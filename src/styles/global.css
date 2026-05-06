@@ -199,11 +199,11 @@ html {
   color: var(--color-tjb-rose-500);
 }
 
-/* ── Dot grid texture (light theme anti-slop) ── */
+/* ── Dot grid texture (editorial, barely visible) ── */
 .dot-grid {
   background-image: radial-gradient(circle, #C5C0D1 1px, transparent 1px);
   background-size: 2.5rem 2.5rem;
-  opacity: 0.35;
+  opacity: 0.12;
 }
 
 /* ── Soft curved bottom ── */

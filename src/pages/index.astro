@@ -40,7 +40,7 @@ import Layout from '../layouts/Layout.astro';
         
         <!-- Left: Headline + CTAs -->
         <div>
-          <p class="eyebrow mb-4">Freebirthplanning.com</p>
+          <p class="eyebrow mb-4">Birth Planning That Actually Helps</p>
 
           <h1 class="mb-6 text-[2.2rem] md:text-[3rem] leading-[1.12] font-bold text-tjb-charcoal">
             Know Exactly What to Say When Your Doctor Recommends Something You Didn't Expect
@@ -80,12 +80,15 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ═══════════════════════════════════════════
-       TESTIMONIALS — Social proof (one row)
+       TESTIMONIALS — Pull-quote, not centered plain text
        ═══════════════════════════════════════════ -->
   <section class="bg-tjb-cream py-10 md:py-14">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="text-center">
-        <blockquote class="text-xl md:text-2xl text-tjb-charcoal leading-relaxed font-serif italic mb-4">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="relative pl-8 md:pl-12 border-l-2 border-tjb-rose-400">
+        <svg class="absolute -top-2 left-3 md:left-5 w-8 h-8 text-tjb-rose-300" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+        </svg>
+        <blockquote class="text-xl md:text-[1.375rem] text-tjb-charcoal leading-[1.65] font-serif italic mb-6">
           "I walked into that room knowing exactly what to say. My nurses actually read the plan. It changed everything."
         </blockquote>
         <p class="text-sm text-tjb-gray font-semibold">— Sarah M., first-time mom, Dallas, TX</p>
@@ -163,6 +166,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="bg-tjb-lavender-100 py-20 md:py-28">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <p class="eyebrow mb-3">For Birth Professionals</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
       <h2 class="mb-5 text-[2.25rem] md:text-[2.75rem] leading-[1.15]">Built for Doulas and Midwives, Too</h2>
       <p class="text-lg text-tjb-gray leading-relaxed max-w-2xl mx-auto mb-10">
         When your clients build their plan in the True Joy Birthing app, it flows directly into your Pro Mode dashboard — no copy-paste, no lost details.
