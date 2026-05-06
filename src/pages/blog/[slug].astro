@@ -1,0 +1,55 @@
+---
+import { marked } from 'marked';
+import fs from 'node:fs';
+import path from 'node:path';
+import matter from 'gray-matter';
+import PostLayout from '../../layouts/PostLayout.astro';
+
+export function getStaticPaths() {
+  const contentDir = path.join(process.cwd(), 'src', 'content', 'blog');
+  const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.md') && !f.startsWith('_'));
+  const paths = [];
+  for (const filename of files) {
+    const filePath = path.join(contentDir, filename);
+    const raw = fs.readFileSync(filePath, 'utf-8');
+    const { data: frontmatter } = matter(raw);
+    paths.push({
+      params: { slug: frontmatter.slug || filename.replace('.md', '') },
+      props: {
+        title: frontmatter.title,
+        date: frontmatter.date,
+        author: frontmatter.author,
+        description: frontmatter.description,
+        canonical: frontmatter.canonical,
+        featuredImage: frontmatter.featuredImage,
+        rawFile: filePath,
+      }
+    });
+  }
+  return paths;
+}
+
+const { title, date, author, description, canonical, featuredImage, rawFile } = Astro.props;
+
+// Render markdown to HTML server-side
+const raw = fs.readFileSync(rawFile, 'utf-8');
+const { content } = matter(raw);
+const htmlContent = marked.parse(content);
+---
+
+<PostLayout title={title} description={description} canonical={canonical} date={date} author={author} featuredImage={featuredImage}>
+  <article class="max-w-3xl mx-auto px-6 py-12">
+    <header class="mb-10">
+      <p class="text-sm text-tjb-forest font-semibold mb-2">{new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+      <h1 class="text-3xl md:text-4xl font-bold text-tjb-charcoal mb-4">{title}</h1>
+      <p class="text-tjb-soft">{description}</p>
+      {featuredImage && (
+        <img src={featuredImage} alt={title} class="mt-6 rounded-xl w-full object-cover max-h-80" loading="eager" />
+      )}
+    </header>
+    <div class="prose prose-lg max-w-none text-tjb-charcoal leading-relaxed" set:html={htmlContent} />
+    <div class="mt-12 pt-8 border-t border-tjb-rose/30">
+      <p class="text-sm text-tjb-soft">Written by <span class="font-semibold text-tjb-forest">{author}</span></p>
+    </div>
+  </article>
+</PostLayout>

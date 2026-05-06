@@ -1,25 +1,80 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import BlogLayout from '../../layouts/PostLayout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+import matter from 'gray-matter';
+
+// Read all markdown posts from content/blog directory
+const contentDir = 'src/content/blog';
+let posts = [];
+
+try {
+  const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.md') && !f.startsWith('_'));
+  
+  for (const filename of files) {
+    const filePath = path.join(contentDir, filename);
+    const raw = fs.readFileSync(filePath, 'utf-8');
+    const { data } = matter(raw);
+    
+    posts.push({
+      slug: data.slug || filename.replace('.md', ''),
+      title: data.title,
+      date: data.date,
+      author: data.author || 'Shelbi Kohler',
+      description: data.description,
+      featuredImage: data.featuredImage,
+    });
+  }
+  
+  // Sort by date descending
+  posts.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
+} catch (e) {
+  console.error('Error reading posts:', e.message);
+}
+
+const description = "Real stories and evidence-based guidance from Shelbi, a certified birth doula and mom of seven. Learn about birth plans, doula services, insurance coverage, and more.";
 ---
 
-<Layout
+<BlogLayout
   title="Blog"
-  description="Real talk about birth plans, hospital births, doula support, and feeling confident in your choices."
+  description={description}
   canonical="https://truejoybirthing.com/blog"
+  date="2024-12-09"
 >
-  <section class="bg-tjb-warm pt-16 pb-12">
+  <section class="bg-tjb-warm py-16 md:py-24">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h1 class="text-3xl md:text-4xl font-bold mb-4">Blog</h1>
-      <p class="text-lg text-tjb-soft">Real talk about birth plans, hospital births, and feeling confident in your choices.</p>
+      <h1 class="text-3xl md:text-5xl font-bold text-tjb-charcoal mb-4 leading-tight">True Joy Birthing Blog</h1>
+      <p class="text-lg md:text-xl text-tjb-soft max-w-2xl mx-auto">Real stories, evidence-based guidance, and honest answers from a certified birth doula and mom of seven.</p>
     </div>
   </section>
 
   <section class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="text-tjb-soft italic">
-        <p>Blog posts will appear here after migration from WordPress.</p>
-        <p class="mt-2">Coming soon: "What Is a Doula?", "How Much Does a Doula Cost?", "Doula vs Midwife", and more.</p>
-      </div>
+    <div class="max-w-5xl mx-auto px-6">
+      {posts.length > 0 ? (
+        <div class="grid md:grid-cols-2 gap-8">
+          {posts.map(post => (
+            <article class="group bg-tjb-cream rounded-xl overflow-hidden hover:shadow-lg transition">
+              <a href={`/blog/${post.slug}/`} class="block">
+                {post.featuredImage && (
+                  <div class="h-48 overflow-hidden">
+                    <img src={post.featuredImage} alt={post.title} class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
+                  </div>
+                )}
+                <div class="p-6">
+                  <p class="text-sm font-semibold text-tjb-forest mb-1">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                  <h2 class="text-xl font-bold text-tjb-charcoal mb-2 group-hover:text-tjb-forest transition">{post.title}</h2>
+                  <p class="text-sm text-tjb-soft line-clamp-3">{post.description}</p>
+                  <span class="inline-block mt-4 text-tjb-forest font-semibold text-sm group-hover:underline">Read more →</span>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+      ) : (
+        <div class="text-center py-16">
+          <p class="text-tjb-soft text-lg">Coming soon: "What Is a Doula?", "How Much Does a Doula Cost?", "Doula vs Midwife", and more.</p>
+        </div>
+      )}
     </div>
   </section>
-</Layout>
+</BlogLayout>
