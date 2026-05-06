@@ -18,7 +18,7 @@ const pageTitle = `${title} | True Joy Birthing`;
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "TechArticle",
+  "@type": "BlogPosting",
   "headline": title,
   "description": description,
   "author": {
@@ -29,7 +29,7 @@ const schema = {
   "publisher": {
     "@type": "Organization",
     "name": "True Joy Birthing",
-    "logo": { "@type": "ImageObject", "url": "https://truejoybirthing.com/images/logo.png" }
+    "logo": { "@type": "ImageObject", "url": "https://truejoybirthing.com/images/logo.webp" }
   },
   "datePublished": date,
   ...(featuredImage && { "image": featuredImage }),
@@ -50,7 +50,7 @@ const schemaJson = JSON.stringify(schema);
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     {canonical && <link rel="canonical" href={canonical} />}
-    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
@@ -60,17 +60,16 @@ const schemaJson = JSON.stringify(schema);
     <header class="bg-tjb-cream/95 backdrop-blur-sm sticky top-0 z-50 border-b border-tjb-lavender-300/30">
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="/" class="flex items-center gap-3 group">
-          <img src="/images/logo.png" alt="True Joy Birthing" class="h-12 w-auto transition-transform duration-300 group-hover:scale-[1.02]"/>
+          <img src="/images/logo.webp" alt="True Joy Birthing" class="h-12 w-auto transition-transform duration-300 group-hover:scale-[1.02]"/>
         </a>
         <nav class="hidden md:flex gap-8 text-sm font-semibold tracking-wide text-tjb-gray">
-          <a href="/" class="hover:text-tjb-rose-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-500 after:transition-all after:duration-300 hover:after:w-full">Home</a>
-          <a href="/about" class="hover:text-tjb-rose-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-500 after:transition-all after:duration-300 hover:after:w-full">About</a>
-          <a href="/blog" class="hover:text-tjb-rose-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-500 after:transition-all after:duration-300 hover:after:w-full">Blog</a>
-          <a href="/birth-support" class="hover:text-tjb-rose-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-500 after:transition-all after:duration-300 hover:after:w-full">Find Support</a>
-          <a href="/contact" class="hover:text-tjb-rose-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-500 after:transition-all after:duration-300 hover:after:w-full">Connect</a>
+          <a href="/" class="hover:text-tjb-rose-500 transition-colors duration-200" aria-label="Home">Home</a>
+          <a href="/about" class="hover:text-tjb-rose-500 transition-colors duration-200">About</a>
+          <a href="/blog" class="hover:text-tjb-rose-500 transition-colors duration-200">Blog</a>
+          <a href="/contact" class="hover:text-tjb-rose-500 transition-colors duration-200">Contact</a>
         </nav>
-        <a href="/birth-plan-course" class="hidden md:inline-block btn-primary text-sm py-2 px-4">
-          Get the Course
+        <a href="/birth-plan-course" class="hidden md:inline-block bg-tjb-lavender-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-tjb-rose-500 transition-all duration-300 hover:shadow-lg hover:shadow-tjb-lavender-300">
+          Get the Plan
         </a>
         <button id="mobile-menu-btn" class="md:hidden text-tjb-charcoal p-2" aria-label="Open menu">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -81,9 +80,8 @@ const schemaJson = JSON.stringify(schema);
           <a href="/" class="hover:text-tjb-rose-500 transition">Home</a>
           <a href="/about" class="hover:text-tjb-rose-500 transition">About</a>
           <a href="/blog" class="hover:text-tjb-rose-500 transition">Blog</a>
-          <a href="/birth-support" class="hover:text-tjb-rose-500 transition">Find Support</a>
-          <a href="/contact" class="hover:text-tjb-rose-500 transition">Connect</a>
-          <a href="/birth-plan-course" class="btn-primary text-center w-fit">Get the Course</a>
+          <a href="/contact" class="hover:text-tjb-rose-500 transition">Contact</a>
+          <a href="/birth-plan-course" class="bg-tjb-lavender-500 text-white px-6 py-2.5 rounded-full text-center font-semibold w-fit hover:bg-tjb-rose-500 transition">Get the Plan</a>
         </nav>
       </div>
     </header>
@@ -92,17 +90,29 @@ const schemaJson = JSON.stringify(schema);
       <slot />
     </main>
 
+    <!-- CTA Band — Blog conversion -->
+    <section class="bg-tjb-lavender-100 py-12 border-t border-tjb-lavender-300/20">
+      <div class="max-w-3xl mx-auto px-6 text-center">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">Build Your Birth Plan — Free</h3>
+        <p class="text-tjb-gray mb-6">Download the doula-crafted birth plan that actually works in a hospital room.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/birth-plan-course" class="btn-primary">Get the Free Birth Plan</a>
+          <a href="/birth-plan-session" class="btn-secondary">Book a 1:1 Session</a>
+        </div>
+      </div>
+    </section>
+
     <footer class="bg-tjb-charcoal text-tjb-cream/80 mt-auto">
       <div class="max-w-6xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-3">
         <div>
-          <img src="/images/logo.png" alt="True Joy Birthing" class="h-10 w-auto mb-4 brightness-100 invert opacity-90" />
+          <img src="/images/logo.webp" alt="True Joy Birthing" class="h-10 w-auto mb-4 brightness-100 invert opacity-90" />
           <p class="text-sm text-tjb-gray-300 leading-relaxed">Birth education and planning tools — free for moms, Pro for doulas and midwives.</p>
         </div>
         <div>
           <p class="font-semibold text-white mb-4 tracking-wide text-sm uppercase">Resources</p>
           <ul class="text-sm space-y-2">
             <li><a href="/blog" class="hover:text-tjb-lavender-light transition">Blog</a></li>
-            <li><a href="/birth-support" class="hover:text-tjb-lavender-light transition">Birth Support by City</a></li>
+            <li><a href="/about" class="hover:text-tjb-lavender-light transition">About</a></li>
             <li><a href="/faq" class="hover:text-tjb-lavender-light transition">FAQ</a></li>
             <li><a href="/privacy" class="hover:text-tjb-lavender-light transition">Privacy</a></li>
             <li><a href="/terms" class="hover:text-tjb-lavender-light transition">Terms</a></li>
@@ -117,7 +127,7 @@ const schemaJson = JSON.stringify(schema);
           </div>
         </div>
       </div>
-      <div class="border-t border-tjb-gray-200/20 max-w-6xl mx-auto px-6 py-5 text-xs text-tjb-gray-300">
+      <div class="border-t border-tjb-gray/20 max-w-6xl mx-auto px-6 py-5 text-xs text-tjb-gray-300">
         © {new Date().getFullYear()} True Joy Birthing. Built with intention.
         <span class="block mt-1">Not medical advice. Always consult your care provider.</span>
       </div>
