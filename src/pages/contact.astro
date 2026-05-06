@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Contact"
+  description="Get in touch with True Joy Birthing."
+  canonical="https://truejoybirthing.com/contact"
+>
+  <section class="bg-tjb-warm pt-16 pb-12">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Contact</h1>
+      <p class="text-lg text-tjb-soft">Questions, partnerships, or just want to say hi? We'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-2xl mx-auto px-6">
+      <form action="/contact" method="POST" class="space-y-4" data-netlify="true" name="contact">
+        <div>
+          <label class="block text-sm font-medium mb-1">Name</label>
+          <input type="text" name="name" class="w-full px-4 py-3 rounded-lg border border-tjb-rose/50 focus:outline-none focus:border-tjb-forest" required />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Email</label>
+          <input type="email" name="email" class="w-full px-4 py-3 rounded-lg border border-tjb-rose/50 focus:outline-none focus:border-tjb-forest" required />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Message</label>
+          <textarea name="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-tjb-rose/50 focus:outline-none focus:border-tjb-forest" required></textarea>
+        </div>
+        <button type="submit" class="bg-tjb-forest text-tjb-cream px-8 py-3 rounded-lg font-semibold hover:bg-tjb-sage transition">Send Message</button>
+      </form>
+    </div>
+  </section>
+</Layout>

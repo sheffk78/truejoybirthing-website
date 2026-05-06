@@ -5,6 +5,9 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  output: 'static',
+  trailingSlash: 'always',
+  site: 'https://truejoybirthing.com',
   vite: {
     plugins: [tailwindcss()]
   }

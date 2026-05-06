@@ -1,0 +1,118 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const city = "Fort Worth";
+const state = "TX";
+const pageTitle = `Birth Support in ${city}, ${state}`;
+const pageDesc = `Find birth support resources in Fort Worth, TX — local hospital info, doula costs, Medicaid status, and a free birth plan built for local families.`;
+const pageUrl = `https://truejoybirthing.com/birth-support/fort-worth-tx`;
+
+const hospitals = ["Texas Health Harris Methodist Hospital", "Cook Children's Medical Center", "JPS Health Network"];
+const birthCenters = ["Fort Worth Birth Center"];
+const costLow = 850;
+const costHigh = 2400;
+const medicaidNote = "Texas Medicaid doula benefits are expanding. In the Fort Worth area, check your Tarrant County or surrounding-area Medicaid plan for current doula coverage.";
+const insuranceNote = "Some Fort Worth-area insurers offer maternal wellness benefits that include doula coverage. Contact your insurance representative to confirm.";
+const culture = "Fort Worth blends a western heritage with a growing, modern healthcare scene. The city has strong hospital systems and an emerging birth center community. Fort Worth families often value both tradition and informed, empowered birth experiences.";
+const shelbiServesHere = true;
+
+const faqs = [
+  { q: "Does True Joy Birthing serve Fort Worth families in person?", a: "Fort Worth is within Shelbi's DFW service area. In-person doula support may be available depending on availability. Virtual confidence sessions are always available." },
+  { q: "How much does a doula cost in Fort Worth?", a: "$850 to $2,400. The Fort Worth market is generally more affordable than Dallas proper, with many experienced doulas serving both sides of the metro." },
+  { q: "What hospitals do Fort Worth families use?", a: "Texas Health Harris Methodist Fort Worth is a major option. Cook Children's serves families needing NICU or pediatric support. JPS Health Network serves diverse communities across Tarrant County." },
+  { q: "Does Medicaid cover doulas in Fort Worth?", a: "Texas' Medicaid doula expansion is statewide. Contact your Tarrant County or surrounding Medicaid plan to confirm current coverage status." }
+];
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDesc}
+  canonical={pageUrl}
+>
+
+  <section class="bg-tjb-warm pt-16 pb-12">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Birth Support in Fort Worth, TX</h1>
+      <p class="text-lg text-tjb-soft mb-6">
+        Local hospital options, doula costs, and Medicaid status — plus the free birth plan template families in Fort Worth use to feel confident and prepared.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="#download-pdf" class="bg-tjb-forest text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-sage transition">Download Free Birth Plan</a>
+        <a href="https://apps.apple.com/app/true-joy-birthing" class="bg-white text-tjb-forest border-2 border-tjb-forest px-6 py-3 rounded-lg font-semibold hover:bg-tjb-warm transition">Get the Free App</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 prose">
+
+      <h2>What Birth Support Looks Like in Fort Worth</h2>
+      <p>Fort Worth blends a western heritage with a growing, modern healthcare scene. The city has strong hospital systems and an emerging birth center community. Fort Worth families often value both tradition and informed, empowered birth experiences.</p>
+
+      <p>Families in Fort Worth often deliver at hospitals including:</p>
+      <ul>
+        <li>Texas Health Harris Methodist Hospital</li>
+        <li>Cook Children's Medical Center</li>
+        <li>JPS Health Network</li>
+      </ul>
+      <p class="text-sm text-tjb-soft italic">Hospitals mentioned for context only. True Joy Birthing does not endorse any specific provider.</p>
+
+      <p>Birth center options in Fort Worth may include:</p>
+      <ul>
+        <li>Fort Worth Birth Center</li>
+      </ul>
+
+      <h2>How Much Does a Doula Cost in Fort Worth?</h2>
+      <p>In Fort Worth, birth doula services typically range from <strong>$850 to $2,400</strong> depending on experience, package, and whether the doula offers add-on services like postpartum visits.</p>
+      <p>Some Fort Worth-area insurers offer maternal wellness benefits that include doula coverage. Contact your insurance representative to confirm.</p>
+      <p><strong>Medicaid Note:</strong> Texas Medicaid doula benefits are expanding. In the Fort Worth area, check your Tarrant County or surrounding-area Medicaid plan for current doula coverage.</p>
+
+      <h2>Build Your Birth Plan for Fort Worth</h2>
+      <p>No matter where you deliver in Fort Worth, a clear, organized birth plan helps you communicate your preferences to the team in your birth room.</p>
+      <a href="#download-pdf" class="inline-block bg-tjb-forest text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-sage transition mb-6">Download the Free Birth Plan</a>
+
+      <div class="bg-tjb-warm p-4 rounded-lg mb-6">
+        <p class="font-semibold text-tjb-forest mb-1">Shelbi serves local families in the Fort Worth area.</p>
+        <p class="text-sm text-tjb-soft">Virtual confidence sessions are also available for families in Fort Worth.</p>
+        <a href="/birth-plan-session" class="text-tjb-forest font-semibold text-sm hover:underline">Book a session →</a>
+      </div>
+
+      <h2>Common Questions in Fort Worth</h2>
+      <div class="space-y-4">
+        <div>
+          <h3 class="font-semibold mb-1">Does True Joy Birthing serve Fort Worth families in person?</h3>
+          <p class="text-tjb-soft">Fort Worth is within Shelbi's DFW service area. In-person doula support may be available depending on availability. Virtual confidence sessions are always available.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">How much does a doula cost in Fort Worth?</h3>
+          <p class="text-tjb-soft">$850 to $2,400. The Fort Worth market is generally more affordable than Dallas proper, with many experienced doulas serving both sides of the metro.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">What hospitals do Fort Worth families use?</h3>
+          <p class="text-tjb-soft">Texas Health Harris Methodist Fort Worth is a major option. Cook Children's serves families needing NICU or pediatric support. JPS Health Network serves diverse communities across Tarrant County.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Does Medicaid cover doulas in Fort Worth?</h3>
+          <p class="text-tjb-soft">Texas' Medicaid doula expansion is statewide. Contact your Tarrant County or surrounding Medicaid plan to confirm current coverage status.</p>
+        </div>
+      </div>
+
+      <h2>Nearby Resources</h2>
+      <a href="/birth-support" class="text-tjb-forest font-semibold hover:underline">See all cities →</a>
+
+    </div>
+  </section>
+
+  <section id="download-pdf" class="py-16 bg-tjb-cream">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Download Your Free Birth Plan</h2>
+      <p class="text-tjb-soft mb-8">Built by a doula for hospital-planning moms everywhere.</p>
+      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" action="#" method="POST">
+        <input name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-lg border border-tjb-rose/50 focus:outline-none focus:border-tjb-forest" required />
+        <button type="submit" class="bg-tjb-forest text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-sage transition whitespace-nowrap">Get My Plan →</button>
+      </form>
+      <p class="text-xs text-tjb-soft/70 mt-4">No spam. Just a free birth plan and occasional tips you can actually use.</p>
+    </div>
+  </section>
+
+</Layout>
