@@ -54,7 +54,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
   </head>
   <body class="min-h-dvh flex flex-col font-sans">
     <!-- Header -->
-    <header class="bg-tjb-cream/95 backdrop-blur-sm sticky top-0 z-50 border-b border-tjb-lavender-medium/30">
+    <header class="bg-tjb-cream/95 backdrop-blur-sm sticky top-0 z-50 border-b border-tjb-lavender-300/30">
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="/" class="flex items-center gap-3 group">
           <img 
@@ -64,25 +64,25 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
           />
         </a>
         <nav class="hidden md:flex gap-8 text-sm font-semibold tracking-wide text-tjb-gray">
-          <a href="/" class="hover:text-tjb-rose-dark transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-dark after:transition-all after:duration-300 hover:after:w-full">Home</a>
-          <a href="/about" class="hover:text-tjb-rose-dark transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-dark after:transition-all after:duration-300 hover:after:w-full">About</a>
-          <a href="/blog" class="hover:text-tjb-rose-dark transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-dark after:transition-all after:duration-300 hover:after:w-full">Blog</a>
-          <a href="/contact" class="hover:text-tjb-rose-dark transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-dark after:transition-all after:duration-300 hover:after:w-full">Connect</a>
+          <a href="/" class="hover:text-tjb-rose-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-500 after:transition-all after:duration-300 hover:after:w-full">Home</a>
+          <a href="/about" class="hover:text-tjb-rose-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-500 after:transition-all after:duration-300 hover:after:w-full">About</a>
+          <a href="/blog" class="hover:text-tjb-rose-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-500 after:transition-all after:duration-300 hover:after:w-full">Blog</a>
+          <a href="/contact" class="hover:text-tjb-rose-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-500 after:transition-all after:duration-300 hover:after:w-full">Connect</a>
         </nav>
-        <a href="/birth-plan-course" class="hidden md:inline-block bg-tjb-lavender-dark text-tjb-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-tjb-rose-dark transition-all duration-300 hover:shadow-lg hover:shadow-tjb-rose/20">
+        <a href="/birth-plan-course" class="hidden md:inline-block bg-tjb-lavender-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-tjb-rose-500 transition-all duration-300 hover:shadow-lg hover:shadow-tjb-lavender-300">
           Get the Course
         </a>
         <button id="mobile-menu-btn" class="md:hidden text-tjb-charcoal p-2" aria-label="Open menu">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
-      <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 border-t border-tjb-lavender-medium/20 bg-tjb-cream">
+      <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 border-t border-tjb-lavender-300/20 bg-tjb-cream">
         <nav class="flex flex-col gap-4 pt-6 text-sm font-semibold tracking-wide text-tjb-gray">
-          <a href="/" class="hover:text-tjb-rose-dark transition">Home</a>
-          <a href="/about" class="hover:text-tjb-rose-dark transition">About</a>
-          <a href="/blog" class="hover:text-tjb-rose-dark transition">Blog</a>
-          <a href="/contact" class="hover:text-tjb-rose-dark transition">Connect</a>
-          <a href="/birth-plan-course" class="bg-tjb-lavender-dark text-tjb-white px-6 py-2.5 rounded-full text-center font-semibold w-fit hover:bg-tjb-rose-dark transition">Get the Course</a>
+          <a href="/" class="hover:text-tjb-rose-500 transition">Home</a>
+          <a href="/about" class="hover:text-tjb-rose-500 transition">About</a>
+          <a href="/blog" class="hover:text-tjb-rose-500 transition">Blog</a>
+          <a href="/contact" class="hover:text-tjb-rose-500 transition">Connect</a>
+          <a href="/birth-plan-course" class="bg-tjb-lavender-500 text-white px-6 py-2.5 rounded-full text-center font-semibold w-fit hover:bg-tjb-rose-500 transition">Get the Course</a>
         </nav>
       </div>
     </header>
@@ -96,10 +96,10 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
       <div class="max-w-6xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-3">
         <div>
           <img src="/images/logo.png" alt="True Joy Birthing" class="h-10 w-auto mb-4 brightness-100 invert opacity-90" />
-          <p class="text-sm text-tjb-gray-light leading-relaxed">Birth education and planning tools — free for moms, Pro for doulas and midwives.</p>
+          <p class="text-sm text-tjb-gray-300 leading-relaxed">Birth education and planning tools — free for moms, Pro for doulas and midwives.</p>
         </div>
         <div>
-          <p class="font-semibold text-tjb-white mb-4 tracking-wide text-sm uppercase">Resources</p>
+          <p class="font-semibold text-white mb-4 tracking-wide text-sm uppercase">Resources</p>
           <ul class="text-sm space-y-2">
             <li><a href="/blog" class="hover:text-tjb-lavender-light transition">Blog</a></li>
             <li><a href="/about" class="hover:text-tjb-lavender-light transition">About</a></li>
@@ -109,15 +109,15 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
           </ul>
         </div>
         <div>
-          <p class="font-semibold text-tjb-white mb-4 tracking-wide text-sm uppercase">Get the Free App</p>
-          <p class="text-sm text-tjb-gray-light mb-4 leading-relaxed">Build your birth plan, learn your options, and feel confident.</p>
+          <p class="font-semibold text-white mb-4 tracking-wide text-sm uppercase">Get the Free App</p>
+          <p class="text-sm text-tjb-gray-300 mb-4 leading-relaxed">Build your birth plan, learn your options, and feel confident.</p>
           <div class="flex flex-wrap gap-3">
-            <a href="https://apps.apple.com/app/true-joy-birthing" class="inline-block bg-tjb-lavender-dark text-tjb-white px-4 py-2 rounded-full text-xs font-semibold hover:bg-tjb-rose-dark transition">App Store</a>
-            <a href="https://play.google.com/store/apps/details?id=com.truejoybirthing" class="inline-block bg-tjb-lavender-dark text-tjb-white px-4 py-2 rounded-full text-xs font-semibold hover:bg-tjb-rose-dark transition">Google Play</a>
+            <a href="https://apps.apple.com/app/true-joy-birthing" class="inline-block bg-tjb-lavender-500 text-white px-4 py-2 rounded-full text-xs font-semibold hover:bg-tjb-rose-500 transition">App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.truejoybirthing" class="inline-block bg-tjb-lavender-500 text-white px-4 py-2 rounded-full text-xs font-semibold hover:bg-tjb-rose-500 transition">Google Play</a>
           </div>
         </div>
       </div>
-      <div class="border-t border-tjb-gray/20 max-w-6xl mx-auto px-6 py-5 text-xs text-tjb-gray-light">
+      <div class="border-t border-tjb-gray/20 max-w-6xl mx-auto px-6 py-5 text-xs text-tjb-gray-300">
         © {new Date().getFullYear()} True Joy Birthing. Built with intention.
         <span class="block mt-1">Not medical advice. Always consult your care provider.</span>
       </div>
