@@ -1,0 +1,129 @@
+---
+// Base layout — used by every page. Imports global styles, renders header/footer, injects schema.
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  schema?: object;
+}
+
+const { title, description = "True Joy Birthing — birth education and planning tools for moms, doulas, and midwives.", canonical } = Astro.props;
+
+const schemaBase = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://truejoybirthing.com/#organization",
+      "name": "True Joy Birthing",
+      "url": "https://truejoybirthing.com/",
+      "description": "Birth education and planning tools — free for moms, Pro for doulas and midwives.",
+      "sameAs": [
+        "https://instagram.com/truejoybirthing"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://truejoybirthing.com/#website",
+      "url": "https://truejoybirthing.com/",
+      "name": "True Joy Birthing",
+      "publisher": { "@id": "https://truejoybirthing.com/#organization" }
+    }
+  ]
+};
+
+const schema = Astro.props.schema ? { ...schemaBase, ...Astro.props.schema } : schemaBase;
+const schemaJson = JSON.stringify(schema);
+const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True Joy Birthing`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script type="application/ld+json" set:html={schemaJson} />
+  </head>
+  <body class="min-h-dvh flex flex-col">
+    <header class="bg-tjb-cream/90 backdrop-blur-sm sticky top-0 z-50 border-b border-tjb-rose/50">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="/" class="text-xl font-bold text-tjb-forest tracking-tight">
+          True Joy Birthing
+        </a>
+        <nav class="hidden md:flex gap-6 text-sm font-medium text-tjb-soft">
+          <a href="/" class="hover:text-tjb-forest transition">Home</a>
+          <a href="/about" class="hover:text-tjb-forest transition">About</a>
+          <a href="/blog" class="hover:text-tjb-forest transition">Blog</a>
+          <a href="/birth-support" class="hover:text-tjb-forest transition">Find Support</a>
+          <a href="/contact" class="hover:text-tjb-forest transition">Contact</a>
+        </nav>
+        <a href="/birth-plan-course" class="hidden md:inline-block bg-tjb-forest text-tjb-cream px-4 py-2 rounded-lg text-sm font-semibold hover:bg-tjb-sage transition">
+          Get the Course
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden text-tjb-charcoal" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 border-t border-tjb-rose/30">
+        <nav class="flex flex-col gap-3 pt-4 text-sm font-medium text-tjb-soft">
+          <a href="/" class="hover:text-tjb-forest">Home</a>
+          <a href="/about" class="hover:text-tjb-forest">About</a>
+          <a href="/blog" class="hover:text-tjb-forest">Blog</a>
+          <a href="/birth-support" class="hover:text-tjb-forest">Find Support</a>
+          <a href="/contact" class="hover:text-tjb-forest">Contact</a>
+          <a href="/birth-plan-course" class="bg-tjb-forest text-tjb-cream px-4 py-2 rounded-lg text-center font-semibold w-fit">Get the Course</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="bg-tjb-forest text-tjb-cream/80 mt-auto">
+      <div class="max-w-6xl mx-auto px-6 py-12 grid gap-8 md:grid-cols-3">
+        <div>
+          <p class="font-bold text-tjb-cream text-lg mb-2">True Joy Birthing</p>
+          <p class="text-sm">Birth education and planning tools — free for moms, Pro for doulas and midwives.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-tjb-cream mb-2">Resources</p>
+          <ul class="text-sm space-y-1">
+            <li><a href="/blog" class="hover:text-white transition">Blog</a></li>
+            <li><a href="/birth-support" class="hover:text-white transition">Birth Support by City</a></li>
+            <li><a href="/faq" class="hover:text-white transition">FAQ</a></li>
+            <li><a href="/privacy" class="hover:text-white transition">Privacy</a></li>
+            <li><a href="/terms" class="hover:text-white transition">Terms</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-tjb-cream mb-2">Get the Free App</p>
+          <p class="text-sm mb-3">Build your birth plan, learn your options, and feel confident.</p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://apps.apple.com/app/true-joy-birthing" class="inline-block bg-tjb-cream text-tjb-forest px-3 py-1.5 rounded text-xs font-semibold hover:bg-white transition">App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.truejoybirthing" class="inline-block bg-tjb-cream text-tjb-forest px-3 py-1.5 rounded text-xs font-semibold hover:bg-white transition">Google Play</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-tjb-sage/30 max-w-6xl mx-auto px-6 py-4 text-xs text-tjb-cream/50">
+        © {new Date().getFullYear()} True Joy Birthing. Built with intention.
+        <br/>Not medical advice. Always consult your care provider.
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+        document.getElementById('mobile-menu')?.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
