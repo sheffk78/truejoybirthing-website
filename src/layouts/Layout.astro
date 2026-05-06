@@ -7,9 +7,11 @@ interface Props {
   description?: string;
   canonical?: string;
   schema?: object;
+  breadcrumbList?: { name: string; url: string }[];
 }
 
 const { title, description = "True Joy Birthing — birth education and planning tools for moms, doulas, and midwives.", canonical } = Astro.props;
+const breadcrumbList = Astro.props.breadcrumbList;
 
 const schemaBase = {
   "@context": "https://schema.org",
@@ -34,7 +36,25 @@ const schemaBase = {
 };
 
 const schema = Astro.props.schema ? { ...schemaBase, ...Astro.props.schema } : schemaBase;
-const schemaJson = JSON.stringify(schema);
+let finalSchema = schema;
+if (breadcrumbList && breadcrumbList.length > 0) {
+  finalSchema = {
+    ...schema,
+    "@graph": [
+      ...((schema["@graph"] || [])),
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": breadcrumbList.map((item, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": item.name,
+          "item": item.url
+        }))
+      }
+    ]
+  };
+}
+const schemaJson = JSON.stringify(finalSchema);
 const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True Joy Birthing`;
 ---
 

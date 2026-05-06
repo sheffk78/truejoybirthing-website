@@ -1,11 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "FAQ", "url": "https://truejoybirthing.com/faq/"}];
 ---
 
 <Layout
   title="FAQ"
   description="Common questions about birth plans, doula support, and the True Joy Birthing app."
   canonical="https://truejoybirthing.com/faq"
+  breadcrumbList={breadcrumbList}
+>
   schema={{
     "@graph": [
       {

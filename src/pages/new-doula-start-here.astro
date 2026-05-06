@@ -1,11 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "New Doula Start Here", "url": "https://truejoybirthing.com/new-doula-start-here/"}];
 ---
 
 <Layout
   title="New Doula? Set Up Your Practice in One Place"
   description="Just certified? Get organized from day one. TJB Pro Mode gives you client plans, visit tracking, notes, and invoicing — built specifically for birth work."
   canonical="https://truejoybirthing.com/new-doula-start-here"
+  breadcrumbList={breadcrumbList}
+>
 >
   <section class="bg-tjb-cream pt-16 pb-12">
     <div class="max-w-3xl mx-auto px-6 text-center">

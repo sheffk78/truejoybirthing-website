@@ -1,11 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "About", "url": "https://truejoybirthing.com/about/"}];
 ---
 
 <Layout
   title="About True Joy Birthing"
   description="Meet Shelbi — certified birth doula and founder of True Joy Birthing, the platform that helps moms build confident birth plans and connects birth pros with powerful tools."
   canonical="https://truejoybirthing.com/about"
+  breadcrumbList={breadcrumbList}
+>
 >
   <section class="bg-tjb-cream pt-16 pb-12">
     <div class="max-w-3xl mx-auto px-6 text-center">
