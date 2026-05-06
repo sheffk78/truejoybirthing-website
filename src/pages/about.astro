@@ -10,18 +10,34 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
   canonical="https://truejoybirthing.com/about"
   breadcrumbList={breadcrumbList}
 >
->
+
+  <!-- Hero with real photo -->
   <section class="bg-tjb-cream pt-16 pb-12">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h1 class="text-3xl md:text-4xl font-bold mb-4">About</h1>
-      <p class="text-lg text-tjb-gray">You deserve to walk into your birth knowing exactly what to expect — and what to say when something unexpected happens.</p>
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-3xl md:text-[2.75rem] font-bold mb-4 leading-tight">About True Joy Birthing</h1>
+          <p class="text-lg text-tjb-gray leading-relaxed">You deserve to walk into your birth knowing exactly what to expect — and what to say when something unexpected happens.</p>
+        </div>
+        <div class="relative">
+          <div class="rounded-2xl overflow-hidden shadow-lg shadow-tjb-lavender-300/20">
+            <img src="/images/shelbi-portrait-1.webp" alt="Shelbi Kohler — certified birth doula" class="w-full h-auto object-cover" loading="eager" />
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- Who is Shelbi -->
   <section class="py-16 bg-tjb-cream-50">
     <div class="max-w-3xl mx-auto px-6 prose">
       <h2>Hi — I'm Shelbi</h2>
       <p>I'm a certified birth doula and childbirth educator based in North Texas. I've supported hundreds of families through births in hospitals, birth centers, and at home.</p>
+
+      <div class="my-8 rounded-xl overflow-hidden shadow-md">
+        <img src="/images/doula-birth-plan-couch.webp" alt="Shelbi going through a birth plan with a client on the couch" class="w-full h-auto" loading="lazy" />
+        <p class="text-sm text-tjb-gray-300 mt-2 text-center">Walking through a birth plan, one decision at a time.</p>
+      </div>
 
       <p>I started True Joy Birthing because I kept seeing the same thing: moms who wanted to feel empowered in their births but didn't know their options, didn't have the words, and felt like the system was happening <em>to</em> them instead of <em>with</em> them.</p>
 
@@ -34,9 +50,35 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
         <li><strong>Honest, not fear-based.</strong> We explain options and tradeoffs. We don't scare you into decisions.</li>
       </ul>
 
+      <div class="my-8 grid md:grid-cols-2 gap-4">
+        <div class="rounded-xl overflow-hidden shadow-md">
+          <img src="/images/doula-holding-hands.webp" alt="Doula holding a laboring mother's hands" class="w-full h-48 object-cover" loading="lazy" />
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-md">
+          <img src="/images/doula-newborn.webp" alt="Doula encouraging a new mother with her newborn" class="w-full h-48 object-cover" loading="lazy" />
+        </div>
+      </div>
+
       <h2>For Doulas & Midwives</h2>
       <p>True Joy Birthing Pro Mode gives you everything you need to run your practice — client plans, visit tracking, notes, and simple invoicing — in one place built specifically for birth work.</p>
+
+      <div class="my-8 rounded-xl overflow-hidden shadow-md">
+        <img src="/images/online-support.webp" alt="Online doula support for first-time mothers" class="w-full h-auto" loading="lazy" />
+      </div>
+
       <a href="https://apps.apple.com/app/true-joy-birthing" class="inline-block bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">Start Pro →</a>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="bg-tjb-lavender-100 py-16">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to feel confident about your birth?</h2>
+      <p class="text-tjb-gray mb-8">Download the free birth plan or book a 1:1 session with Shelbi.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/birth-plan-course" class="btn-primary">Get the Free Plan</a>
+        <a href="/birth-plan-session" class="btn-secondary">Book a Session</a>
+      </div>
     </div>
   </section>
 </Layout>

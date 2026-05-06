@@ -21,7 +21,7 @@ const schemaBase = {
       "@id": "https://truejoybirthing.com/#organization",
       "name": "True Joy Birthing",
       "url": "https://truejoybirthing.com/",
-      "logo": "https://truejoybirthing.com/images/logo.png",
+      "logo": "https://truejoybirthing.com/images/logo.webp",
       "description": "Birth education and planning tools — free for moms, Pro for doulas and midwives.",
       "sameAs": ["https://instagram.com/truejoybirthing"]
     },
@@ -66,7 +66,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     {canonical && <link rel="canonical" href={canonical} />}
-    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
@@ -78,7 +78,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="/" class="flex items-center gap-3 group">
           <img 
-            src="/images/logo.png" 
+            src="/images/logo.webp" 
             alt="True Joy Birthing" 
             class="h-12 w-auto transition-transform duration-300 group-hover:scale-[1.02]"
           />
@@ -115,7 +115,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
     <footer class="bg-tjb-charcoal text-tjb-cream/80 mt-auto">
       <div class="max-w-6xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-3">
         <div>
-          <img src="/images/logo.png" alt="True Joy Birthing" class="h-10 w-auto mb-4 brightness-100 invert opacity-90" />
+          <img src="/images/logo.webp" alt="True Joy Birthing" class="h-10 w-auto mb-4 brightness-100 invert opacity-90" />
           <p class="text-sm text-tjb-gray-300 leading-relaxed">Birth education and planning tools — free for moms, Pro for doulas and midwives.</p>
         </div>
         <div>
