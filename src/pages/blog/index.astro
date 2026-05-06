@@ -41,14 +41,14 @@ const description = "Real stories and evidence-based guidance from Shelbi, a cer
   canonical="https://truejoybirthing.com/blog"
   date="2024-12-09"
 >
-  <section class="bg-tjb-warm py-16 md:py-24">
+  <section class="bg-tjb-cream py-16 md:py-24">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h1 class="text-3xl md:text-5xl font-bold text-tjb-charcoal mb-4 leading-tight">True Joy Birthing Blog</h1>
-      <p class="text-lg md:text-xl text-tjb-soft max-w-2xl mx-auto">Real stories, evidence-based guidance, and honest answers from a certified birth doula and mom of seven.</p>
+      <p class="text-lg md:text-xl text-tjb-gray max-w-2xl mx-auto">Real stories, evidence-based guidance, and honest answers from a certified birth doula and mom of seven.</p>
     </div>
   </section>
 
-  <section class="py-16 bg-white">
+  <section class="py-16 bg-tjb-cream-50">
     <div class="max-w-5xl mx-auto px-6">
       {posts.length > 0 ? (
         <div class="grid md:grid-cols-2 gap-8">
@@ -61,10 +61,10 @@ const description = "Real stories and evidence-based guidance from Shelbi, a cer
                   </div>
                 )}
                 <div class="p-6">
-                  <p class="text-sm font-semibold text-tjb-forest mb-1">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-                  <h2 class="text-xl font-bold text-tjb-charcoal mb-2 group-hover:text-tjb-forest transition">{post.title}</h2>
-                  <p class="text-sm text-tjb-soft line-clamp-3">{post.description}</p>
-                  <span class="inline-block mt-4 text-tjb-forest font-semibold text-sm group-hover:underline">Read more →</span>
+                  <p class="text-sm font-semibold text-tjb-lavender-500 mb-1">{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+                  <h2 class="text-xl font-bold text-tjb-charcoal mb-2 group-hover:text-tjb-lavender-500 transition">{post.title}</h2>
+                  <p class="text-sm text-tjb-gray line-clamp-3">{post.description}</p>
+                  <span class="inline-block mt-4 text-tjb-lavender-500 font-semibold text-sm group-hover:underline">Read more →</span>
                 </div>
               </a>
             </article>
@@ -72,7 +72,7 @@ const description = "Real stories and evidence-based guidance from Shelbi, a cer
         </div>
       ) : (
         <div class="text-center py-16">
-          <p class="text-tjb-soft text-lg">Coming soon: "What Is a Doula?", "How Much Does a Doula Cost?", "Doula vs Midwife", and more.</p>
+          <p class="text-tjb-gray text-lg">Coming soon: "What Is a Doula?", "How Much Does a Doula Cost?", "Doula vs Midwife", and more.</p>
         </div>
       )}
     </div>

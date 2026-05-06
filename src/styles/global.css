@@ -1,35 +1,102 @@
 @import "tailwindcss";
 
 @theme {
-  --color-tjb-warm: #F5EDE6;
-  --color-tjb-cream: #FAF7F3;
-  --color-tjb-rose: #E8D5C4;
-  --color-tjb-sage: #7A8B7A;
-  --color-tjb-forest: #3D5A40;
-  --color-tjb-charcoal: #2C2C2C;
-  --color-tjb-soft: #8B7B6B;
+  /* ═══════════════════════════════════════════
+     True Joy Birthing — Feminine Brand Palette
+     ═══════════════════════════════════════════ */
+
+  /* Primary: Lavender */
+  --color-tjb-lavender: #B9B7D4;
+  --color-tjb-lavender-50:  #F7F7FC;
+  --color-tjb-lavender-100: #F1F1FB;
+  --color-tjb-lavender-200: #E6E4F4;
+  --color-tjb-lavender-300: #D5D3E8;
+  --color-tjb-lavender-400: #B9B7D4;
+  --color-tjb-lavender-500: #8E8CB5;
+  --color-tjb-lavender-600: #6E6C99;
+  --color-tjb-lavender-700: #504E7A;
+
+  /* Accent: Dusty Rose */
+  --color-tjb-rose: #D8A0C4;
+  --color-tjb-rose-50:  #FCF5F9;
+  --color-tjb-rose-100: #F5E5EE;
+  --color-tjb-rose-200: #EFD3E5;
+  --color-tjb-rose-300: #E6BBD8;
+  --color-tjb-rose-400: #D8A0C4;
+  --color-tjb-rose-500: #B87AA0;
+  --color-tjb-rose-600: #9A5E84;
+
+  /* Neutrals: Warm, never cold */
+  --color-tjb-cream: #FAF8F5;
+  --color-tjb-cream-50: #FDFCFA;
+  --color-tjb-cream-100: #F5F3EF;
+  --color-tjb-cream-200: #EBE7E1;
+
+  --color-tjb-charcoal: #2A2A2A;
+  --color-tjb-charcoal-500: #3B3B3B;
+  --color-tjb-charcoal-400: #4A4A4A;
+
+  --color-tjb-gray: #6A6B6C;
+  --color-tjb-gray-300: #9A9B9C;
+  --color-tjb-gray-200: #B8B9BA;
+
+  /* Soft sage for subtle organic moments */
+  --color-tjb-sage: #A8B5A0;
+  --color-tjb-sage-100: #E8EDE5;
 }
 
+/* ────────────────────────────────────────────
+   Font loading via preconnect in Layout
+   ──────────────────────────────────────────── */
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+  font-weight: 400;
   background-color: var(--color-tjb-cream);
   color: var(--color-tjb-charcoal);
   line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* ── Editorial serif headings ── */
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.15;
+  color: var(--color-tjb-charcoal);
 }
 
+h1 {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 600;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.625rem);
+  font-weight: 600;
+}
+
+/* ── Prose / blog overrides ── */
 .prose h2 {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   margin-bottom: 1rem;
+  font-size: 1.875rem;
+}
+
+.prose h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
   font-size: 1.5rem;
 }
 
 .prose p {
   margin-bottom: 1.25rem;
+  color: var(--color-tjb-gray);
 }
 
 .prose ul, .prose ol {
@@ -42,10 +109,121 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .prose a {
+  color: var(--color-tjb-rose-500);
   text-decoration: underline;
   text-underline-offset: 3px;
+  transition: color 0.2s ease;
 }
 
+.prose a:hover {
+  color: var(--color-tjb-charcoal);
+}
+
+/* ── Selection ── */
+::selection {
+  background-color: var(--color-tjb-rose-100);
+  color: var(--color-tjb-charcoal);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ═══════════════════════════════════════════
+   Components
+   ═══════════════════════════════════════════ */
+
+/* Primary CTA: lavender → rose on hover */
+.btn-primary {
+  background-color: var(--color-tjb-lavender-500);
+  color: #FFFFFF;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  letter-spacing: 0.025em;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-tjb-rose-500);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(155, 94, 132, 0.25);
+}
+
+/* Secondary CTA: outline lavender */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-tjb-lavender-500);
+  border: 2px solid var(--color-tjb-lavender-500);
+  padding: 0.75rem 1.875rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-tjb-lavender-500);
+  color: #FFFFFF;
+}
+
+/* Rose CTA for dark backgrounds */
+.btn-accent {
+  background-color: var(--color-tjb-rose-500);
+  color: #FFFFFF;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  letter-spacing: 0.025em;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-accent:hover {
+  background-color: var(--color-tjb-rose-600);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(155, 94, 132, 0.25);
+}
+
+/* ── Eyebrow label ── */
+.eyebrow {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-tjb-rose-500);
+}
+
+/* ── Dot grid texture (light theme anti-slop) ── */
+.dot-grid {
+  background-image: radial-gradient(circle, #C5C0D1 1px, transparent 1px);
+  background-size: 2.5rem 2.5rem;
+  opacity: 0.35;
+}
+
+/* ── Soft curved bottom ── */
+.curve-bottom {
+  border-radius: 0 0 50% 50% / 0 0 4% 4%;
+}
+
+/* ── Reveal animation utilities ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Hidden schema ── */
 .schema-data {
   display: none;
 }

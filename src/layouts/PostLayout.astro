@@ -1,4 +1,5 @@
 ---
+import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
@@ -28,7 +29,7 @@ const schema = {
   "publisher": {
     "@type": "Organization",
     "name": "True Joy Birthing",
-    "logo": { "@type": "ImageObject", "url": "https://truejoybirthing.com/favicon.svg" }
+    "logo": { "@type": "ImageObject", "url": "https://truejoybirthing.com/images/logo.png" }
   },
   "datePublished": date,
   ...(featuredImage && { "image": featuredImage }),
@@ -49,40 +50,40 @@ const schemaJson = JSON.stringify(schema);
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     {canonical && <link rel="canonical" href={canonical} />}
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
     <script type="application/ld+json" set:html={schemaJson} />
   </head>
-  <body class="min-h-dvh flex flex-col font-sans">
-    <header class="bg-tjb-cream/90 backdrop-blur-sm sticky top-0 z-50 border-b border-tjb-rose/50">
+  <body class="min-h-dvh flex flex-col font-sans bg-tjb-cream">
+    <header class="bg-tjb-cream/95 backdrop-blur-sm sticky top-0 z-50 border-b border-tjb-lavender-300/30">
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="/" class="text-xl font-bold text-tjb-forest tracking-tight">True Joy Birthing</a>
-        <nav class="hidden md:flex gap-6 text-sm font-medium text-tjb-soft">
-          <a href="/" class="hover:text-tjb-forest transition">Home</a>
-          <a href="/about" class="hover:text-tjb-forest transition">About</a>
-          <a href="/blog" class="hover:text-tjb-forest transition">Blog</a>
-          <a href="/birth-support" class="hover:text-tjb-forest transition">Find Support</a>
-          <a href="/contact" class="hover:text-tjb-forest transition">Contact</a>
+        <a href="/" class="flex items-center gap-3 group">
+          <img src="/images/logo.png" alt="True Joy Birthing" class="h-12 w-auto transition-transform duration-300 group-hover:scale-[1.02]"/>
+        </a>
+        <nav class="hidden md:flex gap-8 text-sm font-semibold tracking-wide text-tjb-gray">
+          <a href="/" class="hover:text-tjb-rose-dark transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-dark after:transition-all after:duration-300 hover:after:w-full">Home</a>
+          <a href="/about" class="hover:text-tjb-rose-dark transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-dark after:transition-all after:duration-300 hover:after:w-full">About</a>
+          <a href="/blog" class="hover:text-tjb-rose-dark transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-dark after:transition-all after:duration-300 hover:after:w-full">Blog</a>
+          <a href="/birth-support" class="hover:text-tjb-rose-dark transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-dark after:transition-all after:duration-300 hover:after:w-full">Find Support</a>
+          <a href="/contact" class="hover:text-tjb-rose-dark transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-dark after:transition-all after:duration-300 hover:after:w-full">Connect</a>
         </nav>
-        <a href="/birth-plan-course" class="hidden md:inline-block bg-tjb-forest text-tjb-cream px-4 py-2 rounded-lg text-sm font-semibold hover:bg-tjb-sage transition">
+        <a href="/birth-plan-course" class="hidden md:inline-block btn-primary text-sm py-2 px-4">
           Get the Course
         </a>
-        <button id="mobile-menu-btn" class="md:hidden text-tjb-charcoal" aria-label="Open menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
+        <button id="mobile-menu-btn" class="md:hidden text-tjb-charcoal p-2" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
-      <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 border-t border-tjb-rose/30">
-        <nav class="flex flex-col gap-3 pt-4 text-sm font-medium text-tjb-soft">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/blog">Blog</a>
-          <a href="/birth-support">Find Support</a>
-          <a href="/contact">Contact</a>
-          <a href="/birth-plan-course" class="bg-tjb-forest text-tjb-cream px-4 py-2 rounded-lg text-center font-semibold w-fit">Get the Course</a>
+      <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 border-t border-tjb-lavender-300/20 bg-tjb-cream">
+        <nav class="flex flex-col gap-4 pt-6 text-sm font-semibold tracking-wide text-tjb-gray">
+          <a href="/" class="hover:text-tjb-rose-dark transition">Home</a>
+          <a href="/about" class="hover:text-tjb-rose-dark transition">About</a>
+          <a href="/blog" class="hover:text-tjb-rose-dark transition">Blog</a>
+          <a href="/birth-support" class="hover:text-tjb-rose-dark transition">Find Support</a>
+          <a href="/contact" class="hover:text-tjb-rose-dark transition">Connect</a>
+          <a href="/birth-plan-course" class="btn-primary text-center w-fit">Get the Course</a>
         </nav>
       </div>
     </header>
@@ -91,34 +92,34 @@ const schemaJson = JSON.stringify(schema);
       <slot />
     </main>
 
-    <footer class="bg-tjb-forest text-tjb-cream/80 mt-auto">
-      <div class="max-w-6xl mx-auto px-6 py-12 grid gap-8 md:grid-cols-3">
+    <footer class="bg-tjb-charcoal text-tjb-cream/80 mt-auto">
+      <div class="max-w-6xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-3">
         <div>
-          <p class="font-bold text-tjb-cream text-lg mb-2">True Joy Birthing</p>
-          <p class="text-sm">Birth education and planning tools -- free for moms, Pro for doulas and midwives.</p>
+          <img src="/images/logo.png" alt="True Joy Birthing" class="h-10 w-auto mb-4 brightness-100 invert opacity-90" />
+          <p class="text-sm text-tjb-gray-300 leading-relaxed">Birth education and planning tools — free for moms, Pro for doulas and midwives.</p>
         </div>
         <div>
-          <p class="font-semibold text-tjb-cream mb-2">Resources</p>
-          <ul class="text-sm space-y-1">
-            <li><a href="/blog" class="hover:text-white transition">Blog</a></li>
-            <li><a href="/birth-support" class="hover:text-white transition">Birth Support by City</a></li>
-            <li><a href="/faq" class="hover:text-white transition">FAQ</a></li>
-            <li><a href="/privacy" class="hover:text-white transition">Privacy</a></li>
-            <li><a href="/terms" class="hover:text-white transition">Terms</a></li>
+          <p class="font-semibold text-white mb-4 tracking-wide text-sm uppercase">Resources</p>
+          <ul class="text-sm space-y-2">
+            <li><a href="/blog" class="hover:text-tjb-lavender-light transition">Blog</a></li>
+            <li><a href="/birth-support" class="hover:text-tjb-lavender-light transition">Birth Support by City</a></li>
+            <li><a href="/faq" class="hover:text-tjb-lavender-light transition">FAQ</a></li>
+            <li><a href="/privacy" class="hover:text-tjb-lavender-light transition">Privacy</a></li>
+            <li><a href="/terms" class="hover:text-tjb-lavender-light transition">Terms</a></li>
           </ul>
         </div>
         <div>
-          <p class="font-semibold text-tjb-cream mb-2">Get the Free App</p>
-          <p class="text-sm mb-3">Build your birth plan, learn your options, and feel confident.</p>
-          <div class="flex flex-wrap gap-2">
-            <a href="https://apps.apple.com/app/true-joy-birthing" class="inline-block bg-tjb-cream text-tjb-forest px-3 py-1.5 rounded text-xs font-semibold hover:bg-white transition">App Store</a>
-            <a href="https://play.google.com/store/apps/details?id=com.truejoybirthing" class="inline-block bg-tjb-cream text-tjb-forest px-3 py-1.5 rounded text-xs font-semibold hover:bg-white transition">Google Play</a>
+          <p class="font-semibold text-white mb-4 tracking-wide text-sm uppercase">Get the Free App</p>
+          <p class="text-sm text-tjb-gray-300 mb-4 leading-relaxed">Build your birth plan, learn your options, and feel confident.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://apps.apple.com/app/true-joy-birthing" class="inline-block bg-tjb-lavender-dark text-white px-4 py-2 rounded-full text-xs font-semibold hover:bg-tjb-rose-dark transition">App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.truejoybirthing" class="inline-block bg-tjb-lavender-dark text-white px-4 py-2 rounded-full text-xs font-semibold hover:bg-tjb-rose-dark transition">Google Play</a>
           </div>
         </div>
       </div>
-      <div class="border-t border-tjb-sage/30 max-w-6xl mx-auto px-6 py-4 text-xs text-tjb-cream/50">
-        &copy; {new Date().getFullYear()} True Joy Birthing. Built with intention.
-        <br/>Not medical advice. Always consult your care provider.
+      <div class="border-t border-tjb-gray-200/20 max-w-6xl mx-auto px-6 py-5 text-xs text-tjb-gray-300">
+        © {new Date().getFullYear()} True Joy Birthing. Built with intention.
+        <span class="block mt-1">Not medical advice. Always consult your care provider.</span>
       </div>
     </footer>
 
