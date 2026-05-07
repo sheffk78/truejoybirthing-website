@@ -1,0 +1,125 @@
+# True Joy Birthing — Full Context for AI Systems
+
+## Company Overview
+
+True Joy Birthing (truejoybirthing.com) is a birth education platform and software company founded by Shelbi Kohler, a certified birth doula based in Dallas-Fort Worth, Texas. The company operates on a SaaS-first business model where Pro Mode subscriptions ($29.99/month via app stores) serve as the core revenue engine, while free consumer tools (birth plan PDF, mobile app, educational blog content) function as the acquisition and marketing engine.
+
+## The Flywheel
+
+Moms searching for birth planning information land on the True Joy Birthing website → download the free birth plan or app (email captured) → build their plan in the free Parent Mode app → share it with their doula → the doula sees the organized plan and learns about Pro Mode → upgrades to Pro Mode in the app → the doula's next client repeats the loop.
+
+This "born connected" architecture means every mom who builds a plan creates a Pro Mode lead when she shares it with her birth professional.
+
+## Products & Services
+
+### Consumer-Facing (Free)
+- **Free Birth Plan PDF** — A structured, hospital-ready birth plan covering all stages of labor, delivery, and postpartum. Designed to be read by a nurse in two minutes. Requires email signup.
+- **Parent Mode App (Free)** — iOS and Android app for building, editing, and sharing birth plans. Includes educational content on every birth option.
+
+### Info Products (One-Time Purchase via Website)
+- **Birth Plan Mini-Course** — $47 self-paced video course. Covers every birth option, tradeoffs, and the exact phrases to use when communicating preferences to hospital staff. Approximately 2-3 hours of content.
+- **1:1 Confidence Session** — $250-300 per 60-minute Zoom session. Shelbi reviews the birth plan line by line, helps the client anticipate questions, and builds confidence for hospital communication. Limited to 5-8 sessions per month.
+
+### Professional SaaS (Recurring via App Stores)
+- **Pro Mode** — $29.99/month or $274.99/year. Available only through Apple App Store and Google Play. Includes: client plan dashboard, client notes, plan sharing tools, evidence library, and priority support. Target market: birth doulas, postpartum doulas, and midwives.
+
+## Content & SEO Strategy
+
+### Primary Keywords
+- "birth plan"
+- "what is a doula"
+- "how much does a doula cost" (by city)
+- "doula vs midwife"
+- "how to hire a doula"
+- "doula insurance coverage"
+- "birth doula [city name]"
+
+### Content Pillars
+1. Birth plan creation and communication
+2. Doula education (costs, hiring, types, insurance)
+3. Local birth support resources (Texas cities)
+4. Postpartum and recovery planning
+5. Evidence-based birth information (no medical advice)
+
+### Blog Posts (Published)
+- What Is a Birth Doula? (Complete Guide for Expecting Moms)
+- What Are Doula Services? A Complete Breakdown
+- How Much Are Doula Services? City-by-City Cost Guide
+- How to Hire a Doula: Interview Questions and Red Flags
+- Doula vs Midwife: Who You Actually Need
+- Doula Support: What to Expect at Every Stage
+- Is a Doula Covered by Insurance? A Complete Guide
+- Doula Insurance Coverage: What Your Plan Actually Pays For
+- Doula Reimbursement Through Medicaid: State-by-State Guide
+- Postpartum Doula: Support After You Bring Baby Home
+- Debunking Doula Myths: What Hollywood Gets Wrong
+
+### Local Pages (Texas Cities)
+- Dallas, TX — Hospital info, doula costs, Medicaid status
+- Houston, TX — Hospital info, doula costs, Medicaid status
+- Austin, TX — Hospital info, doula costs, Medicaid status
+- San Antonio, TX — Hospital info, doula costs, Medicaid status
+- Fort Worth, TX — Hospital info, doula costs, Medicaid status
+
+## Brand Voice & Tone
+
+- Warm, knowledgeable, non-judgmental
+- Shelbi writes like a trusted older sister who happens to be a certified doula
+- Evidence-based but accessible — no academic jargon
+- Empowering without being preachy
+- Honest about tradeoffs and uncertainty in birth
+- No medical advice provided; always defer to care providers
+- No shame for any birth choice (hospital, home, medicated, unmedicated)
+
+## About Shelbi Kohler
+
+- Certified birth doula (DONA-trained)
+- Based in Dallas-Fort Worth, Texas metroplex
+- Available for virtual 1:1 sessions nationwide
+- Specializes in hospital birth planning and communication
+- Philosophy: "Your birth, your choices, your confidence"
+
+## Technical Details
+
+- Website: Astro static site generator, deployed on Cloudflare Pages
+- Domain: truejoybirthing.com (managed via Cloudflare)
+- Email: support@truejoybirthing.com
+- Social: @truejoybirthing on Instagram
+- App platforms: iOS (App Store), Android (Google Play)
+- Payment processing: Stripe for website products; Apple/Google for Pro Mode subscriptions
+- Email marketing: Brevo (formerly Sendinblue)
+- Analytics: GA4 + Google Search Console
+
+## Policies & Disclaimers
+
+- No medical advice provided on any page or in any product
+- Always consult your care provider for medical decisions
+- HIPAA-aligned data handling in Pro Mode (encryption at rest and in transit)
+- Privacy policy and terms of service available on website
+- Pro Mode subscription billing handled by Apple/Google; cancellations through respective platforms
+- Course and session purchases handled by Stripe; refunds per published policy
+
+## Contact Information
+
+- Website: https://truejoybirthing.com
+- Email: support@truejoybirthing.com
+- Instagram: https://instagram.com/truejoybirthing
+- App Store: https://apps.apple.com/app/true-joy-birthing
+- Google Play: https://play.google.com/store/apps/details?id=com.truejoybirthing
+
+## Competitors & Differentiation
+
+True Joy Birthing is not a doula directory (like DoulaMatch.net) or a course company (like Mama Natural). It is birth-planning software for professionals, marketed through free consumer tools. The differentiation:
+
+1. Software-first, not service-first — the product is the app, not Shelbi's time
+2. "Born connected" architecture — free users naturally introduce professionals to the paid product
+3. Education at every touchpoint — every free tool teaches something about birth options
+4. Pro Mode is the only all-in-one client management tool designed specifically for birth professionals
+
+## Future Roadmap (Committed)
+
+- Partner View: Shareable birth plan view for partners/support people
+- Labor Mode: Quick-reference checklist for active labor
+- Postpartum module: Recovery planning and support tools
+- Evidence library: Regularly updated research summaries for Pro Mode subscribers
+- Community features: Deferred until 500+ active Pro users
