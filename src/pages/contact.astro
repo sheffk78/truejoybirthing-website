@@ -10,7 +10,6 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
   canonical="https://truejoybirthing.com/contact"
   breadcrumbList={breadcrumbList}
 >
->
   <section class="bg-tjb-cream pt-16 pb-12">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <h1 class="text-3xl md:text-4xl font-bold mb-4">Contact</h1>
@@ -22,16 +21,16 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
     <div class="max-w-2xl mx-auto px-6">
       <form action="/contact" method="POST" class="space-y-4" data-netlify="true" name="contact">
         <div>
-          <label class="block text-sm font-medium mb-1">Name</label>
-          <input type="text" name="name" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+          <label for="contact-name" class="block text-sm font-medium mb-1">Name</label>
+          <input type="text" id="contact-name" name="name" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
         </div>
         <div>
-          <label class="block text-sm font-medium mb-1">Email</label>
-          <input type="email" name="email" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+          <label for="contact-email" class="block text-sm font-medium mb-1">Email</label>
+          <input type="email" id="contact-email" name="email" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
         </div>
         <div>
-          <label class="block text-sm font-medium mb-1">Message</label>
-          <textarea name="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required></textarea>
+          <label for="contact-message" class="block text-sm font-medium mb-1">Message</label>
+          <textarea id="contact-message" name="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required></textarea>
         </div>
         <button type="submit" class="bg-tjb-lavender-500 text-tjb-cream px-8 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">Send Message</button>
       </form>

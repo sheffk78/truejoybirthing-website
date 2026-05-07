@@ -6,12 +6,14 @@ interface Props {
   title: string;
   description?: string;
   canonical?: string;
+  ogImage?: string;
   schema?: object;
   breadcrumbList?: { name: string; url: string }[];
 }
 
-const { title, description = "True Joy Birthing — birth education and planning tools for moms, doulas, and midwives.", canonical } = Astro.props;
+const { title, description = "True Joy Birthing — birth education and planning tools for moms, doulas, and midwives.", canonical, ogImage = "https://truejoybirthing.com/images/og-default.webp" } = Astro.props;
 const breadcrumbList = Astro.props.breadcrumbList;
+const currentPath = Astro.url.pathname;
 
 const schemaBase = {
   "@context": "https://schema.org",
@@ -65,6 +67,15 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonical || `https://truejoybirthing.com${currentPath}`} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
     {canonical && <link rel="canonical" href={canonical} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
@@ -75,6 +86,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
     <script type="application/ld+json" set:html={schemaJson} />
   </head>
   <body class="min-h-dvh flex flex-col font-sans">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-tjb-charcoal focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>
     <!-- Header -->
     <header class="bg-tjb-cream/95 backdrop-blur-sm sticky top-0 z-50 border-b border-tjb-lavender-300/30">
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -85,7 +97,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
             class="h-12 w-auto transition-transform duration-300 group-hover:scale-[1.02]"
           />
         </a>
-        <nav class="hidden md:flex gap-8 text-sm font-semibold tracking-wide text-tjb-gray">
+        <nav class="hidden md:flex gap-8 text-sm font-semibold tracking-wide text-tjb-gray" aria-label="Main">
           <a href="/" class="hover:text-tjb-rose-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-500 after:transition-all after:duration-300 hover:after:w-full">Home</a>
           <a href="/about" class="hover:text-tjb-rose-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-500 after:transition-all after:duration-300 hover:after:w-full">About</a>
           <a href="/blog" class="hover:text-tjb-rose-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-500 after:transition-all after:duration-300 hover:after:w-full">Blog</a>
@@ -99,7 +111,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
         </button>
       </div>
       <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 border-t border-tjb-lavender-300/20 bg-tjb-cream">
-        <nav class="flex flex-col gap-4 pt-6 text-sm font-semibold tracking-wide text-tjb-gray">
+        <nav class="flex flex-col gap-4 pt-6 text-sm font-semibold tracking-wide text-tjb-gray" aria-label="Mobile">
           <a href="/" class="hover:text-tjb-rose-500 transition">Home</a>
           <a href="/about" class="hover:text-tjb-rose-500 transition">About</a>
           <a href="/blog" class="hover:text-tjb-rose-500 transition">Blog</a>
@@ -109,7 +121,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
       </div>
     </header>
 
-    <main class="flex-1">
+    <main class="flex-1" id="main">
       <slot />
     </main>
 
@@ -146,8 +158,13 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
     </footer>
 
     <script>
-      document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
-        document.getElementById('mobile-menu')?.classList.toggle('hidden');
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      btn?.addEventListener('click', () => {
+        menu?.classList.toggle('hidden');
+        const isOpen = !menu?.classList.contains('hidden');
+        btn?.setAttribute('aria-expanded', String(isOpen));
+        btn?.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
       });
     </script>
   </body>
