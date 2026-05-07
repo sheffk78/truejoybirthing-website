@@ -40,11 +40,41 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
       </div>
 
       <div class="bg-tjb-cream p-6 rounded-xl text-center my-8">
-        <p class="text-3xl font-bold text-tjb-lavender-500 mb-2">$250–300</p>
+        <p class="text-3xl font-bold text-tjb-lavender-500 mb-2">$250</p>
         <p class="text-sm text-tjb-gray mb-4">60–75 minutes via Zoom</p>
-        <button class="bg-tjb-lavender-500 text-tjb-cream px-8 py-3 rounded-lg font-semibold text-lg hover:bg-tjb-rose-500 transition" disabled>Book Now — Coming Soon</button>
-        <p class="text-xs text-tjb-gray mt-2">Calendly + Stripe integration in progress. Contact us directly for immediate booking.</p>
+        <button
+          id="checkout-session"
+          class="bg-tjb-lavender-500 text-tjb-cream px-8 py-3 rounded-lg font-semibold text-lg hover:bg-tjb-rose-500 transition"
+          data-price-id="price_1TUJVT2lZzmsSFmdi22Zw79w"
+        >Book Now — $250</button>
+        <p class="text-xs text-tjb-gray mt-2">Secure checkout via Stripe. Shelbi will reach out within 24 hours to schedule your Zoom call.</p>
       </div>
+
+      <script>
+        document.getElementById('checkout-session')?.addEventListener('click', async function(e) {
+          const btn = e.target;
+          const originalText = btn.textContent;
+          btn.textContent = 'Redirecting to checkout…';
+          btn.disabled = true;
+          try {
+            const res = await fetch('/api/create-checkout-session', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ priceId: btn.dataset.priceId }),
+            });
+            const data = await res.json();
+            if (data.url) {
+              window.location.href = data.url;
+            } else {
+              throw new Error(data.error || 'Checkout failed');
+            }
+          } catch (err) {
+            btn.textContent = originalText;
+            btn.disabled = false;
+            alert('Something went wrong. Please try again or email shelbi@truejoybirthing.com');
+          }
+        });
+      </script>
 
       <p class="text-sm text-tjb-gray italic">Sessions are in high demand. If you need immediate support, email <a href="mailto:shelbi@truejoybirthing.com" class="text-tjb-rose-500">shelbi@truejoybirthing.com</a>.</p>
     </div>

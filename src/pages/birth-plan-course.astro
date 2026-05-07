@@ -44,9 +44,39 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
       <div class="bg-tjb-cream p-6 rounded-xl text-center my-8">
         <p class="text-3xl font-bold text-tjb-lavender-500 mb-2">$47</p>
         <p class="text-sm text-tjb-gray mb-4">One-time purchase. Lifetime access.</p>
-        <button class="bg-tjb-lavender-500 text-tjb-cream px-8 py-3 rounded-lg font-semibold text-lg hover:bg-tjb-rose-500 transition" disabled>Enroll Now — Coming Soon</button>
-        <p class="text-xs text-tjb-gray mt-2">Stripe checkout integration in progress. Course content already live in Thrive.</p>
+        <button
+          id="checkout-course"
+          class="bg-tjb-lavender-500 text-tjb-cream px-8 py-3 rounded-lg font-semibold text-lg hover:bg-tjb-rose-500 transition"
+          data-price-id="price_1TUJVS2lZzmsSFmdf7yahFcF"
+        >Enroll Now — $47</button>
+        <p class="text-xs text-tjb-gray mt-2">Secure checkout via Stripe. Instant access after purchase.</p>
       </div>
+
+      <script>
+        document.getElementById('checkout-course')?.addEventListener('click', async function(e) {
+          const btn = e.target;
+          const originalText = btn.textContent;
+          btn.textContent = 'Redirecting to checkout…';
+          btn.disabled = true;
+          try {
+            const res = await fetch('/api/create-checkout-session', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ priceId: btn.dataset.priceId }),
+            });
+            const data = await res.json();
+            if (data.url) {
+              window.location.href = data.url;
+            } else {
+              throw new Error(data.error || 'Checkout failed');
+            }
+          } catch (err) {
+            btn.textContent = originalText;
+            btn.disabled = false;
+            alert('Something went wrong. Please try again or email shelbi@truejoybirthing.com');
+          }
+        });
+      </script>
 
       <h2>Instructor</h2>
       <p>Shelbi, certified birth doula and childbirth educator. She's walked this journey with hundreds of families — and she built the course she wishes every mom had before their first birth.</p>
