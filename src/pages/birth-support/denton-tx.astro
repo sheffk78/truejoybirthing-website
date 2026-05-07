@@ -1,0 +1,124 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const city = "Denton";
+const state = "TX";
+const pageTitle = `Birth Support in ${city}, ${state}`;
+const pageDesc = `Find birth support resources in Denton, TX — local hospital info, doula costs, Medicaid status, and a free birth plan built for local families.`;
+const pageUrl = `https://truejoybirthing.com/birth-support/denton-tx`;
+
+const hospitals = ['Texas Health Denton', 'Medical City Denton'];
+const birthCenters = ['Denton Birth Center'];
+const costLow = 900;
+const costHigh = 2500;
+const medicaidNote = "Texas Medicaid's doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Denton area. Confirm with your Medicaid plan.";
+const insuranceNote = "Some private insurers in the Denton area now cover doula support as part of maternal wellness benefits. Contact your plan for details.";
+const culture = "Denton is a vibrant college town north of the DFW metroplex with a young, health-conscious population. The city has a strong natural birth community and a respected birth center. Many Denton families are drawn to evidence-based birth preparation and value informed decision-making.";
+const shelbiServesHere = true;
+
+const faqs = [
+  { q: "Does Medicaid cover doulas in Denton?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits in the Denton area." },
+  { q: "Which hospitals in Denton accommodate birth plans?", a: "Texas Health Denton and other area facilities generally accommodate birth plans, but policies vary. Always confirm your hospital's policy during your hospital tour." },
+  { q: "How much does a doula cost in Denton?", a: "$900 to $2,500 depending on experience and package. Doula services are often considered worthwhile by families who want continuous support through labor and delivery." },
+  { q: "Does True Joy Birthing work with Denton families?", a: "Shelbi is based in the DFW metro and can support Denton-area families with virtual birth plan sessions. The free app and birth plan work for any Denton hospital." }
+];
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDesc}
+  canonical={pageUrl}
+>
+
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Birth Support in Denton, TX</h1>
+      <p class="text-lg text-tjb-gray mb-6">
+        Local hospital options, doula costs, and Medicaid status — plus the free birth plan template families in Denton use to feel confident and prepared.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="#download-pdf" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">
+          Download Free Birth Plan</a>
+        <a href="https://apps.apple.com/app/true-joy-birthing" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-lg font-semibold hover:bg-tjb-cream transition">
+          Get the Free App</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 prose">
+
+      <h2>What Birth Support Looks Like in Denton</h2>
+      <p>Denton is a vibrant college town north of the DFW metroplex with a young, health-conscious population. The city has a strong natural birth community and a respected birth center. Many Denton families are drawn to evidence-based birth preparation and value informed decision-making.</p>
+
+      <p>Families in Denton often deliver at hospitals including:</p>
+      <ul>
+        <li>Texas Health Denton</li>
+        <li>Medical City Denton</li>
+      </ul>
+      <p class="text-sm text-tjb-gray italic">Hospitals mentioned for context only. True Joy Birthing does not endorse any specific provider.</p>
+
+
+      <h2>Birth Centers Near Denton</h2>
+      <ul>
+        <li>Denton Birth Center</li>
+      </ul>
+      <p class="text-sm text-tjb-gray italic">Birth centers mentioned for context only. True Joy Birthing does not endorse any specific provider.</p>
+
+      <h2>Doula Costs in Denton</h2>
+      <p>In the Denton area, doula services typically range from <strong>$900 to $2,500</strong> depending on:</p>
+      <ul>
+        <li>Experience and certifications (DONA, CAPPA, etc.)</li>
+        <li>Package inclusions (prenatal visits, on-call period, postpartum check-ins)</li>
+        <li>Whether the doula serves a wide area or focuses specifically on Denton</li>
+      </ul>
+
+      <h2>Medicaid & Insurance Coverage</h2>
+      <p>{medicaidNote}</p>
+      <p>{insuranceNote}</p>
+
+
+      <h2>Virtual Birth Plan Support for Denton</h2>
+      <p>Shelbi offers virtual 1:1 birth plan sessions for Denton-area families. Whether you're delivering at Texas Health Denton or planning a home birth, the session walks through your plan line by line — with the words to use when you want to slow things down or ask questions.</p>
+      <div class="my-6 not-prose">
+        <a href="/birth-plan-session" class="btn-accent inline-block">Book a 1:1 Session</a>
+      </div>
+
+      <h2>Free Birth Plan for Denton Families</h2>
+      <p>Download the same birth plan template Denton families use to prepare for hospital conversations — free, structured, and designed to be read by a nurse in two minutes.</p>
+      <div class="my-8 not-prose">
+        <a href="#download" class="btn-primary inline-block">Download Free Birth Plan</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-tjb-cream-50">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-8">Frequently Asked Questions — Denton</h2>
+      <div class="space-y-6">
+        {faqs.map((faq, i) => (
+          <div class="border border-tjb-lavender-200 rounded-lg p-5 bg-white">
+            <h3 class="text-lg font-semibold mb-2">{faq.q}</h3>
+            <p class="text-tjb-gray">{faq.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section id="download-pdf" class="bg-tjb-lavender-100 py-16">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Get Your Free Birth Plan</h2>
+      <p class="text-tjb-gray mb-8">Join families in Denton and across Texas who walk into their births with a clear plan and the words to stand by it.</p>
+      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4" action="#" method="POST">
+        <input name="email" type="email" placeholder="Your email" class="flex-1 px-5 py-3.5 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-rose-400 bg-white text-[0.9375rem]" required />
+        <button type="submit" class="btn-primary whitespace-nowrap">Get My Plan →</button>
+      </form>
+      <p class="text-xs text-tjb-gray-300">No spam. Just a free birth plan and occasional tips you can actually use.</p>
+    </div>
+  </section>
+
+</Layout>
