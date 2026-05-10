@@ -17,7 +17,8 @@
 /is-a-doula-covered-by-insurance /blog/doula-covered-by-insurance/ 301
 /is-a-doula-covered-by-insurance/ /blog/doula-covered-by-insurance/ 301
 /postpartum-doula /blog/postpartum-doula/ 301
-/postpartum-doula/ /blog/postpartum-doula/ 301
+# NOTE: /postpartum-doula/ now serves the dedicated SEO landing page.
+# The blog post lives at /blog/postpartum-doula/.
 /doula-myths /blog/debunking-doula-myths/ 301
 /doula-myths/ /blog/debunking-doula-myths/ 301
 /doula-support /blog/doula-support/ 301
@@ -76,6 +77,17 @@
 /xmlrpc.php /404.html 404
 
 # ════════════════════════════════════════════════════════════
+# LEGAL PAGE REDIRECTS (old app URLs → new pages)
+# ════════════════════════════════════════════════════════════
+
+/terms-of-service /terms/ 301
+/terms-of-service/ /terms/ 301
+/privacy-policy /privacy/ 301
+/privacy-policy/ /privacy/ 301
+/disclaimer /terms/ 301
+/disclaimer/ /terms/ 301
+
+# ════════════════════════════════════════════════════════════
 # CONVENIENCE SHORTCUTS
 # ════════════════════════════════════════════════════════════
 
@@ -91,6 +103,10 @@
 /free /#download 301
 /help /faq/ 301
 /support /faq/ 301
+/template /birth-plan-template/ 301
+/checklist /birth-plan-checklist/ 301
+/cost /doula-cost/ 301
+/postpartum /postpartum-doula/ 301
 
 # ════════════════════════════════════════════════════════════
 # OLD CITY PAGES → NEW CITY PAGES

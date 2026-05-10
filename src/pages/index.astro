@@ -64,8 +64,8 @@ import Layout from '../layouts/Layout.astro';
         <div class="relative flex justify-center md:justify-end">
           <div class="w-44 h-56 md:w-52 md:h-64 rounded-[60%_40%_50%_50%/40%_50%_50%_60%] overflow-hidden border-[3px] border-tjb-rose-200 shadow-xl shadow-tjb-lavender-300/40 shrink-0">
             <img 
-              src="/images/doula-walking.webp" 
-              alt="Shelbi walking with a pregnant mother — certified birth doula support" 
+              src="/images/shelbi-real-hero.webp" 
+              alt="Shelbi Kohler — certified birth doula and founder of True Joy Birthing" 
               class="w-full h-full object-cover"
               loading="eager"
             />
@@ -180,6 +180,37 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ═══════════════════════════════════════════
+       RESOURCES — Quick links to key planning pages
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="eyebrow mb-3">Plan Your Birth</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+        <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15]">Everything You Need to Feel Prepared</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <a href="/birth-plan-template/" class="border border-tjb-lavender-300 rounded-lg p-5 hover:border-tjb-lavender-500 hover:shadow-md transition text-center group">
+          <h3 class="font-semibold text-tjb-charcoal mb-1 group-hover:text-tjb-rose-500 transition">Birth Plan Template</h3>
+          <p class="text-sm text-tjb-gray">Free template built by a doula. Download and fill it out.</p>
+        </a>
+        <a href="/birth-plan-checklist/" class="border border-tjb-lavender-300 rounded-lg p-5 hover:border-tjb-lavender-500 hover:shadow-md transition text-center group">
+          <h3 class="font-semibold text-tjb-charcoal mb-1 group-hover:text-tjb-rose-500 transition">Birth Plan Checklist</h3>
+          <p class="text-sm text-tjb-gray">Every preference point, organized by category.</p>
+        </a>
+        <a href="/doula-cost/" class="border border-tjb-lavender-300 rounded-lg p-5 hover:border-tjb-lavender-500 hover:shadow-md transition text-center group">
+          <h3 class="font-semibold text-tjb-charcoal mb-1 group-hover:text-tjb-rose-500 transition">Doula Cost Guide</h3>
+          <p class="text-sm text-tjb-gray">What doulas cost, what's included, and insurance coverage.</p>
+        </a>
+        <a href="/postpartum-doula/" class="border border-tjb-lavender-300 rounded-lg p-5 hover:border-tjb-lavender-500 hover:shadow-md transition text-center group">
+          <h3 class="font-semibold text-tjb-charcoal mb-1 group-hover:text-tjb-rose-500 transition">Postpartum Doula</h3>
+          <p class="text-sm text-tjb-gray">What they do, what they cost, and why postpartum support matters.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
        LEAD MAGNET — Clean, warm, prominent
        ═══════════════════════════════════════════ -->
   <section id="download" class="py-20 md:py-28">
@@ -191,18 +222,20 @@ import Layout from '../layouts/Layout.astro';
         Join thousands of moms who've walked into their births with a clear plan and the words to stand by it.
       </p>
 
-      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4" action="#" method="POST">
+      <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4">
         <input 
+          id="lead-email"
           name="email" 
           type="email" 
           placeholder="Your email" 
           class="flex-1 px-5 py-3.5 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-rose-400 bg-white transition-colors text-[0.9375rem]"
           required
         />
-        <button type="submit" class="btn-primary whitespace-nowrap">
+        <button type="submit" id="lead-submit" class="btn-primary whitespace-nowrap">
           Get My Plan →
         </button>
       </form>
+      <p id="lead-status" class="text-xs hidden text-tjb-gray-300"></p>
       <p class="text-xs text-tjb-gray-300">No spam. Just a free birth plan and occasional tips you can actually use.</p>
     </div>
   </section>
@@ -232,6 +265,8 @@ import Layout from '../layouts/Layout.astro';
         <a href="/birth-support/san-antonio-tx" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">San Antonio, TX</a>
         <span class="text-tjb-rose-400">·</span>
         <a href="/birth-support/fort-worth-tx" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Fort Worth, TX</a>
+        <span class="text-tjb-rose-400">·</span>
+        <a href="/birth-support/el-paso-tx" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">El Paso, TX</a>
       </div>
 
       <p class="text-center mt-8">
@@ -241,5 +276,47 @@ import Layout from '../layouts/Layout.astro';
       </p>
     </div>
   </section>
+
+  <script>
+    const leadForm = document.getElementById('lead-magnet-form') as HTMLFormElement;
+    const leadStatus = document.getElementById('lead-status') as HTMLParagraphElement;
+    const leadBtn = document.getElementById('lead-submit') as HTMLButtonElement;
+    const leadEmail = document.getElementById('lead-email') as HTMLInputElement;
+
+    leadForm?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = leadEmail.value;
+
+      if (!email) return;
+
+      leadBtn.disabled = true;
+      leadBtn.textContent = 'Sending...';
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: 'Lead Magnet', email, message: `Birth plan download request from: ${email}` }),
+        });
+
+        const data = await res.json();
+        if (res.ok && data.success) {
+          leadStatus.textContent = '✓ Check your inbox!';
+          leadStatus.className = 'text-xs text-green-700 mt-2';
+          leadForm.reset();
+        } else {
+          leadStatus.textContent = 'Something went wrong. Please try again.';
+          leadStatus.className = 'text-xs text-red-600 mt-2';
+        }
+      } catch {
+        leadStatus.textContent = 'Network error. Please try again.';
+        leadStatus.className = 'text-xs text-red-600 mt-2';
+      } finally {
+        leadBtn.disabled = false;
+        leadBtn.textContent = 'Get My Plan →';
+        leadStatus.classList.remove('hidden');
+      }
+    });
+  </script>
 
 </Layout>

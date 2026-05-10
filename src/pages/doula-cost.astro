@@ -1,0 +1,216 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "How Much Does a Doula Cost", "url": "https://truejoybirthing.com/doula-cost/"}];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://truejoybirthing.com/doula-cost/#service",
+      "name": "Birth Doula Support",
+      "description": "Non-medical emotional, physical, and informational support during labor and delivery.",
+      "provider": { "@id": "https://truejoybirthing.com/#organization" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "650",
+        "highPrice": "3000",
+        "priceCurrency": "USD",
+        "offerCount": "1000"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://truejoybirthing.com/doula-cost/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "How much does a birth doula cost?", "acceptedAnswer": { "@type": "Answer", "text": "In the US, birth doula services typically range from $650 to $3,000 depending on location, experience, and what's included. The national average is around $1,200–$1,500 for a standard birth package." } },
+        { "@type": "Question", "name": "What's included in a doula's fee?", "acceptedAnswer": { "@type": "Answer", "text": "A standard birth doula package usually includes 1-2 prenatal visits, on-call availability from 37-38 weeks, continuous labor support, and 1-2 postpartum visits. Some include additional services like birth plan help, texting support, or lactation guidance." } },
+        { "@type": "Question", "name": "Does insurance cover doula costs?", "acceptedAnswer": { "@type": "Answer", "text": "Some private insurers are starting to cover doula services, particularly as part of maternal wellness benefits. Medicaid coverage for doulas is also expanding in many states. You'll need to check directly with your plan." } },
+        { "@type": "Question", "name": "Why do doulas cost so much?", "acceptedAnswer": { "@type": "Answer", "text": "Birth doulas are on-call for weeks, often leaving their own lives on hold. A standard package represents 30-50+ hours of work across prenatal visits, the birth itself (which can be 12-24+ hours), and postpartum visits. When you break it down hourly, the cost is often comparable to other professional support services." } },
+        { "@type": "Question", "name": "Are there low-cost or free doula options?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Many communities have volunteer doula programs, and some doulas offer sliding-scale fees or payment plans. If cost is a barrier, look into local doula collectives or ask about reduced-rate packages." } },
+        { "@type": "Question", "name": "Is a doula worth the cost?", "acceptedAnswer": { "@type": "Answer", "text": "Research consistently shows that continuous doula support leads to shorter labors, fewer interventions, and higher satisfaction with the birth experience. For many families, the investment pays off in confidence and outcomes." } }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="How Much Does a Doula Cost?"
+  description="Birth doula costs range from $650 to $3,000 in the US. Learn what affects the price, what's included, insurance coverage, and how to find affordable doula support."
+  canonical="https://truejoybirthing.com/doula-cost/"
+  breadcrumbList={breadcrumbList}
+  schema={schema}
+>
+
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">How Much Does a Doula Cost?</h1>
+      <p class="text-lg text-tjb-gray mb-6">
+        Birth doula services in the US typically cost <strong>$650–$3,000</strong>. Here's what drives that range, what you're actually paying for, and how to find support that fits your budget.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="/" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">
+          Get the Free Birth Plan</a>
+        <a href="/birth-support/" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-lg font-semibold hover:bg-tjb-cream transition">
+          Find Your City</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 prose">
+
+      <h2>Doula Cost at a Glance</h2>
+      <p>In the United States, birth doula services typically range from <strong>$650 to $3,000</strong> depending on where you live, the doula's experience, and what's included in the package.</p>
+
+      <div class="bg-tjb-cream p-5 rounded-lg my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-tjb-lavender-300">
+              <th class="text-left py-2 font-semibold">Region</th>
+              <th class="text-left py-2 font-semibold">Typical Range</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-tjb-lavender-100">
+              <td class="py-2">Major metros (NYC, LA, SF)</td>
+              <td class="py-2">$1,500–$3,000</td>
+            </tr>
+            <tr class="border-b border-tjb-lavender-100">
+              <td class="py-2">Texas cities (Dallas, Houston, Austin)</td>
+              <td class="py-2">$800–$2,800</td>
+            </tr>
+            <tr class="border-b border-tjb-lavender-100">
+              <td class="py-2">Mid-size cities</td>
+              <td class="py-2">$700–$2,000</td>
+            </tr>
+            <tr>
+              <td class="py-2">Smaller towns and rural areas</td>
+              <td class="py-2">$650–$1,500</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="text-xs text-tjb-gray mt-3 italic">These ranges reflect 2025-2026 market rates. Costs vary by individual doula and package.</p>
+      </div>
+
+      <h2>What's Included in a Doula's Fee</h2>
+      <p>A standard birth doula package typically includes:</p>
+      <ul>
+        <li><strong>1-2 prenatal visits</strong> — getting to know you, discussing your birth plan, answering questions</li>
+        <li><strong>On-call availability</strong> — usually starting at 37-38 weeks, the doula is available 24/7 until you deliver</li>
+        <li><strong>Continuous labor support</strong> — from the time you call them until 1-2 hours after delivery</li>
+        <li><strong>1-2 postpartum visits</strong> — processing the birth, breastfeeding support, newborn care help</li>
+        <li><strong>Phone and text support</strong> — throughout pregnancy and early postpartum</li>
+      </ul>
+      <p>When you add it up, a birth doula package often represents <strong>30-50+ hours</strong> of combined time — prenatal visits, on-call weeks, labor itself (8-24+ hours is common), and postpartum care. Broken down hourly, the rate is typically $25-50/hour, comparable to other professional support services.</p>
+
+      <h2>What Affects the Cost</h2>
+      <ul>
+        <li><strong>Location</strong> — Cost of living drives pricing. Doulas in major metros charge more than those in smaller cities.</li>
+        <li><strong>Experience</strong> — A doula with 100+ births will charge more than someone recently certified.</li>
+        <li><strong>Package inclusions</strong> — Some doulas include postpartum doula visits, lactation support, or childbirth education classes in their package.</li>
+        <li><strong>Add-on services</strong> — Placenta encapsulation, photography, aromatherapy, and other services increase the total.</li>
+        <li><strong>Availability</strong> — Doulas who take fewer clients or guarantee 1-on-1 attention may charge a premium.</li>
+      </ul>
+
+      <h2>Does Insurance Cover Doulas?</h2>
+      <p><strong>Private insurance:</strong> Some insurers are beginning to cover doula services as part of maternal wellness benefits. This is especially true for employer-sponsored plans through companies prioritizing maternal health outcomes. Ask your plan directly — don't assume the answer is no.</p>
+      <p><strong>Medicaid:</strong> Medicaid doula coverage is expanding state by state. As of 2026, several states including Texas are moving toward reimbursing doula services. Check with your Medicaid managed care plan for current benefits.</p>
+      <p><strong>FSA/HSA:</strong> Many families use Flexible Spending Account or Health Savings Account funds for doula services. Ask your doula for an itemized receipt you can submit for reimbursement.</p>
+
+      <h2>How to Find Affordable Doula Support</h2>
+      <ul>
+        <li><strong>Ask about sliding-scale fees.</strong> Many doulas offer reduced rates based on income.</li>
+        <li><strong>Check local doula collectives.</strong> Community-based organizations often provide lower-cost services.</li>
+        <li><strong>Look into volunteer doula programs.</strong> Some hospitals and nonprofits offer free doula support for families who qualify.</li>
+        <li><strong>Consider a student doula.</strong> Doulas completing their certification require a certain number of births and may offer reduced rates.</li>
+        <li><strong>Use the free birth plan tools.</strong> Even without a doula, a structured birth plan helps you feel prepared. <a href="/birth-plan-template/">Download the free template →</a></li>
+      </ul>
+
+      <h2>Find Doula Costs in Your City</h2>
+      <p>For city-specific doula cost information, hospital lists, and Medicaid coverage details:</p>
+      <p><a href="/birth-support/" class="text-tjb-lavender-500 font-semibold hover:underline">Browse city pages →</a></p>
+
+      <h2>Common Questions</h2>
+      <div class="space-y-4">
+        <div>
+          <h3 class="font-semibold mb-1">How much does a birth doula cost?</h3>
+          <p class="text-tjb-gray">In the US, birth doula services typically range from $650 to $3,000 depending on location, experience, and what's included. The national average is around $1,200–$1,500 for a standard birth package.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">What's included in a doula's fee?</h3>
+          <p class="text-tjb-gray">A standard birth doula package usually includes 1-2 prenatal visits, on-call availability from 37-38 weeks, continuous labor support, and 1-2 postpartum visits. Some include additional services like birth plan help, texting support, or lactation guidance.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Does insurance cover doula costs?</h3>
+          <p class="text-tjb-gray">Some private insurers are starting to cover doula services, particularly as part of maternal wellness benefits. Medicaid coverage for doulas is also expanding in many states. You'll need to check directly with your plan.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Why do doulas cost so much?</h3>
+          <p class="text-tjb-gray">Birth doulas are on-call for weeks, often leaving their own lives on hold. A standard package represents 30-50+ hours of work across prenatal visits, the birth itself (which can be 12-24+ hours), and postpartum visits. When you break it down hourly, the cost is often comparable to other professional support services.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Are there low-cost or free doula options?</h3>
+          <p class="text-tjb-gray">Yes. Many communities have volunteer doula programs, and some doulas offer sliding-scale fees or payment plans. If cost is a barrier, look into local doula collectives or ask about reduced-rate packages.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Is a doula worth the cost?</h3>
+          <p class="text-tjb-gray">Research consistently shows that continuous doula support leads to shorter labors, fewer interventions, and higher satisfaction with the birth experience. For many families, the investment pays off in confidence and outcomes.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="download" class="py-16 bg-tjb-cream">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Start With a Free Birth Plan</h2>
+      <p class="text-tjb-gray mb-8">Whether or not you hire a doula, a clear birth plan helps you communicate your preferences with confidence.</p>
+      <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+        <button id="lead-submit" type="submit" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition whitespace-nowrap">Get My Plan →</button>
+      </form>
+      <p id="lead-status" class="text-sm mt-2 hidden"></p>
+      <p class="text-xs text-tjb-gray/70 mt-4">No spam. Just a free birth plan and occasional tips you can actually use.</p>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('lead-magnet-form');
+    const emailInput = document.getElementById('lead-email');
+    const status = document.getElementById('lead-status');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = emailInput?.value;
+        if (!email) return;
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: 'Lead Magnet', email, message: 'Birth plan download from doula cost page' })
+          });
+          const data = await res.json();
+          if (data.success) {
+            status.textContent = '✓ Check your email — your birth plan is on its way.';
+            status.classList.remove('hidden', 'text-red-500');
+            status.classList.add('text-green-600');
+            emailInput.value = '';
+          } else {
+            status.textContent = 'Something went wrong. Please try again.';
+            status.classList.remove('hidden', 'text-green-600');
+            status.classList.add('text-red-500');
+          }
+        } catch {
+          status.textContent = 'Network error. Please try again.';
+          status.classList.remove('hidden', 'text-green-600');
+          status.classList.add('text-red-500');
+        }
+      });
+    }
+  </script>
+
+</Layout>

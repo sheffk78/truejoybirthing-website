@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 
 const city = "Irving";
 const state = "TX";
-const pageTitle = `Birth Support in ${city}, ${state}`;
-const pageDesc = `Find birth support resources in Irving, TX — local hospital info, doula costs, Medicaid status, and a free birth plan built for local families.`;
+const pageTitle = `Doula Irving TX — Birth Support, Costs & Free Joyful Birth Plan`;
+const pageDesc = `Find a doula in Irving, TX — local hospital info, doula costs, Medicaid status, and the free Joyful Birth Plan for local families.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/irving-tx`;
 
 const hospitals = ['Baylor Scott & White Irving', 'Medical City Las Colinas'];
@@ -20,27 +20,77 @@ const faqs = [
   { q: "Does Medicaid cover doulas in Irving?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits in the Irving area." },
   { q: "Which hospitals in Irving accommodate birth plans?", a: "Baylor Scott & White Irving and other area facilities generally accommodate birth plans, but policies vary. Always confirm your hospital's policy during your hospital tour." },
   { q: "How much does a doula cost in Irving?", a: "$900 to $2,600 depending on experience and package. Doula services are often considered worthwhile by families who want continuous support through labor and delivery." },
-  { q: "Does True Joy Birthing work with Irving families?", a: "Shelbi is based in the DFW metro and can support Irving-area families with virtual birth plan sessions. The free app and birth plan work for any Irving hospital." }
+  { q: "Does True Joy Birthing work with Irving families?", a: "Shelbi is based in the DFW metro and can support Irving-area families with virtual birth plan sessions. The free app and birth plan work for any Irving hospital. the free birth plan course to prepare step by step." }
 ];
+const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Birth Support", "url": "https://truejoybirthing.com/birth-support/"}, {"name": "Irving, TX", "url": "https://truejoybirthing.com/birth-support/irving-tx"}];
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://truejoybirthing.com/birth-support/irving-tx#faq",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": f.a
+        }
+      }))
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://truejoybirthing.com/birth-support/irving-tx#local",
+      "name": "True Joy Birthing",
+      "url": "https://truejoybirthing.com/birth-support/irving-tx",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Irving",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": { "@type": "City", "name": "Irving" },
+      "parentOrganization": { "@id": "https://truejoybirthing.com/#organization" }
+    }
+  ]
+};
+
 ---
 
 <Layout
   title={pageTitle}
   description={pageDesc}
   canonical={pageUrl}
+
+  breadcrumbList={breadcrumbList}
+  schema={schema}
 >
 
   <section class="bg-tjb-cream pt-16 pb-12">
-    <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-3xl md:text-4xl font-bold mb-4">Birth Support in Irving, TX</h1>
-      <p class="text-lg text-tjb-gray mb-6">
-        Local hospital options, doula costs, and Medicaid status — plus the free birth plan template families in Irving use to feel confident and prepared.
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <h1 class="text-3xl md:text-4xl font-bold mb-4">Find a Doula in Irving, TX</h1>
+          <p class="text-lg text-tjb-gray mb-6">
+        If you're <a href="/what-is-a-doula/">looking for a doula</a> in Irving, TX, this guide covers local hospital options, doula costs, Medicaid status, and the free Joyful Birth Plan families trust here.
       </p>
-      <div class="flex flex-col sm:flex-row gap-3">
+          <div class="flex flex-col sm:flex-row gap-3">
         <a href="#download-pdf" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">
           Download Free Birth Plan</a>
         <a href="https://apps.apple.com/app/true-joy-birthing" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-lg font-semibold hover:bg-tjb-cream transition">
           Get the Free App</a>
+      </div>
+        </div>
+        <div class="relative">
+          <img
+            src="/images/irving-texas-birth-doula-skyline.webp"
+            alt="Skyline of Irving, Texas, where families search for birth doulas and plan their hospital births."
+            class="w-full h-64 md:h-80 object-cover rounded-2xl shadow-lg"
+            width="1200"
+            height="800"
+            loading="eager"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -50,13 +100,15 @@ const faqs = [
 
       <h2>What Birth Support Looks Like in Irving</h2>
       <p>Irving sits between Dallas and DFW International Airport, making it a diverse, centrally located community with families from many backgrounds. The city has solid hospital access but fewer standalone birth centers. Many Irving families travel to Dallas or Plano for additional birth support options.</p>
+      <p>Whether this is your first baby or you're preparing for a VBAC, <a href="/benefits-of-a-doula/">understanding the benefits of having a doula</a> can help you decide what support is right for your Irving birth.</p>
 
-      <p>Families in Irving often deliver at hospitals including:</p>
-      <ul>
-        <li>Baylor Scott & White Irving</li>
-        <li>Medical City Las Colinas</li>
-      </ul>
-      <p class="text-sm text-tjb-gray italic">Hospitals mentioned for context only. True Joy Birthing does not endorse any specific provider.</p>
+      
+
+      <p>Baylor Scott &amp; White Irving, in the Las Colinas area, serves Irving and the mid-cities with a Level III NICU and a strong obstetric program. It sees a lot of families from the DFW Airport-adjacent communities — well-equipped and efficient, so having your birth plan written out means less explaining when you arrive. <a href="/birth-plan-template/">Use our free hospital birth plan template</a> to get started.</p>
+
+      <p>Medical City Las Colinas, also in Irving, is a newer facility with a Level III NICU and a growing obstetric program. Irving is so central that you might end up at whichever hospital your OB delivers at — both are solid, and both are busy. Write your plan before contractions start.</p>
+
+      <p class="text-sm text-tjb-gray italic">Hospitals and birth centers mentioned for context only. True Joy Birthing does not endorse any specific provider. Always confirm visitor and doula policies during your hospital tour.</p>
 
 
 
@@ -71,16 +123,20 @@ const faqs = [
       <h2>Medicaid & Insurance Coverage</h2>
       <p>{medicaidNote}</p>
       <p>{insuranceNote}</p>
+      <p><strong>HSA/FSA:</strong> Many families don't realize that doula services can often be paid for with HSA or FSA funds, since birth support qualifies as a medical expense under most plans. Check with your plan administrator to confirm what's eligible and whether you need a letter from your provider.</p>
+      <p>Not sure what to look for? <a href="/how-to-choose-a-doula/">Here's how to choose a doula</a> who fits your birth preferences and budget.</p>
+      
 
 
       <h2>Virtual Birth Plan Support for Irving</h2>
       <p>Shelbi offers virtual 1:1 birth plan sessions for Irving-area families. Whether you're delivering at Baylor Scott & White Irving or planning a home birth, the session walks through your plan line by line — with the words to use when you want to slow things down or ask questions.</p>
       <div class="my-6 not-prose">
         <a href="/birth-plan-session" class="btn-accent inline-block">Book a 1:1 Session</a>
+      <p class="text-sm text-tjb-gray mt-2">Or <a href="/birth-plan-course/">take the free birth plan course</a> to prepare step by step.</p>
       </div>
 
       <h2>Free Birth Plan for Irving Families</h2>
-      <p>Download the same birth plan template Irving families use to prepare for hospital conversations — free, structured, and designed to be read by a nurse in two minutes.</p>
+      <p>Download the same birth plan template Irving families use to prepare for hospital conversations — free, structured, and designed to be read by a nurse in two minutes. Then use the <a href="/birth-plan-checklist/">birth plan checklist</a> to make sure nothing gets missed.</p>
       <div class="my-8 not-prose">
         <a href="#download" class="btn-primary inline-block">Download Free Birth Plan</a>
       </div>
@@ -91,6 +147,14 @@ const faqs = [
   <!-- FAQ -->
   <section class="py-16 bg-tjb-cream-50">
     <div class="max-w-3xl mx-auto px-6">
+      
+      <div class="bg-white border-2 border-tjb-lavender-200 p-5 rounded-lg mb-6">
+        <h3 class="font-semibold text-lg text-tjb-charcoal mb-2">What True Joy Birthing Actually Does for You</h3>
+        <p class="text-tjb-gray mb-2">True Joy Birthing isn't a doula matching service, and we're not necessarily your in-person doula in Irving. We're the step before — and alongside — all of that.</p>
+        <p class="text-tjb-gray mb-2">Shelbi built the free Joyful Birth Plan because she saw families show up to the hospital without their preferences written down, every single time. The birth plan template, the checklist, the free course — these are the tools that help you walk in prepared, whether you end up hiring a local doula or going it alone.</p>
+        <p class="text-tjb-gray">If you do find a doula in Irving, great — bring your plan and use it together. If you're still looking, or if hiring a doula isn't in the budget right now, the birth plan is free and it works.</p>
+      </div>
+
       <h2 class="text-2xl font-bold mb-8">Frequently Asked Questions — Irving</h2>
       <div class="space-y-6">
         {faqs.map((faq, i) => (
@@ -107,7 +171,7 @@ const faqs = [
   <section id="download-pdf" class="bg-tjb-lavender-100 py-16">
     <div class="max-w-2xl mx-auto px-6 text-center">
       <h2 class="text-2xl md:text-3xl font-bold mb-4">Get Your Free Birth Plan</h2>
-      <p class="text-tjb-gray mb-8">Join families in Irving and across Texas who walk into their births with a clear plan and the words to stand by it.</p>
+      <p class="text-tjb-gray mb-8">Join families in Irving and across Texas who walk into their births with a clear plan and the words to stand by it. <a href="/doula-cost/">See doula costs across Texas</a>.</p>
       <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4" action="#" method="POST">
         <input name="email" type="email" placeholder="Your email" class="flex-1 px-5 py-3.5 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-rose-400 bg-white text-[0.9375rem]" required />
         <button type="submit" class="btn-primary whitespace-nowrap">Get My Plan →</button>

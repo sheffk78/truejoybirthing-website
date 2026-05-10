@@ -29,7 +29,7 @@ const schema = {
   "publisher": {
     "@type": "Organization",
     "name": "True Joy Birthing",
-    "logo": { "@type": "ImageObject", "url": "https://truejoybirthing.com/images/logo.webp" }
+    "logo": { "@type": "ImageObject", "url": "https://truejoybirthing.com/images/logo.svg" }
   },
   "datePublished": date,
   ...(featuredImage && { "image": featuredImage }),
@@ -57,12 +57,20 @@ const schemaJson = JSON.stringify(schema);
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
     <script type="application/ld+json" set:html={schemaJson} />
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-469670390"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-469670390');
+    </script>
   </head>
   <body class="min-h-dvh flex flex-col font-sans bg-tjb-cream">
     <header class="bg-tjb-cream/95 backdrop-blur-sm sticky top-0 z-50 border-b border-tjb-lavender-300/30">
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="/" class="flex items-center gap-3 group">
-          <img src="/images/logo.webp" alt="True Joy Birthing" class="h-12 w-auto transition-transform duration-300 group-hover:scale-[1.02]"/>
+          <img src="/images/logo.svg" alt="True Joy Birthing" class="h-12 w-auto transition-transform duration-300 group-hover:scale-[1.02]"/>
         </a>
         <nav class="hidden md:flex gap-8 text-sm font-semibold tracking-wide text-tjb-gray">
           <a href="/" class="hover:text-tjb-rose-500 transition-colors duration-200" aria-label="Home">Home</a>
@@ -107,7 +115,7 @@ const schemaJson = JSON.stringify(schema);
     <footer class="bg-tjb-charcoal text-tjb-cream/80 mt-auto">
       <div class="max-w-6xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-3">
         <div>
-          <img src="/images/logo.webp" alt="True Joy Birthing" class="h-10 w-auto mb-4 brightness-100 invert opacity-90" />
+          <img src="/images/logo-white.svg" alt="True Joy Birthing" class="h-10 w-auto mb-4" />
           <p class="text-sm text-tjb-gray-300 leading-relaxed">Birth education and planning tools — free for moms, Pro for doulas and midwives.</p>
         </div>
         <div>

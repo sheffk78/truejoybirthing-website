@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 
 const city = "Houston";
 const state = "TX";
-const pageTitle = `Birth Support in ${city}, ${state}`;
-const pageDesc = `Find birth support resources in Houston, TX — local hospital info, doula costs, Medicaid status, and a free birth plan built for local families.`;
+const pageTitle = `Doula Houston TX — Birth Support, Costs & Free Joyful Birth Plan`;
+const pageDesc = `Find a doula in Houston, TX — local hospital info, doula costs, Medicaid status, and the free Joyful Birth Plan for local families.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/houston-tx`;
 
 const hospitals = ["Texas Children's Pavilion for Women", "Memorial Hermann", "The Woman's Hospital of Texas"];
@@ -20,25 +20,76 @@ const faqs = [
   { q: "How much does a doula cost in Houston?", a: "$800 to $2,600. Prices vary based on certification level, experience, and whether postpartum visits are included." },
   { q: "Does Texas Medicaid cover doulas in Houston?", a: "Texas is expanding Medicaid doula benefits. Contact your Harris County or surrounding area Medicaid managed care plan for current coverage details." },
   { q: "What are good birth centers in Houston?", a: "Houston has several birth center options, including Nativity Birth Center and Birth Center at St. Luke's. Always tour your chosen facility and understand their transfer protocols." },
-  { q: "Does True Joy Birthing provide in-person doula services in Houston?", a: "No. True Joy Birthing provides education and tools for birth planning. The free birth plan and app work for any Houston hospital. Virtual confidence sessions are available with Shelbi." }
+  { q: "Does True Joy Birthing provide in-person doula services in Houston?", a: "No. True Joy Birthing provides education and tools for birth planning. the free birth plan course to prepare step by step. The free birth plan and app work for any Houston hospital. Virtual confidence sessions are available with Shelbi." }
 ];
+const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Birth Support", "url": "https://truejoybirthing.com/birth-support/"}, {"name": "Houston, TX", "url": "https://truejoybirthing.com/birth-support/houston-tx"}];
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://truejoybirthing.com/birth-support/houston-tx#faq",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": f.a
+        }
+      }))
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://truejoybirthing.com/birth-support/houston-tx#local",
+      "name": "True Joy Birthing",
+      "url": "https://truejoybirthing.com/birth-support/houston-tx",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Houston",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": { "@type": "City", "name": "Houston" },
+      "parentOrganization": { "@id": "https://truejoybirthing.com/#organization" }
+    }
+  ]
+};
+
 ---
 
 <Layout
   title={pageTitle}
   description={pageDesc}
   canonical={pageUrl}
+
+  breadcrumbList={breadcrumbList}
+  schema={schema}
 >
 
   <section class="bg-tjb-cream pt-16 pb-12">
-    <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-3xl md:text-4xl font-bold mb-4">Birth Support in Houston, TX</h1>
-      <p class="text-lg text-tjb-gray mb-6">
-        Local hospital options, doula costs, and Medicaid status — plus the free birth plan template families in Houston use to feel confident and prepared.
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <h1 class="text-3xl md:text-4xl font-bold mb-4">Find a Doula in Houston, TX</h1>
+          <p class="text-lg text-tjb-gray mb-6">
+        If you're <a href="/what-is-a-doula/">looking for a doula</a> in Houston, TX, this guide covers local hospital options, doula costs, Medicaid status, and the free Joyful Birth Plan families trust here.
       </p>
-      <div class="flex flex-col sm:flex-row gap-3">
+      <p class="text-tjb-gray mb-4">If you're delivering at the Texas Medical Center, memorize this now: Hermann Park Drive and Fannin Street back up hard between 7–9 AM and 4–6 PM, and the parking garages fill fast. Give yourself an extra 20 minutes for any appointment — and if you're driving in for a scheduled induction, you do not want to be figuring out parking at 5 AM while having contractions. Buffalo Bayou Park's trails are where a lot of Houston moms walk in the third trimester — shaded, mostly flat, and close enough to the Medical Center that you're not far if you need to head in.</p>
+          <div class="flex flex-col sm:flex-row gap-3">
         <a href="#download-pdf" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">Download Free Birth Plan</a>
         <a href="https://apps.apple.com/app/true-joy-birthing" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-lg font-semibold hover:bg-tjb-cream transition">Get the Free App</a>
+      </div>
+        </div>
+        <div class="relative">
+          <img
+            src="/images/houston-texas-birth-doula-skyline.webp"
+            alt="Skyline of Houston, Texas, where families search for birth doulas and plan their hospital births."
+            class="w-full h-64 md:h-80 object-cover rounded-2xl shadow-lg"
+            width="1200"
+            height="800"
+            loading="eager"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -48,29 +99,34 @@ const faqs = [
 
       <h2>What Birth Support Looks Like in Houston</h2>
       <p>Houston has one of the highest birth rates in the country and a large, multicultural birth community. The Texas Medical Center is one of the largest medical complexes in the world, with options ranging from major hospital systems to independent birth centers.</p>
+      <p>Whether this is your first baby or you're preparing for a VBAC, <a href="/benefits-of-a-doula/">understanding the benefits of having a doula</a> can help you decide what support is right for your Houston birth.</p>
 
-      <p>Families in Houston often deliver at hospitals including:</p>
-      <ul>
-        <li>Texas Children's Pavilion for Women</li>
-        <li>Memorial Hermann</li>
-        <li>The Woman's Hospital of Texas</li>
-      </ul>
-      <p class="text-sm text-tjb-gray italic">Hospitals mentioned for context only. True Joy Birthing does not endorse any specific provider.</p>
+      <p>Texas Children's Pavilion for Women, in the Texas Medical Center, is where Houston families go when they need the most specialized care — it has a Level IV NICU and one of the strongest maternal-fetal medicine programs in the country. If you're navigating a high-risk pregnancy, this is the place your OB might refer you to. Doulas are welcome here, and honestly, having someone in the room who knows how this particular hospital works makes a real difference when you're already processing a lot. <a href="/birth-plan-template/">Use our free hospital birth plan template</a> to prepare before you go.</p>
 
-      <p>Birth center options in Houston may include:</p>
-      <ul>
-        <li>Nativity Birth Center</li>
-        <li>Birth Center at St. Luke's</li>
-      </ul>
+      <p>Memorial Hermann–Texas Medical Center is one of the busiest L&amp;D units in the city. It's also a Level I trauma center, which means they handle everything — high-volume, high-complexity births alongside their regular caseload. The Woman's Hospital of Texas, just south of the Medical Center on Fannin, focuses exclusively on women's services and sees thousands of births a year. If we're being real, delivering at any of these Houston hospitals means you're walking into a big, busy system — and having a birth plan in your hands is the best way to make sure your preferences don't get lost in the pace of it all.</p>
+
+      <p>Families looking for a lower-intervention setting can explore Nativity Birth Center or the Birth Center at St. Luke's. Nativity is a freestanding, midwife-led birth center for low-risk, unmedicated births. The Birth Center at St. Luke's offers a birth-center experience with hospital backup right next door — a good fit if you want the midwifery model but still want that safety net close by.</p>
+
+      <p class="text-sm text-tjb-gray italic">Hospitals and birth centers mentioned for context only. True Joy Birthing does not endorse any specific provider. Always confirm visitor and doula policies during your hospital tour.</p>
 
       <h2>How Much Does a Doula Cost in Houston?</h2>
-      <p>In Houston, birth doula services typically range from <strong>$800 to $2,600</strong> depending on experience, package, and whether the doula offers add-on services like postpartum visits.</p>
+      <p>In Houston, birth doula services typically range from <strong>$800 to $2,600</strong> depending on experience, package, and whether the doula offers add-on services like <a href="/postpartum-doula/">postpartum visits</a>. <a href="/doula-cost/">See our full doula cost guide</a> for what's typically included.</p>
       <p>Some Houston-area employers offer maternity benefits that include doula coverage. Ask your HR department or insurance representative.</p>
+      <p><strong>HSA/FSA:</strong> Many families don't realize that doula services can often be paid for with HSA or FSA funds, since birth support qualifies as a medical expense under most plans. Check with your plan administrator to confirm what's eligible and whether you need a letter from your provider.</p>
       <p><strong>Medicaid Note:</strong> Texas Medicaid's doula benefit is expanding. In Harris County and surrounding areas, eligible individuals should verify doula coverage with their Medicaid plan.</p>
+      <p>Not sure what to look for? <a href="/how-to-choose-a-doula/">Here's how to choose a doula</a> who fits your birth preferences and budget.</p>
 
-      <h2>Build Your Birth Plan for Houston</h2>
-      <p>No matter where you deliver in Houston, a clear, organized birth plan helps you communicate your preferences to the team in your birth room.</p>
+      <h2>Next Steps: Your Doula in Houston, TX — Plan Your Birth</h2>
+      <p>No matter where you deliver in Houston, a clear, organized birth plan helps you communicate your preferences to the team in your birth room. Start with the <a href="/birth-plan-template/">free birth plan template</a>, then use the <a href="/birth-plan-checklist/">birth plan checklist</a> to make sure nothing gets missed.</p>
       <a href="#download-pdf" class="inline-block bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition mb-6">Download the Free Birth Plan</a>
+      <p class="mt-2 text-sm text-tjb-gray">Or <a href="/birth-plan-course/">take the free birth plan course</a> step by step.</p>
+
+      <div class="bg-white border-2 border-tjb-lavender-200 p-5 rounded-lg mb-6">
+        <h3 class="font-semibold text-lg text-tjb-charcoal mb-2">What True Joy Birthing Actually Does for You</h3>
+        <p class="text-tjb-gray mb-2">True Joy Birthing isn't a doula matching service, and we're not necessarily your in-person doula in Houston. We're the step before — and alongside — all of that.</p>
+        <p class="text-tjb-gray mb-2">Shelbi built the free Joyful Birth Plan because she saw families show up to the hospital without their preferences written down, every single time. The birth plan template, the checklist, the free course — these are the tools that help you walk in prepared, whether you end up hiring a local doula or going it alone.</p>
+        <p class="text-tjb-gray">If you do find a doula in Houston, great — bring your plan and use it together. If you're still looking, or if hiring a doula isn't in the budget right now, the birth plan is free and it works.</p>
+      </div>
 
       <h2>Common Questions in Houston</h2>
       <div class="space-y-4">
@@ -100,8 +156,8 @@ const faqs = [
 
   <section id="download-pdf" class="py-16 bg-tjb-cream">
     <div class="max-w-2xl mx-auto px-6 text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">Download Your Free Birth Plan</h2>
-      <p class="text-tjb-gray mb-8">Built by a doula for hospital-planning moms everywhere.</p>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Get Your Free Joyful Birth Plan</h2>
+      <p class="text-tjb-gray mb-8">Built by a doula for Houston-area moms planning their birth.</p>
       <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" action="#" method="POST">
         <input name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
         <button type="submit" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition whitespace-nowrap">Get My Plan →</button>

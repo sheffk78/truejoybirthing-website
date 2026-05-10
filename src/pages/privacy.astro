@@ -1,21 +1,140 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Privacy Policy", "url": "https://truejoybirthing.com/privacy/"}];
 ---
 
-<Layout title="Privacy Policy" canonical="https://truejoybirthing.com/privacy">
-  <section class="py-16 max-w-3xl mx-auto px-6 prose">
-    <h1>Privacy Policy</h1>
-    <p>Last updated: May 2026</p>
-    <p>True Joy Birthing is committed to protecting your privacy. We collect only the information necessary to provide our services.</p>
-    <h2>What We Collect</h2>
-    <ul>
-      <li>Email address (when you download a free resource or sign up)</li>
-      <li>Payment information (for courses and consults — processed via Stripe)</li>
-      <li>App usage data (to improve our products)</li>
-    </ul>
-    <h2>How We Use It</h2>
-    <p>We use your information to deliver our services, communicate with you, and improve our offerings. We do not sell your data.</p>
-    <h2>Medical Disclaimer</h2>
-    <p>True Joy Birthing does not provide medical advice. Always consult your healthcare provider.</p>
+<Layout
+  title="Privacy Policy"
+  description="Privacy Policy for True Joy Birthing — how we collect, use, and protect your personal information."
+  canonical="https://truejoybirthing.com/privacy"
+  breadcrumbList={breadcrumbList}
+  schema={{
+    "@type": "WebPage",
+    "name": "Privacy Policy",
+    "description": "Privacy Policy for True Joy Birthing products and services.",
+    "url": "https://truejoybirthing.com/privacy"
+  }}
+>
+  <!-- Hero -->
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Privacy Policy</h1>
+      <p class="text-lg text-tjb-gray">Last updated: May 2026</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 space-y-8">
+
+      <p class="text-tjb-gray leading-relaxed">True Joy Birthing, LLC ("we," "us," "our") respects your privacy and is committed to protecting your personal information. This policy explains what we collect, how we use it, and your choices.</p>
+
+      <!-- 1. Information We Collect -->
+      <div class="bg-tjb-cream-50 rounded-xl p-6 border border-tjb-lavender-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">1. Information We Collect</h2>
+        <div class="space-y-3 mt-2">
+          <div>
+            <p class="font-semibold text-tjb-charcoal">Account information:</p>
+            <p class="text-tjb-gray">Name, email address, and password when you create an account.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-tjb-charcoal">Birth plan data:</p>
+            <p class="text-tjb-gray">Preferences, choices, and notes you enter into the birth plan builder.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-tjb-charcoal">Pro Mode data:</p>
+            <p class="text-tjb-gray">Client information, visit notes, contracts, and invoices you create as a doula or midwife.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-tjb-charcoal">Usage data:</p>
+            <p class="text-tjb-gray">How you interact with the app, including pages visited, features used, and session duration.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-tjb-charcoal">Device information:</p>
+            <p class="text-tjb-gray">Device type, operating system, and app version for troubleshooting and optimization.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. How We Use Your Information -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">2. How We Use Your Information</h2>
+        <p class="text-tjb-gray leading-relaxed">We use your information to provide and improve our services, process subscriptions, send transactional communications (account confirmation, subscription receipts, renewal notices), respond to support requests, and comply with legal obligations.</p>
+      </div>
+
+      <!-- 3. Subscription Information -->
+      <div class="bg-tjb-rose-50 rounded-xl p-6 border border-tjb-rose-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">3. Subscription Information</h2>
+        <p class="text-tjb-gray leading-relaxed">If you subscribe to True Joy Pro, we collect and process your subscription status, payment method details (processed securely through Apple App Store or Google Play), and transaction history. We do not store your full payment card number on our servers. Subscription payments and refunds are managed by Apple or Google through your device's account settings.</p>
+        <div class="mt-3 bg-white rounded-lg p-4 border border-tjb-rose-200/50">
+          <p class="text-sm text-tjb-gray"><strong class="text-tjb-charcoal">True Joy Pro pricing:</strong> $29.99/month or $274.99/year (annual saves $85.89). New subscribers receive a 14-day free trial. Subscriptions auto-renew. Cancel anytime in your device's subscription settings.</p>
+        </div>
+      </div>
+
+      <!-- 4. Data Sharing -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">4. Data Sharing</h2>
+        <p class="text-tjb-gray leading-relaxed mb-3">We do not sell your personal information. We share data only with:</p>
+        <ul class="space-y-2 text-tjb-gray">
+          <li class="flex items-start gap-2"><span class="text-tjb-lavender-500 mt-1">●</span> <span><strong class="text-tjb-charcoal">Apple / Google:</strong> Payment processing, subscription management, and app delivery.</span></li>
+          <li class="flex items-start gap-2"><span class="text-tjb-lavender-500 mt-1">●</span> <span><strong class="text-tjb-charcoal">Stripe:</strong> Payment processing for courses and consults (if applicable).</span></li>
+          <li class="flex items-start gap-2"><span class="text-tjb-lavender-500 mt-1">●</span> <span><strong class="text-tjb-charcoal">Analytics tools (GA4):</strong> Aggregated, anonymized usage patterns. No personally identifiable information is shared.</span></li>
+        </ul>
+      </div>
+
+      <!-- 5. Data Retention -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">5. Data Retention</h2>
+        <p class="text-tjb-gray leading-relaxed">We retain your account information for as long as your account is active. If you delete your account, we will remove your personal data within 30 days, except where retention is required by law. Anonymized usage data may be retained indefinitely for analytics.</p>
+      </div>
+
+      <!-- 6. Your Rights -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">6. Your Rights</h2>
+        <p class="text-tjb-gray leading-relaxed">You may access, correct, or delete your personal information at any time by contacting us. If you are a California resident, you have the right to request a copy of your data under the CCPA. To exercise these rights, email <a href="mailto:support@truejoybirthing.com" class="text-tjb-rose-500 hover:text-tjb-charcoal underline underline-offset-3 transition-colors">support@truejoybirthing.com</a>.</p>
+      </div>
+
+      <!-- 7. Security -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">7. Security</h2>
+        <p class="text-tjb-gray leading-relaxed">We use industry-standard encryption and security practices to protect your information. No method of electronic storage is 100% secure. While we strive to protect your data, we cannot guarantee absolute security.</p>
+      </div>
+
+      <!-- 8. Children's Privacy -->
+      <div class="bg-tjb-rose-50 rounded-xl p-6 border border-tjb-rose-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">8. Children's Privacy</h2>
+        <p class="text-tjb-gray leading-relaxed">True Joy Birthing is not intended for use by children under the age of 13. We do not knowingly collect personal information from children under 13. If we discover that we have collected data from a child under 13, we will delete it promptly.</p>
+      </div>
+
+      <!-- 9. Medical Disclaimer -->
+      <div class="bg-tjb-cream-50 rounded-xl p-6 border border-tjb-lavender-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">9. Medical Disclaimer</h2>
+        <p class="text-tjb-gray leading-relaxed">True Joy Birthing provides educational content and planning tools. It is not a medical device and does not provide medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for medical decisions related to your pregnancy, birth, or postpartum care.</p>
+      </div>
+
+      <!-- 10. Changes -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">10. Changes to This Policy</h2>
+        <p class="text-tjb-gray leading-relaxed">We may update this policy from time to time. We will notify you of material changes by posting the updated policy with a revised "Last updated" date. Your continued use of our services after changes are posted constitutes acceptance of the updated policy.</p>
+      </div>
+
+      <!-- 11. Contact -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">11. Contact</h2>
+        <p class="text-tjb-gray leading-relaxed">For questions about this privacy policy, contact us at <a href="mailto:support@truejoybirthing.com" class="text-tjb-rose-500 hover:text-tjb-charcoal underline underline-offset-3 transition-colors">support@truejoybirthing.com</a>.</p>
+        <div class="mt-3 text-sm text-tjb-gray">
+          <p>True Joy Birthing, LLC</p>
+          <p>Dallas, TX</p>
+        </div>
+      </div>
+
+      <!-- Related links -->
+      <div class="pt-8 border-t border-tjb-lavender-200/50 text-center">
+        <p class="text-tjb-gray mb-4">Related: <a href="/terms" class="text-tjb-rose-500 hover:text-tjb-charcoal underline underline-offset-3 transition-colors font-semibold">Terms of Use</a></p>
+        <a href="/" class="btn-primary">Back to Home →</a>
+      </div>
+
+    </div>
   </section>
 </Layout>

@@ -1,0 +1,234 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Birth Plan Checklist", "url": "https://truejoybirthing.com/birth-plan-checklist/"}];
+
+const categories = [
+  {
+    title: "Labor Preferences",
+    items: [
+      "Who do you want in the delivery room?",
+      "Do you want to be offered an induction, or only if medically necessary?",
+      "How do you feel about continuous vs. intermittent monitoring?",
+      "Do you want freedom to move and change positions during labor?",
+      "Would you like to use a birthing ball, tub, or shower for comfort?",
+      "Do you want to eat or drink during labor?",
+      "How do you want your support team to encourage you?",
+      "Do you want the room lights dimmed?"
+    ]
+  },
+  {
+    title: "Pain Management",
+    items: [
+      "What is your first response to being offered an epidural?",
+      "Do you want to try unmedicated comfort measures first?",
+      "Which comfort measures matter most to you? (breathing, massage, movement, water, etc.)",
+      "If you plan to go unmedicated, do you want to be reminded of that goal — or supported in changing your mind?",
+      "Do you want to be offered pain medication, or only receive it when you ask?",
+      "How do you feel about Pitocin to speed up labor?"
+    ]
+  },
+  {
+    title: "Delivery Preferences",
+    items: [
+      "Do you have a preferred delivery position? (squatting, side-lying, hands-and-knees, etc.)",
+      "Do you want a mirror to see the birth?",
+      "Who do you want to announce the baby's sex?",
+      "Do you want delayed cord clamping (1-3 minutes)?",
+      "Who cuts the umbilical cord?",
+      "Do you want immediate skin-to-skin contact?",
+      "How do you feel about an episiotomy?",
+      "If a cesarean becomes necessary, what are your preferences? (clear drape, partner present, skin-to-skin in OR)"
+    ]
+  },
+  {
+    title: "Postpartum Care",
+    items: [
+      "Do you want the placenta delivered naturally or with medication?",
+      "Do you plan to breastfeed? Do you want lactation support?",
+      "Who do you want in the recovery room?",
+      "Do you want to delay certain postpartum procedures? (Vitamin K, eye ointment — discuss with your pediatrician)",
+      "How do you feel about pacifiers or formula supplementation?",
+      "Do you want help with perineal care and recovery?"
+    ]
+  },
+  {
+    title: "Newborn Care",
+    items: [
+      "Do you want your baby to room-in with you at all times?",
+      "Do you want to decline the first bath so the vernix absorbs?",
+      "What are your preferences for newborn vaccinations and screenings?",
+      "Do you want your baby examined in your presence?",
+      "Are there any religious or cultural practices you want observed?",
+      "Do you have preferences for circumcision? (if applicable)"
+    ]
+  }
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "@id": "https://truejoybirthing.com/birth-plan-checklist/#checklist",
+      "name": "Birth Plan Checklist",
+      "description": "A comprehensive birth plan checklist organized by category: labor preferences, pain management, delivery, postpartum care, and newborn care.",
+      "numberOfItems": 40,
+      "itemListElement": categories.flatMap((cat, ci) =>
+        cat.items.map((item, ii) => ({
+          "@type": "ListItem",
+          "position": ci * 10 + ii + 1,
+          "name": item,
+          "item": `https://truejoybirthing.com/birth-plan-checklist/#${cat.title.toLowerCase().replace(/\s+/g, '-')}`
+        }))
+      )
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://truejoybirthing.com/birth-plan-checklist/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "What should be on a birth plan checklist?", "acceptedAnswer": { "@type": "Answer", "text": "A birth plan checklist should cover labor preferences, pain management, delivery positions and procedures, postpartum care, and newborn care decisions. Each item should be a clear preference you can communicate to your care team." } },
+        { "@type": "Question", "name": "How many items should a birth plan have?", "acceptedAnswer": { "@type": "Answer", "text": "Aim for 10-15 preferences that truly matter to you. A birth plan that's too long gets ignored. Focus on the items where you have a strong opinion — not every checkbox on a generic form." } },
+        { "@type": "Question", "name": "Do I need to include everything on this checklist?", "acceptedAnswer": { "@type": "Answer", "text": "No. This checklist gives you options so you can decide what matters. Not every item will be relevant to your situation. Fill in what you care about and skip the rest." } },
+        { "@type": "Question", "name": "What if my hospital doesn't allow something on the checklist?", "acceptedAnswer": { "@type": "Answer", "text": "Bring your checklist to your next prenatal appointment and review it with your care provider. They can tell you which preferences are possible at your specific hospital and help you adjust." } },
+        { "@type": "Question", "name": "Is this checklist the same as a birth plan template?", "acceptedAnswer": { "@type": "Answer", "text": "The checklist helps you think through your options. The birth plan template is the document you actually share with your care team. Use the checklist first, then transfer your preferences to the template." } }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Birth Plan Checklist"
+  description="A complete birth plan checklist covering labor preferences, pain management, delivery, postpartum care, and newborn care — organized so your care team can read it in 30 seconds."
+  canonical="https://truejoybirthing.com/birth-plan-checklist/"
+  breadcrumbList={breadcrumbList}
+  schema={schema}
+>
+
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Birth Plan Checklist</h1>
+      <p class="text-lg text-tjb-gray mb-6">
+        Every preference point you should consider before you fill out your birth plan — organized by category, written in plain language, and built by a certified doula.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="/birth-plan-template/#download" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">
+          Download the Template</a>
+        <a href="https://apps.apple.com/app/true-joy-birthing" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-lg font-semibold hover:bg-tjb-cream transition">
+          Build It in the Free App</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 prose">
+
+      <h2>How to Use This Checklist</h2>
+      <p>Don't try to answer every item. Read through each category, mark the preferences that matter most to you, and skip the ones you don't have strong feelings about. A good birth plan has 10-15 preferences — not 40.</p>
+      <p>Then <a href="/birth-plan-template/">transfer your choices to the free template</a> so your care team can read it at a glance.</p>
+
+      {categories.map(cat => (
+        <div id={cat.title.toLowerCase().replace(/\s+/g, '-')} class="mb-10">
+          <h2>{cat.title}</h2>
+          <ul class="space-y-2">
+            {cat.items.map(item => (
+              <li class="flex items-start gap-3">
+                <span class="mt-1.5 w-4 h-4 rounded border-2 border-tjb-lavender-400 flex-shrink-0"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
+      <h2>After the Checklist: What Next</h2>
+      <ol>
+        <li><strong>Review with your partner.</strong> Make sure you're aligned on the big items — who's in the room, pain management, and delivery preferences.</li>
+        <li><strong>Bring it to your care provider.</strong> Your OB or midwife needs to see your plan before you're in labor. They'll flag anything your hospital can't accommodate.</li>
+        <li><strong>Transfer it to the template.</strong> Use the <a href="/birth-plan-template/">free birth plan template</a> or the free app to create a clean, one-page document your nurse can read in 30 seconds.</li>
+        <li><strong>Print copies.</strong> One for your partner, one for your doula, one in your hospital bag. When you're in labor, you won't be searching for it.</li>
+      </ol>
+
+      <div class="bg-tjb-cream p-5 rounded-lg my-8 not-prose">
+        <p class="font-semibold text-tjb-lavender-500 mb-2">Want help thinking through each section?</p>
+        <p class="text-sm text-tjb-gray mb-3">The free birth plan mini-course walks through every category with short, clear videos.</p>
+        <a href="/birth-plan-course/" class="text-tjb-lavender-500 font-semibold text-sm hover:underline">Explore the free course →</a>
+      </div>
+
+      <h2>Common Questions</h2>
+      <div class="space-y-4">
+        <div>
+          <h3 class="font-semibold mb-1">What should be on a birth plan checklist?</h3>
+          <p class="text-tjb-gray">A birth plan checklist should cover labor preferences, pain management, delivery positions and procedures, postpartum care, and newborn care decisions. Each item should be a clear preference you can communicate to your care team.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">How many items should a birth plan have?</h3>
+          <p class="text-tjb-gray">Aim for 10-15 preferences that truly matter to you. A birth plan that's too long gets ignored. Focus on the items where you have a strong opinion — not every checkbox on a generic form.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Do I need to include everything on this checklist?</h3>
+          <p class="text-tjb-gray">No. This checklist gives you options so you can decide what matters. Not every item will be relevant to your situation. Fill in what you care about and skip the rest.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">What if my hospital doesn't allow something on the checklist?</h3>
+          <p class="text-tjb-gray">Bring your checklist to your next prenatal appointment and review it with your care provider. They can tell you which preferences are possible at your specific hospital and help you adjust.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Is this checklist the same as a birth plan template?</h3>
+          <p class="text-tjb-gray">The checklist helps you think through your options. The birth plan template is the document you actually share with your care team. Use the checklist first, then transfer your preferences to the template.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="download" class="py-16 bg-tjb-cream">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Build Your Birth Plan?</h2>
+      <p class="text-tjb-gray mb-8">Use this checklist, then transfer your preferences to the free template.</p>
+      <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+        <button id="lead-submit" type="submit" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition whitespace-nowrap">Get My Plan →</button>
+      </form>
+      <p id="lead-status" class="text-sm mt-2 hidden"></p>
+      <p class="text-xs text-tjb-gray/70 mt-4">No spam. Just a free birth plan and occasional tips you can actually use.</p>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('lead-magnet-form');
+    const emailInput = document.getElementById('lead-email');
+    const status = document.getElementById('lead-status');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = emailInput?.value;
+        if (!email) return;
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: 'Lead Magnet', email, message: 'Birth plan checklist download' })
+          });
+          const data = await res.json();
+          if (data.success) {
+            status.textContent = '✓ Check your email — your birth plan is on its way.';
+            status.classList.remove('hidden', 'text-red-500');
+            status.classList.add('text-green-600');
+            emailInput.value = '';
+          } else {
+            status.textContent = 'Something went wrong. Please try again.';
+            status.classList.remove('hidden', 'text-green-600');
+            status.classList.add('text-red-500');
+          }
+        } catch {
+          status.textContent = 'Network error. Please try again.';
+          status.classList.remove('hidden', 'text-green-600');
+          status.classList.add('text-red-500');
+        }
+      });
+    }
+  </script>
+
+</Layout>

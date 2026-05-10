@@ -1,0 +1,225 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Postpartum Doula", "url": "https://truejoybirthing.com/postpartum-doula/"}];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://truejoybirthing.com/postpartum-doula/#service",
+      "name": "Postpartum Doula Support",
+      "description": "Non-medical support for new families after birth — including newborn care help, emotional support, breastfeeding guidance, and recovery assistance.",
+      "provider": { "@id": "https://truejoybirthing.com/#organization" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "serviceType": "Postpartum Care"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://truejoybirthing.com/postpartum-doula/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "What does a postpartum doula do?", "acceptedAnswer": { "@type": "Answer", "text": "A postpartum doula provides non-medical support after birth — help with newborn care, breastfeeding guidance, emotional support, light meal prep, sibling adjustment, and recovery assistance. They help families transition home from the hospital." } },
+        { "@type": "Question", "name": "How much does a postpartum doula cost?", "acceptedAnswer": { "@type": "Answer", "text": "Postpartum doulas typically charge $25-50 per hour, or $200-400 for overnight shifts. Some offer package rates for 3-5 days of support." } },
+        { "@type": "Question", "name": "What's the difference between a birth doula and a postpartum doula?", "acceptedAnswer": { "@type": "Answer", "text": "A birth doula supports you during labor and delivery. A postpartum doula supports you after the baby arrives. Many birth doulas offer postpartum visits as part of their package, but a dedicated postpartum doula specializes in the recovery and adjustment period." } },
+        { "@type": "Question", "name": "When should I hire a postpartum doula?", "acceptedAnswer": { "@type": "Answer", "text": "Ideally, arrange postpartum support before your baby arrives — just like you'd plan your birth support. The first 2-6 weeks are when families need the most help." } },
+        { "@type": "Question", "name": "Does True Joy Birthing offer postpartum support?", "acceptedAnswer": { "@type": "Answer", "text": "The True Joy Birthing app includes postpartum care preferences in the free birth plan, and the free course covers post-delivery planning. For hands-on postpartum doula support, ask about local referrals." } },
+        { "@type": "Question", "name": "Does insurance cover postpartum doulas?", "acceptedAnswer": { "@type": "Answer", "text": "Some private insurers and Medicaid plans are beginning to cover postpartum doula services, especially as maternal health legislation expands. Check with your plan for specifics." } }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Postpartum Doula"
+  description="What a postpartum doula does, how much they cost, how they differ from a birth doula, and why postpartum support matters for new families."
+  canonical="https://truejoybirthing.com/postpartum-doula/"
+  breadcrumbList={breadcrumbList}
+  schema={schema}
+>
+
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Postpartum Doula</h1>
+      <p class="text-lg text-tjb-gray mb-6">
+        A postpartum doula supports you <em>after</em> the birth — with newborn care, recovery help, breastfeeding guidance, and the emotional support most families don't realize they need until they're home from the hospital.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="/" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">
+          Get the Free Birth Plan</a>
+        <a href="/birth-plan-course/" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-lg font-semibold hover:bg-tjb-cream transition">
+          Free Postpartum Course</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 prose">
+
+      <h2>What Is a Postpartum Doula?</h2>
+      <p>A <strong>postpartum doula</strong> is a trained, non-medical support person who helps families after birth. Where a birth doula supports you through labor and delivery, a postpartum doula supports you through the days and weeks that follow — when most families are sent home from the hospital and left to figure it out alone.</p>
+      <p>Postpartum doulas don't replace your doctor or your baby's pediatrician. They fill a different gap: practical, emotional, and informational support during one of the most intense transitions of your life.</p>
+
+      <h2>What a Postpartum Doula Actually Does</h2>
+      <ul>
+        <li><strong>Newborn care</strong> — diapering, bathing, soothing techniques, sleep tips</li>
+        <li><strong>Breastfeeding support</strong> — latch help, positioning, pumping guidance, knowing when to call a lactation consultant</li>
+        <li><strong>Recovery assistance</strong> — postpartum body care, cesarean recovery support, perineal care</li>
+        <li><strong>Emotional support</strong> — processing the birth, watching for signs of postpartum depression or anxiety</li>
+        <li><strong>Household help</strong> — light meal prep, sibling care, running errands so you can rest</li>
+        <li><strong>Education</strong> — normal versus concerning symptoms, when to call the doctor, what to expect week by week</li>
+        <li><strong>Partner support</strong> — helping partners learn baby care, manage their own stress, and feel confident</li>
+      </ul>
+      <p>The core value of a postpartum doula is not any single task. It's having a calm, experienced person in your home who's seen dozens of new families navigate the same phase you're in.</p>
+
+      <h2>How Much Does a Postpartum Doula Cost?</h2>
+      <p>Postpartum doula pricing works differently than birth doula pricing. Most charge by the hour or by the shift:</p>
+      <ul>
+        <li><strong>Daytime support:</strong> $25–$50 per hour</li>
+        <li><strong>Overnight support:</strong> $200–$400 per night (8-10 hours)</li>
+        <li><strong>Package rates:</strong> some offer 3-5 day packages at $800–$2,000</li>
+      </ul>
+      <p>Unlike birth doulas, postpartum doulas aren't on-call for weeks — they work scheduled shifts. That makes the pricing more straightforward but also means you're hiring someone for a defined period, typically the first 2-6 weeks after birth.</p>
+
+      <h2>Birth Doula vs. Postpartum Doula</h2>
+      <div class="bg-tjb-cream p-5 rounded-lg my-6 not-prose">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-tjb-lavender-300">
+              <th class="text-left py-2 font-semibold"></th>
+              <th class="text-left py-2 font-semibold">Birth Doula</th>
+              <th class="text-left py-2 font-semibold">Postpartum Doula</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-tjb-lavender-100">
+              <td class="py-2 font-semibold">When</td>
+              <td class="py-2">During labor & delivery</td>
+              <td class="py-2">After birth (1–12 weeks)</td>
+            </tr>
+            <tr class="border-b border-tjb-lavender-100">
+              <td class="py-2 font-semibold">Support type</td>
+              <td class="py-2">Continuous labor support</td>
+              <td class="py-2">Scheduled shifts at home</td>
+            </tr>
+            <tr class="border-b border-tjb-lavender-100">
+              <td class="py-2 font-semibold">Focus</td>
+              <td class="py-2">Comfort, advocacy, coping</td>
+              <td class="py-2">Recovery, newborn care, feeding</td>
+            </tr>
+            <tr class="border-b border-tjb-lavender-100">
+              <td class="py-2 font-semibold">Typical cost</td>
+              <td class="py-2">$800–$3,000 (package)</td>
+              <td class="py-2">$25–$50/hr or $200–$400/night</td>
+            </tr>
+            <tr>
+              <td class="py-2 font-semibold">Insurance</td>
+              <td class="py-2">Sometimes covered</td>
+              <td class="py-2">Sometimes covered (expanding)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Some birth doulas include 1-2 postpartum visits in their package. A dedicated postpartum doula provides deeper, longer-term support during the recovery window.</p>
+
+      <h2>Planning for Postpartum Support</h2>
+      <p>Most families spend months planning for the birth and almost no time planning for the postpartum period. That's backwards. The birth is one day. Postpartum is weeks.</p>
+      <p>Here's what to think through before your baby arrives:</p>
+      <ul>
+        <li><strong>Who will be in your home?</strong> Partner, family, postpartum doula, or some combination?</li>
+        <li><strong>What help do you actually need?</strong> Newborn care, cooking, overnight support, older sibling management?</li>
+        <li><strong>How will you feed your baby?</strong> Breastfeeding, pumping, formula — and what support you'll need for your choice.</li>
+        <li><strong>What's your recovery plan?</strong> If you have a cesarean, you won't be lifting or driving for weeks.</li>
+        <li><strong>What are your postpartum care preferences?</strong> The free birth plan includes a postpartum section — <a href="/birth-plan-template/">fill it out before you deliver</a>.</li>
+      </ul>
+
+      <h2>How True Joy Birthing Helps With Postpartum</h2>
+      <p>The free True Joy Birthing tools include postpartum planning:</p>
+      <ul>
+        <li><strong>Birth plan template</strong> — includes a dedicated postpartum care section covering recovery, feeding, and who you want in your space</li>
+        <li><strong>Free mini-course</strong> — the "Post-Delivery Preferences" video walks through what to plan for after birth</li>
+        <li><strong>Free app</strong> — build your birth plan including postpartum preferences, and reference it from your phone</li>
+      </ul>
+      <p>For hands-on postpartum doula support in your area, check your <a href="/birth-support/">local city page</a> or ask your care provider for referrals.</p>
+
+      <h2>Common Questions</h2>
+      <div class="space-y-4">
+        <div>
+          <h3 class="font-semibold mb-1">What does a postpartum doula do?</h3>
+          <p class="text-tjb-gray">A postpartum doula provides non-medical support after birth — help with newborn care, breastfeeding guidance, emotional support, light meal prep, sibling adjustment, and recovery assistance. They help families transition home from the hospital.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">How much does a postpartum doula cost?</h3>
+          <p class="text-tjb-gray">Postpartum doulas typically charge $25-50 per hour, or $200-400 for overnight shifts. Some offer package rates for 3-5 days of support.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">What's the difference between a birth doula and a postpartum doula?</h3>
+          <p class="text-tjb-gray">A birth doula supports you during labor and delivery. A postpartum doula supports you after the baby arrives. Many birth doulas offer postpartum visits as part of their package, but a dedicated postpartum doula specializes in the recovery and adjustment period.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">When should I hire a postpartum doula?</h3>
+          <p class="text-tjb-gray">Ideally, arrange postpartum support before your baby arrives — just like you'd plan your birth support. The first 2-6 weeks are when families need the most help.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Does True Joy Birthing offer postpartum support?</h3>
+          <p class="text-tjb-gray">The True Joy Birthing app includes postpartum care preferences in the free birth plan, and the free course covers post-delivery planning. For hands-on postpartum doula support, ask about local referrals.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Does insurance cover postpartum doulas?</h3>
+          <p class="text-tjb-gray">Some private insurers and Medicaid plans are beginning to cover postpartum doula services, especially as maternal health legislation expands. Check with your plan for specifics.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="download" class="py-16 bg-tjb-cream">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Plan Your Postpartum Care Now</h2>
+      <p class="text-tjb-gray mb-8">Include postpartum preferences in your birth plan — before you deliver, not after.</p>
+      <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+        <button id="lead-submit" type="submit" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition whitespace-nowrap">Get My Plan →</button>
+      </form>
+      <p id="lead-status" class="text-sm mt-2 hidden"></p>
+      <p class="text-xs text-tjb-gray/70 mt-4">No spam. Just a free birth plan and occasional tips you can actually use.</p>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('lead-magnet-form');
+    const emailInput = document.getElementById('lead-email');
+    const status = document.getElementById('lead-status');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = emailInput?.value;
+        if (!email) return;
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: 'Lead Magnet', email, message: 'Birth plan download from postpartum doula page' })
+          });
+          const data = await res.json();
+          if (data.success) {
+            status.textContent = '✓ Check your email — your birth plan is on its way.';
+            status.classList.remove('hidden', 'text-red-500');
+            status.classList.add('text-green-600');
+            emailInput.value = '';
+          } else {
+            status.textContent = 'Something went wrong. Please try again.';
+            status.classList.remove('hidden', 'text-green-600');
+            status.classList.add('text-red-500');
+          }
+        } catch {
+          status.textContent = 'Network error. Please try again.';
+          status.classList.remove('hidden', 'text-green-600');
+          status.classList.add('text-red-500');
+        }
+      });
+    }
+  </script>
+
+</Layout>

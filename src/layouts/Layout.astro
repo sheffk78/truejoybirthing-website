@@ -19,13 +19,128 @@ const schemaBase = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": ["Organization", "ProfessionalService"],
       "@id": "https://truejoybirthing.com/#organization",
       "name": "True Joy Birthing",
+      "legalName": "True Joy Birthing",
       "url": "https://truejoybirthing.com/",
-      "logo": "https://truejoybirthing.com/images/logo.webp",
-      "description": "Birth education and planning tools — free for moms, Pro for doulas and midwives.",
-      "sameAs": ["https://instagram.com/truejoybirthing"]
+      "email": "support@truejoybirthing.com",
+      "description": "Birth education and planning tools — free for moms, Pro for doulas and midwives. Build your birth plan, learn your options, and feel confident about your delivery.",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://truejoybirthing.com/#logo",
+        "url": "https://truejoybirthing.com/images/logo.svg",
+        "contentUrl": "https://truejoybirthing.com/images/logo.svg",
+        "width": 579,
+        "height": 256,
+        "creditText": "True Joy Birthing",
+        "copyrightHolder": { "@id": "https://truejoybirthing.com/#organization" }
+      },
+      "image": { "@id": "https://truejoybirthing.com/#logo" },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dallas",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "State", "name": "Texas" },
+        { "@type": "Country", "name": "United States" }
+      ],
+      "priceRange": "Free–$49",
+      "foundingDate": "2025",
+      "founder": {
+        "@type": "Person",
+        "@id": "https://truejoybirthing.com/about/#founder",
+        "name": "Shelbi Kohler",
+        "jobTitle": "Certified Birth Doula",
+        "description": "Certified birth doula and founder of True Joy Birthing.",
+        "url": "https://truejoybirthing.com/about/"
+      },
+      "sameAs": [
+        "https://instagram.com/truejoybirthing"
+      ],
+      "knowsAbout": [
+        "Birth planning",
+        "Birth doula support",
+        "Doula services",
+        "Birth plan template",
+        "Pregnancy preparation",
+        "Labor and delivery preferences",
+        "Postpartum care",
+        "Newborn care preferences",
+        "Doula cost",
+        "Medicaid doula coverage",
+        "Hospital birth planning",
+        "Birth center options",
+        "VBAC planning",
+        "Natural birth preparation",
+        "Postpartum doula services"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Birth Planning Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://truejoybirthing.com/#birth-plan-service",
+              "name": "Free Birth Plan",
+              "url": "https://truejoybirthing.com/",
+              "description": "A structured birth plan template free for expecting mothers.",
+              "serviceType": "Birth Planning",
+              "provider": { "@id": "https://truejoybirthing.com/#organization" },
+              "areaServed": { "@type": "Country", "name": "United States" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://truejoybirthing.com/birth-plan-course/#service",
+              "name": "Birth Plan Mini-Course",
+              "url": "https://truejoybirthing.com/birth-plan-course/",
+              "description": "Free video course walking through each section of your birth plan.",
+              "serviceType": "Birth Education",
+              "provider": { "@id": "https://truejoybirthing.com/#organization" },
+              "areaServed": { "@type": "Country", "name": "United States" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://truejoybirthing.com/birth-plan-session/#service",
+              "name": "1:1 Confidence Session",
+              "url": "https://truejoybirthing.com/birth-plan-session/",
+              "description": "Virtual 1-on-1 birth planning session with Shelbi, a certified birth doula.",
+              "serviceType": "Doula Consultation",
+              "provider": { "@id": "https://truejoybirthing.com/#organization" },
+              "areaServed": { "@type": "Country", "name": "United States" }
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": "https://truejoybirthing.com/#pro-mode-service",
+              "name": "Pro Mode",
+              "url": "https://truejoybirthing.com/",
+              "description": "Professional tools for doulas and midwives to manage client birth plans.",
+              "serviceType": "Professional Software",
+              "provider": { "@id": "https://truejoybirthing.com/#organization" },
+              "areaServed": { "@type": "Country", "name": "United States" }
+            }
+          }
+        ]
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "support@truejoybirthing.com",
+        "contactType": "customer service",
+        "availableLanguage": ["English"]
+      }
     },
     {
       "@type": "WebSite",
@@ -84,6 +199,14 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
     <script type="application/ld+json" set:html={schemaJson} />
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-469670390"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-469670390');
+    </script>
   </head>
   <body class="min-h-dvh flex flex-col font-sans">
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-tjb-charcoal focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>
@@ -92,7 +215,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="/" class="flex items-center gap-3 group">
           <img 
-            src="/images/logo.webp" 
+            src="/images/logo.svg" 
             alt="True Joy Birthing" 
             class="h-12 w-auto transition-transform duration-300 group-hover:scale-[1.02]"
           />
@@ -129,8 +252,13 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
     <footer class="bg-tjb-charcoal text-tjb-cream/80 mt-auto">
       <div class="max-w-6xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-3">
         <div>
-          <img src="/images/logo.webp" alt="True Joy Birthing" class="h-10 w-auto mb-4" />
+          <img src="/images/logo-white.svg" alt="True Joy Birthing" class="h-10 w-auto mb-4" />
           <p class="text-sm text-tjb-gray-300 leading-relaxed">Birth education and planning tools — free for moms, Pro for doulas and midwives.</p>
+          <div class="mt-3 text-sm text-tjb-gray-300 space-y-1">
+            <p>True Joy Birthing</p>
+            <p>Dallas, TX</p>
+            <p><a href="mailto:support@truejoybirthing.com" class="hover:text-tjb-lavender-light transition">support@truejoybirthing.com</a></p>
+          </div>
         </div>
         <div>
           <p class="font-semibold text-white mb-4 tracking-wide text-sm uppercase">Resources</p>

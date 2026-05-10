@@ -1,11 +1,61 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Birth Support", "url": "https://truejoybirthing.com/birth-support/"}];
+
+const cities = [
+  { name: "Dallas", slug: "dallas-tx" },
+  { name: "Fort Worth", slug: "fort-worth-tx" },
+  { name: "Houston", slug: "houston-tx" },
+  { name: "Austin", slug: "austin-tx" },
+  { name: "San Antonio", slug: "san-antonio-tx" },
+  { name: "El Paso", slug: "el-paso-tx" },
+  { name: "Plano", slug: "plano-tx" },
+  { name: "Frisco", slug: "frisco-tx" },
+  { name: "McKinney", slug: "mckinney-tx" },
+  { name: "Arlington", slug: "arlington-tx" },
+  { name: "Garland", slug: "garland-tx" },
+  { name: "Irving", slug: "irving-tx" },
+  { name: "Carrollton", slug: "carrollton-tx" },
+  { name: "Grand Prairie", slug: "grand-prairie-tx" },
+  { name: "Denton", slug: "denton-tx" },
+  { name: "Mesquite", slug: "mesquite-tx" },
+  { name: "Lubbock", slug: "lubbock-tx" },
+  { name: "Amarillo", slug: "amarillo-tx" },
+  { name: "Corpus Christi", slug: "corpus-christi-tx" },
+  { name: "Laredo", slug: "laredo-tx" },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://truejoybirthing.com/birth-support/#collection",
+      "name": "Birth Support by City",
+      "description": "Find local birth support resources — hospital info, doula costs, Medicaid status — city by city across Texas.",
+      "url": "https://truejoybirthing.com/birth-support/",
+      "about": { "@id": "https://truejoybirthing.com/#organization" },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": cities.map((c, i) => ({
+          "@type": "ListItem",
+          "position": i + 1,
+          "name": `Birth Support in ${c.name}, TX`,
+          "url": `https://truejoybirthing.com/birth-support/${c.slug}/`
+        }))
+      }
+    }
+  ]
+};
 ---
 
 <Layout
   title="Birth Support by City"
-  description="Find local birth support resources — hospital info, doula costs, and Medicaid status — city by city."
+  description="Find local birth support resources — hospital info, doula costs, and Medicaid status — city by city across Texas."
   canonical="https://truejoybirthing.com/birth-support/"
+  breadcrumbList={breadcrumbList}
+  schema={schema}
 >
   <section class="bg-tjb-cream pt-16 pb-12">
     <div class="max-w-4xl mx-auto px-6 text-center">
@@ -18,21 +68,9 @@ import Layout from '../../layouts/Layout.astro';
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-xl font-semibold mb-6">Texas</h2>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <a href="/birth-support/dallas-tx/" class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">Dallas, TX</a>
-        <a href="/birth-support/houston-tx/" class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">Houston, TX</a>
-        <a href="/birth-support/austin-tx/" class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">Austin, TX</a>
-        <a href="/birth-support/san-antonio-tx/" class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">San Antonio, TX</a>
-        <a href="/birth-support/fort-worth-tx/" class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">Fort Worth, TX</a>
-        <a href="/birth-support/mckinney-tx/" class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">McKinney, TX</a>
-        <a href="/birth-support/plano-tx/" class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">Plano, TX</a>
-        <a href="/birth-support/frisco-tx/" class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">Frisco, TX</a>
-        <a href="/birth-support/irving-tx/" class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">Irving, TX</a>
-        <a href="/birth-support/arlington-tx/" class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">Arlington, TX</a>
-        <a href="/birth-support/garland-tx/" class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">Garland, TX</a>
-        <a href="/birth-support/denton-tx/" class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">Denton, TX</a>
-        <a href="/birth-support/mesquite-tx/" class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">Mesquite, TX</a>
-        <a href="/birth-support/carrollton-tx/" class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">Carrollton, TX</a>
-        <a href="/birth-support/grand-prairie-tx/" class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">Grand Prairie, TX</a>
+        {cities.map(city => (
+          <a href={`/birth-support/${city.slug}/`} class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">{city.name}, TX</a>
+        ))}
       </div>
     </div>
   </section>

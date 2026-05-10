@@ -1,0 +1,19 @@
+/* This file is imported by global.css to force Tailwind v4's @tailwindcss/vite plugin
+   to generate utility classes used in .astro files.
+   
+   The Vite plugin only scans JS/TS/CSS modules in its dependency graph, not .astro files.
+   By importing this CSS from global.css, Tailwind sees these class names during scanning. */
+
+/* Tailwind v4 safelist — every utility class used across all .astro pages, layouts, and components */
+.before\:content-\[\'\'\] after:content-[''],
+.bg-tjb-charcoal,
+.bg-tjb-cream,
+.bg-tjb-cream-100,
+.bg-tjb-cream-50,
+.bg-tjb-cream\/95,
+.bg-tjb-lavender-100,
+.bg-tjb-lavender-200,
+.bg-tjb-lavender-50,
+.bg-tjb-lavender-500,
+.bg-tjb-rose-100,
+.bg-tjb

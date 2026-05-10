@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 
 const city = "Dallas";
 const state = "TX";
-const pageTitle = `Birth Support in ${city}, ${state}`;
-const pageDesc = `Find birth support resources in Dallas, TX — local hospital info, doula costs, Medicaid status, and a free birth plan built for local families.`;
+const pageTitle = `Doula Dallas TX — Birth Support, Costs & Free Joyful Birth Plan`;
+const pageDesc = `Find a doula in Dallas, TX — local hospital info, doula costs, Medicaid status, and the free Joyful Birth Plan for local families.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/dallas-tx`;
 
 const hospitals = ["Texas Health Dallas", "Baylor University Medical Center", "Parkland Memorial Hospital"];
@@ -20,27 +20,78 @@ const faqs = [
   { q: "Does Medicaid cover doulas in Dallas?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits." },
   { q: "Which Dallas hospitals are birth-plan friendly?", a: "Many Dallas-area hospitals accommodate birth plans, but policies vary by facility. Texas Health Dallas and Baylor University Medical Center both see well-informed patients with clear preferences. Always confirm your hospital's policy during your hospital tour." },
   { q: "How much does a doula cost in Dallas?", a: "$900 to $2,800 depending on experience and package. Doula services are often considered worthwhile by families who want continuous support through labor and delivery." },
-  { q: "Does True Joy Birthing work with Dallas families?", a: "Shelbi is based in the DFW metro and can support Dallas-area families with virtual birth plan sessions. The free app and birth plan work for any Dallas hospital." }
+  { q: "Does True Joy Birthing work with Dallas families?", a: "Shelbi is based in the DFW metro and can support Dallas-area families with virtual birth plan sessions. The free app and birth plan work for any Dallas hospital. the free birth plan course to prepare step by step." }
 ];
+const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Birth Support", "url": "https://truejoybirthing.com/birth-support/"}, {"name": "Dallas, TX", "url": "https://truejoybirthing.com/birth-support/dallas-tx"}];
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://truejoybirthing.com/birth-support/dallas-tx#faq",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": f.a
+        }
+      }))
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://truejoybirthing.com/birth-support/dallas-tx#local",
+      "name": "True Joy Birthing",
+      "url": "https://truejoybirthing.com/birth-support/dallas-tx",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dallas",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      },
+      "areaServed": { "@type": "City", "name": "Dallas" },
+      "parentOrganization": { "@id": "https://truejoybirthing.com/#organization" }
+    }
+  ]
+};
+
 ---
 
 <Layout
   title={pageTitle}
   description={pageDesc}
   canonical={pageUrl}
+
+  breadcrumbList={breadcrumbList}
+  schema={schema}
 >
 
   <section class="bg-tjb-cream pt-16 pb-12">
-    <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-3xl md:text-4xl font-bold mb-4">Birth Support in Dallas, TX</h1>
-      <p class="text-lg text-tjb-gray mb-6">
-        Local hospital options, doula costs, and Medicaid status — plus the free birth plan template families in Dallas use to feel confident and prepared.
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <h1 class="text-3xl md:text-4xl font-bold mb-4">Find a Doula in Dallas, TX</h1>
+          <p class="text-lg text-tjb-gray mb-6">
+        If you're <a href="/what-is-a-doula/">looking for a doula</a> in Dallas, TX, this guide covers local hospital options, doula costs, Medicaid status, and the free Joyful Birth Plan families trust here.
       </p>
-      <div class="flex flex-col sm:flex-row gap-3">
+      <p class="text-tjb-gray mb-4">If you're delivering at Texas Health Dallas, know that the LBJ Freeway stretch near Forest Lane can turn a 15-minute drive into 40 during afternoon rush — plan your route to the hospital before contractions start. And when those third-trimester evening walks become non-negotiable, White Rock Lake's loop trail is shaded, flat, and has enough bathrooms along the way that you're never too far from one.</p>
+          <div class="flex flex-col sm:flex-row gap-3">
         <a href="#download-pdf" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">
           Download Free Birth Plan</a>
         <a href="https://apps.apple.com/app/true-joy-birthing" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-lg font-semibold hover:bg-tjb-cream transition">
           Get the Free App</a>
+      </div>
+        </div>
+        <div class="relative">
+          <img
+            src="/images/dallas-texas-birth-doula-skyline.webp"
+            alt="Skyline of Dallas, Texas, where families search for birth doulas and plan their hospital births."
+            class="w-full h-64 md:h-80 object-cover rounded-2xl shadow-lg"
+            width="1200"
+            height="800"
+            loading="eager"
+          />
+        </div>
       </div>
     </div>
   </section>
@@ -50,36 +101,42 @@ const faqs = [
 
       <h2>What Birth Support Looks Like in Dallas</h2>
       <p>Dallas is a large, diverse metro with a growing birth community. Families deliver at everything from high-volume hospitals to smaller community facilities and standalone birth centers. Medicaid expansion is making doula support more accessible.</p>
+      <p>Whether this is your first baby or you're preparing for a VBAC, <a href="/benefits-of-a-doula/">understanding the benefits of having a doula</a> can help you decide what support is right for your Dallas birth.</p>
 
-      <p>Families in Dallas often deliver at hospitals including:</p>
-      <ul>
-        <li>Texas Health Dallas</li>
-        <li>Baylor University Medical Center</li>
-        <li>Parkland Memorial Hospital</li>
-      </ul>
-      <p class="text-sm text-tjb-gray italic">Hospitals mentioned for context only. True Joy Birthing does not endorse any specific provider.</p>
+      <p>Texas Health Dallas on Harry Hines is one of the busiest L&amp;D units in the DFW metro — which means your care team has seen every kind of birth plan. Doulas are generally welcome, though visitor policies can shift seasonally, so confirm during your hospital tour. If we're being real, walking into a big hospital system without your preferences written down makes everything harder — so bring your birth plan and your doula, and you'll feel the difference. <a href="/birth-plan-template/">Use our free hospital birth plan template</a> to get started.</p>
 
-      <p>Birth center options in Dallas may include:</p>
-      <ul>
-        <li>The Birth Place at Dallas Birth Center</li>
-      </ul>
+      <p>Baylor University Medical Center in Deep Ellum draws families from across Dallas for its high-risk and maternal-fetal medicine programs. If you're planning a VBAC or managing a high-risk pregnancy here, a doula can be the steady presence who helps you ask the right questions and hold steady in the room. Parkland Memorial Hospital, Dallas County's public hospital, handles an enormous volume of births and cares for many Medicaid-covered families. The team there is increasingly familiar with doulas and birth plans, but policies can shift, so it helps to come in with your preferences written down. Honestly, it's a lot to walk into a place that busy without a plan in your hands — so write one before you go.</p>
+
+      <p>For families seeking a lower-intervention setting, The Birth Place at Dallas Birth Center offers midwife-led care in a standalone birth center environment. It's a good option if you want a birth center experience without leaving the city — and honestly, having a doula there who knows the rhythm of that space makes the whole thing feel a lot less unknown.</p>
+
+      <p class="text-sm text-tjb-gray italic">Hospitals and birth centers mentioned for context only. True Joy Birthing does not endorse any specific provider. Always confirm visitor and doula policies during your hospital tour.</p>
 
       <h2>How Much Does a Doula Cost in Dallas?</h2>
       <p>
-        In Dallas, birth doula services typically range from <strong>$900 to $2,800</strong> depending on experience, package, and whether the doula offers add-on services like postpartum visits.
+        In Dallas, birth doula services typically range from <strong>$900 to $2,800</strong> depending on experience, package, and whether the doula offers add-on services like <a href="/postpartum-doula/">postpartum visits</a>. <a href="/doula-cost/">See our full doula cost guide</a> for what's typically included.
       </p>
       <p>Some private insurers through the DFW metro area now cover doula support as part of maternal wellness benefits. Contact your plan.</p>
+      <p><strong>HSA/FSA:</strong> Many families don't realize that doula services can often be paid for with HSA or FSA funds, since birth support qualifies as a medical expense under most plans. Check with your plan administrator to confirm what's eligible and whether you need a letter from your provider.</p>
       <p><strong>Medicaid Note:</strong> Texas Medicaid's doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Dallas-Fort Worth area. Confirm with your Medicaid plan.</p>
+      <p>Not sure what to look for? <a href="/how-to-choose-a-doula/">Here's how to choose a doula</a> who fits your birth preferences and budget.</p>
 
-      <h2>Build Your Birth Plan for Dallas</h2>
-      <p>No matter where you deliver in Dallas, a clear, organized birth plan helps you communicate your preferences to the team in your birth room.</p>
+      <h2>Next Steps: Your Doula in Dallas, TX — Plan Your Birth</h2>
+      <p>No matter where you deliver in Dallas, a clear, organized birth plan helps you communicate your preferences to the team in your birth room. Start with the <a href="/birth-plan-template/">free birth plan template</a>, then use the <a href="/birth-plan-checklist/">birth plan checklist</a> to make sure nothing gets missed.</p>
       <a href="#download-pdf" class="inline-block bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition mb-6">
         Download the Free Birth Plan</a>
+      <p class="mt-2 text-sm text-tjb-gray">Or <a href="/birth-plan-course/">take the free birth plan course</a> step by step.</p>
 
       <div class="bg-tjb-cream p-4 rounded-lg mb-6">
         <p class="font-semibold text-tjb-lavender-500 mb-1">Shelbi serves local families in the Dallas area.</p>
-        <p class="text-sm text-tjb-gray">Virtual confidence sessions are also available for families in Dallas.</p>
+        <p class="text-sm text-tjb-gray">Virtual confidence sessions are also available for families in Dallas. the free birth plan course to prepare step by step.</p>
         <a href="/birth-plan-session" class="text-tjb-lavender-500 font-semibold text-sm hover:underline">Book a session →</a>
+      </div>
+
+      <div class="bg-white border-2 border-tjb-lavender-200 p-5 rounded-lg mb-6">
+        <h3 class="font-semibold text-lg text-tjb-charcoal mb-2">What True Joy Birthing Actually Does for You</h3>
+        <p class="text-tjb-gray mb-2">True Joy Birthing isn't a doula matching service, and we're not necessarily your in-person doula in Dallas. We're the step before — and alongside — all of that.</p>
+        <p class="text-tjb-gray mb-2">Shelbi built the free Joyful Birth Plan because she saw families show up to the hospital without their preferences written down, every single time. The birth plan template, the checklist, the free course — these are the tools that help you walk in prepared, whether you end up hiring a local doula or going it alone.</p>
+        <p class="text-tjb-gray">If you do find a doula in Dallas, great — bring your plan and use it together. If you're still looking, or if hiring a doula isn't in the budget right now, the birth plan is free and it works.</p>
       </div>
 
       <h2>Common Questions in Dallas</h2>
@@ -110,8 +167,8 @@ const faqs = [
 
   <section id="download-pdf" class="py-16 bg-tjb-cream">
     <div class="max-w-2xl mx-auto px-6 text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">Download Your Free Birth Plan</h2>
-      <p class="text-tjb-gray mb-8">Built by a doula for hospital-planning moms everywhere.</p>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Get Your Free Joyful Birth Plan</h2>
+      <p class="text-tjb-gray mb-8">Built by a doula for Dallas-area moms planning their birth.</p>
       <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" action="#" method="POST">
         <input name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
         <button type="submit" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition whitespace-nowrap">Get My Plan →</button>

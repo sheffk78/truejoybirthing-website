@@ -2,64 +2,57 @@
 
 ## Company Overview
 
-True Joy Birthing (truejoybirthing.com) is a birth education platform and software company founded by Shelbi Kohler, a certified birth doula based in Dallas-Fort Worth, Texas. The company operates on a SaaS-first business model where Pro Mode subscriptions ($29.99/month via app stores) serve as the core revenue engine, while free consumer tools (birth plan PDF, mobile app, educational blog content) function as the acquisition and marketing engine.
+True Joy Birthing (truejoybirthing.com) is a birth education platform founded by Shelbi Kohler, a certified birth doula based in Dallas-Fort Worth, Texas. The company provides free tools for expecting mothers — a structured birth plan, a free video mini-course, and a free mobile app — while offering Pro Mode subscriptions ($29.99/month) to birth professionals (doulas and midwives) who want to manage client birth plans.
 
 ## The Flywheel
 
-Moms searching for birth planning information land on the True Joy Birthing website → download the free birth plan or app (email captured) → build their plan in the free Parent Mode app → share it with their doula → the doula sees the organized plan and learns about Pro Mode → upgrades to Pro Mode in the app → the doula's next client repeats the loop.
+Moms searching for birth planning information land on the website → download the free birth plan or app (email captured) → build their plan in the free Parent Mode app → share it with their doula → the doula sees the organized plan and learns about Pro Mode → upgrades to Pro Mode → the doula's next client repeats the loop.
 
-This "born connected" architecture means every mom who builds a plan creates a Pro Mode lead when she shares it with her birth professional.
+Every mom who builds a plan creates a Pro Mode lead when she shares it with her birth professional.
 
 ## Products & Services
 
-### Consumer-Facing (Free)
-- **Free Birth Plan PDF** — A structured, hospital-ready birth plan covering all stages of labor, delivery, and postpartum. Designed to be read by a nurse in two minutes. Requires email signup.
-- **Parent Mode App (Free)** — iOS and Android app for building, editing, and sharing birth plans. Includes educational content on every birth option.
+### Free for Moms
+- **Free Birth Plan PDF/Template** — Structured, hospital-ready birth plan covering labor preferences, pain management, delivery, postpartum care, and newborn care. Designed to be read by a nurse in 30 seconds. Email signup required. truejoybirthing.com/birth-plan-template/
+- **Free Birth Plan Checklist** — Complete checklist organized by category. truejoybirthing.com/birth-plan-checklist/
+- **Free Birth Plan Mini-Course** — Video walkthrough of every birth plan section (About Shelbi + Intro, Labor & Delivery Preferences, Newborn Care Preferences, Post-Delivery Preferences, Other Information). Free. truejoybirthing.com/birth-plan-course/
+- **Free Parent Mode App** — iOS and Android. Build, edit, and share your birth plan. Includes educational content on every birth option. Free for all expecting mothers.
 
-### Info Products (One-Time Purchase via Website)
-- **Birth Plan Mini-Course** — $47 self-paced video course. Covers every birth option, tradeoffs, and the exact phrases to use when communicating preferences to hospital staff. Approximately 2-3 hours of content.
-- **1:1 Confidence Session** — $250-300 per 60-minute Zoom session. Shelbi reviews the birth plan line by line, helps the client anticipate questions, and builds confidence for hospital communication. Limited to 5-8 sessions per month.
+### Paid for Professionals
+- **Pro Mode** — $29.99/month or $274.99/year. Client plan dashboard, client notes, plan sharing tools, evidence library, priority support. Available only through Apple App Store and Google Play. Target: birth doulas, postpartum doulas, and midwives.
 
-### Professional SaaS (Recurring via App Stores)
-- **Pro Mode** — $29.99/month or $274.99/year. Available only through Apple App Store and Google Play. Includes: client plan dashboard, client notes, plan sharing tools, evidence library, and priority support. Target market: birth doulas, postpartum doulas, and midwives.
+### 1:1 Sessions
+- **Confidence Session** — 60-minute virtual session with Shelbi. She reviews your birth plan line by line, helps you anticipate questions, and builds confidence for hospital communication. Limited availability.
 
-## Content & SEO Strategy
+## Key Pages
 
-### Primary Keywords
-- "birth plan"
-- "what is a doula"
-- "how much does a doula cost" (by city)
-- "doula vs midwife"
-- "how to hire a doula"
-- "doula insurance coverage"
-- "birth doula [city name]"
+### Core Conversion Pages
+- Homepage: truejoybirthing.com — Free birth plan download, app CTA, course CTA
+- Free Birth Plan Template: truejoybirthing.com/birth-plan-template/ — Download + 5-step HowTo + FAQ
+- Birth Plan Checklist: truejoybirthing.com/birth-plan-checklist/ — Complete checklist by category
+- Free Mini-Course: truejoybirthing.com/birth-plan-course/ — 5 video modules, free for all
+- Contact: truejoybirthing.com/contact/ — Form sends to support@truejoybirthing.com
 
-### Content Pillars
-1. Birth plan creation and communication
-2. Doula education (costs, hiring, types, insurance)
-3. Local birth support resources (Texas cities)
-4. Postpartum and recovery planning
-5. Evidence-based birth information (no medical advice)
+### Educational / SEO Pages
+- What Is a Doula: truejoybirthing.com/what-is-a-doula/
+- How to Choose a Doula: truejoybirthing.com/how-to-choose-a-doula/
+- Benefits of a Doula: truejoybirthing.com/benefits-of-a-doula/
+- How Much Does a Doula Cost: truejoybirthing.com/doula-cost/ — Cost guide with city-by-city data
+- Postpartum Doula: truejoybirthing.com/postpartum-doula/ — What they do, costs, how they differ from birth doulas
+- Birth Plan Checklist: truejoybirthing.com/birth-plan-checklist/ — Organized by category
 
-### Blog Posts (Published)
-- What Is a Birth Doula? (Complete Guide for Expecting Moms)
-- What Are Doula Services? A Complete Breakdown
-- How Much Are Doula Services? City-by-City Cost Guide
-- How to Hire a Doula: Interview Questions and Red Flags
-- Doula vs Midwife: Who You Actually Need
-- Doula Support: What to Expect at Every Stage
-- Is a Doula Covered by Insurance? A Complete Guide
-- Doula Insurance Coverage: What Your Plan Actually Pays For
-- Doula Reimbursement Through Medicaid: State-by-State Guide
-- Postpartum Doula: Support After You Bring Baby Home
-- Debunking Doula Myths: What Hollywood Gets Wrong
+### Local / City Pages (20 Texas Cities)
+truejoybirthing.com/birth-support/ — Hub page linking to all cities
 
-### Local Pages (Texas Cities)
-- Dallas, TX — Hospital info, doula costs, Medicaid status
-- Houston, TX — Hospital info, doula costs, Medicaid status
-- Austin, TX — Hospital info, doula costs, Medicaid status
-- San Antonio, TX — Hospital info, doula costs, Medicaid status
-- Fort Worth, TX — Hospital info, doula costs, Medicaid status
+Each city page includes: local hospital info, doula cost range, Medicaid status, insurance notes, FAQs, and a free birth plan download CTA.
+
+Cities: Dallas, Fort Worth, Houston, Austin, San Antonio, El Paso, Plano, Frisco, McKinney, Arlington, Garland, Irving, Carrollton, Grand Prairie, Denton, Mesquite, Lubbock, Amarillo, Corpus Christi, Laredo
+
+### Blog
+truejoybirthing.com/blog/ — 13 published posts covering doula education, costs, insurance, hiring, and debunking myths.
+
+### About
+truejoybirthing.com/about/ — Shelbi's story, certification, philosophy, video intro
 
 ## Brand Voice & Tone
 
@@ -68,58 +61,50 @@ This "born connected" architecture means every mom who builds a plan creates a P
 - Evidence-based but accessible — no academic jargon
 - Empowering without being preachy
 - Honest about tradeoffs and uncertainty in birth
-- No medical advice provided; always defer to care providers
+- No medical advice; always defer to care providers
 - No shame for any birth choice (hospital, home, medicated, unmedicated)
 
 ## About Shelbi Kohler
 
 - Certified birth doula (DONA-trained)
-- Based in Dallas-Fort Worth, Texas metroplex
+- Based in Dallas-Fort Worth, Texas
 - Available for virtual 1:1 sessions nationwide
 - Specializes in hospital birth planning and communication
 - Philosophy: "Your birth, your choices, your confidence"
 
 ## Technical Details
 
-- Website: Astro static site generator, deployed on Cloudflare Pages
-- Domain: truejoybirthing.com (managed via Cloudflare)
-- Email: support@truejoybirthing.com
+- Website: Astro static site, deployed on Cloudflare Pages
+- Domain: truejoybirthing.com (Cloudflare)
+- Email: support@truejoybirthing.com (AgentMail API)
 - Social: @truejoybirthing on Instagram
-- App platforms: iOS (App Store), Android (Google Play)
-- Payment processing: Stripe for website products; Apple/Google for Pro Mode subscriptions
-- Email marketing: Brevo (formerly Sendinblue)
-- Analytics: GA4 + Google Search Console
+- App: iOS (App Store) + Android (Google Play)
+- Payment: Stripe for website; Apple/Google IAP for Pro Mode
+- Analytics: GA4 (G-469670390)
+- Structured data: Organization + ProfessionalService schema on all pages, FAQPage schema on FAQ/city pages, LocalBusiness on city pages, HowTo on template/checklist pages, Service schema on doula-cost and postpartum-doula
+
+## Schema & SEO
+
+- Full Organization/ProfessionalService JSON-LD on every page (Shelbi as founder, services catalog, area served, contact)
+- BreadcrumbList on all non-homepage pages
+- FAQPage schema on FAQ, city, and SEO pages
+- LocalBusiness schema on every city page with city-specific areaServed
+- HowTo schema on birth-plan-template and birth-plan-checklist
+- Sitemap: sitemap-index.xml (auto-generated by @astrojs/sitemap)
+- robots.txt: allows all crawlers including AI citation bots (ClaudeBot, PerplexityBot, OAI-SearchBot, Google-Extended, Applebot-Extended)
+- /llms.txt and /llms-full.txt for AI system ingestion
 
 ## Policies & Disclaimers
 
-- No medical advice provided on any page or in any product
+- No medical advice on any page or in any product
 - Always consult your care provider for medical decisions
-- HIPAA-aligned data handling in Pro Mode (encryption at rest and in transit)
-- Privacy policy and terms of service available on website
-- Pro Mode subscription billing handled by Apple/Google; cancellations through respective platforms
-- Course and session purchases handled by Stripe; refunds per published policy
+- Privacy policy and terms of service on website
+- Pro Mode billing via Apple/Google; cancellations through respective platforms
 
-## Contact Information
+## Contact
 
 - Website: https://truejoybirthing.com
 - Email: support@truejoybirthing.com
 - Instagram: https://instagram.com/truejoybirthing
 - App Store: https://apps.apple.com/app/true-joy-birthing
 - Google Play: https://play.google.com/store/apps/details?id=com.truejoybirthing
-
-## Competitors & Differentiation
-
-True Joy Birthing is not a doula directory (like DoulaMatch.net) or a course company (like Mama Natural). It is birth-planning software for professionals, marketed through free consumer tools. The differentiation:
-
-1. Software-first, not service-first — the product is the app, not Shelbi's time
-2. "Born connected" architecture — free users naturally introduce professionals to the paid product
-3. Education at every touchpoint — every free tool teaches something about birth options
-4. Pro Mode is the only all-in-one client management tool designed specifically for birth professionals
-
-## Future Roadmap (Committed)
-
-- Partner View: Shareable birth plan view for partners/support people
-- Labor Mode: Quick-reference checklist for active labor
-- Postpartum module: Recovery planning and support tools
-- Evidence library: Regularly updated research summaries for Pro Mode subscribers
-- Community features: Deferred until 500+ active Pro users
