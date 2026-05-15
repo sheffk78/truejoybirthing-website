@@ -75,7 +75,7 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
       });
     }
 
-    // Rate limit: max 500 chars for message
+    // Rate limit: max 5000 chars for message
     if (message.length > 5000) {
       return new Response(JSON.stringify({ error: 'Message too long' }), {
         status: 400,
@@ -83,7 +83,55 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
       });
     }
 
-    // Build email subject and body
+    const brevoContactName = name || email;
+    const firstName = name ? name.split(' ')[0] : '';
+
+    // ── Primary: Brevo contact sync + welcome email ──
+    // Brevo is the critical path — list signup + welcome email with PDF link.
+    // AgentMail (inbox notification) is secondary — fire-and-forget.
+    if (env.BREVO_API_KEY) {
+      try {
+        // 1. Create/update contact in list 2 (general) + list 5 (Free Birth Plan)
+        await fetch('https://api.brevo.com/v3/contacts', {
+          method: 'POST',
+          headers: {
+            'api-key': env.BREVO_API_KEY,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email,
+            attributes: { FIRSTNAME: brevoContactName },
+            listIds: [2, 5],
+            updateEnabled: true,
+          }),
+        });
+        // Contact created (or already exists) — that's sufficient. Proceed to send email.
+      } catch (brevoErr) {
+        console.error('Brevo contact sync error (non-fatal):', brevoErr);
+        // Don't block — continue to try sending welcome email anyway
+      }
+
+      // 2. Send welcome email with birth plan PDF (template 7)
+      try {
+        await fetch('https://api.brevo.com/v3/smtp/email', {
+          method: 'POST',
+          headers: {
+            'api-key': env.BREVO_API_KEY,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            templateId: 7,
+            to: [{ email, name: brevoContactName }],
+            params: { FIRSTNAME: firstName || brevoContactName },
+          }),
+        });
+      } catch (sendErr) {
+        console.error('Brevo welcome email send error (non-fatal):', sendErr);
+      }
+    }
+
+    // ── Secondary: AgentMail inbox notification (fire-and-forget) ──
+    const inboxId = 'support@truejoybirthing.com';
     const emailSubject = subject || `New contact from ${name || email}`;
     const emailBody = [
       `New contact form submission from truejoybirthing.com`,
@@ -94,76 +142,18 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
       message,
     ].join('\n');
 
-    // Send via AgentMail
-    const inboxId = 'support@truejoybirthing.com';
-    const sendResponse = await fetch(`https://api.agentmail.to/v0/inboxes/${inboxId}/messages/send`, {
+    fetch(`https://api.agentmail.to/v0/inboxes/${inboxId}/messages/send`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${env.AGENTMAIL_API_KEY}`,
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        to: [inboxId],
-        subject: emailSubject,
-        text: emailBody,
-      }),
+      body: JSON.stringify({ to: [inboxId], subject: emailSubject, text: emailBody }),
+    }).catch((agentErr) => {
+      console.error('AgentMail send failed (non-blocking):', agentErr);
     });
 
-    if (!sendResponse.ok) {
-      const errorData = await sendResponse.text();
-      console.error('AgentMail send failed:', sendResponse.status, errorData);
-      return new Response(JSON.stringify({ error: 'Failed to send message' }), {
-        status: 500,
-        headers: corsHeaders,
-      });
-    }
-
-    // After successful AgentMail send, add/update contact in Brevo and send welcome email
-    if (env.BREVO_API_KEY) {
-      const brevoContactName = name || email;
-      const firstName = name ? name.split(' ')[0] : '';
-
-      // 1. Create/update contact in Brevo list 2 (general) + list 5 (Free Birth Plan)
-      fetch('https://api.brevo.com/v3/contacts', {
-        method: 'POST',
-        headers: {
-          'api-key': env.BREVO_API_KEY,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email,
-          attributes: {
-            FIRSTNAME: brevoContactName,
-          },
-          listIds: [2, 5],
-          updateEnabled: true,
-        }),
-      }).catch((brevoErr) => {
-        console.error('Brevo contact sync failed (non-blocking):', brevoErr);
-      });
-
-      // 2. Send welcome email with birth plan PDF (template 7 = "Download Birth Plan")
-      // Delay 3s to allow contact creation to propagate before send
-      setTimeout(() => {
-        fetch('https://api.brevo.com/v3/smtp/email', {
-          method: 'POST',
-          headers: {
-            'api-key': env.BREVO_API_KEY!,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            templateId: 7,
-            to: [{ email, name: brevoContactName }],
-            params: {
-              FIRSTNAME: firstName || brevoContactName,
-            },
-          }),
-        }).catch((sendErr) => {
-          console.error('Brevo welcome email send failed (non-blocking):', sendErr);
-        });
-      }, 3000);
-    }
-
+    // Return success — lead is captured
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
       headers: corsHeaders,
