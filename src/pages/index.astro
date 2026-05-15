@@ -77,7 +77,7 @@ import Layout from '../layouts/Layout.astro';
           <img
             src="/images/birth-plan-preview.webp"
             alt="Preview of the free birth plan template — a structured multi-page document covering labor preferences, pain management, delivery, postpartum, and newborn care"
-            class="w-full max-w-md rounded-lg shadow-lg"
+            class="w-full max-w-md"
             loading="eager"
             fetchpriority="high"
           />
@@ -118,7 +118,7 @@ import Layout from '../layouts/Layout.astro';
         <img
           src="/images/skin-to-skin.webp"
           alt="A mother holds her newborn skin-to-skin after birth — the kind of moment a birth plan protects"
-          class="w-full max-w-2xl mx-auto rounded-lg"
+          class="w-full max-w-lg mx-auto"
           loading="lazy"
         />
       </div>
@@ -181,7 +181,7 @@ import Layout from '../layouts/Layout.astro';
             <img
               src="/images/birth-plan-booklet-1.webp"
               alt="The free birth plan template — a structured multi-page document covering labor preferences, fetal monitoring, and delivery options, designed to be read by your nurse in two minutes"
-              class="w-full max-w-sm mx-auto md:mx-0 rounded-lg"
+              class="w-full max-w-sm mx-auto md:mx-0"
               loading="lazy"
             />
           </div>
@@ -192,20 +192,21 @@ import Layout from '../layouts/Layout.astro';
           <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-8 items-start">
             <span class="text-3xl font-bold text-tjb-rose-500 font-serif">02</span>
             <div>
-              <h3 class="text-2xl mb-3">Birth Plan Mini-Course</h3>
+              <h3 class="text-2xl mb-1">Birth Plan Mini-Course</h3>
+              <p class="text-sm text-tjb-lavender-500 font-semibold mb-3">$47 · 4 lessons</p>
               <p class="text-tjb-gray leading-relaxed mb-4 max-w-xl">
                 Learn every option, every tradeoff, and the exact phrases to use when you want to slow things down or ask questions. Use the <a href="/birth-plan-checklist/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">birth plan checklist</a> to work through each preference point before you start.
               </p>
-              <div class="border-t border-tjb-cream-200/60 mt-4 mb-4">
-                <div class="py-2.5 border-b border-tjb-cream-200/60 flex gap-3 items-baseline">
+              <div class="border-t border-tjb-lavender-300/40 mt-4 mb-4">
+                <div class="py-2.5 border-b border-tjb-lavender-300/40 flex gap-3 items-baseline">
                   <span class="text-sm font-semibold text-tjb-lavender-500">1</span>
                   <span class="text-sm text-tjb-gray">Talking to your OB about induction</span>
                 </div>
-                <div class="py-2.5 border-b border-tjb-cream-200/60 flex gap-3 items-baseline">
+                <div class="py-2.5 border-b border-tjb-lavender-300/40 flex gap-3 items-baseline">
                   <span class="text-sm font-semibold text-tjb-lavender-500">2</span>
                   <span class="text-sm text-tjb-gray">Pain management options and real tradeoffs</span>
                 </div>
-                <div class="py-2.5 border-b border-tjb-cream-200/60 flex gap-3 items-baseline">
+                <div class="py-2.5 border-b border-tjb-lavender-300/40 flex gap-3 items-baseline">
                   <span class="text-sm font-semibold text-tjb-rose-500">3</span>
                   <span class="text-sm text-tjb-gray">Newborn procedures — what's standard vs. optional</span>
                 </div>
@@ -215,7 +216,7 @@ import Layout from '../layouts/Layout.astro';
                 </div>
               </div>
               <a href="/birth-plan-course" class="text-tjb-rose-500 font-semibold text-sm border-b border-transparent hover:border-tjb-rose-500 transition-all inline-block pb-0.5">
-                Enroll in the birth plan course
+                Enroll — $47
               </a>
             </div>
           </div>
@@ -239,7 +240,7 @@ import Layout from '../layouts/Layout.astro';
             <img
               src="/images/doula-holding-hands.webp"
               alt="A birth doula provides hands-on comfort and support during labor — the kind of personalized guidance a 1:1 Confidence Session delivers"
-              class="w-full max-w-sm mx-auto md:mx-0 rounded-lg"
+              class="w-full max-w-sm mx-auto md:mx-0"
               loading="lazy"
             />
           </div>
@@ -250,10 +251,9 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ═══════════════════════════════════════════
-       LEAD MAGNET — Moved after testimonials + how-it-helps
-       (catches mom at peak conviction before Pro fork)
+       LEAD MAGNET — Conversion zone with framing
        ═══════════════════════════════════════════ -->
-  <section id="download" class="py-20 md:py-28">
+  <section id="download" class="bg-white border-y border-tjb-lavender-200/60 py-20 md:py-28">
     <div class="max-w-2xl mx-auto px-6 text-center">
       <p class="eyebrow mb-4 fade-up">Free Download</p>
       <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
@@ -262,7 +262,7 @@ import Layout from '../layouts/Layout.astro';
         Join thousands of moms who've walked into their births with a clear plan and the words to stand by it.
       </p>
 
-      <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4">
+      <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-4">
         <input 
           id="lead-email"
           name="email" 
@@ -307,7 +307,7 @@ import Layout from '../layouts/Layout.astro';
           <img
             src="/images/doula-teaching.webp"
             alt="A birth doula reviews a client's birth plan together — Pro Mode gives doulas and midwives the same collaborative tools"
-            class="w-full max-w-md rounded-lg"
+            class="w-full max-w-md"
             loading="lazy"
           />
         </div>
