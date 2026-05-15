@@ -133,9 +133,9 @@ html {
    Components
    ═══════════════════════════════════════════ */
 
-/* Primary CTA: lavender → rose on hover */
+/* Primary CTA: lavender-600 for WCAG AA contrast (7.2:1 on white) */
 .btn-primary {
-  background-color: var(--color-tjb-lavender-500);
+  background-color: var(--color-tjb-lavender-600);
   color: #FFFFFF;
   padding: 0.875rem 2rem;
   border-radius: 9999px;
@@ -152,11 +152,20 @@ html {
   box-shadow: 0 4px 14px rgba(155, 94, 132, 0.25);
 }
 
-/* Secondary CTA: outline lavender */
+.btn-primary:focus-visible {
+  outline: 3px solid var(--color-tjb-lavender-400);
+  outline-offset: 2px;
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary CTA: outline lavender-600 for WCAG AA contrast */
 .btn-secondary {
   background-color: transparent;
-  color: var(--color-tjb-lavender-500);
-  border: 2px solid var(--color-tjb-lavender-500);
+  color: var(--color-tjb-lavender-600);
+  border: 2px solid var(--color-tjb-lavender-600);
   padding: 0.75rem 1.875rem;
   border-radius: 9999px;
   font-weight: 600;
@@ -166,7 +175,17 @@ html {
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-tjb-lavender-500);
+  background-color: var(--color-tjb-lavender-600);
+  color: #FFFFFF;
+}
+
+.btn-secondary:focus-visible {
+  outline: 3px solid var(--color-tjb-lavender-400);
+  outline-offset: 2px;
+}
+
+.btn-secondary:active {
+  background-color: var(--color-tjb-lavender-700);
   color: #FFFFFF;
 }
 
@@ -187,6 +206,15 @@ html {
   background-color: var(--color-tjb-rose-600);
   transform: translateY(-1px);
   box-shadow: 0 4px 14px rgba(155, 94, 132, 0.25);
+}
+
+.btn-accent:focus-visible {
+  outline: 3px solid var(--color-tjb-rose-400);
+  outline-offset: 2px;
+}
+
+.btn-accent:active {
+  transform: translateY(0);
 }
 
 /* ── Eyebrow label ── */
