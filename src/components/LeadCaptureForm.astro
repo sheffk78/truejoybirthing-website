@@ -1,5 +1,5 @@
 ---
-// Shared lead capture form — name + email → free PDF + free course → app upsell.
+// Shared lead capture form — name + email → free PDF + guided app walkthrough.
 // Used on every page that collects leads for the birth plan.
 interface Props {
   heading?: string;
@@ -8,7 +8,7 @@ interface Props {
 }
 const {
   heading = 'Get Your Free Birth Plan',
-  body = 'Enter your name and email and we\'ll send you the free fillable birth plan PDF and access to the free course. No spam — just the tools you need.',
+  body = 'Enter your name and email and we\'ll send you the free fillable birth plan PDF plus a guided walkthrough in the app. No spam — just the tools you need.',
   eyebrow = 'Free Download',
 } = Astro.props;
 ---
@@ -40,7 +40,7 @@ const {
         />
       </div>
       <button type="submit" id="lead-submit" class="btn-primary whitespace-nowrap">
-        Get the free PDF + course
+        Get the free PDF + app guide
       </button>
     </form>
     <p id="lead-status" class="text-xs hidden text-tjb-gray-300"></p>
@@ -90,7 +90,7 @@ const {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: name || 'Lead Magnet', email, message: `Birth plan PDF + course request from: ${name || email}` }),
+        body: JSON.stringify({ name: name || 'Lead Magnet', email, message: `Birth plan PDF request from: ${name || email}` }),
       });
 
       const data = await res.json();
@@ -110,7 +110,7 @@ const {
       leadStatus.classList.remove('hidden');
     } finally {
       leadBtn.disabled = false;
-      leadBtn.textContent = 'Get the free PDF + course';
+      leadBtn.textContent = 'Get the free PDF + app guide';
     }
   });
 </script>

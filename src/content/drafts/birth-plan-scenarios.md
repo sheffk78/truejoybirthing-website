@@ -99,7 +99,7 @@ Maybe. If your birth has clear next steps — "if we induce, I want X; if I go i
 
 ### What if my birth doesn't fit any scenario?
 
-That's okay and honestly pretty common. Birth doesn't always sort itself into neat categories. If your situation is unique — say you're being induced but also planning an unmedicated birth, or your doctor has mentioned a C-section but hasn't scheduled one — pick the closest scenario and adapt. The language templates in each guide are starting points, not final drafts. Your doula can help you customize, or you can [take the free birth plan course](/birth-plan-course/) to walk through each section.
+That's okay and honestly pretty common. Birth doesn't always sort itself into neat categories. If your situation is unique — say you're being induced but also planning an unmedicated birth, or your doctor has mentioned a C-section but hasn't scheduled one — pick the closest scenario and adapt. The language templates in each guide are starting points, not final drafts. Your doula can help you customize, or you can [get the free birth plan](/#download) to walk through each section.
 
 ### Can I change my birth plan during labor?
 
@@ -107,7 +107,7 @@ Yes. Your birth plan isn't a contract you're locked into. It's a communication t
 
 ### Where do I start?
 
-Right here. Pick the scenario that matches your situation from the list above, read through the guide, and use the [free birth plan template](/birth-plan-template/) to write it out. If you want step-by-step help, the [free birth plan course](/birth-plan-course/) walks you through each section with short videos. And if you want someone in your corner who's done this before, [find a doula in your city](/birth-support/).
+Right here. Pick the scenario that matches your situation from the list above, read through the guide, and use the [free birth plan template](/birth-plan-template/) to write it out. If you want step-by-step help, the [free birth plan](/#download) walks you through each section with short videos. And if you want someone in your corner who's done this before, [find a doula in your city](/birth-support/).
 
 ---
 
@@ -157,8 +157,8 @@ internal_links:
   - href: /birth-plan-template/
     anchor: Free birth plan template
     status: live
-  - href: /birth-plan-course/
-    anchor: Free birth plan course
+  - href: /#download
+      anchor: Get the free birth plan
     status: live
   - label: VBAC Birth Plan
     status: coming_soon
