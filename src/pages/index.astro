@@ -72,12 +72,12 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- Right: Photo — 45%, 3:4 portrait crop of Shelbi -->
-        <div class="md:w-[45%] min-h-[24rem] md:min-h-0 relative overflow-hidden">
+        <!-- Right: Product mockup — 45%, stacked pages preview of the birth plan -->
+        <div class="md:w-[45%] flex items-center justify-center px-8 py-12 md:py-0">
           <img
-            src="/images/shelbi-hero-portrait.webp"
-            alt="Shelbi Kohler — certified birth doula and creator of the free birth plan"
-            class="absolute inset-0 w-full h-full object-cover object-center"
+            src="/images/birth-plan-preview.webp"
+            alt="Preview of the free birth plan template — a structured multi-page document covering labor preferences, pain management, delivery, postpartum, and newborn care"
+            class="w-full max-w-md rounded-lg shadow-lg"
             loading="eager"
             fetchpriority="high"
           />
@@ -88,15 +88,20 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ═══════════════════════════════════════════
-       PROOF BAR — Single trust line, no heading
+       PROVENANCE — Compact trust anchor
        ═══════════════════════════════════════════ -->
   <div class="bg-tjb-cream border-y border-tjb-lavender-200/40">
-    <div class="max-w-3xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-sm text-tjb-gray-300 font-sans tracking-wide">
-      <span>Built by a certified birth doula</span>
-      <span class="hidden sm:inline text-tjb-rose-400">·</span>
-      <span>Designed to be read by a nurse in two minutes</span>
-      <span class="hidden sm:inline text-tjb-rose-400">·</span>
-      <span>App Store · Google Play</span>
+    <div class="max-w-3xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
+      <div class="flex items-center gap-2.5">
+        <img src="/images/shelbi-thumb.webp" alt="" width="32" height="32" class="w-8 h-8 rounded-full object-cover" />
+        <p class="text-sm text-tjb-gray leading-snug">
+          <a href="/about/" class="text-tjb-lavender-600 hover:text-tjb-lavender-700 font-medium no-underline">Shelbi Kohler</a>, certified birth doula
+        </p>
+      </div>
+      <span class="hidden sm:inline text-tjb-rose-400 text-sm">·</span>
+      <span class="text-sm text-tjb-gray-300 tracking-wide">Designed to be read by a nurse in two minutes</span>
+      <span class="hidden sm:inline text-tjb-rose-400 text-sm">·</span>
+      <span class="text-sm text-tjb-gray-300 tracking-wide">App Store · Google Play</span>
     </div>
   </div>
 
