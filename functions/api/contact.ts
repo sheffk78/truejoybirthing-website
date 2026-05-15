@@ -1,5 +1,6 @@
 export interface Env {
   AGENTMAIL_API_KEY: string;
+  BREVO_API_KEY?: string;
 }
 
 const ALLOWED_ORIGINS = ['https://truejoybirthing.com', 'https://www.truejoybirthing.com', 'http://localhost:4321'];
@@ -114,6 +115,28 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
       return new Response(JSON.stringify({ error: 'Failed to send message' }), {
         status: 500,
         headers: corsHeaders,
+      });
+    }
+
+    // After successful AgentMail send, add/update contact in Brevo (non-blocking)
+    if (env.BREVO_API_KEY) {
+      const brevoContactName = name || email;
+      fetch('https://api.brevo.com/v3/contacts', {
+        method: 'POST',
+        headers: {
+          'api-key': env.BREVO_API_KEY,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          attributes: {
+            FIRSTNAME: brevoContactName,
+          },
+          listIds: [2],
+          updateEnabled: true,
+        }),
+      }).catch((brevoErr) => {
+        console.error('Brevo contact sync failed (non-blocking):', brevoErr);
       });
     }
 
