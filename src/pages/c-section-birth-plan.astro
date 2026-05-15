@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import LeadCaptureForm from '../components/LeadCaptureForm.astro';
 
 const breadcrumbList = [
   {"name": "Home", "url": "https://truejoybirthing.com/"},
@@ -223,22 +224,6 @@ const schema = {
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════
-       LEAD CAPTURE — Download archetype
-       ═══════════════════════════════════════════ -->
-  <section id="download" class="py-20 md:py-28">
-    <div class="max-w-2xl mx-auto px-6 text-center">
-      <p class="eyebrow mb-4">Free download</p>
-      <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
-      <h2 class="font-semibold text-tjb-charcoal mb-5 leading-[1.15]" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
-        Start Your C-Section Birth Plan
-      </h2>
-      <p class="text-lg text-tjb-gray mb-10 max-w-xl mx-auto leading-relaxed">
-        Pick the sections that apply to your C-section, fill in your preferences, and walk in knowing your plan is documented. The template is free.
-      </p>
-      <a href="/true-joy-birth-plan.pdf" download="true-joy-birth-plan.pdf" class="btn-primary inline-block mb-6">Download free PDF</a>
-      <p class="text-sm text-tjb-gray mb-3">Print it, fill it out, hand it to your nurse.</p>
-      <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="inline-flex items-center gap-2 text-tjb-lavender-600 font-semibold hover:text-tjb-lavender-700 transition-colors"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>Get the free app — richer, updatable, shareable</a>
-    </div>
-  </section>
+
+  <LeadCaptureForm />
 </Layout>

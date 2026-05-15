@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import LeadCaptureForm from '../components/LeadCaptureForm.astro';
 
 const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "How Much Does a Doula Cost", "url": "https://truejoybirthing.com/doula-cost/"}];
 
@@ -60,7 +61,7 @@ const schema = {
         Birth doula services in the US typically cost <strong>$650–$3,000</strong>. Here's what drives that range, what you're actually paying for, and how to find support that fits your budget.
       </p>
       <div class="flex flex-col sm:flex-row gap-3">
-        <a href="/#download" class="bg-tjb-lavender-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition">
+        <a href="#download" class="bg-tjb-lavender-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition">
           Download free PDF</a>
         <a href="/birth-support/" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-full font-semibold hover:bg-tjb-cream transition">
           Find Your City</a>
@@ -182,13 +183,6 @@ const schema = {
     </div>
   </section>
 
-  <section id="download" class="py-16 bg-tjb-cream">
-    <div class="max-w-2xl mx-auto px-6 text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">Start With a Free Birth Plan</h2>
-      <p class="text-tjb-gray mb-8">Whether or not you hire a doula, a clear birth plan helps you communicate your preferences with confidence.</p>
-      <a href="/true-joy-birth-plan.pdf" download="true-joy-birth-plan.pdf" class="btn-primary inline-block mb-6">Download free PDF</a>
-      <p class="text-sm text-tjb-gray mb-3">Print it, fill it out, hand it to your nurse.</p>
-      <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="inline-flex items-center gap-2 text-tjb-lavender-600 font-semibold hover:text-tjb-lavender-700 transition-colors"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>Get the free app — richer, updatable, shareable</a>
-    </div>
-  </section>
+
+  <LeadCaptureForm />
 </Layout>

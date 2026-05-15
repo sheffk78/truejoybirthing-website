@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import LeadCaptureForm from '../components/LeadCaptureForm.astro';
 
 const breadcrumbList = [
   {"name": "Home", "url": "https://truejoybirthing.com/"},
@@ -150,11 +151,7 @@ const breadcrumbList = [
         <p class="text-sm text-tjb-gray">— Amanda T., Austin</p>
       </div>
 
-      <div class="my-10 not-prose bg-tjb-rose-50 rounded-xl p-8 text-center">
-        <h3 class="text-xl font-bold mb-3">Preparing for Interviews?</h3>
-        <p class="text-tjb-gray mb-6">Our free birth plan template helps you articulate your preferences before you meet doulas. Know what you want before you ask for help.</p>
-        <a href="#download" class="btn-primary">Download Free PDF</a>
-      </div>
+      <LeadCaptureForm />
 
     </div>
   </section>

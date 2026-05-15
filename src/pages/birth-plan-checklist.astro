@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import LeadCaptureForm from '../components/LeadCaptureForm.astro';
 
 const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Birth Plan Checklist", "url": "https://truejoybirthing.com/birth-plan-checklist/"}];
 
@@ -156,7 +157,7 @@ const schema = {
       <div class="bg-tjb-cream p-5 rounded-lg my-8 not-prose">
         <p class="font-semibold text-tjb-lavender-500 mb-2">Want help thinking through each section?</p>
         <p class="text-sm text-tjb-gray mb-3">The free birth plan mini-course walks through every category with short, clear videos.</p>
-        <a href="/birth-plan-course/" class="text-tjb-lavender-500 font-semibold text-sm hover:underline">Explore the free course →</a>
+        <a href="#download" class="text-tjb-lavender-500 font-semibold text-sm hover:underline">Explore the free course →</a>
       </div>
 
       <h2>Common Questions</h2>
@@ -186,13 +187,6 @@ const schema = {
     </div>
   </section>
 
-  <section id="download" class="py-16 bg-tjb-cream">
-    <div class="max-w-2xl mx-auto px-6 text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Build Your Birth Plan?</h2>
-      <p class="text-tjb-gray mb-8">Use this checklist, then transfer your preferences to the free template.</p>
-      <a href="/true-joy-birth-plan.pdf" download="true-joy-birth-plan.pdf" class="btn-primary inline-block mb-6">Download free PDF</a>
-      <p class="text-sm text-tjb-gray mb-3">Print it, fill it out, hand it to your nurse.</p>
-      <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="inline-flex items-center gap-2 text-tjb-lavender-600 font-semibold hover:text-tjb-lavender-700 transition-colors"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>Get the free app — richer, updatable, shareable</a>
-    </div>
-  </section>
+
+  <LeadCaptureForm />
 </Layout>

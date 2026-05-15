@@ -88,14 +88,23 @@
 /disclaimer/ /terms/ 301
 
 # ════════════════════════════════════════════════════════════
+# PAID PRODUCT PAGES → FREE DOWNLOAD (product decommissioned)
+# ════════════════════════════════════════════════════════════
+
+/birth-plan-course /#download 301
+/birth-plan-course/ /#download 301
+/birth-plan-session /#download 301
+/birth-plan-session/ /#download 301
+
+# ════════════════════════════════════════════════════════════
 # CONVENIENCE SHORTCUTS
 # ════════════════════════════════════════════════════════════
 
-/plan /birth-plan-course/ 301
-/course /birth-plan-course/ 301
-/session /birth-plan-session/ 301
-/consult /birth-plan-session/ 301
-/book /birth-plan-session/ 301
+/plan /#download 301
+/course /#download 301
+/session /#download 301
+/consult /#download 301
+/book /#download 301
 /pro /new-doula-start-here/ 301
 /doula /new-doula-start-here/ 301
 /app / 301

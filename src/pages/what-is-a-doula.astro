@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import LeadCaptureForm from '../components/LeadCaptureForm.astro';
 
 const breadcrumbList = [
   {"name": "Home", "url": "https://truejoybirthing.com/"},
@@ -139,11 +140,7 @@ const breadcrumbList = [
 
       <p><a href="/blog/how-to-hire-a-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Read: How to Hire a Doula — Interview Questions and Red Flags →</a></p>
 
-      <div class="my-10 not-prose bg-tjb-rose-50 rounded-xl p-8 text-center">
-        <h3 class="text-xl font-bold mb-3">Not Ready to Hire a Doula Yet?</h3>
-        <p class="text-tjb-gray mb-6">Start with the free birth plan. Even if you don't hire a doula, having a clear, structured plan helps you communicate with your care team.</p>
-        <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-primary">Get the Free App</a>
-      </div>
+      <LeadCaptureForm />
 
       <h2 id="find-doula">Find a Doula in Your City</h2>
       <p>Looking for a doula near you? Our city pages have local hospital info, doula cost ranges, and Medicaid coverage details for 20 Texas cities:</p>
