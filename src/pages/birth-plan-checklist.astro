@@ -102,6 +102,7 @@ const schema = {
   title="Birth Plan Checklist"
   description="A complete birth plan checklist covering labor preferences, pain management, delivery, postpartum care, and newborn care — organized so your care team can read it in 30 seconds."
   canonical="https://truejoybirthing.com/birth-plan-checklist/"
+  ogImage="/images/og-birth-plan-checklist.webp"
   breadcrumbList={breadcrumbList}
   schema={schema}
 >
@@ -113,9 +114,9 @@ const schema = {
         Every preference point you should consider before you fill out your birth plan — organized by category, written in plain language, and built by a certified doula.
       </p>
       <div class="flex flex-col sm:flex-row gap-3">
-        <a href="/birth-plan-template/#download" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">
+        <a href="/birth-plan-template/#download" class="bg-tjb-lavender-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition">
           Download the Template</a>
-        <a href="https://apps.apple.com/app/true-joy-birthing" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-lg font-semibold hover:bg-tjb-cream transition">
+        <a href="https://apps.apple.com/app/true-joy-birthing" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-full font-semibold hover:bg-tjb-cream transition">
           Build It in the Free App</a>
       </div>
     </div>
@@ -147,6 +148,8 @@ const schema = {
         <li><strong>Review with your partner.</strong> Make sure you're aligned on the big items — who's in the room, pain management, and delivery preferences.</li>
         <li><strong>Bring it to your care provider.</strong> Your OB or midwife needs to see your plan before you're in labor. They'll flag anything your hospital can't accommodate.</li>
         <li><strong>Transfer it to the template.</strong> Use the <a href="/birth-plan-template/">free birth plan template</a> or the free app to create a clean, one-page document your nurse can read in 30 seconds.</li>
+        <li><strong>If you're being induced,</strong> a generic checklist won't cover everything you need. <a href="/birth-plan-for-induction/" class="text-tjb-rose-500 font-semibold hover:underline">Read the induction birth plan guide</a> for scenario-specific language and what to skip.</li>
+        <li><strong>If a cesarean is possible,</strong> consider filling out a <a href="/c-section-birth-plan/" class="text-tjb-rose-500 font-semibold hover:underline">cesarean-specific birth plan guide</a> alongside your primary plan so you're ready for that scenario too.</li>
         <li><strong>Print copies.</strong> One for your partner, one for your doula, one in your hospital bag. When you're in labor, you won't be searching for it.</li>
       </ol>
 
@@ -188,8 +191,8 @@ const schema = {
       <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to Build Your Birth Plan?</h2>
       <p class="text-tjb-gray mb-8">Use this checklist, then transfer your preferences to the free template.</p>
       <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-        <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
-        <button id="lead-submit" type="submit" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition whitespace-nowrap">Get My Plan →</button>
+        <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+        <button id="lead-submit" type="submit" class="bg-tjb-lavender-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition whitespace-nowrap">Get My Plan</button>
       </form>
       <p id="lead-status" class="text-sm mt-2 hidden"></p>
       <p class="text-xs text-tjb-gray/70 mt-4">No spam. Just a free birth plan and occasional tips you can actually use.</p>

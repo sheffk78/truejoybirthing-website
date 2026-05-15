@@ -35,6 +35,7 @@ const schema = {
   title="Postpartum Doula"
   description="What a postpartum doula does, how much they cost, how they differ from a birth doula, and why postpartum support matters for new families."
   canonical="https://truejoybirthing.com/postpartum-doula/"
+  ogImage="/images/og-postpartum-doula.webp"
   breadcrumbList={breadcrumbList}
   schema={schema}
 >
@@ -46,9 +47,9 @@ const schema = {
         A postpartum doula supports you <em>after</em> the birth — with newborn care, recovery help, breastfeeding guidance, and the emotional support most families don't realize they need until they're home from the hospital.
       </p>
       <div class="flex flex-col sm:flex-row gap-3">
-        <a href="/" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">
+        <a href="/" class="bg-tjb-lavender-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition">
           Get the Free Birth Plan</a>
-        <a href="/birth-plan-course/" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-lg font-semibold hover:bg-tjb-cream transition">
+        <a href="/birth-plan-course/" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-full font-semibold hover:bg-tjb-cream transition">
           Free Postpartum Course</a>
       </div>
     </div>
@@ -141,7 +142,16 @@ const schema = {
         <li><strong>Free mini-course</strong> — the "Post-Delivery Preferences" video walks through what to plan for after birth</li>
         <li><strong>Free app</strong> — build your birth plan including postpartum preferences, and reference it from your phone</li>
       </ul>
-      <p>For hands-on postpartum doula support in your area, check your <a href="/birth-support/">local city page</a> or ask your care provider for referrals.</p>
+      <p>For hands-on postpartum doula support in your area, see your local city page:</p>
+      <ul>
+        <li><a href="/birth-support/dallas-tx/" class="text-tjb-lavender-500 hover:underline">Postpartum doula support in Dallas</a></li>
+        <li><a href="/birth-support/houston-tx/" class="text-tjb-lavender-500 hover:underline">Postpartum doula support in Houston</a></li>
+        <li><a href="/birth-support/austin-tx/" class="text-tjb-lavender-500 hover:underline">Postpartum doula support in Austin</a></li>
+        <li><a href="/birth-support/san-antonio-tx/" class="text-tjb-lavender-500 hover:underline">Postpartum doula support in San Antonio</a></li>
+        <li><a href="/birth-support/fort-worth-tx/" class="text-tjb-lavender-500 hover:underline">Postpartum doula support in Fort Worth</a></li>
+        <li><a href="/birth-support/el-paso-tx/" class="text-tjb-lavender-500 hover:underline">Postpartum doula support in El Paso</a></li>
+      </ul>
+      <p><a href="/birth-support/" class="text-tjb-lavender-500 font-semibold hover:underline">See all 20 Texas cities →</a></p>
 
       <h2>Common Questions</h2>
       <div class="space-y-4">
@@ -179,8 +189,8 @@ const schema = {
       <h2 class="text-2xl md:text-3xl font-bold mb-4">Plan Your Postpartum Care Now</h2>
       <p class="text-tjb-gray mb-8">Include postpartum preferences in your birth plan — before you deliver, not after.</p>
       <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-        <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
-        <button id="lead-submit" type="submit" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition whitespace-nowrap">Get My Plan →</button>
+        <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+        <button id="lead-submit" type="submit" class="bg-tjb-lavender-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition whitespace-nowrap">Get My Plan</button>
       </form>
       <p id="lead-status" class="text-sm mt-2 hidden"></p>
       <p class="text-xs text-tjb-gray/70 mt-4">No spam. Just a free birth plan and occasional tips you can actually use.</p>

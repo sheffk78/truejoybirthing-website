@@ -1,0 +1,72 @@
+---
+// Shared email lead capture form for city pages.
+// Renders the pill-shaped input + btn-primary button.
+// Includes client-side JS handler that POSTs to /api/contact.
+interface Props {
+  class?: string;
+}
+const { class: wrapClass = '' } = Astro.props;
+---
+
+<section id="download-pdf" class={`bg-tjb-lavender-100 py-16 ${wrapClass}`}>
+  <div class="max-w-2xl mx-auto px-6 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">Get Your Free Birth Plan</h2>
+    <p class="text-tjb-gray mb-8">
+      Join families across Texas who walk into their births with a clear plan and the words to stand by it.
+      <a href="/doula-cost/">See doula costs across Texas</a>.
+    </p>
+    <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4" action="#" method="POST">
+      <input
+        name="email"
+        type="email"
+        placeholder="Your email"
+        class="flex-1 px-5 py-3.5 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-rose-400 bg-white text-[0.9375rem]"
+        required
+      />
+      <button type="submit" class="btn-primary whitespace-nowrap">Get My Plan →</button>
+    </form>
+    <p class="text-xs text-tjb-gray-300">No spam. Just a free birth plan and occasional tips you can actually use.</p>
+  </div>
+</section>
+
+<script>
+  const forms = document.querySelectorAll<HTMLElement>('#download-pdf form');
+  forms.forEach(form => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const emailInput = form.querySelector<HTMLInputElement>('input[name="email"]');
+      const email = emailInput?.value;
+      if (!email) return;
+
+      // Find or create status element
+      let status = form.parentElement?.querySelector<HTMLElement>('#lead-status');
+      if (!status) {
+        status = document.createElement('p');
+        status.id = 'lead-status';
+        status.className = 'text-sm mt-2';
+        form.parentElement?.appendChild(status);
+      }
+      status.classList.remove('hidden', 'text-red-500', 'text-green-600');
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: 'Lead Magnet', email, message: 'Lead magnet download request from city page' })
+        });
+        const data = await res.json();
+        if (data.success) {
+          status.textContent = '✓ Check your email — your birth plan is on its way.';
+          status.classList.add('text-green-600');
+          if (emailInput) emailInput.value = '';
+        } else {
+          status.textContent = 'Something went wrong. Please try again.';
+          status.classList.add('text-red-500');
+        }
+      } catch {
+        status.textContent = 'Network error. Please try again.';
+        status.classList.add('text-red-500');
+      }
+    });
+  });
+</script>

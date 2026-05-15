@@ -1,0 +1,289 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const breadcrumbList = [
+  {"name": "Home", "url": "https://truejoybirthing.com/"},
+  {"name": "Birth Plan Scenarios", "url": "https://truejoybirthing.com/birth-plan-scenarios/"},
+  {"name": "VBAC Birth Plan", "url": "https://truejoybirthing.com/vbac-birth-plan/"}
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://truejoybirthing.com/vbac-birth-plan/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "What's the VBAC success rate?", "acceptedAnswer": { "@type": "Answer", "text": "ACOG reports that approximately 60–80% of people who attempt a VBAC deliver vaginally. Your individual success rate depends on factors like the reason for your previous C-section, the type of incision you had, how far along you are in pregnancy, and whether labor starts on its own. If your first C-section was for a non-recurring reason (like breech presentation), your chances are generally on the higher end of that range." } },
+        { "@type": "Question", "name": "Is VBAC safer than a repeat C-section?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on what you're measuring. A successful vaginal birth has fewer complications than a C-section — shorter recovery, lower infection risk, less blood loss. A VBAC attempt that ends in a repeat C-section does carry slightly more risk than a planned repeat C-section. The overall risk of serious complications with either option is low. ACOG considers both VBAC and repeat C-section to be reasonable choices for most people with one prior low-transverse cesarean. Talk through your specific risk factors with your provider." } },
+        { "@type": "Question", "name": "Can I be induced during a VBAC?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your provider and hospital. Some providers will induce a VBAC; others won't. ACOG says that induction of labor may be considered in certain circumstances for VBAC candidates, but certain medications (like Misoprostol/Cytotec) are generally not recommended for VBAC induction due to increased rupture risk. This is a conversation you need to have with your provider well before your due date." } },
+        { "@type": "Question", "name": "What are the signs of uterine rupture?", "acceptedAnswer": { "@type": "Answer", "text": "Signs include abnormal fetal heart rate patterns (the most common and most reliable sign), loss of station (the baby moving back up the birth canal), sudden onset of severe abdominal pain that's different from normal labor, vaginal bleeding, and decreased uterine tone or a change in the shape of your abdomen. Your medical team monitors for these signs continuously during a VBAC — you don't need to diagnose rupture yourself, but knowing the signs means you can speak up if something feels wrong." } },
+        { "@type": "Question", "name": "Can I have a VBAC after two C-sections?", "acceptedAnswer": { "@type": "Answer", "text": "It's possible, but it's a different conversation. ACOG notes that VBAC after two prior low-transverse cesareans 'may be considered' but that the evidence is more limited. The risk of uterine rupture is slightly higher than with one prior C-section. You'll need a provider who is specifically experienced with VBA2C, and not all hospitals will allow it. Be honest with yourself and your provider about the risks." } },
+        { "@type": "Question", "name": "What if I go into labor before my scheduled C-section?", "acceptedAnswer": { "@type": "Answer", "text": "Many providers will support a trial of labor if you're already in spontaneous labor and both you and baby are doing well, even if you had a repeat C-section scheduled. This is a great conversation to have before you're actually in labor so you know your options in advance." } },
+        { "@type": "Question", "name": "Does my hospital allow VBACs?", "acceptedAnswer": { "@type": "Answer", "text": "Not all hospitals do. ACOG recommends that hospitals offering VBAC have the ability to perform an emergency C-section 'immediately available' — meaning anesthesia and surgical staff are on-site. Some smaller or rural hospitals don't have this capacity and therefore don't allow VBACs. Call your hospital's labor and delivery unit directly and ask about their current VBAC policy. Don't assume — policies change, and what was true two years ago may not be true today." } }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="VBAC Birth Plan — What to Include, What to Skip, and How to Prepare"
+  description="Planning a vaginal birth after cesarean? Your VBAC birth plan needs specific language for monitoring, provider philosophy, and what happens if things change. Here's what to include, what to skip, and how to prepare."
+  canonical="https://truejoybirthing.com/vbac-birth-plan/"
+  breadcrumbList={breadcrumbList}
+  schema={schema}
+>
+
+  <!-- ═══════════════════════════════════════════
+       HERO — Editorial archetype: eyebrow + rule + H1 + sub
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="eyebrow mb-4">VBAC Birth Plan</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h1 class="text-[2.5rem] md:text-[3.25rem] font-bold mb-6 leading-[1.12]">How to Write a Birth Plan for a VBAC</h1>
+      <p class="text-lg md:text-xl text-tjb-gray leading-relaxed max-w-2xl">
+        You've had a C-section before. Now you're exploring a vaginal birth after cesarean — and your birth plan needs to reflect that specific reality. Here's what to include, what to skip, and how to hold your ground where it matters.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 mt-8">
+        <a href="#download" class="btn-primary">Download free birth plan</a>
+        <a href="/birth-plan-course/" class="btn-secondary">Enroll in the birth plan course</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Table of Contents -->
+  <section class="py-8 border-t border-tjb-lavender-300/30">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="text-sm font-semibold text-tjb-gray uppercase tracking-wide mb-4">In this guide:</p>
+      <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+        <a href="#what-vbac-means" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">What VBAC Means for Your Plan</a>
+        <a href="#what-to-include" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">What to Include</a>
+        <a href="#what-to-skip" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">What to Skip</a>
+        <a href="#questions-to-ask" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">Questions for Your Appointment</a>
+        <a href="#your-hospital" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">Your Hospital</a>
+        <a href="#doula-support" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">How a Doula Helps</a>
+        <a href="#common-questions" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">Common Questions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white" id="what-vbac-means">
+    <div class="max-w-3xl mx-auto px-6 prose">
+
+      <h2>What VBAC Means for Your Birth Plan</h2>
+      <p>A VBAC birth plan isn't just another birth plan with "VBAC" written at the top. Choosing a trial of labor after cesarean (TOLAC) comes with specific medical considerations, hospital policies, and provider preferences that shape what's possible.</p>
+      <p>Here's what makes a VBAC plan different:</p>
+      <ul>
+        <li><strong>Continuous monitoring is almost always required.</strong> Most hospitals mandate electronic fetal monitoring throughout labor for VBAC patients. This doesn't mean you're trapped in bed, but your mobility options are more limited than an unmedicated, low-risk birth plan.</li>
+        <li><strong>Your provider's philosophy matters a lot.</strong> Some providers are genuinely supportive of VBAC. Others say they are but default to a repeat C-section at the first sign of a longer labor. Your birth plan needs to reflect conversations you've already had with your provider — not just what you hope will happen.</li>
+        <li><strong>Hospital policy can override your preferences.</strong> Not every hospital allows VBACs. Of those that do, some have strict protocols about timing, induction methods, and anesthesia availability. Knowing your hospital's policies before you write your plan saves you from disappointment later.</li>
+        <li><strong>There's a real conversation about risk.</strong> The risk of uterine rupture during a VBAC is approximately 0.5–0.9% for a low-transverse incision, according to ACOG. That's low, but it's not zero — and your plan needs to show you understand that, not so you're afraid, but so your team knows you've done your homework.</li>
+      </ul>
+      <p>Your VBAC birth plan should be a document that any nurse or provider can read in five minutes and know exactly where you stand. Specific about your preferences, flexible enough to handle the unexpected.</p>
+      <p><a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:underline">Download the free birth plan template</a> — it has a dedicated section for VBAC preferences.</p>
+
+      <h2 id="what-to-include">What to Include in Your VBAC Birth Plan</h2>
+      <p>The <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:underline">free birth plan template</a> organizes everything by category. For a VBAC, here's what to prioritize.</p>
+
+      <h3>Trial of Labor Preferences</h3>
+      <p>This is the heart of your VBAC plan. Be direct about what you want.</p>
+      <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
+        I am planning a trial of labor after cesarean and intend to deliver vaginally if it is safe to do so.
+      </blockquote>
+      <p>Briefly note the reason for your prior C-section:</p>
+      <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
+        First C-section was for breech presentation — not a failure to progress.
+      </blockquote>
+      <p>Set expectations for labor progression:</p>
+      <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
+        I'd like to allow labor to progress without arbitrary time limits, while trusting my provider to make the final call on safety.
+      </blockquote>
+      <p>If you've also prepared for a possible C-section, note that. <a href="/c-section-birth-plan/" class="text-tjb-rose-500 font-semibold hover:underline">The C-section birth plan guide</a> covers those contingencies.</p>
+
+      <h3>Monitoring</h3>
+      <p>Most hospitals require continuous fetal monitoring during a VBAC. Fighting this in your birth plan isn't realistic. Instead, work with the requirement:</p>
+      <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
+        I'd like wireless or telemetry monitoring if available, so I can move and change positions as freely as monitoring allows.
+      </blockquote>
+      <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
+        I'd like to be informed about what the monitor is showing — I deserve to know what my team is seeing, not just be hooked up to a machine with no explanation.
+      </blockquote>
+
+      <h3>Pain Management</h3>
+      <p>Your pain management preferences are personal. VBAC doesn't automatically mean you should or shouldn't choose an epidural. Consider:</p>
+      <ul>
+        <li><strong>If you want an epidural:</strong> Some providers recommend early epidural placement for VBAC patients in case an emergency C-section becomes necessary. This isn't a scare tactic — it's logistics. Knowing it ahead of time helps you plan.</li>
+        <li><strong>If you prefer unmedicated labor:</strong> Say so, and also state that you're open to pain relief if labor becomes prolonged. Being rigid here can work against you.</li>
+        <li><strong>If you're being induced</strong> as part of your VBAC, the <a href="/birth-plan-for-induction/" class="text-tjb-rose-500 font-semibold hover:underline">birth plan for induction</a> walks through those specifics.</li>
+      </ul>
+      <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
+        I'd like to try unmedicated labor for as long as I'm comfortable. If an epidural becomes necessary or I request one, I'd like it offered within 30 minutes.
+      </blockquote>
+
+      <h3>Delivery Preferences</h3>
+      <p>What happens as you approach pushing:</p>
+      <ul>
+        <li><strong>Positions for pushing.</strong> Lateral, hands-and-knees, squatting — whatever works for your body and your monitoring setup.</li>
+        <li><strong>Who you want in the room.</strong> Beyond your partner, note if you'd like your doula present.</li>
+        <li><strong>Skin-to-skin preferences.</strong> State whether you want immediate skin-to-skin if baby is stable.</li>
+        <li><strong>Delayed cord clamping.</strong> If this is important to you, say so.</li>
+      </ul>
+
+      <h3>Recovery Preferences</h3>
+      <p>You should be prepared for both outcomes:</p>
+      <ul>
+        <li><strong>If you deliver vaginally:</strong> Note your preferences for postpartum monitoring, breastfeeding support, and when you'd like to go home.</li>
+        <li><strong>If you end up with a repeat C-section:</strong> Note that you have a <a href="/c-section-birth-plan/" class="text-tjb-rose-500 font-semibold hover:underline">C-section birth plan</a> ready with your recovery preferences detailed there.</li>
+      </ul>
+
+      <h3>If Things Change</h3>
+      <p>This is the section that shows your team you're not naive. VBAC doesn't always go according to plan, and acknowledging that builds trust.</p>
+      <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
+        I understand that a repeat cesarean may become necessary for my safety or my baby's safety. If that happens, I would like to be informed and involved in the decision-making process as much as possible.
+      </blockquote>
+      <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
+        In the event of an emergency, I trust my medical team to act quickly. I've discussed my preferences with my partner, who can advocate for me if I'm unable to.
+      </blockquote>
+
+      <h2 id="what-to-skip">What to Skip in Your VBAC Birth Plan</h2>
+      <p>Less is more. Skip these:</p>
+      <ul>
+        <li><strong>Lengthy explanations of your birth philosophy.</strong> Your team doesn't need a page on why you believe in natural birth. They need to know your preferences.</li>
+        <li><strong>Demands that conflict with hospital policy.</strong> If your hospital requires continuous monitoring for VBAC, don't write "I decline continuous monitoring." That creates tension before labor even starts.</li>
+        <li><strong>Overly specific timeframes.</strong> "I want to push for no more than 30 minutes" ties your provider's hands. Every labor is different.</li>
+        <li><strong>Anything passive-aggressive.</strong> "I do not want to be pressured into a C-section" is adversarial. Try: "I would like to be informed and included in any conversation about changing my birth plan."</li>
+      </ul>
+
+      <h2 id="questions-to-ask">Before You Go In: What to Ask at Your VBAC Appointment</h2>
+      <p>Have a real conversation with your provider before you write your birth plan. Bring these questions:</p>
+      <ol>
+        <li><strong>Am I a good candidate for a VBAC?</strong> Ask specifically about your incision type, the reason for your previous C-section, and any factors that might affect your chances.</li>
+        <li><strong>What is your VBAC success rate?</strong> ACOG reports that VBAC success rates are approximately 60–80% overall, but your individual chances depend on your history. Your provider should give you a personalized assessment.</li>
+        <li><strong>What are this hospital's VBAC policies?</strong> Ask about mandatory monitoring, time limits on labor, induction protocols, and anesthesia availability requirements.</li>
+        <li><strong>Under what circumstances would you recommend a repeat C-section?</strong> You need to know their threshold — is it at the first sign of a slow labor, or will they support you through a longer process?</li>
+        <li><strong>How do you handle induction for VBAC patients?</strong> Some providers won't induce at all. Others will use certain methods but not others. Know this going in.</li>
+        <li><strong>What happens if I go into labor before my scheduled C-section?</strong> If you have a backup repeat C-section scheduled, ask whether they'd still support a VBAC if labor starts on its own.</li>
+        <li><strong>Who will be on call when I deliver?</strong> If your provider isn't available, who covers? Are they equally VBAC-supportive?</li>
+        <li><strong>Will a doctor be in the hospital throughout my labor?</strong> ACOG recommends that a physician capable of performing a C-section be "immediately available" during a trial of labor. Ask what that looks like at your hospital.</li>
+      </ol>
+
+      <h2 id="your-hospital">Your Hospital and Your VBAC Plan</h2>
+      <p>Hospital policy can make or break your VBAC experience. Not every hospital allows them, and support varies widely. If you're delivering in Texas, your city page has local hospital details and doula availability:</p>
+      <ul>
+        <li><a href="/birth-support/dallas-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Dallas hospitals and doula costs</a></li>
+        <li><a href="/birth-support/houston-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Houston doula costs and insurance coverage</a></li>
+        <li><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Austin birth doula pricing and hospitals</a></li>
+        <li><a href="/birth-support/san-antonio-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">San Antonio doula cost guide</a></li>
+        <li><a href="/birth-support/fort-worth-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Fort Worth doula services and pricing</a></li>
+        <li><a href="/birth-support/el-paso-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">El Paso doula costs and Medicaid info</a></li>
+      </ul>
+      <p><a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:underline">See all 20 Texas cities →</a></p>
+      <p><strong>Important:</strong> Hospital policies change, and individual providers within a system can have very different approaches. Always call your hospital's labor and delivery unit directly and ask about their current VBAC policy.</p>
+
+      <h2 id="doula-support">How a Doula Helps During a VBAC</h2>
+      <p>VBAC moms benefit enormously from doula support — and the research backs this up. A doula during a VBAC provides:</p>
+      <ul>
+        <li><strong>Emotional support through the unknown.</strong> You've birthed before, but not this way. A doula holds space for hope and fear simultaneously — without projecting either onto you.</li>
+        <li><strong>Advocacy when you're in the thick of it.</strong> During labor is not the time to negotiate with your provider about whether you can labor another hour. Your doula helps you ask the right questions and makes sure your voice is heard.</li>
+        <li><strong>Physical comfort techniques that work with monitoring.</strong> You're probably going to be on a monitor. A doula who knows how to work within that constraint — helping you move, change positions, and manage labor without fighting the technology — is invaluable.</li>
+        <li><strong>Help processing your previous birth.</strong> If your first birth was traumatic or disappointing, that doesn't just disappear because you're trying for a VBAC. A good doula helps you work through that before labor starts.</li>
+        <li><strong>Support no matter how birth unfolds.</strong> If your VBAC is successful, your doula celebrates with you. If you end up with a repeat C-section, your doula stays — helping you understand what happened and making sure you still feel respected and informed.</li>
+      </ul>
+      <p><a href="/doula-cost/" class="text-tjb-rose-500 font-semibold hover:underline">How much does a doula cost?</a> — <a href="/how-to-choose-a-doula/" class="text-tjb-rose-500 font-semibold hover:underline">How to choose a doula for your birth</a></p>
+
+      <h2 id="common-questions">Common Questions</h2>
+      <div class="space-y-4">
+        <div>
+          <h3 class="font-semibold mb-1">What's the VBAC success rate?</h3>
+          <p class="text-tjb-gray">ACOG reports that approximately 60–80% of people who attempt a VBAC deliver vaginally. Your individual success rate depends on factors like the reason for your previous C-section, the type of incision you had, how far along you are in pregnancy, and whether labor starts on its own. If your first C-section was for a non-recurring reason (like breech presentation), your chances are generally on the higher end of that range.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Is VBAC safer than a repeat C-section?</h3>
+          <p class="text-tjb-gray">It depends on what you're measuring. A successful vaginal birth has fewer complications than a C-section — shorter recovery, lower infection risk, less blood loss. A VBAC attempt that ends in a repeat C-section does carry slightly more risk than a planned repeat C-section. The overall risk of serious complications with either option is low. ACOG considers both VBAC and repeat C-section to be reasonable choices for most people with one prior low-transverse cesarean.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Can I be induced during a VBAC?</h3>
+          <p class="text-tjb-gray">It depends on your provider and hospital. Some providers will induce a VBAC; others won't. ACOG says that induction may be considered in certain circumstances for VBAC candidates, but certain medications (like Misoprostol/Cytotec) are generally not recommended for VBAC induction due to increased rupture risk. This is a conversation you need to have with your provider well before your due date.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">What are the signs of uterine rupture?</h3>
+          <p class="text-tjb-gray">Signs include abnormal fetal heart rate patterns (the most common and most reliable sign), loss of station (the baby moving back up the birth canal), sudden onset of severe abdominal pain different from normal labor, vaginal bleeding, and decreased uterine tone or a change in the shape of your abdomen. Your medical team monitors for these signs continuously during a VBAC — you don't need to diagnose rupture yourself, but knowing the signs means you can speak up if something feels wrong.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Can I have a VBAC after two C-sections?</h3>
+          <p class="text-tjb-gray">It's possible, but it's a different conversation. ACOG notes that VBAC after two prior low-transverse cesareans "may be considered" but that the evidence is more limited. The risk of uterine rupture is slightly higher than with one prior C-section. You'll need a provider experienced with VBA2C, and not all hospitals will allow it. Be honest with yourself and your provider about the risks.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">What if I go into labor before my scheduled C-section?</h3>
+          <p class="text-tjb-gray">Many providers will support a trial of labor if you're already in spontaneous labor and both you and baby are doing well, even if you had a repeat C-section scheduled. This is a great conversation to have before you're actually in labor so you know your options.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Does my hospital allow VBACs?</h3>
+          <p class="text-tjb-gray">Not all hospitals do. ACOG recommends that hospitals offering VBAC have the ability to perform an emergency C-section "immediately available" — meaning anesthesia and surgical staff are on-site. Some smaller or rural hospitals don't have this capacity and therefore don't allow VBACs. Call your hospital's labor and delivery unit directly and ask about their current VBAC policy. Don't assume — policies change.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       LEAD CAPTURE — Download archetype
+       ═══════════════════════════════════════════ -->
+  <section id="download" class="py-20 md:py-28">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <p class="eyebrow mb-4">Free download</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+      <h2 class="font-semibold text-tjb-charcoal mb-5 leading-[1.15]" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
+        Start Your VBAC Birth Plan
+      </h2>
+      <p class="text-lg text-tjb-gray mb-10 max-w-xl mx-auto leading-relaxed">
+        Pick the sections that apply to your VBAC, fill in your preferences, and walk in knowing your plan is documented. The template is free.
+      </p>
+      <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+        <button id="lead-submit" type="submit" class="btn-primary whitespace-nowrap">Download free birth plan</button>
+      </form>
+      <p id="lead-status" class="text-sm mt-2 hidden"></p>
+      <p class="text-xs text-tjb-gray/70 mt-4">We'll send your birth plan template to this email. No spam, just birth prep.</p>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('lead-magnet-form');
+    const emailInput = document.getElementById('lead-email');
+    const status = document.getElementById('lead-status');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = emailInput?.value;
+        if (!email) return;
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: 'Lead Magnet', email, message: 'Birth plan template download — VBAC scenario' })
+          });
+          const data = await res.json();
+          if (data.success) {
+            status.textContent = '✓ Check your email — your birth plan template is on its way.';
+            status.classList.remove('hidden', 'text-red-500');
+            status.classList.add('text-green-600');
+            emailInput.value = '';
+          } else {
+            status.textContent = 'Something went wrong. Please try again.';
+            status.classList.remove('hidden', 'text-green-600');
+            status.classList.add('text-red-500');
+          }
+        } catch {
+          status.textContent = 'Network error. Please try again.';
+          status.classList.remove('hidden', 'text-green-600');
+          status.classList.add('text-red-500');
+        }
+      });
+    }
+  </script>
+
+</Layout>

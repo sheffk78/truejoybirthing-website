@@ -64,21 +64,46 @@ const schema = {
   title="Free Birth Plan Template"
   description="Download a free birth plan template built by a certified doula. Structured, concise, and easy for your care team to read. Covers labor, delivery, postpartum, and newborn care."
   canonical="https://truejoybirthing.com/birth-plan-template/"
+  ogImage="/images/og-birth-plan-template.webp"
   breadcrumbList={breadcrumbList}
   schema={schema}
 >
 
-  <section class="bg-tjb-cream pt-16 pb-12">
-    <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-3xl md:text-4xl font-bold mb-4">Free Birth Plan Template</h1>
-      <p class="text-lg text-tjb-gray mb-6">
-        A structured birth plan template built by a certified doula — not a generic checklist. Download it free, fill it out, and walk into your delivery knowing exactly what to say.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-3">
-        <a href="#download" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">
-          Download Free Template</a>
-        <a href="https://apps.apple.com/app/true-joy-birthing" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-lg font-semibold hover:bg-tjb-cream transition">
-          Build It in the Free App</a>
+  <!-- ═══════════════════════════════════════════
+       HERO — Two-column 55/45: text left, photo right
+       Design spec: VISUAL-TOKENS.md hero archetype
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-cream">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row">
+
+        <!-- Left: Text — 55% -->
+        <div class="md:w-[55%] px-12 py-24 flex flex-col justify-center">
+          <p class="eyebrow mb-3">Free birth plan</p>
+          <h1 class="font-bold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(2.25rem, 5vw, 3.75rem);">
+            A birth plan template that actually works in the delivery room
+          </h1>
+          <p class="text-tjb-gray text-lg leading-[1.7] mb-8 max-w-[36rem]">
+            Built by a certified doula — not a generic checklist. Structured so your nurse can read it in 30 seconds, free to download or build in the app.
+          </p>
+          <div>
+            <a href="#download" class="btn-primary">
+              Download free birth plan
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Photo — 45%, 3:4 portrait crop of Shelbi -->
+        <div class="md:w-[45%] min-h-[24rem] md:min-h-0 relative overflow-hidden">
+          <img
+            src="/images/shelbi-hero-portrait.webp"
+            alt="Shelbi Kohler — certified birth doula and creator of the free birth plan"
+            class="absolute inset-0 w-full h-full object-cover object-center"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+
       </div>
     </div>
   </section>
@@ -90,7 +115,7 @@ const schema = {
       <p>A birth plan is a communication tool — not a contract, not a wish list. It tells your care team what you prefer when things go as expected, and what you want to be asked about when they don't.</p>
       <p>A useful birth plan template covers five categories:</p>
       <ul>
-        <li><strong>Labor preferences</strong> — who's in the room, movement during labor, monitoring, induction preferences</li>
+        <li><strong>Labor preferences</strong> — who's in the room, movement during labor, monitoring, <a href="/birth-plan-for-induction/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">induction preferences</a></li>
         <li><strong>Pain management</strong> — epidural timing, alternative comfort measures, your stance on being offered pain medication</li>
         <li><strong>Delivery preferences</strong> — positions, who cuts the cord, skin-to-skin, delayed cord clamping</li>
         <li><strong>Postpartum care</strong> — breastfeeding support, placenta delivery, who you want in recovery</li>
@@ -111,10 +136,23 @@ const schema = {
       <p>Most free birth plan templates you find online are generic checklists — they ask if you want an epidural or not, if you want music or not, and leave it at that.</p>
       <p>This template was built by <strong>Shelbi Kohler</strong>, a certified birth doula who has sat in delivery rooms across Texas. It's organized around <em>the decisions that actually come up</em> when you're in labor — the ones your care team needs to see at a glance, not the ones that look nice on a Pinterest board.</p>
       <p>It's structured so a nurse can read it in 30 seconds. That matters. When you're 6 centimeters dilated and your nurse is covering for someone else's shift, your birth plan needs to speak for you immediately.</p>
+      <p>And if your birth plan needs to account for a specific situation — like being induced — the template still works. <a href="/birth-plan-for-induction/" class="text-tjb-rose-500 font-semibold hover:underline">See how to fill it out for an induction</a>. For surgical deliveries, see <a href="/c-section-birth-plan/" class="text-tjb-rose-500 font-semibold hover:underline">what to include if you end up needing a C-section</a>.</p>
+
+      <h2>Building Your Birth Plan for Your Hospital</h2>
+      <p>Birth plans work best when they're tailored to your actual care setting. Our city pages include local hospital details, doula costs, and what Medicaid covers in your area:</p>
+      <ul>
+        <li><a href="/birth-support/dallas-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Dallas hospitals and doula costs</a></li>
+        <li><a href="/birth-support/houston-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Houston hospitals and doula costs</a></li>
+        <li><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Austin hospitals and doula costs</a></li>
+        <li><a href="/birth-support/san-antonio-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">San Antonio hospitals and doula costs</a></li>
+        <li><a href="/birth-support/fort-worth-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Fort Worth hospitals and doula costs</a></li>
+        <li><a href="/birth-support/el-paso-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">El Paso hospitals and doula costs</a></li>
+      </ul>
+      <p><a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:underline">See all 20 Texas cities →</a></p>
 
       <h2>Free Birth Plan Mini-Course</h2>
       <p>Want to understand <em>why</em> each section matters before you fill it out? The free birth plan mini-course walks through every category of your birth plan with short videos — labor preferences, newborn care, postpartum, and more.</p>
-      <p><a href="/birth-plan-course/" class="text-tjb-lavender-500 font-semibold hover:underline">Explore the free course →</a></p>
+      <p><a href="/birth-plan-course/" class="text-tjb-rose-500 font-semibold hover:underline">Enroll in the birth plan course</a></p>
 
       <h2>Common Questions</h2>
       <div class="space-y-4">
@@ -143,13 +181,19 @@ const schema = {
     </div>
   </section>
 
-  <section id="download" class="py-16 bg-tjb-cream">
+  <section id="download" class="py-20 md:py-28">
     <div class="max-w-2xl mx-auto px-6 text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">Download Your Free Birth Plan Template</h2>
-      <p class="text-tjb-gray mb-8">Built by a doula. Structured for the delivery room. Free for you.</p>
+      <p class="eyebrow mb-4">Free download</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+      <h2 class="font-semibold text-tjb-charcoal mb-5 leading-[1.15]" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
+        Your birth plan is ready
+      </h2>
+      <p class="text-lg text-tjb-gray mb-10 max-w-xl mx-auto leading-relaxed">
+        Fill it out, print a few copies, hand one to your nurse. One page that speaks for you when you're focused on labor — not on paperwork.
+      </p>
       <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-        <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
-        <button id="lead-submit" type="submit" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition whitespace-nowrap">Get My Plan →</button>
+        <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+        <button id="lead-submit" type="submit" class="btn-primary whitespace-nowrap">Download free birth plan</button>
       </form>
       <p id="lead-status" class="text-sm mt-2 hidden"></p>
       <p class="text-xs text-tjb-gray/70 mt-4">No spam. Just a free birth plan and occasional tips you can actually use.</p>

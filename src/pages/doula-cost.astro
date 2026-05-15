@@ -41,6 +41,7 @@ const schema = {
   title="How Much Does a Doula Cost?"
   description="Birth doula costs range from $650 to $3,000 in the US. Learn what affects the price, what's included, insurance coverage, and how to find affordable doula support."
   canonical="https://truejoybirthing.com/doula-cost/"
+  ogImage="https://truejoybirthing.com/images/og-doula-cost.webp"
   breadcrumbList={breadcrumbList}
   schema={schema}
 >
@@ -52,9 +53,9 @@ const schema = {
         Birth doula services in the US typically cost <strong>$650–$3,000</strong>. Here's what drives that range, what you're actually paying for, and how to find support that fits your budget.
       </p>
       <div class="flex flex-col sm:flex-row gap-3">
-        <a href="/" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">
+        <a href="/" class="bg-tjb-lavender-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition">
           Get the Free Birth Plan</a>
-        <a href="/birth-support/" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-lg font-semibold hover:bg-tjb-cream transition">
+        <a href="/birth-support/" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-full font-semibold hover:bg-tjb-cream transition">
           Find Your City</a>
       </div>
     </div>
@@ -106,6 +107,7 @@ const schema = {
         <li><strong>Phone and text support</strong> — throughout pregnancy and early postpartum</li>
       </ul>
       <p>When you add it up, a birth doula package often represents <strong>30-50+ hours</strong> of combined time — prenatal visits, on-call weeks, labor itself (8-24+ hours is common), and postpartum care. Broken down hourly, the rate is typically $25-50/hour, comparable to other professional support services.</p>
+      <p>If you're being induced, that prenatal visit is where your doula helps you write <a href="/birth-plan-for-induction/" class="text-tjb-lavender-500 hover:underline">an induction-specific birth plan</a> — one that accounts for Pitocin, continuous monitoring, and the decisions that come with a scheduled start to labor. And since birth doesn't always follow the original plan, your doula can also help you prepare for <a href="/birth-plan-scenarios/" class="text-tjb-lavender-500 hover:underline">different birth plan scenarios</a> so you're ready no matter how things unfold.</p>
 
       <h2>What Affects the Cost</h2>
       <ul>
@@ -131,8 +133,16 @@ const schema = {
       </ul>
 
       <h2>Find Doula Costs in Your City</h2>
-      <p>For city-specific doula cost information, hospital lists, and Medicaid coverage details:</p>
-      <p><a href="/birth-support/" class="text-tjb-lavender-500 font-semibold hover:underline">Browse city pages →</a></p>
+      <p>Doula costs vary by city. See local pricing, hospital lists, and Medicaid coverage for major Texas metros:</p>
+      <ul>
+        <li><a href="/birth-support/dallas-tx/" class="text-tjb-lavender-500 hover:underline">How much does a doula cost in Dallas?</a></li>
+        <li><a href="/birth-support/houston-tx/" class="text-tjb-lavender-500 hover:underline">Houston doula costs and insurance coverage</a></li>
+        <li><a href="/birth-support/austin-tx/" class="text-tjb-lavender-500 hover:underline">Austin birth doula pricing and hospitals</a></li>
+        <li><a href="/birth-support/san-antonio-tx/" class="text-tjb-lavender-500 hover:underline">San Antonio doula cost guide</a></li>
+        <li><a href="/birth-support/fort-worth-tx/" class="text-tjb-lavender-500 hover:underline">Fort Worth doula services and pricing</a></li>
+        <li><a href="/birth-support/el-paso-tx/" class="text-tjb-lavender-500 hover:underline">El Paso doula costs and Medicaid info</a></li>
+      </ul>
+      <p><a href="/birth-support/" class="text-tjb-lavender-500 font-semibold hover:underline">See all 20 Texas cities →</a></p>
 
       <h2>Common Questions</h2>
       <div class="space-y-4">
@@ -170,8 +180,8 @@ const schema = {
       <h2 class="text-2xl md:text-3xl font-bold mb-4">Start With a Free Birth Plan</h2>
       <p class="text-tjb-gray mb-8">Whether or not you hire a doula, a clear birth plan helps you communicate your preferences with confidence.</p>
       <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-        <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
-        <button id="lead-submit" type="submit" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition whitespace-nowrap">Get My Plan →</button>
+        <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+        <button id="lead-submit" type="submit" class="bg-tjb-lavender-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition whitespace-nowrap">Get My Plan</button>
       </form>
       <p id="lead-status" class="text-sm mt-2 hidden"></p>
       <p class="text-xs text-tjb-gray/70 mt-4">No spam. Just a free birth plan and occasional tips you can actually use.</p>

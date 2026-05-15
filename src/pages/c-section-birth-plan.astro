@@ -1,0 +1,280 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const breadcrumbList = [
+  {"name": "Home", "url": "https://truejoybirthing.com/"},
+  {"name": "Birth Plan Scenarios", "url": "https://truejoybirthing.com/birth-plan-scenarios/"},
+  {"name": "C-Section Birth Plan", "url": "https://truejoybirthing.com/c-section-birth-plan/"}
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://truejoybirthing.com/c-section-birth-plan/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Can I have preferences in a C-section birth plan?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A cesarean is surgery, but you still have choices — who's in the room, whether you want a clear drape, skin-to-skin in the OR, delayed cord clamping, and more. A C-section birth plan documents those preferences so your team knows what matters to you." } },
+        { "@type": "Question", "name": "What's the difference between a planned and unplanned C-section birth plan?", "acceptedAnswer": { "@type": "Answer", "text": "A planned C-section gives you time to write detailed preferences — music, lighting, who cuts the cord, recovery goals. An unplanned C-section happens during labor, so your plan should focus on the few things that matter most no matter how your baby arrives: partner present, skin-to-skin if possible, and feeding preferences. Include both in your birth plan." } },
+        { "@type": "Question", "name": "Can I have skin-to-skin after a C-section?", "acceptedAnswer": { "@type": "Answer", "text": "Often yes, but it depends on your hospital and your medical situation. Many hospitals now support skin-to-skin in the operating room — some with a clear drape so you can watch your baby being born, others by bringing your baby to your chest while the surgical team finishes. Put this in your birth plan and ask your hospital about their protocol." } },
+        { "@type": "Question", "name": "Do I need a birth plan if I'm having a scheduled C-section?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A scheduled C-section actually gives you more control, not less — you know the date, you know the team, and you have time to communicate your preferences. Without a plan, the hospital defaults take over. With a plan, you get to shape what the experience feels like." } },
+        { "@type": "Question", "name": "What should my C-section birth plan include for recovery?", "acceptedAnswer": { "@type": "Answer", "text": "Cover three things: pain management (what you'd like and what you'd like to avoid), help at home (who's staying, for how long, what they're doing), and feeding (breastfeeding support in the hospital, rooming-in preferences). Recovery from a C-section is a 4–6 week process and your birth plan should extend into that window." } },
+        { "@type": "Question", "name": "What if I'm planning a vaginal birth but want to be prepared for a C-section?", "acceptedAnswer": { "@type": "Answer", "text": "That's smart. Add a short \"if a C-section becomes necessary\" section to your birth plan. You don't need a separate document — just a few bullet points: partner present, clear drape if possible, skin-to-skin if baby is stable, delayed cord clamping if safe. This takes two lines and covers the most common preferences." } },
+        { "@type": "Question", "name": "Can my partner cut the cord during a C-section?", "acceptedAnswer": { "@type": "Answer", "text": "Sometimes. It depends on the hospital and the surgical team. Some allow it with a sterile tool and the doctor's supervision. Others don't, for reasons related to surgical protocol. Put it in your plan as a preference and ask your provider at your pre-op appointment." } }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="C-Section Birth Plan — What to Include, What to Skip, and How to Prepare"
+  description="Planning a C-section or want to be prepared? Your birth plan can document preferences for the OR, recovery, and newborn care. Here's what to include, what to skip, and how to prepare."
+  canonical="https://truejoybirthing.com/c-section-birth-plan/"
+  breadcrumbList={breadcrumbList}
+  schema={schema}
+  ogImage="/images/og-c-section-birth-plan.webp"
+>
+
+  <!-- ═══════════════════════════════════════════
+       HERO — Editorial archetype: eyebrow + rule + H1 + sub
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="eyebrow mb-4">C-Section Birth Plan</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h1 class="text-[2.5rem] md:text-[3.25rem] font-bold mb-6 leading-[1.12]">Your C-Section Birth Plan Still Matters</h1>
+      <p class="text-lg md:text-xl text-tjb-gray leading-relaxed max-w-2xl">
+        A cesarean is surgery — but that doesn't mean you're handed a script. Your birth plan documents what matters to you in the OR, right after birth, and through recovery. Here's how to write one that your team will actually read.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 mt-8">
+        <a href="#download" class="btn-primary">Download free birth plan</a>
+        <a href="/birth-plan-course/" class="btn-secondary">Enroll in the birth plan course</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Table of Contents -->
+  <section class="py-8 border-t border-tjb-lavender-300/30">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="text-sm font-semibold text-tjb-gray uppercase tracking-wide mb-4">In this guide:</p>
+      <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+        <a href="#what-c-section-means" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">What Changes for Your Plan</a>
+        <a href="#what-to-include" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">What to Include</a>
+        <a href="#what-to-skip" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">What to Skip</a>
+        <a href="#questions-to-ask" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">Questions for Your Appointment</a>
+        <a href="#your-hospital" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">Your Hospital</a>
+        <a href="#doula-support" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">How a Doula Helps</a>
+        <a href="#common-questions" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">Common Questions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-16 bg-white" id="what-c-section-means">
+    <div class="max-w-3xl mx-auto px-6 prose">
+
+      <h2>What Changes in Your Birth Plan for a C-Section</h2>
+      <p>A cesarean changes the room, the timeline, who's there, and what you can feel and see. But it doesn't take away your voice. You still get to say what matters to you — and your <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:underline">birth plan</a> is how you say it.</p>
+      <p>A C-section birth plan should cover:</p>
+      <ul>
+        <li><strong>The operating room.</strong> It's bright, it's cold, and there are more people than you expect. Your plan can cover music, a clear drape so you can see your baby born, and whether you want the team to narrate what's happening.</li>
+        <li><strong>Who's with you.</strong> Most hospitals allow one support person. Some allow two. Write down who that is and what their role is.</li>
+        <li><strong>What happens right after birth.</strong> Skin-to-skin in the OR, delayed cord clamping, who cuts the cord — these are decisions you can make in advance, and many hospitals will accommodate them if they're documented.</li>
+        <li><strong>Your recovery.</strong> A C-section recovery is a different process from a vaginal recovery. Your plan should cover pain management, feeding support, help at home, and how long you'll realistically need someone with you.</li>
+        <li><strong>Why you're having a C-section.</strong> A planned repeat C-section feels different from an unplanned one. Your plan should include your context so every provider who reads it understands where you're coming from.</li>
+      </ul>
+      <p>If you're also planning for a vaginal birth and want to cover the what-if, <a href="/birth-plan-scenarios/" class="text-tjb-rose-500 font-semibold hover:underline">see all birth plan scenarios</a> — or jump straight to the <a href="/birth-plan-for-induction/" class="text-tjb-rose-500 font-semibold hover:underline">induction birth plan</a> if that's your situation.</p>
+
+      <h2 id="what-to-include">What to Include in a C-Section Birth Plan</h2>
+      <p>The <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:underline">free birth plan template</a> organizes everything by category. For a C-section, here's what to prioritize in each section — with language you can copy directly into your plan.</p>
+
+      <h3>Before the C-Section</h3>
+      <p>If your C-section is scheduled, you have time to prepare. Use it.</p>
+      <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
+        <strong>Copy into your plan:</strong> "I'd like a clear drape lowered for the birth so I can see my baby being born, then raised again for the repair."
+      </blockquote>
+      <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
+        <strong>Copy into your plan:</strong> "I'd like my partner present in the OR. If the hospital allows a second support person, my doula will join. If only one person is allowed, my partner will be in the OR and my doula will meet us in recovery."
+      </blockquote>
+      <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
+        <strong>Copy into your plan:</strong> "I'd like calm instrumental music playing during the procedure. I can bring a playlist or I'm happy with what the team has."
+      </blockquote>
+      <p>These preferences are common enough that most hospitals will accommodate them — but only if they're documented and your team knows about them before you're in the OR.</p>
+
+      <h3>During the C-Section</h3>
+      <p>Most planned C-sections use a spinal block or epidural, which means you're awake and aware. You'll feel pressure and movement, but not pain. Your preferences in the OR should cover:</p>
+      <ul>
+        <li><strong>Observation.</strong> Clear drape lowered for the birth, raised for the repair. Or a solid drape if you'd rather not see the surgery.</li>
+        <li><strong>Partner's role.</strong> Cutting the cord, taking photos, helping with skin-to-skin, or just holding your hand and narrating what's happening.</li>
+        <li><strong>Cord clamping.</strong> Delayed cord clamping is possible in many C-sections — ask your provider. If possible, you may want your partner to cut the cord.</li>
+        <li><strong>Announcing the sex.</strong> Some parents want the doctor to announce it. Others want to look and discover themselves. Put this in your plan.</li>
+      </ul>
+      <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
+        <strong>Copy into your plan:</strong> "If my baby is stable, I'd like delayed cord clamping (at least 60 seconds) and skin-to-skin in the OR as soon as the cord is cut."
+      </blockquote>
+
+      <h3>Skin-to-Skin and Newborn Care</h3>
+      <p>Skin-to-skin after a C-section is increasingly common, but it requires a nurse or your partner to help because your arms are immobilized. Your plan should be specific:</p>
+      <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
+        <strong>Copy into your plan:</strong> "If my baby is stable, I'd like skin-to-skin contact in the operating room as soon as possible. My partner can help position the baby on my chest. Please delay routine newborn procedures for the first hour unless medically necessary."
+      </blockquote>
+      <p>If skin-to-skin in the OR isn't possible — because of bleeding, the baby needs evaluation, or your hospital doesn't offer it — your partner can do skin-to-skin while you're being closed. Plan for both paths.</p>
+
+      <h3>Recovery Preferences</h3>
+      <p>This section matters more for a C-section than almost any other birth plan scenario. Recovery is a 4–6 week process and your preferences should cover it.</p>
+      <ul>
+        <li><strong>Pain management.</strong> What you'd like for pain relief and what you'd like to avoid. If you're breastfeeding, mention that so your care team can prescribe compatible medication.</li>
+        <li><strong>Feeding.</strong> Whether you plan to breastfeed, and if so, request a lactation consultant visit during your hospital stay.</li>
+        <li><strong>Rooming-in.</strong> Whether you want your baby with you at all times or whether you'd like the nursery to take over for a period so you can sleep.</li>
+        <li><strong>Help at home.</strong> Who's staying with you after discharge, for how long, and what they're helping with. This isn't medical advice — it's planning realistically for your recovery.</li>
+      </ul>
+      <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
+        <strong>Copy into your plan:</strong> "I'd like a lactation consultant to visit within the first 24 hours. I plan to breastfeed and want help with positioning after surgery, since I'll be limited in how I can hold my baby."
+      </blockquote>
+
+      <h3>If Things Change</h3>
+      <p>Even with a planned C-section, things can shift. Your scheduled time might move earlier, you might go into labor before the date, or something might come up during surgery that requires a different approach.</p>
+      <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
+        <strong>Copy into your plan:</strong> "If at any point my plan needs to change — whether it's an earlier delivery, an unexpected complication, or a different approach to anesthesia — I'd like my care team to explain what's happening and why, and give my partner and me time to discuss before making decisions unless it's a true emergency."
+      </blockquote>
+      <p>If you're planning a vaginal birth and want to cover the C-section possibility, add a short section:</p>
+      <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
+        <strong>Copy into your plan:</strong> "If a C-section becomes necessary: partner present, clear drape if possible, skin-to-skin if baby is stable, delayed cord clamping if safe."
+      </blockquote>
+      <p>Two lines. That's all you need for the what-if. The <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:underline">free birth plan template</a> has a dedicated section for this.</p>
+
+      <h2 id="what-to-skip">What to Skip in a C-Section Birth Plan</h2>
+      <p>More isn't better. Skip:</p>
+      <ul>
+        <li><strong>Preferences that conflict with surgical safety.</strong> You can ask for a clear drape, music, and skin-to-skin. You can't ask to move around during surgery or decline the spinal block. Focus on what's possible.</li>
+        <li><strong>Long narrative paragraphs.</strong> Nurses and anesthesiologists read your plan in the minutes before surgery. Bullet points. One preference per line. Short and specific.</li>
+        <li><strong>Anything that sounds like you don't trust your team.</strong> "I refuse" and "I insist" create tension. "I prefer" and "I'd like" communicate clearly without putting up walls. Your birth plan is a communication tool — write it like you'd want to receive it.</li>
+        <li><strong>A separate birth plan for every scenario.</strong> One document, one page, all your preferences. Include your C-section preferences alongside your vaginal birth preferences. Your nurses don't want to flip between two pages.</li>
+      </ul>
+
+      <h2 id="questions-to-ask">Before You Go In: What to Ask at Your Pre-Op Appointment</h2>
+      <p>Your pre-op appointment is usually scheduled a few days before your C-section. This is where you ask questions and get answers before you're in the hospital. Bring these written down:</p>
+      <ol>
+        <li><strong>Can I have a clear drape?</strong> Most hospitals now offer a clear drape that's lowered for the birth and raised for the repair. Ask specifically — some only use them if you request them.</li>
+        <li><strong>Can my partner cut the cord?</strong> Some hospitals allow it with a sterile tool and doctor supervision. Others don't. Ask now.</li>
+        <li><strong>What's the policy on skin-to-skin in the OR?</strong> Some hospitals routinely offer it. Others need you to request it. Find out so you can put it in your plan.</li>
+        <li><strong>How many support people can be in the OR?</strong> Usually one. Sometimes two. Ask now so you're not surprised.</li>
+        <li><strong>What happens if I go into labor before my scheduled date?</strong> Know whether they'll proceed with the C-section or let you attempt a vaginal birth if conditions are favorable.</li>
+        <li><strong>What kind of anesthesia will be used?</strong> Most planned C-sections use a spinal block. Know what to expect — how it's administered, how it feels, and how long it lasts.</li>
+      </ol>
+      <p>Write the answers on your birth plan or bring them to your next prenatal appointment.</p>
+
+      <h2 id="your-hospital">Your Hospital and Your C-Section Plan</h2>
+      <p>C-section protocols vary by hospital — including skin-to-skin policies, support person limits, and recovery room setup. If you're delivering in Texas, your city page has local hospital details and doula availability:</p>
+      <ul>
+        <li><a href="/birth-support/dallas-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Dallas hospitals and doula costs</a></li>
+        <li><a href="/birth-support/houston-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Houston doula costs and insurance coverage</a></li>
+        <li><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Austin birth doula pricing and hospitals</a></li>
+        <li><a href="/birth-support/san-antonio-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">San Antonio doula cost guide</a></li>
+        <li><a href="/birth-support/fort-worth-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Fort Worth doula services and pricing</a></li>
+        <li><a href="/birth-support/el-paso-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">El Paso doula costs and Medicaid info</a></li>
+      </ul>
+      <p><a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:underline">See all 20 Texas cities →</a></p>
+
+      <h2 id="doula-support">How a Doula Helps During a C-Section</h2>
+      <p>A doula in the OR? Yes — not all hospitals allow it, but many do. And if they don't, your doula still supports you before and after surgery. Here's how:</p>
+      <ul>
+        <li><strong>Before surgery:</strong> A doula helps you write your C-section birth plan with specific language for the OR. They walk through your preferences so you walk in knowing what you want, not just what you're told.</li>
+        <li><strong>If they can be in the OR:</strong> They stay by your head, narrate what's happening, help you stay calm, and facilitate skin-to-skin if your partner needs to take photos or help with the baby.</li>
+        <li><strong>If they can't be in the OR:</strong> They wait outside and join you in recovery. This is when most C-section parents need the most hands-on help — and your partner may be with the baby, not with you.</li>
+        <li><strong>In recovery:</strong> A doula helps with breastfeeding positioning (which can be tricky after abdominal surgery), monitors your comfort, and makes sure your pain management preferences are being followed.</li>
+        <li><strong>At home:</strong> <a href="/postpartum-doula/" class="text-tjb-rose-500 font-semibold hover:underline">Postpartum doulas</a> specialize in C-section recovery — helping with feeding, baby care while you're healing, and the emotional processing that comes with any birth experience.</li>
+      </ul>
+      <p><a href="/doula-cost/" class="text-tjb-rose-500 font-semibold hover:underline">How much does a doula cost?</a> — <a href="/how-to-choose-a-doula/" class="text-tjb-rose-500 font-semibold hover:underline">How to choose a doula for your birth</a></p>
+
+      <h2 id="common-questions">Common Questions</h2>
+      <div class="space-y-4">
+        <div>
+          <h3 class="font-semibold mb-1">Can I have preferences in a C-section birth plan?</h3>
+          <p class="text-tjb-gray">Yes. A cesarean is surgery, but you still have choices — who's in the room, whether you want a clear drape, skin-to-skin in the OR, delayed cord clamping, and more. A C-section birth plan documents those preferences so your team knows what matters to you.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">What's the difference between a planned and unplanned C-section birth plan?</h3>
+          <p class="text-tjb-gray">A planned C-section gives you time to write detailed preferences — music, lighting, who cuts the cord, recovery goals. An unplanned C-section happens during labor, so your plan should focus on the few things that matter most no matter how your baby arrives: partner present, skin-to-skin if possible, and feeding preferences. Include both in your birth plan.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Can I have skin-to-skin after a C-section?</h3>
+          <p class="text-tjb-gray">Often yes, but it depends on your hospital and your medical situation. Many hospitals now support skin-to-skin in the operating room — some with a clear drape so you can see your baby being born, others by bringing your baby to your chest while the surgical team finishes. Put this in your birth plan and ask your hospital about their protocol.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Do I need a birth plan if I'm having a scheduled C-section?</h3>
+          <p class="text-tjb-gray">Yes. A scheduled C-section actually gives you more control, not less — you know the date, you know the team, and you have time to communicate your preferences. Without a plan, the hospital defaults take over. With a plan, you shape what the experience feels like.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">What should my C-section birth plan include for recovery?</h3>
+          <p class="text-tjb-gray">Cover three things: pain management (what you'd like and what you'd like to avoid), help at home (who's staying, for how long, what they're doing), and feeding (breastfeeding support in the hospital, rooming-in preferences). Recovery from a C-section is a 4–6 week process — your birth plan should extend into that window.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">What if I'm planning a vaginal birth but want to be prepared for a C-section?</h3>
+          <p class="text-tjb-gray">That's smart. Add a short "if a C-section becomes necessary" section to your birth plan. You don't need a separate document — just a few bullet points: partner present, clear drape if possible, skin-to-skin if baby is stable, delayed cord clamping if safe. This takes two lines and covers the most common preferences.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-1">Can my partner cut the cord during a C-section?</h3>
+          <p class="text-tjb-gray">Sometimes. It depends on the hospital and the surgical team. Some allow it with a sterile tool and the doctor's supervision. Others don't, for reasons related to surgical protocol. Put it in your plan as a preference and ask your provider at your pre-op appointment.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       LEAD CAPTURE — Download archetype
+       ═══════════════════════════════════════════ -->
+  <section id="download" class="py-20 md:py-28">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <p class="eyebrow mb-4">Free download</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+      <h2 class="font-semibold text-tjb-charcoal mb-5 leading-[1.15]" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
+        Start Your C-Section Birth Plan
+      </h2>
+      <p class="text-lg text-tjb-gray mb-10 max-w-xl mx-auto leading-relaxed">
+        Pick the sections that apply to your C-section, fill in your preferences, and walk in knowing your plan is documented. The template is free.
+      </p>
+      <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+        <button id="lead-submit" type="submit" class="btn-primary whitespace-nowrap">Download free birth plan</button>
+      </form>
+      <p id="lead-status" class="text-sm mt-2 hidden"></p>
+      <p class="text-xs text-tjb-gray-300 mt-4">No spam. Just a free birth plan and occasional tips you can actually use.</p>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('lead-magnet-form');
+    const emailInput = document.getElementById('lead-email');
+    const status = document.getElementById('lead-status');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = emailInput?.value;
+        if (!email) return;
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: 'Lead Magnet', email, message: 'Birth plan template download — C-section scenario' })
+          });
+          const data = await res.json();
+          if (data.success) {
+            status.textContent = '✓ Check your inbox!';
+            status.className = 'text-xs text-green-700 mt-2';
+            emailInput.value = '';
+          } else {
+            status.textContent = 'Something went wrong. Please try again.';
+            status.className = 'text-xs text-red-600 mt-2';
+          }
+        } catch {
+          status.textContent = 'Network error. Please try again.';
+          status.className = 'text-xs text-red-600 mt-2';
+        }
+      });
+    }
+  </script>
+
+</Layout>

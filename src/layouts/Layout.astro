@@ -31,8 +31,8 @@ const schemaBase = {
         "@id": "https://truejoybirthing.com/#logo",
         "url": "https://truejoybirthing.com/images/logo.svg",
         "contentUrl": "https://truejoybirthing.com/images/logo.svg",
-        "width": 579,
-        "height": 256,
+        "width": 480,
+        "height": 128,
         "creditText": "True Joy Birthing",
         "copyrightHolder": { "@id": "https://truejoybirthing.com/#organization" }
       },
@@ -152,7 +152,19 @@ const schemaBase = {
   ]
 };
 
-const schema = Astro.props.schema ? { ...schemaBase, ...Astro.props.schema } : schemaBase;
+// Merge page-level schema with base: combine @graph arrays, deduplicating by @id
+// Page-level @id entries override base entries of the same @id
+const pageSchema = Astro.props.schema;
+let schema;
+if (pageSchema) {
+  const baseGraph = schemaBase["@graph"] || [];
+  const pageGraph = pageSchema["@graph"] || [];
+  const pageIds = new Set(pageGraph.map(e => e["@id"]).filter(Boolean));
+  const mergedGraph = [...baseGraph.filter(e => !pageIds.has(e["@id"])), ...pageGraph];
+  schema = { ...schemaBase, ...pageSchema, "@graph": mergedGraph };
+} else {
+  schema = schemaBase;
+}
 let finalSchema = schema;
 if (breadcrumbList && breadcrumbList.length > 0) {
   finalSchema = {
@@ -185,6 +197,9 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="True Joy Birthing" />
     <meta property="og:url" content={canonical || `https://truejoybirthing.com${currentPath}`} />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -217,7 +232,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
           <img 
             src="/images/logo.svg" 
             alt="True Joy Birthing" 
-            class="h-12 w-auto transition-transform duration-300 group-hover:scale-[1.02]"
+            class="h-10 max-w-[160px] w-auto transition-transform duration-300 group-hover:scale-[1.02]"
           />
         </a>
         <nav class="hidden md:flex gap-8 text-sm font-semibold tracking-wide text-tjb-gray" aria-label="Main">
@@ -226,8 +241,8 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
           <a href="/blog" class="hover:text-tjb-rose-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-500 after:transition-all after:duration-300 hover:after:w-full">Blog</a>
           <a href="/contact" class="hover:text-tjb-rose-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-500 after:transition-all after:duration-300 hover:after:w-full">Contact</a>
         </nav>
-        <a href="/birth-plan-course" class="hidden md:inline-block bg-tjb-lavender-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-tjb-rose-500 transition-all duration-300 hover:shadow-lg hover:shadow-tjb-lavender-300">
-          Get the Plan
+        <a href="#download" id="nav-cta" class="hidden md:inline-block bg-tjb-lavender-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-tjb-rose-500 transition-all duration-300">
+          Download free birth plan
         </a>
         <button id="mobile-menu-btn" class="md:hidden text-tjb-charcoal p-2" aria-label="Open menu">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -239,7 +254,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
           <a href="/about" class="hover:text-tjb-rose-500 transition">About</a>
           <a href="/blog" class="hover:text-tjb-rose-500 transition">Blog</a>
           <a href="/contact" class="hover:text-tjb-rose-500 transition">Contact</a>
-          <a href="/birth-plan-course" class="bg-tjb-lavender-500 text-white px-6 py-2.5 rounded-full text-center font-semibold w-fit hover:bg-tjb-rose-500 transition">Get the Plan</a>
+          <a href="#download" class="bg-tjb-lavender-500 text-white px-6 py-2.5 rounded-full text-center font-semibold w-fit hover:bg-tjb-rose-500 transition">Download free birth plan</a>
         </nav>
       </div>
     </header>
@@ -271,7 +286,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
           </ul>
         </div>
         <div>
-          <p class="font-semibold text-white mb-4 tracking-wide text-sm uppercase">Get the Free App</p>
+          <p class="font-semibold text-white mb-4 tracking-wide text-sm uppercase">Download the app — free for moms</p>
           <p class="text-sm text-tjb-gray-300 mb-4 leading-relaxed">Build your birth plan, learn your options, and feel confident.</p>
           <div class="flex flex-wrap gap-3">
             <a href="https://apps.apple.com/app/true-joy-birthing" class="inline-block bg-tjb-lavender-500 text-white px-4 py-2 rounded-full text-xs font-semibold hover:bg-tjb-rose-500 transition">App Store</a>

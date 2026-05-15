@@ -1,0 +1,226 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const breadcrumbList = [
+  {"name": "Home", "url": "https://truejoybirthing.com/"},
+  {"name": "Birth Plan Scenarios", "url": "https://truejoybirthing.com/birth-plan-scenarios/"}
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://truejoybirthing.com/birth-plan-scenarios/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "What's a birth plan scenario?", "acceptedAnswer": { "@type": "Answer", "text": "A birth plan scenario is a situation-specific guide that helps you write language matching a particular type of birth — induction, C-section, VBAC, natural birth, and others. Instead of a one-size-fits-all template, scenario-based plans include the exact wording, priorities, and considerations that matter for your specific circumstances." } },
+        { "@type": "Question", "name": "Do I need more than one birth plan?", "acceptedAnswer": { "@type": "Answer", "text": "Maybe. If your birth has clear next steps — 'if we induce, I want X; if I go into labor on my own, I want Y' — writing both helps you feel prepared without being rigid. But most people only need one primary plan with a brief contingency section. Write for your most likely scenario, include a few 'if things change' lines, and adjust if your circumstances shift." } },
+        { "@type": "Question", "name": "What if my birth doesn't fit any scenario?", "acceptedAnswer": { "@type": "Answer", "text": "That's okay and honestly pretty common. If your situation is unique — say you're being induced but also planning an unmedicated birth, or your doctor has mentioned a C-section but hasn't scheduled one — pick the closest scenario and adapt. The language templates in each guide are starting points, not final drafts." } },
+        { "@type": "Question", "name": "Can I change my birth plan during labor?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Your birth plan isn't a contract you're locked into. It's a communication tool that tells your team what you'd prefer if things go the way you're hoping. If your birth takes a different path, your nurses, doctor or midwife, and doula should talk you through what's changing and why — and you get to decide in real time." } },
+        { "@type": "Question", "name": "Where do I start?", "acceptedAnswer": { "@type": "Answer", "text": "Pick the scenario that matches your situation from the list on this page, read through the guide, and use the free birth plan template to write it out. If you want step-by-step help, the free birth plan course walks you through each section with short videos." } }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://truejoybirthing.com/birth-plan-scenarios/#scenarios",
+      "name": "Birth Plan Scenarios",
+      "description": "Situation-specific birth plan guides for inductions, C-sections, VBACs, and more.",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Birth Plan for Induction", "url": "https://truejoybirthing.com/birth-plan-for-induction/" },
+        { "@type": "ListItem", "position": 2, "name": "C-Section Birth Plan", "url": "https://truejoybirthing.com/c-section-birth-plan/" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Birth Plan Scenarios — Find the Right Plan for Your Birth"
+  description="Birth plans aren't one-size-fits-all. Choose your scenario — induction, C-section, VBAC, and more — and get scenario-specific language your care team can actually read."
+  canonical="https://truejoybirthing.com/birth-plan-scenarios/"
+  breadcrumbList={breadcrumbList}
+  schema={schema}
+>
+
+  <!-- ═══════════════════════════════════════════
+       HERO — Editorial archetype: eyebrow + rule + H1 + sub
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="eyebrow mb-4">Birth Plan Scenarios</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h1 class="text-[2.5rem] md:text-[3.25rem] font-bold mb-6 leading-[1.12]">Find the Right Birth Plan for Your Situation</h1>
+      <p class="text-lg md:text-xl text-tjb-gray leading-relaxed max-w-2xl">
+        A generic birth plan only works if your birth goes exactly the way you imagined. But birth has its own ideas. These scenario guides help you write language that matches what's actually happening — so your team reads you clearly and nothing catches you off guard.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 mt-8">
+        <a href="#download" class="btn-primary">Download free birth plan</a>
+        <a href="/birth-plan-course/" class="btn-secondary">Enroll in the birth plan course</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scenario Cards -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="font-semibold mb-8 leading-[1.15]" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">Which Scenario Fits Your Birth?</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+
+        <a href="/birth-plan-for-induction/" class="block bg-tjb-cream-50 border border-tjb-lavender-200 hover:border-tjb-rose-300 rounded-2xl p-6 transition group">
+          <h3 class="text-xl font-semibold text-tjb-charcoal mb-2 group-hover:text-tjb-rose-500 transition">Birth Plan for Induction</h3>
+          <p class="text-tjb-gray text-sm leading-relaxed">Being induced changes your timeline, your options, and how your labor feels. This guide covers monitoring, pain management, escalation language, and what to ask at your scheduling appointment.</p>
+        </a>
+
+        <a href="/c-section-birth-plan/" class="block bg-tjb-cream-50 border border-tjb-lavender-200 hover:border-tjb-rose-300 rounded-2xl p-6 transition group">
+          <h3 class="text-xl font-semibold text-tjb-charcoal mb-2 group-hover:text-tjb-rose-500 transition">C-Section Birth Plan</h3>
+          <p class="text-tjb-gray text-sm leading-relaxed">Whether planned or a possibility you want to be ready for, a C-section birth plan covers what matters in the operating room: who's present, clear drapes, skin-to-skin, and recovery preferences.</p>
+        </a>
+
+        <div class="bg-tjb-cream-50 border border-tjb-lavender-100 rounded-2xl p-6 opacity-60">
+          <h3 class="text-xl font-semibold text-tjb-charcoal mb-2">VBAC Birth Plan</h3>
+          <p class="text-tjb-gray text-sm leading-relaxed">Planning a vaginal birth after cesarean means balancing your desire for a different experience with real medical considerations — monitoring protocols, hospital VBAC policies, and backup planning. <em>Coming soon.</em></p>
+        </div>
+
+        <div class="bg-tjb-cream-50 border border-tjb-lavender-100 rounded-2xl p-6 opacity-60">
+          <h3 class="text-xl font-semibold text-tjb-charcoal mb-2">Natural Birth Plan</h3>
+          <p class="text-tjb-gray text-sm leading-relaxed">An unmedicated birth isn't "just showing up and hoping." It takes specific preparation, clear language about pain management, and a plan for keeping your birth space calm and supported. <em>Coming soon.</em></p>
+        </div>
+
+        <div class="bg-tjb-cream-50 border border-tjb-lavender-100 rounded-2xl p-6 opacity-60">
+          <h3 class="text-xl font-semibold text-tjb-charcoal mb-2">Birth Plan for Twins</h3>
+          <p class="text-tjb-gray text-sm leading-relaxed">Twin births involve more variables — timing, monitoring, delivery positions, NICU readiness, and postpartum recovery. Your plan needs to cover decisions that a single-baby plan doesn't address. <em>Coming soon.</em></p>
+        </div>
+
+        <div class="bg-tjb-cream-50 border border-tjb-lavender-100 rounded-2xl p-6 opacity-60">
+          <h3 class="text-xl font-semibold text-tjb-charcoal mb-2">When Your Doctor Disagrees</h3>
+          <p class="text-tjb-gray text-sm leading-relaxed">You've done the work, you know what you want, and your provider pushes back. Learn how to navigate disagreements, find common ground, and decide when it's time to switch providers. <em>Coming soon.</em></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Choose -->
+  <section class="py-16 bg-tjb-cream">
+    <div class="max-w-3xl mx-auto px-6 prose">
+      <h2>How to Choose the Right Scenario</h2>
+      <p>Start with the scenario that matches your <strong>most likely birth path</strong>. Not the one you were originally imagining — the one that's actually happening or most probable.</p>
+
+      <p><strong>If your care provider has scheduled an induction:</strong> Start with the <a href="/birth-plan-for-induction/" class="text-tjb-rose-500 font-semibold hover:underline">induction guide</a>, even if you were planning an unmedicated birth. You can absolutely still want an unmedicated experience — the induction guide just helps you write for the realities of Pitocin, monitoring, and a different timeline.</p>
+
+      <p><strong>If you're planning a VBAC:</strong> Our VBAC guide is coming soon. In the meantime, start with the <a href="/c-section-birth-plan/" class="text-tjb-rose-500 font-semibold hover:underline">C-section guide</a> for your backup preferences and add a brief "if I go into labor" section for your VBAC goals.</p>
+
+      <p><strong>If you're a first-time parent and not sure what to expect:</strong> Pick the scenario closest to your current plan, then add a brief "if things change" section. You can always update — a birth plan is a living document, not a contract.</p>
+
+      <p><strong>If more than one scenario applies to you:</strong> Write a primary plan for your most likely scenario and add a one-paragraph "if we need to pivot" section for the next most likely one. Keep both in your birth folder.</p>
+
+      <p>The important thing: <strong>write for the birth you're actually having.</strong> If your circumstances change between your last prenatal appointment and the hospital, you can update. A plan for spontaneous labor doesn't serve you well if you end up being induced — and that disconnect is exactly what scenario-specific language fixes.</p>
+    </div>
+  </section>
+
+  <!-- Your Hospital -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 prose">
+      <h2>Your Hospital Changes Everything</h2>
+      <p>Here's something most people don't think about until they're in labor: your hospital's policies shape what's actually possible in your birth plan more than any preference you write down.</p>
+      <p>The same birth plan reads differently at a Baby-Friendly hospital with midwife staffing than it does at a large teaching hospital with mandatory continuous monitoring. Not better or worse — just different. And you need to know which policies affect your scenario-specific choices.</p>
+      <p>If you're delivering in Texas, your city page has the hospital names, doula pricing, and Medicaid details relevant to where you're actually giving birth:</p>
+      <ul>
+        <li><a href="/birth-support/dallas-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Dallas hospitals and doula costs</a></li>
+        <li><a href="/birth-support/houston-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Houston doula costs and insurance coverage</a></li>
+        <li><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Austin birth doula pricing and hospitals</a></li>
+        <li><a href="/birth-support/san-antonio-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">San Antonio doula cost guide</a></li>
+        <li><a href="/birth-support/fort-worth-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Fort Worth doula services and pricing</a></li>
+        <li><a href="/birth-support/el-paso-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">El Paso doula costs and Medicaid info</a></li>
+      </ul>
+      <p><a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:underline">See all 20 Texas cities →</a></p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-tjb-cream">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="font-semibold mb-8 leading-[1.15]" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">Common Questions</h2>
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-semibold mb-2 text-tjb-charcoal">What's a birth plan scenario?</h3>
+          <p class="text-tjb-gray">A birth plan scenario is a situation-specific guide that helps you write language matching a particular type of birth — induction, C-section, VBAC, natural birth, and others. Instead of a one-size-fits-all template, scenario-based plans include the exact wording, priorities, and considerations that matter for your specific circumstances. An induction birth plan, for example, addresses monitoring, pain management, and escalation decisions that a generic plan wouldn't cover.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2 text-tjb-charcoal">Do I need more than one birth plan?</h3>
+          <p class="text-tjb-gray">Maybe. If your birth has clear next steps — "if we induce, I want X; if I go into labor on my own, I want Y" — writing both helps you feel prepared without being rigid. But most people only need one primary plan with a brief contingency section. Don't overthink it. Write for your most likely scenario, include a few "if things change" lines, and adjust if your circumstances shift.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2 text-tjb-charcoal">What if my birth doesn't fit any scenario?</h3>
+          <p class="text-tjb-gray">That's okay and honestly pretty common. Birth doesn't always sort itself into neat categories. If your situation is unique — say you're being induced but also planning an unmedicated birth, or your doctor has mentioned a C-section but hasn't scheduled one — pick the closest scenario and adapt. The language templates in each guide are starting points, not final drafts. Your doula can help you customize, or you can <a href="/birth-plan-course/" class="text-tjb-rose-500 font-semibold hover:underline">take the free birth plan course</a> to walk through each section.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2 text-tjb-charcoal">Can I change my birth plan during labor?</h3>
+          <p class="text-tjb-gray">Yes. Your birth plan isn't a contract you're locked into. It's a communication tool that tells your team what you'd prefer if things go the way you're hoping. If your birth takes a different path, your nurses, doctor or midwife, and doula should talk you through what's changing and why — and you get to decide in real time. The "if things change" section of your plan exists exactly for this: it tells your team how you want to be involved in decisions when your original plan no longer applies.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold mb-2 text-tjb-charcoal">Where do I start?</h3>
+          <p class="text-tjb-gray">Pick the scenario that matches your situation from the list above, read through the guide, and use the <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:underline">free birth plan template</a> to write it out. If you want step-by-step help, the <a href="/birth-plan-course/" class="text-tjb-rose-500 font-semibold hover:underline">free birth plan course</a> walks you through each section with short videos. And if you want someone in your corner who's done this before, <a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:underline">find a doula in your city</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       LEAD CAPTURE — Download archetype
+       ═══════════════════════════════════════════ -->
+  <section id="download" class="py-20 md:py-28 bg-white">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <p class="eyebrow mb-4">Free download</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+      <h2 class="font-semibold text-tjb-charcoal mb-5 leading-[1.15]" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
+        Start With the Scenario That Matches Your Birth
+      </h2>
+      <p class="text-lg text-tjb-gray mb-10 max-w-xl mx-auto leading-relaxed">
+        Pick your scenario, fill in your preferences, and walk in knowing your plan is documented and your team can read it in 30 seconds. The template is free.
+      </p>
+      <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+        <button id="lead-submit" type="submit" class="btn-primary whitespace-nowrap">Download free birth plan</button>
+      </form>
+      <p id="lead-status" class="text-sm mt-2 hidden"></p>
+      <p class="text-xs text-tjb-gray/70 mt-4">We'll send your birth plan template to this email. No spam, just birth prep.</p>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('lead-magnet-form');
+    const emailInput = document.getElementById('lead-email');
+    const status = document.getElementById('lead-status');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = emailInput?.value;
+        if (!email) return;
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: 'Lead Magnet', email, message: 'Birth plan template download — scenarios hub' })
+          });
+          const data = await res.json();
+          if (data.success) {
+            status.textContent = '✓ Check your email — your birth plan template is on its way.';
+            status.classList.remove('hidden', 'text-red-500');
+            status.classList.add('text-green-600');
+            emailInput.value = '';
+          } else {
+            status.textContent = 'Something went wrong. Please try again.';
+            status.classList.remove('hidden', 'text-green-600');
+            status.classList.add('text-red-500');
+          }
+        } catch {
+          status.textContent = 'Network error. Please try again.';
+          status.classList.remove('hidden', 'text-green-600');
+          status.classList.add('text-red-500');
+        }
+      });
+    }
+  </script>
+
+</Layout>
