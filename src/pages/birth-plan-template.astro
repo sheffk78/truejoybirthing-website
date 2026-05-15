@@ -16,8 +16,8 @@ const schema = {
         {
           "@type": "HowToStep",
           "position": 1,
-          "name": "Download the free template",
-          "text": "Enter your email to get the free birth plan template. It arrives as a structured document you can fill out or recreate in the free True Joy Birthing app."
+          "name": "Download the free fillable PDF",
+          "text": "Download the free birth plan template as a fillable PDF. You can type directly into it, print it, or recreate it in the free True Joy Birthing app."
         },
         {
           "@type": "HowToStep",
@@ -50,8 +50,8 @@ const schema = {
       "@id": "https://truejoybirthing.com/birth-plan-template/#faq",
       "mainEntity": [
         { "@type": "Question", "name": "What should a birth plan template include?", "acceptedAnswer": { "@type": "Answer", "text": "A good birth plan template covers labor preferences, pain management options, delivery positions, postpartum care preferences, and newborn care decisions. It should be organized, concise, and easy for your care team to scan quickly." } },
-        { "@type": "Question", "name": "Is this birth plan template really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The template is completely free for expecting mothers. Enter your email and it's yours — no upsell, no trial, no catch." } },
-        { "@type": "Question", "name": "Can I edit the birth plan template?", "acceptedAnswer": { "@type": "Answer", "text": "You can fill in the template digitally in the free True Joy Birthing app, or download and print it to fill in by hand. Either way, you control every preference." } },
+        { "@type": "Question", "name": "Is this birth plan template really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The fillable PDF is completely free — no email, no upsell, no catch. You can also use the free app for a richer, updatable experience." } },
+        { "@type": "Question", "name": "Can I edit the birth plan template?", "acceptedAnswer": { "@type": "Answer", "text": "The PDF is fillable — type directly into it or print it and fill it in by hand. For live updates, doula sharing, and course lessons, use the free True Joy Birthing app." } },
         { "@type": "Question", "name": "How is this different from a birth plan I find on Google?", "acceptedAnswer": { "@type": "Answer", "text": "Most free templates online are generic checklists. This one was built by a certified birth doula and organized around the decisions that actually come up in the delivery room — not just wish-list items." } },
         { "@type": "Question", "name": "When should I fill out my birth plan?", "acceptedAnswer": { "@type": "Answer", "text": "Most families start around 28-32 weeks. Earlier is fine too — the sooner you understand your options, the more confident you'll feel when the time comes." } }
       ]
@@ -62,7 +62,7 @@ const schema = {
 
 <Layout
   title="Free Birth Plan Template"
-  description="Download a free birth plan template built by a certified doula. Structured, concise, and easy for your care team to read. Covers labor, delivery, postpartum, and newborn care."
+  description="Download a free fillable birth plan template built by a certified doula. Structured, concise, and easy for your care team to read. Covers labor, delivery, postpartum, and newborn care."
   canonical="https://truejoybirthing.com/birth-plan-template/"
   ogImage="/images/og-birth-plan-template.webp"
   breadcrumbList={breadcrumbList}
@@ -84,11 +84,11 @@ const schema = {
             A birth plan template that actually works in the delivery room
           </h1>
           <p class="text-tjb-gray text-lg leading-[1.7] mb-8 max-w-[36rem]">
-            Built by a certified doula — not a generic checklist. Structured so your nurse can read it in 30 seconds, free to download or build in the app.
+            Built by a certified doula — not a generic checklist. Structured so your nurse can read it in 30 seconds. Download the fillable PDF free, or build your plan in the <a href="https://apps.apple.com/app/true-joy-birthing" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free app</a>.
           </p>
           <div>
             <a href="#download" class="btn-primary">
-              Download free birth plan
+              Download free PDF
             </a>
           </div>
         </div>
@@ -125,7 +125,7 @@ const schema = {
 
       <h2>How to Use This Template in 5 Steps</h2>
       <ol>
-        <li><strong>Download the free template.</strong> Enter your email below. It arrives as a structured document you can fill out or recreate in the free app.</li>
+        <li><strong>Download the fillable PDF.</strong> It's free — no email required. Type directly into it, or print it and fill it in by hand. For live updates and doula sharing, use the <a href="https://apps.apple.com/app/true-joy-birthing" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free app</a>.</li>
         <li><strong>Review each section with your partner.</strong> Go through labor preferences, pain management, delivery, postpartum care, and newborn care. Talk through each section with your partner or support person so you're aligned before the big day.</li>
         <li><strong>Fill in your preferences.</strong> Mark what matters most to you. You don't need to answer every item — focus on the preferences that reflect what you actually want, not what you think you should want.</li>
         <li><strong>Bring it to your next appointment.</strong> Share your draft with your OB or midwife. Ask them to flag anything that might not be possible at your specific hospital or birth center.</li>
@@ -162,11 +162,11 @@ const schema = {
         </div>
         <div>
           <h3 class="font-semibold mb-1">Is this birth plan template really free?</h3>
-          <p class="text-tjb-gray">Yes. The template is completely free for expecting mothers. Enter your email and it's yours — no upsell, no trial, no catch.</p>
+          <p class="text-tjb-gray">Yes. The fillable PDF is completely free — no email, no upsell, no catch. You can also use the free app for a richer, updatable experience.</p>
         </div>
         <div>
           <h3 class="font-semibold mb-1">Can I edit the birth plan template?</h3>
-          <p class="text-tjb-gray">You can fill in the template digitally in the free True Joy Birthing app, or download and print it to fill in by hand. Either way, you control every preference.</p>
+          <p class="text-tjb-gray">The PDF is fillable — type directly into it or print it and fill it in by hand. For live updates, doula sharing, and course lessons, use the free True Joy Birthing app.</p>
         </div>
         <div>
           <h3 class="font-semibold mb-1">How is this different from a birth plan I find on Google?</h3>
@@ -181,58 +181,29 @@ const schema = {
     </div>
   </section>
 
-  <section id="download" class="py-20 md:py-28">
+  <!-- ═══════════════════════════════════════════
+       DOWNLOAD — Direct PDF download + app upsell
+       ═══════════════════════════════════════════ -->
+  <section id="download" class="bg-white border-y border-tjb-lavender-200/60 py-20 md:py-28">
     <div class="max-w-2xl mx-auto px-6 text-center">
-      <p class="eyebrow mb-4">Free download</p>
+      <p class="eyebrow mb-4">Free Download</p>
       <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
-      <h2 class="font-semibold text-tjb-charcoal mb-5 leading-[1.15]" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
-        Your birth plan is ready
-      </h2>
-      <p class="text-lg text-tjb-gray mb-10 max-w-xl mx-auto leading-relaxed">
-        Fill it out, print a few copies, hand one to your nurse. One page that speaks for you when you're focused on labor — not on paperwork.
+      <h2 class="mb-5 text-[2.25rem] md:text-[2.75rem] leading-[1.15]">Download Your Free Birth Plan</h2>
+      <p class="text-tjb-gray mb-8 max-w-xl mx-auto leading-relaxed">
+        A fillable PDF you can print or edit — free. For the full experience with course lessons, live updates, and doula sharing, <a href="https://apps.apple.com/app/true-joy-birthing" class="text-tjb-lavender-600 font-semibold hover:text-tjb-lavender-700 border-b border-transparent hover:border-tjb-lavender-600 transition-all">get the free app</a>.
       </p>
-      <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-        <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
-        <button id="lead-submit" type="submit" class="btn-primary whitespace-nowrap">Download free birth plan</button>
-      </form>
-      <p id="lead-status" class="text-sm mt-2 hidden"></p>
-      <p class="text-xs text-tjb-gray/70 mt-4">No spam. Just a free birth plan and occasional tips you can actually use.</p>
+
+      <a href="/true-joy-birth-plan.pdf" download="true-joy-birth-plan.pdf" class="btn-primary inline-block mb-6">
+        Download free PDF
+      </a>
+      <p class="text-sm text-tjb-gray mb-3">Print it, fill it out, hand it to your nurse.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+        <a href="https://apps.apple.com/app/true-joy-birthing" class="inline-flex items-center gap-2 text-tjb-lavender-600 font-semibold hover:text-tjb-lavender-700 transition-colors">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          Get the free app — richer, updatable, shareable
+        </a>
+      </div>
     </div>
   </section>
-
-  <script>
-    const form = document.getElementById('lead-magnet-form');
-    const emailInput = document.getElementById('lead-email');
-    const status = document.getElementById('lead-status');
-    if (form) {
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const email = emailInput?.value;
-        if (!email) return;
-        try {
-          const res = await fetch('/api/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name: 'Lead Magnet', email, message: 'Birth plan template download' })
-          });
-          const data = await res.json();
-          if (data.success) {
-            status.textContent = '✓ Check your email — your birth plan template is on its way.';
-            status.classList.remove('hidden', 'text-red-500');
-            status.classList.add('text-green-600');
-            emailInput.value = '';
-          } else {
-            status.textContent = 'Something went wrong. Please try again.';
-            status.classList.remove('hidden', 'text-green-600');
-            status.classList.add('text-red-500');
-          }
-        } catch {
-          status.textContent = 'Network error. Please try again.';
-          status.classList.remove('hidden', 'text-green-600');
-          status.classList.add('text-red-500');
-        }
-      });
-    }
-  </script>
 
 </Layout>

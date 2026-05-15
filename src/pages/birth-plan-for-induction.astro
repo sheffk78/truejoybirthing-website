@@ -48,7 +48,7 @@ const schema = {
         Being induced changes your timeline, your options, and how your labor feels. Here's what to include in your birth plan — and what to leave out — when your birth starts with a scheduled induction instead of going into labor on your own.
       </p>
       <div class="flex flex-col sm:flex-row gap-3 mt-8">
-        <a href="#download" class="btn-primary">Download free birth plan</a>
+        <a href="#download" class="btn-primary">Download free PDF</a>
         <a href="/birth-plan-course/" class="btn-secondary">Enroll in the birth plan course</a>
       </div>
     </div>
@@ -158,7 +158,7 @@ const schema = {
       <blockquote class="border-l-2 border-tjb-rose-400 pl-6 my-6 text-tjb-charcoal italic">
         If at any point I feel overwhelmed or unsure, I'd like my doula or support person to help me ask questions and understand my options.
       </blockquote>
-      <p><a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:underline">Download free birth plan</a> — the template has a dedicated "if things change" section.</p>
+      <p><a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:underline">Download free PDF</a> — the template has a dedicated "if things change" section.</p>
 
       <h2 id="what-to-skip">What to Skip in an Induction Birth Plan</h2>
       <p>More isn't better. Skip:</p>
@@ -252,48 +252,9 @@ const schema = {
       <p class="text-lg text-tjb-gray mb-10 max-w-xl mx-auto leading-relaxed">
         Pick the sections that apply to your induction, fill in your preferences, and walk in knowing your plan is documented. The template is free.
       </p>
-      <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-        <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
-        <button id="lead-submit" type="submit" class="btn-primary whitespace-nowrap">Download free birth plan</button>
-      </form>
-      <p id="lead-status" class="text-sm mt-2 hidden"></p>
-      <p class="text-xs text-tjb-gray/70 mt-4">We'll send your birth plan template to this email. No spam, just birth prep.</p>
+      <a href="/true-joy-birth-plan.pdf" download="true-joy-birth-plan.pdf" class="btn-primary inline-block mb-6">Download free PDF</a>
+      <p class="text-sm text-tjb-gray mb-3">Print it, fill it out, hand it to your nurse.</p>
+      <a href="https://apps.apple.com/app/true-joy-birthing" class="inline-flex items-center gap-2 text-tjb-lavender-600 font-semibold hover:text-tjb-lavender-700 transition-colors"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>Get the free app — richer, updatable, shareable</a>
     </div>
   </section>
-
-  <script>
-    const form = document.getElementById('lead-magnet-form');
-    const emailInput = document.getElementById('lead-email');
-    const status = document.getElementById('lead-status');
-    if (form) {
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const email = emailInput?.value;
-        if (!email) return;
-        try {
-          const res = await fetch('/api/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name: 'Lead Magnet', email, message: 'Birth plan template download — induction scenario' })
-          });
-          const data = await res.json();
-          if (data.success) {
-            status.textContent = '✓ Check your email — your birth plan template is on its way.';
-            status.classList.remove('hidden', 'text-red-500');
-            status.classList.add('text-green-600');
-            emailInput.value = '';
-          } else {
-            status.textContent = 'Something went wrong. Please try again.';
-            status.classList.remove('hidden', 'text-green-600');
-            status.classList.add('text-red-500');
-          }
-        } catch {
-          status.textContent = 'Network error. Please try again.';
-          status.classList.remove('hidden', 'text-green-600');
-          status.classList.add('text-red-500');
-        }
-      });
-    }
-  </script>
-
 </Layout>
