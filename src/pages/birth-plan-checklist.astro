@@ -97,10 +97,12 @@ const schema = {
     }
   ]
 };
+
+const accentColors = ['text-tjb-lavender-500', 'text-tjb-rose-500', 'text-tjb-sage', 'text-tjb-lavender-500', 'text-tjb-rose-500'];
 ---
 
 <Layout
-  title="Birth Plan Checklist"
+  title="Birth Plan Checklist — Every Preference to Consider Before You Fill Out Your Birth Plan"
   description="A complete birth plan checklist covering labor preferences, pain management, delivery, postpartum care, and newborn care — organized so your care team can read it in 30 seconds."
   canonical="https://truejoybirthing.com/birth-plan-checklist/"
   ogImage="/images/og-birth-plan-checklist.webp"
@@ -108,85 +110,232 @@ const schema = {
   schema={schema}
 >
 
-  <section class="bg-tjb-cream pt-16 pb-12">
-    <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-3xl md:text-4xl font-bold mb-4">Birth Plan Checklist</h1>
-      <p class="text-lg text-tjb-gray mb-6">
-        Every preference point you should consider before you fill out your birth plan — organized by category, written in plain language, and built by a certified doula.
+  <!-- ═══════════════════════════════════════════
+       HERO — Editorial two-column, 55/45
+       Illustration right (clipboard + checklist)
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-cream">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row">
+
+        <!-- Left: Text — 55% -->
+        <div class="md:w-[55%] px-6 md:px-12 py-16 md:py-24 flex flex-col justify-center">
+          <p class="eyebrow mb-3">Birth Plan Checklist</p>
+          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+          <h1 class="font-bold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(2.25rem, 5vw, 3.75rem);">
+            Every Question to Answer Before You Write Your Birth Plan
+          </h1>
+          <!-- Author credibility strip -->
+          <div class="flex items-center gap-2.5 mb-5">
+            <img src="/images/shelbi-thumb.webp" alt="" width="32" height="32" class="w-8 h-8 rounded-full object-cover" />
+            <p class="text-sm text-tjb-gray leading-snug">
+              <a href="/about/" class="text-tjb-lavender-600 hover:text-tjb-lavender-700 font-medium no-underline">Shelbi Kohler</a>,
+              certified birth doula — 500+ families supported
+            </p>
+          </div>
+          <p class="text-tjb-gray text-lg leading-[1.7] mb-8 max-w-[36rem]">
+            Every preference point you should consider — organized by category, written in plain language, and built by a certified doula. Mark what matters, skip what doesn't, then transfer your choices to the template.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="#download" class="btn-primary">Get the free birth plan</a>
+            <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-secondary">Get the free app for the full course</a>
+          </div>
+        </div>
+
+        <!-- Right: Illustration — 45% -->
+        <div class="md:w-[45%] flex items-center justify-center px-6 py-12 md:py-0">
+          <img
+            src="/images/birth-plan-checklist-portrait.webp"
+            alt="A warm editorial illustration of a doula holding a clipboard labeled BIRTH PLAN with checkboxes, ready to help you think through each preference"
+            class="w-full max-w-md rounded-md"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PROVENANCE — Compact trust anchor
+       ═══════════════════════════════════════════ -->
+  <div class="bg-tjb-cream border-y border-tjb-lavender-200/40">
+    <div class="max-w-3xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
+      <span class="text-sm text-tjb-gray-300 tracking-wide">5 categories · 40 preference points</span>
+      <span class="hidden sm:inline text-tjb-rose-400 text-sm">·</span>
+      <span class="text-sm text-tjb-gray-300 tracking-wide">Plain language, no jargon</span>
+      <span class="hidden sm:inline text-tjb-rose-400 text-sm">·</span>
+      <span class="text-sm text-tjb-gray-300 tracking-wide">Built by a certified doula</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       HOW TO USE — Editorial explainer on white
+       ═══════════════════════════════════════════ -->
+  <section class="bg-white py-10 border-b border-tjb-lavender-200/50">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="eyebrow mb-4">How to use this checklist</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <p class="text-tjb-gray text-lg leading-relaxed mb-2">
+        Don't try to answer every item. Read through each category, mark the preferences that matter most to you, and skip the ones you don't have strong feelings about.
       </p>
-      <div class="flex flex-col sm:flex-row gap-3">
-        <a href="/birth-plan-template/#download" class="bg-tjb-lavender-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition">
-          Download the Template</a>
-        <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-full font-semibold hover:bg-tjb-cream transition">
-          Build It in the Free App</a>
-      </div>
+      <p class="text-tjb-gray text-lg leading-relaxed">
+        Then <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">transfer your choices to the free template</a> so your care team can read it at a glance.
+      </p>
     </div>
   </section>
 
-  <section class="py-16 bg-white">
-    <div class="max-w-3xl mx-auto px-6 prose">
+  <!-- ═══════════════════════════════════════════
+       CHECKLIST CATEGORIES — Editorial numbered on alternating BG
+       Each category: eyebrow + title + custom checkboxes
+       ═══════════════════════════════════════════ -->
+  {categories.map((cat, ci) => {
+    const bg = ci % 2 === 0 ? 'bg-tjb-cream' : 'bg-white';
+    const numColor = accentColors[ci];
+    const anchor = cat.title.toLowerCase().replace(/\s+/g, '-');
+    return (
+  <section class={`${bg} py-16 md:py-20`} id={anchor}>
+    <div class="max-w-3xl mx-auto px-6">
 
-      <h2>How to Use This Checklist</h2>
-      <p>Don't try to answer every item. Read through each category, mark the preferences that matter most to you, and skip the ones you don't have strong feelings about. A good birth plan has 10-15 preferences — not 40.</p>
-      <p>Then <a href="/birth-plan-template/">transfer your choices to the free template</a> so your care team can read it at a glance.</p>
-
-      {categories.map(cat => (
-        <div id={cat.title.toLowerCase().replace(/\s+/g, '-')} class="mb-10">
-          <h2>{cat.title}</h2>
-          <ul class="space-y-2">
-            {cat.items.map(item => (
-              <li class="flex items-start gap-3">
-                <span class="mt-1.5 w-4 h-4 rounded border-2 border-tjb-lavender-400 flex-shrink-0"></span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-
-      <h2>After the Checklist: What Next</h2>
-      <ol>
-        <li><strong>Review with your partner.</strong> Make sure you're aligned on the big items — who's in the room, pain management, and delivery preferences.</li>
-        <li><strong>Bring it to your care provider.</strong> Your OB or midwife needs to see your plan before you're in labor. They'll flag anything your hospital can't accommodate.</li>
-        <li><strong>Transfer it to the template.</strong> Use the <a href="/birth-plan-template/">free birth plan template</a> or the free app to create a clean, one-page document your nurse can read in 30 seconds.</li>
-        <li><strong>If you're being induced,</strong> a generic checklist won't cover everything you need. <a href="/birth-plan-for-induction/" class="text-tjb-rose-500 font-semibold hover:underline">Read the induction birth plan guide</a> for scenario-specific language and what to skip.</li>
-        <li><strong>If a cesarean is possible,</strong> consider filling out a <a href="/c-section-birth-plan/" class="text-tjb-rose-500 font-semibold hover:underline">cesarean-specific birth plan guide</a> alongside your primary plan so you're ready for that scenario too.</li>
-        <li><strong>Print copies.</strong> One for your partner, one for your doula, one in your hospital bag. When you're in labor, you won't be searching for it.</li>
-      </ol>
-
-      <div class="bg-tjb-cream p-5 rounded-lg my-8 not-prose">
-        <p class="font-semibold text-tjb-lavender-500 mb-2">Want help thinking through each section?</p>
-        <p class="text-sm text-tjb-gray mb-3">The free birth plan mini-course walks through every category with short, clear videos.</p>
-        <a href="#download" class="text-tjb-lavender-500 font-semibold text-sm hover:underline">Explore the free course →</a>
+      <div class="flex items-baseline gap-3 mb-2">
+        <span class={`text-3xl font-bold font-serif ${numColor}`}>0{ci + 1}</span>
+        <p class="eyebrow mb-0">Category {ci + 1} of 5</p>
       </div>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-4"></div>
+      <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-8" style="font-size: clamp(1.5rem, 3.5vw, 2.25rem);">
+        {cat.title}
+      </h2>
 
-      <h2>Common Questions</h2>
-      <div class="space-y-4">
-        <div>
-          <h3 class="font-semibold mb-1">What should be on a birth plan checklist?</h3>
-          <p class="text-tjb-gray">A birth plan checklist should cover labor preferences, pain management, delivery positions and procedures, postpartum care, and newborn care decisions. Each item should be a clear preference you can communicate to your care team.</p>
+      <ul class="space-y-4">
+        {cat.items.map((item, ii) => (
+          <li class="flex items-start gap-3 group">
+            <span class="mt-1.5 w-4 h-4 rounded-sm border-2 border-tjb-lavender-400 flex-shrink-0 group-hover:border-tjb-rose-400 transition-colors"></span>
+            <span class="text-tjb-gray group-hover:text-tjb-charcoal transition-colors leading-relaxed">{item}</span>
+          </li>
+        ))}
+      </ul>
+
+    </div>
+  </section>
+    );
+  })}
+
+  <!-- ═══════════════════════════════════════════
+       AFTER THE CHECKLIST — Editorial numbered on cream
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-cream py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <p class="eyebrow mb-4">After the checklist</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-10" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
+        What to Do After You Fill It Out
+      </h2>
+
+      <div class="space-y-0">
+        <div class="py-5 border-t border-tjb-lavender-300/40">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
+            <span class="text-3xl font-bold text-tjb-lavender-500 font-serif">01</span>
+            <div>
+              <p class="text-tjb-charcoal font-semibold mb-1">Review with your partner.</p>
+              <p class="text-tjb-gray leading-relaxed">Make sure you're aligned on the big items — who's in the room, pain management, and delivery preferences.</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <h3 class="font-semibold mb-1">How many items should a birth plan have?</h3>
-          <p class="text-tjb-gray">Aim for 10-15 preferences that truly matter to you. A birth plan that's too long gets ignored. Focus on the items where you have a strong opinion — not every checkbox on a generic form.</p>
+
+        <div class="py-5 border-t border-tjb-lavender-300/40">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
+            <span class="text-3xl font-bold text-tjb-rose-500 font-serif">02</span>
+            <div>
+              <p class="text-tjb-charcoal font-semibold mb-1">Bring it to your care provider.</p>
+              <p class="text-tjb-gray leading-relaxed">Your OB or midwife needs to see your plan before you're in labor. They'll flag anything your hospital can't accommodate.</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <h3 class="font-semibold mb-1">Do I need to include everything on this checklist?</h3>
-          <p class="text-tjb-gray">No. This checklist gives you options so you can decide what matters. Not every item will be relevant to your situation. Fill in what you care about and skip the rest.</p>
+
+        <div class="py-5 border-t border-tjb-lavender-300/40">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
+            <span class="text-3xl font-bold text-tjb-lavender-500 font-serif">03</span>
+            <div>
+              <p class="text-tjb-charcoal font-semibold mb-1">Transfer it to the template.</p>
+              <p class="text-tjb-gray leading-relaxed">Use the <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free birth plan template</a> or the free app to create a clean, one-page document your nurse can read in 30 seconds.</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <h3 class="font-semibold mb-1">What if my hospital doesn't allow something on the checklist?</h3>
-          <p class="text-tjb-gray">Bring your checklist to your next prenatal appointment and review it with your care provider. They can tell you which preferences are possible at your specific hospital and help you adjust.</p>
+
+        <div class="py-5 border-t border-tjb-lavender-300/40">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
+            <span class="text-3xl font-bold text-tjb-sage font-serif">04</span>
+            <div>
+              <p class="text-tjb-charcoal font-semibold mb-1">If you're being induced, adjust your plan.</p>
+              <p class="text-tjb-gray leading-relaxed">A generic checklist won't cover everything you need. <a href="/birth-plan-for-induction/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Read the induction birth plan guide</a> for scenario-specific language and what to skip.</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <h3 class="font-semibold mb-1">Is this checklist the same as a birth plan template?</h3>
-          <p class="text-tjb-gray">The checklist helps you think through your options. The birth plan template is the document you actually share with your care team. Use the checklist first, then transfer your preferences to the template.</p>
+
+        <div class="py-5 border-t border-tjb-lavender-300/40">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
+            <span class="text-3xl font-bold text-tjb-rose-500 font-serif">05</span>
+            <div>
+              <p class="text-tjb-charcoal font-semibold mb-1">If a cesarean is possible, prepare for that too.</p>
+              <p class="text-tjb-gray leading-relaxed">Consider filling out a <a href="/c-section-birth-plan/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">cesarean-specific birth plan guide</a> alongside your primary plan so you're ready for that scenario.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="py-5 border-t border-tjb-lavender-300/40 border-b">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
+            <span class="text-3xl font-bold text-tjb-lavender-500 font-serif">06</span>
+            <div>
+              <p class="text-tjb-charcoal font-semibold mb-1">Print copies.</p>
+              <p class="text-tjb-gray leading-relaxed">One for your partner, one for your doula, one in your hospital bag. When you're in labor, you won't be searching for it.</p>
+            </div>
+          </div>
         </div>
       </div>
 
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════
+       FAQ — Editorial on white
+       ═══════════════════════════════════════════ -->
+  <section class="bg-white py-16 md:py-20" id="common-questions">
+    <div class="max-w-3xl mx-auto px-6">
 
+      <p class="eyebrow mb-4">Common questions</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+
+      <div class="space-y-6">
+        <div class="border-b border-tjb-lavender-300/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">What should be on a birth plan checklist?</h3>
+          <p class="text-tjb-gray leading-relaxed">A birth plan checklist should cover labor preferences, pain management, delivery positions and procedures, postpartum care, and newborn care decisions. Each item should be a clear preference you can communicate to your care team.</p>
+        </div>
+        <div class="border-b border-tjb-lavender-300/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">How many items should a birth plan have?</h3>
+          <p class="text-tjb-gray leading-relaxed">Aim for 10-15 preferences that truly matter to you. A birth plan that's too long gets ignored. Focus on the items where you have a strong opinion — not every checkbox on a generic form.</p>
+        </div>
+        <div class="border-b border-tjb-lavender-300/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Do I need to include everything on this checklist?</h3>
+          <p class="text-tjb-gray leading-relaxed">No. This checklist gives you options so you can decide what matters. Not every item will be relevant to your situation. Fill in what you care about and skip the rest.</p>
+        </div>
+        <div class="border-b border-tjb-lavender-300/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">What if my hospital doesn't allow something on the checklist?</h3>
+          <p class="text-tjb-gray leading-relaxed">Bring your checklist to your next prenatal appointment and review it with your care provider. They can tell you which preferences are possible at your specific hospital and help you adjust.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Is this checklist the same as a birth plan template?</h3>
+          <p class="text-tjb-gray leading-relaxed">The checklist helps you think through your options. The birth plan template is the document you actually share with your care team. Use the checklist first, then transfer your preferences to the template.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       LEAD CAPTURE — Name + email → PDF + course
+       ═══════════════════════════════════════════ -->
   <LeadCaptureForm />
+
 </Layout>
