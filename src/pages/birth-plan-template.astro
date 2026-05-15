@@ -70,7 +70,7 @@ const schema = {
 >
 
   <!-- ═══════════════════════════════════════════
-       HERO — Two-column 55/45: text left, photo right
+       HERO — Text + product mockup (stacked pages)
        Design spec: VISUAL-TOKENS.md hero archetype
        ═══════════════════════════════════════════ -->
   <section class="bg-tjb-cream">
@@ -93,12 +93,12 @@ const schema = {
           </div>
         </div>
 
-        <!-- Right: Photo — 45%, 3:4 portrait crop of Shelbi -->
-        <div class="md:w-[45%] min-h-[24rem] md:min-h-0 relative overflow-hidden">
+        <!-- Right: Product mockup — 45%, stacked pages preview of the actual birth plan -->
+        <div class="md:w-[45%] flex items-center justify-center px-8 py-12 md:py-0">
           <img
-            src="/images/shelbi-hero-portrait.webp"
-            alt="Shelbi Kohler — certified birth doula and creator of the free birth plan"
-            class="absolute inset-0 w-full h-full object-cover object-center"
+            src="/images/birth-plan-preview.webp"
+            alt="Preview of the free birth plan template — a structured multi-page document covering labor preferences, pain management, delivery, postpartum, and newborn care"
+            class="w-full max-w-md rounded-lg shadow-lg"
             loading="eager"
             fetchpriority="high"
           />
