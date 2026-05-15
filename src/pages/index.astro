@@ -111,8 +111,16 @@ import Layout from '../layouts/Layout.astro';
   <section class="bg-tjb-cream py-20 md:py-28">
     <div class="max-w-3xl mx-auto px-6">
       <div class="text-center mb-12">
-        <p class="eyebrow mb-3">What moms are saying</p>
+        <p class="eyebrow mb-3 fade-up">What moms are saying</p>
         <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto"></div>
+      </div>
+      <div class="mb-12">
+        <img
+          src="/images/skin-to-skin.webp"
+          alt="A mother holds her newborn skin-to-skin after birth — the kind of moment a birth plan protects"
+          class="w-full max-w-2xl mx-auto rounded-lg"
+          loading="lazy"
+        />
       </div>
       <div class="space-y-12">
         <div class="relative pl-8 md:pl-12 border-l-2 border-tjb-rose-400">
@@ -144,7 +152,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="max-w-5xl mx-auto px-6">
       
       <div class="text-center mb-16">
-        <p class="eyebrow mb-4">What You Get</p>
+        <p class="eyebrow mb-4 fade-up">What You Get</p>
         <!-- Editorial rule between eyebrow and heading -->
         <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
         <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15] max-w-2xl mx-auto">
@@ -179,31 +187,61 @@ import Layout from '../layouts/Layout.astro';
           </div>
         </div>
 
-        <!-- Item 2 -->
-        <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-8 items-start py-8 border-t border-tjb-lavender-300/40">
-          <span class="text-3xl font-bold text-tjb-rose-500 font-serif">02</span>
-          <div>
-            <h3 class="text-2xl mb-3">Birth Plan Mini-Course</h3>
-            <p class="text-tjb-gray leading-relaxed mb-4 max-w-xl">
-              Learn every option, every tradeoff, and the exact phrases to use when you want to slow things down or ask questions. Use the <a href="/birth-plan-checklist/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">birth plan checklist</a> to work through each preference point before you start.
-            </p>
-            <a href="/birth-plan-course" class="text-tjb-rose-500 font-semibold text-sm border-b border-transparent hover:border-tjb-rose-500 transition-all inline-block pb-0.5">
-              Enroll in the birth plan course
-            </a>
+        <!-- Item 2 — with editorial lesson arc -->
+        <div class="py-8 border-t border-tjb-lavender-300/40">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-8 items-start">
+            <span class="text-3xl font-bold text-tjb-rose-500 font-serif">02</span>
+            <div>
+              <h3 class="text-2xl mb-3">Birth Plan Mini-Course</h3>
+              <p class="text-tjb-gray leading-relaxed mb-4 max-w-xl">
+                Learn every option, every tradeoff, and the exact phrases to use when you want to slow things down or ask questions. Use the <a href="/birth-plan-checklist/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">birth plan checklist</a> to work through each preference point before you start.
+              </p>
+              <div class="border-t border-tjb-cream-200/60 mt-4 mb-4">
+                <div class="py-2.5 border-b border-tjb-cream-200/60 flex gap-3 items-baseline">
+                  <span class="text-sm font-semibold text-tjb-lavender-500">1</span>
+                  <span class="text-sm text-tjb-gray">Talking to your OB about induction</span>
+                </div>
+                <div class="py-2.5 border-b border-tjb-cream-200/60 flex gap-3 items-baseline">
+                  <span class="text-sm font-semibold text-tjb-lavender-500">2</span>
+                  <span class="text-sm text-tjb-gray">Pain management options and real tradeoffs</span>
+                </div>
+                <div class="py-2.5 border-b border-tjb-cream-200/60 flex gap-3 items-baseline">
+                  <span class="text-sm font-semibold text-tjb-rose-500">3</span>
+                  <span class="text-sm text-tjb-gray">Newborn procedures — what's standard vs. optional</span>
+                </div>
+                <div class="py-2.5 flex gap-3 items-baseline">
+                  <span class="text-sm font-semibold text-tjb-sage">4</span>
+                  <span class="text-sm text-tjb-gray">What to say when a provider surprises you</span>
+                </div>
+              </div>
+              <a href="/birth-plan-course" class="text-tjb-rose-500 font-semibold text-sm border-b border-transparent hover:border-tjb-rose-500 transition-all inline-block pb-0.5">
+                Enroll in the birth plan course
+              </a>
+            </div>
           </div>
         </div>
 
-        <!-- Item 3 -->
-        <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-8 items-start py-8 border-t border-tjb-lavender-300/40">
-          <span class="text-3xl font-bold text-tjb-sage font-serif">03</span>
-          <div>
-            <h3 class="text-2xl mb-3">1:1 Confidence Session</h3>
-            <p class="text-tjb-gray leading-relaxed mb-4 max-w-xl">
-              Sit down with a <a href="/what-is-a-doula/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">certified birth doula</a> via Zoom and walk through your plan line by line. Get the words. Face what you fear. <a href="/benefits-of-a-doula/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">See how a doula changes outcomes</a>.
-            </p>
-            <a href="/birth-plan-session" class="text-tjb-rose-500 font-semibold text-sm border-b border-transparent hover:border-tjb-rose-500 transition-all inline-block pb-0.5">
-              Book a Birth Plan Confidence Session
-            </a>
+        <!-- Item 3 — with session photo -->
+        <div class="py-8 border-t border-tjb-lavender-300/40">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-8 items-start">
+            <span class="text-3xl font-bold text-tjb-sage font-serif">03</span>
+            <div>
+              <h3 class="text-2xl mb-3">1:1 Confidence Session</h3>
+              <p class="text-tjb-gray leading-relaxed mb-4 max-w-xl">
+                Sit down with a <a href="/what-is-a-doula/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">certified birth doula</a> via Zoom and walk through your plan line by line. Get the words. Face what you fear. <a href="/benefits-of-a-doula/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">See how a doula changes outcomes</a>.
+              </p>
+              <a href="/birth-plan-session" class="text-tjb-rose-500 font-semibold text-sm border-b border-transparent hover:border-tjb-rose-500 transition-all inline-block pb-0.5">
+                Book a Birth Plan Confidence Session
+              </a>
+            </div>
+          </div>
+          <div class="mt-8 md:mt-6 md:ml-16">
+            <img
+              src="/images/doula-holding-hands.webp"
+              alt="A birth doula provides hands-on comfort and support during labor — the kind of personalized guidance a 1:1 Confidence Session delivers"
+              class="w-full max-w-sm mx-auto md:mx-0 rounded-lg"
+              loading="lazy"
+            />
           </div>
         </div>
 
@@ -217,7 +255,7 @@ import Layout from '../layouts/Layout.astro';
        ═══════════════════════════════════════════ -->
   <section id="download" class="py-20 md:py-28">
     <div class="max-w-2xl mx-auto px-6 text-center">
-      <p class="eyebrow mb-4">Free Download</p>
+      <p class="eyebrow mb-4 fade-up">Free Download</p>
       <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
       <h2 class="mb-5 text-[2.25rem] md:text-[2.75rem] leading-[1.15]">Download Your Free Birth Plan</h2>
       <p class="text-tjb-gray mb-10 max-w-xl mx-auto leading-relaxed">
@@ -243,22 +281,38 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- ═══════════════════════════════════════════
-       FOR PROS — Lavender wash, white CTA
-       (below lead capture — mom-first, then pro fork)
+       FOR PROS — Two-column: text left, photo right
        ═══════════════════════════════════════════ -->
   <section class="bg-tjb-lavender-100 py-20 md:py-28">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <p class="eyebrow mb-3">For Birth Professionals</p>
-      <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
-      <h2 class="mb-5 text-[2.25rem] md:text-[2.75rem] leading-[1.15]">Built for Doulas and Midwives, Too</h2>
-      <p class="text-lg text-tjb-gray leading-relaxed max-w-2xl mx-auto mb-10">
-        When your clients build their plan in the True Joy Birthing app, it flows directly into your Pro Mode dashboard — no copy-paste, no lost details.
-      </p>
-      <!-- Primary CTA — official pill style per VISUAL-TOKENS -->
-      <a href="https://apps.apple.com/app/true-joy-birthing" class="inline-block bg-tjb-lavender-500 text-white px-8 py-3.5 rounded-full font-semibold text-[0.9375rem] border border-transparent hover:bg-tjb-rose-500 transition-all duration-300">
-        Start Pro for doulas and midwives
-      </a>
-      <p class="text-sm text-tjb-gray-300 mt-4">In-app subscription. Available on App Store and Google Play.</p>
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+
+        <!-- Left: Text — 55% -->
+        <div class="md:w-[55%]">
+          <p class="eyebrow mb-3 fade-up">For Birth Professionals</p>
+          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+          <h2 class="mb-5 text-[2.25rem] md:text-[2.75rem] leading-[1.15]">Built for Doulas and Midwives, Too</h2>
+          <p class="text-lg text-tjb-gray leading-relaxed mb-10">
+            When your clients build their plan in the True Joy Birthing app, it flows directly into your Pro Mode dashboard — no copy-paste, no lost details.
+          </p>
+          <!-- Primary CTA — official pill style per VISUAL-TOKENS -->
+          <a href="https://apps.apple.com/app/true-joy-birthing" class="inline-block bg-tjb-lavender-500 text-white px-8 py-3.5 rounded-full font-semibold text-[0.9375rem] border border-transparent hover:bg-tjb-rose-500 transition-all duration-300">
+            Start Pro for doulas and midwives
+          </a>
+          <p class="text-sm text-tjb-gray-300 mt-4">In-app subscription. Available on App Store and Google Play.</p>
+        </div>
+
+        <!-- Right: Photo — 45% -->
+        <div class="md:w-[45%] flex items-center justify-center">
+          <img
+            src="/images/doula-teaching.webp"
+            alt="A birth doula reviews a client's birth plan together — Pro Mode gives doulas and midwives the same collaborative tools"
+            class="w-full max-w-md rounded-lg"
+            loading="lazy"
+          />
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -268,7 +322,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="py-16 md:py-20 bg-tjb-cream">
     <div class="max-w-3xl mx-auto px-6">
       <div class="text-center mb-12">
-        <p class="eyebrow mb-3">Plan Your Birth</p>
+        <p class="eyebrow mb-3 fade-up">Plan Your Birth</p>
         <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
         <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15]">Everything You Need to Feel Prepared</h2>
       </div>
@@ -305,7 +359,7 @@ import Layout from '../layouts/Layout.astro';
   <section class="bg-tjb-cream py-20 md:py-24 border-t border-tjb-lavender-200/50">
     <div class="max-w-5xl mx-auto px-6">
       <div class="text-center mb-10">
-        <p class="eyebrow mb-3">Local Support</p>
+        <p class="eyebrow mb-3 fade-up">Local Support</p>
         <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
         <h2 class="mb-3 text-[2.25rem] md:text-[2.75rem] leading-[1.15]">Birth Support Resources by City</h2>
         <p class="text-tjb-gray max-w-xl mx-auto leading-relaxed">
@@ -335,6 +389,43 @@ import Layout from '../layouts/Layout.astro';
       </p>
     </div>
   </section>
+
+  <style>
+    .fade-up {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+  <script>
+    // Fade-in reveals on scroll
+    const fadeEls = document.querySelectorAll('.fade-up');
+    if (fadeEls.length && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      fadeEls.forEach(el => observer.observe(el));
+    } else {
+      // Fallback: show everything immediately
+      fadeEls.forEach(el => el.classList.add('is-visible'));
+    }
+  </script>
 
   <script>
     const leadForm = document.getElementById('lead-magnet-form') as HTMLFormElement;
