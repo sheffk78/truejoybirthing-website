@@ -4,9 +4,41 @@ Mandatory checks for every city page before deploy. If any check fails, fix befo
 
 ---
 
-## F-Group: SEO + LLM Readability (Hard Gates)
+## F-Group: SEO + LLM Readability
 
-### F1: WebPage Schema with Freshness Signal
+### F2: Service Schema Image ✅ ENFORCED (Sprint 1)
+**Status:** Hard failure. All 21 cities pass.
+**What:** Service schema must include `image` property pointing to hero image.
+**Why:** Google rich results require Service image. LLMs use images for context.
+
+### F4: Author Attribution ✅ ENFORCED (Sprint 1)
+**Status:** Hard failure (reviewer byline only). All 21 cities pass.
+**What:** "Reviewed by Shelbi Kohler, CD(DONA)" after hospital disclaimer. Links to /about/.
+**Why:** E-E-A-T signal. YMYL content needs reviewer attribution.
+**Note:** "Last updated" date deferred to Sprint 2 (requires per-city datePublished/dateModified data). No false freshness signals.
+
+### F5: FAQ Anchors ✅ ENFORCED (Sprint 1)
+**Status:** Hard failure. All 21 cities pass.
+**What:** Each FAQ `<h3>` has `id="faq-{type}"` anchor. FAQ Question schema includes `url` with `#faq-{type}` anchor.
+**Why:** Enables deep-linking (#faq-cost, #faq-medicaid, etc.) and LLM citation with specific answers.
+
+### F7: Hospital H2 Heading ✅ ENFORCED (Sprint 1)
+**Status:** Hard failure. All 21 cities pass.
+**What:** "Hospital & Birth Center Info for {city}" H2 before hospital paragraphs.
+**Why:** Heading hierarchy. Screen readers and LLMs use H2 structure to understand page sections.
+
+### F8: SpeakableSpecification ✅ ENFORCED (Sprint 1)
+**Status:** Hard failure. All 21 cities pass.
+**What:** SpeakableSpecification schema in JSON-LD targeting `.prose h2`, `.prose h3`, `.faq-answer`.
+**Why:** Tells voice assistants and LLMs which content is citable/speakable.
+
+---
+
+### F1: WebPage Schema + Dates ⏳ WARNING (Sprint 2)
+### F3: Visible Breadcrumb Nav ⏳ WARNING (Sprint 2)
+### F9a: og:locale = en_US ⏳ WARNING (Sprint 2)
+### F9b: og:type = article ⏳ WARNING (Sprint 2)
+### F9e: twitter:site ⏳ WARNING (Sprint 2)
 Every city page must include `WebPage` schema in JSON-LD with `datePublished` and `dateModified`.
 - `datePublished`: date the city page was first created
 - `dateModified`: date of the most recent material content change
