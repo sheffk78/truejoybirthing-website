@@ -1,44 +1,56 @@
 # City Launch Checklist — True Joy Birthing
 
-Every city page must pass all four gates before deploy. If any hard gate fails, **do not deploy**.
+No city page deploys without every section below checked.
 
 ---
 
-## A. Trust + local accuracy
+## A. Trust & Local Accuracy
 
 - [ ] No fake-local-presence language
-- [ ] Hospitals, birth centers, roads, and local details verified from primary or high-confidence sources
-- [ ] Any uncertain claim is flagged for human review, not stated as fact
-- [ ] NICU, Medicaid, insurance, and pricing reviewed by a human before deploy
+- [ ] Hospitals, birth centers, roads, and local details verified from primary/reputable sources
+- [ ] Any uncertain claim is clearly flagged for human review (not stated as fact)
+- [ ] NICU levels, Medicaid/insurance notes, and pricing reviewed by a human
 
-## B. Page quality
+## B. Page Quality & Structure
 
-- [ ] City page passes `npm run validate && npm run test:city-pages`
-- [ ] Required SEO + LLM checks pass (F2, F4, F5, F7, F8 — hard failures after Sprint 1)
-- [ ] FAQ pattern matches brand standard (`faq-cost`, `faq-medicaid`, `faq-hospital`, `faq-brand`)
-- [ ] Internal links to the 7 pillar pages are present with correct anchor text
-- [ ] Nearby cities use valid existing slugs only (checked by A5 in validate-cities.ts)
+- [ ] `npm run validate` passes (data)
+- [ ] `npm run test:city-pages` passes (HTML + schema)
+- [ ] All current F-group SEO/LLM checks pass (no failures)
+- [ ] FAQ questions follow the brand FAQ pattern
+- [ ] FAQ anchors present (`faq-cost`, `faq-medicaid`, `faq-hospital`, `faq-brand`)
+- [ ] Hospital section includes an H2 heading: "Hospital & Birth Center Info for {city}"
 
-### Pillar page internal links (required on every city page)
+## C. Internal Links & Navigation
 
-| Pillar | Anchor text | Expected location |
-|---|---|---|
-| `/birth-plan-template/` | "free birth plan template" | Hospital paragraph CTA + Next Steps |
-| `/birth-plan-checklist/` | "birth plan checklist" | Next Steps |
-| `/benefits-of-a-doula/` | "benefits of having a doula" | Culture section |
-| `/doula-cost/` | "doula cost guide" | Doula cost section |
-| `/how-to-choose-a-doula/` | "how to choose a doula" | Medicaid/insurance section |
-| `/postpartum-doula/` | "postpartum support" | Doula cost section |
-| `/about/` | "Shelbi Kohler" | Reviewer attribution line |
+- [ ] All 7 pillar links present with correct anchor text and placement:
+  - `/birth-plan-template/` — "free birth plan template"
+  - `/birth-plan-checklist/` — "birth plan checklist"
+  - `/benefits-of-a-doula/` — "benefits of having a doula"
+  - `/doula-cost/` — "doula cost guide"
+  - `/how-to-choose-a-doula/` — "how to choose a doula"
+  - `/postpartum-doula/` — "postpartum support"
+  - `/about/` — "Shelbi Kohler"
+- [ ] Nearby cities use only valid existing slugs
+- [ ] BreadcrumbList schema present; visible breadcrumb nav (once implemented) matches it
 
-## C. Voice + usefulness
+## D. Voice & Usefulness
 
-- [ ] Hero, culture, and hospital paragraphs sound like TJB, not encyclopedia copy
-- [ ] Page answers: cost, hospitals/birth settings, Medicaid, local support, next steps
-- [ ] Content is locally specific, not city-swapped boilerplate
+- [ ] Hero, culture, and hospital paragraphs sound like True Joy Birthing:
+  - Mom-to-mom tone
+  - "If we're being real" candor in the hospital section
+  - Birth-plan CTA present in the first hospital paragraph
+- [ ] Page clearly answers:
+  - What birth options look like in this city
+  - Typical doula costs here
+  - Medicaid/insurance reality here
+  - How to get started with a birth plan and the app
+- [ ] Content is locally specific (no city-swap boilerplate)
 
-## D. Publish gate
+## E. Deploy Gate
 
-- [ ] Reviewer confirms 8–10 minute human pass is done
-- [ ] Live URL spot-check completed after deploy
-- [ ] If any hard gate fails, do not deploy
+- [ ] Review packet delivered and read
+- [ ] Human reviewer has:
+  - Voice-edited as needed
+  - Confirmed NICU/Medicaid/insurance/pricing
+- [ ] Explicit "deploy {city}" approval given in this channel
+- [ ] Live URL spot-checked after deploy (H1, hero, hospitals, FAQ, schema present)
