@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test:city-pages": "tsx scripts/city-pages.test.ts"
+    "test:city-pages": "tsx scripts/city-pages.test.ts",
+    "validate": "tsx scripts/validate-cities.ts"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
