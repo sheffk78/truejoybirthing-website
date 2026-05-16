@@ -6,88 +6,150 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
 
 <Layout
   title="About True Joy Birthing"
-  description="Meet Shelbi — certified birth doula and founder of True Joy Birthing, the platform that helps moms build confident birth plans and connects birth pros with powerful tools."
+  description="True Joy Birthing helps moms build confident birth plans and connects birth pros with powerful tools. Free birth plan, guided walkthrough, and Pro Mode for doulas."
   canonical="https://truejoybirthing.com/about"
   breadcrumbList={breadcrumbList}
 >
 
-  <!-- Hero with real photo -->
+  <!-- ═══════════════════════════════════════════
+       HERO — Mission-first, founder image as proof point
+       ═══════════════════════════════════════════ -->
   <section class="bg-tjb-cream pt-16 pb-12">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-10 items-center">
         <div>
-          <h1 class="text-3xl md:text-[2.75rem] font-bold mb-4 leading-tight">About True Joy Birthing</h1>
-          <p class="text-lg text-tjb-gray leading-relaxed">You deserve to walk into your birth knowing exactly what to expect — and what to say when something unexpected happens.</p>
+          <p class="eyebrow mb-3">Free birth plan, guided walkthrough, Pro tools</p>
+          <h1 class="text-3xl md:text-[2.75rem] font-bold mb-4 leading-tight">Every mom deserves to walk into her birth knowing her options</h1>
+          <p class="text-lg text-tjb-gray leading-relaxed">True Joy Birthing gives you a <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">doula-crafted birth plan</a>, a guided walkthrough in the <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free app</a> that explains every tradeoff, and a doula directory — so you're never guessing.</p>
         </div>
         <div class="relative">
           <div class="rounded-2xl overflow-hidden shadow-lg shadow-tjb-lavender-300/20">
-            <img src="/images/shelbi-real.webp" alt="Shelbi Kohler — certified birth doula" class="w-full h-auto object-cover" loading="eager" />
+            <img src="/images/shelbi-real.webp" alt="Shelbi Kohler — certified birth doula and founder of True Joy Birthing" class="w-full h-auto object-cover" loading="eager" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Video introduction -->
-  <section class="py-12 bg-tjb-cream">
-    <div class="max-w-3xl mx-auto px-6">
-      <div class="aspect-video rounded-2xl overflow-hidden shadow-lg shadow-tjb-lavender-300/20 bg-tjb-charcoal">
-        <iframe
-          src="https://iframe.mediadelivery.net/embed/602267/adc27428-031a-4c06-9115-c842bef0fb6e"
-          loading="lazy"
-          class="w-full h-full border-0"
-          allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-          allowfullscreen
-        ></iframe>
+  <!-- ═══════════════════════════════════════════
+       HOW IT FITS TOGETHER — The three-tier model
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-white border-y border-tjb-lavender-200/40">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="eyebrow mb-3">What you get</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+        <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15]">One platform. Three ways in.</h2>
       </div>
-      <p class="text-sm text-tjb-gray-300 mt-3 text-center">Hear Shelbi's story and why she became a doula.</p>
+
+      <div class="space-y-0">
+        <!-- Free birth plan -->
+        <div class="py-8 border-t border-tjb-lavender-300/40">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-8 items-start">
+            <span class="text-3xl font-bold text-tjb-lavender-600 font-serif">01</span>
+            <div>
+              <h3 class="text-2xl mb-1">Free Birth Plan</h3>
+              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">No sign-up required</p>
+              <p class="text-tjb-gray leading-relaxed">A structured, fillable birth plan built from real birth-room experience. Designed to be read by a nurse in two minutes. <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Download the free PDF</a>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Guided walkthrough -->
+        <div class="py-8 border-t border-tjb-lavender-300/40">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-8 items-start">
+            <span class="text-3xl font-bold text-tjb-rose-500 font-serif">02</span>
+            <div>
+              <h3 class="text-2xl mb-1">Guided Walkthrough in the App</h3>
+              <p class="text-sm text-tjb-rose-500 font-semibold mb-3">Free for moms · 4 lessons</p>
+              <p class="text-tjb-gray leading-relaxed">Walk through every section of your birth plan with context — what each choice means, what the tradeoffs are, and what to say when a provider surprises you. <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Download the free app</a>.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doula directory + Pro -->
+        <div class="py-8 border-t border-tjb-lavender-300/40">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-8 items-start">
+            <span class="text-3xl font-bold text-tjb-sage font-serif">03</span>
+            <div>
+              <h3 class="text-2xl mb-1">Doula Directory &amp; Pro Mode</h3>
+              <p class="text-sm text-tjb-sage font-semibold mb-3">For moms who want more support · For birth pros</p>
+              <p class="text-tjb-gray leading-relaxed">Find a certified <a href="/what-is-a-doula/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">birth doula</a> in your area. And for doulas and midwives — client plans, visit tracking, notes, and invoicing built for birth work.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Who is Shelbi -->
+  <!-- ═══════════════════════════════════════════
+       WHY THIS EXISTS — Founder story as credibility, not the whole page
+       ═══════════════════════════════════════════ -->
   <section class="py-16 bg-tjb-cream-50">
     <div class="max-w-3xl mx-auto px-6 prose">
-      <h2>Hi — I'm Shelbi</h2>
-      <p>I'm a certified birth doula and childbirth educator based in North Texas. I've supported hundreds of families through births in hospitals, birth centers, and at home.</p>
+      <h2>Why I built this</h2>
+      <p>I'm Shelbi Kohler — certified birth doula and childbirth educator. I've supported hundreds of families through births in hospitals, birth centers, and at home.</p>
 
-      <div class="my-8 rounded-xl overflow-hidden shadow-md">
-        <img src="/images/doula-birth-plan-couch.webp" alt="Shelbi going through a birth plan with a client on the couch" class="w-full h-auto" loading="lazy" />
-        <p class="text-sm text-tjb-gray-300 mt-2 text-center">Walking through a birth plan, one decision at a time.</p>
-      </div>
-
-      <p>I started True Joy Birthing because I kept seeing the same thing: moms who wanted to feel empowered in their births but didn't know their options, didn't have the words, and felt like the system was happening <em>to</em> them instead of <em>with</em> them.</p>
+      <p>I kept seeing the same thing: moms who wanted to feel prepared but didn't know their options, didn't have the words, and felt like the system was happening <em>to</em> them instead of <em>with</em> them.</p>
 
       <p>So I built something practical. A birth plan that actually works in a hospital room. Education that explains the tradeoffs, not just the buzzwords. And for doulas — tools that finally make running a practice feel organized instead of overwhelming.</p>
 
-      <h2>What Makes True Joy Birthing Different</h2>
+      <div class="my-8 not-prose">
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-lg shadow-tjb-lavender-300/20 bg-tjb-charcoal">
+          <iframe
+            src="https://iframe.mediadelivery.net/embed/602267/adc27428-031a-4c06-9115-c842bef0fb6e"
+            loading="lazy"
+            class="w-full h-full border-0"
+            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="text-sm text-tjb-gray-300 mt-3 text-center">Hear why Shelbi became a doula and what she's building.</p>
+      </div>
+
+      <h2>What makes this different</h2>
       <ul>
-        <li><strong>Doula-crafted, not generic.</strong> Every template, every script, every lesson is built from real birth-room experience.</li>
-        <li><strong>Born Connected.</strong> When a mom builds her plan in the free app, it flows directly into her doula's Pro dashboard. No lost details. No copy-paste.</li>
+        <li><strong>Doula-crafted, not generic.</strong> Every template, every walkthrough, every script is built from real birth-room experience.</li>
+        <li><strong>Born connected.</strong> When a mom builds her plan in the free app, it flows directly into her doula's Pro dashboard. No lost details. No copy-paste.</li>
         <li><strong>Honest, not fear-based.</strong> We explain options and tradeoffs. We don't scare you into decisions.</li>
       </ul>
-
-      <div class="my-8 grid md:grid-cols-2 gap-4">
-        <div class="rounded-xl overflow-hidden shadow-md">
-          <img src="/images/doula-holding-hands.webp" alt="Doula holding a laboring mother's hands" class="w-full h-48 object-cover" loading="lazy" />
-        </div>
-        <div class="rounded-xl overflow-hidden shadow-md">
-          <img src="/images/doula-newborn.webp" alt="Doula encouraging a new mother with her newborn" class="w-full h-48 object-cover" loading="lazy" />
-        </div>
-      </div>
-
-      <h2>For Doulas & Midwives</h2>
-      <p>True Joy Birthing Pro Mode gives you everything you need to run your practice — client plans, visit tracking, notes, and simple invoicing — in one place built specifically for birth work.</p>
-
-      <div class="my-8 rounded-xl overflow-hidden shadow-md">
-        <img src="/images/online-support.webp" alt="Online doula support for first-time mothers" class="w-full h-auto" loading="lazy" />
-      </div>
-
-      <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="inline-block bg-tjb-lavender-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 active:translate-y-0 transition">Start Pro</a>
     </div>
   </section>
 
-  <!-- CTA band -->
-  <section class="bg-tjb-lavender-100 py-16">
+  <!-- ═══════════════════════════════════════════
+       FOR DOULAS — Clear CTA section with context
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-lavender-100 py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+        <div class="md:w-[55%]">
+          <p class="eyebrow mb-3 fade-up">For Birth Professionals</p>
+          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+          <h2 class="mb-5 text-[2.25rem] md:text-[2.75rem] leading-[1.15]">Built for Doulas and Midwives, Too</h2>
+          <p class="text-lg text-tjb-gray leading-relaxed mb-6">
+            When your clients build their plan in the True Joy Birthing app, it flows directly into your Pro dashboard — no copy-paste, no lost details. Client plans, visit tracking, notes, and invoicing, all in one place built for birth work.
+          </p>
+          <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="inline-block bg-tjb-lavender-600 text-white px-8 py-3.5 rounded-full font-semibold text-[0.9375rem] border border-transparent hover:bg-tjb-rose-500 focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 active:translate-y-0 transition-all duration-300">
+            Start Pro for doulas and midwives
+          </a>
+          <p class="text-sm text-tjb-gray-300 mt-4">In-app subscription. Available on App Store (Android coming soon).</p>
+        </div>
+        <div class="md:w-[45%] flex items-center justify-center">
+          <img
+            src="/images/doula-teaching.webp"
+            alt="A birth doula reviews a client's birth plan together — Pro Mode gives doulas and midwives collaborative tools"
+            class="w-full max-w-md rounded-2xl shadow-lg shadow-tjb-lavender-300/20"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA — Both audiences, clear hierarchy
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-cream py-16">
     <div class="max-w-3xl mx-auto px-6 text-center">
       <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to feel confident about your birth?</h2>
       <p class="text-tjb-gray mb-8">Download the free birth plan or explore the <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-lavender-600 font-semibold hover:text-tjb-lavender-700 border-b border-transparent hover:border-tjb-lavender-600 transition-all">free app</a>.</p>
@@ -97,4 +159,40 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
       </div>
     </div>
   </section>
+
+  <style>
+    .fade-up {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+  <script>
+    const fadeEls = document.querySelectorAll('.fade-up');
+    if (fadeEls.length && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      fadeEls.forEach(el => observer.observe(el));
+    } else {
+      fadeEls.forEach(el => el.classList.add('is-visible'));
+    }
+  </script>
+
 </Layout>
