@@ -576,6 +576,57 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["austin-tx", "dallas-tx", "fort-worth-tx"],
   },
+  "midland-tx": {
+    city: "Midland",
+    state: "TX",
+    slug: "midland-tx",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Midland is the largest city in the Permian Basin and the administrative hub of West Texas oil and gas. The birth community here is small but growing \u2014 the Midland Doula Collective serves the Midland-Odessa area, and The Birth Center of Midland gives families an out-of-hospital option that most cities this size don\u2019t have. Housing costs and infrastructure boom and bust with oil prices, which means the local birth support network has learned to be resourceful.",
+    heroLocalDetail: "Midland Memorial sits on Rosalind Redfern Grover Parkway off Loop 250 on the west side of town, and if you\u2019re heading to ORMC in Odessa you\u2019ll take I-20 east about 20 minutes \u2014 both hospitals are accessible, but I-20 between Midland and Odessa can back up during oil-field shift changes. Rock the Basin at Centennial Park is where a lot of Midland moms walk in the third trimester \u2014 flat, shaded, and close enough to both hospitals that you\u2019re not stranded if something picks up.",
+    hospitalDetails: [
+      { name: "Midland Memorial Hospital", paragraph: "Midland Memorial Hospital is the main labor and delivery hospital for Midland and much of the Permian Basin, with a verified Level II NICU and a full women\u2019s services program. If Midland Memorial is where you\u2019re planning to give birth, it helps to walk in already clear on your preferences, because a busy hospital admission is not the moment most moms want to explain everything from scratch. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Odessa Regional Medical Center", paragraph: "Odessa Regional Medical Center, about 20 minutes east in Odessa, was founded as a women\u2019s and children\u2019s hospital and carries that legacy forward with a Level III NICU and the Permian Basin\u2019s most established maternity program. If we\u2019re being real, Midland families who want a higher-level NICU or a more specialized maternity experience often end up here \u2014 the drive is short, and the L&D unit handles a high volume of births for the region." },
+    ],
+    birthCenterDetails: [
+      { name: "The Birth Center of Midland", paragraph: "The Birth Center of Midland is a freestanding, midwife-led birth center offering a lower-intervention setting for low-risk pregnancies. It\u2019s the only out-of-hospital birth center in the Permian Basin \u2014 and having a doula who knows the rhythm of that space makes the whole thing feel a lot less unknown." },
+    ],
+    medicaidNote: "Texas Medicaid\u2019s doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Midland area. Contact your Medicaid managed care plan to confirm coverage \u2014 some Permian Basin plans have started adding doula benefits ahead of the statewide mandate.",
+    insuranceNote: "Some private insurers in the Midland-Odessa region cover doula support as part of maternal wellness benefits. The oil-industry employer landscape here means some families have access to more comprehensive plans \u2014 check with your HR department or insurance provider directly.",
+    faqs: [
+      { q: "How much does a doula cost in Midland?", a: "$800 to $2,000 depending on experience and package. The Midland Doula Collective offers birth doula packages starting at $950, and local rates tend to be lower than the big Texas metros." },
+      { q: "Does Medicaid cover doulas in Midland?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits in the Midland area." },
+      { q: "Which hospitals in Midland accommodate birth plans?", a: "Midland Memorial Hospital has a full L&D program with a Level II NICU, and Odessa Regional Medical Center (about 20 minutes away) offers a Level III NICU and the region\u2019s most established maternity program. Midland also has The Birth Center of Midland for families planning an out-of-hospital birth." },
+      { q: "Does True Joy Birthing work with Midland families?", a: "True Joy Birthing provides free birth-prep tools for Midland families. The free birth plan, checklist, and guided walkthrough in the app work for any Midland birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["lubbock-tx"],
+  },
+  "killeen-tx": {
+    city: "Killeen",
+    state: "TX",
+    slug: "killeen-tx",
+    costLow: 700,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Killeen is a military town anchored by Fort Cavazos (formerly Fort Hood) in Bell County, part of the Killeen-Temple-Fort Hood metro. The military population means a high proportion of young families and Tricare-covered births, and the community cycles with deployments and PCS moves. Birth support here runs practical and tight-knit \u2014 doulas who understand military life, Tricare maternity benefits, and the reality of giving birth while a partner is deployed fill a real gap.",
+    heroLocalDetail: "AdventHealth Central Texas sits off Clear Creek Road on Killeen\u2019s south side, and Baylor Scott & White in Temple is about a 20-minute drive up US-190 / I-35. If you\u2019re heading to BSW Temple from Killeen during morning rush, expect I-35 between Belton and Temple to slow down \u2014 build in an extra 10\u201315 minutes. The Killeen-Fort Cavazos area is flat and spread out, so most hospital drives are straightforward unless you\u2019re coming from the far west side near Copperas Cove.",
+    hospitalDetails: [
+      { name: "AdventHealth Central Texas", paragraph: "AdventHealth Central Texas, on South Clear Creek Road in Killeen, is the city\u2019s only hospital with a labor and delivery unit \u2014 the J. Barry Siebenlist L&D Unit, staffed by board-certified OB/GYNs and neonatologists. Doulas are generally welcome as part of your support team, though visitor policies can change, so check before your tour. If you\u2019re delivering here, having a birth plan ready makes the intake conversation smoother \u2014 especially when you\u2019re already in labor and don\u2019t want to be explaining everything from scratch. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Baylor Scott & White Medical Center \u2013 Temple", paragraph: "Baylor Scott & White in Temple, about 20 minutes north on I-35, is a 636-bed teaching hospital with a NICU and a high-volume L&D program that draws families from across the Killeen-Temple metro. If we\u2019re being real, a lot of Killeen families end up delivering here for the higher-level NICU and specialist access \u2014 it\u2019s the regional referral center for complicated pregnancies." },
+    ],
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid\u2019s doula benefit is expanding statewide. Bell County families on Medicaid should contact their managed care plan directly \u2014 some plans in the Killeen-Temple area have started adding doula support as a covered benefit ahead of the statewide rollout. Military families with Tricare have separate maternity coverage and should check Tricare\u2019s current doula policy.",
+    insuranceNote: "Killeen\u2019s large military population means many families have Tricare, which covers hospital birth but does not directly reimburse doulas. For private insurance, some BCBS Texas and UnitedHealthcare plans in the Bell County area offer partial doula reimbursement or maternal wellness benefits \u2014 ask your specific plan, and check whether HSA or FSA funds can cover out-of-pocket costs.",
+    faqs: [
+      { q: "How much does a doula cost in Killeen?", a: "$700 to $1,800 depending on experience and package. Killeen\u2019s doula rates tend to run lower than Austin or Dallas, and some local doulas offer military discounts or sliding-scale options for Fort Cavazos families." },
+      { q: "Does Medicaid cover doulas in Killeen?", a: "Texas is expanding Medicaid doula coverage statewide. Bell County families should contact their Medicaid managed care plan to confirm current benefits \u2014 some Killeen-area plans have started adding doula support ahead of the statewide mandate." },
+      { q: "Which hospitals in Killeen accommodate birth plans?", a: "AdventHealth Central Texas is Killeen\u2019s only hospital with L&D, and Baylor Scott & White Medical Center in Temple (about 20 minutes away) offers a NICU and a high-volume maternity program that serves the broader Killeen-Temple metro." },
+      { q: "Does True Joy Birthing work with Killeen families?", a: "True Joy Birthing provides free birth-prep tools for Killeen families. The free birth plan, checklist, and guided walkthrough in the app work for any Killeen birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["waco-tx", "austin-tx"],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
