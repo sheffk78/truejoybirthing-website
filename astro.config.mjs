@@ -7,5 +7,12 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'always',
   site: 'https://truejoybirthing.com',
-  integrations: [sitemap()]
+  integrations: [
+    sitemap({
+      changefreq: 'weekly',
+      priority: 0.7,
+      lastmod: new Date(),
+      filter: (page) => !page.includes('/404'),
+    })
+  ]
 });

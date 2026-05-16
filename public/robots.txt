@@ -28,4 +28,4 @@ User-agent: ChatGPT-User
 Allow: /
 
 # Sitemap
-Sitemap: https://truejoybirthing.com/sitemap.xml
+Sitemap: https://truejoybirthing.com/sitemap-index.xml

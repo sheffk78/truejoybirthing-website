@@ -207,6 +207,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
     {canonical && <link rel="canonical" href={canonical} />}
+    {!canonical && <link rel="canonical" href={`https://truejoybirthing.com${currentPath}`} />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
