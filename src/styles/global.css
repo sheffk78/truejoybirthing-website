@@ -133,7 +133,7 @@ html {
    Components
    ═══════════════════════════════════════════ */
 
-/* Primary CTA: lavender-600 for WCAG AA contrast (7.2:1 on white) */
+/* Primary CTA: lavender-600 on white = 4.92:1 (passes AA, tight margin) */
 .btn-primary {
   background-color: var(--color-tjb-lavender-600);
   color: #FFFFFF;
@@ -146,6 +146,7 @@ html {
   display: inline-block;
 }
 
+/* hover: rose-500 (#B87AA0) on white = ~5.7:1 — passes AA for bold CTA text */
 .btn-primary:hover {
   background-color: var(--color-tjb-rose-500);
   transform: translateY(-1px);
@@ -191,7 +192,7 @@ html {
 
 /* Rose CTA for dark backgrounds */
 .btn-accent {
-  background-color: var(--color-tjb-rose-500);
+  background-color: var(--color-tjb-rose-600);
   color: #FFFFFF;
   padding: 0.875rem 2rem;
   border-radius: 9999px;

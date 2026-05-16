@@ -14,13 +14,13 @@ export function getStaticPaths() {
 
 const { data, slug } = Astro.props;
 const {
-  city, state, costLow, costHigh, shelbiServesHere, culture,
+  city, state, costLow, costHigh, culture,
   heroLocalDetail, hospitalDetails, birthCenterDetails,
   medicaidNote, insuranceNote, faqs, nearbyCities,
 }: CityData = data;
 
 const pageTitle = `Doula ${city} ${state} — Birth Support, Costs & Free Joyful Birth Plan`;
-const pageDesc = `Find a doula in ${city}, ${state} — local hospital info, doula costs, Medicaid status, and the free Joyful Birth Plan for local families.`;
+const pageDesc = `Free birth-plan resources for ${city}, ${state} families — hospital info, doula costs, Medicaid status, and the Joyful Birth Plan.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}`;
 const heroImage = `/images/${slug.replace('-tx', '')}-texas-birth-doula-skyline.webp`;
 const heroAlt = `Skyline of ${city}, Texas, where families search for birth doulas and plan their hospital births.`;
@@ -45,18 +45,14 @@ const schema = {
       })),
     },
     {
-      '@type': 'LocalBusiness',
-      '@id': `${pageUrl}#local`,
-      name: 'True Joy Birthing',
+      '@type': 'Service',
+      '@id': `${pageUrl}#service`,
+      name: `Free Birth-Plan Resources for ${city} Families`,
       url: pageUrl,
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: city,
-        addressRegion: state,
-        addressCountry: 'US',
-      },
       areaServed: { '@type': 'City', name: city },
-      parentOrganization: { '@id': 'https://truejoybirthing.com/#organization' },
+      provider: { '@id': 'https://truejoybirthing.com/#organization' },
+      serviceType: 'Birth Plan Resources',
+      description: `Free birth-plan tools, hospital info, and doula cost guides for families in ${city}, ${state}.`,
     },
   ],
 };
@@ -74,9 +70,9 @@ const schema = {
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div>
-          <h1 class="text-3xl md:text-4xl font-bold mb-4">Find a Doula in {city}, {state}</h1>
+          <h1 class="text-3xl md:text-4xl font-bold mb-4">Birth Plan Resources for {city}, {state} Families</h1>
           <p class="text-lg text-tjb-gray mb-6">
-            If you're <a href="/what-is-a-doula/">looking for a doula</a> in {city}, {state}, this guide covers local hospital options, doula costs, Medicaid status, and the free Joyful Birth Plan families trust here.
+            Preparing for birth in {city}, {state}? This guide covers local hospital options, doula costs, Medicaid status, and the free Joyful Birth Plan families use here.
           </p>
           {heroLocalDetail && (
             <p class="text-lg text-tjb-gray mb-6">{heroLocalDetail}</p>
@@ -133,30 +129,18 @@ const schema = {
       <p><strong>HSA/FSA:</strong> Many families don't realize that doula services can often be paid for with HSA or FSA funds, since birth support qualifies as a medical expense under most plans. Check with your plan administrator to confirm what's eligible and whether you need a letter from your provider.</p>
       <p>Not sure what to look for? <a href="/how-to-choose-a-doula/">Here's how to choose a doula</a> who fits your birth preferences and budget.</p>
 
-      <!-- shelbiServesHere variant -->
-      {shelbiServesHere ? (
-        <div>
-          <h2>Next Steps: Your Doula in {city}, {state} — Plan Your Birth</h2>
-          <p>No matter where you deliver in {city}, a clear, organized birth plan helps you communicate your preferences to the team in your birth room. Start with the <a href="/birth-plan-template/">free birth plan template</a>, then use the <a href="/birth-plan-checklist/">birth plan checklist</a> to make sure nothing gets missed.</p>
-          <a href="#download-pdf" class="inline-block bg-tjb-lavender-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition mb-6">
-            Download the Free Birth Plan
-          </a>
-          <p class="mt-2 text-sm text-tjb-gray">Or <a href="/#download">get the free birth plan walkthrough in the app</a> step by step.</p>
-          <div class="bg-tjb-cream p-4 rounded-lg mt-6">
-            <p class="font-semibold text-tjb-lavender-600 mb-1">Shelbi serves local families in the {city} area.</p>
-            <p class="text-sm text-tjb-gray">Get personalized support — <a href="/#download">download the free birth plan</a> or <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180">use the free app</a> to prepare step by step.</p>
-          </div>
+      <div>
+        <h2>Next Steps: Plan Your Birth in {city}, {state}</h2>
+        <p>No matter where you deliver in {city}, a clear, organized birth plan helps you communicate your preferences to the team in your birth room. Start with the <a href="/birth-plan-template/">free birth plan template</a>, then use the <a href="/birth-plan-checklist/">birth plan checklist</a> to make sure nothing gets missed.</p>
+        <a href="#download-pdf" class="inline-block bg-tjb-lavender-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition mb-6">
+          Download the Free Birth Plan
+        </a>
+        <p class="mt-2 text-sm text-tjb-gray">Or <a href="/#download">get the free birth plan walkthrough in the app</a> step by step.</p>
+        <div class="bg-tjb-cream p-4 rounded-lg mt-6">
+          <p class="font-semibold text-tjb-lavender-600 mb-1">Free birth-prep tools for {city} families</p>
+          <p class="text-sm text-tjb-gray">True Joy Birthing helps you prepare and connect with local doulas and midwives in your area. <a href="/#download">Download the free birth plan</a> or <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180">use the free app</a> to walk through your preferences step by step.</p>
         </div>
-      ) : (
-        <div>
-          <h2>Next Steps: Your Doula in {city}, {state} — Plan Your Birth</h2>
-          <p>No matter where you deliver in {city}, a clear, organized birth plan helps you communicate your preferences to the team in your birth room. Start with the <a href="/birth-plan-template/">free birth plan template</a>, then use the <a href="/birth-plan-checklist/">birth plan checklist</a> to make sure nothing gets missed.</p>
-          <a href="#download-pdf" class="inline-block bg-tjb-lavender-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition mb-6">
-            Download the Free Birth Plan
-          </a>
-          <p class="mt-2 text-sm text-tjb-gray">Or <a href="/#download">get the free birth plan walkthrough in the app</a> step by step.</p>
-        </div>
-      )}
+      </div>
 
     </div>
   </section>
