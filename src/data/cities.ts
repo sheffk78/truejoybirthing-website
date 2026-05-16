@@ -549,6 +549,33 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["austin-tx", "houston-tx", "corpus-christi-tx"],
   },
+
+  "waco-tx": {
+    city: "Waco",
+    state: "TX",
+    slug: "waco-tx",
+    costLow: 800,
+    costHigh: 1500,
+    shelbiServesHere: false,
+    culture: "Waco sits halfway between Dallas and Austin on I-35, anchored by Baylor University and the visitor draw of Magnolia Market at the Silos. The city blends a college-town feel with small-town affordability \u2014 lower cost of living means birth support budgets stretch a bit further here than in the big metros. For expectant families, Waco\u2019s advantage is accessibility: two solid hospitals with NICU access and a freestanding birth center, which most cities this size don\u2019t have.",
+    heroLocalDetail: "Both of Waco\u2019s hospitals sit along the I-35 corridor \u2014 Hillcrest near the Baylor campus and Providence up on Medical Parkway by the VA. I-35 construction through downtown can slow you down, so build in an extra 10\u201315 minutes when you\u2019re heading in. The Bosque River trail near both hospitals is a go-to for third-trimester evening walks.",
+    hospitalDetails: [
+      { name: "Baylor Scott & White Medical Center \u2013 Hillcrest", paragraph: "Baylor Scott & White \u2013 Hillcrest, off I-35 and University Parks Drive, is McLennan County\u2019s only dedicated Women\u2019s & Children\u2019s Center, with 14 labor and delivery rooms, 26 mother-baby rooms, and a 30-bed Level III NICU. Doulas are generally welcome as part of your support team, though visitor policies can change, so check before your tour. If you\u2019re delivering here, having a birth plan ready makes the intake conversation smoother \u2014 especially when you\u2019re already in labor and don\u2019t want to be explaining everything from scratch. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Ascension Providence Hospital", paragraph: "Ascension Providence, up on Medical Parkway near the Waco VA, has a Women\u2019s and Newborn Center with a Dell Children\u2019s Level II NICU on site. If we\u2019re being real, Providence\u2019s smaller L&D unit means you might see more one-on-one time with nursing staff \u2014 and shorter walks from the parking garage to the delivery room, which matters more than you\u2019d think at 38 weeks." },
+    ],
+    birthCenterDetails: [
+      { name: "Waco Birth Center and Clinic", paragraph: "Waco Birth Center and Clinic, on Austin Avenue near downtown, is a licensed freestanding birth center staffed by certified nurse-midwives. They accept insurance and Medicaid, making them one of the more accessible out-of-hospital birth options in Central Texas." },
+    ],
+    medicaidNote: "Texas is rolling out Medicaid doula coverage statewide, but full birth-doula reimbursement isn\u2019t active yet for Waco-area families. If you\u2019re on Medicaid in McLennan County, contact your managed care plan directly \u2014 some plans have started adding doula support as a benefit ahead of the state mandate. Doulas who want to accept Medicaid must register with Texas HHSC.",
+    insuranceNote: "Most private insurance in the Waco area doesn\u2019t cover doulas directly, but some plans \u2014 including BCBS Texas\u2019s Special Beginnings program and UnitedHealthcare\u2019s Doula Support benefit \u2014 offer partial reimbursement or resource access. Check your specific plan details, and ask whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "How much does a doula cost in Waco?", a: "$800 to $1,500 depending on experience and package. Waco\u2019s cost of living keeps doula rates lower than Dallas or Austin \u2014 you\u2019ll typically see rates in the $800\u2013$1,200 range for standard birth packages, with premium packages running up to $1,500." },
+      { q: "Does Medicaid cover doulas in Waco?", a: "Texas is expanding Medicaid doula coverage statewide, but full reimbursement isn\u2019t active yet for Waco-area families. If you\u2019re on Medicaid in McLennan County, contact your managed care plan directly \u2014 some have started adding doula benefits ahead of the state mandate." },
+      { q: "Which hospitals in Waco accommodate birth plans?", a: "Waco has two hospitals with L&D: Baylor Scott & White \u2013 Hillcrest (Level III NICU, dedicated Women\u2019s & Children\u2019s Center) and Ascension Providence (Level II NICU, smaller unit with more one-on-one nursing time). Waco also has a freestanding birth center \u2014 Waco Birth Center and Clinic on Austin Avenue \u2014 for families planning an out-of-hospital birth." },
+      { q: "Does True Joy Birthing work with Waco families?", a: "True Joy Birthing provides free birth-prep tools for Waco families. The free birth plan, checklist, and guided walkthrough in the app work for any Waco birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["austin-tx", "dallas-tx", "fort-worth-tx"],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
