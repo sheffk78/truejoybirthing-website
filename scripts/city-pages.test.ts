@@ -273,7 +273,7 @@ function assertCompleteness(slug: string, doc: ReturnType<typeof parse>, html: s
            parent?.getAttribute("class")?.includes("border");
   }).length;
   // Fallback: count h3 elements inside faq-adjacent containers
-  const directFaqs = html.match(/<h3 class="text-lg font-semibold mb-2">/g)?.length ?? 0;
+  const directFaqs = html.match(/<h3[^>]*class="text-lg font-semibold mb-2"[^>]*>/g)?.length ?? 0;
 
   results.push({
     id: "D2",
@@ -361,18 +361,15 @@ function checkWarnings(slug: string, doc: ReturnType<typeof parse>): WarningResu
 }
 
 // ─── Group F: SEO + LLM Readability ─────────────────────────────────
-// All F-group checks are currently WARNINGS because the template doesn't
-// implement these features yet. Once the template is updated to support each
-// feature, promote the corresponding check from warning to hard failure by
-// changing `warnings.push(...)` to `results.push({ passed: false, ... })` and
-// removing the `results.push({ passed: true, ... })` companion.
+// F2, F4, F5, F7, F8 are HARD FAILURES (template implements them as of Sprint 1).
+// F1, F3, F9a, F9b, F9e are WARNINGS (template doesn't implement them yet — Sprint 2).
 
 function assertSeoLlm(slug: string, doc: ReturnType<typeof parse>, html: string, jsonLd: Record<string, unknown>[]): { assertions: AssertionResult[]; warnings: WarningResult[] } {
   const results: AssertionResult[] = [];
   const warnings: WarningResult[] = [];
   const cityDisplayName = slug.replace(/-tx$/, "").replace(/-/g, " ");
 
-  // F1: WebPage schema with datePublished or dateModified (WARNING until template updated)
+  // F1: WebPage schema with datePublished or dateModified (WARNING — Sprint 2)
   const webPageEntry = jsonLd.find((e) => {
     const type = e["@type"];
     return type === "WebPage" || (Array.isArray(type) && type.includes("WebPage"));
@@ -385,16 +382,19 @@ function assertSeoLlm(slug: string, doc: ReturnType<typeof parse>, html: string,
     results.push({ id: "F1", city: slug, passed: true, message: `WebPage schema with date(s) present (correct)` });
   }
 
-  // F2: Service schema has image property (WARNING until template updated)
+  // F2: Service schema has image property (HARD FAILURE — Sprint 1)
   const serviceEntry = jsonLd.find((e) => e["@type"] === "Service");
   const serviceImage = serviceEntry && (serviceEntry as Record<string, unknown>)["image"];
-  if (!serviceImage) {
-    warnings.push({ id: "F2", city: slug, message: `SEO: Service schema missing "image" property — rich results need it` });
-  } else {
-    results.push({ id: "F2", city: slug, passed: true, message: `Service schema has "image" property (correct)` });
-  }
+  results.push({
+    id: "F2",
+    city: slug,
+    passed: !!serviceImage,
+    message: !serviceImage
+      ? `Service schema missing "image" property — required for rich results`
+      : `Service schema has "image" property (correct)`,
+  });
 
-  // F3: Visible breadcrumb <nav> element (WARNING until template updated)
+  // F3: Visible breadcrumb <nav> element (WARNING — Sprint 2)
   const breadcrumbNav = doc.querySelector('nav[aria-label="Breadcrumb"], nav[aria-label="breadcrumb"], nav.breadcrumb, [data-breadcrumb]');
   if (!breadcrumbNav) {
     warnings.push({ id: "F3", city: slug, message: `SEO: No visible breadcrumb <nav> — schema-only breadcrumb is not enough` });
@@ -402,47 +402,59 @@ function assertSeoLlm(slug: string, doc: ReturnType<typeof parse>, html: string,
     results.push({ id: "F3", city: slug, passed: true, message: `Visible breadcrumb nav present (correct)` });
   }
 
-  // F4: Author attribution line (WARNING until template updated)
+  // F4: Author attribution line (HARD FAILURE — Sprint 1, reviewer byline only, no date)
   const visibleText = stripTags(html);
-  const hasAuthorAttribution = /reviewed by/i.test(visibleText) || /last updated/i.test(visibleText) || /updated\s+\w+\s+\d{4}/i.test(visibleText);
-  if (!hasAuthorAttribution) {
-    warnings.push({ id: "F4", city: slug, message: `SEO: No author attribution or "Last updated" line — E-E-A-T signal missing` });
-  } else {
-    results.push({ id: "F4", city: slug, passed: true, message: `Author attribution found (correct)` });
-  }
+  const hasAuthorAttribution = /reviewed by/i.test(visibleText);
+  results.push({
+    id: "F4",
+    city: slug,
+    passed: hasAuthorAttribution,
+    message: !hasAuthorAttribution
+      ? `No "Reviewed by" attribution line found — E-E-A-T signal missing`
+      : `"Reviewed by" attribution line found (correct)`,
+  });
 
-  // F5: FAQ items have id attributes for deep-linking (WARNING until template updated)
+  // F5: FAQ items have id attributes for deep-linking (HARD FAILURE — Sprint 1)
   const faqH3s = doc.querySelectorAll("h3");
   const faqIds = [...faqH3s].filter((h) => {
     const id = h.getAttribute("id") ?? "";
     return id.startsWith("faq-");
   });
-  if (faqIds.length < 2) {
-    warnings.push({ id: "F5", city: slug, message: `SEO: Only ${faqIds.length} FAQ items with id="faq-*" anchors — need ≥2 for deep-linking` });
-  } else {
-    results.push({ id: "F5", city: slug, passed: true, message: `${faqIds.length} FAQ items with id="faq-*" anchors (correct)` });
-  }
+  results.push({
+    id: "F5",
+    city: slug,
+    passed: faqIds.length >= 2,
+    message: faqIds.length < 2
+      ? `Only ${faqIds.length} FAQ items with id="faq-*" anchors — need at least 2 for deep-linking`
+      : `${faqIds.length} FAQ items with id="faq-*" anchors (correct)`,
+  });
 
-  // F7: Hospital section H2 heading (WARNING until template updated)
+  // F7: Hospital section H2 heading (HARD FAILURE — Sprint 1)
   const allH2s = [...doc.querySelectorAll("h2")];
   const hospitalH2 = allH2s.find((h) =>
     /hospital|birth (center|support)/i.test(h.textContent ?? "")
   );
-  if (!hospitalH2) {
-    warnings.push({ id: "F7", city: slug, message: `SEO: No H2 heading for hospital/birth center section — heading hierarchy gap` });
-  } else {
-    results.push({ id: "F7", city: slug, passed: true, message: `Hospital/birth center H2 heading: "${hospitalH2.textContent?.trim().slice(0, 60)}" (correct)` });
-  }
+  results.push({
+    id: "F7",
+    city: slug,
+    passed: !!hospitalH2,
+    message: !hospitalH2
+      ? `No H2 heading for hospital/birth center section — heading hierarchy gap`
+      : `Hospital/birth center H2 heading: "${hospitalH2.textContent?.trim().slice(0, 60)}" (correct)`,
+  });
 
-  // F8: SpeakableSpecification in JSON-LD (WARNING until template updated)
+  // F8: SpeakableSpecification in JSON-LD (HARD FAILURE — Sprint 1)
   const hasSpeakable = jsonLd.some((e) => e["@type"] === "SpeakableSpecification");
-  if (!hasSpeakable) {
-    warnings.push({ id: "F8", city: slug, message: `SEO: No SpeakableSpecification schema — voice/LLM extraction signal missing` });
-  } else {
-    results.push({ id: "F8", city: slug, passed: true, message: `SpeakableSpecification schema present (correct)` });
-  }
+  results.push({
+    id: "F8",
+    city: slug,
+    passed: hasSpeakable,
+    message: !hasSpeakable
+      ? `No SpeakableSpecification schema — voice/LLM extraction signal missing`
+      : `SpeakableSpecification schema present (correct)`,
+  });
 
-  // F9a: og:locale (WARNING until Layout updated)
+  // F9a: og:locale (WARNING — Sprint 2)
   const ogLocale = doc.querySelector('meta[property="og:locale"]');
   if (!ogLocale || ogLocale.getAttribute("content") !== "en_US") {
     warnings.push({ id: "F9a", city: slug, message: !ogLocale ? `SEO: Missing og:locale meta tag` : `SEO: og:locale is "${ogLocale.getAttribute("content")}" — expected "en_US"` });
@@ -450,7 +462,7 @@ function assertSeoLlm(slug: string, doc: ReturnType<typeof parse>, html: string,
     results.push({ id: "F9a", city: slug, passed: true, message: `og:locale = en_US (correct)` });
   }
 
-  // F9b: og:type = article (WARNING until Layout updated)
+  // F9b: og:type = article (WARNING — Sprint 2)
   const ogType = doc.querySelector('meta[property="og:type"]');
   const ogTypeContent = ogType?.getAttribute("content") ?? "";
   if (ogTypeContent !== "article") {
@@ -459,7 +471,7 @@ function assertSeoLlm(slug: string, doc: ReturnType<typeof parse>, html: string,
     results.push({ id: "F9b", city: slug, passed: true, message: `og:type = article (correct)` });
   }
 
-  // F9e: twitter:site (WARNING until Layout updated)
+  // F9e: twitter:site (WARNING — Sprint 2)
   const twitterSite = doc.querySelector('meta[name="twitter:site"]');
   if (!twitterSite) {
     warnings.push({ id: "F9e", city: slug, message: `SEO: Missing twitter:site meta tag` });

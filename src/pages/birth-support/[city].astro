@@ -41,6 +41,7 @@ const schema = {
       mainEntity: faqs.map((f) => ({
         '@type': 'Question',
         name: f.q,
+        url: `${pageUrl}#faq-${f.q.toLowerCase().includes('cost') ? 'cost' : f.q.toLowerCase().includes('medicaid') ? 'medicaid' : f.q.toLowerCase().includes('true joy') ? 'brand' : 'hospital'}`,
         acceptedAnswer: { '@type': 'Answer', text: f.a },
       })),
     },
@@ -49,10 +50,16 @@ const schema = {
       '@id': `${pageUrl}#service`,
       name: `Free Birth-Plan Resources for ${city} Families`,
       url: pageUrl,
+      image: `https://truejoybirthing.com${heroImage}`,
       areaServed: { '@type': 'City', name: city },
       provider: { '@id': 'https://truejoybirthing.com/#organization' },
       serviceType: 'Birth Plan Resources',
       description: `Free birth-plan tools, hospital info, and doula cost guides for families in ${city}, ${state}.`,
+    },
+    {
+      '@type': 'SpeakableSpecification',
+      '@id': `${pageUrl}#speakable`,
+      cssSelector: ['.prose h2', '.prose h3', '.faq-answer'],
     },
   ],
 };
@@ -109,6 +116,9 @@ const schema = {
       <p>{culture}</p>
       <p>Whether this is your first baby or you're preparing for a VBAC, <a href="/benefits-of-a-doula/">understanding the benefits of having a doula</a> can help you decide what support is right for your {city} birth.</p>
 
+      {hospitalDetails.length > 0 && (
+        <h2>Hospital & Birth Center Info for {city}</h2>
+      )}
       {hospitalDetails.map((h) => (
         <p set:html={h.paragraph} />
       ))}
@@ -117,6 +127,7 @@ const schema = {
       ))}
 
       <p class="text-sm text-tjb-gray italic">Hospitals mentioned for context only. True Joy Birthing does not endorse any specific provider. Always confirm visitor and doula policies during your hospital tour.</p>
+      <p class="text-sm text-tjb-gray mt-1">Reviewed by <a href="/about/" class="text-tjb-lavender-600 hover:underline">Shelbi Kohler, CD(DONA)</a></p>
 
       <!-- Doula Costs -->
       <h2>Doula Costs in {city}</h2>
@@ -185,8 +196,8 @@ const schema = {
       <div class="space-y-6">
         {faqs.map((faq) => (
           <div class="border border-tjb-lavender-200 rounded-lg p-5 bg-white">
-            <h3 class="text-lg font-semibold mb-2">{faq.q}</h3>
-            <p class="text-tjb-gray">{faq.a}</p>
+             <h3 class="text-lg font-semibold mb-2" id={`faq-${faq.q.toLowerCase().includes('cost') ? 'cost' : faq.q.toLowerCase().includes('medicaid') ? 'medicaid' : faq.q.toLowerCase().includes('true joy') ? 'brand' : 'hospital'}`}>{faq.q}</h3>
+             <p class="text-tjb-gray faq-answer">{faq.a}</p>
           </div>
         ))}
       </div>
