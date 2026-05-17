@@ -602,6 +602,32 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["lubbock-tx"],
   },
+  "tyler-tx": {
+    city: "Tyler",
+    state: "TX",
+    slug: "tyler-tx",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Tyler is the largest city in Northeast Texas and the seat of Smith County, known as the Rose Capital of America for its rose industry and the annual Texas Rose Festival. The regional healthcare hub for East Texas, Tyler draws families from across the region for hospital births \u2014 and the birth community, while smaller than in the big metros, is steady and growing.",
+    heroLocalDetail: "CHRISTUS Mother Frances sits off South Broadway in central Tyler, and UT Health Tyler is on the south side near Beckham Avenue. South Broadway between the hospitals can back up during afternoon rush and on Texas Rose Festival weekends in October \u2014 if you\u2019re due in the fall, know your fastest route before contractions start.",
+    hospitalDetails: [
+      { name: "CHRISTUS Mother Frances Hospital \u2013 Tyler", paragraph: "CHRISTUS Mother Frances Hospital \u2013 Tyler, on South Broadway in central Tyler, is the region\u2019s most established maternity hospital with a verified Level III NICU (the Lucy & John Carr NICU) and Level III Maternal designation. If you\u2019re delivering here, having a birth plan ready makes the intake conversation smoother \u2014 especially when you\u2019re already in labor and don\u2019t want to be explaining everything from scratch. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "UT Health Tyler", paragraph: "UT Health Tyler, on the south side of town, is the flagship hospital of the UT Health East Texas system with a Level III NICU designation (earned 2024) and labor and delivery services. If we\u2019re being real, Tyler families have two solid hospital options with Level III NICUs \u2014 which is more than most East Texas towns can say \u2014 but both can be busy, so having your preferences written down and a support advocate at your side makes the whole experience feel more manageable." },
+    ],
+    birthCenterDetails: [
+      { name: "Azalea Birth Center", paragraph: "Azalea Birth Center, on South Broadway in central Tyler, is a freestanding birth center run by midwife Vicky Wells, offering water birth and midwife-attended out-of-hospital birth in a home-like setting. If you\u2019re considering birth center care, call ahead to confirm current availability and schedule a tour \u2014 the birth community in Tyler is growing but small, so spots can fill." },
+    ],
+    medicaidNote: "Texas Medicaid\u2019s doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Tyler area. Contact your Medicaid managed care plan to confirm coverage \u2014 some East Texas plans have started adding doula support ahead of the statewide mandate.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Tyler area. Some private insurers offer maternal wellness benefits that include doula support \u2014 contact your provider directly, and check whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "How much does a doula cost in Tyler?", a: "$800 to $2,000 depending on experience and package. Tyler\u2019s doula community is smaller than in Dallas or Houston, but rates tend to be more affordable \u2014 you\u2019ll typically find standard birth packages in the $800\u2013$1,400 range." },
+      { q: "Does Medicaid cover doulas in Tyler?", a: "Texas is expanding Medicaid doula coverage statewide. Smith County families should contact their Medicaid managed care plan directly \u2014 some East Texas plans have started adding doula support as a covered benefit ahead of the statewide mandate." },
+      { q: "Which hospitals in Tyler accommodate birth plans?", a: "CHRISTUS Mother Frances Hospital \u2013 Tyler has a verified Level III NICU (the Lucy & John Carr NICU) and Level III Maternal designation, and UT Health Tyler earned its own Level III NICU designation in 2024. Tyler also has a freestanding birth center \u2014 Azalea Birth Center on South Broadway, run by midwife Vicky Wells \u2014 for families seeking out-of-hospital birth. That\u2019s two Level III hospitals and a birth center, which is more than most East Texas towns can offer." },
+      { q: "Does True Joy Birthing work with Tyler families?", a: "True Joy Birthing provides free birth-prep tools for Tyler families. The free birth plan, checklist, and guided walkthrough in the app work for any Tyler birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["dallas-tx", "waco-tx"],
+  },
   "killeen-tx": {
     city: "Killeen",
     state: "TX",
