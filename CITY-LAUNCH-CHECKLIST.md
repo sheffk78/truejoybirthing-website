@@ -10,6 +10,9 @@ No city page deploys without every section below checked.
 - [ ] Hospitals, birth centers, roads, and local details verified from primary/reputable sources
 - [ ] Any uncertain claim is flagged as needing human verification, not stated as fact
 - [ ] NICU levels, Medicaid/insurance notes, and pricing reviewed by a human
+- [ ] Every NICU level claim includes a source qualifier ("verified", named unit, or year) or uses "contact the hospital directly"
+- [ ] No named insurance carriers without a publicly verifiable program page
+- [ ] Birth center verification done: NPI registry + Google Maps + social media + website checked; empty `birthCenterDetails` documented with search comment
 
 ## B. Page Quality & Structure
 
