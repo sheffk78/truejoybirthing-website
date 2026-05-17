@@ -602,6 +602,61 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["lubbock-tx"],
   },
+  "mcallen-tx": {
+    city: "McAllen",
+    state: "TX",
+    slug: "mcallen-tx",
+    costLow: 600,
+    costHigh: 1400,
+    shelbiServesHere: false,
+    culture: "McAllen sits in the heart of the Rio Grande Valley in Hidalgo County, one of the fastest-growing regions in Texas and a crossroads of American and Mexican culture. The city is known as the City of Palms, home to the International Museum of Art & Science and Quinta Mazatlan World Birding Center. Birth support here is shaped by the RGV\u2019s high uninsured rate and documented OB/GYN shortage \u2014 families often travel long distances for specialized maternity care, and doulas fill a critical gap in a community where many rely on Medicaid or the Healthy Texas Women program.",
+    heroLocalDetail: "South Texas Health System McAllen sits just off Expressway 83 in central McAllen, and the main entrance is on South McColl Road \u2014 if you\u2019re coming from the west side of town during afternoon rush, McColl can back up between Nolana and the hospital. DHR Health Women\u2019s Hospital is about 10 miles east in Edinburg, a straight shot down McColl or 10th Street. The Expressway frontage roads are your faster bet most of the day, but they get congested near Sugar Road during school pickup hours.",
+    hospitalDetails: [
+      { name: "South Texas Health System McAllen", paragraph: "South Texas Health System McAllen, just off Expressway 83 in central McAllen, is the city\u2019s primary maternity hospital \u2014 with a verified Level III NICU that was the first in the Rio Grande Valley when it opened over 25 years ago, and a dedicated Maternity Center that\u2019s been delivering babies for 35+ years. STHS Edinburg, the system\u2019s sister facility about 8 miles east, also has a Maternity Center with L&D and a midwifery program \u2014 but families who may need NICU access deliver here, because STHS McAllen is where STHS Edinburg transfers neonatal cases. If you\u2019re delivering at STHS McAllen, having a birth plan ready makes the intake conversation smoother \u2014 especially when you\u2019re already in labor and don\u2019t want to be explaining everything from scratch. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "DHR Health Women\u2019s Hospital", paragraph: "DHR Health Women\u2019s Hospital, about 10 miles east in Edinburg, is the first and only designated Level IV Maternal Facility in the Rio Grande Valley \u2014 recognized by Texas DSHS for handling the most complex maternal cases. With 24 birthing suites, maternal-fetal medicine specialists, and VBAC support, it\u2019s the referral destination for high-risk pregnancies across the RGV. Contact the hospital directly for current NICU level and maternity service details. If we\u2019re being real, McAllen-area families increasingly deliver here for complex pregnancies \u2014 it\u2019s a short drive and the Level IV maternal designation means they\u2019re equipped for what other hospitals transfer out." },
+    ],
+    // Birth center search: NPI 261QB0400X returned no birthing-center results for McAllen,
+    // Edinburg, Harlingen, Brownsville, Pharr, or Mission. Google Maps and social media
+    // searches found no freestanding birth centers in the RGV. Verified 2026-05-17.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Hidalgo County\u2019s STAR managed care plans. Hidalgo County has one of the highest uninsured rates in the United States \u2014 many families here depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Rio Grande Valley. Hidalgo County\u2019s provider shortage means fewer in-network doulas overall \u2014 check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "How much does a doula cost in McAllen?", a: "$600 to $1,400 depending on experience and package. The RGV has fewer practicing doulas than major Texas metros, so availability may be limited and some doulas charge travel fees if you\u2019re outside the McAllen-Edinburg corridor. Reach out to doulas directly for current pricing and package details." },
+      { q: "Does Medicaid cover doulas in McAllen?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Hidalgo County\u2019s STAR managed care plans. Families in McAllen should verify coverage with their specific plan by calling Texas Medicaid at 1-877-543-7669 or visiting YourTexasBenefits.com. Not all managed care plans have completed their doula network setup, so confirm before hiring." },
+      { q: "Which hospitals in McAllen accommodate birth plans?", a: "South Texas Health System McAllen has a verified Level III NICU \u2014 the first in the Rio Grande Valley \u2014 and a dedicated Maternity Center with neonatologist-led care and 35+ years of delivering babies. STHS Edinburg, about 8 miles east in the same system, also has a Maternity Center with a midwifery program, but transfers neonatal cases to STHS McAllen. DHR Health Women\u2019s Hospital in Edinburg, about 10 miles east, is a designated Level IV Maternal Facility that handles the most complex pregnancies in the RGV \u2014 contact DHR directly for current NICU level details. The RGV does not currently have a freestanding birth center, so hospital birth is the primary option for McAllen families." },
+      { q: "Does True Joy Birthing work with McAllen families?", a: "True Joy Birthing provides free birth-prep tools for McAllen families. The free birth plan, checklist, and guided walkthrough in the app work for any McAllen birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["corpus-christi-tx", "san-antonio-tx", "laredo-tx"],
+  },
+  "college-station-tx": {
+    city: "College Station",
+    state: "TX",
+    slug: "college-station-tx",
+    costLow: 800,
+    costHigh: 1500,
+    shelbiServesHere: false,
+    culture: "College Station lives and breathes Aggie maroon. Home to Texas A&M University \u2014 one of the largest campuses in the nation \u2014 this Brazos Valley city of 120,000+ is a genuine college town where thousands of families balance graduate programs and growing households at the same time. The Bryan\u2013College Station metro (pop. 268,000) stretches across Brazos County, weaving tree-lined campus neighborhoods into quiet residential streets south of University Drive. The birth community here mixes graduate-student families, faculty, and born-and-raised Brazos Valley parents \u2014 and with no freestanding birth center in town, knowing your patient rights and having a written birth plan matters even more in a busy hospital system.",
+    heroLocalDetail: "BSW Medical Center sits near the intersection of Texas Highway 6 and Rock Prairie Road on the south side of College Station. The main entrance faces Scott and White Drive, connecting east to Harvey Road. During Texas A&M game days and move-in weekends (\u2014August through September), traffic on Highway 6 and University Drive can add 15\u201320 minutes to a normally 10-minute drive from central College Station. Use the Rock Prairie Road exit (Exit 167A) from the Earl Rudder Freeway for direct hospital access. For higher-acuity needs, Baylor Scott & White Medical Center in Temple (about 35 minutes north on I-35) has a Level I Trauma Center and the system\u2019s most comprehensive neonatal and maternal specialty services.",
+    hospitalDetails: [
+      { name: "Baylor Scott & White Medical Center \u2013 College Station", paragraph: "Baylor Scott & White Medical Center \u2013 College Station, near Highway 6 and Rock Prairie Road on the south side of town, is a 142-bed hospital with a verified Level III NICU and a dedicated labor and delivery unit \u2014 both stated directly on BSW\u2019s website. Magnet-recognized for nursing excellence, with U.S. News high-performing designations for heart attack and pneumonia care. If you\u2019re delivering at BSW College Station, a written birth plan means your preferences travel with you. <a href=\"/birth-plan-template/\">Use our free template</a> to walk in prepared." },
+    ],
+    // Birth center search: NPI 261QB0400X returned zero results in College Station and Bryan.
+    // Google Maps and social media searches found no freestanding birth centers.
+    // Closest birth center options are in Houston metro (~95 miles south). Verified 2026-05-17.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees. Brazos County families on Medicaid should contact their STAR managed care plan to confirm doula coverage \u2014 some plans have started adding doula support as a covered benefit. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to verify.",
+    insuranceNote: "Baylor Scott & White Health Plan is a major insurer in the Brazos Valley, and whether it covers doula services depends on your specific plan \u2014 contact your provider directly. If you\u2019re an Aggie on a student health plan or covered under a university policy, check whether HSA or FSA funds can be applied toward doula costs, since most student plans don\u2019t include direct doula benefits.",
+    faqs: [
+      { q: "How much does a doula cost in College Station?", a: "$800 to $1,500 depending on experience and package. College Station has fewer practicing doulas than Houston or Austin, and some travel from those cities \u2014 expect potential travel surcharges of $100\u2013$300 if you\u2019re outside the immediate Bryan\u2013College Station area." },
+      { q: "Does Medicaid cover doulas in College Station?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Brazos County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup." },
+      { q: "Which hospitals in College Station accommodate birth plans?", a: "Baylor Scott & White Medical Center \u2013 College Station has a verified Level III NICU and dedicated L&D unit \u2014 stated directly on their website. College Station does not have a freestanding birth center. For higher-acuity maternal or neonatal needs, Baylor Scott & White in Temple (about 35 minutes north) is the system\u2019s flagship with the most comprehensive specialty care in the region." },
+      { q: "Does True Joy Birthing work with College Station families?", a: "True Joy Birthing provides free birth-prep tools for College Station families. The free birth plan, checklist, and guided walkthrough in the app work for any College Station birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["waco-tx", "austin-tx", "houston-tx"],
+  },
   "tyler-tx": {
     city: "Tyler",
     state: "TX",
