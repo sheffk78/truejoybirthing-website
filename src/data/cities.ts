@@ -475,6 +475,33 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["amarillo-tx", "el-paso-tx"],
   },
+  "longview-tx": {
+    city: "Longview",
+    state: "TX",
+    slug: "longview-tx",
+    costLow: 700,
+    costHigh: 1600,
+    shelbiServesHere: false,
+    culture: "Longview sits in the rolling Piney Woods of East Texas, the Gregg County seat and a regional commercial hub where timber, oil, and healthcare keep the economy moving. The birth community here is small and close-knit \u2014 most families deliver at one hospital, and word travels fast. With Tyler about 35 miles east offering more options for high-risk pregnancies and neonatal intensive care, Longview families who plan ahead and know their patient rights have a smoother experience.",
+    heroLocalDetail: "CHRISTUS Good Shepherd Medical Center sits on East Marshall Avenue near the center of Longview, and if you\u2019re coming from the south side or the Lakeport area, US-80 and Spur 63 both feed directly into the hospital district. Traffic on Marshall Avenue near the hospital entrance can back up during weekday afternoon rush. Longview\u2019s a spread-out city with long east\u2013west corridors \u2014 if you live on the west side near Kilgore, budget an extra 10 minutes during peak times. Heritage Plaza in downtown Longview is where a lot of expectant moms walk during the third trimester \u2014 flat, shaded, and about 8 minutes from the hospital.",
+    hospitalDetails: [
+      { name: "CHRISTUS Good Shepherd Medical Center", paragraph: "CHRISTUS Good Shepherd Medical Center, on East Marshall Avenue in central Longview, is the city\u2019s primary hospital for labor and delivery, with a NICU and 24/7 obstetric care. CHRISTUS Good Shepherd \u2013 Marshall, the same system\u2019s hospital about 25 miles east, handles some maternity services for Harrison County families but transfers complex neonatal cases to the Longview campus. Contact the hospital directly for current NICU level and maternity service details. Your birth plan is your voice in a busy room. <a href=\"/birth-plan-template/\">Use our free template</a> to walk in knowing what you want." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned 0 results for Longview,
+    // Kilgore, Marshall, and Hallsville. Google Maps and social media searches
+    // found no freestanding birth centers in the Longview area. Verified 2026-05-18.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees. Gregg County families on Medicaid should contact their STAR managed care plan to confirm doula coverage \u2014 some East Texas plans are still completing their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to verify before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Longview area. CHRISTUS Health Plan is a major insurer in East Texas \u2014 check whether your specific plan includes doula or maternal wellness benefits. HSA and FSA funds can often be applied toward birth support costs; confirm with your plan administrator.",
+    faqs: [
+      { q: "How much does a doula cost in Longview?", a: "$700 to $1,600 depending on experience and package. Longview has fewer practicing doulas than the major Texas metros, so availability may be limited and some doulas commute from Tyler or Shreveport \u2014 expect potential travel fees of $100\u2013$200 if you\u2019re outside the immediate area." },
+      { q: "Does Medicaid cover doulas in Longview?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Gregg County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as some East Texas plans are still completing their doula network setup." },
+      { q: "Which hospitals in Longview accommodate birth plans?", a: "CHRISTUS Good Shepherd Medical Center on East Marshall Avenue is Longview\u2019s primary hospital for labor and delivery, with a NICU and 24/7 obstetric care. Contact the hospital directly for current NICU level and maternity service details. Longview does not have a freestanding birth center. For families who need a higher level of neonatal or maternal specialty care, Tyler \u2014 about 35 miles east \u2014 has two hospitals with verified Level III NICUs and a freestanding birth center." },
+      { q: "Does True Joy Birthing work with Longview families?", a: "True Joy Birthing provides free birth-prep tools for Longview families. The free birth plan, checklist, and guided walkthrough in the app work for any Longview birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["tyler-tx", "dallas-tx"],
+  },
   "mckinney-tx": {
     city: "McKinney",
     state: "TX",
