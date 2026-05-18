@@ -60,6 +60,36 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["lubbock-tx"],
   },
+  "abilene-tx": {
+    city: "Abilene",
+    state: "TX",
+    slug: "abilene-tx",
+    costLow: 650,
+    costHigh: 1600,
+    shelbiServesHere: false,
+    culture: "Abilene is a West Texas regional hub anchored by Dyess Air Force Base and three Christian universities. The birth community is small but growing \u2014 a military and college-town mix of young families, deployed-though-pregnant spouses, and first-time parents who value practical, evidence-based preparation. Hendrick Medical Center consolidating all L&D services to its north campus in June 2026 means the whole region\u2019s hospital births now flow through one location.",
+    heroLocalDetail: "Hendrick Medical Center sits at 1900 Pine Street in north Abilene, and if you\u2019re coming from the south side or the Dyess AFB area, Pine Street between South 14th and the hospital entrance can slow down during rush. I-20 is the main east\u2013west artery through town \u2014 exits 279B (Pine Street) and 284 (Judge Ely Boulevard) both get you to the hospital, but Judge Ely tends to move faster at peak times. Nelson Park\u2019s walking trail on the east side of town is where a lot of Abilene moms head for third-trimester evenings \u2014 flat, well-lit, and about 10 minutes from the hospital.",
+    hospitalDetails: [
+      { name: "Hendrick Medical Center", paragraph: "Hendrick Medical Center, at 1900 Pine Street in north Abilene, is the regional hub for labor and delivery with a verified Level III NICU and a dedicated Obstetrics Emergency Department \u2014 both stated directly on hendrickhealth.org. The BirthPlace at Hendrick provides 24/7 obstetric care, and the OBED on the fourth floor of the Jones Building handles pregnancy-related emergencies for mothers at 20 weeks or beyond. As of June 1, 2026, all Hendrick Health obstetric and neonatal services in Abilene are centralized here \u2014 Hendrick Medical Center South\u2019s L&D unit closed May 31, 2026, so every hospital birth in the region now flows through this single campus. If you\u2019re delivering at Hendrick, having your birth plan ready makes the intake conversation smoother \u2014 especially when you\u2019re already in labor. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned 1 result for Abilene, TX \u2014
+    // Crowned Birth Place, LLC (NPI 1912549320, DBA "Crowned Birth Place"),
+    // 1636 N 20th St, Abilene, TX, owned by Sabrina R. Elliott, LM.
+    // Active as of 2019-10-17 enumeration date. Facebook page exists.
+    // Website (crownedbirthplace.com) does not resolve. Verified 2026-05-17.
+    birthCenterDetails: [
+      { name: "Crowned Birth Place", paragraph: "Crowned Birth Place, on North 20th Street in Abilene, is a freestanding birth center run by Licensed Midwife Sabrina Elliott, offering a lower-intervention setting for low-risk pregnancies. It\u2019s the only freestanding birth center in the Abilene area \u2014 and having a doula who knows the rhythm of that space makes the whole thing feel a lot less unknown. Call ahead to confirm current availability and schedule a tour, since the birth community in Abilene is small and spots can fill." },
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees. Taylor County families on Medicaid should contact their STAR managed care plan to confirm doula coverage \u2014 not all plans have completed their doula network setup yet. Military families with Tricare have separate maternity coverage and should check Tricare\u2019s current doula policy.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Abilene area. Some private insurers offer maternal wellness benefits that include doula support \u2014 contact your provider directly, and check whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "How much does a doula cost in Abilene?", a: "$650 to $1,600 depending on experience and package. Abilene has fewer practicing doulas than the big Texas metros, so availability may be limited and some doulas may charge travel fees if commuting from the DFW area." },
+      { q: "Does Medicaid cover doulas in Abilene?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Taylor County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup." },
+      { q: "Which hospitals in Abilene accommodate birth plans?", a: "Hendrick Medical Center at 1900 Pine Street is Abilene\u2019s only hospital providing labor and delivery as of June 2026, with a verified Level III NICU and dedicated OB Emergency Department stated directly on hendrickhealth.org. Hendrick Medical Center South\u2019s L&D unit closed May 31, 2026, with all maternity services centralized to the north campus. Abilene also has Crowned Birth Place on North 20th Street for families seeking an out-of-hospital birth." },
+      { q: "Does True Joy Birthing work with Abilene families?", a: "True Joy Birthing provides free birth-prep tools for Abilene families. The free birth plan, checklist, and guided walkthrough in the app work for any Abilene birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["midland-tx", "lubbock-tx"],
+  },
   "arlington-tx": {
     city: "Arlington",
     state: "TX",
