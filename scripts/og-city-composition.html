@@ -32,6 +32,7 @@
     overflow: hidden;
     background: linear-gradient(135deg, #F1F1FB 0%, #FAF8F5 40%, #E6E4F4 100%);
   }
+  /* Subtle rose + lavender radial accents — brand colors only */
   .right-column::before {
     content: '';
     position: absolute;
@@ -52,32 +53,17 @@
     height: 200px;
     background: linear-gradient(to top, rgba(218,160,196,0.05) 0%, transparent 100%);
   }
-  /* Decorative location pin and city initial */
-  .city-initial {
+  /* TJB wordmark in right column — the only approved brand mark */
+  .tjb-wordmark {
     position: absolute;
-    top: 50%;
-    right: 80px;
-    transform: translateY(-50%);
+    bottom: 48px;
+    right: 72px;
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-weight: 700;
-    font-size: 280px;
-    color: rgba(110,108,153,0.07);
-    line-height: 1;
-    letter-spacing: -0.02em;
+    font-size: 20px;
+    color: rgba(110,108,153,0.25);
+    letter-spacing: 0.01em;
     user-select: none;
-  }
-  .pin-silhouette {
-    position: absolute;
-    top: 45%;
-    right: 60px;
-    transform: translateY(-50%);
-    width: 60px;
-    height: 80px;
-    opacity: 0.06;
-  }
-  .pin-silhouette svg {
-    width: 100%;
-    height: 100%;
   }
   .accent-line {
     width: 36px;
@@ -140,12 +126,7 @@
     <div class="brand-line">True Joy Birthing</div>
   </div>
   <div class="right-column">
-    <div class="city-initial" id="city-initial">A</div>
-    <div class="pin-silhouette">
-      <svg viewBox="0 0 24 32" fill="#6E6C99" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 0C5.37 0 0 5.37 0 12c0 9 12 20 12 20s12-11 12-20c0-6.63-5.37-12-12-12zm0 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
-      </svg>
-    </div>
+    <div class="tjb-wordmark">True Joy Birthing</div>
   </div>
 </div>
 <script>
@@ -153,10 +134,8 @@
   const params = new URLSearchParams(window.location.search);
   const city = params.get('city') || 'Austin';
   const state = params.get('state') || 'TX';
-  const initial = city.charAt(0).toUpperCase();
 
   document.getElementById('headline').textContent = `Doulas & Birth Plans in ${city}, ${state}`;
-  document.getElementById('city-initial').textContent = initial;
   document.getElementById('eyebrow').textContent = `${city} birth support`;
 </script>
 </body>
