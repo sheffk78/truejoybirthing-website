@@ -3,6 +3,7 @@
 // Dynamic city birth-support page — single template for all cities
 // ═══════════════════════════════════════════════════════════════
 import Layout from '../../layouts/Layout.astro';
+import CityLeadCaptureForm from '../../components/city/LeadCaptureForm.astro';
 import { cities, citySlugs, type CityData } from '../../data/cities';
 
 export function getStaticPaths() {
@@ -146,10 +147,10 @@ const schema = {
         <a href="#download-pdf" class="inline-block bg-tjb-lavender-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition mb-6">
           Download the Free Birth Plan
         </a>
-        <p class="mt-2 text-sm text-tjb-gray">Or <a href="/#download">get the free birth plan walkthrough in the app</a> step by step.</p>
+        <p class="mt-2 text-sm text-tjb-gray">Or <a href="/birth-plan-template/">get the free birth plan walkthrough in the app</a> step by step.</p>
         <div class="bg-tjb-cream p-4 rounded-lg mt-6">
           <p class="font-semibold text-tjb-lavender-600 mb-1">Free birth-prep tools for {city} families</p>
-          <p class="text-sm text-tjb-gray">True Joy Birthing helps you prepare and connect with local doulas and midwives in your area. <a href="/#download">Download the free birth plan</a> or <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180">use the free app</a> to walk through your preferences step by step.</p>
+          <p class="text-sm text-tjb-gray">True Joy Birthing helps you prepare and connect with local doulas and midwives in your area. <a href="/birth-plan-template/">Download the free birth plan</a> or <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180">use the free app</a> to walk through your preferences step by step.</p>
         </div>
       </div>
 
@@ -204,27 +205,8 @@ const schema = {
     </div>
   </section>
 
-  <!-- CTA band -->
-  <section id="download-pdf" class="bg-white border-y border-tjb-lavender-200/60 py-16">
-    <div class="max-w-2xl mx-auto px-6 text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">Download Your Free Birth Plan</h2>
-      <p class="text-tjb-gray mb-8 max-w-xl mx-auto leading-relaxed">
-        A fillable PDF you can print or edit — free. For the full experience with a guided walkthrough, live updates, and doula sharing,
-        <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-lavender-600 font-semibold hover:text-tjb-lavender-700 border-b border-transparent hover:border-tjb-lavender-600 transition-all">get the free app</a>.
-      </p>
-      <a href="/true-joy-birth-plan.pdf" download="true-joy-birth-plan.pdf" class="btn-primary inline-block mb-6">
-        Download free PDF
-      </a>
-      <p class="text-sm text-tjb-gray mb-3">Print it, fill it out, hand it to your nurse.</p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-        <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="inline-flex items-center gap-2 text-tjb-lavender-600 font-semibold hover:text-tjb-lavender-700 transition-colors">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-          Get the free app — richer, updatable, shareable
-        </a>
-      </div>
-    </div>
-  </section>
+  <!-- CTA band — email-gated PDF download -->
+  <CityLeadCaptureForm city={city} />
 
 </Layout>
 
-<!-- Email-gated form removed: direct PDF download replaces email collection -->

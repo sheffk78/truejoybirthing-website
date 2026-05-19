@@ -95,7 +95,7 @@ const schemaBase = {
               "@type": "Service",
               "@id": "https://truejoybirthing.com/#guided-birth-plan-service",
               "name": "Guided Birth Plan Walkthrough",
-              "url": "https://truejoybirthing.com/#download",
+              "url": "https://truejoybirthing.com/birth-plan-template/",
               "description": "Free guided walkthrough walking you through each section of your birth plan, available in the True Joy Birthing app.",
               "serviceType": "Birth Education",
               "provider": { "@id": "https://truejoybirthing.com/#organization" },
@@ -237,8 +237,8 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
           <a href="/blog" class="hover:text-tjb-rose-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-500 after:transition-all after:duration-300 hover:after:w-full">Blog</a>
           <a href="/contact" class="hover:text-tjb-rose-500 transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-tjb-rose-500 after:transition-all after:duration-300 hover:after:w-full">Contact</a>
         </nav>
-        <a href="#download" id="nav-cta" class="hidden md:inline-block bg-tjb-lavender-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-tjb-rose-500 focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 active:translate-y-0 transition-all duration-300">
-          Get the free PDF
+        <a href="/birth-plan-template/" id="nav-cta" class="hidden md:inline-block bg-tjb-lavender-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-tjb-rose-500 focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 active:translate-y-0 transition-all duration-300">
+          Get the Free Birth Plan
         </a>
         <button id="mobile-menu-btn" class="md:hidden text-tjb-charcoal p-2" aria-label="Open menu">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -250,7 +250,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
           <a href="/about" class="hover:text-tjb-rose-500 transition">About</a>
           <a href="/blog" class="hover:text-tjb-rose-500 transition">Blog</a>
           <a href="/contact" class="hover:text-tjb-rose-500 transition">Contact</a>
-          <a href="#download" class="bg-tjb-lavender-600 text-white px-6 py-2.5 rounded-full text-center font-semibold w-fit hover:bg-tjb-rose-500 focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 active:translate-y-0 transition">Get the free PDF</a>
+          <a href="/birth-plan-template/" class="bg-tjb-lavender-600 text-white px-6 py-2.5 rounded-full text-center font-semibold w-fit hover:bg-tjb-rose-500 focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 active:translate-y-0 transition">Get the Free Birth Plan</a>
         </nav>
       </div>
     </header>
@@ -288,10 +288,9 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
               <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.81-1.31.03-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.97-.09.06-2.17 1.28-2.15 3.8.03 3.02 2.65 4.03 2.68 4.04-.02.07-.42 1.45-1.39 2.88M12.03 6.37c.69-.82 1.15-1.97 1.03-3.11-1 .04-2.22.66-2.93 1.5-.64.74-1.2 1.93-1.05 3.07 1.12.09 2.26-.57 2.95-1.46"/></svg>
               App Store
             </a>
-            <span class="inline-flex items-center gap-2 bg-tjb-gray-300/30 text-tjb-gray-400 px-5 py-2.5 rounded-full text-sm font-semibold cursor-not-allowed relative group">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.61 1.814L13.793 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.61-.92zm10.89 9.48l2.71-1.572 2.525 4.363-2.71 1.572-2.525-4.363zm-2.75.412L5.28 4.772l8.346 4.833-2.877 1.101zM5.28 19.228l6.47-6.928 2.877 1.1-8.347 4.828zm14.074-5.543l-2.71-1.572 2.525-4.363 2.71 1.572-2.525 4.363z"/></svg>
-              Google Play
-              <span class="absolute -top-8 left-1/2 -translate-x-1/2 bg-white text-tjb-charcoal text-xs font-medium px-2.5 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Coming soon</span>
+            <span class="relative group inline-flex items-center" title="Google Play — Coming soon">
+              <img src="/images/google-play-badge.png" alt="Get it on Google Play" class="h-9 w-auto opacity-50 grayscale" loading="lazy" />
+              <span class="absolute -top-7 left-1/2 -translate-x-1/2 bg-white text-tjb-charcoal text-xs font-medium px-2.5 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Coming soon</span>
             </span>
           </div>
         </div>
