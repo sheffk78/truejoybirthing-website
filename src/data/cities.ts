@@ -816,6 +816,91 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["waco-tx", "austin-tx"],
   },
+  "brownsville-tx": {
+    city: "Brownsville",
+    state: "TX",
+    slug: "brownsville-tx",
+    costLow: 600,
+    costHigh: 1400,
+    shelbiServesHere: false,
+    culture: "Brownsville sits directly on the US-Mexico border adjacent to Matamoros, Tamaulipas, and its birthing culture reflects deep cross-border family ties, with many families having support networks on both sides of the bridge. At roughly 94% Hispanic population, Brownsville families commonly seek bilingual providers and value cultural traditions like cuarentena (the 40-day postpartum recovery period). The city's Gulf-coast border identity shapes everything from maternity comfort to the local approach to postpartum rest.",
+    heroLocalDetail: "Valley Regional Medical Center on Alton Gloor Blvd is the only Brownsville hospital with a Level III NICU verified on its own website \u2014 a key detail for families weighing where to deliver in the RGV.",
+    hospitalDetails: [
+      { name: "Valley Regional Medical Center", paragraph: "If you\u2019re delivering in Brownsville, Valley Regional is the hospital most local moms already know \u2014 it\u2019s been serving RGV families for over 50 years right off Alton Gloor Blvd. They\u2019ve got a verified Level III NICU, which means if your baby needs extra care after birth, you don\u2019t have to drive to Harlingen or McAllen. Valley Regional is an HCA Healthcare hospital with a solid network of OB-GYNs and a full women\u2019s and children\u2019s program. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to walk in prepared." },
+      { name: "Valley Baptist Medical Center \u2013 Brownsville", paragraph: "Valley Baptist \u2013 Brownsville is the other major hospital in town, and they\u2019ve earned Healthgrades\u2019 Labor and Delivery Excellence Award, which speaks to the quality of their maternity program. They have a NICU for newborns who need specialized support \u2014 contact the hospital directly for current NICU level and maternity service details. If you live on the south side of Brownsville, Valley Baptist may be the closer option for prenatal visits and delivery." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned zero results for Brownsville, TX (2026-05-19).
+    // Google Maps and social media searches found no freestanding birth center.
+    // RGV birth center documentation: see McAllen city page comment (verified 2026-05-17).
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Cameron County\u2019s STAR managed care plans. Many Brownsville families depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Brownsville area. Some RGV community health workers (promotoras) may offer free or low-cost pregnancy support through local nonprofits or county health programs \u2014 check with your hospital\u2019s financial counselor for in-house support programs, and whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "How much does a doula cost in Brownsville?", a: "$600 to $1,400 depending on experience and package. The RGV\u2019s lower cost of living keeps prices below big-city Texas rates, but bilingual or bicultural doulas with specialized training may charge more. Always ask about payment plans or sliding-scale options." },
+      { q: "Does Medicaid cover doulas in Brownsville?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Cameron County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which Brownsville hospitals have labor and delivery?", a: "Brownsville has two hospitals with labor and delivery: Valley Regional Medical Center on Alton Gloor Blvd (verified Level III NICU) and Valley Baptist Medical Center \u2013 Brownsville (Labor and Delivery Excellence Award from Healthgrades). Some Brownsville families also travel to Harlingen or McAllen for additional hospital options." },
+      { q: "Does True Joy Birthing work for Brownsville families?", a: "True Joy Birthing provides free birth-prep tools for Brownsville families. The free birth plan, checklist, and guided walkthrough in the app work for any Brownsville birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["mcallen-tx", "corpus-christi-tx", "laredo-tx"],
+  },
+  "edinburg-tx": {
+    city: "Edinburg",
+    state: "TX",
+    slug: "edinburg-tx",
+    costLow: 600,
+    costHigh: 1400,
+    shelbiServesHere: false,
+    culture: "Edinburg sits at the crossroads of the Rio Grande Valley as the Hidalgo County seat, shaped by generations of bilingual, bicultural families and a strong connection to life on the U.S.\u2013Mexico border. With UTRGV calling Edinburg home, the city blends a college-town energy with deep South Texas roots and community-centered traditions.",
+    heroLocalDetail: "DHR Health Women\u2019s Hospital on McColl Road is the Rio Grande Valley\u2019s only Level IV Maternal Facility \u2014 the highest designation the state of Texas awards for maternal care.",
+    hospitalDetails: [
+      { name: "DHR Health Women\u2019s Hospital", paragraph: "If you\u2019re giving birth in Edinburg, chances are DHR Health Women\u2019s Hospital is on your radar \u2014 and for good reason. It\u2019s the only Level IV Maternal Facility in the entire Rio Grande Valley, which means they\u2019re equipped to handle everything from straightforward deliveries to the most complex high-risk pregnancies. They\u2019ve got maternal fetal medicine specialists on staff, VBAC support, a lactation program, genetic counseling, and even Lamaze classes right on campus. The NICU is there if your baby needs extra care after birth \u2014 contact the hospital directly for current NICU level and maternity service details. <a href=\"/birth-plan-template/\">Start your free birth plan</a> to prep for your DHR delivery." },
+      { name: "South Texas Health System Edinburg / STHS McAllen", paragraph: "South Texas Health System Edinburg, over on West Trenton Road, is part of a broader hospital family \u2014 and that matters when you\u2019re planning a birth. STHS McAllen, just minutes south on Expressway 83, is where the system\u2019s maternity unit lives, so if you\u2019re leaning toward an STHS provider for prenatal care, your delivery will likely happen at the McAllen campus with its verified Level III NICU. The advantage? If anything comes up that needs a higher level of neonatal care, STHS McAllen can keep you in the same system without a scramble to another hospital network." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned zero results for Edinburg and McAllen, TX (2026-05-19).
+    // Google Maps and social media searches found no freestanding birth center.
+    // RGV birth center documentation: see McAllen city page comment (verified 2026-05-17).
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Hidalgo County\u2019s STAR managed care plans. Hidalgo County has one of the highest uninsured rates in the United States \u2014 many families depend on Medicaid, CHIP, and the Healthy Texas Women program. Contact your Medicaid managed care plan to confirm doula coverage, and call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Rio Grande Valley. Hidalgo County\u2019s provider shortage means fewer in-network doulas overall \u2014 check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "How much does a doula cost in Edinburg?", a: "$600 to $1,400 depending on experience and package. The RGV has fewer practicing doulas than major Texas metros, so availability may be limited and some doulas charge travel fees if you\u2019re outside the McAllen\u2013Edinburg corridor. Always ask about payment plans or sliding-scale options." },
+      { q: "Does Medicaid cover doulas in Edinburg?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Hidalgo County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals in Edinburg offer labor and delivery?", a: "DHR Health Women\u2019s Hospital, on McColl Road in Edinburg, is the primary L&D hospital and the only Level IV Maternal Facility in the Rio Grande Valley. South Texas Health System\u2019s maternity services operate out of STHS McAllen, just a few miles south on Expressway 83, with a verified Level III NICU. Both systems serve Edinburg families." },
+      { q: "Does True Joy Birthing work for Edinburg families?", a: "True Joy Birthing provides free birth-prep tools for Edinburg families. The free birth plan, checklist, and guided walkthrough in the app work for any Edinburg birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["mcallen-tx", "laredo-tx", "corpus-christi-tx"],
+  },
+  "harlingen-tx": {
+    city: "Harlingen",
+    state: "TX",
+    slug: "harlingen-tx",
+    costLow: 600,
+    costHigh: 1400,
+    shelbiServesHere: false,
+    culture: "Harlingen is where US-77 and US-83 meet \u2014 quite literally the crossroads of the Rio Grande Valley. Known locally as \u201CThe Capital of the Valley,\u201D it pulls families from Brownsville, San Benito, and the surrounding colonias who come here for hospital births at the region\u2019s biggest medical center. Bilingual care isn\u2019t a nice-to-have in Harlingen; it\u2019s just how things are done. Expect your providers to switch between English and Spanish mid-sentence, and expect your extended family to show up at the hospital because that\u2019s how Valley families do birth \u2014 together.",
+    heroLocalDetail: "Harlingen sits where the Valley\u2019s two main highways converge \u2014 US-77 (I-69E) heading north toward Corpus Christi and US-83 (I-2) stretching west to McAllen and Laredo \u2014 making it the natural healthcare destination for families across Cameron County.",
+    hospitalDetails: [
+      { name: "Valley Baptist Medical Center \u2013 Harlingen", paragraph: "Valley Baptist is the big one in Harlingen \u2014 586 beds, the only Level II Trauma Center in the entire Rio Grande Valley, and the hospital where most Cameron County families end up when it\u2019s time to deliver. They\u2019ve got private labor/delivery/recovery suites, a family-centered maternity unit, and the only NICU in Harlingen \u2014 contact the hospital directly for current NICU level and maternity service details. If you\u2019re a high-risk patient or your OB is concerned about complications, Valley Baptist is where you\u2019ll likely be sent. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> before your tour so you know what to ask." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned zero results for Harlingen, TX (2026-05-19).
+    // Google Maps and social media searches found no freestanding birth center.
+    // RGV birth center documentation: see McAllen city page comment (verified 2026-05-17).
+    // Note: Harlingen Medical Center (112 beds) discontinued labor and delivery services effective
+    // January 10, 2025. It is not listed as a delivery hospital.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Cameron County\u2019s STAR managed care plans. Cameron County has one of the highest uninsured rates in the state \u2014 many families here depend on Medicaid, CHIP, and the Healthy Texas Women program. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Harlingen area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Some RGV community health workers (promotoras) may offer free or low-cost pregnancy support through local nonprofits or county health programs.",
+    faqs: [
+      { q: "How much does a doula cost in Harlingen?", a: "$600 to $1,400 depending on experience and package. Rates in the Rio Grande Valley tend to run lower than in larger Texas metros like Austin or Dallas. Some doulas offer sliding-scale fees or package deals that include prenatal visits, labor support, and postpartum follow-up." },
+      { q: "Does Medicaid cover doulas in Harlingen?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Cameron County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals in Harlingen have labor and delivery?", a: "Valley Baptist Medical Center \u2013 Harlingen is the city\u2019s primary hospital for labor and delivery, with a NICU, private LDR suites, and the only Level II Trauma Center in the Rio Grande Valley. Harlingen Medical Center discontinued its labor and delivery services in January 2025. Some Harlingen families also travel to McAllen or Brownsville for additional hospital options." },
+      { q: "Does True Joy Birthing work for Harlingen families?", a: "True Joy Birthing provides free birth-prep tools for Harlingen families. The free birth plan, checklist, and guided walkthrough in the app work for any Harlingen birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["mcallen-tx", "corpus-christi-tx"],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
