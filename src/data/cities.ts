@@ -141,6 +141,31 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["san-antonio-tx", "houston-tx"],
   },
+  "beaumont-tx": {
+    city: "Beaumont",
+    state: "TX",
+    slug: "beaumont-tx",
+    costLow: 700,
+    costHigh: 1600,
+    shelbiServesHere: false,
+    culture: "Beaumont sits in the Golden Triangle of southeast Texas, where families from Jefferson, Hardin, and Orange counties come for hospital births. The birth community is small but committed, and families here tend to plan carefully \u2014 often traveling from rural areas into the city for delivery.",
+    heroLocalDetail: "Families across the Golden Triangle \u2014 from Beaumont, Port Arthur, and Orange \u2014 deliver at St. Elizabeth, where the L&D unit sees a steady volume of births from across the region.",
+    hospitalDetails: [
+      { name: "CHRISTUS Southeast Texas \u2013 St. Elizabeth", paragraph: "CHRISTUS Southeast Texas \u2013 St. Elizabeth, at 2830 Calder Ave in Beaumont, is the region's anchor hospital for labor and delivery. Their L&D unit includes a NICU and maternal transport services, drawing families from across the Golden Triangle. Doulas are generally welcome \u2014 confirm visitor policy on your hospital tour. If you're delivering at St. Elizabeth, a birth plan helps the nursing team understand your preferences quickly, especially when the unit is busy. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started. CHRISTUS Southeast Texas \u2013 St. Mary, about 10 miles south in Port Arthur, is part of the same CHRISTUS system and provides additional emergency and specialty services." },
+    ],
+    birthCenterDetails: [
+      // NPI taxonomy 261QB0400X search (Beaumont, Port Arthur, Orange TX) returned zero birth centers (2026-05-19). Google Maps search for "birth center Beaumont TX" and "freestanding birth center Beaumont" also returned no results.
+    ],
+    medicaidNote: "Texas Medicaid's doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Beaumont area. Confirm with your Medicaid plan.",
+    insuranceNote: "Some private insurers in the Beaumont region now cover doula support as part of maternal wellness benefits. Contact your plan.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Beaumont?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits." },
+      { q: "How much does a doula cost in Beaumont?", a: "$700 to $1,600 depending on experience and package. Costs in southeast Texas tend to be lower than in major metro areas." },
+      { q: "Which Beaumont hospitals are birth-plan friendly?", a: "CHRISTUS Southeast Texas \u2013 St. Elizabeth is the primary L&D hospital serving the Golden Triangle. Doulas are generally welcome there. Always confirm current visitor and support-person policies during your hospital tour \u2014 they can change." },
+      { q: "Does True Joy Birthing work with Beaumont families?", a: "True Joy Birthing provides free birth-prep tools for Beaumont families. The free birth plan, checklist, and guided walkthrough in the app work for any Beaumont birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["houston-tx"],
+  },
   "carrollton-tx": {
     city: "Carrollton",
     state: "TX",
