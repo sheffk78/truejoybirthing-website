@@ -553,6 +553,32 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["plano-tx", "frisco-tx", "denton-tx"],
   },
+  "odessa-tx": {
+    city: "Odessa",
+    state: "TX",
+    slug: "odessa-tx",
+    costLow: 700,
+    costHigh: 1600,
+    shelbiServesHere: false,
+    culture: "Odessa sits in the heart of the Permian Basin, where families from across West Texas come for hospital births. The birth community here is small but connected, and doulas who serve both Odessa and Midland tend to know both hospitals well.",
+    heroLocalDetail: "Odessa Regional Medical Center started as a women\u2019s and children\u2019s hospital \u2014 maternity care is literally what this place was built for.",
+    hospitalDetails: [
+      { name: "Odessa Regional Medical Center", paragraph: "Odessa Regional Medical Center, at 515 N Texas Ave, was founded as a women\u2019s and children\u2019s hospital and still carries that focus with a verified Level III NICU and the Permian Basin\u2019s most established maternity program. If you\u2019re delivering at ORMC, a birth plan helps the nursing team understand your preferences quickly, especially when the unit is busy. <a href=\"/birth-plan-template/\">Come prepared with our free template</a> and walk in knowing what you want." },
+      { name: "Medical Center Hospital", paragraph: "Medical Center Hospital, at 500 W 4th St, is Odessa\u2019s other major hospital with OB/GYN services and a NICU. It\u2019s part of the Medical Center Health System serving the broader Permian Basin. If we\u2019re being real, families who want a higher-level NICU or a more specialized maternity experience often deliver at ORMC down the street \u2014 but MCH sees a solid volume of births and your birth plan works there too." },
+    ],
+    birthCenterDetails: [
+      // NPI taxonomy 261QB0400X search (Odessa, Midland TX) returned zero birth centers (2026-05-19). Google Maps search for "birth center Odessa TX" returned The Birth Center of Midland (~20 mi away), which is already documented on the Midland city page.
+    ],
+    medicaidNote: "Texas Medicaid's doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Odessa area. Confirm with your Medicaid plan.",
+    insuranceNote: "Some private insurers in the Odessa region now cover doula support as part of maternal wellness benefits. Contact your plan.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Odessa?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits." },
+      { q: "How much does a doula cost in Odessa?", a: "$700 to $1,600 depending on experience and package. Costs in the Permian Basin tend to be lower than in major Texas metros." },
+      { q: "Which Odessa hospitals are birth-plan friendly?", a: "Odessa Regional Medical Center and Medical Center Hospital both provide labor and delivery services. Doulas are generally welcome at both. Always confirm current visitor and support-person policies during your hospital tour." },
+      { q: "Does True Joy Birthing work with Odessa families?", a: "True Joy Birthing provides free birth-prep tools for Odessa families. The free birth plan, checklist, and guided walkthrough in the app work for any Odessa birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["midland-tx", "lubbock-tx"],
+  },
   "mesquite-tx": {
     city: "Mesquite",
     state: "TX",
