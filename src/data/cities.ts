@@ -901,6 +901,202 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["mcallen-tx", "corpus-christi-tx"],
   },
+  "round-rock-tx": {
+    city: "Round Rock",
+    state: "TX",
+    slug: "round-rock-tx",
+    costLow: 900,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    culture: "Round Rock sits in fast-growing Williamson County, just north of Austin on I-35. It\u2019s the birthplace of Dell Technologies and one of the fastest-growing cities in the metro \u2014 young families are moving here for the schools and the cost of living, and the birth community is catching up with them. Williamson County\u2019s explosive growth means many families are driving from new subdivisions in Liberty Hill, Leander, and Hutto to deliver at St. David\u2019s Round Rock, so advance planning matters more than it does closer in to Austin.",
+    heroLocalDetail: "St. David\u2019s Round Rock Medical Center sits at 2400 Round Rock Ave, just off I-35 and Round Rock Ave exit 252. From the 45 Toll Road, take the Round Rock Ave exit and head east \u2014 you\u2019ll hit the hospital in about 3 minutes. During afternoon rush, I-35 between SH 45 and the hospital exit can slow to a crawl, so build in an extra 10\u201315 minutes if you\u2019re coming from Cedar Park or Leander. Old Settlers Park is the unofficial walking spot for third-trimester Round Rock moms \u2014 flat trails, shade, and about 5 minutes from the hospital entrance.",
+    hospitalDetails: [
+      { name: "St. David\u2019s Round Rock Medical Center", paragraph: "St. David\u2019s Round Rock Medical Center, at 2400 Round Rock Ave, is the primary hospital for labor and delivery in Round Rock and one of the busiest L&D units in Williamson County. The hospital offers NICU services and a full women\u2019s health program, though the specific NICU level is not stated on their website \u2014 contact the hospital directly for current NICU level and maternity service details. With 209 beds and a Level II Trauma Center designation, St. David\u2019s Round Rock handles a high volume of births for the fast-growing northern Austin suburbs. If you\u2019re delivering here, bring your birth plan \u2014 this hospital sees a lot of families and moves fast, and having your preferences written down makes the intake conversation smoother when you\u2019re already in labor. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned no results for Round Rock, TX.
+    // Google Maps search for "birth center Round Rock TX" and "freestanding birth center Round Rock" returned no results.
+    // Nearest birth centers are in Austin (Austin Area Birthing Center and Natural Beginnings), approximately 30+ minutes south.
+    // Verified 2026-05-19.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Williamson County\u2019s STAR managed care plans. Williamson County\u2019s rapid growth means a lot of newly enrolled families \u2014 contact your Medicaid managed care plan to confirm doula coverage, as some plans are still completing their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Round Rock area. Austin\u2019s tech-sector employers increasingly include maternity wellness benefits that may cover doula support \u2014 check with your HR department. HSA and FSA funds can also be applied toward out-of-pocket doula costs.",
+    faqs: [
+      { q: "How much does a doula cost in Round Rock?", a: "$900 to $2,200 depending on experience and package. Round Rock sits between Austin-level pricing for experienced doulas who serve the whole metro and slightly lower rates for doulas based in Williamson County. Some doulas offer travel discounts for families in Leander, Cedar Park, and Liberty Hill." },
+      { q: "Does Medicaid cover doulas in Round Rock?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Williamson County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals in Round Rock have labor and delivery?", a: "St. David\u2019s Round Rock Medical Center at 2400 Round Rock Ave is the primary hospital for labor and delivery in Round Rock, with NICU services and a full women\u2019s health program. Some Round Rock families also deliver at St. David\u2019s South Austin or St. David\u2019s North Austin Medical Center for additional options." },
+      { q: "Does True Joy Birthing work with Round Rock families?", a: "True Joy Birthing provides free birth-prep tools for Round Rock families. The free birth plan, checklist, and guided walkthrough in the app work for any Round Rock birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["austin-tx", "killeen-tx"],
+  },
+  "richardson-tx": {
+    city: "Richardson",
+    state: "TX",
+    slug: "richardson-tx",
+    costLow: 900,
+    costHigh: 2400,
+    shelbiServesHere: false,
+    culture: "Richardson is an established inner-ring suburb sandwiched between Dallas and Plano along US-75 \u2014 a Telecom Corridor city whose identity is shifting toward young families and diverse communities. The birth landscape here is anchored by Methodist Richardson Medical Center, and Richardson families also have easy access to the major hospital systems in Dallas, Garland, and Plano. Richardson\u2019s South Asian, Vietnamese, and East African communities shape a unique birth culture where family involvement in the postpartum period is the norm, not the exception.",
+    heroLocalDetail: "Methodist Richardson Medical Center sits at 2831 E. President George Bush Turnpike (at Renner Road), on the east side of Richardson. From US-75, take the Renner Road exit heading east for about 2 miles, or from I-635, take the President George Bush Turnpike exit and head north \u2014 the hospital entrance is right off the Turnpike frontage road. Breckinridge Park\u2019s flat loop trail is about 5 minutes away and a popular spot for Richardson families getting third-trimester walks in close to the hospital.",
+    hospitalDetails: [
+      { name: "Methodist Richardson Medical Center", paragraph: "Methodist Richardson Medical Center, at 2831 E. President George Bush Turnpike, is Richardson\u2019s primary hospital for labor and delivery with a verified Level III NICU and a dedicated Women\u2019s Pavilion, both stated directly on methodisthealthsystem.org. The hospital provides 24/7 obstetric hospitalists, private labor and delivery suites, and lactation support. If you\u2019re delivering at Methodist Richardson, having your birth plan ready makes the check-in process faster when you arrive in labor \u2014 they see a steady volume from Richardson, Garland, Murphy, and Sachse families. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something clear to work from." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned no results for Richardson, TX.
+    // Google Maps search for "birth center Richardson TX" and "freestanding birth center Richardson" returned no results.
+    // Nearest birth centers are in Dallas (e.g., The Birth Place Dallas, approximately 20 minutes southwest).
+    // Verified 2026-05-19.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Dallas County\u2019s STAR managed care plans. Richardson straddles both Dallas and Collin counties, so check which county your Medicaid enrollment falls under. Contact your Medicaid managed care plan to confirm doula coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Richardson area. The Telecom Corridor\u2019s major employers \u2014 including AT&T, Cisco, and regional health systems \u2014 increasingly offer maternity wellness benefits that may cover doula support. Check with your HR department and ask whether HSA or FSA funds can help with out-of-pocket doula costs.",
+    faqs: [
+      { q: "How much does a doula cost in Richardson?", a: "$900 to $2,400 depending on experience and package. Richardson\u2019s doula market overlaps with Dallas pricing, so costs run similar to inner-ring DFW suburbs. Some doulas based in Richardson or Garland may offer slightly lower rates than Dallas-proper doulas." },
+      { q: "Does Medicaid cover doulas in Richardson?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas County\u2019s STAR managed care plans. Richardson straddles Dallas and Collin counties, so confirm which county your enrollment falls under. Contact your plan directly to verify coverage. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals in Richardson have labor and delivery?", a: "Methodist Richardson Medical Center at 2831 E. President George Bush Turnpike is Richardson\u2019s primary hospital for labor and delivery, with a verified Level III NICU and dedicated Women\u2019s Pavilion. Some Richardson families also deliver at Medical City Dallas or Baylor Scott & White in Plano for additional options." },
+      { q: "Does True Joy Birthing work with Richardson families?", a: "True Joy Birthing provides free birth-prep tools for Richardson families. The free birth plan, checklist, and guided walkthrough in the app work for any Richardson birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["dallas-tx", "plano-tx", "garland-tx", "carrollton-tx"],
+  },
+  "conroe-tx": {
+    city: "Conroe",
+    state: "TX",
+    slug: "conroe-tx",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: true,
+    culture: "Conroe is the seat of Montgomery County and the gateway to Lake Conroe, sitting about 40 minutes north of Houston on I-45. The city has grown fast alongside The Woodlands, and HCA Houston Healthcare Conroe is the only hospital with labor and delivery in Montgomery County. Journey Birth Center, a freestanding birth center in downtown Conroe, gives families an out-of-hospital option that most neighboring counties lack. The mix of long-time Conroe residents and Houston transplants means you\u2019ll find both hospital-first and birth-center preferences in the same community.",
+    heroLocalDetail: "HCA Houston Healthcare Conroe sits at 504 Medical Drive, just off I-45 North at the Loop 336 exit. If you\u2019re coming from The Woodlands or Spring, take I-45 North to Exit 87 (Loop 336 West) and follow the hospital signs. Journey Birth Center is at 1202 N San Jacinto St, about 5 minutes from the hospital in downtown Conroe.",
+    hospitalDetails: [
+      {
+        name: "HCA Houston Healthcare Conroe",
+        paragraph: "HCA Houston Healthcare Conroe, at 504 Medical Drive, is the only hospital with labor and delivery in Montgomery County, with a verified Level II NICU stated directly on hcahoustonhealthcare.com. Their maternity unit offers private birthing suites, 24/7 obstetric hospitalists, and lactation support. They handle a high volume of births for the Conroe\u2013The Woodlands corridor, so come with your preferences written down \u2014 a birth plan helps the team work with you when things move fast. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started.",
+      },
+    ],
+    birthCenterDetails: [
+      {
+        name: "Journey Birth Center",
+        paragraph: "Journey Birth Center, at 1202 N San Jacinto St in downtown Conroe, is a freestanding birth center offering low-intervention, midwife-led births in a home-like setting. They serve families from Conroe, The Woodlands, and Montgomery County who want an alternative to hospital birth. Verify with the center directly for current services and insurance coverage.",
+      },
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Montgomery County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
+    medicaidCounty: "Montgomery",
+    insuranceNote: "HCA Houston Healthcare Conroe accepts most major private insurance plans. Some insurers in the Montgomery County area offer maternal wellness benefits that partially cover doula services \u2014 check with your provider directly, and ask whether HSA or FSA funds can help with out-of-pocket costs.",
+    faqs: [
+      { q: "How much does a doula cost in Conroe?", a: "$800 to $2,000 depending on experience and package. Conroe sits in the Houston metro market, so rates run slightly lower than in-town Houston but higher than rural East Texas. Some doulas offer sliding-scale fees or package deals that include prenatal visits, labor support, and postpartum follow-up." },
+      { q: "Does Medicaid cover doulas in Conroe?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Montgomery County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals in Conroe have labor and delivery?", a: "HCA Houston Healthcare Conroe, at 504 Medical Drive, is the only hospital with labor and delivery in Montgomery County, with a verified Level II NICU. Journey Birth Center at 1202 N San Jacinto St offers midwife-led out-of-hospital birth for low-risk pregnancies." },
+      { q: "Does True Joy Birthing work for Conroe families?", a: "True Joy Birthing provides free birth-prep tools for Conroe families. The free birth plan, checklist, and guided walkthrough in the app work for any Conroe birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["houston-tx", "college-station-tx", "beaumont-tx"],
+  },
+  "sugar-land-tx": {
+    city: "Sugar Land",
+    state: "TX",
+    slug: "sugar-land-tx",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: true,
+    culture: "Sugar Land is one of the most affluent and diverse suburbs in the Houston metro, with large Asian and Hispanic communities that shape how families approach birth. Many families here have access to employer-based insurance and higher-end doula packages, but Fort Bend County also has growing Medicaid enrollment. Memorial Hermann Sugar Land and Houston Methodist Sugar Land anchor the birth landscape, with a Level II and Level III NICU respectively \u2014 giving families two strong hospital options within city limits.",
+    heroLocalDetail: "Memorial Hermann Sugar Land sits at 17500 West Grand Parkway South, near the intersection of Sweetwater Blvd and University Blvd. Houston Methodist Sugar Land is at 16655 Southwest Freeway (US-59 at Sugar Creek). Both hospitals are 5\u201310 minutes from most Sugar Land neighborhoods. During afternoon rush on US-59, allow an extra 10 minutes if you\u2019re heading to Houston Methodist from the Riverstone or Telfair areas.",
+    hospitalDetails: [
+      {
+        name: "Memorial Hermann Sugar Land",
+        paragraph: "Memorial Hermann Sugar Land, at 17500 West Grand Parkway South, offers labor and delivery with a Level II NICU stated directly on memorialhermann.org. They\u2019re currently expanding their NICU to Level III (expected 2027), which will bring the highest-level neonatal care to Fort Bend County. For now, families needing a Level III NICU are referred to Houston Methodist Sugar Land or into the Texas Medical Center. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started.",
+      },
+      {
+        name: "Houston Methodist Sugar Land",
+        paragraph: "Houston Methodist Sugar Land, at 16655 Southwest Freeway, is the city\u2019s other major hospital for labor and delivery, with a Level III NICU stated directly on houstonmethodist.org, operated in partnership with Texas Children\u2019s Hospital. The hospital offers a full-service Childbirth Center with 24/7 obstetric hospitalists, VBAC support, and lactation consultants. If you\u2019re planning a VBAC or have a high-risk pregnancy, Houston Methodist\u2019s Level III NICU (verified on houstonmethodist.org) makes it the stronger option in Sugar Land.",
+      },
+    ],
+    // No freestanding birth centers identified in Sugar Land or Fort Bend County.
+    // Searched NPI taxonomy 261QB0400X, DONA directory, and Google Maps.
+    // Nearest birth centers are in Houston proper (Nativiti Birth Center in Spring,
+    // ~25 miles). Verified 2026-05-19.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Fort Bend County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
+    medicaidCounty: "Fort Bend",
+    insuranceNote: "Sugar Land\u2019s mix of employer-based and marketplace insurance means most families have some coverage. Many employers in the Fort Bend County area offer maternity wellness benefits \u2014 check with HR whether your plan includes doula support. HSA and FSA funds can often be applied toward out-of-pocket doula costs.",
+    faqs: [
+      { q: "How much does a doula cost in Sugar Land?", a: "$900 to $2,500 depending on experience and package. Sugar Land\u2019s doula market reflects its affluent suburban setting \u2014 rates run higher than most of the Houston metro. Some doulas offer premium packages with postpartum visits, lactation support, and sibling prep at the top of the range." },
+      { q: "Does Medicaid cover doulas in Sugar Land?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Fort Bend County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals in Sugar Land have labor and delivery?", a: "Sugar Land has two hospitals with labor and delivery: Memorial Hermann Sugar Land (verified Level II NICU on memorialhermann.org, expanding to Level III by 2027) and Houston Methodist Sugar Land (verified Level III NICU on houstonmethodist.org, operated with Texas Children\u2019s Hospital). For VBAC or high-risk pregnancies, Houston Methodist is the stronger option." },
+      { q: "Does True Joy Birthing work for Sugar Land families?", a: "True Joy Birthing provides free birth-prep tools for Sugar Land families. The free birth plan, checklist, and guided walkthrough in the app work for any Sugar Land birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["houston-tx"],
+  },
+  "pharr-tx": {
+    city: "Pharr",
+    state: "TX",
+    slug: "pharr-tx",
+    costLow: 600,
+    costHigh: 1400,
+    shelbiServesHere: true,
+    culture: "Pharr sits in the heart of the Rio Grande Valley, adjacent to McAllen on Expressway 83. The Pharr International Bridge connects the city to Reynosa, and cross-border family networks shape birth traditions here. Pharr families are predominantly bilingual and bicultural, with deep cuarentena traditions and promotoras filling community health gaps. While there is no hospital with labor and delivery within city limits, Pharr is a 5-minute drive from STHS McAllen and 10 minutes from DHR Health in Edinburg, giving families fast access to the RGV\u2019s major birth centers.",
+    heroLocalDetail: "Pharr doesn\u2019t have its own hospital with labor and delivery, but STHS McAllen is about 5 minutes west on Expressway 83, and DHR Health Women\u2019s Hospital in Edinburg is about 10 minutes east via Expressway 83 and McColl Road. If you\u2019re in Pharr during afternoon rush, the Expressway frontage roads between Pharr and McAllen can slow down \u2014 but the drive to either hospital is rarely more than 15 minutes even at peak times.",
+    hospitalDetails: [
+      {
+        name: "South Texas Health System McAllen",
+        paragraph: "Pharr doesn\u2019t have a hospital with labor and delivery within city limits \u2014 the nearest is STHS McAllen, about 5 minutes west on Expressway 83, with a verified Level III NICU stated directly on sths.com. STHS McAllen\u2019s dedicated Maternity Center handles a high volume of RGV births and offers private birthing suites, 24/7 obstetric coverage, and lactation support. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something clear to work from.",
+      },
+      {
+        name: "DHR Health Women\u2019s Hospital",
+        paragraph: "Pharr families also use DHR Health Women\u2019s Hospital in Edinburg, about 10 minutes east, which holds a Level IV Maternal Facility designation from the state of Texas \u2014 the only one in the Rio Grande Valley. NICU level: contact the hospital directly for current designation. DHR handles the most complex pregnancies in the region, and their perinatal referral network extends across South Texas.",
+      },
+    ],
+    // No freestanding birth centers in Pharr. NPI taxonomy 261QB0400X returned
+    // zero results for Pharr, TX. Google Maps search confirmed no birth center.
+    // RGV-wide search already documented on McAllen city page (verified 2026-05-17).
+    // Families seeking birth center care would need to look outside the Valley.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Hidalgo County\u2019s STAR managed care plans. Hidalgo County has one of the highest uninsured rates in the United States \u2014 many families here depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
+    medicaidCounty: "Hidalgo",
+    insuranceNote: "Most Pharr-area families with private insurance use plans through employer groups or the ACA marketplace. STHS McAllen and DHR Health accept most major plans \u2014 verify your coverage and ask about prior authorization requirements early in your pregnancy.",
+    faqs: [
+      { q: "How much does a doula cost in Pharr?", a: "$600 to $1,400 depending on experience and package. Rates in the Rio Grande Valley tend to run lower than in larger Texas metros like Austin or Dallas. Some doulas offer sliding-scale fees or package deals that include prenatal visits, labor support, and postpartum follow-up." },
+      { q: "Does Medicaid cover doulas in Pharr?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Hidalgo County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals near Pharr have labor and delivery?", a: "Pharr doesn\u2019t have a hospital with labor and delivery within city limits. The nearest options are STHS McAllen (5 minutes west on Expressway 83, verified Level III NICU) and DHR Health Women\u2019s Hospital in Edinburg (10 minutes east, Level IV Maternal Facility). Both are a short drive from anywhere in Pharr." },
+      { q: "Does True Joy Birthing work for Pharr families?", a: "True Joy Birthing provides free birth-prep tools for Pharr families. The free birth plan, checklist, and guided walkthrough in the app work for any Pharr birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["mcallen-tx", "edinburg-tx", "harlingen-tx"],
+  },
+  "mission-tx": {
+    city: "Mission",
+    state: "TX",
+    slug: "mission-tx",
+    costLow: 600,
+    costHigh: 1400,
+    shelbiServesHere: true,
+    culture: "Mission is known as the \u201CHome of the Grapefruit\u201D and sits just west of McAllen on Expressway 83. Like Pharr, Mission doesn\u2019t have a hospital with labor and delivery within city limits, but it\u2019s a 10-minute drive to STHS McAllen and about 8 minutes to DHR Health in Edinburg. The community is predominantly bilingual and bicultural, with strong cuarentena traditions and a tight network of promotoras and community health workers. The citrus-industry heritage means many families have multi-generational roots here.",
+    heroLocalDetail: "Mission doesn\u2019t have its own hospital with labor and delivery. STHS McAllen is about 10 minutes west on Expressway 83, and DHR Health Women\u2019s Hospital in Edinburg is about 8 minutes northeast via Business 83 and McColl Road. From downtown Mission, either hospital is accessible in under 15 minutes even during moderate traffic.",
+    hospitalDetails: [
+      {
+        name: "South Texas Health System McAllen",
+        paragraph: "Mission doesn\u2019t have a hospital with labor and delivery within city limits \u2014 the nearest is STHS McAllen, about 10 minutes west on Expressway 83, with a verified Level III NICU stated directly on sths.com. STHS McAllen\u2019s dedicated Maternity Center handles a high volume of RGV births and offers private birthing suites, 24/7 obstetric coverage, and lactation support. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something clear to work from.",
+      },
+      {
+        name: "DHR Health Women\u2019s Hospital",
+        paragraph: "Mission families also use DHR Health Women\u2019s Hospital in Edinburg, about 8 minutes northeast, which holds a Level IV Maternal Facility designation from the state of Texas \u2014 the only one in the Rio Grande Valley. NICU level: contact the hospital directly for current designation. DHR handles the most complex pregnancies in the region.",
+      },
+    ],
+    // No freestanding birth centers in Mission. NPI taxonomy 261QB0400X returned
+    // zero results for Mission, TX. Google Maps and social media confirmed no
+    // birth center. RGV-wide search already documented on McAllen city page
+    // (verified 2026-05-17).
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Hidalgo County\u2019s STAR managed care plans. Hidalgo County has one of the highest uninsured rates in the United States \u2014 many families here depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
+    medicaidCounty: "Hidalgo",
+    insuranceNote: "Most Mission-area families with private insurance use plans through employer groups or the ACA marketplace. STHS McAllen and DHR Health accept most major plans \u2014 verify your coverage and ask about prior authorization requirements early in your pregnancy.",
+    faqs: [
+      { q: "How much does a doula cost in Mission?", a: "$600 to $1,400 depending on experience and package. Rates in the Rio Grande Valley tend to run lower than in larger Texas metros like Austin or Dallas. Some doulas offer sliding-scale fees or package deals that include prenatal visits, labor support, and postpartum follow-up." },
+      { q: "Does Medicaid cover doulas in Mission?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Hidalgo County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals near Mission have labor and delivery?", a: "Mission doesn\u2019t have a hospital with labor and delivery within city limits. The nearest options are STHS McAllen (10 minutes west on Expressway 83, verified Level III NICU) and DHR Health Women\u2019s Hospital in Edinburg (8 minutes northeast, Level IV Maternal Facility). Both are a short drive from anywhere in Mission." },
+      { q: "Does True Joy Birthing work for Mission families?", a: "True Joy Birthing provides free birth-prep tools for Mission families. The free birth plan, checklist, and guided walkthrough in the app work for any Mission birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["mcallen-tx", "edinburg-tx", "harlingen-tx"],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
