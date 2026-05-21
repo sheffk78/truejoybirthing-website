@@ -11,7 +11,15 @@ interface Props {
   breadcrumbList?: { name: string; url: string }[];
 }
 
-const { title, description = "True Joy Birthing — birth education and planning tools for moms, doulas, and midwives.", canonical, ogImage = "https://truejoybirthing.com/images/og-default.webp" } = Astro.props;
+const { title, description = "True Joy Birthing — birth education and planning tools for moms, doulas, and midwives.", canonical, // OG IMAGE POLICY — never use og-default.webp (old invented logo) on consumer pages.
+  // Fallback hierarchy:
+  //   - Homepage, About: https://truejoybirthing.com/images/og-homepage.webp (Shelbi portrait)
+  //   - Education/scenario pages: use page-specific editorial OG, or nearest content-family OG
+  //   - Offer pages: use page-specific offer OG, or nearest content-family OG temporarily
+  //   - City pages: use per-city OG pattern (og-city-{slug}.webp)
+  // Never fall back to og-default.webp. If a page lacks a custom OG, use the closest
+  // content-family match or og-homepage.webp as a last resort.
+  ogImage = "https://truejoybirthing.com/images/og-homepage.webp"  } = Astro.props;
 const breadcrumbList = Astro.props.breadcrumbList;
 const currentPath = Astro.url.pathname;
 
