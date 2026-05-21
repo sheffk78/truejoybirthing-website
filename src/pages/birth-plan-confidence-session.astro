@@ -1,0 +1,277 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+
+const breadcrumbList = [
+  {"name": "Home", "url": "https://truejoybirthing.com/"},
+  {"name": "Birth Plan Confidence Session", "url": "https://truejoybirthing.com/birth-plan-confidence-session/"}
+];
+---
+
+<Layout
+  title="Birth Plan Confidence Session | True Joy Birthing"
+  description="Sit down with a certified birth doula via Zoom and walk through your plan line by line. Get answers, build confidence, and go into your birth knowing your options. $250, 60-75 minutes."
+  canonical="https://truejoybirthing.com/birth-plan-confidence-session/"
+  ogImage="https://truejoybirthing.com/images/og-birth-plan-confidence-session.webp"
+  breadcrumbList={breadcrumbList}
+  schema={{
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://truejoybirthing.com/birth-plan-confidence-session/#webpage",
+        "url": "https://truejoybirthing.com/birth-plan-confidence-session/",
+        "name": "Birth Plan Confidence Session",
+        "description": "Sit down with a certified birth doula via Zoom and walk through your plan line by line. Get answers, build confidence, and go into your birth knowing your options. $250, 60-75 minutes.",
+        "isPartOf": {"@id": "https://truejoybirthing.com/#website"},
+        "about": {
+          "@type": "Service",
+          "name": "Birth Plan Confidence Session",
+          "provider": {"@id": "https://truejoybirthing.com/#organization"}
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://truejoybirthing.com/birth-plan-confidence-session/#service",
+        "name": "Birth Plan Confidence Session",
+        "description": "A 60-75 minute live Zoom call with a certified birth doula who reviews your birth plan line by line, including advocacy role-play and hospital-specific pushback practice.",
+        "provider": {"@id": "https://truejoybirthing.com/#organization"},
+        "url": "https://truejoybirthing.com/birth-plan-confidence-session/",
+        "areaServed": {"@type": "Country", "name": "United States"},
+        "offers": {
+          "@type": "Offer",
+          "price": "250",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/LimitedAvailability",
+          "category": "Consultation"
+        }
+      }
+    ]
+  }}
+>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="eyebrow mb-3">1:1 birth plan coaching</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h1 class="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.12] mb-4">Birth Plan Confidence Session</h1>
+      <p class="text-lg md:text-xl text-tjb-charcoal font-semibold mb-3">Walk into your birth feeling calm, prepared, and heard.</p>
+      <p class="text-tjb-gray leading-relaxed max-w-2xl mb-6">
+        A 60–75 minute live Zoom call with a certified birth doula who reviews your birth plan line by line — so you know exactly what to say when your provider recommends something you didn't expect.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+        <a href="#book" class="btn-primary">Book a Birth Plan Confidence Session</a>
+        <span class="text-sm text-tjb-gray">$250 · 60–75 minutes · Live on Zoom · Limited spots each month</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHAT THIS SESSION IS
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 prose">
+      <h2>What this session is (and isn't)</h2>
+
+      <h3>What happens during your session</h3>
+      <p>You and a certified birth doula sit down on Zoom with your completed birth plan and go through it together — section by section, line by line.</p>
+      <p>This is not a lecture. It's a working session. You bring your plan, your questions, and the things you're unsure about. We bring the birth-room experience to make sure your plan reflects what actually happens — not just what the brochure says.</p>
+
+      <div class="not-prose bg-tjb-cream rounded-xl p-6 my-8">
+        <p class="font-semibold text-tjb-charcoal mb-3">What this session is</p>
+        <ul class="space-y-2 text-tjb-gray text-sm">
+          <li class="flex gap-2"><span class="text-tjb-rose-500 font-bold">✓</span> Birth plan coaching and education from someone who has attended hundreds of births</li>
+          <li class="flex gap-2"><span class="text-tjb-rose-500 font-bold">✓</span> A line-by-line review of your completed Joyful Birth Plan against real hospital context</li>
+          <li class="flex gap-2"><span class="text-tjb-rose-500 font-bold">✓</span> A chance to practice what you'll say in the moments that matter most</li>
+        </ul>
+        <p class="font-semibold text-tjb-charcoal mb-3 mt-6">What this session is not</p>
+        <ul class="space-y-2 text-tjb-gray text-sm">
+          <li class="flex gap-2"><span class="text-tjb-gray-300 font-bold">✗</span> Medical advice, diagnosis, or a substitute for your provider</li>
+          <li class="flex gap-2"><span class="text-tjb-gray-300 font-bold">✗</span> A guarantee of any birth outcome</li>
+          <li class="flex gap-2"><span class="text-tjb-gray-300 font-bold">✗</span> In-person doula support (this is virtual coaching only)</li>
+        </ul>
+      </div>
+
+      <h3>Who it's best for</h3>
+      <ul>
+        <li><strong>First-time moms</strong> who have never written a birth plan and don't know what they don't know</li>
+        <li><strong>Moms planning a VBAC, induction, or C-section</strong> who need scenario-specific language</li>
+        <li><strong>Anyone with a trauma history</strong> who wants to make sure their plan reflects what they need to feel safe</li>
+        <li><strong>Hospital-birth families</strong> navigating policies, pushback, and limited time with providers</li>
+        <li><strong>Moms who already have a plan</strong> but aren't sure if it will hold up in the delivery room</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHAT WE COVER
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-tjb-cream">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="eyebrow mb-3 fade-up">What we cover</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-8"></div>
+
+      <div class="space-y-8">
+        <div class="border-l-2 border-tjb-lavender-500 pl-6">
+          <h3 class="text-lg font-semibold mb-2">01 — Labor and delivery interventions</h3>
+          <p class="text-tjb-gray leading-relaxed">What providers are likely to recommend, what they actually mean, and how to say yes, no, or "I need a minute" with confidence. We review your preferences for monitoring, IV, movement, induction, and augmentation — and flag gaps where the hospital's default might override what you wrote.</p>
+        </div>
+        <div class="border-l-2 border-tjb-lavender-500 pl-6">
+          <h3 class="text-lg font-semibold mb-2">02 — Pain relief preferences</h3>
+          <p class="text-tjb-gray leading-relaxed">Not just "epidural or unmedicated." We walk through the full pain management ladder — what's available, when it's typically offered, and how to keep your options open at each stage. You'll leave with language that doesn't box you in.</p>
+        </div>
+        <div class="border-l-2 border-tjb-lavender-500 pl-6">
+          <h3 class="text-lg font-semibold mb-2">03 — Post-delivery and newborn procedures</h3>
+          <p class="text-tjb-gray leading-relaxed">Skin-to-skin, cord clamping, golden hour, feeding, Vitamin K, Hep B, eye ointment, circumcision, rooming-in, screenings. These decisions come fast after delivery. We make sure your plan covers them clearly — and that your support team knows them cold.</p>
+        </div>
+        <div class="border-l-2 border-tjb-rose-500 pl-6">
+          <h3 class="text-lg font-semibold mb-2">04 — Advocating with your provider</h3>
+          <p class="text-tjb-gray leading-relaxed">This is the heart of the session. We role-play the conversations you're most worried about — induction talks, epidural timing, cesarean discussions, anything that feels like pressure. You practice the phrases, we sharpen them, and you walk away knowing what to say when the moment comes.</p>
+        </div>
+        <div class="border-l-2 border-tjb-sage pl-6">
+          <h3 class="text-lg font-semibold mb-2">05 — Plan B, Plan C, and flexibility language</h3>
+          <p class="text-tjb-gray leading-relaxed">Birth doesn't follow scripts. We help you write backup language into your plan so that if things shift — and they often do — you still have a voice. This is where most birth plans fall apart. We make sure yours doesn't.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHY IT MATTERS
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 prose">
+      <h2>Why it matters</h2>
+      <p>You've done the research. You've downloaded the plan. You've watched the videos. But knowing your options and speaking up in the moment are two different things.</p>
+      <p><strong>Feel prepared, not just informed.</strong> There's a difference between reading about induction and having practiced what you'll say when your OB brings it up at 39 weeks. We bridge that gap.</p>
+      <p><strong>Have language that works in the room.</strong> "I prefer" sounds different than "I'd like to understand the reasoning before we decide." We help you find the words that get heard — not just said.</p>
+      <p><strong>Give your partner a script, not a spotlight.</strong> Your support person wants to help but may not know what to say. Your plan gives them the words. Your session makes sure those words actually work when a nurse has three other patients and your doctor is recommending Pitocin.</p>
+      <p><strong>Walk in knowing what you'll say when plans change.</strong> Most births don't follow the plan. That's not failure — that's reality. A good birth plan includes language for flexibility. A great one includes language for the conversations that happen when flexibility becomes the plan.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FUNNEL CONTEXT
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-tjb-cream">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="eyebrow mb-3 fade-up">How it fits together</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-8"></div>
+      <h2 class="text-2xl font-bold mb-8">Where this fits</h2>
+
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+          <p class="text-sm font-semibold text-tjb-lavender-600 mb-1">Start here: Free Joyful Birth Plan</p>
+          <p class="text-tjb-charcoal">Download the <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free Joyful Birth Plan</a>. Fill it out. Sit with it. This is your foundation — the session builds on this plan, not the other way around. Every section we review comes straight from the PDF.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+          <p class="text-sm font-semibold text-tjb-lavender-600 mb-1">Go deeper on your own time: Guided Birth Plan Walkthrough</p>
+          <p class="text-tjb-charcoal">The <a href="/guided-birth-plan-walkthrough/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Guided Birth Plan Walkthrough</a> walks you through every section of your plan with context — what each choice means, what the tradeoffs are, and what to ask your provider. If you're the kind of person who wants to understand the "why" behind every checkbox, start here. <strong>$47 one-time.</strong></p>
+        </div>
+        <div class="bg-tjb-lavender-50 rounded-xl p-6 border-2 border-tjb-lavender-300">
+          <p class="text-sm font-semibold text-tjb-sage mb-1">When you need a real person: The Confidence Session</p>
+          <p class="text-tjb-charcoal font-semibold">You're here. This is for when you've done the work, you have a plan, and you want someone with birth-room experience to look at it with you. Personal situations, complicated histories, hospital-specific concerns — that's what this session is for. <strong>$250 per session. Limited spots.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       LOGISTICS AND FAQ
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-8">Logistics and FAQs</h2>
+
+      <div class="not-prose bg-tjb-cream rounded-xl p-6 mb-8">
+        <table class="w-full text-sm text-tjb-charcoal">
+          <tbody>
+            <tr class="border-b border-tjb-lavender-200/40"><td class="py-2 font-semibold pr-4">Price</td><td class="py-2">$250 per session</td></tr>
+            <tr class="border-b border-tjb-lavender-200/40"><td class="py-2 font-semibold pr-4">Length</td><td class="py-2">60–75 minutes</td></tr>
+            <tr class="border-b border-tjb-lavender-200/40"><td class="py-2 font-semibold pr-4">Format</td><td class="py-2">Live video call on Zoom</td></tr>
+            <tr class="border-b border-tjb-lavender-200/40"><td class="py-2 font-semibold pr-4">Availability</td><td class="py-2">Limited to 5–8 sessions per month</td></tr>
+            <tr class="border-b border-tjb-lavender-200/40"><td class="py-2 font-semibold pr-4">What you need</td><td class="py-2">A completed or near-complete Joyful Birth Plan (free download is fine)</td></tr>
+            <tr><td class="py-2 font-semibold pr-4">Payment</td><td class="py-2">Due at booking</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="space-y-6">
+        <div class="bg-tjb-cream rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">Can my partner join?</h3>
+          <p class="text-tjb-gray leading-relaxed">Yes. Partners are welcome and encouraged. Many families find it helpful for both people to hear the review and practice the language together. No extra charge.</p>
+        </div>
+        <div class="bg-tjb-cream rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">What if I don't have a birth plan yet?</h3>
+          <p class="text-tjb-gray leading-relaxed"><a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Download the free Joyful Birth Plan</a> first and fill out as much as you can. Even a rough draft gives us something to work with. If you're truly starting from zero, the <a href="/guided-birth-plan-walkthrough/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Guided Birth Plan Walkthrough</a> is a great place to build your first draft before the session.</p>
+        </div>
+        <div class="bg-tjb-cream rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">Is this only for hospital births?</h3>
+          <p class="text-tjb-gray leading-relaxed">No. We work with families planning hospital births, birth center births, and home births. The session is tailored to your specific setting and provider. That said, hospital-birth families tend to have the most advocacy questions — and those are the conversations we're best equipped to practice.</p>
+        </div>
+        <div class="bg-tjb-cream rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">Do you replace my provider or doula?</h3>
+          <p class="text-tjb-gray leading-relaxed">No. This is birth plan coaching and education, not medical advice and not doula care. We help you understand your options and communicate them clearly. Your OB, midwife, or doula is still your care team. We're the person who makes sure your plan speaks their language.</p>
+        </div>
+        <div class="bg-tjb-cream rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">What if I need to reschedule?</h3>
+          <p class="text-tjb-gray leading-relaxed">Life happens, especially when you're pregnant. You can reschedule up to 24 hours before your session with no penalty. No-shows and late cancellations are non-refundable.</p>
+        </div>
+        <div class="bg-tjb-cream rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">Is this covered by insurance or Medicaid?</h3>
+          <p class="text-tjb-gray leading-relaxed">We cannot bill insurance or Medicaid directly. Some families have been reimbursed for doula education through their HSA/FSA or state Medicaid doula benefit — check with your plan administrator. We provide a receipt you can submit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA
+       ═══════════════════════════════════════════ -->
+  <section id="book" class="py-16 bg-tjb-lavender-100">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to walk into your birth with confidence?</h2>
+      <p class="text-tjb-gray mb-8">$250 · 60–75 minutes · Live on Zoom · Limited spots</p>
+      <a href="#book" class="btn-primary">Book a Birth Plan Confidence Session</a>
+      <p class="text-sm text-tjb-gray mt-6">Don't have a plan yet? <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Download free birth plan</a></p>
+    </div>
+  </section>
+
+  <style>
+    .fade-up {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-up.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
+  <script>
+    const fadeEls = document.querySelectorAll('.fade-up');
+    if (fadeEls.length && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      fadeEls.forEach(el => observer.observe(el));
+    } else {
+      fadeEls.forEach(el => el.classList.add('is-visible'));
+    }
+  </script>
+
+</Layout>

@@ -41,7 +41,7 @@ const schemaBase = {
         { "@type": "State", "name": "Texas" },
         { "@type": "Country", "name": "United States" }
       ],
-      "priceRange": "Free–$29.99/mo",
+      "priceRange": "Free–$250",
       "foundingDate": "2025",
       "founder": {
         "@type": "Person",
@@ -91,12 +91,14 @@ const schemaBase = {
           },
           {
             "@type": "Offer",
+            "price": "47",
+            "priceCurrency": "USD",
             "itemOffered": {
               "@type": "Service",
               "@id": "https://truejoybirthing.com/#guided-birth-plan-service",
               "name": "Guided Birth Plan Walkthrough",
-              "url": "https://truejoybirthing.com/birth-plan-template/",
-              "description": "Free guided walkthrough walking you through each section of your birth plan, available in the True Joy Birthing app.",
+              "url": "https://truejoybirthing.com/guided-birth-plan-walkthrough/",
+              "description": "A self-paced video course that walks you through every section of your birth plan — what each choice means, what the tradeoffs are, and what to say when your provider recommends something you didn't expect. $47 one-time.",
               "serviceType": "Birth Education",
               "provider": { "@id": "https://truejoybirthing.com/#organization" },
               "areaServed": { "@type": "Country", "name": "United States" }
@@ -104,26 +106,15 @@ const schemaBase = {
           },
           {
             "@type": "Offer",
+            "price": "250",
+            "priceCurrency": "USD",
             "itemOffered": {
               "@type": "Service",
-              "@id": "https://truejoybirthing.com/#doula-support",
-              "name": "Doula Directory and Birth Support",
-              "url": "https://truejoybirthing.com/birth-support/",
-              "description": "Virtual birth planning support with a certified birth doula, available in the True Joy Birthing app.",
-              "serviceType": "Doula Directory",
-              "provider": { "@id": "https://truejoybirthing.com/#organization" },
-              "areaServed": { "@type": "Country", "name": "United States" }
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "@id": "https://truejoybirthing.com/#pro-mode-service",
-              "name": "Pro Mode",
-              "url": "https://truejoybirthing.com/",
-              "description": "Professional tools for doulas and midwives to manage client birth plans.",
-              "serviceType": "Professional Software",
+              "@id": "https://truejoybirthing.com/#confidence-session-service",
+              "name": "Birth Plan Confidence Session",
+              "url": "https://truejoybirthing.com/birth-plan-confidence-session/",
+              "description": "A 60–75 minute live Zoom call with a certified birth doula who reviews your birth plan line by line — including advocacy role-play and hospital-specific pushback practice. $250 per session.",
+              "serviceType": "Birth Coaching",
               "provider": { "@id": "https://truejoybirthing.com/#organization" },
               "areaServed": { "@type": "Country", "name": "United States" }
             }

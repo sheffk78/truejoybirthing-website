@@ -6,7 +6,7 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
 
 <Layout
   title="FAQ"
-  description="Common questions about birth plans, doula support, and the True Joy Birthing app."
+  description="Common questions about birth plans, doulas, and the Joyful Birth Plan."
   canonical="https://truejoybirthing.com/faq"
   breadcrumbList={breadcrumbList}
   schema={{
@@ -19,7 +19,10 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
           {"@type":"Question","name":"Is the app really free for moms?","acceptedAnswer":{"@type":"Answer","text":"Yes. Parent Mode — the birth plan builder and education — is free. Pro Mode with tools for doulas and midwives is a paid subscription."}},
           {"@type":"Question","name":"What's the difference between a doula and a midwife?","acceptedAnswer":{"@type":"Answer","text":"A doula provides non-medical support. A midwife is a medical care provider who can deliver babies. You can have both."}},
           {"@type":"Question","name":"When should I start my birth plan?","acceptedAnswer":{"@type":"Answer","text":"Most families start around 28-32 weeks, but earlier is fine too. The sooner you understand your options, the more confident you'll feel."}},
-          {"@type":"Question","name":"What's Pro Mode?","acceptedAnswer":{"@type":"Answer","text":"Pro Mode is our paid subscription for doulas and midwives. It includes client management, visit tracking, notes, and invoicing — all built around birth-specific workflows."}}
+          {"@type":"Question","name":"What's Pro Mode?","acceptedAnswer":{"@type":"Answer","text":"Pro Mode is our paid subscription for doulas and midwives. It includes client management, visit tracking, notes, and invoicing — all built around birth-specific workflows."}},
+          {"@type":"Question","name":"What's the Joyful Birth Plan?","acceptedAnswer":{"@type":"Answer","text":"A free, fillable birth plan template designed by a certified doula — structured so a nurse can read it in two minutes. It covers every stage of birth: labor preferences, pain management, delivery, postpartum, and newborn care."}},
+          {"@type":"Question","name":"What's the Guided Birth Plan Walkthrough?","acceptedAnswer":{"@type":"Answer","text":"A self-paced video course that picks up where the free plan leaves off. About 60 minutes of short lessons that walk you through each section of your birth plan — what each choice means, what the tradeoffs are, and what to say when your provider recommends something you didn't expect. $47 one-time."}},
+          {"@type":"Question","name":"What's the Birth Plan Confidence Session?","acceptedAnswer":{"@type":"Answer","text":"A 60–75 minute live Zoom call with a certified birth doula who reviews your completed birth plan with you line by line — including advocacy role-play and hospital-specific pushback practice. Bring your questions and your plan. $250 per session, limited spots."}}
         ]
       }
     ]
@@ -27,8 +30,9 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
 >
   <section class="bg-tjb-cream pt-16 pb-12">
     <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="eyebrow mb-3">Free Joyful Birth Plan</p>
       <h1 class="text-3xl md:text-4xl font-bold mb-4">FAQ</h1>
-      <p class="text-lg text-tjb-gray">Common questions about birth plans, doula support, and the True Joy Birthing app.</p>
+      <p class="text-lg text-tjb-gray">Common questions about birth plans, doulas, and the Joyful Birth Plan.</p>
     </div>
   </section>
 
@@ -60,12 +64,40 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
         <h3 class="font-semibold text-lg mb-2">What's Pro Mode?</h3>
         <p class="text-tjb-gray">Pro Mode is our paid subscription for doulas and midwives. It includes client management, visit tracking, notes, and simple invoicing — all built around birth-specific workflows. Available on the App Store and Google Play.</p>
       </div>
+      <div class="bg-tjb-cream rounded-xl p-6 border border-tjb-lavender-200/50">
+        <h3 class="font-semibold text-lg mb-2">What's the Joyful Birth Plan?</h3>
+        <p class="text-tjb-gray">A free, fillable birth plan template designed by a certified doula — structured so a nurse can read it in two minutes. It covers every stage of birth: labor preferences, pain management, delivery, postpartum, and newborn care. <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Download free birth plan</a></p>
+      </div>
+      <div class="bg-tjb-cream rounded-xl p-6 border border-tjb-lavender-200/50">
+        <h3 class="font-semibold text-lg mb-2">What's the Guided Birth Plan Walkthrough?</h3>
+        <p class="text-tjb-gray">A self-paced video course that picks up where the free plan leaves off. About 60 minutes of short lessons that walk you through each section of your birth plan — what each choice means, what the tradeoffs are, and what to say when your provider recommends something you didn't expect. $47 one-time. <a href="/guided-birth-plan-walkthrough/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Enroll in the birth plan course</a></p>
+      </div>
+      <div class="bg-tjb-cream rounded-xl p-6 border border-tjb-lavender-200/50">
+        <h3 class="font-semibold text-lg mb-2">What's the Birth Plan Confidence Session?</h3>
+        <p class="text-tjb-gray">A 60–75 minute live Zoom call with a certified birth doula who reviews your completed birth plan with you line by line — including advocacy role-play and hospital-specific pushback practice. Bring your questions and your plan. $250 per session, limited spots. <a href="/birth-plan-confidence-session/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Book a Birth Plan Confidence Session</a></p>
+      </div>
       </div>
     </div>
 
-    <div class="max-w-3xl mx-auto px-6 mt-12 text-center">
-      <p class="text-tjb-gray mb-4">Still have questions? Reach out directly.</p>
-      <a href="/contact" class="btn-primary">Contact Shelbi →</a>
+    <div class="max-w-3xl mx-auto px-6 mt-16">
+      <h2 class="text-2xl font-bold text-center mb-10 text-tjb-charcoal">Start here</h2>
+
+      <div class="space-y-6">
+        <a href="/birth-plan-template/" class="block bg-tjb-lavender-50 rounded-xl p-6 border-2 border-tjb-lavender-300 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-lg font-bold text-tjb-charcoal group-hover:text-tjb-rose-500 transition mb-1">Download free birth plan</h3>
+          <p class="text-sm text-tjb-gray">The free Joyful Birth Plan — structured, fillable, and designed to be read by a nurse in two minutes.</p>
+        </a>
+        <a href="/guided-birth-plan-walkthrough/" class="block bg-white rounded-xl p-6 border border-tjb-lavender-200/50 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-lg font-bold text-tjb-charcoal group-hover:text-tjb-rose-500 transition mb-1">Enroll in the birth plan course</h3>
+          <p class="text-sm text-tjb-gray">Walk through every section of your plan with a doula's context. $47 one-time.</p>
+        </a>
+        <a href="/birth-plan-confidence-session/" class="block bg-white rounded-xl p-6 border border-tjb-lavender-200/50 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-lg font-bold text-tjb-charcoal group-hover:text-tjb-rose-500 transition mb-1">Book a Birth Plan Confidence Session</h3>
+          <p class="text-sm text-tjb-gray">A 60–75 minute live Zoom call to review your plan with a doula line by line. $250 per session.</p>
+        </a>
+      </div>
+
+      <p class="text-sm text-tjb-gray mt-8 text-center">Still have questions? <a href="/contact/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Contact us</a></p>
     </div>
   </section>
 </Layout>
