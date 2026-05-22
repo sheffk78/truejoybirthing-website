@@ -139,7 +139,7 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing serve Austin families?", a: "True Joy Birthing provides free birth-prep tools for Austin families. The free birth plan, checklist, and guided walkthrough in the app work for any Austin birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What are Austin's birth center options?", a: "Austin Area Birthing Center and Natural Beginnings are two well-established options. Both have strong community ties. Always verify their transfer agreements with nearby hospitals." },
     ],
-    nearbyCities: ["san-antonio-tx", "houston-tx"],
+    nearbyCities: ["san-antonio-tx", "san-marcos-tx", "new-braunfels-tx", "houston-tx"],
   },
   "beaumont-tx": {
     city: "Beaumont",
@@ -692,7 +692,7 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals in Waco accommodate birth plans?", a: "Waco has two hospitals with L&D: Baylor Scott & White \u2013 Hillcrest (Level III NICU, dedicated Women\u2019s & Children\u2019s Center) and Ascension Providence (Level II NICU, smaller unit with more one-on-one nursing time). Waco also has a freestanding birth center \u2014 Waco Birth Center and Clinic on Austin Avenue \u2014 for families planning an out-of-hospital birth." },
       { q: "Does True Joy Birthing work with Waco families?", a: "True Joy Birthing provides free birth-prep tools for Waco families. The free birth plan, checklist, and guided walkthrough in the app work for any Waco birth setting. The app also helps you connect with local doulas and midwives in your area." },
     ],
-    nearbyCities: ["austin-tx", "dallas-tx", "fort-worth-tx"],
+    nearbyCities: ["temple-tx", "austin-tx", "dallas-tx", "fort-worth-tx"],
   },
   "midland-tx": {
     city: "Midland",
@@ -824,7 +824,7 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals in Killeen accommodate birth plans?", a: "AdventHealth Central Texas is Killeen\u2019s only hospital with L&D. Baylor Scott & White Medical Center in Temple, about 20 minutes north, also serves Killeen-area families \u2014 contact the hospital directly to ask about their current maternity services and NICU availability." },
       { q: "Does True Joy Birthing work with Killeen families?", a: "True Joy Birthing provides free birth-prep tools for Killeen families. The free birth plan, checklist, and guided walkthrough in the app work for any Killeen birth setting. The app also helps you connect with local doulas and midwives in your area." },
     ],
-    nearbyCities: ["waco-tx", "austin-tx"],
+    nearbyCities: ["temple-tx", "waco-tx", "austin-tx"],
   },
   "brownsville-tx": {
     city: "Brownsville",
@@ -1106,6 +1106,91 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work for Mission families?", a: "True Joy Birthing provides free birth-prep tools for Mission families. The free birth plan, checklist, and guided walkthrough in the app work for any Mission birth setting. The app also helps you connect with local doulas and midwives in your area." },
     ],
     nearbyCities: ["mcallen-tx", "edinburg-tx", "harlingen-tx"],
+  },
+  "temple-tx": {
+    city: "Temple",
+    state: "TX",
+    slug: "temple-tx",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    culture: "Temple is Central Texas's medical hub — Baylor Scott & White brings families from across the region for obstetric and neonatal care, and the Fort Cavazos (formerly Fort Hood) military community means a constant flow of young families navigating both TRICARE and civilian insurance. The birth community here is small but experienced, with doulas who know the BSW system inside and out.",
+    heroLocalDetail: "Baylor Scott & White sits on the west side of Temple off 31st Street and Interstate 35, and during shift change at 7 AM and 7 PM that whole medical district turns into a slow crawl — if you're delivering at BSW, know the back entrance off 31st Street, because the main entrance on I-35 frontage gets backed up. AdventHealth Central Texas is about 10 minutes south in Belton, right off I-14 near the mall. Temple's Lion's Park has a flat, shaded walking loop along the creek that's a go-to for third-trimester moms — and it's only 5 minutes from BSW.",
+    hospitalDetails: [
+      { name: "Baylor Scott & White Medical Center – Temple", paragraph: "Baylor Scott & White Medical Center in Temple is one of the largest hospitals in Central Texas, with one of the region's most advanced NICUs, maternal-fetal medicine specialists, and a high-volume L&D unit that serves families from Killeen, Fort Cavazos, Belton, and across the region. Contact BSW directly for current NICU level verification. BSW is where many high-risk pregnancies in Central Texas end up — having your birth plan ready before you arrive makes a real difference, especially in a hospital system this large. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "AdventHealth Central Texas", paragraph: "AdventHealth Central Texas, in Belton about 10 minutes south of Temple, offers maternity care with a NICU for babies who need extra support — contact AdventHealth directly for current NICU level verification. If we're being real, AdventHealth is smaller and quieter than BSW, which some families prefer — but it also means fewer specialists on-site for complex cases, so having a doula who knows when to advocate for a transfer matters." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned zero results in
+    // Temple/Bell County. Google Maps found no freestanding birth centers.
+    // Verified 2026-05-22.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Bell County's STAR managed care plans. Fort Cavazos families on TRICARE should check with their TRICARE regional contractor for doula coverage — TRICARE does not currently cover doulas, but HSA and FSA funds can often be used. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage.",
+    insuranceNote: "Bell County has a large TRICARE population from Fort Cavazos — TRICARE does not currently cover doula services, but many military families use HSA or FSA funds for birth support. Baylor Scott & White Health Plan and FirstCare Health Plans are major civilian insurers in the area. Check your specific plan for maternal wellness or doula coverage benefits.",
+    faqs: [
+      { q: "How much does a doula cost in Temple?", a: "$800 to $2,200 depending on experience and package. Temple's doula community is small but experienced with both BSW and AdventHealth — some doulas offer military discounts for Fort Cavazos families." },
+      { q: "Does Medicaid cover doulas in Temple?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Bell County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your coverage. If you're on TRICARE, doulas are not currently covered, but HSA and FSA funds can often help." },
+      { q: "Which Temple hospitals accommodate birth plans?", a: "Baylor Scott & White Medical Center – Temple is the region's largest hospital with an advanced NICU and high-volume L&D unit. AdventHealth Central Texas in Belton offers maternity care in a smaller setting. Temple does not have a freestanding birth center." },
+      { q: "Does True Joy Birthing work with Temple families?", a: "True Joy Birthing provides free birth-prep tools for Temple families. The free birth plan, checklist, and guided walkthrough in the app work for any Temple birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["killeen-tx", "austin-tx", "waco-tx"],
+  },
+  "new-braunfels-tx": {
+    city: "New Braunfels",
+    state: "TX",
+    slug: "new-braunfels-tx",
+    costLow: 850,
+    costHigh: 2300,
+    shelbiServesHere: false,
+    culture: "New Braunfels sits where the Hill Country meets I-35 — a fast-growing city that balances German heritage, river tourism, and one of the youngest family populations in Comal County. Young families are moving here for the schools and the quality of life, but the birth community is still catching up — Resolute Health is the only hospital in town, and for a Level II+ NICU or birth center you're driving to San Antonio or Austin.",
+    heroLocalDetail: "Resolute Health Hospital sits on Creekside Crossing near the I-35 and Loop 337 interchange on the city's west side — convenient from most New Braunfels neighborhoods, but during Schlitterbahn season and summer river traffic on Loop 337 and Common Street, that 10-minute drive can turn into 25. If you're delivering between June and September, know your alternate routes before contractions start. Landa Park's paved walking path along the Comal Springs is flat, shaded, and a favorite for third-trimester moms — and it's only 5 minutes from Resolute.",
+    hospitalDetails: [
+      { name: "Resolute Health Hospital", paragraph: "Resolute Health Hospital, on Creekside Crossing near the I-35 and Loop 337 interchange, is New Braunfels' only hospital with maternity services — offering private L&D rooms and a NICU for babies who need extra support. Contact Resolute Health directly for current NICU level verification. If we're being real, New Braunfels families with high-risk pregnancies or needing a Level III NICU often transfer to San Antonio, about 35 minutes south on I-35 — so having your birth plan ready and knowing your transfer route matters. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned zero results in
+    // New Braunfels/Comal County. Google Maps found no freestanding birth
+    // centers. Nearest: Austin Area Birthing Center (~50 min), Birth Center
+    // Stone Oak in San Antonio (~35 min). Verified 2026-05-22.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Comal County's STAR managed care plans. New Braunfels' rapid growth means the provider network is expanding, but some plans are still building their doula directories — call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in Comal County. Aetna, BCBS of Texas, and UnitedHealthcare all have a presence in the New Braunfels area — check your specific plan for maternal wellness or doula benefits. HSA and FSA funds can often be applied toward birth support costs.",
+    faqs: [
+      { q: "How much does a doula cost in New Braunfels?", a: "$850 to $2,300 depending on experience and package. New Braunfels' rapid growth means more doulas are serving the area, but availability can be limited — some commute from San Antonio or Austin and may charge travel fees." },
+      { q: "Does Medicaid cover doulas in New Braunfels?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Comal County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your coverage before hiring." },
+      { q: "Does New Braunfels have a birth center?", a: "New Braunfels does not have a freestanding birth center. Resolute Health Hospital is the only facility with maternity services in town. For birth center care, the nearest options are in San Antonio (about 35 minutes south) or Austin (about 50 minutes north)." },
+      { q: "Does True Joy Birthing work with New Braunfels families?", a: "True Joy Birthing provides free birth-prep tools for New Braunfels families. The free birth plan, checklist, and guided walkthrough in the app work for any New Braunfels birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["san-antonio-tx", "austin-tx", "san-marcos-tx"],
+  },
+  "san-marcos-tx": {
+    city: "San Marcos",
+    state: "TX",
+    slug: "san-marcos-tx",
+    costLow: 800,
+    costHigh: 2100,
+    shelbiServesHere: false,
+    culture: "San Marcos is a college town on I-35 between Austin and San Antonio — home to Texas State University and a growing population of young families who've moved here for the cost of living. The birth community here is small, and the reality is that most San Marcos families deliver at one of two nearby hospitals: Ascension Seton Hays in Kyle (15 minutes north) or Resolute Health in New Braunfels (25 minutes south). CHRISTUS Santa Rosa – San Marcos has a smaller maternity unit with basic newborn support.",
+    heroLocalDetail: "If you're delivering at Seton Hays in Kyle, take I-35 north to exit 213 — the hospital is on Kyle Crossing Drive, about 15 minutes from central San Marcos. If you're heading to Resolute Health in New Braunfels, I-35 south to exit 191, about 25 minutes. During Texas State game days, I-35 through San Marcos can slow to a crawl — if you're due in the fall, know your alternate routes before contractions start. Sewell Park, on the San Marcos River near campus, has flat walking paths that are popular for third-trimester walks.",
+    hospitalDetails: [
+      { name: "Ascension Seton Hays Medical Center", paragraph: "Ascension Seton Hays, in Kyle about 15 minutes north of San Marcos on I-35, offers maternity care with a NICU — contact Seton Hays directly for current NICU level verification. Seton Hays is where many San Marcos and Hays County families deliver, especially those who want a closer option than driving to Austin or San Antonio. Having your birth plan ready means your preferences follow you in. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "CHRISTUS Santa Rosa Hospital – San Marcos", paragraph: "CHRISTUS Santa Rosa Hospital – San Marcos, on Wonder World Drive near the I-35 interchange, offers maternity care with basic newborn support — contact CHRISTUS Santa Rosa directly for current NICU level and maternity service verification. If we're being real, San Marcos' hospital has a smaller maternity unit than the bigger hospitals in Austin and San Antonio, and families with higher-risk pregnancies often choose Seton Hays or Resolute Health for their NICU capabilities." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned no active birth
+    // centers in San Marcos/Hays County. Google Maps found no freestanding
+    // birth centers. Nearest: Austin Area Birthing Center (~35 min north).
+    // Verified 2026-05-22.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Hays County's STAR managed care plans. San Marcos has a significant college-student and young-family population — if you're on Medicaid, call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in Hays County. Texas State University student health plans typically don't cover doulas, but graduate students and staff may have separate coverage. BCBS of Texas and Aetna both have a strong presence in the area — check your specific plan for maternal wellness or doula benefits. HSA and FSA funds can often be applied toward birth support costs.",
+    faqs: [
+      { q: "How much does a doula cost in San Marcos?", a: "$800 to $2,100 depending on experience and package. San Marcos' doula community is growing but still small — some doulas commute from Austin or San Antonio, so availability and travel fees vary." },
+      { q: "Does Medicaid cover doulas in San Marcos?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Hays County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your coverage before hiring." },
+      { q: "Where do San Marcos families deliver?", a: "Most San Marcos families deliver at Ascension Seton Hays in Kyle (about 15 minutes north on I-35) or Resolute Health in New Braunfels (about 25 minutes south). CHRISTUS Santa Rosa – San Marcos offers maternity care with basic newborn support, but families with higher-risk pregnancies often choose Seton Hays or Austin hospitals for their NICU capabilities. San Marcos does not have a freestanding birth center." },
+      { q: "Does True Joy Birthing work with San Marcos families?", a: "True Joy Birthing provides free birth-prep tools for San Marcos families. The free birth plan, checklist, and guided walkthrough in the app work for any San Marcos birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["austin-tx", "san-antonio-tx", "new-braunfels-tx"],
   },
 };
 
