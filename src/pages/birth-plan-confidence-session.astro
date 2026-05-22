@@ -4,6 +4,8 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
 
 const breadcrumbList = [
   {"name": "Home", "url": "https://truejoybirthing.com/"},
+  {"name": "Free Birth Plan", "url": "https://truejoybirthing.com/birth-plan-template/"},
+  {"name": "Guided Birth Plan Walkthrough", "url": "https://truejoybirthing.com/guided-birth-plan-walkthrough/"},
   {"name": "Birth Plan Confidence Session", "url": "https://truejoybirthing.com/birth-plan-confidence-session/"}
 ];
 ---
@@ -33,17 +35,44 @@ const breadcrumbList = [
         "@type": "Service",
         "@id": "https://truejoybirthing.com/birth-plan-confidence-session/#service",
         "name": "Birth Plan Confidence Session",
-        "description": "A 60-75 minute live Zoom call with a certified birth doula who reviews your birth plan line by line, including advocacy role-play and hospital-specific pushback practice.",
-        "provider": {"@id": "https://truejoybirthing.com/#organization"},
+        "description": "A 60-75 minute live Zoom session with a certified birth doula who reviews your birth plan line by line, including advocacy role-play and hospital-specific pushback practice.",
+        "provider": {
+          "@type": "Person",
+          "name": "Shelbi Kohler, CD(DONA)",
+          "url": "https://truejoybirthing.com/about/"
+        },
         "url": "https://truejoybirthing.com/birth-plan-confidence-session/",
         "areaServed": {"@type": "Country", "name": "United States"},
+        "serviceType": "Birth plan consultation",
         "offers": {
           "@type": "Offer",
           "price": "250",
           "priceCurrency": "USD",
+          "priceValidUntil": "2026-12-31",
           "availability": "https://schema.org/LimitedAvailability",
           "category": "Consultation"
         }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://truejoybirthing.com/about/#founder",
+        "name": "Shelbi Kohler",
+        "jobTitle": "Certified Birth Doula",
+        "description": "500+ families supported across Texas. Specializes in hospital birth advocacy and birth plan preparation.",
+        "credential": "CD(DONA)",
+        "worksFor": {"@type": "Organization", "name": "True Joy Birthing"}
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://truejoybirthing.com/birth-plan-confidence-session/#faq",
+        "mainEntity": [
+          { "@type": "Question", "name": "What do I need before the session?", "acceptedAnswer": { "@type": "Answer", "text": "A completed or near-complete birth plan and a quiet space for Zoom. Download the free Joyful Birth Plan if you don't have one yet, or use whatever plan you've already started." } },
+          { "@type": "Question", "name": "How long is the session?", "acceptedAnswer": { "@type": "Answer", "text": "60-75 minutes. Long enough to go through your plan in detail and practice advocacy scenarios. Short enough that you don't need to block off your whole day." } },
+          { "@type": "Question", "name": "Is this medical advice?", "acceptedAnswer": { "@type": "Answer", "text": "No. Shelbi is a certified birth doula, not a medical provider. This is education and advocacy coaching — helping you understand your options and communicate them clearly." } },
+          { "@type": "Question", "name": "Can I book more than one session?", "acceptedAnswer": { "@type": "Answer", "text": "You can, but most parents find one is enough. The session is designed to give you everything you need to walk into your birth with confidence." } },
+          { "@type": "Question", "name": "What if I haven't filled out a birth plan yet?", "acceptedAnswer": { "@type": "Answer", "text": "Start with the free Joyful Birth Plan template, or take the Guided Birth Plan Walkthrough course first. Both give you a strong foundation before the session." } },
+          { "@type": "Question", "name": "Is this only for Texas residents?", "acceptedAnswer": { "@type": "Answer", "text": "No — sessions are on Zoom and available nationwide. Shelbi is based in Texas but serves expectant parents across the United States." } }
+        ]
       }
     ]
   }}
@@ -56,7 +85,7 @@ const breadcrumbList = [
     <div class="max-w-4xl mx-auto px-6">
       <p class="eyebrow mb-3">1:1 birth plan coaching</p>
       <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-      <h1 class="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.12] mb-4">Birth Plan Confidence Session</h1>
+      <h1 class="text-[2.5rem] md:text-[3.25rem] font-bold leading-[1.12] mb-4">Get your birth plan reviewed line by line — and practice saying what you actually want</h1>
       <p class="text-lg md:text-xl text-tjb-charcoal font-semibold mb-3">Walk into your birth feeling calm, prepared, and heard.</p>
       <p class="text-tjb-gray leading-relaxed max-w-2xl mb-6">
         A 60–75 minute live Zoom call with a certified birth doula who reviews your birth plan line by line — so you know exactly what to say when your provider recommends something you didn't expect.
@@ -69,38 +98,124 @@ const breadcrumbList = [
   </section>
 
   <!-- ═══════════════════════════════════════════
-       WHAT THIS SESSION IS
+       WHAT HAPPENS IN A SESSION
        ═══════════════════════════════════════════ -->
   <section class="py-16 bg-white">
     <div class="max-w-3xl mx-auto px-6 prose">
-      <h2>What this session is (and isn't)</h2>
-
-      <h3>What happens during your session</h3>
+      <h2>What happens in a Birth Plan Confidence Session</h2>
       <p>You and a certified birth doula sit down on Zoom with your completed birth plan and go through it together — section by section, line by line.</p>
       <p>This is not a lecture. It's a working session. You bring your plan, your questions, and the things you're unsure about. We bring the birth-room experience to make sure your plan reflects what actually happens — not just what the brochure says.</p>
 
-      <div class="not-prose bg-tjb-cream rounded-xl p-6 my-8">
-        <p class="font-semibold text-tjb-charcoal mb-3">What this session is</p>
-        <ul class="space-y-2 text-tjb-gray text-sm">
-          <li class="flex gap-2"><span class="text-tjb-rose-500 font-bold">✓</span> Birth plan coaching and education from someone who has attended hundreds of births</li>
-          <li class="flex gap-2"><span class="text-tjb-rose-500 font-bold">✓</span> A line-by-line review of your completed Joyful Birth Plan against real hospital context</li>
-          <li class="flex gap-2"><span class="text-tjb-rose-500 font-bold">✓</span> A chance to practice what you'll say in the moments that matter most</li>
-        </ul>
-        <p class="font-semibold text-tjb-charcoal mb-3 mt-6">What this session is not</p>
-        <ul class="space-y-2 text-tjb-gray text-sm">
-          <li class="flex gap-2"><span class="text-tjb-gray-300 font-bold">✗</span> Medical advice, diagnosis, or a substitute for your provider</li>
-          <li class="flex gap-2"><span class="text-tjb-gray-300 font-bold">✗</span> A guarantee of any birth outcome</li>
-          <li class="flex gap-2"><span class="text-tjb-gray-300 font-bold">✗</span> In-person doula support (this is virtual coaching only)</li>
-        </ul>
-      </div>
-
-      <h3>Who it's best for</h3>
       <ul>
-        <li><strong>First-time moms</strong> who have never written a birth plan and don't know what they don't know</li>
-        <li><strong>Moms planning a VBAC, induction, or C-section</strong> who need scenario-specific language</li>
-        <li><strong>Anyone with a trauma history</strong> who wants to make sure their plan reflects what they need to feel safe</li>
-        <li><strong>Hospital-birth families</strong> navigating policies, pushback, and limited time with providers</li>
-        <li><strong>Moms who already have a plan</strong> but aren't sure if it will hold up in the delivery room</li>
+        <li><strong>Line-by-line review of YOUR birth plan</strong> — not a template, not generic advice. Your filled-out plan, your hospital, your concerns.</li>
+        <li><strong>Advocacy role-play</strong> — practice what to say when your provider suggests something you didn't plan for. "I need a minute to think," "What happens if we wait?," "Can you explain the reasoning?"</li>
+        <li><strong>Walk away confident</strong> — you'll know what to communicate, when to say it, and why.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHAT TO EXPECT — STEP-BY-STEP
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-tjb-cream">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="eyebrow mb-3 fade-up">What to expect</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-8"></div>
+
+      <div class="space-y-8">
+        <div class="border-l-2 border-tjb-lavender-500 pl-6">
+          <h3 class="text-lg font-semibold mb-2">01 — Book your session</h3>
+          <p class="text-tjb-gray leading-relaxed">Pick a time that works — evenings available. You'll fill out a brief intake form at booking so Shelbi knows what to prepare.</p>
+        </div>
+
+        <div class="border-l-2 border-tjb-lavender-500 pl-6">
+          <h3 class="text-lg font-semibold mb-2">02 — Fill out the pre-session intake</h3>
+          <p class="text-tjb-gray leading-relaxed">Share your plan, your hospital, and your concerns. Shelbi reviews everything before the call so your session time is spent on what matters most to you.</p>
+        </div>
+
+        <div class="border-l-2 border-tjb-lavender-500 pl-6">
+          <h3 class="text-lg font-semibold mb-2">03 — Meet on Zoom</h3>
+          <p class="text-tjb-gray leading-relaxed">Shelbi reviews your plan and you practice real scenarios together — the conversations you're most worried about, the decisions that feel uncertain, the moments where you want language that works.</p>
+        </div>
+
+        <div class="border-l-2 border-tjb-sage pl-6">
+          <h3 class="text-lg font-semibold mb-2">04 — Walk away confident</h3>
+          <p class="text-tjb-gray leading-relaxed">You'll know what to say, when to say it, and why. Your plan is nurse-readable. Your language is calm and clear. You're prepared for the moments that matter most.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHO YOU'LL WORK WITH
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row gap-8 items-start">
+        <div class="md:w-1/3 flex-shrink-0">
+          <img
+            src="/images/shelbi-real.webp"
+            alt="Shelbi Kohler — certified birth doula and founder of True Joy Birthing"
+            class="w-full rounded-xl shadow-md"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:w-2/3">
+          <p class="eyebrow mb-3">Who you'll work with</p>
+          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+          <h2 class="text-2xl font-bold mb-4">Shelbi Kohler, CD(DONA)</h2>
+          <p class="text-tjb-gray leading-relaxed mb-4">Certified birth doula and founder of <a href="/about/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">True Joy Birthing</a>. 500+ families supported. Specializes in hospital birth advocacy — she knows what happens when plans change mid-labor, and she'll help you prepare for those moments too.</p>
+          <p class="text-tjb-gray leading-relaxed mb-4">Based in Texas. Available nationwide via Zoom.</p>
+          <p class="text-tjb-gray leading-relaxed text-sm">Not a generic consultant — a birth doula who sits in delivery rooms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       THIS SESSION IS FOR YOU IF
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-tjb-cream">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="eyebrow mb-3 fade-up">This session is for you if</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-8"></div>
+
+      <div class="space-y-4">
+        <div class="flex items-start gap-3">
+          <span class="text-tjb-rose-500 mt-1 text-lg">✓</span>
+          <p class="text-tjb-charcoal leading-relaxed">You've filled out a birth plan but you're not sure if it covers everything</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-tjb-rose-500 mt-1 text-lg">✓</span>
+          <p class="text-tjb-charcoal leading-relaxed">You're worried about advocating for yourself during labor</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-tjb-rose-500 mt-1 text-lg">✓</span>
+          <p class="text-tjb-charcoal leading-relaxed">You've had a provider dismiss your preferences before and you want to be ready this time</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-tjb-rose-500 mt-1 text-lg">✓</span>
+          <p class="text-tjb-charcoal leading-relaxed">You want a real person to look at YOUR plan and YOUR hospital — not generic advice</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="text-tjb-rose-500 mt-1 text-lg">✓</span>
+          <p class="text-tjb-charcoal leading-relaxed">You're working with a specific medical situation (<a href="/birth-plan-for-induction/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">induction</a>, <a href="/vbac-birth-plan/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">VBAC</a>, etc.) and need tailored guidance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHAT'S DIFFERENT
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 prose">
+      <h2>What's different about this session</h2>
+      <ul>
+        <li><strong>Not a course</strong> — this is your plan, your hospital, your concerns. The <a href="/guided-birth-plan-walkthrough/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Guided Birth Plan Walkthrough</a> gives you context for each section. This session gives you a live review of your specific situation.</li>
+        <li><strong>Not a doula hiring pitch</strong> — this is a single session, no ongoing commitment. You get a reviewed plan and practiced advocacy scripts. That's the deliverable.</li>
+        <li><strong>Advocacy role-play included</strong> — practice the hard conversation before you're in labor. "I need a minute to think," "What happens if we wait?," "Can you explain the reasoning?" These phrases work. We'll rehearse them so they feel natural.</li>
+        <li><strong>Limited spots: 5–8 sessions/month</strong> — because Shelbi reviews your plan before the call. This isn't a volume product. Each session gets her full attention. She actually reads your plan before you meet.</li>
       </ul>
     </div>
   </section>
@@ -153,73 +268,95 @@ const breadcrumbList = [
   </section>
 
   <!-- ═══════════════════════════════════════════
-       FUNNEL CONTEXT
+       INVESTMENT
        ═══════════════════════════════════════════ -->
   <section class="py-16 bg-tjb-cream">
-    <div class="max-w-3xl mx-auto px-6">
-      <p class="eyebrow mb-3 fade-up">How it fits together</p>
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <p class="eyebrow mb-3 fade-up">Investment</p>
       <div class="w-10 h-0.5 bg-tjb-rose-500 mb-8"></div>
-      <h2 class="text-2xl font-bold mb-8">Where this fits</h2>
+
+      <div class="bg-white rounded-xl p-8 shadow-sm border border-tjb-lavender-200/50">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4">$250–300 per session</h2>
+        <p class="text-tjb-gray mb-2">60–75 minutes · Live on Zoom · Pre-session intake included</p>
+        <p class="text-tjb-gray text-sm mb-6">Shelbi reviews your plan before the call so you get maximum value from your time together.</p>
+        <a href="#book" class="btn-primary">Book a Birth Plan Confidence Session</a>
+        <p class="text-sm text-tjb-gray mt-4">No subscription, no ongoing commitment — one session and you're prepared.</p>
+        <p class="text-sm text-tjb-gray mt-2">Limited to 5–8 sessions per month.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       BEFORE YOU BOOK — FUNNEL ROUTING
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="eyebrow mb-3 fade-up">Before you book — here's what helps most</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-8"></div>
+      <h2 class="text-2xl font-bold mb-8">Three paths, depending on where you are</h2>
 
       <div class="space-y-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
-          <p class="text-sm font-semibold text-tjb-lavender-600 mb-1">Start here: Free Joyful Birth Plan</p>
-          <p class="text-tjb-charcoal">Download the <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free Joyful Birth Plan</a>. Fill it out. Sit with it. This is your foundation — the session builds on this plan, not the other way around. Every section we review comes straight from the PDF.</p>
+        <div class="bg-tjb-cream rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+          <p class="text-sm font-semibold text-tjb-lavender-600 mb-1">Haven't started a birth plan yet?</p>
+          <p class="text-tjb-charcoal mb-3">Start with the free template. Fill it out, sit with it, and come back when you're ready for expert feedback.</p>
+          <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Download free birth plan →</a>
         </div>
-        <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
-          <p class="text-sm font-semibold text-tjb-lavender-600 mb-1">Go deeper on your own time: Guided Birth Plan Walkthrough</p>
-          <p class="text-tjb-charcoal">The <a href="/guided-birth-plan-walkthrough/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Guided Birth Plan Walkthrough</a> walks you through every section of your plan with context — what each choice means, what the tradeoffs are, and what to ask your provider. If you're the kind of person who wants to understand the "why" behind every checkbox, start here. <strong>$47 one-time.</strong></p>
+        <div class="bg-tjb-cream rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+          <p class="text-sm font-semibold text-tjb-lavender-600 mb-1">Have the plan but want guided help?</p>
+          <p class="text-tjb-charcoal mb-3">The <a href="/guided-birth-plan-walkthrough/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Guided Birth Plan Walkthrough</a> walks you through every section with context — what each choice means, what the tradeoffs are. If you want to understand the "why" behind every checkbox, start there. <strong>$47 one-time.</strong></p>
         </div>
         <div class="bg-tjb-lavender-50 rounded-xl p-6 border-2 border-tjb-lavender-300">
-          <p class="text-sm font-semibold text-tjb-sage mb-1">When you need a real person: The Confidence Session</p>
-          <p class="text-tjb-charcoal font-semibold">You're here. This is for when you've done the work, you have a plan, and you want someone with birth-room experience to look at it with you. Personal situations, complicated histories, hospital-specific concerns — that's what this session is for. <strong>$250 per session. Limited spots.</strong></p>
+          <p class="text-sm font-semibold text-tjb-sage mb-1">Ready for personalized review?</p>
+          <p class="text-tjb-charcoal font-semibold">You're in the right place. A certified birth doula reviews your plan live, practices the hard conversations with you, and makes sure you walk in prepared. <strong>$250 per session. Limited spots.</strong></p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
-       LOGISTICS AND FAQ
+       FAQ
        ═══════════════════════════════════════════ -->
-  <section class="py-16 bg-white">
+  <section class="py-16 bg-tjb-cream">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="text-2xl font-bold mb-8">Logistics and FAQs</h2>
-
-      <div class="not-prose bg-tjb-cream rounded-xl p-6 mb-8">
-        <table class="w-full text-sm text-tjb-charcoal">
-          <tbody>
-            <tr class="border-b border-tjb-lavender-200/40"><td class="py-2 font-semibold pr-4">Price</td><td class="py-2">$250 per session</td></tr>
-            <tr class="border-b border-tjb-lavender-200/40"><td class="py-2 font-semibold pr-4">Length</td><td class="py-2">60–75 minutes</td></tr>
-            <tr class="border-b border-tjb-lavender-200/40"><td class="py-2 font-semibold pr-4">Format</td><td class="py-2">Live video call on Zoom</td></tr>
-            <tr class="border-b border-tjb-lavender-200/40"><td class="py-2 font-semibold pr-4">Availability</td><td class="py-2">Limited to 5–8 sessions per month</td></tr>
-            <tr class="border-b border-tjb-lavender-200/40"><td class="py-2 font-semibold pr-4">What you need</td><td class="py-2">A completed or near-complete Joyful Birth Plan (free download is fine)</td></tr>
-            <tr><td class="py-2 font-semibold pr-4">Payment</td><td class="py-2">Due at booking</td></tr>
-          </tbody>
-        </table>
-      </div>
-
+      <h2 class="text-2xl font-bold mb-8">Frequently asked questions</h2>
       <div class="space-y-6">
-        <div class="bg-tjb-cream rounded-xl p-6">
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">What do I need before the session?</h3>
+          <p class="text-tjb-gray leading-relaxed">A completed or near-complete birth plan and a quiet space for Zoom. Download the <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free Joyful Birth Plan</a> if you don't have one yet — even a rough draft gives us something to work with.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">How long is the session?</h3>
+          <p class="text-tjb-gray leading-relaxed">60–75 minutes. Long enough to go through your plan in detail and practice advocacy scenarios. Short enough that you don't need to block off your whole day.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">Is this medical advice?</h3>
+          <p class="text-tjb-gray leading-relaxed">No. Shelbi is a certified birth doula, not a medical provider. This is education and advocacy coaching — helping you understand your options and communicate them clearly. Always discuss your specific medical situation with your OB, midwife, or care team.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">Can I book more than one session?</h3>
+          <p class="text-tjb-gray leading-relaxed">You can, but most parents find one is enough. The session is designed to give you everything you need to walk into your birth with confidence.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">What if I haven't filled out a birth plan yet?</h3>
+          <p class="text-tjb-gray leading-relaxed">Start with the <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free Joyful Birth Plan</a> and fill out as much as you can. If you're truly starting from zero, the <a href="/guided-birth-plan-walkthrough/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Guided Birth Plan Walkthrough</a> is a great place to build your first draft before the session.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">Is this only for Texas residents?</h3>
+          <p class="text-tjb-gray leading-relaxed">No — sessions are on Zoom and available nationwide. Shelbi is based in Texas but serves expectant parents across the United States.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6">
           <h3 class="font-semibold text-lg mb-2">Can my partner join?</h3>
           <p class="text-tjb-gray leading-relaxed">Yes. Partners are welcome and encouraged. Many families find it helpful for both people to hear the review and practice the language together. No extra charge.</p>
         </div>
-        <div class="bg-tjb-cream rounded-xl p-6">
-          <h3 class="font-semibold text-lg mb-2">What if I don't have a birth plan yet?</h3>
-          <p class="text-tjb-gray leading-relaxed"><a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Download the free Joyful Birth Plan</a> first and fill out as much as you can. Even a rough draft gives us something to work with. If you're truly starting from zero, the <a href="/guided-birth-plan-walkthrough/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Guided Birth Plan Walkthrough</a> is a great place to build your first draft before the session.</p>
-        </div>
-        <div class="bg-tjb-cream rounded-xl p-6">
+        <div class="bg-white rounded-xl p-6">
           <h3 class="font-semibold text-lg mb-2">Is this only for hospital births?</h3>
           <p class="text-tjb-gray leading-relaxed">No. We work with families planning hospital births, birth center births, and home births. The session is tailored to your specific setting and provider. That said, hospital-birth families tend to have the most advocacy questions — and those are the conversations we're best equipped to practice.</p>
         </div>
-        <div class="bg-tjb-cream rounded-xl p-6">
-          <h3 class="font-semibold text-lg mb-2">Do you replace my provider or doula?</h3>
-          <p class="text-tjb-gray leading-relaxed">No. This is birth plan coaching and education, not medical advice and not doula care. We help you understand your options and communicate them clearly. Your OB, midwife, or doula is still your care team. We're the person who makes sure your plan speaks their language.</p>
-        </div>
-        <div class="bg-tjb-cream rounded-xl p-6">
-          <h3 class="font-semibold text-lg mb-2">What if I need to reschedule?</h3>
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-semibold text-lg mb-2">What's the cancellation policy?</h3>
           <p class="text-tjb-gray leading-relaxed">Life happens, especially when you're pregnant. You can reschedule up to 24 hours before your session with no penalty. No-shows and late cancellations are non-refundable.</p>
         </div>
-        <div class="bg-tjb-cream rounded-xl p-6">
+        <div class="bg-white rounded-xl p-6">
           <h3 class="font-semibold text-lg mb-2">Is this covered by insurance or Medicaid?</h3>
           <p class="text-tjb-gray leading-relaxed">We cannot bill insurance or Medicaid directly. Some families have been reimbursed for doula education through their HSA/FSA or state Medicaid doula benefit — check with your plan administrator. We provide a receipt you can submit.</p>
         </div>
@@ -228,14 +365,48 @@ const breadcrumbList = [
   </section>
 
   <!-- ═══════════════════════════════════════════
-       CTA
+       CTA — BOOK
        ═══════════════════════════════════════════ -->
   <section id="book" class="py-16 bg-tjb-lavender-100">
     <div class="max-w-2xl mx-auto px-6 text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to walk into your birth with confidence?</h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Ready to feel confident about your birth plan?</h2>
       <p class="text-tjb-gray mb-8">$250 · 60–75 minutes · Live on Zoom · Limited spots</p>
       <a href="#book" class="btn-primary">Book a Birth Plan Confidence Session</a>
       <p class="text-sm text-tjb-gray mt-6">Don't have a plan yet? <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Download free birth plan</a></p>
+      <p class="text-sm text-tjb-gray mt-2">Want guided help first? <a href="/guided-birth-plan-walkthrough/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Enroll in the birth plan course</a></p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PILLAR PAGES — Internal links
+       ═══════════════════════════════════════════ -->
+  <section class="bg-white py-16 border-t border-tjb-lavender-200/40">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-lg font-semibold text-tjb-charcoal mb-4">More birth planning resources</h2>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+        <li><a href="/birth-plan-template/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Free Birth Plan Template</a></li>
+        <li><a href="/guided-birth-plan-walkthrough/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Guided Birth Plan Walkthrough</a></li>
+        <li><a href="/birth-plan-checklist/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Birth Plan Checklist</a></li>
+        <li><a href="/birth-plan-for-induction/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Birth Plan for Induction</a></li>
+        <li><a href="/c-section-birth-plan/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">C-Section Birth Plan</a></li>
+        <li><a href="/vbac-birth-plan/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">VBAC Birth Plan</a></li>
+        <li><a href="/birth-plan-scenarios/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">All Birth Plan Scenarios</a></li>
+        <li><a href="/faq/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Birth Plan FAQ</a></li>
+        <li><a href="/about/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">About Shelbi</a></li>
+        <li><a href="/benefits-of-a-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Benefits of a Doula</a></li>
+      </ul>
+      <div class="mt-6 pt-6 border-t border-tjb-lavender-200/40">
+        <p class="text-sm font-semibold text-tjb-charcoal mb-3">Find hospital-specific details for your area:</p>
+        <ul class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+          <li><a href="/birth-support/dallas-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Dallas</a></li>
+          <li><a href="/birth-support/houston-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Houston</a></li>
+          <li><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Austin</a></li>
+          <li><a href="/birth-support/san-antonio-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">San Antonio</a></li>
+          <li><a href="/birth-support/fort-worth-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Fort Worth</a></li>
+          <li><a href="/birth-support/el-paso-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">El Paso</a></li>
+        </ul>
+        <p class="mt-3"><a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 transition">See all 20 Texas cities →</a></p>
+      </div>
     </div>
   </section>
 
