@@ -50,10 +50,10 @@ export const cities: Record<string, CityData> = {
     ],
     birthCenterDetails: [
     ],
-    medicaidNote: "Texas Medicaid's doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Amarillo area. Confirm with your Medicaid plan.",
-    insuranceNote: "Some private insurers in the Amarillo region now cover doula support as part of maternal wellness benefits. Contact your plan.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Potter/Randall Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Amarillo area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
-      { q: "Does Medicaid cover doulas in Amarillo?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits." },
+      { q: "Does Medicaid cover doulas in Amarillo?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Potter/Randall Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "How much does a doula cost in Amarillo?", a: "$650 to $1,800 depending on experience and package. Costs in the Panhandle tend to be lower than in major Texas metros." },
       { q: "Does True Joy Birthing work with Amarillo families?", a: "True Joy Birthing provides free birth-prep tools for Amarillo families. The free birth plan, checklist, and guided walkthrough in the app work for any Amarillo birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "Are there doulas in Amarillo?", a: "Amarillo has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare." },
@@ -105,10 +105,10 @@ export const cities: Record<string, CityData> = {
     ],
     birthCenterDetails: [
     ],
-    medicaidNote: "Texas Medicaid's doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Arlington area. Confirm with your Medicaid plan.",
-    insuranceNote: "Some private insurers in the Arlington area now cover doula support as part of maternal wellness benefits. Contact your plan for details.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Tarrant County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Arlington area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
-      { q: "Does Medicaid cover doulas in Arlington?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits in the Arlington area." },
+      { q: "Does Medicaid cover doulas in Arlington?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Tarrant County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "Which hospitals in Arlington accommodate birth plans?", a: "Texas Health Arlington Memorial and other area facilities generally accommodate birth plans, but policies vary. Always confirm your hospital's policy during your hospital tour." },
       { q: "How much does a doula cost in Arlington?", a: "$850 to $2,500 depending on experience and package." },
       { q: "Does True Joy Birthing work with Arlington families?", a: "True Joy Birthing provides free birth-prep tools for Arlington families. The free birth plan, checklist, and guided walkthrough in the app work for any Arlington hospital. The app also helps you connect with local doulas and midwives in your area." },
@@ -131,8 +131,8 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Austin Area Birthing Center and Natural Beginnings Birth and Wellness Center", paragraph: "Austin Area Birthing Center and Natural Beginnings Birth and Wellness Center both offer freestanding, midwife-led birth center options for families seeking a lower-intervention setting. These are good options for low-risk pregnancies if you want the birth center experience \u2014 and having a doula there who knows the rhythm of that space makes the whole thing feel a lot less unknown." },
     ],
-    medicaidNote: "Texas Medicaid doula expansion is underway. In the progressive Austin area, some Medicaid plans may already offer doula coverage. Check with your specific plan.",
-    insuranceNote: "Austin's progressive health culture means more insurers offer alternative care benefits including doula support. Tech-sector employers in the area increasingly include maternity wellness in coverage.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Travis County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Austin area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
       { q: "Is Austin a good city for natural birth?", a: "Austin is known for its birth-friendly culture. The city has multiple birth centers and a community of providers who support varied birth preferences. Hospitals like St. David's South Austin accommodate diverse birth plans." },
       { q: "How much does a doula cost in Austin?", a: "$1,000 to $3,000. Austin's higher cost of living and strong doula community mean prices range higher than some Texas markets, but so does the level of experienced support." },
@@ -182,10 +182,10 @@ export const cities: Record<string, CityData> = {
     ],
     birthCenterDetails: [
     ],
-    medicaidNote: "Texas Medicaid's doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Carrollton area. Confirm with your Medicaid plan.",
-    insuranceNote: "Some private insurers in the Carrollton area now cover doula support as part of maternal wellness benefits. Contact your plan for details.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas/Denton/Collin Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Carrollton area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
-      { q: "Does Medicaid cover doulas in Carrollton?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits in the Carrollton area." },
+      { q: "Does Medicaid cover doulas in Carrollton?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas/Denton/Collin Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "Which hospitals in Carrollton accommodate birth plans?", a: "Medical City Lewisville and other area facilities generally accommodate birth plans, but policies vary. Always confirm your hospital's policy during your hospital tour." },
       { q: "How much does a doula cost in Carrollton?", a: "$900 to $2,500 depending on experience and package." },
       { q: "Does True Joy Birthing work with Carrollton families?", a: "True Joy Birthing provides free birth-prep tools for Carrollton families. The free birth plan, checklist, and guided walkthrough in the app work for any Carrollton hospital. The app also helps you connect with local doulas and midwives in your area." },
@@ -226,7 +226,7 @@ export const cities: Record<string, CityData> = {
     costLow: 900,
     costHigh: 2800,
     shelbiServesHere: true,
-    culture: "Dallas is a large, diverse metro with a growing birth community. Families deliver at everything from high-volume hospitals to smaller community facilities and standalone birth centers. Medicaid expansion is making doula support more accessible.",
+    culture: "Dallas is a large, diverse metro with a growing birth community. Families deliver at everything from high-volume hospitals to smaller community facilities and standalone birth centers. SB 750 is making doula support more accessible through Medicaid coverage.",
     heroLocalDetail: "If you're delivering at Texas Health Dallas, know that the LBJ Freeway stretch near Forest Lane can turn a 15-minute drive into 40 during afternoon rush \u2014 plan your route to the hospital before contractions start. And when those third-trimester evening walks become non-negotiable, White Rock Lake's loop trail is shaded, flat, and has enough bathrooms along the way that you're never too far from one.",
     hospitalDetails: [
       { name: "Texas Health Dallas", paragraph: "Texas Health Dallas on Harry Hines is one of the busiest L&amp;D units in the DFW metro \u2014 which means your care team has seen every kind of birth plan. Doulas are generally welcome, though visitor policies can shift seasonally, so confirm during your hospital tour. If we're being real, walking into a big hospital system without your preferences written down makes everything harder \u2014 so bring your birth plan and your doula, and you'll feel the difference. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
@@ -236,10 +236,10 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "The Birth Place at Dallas Birth Center", paragraph: "For families seeking a lower-intervention setting, The Birth Place at Dallas Birth Center offers midwife-led care in a standalone birth center environment. It's a good option if you want a birth center experience without leaving the city \u2014 and honestly, having a doula there who knows the rhythm of that space makes the whole thing feel a lot less unknown." },
     ],
-    medicaidNote: "Texas Medicaid's doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Dallas-Fort Worth area. Confirm with your Medicaid plan.",
-    insuranceNote: "Some private insurers through the DFW metro area now cover doula support as part of maternal wellness benefits. Contact your plan.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the DFW metro area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
-      { q: "Does Medicaid cover doulas in Dallas?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits." },
+      { q: "Does Medicaid cover doulas in Dallas?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "Which Dallas hospitals are birth-plan friendly?", a: "Many Dallas-area hospitals accommodate birth plans, but policies vary by facility. Texas Health Dallas and Baylor University Medical Center both see well-informed patients with clear preferences. Always confirm your hospital's policy during your hospital tour." },
       { q: "How much does a doula cost in Dallas?", a: "$900 to $2,800 depending on experience and package." },
       { q: "Does True Joy Birthing work with Dallas families?", a: "True Joy Birthing provides free birth-prep tools for Dallas families. The free birth plan, checklist, and guided walkthrough in the app work for any Dallas hospital. The app also helps you connect with local doulas and midwives in your area." },
@@ -262,10 +262,10 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Denton Birth Center", paragraph: "Denton Birth Center is a freestanding, midwife-led birth center offering a lower-intervention setting for low-risk pregnancies. It's a good option if you want a birth center experience without leaving the city \u2014 and having a doula there who knows the rhythm of that space makes the whole thing feel a lot less unknown." },
     ],
-    medicaidNote: "Texas Medicaid's doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Denton area. Confirm with your Medicaid plan.",
-    insuranceNote: "Some private insurers in the Denton area now cover doula support as part of maternal wellness benefits. Contact your plan for details.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Denton County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Denton area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
-      { q: "Does Medicaid cover doulas in Denton?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits in the Denton area." },
+      { q: "Does Medicaid cover doulas in Denton?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Denton County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "Which hospitals in Denton accommodate birth plans?", a: "Texas Health Denton and other area facilities generally accommodate birth plans, but policies vary. Always confirm your hospital's policy during your hospital tour." },
       { q: "How much does a doula cost in Denton?", a: "$850 to $2,300 depending on experience and package." },
       { q: "Does True Joy Birthing work with Denton families?", a: "True Joy Birthing provides free birth-prep tools for Denton families. The free birth plan, checklist, and guided walkthrough in the app work for any Denton hospital. The app also helps you connect with local doulas and midwives in your area." },
@@ -317,10 +317,10 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Fort Worth Birth Center", paragraph: "Fort Worth Birth Center is a freestanding, midwife-led birth center for families seeking a lower-intervention setting. It's a good option for low-risk pregnancies \u2014 and having a doula who knows the birth center space makes the whole experience feel more supported." },
     ],
-    medicaidNote: "Texas Medicaid doula benefits are expanding. In the Fort Worth area, check your Tarrant County or surrounding-area Medicaid plan for current doula coverage.",
-    insuranceNote: "Some Fort Worth-area insurers offer maternal wellness benefits that include doula coverage. Contact your insurance representative to confirm.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Tarrant County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Fort Worth area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
-      { q: "Does Medicaid cover doulas in Fort Worth?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits." },
+      { q: "Does Medicaid cover doulas in Fort Worth?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Tarrant County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "Which Fort Worth hospitals are birth-plan friendly?", a: "Many Fort Worth-area hospitals accommodate birth plans, but policies vary by facility. Texas Health Harris Methodist and Cook Children's Medical Center both see well-informed patients with clear preferences. Always confirm your hospital's policy during your hospital tour." },
       { q: "How much does a doula cost in Fort Worth?", a: "$850 to $2,600 depending on experience and package." },
       { q: "Does True Joy Birthing work with Fort Worth families?", a: "True Joy Birthing provides free birth-prep tools for Fort Worth families. The free birth plan, checklist, and guided walkthrough in the app work for any Fort Worth hospital. The app also helps you connect with local doulas and midwives in your area." },
@@ -343,10 +343,10 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Birth Center of Frisco", paragraph: "Birth Center of Frisco is a freestanding, midwife-led birth center offering a lower-intervention setting for low-risk pregnancies. It's a good option if you want the birth center experience close to home \u2014 and having a doula there who knows the rhythm of that space makes it feel a lot less unknown." },
     ],
-    medicaidNote: "Texas Medicaid's doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Frisco area. Confirm with your Medicaid plan.",
-    insuranceNote: "Some private insurers in the Frisco area now cover doula support as part of maternal wellness benefits. Contact your plan for details.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Collin/Denton Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Frisco area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
-      { q: "Does Medicaid cover doulas in Frisco?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits in the Frisco area." },
+      { q: "Does Medicaid cover doulas in Frisco?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Collin/Denton Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "Which hospitals in Frisco accommodate birth plans?", a: "Baylor Scott & White Frisco and other area facilities generally accommodate birth plans, but policies vary. Always confirm your hospital's policy during your hospital tour." },
       { q: "How much does a doula cost in Frisco?", a: "$950 to $2,700 depending on experience and package." },
       { q: "Does True Joy Birthing work with Frisco families?", a: "True Joy Birthing provides free birth-prep tools for Frisco families. The free birth plan, checklist, and guided walkthrough in the app work for any Frisco hospital. The app also helps you connect with local doulas and midwives in your area." },
@@ -368,10 +368,10 @@ export const cities: Record<string, CityData> = {
     ],
     birthCenterDetails: [
     ],
-    medicaidNote: "Texas Medicaid's doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Garland area. Confirm with your Medicaid plan.",
-    insuranceNote: "Some private insurers in the Garland area now cover doula support as part of maternal wellness benefits. Contact your plan for details.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Garland area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
-      { q: "Does Medicaid cover doulas in Garland?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits in the Garland area." },
+      { q: "Does Medicaid cover doulas in Garland?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "Which hospitals in Garland accommodate birth plans?", a: "Baylor Scott & White Garland and other area facilities generally accommodate birth plans, but policies vary. Always confirm your hospital's policy during your hospital tour." },
       { q: "How much does a doula cost in Garland?", a: "$800 to $2,400 depending on experience and package." },
       { q: "Does True Joy Birthing work with Garland families?", a: "True Joy Birthing provides free birth-prep tools for Garland families. The free birth plan, checklist, and guided walkthrough in the app work for any Garland hospital. The app also helps you connect with local doulas and midwives in your area." },
@@ -393,10 +393,10 @@ export const cities: Record<string, CityData> = {
     ],
     birthCenterDetails: [
     ],
-    medicaidNote: "Texas Medicaid's doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Grand Prairie area. Confirm with your Medicaid plan.",
-    insuranceNote: "Some private insurers in the Grand Prairie area now cover doula support as part of maternal wellness benefits. Contact your plan for details.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas/Tarrant Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Grand Prairie area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
-      { q: "Does Medicaid cover doulas in Grand Prairie?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits in the Grand Prairie area." },
+      { q: "Does Medicaid cover doulas in Grand Prairie?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas/Tarrant Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "Which hospitals in Grand Prairie accommodate birth plans?", a: "Baylor Scott & White Grand Prairie and other area facilities generally accommodate birth plans, but policies vary. Always confirm your hospital's policy during your hospital tour." },
       { q: "How much does a doula cost in Grand Prairie?", a: "$850 to $2,500 depending on experience and package." },
       { q: "Does True Joy Birthing work with Grand Prairie families?", a: "True Joy Birthing provides free birth-prep tools for Grand Prairie families. The free birth plan, checklist, and guided walkthrough in the app work for any Grand Prairie hospital. The app also helps you connect with local doulas and midwives in your area." },
@@ -420,11 +420,11 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Nativity Birth Center and Birth Center at St. Luke's", paragraph: "Families looking for a lower-intervention setting can explore Nativity Birth Center or the Birth Center at St. Luke's. Nativity is a freestanding, midwife-led birth center for low-risk, unmedicated births. The Birth Center at St. Luke's offers a birth-center experience with hospital backup right next door \u2014 a good fit if you want the midwifery model but still want that safety net close by." },
     ],
-    medicaidNote: "Texas Medicaid's doula benefit is expanding. In Harris County and surrounding areas, eligible individuals should verify doula coverage with their Medicaid plan.",
-    insuranceNote: "Some Houston-area employers offer maternity benefits that include doula coverage. Ask your HR department or insurance representative.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Harris County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Houston area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
       { q: "How much does a doula cost in Houston?", a: "$800 to $2,600. Prices vary based on certification level, experience, and whether postpartum visits are included." },
-      { q: "Does Texas Medicaid cover doulas in Houston?", a: "Texas is expanding Medicaid doula benefits. Contact your Harris County or surrounding area Medicaid managed care plan for current coverage details." },
+      { q: "Does Texas Medicaid cover doulas in Houston?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Harris County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "What are good birth centers in Houston?", a: "Houston has several birth center options, including Nativity Birth Center and Birth Center at St. Luke's. Always tour your chosen facility and understand their transfer protocols." },
       { q: "Does True Joy Birthing provide in-person doula services in Houston?", a: "True Joy Birthing provides free birth-prep tools for Houston families. The free birth plan, checklist, and guided walkthrough in the app work for any Houston hospital. The app also helps you connect with local doulas and midwives in your area." },
     ],
@@ -445,10 +445,10 @@ export const cities: Record<string, CityData> = {
     ],
     birthCenterDetails: [
     ],
-    medicaidNote: "Texas Medicaid's doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Irving area. Confirm with your Medicaid plan.",
-    insuranceNote: "Some private insurers in the Irving area now cover doula support as part of maternal wellness benefits. Contact your plan for details.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Irving area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
-      { q: "Does Medicaid cover doulas in Irving?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits in the Irving area." },
+      { q: "Does Medicaid cover doulas in Irving?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "Which hospitals in Irving accommodate birth plans?", a: "Baylor Scott & White Irving and other area facilities generally accommodate birth plans, but policies vary. Always confirm your hospital's policy during your hospital tour." },
       { q: "How much does a doula cost in Irving?", a: "$900 to $2,600 depending on experience and package." },
       { q: "Does True Joy Birthing work with Irving families?", a: "True Joy Birthing provides free birth-prep tools for Irving families. The free birth plan, checklist, and guided walkthrough in the app work for any Irving hospital. The app also helps you connect with local doulas and midwives in your area." },
@@ -556,10 +556,10 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Arise Birth Center", paragraph: "Arise Birth Center is a freestanding, midwife-led birth center in the McKinney area offering a lower-intervention setting for low-risk pregnancies. It's a good option if you want a birth center experience close to home \u2014 and having a doula who knows the rhythm of that space makes it feel a lot less unknown." },
     ],
-    medicaidNote: "Texas Medicaid's doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the McKinney area. Confirm with your Medicaid plan.",
-    insuranceNote: "Some private insurers in the McKinney area now cover doula support as part of maternal wellness benefits. Contact your plan for details.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Collin County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the McKinney area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
-      { q: "Does Medicaid cover doulas in McKinney?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits in the McKinney area." },
+      { q: "Does Medicaid cover doulas in McKinney?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Collin County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "Which hospitals in McKinney accommodate birth plans?", a: "Baylor Scott & White McKinney and other area facilities generally accommodate birth plans, but policies vary. Always confirm your hospital's policy during your hospital tour." },
       { q: "How much does a doula cost in McKinney?", a: "$950 to $2,700 depending on experience and package." },
       { q: "Does True Joy Birthing work with McKinney families?", a: "True Joy Birthing provides free birth-prep tools for McKinney families. The free birth plan, checklist, and guided walkthrough in the app work for any McKinney hospital. The app also helps you connect with local doulas and midwives in your area." },
@@ -607,10 +607,10 @@ export const cities: Record<string, CityData> = {
     ],
     birthCenterDetails: [
     ],
-    medicaidNote: "Texas Medicaid's doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Mesquite area. Confirm with your Medicaid plan.",
-    insuranceNote: "Some private insurers in the Mesquite area now cover doula support as part of maternal wellness benefits. Contact your plan for details.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Mesquite area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
-      { q: "Does Medicaid cover doulas in Mesquite?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits in the Mesquite area." },
+      { q: "Does Medicaid cover doulas in Mesquite?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "Which hospitals in Mesquite accommodate birth plans?", a: "Baylor Scott & White Sunnyvale and other area facilities generally accommodate birth plans, but policies vary. Always confirm your hospital's policy during your hospital tour." },
       { q: "How much does a doula cost in Mesquite?", a: "$800 to $2,300 depending on experience and package." },
       { q: "Does True Joy Birthing work with Mesquite families?", a: "True Joy Birthing provides free birth-prep tools for Mesquite families. The free birth plan, checklist, and guided walkthrough in the app work for any Mesquite hospital. The app also helps you connect with local doulas and midwives in your area." },
@@ -634,10 +634,10 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "The Birth Place", paragraph: "The Birth Place is a freestanding birth center in the Plano area offering a midwife-led, lower-intervention setting for low-risk pregnancies. It's a good option if you want a birth center experience without leaving the city \u2014 and having a doula who knows the space makes the whole thing feel more supported." },
     ],
-    medicaidNote: "Texas Medicaid's doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Plano area. Confirm with your Medicaid plan.",
-    insuranceNote: "Some private insurers in the Plano area now cover doula support as part of maternal wellness benefits. Contact your plan for details.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Collin County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Plano area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
-      { q: "Does Medicaid cover doulas in Plano?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits in the Plano area." },
+      { q: "Does Medicaid cover doulas in Plano?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Collin County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "Which hospitals in Plano accommodate birth plans?", a: "Texas Health Plano and other area facilities generally accommodate birth plans, but policies vary. Always confirm your hospital's policy during your hospital tour." },
       { q: "How much does a doula cost in Plano?", a: "$1,000 to $2,800 depending on experience and package." },
       { q: "Does True Joy Birthing work with Plano families?", a: "True Joy Birthing provides free birth-prep tools for Plano families. The free birth plan, checklist, and guided walkthrough in the app work for any Plano hospital. The app also helps you connect with local doulas and midwives in your area." },
@@ -660,11 +660,11 @@ export const cities: Record<string, CityData> = {
     ],
     birthCenterDetails: [
     ],
-    medicaidNote: "Texas Medicaid doula coverage is expanding statewide. San Antonio-area families should check current coverage with their Medicaid managed care organization.",
-    insuranceNote: "San Antonio's large military community (Joint Base San Antonio) means some families may have access to Tricare or VA maternity benefits. Coverage for doula support varies.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Bexar County's STAR managed care plans (Superior HealthPlan, Community First Health Plans, and others). Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the San Antonio area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm. Military families: TRICARE does not currently cover doula services, but HSA and FSA funds can often help.",
     faqs: [
       { q: "How much does a doula cost in San Antonio?", a: "$700 to $2,200. San Antonio's doula market tends to be more affordable than Austin or Dallas, with many experienced doulas offering sliding scale options." },
-      { q: "Does Medicaid cover doulas in San Antonio?", a: "Texas is expanding Medicaid doula benefits statewide. Contact your San Antonio-area Medicaid plan for current coverage and eligibility." },
+      { q: "Does Medicaid cover doulas in San Antonio?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Bexar County's STAR managed care plans (Superior HealthPlan, Community First Health Plans, and others). Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "Are there birth centers in San Antonio?", a: "San Antonio's birth center scene is smaller than Austin's, but options are growing. Most families deliver at University Hospital, Baptist Medical Center, or CHRISTUS Santa Rosa." },
       { q: "Does True Joy Birthing work with San Antonio families?", a: "True Joy Birthing provides free birth-prep tools for San Antonio families. The free birth plan, checklist, and guided walkthrough in the app work for any San Antonio birth setting. The app also helps you connect with local doulas and midwives in your area." },
     ],
@@ -687,11 +687,11 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Waco Birth Center and Clinic", paragraph: "Waco Birth Center and Clinic, on Austin Avenue near downtown, is a licensed freestanding birth center staffed by certified nurse-midwives. They accept insurance and Medicaid, making them one of the more accessible out-of-hospital birth options in Central Texas." },
     ],
-    medicaidNote: "Texas is rolling out Medicaid doula coverage statewide, but full birth-doula reimbursement isn\u2019t active yet for Waco-area families. If you\u2019re on Medicaid in McLennan County, contact your managed care plan directly \u2014 some plans have started adding doula support as a benefit ahead of the state mandate. Doulas who want to accept Medicaid must register with Texas HHSC.",
-    insuranceNote: "Most private insurance in the Waco area doesn\u2019t cover doulas directly, but some plans \u2014 including BCBS Texas\u2019s Special Beginnings program and UnitedHealthcare\u2019s Doula Support benefit \u2014 offer partial reimbursement or resource access. Check your specific plan details, and ask whether HSA or FSA funds can help cover out-of-pocket costs.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including McLennan County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Waco area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
       { q: "How much does a doula cost in Waco?", a: "$800 to $1,500 depending on experience and package. Waco\u2019s cost of living keeps doula rates lower than Dallas or Austin \u2014 you\u2019ll typically see rates in the $800\u2013$1,200 range for standard birth packages, with premium packages running up to $1,500." },
-      { q: "Does Medicaid cover doulas in Waco?", a: "Texas is expanding Medicaid doula coverage statewide, but full reimbursement isn\u2019t active yet for Waco-area families. If you\u2019re on Medicaid in McLennan County, contact your managed care plan directly \u2014 some have started adding doula benefits ahead of the state mandate." },
+      { q: "Does Medicaid cover doulas in Waco?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including McLennan County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "Which hospitals in Waco accommodate birth plans?", a: "Waco has two hospitals with L&D: Baylor Scott & White \u2013 Hillcrest (Level III NICU, dedicated Women\u2019s & Children\u2019s Center) and Ascension Providence (Level II NICU, smaller unit with more one-on-one nursing time). Waco also has a freestanding birth center \u2014 Waco Birth Center and Clinic on Austin Avenue \u2014 for families planning an out-of-hospital birth." },
       { q: "Does True Joy Birthing work with Waco families?", a: "True Joy Birthing provides free birth-prep tools for Waco families. The free birth plan, checklist, and guided walkthrough in the app work for any Waco birth setting. The app also helps you connect with local doulas and midwives in your area." },
     ],
@@ -713,11 +713,11 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "The Birth Center of Midland", paragraph: "The Birth Center of Midland is a freestanding, midwife-led birth center offering a lower-intervention setting for low-risk pregnancies. It\u2019s the only out-of-hospital birth center in the Permian Basin \u2014 and having a doula who knows the rhythm of that space makes the whole thing feel a lot less unknown." },
     ],
-    medicaidNote: "Texas Medicaid\u2019s doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Midland area. Contact your Medicaid managed care plan to confirm coverage \u2014 some Permian Basin plans have started adding doula benefits ahead of the statewide mandate.",
-    insuranceNote: "Some private insurers in the Midland-Odessa region cover doula support as part of maternal wellness benefits. The oil-industry employer landscape here means some families have access to more comprehensive plans \u2014 check with your HR department or insurance provider directly.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Midland County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Midland-Odessa area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
       { q: "How much does a doula cost in Midland?", a: "$800 to $2,000 depending on experience and package. The Midland Doula Collective offers birth doula packages starting at $950, and local rates tend to be lower than the big Texas metros." },
-      { q: "Does Medicaid cover doulas in Midland?", a: "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits in the Midland area." },
+      { q: "Does Medicaid cover doulas in Midland?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Midland County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "Which hospitals in Midland accommodate birth plans?", a: "Midland Memorial Hospital has a full L&D program with a Level II NICU, and Odessa Regional Medical Center (about 20 minutes away) offers a Level III NICU and the region\u2019s most established maternity program. Midland also has The Birth Center of Midland for families planning an out-of-hospital birth." },
       { q: "Does True Joy Birthing work with Midland families?", a: "True Joy Birthing provides free birth-prep tools for Midland families. The free birth plan, checklist, and guided walkthrough in the app work for any Midland birth setting. The app also helps you connect with local doulas and midwives in your area." },
     ],
@@ -794,11 +794,11 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Azalea Birth Center", paragraph: "Azalea Birth Center, on South Broadway in central Tyler, is a freestanding birth center run by midwife Vicky Wells, offering water birth and midwife-attended out-of-hospital birth in a home-like setting. If you\u2019re considering birth center care, call ahead to confirm current availability and schedule a tour \u2014 the birth community in Tyler is growing but small, so spots can fill." },
     ],
-    medicaidNote: "Texas Medicaid\u2019s doula benefit is expanding statewide. As of 2026, doula services may be reimbursable in the Tyler area. Contact your Medicaid managed care plan to confirm coverage \u2014 some East Texas plans have started adding doula support ahead of the statewide mandate.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Smith County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Tyler area. Some private insurers offer maternal wellness benefits that include doula support \u2014 contact your provider directly, and check whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
       { q: "How much does a doula cost in Tyler?", a: "$800 to $2,000 depending on experience and package. Tyler\u2019s doula community is smaller than in Dallas or Houston, but rates tend to be more affordable \u2014 you\u2019ll typically find standard birth packages in the $800\u2013$1,400 range." },
-      { q: "Does Medicaid cover doulas in Tyler?", a: "Texas is expanding Medicaid doula coverage statewide. Smith County families should contact their Medicaid managed care plan directly \u2014 some East Texas plans have started adding doula support as a covered benefit ahead of the statewide mandate." },
+      { q: "Does Medicaid cover doulas in Tyler?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Smith County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring." },
       { q: "Which hospitals in Tyler accommodate birth plans?", a: "CHRISTUS Mother Frances Hospital \u2013 Tyler has a verified Level III NICU (the Lucy & John Carr NICU) and Level III Maternal designation, and UT Health Tyler earned its own Level III NICU designation in 2024. Tyler also has a freestanding birth center \u2014 Azalea Birth Center on South Broadway, run by midwife Vicky Wells \u2014 for families seeking out-of-hospital birth. That\u2019s two Level III hospitals and a birth center, which is more than most East Texas towns can offer." },
       { q: "Does True Joy Birthing work with Tyler families?", a: "True Joy Birthing provides free birth-prep tools for Tyler families. The free birth plan, checklist, and guided walkthrough in the app work for any Tyler birth setting. The app also helps you connect with local doulas and midwives in your area." },
     ],
@@ -819,11 +819,11 @@ export const cities: Record<string, CityData> = {
     ],
     birthCenterDetails: [
     ],
-    medicaidNote: "Texas Medicaid\u2019s doula benefit is expanding statewide. Bell County families on Medicaid should contact their managed care plan directly \u2014 some plans in the Killeen-Temple area have started adding doula support as a covered benefit ahead of the statewide rollout. Military families with Tricare have separate maternity coverage and should check Tricare\u2019s current doula policy.",
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Bell County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring. Military families: TRICARE does not currently cover doula services, but HSA and FSA funds can often help.",
     insuranceNote: "Killeen\u2019s large military population means many families have Tricare, which covers hospital birth but does not directly reimburse doulas. For private insurance, whether doula services are partially covered varies by plan \u2014 contact your provider directly, and check whether HSA or FSA funds can cover out-of-pocket costs.",
     faqs: [
       { q: "How much does a doula cost in Killeen?", a: "$700 to $1,800 depending on experience and package. Killeen\u2019s doula rates tend to run lower than Austin or Dallas, and some local doulas offer military discounts or sliding-scale options for Fort Cavazos families." },
-      { q: "Does Medicaid cover doulas in Killeen?", a: "Texas is expanding Medicaid doula coverage statewide. Bell County families should contact their Medicaid managed care plan to confirm current benefits \u2014 some Killeen-area plans have started adding doula support ahead of the statewide mandate." },
+      { q: "Does Medicaid cover doulas in Killeen?", a: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Bell County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's coverage before hiring. Military families: TRICARE does not currently cover doula services, but HSA and FSA funds can often help." },
       { q: "Which hospitals in Killeen accommodate birth plans?", a: "AdventHealth Central Texas is Killeen\u2019s only hospital with L&D. Baylor Scott & White Medical Center in Temple, about 20 minutes north, also serves Killeen-area families \u2014 contact the hospital directly to ask about their current maternity services and NICU availability." },
       { q: "Does True Joy Birthing work with Killeen families?", a: "True Joy Birthing provides free birth-prep tools for Killeen families. The free birth plan, checklist, and guided walkthrough in the app work for any Killeen birth setting. The app also helps you connect with local doulas and midwives in your area." },
     ],
