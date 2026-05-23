@@ -1204,6 +1204,90 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["austin-tx", "san-antonio-tx", "new-braunfels-tx"],
   },
+  "pearland-tx": {
+    city: "Pearland",
+    state: "TX",
+    slug: "pearland-tx",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Pearland sits south of Houston along TX-288 in northern Brazoria County (with small portions spilling into Fort Bend and Harris counties). It\u2019s one of the fastest-growing bedroom communities in the Houston metro \u2014 Shadow Creek Ranch and Silverlake have drawn thousands of young families looking for suburban space within commuting distance of the Texas Medical Center. The birth community here is small and locally rooted; most families drive into Houston for specialist care or birth center options, but HCA Houston Healthcare Pearland gives Pearland its own in-city delivery hospital.",
+    heroLocalDetail: "The TX-288/Beltway 8 interchange is the traffic choke point every Pearland family knows \u2014 during afternoon rush, southbound TX-288 from the Medical Center backs up all the way past Broadmore, and the Beltway 8 frontage roads aren\u2019t much better. If you\u2019re delivering at HCA Houston Healthcare Pearland on Shadow Creek Parkway, take the Silverlake exit off TX-288 and come in from the west \u2014 it\u2019s faster than fighting Broadway during peak times. Independence Park\u2019s trail system on the east side of town is a flat, shaded go-to for third-trimester walks, and Shadow Creek Ranch\u2019s greenbelt trails are equally popular with expectant moms in the south part of the city.",
+    hospitalDetails: [
+      { name: "HCA Houston Healthcare Pearland", paragraph: "HCA Houston Healthcare Pearland, at 11100 Shadow Creek Pkwy, is Pearland\u2019s only hospital with labor and delivery services, offering private birthing suites and 24/7 obstetric coverage. The hospital provides a NICU for babies who need extra support, though the specific NICU level is not stated on their website \u2014 contact the hospital directly for current NICU level verification. If we\u2019re being real, Pearland families needing a higher-level NICU are about 20 minutes from the Texas Medical Center, where Level III and IV NICU access is standard. Having your birth plan ready when you arrive at HCA Pearland makes the intake conversation smoother \u2014 especially when you\u2019re already in labor. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something clear to work from." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned zero results for
+    // Pearland / Brazoria County. Google Maps found no freestanding birth
+    // centers. Nearest: Bay Area Community Birth Center in Houston (~15 min
+    // north on TX-288). Verified 2026-05-22.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Brazoria County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Pearland area. Many families here carry employer-based insurance through Houston-area employers \u2014 check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
+    faqs: [
+      { q: "How much does a doula cost in Pearland?", a: "$900 to $2,500 depending on experience and package. Pearland sits in the Houston metro market, so rates are comparable to Houston proper \u2014 some doulas based in Pearland or Shadow Creek Ranch may offer slightly lower rates than in-town Houston doulas." },
+      { q: "Does Medicaid cover doulas in Pearland?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Brazoria County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals in Pearland have labor and delivery?", a: "HCA Houston Healthcare Pearland at 11100 Shadow Creek Pkwy is the only hospital in Pearland with labor and delivery services. Contact the hospital directly for current NICU level verification. Pearland does not have a freestanding birth center; the nearest is Bay Area Community Birth Center in Houston, about 15 minutes north." },
+      { q: "Does True Joy Birthing work with Pearland families?", a: "True Joy Birthing provides free birth-prep tools for Pearland families. The free birth plan, checklist, and guided walkthrough in the app work for any Pearland birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["houston-tx", "sugar-land-tx"],
+  },
+  "cedar-park-tx": {
+    city: "Cedar Park",
+    state: "TX",
+    slug: "cedar-park-tx",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Cedar Park sits in fast-growing Williamson County just northwest of Austin along US-183, anchored by the Brushy Creek area and a surge of young families moving into master-planned communities like Cedar Park Town Center and Buttercup Creek. The city itself doesn\u2019t have a hospital with labor and delivery \u2014 St. David\u2019s Cedar Park is a surgical and emergency facility, not a birth hospital \u2014 so Cedar Park families must travel for delivery. The nearest hospitals are in Round Rock (~10 miles) and Austin (~12 miles), and the nearest birth center is Austin Area Birthing Center about 8 minutes south.",
+    heroLocalDetail: "US-183 (Bell Blvd) runs through the heart of Cedar Park, and the intersection with Parmer Lane and the 45 Toll Road is where most of your hospital-bound traffic decisions happen. If you\u2019re heading to St. David\u2019s Round Rock, take the 45 Toll east to I-35 and exit at Round Rock Ave \u2014 it\u2019s the fastest route even with toll fares. For St. David\u2019s Medical Center Austin, US-183 south to MoPac is your best bet, but avoid MoPac during afternoon rush or you\u2019ll be sitting in traffic at the worst possible time. Brushy Creek Lake Park\u2019s trail system is the go-to for Cedar Park moms in the third trimester \u2014 flat, paved, shaded, and about 10 minutes from both hospital routes.",
+    hospitalDetails: [
+      { name: "St. David\u2019s Round Rock Medical Center (~10 mi)", paragraph: "St. David\u2019s Round Rock Medical Center, about 10 miles northeast in Round Rock at 2400 Round Rock Ave, is the nearest hospital with labor and delivery for Cedar Park families. The hospital offers NICU services and a full women\u2019s health program, though the specific NICU level is not stated on their website \u2014 contact the hospital directly for current NICU level verification. With 209 beds and a Level II Trauma Center, St. David\u2019s Round Rock handles a high volume of births for the fast-growing northern Austin suburbs. If you\u2019re delivering here, bring your birth plan \u2014 this hospital sees a lot of families and moves fast. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "St. David\u2019s Medical Center Austin (~12 mi)", paragraph: "St. David\u2019s Medical Center Austin, about 12 miles south in central Austin, is another option for Cedar Park families, with a Level III NICU (contact the hospital directly for current level verification) and a strong maternal-fetal medicine program. If we\u2019re being real, Cedar Park families don\u2019t have a delivery hospital in their own city \u2014 so plan your route and your birth plan well before contractions start. Having both St. David\u2019s locations in your back pocket means you\u2019re covered from either direction." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned zero results for
+    // Cedar Park / Williamson County outside Round Rock. Nearest birth center:
+    // Austin Area Birthing Center, ~8 miles south. Verified 2026-05-22.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Williamson County\u2019s STAR managed care plans. Williamson County\u2019s rapid growth means a lot of newly enrolled families \u2014 contact your Medicaid managed care plan to confirm doula coverage, as some plans are still completing their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Cedar Park area. Austin\u2019s tech-sector employers increasingly include maternity wellness benefits that may cover doula support \u2014 check with your HR department. HSA and FSA funds can also be applied toward out-of-pocket doula costs.",
+    faqs: [
+      { q: "How much does a doula cost in Cedar Park?", a: "$900 to $2,500 depending on experience and package. Cedar Park sits between Austin-level pricing for experienced doulas who serve the whole metro and slightly lower rates for doulas based in Williamson County." },
+      { q: "Does Medicaid cover doulas in Cedar Park?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Williamson County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Where do Cedar Park families deliver?", a: "Cedar Park does not have a hospital with labor and delivery. The nearest options are St. David\u2019s Round Rock Medical Center (~10 miles, NICU services, contact directly for level verification) and St. David\u2019s Medical Center Austin (~12 miles, Level III NICU, contact directly for level verification). The nearest birth center is Austin Area Birthing Center, about 8 miles south." },
+      { q: "Does True Joy Birthing work with Cedar Park families?", a: "True Joy Birthing provides free birth-prep tools for Cedar Park families. The free birth plan, checklist, and guided walkthrough in the app work for any Cedar Park birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["austin-tx", "round-rock-tx"],
+  },
+  "victoria-tx": {
+    city: "Victoria",
+    state: "TX",
+    slug: "victoria-tx",
+    costLow: 700,
+    costHigh: 1500,
+    shelbiServesHere: false,
+    culture: "Victoria is a regional hub that sits at the crossroads between Houston, San Antonio, and Austin \u2014 literally where US-59, US-87, and US-77 converge in the Texas Coastal Plains. It\u2019s an agricultural and oil town with a working-class heartbeat and deep multi-generational roots. The birth community here is small and steady; Citizens Medical Center branded their maternity unit as the \u201CCitizens Birth Center,\u201D and DeTar Healthcare System provides the city\u2019s other major hospital option. Families from surrounding counties \u2014 Calhoun, Goliad, Refugio, DeWitt, Lavaca \u2014 travel to Victoria for delivery, making advance planning especially important.",
+    heroLocalDetail: "US-59 (the future I-69 / Navy Memorial Highway) runs through the heart of Victoria, and the DeTar campuses sit just off it on either side of town \u2014 DeTar Navarro near the downtown side, DeTar North on the growing north side. Citizens Medical Center is on Medical Drive near Victoria College, about 5 minutes from the US-59/Guadalupe Street interchange. Riverside Park\u2019s trail system along the Guadalupe River is where a lot of Victoria moms walk in the third trimester \u2014 flat, shaded, and a 5-minute drive from both hospital systems. Victoria College and the University of Houston\u2013Victoria campus bring a younger demographic to the central part of the city.",
+    hospitalDetails: [
+      { name: "Citizens Medical Center", paragraph: "Citizens Medical Center, on Medical Drive near Victoria College, is a 317-bed hospital that branded its maternity unit as the \u201CCitizens Birth Center\u201D \u2014 not to be confused with a freestanding birth center, as this is a hospital-based unit. Citizens has a verified Level II NICU stated directly on their website, along with lactation consultants and free prenatal classes. If you\u2019re delivering at Citizens, having your birth plan ready makes the intake conversation smoother \u2014 they handle births from across the region and move fast. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something clear to work from." },
+      { name: "DeTar Healthcare System", paragraph: "DeTar Healthcare System operates two campuses in Victoria \u2014 DeTar Navarro on the south side and DeTar North on the growing north side \u2014 and provides maternity care and delivery services. DeTar confirms obstetric and newborn services on their website, though the specific NICU level is not stated \u2014 contact the hospital directly for current NICU level verification. If we\u2019re being real, Victoria families are fortunate to have two separate hospital systems in one mid-sized city, but that also means knowing which campus your OB delivers at before you\u2019re in labor." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned zero results for
+    // Victoria / Victoria County. Google Maps found no freestanding birth
+    // centers. Verified 2026-05-22.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Victoria County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Victoria area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
+    faqs: [
+      { q: "How much does a doula cost in Victoria?", a: "$700 to $1,500 depending on experience and package. Victoria\u2019s cost of living keeps doula rates lower than in the major Texas metros, but the local doula community is small \u2014 some doulas commute from Houston or San Antonio and may charge travel fees." },
+      { q: "Does Medicaid cover doulas in Victoria?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Victoria County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals in Victoria have labor and delivery?", a: "Citizens Medical Center has a verified Level II NICU and a maternity unit branded as the \u201CCitizens Birth Center.\u201D DeTar Healthcare System also provides delivery services across two campuses (Navarro and North), though contact them directly for current NICU level verification. Victoria does not have a freestanding birth center." },
+      { q: "Does True Joy Birthing work with Victoria families?", a: "True Joy Birthing provides free birth-prep tools for Victoria families. The free birth plan, checklist, and guided walkthrough in the app work for any Victoria birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["houston-tx", "san-antonio-tx", "corpus-christi-tx"],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
