@@ -937,7 +937,7 @@ export const cities: Record<string, CityData> = {
     culture: "Round Rock sits in fast-growing Williamson County, just north of Austin on I-35. It\u2019s the birthplace of Dell Technologies and one of the fastest-growing cities in the metro \u2014 young families are moving here for the schools and the cost of living, and the birth community is catching up with them. Williamson County\u2019s explosive growth means many families are driving from new subdivisions in Liberty Hill, Leander, and Hutto to deliver at St. David\u2019s Round Rock, so advance planning matters more than it does closer in to Austin.",
     heroLocalDetail: "St. David\u2019s Round Rock Medical Center sits at 2400 Round Rock Ave, just off I-35 and Round Rock Ave exit 252. From the 45 Toll Road, take the Round Rock Ave exit and head east \u2014 you\u2019ll hit the hospital in about 3 minutes. During afternoon rush, I-35 between SH 45 and the hospital exit can slow to a crawl, so build in an extra 10\u201315 minutes if you\u2019re coming from Cedar Park or Leander. Old Settlers Park is the unofficial walking spot for third-trimester Round Rock moms \u2014 flat trails, shade, and about 5 minutes from the hospital entrance.",
     hospitalDetails: [
-      { name: "St. David\u2019s Round Rock Medical Center", paragraph: "St. David\u2019s Round Rock Medical Center, at 2400 Round Rock Ave, is the primary hospital for labor and delivery in Round Rock and one of the busiest L&D units in Williamson County. The hospital offers NICU services and a full women\u2019s health program, though the specific NICU level is not stated on their website \u2014 contact the hospital directly for current NICU level and maternity service details. With 209 beds and a Level II Trauma Center designation, St. David\u2019s Round Rock handles a high volume of births for the fast-growing northern Austin suburbs. If you\u2019re delivering here, bring your birth plan \u2014 this hospital sees a lot of families and moves fast, and having your preferences written down makes the intake conversation smoother when you\u2019re already in labor. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "St. David\u2019s Round Rock Medical Center", paragraph: "St. David\u2019s Round Rock Medical Center, at 2400 Round Rock Ave, is the primary hospital for labor and delivery in Round Rock and one of the busiest L&D units in Williamson County. The hospital has a verified Level II NICU (intensive care for sick and premature infants), as listed on the St. David\u2019s HealthCare NICU specialties page, plus a full women\u2019s health program and Magnet\u00ae recognition for nursing excellence. With 209 beds and a Level II Trauma Center designation, St. David\u2019s Round Rock handles a high volume of births for the fast-growing northern Austin suburbs. If you\u2019re delivering here, bring your birth plan \u2014 this hospital sees a lot of families and moves fast, and having your preferences written down makes the intake conversation smoother when you\u2019re already in labor. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
     ],
     // Birth center search: NPI taxonomy 261QB0400X returned no results for Round Rock, TX.
     // Google Maps search for "birth center Round Rock TX" and "freestanding birth center Round Rock" returned no results.
@@ -950,7 +950,7 @@ export const cities: Record<string, CityData> = {
     faqs: [
       { q: "How much does a doula cost in Round Rock?", a: "$900 to $2,200 depending on experience and package. Round Rock sits between Austin-level pricing for experienced doulas who serve the whole metro and slightly lower rates for doulas based in Williamson County. Some doulas offer travel discounts for families in Leander, Cedar Park, and Liberty Hill." },
       { q: "Does Medicaid cover doulas in Round Rock?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Williamson County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
-      { q: "Which hospitals in Round Rock have labor and delivery?", a: "St. David\u2019s Round Rock Medical Center at 2400 Round Rock Ave is the primary hospital for labor and delivery in Round Rock, with NICU services and a full women\u2019s health program. Some Round Rock families also deliver at St. David\u2019s South Austin or St. David\u2019s North Austin Medical Center for additional options." },
+      { q: "Which hospitals in Round Rock have labor and delivery?", a: "St. David\u2019s Round Rock Medical Center at 2400 Round Rock Ave is the primary hospital for labor and delivery in Round Rock, with a verified Level II NICU and a full women\u2019s health program. Some Round Rock families also deliver at St. David\u2019s South Austin or St. David\u2019s North Austin Medical Center for additional options." },
       { q: "Does True Joy Birthing work with Round Rock families?", a: "True Joy Birthing provides free birth-prep tools for Round Rock families. The free birth plan, checklist, and guided walkthrough in the app work for any Round Rock birth setting. The app also helps you connect with local doulas and midwives in your area." },
     ],
     nearbyCities: ["austin-tx", "killeen-tx"],
@@ -995,7 +995,7 @@ export const cities: Record<string, CityData> = {
     hospitalDetails: [
       {
         name: "HCA Houston Healthcare Conroe",
-        paragraph: "HCA Houston Healthcare Conroe, at 504 Medical Drive, is the only hospital with labor and delivery in Montgomery County, with a verified Level II NICU stated directly on hcahoustonhealthcare.com. Their maternity unit offers private birthing suites, 24/7 obstetric hospitalists, and lactation support. They handle a high volume of births for the Conroe\u2013The Woodlands corridor, so come with your preferences written down \u2014 a birth plan helps the team work with you when things move fast. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started.",
+        paragraph: "HCA Houston Healthcare Conroe, at 504 Medical Drive, is the only hospital with labor and delivery in Montgomery County. The hospital offers private birthing suites, 24/7 obstetric hospitalists, and lactation support. Contact the hospital directly for current NICU level verification, as the NICU designation was not confirmed on the hospital\u2019s website at last check. They handle a high volume of births for the Conroe\u2013The Woodlands corridor, so come with your preferences written down \u2014 a birth plan helps the team work with you when things move fast. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started.",
       },
     ],
     birthCenterDetails: [
@@ -1003,13 +1003,21 @@ export const cities: Record<string, CityData> = {
         name: "Journey Birth Center",
         paragraph: "Journey Birth Center, at 1202 N San Jacinto St in downtown Conroe, is a freestanding birth center offering low-intervention, midwife-led births in a home-like setting. They serve families from Conroe, The Woodlands, and Montgomery County who want an alternative to hospital birth. Verify with the center directly for current services and insurance coverage.",
       },
+      {
+        name: "Bliss Women\u2019s Wellness & Birth Center",
+        paragraph: "Bliss Women\u2019s Wellness & Birth Center, at 14157 Horseshoe Bend in Conroe (NPI 1457935439), is an NPI-verified freestanding birth center offering midwife-led birth and women\u2019s wellness services. Verify with the center directly for current services, insurance coverage, and availability.",
+      },
+      {
+        name: "Nativiti Family Birth Center",
+        paragraph: "Nativiti Family Birth Center, at 26614 Oak Ridge Dr in The Woodlands (NPI 1245638287), is an NPI-verified freestanding birth center about 15 minutes south of Conroe. They offer CNM-led births and serve the broader Montgomery County area. Verify with the center directly for current services and insurance coverage.",
+      },
     ],
     medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Montgomery County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "HCA Houston Healthcare Conroe accepts most major private insurance plans. Some insurers in the Montgomery County area offer maternal wellness benefits that partially cover doula services \u2014 check with your provider directly, and ask whether HSA or FSA funds can help with out-of-pocket costs.",
     faqs: [
       { q: "How much does a doula cost in Conroe?", a: "$800 to $2,000 depending on experience and package. Conroe sits in the Houston metro market, so rates run slightly lower than in-town Houston but higher than rural East Texas. Some doulas offer sliding-scale fees or package deals that include prenatal visits, labor support, and postpartum follow-up." },
       { q: "Does Medicaid cover doulas in Conroe?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Montgomery County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
-      { q: "Which hospitals in Conroe have labor and delivery?", a: "HCA Houston Healthcare Conroe, at 504 Medical Drive, is the only hospital with labor and delivery in Montgomery County, with a verified Level II NICU. Journey Birth Center at 1202 N San Jacinto St offers midwife-led out-of-hospital birth for low-risk pregnancies." },
+      { q: "Which hospitals in Conroe have labor and delivery?", a: "HCA Houston Healthcare Conroe, at 504 Medical Drive, is the only hospital with labor and delivery in Montgomery County. Contact the hospital directly for current NICU level verification. Journey Birth Center at 1202 N San Jacinto St offers midwife-led out-of-hospital birth for low-risk pregnancies." },
       { q: "Does True Joy Birthing work for Conroe families?", a: "True Joy Birthing provides free birth-prep tools for Conroe families. The free birth plan, checklist, and guided walkthrough in the app work for any Conroe birth setting. The app also helps you connect with local doulas and midwives in your area." },
     ],
     nearbyCities: ["houston-tx", "college-station-tx", "beaumont-tx"],
@@ -1287,6 +1295,38 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Victoria families?", a: "True Joy Birthing provides free birth-prep tools for Victoria families. The free birth plan, checklist, and guided walkthrough in the app work for any Victoria birth setting. The app also helps you connect with local doulas and midwives in your area." },
     ],
     nearbyCities: ["houston-tx", "san-antonio-tx", "corpus-christi-tx"],
+  },
+  "georgetown-tx": {
+    city: "Georgetown",
+    state: "TX",
+    slug: "georgetown-tx",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Georgetown is the county seat of Williamson County and one of the fastest-growing cities in the Austin metro, sitting where I-35 meets SH-29 on the north side of Austin. Southwestern University gives the downtown a college-town feel, while Wolf Ranch and the I-35 corridor bring young families moving in for the schools and cost of living. Birth preferences here run the gamut \u2014 hospital births at St. David\u2019s Georgetown, trips to Round Rock for NICU care, or the out-of-hospital option at Genesis Birth Centers downtown. The city\u2019s growth means families are often new to the area and actively looking for birth support.",
+    heroLocalDetail: "St. David\u2019s Georgetown Hospital sits at 2000 Scenic Dr, about 5 minutes from the I-35/SH-29 (University Ave) interchange. From I-35, take Exit 261 (SH-29/University Ave) and head west \u2014 the hospital is just past the Wolf Ranch development. Genesis Birth Centers is at 101 W Cooperative Way, near the intersection of I-35 and SH-29 in central Georgetown, about 5 minutes from the hospital. The San Gabriel River trail system runs through downtown Georgetown and connects to the hospital area \u2014 popular for third-trimester walks with shade and flat terrain.",
+    hospitalDetails: [
+      {
+        name: "St. David\u2019s Georgetown Hospital",
+        paragraph: "St. David\u2019s Georgetown Hospital, at 2000 Scenic Dr, offers maternity and newborn services for the Georgetown area. The hospital\u2019s website confirms labor and delivery, though it does not explicitly list a NICU \u2014 for anything beyond routine newborn care, families are typically referred to St. David\u2019s Round Rock (10 minutes south, verified Level II NICU) or St. David\u2019s Medical Center in Austin (20 minutes south, verified Level III NICU). If you\u2019re delivering at St. David\u2019s Georgetown, bring your birth plan so the team knows your preferences from the start. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started.",
+      },
+    ],
+    birthCenterDetails: [
+      {
+        name: "Genesis Birth Centers",
+        paragraph: "Genesis Birth Centers, at 101 W Cooperative Way in Georgetown (NPI 1679907356), is an NPI-verified freestanding birth center offering midwife-led births in a home-like setting. Located near the I-35/SH-29 interchange, they serve families from Georgetown, Round Rock, and northern Williamson County who want an out-of-hospital option. Verify with the center directly for current services and insurance coverage.",
+      },
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Williamson County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Georgetown area. Austin\u2019s tech-sector employers increasingly include maternity wellness benefits that may cover doula support \u2014 check with your HR department. HSA and FSA funds can also be applied toward out-of-pocket doula costs.",
+    faqs: [
+      { q: "How much does a doula cost in Georgetown?", a: "$900 to $2,500 depending on experience and package. Georgetown\u2019s proximity to Austin means rates cluster near Austin levels, especially for doulas who serve the whole Williamson County corridor. Some doulas offer package deals that include prenatal visits, labor support, and postpartum follow-up." },
+      { q: "Does Medicaid cover doulas in Georgetown?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Williamson County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals in Georgetown have labor and delivery?", a: "St. David\u2019s Georgetown Hospital at 2000 Scenic Dr offers maternity and newborn services. For NICU care, families are typically referred to St. David\u2019s Round Rock (10 minutes south, Level II NICU) or St. David\u2019s Medical Center in Austin (20 minutes, Level III NICU). Genesis Birth Centers at 101 W Cooperative Way offers midwife-led out-of-hospital birth." },
+      { q: "Are there birth centers in Georgetown?", a: "Yes \u2014 Genesis Birth Centers at 101 W Cooperative Way is an NPI-verified freestanding birth center in downtown Georgetown. Their CNM-led team serves low-risk families who want an out-of-hospital birth option. Additional birth centers in the Austin metro are 25\u201340 minutes south." },
+      { q: "Does True Joy Birthing work for Georgetown families?", a: "True Joy Birthing provides free birth-prep tools for Georgetown families. The free birth plan, checklist, and guided walkthrough in the app work for any Georgetown birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["austin-tx", "round-rock-tx", "cedar-park-tx"],
   },
 };
 
