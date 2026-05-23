@@ -1413,6 +1413,86 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["dallas-tx", "denton-tx", "fort-worth-tx"],
   },
+  "pasadena-tx": {
+    city: "Pasadena",
+    state: "TX",
+    slug: "pasadena-tx",
+    costLow: 750,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Pasadena is the third-largest city in the Houston metro, sitting between Houston's East End and the Ship Channel industrial corridor along I-45 and SH-225. It's a working-class to middle-class community with a strong Hispanic majority and deep multi-generational roots \u2014 families here have been delivering at HCA Southeast and Memorial Hermann Southeast for decades. The birth community is hospital-centric, with the nearest freestanding birth centers 15-20 minutes away in Houston proper.",
+    heroLocalDetail: "HCA Houston Healthcare Southeast sits at 4000 Spencer Hwy, just off SH-225 (Pasadena Freeway) and the South Loop access roads. Spencer Hwy is the main east-west corridor through Pasadena, and Red Bluff Rd connects to I-45 about 3 miles west. From the South Loop, take the Spencer Hwy exit and head east \u2014 the hospital is on the right. Armand Bayou Nature Center's trails are the go-to for third-trimester walks, with flat boardwalks and shade about 10 minutes from either hospital.",
+    hospitalDetails: [
+      { name: "HCA Houston Healthcare Southeast", paragraph: "HCA Houston Healthcare Southeast, at 4000 Spencer Hwy in Pasadena, TX 77504, has labor and delivery and a Level II NICU (special care nursery). Not Level III/IV \u2014 high-risk neonates transfer to HCA Clear Lake or Texas Children's. Contact the hospital directly for current NICU level verification. 24/7 obstetric hospitalists and lactation support. If you're delivering here, bring your birth plan \u2014 they see a high volume of families from Pasadena and the surrounding Ship Channel communities. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Memorial Hermann Southeast", paragraph: "Memorial Hermann Southeast, at 11800 Astoria Blvd in Houston, TX 77089, has labor and delivery with a well-baby nursery; does not have a standalone NICU. For anything beyond routine newborn care, transfers go to Children's Memorial Hermann (Level IV) or Memorial Hermann Memorial City (Level III). Contact the hospital directly for current maternity service details." },
+    ],
+    // Zero birth centers in Pasadena; nearest are Bay Area Birth Center and other Houston-area centers ~15\u201320 min away
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Harris County\u2019s STAR managed care plans. Contact your plan directly to confirm doula coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
+    insuranceNote: "Both HCA Southeast and Memorial Hermann Southeast accept most major private insurance and Medicaid. The Pasadena area\u2019s employer market (oil refining, maritime, healthcare) increasingly includes maternity wellness benefits \u2014 check with your provider about doula coverage.",
+    faqs: [
+      { q: "How much does a doula cost in Pasadena?", a: "$750 to $1,800 depending on experience and package. Pasadena sits within the Houston metro pricing range, with costs slightly lower than downtown Houston." },
+      { q: "Does Medicaid cover doulas in Pasadena?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Harris County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals in Pasadena have labor and delivery?", a: "HCA Houston Healthcare Southeast at 4000 Spencer Hwy has labor and delivery with a Level II NICU (special care nursery) \u2014 contact the hospital directly for current NICU level verification. Memorial Hermann Southeast at 11800 Astoria Blvd has labor and delivery with a well-baby nursery but no standalone NICU." },
+      { q: "Are there birth centers in Pasadena?", a: "There are currently no freestanding birth centers in Pasadena. The nearest birth centers are Bay Area Birth Center and other Houston-area centers, approximately 15\u201320 minutes away." },
+      { q: "Does True Joy Birthing work with Pasadena families?", a: "True Joy Birthing provides free birth-prep tools for Pasadena families. The free birth plan, checklist, and guided walkthrough in the app work for any Pasadena birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["houston-tx", "spring-tx", "pearland-tx"],
+  },
+  "allen-tx": {
+    city: "Allen",
+    state: "TX",
+    slug: "allen-tx",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Allen is an affluent, fast-growing suburb in Collin County along US-75, about 25 miles north of Dallas. The city's top-rated schools and premium retail (Allen Premium Outlets) have attracted young families in droves, and the birth community is growing to match \u2014 Allen Birthing Center opened in 2007 as one of the few freestanding birth centers in Collin County. Texas Health Allen became the first Baby-Friendly designated hospital in Texas, which matters if you're looking for a hospital that prioritizes breastfeeding support and mother-baby bonding.",
+    heroLocalDetail: "Texas Health Allen sits at 1105 N Central Expressway, right off US-75 at the Stacy Rd exit. From US-75 northbound, the hospital entrance is visible from the highway \u2014 you can't miss it. During afternoon rush, US-75 between I-635 and the Stacy Rd exit can slow to a crawl, so add 10-15 minutes if you're coming from Dallas. Bethany Lakes Park and Waterford Park trails are popular for third-trimester walking, both about 5 minutes from the hospital.",
+    hospitalDetails: [
+      { name: "Texas Health Presbyterian Hospital Allen", paragraph: "Texas Health Presbyterian Hospital Allen, at 1105 N Central Expressway in Allen, TX 75013, has a verified Level II NICU stated directly on texashealth.org: \u201cIf your infant needs additional care after birth, Texas Health Allen has a Level II NICU.\u201d First hospital in Texas designated as Baby-Friendly by WHO/UNICEF. Offers family-centered maternity care, certified nurse midwives, OB/GYNs, doula support, pain management, and breastfeeding support. If you're delivering here, bring your birth plan \u2014 they see a high volume of Collin County families. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+    ],
+    birthCenterDetails: [
+      { name: "Allen Birthing Center", paragraph: "Allen Birthing Center, on W Main St in Allen, TX (NPI 1629192562, est. 2007), is an NPI-verified freestanding birth center offering midwife-led births. Verify with the center directly for current services and insurance coverage." },
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Collin County\u2019s STAR managed care plans. Contact your plan directly to confirm doula coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
+    insuranceNote: "DFW\u2019s employer market (including companies near Legacy West, Liberty Mutual, and Allen\u2019s corporate corridor) increasingly includes maternity wellness benefits that may cover doula support. Check with your HR department about doula coverage, and whether HSA or FSA funds can cover out-of-pocket costs.",
+    faqs: [
+      { q: "How much does a doula cost in Allen?", a: "$900 to $2,500 depending on experience and package. Allen sits in the upper range of DFW suburban pricing, reflecting the area\u2019s higher cost of living and demand." },
+      { q: "Does Medicaid cover doulas in Allen?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Collin County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals in Allen have labor and delivery?", a: "Texas Health Presbyterian Hospital Allen at 1105 N Central Expressway is Allen\u2019s primary maternity hospital, with a verified Level II NICU and Baby-Friendly designation \u2014 the first hospital in Texas to receive that designation." },
+      { q: "Are there birth centers in Allen?", a: "Allen Birthing Center on W Main St (NPI 1629192562, est. 2007) is an NPI-verified freestanding birth center offering midwife-led births. Verify with the center directly for current services and insurance coverage." },
+      { q: "Does True Joy Birthing work with Allen families?", a: "True Joy Birthing provides free birth-prep tools for Allen families. The free birth plan, checklist, and guided walkthrough in the app work for any Allen birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["dallas-tx", "plano-tx", "mckinney-tx"],
+  },
+  "wichita-falls-tx": {
+    city: "Wichita Falls",
+    state: "TX",
+    slug: "wichita-falls-tx",
+    costLow: 700,
+    costHigh: 1500,
+    shelbiServesHere: false,
+    culture: "Wichita Falls is the largest city between Dallas and Oklahoma City, serving as the regional medical hub for all of North Texas and southern Oklahoma. Sheppard Air Force Base brings a rotating military family population, while multi-generational Wichita Falls families have been delivering at United Regional for decades. The city has a growing birth center option in Wichita Falls Birth & Wellness Center \u2014 rare for a city this size in West Texas.",
+    heroLocalDetail: "United Regional Hospital's main campus sits at 1600 11th St in central Wichita Falls, about 5 minutes from the US-277/US-287 (Kemp Blvd) interchange. Kemp Blvd is the main north-south commercial corridor \u2014 if you're coming from Sheppard AFB, take Wichita Falls Blvd south to 11th St. Sikes Lake trails on the southwest side of town are popular for third-trimester walks, with flat paths and shade.",
+    hospitalDetails: [
+      { name: "United Regional Hospital", paragraph: "United Regional Hospital, at 1600 11th St in Wichita Falls, TX 76301, has labor and delivery on the 4th floor of Bridwell Tower with L&D rooms, antepartum rooms, postpartum rooms, and C-section rooms. Currently operates a Level II NICU (Special Care Nursery, cares for infants \u226530 weeks, \u22651,250g), with a Level III upgrade in progress \u2014 contact the hospital directly for current NICU level as this may change. Offers an OB Emergency Department, IBCLC lactation support daily, and outpatient lactation services. If you're delivering here, bring your birth plan \u2014 they handle the entire region's births, from Wichita Falls to southern Oklahoma. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+    ],
+    birthCenterDetails: [
+      { name: "Wichita Falls Birth & Wellness Center", paragraph: "Wichita Falls Birth & Wellness Center, at 2001 Brook Ave in Wichita Falls, TX 76301 (NPI 1730628918), is an NPI-verified freestanding birth center. Verify with the center directly for current services and insurance coverage." },
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Wichita County\u2019s STAR managed care plans. Contact your plan directly to confirm doula coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
+    insuranceNote: "United Regional accepts most major private insurance and Medicaid. The Wichita Falls area\u2019s employer market (Sheppard AFB, manufacturing, healthcare) may include maternity wellness benefits \u2014 check with your provider. TRICARE covers doula services for military families at Sheppard AFB; verify current coverage with your TRICARE plan.",
+    faqs: [
+      { q: "How much does a doula cost in Wichita Falls?", a: "$700 to $1,500 depending on experience and package. Wichita Falls has lower doula costs than major Texas metros, reflecting the regional market." },
+      { q: "Does Medicaid cover doulas in Wichita Falls?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Wichita County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals in Wichita Falls have labor and delivery?", a: "United Regional Hospital at 1600 11th St is the regional hub for labor and delivery, currently operating a Level II NICU (Special Care Nursery) with a Level III upgrade in progress \u2014 contact the hospital directly for current NICU level as this may change." },
+      { q: "Are there birth centers in Wichita Falls?", a: "Wichita Falls Birth & Wellness Center at 2001 Brook Ave (NPI 1730628918) is an NPI-verified freestanding birth center. Verify with the center directly for current services and insurance coverage." },
+      { q: "Does True Joy Birthing work with Wichita Falls families?", a: "True Joy Birthing provides free birth-prep tools for Wichita Falls families. The free birth plan, checklist, and guided walkthrough in the app work for any Wichita Falls birth setting. The app also helps you connect with local doulas and midwives in your area." },
+      { q: "Does TRICARE cover doula services for Sheppard AFB families?", a: "TRICARE covers doula services for military families at Sheppard AFB. Verify current coverage details with your TRICARE plan, as policies can change." },
+    ],
+    nearbyCities: ["dallas-tx"],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
