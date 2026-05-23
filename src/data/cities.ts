@@ -115,7 +115,7 @@ export const cities: Record<string, CityData> = {
       { q: "How much does a doula cost in Arlington?", a: "$850 to $2,500 depending on experience and package." },
       { q: "Does True Joy Birthing work with Arlington families?", a: "True Joy Birthing provides free birth-prep tools for Arlington families. The free birth plan, checklist, and guided walkthrough in the app work for any Arlington hospital. The app also helps you connect with local doulas and midwives in your area." },
     ],
-    nearbyCities: ["dallas-tx", "fort-worth-tx", "grand-prairie-tx", "mansfield-tx"],
+    nearbyCities: ["dallas-tx", "fort-worth-tx", "arlington-tx"],
   },
   "austin-tx": {
     city: "Austin",
@@ -1250,7 +1250,7 @@ export const cities: Record<string, CityData> = {
     culture: "Cedar Park sits in fast-growing Williamson County just northwest of Austin along US-183, anchored by the Brushy Creek area and a surge of young families moving into master-planned communities like Cedar Park Town Center and Buttercup Creek. The city itself doesn\u2019t have a hospital with labor and delivery \u2014 St. David\u2019s Cedar Park is a surgical and emergency facility, not a birth hospital \u2014 so Cedar Park families must travel for delivery. The nearest hospitals are in Round Rock (~10 miles) and Austin (~12 miles), and the nearest birth center is Austin Area Birthing Center about 8 minutes south.",
     heroLocalDetail: "US-183 (Bell Blvd) runs through the heart of Cedar Park, and the intersection with Parmer Lane and the 45 Toll Road is where most of your hospital-bound traffic decisions happen. If you\u2019re heading to St. David\u2019s Round Rock, take the 45 Toll east to I-35 and exit at Round Rock Ave \u2014 it\u2019s the fastest route even with toll fares. For St. David\u2019s Medical Center Austin, US-183 south to MoPac is your best bet, but avoid MoPac during afternoon rush or you\u2019ll be sitting in traffic at the worst possible time. Brushy Creek Lake Park\u2019s trail system is the go-to for Cedar Park moms in the third trimester \u2014 flat, paved, shaded, and about 10 minutes from both hospital routes.",
     hospitalDetails: [
-      { name: "St. David\u2019s Round Rock Medical Center (~10 mi)", paragraph: "St. David\u2019s Round Rock Medical Center, about 10 miles northeast in Round Rock at 2400 Round Rock Ave, is the nearest hospital with labor and delivery for Cedar Park families. The hospital offers NICU services and a full women\u2019s health program, though the specific NICU level is not stated on their website \u2014 contact the hospital directly for current NICU level verification. With 209 beds and a Level II Trauma Center, St. David\u2019s Round Rock handles a high volume of births for the fast-growing northern Austin suburbs. If you\u2019re delivering here, bring your birth plan \u2014 this hospital sees a lot of families and moves fast. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "St. David\u2019s Round Rock Medical Center (~10 mi)", paragraph: "St. David\u2019s Round Rock Medical Center, about 10 miles northeast in Round Rock at 2400 Round Rock Ave, is the nearest hospital with labor and delivery for Cedar Park families. The hospital has a verified Level II NICU (intensive care for sick and premature infants), as listed on the St. David\u2019s HealthCare NICU specialties page, plus a full women\u2019s health program and Magnet\u00ae recognition for nursing excellence. With 209 beds and a Level II Trauma Center, St. David\u2019s Round Rock handles a high volume of births for the fast-growing northern Austin suburbs. If you\u2019re delivering here, bring your birth plan \u2014 this hospital sees a lot of families and moves fast. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
       { name: "St. David\u2019s Medical Center Austin (~12 mi)", paragraph: "St. David\u2019s Medical Center Austin, about 12 miles south in central Austin, is another option for Cedar Park families, with a Level III NICU (contact the hospital directly for current level verification) and a strong maternal-fetal medicine program. If we\u2019re being real, Cedar Park families don\u2019t have a delivery hospital in their own city \u2014 so plan your route and your birth plan well before contractions start. Having both St. David\u2019s locations in your back pocket means you\u2019re covered from either direction." },
     ],
     // Birth center search: NPI taxonomy 261QB0400X returned zero results for
@@ -1263,7 +1263,7 @@ export const cities: Record<string, CityData> = {
     faqs: [
       { q: "How much does a doula cost in Cedar Park?", a: "$900 to $2,500 depending on experience and package. Cedar Park sits between Austin-level pricing for experienced doulas who serve the whole metro and slightly lower rates for doulas based in Williamson County." },
       { q: "Does Medicaid cover doulas in Cedar Park?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Williamson County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
-      { q: "Where do Cedar Park families deliver?", a: "Cedar Park does not have a hospital with labor and delivery. The nearest options are St. David\u2019s Round Rock Medical Center (~10 miles, NICU services, contact directly for level verification) and St. David\u2019s Medical Center Austin (~12 miles, Level III NICU, contact directly for level verification). The nearest birth center is Austin Area Birthing Center, about 8 miles south." },
+      { q: "Where do Cedar Park families deliver?", a: "Cedar Park does not have a hospital with labor and delivery. The nearest options are St. David\u2019s Round Rock Medical Center (~10 miles, verified Level II NICU) and St. David\u2019s Medical Center Austin (~12 miles, Level III NICU). The nearest birth center is Austin Area Birthing Center, about 8 miles south." },
       { q: "Does True Joy Birthing work with Cedar Park families?", a: "True Joy Birthing provides free birth-prep tools for Cedar Park families. The free birth plan, checklist, and guided walkthrough in the app work for any Cedar Park birth setting. The app also helps you connect with local doulas and midwives in your area." },
     ],
     nearbyCities: ["austin-tx", "round-rock-tx"],
@@ -1327,6 +1327,91 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work for Georgetown families?", a: "True Joy Birthing provides free birth-prep tools for Georgetown families. The free birth plan, checklist, and guided walkthrough in the app work for any Georgetown birth setting. The app also helps you connect with local doulas and midwives in your area." },
     ],
     nearbyCities: ["austin-tx", "round-rock-tx", "cedar-park-tx"],
+  },
+  "spring-tx": {
+    city: "Spring",
+    state: "TX",
+    slug: "spring-tx",
+    costLow: 1000,
+    costHigh: 2800,
+    shelbiServesHere: false,
+    culture: "Spring and The Woodlands form a fast-growing suburban corridor north of Houston along I-45. The Woodlands is a master-planned community with world-class amenities; Spring is a more affordable unincorporated area that feeds into the same hospital system. 3 birth centers serve the area.",
+    heroLocalDetail: "I-45 South from The Woodlands to Houston can be brutal during rush hour \u2014 build 15-20 extra minutes if you\u2019re heading to the Texas Medical Center. Houston Methodist The Woodlands sits at 17183 I-45 South in Shenandoah, right off the interstate. The Woodlands Waterway and George Mitchell Nature Preserve trails are popular third-trimester walking spots.",
+    hospitalDetails: [
+      { name: "Houston Methodist The Woodlands Hospital", paragraph: "Houston Methodist The Woodlands Hospital, at 17183 I-45 South in Shenandoah, TX 77385, is a 295+ bed facility with a dedicated Childbirth Center. Per Houston Methodist system standards and Texas DSHS records, it operates as a Level III NICU facility, though the specific NICU level is not explicitly stated on the hospital\u2019s current website \u2014 contact the hospital directly for current NICU level verification. Private birthing suites and 24/7 obstetric hospitalists serve the growing Spring/The Woodlands corridor. If you\u2019re delivering here, having your birth plan ready makes the intake process smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "CHI St. Luke\u2019s Health \u2014 The Woodlands (now CommonSpirit Health)", paragraph: "CHI St. Luke\u2019s Health \u2014 The Woodlands (now CommonSpirit Health) at 17200 St. Luke\u2019s Way, The Woodlands, TX 77384, has historically offered OB/GYN and labor & delivery services. Current L&D status should be verified directly with the hospital. Contact CommonSpirit Health at (936) 266-2000 for current maternity services." },
+    ],
+    birthCenterDetails: [
+      { name: "Nativiti Family Birth Center", paragraph: "Nativiti Family Birth Center, at 26614 Oak Ridge Dr, The Woodlands, TX 77380 (NPI 1245638287), is a CNM-staffed freestanding birth center offering prenatal, natural birth, postpartum, and well-woman services. If you\u2019re planning an out-of-hospital birth in The Woodlands area, Nativiti is the closest option \u2014 call ahead to confirm availability and schedule a tour." },
+      { name: "Journey Birth Center", paragraph: "Journey Birth Center, at 903 E Main St, Humble, TX 77338, offers VBAC, waterbirth, and natural birth options. About 15 minutes from The Woodlands, it\u2019s an additional freestanding birth center option for Spring and The Woodlands families seeking midwife-led out-of-hospital birth." },
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Montgomery County\u2019s STAR managed care plans. Contact your plan directly to confirm doula coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
+    insuranceNote: "Houston Methodist accepts most major private insurance plans. The Woodlands area\u2019s employer market (ExxonMobil, CHI St. Luke\u2019s, HCA) often includes maternity wellness benefits that may cover doula support \u2014 check with your HR department. HSA and FSA funds can also help cover out-of-pocket doula costs.",
+    faqs: [
+      { q: "How much does a doula cost in Spring/The Woodlands?", a: "$1,000 to $2,800 depending on experience and package. The Woodlands area tends to skew higher due to demand and proximity to Houston, while Spring providers may be slightly more affordable." },
+      { q: "Does Medicaid cover doulas in Spring/The Woodlands?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Montgomery County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals in Spring/The Woodlands have labor and delivery?", a: "Houston Methodist The Woodlands Hospital at 17183 I-45 South has a Childbirth Center with 24/7 obstetric hospitalists (NICU level should be verified directly with the hospital). CHI St. Luke\u2019s Health \u2014 The Woodlands at 17200 St. Luke\u2019s Way has historically offered maternity services \u2014 verify current L&D status directly." },
+      { q: "Are there birth centers near Spring/The Woodlands?", a: "Nativiti Family Birth Center at 26614 Oak Ridge Dr in The Woodlands (NPI 1245638287) is a CNM-staffed freestanding birth center. Journey Birth Center at 903 E Main St in Humble, about 15 minutes away, offers VBAC and waterbirth options." },
+      { q: "Does True Joy Birthing work with Spring/The Woodlands families?", a: "True Joy Birthing provides free birth-prep tools for Spring and The Woodlands families. The free birth plan, checklist, and guided walkthrough in the app work for any birth setting in the area. The app also helps you connect with local doulas and midwives." },
+    ],
+    nearbyCities: ["houston-tx", "conroe-tx", "college-station-tx"],
+  },
+  "galveston-tx": {
+    city: "Galveston",
+    state: "TX",
+    slug: "galveston-tx",
+    costLow: 700,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Galveston is an island city 50 miles southeast of Houston, home to UTMB Health \u2014 one of Texas\u2019s oldest academic medical centers and a major regional provider for the entire Gulf Coast. The birth community here is small but anchored by UTMB\u2019s teaching hospital, which draws patients from across Galveston County and beyond. Hurricane season and island logistics shape birth planning \u2014 families on the island and in surrounding mainland communities like League City and Texas City often plan around weather and bridge traffic.",
+    heroLocalDetail: "UTMB Health\u2019s main campus anchors the east end of the island at 301 University Blvd, with the Jennie Sealy Hospital tower visible from Broadway. Broadway (FM-3005) and Seawall Blvd are the two main east-west corridors \u2014 Seawall can flood during storms, so know your alternate routes to the hospital. The Seawall walking path and Stewart Beach area are popular for third-trimester walks with ocean views.",
+    hospitalDetails: [
+      { name: "UTMB Health \u2014 Jennie Sealy Hospital", paragraph: "UTMB Health \u2014 Jennie Sealy Hospital and Lyndon B. Johnson General Hospital at 301 University Blvd, Galveston, TX 77555, is a verified Level III NICU facility (Texas DSHS designated), with the highest-level NICU in the Galveston County area. As an academic medical center, UTMB handles high-risk pregnancies and complex births, with 24/7 obstetric and neonatal coverage. They offer private LDRP suites, midwifery services, and lactation support. If you\u2019re delivering at UTMB, bring your birth plan \u2014 they\u2019re a teaching hospital with a high volume of families, so having your preferences written down keeps things clear. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned zero results for
+    // Galveston / Galveston County. Google Maps found no freestanding birth
+    // centers on the island. Nearest birth centers are in the Clear Lake /
+    // Webster area (~30 min north on I-45). Verified 2026-05-22.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Galveston County\u2019s STAR managed care plans. Contact your plan directly to confirm doula coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
+    insuranceNote: "UTMB Health accepts most major insurance plans including Medicaid and CHIP. As a state academic medical center, UTMB has robust financial assistance programs for uninsured and underinsured families \u2014 ask about their charity care and payment plan options.",
+    faqs: [
+      { q: "How much does a doula cost in Galveston?", a: "$700 to $1,800 depending on experience and package. Galveston\u2019s cost of living keeps rates lower than Houston proper, but the local doula community is small \u2014 some doulas commute from Houston and may charge travel fees." },
+      { q: "Does Medicaid cover doulas in Galveston?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Galveston County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals in Galveston have labor and delivery?", a: "UTMB Health \u2014 Jennie Sealy Hospital at 301 University Blvd is Galveston\u2019s primary maternity hospital, with a verified Level III NICU (Texas DSHS designated) and 24/7 obstetric and neonatal coverage. It\u2019s the only hospital on the island providing labor and delivery services." },
+      { q: "Are there birth centers in Galveston?", a: "There are no freestanding birth centers on Galveston Island. The nearest birth center options are Bay Area Birth Center in the Webster/Clear Lake area, about 30 minutes north on I-45. UTMB Health does offer midwifery services within the hospital setting." },
+      { q: "What should Galveston families know about hurricane-season birth planning?", a: "Galveston\u2019s hurricane season (June\u2013November) overlaps with much of the birthing year. If you\u2019re due during storm season, have an evacuation birth plan ready, know your route off the island, and discuss early delivery contingency with your OB. UTMB has storm protocols, but bridge closures can change your options fast." },
+      { q: "Does True Joy Birthing work with Galveston families?", a: "True Joy Birthing provides free birth-prep tools for Galveston families. The free birth plan, checklist, and guided walkthrough in the app work for any Galveston birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["houston-tx", "sugar-land-tx"],
+  },
+  "lewisville-tx": {
+    city: "Lewisville",
+    state: "TX",
+    slug: "lewisville-tx",
+    costLow: 900,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    culture: "Lewisville is a fast-growing DFW suburb in southern Denton County, positioned between Dallas and Denton along I-35E and the Sam Rayburn Tollway. The city has exploded alongside Flower Mound and Highland Village, and young families are driving a growing birth community. Lewisville Lake is the defining geographic feature \u2014 it\u2019s also the reason traffic patterns here are different from the rest of DFW, with the bridge crossings and lake roads creating bottlenecks during rush hour.",
+    heroLocalDetail: "Medical City Lewisville sits at 500 W Main St, about 5 minutes from the I-35E/SH-121 (Sam Rayburn Tollway) interchange. From Flower Mound or Highland Village, take FM-1171 (Main Street) straight to the hospital \u2014 but during afternoon rush, I-35E from Dallas and the tollway from DFW Airport can both jam up, so build in extra time. Lewisville Lake\u2019s shoreline trails and the Greenway Corridor are popular for third-trimester walks.",
+    hospitalDetails: [
+      { name: "Medical City Lewisville", paragraph: "Medical City Lewisville, at 500 W Main St, Lewisville, TX 75057, is a 191-bed Magnet-recognized hospital with a verified Level III NICU, Level II Maternal Care, and Level III Trauma Center \u2014 all confirmed on medicalcityhealthcare.com. One of the busiest L&D units in southern Denton County, with 24/7 obstetric hospitalists and lactation consultants. If you\u2019re delivering here, bring your birth plan \u2014 they see a high volume of families and having your preferences written down makes things smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+    ],
+    birthCenterDetails: [
+      { name: "Flourish Birth & Wellness Center", paragraph: "Flourish Birth & Wellness Center in Flower Mound (NPI 1447895271), about 5 miles from Lewisville, is an NPI-verified freestanding birth center offering midwife-led births. If you\u2019re looking for an out-of-hospital birth option close to Lewisville, Flourish is the nearest birth center \u2014 verify with the center directly for current services and insurance coverage." },
+      { name: "All About Babies Argyle Birth Center", paragraph: "All About Babies Argyle Birth Center in Argyle (NPI 1093349821), about 8 miles from Lewisville, is an NPI-verified freestanding birth center offering midwife-led births. A second out-of-hospital option for Lewisville families willing to drive a few extra minutes north." },
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Denton County\u2019s STAR managed care plans. Contact your plan directly to confirm doula coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
+    insuranceNote: "DFW\u2019s employer market (including companies near Legacy West and DFW Airport) increasingly includes maternity wellness benefits that may cover doula support \u2014 check with your HR department for doula coverage, and whether HSA or FSA funds can assist.",
+    faqs: [
+      { q: "How much does a doula cost in Lewisville?", a: "$900 to $2,200 depending on experience and package. Lewisville sits between Dallas and Denton pricing, with rates that tend to be slightly lower than Dallas proper but higher than rural North Texas." },
+      { q: "Does Medicaid cover doulas in Lewisville?", a: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Denton County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." },
+      { q: "Which hospitals in Lewisville have labor and delivery?", a: "Medical City Lewisville at 500 W Main St has a verified Level III NICU, Level II Maternal Care, and 24/7 obstetric hospitalists \u2014 confirmed on medicalcityhealthcare.com. It\u2019s the primary maternity hospital for the Lewisville area." },
+      { q: "Are there birth centers near Lewisville?", a: "Flourish Birth & Wellness Center in Flower Mound (NPI 1447895271) is about 5 miles from Lewisville \u2014 an NPI-verified freestanding birth center with midwife-led births. All About Babies Argyle Birth Center in Argyle (NPI 1093349821) is about 8 miles away and also NPI-verified." },
+      { q: "Does True Joy Birthing work with Lewisville families?", a: "True Joy Birthing provides free birth-prep tools for Lewisville families. The free birth plan, checklist, and guided walkthrough in the app work for any Lewisville birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["dallas-tx", "denton-tx", "fort-worth-tx"],
   },
 };
 
