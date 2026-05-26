@@ -2500,6 +2500,96 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["las-vegas-nv"],
   },
+  "chicago-il": {
+    city: "Chicago",
+    state: "IL",
+    slug: "chicago-il",
+    costLow: 1500,
+    costHigh: 5000,
+    shelbiServesHere: false,
+    culture: "Chicago's birth culture is shaped by a strong network of Black and Latina doulas working across the South and West Sides, with a growing push for birth equity amid well-documented maternal health disparities. The city blends world-class academic medical centers with a vibrant community birth worker scene, and advocacy groups were instrumental in pushing for Illinois Medicaid doula coverage.",
+    heroLocalDetail: "From the sweeping views along Lake Shore Drive to the historic brownstones of Hyde Park, Chicago families navigate birth across a sprawling mosaic of neighborhoods. The Illinois Medical District near Polk Street houses some of the city's largest labor and delivery units, while community birth workers build connections from Bronzeville to Logan Square.",
+    hospitalDetails: [
+      { name: "Northwestern Memorial Hospital — Prentice Women's Hospital", paragraph: "Prentice Women's Hospital on East Huron Street in Streeterville is one of the busiest birthing hospitals in the Midwest with a Level III NICU and over 12,000 births annually. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Rush University Medical Center", paragraph: "Rush University Medical Center near Harrison Street in the Illinois Medical District features a Level III NICU and a midwifery practice, offering a blend of medical and supportive birth options." },
+      { name: "University of Chicago Medical Center", paragraph: "Located in Hyde Park, the University of Chicago Medical Center operates a Level III NICU and serves as a critical resource for South Side families with a strong maternal-fetal medicine program." },
+      { name: "Advocate Illinois Masonic Medical Center", paragraph: "Advocate Illinois Masonic in Lakeview on Wellington Avenue has a Level III NICU and is known for its midwifery-friendly approach within a hospital setting." }
+    ],
+    birthCenterDetails: [
+      { name: "The Birth Center of Chicago", paragraph: "The Birth Center of Chicago is a freestanding birth center offering midwifery-led, low-intervention births in a home-like setting for families seeking an alternative to hospital delivery." }
+    ],
+    medicaidNote: "Illinois Medicaid covers doula services starting January 2025 under SB334 (signed January 2024), reimbursing up to $1,500 per pregnancy for prenatal, labor, and postpartum support visits.",
+    insuranceNote: "Illinois law requires Medicaid managed care plans to cover doula services. Private insurers vary — ask your plan if they reimburse doula care, and request a superbill from your doula for out-of-network submission.",
+    faqs: [
+      { q: "How much does a doula cost in Chicago?", a: "Doula fees in Chicago typically range from $1,500 to $5,000, depending on experience and package inclusions. Some doulas offer sliding-scale fees, and Illinois Medicaid covers certified doulas at no cost to eligible families." },
+      { q: "Does Illinois Medicaid really cover doula services?", a: "Yes. As of January 2025, Illinois Medicaid reimburses up to $1,500 per pregnancy for doula services under SB334. You can find Medicaid-enrolled doulas through the Illinois Department of Healthcare and Family Services directory." },
+      { q: "What hospitals in Chicago have Level III NICUs?", a: "Northwestern Prentice, Rush University Medical Center, University of Chicago Medical Center, and Advocate Illinois Masonic all have Level III NICUs." },
+      { q: "Are there freestanding birth centers in Chicago?", a: "Yes. The Birth Center of Chicago offers midwifery-led births outside the hospital. Availability can be limited, so inquire early in your pregnancy." },
+      { q: "Can I have a midwife-attended birth at a Chicago hospital?", a: "Several Chicago hospitals, including Rush University Medical Center and Advocate Illinois Masonic, have midwifery practices that support low-intervention births within a hospital setting." },
+      { q: "How do I find a Black doula in Chicago?", a: "Organizations like Chicago Volunteer Doulas and the Illinois Maternal Health Initiative maintain directories of culturally matched doulas. Many Black doulas serve the South and West Sides and are Medicaid-enrolled." }
+    ],
+    nearbyCities: ["minneapolis-mn", "st-paul-mn"],
+  },
+  "detroit-mi": {
+    city: "Detroit",
+    state: "MI",
+    slug: "detroit-mi",
+    costLow: 800,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    culture: "Detroit's birth culture is deeply rooted in community-based care, with a powerful legacy of Black midwifery and doula work shaped by the city's history of maternal health inequity. Grassroots organizations have led the charge for better birth outcomes, and Michigan's 2024 Medicaid doula coverage expansion is a direct result of decades of local advocacy.",
+    heroLocalDetail: "From the historic neighborhoods around Woodward Avenue to the revitalizing communities near the Detroit RiverWalk, Detroit families navigate a birth landscape marked by both resilience and gaps in access. The Detroit Medical Center campus near Canfield Street anchors the city's hospital-based birth options, while community birth workers build vital support networks across the east and west sides.",
+    hospitalDetails: [
+      { name: "DMC Hutzel Women's Hospital", paragraph: "Part of the Detroit Medical Center near Canfield Street, Hutzel Women's Hospital is one of Michigan's oldest obstetric hospitals with a Level III NICU and a long history of serving Detroit families. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Henry Ford Hospital", paragraph: "Henry Ford Hospital on West Grand Boulevard features a Level III NICU and is a major teaching hospital offering comprehensive maternal-fetal medicine services." },
+      { name: "Corewell Health William Beaumont University Hospital", paragraph: "Located in nearby Royal Oak, Corewell Health Beaumont has a Level IV NICU — the highest designation — and handles the region's most complex neonatal cases." },
+      { name: "Sinai-Grace Hospital", paragraph: "Sinai-Grace Hospital on the west side of Detroit provides obstetric services with a Level III NICU and serves as a critical birth access point for northwest Detroit communities." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Detroit", paragraph: "Detroit currently lacks licensed freestanding birth centers. Families seeking out-of-hospital birth may work with home birth midwives, though options in the city proper remain limited." }
+    ],
+    medicaidNote: "Michigan Medicaid covers doula services as of 2024, reimbursing up to approximately $1,500 per pregnancy for prenatal, labor and delivery, and postpartum support visits through enrolled doulas.",
+    insuranceNote: "Michigan Medicaid managed care plans are required to cover doula services. For private insurance, coverage varies by plan — request a superbill from your doula and submit for potential out-of-network reimbursement.",
+    faqs: [
+      { q: "How much does a doula cost in Detroit?", a: "Doula fees in Detroit typically range from $800 to $3,000, making it one of the more affordable major cities for doula care. Many Detroit doulas offer sliding-scale or community rates." },
+      { q: "Does Michigan Medicaid cover doula services?", a: "Yes. As of 2024, Michigan Medicaid covers doula services at approximately $1,500 per pregnancy. Contact your Medicaid managed care plan for a list of enrolled doulas." },
+      { q: "Are there freestanding birth centers in Detroit?", a: "Detroit currently does not have any licensed freestanding birth centers. Families interested in out-of-hospital birth can explore certified home birth midwives practicing in the area." },
+      { q: "What is the highest-level NICU near Detroit?", a: "Corewell Health William Beaumont University Hospital in Royal Oak has a Level IV NICU, the highest designation, capable of treating the most complex neonatal conditions." },
+      { q: "How do I find a community doula in Detroit?", a: "Organizations like Mama Akua Community Wellness and Detroit birth justice programs connect families with culturally matched doulas. Many community doulas are Medicaid-enrolled." },
+      { q: "Is Hutzel Women's Hospital still open for deliveries?", a: "Yes. DMC Hutzel Women's Hospital continues to operate as a dedicated women's hospital with a Level III NICU and remains a cornerstone of obstetric care in Detroit." }
+    ],
+    nearbyCities: ["chicago-il", "minneapolis-mn"],
+  },
+  "new-york-ny": {
+    city: "New York",
+    state: "NY",
+    slug: "new-york-ny",
+    costLow: 1500,
+    costHigh: 5000,
+    shelbiServesHere: false,
+    culture: "New York City's birth culture is as diverse as its boroughs — from the hospital-intensive landscape of Manhattan to the community midwifery traditions of Brooklyn and the Bronx. The city has a robust doula community and has been a national leader in Medicaid doula coverage, though persistent maternal health disparities in Black and Brown communities drive ongoing birth justice activism.",
+    heroLocalDetail: "From the brownstone-lined blocks of Park Slope to the bustling corridors along the Grand Concourse in the Bronx, New York families plan births across an enormous spectrum of settings. Manhattan's East Side hospital corridor near York Avenue houses some of the nation's top neonatal units, while birth justice organizers build grassroots support networks from Harlem to Bedford-Stuyvesant.",
+    hospitalDetails: [
+      { name: "NewYork-Presbyterian/Columbia University Irving Medical Center", paragraph: "Located in Washington Heights, Columbia's medical center features a Level IV NICU — the highest designation — and is one of the premier maternal-fetal medicine programs in the country. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "NYU Langone Health — Tisch Hospital", paragraph: "NYU Langone on First Avenue in Midtown East operates a Level IV NICU and is known for its midwifery practice alongside top-tier obstetric care." },
+      { name: "Mount Sinai Hospital", paragraph: "Mount Sinai on the Upper East Side near Madison Avenue has a Level IV NICU and handles some of the city's most complex pregnancies and neonatal cases." },
+      { name: "NYC Health + Hospitals/Elmhurst", paragraph: "Elmhurst Hospital in Queens provides a Level III NICU and serves as a vital safety-net hospital for immigrant and low-income families across the borough." }
+    ],
+    birthCenterDetails: [
+      { name: "No freestanding birth centers in New York City", paragraph: "Licensed freestanding birth centers are virtually nonexistent in New York City due to the state's stringent regulatory environment. Families seeking low-intervention birth typically work with midwives within hospital-based midwifery practices or explore home birth with certified midwives." }
+    ],
+    medicaidNote: "New York State Medicaid covers doula services at approximately $1,710 per pregnancy, with reimbursement split across prenatal, labor/delivery, and postpartum visits. Doulas must enroll as Medicaid providers through the state's eMedNY system.",
+    insuranceNote: "New York State law requires commercial insurers to cover lactation support and certain maternal services, but doula coverage varies by plan. Request a superbill from your doula and submit it for out-of-network reimbursement — many plans will partially reimburse.",
+    faqs: [
+      { q: "How much does a doula cost in New York City?", a: "Doula fees in NYC typically range from $1,500 to $5,000, with experienced doulas and those offering postpartum packages often at the higher end. Some doulas offer sliding-scale rates." },
+      { q: "Does New York Medicaid cover doula services?", a: "Yes. New York Medicaid covers doula services at approximately $1,710 per pregnancy. Doulas must enroll as Medicaid providers, and you can find enrolled doulas through your Medicaid managed care plan." },
+      { q: "Are there freestanding birth centers in NYC?", a: "Practically no — New York's regulatory environment makes opening freestanding birth centers extremely difficult. Your best options for low-intervention birth are hospital-based midwifery practices or certified home birth midwives." },
+      { q: "Which NYC hospitals have Level IV NICUs?", a: "NewYork-Presbyterian/Columbia, NYU Langone, and Mount Sinai all have Level IV NICUs — the highest designation — capable of caring for the most critically ill newborns." },
+      { q: "How do I find a doula who speaks my language in NYC?", a: "NYC's doula community is incredibly diverse. Organizations like Ancient Song Doula Services and The Doula Project can connect you with bilingual and culturally matched doulas serving communities across the five boroughs." },
+      { q: "Can I have a midwife-attended birth at a NYC hospital?", a: "Yes. Several NYC hospitals including NYU Langone and NewYork-Presbyterian have midwifery practices that support low-intervention, midwife-attended births within the hospital setting." }
+    ],
+    nearbyCities: ["chicago-il"],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
