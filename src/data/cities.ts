@@ -1778,6 +1778,104 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["cumming-ga", "greenville-sc"],
   },
+  "savannah-ga": {
+    city: "Savannah",
+    state: "GA",
+    slug: "savannah-ga",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Savannah is Georgia\u2019s oldest city and the medical hub of the Coastal Empire, where Memorial Health University Medical Center and St. Joseph\u2019s/Candler anchor a two-system hospital landscape. The birth community here is small but growing \u2014 local doulas, lactation consultants, and childbirth educators serve Chatham County families and the surrounding rural counties that funnel into Savannah for hospital births. The city\u2019s historic character and walkable downtown attract young families, but the doula network is tighter-knit than in Atlanta, and availability can be limited compared to larger metros.",
+    heroLocalDetail: "Memorial Health University Medical Center sits at 4700 Waters Avenue in midtown Savannah, about 10 minutes from the historic district via DeRenne Avenue \u2014 and the DeRenne Avenue/Waters Avenue intersection backs up during weekday rush, so know your route before contractions start. Candler Hospital is at 5353 Reynolds Street on the southside, accessible via Abercorn Street or the Truman Parkway. I-16 terminates at I-95 just west of the city, and I-516 loops through the southside, but surface streets like Abercorn and DeRenne are often faster during rush than getting on and off the interstates. Forsyth Park\u2019s walking loop around the fountain and Daffin Park\u2019s flat paths on the east side are where Savannah moms walk in the third trimester \u2014 shaded, flat, and close to both hospitals. Ardsley Park and Baldwin Park are where you\u2019ll find most young families.",
+    hospitalDetails: [
+      { name: "Memorial Health University Medical Center", paragraph: "Memorial Health University Medical Center, at 4700 Waters Avenue in Savannah, is the region\u2019s largest hospital and the only Level I trauma center between Jacksonville and Charleston. Now part of HCA Healthcare, Memorial Health houses the Dwaine & Cynthia Willett Children\u2019s Hospital of Savannah on campus with a Level III NICU (stated directly on memorialhealth.com) and serves as the regional referral center for high-risk pregnancies across southeast Georgia. If you\u2019re delivering at Memorial, having your birth plan ready helps you navigate a busy regional hospital that sees families from a huge geographic area. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "St. Joseph\u2019s/Candler \u2014 Candler Hospital", paragraph: "Candler Hospital, at 5353 Reynolds Street on Savannah\u2019s southside, is part of the St. Joseph\u2019s/Candler health system and home to the Mary Telfair Women\u2019s Hospital, which provides labor and delivery, surgical services, and pediatric care. Contact the hospital directly for current NICU level verification. Candler is known for its faith-based care tradition and a more personal feel than the large regional hospital across town. If we\u2019re being real, Savannah has two strong hospital systems and they\u2019re about 15 minutes apart by car \u2014 know which one your OB delivers at and plan your route before you need it." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Savannah (ZIPs 31401, 31404, 31405, 31406, 31407, 31408, 31410, 31411, 31415,
+    // 31419), Chatham County. Google Maps search "birth center Savannah GA" found no
+    // freestanding birth centers within Savannah/Chatham County. Hospital birth is the
+    // primary option. Nearest birth centers are approximately 4 hours north in the
+    // Atlanta metro area.
+    // Verified 2026-05-26.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "As of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. Check with Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Chatham County families on Medicaid should also check with their managed care plan (AmeriHealth Caritas, CareSource, PeachState Health Plan) about any maternal wellness benefits that might include doula support.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Savannah area. Gulfstream Aerospace, JCB, and other Savannah-area employers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "How much does a doula cost in Savannah?", a: "$800 to $2,000 depending on experience and package. Savannah\u2019s smaller doula community means costs are lower than Atlanta, but availability may be more limited and some doulas may charge travel fees for families in surrounding counties." },
+      { q: "Does Medicaid cover doulas in Savannah?", a: "As of 2026, Georgia Medicaid does not yet cover doula services. HB 290, which would add Medicaid doula coverage, has been introduced in the Georgia legislature but not yet enacted. Check with Georgia Medicaid at 1-877-423-4746 for the most current status." },
+      { q: "Which Savannah hospitals accommodate birth plans?", a: "Memorial Health University Medical Center (Level III NICU, stated directly on memorialhealth.com) and St. Joseph\u2019s/Candler Candler Hospital both offer labor and delivery and generally accommodate birth plans. Always confirm your hospital\u2019s current visitor and support-person policies during your tour." },
+      { q: "Does True Joy Birthing work with Savannah families?", a: "True Joy Birthing provides free birth-prep tools for Savannah families. The free birth plan, checklist, and guided walkthrough in the app work for any Savannah birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["atlanta-ga", "charlotte-nc"],
+  },
+  "jacksonville-fl": {
+    city: "Jacksonville",
+    state: "FL",
+    slug: "jacksonville-fl",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Jacksonville is the largest city by area in the continental United States, spread across Duval County with distinct neighborhoods separated by the St. Johns River. Baptist Health and Ascension St. Vincent\u2019s anchor the hospital landscape, with Wolfson Children\u2019s Hospital providing the region\u2019s highest-level neonatal care. The city\u2019s massive military presence \u2014 Naval Air Station Jacksonville, Naval Station Mayport, and a large veteran population \u2014 means a significant TRICARE-covered family base with unique maternity needs. The local birth community is growing but dispersed across a metro area that covers 875 square miles.",
+    heroLocalDetail: "Baptist Medical Center Jacksonville sits at 800 Prudential Drive on the south bank of the St. Johns River, just across the Fuller Warren Bridge from downtown \u2014 and that bridge backs up badly during afternoon rush, adding 10\u201315 minutes if you\u2019re coming from downtown or the northside. Ascension St. Vincent\u2019s Riverside is at 1 Shircliff Way in the Riverside neighborhood, about 5 minutes from downtown via Park Street. I-95 cuts north\u2013south through the city, I-10 terminates downtown from the west, and the I-295 loop encircles the entire metro. Blanding Boulevard on the westside and Southside Boulevard on the southside are the surface-street traffic bottlenecks that can slow a hospital drive when the interstates jam up. Memorial Park\u2019s riverfront paths in Riverside and the Jacksonville-Baldwin Rail Trail on the westside are where Jacksonville moms walk in the third trimester \u2014 flat, shaded, and away from the worst traffic.",
+    hospitalDetails: [
+      { name: "Baptist Medical Center Jacksonville", paragraph: "Baptist Medical Center Jacksonville, at 800 Prudential Drive on the St. Johns River\u2019s south bank, is the flagship of the Baptist Health system and the highest-volume birthing hospital in northeast Florida. Wolfson Children\u2019s Hospital is adjacent on the same campus, providing a Level IV NICU (verified on wolfsonchildrens.com) and the region\u2019s most advanced neonatal care. Baptist handles a huge volume of births and has maternal-fetal medicine specialists on staff. If you\u2019re delivering at Baptist, having your birth plan ready keeps your preferences clear in a hospital that sees families from across a massive geographic area. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Ascension St. Vincent\u2019s Riverside", paragraph: "Ascension St. Vincent\u2019s Riverside, at 1 Shircliff Way in Jacksonville\u2019s Riverside neighborhood, is part of the Ascension health system and offers labor and delivery with a faith-based care approach. Contact the hospital directly for current NICU level verification. St. Vincent\u2019s serves families in the urban core and westside, and its location in the historic Riverside neighborhood means you\u2019re minutes from downtown without crossing the river. If we\u2019re being real, Jacksonville\u2019s size means your hospital choice often comes down to which side of the river you live on \u2014 have your route planned before contractions start." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Jacksonville (ZIPs 32202, 32204, 32205, 32206, 32207, 32208, 32209, 32210,
+    // 32211, 32216, 32217, 32218, 32221, 32222, 32223, 32224, 32225, 32226, 32227,
+    // 32228, 32244, 32246, 32250, 32256, 32257, 32258), Duval County. Google Maps
+    // search "birth center Jacksonville FL" found no freestanding birth centers within
+    // Duval County. Hospital birth is the primary option. No CABC-accredited birth
+    // centers in the Jacksonville metro.
+    // Verified 2026-05-26.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "As of 2026, Florida Medicaid does not cover doula services. Florida has not enacted legislation to add Medicaid doula coverage. Duval County families on Medicaid should check with their managed care plan (Staywell, Sunshine Health, Simply Healthcare, UnitedHealthcare Community Plan) about any maternal wellness benefits that might include doula support. Contact Florida Medicaid at 1-877-254-1055 or visit flmedicaidmanagedcare.com for current plan information.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Jacksonville area. TRICARE covers maternity care for military families \u2014 check TRICARE\u2019s current doula and support-person policy at tricare.mil. Jacksonville\u2019s employer market (CSX, Fidelity, Anthem Blue Cross, Naval Station Mayport) increasingly includes maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "How much does a doula cost in Jacksonville?", a: "$900 to $2,500 depending on experience and package. Jacksonville\u2019s large metro area means a wider range of pricing, and military families should check whether their TRICARE plan covers any doula support." },
+      { q: "Does Medicaid cover doulas in Jacksonville?", a: "As of 2026, Florida Medicaid does not cover doula services. Florida has not enacted legislation to add Medicaid doula coverage. Contact Florida Medicaid at 1-877-254-1055 for the most current status." },
+      { q: "Which Jacksonville hospitals accommodate birth plans?", a: "Baptist Medical Center Jacksonville (Level IV NICU via Wolfson Children\u2019s Hospital, verified on wolfsonchildrens.com) and Ascension St. Vincent\u2019s Riverside both offer labor and delivery and generally accommodate birth plans. Always confirm your hospital\u2019s current visitor and support-person policies during your tour." },
+      { q: "Does True Joy Birthing work with Jacksonville families?", a: "True Joy Birthing provides free birth-prep tools for Jacksonville families. The free birth plan, checklist, and guided walkthrough in the app work for any Jacksonville birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["greenville-sc", "charlotte-nc"],
+  },
+  "greensboro-nc": {
+    city: "Greensboro",
+    state: "NC",
+    slug: "greensboro-nc",
+    costLow: 850,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    culture: "Greensboro is the largest city in the Piedmont Triad and a major healthcare hub anchored by Cone Health, which operates one of the few standalone women\u2019s hospitals in North Carolina. The birth community benefits from the city\u2019s academic and healthcare infrastructure \u2014 the UNC Greensboro nursing program, Cone Health\u2019s residency programs, and a growing network of doulas and lactation consultants serve Guilford County and the broader Triad region. Families here have access to dedicated women\u2019s hospital care that most North Carolina cities don\u2019t offer, and North Carolina\u2019s Medicaid doula coverage (effective October 2024) gives more families a pathway to birth support.",
+    heroLocalDetail: "Cone Health Women\u2019s Hospital sits at 801 Green Valley Road in northwest Greensboro, about 12 minutes from downtown via Friendly Avenue \u2014 and Friendly Avenue between Elm Street and Green Valley Road backs up steady during afternoon rush, so add 10 minutes if you\u2019re coming from the center city. Moses Cone Hospital is at 1200 North Elm Street just south of downtown, about 8 minutes from Women\u2019s Hospital via Wendover Avenue. I-40 runs east\u2013west through Greensboro, I-85 runs northeast\u2013southwest, and the I-73/I-840 southern bypass moves traffic around the perimeter. Battleground Avenue on the northwest side and Wendover Avenue east\u2013west are the surface-street routes that slow down when the interstates jam. The Bog Garden at Benjamin Park and the Greensboro Arboretum\u2019s walking trails are where Greensboro moms walk in the third trimester \u2014 flat, shaded, and minutes from both hospitals. Fisher Park and Lindley Park are where you\u2019ll find most young families.",
+    hospitalDetails: [
+      { name: "Cone Health Women\u2019s Hospital", paragraph: "Cone Health Women\u2019s Hospital, at 801 Green Valley Road in Greensboro, is one of the few standalone women\u2019s hospitals in North Carolina \u2014 dedicated entirely to women\u2019s and infants\u2019 care with a Level III NICU (stated directly on conehealth.com) and 24/7 neonatologist coverage. Having a hospital built specifically for birth means the entire staff, from L&D nurses to lactation consultants, focuses on maternity care every day. If you\u2019re delivering at Women\u2019s Hospital, having your birth plan ready means your preferences are documented in a hospital that was designed around exactly this kind of care. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Moses Cone Hospital", paragraph: "Moses Cone Hospital, at 1200 North Elm Street in Greensboro, is the flagship of the Cone Health system and the region\u2019s Level I trauma center. While maternity and neonatal care is primarily delivered at nearby Women\u2019s Hospital, Moses Cone handles complex medical cases that overlap with pregnancy and provides the maternal-fetal medicine referral base for the system. Contact the hospital directly for current NICU level verification. If we\u2019re being real, most Greensboro families deliver at Women\u2019s Hospital \u2014 but knowing Moses Cone is the backup for medical complexity gives you confidence that the system can handle whatever comes your way." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Greensboro (ZIPs 27401, 27403, 27405, 27406, 27407, 27408, 27409, 27410,
+    // 27455, 27413), Guilford County. Google Maps search "birth center Greensboro NC"
+    // found no freestanding birth centers within Greensboro/Guilford County. Cone
+    // Health Women's Hospital provides the primary maternity option. The nearest
+    // birth centers are in the Raleigh/Durham area (approximately 60-80 minutes
+    // east) and Charlotte (approximately 90 minutes south).
+    // Verified 2026-05-26.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Guilford County\u2019s managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health, Healthy Blue). Contact NC Medicaid at 1-800-662-7030 or visit ncdhhs.gov to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Greensboro area. The Triad\u2019s employer market (Volvo Trucks, Honda Aircraft, Syngenta, VF Corporation, Lincoln Financial) increasingly includes maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "How much does a doula cost in Greensboro?", a: "$850 to $2,200 depending on experience and package. Greensboro\u2019s cost of living keeps rates comparable to Raleigh and lower than Charlotte, and the growing doula community means you\u2019ll find doulas at various price points." },
+      { q: "Does Medicaid cover doulas in Greensboro?", a: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Guilford County\u2019s managed care plans. Contact NC Medicaid at 1-800-662-7030 or visit ncdhhs.gov to confirm your plan\u2019s coverage before hiring." },
+      { q: "Which Greensboro hospitals accommodate birth plans?", a: "Cone Health Women\u2019s Hospital (Level III NICU, stated directly on conehealth.com) is Greensboro\u2019s primary maternity hospital and generally accommodates birth plans. Moses Cone Hospital provides the system\u2019s medical backup for complex cases. Always confirm your hospital\u2019s current visitor and support-person policies during your tour." },
+      { q: "Does True Joy Birthing work with Greensboro families?", a: "True Joy Birthing provides free birth-prep tools for Greensboro families. The free birth plan, checklist, and guided walkthrough in the app work for any Greensboro birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["charlotte-nc", "raleigh-nc"],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
