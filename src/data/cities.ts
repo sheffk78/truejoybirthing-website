@@ -408,6 +408,11 @@ export const cities: Record<string, CityData> = {
       { name: "Baylor Scott & White Garland", paragraph: "Baylor Scott &amp; White Garland sits in the Centerville/Marsh area near Firewheel Town Center, and it's the only hospital actually inside Garland city limits. The L&amp;D unit handles a steady volume from the surrounding neighborhoods \u2014 Spring Creek Forest, Eastern Hills, North Garland \u2014 and families here tend to know the hospital well because it's genuinely local, not a regional referral center. Come with your preferences written down: the nurses see a lot of births and move quickly, so a clear birth plan saves everyone time at check-in. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
       { name: "Texas Health Dallas and Baylor University Medical Center (nearby Dallas hospitals)", paragraph: "Garland families also deliver at Texas Health Dallas or Baylor University Medical Center in Dallas, both about 15-20 minutes away. If we're being real, living in Garland means you probably know which Dallas hospital is closest to your house \u2014 so plan for that drive during rush hour, not just distance. Write your birth plan before you need it." },
     ],
+    // Birth center search: NPI taxonomy 261QB0400X returned 0 results for Garland, TX
+    // (searched Garland city, Dallas County). Google Maps "birth center Garland TX"
+    // returned no freestanding birth centers within Garland city limits. Nearest birth
+    // centers are Lovers Lane Birth Center in Richardson (~12 mi) and The Birth Place
+    // Dallas (~15 mi). Verified 2026-05-26.
     birthCenterDetails: [
     ],
     medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
@@ -676,6 +681,11 @@ export const cities: Record<string, CityData> = {
       { name: "Baylor Scott & White Sunnyvale", paragraph: "Baylor Scott &amp; White Sunnyvale opened in 2019 and is the newest hospital serving the east Dallas corridor \u2014 it was built specifically to relieve capacity pressure on BSW Garland and BSW Dallas. The campus sits just off I-30 in Sunnyvale, and the L&amp;D unit skews toward lower-risk births because the higher-acuity referrals still go downtown. That newer, smaller feel is exactly why some Mesquite-area families prefer it: shorter walks from parking, newer rooms, and a slightly calmer pace. Bring your birth plan regardless \u2014 new hospital doesn't mean less busy. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
       { name: "Texas Health Rockwall", paragraph: "Texas Health Rockwall, to the east, also serves Mesquite-area families. Note: Texas Health Rockwall has a Level I NICU (stated directly on texashealth.org), which provides basic neonatal care — not the higher-level NICU available at Baylor Sunnyvale. Mesquite families often split between Baylor Sunnyvale and Texas Health Rockwall depending on which side of town they're on. If your pregnancy is high-risk or you anticipate needing a Level III NICU, Baylor Sunnyvale is the closer option with higher-level neonatal care. Plan your route and your birth plan ahead of time." },
     ],
+    // Birth center search: NPI taxonomy 261QB0400X returned 0 results for Mesquite, TX
+    // (searched Dallas County and Kaufman County). Google Maps "birth center Mesquite TX"
+    // returned no freestanding birth centers within Mesquite city limits. Nearest options
+    // are Lovers Lane Birth Center in Richardson (~8 mi) and The Birth Place Dallas (~12 mi).
+    // Verified 2026-05-26.
     birthCenterDetails: [
     ],
     medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas County's STAR managed care plans (Community First Health Plans and AmeriGroup serve most eastern Dallas County families). Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
