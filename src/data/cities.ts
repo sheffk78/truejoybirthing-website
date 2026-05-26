@@ -1534,7 +1534,7 @@ export const cities: Record<string, CityData> = {
       { q: "How much does a doula cost in Concord?", a: "$800 to $2,000 depending on experience and package. Concord sits in the Charlotte metro pricing zone, with costs slightly lower than Charlotte proper but higher than rural North Carolina." },
       { q: "Does True Joy Birthing work with Concord families?", a: "True Joy Birthing provides free birth-prep tools for Concord families. The free birth plan, checklist, and guided walkthrough in the app work for any Concord birth setting. The app also helps you connect with local doulas and midwives in your area." },
     ],
-    nearbyCities: [],
+    nearbyCities: ["charlotte-nc", "raleigh-nc"],
   },
   "cumming-ga": {
     city: "Cumming",
@@ -1567,7 +1567,7 @@ export const cities: Record<string, CityData> = {
       { q: "How much does a doula cost in Cumming?", a: "$900 to $2,500 depending on experience and package. Cumming sits in the north Atlanta metro pricing range, with costs comparable to Alpharetta and Johns Creek." },
       { q: "Does True Joy Birthing work with Cumming families?", a: "True Joy Birthing provides free birth-prep tools for Cumming families. The free birth plan, checklist, and guided walkthrough in the app work for any Cumming birth setting. The app also helps you connect with local doulas and midwives in your area." },
     ],
-    nearbyCities: [],
+    nearbyCities: ["atlanta-ga", "concord-nc"],
   },
   "greenville-sc": {
     city: "Greenville",
@@ -1598,7 +1598,104 @@ export const cities: Record<string, CityData> = {
       { q: "How much does a doula cost in Greenville?", a: "$800 to $2,200 depending on experience and package. Greenville\u2019s cost of living keeps rates lower than Charlotte or Atlanta, but the growing doula community means you\u2019ll find doulas at various price points." },
       { q: "Does True Joy Birthing work with Greenville families?", a: "True Joy Birthing provides free birth-prep tools for Greenville families. The free birth plan, checklist, and guided walkthrough in the app work for any Greenville birth setting. The app also helps you connect with local doulas and midwives in your area." },
     ],
-    nearbyCities: [],
+    nearbyCities: ["charlotte-nc", "atlanta-ga"],
+  },
+  "charlotte-nc": {
+    city: "Charlotte",
+    state: "NC",
+    slug: "charlotte-nc",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Charlotte is the largest city in the Carolinas and a major banking hub with a rapidly growing, diverse population. The birth community here is one of the strongest between Atlanta and Washington, DC \u2014 multiple birth centers, a robust doula network, and two major health systems (Atrium Health and Novant Health) that handle high volumes of births across the metro. Families in Charlotte increasingly seek out evidence-based, personalized birth support, and the local doula community reflects that demand.",
+    heroLocalDetail: "Atrium Health Carolinas Medical Center sits at 1000 Blythe Boulevard in the Elizabeth neighborhood, just east of Uptown \u2014 and the I-77/I-85 interchange near Brookshire Freeway can back up badly during afternoon rush, adding 15 minutes you don't want to be figuring out in labor. Novant Health Presbyterian Medical Center is on Randolph Road in the Cotswold area, about 10 minutes from Uptown via East Morehead Street. The Little Sugar Creek Greenway running through Midtown and Freedom Park's trails are where Charlotte moms walk in the third trimester \u2014 flat, shaded, and close enough to both hospital systems that you're never far if something picks up. Neighborhoods like NoDa, Plaza Midwood, and South End are where you'll find most of the young families and birth professionals.",
+    hospitalDetails: [
+      { name: "Atrium Health Carolinas Medical Center", paragraph: "Atrium Health Carolinas Medical Center, at 1000 Blythe Boulevard in Charlotte, is the flagship hospital of the Atrium Health system and one of the busiest birthing hospitals in the Carolinas. It houses the Atrium Health Levine Children's Hospital with a Level IV NICU \u2014 verified on atriumhealth.org \u2014 making it the regional referral center for the most complex neonatal cases. The maternity program handles high-risk pregnancies with maternal-fetal medicine specialists, 24/7 neonatologists, and a dedicated transport team. If you're delivering at Carolinas Medical Center, having your birth plan ready makes the intake conversation smoother in a hospital that sees this kind of volume. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Novant Health Presbyterian Medical Center", paragraph: "Novant Health Presbyterian Medical Center, on Randolph Road in the Cotswold area of Charlotte, is Novant Health's flagship hospital with a Level III NICU (verified on novanthealth.org) and Hemby Children's Hospital on the same campus. Presbyterian has one of the highest birth volumes in the Charlotte metro and a strong maternal-fetal medicine program. Doulas are generally welcome as part of your support team, though visitor policies can shift seasonally \u2014 confirm during your hospital tour. If we're being real, Charlotte has two massive hospital systems and they both move fast \u2014 having a doula who knows the rhythm of your specific hospital makes a real difference when you're already in labor." },
+    ],
+    // Birth center search: Google Maps search "birth center Charlotte NC" found
+    // Baby+Co. (4211 Stuart Andrew Blvd, Charlotte, NC 28217, categorized as "Birth center",
+    // 4.8\u2605/5 reviews, phone (704) 930-5401, website babyandco.net) and
+    // Queens Free Birth Center (4709 Ashley Park Dr, Charlotte, NC 28210, categorized as
+    // "Birth center", website queensbirthcenter.com). Verified 2026-05-26.
+    birthCenterDetails: [
+      { name: "Baby+Co. Birth Center", paragraph: "Baby+Co. Birth Center, at 4211 Stuart Andrew Blvd in southwest Charlotte, is a freestanding birth center offering midwife-led birth in a lower-intervention setting. It's part of the Baby+Co. network with locations across the Southeast, staffed by certified nurse midwives with hospital transfer agreements in place. If you're planning an out-of-hospital birth in Charlotte, Baby+Co. is one of the most established options \u2014 and having a doula who knows the birth center space makes the whole experience feel a lot less unknown. Call ahead to confirm current availability and schedule a tour." },
+      { name: "Queens Free Birth Center", paragraph: "Queens Free Birth Center, at 4709 Ashley Park Dr in Charlotte, offers midwife-led birth services in a freestanding birth center setting. It serves families seeking a lower-intervention, community-centered birth experience in the Charlotte metro. Verify with the center directly for current services, insurance coverage, and availability." },
+    ],
+    medicaidNote: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Mecklenburg County's managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health, Healthy Blue). Contact NC Medicaid at 1-800-662-7030 or visit.ncdhhs.gov to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Charlotte area. Atrium Health's employer network and Charlotte-area insurers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Charlotte?", a: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Mecklenburg County's managed care plans. Contact NC Medicaid at 1-800-662-7030 or visit.ncdhhs.gov to confirm your plan's coverage before hiring." },
+      { q: "Which hospitals in Charlotte accommodate birth plans?", a: "Atrium Health Carolinas Medical Center (Level IV NICU, verified on atriumhealth.org) and Novant Health Presbyterian Medical Center (Level III NICU, verified on novanthealth.org) both accommodate birth plans and handle high volumes of births. Always confirm your hospital's current visitor and support-person policies during your tour." },
+      { q: "How much does a doula cost in Charlotte?", a: "$900 to $2,500 depending on experience and package. Charlotte's large doula community means a wide range of pricing and specialties \u2014 bilingual doulas, VBAC-experienced doulas, and postpartum-focused support are all available." },
+      { q: "Does True Joy Birthing work with Charlotte families?", a: "True Joy Birthing provides free birth-prep tools for Charlotte families. The free birth plan, checklist, and guided walkthrough in the app work for any Charlotte birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["concord-nc", "greenville-sc"],
+  },
+  "raleigh-nc": {
+    city: "Raleigh",
+    state: "NC",
+    slug: "raleigh-nc",
+    costLow: 850,
+    costHigh: 2300,
+    shelbiServesHere: false,
+    culture: "Raleigh is the capital of North Carolina and part of the Research Triangle, with a highly educated population drawn by NC State, RTP tech employers, and state government. The birth community benefits from proximity to UNC Chapel Hill and Duke's academic medical systems, and families here have access to WakeMed (the city's highest-volume birthing hospital), UNC REX, and Duke Regional. The Triangle's doula community is organized and growing, with strong networks of birth and postpartum doulas serving Wake, Durham, and Orange counties.",
+    heroLocalDetail: "WakeMed Raleigh Campus sits at 3000 New Bern Avenue in east Raleigh, about 10 minutes from downtown via New Bern Avenue \u2014 but the New Bern Avenue corridor between downtown and the hospital backs up hard during weekday rush, so know your back route before contractions start. UNC REX Healthcare is at 4418 Lake Boone Trail in west Raleigh near the I-440 Beltline, where the Edwards Mill and Lake Boone exits can slow during afternoon commute. Duke Regional Hospital is at 3643 North Roxboro Road in north Durham, about 25 minutes from downtown Raleigh via I-85. The Neuse River Greenway Trail (28 miles of paved, flat greenway) and Umstead State Park's trails are where Raleigh moms walk in the third trimester \u2014 shaded, well-maintained, and close enough to all three hospitals.",
+    hospitalDetails: [
+      { name: "WakeMed Raleigh Campus", paragraph: "WakeMed Raleigh Campus, at 3000 New Bern Avenue, is the highest-volume birthing hospital in Wake County and one of the busiest in the state. It houses the WakeMed Women's Pavilion and a Level IV NICU (verified on wakemed.org), making it the regional referral center for the most complex neonatal cases in the Triangle. WakeMed handles a massive volume of births \u2014 more than most North Carolina hospitals \u2014 and they've seen every kind of birth plan. Having yours in hand when you arrive keeps your preferences clear in a fast-moving environment. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "UNC REX Healthcare", paragraph: "UNC REX Healthcare, at 4418 Lake Boone Trail in west Raleigh, is part of the UNC Health system with a Level III NICU (verified on unchealth.org) and a strong maternal-fetal medicine program. UNC REX is known for a slightly calmer, more personal feel than the city's highest-volume hospitals while still providing comprehensive neonatal care. If you're delivering at UNC REX, having your birth plan ready means your preferences travel with you \u2014 even in a well-run hospital, things move fast." },
+      { name: "Duke Regional Hospital", paragraph: "Duke Regional Hospital, at 3643 North Roxboro Road in north Durham, is part of the Duke Health system with a Level III NICU (verified on dukehealth.org) and a full obstetric program. While technically in Durham, it's a 25-minute drive from Raleigh and one of the Triangle's major birthing hospitals. Duke Regional serves many Wake County families, particularly those in northwest Raleigh and Cary. If we're being real, crossing county lines for your hospital is common in the Triangle \u2014 just make sure you know the route before you need it." },
+    ],
+    // Birth center search: Google Maps search "birth center Raleigh NC" found
+    // Raleigh Birth Center (4700 Homewood Court, Suite 120, Raleigh, NC 27612,
+    // categorized as "Birth center", 5.0\u2605/34 reviews, website raleighbirthcenter.com).
+    // No NPI taxonomy 261QB0400X results found for Raleigh. Verified 2026-05-26.
+    birthCenterDetails: [
+      { name: "Raleigh Birth Center", paragraph: "Raleigh Birth Center, at 4700 Homewood Court Suite 120 in Raleigh, is a freestanding birth center offering midwife-led birth in a lower-intervention setting. It's the only dedicated birth center in Raleigh proper and has been serving Triangle families for years with CPM and CNM midwives. If you're planning an out-of-hospital birth in Wake County, this is the primary option \u2014 and having a doula who knows the transfer protocols to WakeMed or UNC REX makes the safety net feel solid. Call ahead to confirm current availability and schedule a tour." },
+    ],
+    medicaidNote: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Wake County's managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health, Healthy Blue). Contact NC Medicaid at 1-800-662-7030 or visit.ncdhhs.gov to confirm your plan's doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Raleigh area. The Triangle's employer market (Duke, IBM, Cisco, Red Hat) increasingly includes maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Raleigh?", a: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Wake County's managed care plans. Contact NC Medicaid at 1-800-662-7030 or visit.ncdhhs.gov to confirm your plan's coverage before hiring." },
+      { q: "Which hospitals in Raleigh accommodate birth plans?", a: "WakeMed Raleigh Campus (Level IV NICU, verified on wakemed.org), UNC REX Healthcare (Level III NICU, verified on unchealth.org), and Duke Regional Hospital in Durham (Level III NICU, verified on dukehealth.org) all accommodate birth plans. WakeMed handles the highest volume in Wake County. Always confirm your hospital's current visitor and support-person policies during your tour." },
+      { q: "How much does a doula cost in Raleigh?", a: "$850 to $2,300 depending on experience and package. Raleigh's doula community is growing alongside the city's population, with rates that sit between Charlotte and smaller North Carolina cities." },
+      { q: "Does True Joy Birthing work with Raleigh families?", a: "True Joy Birthing provides free birth-prep tools for Raleigh families. The free birth plan, checklist, and guided walkthrough in the app work for any Raleigh birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["concord-nc", "greenville-sc"],
+  },
+  "atlanta-ga": {
+    city: "Atlanta",
+    state: "GA",
+    slug: "atlanta-ga",
+    costLow: 1000,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    culture: "Atlanta is the largest city in the Southeast and the undisputed medical hub of Georgia, with Northside Hospital delivering more babies than any other single hospital in the country. The birth community here is massive and diverse \u2014 Black maternal health organizations, Spanish-speaking doulas, VBAC advocates, and birth center communities all have a strong presence. Atlanta families have more birth options than anywhere else in Georgia, but navigating a metro this large also means planning your route and your team carefully.",
+    heroLocalDetail: "Northside Hospital Atlanta sits at 1000 Johnson Ferry Road NE in Sandy Springs, just inside the Perimeter (I-285) on the north side \u2014 and the Glenridge Drive/Johnson Ferry Road intersection backs up during morning and afternoon rush, so add 15 minutes if you're coming from inside I-285. Emory University Hospital Midtown is at 550 Peachtree Street NE in Midtown Atlanta, where Peachtree Street traffic and Midtown event congestion can slow your approach on any given day. Piedmont Atlanta Hospital is at 1968 Peachtree Road NW in Buckhead, accessible via I-75/85 to the Peachtree Road exit. The Atlanta BeltLine's Eastside Trail and Piedmont Park's loop are where Atlanta moms walk in the third trimester \u2014 the BeltLine is flat, shaded, and connects some of the city's most family-friendly neighborhoods.",
+    hospitalDetails: [
+      { name: "Northside Hospital Atlanta", paragraph: "Northside Hospital Atlanta, at 1000 Johnson Ferry Road NE in Sandy Springs, delivers more babies than any other hospital in the country \u2014 over 16,000 births a year across the Northside system. It has a Level III NICU (stated directly on northside.com) and Level IV Maternal Care verification (the first hospital in the country to receive this designation from the Joint Commission). Northside's sheer volume means they've seen every kind of birth plan and every level of complexity \u2014 but that also means they move fast, so coming in with your preferences written down keeps your voice in the room. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something specific to work from." },
+      { name: "Emory University Hospital Midtown", paragraph: "Emory University Hospital Midtown, at 550 Peachtree Street NE in Midtown Atlanta, is part of the Emory Healthcare system with a Level III NICU (verified on emoryhealthcare.org) and a full maternal-fetal medicine program. As an academic medical center, Emory Midtown handles both routine and high-risk pregnancies with 24/7 obstetric and neonatal coverage. If you're navigating a high-risk pregnancy and want an academic hospital, Emory Midtown's team is one of the strongest in the Southeast \u2014 and having a doula who knows how academic hospitals work makes the whole experience feel more grounded." },
+      { name: "Piedmont Atlanta Hospital", paragraph: "Piedmont Atlanta Hospital, at 1968 Peachtree Road NW in Buckhead, has a Level III NICU (verified on piedmont.org) and a comprehensive women's services program including maternal-fetal medicine. Piedmont is a well-established Buckhead hospital that serves a large portion of Atlanta's intown and northside families. If we're being real, Atlanta has more hospital options than most cities \u2014 know which hospital your OB delivers at and plan your route from home before contractions start." },
+    ],
+    // Birth center search: Google Maps search "birth center Atlanta GA" found
+    // Intown Birth Center (1401 Montgomery Ferry Drive NE, Atlanta, GA 30306,
+    // categorized as "Birth center", 4.9\u2605/82 reviews, website intownbirthcenter.com)
+    // and Atlanta Birth Center (1442 Flat Shoals Ave SE, Atlanta, GA 30316,
+    // categorized as "Birth center", 4.9\u2605/67 reviews, website atlantabirthcenter.com).
+    // Verified 2026-05-26.
+    birthCenterDetails: [
+      { name: "Intown Birth Center", paragraph: "Intown Birth Center, at 1401 Montgomery Ferry Drive NE in Atlanta's Morningside neighborhood, is a freestanding birth center offering midwife-led birth in a lower-intervention setting. It's one of Atlanta's most established birth centers, with CNM midwives and transfer agreements with nearby hospitals. If you're planning an out-of-hospital birth in intown Atlanta, Intown Birth Center is a primary option \u2014 and having a doula who knows the birth center space and transfer protocols makes the experience feel supported." },
+      { name: "Atlanta Birth Center", paragraph: "Atlanta Birth Center, at 1442 Flat Shoals Ave SE in East Atlanta, is a freestanding birth center serving families seeking a community-centered, lower-intervention birth experience. It's located in the East Atlanta Village area, convenient for families in southeast intown neighborhoods. Verify with the center directly for current services, insurance coverage, and availability." },
+    ],
+    medicaidNote: "As of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. Check with Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Fulton, DeKalb, and Clayton County families on Medicaid should also check with their managed care plan about any maternal wellness benefits that might include doula support.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Atlanta area. Atlanta's large employer market (Delta, Home Depot, Coca-Cola, Emory, CDC) increasingly includes maternal wellness benefits \u2014 check with your HR department about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Atlanta?", a: "As of 2026, Georgia Medicaid does not yet cover doula services. HB 290, which would add Medicaid doula coverage, has been introduced in the Georgia legislature but not yet enacted. Check with Georgia Medicaid at 1-877-423-4746 for the most current status." },
+      { q: "Which hospitals in Atlanta accommodate birth plans?", a: "Northside Hospital Atlanta (Level III NICU and Level IV Maternal Care, verified on northside.com), Emory University Hospital Midtown (Level III NICU, verified on emoryhealthcare.org), and Piedmont Atlanta Hospital (Level III NICU, verified on piedmont.org) all accommodate birth plans. Northside handles the highest birth volume in the country. Always confirm your hospital's current visitor and support-person policies during your tour." },
+      { q: "How much does a doula cost in Atlanta?", a: "$1,000 to $3,000 depending on experience and package. Atlanta's large and diverse doula community means you'll find a wide range of pricing \u2014 bilingual doulas, Black maternal health specialists, VBAC-experienced doulas, and postpartum-focused support are all available." },
+      { q: "Does True Joy Birthing work with Atlanta families?", a: "True Joy Birthing provides free birth-prep tools for Atlanta families. The free birth plan, checklist, and guided walkthrough in the app work for any Atlanta birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["cumming-ga", "greenville-sc"],
   },
 };
 
