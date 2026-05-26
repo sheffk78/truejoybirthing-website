@@ -1,6 +1,7 @@
 ---
 // ═══════════════════════════════════════════════════════════════
 // Dynamic city birth-support page — single template for all cities
+// Written directly to expectant moms, especially first-time moms
 // ═══════════════════════════════════════════════════════════════
 import Layout from '../../layouts/Layout.astro';
 import CityLeadCaptureForm from '../../components/city/LeadCaptureForm.astro';
@@ -21,7 +22,7 @@ const {
 }: CityData = data;
 
 const pageTitle = `Doula ${city} ${state} — Birth Support, Costs & Free Joyful Birth Plan`;
-const pageDesc = `Free birth-plan resources for ${city}, ${state} families — hospital info, doula costs, Medicaid status, and the Joyful Birth Plan.`;
+const pageDesc = `Planning a birth in ${city}, ${state}? Get the real scoop on doula costs, hospital policies, Medicaid coverage, and the free Joyful Birth Plan that helps you walk in prepared.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}`;
 const ogImage = `https://truejoybirthing.com/images/og-city-${slug}.webp`;
 const heroImage = `/images/${slug}-birth-doula-skyline.webp`;
@@ -80,19 +81,19 @@ const schema = {
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div>
-          <h1 class="text-3xl md:text-4xl font-bold mb-4">Birth Plan Resources for {city}, {state} Families</h1>
-          <p class="text-lg text-tjb-gray mb-6">
-            Preparing for birth in {city}, {state}? This guide covers local hospital options, doula costs, Medicaid status, and the free Joyful Birth Plan families use here.
+          <h1 class="text-3xl md:text-4xl font-bold mb-4">Planning Your Birth in {city}, {state}?</h1>
+          <p class="text-lg text-tjb-gray mb-4">
+            Whether you're wondering if a doula is worth it, whether your hospital will let one in, or how you'll afford it — you're in the right place. This guide covers what {city} moms actually need to know about doulas, midwives, hospital policies, and costs.
           </p>
           {heroLocalDetail && (
-            <p class="text-lg text-tjb-gray mb-6">{heroLocalDetail}</p>
+            <p class="text-base text-tjb-gray italic mb-6">{heroLocalDetail}</p>
           )}
           <div class="flex flex-col sm:flex-row gap-3">
-            <a href="/birth-plan-template/" class="bg-tjb-lavender-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition">
-              Get Your Joyful Birth Plan
+            <a href="/birth-plan-template/" class="bg-tjb-lavender-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition text-center">
+              Get Your Free Joyful Birth Plan
             </a>
-            <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="bg-tjb-cream-50 text-tjb-lavender-600 border-2 border-tjb-lavender-600 px-6 py-3 rounded-full font-semibold hover:bg-tjb-cream transition">
-              Get the Free App
+            <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="bg-tjb-cream-50 text-tjb-lavender-600 border-2 border-tjb-lavender-600 px-6 py-3 rounded-full font-semibold hover:bg-tjb-cream transition text-center">
+              Download the Free App
             </a>
           </div>
         </div>
@@ -115,13 +116,34 @@ const schema = {
     <div class="max-w-3xl mx-auto px-6 prose">
 
       <!-- What Birth Support Looks Like -->
-      <h2>What Birth Support Looks Like in {city}</h2>
+      <h2>What Doula & Midwife Support Looks Like in {city}</h2>
       <p>{culture}</p>
-      <p>Whether this is your first baby or you're preparing for a VBAC, <a href="/what-is-a-doula/">learning what a doula actually does</a> — and <a href="/benefits-of-a-doula/">understanding the benefits of having a doula</a> — can help you decide what support is right for your {city} birth.</p>
 
+      <!-- Quick clarification -->
+      <div class="bg-tjb-cream p-4 rounded-lg mb-6 not-prose">
+        <p class="font-semibold text-tjb-lavender-600 mb-1">Not sure what the difference is?</p>
+        <p class="text-sm text-tjb-gray">A <strong>midwife</strong> is your medical provider — she can deliver your baby, write prescriptions, and monitor your health. A <strong>doula</strong> is your support person — she keeps you comfortable, informed, and emotionally held, but doesn't do medical tasks. You can have both, and many {city} moms do. <a href="/what-is-a-doula/" class="text-tjb-lavender-600 hover:underline">Learn more about what a doula actually does →</a></p>
+      </div>
+
+      <p>Whether this is your first baby or you're preparing for a VBAC, <a href="/what-is-a-doula/">understanding what a doula does</a> — and <a href="/benefits-of-a-doula/">how a doula can change your birth experience</a> — can help you decide what support is right for you.</p>
+
+      <!-- Can My Doula Come With Me? -->
+      <h2>Can My Doula Come to the Hospital With Me in {city}?</h2>
+      <p>This is one of the top questions {city} moms ask — and the answer matters. Most hospitals in the {city} area <strong>do allow doulas</strong>, and many have explicit policies supporting continuous doula support during labor. Post-COVID visitor restrictions have mostly lifted, and hospitals generally recognize that doulas are not visitors — they're part of your care team.</p>
+      <p>That said, it's smart to <strong>call your hospital before labor starts</strong> and ask directly about their doula policy. Some questions to ask:</p>
+      <ul>
+        <li>"How many support people can I have in the delivery room?"</li>
+        <li>"Does your hospital have a written doula policy I can review?"</li>
+        <li>"Are doulas counted as visitors or as part of my care team?"</li>
+        <li>"Is there a limit on support people during a C-section?"</li>
+      </ul>
+      <p>Your doula will also know the policies at {city} hospitals and can help you navigate any hoops. And if your hospital pushes back, your birth plan gives you a written document that shows you've thought this through — <a href="/birth-plan-template/">grab the free template here</a>.</p>
+
+      <!-- Hospital & Birth Center Info -->
       {hospitalDetails.length > 0 && (
-        <h2>Hospital & Birth Center Info for {city}</h2>
+        <h2>Hospital & Birth Center Info in {city}</h2>
       )}
+      <p>Here's what you need to know about the hospitals where {city} moms deliver — including NICU levels, which matters if your baby needs extra care after birth.</p>
       {hospitalDetails.map((h) => (
         <p set:html={h.paragraph} />
       ))}
@@ -129,31 +151,54 @@ const schema = {
         <p set:html={bc.paragraph} />
       ))}
 
-      <p class="text-sm text-tjb-gray italic">Hospitals mentioned for context only. True Joy Birthing does not endorse any specific provider. Always confirm visitor and doula policies during your hospital tour.</p>
+      <p class="text-sm text-tjb-gray italic">Hospitals listed for reference only. True Joy Birthing does not endorse any specific provider. Always call ahead to confirm doula and visitor policies during your hospital tour.</p>
       <p class="text-sm text-tjb-gray mt-1">Reviewed by <a href="/about/" class="text-tjb-lavender-600 hover:underline">Shelbi Kohler, CD(DONA)</a></p>
 
       <!-- Doula Costs -->
-      <h2>Doula Costs in {city}</h2>
-      <p>In the {city} area, doula services typically range from <strong>${costLow.toLocaleString()} to ${costHigh.toLocaleString()}</strong> depending on experience, package, and whether the doula offers add-on services like <a href="/postpartum-doula/">postpartum visits</a>. <a href="/doula-cost/">See our full doula cost guide</a> for what's typically included.</p>
+      <h2>How Much Does a Doula Cost in {city}?</h2>
+      <p>In the {city} area, birth doula packages typically range from <strong>${costLow.toLocaleString()} to ${costHigh.toLocaleString()}</strong> — that usually includes prenatal visits, your birth, and postpartum follow-up. <a href="/doula-cost/">See our full doula cost breakdown</a> for what's included and what to ask about.</p>
+      <p>If that number feels steep, you're not alone — and there are options:</p>
+      <ul>
+        <li><strong>Medicaid:</strong> {medicaidNote.includes('does not') || medicaidNote.includes('does NOT') ? 'Unfortunately, your state does not yet cover doulas through Medicaid. Some community organizations and volunteer doula programs offer free or reduced-cost support — ask at your local WIC office or community health center.' : 'Good news — your state covers doula services through Medicaid. See the details below.'}</li>
+        <li><strong>HSA/FSA:</strong> Many families don't realize that doula services can often be paid for with HSA or FSA funds, since birth support qualifies as a medical expense under most plans. Check with your plan administrator.</li>
+        <li><strong>Sliding-scale doulas:</strong> Many {city} doulas offer payment plans, sliding-scale fees, or reduced packages. Don't be afraid to ask.</li>
+        <li><strong>Student doulas:</strong> Doulas in training often attend births at reduced rates. It's a great option if budget is tight.</li>
+      </ul>
 
       <!-- Medicaid & Insurance -->
-      <h2>Medicaid & Insurance Coverage</h2>
+      <h2>Does Medicaid or Insurance Cover a Doula in {state}?</h2>
       <p>{medicaidNote}</p>
       <p>{insuranceNote}</p>
-      <p><strong>HSA/FSA:</strong> Many families don't realize that doula services can often be paid for with HSA or FSA funds, since birth support qualifies as a medical expense under most plans. Check with your plan administrator to confirm what's eligible and whether you need a letter from your provider.</p>
-      <p>Not sure what to look for? <a href="/how-to-choose-a-doula/">Here's how to choose a doula</a> who fits your birth preferences and budget.</p>
+      <p>Not sure what to look for in a doula? <a href="/how-to-choose-a-doula/">Here's how to choose a doula</a> who fits your birth preferences, your personality, and your budget.</p>
 
-      <div>
-        <h2>Next Steps: Plan Your Birth in {city}, {state}</h2>
-        <p>No matter where you deliver in {city}, a clear, organized birth plan helps you communicate your preferences to the team in your birth room. Start with the <a href="/birth-plan-template/">free birth plan template</a>, then use the <a href="/birth-plan-checklist/">birth plan checklist</a> to make sure nothing gets missed.</p>
-        <a href="/birth-plan-template/" class="inline-block bg-tjb-lavender-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition mb-6">
-          Get Your Joyful Birth Plan
-        </a>
-        <p class="mt-2 text-sm text-tjb-gray">Or <a href="/birth-plan-template/">get the free Joyful Birth Plan walkthrough in the app</a> step by step.</p>
-        <div class="bg-tjb-cream p-4 rounded-lg mt-6">
-          <p class="font-semibold text-tjb-lavender-600 mb-1">Free birth-prep tools for {city} families</p>
-          <p class="text-sm text-tjb-gray">True Joy Birthing helps you prepare and connect with local doulas and midwives in your area. <a href="/birth-plan-template/">Download the free Joyful Birth Plan</a> or <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180">use the free app</a> to walk through your preferences step by step.</p>
+      <!-- What About a Midwife? -->
+      <h2>What About a Midwife in {city}?</h2>
+      <p>If you're considering a midwife, you're in good company. More {city} moms are choosing midwifery care each year. Here's what to know:</p>
+      <ul>
+        <li><strong>Certified Nurse-Midwives (CNMs)</strong> work in hospitals and birth centers and are covered by Medicaid in all 50 states.</li>
+        <li><strong>Midwives vs. OBs:</strong> Midwives spend more time with you — longer appointments, more conversation, less rushed. OBs are surgeons trained for complications. Both are valid choices for different situations.</li>
+        <li><strong>You can have both:</strong> Many {city} practices pair midwives and OBs so you get midwifery-style care with a doctor backing you up if needed.</li>
+        {birthCenterDetails.some((bc) => !bc.name.toLowerCase().includes('no ')) ? (
+          <li><strong>Birth centers:</strong> {city} has freestanding birth centers where midwives attend births in a home-like setting. See the details above.</li>
+        ) : (
+          <li><strong>No birth centers locally:</strong> {city} doesn't currently have a freestanding birth center, but midwifery care at local hospitals is still a great option.</li>
+        )}
+      </ul>
+
+      <!-- CTA: Your Birth Plan -->
+      <div class="bg-tjb-lavender-50 border-2 border-tjb-lavender-200 p-6 rounded-lg mt-8 not-prose">
+        <h3 class="font-semibold text-lg text-tjb-charcoal mb-2">Walk Into Your Birth Feeling Prepared — Not Anxious</h3>
+        <p class="text-tjb-gray mb-3">The #1 thing {city} moms tell us they wish they'd had? <strong>A clear plan they'd actually thought through</strong> — not just a form, but a process that helped them understand their options before the contractions started.</p>
+        <p class="text-tjb-gray mb-4">That's exactly what the free Joyful Birth Plan does. It walks you through every decision — who's in the room, what happens if things shift, what matters most to you — so you walk in confident.</p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="/birth-plan-template/" class="bg-tjb-lavender-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition text-center">
+            Get Your Free Joyful Birth Plan
+          </a>
+          <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="bg-white text-tjb-lavender-600 border-2 border-tjb-lavender-600 px-6 py-3 rounded-full font-semibold hover:bg-tjb-cream transition text-center">
+            Use the Free App Instead
+          </a>
         </div>
+        <p class="text-xs text-tjb-gray mt-3">Free. No email required for the template. The app walks you through it step by step.</p>
       </div>
 
     </div>
@@ -167,13 +212,13 @@ const schema = {
       <div class="bg-white border-2 border-tjb-lavender-200 p-5 rounded-lg mb-6">
         <h3 class="font-semibold text-lg text-tjb-charcoal mb-2">What True Joy Birthing Actually Does for You</h3>
         <p class="text-tjb-gray mb-2">True Joy Birthing isn't a doula matching service, and we're not necessarily your in-person doula in {city}. We're the step before — and alongside — all of that.</p>
-        <p class="text-tjb-gray mb-2">Shelbi built the free Joyful Birth Plan because she saw families show up to the hospital without their preferences written down, every single time. The birth plan template, the checklist, the free app walkthrough — these are the tools that help you walk in prepared, whether you end up hiring a local doula or going it alone.</p>
+        <p class="text-tjb-gray mb-2">Shelbi built the free Joyful Birth Plan because she saw families show up to the hospital without their preferences written down, <em>every single time</em>. The birth plan template, the checklist, the free app walkthrough — these are the tools that help you walk in prepared, whether you end up hiring a local doula or going it alone.</p>
         <p class="text-tjb-gray">If you do find a doula in {city}, great — bring your plan and use it together. If you're still looking, or if hiring a doula isn't in the budget right now, the birth plan is free and it works.</p>
       </div>
 
       {nearbyCities.length > 0 && (
         <div class="mb-8">
-          <h2 class="text-xl font-bold mb-3">Nearby Cities</h2>
+          <h2 class="text-xl font-bold mb-3">Looking at Nearby Cities?</h2>
           <div class="flex flex-wrap gap-2">
             {nearbyCities.map((nSlug) => {
               const near = cities[nSlug];
@@ -195,7 +240,8 @@ const schema = {
   <!-- FAQ -->
   <section class="py-16 bg-tjb-cream-50">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="text-2xl font-bold mb-8">Frequently Asked Questions — {city}</h2>
+      <h2 class="text-2xl font-bold mb-2">Your Questions About Doulas & Midwives in {city}</h2>
+      <p class="text-tjb-gray mb-8">The things {city} moms ask us most — answered honestly.</p>
       <div class="space-y-6">
         {faqs.map((faq) => (
           <div class="border border-tjb-lavender-200 rounded-lg p-5 bg-white">
@@ -211,4 +257,3 @@ const schema = {
   <CityLeadCaptureForm city={city} />
 
 </Layout>
-
