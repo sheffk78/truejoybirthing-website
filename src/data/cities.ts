@@ -1876,6 +1876,97 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["charlotte-nc", "raleigh-nc"],
   },
+  "tampa-fl": {
+    city: "Tampa",
+    state: "FL",
+    slug: "tampa-fl",
+    costLow: 900,
+    costHigh: 2800,
+    shelbiServesHere: false,
+    culture: "Tampa is the largest birth market on Florida's Gulf Coast, with Tampa General Hospital and BayCare's St. Joseph's Women's Hospital anchoring a competitive hospital landscape. The MacDill Air Force Base population brings a steady flow of TRICARE families navigating military insurance, and the city's suburban sprawl — from South Tampa to Brandon to Wesley Chapel — means doulas who know which hospital system serves which ZIP code have a real edge. The birth community here is larger and more organized than in most Florida cities.",
+    heroLocalDetail: "Tampa General Hospital sits on Davis Islands, accessible via the Selmon Expressway (FL-618) and the Platt Street Bridge — and during morning rush, that bridge and the parallel Cass Street bridge both back up. If you're delivering at TGH, the Selmon Expressway is almost always faster than surface streets from South Tampa or Brandon. AdventHealth Tampa is on McLaren Circle just west of downtown, reachable via I-275 Exit 45. BayCare St. Joseph's Women's Hospital is in central Tampa on MLK Boulevard, about 10 minutes from I-275. Bayshore Boulevard's 4.5-mile sidewalk — the longest continuous sidewalk in the US — is where Tampa moms walk in the third trimester, and Al Lopez Park near Raymond James Stadium has flat, shaded paths that are popular when Bayshore feels too exposed.",
+    hospitalDetails: [
+      { name: "Tampa General Hospital", paragraph: "Tampa General Hospital, on Davis Islands just south of downtown, is the region's only Level I trauma center and home to one of the busiest neonatal intensive care units in the state — with a Level IV NICU through its partnership with USF Health (verified on tgh.org). TGH handles high-risk pregnancies from across west-central Florida and has maternal-fetal medicine specialists on staff. If you're delivering at Tampa General, having your birth plan ready helps you navigate a large regional referral center that sees families from a huge geographic area. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "BayCare St. Joseph's Women's Hospital", paragraph: "St. Joseph's Women's Hospital, on MLK Boulevard in central Tampa, is BayCare's dedicated women's and children's hospital — one of the few standalone women's hospitals in Florida, with a Level III NICU (contact the hospital directly for current level verification) and a high-volume L&D unit that serves families from South Tampa, Town 'n' Country, and the western suburbs. St. Joseph's is the hospital where a lot of Tampa OBs deliver, and its dedicated women's campus means the entire floor is built around birth and newborn care." },
+      { name: "AdventHealth Tampa", paragraph: "AdventHealth Tampa, on McLaren Circle just west of downtown off I-275, offers maternity care with a NICU for babies who need extra support — contact AdventHealth directly for current NICU level verification. AdventHealth is smaller than TGH or St. Joseph's for births, which some families prefer, but it's also the closest option for families in the Westshore and Airport West corridors. If we're being real, your OB usually determines your hospital in Tampa — so know which system they deliver at before you commit to a birth plan." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Tampa (ZIPs 33602-33647). Google Maps search "birth center Tampa FL" found no
+    // freestanding birth centers within the Tampa city limits. The nearest CABC-accredited
+    // birth centers are in St. Petersburg (About Women Birth Center) and Lakeland (Lakeland Birth Center).
+    // Verified 2026-05-26.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "As of 2026, Florida Medicaid does not cover doula services. Florida has not enacted legislation to add Medicaid doula coverage. Tampa-area families on Medicaid should check with their managed care plan (Staywell, Sunshine Health, Simply Healthcare, Molina Healthcare) about any maternal wellness benefits that might include doula support. Contact Florida Medicaid at 1-877-254-1055 or visit flmedicaidmanagedcare.com for current plan information.",
+    insuranceNote: "TRICARE covers maternity care for military families at MacDill AFB — check TRICARE's current doula and support-person policy at tricare.mil, as doula coverage is limited. Tampa's employer market (BayCare, Raymond James, Jabil, Citigroup) increasingly includes maternal wellness benefits — check your specific plan for doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "How much does a doula cost in Tampa?", a: "$900 to $2,800 depending on experience and package. Tampa's larger doula community means more options and a wider price range than smaller Florida cities. Military families should check whether their TRICARE plan covers any doula support." },
+      { q: "Does Medicaid cover doulas in Tampa?", a: "As of 2026, Florida Medicaid does not cover doula services. Florida has not enacted legislation to add Medicaid doula coverage. Contact Florida Medicaid at 1-877-254-1055 for the most current status." },
+      { q: "Which Tampa hospitals accommodate birth plans?", a: "Tampa General Hospital (Level IV NICU, verified on tgh.org), BayCare St. Joseph's Women's Hospital (dedicated women's campus, contact for current NICU level), and AdventHealth Tampa all offer labor and delivery and generally accommodate birth plans. Always confirm your hospital's current visitor and support-person policies during your tour." },
+      { q: "Does True Joy Birthing work with Tampa families?", a: "True Joy Birthing provides free birth-prep tools for Tampa families. The free birth plan, checklist, and guided walkthrough in the app work for any Tampa birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["jacksonville-fl", "savannah-ga"],
+  },
+  "orlando-fl": {
+    city: "Orlando",
+    state: "FL",
+    slug: "orlando-fl",
+    costLow: 850,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Orlando is one of the highest-volume birth markets in the Southeast — Winnie Palmer Hospital delivers more babies than almost any other hospital in the country, and the city's transient, transplant-heavy population means a constant flow of families who don't have a local support network yet. The birth community here is active but spread across a metro that includes Seminole County, Osceola County, and Lake Mary, so knowing which hospital system serves your ZIP code matters.",
+    heroLocalDetail: "Winnie Palmer Hospital is on South Orange Avenue just south of downtown Orlando, connected to the Orlando Health campus — and SR-408 (the East-West Expressway) is the fastest way in from the east side, while I-4 is the main north-south corridor that backs up badly during rush, especially near the Universal Studios exit. AdventHealth Orlando is on Rollins Avenue in the Loch Haven neighborhood, about 8 minutes north of downtown via Orange Avenue. If you're delivering at Winnie Palmer from the suburbs (Lake Mary, Sanford, Kissimmee), I-4 and the 417 toll road are your main routes — know which one is faster from your neighborhood. Lake Eola Park's walking loop in downtown Orlando and Blanchard Park's shaded trails along the Little Econlockhatchee River on the east side are where Orlando moms walk in the third trimester.",
+    hospitalDetails: [
+      { name: "Winnie Palmer Hospital for Women & Babies", paragraph: "Winnie Palmer Hospital, on South Orange Avenue in downtown Orlando, is one of the busiest birthing hospitals in the United States — delivering over 14,000 babies a year — with a Level III NICU (stated directly on winniepalmerhospital.com). It's part of the Orlando Health system and is the primary referral center for high-risk pregnancies across central Florida. If you're delivering at Winnie Palmer, having your birth plan ready is especially important — it's a high-volume hospital where clear preferences help your care team support you in a busy environment. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "AdventHealth Orlando", paragraph: "AdventHealth Orlando, on Rollins Avenue in the Loch Haven neighborhood just north of downtown, is the flagship of the AdventHealth system in central Florida — and its maternity services include a NICU with neonatologists on staff (contact AdventHealth directly for current NICU level verification). AdventHealth Orlando handles a large volume of births and is the go-to hospital for families in the north Orlando, Winter Park, and Maitland corridors. If we're being real, Orlando's two biggest hospital systems — Orlando Health and AdventHealth — both have strong maternity programs, and most Orlando OBs deliver at one or the other based on their practice affiliation." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Orlando (ZIPs 32801-32837). Google Maps search "birth center Orlando FL" found no
+    // freestanding birth centers within the Orlando city limits. The nearest CABC-accredited
+    // birth center is About Women Birth Center in St. Petersburg (~90 min west).
+    // Verified 2026-05-26.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "As of 2026, Florida Medicaid does not cover doula services. Florida has not enacted legislation to add Medicaid doula coverage. Orlando-area families on Medicaid should check with their managed care plan (Staywell, Sunshine Health, Simply Healthcare, UnitedHealthcare Community Plan) about any maternal wellness benefits. Contact Florida Medicaid at 1-877-254-1055 or visit flmedicaidmanagedcare.com for current plan information.",
+    insuranceNote: "Orlando's employer market is one of the largest in Florida — Disney, Universal, AdventHealth, Lockheed Martin, and Darden all offer health plans that may include maternal wellness benefits. Check your specific plan for doula coverage, and whether HSA or FSA funds can help. Theme-park and hospitality employers sometimes have flexible benefits that cover doula services under wellness programs.",
+    faqs: [
+      { q: "How much does a doula cost in Orlando?", a: "$850 to $2,500 depending on experience and package. Orlando's larger doula community means more options and a broader price range, and some doulas offer package deals that include postpartum support." },
+      { q: "Does Medicaid cover doulas in Orlando?", a: "As of 2026, Florida Medicaid does not cover doula services. Florida has not enacted legislation to add Medicaid doula coverage. Contact Florida Medicaid at 1-877-254-1055 for the most current status." },
+      { q: "Which Orlando hospitals accommodate birth plans?", a: "Winnie Palmer Hospital for Women & Babies (Level III NICU, verified on winniepalmerhospital.com) and AdventHealth Orlando both offer labor and delivery and generally accommodate birth plans. Always confirm your hospital's current visitor and support-person policies during your tour." },
+      { q: "Does True Joy Birthing work with Orlando families?", a: "True Joy Birthing provides free birth-prep tools for Orlando families. The free birth plan, checklist, and guided walkthrough in the app work for any Orlando birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: ["jacksonville-fl", "tampa-fl"],
+  },
+  "denver-co": {
+    city: "Denver",
+    state: "CO",
+    slug: "denver-co",
+    costLow: 1000,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    culture: "Denver is Colorado's largest birth market and one of the most doula-friendly cities in the Mountain West — the state's Medicaid doula coverage (since January 2024 via HB 23-1027) has accelerated adoption, and the local birth community is organized around the Colorado Doula Project, Mountain Midwifery, and a strong network of birth centers. UCHealth and HealthOne (HCA Healthcare) split the hospital market, and families who know which system their OB delivers at have a real advantage in navigating Denver's sprawl.",
+    heroLocalDetail: "UCHealth University of Colorado Hospital is on the Anschutz Medical Campus in Aurora, about 20 minutes east of downtown via I-70 or Colfax Avenue — and during afternoon rush, I-70 between downtown and the medical campus backs up hard, so Hampden Avenue or MLK Boulevard can be faster. Saint Joseph Hospital is on Lafayette Street just east of downtown, about 5 minutes from City Park. Presbyterian/St. Luke's is at 20th and High Street in the City Park South neighborhood, adjacent to Saint Joe's within the CarePoint Health system. Washington Park's 2.5-mile outer loop and Cheesman Park's paved paths are where Denver moms walk in the third trimester — both are flat, shaded, and close to the major hospitals.",
+    hospitalDetails: [
+      { name: "UCHealth University of Colorado Hospital", paragraph: "UCHealth University of Colorado Hospital, on the Anschutz Medical Campus in Aurora, is the region's academic medical center and the highest-level NICU provider in the state — with a Level III NICU (verified on uchealth.org). It's where high-risk pregnancies from across Colorado are referred, with maternal-fetal medicine specialists and the full range of neonatal subspecialties. If you're delivering at UCHealth, having your birth plan ready helps you navigate a busy academic hospital that serves families from a huge catchment area. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Saint Joseph Hospital", paragraph: "Saint Joseph Hospital, on Lafayette Street just east of downtown Denver, is one of the city's oldest hospitals and a high-volume birthing center with a Level III NICU (contact the hospital directly for current level verification). Saint Joe's is known for its strong midwifery program and has long been a favorite among Denver doulas for its relatively supportive approach to birth plans and continuous labor support. If we're being real, Saint Joe's location in central Denver makes it the most accessible hospital for families in Capitol Hill, City Park, and the central neighborhoods." },
+      { name: "Presbyterian/St. Luke's Medical Center", paragraph: "Presbyterian/St. Luke's Medical Center (P/SL), at 20th and High Street in the City Park South neighborhood, is part of the CarePoint Health system and adjacent to Saint Joseph Hospital. P/SL offers labor and delivery with a NICU — contact the hospital directly for current NICU level verification. P/SL and Saint Joe's share a campus area near City Park, which means some OB practices deliver at both, so confirm which hospital your provider uses." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned one result for Denver —
+    // Mountain Midwifery Birth Center (5455 S Lima Ct, Englewood, CO 80111, just south of
+    // Denver). Google Maps also found Aurora Birth Center. Both are CABC-accredited.
+    birthCenterDetails: [
+      { name: "Mountain Midwifery Birth Center", paragraph: "Mountain Midwifery Birth Center, in Englewood just south of Denver, is a CABC-accredited freestanding birth center staffed by certified nurse-midwives. It's been serving Denver-area families for years and is the go-to birth center for families seeking an out-of-hospital birth in the metro. Mountain Midwifery also has a strong relationship with UCHealth for transfers, which matters if you're planning a birth center birth and want to know your backup hospital." },
+    ],
+    medicaidNote: "Yes — Colorado Medicaid now covers doula services as of January 2024 under HB 23-1027, including Health First Colorado (the state's Medicaid program) managed care plans in Denver County. The reimbursement rate is $750 per birth for a full-spectrum doula package (prenatal, labor, and postpartum visits). Contact Health First Colorado at 1-800-221-3943 or visit healthfirstcolorado.com to confirm your plan's doula coverage and find participating doulas.",
+    insuranceNote: "Colorado's Medicaid doula coverage (HB 23-1027, effective January 2024) is among the most progressive in the country — $750 per birth for full-spectrum doula services under Health First Colorado. For families with private insurance, Denver's employer market (DaVita, Liberty Global, Arrow Electronics, Quest Communications) increasingly includes maternal wellness benefits. Check your plan for doula coverage, and HSA/FSA funds can supplement out-of-pocket costs.",
+    faqs: [
+      { q: "How much does a doula cost in Denver?", a: "$1,000 to $3,000 depending on experience and package. Denver's doula community is large and well-established, with more price variation than smaller Colorado cities. With Colorado Medicaid now covering doula services at $750 per birth, some doulas offer sliding-scale packages that combine Medicaid reimbursement with private-pay arrangements." },
+      { q: "Does Medicaid cover doulas in Denver?", a: "Yes — Colorado Medicaid covers doula services as of January 2024 under HB 23-1027. The reimbursement rate is $750 per birth for a full-spectrum doula package. Contact Health First Colorado at 1-800-221-3943 or visit healthfirstcolorado.com to confirm your plan's doula coverage and find participating doulas." },
+      { q: "Which Denver hospitals accommodate birth plans?", a: "UCHealth University of Colorado Hospital (Level III NICU, verified), Saint Joseph Hospital (Level III NICU, contact for verification), and Presbyterian/St. Luke's Medical Center all offer labor and delivery. Denver also has Mountain Midwifery Birth Center in Englewood for families seeking an out-of-hospital birth. Always confirm your hospital's current visitor and support-person policies during your tour." },
+      { q: "Does True Joy Birthing work with Denver families?", a: "True Joy Birthing provides free birth-prep tools for Denver families. The free birth plan, checklist, and guided walkthrough in the app work for any Denver birth setting — hospital or birth center. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: [],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
