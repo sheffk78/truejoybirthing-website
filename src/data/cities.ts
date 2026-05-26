@@ -2141,6 +2141,97 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: [],
   },
+  "seattle-wa": {
+    city: "Seattle",
+    state: "WA",
+    slug: "seattle-wa",
+    costLow: 1500,
+    costHigh: 4500,
+    shelbiServesHere: false,
+    culture: "Seattle is a powerhouse of progressive birth culture, with one of the highest rates of midwifery and out-of-hospital birth in the nation. The city's doulas, birth photographers, and community groups form a tight-knit ecosystem, and organizations like Perinatal Support Washington push relentlessly for equity and access. From Capitol Hill to Ballard, expecting families have no shortage of holistic and collaborative care options.",
+    heroLocalDetail: "If you're giving birth in Seattle, your hospital experience likely centers on Pill Hill near Broadway and Jefferson, where UW Medical Center and Swedish First Hill sit blocks apart — or you might head to Ballard or Eastlake for a birth-center vibe. Interstate 5 can be brutal during rush hour, so factor commute time from neighborhoods like West Seattle or Beacon Hill carefully when choosing your birth location.",
+    hospitalDetails: [
+      { name: "UW Medical Center – University of Washington", paragraph: "The region's premier academic medical center with a Level IV NICU, offering high-risk maternal-fetal medicine and collaborative midwifery care. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Swedish Medical Center – First Hill", paragraph: "Seattle's busiest birth hospital with a Level III NICU, a dedicated midwifery program, and a longstanding reputation for comprehensive perinatal services." },
+      { name: "Virginia Mason Franciscan Health – St. Joseph's", paragraph: "Located in the Buckshaw neighborhood near downtown, St. Joseph's offers a Level III NICU alongside a full spectrum of maternal-fetal medicine." },
+      { name: "Overlake Medical Center & Clinics", paragraph: "Serving Bellevue and the Eastside, Overlake features a Level III NICU and a well-regarded midwifery practice integrated into its labor and delivery unit." },
+      { name: "Northwest Hospital – UW Medicine", paragraph: "A community hospital in north Seattle with a Level II NICU, offering a more intimate setting while backed by UW Medicine's full network." }
+    ],
+    birthCenterDetails: [
+      { name: "Center for Birth", paragraph: "A freestanding birth center in the Eastlake neighborhood staffed by certified nurse-midwives, offering water birth and a homelike setting minutes from Swedish's backup emergency services." },
+      { name: "South Seattle Birth Center", paragraph: "Located in the Rainier Beach area, this midwifery-led birth center serves south Seattle families with a focus on culturally responsive, community-centered care." }
+    ],
+    medicaidNote: "Washington Apple Health (Medicaid) covers doula services statewide. Doulas register with the Washington State Department of Health and bill through ProviderOne, with reimbursement of approximately $1,500 per birth package covering prenatal visits, labor support, and postpartum follow-up. Washington also extended postpartum Medicaid coverage to 12 months.",
+    insuranceNote: "Washington State law requires commercial plans to cover midwifery and birth center services. Most Blue Cross, Regence, Aetna, and Molina plans in Washington include birth-center and home-birth benefits, though out-of-network doula reimbursement varies by carrier and plan tier.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Seattle?", a: "Yes. Washington Apple Health (Medicaid) covers doula services. Doulas register with the state DOH and bill ProviderOne; the birth package reimburses roughly $1,500 for prenatal, labor, and postpartum visits combined." },
+      { q: "Which Seattle hospital has the highest-level NICU?", a: "UW Medical Center on Pill Hill operates a Level IV NICU — the highest level available — with 24/7 neonatologists and the region's most advanced maternal-fetal medicine specialists." },
+      { q: "Can I have a water birth in Seattle?", a: "Yes. The Center for Birth in Eastlake and South Seattle Birth Center both offer water birth, and Swedish First Hill's midwifery program provides water immersion for labor (though hospital water-birth policies vary)." },
+      { q: "What's the average cost of a doula in Seattle?", a: "Seattle doula fees typically range from $1,500 to $4,500, with most experienced birth doulas in the $2,000–$3,000 range. Postpartum doulas run $35–$65 per hour." },
+      { q: "Are birth centers in Seattle covered by insurance?", a: "Most Washington commercial plans and Medicaid cover licensed birth center births. Verify your specific plan's in-network status, as some centers are out-of-network with certain carriers." },
+      { q: "How long is the drive to a hospital from Seattle birth centers?", a: "The Center for Birth in Eastlake is approximately 5 minutes from Swedish First Hill by car. South Seattle Birth Center is roughly 15 minutes from Valley Medical Center in Renton, depending on I-5 traffic." }
+    ],
+    nearbyCities: ["spokane-wa", "tacoma-wa"],
+  },
+  "tacoma-wa": {
+    city: "Tacoma",
+    state: "WA",
+    slug: "tacoma-wa",
+    costLow: 1200,
+    costHigh: 3500,
+    shelbiServesHere: false,
+    culture: "Tacoma's birth community is growing and increasingly vocal, supported by grassroots networks of doulas and midwives committed to closing Pierce County's maternal health disparities. The city blends military families from Joint Base Lewis-McChord with a thriving arts-and-activism scene that centers reproductive justice. Local organizations like the Tacoma-Pierce County Health Department's perinatal programs work to connect families with equitable, culturally appropriate care.",
+    heroLocalDetail: "Most Tacoma families deliver at Tacoma General near Wright Park and 6th Avenue, or at St. Joseph's just up the hill on South J Street near Stadium District. If you're commuting from Puyallup or Lakewood, factor in SR-16 and I-5 interchange congestion — it can add 20+ minutes during afternoon rush, which matters when you're in active labor.",
+    hospitalDetails: [
+      { name: "Tacoma General Hospital – MultiCare", paragraph: "Pierce County's largest birth hospital with a Level III NICU and a full midwifery practice, serving roughly 4,000 deliveries per year. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "St. Joseph Medical Center – Virginia Mason Franciscan", paragraph: "A Level III NICU hospital on Tacoma's Hilltop offering maternal-fetal medicine, a collaborative midwifery program, and a redesigned family birth unit." },
+      { name: "Good Samaritan Hospital – MultiCare (Puyallup)", paragraph: "Located just east of Tacoma in Puyallup, Good Sam features a Level II NICU and a well-regarded midwifery-integrated birth unit." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Tacoma", paragraph: "NPI taxonomy 261QB0400X returned no active results for Tacoma, WA. Tacoma does not currently have a licensed freestanding birth center. The closest options are south Seattle's birth centers roughly 30 miles north, or home birth with a licensed midwife." }
+    ],
+    medicaidNote: "Washington Apple Health (Medicaid) covers doula services statewide, including Pierce County. Doulas must register with the Washington State Department of Health and bill through ProviderOne, with reimbursement of approximately $1,500 per birth package covering prenatal visits, labor support, and postpartum follow-up.",
+    insuranceNote: "Washington requires commercial insurance to cover midwifery and birth center care. Regence, Premera, Molina, and Aetna plans sold in Pierce County generally include these benefits, but doula reimbursement varies by plan tier and network status.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Tacoma?", a: "Yes. Apple Health covers doula services for Pierce County residents. Registered doulas bill ProviderOne, and the birth package reimburses approximately $1,500 for combined prenatal, labor, and postpartum support." },
+      { q: "What NICU level does Tacoma General have?", a: "Tacoma General has a Level III NICU capable of caring for babies born as early as 28 weeks, with 24/7 neonatal nurse practitioners and transfer protocols to UW's Level IV NICU in Seattle." },
+      { q: "Are there any freestanding birth centers in Tacoma?", a: "No. Tacoma does not have a licensed freestanding birth center. Families seeking a birth-center experience typically travel to Seattle's Center for Birth or arrange a home birth with a licensed midwife." },
+      { q: "What's the average cost of a doula in Tacoma?", a: "Tacoma doula fees generally range from $1,200 to $3,500, slightly lower than Seattle rates. Postpartum doulas typically charge $30–$50 per hour." },
+      { q: "Can I give birth at JBLM (Joint Base Lewis-McChord)?", a: "Madigan Army Medical Center at JBLM serves active-duty and TRICARE-eligible families with a Level III NICU and full obstetric services, including a midwifery program for eligible beneficiaries." },
+      { q: "How far is the drive to Seattle for a Level IV NICU?", a: "UW Medical Center's Level IV NICU is approximately 35 miles from downtown Tacoma, typically a 45–60 minute drive via I-5 — longer during peak commute times." }
+    ],
+    nearbyCities: ["seattle-wa", "spokane-wa"],
+  },
+  "sacramento-ca": {
+    city: "Sacramento",
+    state: "CA",
+    slug: "sacramento-ca",
+    costLow: 1500,
+    costHigh: 4000,
+    shelbiServesHere: false,
+    culture: "Sacramento's birth culture is shaped by the city's diversity and its role as California's policy hub, where Medi-Cal expansions and doula legislation are debated blocks from where families give birth. The region has a strong community of Latina and Black doulas addressing perinatal inequities, and midwifery is steadily gaining visibility despite California's historically tight birth-center licensing. From Oak Park to Natomas, Sacramento families are building more options than ever before.",
+    heroLocalDetail: "Sacramento's main birth hospitals cluster along Stockton Boulevard and J Street — UC Davis Health sits at the top of Stockton near Elmhurst, while Sutter Medical Center anchors midtown near 28th and Capitol Avenue. Families in Natomas or Elk Grove should map their route down I-5 or Highway 99 well in advance, as the Business 80/US-50 interchange near Cal Expo can back up severely during commute hours.",
+    hospitalDetails: [
+      { name: "UC Davis Medical Center", paragraph: "Sacramento's only Level IV NICU hospital, also home to the region's top maternal-fetal medicine program and a collaborative midwifery service that handles high-risk and low-risk deliveries alike. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Sutter Medical Center, Sacramento", paragraph: "Located in midtown with a Level III NICU, Sutter offers a well-established midwifery program, private birth suites, and a strong reputation for family-centered obstetric care." },
+      { name: "Mercy General Hospital – Dignity Health", paragraph: "A midtown Sacramento staple near Folsom Boulevard with a Level II NICU, known for its compassionate nursing staff and a smaller, more intimate labor-and-delivery floor." },
+      { name: "Kaiser Permanente Sacramento Medical Center", paragraph: "Situated on Morse Avenue south of Cal Expo, Kaiser Sacramento features a Level III NICU and full OB services, primarily serving Kaiser HMO members." }
+    ],
+    birthCenterDetails: [
+      { name: "No licensed birth centers in Sacramento", paragraph: "NPI taxonomy 261QB0400X returned no active results for Sacramento, CA. Sacramento does not currently have a licensed freestanding birth center. Families seeking birth-center care typically travel to the San Francisco Bay Area or arrange home births with California Licensed Midwives (CLMs)." }
+    ],
+    medicaidNote: "California's Medi-Cal covers doula services statewide as of January 2023 under SB-509. Reimbursement is approximately $1,587 per birth package, including prenatal visits, labor support, and postpartum visits. Doulas must enroll as Medi-Cal providers through the Department of Health Care Services (DHCS) and bill via the PAVE portal.",
+    insuranceNote: "California law (SB 332) requires most commercial plans to cover licensed midwife and birth center care. Covered California marketplace plans and large-group plans must include these benefits, though out-of-network doula reimbursement still varies widely by carrier and plan type.",
+    faqs: [
+      { q: "Does Medi-Cal cover doulas in Sacramento?", a: "Yes. Since January 2023, Medi-Cal covers doula services statewide under SB-509. The birth package reimburses roughly $1,587, and doulas enroll as Medi-Cal providers through DHCS's PAVE portal." },
+      { q: "Which Sacramento hospital has the highest-level NICU?", a: "UC Davis Medical Center on Stockton Boulevard operates the region's only Level IV NICU, providing the highest level of neonatal care and 24/7 neonatologist coverage." },
+      { q: "Are there any birth centers in Sacramento?", a: "No. Sacramento does not currently have a licensed freestanding birth center. Families can pursue home birth with a California Licensed Midwife (CLM) or travel to the Bay Area for birth-center options." },
+      { q: "What's the average cost of a doula in Sacramento?", a: "Sacramento doula fees typically range from $1,500 to $4,000 for a birth package, with most experienced doulas in the $2,000–$3,000 range. Medi-Cal covers doulas at no cost to eligible families." },
+      { q: "Does Kaiser Sacramento allow doulas?", a: "Yes. Kaiser Permanente Sacramento permits doulas in the labor and delivery room, though they are not employed by Kaiser. Families hire independent doulas; some Kaiser plans may offer partial reimbursement for out-of-network doula services." },
+      { q: "How long is the drive from Elk Grove to Sacramento hospitals?", a: "Elk Grove to UC Davis Medical Center is roughly 20 miles via Highway 99, typically 25–35 minutes outside rush hour but potentially 45–60 minutes during peak commute times on the 99 corridor." }
+    ],
+    nearbyCities: [],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
