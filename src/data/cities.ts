@@ -2324,6 +2324,93 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["san-diego-ca"],
   },
+  "portland-or": {
+    city: "Portland",
+    state: "OR",
+    slug: "portland-or",
+    costLow: 1500,
+    costHigh: 4500,
+    shelbiServesHere: false,
+    culture: "Portland is a birth-culture stronghold — home to one of the highest rates of out-of-hospital birth in the U.S. and a deep community of home-birth midwives, doulas, and birth photographers. The city's progressive, wellness-forward ethos means families routinely choose birth centers and home births, and hospitals here are accustomed to collaborative care models with community midwives.",
+    heroLocalDetail: "From the leafy streets of Sellwood-Moreland to the bustling corridors along SE Hawthorne Blvd and NE Alberta Street, Portland families have their pick of midwifery practices, birth centers, and hospital options — all within a quick drive across the Willamette River via the bridges that connect the east and west sides.",
+    hospitalDetails: [
+      { name: "OHSU Hospital", paragraph: "Oregon Health & Science University on Marquam Hill is the state's only Level IV NICU and the premier referral center for high-risk pregnancies and neonatal emergencies. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your OHSU delivery." },
+      { name: "Providence St. Vincent Medical Center", paragraph: "Providence St. Vincent in Beaverton offers a Level III NICU and a well-regarded maternity program with private labor suites and 24/7 OB and anesthesiology coverage." },
+      { name: "Legacy Emanuel Medical Center", paragraph: "Legacy Emanuel in Northeast Portland provides a Level III NICU alongside a family birth center known for supporting physiologic birth and midwifery-friendly protocols." }
+    ],
+    birthCenterDetails: [
+      { name: "Andaluz Birth Center", paragraph: "Andaluz Birth Center in the Tualatin area just south of Portland offers waterbirth, midwifery-led care, and a home-like freestanding birth center setting with transfer agreements to nearby hospitals." }
+    ],
+    medicaidNote: "Oregon Health Plan (OHP) covers doula services for Medicaid members. OHP reimburses doulas through Coordinated Care Organizations (CCOs) for prenatal visits, labor and delivery support, and postpartum care. Reimbursement rates vary by CCO — check with your CCO or the Oregon Health Authority for current fee schedules and enrollment requirements.",
+    insuranceNote: "Oregon requires coverage of midwifery services, and most major plans in Portland cover birth center and home-birth deliveries under licensed midwives. Verify out-of-network doula coverage with your specific plan.",
+    faqs: [
+      { q: "How much does a doula cost in Portland?", a: "Doula fees in Portland typically range from $1,500 to $4,500, with postpartum doulas often charging $35–$55 per hour. If you have OHP, doula services may be covered at no cost through your CCO." },
+      { q: "Does OHP cover birth center deliveries in Portland?", a: "Yes. Oregon Health Plan covers births at licensed birth centers staffed by certified nurse-midwives or licensed direct-entry midwives. Confirm that your chosen birth center is enrolled as an OHP provider." },
+      { q: "Which Portland hospital has the highest-level NICU?", a: "OHSU Hospital operates the only Level IV NICU in Oregon, making it the top referral destination for extremely premature or medically complex newborns." },
+      { q: "Can I have a waterbirth in Portland?", a: "Waterbirth is available at Andaluz Birth Center and through home birth midwives. OHSU and most Portland hospitals do not permit waterbirth in their labor tubs, though hydrotherapy for labor is widely supported." },
+      { q: "How do I find an OHP-covered doula in Portland?", a: "Search the Oregon Health Authority's provider directory or ask your CCO care coordinator for a list of enrolled doulas. Many Portland doulas are registering as OHP providers as the program expands." },
+      { q: "Is home birth legal in Oregon?", a: "Yes. Oregon licenses direct-entry midwives (LDMs) and certified nurse-midwives (CNMs) who attend home births. Home birth is a legally recognized, covered option under many insurance plans." }
+    ],
+    nearbyCities: ["seattle-wa", "eugene-or"],
+  },
+  "eugene-or": {
+    city: "Eugene",
+    state: "OR",
+    slug: "eugene-or",
+    costLow: 1000,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    culture: "Eugene's birth culture mirrors the city's laid-back, nature-oriented ethos — many families seek midwifery care, home births, and birth center options, and the local midwifery community is tight-knit and well-established. The University of Oregon influence brings younger families and progressive attitudes toward informed-choice, low-intervention birth.",
+    heroLocalDetail: "Nestled in the Willamette Valley along the banks of the Willamette River near Alton Baker Park, Eugene families often choose birth practices centered around the Friendly Street neighborhood and the South Willamette corridor, with easy access to both Sacred Heart and McKenzie-Willamette hospitals in neighboring Springfield.",
+    hospitalDetails: [
+      { name: "PeaceHealth Sacred Heart Medical Center at RiverBend", paragraph: "PeaceHealth Sacred Heart RiverBend in Springfield is the region's largest hospital and operates a Level III NICU, serving as the primary high-risk referral center for Lane County and southern Oregon. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to organize your preferences for a Sacred Heart delivery." },
+      { name: "McKenzie-Willamette Medical Center", paragraph: "McKenzie-Willamette in Springfield offers a Level II NICU, private labor and delivery suites, and a midwifery-friendly environment that supports low-intervention birth when clinically appropriate." }
+    ],
+    birthCenterDetails: [
+      { name: "Eugene Birth Center", paragraph: "Eugene Birth Center provides midwifery-led, out-of-hospital birth services in a freestanding setting, offering waterbirth and holistic prenatal and postpartum care to Eugene-area families." }
+    ],
+    medicaidNote: "Oregon Health Plan (OHP) covers doula services for Medicaid members in Eugene just as it does statewide. Doulas bill through Coordinated Care Organizations (CCOs) — Lane County's CCO is Trillium Community Health Plan. Contact Trillium or the Oregon Health Authority for enrollment and reimbursement details.",
+    insuranceNote: "Oregon law requires insurance coverage for licensed midwifery services, including birth center and home births. Most major carriers in the Eugene market cover CNM-attended hospital and birth center deliveries; verify your plan's coverage for out-of-hospital birth and doula services.",
+    faqs: [
+      { q: "How much does a doula cost in Eugene?", a: "Doula services in Eugene typically range from $1,000 to $3,000 for a full birth package. Postpartum doulas generally charge $30–$50 per hour. OHP members may receive doula care at no cost through Trillium Community Health Plan." },
+      { q: "Does Eugene have a birth center?", a: "Yes. The Eugene Birth Center offers freestanding, midwifery-led birth services including waterbirth. It is one of the few freestanding birth centers in the southern Willamette Valley." },
+      { q: "Which hospital in Eugene has a NICU?", a: "PeaceHealth Sacred Heart Medical Center at RiverBend has a Level III NICU, the highest level in the region. McKenzie-Willamette Medical Center operates a Level II NICU." },
+      { q: "Is waterbirth available in Eugene?", a: "Yes. Waterbirth is available at the Eugene Birth Center and through some home-birth midwives. The local hospitals generally offer hydrotherapy for labor but do not permit underwater delivery." },
+      { q: "Can I use OHP for a birth center delivery in Eugene?", a: "Yes. OHP covers births at licensed birth centers with enrolled providers. Confirm with Trillium Community Health Plan that the Eugene Birth Center is in-network." },
+      { q: "How far is Eugene from Portland for specialized care?", a: "Eugene is roughly 110 miles south of Portland — about a two-hour drive. Families with high-risk pregnancies requiring a Level IV NICU would be referred to OHSU in Portland." }
+    ],
+    nearbyCities: ["portland-or", "seattle-wa"],
+  },
+  "las-vegas-nv": {
+    city: "Las Vegas",
+    state: "NV",
+    slug: "las-vegas-nv",
+    costLow: 1200,
+    costHigh: 3500,
+    shelbiServesHere: false,
+    culture: "Las Vegas has a growing but still relatively small community of doulas and midwives compared to its population. The city's transient, fast-paced character means many families default to hospital birth, but a dedicated network of birth workers is steadily expanding out-of-hospital options and advocating for more choices in the valley.",
+    heroLocalDetail: "From the master-planned streets of Summerlin near Red Rock Canyon to the family-friendly neighborhoods of Henderson along Eastern Avenue, Las Vegas families navigate birth options across a sprawling desert metro with hospitals clustered along the US-95 and I-15 corridors. Traffic on the I-215 beltway can add significant time, so map your hospital route before week 36.",
+    hospitalDetails: [
+      { name: "Sunrise Hospital & Medical Center", paragraph: "Sunrise Hospital on Maryland Parkway operates a Level III NICU and is southern Nevada's largest and most established maternity center, handling the highest volume of deliveries in the Las Vegas Valley. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your Sunrise delivery." },
+      { name: "University Medical Center (UMC)", paragraph: "UMC near the medical district on Shadow Lane provides a Level III NICU and serves as the valley's safety-net hospital with a strong high-risk obstetrics program and 24/7 neonatal specialist coverage." },
+      { name: "Summerlin Hospital Medical Center", paragraph: "Summerlin Hospital in the Town Center Drive area offers a Level III NICU and modern maternity suites, serving the fast-growing Summerlin and west Las Vegas communities." },
+      { name: "Centennial Hills Hospital", paragraph: "Centennial Hills Hospital in the northwest valley has a Level II NICU and family-centered maternity care, a convenient option for families in the far-northwest suburbs." }
+    ],
+    birthCenterDetails: [
+      { name: "No freestanding birth centers in Las Vegas", paragraph: "NPI taxonomy 261QB0400X returned no active results for Las Vegas, NV. There are no freestanding birth centers in the Las Vegas Valley. Families seeking out-of-hospital birth work with home-birth midwives; the nearest birth center options are in Southern California." }
+    ],
+    medicaidNote: "Nevada Medicaid does not currently cover doula services as of 2025. Nevada has not enacted legislation to include doula reimbursement. Families on Nevada Medicaid must pay out of pocket for doula support, though some nonprofit programs offer no-cost or sliding-scale doula services in the Las Vegas area.",
+    insuranceNote: "Nevada's insurance market includes large employer and union plans (especially the Culinary Health Fund). Many of these plans cover midwifery and some doula-related services, but coverage varies — check with your specific plan. Nevada does not have a state mandate for doula insurance coverage.",
+    faqs: [
+      { q: "How much does a doula cost in Las Vegas?", a: "Birth doula packages in Las Vegas typically range from $1,200 to $3,500. Since Nevada Medicaid does not cover doulas, all families pay out of pocket unless their private insurance plan offers a benefit." },
+      { q: "Are there any birth centers in Las Vegas?", a: "No. There are currently no freestanding birth centers in the Las Vegas Valley. Families wanting a birth center experience would need to travel to Southern California or arrange a home birth with a licensed midwife." },
+      { q: "Does Nevada Medicaid cover doulas?", a: "No. As of 2025, Nevada Medicaid does not reimburse doula services. Advocacy efforts are underway, but there is no current legislative mandate for doula coverage." },
+      { q: "Which Las Vegas hospital has the best NICU?", a: "Sunrise Hospital, UMC, and Summerlin Hospital all operate Level III NICUs — the highest level available in the Las Vegas Valley. For Level IV NICU care, families would be transferred out of state." },
+      { q: "Is home birth legal in Nevada?", a: "Yes. Home birth with a licensed midwife is legal in Nevada. Certified professional midwives (CPMs) and certified nurse-midwives (CNMs) may attend home births, though the pool of attending midwives in Las Vegas is small." },
+      { q: "Does the Culinary Health Fund cover doula services?", a: "The Culinary Health Fund covers midwifery and hospital maternity care for its members, but doula coverage is not a standard benefit. Contact the fund directly to verify whether doula services can be reimbursed under your specific plan." }
+    ],
+    nearbyCities: ["sacramento-ca", "los-angeles-ca"],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
