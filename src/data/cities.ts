@@ -2055,6 +2055,92 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["denver-co"],
   },
+  "augusta-ga": {
+    city: "Augusta",
+    state: "GA",
+    slug: "augusta-ga",
+    costLow: 1200,
+    costHigh: 3500,
+    shelbiServesHere: false,
+    culture: "Augusta's birth community blends small-city Southern hospitality with the resources of a regional medical hub anchored by Augusta University. Doulas and midwives are active but the community is smaller than Atlanta's, making word-of-mouth referrals especially important.",
+    heroLocalDetail: "Most Augusta births happen at hospitals along the 15th Street medical corridor near Augusta University, with Piedmont Augusta on Harper Street serving as the other major option. Families in Evans and Martinez drive 15–20 minutes across the Savannah River to reach these facilities, while South Augusta families have quicker access via Gordon Highway (US 78).",
+    hospitalDetails: [
+      { name: "Piedmont Augusta Hospital", paragraph: "Piedmont Augusta (formerly University Hospital) is a Level III NICU facility and the most popular birth hospital in the Augusta area, delivering over 3,000 babies annually. It offers private labor suites and a dedicated maternity wing with 24/7 neonatology coverage. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Augusta University Medical Center", paragraph: "Augusta University Medical Center features a Level IV NICU — the highest level in the region — and serves as the referral center for high-risk pregnancies across the CSRA. Its academic setting means MFM specialists and maternal-fetal medicine research are on-site, making it the go-to for complex births." },
+      { name: "Doctors Hospital of Augusta", paragraph: "Doctors Hospital of Augusta provides labor and delivery services with a Level II NICU, serving families in western Augusta and Columbia County. It's known for a more intimate birth experience than the larger academic hospitals while still having neonatal support." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Augusta", paragraph: "NPI taxonomy 261QB0400X returned no active results for Augusta, GA. The closest freestanding birth centers are approximately 150 miles away in the Atlanta metro area (Intown Midwifery & Birth Center). Families seeking out-of-hospital birth should connect with local home birth midwives." }
+    ],
+    medicaidNote: "Georgia does not currently cover doula services through Medicaid. A doula coverage bill has been proposed in the Georgia legislature but has not been enacted as of 2025. Families using Medicaid in Augusta should explore community doula programs that offer sliding-scale fees or volunteer support.",
+    insuranceNote: "Georgia does not have a state mandate requiring commercial insurance to cover doula services. Some plans may include birth center or doula benefits — check with your specific provider. The closest pathway to covered doula care is through community programs.",
+    faqs: [
+      { q: "Does Augusta have any freestanding birth centers?", a: "No. Augusta currently has no freestanding birth centers. Families seeking out-of-hospital birth work with home birth midwives or travel approximately 150 miles to Atlanta-area birth centers." },
+      { q: "Which hospital in Augusta has the highest-level NICU?", a: "Augusta University Medical Center has a Level IV NICU, the highest in the region, making it the primary referral center for premature and high-risk infants." },
+      { q: "Does Georgia Medicaid pay for doula services in Augusta?", a: "No. Georgia Medicaid does not currently reimburse doula services. A coverage bill has been proposed but not enacted. Some community organizations offer free or low-cost doula support for Medicaid-eligible families." },
+      { q: "Are there midwife-led birth options in Augusta?", a: "Yes. Certified nurse-midwives practice at both Piedmont Augusta and Augusta University Medical Center, and home birth midwives serve the greater Augusta area." },
+      { q: "How far is the nearest birth center from Augusta?", a: "The nearest freestanding birth centers are approximately 150 miles away in the Atlanta metro area — roughly a 2.5-hour drive." },
+      { q: "What's the average cost of a doula in Augusta?", a: "Doulas in Augusta typically charge $1,200–$3,500, depending on experience and package. Since Georgia Medicaid doesn't cover doulas, community programs are the main pathway for low-cost support." }
+    ],
+    nearbyCities: ["atlanta-ga", "savannah-ga", "greenville-sc"],
+  },
+  "fort-collins-co": {
+    city: "Fort Collins",
+    state: "CO",
+    slug: "fort-collins-co",
+    costLow: 1400,
+    costHigh: 4000,
+    shelbiServesHere: false,
+    culture: "Fort Collins has a vibrant, progressive birth community shaped by its outdoorsy, wellness-oriented culture and proximity to Colorado State University. The city supports a strong network of doulas, lactation consultants, and midwives, with many families choosing birth center or home birth options alongside hospital delivery. Colorado's Medicaid doula coverage makes this one of the more affordable cities for supported birth.",
+    heroLocalDetail: "Most Fort Collins births happen at UCHealth Poudre Valley Hospital on Lemay Avenue or Banner Health's North Colorado Medical Center in Greeley about 15 minutes south via US-287. Families in Old Town and the west side have quick access to PVH, while those in the southeastern Harmony Road corridor may find the drive to Greeley equally convenient.",
+    hospitalDetails: [
+      { name: "UCHealth Poudre Valley Hospital", paragraph: "UCHealth Poudre Valley Hospital is Fort Collins' primary birth hospital, featuring a Level III NICU and delivering over 2,500 babies annually. It offers spacious labor and delivery suites, midwifery integration, and a family-centered approach with 24/7 neonatology coverage. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to organize your preferences for PVH." },
+      { name: "Banner North Colorado Medical Center (Greeley)", paragraph: "Located about 15 miles southeast in Greeley, Banner NCMC has a Level III NICU and serves as a secondary option for Fort Collins-area families, particularly those in the southeast part of the city. It provides full OB services and maternal-fetal medicine referrals." }
+    ],
+    birthCenterDetails: [
+      { name: "Avalon Birth & Wellness Center", paragraph: "Avalon Birth & Wellness Center in Fort Collins operates as a freestanding birth center offering out-of-hospital birth in a home-like setting with certified nurse-midwives. It is one of the few birth centers in northern Colorado and serves families from Fort Collins, Loveland, and the surrounding region." }
+    ],
+    medicaidNote: "Colorado Health First (Medicaid) covers doula services under HB 23-1027, effective January 2024. Colorado Medicaid reimburses doulas up to $750 per pregnancy ($150 prenatal, $150 labor/delivery, $150 postpartum, plus $300 in extended postpartum visits). Doulas must register with the state as Medicaid providers.",
+    insuranceNote: "Colorado is one of the few states where both Medicaid and some commercial insurers cover doula services. Colorado law also requires coverage for licensed midwife services at birth centers. Check your specific plan for doula and birth center benefits.",
+    faqs: [
+      { q: "Does Fort Collins have a freestanding birth center?", a: "Yes. Avalon Birth & Wellness Center operates as a freestanding birth center in Fort Collins, offering midwife-led births outside the hospital setting." },
+      { q: "Which hospital in Fort Collins has a NICU?", a: "UCHealth Poudre Valley Hospital has a Level III NICU, providing care for premature and critically ill newborns in the Fort Collins area." },
+      { q: "Does Colorado Medicaid cover doula services in Fort Collins?", a: "Yes. Colorado Medicaid (Health First Colorado) reimburses enrolled doulas for prenatal, labor, and postpartum support under HB 23-1027, with coverage up to $750 per pregnancy." },
+      { q: "How does altitude affect pregnancy in Fort Collins?", a: "At 4,976 feet, Fort Collins' altitude is moderate. Stay hydrated, discuss altitude concerns with your provider, and mention it in your birth plan. Most local providers are experienced with high-altitude prenatal care." },
+      { q: "Are there home birth midwives in Fort Collins?", a: "Yes. Several certified professional midwives (CPMs) and certified nurse-midwives (CNMs) offer home birth services, supported by Colorado's licensure for out-of-hospital birth providers." },
+      { q: "What's the average cost of a doula in Fort Collins?", a: "Doulas in Fort Collins typically charge $1,400–$4,000, with most around $2,200. Medicaid-covered doulas are available at no out-of-pocket cost to qualifying families." }
+    ],
+    nearbyCities: ["denver-co", "colorado-springs-co"],
+  },
+  "spokane-wa": {
+    city: "Spokane",
+    state: "WA",
+    slug: "spokane-wa",
+    costLow: 1300,
+    costHigh: 3800,
+    shelbiServesHere: false,
+    culture: "Spokane is the Inland Northwest's regional birth hub, with a tight-knit doula and midwife community that's smaller but deeply connected compared to Seattle. The city has a growing interest in evidence-based birth options and midwifery care, supported by organizations like the Inland Northwest Doula collective.",
+    heroLocalDetail: "Spokane's major birth hospitals cluster along the Maple Street and Division Street corridors — Providence Sacred Heart on West 8th Avenue and MultiCare Deaconess on West 5th Avenue are just minutes apart on the South Hill. Families in Spokane Valley and Liberty Lake drive about 15–20 minutes west via I-90 to reach these facilities.",
+    hospitalDetails: [
+      { name: "Providence Sacred Heart Medical Center", paragraph: "Providence Sacred Heart is Spokane's largest birth hospital and features a Level IV NICU — the highest in the Inland Northwest — making it the regional referral center for high-risk pregnancies and premature infants. It delivers over 4,000 babies annually and offers MFM specialists, midwifery options, and a dedicated birth center unit. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your Sacred Heart delivery." },
+      { name: "MultiCare Deaconess Hospital", paragraph: "MultiCare Deaconess Hospital provides labor and delivery services with a Level II NICU, serving families on Spokane's South Hill and surrounding areas. It offers comfortable private suites and a family-centered approach, with neonatology support for moderately complex births." },
+      { name: "Kootenai Health (Coeur d'Alene, ID)", paragraph: "Just across the Idaho border about 35 miles east via I-90, Kootenai Health in Coeur d'Alene has a Level III NICU and serves many Spokane-area families, especially those in the Spokane Valley and Liberty Lake corridor. Verify insurance coverage for out-of-state care before choosing this option." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Spokane", paragraph: "NPI taxonomy 261QB0400X returned no active results for Spokane, WA. There are no freestanding birth centers in Spokane. Families seeking birth center care typically work with home birth midwives, as the nearest birth centers are approximately 280 miles west in the Seattle metro area." }
+    ],
+    medicaidNote: "Washington Apple Health (Medicaid) covers doula services. Under state rules effective 2024, Washington Medicaid reimburses enrolled doulas for prenatal, labor, and postpartum support. Washington also extended postpartum Medicaid coverage to 12 months, and has some of the most robust doula Medicaid coverage in the nation.",
+    insuranceNote: "Washington State is among the most progressive for birth access — Medicaid covers doula care, and the state requires most insurance plans to cover midwifery and birth center services. Check your specific plan for doula benefits.",
+    faqs: [
+      { q: "Does Spokane have any freestanding birth centers?", a: "No. Spokane currently has no freestanding birth centers. Families interested in out-of-hospital birth typically hire home birth midwives, as the nearest birth centers are in the Seattle metro area, roughly 280 miles away." },
+      { q: "Which Spokane hospital has the highest-level NICU?", a: "Providence Sacred Heart Medical Center has a Level IV NICU, the highest level available, serving as the regional referral center for the Inland Northwest's most critically ill newborns." },
+      { q: "Does Washington Medicaid cover doula services in Spokane?", a: "Yes. Washington Apple Health (Medicaid) covers doula services statewide, including in Spokane. Doulas must be enrolled as Apple Health providers, and coverage includes prenatal, labor, and postpartum visits." },
+      { q: "Can I give birth at Kootenai Health if I live in Spokane?", a: "Yes, many Spokane-area families choose Kootenai Health in Coeur d'Alene, Idaho, about 35 miles east. It has a Level III NICU. Some Washington Medicaid plans may cover out-of-state care there, but verify coverage with your insurance first." },
+      { q: "Are there home birth midwives in Spokane?", a: "Yes. Spokane has several licensed midwives (LMs and CPMs) offering home birth services, supported by Washington State's licensure framework for out-of-hospital birth providers." },
+      { q: "What's the average cost of a doula in Spokane?", a: "Doulas in Spokane typically charge $1,300–$3,800, with most packages averaging around $2,000. Medicaid-covered doulas are available at no cost to qualifying families through Apple Health." }
+    ],
+    nearbyCities: [],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
