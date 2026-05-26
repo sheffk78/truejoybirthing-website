@@ -2590,6 +2590,93 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["chicago-il"],
   },
+  "newark-nj": {
+    city: "Newark",
+    state: "NJ",
+    slug: "newark-nj",
+    costLow: 1200,
+    costHigh: 4000,
+    shelbiServesHere: false,
+    culture: "Newark's birth culture is deeply rooted in its Black and Latinx communities, where maternal health advocacy has grown significantly in recent years. Grassroots organizations and community doulas work to address stark racial disparities in maternal outcomes across Essex County, while the city's proximity to NYC academic medical centers gives families additional options.",
+    heroLocalDetail: "From the brownstones along Clinton Avenue to the revitalized streets around Broad Street and Military Park, Newark families navigate a city where historic neighborhoods meet a growing healthcare corridor. University Heights and the area surrounding Rutgers-Newark anchor the city's medical and academic community.",
+    hospitalDetails: [
+      { name: "Newark Beth Israel Medical Center", paragraph: "Newark Beth Israel Medical Center is a major teaching hospital with a Level III NICU, providing high-risk neonatal care and a full range of maternal-fetal medicine services. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "University Hospital (Rutgers NJMS)", paragraph: "University Hospital, affiliated with Rutgers New Jersey Medical School, features a Level III NICU and serves as a regional perinatal center with specialized maternal-fetal medicine and high-risk obstetric care." },
+      { name: "Saint Michael's Medical Center", paragraph: "Saint Michael's Medical Center offers maternity services with a Level II NICU and serves the Newark community with a focus on family-centered obstetric care." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Newark", paragraph: "There are currently no licensed freestanding birth centers operating within Newark city limits. Families seeking out-of-hospital birth center care typically travel to nearby communities in northern New Jersey or New York City." }
+    ],
+    medicaidNote: "New Jersey Medicaid covers doula services as of 2024 through the NJ DMAS (Doula Medicaid Access Study), reimbursing approximately $1,540 per pregnancy for doula support including prenatal, labor, and postpartum visits.",
+    insuranceNote: "Under New Jersey's insurance regulations, most private insurers are required to cover maternity care including lactation support. Check with your specific plan for doula coverage, as NJ has been expanding access through state-level maternal health legislation.",
+    faqs: [
+      { q: "How much does a doula cost in Newark, NJ?", a: "Doula services in Newark typically range from $1,200 to $4,000, depending on experience level and package inclusions. Some doulas offer sliding-scale fees to increase accessibility." },
+      { q: "Does New Jersey Medicaid cover doula services?", a: "Yes. As of 2024, New Jersey Medicaid covers doula services through the NJ DMAS program, reimbursing approximately $1,540 per pregnancy. Contact your managed care organization for details on finding a Medicaid-enrolled doula." },
+      { q: "What hospitals in Newark have the highest level NICU?", a: "Newark Beth Israel Medical Center and University Hospital both have Level III NICUs, providing the highest level of specialized neonatal care available in the city." },
+      { q: "Are there birth centers in Newark?", a: "There are currently no licensed freestanding birth centers in Newark. Families interested in birth center deliveries may need to travel to facilities in other parts of northern New Jersey or New York City." },
+      { q: "How do I find a Black doula in Newark?", a: "Newark has a strong network of Black doulas and community-based organizations focused on Black maternal health. Organizations like the Sankofa Birth Workers Collective serve Essex County families with culturally centered care." },
+      { q: "What postpartum resources are available in Newark?", a: "Newark offers postpartum support through community health centers, lactation consultants at Newark Beth Israel and University Hospital, WIC offices along Broad Street, and local parenting groups. New Jersey extends Medicaid postpartum coverage to 12 months." }
+    ],
+    nearbyCities: ["new-york-ny"],
+  },
+  "virginia-beach-va": {
+    city: "Virginia Beach",
+    state: "VA",
+    slug: "virginia-beach-va",
+    costLow: 1000,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    culture: "Virginia Beach's birth culture blends military-family practicality with a growing natural birth community shaped by the city's coastal lifestyle. With a large active-duty military population, many families navigate TRICARE benefits alongside local birth support options. The broader Hampton Roads area has seen a rise in community doulas addressing maternal health disparities.",
+    heroLocalDetail: "From the bustling corridor along Virginia Beach Boulevard to the oceanfront neighborhoods near the Boardwalk and Atlantic Avenue, families in Virginia Beach live where suburban sprawl meets coastal charm. The Hilltop area near Laskin Road and the growing Town Center district provide healthcare access and community gathering spots for new parents.",
+    hospitalDetails: [
+      { name: "Sentara Virginia Beach General Hospital", paragraph: "Sentara Virginia Beach General Hospital is the city's primary maternity hospital with a Level III NICU and comprehensive maternal-fetal medicine services for high-risk pregnancies. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Sentara Princess Anne Hospital", paragraph: "Sentara Princess Anne Hospital offers labor and delivery services with a Level II NICU and serves families in the southern Virginia Beach area near the Pungo and Sandbridge communities." },
+      { name: "Naval Medical Center Portsmouth", paragraph: "Naval Medical Center Portsmouth, located just across the water, serves active-duty military families with a Level III NICU and serves as the primary military treatment facility for the Hampton Roads region." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Virginia Beach", paragraph: "There are currently no licensed freestanding birth centers operating within Virginia Beach. Families seeking birth center care may explore home birth options with certified professional midwives." }
+    ],
+    medicaidNote: "Virginia Medicaid covers doula services as of 2023, reimbursing approximately $1,500 per pregnancy through managed care organizations. Doulas must enroll as Virginia Medicaid providers to receive reimbursement for prenatal, intrapartum, and postpartum support.",
+    insuranceNote: "Virginia's Medicaid expansion and state insurance regulations have improved maternity coverage access. TRICARE covers hospital births and some home birth scenarios for military families. Private insurance doula coverage varies by plan — contact your insurer directly.",
+    faqs: [
+      { q: "How much does a doula cost in Virginia Beach?", a: "Doula services in Virginia Beach typically range from $1,000 to $3,000, reflecting the Hampton Roads cost of living. Some doulas offer military family discounts given the area's large active-duty population." },
+      { q: "Does Virginia Medicaid cover doula services?", a: "Yes. Virginia Medicaid has covered doula services since 2023, reimbursing approximately $1,500 per pregnancy through managed care organizations. Contact your MCO for a list of enrolled doulas in the Hampton Roads area." },
+      { q: "Does TRICARE cover doulas in Virginia Beach?", a: "TRICARE does not directly cover doula services, but doulas can support military families during TRICARE-covered hospital births. Many Virginia Beach doulas offer military discounts or payment plans." },
+      { q: "What hospitals in Virginia Beach have the highest level NICU?", a: "Sentara Virginia Beach General Hospital has a Level III NICU, the highest neonatal care level available in the city. Naval Medical Center Portsmouth also has a Level III NICU serving military families." },
+      { q: "Are there birth centers in Virginia Beach?", a: "There are currently no licensed freestanding birth centers in Virginia Beach. Families interested in out-of-hospital birth may explore home birth with certified professional midwives." },
+      { q: "What postpartum support is available for military families in Virginia Beach?", a: "Military families have access to Fleet and Family Support programs, New Parent Support Program home visitors, and TRICARE-covered lactation consultants. Community-based groups and local doulas also provide culturally responsive postpartum care." }
+    ],
+    nearbyCities: ["new-york-ny", "chicago-il"],
+  },
+  "nashville-tn": {
+    city: "Nashville",
+    state: "TN",
+    slug: "nashville-tn",
+    costLow: 1200,
+    costHigh: 3500,
+    shelbiServesHere: false,
+    culture: "Nashville's birth culture is evolving alongside its booming population, with a growing community of doulas, midwives, and birth advocates working to address significant racial disparities in maternal health outcomes across Middle Tennessee. While the city is home to world-class medical institutions, grassroots organizations are pushing for more culturally centered, community-based birth support.",
+    heroLocalDetail: "From the historic streets of North Nashville near Jefferson Street to the bustling Medical District along 21st Avenue South and the 12 South neighborhood popular with young families, Nashville blends Southern heritage with rapid growth. Vanderbilt University Medical Center anchors the West End healthcare corridor, while community health centers serve neighborhoods across Davidson County.",
+    hospitalDetails: [
+      { name: "Vanderbilt University Medical Center", paragraph: "Vanderbilt University Medical Center is a nationally ranked academic hospital with a Level IV NICU — the highest level of neonatal care — providing comprehensive maternal-fetal medicine and specialized high-risk obstetric services. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Ascension Saint Thomas Midtown Hospital", paragraph: "Ascension Saint Thomas Midtown Hospital is one of Nashville's busiest maternity hospitals with a Level III NICU, delivering thousands of babies annually and serving as a key provider in the Middle Tennessee region." },
+      { name: "TriStar Centennial Medical Center", paragraph: "TriStar Centennial Medical Center offers labor and delivery services with a Level III NICU and serves families across the Nashville metro area with a full range of obstetric and neonatal care." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Nashville", paragraph: "There are currently no licensed freestanding birth centers operating within Nashville. Tennessee's regulatory landscape for birth centers has been a barrier. Families seeking out-of-hospital birth typically work with home birth midwives serving the Middle Tennessee area." }
+    ],
+    medicaidNote: "Tennessee does NOT cover doula services through Medicaid (TennCare) as of 2025. While neighboring states have implemented Medicaid doula coverage, Tennessee has not yet enacted similar legislation, leaving low-income families to seek sliding-scale or volunteer doula options.",
+    insuranceNote: "Private insurance doula coverage in Tennessee varies significantly by plan and insurer. Tennessee has not mandated doula coverage for private plans. Contact your insurance provider directly to ask about reimbursement for doula services or out-of-network benefits.",
+    faqs: [
+      { q: "How much does a doula cost in Nashville?", a: "Doula services in Nashville typically range from $1,200 to $3,500, reflecting the city's growing market and increasing demand for birth support. Some doulas offer sliding-scale fees or payment plans." },
+      { q: "Does Tennessee Medicaid cover doula services?", a: "No. As of 2025, Tennessee Medicaid (TennCare) does not cover doula services. Advocacy groups continue to push for legislative change. Some community-based doulas offer sliding-scale or pro bono services for families with limited resources." },
+      { q: "What hospitals in Nashville have the highest level NICU?", a: "Vanderbilt University Medical Center has a Level IV NICU, the highest level available. Ascension Saint Thomas Midtown and TriStar Centennial both have Level III NICUs." },
+      { q: "Are there birth centers in Nashville?", a: "There are currently no licensed freestanding birth centers in Nashville. Tennessee's regulatory environment has made it difficult for birth centers to operate. Families seeking out-of-hospital birth typically hire certified professional midwives for home birth." },
+      { q: "How do I find a doula of color in Nashville?", a: "Nashville has a growing network of doulas of color serving communities across Middle Tennessee. Organizations like the Nashville Birth Collective can connect families with culturally responsive doulas." },
+      { q: "What postpartum resources are available in Nashville?", a: "Nashville offers postpartum support through Vanderbilt's lactation consultants, community health centers across Davidson County, WIC offices, and local parenting groups. Tennessee extends Medicaid postpartum coverage, though doula services are not included under current policy." }
+    ],
+    nearbyCities: ["atlanta-ga", "chicago-il"],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
