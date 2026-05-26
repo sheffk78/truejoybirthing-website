@@ -2411,6 +2411,95 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["sacramento-ca", "los-angeles-ca"],
   },
+  "minneapolis-mn": {
+    city: "Minneapolis",
+    state: "MN",
+    slug: "minneapolis-mn",
+    costLow: 1500,
+    costHigh: 4000,
+    shelbiServesHere: false,
+    culture: "Minneapolis has one of the most progressive birth-work communities in the country, with strong collaborative networks among doulas, midwives, and obstetricians. The city's legacy of maternal-health advocacy — rooted in both its Scandinavian welfare traditions and its powerful BIPOC birth-justice organizations — makes it a place where families can find genuinely informed, supportive care across the spectrum from hospital to home birth.",
+    heroLocalDetail: "Minneapolis families travel easy I-35W or Hiawatha Avenue corridors to reach the city's cluster of major hospital campuses near Downtown East and the Philips neighborhood, while families in Uptown and Southwest Minneapolis access birth centers and midwifery practices along the Greenway trail and Hennepin Avenue corridors.",
+    hospitalDetails: [
+      { name: "Abbott Northwestern Hospital", paragraph: "Abbott Northwestern is Minneapolis's largest birth hospital, delivering over 5,000 babies annually with a Level III NICU and a dedicated midwifery program through the Minnesota Birth Center partnership. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "HCMC (Hennepin Healthcare)", paragraph: "Hennepin Healthcare in downtown Minneapolis operates a Level III NICU and serves as the region's safety-net hospital, offering robust OB services with a focus on high-risk pregnancies and community-centered care." },
+      { name: "M Health Fairview University of Minnesota Medical Center", paragraph: "M Health Fairview offers a Level IV NICU — the highest level in the state — alongside its maternal-fetal medicine specialists, making it the referral center for the most complex neonatal cases." },
+      { name: "North Memorial Health Hospital", paragraph: "North Memorial Health in Robbinsdale just northwest of Minneapolis features a Level III NICU and a family birth center known for its private suites and 24/7 in-house OB and anesthesia coverage." }
+    ],
+    birthCenterDetails: [
+      { name: "Minnesota Birth Center", paragraph: "Minnesota Birth Center is a CABC-accredited freestanding birth center with its Minneapolis location in the Phillips neighborhood, offering water birth, midwifery-led care, and seamless hospital transfer partnerships." }
+    ],
+    medicaidNote: "Minnesota Medicaid (Medical Assistance) covers doula services. Effective January 2024, MN DHS reimburses certified doulas up to $1,700 per pregnancy ($425 prenatal, $425 labor/delivery, $425 postpartum, $425 additional visits). Doulas must be listed on the Minnesota Doula Registry to bill Medical Assistance or MinnesotaCare.",
+    insuranceNote: "Minnesota law requires most private insurers to cover midwifery services, and many major carriers (Blue Cross, HealthPartners, UCare) include doula benefits or offer flex-spending reimbursement. Always verify your specific plan's out-of-network doula coverage.",
+    faqs: [
+      { q: "How much does a doula cost in Minneapolis?", a: "Doula services in Minneapolis typically range from $1,500 to $4,000. Many Minneapolis doulas offer sliding-scale fees, and Minnesota Medicaid covers certified doulas at no cost to eligible families." },
+      { q: "Does Minnesota Medicaid pay for doulas?", a: "Yes. Minnesota's Medical Assistance and MinnesotaCare programs reimburse certified doulas up to $1,700 per pregnancy. Your doula must be registered with the MN Doula Registry." },
+      { q: "What is the best hospital for giving birth in Minneapolis?", a: "Abbott Northwestern delivers the most babies and has a Level III NICU with an in-house midwifery option, while M Health Fairview has a Level IV NICU for high-risk pregnancies. Your best fit depends on your risk level and preferences." },
+      { q: "Are there freestanding birth centers in Minneapolis?", a: "Yes. Minnesota Birth Center in the Phillips neighborhood is CABC-accredited and offers water birth and midwifery-led care." },
+      { q: "Can I have a water birth in Minneapolis?", a: "Yes. Minnesota Birth Center offers water birth in freestanding tubs, and Abbott Northwestern's midwifery program supports water immersion during labor. Some families also hire home-birth midwives who bring portable birth tubs." },
+      { q: "Do Minneapolis hospitals allow doulas in the delivery room?", a: "Yes. All major Minneapolis hospitals welcome doulas. Post-COVID restrictions have fully lifted so doulas are allowed without visitor limits." }
+    ],
+    nearbyCities: ["st-paul-mn"],
+  },
+  "st-paul-mn": {
+    city: "St. Paul",
+    state: "MN",
+    slug: "st-paul-mn",
+    costLow: 1200,
+    costHigh: 3500,
+    shelbiServesHere: false,
+    culture: "St. Paul's birth community blends the same Minnesota progressive values as its twin across the river but with a quieter, more intimate feel — smaller hospital campuses, tight-knit midwifery practices, and a strong Hmong and East African maternal health network that has shaped culturally responsive care models. Families here often describe a 'small-town within a big-city' experience when navigating birth options.",
+    heroLocalDetail: "St. Paul families navigate birth from Grand Avenue's canopy of oaks to the compact medical campus near Regions Hospital and the State Capitol grounds. The birth-friendly community stretches from Cathedral Hill out to the suburban edges along I-94 and Highway 61, with Minneapolis options just 10 minutes west across the river.",
+    hospitalDetails: [
+      { name: "Regions Hospital", paragraph: "Regions Hospital in downtown St. Paul is the city's primary birth hospital, featuring a Level III NICU, private labor-delivery-recovery suites, and a midwifery practice. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to organize your preferences before arrival." },
+      { name: "M Health Fairview St. John's Hospital", paragraph: "St. John's Hospital in Maplewood just east of St. Paul offers a Level III NICU with a family birth center known for supportive nursing staff and comfortable private rooms." },
+      { name: "United Hospital (Allina Health)", paragraph: "United Hospital on the bluff overlooking the Mississippi in downtown St. Paul operates a birth center with a Level II NICU and strong midwifery collaboration through Allina Health's integrated OB network." }
+    ],
+    birthCenterDetails: [
+      { name: "Minnesota Birth Center – St. Paul", paragraph: "Minnesota Birth Center opened a St. Paul location offering the same CABC-accredited midwifery-led care, with water birth options and a warm, home-like setting." }
+    ],
+    medicaidNote: "Minnesota Medicaid (Medical Assistance) covers doula services statewide. Effective January 2024, MN DHS reimburses certified doulas up to $1,700 per pregnancy. St. Paul families access the same MN Doula Registry and reimbursement schedule as the rest of the state.",
+    insuranceNote: "St. Paul families insured through HealthPartners, Blue Cross Blue Shield of Minnesota, or Medica generally find strong midwifery coverage. Minnesota law mandates private-plan coverage of licensed midwifery, though doula coverage varies by plan — check your specific benefits.",
+    faqs: [
+      { q: "How much does a doula cost in St. Paul?", a: "Doula services in St. Paul typically range from $1,200 to $3,500. Many St. Paul doulas are slightly less expensive than their Minneapolis counterparts, and Minnesota Medicaid covers certified doulas at no cost to eligible families." },
+      { q: "Is St. Paul a good city for a birth center delivery?", a: "Yes. Minnesota Birth Center's St. Paul location offers CABC-accredited, midwifery-led birth center care with water birth tubs. Minneapolis birth center options are also just 10 minutes away." },
+      { q: "What NICU level does Regions Hospital have?", a: "Regions Hospital has a Level III NICU, the highest level available in St. Paul, capable of caring for babies born as early as 28 weeks." },
+      { q: "Are there Hmong-speaking doulas in St. Paul?", a: "Yes. St. Paul is home to one of the largest Hmong populations in the U.S., and culturally specific doula collectives offer Hmong-language birth support and postpartum care traditions." },
+      { q: "Can I use Medicaid for a birth center in St. Paul?", a: "Yes. Minnesota Medical Assistance covers birth center births at licensed facilities like Minnesota Birth Center. Your midwife and facility must be enrolled Minnesota Health Care Program providers." },
+      { q: "How far is Minneapolis from St. Paul for birth services?", a: "Downtown St. Paul to downtown Minneapolis is about 10 miles via I-94 — roughly a 15-minute drive. Many families use both cities' birth options since they share one connected metro birth community." }
+    ],
+    nearbyCities: ["minneapolis-mn"],
+  },
+  "phoenix-az": {
+    city: "Phoenix",
+    state: "AZ",
+    slug: "phoenix-az",
+    costLow: 1200,
+    costHigh: 3500,
+    shelbiServesHere: false,
+    culture: "Phoenix's birth culture is shaped by its sprawling valley geography and a growing community of Latinx, Indigenous, and Black birth workers advocating for culturally congruent care in a state where out-of-hospital birth options are expanding but remain fewer per capita than in progressive northern states. The Valley's warm-weather lifestyle and large transplanted population create a diverse client base seeking everything from traditional hospital births to home births guided by partera traditions.",
+    heroLocalDetail: "Phoenix families navigate a vast metro spread along the Loop 101 and I-10, with birth resources concentrated in the Central Phoenix and Scottsdale medical districts near Camelback Road and Indian School Road. The Camelback Mountain silhouette marks the geographic center of the Valley's birth corridor, with hospitals clustering along Central Avenue north of downtown.",
+    hospitalDetails: [
+      { name: "Banner University Medical Center Phoenix", paragraph: "Banner University Medical Center Phoenix is the Valley's academic medical center with a Level IV NICU — the highest available — as well as maternal-fetal medicine specialists and a high-risk pregnancy program. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to coordinate your care team here." },
+      { name: "St. Joseph's Hospital and Medical Center (Dignity Health)", paragraph: "St. Joseph's in central Phoenix features a Level III NICU and one of the busiest OB departments in Arizona, with a long-standing midwifery collaboration and a reputation for high-volume, high-quality birth care." },
+      { name: "Phoenix Children's Hospital", paragraph: "Phoenix Children's Hospital operates the state's largest Level IV NICU and serves as the regional referral center for the most critically ill newborns, working in partnership with nearby maternal-fetal medicine programs." },
+      { name: "HonorHealth Scottsdale Shea Medical Center", paragraph: "HonorHealth Shea in Scottsdale offers a Level III NICU with a family birth center known for private suites, comfortable amenities, and strong lactation support in the northeast Valley." }
+    ],
+    birthCenterDetails: [
+      { name: "Natural Birth Center & Women's Wellness", paragraph: "The Natural Birth Center & Women's Wellness in Mesa is one of the few freestanding birth centers in the Phoenix metro area, offering midwifery-led birth, water birth, and holistic prenatal care." }
+    ],
+    medicaidNote: "Arizona does not currently cover doula services through its Medicaid program (AHCCCS) as of 2025. While advocacy efforts have pushed for doula reimbursement, AHCCCS has not yet implemented a doula benefit. Arizona families on Medicaid must pay out of pocket for doula support or seek volunteer/sliding-scale doulas.",
+    insuranceNote: "Arizona private insurers are not required to cover doula services, though some plans offer partial reimbursement or flex-spending eligibility. Arizona does mandate coverage for licensed midwives and birth center births under certain plans, but coverage varies widely — verify with your insurer directly.",
+    faqs: [
+      { q: "How much does a doula cost in Phoenix?", a: "Doula services in Phoenix typically range from $1,200 to $3,500. Since Arizona Medicaid does not cover doulas, some Phoenix doulas offer sliding-scale or community-based packages to improve access." },
+      { q: "Does Arizona Medicaid cover doula services?", a: "No. As of 2025, Arizona's AHCCCS (Medicaid) program does not include a doula benefit. Advocacy organizations continue to push for legislation, but for now Arizona families on Medicaid must pay out of pocket or seek volunteer doulas." },
+      { q: "Are there birth centers in Phoenix?", a: "Yes, but options are limited. Natural Birth Center & Women's Wellness in Mesa is one of the few freestanding birth centers in the Phoenix metro area. Many families seeking out-of-hospital birth work with home-birth midwives instead." },
+      { q: "What is the best hospital for giving birth in Phoenix?", a: "Banner University Medical Center Phoenix offers a Level IV NICU, making it ideal for high-risk pregnancies. St. Joseph's Hospital in central Phoenix also has an excellent Level III NICU and a strong midwifery collaboration." },
+      { q: "Can I have a water birth in Phoenix?", a: "Water birth is available at freestanding birth centers like Natural Birth Center & Women's Wellness. Most Phoenix hospitals allow water immersion during labor but not water birth itself — check your hospital's current policy." },
+      { q: "Are there Spanish-speaking doulas in Phoenix?", a: "Yes. Phoenix's large Latinx community means many doulas offer services in Spanish, and organizations like Arizona Birth Workers of Color connect Spanish-speaking families with culturally responsive birth support including partera-informed care." }
+    ],
+    nearbyCities: ["las-vegas-nv"],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
