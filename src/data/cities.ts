@@ -2232,6 +2232,98 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: [],
   },
+  "san-diego-ca": {
+    city: "San Diego",
+    state: "CA",
+    slug: "san-diego-ca",
+    costLow: 1500,
+    costHigh: 4500,
+    shelbiServesHere: false,
+    culture: "San Diego's birth community thrives with a strong network of doulas, midwives, and lactation consultants who embrace the region's outdoor, wellness-oriented lifestyle. Home birth and birth center options are well-established, supported by active organizations like the San Diego Birth Network. The city's diverse population means culturally centered care is available, with Spanish-speaking doulas and providers particularly prominent.",
+    heroLocalDetail: "San Diego families navigating birth often coordinate between Hillcrest-area hospitals like UCSD Jacobs Medical Center and the birth centers clustered in Normal Heights and North Park. Traffic along the I-805 and SR-163 corridors can add 20+ minutes to hospital runs from inland communities like Rancho Penasquitos or Chula Vista, so proximity planning along the Friars Road and Mission Valley routes matters for labor-day logistics.",
+    hospitalDetails: [
+      { name: "UCSD Jacobs Medical Center", paragraph: "UCSD Jacobs Medical Center in La Jolla features a Level IV NICU — the highest level of neonatal care — and is San Diego's premier academic medical center for high-risk pregnancies. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Sharp Mary Birch Hospital for Women & Newborns", paragraph: "Sharp Mary Birch in Santee is one of the largest freestanding women's hospitals in the nation, with a Level III NICU and over 17,000 births annually, offering specialized maternal-fetal medicine." },
+      { name: "Scripps Mercy Hospital San Diego", paragraph: "Scripps Mercy Hospital in Hillcrest provides a Level III NICU and serves as a major teaching hospital with comprehensive obstetric and neonatal services in central San Diego." },
+      { name: "Palomar Medical Center Escondido", paragraph: "Palomar Medical Center in Escondido offers a Level II NICU with family-centered maternity care serving North County Inland families." }
+    ],
+    birthCenterDetails: [
+      { name: "San Diego Birth Center", paragraph: "The San Diego Birth Center in Normal Heights is a CABC-accredited freestanding birth center staffed by certified nurse-midwives offering water birth, VBAC, and holistic prenatal care in a home-like setting." },
+      { name: "Best Start Birth Center", paragraph: "Best Start Birth Center in Kearny Mesa provides midwife-led birth services including water birth with transfer agreements to nearby hospitals." }
+    ],
+    medicaidNote: "California Medi-Cal covers doula services under SB-509, with a birth package reimbursement of approximately $1,587. Doulas must enroll through the PAVE portal to bill Medi-Cal directly. Contact your managed care plan (Community Health Group, Health Net, or Blue Shield Promise) for referral details.",
+    insuranceNote: "Under California SB 332, commercial health plans are required to cover doula services and midwifery care. Check with your insurer for in-network doula providers and prior authorization requirements.",
+    faqs: [
+      { q: "Can I get a free doula through Medi-Cal in San Diego?", a: "Yes. Medi-Cal covers doula services under SB-509 at approximately $1,587 for the full birth package. Enrolled doulas bill through the PAVE portal — ask your Medi-Cal managed care plan for a referral list." },
+      { q: "Which San Diego hospitals have the highest-level NICU?", a: "UCSD Jacobs Medical Center in La Jolla has a Level IV NICU, the highest designation in California, capable of caring for the most complex and premature newborns." },
+      { q: "Are there freestanding birth centers in San Diego?", a: "Yes. San Diego Birth Center in Normal Heights and Best Start Birth Center in Kearny Mesa both offer out-of-hospital birth with certified nurse-midwives, water birth options, and hospital transfer agreements." },
+      { q: "How much does a doula cost in San Diego without insurance?", a: "Out-of-pocket doula fees in San Diego typically range from $1,500 to $4,500, depending on experience level and package inclusions." },
+      { q: "Does Sharp Mary Birch support VBAC deliveries?", a: "Yes. Sharp Mary Birch Hospital for Women & Newborns supports VBAC (Vaginal Birth After Cesarean) with their maternal-fetal medicine team, though eligibility depends on your specific clinical situation." },
+      { q: "What if I live in North County — which hospital is closest?", a: "Palomar Medical Center in Escondido (Level II NICU) and Tri-City Medical Center in Oceanside serve North County families. For a Level III or IV NICU, the drive to Scripps Mercy or UCSD is typically 30–45 minutes depending on traffic." }
+    ],
+    nearbyCities: ["los-angeles-ca"],
+  },
+  "fresno-ca": {
+    city: "Fresno",
+    state: "CA",
+    slug: "fresno-ca",
+    costLow: 1000,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    culture: "Fresno's birth community blends Central Valley pragmatism with a growing network of doulas and midwives who are expanding access to culturally responsive care. The diverse Hmong, Latino, and Black communities in Fresno have driven grassroots doula training programs and community-based birth support. Resource gaps exist compared to coastal cities, but organizations like the Fresno Birth Network are working to bridge them.",
+    heroLocalDetail: "Fresno families typically deliver at one of the hospitals along the Cedar Avenue medical corridor, with Community Regional Medical Center downtown and Clovis Community Medical Center in northeast Fresno as the main options. Commutes from west Fresno or Kerman along Highway 180 can stretch to 30+ minutes during peak hours, so families in outlying areas like Sanger or Selma should plan alternate routes to avoid Hwy 99 congestion.",
+    hospitalDetails: [
+      { name: "Community Regional Medical Center", paragraph: "Community Regional Medical Center in downtown Fresno is the region's largest hospital, with a Level III NICU and the only high-risk obstetric program between Sacramento and Bakersfield. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Clovis Community Medical Center", paragraph: "Clovis Community Medical Center in northeast Fresno features a Level II NICU, private labor suites, and a family-centered birth experience popular with families in the Clovis and north Fresno area." },
+      { name: "Saint Agnes Medical Center", paragraph: "Saint Agnes Medical Center in northeast Fresno offers a Level II NICU with a dedicated maternity unit and lactation services, serving families across the greater Fresno metro area." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Fresno", paragraph: "NPI taxonomy 261QB0400X returned no active results for Fresno, CA. There are currently no freestanding birth centers operating in Fresno. Families seeking out-of-hospital birth work with home birth midwives; the closest birth center options are in the Sacramento or Bay Area." }
+    ],
+    medicaidNote: "California Medi-Cal covers doula services under SB-509, with approximately $1,587 reimbursement for the birth package. Doulas must enroll through the PAVE portal. In Fresno, Medi-Cal managed care plans include CalViva Health and Health Net — contact them for doula referral lists.",
+    insuranceNote: "Under California SB 332, commercial health plans must cover doula services. Given the limited supply of doulas in Fresno, ask your insurer about out-of-network coverage or telehealth doula options if in-network providers are unavailable.",
+    faqs: [
+      { q: "Can I get a free doula through Medi-Cal in Fresno?", a: "Yes. Medi-Cal covers doula services under SB-509 at approximately $1,587 for the birth package. Contact CalViva Health or Health Net (Fresno's Medi-Cal managed care plans) for an enrolled doula referral list." },
+      { q: "Does Fresno have any freestanding birth centers?", a: "No. There are currently no freestanding birth centers in Fresno. Families interested in out-of-hospital birth typically work with home birth midwives, though options are limited in the Central Valley." },
+      { q: "Which Fresno hospital has the highest-level NICU?", a: "Community Regional Medical Center downtown has a Level III NICU — the highest in the Fresno area — and provides the region's most comprehensive neonatal and high-risk obstetric care." },
+      { q: "How much does a doula cost in Fresno?", a: "Out-of-pocket doula fees in Fresno typically range from $1,000 to $3,000, generally lower than coastal California cities but with fewer available doulas, so early booking is recommended." },
+      { q: "Are there Spanish-speaking doulas in Fresno?", a: "Yes. Fresno has a growing number of bilingual Spanish-speaking doulas, particularly through community-based training programs. Ask your Medi-Cal managed care plan or the Fresno Birth Network for referrals." },
+      { q: "What if I live in a rural area outside Fresno?", a: "Families in rural communities like Sanger, Selma, Kerman, or Reedley should plan hospital routes carefully — Community Regional is the only Level III NICU option, and travel times along Hwy 99 or Hwy 180 can vary significantly during peak hours." }
+    ],
+    nearbyCities: ["sacramento-ca"],
+  },
+  "los-angeles-ca": {
+    city: "Los Angeles",
+    state: "CA",
+    slug: "los-angeles-ca",
+    costLow: 1800,
+    costHigh: 5500,
+    shelbiServesHere: false,
+    culture: "Los Angeles has one of the largest and most diverse birth communities in the country, spanning from celebrity-endorsed boutique doulas to grassroots organizations providing free culturally centered care in South LA and the Eastside. The city's sheer size creates distinct birth microcultures — Silver Lake and Pasadena families often choose birth centers, while Westside families gravitate toward Cedars-Sinai and UCLA. Organizations like the Los Angeles Doula Project and SQUATS are expanding access for underserved communities.",
+    heroLocalDetail: "Navigating birth logistics in LA means factoring in notorious traffic on the 405, 10, and 101 freeways — a 10-mile hospital trip from Venice to Cedars-Sinai can take 20 minutes or over an hour depending on the time of day. Families in the San Fernando Valley typically deliver at Providence Tarzana or Northridge Hospital, while Eastside families use White Memorial or USC Verdugo Hills, and South LA families rely on Centinela or Martin Luther King Jr. Community Hospital.",
+    hospitalDetails: [
+      { name: "Cedars-Sinai Medical Center", paragraph: "Cedars-Sinai in Mid-City Los Angeles features a Level IV NICU and is one of the top-ranked hospitals in the nation for obstetric care, with a dedicated maternal-fetal medicine program. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "UCLA Ronald Reagan Medical Center", paragraph: "UCLA Medical Center in Westwood offers a Level III NICU with world-class maternal-fetal medicine specialists and is a top choice for high-risk pregnancies on LA's Westside." },
+      { name: "Kaiser Permanente West LA Medical Center", paragraph: "Kaiser West LA in Mid-City provides a Level III NICU with integrated OB-midwifery care and is popular with Kaiser members across central and west Los Angeles." },
+      { name: "Providence Cedars-Sinai Tarzana Medical Center", paragraph: "Providence Tarzana in the San Fernando Valley offers a Level III NICU and is the primary destination for Valley families needing high-level neonatal care close to home." },
+      { name: "Martin Luther King Jr. Community Hospital", paragraph: "MLK Community Hospital in Willowbrook serves South LA with a Level III NICU and is a critical access point for families in communities that historically lacked quality maternity care." }
+    ],
+    birthCenterDetails: [
+      { name: "The Birth Sanctuary", paragraph: "The Birth Sanctuary in Pasadena is a freestanding birth center offering midwife-led births, water birth, and holistic prenatal care with transfer agreements to nearby hospitals." },
+      { name: "Gracefull Birth Center", paragraph: "Gracefull Birth Center in Silver Lake provides a warm, community-rooted out-of-hospital birth experience with certified midwives, water birth tubs, and a strong commitment to equitable care." }
+    ],
+    medicaidNote: "California Medi-Cal covers doula services under SB-509, with approximately $1,587 reimbursement for the birth package. Doulas must enroll through the PAVE portal. LA County Medi-Cal managed care plans include L.A. Care, Health Net, and Molina Healthcare — contact your plan for doula referral lists.",
+    insuranceNote: "Under California SB 332, commercial health plans must cover doula services. In LA, many doulas are familiar with billing Blue Shield of CA, Anthem, and Cigna, but always confirm your plan's specific authorization requirements.",
+    faqs: [
+      { q: "Can I get a free doula through Medi-Cal in Los Angeles?", a: "Yes. Medi-Cal covers doula services under SB-509 at approximately $1,587 for the birth package. Enrolled doulas bill through the PAVE portal. Contact your Medi-Cal managed care plan (L.A. Care, Health Net, or Molina) for their doula provider directory." },
+      { q: "Which LA hospitals have a Level IV NICU?", a: "Cedars-Sinai Medical Center in Mid-City Los Angeles has a Level IV NICU — the highest designation. UCLA Ronald Reagan (Level III) and Children's Hospital Los Angeles also provide top-tier neonatal care." },
+      { q: "Are there birth centers in Los Angeles?", a: "Yes. LA has several freestanding birth centers including Gracefull Birth Center in Silver Lake and The Birth Sanctuary in Pasadena, both staffed by certified midwives with water birth options and hospital transfer agreements." },
+      { q: "How do I handle LA traffic on labor day?", a: "Plan at least two hospital routes and drive them in advance. Avoid the 405 and 101 freeways during rush hours (7–10 AM and 4–7 PM). If you're delivering at Cedars-Sinai from the Westside, San Vicente Blvd access can save time. Always call your doula early so they can help navigate real-time traffic." },
+      { q: "How much does a doula cost in LA without insurance?", a: "Out-of-pocket doula fees in Los Angeles range from $1,800 to $5,500, the highest in California, reflecting the city's large market and wide range of services from basic labor support to luxury concierge packages." },
+      { q: "Are there doulas who specifically serve South LA communities?", a: "Yes. Organizations like the LA Doula Project, Cherished Futures for Black Moms & Babies, and SQUATS provide or connect families with culturally centered, often free or low-cost doula care in South LA and surrounding communities." }
+    ],
+    nearbyCities: ["san-diego-ca"],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
