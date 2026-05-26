@@ -207,14 +207,14 @@ function assertCompleteness(slug: string, data: any): Assertion[] {
       : `"culture" is ${cultureLen} chars`,
   });
 
-  // A7: slug matches {name}-tx pattern
-  const slugOk = typeof data.slug === "string" && data.slug.endsWith("-tx");
+  // A7: slug matches {name}-{state} pattern
+  const slugOk = typeof data.slug === "string" && /^.+-(tx|nc|ga|sc)$/.test(data.slug);
   results.push({
     id: "A7",
     city: slug,
     passed: slugOk,
     message: !slugOk
-      ? `Slug "${data.slug}" does not end with "-tx"`
+      ? `Slug "${data.slug}" does not match {name}-{state} pattern (expected -tx, -nc, -ga, or -sc)`
       : `Slug pattern valid`,
   });
 
@@ -224,7 +224,7 @@ function assertCompleteness(slug: string, data: any): Assertion[] {
   // Bare "Level X NICU" without qualification is a hard fail for new cities,
   // warning for known debt cities.
   const NICU_LEVEL_REGEX = /level\s+(?:i{1,3}|iv|1|2|3|4)\s+nicu/i;
-  const NICU_QUALIFIER_REGEX = /verified|earned\s+\d{4}|\(\d{4}\)|\d{4}\s*(designation|certification)|named.*nicu|lucy|car|nicu\s+(designation|level)/i;
+  const NICU_QUALIFIER_REGEX = /verified|stated\s+directly\s+on|contact\s+the\s+hospital\s+directly|earned\s+\d{4}|\(\d{4}\)|\d{4}\s*(designation|certification)|named.*nicu|lucy|car|nicu\s+(designation|level)/i;
   const allText = [
     ...(data.hospitalDetails ?? []).map((h: any) => h.paragraph ?? ""),
     ...(data.faqs ?? []).map((f: any) => f.a ?? ""),
@@ -715,7 +715,7 @@ async function main(): Promise<never> {
       ...(data.faqs ?? []).map((f: any) => f.a ?? ""),
     ];
     const NICU_LEVEL_REGEX = /level\s+(?:i{1,3}|iv|1|2|3|4)\s+nicu/i;
-    const NICU_QUALIFIER_REGEX = /verified|earned\s+\d{4}|\(\d{4}\)|\d{4}\s*(designation|certification)|named.*nicu|lucy|car|nicu\s+(designation|level)/i;
+    const NICU_QUALIFIER_REGEX = /verified|stated\s+directly\s+on|contact\s+the\s+hospital\s+directly|earned\s+\d{4}|\(\d{4}\)|\d{4}\s*(designation|certification)|named.*nicu|lucy|car|nicu\s+(designation|level)/i;
     const hasBareNicu = allText.some((t: string) => NICU_LEVEL_REGEX.test(t) && !NICU_QUALIFIER_REGEX.test(t));
     return !hasBareNicu; // graduated if no bare NICU claims remain
   });

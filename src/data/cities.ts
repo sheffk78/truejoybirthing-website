@@ -1506,6 +1506,100 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["dallas-tx"],
   },
+  "concord-nc": {
+    city: "Concord",
+    state: "NC",
+    slug: "concord-nc",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Concord sits in Cabarrus County northeast of Charlotte, a fast-growing area where NASCAR\u2019s home meets suburban family life. The birth community draws from Charlotte\u2019s doula network, with some doulas based locally in Concord and Kannapolis. Cabarrus County has a solid Medicaid birth rate, and families here increasingly seek evidence-based birth support that bridges hospital and community care.",
+    heroLocalDetail: "Atrium Health Cabarrus sits at 920 Church Street North in Concord, right off I-85 Exit 58 (George W. Liles Parkway). If you\u2019re coming from the Harrisburg area or southern Cabarrus County, I-85 to Exit 58 is your fastest route \u2014 but Concord Mills mall traffic and NASCAR race-day congestion at Charlotte Motor Speedway can back up I-85 and Bruton Smith Boulevard for hours during events. Know your back route through Poplar Tent Road before you need it. Frank Liske Park\u2019s trails and the Irish Creek Greenway are popular third-trimester walking spots \u2014 flat, shaded, and about 10 minutes from the hospital.",
+    hospitalDetails: [
+      { name: "Atrium Health Cabarrus", paragraph: "Atrium Health Cabarrus, at 920 Church Street North in Concord, is a 457-bed regional hospital and the primary maternity provider for Cabarrus County. The hospital includes the Jeff Gordon Children\u2019s Center with a NICU for newborns needing specialized care \u2014 contact the hospital directly for current NICU level verification. As part of Atrium Health (now Advocate Health), Cabarrus has access to maternal-fetal medicine specialists and the full Atrium Health Levine Children\u2019s network for complex cases. If you\u2019re delivering at Cabarrus, having your birth plan ready keeps your preferences clear in a busy regional hospital where the team handles a high volume of families. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Concord (ZIPs 28025, 28026, 28027), Cabarrus County. Google Maps search
+    // "birth center Concord NC" found no freestanding birth centers within Concord
+    // city limits. Charlotte-area birth centers (e.g., Baby+Co., Queens Free Birth
+    // Center) are approximately 25-35 minutes away in Mecklenburg County.
+    // Verified 2026-05-26.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Cabarrus County\u2019s managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health). Contact NC Medicaid at 1-800-662-7030 or visit.ncdhhs.gov to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Concord area. Atrium Health\u2019s employer network and Charlotte-area insurers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Concord?", a: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Cabarrus County\u2019s managed care plans. Contact NC Medicaid at 1-800-662-7030 or visit.ncdhhs.gov to confirm your plan\u2019s coverage before hiring." },
+      { q: "Which hospitals in Concord accommodate birth plans?", a: "Atrium Health Cabarrus at 920 Church Street North is Concord\u2019s primary hospital for labor and delivery with a NICU and maternal-fetal medicine specialists \u2014 contact the hospital directly for current NICU level verification. Always confirm visitor and support-person policies during your hospital tour." },
+      { q: "How much does a doula cost in Concord?", a: "$800 to $2,000 depending on experience and package. Concord sits in the Charlotte metro pricing zone, with costs slightly lower than Charlotte proper but higher than rural North Carolina." },
+      { q: "Does True Joy Birthing work with Concord families?", a: "True Joy Birthing provides free birth-prep tools for Concord families. The free birth plan, checklist, and guided walkthrough in the app work for any Concord birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: [],
+  },
+  "cumming-ga": {
+    city: "Cumming",
+    state: "GA",
+    slug: "cumming-ga",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Cumming is the county seat of Forsyth County, one of the fastest-growing counties in metro Atlanta. The city sits at the intersection of Georgia 400 and Highway 20, where suburban sprawl meets Lake Lanier country. Forsyth County\u2019s birth community is anchored by Northside Hospital Forsyth \u2014 part of the Northside Hospital system that delivers more babies than any other hospital system in Georgia. Families here tend to be well-insured and increasingly seek out doulas and birth planners as the community grows.",
+    heroLocalDetail: "Northside Hospital Forsyth sits at 1200 Northside Forsyth Drive, just off GA-400 at Exit 16 (Pilgrim Mill Road). GA-400 is your lifeline to the hospital \u2014 but it backs up hard during weekday rush hours between exits 13 and 17, and weekend lake traffic around Lanier can add 10\u201315 minutes when you least want it. Sawnee Mountain Preserve\u2019s trails and the Big Creek Greenway are where Cumming moms walk in the third trimester \u2014 flat, shaded, and accessible from the hospital side of town. neighborhoods like Vickery, Windermere, and Three Chimneys are where most young families are clustered.",
+    hospitalDetails: [
+      { name: "Northside Hospital Forsyth", paragraph: "Northside Hospital Forsyth, at 1200 Northside Forsyth Drive in Cumming, is part of the Northside Hospital system \u2014 the busiest birthing hospital system in Georgia. It has a Level III NICU (stated directly on northside.com) and high-volume labor and delivery services with maternal-fetal medicine specialists on the medical staff. If you\u2019re delivering at Northside Forsyth, the maternity unit sees a high volume of families, so having your birth plan written before you arrive keeps your preferences clear in a fast-moving environment. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Emory Johns Creek Hospital", paragraph: "Emory Johns Creek Hospital, about 15 minutes south of Cumming at 6325 Hospital Parkway in Johns Creek, also offers labor and delivery with a NICU \u2014 contact the hospital directly for current NICU level verification. Some Forsyth County families choose Emory Johns Creek for its Emory-affiliated maternal-fetal medicine team, particularly for high-risk pregnancies. If we\u2019re being real, your OB probably delivers at one of these two hospitals \u2014 so know which one and plan your route before contractions start." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Cumming (ZIPs 30028, 30040, 30041), Forsyth County. Google Maps search
+    // "birth center Cumming GA" found no freestanding birth centers within Cumming
+    // city limits. Northside Hospital Forsyth offers a natural birth suite within
+    // the hospital, but there are no freestanding out-of-hospital birth centers in
+    // Forsyth County. Atlanta-area birth centers are approximately 40-50 minutes
+    // south in the I-285 perimeter.
+    // Verified 2026-05-26.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "As of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. Check with Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Forsyth County families on Medicaid should also check with their managed care plan about any maternal wellness benefits that might include doula support.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Cumming area. Northside Hospital\u2019s affiliated insurance networks and Atlanta-area employers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Cumming?", a: "As of 2026, Georgia Medicaid does not yet cover doula services. HB 290, which would add Medicaid doula coverage, has been introduced in the Georgia legislature but not yet enacted. Check with Georgia Medicaid at 1-877-423-4746 for the most current status." },
+      { q: "Which hospitals in Cumming accommodate birth plans?", a: "Northside Hospital Forsyth (Level III NICU, stated directly on northside.com) is Cumming\u2019s primary maternity hospital and generally accommodates birth plans. Emory Johns Creek Hospital, about 15 minutes south, also offers L&D with a NICU \u2014 contact the hospital directly for current NICU level verification. Always confirm your hospital\u2019s current visitor and support-person policies during your tour." },
+      { q: "How much does a doula cost in Cumming?", a: "$900 to $2,500 depending on experience and package. Cumming sits in the north Atlanta metro pricing range, with costs comparable to Alpharetta and Johns Creek." },
+      { q: "Does True Joy Birthing work with Cumming families?", a: "True Joy Birthing provides free birth-prep tools for Cumming families. The free birth plan, checklist, and guided walkthrough in the app work for any Cumming birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: [],
+  },
+  "greenville-sc": {
+    city: "Greenville",
+    state: "SC",
+    slug: "greenville-sc",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    culture: "Greenville is the economic and medical hub of Upstate South Carolina, where a booming downtown meets Appalachian foothill culture. The city anchors the Prisma Health and Bon Secours health systems, and families from across the region travel here for hospital births. The birth community is growing alongside the city\u2019s population boom \u2014 doulas, lactation consultants, and midwives are increasingly visible and accessible, though the area still has fewer birth professionals per capita than Charlotte or Atlanta.",
+    heroLocalDetail: "Prisma Health Greenville Memorial Hospital sits at 701 Grove Road on the east side of Greenville, about 8 minutes from downtown via I-385 and Faris Road. Bon Secours St. Francis is on the west side at 1 Saint Francis Drive, accessible via US-123 from the Clemson/Powdersville direction. During afternoon rush, I-385 between downtown and the Grove Road exit backs up steadily \u2014 and Falls Park on the Reedy draws weekend crowds that can slow your approach to St. Francis from the north. The Swamp Rabbit Trail, running 22 miles from Greenville to Travelers Rest, is the go-to third-trimester walking path \u2014 flat, paved, and shaded through Cleveland Park right near Greenville Memorial.",
+    hospitalDetails: [
+      { name: "Prisma Health Greenville Memorial Hospital", paragraph: "Prisma Health Greenville Memorial, at 701 Grove Road in Greenville, is the largest hospital in Upstate South Carolina and the regional referral center for high-risk pregnancies and complex neonatal care. It has a Level III NICU (stated directly on prismahealth.org) and the Prisma Health Children\u2019s Hospital on the same campus, making it the go-to for families navigating complicated pregnancies in the Upstate. If you\u2019re delivering at Greenville Memorial, having a birth plan keeps your preferences clear in a large, busy teaching hospital. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Bon Secours St. Francis Hospital", paragraph: "Bon Secours St. Francis Hospital, at 1 Saint Francis Drive on Greenville\u2019s west side, offers labor and delivery with a faith-based care approach and a well-established maternity program. It provides L&D services and newborn nursery care \u2014 contact the hospital directly for current NICU level verification. St. Francis is known for personalized attention and a quieter environment than the large academic hospital across town. If we\u2019re being real, having two strong hospital systems in Greenville gives families a real choice \u2014 write your birth plan for whichever hospital you choose so your preferences travel with you." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Greenville (ZIPs 29601, 29605, 29606, 29607, 29609, 29611, 29614, 29615,
+    // 29616, 29617), Greenville County. Google Maps search "birth center Greenville
+    // SC" found no freestanding birth centers within Greenville County. The nearest
+    // birth centers are in the Charlotte metro area, approximately 90 minutes north.
+    // Verified 2026-05-26.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Yes \u2014 as of July 1, 2022, South Carolina Medicaid covers doula services for eligible enrollees under the SC Healthy Connections program, including Greenville County\u2019s managed care plans (Molina Healthcare, First Choice by Select Health, Absolute Total Care). Contact SC Healthy Connections at 1-888-549-0820 or visit scdhhs.gov to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Greenville area. Prisma Health\u2019s employer network and Upstate SC employers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Greenville?", a: "Yes \u2014 as of July 1, 2022, South Carolina Medicaid covers doula services for eligible enrollees under the SC Healthy Connections program, including Greenville County\u2019s managed care plans. Contact SC Healthy Connections at 1-888-549-0820 or visit scdhhs.gov to confirm your plan\u2019s coverage before hiring." },
+      { q: "Which hospitals in Greenville accommodate birth plans?", a: "Prisma Health Greenville Memorial Hospital (Level III NICU, stated directly on prismahealth.org) and Bon Secours St. Francis Hospital both offer labor and delivery and generally accommodate birth plans. Always confirm your hospital\u2019s current visitor and support-person policies during your tour." },
+      { q: "How much does a doula cost in Greenville?", a: "$800 to $2,200 depending on experience and package. Greenville\u2019s cost of living keeps rates lower than Charlotte or Atlanta, but the growing doula community means you\u2019ll find doulas at various price points." },
+      { q: "Does True Joy Birthing work with Greenville families?", a: "True Joy Birthing provides free birth-prep tools for Greenville families. The free birth plan, checklist, and guided walkthrough in the app work for any Greenville birth setting. The app also helps you connect with local doulas and midwives in your area." },
+    ],
+    nearbyCities: [],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
