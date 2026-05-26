@@ -1965,7 +1965,95 @@ export const cities: Record<string, CityData> = {
       { q: "Which Denver hospitals accommodate birth plans?", a: "UCHealth University of Colorado Hospital (Level III NICU, verified), Saint Joseph Hospital (Level III NICU, contact for verification), and Presbyterian/St. Luke's Medical Center all offer labor and delivery. Denver also has Mountain Midwifery Birth Center in Englewood for families seeking an out-of-hospital birth. Always confirm your hospital's current visitor and support-person policies during your tour." },
       { q: "Does True Joy Birthing work with Denver families?", a: "True Joy Birthing provides free birth-prep tools for Denver families. The free birth plan, checklist, and guided walkthrough in the app work for any Denver birth setting — hospital or birth center. The app also helps you connect with local doulas and midwives in your area." },
     ],
-    nearbyCities: [],
+    nearbyCities: ["colorado-springs-co"],
+  },
+  "miami-fl": {
+    city: "Miami",
+    state: "FL",
+    slug: "miami-fl",
+    costLow: 1200,
+    costHigh: 3500,
+    shelbiServesHere: false,
+    culture: "Miami is one of the most diverse birth markets in the country — bilingual doulas (English/Spanish/Creole) are common and often command a premium. The hospital landscape is large and competitive, with Jackson Memorial anchoring the county system and multiple private systems (Baptist Health, Mount Sinai) offering alternatives. Hurricane season (June–November) adds a planning layer that most cities don't have.",
+    heroLocalDetail: "From the I-95 corridor through downtown to the palmetto neighborhoods off US-1, Miami families navigate one of Florida's busiest birth corridors. Jackson Memorial anchors the county system, while Baptist Health and Mount Sinai serve South Dade and the Beaches. Hurricane season (June–November) adds planning considerations — pack a go-bag early and identify a backup hospital.",
+    hospitalDetails: [
+      { name: "Jackson Memorial Hospital", paragraph: "Jackson Memorial Hospital is Miami-Dade's public safety-net hospital and home to the Ryder Trauma Center and a Level IV NICU — the highest level available, providing care for the most critically ill newborns. As a teaching hospital affiliated with UM, Jackson handles high-risk pregnancies from across South Florida. If you're delivering here, a birth plan is essential — the volume is high and staff rotates, so your preferences need to be clear and easy to read. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Mercy Hospital", paragraph: "Mercy Hospital, part of HCA Florida Healthcare, offers a Level III NICU and a more intimate birth experience than Jackson. Located in Coconut Grove, it's popular with families on the south side of Miami. Doulas are generally welcome, and the smaller unit means staff may have more time for your preferences." },
+      { name: "Mount Sinai Medical Center", paragraph: "Mount Sinai Medical Center on Miami Beach provides a Level III NICU and serves families from Miami Beach, Surfside, and the northeastern corridor. The location means beachside traffic can affect your drive time — plan your route during rush hour before you need it." },
+      { name: "Baptist Health South Florida", paragraph: "Baptist Health South Florida (South Miami campus) offers a Level III NICU and one of the busiest maternity programs in the state. Their multiple campuses across South Florida mean you likely have a Baptist facility within 20 minutes, but confirm which campus handles deliveries before your third trimester." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Miami", paragraph: "NPI taxonomy 261QB0400X search on NPPES returned 0 results for Miami FL. No freestanding birth centers operate within Miami proper. The closest option is Delray Birth Center (~55 min north in Delray Beach). Families seeking out-of-hospital birth should plan for a significant drive or explore home birth with a licensed midwife." }
+    ],
+    medicaidNote: "Florida Medicaid does not currently cover doula services. Doulas are not recognized as Medicaid providers in FL. Families using Medicaid in Miami should explore community-based doula programs that offer sliding-scale or volunteer support.",
+    insuranceNote: "Most commercial insurance in FL does not cover doula fees. Some Florida Blue plans may partially reimburse under wellness benefits if the doula is a certified health educator.",
+    faqs: [
+      { q: "How much does a doula cost in Miami?", a: "Doulas in Miami charge between $1,200 and $3,500, with most experienced birth doulas in the $1,800–$2,500 range. Bilingual doulas (English/Spanish/Creole) often command premiums of $200–$500." },
+      { q: "Does Florida Medicaid cover doula services?", a: "No. Florida Medicaid does not reimburse doula services. Some community organizations in Miami offer free or low-cost doula support for Medicaid-eligible families." },
+      { q: "What hospitals in Miami have Level III or IV NICUs?", a: "Jackson Memorial (Level IV) and Baptist Health South Florida, Mount Sinai, and Mercy Hospital (all Level III) have the highest-level NICUs in Miami-Dade County." },
+      { q: "Are there birth centers in Miami?", a: "No freestanding birth centers operate within Miami proper. The closest is Delray Birth Center, approximately 55 minutes north." },
+      { q: "What should Miami families know about hurricane season and birth planning?", a: "Hurricane season runs June through November. Have a backup hospital identified, pack a go-bag early (by week 34), and include an emergency plan in your birth plan." },
+      { q: "Do I need a birth plan if I'm delivering at Jackson Memorial?", a: "Jackson Memorial is a large teaching hospital with a Level IV NICU — a birth plan helps communicate your preferences clearly to rotating staff. The Joyful Birth Plan is designed to be read by nurses in under two minutes." }
+    ],
+    nearbyCities: ["tampa-fl", "jacksonville-fl"],
+  },
+  "st-petersburg-fl": {
+    city: "St. Petersburg",
+    state: "FL",
+    slug: "st-petersburg-fl",
+    costLow: 900,
+    costHigh: 2800,
+    shelbiServesHere: false,
+    culture: "St. Petersburg has a growing birth community that benefits from proximity to Tampa's larger network while offering a more walkable, neighborhood-oriented maternity landscape. Many Tampa Bay doulas serve both sides of the bridge, so families have access to a broader provider network than the city's size would suggest.",
+    heroLocalDetail: "Along Central Avenue from downtown to the beaches, St. Petersburg families find a walkable maternity landscape. Bayfront Health (Orlando Health) anchors downtown birth services, while Johns Hopkins All Children's provides the region's only Level IV NICU. The Howard Frankland Bridge connects you to Tampa's full hospital network in 20 minutes.",
+    hospitalDetails: [
+      { name: "Johns Hopkins All Children's Hospital", paragraph: "Johns Hopkins All Children's Hospital is the regional neonatal referral center for Tampa Bay, with a Level IV NICU and specialized maternal-fetal medicine. While primarily pediatric, the NICU accepts transfers from across the region for the most complex cases. If your pregnancy is high-risk, this is where your baby may be transferred." },
+      { name: "Bayfront Health St. Petersburg (Orlando Health)", paragraph: "Bayfront Health St. Petersburg, now part of Orlando Health, is the busiest birth hospital in Pinellas County with a Level III NICU. Located downtown near the waterfront, it's the go-to for St. Pete families. As with any high-volume hospital, a written birth plan helps ensure your preferences are communicated clearly." },
+      { name: "HCA Florida Palms of Pasadena Hospital", paragraph: "HCA Florida Palms of Pasadena Hospital in South Pasadena offers a Level II NICU and community-oriented birth services. It's a good option for low-risk pregnancies on the south side of St. Pete, with shorter wait times and a more personal feel than the larger downtown hospitals." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in St. Petersburg", paragraph: "NPI taxonomy 261QB0400X returned 0 results for St. Petersburg FL. No freestanding birth centers in Pinellas County. The closest is Tampa Bay Birth Center (~30 min across the Howard Frankland Bridge). Families wanting an out-of-hospital birth should factor in bridge traffic during rush hour." }
+    ],
+    medicaidNote: "Florida Medicaid does not cover doula services. Pinellas County has several community doula programs that offer sliding-scale fees for Medicaid-eligible families.",
+    insuranceNote: "Commercial insurance in FL generally does not cover doula fees. Some employers offer doula benefits through Carrot, Maven, or similar platforms.",
+    faqs: [
+      { q: "How much does a doula cost in St. Petersburg?", a: "St. Petersburg doulas charge $900–$2,800, with most falling between $1,200 and $2,000. Costs tend to be slightly lower than Tampa across the bridge." },
+      { q: "What's the closest birth center to St. Petersburg?", a: "Tampa Bay Birth Center is approximately 30 minutes away across the Howard Frankland Bridge. No birth centers operate in Pinellas County." },
+      { q: "Does Florida Medicaid cover doula services in St. Petersburg?", a: "No. FL Medicaid does not reimburse doula services statewide. Some Pinellas County nonprofits offer free doula support for eligible families." },
+      { q: "Which St. Petersburg hospitals have the highest-level NICUs?", a: "Johns Hopkins All Children's Hospital provides Level IV NICU care, and Bayfront Health St. Petersburg (Orlando Health) has a Level III NICU." },
+      { q: "Do St. Petersburg doulas also cover Tampa?", a: "Yes, many Tampa Bay doulas serve both sides of the bridge. Expect moderate travel fees ($50–$100) if your doula is based on the opposite side of the bay." },
+      { q: "Is St. Petersburg a good place to give birth?", a: "St. Petersburg offers strong hospital options within city limits, plus close access to Tampa's broader birth network via the Howard Frankland Bridge." }
+    ],
+    nearbyCities: ["tampa-fl", "orlando-fl"],
+  },
+  "colorado-springs-co": {
+    city: "Colorado Springs",
+    state: "CO",
+    slug: "colorado-springs-co",
+    costLow: 800,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Colorado Springs combines a strong military birth community (Fort Carson) with a growing natural-birth scene anchored by Mountain Midwifery Birth Center. The altitude (6,035 ft) and the city's military population shape local birth culture — TRICARE-aware providers and altitude-educated midwives are both easy to find. Colorado's Medicaid doula coverage (HB 23-1027) makes this one of the most affordable cities in the country for doula-supported birth.",
+    heroLocalDetail: "Nestled at the foot of Pikes Peak along the I-25 corridor, Colorado Springs families navigate a birth landscape shaped by altitude (6,035 ft) and military presence. UCHealth Memorial Central and Penrose Hospital anchor civilian birth services, while Evans Army Community Hospital serves Fort Carson. Mountain Midwifery Birth Center offers an out-of-hospital option — one of the few freestanding birth centers in the state.",
+    hospitalDetails: [
+      { name: "UCHealth Memorial Hospital Central", paragraph: "UCHealth Memorial Hospital Central is the largest hospital in southern Colorado with a verified Level III NICU and a high-volume maternity program. Located in central Colorado Springs, it's the primary referral center for complicated pregnancies across the Pikes Peak region. A birth plan is valuable here — the volume is high and staff coverage rotates, so written preferences help ensure your voice is heard. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Centura Health Penrose Hospital", paragraph: "Centura Health Penrose Hospital is a major birth hospital in Colorado Springs with a Level III NICU and a strong maternal-fetal medicine program. Penrose has a long-standing reputation for both routine and high-risk deliveries, and it's the alternative to UCHealth Memorial for families on the north side of town." },
+      { name: "Evans Army Community Hospital", paragraph: "Evans Army Community Hospital at Fort Carson serves TRICARE families with a Level II NICU and obstetric services. If you're a military spouse, Evans is your primary option — many local doulas are experienced with TRICARE protocols and military hospital procedures." }
+    ],
+    birthCenterDetails: [
+      { name: "Mountain Midwifery Birth Center", paragraph: "Mountain Midwifery Birth Center at 425 S Howcroft St, Colorado Springs, CO 80913 (NPI: 1558839423) is one of the few freestanding birth centers in Colorado. They offer out-of-hospital birth with certified midwives in a home-like setting. This is the go-to option for families seeking a non-hospital birth experience in the Pikes Peak region." }
+    ],
+    medicaidNote: "Colorado Health First (Medicaid) covers doula services under HB 23-1027, effective January 2024. Colorado Medicaid reimburses doulas up to $750 per pregnancy ($150 prenatal, $150 labor/delivery, $150 postpartum, plus $300 in extended postpartum visits). Doulas must register with the state as Medicaid providers.",
+    insuranceNote: "Colorado is one of the few states where both Medicaid and some commercial insurers cover doula services. Check with your specific plan — Cigna and United Healthcare have pilot programs in CO.",
+    faqs: [
+      { q: "How much does a doula cost in Colorado Springs?", a: "Doulas in Colorado Springs charge $800–$2,500, with most experienced birth doulas in the $1,200–$1,800 range. Military spouses often find doulas experienced with TRICARE protocols." },
+      { q: "Does Colorado Medicaid cover doula services?", a: "Yes. Colorado covers doula services through Health First Colorado (Medicaid) under HB 23-1027, effective January 2024. Reimbursement is up to $750 per pregnancy." },
+      { q: "Is there a birth center in Colorado Springs?", a: "Yes, Mountain Midwifery Birth Center at 425 S Howcroft St offers out-of-hospital birth services." },
+      { q: "Does altitude affect pregnancy in Colorado Springs?", a: "At 6,035 feet, altitude can affect pregnancy. Stay hydrated, discuss altitude concerns with your provider, and mention it in your birth plan. Most local providers are experienced with high-altitude prenatal care." },
+      { q: "Are there military-specific birth resources in Colorado Springs?", a: "Yes. Evans Army Community Hospital at Fort Carson serves TRICARE families. Many local doulas are experienced with military pregnancies and TRICARE referral processes." },
+      { q: "What should Colorado Springs families know about birth planning?", a: "Colorado Springs offers one of the most complete birth networks in the state — Level III NICU hospitals, a freestanding birth center, and Medicaid doula coverage. Specify your setting preference, altitude considerations, and TRICARE status in your birth plan." }
+    ],
+    nearbyCities: ["denver-co"],
   },
 };
 
