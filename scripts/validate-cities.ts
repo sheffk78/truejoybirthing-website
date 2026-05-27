@@ -208,7 +208,7 @@ function assertCompleteness(slug: string, data: any): Assertion[] {
   });
 
   // A7: slug matches {name}-{state} pattern
-  const slugOk = typeof data.slug === "string" && /^.+-(tx|nc|ga|sc|ok|oh|in|fl|co|tn|nv|ca|ny|ma|mi|il|ct|ri|pa|az|wa|or|mn|md|nj|va|wi|mo|nm|ut|al|ky)$/.test(data.slug);
+  const slugOk = typeof data.slug === "string" && /^.+-(tx|nc|ga|sc|ok|oh|in|fl|co|tn|nv|ca|ny|ma|mi|il|ct|ri|pa|az|wa|or|mn|md|nj|va|wi|mo|nm|ut|al|ky|id|ia|ne|ms)$/.test(data.slug);
   results.push({
     id: "A7",
     city: slug,

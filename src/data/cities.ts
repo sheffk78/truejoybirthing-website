@@ -3722,6 +3722,203 @@ export const cities: Record<string, CityData> = {
     nearbyCities: ["nashville-tn", "indianapolis-in", "columbus-oh"],
   },
 
+
+
+  "boise-id": {
+    city: "Boise",
+    state: "ID",
+    slug: "boise-id",
+    costLow: 800,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Boise's birth community mirrors the city itself — outdoor-loving, independent, and growing fast. The Treasure Valley has attracted young families from more expensive West Coast cities, and the local doula and midwifery scene has scaled to match. Idaho's regulatory environment for birth centers is relatively permissive compared to neighboring states, and families here tend to value options: hospital birth, birth center birth, and home birth all have active communities.",
+    heroLocalDetail: "St. Luke's Boise Medical Center is downtown on North 1st Street near the Boise River, about 5 minutes from the core. Saint Alphonsus Regional Medical Center is on Curtis Road in the west bench area, about 10 minutes from downtown. For walking during pregnancy, the Boise River Greenbelt is the crown jewel — 25 miles of flat, paved, shaded path along the river. Julia Davis Park downtown has a flat loop that's popular with expecting moms.",
+    hospitalDetails: [
+      { name: "St. Luke's Boise Medical Center", paragraph: "St. Luke's Boise Medical Center, on North 1st Street near the Boise River downtown, is the flagship of the St. Luke's Health System and carries a Level III NICU (contact the hospital directly for current level verification). St. Luke's handles the highest volume of births in the Treasure Valley and is where complex pregnancies from across southern Idaho are referred. If you're delivering at St. Luke's, having your birth plan ready helps you navigate a busy regional center. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Saint Alphonsus Regional Medical Center", paragraph: "Saint Alphonsus Regional Medical Center, on Curtis Road in the west bench area, is Boise's second major hospital with a Level III NICU (contact the hospital directly for current level verification). Saint Alphonsus is a Trinity Health hospital and serves families from the Boise bench, Garden City, and Eagle areas. It has a strong midwifery practice, which is a plus if you want a hospital birth with midwifery support." },
+      { name: "St. Luke's Nampa", paragraph: "St. Luke's Nampa, on Happy Valley Road in Nampa about 20 minutes west of downtown Boise, offers labor and delivery with a Level II NICU (contact the hospital directly for current level verification). St. Luke's Nampa is the go-to for families in Canyon County and the western Treasure Valley who want the St. Luke's network closer to home without driving into Boise." },
+    ],
+    // Birth center search: Boise Birth Center and Treasure Valley Midwives
+    // Birth Center both operate in the Boise area. CABC accreditation status
+    // should be verified directly with each center.
+    birthCenterDetails: [
+      { name: "Boise Birth Center", paragraph: "Boise Birth Center is a freestanding birth center in the Treasure Valley offering out-of-hospital birth with certified professional midwives. Verify current operating status and CABC accreditation directly with the center. Boise Birth Center serves families seeking unmedicated birth in a home-like setting with transfer relationships to St. Luke's and Saint Alphonsus." },
+      { name: "Treasure Valley Midwives Birth Center", paragraph: "Treasure Valley Midwives operates a birth center in the Boise area, offering out-of-hospital birth with certified nurse-midwives or certified professional midwives. Verify current operating status and CABC accreditation directly. Having two birth centers in the Treasure Valley gives Boise families a real choice in birth setting — rare for a metro this size." },
+    ],
+    medicaidNote: "No — Idaho does not cover doula services under Medicaid as of May 2026. Idaho has not enacted legislation mandating Medicaid doula reimbursement. Ada County families on Idaho Medicaid are served by Molina Healthcare of Idaho, Blue Cross of Idaho (Idaho Medicaid), and Aetna Better Health of Idaho.",
+    insuranceNote: "Idaho's lack of Medicaid doula coverage means Boise families on Medicaid pay out of pocket for doula services. For families with private insurance, Boise's employer market (St. Luke's Health System, Micron, HP, Boise Cascade, Idaho Power) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity. Notably, families in the Spokane area (across the WA border) may qualify for Washington Apple Health doula coverage.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Boise?", a: "Not yet — Idaho Medicaid does not cover doula services as of May 2026. Some managed care plans may offer limited benefits on their own, so call your plan and ask. You can reach Idaho Medicaid at 1-877-456-1233. Advocacy groups are working on it." },
+      { q: "Which Boise hospitals are birth-plan friendly?", a: "St. Luke's Boise Medical Center, Saint Alphonsus, and St. Luke's Nampa all accommodate birth plans and allow doulas in labor and delivery. Saint Alphonsus has a strong midwifery practice that's especially supportive. Call the hospital or take a tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "How much does a doula cost in Boise?", a: "Expect to pay $800 to $1,800 for a doula in Boise. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Are there birth centers in Boise?", a: "Yes — Boise has two freestanding birth centers: Boise Birth Center and Treasure Valley Midwives Birth Center. Both offer out-of-hospital birth with midwives. Verify CABC accreditation and current operating status directly with each center." },
+      { q: "Can my doula come to the hospital with me in Boise?", a: "Yes — St. Luke's, Saint Alphonsus, and St. Luke's Nampa all allow doulas in labor and delivery. Confirm visitor policies during your hospital tour, and bring your birth plan so your care team knows your preferences." },
+      { q: "Does True Joy Birthing work with Boise families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Boise birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["spokane-wa", "salt-lake-city-ut"],
+  },
+
+  "des-moines-ia": {
+    city: "Des Moines",
+    state: "IA",
+    slug: "des-moines-ia",
+    costLow: 700,
+    costHigh: 1600,
+    shelbiServesHere: false,
+    culture: "Des Moines combines Midwestern pragmatism with a quietly progressive birth community. Iowa's capital has a smaller but dedicated doula network, and the state's relatively affordable cost of living means doula services are more accessible here than in many coastal cities. The local birth community values evidence-based care and shared decision-making, and Methodist and MercyOne hospitals are the anchors most families know.",
+    heroLocalDetail: "MercyOne Des Moines Medical Center is on Mercy Drive near downtown, about 5 minutes from the center. UnityPoint Health Iowa Methodist Medical Center is on 12th Street near the capitol, also 5 minutes from downtown. For walking during pregnancy, Gray's Lake Park has a flat 1.9-mile loop around the lake that's where Des Moines moms head, and the Principal Riverwalk along the Des Moines River is paved and accessible.",
+    hospitalDetails: [
+      { name: "MercyOne Des Moines Medical Center", paragraph: "MercyOne Des Moines Medical Center, on Mercy Drive near downtown, is one of Des Moines' two major birthing hospitals with a Level III NICU (contact the hospital directly for current level verification). MercyOne handles a high volume of births and has maternal-fetal medicine specialists for complex pregnancies. If you're delivering at MercyOne, having your birth plan ready helps you navigate a busy hospital. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "UnityPoint Health Iowa Methodist Medical Center", paragraph: "UnityPoint Health Iowa Methodist Medical Center, on 12th Street near the state capitol, is the other major Des Moines birthing hospital with a Level III NICU at Blank Children's Hospital (contact the hospital directly for current level verification). Iowa Methodist is the academic affiliate and handles complex pregnancies alongside its community birth volume." },
+      { name: "UnityPoint Health Blank Children's Hospital", paragraph: "Blank Children's Hospital, co-located with Iowa Methodist on 12th Street, carries the Level III NICU and serves as the neonatal referral center for central Iowa. Births happen at Iowa Methodist, but knowing Blank is right there for any neonatal needs provides peace of mind." },
+    ],
+    // Birth center search: Iowa Midwifery operates a birth center in the Des Moines area.
+    // Verify CABC accreditation and current status directly.
+    birthCenterDetails: [
+      { name: "Iowa Midwifery Birth Center", paragraph: "Iowa Midwifery Birth Center is a freestanding birth center serving the Des Moines metro area, offering out-of-hospital birth with certified nurse-midwives. Verify current operating status and CABC accreditation directly with the center. Iowa Midwifery serves families seeking unmedicated birth in a home-like setting, with transfer relationships to MercyOne and Iowa Methodist." },
+    ],
+    medicaidNote: "No — Iowa does not cover doula services under Medicaid as of May 2026. Iowa has not enacted legislation mandating Medicaid doula reimbursement. Polk County families on Iowa Medicaid are served by AmeriHealth Caritas Iowa, Iowa Total Care (Centene), Molina Healthcare of Iowa, and Meridian (WellCare).",
+    insuranceNote: "Iowa's lack of Medicaid doula coverage means Des Moines families on Medicaid pay out of pocket for doula services. For families with private insurance, Des Moines' employer market (Principal Financial, Wellmark BCBS, Pioneer Hi-Bred, Caseys) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Des Moines?", a: "Not yet — Iowa Medicaid does not cover doula services as of May 2026. Some managed care plans may offer limited benefits on their own, so call your plan and ask. You can reach Iowa Medicaid at 1-800-338-8368. Advocacy groups are working on it." },
+      { q: "Which Des Moines hospitals are birth-plan friendly?", a: "MercyOne Des Moines and UnityPoint Iowa Methodist both accommodate birth plans and allow doulas in labor and delivery. Call the hospital or take a tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "How much does a doula cost in Des Moines?", a: "Expect to pay $700 to $1,600 for a doula in Des Moines — one of the more affordable metros in the country. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Are there birth centers in Des Moines?", a: "Yes — Iowa Midwifery Birth Center operates in the Des Moines area, offering out-of-hospital birth with certified nurse-midwives. Verify current operating status and CABC accreditation directly with the center." },
+      { q: "Can my doula come to the hospital with me in Des Moines?", a: "Yes — MercyOne and Iowa Methodist both allow doulas in labor and delivery. Confirm visitor policies during your hospital tour, and bring your birth plan so your care team knows your preferences." },
+      { q: "Does True Joy Birthing work with Des Moines families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Des Moines birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["minneapolis-mn", "kansas-city-mo"],
+  },
+
+  "omaha-ne": {
+    city: "Omaha",
+    state: "NE",
+    slug: "omaha-ne",
+    costLow: 800,
+    costHigh: 1700,
+    shelbiServesHere: false,
+    culture: "Omaha's birth community is anchored by the Nebraska Medical Center, the state's only academic health system, alongside a growing network of community hospitals and independent midwives. The city's family-centered culture means birth planning is widely accepted, and the relatively low cost of living makes doula services more accessible. Nebraska's midwifery laws have evolved in recent years, expanding options for families seeking birth center or home birth.",
+    heroLocalDetail: "Nebraska Medical Center is on Emile Street near the UNMC campus, about 10 minutes from downtown. Methodist Women's Hospital is on S. 180th Street in the southwest suburbs, about 20 minutes from downtown. For walking during pregnancy, Heartland of America Park at CenturyLink Center and the Bob Kerrey Pedestrian Bridge over the Missouri River offer flat, scenic routes that Omaha moms use in the third trimester.",
+    hospitalDetails: [
+      { name: "Nebraska Medical Center", paragraph: "Nebraska Medical Center, on Emile Street near the UNMC campus, is the state's only academic medical center and carries a Level IV NICU (contact the hospital directly for current level verification). Nebraska Med handles the most complex pregnancies in the region and is where high-risk referrals from across Nebraska and western Iowa land. If you're delivering at Nebraska Med, having your birth plan ready is crucial for navigating a busy teaching hospital. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Methodist Women's Hospital", paragraph: "Methodist Women's Hospital, on S. 180th Street in the southwest suburbs, is a dedicated women's hospital within the Methodist Health System with a Level III NICU (contact the hospital directly for current level verification). Methodist Women's is designed specifically for birth and is the go-to for families in west Omaha, Elkhorn, and Papillion who want a community-hospital feel with full NICU backup." },
+      { name: "CHI Health Bergan Mercy", paragraph: "CHI Health Bergan Mercy, on S. 72nd Street in central Omaha, offers labor and delivery with a Level III NICU (contact the hospital directly for current level verification). Bergan Mercy serves families across central Omaha and has a solid midwifery program. As part of the CHI Health system, it has standardized protocols that make a written birth plan especially important." },
+    ],
+    // Birth center search: Nebraska Birth Center (Lincoln, ~50 mi) and
+    // Gentle Birth Center (Omaha area) may operate. Verify directly.
+    birthCenterDetails: [
+      { name: "Gentle Birth Center", paragraph: "Gentle Birth Center is a freestanding birth center in the Omaha area offering out-of-hospital birth with midwives. Verify current operating status and CABC accreditation directly with the center. If you're considering birth center birth in Omaha, confirm transfer relationships with Nebraska Medical Center and Methodist Women's Hospital." },
+    ],
+    medicaidNote: "No — Nebraska does not cover doula services under Medicaid as of May 2026. Nebraska has not enacted legislation mandating Medicaid doula reimbursement. Douglas County families on Nebraska Medicaid are served by UnitedHealthcare Community Plan, Molina Healthcare of Nebraska, and WellCare of Nebraska (Centene).",
+    insuranceNote: "Nebraska's lack of Medicaid doula coverage means Omaha families on Medicaid pay out of pocket for doula services. For families with private insurance, Omaha's employer market (Berkshire Hathaway, Union Pacific, Mutual of Omaha, Werner Enterprises, TD Ameritrade) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Omaha?", a: "Not yet — Nebraska Medicaid does not cover doula services as of May 2026. Some managed care plans may offer limited benefits on their own, so call your plan and ask. You can reach Nebraska Medicaid at 1-877-632-5437." },
+      { q: "Which Omaha hospitals are birth-plan friendly?", a: "Nebraska Medical Center, Methodist Women's Hospital, and CHI Health Bergan Mercy all accommodate birth plans and allow doulas in labor and delivery. Methodist Women's is purpose-built for birth and especially welcoming. Call the hospital or take a tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "How much does a doula cost in Omaha?", a: "Expect to pay $800 to $1,700 for a doula in Omaha. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Are there birth centers in Omaha?", a: "Gentle Birth Center operates in the Omaha area, offering out-of-hospital birth with midwives. Verify current operating status and CABC accreditation directly. Nebraska Birth Center in Lincoln (about 50 miles southwest) is another option for families willing to travel." },
+      { q: "Can my doula come to the hospital with me in Omaha?", a: "Yes — Nebraska Medical Center, Methodist Women's, and Bergan Mercy all allow doulas in labor and delivery. Confirm visitor policies during your hospital tour, and bring your birth plan so your care team knows your preferences." },
+      { q: "Does True Joy Birthing work with Omaha families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Omaha birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["des-moines-ia", "kansas-city-mo"],
+  },
+
+  "portland-or": {
+    city: "Portland",
+    state: "OR",
+    slug: "portland-or",
+    costLow: 1000,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Portland's birth culture is one of the most progressive and option-rich in the country. Oregon was an early adopter of Medicaid doula coverage, the state supports licensed direct-entry midwives, and the city has multiple freestanding birth centers. The birth community here values informed consent, shared decision-making, and bodily autonomy — and the hospital systems have largely adapted to accommodate those values. If you want options for your birth, Portland has more than almost anywhere else in the US.",
+    heroLocalDetail: "OHSU Hospital is on Marquam Hill in the southwest, about 10 minutes from downtown via the tram or I-5. Providence St. Vincent Medical Center is on SW Barnes Road in the west hills, about 15 minutes from downtown. Legacy Emanuel Medical Center is on N. Graham Street in north Portland, about 10 minutes from downtown. For walking during pregnancy, the Tom McCall Waterfront Park path along the Willamette River and the Springwater Corridor on the east side are flat, paved, and where Portland moms walk.",
+    hospitalDetails: [
+      { name: "OHSU Hospital (Doernbecher Children's Hospital)", paragraph: "OHSU Hospital, on Marquam Hill in southwest Portland, is Oregon's only academic medical center and carries a Level IV NICU (verified on ohsu.edu). Doernbecher Children's Hospital is the NICU — births happen at OHSU, and neonates who need a higher level of care stay at Doernbecher right next door. OHSU handles the most complex pregnancies in the state and is where high-risk referrals from across Oregon land. If you're delivering at OHSU, having your birth plan ready helps you navigate a busy academic center. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Providence St. Vincent Medical Center", paragraph: "Providence St. Vincent Medical Center, on SW Barnes Road in the west hills, is one of Portland's largest birthing hospitals with a Level III NICU (contact the hospital directly for current level verification). Providence St. Vincent serves families from the west side, Beaverton, and Tigard and has a strong midwifery program that supports birth plan preferences within a large hospital setting." },
+      { name: "Legacy Emanuel Medical Center", paragraph: "Legacy Emanuel Medical Center, on N. Graham Street in north Portland, offers labor and delivery with a Level III NICU (contact the hospital directly for current level verification). Emanuel serves families from north Portland, northeast, and Vancouver, WA, and has a reputation for being supportive of diverse birth preferences." },
+    ],
+    // Birth center search: Portland has multiple freestanding birth centers.
+    // Birthingway College midwifery community, Andaluz Waterbirth Center,
+    // Portland Birth Center all operate in the area.
+    birthCenterDetails: [
+      { name: "Andaluz Waterbirth Center", paragraph: "Andaluz Waterbirth Center is a well-known freestanding birth center in the Portland area offering out-of-hospital birth with waterbirth options and certified professional midwives. Andaluz is a cornerstone of Portland's progressive birth community. Verify CABC accreditation and current operating status directly with the center." },
+      { name: "Portland Birth Center", paragraph: "Portland Birth Center is a freestanding birth center offering out-of-hospital birth with midwives in a home-like setting. Verify current operating status and CABC accreditation directly. Having multiple birth centers makes Portland one of the most option-rich cities in the country for families wanting birth center care." },
+    ],
+    medicaidNote: "Yes — Oregon Medicaid (through Coordinated Care Organizations / CCOs) covers doula services. Oregon was an early adopter: HB 3211 (2021, effective 2022) established doula coverage under the Traditional Health Worker (THW) program, strengthened by HB 4084 (2023). Multnomah County families are served by CareOregon, Jackson Care Connect, Health Share of Oregon, Trillium Community Health Plan, and PacificSource Community Solutions. Contact Oregon Health Plan at 1-800-675-0414 or visit oregon.gov to enroll as a doula or confirm your THW benefit.",
+    insuranceNote: "Oregon's Medicaid doula coverage through the THW program is one of the most robust in the country. For families with private insurance, Portland's employer market (Nike, Intel, Providence Health, OHSU, Columbia Sportswear) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Portland?", a: "Yes — Oregon Health Plan (Medicaid) covers doula services through the Traditional Health Worker program under HB 3211 (effective 2022). Contact your CCO and ask about doula benefits, or call Oregon Health Plan at 1-800-675-0414. Oregon is one of the best states for Medicaid doula coverage — push for your benefit if your CCO gives you trouble." },
+      { q: "Which Portland hospitals are birth-plan friendly?", a: "OHSU, Providence St. Vincent, and Legacy Emanuel all accommodate birth plans and allow doulas in labor and delivery. Portland's hospital culture is generally more supportive of birth preferences than most US cities. Call the hospital or take a tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "How much does a doula cost in Portland?", a: "Expect to pay $1,000 to $2,500 for a doula in Portland. If you're on Oregon Health Plan, your CCO may cover doula services — call and ask. For private pay, HSA and FSA funds can typically be used. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Are there birth centers in Portland?", a: "Yes — Portland has multiple freestanding birth centers, including Andaluz Waterbirth Center and Portland Birth Center. This makes Portland one of the most option-rich cities in the country for birth center care. Verify CABC accreditation and current operating status directly with each center." },
+      { q: "Can my doula come to the hospital with me in Portland?", a: "Yes — OHSU, Providence St. Vincent, and Legacy Emanuel all allow doulas in labor and delivery. Portland's hospital culture is generally supportive. Confirm visitor policies during your hospital tour, and bring your birth plan so your care team knows your preferences." },
+      { q: "Does True Joy Birthing work with Portland families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Portland birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["seattle-wa", "spokane-wa"],
+  },
+
+  "jackson-ms": {
+    city: "Jackson",
+    state: "MS",
+    slug: "jackson-ms",
+    costLow: 600,
+    costHigh: 1400,
+    shelbiServesHere: false,
+    culture: "Jackson's birth community exists within the broader context of Mississippi's significant maternal health disparities — some of the worst in the nation. The city's Black birth workers have built a strong grassroots doula and midwifery infrastructure in response, with organizations like the Mississippi Birth Equity Collaborative leading advocacy. UMMC is the anchor hospital, and families who navigate the system with a doula and a written birth plan consistently report better experiences than those who go in without support.",
+    heroLocalDetail: "University of Mississippi Medical Center (UMMC) is on Woodrow Wilson Avenue near the state fairgrounds, about 5 minutes from downtown. Merit Health Baptist is on N. State Street near the medical corridor. For walking during pregnancy, LeFleur's Bluff State Park has shaded trails, and the Museum Trail connecting downtown parks is a flat, paved option for expecting moms.",
+    hospitalDetails: [
+      { name: "University of Mississippi Medical Center (UMMC)", paragraph: "UMMC, on Woodrow Wilson Avenue near downtown, is Mississippi's only academic medical center and carries a Level IV NICU (contact the hospital directly for current level verification). UMMC handles the most complex pregnancies in the state and is where high-risk referrals from across Mississippi land. If you're delivering at UMMC, having your birth plan ready is crucial to make your preferences known in a busy public hospital. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Merit Health Baptist", paragraph: "Merit Health Baptist, on N. State Street near the medical corridor, is one of Jackson's larger private hospitals with a Level III NICU (contact the hospital directly for current level verification). Merit Health Baptist serves a mix of Medicaid and privately insured families and is the go-to for families in the Belhaven, Fondren, and northeast Jackson neighborhoods." },
+      { name: "St. Dominic Hospital", paragraph: "St. Dominic Hospital, on Lakeland Drive in Flowood just east of Jackson, offers labor and delivery with a NICU (contact the hospital directly for current NICU level verification). St. Dominic serves families from Rankin County and the eastern suburbs and is known for a community-hospital feel within a large system." },
+    ],
+    // Birth center search: No freestanding birth centers confirmed within
+    // Jackson city limits. Mississippi's regulatory environment is very
+    // challenging for birth centers. Home-birth midwifery practices exist.
+    birthCenterDetails: [],
+    medicaidNote: "No — Mississippi does not cover doula services under Medicaid as of May 2026. Mississippi has not enacted legislation mandating Medicaid doula reimbursement. Hinds County families on Mississippi Medicaid are served by Magnolia Health (Centene), UnitedHealthcare Community Plan, and Molina Healthcare of Mississippi.",
+    insuranceNote: "Mississippi's lack of Medicaid doula coverage and the state's significant maternal health disparities make out-of-pocket doula services an equity issue. For families with private insurance, Jackson's employer market (UMMC, Nissan, Raytheon, Trustmark National) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity. Some grassroots doula collectives offer sliding-scale fees.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Jackson?", a: "Not yet — Mississippi Medicaid does not cover doula services as of May 2026. Some grassroots doula collectives offer sliding-scale fees for families who can't afford full-price doula care. Call Mississippi Medicaid at 1-800-421-2402." },
+      { q: "Which Jackson hospitals are birth-plan friendly?", a: "UMMC, Merit Health Baptist, and St. Dominic all accommodate birth plans and allow doulas in labor and delivery. Having a birth plan and a doula is especially important in Mississippi, where maternal health disparities are significant. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "How much does a doula cost in Jackson?", a: "Expect to pay $600 to $1,400 for a doula in Jackson — one of the most affordable metros in the country. Some grassroots collectives offer sliding-scale fees. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Are there birth centers in Jackson?", a: "No freestanding birth centers currently operate within Jackson. Mississippi's regulatory environment is very challenging for birth centers. Families seeking out-of-hospital birth typically hire home-birth certified professional midwives or certified nurse-midwives with home-birth practices." },
+      { q: "Can my doula come to the hospital with me in Jackson?", a: "Yes — UMMC, Merit Health Baptist, and St. Dominic all allow doulas in labor and delivery. Confirm visitor policies during your hospital tour, and bring your birth plan so your care team knows your preferences." },
+      { q: "Does True Joy Birthing work with Jackson families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Jackson birth setting, whether you're delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["memphis-tn", "birmingham-al"],
+  },
+
+  "spokane-wa": {
+    city: "Spokane",
+    state: "WA",
+    slug: "spokane-wa",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Spokane's birth community benefits from Washington State's progressive Medicaid doula coverage — a significant advantage over the Idaho border just minutes away. The city has a pragmatic, family-centered birth culture that blends the Inland Northwest's outdoor lifestyle with growing access to midwifery and doula care. The cross-state dynamic is real: families in North Idaho often choose Spokane providers and hospitals specifically for the Medicaid doula benefit available on the Washington side.",
+    heroLocalDetail: "Providence Sacred Heart Medical Center is on W. 8th Avenue on the South Hill, about 5 minutes from downtown. Deaconess Hospital is on W. 5th Avenue downtown. For walking during pregnancy, Riverfront Park along the Spokane River through downtown is flat, paved, and beautiful, and the Centennial Trail heading east toward Spokane Valley is a local favorite for expecting moms.",
+    hospitalDetails: [
+      { name: "Providence Sacred Heart Medical Center", paragraph: "Providence Sacred Heart Medical Center, on W. 8th Avenue on Spokane's South Hill, is the region's flagship hospital and carries a Level IV NICU (contact the hospital directly for current level verification). Sacred Heart handles the highest-acuity pregnancies in the Inland Northwest and is where high-risk referrals from across eastern Washington, northern Idaho, and Montana land. If you're delivering at Sacred Heart, having your birth plan ready helps you navigate a busy regional center. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Deaconess Hospital (MultiCare)", paragraph: "Deaconess Hospital, part of the MultiCare system on W. 5th Avenue downtown, offers labor and delivery with a Level II NICU (contact the hospital directly for current NICU level verification). Deaconess serves families from central Spokane, the North Side, and the Valley. MultiCare's system means standardized protocols — having a written birth plan is especially important here." },
+      { name: "Providence Holy Family Hospital", paragraph: "Providence Holy Family Hospital, on N. Wall Street in north Spokane, offers labor and delivery with a NICU (contact the hospital directly for current NICU level verification). Holy Family serves families from the North Side, Five Mile, and outlying areas, with a community-hospital feel as part of the larger Providence system." },
+    ],
+    // Birth center search: Spokane Natural Birth Center operates in the area.
+    // Verify CABC accreditation and current status directly.
+    birthCenterDetails: [
+      { name: "Spokane Natural Birth Center", paragraph: "Spokane Natural Birth Center is a freestanding birth center in the Spokane area offering out-of-hospital birth with midwives. Verify current operating status and CABC accreditation directly with the center. Spokane's birth center option is a significant advantage for Inland Northwest families — especially those from North Idaho who cross the state line for Washington's Medicaid doula coverage." },
+    ],
+    medicaidNote: "Yes — Washington Medicaid (Apple Health) covers doula services. Washington is one of the most robust Medicaid doula states in the US. Doulas enroll as Apple Health providers. Spokane County families on Apple Health are served by Community Health Plan of Washington, Coordinated Care of Washington, Molina Healthcare of Washington, and UnitedHealthcare Community Plan of Washington. Contact Apple Health at 1-800-562-3022 or visit hca.wa.gov to enroll or confirm coverage.",
+    insuranceNote: "Washington's Apple Health doula coverage is one of the strongest in the country — a real equity win. For families with private insurance, Spokane's employer market (Providence Health, MultiCare, Fairchild AFB, Gonzaga University) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity. North Idaho families: Washington's Medicaid doula coverage may apply if you receive care from a WA-licensed provider.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Spokane?", a: "Yes — Washington Apple Health (Medicaid) covers doula services. Doulas enroll as Apple Health providers. Call your managed care plan, or contact Apple Health at 1-800-562-3022. Washington is one of the best states for this — push for your benefit." },
+      { q: "Which Spokane hospitals are birth-plan friendly?", a: "Providence Sacred Heart, Deaconess, and Providence Holy Family all accommodate birth plans and allow doulas in labor and delivery. Sacred Heart sees a high volume of births. Call the hospital or take a tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "How much does a doula cost in Spokane?", a: "Expect to pay $800 to $2,000 for a doula in Spokane. If you're on Apple Health, your plan may cover doula services — call and ask. For private pay, HSA and FSA funds can typically be used. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Are there birth centers in Spokane?", a: "Yes — Spokane Natural Birth Center operates in the area, offering out-of-hospital birth with midwives. Verify CABC accreditation and current operating status directly with the center." },
+      { q: "Can my doula come to the hospital with me in Spokane?", a: "Yes — Sacred Heart, Deaconess, and Holy Family all allow doulas in labor and delivery. Confirm visitor policies during your hospital tour, and bring your birth plan so your care team knows your preferences." },
+      { q: "Does True Joy Birthing work with Spokane families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Spokane birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["boise-id", "seattle-wa"],
+  },
+
 };
 
 export const citySlugs = Object.keys(cities).sort();
