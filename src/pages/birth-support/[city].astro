@@ -45,7 +45,7 @@ const schema = {
         '@type': 'Question',
         name: f.q,
         url: `${pageUrl}#faq-${f.q.toLowerCase().includes('cost') ? 'cost' : f.q.toLowerCase().includes('medicaid') ? 'medicaid' : f.q.toLowerCase().includes('true joy') ? 'brand' : 'hospital'}`,
-        acceptedAnswer: { '@type': 'Answer', text: f.a },
+        acceptedAnswer: { '@type': 'Answer', text: f.a.replace(/<[^>]*>/g, '') },
       })),
     },
     {
@@ -246,7 +246,7 @@ const schema = {
         {faqs.map((faq) => (
           <div class="border border-tjb-lavender-200 rounded-lg p-5 bg-white">
              <h3 class="text-lg font-semibold mb-2" id={`faq-${faq.q.toLowerCase().includes('cost') ? 'cost' : faq.q.toLowerCase().includes('medicaid') ? 'medicaid' : faq.q.toLowerCase().includes('true joy') ? 'brand' : 'hospital'}`}>{faq.q}</h3>
-             <p class="text-tjb-gray faq-answer">{faq.a}</p>
+             <p class="text-tjb-gray faq-answer" set:html={faq.a} />
           </div>
         ))}
       </div>
