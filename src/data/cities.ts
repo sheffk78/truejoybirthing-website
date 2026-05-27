@@ -3535,6 +3535,193 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["hartford-ct"],
   },
+
+
+  "milwaukee-wi": {
+    city: "Milwaukee",
+    state: "WI",
+    slug: "milwaukee-wi",
+    costLow: 800,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Milwaukee's birth community reflects the city's rich cultural diversity, from the historically Black neighborhoods on the North Side to the growing Latino community on the South Side. Grassroots collectives like Milwaukee Doulas of Color actively work to reduce the city's significant Black infant mortality gap, creating a birth-justice ethos woven through hospital systems, community health centers, and independent midwifery practices alike.",
+    heroLocalDetail: "Aurora St. Luke's Medical Center sits on W. Oklahoma Avenue on the south side, about 15 minutes from downtown via I-43 or S. 27th Street. Aurora Sinai is right downtown near 12th and Wisconsin. Ascension Columbia St. Mary's is on Lake Drive on the east side. For walking during pregnancy, the Oak Leaf Trail lakeshore segment and Lake Park above the bluffs of Lake Michigan are where Milwaukee moms head, flat and shaded, and Humboldt Park in Bay View has a nice paved loop.",
+    hospitalDetails: [
+      { name: "Aurora St. Luke's Medical Center", paragraph: "Aurora St. Luke's Medical Center, on W. Oklahoma Avenue on Milwaukee's south side, is the region's flagship hospital and carries a Level III NICU (verified on aurorahealthcare.org). It's nationally ranked in OB/GYN by U.S. News and handles high-risk pregnancies from across the metro. If you're delivering at St. Luke's, having your birth plan ready helps you navigate a busy academic-level hospital that serves a huge catchment area. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Aurora Sinai Medical Center", paragraph: "Aurora Sinai Medical Center, downtown near 12th and Wisconsin, is the second Aurora campus with a Level III NICU and full labor and delivery. Sinai is the more central option for families in the Harambee, Brewer's Hill, and downtown neighborhoods. Same Aurora system as St. Luke's, so if your OB delivers at both, confirm which campus you're heading to before labor starts." },
+      { name: "Ascension Columbia St. Mary's Hospital", paragraph: "Ascension Columbia St. Mary's, on Lake Drive on the east side near the UW-Milwaukee campus, offers labor and delivery with a Level III NICU (contact the hospital directly for current level verification). It's the go-to for east side and Shorewood families and has a reputation for being more intimate than the Aurora campuses. Children's Wisconsin, with a Level IV NICU, is right next door for any transfers that need a higher level of neonatal care." },
+    ],
+    // Birth center search: NPPES registry search for taxonomy 261SB0200X in WI returned
+    // zero results for Milwaukee. No freestanding birth centers identified within city.
+    // Closest is Madison Birth Center (~80 mi west). Home-birth midwifery practices exist.
+    birthCenterDetails: [],
+    medicaidNote: "No — Wisconsin Medicaid (BadgerCare Plus) does not cover doula services as of May 2026. Wisconsin is not among states with active Medicaid doula reimbursement. Advocacy organizations continue pushing for legislation. Milwaukee County families on BadgerCare Plus are served by five managed care plans: iCare, Molina Healthcare, UnitedHealthcare Community Plan, Anthem BCBS (Elevance), and Children's Community Health Plan.",
+    insuranceNote: "Wisconsin's lack of Medicaid doula coverage means Milwaukee families on BadgerCare Plus pay out of pocket for doula services unless their specific managed care plan offers a benefit — call your plan and ask. For families with private insurance, Milwaukee's employer market (Northwestern Mutual, Fiserv, Rockwell Automation) sometimes includes maternal wellness benefits that cover or subsidize doula care. Always verify with your HR department and insurance carrier. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Milwaukee?", a: "Not yet — Wisconsin's BadgerCare Plus does not cover doula services as of May 2026. Some managed care plans may offer limited benefits, so call your plan directly and ask. You can also reach BadgerCare Plus at 1-800-362-3002. Advocacy groups are working on it, and it's worth asking every enrollment period." },
+      { q: "Which Milwaukee hospitals are birth-plan friendly?", a: "Aurora St. Luke's, Aurora Sinai, and Ascension Columbia St. Mary's all accommodate birth plans and allow doulas in labor and delivery. St. Luke's sees well-informed moms with clear preferences regularly as a high-volume center. Call the hospital or take a tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "How much does a doula cost in Milwaukee?", a: "Expect to pay $800 to $2,500 for a doula in Milwaukee. Student doulas may charge $600 to $900. Postpartum-only doulas typically $25 to $40 per hour. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Are there birth centers in Milwaukee?", a: "No freestanding birth centers currently operate within Milwaukee. Families seeking out-of-hospital birth typically hire home-birth certified professional midwives or certified nurse-midwives with home-birth practices. The nearest freestanding birth center is Madison Birth Center, about 80 miles west." },
+      { q: "Can my doula come to the hospital with me in Milwaukee?", a: "Yes — Aurora St. Luke's, Aurora Sinai, and Ascension Columbia St. Mary's all allow doulas in labor and delivery. Confirm visitor policies during your hospital tour, and bring your birth plan so your care team knows your preferences." },
+      { q: "Does True Joy Birthing work with Milwaukee families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Milwaukee birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["chicago-il", "minneapolis-mn"],
+  },
+
+  "kansas-city-mo": {
+    city: "Kansas City",
+    state: "MO",
+    slug: "kansas-city-mo",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Kansas City blends Midwestern warmth with a vibrant arts and jazz heritage, and its birth community reflects that same mix of tradition and progressive energy. Known as the City of Fountains, KC's diverse neighborhoods are anchored by strong Black and Latino communities with rich culinary and musical traditions. The city's hospital safety net serves a broad cross-section of families, and grassroots doula collectives are growing fast on both sides of the state line.",
+    heroLocalDetail: "Truman Medical Center (University Health) is on Holmes Street just east of downtown near the Crown Center area, about 10 minutes from the Country Club Plaza. Saint Luke's Hospital is on the Plaza near 44th and Wornall, right in midtown. Research Medical Center is on Meyer Boulevard in the Brookside area. For walking during pregnancy, Loose Park's rose garden loop and the Brush Creek Trail along the Plaza are flat, shaded, and close to the hospitals.",
+    hospitalDetails: [
+      { name: "Truman Medical Center (University Health)", paragraph: "Truman Medical Center, now branded University Health, is on Holmes Street just east of downtown and serves as Kansas City's safety-net hospital with a Level III NICU (contact the hospital directly for current level verification). Truman handles a high volume of Medicaid births and is where many KC families with complex pregnancies deliver. If you're delivering at Truman, having your birth plan ready is especially important to make sure your preferences are documented in a busy public hospital. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Saint Luke's Hospital of Kansas City", paragraph: "Saint Luke's Hospital, on the Country Club Plaza near 44th and Wornall, is one of KC's premier private hospitals with a Level III NICU (contact the hospital directly for current level verification). It's known for strong midwifery support and a more boutique labor experience compared to the high-volume public hospitals. Saint Luke's is the go-to for families in Brookside, Waldo, and the Plaza neighborhoods." },
+      { name: "Research Medical Center", paragraph: "Research Medical Center, an HCA Healthcare hospital on Meyer Boulevard in the Brookside area, offers labor and delivery with a NICU (contact the hospital directly for current NICU level verification). Research is centrally located and handles a mix of Medicaid and privately insured births. If your OB delivers at Research, confirm your birth plan preferences early since HCA hospitals can have more standardized protocols." },
+    ],
+    // Birth center search: No freestanding birth centers within KC MO city limits.
+    // New Birth Company in Overland Park, KS is the nearest (~15 min south).
+    birthCenterDetails: [],
+    medicaidNote: "No — Missouri does not cover doula services under Medicaid as of May 2026. Missouri has not enacted legislation mandating Medicaid doula reimbursement. Jackson County families on MO HealthNet (Medicaid) are served by UnitedHealthcare Community Plan, Home State Health (Centene), and Molina Healthcare of Missouri.",
+    insuranceNote: "Missouri's lack of Medicaid doula coverage means Kansas City families on MO HealthNet pay out of pocket for doula services. For families with private insurance, KC's employer market (Cerner, Hallmark, H&R Block, Burns & McDonnell) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Kansas City?", a: "Not yet — Missouri Medicaid (MO HealthNet) does not cover doula services as of May 2026. Some managed care plans may offer limited benefits on their own, so call your plan and ask. You can reach MO HealthNet at 1-888-275-5772." },
+      { q: "Which Kansas City hospitals are birth-plan friendly?", a: "Saint Luke's Hospital, Truman Medical Center, and Research Medical Center all accommodate birth plans and allow doulas in labor and delivery. Saint Luke's is known for its midwifery-friendly approach. Call the hospital or take a tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "How much does a doula cost in Kansas City?", a: "Expect to pay $800 to $2,000 for a doula in Kansas City. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Are there birth centers in Kansas City?", a: "No freestanding birth centers operate within Kansas City, Missouri. New Birth Company in Overland Park, Kansas (about 15 minutes south) is the nearest birth center and serves KC-area families on both sides of the state line." },
+      { q: "Can my doula come to the hospital with me in Kansas City?", a: "Yes — Saint Luke's, Truman, and Research Medical Center all allow doulas in labor and delivery. Confirm visitor policies during your hospital tour, and bring your birth plan so your care team knows your preferences." },
+      { q: "Does True Joy Birthing work with Kansas City families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Kansas City birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["memphis-tn", "indianapolis-in", "tulsa-ok"],
+  },
+
+  "albuquerque-nm": {
+    city: "Albuquerque",
+    state: "NM",
+    slug: "albuquerque-nm",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    culture: "Albuquerque sits at the crossroads of Native American, Hispanic, and Anglo cultures, deeply reflected in its art, architecture, and birth traditions. The high-desert city values community-based and midwifery-rooted birth practices, with strong support for out-of-hospital birth options. Dar a Luz Birth and Health Center is one of the most well-known freestanding birth centers in the Southwest, and the local doula community is tight-knit and deeply invested in birth justice.",
+    heroLocalDetail: "UNM Hospital is on Lomas Boulevard near the university, about 10 minutes from downtown. Presbyterian Hospital is on Central Avenue in the Uptown area. Lovelace Medical Center is on Gibson SE near the airport. For walking during pregnancy, the Paseo del Bosque Trail along the Rio Grande is flat, shaded, and beautiful at sunset, and Tingley Beach has a short loop that's popular with expecting moms.",
+    hospitalDetails: [
+      { name: "UNM Hospital", paragraph: "UNM Hospital, on Lomas Boulevard near the University of New Mexico campus, is the state's only academic medical center and handles the highest-level care in New Mexico with a Level III NICU (contact the hospital directly for current level verification). UNM serves a high volume of Medicaid births and is where complex pregnancies from across the state are referred. If you're delivering at UNM, having your birth plan ready helps you navigate a busy teaching hospital with a large catchment area. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Presbyterian Hospital", paragraph: "Presbyterian Hospital, on Central Avenue in the Uptown area, is one of Albuquerque's largest private hospitals with a Level III NICU (contact the hospital directly for current level verification). Presbyterian is known for a more personalized approach compared to the academic volume at UNM, and it's the go-to for families in the Northeast Heights and Uptown neighborhoods." },
+      { name: "Lovelace Medical Center", paragraph: "Lovelace Medical Center, on Gibson SE near the Albuquerque airport, offers labor and delivery with a NICU (contact the hospital directly for current NICU level verification). Lovelace is centrally located and handles a mix of births, including high-risk pregnancies with maternal-fetal medicine specialists." },
+    ],
+    // Birth center: Dar a Luz Birth and Health Center is a well-known freestanding
+    // birth center in Albuquerque. CABC accreditation status should be verified.
+    birthCenterDetails: [
+      { name: "Dar a Luz Birth and Health Center", paragraph: "Dar a Luz Birth and Health Center is Albuquerque's premier freestanding birth center, offering out-of-hospital birth with certified nurse-midwives in a warm, home-like setting. Dar a Luz has strong relationships with UNM and Presbyterian for transfers, which matters if you're planning a birth center birth and want to know your backup hospital. It's a cornerstone of Albuquerque's midwifery and doula community." },
+    ],
+    medicaidNote: "Yes — New Mexico Medicaid (Centennial Care 2.0) covers doula services effective January 1, 2024, following the passage of the Doula Licensure Act (SB 195) and approval of a Medicaid State Plan Amendment. Bernalillo County families on Centennial Care are served by Blue Cross Blue Shield of NM, Western Sky Community Care (Centene), and Molina Healthcare of NM. Contact Centennial Care at 1-888-990-6789 or visitCentennialCareNM.com to confirm your plan's doula coverage.",
+    insuranceNote: "New Mexico's Medicaid doula coverage (effective January 2024) makes it one of the more progressive states in the Southwest. For families with private insurance, Albuquerque's employer market (Sandia National Labs, Kirtland AFB, Intel Rio Rancho) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Albuquerque?", a: "Yes — New Mexico Medicaid (Centennial Care 2.0) covers doula services as of January 2024. Call your managed care plan and ask about doula benefits, or contact Centennial Care at 1-888-990-6789. This is real coverage, not just a pilot, so push for your benefit if your plan gives you trouble." },
+      { q: "Which Albuquerque hospitals are birth-plan friendly?", a: "UNM Hospital, Presbyterian Hospital, and Lovelace Medical Center all accommodate birth plans and allow doulas in labor and delivery. UNM sees a high volume of births with strong midwifery support. Call the hospital or take a tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "How much does a doula cost in Albuquerque?", a: "Expect to pay $800 to $2,200 for a doula in Albuquerque. If you're on Centennial Care, your plan may cover doula services as of January 2024 — call and ask. For private pay, HSA and FSA funds can typically be used. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Are there birth centers in Albuquerque?", a: "Yes — Dar a Luz Birth and Health Center is a well-established freestanding birth center in Albuquerque, offering out-of-hospital birth with certified nurse-midwives. It has strong transfer relationships with UNM and Presbyterian hospitals." },
+      { q: "Can my doula come to the hospital with me in Albuquerque?", a: "Yes — UNM Hospital, Presbyterian, and Lovelace all allow doulas in labor and delivery. Confirm visitor policies during your hospital tour, and bring your birth plan so your care team knows your preferences." },
+      { q: "Does True Joy Birthing work with Albuquerque families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Albuquerque birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["phoenix-az", "tucson-az", "denver-co", "el-paso-tx"],
+  },
+
+  "salt-lake-city-ut": {
+    city: "Salt Lake City",
+    state: "UT",
+    slug: "salt-lake-city-ut",
+    costLow: 1000,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Salt Lake City's birth culture blends strong family values rooted in the city's LDS heritage with a growing progressive birth community pushing for more options. Utah's high birth rate means the hospital and doula infrastructure is robust, and families here tend to be well-informed about their choices. The city's outdoor lifestyle and health-conscious culture shape how families approach birth, with strong interest in unmedicated and birth center options alongside traditional hospital births.",
+    heroLocalDetail: "University of Utah Hospital sits on the medical campus at the base of the Wasatch foothills, about 10 minutes from downtown via I-15 or Foothill Drive. Intermountain Medical Center is in Murray, about 12 minutes south via I-15. For walking during pregnancy, Liberty Park's 1.5-mile loop and the Jordan River Parkway Trail are flat, shaded, and where SLC moms head in the third trimester.",
+    hospitalDetails: [
+      { name: "University of Utah Hospital", paragraph: "University of Utah Hospital, on the medical campus at the base of the Wasatch foothills, is the region's academic medical center and carries a Level IV NICU (verified on healthcare.utah.edu). It's where high-risk pregnancies from across Utah and surrounding states are referred, with maternal-fetal medicine specialists and the full range of neonatal subspecialties. If you're delivering at the U, having your birth plan ready helps you navigate a busy academic hospital. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Intermountain Medical Center", paragraph: "Intermountain Medical Center, in Murray about 12 minutes south of downtown via I-15, is Intermountain Healthcare's flagship hospital with a Level III NICU (contact the hospital directly for current level verification). It's one of the highest-volume birthing hospitals in the state and serves families from across the Salt Lake Valley. Intermountain is known for evidence-based protocols and standardized care, so having your birth plan documented matters." },
+      { name: "Primary Children's Hospital", paragraph: "Primary Children's Hospital, adjacent to the University of Utah medical campus on Foothill Drive, is a Level IV NICU referral center (verified on primarychildrens.org). Primary Children's doesn't handle labor and delivery itself — births happen at the U next door, and neonates who need a higher level of care transfer here. Knowing this transfer pathway exists can relieve anxiety if you're delivering at the U with a high-risk pregnancy." },
+    ],
+    // Birth center search: Better Birth LLC operates in the SLC area.
+    // Sacred Mountain Birth Center in Midway, UT (~45 min) is CABC-accredited.
+    birthCenterDetails: [
+      { name: "Better Birth LLC", paragraph: "Better Birth LLC is a freestanding birth center in the Salt Lake City area offering out-of-hospital birth with certified professional midwives. Better Birth serves families seeking unmedicated birth in a home-like setting, with transfer relationships to local hospitals. Verify current operating status and CABC accreditation directly with the center." },
+    ],
+    medicaidNote: "Yes — Utah Medicaid covers doula services as of October 1, 2024, following the passage of HB 222 in the 2024 legislative session. Salt Lake County families on Medicaid are served by Molina Healthcare of Utah, UnitedHealthcare Community Plan, and SelectHealth (Intermountain). Contact Utah Medicaid at 1-866-608-4212 or visit health.utah.gov to confirm your plan's doula coverage and find participating doulas.",
+    insuranceNote: "Utah's Medicaid doula coverage (HB 222, effective October 2024) is a significant win for SLC families. For families with private insurance, Salt Lake City's employer market (University of Utah, Intermountain Healthcare, Goldman Sachs, Qualtrics) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Salt Lake City?", a: "Yes — Utah Medicaid covers doula services as of October 2024 under HB 222. Contact your managed care plan and ask about doula benefits, or call Utah Medicaid at 1-866-608-4212. This is statewide coverage, so push for your benefit if your plan gives you trouble." },
+      { q: "Which Salt Lake City hospitals are birth-plan friendly?", a: "University of Utah Hospital and Intermountain Medical Center both accommodate birth plans and allow doulas in labor and delivery. The U tends to see more birth plans as an academic center. Call the hospital or take a tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "How much does a doula cost in Salt Lake City?", a: "Expect to pay $1,000 to $2,500 for a doula in Salt Lake City. If you're on Utah Medicaid, your plan may cover doula services as of October 2024 — call and ask. For private pay, HSA and FSA funds can typically be used. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Are there birth centers in Salt Lake City?", a: "Yes — Better Birth LLC operates a freestanding birth center in the Salt Lake City area. Sacred Mountain Birth Center in Midway (about 45 minutes southeast) is CABC-accredited and serves families seeking out-of-hospital birth." },
+      { q: "Can my doula come to the hospital with me in Salt Lake City?", a: "Yes — University of Utah Hospital and Intermountain Medical Center allow doulas in labor and delivery. Confirm visitor policies during your hospital tour, and bring your birth plan so your care team knows your preferences." },
+      { q: "Does True Joy Birthing work with Salt Lake City families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Salt Lake City birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["denver-co", "reno-nv", "las-vegas-nv"],
+  },
+
+  "birmingham-al": {
+    city: "Birmingham",
+    state: "AL",
+    slug: "birmingham-al",
+    costLow: 700,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Birmingham's birth culture is shaped by the legacy of the Civil Rights Movement and a deeply rooted Black community that drives local birth advocacy. The city faces significant maternal health disparities, which has fueled strong doula and midwifery activism. UAB anchors the medical infrastructure as one of the premier academic health systems in the South, and grassroots collectives are building bridges between hospital care and community-based birth support.",
+    heroLocalDetail: "UAB Hospital is downtown on University Boulevard, about 5 minutes from the central business district. Brookwood Baptist Medical Center is on Brookwood Medical Drive in the Highway 280 corridor, about 15 minutes southeast. Ascension St. Vincent's is on St. Vincent's Drive near Homewood. For walking during pregnancy, Railroad Park's loop and the Vulcan Trail at the base of Red Mountain are flat, shaded, and popular with expecting moms.",
+    hospitalDetails: [
+      { name: "UAB Hospital", paragraph: "UAB Hospital, downtown on University Boulevard, is Alabama's premier academic medical center and carries a Level III NICU (contact the hospital directly for current level verification). UAB handles the most complex pregnancies in the state and is where high-risk referrals from across Alabama land. If you're delivering at UAB, having your birth plan ready is crucial to make your preferences known in a busy teaching hospital. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Brookwood Baptist Medical Center", paragraph: "Brookwood Baptist Medical Center, on Brookwood Medical Drive in the Highway 280 corridor, is one of Birmingham's largest private hospitals with a Level III NICU (contact the hospital directly for current level verification). Brookwood Baptist serves families from the over-the-mountain suburbs (Hoover, Vestavia, Mountain Brook) and has a strong midwifery program. It's the go-to for families who want a large hospital birth with a more community-hospital feel." },
+      { name: "Ascension St. Vincent's Birmingham", paragraph: "Ascension St. Vincent's Birmingham, on St. Vincent's Drive near Homewood, offers labor and delivery with a NICU (contact the hospital directly for current NICU level verification). St. Vincent's is centrally located and serves a mix of Medicaid and privately insured families. As part of the Ascension system, it has standardized protocols that make having a written birth plan especially important." },
+    ],
+    // Birth center search: No freestanding birth centers identified within Birmingham.
+    // Alabama has some of the most restrictive birth center regulations in the country.
+    birthCenterDetails: [],
+    medicaidNote: "No — Alabama does not cover doula services under Medicaid as of May 2026. Alabama has not enacted legislation mandating Medicaid doula reimbursement. Jefferson County families on Alabama Medicaid are served by Blue Cross Blue Shield of Alabama, UnitedHealthcare Community Plan, and Aetna Better Health of Alabama.",
+    insuranceNote: "Alabama's lack of Medicaid doula coverage means Birmingham families on Medicaid pay out of pocket for doula services. For families with private insurance, Birmingham's employer market (UAB Health System, Regions Financial, Alabama Power, Encompass Health) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Birmingham?", a: "Not yet — Alabama Medicaid does not cover doula services as of May 2026. Some managed care plans may offer limited benefits on their own, so call your plan and ask. You can reach Alabama Medicaid at 1-800-362-1504. Advocacy groups are working on it." },
+      { q: "Which Birmingham hospitals are birth-plan friendly?", a: "UAB Hospital, Brookwood Baptist, and Ascension St. Vincent's all accommodate birth plans and allow doulas in labor and delivery. Brookwood Baptist's midwifery program is especially supportive. Call the hospital or take a tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "How much does a doula cost in Birmingham?", a: "Expect to pay $700 to $1,800 for a doula in Birmingham. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Are there birth centers in Birmingham?", a: "No freestanding birth centers currently operate within Birmingham. Alabama has some of the most restrictive birth center regulations in the country, which has limited out-of-hospital birth options. Families seeking birth center care typically look to home-birth midwifery practices." },
+      { q: "Can my doula come to the hospital with me in Birmingham?", a: "Yes — UAB Hospital, Brookwood Baptist, and St. Vincent's all allow doulas in labor and delivery. Confirm visitor policies during your hospital tour, and bring your birth plan so your care team knows your preferences." },
+      { q: "Does True Joy Birthing work with Birmingham families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Birmingham birth setting, whether you're delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["nashville-tn", "atlanta-ga", "memphis-tn"],
+  },
+
+  "louisville-ky": {
+    city: "Louisville",
+    state: "KY",
+    slug: "louisville-ky",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Louisville blends Southern charm with Midwestern practicality, anchored by its bourbon and equestrian heritage. The city's birth community is growing fast, with grassroots doulas addressing maternal health disparities in the West End and a supportive network of hospital-based midwifery programs. Norton Healthcare and UofL Health anchor the hospital landscape, and families who know which system their OB delivers at have a real advantage in navigating Louisville's medical options.",
+    heroLocalDetail: "Norton Hospital is downtown on Preston Street, adjacent to the Norton Women's and Children's Hospital. UofL Health Jewish Hospital is on Muhammad Ali Boulevard in the medical district. Baptist Health Louisville is on Keanwood Drive near the Hurstborne area. For walking during pregnancy, Cherokee Park's 2.4-mile Scenic Loop and the Waterfront Park trail along the Ohio River are flat, shaded, and where Louisville moms head in the third trimester.",
+    hospitalDetails: [
+      { name: "Norton Hospital / Norton Women's and Children's Hospital", paragraph: "Norton Hospital and its adjacent Norton Women's and Children's Hospital, both on Preston Street in downtown Louisville, are the go-to birthing hospitals for the Norton system. Norton Women's and Children's carries a Level III NICU (contact the hospital directly for current level verification) and is the most popular Louisville hospital for birth. The Norton campus handles the highest volume of births in the city, and having your birth plan ready helps you navigate a busy system. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "UofL Health Jewish Hospital", paragraph: "UofL Health Jewish Hospital, on Muhammad Ali Boulevard in the downtown medical district, offers labor and delivery with a NICU (contact the hospital directly for current NICU level verification). Jewish Hospital is part of the UofL Health academic system and handles complex pregnancies alongside its transplant and cardiac specialties. If your OB is UofL-affiliated, confirm which campus you're delivering at." },
+      { name: "Baptist Health Louisville", paragraph: "Baptist Health Louisville, on Keanwood Drive in the Hurstborne area east of downtown, offers labor and delivery with a NICU (contact the hospital directly for current NICU level verification). Baptist Health serves families from the east end suburbs and has a reputation for a community-hospital feel within a large system. If you're delivering at Baptist, having your birth plan documented matters since protocols can vary." },
+    ],
+    // Birth center search: No CABC-accredited freestanding birth centers identified
+    // within Louisville. Home-birth midwifery practices serve the area.
+    birthCenterDetails: [],
+    medicaidNote: "No — as of May 2026, Kentucky has not implemented Medicaid doula coverage. While legislation has been discussed, no bill has been enacted into law with an implemented State Plan Amendment. Jefferson County families on Kentucky Medicaid are served by Aetna Better Health of Kentucky, Passport Health Plan by Molina, WellCare of Kentucky (Centene), and Humana/CareSource.",
+    insuranceNote: "Kentucky's Medicaid program has not yet implemented doula coverage as of May 2026. For families with private insurance, Louisville's employer market (Humana, UPS, Ford, Yum! Brands) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Louisville?", a: "Not yet — Kentucky Medicaid has not implemented doula coverage as of May 2026. Some managed care plans may offer limited benefits on their own, so call your plan and ask. You can reach Kentucky Medicaid at 1-800-635-2570. Advocacy groups are working toward coverage." },
+      { q: "Which Louisville hospitals are birth-plan friendly?", a: "Norton Women's and Children's Hospital, UofL Health Jewish Hospital, and Baptist Health Louisville all accommodate birth plans and allow doulas in labor and delivery. Norton Women's is the most popular for birth in Louisville. Call the hospital or take a tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "How much does a doula cost in Louisville?", a: "Expect to pay $800 to $2,000 for a doula in Louisville. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Are there birth centers in Louisville?", a: "No freestanding birth centers currently operate within Louisville. Families seeking out-of-hospital birth typically hire home-birth certified professional midwives or certified nurse-midwives with home-birth practices." },
+      { q: "Can my doula come to the hospital with me in Louisville?", a: "Yes — Norton, Jewish Hospital, and Baptist Health all allow doulas in labor and delivery. Confirm visitor policies during your hospital tour, and bring your birth plan so your care team knows your preferences." },
+      { q: "Does True Joy Birthing work with Louisville families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Louisville birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["nashville-tn", "indianapolis-in", "columbus-oh"],
+  },
+
 };
 
 export const citySlugs = Object.keys(cities).sort();
