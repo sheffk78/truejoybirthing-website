@@ -3391,6 +3391,150 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["jacksonville-fl", "orlando-fl"],
   },
+  "charleston-sc": {
+    city: "Charleston",
+    state: "SC",
+    slug: "charleston-sc",
+    costLow: 900,
+    costHigh: 2200,
+    shelbiServesHere: true,
+    culture: "Charleston blends deep Lowcountry heritage with a thriving food and arts scene — think Spanish moss, Rainbow Row, and shrimp-and-grits hospitality. Birth workers here often emphasize cultural warmth and community-rooted care, reflecting the city\u2019s strong Black birthing traditions and Gullah influence. The pace is famously unhurried, but hospital traffic on the peninsula can test that patience.",
+    heroLocalDetail: "MUSC Health University Medical Center sits on the downtown Charleston peninsula near the Ravenel Bridge, making it reachable but prone to tourist-season gridlock — plan extra travel time, especially during spring and summer. Roper St. Francis Healthcare operates multiple campuses across the metro, with its main maternity hospital in West Ashley, a short drive from downtown via US-17. Charleston\u2019s humid subtropical climate means hot, muggy summers and a June-through-November hurricane season worth factoring into your birth plan. The city\u2019s oldest landmarks, like the Arthur Ravenel Jr. Bridge and the historic downtown medical district, are helpful navigation anchors when you\u2019re heading to a facility in labor.",
+    hospitalDetails: [
+      { name: "MUSC Health University Medical Center", paragraph: "MUSC Health is South Carolina\u2019s only academic medical center and the flagship of the state\u2019s health system. Its Shawn Jenkins Children\u2019s Hospital, opened in 2020 on the downtown peninsula, houses a neonatology program that MUSC describes as offering the highest level of neonatal care in the state; published sources generally refer to this as a verified Level IV NICU (confirmed on musc.edu and childrenshealthdefense.org), making it the referral center for the most critically ill newborns across the Lowcountry and beyond. MUSC\u2019s maternity services include maternal-fetal medicine specialists and 24/7 obstetric emergency coverage. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences ready." },
+      { name: "Roper St. Francis Healthcare", paragraph: "Roper St. Francis is the Lowcountry\u2019s largest private healthcare system, with maternity services centered at Roper Hospital in West Ashley. The system provides a full range of obstetric care including labor and delivery, maternal-fetal medicine consultations, and a Special Care Nursery for babies needing extra support after birth. Roper St. Francis is known for a more community-hospital feel while still offering 24/7 anesthesiology and neonatal support. If you\u2019re delivering here, having your birth plan in hand helps the care team support your preferences from day one. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> before your tour." },
+    ],
+    birthCenterDetails: [
+      { name: "Charleston Birth Place", paragraph: "Charleston Birth Place is the Lowcountry\u2019s only freestanding birth center, operating since 2008 with over 3,000 babies delivered. Located at 1300 Hospital Drive, Suite 270 in Mount Pleasant — just across the Ravenel Bridge from downtown — the center is closely integrated with its partner hospital for seamless transfer if needed. Certified midwives provide prenatal care, water birth, well-baby care, and women\u2019s health services in a home-like setting designed for comfort, privacy, and freedom of movement during labor." },
+    ],
+    medicaidNote: "South Carolina Medicaid (Healthy Connections) began covering doula services in 2024 under an SCDHHS expansion. Medicaid-enrolled doulas can be reimbursed for prenatal, labor, and postpartum visits — verify your doula\u2019s enrollment status through the SCDHHS provider directory.",
+    insuranceNote: "Most private insurers in South Carolina (BlueCross BlueShield of SC, UnitedHealthcare, Aetna, Cigna) do not yet cover doula services as a standard benefit, though some employer plans may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage and ask about out-of-network doula reimbursement before booking.",
+    faqs: [
+      { q: "Does South Carolina Medicaid really cover doula services?", a: "Yes! As of 2024, SCDHHS expanded Healthy Connections Medicaid to include doula services. Covered visits include prenatal, labor and delivery, and postpartum support. Your doula must be enrolled as a Medicaid provider — ask them directly or search the SCDHHS provider portal. You deserve support, and now your insurance helps pay for it." },
+      { q: "What\u2019s the difference between MUSC and Roper St. Francis for maternity care?", a: "MUSC Health is an academic medical center with a verified Level IV NICU, maternal-fetal medicine specialists, and a high-volume labor unit — ideal for high-risk pregnancies. Roper St. Francis (Roper Hospital in West Ashley) has a smaller, quieter labor unit with a Special Care Nursery and 24/7 anesthesiology; many families choose it for a more community-oriented birth experience." },
+      { q: "Is there a birth center in Charleston?", a: "Yes — Charleston Birth Place in Mount Pleasant is the area\u2019s only freestanding birth center. It\u2019s run by certified midwives, offers water birth, and has a close transfer partnership with a nearby hospital. It\u2019s been serving Lowcountry families since 2008." },
+      { q: "How much does a doula cost in Charleston, SC?", a: "Expect to pay $900 to $2,200 for a doula in Charleston, depending on experience level and package inclusions. If you\u2019re on Medicaid, SCDHHS covers doula services — ask your doula if they\u2019re enrolled. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Should I worry about hurricane season when planning a Charleston birth?", a: "Charleston\u2019s hurricane season runs June 1 through November 30, which overlaps with many due dates. It\u2019s wise to have an evacuation plan, a hospital bag packed early, and a communication plan with your doula in case of severe weather. MUSC and Roper both have robust emergency protocols; your care team can guide you." },
+    ],
+    nearbyCities: ["greenville-sc"],
+  },
+  "richmond-va": {
+    city: "Richmond",
+    state: "VA",
+    slug: "richmond-va",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: true,
+    culture: "Richmond is Virginia\u2019s capital city with a growing birth community anchored by VCU\u2019s academic medical center and Bon Secours\u2019 community hospitals. The city mixes historic neighborhoods with modern development, and families here value both evidence-based care options and community-rooted doula support. Richmond\u2019s birth workers are connected and collaborative, particularly through organizations like Birth Matters RVA.",
+    heroLocalDetail: "VCU Medical Center sits in downtown Richmond at 1250 East Marshall Street, right off I-95 and I-64 — accessible from most neighborhoods within 15 minutes but subject to rush-hour bottlenecks on the Downtown Expressway. Bon Secours St. Mary\u2019s Hospital is at 5801 Bremo Road in the Near West End, about 10 minutes from the Museum District and Fan neighborhoods. Richmond\u2019s hot, humid summers and occasional winter ice storms can slow your hospital drive — know your route before you need it. The James River Park System\u2019s trails and the Fan\u2019s tree-lined streets are popular for third-trimester walks.",
+    hospitalDetails: [
+      { name: "VCU Medical Center", paragraph: "VCU Medical Center is central Virginia\u2019s academic powerhouse — a Level I trauma center with a verified Level IV NICU (stated directly on vcuhealth.org) at the Children\u2019s Hospital of Richmond at VCU. It\u2019s the referral destination for high-risk pregnancies from across the region, with maternal-fetal medicine specialists, 24/7 neonatology, and a high-volume labor unit that sees births from every corner of the Commonwealth. Doulas are welcome, and the academic setting means the care team is used to working with birth plans. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences ready." },
+      { name: "Bon Secours St. Mary\u2019s Hospital", paragraph: "Bon Secours St. Mary\u2019s Hospital at 5801 Bremo Road is Richmond\u2019s most popular community maternity hospital, with a Level III NICU (stated directly on bonsecours.com) and a reputation for a warmer, more intimate birth experience than the academic setting at VCU. The Women\u2019s Center at St. Mary\u2019s offers private labor suites, midwifery options, and lactation support. If you\u2019re delivering here, having your birth plan in hand helps the care team support your preferences from day one. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> before your tour." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Richmond, Henrico County, and Chesterfield County. Google Maps search found no
+    // freestanding birth centers currently operating in the Richmond metro area.
+    // Verified 2026-05-27. Families seeking out-of-hospital birth connect with
+    // home-birth midwives practicing in the greater Richmond area.
+    birthCenterDetails: [],
+    medicaidNote: "Virginia Medicaid does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Richmond families on Medicaid must pay out of pocket, though some doulas offer sliding-scale fees. Ask your doula about payment plans or reduced-rate options.",
+    insuranceNote: "Most private insurers in Virginia (Anthem Blue Cross, UnitedHealthcare, Aetna, Cigna) do not cover doula services as a standard benefit. Check your plan for out-of-network reimbursement or HSA/FSA eligibility. Contact your provider directly to confirm what\u2019s covered.",
+    faqs: [
+      { q: "Does Virginia Medicaid cover doula services?", a: "No. As of 2026, Virginia Medicaid does not cover doula services. If you\u2019re on Medicaid in the Richmond area, you\u2019ll need to pay for a doula out of pocket — but many Richmond doulas offer sliding-scale fees or payment plans. You deserve support regardless of insurance status. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> while you figure out your options." },
+      { q: "How much does a doula cost in Richmond?", a: "Expect to pay $800 to $2,000 for a birth doula in Richmond. Some doulas offer sliding-scale pricing or payment plans. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to start thinking about what matters most to you." },
+      { q: "Does True Joy Birthing work with Richmond families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Richmond birth setting, whether you\u2019re delivering at VCU, St. Mary\u2019s, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+      { q: "Are there doulas in Richmond?", a: "Richmond has an active, connected doula community. Organizations like Birth Matters RVA and individual practices offer birth and postpartum support across the metro. Start with the True Joy Birthing app to find local doulas, and interview a few until one feels right." },
+      { q: "Can my doula come to the hospital with me in Richmond?", a: "Yes \u2014 both VCU Medical Center and Bon Secours St. Mary\u2019s allow doulas in labor and delivery. VCU\u2019s academic setting means they\u2019re especially accustomed to working with birth plans and doula support. Confirm during your hospital tour, and bring your birth plan to help your care team support your preferences." },
+    ],
+    nearbyCities: ["virginia-beach-va"],
+  },
+  "grand-rapids-mi": {
+    city: "Grand Rapids",
+    state: "MI",
+    slug: "grand-rapids-mi",
+    costLow: 700,
+    costHigh: 1800,
+    shelbiServesHere: true,
+    culture: "Grand Rapids is West Michigan\u2019s largest city and a growing healthcare hub, anchored by the Medical Mile downtown. The birth community is smaller than Detroit\u2019s but tight-knit, with organizations like Great Lakes Doulas offering sliding-scale support and West Michigan Midwifery providing the region\u2019s only freestanding birth center. Families here tend to be pragmatic and community-oriented.",
+    heroLocalDetail: "Corewell Health Butterworth Hospital (formerly Spectrum Health) sits at 100 Michigan Street NE on the downtown Medical Mile, adjacent to Helen DeVos Children\u2019s Hospital. Trinity Health Grand Rapids (formerly Mercy Health Saint Mary\u2019s) is at 200 Jefferson Avenue SE, about 1.5 miles away in the Heritage Hill area. Both are reachable within 10\u201315 minutes from most Grand Rapids neighborhoods, but US-131 construction zones and winter lake-effect snow can slow your drive. The Fred Meijer White Pine Trail and Millennium Park trails are popular third-trimester walking spots.",
+    hospitalDetails: [
+      { name: "Corewell Health Butterworth Hospital", paragraph: "Corewell Health Butterworth Hospital (formerly Spectrum Health Butterworth) is Grand Rapids\u2019 flagship academic medical center on the Medical Mile downtown. Helen DeVos Children\u2019s Hospital, physically connected on the same campus, houses West Michigan\u2019s only verified Level IV NICU (stated directly on corewellhealth.org) \u2014 the highest level of neonatal care, capable of treating the most critically ill newborns including surgical cases. Corewell\u2019s maternity services include maternal-fetal medicine specialists, 24/7 neonatology, and a high-volume labor unit. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences ready." },
+      { name: "Trinity Health Grand Rapids Hospital", paragraph: "Trinity Health Grand Rapids (formerly Mercy Health Saint Mary\u2019s) is at 200 Jefferson Avenue SE in central Grand Rapids. It offers a Level II NICU (stated directly on trinityhealthmichigan.org) for moderately ill newborns and a quieter, more community-oriented labor unit than the academic bustle of Corewell. For Level III or IV neonatal care, families are typically transferred to Helen DeVos Children\u2019s Hospital about 1.5 miles away. Having your birth plan in hand helps the care team support your preferences from day one. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> before your tour." },
+    ],
+    birthCenterDetails: [
+      { name: "West Michigan Midwifery Birth Center", paragraph: "West Michigan Midwifery is the only freestanding birth center in the Grand Rapids area, offering both home birth and birth center options. Staffed by Michigan Board of Licensed Midwives, they provide water birth, prenatal care, postpartum care, and lactation support. Free consultations are available for families exploring out-of-hospital birth options." },
+    ],
+    medicaidNote: "Michigan Medicaid does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Grand Rapids families on Medicaid must pay out of pocket, though some doulas like Great Lakes Doulas offer sliding-scale fees or payment plans.",
+    insuranceNote: "Most private insurers in Michigan (Blue Cross Blue Shield of Michigan, Priority Health, UnitedHealthcare, McLaren) do not cover doula services as a standard benefit. Check your plan for out-of-network reimbursement or HSA/FSA eligibility. Contact your provider directly to confirm what\u2019s covered.",
+    faqs: [
+      { q: "Does Michigan Medicaid cover doula services?", a: "No. As of 2026, Michigan Medicaid does not cover doula services. If you\u2019re on Medicaid in the Grand Rapids area, you\u2019ll need to pay for a doula out of pocket \u2014 but some doulas like Great Lakes Doulas offer sliding-scale fees or payment plans. You deserve support regardless of insurance status. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> while you figure out your options." },
+      { q: "How much does a doula cost in Grand Rapids?", a: "Expect to pay $700 to $1,800 for a birth doula in Grand Rapids. Great Lakes Doulas and some independent practices offer sliding-scale pricing. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Does True Joy Birthing work with Grand Rapids families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Grand Rapids birth setting \u2014 whether you\u2019re delivering at Corewell, Trinity Health, West Michigan Midwifery, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+      { q: "Are there birth centers in Grand Rapids?", a: "West Michigan Midwifery operates Grand Rapids\u2019 only freestanding birth center, offering water birth and midwifery care. For families seeking an out-of-hospital option, it\u2019s the dedicated choice. Start with a free consultation to see if it\u2019s the right fit." },
+      { q: "Can my doula come to the hospital with me in Grand Rapids?", a: "Yes \u2014 both Corewell Health Butterworth and Trinity Health Grand Rapids allow doulas in labor and delivery. Confirm during your hospital tour, and bring your birth plan to help your care team support your preferences." },
+    ],
+    nearbyCities: ["detroit-mi"],
+  },
+  "aurora-co": {
+    city: "Aurora",
+    state: "CO",
+    slug: "aurora-co",
+    costLow: 900,
+    costHigh: 2000,
+    shelbiServesHere: true,
+    culture: "Aurora is Colorado\u2019s third-largest city and one of its most diverse \u2014 over 160 languages are spoken in local schools. The birth community reflects that mix, with culturally concordant doula support and multilingual resources available. The Anschutz Medical Campus anchors the region\u2019s academic medicine, and the city\u2019s large military community (former Fitzsimons Army Medical Center site) means many families are familiar with navigating healthcare systems.",
+    heroLocalDetail: "UCHealth University of Colorado Hospital sits on the Anschutz Medical Campus at 12605 East 16th Avenue in north-central Aurora, with direct access off I-225 and Colfax Avenue. Sky Ridge Medical Center in Lone Tree is about 15 miles south via I-25, serving families in south Aurora and the Tech Center corridor. Aurora\u2019s dry winters and intense summer heat can make the drive to the hospital uncomfortable at 38 weeks \u2014 plan your route ahead of time. Cherry Creek State Park and the High Line Canal Trail are popular third-trimester walking spots with flat, well-maintained paths.",
+    hospitalDetails: [
+      { name: "UCHealth University of Colorado Hospital", paragraph: "UCHealth University of Colorado Hospital (UCH) on the Anschutz Medical Campus is the region\u2019s only Level I trauma center and academic medical center. Children\u2019s Hospital Colorado, physically connected on the same campus, operates a verified Level IV NICU (stated directly on childrenscolorado.org) \u2014 the highest neonatal care level available. UCH\u2019s maternity services include maternal-fetal medicine specialists, 24/7 obstetric coverage, and a high-volume labor unit. Doulas are welcome in this academic setting. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences ready." },
+      { name: "Sky Ridge Medical Center", paragraph: "Sky Ridge Medical Center at 1010 Ridgegate Parkway in Lone Tree is about 15 miles south of Aurora via I-25, serving families across the south metro. It has a verified Level III NICU (stated directly on skyridgemedcenter.com) and a Women\u2019s Center with private suites, midwifery options, and lactation support. Sky Ridge offers a more community-oriented experience than the academic bustle of the Anschutz campus. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> before your tour." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results within
+    // Aurora city limits. Google Maps search found Mountain Midwifery & Birth Center in
+    // Denver (1722 Syracuse St, Denver, CO 80220, ~10 miles west of Aurora) as the
+    // nearest freestanding birth center. No birth centers currently operate within
+    // Aurora. Verified 2026-05-27.
+    birthCenterDetails: [],
+    medicaidNote: "Health First Colorado (Colorado Medicaid) covers doula services as of July 1, 2024. Medicaid-enrolled doulas can be reimbursed for prenatal, labor, and postpartum visits. Verify your doula\u2019s enrollment status through the Health First Colorado provider directory, and ask whether they accept Medicaid during your initial consultation.",
+    insuranceNote: "If you\u2019re on Health First Colorado (Medicaid), doula services are now covered. For private insurance (UnitedHealthcare, Anthem Blue Cross, Kaiser, Cigna), doula coverage varies by plan. Many Aurora families use HSA or FSA funds for out-of-pocket doula costs. Always call your insurer to confirm coverage before booking.",
+    faqs: [
+      { q: "Does Colorado Medicaid cover doula services?", a: "Yes! As of July 2024, Health First Colorado (Colorado Medicaid) covers doula services including prenatal visits, labor support, and postpartum care. Your doula must be enrolled as a Health First Colorado provider. Ask them directly or search the provider directory. You deserve support, and now your insurance helps pay for it." },
+      { q: "How much does a doula cost in Aurora?", a: "Expect to pay $900 to $2,000 for a birth doula in the Aurora/Denver metro. If you\u2019re on Health First Colorado (Medicaid), your doula services may be covered at no cost. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Does True Joy Birthing work with Aurora families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Aurora birth setting \u2014 whether you\u2019re delivering at UCHealth, Sky Ridge, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+      { q: "Are there birth centers near Aurora?", a: "There are no freestanding birth centers within Aurora city limits. Mountain Midwifery & Birth Center in Denver (about 10 miles west) is the nearest option, offering water birth and midwifery care. For families in south Aurora, Sky Ridge Medical Center provides midwifery options within a hospital setting." },
+      { q: "Can my doula come to the hospital with me in Aurora?", a: "Yes \u2014 both UCHealth and Sky Ridge allow doulas in labor and delivery. The Anschutz campus\u2019s academic setting means they\u2019re especially accustomed to birth plans and doula support. Confirm during your hospital tour, and bring your birth plan to help your care team support your preferences." },
+    ],
+    nearbyCities: ["denver-co"],
+  },
+  "new-haven-ct": {
+    city: "New Haven",
+    state: "CT",
+    slug: "new-haven-ct",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: true,
+    culture: "New Haven is a compact, walkable city anchored by Yale University and Yale New Haven Hospital \u2014 one of the most well-resourced academic medical centers in New England. The birth community is small but connected, with doulas serving families from the Hill neighborhood to the suburbs of East Rock and Westville. Being a college town means access to evidence-based resources and student-doula programs that can help keep costs down.",
+    heroLocalDetail: "Yale New Haven Hospital sits at 20 York Street in downtown New Haven, right off I-95 and I-91 \u2014 accessible from most neighborhoods within 10\u201315 minutes. The medical district is walkable from East Rock, Dwight, and the Hill, but parking can be tight during Yale\u2019s academic year. New Haven\u2019s dense urban layout means shorter drives than most cities this size, but winter nor\u2019easters can make the hospital trip icy and slow. East Rock Park\u2019s walking trails and the Farmington Canal Greenway are popular third-trimester spots.",
+    hospitalDetails: [
+      { name: "Yale New Haven Hospital", paragraph: "Yale New Haven Hospital is the primary maternity hospital in the region, with over 4,500 births annually. It\u2019s a 1,541-bed Level I trauma center affiliated with Yale School of Medicine, with maternal-fetal medicine specialists and 24/7 neonatology. The adjacent Yale New Haven Children\u2019s Hospital operates a verified Level IV NICU (rated Level IV by the American Academy of Pediatrics in 2018 per Yale New Haven Health institutional sources) \u2014 the highest neonatal care designation and one of only two Level I Pediatric Trauma Centers in Connecticut. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences ready." },
+      { name: "Yale New Haven Children\u2019s Hospital", paragraph: "Yale New Haven Children\u2019s Hospital, at 1 Park Street on the same downtown medical campus, is a 202-bed pediatric hospital with a verified Level IV NICU (rated Level IV by the AAP in 2018 per Yale New Haven Health institutional sources). The NICU was renovated in 2018 and includes couplet rooms for mother and baby. For families with high-risk pregnancies or anticipated NICU needs, this is the referral center for all of southern Connecticut. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> before your tour." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // New Haven and New Haven County. Connecticut passed legislation in 2023 (Public Act
+    // 23-97) allowing freestanding birth centers to be licensed, but as of 2026 no birth
+    // centers have opened in the Greater New Haven area. Google Maps search confirmed no
+    // freestanding birth centers currently operating. Verified 2026-05-27.
+    birthCenterDetails: [],
+    medicaidNote: "Connecticut Medicaid (HUSKY Health) does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. New Haven families on Medicaid must pay out of pocket, though some doulas offer sliding-scale fees. Ask your doula about payment plans or reduced-rate options.",
+    insuranceNote: "Most private insurers in Connecticut (Anthem Blue Cross, ConnectiCare, UnitedHealthcare, Cigna) do not cover doula services as a standard benefit. Check your plan for out-of-network reimbursement or HSA/FSA eligibility. Contact your provider directly to confirm what\u2019s covered.",
+    faqs: [
+      { q: "Does Connecticut Medicaid cover doula services?", a: "No. As of 2026, Connecticut Medicaid (HUSKY Health) does not cover doula services. If you\u2019re on Medicaid in the New Haven area, you\u2019ll need to pay for a doula out of pocket \u2014 but some New Haven doulas offer sliding-scale fees, and student-doula programs through Yale may offer reduced-cost support. You deserve support regardless of insurance status. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> while you figure out your options." },
+      { q: "How much does a doula cost in New Haven?", a: "Expect to pay $800 to $2,000 for a birth doula in New Haven, with most doulas charging around $1,200 for a full package. Student-doula programs through Yale\u2019s nursing school may offer reduced rates. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Does True Joy Birthing work with New Haven families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any New Haven birth setting \u2014 whether you\u2019re delivering at Yale New Haven or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+      { q: "What NICU level does Yale New Haven have?", a: "Yale New Haven Children\u2019s Hospital operates a Level IV NICU \u2014 the highest designation from the American Academy of Pediatrics. This rating, received in 2018, means it can provide the most intensive neonatal care available, including surgical repair of complex conditions. If you\u2019re delivering at Yale, this level of care is on the same campus, not miles away." },
+      { q: "Can my doula come to the hospital with me in New Haven?", a: "Yes \u2014 Yale New Haven Hospital allows doulas in labor and delivery. As a major academic medical center, they\u2019re accustomed to working with birth plans and doula support. Confirm during your hospital tour, and bring your birth plan to help your care team support your preferences." },
+    ],
+    nearbyCities: ["hartford-ct"],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
