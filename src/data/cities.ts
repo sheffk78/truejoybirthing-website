@@ -3242,6 +3242,155 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: [],
   },
+  "reno-nv": {
+    city: "Reno",
+    state: "NV",
+    slug: "reno-nv",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Reno is northern Nevada\u2019s healthcare hub, drawing families from across the Truckee Meadows and Sierra foothills. The birth community is small but tight-knit \u2014 a mix of hospital-based and home-birth midwives, doulas who serve both Reno and Sparks, and military families from the region\u2019s installations. Expect a pragmatic, Western-independence vibe where asking for help isn\u2019t weakness \u2014 it\u2019s how you show up prepared.",
+    heroLocalDetail: "Reno\u2019s two birthing hospitals \u2014 Renown Regional Medical Center near downtown at 1155 Mill Street and Sierra Medical Center in south Reno at 6500 Longley Lane \u2014 are roughly 20 minutes apart via I-580. The region\u2019s only Level III NICUs are at both Renown Children\u2019s Hospital (on the Renown campus) and Sierra Medical Center, so high-acuity newborns don\u2019t need to transfer to Las Vegas or Sacramento. I-580 and I-80 form the Spaghetti Bowl interchange downtown, which backs up during morning and evening rush; if you\u2019re coming from Spanish Springs or Cold Springs, South Virginia Street to Renown is usually faster than battling I-80. Summers break 95\u00B0F regularly and winter Sierra snowstorms can slow the hospital drive \u2014 know your route before 38 weeks. The Truckee River Walk and Idlewild Park loop are popular third-trimester strolls close to Renown.",
+    hospitalDetails: [
+      { name: "Renown Regional Medical Center", paragraph: "Renown Regional Medical Center, in central Reno at 1155 Mill Street, is the largest hospital in northern Nevada and home to Renown Children\u2019s Hospital with a verified Level III NICU \u2014 the region\u2019s first and only Level III NICU. High-volume L&D with 24/7 neonatology, maternal-fetal medicine, and obstetric anesthesiology. Doulas are generally welcome, though visitor policies shift, so confirm during your hospital tour. If you\u2019re delivering at Renown, having your birth plan in hand makes check-in smoother \u2014 they see a lot of families and move fast. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Sierra Medical Center", paragraph: "Sierra Medical Center, in south Reno at 6500 Longley Lane, is the newer addition to the Northern Nevada Health System. It has a Level III NICU (verified on northernnevadahealth.com) and a dedicated Family Birth Center with LDRP suites. Sierra consolidated the maternity services that were previously at the Sparks campus, so all L&D now happens here. The south Reno location is convenient for families in the Damonte Ranch, Galena, and south Truckee Meadows areas \u2014 about 10 minutes from I-580 and the South Meadows Parkway interchange. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> before your tour." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Reno, Sparks, and Washoe County. Google Maps search "birth center Reno NV" found
+    // no freestanding birth centers. Verified 2026-05-27. Families seeking out-of-hospital
+    // birth work with licensed home-birth midwives; closest freestanding birth centers
+    // are in the Sacramento, CA area (~130 miles west).
+    birthCenterDetails: [],
+    medicaidNote: "Nevada Medicaid does NOT cover doula services as of 2026. HSA and FSA funds can be used for doula fees, and some doulas in the Reno area offer sliding-scale pricing. Community-based programs through the Washoe County Health District\u2019s Maternal & Child Health division and local birth equity collectives may offer reduced-cost or volunteer doula support \u2014 ask individual doulas what\u2019s available.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Reno area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Reno?", a: "Not yet \u2014 Nevada Medicaid does not currently cover doula services. But you still have options: HSA and FSA funds can cover doula fees, some local doulas offer sliding-scale rates, and community collectives may provide reduced-cost support. It\u2019s worth asking any doula you interview about payment flexibility." },
+      { q: "How much does a doula cost in Reno?", a: "Expect to pay $800 to $2,000 for a birth doula in Reno. That typically covers prenatal visits, labor support, and a postpartum check-in. The range depends on experience level and what\u2019s included. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> to figure out what matters most to you before you interview doulas." },
+      { q: "Does True Joy Birthing work with Reno families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Reno birth setting, whether you\u2019re delivering at Renown, Sierra, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+      { q: "Are there doulas in Reno?", a: "Reno has a small but growing doula community. If local availability is tight, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Can my doula come to the hospital with me in Reno?", a: "Yes \u2014 both Renown Regional Medical Center and Sierra Medical Center allow doulas in L&D. Policies can change, especially during flu season or COVID surges, so confirm with your hospital during your tour. Having your birth plan ready helps your care team know your preferences from the moment you walk in." },
+    ],
+    nearbyCities: ["las-vegas-nv"],
+  },
+  "tucson-az": {
+    city: "Tucson",
+    state: "AZ",
+    slug: "tucson-az",
+    costLow: 800,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Tucson\u2019s birth community is a blend of university-town progressiveness and Desert Southwest independence. The University of Arizona\u2019s medical center anchors high-risk perinatal care for all of southern Arizona, drawing families from towns 100+ miles away. The local doula network is small but active \u2014 organizations like Doula Train Pima County and the Arizona Birth Network connect families with sliding-scale and community-based support.",
+    heroLocalDetail: "Tucson\u2019s two largest delivery hospitals \u2014 Tucson Medical Center and Banner University Medical Center \u2014 sit roughly six miles apart on the city\u2019s midtown east side, reachable within 15\u201325 minutes from most neighborhoods. But expect I-10 and Speedway Boulevard congestion during morning and evening rush, especially near the UA campus. The Santa Catalina Mountains frame the northern skyline, and summer monsoon storms from July through September can dump rain fast and flood low-lying roads near the Rillito River wash \u2014 plan alternate routes if you live near a wash. Northwest Medical Center in Marana serves the growing northwest suburbs about 20 minutes beyond the city center. Winters are mild and dry, with daytime highs in the mid-60s, making the hospital drive far less weather-dependent than in colder climates.",
+    hospitalDetails: [
+      { name: "Tucson Medical Center", paragraph: "Tucson Medical Center, at 5301 E Grant Road in midtown, is the city\u2019s largest hospital and a Mayo Clinic Care Network member with a Special Care Nursery (estimated Level II equivalent) for babies who need extra support. TMC handles a high volume of births \u2014 roughly 3,500 per year \u2014 and has 24/7 obstetric anesthesiology and maternal-fetal medicine on-site. Higher-level NICU cases are typically transferred to Banner\u2019s Diamond Children\u2019s across town. <a href=\"/birth-plan-template/\">Use our free birth plan template</a> to get your preferences in order before your tour." },
+      { name: "Banner University Medical Center Tucson", paragraph: "Banner University Medical Center Tucson, at 1501 N Campbell Avenue, is the University of Arizona\u2019s academic medical center and home to Banner Children\u2019s at Diamond Children\u2019s Medical Center with a verified Level III NICU (stated directly on bannerhealth.com). This is southern Arizona\u2019s highest-level NICU and the regional referral center for complex pregnancies and critically ill newborns. The academic setting means OB-GYN residents and maternal-fetal medicine specialists are always on-site. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> to have your preferences ready." },
+      { name: "Northwest Medical Center", paragraph: "Northwest Medical Center, at 6200 N La Cholla Boulevard in northwest Tucson/Marana, serves the growing northwest suburbs. It has a NICU for babies who need extra support \u2014 contact the hospital directly for current NICU level designation. Northwest is a community-hospital alternative to the two big academic centers, with a more intimate Women\u2019s Center and private labor rooms. If you\u2019re delivering on the northwest side, it\u2019s the closest option \u2014 about 10 minutes from the I-10/La Cholla interchange." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Tucson and Pima County. Google Maps search "birth center Tucson AZ" found no
+    // freestanding birth centers currently operating. El Rio Health provides midwifery
+    // services in conjunction with TMC but is not a freestanding birth center.
+    // Verified 2026-05-27.
+    birthCenterDetails: [],
+    medicaidNote: "Arizona\u2019s AHCCCS (Medicaid) does NOT cover doula services as of 2026. State legislation for doula coverage has been proposed but not yet enacted. HSA and FSA funds can cover doula fees, and community organizations like Doula Train Pima County offer sliding-scale or reduced-cost support. Check with individual doulas about payment options.",
+    insuranceNote: "Since AHCCCS doesn\u2019t cover doulas in Arizona, check whether your private insurance covers out-of-network doula services. HSA and FSA funds can be used for doula fees \u2014 ask your doula for a superbill for reimbursement. Contact your provider directly to confirm what\u2019s covered.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Tucson?", a: "Not yet \u2014 Arizona\u2019s AHCCCS does not currently reimburse doula services. But you still have options: HSA and FSA funds can cover doula fees, and organizations like Doula Train Pima County and the Arizona Birth Network connect families with sliding-scale support. Ask any doula you interview about payment flexibility." },
+      { q: "How much does a doula cost in Tucson?", a: "Expect to pay $800 to $1,800 for a birth doula in Tucson. The range depends on experience level and what\u2019s included (prenatal visits, labor support, postpartum check-ins). College-town doulas and student programs sometimes offer lower rates. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> to figure out your priorities." },
+      { q: "Does True Joy Birthing work with Tucson families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Tucson birth setting, whether you\u2019re delivering at TMC, Banner, Northwest, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+      { q: "Are there doulas in Tucson?", a: "Tucson has an active doula community, from independent birth doulas to organizations like Doula Train Pima County that offer sliding-scale support. The Arizona Birth Network maintains a local provider directory. Start with the True Joy Birthing app to find local doulas, and interview a few until one feels right." },
+      { q: "Can my doula come to the hospital with me in Tucson?", a: "Yes \u2014 TMC, Banner UMC, and Northwest Medical Center all allow doulas in labor and delivery. Visitor policies can shift, especially during flu season, so confirm with your hospital during your tour. Having a birth plan ready helps your care team support your preferences from the start." },
+    ],
+    nearbyCities: ["phoenix-az"],
+  },
+  "memphis-tn": {
+    city: "Memphis",
+    state: "TN",
+    slug: "memphis-tn",
+    costLow: 700,
+    costHigh: 1700,
+    shelbiServesHere: false,
+    culture: "Memphis sits in Shelby County, which has one of the highest Black infant mortality rates in Tennessee \u2014 and a powerful, growing community fighting to change that. Organizations like CHOICES and A Better Balanced Birth center reproductive justice and Black maternal health equity. The birth community here is rooted, resilient, and deeply connected to the rhythms of a city where family and faith run everything.",
+    heroLocalDetail: "Memphis\u2019s three major hospital systems \u2014 Methodist Le Bonheur, Baptist Memorial, and Regional One Health \u2014 are clustered within the Memphis Medical District off Poplar Avenue and Union Avenue, roughly 10\u201320 minutes from most neighborhoods. I-240 forms a loop around the center of the city and can back up badly during rush hour, especially near the Poplar and Union exits. If you\u2019re coming from Germantown or Collierville on the east side, plan an extra 15\u201320 minutes for appointments. Le Bonheur Children\u2019s Hospital provides the region\u2019s highest-level NICU right on the Methodist campus. Summers are brutally hot and humid \u2014 regularly above 95\u00B0F from June through September \u2014 and winter ice storms can briefly shut down overpasses. Overton Park and the Greenline are popular third-trimester walking spots near the hospitals.",
+    hospitalDetails: [
+      { name: "Methodist University Hospital (Methodist Le Bonheur)", paragraph: "Methodist University Hospital, at 1265 Union Avenue in the Memphis Medical District, is the largest hospital in the Methodist Le Bonheur system and is affiliated with the University of Tennessee Health Science Center. Le Bonheur Children\u2019s Hospital \u2014 on the same campus \u2014 has a verified Level IV NICU (stated directly on lebonheur.org), the highest-level NICU in the region, making this the referral destination for complex pregnancies and critically ill newborns across the Mid-South. The OB-GYN residency program means 24/7 coverage. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences documented." },
+      { name: "Baptist Memorial Hospital-Memphis", paragraph: "Baptist Memorial Hospital-Memphis, at 6019 Walnut Grove Road in East Memphis, is the flagship of the Baptist Memorial Health Care system with 706 beds and a Level III NICU (contact the hospital directly for current NICU level verification). Walnut Grove is a major east\u2013west corridor, so getting here from Germantown and Collierville is straightforward during off-peak hours. Baptist is known for a more private, community-hospital feel compared to the academic centers, and its Women\u2019s Center offers LDRP suites. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> before your hospital tour." },
+      { name: "Regional One Health", paragraph: "Regional One Health, at 877 Jefferson Avenue, is Shelby County\u2019s safety-net hospital and home to the Elvis Presley Trauma Center. It has a Level III NICU (contact the hospital directly for current NICU level verification) and provides high-volume OB services to TennCare and uninsured families. If you\u2019re delivering here, the staff is deeply experienced with a wide range of birth situations \u2014 and having a birth plan helps them support your preferences in a busy environment. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a>." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Memphis, Shelby County. Google Maps search found no freestanding birth centers
+    // currently operating. CHOICES – Memphis Center for Reproductive Health provides
+    // midwifery consultations but does not operate a freestanding birth center.
+    // Verified 2026-05-27.
+    birthCenterDetails: [],
+    medicaidNote: "Tennessee\u2019s Medicaid program, TennCare, does NOT cover doula services as of 2026. HSA and FSA funds can be used for doula fees, and some Memphis doulas offer sliding-scale pricing. Organizations like A Better Balanced Birth and the Shelby County Health Department\u2019s community doula program may offer reduced-cost or pro-bono support \u2014 ask when you interview.",
+    insuranceNote: "Since TennCare doesn\u2019t cover doulas, check whether your private insurance covers out-of-network doula services. HSA and FSA reimbursement is available nationwide for doula fees. Contact your provider directly to confirm coverage details.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Memphis?", a: "Not yet \u2014 TennCare does not currently reimburse doula services in Tennessee. But you still have options: HSA and FSA funds can cover doula fees, and organizations like A Better Balanced Birth and CHOICES offer sliding-scale or community-based support. Don\u2019t let insurance be the reason you go without a doula \u2014 ask about payment plans when you interview." },
+      { q: "How much does a doula cost in Memphis?", a: "Expect to pay $700 to $1,700 for a birth doula in Memphis. Some community-based doulas offer reduced rates or payment plans, especially through organizations focused on Black maternal health equity. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you before you start interviewing." },
+      { q: "Does True Joy Birthing work with Memphis families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Memphis birth setting \u2014 whether you\u2019re delivering at Methodist, Baptist, Regional One, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing." },
+      { q: "Are there doulas in Memphis?", a: "Memphis has a growing doula community, including organizations like A Better Balanced Birth that focus on Black maternal health equity, and CHOICES for reproductive justice. The True Joy Birthing app can help you find local doulas \u2014 start there and interview a few until you find the right fit." },
+      { q: "Can my doula come to the hospital with me in Memphis?", a: "Yes \u2014 Methodist Le Bonheur, Baptist Memorial, and Regional One Health all allow doulas in labor and delivery. Policies can shift during flu season or surges, so confirm during your hospital tour. Having your birth plan ready helps your care team understand and support your preferences." },
+    ],
+    nearbyCities: ["nashville-tn"],
+  },
+  "st-augustine-fl": {
+    city: "St. Augustine",
+    state: "FL",
+    slug: "st-augustine-fl",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "St. Augustine blends historic coastal charm with a growing young-family demographic in communities like Nocatee and World Golf Village. The birth community is small \u2014 most families deliver at Flagler Hospital, the only L&D facility in St. Johns County \u2014 but doulas from Jacksonville make regular trips south. Coastal living means hot, humid summers and hurricane season awareness, but the pace of life here is gentler than Jacksonville\u2019s.",
+    heroLocalDetail: "UF Health Flagler Hospital sits just off US 1 South and SR 207 in St. Augustine, about 10 minutes from historic downtown via US 1. From the beaches and A1A, expect slower traffic during tourist season (spring and summer) \u2014 especially on the Bridge of Lions and Anastasia Boulevard. Ponte Vedra families to the north can reach Flagler in about 15\u201320 minutes via A1A. Hurricane season (June through November) can affect hospital access when storms approach the coast; know your evacuation route and hospital alternatives in Jacksonville. The sidewalks along the bayfront and the St. Augustine Beach pier area flat, third-trimester-friendly walking spots.",
+    hospitalDetails: [
+      { name: "UF Health Flagler Hospital", paragraph: "UF Health Flagler Hospital, at 400 Health Park Boulevard in St. Augustine, is the only hospital providing labor and delivery services in all of St. Johns County. It has a Special Care Nursery for babies born at 32+ weeks gestation \u2014 contact the hospital directly for current NICU level designation. Higher-level NICU cases transfer to UF Health Jacksonville or Nemours Children\u2019s in Jacksonville. About 1,300 deliveries per year give it a community-hospital feel where the staff knows families by name. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences documented before your tour." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // St. Augustine and St. Johns County. Google Maps search found no freestanding
+    // birth centers currently operating. Verified 2026-05-27. Families seeking
+    // out-of-hospital birth would need to travel to Jacksonville or Gainesville.
+    birthCenterDetails: [],
+    medicaidNote: "Florida Medicaid covers doula services as of July 1, 2024, under SB 264. Coverage includes prenatal, labor and delivery, and postpartum doula visits. Doulas must be certified by approved organizations (such as DONA International or CAPPA) and enrolled as Florida Medicaid providers. If you\u2019re on Medicaid in St. Johns County, call your managed care plan to confirm doula coverage and find enrolled doulas \u2014 or check with UF Health Flagler\u2019s patient navigation team.",
+    insuranceNote: "Florida Medicaid now covers doula services under SB 264. If you\u2019re not on Medicaid, check whether your private insurance covers out-of-network doula services. HSA and FSA funds can also be used for doula fees. Contact your provider directly to confirm what\u2019s covered under your plan.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in St. Augustine?", a: "Yes! Florida Medicaid covers doula services as of July 2024 under SB 264. That includes prenatal visits, labor support, and postpartum care. If you\u2019re on Medicaid in St. Johns County, call your managed care plan and ask about doula coverage \u2014 they\u2019ll walk you through how to find an enrolled doula. You deserve support, and now your insurance helps pay for it." },
+      { q: "How much does a doula cost in St. Augustine?", a: "Expect to pay $800 to $2,000 for a birth doula in St. Augustine. Some doulas serve both St. Augustine and Jacksonville, which can push the upper end higher. If you\u2019re on Medicaid, SB 264 may cover your doula at no cost. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> to figure out your priorities." },
+      { q: "Does True Joy Birthing work with St. Augustine families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any St. Augustine birth setting. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+      { q: "Are there doulas in St. Augustine?", a: "St. Augustine has a small local doula community, and Jacksonville-based doulas regularly serve St. Augustine families. The True Joy Birthing app can help you find local doulas \u2014 start there and interview a few until one feels right." },
+      { q: "Can my doula come to the hospital with me in St. Augustine?", a: "Yes \u2014 UF Health Flagler Hospital allows doulas in labor and delivery. Since Flagler is the only L&D hospital in St. Johns County, confirming your birth plan and doula arrangements during your hospital tour is especially important. Your doula will be familiar with Flagler\u2019s layout and policies." },
+    ],
+    nearbyCities: ["jacksonville-fl", "orlando-fl"],
+  },
+  "gainesville-fl": {
+    city: "Gainesville",
+    state: "FL",
+    slug: "gainesville-fl",
+    costLow: 700,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Gainesville is a classic college town powered by the University of Florida, and the birth community reflects that mix \u2014 academic medicine at Shands alongside community midwives and student-doula programs. The local doula network punches above its size, with organizations offering sliding-scale support and midwifery training through UF\u2019s nursing and public health programs. It\u2019s a place where evidence-based care meets Southern warmth.",
+    heroLocalDetail: "UF Health Shands Hospital sits on Archer Road (SW 16th Avenue area), one of Gainesville\u2019s busiest corridors \u2014 expect heavy traffic during UF class times (8am\u20135pm, September through May). North Florida Regional Medical Center is on NW 6th Street near I-75, more accessible from west Gainesville and Alachua. Typical drive times within Gainesville are 10\u201320 minutes, but families coming from rural surrounds (High Springs, Micanopy, Alachua) may drive 30+ miles for care. Hot, humid summers consistently top 90\u00B0F with afternoon thunderstorms; mild winters mean weather rarely disrupts the hospital trip. The walking path around Sweetwater Branch Preserve and the Gainesville-Hawthorne State Trail are popular third-trimester spots.",
+    hospitalDetails: [
+      { name: "UF Health Shands Hospital", paragraph: "UF Health Shands Hospital, at 1600 SW Archer Road, is the University of Florida\u2019s academic medical center and one of only seven Baby-Friendly designated hospitals in Florida. Shands Children\u2019s Hospital houses a verified Level IV NICU (stated directly on ufhealth.org) \u2014 the highest-level NICU in the region and the referral center for critically ill newborns across north-central Florida. With maternal-fetal medicine specialists, 24/7 neonatology, and a high-risk pregnancy program, this is where families with complex pregnancies come from 100+ miles away. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences ready." },
+      { name: "North Florida Regional Medical Center", paragraph: "North Florida Regional Medical Center, at 6500 NW 6th Street near I-75, serves northwest Gainesville and Alachua County\u2019s growing suburbs. It has a NICU for babies who need extra support \u2014 contact the hospital directly for current NICU level designation. North Florida Regional offers a more community-hospital feel than Shands, with private LDRP suites and a Women\u2019s Center that\u2019s popular with families on the west side. If you\u2019re delivering here, having your birth plan in hand helps the care team support your preferences from day one. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> before your tour." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Gainesville and Alachua County. Google Maps search found no freestanding birth
+    // centers currently operating. Verified 2026-05-27. Families seeking out-of-hospital
+    // birth connect with local home-birth midwives or travel to Ocala or Jacksonville.
+    birthCenterDetails: [],
+    medicaidNote: "Florida Medicaid covers doula services as of July 1, 2024, under SB 264. Coverage includes prenatal, labor and delivery, and postpartum doula visits. Doulas must be certified by approved organizations and enrolled as Florida Medicaid providers. UF Health Shands\u2019 patient navigation team can help connect Medicaid patients with enrolled doulas, and student-doula programs through UF may offer reduced-cost support.",
+    insuranceNote: "Florida Medicaid now covers doula services under SB 264. If you\u2019re not on Medicaid, check whether your private insurance covers out-of-network doula services. HSA and FSA funds can also be used for doula fees. Contact your provider directly to confirm what\u2019s covered under your plan.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Gainesville?", a: "Yes! Florida Medicaid covers doula services as of July 2024 under SB 264. That includes prenatal visits, labor support, and postpartum care. If you\u2019re on Medicaid in Alachua County, call your managed care plan or ask UF Health\u2019s patient navigation team about finding an enrolled doula. You deserve support, and now your insurance helps pay for it." },
+      { q: "How much does a doula cost in Gainesville?", a: "Expect to pay $700 to $1,800 for a birth doula in Gainesville. College-town pricing can be slightly lower than coastal Florida, and student-doula programs through UF may offer reduced rates. If you\u2019re on Medicaid, SB 264 may cover your doula at no cost. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Does True Joy Birthing work with Gainesville families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Gainesville birth setting \u2014 whether you\u2019re delivering at Shands, North Florida Regional, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+      { q: "Are there doulas in Gainesville?", a: "Gainesville has an active doula community, including student-doula programs through UF\u2019s nursing and public health programs. Sliding-scale support is available through community organizations. Start with the True Joy Birthing app to find local doulas, and interview a few until one feels right." },
+      { q: "Can my doula come to the hospital with me in Gainesville?", a: "Yes \u2014 both UF Health Shands and North Florida Regional allow doulas in labor and delivery. UF Health Shands\u2019 academic setting means they\u2019re used to working with doulas and birth plans. Confirm during your hospital tour, and bring your birth plan to help your care team support your preferences." },
+    ],
+    nearbyCities: ["jacksonville-fl", "orlando-fl"],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
