@@ -1,30 +1,30 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { cities, citySlugs } from '../../data/cities';
 
 const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Birth Support", "url": "https://truejoybirthing.com/birth-support/"}];
 
-const cities = [
-  { name: "Dallas", slug: "dallas-tx" },
-  { name: "Fort Worth", slug: "fort-worth-tx" },
-  { name: "Houston", slug: "houston-tx" },
-  { name: "Austin", slug: "austin-tx" },
-  { name: "San Antonio", slug: "san-antonio-tx" },
-  { name: "El Paso", slug: "el-paso-tx" },
-  { name: "Plano", slug: "plano-tx" },
-  { name: "Frisco", slug: "frisco-tx" },
-  { name: "McKinney", slug: "mckinney-tx" },
-  { name: "Arlington", slug: "arlington-tx" },
-  { name: "Garland", slug: "garland-tx" },
-  { name: "Irving", slug: "irving-tx" },
-  { name: "Carrollton", slug: "carrollton-tx" },
-  { name: "Grand Prairie", slug: "grand-prairie-tx" },
-  { name: "Denton", slug: "denton-tx" },
-  { name: "Mesquite", slug: "mesquite-tx" },
-  { name: "Lubbock", slug: "lubbock-tx" },
-  { name: "Amarillo", slug: "amarillo-tx" },
-  { name: "Corpus Christi", slug: "corpus-christi-tx" },
-  { name: "Laredo", slug: "laredo-tx" },
-];
+// Group cities by state, sorted by count
+const stateGroups: Record<string, { name: string; slug: string }[]> = {};
+for (const slug of citySlugs) {
+  const city = cities[slug];
+  if (!city) continue;
+  if (!stateGroups[city.state]) stateGroups[city.state] = [];
+  stateGroups[city.state].push({ name: city.city, slug: city.slug });
+}
+// Sort state codes alphabetically, with TX first (largest group)
+const stateOrder = Object.keys(stateGroups).sort((a, b) => {
+  if (a === 'TX') return -1;
+  if (b === 'TX') return 1;
+  return a.localeCompare(b);
+});
+const stateNames: Record<string, string> = {
+  TX: 'Texas', FL: 'Florida', NC: 'North Carolina', GA: 'Georgia', CA: 'California',
+  WA: 'Washington', CO: 'Colorado', OR: 'Oregon', MN: 'Minnesota', AZ: 'Arizona',
+  IL: 'Illinois', MI: 'Michigan', NY: 'New York', NJ: 'New Jersey', VA: 'Virginia',
+  TN: 'Tennessee', NV: 'Nevada', SC: 'South Carolina',
+};
+const totalCities = citySlugs.length;
 
 const schema = {
   "@context": "https://schema.org",
@@ -32,18 +32,21 @@ const schema = {
     {
       "@type": "CollectionPage",
       "@id": "https://truejoybirthing.com/birth-support/#collection",
-      "name": "Birth Support by City",
-      "description": "Find local birth support resources — hospital info, doula costs, Medicaid status — city by city across Texas.",
+      "name": "Birth Support by City — Doula Costs, Hospital Info & Free Birth Plans",
+      "description": `Find local birth support resources in ${totalCities} cities — hospital info, doula costs, Medicaid coverage, and free birth planning tools, organized city by city across the US.`,
       "url": "https://truejoybirthing.com/birth-support/",
       "about": { "@id": "https://truejoybirthing.com/#organization" },
       "mainEntity": {
         "@type": "ItemList",
-        "itemListElement": cities.map((c, i) => ({
-          "@type": "ListItem",
-          "position": i + 1,
-          "name": `Birth Support in ${c.name}, TX`,
-          "url": `https://truejoybirthing.com/birth-support/${c.slug}/`
-        }))
+        "itemListElement": citySlugs.slice(0, 50).map((slug, i) => {
+          const city = cities[slug];
+          return {
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": `Birth Support in ${city?.city}, ${city?.state}`,
+            "url": `https://truejoybirthing.com/birth-support/${slug}/`
+          };
+        })
       }
     }
   ]
@@ -51,33 +54,43 @@ const schema = {
 ---
 
 <Layout
-  title="Birth Support in Texas"
-  description="Find birth support resources across Texas — hospital info, doula costs, Medicaid coverage, and free birth planning tools, organized city by city."
+  title="Birth Support by City — Doula Costs, Hospital Info & Free Birth Plans"
+  description={`Find birth support resources in ${totalCities} cities — hospital info, doula costs, Medicaid coverage, and free birth planning tools, organized by state.`}
   canonical="https://truejoybirthing.com/birth-support/"
   breadcrumbList={breadcrumbList}
   schema={schema}
 >
   <section class="bg-tjb-cream pt-16 pb-12">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h1 class="text-3xl md:text-4xl font-bold mb-4">Birth Support by City</h1>
-      <p class="text-lg text-tjb-gray"><strong>Birth support</strong> is the network of people, tools, and information you rely on during pregnancy, labor, and postpartum — from doulas and hospital policies to birth plans and Medicaid coverage. Find local resources for your city below.</p>
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Birth Support in {totalCities} Cities</h1>
+      <p class="text-lg text-tjb-gray"><strong>Birth support</strong> is the network of people, tools, and information you rely on during pregnancy, labor, and postpartum — from doulas and hospital policies to birth plans and Medicaid coverage. Find resources for your city below.</p>
     </div>
   </section>
 
   <section class="py-16 bg-white">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-xl font-semibold mb-6">Texas</h2>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {cities.map(city => (
-          <a href={`/birth-support/${city.slug}/`} class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 transition">{city.name}, TX</a>
-        ))}
-      </div>
+      {stateOrder.map((stateCode) => {
+        const stateCities = stateGroups[stateCode];
+        const stateName = stateNames[stateCode] || stateCode;
+        return (
+          <div class="mb-10">
+            <h2 class="text-xl font-semibold mb-4">{stateName} ({stateCities.length} {stateCities.length === 1 ? 'city' : 'cities'})</h2>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+              {stateCities.map((c) => (
+                <a href={`/birth-support/${c.slug}/`} class="border border-tjb-lavender-300 p-3 rounded-lg hover:border-tjb-lavender-500 hover:bg-tjb-lavender-50 transition text-sm font-medium text-tjb-charcoal">
+                  {c.name}, {stateCode}
+                </a>
+              ))}
+            </div>
+          </div>
+        );
+      })}
     </div>
   </section>
 
   <section class="py-12 bg-tjb-cream text-center">
-    <h2 class="text-xl font-semibold mb-4">Can't find your city?</h2>
-    <p class="text-tjb-gray mb-4">The free birth plan works anywhere. Download it and build your plan for your specific birth setting.</p>
-    <a href="/" class="inline-block bg-tjb-lavender-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 active:translate-y-0 transition">Download Free Birth Plan</a>
+    <h2 class="text-xl font-semibold mb-4">Don't see your city?</h2>
+    <p class="text-tjb-gray mb-4">The free Joyful Birth Plan works anywhere — and we're adding new cities regularly. Download your plan and build it for your specific birth setting.</p>
+    <a href="/birth-plan-template/" class="inline-block bg-tjb-lavender-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 active:translate-y-0 transition">Get Your Free Joyful Birth Plan</a>
   </section>
 </Layout>
