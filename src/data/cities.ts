@@ -1742,7 +1742,7 @@ export const cities: Record<string, CityData> = {
       { q: "How much does a doula cost in Raleigh?", a: "Expect to pay $850 to $2,300 for a doula in Raleigh. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
       { q: "Does True Joy Birthing work with Raleigh families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Raleigh birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
-    nearbyCities: ["concord-nc", "greenville-sc"],
+    nearbyCities: ["cary-nc", "concord-nc", "greenville-sc"],
   },
   "atlanta-ga": {
     city: "Atlanta",
@@ -2409,7 +2409,7 @@ export const cities: Record<string, CityData> = {
       { q: "Is home birth legal in Nevada?", a: "Yes. Home birth with a licensed midwife is legal in Nevada. Certified professional midwives (CPMs) and certified nurse-midwives (CNMs) may attend home births, though the pool of attending midwives in Las Vegas is small. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether home birth is right for you." },
       { q: "Does the Culinary Health Fund cover doula services?", a: "The Culinary Health Fund covers midwifery and hospital maternity care for its members, but doula coverage is not a standard benefit. Contact the fund directly to verify whether doula services can be reimbursed under your specific plan. Call your insurance and ask directly: \"Do you cover doula services?\" That one phone call gets you a clear answer." }
     ],
-    nearbyCities: ["sacramento-ca", "los-angeles-ca"],
+    nearbyCities: ["henderson-nv", "sacramento-ca", "los-angeles-ca"],
   },
   "minneapolis-mn": {
     city: "Minneapolis",
@@ -2675,7 +2675,7 @@ export const cities: Record<string, CityData> = {
       { q: "How do I find a doula of color in Nashville?", a: "You deserve a doula who gets your experience. Start with Nashville Birth Collective — they connect you with doulas who share your lived experience. Don't settle — keep asking until you find someone who feels right." },
       { q: "What postpartum resources are available in Nashville?", a: "You're not supposed to do this alone. Nashville has lactation consultants, WIC offices, local parenting groups to lean on. Note: postpartum Medicaid coverage is available, though doula services aren't included under current policy. And grab the <a href=\"/birth-plan-template/\">free birth plan template</a> — knowing what's normal (and what's not) after birth is everything." }
     ],
-    nearbyCities: ["atlanta-ga", "chicago-il"],
+    nearbyCities: ["hendersonville-tn", "atlanta-ga", "chicago-il"],
   },
   "philadelphia-pa": {
     city: "Philadelphia",
@@ -3534,6 +3534,94 @@ export const cities: Record<string, CityData> = {
       { q: "Can my doula come to the hospital with me in New Haven?", a: "Yes \u2014 Yale New Haven Hospital allows doulas in labor and delivery. As a major academic medical center, they\u2019re accustomed to working with birth plans and doula support. Confirm during your hospital tour, and bring your birth plan to help your care team support your preferences." },
     ],
     nearbyCities: ["hartford-ct"],
+  },
+  "cary-nc": {
+    city: "Cary",
+    state: "NC",
+    slug: "cary-nc",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Cary is one of the fastest-growing towns in the Research Triangle, known for its highly educated population, top-rated schools, and strong tech-sector employer base (SAS Institute, Epic Games, MetLife). Cary families often deliver at the same Wake County hospitals as Raleigh families, but benefit from shorter drive times and a more suburban, family-oriented community feel. The local doula network is connected to the broader Triangle birth community.",
+    heroLocalDetail: "Cary sits between Raleigh and the Research Triangle Park, with WakeMed Cary Hospital on the town\u2019s eastern edge near the intersection of Walnut Street and Tryon Road. Most Cary families deliver at WakeMed Cary Hospital or cross into Raleigh for WakeMed Raleigh Campus, UNC REX, or Duke Regional in Durham \u2014 all within 15\u201325 minutes depending on traffic. US-1 and I-40 run through Cary, and the Harrison Avenue exit gets you to WakeMed Cary fast. The American Tobacco Trail and Hemlock Bluffs Nature Preserve are popular third-trimester walking spots \u2014 flat, shaded, and peaceful.",
+    hospitalDetails: [
+      { name: "WakeMed Cary Hospital", paragraph: "WakeMed Cary Hospital, at 1900 Kildaire Farm Road in Cary, is a community hospital with a Level II NICU and a dedicated maternity unit offering private LDRP suites. It\u2019s the closest hospital for most Cary families and provides a quieter, more personal setting than the high-volume WakeMed Raleigh Campus. If you\u2019re delivering at WakeMed Cary, having your birth plan ready helps the care team support your preferences from the start. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "WakeMed Raleigh Campus", paragraph: "WakeMed Raleigh Campus, at 3000 New Bern Avenue in east Raleigh, is the highest-volume birthing hospital in Wake County with a Level IV NICU (verified on wakemed.org). Many Cary families choose WakeMed Raleigh for its comprehensive neonatal care and 24/7 maternal-fetal medicine coverage. The drive from central Cary is about 15\u201320 minutes via US-1 and I-440. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> before your hospital tour." },
+      { name: "UNC REX Healthcare", paragraph: "UNC REX Healthcare, at 4418 Lake Boone Trail in west Raleigh, is part of the UNC Health system with a Level III NICU (verified on unchealth.org) and a strong maternal-fetal medicine program. UNC REX is convenient for families in western Cary near the I-40/Lake Boone corridor \u2014 about 10\u201315 minutes from most west Cary neighborhoods. Having your birth plan in hand means your preferences travel with you. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences documented." },
+    ],
+    // Birth center search: No freestanding birth centers operate within Cary city limits.
+    // Raleigh Birth Center (4700 Homewood Court Suite 120, Raleigh, NC 27612) is
+    // the nearest birth center, approximately 15 minutes from central Cary.
+    // No NPI taxonomy 261QB0400X results found for Cary. Verified 2026-05-27.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Wake County\u2019s managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health, Healthy Blue). Contact NC Medicaid at 1-800-662-7030 or visit.ncdhhs.gov to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Cary area. The Triangle\u2019s employer market (SAS, Epic Games, Cisco, IBM) increasingly includes maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Cary?", a: "Yes! Great news \u2014 Medicaid covers doula services in Cary. That includes Wake County\u2019s managed care plans. Here\u2019s your next step: call your Medicaid plan and ask \"Do you cover doula services?\" \u2014 they\u2019ll walk you through it, or call 1-800-662-7030 directly. You deserve support, and now your insurance helps pay for it." },
+      { q: "How much does a doula cost in Cary?", a: "Expect to pay $900 to $2,500 for a doula in Cary. The Triangle\u2019s doula rates reflect the area\u2019s cost of living and the strong professional network here. The investment typically covers prenatal visits, labor support, and postpartum check-ins. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does True Joy Birthing work with Cary families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Cary birth setting, whether you\u2019re delivering at WakeMed Cary, UNC REX, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+      { q: "Which hospitals in Cary accommodate birth plans?", a: "WakeMed Cary Hospital (Level II NICU), WakeMed Raleigh Campus (Level IV NICU, verified on wakemed.org), and UNC REX Healthcare (Level III NICU, verified on unchealth.org) all accommodate birth plans. WakeMed Cary offers a quieter, more personal setting, while WakeMed Raleigh has the region\u2019s highest-level NICU. Always confirm your hospital\u2019s current visitor and support-person policies during your tour." },
+    ],
+    nearbyCities: ["raleigh-nc"],
+  },
+  "hendersonville-tn": {
+    city: "Hendersonville",
+    state: "TN",
+    slug: "hendersonville-tn",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    culture: "Hendersonville is a fast-growing suburban community on Old Hickory Lake, about 20 miles northeast of Nashville. Known as the \u2018city by the lake,\u2019 it draws families seeking a quieter pace with easy access to Nashville\u2019s medical district. The birth community here overlaps with Nashville\u2019s growing doula and midwife networks, and many Hendersonville families commute to Nashville hospitals for delivery while building their own local support systems.",
+    heroLocalDetail: "Hendersonville\u2019s closest delivery hospital is TriStar Hendersonville Medical Center, right off Vietnam Veterans Boulevard near the intersection with Gallatin Road. Most Hendersonville families deliver here or commute 20\u201325 minutes south on I-65 or Vietnam Veterans Boulevard to Nashville\u2019s hospital district for higher-level NICU care at Vanderbilt or Ascension Saint Thomas. The Long Hollow Pike corridor connects west Hendersonville to I-65, and traffic on Vietnam Veterans Boulevard can back up during afternoon rush. Drakes Creek Park and Memorial Park on Old Hickory Lake are popular third-trimester walking spots.",
+    hospitalDetails: [
+      { name: "TriStar Hendersonville Medical Center", paragraph: "TriStar Hendersonville Medical Center, at 355 New Shackle Island Road in Hendersonville, is a community hospital providing labor and delivery services with a Level II NICU and private maternity suites. It\u2019s the most convenient option for Hendersonville families and offers a smaller, more personal feel than Nashville\u2019s high-volume hospitals. For Level III or IV NICU care, families transfer to Nashville. If you\u2019re delivering at TriStar Hendersonville, having your birth plan in hand helps the care team support your preferences. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Vanderbilt University Medical Center", paragraph: "Vanderbilt University Medical Center, about 25 minutes south in Nashville, is a nationally ranked academic hospital with a Level IV NICU \u2014 the highest level of neonatal care \u2014 providing comprehensive maternal-fetal medicine and specialized high-risk obstetric services. Many Hendersonville families with high-risk pregnancies choose Vanderbilt for its Level IV NICU and 24/7 neonatal specialist coverage. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> before your hospital tour." },
+      { name: "Ascension Saint Thomas Midtown Hospital", paragraph: "Ascension Saint Thomas Midtown Hospital in Nashville is one of the region\u2019s busiest maternity hospitals with a Level III NICU, delivering thousands of babies annually. It\u2019s about 20 minutes from Hendersonville via I-65 South. Saint Thomas is a strong middle-ground option \u2014 comprehensive NICU care without the academic-hospital intensity of Vanderbilt. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery." },
+    ],
+    // Birth center search: No freestanding birth centers operate in Hendersonville or
+    // Sumner County. Nashville also has no licensed freestanding birth centers as of 2026.
+    // Families seeking out-of-hospital birth work with home-birth midwives serving the
+    // Middle Tennessee area. Verified 2026-05-27.
+    birthCenterDetails: [],
+    medicaidNote: "Tennessee does NOT cover doula services through Medicaid (TennCare) as of 2026. While neighboring states have implemented Medicaid doula coverage, Tennessee has not yet enacted similar legislation, leaving low-income families to seek sliding-scale or volunteer doula options.",
+    insuranceNote: "Private insurance doula coverage in Tennessee varies significantly by plan and insurer. Tennessee has not mandated doula coverage for private plans. Contact your insurance provider directly to ask about reimbursement for doula services or out-of-network benefits.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Hendersonville?", a: "Not yet \u2014 Tennessee\u2019s TennCare doesn\u2019t cover doulas right now. But you still have options: some doulas offer sliding-scale rates, payment plans, or even pro bono spots. Advocacy groups are working on changing this. Ask any doula you interview about payment flexibility. And grab the <a href=\"/birth-plan-template/\">free birth plan template</a> \u2014 knowing what you want is your superpower." },
+      { q: "How much does a doula cost in Hendersonville?", a: "Expect to pay $800 to $2,200 for a doula in Hendersonville. Rates are slightly lower than Nashville proper, but many doulas serve both areas. The investment typically covers prenatal visits, labor support, and postpartum check-ins. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does True Joy Birthing work with Hendersonville families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Hendersonville birth setting, whether you\u2019re delivering at TriStar Hendersonville, a Nashville hospital, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+      { q: "Which hospital in Hendersonville has a NICU?", a: "TriStar Hendersonville Medical Center has a Level II NICU for moderately ill newborns. For Level III NICU care, Ascension Saint Thomas Midtown in Nashville (20 minutes away) is the nearest option. Vanderbilt University Medical Center in Nashville has a Level IV NICU \u2014 the highest level \u2014 for the most complex cases. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+    ],
+    nearbyCities: ["nashville-tn"],
+  },
+  "henderson-nv": {
+    city: "Henderson",
+    state: "NV",
+    slug: "henderson-nv",
+    costLow: 1100,
+    costHigh: 3200,
+    shelbiServesHere: false,
+    culture: "Henderson is Nevada\u2019s second-largest city and one of its fastest-growing, a family-friendly suburb southeast of Las Vegas known for master-planned communities like Green Valley and Anthem. The birth community here overlaps heavily with the Las Vegas Valley\u2019s network \u2014 doulas and midwives serve families across both cities. Henderson families often deliver at Henderson\u2019s own hospitals but have easy access to the entire Las Vegas medical corridor.",
+    heroLocalDetail: "Henderson\u2019s two main hospitals \u2014 St. Rose Dominican Hospitals, Siena and San Mart\u00EDn campuses \u2014 sit along the Eastern Avenue and St. Rose Parkway corridor in the southern Las Vegas Valley. Both are reachable within 10\u201315 minutes from most Henderson neighborhoods. The I-215 beltway connects Henderson to the rest of the valley, and Eastern Avenue is the main north\u2013south artery. For Level III NICU care, families can also access Sunrise Hospital or Summerlin Hospital in Las Vegas, about 20\u201330 minutes north. Henderson\u2019s desert heat is intense \u2014 summer temps regularly top 105\u00B0F, so hydrate and know your hospital route before 38 weeks. The Henderson Multisurface Trail and Cornerstone Park are popular third-trimester walking spots.",
+    hospitalDetails: [
+      { name: "St. Rose Dominican Hospital \u2013 Siena Campus", paragraph: "St. Rose Dominican Hospital \u2013 Siena Campus, at 3001 St. Rose Parkway in Henderson, is Dignity Health\u2019s larger Henderson hospital with a Level III NICU and a high-volume maternity program. It\u2019s the primary delivery hospital for families in Green Valley, MacDonald Highlands, and central Henderson. Having your birth plan ready helps the care team support your preferences in a busy environment. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "St. Rose Dominican Hospital \u2013 San Mart\u00EDn Campus", paragraph: "St. Rose Dominican Hospital \u2013 San Mart\u00EDn Campus, at 1020 San Martin Drive in southwest Henderson, is a newer Dignity Health facility with a Level III NICU and modern maternity suites serving the fast-growing southwestern Henderson and Enterprise areas. The San Mart\u00EDn campus offers a quieter, more contemporary setting than the busier Siena campus. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> before your hospital tour." },
+      { name: "Sunrise Hospital & Medical Center", paragraph: "Sunrise Hospital, on Maryland Parkway in Las Vegas about 20 minutes north of Henderson, operates a Level III NICU and is southern Nevada\u2019s largest and most established maternity center. Henderson families with complex pregnancies or who want the valley\u2019s highest-volume maternity hospital often choose Sunrise. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery." },
+    ],
+    // Birth center search: No freestanding birth centers operate in Henderson or the
+    // broader Las Vegas Valley. NPI taxonomy 261QB0400X returned zero results for
+    // Henderson, NV. Families seeking out-of-hospital birth work with home-birth
+    // midwives. Verified 2026-05-27.
+    birthCenterDetails: [],
+    medicaidNote: "Nevada Medicaid does not currently cover doula services as of 2026. Nevada has not enacted legislation to include doula reimbursement. Families on Nevada Medicaid must pay out of pocket for doula support, though some nonprofit programs offer no-cost or sliding-scale doula services in the Las Vegas Valley area.",
+    insuranceNote: "Nevada\u2019s insurance market includes large employer and union plans (especially the Culinary Health Fund). Many of these plans cover midwifery and some doula-related services, but coverage varies \u2014 check with your specific plan. Nevada does not have a state mandate for doula insurance coverage.",
+    faqs: [
+      { q: "How much does a doula cost in Henderson?", a: "Expect to pay $1,100 to $3,200 for a doula in Henderson. Rates are similar to the broader Las Vegas Valley. The investment typically covers prenatal visits, labor support, and postpartum check-ins. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Nevada Medicaid cover doulas?", a: "Not yet \u2014 Nevada Medicaid doesn\u2019t cover doulas right now. But that doesn\u2019t mean you\u2019re alone. Advocacy groups are working on changing this, and some nonprofit programs offer sliding-scale support. Ask any doula you interview about payment plans and reduced-fee spots. And grab the <a href=\"/birth-plan-template/\">free birth plan template</a> \u2014 knowing what you want is your superpower." },
+      { q: "Does True Joy Birthing work with Henderson families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Henderson birth setting, whether you\u2019re delivering at St. Rose Dominican, Sunrise, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+      { q: "Which Henderson hospital has the best NICU?", a: "Both St. Rose Dominican Siena and San Mart\u00EDn campuses have Level III NICUs. For the valley\u2019s highest-volume maternity program, Sunrise Hospital in Las Vegas (20 minutes north) also has a Level III NICU. There is no Level IV NICU in the Las Vegas Valley. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "Are there birth centers in Henderson?", a: "No. There are currently no freestanding birth centers in Henderson or the broader Las Vegas Valley. Families wanting a birth center experience would need to travel to Southern California or arrange a home birth with a licensed midwife. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." },
+    ],
+    nearbyCities: ["las-vegas-nv"],
   },
 };
 
