@@ -3111,6 +3111,137 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["rochester-ny", "buffalo-ny", "new-york-ny", "hartford-ct"],
   },
+
+  "oklahoma-city-ok": {
+    city: "Oklahoma City",
+    state: "OK",
+    slug: "oklahoma-city-ok",
+    costLow: 800,
+    costHigh: 1500,
+    shelbiServesHere: false,
+    culture: "OKC sprawls hard — expect long drives between your OB office and the hospital district near NE 10th. The metro keeps growing, but maternity resources still cluster around the Health Center campus downtown, so plan your commute around rush hour on I-235 and I-40 if you\u2019re delivering anywhere near OU.",
+    heroLocalDetail: "The main hospital district sits just northeast of downtown off NE 10th St; traffic on I-235 can back up badly during evening rush, so factor in an extra 15-20 minutes if you\u2019re driving from the south or west suburbs.",
+    hospitalDetails: [
+      { name: "OU Health University of Oklahoma Medical Center", paragraph: "OU Health is the big academic medical center on the Oklahoma Health Center campus — if you\u2019re high-risk or want a team that handles complex deliveries, this is where you go. They have a NICU for babies who need extra support (contact the hospital directly for current NICU level information). <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so you\u2019re ready to discuss your preferences at your first visit." },
+      { name: "Mercy Hospital Oklahoma City", paragraph: "Mercy\u2019s maternity floor on Memorial Road is a popular pick for northwest OKC and Edmond families — solid L&D unit with private postpartum rooms and a well-baby nursery. They have a NICU for babies who need extra support; contact the hospital directly for current NICU level information." },
+      { name: "Integris Baptist Medical Center", paragraph: "Integris Baptist sits in the heart of the OKC Health Center district near downtown and has a strong labor and delivery program with 24/7 anesthesiology coverage. They have a NICU for babies who need extra support; contact the hospital directly for current NICU level information." }
+    ],
+    birthCenterDetails: [],
+    // Birth center search: NPI taxonomy 261QB0400X, Google Maps, and social media checked for Oklahoma City OK. No verified freestanding birth center found.
+    medicaidNote: "Oklahoma SoonerCare started covering doula services in 2024 — the program reimburses certified doulas for prenatal, labor, and postpartum visits, so if you\u2019re on SoonerCare ask your provider about connecting with a Medicaid-enrolled doula.",
+    insuranceNote: "Even without Medicaid, many OKC doulas offer sliding-scale payment, and you can typically use HSA or FSA funds for doula services — just ask for a superbill to submit for reimbursement.",
+    faqs: [
+      { q: "How much does a doula cost in Oklahoma City?", a: "In Oklahoma City, doula services typically range from $800 to $1,500 for a full birth package including prenatal visits, labor support, and postpartum follow-up. Some doulas offer sliding-scale pricing or payment plans." },
+      { q: "Does Medicaid cover doulas in Oklahoma City?", a: "Yes — Oklahoma SoonerCare began covering doula services in 2024. Certified doulas enrolled with SoonerCare can be reimbursed for prenatal, labor and delivery, and postpartum support visits." },
+      { q: "Which hospitals in Oklahoma City accommodate birth plans?", a: "OU Health University of Oklahoma Medical Center, Mercy Hospital Oklahoma City, and Integris Baptist Medical Center all have labor and delivery departments. There are currently no freestanding birth centers in the OKC metro." },
+      { q: "Does True Joy Birthing work with Oklahoma City families?", a: "True Joy Birthing provides free birth-prep tools for Oklahoma City families. The free birth plan, checklist, and guided walkthrough in the app work for any Oklahoma City birth setting. The app also helps you connect with local doulas and midwives in your area." }
+    ],
+    nearbyCities: [],
+  },
+  "tulsa-ok": {
+    city: "Tulsa",
+    state: "OK",
+    slug: "tulsa-ok",
+    costLow: 750,
+    costHigh: 1400,
+    shelbiServesHere: false,
+    culture: "Tulsa\u2019s hospital corridor runs right along the Utica/South Lewis strip near Saint Francis and Hillcrest — and if you live in Broken Arrow or Owasso, that drive down US-169 or Riverside can feel like forever in morning traffic. The local birth community here is smaller than OKC but mighty, with midwives and doulas who really know each other.",
+    heroLocalDetail: "The Hillcrest and Saint Francis campuses are both located along S. Utica and E. 61st St respectively — parking at Hillcrest can be tight during shift changes, so arrive early or use the valet if it\u2019s available.",
+    hospitalDetails: [
+      { name: "Hillcrest Medical Center", paragraph: "Hillcrest is right off Utica and has been Tulsa\u2019s go-to for generations — their labor and delivery unit handles a high volume of births and they\u2019ve got a NICU for babies who need extra support. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> before your first OB visit. Contact Hillcrest directly for current NICU level information." },
+      { name: "Saint Francis Hospital", paragraph: "Saint Francis on 61st and Yale is the biggest hospital in Tulsa and has a strong maternity program with 24/7 anesthesiology on deck. They have a NICU for babies who need extra care; contact the hospital directly for current NICU level information." },
+      { name: "OU Health Tulsa", paragraph: "OU Health Tulsa brings the academic medicine of OU to the northeast part of the state — their OB/GYN team handles routine and high-risk pregnancies, and they coordinate closely with the Oklahoma City campus for complex cases." }
+    ],
+    birthCenterDetails: [],
+    // Birth center search: NPI taxonomy 261QB0400X, Google Maps, and social media checked for Tulsa OK. No verified freestanding birth center found.
+    medicaidNote: "Oklahoma SoonerCare covers doula care for enrolled members — Tulsa County doulas who are SoonerCare-certified can bill for prenatal, birth-day, and postpartum visits, so ask your clinic if they can refer you to one.",
+    insuranceNote: "Several Tulsa doulas offer tiered pricing or package discounts, and many accept HSA/FSA payments — it\u2019s worth asking about payment plans upfront since out-of-pocket rates in Tulsa run a bit lower than the national average.",
+    faqs: [
+      { q: "How much does a doula cost in Tulsa?", a: "In Tulsa, you can expect doula services to range from about $750 to $1,400 for a complete birth support package. Some doulas offer postpartum-only packages starting around $25/hour." },
+      { q: "Does Medicaid cover doulas in Tulsa?", a: "Yes — SoonerCare Oklahoma began reimbursing certified doulas in 2024, including those practicing in Tulsa. Talk to your SoonerCare provider or search for SoonerCare-enrolled doulas in the Tulsa area." },
+      { q: "Which hospitals in Tulsa accommodate birth plans?", a: "Hillcrest Medical Center, Saint Francis Hospital, and OU Health Tulsa all have labor and delivery units. There are no freestanding birth centers currently operating in the Tulsa metro area." },
+      { q: "Does True Joy Birthing work with Tulsa families?", a: "True Joy Birthing provides free birth-prep tools for Tulsa families. The free birth plan, checklist, and guided walkthrough in the app work for any Tulsa birth setting. The app also helps you connect with local doulas and midwives in your area." }
+    ],
+    nearbyCities: ["oklahoma-city-ok"],
+  },
+  "columbus-oh": {
+    city: "Columbus",
+    state: "OH",
+    slug: "columbus-oh",
+    costLow: 900,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Columbus is a sprawl of cool neighborhoods — from Clintonville to the Short North — but when you\u2019re pregnant, what matters is that most L&D action clusters around Riverside Methodist up on Olentangy River Rd and OSU\u2019s Wexner campus off 315. If you live out in Hilliard or Dublin, that midday drive up 315 is a breeze, but factor in rush-hour parking time at Riverside because that lot fills fast.",
+    heroLocalDetail: "Riverside Methodist\u2019s maternity entrance faces Olentangy River Road — the parking garage directly attached to the Women\u2019s Pavilion can have a line on weekday mornings, so plan to arrive at least 20 minutes before any scheduled appointment.",
+    hospitalDetails: [
+      { name: "OhioHealth Riverside Methodist Hospital", paragraph: "Riverside Methodist is Columbus\u2019s busiest maternity hospital, delivering over 8,000 babies a year — they\u2019ve got a Level III NICU on-site and a dedicated Women\u2019s Pavilion that makes the whole check-in process smoother. <a href=\"/birth-plan-template/\">Download your free birth plan template</a> to bring to your first Riverside appointment." },
+      { name: "The Ohio State University Wexner Medical Center", paragraph: "Wexner\u2019s Maternity Center at OSU handles both routine and high-risk pregnancies with an academic OB team, and they\u2019ve got a Level III NICU on-site for babies who need specialized care right after delivery." },
+      { name: "Mount Carmel East Hospital", paragraph: "Mount Carmel East on the east side of Columbus has a solid maternity program with labor, delivery, and recovery suites — great option if you live in Reynoldsburg, Pataskala, or further east and don\u2019t want to drive across town when contractions start." }
+    ],
+    birthCenterDetails: [],
+    // Birth center search: NPI taxonomy 261QB0400X, Google Maps, and social media checked for Columbus OH. No verified freestanding birth center found.
+    medicaidNote: "Ohio Medicaid began covering doula services in 2024 — the state added doulas as an eligible provider type, so if you\u2019re on Ohio Medicaid you can find a certified doula who accepts your plan and get prenatal, labor, and postpartum visits covered.",
+    insuranceNote: "In Columbus, you\u2019ll find doulas who take HSA/FSA cards directly, and several collectives like Central Ohio Doulas offer sliding-scale packages — always ask about payment plan options since costs vary widely between individual doulas and groups.",
+    faqs: [
+      { q: "How much does a doula cost in Columbus?", a: "Columbus doula services range from about $900 to $2,000 for a full birth package, with some experienced doulas charging above that. Postpartum-only support typically runs $30\u2013$50 per hour." },
+      { q: "Does Medicaid cover doulas in Columbus?", a: "Yes — Ohio Medicaid began covering doula services in 2024. You can find certified doulas who accept Medicaid through the Ohio Department of Medicaid provider directory or by asking your OB clinic." },
+      { q: "Which hospitals in Columbus accommodate birth plans?", a: "OhioHealth Riverside Methodist Hospital, The Ohio State University Wexner Medical Center, and Mount Carmel East Hospital all have active L&D departments. There are no freestanding birth centers currently operating in the Columbus metro area." },
+      { q: "Does True Joy Birthing work with Columbus families?", a: "True Joy Birthing provides free birth-prep tools for Columbus families. The free birth plan, checklist, and guided walkthrough in the app work for any Columbus birth setting. The app also helps you connect with local doulas and midwives in your area." }
+    ],
+    nearbyCities: ["detroit-mi", "pittsburgh-pa"],
+  },
+  "cleveland-oh": {
+    city: "Cleveland",
+    state: "OH",
+    slug: "cleveland-oh",
+    costLow: 900,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    culture: "Cleveland moms will tell you — everything healthcare-wise funnels toward the Clinic or University Hospitals, both clustered near University Circle on the east side. If you live in Westlake or Avon, that commute down I-90 and into the Health Campus can turn ugly in winter lake-effect snow, so have a backup route and a packed hospital bag by 35 weeks.",
+    heroLocalDetail: "Cleveland Clinic\u2019s main campus sits at 9500 Euclid Avenue — if you\u2019re coming from the western suburbs, take I-90 to E. 72nd or use the MLK exit off I-90 rather than battling downtown traffic, and give yourself extra time in winter weather.",
+    hospitalDetails: [
+      { name: "Cleveland Clinic", paragraph: "Cleveland Clinic\u2019s main campus on Euclid Avenue handles high-volume, high-complexity maternity care — they\u2019ve got a Level III NICU and the full weight of a world-class academic medical team behind them. <a href=\"/birth-plan-template/\">Start your birth plan free</a> so you\u2019re ready to discuss your preferences at your first visit." },
+      { name: "University Hospitals MacDonald Women\u2019s Hospital", paragraph: "MacDonald Women\u2019s Hospital (part of UH) specializes exclusively in women\u2019s and neonatal health — one of the only stand-alone women\u2019s hospitals in the country, with a Level III NICU right next door at UH Rainbow Babies & Children\u2019s." },
+      { name: "MetroHealth Medical Center", paragraph: "MetroHealth is Cleveland\u2019s public hospital on the near west side and has a strong maternity program serving a diverse community — they offer comprehensive prenatal care and have a NICU for babies who need extra support. Contact MetroHealth directly for current NICU level information." }
+    ],
+    birthCenterDetails: [],
+    // Birth center search: NPI taxonomy 261QB0400X, Google Maps, and social media checked for Cleveland OH. No verified freestanding birth center found.
+    medicaidNote: "Ohio Medicaid includes doula services as a covered benefit starting in 2024 — Cleveland-area doulas who complete state certification can bill Medicaid directly for your prenatal, birth, and postpartum appointments.",
+    insuranceNote: "Many Cleveland doulas accept HSA and FSA payments, and a few local organizations like Birthing Beautiful Communities offer low-cost or free doula support to qualifying families — check both options before assuming you can\u2019t afford one.",
+    faqs: [
+      { q: "How much does a doula cost in Cleveland?", a: "Cleveland doula packages typically run $900 to $2,200, with experienced doulas and those affiliated with hospitals like the Clinic or UH sometimes at the higher end. Postpartum doula rates average $30\u2013$50/hour." },
+      { q: "Does Medicaid cover doulas in Cleveland?", a: "Yes — Ohio Medicaid added doula coverage in 2024. Certified doulas in the Cleveland area can enroll as Medicaid providers, covering your prenatal visits, labor support, and postpartum care at no out-of-pocket cost to you." },
+      { q: "Which hospitals in Cleveland accommodate birth plans?", a: "Cleveland Clinic, University Hospitals MacDonald Women\u2019s Hospital, and MetroHealth Medical Center all have L&D departments. There are no freestanding birth centers currently operating in the Cleveland area." },
+      { q: "Does True Joy Birthing work with Cleveland families?", a: "True Joy Birthing provides free birth-prep tools for Cleveland families. The free birth plan, checklist, and guided walkthrough in the app work for any Cleveland birth setting. The app also helps you connect with local doulas and midwives in your area." }
+    ],
+    nearbyCities: ["pittsburgh-pa", "detroit-mi"],
+  },
+  "indianapolis-in": {
+    city: "Indianapolis",
+    state: "IN",
+    slug: "indianapolis-in",
+    costLow: 800,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Indy\u2019s maternity care revolves around the IU Health campus just west of downtown and the Community/Ascension hospitals ringing the suburbs. If you\u2019re delivering at IU Health Methodist, you\u2019re right next to the IUPUI campus where parking garages and construction detours change constantly — leave yourself extra time, especially if you\u2019re coming from Carmel or Fishers down I-465 and 65.",
+    heroLocalDetail: "IU Health Methodist Hospital sits at 1514 N. Senate Blvd just northwest of downtown — the Senate Blvd entrance by the Women\u2019s Tower is the one you want for L&D check-in, not the main emergency entrance on the south side of the building.",
+    hospitalDetails: [
+      { name: "IU Health Methodist Hospital", paragraph: "Methodist is the flagship of IU Health\u2019s maternity network in Indy — they handle the highest volume of births in the state and staff a Level III NICU through the adjacent Riley Hospital for Children. <a href=\"/birth-plan-template/\">Start with your free birth plan</a> so your preferences are documented before you walk in." },
+      { name: "Ascension St. Vincent Hospital Indianapolis", paragraph: "St. Vincent on 86th St is the go-to for north side families — they\u2019ve got a well-established maternity program with private LDRP suites and 24/7 in-house OB coverage. They have a NICU for babies who need extra support; contact the hospital directly for current NICU level information." },
+      { name: "Community Hospital East", paragraph: "Community East on the east side serves families from Lawrence, Greenfield, and Cumberland — solid L&D unit with a community feel and lower volume than the downtown hospitals, which some moms appreciate for more personalized attention." }
+    ],
+    birthCenterDetails: [],
+    // Birth center search: NPI taxonomy 261QB0400X, Google Maps, and social media checked for Indianapolis IN. No verified freestanding birth center found.
+    medicaidNote: "Indiana Medicaid began covering doula services under HB 1008 effective January 1, 2025 — if you have Hoosier Healthwise or traditional Medicaid, you can work with a state-certified doula at no cost for prenatal, delivery, and postpartum visits.",
+    insuranceNote: "Several Indy doulas accept HSA/FSA and some offer need-based sliding scales — the Indiana Doula Association maintains a directory of doulas organized by fee range, which makes it easier to find someone who fits your budget.",
+    faqs: [
+      { q: "How much does a doula cost in Indianapolis?", a: "Indianapolis doula packages generally range from $800 to $1,800 for full birth support including prenatal visits, labor attendance, and postpartum follow-up. Postpartum-only packages start around $25\u2013$40/hour." },
+      { q: "Does Medicaid cover doulas in Indianapolis?", a: "Yes — Indiana\u2019s HB 1008 extended Medicaid doula coverage starting January 2025. If you\u2019re on Hoosier Healthwise or traditional Medicaid, you can receive doula services at no cost from a state-certified provider." },
+      { q: "Which hospitals in Indianapolis accommodate birth plans?", a: "IU Health Methodist Hospital, Ascension St. Vincent Hospital Indianapolis, and Community Hospital East all have L&D departments. There are no freestanding birth centers currently operating in the Indianapolis metro area." },
+      { q: "Does True Joy Birthing work with Indianapolis families?", a: "True Joy Birthing provides free birth-prep tools for Indianapolis families. The free birth plan, checklist, and guided walkthrough in the app work for any Indianapolis birth setting. The app also helps you connect with local doulas and midwives in your area." }
+    ],
+    nearbyCities: [],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
