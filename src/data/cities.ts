@@ -2677,6 +2677,97 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["atlanta-ga", "chicago-il"],
   },
+  "philadelphia-pa": {
+    city: "Philadelphia",
+    state: "PA",
+    slug: "philadelphia-pa",
+    costLow: 800,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Philadelphia has a rich, community-rooted doula culture shaped by powerful Black birthworkers and organizations like the Philadelphia Doula Network who have been championing birth justice for decades. You'll find doulas here who truly understand the city's racial disparities in maternal health and fight alongside you for better care. Whether you're delivering at a major medical center or exploring home birth, Philly doulas bring both fierce advocacy and deep, sister-level support.",
+    heroLocalDetail: "At 38 weeks pregnant, you're probably mapping the quickest route from your rowhome in West Philly or Fishtown to your delivery hospital — dodging construction on Broad Street and praying the Vine Street Expressway isn't a parking lot. Spruce Street Harbor Park is a peaceful spot for those final walking-the-baby-out strolls along the Delaware River waterfront, and the Schuylkill River Trail behind the Philadelphia Museum of Art gives you a breezier path when summer humidity hits hard.",
+    hospitalDetails: [
+      { name: "Hospital of the University of Pennsylvania", paragraph: "HUP is a Level IV NICU hospital and Philadelphia's top-tier academic medical center, offering 24/7 maternal-fetal medicine specialists and a state-of-the-art labor and delivery unit. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Thomas Jefferson University Hospital", paragraph: "Jefferson holds a Level III NICU designation with a dedicated high-risk pregnancy program and private labor suites on their Center City campus. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Temple University Hospital", paragraph: "Temple is a Level III NICU facility known for its strong community presence in North Philadelphia and comprehensive obstetric care including midwifery services. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Einstein Medical Center Philadelphia", paragraph: "Einstein carries a Level III NICU and serves as a cornerstone maternity hospital in North Philly with a long-standing midwifery program and robust lactation support. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Pennsylvania Hospital", paragraph: "Pennsylvania Hospital — the nation's first hospital — features a Level III NICU and is beloved for its historic maternity unit with private rooms on 8th and Spruce Streets. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
+    ],
+    birthCenterDetails: [
+      { name: "Philadelphia Birth Center", paragraph: "The Philadelphia Birth Center in the Germantown section offers a warm, home-like setting with certified nurse-midwives for low-risk pregnancies seeking an out-of-hospital birth experience. It's one of Philly's few freestanding birth centers, and they welcome doula support throughout your labor." }
+    ],
+    medicaidNote: "Pennsylvania Medicaid covers doula services as of 2024, with reimbursement of up to $1,250 per pregnancy through the PA Doula Program — covering prenatal visits, labor support, and postpartum visits combined.",
+    insuranceNote: "Pennsylvania private insurers vary widely on doula coverage — Aetna and UHC may partially reimburse with a superbill, while Cigna and Blue Cross of Pennsylvania often require pre-authorization. Always request a superbill from your doula and submit it with CPT code S9443 for the best chance of reimbursement.",
+    faqs: [
+      { q: "How much does a doula cost in Philadelphia?", a: "In Philly, doula packages typically run $800–$2,500 depending on experience and what's included — most cover 2 prenatal visits, labor support, and 1–2 postpartum visits. Some doulas offer sliding scale, and if you have PA Medicaid, you may qualify for full coverage up to $1,250." },
+      { q: "Does Pennsylvania Medicaid cover doula services?", a: "Yes! As of 2024, Pennsylvania Medicaid covers doula services up to $1,250 per pregnancy through the PA Doula Program. You'll need to use a Medicaid-enrolled doula — contact your managed care plan for a list of enrolled doulas in Philadelphia." },
+      { q: "What hospitals in Philadelphia have the highest level NICU?", a: "Hospital of the University of Pennsylvania (HUP) has the only Level IV NICU in the city — the highest level available. CHOP (Children's Hospital of Philadelphia) also operates a Level IV NICU for newborns who need transfer after birth." },
+      { q: "Are there birth centers in Philadelphia?", a: "Yes — the Philadelphia Birth Center in Germantown offers out-of-hospital birth with certified nurse-midwives. For more options, you can also look into birth centers in the surrounding suburbs or home birth with a licensed midwife." },
+      { q: "Can I bring my doula to hospitals in Philadelphia?", a: "Most Philly hospitals allow doulas in the delivery room alongside your medical team, but policies can vary — especially during flu season or if visitor restrictions are in place. Call your hospital's labor and delivery unit a few weeks before your due date to confirm their current policy." },
+      { q: "What postpartum resources are available in Philadelphia?", a: "Philly has strong postpartum support: Maternity Care Coalition offers home visiting and breastfeeding help across the city, the Philadelphia Department of Public Health runs free parenting groups, CHOP's Lactation Center provides expert breastfeeding support, and the Postpartum Support International PA helpline (1-800-773-6667) is available for perinatal mood concerns." }
+    ],
+    nearbyCities: ["new-york-ny", "baltimore-md"],
+  },
+  "pittsburgh-pa": {
+    city: "Pittsburgh",
+    state: "PA",
+    slug: "pittsburgh-pa",
+    costLow: 700,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Pittsburgh's doula community is growing strong, with a tight-knit network of birthworkers who bring that signature Steel City loyalty to your birth experience. Organizations like Birth Sisters Pittsburgh and local BIPOC birth collectives are expanding access and pushing for more equitable maternal care across the city's neighborhoods. You'll find doulas here who treat you like family and who deeply understand the unique experience of birthing in Western Pennsylvania's hospital landscape.",
+    heroLocalDetail: "At 38 weeks, you're probably mentally calculating drive times from your Squirrel Hill apartment or Lawrenceville rowhouse to your delivery hospital, wondering whether the Fort Pitt Tunnel will cooperate or if Route 28 is the safer bet. Frick Park's wooded trails give you shaded walking paths when you need to coax baby along, and the Strip District on a quiet Saturday morning is a surprisingly peaceful place for those final waddle-walks past the vendor stands on Smallman Street.",
+    hospitalDetails: [
+      { name: "Magee-Womens Hospital of UPMC", paragraph: "Magee-Womens Hospital is a Level III NICU facility and Pittsburgh's premier maternity hospital, delivering over 10,000 babies a year with 24/7 obstetric anesthesiology, midwifery services, and a renowned maternal-fetal medicine program. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "UPMC Children's Hospital of Pittsburgh", paragraph: "While not a delivery hospital, UPMC Children's operates a Level IV NICU — the region's highest — for newborns who need the most specialized neonatal care after transfer from any surrounding hospital." },
+      { name: "Allegheny General Hospital", paragraph: "Allegheny General on the North Side holds a Level III NICU with a well-established obstetric program and private labor rooms, serving families from the North Hills and beyond. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "West Penn Hospital", paragraph: "West Penn Hospital in Bloomfield features a Level II NICU with a highly regarded midwifery practice and a more intimate, community-hospital feel. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Pittsburgh", paragraph: "Pittsburgh doesn't currently have a freestanding birth center, which we know is disappointing if that's the experience you're hoping for. The good news is that Magee-Womens Hospital and West Penn Hospital both offer midwifery-led care with more supportive, low-intervention options, and some doulas in the area can connect you with home birth midwives serving the greater Pittsburgh region." }
+    ],
+    medicaidNote: "Pennsylvania Medicaid covers doula services as of 2024, with reimbursement of up to $1,250 per pregnancy through the PA Doula Program — covering prenatal visits, labor support, and postpartum visits combined.",
+    insuranceNote: "Pennsylvania private insurers vary widely on doula coverage — Aetna and UHC may partially reimburse with a superbill, while Cigna and Blue Cross of Pennsylvania often require pre-authorization. Always request a superbill from your doula and submit it with CPT code S9443 for the best chance of reimbursement.",
+    faqs: [
+      { q: "How much does a doula cost in Pittsburgh?", a: "In Pittsburgh, doula packages generally range from $700–$2,000, with most covering prenatal visits, labor support, and postpartum follow-up. If cost is a concern, ask about sliding scale options — and remember, PA Medicaid now covers doula services up to $1,250." },
+      { q: "Does Pennsylvania Medicaid cover doula services?", a: "Yes! As of 2024, Pennsylvania Medicaid covers doula services up to $1,250 per pregnancy through the PA Doula Program. You'll need to work with a Medicaid-enrolled doula — contact your managed care plan for options in Pittsburgh." },
+      { q: "What hospitals in Pittsburgh have the highest level NICU?", a: "UPMC Children's Hospital of Pittsburgh has a Level IV NICU — the highest level possible — for newborns needing the most advanced care. Magee-Womens Hospital and Allegheny General both have Level III NICUs for in-house delivery support." },
+      { q: "Are there birth centers in Pittsburgh?", a: "Not currently — Pittsburgh doesn't have a freestanding birth center. But you can still get midwifery-led, low-intervention care at Magee-Womens Hospital or West Penn Hospital, or explore home birth options with licensed midwives in the greater Pittsburgh area." },
+      { q: "Can I bring my doula to hospitals in Pittsburgh?", a: "Yes, most Pittsburgh hospitals welcome doulas as part of your support team during labor and delivery. Magee-Womens and West Penn are especially doula-friendly — but it's always smart to call your hospital's labor and delivery unit a few weeks before your due date to confirm their current visitor and support person policies." },
+      { q: "What postpartum resources are available in Pittsburgh?", a: "Pittsburgh offers several great postpartum resources: Healthy Start Pittsburgh supports moms through pregnancy and postpartum with wraparound services, the Allegheny County Health Department has a free home visiting program, Western Psychiatric Institute provides perinatal mood support, and La Leche League Pittsburgh runs free breastfeeding support groups across the city." }
+    ],
+    nearbyCities: ["philadelphia-pa"],
+  },
+  "baltimore-md": {
+    city: "Baltimore",
+    state: "MD",
+    slug: "baltimore-md",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    culture: "Baltimore's birth worker community is powered by a fierce network of Black doulas and birth justice organizations that have been fighting for equitable maternal care in a city with stark disparities. Groups like the Baltimore Doula Project and community-based collectives bring culturally grounded support that centers your voice and your choices. Whether you're delivering at a downtown academic center or a community hospital, Baltimore doulas show up with both strategy and soul.",
+    heroLocalDetail: "At 38 weeks pregnant, you're probably figuring out the fastest route from your Canton rowhouse or Reservoir Hill apartment to your hospital — banking on Greenmount Avenue being clear or bracing for Charles Street traffic. The promenade along the Inner Harbor waterfront gives you flat, easy walking when contractions start feeling like they might mean business, and Druid Hill Park's shaded loop is a neighborhood favorite for those last-weeks waddles under the old-growth canopy.",
+    hospitalDetails: [
+      { name: "The Johns Hopkins Hospital", paragraph: "Johns Hopkins holds a Level IV NICU — Maryland's highest — with world-class maternal-fetal medicine specialists, 24/7 neonatologists, and a recently renovated labor and delivery unit on their East Baltimore campus. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "University of Maryland Medical Center", paragraph: "UMMC operates a Level III NICU with a strong midwifery program, high-risk obstetric care, and serves as the primary teaching hospital for West Baltimore. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Sinai Hospital of Baltimore", paragraph: "Sinai Hospital carries a Level III NICU on its Greenspring campus in Northwest Baltimore, with a supportive maternity unit, lactation consultants, and midwifery options. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "MedStar Franklin Square Medical Center", paragraph: "MedStar Franklin Square has a Level III NICU and is a key community hospital serving Baltimore's eastern neighborhoods with full obstetric services. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
+    ],
+    birthCenterDetails: [
+      { name: "Johns Hopkins Bayview Birth Center", paragraph: "The Johns Hopkins Bayview Birth Center offers a midwifery-led, low-intervention birth experience within a hospital campus — giving you the homey feel of a birth center with the safety net of hospital-level care steps away. It's one of the few birth center options in Baltimore and welcomes doula support throughout your labor." }
+    ],
+    medicaidNote: "Maryland Medicaid covers doula services as of 2024, with reimbursement rates including $450 for labor and delivery support, $75 per prenatal or postpartum visit (up to 4 visits), totaling up to $900 per pregnancy for Medicaid-enrolled doulas.",
+    insuranceNote: "Maryland's state insurance regulations support broader maternity coverage, but doula-specific reimbursement through private insurance varies. CareFirst BlueCross BlueShield of Maryland and UHC may offer partial reimbursement with a superbill using CPT code S9443. Always ask your doula for a superbill and submit it promptly.",
+    faqs: [
+      { q: "How much does a doula cost in Baltimore?", a: "In Baltimore, doula packages typically range from $800–$2,200 depending on experience level and services included. If you have Maryland Medicaid, you may qualify for coverage up to $900 through the state's Medicaid doula program." },
+      { q: "Does Maryland Medicaid cover doula services?", a: "Yes! Maryland Medicaid covers doula services as of 2024, with up to $450 for labor and delivery and $75 per visit for up to 4 prenatal or postpartum visits — totaling up to $900 per pregnancy. You'll need a Medicaid-enrolled doula, and we can help connect you with one in Baltimore." },
+      { q: "What hospitals in Baltimore have the highest level NICU?", a: "Johns Hopkins Hospital has a Level IV NICU — the highest level available in the city and state. University of Maryland Medical Center, Sinai Hospital, and MedStar Franklin Square all have Level III NICUs for advanced care." },
+      { q: "Are there birth centers in Baltimore?", a: "Yes! The Johns Hopkins Bayview Birth Center offers midwifery-led, low-intervention birth on a hospital campus. It's a great option if you want a birth center vibe with the backup of hospital care right down the hall." },
+      { q: "Can I bring my doula to hospitals in Baltimore?", a: "Most Baltimore hospitals welcome doulas as part of your birth team — Johns Hopkins, UMMC, and Sinai are generally doula-friendly. It's still a good idea to call your hospital's labor and delivery unit a couple of weeks before delivery to confirm their current support person policies." },
+      { q: "What postpartum resources are available in Baltimore?", a: "Baltimore has strong postpartum support: Baltimore Healthy Start provides wraparound services from pregnancy through the first year, the Baltimore City Health Department offers free home visiting programs, Sinai Hospital's Center for Pregnancy and New Parents provides lactation and newborn support, and the Maryland PSI warmline (1-800-773-6667) is available for perinatal mood and anxiety support." }
+    ],
+    nearbyCities: ["philadelphia-pa", "virginia-beach-va"],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
