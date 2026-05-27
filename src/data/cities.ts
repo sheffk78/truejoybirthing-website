@@ -2768,6 +2768,349 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["philadelphia-pa", "virginia-beach-va"],
   },
+  "hartford-ct": {
+    city: "Hartford",
+    state: "CT",
+    slug: "hartford-ct",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Hartford's birth community is growing fast, with doulas and midwives building real connection across the city — especially in neighborhoods like North End and Frog Hollow. You'll find a strong network of Black and Latina doulas who understand that your culture matters in the birth room. Connecticut's HUSKY Health doula coverage (live since 2024) is opening doors for more moms to get the support they deserve.",
+    heroLocalDetail: "At 38 weeks, you're probably mapping the quickest route from your apartment in Asylum Hill or your place on the South Side to your hospital — knowing Albany Avenue traffic can be unpredictable at rush hour. Bushnell Park gives you flat, shaded walking paths for those final pregnancy strolls right in downtown, and the Connecticut River trail behind the science center is a quiet spot when you need to move and think.",
+    hospitalDetails: [
+      { name: "Connecticut Children's Medical Center", paragraph: "Connecticut Children's operates a Level IV NICU — the highest level available — meaning they can handle the most complex neonatal needs right in Hartford. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Hartford Hospital", paragraph: "Hartford Hospital offers a Level III NICU and a well-established maternity program serving families throughout the Greater Hartford area. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Saint Francis Hospital", paragraph: "Saint Francis Hospital provides a Level III NICU and a family-centered birth experience on the north side of Hartford. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Hartford", paragraph: "There are currently no freestanding birth centers operating in Hartford, but midwifery practices at Hartford Hospital and Saint Francis offer low-intervention birth options. Connecticut law allows birth centers, so this landscape may evolve — talk to your provider about what's available." }
+    ],
+    medicaidNote: "Connecticut's HUSKY Health (Medicaid) covers doula services as of January 2024, with reimbursement of approximately $900 for a full package including prenatal visits, labor support, and postpartum visits. Your doula must be enrolled as a HUSKY Health provider.",
+    insuranceNote: "Connecticut private insurers vary on doula coverage — some Aetna and Cigna plans in CT now include doula benefits. Call your insurance company and ask specifically about 'doula services' or 'labor support' to find out what's covered. If your plan doesn't cover doulas, ask about out-of-network reimbursement with a superbill.",
+    faqs: [
+      { q: "How much does a doula cost in Hartford?", a: "In Hartford, a birth doula typically charges between $800 and $2,000 for a full package — prenatal visits, labor support, and postpartum care. Some doulas offer sliding scale fees, and if you have HUSKY Health (CT Medicaid), your doula services may be covered at no cost to you." },
+      { q: "Does Connecticut Medicaid cover doula services?", a: "Yes! As of January 2024, Connecticut's HUSKY Health program covers doula services — including prenatal visits, labor support, and postpartum visits. Make sure your doula is enrolled as a HUSKY Health provider, and ask your care coordinator to help you find one." },
+      { q: "What hospitals in Hartford have the highest level NICU?", a: "Connecticut Children's Medical Center has a Level IV NICU — the highest level — offering the most advanced neonatal care in the region. Hartford Hospital and Saint Francis Hospital both have Level III NICUs." },
+      { q: "Are there birth centers in Hartford?", a: "There are no freestanding birth centers currently operating in Hartford. However, hospital-based midwifery practices at Hartford Hospital and Saint Francis offer midwifery-centered birth experiences." },
+      { q: "Can I bring my doula to hospitals in Hartford?", a: "Yes — all major Hartford hospitals allow doulas as part of your birth team. Call the hospital's maternity floor ahead of time to confirm their current visitor and support person policies so there are no surprises on your big day." },
+      { q: "What postpartum resources are available in Hartford?", a: "Hartford has solid postpartum support: Connecticut's HUSKY Health offers postpartum coverage up to 12 months, the Hartford WIC program provides nutrition and breastfeeding support, the Family Life Center at Saint Francis offers parenting programs, and community-based groups through the Hispanic Health Council and Hartford's home visiting programs are available." }
+    ],
+    nearbyCities: ["boston-ma", "providence-ri", "new-york-ny"],
+  },
+  "boston-ma": {
+    city: "Boston",
+    state: "MA",
+    slug: "boston-ma",
+    costLow: 1000,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    culture: "Boston is a powerhouse for birth justice — home to some of the country's most storied teaching hospitals and a growing community of doulas who are making sure your voice gets heard no matter where you deliver. From the Black maternal health advocates in Roxbury and Dorchester to the midwifery champions in Cambridge, Boston moms have options and a community that fights for them. Massachusetts MassHealth doula coverage launched in 2024, making support more accessible than ever.",
+    heroLocalDetail: "At 38 weeks, you're probably mapping the fastest route from your place in Jamaica Plain or Southie to your hospital — hoping the Longwood area isn't a parking lot and that Centre Street construction is done. The Arnold Arboretum gives you gorgeous, shaded walking paths for those final coax-baby-out strolls, and the Charles River Esplanade is flat and breezy when you need easy movement.",
+    hospitalDetails: [
+      { name: "Brigham and Women's Hospital", paragraph: "Brigham and Women's operates a Level III NICU and is one of the busiest maternity hospitals in New England, with midwifery and physician options. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Boston Medical Center", paragraph: "BMC offers a Level III NICU and is known for its commitment to serving diverse families and its strong midwifery practice. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Massachusetts General Hospital", paragraph: "Mass General provides a Level III NICU and a full-spectrum maternity program integrated with one of the top research hospitals in the world. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Beth Israel Deaconess Medical Center", paragraph: "BIDMC offers a Level III NICU and a well-established midwifery practice in the Longwood area. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Boston Children's Hospital", paragraph: "While primarily a pediatric hospital, Boston Children's operates a Level IV NICU — the highest level — for the most complex neonatal conditions, working closely with Brigham and Women's." }
+    ],
+    birthCenterDetails: [
+      { name: "Birth Sanctuary Cambridge", paragraph: "Birth Sanctuary Cambridge is a freestanding birth center near Alewife offering midwife-led births in a home-like setting. It's one of the few independent birth centers in the greater Boston area — a beautiful option if you're seeking a low-intervention birth outside the hospital." }
+    ],
+    medicaidNote: "Massachusetts MassHealth covers doula services as of January 2024, with reimbursement of approximately $1,200 for a full package — covering 2 prenatal visits, labor and delivery support, and 2 postpartum visits. Your doula must be enrolled as a MassHealth provider.",
+    insuranceNote: "Massachusetts requires most private insurance plans through the state exchange (MA Health Connector) to cover maternity services. Doula coverage by private insurers is expanding — some Blue Cross Blue Shield of MA and Tufts Health Plan policies now include doula benefits. Check your plan documents or call member services and ask about 'certified doula services.'",
+    faqs: [
+      { q: "How much does a doula cost in Boston?", a: "In Boston, a birth doula typically charges between $1,000 and $3,000 for a full package — Boston's higher cost of living and concentration of experienced doulas drives the upper range. If you have MassHealth, your doula services may be fully covered — and some doulas offer sliding scale or payment plans." },
+      { q: "Does Massachusetts Medicaid cover doula services?", a: "Yes — MassHealth started covering doula services in January 2024, reimbursing approximately $1,200 for a full package. Your doula needs to be enrolled as a MassHealth provider. Call your MassHealth health plan to get a list of enrolled doulas near you." },
+      { q: "What hospitals in Boston have the highest level NICU?", a: "Boston Children's Hospital operates a Level IV NICU — the highest level possible. Brigham and Women's, Boston Medical Center, Massachusetts General Hospital, and Beth Israel Deaconess all have Level III NICUs." },
+      { q: "Are there birth centers in Boston?", a: "Birth Sanctuary Cambridge near Alewife is a freestanding birth center offering midwife-led births in a home-like setting. Most other birth options in Boston are hospital-based midwifery practices. If you want a birth center experience, Birth Sanctuary is worth exploring." },
+      { q: "Can I bring my doula to hospitals in Boston?", a: "Yes — Boston's major hospitals generally welcome doulas as part of your support team. Policies can shift, so call your hospital's maternity floor before your due date to confirm their current support person policy." },
+      { q: "What postpartum resources are available in Boston?", a: "Boston has strong postpartum support: MassHealth covers postpartum care up to 12 months, the Boston Public Health Commission's MOMCARE program provides wraparound services, Birth Sisters at Boston Medical Center offers culturally centered doula support, postpartum groups run through Brigham and Women's Center for Women's Health, and WIC offices serve Dorchester, Roxbury, and Jamaica Plain." }
+    ],
+    nearbyCities: ["hartford-ct", "providence-ri", "new-york-ny"],
+  },
+  "providence-ri": {
+    city: "Providence",
+    state: "RI",
+    slug: "providence-ri",
+    costLow: 800,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Providence has a quietly powerful birth community shaped by its size — doulas, midwives, and lactation consultants here tend to know each other and often know your OB too. The city's Dominican, Cape Verdean, and Portuguese communities have built strong networks of culturally centered birth workers. Rhode Island was ahead of the curve on Medicaid doula coverage, and you'll feel the difference: more moms can actually afford the support they want.",
+    heroLocalDetail: "At 38 weeks, you're probably figuring out the fastest route from your place on the South Side or Federal Hill to Women & Infants on Dudley Street — thankfully everything in Providence is close. India Point Park along the Providence River gives you flat, waterfront walking when you need to move, and Rogers Williams Park's rose garden is a surprisingly peaceful place for those last-weeks waddles.",
+    hospitalDetails: [
+      { name: "Women & Infants Hospital of Rhode Island", paragraph: "Women & Infants operates a Level III NICU and is the largest obstetrical care facility in Rhode Island, delivering more babies than any other hospital in the state. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Roger Williams Medical Center", paragraph: "Roger Williams provides a Level II NICU and serves families in the Providence area with a smaller, more intimate maternity program. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Hasbro Children's Hospital", paragraph: "Hasbro Children's, part of Rhode Island Hospital, provides Level IV NICU services — the highest level — for the most complex neonatal cases, working in close collaboration with Women & Infants." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Providence", paragraph: "There are currently no freestanding birth centers in Providence, though Women & Infants Hospital offers midwifery services within the hospital setting. Community advocates are working to expand birth center options in Rhode Island." }
+    ],
+    medicaidNote: "Rhode Island Medicaid began covering doula services in July 2023 — one of the earliest New England states to do so. The state reimburses approximately $1,500 for a full doula package covering up to 8 visits. Your doula must be enrolled as a RI Medicaid provider.",
+    insuranceNote: "Rhode Island private insurers are increasingly offering doula coverage — Blue Cross Blue Shield of Rhode Island and UnitedHealthcare have pilot programs. Ask your insurer directly about 'doula services' coverage. If your doula accepts RI Medicaid, you should have no out-of-pocket cost.",
+    faqs: [
+      { q: "How much does a doula cost in Providence?", a: "In Providence, a birth doula typically charges between $800 and $1,800 for a full package including prenatal visits, labor support, and postpartum care. If you have RI Medicaid, your doula services may be fully covered at no cost to you — Rhode Island was one of the first New England states to offer this." },
+      { q: "Does Rhode Island Medicaid cover doula services?", a: "Yes! Rhode Island Medicaid has covered doula services since July 2023 — the full package is reimbursed at approximately $1,500. Your doula must be enrolled as a RI Medicaid provider. Contact your health plan or care coordinator to find enrolled doulas." },
+      { q: "What hospitals in Providence have the highest level NICU?", a: "Hasbro Children's Hospital (part of Rhode Island Hospital) operates a Level IV NICU — the highest level. Women & Infants Hospital has a Level III NICU, and Roger Williams Medical Center has a Level II NICU." },
+      { q: "Are there birth centers in Providence?", a: "There are no freestanding birth centers in Providence right now. Women & Infants Hospital does have midwives and a more home-like birth suite option within the hospital. Community advocates are pushing for birth center options, so this could change." },
+      { q: "Can I bring my doula to hospitals in Providence?", a: "Yes — Providence hospitals, including Women & Infants, generally welcome doulas as part of your birth team. Call the hospital's maternity unit before your due date to confirm their current visitor and support person policies." },
+      { q: "What postpartum resources are available in Providence?", a: "Providence has solid postpartum support: RI Medicaid covers postpartum care up to 12 months, the Rhode Island Department of Health's Home Visiting Program provides in-home support, WIC offices on Broad Street and in Olneyville offer nutrition and breastfeeding help, and community-based groups through organizations like the SISTA Project and Progreso Latino are available." }
+    ],
+    nearbyCities: ["boston-ma", "hartford-ct", "new-york-ny"],
+  },
+  "san-francisco-ca": {
+    city: "San Francisco",
+    state: "CA",
+    slug: "san-francisco-ca",
+    costLow: 1800,
+    costHigh: 3500,
+    shelbiServesHere: false,
+    culture: "San Francisco's birth community is vibrant and progressive — from the long-standing home-birth midwifery tradition to a thriving network of doulas of color who center equity and ancestral wisdom. You'll find everything from BIPOC-centered doula collectives to integrative birth prep classes that honor the whole you, not just the clinical side of things.",
+    heroLocalDetail: "At 38 weeks, you're probably mapping the quickest route from your apartment in the Mission or Noe Valley to your hospital — praying for no fog delays on the way to the medical campus. The Embarcadero waterfront gives you flat walking for those final pregnancy strolls, and Crissy Field offers ocean breezes when you need to move and think.",
+    hospitalDetails: [
+      { name: "UCSF Medical Center", paragraph: "UCSF's Level IV NICU is one of the top neonatal programs on the West Coast, making it a go-to for high-risk pregnancies. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "California Pacific Medical Center", paragraph: "CPMC's Van Ness campus features a Level III NICU and beautifully designed private birthing suites. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Zuckerberg San Francisco General Hospital", paragraph: "SF General offers a Level III NICU and serves as the city's safety-net hospital with a dedicated team experienced in diverse patient populations. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
+    ],
+    birthCenterDetails: [
+      { name: "San Francisco Birth Center", paragraph: "The San Francisco Birth Center offers out-of-hospital midwifery care in a warm, home-like setting — one of the few freestanding birth centers in the city, welcoming families seeking a low-intervention birth experience." }
+    ],
+    medicaidNote: "California covers doula services through Medi-Cal — since January 2023, you can receive up to ~$1,587 in doula coverage including prenatal, birth, and postpartum visits. Ask your Medi-Cal managed care plan how to get started.",
+    insuranceNote: "Under CA law, private insurance plans must cover maternity services, and many now include doula benefits. Medi-Cal doula coverage has removed prior-authorization requirements to make access easier.",
+    faqs: [
+      { q: "How much does a doula cost in San Francisco?", a: "In San Francisco, doula services typically range from $1,800 to $3,500 depending on experience and package inclusions. Some doulas offer sliding-scale spots — always ask! And if you have Medi-Cal, coverage up to ~$1,587 can significantly reduce your costs." },
+      { q: "Does California Medicaid cover doula services?", a: "Yes! Since 2023, Medi-Cal covers doula services up to ~$1,587. Contact your Medi-Cal managed care plan to find an enrolled doula near you, or ask a doula you love if they accept Medi-Cal — many now do." },
+      { q: "What hospitals in San Francisco have the highest level NICU?", a: "UCSF Medical Center has a Level IV NICU — the highest level. CPMC and SF General both offer Level III NICUs. You're in excellent hands for any level of care you and your baby may need." },
+      { q: "Are there birth centers in San Francisco?", a: "Yes — the San Francisco Birth Center is a freestanding birth center offering midwifery-led, low-intervention births. It's one of the few in the city proper, so spots can fill quickly." },
+      { q: "Can I bring my doula to hospitals in San Francisco?", a: "Yes — UCSF, CPMC, and SF General all allow doulas as part of your support team. Call your hospital's maternity unit ahead of time to confirm their current visitor and support-person policies." },
+      { q: "What postpartum resources are available in San Francisco?", a: "San Francisco has strong postpartum support: UCSF's Lactation Center provides expert breastfeeding help, Day One Centers in SoMa offer postpartum groups, Black Mama's Village provides culturally centered care, and the SF Department of Public Health's Black Infant Health Program serves local families." }
+    ],
+    nearbyCities: ["oakland-ca", "san-jose-ca", "sacramento-ca"],
+  },
+  "san-jose-ca": {
+    city: "San Jose",
+    state: "CA",
+    slug: "san-jose-ca",
+    costLow: 1500,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    culture: "San Jose's birth community blends Silicon Valley innovation with deep-rooted Vietnamese and Latino cultural traditions around pregnancy and postpartum care. You'll find doulas here who honor nằm cữ (Vietnamese postpartum recovery) and cuarentena (Latino 40-day rest) alongside modern evidence-based birth prep — your cultural traditions are respected in the birth room.",
+    heroLocalDetail: "At 38 weeks, you're probably figuring out the fastest route from your place in Willow Glen or Berryessa to your delivery hospital — timing the 101 vs 280 commute. The Guadalupe River Park trail gives you flat, paved walking near downtown, and Alum Rock Park's shaded canyon is a quiet spot for those last peaceful walks before baby arrives.",
+    hospitalDetails: [
+      { name: "Good Samaritan Hospital", paragraph: "Good Samaritan features a Level III NICU and is known for its family-centered maternity care in the Los Gatos/San Jose area. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Regional Medical Center of San Jose", paragraph: "Regional Medical Center offers a Level III NICU and a dedicated women's health program serving the East San Jose community. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Kaiser Permanente San Jose Medical Center", paragraph: "Kaiser San Jose provides a Level III NICU with seamless integrated prenatal-to-postpartum care for Kaiser members. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in San Jose", paragraph: "There are currently no freestanding birth centers operating within San Jose city limits. The Bay Area Birth Center in nearby Santa Clara or South Bay Midwifery may be options — or talk to your midwife about home birth if that's your preference." }
+    ],
+    medicaidNote: "California covers doula services through Medi-Cal — since January 2023, you can receive up to ~$1,587 in doula coverage including prenatal, birth, and postpartum visits. Ask your Medi-Cal managed care plan how to get started.",
+    insuranceNote: "If you have insurance through a Silicon Valley employer, check whether your plan includes doula benefits — many large tech-company plans now do. Medi-Cal doula coverage requires no prior authorization.",
+    faqs: [
+      { q: "How much does a doula cost in San Jose?", a: "San Jose doula services typically run $1,500–$3,000. Costs vary based on experience and package scope — many doulas in this area offer payment plans or sliding-scale options, so don't hesitate to ask." },
+      { q: "Does California Medicaid cover doula services?", a: "Yes — Medi-Cal has covered doula services since 2023, up to ~$1,587. Many San Jose doulas have started accepting Medi-Cal since the policy change." },
+      { q: "What hospitals in San Jose have the highest level NICU?", a: "Good Samaritan Hospital, Regional Medical Center, and Kaiser San Jose all offer Level III NICUs. For Level IV care, UCSF Benioff in San Francisco is the closest option." },
+      { q: "Are there birth centers in San Jose?", a: "There are no freestanding birth centers in San Jose proper right now. The Bay Area Birth Center in nearby Santa Clara or South Bay Midwifery are alternatives, or you can explore home birth with a licensed midwife." },
+      { q: "Can I bring my doula to hospitals in San Jose?", a: "Absolutely — Good Samaritan, Regional Medical Center, and Kaiser San Jose all allow doulas as support persons. Call ahead to your hospital's maternity triage to confirm current policies." },
+      { q: "What postpartum resources are available in San Jose?", a: "San Jose has solid postpartum support: lactation consultants at Santa Clara Valley Medical Center, postpartum groups through the YWCA Golden Gate Silicon Valley, Vietnamese postpartum meal services in East San Jose, and Santa Clara County's Perinatal Equity Initiative for Black moms." }
+    ],
+    nearbyCities: ["san-francisco-ca", "oakland-ca", "sacramento-ca"],
+  },
+  "long-beach-ca": {
+    city: "Long Beach",
+    state: "CA",
+    slug: "long-beach-ca",
+    costLow: 1200,
+    costHigh: 2800,
+    shelbiServesHere: false,
+    culture: "Long Beach has a grounded, community-oriented birth culture shaped by its huge Cambodian and Latino populations — you'll find doulas who understand traditional postpartum practices like 'lying-in' and who show up for mamas in languages beyond English. The birth community here is scrappy, real, and deeply connected to grassroots mutual aid.",
+    heroLocalDetail: "At 38 weeks, you're probably figuring out the fastest route from your place near Retro Row or Cambodia Town to your hospital on Atlantic Avenue — thankful that Long Beach is flatter than most of LA. Shoreline Drive and the beach path give you flat, breezy walking when you need to move, and El Dorado Park's shaded trails are a quiet escape near the end of pregnancy.",
+    hospitalDetails: [
+      { name: "MemorialCare Long Beach Medical Center", paragraph: "MemorialCare Long Beach features a Level III NICU and is one of the area's most established maternity hospitals with a robust women's health program. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Dignity Health St. Mary Medical Center", paragraph: "St. Mary Medical Center offers a Level III NICU and serves as a vital community hospital with deep roots in the Long Beach community. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Long Beach", paragraph: "There are no freestanding birth centers currently operating in Long Beach. Nearby options include the South Bay Birth Center in Redondo Beach or exploring home birth with a licensed midwife." }
+    ],
+    medicaidNote: "California covers doula services through Medi-Cal — since January 2023, you can receive up to ~$1,587 in doula coverage including prenatal, birth, and postpartum visits. Long Beach has a large Medi-Cal population, making this coverage especially impactful.",
+    insuranceNote: "Medi-Cal is the primary insurer for many Long Beach families, and doula coverage is now available without prior authorization. For private insurance, check with your carrier — many Blue Shield and Health Net plans in the area now include doula benefits.",
+    faqs: [
+      { q: "How much does a doula cost in Long Beach?", a: "In Long Beach, expect to pay $1,200–$2,800 for a birth doula package. The community has some wonderful grassroots doulas who offer sliding-scale rates, and Medi-Cal coverage has made doula support more accessible than ever." },
+      { q: "Does California Medicaid cover doula services?", a: "Yes! Medi-Cal covers doula services up to ~$1,587 since 2023. Many Long Beach doulas now accept Medi-Cal — contact your plan or ask any doula you're considering." },
+      { q: "What hospitals in Long Beach have the highest level NICU?", a: "Both MemorialCare Long Beach Medical Center and St. Mary Medical Center have Level III NICUs. For Level IV NICU care, you'd be referred to nearby facilities like UCLA or Children's Hospital LA." },
+      { q: "Are there birth centers in Long Beach?", a: "There are no freestanding birth centers in Long Beach currently. The South Bay Birth Center in Redondo Beach (about 20 minutes away) or a home birth with a licensed midwife are your closest out-of-hospital options." },
+      { q: "Can I bring my doula to hospitals in Long Beach?", a: "Yes — both MemorialCare Long Beach and St. Mary allow doulas as support persons. Call your hospital's maternity department before your due date to confirm their current visitor policy." },
+      { q: "What postpartum resources are available in Long Beach?", a: "Long Beach offers the Comprehensive Perinatal Services Program through community clinics, lactation support at MemorialCare, the Cambodian Advocacy Collaborative for culturally rooted postpartum care, and the Black Infant Health Program through the City of Long Beach Health Department." }
+    ],
+    nearbyCities: ["los-angeles-ca", "san-diego-ca", "bakersfield-ca"],
+  },
+  "oakland-ca": {
+    city: "Oakland",
+    state: "CA",
+    slug: "oakland-ca",
+    costLow: 1500,
+    costHigh: 3200,
+    shelbiServesHere: false,
+    culture: "Oakland's birth culture is powerful and unapologetic — this is a city where Black midwifery is being reclaimed, where doulas organize for birth justice, and where community birth workers show up for each other like family. If you want a birth team that sees your whole self — your culture, your story, your strength — Oakland is where you'll find it.",
+    heroLocalDetail: "At 38 weeks, you're probably mapping the quickest route from your place in West Oakland or the Dimond District to your hospital — calculating whether 880 or 580 is the better bet. Lake Merritt gives you a flat, beautiful walking loop for those final pregnancy strolls, and Jack London Waterfront is peaceful when you need easy movement.",
+    hospitalDetails: [
+      { name: "Highland Hospital", paragraph: "Highland Hospital (Alameda Health System) provides a Level III NICU and serves as Oakland's public safety-net hospital with a deeply committed maternity team experienced in diverse communities. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Kaiser Permanente Oakland Medical Center", paragraph: "Kaiser Oakland offers a Level III NICU with the integrated prenatal-to-postpartum care model that Kaiser members know. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
+    ],
+    birthCenterDetails: [
+      { name: "Bay Area Birth Center", paragraph: "The Bay Area Birth Center in nearby Santa Clara offers a freestanding midwifery-led birth option — a home-like environment for families seeking gentle, low-intervention birth outside the hospital setting. Oakland also has a strong home-birth midwifery community." }
+    ],
+    medicaidNote: "California covers doula services through Medi-Cal — since January 2023, you can receive up to ~$1,587 in doula coverage including prenatal, birth, and postpartum visits. Oakland's community health centers have been early adopters of Medi-Cal doula billing.",
+    insuranceNote: "If you have private insurance, many Alameda County employers include doula benefits — especially tech, university, and public-sector plans. Alameda County also has a Perinatal Equity Initiative funding additional support for Black families.",
+    faqs: [
+      { q: "How much does a doula cost in Oakland?", a: "Oakland doula packages typically range from $1,500 to $3,200. Oakland has a deeply connected birth-justice community, and many doulas offer sliding-scale, community-rate, or Medi-Cal spots — don't let sticker shock stop you from reaching out." },
+      { q: "Does California Medicaid cover doula services?", a: "Yes — Medi-Cal covers doula services up to ~$1,587 since 2023, and Oakland's community birth workers have been quick to enroll. Many Oakland doulas now accept Medi-Cal." },
+      { q: "What hospitals in Oakland have the highest level NICU?", a: "Highland Hospital and Kaiser Oakland both have Level III NICUs. For Level IV neonatal care, UCSF Benioff in San Francisco is your closest option, about 20 minutes away." },
+      { q: "Are there birth centers in Oakland?", a: "The Bay Area Birth Center in Santa Clara serves Oakland families with freestanding midwifery-led care. Oakland also has a strong home-birth midwifery community if you're leaning toward birthing at home." },
+      { q: "Can I bring my doula to hospitals in Oakland?", a: "Yes — Highland and Kaiser Oakland both allow doulas. Oakland hospitals have been especially supportive of doula accompaniment given the city's birth-justice culture. Still, call ahead to confirm current policies." },
+      { q: "What postpartum resources are available in Oakland?", a: "Oakland is rich in postpartum support: the Black Infant Health Program through Alameda County Public Health, Roots Community Birth Center's postpartum circles, lactation support at Highland Hospital, and Alameda County WIC offices for breastfeeding help and nutrition support." }
+    ],
+    nearbyCities: ["san-francisco-ca", "san-jose-ca", "sacramento-ca", "stockton-ca"],
+  },
+  "bakersfield-ca": {
+    city: "Bakersfield",
+    state: "CA",
+    slug: "bakersfield-ca",
+    costLow: 900,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    culture: "Bakersfield's birth community is small but mighty — you'll find doulas and midwives who serve this sprawling Central Valley city with heart, often bridging English and Spanish for Latino families who make up over half the population. The birth culture here is down-to-earth and community-first, where your doula becomes like family.",
+    heroLocalDetail: "At 38 weeks, you're probably figuring out the fastest route from your place in the southwest or Rosedale area to your hospital near Chester Avenue — grateful that Bakersfield traffic is nothing like LA. The River Walk near the Kern River gives you flat, shaded walking paths, and Hart Park is a quiet spot for those last peaceful stretches before baby.",
+    hospitalDetails: [
+      { name: "Kern Medical", paragraph: "Kern Medical features a Level III NICU and provides essential maternity services as Kern County's safety-net hospital. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Bakersfield Memorial Hospital", paragraph: "Bakersfield Memorial offers a Level III NICU and a comfortable family-centered maternity unit serving southwest Bakersfield families. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Bakersfield", paragraph: "There are currently no freestanding birth centers operating in Bakersfield. Some families choose home birth with a licensed midwife — the closest birth center options are a significant drive away in the LA or Bay areas." }
+    ],
+    medicaidNote: "California covers doula services through Medi-Cal — since January 2023, you can receive up to ~$1,587 in doula coverage. Bakersfield has a large Medi-Cal population, making this coverage especially impactful for local families.",
+    insuranceNote: "Medi-Cal is the primary insurer for many Bakersfield families, and doula coverage is now available without prior authorization. For privately insured families, check your plan — Kern County employer plans through Kaiser, Blue Shield, and Health Net may include doula benefits.",
+    faqs: [
+      { q: "How much does a doula cost in Bakersfield?", a: "In Bakersfield, a birth doula typically costs $900–$2,200 — lower than coastal cities but still an investment. Many local doulas offer payment plans, and Medi-Cal coverage at ~$1,587 can cover the full cost of care." },
+      { q: "Does California Medicaid cover doula services?", a: "Yes! Medi-Cal covers doula services up to ~$1,587 since 2023. This is a game-changer in Bakersfield, where Medi-Cal serves a huge portion of families." },
+      { q: "What hospitals in Bakersfield have the highest level NICU?", a: "Both Kern Medical and Bakersfield Memorial have Level III NICUs. For Level IV neonatal care, you'd typically be referred to Valley Children's Hospital in Madera (about 2 hours north)." },
+      { q: "Are there birth centers in Bakersfield?", a: "Not currently — there are no freestanding birth centers in Bakersfield. Home birth with a licensed midwife is an option, and the closest birth centers require driving to the Bay Area or LA." },
+      { q: "Can I bring my doula to hospitals in Bakersfield?", a: "Yes — Kern Medical and Bakersfield Memorial both allow doulas as part of your birth team. Call the maternity unit ahead of time to confirm their current policy." },
+      { q: "What postpartum resources are available in Bakersfield?", a: "Bakersfield offers the Kern County Black Infant Health Program, lactation support through Kern Medical's WIC office, postpartum support groups at Adventist Health Bakersfield, and the Comprehensive Perinatal Services Program (CPSP) at local community health centers." }
+    ],
+    nearbyCities: ["fresno-ca", "los-angeles-ca", "san-diego-ca"],
+  },
+  "stockton-ca": {
+    city: "Stockton",
+    state: "CA",
+    slug: "stockton-ca",
+    costLow: 900,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Stockton's birth community reflects the heart of the Central Valley — hardworking, diverse, and deeply connected to family traditions. With a large Filipino and Latino population, you'll find birth workers who honor cultural practices like cuarentena and who serve families in Spanish, Tagalog, and more. The doula scene is growing here, and the women who do this work show up with real love.",
+    heroLocalDetail: "At 38 weeks, you're probably figuring out the fastest route from your place in Lincoln Village or the Boggs Tract to your hospital near Hammer Lane — grateful that Stockton keeps things close. The Downtown Stockton waterfront near Banner Island gives you flat, easy walking, and Victory Park's rose garden is a surprisingly peaceful place for those last-weeks waddles.",
+    hospitalDetails: [
+      { name: "St. Joseph's Medical Center", paragraph: "St. Joseph's features a Level III NICU and has been a trusted maternity provider in Stockton for decades, serving families across San Joaquin County. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Dameron Hospital", paragraph: "Dameron Hospital offers a Level III NICU and serves as a vital community hospital, particularly for families in central and south Stockton. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Stockton", paragraph: "There are no freestanding birth centers in Stockton currently. Families seeking out-of-hospital birth typically work with a licensed midwife for a home birth, or travel to the Bay Area for birth center options." }
+    ],
+    medicaidNote: "California covers doula services through Medi-Cal — since January 2023, you can receive up to ~$1,587 in doula coverage. Stockton has a high Medi-Cal enrollment, so this coverage makes a real difference for local families.",
+    insuranceNote: "Medi-Cal covers a significant portion of Stockton families, and doula coverage is now accessible without prior authorization. For those with private insurance, check your plan — some San Joaquin County and healthcare employer plans include doula benefits.",
+    faqs: [
+      { q: "How much does a doula cost in Stockton?", a: "In Stockton, a birth doula typically costs $900–$2,000, more affordable than Bay Area rates. Many Stockton doulas offer flexible payment arrangements, and if you have Medi-Cal, your doula could be fully covered at up to ~$1,587." },
+      { q: "Does California Medicaid cover doula services?", a: "Yes — Medi-Cal covers doula services up to ~$1,587 since 2023. Stockton's community health workers can help connect you with Medi-Cal enrolled doulas, or ask a doula directly if they accept Medi-Cal." },
+      { q: "What hospitals in Stockton have the highest level NICU?", a: "Both St. Joseph's Medical Center and Dameron Hospital have Level III NICUs. For the highest Level IV NICU care, families are typically referred to UC Davis in Sacramento." },
+      { q: "Are there birth centers in Stockton?", a: "There are no freestanding birth centers in Stockton. Home birth with a licensed midwife is available locally, or you can look at birth center options in the Bay Area if you're willing to travel." },
+      { q: "Can I bring my doula to hospitals in Stockton?", a: "Yes — St. Joseph's and Dameron both allow doulas to accompany you during labor. It's always smart to call the maternity unit ahead of your delivery to confirm their current support-person policies." },
+      { q: "What postpartum resources are available in Stockton?", a: "Stockton offers postpartum support through the San Joaquin County Black Infant Health Program, WIC lactation consultants at community clinics, the Comprehensive Perinatal Services Program (CPSP) at local health centers, and parenting groups through the Family Resource and Referral Center." }
+    ],
+    nearbyCities: ["sacramento-ca", "fresno-ca", "oakland-ca", "san-francisco-ca"],
+  },
+  "buffalo-ny": {
+    city: "Buffalo",
+    state: "NY",
+    slug: "buffalo-ny",
+    costLow: 1000,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Buffalo's birth community is tight-knit and resilient — just like the city itself. You'll find doulas here who serve across communities from the West Side to the East Side, many connected through grassroots birth-justice organizing that centers Black and Brown mamas. There's a growing movement here to reclaim birth as a community experience, not just a medical one.",
+    heroLocalDetail: "At 38 weeks, you're probably mapping the fastest route from your place in the Elmwood Village or Allentown to your hospital near the medical campus on High Street — hoping the 33 isn't a mess. Delaware Park and Hoyt Lake give you a flat, gorgeous walking loop for those final pregnancy strolls, and Canalside along the water is refreshing when you need easy movement.",
+    hospitalDetails: [
+      { name: "John R. Oishei Children's Hospital", paragraph: "Oishei Children's Hospital is Western New York's premier pediatric facility with a Level IV NICU — the highest level — and a dedicated high-risk maternity program. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Mercy Hospital of Buffalo", paragraph: "Mercy Hospital offers a Level III NICU and a well-established maternity program serving families in South Buffalo and the broader region. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Buffalo", paragraph: "There are currently no freestanding birth centers in Buffalo. Some families pursue home birth with a licensed midwife, but the out-of-hospital birth infrastructure is still growing in Western New York." }
+    ],
+    medicaidNote: "New York Medicaid covers doula services — since January 2024, you can receive up to ~$1,710 in doula coverage for prenatal, labor, and postpartum support. Contact your Medicaid managed care plan to find an enrolled doula near you.",
+    insuranceNote: "NY Medicaid doula coverage launched in January 2024, and Buffalo's community doulas have been enrolling. New York also now requires commercial insurance plans to cover doula services — check with your employer plan for benefits.",
+    faqs: [
+      { q: "How much does a doula cost in Buffalo?", a: "In Buffalo, a birth doula typically costs $1,000–$2,500. With NY Medicaid now covering doulas up to ~$1,710, many families can access doula support at little to no out-of-pocket cost." },
+      { q: "Does New York Medicaid cover doula services?", a: "Yes — since January 2024, NY Medicaid covers doula services up to ~$1,710. Call your Medicaid managed care plan to get a list of enrolled doulas, or ask a doula you're interested in if they accept Medicaid." },
+      { q: "What hospitals in Buffalo have the highest level NICU?", a: "Oishei Children's Hospital has a Level IV NICU — the highest level available — making it the go-to for the most complex neonatal needs in Western New York. Mercy Hospital offers a Level III NICU." },
+      { q: "Are there birth centers in Buffalo?", a: "There are no freestanding birth centers currently operating in Buffalo. Home birth with a licensed midwife is an option, though the community birth center movement is still building in this area." },
+      { q: "Can I bring my doula to hospitals in Buffalo?", a: "Yes — Oishei Children's Hospital and Mercy Hospital both allow doulas as part of your support team. Call the maternity unit ahead of time to confirm their current visitor and support-person policies." },
+      { q: "What postpartum resources are available in Buffalo?", a: "Buffalo offers the Erie County WIC program's lactation consultants, the Buffalo Prenatal Perinatal Network's home visiting program, Jericho Road Community Health Center for culturally responsive care, and postpartum depression support groups through the Mental Health Advocates of WNY." }
+    ],
+    nearbyCities: ["rochester-ny", "albany-ny", "new-york-ny"],
+  },
+  "rochester-ny": {
+    city: "Rochester",
+    state: "NY",
+    slug: "rochester-ny",
+    costLow: 1000,
+    costHigh: 2400,
+    shelbiServesHere: false,
+    culture: "Rochester's birth community is fueled by a powerful legacy — this is the home of Susan B. Anthony and a long tradition of women's advocacy, and that energy carries into today's birth-justice movement. You'll find a growing network of doulas here, especially organizers who center Black maternal health and who are pushing hard for equitable birth outcomes across the city's diverse neighborhoods.",
+    heroLocalDetail: "At 38 weeks, you're probably mapping the fastest route from your place in the South Wedge or Park Avenue area to your hospital near the University of Rochester medical campus on Elmwood Avenue. The Genesee Riverway Trail near High Falls gives you flat, scenic walking for those final pregnancy strolls, and Cobb's Hill Park offers a short loop with a view when you need a change of scene.",
+    hospitalDetails: [
+      { name: "Strong Memorial Hospital (Golisano Children's)", paragraph: "Strong Memorial's Golisano Children's Hospital features a Level IV NICU — the highest level — and is the region's top referral center for high-risk pregnancies and complex neonatal needs. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Rochester General Hospital", paragraph: "Rochester General offers a Level III NICU and a well-established family maternity center serving the greater Rochester community. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Rochester", paragraph: "There are currently no freestanding birth centers in Rochester. Home birth with a licensed midwife is available, and some families travel to birth centers in the Syracuse area for out-of-hospital options." }
+    ],
+    medicaidNote: "New York Medicaid covers doula services — since January 2024, you can receive up to ~$1,710 in doula coverage for prenatal, labor, and postpartum support. Contact your Medicaid managed care plan to find an enrolled doula near you.",
+    insuranceNote: "NY Medicaid doula coverage took effect in January 2024, and Rochester doulas are actively enrolling. New York now also requires commercial insurance plans to cover doula services — contact your insurer to learn about your benefits.",
+    faqs: [
+      { q: "How much does a doula cost in Rochester?", a: "In Rochester, a birth doula usually costs $1,000–$2,400. With NY Medicaid covering up to ~$1,710, many families can get doula support fully covered — and many Rochester doulas also offer payment plans or sliding-scale spots." },
+      { q: "Does New York Medicaid cover doula services?", a: "Yes! Since January 2024, NY Medicaid covers doula services up to ~$1,710. Reach out to your Medicaid managed care plan for a list of enrolled doulas, or ask a doula you love if they accept Medicaid." },
+      { q: "What hospitals in Rochester have the highest level NICU?", a: "Strong Memorial Hospital's Golisano Children's Hospital has a Level IV NICU — the highest level — and is the regional referral center for the most complex cases. Rochester General offers a Level III NICU." },
+      { q: "Are there birth centers in Rochester?", a: "There are no freestanding birth centers in Rochester right now. Home birth with a licensed midwife is an option, or you'd need to travel to Syracuse for the nearest birth center." },
+      { q: "Can I bring my doula to hospitals in Rochester?", a: "Yes — Strong Memorial and Rochester General both welcome doulas as part of your labor support team. Call your hospital's maternity unit before your due date to confirm their current policies." },
+      { q: "What postpartum resources are available in Rochester?", a: "Rochester has solid postpartum resources: the Monroe County WIC program's lactation services, Highland Hospital midwifery practice's postpartum care, the Baby Love Program at Anthony L. Jordan Health Center for Black moms, and the Perinatal Network of Monroe County for peer support and referrals." }
+    ],
+    nearbyCities: ["buffalo-ny", "albany-ny", "new-york-ny"],
+  },
+  "albany-ny": {
+    city: "Albany",
+    state: "NY",
+    slug: "albany-ny",
+    costLow: 1000,
+    costHigh: 2300,
+    shelbiServesHere: false,
+    culture: "Albany's birth community is small but mighty, bolstered by the state capital's connection to health policy and a growing grassroots birth-justice movement. You'll find doulas here who serve the Capital Region with heart — from community-based doulas serving Black and Brown families to midwives who've been attending births in this area for decades. It's a place where your birth team knows you by name.",
+    heroLocalDetail: "At 38 weeks, you're probably mapping the fastest route from your place in Center Square or Pine Hills to your hospital on New Scotland Avenue — calculating whether Madison or Western is the quicker drive. Washington Park gives you a flat, beautiful walking loop for those final pregnancy strolls, and the Corning Preserve along the Hudson River is peaceful when you need easy movement near the water.",
+    hospitalDetails: [
+      { name: "Albany Medical Center", paragraph: "Albany Medical Center features a Level IV NICU — the highest level — and serves as the Capital Region's major referral center for high-risk pregnancies and complex neonatal care. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "St. Peter's Hospital", paragraph: "St. Peter's Hospital offers a Level III NICU and a well-respected family maternity center serving Albany and the broader Capital Region. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
+    ],
+    birthCenterDetails: [
+      { name: "No birth centers in Albany", paragraph: "There are currently no freestanding birth centers in Albany. Home birth with a licensed midwife is an option, and some Capital Region midwives offer home-birth services as an alternative to hospital delivery." }
+    ],
+    medicaidNote: "New York Medicaid covers doula services — since January 2024, you can receive up to ~$1,710 in doula coverage for prenatal, labor, and postpartum support. Contact your Medicaid managed care plan to find an enrolled doula near you.",
+    insuranceNote: "NY Medicaid doula coverage launched in January 2024 and is rolling out across the Capital Region. New York also now requires commercial insurance plans to cover doula services — check with your employer plan or individual insurance for benefit details.",
+    faqs: [
+      { q: "How much does a doula cost in Albany?", a: "In Albany, a birth doula typically costs $1,000–$2,300. With NY Medicaid covering up to ~$1,710 since 2024, many families can access doula care with little to no out-of-pocket cost." },
+      { q: "Does New York Medicaid cover doula services?", a: "Yes — since January 2024, NY Medicaid covers doula services up to ~$1,710. Contact your Medicaid managed care plan for enrolled doula lists, or ask doulas directly if they accept Medicaid." },
+      { q: "What hospitals in Albany have the highest level NICU?", a: "Albany Medical Center has a Level IV NICU — the highest level — and is the Capital Region's top referral center for the most complex neonatal cases. St. Peter's Hospital offers a Level III NICU." },
+      { q: "Are there birth centers in Albany?", a: "Not currently — there are no freestanding birth centers in Albany. Home birth with a licensed midwife is your closest out-of-hospital option." },
+      { q: "Can I bring my doula to hospitals in Albany?", a: "Yes — Albany Medical Center and St. Peter's both allow doulas during labor and delivery. Call ahead to your hospital's maternity unit to confirm their current support-person policies." },
+      { q: "What postpartum resources are available in Albany?", a: "Albany offers the Albany County WIC program for lactation support and nutrition, the REACH Program at Albany Med for high-risk moms, postpartum support groups through St. Peter's maternity services, and the Capital District Perinatal Network for peer support and home visiting programs." }
+    ],
+    nearbyCities: ["rochester-ny", "buffalo-ny", "new-york-ny", "hartford-ct"],
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
