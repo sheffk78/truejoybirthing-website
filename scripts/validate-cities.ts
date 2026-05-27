@@ -208,13 +208,13 @@ function assertCompleteness(slug: string, data: any): Assertion[] {
   });
 
   // A7: slug matches {name}-{state} pattern
-  const slugOk = typeof data.slug === "string" && /^.+-(tx|nc|ga|sc)$/.test(data.slug);
+  const slugOk = typeof data.slug === "string" && /^.+-(tx|nc|ga|sc|ok|oh|in|fl|co|tn|nv|ca|ny|ma|mi|il|ct|ri|pa|az|wa|or|mn|md|nj|va)$/.test(data.slug);
   results.push({
     id: "A7",
     city: slug,
     passed: slugOk,
     message: !slugOk
-      ? `Slug "${data.slug}" does not match {name}-{state} pattern (expected -tx, -nc, -ga, or -sc)`
+      ? `Slug "${data.slug}" does not match {name}-{state} pattern`
       : `Slug pattern valid`,
   });
 
