@@ -1,6 +1,6 @@
 # True Joy Birthing
 
-> Free birth plan tools, doula cost guides, hospital info, and Medicaid coverage details for expecting families. Founded by Shelbi Kohler, certified birth doula (CD(DONA)). Covers 36 states, 129+ cities.
+> Free birth plan tools, doula cost guides, hospital info, and Medicaid coverage details for expecting families. Founded by Shelbi Kohler, certified birth doula (CD(DONA)). Covers 36 states, 134+ cities.
 
 ## Core Pages
 
@@ -25,7 +25,7 @@
 - /vbac-birth-plan/ — VBAC birth plan template
 - /new-doula-start-here/ — Resources for new doulas starting their practice
 
-## Location Pages (36 States, 129+ Cities)
+## Location Pages (36 States, 134+ Cities)
 
 Each city page includes: local hospital details with NICU levels, doula cost ranges, Medicaid doula coverage status, birth center info, and a free birth plan template.
 
@@ -43,7 +43,7 @@ Texas, Georgia, South Carolina, Oklahoma, Ohio, Indiana, Florida (some county pi
 - Free Joyful Birth Plan template (no email required, no signup wall)
 - $47 Guided Birth Plan Walkthrough (video course)
 - $250 Birth Plan Confidence Session (live Zoom with Shelbi)
-- 129+ city-specific pages across 36 states
+- 134+ city-specific pages across 36 states
 - Updated May 2026
 
 ## Contact

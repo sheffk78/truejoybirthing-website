@@ -4733,6 +4733,159 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["jersey-city-nj", "new-york-ny"],
   },
+  "columbus-ga": {
+    city: "Columbus",
+    state: "GA",
+    slug: "columbus-ga",
+    costLow: 800,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Columbus sits on the Chattahoochee River at the Georgia\u2013Alabama border, shaped deeply by nearby Fort Moore (formerly Fort Benning). Military families make up a significant portion of the birth community here, navigating TRICARE benefits and deployments that often mean giving birth without a partner present. The city has a tight-knit but growing doula network, and Black maternal health organizations in the region are addressing persistent disparities in Muscogee County. Spanish-speaking doulas serve the area\u2019s growing Hispanic population, though availability is more limited than in Atlanta.",
+    heroLocalDetail: "Piedmont Columbus Regional Hospital sits at the center of the Midtown medical district near 13th Street, and St. Francis-Emory Healthcare is on the Manchester Expressway corridor west of downtown. Traffic on I-185 and the Manchester Expressway backs up during rush hours (7\u20139 AM, 4\u20136 PM), and Victory Drive near the Fort Moore gates can slow to a crawl during shift changes. The 13th Street Bridge into Phenix City, Alabama is the main cross-river route and gets congested during peak times \u2014 plan your route to the hospital before labor starts.",
+    hospitalDetails: [
+      { name: "Piedmont Columbus Regional Hospital (Midtown Campus)", paragraph: "Piedmont Columbus Regional is one of the largest birth hospitals in the Chattahoochee Valley, delivering thousands of babies annually in private LDR rooms designed for family-centered care. The hospital offers a Level III NICU \u2014 one of the highest NICU designations in the region (contact the hospital directly for current NICU level verification) \u2014 and frequently serves military families from Fort Moore. Certified lactation consultants and childbirth education classes are available. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "St. Francis-Emory Healthcare", paragraph: "St. Francis-Emory Healthcare, on Manchester Expressway, features the Family Birth Place with private suites and a patient-focused approach to labor and delivery. The hospital offers a Level II NICU for moderately ill or premature infants, with transfer protocols for higher-level neonatal care (contact the hospital directly for current NICU level verification). Breastfeeding assistance, parenting classes, and postpartum follow-up care round out their maternity program. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to organize your preferences before you arrive." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Columbus, GA (ZIPs 31801, 31901\u201331909), Muscogee County. Google Maps search
+    // "birth center Columbus GA" found no freestanding birth centers. The nearest
+    // out-of-hospital birth options are in Atlanta (approximately 2 hours east).
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 as of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. For Muscogee County families on Medicaid, call Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Check with your managed care plan (Peach State Health Plan, Amerigroup, or CareSource) about any maternal wellness benefits that might include doula support.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Columbus area. Military families on TRICARE should note that TRICARE does not currently cover doula services, but some employer plans through Fort Moore\u2019s civilian workforce do include maternal wellness benefits. Check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Columbus?", a: "Not yet \u2014 as of 2026, Georgia Medicaid does not have statewide doula coverage. HB 290, which would add Medicaid doula coverage, has been introduced but not enacted. Call Georgia Medicaid at 1-877-423-4746 for the most current status. Some managed care plans like Peach State, Amerigroup, or CareSource may offer limited maternal wellness benefits \u2014 it\u2019s worth asking directly." },
+      { q: "How much does a doula cost in Columbus?", a: "Expect to pay $800 to $1,800 for a birth doula in Columbus. Rates are lower than Atlanta but reflect the local cost of living. Some doulas offer sliding-scale fees or payment plans for military families. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Which Columbus hospitals accommodate birth plans?", a: "Piedmont Columbus Regional Hospital (Level III NICU \u2014 contact the hospital directly for current level verification) and St. Francis-Emory Healthcare (Level II NICU \u2014 contact the hospital directly) both accommodate birth plans. Both serve a large military population and are experienced with a range of birth preferences. Always confirm current visitor and support-person policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Does True Joy Birthing work with Columbus families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Columbus birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["atlanta-ga", "augusta-ga"],
+  },
+  "yonkers-ny": {
+    city: "Yonkers",
+    state: "NY",
+    slug: "yonkers-ny",
+    costLow: 1200,
+    costHigh: 3500,
+    shelbiServesHere: false,
+    culture: "Yonkers is New York\u2019s fourth-largest city and the biggest in Westchester County, where the Hudson Valley meets the Bronx. Its diverse population \u2014 roughly 35% Hispanic/Latino, 30% White, 20% Black, 8% Asian \u2014 means culturally centered birth support is both essential and available, from Spanish-speaking doulas to Caribbean and African diaspora birth traditions. The birth community is growing, with Hudson Valley doulas and DONA-certified practitioners serving the area, though Yonkers lacks the dense network of birth collectives found in New York City proper.",
+    heroLocalDetail: "St. John\u2019s Riverside Hospital sits on North Broadway in central Yonkers, and NewYork-Presbyterian Lawrence Hospital is a short drive east in Bronxville. The Cross County Parkway and Sprain Brook Parkway are the main east\u2013west and north\u2013south corridors, and I-87 (the Major Deegan Expressway) runs through the city \u2014 expect rush-hour backups between 7\u20139 AM and 4\u20136 PM. Metro-North\u2019s Hudson Line connects Yonkers to Grand Central in about 30 minutes, and the Bee-Line Bus System serves Westchester for families without a car.",
+    hospitalDetails: [
+      { name: "St. John\u2019s Riverside Hospital", paragraph: "St. John\u2019s Riverside Hospital on North Broadway has served Yonkers families for over 150 years through its Dr. Richard B. Andree Maternity Center. The hospital offers private and semi-private postpartum rooms, midwifery options alongside OB/GYN care, certified lactation consultants, and prenatal education classes. NICU capabilities are available (contact the hospital directly for current NICU level verification). <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "NewYork-Presbyterian Lawrence Hospital", paragraph: "NewYork-Presbyterian Lawrence Hospital in nearby Bronxville is part of the prestigious NYP health system, offering private LDR rooms, 24/7 obstetric and anesthesiology coverage, and access to maternal-fetal medicine specialists for high-risk pregnancies through the NYP network. NICU capabilities are available (contact the hospital directly for current NICU level verification). <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Yonkers, NY (ZIPs 10701\u201310710), Westchester County. Google Maps search
+    // "birth center Yonkers NY" found no freestanding birth centers. The nearest
+    // confirmed birth center is Morris Heights Health Center Birth Center in the
+    // Bronx (~8\u201310 miles south). Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 as of January 2024, New York State Medicaid covers doula services for eligible enrollees, including Westchester County\u2019s managed care plans (Fidelis, Healthfirst, UnitedHealthcare Community, MetroPlus, MVP, Affinity). The statewide reimbursement is approximately $1,710 per pregnancy, covering prenatal visits, labor and delivery support, and postpartum visits. Doulas must enroll as Medicaid providers through the eMedNY system.",
+    insuranceNote: "New York State law requires commercial insurers to cover lactation support and certain maternal services, but doula coverage varies by plan. Request a superbill from your doula and submit it for out-of-network reimbursement \u2014 many plans will partially reimburse. HSA and FSA funds can typically be used for doula services.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Yonkers?", a: "Yes. New York Medicaid covers doula services as of January 2024, with approximately $1,710 in coverage per pregnancy. Westchester County families are served by managed care plans including Fidelis, Healthfirst, UnitedHealthcare Community, MetroPlus, MVP, and Affinity. Call your plan and ask specifically about doula coverage \u2014 you might be surprised at what\u2019s covered." },
+      { q: "How much does a doula cost in Yonkers?", a: "Expect to pay $1,200 to $3,500 for a doula in the Yonkers\u2013Westchester area. If you\u2019re on Medicaid, your doula services may be covered at no cost through the state program. Some doulas offer sliding-scale fees or payment plans. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Which Yonkers hospitals accommodate birth plans?", a: "St. John\u2019s Riverside Hospital in Yonkers and NewYork-Presbyterian Lawrence Hospital in nearby Bronxville both accommodate birth plans and allow doulas. St. John\u2019s offers midwifery options alongside OB/GYN care, and NYP Lawrence provides access to the broader NYP network of specialists. Always confirm current visitor and support-person policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Does True Joy Birthing work with Yonkers families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Yonkers birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["new-york-ny", "buffalo-ny"],
+  },
+  "anaheim-ca": {
+    city: "Anaheim",
+    state: "CA",
+    slug: "anaheim-ca",
+    costLow: 1200,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    culture: "Anaheim is the most populous city in Orange County and one of the most diverse \u2014 roughly 54% Hispanic/Latino, with a significant Vietnamese community in the adjacent Little Saigon area. Birth traditions here are layered: la cuarentena (the 40-day postpartum rest period), sobada (traditional abdominal massage), and rebozo techniques from Latino heritage, alongside Vietnamese postpartum confinement practices like n\u1ec1n/\u1edf c\u1ef5 and ginger-based recovery diets. The doula community is growing, with Spanish-speaking and Vietnamese-speaking doulas in increasing demand, though supply still trails need.",
+    heroLocalDetail: "UCI Medical Center in Orange is about five minutes from Anaheim via the City Drive exit off the 57 freeway, and St. Jude Medical Center in Fullerton is roughly ten minutes north. The 5 and 57 freeways intersect in central Anaheim \u2014 expect heavy congestion near Disneyland and the Angel Stadium corridor during afternoon rush (3\u20136 PM) and on game nights. Neighborhoods like West Anaheim, The Colony, and Anaheim Hills each have their own feel, with most birthing families heading to Orange or Fullerton for hospital delivery.",
+    hospitalDetails: [
+      { name: "UCI Medical Center", paragraph: "UCI Medical Center in Orange is the county\u2019s only academic medical center and a Magnet-designated hospital offering certified nurse-midwifery care alongside OB/GYN services. It\u2019s affiliated with CHOC Children\u2019s for neonatal care and has a Level III NICU (contact the hospital directly for current NICU level verification). VBAC-supportive care is available for appropriate candidates. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "St. Jude Medical Center", paragraph: "St. Jude Medical Center in Fullerton, part of Providence St. Joseph Health, is a Magnet-designated hospital with a well-established midwifery program through St. Jude Heritage Medical Group. It\u2019s one of north Orange County\u2019s busiest maternity programs with private LDR suites and a Level III NICU (contact the hospital directly for current NICU level verification). The hospital is VBAC-supportive for qualifying patients. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your preferences are written down and accessible." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X and Google Maps found
+    // Nawiri Birth Center (575 S. Beach Blvd, Suite 2, Anaheim, CA 92804) directly
+    // in Anaheim offering waterbirth, VBAC, and midwifery care. Also nearby:
+    // Sacred Heart Birth Center (705 W. Carlyle Dr, Orange, CA 92865, ~3 miles),
+    // and Del Mar Birth Center (399 N. Tustin Ave, Suite 205, Santa Ana, CA 92705,
+    // ~7 miles). Verified 2026-05-28.
+    birthCenterDetails: [
+      { name: "Nawiri Birth Center", paragraph: "Nawiri Birth Center at 575 S. Beach Blvd in Anaheim is a freestanding birth center offering waterbirth, VBAC support, and midwifery care in a home-like setting. They accept Tricare, Aetna, Cigna, and Blue Cross, and also offer home birth services. Verify with the center directly for current services and availability." },
+    ],
+    medicaidNote: "Yes \u2014 as of January 2023, California Medi-Cal covers doula services. Anaheim families on Medi-Cal managed care plans (Health Net, Blue Shield Promise, Molina, Aetna Better Health, CenCal, PHC, SCC) can access doula services at no cost. Doulas must enroll through the PAVE portal to bill Medi-Cal directly. The reimbursement covers prenatal visits, labor and delivery support, and postpartum visits.",
+    insuranceNote: "Under California SB 332, commercial health plans are required to cover doula services and midwifery care. Check with your insurer about in-network doula providers and prior authorization requirements. HSA and FSA funds can typically be used for doula services. Request a superbill from your doula for out-of-network reimbursement.",
+    faqs: [
+      { q: "Does Medi-Cal cover doulas in Anaheim?", a: "Yes. Medi-Cal covers doula services under California\u2019s SB-509, with approximately $1,587 for the full birth package. Orange County families are served by plans including Health Net, Blue Shield Promise, Molina, Aetna Better Health, CenCal, PHC, and SCC. Call your plan and ask specifically about doula coverage \u2014 you might be surprised at what\u2019s covered." },
+      { q: "How much does a doula cost in Anaheim?", a: "Expect to pay $1,200 to $3,000 for a doula in the Anaheim\u2013Orange County area. If you\u2019re on Medi-Cal, doula services may be covered at no cost through the state program. Some doulas offer sliding-scale fees or payment plans. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Which Anaheim-area hospitals accommodate birth plans?", a: "UCI Medical Center in Orange and St. Jude Medical Center in Fullerton both accommodate birth plans and welcome doulas. UCI offers certified nurse-midwifery alongside OB/GYN care, while St. Jude has a well-established midwifery program and private LDR suites. Always confirm current visitor and support-person policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Does True Joy Birthing work with Anaheim families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Anaheim birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["los-angeles-ca", "san-diego-ca", "santa-ana-ca"],
+  },
+  "riverside-ca": {
+    city: "Riverside",
+    state: "CA",
+    slug: "riverside-ca",
+    costLow: 1000,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Riverside is the largest city in California\u2019s Inland Empire, where a growing birth community is addressing significant maternal health disparities. Roughly 54% Hispanic/Latino, the city has a strong need for Spanish-speaking doulas and culturally centered care. Riverside County\u2019s Black Infant Health (BIH) Program and Perinatal Equity Initiative provide free doula services for Black birthing families, and organizations like Sankofa Birth Collective train community doulas. The Inland Empire\u2019s lower cost of living attracts young families, but air quality concerns during wildfire season add a layer of pregnancy planning that coastal families don\u2019t face.",
+    heroLocalDetail: "Riverside Community Hospital sits on Magnolia Avenue in central Riverside, and Kaiser Permanente Riverside Medical Center is on Magnolia a few miles west. The 91 and 215 freeways intersect in downtown Riverside, and both can back up significantly during rush hours (7\u20139 AM, 4\u20136 PM). Summer temperatures regularly exceed 100\u00b0F, making hydration and air conditioning essential for pregnant families. UC Riverside and California Baptist University contribute to a younger demographic in the city\u2019s core neighborhoods.",
+    hospitalDetails: [
+      { name: "Riverside Community Hospital", paragraph: "Riverside Community Hospital on Magnolia Avenue is one of the Inland Empire\u2019s largest maternity providers, with a Level III NICU (contact the hospital directly for current NICU level verification) and a Baby-Friendly designation. The hospital operates a 24/7 OB hospitalist program, offers private LDR rooms, and has certified nurse-midwives on staff. It\u2019s also the regional referral center for high-risk pregnancies. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Kaiser Permanente Riverside Medical Center", paragraph: "Kaiser Permanente Riverside on Magnolia Avenue offers an integrated care model coordinating OB, midwifery, and specialty services under one roof. The hospital has a Level II NICU (contact the hospital directly for current NICU level verification) and provides comprehensive prenatal education and lactation support. For higher-level NICU needs, Kaiser patients may be transferred to Kaiser Fontana. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your preferences are written down and accessible." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Riverside, CA (ZIPs 92501\u201392522), Riverside County. Google Maps search
+    // "birth center Riverside CA" found TruBirth Center at 24665 Sunnymead Blvd,
+    // Moreno Valley, CA 92553 (~10\u201315 minutes from Riverside), the only confirmed
+    // freestanding birth center in the Inland Empire. Verified 2026-05-28.
+    birthCenterDetails: [
+      { name: "TruBirth Center", paragraph: "TruBirth Center in nearby Moreno Valley (~10 minutes from Riverside) is the only freestanding birth center in the Inland Empire region. Staffed by licensed midwives, it offers home-like birth settings, water birth, and holistic prenatal care. Verify with the center directly for current services, insurance coverage, and availability." },
+    ],
+    medicaidNote: "Yes \u2014 as of January 2023, California Medi-Cal covers doula services. Riverside County families on Medi-Cal managed care plans (Health Net, Blue Shield Promise, Molina, Aetna Better Health, IEHP, CenCal, PHC, SCC) can access doula services at no cost. The Riverside County Perinatal Equity Initiative also provides free doula services for Black birthing families. Doulas must enroll through the PAVE portal to bill Medi-Cal directly.",
+    insuranceNote: "Under California SB 332, commercial health plans are required to cover doula services and midwifery care. Check with your insurer about in-network doula providers. IEHP (Inland Empire Health Plan) as a Medi-Cal managed care plan also covers doula services. HSA and FSA funds can typically be used for doula services.",
+    faqs: [
+      { q: "Does Medi-Cal cover doulas in Riverside?", a: "Yes. Medi-Cal covers doula services under California\u2019s SB-509, with approximately $1,587 for the full birth package. Riverside County families are served by plans including Health Net, Blue Shield Promise, Molina, Aetna Better Health, IEHP, CenCal, PHC, and SCC. The Riverside County Perinatal Equity Initiative also offers free doula services for Black birthing families. Call your plan and ask specifically about doula coverage." },
+      { q: "How much does a doula cost in Riverside?", a: "Expect to pay $1,000 to $2,500 for a doula in the Riverside\u2013Inland Empire area. Rates are lower than coastal Orange County or LA but reflect the growing demand. If you\u2019re on Medi-Cal, doula services may be covered at no cost. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Which Riverside hospitals accommodate birth plans?", a: "Riverside Community Hospital (Level III NICU \u2014 contact the hospital directly for current level verification, Baby-Friendly designated) and Kaiser Permanente Riverside (Level II NICU \u2014 contact the hospital directly) both accommodate birth plans and welcome doulas. Riverside Community has a 24/7 OB hospitalist and CNMs on staff. Always confirm current visitor and support-person policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Does True Joy Birthing work with Riverside families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Riverside birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["los-angeles-ca", "san-diego-ca"],
+  },
+  "santa-ana-ca": {
+    city: "Santa Ana",
+    state: "CA",
+    slug: "santa-ana-ca",
+    costLow: 1200,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    culture: "Santa Ana is the most Latino large city in Orange County at roughly 77% Hispanic/Latino, and its birth community reflects that identity deeply. La cuarentena (the 40-day postpartum rest period), sobada (traditional abdominal massage), and the central role of familia during labor are woven into how Santa Ana families approach birth. Spanish-speaking doulas and comadronas serve a critical need here, though demand consistently outpaces supply. Community health workers (promotoras) bridge gaps in prenatal education and postpartum support across the city\u2019s network of community clinics.",
+    heroLocalDetail: "UCI Medical Center in Orange is about ten minutes north via the 22 or 57 freeways, and South Coast Global Medical Center sits on Bristol Street right in Santa Ana. The 5 freeway cuts through the heart of the city, and the 55 and 22 provide east\u2013west access \u2014 expect morning and afternoon rush-hour congestion, especially near the I-5/Main Street interchange and around South Coast Plaza. The downtown 4th Street district and the Westside neighborhoods are where most community health resources are clustered.",
+    hospitalDetails: [
+      { name: "UCI Medical Center", paragraph: "UCI Medical Center in Orange is the county\u2019s only academic medical center and a Magnet-designated hospital offering certified nurse-midwifery care alongside OB/GYN services. Affiliated with CHOC Children\u2019s for neonatal care, the hospital has a Level III NICU (contact the hospital directly for current NICU level verification). VBAC-supportive care is available for appropriate candidates. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "South Coast Global Medical Center", paragraph: "South Coast Global Medical Center on Bristol Street in Santa Ana provides labor and delivery services in a community hospital setting convenient to Santa Ana neighborhoods. NICU capabilities are available (contact the hospital directly for current NICU level verification). The hospital serves a predominantly Spanish-speaking patient population and offers interpreter services. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your preferences are written down and accessible." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X and Google Maps found
+    // Del Mar Birth Center (399 N. Tustin Ave, Suite 205, Santa Ana, CA 92705) directly
+    // in Santa Ana offering midwifery care and natural birth services. Nawiri Birth
+    // Center is in nearby Anaheim (575 S. Beach Blvd, Suite 2, Anaheim, CA 92804).
+    // Sacred Heart Birth Center is in Orange (705 W. Carlyle Dr, Orange, CA 92865).
+    // Verified 2026-05-28.
+    birthCenterDetails: [
+      { name: "Del Mar Birth Center", paragraph: "Del Mar Birth Center at 399 N. Tustin Ave, Suite 205 in Santa Ana offers midwifery-led birth services including water birth and natural birth in a home-like setting. Verify with the center directly for current services, insurance coverage (including Medi-Cal), and availability." },
+    ],
+    medicaidNote: "Yes \u2014 as of January 2023, California Medi-Cal covers doula services. Santa Ana families on Medi-Cal managed care plans (Health Net, Blue Shield Promise, Molina, Aetna Better Health, CenCal, PHC, SCC) can access doula services at no cost. Doulas must enroll through the PAVE portal to bill Medi-Cal directly. The county\u2019s large Medi-Cal-eligible population makes this coverage especially significant in Santa Ana.",
+    insuranceNote: "Under California SB 332, commercial health plans are required to cover doula services and midwifery care. For Santa Ana\u2019s large Spanish-speaking population, ask insurers about bilingual doula provider directories. HSA and FSA funds can typically be used for doula services. Request a superbill for out-of-network reimbursement.",
+    faqs: [
+      { q: "Does Medi-Cal cover doulas in Santa Ana?", a: "Yes. Medi-Cal covers doula services under California\u2019s SB-509, with approximately $1,587 for the full birth package. Santa Ana families are served by plans including Health Net, Blue Shield Promise, Molina, Aetna Better Health, CenCal, PHC, and SCC. Call your plan and ask specifically about doula coverage \u2014 many plans are expanding their doula networks in Orange County." },
+      { q: "How much does a doula cost in Santa Ana?", a: "Expect to pay $1,200 to $3,000 for a doula in the Santa Ana\u2013Orange County area. If you\u2019re on Medi-Cal, doula services may be covered at no cost through the state program. Community-based doulas and sliding-scale options exist, particularly through organizations serving Latino families. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Which Santa Ana-area hospitals accommodate birth plans?", a: "UCI Medical Center in Orange and South Coast Global Medical Center in Santa Ana both accommodate birth plans and welcome doulas. UCI offers certified nurse-midwifery alongside OB/GYN care, and South Coast Global serves a predominantly Spanish-speaking community with interpreter services available. Always confirm current visitor and support-person policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Does True Joy Birthing work with Santa Ana families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Santa Ana birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["los-angeles-ca", "anaheim-ca"],
+  },
 
 };
 
