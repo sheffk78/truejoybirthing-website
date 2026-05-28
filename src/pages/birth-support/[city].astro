@@ -21,8 +21,8 @@ const {
   medicaidNote, insuranceNote, faqs, nearbyCities,
 }: CityData = data;
 
-const pageTitle = `Doula ${city} ${state} — Birth Support, Costs & Free Joyful Birth Plan`;
-const pageDesc = `Planning a birth in ${city}, ${state}? Get the real scoop on doula costs, hospital policies, Medicaid coverage, and the free Joyful Birth Plan that helps you walk in prepared.`;
+const pageTitle = `${city} Doula Costs & Birth Plan`;
+const pageDesc = `Doula costs, hospital policies, and Medicaid coverage in ${city}, ${state}. Plus a free birth plan template to walk in prepared.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}`;
 const ogImage = `https://truejoybirthing.com/images/og-city-${slug}.webp`;
 const heroImage = `/images/${slug}-birth-doula-skyline.webp`;
@@ -169,11 +169,12 @@ const schema = {
       <h2>Does Medicaid or Insurance Cover a Doula in {state}?</h2>
       <p>{medicaidNote}</p>
       <p>{insuranceNote}</p>
-      <p>Not sure what to look for in a doula? <a href="/how-to-choose-a-doula/">Here's how to choose a doula</a> who fits your birth preferences, your personality, and your budget.</p>
+      <p>Not sure what to look for in a doula? <a href="/how-to-choose-a-doula/">Here's how to choose a doula</a> who fits your birth preferences, your personality, and your budget. For a full breakdown of which states cover doulas through Medicaid, see our <a href="/medicaid-doula-coverage/">Medicaid doula coverage guide</a>.</p>
 
       <!-- What About a Midwife? -->
       <h2>What About a Midwife in {city}?</h2>
       <p>If you're considering a midwife, you're in good company. More {city} moms are choosing midwifery care each year. Here's what to know:</p>
+      <p>Not sure whether you need a doula, a midwife, or both? <a href="/doula-vs-midwife/">Our doula vs. midwife guide</a> breaks it down clearly.</p>
       <ul>
         <li><strong>Certified Nurse-Midwives (CNMs)</strong> work in hospitals and birth centers and are covered by Medicaid in all 50 states.</li>
         <li><strong>Midwives vs. OBs:</strong> Midwives spend more time with you — longer appointments, more conversation, less rushed. OBs are surgeons trained for complications. Both are valid choices for different situations.</li>

@@ -24,7 +24,7 @@ const categories = [
       "What is your first response to being offered an epidural?",
       "Do you want to try unmedicated comfort measures first?",
       "Which comfort measures matter most to you? (breathing, massage, movement, water, etc.)",
-      "If you plan to go unmedicated, do you want to be reminded of that goal — or supported in changing your mind?",
+      "If you plan to go unmedicated, do you want to be reminded of that goal, or supported in changing your mind?",
       "Do you want to be offered pain medication, or only receive it when you ask?",
       "How do you feel about Pitocin to speed up labor?"
     ]
@@ -48,7 +48,7 @@ const categories = [
       "Do you want the placenta delivered naturally or with medication?",
       "Do you plan to breastfeed? Do you want lactation support?",
       "Who do you want in the recovery room?",
-      "Do you want to delay certain postpartum procedures? (Vitamin K, eye ointment — discuss with your pediatrician)",
+      "Do you want to delay certain postpartum procedures? (Vitamin K, eye ointment: discuss with your pediatrician)",
       "How do you feel about pacifiers or formula supplementation?",
       "Do you want help with perineal care and recovery?"
     ]
@@ -89,10 +89,11 @@ const schema = {
       "@id": "https://truejoybirthing.com/birth-plan-checklist/#faq",
       "mainEntity": [
         { "@type": "Question", "name": "What should be on a birth plan checklist?", "acceptedAnswer": { "@type": "Answer", "text": "A birth plan checklist should cover labor preferences, pain management, delivery positions and procedures, postpartum care, and newborn care decisions. Each item should be a clear preference you can communicate to your care team." } },
-        { "@type": "Question", "name": "How many items should a birth plan have?", "acceptedAnswer": { "@type": "Answer", "text": "Aim for 10-15 preferences that truly matter to you. A birth plan that's too long gets ignored. Focus on the items where you have a strong opinion — not every checkbox on a generic form." } },
+        { "@type": "Question", "name": "How many items should a birth plan have?", "acceptedAnswer": { "@type": "Answer", "text": "Aim for 10-15 preferences that truly matter to you. A birth plan that's too long gets ignored. Focus on the items where you have a strong opinion, not every checkbox on a generic form." } },
         { "@type": "Question", "name": "Do I need to include everything on this checklist?", "acceptedAnswer": { "@type": "Answer", "text": "No. This checklist gives you options so you can decide what matters. Not every item will be relevant to your situation. Fill in what you care about and skip the rest." } },
         { "@type": "Question", "name": "What if my hospital doesn't allow something on the checklist?", "acceptedAnswer": { "@type": "Answer", "text": "Bring your checklist to your next prenatal appointment and review it with your care provider. They can tell you which preferences are possible at your specific hospital and help you adjust." } },
-        { "@type": "Question", "name": "Is this checklist the same as a birth plan template?", "acceptedAnswer": { "@type": "Answer", "text": "The checklist helps you think through your options. The birth plan template is the document you actually share with your care team. Use the checklist first, then transfer your preferences to the template." } }
+        { "@type": "Question", "name": "Is this checklist the same as a birth plan template?", "acceptedAnswer": { "@type": "Answer", "text": "The checklist helps you think through your options. The birth plan template is the document you actually share with your care team. Use the checklist first, then transfer your preferences to the template." } },
+        { "@type": "Question", "name": "Can a doula help me fill out my birth plan checklist?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A doula can walk you through each section, explain the options you may not be familiar with, and help you prioritize what matters most. Learn what a doula does and how working with one can simplify the whole process." } }
       ]
     }
   ]
@@ -102,8 +103,8 @@ const accentColors = ['text-tjb-lavender-500', 'text-tjb-rose-500', 'text-tjb-sa
 ---
 
 <Layout
-  title="Birth Plan Checklist"
-  description="Complete birth plan checklist — labor, pain management, delivery, postpartum, and newborn care. Organized so your team can read it fast."
+  title="Birth Plan Checklist — Everything to Include Before Delivery"
+  description="Complete birth plan checklist: every section to include, what to skip, and how to keep it to one page. Free downloadable template included."
   canonical="https://truejoybirthing.com/birth-plan-checklist/"
   ogImage="/images/og-birth-plan-checklist.webp"
   breadcrumbList={breadcrumbList}
@@ -123,18 +124,18 @@ const accentColors = ['text-tjb-lavender-500', 'text-tjb-rose-500', 'text-tjb-sa
           <p class="eyebrow mb-3">Birth Plan Checklist</p>
           <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
           <h1 class="font-bold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(2.25rem, 5vw, 3.75rem);">
-            Every Question to Answer Before You Write Your Birth Plan
+            Birth Plan Checklist: Everything to Include Before Your Delivery
           </h1>
           <!-- Author credibility strip -->
           <div class="flex items-center gap-2.5 mb-5">
             <img src="/images/shelbi-thumb.webp" alt="" width="32" height="32" class="w-8 h-8 rounded-full object-cover" />
             <p class="text-sm text-tjb-gray leading-snug">
               <a href="/about/" class="text-tjb-lavender-600 hover:text-tjb-lavender-700 font-medium no-underline">Shelbi Kohler</a>,
-              certified birth doula — 500+ families supported
+              certified birth doula, 500+ families supported
             </p>
           </div>
           <p class="text-tjb-gray text-lg leading-[1.7] mb-8 max-w-[36rem]">
-            A <strong>birth plan checklist</strong> is a list of questions that helps you think through every preference before you write your birth plan — from who's in the room to how you want to feed your baby. Organized by category, written in plain language, and built by a certified doula. Mark what matters, skip what doesn't, then transfer your choices to the template.
+            A <strong>birth plan checklist</strong> is a list of questions that helps you think through every preference before you write your birth plan, from who's in the room to how you want to feed your baby. Organized by category, written in plain language, and built by a certified doula. Mark what matters, skip what doesn't, then transfer your choices to the template.
           </p>
           <div class="flex flex-col sm:flex-row gap-3">
             <a href="#download" class="btn-primary">Get the free birth plan</a>
@@ -239,7 +240,7 @@ const accentColors = ['text-tjb-lavender-500', 'text-tjb-rose-500', 'text-tjb-sa
             <span class="text-3xl font-bold text-tjb-lavender-500 font-serif">01</span>
             <div>
               <p class="text-tjb-charcoal font-semibold mb-1">Review with your partner.</p>
-              <p class="text-tjb-gray leading-relaxed">Make sure you're aligned on the big items — who's in the room, pain management, and delivery preferences.</p>
+              <p class="text-tjb-gray leading-relaxed">Make sure you're aligned on the big items: who's in the room, pain management, and delivery preferences.</p>
             </div>
           </div>
         </div>
@@ -299,6 +300,29 @@ const accentColors = ['text-tjb-lavender-500', 'text-tjb-rose-500', 'text-tjb-sa
   </section>
 
   <!-- ═══════════════════════════════════════════
+       KEEP READING — Pillar links
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-cream py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="eyebrow mb-4">Keep reading</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-8" style="font-size: clamp(1.5rem, 3.5vw, 2.25rem);">
+        Explore the full birth-plan series
+      </h2>
+      <ul class="space-y-3">
+        <li><a href="/what-is-a-doula/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">What Is a Doula?</a></li>
+        <li><a href="/benefits-of-a-doula/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Benefits of a Doula</a></li>
+        <li><a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Birth Plan Template</a></li>
+        <li><a href="/how-to-choose-a-doula/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">How to Choose a Doula</a></li>
+        <li><a href="/doula-vs-midwife/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Doula vs. Midwife</a></li>
+        <li><a href="/doula-cost/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Doula Cost</a></li>
+        <li><a href="/medicaid-doula-coverage/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Medicaid Doula Coverage</a></li>
+        <li><a href="/postpartum-doula/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Postpartum Doula</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
        FAQ — Editorial on white
        ═══════════════════════════════════════════ -->
   <section class="bg-white py-16 md:py-20" id="common-questions">
@@ -314,7 +338,7 @@ const accentColors = ['text-tjb-lavender-500', 'text-tjb-rose-500', 'text-tjb-sa
         </div>
         <div class="border-b border-tjb-lavender-300/40 pb-6">
           <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">How many items should a birth plan have?</h3>
-          <p class="text-tjb-gray leading-relaxed">Aim for 10-15 preferences that truly matter to you. A birth plan that's too long gets ignored. Focus on the items where you have a strong opinion — not every checkbox on a generic form.</p>
+          <p class="text-tjb-gray leading-relaxed">Aim for 10-15 preferences that truly matter to you. A birth plan that's too long gets ignored. Focus on the items where you have a strong opinion, not every checkbox on a generic form.</p>
         </div>
         <div class="border-b border-tjb-lavender-300/40 pb-6">
           <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Do I need to include everything on this checklist?</h3>
@@ -327,6 +351,10 @@ const accentColors = ['text-tjb-lavender-500', 'text-tjb-rose-500', 'text-tjb-sa
         <div>
           <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Is this checklist the same as a birth plan template?</h3>
           <p class="text-tjb-gray leading-relaxed">The checklist helps you think through your options. The birth plan template is the document you actually share with your care team. Use the checklist first, then transfer your preferences to the template.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Can a doula help me fill out my birth plan checklist?</h3>
+          <p class="text-tjb-gray leading-relaxed">Yes. A doula can walk you through each section, explain the options you may not be familiar with, and help you prioritize what matters most. <a href="/what-is-a-doula/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Learn what a doula does</a> and how working with one can simplify the whole process.</p>
         </div>
       </div>
 
