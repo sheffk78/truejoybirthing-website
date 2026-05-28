@@ -4411,6 +4411,180 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["indianapolis-in"],
   },
+  "evansville-in": {
+    city: "Evansville",
+    state: "IN",
+    slug: "evansville-in",
+    costLow: 700,
+    costHigh: 1500,
+    shelbiServesHere: false,
+    culture: "Evansville is southwest Indiana\u2019s regional hub, where families from the Tri-State area \u2014 Indiana, Kentucky, and Illinois \u2014 come for maternity care anchored by Deaconess Health System and Ascension St. Vincent. The birth community is small but growing, with certified nurse-midwives offering alternatives to traditional OB-GYN care and Indiana\u2019s new Medicaid doula coverage (HB 1269, effective January 2025) opening doors for families who previously couldn\u2019t afford doula support.",
+    heroLocalDetail: "Deaconess Hospital sits on Mary Street in downtown Evansville, while The Women\u2019s Hospital at Deaconess Gateway is a 15-minute drive east along the Lloyd Expressway in Newburgh. The Pigeon Creek Greenway Passage offers miles of paved riverfront walking perfect for third-trimester strolls, though Evansville\u2019s humid summers and icy winter stretches mean spring and fall are the most comfortable seasons to be outdoors. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Deaconess Hospital", paragraph: "Deaconess Hospital, on Mary Street in downtown Evansville, is the region\u2019s flagship medical center with comprehensive maternity services including a Level III NICU (contact the hospital directly for current NICU level verification) and maternal-fetal medicine specialists for high-risk pregnancies. If you\u2019re delivering at Deaconess, having your birth plan ready makes the intake conversation smoother \u2014 they see families from across the Tri-State area and move fast. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something specific to work from." },
+      { name: "The Women\u2019s Hospital at Deaconess Gateway", paragraph: "The Women\u2019s Hospital at Deaconess Gateway, on Gateway Boulevard in Newburgh just off I-69, specializes exclusively in women\u2019s health \u2014 labor, delivery, and postpartum \u2014 with private birthing suites and a Level III NICU (contact the hospital directly for current NICU level verification). For families on Evansville\u2019s east side and in Warrick County, this is the closer option. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> before your tour." },
+      { name: "Ascension St. Vincent Evansville", paragraph: "Ascension St. Vincent Evansville, on Washington Avenue on the city\u2019s southeast side (formerly St. Mary\u2019s Medical Center), provides maternity care and labor and delivery services with a community-centered approach. They have a NICU for babies who need extra support; contact the hospital directly for current NICU level information." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Evansville, IN (Vanderburgh County). Google Maps search "birth center Evansville IN"
+    // found no freestanding birth centers currently operating in the Evansville metro area.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 Indiana covers doula services under Medicaid as of January 2025 (HB 1269). Vanderburgh County families on Medicaid are served by managed care plans including Anthem Blue Cross Blue Shield, CareSource, MDwise, and Managed Health Services (MHS). Contact your plan directly to confirm doula benefits.",
+    insuranceNote: "If you\u2019re on Indiana Medicaid, doula services are covered as of January 2025. For private insurance in the Evansville area, coverage varies by plan \u2014 Anthem Blue Cross Blue Shield and some UnitedHealthcare policies may offer partial reimbursement. Ask your insurer about doula benefits, and request a superbill from your doula for out-of-network submission. HSA and FSA funds can typically be used for doula services.",
+    faqs: [
+      { q: "How much does a doula cost in Evansville?", a: "Expect to pay $700 to $1,500 for a doula in Evansville. If you\u2019re on Indiana Medicaid, your doula services may be covered at no cost under HB 1269 (effective January 2025). <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Does Indiana Medicaid cover doula services in Evansville?", a: "Yes \u2014 Indiana covers doula services under Medicaid as of January 2025 (HB 1269). Vanderburgh County families are served by managed care plans including Anthem Blue Cross Blue Shield, CareSource, MDwise, and MHS. Contact your plan directly to confirm doula benefits. If you\u2019re on Medicaid, you can receive doula services at no cost from a state-certified provider." },
+      { q: "Are there doulas in Evansville?", a: "Evansville has a small but growing doula community that\u2019s expanding as Medicaid coverage makes services more accessible. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Evansville families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Evansville birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["indianapolis-in", "louisville-ky", "nashville-tn"],
+  },
+  "lexington-ky": {
+    city: "Lexington",
+    state: "KY",
+    slug: "lexington-ky",
+    costLow: 800,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Lexington is Kentucky\u2019s second-largest city and its healthcare hub for central and eastern Kentucky, anchored by UK HealthCare and Baptist Health. The birth community is rooted in a mix of academic medicine and community-based midwifery, with a growing cohort of doulas addressing maternal health disparities \u2014 particularly in communities of color where Kentucky\u2019s Black infant mortality rate remains disproportionately high. Kentucky has not yet enacted Medicaid doula coverage, so local organizations like BirthLex and community collectives are filling the gap with sliding-scale and volunteer support.",
+    heroLocalDetail: "UK Chandler Hospital sits on South Limestone Street near the University of Kentucky campus in south Lexington, while Baptist Health Lexington is on Nicholasville Road on the south side \u2014 both reachable within 15 minutes from most Lexington neighborhoods via New Circle Road. The Legacy Trail and Lexington Green\u2019s walking paths are popular third-trimester go-tos, though summer humidity and winter ice can make the hospital drive unpredictable. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "UK Chandler Hospital", paragraph: "UK Chandler Hospital, on South Limestone Street near the University of Kentucky campus, is central and eastern Kentucky\u2019s premier academic medical center with a verified Level III NICU at UK HealthCare and comprehensive maternal-fetal medicine for high-risk pregnancies. If you\u2019re delivering at UK, having your birth plan ready helps you navigate a busy teaching hospital \u2014 they handle the region\u2019s most complex cases and a high volume of births. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences documented." },
+      { name: "Baptist Health Lexington", paragraph: "Baptist Health Lexington, on Nicholasville Road on the city\u2019s south side, is Fayette County\u2019s largest community hospital for maternity care with private labor suites and 24/7 obstetric coverage. They have a NICU for babies who need extra support; contact the hospital directly for current NICU level information." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Lexington, KY (Fayette County). Google Maps search "birth center Lexington KY"
+    // found no freestanding birth centers currently operating in the Lexington metro area.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Kentucky does not cover doula services under Medicaid as of May 2026. While legislation has been discussed, no bill has been enacted into law with an implemented State Plan Amendment. Fayette County families on Kentucky Medicaid are served by Aetna Better Health of Kentucky, Passport Health Plan by Molina, WellCare of Kentucky, and Humana/CareSource.",
+    insuranceNote: "Kentucky\u2019s Medicaid program has not yet implemented doula coverage as of May 2026. For families with private insurance, Lexington\u2019s employer market (UK HealthCare, Baptist Health, Lexmark, Valvoline) sometimes includes maternal wellness benefits \u2014 check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Lexington?", a: "Not yet \u2014 Kentucky Medicaid has not implemented doula coverage as of May 2026. Some managed care plans may offer limited benefits on their own, so call your plan and ask. You can reach Kentucky Medicaid at 1-800-635-2570. Community doulas and organizations like BirthLex may offer sliding-scale or volunteer support \u2014 don\u2019t assume you have to go without." },
+      { q: "How much does a doula cost in Lexington?", a: "Expect to pay $800 to $1,800 for a doula in Lexington. If you have an HSA or FSA, ask whether doula services qualify. Some doulas offer payment plans or sliding-scale fees. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which Lexington hospitals accommodate birth plans?", a: "UK Chandler Hospital and Baptist Health Lexington both accommodate birth plans and allow doulas in labor and delivery. UK\u2019s academic setting means they\u2019re accustomed to working with birth preferences. Call ahead during your hospital tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "Does True Joy Birthing work with Lexington families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Lexington birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["louisville-ky", "nashville-tn", "indianapolis-in"],
+  },
+  "worcester-ma": {
+    city: "Worcester",
+    state: "MA",
+    slug: "worcester-ma",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Worcester is central Massachusetts\u2019 largest city and its healthcare hub, anchored by UMass Memorial Medical Center and Saint Vincent Hospital. The birth community here is practical and community-oriented, with a growing network of doulas and midwives serving a diverse population that includes significant Vietnamese, Dominican, and Puerto Rican communities. Massachusetts\u2019 Medicaid doula coverage through MassHealth (effective January 2024) is a game-changer, and Worcester doulas are beginning to enroll as providers to meet that demand.",
+    heroLocalDetail: "UMass Memorial Medical Center\u2019s University Campus is on Plantation Street just east of downtown, while Saint Vincent Hospital sits on Evelyn Avenue on the west side \u2014 both reachable within 15 minutes from most Worcester neighborhoods. Green Hill Park and the East Side Trail give you flat, accessible walking routes for third-trimester strolls, and Worcester\u2019s inland location means cold, snowy winters that can make the hospital drive unpredictable. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "UMass Memorial Medical Center", paragraph: "UMass Memorial Medical Center\u2019s University Campus, on Plantation Street in east Worcester, is central Massachusetts\u2019 academic medical center and the region\u2019s referral hospital for high-risk pregnancies. They staff a Level III NICU (contact the hospital directly for current NICU level verification) and have maternal-fetal medicine specialists on-site 24/7. If you\u2019re delivering at UMass, having your birth plan ready helps you navigate a busy teaching hospital. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences documented." },
+      { name: "Saint Vincent Hospital", paragraph: "Saint Vincent Hospital, on Evelyn Avenue on Worcester\u2019s west side, is a Tenet Healthcare community hospital with comprehensive labor and delivery services and a NICU for babies who need extra support. Contact the hospital directly for current NICU level information. Saint Vincent serves families from Worcester\u2019s western suburbs and offers a smaller, more intimate birth experience than the academic center." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Worcester, MA (Worcester County). Google Maps search "birth center Worcester MA"
+    // found no freestanding birth centers currently operating in the Worcester area.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 Massachusetts MassHealth covers doula services as of January 2024, with reimbursement of approximately $1,200 for a full package covering prenatal visits, labor and delivery support, and postpartum visits. Worcester County families on MassHealth are served by MassHealth, Fallon Health, BMC Health Net, and Accountable Blue. Your doula must be enrolled as a MassHealth provider.",
+    insuranceNote: "Massachusetts requires most private insurance plans through the state exchange (MA Health Connector) to cover maternity services. Doula coverage by private insurers is expanding \u2014 some Blue Cross Blue Shield of MA, Tufts Health Plan, and Fallon Health policies now include doula benefits. Check your plan documents or call member services and ask about certified doula services.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Worcester?", a: "Yes \u2014 Massachusetts MassHealth covers doula services as of January 2024, reimbursing approximately $1,200 for a full package. Your doula needs to be enrolled as a MassHealth provider. Worcester County families are served by plans including MassHealth, Fallon Health, BMC Health Net, and Accountable Blue. Call your MassHealth plan to get a list of enrolled doulas near you." },
+      { q: "How much does a doula cost in Worcester?", a: "Expect to pay $800 to $2,000 for a birth doula in Worcester. If you have MassHealth, your doula services may be covered at no cost. Some doulas offer sliding-scale fees or payment plans. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which Worcester hospitals accommodate birth plans?", a: "UMass Memorial Medical Center and Saint Vincent Hospital both accommodate birth plans and allow doulas in labor and delivery. UMass\u2019s academic setting means they\u2019re accustomed to working with birth preferences. Call during your hospital tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "Does True Joy Birthing work with Worcester families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Worcester birth setting, whether you\u2019re delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["boston-ma", "springfield-ma", "hartford-ct"],
+  },
+  "springfield-ma": {
+    city: "Springfield",
+    state: "MA",
+    slug: "springfield-ma",
+    costLow: 800,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Springfield is western Massachusetts\u2019 largest city and a healthcare hub for the Pioneer Valley, anchored by Baystate Medical Center. The birth community here reflects Springfield\u2019s diversity \u2014 a significant Puerto Rican and Black population that has driven community-based birth work and advocacy for equitable maternal care. Massachusetts\u2019 Medicaid doula coverage through MassHealth (effective January 2024) is making doula support more accessible, and Springfield\u2019s doulas are enrolling as providers to meet the need.",
+    heroLocalDetail: "Baystate Medical Center sits on Chestnut Street in the Mason Square area of Springfield, reachable within 10\u201315 minutes from most Springfield neighborhoods via I-91 and Route 291. Mercy Medical Center is on Carew Street on the city\u2019s north side. Forest Park and the Connecticut Riverwalk give you flat, paved walking for third-trimester strolls, though Springfield\u2019s cold, snowy winters mean spring and fall are the best seasons for outdoor walking. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Baystate Medical Center", paragraph: "Baystate Medical Center, on Chestnut Street in Springfield, is western Massachusetts\u2019 largest hospital and the region\u2019s only Level III NICU provider (contact the hospital directly for current NICU level verification). Baystate handles the highest volume of births in the Pioneer Valley and serves as the regional referral center for complex pregnancies from across western New England. If you\u2019re delivering at Baystate, having your birth plan ready helps you navigate a busy regional hospital. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences documented." },
+      { name: "Mercy Medical Center", paragraph: "Mercy Medical Center, on Carew Street on Springfield\u2019s north side, is a Trinity Health community hospital with labor and delivery services and a smaller, more intimate birth experience than the academic center at Baystate. They have a NICU for babies who need extra support; contact the hospital directly for current NICU level information." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Springfield, MA (Hampden County). Google Maps search "birth center Springfield MA"
+    // found no freestanding birth centers currently operating in the Springfield area.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 Massachusetts MassHealth covers doula services as of January 2024, with reimbursement of approximately $1,200 for a full package covering prenatal visits, labor and delivery support, and postpartum visits. Hampden County families on MassHealth are served by MassHealth, Fallon Health, BMC Health Net, and Accountable Blue. Your doula must be enrolled as a MassHealth provider.",
+    insuranceNote: "Massachusetts requires most private insurance plans through the state exchange (MA Health Connector) to cover maternity services. Doula coverage by private insurers is expanding \u2014 some Blue Cross Blue Shield of MA, Tufts Health Plan, and Fallon Health policies now include doula benefits. Check your plan documents or call member services and ask about certified doula services.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Springfield?", a: "Yes \u2014 Massachusetts MassHealth covers doula services as of January 2024, reimbursing approximately $1,200 for a full package. Your doula needs to be enrolled as a MassHealth provider. Hampden County families are served by plans including MassHealth, Fallon Health, BMC Health Net, and Accountable Blue. Call your MassHealth plan to get a list of enrolled doulas near you." },
+      { q: "How much does a doula cost in Springfield?", a: "Expect to pay $800 to $1,800 for a birth doula in Springfield. If you have MassHealth, your doula services may be covered at no cost. Some doulas offer sliding-scale fees or payment plans. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which Springfield hospitals accommodate birth plans?", a: "Baystate Medical Center and Mercy Medical Center both accommodate birth plans and allow doulas in labor and delivery. Baystate\u2019s high-volume academic setting means they\u2019re accustomed to working with birth preferences. Call during your hospital tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "Does True Joy Birthing work with Springfield families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Springfield birth setting, whether you\u2019re delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["worcester-ma", "boston-ma", "hartford-ct"],
+  },
+  "columbia-md": {
+    city: "Columbia",
+    state: "MD",
+    slug: "columbia-md",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    culture: "Columbia is one of America\u2019s most successful planned communities, designed with walkable village centers and the extensive pathway system that makes it a surprisingly family-friendly place to navigate pregnancy. Maternity care flows primarily through Howard County General Hospital (a Johns Hopkins affiliate) and Luminis Health Anne Arundel Medical Center in nearby Annapolis. Maryland\u2019s Medicaid doula coverage (effective January 2024) is making support more accessible for families across Howard County\u2019s managed care plans.",
+    heroLocalDetail: "Howard County General Hospital sits right on Cedar Lane in the heart of Columbia, reachable within 10 minutes from most village centers. Luminis Health Anne Arundel Medical Center is about 25 minutes south via Route 32 and I-97. Columbia\u2019s 100+ miles of pathways and the Lake Kittamaqundi loop make for flat, shaded third-trimester walking, and the four-season climate means humid summers and occasional winter snow \u2014 pack layers for hospital trips. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Howard County General Hospital", paragraph: "Howard County General Hospital, on Cedar Lane in central Columbia, is part of the Johns Hopkins Health System and the city\u2019s primary hospital for maternity care. They offer private labor and delivery rooms, midwifery services, and maternal-fetal medicine consultations through Johns Hopkins specialists, with a Special Care Nursery for intermediate-level neonatal care. Contact the hospital directly for current NICU level verification. For families needing higher-level neonatal care, seamless transfer is available to Johns Hopkins Hospital\u2019s Level IV NICU in Baltimore. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences ready." },
+      { name: "Luminis Health Anne Arundel Medical Center", paragraph: "Luminis Health Anne Arundel Medical Center, on Medical Parkway in Annapolis about 25 minutes from Columbia, is one of Maryland\u2019s busiest maternity hospitals with over 5,500 births annually. They offer water birth, midwife-led care, and a Level IIIB NICU (contact the hospital directly for current NICU level verification). Its dedicated midwifery practice and homey birth suites draw families from across the DC metro who want a broader range of birth options. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> before your tour." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Columbia, MD (Howard County). Google Maps search "birth center Columbia MD"
+    // found no freestanding birth centers within Howard County. The nearest verified
+    // centers are Special Beginnings Birth & Women's Center in Arnold, MD (~25 min SE)
+    // and Chesapeake Birth Center in Annapolis (~30 min SE).
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 Maryland Medicaid covers doula services as of January 2024, with reimbursement of $450 for labor and delivery support, $75 per prenatal or postpartum visit (up to 4 visits), totaling up to $900 per pregnancy. Howard County families on Maryland Medicaid are served by managed care plans including Kaiser Permanente, UnitedHealthcare, MedStar, Jai Medical, Priority Partners, and Maryland Physicians Care. Your doula must be enrolled as a Maryland Medicaid provider.",
+    insuranceNote: "Maryland\u2019s state insurance regulations support broader maternity coverage, but doula-specific reimbursement through private insurance varies. CareFirst BlueCross BlueShield of Maryland and UnitedHealthcare may offer partial reimbursement with a superbill using CPT code S9443. Always ask your doula for a superbill and submit it promptly. HSA and FSA funds can typically be used for doula services.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Columbia?", a: "Yes \u2014 Maryland Medicaid covers doula services as of January 2024, with up to $450 for labor and delivery and $75 per visit for up to 4 prenatal or postpartum visits, totaling up to $900 per pregnancy. Howard County families are served by plans including Kaiser Permanente, UnitedHealthcare, MedStar, Jai Medical, Priority Partners, and Maryland Physicians Care. You\u2019ll need a Medicaid-enrolled doula." },
+      { q: "How much does a doula cost in Columbia?", a: "Expect to pay $800 to $2,200 for a birth doula in Columbia. If you have Maryland Medicaid, your doula services may be covered up to $900 through the state\u2019s program. Some doulas offer sliding-scale fees or payment plans. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which Columbia hospitals accommodate birth plans?", a: "Howard County General Hospital in Columbia and Luminis Health Anne Arundel Medical Center in Annapolis both accommodate birth plans and welcome doulas. Howard County General\u2019s Johns Hopkins affiliation means they\u2019re accustomed to working with birth preferences and specialist referrals. Call during your hospital tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Does True Joy Birthing work with Columbia families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Columbia birth setting, whether you\u2019re delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["baltimore-md", "richmond-va"],
+  },
+  "silver-spring-md": {
+    city: "Silver Spring",
+    state: "MD",
+    slug: "silver-spring-md",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Silver Spring sits at the intersection of DC suburb practicality and one of the largest Ethiopian diaspora communities outside Addis Ababa, giving the birth landscape a rich mix of culturally specific support networks and mainstream hospital options. Holy Cross Hospital handles the bulk of local deliveries, and Maryland\u2019s Medicaid doula coverage (effective January 2024) means more families can access the doula support they deserve. The downtown corridor along Georgia Avenue and the Sligo Creek trail system give expecting families a walkable, community-centered backdrop for prenatal meetups and postpartum recovery walks.",
+    heroLocalDetail: "Holy Cross Hospital sits on Forest Glen Road just north of downtown Silver Spring, adjacent to the Forest Glen Metro station \u2014 reachable within 10\u201315 minutes from most Silver Spring neighborhoods. Adventist HealthCare White Oak Medical Center serves the eastern neighborhoods off New Hampshire Avenue. The Sligo Creek Trail and downtown Silver Spring\u2019s walkable blocks make for gentle early-labor walking, and the area\u2019s humid summers and mild winters mean lightweight layers for hospital trips year-round. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Holy Cross Hospital", paragraph: "Holy Cross Hospital, on Forest Glen Road in the Forest Glen neighborhood just north of downtown Silver Spring, is one of Maryland\u2019s busiest maternity hospitals \u2014 delivering approximately 9,000 babies per year \u2014 with a Level IIIB NICU (contact the hospital directly for current NICU level verification). Its large-volume practice means experienced staff and robust support services including maternal-fetal medicine and midwifery. If you\u2019re delivering at Holy Cross, having your birth plan ready helps the care team support your preferences from the start. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences documented." },
+      { name: "Adventist HealthCare White Oak Medical Center", paragraph: "Adventist HealthCare White Oak Medical Center, in eastern Silver Spring, serves families in the White Oak and Colesville communities with labor and delivery services, midwifery support, and a Special Care Nursery for newborns needing intermediate-level care. Contact the hospital directly for current NICU level information. White Oak\u2019s modern facility provides a community-oriented birth experience within the Adventist HealthCare network." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Silver Spring, MD (Montgomery County). Google Maps search "birth center Silver Spring MD"
+    // found no freestanding birth centers within Silver Spring or immediate vicinity.
+    // Nearest verified centers are Chesapeake Birth Center in Annapolis (~35 min E),
+    // Special Beginnings Birth & Women's Center in Arnold (~35 min E),
+    // and BirthCare & Women's Health in Falls Church, VA (~25 min SW).
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 Maryland Medicaid covers doula services as of January 2024, with reimbursement of $450 for labor and delivery support, $75 per prenatal or postpartum visit (up to 4 visits), totaling up to $900 per pregnancy. Montgomery County families on Maryland Medicaid are served by managed care plans including Kaiser Permanente, UnitedHealthcare, MedStar, Jai Medical, Priority Partners, and Maryland Physicians Care. Your doula must be enrolled as a Maryland Medicaid provider.",
+    insuranceNote: "Maryland\u2019s state insurance regulations support broader maternity coverage, but doula-specific reimbursement through private insurance varies. CareFirst BlueCross BlueShield of Maryland and UnitedHealthcare may offer partial reimbursement with a superbill using CPT code S9443. Always ask your doula for a superbill and submit it promptly. HSA and FSA funds can typically be used for doula services.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Silver Spring?", a: "Yes \u2014 Maryland Medicaid covers doula services as of January 2024, with up to $450 for labor and delivery and $75 per visit for up to 4 prenatal or postpartum visits, totaling up to $900 per pregnancy. Montgomery County families are served by plans including Kaiser Permanente, UnitedHealthcare, MedStar, Jai Medical, Priority Partners, and Maryland Physicians Care. You\u2019ll need a Medicaid-enrolled doula." },
+      { q: "How much does a doula cost in Silver Spring?", a: "Expect to pay $900 to $2,500 for a birth doula in Silver Spring \u2014 rates trend higher here due to the DC metro cost of living. If you have Maryland Medicaid, your doula services may be covered up to $900 through the state\u2019s program. Some doulas offer sliding-scale fees or payment plans. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which Silver Spring hospitals accommodate birth plans?", a: "Holy Cross Hospital and Adventist HealthCare White Oak Medical Center both accommodate birth plans and welcome doulas. Holy Cross\u2019s high-volume maternity practice means they\u2019re very familiar with birth preferences. Call during your hospital tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Does True Joy Birthing work with Silver Spring families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Silver Spring birth setting, whether you\u2019re delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["baltimore-md", "richmond-va"],
+  },
 
 };
 
