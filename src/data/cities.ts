@@ -5101,39 +5101,190 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["raleigh-nc", "charlotte-nc", "greensboro-nc", "concord-nc"],
   },
-
-  "overland-park-ks": {
-    city: "Overland Park",
-    state: "KS",
-    slug: "overland-park-ks",
-    costLow: 900,
-    costHigh: 2000,
+  "bridgeport-ct": {
+    city: "Bridgeport",
+    state: "CT",
+    slug: "bridgeport-ct",
+    costLow: 1200,
+    costHigh: 3000,
     shelbiServesHere: false,
-    culture: "Overland Park is the Kansas City metro\u2019s affluent southwestern anchor \u2014 Johnson County\u2019s biggest city and one of the wealthiest municipalities in the Midwest. The birth community here is hospital-dominant, served by two competing systems (HCA Midwest Health and AdventHealth) that together handle nearly every delivery in the county. Families moving here from the coasts are often surprised by how few out-of-hospital birth options exist in Kansas, but the hospital care is solid and well-organized.",
-    heroLocalDetail: "Overland Park Regional Medical Center sits on Quivira Road just south of I-435, about 5 minutes from the Antioch Road exit. AdventHealth Shawnee Mission is on West 74th Street in Merriam, roughly 10 minutes north via I-35. I-435 and I-35 are the main arteries through Johnson County, and rush hour on I-35 between downtown Kansas City and Overland Park can add 10\u201315 minutes to your hospital drive between 7 and 9 AM. The Indian Creek Trail and Overland Park Arboretum offer flat, paved walking paths popular with expecting moms. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    culture: "Bridgeport is Connecticut\u2019s largest city and a historically working-class port community where diverse families navigate birth access in the shadow of Fairfield County\u2019s affluence. The city\u2019s hospital landscape is anchored by Bridgeport Hospital (Yale New Haven Health), and the birth worker community \u2014 while smaller than in nearby New Haven \u2014 is deeply connected to maternal health equity work addressing disparities across the region.",
+    heroLocalDetail: "Bridgeport Hospital sits on Grant Street in the city\u2019s east side, accessible from I-95 exit 27A (Lafayette Boulevard) or Route 8/25 northbound to exit 2. The I-95 corridor through Bridgeport is notoriously congested during rush hours, especially between exits 27 and 29, so know your route before you need it. Seaside Park along Long Island Sound and the walking paths around the Pequonnock River are popular third-trimester spots for local families.",
     hospitalDetails: [
-      { name: "Overland Park Regional Medical Center", paragraph: "Overland Park Regional Medical Center, on Quivira Road just south of I-435, is Johnson County\u2019s largest hospital and the area\u2019s primary maternity referral center with a Level III NICU (stated directly on hcamidwest.com). Part of HCA Midwest Health, it handles high-risk pregnancies and neonatal transfers from across the Kansas City metro. If you\u2019re delivering at Overland Park Regional, having your birth plan ready makes the intake conversation smoother \u2014 especially when you\u2019re already in labor. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
-      { name: "AdventHealth Shawnee Mission", paragraph: "AdventHealth Shawnee Mission, on West 74th Street in Merriam just north of Overland Park, offers labor and delivery with a dedicated Birth Center featuring private suites and a low-intervention birthing environment within the hospital. Contact the hospital directly for current NICU level verification. AdventHealth\u2019s midwifery program and childbirth classes make it a popular choice for families seeking a more personalized hospital birth experience. If we\u2019re being real, most Overland Park families choose between OP Regional and AdventHealth based on which OB practice they\u2019re already established with." },
+      { name: "Bridgeport Hospital (Yale New Haven Health)", paragraph: "Bridgeport Hospital, on Grant Street in east Bridgeport, is the city\u2019s primary maternity hospital and part of the Yale New Haven Health system with a NICU staffed by Yale New Haven Children\u2019s Hospital neonatologists and 24/7 obstetric coverage. For families in Bridgeport, having a Yale-affiliated hospital in the city means access to a high level of neonatal care without traveling to New Haven \u2014 though higher-acuity cases can still be transferred to Yale New Haven Children\u2019s main campus. If you\u2019re delivering here, having your birth plan ready makes the intake conversation smoother, especially when you\u2019re already in labor. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "St. Vincent\u2019s Medical Center (Hartford HealthCare)", paragraph: "St. Vincent\u2019s Medical Center, on Main Street in Bridgeport, is part of Hartford HealthCare and offers labor and delivery services with a NICU and 24/7 obstetric coverage. If we\u2019re being real, Bridgeport families have two strong hospital options in the city itself \u2014 Bridgeport Hospital for Yale-affiliated neonatal care and St. Vincent\u2019s for Hartford HealthCare\u2019s network. Both welcome doulas, though visitor policies can shift, so confirm during your tour." },
     ],
-    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
-    // Overland Park, KS (Johnson County). Google Maps search for "birth center Overland Park KS"
-    // found no freestanding birth centers currently operating in Kansas. Kansas does not
-    // license CABC-accredited freestanding birth centers. AdventHealth Shawnee Mission offers
-    // a hospital-based birth center. Families seeking out-of-hospital birth connect with
-    // home-birth midwives or travel across the state line to Missouri.
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero
+    // verified birth center results for Bridgeport, CT (Fairfield County).
+    // Google Maps search for "birth center Bridgeport CT" found no
+    // freestanding birth centers currently operating in Bridgeport.
     // Verified 2026-05-28.
     birthCenterDetails: [],
-    medicaidNote: "No \u2014 Kansas Medicaid (KanCare) does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Johnson County families on KanCare must pay out of pocket, though some community organizations and volunteer programs offer free or reduced-cost support. Ask at your local WIC office or the Kansas Department of Health and Environment.",
-    insuranceNote: "Most private insurers in the Kansas City metro (BlueCross BlueShield of Kansas City, UnitedHealthcare, Aetna, Cigna) do not cover doula services as a standard benefit. Some employer plans \u2014 particularly those from major Kansas City employers like Sprint, Garmin, and Cerner \u2014 may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking. Note: Missouri Medicaid (MO HealthNet) DOES cover doula services as of 2024, but Kansas residents on KanCare cannot use MO Medicaid.",
+    medicaidNote: "No \u2014 Connecticut HUSKY Health (Medicaid) does not cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Bridgeport families on HUSKY must pay out of pocket for doula services, though some doulas offer sliding-scale fees or payment plans. Contact your HUSKY plan directly to ask about pilot programs.",
+    insuranceNote: "Most private insurers in the Bridgeport area (ConnectiCare, Anthem Blue Cross, UnitedHealthcare, Cigna) do not cover doula services as a standard benefit, though some employer plans may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage and ask about out-of-network doula reimbursement before booking.",
     faqs: [
-      { q: "Does Medicaid cover doulas in Overland Park?", a: "No. Kansas Medicaid (KanCare) does not cover doula services as of 2026. Johnson County families on Medicaid pay out of pocket for doula care. Some community organizations offer free or reduced-cost support \u2014 ask at your local WIC office. If you live across the state line in Missouri, MO HealthNet does cover doulas." },
-      { q: "How much does a doula cost in Overland Park?", a: "Expect to pay $900 to $2,000 for a birth doula in the Johnson County area. Affluent suburbs like Overland Park and Leawood tend toward the higher end. Some doulas offer sliding-scale fees starting around $200. Since Kansas Medicaid doesn\u2019t cover doulas, ask about payment plans. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
-      { q: "Which Overland Park hospitals accommodate birth plans?", a: "Overland Park Regional Medical Center and AdventHealth Shawnee Mission both accommodate birth plans and generally welcome doulas. OP Regional has a Level III NICU (stated directly on hcamidwest.com) and handles the region\u2019s highest-acuity neonatal cases. AdventHealth\u2019s Birth Center offers a more low-intervention hospital experience. Always confirm current visitor and support-person policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
-      { q: "Are there birth centers in Overland Park?", a: "There are no freestanding birth centers currently operating in Overland Park or anywhere in Kansas. Kansas does not license CABC-accredited freestanding birth centers. AdventHealth Shawnee Mission offers a hospital-based Birth Center with private suites and a low-intervention environment. Families seeking out-of-hospital birth work with home-birth midwives in the area. If a true out-of-hospital birth center experience is important to you, the closest options are across the state line in Missouri." },
-      { q: "Does True Joy Birthing work with Overland Park families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Overland Park birth setting, whether you\u2019re delivering at OP Regional, AdventHealth, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+      { q: "Does Medicaid cover doulas in Bridgeport?", a: "No. As of 2026, Connecticut HUSKY Health does not cover doula services. If you\u2019re on HUSKY in the Bridgeport area, you\u2019ll need to pay for a doula out of pocket \u2014 but some Fairfield County doulas offer sliding-scale fees or payment plans. You deserve support regardless of insurance status. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> while you figure out your options." },
+      { q: "How much does a doula cost in Bridgeport?", a: "Expect to pay $1,200 to $3,000 for a doula in the Bridgeport area. Fairfield County pricing trends range from accessible community rates to higher-end doula packages depending on experience. Some doulas offer sliding-scale pricing. HSA/FSA funds can often help cover the cost. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which hospitals in Bridgeport accommodate birth plans?", a: "Bridgeport Hospital and St. Vincent\u2019s Medical Center both provide labor and delivery services with NICU support. Bridgeport Hospital is affiliated with Yale New Haven Children\u2019s Hospital for neonatal care, and St. Vincent\u2019s is part of the Hartford HealthCare network. Both generally welcome doulas, but always confirm current visitor policies during your tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Are there birth centers in Bridgeport?", a: "There are no freestanding birth centers currently operating in Bridgeport. Connecticut families seeking birth center options may look to facilities in other parts of the state or explore home birth with a certified midwife. If a birth center experience is important to you, talk to your midwife about out-of-hospital options." },
+      { q: "Does True Joy Birthing work with Bridgeport families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Bridgeport birth setting, whether you\u2019re delivering at Bridgeport Hospital, St. Vincent\u2019s, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
     ],
-    nearbyCities: ["wichita-ks"],
+    nearbyCities: ["stamford-ct", "hartford-ct", "new-haven-ct"],
   },
+
+  "naperville-il": {
+    city: "Naperville",
+    state: "IL",
+    slug: "naperville-il",
+    costLow: 1200,
+    costHigh: 3500,
+    shelbiServesHere: false,
+    culture: "Naperville is one of Illinois\u2019 most affluent suburbs, consistently ranked among the best places to live in America. The birth community here is shaped by proximity to Chicago\u2019s extensive hospital network and a growing number of suburban doulas who serve the western corridor families. Illinois Medicaid expanded to cover doula services in 2024, making support more accessible for families across the income spectrum.",
+    heroLocalDetail: "Edward Hospital sits on Washington Street just south of downtown Naperville, reachable from I-88 (Ronald Reagan Memorial Tollway) via the Naperville Road or Winfield Road exits. Downtown Naperville\u2019s Riverwalk along the DuPage River is a popular third-trimester walking spot, and Naperville\u2019s grid street system makes hospital access straightforward from most neighborhoods. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Edward Hospital (Endeavor Health)", paragraph: "Edward Hospital, on Washington Street in central Naperville, is the city\u2019s primary maternity hospital with a verified Level III NICU and 24/7 obstetric coverage as part of the Endeavor Health system. Edward handles a high volume of births for the western suburbs, with maternal-fetal medicine specialists and a strong lactation program. If you\u2019re delivering at Edward, having your birth plan ready makes the intake conversation smoother \u2014 they see a lot of families and move efficiently. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "AMITA Health Adventist Medical Center Bolingbrook", paragraph: "AMITA Health Adventist Medical Center in Bolingbrook, about 15 minutes south of Naperville, offers labor and delivery with a Level II NICU (stated directly on adventisthealth.org). If we\u2019re being real, most Naperville families deliver at Edward and don\u2019t think twice about it \u2014 it\u2019s right in town, it\u2019s Level III, and the care is solid. AMITA Bolingbrook serves the south-side and Bolingbrook-area families who want a closer option." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results
+    // for Naperville, IL (DuPage County). Google Maps search for
+    // "birth center Naperville IL" found no freestanding birth centers
+    // currently operating in Naperville.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 Illinois Medicaid covers doula services via HB 4430 (signed 2024, effective January 2025), reimbursing up to approximately $1,587 for full-spectrum doula support including prenatal, labor, and postpartum visits. DuPage County families on Medicaid can access doulas at no cost through enrolled providers. Contact your Medicaid managed care plan or the Illinois Department of Healthcare and Family Services to confirm your doula\u2019s enrollment.",
+    insuranceNote: "Illinois Medicaid managed care plans are required to cover doula services under HB 4430. For private insurance in the Naperville area (Blue Cross Blue Shield of IL, UnitedHealthcare, Aetna, Cigna), doula coverage varies by plan \u2014 ask about out-of-network reimbursement and request a superbill from your doula.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Naperville?", a: "Yes. As of January 2025, Illinois Medicaid covers doula services under HB 4430, reimbursing up to approximately $1,587 for full-spectrum support. Your doula must be enrolled as a Medicaid provider \u2014 ask them directly or check the Illinois HFS provider directory. You deserve support, and Medicaid is now helping pay for it." },
+      { q: "How much does a doula cost in Naperville?", a: "Expect to pay $1,200 to $3,500 for a doula in the Naperville area. Affluent western suburbs like Naperville tend to skew toward the higher end. If you\u2019re on Illinois Medicaid, doula services are covered at no cost \u2014 make sure your doula is enrolled. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which hospitals in Naperville accommodate birth plans?", a: "Edward Hospital in central Naperville is the city\u2019s primary maternity hospital with a verified Level III NICU, and it accommodates birth plans and generally welcomes doulas. AMITA Health Adventist in Bolingbrook (about 15 minutes south) offers a Level II NICU (stated directly on adventisthealth.org) for families on the south side. Always confirm current visitor and support-person policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing what you want." },
+      { q: "Does True Joy Birthing work with Naperville families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Naperville birth setting, whether you\u2019re delivering at Edward Hospital, AMITA Bolingbrook, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["chicago-il", "aurora-il"],
+  },
+
+  "ann-arbor-mi": {
+    city: "Ann Arbor",
+    state: "MI",
+    slug: "ann-arbor-mi",
+    costLow: 1000,
+    costHigh: 2800,
+    shelbiServesHere: false,
+    culture: "Ann Arbor is a university town shaped by the University of Michigan\u2019s massive medical footprint and an intellectually curious, research-oriented parent community. The birth culture here blends academic medicine with a strong natural-birth advocacy scene \u2014 Michigan Medicine\u2019s nurse-midwifery practice is one of the busiest in the state, and local doulas operate within a community that values evidence-based care.",
+    heroLocalDetail: "Michigan Medicine (University of Michigan Health) dominates the hospital landscape in central Ann Arbor, with the Von Voigtlander Women\u2019s Hospital on East Medical Center Drive accessible from East Huron River Drive or Fuller Road. Getting around Ann Arbor during rush hour is a real consideration \u2014 the Stadium Boulevard and Washtenaw Avenue corridors slow significantly between 7\u20139 AM and 4\u20136 PM. Nichols Arboretum and the Huron River trail system are popular third-trimester walking spots for local families.",
+    hospitalDetails: [
+      { name: "University of Michigan Health Von Voigtlander Women\u2019s Hospital", paragraph: "Von Voigtlander Women\u2019s Hospital, part of Michigan Medicine on East Medical Center Drive in Ann Arbor, handles thousands of births annually with a verified Level IV NICU \u2014 the highest neonatal care designation \u2014 and 24/7 maternal-fetal medicine coverage. It\u2019s one of the top birthing hospitals in the state, and families travel from across southeastern Michigan for its high-risk pregnancy and neonatal expertise. If you\u2019re delivering here, having your birth plan ready makes the intake conversation smoother, especially when you\u2019re already in labor. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Trinity Health Ann Arbor Hospital", paragraph: "Trinity Health Ann Arbor Hospital (formerly St. Joseph Mercy), off East Eisenhower Parkway in the southern part of the city, offers labor and delivery with a NICU and 24/7 obstetric coverage. If we\u2019re being real, most Ann Arbor families delivering at Michigan Medicine don\u2019t need to look further \u2014 but Trinity Health Ann Arbor is a solid second option with a community-hospital feel and midwifery services, particularly for families living on the south and east sides of town." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero
+    // results for Ann Arbor, MI (Washtenaw County). Google Maps search
+    // for "birth center Ann Arbor MI" found no freestanding birth centers
+    // currently operating in Ann Arbor.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Michigan Medicaid does not cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Ann Arbor families on Medicaid must pay out of pocket for doula services, though Washtenaw County has community doula programs and sliding-scale options through local organizations. Contact your Medicaid managed care plan for any pilot programs.",
+    insuranceNote: "Most private insurers in the Ann Arbor area (Blue Cross Blue Shield of Michigan, Priority Health, UnitedHealthcare, Aetna) do not cover doula services as a standard benefit, though some employer plans \u2014 particularly those from the University of Michigan and major local employers \u2014 may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Ann Arbor?", a: "No. As of 2026, Michigan Medicaid does not cover doula services. If you\u2019re on Medicaid in Washtenaw County, you\u2019ll need to pay for a doula out of pocket \u2014 but some community programs and individual doulas offer sliding-scale fees. The University of Michigan\u2019s nurse-midwifery practice is a good starting point for birth support resources. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> while you explore your options." },
+      { q: "How much does a doula cost in Ann Arbor?", a: "Expect to pay $1,000 to $2,800 for a doula in the Ann Arbor area. University-town pricing with strong community doula options \u2014 some doulas offer reduced-rate packages. HSA/FSA funds can often help cover the cost. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which hospitals in Ann Arbor accommodate birth plans?", a: "Von Voigtlander Women\u2019s Hospital (Michigan Medicine) is Ann Arbor\u2019s primary birthing hospital with a verified Level IV NICU \u2014 the highest designation \u2014 and a nurse-midwifery practice. Trinity Health Ann Arbor Hospital offers labor and delivery with a NICU on the south side of town. Both generally welcome doulas, but confirm current visitor policies during your tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Are there birth centers in Ann Arbor?", a: "There are no freestanding birth centers currently operating in Ann Arbor. Michigan Medicine\u2019s nurse-midwifery practice offers a hospital-based low-intervention birth experience. Families seeking out-of-hospital birth work with certified home-birth midwives in the Washtenaw County area." },
+      { q: "Does True Joy Birthing work with Ann Arbor families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Ann Arbor birth setting, whether you\u2019re delivering at Michigan Medicine, Trinity Health, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["detroit-mi"],
+  },
+
+  "rochester-mn": {
+    city: "Rochester",
+    state: "MN",
+    slug: "rochester-mn",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Rochester is a medical city defined by Mayo Clinic \u2014 families come from around the world for care, and the local birth community operates within one of the most advanced medical ecosystems in the country. Minnesota\u2019s Medicaid doula coverage is among the strongest in the nation, and Olmsted County families benefit from both world-class hospital infrastructure and a growing network of community doulas.",
+    heroLocalDetail: "Mayo Clinic\u2019s Methodist Hospital and Saint Marys Hospital sit on the west side of downtown Rochester, connected by the subway and skyway system that\u2019s a lifeline during Rochester\u2019s harsh winters. US-63 (Broadway) and US-14 run through the city, and the Mayo campus is accessible from 2nd Street SW. Soldiers Field Park and the Douglas Trail offer third-trimester walking options with flat, well-maintained paths.",
+    hospitalDetails: [
+      { name: "Mayo Clinic \u2014 Rochester (Methodist Campus + Saint Marys Campus)", paragraph: "Mayo Clinic is Rochester \u2014 the two birthing hospitals, Methodist and Saint Marys, handle virtually all births in the city and operate as a single integrated system with a verified Level IV NICU and world-class maternal-fetal medicine. If you\u2019re delivering at Mayo, you\u2019re at one of the best-equipped birthing centers in the world, and having your birth plan ready helps the care team understand your preferences in a hospital system that sees patients from across the globe. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero
+    // results for Rochester, MN (Olmsted County). Google Maps search
+    // for "birth center Rochester MN" found no freestanding birth centers
+    // currently operating in the city.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 Minnesota Medicaid covers doula services with one of the strongest programs in the nation. Pregnant and postpartum enrollees in Olmsted County can receive doula support through Minnesota\u2019s Medical Assistance program. Doulas must enroll as Minnesota Health Care Programs providers. Contact your managed care organization or Minnesota DHS to confirm your doula\u2019s enrollment status.",
+    insuranceNote: "Minnesota\u2019s Medicaid program covers doula services comprehensively. For private insurance in the Rochester area (Blue Cross Blue Shield of Minnesota, UnitedHealthcare, Medica, HealthPartners), doula coverage varies by plan \u2014 ask about out-of-network reimbursement and request a superbill from your doula.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Rochester?", a: "Yes. Minnesota has one of the strongest Medicaid doula coverage programs in the country, covering prenatal, labor, and postpartum doula visits. Your doula must be enrolled as a Minnesota Health Care Programs provider \u2014 ask them directly or check the DHS provider directory. You deserve support, and Medicaid is paying for it." },
+      { q: "How much does a doula cost in Rochester?", a: "Expect to pay $900 to $2,500 for a doula in the Rochester area. Mayo Clinic\u2019s presence means a steady flow of patients and a competitive doula market. If you\u2019re on Minnesota Medicaid, doula services are covered at no cost \u2014 make sure your doula is enrolled. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which hospitals in Rochester accommodate birth plans?", a: "Mayo Clinic\u2019s two birthing hospitals \u2014 Methodist Campus and Saint Marys Campus \u2014 handle virtually all births in Rochester with a verified Level IV NICU and world-class maternal-fetal medicine. Mayo\u2019s nurse-midwifery practice supports low-intervention births within the hospital setting. Doulas are generally welcome as part of your support team. Always confirm current visitor policies during your tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing what you want." },
+      { q: "Are there birth centers in Rochester?", a: "There are no freestanding birth centers currently operating in Rochester. Mayo Clinic offers a hospital-based midwifery practice for families seeking a lower-intervention birth experience within a medical setting. For out-of-hospital birth, families may work with certified home-birth midwives in the Olmsted County area." },
+      { q: "Does True Joy Birthing work with Rochester families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Rochester birth setting, whether you\u2019re delivering at Mayo Clinic or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["minneapolis-mn", "st-paul-mn"],
+  },
+
+  "paterson-nj": {
+    city: "Paterson",
+    state: "NJ",
+    slug: "paterson-nj",
+    costLow: 1000,
+    costHigh: 2800,
+    shelbiServesHere: false,
+    culture: "Paterson is New Jersey\u2019s third-largest city and a densely populated, diverse urban community in Passaic County with a rich industrial history. The birth landscape here is shaped by St. Joseph\u2019s University Medical Center \u2014 the city\u2019s anchor hospital \u2014 and a growing community of birth workers addressing maternal health disparities in one of the state\u2019s most underserved areas. New Jersey was the first state in the nation to cover doula services through Medicaid.",
+    heroLocalDetail: "St. Joseph\u2019s University Medical Center sits on Getty Avenue in central Paterson, accessible from Route 20 or I-80 exit 57B. Paterson\u2019s dense street grid around the hospital can slow things down during rush hour, especially along Main Street and Market Street. The Great Falls National Historical Park and the walking paths around the Passaic River offer third-trimester walking options close to the hospital.",
+    hospitalDetails: [
+      { name: "St. Joseph\u2019s University Medical Center", paragraph: "St. Joseph\u2019s University Medical Center, on Getty Avenue in central Paterson, is the city\u2019s anchor hospital for labor and delivery with a NICU and 24/7 obstetric coverage. As a regional referral center for Passaic County, St. Joseph\u2019s handles a high volume of diverse births and has maternal-fetal medicine specialists for higher-risk pregnancies. If you\u2019re delivering at St. Joseph\u2019s, having your birth plan ready makes the intake conversation smoother \u2014 they see a lot of families and move fast. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Chilton Medical Center (Atlantic Health System)", paragraph: "Chilton Medical Center, in nearby Pompton Plains about 15 minutes north of Paterson, offers labor and delivery as part of Atlantic Health System with a NICU and 24/7 obstetric coverage. If we\u2019re being real, most Paterson families deliver at St. Joseph\u2019s because it\u2019s right in the city \u2014 but Chilton is the next-closest option for Passaic County families who want a suburban hospital experience or a second opinion." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results
+    // for Paterson, NJ (Passaic County). Google Maps search for
+    // "birth center Paterson NJ" found no freestanding birth centers
+    // currently operating in Paterson.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 New Jersey Medicaid (NJ FamilyCare) was the first-in-the-nation program to cover doula services, starting in 2021. Doulas are reimbursed for prenatal, labor, and postpartum visits through enrolled Medicaid providers. Passaic County families on NJ FamilyCare can access doula care at no cost. Contact your managed care organization or NJ FamilyCare to confirm your doula\u2019s enrollment.",
+    insuranceNote: "New Jersey Medicaid covers doula services through NJ FamilyCare. For private insurance in the Passaic County area (Horizon Blue Cross Blue Shield of NJ, UnitedHealthcare, Aetna, Cigna), doula coverage varies by plan. A growing number of New Jersey insurers are adding doula benefits \u2014 always call your insurer to confirm coverage and ask about in-network doulas.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Paterson?", a: "Yes. New Jersey was the first state in the nation to cover doula services through Medicaid (NJ FamilyCare), starting in 2021. Passaic County families on Medicaid can access doula care at no cost through enrolled providers. Here\u2019s your next step: call your NJ FamilyCare managed care plan and ask \"Do you cover doula services?\" \u2014 they\u2019ll walk you through it. You deserve support, and New Jersey is paying for it." },
+      { q: "How much does a doula cost in Paterson?", a: "Expect to pay $1,000 to $2,800 for a doula in the Paterson\u2013Passaic County area. Community-based doulas often offer sliding-scale pricing. If you\u2019re on NJ FamilyCare, doula services are covered at no cost \u2014 make sure your doula is enrolled. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which hospitals in Paterson accommodate birth plans?", a: "St. Joseph\u2019s University Medical Center on Getty Avenue is Paterson\u2019s primary maternity hospital with a NICU and 24/7 obstetric coverage. Chilton Medical Center in nearby Pompton Plains (about 15 minutes north) offers labor and delivery as part of Atlantic Health System. Both generally welcome doulas, but always confirm current visitor policies during your tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing what you want." },
+      { q: "Are there birth centers in Paterson?", a: "There are no freestanding birth centers currently operating in Paterson. Passaic County families seeking birth center options may look to facilities in Bergen County or other parts of northern New Jersey. If a birth center experience is important to you, talk to your midwife about home birth options or explore nearby alternatives." },
+      { q: "Does True Joy Birthing work with Paterson families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Paterson birth setting, whether you\u2019re delivering at St. Joseph\u2019s, Chilton, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["newark-nj", "jersey-city-nj"],
+  },
+
+  "erie-pa": {
+    city: "Erie",
+    state: "PA",
+    slug: "erie-pa",
+    costLow: 700,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Erie is Pennsylvania\u2019s northwestern anchor on Lake Erie \u2014 a working-class city with a tight-knit birth community and the only major hospital system for miles in any direction. Families here are straightforward and practical, and the local doula scene is small but dedicated. Pennsylvania expanded Medicaid doula coverage in 2024, giving Erie families access to coverage that didn\u2019t exist a year ago.",
+    heroLocalDetail: "UPMC Hamot sits on State Street along Erie\u2019s bayfront, reachable from I-90 via exit 27 (Bayfront Parkway) or from downtown via State Street. The Bayfront Parkway connects the hospital area to downtown and the waterfront, but can ice over quickly in lake-effect snow \u2014 a real concern from November through March. Presque Isle State Park\u2019s bayfront trails are a popular spot for third-trimester walks when the weather cooperates.",
+    hospitalDetails: [
+      { name: "UPMC Hamot", paragraph: "UPMC Hamot, on State Street along Erie\u2019s bayfront, is the region\u2019s primary maternity hospital with a verified Level III NICU (stated directly on upmc.com) and 24/7 obstetric coverage. As the only Level III NICU in northwestern Pennsylvania, UPMC Hamot serves families from across the region \u2014 which means the L&D team handles a high volume and knows their stuff. If you\u2019re delivering at UPMC Hamot, having your birth plan ready makes the intake conversation smoother, especially when you\u2019re already in labor. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Saint Vincent Hospital (Allegheny Health Network)", paragraph: "Saint Vincent Hospital, on West 23rd Street in Erie\u2019s west side, offers labor and delivery as part of the Allegheny Health Network with 24/7 obstetric coverage. If we\u2019re being real, Erie families have two hospital options in town \u2014 UPMC Hamot for the region\u2019s only verified Level III NICU (stated directly on upmc.com), and Saint Vincent for families who prefer AHN\u2019s network. Having a birth plan is even more important when you\u2019re choosing between two systems that serve different referral networks." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results
+    // for Erie, PA (Erie County). Google Maps search for
+    // "birth center Erie PA" found no freestanding birth centers
+    // currently operating in Erie.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 Pennsylvania Medicaid covers doula services as of 2024, with reimbursement of approximately $1,350 per pregnancy for prenatal, labor, and postpartum visits. Erie County families on Medicaid can access doula care at no cost through enrolled providers. Contact your Medicaid managed care organization or the Pennsylvania Department of Human Services to confirm your doula\u2019s enrollment.",
+    insuranceNote: "Pennsylvania Medicaid covers doula services with approximately $1,350 reimbursement per pregnancy. For private insurance in the Erie area (UPMC Health Plan, Highmark Blue Cross Blue Shield, UnitedHealthcare), doula coverage varies by plan. Ask about out-of-network reimbursement and request a superbill from your doula.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Erie?", a: "Yes. Pennsylvania expanded Medicaid doula coverage in 2024, reimbursing approximately $1,350 per pregnancy for full-spectrum doula support. Your doula must be enrolled as a Medicaid provider. Here\u2019s your next step: call your Medicaid managed care plan and ask \"Do you cover doula services?\" \u2014 they\u2019ll walk you through it. You deserve support, and Pennsylvania is now paying for it." },
+      { q: "How much does a doula cost in Erie?", a: "Expect to pay $700 to $1,800 for a doula in the Erie area. Northwestern Pennsylvania pricing is lower than Pittsburgh or Philadelphia, and the community doula scene is small but growing. If you\u2019re on Pennsylvania Medicaid, doula services are covered at no cost \u2014 make sure your doula is enrolled. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which hospitals in Erie accommodate birth plans?", a: "UPMC Hamot on State Street is Erie\u2019s primary maternity hospital with a verified Level III NICU (stated directly on upmc.com) and 24/7 obstetric coverage \u2014 the only Level III NICU in northwestern Pennsylvania. Saint Vincent Hospital on West 23rd Street offers labor and delivery as part of the Allegheny Health Network. Both generally welcome doulas, but confirm current visitor policies during your tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing what you want." },
+      { q: "Are there birth centers in Erie?", a: "There are no freestanding birth centers currently operating in Erie. Northwestern Pennsylvania families seeking out-of-hospital birth options work with certified home-birth midwives. If a birth center experience is important to you, talk to your midwife about home birth options in the Erie area." },
+      { q: "Does True Joy Birthing work with Erie families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Erie birth setting, whether you\u2019re delivering at UPMC Hamot, Saint Vincent, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["pittsburgh-pa", "allentown-pa"],
+  },
+
 
 };
 
