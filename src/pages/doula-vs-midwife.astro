@@ -1,0 +1,229 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+
+const breadcrumbList = [
+  {"name": "Home", "url": "https://truejoybirthing.com/"},
+  {"name": "Doula vs Midwife", "url": "https://truejoybirthing.com/doula-vs-midwife/"}
+];
+---
+
+<Layout
+  title="Doula vs Midwife — What's the Difference & Do You Need Both? | TJB"
+  description="Doula vs midwife: what's the difference, what does each one do, and can you have both? Clear, honest comparison with a free birth plan template."
+  canonical="https://truejoybirthing.com/doula-vs-midwife/"
+  breadcrumbList={breadcrumbList}
+  ogImage="/images/og-doula-vs-midwife.webp"
+>
+
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="eyebrow mb-4">Understanding Your Birth Team</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h1 class="text-[2.5rem] md:text-[3.25rem] font-bold mb-6 leading-[1.12]">Doula vs Midwife: What's the Difference?</h1>
+      <p class="text-lg md:text-xl text-tjb-gray leading-relaxed max-w-2xl">
+        <strong>Doula vs midwife</strong> is one of the most Googled questions in pregnancy, and the confusion is completely understandable. Both words show up in birth plans. Both sound like they belong in the delivery room. But they are not the same thing at all. Here is the honest, clear breakdown so you can build the right team for your birth.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 prose">
+
+      <h2>The Short Answer</h2>
+      <p>A <a href="/what-is-a-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition"><strong>doula</strong></a> provides emotional, physical, and informational support. She is not a medical provider. She does not deliver babies, check your cervix, write prescriptions, or monitor fetal heart tones. She is your advocate, your comfort, your steady presence.</p>
+      <p>A <strong>midwife</strong> is a medical provider. She can deliver your baby, write prescriptions, order labs, monitor your health, and manage complications within her scope. She is part of your clinical care team.</p>
+      <p>And yes, you can have both. Many families do.</p>
+
+      <h2>What a Doula Does</h2>
+      <p>A doula stays with you throughout labor. She suggests positions, applies counter-pressure, offers encouragement, and helps you understand what is happening so you can make informed decisions. She supports your partner, too, so they know how to help rather than feeling helpless on the sidelines.</p>
+      <p>There are three main types of doulas:</p>
+      <ul>
+        <li><strong>Birth doula:</strong> supports you during pregnancy and labor</li>
+        <li><a href="/postpartum-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition"><strong>Postpartum doula:</strong></a> helps you after the baby arrives with feeding, recovery, newborn care, and emotional support</li>
+        <li><strong>Full-spectrum doula:</strong> supports all pregnancy outcomes, including loss, surrogacy, and adoption</li>
+      </ul>
+      <p>A doula does not replace your doctor or midwife. She does not perform any clinical tasks. Her job is to make sure you feel informed, supported, and heard. Learn more about <a href="/what-is-a-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">what a doula is</a> and the <a href="/benefits-of-a-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">evidence behind doula support</a>.</p>
+
+      <h2>What a Midwife Does</h2>
+      <p>A midwife is a trained healthcare provider who manages your prenatal care, attends your birth, and provides postpartum medical care. She can deliver your baby, suture tears, order blood work, prescribe medications, and refer you to a specialist if needed.</p>
+      <p>There are three main types of midwives in the United States:</p>
+      <ul>
+        <li><strong>Certified Nurse Midwife (CNM):</strong> a registered nurse with a graduate degree in midwifery. CNMs can practice in all 50 states, work in hospitals and birth centers, and write prescriptions. This is the most common type of midwife in the U.S.</li>
+        <li><strong>Certified Professional Midwife (CPM):</strong> trained specifically for out-of-hospital births (home and birth center). CPMs are licensed in some states but not all. They do not have a nursing background.</li>
+        <li><strong>Direct-Entry Midwife (DEM):</strong> learned midwifery through apprenticeship or a non-nursing program rather than through nursing school. Licensing and scope vary widely by state.</li>
+      </ul>
+      <p>The key distinction: a midwife has medical authority and clinical responsibility for you and your baby. A doula does not.</p>
+
+      <h2>Side-by-Side Comparison</h2>
+
+      <div class="my-6 not-prose overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="bg-tjb-cream">
+              <th class="text-left p-3 font-semibold text-tjb-charcoal border-b-2 border-tjb-lavender-200"></th>
+              <th class="text-left p-3 font-semibold text-tjb-charcoal border-b-2 border-tjb-lavender-200">Doula</th>
+              <th class="text-left p-3 font-semibold text-tjb-charcoal border-b-2 border-tjb-lavender-200">Midwife</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-tjb-lavender-100">
+              <td class="p-3 font-semibold text-tjb-charcoal">Role</td>
+              <td class="p-3">Emotional, physical, informational support</td>
+              <td class="p-3">Medical provider for pregnancy and birth</td>
+            </tr>
+            <tr class="border-b border-tjb-lavender-100 bg-tjb-cream-50">
+              <td class="p-3 font-semibold text-tjb-charcoal">Performs medical tasks</td>
+              <td class="p-3">No</td>
+              <td class="p-3">Yes</td>
+            </tr>
+            <tr class="border-b border-tjb-lavender-100">
+              <td class="p-3 font-semibold text-tjb-charcoal">Delivers the baby</td>
+              <td class="p-3">No</td>
+              <td class="p-3">Yes</td>
+            </tr>
+            <tr class="border-b border-tjb-lavender-100 bg-tjb-cream-50">
+              <td class="p-3 font-semibold text-tjb-charcoal">Prescriptive authority</td>
+              <td class="p-3">None</td>
+              <td class="p-3">CNMs: yes. CPMs/DEMs: varies by state</td>
+            </tr>
+            <tr class="border-b border-tjb-lavender-100">
+              <td class="p-3 font-semibold text-tjb-charcoal">Insurance coverage</td>
+              <td class="p-3">Rarely covered; some plans offer partial reimbursement</td>
+              <td class="p-3">Often covered, especially CNMs</td>
+            </tr>
+            <tr class="border-b border-tjb-lavender-100 bg-tjb-cream-50">
+              <td class="p-3 font-semibold text-tjb-charcoal">Typical cost</td>
+              <td class="p-3">$800–$2,500 <a href="/doula-cost/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">(see full breakdown)</a></td>
+              <td class="p-3">$2,000–$9,000+ (often insurance-covered)</td>
+            </tr>
+            <tr class="border-b border-tjb-lavender-100">
+              <td class="p-3 font-semibold text-tjb-charcoal">Certification</td>
+              <td class="p-3">DONA, CAPPA, toLabor, etc. (not legally required)</td>
+              <td class="p-3">State-licensed; CNM, CPM, or DEM credential</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-semibold text-tjb-charcoal">Stays with you through entire labor</td>
+              <td class="p-3">Yes, continuous presence</td>
+              <td class="p-3">Comes and goes; present for active labor and pushing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Can You Have Both?</h2>
+      <p>Absolutely, and many families do. Here is how it works in practice:</p>
+      <p>Your <strong>midwife</strong> manages the clinical side. She monitors your vitals, checks the baby, catches the baby, and handles any medical concerns. She is focused on safety and health outcomes.</p>
+      <p>Your <strong>doula</strong> manages the human side. She rubs your back, reminds you to drink water, helps you change positions, talks you through the tough moments, and makes sure your partner feels useful. She is focused on comfort and emotional wellbeing.</p>
+      <p>In the delivery room, these roles complement each other beautifully. The midwife can stay focused on clinical care because the doula is handling the comfort piece. The doula can focus on support because the midwife is handling the medical piece. Nobody is stretched too thin, and you get the best of both worlds.</p>
+
+      <div class="my-8 not-prose bg-tjb-lavender-50 rounded-xl p-6">
+        <p class="text-lg font-serif italic text-tjb-charcoal mb-3">"Having both my midwife and my doula was the best decision I made. My midwife was amazing but she had clinical things to focus on. My doula was the one holding my hand and telling me I could do it. I needed both."</p>
+        <p class="text-sm text-tjb-gray">- Rachel M., Dallas</p>
+      </div>
+
+      <h2>When You Might Choose One Over the Other</h2>
+
+      <h3>When a doula is the right addition</h3>
+      <ul>
+        <li>You are planning a hospital birth with an OB and want nonmedical support alongside your clinical team</li>
+        <li>You are a first-time parent who wants someone to help you navigate the experience and advocate for your preferences</li>
+        <li>Your partner wants to be involved but is not sure how to help</li>
+        <li>You had a difficult previous birth and want extra emotional support this time</li>
+      </ul>
+
+      <h3>When a midwife is the right provider</h3>
+      <ul>
+        <li>You want a provider who can manage your prenatal care and attend your birth, and you prefer a model that centers on low-intervention, relationship-based care</li>
+        <li>You are planning an out-of-hospital birth at home or a birth center</li>
+        <li>You want someone who can prescribe medications and order labs within the midwifery model</li>
+      </ul>
+
+      <h3>When you need both</h3>
+      <ul>
+        <li>You are planning a home or birth center birth and want the medical care of a midwife plus the continuous comfort support of a doula</li>
+        <li>You are planning a hospital birth with a midwife and want the additional layer of advocacy and hands-on support a doula provides</li>
+        <li>You are planning a VBAC and want both medical oversight and nonjudgmental emotional support</li>
+        <li>You have a history of trauma, anxiety, or a previous difficult birth, and you want both clinical expertise and someone whose only job is your wellbeing</li>
+      </ul>
+
+      <h2>Cost Comparison: Doulas vs Midwives</h2>
+      <p><a href="/doula-cost/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition"><strong>Doula costs</strong></a> typically range from $800 to $2,500 depending on your city, the doula's experience, and what is included. Most doulas charge a flat fee that covers prenatal visits, on-call time, labor support, and postpartum visits. Insurance coverage for doulas is limited but improving. Some plans offer partial reimbursement, and some doulas accept HSA/FSA payments.</p>
+      <p><strong>Midwife costs</strong> vary more widely. A CNM attending a hospital birth is often covered by insurance, meaning your out-of-pocket cost may be similar to any other provider under your plan. Out-of-hospital midwives (CPMs and some CNMs) may charge $2,000 to $9,000 or more for a package of prenatal, birth, and postpartum care. Insurance coverage for out-of-hospital midwives depends on your state and your plan. Some cover it fully, some partially, and some not at all.</p>
+      <p>The bottom line: if insurance covers your midwife, the main additional cost to consider is your doula fee. And families who have used both will tell you that doula support is worth every penny. <a href="/doula-cost/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">See our full doula cost breakdown</a>.</p>
+
+      <h2>How to Decide</h2>
+      <p>Start with your birth setting:</p>
+      <ul>
+        <li><strong>Hospital birth with an OB:</strong> You already have a medical provider. A doula gives you the comfort and advocacy layer that hospitals often need. <a href="/how-to-choose-a-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Here is how to find the right one</a>.</li>
+        <li><strong>Birth center or home birth:</strong> You will likely have a midwife as your provider. A doula adds the continuous hands-on support that makes long labors more manageable. Consider a <a href="/postpartum-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">postpartum doula</a> for after the baby arrives, too.</li>
+        <li><strong>Still deciding:</strong> Think about what matters most to you. If having a low-intervention, high-touch experience is the priority, a midwife model might be the right fit. If you are staying with an OB but want someone in your corner, a doula is the answer. Many families choose both and never look back.</li>
+      </ul>
+      <p>Not sure where to start? A <a href="/birth-plan-template/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">birth plan template</a> can help you think through your preferences and figure out what kind of support you actually want.</p>
+
+      <h2>Your Next Step</h2>
+      <p>Whether you choose a doula, a midwife, or both, the most important thing is that you feel supported and informed. You deserve a birth team that respects your choices and keeps you at the center of your own experience.</p>
+      <p>Get our free birth plan template to start mapping out your preferences. It walks you through every decision point so you can walk into your birth knowing exactly what you want and how to ask for it.</p>
+
+      <LeadCaptureForm />
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="space-y-6 mt-6">
+        <details class="group border border-tjb-lavender-200 rounded-lg p-4">
+          <summary class="font-semibold text-tjb-charcoal cursor-pointer list-none flex items-center justify-between">Is a doula the same as a midwife? <span class="text-tjb-rose-500 group-open:rotate-45 transition-transform text-xl">+</span></summary>
+          <div class="mt-3 text-tjb-gray" set:html="<p>No. A doula provides emotional, physical, and informational support but is not a medical provider. A midwife is a licensed healthcare provider who can deliver babies, write prescriptions, and manage clinical care. They have completely different roles, training, and legal authority. Learn more about <a href='/what-is-a-doula/' class='text-tjb-rose-500 hover:text-tjb-rose-600 transition'>what a doula is</a> and <a href='/benefits-of-a-doula/' class='text-tjb-rose-500 hover:text-tjb-rose-600 transition'>what doulas do</a>.</p>"></div>
+        </details>
+
+        <details class="group border border-tjb-lavender-200 rounded-lg p-4">
+          <summary class="font-semibold text-tjb-charcoal cursor-pointer list-none flex items-center justify-between">Can a doula deliver a baby? <span class="text-tjb-rose-500 group-open:rotate-45 transition-transform text-xl">+</span></summary>
+          <div class="mt-3 text-tjb-gray" set:html="<p>No. A doula cannot deliver a baby. That is a medical task outside her scope of practice. Only a licensed provider like a midwife, doctor, or OB can deliver a baby. A doula is there to support you through the process, not to serve as your medical provider.</p>"></div>
+        </details>
+
+        <details class="group border border-tjb-lavender-200 rounded-lg p-4">
+          <summary class="font-semibold text-tjb-charcoal cursor-pointer list-none flex items-center justify-between">Do I need both a doula and a midwife? <span class="text-tjb-rose-500 group-open:rotate-45 transition-transform text-xl">+</span></summary>
+          <div class="mt-3 text-tjb-gray" set:html="<p>You do not <em>need</em> both, but having both gives you comprehensive support. Your midwife manages medical care. Your doula provides continuous comfort and advocacy. Many families who have used both say the combination gave them the best possible experience. If budget is a concern, prioritize whichever role fills the biggest gap in your current support system.</p>"></div>
+        </details>
+
+        <details class="group border border-tjb-lavender-200 rounded-lg p-4">
+          <summary class="font-semibold text-tjb-charcoal cursor-pointer list-none flex items-center justify-between">Does insurance cover midwives but not doulas? <span class="text-tjb-rose-500 group-open:rotate-45 transition-transform text-xl">+</span></summary>
+          <div class="mt-3 text-tjb-gray" set:html="<p>In most cases, yes. Insurance commonly covers CNMs, especially in hospital settings. Out-of-hospital midwives may or may not be covered depending on your state and plan. Doula coverage is improving but is still limited. Some plans offer partial reimbursement, and many families use HSA or FSA funds to pay for doula services. See our <a href='/doula-cost/' class='text-tjb-rose-500 hover:text-tjb-rose-600 transition'>full cost breakdown</a> for more details.</p>"></div>
+        </details>
+
+        <details class="group border border-tjb-lavender-200 rounded-lg p-4">
+          <summary class="font-semibold text-tjb-charcoal cursor-pointer list-none flex items-center justify-between">What's a certified nurse midwife vs a certified professional midwife? <span class="text-tjb-rose-500 group-open:rotate-45 transition-transform text-xl">+</span></summary>
+          <div class="mt-3 text-tjb-gray" set:html="<p>A <strong>Certified Nurse Midwife (CNM)</strong> is a registered nurse with a graduate degree in midwifery. CNMs can practice in all 50 states, work in hospitals and birth centers, and write prescriptions. A <strong>Certified Professional Midwife (CPM)</strong> is trained specifically for out-of-hospital births (home and birth center). CPMs are licensed in some states but not all, and they do not have a nursing background. CNMs have the broadest scope and most legal recognition. For more common questions, visit our <a href='/faq/' class='text-tjb-rose-500 hover:text-tjb-rose-600 transition'>FAQ page</a>.</p>"></div>
+        </details>
+
+        <details class="group border border-tjb-lavender-200 rounded-lg p-4">
+          <summary class="font-semibold text-tjb-charcoal cursor-pointer list-none flex items-center justify-between">Can a midwife also be my doula? <span class="text-tjb-rose-500 group-open:rotate-45 transition-transform text-xl">+</span></summary>
+          <div class="mt-3 text-tjb-gray" set:html="<p>A single person cannot fill both roles at the same time. If your midwife is attending your birth as your medical provider, she has clinical responsibilities that require her full attention. She cannot simultaneously be your continuous comfort support. The roles are complementary but distinct. Some midwives-trained individuals may offer doula services separately from their midwifery practice, but during your birth they can only serve one role at a time.</p>"></div>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-16 bg-tjb-cream-50 border-t border-tjb-lavender-200/50">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="eyebrow mb-4">Keep Reading</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/what-is-a-doula/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-lg font-semibold mb-2 group-hover:text-tjb-rose-500 transition">What Is a Doula?</h3>
+          <p class="text-sm text-tjb-gray">The complete guide: what doulas do, what they don't do, and the three types.</p>
+        </a>
+        <a href="/doula-cost/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-lg font-semibold mb-2 group-hover:text-tjb-rose-500 transition">Doula Costs</h3>
+          <p class="text-sm text-tjb-gray">What doulas charge, what's included, and how to make it work on any budget.</p>
+        </a>
+        <a href="/how-to-choose-a-doula/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-lg font-semibold mb-2 group-hover:text-tjb-rose-500 transition">How to Choose a Doula</h3>
+          <p class="text-sm text-tjb-gray">Interview questions, red flags, and what your contract should cover.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
