@@ -4,7 +4,6 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
 
 const breadcrumbList = [
   {"name": "Home", "url": "https://truejoybirthing.com/"},
-  {"name": "Birth Plan Scenarios", "url": "https://truejoybirthing.com/birth-plan-scenarios/"},
   {"name": "Birth Plan for Induction", "url": "https://truejoybirthing.com/birth-plan-for-induction/"}
 ];
 
@@ -12,16 +11,23 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Article",
+      "@id": "https://truejoybirthing.com/birth-plan-for-induction/#article",
+      "headline": "How to Write a Birth Plan for a Scheduled Induction",
+      "url": "https://truejoybirthing.com/birth-plan-for-induction/",
+      "publisher": { "@id": "https://truejoybirthing.com/#organization" },
+      "author": { "@id": "https://truejoybirthing.com/about/#founder" }
+    },
+    {
       "@type": "FAQPage",
       "@id": "https://truejoybirthing.com/birth-plan-for-induction/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "Does being induced mean I'll end up with a cesarean?", "acceptedAnswer": { "@type": "Answer", "text": "No. Many induced labors result in vaginal births. The rate of cesarean delivery is higher for inductions than for spontaneous labor, especially for first-time moms, but it is not a guaranteed outcome. Your chances improve when your cervix is favorable, your baby is in a good position, and your induction method aligns with your body's readiness." } },
-        { "@type": "Question", "name": "How long does an induction take?", "acceptedAnswer": { "@type": "Answer", "text": "It varies widely. Some inductions progress quickly — a few hours from start to delivery. Others take 24–36 hours, especially if your cervix isn't favorable yet. Your care team should give you realistic expectations at your scheduling appointment based on your Bishop score and the method they're using." } },
-        { "@type": "Question", "name": "Can I eat during an induction?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your hospital. Some allow clear liquids and light snacks during early induction. Others restrict food once Pitocin starts, especially if an epidural or cesarean becomes more likely. Ask at your induction appointment and put your preference in your birth plan — then ask again when you arrive." } },
-        { "@type": "Question", "name": "Can I move around during an induction?", "acceptedAnswer": { "@type": "Answer", "text": "Usually yes, with some limitations. Most hospitals require continuous fetal monitoring during Pitocin, which means monitors strapped to your belly. Ask about wireless telemetry monitors, birth balls near the bed, and standing positions you can use while monitored. Your birth plan should state that you want to move as much as monitoring allows." } },
-        { "@type": "Question", "name": "What if my induction doesn't work?", "acceptedAnswer": { "@type": "Answer", "text": "Failed induction is one of the most common reasons for a cesarean. Your plan should include what you want to happen if labor stalls — do you want more time, a different method, or to discuss a cesarean? Having this documented before you're exhausted helps you participate in decisions you'd otherwise experience as happening to you." } },
-        { "@type": "Question", "name": "Should I write a different birth plan if I was planning an unmedicated birth and now I'm being induced?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, adjust your plan. Keep your preferences, but account for the realities of induction. If you wanted an unmedicated birth, you still can — Pitocin contractions are manageable with the right support and positioning. But your plan should acknowledge continuous monitoring, an IV, and a different timeline. Write for the birth you're actually having, not the one you were planning." } },
-        { "@type": "Question", "name": "What's a Bishop score and why does it matter for induction?", "acceptedAnswer": { "@type": "Answer", "text": "The Bishop score is a number (0–10) that measures how ready your cervix is for labor. It looks at dilation, effacement, station, consistency, and position. A score of 8 or higher means your body is favorable for induction — labor is likely to start and progress. A lower score means your cervix may need ripening first, and induction may take longer. Ask your provider about your Bishop score at your scheduling appointment." } }
+        { "@type": "Question", "name": "Does being induced mean I'll end up with a cesarean?", "acceptedAnswer": { "@type": "Answer", "text": "No. Many induced labors are vaginal. The cesarean rate is higher for inductions than for spontaneous labor, especially for first-time moms, but it is not a given. Your chances improve with a favorable cervix, good baby position, and an induction method that matches your body's readiness." } },
+        { "@type": "Question", "name": "How long does an induction take?", "acceptedAnswer": { "@type": "Answer", "text": "It varies widely. Some inductions take a few hours from start to delivery. Others take 24 to 36 hours, especially if your cervix is not yet favorable. Ask your provider about your Bishop score at your scheduling appointment so you can set realistic expectations." } },
+        { "@type": "Question", "name": "Can I eat during an induction?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your hospital. Some allow clear liquids and light snacks during the early phase. Others restrict food once Pitocin starts, especially if an epidural or cesarean becomes more likely. Ask at your scheduling appointment and put your preference in your birth plan." } },
+        { "@type": "Question", "name": "Can I move around during an induction?", "acceptedAnswer": { "@type": "Answer", "text": "Usually yes, with some limitations. Most hospitals require continuous fetal monitoring during Pitocin, which means monitors strapped to your belly. Ask about wireless telemetry monitors, birth balls near the bed, and standing positions you can use while monitored." } },
+        { "@type": "Question", "name": "What if my induction doesn't work?", "acceptedAnswer": { "@type": "Answer", "text": "Failed induction is one of the most common reasons for a cesarean. Your plan should include what you want if labor stalls, whether that is more time, a different method, or a conversation about cesarean. Having this documented before you are exhausted helps you stay involved in decisions." } },
+        { "@type": "Question", "name": "What's a Bishop score and why does it matter?", "acceptedAnswer": { "@type": "Answer", "text": "The Bishop score is a number from 0 to 10 that measures how ready your cervix is for labor. It looks at dilation, effacement, station, consistency, and position. A score of 8 or higher is favorable, meaning induction is more likely to succeed. A lower score means your cervix may need ripening first and the induction may take longer." } }
       ]
     }
   ]
@@ -29,542 +35,155 @@ const schema = {
 ---
 
 <Layout
-  title="Birth Plan for Induction"
-  description="Being induced? Your birth plan needs induction-specific language for monitoring, pain management, and escalation. Free induction birth plan template."
+  title="Birth Plan for a Scheduled Induction"
+  description="Writing an induction birth plan? Cover monitoring, pain management, eating, and what to pack. Free Joyful Birth Plan template included."
   canonical="https://truejoybirthing.com/birth-plan-for-induction/"
   ogImage="/images/og-birth-plan-for-induction.webp"
   breadcrumbList={breadcrumbList}
   schema={schema}
 >
 
-  <!-- ═══════════════════════════════════════════
-       HERO — Editorial two-column, 55/45
-       Portrait illustration right
-       ═══════════════════════════════════════════ -->
-  <section class="bg-tjb-cream">
-    <div class="max-w-7xl mx-auto">
-      <div class="flex flex-col md:flex-row">
-
-        <!-- Left: Text — 55% -->
-        <div class="md:w-[55%] px-6 md:px-12 py-16 md:py-24 flex flex-col justify-center">
-          <p class="eyebrow mb-3">Birth Plan for Induction</p>
-          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-          <h1 class="font-bold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(2.25rem, 5vw, 3.75rem);">
-            How to Write a Birth Plan for an Induction
-          </h1>
-          <!-- Author credibility strip -->
-          <div class="flex items-center gap-2.5 mb-5">
-            <img src="/images/shelbi-thumb.webp" alt="" width="32" height="32" class="w-8 h-8 rounded-full object-cover" />
-            <p class="text-sm text-tjb-gray leading-snug">
-              <a href="/about/" class="text-tjb-lavender-600 hover:text-tjb-lavender-700 font-medium no-underline">Shelbi Kohler</a>,
-              certified birth doula — 500+ families supported
-            </p>
-          </div>
-          <p class="text-tjb-gray text-lg leading-[1.7] mb-8 max-w-[36rem]">
-            Being induced changes your timeline, your options, and how your labor feels. Here's what to include in your birth plan — and what to leave out — when your birth starts with a scheduled induction.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-3">
-            <a href="#download" class="btn-primary">Get the free birth plan</a>
-            <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-secondary">Get the free app for the full walkthrough</a>
-          </div>
-        </div>
-
-        <!-- Right: Portrait — 45% -->
-        <div class="md:w-[45%] flex items-center justify-center px-6 py-12 md:py-0">
-          <img
-            src="/images/birth-plan-for-induction-portrait.webp"
-            alt="A warm, illustrated guide to writing a birth plan for an induction — covering monitoring, pain management, and decision points"
-            class="w-full max-w-md rounded-md"
-            loading="eager"
-            fetchpriority="high"
-          />
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       PROVENANCE — Compact trust anchor
-       ═══════════════════════════════════════════ -->
-  <div class="bg-tjb-cream border-y border-tjb-lavender-200/40">
-    <div class="max-w-3xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
-      <span class="text-sm text-tjb-gray-300 tracking-wide">Induction-specific language</span>
-      <span class="hidden sm:inline text-tjb-rose-400 text-sm">·</span>
-      <span class="text-sm text-tjb-gray-300 tracking-wide">Copy-into-your-plan phrasing</span>
-      <span class="hidden sm:inline text-tjb-rose-400 text-sm">·</span>
-      <span class="text-sm text-tjb-gray-300 tracking-wide">What to skip and what to insist on</span>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════════════════
-       TABLE OF CONTENTS — Visual treatment
-       ═══════════════════════════════════════════ -->
-  <section class="bg-white py-10 border-b border-tjb-lavender-200/50">
-    <div class="max-w-3xl mx-auto px-6">
-      <p class="text-sm font-semibold text-tjb-gray-400 uppercase tracking-widest mb-5">In this guide</p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
-        <a href="#what-induction-means" class="group flex items-baseline gap-2 text-tjb-charcoal hover:text-tjb-rose-500 transition">
-          <span class="text-sm font-semibold text-tjb-lavender-500 group-hover:text-tjb-rose-500 transition">01</span>
-          <span class="text-sm font-medium">What Induction Means for Your Plan</span>
-        </a>
-        <a href="#what-to-include" class="group flex items-baseline gap-2 text-tjb-charcoal hover:text-tjb-rose-500 transition">
-          <span class="text-sm font-semibold text-tjb-rose-500 group-hover:text-tjb-lavender-500 transition">02</span>
-          <span class="text-sm font-medium">What to Include</span>
-        </a>
-        <a href="#what-to-skip" class="group flex items-baseline gap-2 text-tjb-charcoal hover:text-tjb-rose-500 transition">
-          <span class="text-sm font-semibold text-tjb-lavender-500 group-hover:text-tjb-rose-500 transition">03</span>
-          <span class="text-sm font-medium">What to Skip</span>
-        </a>
-        <a href="#questions-to-ask" class="group flex items-baseline gap-2 text-tjb-charcoal hover:text-tjb-rose-500 transition">
-          <span class="text-sm font-semibold text-tjb-rose-500 group-hover:text-tjb-lavender-500 transition">04</span>
-          <span class="text-sm font-medium">Questions for Your Appointment</span>
-        </a>
-        <a href="#your-hospital" class="group flex items-baseline gap-2 text-tjb-charcoal hover:text-tjb-rose-500 transition">
-          <span class="text-sm font-semibold text-tjb-lavender-500 group-hover:text-tjb-rose-500 transition">05</span>
-          <span class="text-sm font-medium">Your Hospital</span>
-        </a>
-        <a href="#doula-support" class="group flex items-baseline gap-2 text-tjb-charcoal hover:text-tjb-rose-500 transition">
-          <span class="text-sm font-semibold text-tjb-rose-500 group-hover:text-tjb-lavender-500 transition">06</span>
-          <span class="text-sm font-medium">How a Doula Helps</span>
-        </a>
-        <a href="#common-questions" class="group flex items-baseline gap-2 text-tjb-charcoal hover:text-tjb-rose-500 transition">
-          <span class="text-sm font-semibold text-tjb-lavender-500 group-hover:text-tjb-rose-500 transition">07</span>
-          <span class="text-sm font-medium">Common Questions</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       WHAT INDUCTION MEANS — Editorial numbered on cream
-       ═══════════════════════════════════════════ -->
-  <section class="bg-tjb-cream py-16 md:py-20" id="what-induction-means">
-    <div class="max-w-3xl mx-auto px-6">
-
-      <p class="eyebrow mb-4">What changes</p>
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="eyebrow mb-4">Induction Birth Plan</p>
       <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-      <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
-        What Induction Actually Means for Your Birth Plan
-      </h2>
-      <p class="text-tjb-gray text-lg leading-relaxed mb-8">
-        An <strong>induction birth plan</strong> is a birth plan that accounts for the specific decisions, interventions, and timeline changes that come when your care team starts labor for you — usually with Pitocin, a Foley bulb, a membrane sweep, or breaking your water. You're not waiting for your body to decide when it's ready. That changes things your birth plan needs to account for:
+      <h1 class="text-[2.5rem] md:text-[3.25rem] font-bold mb-6 leading-[1.12]">How to Write a Birth Plan for a Scheduled Induction</h1>
+      <p class="text-lg md:text-xl text-tjb-gray leading-relaxed max-w-2xl">
+        <strong>Being induced changes your timeline, your options, and how your labor feels.</strong> Your birth plan needs induction-specific language for monitoring, pain management, and what happens if things change. Here is what to include, what to pack, and copy-into-your-plan phrases you can use right now.
       </p>
-
-      <div class="space-y-0">
-        <div class="py-5 border-t border-tjb-lavender-300/40">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-lavender-500 font-serif">01</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">A longer early phase.</p>
-              <p class="text-tjb-gray leading-relaxed">Pitocin contractions often ramp up differently than spontaneous labor. The early phase can feel longer or more intense than you expected.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="py-5 border-t border-tjb-lavender-300/40">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-rose-500 font-serif">02</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">Continuous monitoring.</p>
-              <p class="text-tjb-gray leading-relaxed">Most hospitals require fetal monitoring throughout an induction. You can still move, but you'll be tethered to monitors — ask about wireless or intermittent options up front.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="py-5 border-t border-tjb-lavender-300/40">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-lavender-500 font-serif">03</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">More interventions as standard protocol.</p>
-              <p class="text-tjb-gray leading-relaxed">An IV, Pitocin, continuous monitoring, and restricted movement often come as a package deal with induction. Your birth plan should say which of these you consent to and which you'd like to discuss.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="py-5 border-t border-tjb-lavender-300/40 border-b">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-sage font-serif">04</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">Your reasons.</p>
-              <p class="text-tjb-gray leading-relaxed">Why you're being induced matters. A 41-week post-dates induction has a different feel than a 37-week induction for preeclampsia. Your plan should include your context so every new nurse who walks in understands your situation.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="text-tjb-gray mt-8 leading-relaxed">
-        This doesn't mean induction is a bad experience. It means your birth plan needs to be more specific about what you want, because the default settings are more of everything.
-      </p>
-
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════
-       WHAT TO INCLUDE — Editorial on white with pull-quotes
-       ═══════════════════════════════════════════ -->
-  <section class="bg-white py-16 md:py-20" id="what-to-include">
-    <div class="max-w-3xl mx-auto px-6">
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 prose">
 
-      <p class="eyebrow mb-4">What to include</p>
-      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-      <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
-        What to Include in an Induction Birth Plan
-      </h2>
-      <p class="text-tjb-gray text-lg leading-relaxed mb-10">
-        The <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free birth plan template</a> organizes everything by category. For an induction, here's what to prioritize — with language you can copy directly into your plan.
-      </p>
+      <h2>Why Induction Needs Its Own Plan</h2>
+      <p>An <strong>induction birth plan</strong> is not just a regular birth plan with "induction" written at the top. When your care team starts labor for you instead of waiting for your body to go into labor on its own, the experience is different in ways that matter for your plan.</p>
+      <p>Here is what changes:</p>
+      <ul>
+        <li><strong>A longer early phase.</strong> Pitocin contractions often ramp up differently than spontaneous labor. The early phase can feel longer or more intense than you expected, especially if your cervix is not yet ready.</li>
+        <li><strong>Continuous monitoring.</strong> Most hospitals require fetal monitoring throughout an induction. You can still move, but you will be tethered to monitors more than you would be during spontaneous labor.</li>
+        <li><strong>More interventions as the default.</strong> An IV, Pitocin, continuous monitoring, and restricted movement often come as a package deal with induction. Your birth plan should say which of these you consent to and which you would like to discuss.</li>
+        <li><strong>Your reasons matter.</strong> A 41-week post-dates induction feels different from a 37-week induction for preeclampsia. Your plan should include your context so every nurse who walks in understands your situation.</li>
+      </ul>
+      <p>This does not mean induction is a bad experience. It means your birth plan needs to be more specific about what you want, because the default settings are more of everything.</p>
 
-      <!-- Labor Preferences -->
-      <h3 class="font-semibold text-tjb-charcoal text-xl mb-3 pt-8 border-t border-tjb-lavender-300/40">Labor Preferences</h3>
-      <p class="text-tjb-gray leading-relaxed mb-4">This is where most induction-specific decisions live.</p>
-      <p class="text-tjb-gray leading-relaxed mb-4"><strong class="text-tjb-charcoal">Pain management.</strong> State your preferences clearly. If you want an unmedicated birth, say that — but also say what you want if labor becomes more than you expected.</p>
+      <h2>Common Induction Methods</h2>
+      <p>Knowing which method your provider plans to use helps you write a more specific plan. Each works differently:</p>
+      <ul>
+        <li><strong>Pitocin (synthetic oxytocin).</strong> Given through an IV. Contractions start within about 30 minutes and are typically stronger and closer together than spontaneous contractions. Your nurse adjusts the dose throughout labor.</li>
+        <li><strong>Foley bulb.</strong> A small balloon catheter inserted into your cervix and inflated with saline. It physically opens the cervix without medication. Usually removed once you reach about 4 cm. Often used with Pitocin.</li>
+        <li><strong>Cytotec (misoprostol).</strong> A medication placed vaginally or taken orally to soften and ripen the cervix. Works over several hours. Cannot be used for VBAC patients due to rupture risk. If you are planning a <a href="/vbac-birth-plan/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">VBAC birth plan</a>, confirm your provider is not using Cytotec.</li>
+        <li><strong>AROM (artificial rupture of membranes).</strong> Your provider breaks your water using a small hook. This usually strengthens contractions but also commits you to delivering within a certain timeframe due to infection risk.</li>
+        <li><strong>Membrane sweep.</strong> Done during a prenatal visit. Your provider separates the amniotic sac from the cervix with a finger to stimulate natural labor. It is uncomfortable but does not require you to be in the hospital.</li>
+      </ul>
+      <p>Ask your provider which method they plan to use and why. If your provider suggests multiple methods in sequence, your plan should document that order.</p>
 
+      <h2>Pain Management Timeline</h2>
+      <p>Pitocin contractions feel different from spontaneous labor contractions. They often peak faster, feel more intense, and come with less break in between. That does not mean you cannot have an unmedicated induction. It means you need to plan for both possibilities.</p>
+      <p>If you want to try unmedicated labor, say so clearly. But also say what you want if labor becomes more than you expected:</p>
       <blockquote class="bg-tjb-cream border-l-2 border-tjb-rose-400 pl-6 py-4 my-6 rounded-r-md">
-        <p class="text-tjb-charcoal italic leading-relaxed"><strong class="not-italic">Copy into your plan:</strong> "I'd like to try unmedicated labor for as long as I'm comfortable. If I request an epidural, I'd like it offered within 30 minutes. Please don't offer pain medication unless I ask — I'll let you know."</p>
+        <p class="text-tjb-charcoal italic leading-relaxed"><strong class="not-italic">Copy into your plan:</strong> "I'd like to try unmedicated labor for as long as I'm comfortable. If I request an epidural, I'd like it offered within 30 minutes. Please don't offer pain medication unless I ask."</p>
       </blockquote>
-      <p class="text-tjb-gray leading-relaxed mb-4">If you know you want an epidural, say when:</p>
+      <p>If you know you want an epidural, state when:</p>
       <blockquote class="bg-tjb-cream border-l-2 border-tjb-rose-400 pl-6 py-4 my-6 rounded-r-md">
-        <p class="text-tjb-charcoal italic leading-relaxed"><strong class="not-italic">Copy into your plan:</strong> "I plan to get an epidural when I'm around 4–5 cm dilated or when contractions become difficult to manage, whichever comes first."</p>
+        <p class="text-tjb-charcoal italic leading-relaxed"><strong class="not-italic">Copy into your plan:</strong> "I plan to get an epidural when I'm around 4 to 5 cm dilated or when contractions become difficult to manage, whichever comes first."</p>
+      </blockquote>
+      <p>Some providers recommend early epidural placement for induction patients in case a <a href="/c-section-birth-plan/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">C-section becomes necessary</a>. This is not a scare tactic, it is logistics. Knowing about it ahead of time helps you plan.</p>
+      <p>The key is flexibility language. Use phrases like "for as long as I'm comfortable" and "if I request" rather than rigid declarations. Induction has enough unpredictability already. Your pain management plan should bend without breaking.</p>
+
+      <h2>What to Pack for an Induction</h2>
+      <p>Inductions take longer than spontaneous labors, often 12 to 24 hours or more. Pack like you are going on a very long, very important trip:</p>
+      <ul>
+        <li><strong>Entertainment.</strong> A book, downloaded shows, podcasts, or a card game. The early phase can be hours of waiting before anything feels like active labor.</li>
+        <li><strong>Phone chargers and a long charging cable.</strong> You will be there a while and you will want your phone working.</li>
+        <li><strong>Snacks if your hospital allows them.</strong> Some hospitals allow light snacks during early induction. Others restrict food once Pitocin starts. Check the policy ahead of time and pack accordingly. Crackackers, granola bars, and electrolyte drinks are common choices.</li>
+        <li><strong>Comfortable clothes.</strong> A robe, loose nursing tank, slip-on slippers, and your own pillow from home. Hospital beds and gowns get old after 18 hours.</li>
+        <li><strong>Items that make you feel human.</strong> Lip balm, face wipes, hair ties, lotion. Small comforts matter more when you are spending a full day in a hospital room.</li>
+      </ul>
+      <p>If you are also preparing for a possible <a href="/home-birth-plan/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">home birth plan</a> or hospital birth, your packing list is shorter for those scenarios. For induction, plan for a longer stay.</p>
+
+      <h2>Monitoring Preferences</h2>
+      <p>Most hospitals require continuous fetal monitoring during Pitocin. This is standard protocol and your birth plan cannot override hospital policy. But you can ask for the most freedom within that policy.</p>
+      <p>Here are your options:</p>
+      <ul>
+        <li><strong>Intermittent monitoring.</strong> Some hospitals allow monitoring every 15 to 30 minutes during early labor rather than continuous. Ask if this is an option for your situation.</li>
+        <li><strong>Wireless telemetry monitoring.</strong> Some hospitals have wireless monitors that let you walk the halls, sit on a birth ball, or use the bathroom without being tethered to a bed. Ask specifically if your hospital has these.</li>
+        <li><strong>Movement with monitors.</strong> Even with continuous wired monitoring, you can usually stand next to the bed, sit on a birth ball nearby, or use a support bar. Your plan should say you want to move as much as monitoring allows.</li>
+      </ul>
+      <blockquote class="bg-tjb-cream border-l-2 border-tjb-rose-400 pl-6 py-4 my-6 rounded-r-md">
+        <p class="text-tjb-charcoal italic leading-relaxed"><strong class="not-italic">Copy into your plan:</strong> "I'd like intermittent monitoring during early labor or wireless telemetry monitoring if available. If continuous monitoring is required, I'd like to stand, sit on a birth ball, or move as much as the monitors allow."</p>
       </blockquote>
 
-      <p class="text-tjb-gray leading-relaxed mt-6 mb-2"><strong class="text-tjb-charcoal">Monitoring.</strong> Ask for what's available:</p>
-      <blockquote class="bg-tjb-cream border-l-2 border-tjb-rose-400 pl-6 py-4 my-6 rounded-r-md">
-        <p class="text-tjb-charcoal italic leading-relaxed"><strong class="not-italic">Copy into your plan:</strong> "I'd like intermittent monitoring (every 30 minutes during early labor) or wireless telemetry monitoring if available, so I can move and change positions freely."</p>
-      </blockquote>
-      <p class="text-tjb-gray leading-relaxed mb-4">If your hospital requires continuous monitoring, add:</p>
-      <blockquote class="bg-tjb-cream border-l-2 border-tjb-rose-400 pl-6 py-4 my-6 rounded-r-md">
-        <p class="text-tjb-charcoal italic leading-relaxed"><strong class="not-italic">Copy into your plan:</strong> "If continuous monitoring is required, I'd like to use a wireless monitor or be able to stand and move with the monitor cables."</p>
-      </blockquote>
-
-      <p class="text-tjb-gray leading-relaxed mt-6 mb-2"><strong class="text-tjb-charcoal">Movement and positioning.</strong> Even with monitors and an IV, you can usually move:</p>
-      <blockquote class="bg-tjb-cream border-l-2 border-tjb-rose-400 pl-6 py-4 my-6 rounded-r-md">
-        <p class="text-tjb-charcoal italic leading-relaxed"><strong class="not-italic">Copy into your plan:</strong> "I'd like to labor out of bed as much as possible — walking, sitting on a birth ball, or using a support bar. I understand I'll have an IV and monitors, and I'd like help positioning around them."</p>
-      </blockquote>
-
-      <p class="text-tjb-gray leading-relaxed mt-6 mb-2"><strong class="text-tjb-charcoal">Eating and drinking.</strong> Some hospitals restrict food during induction:</p>
+      <h2>Eating During Induction</h2>
+      <p>Hospital policies on eating during induction vary a lot. Some allow clear liquids and light snacks during the early phase when you are not yet in active labor. Others restrict all food once Pitocin starts because of the possibility that you might need an epidural or a cesarean later.</p>
+      <p>This is worth asking about at your scheduling appointment. Then put your preference in your plan:</p>
       <blockquote class="bg-tjb-cream border-l-2 border-tjb-rose-400 pl-6 py-4 my-6 rounded-r-md">
         <p class="text-tjb-charcoal italic leading-relaxed"><strong class="not-italic">Copy into your plan:</strong> "I'd like to eat light snacks and drink water during early labor. If my care team recommends restricting food, I'd like to understand why before agreeing."</p>
       </blockquote>
+      <p>Even if your hospital restricts solid food, most allow ice chips, clear broth, Jell-O, and electrolyte drinks. Pack what you can.</p>
 
-      <!-- Induction Method -->
-      <h3 class="font-semibold text-tjb-charcoal text-xl mb-3 pt-10 border-t border-tjb-lavender-300/40">The Induction Method Itself</h3>
-      <p class="text-tjb-gray leading-relaxed mb-6">Your plan should document what you know about the method they're using and what you want to happen if it takes longer than expected.</p>
+      <h2>What If Your Induction Does Not Work</h2>
+      <p>Failed induction is one of the most common reasons for a cesarean. This is not meant to scare you. It is meant to help you plan for the possibility so you are not making big decisions exhausted and overwhelmed.</p>
+      <p>Your plan should include what you want if labor stalls:</p>
       <blockquote class="bg-tjb-cream border-l-2 border-tjb-rose-400 pl-6 py-4 my-6 rounded-r-md">
-        <p class="text-tjb-charcoal italic leading-relaxed"><strong class="not-italic">Copy into your plan:</strong> "We're planning to start with Pitocin. If the first method isn't effective after 6–8 hours, I'd like to discuss next steps before proceeding to additional interventions."</p>
+        <p class="text-tjb-charcoal italic leading-relaxed"><strong class="not-italic">Copy into your plan:</strong> "If my labor stalls or my care team recommends additional interventions, I'd like to be informed of the risks and benefits and given time to discuss with my partner before making a decision, unless it's a true emergency."</p>
       </blockquote>
-      <p class="text-tjb-gray leading-relaxed">This matters because inductions can stall. Having language that says "let's discuss before escalating" gives you back some decision-making power in a process that can feel like it's happening to you.</p>
+      <blockquote class="bg-tjb-cream border-l-2 border-tjb-rose-400 pl-6 py-4 my-6 rounded-r-md">
+        <p class="text-tjb-charcoal italic leading-relaxed"><strong class="not-italic">Copy into your plan:</strong> "If a cesarean becomes necessary, I'd like my partner present and a clear explanation of why before consent. If my baby is stable, I'd like skin-to-skin in the operating room if possible."</p>
+      </blockquote>
+      <p>Having this documented before you are exhausted helps you participate in decisions you might otherwise experience as happening to you.</p>
 
-      <!-- Delivery Preferences -->
-      <h3 class="font-semibold text-tjb-charcoal text-xl mb-3 pt-10 border-t border-tjb-lavender-300/40">Delivery Preferences</h3>
-      <p class="text-tjb-gray leading-relaxed mb-4">Many induction births are vaginal — but induction also increases the likelihood of instrumental delivery and cesarean. Your delivery preferences should account for both paths.</p>
+      <h2>Birth Plan Language Tips</h2>
+      <p>How you say things matters as much as what you say. A few guidelines for your <a href="/birth-plan-template/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">birth plan template</a>:</p>
+      <ul>
+        <li>Use "I prefer" and "I'd like" instead of "I refuse" or "I insist." Firm preferences, respectful tone. Your birth plan is a communication tool, not a contract.</li>
+        <li>Keep it short. Nurses read your plan in 30 seconds. Bullet points, one preference per line.</li>
+        <li>Do not include requests that contradict hospital policy for inductions. If continuous monitoring is required, ask for the most freedom within that policy instead of fighting it.</li>
+        <li>Write for the birth you are actually having, not the one you were originally planning. If you were planning an unmedicated home birth and now you are being induced at the hospital, adjust your plan accordingly.</li>
+      </ul>
+      <p>The <a href="/birth-plan-checklist/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">birth plan checklist</a> helps you make sure you have covered everything. The <a href="/birth-plan-template/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">free Joyful Birth Plan template</a> organizes all of this by category with induction-specific sections included.</p>
 
-      <p class="text-tjb-charcoal font-semibold mb-2">If labor progresses to pushing:</p>
-      <ul class="space-y-2 mb-4">
-        <li class="text-tjb-gray leading-relaxed">I'd like to push in whatever position feels most effective. I prefer not to be on my back unless there's a medical reason.</li>
-        <li class="text-tjb-gray leading-relaxed">If an assisted delivery (vacuum or forceps) is recommended, I'd like to understand why and discuss alternatives before proceeding.</li>
+      <div class="my-8 not-prose bg-tjb-lavender-50 rounded-xl p-6">
+        <p class="text-lg font-serif italic text-tjb-charcoal mb-3">"I was so bummed when my provider said I needed to be induced at 39 weeks. I had planned an unmedicated birth and felt like the whole thing was ruined. But my doula helped me rewrite my plan for what was actually happening, and you know what? My induction was 14 hours, I got my epidural at 5 cm, and I still had a beautiful vaginal birth. The plan made me feel like I still had a say."</p>
+        <p class="text-sm text-tjb-gray">Kristen M., Fort Worth</p>
+      </div>
+
+      <h2>More Resources for Your Birth Plan</h2>
+      <p>Your induction birth plan connects to the rest of your birth preparation. Explore these guides for the full picture:</p>
+      <ul>
+        <li><a href="/what-is-a-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">What is a doula?</a>: how a doula supports you specifically during an induction</li>
+        <li><a href="/benefits-of-a-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Benefits of a doula</a>: shorter labors, fewer interventions, higher satisfaction</li>
+        <li><a href="/doula-cost/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Doula cost</a>: what doulas charge and what is included</li>
+        <li><a href="/how-to-choose-a-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">How to choose a doula</a>: interview questions, red flags, contract details</li>
+        <li><a href="/doula-vs-midwife/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Doula vs. midwife</a>: the difference and why you might want both</li>
       </ul>
 
-      <p class="text-tjb-charcoal font-semibold mb-2">If a cesarean becomes necessary:</p>
-      <ul class="space-y-2 mb-4">
-        <li class="text-tjb-gray leading-relaxed">If a cesarean is recommended, I'd like my partner present and a clear explanation of why before consent.</li>
-        <li class="text-tjb-gray leading-relaxed">If my baby is stable, I'd like delayed cord clamping and skin-to-skin in the operating room if possible.</li>
-      </ul>
-      <p class="text-tjb-gray leading-relaxed">You don't need a separate C-section plan — just include a few lines that cover the what-if. The <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free birth plan template</a> has a dedicated section for this.</p>
-
-      <!-- Newborn Care -->
-      <h3 class="font-semibold text-tjb-charcoal text-xl mb-3 pt-10 border-t border-tjb-lavender-300/40">Newborn Care and Postpartum</h3>
-      <p class="text-tjb-gray leading-relaxed mb-6">This section is mostly the same regardless of induction, but include:</p>
-      <blockquote class="bg-tjb-cream border-l-2 border-tjb-rose-400 pl-6 py-4 my-6 rounded-r-md">
-        <p class="text-tjb-charcoal italic leading-relaxed"><strong class="not-italic">Copy into your plan:</strong> "I'd like skin-to-skin contact as soon as possible after delivery, even if there's meconium or a brief NICU evaluation — please delay routine newborn procedures for the first hour unless medically necessary."</p>
-      </blockquote>
-      <blockquote class="bg-tjb-cream border-l-2 border-tjb-rose-400 pl-6 py-4 my-6 rounded-r-md">
-        <p class="text-tjb-charcoal italic leading-relaxed"><strong class="not-italic">Copy into your plan:</strong> "I plan to breastfeed and would like a lactation consultant available during my hospital stay."</p>
-      </blockquote>
-      <p class="text-tjb-gray leading-relaxed">These preferences don't change because you were induced, but they can get lost in the shuffle when there are more people in the room and more protocols in play.</p>
-
-      <!-- If Things Change -->
-      <h3 class="font-semibold text-tjb-charcoal text-xl mb-3 pt-10 border-t border-tjb-lavender-300/40">If Things Change</h3>
-      <p class="text-tjb-gray leading-relaxed mb-4">This is the most important section for an induction birth plan. Inductions have more decision points than spontaneous labor. Your plan should say how you want to be involved in those decisions.</p>
-      <blockquote class="bg-tjb-cream border-l-2 border-tjb-rose-400 pl-6 py-4 my-6 rounded-r-md">
-        <p class="text-tjb-charcoal italic leading-relaxed"><strong class="not-italic">Copy into your plan:</strong> "If my labor stalls or my care team recommends additional interventions, I'd like to be informed of the risks and benefits and given time to discuss with my partner before making a decision — unless it's a true emergency."</p>
-      </blockquote>
-      <blockquote class="bg-tjb-cream border-l-2 border-tjb-rose-400 pl-6 py-4 my-6 rounded-r-md">
-        <p class="text-tjb-charcoal italic leading-relaxed"><strong class="not-italic">Copy into your plan:</strong> "If at any point I feel overwhelmed or unsure, I'd like my doula or support person to help me ask questions and understand my options."</p>
-      </blockquote>
+      <LeadCaptureForm />
 
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════
-       WHAT TO SKIP — Editorial numbered on cream
-       ═══════════════════════════════════════════ -->
-  <section class="bg-tjb-cream py-16 md:py-20" id="what-to-skip">
-    <div class="max-w-3xl mx-auto px-6">
-
-      <p class="eyebrow mb-4">What to skip</p>
-      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-      <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-8" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
-        What to Skip in an Induction Birth Plan
-      </h2>
-      <p class="text-tjb-gray text-lg leading-relaxed mb-8">More isn't better. Skip these:</p>
-
-      <div class="space-y-0">
-        <div class="py-5 border-t border-tjb-lavender-300/40">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-lavender-500 font-serif">01</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">Requests that contradict hospital policy for inductions.</p>
-              <p class="text-tjb-gray leading-relaxed">If your hospital requires continuous monitoring during Pitocin, your birth plan can't override that. Instead, ask for the most freedom within that policy — wireless monitors, movement within range, position changes.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="py-5 border-t border-tjb-lavender-300/40">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-rose-500 font-serif">02</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">Long narrative paragraphs.</p>
-              <p class="text-tjb-gray leading-relaxed">Nurses read your plan in 30 seconds. Bullet points and short statements. One preference per line.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="py-5 border-t border-tjb-lavender-300/40">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-lavender-500 font-serif">03</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">Language about "going into labor naturally."</p>
-              <p class="text-tjb-gray leading-relaxed">If you're being induced, your plan should reflect induction — not the spontaneous labor experience you were originally planning for. Adjust your plan when your circumstances change.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="py-5 border-t border-tjb-lavender-300/40 border-b">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-sage font-serif">04</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">Anything that sounds like a contract.</p>
-              <p class="text-tjb-gray leading-relaxed">"I prefer" and "I'd like" land better than "I refuse" or "I insist." Firm preferences, respectful tone. Your birth plan is a communication tool, not a legal document.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       QUESTIONS FOR YOUR APPOINTMENT — Editorial numbered on white
-       ═══════════════════════════════════════════ -->
-  <section class="bg-white py-16 md:py-20" id="questions-to-ask">
-    <div class="max-w-3xl mx-auto px-6">
-
-      <p class="eyebrow mb-4">Pre-induction questions</p>
-      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-      <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
-        Before You Go In: What to Ask at Your Induction Appointment
-      </h2>
-      <p class="text-tjb-gray text-lg leading-relaxed mb-10">
-        Your induction probably gets scheduled at a 36- or 37-week appointment. That appointment is your chance to ask questions and get answers before you're in labor. Bring these written down:
-      </p>
-
-      <div class="space-y-0">
-        <div class="py-5 border-t border-tjb-lavender-300/40">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-lavender-500 font-serif">01</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">Why are we inducing?</p>
-              <p class="text-tjb-gray leading-relaxed">Get the specific medical reason. "You're past your due date" is a reason. "You're 40+3 and we like to induce by 41 weeks" is a policy. Understanding the difference helps you make informed choices.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="py-5 border-t border-tjb-lavender-300/40">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-rose-500 font-serif">02</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">What method are we using?</p>
-              <p class="text-tjb-gray leading-relaxed">Pitocin, Foley bulb, Cytotec, AROM — they work differently and have different timelines. Ask which one and why.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="py-5 border-t border-tjb-lavender-300/40">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-lavender-500 font-serif">03</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">How long will we try before changing course?</p>
-              <p class="text-tjb-gray leading-relaxed">Inductions can take 12–24+ hours. Ask what the hospital's timeline expectations are and what happens if your body needs more time.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="py-5 border-t border-tjb-lavender-300/40">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-rose-500 font-serif">04</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">What are the signs we'd switch to a cesarean?</p>
-              <p class="text-tjb-gray leading-relaxed">Know the thresholds in advance — failure to progress, fetal distress, infection risk. This isn't pessimistic; it's preparation.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="py-5 border-t border-tjb-lavender-300/40">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-lavender-500 font-serif">05</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">Can I eat, move, and use the shower/ball during induction?</p>
-              <p class="text-tjb-gray leading-relaxed">Hospital policies vary. Some restrict food once Pitocin starts. Others allow light snacks. Know what yours allows.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="py-5 border-t border-tjb-lavender-300/40 border-b">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-sage font-serif">06</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">Who will be in the room?</p>
-              <p class="text-tjb-gray leading-relaxed">Ask about nursing shifts, residents, and whether your doula is welcome. If you're at a teaching hospital, you can say you'd prefer not to have students observe.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="text-tjb-gray mt-8 leading-relaxed">Write the answers on your birth plan or bring them to your next prenatal appointment.</p>
-
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       YOUR HOSPITAL — Typographic link strip
-       ═══════════════════════════════════════════ -->
-  <section class="bg-tjb-cream py-12 border-y border-tjb-lavender-200/50" id="your-hospital">
-    <div class="max-w-3xl mx-auto px-6">
-      <h2 class="font-semibold text-tjb-charcoal text-lg mb-4">Your hospital and your induction plan</h2>
-      <p class="text-tjb-gray mb-6">Not every hospital handles inductions the same way. See local protocols, doula availability, and Medicaid coverage for major Texas metros:</p>
-      <ul class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2">
-        <li><a href="/birth-support/dallas-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Dallas</a></li>
-        <li><a href="/birth-support/houston-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Houston</a></li>
-        <li><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Austin</a></li>
-        <li><a href="/birth-support/san-antonio-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">San Antonio</a></li>
-        <li><a href="/birth-support/fort-worth-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Fort Worth</a></li>
-        <li><a href="/birth-support/el-paso-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">El Paso</a></li>
-      </ul>
-      <p class="mt-4"><a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 transition">See all 20 Texas cities →</a></p>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       HOW A DOULA HELPS — Editorial numbered on white
-       ═══════════════════════════════════════════ -->
-  <section class="bg-white py-16 md:py-20" id="doula-support">
-    <div class="max-w-3xl mx-auto px-6">
-
-      <p class="eyebrow mb-4">Doula support</p>
-      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-      <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
-        How a Doula Helps During an Induction
-      </h2>
-      <p class="text-tjb-gray text-lg leading-relaxed mb-10">
-        Inductions have more decision points, longer early phases, and often more interventions than spontaneous labor. A doula doesn't replace your medical team — they help you navigate the process.
-      </p>
-
-      <div class="space-y-0">
-        <div class="py-5 border-t border-tjb-lavender-300/40">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-lavender-500 font-serif">01</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">Before induction</p>
-              <p class="text-tjb-gray leading-relaxed">A doula helps you write your birth plan with induction-specific language and talks through your questions so you walk in informed, not just scheduled.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="py-5 border-t border-tjb-lavender-300/40">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-rose-500 font-serif">02</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">During early labor</p>
-              <p class="text-tjb-gray leading-relaxed">Pitocin contractions can feel different from spontaneous ones. A doula helps with positioning, comfort measures, and pacing through a phase that can last hours before anything feels "active."</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="py-5 border-t border-tjb-lavender-300/40">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-lavender-500 font-serif">03</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">When decisions come up</p>
-              <p class="text-tjb-gray leading-relaxed">Should we increase Pitocin? Should we try AROM? How long should we wait? A doula reminds you of your preferences and helps you ask your care team for time and information.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="py-5 border-t border-tjb-lavender-300/40 border-b">
-          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-6 items-start">
-            <span class="text-3xl font-bold text-tjb-rose-500 font-serif">04</span>
-            <div>
-              <p class="text-tjb-charcoal font-semibold mb-1">If things change</p>
-              <p class="text-tjb-gray leading-relaxed">If your induction leads to a cesarean, your doula stays. They help you understand what's happening, support your partner, and make sure your preferences (skin-to-skin, delayed clamping) still get communicated.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p class="text-tjb-gray mt-8 leading-relaxed">
-        <a href="/doula-cost/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">How much does a doula cost?</a> · <a href="/how-to-choose-a-doula/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">How to choose a doula for your birth</a>
-      </p>
-
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════
-       FAQ — Editorial on cream
-       ═══════════════════════════════════════════ -->
-  <section class="bg-tjb-cream py-16 md:py-20" id="common-questions">
-    <div class="max-w-3xl mx-auto px-6">
-
-      <p class="eyebrow mb-4">Common questions</p>
+  <section class="py-16 bg-tjb-cream-50 border-t border-tjb-lavender-200/50">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="eyebrow mb-4">Keep Reading</p>
       <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
 
-      <div class="space-y-6">
-        <div class="border-b border-tjb-lavender-300/40 pb-6">
-          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Does being induced mean I'll end up with a cesarean?</h3>
-          <p class="text-tjb-gray leading-relaxed">No. Many induced labors result in vaginal births. The rate of cesarean delivery is higher for inductions than for spontaneous labor, especially for first-time moms, but it is not a guaranteed outcome. Your chances improve when your cervix is favorable, your baby is in a good position, and your induction method aligns with your body's readiness.</p>
-        </div>
-        <div class="border-b border-tjb-lavender-300/40 pb-6">
-          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">How long does an induction take?</h3>
-          <p class="text-tjb-gray leading-relaxed">It varies widely. Some inductions progress quickly — a few hours from start to delivery. Others take 24–36 hours, especially if your cervix isn't favorable yet. Your care team should give you realistic expectations at your scheduling appointment based on your Bishop score and the method they're using.</p>
-        </div>
-        <div class="border-b border-tjb-lavender-300/40 pb-6">
-          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Can I eat during an induction?</h3>
-          <p class="text-tjb-gray leading-relaxed">It depends on your hospital. Some allow clear liquids and light snacks during early induction. Others restrict food once Pitocin starts, especially if an epidural or cesarean becomes more likely. Ask at your induction appointment and put your preference in your birth plan — then ask again when you arrive.</p>
-        </div>
-        <div class="border-b border-tjb-lavender-300/40 pb-6">
-          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Can I move around during an induction?</h3>
-          <p class="text-tjb-gray leading-relaxed">Usually yes, with some limitations. Most hospitals require continuous fetal monitoring during Pitocin, which means monitors strapped to your belly. Ask about wireless telemetry monitors, birth balls near the bed, and standing positions you can use while monitored. Your birth plan should state that you want to move as much as monitoring allows.</p>
-        </div>
-        <div class="border-b border-tjb-lavender-300/40 pb-6">
-          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">What if my induction doesn't work?</h3>
-          <p class="text-tjb-gray leading-relaxed">Failed induction is one of the most common reasons for a cesarean. Your plan should include what you want to happen if labor stalls — do you want more time, a different method, or to discuss a cesarean? Having this documented before you're exhausted helps you participate in decisions you'd otherwise experience as happening to you.</p>
-        </div>
-        <div class="border-b border-tjb-lavender-300/40 pb-6">
-          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Should I write a different birth plan if I was planning an unmedicated birth and now I'm being induced?</h3>
-          <p class="text-tjb-gray leading-relaxed">Yes, adjust your plan. Keep your preferences, but account for the realities of induction. If you wanted an unmedicated birth, you still can — Pitocin contractions are manageable with the right support and positioning. But your plan should acknowledge continuous monitoring, an IV, and a different timeline. Write for the birth you're actually having, not the one you were planning.</p>
-        </div>
-        <div>
-          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">What's a Bishop score and why does it matter for induction?</h3>
-          <p class="text-tjb-gray leading-relaxed">The Bishop score is a number (0–10) that measures how ready your cervix is for labor. It looks at dilation, effacement, station, consistency, and position. A score of 8 or higher means your body is favorable for induction — labor is likely to start and progress. A lower score means your cervix may need ripening first, and induction may take longer. Ask your provider about your Bishop score at your scheduling appointment.</p>
-        </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/postpartum-doula/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-lg font-semibold mb-2 group-hover:text-tjb-rose-500 transition">Postpartum Doula Guide</h3>
+          <p class="text-sm text-tjb-gray">Recovery support after birth: feeding help, emotional care, and what to expect.</p>
+        </a>
+        <a href="/faq/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-lg font-semibold mb-2 group-hover:text-tjb-rose-500 transition">Birth Plan FAQ</h3>
+          <p class="text-sm text-tjb-gray">Common questions about birth plans, doulas, and what to expect answered.</p>
+        </a>
+        <a href="/birth-plan-template/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-lg font-semibold mb-2 group-hover:text-tjb-rose-500 transition">Free Birth Plan Template</h3>
+          <p class="text-sm text-tjb-gray">The Joyful Birth Plan template with induction-specific sections included.</p>
+        </a>
       </div>
-
     </div>
   </section>
-
-  <!-- ═══════════════════════════════════════════
-       LEAD CAPTURE — Name + email → PDF
-       ═══════════════════════════════════════════ -->
-  <LeadCaptureForm />
 
 </Layout>
