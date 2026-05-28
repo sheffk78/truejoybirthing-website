@@ -2528,7 +2528,7 @@ export const cities: Record<string, CityData> = {
       { q: "Can I have a midwife-attended birth at a Chicago hospital?", a: "Several Chicago hospitals, including Rush University Medical Center and Advocate Illinois Masonic, have midwifery practices that support low-intervention births within a hospital setting. Ask your provider directly about midwife-attended birth options — you might have more choices than you think." },
       { q: "How do I find a Black doula in Chicago?", a: "You deserve a doula who gets your experience. Chicago has doulas of color who serve families with cultural understanding and real care. Don't settle — keep asking until you find someone who feels right." }
     ],
-    nearbyCities: ["minneapolis-mn", "st-paul-mn"],
+    nearbyCities: ["minneapolis-mn", "st-paul-mn", "aurora-il"],
   },
   "detroit-mi": {
     city: "Detroit",
@@ -3240,7 +3240,7 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals in Indianapolis accommodate birth plans?", a: "IU Health Methodist Hospital, Ascension St. Vincent Hospital Indianapolis, and Community Hospital East all have L&D departments. There are no freestanding birth centers currently operating in the Indianapolis metro area." },
       { q: "Does True Joy Birthing work with Indianapolis families?", a: "True Joy Birthing provides free birth-prep tools for Indianapolis families. The free birth plan, checklist, and guided walkthrough in the app work for any Indianapolis birth setting. The app also helps you connect with local doulas and midwives in your area." }
     ],
-    nearbyCities: [],
+    nearbyCities: ["fort-wayne-in"],
   },
   "reno-nv": {
     city: "Reno",
@@ -3689,7 +3689,7 @@ export const cities: Record<string, CityData> = {
       { q: "Can my doula come to the hospital with me in Birmingham?", a: "Yes — UAB Hospital, Brookwood Baptist, and St. Vincent's all allow doulas in labor and delivery. Confirm visitor policies during your hospital tour, and bring your birth plan so your care team knows your preferences." },
       { q: "Does True Joy Birthing work with Birmingham families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Birmingham birth setting, whether you're delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
-    nearbyCities: ["nashville-tn", "atlanta-ga", "memphis-tn"],
+    nearbyCities: ["nashville-tn", "atlanta-ga", "memphis-tn", "huntsville-al", "mobile-al"],
   },
 
   "louisville-ky": {
@@ -3755,7 +3755,7 @@ export const cities: Record<string, CityData> = {
       { q: "Can my doula come to the hospital with me in Boise?", a: "Yes — St. Luke's, Saint Alphonsus, and St. Luke's Nampa all allow doulas in labor and delivery. Confirm visitor policies during your hospital tour, and bring your birth plan so your care team knows your preferences." },
       { q: "Does True Joy Birthing work with Boise families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Boise birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
-    nearbyCities: ["spokane-wa", "salt-lake-city-ut"],
+    nearbyCities: ["spokane-wa", "salt-lake-city-ut", "nampa-id"],
   },
 
   "des-moines-ia": {
@@ -3787,7 +3787,7 @@ export const cities: Record<string, CityData> = {
       { q: "Can my doula come to the hospital with me in Des Moines?", a: "Yes — MercyOne and Iowa Methodist both allow doulas in labor and delivery. Confirm visitor policies during your hospital tour, and bring your birth plan so your care team knows your preferences." },
       { q: "Does True Joy Birthing work with Des Moines families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Des Moines birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
-    nearbyCities: ["minneapolis-mn", "kansas-city-mo"],
+    nearbyCities: ["minneapolis-mn", "kansas-city-mo", "cedar-rapids-ia"],
   },
 
   "omaha-ne": {
@@ -4236,6 +4236,180 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Wilmington families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Wilmington birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["baltimore-md"],
+  },
+  "huntsville-al": {
+    city: "Huntsville",
+    state: "AL",
+    slug: "huntsville-al",
+    costLow: 800,
+    costHigh: 1500,
+    shelbiServesHere: false,
+    culture: "Huntsville\u2019s birth community is growing alongside the city\u2019s tech boom \u2014 NASA\u2019s Marshall Space Flight Center and the Redstone Arsenal military installation bring a steady stream of young families to North Alabama. The local doula scene is small but dedicated, and Huntsville Hospital Women & Children handles the vast majority of regional births as the only Level III NICU facility in the Tennessee Valley.",
+    heroLocalDetail: "Huntsville Hospital Women & Children sits on Governor Drive in the medical district just southwest of downtown, about 10 minutes from the neighborhoods around Research Park and the arsenal. Crestwood Medical Center is on Hospital Drive a few blocks south of Huntsville Hospital, so both birthing hospitals are clustered together \u2014 which means your route planning is simpler than in most cities, but also means that medical district traffic around lunch and shift changes can slow you down. The Huntsville Greenway along Aldridge Creek and the trails at Brahan Spring Park are flat, paved, and popular with expecting moms on the south side of town. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Huntsville Hospital Women & Children", paragraph: "Huntsville Hospital Women & Children, on Governor Drive in Huntsville, is the regional hub for labor and delivery in North Alabama with a Level III NICU (contact the hospital directly for current NICU level verification). It\u2019s the highest-volume birth hospital in the Tennessee Valley and handles complex pregnancies from across the region. If you\u2019re delivering at Huntsville Hospital Women & Children, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Crestwood Medical Center", paragraph: "Crestwood Medical Center, on Hospital Drive just south of Huntsville Hospital, offers labor and delivery with a NICU (contact the hospital directly for current NICU level verification). Crestwood serves families from southeast Huntsville, Hampton Cove, and the growing areas along Highway 431. If you\u2019re delivering at Crestwood Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Huntsville, AL. Google Maps search "birth center Huntsville Alabama" found
+    // Alabama Birth Center (alabamabirthcenter.com, Wix website active as of 2026-05-27).
+    // Address reportedly 7495 Bailey Creek Circle SE, Huntsville, AL 35802.
+    // Could not independently confirm operating status via Google reviews or phone listing.
+    // Verified 2026-05-27.
+    birthCenterDetails: [
+      { name: "Alabama Birth Center", paragraph: "Alabama Birth Center, reportedly located on Bailey Creek Circle in southeast Huntsville, is Alabama\u2019s first freestanding birth center, offering out-of-hospital birth with certified nurse-midwives. Verify current operating status and CABC accreditation directly with the center \u2014 the website (alabamabirthcenter.com) is active but independent confirmation of reviews and operating hours was limited at time of research. For families seeking a lower-intervention birth setting in North Alabama, this represents the only freestanding birth center option in the region." },
+    ],
+    medicaidNote: "No \u2014 Alabama does not cover doula services under Medicaid as of May 2026. Alabama has not enacted legislation mandating Medicaid doula reimbursement. Madison County families on Alabama Medicaid are served by Blue Cross Blue Shield of Alabama, UnitedHealthcare Community Plan, and Aetna Better Health of Alabama.",
+    insuranceNote: "Alabama\u2019s lack of Medicaid doula coverage means Huntsville families on Medicaid pay out of pocket for doula services. For families with private insurance, Huntsville\u2019s employer market (NASA Marshall, Redstone Arsenal, Toyota, ADTRAN) sometimes includes maternal wellness benefits \u2014 check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
+    faqs: [
+      { q: "How much does a doula cost in Huntsville?", a: "Expect to pay $800 to $1,500 for a doula in Huntsville. The local doula community is smaller than in Birmingham, so start your search early. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Does Medicaid cover doulas in Huntsville?", a: "Not yet \u2014 Alabama Medicaid does not cover doula services as of May 2026. Some managed care plans may offer limited benefits on their own, so call your plan and ask. You can reach Alabama Medicaid at 1-800-362-1504. Advocacy groups are working on it." },
+      { q: "Are there doulas in Huntsville?", a: "Huntsville has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Huntsville families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Huntsville birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["birmingham-al", "nashville-tn"],
+  },
+  "mobile-al": {
+    city: "Mobile",
+    state: "AL",
+    slug: "mobile-al",
+    costLow: 700,
+    costHigh: 1500,
+    shelbiServesHere: false,
+    culture: "Mobile is a Gulf Coast port city with deep cultural roots \u2014 Mardi Gras was born here, not New Orleans. The birth community is shaped by a tight-knit network of Black doulas and midwives who have served Gulf Coast families for generations. USA Health Children\u2019s & Women\u2019s Hospital anchors the academic side of maternity care, while Infirmary Health operates the largest private hospital system in the region. Alabama\u2019s restrictive birth center regulations have limited out-of-hospital options, but advocacy for birth equity is strong.",
+    heroLocalDetail: "USA Health Children\u2019s & Women\u2019s Hospital sits on Center Street in midtown Mobile, about 5 minutes from downtown via Broad Street. Mobile Infirmary Medical Center is on Mobile Infirmary Boulevard near Airport Boulevard in west Mobile, about 15 minutes from downtown via I-65. Mobile\u2019s summer heat and humidity are intense \u2014 plan for air-conditioned routes to the hospital if you\u2019re due between June and September. The Mobile Botanical Gardens on Museum Drive and the walking paths at Langan Park are shaded, flat options for third-trimester movement. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "USA Health Children\u2019s & Women\u2019s Hospital", paragraph: "USA Health Children\u2019s & Women\u2019s Hospital, on Center Street in midtown Mobile, is the academic medical center for the Gulf Coast region with a Level III NICU (contact the hospital directly for current NICU level verification). As the university-affiliated hospital, it handles the region\u2019s most complex pregnancies and has maternal-fetal medicine specialists on staff. If you\u2019re delivering at USA Health Children\u2019s & Women\u2019s Hospital, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Mobile Infirmary Medical Center", paragraph: "Mobile Infirmary Medical Center, on Mobile Infirmary Boulevard in west Mobile, is the largest private hospital in the region with a NICU (contact the hospital directly for current NICU level verification). Infirmary Health\u2019s birthing suites are private and their OB/GYN staff covers a high volume of births from across the Gulf Coast. If you\u2019re delivering at Mobile Infirmary Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Mobile, AL. Google Maps search "birth center Mobile Alabama" found no
+    // freestanding birth centers. Alabama has some of the most restrictive birth
+    // center regulations in the country, which has limited out-of-hospital birth
+    // options across the state. Verified 2026-05-27.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Alabama does not cover doula services under Medicaid as of May 2026. Alabama has not enacted legislation mandating Medicaid doula reimbursement. Mobile County families on Alabama Medicaid are served by Blue Cross Blue Shield of Alabama, UnitedHealthcare Community Plan, and Aetna Better Health of Alabama.",
+    insuranceNote: "Alabama\u2019s lack of Medicaid doula coverage means Mobile families on Medicaid pay out of pocket for doula services. For families with private insurance, Mobile\u2019s employer market (Austal USA, Airbus, ThyssenKrupp, University of South Alabama) sometimes includes maternal wellness benefits \u2014 check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
+    faqs: [
+      { q: "How much does a doula cost in Mobile?", a: "Expect to pay $700 to $1,500 for a doula in Mobile. The Gulf Coast cost of living keeps prices more affordable than bigger metros. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Does Medicaid cover doulas in Mobile?", a: "Not yet \u2014 Alabama Medicaid does not cover doula services as of May 2026. Some managed care plans may offer limited benefits on their own, so call your plan and ask. You can reach Alabama Medicaid at 1-800-362-1504. Advocacy groups are working on it." },
+      { q: "Are there doulas in Mobile?", a: "Mobile has a small but dedicated doula community, including a strong network of Black birth workers serving Gulf Coast families. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Mobile families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Mobile birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["birmingham-al"],
+  },
+  "cedar-rapids-ia": {
+    city: "Cedar Rapids",
+    state: "IA",
+    slug: "cedar-rapids-ia",
+    costLow: 700,
+    costHigh: 1600,
+    shelbiServesHere: false,
+    culture: "Cedar Rapids is Iowa\u2019s second-largest city, where the birth community blends Midwestern practicality with a growing interest in evidence-based, family-centered care. The city\u2019s two hospital systems \u2014 Mercy Medical Center and UnityPoint Health St. Luke\u2019s \u2014 anchor maternity services for the entire corridor, and families from surrounding rural counties travel here for delivery. The doula community is small but committed, and the city\u2019s Czech and Slovak heritage contributes to a culture that values family traditions around birth.",
+    heroLocalDetail: "Mercy Medical Center sits on 10th Street SE in central Cedar Rapids, about 5 minutes from the Czech Village neighborhood and downtown. UnityPoint Health St. Luke\u2019s Hospital is on A Avenue NE, also about 5 minutes from downtown. Both hospitals are close together, which simplifies route planning \u2014 but keep in mind that I-380 through the city can slow during rush, especially near the Collins Road and Blairs Ferry Road exits on the north side where new development has added traffic. The Cedar River Trail along the riverfront and the paths at Noelridge Park on the northeast side are flat, well-maintained options for third-trimester walking. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Mercy Medical Center", paragraph: "Mercy Medical Center, on 10th Street SE in Cedar Rapids, is part of the MercyOne health system and carries a Level III NICU (contact the hospital directly for current NICU level verification). MercyOne handles a high volume of births for the Cedar Rapids corridor and has maternal-fetal medicine specialists for complex pregnancies. If you\u2019re delivering at Mercy Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "UnityPoint Health \u2013 St. Luke\u2019s Hospital", paragraph: "UnityPoint Health St. Luke\u2019s Hospital, on A Avenue NE in Cedar Rapids, is part of the UnityPoint Health system with a Level III NICU (contact the hospital directly for current NICU level verification). St. Luke\u2019s Birth Center features private labor/delivery/recovery rooms, 24/7 anesthesia and obstetric coverage, and a NICU transport team for the region. If you\u2019re delivering at St. Luke\u2019s Hospital, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Cedar Rapids, IA. Google Maps search "birth center Cedar Rapids Iowa" found no
+    // freestanding birth centers. The nearest birth center option is the University of
+    // Iowa Birth Center in Iowa City (~25 miles south). Verified 2026-05-27.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Iowa does not cover doula services under Medicaid as of May 2026. Iowa has not enacted legislation mandating Medicaid doula reimbursement. Linn County families on Iowa Medicaid are served by AmeriHealth Caritas Iowa, Iowa Total Care (Centene), Molina Healthcare of Iowa, and Meridian (WellCare).",
+    insuranceNote: "Iowa\u2019s lack of Medicaid doula coverage means Cedar Rapids families on Medicaid pay out of pocket for doula services. For families with private insurance, Cedar Rapids\u2019 employer market (Cargill, Quaker Oats, Rockwell Collins, Transamerica) sometimes includes maternal wellness benefits \u2014 check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
+    faqs: [
+      { q: "How much does a doula cost in Cedar Rapids?", a: "Expect to pay $700 to $1,600 for a doula in Cedar Rapids \u2014 one of the more affordable metros in the country. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Does Medicaid cover doulas in Cedar Rapids?", a: "Not yet \u2014 Iowa Medicaid does not cover doula services as of May 2026. Some managed care plans may offer limited benefits on their own, so call your plan and ask. You can reach Iowa Medicaid at 1-800-338-8368. Advocacy groups are working on it." },
+      { q: "Are there doulas in Cedar Rapids?", a: "Cedar Rapids has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Cedar Rapids families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Cedar Rapids birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["des-moines-ia"],
+  },
+  "nampa-id": {
+    city: "Nampa",
+    state: "ID",
+    slug: "nampa-id",
+    costLow: 800,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Nampa is the Treasure Valley\u2019s fast-growing second city, where families drawn by Boise\u2019s tech boom and affordable housing are reshaping the birth community. Canyon County\u2019s Hispanic population \u2014 over 25% \u2014 means bilingual birth support matters here, and the local doula scene is scaling to match the growth. St. Luke\u2019s Nampa is the primary hospital for births in the western Treasure Valley, and families here benefit from the broader Boise-area birth center and midwifery options just 20 minutes east.",
+    heroLocalDetail: "St. Luke\u2019s Nampa is on St. Luke\u2019s Way in north Nampa, accessible from I-84 via the Northside Boulevard or Garrity Boulevard exits \u2014 the Garrity exit can back up during afternoon rush as commuters head to the Boise tech corridor. If you\u2019re coming from south Nampa or Kuna, Idaho Center Boulevard runs north\u2013south and gets you to the hospital faster than I-84 at peak times. Lake Lowell and the Deer Flat National Wildlife Refuge on the south side of town offer flat, quiet walking trails for third-trimester movement, and Lions Park in central Nampa has a paved loop popular with expecting moms. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "St. Luke\u2019s Nampa", paragraph: "St. Luke\u2019s Nampa, on St. Luke\u2019s Way in north Nampa, is part of the St. Luke\u2019s Health System and offers labor and delivery services for Canyon County families (contact the hospital directly for current NICU level verification). For complex pregnancies requiring a higher-level NICU, St. Luke\u2019s Boise Medical Center \u2014 with a Level III NICU \u2014 is about 20 minutes east. If you\u2019re delivering at St. Luke\u2019s Nampa, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Nampa, ID. No freestanding birth centers found in Nampa proper. Boise-area
+    // birth centers (Boise Birth Center in Garden City, Treasure Valley Midwives
+    // Birth Center) are approximately 20 minutes east and serve Nampa families.
+    // Verified 2026-05-27.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Idaho does not cover doula services under Medicaid as of May 2026. Idaho has not enacted legislation mandating Medicaid doula reimbursement. Canyon County families on Idaho Medicaid are served by Molina Healthcare of Idaho, Blue Cross of Idaho (Idaho Medicaid), and Aetna Better Health of Idaho.",
+    insuranceNote: "Idaho\u2019s lack of Medicaid doula coverage means Nampa families on Medicaid pay out of pocket for doula services. For families with private insurance, the Treasure Valley\u2019s employer market (St. Luke\u2019s Health System, Micron, HP, Boise Cascade, Idaho Power) sometimes includes maternal wellness benefits \u2014 check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
+    faqs: [
+      { q: "How much does a doula cost in Nampa?", a: "Expect to pay $800 to $1,800 for a doula in the Nampa/Boise metro. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Does Medicaid cover doulas in Nampa?", a: "Not yet \u2014 Idaho Medicaid does not cover doula services as of May 2026. Some managed care plans may offer limited benefits on their own, so call your plan and ask. You can reach Idaho Medicaid at 1-877-456-1233. Advocacy groups are working on it." },
+      { q: "Are there doulas in Nampa?", a: "Nampa and the broader Treasure Valley have a small but growing doula community. Boise-area birth centers (about 20 minutes east) also serve Nampa families. If local availability is limited, virtual support and the free birth plan app can help you prepare." },
+      { q: "Does True Joy Birthing work with Nampa families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Nampa birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["boise-id"],
+  },
+  "aurora-il": {
+    city: "Aurora",
+    state: "IL",
+    slug: "aurora-il",
+    costLow: 1000,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Aurora is Illinois\u2019 second-largest city and one of its most diverse \u2014 over 130 languages are spoken in local schools, and the birth community is reflecting that mix. The city sits at the western edge of the Chicago metro, and families here can access both suburban hospital care and the broader birth worker network in Chicago proper. Illinois\u2019 Medicaid doula coverage (effective March 2024) makes doula support more accessible for families on Medicaid than in most states.",
+    heroLocalDetail: "Rush Copley Medical Center sits on Ogden Avenue in southwest Aurora, about 10 minutes from downtown Aurora via Galena Boulevard or New York Street. AMITA Mercy Medical Center is on Highland Avenue in north Aurora. If you\u2019re commuting from the Fox Valley area or the I-88 corridor, the Route 59 and Farnsworth Avenue exits off I-88 are your fastest routes to both hospitals. The Fox River Trail runs through downtown Aurora along the river \u2014 flat, paved, and tree-shaded, it\u2019s the go-to for third-trimester walks. Phillips Park on the east side has a paved loop around the lake that\u2019s popular with expecting moms. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Rush Copley Medical Center", paragraph: "Rush Copley Medical Center, on Ogden Avenue in Aurora, is part of the Rush University Medical Center system and offers comprehensive labor and delivery services with a NICU (contact the hospital directly for current NICU level verification). Rush Copley handles a high volume of births for the Fox Valley area and has maternal-fetal medicine specialists available. If you\u2019re delivering at Rush Copley Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "AMITA Mercy Medical Center", paragraph: "AMITA Mercy Medical Center, on Highland Avenue in north Aurora, is part of the Ascension Illinois system and provides labor and delivery services with a NICU (contact the hospital directly for current NICU level verification). Mercy serves families from Aurora, Naperville, and the surrounding Fox Valley communities. If you\u2019re delivering at AMITA Mercy Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Aurora, IL. No freestanding birth centers found in Aurora proper. The nearest
+    // freestanding birth centers serving Aurora families are Blossom Birth Center
+    // in Naperville (~10 miles, blossombirthcenter.com, active website as of 2026-05-27)
+    // and A Birth Center in Downers Grove (~18 miles). Verified 2026-05-27.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 Illinois covers doula services under Medicaid as of March 2024. Managed care plans include IA/ACHI, Meridian, Molina, and Blue Cross Community. Contact your plan directly to confirm doula benefits.",
+    insuranceNote: "If you\u2019re on Illinois Medicaid, doula services are covered. For private insurance in the Aurora area, coverage varies by plan \u2014 many Chicago-area employers (State Farm, Caterpillar, Aurora University, Hollywood Casino) include maternal wellness benefits. Ask your insurer about doula reimbursement and request a superbill from your doula for out-of-network submission. HSA and FSA funds can typically be used for doula services.",
+    faqs: [
+      { q: "How much does a doula cost in Aurora?", a: "Expect to pay $1,000 to $2,500 for a doula in the Aurora/Fox Valley area \u2014 less than Chicago proper but still a major investment. If you\u2019re on Illinois Medicaid, your doula services may be covered at no cost. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Does Illinois Medicaid cover doula services in Aurora?", a: "Yes \u2014 Illinois covers doula services under Medicaid as of March 2024. Managed care plans include IA/ACHI, Meridian, Molina, and Blue Cross Community. Contact your plan directly to confirm doula benefits. If you\u2019re on Medicaid, you can receive doula services at no cost from a Medicaid-enrolled provider." },
+      { q: "Are there doulas in Aurora?", a: "Aurora and the Fox Valley have a growing doula community, with access to the larger Chicago-area birth worker network. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Aurora families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Aurora birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["chicago-il"],
+  },
+  "fort-wayne-in": {
+    city: "Fort Wayne",
+    state: "IN",
+    slug: "fort-wayne-in",
+    costLow: 800,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Fort Wayne is northeast Indiana\u2019s regional hub, where a practical, family-first culture meets a quietly growing birth community. Parkview Health and Lutheran Health Network anchor the city\u2019s maternity care, and the local doula scene is small but committed. Indiana\u2019s new Medicaid doula coverage (HB 1269, effective January 2025) is a game-changer for families who previously had no way to afford doula support \u2014 Fort Wayne doulas are beginning to enroll as Medicaid providers to meet that demand.",
+    heroLocalDetail: "Parkview Hospital Randallia sits on Parkview Plaza Drive in northwest Fort Wayne, accessible from I-69 via the Dupont Road exit \u2014 about 10 minutes from the Aboite and Southwest Wayne neighborhoods. Lutheran Hospital is on West Jefferson Boulevard on the city\u2019s west side, about 15 minutes from downtown via West Main Street or I-69. Fort Wayne\u2019s grid layout makes route planning straightforward, but winter lake-effect snow from December through March can make the hospital drive slower than you\u2019d expect \u2014 know your route before you need it. Promenade Park along the St. Marys River downtown and the paved trails at Franke Park are flat, popular third-trimester walking options. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Parkview Hospital Randallia", paragraph: "Parkview Hospital Randallia, on Parkview Plaza Drive in northwest Fort Wayne, is part of the Parkview Health system and carries a Level III NICU (contact the hospital directly for current NICU level verification). Parkview handles the highest volume of births in northeast Indiana and serves as the regional referral center for complex pregnancies. If you\u2019re delivering at Parkview Hospital Randallia, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Lutheran Hospital", paragraph: "Lutheran Hospital, on West Jefferson Boulevard in west Fort Wayne, is part of the Lutheran Health Network and offers comprehensive labor and delivery services with a NICU (contact the hospital directly for current NICU level verification). Lutheran serves families from the west side, Aboite, and the surrounding suburban communities. If you\u2019re delivering at Lutheran Hospital, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Fort Wayne, IN. Google Maps search "birth center Fort Wayne Indiana" found no
+    // freestanding birth centers. No birth centers currently operate in the Fort Wayne
+    // metro area. Verified 2026-05-27.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 Indiana covers doula services under Medicaid as of January 2025 (HB 1269). Managed care plans include MDwise, CareSource, Anthem Hoosier Healthwise, and United Healthcare. Contact your plan directly to confirm doula benefits.",
+    insuranceNote: "If you\u2019re on Indiana Medicaid, doula services are covered as of January 2025. For private insurance in the Fort Wayne area, coverage varies by plan \u2014 Fort Wayne\u2019s employer market (Parkview Health, Steel Dynamics, Frontier Communications, Do it Best Corp.) sometimes includes maternal wellness benefits. Ask your insurer about doula reimbursement, and request a superbill from your doula for out-of-network submission. HSA and FSA funds can typically be used for doula services.",
+    faqs: [
+      { q: "How much does a doula cost in Fort Wayne?", a: "Expect to pay $800 to $1,800 for a doula in Fort Wayne. If you\u2019re on Indiana Medicaid, your doula services may be covered at no cost under HB 1269 (effective January 2025). <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Does Indiana Medicaid cover doula services in Fort Wayne?", a: "Yes \u2014 Indiana covers doula services under Medicaid as of January 2025 (HB 1269). Managed care plans include MDwise, CareSource, Anthem Hoosier Healthwise, and United Healthcare. Contact your plan directly to confirm doula benefits. If you\u2019re on Medicaid, you can receive doula services at no cost from a state-certified provider." },
+      { q: "Are there doulas in Fort Wayne?", a: "Fort Wayne has a small but dedicated doula community that\u2019s growing as Medicaid coverage makes services more accessible. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Fort Wayne families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Fort Wayne birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["indianapolis-in"],
   },
 
 };
