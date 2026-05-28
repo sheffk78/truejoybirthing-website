@@ -5134,6 +5134,182 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["wichita-ks"],
   },
+  "beaverton-or": {
+    city: "Beaverton",
+    state: "OR",
+    slug: "beaverton-or",
+    costLow: 1000,
+    costHigh: 2800,
+    shelbiServesHere: false,
+    culture: "Beaverton sits at the intersection of Portland\u2019s progressive birth culture and Washington County\u2019s suburban practicality. The city\u2019s diversity \u2014 large Latino, Korean, and Indian communities \u2014 means families seeking culturally congruent care can find community-based doulas who understand their needs. Oregon\u2019s Medicaid doula coverage through the Traditional Health Worker program makes support more accessible than in most states.",
+    heroLocalDetail: "Providence St. Vincent Medical Center sits on SW Barnes Road in the west hills between Beaverton and Portland \u2014 about 10 minutes from central Beaverton via TV Highway or Beaverton-Hillsdale Highway, and the Route 26 approach can slow during afternoon rush. OHSU on Marquam Hill is about 15 minutes east. Beaverton\u2019s Tualatin Hills Park & Recreation District maintains miles of flat, paved trails \u2014 the Fanno Creek Trail and Tualatin Valley Trail are popular for third-trimester walking, and they\u2019ree well-lit and close to the hospital corridor.",
+    hospitalDetails: [
+      { name: "Providence St. Vincent Medical Center", paragraph: "Providence St. Vincent Medical Center, on SW Barnes Road between Beaverton and Portland, is one of the largest birthing hospitals in the metro area with a Level III NICU (contact the hospital directly for current level verification). Providence St. Vincent serves families from Beaverton, Tigard, and the west side with a strong midwifery program and lactation support. If you\u2019re delivering here, having your birth plan in hand makes the intake process smoother \u2014 they see a high volume and move fast. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "OHSU Hospital", paragraph: "OHSU Hospital on Marquam Hill in Portland, about 15 minutes from Beaverton, carries a Level IV NICU (verified on ohsu.edu) and is Oregon\u2019s highest-level neonatal referral center. If we\u2019re being real, most Beaverton families deliver at Providence St. Vincent and transfer to OHSU only for high-risk pregnancies or complex neonatal needs. Knowing both hospitals exist gives you backup if your pregnancy requires it." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Beaverton, OR. Portland-area birth centers (Andaluz Waterbirth Center, Portland Birth Center)
+    // serve Beaverton families but are located in Portland proper.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 Oregon Medicaid (OHP) covers doula services through the Traditional Health Worker program. Washington County families are served by CareOregon, Health Share of Oregon, and PacificSource Community Solutions. The reimbursement rate covers prenatal, birth, and postpartum visits. Contact Oregon Health Plan at 1-800-675-0414 or visit oregon.gov to confirm your plan\u2019s doula benefit and find enrolled doulas.",
+    insuranceNote: "Yes \u2014 Oregon\u2019s Medicaid doula coverage through the THW program is robust. For families with private insurance, Beaverton\u2019s employer market (Nike, Intel, Tektronix) sometimes includes maternal wellness benefits. Check your plan for doula coverage, and HSA/FSA funds can typically supplement out-of-pocket costs.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Beaverton?", a: "Yes \u2014 Oregon Health Plan (Medicaid) covers doula services through the Traditional Health Worker program. Washington County residents are served by CareOregon, Health Share of Oregon, and other CCOs. Contact your CCO and ask about doula benefits, or call Oregon Health Plan at 1-800-675-0414. Oregon is one of the best states for Medicaid doula coverage \u2014 push for your benefit if your CCO gives you trouble." },
+      { q: "How much does a doula cost in Beaverton?", a: "Expect to pay $1,000 to $2,800 for a doula in Beaverton. If you\u2019re on Oregon Health Plan, your CCO may cover doula services at no cost. For private pay, HSA and FSA funds can typically be used. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which Beaverton hospitals accommodate birth plans?", a: "Providence St. Vincent Medical Center (Level III NICU, contact the hospital directly for current level verification) is Beaverton\u2019s primary birthing hospital and welcomes doulas and birth plans. OHSU in Portland offers a verified Level IV NICU for high-risk pregnancies. Portland\u2019s hospital culture is generally supportive of birth preferences. Call the hospital or take a tour and bring your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Does True Joy Birthing work with Beaverton families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Beaverton birth setting, whether you\u2019re delivering at Providence St. Vincent, OHSU, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["portland-or", "eugene-or"],
+  },
+  "bowie-md": {
+    city: "Bowie",
+    state: "MD",
+    slug: "bowie-md",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Bowie is one of Prince George\u2019s County\u2019s largest cities and a key suburb in the DC metro\u2019s maternal care landscape. Maryland\u2019s Medicaid doula coverage (effective January 2024) is transforming access for families who previously had to pay out of pocket, and the county\u2019s diverse community \u2014 one of the wealthiest majority-Black counties in the nation \u2014 has built a strong network of community-based birth workers.",
+    heroLocalDetail: "The closest hospital for most Bowie families is Luminis Health Doctors Community Medical Center in Lanham, about 10 minutes north via Route 450. UM Capital Region Medical Center in Largo is about 12 minutes south. Route 50 (John Hanson Highway) connects Bowie to both hospitals and can back up during the afternoon rush \u2014 especially the interchange at Route 197. Allen Pond Park and the Bowie Walking Trail are flat, shaded, and popular for third-trimester strolls in the city\u2019s center.",
+    hospitalDetails: [
+      { name: "Luminis Health Doctors Community Medical Center", paragraph: "Luminis Health Doctors Community Medical Center in Lanham, about 10 minutes from Bowie via Route 450, is the closest hospital offering labor and delivery for PG County families. They provide obstetric services with a Special Care Nursery for intermediate-level neonatal care \u2014 contact the hospital directly for current NICU level verification. For families needing a higher-level NICU, transfer is available to Johns Hopkins or University of Maryland Medical Center in Baltimore. <a href=\"/birth-plan-template/\">Come prepared with our free birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "University of Maryland Capital Region Medical Center", paragraph: "UM Capital Region Medical Center in Largo, about 12 minutes south of Bowie, opened in 2021 and serves as PG County\u2019s primary academic medical center. They offer labor and delivery with maternal-fetal medicine consultations and serve a high volume of families across the county. If we\u2019re being real, PG County families have historically had to travel to DC or Baltimore for the highest-level NICU care \u2014 knowing that going in helps you plan." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Bowie, MD (Prince George's County). Google Maps search "birth center Bowie MD" and
+    // "birth center Prince George's County" found no freestanding birth centers currently
+    // operating in the county. The nearest verified center is Special Beginnings Birth &
+    // Women's Center in Arnold, MD (~25 min east, in Anne Arundel County).
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 Maryland Medicaid covers doula services as of January 2024, with reimbursement of $450 for labor and delivery support, $75 per prenatal or postpartum visit (up to 4 visits), totaling up to $900 per pregnancy. Prince George\u2019s County families on Maryland Medicaid are served by managed care plans including Kaiser Permanente, UnitedHealthcare, MedStar, Jai Medical, Priority Partners, and Maryland Physicians Care. Your doula must be enrolled as a Maryland Medicaid provider.",
+    insuranceNote: "Yes \u2014 Maryland\u2019s state insurance regulations support broader maternity coverage, but doula-specific reimbursement through private insurance varies. CareFirst BlueCross BlueShield of Maryland and UnitedHealthcare may offer partial reimbursement with a superbill using CPT code S9443. Always ask your doula for a superbill and submit it promptly. HSA and FSA funds can typically be used for doula services.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Bowie?", a: "Yes \u2014 Maryland Medicaid covers doula services as of January 2024, with up to $450 for labor and delivery and $75 per visit for up to 4 prenatal or postpartum visits, totaling up to $900 per pregnancy. Prince George\u2019s County families are served by plans including Kaiser Permanente, UnitedHealthcare, MedStar, Jai Medical, Priority Partners, and Maryland Physicians Care. You\u2019ll need a Medicaid-enrolled doula." },
+      { q: "How much does a doula cost in Bowie?", a: "Expect to pay $900 to $2,500 for a birth doula in Bowie. DC metro pricing tends higher than the statewide average. If you have Maryland Medicaid, your doula services may be covered up to $900 through the state\u2019s program. Some doulas offer sliding-scale fees or payment plans. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which Bowie hospitals accommodate birth plans?", a: "Luminis Health Doctors Community Medical Center in Lanham and UM Capital Region Medical Center in Largo are the two closest hospitals offering labor and delivery for Bowie families. Both welcome birth plans and doulas. For the highest-level NICU, families travel to Baltimore (Johns Hopkins or UMMC). A birth plan helps at every hospital \u2014 <a href=\"/birth-plan-template/\">download the free template</a> and walk in knowing what you want." },
+      { q: "Does True Joy Birthing work with Bowie families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Bowie birth setting, whether you\u2019re delivering in PG County or Baltimore. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["baltimore-md", "columbia-md"],
+  },
+  "chesapeake-va": {
+    city: "Chesapeake",
+    state: "VA",
+    slug: "chesapeake-va",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Chesapeake is the fastest-growing city in Hampton Roads and one of Virginia\u2019s largest by land area \u2014 a suburban-and-rural mix where families live in planned communities like Great Bridge and Deep Creek and commute across the region for work and medical care. The birth community here is intertwined with Norfolk and Virginia Beach, and Virginia\u2019s lack of Medicaid doula coverage is a real gap that local birth workers are fighting to change.",
+    heroLocalDetail: "Chesapeake Regional Medical Center sits on Battlefield Boulevard in the Great Bridge area of southern Chesapeake, about 15 minutes from most neighborhoods via Route 168 or I-64. Sentara Norfolk General is about 20 minutes north via I-464 and I-264. The Great Dismal Swamp Canal Trail and Chesapeake\u2019s extensive greenway system give families flat, shaded walking during late pregnancy \u2014 and summer humidity here is no joke, so morning walks are your friend.",
+    hospitalDetails: [
+      { name: "Chesapeake Regional Medical Center", paragraph: "Chesapeake Regional Medical Center on Battlefield Boulevard is the city\u2019s primary hospital and one of Hampton Roads\u2019 largest birthing hospitals, delivering over 3,000 babies annually. They offer a dedicated Birth Place program with private suites, midwifery services, and a Level II NICU (contact the hospital directly for current NICU level verification). Chesapeake Regional has built a reputation for being supportive of birth plans and doula attendance. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences ready." },
+      { name: "Sentara Norfolk General Hospital", paragraph: "Sentara Norfolk General Hospital, about 20 minutes north in Norfolk, is the region\u2019s highest-level referral center with a Level III NICU (verified on sentara.com). It\u2019s where Chesapeake families go for high-risk pregnancies or complex neonatal needs. If we\u2019re being real, most routine births happen at Chesapeake Regional \u2014 Sentara is your backup when things get complicated. Knowing both hospitals exist gives you a plan A and a plan B." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Chesapeake, VA (Chesapeake city County). Google Maps search "birth center Chesapeake VA"
+    // and "birth center Hampton Roads" found no freestanding birth centers currently
+    // operating in Chesapeake. Families seeking out-of-hospital birth work with
+    // home-birth midwives practicing in the greater Hampton Roads area.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Virginia Medicaid does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Chesapeake families on Medicaid must pay out of pocket, though some doulas offer sliding-scale fees. Ask your doula about payment plans or reduced-rate options.",
+    insuranceNote: "Most private insurers in Virginia (Anthem Blue Cross, UnitedHealthcare, Aetna, Cigna) do not cover doula services as a standard benefit. Check your plan for out-of-network reimbursement or HSA/FSA eligibility. Contact your provider directly to confirm what\u2019s covered.",
+    faqs: [
+      { q: "Does Virginia Medicaid cover doula services?", a: "No. As of 2026, Virginia Medicaid does not cover doula services. If you\u2019re on Medicaid in the Chesapeake area, you\u2019ll need to pay for a doula out of pocket \u2014 but many Hampton Roads doulas offer sliding-scale fees or payment plans. You deserve support regardless of insurance status. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> while you figure out your options." },
+      { q: "How much does a doula cost in Chesapeake?", a: "Expect to pay $800 to $2,000 for a birth doula in Chesapeake. Hampton Roads pricing tends slightly lower than the DC metro. Some doulas offer sliding-scale pricing or payment plans. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to start thinking about what matters most to you." },
+      { q: "Which Chesapeake hospitals accommodate birth plans?", a: "Chesapeake Regional Medical Center on Battlefield Boulevard is the city\u2019s primary birthing hospital with a dedicated Birth Place program and midwifery services. They welcome doulas and birth plans. Sentara Norfolk General, 20 minutes north, offers the region\u2019s highest-level NICU for high-risk pregnancies. Always confirm current visitor policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Does True Joy Birthing work with Chesapeake families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Chesapeake birth setting, whether you\u2019re delivering at Chesapeake Regional, Sentara Norfolk General, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["richmond-va", "norfolk-va", "virginia-beach-va"],
+  },
+  "lakewood-co": {
+    city: "Lakewood",
+    state: "CO",
+    slug: "lakewood-co",
+    costLow: 1000,
+    costHigh: 2800,
+    shelbiServesHere: false,
+    culture: "Lakewood sits just west of Denver on the metro\u2019s western edge, and families here benefit from both Denver\u2019s robust birth community and a quieter suburban pace. Colorado\u2019s Medicaid doula coverage (since January 2024 via HB 23-1027) has been a game-changer for accessibility, and the local birth advocate network stretches from Denver into Jeffco without missing a beat.",
+    heroLocalDetail: "St. Anthony Hospital sits on West 2nd Avenue in Lakewood, just south of the US-6 freeway and about 5 minutes from the Wadsworth Boulevard interchange. From Green Mountain or the Bear Creek area, expect a 10\u201315 minute drive depending on traffic on C-470. Lakewood\u2019s paved trails along Bear Creek Greenbelt and the foothills-side William F. Hayden Park on Green Mountain are popular for third-trimester walking \u2014 flat, well-lit, and close to the hospital corridor.",
+    hospitalDetails: [
+      { name: "St. Anthony Hospital", paragraph: "St. Anthony Hospital, on West 2nd Avenue in Lakewood, is the city\u2019s primary birthing hospital and part of the Centura Health system (now CommonSpirit Health). They offer labor and delivery with a Level III NICU (contact the hospital directly for current NICU level verification) and serve families from across the western metro. The Birth Center at St. Anthony\u2019s is known for private suites and a supportive approach to birth plans and doula attendance. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences ready." },
+      { name: "UCHealth University of Colorado Hospital", paragraph: "UCHealth University of Colorado Hospital, on the Anschutz Medical Campus in Aurora about 20 minutes east, is the region\u2019s highest-level NICU provider with a Level III NICU (verified on uchealth.org). Most Lakewood families deliver at St. Anthony\u2019s for routine births and transfer to UCHealth only for high-risk pregnancies or complex neonatal needs. Knowing both hospitals exist gives you backup if things don\u2019t go as planned." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Lakewood, CO (Jefferson County). The nearest verified freestanding birth center is
+    // Mountain Midwifery Birth Center in Englewood (~10 min south via C-470).
+    // Mountain Midwifery is CABC-accredited and serves Denver metro families.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 Colorado Medicaid (Health First Colorado) covers doula services as of January 2024 under HB 23-1027. The reimbursement rate covers $750 per birth for a full-spectrum doula package (prenatal, labor, and postpartum visits). Jefferson County families are served by Colorado Access, Health First Colorado\u2019s Regional Accountable Entity. Contact Health First Colorado at 1-800-221-3943 or visit healthfirstcolorado.com to confirm your plan\u2019s doula coverage.",
+    insuranceNote: "Yes \u2014 Colorado\u2019s Medicaid doula coverage through HB 23-1027 is one of the strongest in the nation. For families with private insurance, Lakewood\u2019s employer market (Denver Federal Center, Terumo BCT, FirstBank) sometimes includes maternal wellness benefits. Check your plan for doula coverage, and HSA/FSA funds can supplement out-of-pocket costs.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Lakewood?", a: "Yes! Great news \u2014 Colorado Medicaid (Health First Colorado) covers doula services as of January 2024 under HB 23-1027, with $750 per birth for a full-spectrum package. Jefferson County families are served by Colorado Access and other RAEs. Contact Health First Colorado at 1-800-221-3943 to find enrolled doulas near you." },
+      { q: "How much does a doula cost in Lakewood?", a: "Expect to pay $1,000 to $2,800 for a doula in the Lakewood area. Denver metro pricing tends on par with or slightly below central Denver. If you\u2019re on Health First Colorado, your doula services may be covered at no cost. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to start thinking about what matters most to you." },
+      { q: "Which Lakewood hospitals accommodate birth plans?", a: "St. Anthony Hospital in Lakewood is the city\u2019s primary birthing hospital with a NICU and a supportive approach to birth plans and doula attendance. UCHealth University of Colorado Hospital in Aurora offers the region\u2019s highest-level NICU for high-risk pregnancies. Always confirm current visitor and support-person policies during your tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Does True Joy Birthing work with Lakewood families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Lakewood birth setting, whether you\u2019re delivering at St. Anthony\u2019s, UCHealth, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["denver-co", "colorado-springs-co"],
+  },
+  "scottsdale-az": {
+    city: "Scottsdale",
+    state: "AZ",
+    slug: "scottsdale-az",
+    costLow: 1200,
+    costHigh: 3500,
+    shelbiServesHere: false,
+    culture: "Scottsdale is the Phoenix metro\u2019s affluent northeast corridor, where resort-town aesthetics meet a surprisingly personal birth community. The city\u2019s hospitals draw OBs trained at top programs nationwide, and the cost of living pushes doula pricing toward the higher end of the Arizona range. Arizona does not yet cover doula services through AHCCCS (Medicaid), but advocacy efforts are gaining momentum, and community-based doula programs are filling the gap.",
+    heroLocalDetail: "HonorHealth Scottsdale Shea Medical Center sits on North Shea Boulevard just east of the 101 Loop, about 10 minutes from most central Scottsdale neighborhoods. HonorHealth Scottsdale Osborn Medical Center is on North Osborn Road in southern Scottsdale, about 5 minutes from Old Town. The 101 Loop and Pima Freeway connect both hospitals across the city \u2014 and rush-hour backups on the 101 between Shea and Frank Lloyd Wright are real, so know your route before labor starts. Indian Bend Wash Greenbelt and Camelback Mountain\u2019s trails are popular for third-trimester walking when Phoenix\u2019s heat lets up.",
+    hospitalDetails: [
+      { name: "HonorHealth Scottsdale Shea Medical Center", paragraph: "HonorHealth Scottsdale Shea Medical Center, on North Shea Boulevard in northeast Scottsdale, is the city\u2019s primary birthing hospital with a Level III NICU (contact the hospital directly for current NICU level verification) and a family birth center known for private suites and strong lactation support. HonorHealth\u2019s obstetric program is one of the busiest in the Valley, and doulas are generally welcome as part of your support team. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get your preferences ready." },
+      { name: "HonorHealth Scottsdale Osborn Medical Center", paragraph: "HonorHealth Scottsdale Osborn Medical Center, on North Osborn Road in southern Scottsdale, offers labor and delivery with a NICU (contact the hospital directly for current NICU level and maternity service details). Osborn serves families in central and south Scottsdale and has a smaller, more community-oriented maternity program than Shea. If we\u2019re being real, many Scottsdale families choose between these two HonorHealth campuses based on their OB\u2019s admitting privileges rather than hospital features alone." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Scottsdale, AZ (Maricopa County). The Phoenix metro has one freestanding birth center:
+    // Natural Birth Center & Women's Wellness in Mesa (already documented in the Phoenix
+    // city page). No verified freestanding birth centers were found in Scottsdale proper.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Arizona AHCCCS (Medicaid) does not cover doula services as of 2026. While advocacy efforts have pushed for doula reimbursement, AHCCCS has not yet implemented a doula benefit. Scottsdale families on Medicaid must pay out of pocket for doula support or seek volunteer/sliding-scale doulas. Ask your doula about payment plans or reduced-rate options.",
+    insuranceNote: "Most private insurers in Arizona do not cover doula services as a standard benefit. Some plans offer partial reimbursement or flex-spending eligibility. Arizona does mandate coverage for licensed midwives and birth center births under certain plans, but coverage varies widely \u2014 verify with your insurer directly. HSA and FSA funds can help cover out-of-pocket costs.",
+    faqs: [
+      { q: "Does Arizona Medicaid cover doula services?", a: "Not yet \u2014 AHCCCS (Arizona Medicaid) does not cover doula services as of 2026. But that doesn\u2019t mean you\u2019re alone. Advocacy groups are working on changing this, and some doulas offer sliding-scale spots. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> \u2014 no matter who\u2019s in the room with you, knowing what you want is your superpower." },
+      { q: "How much does a doula cost in Scottsdale?", a: "Expect to pay $1,200 to $3,500 for a doula in Scottsdale. The affluent metro pushes pricing higher than the Arizona average. Some doulas offer sliding-scale options \u2014 always ask. HSA and FSA funds can help cover the cost. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to start thinking about what matters most to you." },
+      { q: "Which Scottsdale hospitals accommodate birth plans?", a: "HonorHealth Scottsdale Shea Medical Center (Level III NICU, contact the hospital directly for current level verification) and HonorHealth Scottsdale Osborn Medical Center (NICU level, contact the hospital directly for details) are the two main birthing hospitals in Scottsdale. Both welcome doulas and birth plans. Banner University Medical Center in Phoenix offers a verified Level IV NICU for the highest-risk pregnancies. Always confirm current visitor and support-person policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Does True Joy Birthing work with Scottsdale families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Scottsdale birth setting, whether you\u2019re delivering at HonorHealth Shea, Osborn, or home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["phoenix-az", "tucson-az"],
+  },
+  "warwick-ri": {
+    city: "Warwick",
+    state: "RI",
+    slug: "warwick-ri",
+    costLow: 800,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Warwick is Rhode Island\u2019s second-largest city and the commercial hub between Providence and the coastal communities of Narragansett Bay. For birth care, Warwick families mostly deliver at Kent Hospital or drive 10 minutes north to Women & Infants Hospital in Providence \u2014 the state\u2019s largest birthing hospital. Rhode Island\u2019s early adoption of Medicaid doula coverage (July 2023) means more families can actually afford the support they want, and Warwick\u2019s birth community benefits from being so close to the Providence-based network of doulas and midwives.",
+    heroLocalDetail: "Kent Hospital sits on Toll Gate Road in central Warwick, right off I-95 at Exit 13 \u2014 about 5 minutes from most Warwick neighborhoods via Route 5 or I-95. Women & Infants Hospital is about 10 minutes north on I-95 in Providence. Warwick\u2019s location at the junction of I-95 and Route 37 makes it one of Rhode Island\u2019s best-connected cities for hospital access. Goddard Memorial State Park\u2019s waterfront trails and the Warwick Bike Path are flat, well-maintained, and popular for third-trimester walking.",
+    hospitalDetails: [
+      { name: "Kent Hospital", paragraph: "Kent Hospital, on Toll Gate Road in central Warwick, is a Care New England hospital offering obstetric services with a Special Care Nursery for intermediate-level neonatal care \u2014 contact the hospital directly for current NICU level verification. Kent Hospital serves families across Kent County and western Rhode Island, and for routine births it\u2019s the closest and most convenient option for Warwick families. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Women & Infants Hospital of Rhode Island", paragraph: "Women & Infants Hospital, about 10 minutes north in Providence on Dudley Street, operates a Level III NICU (stated directly on wihri.org) and is the state\u2019s largest birthing hospital. For families needing a higher level of neonatal care, Women & Infants is the referral center \u2014 and for high-risk pregnancies, their maternal-fetal medicine program and the adjacent Hasbro Children\u2019s Level IV NICU provide the highest level of care in the state. If we\u2019re real, most Warwick families deliver at Kent for routine births and transfer to Women & Infants only when needed." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Warwick, RI (Kent County). There are no freestanding birth centers operating in
+    // Warwick or Kent County. The Providence entry documents that there are no freestanding
+    // birth centers in Providence either. Rhode Island families seeking out-of-hospital
+    // birth work with home-birth midwives.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 Rhode Island Medicaid covers doula services. The state reimburses approximately $1,500 for a full doula package covering up to 8 visits. Your doula must be enrolled as a RI Medicaid provider. Rhode Island was one of the first New England states to implement Medicaid doula coverage (effective July 2023). Contact your RI Medicaid managed care plan to confirm doula benefit enrollment.",
+    insuranceNote: "Rhode Island private insurers are increasingly offering doula coverage \u2014 Blue Cross Blue Shield of Rhode Island and UnitedHealthcare have pilot programs. Ask your insurer directly about \u2018doula services\u2019 coverage. If your doula accepts RI Medicaid, you may have no out-of-pocket cost. HSA and FSA funds can typically supplement any remaining costs.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Warwick?", a: "Yes! Rhode Island Medicaid has covered doula services since July 2023 \u2014 the full package is reimbursed at approximately $1,500. Your doula must be enrolled as a RI Medicaid provider. Contact your health plan or care coordinator to find enrolled doulas in the Warwick area. This is one of the best Medicaid doula programs in New England." },
+      { q: "How much does a doula cost in Warwick?", a: "Expect to pay $800 to $1,800 for a birth doula in Warwick. If you have RI Medicaid, your doula services may be fully covered at no cost to you \u2014 Rhode Island\u2019s coverage is generous compared to most states. Some doulas offer sliding-scale options for families who don\u2019t qualify for Medicaid. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to start thinking about what matters most to you." },
+      { q: "Which Warwick hospitals accommodate birth plans?", a: "Kent Hospital in Warwick and Women & Infants Hospital in Providence both accommodate birth plans and welcome doulas. Kent is closest for routine births with its Special Care Nursery, and Women & Infants offers a Level III NICU for higher-risk needs. Both are part of the Care New England system and are accustomed to working with birth preferences. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "Does True Joy Birthing work with Warwick families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Warwick birth setting, whether you\u2019re delivering at Kent Hospital, Women & Infants, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["providence-ri", "boston-ma"],
+  },
 
 };
 
