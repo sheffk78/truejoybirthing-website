@@ -1,0 +1,275 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+
+const breadcrumbList = [
+  {"name": "Home", "url": "https://truejoybirthing.com/"},
+  {"name": "Medicaid Doula Coverage", "url": "https://truejoybirthing.com/medicaid-doula-coverage/"}
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://truejoybirthing.com/medicaid-doula-coverage/#article",
+      "headline": "Does Medicaid Cover Doulas in Your State?",
+      "description": "Does Medicaid cover doulas in your state? Our 2026 state-by-state guide explains which states cover doula services, how to check your plan, and what to do if yours doesn't.",
+      "author": {
+        "@type": "Person",
+        "name": "Shelbi Kohler",
+        "url": "https://truejoybirthing.com/about/"
+      },
+      "publisher": {
+        "@id": "https://truejoybirthing.com/#organization"
+      },
+      "datePublished": "2025-01-15",
+      "dateModified": "2026-05-27"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://truejoybirthing.com/medicaid-doula-coverage/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Does Medicaid cover doulas in every state?", "acceptedAnswer": { "@type": "Answer", "text": "No. Medicaid does not cover doula services in every state. As of 2026, about 18 states plus Washington, D.C. have approved Medicaid coverage for doula care, and the list keeps growing. Coverage varies significantly by state, including which services are covered, how much is reimbursed, and whether you need to use an enrolled provider." } },
+        { "@type": "Question", "name": "Which states cover doula services under Medicaid in 2026?", "acceptedAnswer": { "@type": "Answer", "text": "As of 2026, states with Medicaid doula coverage include Oregon, Washington, New Mexico, Utah, North Carolina, Colorado, California, New York, Massachusetts, Michigan, Illinois, Connecticut, Rhode Island, Pennsylvania, Arizona, Minnesota, Maryland, New Jersey, and Virginia. Each state's program works differently, so check your local Medicaid office for details." } },
+        { "@type": "Question", "name": "How do I find out if my Medicaid plan covers doulas?", "acceptedAnswer": { "@type": "Answer", "text": "Call the number on the back of your Medicaid card and ask specifically about doula benefits. If you have a managed care plan, call your plan directly. You can also check your state's Medicaid website, ask your OB or midwife, or contact a local doula collective for guidance." } },
+        { "@type": "Question", "name": "Can I use my HSA or FSA to pay for a doula?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, in most cases. HSA and FSA funds can typically be used for doula services if you get a letter of medical necessity from your provider. Ask your doula for an itemized receipt and include the letter when you submit for reimbursement." } },
+        { "@type": "Question", "name": "What if my state doesn't cover doulas but I can't afford one?", "acceptedAnswer": { "@type": "Answer", "text": "Look into sliding-scale doulas, doula training programs that offer reduced rates, volunteer doula programs through hospitals or nonprofits, and virtual doula services that cost less. Many doulas are willing to work with families on payment plans." } },
+        { "@type": "Question", "name": "Does True Joy Birthing work with Medicaid families?", "acceptedAnswer": { "@type": "Answer", "text": "True Joy Birthing's free birth plan tools are available to everyone, regardless of insurance. For in-person doula support, we encourage families in covered states to contact their Medicaid plan to find enrolled providers. In areas without Medicaid coverage, our resources and local guides can help you find affordable doula support." } }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Does Medicaid Cover Doulas? State-by-State Guide | TJB"
+  description="Does Medicaid cover doulas in your state? Our 2026 state-by-state guide explains which states cover doula services, how to check your plan, and what to do if yours doesn't."
+  canonical="https://truejoybirthing.com/medicaid-doula-coverage/"
+  ogImage="/images/og-medicaid-doula-coverage.webp"
+  breadcrumbList={breadcrumbList}
+  schema={schema}
+>
+
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="eyebrow mb-4">Medicaid Doula Coverage Guide</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h1 class="text-[2.5rem] md:text-[3.25rem] font-bold mb-6 leading-[1.12]">Does Medicaid Cover Doulas in Your State?</h1>
+      <p class="text-lg md:text-xl text-tjb-gray leading-relaxed max-w-2xl">
+        This is one of the most searched questions about doula care, and for good reason. <a href="/doula-cost/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Doula costs</a> can stretch a family budget, and Medicaid families often need support the most. The answer depends entirely on where you live. Here's what we know in 2026.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 prose">
+
+      <h2>The Short Answer: It Depends on Your State</h2>
+      <p>Medicaid doula coverage is not federal policy. Each state decides whether to include doula services in its Medicaid benefits. That means your neighbor across the state line might have full coverage while you have none.</p>
+      <p>The good news: the list of covered states is growing fast. Since 2022, more than a dozen states have added or expanded doula coverage through legislation, Medicaid waivers, or state plan amendments. Advocacy groups are pushing hard in the remaining states, and momentum is building.</p>
+      <p>But right now, in 2026, the landscape is uneven. Some states cover full doula packages including prenatal visits, labor support, and postpartum care. Others cover only certain services. A few are still in the implementation phase, meaning the law passed but the coverage isn't active yet.</p>
+
+      <h2>States Where Medicaid Covers Doulas (2026)</h2>
+      <p>As of May 2026, these states have approved Medicaid coverage for doula services. Each state's program works differently, so we've included the key details where we have them.</p>
+
+      <h3>Oregon</h3>
+      <p>Oregon was one of the first states to act. <strong>House Bill 3211</strong>, passed in 2021 and effective starting 2022, requires Medicaid coverage for doula services through Coordinated Care Organizations (CCOs). Doulas enroll as traditional health workers with the Oregon Health Authority. Coverage includes prenatal visits, labor and delivery support, and postpartum visits. If you're on Oregon Health Plan, ask your CCO for a list of enrolled doulas. <a href="/birth-support/portland-or/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Find doula support in Portland →</a></p>
+
+      <h3>Washington</h3>
+      <p>Washington covers doula services through Apple Health (the state's Medicaid program). Doulas enroll as Apple Health providers and can bill for prenatal, labor, and postpartum support. The state also covers doula services for postpartum mood and anxiety disorders. Washington has been a model for other states building enrollment systems for doulas.</p>
+
+      <h3>New Mexico</h3>
+      <p><strong>Senate Bill 195</strong>, signed in 2024, requires New Mexico's Medicaid program to cover doula services. The law recognizes doulas as essential perinatal care providers. Coverage includes prenatal visits, continuous labor support, and postpartum care. New Mexico also allows community health workers to serve as doulas under Medicaid. <a href="/birth-support/albuquerque-nm/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Find doula support in Albuquerque →</a></p>
+
+      <h3>Utah</h3>
+      <p><strong>House Bill 222</strong> authorized Medicaid doula coverage in Utah, with services becoming available starting October 2024. Doulas must enroll as Medicaid providers. Coverage includes prenatal consultations, labor and delivery support, and postpartum visits. Utah's program is still relatively new, so provider enrollment is growing. <a href="/birth-support/salt-lake-city-ut/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Find doula support in Salt Lake City →</a></p>
+
+      <h3>North Carolina</h3>
+      <p>The North Carolina Department of Health and Human Services (NCDHHS) rolled out Medicaid doula coverage starting October 2024. Doulas can enroll as Medicaid providers, and coverage includes prenatal visits, labor support, and postpartum care. North Carolina's program was part of a broader Medicaid expansion effort that also added postpartum coverage extensions. <a href="/birth-support/raleigh-nc/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Find doula support in Raleigh →</a></p>
+
+      <h3>Colorado</h3>
+      <p><strong>House Bill 23-1027</strong> directed Colorado's Medicaid program to cover doula services starting January 2024. Colorado covers up to four prenatal visits, labor and delivery support, and up to four postpartum visits. Doulas enroll through Health First Colorado (the state Medicaid program) as certified doula providers.</p>
+
+      <h3>California</h3>
+      <p>California covers doula services under Medi-Cal, the state's Medicaid program. After legislation passed in 2021, full implementation rolled out through 2023. Medi-Cal covers prenatal visits, continuous labor support, and postpartum visits. Doulas must complete a state-approved certification process and enroll as Medi-Cal providers. California is one of the largest states to offer this benefit.</p>
+
+      <h3>New York</h3>
+      <p>New York added doula coverage to its Medicaid program following advocacy from maternal health organizations. Doulas can enroll as Medicaid providers and bill for prenatal, labor, and postpartum support. New York City also has several community-based doula programs that partner with Medicaid managed care plans.</p>
+
+      <h3>Massachusetts</h3>
+      <p>Massachusetts covers doula services under MassHealth. The state recognizes the role doulas play in reducing maternal health disparities, particularly for Black and Brown families. Coverage includes prenatal visits, labor support, and postpartum care. Doulas enroll through the state's provider enrollment system.</p>
+
+      <h3>Michigan</h3>
+      <p>Michigan expanded its Medicaid program to include doula services as part of a broader maternal health initiative. Coverage includes prenatal consultations, labor and delivery support, and postpartum visits. Doulas must enroll as Medicaid providers and meet state requirements.</p>
+
+      <h3>Illinois</h3>
+      <p>Illinois covers doula services under Medicaid following advocacy and legislation aimed at reducing maternal mortality, especially among Black women. Doulas enroll as Illinois Medicaid providers and can bill for prenatal, labor, and postpartum support. Illinois has also invested in community-based doula programs.</p>
+
+      <h3>Connecticut, Rhode Island, Pennsylvania, Arizona, Minnesota, Maryland, New Jersey, Virginia</h3>
+      <p>These states have all approved Medicaid coverage for doula services through various legislative and administrative pathways. Details vary by state, including which services are covered, reimbursement rates, and provider enrollment requirements. Contact your state's Medicaid office for the most current information about how coverage works where you live.</p>
+
+      <div class="my-8 not-prose bg-tjb-lavender-50 rounded-xl p-6">
+        <p class="text-sm text-tjb-charcoal font-semibold mb-2">Important: State programs change frequently.</p>
+        <p class="text-sm text-tjb-gray">This list reflects what we know as of May 2026. States may add coverage, change reimbursement rates, or update enrollment requirements at any time. Always verify directly with your state's Medicaid office or your managed care plan.</p>
+      </div>
+
+      <h2>States That Don't Cover Doulas Under Medicaid (Yet)</h2>
+      <p>As of May 2026, the following states do not yet have Medicaid doula coverage:</p>
+      <ul>
+        <li><strong>Texas</strong> Senate Bill 750 was filed but addresses property issues, not doula coverage. Advocacy groups in Texas continue to push for Medicaid doula legislation, but coverage has not been enacted.</li>
+        <li><strong>Georgia</strong></li>
+        <li><strong>South Carolina</strong></li>
+        <li><strong>Oklahoma</strong></li>
+        <li><strong>Ohio</strong></li>
+        <li><strong>Indiana</strong></li>
+        <li><strong>Florida</strong> Some county-level pilot programs exist, but statewide Medicaid coverage is not yet in place.</li>
+        <li><strong>Tennessee</strong></li>
+        <li><strong>Nevada</strong></li>
+        <li><strong>Wisconsin</strong></li>
+        <li><strong>Missouri</strong></li>
+        <li><strong>Alabama</strong></li>
+        <li><strong>Kentucky</strong></li>
+        <li><strong>Idaho</strong></li>
+        <li><strong>Iowa</strong></li>
+        <li><strong>Nebraska</strong></li>
+        <li><strong>Mississippi</strong></li>
+      </ul>
+      <p>Even in states without Medicaid coverage, advocacy efforts are underway. Organizations like <a href="/what-is-a-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">DONA International</a>, the National Health Law Program, and local reproductive justice groups are pushing for change. If your state isn't listed above as covered, it's still worth checking, because policies can shift between when this article is updated and when you read it.</p>
+
+      <h2>How to Check If Your State Covers Doulas</h2>
+      <p>Don't rely on outdated blog posts (including this one). Policies change. Here's how to get a current, reliable answer in about 15 minutes:</p>
+
+      <div class="my-8 not-prose space-y-4">
+        <div class="flex gap-4 items-start">
+          <span class="text-2xl text-tjb-rose-500 font-bold shrink-0">1</span>
+          <div>
+            <p class="font-semibold text-tjb-charcoal">Call your Medicaid managed care plan.</p>
+            <p class="text-sm text-tjb-gray">The number is on the back of your insurance card. Ask: "Do you cover doula services under my plan?" If they say yes, ask for a list of enrolled doulas in your area.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <span class="text-2xl text-tjb-rose-500 font-bold shrink-0">2</span>
+          <div>
+            <p class="font-semibold text-tjb-charcoal">Check your state Medicaid website.</p>
+            <p class="text-sm text-tjb-gray">Search "[your state] Medicaid doula coverage" or check the provider enrollment section. Most states that cover doulas have a dedicated page explaining the benefit.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <span class="text-2xl text-tjb-rose-500 font-bold shrink-0">3</span>
+          <div>
+            <p class="font-semibold text-tjb-charcoal">Ask your OB or midwife.</p>
+            <p class="text-sm text-tjb-gray">Providers who work with Medicaid patients often know whether doula benefits are available. They may also know which doulas in your area are enrolled Medicaid providers.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start">
+          <span class="text-2xl text-tjb-rose-500 font-bold shrink-0">4</span>
+          <div>
+            <p class="font-semibold text-tjb-charcoal">Contact local doula collectives.</p>
+            <p class="text-sm text-tjb-gray">Community doula organizations stay current on Medicaid enrollment requirements and can help you find a provider who accepts your plan. They often know about programs that aren't widely advertised.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>What If Your State Doesn't Cover Doulas?</h2>
+      <p>Don't give up. Several options can make <a href="/doula-cost/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">doula support</a> more affordable even without Medicaid coverage:</p>
+
+      <h3>HSA or FSA Funds</h3>
+      <p>If you have a Health Savings Account or Flexible Spending Account through your employer or private insurance, you can usually use those funds for doula services. You'll need a letter of medical necessity from your OB or midwife, and you should ask your doula for an itemized receipt. Submit both to your HSA/FSA administrator for reimbursement.</p>
+
+      <h3>Sliding-Scale Doulas</h3>
+      <p>Many doulas offer reduced rates based on income. This isn't a discount menu. It's a genuine commitment to making their services accessible. When you reach out, be honest about what you can afford. You might be surprised by how flexible some doulas are willing to be.</p>
+
+      <h3>Doula Training Programs</h3>
+      <p>Doulas completing their certification need to attend a certain number of births. These student doulas often offer services at significantly reduced rates, and they're supervised by experienced mentors. Contact <a href="/how-to-choose-a-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">local doula training organizations</a> to find candidates.</p>
+
+      <h3>Virtual Doula Support</h3>
+      <p>Virtual doula services typically cost less than in-person support and can still offer meaningful help with birth planning, coping strategies, and postpartum guidance. While you won't have hands-on physical support during labor, many families find the continuous phone/video support invaluable, especially for navigating hospital systems.</p>
+
+      <h3>Community and Volunteer Programs</h3>
+      <p>Some hospitals, nonprofits, and faith-based organizations offer free or low-cost doula programs for families who qualify. These programs often prioritize families with the greatest need, including Medicaid recipients, teen parents, and families facing systemic barriers to care.</p>
+
+      <h2>What to Ask Your Medicaid Plan</h2>
+      <p>If you call your Medicaid plan to ask about doula coverage, here are the specific questions to ask. Write these down before you call:</p>
+      <ul>
+        <li><strong>"Does my plan cover doula services?"</strong> Start here. If the answer is no, ask if they cover any perinatal support services.</li>
+        <li><strong>"What specific services are covered?"</strong> Prenatal visits, labor support, and postpartum visits may be billed separately. Make sure you know what's included.</li>
+        <li><strong>"How many visits am I entitled to?"</strong> Some states cap the number of prenatal or postpartum visits.</li>
+        <li><strong>"Do I need a referral from my doctor?"</strong> Some plans require a referral or a letter of medical necessity.</li>
+        <li><strong>"Which doulas in my area are enrolled providers?"</strong> You'll need to choose from their network, or confirm that your preferred doula can enroll.</li>
+        <li><strong>"What is the reimbursement rate?"</strong> This matters because some states reimburse at rates below what most doulas charge. If the rate is low, ask whether your doula can balance-bill you for the difference.</li>
+        <li><strong>"How do I submit a claim?"</strong> Some plans require the doula to bill directly. Others allow you to submit receipts for reimbursement.</li>
+      </ul>
+      <p>If the first representative doesn't seem sure, call back. Medicaid customer service quality varies, and you may get a more knowledgeable person on the second try.</p>
+
+      <h2>Why This Matters</h2>
+      <p>Medicaid covers nearly half of all births in the United States. Families on Medicaid are disproportionately Black, Indigenous, and people of color, the same communities that face the highest rates of maternal mortality and morbidity. <a href="/benefits-of-a-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Research consistently shows</a> that doula support reduces complications, shortens labor, and improves satisfaction with the birth experience. When Medicaid covers doulas, it puts evidence-based care within reach for the families who need it most.</p>
+      <p>Whether your state covers doulas or not, you deserve support during birth. <a href="/what-is-a-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Understanding what a doula does</a> is the first step. Finding one who fits your life and budget is the next.</p>
+
+      <LeadCaptureForm />
+
+    </div>
+  </section>
+
+  <section class="bg-white py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <p class="eyebrow mb-4">Common Questions</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+
+      <div class="space-y-6">
+        <div class="border-b border-tjb-lavender-300/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Does Medicaid cover doulas in every state?</h3>
+          <p class="text-tjb-gray leading-relaxed">No. Medicaid does not cover doula services in every state. As of 2026, about 18 states plus Washington, D.C. have approved Medicaid coverage for doula care, and the list keeps growing. Coverage varies significantly by state, including which services are covered, how much is reimbursed, and whether you need to use an enrolled provider.</p>
+        </div>
+        <div class="border-b border-tjb-lavender-300/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Which states cover doula services under Medicaid in 2026?</h3>
+          <p class="text-tjb-gray leading-relaxed" set:html={`As of 2026, states with Medicaid doula coverage include Oregon, Washington, New Mexico, Utah, North Carolina, Colorado, California, New York, Massachusetts, Michigan, Illinois, Connecticut, Rhode Island, Pennsylvania, Arizona, Minnesota, Maryland, New Jersey, and Virginia. Each state's program works differently, so <a href="/birth-support/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">check your local Medicaid office</a> for details.`} />
+        </div>
+        <div class="border-b border-tjb-lavender-300/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">How do I find out if my Medicaid plan covers doulas?</h3>
+          <p class="text-tjb-gray leading-relaxed" set:html={`Call the number on the back of your Medicaid card and ask specifically about doula benefits. If you have a managed care plan, call your plan directly. You can also check your state's Medicaid website, ask your OB or midwife, or contact a local doula collective for guidance.`} />
+        </div>
+        <div class="border-b border-tjb-lavender-300/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Can I use my HSA or FSA to pay for a doula?</h3>
+          <p class="text-tjb-gray leading-relaxed" set:html={`Yes, in most cases. HSA and FSA funds can typically be used for doula services if you get a letter of medical necessity from your provider. Ask your doula for an itemized receipt and include the letter when you submit for reimbursement. Learn more about <a href="/doula-cost/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">covering doula costs</a>.`} />
+        </div>
+        <div class="border-b border-tjb-lavender-300/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">What if my state doesn't cover doulas but I can't afford one?</h3>
+          <p class="text-tjb-gray leading-relaxed" set:html={`Look into sliding-scale doulas, doula training programs that offer reduced rates, volunteer doula programs through hospitals or nonprofits, and virtual doula services that cost less. Many doulas are willing to work with families on payment plans. Our guide on <a href="/how-to-choose-a-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">choosing a doula</a> includes tips on finding affordable support.`} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Does True Joy Birthing work with Medicaid families?</h3>
+          <p class="text-tjb-gray leading-relaxed" set:html={`True Joy Birthing's free <a href="/birth-plan-template/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">birth plan tools</a> are available to everyone, regardless of insurance. For in-person doula support, we encourage families in covered states to contact their Medicaid plan to find enrolled providers. In areas without Medicaid coverage, our resources and local guides can help you find affordable doula support.`} />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-16 bg-tjb-cream-50 border-t border-tjb-lavender-200/50">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="eyebrow mb-4">Keep Reading</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/doula-cost/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-lg font-semibold mb-2 group-hover:text-tjb-rose-500 transition">How Much Does a Doula Cost?</h3>
+          <p class="text-sm text-tjb-gray">Complete breakdown of doula fees, what's included, and how to find affordable support.</p>
+        </a>
+        <a href="/what-is-a-doula/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-lg font-semibold mb-2 group-hover:text-tjb-rose-500 transition">What Is a Doula?</h3>
+          <p class="text-sm text-tjb-gray">Everything a doula does, doesn't do, and how support differs from a midwife or partner.</p>
+        </a>
+        <a href="/how-to-choose-a-doula/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-lg font-semibold mb-2 group-hover:text-tjb-rose-500 transition">How to Choose a Doula</h3>
+          <p class="text-sm text-tjb-gray">Interview questions, red flags, and what should be in your doula contract.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
