@@ -4913,6 +4913,186 @@ export const cities: Record<string, CityData> = {
     nearbyCities: ["pittsburgh-pa", "lexington-ky"],
   },
 
+  "wilmington-nc": {
+    city: "Wilmington",
+    state: "NC",
+    slug: "wilmington-nc",
+    costLow: 900,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    culture: "Wilmington is a coastal city in southeastern North Carolina where the Cape Fear River meets the Atlantic, drawing families from across New Hanover, Brunswick, and Pender counties for hospital-based birth care. The birth community blends military families from nearby Camp Lejeune, transplants drawn by the coast, and multi-generational locals \u2014 a mix that makes birth preferences here more varied than you\u2019d expect for a metro this size.",
+    heroLocalDetail: "Novant Health NHRMC (formerly New Hanover Regional Medical Center) sits on Oleander Drive in midtown Wilmington, about 10 minutes from downtown via South 17th Street. US-17/Market Street and Oleander Drive are the main east\u2013west arteries, and summer tourist traffic from Wrightsville Beach and the riverfront can add 10\u201315 minutes to your hospital drive between May and September. Greenfield Lake\u2019s walking trail and the Riverwalk in downtown Wilmington are popular third-trimester walking spots. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Novant Health NHRMC", paragraph: "Novant Health NHRMC (New Hanover Regional Medical Center), on Oleander Drive in midtown Wilmington, is the only hospital providing labor and delivery services in New Hanover County and serves as the regional perinatal referral center for southeastern North Carolina. It has a NICU for babies who need extra support, with higher-level neonatal cases typically transferred to Novant Health Baptist Medical Center in Winston-Salem or UNC Children\u2019s in Chapel Hill. Contact the hospital directly for current NICU level designation. If you\u2019re delivering at NHRMC, having your birth plan ready makes the intake conversation smoother \u2014 especially when you\u2019re already in labor. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Wilmington, NC (New Hanover County). Google Maps search for "birth center Wilmington NC"
+    // found no freestanding birth centers currently operating. Families seeking
+    // out-of-hospital birth connect with home-birth midwives in the greater Wilmington area.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 North Carolina Medicaid (NCDHHS) covers doula services as of October 2024. Pregnant and postpartum Medicaid enrollees in New Hanover County can receive doula support at no cost through enrolled managed care plans. Doulas must register as NC Medicaid providers through NCDHHS to bill for services. Contact your Medicaid managed care plan or NCDHHS to confirm your doula\u2019s enrollment status.",
+    insuranceNote: "Most private insurers in North Carolina (Blue Cross Blue Shield of NC, Aetna, UnitedHealthcare) do not yet cover doula services as a standard benefit, though some employer plans may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage and ask about out-of-network doula reimbursement before booking.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Wilmington?", a: "Yes. As of October 2024, NCDHHS expanded North Carolina Medicaid to cover doula services for pregnant and postpartum enrollees. Your doula must be enrolled as a Medicaid provider \u2014 ask them directly or search the NCDHHS provider directory. You deserve support, and Medicaid is now helping pay for it." },
+      { q: "How much does a doula cost in Wilmington?", a: "Expect to pay $900 to $2,200 for a doula in the Wilmington area. Coastal living drives prices slightly higher than the NC state average. If you\u2019re on NC Medicaid, doula services are covered at no cost \u2014 make sure your doula is enrolled. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which hospitals in Wilmington accommodate birth plans?", a: "Novant Health NHRMC is Wilmington\u2019s only hospital providing labor and delivery, serving families from New Hanover, Brunswick, and Pender counties. It has a NICU for babies who need extra support \u2014 contact the hospital directly for current NICU level designation. Higher-level neonatal cases transfer to Winston-Salem or Chapel Hill. Doulas are generally welcome as part of your support team. Always confirm current visitor policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing what you want." },
+      { q: "Does True Joy Birthing work with Wilmington families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Wilmington birth setting, whether you\u2019re delivering at NHRMC or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["raleigh-nc", "charlotte-nc"],
+  },
+
+  "allentown-pa": {
+    city: "Allentown",
+    state: "PA",
+    slug: "allentown-pa",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Allentown is the Lehigh Valley\u2019s largest city and a rapidly growing hub where affordable housing draws families from the New York and Philadelphia metros. The birth community here is anchored by two major health systems \u2014 Lehigh Valley Health Network and St. Luke\u2019s University Health Network \u2014 with a practical, working-class energy that values straightforward care and solid preparation.",
+    heroLocalDetail: "Lehigh Valley Hospital\u2013Cedar Crest sits on Cedar Crest Boulevard in west Allentown just off I-78/Route 309, and it\u2019s the main destination for maternity care in the Lehigh Valley. St. Luke\u2019s University Hospital is just across the river in Bethlehem, about 15 minutes east via Route 22. I-78 and Route 22 are the main highway arteries, and morning rush on Cedar Crest Boulevard between Route 309 and the hospital entrance can add 5\u201310 minutes. The Lehigh Valley is compact but growing fast \u2014 the D&L Trail along the Lehigh River and Cedar Beach Park\u2019s walking paths are popular with expecting moms. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Lehigh Valley Hospital\u2013Cedar Crest", paragraph: "Lehigh Valley Hospital\u2013Cedar Crest, on Cedar Crest Boulevard in west Allentown, is the Lehigh Valley\u2019s largest hospital and the region\u2019s primary perinatal referral center, with a Level IV NICU (stated directly on lvhn.org) and 24/7 maternal-fetal medicine coverage for high-risk pregnancies. The hospital handles a high volume of births from across Allentown, Bethlehem, and Easton, so walking in with your birth plan already written keeps your preferences clear when things move fast. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "St. Luke\u2019s University Hospital\u2013Bethlehem", paragraph: "St. Luke\u2019s University Hospital, just across the Lehigh River in Bethlehem, is the region\u2019s other major maternity hospital with a Level III NICU (stated directly on sluhn.org) and a long-standing midwifery program that draws families seeking a more community-oriented birth experience. If we\u2019re being real, both LVH and St. Luke\u2019s are excellent choices \u2014 the question for most Lehigh Valley families is which campus is closer to home and which practice feels like the right fit." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Allentown, PA (Lehigh County). Google Maps search for "birth center Allentown PA"
+    // found no freestanding birth centers currently operating. St. Luke's University
+    // Health Network offers midwifery services within the hospital setting. Families
+    // seeking out-of-hospital birth connect with home-birth midwives in the Lehigh Valley.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 Pennsylvania Medicaid covers doula services as of 2024, with reimbursement of approximately $1,350 for the full birth package (prenatal, labor, and postpartum visits). Allentown families on Medicaid managed care plans (including those through Lehigh County Assistance Office) can access doula services at no cost. Doulas must enroll as Medicaid providers through the Pennsylvania Department of Human Services. Contact your managed care plan to confirm your doula\u2019s enrollment status.",
+    insuranceNote: "Most private insurers in the Lehigh Valley (Blue Cross of Northeastern Pennsylvania, Aetna, UnitedHealthcare) do not yet cover doula services as a standard benefit, though some employer plans may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage and ask about out-of-network doula reimbursement before booking.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Allentown?", a: "Yes. Pennsylvania Medicaid covers doula services with approximately $1,350 in reimbursement for the full birth package. Your doula must be enrolled as a PA Medicaid provider \u2014 ask them directly or search the DHS provider directory. You deserve support, and Medicaid is now helping pay for it." },
+      { q: "How much does a doula cost in Allentown?", a: "Expect to pay $800 to $2,000 for a doula in the Lehigh Valley. If you\u2019re on PA Medicaid, doula services are covered at no cost \u2014 make sure your doula is enrolled. Some doulas offer sliding-scale fees or payment plans. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which Allentown-area hospitals accommodate birth plans?", a: "Lehigh Valley Hospital\u2013Cedar Crest and St. Luke\u2019s University Hospital\u2013Bethlehem both accommodate birth plans and generally welcome doulas. LVH\u2013Cedar Crest has a Level IV NICU (stated directly on lvhn.org), and St. Luke\u2019s has a Level III NICU (stated directly on sluhn.org) with a strong midwifery program. Always confirm current visitor and support-person policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Does True Joy Birthing work with Allentown families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Allentown birth setting, whether you\u2019re delivering at LVH, St. Luke\u2019s, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["philadelphia-pa", "pittsburgh-pa"],
+  },
+
+  "clearwater-fl": {
+    city: "Clearwater",
+    state: "FL",
+    slug: "clearwater-fl",
+    costLow: 900,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    culture: "Clearwater sits on Florida\u2019s Gulf Coast in Pinellas County, where the birth community draws from both long-time local families and a steady stream of transplants from colder climates. Morton Plant Hospital and nearby Largo Medical Center anchor the area\u2019s maternity care, and Tampa Bay\u2019s broader network of specialty hospitals is just across the bridge. The coastal lifestyle means a lot of families here value natural birth options, and the doula community is active and well-connected.",
+    heroLocalDetail: "Morton Plant Hospital sits on Jeffords Street in downtown Clearwater, just west of US-19 and about 10 minutes from the Clearwater Beach Causeway. Largo Medical Center is on 14th Street SW in Largo, roughly 15 minutes south via Missouri Avenue. US-19 is the main north\u2013south artery through Pinellas County, and tourist season traffic from Causeway Boulevard and the beach can add 10\u201315 minutes to your hospital drive between January and April. The Pinellas Trail running through downtown Clearwater and the waterfront paths at Coachman Park are popular third-trimester walking routes. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Morton Plant Hospital", paragraph: "Morton Plant Hospital, part of BayCare Health System on Jeffords Street in downtown Clearwater, is the area\u2019s primary maternity hospital with a NICU for babies who need extra support and 24/7 obstetric coverage. Contact the hospital directly for current NICU level designation. BayCare\u2019s maternity services include maternal-fetal medicine referrals to St. Joseph\u2019s Women\u2019s Hospital in Tampa for higher-acuity cases. If you\u2019re delivering at Morton Plant, having your birth plan ready makes the intake conversation smoother \u2014 especially when you\u2019re already in labor. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "HCA Florida Largo Medical Center", paragraph: "HCA Florida Largo Medical Center, on 14th Street SW in Largo, is about 15 minutes south of Clearwater and offers labor and delivery with a NICU for babies needing extra support. Contact the hospital directly for current NICU level designation. If we\u2019re being real, most Clearwater families choose between Morton Plant and Largo based on which OB practice they\u2019re already established with \u2014 both are solid options, and both are a short drive from the Beach." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Clearwater, FL (Pinellas County). Google Maps search for "birth center Clearwater FL"
+    // found no freestanding birth centers currently operating. Families seeking
+    // out-of-hospital birth connect with home-birth midwives in the Tampa Bay area.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Florida Medicaid does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Pinellas County families on Medicaid must pay out of pocket, though some doulas offer sliding-scale fees. Ask your doula about payment plans or reduced-rate options.",
+    insuranceNote: "Most private insurers in the Tampa Bay area (BlueCross BlueShield of Florida, UnitedHealthcare, Aetna, Cigna) do not cover doula services as a standard benefit. Check your plan for out-of-network reimbursement or HSA/FSA eligibility. Contact your provider directly to confirm what\u2019s covered.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Clearwater?", a: "No. As of 2026, Florida Medicaid does not cover doula services. If you\u2019re on Medicaid in the Pinellas County area, you\u2019ll need to pay for a doula out of pocket \u2014 but many Tampa Bay doulas offer sliding-scale fees or payment plans. You deserve support regardless of insurance status. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> while you figure out your options." },
+      { q: "How much does a doula cost in Clearwater?", a: "Expect to pay $900 to $2,200 for a doula in the Clearwater\u2013Tampa Bay area. The Tampa Bay doula community is active and well-connected, so you\u2019ll have options. Some doulas offer sliding-scale pricing or payment plans. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which Clearwater-area hospitals accommodate birth plans?", a: "Morton Plant Hospital and HCA Florida Largo Medical Center both accommodate birth plans and generally welcome doulas. Morton Plant is part of BayCare Health System and has a NICU for babies needing extra support; higher-acuity neonatal cases transfer to St. Joseph\u2019s Women\u2019s Hospital in Tampa. Largo Medical Center also has a NICU for babies needing extra support. Contact both hospitals directly for current NICU level designation. Always confirm current visitor and support-person policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Does True Joy Birthing work with Clearwater families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Clearwater birth setting, whether you\u2019re delivering at Morton Plant, Largo Medical Center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["tampa-fl", "orlando-fl", "jacksonville-fl"],
+  },
+
+  "overland-park-ks": {
+    city: "Overland Park",
+    state: "KS",
+    slug: "overland-park-ks",
+    costLow: 850,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    culture: "Overland Park is one of Kansas\u2019s largest cities and the heart of Johnson County \u2014 one of the most affluent counties in the Midwest. The birth community here benefits from proximity to Kansas City\u2019s major medical centers, with families choosing between HCA Overland Park Regional and AdventHealth Shawnee Mission for hospital births. The area\u2019s growth has drawn young families in record numbers, and the doula community is small but growing.",
+    heroLocalDetail: "Overland Park Regional Medical Center sits on Antioch Road just south of I-435 in northern Overland Park, and AdventHealth Shawnee Mission is on West 74th Street in Merriam, about 15 minutes north via I-35. I-435 and I-35 are the main highway arteries through the south KC metro, and the I-435/I-35 interchange at the south end of Overland Park can back up during rush hour. The Indian Creek Trail and Tomahawk Ridge Park are popular third-trimester walking spots. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Overland Park Regional Medical Center", paragraph: "Overland Park Regional Medical Center, on Antioch Road just south of I-435, is an HCA Healthcare hospital with a Level III NICU (stated directly on overlandparkregionalmedicalcenter.com) and 24/7 obstetric coverage, making it Johnson County\u2019s primary maternity hospital. The hospital handles a high volume of births from across the south KC metro, so having your birth plan ready helps the nursing team understand your preferences. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "AdventHealth Shawnee Mission", paragraph: "AdventHealth Shawnee Mission, on West 74th Street in Merriam about 15 minutes north of central Overland Park, offers labor and delivery with a Level III NICU (stated directly on adventhealth.com) and a midwifery program for families seeking a more community-oriented birth experience. If we\u2019re being real, most Overland Park families choose between these two based on which OB practice they\u2019re already established with \u2014 both are well-equipped and a short drive from anywhere in Johnson County." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Overland Park, KS (Johnson County). Google Maps search for "birth center Overland Park KS"
+    // found no freestanding birth centers currently operating. Kansas does not license
+    // Certified Professional Midwives (CPMs), which limits out-of-hospital birth options.
+    // Families seeking birth center care may travel to Kansas City-area midwifery practices
+    // that offer home birth. Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Kansas does not cover doula services under Medicaid as of 2026. There is no statewide Medicaid reimbursement for doula care. Johnson County families on Medicaid (KanCare) must pay out of pocket for doula services, though some doulas offer sliding-scale fees or payment plans. Contact your KanCare plan directly to ask about any pilot programs.",
+    insuranceNote: "Most private insurers in the Kansas City metro (BlueCross BlueShield of Kansas City, UnitedHealthcare, Aetna, Cigna) do not cover doula services as a standard benefit. Check your plan for out-of-network reimbursement or HSA/FSA eligibility. Contact your provider directly to confirm what\u2019s covered.",
+    faqs: [
+      { q: "How much does a doula cost in Overland Park?", a: "Expect to pay $850 to $2,200 for a doula in the Overland Park\u2013Johnson County area. Affluent KC suburbs tend to skew toward the higher end of the range. Some doulas offer sliding-scale pricing or payment plans. If you have an HSA or FSA, ask whether doula services qualify. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Does Medicaid cover doulas in Overland Park?", a: "No. As of 2026, Kansas Medicaid (KanCare) does not cover doula services. If you\u2019re on KanCare in the Johnson County area, you\u2019ll need to pay for a doula out of pocket \u2014 but some KC-area doulas offer sliding-scale fees or payment plans. You deserve support regardless of insurance status. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> while you figure out your options." },
+      { q: "Which Overland Park-area hospitals accommodate birth plans?", a: "Overland Park Regional Medical Center and AdventHealth Shawnee Mission both accommodate birth plans and generally welcome doulas. Overland Park Regional has a Level III NICU (stated directly on overlandparkregionalmedicalcenter.com), and AdventHealth Shawnee Mission has a Level III NICU (stated directly on adventhealth.com) with a midwifery program. Always confirm current visitor and support-person policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Does True Joy Birthing work with Overland Park families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Overland Park birth setting, whether you\u2019re delivering at Overland Park Regional, AdventHealth Shawnee Mission, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["wichita-ks"],
+  },
+
+  "stamford-ct": {
+    city: "Stamford",
+    state: "CT",
+    slug: "stamford-ct",
+    costLow: 1000,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    culture: "Stamford is Connecticut\u2019s third-largest city and a fast-growing corporate hub in Fairfield County, where New York commuters mix with long-time Connecticut families. The birth community here is anchored by Stamford Hospital, the city\u2019s only major maternity hospital, with easy access to New York\u2019s world-class medical centers if higher-acuity care is needed. Fairfield County\u2019s affluence means doula rates skew higher than the state average, and the community of birth workers is small but professional.",
+    heroLocalDetail: "Stamford Hospital sits on Shelburne Road in the Westover neighborhood just west of downtown, accessible from I-95 exit 9 or the Merritt Parkway (CT-15) exit 35. I-95 through downtown Stamford is notorious for rush-hour congestion \u2014 especially the stretch between exits 7 and 9 \u2014 so know your fastest route before you need it. The Merritt Parkway is a smoother alternative for northbound travel but doesn\u2019t serve the hospital exit directly. Cummings Park on the waterfront and the Scofieldtown Road trails are popular third-trimester walking spots. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Stamford Hospital", paragraph: "Stamford Hospital, on Shelburne Road in the Westover neighborhood, is the city\u2019s only hospital providing labor and delivery services with a NICU for babies who need extra support. Contact the hospital directly for current NICU level designation. The hospital is part of the Stamford Health system and offers 24/7 obstetric coverage with maternal-fetal medicine referrals to Yale New Haven Hospital for higher-acuity cases. If you\u2019re delivering at Stamford Hospital, having your birth plan ready makes the intake conversation smoother \u2014 especially when you\u2019re already in labor. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Stamford, CT (Fairfield County). Google Maps search for "birth center Stamford CT"
+    // found no freestanding birth centers currently operating in Stamford. Connecticut
+    // families seeking birth center options may look to nearby New York or Massachusetts.
+    // Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Connecticut HUSKY Health (Medicaid) does not cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Stamford families on HUSKY must pay out of pocket for doula services, though some doulas offer sliding-scale fees or payment plans. Contact your HUSKY plan directly to ask about pilot programs.",
+    insuranceNote: "Fairfield County\u2019s private insurance landscape (ConnectiCare, Anthem Blue Cross, UnitedHealthcare, Cigna) doesn\u2019t typically cover doula services as a standard benefit, though some employer plans may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage and ask about out-of-network doula reimbursement before booking.",
+    faqs: [
+      { q: "How much does a doula cost in Stamford?", a: "Expect to pay $1,000 to $3,000 for a doula in the Stamford\u2013Fairfield County area. Affluent Fairfield County rates are among the highest in Connecticut. Some doulas offer sliding-scale pricing or payment plans, and HSA/FSA funds can often help cover the cost. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Does Medicaid cover doulas in Stamford?", a: "No. As of 2026, Connecticut HUSKY Health does not cover doula services. If you\u2019re on HUSKY in the Stamford area, you\u2019ll need to pay for a doula out of pocket \u2014 but some Fairfield County doulas offer sliding-scale fees or payment plans. You deserve support regardless of insurance status. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> while you figure out your options." },
+      { q: "Which hospitals in Stamford accommodate birth plans?", a: "Stamford Hospital is the city\u2019s only hospital providing labor and delivery, serving families from Stamford, Greenwich, New Canaan, and Darien. It has a NICU for babies who need extra support \u2014 contact the hospital directly for current NICU level designation. Higher-acuity neonatal cases are typically transferred to Yale New Haven Hospital. Doulas are generally welcome as part of your support team. Always confirm current visitor policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Does True Joy Birthing work with Stamford families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Stamford birth setting, whether you\u2019re delivering at Stamford Hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["hartford-ct", "new-haven-ct"],
+  },
+
+  "cary-nc": {
+    city: "Cary",
+    state: "NC",
+    slug: "cary-nc",
+    costLow: 950,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Cary is one of North Carolina\u2019s fastest-growing towns \u2014 a Research Triangle suburb that\u2019s roughly doubled in population since 2010. The birth community here benefits from proximity to both WakeMed Cary Hospital and the broader Triangle\u2019s medical network, with UNC and Duke hospitals just 20\u201330 minutes away for higher-acuity needs. Families here tend to be highly educated and research-oriented, and the local doula network is active and well-connected.",
+    heroLocalDetail: "WakeMed Cary Hospital sits on Walnut Street just off US-1/US-64 in western Cary, about 10 minutes from most Cary neighborhoods. If you\u2019re coming from Apex or Holly Springs via NC-55, the Harrison Avenue exit gets you there fastest. UNC Hospitals in Chapel Hill and Duke University Hospital in Durham are both 25\u201330 minutes away via I-40 for families who need higher-acuity care. Cary\u2019s Fred G. Bond Metro Park and the American Tobacco Trail are popular third-trimester walking spots. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "WakeMed Cary Hospital", paragraph: "WakeMed Cary Hospital, on Walnut Street in western Cary, is the closest full-service maternity hospital for Cary families with a Level III NICU (stated directly on wakemed.org) and 24/7 obstetric coverage. WakeMed\u2019s Women\u2019s & Children\u2019s program includes midwifery services, lactation support, and a dedicated Special Care Nursery. Cary families are fortunate to have a well-equipped hospital right in town \u2014 but if we\u2019re being real, the Triangle\u2019s smaller hospitals can fill up fast during peak birth seasons, so having your birth plan in hand helps the team understand your preferences quickly. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "UNC Medical Center", paragraph: "UNC Medical Center in Chapel Hill, about 25 minutes from Cary via I-40 West, houses the N.C. Children\u2019s Hospital with a verified Level IV NICU \u2014 the highest level of neonatal care in the state. It\u2019s the regional referral destination for high-risk pregnancies and complex neonatal cases, meaning that if your baby needs the most specialized care available in the Triangle, UNC is where you\u2019d be transferred. Having a birth plan ready is even more important at a high-academic medical center where the care team rotates." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Cary, NC (Wake County). Google Maps search for "birth center Cary NC" found
+    // no freestanding birth centers currently operating in Cary. Wake County families
+    // seeking birth center care can access Women's Birth & Wellness Center in Raleigh
+    // (listed on raleigh-nc city page). Verified 2026-05-28.
+    birthCenterDetails: [],
+    medicaidNote: "Yes \u2014 North Carolina Medicaid (NCDHHS) covers doula services as of October 2024. Pregnant and postpartum Medicaid enrollees in Wake County can receive doula support at no cost through enrolled managed care plans. Doulas must register as NC Medicaid providers through NCDHHS to bill for services. Contact your Medicaid managed care plan or NCDHHS to confirm your doula\u2019s enrollment status.",
+    insuranceNote: "Most private insurers in the Research Triangle (Blue Cross Blue Shield of NC, Aetna, UnitedHealthcare, Cigna) do not yet cover doula services as a standard benefit, though some employer plans \u2014 particularly those from the area\u2019s major tech employers \u2014 may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
+    faqs: [
+      { q: "Does Medicaid cover doulas in Cary?", a: "Yes. As of October 2024, NCDHHS expanded North Carolina Medicaid to cover doula services for pregnant and postpartum enrollees. Your doula must be enrolled as a Medicaid provider \u2014 ask them directly or search the NCDHHS provider directory. You deserve support, and Medicaid is now helping pay for it." },
+      { q: "How much does a doula cost in Cary?", a: "Expect to pay $950 to $2,500 for a doula in the Cary\u2013Research Triangle area. Affluent Triangle suburbs tend to skew toward the higher end. If you\u2019re on NC Medicaid, doula services are covered at no cost \u2014 make sure your doula is enrolled. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to figure out what matters most to you." },
+      { q: "Which Cary-area hospitals accommodate birth plans?", a: "WakeMed Cary Hospital is Cary\u2019s closest full-service maternity hospital with a Level III NICU (stated directly on wakemed.org) and 24/7 obstetric coverage. For higher-acuity needs, UNC Medical Center in Chapel Hill has a verified Level IV NICU. WakeMed accommodates birth plans and generally welcomes doulas. Always confirm current visitor and support-person policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing what you want." },
+      { q: "Does True Joy Birthing work with Cary families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Cary birth setting, whether you\u2019re delivering at WakeMed Cary, UNC, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
+    ],
+    nearbyCities: ["raleigh-nc", "charlotte-nc", "greensboro-nc"],
+  },
+
 };
 
 export const citySlugs = Object.keys(cities).sort();
