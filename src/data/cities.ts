@@ -3919,6 +3919,325 @@ export const cities: Record<string, CityData> = {
     nearbyCities: ["boise-id", "seattle-wa"],
   },
 
+  "wichita-ks": {
+    city: "Wichita",
+    state: "KS",
+    slug: "wichita-ks",
+    costLow: 800,
+    costHigh: 1500,
+    shelbiServesHere: false,
+    culture: "Wichita is the largest city in Kansas and the primary medical hub for south-central Kansas, meaning families often travel from surrounding rural communities for hospital-based birth care. The city's two major health systems\u2014HCA Wesley and Ascension Via Christi\u2014anchor a regional perinatal network, though freestanding birth center options are notably absent in this market.",
+    heroLocalDetail: "HCA Wesley Medical Center, Ascension Via Christi St. Francis, and Ascension Via Christi St. Joseph are the primary hospitals serving Wichita families. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "HCA Wesley Medical Center", paragraph: "HCA Wesley Medical Center with a Level III NICU (contact the hospital directly for current NICU level verification). Largest birthing hospital in the region with the most robust NICU in south-central Kansas. If you\u2019re delivering at HCA Wesley Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Ascension Via Christi St. Francis", paragraph: "Ascension Via Christi St. Francis with a Level III NICU (contact the hospital directly for current NICU level verification). Major hospital system offering full L&D services. If you\u2019re delivering at Ascension Via Christi St. Francis, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Ascension Via Christi St. Joseph", paragraph: "Ascension Via Christi St. Joseph with a Level II NICU (contact the hospital directly for current NICU level verification). Community hospital with L&D services; lower-level NICU than St. Francis campus. If you\u2019re delivering at Ascension Via Christi St. Joseph, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Wichita, KS. No freestanding birth centers found as of May 2026.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Kansas does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Wichita area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
+    faqs: [
+      { q: "How much does a doula cost in Wichita?", a: "Expect to pay $800 to $1,500 for a doula in Wichita. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Wichita?", a: "Not yet \u2014 Kansas does not cover doula services under Medicaid as of May 2026. Some health plans may offer limited doula benefits. Call your Medicaid plan and ask \"Do you cover doula services?\" \u2014 they\u2019ll walk you through it. You deserve support, and some plans are starting to help pay for it." },
+      { q: "Are there doulas in Wichita?", a: "Wichita has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Wichita families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Wichita birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: [],
+  },
+
+  "new-orleans-la": {
+    city: "New Orleans",
+    state: "LA",
+    slug: "new-orleans-la",
+    costLow: 800,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "New Orleans offers a dense concentration of Level III NICU-equipped hospitals within a compact metro area, giving birthing families multiple high-acuity options. The city's rich cultural traditions around birth and postpartum care\u2014including Cajun and Creole practices like 'r\u00e9veillon' and extended family support\u2014create a unique community framework, though the absence of freestanding birth centers limits out-of-hospital options.",
+    heroLocalDetail: "Ochsner Medical Center (Jefferson Hwy), Touro Infirmary (LCMC Health), and University Medical Center New Orleans (UMCNO) are the primary hospitals serving New Orleans families. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Ochsner Medical Center (Jefferson Hwy)", paragraph: "Ochsner Medical Center (Jefferson Hwy) with a Level III NICU (contact the hospital directly for current NICU level verification). Flagship Ochsner Health campus with the largest NICU in the New Orleans metro area. If you\u2019re delivering at Ochsner Medical Center (Jefferson Hwy), having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Touro Infirmary (LCMC Health)", paragraph: "Touro Infirmary (LCMC Health) with a Level III NICU (contact the hospital directly for current NICU level verification). Historic Uptown New Orleans hospital with dedicated women's and infants' services. If you\u2019re delivering at Touro Infirmary (LCMC Health), having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "University Medical Center New Orleans (UMCNO)", paragraph: "University Medical Center New Orleans (UMCNO) with a Level III NICU (contact the hospital directly for current NICU level verification). Academic medical center and safety-net hospital with full L&D and NICU services. If you\u2019re delivering at University Medical Center New Orleans (UMCNO), having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for New Orleans, LA. No freestanding birth centers found as of May 2026.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Louisiana does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the New Orleans area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
+    faqs: [
+      { q: "How much does a doula cost in New Orleans?", a: "Expect to pay $800 to $1,800 for a doula in New Orleans. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in New Orleans?", a: "Not yet \u2014 Louisiana does not cover doula services under Medicaid as of May 2026. Some health plans may offer limited doula benefits. Call your Medicaid plan and ask \"Do you cover doula services?\" \u2014 they\u2019ll walk you through it. You deserve support, and some plans are starting to help pay for it." },
+      { q: "Are there doulas in New Orleans?", a: "New Orleans has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with New Orleans families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any New Orleans birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["kenner-la"],
+  },
+
+  "honolulu-hi": {
+    city: "Honolulu",
+    state: "HI",
+    slug: "honolulu-hi",
+    costLow: 1000,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Honolulu serves as the primary perinatal referral center for the entire state of Hawaii and the Pacific Basin, with Kapiolani Medical Center receiving high-risk transfers from neighbor islands. Hawaii's high cost of living drives doula fees above the national average, and the island geography means families on Oahu have no nearby mainland alternatives\u2014making local birth-support resources especially critical.",
+    heroLocalDetail: "Kapiolani Medical Center for Women & Children, The Queen's Medical Center, and Kaiser Permanente Moanalua Medical Center are the primary hospitals serving Honolulu families. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Kapiolani Medical Center for Women & Children", paragraph: "Kapiolani Medical Center for Women & Children with a Level III NICU (contact the hospital directly for current NICU level verification). Hawaii's only dedicated women's and children's hospital; the state's highest-level NICU and the referral center for all Hawaiian islands. If you\u2019re delivering at Kapiolani Medical Center for Women & Children, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "The Queen's Medical Center", paragraph: "The Queen's Medical Center with a Level III NICU (contact the hospital directly for current NICU level verification). Major academic medical center with full L&D and NICU services. If you\u2019re delivering at The Queen's Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Kaiser Permanente Moanalua Medical Center", paragraph: "Kaiser Permanente Moanalua Medical Center with a Level II NICU (contact the hospital directly for current NICU level verification). Kaiser-owned facility with L&D services; serves Kaiser members primarily. If you\u2019re delivering at Kaiser Permanente Moanalua Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Honolulu, HI. No freestanding birth centers found as of May 2026.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Hawaii does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Honolulu area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
+    faqs: [
+      { q: "How much does a doula cost in Honolulu?", a: "Expect to pay $1,000 to $2,500 for a doula in Honolulu. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Honolulu?", a: "Not yet \u2014 Hawaii does not cover doula services under Medicaid as of May 2026. Some health plans may offer limited doula benefits. Call your Medicaid plan and ask \"Do you cover doula services?\" \u2014 they\u2019ll walk you through it. You deserve support, and some plans are starting to help pay for it." },
+      { q: "Are there doulas in Honolulu?", a: "Honolulu has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Honolulu families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Honolulu birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: [],
+  },
+
+  "anchorage-ak": {
+    city: "Anchorage",
+    state: "AK",
+    slug: "anchorage-ak",
+    costLow: 1000,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Anchorage is the medical hub for nearly half of Alaska's population, and its two Level III NICU hospitals serve as the referral destination for high-risk pregnancies from across the vast state. Alaska's extreme geography and high cost of living push doula costs above average, while the absence of freestanding birth centers means hospital birth is effectively the only structured out-of-home option in the region.",
+    heroLocalDetail: "Providence Alaska Medical Center, Alaska Native Medical Center (ANMC), and Mat-Su Regional Medical Center are the primary hospitals serving Anchorage families. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Providence Alaska Medical Center", paragraph: "Providence Alaska Medical Center with a Level III NICU (contact the hospital directly for current NICU level verification). The largest hospital in Alaska and the state's primary perinatal referral center. If you\u2019re delivering at Providence Alaska Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Alaska Native Medical Center (ANMC)", paragraph: "Alaska Native Medical Center (ANMC) with a Level III NICU (contact the hospital directly for current NICU level verification). Tribally operated hospital serving Alaska Native and American Indian patients; also offers services to the broader community. If you\u2019re delivering at Alaska Native Medical Center (ANMC), having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Mat-Su Regional Medical Center", paragraph: "Mat-Su Regional Medical Center with a Level I NICU (contact the hospital directly for current NICU level verification). Located ~45 miles north in Palmer (Matanuska-Susitna Valley); offers L&D with basic nursery capabilities. Lower NICU level than Anchorage hospitals. If you\u2019re delivering at Mat-Su Regional Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Anchorage, AK. No freestanding birth centers found as of May 2026.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Alaska does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Anchorage area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
+    faqs: [
+      { q: "How much does a doula cost in Anchorage?", a: "Expect to pay $1,000 to $2,500 for a doula in Anchorage. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Anchorage?", a: "Not yet \u2014 Alaska does not cover doula services under Medicaid as of May 2026. Some health plans may offer limited doula benefits. Call your Medicaid plan and ask \"Do you cover doula services?\" \u2014 they\u2019ll walk you through it. You deserve support, and some plans are starting to help pay for it." },
+      { q: "Are there doulas in Anchorage?", a: "Anchorage has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Anchorage families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Anchorage birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: [],
+  },
+
+  "sioux-falls-sd": {
+    city: "Sioux Falls",
+    state: "SD",
+    slug: "sioux-falls-sd",
+    costLow: 700,
+    costHigh: 1400,
+    shelbiServesHere: false,
+    culture: "Sioux Falls is the largest city in South Dakota and serves as the primary perinatal referral center for a wide footprint of the upper Midwest, with families traveling from rural communities across eastern SD, southwestern MN, and northwestern IA. The city's two dominant health systems\u2014Sanford and Avera\u2014operate the only L&D hospitals in the metro, making the local doula and midwifery community an especially vital complement to hospital-based care.",
+    heroLocalDetail: "Sanford USD Medical Center (Sanford Children's Hospital) and Avera McKennan Hospital & University Health Center are the primary hospitals serving Sioux Falls families. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Sanford USD Medical Center (Sanford Children's Hospital)", paragraph: "Sanford USD Medical Center (Sanford Children's Hospital) with a Level III NICU (contact the hospital directly for current NICU level verification). South Dakota's largest hospital and the state's primary pediatric referral center; Sanford Children's is co-located on campus. If you\u2019re delivering at Sanford USD Medical Center (Sanford Children's Hospital), having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Avera McKennan Hospital & University Health Center", paragraph: "Avera McKennan Hospital & University Health Center with a Level III NICU (contact the hospital directly for current NICU level verification). Major regional health system hospital with full L&D and NICU services. If you\u2019re delivering at Avera McKennan Hospital & University Health Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Sioux Falls, SD. No freestanding birth centers found as of May 2026.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 South Dakota does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Sioux Falls area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
+    faqs: [
+      { q: "How much does a doula cost in Sioux Falls?", a: "Expect to pay $700 to $1,400 for a doula in Sioux Falls. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Sioux Falls?", a: "Not yet \u2014 South Dakota does not cover doula services under Medicaid as of May 2026. Some health plans may offer limited doula benefits. Call your Medicaid plan and ask \"Do you cover doula services?\" \u2014 they\u2019ll walk you through it. You deserve support, and some plans are starting to help pay for it." },
+      { q: "Are there doulas in Sioux Falls?", a: "Sioux Falls has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Sioux Falls families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Sioux Falls birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: [],
+  },
+
+  "little-rock-ar": {
+    city: "Little Rock",
+    state: "AR",
+    slug: "little-rock-ar",
+    costLow: 700,
+    costHigh: 1500,
+    shelbiServesHere: false,
+    culture: "Little Rock stands out as home to Arkansas's only Level IV NICU at UAMS, making it the definitive referral destination for the highest-acuity neonatal cases statewide. The city's central Arkansas location and growing metro population support a developing doula community, though the absence of freestanding birth centers and lack of Medicaid doula coverage remain significant gaps in the local birth-support landscape.",
+    heroLocalDetail: "UAMS Medical Center, Baptist Health Medical Center \u2014 Little Rock, and CHI St. Vincent Infirmary are the primary hospitals serving Little Rock families. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "UAMS Medical Center", paragraph: "UAMS Medical Center with a Level IV NICU (contact the hospital directly for current NICU level verification). Arkansas's only Level IV NICU and the state's academic medical center; the highest-level neonatal care available in Arkansas. If you\u2019re delivering at UAMS Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Baptist Health Medical Center \u2014 Little Rock", paragraph: "Baptist Health Medical Center \u2014 Little Rock with a Level III NICU (contact the hospital directly for current NICU level verification). Largest privately owned hospital in Arkansas with full L&D and Level III NICU services. If you\u2019re delivering at Baptist Health Medical Center \u2014 Little Rock, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "CHI St. Vincent Infirmary", paragraph: "CHI St. Vincent Infirmary with a Level III NICU (contact the hospital directly for current NICU level verification). Long-standing Little Rock hospital with comprehensive women's and infants' services. If you\u2019re delivering at CHI St. Vincent Infirmary, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Little Rock, AR. No freestanding birth centers found as of May 2026.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Arkansas does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Little Rock area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
+    faqs: [
+      { q: "How much does a doula cost in Little Rock?", a: "Expect to pay $700 to $1,500 for a doula in Little Rock. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Little Rock?", a: "Not yet \u2014 Arkansas does not cover doula services under Medicaid as of May 2026. Some health plans may offer limited doula benefits. Call your Medicaid plan and ask \"Do you cover doula services?\" \u2014 they\u2019ll walk you through it. You deserve support, and some plans are starting to help pay for it." },
+      { q: "Are there doulas in Little Rock?", a: "Little Rock has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Little Rock families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Little Rock birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["north-little-rock-ar", "conway-ar"],
+  },
+
+  "baton-rouge-la": {
+    city: "Baton Rouge",
+    state: "LA",
+    slug: "baton-rouge-la",
+    costLow: 800,
+    costHigh: 1500,
+    shelbiServesHere: false,
+    culture: "Baton Rouge is Louisiana\u2019s capital city and home to Woman\u2019s Hospital \u2014 the largest dedicated women\u2019s hospital in the state \u2014 making it a regional center for maternal care. The city\u2019s birth community is developing, though the absence of freestanding birth centers and lack of Medicaid doula coverage remain significant gaps for expectant families.",
+    heroLocalDetail: "Woman's Hospital, Our Lady of the Lake Regional Medical Center, and Baton Rouge General Medical Center are the primary hospitals serving Baton Rouge families. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Woman's Hospital", paragraph: "Woman's Hospital with a Level III NICU (contact the hospital directly for current NICU level verification). Woman's Hospital official website; largest dedicated women's hospital in Louisiana. If you\u2019re delivering at Woman's Hospital, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Our Lady of the Lake Regional Medical Center", paragraph: "Our Lady of the Lake Regional Medical Center with a Level III NICU (contact the hospital directly for current NICU level verification). Franciscan Missionaries of Our Lady Health System; verified Level III NICU. If you\u2019re delivering at Our Lady of the Lake Regional Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Baton Rouge General Medical Center", paragraph: "Baton Rouge General Medical Center with a Level II NICU (contact the hospital directly for current NICU level verification). Baton Rouge General Bluebonnet campus; special care nursery. If you\u2019re delivering at Baton Rouge General Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Baton Rouge, LA. No freestanding birth centers found as of May 2026.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Louisiana does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Baton Rouge area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
+    faqs: [
+      { q: "How much does a doula cost in Baton Rouge?", a: "Expect to pay $800 to $1,500 for a doula in Baton Rouge. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Baton Rouge?", a: "Not yet \u2014 Louisiana does not cover doula services under Medicaid as of May 2026. Some health plans may offer limited doula benefits. Call your Medicaid plan and ask \"Do you cover doula services?\" \u2014 they\u2019ll walk you through it. You deserve support, and some plans are starting to help pay for it." },
+      { q: "Are there doulas in Baton Rouge?", a: "Baton Rouge has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Baton Rouge families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Baton Rouge birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: [],
+  },
+
+  "fargo-nd": {
+    city: "Fargo",
+    state: "ND",
+    slug: "fargo-nd",
+    costLow: 700,
+    costHigh: 1200,
+    shelbiServesHere: false,
+    culture: "Fargo is the largest city in North Dakota and a regional hub for the Red River Valley, serving families from both North Dakota and western Minnesota. Sanford Medical Center carries the only Level III NICU in the region, making it the destination for high-risk pregnancies across a wide rural footprint.",
+    heroLocalDetail: "Sanford Medical Center Fargo and Essentia Health St. Mary's Hospital are the primary hospitals serving Fargo families. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Sanford Medical Center Fargo", paragraph: "Sanford Medical Center Fargo with a Level III NICU (contact the hospital directly for current NICU level verification). Sanford Health official website; largest NICU in the Fargo region. If you\u2019re delivering at Sanford Medical Center Fargo, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Essentia Health St. Mary's Hospital", paragraph: "Essentia Health St. Mary's Hospital with a Level II NICU (contact the hospital directly for current NICU level verification). Essentia Health; located in Detroit Lakes, MN (~47mi from Fargo); nearest alternative hospital with L&D. If you\u2019re delivering at Essentia Health St. Mary's Hospital, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Fargo, ND. No freestanding birth centers found as of May 2026.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 North Dakota does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Fargo area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
+    faqs: [
+      { q: "How much does a doula cost in Fargo?", a: "Expect to pay $700 to $1,200 for a doula in Fargo. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Fargo?", a: "Not yet \u2014 North Dakota does not cover doula services under Medicaid as of May 2026. Some health plans may offer limited doula benefits. Call your Medicaid plan and ask \"Do you cover doula services?\" \u2014 they\u2019ll walk you through it. You deserve support, and some plans are starting to help pay for it." },
+      { q: "Are there doulas in Fargo?", a: "Fargo has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Fargo families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Fargo birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: [],
+  },
+
+  "manchester-nh": {
+    city: "Manchester",
+    state: "NH",
+    slug: "manchester-nh",
+    costLow: 1000,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Manchester is the largest city in New Hampshire and a gateway to the Boston metro area for birth services. Elliot Hospital carries the only Level III NICU in southern New Hampshire, making it the primary referral center for the region. The city\u2019s proximity to Boston gives families additional options but also means some providers and resources concentrate across the state line.",
+    heroLocalDetail: "Elliot Hospital, Catholic Medical Center, and Concord Hospital are the primary hospitals serving Manchester families. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Elliot Hospital", paragraph: "Elliot Hospital with a Level III NICU (contact the hospital directly for current NICU level verification). SolutionHealth/Elliot Hospital official website; largest NICU in southern New Hampshire. If you\u2019re delivering at Elliot Hospital, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Catholic Medical Center", paragraph: "Catholic Medical Center with a Level II NICU (contact the hospital directly for current NICU level verification). Catholic Medical Center official website; special care nursery. If you\u2019re delivering at Catholic Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "Concord Hospital", paragraph: "Concord Hospital with a Level I NICU (contact the hospital directly for current NICU level verification). Concord Hospital official website; located ~18mi from Manchester; well newborn nursery. If you\u2019re delivering at Concord Hospital, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Manchester, NH. No freestanding birth centers found as of May 2026.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 New Hampshire does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Manchester area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
+    faqs: [
+      { q: "How much does a doula cost in Manchester?", a: "Expect to pay $1,000 to $2,000 for a doula in Manchester. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Manchester?", a: "Not yet \u2014 New Hampshire does not cover doula services under Medicaid as of May 2026. Some health plans may offer limited doula benefits. Call your Medicaid plan and ask \"Do you cover doula services?\" \u2014 they\u2019ll walk you through it. You deserve support, and some plans are starting to help pay for it." },
+      { q: "Are there doulas in Manchester?", a: "Manchester has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Manchester families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Manchester birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["boston-ma"],
+  },
+
+  "billings-mt": {
+    city: "Billings",
+    state: "MT",
+    slug: "billings-mt",
+    costLow: 700,
+    costHigh: 1200,
+    shelbiServesHere: false,
+    culture: "Billings is the largest city in Montana and the primary medical hub for a vast area of the northern Plains, with families traveling from across eastern Montana and northern Wyoming for hospital-based birth care. The city\u2019s two Level III NICU hospitals anchor a regional perinatal network, though freestanding birth center options are absent in this market.",
+    heroLocalDetail: "Billings Clinic and St. Vincent Healthcare are the primary hospitals serving Billings families. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Billings Clinic", paragraph: "Billings Clinic with a Level III NICU (contact the hospital directly for current NICU level verification). Billings Clinic official website; regional referral center for eastern Montana. If you\u2019re delivering at Billings Clinic, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "St. Vincent Healthcare", paragraph: "St. Vincent Healthcare with a Level III NICU (contact the hospital directly for current NICU level verification). Intermountain Health official website; regional NICU. If you\u2019re delivering at St. Vincent Healthcare, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Billings, MT. No freestanding birth centers found as of May 2026.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Montana does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Billings area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
+    faqs: [
+      { q: "How much does a doula cost in Billings?", a: "Expect to pay $700 to $1,200 for a doula in Billings. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Billings?", a: "Not yet \u2014 Montana does not cover doula services under Medicaid as of May 2026. Some health plans may offer limited doula benefits. Call your Medicaid plan and ask \"Do you cover doula services?\" \u2014 they\u2019ll walk you through it. You deserve support, and some plans are starting to help pay for it." },
+      { q: "Are there doulas in Billings?", a: "Billings has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Billings families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Billings birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: [],
+  },
+
+  "cheyenne-wy": {
+    city: "Cheyenne",
+    state: "WY",
+    slug: "cheyenne-wy",
+    costLow: 600,
+    costHigh: 1100,
+    shelbiServesHere: false,
+    culture: "Cheyenne is Wyoming\u2019s capital and largest city, but its only hospital with L&D \u2014 Cheyenne Regional \u2014 carries just a Level II NICU, meaning some high-risk families drive ~44 miles to UCHealth Poudre Valley in Fort Collins, CO for a Level III NICU. The city\u2019s small size and low population density mean birth-support resources are limited locally.",
+    heroLocalDetail: "Cheyenne Regional Medical Center and UCHealth Poudre Valley Hospital are the primary hospitals serving Cheyenne families. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "Cheyenne Regional Medical Center", paragraph: "Cheyenne Regional Medical Center with a Level II NICU (contact the hospital directly for current NICU level verification). Cheyenne Regional Medical Center official website; only hospital with L&D in Cheyenne; special care nursery. If you\u2019re delivering at Cheyenne Regional Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "UCHealth Poudre Valley Hospital", paragraph: "UCHealth Poudre Valley Hospital with a Level III NICU (contact the hospital directly for current NICU level verification). UCHealth official website; located in Fort Collins, CO (~44mi from Cheyenne); Level III NICU. If you\u2019re delivering at UCHealth Poudre Valley Hospital, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Cheyenne, WY. No freestanding birth centers found as of May 2026.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Wyoming does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Cheyenne area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
+    faqs: [
+      { q: "How much does a doula cost in Cheyenne?", a: "Expect to pay $600 to $1,100 for a doula in Cheyenne. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Cheyenne?", a: "Not yet \u2014 Wyoming does not cover doula services under Medicaid as of May 2026. Some health plans may offer limited doula benefits. Call your Medicaid plan and ask \"Do you cover doula services?\" \u2014 they\u2019ll walk you through it. You deserve support, and some plans are starting to help pay for it." },
+      { q: "Are there doulas in Cheyenne?", a: "Cheyenne has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Cheyenne families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Cheyenne birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: [],
+  },
+
+  "wilmington-de": {
+    city: "Wilmington",
+    state: "DE",
+    slug: "wilmington-de",
+    costLow: 1000,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    culture: "Wilmington is Delaware\u2019s largest city and part of the Philadelphia metro area, with families frequently crossing state lines for birth care. ChristianaCare Christiana Hospital in nearby Newark carries a Level III NICU and serves as the regional perinatal center, while the city\u2019s proximity to Philadelphia gives families additional options for both hospital and birth center care.",
+    heroLocalDetail: "ChristianaCare Christiana Hospital and St. Francis Hospital are the primary hospitals serving Wilmington families. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way.",
+    hospitalDetails: [
+      { name: "ChristianaCare Christiana Hospital", paragraph: "ChristianaCare Christiana Hospital with a Level III NICU (contact the hospital directly for current NICU level verification). ChristianaCare official website; regional perinatal center; located in Newark, DE (~12mi from Wilmington). If you\u2019re delivering at ChristianaCare Christiana Hospital, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+      { name: "St. Francis Hospital", paragraph: "St. Francis Hospital with a Level I NICU (contact the hospital directly for current NICU level verification). St. Francis Hospital official website; well newborn nursery only; located in Wilmington. If you\u2019re delivering at St. Francis Hospital, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+    ],
+    // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Wilmington, DE. No freestanding birth centers found as of May 2026.
+    birthCenterDetails: [],
+    medicaidNote: "No \u2014 Delaware does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Wilmington area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
+    faqs: [
+      { q: "How much does a doula cost in Wilmington?", a: "Expect to pay $1,000 to $1,800 for a doula in Wilmington. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Wilmington?", a: "Not yet \u2014 Delaware does not cover doula services under Medicaid as of May 2026. Some health plans may offer limited doula benefits. Call your Medicaid plan and ask \"Do you cover doula services?\" \u2014 they\u2019ll walk you through it. You deserve support, and some plans are starting to help pay for it." },
+      { q: "Are there doulas in Wilmington?", a: "Wilmington has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas \u2014 start there and interview a few until one clicks." },
+      { q: "Does True Joy Birthing work with Wilmington families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Wilmington birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["baltimore-md"],
+  },
+
 };
 
 export const citySlugs = Object.keys(cities).sort();
