@@ -1,0 +1,431 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Ambassador Program", "url": "https://truejoybirthing.com/ambassador/"}];
+
+const faqs = [
+  {
+    q: "Who can become a True Joy Birthing ambassador?",
+    a: "Any certified doula, midwife, childbirth educator, or lactation consultant who uses the app with clients and wants to share it with their professional network. You need an active practice and a genuine belief that better birth preparation matters."
+  },
+  {
+    q: "Is there a minimum number of posts or referrals required?",
+    a: "No. This is a relationship, not a contract. We ask that you use the app with your clients and mention TJB naturally in your content and conversations. No quotas, no renewal gates, no performance tracking. You share because it works, not because someone is counting."
+  },
+  {
+    q: "How does the free Pro Mode access work?",
+    a: "Once you're accepted as an ambassador, we activate Pro Mode on your account at no cost. It stays active as long as you're in the program. No credit card, no renewal clock, no strings. If you leave the program, your account simply reverts to the standard plan."
+  },
+  {
+    q: "Is there a commission or affiliate program?",
+    a: "No. We intentionally skip affiliate tracking because it changes the dynamic from authentic recommendation to sales pitch. When a doula tells another doula about a tool that works, that's real. We don't want to turn your reputation into a funnel metric."
+  },
+  {
+    q: "What does being featured on a city page mean?",
+    a: "Your name, photo, and a short bio appear on the True Joy Birthing city page for your area. Moms searching for birth support in your city find you there. It's free professional visibility, similar to a directory listing but on a page that already ranks in search."
+  },
+  {
+    q: "How do I apply?",
+    a: "Fill out the form on this page or email us directly at <a href=\"mailto:ambassador@truejoybirthing.com\" class=\"text-tjb-rose-500 hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all font-semibold\">ambassador@truejoybirthing.com</a>. We review every application personally. If it feels like a fit, we'll set up a brief call to get to know you and walk you through the app."
+  }
+];
+
+const faqSchema = {
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a.replace(/<[^>]*>/g, '')
+    }
+  }))
+};
+
+const articleSchema = {
+  "@type": "Article",
+  "headline": "TJB Ambassador Program — Free Pro Mode for Birth Professionals",
+  "description": "Join the True Joy Birthing ambassador program. Free Pro Mode, featured placement on your city page, and a community of birth professionals making birth better.",
+  "author": {
+    "@type": "Organization",
+    "name": "True Joy Birthing",
+    "url": "https://truejoybirthing.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "True Joy Birthing",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://truejoybirthing.com/images/tjb-logo.svg"
+    }
+  },
+  "datePublished": "2026-05-30",
+  "dateModified": "2026-05-30",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://truejoybirthing.com/ambassador/"
+  }
+};
+---
+
+<Layout
+  title="Ambassador Program — Free Pro for Doulas & Midwives"
+  description="Join the True Joy Birthing ambassador program. Get free Pro Mode, be featured on your city page, and help more families have confident births. Apply now."
+  canonical="https://truejoybirthing.com/ambassador/"
+  ogImage="https://truejoybirthing.com/images/og-homepage.webp"
+  breadcrumbList={breadcrumbList}
+  schema={[faqSchema, articleSchema]}
+>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <p class="eyebrow mb-4">For Doulas & Midwives</p>
+          <h1 class="text-[2.2rem] md:text-[3rem] leading-[1.12] font-bold text-tjb-charcoal mb-6">
+            Use the App You Love. Help More Families. Get Recognized.
+          </h1>
+          <p class="text-lg text-tjb-gray leading-relaxed mb-8 max-w-xl">
+            The True Joy Birthing ambassador program is for birth professionals who already use the app with their clients and want to help other doulas and midwives discover it. No quotas. No contracts. Just a better way to work, shared honestly.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#apply" class="btn-primary text-center">
+              Apply to Be an Ambassador
+            </a>
+            <a href="#what-you-get" class="btn-secondary text-center">
+              See What's Included
+            </a>
+          </div>
+        </div>
+        <div class="relative flex justify-center md:justify-end">
+          <div class="w-full max-w-sm rounded-2xl overflow-hidden shadow-xl shadow-tjb-lavender-300/40">
+            <img
+              src="/images/doula-teaching.webp"
+              alt="Doula supporting an expecting family with birth preparation tools"
+              class="w-full h-auto object-cover"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHY THIS IS DIFFERENT
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="eyebrow mb-4">Not Another Affiliate Program</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+        <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15] max-w-2xl mx-auto">
+          This Is a Relationship, Not a Contract
+        </h2>
+        <p class="text-lg text-tjb-gray mt-6 max-w-2xl mx-auto">
+          Most ambassador programs track your posts, count your referrals, and cut you off if you don't perform. We don't. We think birth professionals share tools because they work, not because someone is counting. Here's what makes this different.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-tjb-cream rounded-xl p-8 border border-tjb-lavender-200/50">
+          <div class="w-12 h-12 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          </div>
+          <h3 class="text-xl mb-3">No Affiliate Tracking</h3>
+          <p class="text-tjb-gray">We don't track who you refer or count your conversions. When you tell another doula about a tool that works, that's authentic. We won't turn your reputation into a funnel metric.</p>
+        </div>
+
+        <div class="bg-tjb-cream rounded-xl p-8 border border-tjb-lavender-200/50">
+          <div class="w-12 h-12 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-xl mb-3">No Renewal Clock</h3>
+          <p class="text-tjb-gray">Free Pro Mode for as long as you're in the program. No 3-month expirations. No "post once or lose access." If you go quiet for a while, we check in like a friend, not a manager.</p>
+        </div>
+
+        <div class="bg-tjb-cream rounded-xl p-8 border border-tjb-lavender-200/50">
+          <div class="w-12 h-12 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          </div>
+          <h3 class="text-xl mb-3">No Quotas</h3>
+          <p class="text-tjb-gray">No minimum posts. No referral targets. No tiers to climb. You share when it's real and when it fits. That's the deal. Authentic advocacy works because it's honest, not because it's measured.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHAT YOU GET
+       ═══════════════════════════════════════════ -->
+  <section id="what-you-get" class="py-20 md:py-28 bg-tjb-cream-50 border-y border-tjb-lavender-200/40">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="eyebrow mb-4">What You Get</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+        <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15] max-w-2xl mx-auto">
+          A Real Package, Not a Promo Code
+        </h2>
+      </div>
+
+      <div class="space-y-0">
+        <!-- 01: Free Pro Mode -->
+        <div class="py-8 border-t border-tjb-lavender-300/40">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-8 items-start">
+            <span class="text-3xl font-bold text-tjb-lavender-600 font-serif">01</span>
+            <div>
+              <h3 class="text-2xl mb-1">Free Pro Mode</h3>
+              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">$360/year value, always free for ambassadors</p>
+              <p class="text-tjb-gray leading-relaxed">Full Pro Mode access at no cost. Client management, visit tracking, invoicing, birth plan collaboration, notes, the works. You use it because it makes your practice better. We give it to you because that's the point.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02: Featured on your city page -->
+        <div class="py-8 border-t border-tjb-lavender-300/40">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-8 items-start">
+            <span class="text-3xl font-bold text-tjb-lavender-600 font-serif">02</span>
+            <div>
+              <h3 class="text-2xl mb-1">Featured on Your City Page</h3>
+              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">Free professional listing with SEO reach</p>
+              <p class="text-tjb-gray leading-relaxed">Your name, photo, and bio on the True Joy Birthing city page for your area. When a mom searches for birth support in your city, she finds you. This is the kind of visibility practices pay directories hundreds per year for. You get it because you're part of the community.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03: Cross-promotion -->
+        <div class="py-8 border-t border-tjb-lavender-300/40">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-8 items-start">
+            <span class="text-3xl font-bold text-tjb-lavender-600 font-serif">03</span>
+            <div>
+              <h3 class="text-2xl mb-1">TJB Amplifies Your Work</h3>
+              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">Cross-promotion that grows your audience</p>
+              <p class="text-tjb-gray leading-relaxed">We repost your content, tag you in our stories, and feature you on our pages. Your audience grows with ours. When you post about birth prep or client wins, we help more people see it. This is cross-promotion, not one-way extraction.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04: Partner badge -->
+        <div class="py-8 border-t border-tjb-lavender-300/40">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-8 items-start">
+            <span class="text-3xl font-bold text-tjb-lavender-600 font-serif">04</span>
+            <div>
+              <h3 class="text-2xl mb-1">TJB Partner Badge</h3>
+              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">Social proof for your site, IG, and cards</p>
+              <p class="text-tjb-gray leading-relaxed">A clean credential you can display on your website, social profiles, and business cards. "True Joy Birthing Partner" says you use professional tools and take your practice seriously. Simple, credible, and earned.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05: Early access -->
+        <div class="py-8 border-t border-tjb-lavender-300/40">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-8 items-start">
+            <span class="text-3xl font-bold text-tjb-lavender-600 font-serif">05</span>
+            <div>
+              <h3 class="text-2xl mb-1">Early Access and Real Input</h3>
+              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">Shape the tool you use every day</p>
+              <p class="text-tjb-gray leading-relaxed">New features come to ambassadors first. Your feedback drives real product decisions. When you say "I wish the app did X," we listen. You're not a user we market to. You're a professional we build with.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHAT WE ASK
+       ═══════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="eyebrow mb-4">What We Ask</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+        <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15] max-w-2xl mx-auto">
+          Three Things, All Natural
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-tjb-rose-100 flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3 class="text-xl mb-3">Use the App With Your Clients</h3>
+          <p class="text-tjb-gray">Build birth plans, track visits, manage your practice. You do it because it works, not because we asked.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-tjb-rose-100 flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <h3 class="text-xl mb-3">Tell Your Professional Network</h3>
+          <p class="text-tjb-gray">When it comes up with other doulas and midwives, mention it. In person, in your groups, in your DMs. However you naturally share.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-tjb-rose-100 flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m0 0h4a1 1 0 110 2h-1v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6H3a1 1 0 110-2h4zm-2 2v12h10V6H5z"/></svg>
+          </div>
+          <h3 class="text-xl mb-3">Mention TJB in Your Content</h3>
+          <p class="text-tjb-gray">A birth story, a client prep post, a "tools I use" reel. When it fits, not on a schedule. Authentic moments reach more people than scheduled posts ever will.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       APPLY FORM
+       ═══════════════════════════════════════════ -->
+  <section id="apply" class="py-20 md:py-28 bg-tjb-cream">
+    <div class="max-w-2xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="eyebrow mb-4">Apply Now</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+        <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15]">
+          Ready to Join?
+        </h2>
+        <p class="text-lg text-tjb-gray mt-4 max-w-xl mx-auto">
+          Tell us about yourself and your practice. We review every application personally and set up a brief call if it feels like a fit.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-tjb-lavender-200/50">
+        <form id="ambassador-form" class="space-y-5">
+          <div>
+            <label for="amb-name" class="block text-sm font-medium mb-1">Full Name</label>
+            <input type="text" id="amb-name" name="name" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+          </div>
+
+          <div>
+            <label for="amb-email" class="block text-sm font-medium mb-1">Email</label>
+            <input type="email" id="amb-email" name="email" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+          </div>
+
+          <div>
+            <label for="amb-role" class="block text-sm font-medium mb-1">Your Role</label>
+            <select id="amb-role" name="role" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500 bg-white" required>
+              <option value="">Select your role</option>
+              <option value="doula">Birth Doula</option>
+              <option value="postpartum-doula">Postpartum Doula</option>
+              <option value="midwife">Midwife</option>
+              <option value="childbirth-educator">Childbirth Educator</option>
+              <option value="lactation-consultant">Lactation Consultant (IBCLC)</option>
+              <option value="other">Other Birth Professional</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="amb-city" class="block text-sm font-medium mb-1">City & State</label>
+            <input type="text" id="amb-city" name="city" placeholder="e.g., Austin, TX" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+          </div>
+
+          <div>
+            <label for="amb-instagram" class="block text-sm font-medium mb-1">Instagram or Website <span class="text-tjb-gray font-normal">(optional)</span></label>
+            <input type="text" id="amb-instagram" name="instagram" placeholder="@handle or URL" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" />
+          </div>
+
+          <div>
+            <label for="amb-why" class="block text-sm font-medium mb-1">Why do you want to be an ambassador?</label>
+            <textarea id="amb-why" name="why" rows="4" placeholder="A few sentences about your practice and why TJB resonates with you..." class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required></textarea>
+          </div>
+
+          <button type="submit" id="amb-submit-btn" class="w-full bg-tjb-lavender-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 active:translate-y-0 transition">
+            Submit Application
+          </button>
+          <div id="amb-form-status" class="hidden text-sm mt-2"></div>
+        </form>
+
+        <div class="mt-8 pt-6 border-t border-tjb-lavender-200/50 text-center">
+          <p class="text-tjb-gray text-sm">Prefer email? Reach us at <a href="mailto:ambassador@truejoybirthing.com" class="text-tjb-rose-500 hover:underline font-medium">ambassador@truejoybirthing.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FAQ
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-tjb-cream-50 border-t border-tjb-lavender-200/50">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <div>
+            <h3 class="text-lg font-semibold mb-2">{faq.q}</h3>
+            <p class="text-tjb-gray" set:html={faq.a} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       KEEP READING
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-tjb-cream-50 border-t border-tjb-lavender-200/50">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-8 text-center">Learn More About TJB</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="/what-is-a-doula/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-lg font-semibold mb-2 group-hover:text-tjb-rose-500 transition">What Is a Doula?</h3>
+          <p class="text-sm text-tjb-gray">Understand the role, the training, and why doulas matter for birth outcomes.</p>
+        </a>
+        <a href="/how-to-choose-a-doula/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-lg font-semibold mb-2 group-hover:text-tjb-rose-500 transition">How to Choose a Doula</h3>
+          <p class="text-sm text-tjb-gray">Questions to ask, red flags to watch, and how to find the right fit.</p>
+        </a>
+        <a href="/birth-plan-template/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-lg font-semibold mb-2 group-hover:text-tjb-rose-500 transition">Joyful Birth Plan</h3>
+          <p class="text-sm text-tjb-gray">The free birth plan template that started it all. Built from real birth room experience.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  const form = document.getElementById('ambassador-form') as HTMLFormElement;
+  const status = document.getElementById('amb-form-status') as HTMLDivElement;
+  const btn = document.getElementById('amb-submit-btn') as HTMLButtonElement;
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+    const body = Object.fromEntries(data.entries());
+
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+    status.className = 'hidden text-sm mt-2';
+    status.textContent = '';
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...body, source: 'ambassador-program' }),
+      });
+
+      const result = await res.json();
+
+      if (res.ok && result.success) {
+        status.textContent = 'Application received! We\'ll review it and reach out soon.';
+        status.className = 'text-sm mt-2 text-green-700';
+        form.reset();
+      } else {
+        status.textContent = result.error || 'Something went wrong. Please try again or email us directly.';
+        status.className = 'text-sm mt-2 text-red-600';
+      }
+    } catch {
+      status.textContent = 'Network error. Please try again or email ambassador@truejoybirthing.com directly.';
+      status.className = 'text-sm mt-2 text-red-600';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Submit Application';
+    }
+  });
+</script>
