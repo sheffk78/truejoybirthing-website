@@ -6,27 +6,35 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
 const faqs = [
   {
     q: "Who can become a True Joy Birthing ambassador?",
-    a: "Any certified doula, midwife, childbirth educator, or lactation consultant who uses the app with clients and wants to share it with their professional network. You need an active practice and a genuine belief that better birth preparation matters."
+    a: "Any certified doula, midwife, childbirth educator, or lactation consultant with an active practice. If you care about better birth preparation and you want to share a tool that genuinely helps your clients, you're who this is for."
   },
   {
     q: "Is there a minimum number of posts or referrals required?",
-    a: "No. This is a relationship, not a contract. We ask that you use the app with your clients and mention TJB naturally in your content and conversations. No quotas, no renewal gates, no performance tracking. You share because it works, not because someone is counting."
+    a: "No. None. You share when it's real and when it fits. I'll never count your posts or track your referrals. This is a relationship, not a performance contract."
   },
   {
-    q: "How does the free Pro Mode access work?",
-    a: "Once you're accepted as an ambassador, we activate Pro Mode on your account at no cost. It stays active as long as you're in the program. No credit card, no renewal clock, no strings. If you leave the program, your account simply reverts to the standard plan."
+    q: "How does free Pro Mode work?",
+    a: "I flip Pro Mode on in your account. That's it. No credit card, no expiration date, no weird strings. If you ever leave the program, your account just goes back to the free plan. Nothing weird happens."
   },
   {
     q: "Is there a commission or affiliate program?",
-    a: "No. We intentionally skip affiliate tracking because it changes the dynamic from authentic recommendation to sales pitch. When a doula tells another doula about a tool that works, that's real. We don't want to turn your reputation into a funnel metric."
+    a: "No. I know how these programs usually work. They promise community and track you like a sales rep. I didn't want that for TJB, and I'm guessing you don't want it either. When you tell another doula about a tool that works, that's real. I won't turn your word-of-mouth into a number."
   },
   {
     q: "What does being featured on a city page mean?",
-    a: "Your name, photo, and a short bio appear on the True Joy Birthing city page for your area. Moms searching for birth support in your city find you there. It's free professional visibility, similar to a directory listing but on a page that already ranks in search."
+    a: "Your name, photo, and a short bio appear on the TJB city page for your area. When an expecting family searches for birth support in your city, they find you. It's free professional visibility on a page that already ranks in search."
   },
   {
     q: "How do I apply?",
-    a: "Fill out the form on this page or email us directly at <a href=\"mailto:ambassador@truejoybirthing.com\" class=\"text-tjb-rose-500 hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all font-semibold\">ambassador@truejoybirthing.com</a>. We review every application personally. If it feels like a fit, we'll set up a brief call to get to know you and walk you through the app."
+    a: "Fill out the form on this page or email me directly at <a href=\"mailto:ambassador@truejoybirthing.com\" class=\"text-tjb-rose-500 hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all font-semibold\">ambassador@truejoybirthing.com</a>. I read every application myself. If it feels like a fit, I'll reach out by email to set up a quick 15-minute call so we can get to know each other."
+  },
+  {
+    q: "How long does it take to hear back?",
+    a: "I review applications within 2-3 business days. If it's a fit, I'll email you to schedule a short call. Pro Mode gets activated within 24 hours after that."
+  },
+  {
+    q: "What if I want to leave the program?",
+    a: "You leave whenever you want. No notice required, no questions asked. Your account goes back to the free plan, and that's it. No hard feelings ever."
   }
 ];
 
@@ -44,7 +52,7 @@ const faqSchema = {
 
 const articleSchema = {
   "@type": "Article",
-  "headline": "TJB Ambassador Program — Free Pro Mode for Birth Professionals",
+  "headline": "TJB Ambassador Program — Free Pro Mode for Doulas and Midwives",
   "description": "Join the True Joy Birthing ambassador program. Free Pro Mode, featured placement on your city page, and a community of birth professionals making birth better.",
   "author": {
     "@type": "Organization",
@@ -70,7 +78,7 @@ const articleSchema = {
 
 <Layout
   title="Ambassador Program — Free Pro for Doulas & Midwives"
-  description="Join the True Joy Birthing ambassador program. Get free Pro Mode, be featured on your city page, and help more families have confident births. Apply now."
+  description="Join the True Joy Birthing ambassador program. Get free Pro Mode, be featured on your city page, and help more families have confident births. No quotas, no contracts."
   canonical="https://truejoybirthing.com/ambassador/"
   ogImage="https://truejoybirthing.com/images/og-homepage.webp"
   breadcrumbList={breadcrumbList}
@@ -86,14 +94,14 @@ const articleSchema = {
         <div>
           <p class="eyebrow mb-4">For Doulas & Midwives</p>
           <h1 class="text-[2.2rem] md:text-[3rem] leading-[1.12] font-bold text-tjb-charcoal mb-6">
-            Use the App You Love. Help More Families. Get Recognized.
+            You Love the App. Other Birth Pros Should Know About It.
           </h1>
           <p class="text-lg text-tjb-gray leading-relaxed mb-8 max-w-xl">
-            The True Joy Birthing ambassador program is for birth professionals who already use the app with their clients and want to help other doulas and midwives discover it. No quotas. No contracts. Just a better way to work, shared honestly.
+            You already use TJB with your clients. You've probably told other doulas about it already. This just makes it official. Free Pro Mode, a listing on your city page, and a community that amplifies your work. No quotas. No contracts. No tracking.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
-            <a href="#apply" class="btn-primary text-center">
-              Apply to Be an Ambassador
+            <a href="#join" class="btn-primary text-center">
+              Join the Ambassador Program
             </a>
             <a href="#what-you-get" class="btn-secondary text-center">
               See What's Included
@@ -126,7 +134,7 @@ const articleSchema = {
           This Is a Relationship, Not a Contract
         </h2>
         <p class="text-lg text-tjb-gray mt-6 max-w-2xl mx-auto">
-          Most ambassador programs track your posts, count your referrals, and cut you off if you don't perform. We don't. We think birth professionals share tools because they work, not because someone is counting. Here's what makes this different.
+          I know how these programs usually work. They promise community and track you like a sales rep. I didn't want that for TJB, and I'm guessing you don't want it either. Here's what makes this different.
         </p>
       </div>
 
@@ -135,8 +143,8 @@ const articleSchema = {
           <div class="w-12 h-12 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-6">
             <svg class="w-6 h-6 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
           </div>
-          <h3 class="text-xl mb-3">No Affiliate Tracking</h3>
-          <p class="text-tjb-gray">We don't track who you refer or count your conversions. When you tell another doula about a tool that works, that's authentic. We won't turn your reputation into a funnel metric.</p>
+          <h3 class="text-xl mb-3">No Tracking</h3>
+          <p class="text-tjb-gray">I don't count your posts or track who you refer. When you tell another doula about a tool that works, that's real. I won't turn your word-of-mouth into a number.</p>
         </div>
 
         <div class="bg-tjb-cream rounded-xl p-8 border border-tjb-lavender-200/50">
@@ -144,7 +152,7 @@ const articleSchema = {
             <svg class="w-6 h-6 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <h3 class="text-xl mb-3">No Renewal Clock</h3>
-          <p class="text-tjb-gray">Free Pro Mode for as long as you're in the program. No 3-month expirations. No "post once or lose access." If you go quiet for a while, we check in like a friend, not a manager.</p>
+          <p class="text-tjb-gray">Free Pro Mode for as long as you're in the program. No 3-month expirations. No "post once or lose access." If you go quiet for a while, I check in like a friend, not a manager.</p>
         </div>
 
         <div class="bg-tjb-cream rounded-xl p-8 border border-tjb-lavender-200/50">
@@ -152,7 +160,7 @@ const articleSchema = {
             <svg class="w-6 h-6 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
           </div>
           <h3 class="text-xl mb-3">No Quotas</h3>
-          <p class="text-tjb-gray">No minimum posts. No referral targets. No tiers to climb. You share when it's real and when it fits. That's the deal. Authentic advocacy works because it's honest, not because it's measured.</p>
+          <p class="text-tjb-gray">No minimum posts. No referral targets. No tiers to climb. You share when it's real and when it fits. Authentic advocacy works because it's honest, not because it's measured.</p>
         </div>
       </div>
     </div>
@@ -167,7 +175,7 @@ const articleSchema = {
         <p class="eyebrow mb-4">What You Get</p>
         <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
         <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15] max-w-2xl mx-auto">
-          A Real Package, Not a Promo Code
+          Real Benefits, Not Discount Codes
         </h2>
       </div>
 
@@ -178,8 +186,8 @@ const articleSchema = {
             <span class="text-3xl font-bold text-tjb-lavender-600 font-serif">01</span>
             <div>
               <h3 class="text-2xl mb-1">Free Pro Mode</h3>
-              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">$360/year value, always free for ambassadors</p>
-              <p class="text-tjb-gray leading-relaxed">Full Pro Mode access at no cost. Client management, visit tracking, invoicing, birth plan collaboration, notes, the works. You use it because it makes your practice better. We give it to you because that's the point.</p>
+              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">Free. For as long as you're in the program.</p>
+              <p class="text-tjb-gray leading-relaxed">Full Pro Mode access. Client management, visit tracking, invoicing, birth plan collaboration, notes. Every feature, every update, no limits. You use it because it makes your practice better. I give it to you because that's the point.</p>
             </div>
           </div>
         </div>
@@ -190,8 +198,8 @@ const articleSchema = {
             <span class="text-3xl font-bold text-tjb-lavender-600 font-serif">02</span>
             <div>
               <h3 class="text-2xl mb-1">Featured on Your City Page</h3>
-              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">Free professional listing with SEO reach</p>
-              <p class="text-tjb-gray leading-relaxed">Your name, photo, and bio on the True Joy Birthing city page for your area. When a mom searches for birth support in your city, she finds you. This is the kind of visibility practices pay directories hundreds per year for. You get it because you're part of the community.</p>
+              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">Families in your area find you</p>
+              <p class="text-tjb-gray leading-relaxed">Your name, photo, and bio on the TJB city page for your area. When an expecting family searches for birth support in your city, they find you. You get it because you're part of the community.</p>
             </div>
           </div>
         </div>
@@ -201,9 +209,9 @@ const articleSchema = {
           <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-8 items-start">
             <span class="text-3xl font-bold text-tjb-lavender-600 font-serif">03</span>
             <div>
-              <h3 class="text-2xl mb-1">TJB Amplifies Your Work</h3>
-              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">Cross-promotion that grows your audience</p>
-              <p class="text-tjb-gray leading-relaxed">We repost your content, tag you in our stories, and feature you on our pages. Your audience grows with ours. When you post about birth prep or client wins, we help more people see it. This is cross-promotion, not one-way extraction.</p>
+              <h3 class="text-2xl mb-1">More Eyes on Your Work</h3>
+              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">I amplify your content, you amplify mine</p>
+              <p class="text-tjb-gray leading-relaxed">I repost your content, tag you in stories, and feature you on TJB's pages. Your audience grows with ours. When you post about birth prep or client wins, I help more people see it. Cross-promotion, not one-way extraction.</p>
             </div>
           </div>
         </div>
@@ -214,8 +222,8 @@ const articleSchema = {
             <span class="text-3xl font-bold text-tjb-lavender-600 font-serif">04</span>
             <div>
               <h3 class="text-2xl mb-1">TJB Partner Badge</h3>
-              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">Social proof for your site, IG, and cards</p>
-              <p class="text-tjb-gray leading-relaxed">A clean credential you can display on your website, social profiles, and business cards. "True Joy Birthing Partner" says you use professional tools and take your practice seriously. Simple, credible, and earned.</p>
+              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">A credential that actually means something</p>
+              <p class="text-tjb-gray leading-relaxed">A clean credential for your website, social profiles, and business cards. "True Joy Birthing Partner" says you use professional tools and take your practice seriously. Simple, credible, and earned.</p>
             </div>
           </div>
         </div>
@@ -225,12 +233,17 @@ const articleSchema = {
           <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-8 items-start">
             <span class="text-3xl font-bold text-tjb-lavender-600 font-serif">05</span>
             <div>
-              <h3 class="text-2xl mb-1">Early Access and Real Input</h3>
-              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">Shape the tool you use every day</p>
-              <p class="text-tjb-gray leading-relaxed">New features come to ambassadors first. Your feedback drives real product decisions. When you say "I wish the app did X," we listen. You're not a user we market to. You're a professional we build with.</p>
+              <h3 class="text-2xl mb-1">You Help Build What Comes Next</h3>
+              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">Early access and real input</p>
+              <p class="text-tjb-gray leading-relaxed">New features come to ambassadors first. When you tell me something should work differently, I listen. You're not a user I market to. You're a professional I build with.</p>
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- Mid-page CTA -->
+      <div class="mt-12 text-center">
+        <a href="#join" class="btn-primary">Join the Ambassador Program</a>
       </div>
     </div>
   </section>
@@ -241,10 +254,10 @@ const articleSchema = {
   <section class="py-20 md:py-28 bg-white">
     <div class="max-w-5xl mx-auto px-6">
       <div class="text-center mb-16">
-        <p class="eyebrow mb-4">What We Ask</p>
+        <p class="eyebrow mb-4">What I Ask</p>
         <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
         <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15] max-w-2xl mx-auto">
-          Three Things, All Natural
+          Three Things. Nothing Complicated.
         </h2>
       </div>
 
@@ -254,7 +267,7 @@ const articleSchema = {
             <svg class="w-8 h-8 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           </div>
           <h3 class="text-xl mb-3">Use the App With Your Clients</h3>
-          <p class="text-tjb-gray">Build birth plans, track visits, manage your practice. You do it because it works, not because we asked.</p>
+          <p class="text-tjb-gray">Build birth plans, track visits, manage your practice. You do it because it works, not because I asked.</p>
         </div>
 
         <div class="text-center">
@@ -279,16 +292,16 @@ const articleSchema = {
   <!-- ═══════════════════════════════════════════
        APPLY FORM
        ═══════════════════════════════════════════ -->
-  <section id="apply" class="py-20 md:py-28 bg-tjb-cream">
+  <section id="join" class="py-20 md:py-28 bg-tjb-cream">
     <div class="max-w-2xl mx-auto px-6">
       <div class="text-center mb-12">
-        <p class="eyebrow mb-4">Apply Now</p>
+        <p class="eyebrow mb-4">Join the Program</p>
         <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
         <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15]">
-          Ready to Join?
+          Ready?
         </h2>
         <p class="text-lg text-tjb-gray mt-4 max-w-xl mx-auto">
-          Tell us about yourself and your practice. We review every application personally and set up a brief call if it feels like a fit.
+          Tell me about yourself and your practice. I read every application myself. If it feels like a fit, I'll reach out by email to set up a quick 15-minute call so we can get to know each other.
         </p>
       </div>
 
@@ -328,18 +341,44 @@ const articleSchema = {
           </div>
 
           <div>
-            <label for="amb-why" class="block text-sm font-medium mb-1">Why do you want to be an ambassador?</label>
-            <textarea id="amb-why" name="why" rows="4" placeholder="A few sentences about your practice and why TJB resonates with you..." class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required></textarea>
+            <label for="amb-why" class="block text-sm font-medium mb-1">What interests you most about this? <span class="text-tjb-gray font-normal">(optional)</span></label>
+            <textarea id="amb-why" name="why" rows="3" placeholder="A sentence or two about your practice and why TJB resonates with you..." class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500"></textarea>
           </div>
 
           <button type="submit" id="amb-submit-btn" class="w-full bg-tjb-lavender-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 active:translate-y-0 transition">
-            Submit Application
+            Get Started
           </button>
           <div id="amb-form-status" class="hidden text-sm mt-2"></div>
+          <p class="text-xs text-tjb-gray text-center mt-2">I'll never share your information. You can leave the program at any time.</p>
         </form>
 
         <div class="mt-8 pt-6 border-t border-tjb-lavender-200/50 text-center">
-          <p class="text-tjb-gray text-sm">Prefer email? Reach us at <a href="mailto:ambassador@truejoybirthing.com" class="text-tjb-rose-500 hover:underline font-medium">ambassador@truejoybirthing.com</a></p>
+          <p class="text-tjb-gray text-sm">Prefer email? Reach out directly at <a href="mailto:ambassador@truejoybirthing.com" class="text-tjb-rose-500 hover:underline font-medium">ambassador@truejoybirthing.com</a></p>
+        </div>
+      </div>
+
+      <!-- What happens next -->
+      <div class="mt-10 bg-white rounded-2xl p-8 shadow-sm border border-tjb-lavender-200/50">
+        <h3 class="text-lg font-semibold mb-4 text-center">What Happens Next</h3>
+        <div class="grid md:grid-cols-3 gap-6 text-center">
+          <div>
+            <div class="w-10 h-10 rounded-full bg-tjb-lavender-100 flex items-center justify-center mx-auto mb-3">
+              <span class="text-tjb-lavender-600 font-bold">1</span>
+            </div>
+            <p class="text-sm text-tjb-gray">I review your application within 2-3 business days</p>
+          </div>
+          <div>
+            <div class="w-10 h-10 rounded-full bg-tjb-lavender-100 flex items-center justify-center mx-auto mb-3">
+              <span class="text-tjb-lavender-600 font-bold">2</span>
+            </div>
+            <p class="text-sm text-tjb-gray">Quick 15-minute call to get to know each other</p>
+          </div>
+          <div>
+            <div class="w-10 h-10 rounded-full bg-tjb-lavender-100 flex items-center justify-center mx-auto mb-3">
+              <span class="text-tjb-lavender-600 font-bold">3</span>
+            </div>
+            <p class="text-sm text-tjb-gray">Pro Mode activated within 24 hours. You're in.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -399,7 +438,7 @@ const articleSchema = {
     const body = Object.fromEntries(data.entries());
 
     btn.disabled = true;
-    btn.textContent = 'Submitting...';
+    btn.textContent = 'Sending...';
     status.className = 'hidden text-sm mt-2';
     status.textContent = '';
 
@@ -413,11 +452,11 @@ const articleSchema = {
       const result = await res.json();
 
       if (res.ok && result.success) {
-        status.textContent = 'Application received! We\'ll review it and reach out soon.';
+        status.textContent = 'Got it! I\'ll review your application and reach out within 2-3 business days.';
         status.className = 'text-sm mt-2 text-green-700';
         form.reset();
       } else {
-        status.textContent = result.error || 'Something went wrong. Please try again or email us directly.';
+        status.textContent = result.error || 'Something went wrong. Please try again or email me directly.';
         status.className = 'text-sm mt-2 text-red-600';
       }
     } catch {
@@ -425,7 +464,7 @@ const articleSchema = {
       status.className = 'text-sm mt-2 text-red-600';
     } finally {
       btn.disabled = false;
-      btn.textContent = 'Submit Application';
+      btn.textContent = 'Get Started';
     }
   });
 </script>
