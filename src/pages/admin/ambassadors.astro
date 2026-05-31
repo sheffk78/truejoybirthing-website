@@ -166,35 +166,44 @@
     var token = '';
     var API_BASE = '/api/admin/ambassadors';
 
-    // Check for token in URL hash (from bookmark)
-    var hashToken = window.location.hash.slice(1);
-    if (hashToken) {
-      token = hashToken;
-      verifyAndLoad();
+    function init() {
+      // Check for token in URL hash (from bookmark)
+      var hashToken = window.location.hash.slice(1);
+      if (hashToken) {
+        token = hashToken;
+        verifyAndLoad();
+      }
+
+      document.getElementById('login-btn').addEventListener('click', function() {
+        token = document.getElementById('token-input').value.trim();
+        if (token) verifyAndLoad();
+      });
+
+      document.getElementById('token-input').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') document.getElementById('login-btn').click();
+      });
+
+      // Filter buttons
+      document.getElementById('filters').addEventListener('click', function(e) {
+        if (e.target.classList.contains('filter-btn')) {
+          document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+          e.target.classList.add('active');
+          loadAmbassadors(e.target.dataset.status);
+        }
+      });
+
+      document.getElementById('refresh-btn').addEventListener('click', function() {
+        var activeFilter = document.querySelector('.filter-btn.active');
+        loadAmbassadors(activeFilter ? activeFilter.dataset.status : 'all');
+      });
     }
 
-    document.getElementById('login-btn').addEventListener('click', function() {
-      token = document.getElementById('token-input').value.trim();
-      if (token) verifyAndLoad();
-    });
-
-    document.getElementById('token-input').addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') document.getElementById('login-btn').click();
-    });
-
-    // Filter buttons
-    document.getElementById('filters').addEventListener('click', function(e) {
-      if (e.target.classList.contains('filter-btn')) {
-        document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
-        e.target.classList.add('active');
-        loadAmbassadors(e.target.dataset.status);
-      }
-    });
-
-    document.getElementById('refresh-btn').addEventListener('click', function() {
-      var activeFilter = document.querySelector('.filter-btn.active');
-      loadAmbassadors(activeFilter ? activeFilter.dataset.status : 'all');
-    });
+    // Run on DOM ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
 
     function verifyAndLoad() {
       fetch(API_BASE + '?token=' + encodeURIComponent(token) + '&limit=1')
