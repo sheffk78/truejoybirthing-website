@@ -78,7 +78,7 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
               AMB_STATUS: 'applied',
               AMB_APPLIED_AT: new Date().toISOString(),
             },
-            listIds: [7],
+            listIds: [6],
             updateEnabled: true,
           }),
         });
