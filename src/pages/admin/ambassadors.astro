@@ -1,0 +1,357 @@
+---
+// Admin dashboard - noindex, no public link
+// Auth: requires valid token in URL hash
+// This page is intentionally not in the sitemap and uses a minimal layout
+---
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TJB Ambassador Admin</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <style>
+    :root {
+      --bg: #f9f7f5;
+      --card: #ffffff;
+      --border: #e5ddd5;
+      --text: #2d2a26;
+      --muted: #7a736b;
+      --accent: #8b7bb5;
+      --accent-light: #e8e4f0;
+      --rose: #c4767e;
+      --rose-light: #f5e6e8;
+      --green: #5a9a6b;
+      --green-light: #e6f2ea;
+      --yellow: #b8962e;
+      --yellow-light: #faf3de;
+      --red: #c0392b;
+      --red-light: #fceae8;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 24px 16px; }
+    
+    header { padding: 20px 0; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+    header h1 { font-size: 1.5rem; font-weight: 700; }
+    header p { color: var(--muted); font-size: 0.875rem; margin-top: 4px; }
+    
+    .login { max-width: 400px; margin: 80px auto; text-align: center; }
+    .login h2 { font-size: 1.25rem; margin-bottom: 16px; }
+    .login input { width: 100%; padding: 12px 16px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; margin-bottom: 12px; }
+    .login button { width: 100%; padding: 12px; background: var(--accent); color: white; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; }
+    .login button:hover { background: #7a6aa5; }
+    .login .error { color: var(--red); font-size: 0.875rem; margin-top: 8px; }
+    
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 24px; }
+    .stat-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; text-align: center; }
+    .stat-card .number { font-size: 2rem; font-weight: 700; }
+    .stat-card .label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 4px; }
+    
+    .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+    .filter-btn { padding: 6px 16px; border: 1px solid var(--border); border-radius: 20px; background: var(--card); font-size: 0.875rem; cursor: pointer; transition: all 0.15s; }
+    .filter-btn:hover { border-color: var(--accent); }
+    .filter-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+    
+    .table-wrap { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    table { width: 100%; border-collapse: collapse; }
+    th { background: var(--bg); padding: 12px 16px; text-align: left; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); border-bottom: 1px solid var(--border); }
+    td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 0.875rem; vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover { background: #faf8f6; }
+    
+    .badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
+    .badge-applied { background: var(--yellow-light); color: var(--yellow); }
+    .badge-reviewing { background: var(--accent-light); color: var(--accent); }
+    .badge-active { background: var(--green-light); color: var(--green); }
+    .badge-paused { background: #f0f0f0; color: #666; }
+    .badge-declined { background: var(--red-light); color: var(--red); }
+    .badge-left { background: #f0f0f0; color: #999; }
+    
+    .actions { display: flex; gap: 4px; }
+    .actions select { padding: 4px 8px; border: 1px solid var(--border); border-radius: 6px; font-size: 0.8rem; background: white; cursor: pointer; }
+    .actions button { padding: 4px 10px; background: var(--accent); color: white; border: none; border-radius: 6px; font-size: 0.8rem; cursor: pointer; }
+    .actions button:hover { background: #7a6aa5; }
+    .actions button:disabled { opacity: 0.5; cursor: not-allowed; }
+    
+    .empty { text-align: center; padding: 60px 20px; color: var(--muted); }
+    .empty p:first-child { font-size: 1.25rem; margin-bottom: 4px; }
+    
+    .refresh-btn { padding: 6px 16px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; font-size: 0.875rem; cursor: pointer; margin-left: 12px; }
+    .refresh-btn:hover { border-color: var(--accent); }
+    
+    .loading { text-align: center; padding: 40px; color: var(--muted); }
+    
+    .why-text { max-width: 280px; font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
+    .why-toggle { color: var(--accent); cursor: pointer; font-size: 0.8rem; }
+    .why-toggle:hover { text-decoration: underline; }
+    
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    
+    .toast { position: fixed; bottom: 24px; right: 24px; padding: 12px 20px; border-radius: 8px; color: white; font-size: 0.875rem; transform: translateY(100px); transition: transform 0.3s ease; z-index: 100; }
+    .toast.show { transform: translateY(0); }
+    .toast.success { background: var(--green); }
+    .toast.error { background: var(--red); }
+    
+    @media (max-width: 768px) {
+      .container { padding: 16px 8px; }
+      .stats { grid-template-columns: repeat(3, 1fr); }
+      th:nth-child(4), td:nth-child(4), th:nth-child(5), td:nth-child(5) { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="app">
+    <!-- Login screen (shown when no valid token) -->
+    <div id="login-screen" class="login">
+      <h2>TJB Ambassador Admin</h2>
+      <p style="color:var(--muted);margin-bottom:24px;">Enter admin token to continue</p>
+      <input type="password" id="token-input" placeholder="Admin token" />
+      <button id="login-btn">Sign In</button>
+      <div id="login-error" class="error" style="display:none;"></div>
+    </div>
+
+    <!-- Dashboard (shown after auth) -->
+    <div id="dashboard" style="display:none;">
+      <header>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <h1>TJB Ambassador Program</h1>
+            <p id="last-refresh">Loading...</p>
+          </div>
+          <button class="refresh-btn" id="refresh-btn">↻ Refresh</button>
+        </div>
+      </header>
+
+      <div class="stats" id="stats"></div>
+
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-status="all">All</button>
+        <button class="filter-btn" data-status="applied">Applied</button>
+        <button class="filter-btn" data-status="reviewing">Reviewing</button>
+        <button class="filter-btn" data-status="active">Active</button>
+        <button class="filter-btn" data-status="paused">Paused</button>
+        <button class="filter-btn" data-status="declined">Declined</button>
+        <button class="filter-btn" data-status="left">Left</button>
+      </div>
+
+      <div class="table-wrap">
+        <div id="loading" class="loading">Loading ambassadors...</div>
+        <table id="ambassador-table" style="display:none;">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th>City</th>
+              <th>Instagram / Website</th>
+              <th>Applied</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="ambassador-body"></tbody>
+        </table>
+        <div id="empty-state" class="empty" style="display:none;">
+          <p>No ambassadors found</p>
+          <p>Applications will appear here when doulas and midwives submit the form.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script is:inline>
+    var token = '';
+    var API_BASE = '/api/admin/ambassadors';
+
+    // Check for token in URL hash (from bookmark)
+    var hashToken = window.location.hash.slice(1);
+    if (hashToken) {
+      token = hashToken;
+      verifyAndLoad();
+    }
+
+    document.getElementById('login-btn').addEventListener('click', function() {
+      token = document.getElementById('token-input').value.trim();
+      if (token) verifyAndLoad();
+    });
+
+    document.getElementById('token-input').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') document.getElementById('login-btn').click();
+    });
+
+    // Filter buttons
+    document.getElementById('filters').addEventListener('click', function(e) {
+      if (e.target.classList.contains('filter-btn')) {
+        document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+        e.target.classList.add('active');
+        loadAmbassadors(e.target.dataset.status);
+      }
+    });
+
+    document.getElementById('refresh-btn').addEventListener('click', function() {
+      var activeFilter = document.querySelector('.filter-btn.active');
+      loadAmbassadors(activeFilter ? activeFilter.dataset.status : 'all');
+    });
+
+    function verifyAndLoad() {
+      fetch(API_BASE + '?token=' + encodeURIComponent(token) + '&limit=1')
+        .then(function(res) {
+          if (res.ok) {
+            window.location.hash = token;
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'block';
+            loadAmbassadors('all');
+          } else {
+            showLoginError('Invalid token');
+          }
+        })
+        .catch(function() { showLoginError('Connection error'); });
+    }
+
+    function showLoginError(msg) {
+      var el = document.getElementById('login-error');
+      el.textContent = msg;
+      el.style.display = 'block';
+    }
+
+    var allAmbassadors = [];
+
+    function loadAmbassadors(status) {
+      var loadingEl = document.getElementById('loading');
+      var tableEl = document.getElementById('ambassador-table');
+      var emptyEl = document.getElementById('empty-state');
+      
+      loadingEl.style.display = 'block';
+      tableEl.style.display = 'none';
+      emptyEl.style.display = 'none';
+
+      fetch(API_BASE + '?token=' + encodeURIComponent(token) + '&status=' + status + '&limit=100')
+        .then(function(res) {
+          if (!res.ok) { showToast('Failed to load ambassadors', 'error'); loadingEl.style.display = 'none'; return null; }
+          return res.json();
+        })
+        .then(function(data) {
+          if (!data) return;
+          allAmbassadors = data.contacts || [];
+          updateStats(allAmbassadors);
+
+          var tbody = document.getElementById('ambassador-body');
+          tbody.innerHTML = '';
+
+          if (allAmbassadors.length === 0) {
+            loadingEl.style.display = 'none';
+            emptyEl.style.display = 'block';
+            return;
+          }
+
+          allAmbassadors.forEach(function(amb) {
+            var tr = document.createElement('tr');
+            var appliedDate = amb.appliedAt ? new Date(amb.appliedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'N/A';
+            var whyPreview = amb.why ? (amb.why.length > 60 ? amb.why.substring(0, 60) + '...' : amb.why) : '\u2014';
+            var whyFull = amb.why || '';
+            var whyEl = amb.why 
+              ? '<span class="why-toggle" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display===\'none\'?\'block\':\'none\';this.style.display=\'none\';">' + whyPreview + '</span><span style="display:none;" class="why-text">' + whyFull + '</span>'
+              : '\u2014';
+            
+            var socialLink = '\u2014';
+            if (amb.instagram) {
+              if (amb.instagram.startsWith('@')) {
+                socialLink = '<a href="https://instagram.com/' + amb.instagram.slice(1) + '" target="_blank">' + amb.instagram + '</a>';
+              } else if (amb.instagram.startsWith('http')) {
+                var displayUrl = amb.instagram.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
+                socialLink = '<a href="' + amb.instagram + '" target="_blank">' + displayUrl + '</a>';
+              } else {
+                socialLink = amb.instagram;
+              }
+            }
+
+            tr.innerHTML = '<td><strong>' + (amb.firstName || '') + ' ' + (amb.lastName || '') + '</strong><br><span style="font-size:0.75rem;color:var(--muted);">' + amb.email + '</span></td>' +
+              '<td>' + formatRole(amb.role) + '</td>' +
+              '<td>' + (amb.city || '\u2014') + '</td>' +
+              '<td>' + socialLink + '</td>' +
+              '<td>' + appliedDate + '</td>' +
+              '<td><span class="badge badge-' + amb.status + '">' + amb.status + '</span></td>' +
+              '<td><div class="actions">' +
+              '<select id="status-' + amb.email + '" data-email="' + amb.email + '">' +
+              '<option value="applied"' + (amb.status === 'applied' ? ' selected' : '') + '>Applied</option>' +
+              '<option value="reviewing"' + (amb.status === 'reviewing' ? ' selected' : '') + '>Reviewing</option>' +
+              '<option value="active"' + (amb.status === 'active' ? ' selected' : '') + '>Active</option>' +
+              '<option value="paused"' + (amb.status === 'paused' ? ' selected' : '') + '>Paused</option>' +
+              '<option value="declined"' + (amb.status === 'declined' ? ' selected' : '') + '>Declined</option>' +
+              '<option value="left"' + (amb.status === 'left' ? ' selected' : '') + '>Left</option>' +
+              '</select><button onclick="updateStatus(\'' + amb.email + '\')">Save</button></div>' +
+              (whyFull ? '<div style="margin-top:6px;">' + whyEl + '</div>' : '') +
+              '</td>';
+            tbody.appendChild(tr);
+          });
+
+          loadingEl.style.display = 'none';
+          tableEl.style.display = 'table';
+          document.getElementById('last-refresh').textContent = 'Last updated: ' + new Date().toLocaleTimeString();
+        })
+        .catch(function() { showToast('Error loading ambassadors', 'error'); loadingEl.style.display = 'none'; });
+    }
+
+    function updateStats(contacts) {
+      var counts = {
+        total: contacts.length,
+        applied: contacts.filter(function(c) { return c.status === 'applied'; }).length,
+        reviewing: contacts.filter(function(c) { return c.status === 'reviewing'; }).length,
+        active: contacts.filter(function(c) { return c.status === 'active'; }).length,
+      };
+      document.getElementById('stats').innerHTML = '<div class="stat-card"><div class="number">' + counts.total + '</div><div class="label">Total</div></div>' +
+        '<div class="stat-card"><div class="number" style="color:var(--yellow)">' + counts.applied + '</div><div class="label">Applied</div></div>' +
+        '<div class="stat-card"><div class="number" style="color:var(--accent)">' + counts.reviewing + '</div><div class="label">Reviewing</div></div>' +
+        '<div class="stat-card"><div class="number" style="color:var(--green)">' + counts.active + '</div><div class="label">Active</div></div>';
+    }
+
+    function formatRole(role) {
+      var roles = {
+        'doula': 'Birth Doula',
+        'postpartum-doula': 'Postpartum Doula',
+        'midwife': 'Midwife',
+        'childbirth-educator': 'Childbirth Educator',
+        'lactation-consultant': 'IBCLC',
+        'other': 'Other',
+      };
+      return roles[role] || role || '\u2014';
+    }
+
+    function updateStatus(email) {
+      var select = document.getElementById('status-' + email);
+      var newStatus = select.value;
+      var btn = select.nextElementSibling;
+      btn.disabled = true;
+      btn.textContent = '...';
+
+      fetch(API_BASE + '?token=' + encodeURIComponent(token), {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, status: newStatus }),
+      })
+        .then(function(res) {
+          if (res.ok) {
+            showToast('Updated ' + email + ' \u2192 ' + newStatus, 'success');
+            var activeFilter = document.querySelector('.filter-btn.active');
+            loadAmbassadors(activeFilter ? activeFilter.dataset.status : 'all');
+          } else {
+            showToast('Failed to update status', 'error');
+            btn.disabled = false;
+            btn.textContent = 'Save';
+          }
+        })
+        .catch(function() { showToast('Connection error', 'error'); btn.disabled = false; btn.textContent = 'Save'; });
+    }
+
+    function showToast(msg, type) {
+      var toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.className = 'toast ' + type + ' show';
+      setTimeout(function() { toast.className = 'toast ' + type; }, 3000);
+    }
+  </script>
+</body>
+</html>
