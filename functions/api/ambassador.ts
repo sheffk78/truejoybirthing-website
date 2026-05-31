@@ -28,6 +28,7 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
       role?: string;
       city?: string;
       instagram?: string;
+      audience?: string;
       why?: string;
     };
 
@@ -36,6 +37,7 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
     const role = (body.role || '').trim();
     const city = (body.city || '').trim();
     const instagram = (body.instagram || '').trim();
+    const audience = (body.audience || '').trim();
     const why = (body.why || '').trim();
 
     // Validate required fields
@@ -74,6 +76,7 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
               AMB_ROLE: role,
               AMB_CITY: city,
               AMB_INSTAGRAM: instagram,
+              AMB_AUDIENCE: audience,
               AMB_WHY: why,
               AMB_STATUS: 'applied',
               AMB_APPLIED_AT: new Date().toISOString(),
@@ -99,6 +102,7 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
       `Role: ${role}`,
       `City: ${city}`,
       `Instagram/Website: ${instagram || 'Not provided'}`,
+      `Audience size: ${audience || 'Not provided'}`,
       `Why TJB: ${why || 'Not provided'}`,
       ``,
       `View all ambassador contacts in Brevo: https://app.brevo.com/contacts → List "TJB Ambassadors"`,

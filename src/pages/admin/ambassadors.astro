@@ -145,6 +145,7 @@
               <th>Role</th>
               <th>City</th>
               <th>Instagram / Website</th>
+              <th>Audience</th>
               <th>Applied</th>
               <th>Status</th>
               <th>Actions</th>
@@ -281,6 +282,7 @@
               '<td>' + formatRole(amb.role) + '</td>' +
               '<td>' + (amb.city || '\u2014') + '</td>' +
               '<td>' + socialLink + '</td>' +
+              '<td>' + formatAudience(amb.audience) + '</td>' +
               '<td>' + appliedDate + '</td>' +
               '<td><span class="badge badge-' + amb.status + '">' + amb.status + '</span></td>' +
               '<td><div class="actions">' +
@@ -327,6 +329,17 @@
         'other': 'Other',
       };
       return roles[role] || role || '\u2014';
+    }
+
+    function formatAudience(audience) {
+      var sizes = {
+        'under-100': '< 100',
+        '100-500': '100\u2013500',
+        '500-1000': '500\u20131K',
+        '1000-5000': '1K\u20135K',
+        '5000-plus': '5K+',
+      };
+      return sizes[audience] || audience || '\u2014';
     }
 
     function updateStatus(email) {

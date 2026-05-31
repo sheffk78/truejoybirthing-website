@@ -84,6 +84,7 @@ export const onRequestGet = async (context: { request: Request; env: Env }) => {
             role: detail.attributes?.AMB_ROLE || '',
             city: detail.attributes?.AMB_CITY || '',
             instagram: detail.attributes?.AMB_INSTAGRAM || '',
+            audience: detail.attributes?.AMB_AUDIENCE || '',
             why: detail.attributes?.AMB_WHY || '',
             status: detail.attributes?.AMB_STATUS || 'applied',
             appliedAt: detail.attributes?.AMB_APPLIED_AT || '',
