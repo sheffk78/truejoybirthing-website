@@ -443,10 +443,10 @@ const articleSchema = {
     status.textContent = '';
 
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('/api/ambassador', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...body, source: 'ambassador-program' }),
+        body: JSON.stringify(body),
       });
 
       const result = await res.json();
