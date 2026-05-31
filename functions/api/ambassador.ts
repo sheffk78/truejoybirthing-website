@@ -87,9 +87,10 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
       }
     }
 
-    // ── AgentMail: Notify Shelby/Team of new application ──
-    const inboxId = 'ambassador@truejoybirthing.com';
-    const emailSubject = `New Ambassador Application: ${name} (${role})`;
+    // ── AgentMail: Notify team of new application ──
+    // Using support@ inbox until ambassador@ inbox is created in AgentMail
+    const inboxId = 'support@truejoybirthing.com';
+    const emailSubject = `[Ambassador] New Application: ${name} (${role})`;
     const emailBody = [
       `New ambassador application from truejoybirthing.com/ambassador`,
       ``,
