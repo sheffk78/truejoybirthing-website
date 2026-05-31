@@ -2,6 +2,15 @@
 User-agent: *
 Allow: /
 
+# Block Cloudflare Pages preview URLs
+User-agent: *
+Disallow: /website_*/
+
+# Block staging/preview patterns
+Disallow: /preview/
+Disallow: /staging/
+Disallow: /*?preview=*
+
 # Explicitly allow AI citation crawlers (GEO optimization)
 User-agent: ClaudeBot
 Allow: /

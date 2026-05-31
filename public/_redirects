@@ -123,6 +123,37 @@
 /postpartum /postpartum-doula/ 301
 
 # ════════════════════════════════════════════════════════════
+# ADDITIONAL OLD WORDPRESS SLUGS → NEW PAGES (analytics 404 audit)
+# ════════════════════════════════════════════════════════════
+
+/birth-doula-vs-midwife-the-differences /doula-vs-midwife/ 301
+/birth-doula-vs-midwife-the-differences/ /doula-vs-midwife/ 301
+/create-your-hospital-birth-plan-template /hospital-birth-plan/ 301
+/create-your-hospital-birth-plan-template/ /hospital-birth-plan/ 301
+/joyful-birth-plan /birth-plan-template/ 301
+/joyful-birth-plan/ /birth-plan-template/ 301
+/birth-plan /birth-plan-template/ 301
+/birth-plan/ /birth-plan-template/ 301
+/free-birth-plan-template /birth-plan-template/ 301
+/free-birth-plan-template/ /birth-plan-template/ 301
+/hospital-birth-plan-template /hospital-birth-plan/ 301
+/hospital-birth-plan-template/ /hospital-birth-plan/ 301
+/birth-doula-cost /doula-cost/ 301
+/birth-doula-cost/ /doula-cost/ 301
+/birth-doula-near-me /doula-near-me/ 301
+/birth-doula-near-me/ /doula-near-me/ 301
+/what-is-a-birth-doula /what-is-a-doula/ 301
+/what-is-a-birth-doula/ /what-is-a-doula/ 301
+/benefits-of-having-a-doula /benefits-of-a-doula/ 301
+/benefits-of-having-a-doula/ /benefits-of-a-doula/ 301
+/doula-interview /doula-interview-questions/ 301
+/doula-interview/ /doula-interview-questions/ 301
+/how-to-choose-a-birth-doula /how-to-choose-a-doula/ 301
+/how-to-choose-a-birth-doula/ /how-to-choose-a-doula/ 301
+/birth-center-near /birth-center-near-me/ 301
+/birth-center-near/ /birth-center-near-me/ 301
+
+# ════════════════════════════════════════════════════════════
 # OLD CITY PAGES → NEW CITY PAGES
 # ════════════════════════════════════════════════════════════
 
