@@ -122,7 +122,7 @@ Small touches make powerful differences during labor.
 
  The right atmosphere connects seamlessly with natural birthing methods, keeping you centered and supported. 
 
- For specific hospital doula policies and local birth environment details, check our city guides like <a href="/birth-support/phoenix-az/">Phoenix, AZ</a> and <a href="/birth-support/philadelphia-pa/">Philadelphia, PA</a> — they include which hospitals allow doulas, NICU levels, and local birth center options.
+ For specific hospital doula policies and local birth environment details, check our city guides like <a href="/birth-support/phoenix-az/">Phoenix, AZ</a> and <a href="/birth-support/portland-or/">Portland, OR</a> — they include which hospitals allow doulas, NICU levels, and local birth center options. Facilities like <a href="/birth-support/new-york-ny/">New York, NY</a>'s Mount Sinai and <a href="/birth-support/dallas-tx/">Dallas, TX</a>'s Texas Health Presbyterian each have their own protocols, so knowing what to expect at your location helps you prepare your birth environment.
 
 Each element works together, creating a foundation for bringing your baby earthside with confidence and peace.
 
@@ -165,7 +165,7 @@ Each choice and preparation step builds toward the moment you meet your little o
 – Hospital staff collaborate alongside your team**
 Your birthing preferences guide how each member contributes to your experience. Open dialogue helps everyone work together smoothly. 
 
- Regular updates and shared birth wishes keep your team focused on your goals.
+ Regular updates and shared birth wishes keep your team focused on your goals. Whether you're delivering at <a href="/birth-support/houston-tx/">Houston, TX</a>'s Texas Medical Center, <a href="/birth-support/austin-tx/">Austin, TX</a>'s St. David's, or <a href="/birth-support/chicago-il/">Chicago, IL</a>'s Prentice Women's Hospital, a doula who knows the local facility can help coordinate smoothly with staff.
 
 Planning early allows time to define specific roles. 
 
@@ -191,7 +191,7 @@ Each contraction pattern tells its own story.
 **Clear Communication****
 Your medical team receives regular updates about your progress and wishes. Through my partnership with hospital staff, your birth preferences remain central as we explore options during labor. 
 
- This relationship with your doula keeps everyone aligned with your vision while respecting medical guidance. 
+ This relationship with your doula keeps everyone aligned with your vision while respecting medical guidance. Whether you're giving birth at <a href="/birth-support/minneapolis-mn/">Minneapolis, MN</a>'s Abbott Northwestern or <a href="/birth-support/phoenix-az/">Phoenix, AZ</a>'s Banner University, a doula who understands your hospital's culture helps turn preferences into reality. 
 
 **Comfort Through Transitions****
 Labor changes call for flexible support methods. From soothing touch techniques to creating a peaceful environment, my support adapts to match your needs. 
@@ -206,7 +206,7 @@ Physical comfort measures blend with emotional encouragement, helping you stay c
 
  Take time to meet with childbirth educators and explore pediatric options in your area. 
 
- Your support team should include both medical professionals and emotional care providers who resonate with your birth wishes.
+ Your support team should include both medical professionals and emotional care providers who resonate with your birth wishes. From <a href="/birth-support/denver-co/">Denver, CO</a>'s UCHealth to <a href="/birth-support/san-antonio-tx/">San Antonio, TX</a>'s Methodist Hospital, different regions have different networks of doulas, midwives, and birth educators — so building your team locally matters.
 
 Strong Steps Forward:**
 • Meet with local doulas and midwives offering continuous care**

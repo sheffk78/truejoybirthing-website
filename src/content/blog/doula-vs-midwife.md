@@ -72,7 +72,7 @@ Breastfeeding support expertise
 
  Families choosing home birth work with midwives in their personal space. 
 
- Each path offers unique benefits for different birth plans. For local hospital and birth center details — including NICU levels and doula policies — check our city guides like <a href="/birth-support/dallas-tx/">Dallas, TX</a> and <a href="/birth-support/austin-tx/">Austin, TX</a>. 
+ Each path offers unique benefits for different birth plans. For local hospital and birth center details — including NICU levels and doula policies — check our city guides like <a href="/birth-support/dallas-tx/">Dallas, TX</a> and <a href="/birth-support/austin-tx/">Austin, TX</a>. If you're considering a birth center, <a href="/birth-support/portland-or/">Portland, OR</a>'s Andaluz Waterbirth Center and <a href="/birth-support/houston-tx/">Houston, TX</a>'s Texas Medical Center represent two very different approaches to childbirth.
 
 **Birth Setting Success Rates:**
 
@@ -84,7 +84,7 @@ Breastfeeding support expertise
 
  Your OB or midwife guides your medical care, balancing health decisions with your birth preferences. 
 
- The birthing process flows smoothly as nurses provide continuous monitoring and responsive care when you need it. 
+ The birthing process flows smoothly as nurses provide continuous monitoring and responsive care when you need it. Whether you're working with providers at <a href="/birth-support/chicago-il/">Chicago, IL</a>'s Prentice Women's Hospital or <a href="/birth-support/phoenix-az/">Phoenix, AZ</a>'s Banner University, understanding how your team communicates makes everything smoother. 
 
  Your partner and family members bring familiar comfort and steady emotional grounding. Working as your birth doula, I focus completely on your physical comfort and clear communication, helping express your wishes to the medical team. 
 
@@ -121,7 +121,7 @@ When meeting with your prospective doula care team, explore all their training m
 
  A skilled professional will happily share stories about their birth support experiences. 
 
- They’ll walk you through their education, the number of births they’ve attended, and their unique specialties.
+ They'll walk you through their education, the number of births they've attended, and their unique specialties. Midwives and doulas familiar with <a href="/birth-support/denver-co/">Denver, CO</a>'s UCHealth or <a href="/birth-support/portland-or/">Portland, OR</a>'s OHSU can share region-specific insights that help you plan more effectively.
 
 Birth Philosophy**
 Your plans and hopes matter deeply. 
@@ -151,7 +151,7 @@ Customized comfort measures and care plans
 
  A doula might focus on continuous emotional care while medical staff handles clinical aspects. 
 
- Setting these boundaries early creates harmony and trust among everyone involved. 
+ Setting these boundaries early creates harmony and trust among everyone involved. Whether you're building your team around providers at <a href="/birth-support/houston-tx/">Houston, TX</a>'s Texas Medical Center or <a href="/birth-support/minneapolis-mn/">Minneapolis, MN</a>'s Abbott Northwestern, clear role definitions make collaboration smoother. 
 
 **Creating Clear Communication:**
 
@@ -178,4 +178,4 @@ Customized comfort measures and care plans
 – Monthly payment options help spread costs over time**
 – Local grant programs support expectant mothers seeking prenatal and postnatal care.
 
-For doula cost details in your city, check our guides for <a href="/birth-support/dallas-tx/">Dallas, TX</a> and <a href="/birth-support/san-antonio-tx/">San Antonio, TX</a> — they include local pricing ranges and Medicaid coverage status.
+For doula cost details in your city, check our guides for <a href="/birth-support/dallas-tx/">Dallas, TX</a> and <a href="/birth-support/san-antonio-tx/">San Antonio, TX</a> — they include local pricing ranges and Medicaid coverage status. You can also explore options in <a href="/birth-support/new-york-ny/">New York, NY</a> and <a href="/birth-support/minneapolis-mn/">Minneapolis, MN</a>, where doula pricing and insurance reimbursement vary by region and hospital network.

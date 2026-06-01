@@ -12,7 +12,7 @@ Supporting families through pregnancy brings me so much joy as a mother of seven
 
  Your birth journey should include the support you want, regardless of financial circumstances. 
 
- States increasingly recognize how doula care improves birth experiences and offer coverage through their health programs. • Schedule a meeting to discuss your doula services coverage and birth support options through your insurance plan. 
+ States increasingly recognize how doula care improves birth experiences and offer coverage through their health programs — <a href="/birth-support/minneapolis-mn/">Minneapolis, MN</a> and <a href="/birth-support/portland-or/">Portland, OR</a> families benefit from some of the nation's strongest Medicaid doula programs. • Schedule a meeting to discuss your doula services coverage and birth support options through your insurance plan. 
 
 If you're in a state with Medicaid doula coverage, check your local details — for example, <a href="/birth-support/denver-co/">Denver, CO</a> families have Medicaid doula coverage under Colorado's program, as do <a href="/birth-support/portland-or/">Portland, OR</a> families in Oregon. Even in states without coverage, like <a href="/birth-support/dallas-tx/">Dallas, TX</a>, some health plan pilots offer limited doula benefits.
 
@@ -26,7 +26,7 @@ If you're in a state with Medicaid doula coverage, check your local details — 
 
  Many health care organizations now recognize this value by expanding their coverage policies for birth professionals. 
 
- The growing acceptance of birth support services fits naturally with existing prenatal care programs. More states continue updating their guidelines to include these valuable options for expecting mothers. 
+ The growing acceptance of birth support services fits naturally with existing prenatal care programs. More states continue updating their guidelines to include these valuable options for expecting mothers — in <a href="/birth-support/seattle-wa/">Seattle, WA</a>, for example, Washington's Medicaid program now covers doula services. 
 
 Insurance plans increasingly view professional birth assistance as a smart investment in maternal health.
 
@@ -34,7 +34,7 @@ Insurance plans increasingly view professional birth assistance as a smart inves
 
  Families across America can receive comprehensive birth assistance through their state health programs. As a mom who’s helped hundreds through pregnancy, I’m here to share how you can access this meaningful care. 
 
-**Financial Support Overview:**Several states now include doula care through their Medicaid programs, offering up to $1,500 per birth. 
+**Financial Support Overview:**Several states now include doula care through their Medicaid programs, offering up to $1,500 per birth — from <a href="/birth-support/chicago-il/">Chicago, IL</a> to <a href="/birth-support/richmond-va/">Richmond, VA</a>, Medicaid coverage is making doula support more accessible. 
 
  Your coverage includes pregnancy visits, birth support, and postpartum check-ins, making sure you feel secure from start to finish. 
 
@@ -74,7 +74,7 @@ Complete specialized training programs focused on birth support.
  Many families feel excited when discovering their health plans include support during pregnancy and birth. 
 
 Several insurance companies recognize the benefits that certified birth professionals provide services throughout your special time:.• 4-8 prenatal planning visits preparing your birth preferences• 12-24 hours of continuous labor guidance• 2-3 postpartum visits supporting early parenthood
- Contact your insurance carrier near week 20 of pregnancy to confirm coverage details. Key questions include important considerations about accessing professional doula services through insurance and Medicaid plans, such as coverage requirements, provider networks, and reimbursement details. 
+ Contact your insurance carrier near week 20 of pregnancy to confirm coverage details. Whether you're in <a href="/birth-support/new-york-ny/">New York, NY</a> or <a href="/birth-support/houston-tx/">Houston, TX</a>, asking the right questions early makes a difference. Key questions include important considerations about accessing professional doula services through insurance and Medicaid plans, such as coverage requirements, provider networks, and reimbursement details. 
 
 ## Comparing Birth Support Payment Plans
 

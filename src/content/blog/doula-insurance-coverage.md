@@ -25,7 +25,7 @@ Having worked alongside many families through their birth experiences, I’ve wi
 
  Planning ahead helps families make informed choices about financial support during pregnancy. I’ve helped hundreds of expectant parents explore payment options that match their unique needs and birth goals. 
 
- Insurance coverage for birthing support varies widely between providers and locations. 
+ Insurance coverage for birthing support varies widely between providers and locations — for example, <a href="/birth-support/portland-or/">Portland, OR</a> and <a href="/birth-support/minneapolis-mn/">Minneapolis, MN</a> have robust Medicaid doula coverage, while <a href="/birth-support/austin-tx/">Austin, TX</a> families often rely on private insurance options. 
 
  Health professional services may be fully covered, partially reimbursed, or require direct payment. 
 
@@ -37,7 +37,7 @@ Having worked alongside many families through their birth experiences, I’ve wi
 
  The hospital environment often includes stricter protocols regarding who can join you during labor. Birth centers typically offer more flexibility with your chosen support person, though Medicaid coverage might influence available options. 
 
- Comparing costs between locations helps create realistic budgets. Some facilities partner with doulas and health professionals to provide comprehensive care during the postpartum period while minimizing medical malpractice risks. 
+ Comparing costs between locations helps create realistic budgets. Some facilities partner with doulas and health professionals to provide comprehensive care during the postpartum period while minimizing medical malpractice risks, and in Medicaid-expansion cities like <a href="/birth-support/richmond-va/">Richmond, VA</a>, hospital-based doula programs are increasingly common. 
 
 ## Essential Protection For Birth Workers
 
@@ -69,14 +69,14 @@ Your policy should match the full scope of your practice, from prenatal visits t
 
  A doula practice needs insurance policies that accommodate various birth locations and settings. 
 
- Consider carriers who include both birth center partnerships and hospital-based support in their standard coverage. Established insurance companies like CM&F provide comprehensive professional liability coverage tailored for doulas and birth workers. 
+ Consider carriers who include both birth center partnerships and hospital-based support in their standard coverage. Established insurance companies like CM&F provide comprehensive professional liability coverage tailored for doulas and birth workers — including those practicing in <a href="/birth-support/seattle-wa/">Seattle, WA</a> where demand for insured doulas continues to grow. 
 
 ## Navigating Healthcare Insurance Benefits
 
  Helping families find financial support for childbirth brings me joy as both a mother of seven and a birth worker. Most client’s discover simple ways to access coverage for birth support when they know exactly what questions to ask. 
 
 **Making Sense of Your Coverage****
-Many providers include birth doulas in their plans, though specific benefits vary. 
+Many providers include birth doulas in their plans, though specific benefits vary — for instance, <a href="/birth-support/denver-co/">Denver, CO</a> families covered under Medicaid can access doula services, while <a href="/birth-support/houston-tx/">Houston, TX</a> families may need to explore HSA/FSA options. 
 
  Contact your insurance company with prepared questions about birth support services. 
 

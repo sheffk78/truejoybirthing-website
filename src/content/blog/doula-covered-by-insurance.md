@@ -54,7 +54,7 @@ Some insurance plans offer special programs supporting natural birth choices. Yo
 
  Many flexible spending accounts and health savings accounts include birth support services in their approved expenses. 
 
- Some insurance plans now list doula care as a covered benefit when properly documented. 
+ Some insurance plans now list doula care as a covered benefit when properly documented, and families in <a href="/birth-support/richmond-va/">Richmond, VA</a> have seen Medicaid doula benefits expand under Virginia's new coverage program. 
 
  Working with Sarah last month showed how small details matter. She called her insurance provider during her first trimester to confirm coverage levels. 
 
@@ -75,7 +75,7 @@ The financial benefits of birth support services make sense for insurance provid
  Hospital costs decrease an average of $986 when doula support accompanies birth.
 
 Improved Outcomes:**
-Minnesota and Oregon Medicaid programs led the way, implementing doula coverage that reduced NICU stays by 60%. 
+In <a href="/birth-support/minneapolis-mn/">Minneapolis, MN</a> and <a href="/birth-support/portland-or/">Portland, OR</a>, state Medicaid programs led the way, implementing doula coverage that reduced NICU stays by 60%. 
 
  Private insurance companies soon adopted similar policies after reviewing these statistics. 
 
@@ -160,16 +160,16 @@ Contact your insurance provider to understand if your medical insurance covers d
  My experience supporting hundreds of families has shown how coverage for birth assistance varies widely across our nation. Through my seven births and years helping others, I’ve learned to pinpoint which options work best in different locations. 
 
 **Full Coverage States****
-Oregon provides complete reimbursement for doula care through state programs, offering $1,200 per birth. 
+Oregon provides complete reimbursement for doula care through state programs, offering $1,200 per birth — including for families in <a href="/birth-support/portland-or/">Portland, OR</a> and surrounding areas. 
 
-Minnesota allocates $800 for birth support services, while New Jersey recently introduced comprehensive postpartum doula care packages valued at $.
+Minnesota allocates $800 for birth support services, with strong uptake in <a href="/birth-support/minneapolis-mn/">Minneapolis, MN</a>, while New Jersey recently introduced comprehensive postpartum doula care packages valued at $.
 
  These states maintain specific certification requirements for service providers. 
 
 **Partial Coverage Areas****
-New York health insurance plans cover up to 60% of birth support costs with proper documentation. 
+<a href="/birth-support/new-york-ny/">New York, NY</a> health insurance plans cover up to 60% of birth support costs with proper documentation. 
 
-Washington state offers coverage through select private insurance plans, typically requiring prior authorization. California’s expanding program supports doula services for all pregnant individuals in 27 counties, with payments ranging from $450-.
+In <a href="/birth-support/seattle-wa/">Seattle, WA</a> and across Washington state, select private insurance plans offer coverage, typically requiring prior authorization. California’s expanding program supports doula services for all pregnant individuals in 27 counties, with payments ranging from $450-.
 
 **Finding Local Support****
 Many regions offer alternative funding through community programs. 

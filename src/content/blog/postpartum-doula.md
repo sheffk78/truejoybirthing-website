@@ -44,7 +44,7 @@ Your journey into parenthood deserves gentle guidance from someone who understan
 Creating Your Rest Strategy:**
 Partner coordination opens possibilities for sleep breaks. 
 
- Many postpartum doula families find success with 3-4 hour rest windows. Keep feeding supplies close – water bottles, light snacks, and cozy pillows make midnight moments flow smoothly. 
+ Many postpartum doula families find success with 3-4 hour rest windows. Keep feeding supplies close – water bottles, light snacks, and cozy pillows make midnight moments flow smoothly. Whether you're recovering at home near <a href="/birth-support/minneapolis-mn/">Minneapolis, MN</a>'s Abbott Northwestern or <a href="/birth-support/phoenix-az/">Phoenix, AZ</a>'s Banner University, local postpartum doulas understand the resources available in your area and can connect you with community support. 
 
  Soft lighting and gentle voices help maintain tranquil nighttime spaces. 
 
@@ -75,7 +75,7 @@ Your newborn’s feeding rhythm guides each day and night.
 
  Some moments might feel intense as you meet each day with your baby, and these feelings reflect your body’s wisdom. 
 
- Building a circle of support through family, friends, or a postpartum doula brings warmth and balance to this special season. Need postpartum doula info for your city? See our local guides for <a href="/birth-support/houston-tx/">Houston, TX</a> and <a href="/birth-support/san-diego-ca/">San Diego, CA</a> for cost and availability details.
+ Building a circle of support through family, friends, or a postpartum doula brings warmth and balance to this special season. Need postpartum doula info for your city? See our local guides for <a href="/birth-support/houston-tx/">Houston, TX</a>, <a href="/birth-support/chicago-il/">Chicago, IL</a>, and other cities for cost and availability details — because postpartum care options and pricing vary whether you're near <a href="/birth-support/new-york-ny/">New York, NY</a>'s Mount Sinai or <a href="/birth-support/portland-or/">Portland, OR</a>'s birthing community.
 
 ## Expert Care During Overnight Hours
 
@@ -110,9 +110,9 @@ The emotional and physical connection between parent and child grows stronger wh
 
  Parents who receive in-person support often notice positive changes within days. 
 
- We’ll work to recognize your baby’s sleep signals and create opportunities for you to rest when your little one does. Through consistent guidance, we’ll develop routines that strengthen your confidence in managing overnight hours. 
+ We'll work to recognize your baby's sleep signals and create opportunities for you to rest when your little one does. Through consistent guidance, we'll develop routines that strengthen your confidence in managing overnight hours. 
 
- Sleep solutions look different for each family, which shapes how we build your personalized plan. 
+ Sleep solutions look different for each family, which shapes how we build your personalized plan. This is especially true depending on where you live — postpartum resources near <a href="/birth-support/dallas-tx/">Dallas, TX</a>'s Texas Health Presbyterian differ from those near <a href="/birth-support/denver-co/">Denver, CO</a>'s UCHealth, so our city guides can help you find local lactation consultants and newborn specialists in your area. 
 
  The techniques we use respect your parenting choices while helping everyone get more restorative sleep. Let’s create a sustainable path toward peaceful nights and energized days. Many certified doulas provide in-person support during birth and postpartum recovery, helping new parents with infant feeding, childbirth education, and perinatal support as a postpartum doula helps guide them through their journey. 
 
@@ -182,7 +182,7 @@ Your baby moves through light and deep sleep cycles every 45-50 minutes.
 **Safe Sleep Guidelines****
 Research confirms room-sharing promotes both safety and successful feeding patterns. 
 
- Families choosing to bedshare need firm surfaces without loose items. Birth support during these early weeks ensures proper setup of sleep spaces aligned with current safety recommendations. 
+ Families choosing to bedshare need firm surfaces without loose items. Birth support during these early weeks ensures proper setup of sleep spaces aligned with current safety recommendations. Hospital discharge policies around safe sleep education vary — <a href="/birth-support/austin-tx/">Austin, TX</a>'s St. David's and <a href="/birth-support/san-antonio-tx/">San Antonio, TX</a>'s Methodist Hospital each have their own protocols for newborn sleep guidance before you head home. 
 
 **Gentle Sleep Techniques****
 The drowsy-but-awake method builds healthy sleep associations naturally. 

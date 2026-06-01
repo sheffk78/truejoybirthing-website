@@ -36,7 +36,7 @@ The journey through labor flows naturally when each person understands their uni
 
  Hospital staff contribute their medical training, forming a complete circle of care around you.
 
-Birth unfolds most beautifully when everyone works as one unified team. Your loved ones offer comfort during natural childbirth. 
+Birth unfolds most beautifully when everyone works as one unified team. Your loved ones offer comfort during natural childbirth. Whether you're planning a delivery at <a href="/birth-support/austin-tx/">Austin, TX</a>'s St. David's or <a href="/birth-support/phoenix-az/">Phoenix, AZ</a>'s Banner University, your doula helps bridge the gap between your preferences and hospital routines.
 
 ## What Medical Teams Should Know
 
@@ -54,7 +54,7 @@ Each shift begins with warm introductions to staff members and sharing birth pre
 
  This creates smooth collaboration where birthing families feel supported throughout their experience. We help express needs clearly while respecting hospital protocols and encouraging direct dialogue between parents and medical staff during the birth experience. 
 
-Wondering about doula policies at your hospital? Our city guides — like <a href="/birth-support/dallas-tx/">Dallas, TX</a> and <a href="/birth-support/denver-co/">Denver, CO</a> — list which hospitals allow doulas and what to ask during your hospital tour.
+Wondering about doula policies at your hospital? Our city guides — like <a href="/birth-support/dallas-tx/">Dallas, TX</a> and <a href="/birth-support/denver-co/">Denver, CO</a> — list which hospitals allow doulas and what to ask during your hospital tour. Whether you're delivering at <a href="/birth-support/houston-tx/">Houston, TX</a>'s Texas Medical Center or <a href="/birth-support/chicago-il/">Chicago, IL</a>'s Prentice Women's Hospital, knowing your facility's doula policy ahead of time prevents surprises on delivery day.
 
 Support Partner Role
 Medical Team Role
@@ -127,6 +127,8 @@ Those who serve birthing families professionally complete comprehensive certific
 
  Your companion should smoothly work alongside medical staff while keeping your preferences as the focus. 
 
+Doulas across the country work within hospital systems every day — from <a href="/birth-support/new-york-ny/">New York, NY</a>'s Mount Sinai to <a href="/birth-support/san-antonio-tx/">San Antonio, TX</a>'s Methodist Hospital, understanding facility-specific policies ensures your support team works effectively within local protocols.
+
  Certification ensures this through:**
 • 25+ hours of hands-on classroom learning**
 • Direct experience supporting 3-5 supervised births**
@@ -164,15 +166,15 @@ Training participants master comfort measures through guided practice sessions. 
  As your doula, I partner with your healthcare team to ensure your voice resonates during every conversation. 
 
  When questions arise about procedures and care options, I take time explaining the facts in everyday language. 
-
+ 
  This creates an open bridge of communication between you and your medical providers.
 
 Evidence-Based Support**
 My role focuses on bringing trusted medical research and practical wisdom to help you cope with each decision point. 
 
- From early labor positioning to comfort techniques, you’ll have solid information to make choices aligned with your vision. Your partner plays a central role too – together we’ll discover effective ways to work as a team through every stage. 
+ From early labor positioning to comfort techniques, you'll have solid information to make choices aligned with your vision. Your partner plays a central role too – together we'll discover effective ways to work as a team through every stage. 
 
- I provide resources and gentle guidance while honoring that you know your body best. Each doula plays a huge role in helping you cope with the upcoming birth, ensuring your voice is heard while supporting your partner to step in confidently in their ability to best support and comfort. 
+ I provide resources and gentle guidance while honoring that you know your body best. Whether you're preparing for birth at <a href="/birth-support/minneapolis-mn/">Minneapolis, MN</a>'s Abbott Northwestern or <a href="/birth-support/portland-or/">Portland, OR</a>'s OHSU, understanding your local hospital's policies helps you advocate more effectively for your birth preferences. Each doula plays a huge role in helping you cope with the upcoming birth, ensuring your voice is heard while supporting your partner to step in confidently in their ability to best support and comfort.
 
 [\2](\1)**
 [\2](\1)

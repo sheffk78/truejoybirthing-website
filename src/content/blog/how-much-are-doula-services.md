@@ -97,14 +97,14 @@ Pre-tax funds eligible for doula services
 
  While preparing for your baby’s arrival, I’ve noticed many families have questions about how much to budget for birth support. My experience serving hundreds of families across different regions provides helpful insights about what you might expect. 
 
- Supportive care during birth in larger cities often ranges between $1,500 to $3,000, particularly throughout the Northeast corridor and along the Pacific coast. 
+ Supportive care during birth in larger cities often ranges between $1,500 to $3,000, particularly in <a href="/birth-support/new-york-ny/">New York, NY</a> and <a href="/birth-support/miami-fl/">Miami, FL</a> along the East Coast, and <a href="/birth-support/san-francisco-ca/">San Francisco, CA</a> on the Pacific coast. 
 
  These regions maintain specific educational standards for birth professionals, which reflects in their service rates. 
 
  Rural Communities:**
-Families choosing birth support in smaller towns and countryside areas typically invest between $800 to $1,Though base rates appear lower, some birth professionals include additional fees when traveling beyond their usual service radius. 
+Families choosing birth support in smaller towns and countryside areas typically invest between $800 to $1,500 — for instance, doulas in <a href="/birth-support/amarillo-tx/">Amarillo, TX</a> and <a href="/birth-support/abilene-tx/">Abilene, TX</a> typically charge $650–$1,800. Though base rates appear lower, some birth professionals include additional fees when traveling beyond their usual service radius. 
 
- The postpartum support options vary widely based on regional standards. Areas like Massachusetts, New York, and California follow structured certification paths, influencing local pricing. Most birth companions work closely with families to create manageable payment arrangements, ensuring access to continuous prenatal visits, labor assistance, and postpartum support for their birth experience. 
+ The postpartum support options vary widely based on regional standards. Areas like Massachusetts, New York, and California follow structured certification paths, influencing local pricing. In mid-range markets like <a href="/birth-support/chicago-il/">Chicago, IL</a> ($800–$2,500) and <a href="/birth-support/austin-tx/">Austin, TX</a> ($1,000–$3,000), costs tend to fall between these extremes. Most birth companions work closely with families to create manageable payment arrangements, ensuring access to continuous prenatal visits, labor assistance, and postpartum support for their birth experience.
 
 ## Payment Plans And Flexible Spending Options
 
@@ -132,7 +132,7 @@ Our initial meeting includes a clear breakdown of costs per birth and available 
 
  Planning for birth support brings many choices, including balancing professional expertise with your financial needs. Drawing from my experience hiring and working as a doula, I’m excited to share helpful ways to find your perfect match. 
 
- Your search might start with looking at certification backgrounds through organizations like DONA, CAPPA, or ProDoula. 
+ Your search might start with looking at certification backgrounds through organizations like DONA, CAPPA, or ProDoula. Local doula networks are also a great resource — for example, families in <a href="/birth-support/chicago-il/">Chicago, IL</a> and <a href="/birth-support/austin-tx/">Austin, TX</a> can use our city guides to compare local rates and find certified providers.
 
  Newer doulas often charge less while building their practice, bringing current training and genuine enthusiasm. 
 
@@ -202,7 +202,7 @@ Every family follows their own unique path after birth. We’ll build a support 
 
  Most families find ways to save between $1,000-3,500 over 6-9 months through straightforward approaches. 
 
-Doula costs also vary significantly by location — for example, doulas in <a href="/birth-support/new-york-ny/">New York City</a> typically charge more than those in <a href="/birth-support/dallas-tx/">Dallas</a> or <a href="/birth-support/los-angeles-ca/">Los Angeles</a>. Our city-by-city guides break down local pricing, Medicaid coverage, and hospital policies so you can plan your budget with confidence.
+Doula costs also vary significantly by location — for example, doulas in <a href="/birth-support/new-york-ny/">New York, NY</a> ($1,500–$5,000) and <a href="/birth-support/miami-fl/">Miami, FL</a> ($1,200–$3,500) typically charge more than those in <a href="/birth-support/dallas-tx/">Dallas, TX</a> ($900–$2,800) or <a href="/birth-support/los-angeles-ca/">Los Angeles, CA</a>. Our city-by-city guides break down local pricing, Medicaid coverage, and hospital policies so you can plan your budget with confidence.
 
  Early booking discounts, group childbirth classes, and my referral program help reduce your total investment.
 

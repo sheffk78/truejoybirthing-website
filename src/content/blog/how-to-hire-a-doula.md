@@ -139,7 +139,7 @@ Modern birth teams stay connected through video meetings and messaging support.
 **Clear Agreements****
 Written service details spell out your birth team coverage and backup plans. 
 
- Payment schedules work with your family budget, and our agreements keep expectations clear. Looking for a doula means finding someone who fits smoothly with your birth vision and can provide the support you need throughout your pregnancy journey. 
+ Payment schedules work with your family budget, and our agreements keep expectations clear. Package pricing also depends on your location — for example, standard packages in <a href="/birth-support/amarillo-tx/">Amarillo, TX</a> ($650–$1,800) cost less than comparable services in <a href="/birth-support/new-york-ny/">New York, NY</a> or <a href="/birth-support/san-francisco-ca/">San Francisco, CA</a>. Looking for a doula means finding someone who fits smoothly with your birth vision and can provide the support you need throughout your pregnancy journey. 
 
 Basic Support
 Complete Package
@@ -172,7 +172,7 @@ Your birth journey becomes lighter when split into smaller monthly amounts.
 **Insurance Documentation:****
 Looking to hire a doula through insurance? We’ll prepare detailed receipts and service descriptions for your claims. Many insurance companies now recognize birth support services. 
 
- We’ll help you submit paperwork properly to maximize potential reimbursement. Our local network opens doors to birth support grants to help you search for a doula and find the right one for your birth process. 
+ We'll help you submit paperwork properly to maximize potential reimbursement. Doula costs vary by area — families in <a href="/birth-support/austin-tx/">Austin, TX</a> ($1,000–$3,000) and <a href="/birth-support/los-angeles-ca/">Los Angeles, CA</a> may see different rates than those in <a href="/birth-support/abilene-tx/">Abilene, TX</a> ($650–$1,600). Our local network opens doors to birth support grants to help you search for a doula and find the right one for your birth process.
 
 ## Creating Your Perfect Birth Team
 
@@ -217,7 +217,7 @@ Each family receives access to a second qualified doula and clear contact inform
 – Ask your childbirth educator for recommendations
 – Visit nearby doula agencies that provide carefully screened professionals
 
-For local details, our city guides — like <a href="/birth-support/houston-tx/">Houston, TX</a>, <a href="/birth-support/chicago-il/">Chicago, IL</a>, and <a href="/birth-support/phoenix-az/">Phoenix, AZ</a> — include hospital policies, local doula cost ranges, and Medicaid coverage info.**
+For local details, our city guides — like <a href="/birth-support/new-york-ny/">New York, NY</a> ($1,500–$5,000), <a href="/birth-support/miami-fl/">Miami, FL</a> ($1,200–$3,500), <a href="/birth-support/chicago-il/">Chicago, IL</a>, <a href="/birth-support/dallas-tx/">Dallas, TX</a>, and <a href="/birth-support/san-francisco-ca/">San Francisco, CA</a> — include hospital policies, local doula cost ranges, and Medicaid coverage info.**
 When meeting potential birth workers, pay attention to how comfortable you feel sharing your hopes and concerns. 
 
  Most offer a sliding scale to make support during labor accessible to more families.

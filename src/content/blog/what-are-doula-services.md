@@ -90,9 +90,9 @@ Your story continues after birth with 1-2 postpartum visits.
 
  We’ll focus on baby care guidance, comfort measures, and smooth transitions into parenthood. 
 
- Each family brings unique needs, which shapes how we build your support plan together. 
+ Each family brings unique needs, which shapes how we build your support plan together. Pricing varies by region — for instance, premium packages in <a href="/birth-support/miami-fl/">Miami, FL</a> ($1,200–$3,500) or <a href="/birth-support/san-francisco-ca/">San Francisco, CA</a> may differ from packages in <a href="/birth-support/abilene-tx/">Abilene, TX</a> ($650–$1,600).
 
-From flexible timing to personalized birth preferences, we’ll create the right framework for welcoming your little one.
+From flexible timing to personalized birth preferences, we'll create the right framework for welcoming your little one.
 
 ## Birth Planning And Preparation Tips
 
@@ -118,7 +118,7 @@ List your support people’s contact details and preferred ways to reach them.
 
 Take quiet moments to identify what brings you confidence. 
 
-Your unique preferences about movement, environment, and comfort techniques shape how you'll find a doula or support person matching your needs. Each choice builds toward the birth experience you envision. For help finding local doula costs and hospital policies, check our city guides like <a href="/birth-support/dallas-tx/">Dallas, TX</a> and <a href="/birth-support/chicago-il/">Chicago, IL</a>.
+Your unique preferences about movement, environment, and comfort techniques shape how you'll find a doula or support person matching your needs. Each choice builds toward the birth experience you envision. For help finding local doula costs and hospital policies, check our city guides like <a href="/birth-support/dallas-tx/">Dallas, TX</a> ($900–$2,800), <a href="/birth-support/chicago-il/">Chicago, IL</a> ($800–$2,500), <a href="/birth-support/new-york-ny/">New York, NY</a> ($1,500–$5,000), and <a href="/birth-support/austin-tx/">Austin, TX</a> ($1,000–$3,000).
 
 ###  Birth Preparation- Studies show women who create birth plans are 59% more likely to have positive birth experiences
 - 93% of mothers report that having a dedicated support person during labor reduced their anxiety levels
@@ -223,7 +223,7 @@ Together we’ll establish routines and practices that support your physical hea
 
  Your birth supporter should feel like a steady presence, ready to suggest helpful positions while respecting your preferences and keeping communication open with medical staff. 
 
-The right match brings both wisdom and warmth to your birth space. Schedule meetings with several doulas, observe how they share information, and pay attention to how comfortable you feel discussing your plans.
+The right match brings both wisdom and warmth to your birth space. Schedule meetings with several doulas, observe how they share information, and pay attention to how comfortable you feel discussing your plans. Whether you're looking for a doula in <a href="/birth-support/los-angeles-ca/">Los Angeles, CA</a>, <a href="/birth-support/dallas-tx/">Dallas, TX</a>, or <a href="/birth-support/amarillo-tx/">Amarillo, TX</a>, our city guides can help you compare local rates and certified providers.
 
 Qualities of Effective Birth Support
 Benefits for Mother

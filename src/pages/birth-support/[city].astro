@@ -22,7 +22,29 @@ const {
 }: CityData = data;
 
 const pageTitle = `${city}, ${state} Birth Doula & Midwife | Costs, Hospital Info & Birth Plan`;
-const pageDesc = `Doula costs, hospital policies, and Medicaid coverage in ${city}, ${state}. Plus a free Joyful Birth Plan template to walk in prepared.`;
+const primaryHospital = hospitalDetails[0]?.name;
+const primaryBirthCenter = birthCenterDetails[0]?.name;
+const hasRealBirthCenter = primaryBirthCenter && !primaryBirthCenter.startsWith('No birth center');
+const coverageStatus = medicaidNote.startsWith('Yes') ? 'Medicaid covers doulas' : 'Medicaid doula coverage varies';
+
+// Build a city-specific meta description using real data
+// Keep under 160 chars for Google. Format: "$Low–$High in City, ST. Hospital & Medicaid info. Free birth plan."
+let pageDesc = `Doulas in ${city}, ${state} cost $${costLow}–$${costHigh}.`;
+if (primaryHospital) {
+  // Truncate hospital name if needed to fit in 160 chars
+  const hospitalPart = ` ${primaryHospital}`;
+  const medicaidPart = ` ${coverageStatus} in ${state}.`;
+  const ctaPart = ` Free birth plan template included.`;
+  const baseLen = pageDesc.length;
+  const remaining = 158 - baseLen - medicaidPart.length - ctaPart.length;
+  if (remaining > 10) {
+    const truncated = hospitalPart.length <= remaining
+      ? hospitalPart
+      : hospitalPart.substring(0, remaining - 2) + '…';
+    pageDesc += truncated.replace(/,$/, '');
+  }
+}
+pageDesc += ` ${coverageStatus} in ${state}. Free birth plan template included.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 const ogImage = `https://truejoybirthing.com/images/og-city-${slug}.webp`;
 const heroImage = `/images/${slug}-birth-doula-skyline.webp`;

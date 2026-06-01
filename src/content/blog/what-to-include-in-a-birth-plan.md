@@ -49,7 +49,7 @@ Pain management is the section people agonize over — and overthink. Here's the
 
 **Include:**
 
-- Whether you want to try unmedicated labor, and for how long
+- Whether you want to try unmedicated labor, and for how long — ask about available pain management options during your prenatal visits, as facilities like <a href="/birth-support/dallas-tx/">Dallas, TX</a>'s Texas Health Presbyterian and <a href="/birth-support/chicago-il/">Chicago, IL</a>'s Prentice Women's Hospital may offer different options
 - Your feelings about an epidural (want it available when you ask, want to labor without as long as possible, or definitely want one)
 - Comfort measures you'd like to try (breathing techniques, position changes, warm compresses, massage, birth ball, water)
 - Whether you want pain medication offered to you or only if you specifically request it
@@ -84,7 +84,7 @@ The first hour after birth is often called the golden hour. It's a big deal, but
 - Placenta delivery preferences
 - Perineal care preferences
 
-This section matters because postpartum protocols vary widely between hospitals. Without stating your preferences, you'll get whatever that facility does by default.
+This section matters because postpartum protocols vary widely between hospitals. Without stating your preferences, you'll get whatever that facility does by default. Hospitals like <a href="/birth-support/san-antonio-tx/">San Antonio, TX</a>'s Methodist Hospital and <a href="/birth-support/houston-tx/">Houston, TX</a>'s Texas Medical Center may have different standard newborn procedures, so knowing what's typical at yours helps you plan ahead.
 
 ### 5. Newborn Care
 
@@ -144,7 +144,7 @@ After reading hundreds of birth plans, here are the mistakes I see again and aga
 
 **Forgetting your partner's role.** Your partner isn't just there for moral support. Tell your team how you want your partner involved — counter-pressure, reminding you of your preferences, being the one to announce the baby's sex, cutting the cord.
 
-**Ignoring hospital-specific policies.** Every hospital has different standard procedures. A plan that works perfectly at one hospital might conflict with routine at another. Talk to your provider about what's typical at your location.
+**Ignoring hospital-specific policies.** Every hospital has different standard procedures. A plan that works perfectly at one hospital might conflict with routine at another. Talk to your provider about what's typical at your location. Whether you're delivering at <a href="/birth-support/phoenix-az/">Phoenix, AZ</a>'s Banner University, <a href="/birth-support/minneapolis-mn/">Minneapolis, MN</a>'s Abbott Northwestern, or <a href="/birth-support/new-york-ny/">New York, NY</a>'s NYU Langone, understanding local protocols helps you write a plan your hospital can actually follow.
 
 For examples of birth plans that work — and ones that don't — our <a href="/birth-plan-examples/">birth plan examples</a> page breaks down real plans with notes on what's effective and what to change.
 
@@ -190,13 +190,13 @@ Not every birth starts the same way. If your situation has specific needs, these
 - **C-section planned or possible?** Our <a href="/c-section-birth-plan/">C-section birth plan</a> walks you through surgical birth preferences — from clear drapes to skin-to-skin in the OR.
 - **Planning a home birth?** Our <a href="/home-birth-plan/">home birth plan</a> covers what's different when you're planning to birth at home — transfer plans, supply lists, and how to prepare your space.
 
-Hospital policies look different depending on where you live. For local details on hospital policies, doula availability, and birth center options, check our city guides: <a href="/birth-support/austin-tx/">Austin, TX</a>, <a href="/birth-support/houston-tx/">Houston, TX</a>, and <a href="/birth-support/denver-co/">Denver, CO</a>.
+Hospital policies look different depending on where you live. For local details on hospital policies, doula availability, and birth center options, check our city guides: <a href="/birth-support/austin-tx/">Austin, TX</a>, <a href="/birth-support/houston-tx/">Houston, TX</a>, and <a href="/birth-support/denver-co/">Denver, CO</a>. You'll also find specifics for <a href="/birth-support/dallas-tx/">Dallas, TX</a>'s Texas Health Presbyterian, <a href="/birth-support/chicago-il/">Chicago, IL</a>'s Prentice Women's Hospital, and <a href="/birth-support/portland-or/">Portland, OR</a>'s Andaluz Waterbirth Center — each with different standard procedures that could affect your plan.
 
 ## How to Talk to Your Provider About Your Birth Plan
 
 Writing the plan is step one. Sharing it is where it becomes real. Here's how to make that conversation productive:
 
-**Bring it up around 34-36 weeks.** This gives your provider time to review it and discuss any concerns before you're in labor. Earlier is fine too, but 34-36 weeks is the sweet spot — your plan is fairly complete and your provider still has time to work with it.
+**Bring it up around 34-36 weeks.** This gives your provider time to review it and discuss any concerns before you're in labor. Earlier is fine too, but 34-36 weeks is the sweet spot — your plan is fairly complete and your provider still has time to work with it. If you're planning to deliver at <a href="/birth-support/minneapolis-mn/">Minneapolis, MN</a>'s Abbott Northwestern or <a href="/birth-support/denver-co/">Denver, CO</a>'s UCHealth, try to get your tour and review done well before 36 weeks since larger hospitals tend to book up.
 
 **Bring a printed copy.** Handing your provider a physical document makes it real. Ask them to keep it in your chart. Bring extra copies for delivery day.
 

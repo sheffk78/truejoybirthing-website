@@ -16,7 +16,7 @@ After supporting hundreds of hospital deliveries and birthing seven children mys
 
 A hospital birth plan is a written document that shares your preferences for labor, delivery, and postpartum care with your medical team. Think of it as your voice when you're too focused on breathing to explain yourself.
 
-Unlike a home birth or birth center plan, a hospital birth plan works within a medical environment. That means you're planning around hospital policies, nursing shifts, and available interventions — not against them.
+Unlike a home birth or birth center plan, a hospital birth plan works within a medical environment. That means you're planning around hospital policies, nursing shifts, and available interventions — not against them. And those policies vary: what's standard at <a href="/birth-support/houston-tx/">Houston, TX</a>'s Texas Medical Center may differ from routine at <a href="/birth-support/portland-or/">Portland, OR</a>'s OHSU or <a href="/birth-support/minneapolis-mn/">Minneapolis, MN</a>'s Abbott Northwestern.
 
 The best hospital birth plans are clear, concise, and collaborative. They tell your doctor and nurses what you want while leaving room for the unexpected. Your plan isn't a contract. It's a conversation starter that keeps your preferences front and center.
 
@@ -30,7 +30,7 @@ A birth plan puts you in the conversation. It tells your team:
 - **"These are my priorities."** When your nurse has six patients, your plan helps her support what matters most to you.
 - **"Here's what I want if things change."** A good plan includes backup preferences, so your team doesn't have to guess when the unexpected happens.
 
-Mothers who come with a written birth plan consistently tell me they felt more respected and heard during their hospital stay. Not because the plan is a magic shield — but because it shows you've done the work and you expect to be part of the conversation.
+Mothers who come with a written birth plan consistently tell me they felt more respected and heard during their hospital stay. Not because the plan is a magic shield — but because it shows you've done the work and you expect to be part of the conversation. This is true whether you're delivering at <a href="/birth-support/dallas-tx/">Dallas, TX</a>'s Texas Health Presbyterian, <a href="/birth-support/minneapolis-mn/">Minneapolis, MN</a>'s Abbott Northwestern, or any hospital in between.
 
 ## The 7 Sections Every Hospital Birth Plan Needs
 
@@ -46,7 +46,7 @@ This section covers how you want your delivery room to feel. Hospital rooms can 
 - Whether you want the door kept closed for privacy
 - Your comfort items (your own pillow, a favorite blanket, photos)
 
-Most hospitals allow you to adjust lighting and bring personal items. Don't assume you have to accept the fluorescent overhead. This is still your birth space.
+Most hospitals allow you to adjust lighting and bring personal items. Don't assume you have to accept the fluorescent overhead. This is still your birth space. Whether you're delivering at <a href="/birth-support/austin-tx/">Austin, TX</a>'s St. David's or <a href="/birth-support/phoenix-az/">Phoenix, AZ</a>'s Banner University, ask about your room's options during your hospital tour.
 
 ### 2. Pain Management Preferences
 
@@ -59,7 +59,7 @@ This is often the section people focus on most — and for good reason. Being cl
 - Other pain relief you'd like to try (warm compresses, birth ball, position changes, hydrotherapy if available)
 - Whether you want pain medication offered to you or only if you ask
 
-Be honest with yourself here. There's no prize for suffering, and there's no failure in choosing an epidural. Write what you actually want, not what you think you should want.
+Be honest with yourself here. There's no prize for suffering, and there's no failure in choosing an epidural. Write what you actually want, not what you think you should want. If hydrotherapy is part of your plan, confirm whether your hospital has tubs available — birthing centers like <a href="/birth-support/portland-or/">Portland, OR</a>'s Andaluz Waterbirth Center specialize in water birth, while many hospitals don't offer tubs at all.
 
 ### 3. Delivery Preferences
 
@@ -74,7 +74,7 @@ This section covers what happens when it's time to push and welcome your baby.
 - Your preference for delayed cord clamping
 - Whether you want to touch the baby's head as it crowns
 
-Hospital policies sometimes have standard procedures for delivery. Your plan lets your team know when you want something different from their default.
+Hospital policies sometimes have standard procedures for delivery. Your plan lets your team know when you want something different from their default. What's routine at <a href="/birth-support/san-antonio-tx/">San Antonio, TX</a>'s Methodist Hospital may not be standard at <a href="/birth-support/denver-co/">Denver, CO</a>'s UCHealth — so knowing your facility's defaults helps you plan around them.
 
 ### 4. Postpartum Care Preferences
 
@@ -142,7 +142,7 @@ After reviewing hundreds of birth plans, here are the gaps I see most often:
 
 **Writing a novel.** Your labor nurse has maybe five minutes to read your plan. If it's three pages, she'll skim. One page with clear bullet points? She'll remember it.
 
-**Not sharing it early enough.** Bring your birth plan to a prenatal appointment around 34-36 weeks so your provider can review it and flag anything that conflicts with hospital policy. Surprises on delivery day aren't fun for anyone.
+**Not sharing it early enough.** Bring your birth plan to a prenatal appointment around 34-36 weeks so your provider can review it and flag anything that conflicts with hospital policy. Surprises on delivery day aren't fun for anyone. If you're delivering at <a href="/birth-support/new-york-ny/">New York, NY</a>'s NYU Langone or <a href="/birth-support/chicago-il/">Chicago, IL</a>'s Prentice Women's Hospital, schedule that review appointment early — these larger facilities often have specific protocols.
 
 **Leaving out your partner's role.** Your partner isn't just a spectator. Write down how they can support you — whether that's counter-pressure, reminding you of your preferences, or holding space with you.
 

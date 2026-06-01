@@ -68,7 +68,7 @@ The best birth team honors and supports the path that resonates most deeply with
 
  Each birth story demonstrates how gentle guidance and steady support empower families to embrace their unique childbirth experiences. When physical comfort meets emotional care, mothers find the perfect support in a doula during childbirth. 
 
-If you're looking for local doula costs and hospital policies, our city guides — like <a href="/birth-support/dallas-tx/">Dallas, TX</a>, <a href="/birth-support/new-york-ny/">New York, NY</a>, and <a href="/birth-support/chicago-il/">Chicago, IL</a> — break down what to expect in your area.
+If you're looking for local doula costs and hospital policies, our city guides — like <a href="/birth-support/dallas-tx/">Dallas, TX</a>, <a href="/birth-support/new-york-ny/">New York, NY</a>, and <a href="/birth-support/chicago-il/">Chicago, IL</a> — break down what to expect in your area. You'll also find details for <a href="/birth-support/houston-tx/">Houston, TX</a>'s Texas Medical Center, <a href="/birth-support/austin-tx/">Austin, TX</a>'s Austin Area Birthing Center, and other regional facilities to help you plan.
 
 ## Creating Your Perfect Birth Experience
 
@@ -115,7 +115,7 @@ Positioning plays a beautiful role in your comfort.
 
  This birth support approach helps partners gain confidence in their role too.
 
-These approaches shine in any setting you choose for welcoming your baby. 
+These approaches shine in any setting you choose for welcoming your baby. Whether you're planning a hospital birth at <a href="/birth-support/phoenix-az/">Phoenix, AZ</a>'s Banner University or a birth center delivery near <a href="/birth-support/portland-or/">Portland, OR</a>'s Andaluz Waterbirth Center, comfort techniques adapt to your environment.
 
 Your comfort and confidence flow from having skilled, compassionate support by your side. Through breathing patterns, positioning guidance, and emotional presence, we create the environment where you can embrace your strength.
 
@@ -195,7 +195,7 @@ Clear Steps For Team Success:**
 • Set up quick contact methods**
 When everyone knows their purpose, birth flows naturally. 
 
- Doulas provide support through each stage while medical staff handles health monitoring. Family members offer comfort exactly where you need it most. 
+ Doulas provide support through each stage while medical staff handles health monitoring. Family members offer comfort exactly where you need it most. From <a href="/birth-support/denver-co/">Denver, CO</a>'s UCHealth to <a href="/birth-support/minneapolis-mn/">Minneapolis, MN</a>'s Abbott Northwestern, doulas who know your hospital's layout and staff can help the whole team work together more smoothly. 
 
  Your birth team should help you feel strong and supported. 
 
@@ -216,7 +216,7 @@ I welcome you to connect and learn how we can build your perfect birth support c
 **Your Third Trimester Checklist:****
 • Weekly doula check-ins starting at 36 weeks**
 • Birth plan reviews with your midwife or doctor**
-• Hospital tour and admission paperwork**
+• Hospital tour and admission paperwork — if you're delivering at <a href="/birth-support/san-antonio-tx/">San Antonio, TX</a>'s Methodist Hospital or <a href="/birth-support/new-york-ny/">New York, NY</a>'s NYU Langone, schedule your tour early as spots fill up**
 • Labor comfort technique practice sessions**
 • Pack your birth bag with essentials
 

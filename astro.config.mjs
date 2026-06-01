@@ -35,9 +35,9 @@ export default defineConfig({
           return { ...item, priority: 0.8, changefreq: 'weekly' };
         }
 
-        // Location/city pages: priority 0.6, changefreq monthly
+        // Location/city pages: priority 0.8, changefreq weekly
         if (path.startsWith('/birth-support/')) {
-          return { ...item, priority: 0.6, changefreq: 'monthly' };
+          return { ...item, priority: 0.8, changefreq: 'weekly' };
         }
 
         // Utility pages: priority 0.3, changefreq yearly
