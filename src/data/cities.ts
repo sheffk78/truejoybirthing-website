@@ -2039,13 +2039,13 @@ export const cities: Record<string, CityData> = {
     nearbyCities: ["tampa-fl", "orlando-fl"],
   },
   "colorado-springs-co": {
-    city: "Yes — Colorado Springs",
+    city: "Colorado Springs",
     state: "CO",
     slug: "colorado-springs-co",
     costLow: 800,
     costHigh: 2500,
     shelbiServesHere: false,
-    culture: "Yes — Colorado Springs combines a strong military birth community (Fort Carson) with a growing natural-birth scene anchored by Mountain Midwifery Birth Center. The altitude (6,035 ft) and the city's military population shape local birth culture — TRICARE-aware providers and altitude-educated midwives are both easy to find. Colorado's Medicaid doula coverage (HB 23-1027) makes this one of the most affordable cities in the country for doula-supported birth.",
+    culture: "Colorado Springs combines a strong military birth community (Fort Carson) with a growing natural-birth scene anchored by Mountain Midwifery Birth Center. The altitude (6,035 ft) and the city's military population shape local birth culture — TRICARE-aware providers and altitude-educated midwives are both easy to find. Colorado's Medicaid doula coverage (HB 23-1027) makes this one of the most affordable cities in the country for doula-supported birth.",
     heroLocalDetail: "Nestled at the foot of Pikes Peak along the I-25 corridor, Colorado Springs families navigate a birth landscape shaped by altitude (6,035 ft) and military presence. UCHealth Memorial Central and Penrose Hospital anchor civilian birth services, while Evans Army Community Hospital serves Fort Carson. Mountain Midwifery Birth Center offers an out-of-hospital option — one of the few freestanding birth centers in the state.",
     hospitalDetails: [
       { name: "UCHealth Memorial Hospital Central", paragraph: "UCHealth Memorial Hospital Central is the largest hospital in southern Colorado with a verified Level III NICU and a high-volume maternity program. Located in central Colorado Springs, it's the primary referral center for complicated pregnancies across the Pikes Peak region. A birth plan is valuable here — the volume is high and staff coverage rotates, so written preferences help ensure your voice is heard. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
@@ -2515,13 +2515,13 @@ export const cities: Record<string, CityData> = {
     nearbyCities: ["chicago-il", "minneapolis-mn"],
   },
   "new-york-ny": {
-    city: "Yes — New York",
+    city: "New York",
     state: "NY",
     slug: "new-york-ny",
     costLow: 1500,
     costHigh: 5000,
     shelbiServesHere: false,
-    culture: "Yes — New York City's birth culture is as diverse as its boroughs — from the hospital-intensive landscape of Manhattan to the community midwifery traditions of Brooklyn and the Bronx. The city has a robust doula community and has been a national leader in Medicaid doula coverage, though persistent maternal health disparities in Black and Brown communities drive ongoing birth justice activism.",
+    culture: "New York City's birth culture is as diverse as its boroughs — from the hospital-intensive landscape of Manhattan to the community midwifery traditions of Brooklyn and the Bronx. The city has a robust doula community and has been a national leader in Medicaid doula coverage, though persistent maternal health disparities in Black and Brown communities drive ongoing birth justice activism.",
     heroLocalDetail: "From the brownstone-lined blocks of Park Slope to the bustling corridors along the Grand Concourse in the Bronx, New York families plan births across an enormous spectrum of settings. Manhattan's East Side hospital corridor near York Avenue houses some of the nation's top neonatal units, while birth justice organizers build grassroots support networks from Harlem to Bedford-Stuyvesant.",
     hospitalDetails: [
       { name: "NewYork-Presbyterian/Columbia University Irving Medical Center", paragraph: "Located in Washington Heights, Columbia's medical center features a Level IV NICU — the highest designation — and is one of the premier maternal-fetal medicine programs in the country. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
@@ -3038,7 +3038,7 @@ export const cities: Record<string, CityData> = {
   },
 
   "oklahoma-city-ok": {
-    city: "Yes — Oklahoma City",
+    city: "Oklahoma City",
     state: "OK",
     slug: "oklahoma-city-ok",
     costLow: 800,
@@ -3146,7 +3146,7 @@ export const cities: Record<string, CityData> = {
     nearbyCities: ["pittsburgh-pa", "detroit-mi"],
   },
   "indianapolis-in": {
-    city: "Yes — Indianapolis",
+    city: "Indianapolis",
     state: "IN",
     slug: "indianapolis-in",
     costLow: 800,
