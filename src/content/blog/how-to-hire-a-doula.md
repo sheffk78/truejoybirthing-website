@@ -210,11 +210,14 @@ Each family receives access to a second qualified doula and clear contact inform
 
  These gatherings help you discover someone who matches your birth preferences while learning about different support styles.
 
-Where to Start Looking:**
-– Check with your local birth center or midwifery practice**
-– Join community Facebook groups for expecting parents**
-– Ask your childbirth educator for recommendations**
-– Visit nearby doula agencies that provide carefully screened professionals**
+ Where to Start Looking:**
+
+– Check with your local birth center or midwifery practice
+– Join community Facebook groups for expecting parents
+– Ask your childbirth educator for recommendations
+– Visit nearby doula agencies that provide carefully screened professionals
+
+For local details, our city guides — like <a href="/birth-support/houston-tx/">Houston, TX</a>, <a href="/birth-support/chicago-il/">Chicago, IL</a>, and <a href="/birth-support/phoenix-az/">Phoenix, AZ</a> — include hospital policies, local doula cost ranges, and Medicaid coverage info.**
 When meeting potential birth workers, pay attention to how comfortable you feel sharing your hopes and concerns. 
 
  Most offer a sliding scale to make support during labor accessible to more families.

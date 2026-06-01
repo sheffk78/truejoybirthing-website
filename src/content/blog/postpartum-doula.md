@@ -75,7 +75,7 @@ Your newborn’s feeding rhythm guides each day and night.
 
  Some moments might feel intense as you meet each day with your baby, and these feelings reflect your body’s wisdom. 
 
-Building a circle of support through family, friends, or a postpartum doula brings warmth and balance to this special season.
+ Building a circle of support through family, friends, or a postpartum doula brings warmth and balance to this special season. Need postpartum doula info for your city? See our local guides for <a href="/birth-support/houston-tx/">Houston, TX</a> and <a href="/birth-support/san-diego-ca/">San Diego, CA</a> for cost and availability details.
 
 ## Expert Care During Overnight Hours
 

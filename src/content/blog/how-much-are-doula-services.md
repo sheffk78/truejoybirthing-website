@@ -202,6 +202,8 @@ Every family follows their own unique path after birth. We’ll build a support 
 
  Most families find ways to save between $1,000-3,500 over 6-9 months through straightforward approaches. 
 
+Doula costs also vary significantly by location — for example, doulas in <a href="/birth-support/new-york-ny/">New York City</a> typically charge more than those in <a href="/birth-support/dallas-tx/">Dallas</a> or <a href="/birth-support/los-angeles-ca/">Los Angeles</a>. Our city-by-city guides break down local pricing, Medicaid coverage, and hospital policies so you can plan your budget with confidence.
+
  Early booking discounts, group childbirth classes, and my referral program help reduce your total investment.
 
 Smart Savings Options:**

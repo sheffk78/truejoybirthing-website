@@ -14,6 +14,8 @@ Supporting families through pregnancy brings me so much joy as a mother of seven
 
  States increasingly recognize how doula care improves birth experiences and offer coverage through their health programs. • Schedule a meeting to discuss your doula services coverage and birth support options through your insurance plan. 
 
+If you're in a state with Medicaid doula coverage, check your local details — for example, <a href="/birth-support/denver-co/">Denver, CO</a> families have Medicaid doula coverage under Colorado's program, as do <a href="/birth-support/portland-or/">Portland, OR</a> families in Oregon. Even in states without coverage, like <a href="/birth-support/dallas-tx/">Dallas, TX</a>, some health plan pilots offer limited doula benefits.
+
 [\2](\1)
 
 ## Why Insurance Plans Support Birth Support

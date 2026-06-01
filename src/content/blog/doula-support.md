@@ -122,6 +122,8 @@ Small touches make powerful differences during labor.
 
  The right atmosphere connects seamlessly with natural birthing methods, keeping you centered and supported. 
 
+ For specific hospital doula policies and local birth environment details, check our city guides like <a href="/birth-support/phoenix-az/">Phoenix, AZ</a> and <a href="/birth-support/philadelphia-pa/">Philadelphia, PA</a> — they include which hospitals allow doulas, NICU levels, and local birth center options.
+
 Each element works together, creating a foundation for bringing your baby earthside with confidence and peace.
 
 ## Empowering Your Birth Experience

@@ -68,6 +68,8 @@ The best birth team honors and supports the path that resonates most deeply with
 
  Each birth story demonstrates how gentle guidance and steady support empower families to embrace their unique childbirth experiences. When physical comfort meets emotional care, mothers find the perfect support in a doula during childbirth. 
 
+If you're looking for local doula costs and hospital policies, our city guides — like <a href="/birth-support/dallas-tx/">Dallas, TX</a>, <a href="/birth-support/new-york-ny/">New York, NY</a>, and <a href="/birth-support/chicago-il/">Chicago, IL</a> — break down what to expect in your area.
+
 ## Creating Your Perfect Birth Experience
 
  Each birth unfolds like a personal story waiting to be written. As a mother of seven, I cherish how deeply meaningful these moments become for every family. 

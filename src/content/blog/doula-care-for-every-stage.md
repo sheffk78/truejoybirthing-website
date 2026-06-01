@@ -35,7 +35,7 @@ Motherhood opens a sacred journey filled with wonder and transformation. As a bi
 • Request details on network-approved doula services**
 • Gather needed medical forms and records**
 • Learn about reimbursement steps and timing**
-Many state programs now include birth support services. Your HSA or FSA may help with expenses too. Local birth centers often work directly with insurance companies, making the process of accessing prenatal care and midwifery services more affordable. 
+Many state programs now include birth support services. Your HSA or FSA may help with expenses too. Local birth centers often work directly with insurance companies, making the process of accessing prenatal care and midwifery services more affordable. For local cost details and insurance info, see our city guides like <a href="/birth-support/austin-tx/">Austin, TX</a> and <a href="/birth-support/new-york-ny/">New York, NY</a>. 
 
 ## Choosing Your Perfect Birth Partner
 

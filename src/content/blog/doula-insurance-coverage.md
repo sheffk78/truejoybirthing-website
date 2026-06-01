@@ -143,6 +143,8 @@ Service agreements create a loving framework for working together.
 
  Several insurance providers now include birth support services like doulas within their coverage options. 
 
+For specifics on what insurance and Medicaid cover in your area, check our city guides — <a href="/birth-support/new-york-ny/">New York</a>, <a href="/birth-support/dallas-tx/">Dallas</a>, and <a href="/birth-support/chicago-il/">Chicago</a> all have different coverage landscapes, Medicaid status, and hospital policies that affect your options.
+
  Take time to review exactly which services your plan includes before making decisions about your care team. 
 
 **Working With Your Provider Network:**

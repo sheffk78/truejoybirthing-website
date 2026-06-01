@@ -72,7 +72,7 @@ Breastfeeding support expertise
 
  Families choosing home birth work with midwives in their personal space. 
 
- Each path offers unique benefits for different birth plans. 
+ Each path offers unique benefits for different birth plans. For local hospital and birth center details — including NICU levels and doula policies — check our city guides like <a href="/birth-support/dallas-tx/">Dallas, TX</a> and <a href="/birth-support/austin-tx/">Austin, TX</a>. 
 
 **Birth Setting Success Rates:**
 
@@ -177,3 +177,5 @@ Customized comfort measures and care plans
 – Health Savings Accounts (HSA) and Flexible Spending Accounts (FSA) often accept birth support expenses**
 – Monthly payment options help spread costs over time**
 – Local grant programs support expectant mothers seeking prenatal and postnatal care.
+
+For doula cost details in your city, check our guides for <a href="/birth-support/dallas-tx/">Dallas, TX</a> and <a href="/birth-support/san-antonio-tx/">San Antonio, TX</a> — they include local pricing ranges and Medicaid coverage status.

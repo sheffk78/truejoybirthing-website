@@ -118,7 +118,7 @@ List your support people’s contact details and preferred ways to reach them.
 
 Take quiet moments to identify what brings you confidence. 
 
-Your unique preferences about movement, environment, and comfort techniques shape how you’ll find a doula or support person matching your needs. Each choice builds toward the birth experience you envision.
+Your unique preferences about movement, environment, and comfort techniques shape how you'll find a doula or support person matching your needs. Each choice builds toward the birth experience you envision. For help finding local doula costs and hospital policies, check our city guides like <a href="/birth-support/dallas-tx/">Dallas, TX</a> and <a href="/birth-support/chicago-il/">Chicago, IL</a>.
 
 ###  Birth Preparation- Studies show women who create birth plans are 59% more likely to have positive birth experiences
 - 93% of mothers report that having a dedicated support person during labor reduced their anxiety levels

@@ -97,7 +97,7 @@ Mothers can contact their providers directly to learn about specific coverage op
 
  Minnesota allows six prenatal visits with continuous labor support. 
 
- Oregon and New Jersey offer similar benefits, while other locations still shape their policies for birth assistance. 
+ Oregon and New Jersey offer similar benefits, while other locations still shape their policies for birth assistance. For city-by-city Medicaid details, check our guides for <a href="/birth-support/denver-co/">Denver, CO</a> (Medicaid-covered), <a href="/birth-support/portland-or/">Portland, OR</a> (Medicaid-covered), and <a href="/birth-support/dallas-tx/">Dallas, TX</a> (not yet covered statewide). 
 
 **Private Insurance Coverage:**
 

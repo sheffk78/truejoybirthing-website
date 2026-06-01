@@ -54,6 +54,8 @@ Each shift begins with warm introductions to staff members and sharing birth pre
 
  This creates smooth collaboration where birthing families feel supported throughout their experience. We help express needs clearly while respecting hospital protocols and encouraging direct dialogue between parents and medical staff during the birth experience. 
 
+Wondering about doula policies at your hospital? Our city guides — like <a href="/birth-support/dallas-tx/">Dallas, TX</a> and <a href="/birth-support/denver-co/">Denver, CO</a> — list which hospitals allow doulas and what to ask during your hospital tour.
+
 Support Partner Role
 Medical Team Role
 
