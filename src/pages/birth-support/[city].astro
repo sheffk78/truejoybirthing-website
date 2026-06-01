@@ -54,7 +54,11 @@ const schema = {
       name: `Joyful Birth-Plan Resources for ${city} Families`,
       url: pageUrl,
       image: `https://truejoybirthing.com${heroImage}`,
-      areaServed: { '@type': 'City', name: city },
+      areaServed: {
+        '@type': 'City',
+        name: city,
+        containedInPlace: { '@type': 'State', name: state },
+      },
       provider: { '@id': 'https://truejoybirthing.com/#organization' },
       serviceType: 'Birth Plan Resources',
       description: `Free birth-plan tools, hospital info, and doula cost guides for families in ${city}, ${state}.`,
