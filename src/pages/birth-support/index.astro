@@ -19,11 +19,23 @@ const stateOrder = Object.keys(stateGroups).sort((a, b) => {
   return a.localeCompare(b);
 });
 const stateNames: Record<string, string> = {
-  TX: 'Texas', FL: 'Florida', NC: 'North Carolina', GA: 'Georgia', CA: 'California',
-  WA: 'Washington', CO: 'Colorado', OR: 'Oregon', MN: 'Minnesota', AZ: 'Arizona',
-  IL: 'Illinois', MI: 'Michigan', NY: 'New York', NJ: 'New Jersey', VA: 'Virginia',
-  TN: 'Tennessee', NV: 'Nevada', SC: 'South Carolina',
-  VT: 'Vermont', WV: 'West Virginia',
+  AK: 'Alaska', AL: 'Alabama', AR: 'Arkansas', AZ: 'Arizona',
+  CA: 'California', CO: 'Colorado', CT: 'Connecticut',
+  DE: 'Delaware', FL: 'Florida', GA: 'Georgia',
+  HI: 'Hawaii', IA: 'Iowa', ID: 'Idaho', IL: 'Illinois',
+  IN: 'Indiana', KS: 'Kansas', KY: 'Kentucky',
+  LA: 'Louisiana', MA: 'Massachusetts', MD: 'Maryland',
+  MI: 'Michigan', MN: 'Minnesota', MO: 'Missouri', MS: 'Mississippi',
+  MT: 'Montana', NC: 'North Carolina', ND: 'North Dakota',
+  NE: 'Nebraska', NH: 'New Hampshire', NJ: 'New Jersey',
+  NM: 'New Mexico', NV: 'Nevada', NY: 'New York',
+  OH: 'Ohio', OK: 'Oklahoma', OR: 'Oregon',
+  PA: 'Pennsylvania', RI: 'Rhode Island',
+  SC: 'South Carolina', SD: 'South Dakota',
+  TN: 'Tennessee', TX: 'Texas',
+  UT: 'Utah', VA: 'Virginia', VT: 'Vermont',
+  WA: 'Washington', WI: 'Wisconsin', WV: 'West Virginia',
+  WY: 'Wyoming',
 };
 const totalCities = citySlugs.length;
 
@@ -80,7 +92,10 @@ const schema = {
         const stateName = stateNames[stateCode] || stateCode;
         return (
           <div class="mb-10">
-            <h2 class="text-xl font-semibold mb-4">{stateName} ({stateCities.length} {stateCities.length === 1 ? 'city' : 'cities'})</h2>
+            <h2 class="text-xl font-semibold mb-4">
+            <a href={`/birth-support/${stateCode.toLowerCase()}/`} class="hover:text-tjb-rose-500 transition">{stateName}</a>
+            <span class="text-tjb-gray font-normal text-base ml-1">({stateCities.length} {stateCities.length === 1 ? 'city' : 'cities'})</span>
+          </h2>
             <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
               {stateCities.map((c) => (
                 <a href={`/birth-support/${c.slug}/`} class="border border-tjb-lavender-300 p-3 rounded-lg hover:border-tjb-lavender-500 hover:bg-tjb-lavender-50 transition text-sm font-medium text-tjb-charcoal">
