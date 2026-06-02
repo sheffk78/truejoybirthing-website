@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+import ContextualCityLinks from '../components/ContextualCityLinks.astro';
 
 const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "How Much Does a Doula Cost", "url": "https://truejoybirthing.com/doula-cost/"}];
 
@@ -387,24 +388,7 @@ const schema = {
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════
-       CITY COSTS — Typographic link strip
-       ═══════════════════════════════════════════ -->
-  <section class="bg-tjb-cream py-12 border-y border-tjb-lavender-200/50">
-    <div class="max-w-3xl mx-auto px-6">
-      <h2 class="font-semibold text-tjb-charcoal text-lg mb-4">Find doula costs in your city</h2>
-      <p class="text-tjb-gray mb-6">See local pricing, hospital lists, and Medicaid coverage for major Texas metros:</p>
-      <ul class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2">
-        <li><a href="/birth-support/dallas-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Dallas</a></li>
-        <li><a href="/birth-support/houston-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Houston</a></li>
-        <li><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Austin</a></li>
-        <li><a href="/birth-support/san-antonio-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">San Antonio</a></li>
-        <li><a href="/birth-support/fort-worth-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Fort Worth</a></li>
-        <li><a href="/birth-support/el-paso-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">El Paso</a></li>
-      </ul>
-      <p class="mt-4"><a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 transition">See all 20 Texas cities →</a></p>
-    </div>
-  </section>
+  <ContextualCityLinks topic="cost" />
 
   <!-- ═══════════════════════════════════════════
        FAQ — Editorial on white

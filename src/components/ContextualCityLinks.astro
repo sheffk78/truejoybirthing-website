@@ -1,0 +1,210 @@
+---
+/**
+ * ContextualCityLinks — generates topic-relevant city links for pillar pages.
+ * 
+ * Props:
+ *   topic: 'cost' | 'medicaid' | 'benefits' | 'birth-plan' | 'doula-basics' | 'postpartum' | 'hospital' | 'home-birth' | 'c-section' | 'vbac' | 'interview' | 'certification' | 'general'
+ *   maxLinks?: number (default 15)
+ *   heading?: string (overrides the default "Find Doula Support in [city]")
+ * 
+ * Logic:
+ *   - Each topic selects cities by different relevance criteria
+ *   - Always includes top-5 metro cities (highest traffic potential)
+ *   - Fills remaining slots with context-matched cities
+ *   - Never links to the current page (caller passes currentSlug)
+ */
+import type { CityData } from '../data/cities';
+
+interface Props {
+  topic: 'cost' | 'medicaid' | 'benefits' | 'birth-plan' | 'doula-basics' | 'postpartum' | 'hospital' | 'home-birth' | 'c-section' | 'vbac' | 'interview' | 'certification' | 'general';
+  maxLinks?: number;
+  heading?: string;
+}
+
+const { topic, maxLinks = 15, heading } = Astro.props;
+
+import { cities } from '../data/cities';
+
+// Medicaid coverage states (as of 2026)
+const MEDICAID_STATES = new Set(['OR', 'MN', 'CO', 'IL', 'CT', 'NJ', 'CA', 'NV', 'WA', 'VA', 'MD', 'MA', 'MI', 'NM', 'NY', 'HI', 'MT']);
+
+// Top metros by search volume / traffic potential  
+const TOP_METROS = ['dallas-tx', 'houston-tx', 'austin-tx', 'san-antonio-tx', 'phoenix-az', 'chicago-il', 'denver-co', 'atlanta-ga', 'los-angeles-ca', 'new-york-ny'];
+
+// Cities with high doula costs (useful for cost topic)
+const HIGH_COST_CITIES = Object.entries(cities)
+  .filter(([_, d]) => d.costHigh >= 2800)
+  .sort((a, b) => b[1].costHigh - a[1].costHigh)
+  .map(([slug]) => slug);
+
+// Cities with low doula costs (affordability angle)
+const LOW_COST_CITIES = Object.entries(cities)
+  .filter(([_, d]) => d.costLow <= 700)
+  .sort((a, b) => a[1].costLow - b[1].costLow)
+  .map(([slug]) => slug);
+
+// Cities with birth centers (for home-birth / birth-center topics)
+const BIRTH_CENTER_CITIES = Object.entries(cities)
+  .filter(([_, d]) => d.birthCenterDetails.length > 0)
+  .map(([slug]) => slug);
+
+// Cities in Medicaid states
+const MEDICAID_CITY_SLUGS = Object.entries(cities)
+  .filter(([_, d]) => MEDICAID_STATES.has(d.state))
+  .map(([slug]) => slug);
+
+// State full names for display
+const stateNames: Record<string, string> = {
+  AL:'Alabama',AK:'Alaska',AZ:'Arizona',AR:'Arkansas',CA:'California',CO:'Colorado',CT:'Connecticut',DE:'Delaware',FL:'Florida',GA:'Georgia',HI:'Hawaii',ID:'Idaho',IL:'Illinois',IN:'Indiana',IA:'Iowa',KS:'Kansas',KY:'Kentucky',LA:'Louisiana',MD:'Maryland',MA:'Massachusetts',MI:'Michigan',MN:'Minnesota',MS:'Mississippi',MO:'Missouri',MT:'Montana',NE:'Nebraska',NV:'Nevada',NH:'New Hampshire',NJ:'New Jersey',NM:'New Mexico',NY:'New York',NC:'North Carolina',ND:'North Dakota',OH:'Ohio',OK:'Oklahoma',OR:'Oregon',PA:'Pennsylvania',RI:'Rhode Island',SC:'South Carolina',SD:'South Dakota',TN:'Tennessee',TX:'Texas',UT:'Utah',VT:'Vermont',VA:'Virginia',WA:'Washington',WV:'West Virginia',WI:'Wisconsin',WY:'Wyoming'
+};
+
+// Topic-specific heading text
+const topicHeadings: Record<string, string> = {
+  'cost': 'Doula Costs by City',
+  'medicaid': 'Find Medicaid-Covered Doulas by State',
+  'benefits': 'Doula Support in Your Area',
+  'birth-plan': 'Birth Plan Support Near You',
+  'doula-basics': 'Find a Doula in Your City',
+  'postpartum': 'Postpartum Doula Support by City',
+  'hospital': 'Hospital Birth Support by City',
+  'home-birth': 'Home Birth & Birth Center Cities',
+  'c-section': 'C-Section Birth Support by City',
+  'vbac': 'VBAC Support by City',
+  'interview': 'Doula Directories by City',
+  'certification': 'Certified Doula Support by City',
+  'general': 'Find Birth Support in Your Area',
+};
+
+// Topic-specific selection logic
+function selectCities(): string[] {
+  const selected: string[] = [];
+  const seen = new Set<string>();
+
+  function add(slug: string) {
+    if (!seen.has(slug) && cities[slug]) {
+      seen.add(slug);
+      selected.push(slug);
+    }
+  }
+
+  switch (topic) {
+    case 'cost':
+      // Mix of high-cost, low-cost, and top metros for cost comparison
+      HIGH_COST_CITIES.slice(0, 8).forEach(add);
+      LOW_COST_CITIES.slice(0, 5).forEach(add);
+      TOP_METROS.slice(0, 5).forEach(add);
+      // Add state variety
+      Object.keys(cities).filter(s => !seen.has(s)).sort(() => 0.5 - Math.random()).slice(0, 4).forEach(add);
+      break;
+
+    case 'medicaid':
+      // All cities in Medicaid states, prioritized by metro size
+      MEDICAID_CITY_SLUGS.forEach(add);
+      // Fill with top metros if under max
+      TOP_METROS.forEach(add);
+      break;
+
+    case 'benefits': {
+      TOP_METROS.slice(0, 8).forEach(add);
+      const coveredStates = new Set([...seen].map(s => cities[s].state));
+      Object.entries(cities)
+        .filter(([slug]) => !seen.has(slug) && !coveredStates.has(cities[slug].state))
+        .slice(0, 7)
+        .forEach(([slug]) => { add(slug); coveredStates.add(cities[slug].state); });
+      break;
+    }
+
+    case 'birth-plan': {
+      TOP_METROS.forEach(add);
+      const bpStates = new Set([...seen].map(s => cities[s].state));
+      Object.keys(cities).filter(s => !seen.has(s) && !bpStates.has(cities[s].state)).slice(0, 5).forEach(s => { add(s); bpStates.add(cities[s].state); });
+      break;
+    }
+
+    case 'home-birth':
+      BIRTH_CENTER_CITIES.forEach(add);
+      TOP_METROS.slice(0, 5).forEach(add);
+      break;
+
+    case 'hospital':
+      TOP_METROS.slice(0, 8).forEach(add);
+      Object.entries(cities)
+        .filter(([_, d]) => d.hospitalDetails.length >= 2 && !seen.has(_.toString()))
+        .sort((a, b) => b[1].hospitalDetails.length - a[1].hospitalDetails.length)
+        .slice(0, 7)
+        .forEach(([slug]) => add(slug));
+      break;
+
+    case 'postpartum':
+      TOP_METROS.slice(0, 8).forEach(add);
+      Object.keys(cities).filter(s => !seen.has(s)).sort(() => 0.5 - Math.random()).slice(0, 7).forEach(add);
+      break;
+
+    default: {
+      TOP_METROS.slice(0, 8).forEach(add);
+      const defStates = new Set([...seen].map(s => cities[s].state));
+      Object.keys(cities).filter(s => !seen.has(s) && !defStates.has(cities[s].state)).slice(0, 7).forEach(s => { add(s); defStates.add(cities[s].state); });
+      break;
+    }
+  }
+
+  return selected.slice(0, maxLinks);
+}
+
+const selectedCities = selectCities();
+
+// Group by state for the medicaid topic
+const groupedByState = topic === 'medicaid' 
+  ? selectedCities.reduce((acc, slug) => {
+      const state = cities[slug].state;
+      if (!acc[state]) acc[state] = [];
+      acc[state].push(slug);
+      return acc;
+    }, {} as Record<string, string[]>)
+  : null;
+
+const displayHeading = heading || topicHeadings[topic] || 'Find Birth Support Near You';
+---
+
+{selectedCities.length > 0 && (
+  <section class="py-12 bg-tjb-cream/50 border-t border-tjb-lavender-200">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-2">{displayHeading}</h2>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+
+      {topic === 'medicaid' && groupedByState ? (
+        <!-- Medicaid: group by state for clarity -->
+        <div class="space-y-4">
+          {Object.entries(groupedByState).sort().map(([state, slugs]) => (
+            <div>
+              <h3 class="text-lg font-semibold text-tjb-charcoal mb-2">{stateNames[state] || state}</h3>
+              <div class="flex flex-wrap gap-2">
+                {slugs.map(slug => (
+                  <a href={`/birth-support/${slug}/`} class="inline-flex items-center gap-1 px-4 py-2 rounded-full border border-tjb-lavender-300 text-tjb-lavender-600 hover:bg-tjb-lavender-50 hover:border-tjb-lavender-500 transition text-sm font-medium">
+                    {cities[slug].city}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <!-- All other topics: flat list with city, state labels -->
+        <div class="flex flex-wrap gap-2">
+          {selectedCities.map(slug => {
+            const city = cities[slug];
+            return city ? (
+              <a href={`/birth-support/${slug}/`} class="inline-flex items-center gap-1 px-4 py-2 rounded-full border border-tjb-lavender-300 text-tjb-lavender-600 hover:bg-tjb-lavender-50 hover:border-tjb-lavender-500 transition text-sm font-medium">
+                {city.city}, {city.state}
+              </a>
+            ) : null;
+          })}
+        </div>
+      )}
+
+      <p class="text-sm text-tjb-gray mt-4">
+        <a href="/birth-support/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-medium">Browse all cities →</a>
+      </p>
+    </div>
+  </section>
+)}
