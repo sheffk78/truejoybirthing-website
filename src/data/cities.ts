@@ -274,7 +274,9 @@ export const cities: Record<string, CityData> = {
     // Corpus Christi / Nueces County. Google Maps and social media searches
     // found no freestanding birth centers. Verified 2026-05-22.
     birthCenterDetails: [],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Kendra Albright", credential: "Midwife", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Nueces County's STAR and STAR+PLUS managed care plans. Nueces County has a high Medicaid birth rate — many families here depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Coastal Bend. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Corpus Christi Regional Healthcare's employee plans and some BCBS Texas plans in the area offer partial maternal wellness benefits — contact your provider directly to confirm.",
     faqs: [
@@ -435,7 +437,9 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Birth Center of Frisco", paragraph: "Birth Center of Frisco is a freestanding, midwife-led birth center offering a lower-intervention setting for low-risk pregnancies. It's a good option if you want the birth center experience close to home \u2014 and having a doula there who knows the rhythm of that space makes it feel a lot less unknown." },
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Margaret Wallis", credential: "LM, CPM, FACCE, LCCE, BSS", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Collin/Denton Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Frisco area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -505,7 +509,10 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Amy Allred", credential: "CPM", isAmbassador: false },
+      { name: "Roxanne Anderson", credential: "LM, CPM", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Dallas/Tarrant Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Grand Prairie area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -580,7 +587,9 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "BirthPointe Women's Health & Birth Center", paragraph: "BirthPointe Women's Health & Birth Center, on Las Colinas Blvd in Irving, is the city's only freestanding birth center — midwife-led with a focus on low-intervention birth in a home-like setting. It's the in-city option for Irving families who want an out-of-hospital birth, and having a doula who knows the rhythm of that space makes it feel a lot less unknown." },
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Sarah Larsen", credential: "LM, CPM", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Dallas County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Irving area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -610,8 +619,10 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-22.
     birthCenterDetails: [
     ],
-    localDoulas: [],
-    medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Webb County\u2019s STAR and STAR+PLUS managed care plans. Webb County has one of the highest uninsured rates in the United States \u2014 many families here depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring. Bilingual application assistance is available.",
+    localDoulas: [
+      { name: "Samantha Gomez", credential: "Doula", isAmbassador: false },
+    ],
+    medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Webb County's STAR and STAR+PLUS managed care plans. Webb County has one of the highest uninsured rates in the United States \u2014 many families here depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring. Bilingual application assistance is available.",
     insuranceNote: "Whether doula services are partially covered varies by plan in Laredo. Many families carry insurance from both US and Mexican employers, and coverage for doula support depends on your specific plan \u2014 check whether HSA or FSA funds can help cover out-of-pocket costs. For families using Mexican insurance (IMSS) or crossing for prenatal care, US-based doula services are typically out-of-network and self-pay.",
     faqs: [
       { q: "How much does a doula cost in Laredo?", a: "Expect to pay $700 to $1,900 for a doula in Laredo. If you're looking for bilingual support, reach out early — those spots fill fast. The local doula community here is smaller than in big metros, so start your search early. Can't swing the full price? Ask about sliding-scale options — most doulas would rather work with your budget than see you go without. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
@@ -670,7 +681,9 @@ export const cities: Record<string, CityData> = {
     // found no freestanding birth centers in the Longview area. Verified 2026-05-18.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Summer Richards", credential: "Midwife", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots offer limited doula benefits — ask your plan directly. Gregg County families on Medicaid should contact their STAR managed care plan to ask about doula coverage \u2014 some East Texas plans may offer limited benefits under pilot programs. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to ask about available coverage.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Longview area. CHRISTUS Health Plan is a major insurer in East Texas \u2014 check whether your specific plan includes doula or maternal wellness benefits. HSA and FSA funds can often be applied toward birth support costs; confirm with your plan administrator.",
     faqs: [
@@ -698,7 +711,9 @@ export const cities: Record<string, CityData> = {
       // NPI taxonomy 261QB0400X search (McKinney, Collin County TX) returned zero birth centers (2026-05-26). Google Maps search for "birth center McKinney TX" returned Bella Births Center for Birth & Women's Health, Allen Midwifery & Family Wellness at Allen Birthing Center, and Texas Family Birth & Wellness. Allen Birthing Center in Allen is the closest verified freestanding birth center to McKinney (~10 min south). "Arise Birth Center" was previously listed but does not exist in NPI, Google Maps, or DNS records — removed as fabricated entity.
       { name: "Allen Birthing Center", paragraph: "Allen Birthing Center (Allen Midwifery & Family Wellness), about 10 minutes south of McKinney in Allen, is the closest freestanding birth center for McKinney families seeking a lower-intervention setting. It's midwife-led and well-established in the Collin County birth community \u2014 and having a doula who knows the rhythm of that space makes it feel a lot less unknown." },
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Shanna Hinrichs", credential: "LM, CPM", practice: "North Texas Birth Collective", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Collin County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the McKinney area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -725,7 +740,9 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       // NPI taxonomy 261QB0400X search (Odessa, Midland TX) returned zero birth centers (2026-05-19). Google Maps search for "birth center Odessa TX" returned The Birth Center of Midland (~20 mi away), which is already documented on the Midland city page.
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Dawn Cockrell", credential: "LM, CPM", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Ector County's STAR and STAR+PLUS managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Permian Basin. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -756,8 +773,10 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
-    localDoulas: [],
-    medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Dallas County's STAR managed care plans (Community First Health Plans and AmeriGroup serve most eastern Dallas County families). Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
+    localDoulas: [
+      { name: "Delilah Ray", credential: "CLD", isAmbassador: false },
+    ],
+    medicaidNote: "No \u2014 Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children\u2019s Health Plan) offer limited doula benefits \u2014 ask your plan directly. For Dallas County\u2019s STAR managed care plans (Community First Health Plans and AmeriGroup serve most eastern Dallas County families). Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Mesquite area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
       { q: "Does Medicaid cover doulas in Mesquite?", a: "Not yet — Texas does not have statewide Medicaid doula coverage as of May 2026. Some health plans (like BCBS TX Special Beginning, Dell Children's) offer limited doula benefits. That includes Dallas County's STAR managed care plans (Community First Health Plans and AmeriGroup serve most eastern Dallas County families). Here's your next step: call your Medicaid plan and ask \"Do you cover doula services?\" — they'll walk you through it, or call 1-877-543-7669 directly. You can also check online at YourTexasBenefits.com. You deserve support, and some plans are starting to help pay for it." },
@@ -910,7 +929,9 @@ export const cities: Record<string, CityData> = {
     // searches found no freestanding birth centers in the RGV. Verified 2026-05-17.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Julie Belshe", credential: "LM", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Hidalgo County\u2019s STAR managed care plans. Hidalgo County has one of the highest uninsured rates in the United States \u2014 many families here depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Rio Grande Valley. Hidalgo County\u2019s provider shortage means fewer in-network doulas overall \u2014 check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -938,7 +959,9 @@ export const cities: Record<string, CityData> = {
     // Closest birth center options are in Houston metro (~95 miles south). Verified 2026-05-17.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Brazos Valley Birth", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots offer limited doula benefits — ask your plan directly. Brazos County families on Medicaid should contact their STAR managed care plan to ask about doula coverage \u2014 some plans have started adding doula support as a limited benefit under pilot programs. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to ask about available coverage.",
     insuranceNote: "Baylor Scott & White Health Plan is a major insurer in the Brazos Valley, and whether it covers doula services depends on your specific plan \u2014 contact your provider directly. If you\u2019re an Aggie on a student health plan or covered under a university policy, check whether HSA or FSA funds can be applied toward doula costs, since most student plans don\u2019t include direct doula benefits.",
     faqs: [
@@ -965,7 +988,9 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Azalea Birth Center", paragraph: "Azalea Birth Center, on South Broadway in central Tyler, is a freestanding birth center run by midwife Vicky Wells, offering water birth and midwife-attended out-of-hospital birth in a home-like setting. If you\u2019re considering birth center care, call ahead to confirm current availability and schedule a tour \u2014 the birth community in Tyler is growing but small, so spots can fill." },
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Vicky Wells", credential: "CNM", practice: "Azalea Birth Center", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Smith County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Tyler area. Some private insurers offer maternal wellness benefits that include doula support \u2014 contact your provider directly, and check whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1043,7 +1068,9 @@ export const cities: Record<string, CityData> = {
     // RGV birth center documentation: see McAllen city page comment (verified 2026-05-17).
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Jennifer Gabler", credential: "Midwife", practice: "Heart of Gaia Midwifery Services", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Cameron County\u2019s STAR managed care plans. Many Brownsville families depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Brownsville area. Some RGV community health workers (promotoras) may offer free or low-cost pregnancy support through local nonprofits or county health programs \u2014 check with your hospital\u2019s financial counselor for in-house support programs, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1072,7 +1099,9 @@ export const cities: Record<string, CityData> = {
     // RGV birth center documentation: see McAllen city page comment (verified 2026-05-17).
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Anna Ochoa", credential: "CPM, LM", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Hidalgo County\u2019s STAR managed care plans. Hidalgo County has one of the highest uninsured rates in the United States \u2014 many families depend on Medicaid, CHIP, and the Healthy Texas Women program. Contact your Medicaid managed care plan to confirm doula coverage, and call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Rio Grande Valley. Hidalgo County\u2019s provider shortage means fewer in-network doulas overall \u2014 check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1102,7 +1131,9 @@ export const cities: Record<string, CityData> = {
     // January 10, 2025. It is not listed as a delivery hospital.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Nicole Hoff", practice: "Bright Babies Birth Center", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Cameron County\u2019s STAR managed care plans. Cameron County has one of the highest uninsured rates in the state \u2014 many families here depend on Medicaid, CHIP, and the Healthy Texas Women program. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Harlingen area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Some RGV community health workers (promotoras) may offer free or low-cost pregnancy support through local nonprofits or county health programs.",
     faqs: [
@@ -1164,7 +1195,9 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-19.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Dinah Waranch", credential: "Midwife", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Dallas County\u2019s STAR managed care plans. Richardson straddles both Dallas and Collin counties, so check which county your Medicaid enrollment falls under. Contact your Medicaid managed care plan to confirm doula coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Richardson area. The Telecom Corridor\u2019s major employers \u2014 including AT&T, Cisco, and regional health systems \u2014 increasingly offer maternity wellness benefits that may cover doula support. Check with your HR department and ask whether HSA or FSA funds can help with out-of-pocket doula costs.",
     faqs: [
@@ -1204,7 +1237,9 @@ export const cities: Record<string, CityData> = {
         paragraph: "Nativiti Family Birth Center, at 26614 Oak Ridge Dr in The Woodlands (NPI 1245638287), is an NPI-verified freestanding birth center about 15 minutes south of Conroe. They offer CNM-led births and serve the broader Montgomery County area. Verify with the center directly for current services and insurance coverage.",
       },
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Shelbie Cunningham", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Montgomery County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "HCA Houston Healthcare Conroe accepts most major private insurance plans. Some insurers in the Montgomery County area offer maternal wellness benefits that partially cover doula services \u2014 check with your provider directly, and ask whether HSA or FSA funds can help with out-of-pocket costs.",
     faqs: [
@@ -1276,7 +1311,9 @@ export const cities: Record<string, CityData> = {
     // Families seeking birth center care would need to look outside the Valley.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Julie Belshe", credential: "LM", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Hidalgo County\u2019s STAR managed care plans. Hidalgo County has one of the highest uninsured rates in the United States \u2014 many families here depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Most Pharr-area families with private insurance use plans through employer groups or the ACA marketplace. STHS McAllen and DHR Health accept most major plans \u2014 verify your coverage and ask about prior authorization requirements early in your pregnancy.",
     faqs: [
@@ -1341,7 +1378,9 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-22.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Reyna Casmir", credential: "CD(DONA)", practice: "Soul Good Doulas", url: "https://soulgooddoulas.com", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Bell County's STAR managed care plans. Fort Cavazos families on TRICARE should check with their TRICARE regional contractor for doula coverage — TRICARE does not currently cover doulas, but HSA and FSA funds can often be used. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage.",
     insuranceNote: "Bell County has a large TRICARE population from Fort Cavazos — TRICARE does not currently cover doula services, but many military families use HSA or FSA funds for birth support. Baylor Scott & White Health Plan and FirstCare Health Plans are major civilian insurers in the area. Check your specific plan for maternal wellness or doula coverage benefits.",
     faqs: [
@@ -1370,7 +1409,9 @@ export const cities: Record<string, CityData> = {
     // Stone Oak in San Antonio (~35 min). Verified 2026-05-22.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Amy Lohse", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Comal County's STAR managed care plans. New Braunfels' rapid growth means the provider network is expanding, but some plans are still building their doula directories — call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in Comal County. Aetna, BCBS of Texas, and UnitedHealthcare all have a presence in the New Braunfels area — check your specific plan for maternal wellness or doula benefits. HSA and FSA funds can often be applied toward birth support costs.",
     faqs: [
@@ -1400,7 +1441,9 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-22.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Ashley Thomas", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Hays County's STAR managed care plans. San Marcos has a significant college-student and young-family population — if you're on Medicaid, call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in Hays County. Texas State University student health plans typically don't cover doulas, but graduate students and staff may have separate coverage. BCBS of Texas and Aetna both have a strong presence in the area — check your specific plan for maternal wellness or doula benefits. HSA and FSA funds can often be applied toward birth support costs.",
     faqs: [
@@ -1429,7 +1472,9 @@ export const cities: Record<string, CityData> = {
     // north on TX-288). Verified 2026-05-22.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "The Perinatal Unit", url: "https://theperinatalunit.org", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Brazoria County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Pearland area. Many families here carry employer-based insurance through Houston-area employers \u2014 check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -1458,7 +1503,9 @@ export const cities: Record<string, CityData> = {
     // Austin Area Birthing Center, ~8 miles south. Verified 2026-05-22.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Sarah Parente", credential: "CD", isAmbassador: false },
+    ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Williamson County\u2019s STAR managed care plans. Williamson County\u2019s rapid growth means a lot of newly enrolled families \u2014 contact your Medicaid managed care plan to confirm doula coverage, as some plans are still completing their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Cedar Park area. Austin\u2019s tech-sector employers increasingly include maternity wellness benefits that may cover doula support \u2014 check with your HR department. HSA and FSA funds can also be applied toward out-of-pocket doula costs.",
     faqs: [
@@ -5341,7 +5388,9 @@ export const cities: Record<string, CityData> = {
     // The nearest verified birth center is Genesis Birth Centers in Georgetown
     // (see georgetown-tx entry). Verified 2026-05-28.
     birthCenterDetails: [],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Kim Borchert", practice: "Austin Doula Care", url: "https://austindoulacare.com", isAmbassador: false },
+    ],
     medicaidNote: "No \\u2014 Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children\\u2019s Health Plan) offer limited doula benefits \\u2014 ask your plan directly. For Williamson County\\u2019s STAR managed care plans, contact your plan directly to confirm doula coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Leander area. Austin\\u2019s tech-sector employers increasingly include maternity wellness benefits that may cover doula support \\u2014 check with your HR department. HSA and FSA funds can typically be applied toward out-of-pocket doula costs.",
     faqs: [
