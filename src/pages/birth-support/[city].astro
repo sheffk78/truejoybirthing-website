@@ -41,10 +41,10 @@ const schema = {
     {
       '@type': 'FAQPage',
       '@id': `${pageUrl}#faq`,
-      mainEntity: faqs.map((f) => ({
+      mainEntity: faqs.map((f, i) => ({
         '@type': 'Question',
         name: f.q,
-        url: `${pageUrl}#faq-${f.q.toLowerCase().includes('cost') ? 'cost' : f.q.toLowerCase().includes('medicaid') ? 'medicaid' : f.q.toLowerCase().includes('true joy') ? 'brand' : 'hospital'}`,
+        url: `${pageUrl}#faq-${i + 1}`,
         acceptedAnswer: { '@type': 'Answer', text: f.a.replace(/<[^>]*>/g, '') },
       })),
     },
@@ -250,7 +250,7 @@ const schema = {
         <a href="/birth-plan-template/" class="flex items-start gap-3 p-4 border border-tjb-lavender-200 rounded-lg hover:border-tjb-rose-400 hover:bg-tjb-rose-50/30 transition group">
           <svg class="w-5 h-5 mt-0.5 text-tjb-lavender-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           <div>
-            <span class="font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">Free Birth Plan Template</span>
+            <span class="font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">Joyful Birth Plan</span>
             <p class="text-sm text-tjb-gray mt-0.5">Downloadable fillable PDF for your hospital birth</p>
           </div>
         </a>
@@ -306,9 +306,9 @@ const schema = {
       <h2 class="text-2xl font-bold mb-2">Your Questions About Doulas & Midwives in {city}</h2>
       <p class="text-tjb-gray mb-8">The things {city} moms ask us most — answered honestly. For even more questions and detailed answers, check out our <a href="/faq/" class="text-tjb-lavender-600 hover:underline">full doula FAQ</a>.</p>
       <div class="space-y-6">
-        {faqs.map((faq) => (
+        {faqs.map((faq, i) => (
           <div class="border border-tjb-lavender-200 rounded-lg p-5 bg-white">
-             <h3 class="text-lg font-semibold mb-2" id={`faq-${faq.q.toLowerCase().includes('cost') ? 'cost' : faq.q.toLowerCase().includes('medicaid') ? 'medicaid' : faq.q.toLowerCase().includes('true joy') ? 'brand' : 'hospital'}`}>{faq.q}</h3>
+             <h3 class="text-lg font-semibold mb-2" id={`faq-${i + 1}`}>{faq.q}</h3>
              <p class="text-tjb-gray faq-answer" set:html={faq.a} />
           </div>
         ))}
