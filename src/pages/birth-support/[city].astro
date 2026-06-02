@@ -26,7 +26,9 @@ const pageDesc = `Doula costs, hospital policies, and Medicaid coverage in ${cit
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 const ogImage = `https://truejoybirthing.com/images/og-city-${slug}.webp`;
 const heroImage = `/images/${slug}-birth-doula-skyline.webp`;
-const heroAlt = `Skyline of ${city}, ${state}, where families search for birth doulas and plan their hospital births.`;
+const heroAlt = `Birth doula supporting a family during labor in ${city}, ${state} — local hospital birth support and doula cost info`;
+const supportImage = `/images/${slug}-birth-doula-support.webp`;
+const supportImageAlt = `Birth support and doula care in ${city}, ${state} — a doula helps expectant parents prepare for their hospital birth`;
 
 // Build structured-data
 const breadcrumbList = [
@@ -122,6 +124,14 @@ const schema = {
       <!-- What Birth Support Looks Like -->
       <h2>What Doula & Midwife Support Looks Like in {city}</h2>
       <p>{culture}</p>
+      <img
+        src={supportImage}
+        alt={supportImageAlt}
+        class="w-full h-52 md:h-64 object-cover rounded-xl shadow-md my-6"
+        width="800"
+        height="500"
+        loading="lazy"
+      />
 
       <!-- Quick clarification -->
       <div class="bg-tjb-cream p-4 rounded-lg mb-6 not-prose">
