@@ -21,7 +21,7 @@ const {
   medicaidNote, insuranceNote, faqs, nearbyCities,
 }: CityData = data;
 
-const pageTitle = `${city} ${state} Birth Doula | Costs, Hospital Info & Birth Plan`;
+const pageTitle = `${city} Birth Doula | Costs & Hospital Info | TJB`;
 const pageDesc = `Doula costs, hospital policies, and Medicaid coverage in ${city}, ${state}. Plus a free Joyful Birth Plan template to walk in prepared.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 const ogImage = `https://truejoybirthing.com/images/og-city-${slug}.webp`;
@@ -30,10 +30,26 @@ const heroAlt = `Birth doula supporting a family during labor in ${city}, ${stat
 const supportImage = `/images/${slug}-birth-doula-support.webp`;
 const supportImageAlt = `Birth support and doula care in ${city}, ${state} — a doula helps expectant parents prepare for their hospital birth`;
 
-// Build structured-data
+// Full state name lookup for breadcrumbs and schema
+const stateNames: Record<string, string> = {
+  AK: 'Alaska', AL: 'Alabama', AR: 'Arkansas', AZ: 'Arizona', CA: 'California',
+  CO: 'Colorado', CT: 'Connecticut', DE: 'Delaware', FL: 'Florida', GA: 'Georgia',
+  HI: 'Hawaii', IA: 'Iowa', ID: 'Idaho', IL: 'Illinois', IN: 'Indiana',
+  KS: 'Kansas', KY: 'Kentucky', LA: 'Louisiana', MA: 'Massachusetts', MD: 'Maryland',
+  MI: 'Michigan', MN: 'Minnesota', MO: 'Missouri', MS: 'Mississippi', MT: 'Montana',
+  NC: 'North Carolina', ND: 'North Dakota', NE: 'Nebraska', NH: 'New Hampshire',
+  NJ: 'New Jersey', NM: 'New Mexico', NV: 'Nevada', NY: 'New York', OH: 'Ohio',
+  OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', RI: 'Rhode Island', SC: 'South Carolina',
+  SD: 'South Dakota', TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VA: 'Virginia',
+  VT: 'Vermont', WA: 'Washington', WI: 'Wisconsin', WV: 'West Virginia', WY: 'Wyoming',
+};
+const stateFullName = stateNames[state] || state;
+
+// Build structured-data — 4-level breadcrumbs for local SEO
 const breadcrumbList = [
   { name: 'Home', url: 'https://truejoybirthing.com/' },
   { name: 'Birth Support', url: 'https://truejoybirthing.com/birth-support/' },
+  { name: stateFullName, url: `https://truejoybirthing.com/birth-support/#${state.toLowerCase()}` },
   { name: `${city}, ${state}`, url: pageUrl },
 ];
 
@@ -120,6 +136,22 @@ const schema = {
   <!-- Main content -->
   <section class="py-16 bg-white">
     <div class="max-w-3xl mx-auto px-6 prose">
+
+      <!-- Breadcrumb nav -->
+      <nav aria-label="Breadcrumb" class="not-prose mb-6 text-sm text-tjb-gray">
+        <ol class="flex items-center gap-1.5 flex-wrap">
+          {breadcrumbList.map((crumb, i) => (
+            <li class="flex items-center gap-1.5">
+              {i > 0 && <span aria-hidden="true" class="text-tjb-lavender-300">›</span>}
+              {i < breadcrumbList.length - 1 ? (
+                <a href={crumb.url} class="text-tjb-lavender-600 hover:underline">{crumb.name}</a>
+              ) : (
+                <span class="text-tjb-charcoal font-medium" aria-current="page">{crumb.name}</span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </nav>
 
       <!-- What Birth Support Looks Like -->
       <h2>What Doula & Midwife Support Looks Like in {city}</h2>
