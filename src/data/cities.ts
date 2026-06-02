@@ -32,6 +32,10 @@ export interface CityData {
   insuranceNote: string;
   faqs: FaqItem[];
   nearbyCities: string[];
+  lat?: number;
+  lng?: number;
+  /** ISO date string for sitemap lastmod (e.g. "2026-06-15"). Omit for existing cities. */
+  publishedDate?: string;
 }
 
 export const cities: Record<string, CityData> = {
@@ -67,6 +71,8 @@ export const cities: Record<string, CityData> = {
       { q: "Are there doulas in Amarillo?", a: "Amarillo has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas — start there and interview a few until one clicks." },
     ],
     nearbyCities: ["lubbock-tx"],
+    lat: 35.222,
+    lng: -101.8313,
   },
   "abilene-tx": {
     city: "Abilene",
@@ -97,6 +103,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Abilene families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Abilene birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["midland-tx", "lubbock-tx"],
+    lat: 32.4487,
+    lng: -99.7331,
   },
   "arlington-tx": {
     city: "Arlington",
@@ -128,6 +136,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Arlington families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Arlington birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["dallas-tx", "fort-worth-tx", "grand-prairie-tx"],
+    lat: 32.7357,
+    lng: -97.1081,
   },
   "austin-tx": {
     city: "Austin",
@@ -156,6 +166,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum support is available in Austin?", a: "Austin has a strong postpartum community — lactation consultants, postpartum doulas, and parent support groups are available across the city. Seton and St. David's both offer postpartum lactation support. Austin Area Birthing Center provides postpartum midwifery care. If you're looking for affordable options, the Texas WIC program and local nonprofit groups like Mommies in Need offer free or sliding-scale postpartum support. <a href=\"/postpartum-doula/\">Learn about postpartum doula support</a> and what it covers." },
     ],
     nearbyCities: ["san-antonio-tx", "san-marcos-tx", "new-braunfels-tx", "houston-tx"],
+    lat: 30.2672,
+    lng: -97.7431,
   },
   "beaumont-tx": {
     city: "Beaumont",
@@ -182,6 +194,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Beaumont families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Beaumont birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["houston-tx"],
+    lat: 30.0862,
+    lng: -94.146,
   },
   "carrollton-tx": {
     city: "Carrollton",
@@ -227,6 +241,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Carrollton families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Carrollton birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["dallas-tx", "plano-tx", "denton-tx", "irving-tx"],
+    lat: 32.9535,
+    lng: -96.8903,
   },
   "corpus-christi-tx": {
     city: "Corpus Christi",
@@ -254,6 +270,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Corpus Christi families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Corpus Christi birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["san-antonio-tx", "laredo-tx"],
+    lat: 27.8006,
+    lng: -97.3963,
   },
   "dallas-tx": {
     city: "Dallas",
@@ -290,6 +308,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum support is available in Dallas?", a: "Dallas has strong postpartum resources across the metro — lactation consultants, postpartum doulas, and parent support groups are available near every major hospital. Parkland's lactation program serves a huge volume of families, and the Dallas WIC program covers postpartum support for Medicaid families. Community organizations like Happy Baby Futures and the Lactation Foundation offer free or sliding-scale support. <a href=\"/postpartum-doula/\">Learn about postpartum doula support</a> and what it covers." },
     ],
     nearbyCities: ["fort-worth-tx", "arlington-tx", "plano-tx", "garland-tx", "irving-tx"],
+    lat: 32.7767,
+    lng: -96.797,
   },
   "denton-tx": {
     city: "Denton",
@@ -317,6 +337,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Denton families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Denton birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["dallas-tx", "carrollton-tx", "frisco-tx"],
+    lat: 33.2148,
+    lng: -97.1331,
   },
   "el-paso-tx": {
     city: "El Paso",
@@ -347,6 +369,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum support is available in El Paso?", a: "El Paso has postpartum resources shaped by its bilingual, bicultural community — lactation consultants, postpartum doulas, and parent groups are available in both English and Spanish. UMC\u2019s lactation program serves a high volume of families. The El Paso WIC program provides free postpartum support, and community organizations like the Paso del Norte Health Foundation offer maternal health programs. La cuarentena (the 40-day postpartum rest tradition) is still widely practiced here, and many local providers understand and support it. <a href=\"/postpartum-doula/\">Learn about postpartum doula support</a> and what it covers." },
     ],
     nearbyCities: ["lubbock-tx", "midland-tx"],
+    lat: 31.7619,
+    lng: -106.485,
   },
   "fort-worth-tx": {
     city: "Fort Worth",
@@ -376,6 +400,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum support is available in Fort Worth?", a: "Fort Worth has solid postpartum resources \u2014 lactation consultants, postpartum doulas, and parent groups are available across the city. Cook Children's and Texas Health Harris both offer lactation programs. The Tarrant County WIC program provides free postpartum support for Medicaid families. Community organizations like the Tarrant County Birth Network connect families with local doulas and postpartum resources. <a href=\"/postpartum-doula/\">Learn about postpartum doula support</a> and what it covers." },
     ],
     nearbyCities: ["dallas-tx", "arlington-tx", "grand-prairie-tx"],
+    lat: 32.7555,
+    lng: -97.3308,
   },
   "frisco-tx": {
     city: "Frisco",
@@ -402,6 +428,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Frisco families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Frisco birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["plano-tx", "mckinney-tx", "denton-tx"],
+    lat: 33.1507,
+    lng: -96.8235,
   },
   "garland-tx": {
     city: "Garland",
@@ -432,6 +460,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Garland families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Garland birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["dallas-tx", "mesquite-tx", "arlington-tx"],
+    lat: 32.9126,
+    lng: -96.6389,
   },
   "grand-prairie-tx": {
     city: "Grand Prairie",
@@ -468,6 +498,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Grand Prairie families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Grand Prairie birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["arlington-tx", "dallas-tx", "irving-tx"],
+    lat: 32.7457,
+    lng: -97.0011,
   },
   "houston-tx": {
     city: "Houston",
@@ -497,6 +529,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum support is available in Houston?", a: "Houston has extensive postpartum resources — lactation consultants, postpartum doulas, and parent support groups across the metro. Texas Children's and Memorial Hermann both offer robust lactation programs. The Harris County WIC program and community organizations like March of Dimes Houston provide free or low-cost postpartum support. If you're looking for culturally specific care, Houston's diverse birth community includes Black, Latine, and Asian doulas and midwives who serve their own communities. <a href=\"/postpartum-doula/\">Learn about postpartum doula support</a> and what it covers." },
     ],
     nearbyCities: ["austin-tx", "san-antonio-tx"],
+    lat: 29.7604,
+    lng: -95.3698,
   },
   "irving-tx": {
     city: "Irving",
@@ -539,6 +573,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Irving families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Irving birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["dallas-tx", "carrollton-tx", "grand-prairie-tx"],
+    lat: 32.814,
+    lng: -96.9489,
   },
   "laredo-tx": {
     city: "Laredo",
@@ -568,6 +604,8 @@ export const cities: Record<string, CityData> = {
       { q: "Are there bilingual doulas in Laredo?", a: "Yes! Laredo has bilingual doulas — and if you're more comfortable in another language, that support is out there. Ask when you interview: \"Do you offer support in my language?\" is a great question to start with." },
     ],
     nearbyCities: ["san-antonio-tx", "corpus-christi-tx"],
+    lat: 27.5306,
+    lng: -99.4803,
   },
   "lubbock-tx": {
     city: "Lubbock",
@@ -597,6 +635,8 @@ export const cities: Record<string, CityData> = {
       { q: "Are there birth centers in Lubbock?", a: "Not yet — but that doesn't mean you're stuck. There aren't any freestanding birth centers in Lubbock right now, but you can still have a doula by your side in the hospital — that support makes a huge difference no matter where you deliver. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> and think through what matters most to you — you have more choices than you might think." },
     ],
     nearbyCities: ["amarillo-tx", "el-paso-tx"],
+    lat: 33.5779,
+    lng: -101.8552,
   },
   "longview-tx": {
     city: "Longview",
@@ -624,6 +664,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Longview families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Longview birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["tyler-tx", "dallas-tx"],
+    lat: 32.5007,
+    lng: -94.7425,
   },
   "mckinney-tx": {
     city: "McKinney",
@@ -651,6 +693,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with McKinney families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any McKinney birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["plano-tx", "frisco-tx", "denton-tx"],
+    lat: 33.1976,
+    lng: -96.6153,
   },
   "odessa-tx": {
     city: "Odessa",
@@ -677,6 +721,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Odessa families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Odessa birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["midland-tx", "lubbock-tx"],
+    lat: 31.8457,
+    lng: -102.3677,
   },
   "mesquite-tx": {
     city: "Mesquite",
@@ -707,6 +753,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Mesquite families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Mesquite birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["dallas-tx", "garland-tx", "arlington-tx"],
+    lat: 32.7666,
+    lng: -96.5995,
   },
   "plano-tx": {
     city: "Plano",
@@ -734,6 +782,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Plano families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Plano birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["dallas-tx", "frisco-tx", "mckinney-tx", "carrollton-tx"],
+    lat: 33.0198,
+    lng: -96.6989,
   },
   "san-antonio-tx": {
     city: "San Antonio",
@@ -766,6 +816,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum support is available in San Antonio?", a: "San Antonio has growing postpartum resources — lactation consultants, postpartum doulas, and parent groups are available across the city. University Hospital and Methodist both offer lactation support programs. The San Antonio WIC program and community organizations like the San Antonio Birth Cooperative and Mama Sana Vibrante provide free or low-cost postpartum care, especially for Latine and Black families. <a href=\"/postpartum-doula/\">Learn about postpartum doula support</a> and what it covers." },
     ],
     nearbyCities: ["austin-tx", "houston-tx", "corpus-christi-tx"],
+    lat: 29.4241,
+    lng: -98.4936,
   },
 
   "waco-tx": {
@@ -794,6 +846,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Waco families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Waco birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["temple-tx", "austin-tx", "dallas-tx", "fort-worth-tx"],
+    lat: 31.5493,
+    lng: -97.1467,
   },
   "midland-tx": {
     city: "Midland",
@@ -820,6 +874,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Midland families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Midland birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["lubbock-tx"],
+    lat: 31.9973,
+    lng: -102.0779,
   },
   "mcallen-tx": {
     city: "McAllen",
@@ -848,6 +904,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with McAllen families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any McAllen birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["corpus-christi-tx", "san-antonio-tx", "laredo-tx"],
+    lat: 26.2035,
+    lng: -98.23,
   },
   "college-station-tx": {
     city: "College Station",
@@ -875,6 +933,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with College Station families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any College Station birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["waco-tx", "austin-tx", "houston-tx"],
+    lat: 30.628,
+    lng: -96.3344,
   },
   "tyler-tx": {
     city: "Tyler",
@@ -901,6 +961,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Tyler families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Tyler birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["dallas-tx", "waco-tx"],
+    lat: 32.3513,
+    lng: -95.3011,
   },
   "killeen-tx": {
     city: "Killeen",
@@ -947,6 +1009,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Killeen families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Killeen birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["temple-tx", "waco-tx", "austin-tx"],
+    lat: 31.1171,
+    lng: -97.7272,
   },
   "brownsville-tx": {
     city: "Brownsville",
@@ -975,6 +1039,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work for Brownsville families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Brownsville birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["mcallen-tx", "corpus-christi-tx", "laredo-tx"],
+    lat: 25.9017,
+    lng: -97.4975,
   },
   "edinburg-tx": {
     city: "Edinburg",
@@ -1003,6 +1069,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work for Edinburg families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Edinburg birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["mcallen-tx", "laredo-tx", "corpus-christi-tx"],
+    lat: 26.3017,
+    lng: -98.1633,
   },
   "harlingen-tx": {
     city: "Harlingen",
@@ -1032,6 +1100,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work for Harlingen families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Harlingen birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["mcallen-tx", "corpus-christi-tx"],
+    lat: 26.1906,
+    lng: -97.6961,
   },
   "round-rock-tx": {
     city: "Round Rock",
@@ -1060,6 +1130,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Round Rock families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Round Rock birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["austin-tx", "killeen-tx"],
+    lat: 30.5083,
+    lng: -97.6789,
   },
   "richardson-tx": {
     city: "Richardson",
@@ -1088,6 +1160,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Richardson families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Richardson birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["dallas-tx", "plano-tx", "garland-tx", "carrollton-tx"],
+    lat: 32.9482,
+    lng: -96.7297,
   },
   "conroe-tx": {
     city: "Conroe",
@@ -1127,6 +1201,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work for Conroe families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Conroe birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["houston-tx", "college-station-tx", "beaumont-tx"],
+    lat: 30.3116,
+    lng: -95.4561,
   },
   "sugar-land-tx": {
     city: "Sugar Land",
@@ -1162,6 +1238,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work for Sugar Land families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Sugar Land birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["houston-tx"],
+    lat: 29.6197,
+    lng: -95.6349,
   },
   "pharr-tx": {
     city: "Pharr",
@@ -1197,6 +1275,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work for Pharr families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Pharr birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["mcallen-tx", "edinburg-tx", "harlingen-tx"],
+    lat: 26.1954,
+    lng: -98.1831,
   },
   "mission-tx": {
     city: "Mission",
@@ -1232,6 +1312,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work for Mission families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Mission birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["mcallen-tx", "edinburg-tx", "harlingen-tx"],
+    lat: 26.2159,
+    lng: -98.3254,
   },
   "temple-tx": {
     city: "Temple",
@@ -1260,6 +1342,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Temple families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Temple birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["killeen-tx", "austin-tx", "waco-tx"],
+    lat: 31.0982,
+    lng: -97.3428,
   },
   "new-braunfels-tx": {
     city: "New Braunfels",
@@ -1288,6 +1372,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with New Braunfels families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any New Braunfels birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["san-antonio-tx", "austin-tx", "san-marcos-tx"],
+    lat: 29.7028,
+    lng: -98.1257,
   },
   "san-marcos-tx": {
     city: "San Marcos",
@@ -1317,6 +1403,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with San Marcos families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any San Marcos birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["austin-tx", "san-antonio-tx", "new-braunfels-tx"],
+    lat: 29.8833,
+    lng: -97.9414,
   },
   "pearland-tx": {
     city: "Pearland",
@@ -1345,6 +1433,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Pearland families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Pearland birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["houston-tx", "sugar-land-tx"],
+    lat: 29.5636,
+    lng: -95.2861,
   },
   "cedar-park-tx": {
     city: "Cedar Park",
@@ -1373,6 +1463,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Cedar Park families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Cedar Park birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["austin-tx", "round-rock-tx"],
+    lat: 30.5052,
+    lng: -97.8203,
   },
   "victoria-tx": {
     city: "Victoria",
@@ -1401,6 +1493,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Victoria families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Victoria birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["houston-tx", "san-antonio-tx", "corpus-christi-tx"],
+    lat: 28.8026,
+    lng: -96.9766,
   },
   "georgetown-tx": {
     city: "Georgetown",
@@ -1433,6 +1527,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work for Georgetown families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Georgetown birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["austin-tx", "round-rock-tx", "cedar-park-tx"],
+    lat: 30.637,
+    lng: -97.6776,
   },
   "spring-tx": {
     city: "Spring",
@@ -1461,6 +1557,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Spring/The Woodlands families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Spring birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["houston-tx", "conroe-tx", "college-station-tx"],
+    lat: 30.0797,
+    lng: -95.3813,
   },
   "galveston-tx": {
     city: "Galveston",
@@ -1491,6 +1589,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Galveston families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Galveston birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["houston-tx", "sugar-land-tx"],
+    lat: 29.3872,
+    lng: -94.9927,
   },
   "lewisville-tx": {
     city: "Lewisville",
@@ -1518,6 +1618,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Lewisville families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Lewisville birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["dallas-tx", "denton-tx", "fort-worth-tx"],
+    lat: 33.0462,
+    lng: -96.9941,
   },
   "pasadena-tx": {
     city: "Pasadena",
@@ -1545,6 +1647,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Pasadena families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Pasadena birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["houston-tx", "spring-tx", "pearland-tx"],
+    lat: 29.6922,
+    lng: -95.2091,
   },
   "allen-tx": {
     city: "Allen",
@@ -1571,6 +1675,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Allen families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Allen birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["dallas-tx", "plano-tx", "mckinney-tx"],
+    lat: 33.1032,
+    lng: -96.6706,
   },
   "wichita-falls-tx": {
     city: "Wichita Falls",
@@ -1598,6 +1704,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does TRICARE cover doula services for Sheppard AFB families?", a: "TRICARE covers doula services for military military families at Sheppard AFB. Verify current coverage details with your TRICARE plan, as policies can change. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> — military families deal with enough uncertainty; your birth preferences shouldn't be one of them." },
     ],
     nearbyCities: ["dallas-tx"],
+    lat: 33.9137,
+    lng: -98.4934,
   },
   "concord-nc": {
     city: "Concord",
@@ -1628,6 +1736,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Concord families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Concord birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["charlotte-nc", "raleigh-nc"],
+    lat: 35.4094,
+    lng: -80.58,
   },
   "cumming-ga": {
     city: "Cumming",
@@ -1661,6 +1771,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Cumming families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Cumming birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["atlanta-ga", "columbus-ga"],
+    lat: 34.2087,
+    lng: -84.1186,
   },
   "greenville-sc": {
     city: "Greenville",
@@ -1692,6 +1804,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Greenville families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Greenville birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["charlotte-nc", "atlanta-ga"],
+    lat: 34.8526,
+    lng: -82.394,
   },
   "charlotte-nc": {
     city: "Charlotte",
@@ -1724,6 +1838,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Charlotte families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Charlotte birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["concord-nc", "greenville-sc"],
+    lat: 35.2271,
+    lng: -80.8431,
   },
   "raleigh-nc": {
     city: "Raleigh",
@@ -1755,6 +1871,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Raleigh families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Raleigh birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["charlotte-nc", "greensboro-nc"],
+    lat: 35.7796,
+    lng: -78.6382,
   },
   "atlanta-ga": {
     city: "Atlanta",
@@ -1789,6 +1907,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Atlanta families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Atlanta birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["cumming-ga", "greenville-sc"],
+    lat: 33.749,
+    lng: -84.388,
   },
   "savannah-ga": {
     city: "Savannah",
@@ -1821,6 +1941,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Savannah families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Savannah birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["atlanta-ga", "charlotte-nc"],
+    lat: 32.0809,
+    lng: -81.0912,
   },
   "jacksonville-fl": {
     city: "Jacksonville",
@@ -1854,6 +1976,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Jacksonville families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Jacksonville birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["greenville-sc", "charlotte-nc"],
+    lat: 30.3322,
+    lng: -81.6557,
   },
   "greensboro-nc": {
     city: "Greensboro",
@@ -1887,6 +2011,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Greensboro families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Greensboro birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["charlotte-nc", "raleigh-nc"],
+    lat: 36.0726,
+    lng: -79.792,
   },
   "tampa-fl": {
     city: "Tampa",
@@ -1918,6 +2044,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Tampa families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Tampa birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["jacksonville-fl", "savannah-ga"],
+    lat: 27.9506,
+    lng: -82.4574,
   },
   "orlando-fl": {
     city: "Orlando",
@@ -1948,6 +2076,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Orlando families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Orlando birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["jacksonville-fl", "tampa-fl"],
+    lat: 28.5383,
+    lng: -81.3792,
   },
   "denver-co": {
     city: "Denver",
@@ -1978,6 +2108,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Denver families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Denver birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["colorado-springs-co"],
+    lat: 39.7392,
+    lng: -104.9903,
   },
   "miami-fl": {
     city: "Miami",
@@ -2008,6 +2140,8 @@ export const cities: Record<string, CityData> = {
       { q: "Do I need a birth plan if I'm delivering at Jackson Memorial?", a: "Jackson Memorial is a large teaching hospital with a Level IV NICU — a birth plan helps communicate your preferences clearly to rotating staff. The Joyful Birth Plan is designed to be read by nurses in under two minutes. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> — it walks you through every question to think about before the big day." }
     ],
     nearbyCities: ["tampa-fl", "jacksonville-fl"],
+    lat: 25.7617,
+    lng: -80.1918,
   },
   "st-petersburg-fl": {
     city: "St. Petersburg",
@@ -2037,6 +2171,8 @@ export const cities: Record<string, CityData> = {
       { q: "Is St. Petersburg a good place to give birth?", a: "St. Petersburg offers strong hospital options within city limits, plus close access to Tampa's broader birth network via the Howard Frankland Bridge. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> and start thinking about what kind of birth experience you want — wherever you deliver." }
     ],
     nearbyCities: ["tampa-fl", "orlando-fl"],
+    lat: 27.7676,
+    lng: -82.6403,
   },
   "colorado-springs-co": {
     city: "Colorado Springs",
@@ -2066,6 +2202,8 @@ export const cities: Record<string, CityData> = {
       { q: "What should Colorado Springs families know about birth planning?", a: "Yes — Colorado Springs offers one of the most complete birth networks in the state — Level III NICU hospitals, a freestanding birth center, and Medicaid doula coverage. Specify your setting preference, altitude considerations, and TRICARE status in your birth plan. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> — local knowledge + a clear plan = confidence on birth day." }
     ],
     nearbyCities: ["denver-co"],
+    lat: 38.8339,
+    lng: -104.8214,
   },
   "augusta-ga": {
     city: "Augusta",
@@ -2095,6 +2233,8 @@ export const cities: Record<string, CityData> = {
       { q: "What's the average cost of a doula in Augusta?", a: "Doulas in Augusta typically charge $1,200–$3,500, depending on experience and package. Since Georgia Medicaid doesn't cover doulas, community programs are the main pathway for low-cost support." }
     ],
     nearbyCities: ["atlanta-ga", "savannah-ga", "greenville-sc"],
+    lat: 33.471,
+    lng: -81.9748,
   },
   "fort-collins-co": {
     city: "Fort Collins",
@@ -2123,6 +2263,8 @@ export const cities: Record<string, CityData> = {
       { q: "What's the average cost of a doula in Fort Collins?", a: "Doulas in Fort Collins typically charge $1,400–$4,000, with most around $2,200. Medicaid-covered doulas are available at no out-of-pocket cost to qualifying you and your family." }
     ],
     nearbyCities: ["denver-co", "colorado-springs-co"],
+    lat: 40.5872,
+    lng: -105.077,
   },
   "seattle-wa": {
     city: "Seattle",
@@ -2155,6 +2297,8 @@ export const cities: Record<string, CityData> = {
       { q: "How long is the drive to a hospital from Seattle birth centers?", a: "The Center for Birth in Eastlake is approximately 5 minutes from Swedish First Hill by car. South Seattle Birth Center is roughly 15 minutes from Valley Medical Center in Renton, depending on I-5 traffic. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." }
     ],
     nearbyCities: ["spokane-wa", "tacoma-wa"],
+    lat: 47.6062,
+    lng: -122.3321,
   },
   "tacoma-wa": {
     city: "Tacoma",
@@ -2184,6 +2328,8 @@ export const cities: Record<string, CityData> = {
       { q: "How far is the drive to Seattle for a Level IV NICU?", a: "UW Medical Center's Level IV NICU is approximately 35 miles from downtown Tacoma, typically a 45–60 minute drive via I-5 — longer during peak commute times. Knowing your drive time before you're in labor takes one more worry off your plate." }
     ],
     nearbyCities: ["seattle-wa", "spokane-wa"],
+    lat: 47.2529,
+    lng: -122.4443,
   },
   "sacramento-ca": {
     city: "Sacramento",
@@ -2214,6 +2360,8 @@ export const cities: Record<string, CityData> = {
       { q: "How long is the drive from Elk Grove to Sacramento hospitals?", a: "Elk Grove to UC Davis Medical Center is roughly 20 miles via Highway 99, typically 25–35 minutes outside rush hour but potentially 45–60 minutes during peak commute times on the 99 corridor. Knowing your drive time before you're in labor takes one more worry off your plate." }
     ],
     nearbyCities: [],
+    lat: 38.5816,
+    lng: -121.4944,
   },
   "san-diego-ca": {
     city: "San Diego",
@@ -2245,6 +2393,8 @@ export const cities: Record<string, CityData> = {
       { q: "What if I live in North County — which hospital is closest?", a: "Palomar Medical Center in Escondido (Level II NICU) and Tri-City Medical Center in Oceanside serve North County you and your family. For a Level III or IV NICU, the drive to Scripps Mercy or UCSD is typically 30–45 minutes depending on traffic." }
     ],
     nearbyCities: ["los-angeles-ca"],
+    lat: 32.7157,
+    lng: -117.1611,
   },
   "fresno-ca": {
     city: "Fresno",
@@ -2274,6 +2424,8 @@ export const cities: Record<string, CityData> = {
       { q: "What if I live in a rural area outside Fresno?", a: "Families in rural communities like Sanger, Selma, Kerman, or Reedley should plan hospital routes carefully — Community Regional is the only Level III NICU option, and travel times along Hwy 99 or Hwy 180 can vary significantly during peak hours. If you're outside the city, virtual doula support and the <a href=\"/birth-plan-template/\">free birth plan app</a> can help you prepare no matter your distance." }
     ],
     nearbyCities: ["sacramento-ca"],
+    lat: 36.7378,
+    lng: -119.7871,
   },
   "los-angeles-ca": {
     city: "Los Angeles",
@@ -2306,6 +2458,8 @@ export const cities: Record<string, CityData> = {
       { q: "Are there doulas who specifically serve South LA communities?", a: "Yes. Organizations like the LA Doula Project, Cherished Futures for Black Moms & Babies, and SQUATS provide or connect you with culturally centered, often free or low-cost doula care in South LA and surrounding communities. You can also use the True Joy Birthing app to find local doulas — start there and interview a few until one clicks." }
     ],
     nearbyCities: ["san-diego-ca"],
+    lat: 33.9425,
+    lng: -118.4081,
   },
   "eugene-or": {
     city: "Eugene",
@@ -2334,6 +2488,8 @@ export const cities: Record<string, CityData> = {
       { q: "How far is Eugene from Portland for specialized care?", a: "Eugene is roughly 110 miles south of Portland — about a two-hour drive. Families with high-risk pregnancies requiring a Level IV NICU would be referred to OHSU in Portland. Knowing your drive time before you're in labor takes one more worry off your plate." }
     ],
     nearbyCities: ["portland-or", "seattle-wa"],
+    lat: 44.0521,
+    lng: -123.0868,
   },
   "las-vegas-nv": {
     city: "Las Vegas",
@@ -2364,6 +2520,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does the Culinary Health Fund cover doula services?", a: "The Culinary Health Fund covers midwifery and hospital maternity care for its members, but doula coverage is not a standard benefit. Contact the fund directly to verify whether doula services can be reimbursed under your specific plan. Call your insurance and ask directly: \"Do you cover doula services?\" That one phone call gets you a clear answer." }
     ],
     nearbyCities: ["sacramento-ca", "los-angeles-ca"],
+    lat: 36.1699,
+    lng: -115.1398,
   },
   "minneapolis-mn": {
     city: "Minneapolis",
@@ -2394,6 +2552,8 @@ export const cities: Record<string, CityData> = {
       { q: "Do Minneapolis hospitals allow doulas in the delivery room?", a: "Yes. All major Minneapolis hospitals welcome doulas. Post-COVID restrictions have fully lifted so doulas are allowed without visitor limits. Call ahead or bring your birth plan to your hospital tour — most units welcome doulas, but knowing their policy upfront saves you stress." }
     ],
     nearbyCities: ["st-paul-mn"],
+    lat: 44.9778,
+    lng: -93.265,
   },
   "st-paul-mn": {
     city: "St. Paul",
@@ -2423,6 +2583,8 @@ export const cities: Record<string, CityData> = {
       { q: "How far is Minneapolis from St. Paul for birth services?", a: "Downtown St. Paul to downtown Minneapolis is about 10 miles via I-94 — roughly a 15-minute drive. Many you use both cities' birth options since they share one connected metro birth community. Knowing your drive time before you're in labor takes one more worry off your plate." }
     ],
     nearbyCities: ["minneapolis-mn"],
+    lat: 44.9537,
+    lng: -93.09,
   },
   "phoenix-az": {
     city: "Phoenix",
@@ -2453,6 +2615,8 @@ export const cities: Record<string, CityData> = {
       { q: "Are there Spanish-speaking doulas in Phoenix?", a: "You deserve a doula who gets your experience. Phoenix has doulas of color who serve families with cultural understanding and real care. Don't settle — keep asking until you find someone who feels right." }
     ],
     nearbyCities: ["las-vegas-nv"],
+    lat: 33.4484,
+    lng: -112.074,
   },
   "chicago-il": {
     city: "Chicago",
@@ -2483,6 +2647,8 @@ export const cities: Record<string, CityData> = {
       { q: "How do I find a Black doula in Chicago?", a: "You deserve a doula who gets your experience. Chicago has doulas of color who serve families with cultural understanding and real care. Don't settle — keep asking until you find someone who feels right." }
     ],
     nearbyCities: ["minneapolis-mn", "st-paul-mn", "aurora-il"],
+    lat: 41.8781,
+    lng: -87.6298,
   },
   "detroit-mi": {
     city: "Detroit",
@@ -2513,6 +2679,8 @@ export const cities: Record<string, CityData> = {
       { q: "Is Hutzel Women's Hospital still open for deliveries?", a: "Yes. DMC Hutzel Women's Hospital continues to operate as a dedicated women's hospital with a Level III NICU and remains a cornerstone of obstetric care in Detroit." }
     ],
     nearbyCities: ["chicago-il", "minneapolis-mn"],
+    lat: 42.3314,
+    lng: -83.0458,
   },
   "new-york-ny": {
     city: "New York",
@@ -2543,6 +2711,8 @@ export const cities: Record<string, CityData> = {
       { q: "Can I have a midwife-attended birth at a NYC hospital?", a: "Yes. Several NYC hospitals including NYU Langone and NewYork-Presbyterian have midwifery practices that support low-intervention, midwife-attended births within the hospital setting. Ask your provider directly about midwife-attended birth options — you might have more choices than you think." }
     ],
     nearbyCities: ["chicago-il"],
+    lat: 40.7128,
+    lng: -74.006,
   },
   "virginia-beach-va": {
     city: "Virginia Beach",
@@ -2572,6 +2742,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum support is available for military families in Virginia Beach?", a: "You're not supposed to do this alone. Virginia Beach has lactation consultants, local parenting groups to lean on. And grab the <a href=\"/birth-plan-template/\">free birth plan template</a> — knowing what's normal (and what's not) after birth is everything." }
     ],
     nearbyCities: ["new-york-ny", "chicago-il"],
+    lat: 36.8529,
+    lng: -75.978,
   },
   "nashville-tn": {
     city: "Nashville",
@@ -2601,6 +2773,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in Nashville?", a: "You're not supposed to do this alone. Nashville has lactation consultants, WIC offices, local parenting groups to lean on. Note: postpartum Medicaid coverage is available, though doula services aren't included under current policy. And grab the <a href=\"/birth-plan-template/\">free birth plan template</a> — knowing what's normal (and what's not) after birth is everything." }
     ],
     nearbyCities: ["atlanta-ga", "chicago-il"],
+    lat: 36.1627,
+    lng: -86.7816,
   },
   "philadelphia-pa": {
     city: "Philadelphia",
@@ -2632,6 +2806,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in Philadelphia?", a: "Philly has strong postpartum support: Maternity Care Coalition offers home visiting and breastfeeding help across the city, the Philadelphia Department of Public Health runs free parenting groups, CHOP's Lactation Center provides expert breastfeeding support, and the Postpartum Support International PA helpline (1-800-773-6667) is available for perinatal mood concerns." }
     ],
     nearbyCities: ["new-york-ny", "baltimore-md"],
+    lat: 39.9526,
+    lng: -75.1652,
   },
   "pittsburgh-pa": {
     city: "Pittsburgh",
@@ -2662,6 +2838,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in Pittsburgh?", a: "Pittsburgh offers several great postpartum resources: Healthy Start Pittsburgh supports moms through pregnancy and postpartum with wraparound services, the Allegheny County Health Department has a free home visiting program, Western Psychiatric Institute provides perinatal mood support, and La Leche League Pittsburgh runs free breastfeeding support groups across the city." }
     ],
     nearbyCities: ["philadelphia-pa"],
+    lat: 40.4406,
+    lng: -79.9959,
   },
   "baltimore-md": {
     city: "Baltimore",
@@ -2692,6 +2870,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in Baltimore?", a: "Baltimore has strong postpartum support: Baltimore Healthy Start provides wraparound services from pregnancy through the first year, the Baltimore City Health Department offers free home visiting programs, Sinai Hospital's Center for Pregnancy and New Parents provides lactation and newborn support, and the Maryland PSI warmline (1-800-773-6667) is available for perinatal mood and anxiety support." }
     ],
     nearbyCities: ["philadelphia-pa", "virginia-beach-va"],
+    lat: 39.2904,
+    lng: -76.6122,
   },
   "hartford-ct": {
     city: "Hartford",
@@ -2721,6 +2901,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in Hartford?", a: "Hartford has solid postpartum support: Connecticut's HUSKY Health offers postpartum coverage up to 12 months, the Hartford WIC program provides nutrition and breastfeeding support, the Family Life Center at Saint Francis offers parenting programs, and community-based groups through the Hispanic Health Council and Hartford's home visiting programs are available." }
     ],
     nearbyCities: ["boston-ma", "providence-ri", "new-york-ny"],
+    lat: 41.7637,
+    lng: -72.6851,
   },
   "boston-ma": {
     city: "Boston",
@@ -2752,6 +2934,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in Boston?", a: "Boston has strong postpartum support: MassHealth covers postpartum care up to 12 months, the Boston Public Health Commission's MOMCARE program provides wraparound services, Birth Sisters at Boston Medical Center offers culturally centered doula support, postpartum groups run through Brigham and Women's Center for Women's Health, and WIC offices serve Dorchester, Roxbury, and Jamaica Plain." }
     ],
     nearbyCities: ["hartford-ct", "providence-ri", "new-york-ny"],
+    lat: 42.3601,
+    lng: -71.0589,
   },
   "providence-ri": {
     city: "Providence",
@@ -2781,6 +2965,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in Providence?", a: "Providence has solid postpartum support: RI Medicaid covers postpartum care up to 12 months, the Rhode Island Department of Health's Home Visiting Program provides in-home support, WIC offices on Broad Street and in Olneyville offer nutrition and breastfeeding help, and community-based groups through organizations like the SISTA Project and Progreso Latino are available." }
     ],
     nearbyCities: ["boston-ma", "hartford-ct", "new-york-ny"],
+    lat: 41.824,
+    lng: -71.4128,
   },
   "san-francisco-ca": {
     city: "San Francisco",
@@ -2810,6 +2996,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in San Francisco?", a: "San Francisco has strong postpartum support: UCSF's Lactation Center provides expert breastfeeding help, Day One Centers in SoMa offer postpartum groups, Black Mama's Village provides culturally centered care, and the SF Department of Public Health's Black Infant Health Program serves local families." }
     ],
     nearbyCities: ["oakland-ca", "san-jose-ca", "sacramento-ca"],
+    lat: 37.7749,
+    lng: -122.4194,
   },
   "san-jose-ca": {
     city: "San Jose",
@@ -2839,6 +3027,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in San Jose?", a: "San Jose has solid postpartum support: lactation consultants at Santa Clara Valley Medical Center, postpartum groups through the YWCA Golden Gate Silicon Valley, Vietnamese postpartum meal services in East San Jose, and Santa Clara County's Perinatal Equity Initiative for Black moms." }
     ],
     nearbyCities: ["san-francisco-ca", "oakland-ca", "sacramento-ca"],
+    lat: 37.3382,
+    lng: -121.8863,
   },
   "long-beach-ca": {
     city: "Long Beach",
@@ -2867,6 +3057,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in Long Beach?", a: "Long Beach offers the Comprehensive Perinatal Services Program through community clinics, lactation support at MemorialCare, the Cambodian Advocacy Collaborative for culturally rooted postpartum care, and the Black Infant Health Program through the City of Long Beach Health Department." }
     ],
     nearbyCities: ["los-angeles-ca", "san-diego-ca", "bakersfield-ca"],
+    lat: 33.7701,
+    lng: -118.1937,
   },
   "oakland-ca": {
     city: "Oakland",
@@ -2895,6 +3087,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in Oakland?", a: "Oakland is rich in postpartum support: the Black Infant Health Program through Alameda County Public Health, Roots Community Birth Center's postpartum circles, lactation support at Highland Hospital, and Alameda County WIC offices for breastfeeding help and nutrition support." }
     ],
     nearbyCities: ["san-francisco-ca", "san-jose-ca", "sacramento-ca", "stockton-ca"],
+    lat: 37.8044,
+    lng: -122.2712,
   },
   "bakersfield-ca": {
     city: "Bakersfield",
@@ -2923,6 +3117,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in Bakersfield?", a: "Bakersfield offers the Kern County Black Infant Health Program, lactation support through Kern Medical's WIC office, postpartum support groups at Adventist Health Bakersfield, and the Comprehensive Perinatal Services Program (CPSP) at local community health centers." }
     ],
     nearbyCities: ["fresno-ca", "los-angeles-ca", "san-diego-ca"],
+    lat: 35.3733,
+    lng: -119.0187,
   },
   "stockton-ca": {
     city: "Stockton",
@@ -2951,6 +3147,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in Stockton?", a: "Stockton offers postpartum support through the San Joaquin County Black Infant Health Program, WIC lactation consultants at community clinics, the Comprehensive Perinatal Services Program (CPSP) at local health centers, and parenting groups through the Family Resource and Referral Center." }
     ],
     nearbyCities: ["sacramento-ca", "fresno-ca", "oakland-ca", "san-francisco-ca"],
+    lat: 37.9577,
+    lng: -121.2908,
   },
   "buffalo-ny": {
     city: "Buffalo",
@@ -2979,6 +3177,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in Buffalo?", a: "Buffalo offers the Erie County WIC program's lactation consultants, the Buffalo Prenatal Perinatal Network's home visiting program, Jericho Road Community Health Center for culturally responsive care, and postpartum depression support groups through the Mental Health Advocates of WNY." }
     ],
     nearbyCities: ["rochester-ny", "albany-ny", "new-york-ny"],
+    lat: 42.8864,
+    lng: -78.8781,
   },
   "rochester-ny": {
     city: "Rochester",
@@ -3007,6 +3207,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in Rochester?", a: "Rochester has solid postpartum resources: the Monroe County WIC program's lactation services, Highland Hospital midwifery practice's postpartum care, the Baby Love Program at Anthony L. Jordan Health Center for Black moms, and the Perinatal Network of Monroe County for peer support and referrals." }
     ],
     nearbyCities: ["buffalo-ny", "albany-ny", "new-york-ny"],
+    lat: 43.1573,
+    lng: -77.6152,
   },
   "albany-ny": {
     city: "Albany",
@@ -3035,6 +3237,8 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in Albany?", a: "Albany offers the Albany County WIC program for lactation support and nutrition, the REACH Program at Albany Med for high-risk moms, postpartum support groups through St. Peter's maternity services, and the Capital District Perinatal Network for peer support and home visiting programs." }
     ],
     nearbyCities: ["rochester-ny", "buffalo-ny", "new-york-ny", "hartford-ct"],
+    lat: 42.6512,
+    lng: -73.755,
   },
 
   "oklahoma-city-ok": {
@@ -3064,6 +3268,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Oklahoma City families?", a: "True Joy Birthing provides free birth-prep tools for Oklahoma City families. The free birth plan, checklist, and guided walkthrough in the app work for any Oklahoma City birth setting. The app also helps you connect with local doulas and midwives in your area." }
     ],
     nearbyCities: [],
+    lat: 35.4676,
+    lng: -97.5164,
   },
   "tulsa-ok": {
     city: "Tulsa",
@@ -3092,6 +3298,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Tulsa families?", a: "True Joy Birthing provides free birth-prep tools for Tulsa families. The free birth plan, checklist, and guided walkthrough in the app work for any Tulsa birth setting. The app also helps you connect with local doulas and midwives in your area." }
     ],
     nearbyCities: ["oklahoma-city-ok"],
+    lat: 36.154,
+    lng: -95.9928,
   },
   "columbus-oh": {
     city: "Columbus",
@@ -3118,6 +3326,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Columbus families?", a: "True Joy Birthing provides free birth-prep tools for Columbus families. The free birth plan, checklist, and guided walkthrough in the app work for any Columbus birth setting. The app also helps you connect with local doulas and midwives in your area." }
     ],
     nearbyCities: ["detroit-mi", "pittsburgh-pa"],
+    lat: 39.9612,
+    lng: -82.9988,
   },
   "cleveland-oh": {
     city: "Cleveland",
@@ -3144,6 +3354,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Cleveland families?", a: "True Joy Birthing provides free birth-prep tools for Cleveland families. The free birth plan, checklist, and guided walkthrough in the app work for any Cleveland birth setting. The app also helps you connect with local doulas and midwives in your area." }
     ],
     nearbyCities: ["pittsburgh-pa", "detroit-mi"],
+    lat: 41.4993,
+    lng: -81.6944,
   },
   "indianapolis-in": {
     city: "Indianapolis",
@@ -3170,6 +3382,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Indianapolis families?", a: "True Joy Birthing provides free birth-prep tools for Indianapolis families. The free birth plan, checklist, and guided walkthrough in the app work for any Indianapolis birth setting. The app also helps you connect with local doulas and midwives in your area." }
     ],
     nearbyCities: ["fort-wayne-in"],
+    lat: 39.7684,
+    lng: -86.1581,
   },
   "reno-nv": {
     city: "Reno",
@@ -3200,6 +3414,8 @@ export const cities: Record<string, CityData> = {
       { q: "Can my doula come to the hospital with me in Reno?", a: "Yes \u2014 both Renown Regional Medical Center and Sierra Medical Center allow doulas in L&D. Policies can change, especially during flu season or COVID surges, so confirm with your hospital during your tour. Having your birth plan ready helps your care team know your preferences from the moment you walk in." },
     ],
     nearbyCities: ["las-vegas-nv"],
+    lat: 39.5296,
+    lng: -119.8138,
   },
   "tucson-az": {
     city: "Tucson",
@@ -3231,6 +3447,8 @@ export const cities: Record<string, CityData> = {
       { q: "Can my doula come to the hospital with me in Tucson?", a: "Yes \u2014 TMC, Banner UMC, and Northwest Medical Center all allow doulas in labor and delivery. Visitor policies can shift, especially during flu season, so confirm with your hospital during your tour. Having a birth plan ready helps your care team support your preferences from the start." },
     ],
     nearbyCities: ["phoenix-az"],
+    lat: 32.2226,
+    lng: -110.9747,
   },
   "memphis-tn": {
     city: "Memphis",
@@ -3262,6 +3480,8 @@ export const cities: Record<string, CityData> = {
       { q: "Can my doula come to the hospital with me in Memphis?", a: "Yes \u2014 Methodist Le Bonheur, Baptist Memorial, and Regional One Health all allow doulas in labor and delivery. Policies can shift during flu season or surges, so confirm during your hospital tour. Having your birth plan ready helps your care team understand and support your preferences." },
     ],
     nearbyCities: ["nashville-tn"],
+    lat: 35.1495,
+    lng: -90.049,
   },
   "st-augustine-fl": {
     city: "St. Augustine",
@@ -3290,6 +3510,8 @@ export const cities: Record<string, CityData> = {
       { q: "Can my doula come to the hospital with me in St. Augustine?", a: "Yes \u2014 UF Health Flagler Hospital allows doulas in labor and delivery. Since Flagler is the only L&D hospital in St. Johns County, confirming your birth plan and doula arrangements during your hospital tour is especially important. Your doula will be familiar with Flagler\u2019s layout and policies." },
     ],
     nearbyCities: ["jacksonville-fl", "orlando-fl"],
+    lat: 29.8947,
+    lng: -81.3145,
   },
   "gainesville-fl": {
     city: "Gainesville",
@@ -3319,6 +3541,8 @@ export const cities: Record<string, CityData> = {
       { q: "Can my doula come to the hospital with me in Gainesville?", a: "Yes \u2014 both UF Health Shands and North Florida Regional allow doulas in labor and delivery. UF Health Shands\u2019 academic setting means they\u2019re used to working with doulas and birth plans. Confirm during your hospital tour, and bring your birth plan to help your care team support your preferences." },
     ],
     nearbyCities: ["jacksonville-fl", "orlando-fl"],
+    lat: 29.6516,
+    lng: -82.3248,
   },
   "charleston-sc": {
     city: "Charleston",
@@ -3346,6 +3570,8 @@ export const cities: Record<string, CityData> = {
       { q: "Should I worry about hurricane season when planning a Charleston birth?", a: "Charleston\u2019s hurricane season runs June 1 through November 30, which overlaps with many due dates. It\u2019s wise to have an evacuation plan, a hospital bag packed early, and a communication plan with your doula in case of severe weather. MUSC and Roper both have robust emergency protocols; your care team can guide you." },
     ],
     nearbyCities: ["greenville-sc"],
+    lat: 32.7846,
+    lng: -79.9286,
   },
   "richmond-va": {
     city: "Richmond",
@@ -3376,6 +3602,8 @@ export const cities: Record<string, CityData> = {
       { q: "Can my doula come to the hospital with me in Richmond?", a: "Yes \u2014 both VCU Medical Center and Bon Secours St. Mary\u2019s allow doulas in labor and delivery. VCU\u2019s academic setting means they\u2019re especially accustomed to working with birth plans and doula support. Confirm during your hospital tour, and bring your birth plan to help your care team support your preferences." },
     ],
     nearbyCities: ["virginia-beach-va"],
+    lat: 37.5407,
+    lng: -77.436,
   },
   "grand-rapids-mi": {
     city: "Grand Rapids",
@@ -3403,6 +3631,8 @@ export const cities: Record<string, CityData> = {
       { q: "Can my doula come to the hospital with me in Grand Rapids?", a: "Yes \u2014 both Corewell Health Butterworth and Trinity Health Grand Rapids allow doulas in labor and delivery. Confirm during your hospital tour, and bring your birth plan to help your care team support your preferences." },
     ],
     nearbyCities: ["detroit-mi"],
+    lat: 42.9634,
+    lng: -85.6681,
   },
   "aurora-co": {
     city: "Aurora",
@@ -3433,6 +3663,8 @@ export const cities: Record<string, CityData> = {
       { q: "Can my doula come to the hospital with me in Aurora?", a: "Yes \u2014 both UCHealth and Sky Ridge allow doulas in labor and delivery. The Anschutz campus\u2019s academic setting means they\u2019re especially accustomed to birth plans and doula support. Confirm during your hospital tour, and bring your birth plan to help your care team support your preferences." },
     ],
     nearbyCities: ["denver-co"],
+    lat: 39.7294,
+    lng: -104.8319,
   },
   "new-haven-ct": {
     city: "New Haven",
@@ -3463,6 +3695,8 @@ export const cities: Record<string, CityData> = {
       { q: "Can my doula come to the hospital with me in New Haven?", a: "Yes \u2014 Yale New Haven Hospital allows doulas in labor and delivery. As a major academic medical center, they\u2019re accustomed to working with birth plans and doula support. Confirm during your hospital tour, and bring your birth plan to help your care team support your preferences." },
     ],
     nearbyCities: ["hartford-ct"],
+    lat: 41.3083,
+    lng: -72.9279,
   },
 
 
@@ -3495,6 +3729,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Milwaukee families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Milwaukee birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["chicago-il", "minneapolis-mn"],
+    lat: 43.0389,
+    lng: -87.9065,
   },
 
   "kansas-city-mo": {
@@ -3525,6 +3761,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Kansas City families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Kansas City birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["memphis-tn", "indianapolis-in", "tulsa-ok"],
+    lat: 39.0997,
+    lng: -94.5786,
   },
 
   "albuquerque-nm": {
@@ -3557,6 +3795,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Albuquerque families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Albuquerque birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["phoenix-az", "tucson-az", "denver-co", "el-paso-tx"],
+    lat: 35.0844,
+    lng: -106.6504,
   },
 
   "salt-lake-city-ut": {
@@ -3589,6 +3829,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Salt Lake City families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Salt Lake City birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["denver-co", "reno-nv", "las-vegas-nv"],
+    lat: 40.7596,
+    lng: -111.8868,
   },
 
   "birmingham-al": {
@@ -3619,6 +3861,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Birmingham families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Birmingham birth setting, whether you're delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["nashville-tn", "atlanta-ga", "memphis-tn", "huntsville-al", "mobile-al"],
+    lat: 33.5186,
+    lng: -86.8104,
   },
 
   "louisville-ky": {
@@ -3649,6 +3893,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Louisville families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Louisville birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["nashville-tn", "indianapolis-in", "columbus-oh"],
+    lat: 38.2526,
+    lng: -85.7593,
   },
 
 
@@ -3685,6 +3931,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Boise families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Boise birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["spokane-wa", "salt-lake-city-ut", "nampa-id"],
+    lat: 43.615,
+    lng: -116.2023,
   },
 
   "des-moines-ia": {
@@ -3717,6 +3965,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Des Moines families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Des Moines birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["minneapolis-mn", "kansas-city-mo", "cedar-rapids-ia"],
+    lat: 41.6005,
+    lng: -93.6091,
   },
 
   "omaha-ne": {
@@ -3749,6 +3999,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Omaha families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Omaha birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["des-moines-ia", "kansas-city-mo"],
+    lat: 41.2565,
+    lng: -95.9345,
   },
 
   "portland-or": {
@@ -3783,6 +4035,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Portland families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Portland birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["seattle-wa", "spokane-wa"],
+    lat: 45.5152,
+    lng: -122.6784,
   },
 
   "jackson-ms": {
@@ -3814,6 +4068,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Jackson families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Jackson birth setting, whether you're delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["memphis-tn", "birmingham-al"],
+    lat: 32.2988,
+    lng: -90.1848,
   },
 
   "spokane-wa": {
@@ -3848,6 +4104,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Spokane families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Spokane birth setting, whether you're delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["boise-id", "seattle-wa"],
+    lat: 47.6588,
+    lng: -117.426,
   },
 
   "wichita-ks": {
@@ -3875,6 +4133,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Wichita families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Wichita birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: [],
+    lat: 37.6922,
+    lng: -97.3375,
   },
 
   "new-orleans-la": {
@@ -3902,6 +4162,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with New Orleans families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any New Orleans birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["baton-rouge-la", "jackson-ms"],
+    lat: 29.9511,
+    lng: -90.0715,
   },
 
   "honolulu-hi": {
@@ -3929,6 +4191,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Honolulu families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Honolulu birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: [],
+    lat: 21.3069,
+    lng: -157.8583,
   },
 
   "anchorage-ak": {
@@ -3956,6 +4220,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Anchorage families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Anchorage birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: [],
+    lat: 61.2163,
+    lng: -149.8949,
   },
 
   "sioux-falls-sd": {
@@ -3982,6 +4248,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Sioux Falls families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Sioux Falls birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: [],
+    lat: 43.5446,
+    lng: -96.7311,
   },
 
   "little-rock-ar": {
@@ -4009,6 +4277,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Little Rock families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Little Rock birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["memphis-tn", "baton-rouge-la"],
+    lat: 34.7465,
+    lng: -92.2896,
   },
 
   "baton-rouge-la": {
@@ -4036,6 +4306,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Baton Rouge families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Baton Rouge birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: [],
+    lat: 30.4515,
+    lng: -91.1871,
   },
 
   "fargo-nd": {
@@ -4062,6 +4334,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Fargo families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Fargo birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: [],
+    lat: 46.8772,
+    lng: -96.7898,
   },
 
   "manchester-nh": {
@@ -4089,6 +4363,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Manchester families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Manchester birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["boston-ma"],
+    lat: 42.9956,
+    lng: -71.4548,
   },
 
   "billings-mt": {
@@ -4115,6 +4391,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Billings families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Billings birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: [],
+    lat: 45.7833,
+    lng: -108.5007,
   },
 
   "cheyenne-wy": {
@@ -4141,6 +4419,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Cheyenne families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Cheyenne birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: [],
+    lat: 41.14,
+    lng: -104.8197,
   },
 
   "wilmington-de": {
@@ -4167,6 +4447,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Wilmington families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Wilmington birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["baltimore-md"],
+    lat: 39.7459,
+    lng: -75.5466,
   },
   "huntsville-al": {
     city: "Huntsville",
@@ -4199,6 +4481,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Huntsville families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Huntsville birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["birmingham-al", "nashville-tn"],
+    lat: 34.7304,
+    lng: -86.5861,
   },
   "mobile-al": {
     city: "Mobile",
@@ -4228,6 +4512,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Mobile families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Mobile birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["birmingham-al"],
+    lat: 30.6953,
+    lng: -88.0389,
   },
   "cedar-rapids-ia": {
     city: "Cedar Rapids",
@@ -4256,6 +4542,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Cedar Rapids families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Cedar Rapids birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["des-moines-ia"],
+    lat: 41.9779,
+    lng: -91.6656,
   },
   "nampa-id": {
     city: "Nampa",
@@ -4284,6 +4572,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Nampa families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Nampa birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["boise-id"],
+    lat: 43.5407,
+    lng: -116.5635,
   },
   "aurora-il": {
     city: "Aurora",
@@ -4313,6 +4603,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Aurora families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Aurora birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["chicago-il"],
+    lat: 41.7606,
+    lng: -88.3201,
   },
   "fort-wayne-in": {
     city: "Fort Wayne",
@@ -4341,6 +4633,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Fort Wayne families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Fort Wayne birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["indianapolis-in"],
+    lat: 41.0793,
+    lng: -85.1394,
   },
   "evansville-in": {
     city: "Evansville",
@@ -4370,6 +4664,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Evansville families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Evansville birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["indianapolis-in", "louisville-ky", "nashville-tn"],
+    lat: 37.9705,
+    lng: -87.5716,
   },
   "lexington-ky": {
     city: "Lexington",
@@ -4398,6 +4694,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Lexington families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Lexington birth setting, whether you\u2019re delivering at a hospital or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["louisville-ky", "nashville-tn", "indianapolis-in"],
+    lat: 38.0464,
+    lng: -84.497,
   },
   "worcester-ma": {
     city: "Worcester",
@@ -4426,6 +4724,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Worcester families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Worcester birth setting, whether you\u2019re delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["boston-ma", "springfield-ma", "hartford-ct"],
+    lat: 42.2626,
+    lng: -71.8023,
   },
   "springfield-ma": {
     city: "Springfield",
@@ -4454,6 +4754,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Springfield families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Springfield birth setting, whether you\u2019re delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["worcester-ma", "boston-ma", "hartford-ct"],
+    lat: 42.1019,
+    lng: -72.5887,
   },
   "columbia-md": {
     city: "Columbia",
@@ -4484,6 +4786,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Columbia families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Columbia birth setting, whether you\u2019re delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["baltimore-md", "richmond-va"],
+    lat: 39.2037,
+    lng: -76.8526,
   },
   "silver-spring-md": {
     city: "Silver Spring",
@@ -4515,6 +4819,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Silver Spring families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Silver Spring birth setting, whether you\u2019re delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
     ],
     nearbyCities: ["baltimore-md", "richmond-va"],
+    lat: 38.9969,
+    lng: -77.0266,
   },
   "springfield-mo": {
     city: "Springfield",
@@ -4544,6 +4850,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Springfield families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Springfield birth setting, whether you're delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["kansas-city-mo", "tulsa-ok"],
+    lat: 37.209,
+    lng: -93.2923,
   },
   "columbia-mo": {
     city: "Columbia",
@@ -4573,6 +4881,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Columbia families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Columbia birth setting, whether you're delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["springfield-mo", "kansas-city-mo", "memphis-tn"],
+    lat: 38.9517,
+    lng: -92.3341,
   },
   "gulfport-ms": {
     city: "Gulfport",
@@ -4602,6 +4912,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Gulfport families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Gulf Coast birth setting, whether you're delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["mobile-al", "jackson-ms"],
+    lat: 30.3674,
+    lng: -89.0928,
   },
   "lincoln-ne": {
     city: "Lincoln",
@@ -4632,6 +4944,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Lincoln families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Lincoln birth setting, whether you're delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["omaha-ne"],
+    lat: 40.8136,
+    lng: -96.7026,
   },
   "jersey-city-nj": {
     city: "Jersey City",
@@ -4662,6 +4976,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Jersey City families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Jersey City birth setting, whether you're delivering at a hospital in JC, crossing to Manhattan, or birthing at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["newark-nj", "new-york-ny"],
+    lat: 40.7178,
+    lng: -74.043,
   },
   "newark-nj": {
     city: "Newark",
@@ -4692,6 +5008,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Newark families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Newark birth setting, whether you're delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["jersey-city-nj", "new-york-ny"],
+    lat: 40.7357,
+    lng: -74.1724,
   },
   "columbus-ga": {
     city: "Columbus",
@@ -4721,6 +5039,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Columbus families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Columbus birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
     ],
     nearbyCities: ["atlanta-ga", "augusta-ga"],
+    lat: 32.4611,
+    lng: -84.988,
   },
   "yonkers-ny": {
     city: "Yonkers",
@@ -4750,6 +5070,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Yonkers families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Yonkers birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
     ],
     nearbyCities: ["new-york-ny", "buffalo-ny"],
+    lat: 40.9312,
+    lng: -73.8987,
   },
   "anaheim-ca": {
     city: "Anaheim",
@@ -4782,6 +5104,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Anaheim families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Anaheim birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
     ],
     nearbyCities: ["los-angeles-ca", "san-diego-ca", "santa-ana-ca"],
+    lat: 33.8366,
+    lng: -117.9143,
   },
   "riverside-ca": {
     city: "Riverside",
@@ -4813,6 +5137,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Riverside families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Riverside birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
     ],
     nearbyCities: ["los-angeles-ca", "san-diego-ca"],
+    lat: 33.9533,
+    lng: -117.3962,
   },
   "santa-ana-ca": {
     city: "Santa Ana",
@@ -4845,6 +5171,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Santa Ana families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Santa Ana birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
     ],
     nearbyCities: ["los-angeles-ca", "anaheim-ca"],
+    lat: 33.7455,
+    lng: -117.8677,
   },
 
   "burlington-vt": {
@@ -4878,6 +5206,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Burlington families?", a: "Yes - and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Burlington birth setting, whether you\u2019re delivering at a hospital, with a home-birth midwife, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way - no signup required." },
     ],
     nearbyCities: ["manchester-nh", "albany-ny"],
+    lat: 44.4759,
+    lng: -73.2121,
   },
 
   "charleston-wv": {
@@ -4911,6 +5241,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Charleston families?", a: "Yes - and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Charleston birth setting, whether you\u2019re delivering at a hospital, with a home-birth midwife, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way - no signup required." },
     ],
     nearbyCities: ["pittsburgh-pa", "lexington-ky"],
+    lat: 38.3506,
+    lng: -81.6333,
   },
 
   "wilmington-nc": {
@@ -4942,6 +5274,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Wilmington families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Wilmington birth setting, whether you\u2019re delivering at NHRMC, Brunswick Medical Center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
     ],
     nearbyCities: ["raleigh-nc", "charlotte-nc", "greensboro-nc"],
+    lat: 34.2257,
+    lng: -77.9447,
   },
 
   "allentown-pa": {
@@ -4974,6 +5308,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Allentown families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Allentown birth setting, whether you\u2019re delivering at LVH, St. Luke\u2019s, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
     ],
     nearbyCities: ["philadelphia-pa", "pittsburgh-pa"],
+    lat: 40.6023,
+    lng: -75.4601,
   },
 
   "clearwater-fl": {
@@ -5005,6 +5341,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Clearwater families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Clearwater birth setting, whether you\u2019re delivering at Morton Plant, Mease Countryside, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
     ],
     nearbyCities: ["tampa-fl", "orlando-fl", "jacksonville-fl"],
+    lat: 27.9659,
+    lng: -82.8001,
   },
 
   "overland-park-ks": {
@@ -5038,6 +5376,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Overland Park families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Overland Park birth setting, whether you\u2019re delivering at Overland Park Regional, AdventHealth Shawnee Mission, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
     ],
     nearbyCities: ["wichita-ks"],
+    lat: 38.9822,
+    lng: -94.6708,
   },
 
   "stamford-ct": {
@@ -5068,6 +5408,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Stamford families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Stamford birth setting, whether you\u2019re delivering at Stamford Hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
     ],
     nearbyCities: ["hartford-ct", "new-haven-ct"],
+    lat: 41.0534,
+    lng: -73.5387,
   },
 
   "cary-nc": {
@@ -5100,6 +5442,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Cary families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Cary birth setting, whether you\u2019re delivering at WakeMed Cary, UNC Rex, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
     ],
     nearbyCities: ["raleigh-nc", "charlotte-nc", "greensboro-nc", "concord-nc"],
+    lat: 35.7915,
+    lng: -78.7812,
   },
 
   "leander-tx": {
@@ -5129,6 +5473,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Leander families?", a: "Yes \\u2014 and it\\u2019s free. True Joy Birthing\\u2019s birth plan app, checklist, and guided walkthrough work for any Leander birth setting, whether you\\u2019re delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\\\"/birth-plan-template/\\\">Download the free birth plan template</a> and start preparing your way \\u2014 no signup required." },
     ],
     nearbyCities: ["austin-tx", "georgetown-tx", "cedar-park-tx"],
+    lat: 30.5736,
+    lng: -97.8567,
   },
   "pflugerville-tx": {
     city: "Pflugerville",
@@ -5157,6 +5503,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Pflugerville families?", a: "Yes \\u2014 and it\\u2019s free. True Joy Birthing\\u2019s birth plan app, checklist, and guided walkthrough work for any Pflugerville birth setting, whether you\\u2019re delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\\\"/birth-plan-template/\\\">Download the free birth plan template</a> and start preparing your way \\u2014 no signup required." },
     ],
     nearbyCities: ["austin-tx", "round-rock-tx", "georgetown-tx"],
+    lat: 30.4394,
+    lng: -97.62,
   },
   "sandy-ut": {
     city: "Sandy",
@@ -5185,6 +5533,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Sandy families?", a: "Yes \\u2014 and it\\u2019s free. True Joy Birthing\\u2019s birth plan app, checklist, and guided walkthrough work for any Sandy birth setting, whether you\\u2019re delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\\\"/birth-plan-template/\\\">Download the free birth plan template</a> and start preparing your way \\u2014 no signup required." },
     ],
     nearbyCities: ["salt-lake-city-ut"],
+    lat: 40.571,
+    lng: -111.8954,
   },
   "leesburg-va": {
     city: "Leesburg",
@@ -5214,6 +5564,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Leesburg families?", a: "Yes \\u2014 and it\\u2019s free. True Joy Birthing\\u2019s birth plan app, checklist, and guided walkthrough work for any Leesburg birth setting, whether you\\u2019re delivering at Inova Loudoun, INOVA Fairfax, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\\\"/birth-plan-template/\\\">Download the free birth plan template</a> and start preparing your way \\u2014 no signup required." },
     ],
     nearbyCities: ["richmond-va"],
+    lat: 39.1157,
+    lng: -77.5636,
   },
   "joliet-il": {
     city: "Joliet",
@@ -5242,6 +5594,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Joliet families?", a: "Yes \\u2014 and it\\u2019s free. True Joy Birthing\\u2019s birth plan app, checklist, and guided walkthrough work for any Joliet birth setting, whether you\\u2019re delivering at Ascension Saint Joseph, Silver Cross, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\\\"/birth-plan-template/\\\">Download the free birth plan template</a> and start preparing your way \\u2014 no signup required." },
     ],
     nearbyCities: ["aurora-il", "chicago-il"],
+    lat: 41.525,
+    lng: -88.083,
   },
   "gresham-or": {
     city: "Gresham",
@@ -5270,6 +5624,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Gresham families?", a: "Yes \\u2014 and it\\u2019s free. True Joy Birthing\\u2019s birth plan app, checklist, and guided walkthrough work for any Gresham birth setting, whether you\\u2019re delivering at Legacy Mount Hood, OHSU, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\\\"/birth-plan-template/\\\">Download the free birth plan template</a> and start preparing your way \\u2014 no signup required." },
     ],
     nearbyCities: ["portland-or", "eugene-or"],
+    lat: 45.4981,
+    lng: -122.4315,
   },
 
   "henderson-nv": {
@@ -5301,6 +5657,8 @@ export const cities: Record<string, CityData> = {
       { q: "Can my doula come to the hospital with me in Henderson?", a: "Yes \u2014 both St. Rose Dominican Siena and Henderson Hospital allow doulas in labor and delivery. Visitor policies can shift, especially during flu season, so confirm with your hospital during your tour. Having your birth plan ready helps your care team know your preferences from the moment you walk in." },
     ],
     nearbyCities: ["las-vegas-nv", "reno-nv"],
+    lat: 36.0397,
+    lng: -114.9819,
   },
   "surprise-az": {
     city: "Surprise",
@@ -5332,6 +5690,8 @@ export const cities: Record<string, CityData> = {
       { q: "Can my doula come to the hospital with me in Surprise?", a: "Yes \u2014 both Banner Del E. Webb and Banner Boswell allow doulas in labor and delivery. Banner\u2019s visitor policies can shift seasonally, so confirm during your hospital tour. Having your birth plan ready helps your care team support your preferences from the start." },
     ],
     nearbyCities: ["phoenix-az", "scottsdale-az"],
+    lat: 33.6309,
+    lng: -112.3694,
   },
   "west-jordan-ut": {
     city: "West Jordan",
@@ -5362,6 +5722,8 @@ export const cities: Record<string, CityData> = {
       { q: "Can my doula come to the hospital with me in West Jordan?", a: "Yes \u2014 both Holy Cross Jordan Valley and Intermountain Riverton allow doulas in labor and delivery. Utah hospitals generally support doula presence. Confirm visitor policies during your hospital tour, especially during flu season. Having your birth plan ready helps your care team know your preferences from the start." },
     ],
     nearbyCities: ["salt-lake-city-ut", "sandy-ut"],
+    lat: 40.6061,
+    lng: -111.9395,
   },
 
   "bridgeport-ct": {
@@ -5391,6 +5753,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Bridgeport families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Bridgeport birth setting. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
     ],
     nearbyCities: ["hartford-ct", "new-haven-ct"],
+    lat: 41.1793,
+    lng: -73.1888,
   },
 
   "naperville-il": {
@@ -5418,6 +5782,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Naperville families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Naperville birth setting. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
     ],
     nearbyCities: ["chicago-il", "aurora-il", "peoria-il"],
+    lat: 41.7508,
+    lng: -88.1535,
   },
 
   "ann-arbor-mi": {
@@ -5445,6 +5811,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Ann Arbor families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app works for any Ann Arbor birth setting. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> \u2014 no signup required." },
     ],
     nearbyCities: ["detroit-mi"],
+    lat: 42.2808,
+    lng: -83.743,
   },
 
   "rochester-mn": {
@@ -5472,6 +5840,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Rochester families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app works for any Rochester birth setting. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> \u2014 no signup required." },
     ],
     nearbyCities: ["minneapolis-mn"],
+    lat: 44.0121,
+    lng: -92.479,
   },
 
   "paterson-nj": {
@@ -5499,6 +5869,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Paterson families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app works for any Paterson birth setting. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> \u2014 no signup required." },
     ],
     nearbyCities: ["newark-nj"],
+    lat: 40.9168,
+    lng: -74.1718,
   },
 
   "erie-pa": {
@@ -5526,6 +5898,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Erie families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app works for any Erie birth setting. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> \u2014 no signup required." },
     ],
     nearbyCities: ["pittsburgh-pa"],
+    lat: 42.1292,
+    lng: -80.0851,
   },
   "warwick-ri": {
     city: "Warwick",
@@ -5552,6 +5926,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Warwick families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Warwick birth setting, whether you\u2019re delivering at Kent Hospital, Women & Infants, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
     ],
     nearbyCities: ["providence-ri"],
+    lat: 41.6993,
+    lng: -71.4586,
   },
 
   "scottsdale-az": {
@@ -5579,6 +5955,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Scottsdale families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Scottsdale birth setting, whether you\u2019re delivering at Osborn, Shea, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." },
     ],
     nearbyCities: ["phoenix-az"],
+    lat: 33.4942,
+    lng: -111.9261,
   },
 
   "chesapeake-va": {
@@ -5606,6 +5984,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Chesapeake families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app works for any Chesapeake birth setting, whether you\u2019re delivering at Chesapeake Regional, Sentara Norfolk, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> \u2014 no signup required." },
     ],
     nearbyCities: ["virginia-beach-va", "norfolk-va"],
+    lat: 36.7354,
+    lng: -76.2749,
   },
 
   "bowie-md": {
@@ -5633,6 +6013,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Bowie families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app works for any Bowie birth setting, whether you\u2019re delivering at UM Capital Region, Anne Arundel, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> \u2014 no signup required." },
     ],
     nearbyCities: ["annapolis-md"],
+    lat: 38.9426,
+    lng: -76.7303,
   },
 
   "lakewood-co": {
@@ -5660,6 +6042,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Lakewood families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app works for any Lakewood birth setting, whether you\u2019re delivering at St. Anthony, Lutheran, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> \u2014 no signup required." },
     ],
     nearbyCities: ["denver-co"],
+    lat: 39.7047,
+    lng: -105.0814,
   },
 
   "beaverton-or": {
@@ -5688,6 +6072,8 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Beaverton families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app works for any Beaverton birth setting, whether you\u2019re delivering at St. Vincent, Kaiser Westside, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> \u2014 no signup required." },
     ],
     nearbyCities: ["portland-or", "eugene-or"],
+    lat: 45.4861,
+    lng: -122.8036,
   },
 };
 

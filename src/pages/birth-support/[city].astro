@@ -19,6 +19,7 @@ const {
   city, state, costLow, costHigh, culture,
   heroLocalDetail, hospitalDetails, birthCenterDetails,
   medicaidNote, insuranceNote, faqs, nearbyCities,
+  lat, lng,
 }: CityData = data;
 
 const stateNames: Record<string, string> = {
@@ -87,6 +88,13 @@ const schema = {
         name: city,
         containedInPlace: { '@type': 'State', name: state },
       },
+      ...(lat && lng ? {
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: lat,
+          longitude: lng,
+        },
+      } : {}),
       provider: { '@id': 'https://truejoybirthing.com/#organization' },
       serviceType: 'Birth Plan Resources',
       description: `Free birth-plan tools, hospital info, and doula cost guides for families in ${city}, ${state}.`,
@@ -99,6 +107,17 @@ const schema = {
       jobTitle: 'Birth Education Reviewer',
       worksFor: { '@id': 'https://truejoybirthing.com/#organization' },
     },
+    ...hospitalDetails.map((h) => ({
+      '@type': 'MedicalOrganization',
+      '@id': `${pageUrl}#hospital-${h.name.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}`,
+      name: h.name,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: city,
+        addressRegion: state,
+        addressCountry: 'US',
+      },
+    })),
     {
       '@type': 'SpeakableSpecification',
       '@id': `${pageUrl}#speakable`,
@@ -158,6 +177,7 @@ const schema = {
       <!-- What Birth Support Looks Like -->
       <h2>What Doula & Midwife Support Looks Like in {city}</h2>
       <p>{culture}</p>
+      <p><a href="/doula-cost/">Doula costs in {city}</a> typically range from ${costLow.toLocaleString()} to ${costHigh.toLocaleString()}, and understanding what's included can help you budget for the support you want.</p>
 
       <!-- Quick clarification -->
       <div class="bg-tjb-cream p-4 rounded-lg mb-6 not-prose">
@@ -183,7 +203,7 @@ const schema = {
       {hospitalDetails.length > 0 && (
         <h2>Hospital & Birth Center Info in {city}</h2>
       )}
-      <p>Here's what you need to know about the hospitals where {city} moms deliver — including NICU levels, which matters if your baby needs extra care after birth.</p>
+      <p>Here's what you need to know about the hospitals where {city} moms deliver — including NICU levels, which matters if your baby needs extra care after birth. <a href="/birth-plan-template/">Preparing a birth plan for your {city} hospital birth</a> helps you advocate for your preferences and make sure your care team is on the same page.</p>
       {hospitalDetails.map((h) => (
         <p set:html={h.paragraph} />
       ))}
@@ -197,6 +217,7 @@ const schema = {
       <!-- Doula Costs -->
       <h2>How Much Does a Doula Cost in {city}?</h2>
       <p>In the {city} area, birth doula packages typically range from <strong>${costLow.toLocaleString()} to ${costHigh.toLocaleString()}</strong> — that usually includes prenatal visits, your birth, and postpartum follow-up. <a href="/doula-cost/">See our full doula cost breakdown</a> for what's included and what to ask about. If you're also thinking about support after baby arrives, <a href="/postpartum-doula/">learn what a postpartum doula does and how one can help</a>.</p>
+      <p>Wondering how <a href="/doula-cost/">doula costs in {city}</a> compare to national averages? We break down typical rates, what affects pricing, and what you should expect to pay across different regions.</p>
       <p>If that number feels steep, you're not alone — and there are options:</p>
       <ul>
         <li><strong>Medicaid:</strong> {medicaidNote.includes('does not') || medicaidNote.includes('does NOT') ? 'Unfortunately, your state does not yet cover doulas through Medicaid. Some community organizations and volunteer doula programs offer free or reduced-cost support — ask at your local WIC office or community health center.' : 'Good news — your state covers doula services through Medicaid. See the details below.'}</li>
@@ -209,7 +230,7 @@ const schema = {
       <h2>Does {stateName} Medicaid Cover Doulas for {city} Families?</h2>
       <p>{medicaidNote}</p>
       <p>{insuranceNote}</p>
-      <p>Not sure what to look for in a doula? <a href="/how-to-choose-a-doula/">Here's how to choose a doula</a> who fits your birth preferences, your personality, and your budget. For a full breakdown of which states cover doulas through Medicaid, see our <a href="/medicaid-doula-coverage/">Medicaid doula coverage guide</a>.</p>
+      <p>For a full breakdown of <a href="/medicaid-doula-coverage/">which states cover doulas through Medicaid</a>, see our Medicaid doula coverage guide — including what's covered, how to apply, and what to do if your state doesn't yet offer coverage. Not sure what to look for in a doula? <a href="/how-to-choose-a-doula/">Here's how to choose a doula</a> who fits your birth preferences, your personality, and your budget.</p>
 
       <!-- What About a Midwife? -->
       <h2>What About a Midwife in {city}?</h2>

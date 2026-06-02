@@ -1,6 +1,15 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { cities } from './src/data/cities';
+
+// Build a lookup: city page URL → publishedDate
+const cityLastmod = {};
+Object.entries(cities).forEach(([slug, data]) => {
+  if (data.publishedDate) {
+    cityLastmod[`https://truejoybirthing.com/birth-support/${slug}/`] = data.publishedDate;
+  }
+});
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,9 +18,16 @@ export default defineConfig({
   site: 'https://truejoybirthing.com',
   integrations: [
     sitemap({
-      lastmod: new Date(),
       filter: (page) => !page.includes('/404') && !page.includes('/admin/'),
       serialize(item) {
+        // Per-city lastmod from publishedDate field in cities data
+        const cityDate = cityLastmod[item.url];
+        if (cityDate) {
+          item.lastmod = new Date(cityDate);
+        } else if (item.url.includes('/birth-support/')) {
+          // City pages without publishedDate: omit lastmod so Google uses its own crawl date
+          delete item.lastmod;
+        }
         // Hompage: priority 1.0, changefreq daily
         if (item.url === 'https://truejoybirthing.com/' || item.url === 'https://truejoybirthing.com') {
           return { ...item, priority: 1.0, changefreq: 'daily' };
