@@ -252,6 +252,9 @@ const schema = {
         <div class="mb-8">
           <h2 class="text-xl font-bold mb-3">Looking at Nearby Cities?</h2>
           <div class="flex flex-wrap gap-2">
+            <a href={`/birth-support/${state.toLowerCase()}/`} class="inline-flex items-center gap-1 px-4 py-2 rounded-full border border-tjb-rose-400 text-tjb-rose-500 hover:bg-tjb-rose-50 hover:border-tjb-rose-500 transition text-sm font-semibold">
+              All {stateName} Cities →
+            </a>
             {nearbyCities.map((nSlug) => {
               const near = cities[nSlug];
               return near ? (
