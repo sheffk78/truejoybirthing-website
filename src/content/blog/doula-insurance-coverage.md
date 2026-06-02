@@ -3,7 +3,7 @@ title: "Doula Insurance Coverage Protect Serve"
 date: "2024-12-09"
 slug: "doula-insurance-coverage"
 author: "Shelbi Kohler"
-description: "Professional support during birth creates lasting memories for growing families. My comprehensive coverage allows me to focus completely on your needs throughout pregnancy and d..."
+description: "How doula insurance coverage works: networks, reimbursement, superbills, and what to ask your plan. Get help paying for the birth support you deserve."
 canonical: "https://truejoybirthing.com/blog/doula-insurance-coverage/"
 layout: "../../layouts/PostLayout.astro"
 ---

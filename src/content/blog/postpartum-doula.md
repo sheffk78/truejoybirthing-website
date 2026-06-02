@@ -3,7 +3,7 @@ title: "Postpartum Doula Sleep Magic Solved"
 date: "2024-12-09"
 slug: "postpartum-doula"
 author: "Shelbi Kohler"
-description: "Becoming a new parent brings unexpected questions about nighttime care and rest. As a mother of seven and experienced care provider, I’ve guided many families through their firs..."
+description: "What a postpartum doula does: newborn care, feeding support, sleep help, and emotional recovery. Learn what they cost and how to find one near you."
 canonical: "https://truejoybirthing.com/blog/postpartum-doula/"
 layout: "../../layouts/PostLayout.astro"
 ---

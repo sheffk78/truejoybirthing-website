@@ -3,7 +3,7 @@ title: "Doula Vs Midwife Birth Helper Showdown"
 date: "2024-12-09"
 slug: "doula-vs-midwife"
 author: "Shelbi Kohler"
-description: "Birth support comes in many forms, and each brings special gifts to your journey. After experiencing seven births myself, I’ve seen how different care providers work together to..."
+description: "Doula vs midwife: what's the difference? A certified birth doula explains their roles, training, and how both support your pregnancy and labor."
 canonical: "https://truejoybirthing.com/blog/doula-vs-midwife/"
 layout: "../../layouts/PostLayout.astro"
 ---

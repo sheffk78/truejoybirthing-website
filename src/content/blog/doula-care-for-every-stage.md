@@ -3,7 +3,7 @@ title: "Doula Care For Every Stage Birth Magic"
 date: "2024-12-09"
 slug: "doula-care-for-every-stage"
 author: "Shelbi Kohler"
-description: "Motherhood opens a sacred journey filled with wonder and transformation. As a birth doula and mother of seven, I understand how each pregnancy unfolds with unique hopes and ques..."
+description: "How a birth doula supports you through pregnancy, labor, delivery, and postpartum. Learn what doula care looks like at each phase from a certified professional."
 canonical: "https://truejoybirthing.com/blog/doula-care-for-every-stage/"
 layout: "../../layouts/PostLayout.astro"
 ---

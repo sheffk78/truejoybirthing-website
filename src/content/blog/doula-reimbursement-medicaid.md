@@ -3,7 +3,7 @@ title: "Doula Reimbursement Medicaid Birth Pay"
 date: "2024-12-09"
 slug: "doula-reimbursement-medicaid"
 author: "Shelbi Kohler"
-description: "Supporting families through pregnancy brings me so much joy as a mother of seven. Many Medicaid programs now help families access professional birth support, creating opportunit..."
+description: "Medicaid doula reimbursement explained: which states pay, how to bill, and how doulas can get paid through Medicaid birth support programs."
 canonical: "https://truejoybirthing.com/blog/doula-reimbursement-medicaid/"
 layout: "../../layouts/PostLayout.astro"
 ---

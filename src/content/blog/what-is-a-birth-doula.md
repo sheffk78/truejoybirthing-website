@@ -3,7 +3,7 @@ title: "Birth Doula Your Gateway To Calm Birth"
 date: "2024-12-09"
 slug: "what-is-a-birth-doula"
 author: "Shelbi Kohler"
-description: "Starting your pregnancy opens a world of fresh possibilities and tender moments. As your experienced companion, I bring peaceful guidance and steady encouragement to shape your ..."
+description: "What is a birth doula? Learn how a certified doula provides emotional, physical, and informational support during labor for a more confident birth experience."
 canonical: "https://truejoybirthing.com/blog/what-is-a-birth-doula/"
 layout: "../../layouts/PostLayout.astro"
 ---

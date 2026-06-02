@@ -3,7 +3,7 @@ title: "Doula Services What Is It Birth Magic"
 date: "2024-12-09"
 slug: "what-are-doula-services"
 author: "Shelbi Kohler"
-description: "Motherhood begins with a profound journey, where gentle support creates lasting memories. As your companion, I bring heart-centered guidance and experienced doula wisdom to this..."
+description: "What are doula services? A certified birth doula explains emotional, physical, and informational support during pregnancy, labor, and the postpartum period."
 canonical: "https://truejoybirthing.com/blog/what-are-doula-services/"
 layout: "../../layouts/PostLayout.astro"
 ---

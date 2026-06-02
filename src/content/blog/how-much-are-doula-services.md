@@ -3,7 +3,7 @@ title: "How Much Are Doula Services Birth Care Fees"
 date: "2024-12-09"
 slug: "how-much-are-doula-services"
 author: "Shelbi Kohler"
-description: "Professional support during pregnancy creates lasting positive memories. As a mom of seven and experienced care provider, I help families discover affordable options while addre..."
+description: "How much do doula services cost? Break down the fees, understand what's included, find affordable options, and learn whether insurance or Medicaid can help pay."
 canonical: "https://truejoybirthing.com/blog/how-much-are-doula-services/"
 layout: "../../layouts/PostLayout.astro"
 ---

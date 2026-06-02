@@ -3,7 +3,7 @@ title: "Can Doula Services Be Covered By Insurance Yes Heres How"
 date: "2024-12-09"
 slug: "doula-covered-by-insurance"
 author: "Shelbi Kohler"
-description: "Birth support brings valuable comfort during pregnancy, and many families feel relieved learning about payment possibilities. I’ve helped countless parents find ways to make sup..."
+description: "Can insurance cover your doula? Learn which plans pay, how to submit claims, and what documentation you need to get reimbursed for birth support services."
 canonical: "https://truejoybirthing.com/blog/doula-covered-by-insurance/"
 layout: "../../layouts/PostLayout.astro"
 ---

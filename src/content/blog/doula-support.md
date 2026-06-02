@@ -3,7 +3,7 @@ title: "Doula Support Birth Magic Unleashed"
 date: "2024-12-09"
 slug: "doula-support"
 author: "Shelbi Kohler"
-description: "The transformative journey of welcoming new life unfolds uniquely for every family. As your birth companion, I create a nurturing space where your wishes and comfort take center..."
+description: "What doula support looks like during labor and birth. Emotional, physical, and informational help from a certified birth doula who stays by your side."
 canonical: "https://truejoybirthing.com/blog/doula-support/"
 layout: "../../layouts/PostLayout.astro"
 ---

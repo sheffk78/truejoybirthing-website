@@ -3,7 +3,7 @@ title: "Hospital Birth Plan Template: What to Include for Every Delivery Room"
 date: "2025-06-01"
 slug: "birth-plan-for-hospital-delivery"
 author: "Shelbi Kohler"
-description: "Free hospital birth plan template with every section you need — labor preferences, pain management, C-section backup, and newborn care. Written by a certified doula."
+description: "Free hospital birth plan template with labor, pain management, C-section backup, and newborn care sections. Written by a certified doula for your delivery."
 canonical: "https://truejoybirthing.com/blog/birth-plan-for-hospital-delivery/"
 layout: "../../layouts/PostLayout.astro"
 ---

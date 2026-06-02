@@ -3,7 +3,7 @@ title: "Debunking Doula Myths Hidden Birth Truths"
 date: "2024-12-09"
 slug: "debunking-doula-myths"
 author: "Shelbi Kohler"
-description: "Experience speaks volumes through seven personal births and hundreds of supported deliveries. Each story reveals fresh insights about labor companionship and care. Professional ..."
+description: "Common doula myths debunked by a certified birth doula. Learn the truth about what doulas do, who benefits, and why support matters in your labor and delivery."
 canonical: "https://truejoybirthing.com/blog/debunking-doula-myths/"
 layout: "../../layouts/PostLayout.astro"
 ---
