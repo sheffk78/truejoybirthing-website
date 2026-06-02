@@ -59,6 +59,7 @@ const heroAlt = `Skyline of ${city}, ${state}, where families search for birth d
 const breadcrumbList = [
   { name: 'Home', url: 'https://truejoybirthing.com/' },
   { name: 'Birth Support', url: 'https://truejoybirthing.com/birth-support/' },
+  { name: stateName, url: `https://truejoybirthing.com/birth-support/${state.toLowerCase()}/` },
   { name: `${city}, ${state}`, url: pageUrl },
 ];
 
@@ -89,6 +90,14 @@ const schema = {
       provider: { '@id': 'https://truejoybirthing.com/#organization' },
       serviceType: 'Birth Plan Resources',
       description: `Free birth-plan tools, hospital info, and doula cost guides for families in ${city}, ${state}.`,
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://truejoybirthing.com/#reviewer',
+      name: 'True Joy Birthing Editorial Team',
+      url: 'https://truejoybirthing.com/about/',
+      jobTitle: 'Birth Education Reviewer',
+      worksFor: { '@id': 'https://truejoybirthing.com/#organization' },
     },
     {
       '@type': 'SpeakableSpecification',
@@ -197,7 +206,7 @@ const schema = {
       </ul>
 
       <!-- Medicaid & Insurance -->
-      <h2>Does Medicaid or Insurance Cover a Doula in {state}?</h2>
+      <h2>Does {stateName} Medicaid Cover Doulas for {city} Families?</h2>
       <p>{medicaidNote}</p>
       <p>{insuranceNote}</p>
       <p>Not sure what to look for in a doula? <a href="/how-to-choose-a-doula/">Here's how to choose a doula</a> who fits your birth preferences, your personality, and your budget. For a full breakdown of which states cover doulas through Medicaid, see our <a href="/medicaid-doula-coverage/">Medicaid doula coverage guide</a>.</p>
@@ -333,6 +342,10 @@ const schema = {
   <!-- FAQ -->
   <section class="py-16 bg-tjb-cream-50">
     <div class="max-w-3xl mx-auto px-6">
+      <div class="mb-8 text-sm text-tjb-gray flex items-center gap-2">
+        <svg class="w-4 h-4 text-tjb-lavender-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.582a.75.75 0 00-1.06-1.06l-4.098 4.098-1.768-1.768a.75.75 0 00-1.06 1.06l2.298 2.298a.75.75 0 001.06 0l5.326-5.328z" clip-rule="evenodd"/></svg>
+        <span>Fact-checked by the True Joy Birthing team. <a href="/about/" class="text-tjb-rose-500 hover:underline">About our review process →</a></span>
+      </div>
       <h2 class="text-2xl font-bold mb-2">Your Questions About Doulas & Midwives in {city}</h2>
       <p class="text-tjb-gray mb-8">The things {city} moms ask us most — answered honestly. For even more questions and detailed answers, check out our <a href="/faq/" class="text-tjb-lavender-600 hover:underline">full doula FAQ</a>.</p>
       <div class="space-y-6">

@@ -259,6 +259,17 @@ const medicaidIntro = medicaidStatus === 'yes'
     </div>
   </section>
 
+  <!-- Birth Landscape -->
+  <section class="py-12 bg-white border-t border-tjb-lavender-200">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-4">Birth Landscape in {stateName}</h2>
+      <div class="prose prose-lg text-tjb-charcoal">
+        <p>{stateName} has {stateCities.length} cities with True Joy Birthing birth-support resources, with doula costs ranging from ${costLow.toLocaleString()} to ${costHigh.toLocaleString()}. {medicaidStatus === 'yes' ? `${stateName} Medicaid covers doula services — a significant benefit for families seeking birth support.` : medicaidStatus === 'mixed' ? `Medicaid doula coverage in ${stateName} varies by area — some regions cover services while others don't yet.` : `${stateName} Medicaid does not currently cover doula services statewide, though some health plans offer limited benefits.`}</p>
+        <p>Families in {stateName} can use HSA or FSA funds for doula services, and many doulas offer sliding-scale fees or payment plans. The birth centers and hospital systems across the state vary in their doula policies — always confirm during your hospital tour.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- CTA: Birth Plan -->
   <section class="py-12 bg-tjb-cream">
     <div class="max-w-3xl mx-auto px-6 text-center">
