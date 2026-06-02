@@ -6627,6 +6627,286 @@ export const cities: Record<string, CityData> = {
   },
 
 
+  // ═════════════════════════════════════════════
+  // Batch 15 (2026-06-02): OR, MN, MI, CO expansion (Medicaid-doula states)
+  // ═════════════════════════════════════════════
+
+  "portland-or": {
+    slug: "portland-or",
+    city: "Portland",
+    state: "OR",
+    costLow: 1000,
+    costHigh: 3500,
+    shelbiServesHere: false,
+    costRange: "\u201c$1,000\u2013$3,500 for a birth doula in Portland. Postpartum doulas run $35\u2013$60 per hour. Portland\u2019s progressive birth community is one of the strongest in the nation with exceptional doula availability.\u201d",
+    medicaidNote: "Yes \u2014 Oregon Health Plan (OHP) covers doula services under the state\u2019s Medicaid program. Portland families on OHP can access doulas through Coordinated Care Organizations (CCOs) like CareOregon, Trillium, and Health Share. Oregon has one of the most robust Medicaid doula programs in the US.",
+    hospitalDetails: [
+      { name: "OHSU Hospital (Oregon Health & Science University)", paragraph: "OHSU is Portland\u2019s premier academic medical center and the state\u2019s only Level IV NICU hospital (stated directly on ohsu.edu). It serves as the regional referral center for high-risk pregnancies across Oregon and southwest Washington. The hospital has a strong midwifery program, accommodates birth plans, and welcomes doulas." },
+      { name: "Legacy Emanuel Medical Center", paragraph: "Legacy Emanuel is Portland\u2019s other major birthing hospital, offering a Level III NICU (stated directly on legacyhealth.org). It\u2019s located in the Irvington neighborhood and handles a high volume of births. The hospital is known for its Baby-Friendly designation and supports birth plans and doula participation." }
+    ],
+    birthCenterDetails: [
+      { name: "Andaluz Birth Center", paragraph: "Andaluz Birth Center is Portland\u2019s premier freestanding birth center, offering water birth, midwifery-led births, and a home-like setting. It\u2019s CABC-accredited and provides a beautiful alternative to hospital birth for low-risk families. The birth center has backup arrangements with OHSU and Legacy Emanuel." }
+    ],
+    heroLocalDetail: "Portland\u2019s birth community is arguably the most progressive in the Pacific Northwest, with the state\u2019s only Level IV NICU at OHSU, the renowned Andaluz Birth Center, and Oregon\u2019s industry-leading Medicaid doula coverage making it one of the most doula-accessible cities in America.",
+    culture: "Portland is the birth capital of the Pacific Northwest, with a thriving community of doulas, midwives, and birth activists who have shaped Oregon\u2019s progressive birth legislation. The city\u2019s ethos of holistic wellness, alternative healthcare, and community mutual aid has created one of the strongest doula markets in the US. Oregon\u2019s OHP (Medicaid) doula coverage is among the most generous in the nation. The city also has a large Indigenous and immigrant population with specific cultural birth traditions, and Portland\u2019s birth justice organizations actively work to address maternal health disparities.",
+    faqs: [
+      { q: "How much does a doula cost in Portland, OR?", a: "Birth doulas in Portland typically charge $1,000\u2013$3,500, one of the strongest markets in the Pacific Northwest. Postpartum doulas run $35\u2013$60 per hour. <a href=\"/doula-cost/\">See the full Oregon cost guide</a>." },
+      { q: "Does Oregon Health Plan cover doulas for Portland families?", a: "Yes \u2014 Oregon Health Plan (OHP) covers doula services through CCOs like CareOregon and Health Share. Portland has one of the strongest Medicaid doula programs in the US. <a href=\"/does-medicaid-cover-doulas/\">Learn how Medicaid doula coverage works</a>." },
+      { q: "Which Portland hospitals have the highest-level NICUs?", a: "OHSU Hospital has a Level IV NICU (stated directly on ohsu.edu), Oregon\u2019s only Level IV. Legacy Emanuel has a Level III NICU (stated directly on legacyhealth.org). Both accommodate birth plans and welcome doulas." },
+      { q: "Are there birth centers in Portland?", a: "Yes \u2014 Andaluz Birth Center is Portland\u2019s premier freestanding birth center, offering water birth and midwifery-led births in a home-like setting. It\u2019s CABC-accredited and has backup arrangements with OHSU. <a href=\"/birth-center/\">Learn what a birth center offers vs hospital</a>." },
+    ],
+    nearbyCities: [],
+    publishedDate: "2026-06-02",
+    lat: 45.5202,
+    lng: -122.6742,
+  },
+
+  "eugene-or": {
+    slug: "eugene-or",
+    city: "Eugene",
+    state: "OR",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    costRange: "\u201c$900\u2013$2,500 for a birth doula in Eugene. Postpartum doulas run $30\u2013$50 per hour. Eugene\u2019s university and counterculture roots support a strong natural birth community.\u201d",
+    medicaidNote: "Yes \u2014 Oregon Health Plan (OHP) covers doula services. Eugene families on OHP can access doulas through Trillium Community Health Plan and other Lane County CCOs. Oregon\u2019 s Medicaid doula program is one of the most robust in the US.",
+    hospitalDetails: [
+      { name: "PeaceHealth Sacred Heart Medical Center at RiverBend", paragraph: "Sacred Heart RiverBend is Eugene\u2019s primary birthing hospital and the regional referral center for Lane County, offering a Level III NICU (stated directly on peacehealth.org). It\u2019s the largest hospital between Portland and San Francisco along the I-5 corridor and accommodates birth plans and welcomes doulas." },
+      { name: " McKenzie-Willamette Medical Center", paragraph: "McKenzie-Willamette provides L&D services in Springfield, adjacent to Eugene. Contact the hospital directly for NICU level verification. It offers an alternative birthing option for families with different insurance networks and a smaller, more personal environment than the regional center." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Eugene\u2019s counterculture birth community is anchored by PeaceHealth Sacred Heart\u2019s Level III NICU and supported by Oregon\u2019s generous OHP doula coverage, making the Willamette Valley one of the most doula-accessible regions in the Pacific Northwest.",
+    culture: "Eugene is home to the University of Oregon and has deep roots in counterculture, environmentalism, and holistic wellness \u2014 think Portland\u2019s birth values in a smaller, more tight-knit community. The city\u2019s famous Saturday Market and cooperative ethos extend to birth culture, with strong demand for natural birth, home birth, and midwifery care. The UO student population creates a secondary demographic of young parents. Eugene\u2019s relative isolation (2 hours south of Portland) makes local doula support essential rather than optional.",
+    faqs: [
+      { q: "How much does a doula cost in Eugene, OR?", a: "Birth doulas in Eugene typically charge $900\u2013$2,500. The Willamette Valley market is strong and well-established. <a href=\"/doula-cost/\">Compare Oregon costs</a>." },
+      { q: "Does OHP cover doulas for Eugene families?", a: "Yes \u2014 Oregon Health Plan covers doula services through Trillium Community Health Plan and other Lane County CCOs. Eugene has one of the strongest birth communities in the state." },
+      { q: "Which Eugene hospitals have NICUs?", a: "PeaceHealth Sacred Heart RiverBend has a Level III NICU (stated directly on peacehealth.org). McKenzie-Willamette provides L&D \u2014 contact directly for NICU level. The nearest Level IV NICU is at OHSU in Portland, about 2 hours north." },
+    ],
+    nearbyCities: ["portland-or"],
+    publishedDate: "2026-06-02",
+    lat: 44.0505,
+    lng: -123.0951,
+  },
+
+  "salem-or": {
+    slug: "salem-or",
+    city: "Salem",
+    state: "OR",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,200 for a birth doula in Salem. Postpartum doulas run $25\u2013$45 per hour. The Willamette Valley market is solid with good availability.\u201d",
+    medicaidNote: "Yes \u2014 Oregon Health Plan (OHP) covers doula services. Salem families on OHP can access doulas through Willamette Valley Community Health and other Marion County CCOs.",
+    hospitalDetails: [
+      { name: "Salem Health Hospital", paragraph: "Salem Health is the primary birthing hospital in Marion County, offering a Level III NICU (stated directly on salemhealth.org). It serves as the regional referral center for the mid-Willamette Valley and accommodates birth plans and welcomes doulas." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Salem\u2019s state capital community gets strong birth support from Salem Health\u2019s Level III NICU and Oregon\u2019s generous OHP doula coverage, making quality doula care accessible to families across the mid-Willamette Valley.",
+    culture: "Salem is Oregon\u2019s capital city and the agricultural hub of the Willamette Valley wine country. The birthing population includes state government employees with good insurance, agricultural worker families (many Latino), and a growing suburban population commuting to Portland. The city has a more moderate political culture than Eugene or Portland, but still benefits from Oregon\u2019s progressive birth legislation and OHP doula coverage. The large Latino agricultural workforce makes Spanish-language doula support especially important here.",
+    faqs: [
+      { q: "How much does a doula cost in Salem, OR?", a: "Birth doulas in Salem typically charge $800\u2013$2,200. The mid-Willamette Valley market is well-priced with good availability. <a href=\"/doula-cost/\">Compare Oregon costs</a>." },
+      { q: "Does OHP cover doulas for Salem families?", a: "Yes \u2014 OHP covers doula services through Willamette Valley Community Health and other Marion County CCOs. <a href=\"/does-medicaid-cover-doulas/\">See how Medicaid doula coverage works</a>." },
+      { q: "Which Salem hospitals have NICUs?", a: "Salem Health Hospital has a Level III NICU (stated directly on salemhealth.org), serving the mid-Willamette Valley. The nearest Level IV NICU is at OHSU in Portland, about 1 hour north." },
+    ],
+    nearbyCities: ["portland-or", "eugene-or"],
+    publishedDate: "2026-06-02",
+    lat: 44.9392,
+    lng: -123.0331,
+  },
+
+  "minneapolis-mn": {
+    slug: "minneapolis-mn",
+    city: "Minneapolis",
+    state: "MN",
+    costLow: 1000,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    costRange: "\u201c$1,000\u2013$3,000 for a birth doula in Minneapolis. Postpartum doulas run $35\u2013$55 per hour. The Twin Cities market is one of the strongest in the Midwest with exceptional doula availability.\u201d",
+    medicaidNote: "Yes \u2014 Minnesota Medicaid (Medical Assistance) covers doula services effective January 1, 2024. Minneapolis families on Minnesota Health Care Programs can access doulas through health plans. Minnesota\u2019s legislation was among the earliest and most comprehensive in the Midwest.",
+    hospitalDetails: [
+      { name: "M Health Fairview University of Minnesota Medical Center", paragraph: "The U of M Medical Center is Minneapolis\u2019s premier academic birthing hospital, offering a Level IV NICU (stated directly on mhealthfairview.org). It serves as the regional referral center for high-risk pregnancies across Minnesota and surrounding states. The hospital accommodates birth plans and welcomes doulas." },
+      { name: "Abbott Northwestern Hospital", paragraph: "Abbott Northwestern is one of the Twin Cities\u2019 largest birthing hospitals, offering a Level III NICU (stated directly on allinahealth.org). It\u2019s known for its Piper Birth Center, an in-hospital birth center offering a midwifery-led, home-like birth experience. The hospital welcomes doulas and supports birth plans." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Minneapolis\u2019s Twin Cities birth community is the strongest in the Midwest, with the state\u2019s only Level IV NICU at the U of M Medical Center, the renowned Piper Birth Center at Abbott Northwestern, and Minnesota\u2019s early-adopter Medicaid doula coverage.",
+    culture: "Minneapolis is the birth care capital of the Upper Midwest, with a progressive Scandinavian-influenced culture that values maternal health, evidence-based care, and community support. The Twin Cities have one of the highest concentrations of doulas per capita outside the coasts, supported by Minnesota\u2019s early Medicaid doula legislation (effective Jan 2024). The city\u2019s large Somali, Hmong, and East African immigrant communities have specific cultural birth traditions that culturally concordant doulas serve. The University of Minnesota and Mayo Clinic\u2019s Rochester campus (90 minutes south) make the state a medical destination.",
+    faqs: [
+      { q: "How much does a doula cost in Minneapolis, MN?", a: "Birth doulas in Minneapolis typically charge $1,000\u2013$3,000. The Twin Cities market is one of the strongest in the Midwest. <a href=\"/doula-cost/\">See the full Minnesota cost guide</a>." },
+      { q: "Does Minnesota Medicaid cover doulas for Minneapolis families?", a: "Yes \u2014 Minnesota Medicaid (Medical Assistance) covers doula services since January 2024. Minneapolis families should contact their health plan for enrolled doulas. <a href=\"/does-medicaid-cover-doulas/\">Learn about Medicaid doula coverage</a>." },
+      { q: "Which Minneapolis hospitals have the highest-level NICUs?", a: "The U of M Medical Center has a Level IV NICU (stated directly on mhealthfairview.org). Abbott Northwestern has a Level III NICU (stated directly on allinahealth.org) plus the Piper Birth Center for midwifery-led births." },
+      { q: "Are there birth centers in Minneapolis?", a: "Abbott Northwestern\u2019s Piper Birth Center is an in-hospital birth center offering a home-like, midwifery-led birth experience within a hospital setting. It\u2019s one of the best-known birth center programs in the Midwest. <a href=\"/birth-center/\">Learn about birth center vs hospital birth</a>." },
+    ],
+    nearbyCities: [],
+    publishedDate: "2026-06-02",
+    lat: 44.9773,
+    lng: -93.2655,
+  },
+
+  "st-paul-mn": {
+    slug: "st-paul-mn",
+    city: "St. Paul",
+    state: "MN",
+    costLow: 900,
+    costHigh: 2800,
+    shelbiServesHere: false,
+    costRange: "\u201c$900\u2013$2,800 for a birth doula in St. Paul. Postpartum doulas run $30\u2013$50 per hour. St. Paul shares the Twin Cities\u2019 strong doula market.\u201d",
+    medicaidNote: "Yes \u2014 Minnesota Medicaid (Medical Assistance) covers doula services effective January 1, 2024. St. Paul families on Minnesota Health Care Programs can access doulas through health plans. Ramsey County has active community doula programs.",
+    hospitalDetails: [
+      { name: "Regions Hospital", paragraph: "Regions Hospital is St. Paul\u2019s primary birthing hospital and the regional referral center for the east metro, offering a Level III NICU (stated directly on regionshospital.com or healthpartners.com). Part of the HealthPartners system, it accommodates birth plans and welcomes doulas." },
+      { name: "Children\u2019s Hospital St. Paul (Neonatology)", paragraph: "Children\u2019s Minnesota in St. Paul provides specialized neonatal care. While not a birthing hospital, it serves as the Level III NICU referral center for complex cases. The highest-level NICU care in the Twin Cities is at the U of M Medical Center in Minneapolis." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "St. Paul families access the Twin Cities\u2019 exceptional birth network, with Regions Hospital\u2019s Level III NICU in their own city and the U of M\u2019s Level IV NICU just across the river in Minneapolis.",
+    culture: "St. Paul is the quieter, more historic twin of Minneapolis, with a strong sense of neighborhood identity and a large Hmong community that has specific cultural birth traditions. The city is home to the Minnesota State Capitol, Mayo Clinic\u2019s Health System, and a variety of tight-knit ethnic communities (Hmong, Somali, Latino) who rely on culturally concordant doulas. St. Paul\u2019s birth culture benefits from all of Minnesota\u2019s progressive legislation, with community organizations like Everyday Miracles providing doula support to underserved families.",
+    faqs: [
+      { q: "How much does a doula cost in St. Paul, MN?", a: "Birth doulas in St. Paul typically charge $900\u2013$2,800. The Twin Cities market has excellent availability. <a href=\"/doula-cost/\">Compare Minnesota costs</a>." },
+      { q: "Does Minnesota Medicaid cover doulas for St. Paul families?", a: "Yes \u2014 Minnesota Medicaid covers doula services since January 2024. Ramsey County has active community doula programs like Everyday Miracles that pair families with enrolled doulas." },
+      { q: "Which St. Paul hospitals have NICUs?", a: "Regions Hospital has a Level III NICU (stated directly on healthpartners.com). For Level IV NICU care, the U of M Medical Center in Minneapolis is just across the river." },
+    ],
+    nearbyCities: ["minneapolis-mn"],
+    publishedDate: "2026-06-02",
+    lat: 44.9497,
+    lng: -93.0931,
+  },
+
+  "rochester-mn": {
+    slug: "rochester-mn",
+    city: "Rochester",
+    state: "MN",
+    costLow: 800,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,500 for a birth doula in Rochester. Postpartum doulas run $25\u2013$45 per hour. The Mayo Clinic community supports a specialized doula market.\u201d",
+    medicaidNote: "Yes \u2014 Minnesota Medicaid (Medical Assistance) covers doula services effective January 1, 2024. Rochester families on Minnesota Health Care Programs can access doulas through health plans.",
+    hospitalDetails: [
+      { name: "Mayo Clinic Hospital \u2014 Rochester, Saint Marys Campus", paragraph: "Saint Marys Campus is Mayo Clinic\u2019s primary birthing hospital, offering a Level IV NICU (stated directly on mayoclinic.org). It\u2019s one of the world\u2019s most renowned medical centers and serves as a global referral destination for high-risk pregnancies. The hospital accommodates birth plans and welcomes doulas." },
+      { name: "Mayo Clinic Hospital \u2014 Rochester, Methodist Campus", paragraph: "Methodist Campus provides additional birthing services as part of the Mayo Clinic system. Together with Saint Marys, the Mayo system handles one of the highest volumes of births in Minnesota. Both campuses support birth plans and doula participation." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Rochester\u2019s Mayo Clinic gives this southeastern Minnesota city one of the world\u2019s premier birthing hospitals with a Level IV NICU at Saint Marys Campus, making it a global destination for high-risk pregnancy care alongside Minnesota\u2019s Medicaid doula coverage.",
+    culture: "Rochester is a medical city built around the Mayo Clinic, which dominates every aspect of local life including birth culture. Many birthing families in Rochester are Mayo employees or patients referred from across the region and even internationally. The city has a high proportion of medically-informed parents who understand the value of doula support. The community also includes a growing immigrant population (Somali, Sudanese, Cambodian) who work at Mayo and have specific cultural birth needs. Rochester\u2019s isolation from other major metros (90 minutes from the Twin Cities) makes local doula support essential.",
+    faqs: [
+      { q: "How much does a doula cost in Rochester, MN?", a: "Birth doulas in Rochester typically charge $800\u2013$2,500. The Mayo Clinic market attracts specialized doulas experienced with high-risk pregnancies. <a href=\"/doula-cost/\">See Minnesota costs</a>." },
+      { q: "Does Minnesota Medicaid cover doulas for Rochester families?", a: "Yes \u2014 Minnesota Medicaid covers doula services since January 2024. Rochester families should contact their health plan for enrolled doulas in the Olmsted County area." },
+      { q: "Does Mayo Clinic welcome doulas?", a: "Yes \u2014 Mayo Clinic\u2019s Saint Marys Campus accommodates birth plans and welcomes doulas. The Level IV NICU (stated directly on mayoclinic.org) handles the most complex pregnancies in the upper Midwest. <a href=\"/birth-plan-template/\">Use the free birth plan template</a> to prepare for your Mayo birth." },
+    ],
+    nearbyCities: ["minneapolis-mn"],
+    publishedDate: "2026-06-02",
+    lat: 44.0234,
+    lng: -92.4630,
+  },
+
+  "detroit-mi": {
+    slug: "detroit-mi",
+    city: "Detroit",
+    state: "MI",
+    costLow: 800,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,500 for a birth doula in Detroit. Postpartum doulas run $25\u2013$45 per hour. Detroit\u2019s birth justice movement has created a strong community doula network.\u201d",
+    medicaidNote: "Yes \u2014 Michigan Medicaid covers doula services effective January 1, 2024 (HB 5089). Detroit families on Michigan Medicaid can access doulas through managed care plans. Detroit\u2019s birth justice organizations have been instrumental in implementing this coverage.",
+    hospitalDetails: [
+      { name: "Henry Ford Hospital", paragraph: "Henry Ford Hospital is Detroit\u2019s primary academic medical center, offering a Level III NICU (stated directly on henryford.com). It serves the city\u2019s diverse population and handles high volumes of births. The hospital accommodates birth plans and welcomes doulas." },
+      { name: "DMC Hutzel Women\u2019s Hospital", paragraph: "Hutzel Women\u2019s Hospital is part of the Detroit Medical Center and is one of Michigan\u2019s oldest women\u2019s hospitals, offering a Level III NICU (stated directly on dmc.org). It\u2019s known for its specialized maternal-fetal medicine program and serves as a regional referral center for high-risk pregnancies." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Detroit\u2019s birth justice movement is one of the most active in the nation, with two Level III NICU hospitals (Henry Ford and Hutzel) and Michigan\u2019s new Medicaid doula coverage addressing the city\u2019s maternal health disparities head-on.",
+    culture: "Detroit\u2019s birth culture is shaped by the city\u2019s majority-Black population and the maternal health disparities that birth justice organizations fight daily. Michigan has some of the worst Black maternal mortality rates in the nation, and Detroit\u2019s doulas are on the front lines of changing that. Organizations like MamaShaka and the Black Mothers\u2019 Breastfeeding Association have built a powerful community doula network. The city\u2019s comeback economy is attracting young professionals alongside the established working-class community, creating both demand for premium doula services and urgent need for accessible community doula support.",
+    faqs: [
+      { q: "How much does a doula cost in Detroit, MI?", a: "Birth doulas in Detroit typically charge $800\u2013$2,500. Community doula programs offer sliding-scale options for families who need them. <a href=\"/doula-cost/\">See the full Michigan cost guide</a>." },
+      { q: "Does Michigan Medicaid cover doulas for Detroit families?", a: "Yes \u2014 Michigan Medicaid covers doula services since January 2024 (HB 5089). Detroit\u2019s birth justice organizations help connect families with enrolled doulas. <a href=\"/does-medicaid-cover-doulas/\">Learn about Medicaid doula coverage</a>." },
+      { q: "Which Detroit hospitals have NICUs?", a: "Henry Ford Hospital has a Level III NICU (stated directly on henryford.com), as does DMC Hutzel Women\u2019s Hospital (stated directly on dmc.org). For Level IV NICU care, families are referred to Children\u2019s Hospital of Michigan or the University of Michigan in Ann Arbor." },
+      { q: "Are there birth justice organizations in Detroit?", a: "Yes \u2014 Detroit has one of the strongest birth justice movements in the country. Organizations like MamaShaka and the Black Mothers\u2019 Breastfeeding Association provide community doula support, especially for Black families facing maternal health disparities. <a href=\"/doula-vs-midwife/\">Understand the doula\u2019s role on your birth team</a>." },
+    ],
+    nearbyCities: [],
+    publishedDate: "2026-06-02",
+    lat: 42.3316,
+    lng: -83.0466,
+  },
+
+  "grand-rapids-mi": {
+    slug: "grand-rapids-mi",
+    city: "Grand Rapids",
+    state: "MI",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,200 for a birth doula in Grand Rapids. Postpartum doulas run $25\u2013$40 per hour. West Michigan\u2019s market is solid and family-oriented.\u201d",
+    medicaidNote: "Yes \u2014 Michigan Medicaid covers doula services effective January 1, 2024 (HB 5089). Grand Rapids families on Michigan Medicaid can access doulas through Priority Health, Meridian, and other managed care plans in Kent County.",
+    hospitalDetails: [
+      { name: "Corewell Health Butterworth Hospital", paragraph: "Corewell Health (formerly Spectrum Health) Butterworth Hospital is Grand Rapids\u2019 primary birthing hospital, offering a Level III NICU (stated directly on corewellhealth.org). It\u2019s the regional referral center for west Michigan and handles the highest birth volume in the region. The hospital accommodates birth plans and welcomes doulas." },
+      { name: "Trinity Health Grand Rapids", paragraph: "Trinity Health (formerly Mercy Health) provides L&D services in Grand Rapids. Contact the hospital directly for NICU level verification. It serves families with different insurance networks and offers an additional birthing option in the Grand Rapids area." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Grand Rapids\u2019s reputation as Michigan\u2019s family-oriented west side city is reflected in its birth infrastructure, with Corewell Health Butterworth\u2019s Level III NICU serving as West Michigan\u2019s primary birthing hub alongside Michigan\u2019s new Medicaid doula coverage.",
+    culture: "Grand Rapids is West Michigan\u2019s largest city and a center of the Dutch Reformed Christian community, which influences local birth culture with larger family sizes and strong church-based support networks. The city has been named one of the best places to raise a family multiple times, attracting young parents who value community and affordability. The Beer City USA craft brewery scene has drawn a creative class that brings more progressive birth preferences. Grand Rapids\u2019s growing Latino population in the southeast side creates demand for Spanish-language doula services.",
+    faqs: [
+      { q: "How much does a doula cost in Grand Rapids, MI?", a: "Birth doulas in Grand Rapids typically charge $800\u2013$2,200. West Michigan\u2019s family-oriented market has solid availability. <a href=\"/doula-cost/\">Compare Michigan costs</a>." },
+      { q: "Does Michigan Medicaid cover doulas for Grand Rapids families?", a: "Yes \u2014 Michigan Medicaid covers doula services since January 2024. Kent County families should contact Priority Health or Meridian for enrolled doulas." },
+      { q: "Which Grand Rapids hospitals have NICUs?", a: "Corewell Health Butterworth Hospital has a Level III NICU (stated directly on corewellhealth.org). Trinity Health also provides L&D \u2014 contact directly for NICU level. The nearest Level IV NICU is at the University of Michigan in Ann Arbor, about 2 hours east." },
+    ],
+    nearbyCities: ["detroit-mi"],
+    publishedDate: "2026-06-02",
+    lat: 42.9632,
+    lng: -85.6679,
+  },
+
+  "denver-co": {
+    slug: "denver-co",
+    city: "Denver",
+    state: "CO",
+    costLow: 1000,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    costRange: "\u201c$1,000\u2013$3,000 for a birth doula in Denver. Postpartum doulas run $30\u2013$55 per hour. The Denver metro market is one of the strongest between the coasts.\u201d",
+    medicaidNote: "Yes \u2014 Colorado Medicaid (Health First Colorado) covers doula services effective July 1, 2024 (HB 24-1063). Denver families on Health First Colorado can access doulas through Regional Accountable Entities (RAEs). Colorado\u2019 s legislation was championed by Denver\u2019s birth justice community.",
+    hospitalDetails: [
+      { name: "UCHealth University of Colorado Hospital", paragraph: "The CU Anschutz Medical Campus hospital is Denver\u2019s premier academic medical center, offering a Level IV NICU (stated directly on uchealth.org). It\u2019s the regional referral center for the entire Rocky Mountain region and handles the most complex pregnancies. The hospital accommodates birth plans and welcomes doulas." },
+      { name: "Presbyterian/St. Luke\u2019s Medical Center", paragraph: "P/SL is Denver\u2019s other major birthing hospital, offering a Level III NICU (stated directly on sclhealth.org or centura.org). It serves families across the Denver metro and has an active midwifery program. The hospital supports birth plans and doula participation." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Denver\u2019s position as the Rocky Mountain region\u2019s medical hub gives families access to the state\u2019s only Level IV NICU at UCHealth University of Colorado Hospital, backed by Colorado\u2019s new Medicaid doula coverage championed by the city\u2019s birth justice community.",
+    culture: "Denver is the birth care capital of the Rocky Mountain region, with a thriving outdoor culture, strong wellness community, and progressive birth values. The city\u2019s explosive growth has created a young, health-conscious population that gravitates toward doula support, midwifery care, and birth center options. Denver\u2019s birth justice organizations \u2014 particularly those serving the city\u2019s large Latino and Black communities \u2014 were instrumental in passing Colorado\u2019s Medicaid doula legislation. The altitude (5,280 feet) affects pregnancy in specific ways that Denver doulas are experienced in navigating.",
+    faqs: [
+      { q: "How much does a doula cost in Denver, CO?", a: "Birth doulas in Denver typically charge $1,000\u2013$3,000. The Mile High City has one of the strongest doula markets between the coasts. <a href=\"/doula-cost/\">Compare Colorado costs</a>." },
+      { q: "Does Colorado Medicaid cover doulas for Denver families?", a: "Yes \u2014 Colorado Medicaid (Health First Colorado) covers doula services since July 2024 (HB 24-1063). Denver families should contact their RAE for enrolled doulas. <a href=\"/does-medicaid-cover-doulas/\">Learn about Medicaid doula coverage</a>." },
+      { q: "Which Denver hospitals have the highest-level NICUs?", a: "UCHealth University of Colorado Hospital has a Level IV NICU (stated directly on uchealth.org), the only one in the Rocky Mountain region. Presbyterian/St. Luke\u2019s has a Level III NICU (stated directly on centura.org)." },
+      { q: "Does Denver\u2019s altitude affect pregnancy?", a: "Yes \u2014 at 5,280 feet, Denver\u2019s altitude can affect oxygen levels during pregnancy and birth. Denver doulas are experienced in navigating altitude-related concerns. Both UCHealth and P/SL are well-equipped for these considerations. <a href=\"/birth-plan-template/\">Use the free birth plan template</a> to address altitude concerns." },
+    ],
+    nearbyCities: [],
+    publishedDate: "2026-06-02",
+    lat: 39.7752,
+    lng: -105.0244,
+  },
+
+  "colorado-springs-co": {
+    slug: "colorado-springs-co",
+    city: "Colorado Springs",
+    state: "CO",
+    costLow: 800,
+    costHigh: 2300,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,300 for a birth doula in Colorado Springs. Postpartum doulas run $25\u2013$45 per hour. Military discounts are common near the military installations.\u201d",
+    medicaidNote: "Yes \u2014 Colorado Medicaid (Health First Colorado) covers doula services effective July 1, 2024 (HB 24-1063). Colorado Springs families on Health First Colorado can access doulas through RAEs. Military families should note that TRICARE does not cover doulas.",
+    hospitalDetails: [
+      { name: "UCHealth Memorial Hospital Central", paragraph: "UCHealth Memorial Central is Colorado Springs\u2019 primary birthing hospital, offering a Level III NICU (stated directly on uchealth.org). It serves the greater El Paso County area and accommodates birth plans and welcomes doulas." },
+      { name: "CommonSpirit Penrose Hospital", paragraph: "Penrose Hospital provides L&D services in Colorado Springs. Contact the hospital directly for NICU level verification. It offers an alternative birthing option for families with different insurance networks in the Pikes Peak region." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Colorado Springs\u2019s unique military-family birth community \u2014 anchored by five military installations \u2014 gets strong support from UCHealth Memorial\u2019s Level III NICU and Colorado\u2019s new Medicaid doula coverage.",
+    culture: "Colorado Springs is one of America\u2019s most military-centric cities, home to Fort Carson, Peterson Space Force Base, Schriever AFB, NORAD, and the Air Force Academy. Military spouses giving birth while partners are deployed create one of the highest doula-demand demographics in the country. The city also has a large evangelical Christian community that influences birth culture with large families and church-based support networks. At 6,035 feet (higher than Denver), altitude affects pregnancy, and local doulas are experienced with these considerations. The city\u2019s growing tech sector is diversifying the birthing population.",
+    faqs: [
+      { q: "How much does a doula cost in Colorado Springs, CO?", a: "Birth doulas in Colorado Springs typically charge $800\u2013$2,300. Military discounts are widely available. <a href=\"/doula-cost/\">Compare Colorado costs</a>." },
+      { q: "Does TRICARE cover doulas for military families in Colorado Springs?", a: "No \u2014 TRICARE does not cover doula services. However, Colorado Medicaid (Health First Colorado) covers doulas since July 2024 for qualifying families. Many COS doulas offer military spouse discounts. HSA/FSA funds also work." },
+      { q: "Which Colorado Springs hospitals have NICUs?", a: "UCHealth Memorial Central has a Level III NICU (stated directly on uchealth.org). Penrose Hospital also provides L&D \u2014 contact directly for NICU level. For Level IV NICU, UCHealth University of Colorado Hospital in Denver is about 70 minutes north." },
+    ],
+    nearbyCities: ["denver-co"],
+    publishedDate: "2026-06-02",
+    lat: 38.8340,
+    lng: -104.8253,
+  },
+
+
 };
 
 export const citySlugs = Object.keys(cities).sort();
