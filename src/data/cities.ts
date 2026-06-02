@@ -6351,6 +6351,282 @@ export const cities: Record<string, CityData> = {
   },
 
 
+  // ═════════════════════════════════════════════
+  // Batch 14 (2026-06-02): NC and FL deep fills
+  // ═════════════════════════════════════════════
+
+  "wake-forest-nc": {
+    slug: "wake-forest-nc",
+    city: "Wake Forest",
+    state: "NC",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    costRange: "\u201c$900\u2013$2,500 for a birth doula in Wake Forest. Postpartum doulas run $30\u2013$45 per hour. The Raleigh metro market is well-established with strong availability.\u201d",
+    medicaidNote: "Yes \u2014 North Carolina Medicaid covers doula services as of October 1, 2024. Wake Forest families on NC Medicaid can access doulas through managed care plans (WellCare, UnitedHealthcare, Carolina Complete). Reimbursement is approximately $1,300 for the full birth spectrum. Contact your managed care plan to confirm your doula is enrolled.",
+    hospitalDetails: [
+      { name: "WakeMed North Hospital", paragraph: "WakeMed North is the closest hospital to Wake Forest, located about 15 minutes south in Raleigh. It has a Level III NICU (stated directly on wakemed.org) and is part of the WakeMed Health system, which is one of the busiest birthing networks in Wake County. WakeMed accommodates birth plans and welcomes doulas." },
+      { name: "Duke Raleigh Hospital", paragraph: "About 20 minutes south, Duke Raleigh Hospital provides L&D services with a Level III NICU (stated directly on dukehealth.org). Part of the Duke Health system, it tends to attract families with Duke insurance and those seeking academic medical center care. The hospital supports birth plans and doula participation." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Wake Forest families have convenient access to both the WakeMed and Duke Health systems in neighboring Raleigh, with Level III NICUs at both hospitals providing strong birth support options.",
+    culture: "Wake Forest is one of the fastest-growing towns in the Research Triangle, drawing families with its top-rated schools and small-town feel within commuting distance of Raleigh\u2019s tech and research economy. The town\u2019s rapid 60% growth since 2010 means most birthing families are young professionals with employer insurance. The Research Triangle\u2019s concentration of universities (Duke, UNC, NC State, Wake Forest University) creates a more evidence-based, progressive birth culture than many Southern communities, with strong demand for doula support.",
+    faqs: [
+      { q: "How much does a doula cost in Wake Forest, NC?", a: "Birth doulas in Wake Forest typically charge $900\u2013$2,500. The Raleigh metro has excellent doula availability. <a href=\"/doula-cost/\">Compare doula costs in North Carolina</a>." },
+      { q: "Does NC Medicaid cover doulas for Wake Forest families?", a: "Yes \u2014 North Carolina Medicaid has covered doula services since October 2024. Wake Forest families should contact their managed care plan (WellCare, UnitedHealthcare, Carolina Complete) to find an enrolled doula. Reimbursement is approximately $1,300 for full-spectrum support." },
+      { q: "Which hospitals near Wake Forest have NICUs?", a: "WakeMed North has a Level III NICU (stated directly on wakemed.org), as does Duke Raleigh Hospital (stated directly on dukehealth.org). Both are 15\u201320 minutes from Wake Forest. For Level IV NICU care, UNC Medical Center in Chapel Hill is about 45 minutes away." },
+      { q: "Are there birth centers near Wake Forest?", a: "No freestanding birth centers currently operate in Wake County. Some families travel to Women\u2019s Birth & Wellness Center in Chapel Hill (about 45 minutes) or explore home birth with a certified nurse-midwife." },
+    ],
+    nearbyCities: ["raleigh-nc", "cary-nc", "durham-nc"],
+    publishedDate: "2026-06-02",
+    lat: 35.9803,
+    lng: -78.5104,
+  },
+
+  "asheville-nc": {
+    slug: "asheville-nc",
+    city: "Asheville",
+    state: "NC",
+    costLow: 900,
+    costHigh: 2800,
+    shelbiServesHere: false,
+    costRange: "\u201c$900\u2013$2,800 for a birth doula in Asheville. Postpartum doulas run $30\u2013$50 per hour. Asheville\u2019s holistic wellness community supports a strong doula market with premium options.\u201d",
+    medicaidNote: "Yes \u2014 North Carolina Medicaid covers doula services as of October 1, 2024. Asheville families on NC Medicaid can access doulas through managed care plans. Western North Carolina has active community doula programs. Contact your managed care plan to confirm your doula is enrolled.",
+    hospitalDetails: [
+      { name: "Mission Hospital", paragraph: "Mission Hospital is Asheville\u2019s primary birthing facility and the regional referral center for all of western North Carolina, offering a Level III NICU (stated directly on mission-health.org). As the largest hospital in the region, it handles high-risk births from across the mountains. The hospital accommodates birth plans and welcomes doulas." },
+      { name: "Pardee Hospital (Hendersonville)", paragraph: "About 25 minutes south in Hendersonville, Pardee Hospital provides L&D services for families in the southern Blue Ridge area. Contact the hospital directly for NICU level verification. It offers a smaller, more personal birthing environment than the regional center at Mission." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Asheville\u2019s Mission Hospital serves as the regional birth center for all of western North Carolina, with its Level III NICU providing mountain families access to advanced neonatal care without leaving the region.",
+    culture: "Asheville is the cultural hub of western North Carolina, known for its arts scene, craft brewery culture, and holistic wellness community. This makes it one of the most doula-friendly cities in the state \u2014 demand for natural birth, home birth, and alternative birthing options is high. The city draws young creative professionals and retirees alike, creating a diverse birthing population. The mountain geography means some rural families travel significant distances to reach Mission Hospital, making local doula support especially valuable for prenatal and postpartum care.",
+    faqs: [
+      { q: "How much does a doula cost in Asheville, NC?", a: "Birth doulas in Asheville typically charge $900\u2013$2,800. The holistic wellness community supports premium doula packages. <a href=\"/doula-cost/\">See the full cost guide for NC</a>." },
+      { q: "Does NC Medicaid cover doulas for Asheville families?", a: "Yes \u2014 NC Medicaid covers doula services since October 2024. Western NC has active community doula programs, especially for mountain families who travel long distances for birth care." },
+      { q: "Which Asheville hospitals have NICUs?", a: "Mission Hospital has a Level III NICU (stated directly on mission-health.org), serving as the regional referral center for all of western NC. Pardee Hospital in Hendersonville provides L&D \u2014 contact directly for NICU level. The nearest Level IV NICU is at UNC in Chapel Hill, about 4 hours east." },
+      { q: "Are there birth centers in Asheville?", a: "No freestanding birth centers currently operate in the Asheville area. However, Asheville\u2019s strong midwifery community supports home birth options, and some CNMs attend births at Mission Hospital." },
+    ],
+    nearbyCities: ["charlotte-nc", "greensboro-nc"],
+    publishedDate: "2026-06-02",
+    lat: 35.5954,
+    lng: -82.5508,
+  },
+
+  "winston-salem-nc": {
+    slug: "winston-salem-nc",
+    city: "Winston-Salem",
+    state: "NC",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,200 for a birth doula in Winston-Salem. Postpartum doulas run $25\u2013$40 per hour. The Triad market is moderately sized with good availability.\u201d",
+    medicaidNote: "Yes \u2014 North Carolina Medicaid covers doula services as of October 1, 2024. Winston-Salem families on NC Medicaid can access doulas through managed care plans in the Forsyth County area. Contact your managed care plan to confirm your doula is enrolled.",
+    hospitalDetails: [
+      { name: "Novant Health Forsyth Medical Center", paragraph: "Forsyth Medical Center is Winston-Salem\u2019s largest hospital and the primary birthing facility in the Triad, offering a Level III NICU (stated directly on novanthealth.org). It handles a high volume of births and has an active midwifery program. The hospital accommodates birth plans and welcomes doulas." },
+      { name: "Atrium Health Wake Forest Baptist Medical Center", paragraph: "The academic medical center associated with Wake Forest University provides L&D services with a Level III NICU (stated directly on atriumhealth.org). As a teaching hospital, it attracts high-risk pregnancies and offers specialized maternal-fetal medicine. NICU transfers to Level IV facilities go to Atrium Health Carolinas Medical Center in Charlotte." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Winston-Salem\u2019s Twin City birth landscape is anchored by both the Novant Health and Atrium Health systems, giving Triad families two strong Level III NICU hospital options within the city.",
+    culture: "Winston-Salem is a Twin City (with nearby Greensboro forming the Piedmont Triad) with deep roots in tobacco, textiles, and now healthcare and biotech through Wake Forest University\u2019s medical school. The city has a more affordable cost of living than Charlotte or Raleigh, attracting young families starting out. The birthing culture benefits from the academic medical center\u2019s evidence-based approach, while older community traditions around family support networks remain strong in the city\u2019s Black and Latino communities.",
+    faqs: [
+      { q: "How much does a doula cost in Winston-Salem, NC?", a: "Birth doulas in Winston-Salem typically charge $800\u2013$2,200. The Triad market is well-priced and available. <a href=\"/doula-cost/\">Compare NC doula costs</a>." },
+      { q: "Does NC Medicaid cover doulas for Winston-Salem families?", a: "Yes \u2014 NC Medicaid covers doula services since October 2024. Forsyth County families should contact their managed care plan for enrolled doulas." },
+      { q: "Which Winston-Salem hospitals have NICUs?", a: "Both Novant Health Forsyth Medical Center (stated directly on novanthealth.org) and Atrium Health Wake Forest Baptist (stated directly on atriumhealth.org) have Level III NICUs. For Level IV NICU care, Atrium Health Carolinas Medical Center in Charlotte is about 80 minutes south." },
+    ],
+    nearbyCities: ["greensboro-nc", "charlotte-nc"],
+    publishedDate: "2026-06-02",
+    lat: 36.0998,
+    lng: -80.2441,
+  },
+
+  "fayetteville-nc": {
+    slug: "fayetteville-nc",
+    city: "Fayetteville",
+    state: "NC",
+    costLow: 700,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    costRange: "\u201c$700\u2013$1,800 for a birth doula in Fayetteville. Postpartum doulas run $20\u2013$35 per hour. Military discounts are common near Fort Liberty.\u201d",
+    medicaidNote: "Yes \u2014 North Carolina Medicaid covers doula services as of October 1, 2024. Fayetteville\u2019s large military population should note that TRICARE does not cover doulas, but NC Medicaid coverage helps military-adjacent families. Contact your managed care plan for enrolled doulas.",
+    hospitalDetails: [
+      { name: "Cape Fear Valley Medical Center", paragraph: "Cape Fear Valley is Fayetteville\u2019s primary birthing hospital, offering a Level III NICU (stated directly on capefearvalley.org). It serves the largest civilian population in the region and accommodates birth plans and welcomes doulas. The hospital has one of the highest birth volumes in eastern North Carolina." },
+      { name: "Womack Army Medical Center", paragraph: "Womack Army Medical Center at Fort Liberty (formerly Fort Bragg) provides L&D services for active-duty military families and TRICARE beneficiaries. Contact the hospital directly for NICU level verification. Military families should note that TRICARE does not cover doula services." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Fayetteville\u2019s military community makes it one of the most doula-relevant cities in North Carolina, as young military spouses often give birth far from family and need the support a doula provides.",
+    culture: "Fayetteville is a military city anchored by Fort Liberty (formerly Fort Bragg), one of the largest military installations in the world. The birthing population includes a high proportion of young military spouses, often giving birth while their partner is deployed \u2014 making doula support especially critical here. The city is one of the most diverse in North Carolina, with significant Black, Latino, and military-family communities. Many families are transient, creating a constant flow of new parents seeking birth support without established local networks.",
+    faqs: [
+      { q: "How much does a doula cost in Fayetteville, NC?", a: "Birth doulas in Fayetteville typically charge $700\u2013$1,800. Military spouse discounts are widely available near Fort Liberty. <a href=\"/doula-cost/\">Compare NC costs</a>." },
+      { q: "Does TRICARE cover doulas at Fort Liberty?", a: "No \u2014 TRICARE does not cover doula services. However, NC Medicaid covers doulas since October 2024, which helps some military-adjacent families. Many Fort Liberty doulas offer military discounts. HSA/FSA funds also work." },
+      { q: "Which Fayetteville hospitals have NICUs?", a: "Cape Fear Valley Medical Center has a Level III NICU (stated directly on capefearvalley.org). Womack Army Medical Center at Fort Liberty provides L&D for TRICARE families \u2014 contact directly for NICU level." },
+    ],
+    nearbyCities: ["raleigh-nc", "charlotte-nc"],
+    publishedDate: "2026-06-02",
+    lat: 35.0526,
+    lng: -78.8783,
+  },
+
+  "durham-nc": {
+    slug: "durham-nc",
+    city: "Durham",
+    state: "NC",
+    costLow: 900,
+    costHigh: 2800,
+    shelbiServesHere: false,
+    costRange: "\u201c$900\u2013$2,800 for a birth doula in Durham. Postpartum doulas run $30\u2013$50 per hour. Durham\u2019s academic and creative community supports a premium doula market.\u201d",
+    medicaidNote: "Yes \u2014 North Carolina Medicaid covers doula services as of October 1, 2024. Durham County families can access doulas through managed care plans. The Duke and UNC healthcare systems have some community doula partnerships. Contact your managed care plan for enrolled doulas.",
+    hospitalDetails: [
+      { name: "Duke University Hospital", paragraph: "Duke University Hospital is one of the nation\u2019s top academic medical centers, offering a Level III NICU (stated directly on dukehealth.org). It\u2019s a major regional referral center for high-risk pregnancies and maternal-fetal medicine. The hospital accommodates birth plans and welcomes doulas, with specialized programs for complex births." },
+      { name: "Duke Regional Hospital", paragraph: "Duke Regional (formerly Durham Regional) provides L&D services for the Durham community with a Level III NICU (stated directly on dukehealth.org). It tends to handle routine births and offers a more community-hospital feel than the academic center. Both hospitals are part of the Duke Health system." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Durham\u2019s world-class Duke Health system gives Triangle families access to two Level III NICU hospitals, with Duke University Hospital serving as the region\u2019s premier high-risk pregnancy referral center.",
+    culture: "Durham has transformed from a tobacco and textile town to a thriving tech and creative hub, with Duke University as its anchor institution. The city\u2019s birth community benefits from the Research Triangle\u2019s concentration of medical expertise \u2014 Duke, UNC, and NC State all contribute to an evidence-based, progressive birthing culture. Durham\u2019s historically Black neighborhoods have deep traditions of community birth support, and the city\u2019s growing Latino population has created demand for Spanish-speaking doulas. Food culture, arts, and entrepreneurship make Durham a magnet for millennial parents seeking holistic birth experiences.",
+    faqs: [
+      { q: "How much does a doula cost in Durham, NC?", a: "Birth doulas in Durham typically charge $900\u2013$2,800. The Triangle\u2019s premium market reflects the demand from Duke and tech families. <a href=\"/doula-cost/\">See the full NC cost guide</a>." },
+      { q: "Does NC Medicaid cover doulas for Durham families?", a: "Yes \u2014 NC Medicaid covers doula services since October 2024. Duke and UNC healthcare systems have partnered with community doula programs. Contact your managed care plan for enrolled doulas." },
+      { q: "Which Durham hospitals have NICUs?", a: "Both Duke University Hospital and Duke Regional Hospital have Level III NICUs (stated directly on dukehealth.org). For Level IV NICU care, UNC Children\u2019s Hospital in Chapel Hill is about 30 minutes away." },
+    ],
+    nearbyCities: ["raleigh-nc", "cary-nc", "greensboro-nc"],
+    publishedDate: "2026-06-02",
+    lat: 35.9967,
+    lng: -78.9018,
+  },
+
+  "port-st-lucie-fl": {
+    slug: "port-st-lucie-fl",
+    city: "Port St. Lucie",
+    state: "FL",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    costRange: "\u201c$900\u2013$2,500 for a birth doula in Port St. Lucie. Postpartum doulas run $30\u2013$45 per hour. The Treasure Coast market is growing alongside the city\u2019s rapid expansion.\u201d",
+    medicaidNote: "Yes \u2014 Florida Medicaid covers doula services (SB 264, effective July 1, 2024). Port St. Lucie families on FL Medicaid can access doulas through managed care plans (Suncoast Community Health, StayWell, etc.). Contact your plan to confirm your doula is enrolled.",
+    hospitalDetails: [
+      { name: "Cleveland Clinic Tradition Hospital", paragraph: "Cleveland Clinic Tradition Hospital is Port St. Lucie\u2019s primary birthing facility, providing L&D services. Contact the hospital directly for NICU level verification. As part of the Cleveland Clinic Florida system, it brings academic-level care to the Treasure Coast. The hospital accommodates birth plans and welcomes doulas." },
+      { name: "St. Lucie Medical Center", paragraph: "St. Lucie Medical Center provides L&D services on the Treasure Coast. Contact the hospital directly for NICU level verification. It serves families with various insurance networks and offers a second birthing option in the Port St. Lucie area." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Port St. Lucie\u2019s 50% growth has brought Cleveland Clinic to the Treasure Coast, giving this rapidly expanding city its own academic-hospital birth care option alongside St. Lucie Medical Center.",
+    culture: "Port St. Lucie is one of Florida\u2019s fastest-growing cities, drawing families from the expensive South Florida market with affordable housing and good schools. The city sits on the Treasure Coast between Orlando and Miami, with many families commuting to neighboring counties for work. The birthing population includes a mix of young families relocating for affordability, retirees\u2019 adult children settling near parents, and a growing Latino community. Many families previously gave birth in Fort Pierce or Stuart but now have Port St. Lucie-based options.",
+    faqs: [
+      { q: "How much does a doula cost in Port St. Lucie, FL?", a: "Birth doulas in Port St. Lucie typically charge $900\u2013$2,500. The Treasure Coast market is growing but smaller than South Florida. <a href=\"/doula-cost/\">Compare FL costs</a>." },
+      { q: "Does Florida Medicaid cover doulas for Port St. Lucie families?", a: "Yes \u2014 FL Medicaid covers doula services since July 2024 (SB 264). Contact your managed care plan (Suncoast, StayWell) for enrolled doulas on the Treasure Coast." },
+      { q: "Which Port St. Lucie hospitals have NICUs?", a: "Cleveland Clinic Tradition Hospital and St. Lucie Medical Center both provide L&D \u2014 contact each directly for NICU level verification. For Level III/IV NICU care, families may be referred to Lawnwood Medical Center in Fort Pierce or Martin Health in Stuart." },
+    ],
+    nearbyCities: ["orlando-fl", "miami-fl", "tampa-fl"],
+    publishedDate: "2026-06-02",
+    lat: 27.2939,
+    lng: -80.3503,
+  },
+
+  "lakeland-fl": {
+    slug: "lakeland-fl",
+    city: "Lakeland",
+    state: "FL",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,200 for a birth doula in Lakeland. Postpartum doulas run $25\u2013$40 per hour. The I-4 corridor market draws doulas from both Tampa and Orlando.\u201d",
+    medicaidNote: "Yes \u2014 Florida Medicaid covers doula services (SB 264, effective July 1, 2024). Lakeland families on FL Medicaid can access doulas through managed care plans in Polk County. Contact your plan to find enrolled doulas.",
+    hospitalDetails: [
+      { name: "Lakeland Regional Health Medical Center", paragraph: "Lakeland Regional Health is Polk County\u2019s largest hospital and the primary birthing facility, offering a Level III NICU (stated directly on mylrh.org). It handles the highest birth volume in the county and serves as the regional referral center for high-risk pregnancies. The hospital accommodates birth plans and welcomes doulas." },
+      { name: "Watson Hospital (Haines City)", paragraph: "About 20 minutes east in Haines City, Watson Hospital (AdventHealth) provides L&D services for eastern Polk County families. Contact the hospital directly for NICU level verification. It serves the Four Corners area between Lakeland, Orlando, and Kissimmee." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Lakeland\u2019s position on the I-4 corridor gives Polk County families access to both the Tampa and Orlando hospital networks, with Lakeland Regional Health\u2019s Level III NICU serving as the county\u2019s primary birthing hub.",
+    culture: "Lakeland sits strategically on the I-4 corridor between Tampa and Orlando, making it a commuting hub for both metros. The city has a more affordable, small-town feel that attracts young families priced out of Orlando. Polk County has one of Florida\u2019s largest public school districts, and the community includes a significant agricultural workforce (citrus, phosphate mining) alongside growing suburban professionals. The birthing culture benefits from proximity to both Tampa and Orlando\u2019s doula communities, though local options are more limited.",
+    faqs: [
+      { q: "How much does a doula cost in Lakeland, FL?", a: "Birth doulas in Lakeland typically charge $800\u2013$2,200. Some families use Tampa or Orlando doulas who travel. <a href=\"/doula-cost/\">See the FL cost breakdown</a>." },
+      { q: "Does Florida Medicaid cover doulas for Lakeland families?", a: "Yes \u2014 FL Medicaid covers doula services since July 2024. Polk County families should contact their managed care plan for enrolled doulas in the I-4 corridor area." },
+      { q: "Which Lakeland hospitals have NICUs?", a: "Lakeland Regional Health has a Level III NICU (stated directly on mylrh.org). Watson Hospital in Haines City provides L&D \u2014 contact directly for NICU level. Tampa General Hospital\u2019s Level IV NICU is about 45 minutes west." },
+    ],
+    nearbyCities: ["tampa-fl", "orlando-fl"],
+    publishedDate: "2026-06-02",
+    lat: 28.0395,
+    lng: -81.9498,
+  },
+
+  "daytona-beach-fl": {
+    slug: "daytona-beach-fl",
+    city: "Daytona Beach",
+    state: "FL",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,000 for a birth doula in Daytona Beach. Postpartum doulas run $25\u2013$40 per hour. The Volusia County market is moderate \u2014 book early for due dates near Bike Week or race events.\u201d",
+    medicaidNote: "Yes \u2014 Florida Medicaid covers doula services (SB 264, effective July 1, 2024). Daytona Beach families on FL Medicaid can access doulas through Volusia County managed care plans. Contact your plan for enrolled doulas.",
+    hospitalDetails: [
+      { name: "AdventHealth Daytona Beach", paragraph: "AdventHealth Daytona Beach is the primary birthing facility in Volusia County, providing L&D services. Contact the hospital directly for NICU level verification. Part of the AdventHealth system, it serves the greater Daytona Beach area and accommodates birth plans and doulas." },
+      { name: "Halifax Health Medical Center", paragraph: "Halifax Health provides L&D services in Daytona Beach. Contact the hospital directly for NICU level verification. It\u2019s the community\u2019s other major hospital option and serves families with various insurance networks." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Daytona Beach families have two hospital options in AdventHealth and Halifax Health, with the city\u2019s tourism economy and university population creating a diverse birthing community on Florida\u2019s Fun Coast.",
+    culture: "Daytona Beach is known for its famous beach, NASCAR, and Bike Week \u2014 but it\u2019s also home to Bethune-Cookman University and Embry-Riddle Aeronautical University, creating a diverse birthing population. The city has a significant Black community with deep historical roots (founded by Mary McLeod Bethune), and the university populations bring younger first-time parents. Tourism and hospitality workers make up much of the working-class population, and the city sits between the pricier Orlando and Jacksonville markets, making local doula support essential for families without the budget to travel for care.",
+    faqs: [
+      { q: "How much does a doula cost in Daytona Beach, FL?", a: "Birth doulas in Daytona Beach typically charge $800\u2013$2,000. The Volusia County market is moderate \u2014 book early. <a href=\"/doula-cost/\">See FL costs</a>." },
+      { q: "Does Florida Medicaid cover doulas for Daytona Beach families?", a: "Yes \u2014 FL Medicaid covers doula services since July 2024. Volusia County families should contact their managed care plan for enrolled doulas." },
+      { q: "Which Daytona Beach hospitals have NICUs?", a: "AdventHealth Daytona Beach and Halifax Health both provide L&D \u2014 contact each directly for NICU level verification. For Level III/IV NICU care, families may be referred to Arnold Palmer Hospital in Orlando, about 60 minutes south." },
+    ],
+    nearbyCities: ["orlando-fl", "jacksonville-fl"],
+    publishedDate: "2026-06-02",
+    lat: 29.2092,
+    lng: -81.0229,
+  },
+
+  "sarasota-fl": {
+    slug: "sarasota-fl",
+    city: "Sarasota",
+    state: "FL",
+    costLow: 1000,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    costRange: "\u201c$1,000\u2013$3,000 for a birth doula in Sarasota. Postpartum doulas run $35\u2013$55 per hour. Sarasota\u2019s affluent market supports premium doula packages and holistic birth options.\u201d",
+    medicaidNote: "Yes \u2014 Florida Medicaid covers doula services (SB 264, effective July 1, 2024). Sarasota families on FL Medicaid can access doulas through managed care plans. The city\u2019s affluent market means many families have private insurance with doula benefits. Contact your plan for enrolled doulas.",
+    hospitalDetails: [
+      { name: "Sarasota Memorial Hospital", paragraph: "Sarasota Memorial Hospital is one of the largest public hospitals in Florida and the region\u2019s primary birthing facility, offering a Level III NICU (stated directly on smh.com). Known for its high-quality maternity care, it handles high birth volumes and has an active midwifery program. The hospital accommodates birth plans and welcomes doulas." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Sarasota Memorial Hospital\u2019s reputation as one of Florida\u2019s finest public hospitals gives Suncoast families top-tier maternity care with a Level III NICU serving Sarasota and Manatee counties.",
+    culture: "Sarasota is an affluent Gulf Coast city known for its arts scene (Ringling Museum, Sarasota Opera), beautiful beaches, and large retiree population. The birthing population includes two distinct groups: well-resourced professional families who seek premium birth experiences and community birth support for working families in the service economy. The city\u2019s sizeable retiree population means many births here are to late-in-life parents or grandparents actively supporting their adult children\u2019s births. The holistic wellness culture supports demand for natural birth and specialized doula services.",
+    faqs: [
+      { q: "How much does a doula cost in Sarasota, FL?", a: "Birth doulas in Sarasota typically charge $1,000\u2013$3,000. The affluent market supports premium packages. <a href=\"/doula-cost/\">Compare FL costs</a>." },
+      { q: "Does Florida Medicaid cover doulas for Sarasota families?", a: "Yes \u2014 FL Medicaid covers doula services since July 2024. Sarasota\u2019s many privately insured families should also check their plans, as some include doula benefits." },
+      { q: "Which Sarasota hospitals have NICUs?", a: "Sarasota Memorial Hospital has a Level III NICU (stated directly on smh.com), one of the highest-volume birthing hospitals on Florida\u2019s Gulf Coast. The nearest Level IV NICU is at All Children\u2019s Hospital in St. Petersburg, about 45 minutes north." },
+    ],
+    nearbyCities: ["tampa-fl", "clearwater-fl"],
+    publishedDate: "2026-06-02",
+    lat: 27.3366,
+    lng: -82.5313,
+  },
+
+  "tallahassee-fl": {
+    slug: "tallahassee-fl",
+    city: "Tallahassee",
+    state: "FL",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,200 for a birth doula in Tallahassee. Postpartum doulas run $25\u2013$40 per hour. The capital city\u2019s academic community supports a solid doula market.\u201d",
+    medicaidNote: "Yes \u2014 Florida Medicaid covers doula services (SB 264, effective July 1, 2024). Tallahassee families on FL Medicaid can access doulas through managed care plans in Leon County. FSU and FAMU student families should check their student health plans for doula benefits. Contact your plan for enrolled doulas.",
+    hospitalDetails: [
+      { name: "Tallahassee Memorial Healthcare (TMH)", paragraph: "TMH is Tallahassee\u2019s primary birthing facility and the regional referral center for the Big Bend area, offering a Level III NICU (stated directly on tmh.org). It serves families from across the Florida Panhandle and into southern Georgia. The hospital accommodates birth plans and welcomes doulas." },
+      { name: "Capital Regional Medical Center", paragraph: "Capital Regional provides L&D services in Tallahassee. Contact the hospital directly for NICU level verification. It serves families with different insurance networks and offers an alternative birthing option in the capital city." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Tallahassee\u2019s position as Florida\u2019s capital and home to two major universities creates an educated, diverse birthing community with Level III NICU care at TMH serving the entire Big Bend region.",
+    culture: "Tallahassee is Florida\u2019s capital city and home to Florida State University and Florida A&M University, creating a unique blend of government professionals, academics, and students. The city is more culturally Southern than peninsular Florida, with strong church-based community networks and HBCU traditions at FAMU. The birthing population includes state employees with good insurance, university students and faculty, and established Leon County families. The city\u2019s relative isolation from other major Florida metros (2+ hours to Jacksonville) makes local doula support especially critical.",
+    faqs: [
+      { q: "How much does a doula cost in Tallahassee, FL?", a: "Birth doulas in Tallahassee typically charge $800\u2013$2,200. The capital city market is moderate and has good availability. <a href=\"/doula-cost/\">Compare FL costs</a>." },
+      { q: "Does Florida Medicaid cover doulas for Tallahassee families?", a: "Yes \u2014 FL Medicaid covers doula services since July 2024. Leon County families should contact their managed care plan for enrolled doulas. FSU and FAMU student families should check student health plans." },
+      { q: "Which Tallahassee hospitals have NICUs?", a: "Tallahassee Memorial Healthcare has a Level III NICU (stated directly on tmh.org). Capital Regional Medical Center also provides L&D \u2014 contact directly for NICU level. The nearest Level IV NICU is at UF Health Shands in Gainesville, about 90 minutes southeast." },
+    ],
+    nearbyCities: ["jacksonville-fl", "gainesville-fl"],
+    publishedDate: "2026-06-02",
+    lat: 30.4381,
+    lng: -84.2809,
+  },
+
+
 };
 
 export const citySlugs = Object.keys(cities).sort();
