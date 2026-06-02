@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+import ContextualCityLinks from '../components/ContextualCityLinks.astro';
 
 const breadcrumbList = [
   {"name": "Home", "url": "https://truejoybirthing.com/"},
@@ -134,13 +135,8 @@ const breadcrumbList = [
         <li><strong>CABC Accreditation Search</strong> (birthcenteraccreditation.org): Look for CABC-accredited centers, which meet the highest national standards for safety and quality.</li>
         <li><strong>Ask your midwife</strong>: If you're already seeing a midwife for prenatal care, she likely knows the birth centers in your area and can refer you.</li>
         <li><strong>Local mom groups</strong>: Search "[your city] birth center" or "[your city] natural birth" on Facebook or local parenting forums.</li>
-        <li><strong>True Joy Birthing city pages</strong>: We cover birth resources, doula communities, and local options for cities across the country:
-          <ul>
-            <li><a href="/birth-support/portland-or/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Birth support in Portland, OR</a></li>
-            <li><a href="/birth-support/albuquerque-nm/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Birth support in Albuquerque, NM</a></li>
-            <li><a href="/birth-support/salt-lake-city-ut/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Birth support in Salt Lake City, UT</a></li>
-            <li><a href="/birth-support/boise-id/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Birth support in Boise, ID</a></li>
-          </ul>
+        <li><strong>True Joy Birthing city pages</strong>: We cover birth resources, doula communities, and local options for cities across the country.
+          <ContextualCityLinks topic="home-birth" />
         </li>
       </ul>
 
@@ -171,6 +167,8 @@ const breadcrumbList = [
       </ul>
 
       <p>If you live in one of these states, you're more likely to find a birth center within driving distance. If you don't, keep reading.</p>
+
+      <ContextualCityLinks topic="home-birth" />
 
       <h2>What If There's No Birth Center Near You?</h2>
       <p>Not every area has a freestanding birth center. If you can't find one within a reasonable drive, you still have options.</p>

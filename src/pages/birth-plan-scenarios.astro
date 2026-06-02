@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+import ContextualCityLinks from '../components/ContextualCityLinks.astro';
 
 const breadcrumbList = [
   {"name": "Home", "url": "https://truejoybirthing.com/"},
@@ -127,15 +128,7 @@ const schema = {
       <p>Here's something most people don't think about until they're in labor: your hospital's policies shape what's actually possible in your birth plan more than any preference you write down.</p>
       <p>The same birth plan reads differently at a Baby-Friendly hospital with midwife staffing than it does at a large teaching hospital with mandatory continuous monitoring. Not better or worse — just different. And you need to know which policies affect your scenario-specific choices.</p>
       <p>If you're delivering in Texas, your city page has the hospital names, doula pricing, and Medicaid details relevant to where you're actually giving birth:</p>
-      <ul>
-        <li><a href="/birth-support/dallas-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Dallas hospitals and doula costs</a></li>
-        <li><a href="/birth-support/houston-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Houston doula costs and insurance coverage</a></li>
-        <li><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Austin birth doula pricing and hospitals</a></li>
-        <li><a href="/birth-support/san-antonio-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">San Antonio doula cost guide</a></li>
-        <li><a href="/birth-support/fort-worth-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Fort Worth doula services and pricing</a></li>
-        <li><a href="/birth-support/el-paso-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">El Paso doula costs and Medicaid info</a></li>
-      </ul>
-      <p><a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:underline">See all 20 Texas cities →</a></p>
+      <ContextualCityLinks topic="birth-plan" />
     </div>
   </section>
 
@@ -170,4 +163,5 @@ const schema = {
 
 
   <LeadCaptureForm />
+  <ContextualCityLinks topic="birth-plan" />
 </Layout>

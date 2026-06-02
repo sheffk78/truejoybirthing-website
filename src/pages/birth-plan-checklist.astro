@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+import ContextualCityLinks from '../components/ContextualCityLinks.astro';
 
 const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Birth Plan Checklist", "url": "https://truejoybirthing.com/birth-plan-checklist/"}];
 
@@ -366,4 +367,5 @@ const accentColors = ['text-tjb-lavender-500', 'text-tjb-rose-500', 'text-tjb-sa
        ═══════════════════════════════════════════ -->
   <LeadCaptureForm />
 
+  <ContextualCityLinks topic="birth-plan" />
 </Layout>

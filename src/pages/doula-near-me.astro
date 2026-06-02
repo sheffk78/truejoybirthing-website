@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+import ContextualCityLinks from '../components/ContextualCityLinks.astro';
 
 const breadcrumbList = [
   {"name": "Home", "url": "https://truejoybirthing.com/"},
@@ -110,15 +111,7 @@ const faqSchema = {
       <h3>Hospital and Birth Center Referrals</h3>
       <p>Many hospitals and birth centers maintain lists of doulas who regularly attend births at their facility. A doula who already knows the layout of your hospital, the nursing staff, and the standard protocols can be especially helpful. Call the maternity ward or ask the front desk for their doula referral list.</p>
 
-      <h3>True Joy Birthing City Pages</h3>
-      <p>We are building local doula guides for cities across the country. Each one covers local doulas, hospital details, cost ranges, and community resources:</p>
-      <ul>
-        <li><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Find a doula in Austin, TX</a></li>
-        <li><a href="/birth-support/denver-co/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Find a doula in Denver, CO</a></li>
-        <li><a href="/birth-support/portland-or/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Find a doula in Portland, OR</a></li>
-        <li><a href="/birth-support/charlotte-nc/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Find a doula in Charlotte, NC</a></li>
-      </ul>
-      <p>We are adding new cities regularly. If your city is not listed yet, check back soon or reach out and we will help you connect with local resources.</p>
+      <ContextualCityLinks topic="general" />
 
       <h2>Questions to Ask a Doula Before You Hire</h2>
       <p>Most doulas offer a free 15 to 30 minute consultation. This is not just for them to sell you on their services. It is for you to see if their personality and approach feel right. Here are the questions that matter most:</p>
