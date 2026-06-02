@@ -19,6 +19,14 @@ export interface FaqItem {
   a: string;
 }
 
+export interface LocalDoula {
+  name: string;
+  credential?: string;  // Only include verified credentials (CD(DONA), CNM, CPM, etc.)
+  practice?: string;
+  url?: string;          // Practice website
+  isAmbassador?: boolean;
+}
+
 export interface CityData {
   city: string;
   state: string;
@@ -30,6 +38,7 @@ export interface CityData {
   heroLocalDetail: string;
   hospitalDetails: HospitalDetail[];
   birthCenterDetails: BirthCenterDetail[];
+  localDoulas: LocalDoula[];
   medicaidNote: string;
   insuranceNote: string;
   faqs: FaqItem[];
@@ -60,6 +69,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Birth Haven", paragraph: "Birth Haven, at 27 Medical Drive Suite 200 in Amarillo, is a freestanding birth center run by the midwives at Beyond Birth Midwifery Associates — the only practice in Amarillo that Google Maps categorizes explicitly as a \u201cbirth center.\u201d It\u2019s located just off Coulter near the medical district, which means you\u2019re minutes from both BSA and Northwest Texas hospitals if a transfer becomes necessary. For families seeking a lower-intervention, out-of-hospital birth in the Panhandle, this is the dedicated option \u2014 and having a doula who knows the Birth Haven team and transfer protocols makes that comfort level a lot higher. Call ahead to confirm availability and schedule a tour, since the birth community here is small and spots fill." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Potter/Randall Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Amarillo area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -90,6 +100,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Crowned Birth Place", paragraph: "Crowned Birth Place, on North 20th Street in Abilene, is a freestanding birth center run by Licensed Midwife Sabrina Elliott, offering a lower-intervention setting for low-risk pregnancies. It\u2019s the only freestanding birth center in the Abilene area \u2014 and having a doula who knows the rhythm of that space makes the whole thing feel a lot less unknown. Call ahead to confirm current availability and schedule a tour, since the birth community in Abilene is small and spots can fill." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. Taylor County families on Medicaid should contact their STAR managed care plan to ask about doula coverage — some plans may offer limited benefits. Military families with Tricare have separate maternity coverage and should check Tricare's current doula policy.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Abilene area. Some private insurers offer maternal wellness benefits that include doula support \u2014 contact your provider directly, and check whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -120,6 +131,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Birth & Wellness Center of Arlington", paragraph: "Birth & Wellness Center of Arlington (1001 W Randol Mill Rd) is directly across the street from Texas Health Arlington Memorial, offering out-of-hospital birth with CPM/LM midwives in a boutique-style birthing suite. Founded in 2019, it provides holistic prenatal care, water birth, chiropractic services, and doula partnerships. They also serve families from Fort Worth, Grand Prairie, Mansfield, and the broader mid-cities area." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Tarrant County\u2019s STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Arlington area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -147,6 +159,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Austin Area Birthing Center and Natural Beginnings Birth and Wellness Center", paragraph: "Austin Area Birthing Center and Natural Beginnings Birth and Wellness Center both offer freestanding, midwife-led birth center options for families seeking a lower-intervention setting. These are good options for low-risk pregnancies if you want the birth center experience \u2014 and having a doula there who knows the rhythm of that space makes the whole thing feel a lot less unknown." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Travis County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Austin area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -175,6 +188,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       // NPI taxonomy 261QB0400X search (Beaumont, Port Arthur, Orange TX) returned zero birth centers (2026-05-19). Google Maps search for "birth center Beaumont TX" and "freestanding birth center Beaumont" also returned no results.
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Jefferson County's STAR and STAR+PLUS managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Golden Triangle. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -220,6 +234,7 @@ export const cities: Record<string, CityData> = {
     // "Birth center", no NPI-registered org found). Verified 2026-05-26.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Dallas/Denton/Collin Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Carrollton area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -247,6 +262,7 @@ export const cities: Record<string, CityData> = {
     // Corpus Christi / Nueces County. Google Maps and social media searches
     // found no freestanding birth centers. Verified 2026-05-22.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Nueces County's STAR and STAR+PLUS managed care plans. Nueces County has a high Medicaid birth rate — many families here depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Coastal Bend. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Corpus Christi Regional Healthcare's employee plans and some BCBS Texas plans in the area offer partial maternal wellness benefits — contact your provider directly to confirm.",
     faqs: [
@@ -281,6 +297,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Urban Family Co-op Dallas (formerly Dallas Birth Center)", paragraph: "Urban Family Co-op Dallas (4218 Main St in Deep Ellum), formerly known as Dallas Birth Center, is a freestanding birth center run by Licensed Midwife Kristine Tawater, offering midwife-led birth in a lower-intervention setting. It\u2019s the only NPI-registered freestanding birth center in Dallas proper with taxonomy 261QB0400X, and it\u2019s right in the heart of Deep Ellum \u2014 convenient if you\u2019re in East Dallas, Oak Cliff, or the M Streets. Having a doula who knows the rhythm of that space makes the whole thing feel a lot less unknown. Call 214-914-5015 or visit dallasbirthcenter.com to confirm current availability and schedule a tour." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Dallas County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the DFW metro area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -310,6 +327,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Denton Birth Center", paragraph: "Denton Birth Center is a freestanding, midwife-led birth center offering a lower-intervention setting for low-risk pregnancies. It's a good option if you want a birth center experience without leaving the city \u2014 and having a doula there who knows the rhythm of that space makes the whole thing feel a lot less unknown." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Denton County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Denton area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -338,6 +356,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       // NPI taxonomy 261QB0400X search (El Paso, El Paso County, 799xx ZIPs) returned ZERO birth centers (2026-05-22). Google Maps and web searches for "birth center El Paso TX" also found no operational freestanding birth centers. A county of 860,000+ people with zero birth centers is a significant gap.
     ],
+    localDoulas: [],
     medicaidNote: "No — as of May 2026, Texas does not yet have statewide Medicaid doula coverage. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. El Paso County\u2019s STAR and CHIP managed care plans (Superior HealthPlan, Molina Healthcare, Driscoll Health Plan, Community First) may offer limited doula benefits under pilot programs. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to ask about available coverage. Military families: TRICARE does not currently cover doula services, but HSA and FSA funds can often help.",
     insuranceNote: "El Paso\u2019s military population means TRICARE is common \u2014 doulas aren\u2019t covered by TRICARE, but many Fort Bliss families use HSA or FSA funds. For private insurance, check whether your plan covers out-of-network doula services or offers maternal wellness benefits. Superior HealthPlan and Molina both serve Medicaid populations in El Paso County.",
     faqs: [
@@ -367,6 +386,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Fort Worth Birth Center", url: "https://fortworthbirthcenter.com", paragraph: "Fort Worth Birth Center is a freestanding, midwife-led birth center for families seeking a lower-intervention setting. It's a good option for low-risk pregnancies \u2014 and having a doula who knows the birth center space makes the whole experience feel more supported." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Tarrant County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Fort Worth area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -395,6 +415,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Birth Center of Frisco", paragraph: "Birth Center of Frisco is a freestanding, midwife-led birth center offering a lower-intervention setting for low-risk pregnancies. It's a good option if you want the birth center experience close to home \u2014 and having a doula there who knows the rhythm of that space makes it feel a lot less unknown." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Collin/Denton Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Frisco area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -425,6 +446,7 @@ export const cities: Record<string, CityData> = {
     // Dallas (~15 mi). Verified 2026-05-26.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Dallas County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Garland area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -461,6 +483,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Dallas/Tarrant Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Grand Prairie area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -488,6 +511,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Nativity Birth Center and Birth Center at St. Luke's", paragraph: "Families looking for a lower-intervention setting can explore Nativity Birth Center or the Birth Center at St. Luke's. Nativity is a freestanding, midwife-led birth center for low-risk, unmedicated births. The Birth Center at St. Luke's offers a birth-center experience with hospital backup right next door \u2014 a good fit if you want the midwifery model but still want that safety net close by." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Harris County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Houston area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -532,6 +556,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "BirthPointe Women's Health & Birth Center", paragraph: "BirthPointe Women's Health & Birth Center, on Las Colinas Blvd in Irving, is the city's only freestanding birth center — midwife-led with a focus on low-intervention birth in a home-like setting. It's the in-city option for Irving families who want an out-of-hospital birth, and having a doula who knows the rhythm of that space makes it feel a lot less unknown." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Dallas County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Irving area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -561,6 +586,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-22.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Webb County\u2019s STAR and STAR+PLUS managed care plans. Webb County has one of the highest uninsured rates in the United States \u2014 many families here depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring. Bilingual application assistance is available.",
     insuranceNote: "Whether doula services are partially covered varies by plan in Laredo. Many families carry insurance from both US and Mexican employers, and coverage for doula support depends on your specific plan \u2014 check whether HSA or FSA funds can help cover out-of-pocket costs. For families using Mexican insurance (IMSS) or crossing for prenatal care, US-based doula services are typically out-of-network and self-pay.",
     faqs: [
@@ -590,6 +616,7 @@ export const cities: Record<string, CityData> = {
     // a freestanding birth center. Verified 2026-05-22.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Lubbock County's STAR managed care plans. UMC's in-house doula program makes Medicaid doula access more straightforward here than in most West Texas cities — if you're on Medicaid, ask about the program when you preregister. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Lubbock area. Texas Tech Physicians and Covenant Health Plans are major insurers here — check whether your specific plan includes doula or maternal wellness benefits. HSA and FSA funds can often be applied toward birth support costs. Texas Tech student health plans typically do not cover doulas directly, but graduate student families may have separate coverage options.",
     faqs: [
@@ -617,6 +644,7 @@ export const cities: Record<string, CityData> = {
     // found no freestanding birth centers in the Longview area. Verified 2026-05-18.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots offer limited doula benefits — ask your plan directly. Gregg County families on Medicaid should contact their STAR managed care plan to ask about doula coverage \u2014 some East Texas plans may offer limited benefits under pilot programs. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to ask about available coverage.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Longview area. CHRISTUS Health Plan is a major insurer in East Texas \u2014 check whether your specific plan includes doula or maternal wellness benefits. HSA and FSA funds can often be applied toward birth support costs; confirm with your plan administrator.",
     faqs: [
@@ -644,6 +672,7 @@ export const cities: Record<string, CityData> = {
       // NPI taxonomy 261QB0400X search (McKinney, Collin County TX) returned zero birth centers (2026-05-26). Google Maps search for "birth center McKinney TX" returned Bella Births Center for Birth & Women's Health, Allen Midwifery & Family Wellness at Allen Birthing Center, and Texas Family Birth & Wellness. Allen Birthing Center in Allen is the closest verified freestanding birth center to McKinney (~10 min south). "Arise Birth Center" was previously listed but does not exist in NPI, Google Maps, or DNS records — removed as fabricated entity.
       { name: "Allen Birthing Center", paragraph: "Allen Birthing Center (Allen Midwifery & Family Wellness), about 10 minutes south of McKinney in Allen, is the closest freestanding birth center for McKinney families seeking a lower-intervention setting. It's midwife-led and well-established in the Collin County birth community \u2014 and having a doula who knows the rhythm of that space makes it feel a lot less unknown." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Collin County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the McKinney area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -670,6 +699,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       // NPI taxonomy 261QB0400X search (Odessa, Midland TX) returned zero birth centers (2026-05-19). Google Maps search for "birth center Odessa TX" returned The Birth Center of Midland (~20 mi away), which is already documented on the Midland city page.
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Ector County's STAR and STAR+PLUS managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Permian Basin. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -700,6 +730,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Dallas County's STAR managed care plans (Community First Health Plans and AmeriGroup serve most eastern Dallas County families). Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Mesquite area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -727,6 +758,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "The Birth Place", paragraph: "The Birth Place is a freestanding birth center in the Plano area offering a midwife-led, lower-intervention setting for low-risk pregnancies. It's a good option if you want a birth center experience without leaving the city \u2014 and having a doula who knows the space makes the whole thing feel more supported." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Collin County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Plano area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -757,6 +789,7 @@ export const cities: Record<string, CityData> = {
       { name: "Community Birth Group", paragraph: "Community Birth Group, at 216 Tower Rd on San Antonio\u2019s East Side (78223), provides birth center services for families seeking out-of-hospital birth options. NPI-verified (1972393783)." },
       { name: "Central Texas Birth Center", paragraph: "Central Texas Birth Center, at 410 W Nakoma St (78216), offers freestanding birth center services in central San Antonio. NPI-verified (1477852986)." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Bexar County's STAR managed care plans (Superior HealthPlan, Community First Health Plans, and others). Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the San Antonio area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm. Military families: TRICARE does not currently cover doula services, but HSA and FSA funds can often help.",
     faqs: [
@@ -787,6 +820,7 @@ export const cities: Record<string, CityData> = {
       // Verified active 2026-05-26: wacobirthcenter.com, NPI MedicalClinic schema at 1525 Austin Ave, Waco TX 76701, phone 254-224-6062. Google Maps "Waco Birth Center" returns this as primary result.
       { name: "Waco Birth Center and Clinic", paragraph: "Waco Birth Center and Clinic, on Austin Avenue near downtown, is a licensed freestanding birth center staffed by certified nurse-midwives. They accept insurance and Medicaid, making them one of the more accessible out-of-hospital birth options in Central Texas." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For McLennan County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Waco area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -813,6 +847,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "The Birth Center of Midland", paragraph: "The Birth Center of Midland is a freestanding, midwife-led birth center offering a lower-intervention setting for low-risk pregnancies. It\u2019s the only out-of-hospital birth center in the Permian Basin \u2014 and having a doula who knows the rhythm of that space makes the whole thing feel a lot less unknown." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Midland County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Midland-Odessa area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -841,6 +876,7 @@ export const cities: Record<string, CityData> = {
     // searches found no freestanding birth centers in the RGV. Verified 2026-05-17.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Hidalgo County\u2019s STAR managed care plans. Hidalgo County has one of the highest uninsured rates in the United States \u2014 many families here depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Rio Grande Valley. Hidalgo County\u2019s provider shortage means fewer in-network doulas overall \u2014 check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -868,6 +904,7 @@ export const cities: Record<string, CityData> = {
     // Closest birth center options are in Houston metro (~95 miles south). Verified 2026-05-17.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots offer limited doula benefits — ask your plan directly. Brazos County families on Medicaid should contact their STAR managed care plan to ask about doula coverage \u2014 some plans have started adding doula support as a limited benefit under pilot programs. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to ask about available coverage.",
     insuranceNote: "Baylor Scott & White Health Plan is a major insurer in the Brazos Valley, and whether it covers doula services depends on your specific plan \u2014 contact your provider directly. If you\u2019re an Aggie on a student health plan or covered under a university policy, check whether HSA or FSA funds can be applied toward doula costs, since most student plans don\u2019t include direct doula benefits.",
     faqs: [
@@ -894,6 +931,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Azalea Birth Center", paragraph: "Azalea Birth Center, on South Broadway in central Tyler, is a freestanding birth center run by midwife Vicky Wells, offering water birth and midwife-attended out-of-hospital birth in a home-like setting. If you\u2019re considering birth center care, call ahead to confirm current availability and schedule a tour \u2014 the birth community in Tyler is growing but small, so spots can fill." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Smith County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Tyler area. Some private insurers offer maternal wellness benefits that include doula support \u2014 contact your provider directly, and check whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -940,6 +978,7 @@ export const cities: Record<string, CityData> = {
     // No currently open freestanding birth centers in Killeen. Verified 2026-05-26.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Bell County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring. Military families: TRICARE does not currently cover doula services, but HSA and FSA funds can often help.",
     insuranceNote: "Killeen\u2019s large military population means many families have Tricare, which covers hospital birth but does not directly reimburse doulas. For private insurance, whether doula services are partially covered varies by plan \u2014 contact your provider directly, and check whether HSA or FSA funds can cover out-of-pocket costs.",
     faqs: [
@@ -968,6 +1007,7 @@ export const cities: Record<string, CityData> = {
     // RGV birth center documentation: see McAllen city page comment (verified 2026-05-17).
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Cameron County\u2019s STAR managed care plans. Many Brownsville families depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Brownsville area. Some RGV community health workers (promotoras) may offer free or low-cost pregnancy support through local nonprofits or county health programs \u2014 check with your hospital\u2019s financial counselor for in-house support programs, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -996,6 +1036,7 @@ export const cities: Record<string, CityData> = {
     // RGV birth center documentation: see McAllen city page comment (verified 2026-05-17).
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Hidalgo County\u2019s STAR managed care plans. Hidalgo County has one of the highest uninsured rates in the United States \u2014 many families depend on Medicaid, CHIP, and the Healthy Texas Women program. Contact your Medicaid managed care plan to confirm doula coverage, and call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Rio Grande Valley. Hidalgo County\u2019s provider shortage means fewer in-network doulas overall \u2014 check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1025,6 +1066,7 @@ export const cities: Record<string, CityData> = {
     // January 10, 2025. It is not listed as a delivery hospital.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Cameron County\u2019s STAR managed care plans. Cameron County has one of the highest uninsured rates in the state \u2014 many families here depend on Medicaid, CHIP, and the Healthy Texas Women program. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Harlingen area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Some RGV community health workers (promotoras) may offer free or low-cost pregnancy support through local nonprofits or county health programs.",
     faqs: [
@@ -1053,6 +1095,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-19.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Williamson County\u2019s STAR managed care plans. Williamson County\u2019s rapid growth means a lot of newly enrolled families \u2014 contact your Medicaid managed care plan to confirm doula coverage, as some plans are still completing their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Round Rock area. Austin\u2019s tech-sector employers increasingly include maternity wellness benefits that may cover doula support \u2014 check with your HR department. HSA and FSA funds can also be applied toward out-of-pocket doula costs.",
     faqs: [
@@ -1081,6 +1124,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-19.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Dallas County\u2019s STAR managed care plans. Richardson straddles both Dallas and Collin counties, so check which county your Medicaid enrollment falls under. Contact your Medicaid managed care plan to confirm doula coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Richardson area. The Telecom Corridor\u2019s major employers \u2014 including AT&T, Cisco, and regional health systems \u2014 increasingly offer maternity wellness benefits that may cover doula support. Check with your HR department and ask whether HSA or FSA funds can help with out-of-pocket doula costs.",
     faqs: [
@@ -1120,6 +1164,7 @@ export const cities: Record<string, CityData> = {
         paragraph: "Nativiti Family Birth Center, at 26614 Oak Ridge Dr in The Woodlands (NPI 1245638287), is an NPI-verified freestanding birth center about 15 minutes south of Conroe. They offer CNM-led births and serve the broader Montgomery County area. Verify with the center directly for current services and insurance coverage.",
       },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Montgomery County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "HCA Houston Healthcare Conroe accepts most major private insurance plans. Some insurers in the Montgomery County area offer maternal wellness benefits that partially cover doula services \u2014 check with your provider directly, and ask whether HSA or FSA funds can help with out-of-pocket costs.",
     faqs: [
@@ -1155,6 +1200,7 @@ export const cities: Record<string, CityData> = {
     // ~25 miles). Verified 2026-05-19.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Fort Bend County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "Sugar Land\u2019s mix of employer-based and marketplace insurance means most families have some coverage. Many employers in the Fort Bend County area offer maternity wellness benefits \u2014 check with HR whether your plan includes doula support. HSA and FSA funds can often be applied toward out-of-pocket doula costs.",
     faqs: [
@@ -1190,6 +1236,7 @@ export const cities: Record<string, CityData> = {
     // Families seeking birth center care would need to look outside the Valley.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Hidalgo County\u2019s STAR managed care plans. Hidalgo County has one of the highest uninsured rates in the United States \u2014 many families here depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Most Pharr-area families with private insurance use plans through employer groups or the ACA marketplace. STHS McAllen and DHR Health accept most major plans \u2014 verify your coverage and ask about prior authorization requirements early in your pregnancy.",
     faqs: [
@@ -1225,6 +1272,7 @@ export const cities: Record<string, CityData> = {
     // (verified 2026-05-17).
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Hidalgo County\u2019s STAR managed care plans. Hidalgo County has one of the highest uninsured rates in the United States \u2014 many families here depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Most Mission-area families with private insurance use plans through employer groups or the ACA marketplace. STHS McAllen and DHR Health accept most major plans \u2014 verify your coverage and ask about prior authorization requirements early in your pregnancy.",
     faqs: [
@@ -1253,6 +1301,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-22.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Bell County's STAR managed care plans. Fort Cavazos families on TRICARE should check with their TRICARE regional contractor for doula coverage — TRICARE does not currently cover doulas, but HSA and FSA funds can often be used. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage.",
     insuranceNote: "Bell County has a large TRICARE population from Fort Cavazos — TRICARE does not currently cover doula services, but many military families use HSA or FSA funds for birth support. Baylor Scott & White Health Plan and FirstCare Health Plans are major civilian insurers in the area. Check your specific plan for maternal wellness or doula coverage benefits.",
     faqs: [
@@ -1281,6 +1330,7 @@ export const cities: Record<string, CityData> = {
     // Stone Oak in San Antonio (~35 min). Verified 2026-05-22.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Comal County's STAR managed care plans. New Braunfels' rapid growth means the provider network is expanding, but some plans are still building their doula directories — call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in Comal County. Aetna, BCBS of Texas, and UnitedHealthcare all have a presence in the New Braunfels area — check your specific plan for maternal wellness or doula benefits. HSA and FSA funds can often be applied toward birth support costs.",
     faqs: [
@@ -1310,6 +1360,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-22.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Hays County's STAR managed care plans. San Marcos has a significant college-student and young-family population — if you're on Medicaid, call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in Hays County. Texas State University student health plans typically don't cover doulas, but graduate students and staff may have separate coverage. BCBS of Texas and Aetna both have a strong presence in the area — check your specific plan for maternal wellness or doula benefits. HSA and FSA funds can often be applied toward birth support costs.",
     faqs: [
@@ -1338,6 +1389,7 @@ export const cities: Record<string, CityData> = {
     // north on TX-288). Verified 2026-05-22.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Brazoria County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Pearland area. Many families here carry employer-based insurance through Houston-area employers \u2014 check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -1366,6 +1418,7 @@ export const cities: Record<string, CityData> = {
     // Austin Area Birthing Center, ~8 miles south. Verified 2026-05-22.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Williamson County\u2019s STAR managed care plans. Williamson County\u2019s rapid growth means a lot of newly enrolled families \u2014 contact your Medicaid managed care plan to confirm doula coverage, as some plans are still completing their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Cedar Park area. Austin\u2019s tech-sector employers increasingly include maternity wellness benefits that may cover doula support \u2014 check with your HR department. HSA and FSA funds can also be applied toward out-of-pocket doula costs.",
     faqs: [
@@ -1394,6 +1447,7 @@ export const cities: Record<string, CityData> = {
     // centers. Verified 2026-05-22.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Victoria County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Victoria area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -1425,6 +1479,7 @@ export const cities: Record<string, CityData> = {
         paragraph: "Genesis Birth Centers, at 101 W Cooperative Way in Georgetown (NPI 1679907356), is an NPI-verified freestanding birth center offering midwife-led births in a home-like setting. Located near the I-35/SH-29 interchange, they serve families from Georgetown, Round Rock, and northern Williamson County who want an out-of-hospital option. Verify with the center directly for current services and insurance coverage.",
       },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Williamson County\u2019s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Georgetown area. Austin\u2019s tech-sector employers increasingly include maternity wellness benefits that may cover doula support \u2014 check with your HR department. HSA and FSA funds can also be applied toward out-of-pocket doula costs.",
     faqs: [
@@ -1453,6 +1508,7 @@ export const cities: Record<string, CityData> = {
       { name: "Nativiti Family Birth Center", paragraph: "Nativiti Family Birth Center, at 26614 Oak Ridge Dr, The Woodlands, TX 77380 (NPI 1245638287), is a CNM-staffed freestanding birth center offering prenatal, natural birth, postpartum, and well-woman services. If you\u2019re planning an out-of-hospital birth in The Woodlands area, Nativiti is the closest option \u2014 call ahead to confirm availability and schedule a tour." },
       { name: "Journey Birth Center", paragraph: "Journey Birth Center, at 903 E Main St, Humble, TX 77338, offers VBAC, waterbirth, and natural birth options. About 15 minutes from The Woodlands, it\u2019s an additional freestanding birth center option for Spring and The Woodlands families seeking midwife-led out-of-hospital birth." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Montgomery County\u2019s STAR managed care plans. Contact your plan directly to confirm doula coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "Houston Methodist accepts most major private insurance plans. The Woodlands area\u2019s employer market (ExxonMobil, CHI St. Luke\u2019s, HCA) often includes maternity wellness benefits that may cover doula support \u2014 check with your HR department. HSA and FSA funds can also help cover out-of-pocket doula costs.",
     faqs: [
@@ -1482,6 +1538,7 @@ export const cities: Record<string, CityData> = {
     // Webster area (~30 min north on I-45). Verified 2026-05-22.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Galveston County\u2019s STAR managed care plans. Contact your plan directly to confirm doula coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "UTMB Health accepts most major insurance plans including Medicaid and CHIP. As a state academic medical center, UTMB has robust financial assistance programs for uninsured and underinsured families \u2014 ask about their charity care and payment plan options.",
     faqs: [
@@ -1510,6 +1567,7 @@ export const cities: Record<string, CityData> = {
       { name: "Flourish Birth & Wellness Center", paragraph: "Flourish Birth & Wellness Center in Flower Mound (NPI 1447895271), about 5 miles from Lewisville, is an NPI-verified freestanding birth center offering midwife-led births. If you\u2019re looking for an out-of-hospital birth option close to Lewisville, Flourish is the nearest birth center \u2014 verify with the center directly for current services and insurance coverage." },
       { name: "All About Babies Argyle Birth Center", paragraph: "All About Babies Argyle Birth Center in Argyle (NPI 1093349821), about 8 miles from Lewisville, is an NPI-verified freestanding birth center offering midwife-led births. A second out-of-hospital option for Lewisville families willing to drive a few extra minutes north." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Denton County\u2019s STAR managed care plans. Contact your plan directly to confirm doula coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "DFW\u2019s employer market (including companies near Legacy West and DFW Airport) increasingly includes maternity wellness benefits that may cover doula support \u2014 check with your HR department for doula coverage, and whether HSA or FSA funds can assist.",
     faqs: [
@@ -1537,6 +1595,7 @@ export const cities: Record<string, CityData> = {
     // Zero birth centers in Pasadena; nearest are Bay Area Birth Center and other Houston-area centers ~15\u201320 min away
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Harris County\u2019s STAR managed care plans. Contact your plan directly to confirm doula coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "Both HCA Southeast and Memorial Hermann Southeast accept most major private insurance and Medicaid. The Pasadena area\u2019s employer market (oil refining, maritime, healthcare) increasingly includes maternity wellness benefits \u2014 check with your provider about doula coverage.",
     faqs: [
@@ -1563,6 +1622,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Allen Birthing Center", paragraph: "Allen Birthing Center, on W Main St in Allen, TX (NPI 1629192562, est. 2007), is an NPI-verified freestanding birth center offering midwife-led births. Verify with the center directly for current services and insurance coverage." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Collin County\u2019s STAR managed care plans. Contact your plan directly to confirm doula coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "DFW\u2019s employer market (including companies near Legacy West, Liberty Mutual, and Allen\u2019s corporate corridor) increasingly includes maternity wellness benefits that may cover doula support. Check with your HR department about doula coverage, and whether HSA or FSA funds can cover out-of-pocket costs.",
     faqs: [
@@ -1589,6 +1649,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Wichita Falls Birth & Wellness Center", paragraph: "Wichita Falls Birth & Wellness Center, at 2001 Brook Ave in Wichita Falls, TX 76301 (NPI 1730628918), is an NPI-verified freestanding birth center. Verify with the center directly for current services and insurance coverage." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Wichita County\u2019s STAR managed care plans. Contact your plan directly to confirm doula coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "United Regional accepts most major private insurance and Medicaid. The Wichita Falls area\u2019s employer market (Sheppard AFB, manufacturing, healthcare) may include maternity wellness benefits \u2014 check with your provider. TRICARE covers doula services for military families at Sheppard AFB; verify current coverage with your TRICARE plan.",
     faqs: [
@@ -1621,6 +1682,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Cabarrus County\u2019s managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health). Contact NC Medicaid at 1-800-662-7030 or visit ncdhhs.gov to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Concord area. Atrium Health\u2019s employer network and Charlotte-area insurers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1654,6 +1716,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — As of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. Check with Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Forsyth County families on Medicaid should also check with their managed care plan about any maternal wellness benefits that might include doula support.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Cumming area. Northside Hospital\u2019s affiliated insurance networks and Atlanta-area employers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1685,6 +1748,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — South Carolina does not yet have statewide Medicaid doula coverage as of May 2026. Advocacy groups like the South Carolina Doula Steering Committee are working toward it, but no State Plan Amendment has been approved yet. Check with your Medicaid managed care plan directly — some may offer limited doula benefits. Contact SCDHHS at 1-888-549-0820 or visit scdhhs.gov for updates.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Greenville area. Prisma Health\u2019s employer network and Upstate SC employers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1717,6 +1781,7 @@ export const cities: Record<string, CityData> = {
       { name: "Baby+Co. Birth Center", paragraph: "Baby+Co. Birth Center, at 4211 Stuart Andrew Blvd in southwest Charlotte, is a freestanding birth center offering midwife-led birth in a lower-intervention setting. It's part of the Baby+Co. network with locations across the Southeast, staffed by certified nurse midwives with hospital transfer agreements in place. If you're planning an out-of-hospital birth in Charlotte, Baby+Co. is one of the most established options \u2014 and having a doula who knows the birth center space makes the whole experience feel a lot less unknown. Call ahead to confirm current availability and schedule a tour." },
       { name: "Queens Free Birth Center", paragraph: "Queens Free Birth Center, at 4709 Ashley Park Dr in Charlotte, offers midwife-led birth services in a freestanding birth center setting. It serves families seeking a lower-intervention, community-centered birth experience in the Charlotte metro. Verify with the center directly for current services, insurance coverage, and availability." },
     ],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Mecklenburg County's managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health, Healthy Blue). Contact NC Medicaid at 1-800-662-7030 or ncdhhs.gov to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Charlotte area. Atrium Health's employer network and Charlotte-area insurers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1748,6 +1813,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Raleigh Birth Center", paragraph: "Raleigh Birth Center, at 4700 Homewood Court Suite 120 in Raleigh, is a freestanding birth center offering midwife-led birth in a lower-intervention setting. It's the only dedicated birth center in Raleigh proper and has been serving Triangle families for years with CPM and CNM midwives. If you're planning an out-of-hospital birth in Wake County, this is the primary option \u2014 and having a doula who knows the transfer protocols to WakeMed or UNC REX makes the safety net feel solid. Call ahead to confirm current availability and schedule a tour." },
     ],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Wake County's managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health, Healthy Blue). Contact NC Medicaid at 1-800-662-7030 or ncdhhs.gov to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Raleigh area. The Triangle's employer market (Duke, IBM, Cisco, Red Hat) increasingly includes maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1782,6 +1848,7 @@ export const cities: Record<string, CityData> = {
       { name: "Intown Birth Center", paragraph: "Intown Birth Center, at 1401 Montgomery Ferry Drive NE in Atlanta's Morningside neighborhood, is a freestanding birth center offering midwife-led birth in a lower-intervention setting. It's one of Atlanta's most established birth centers, with CNM midwives and transfer agreements with nearby hospitals. If you're planning an out-of-hospital birth in intown Atlanta, Intown Birth Center is a primary option \u2014 and having a doula who knows the birth center space and transfer protocols makes the experience feel supported." },
       { name: "Atlanta Birth Center", paragraph: "Atlanta Birth Center, at 1442 Flat Shoals Ave SE in East Atlanta, is a freestanding birth center serving families seeking a community-centered, lower-intervention birth experience. It's located in the East Atlanta Village area, convenient for families in southeast intown neighborhoods. Verify with the center directly for current services, insurance coverage, and availability." },
     ],
+    localDoulas: [],
     medicaidNote: "No — As of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. Check with Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Fulton, DeKalb, and Clayton County families on Medicaid should also check with their managed care plan about any maternal wellness benefits that might include doula support.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Atlanta area. Atlanta's large employer market (Delta, Home Depot, Coca-Cola, Emory, CDC) increasingly includes maternal wellness benefits \u2014 check with your HR department about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1814,6 +1881,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — As of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. Check with Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Chatham County families on Medicaid should also check with their managed care plan (AmeriHealth Caritas, CareSource, PeachState Health Plan) about any maternal wellness benefits that might include doula support.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Savannah area. Gulfstream Aerospace, JCB, and other Savannah-area employers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1847,6 +1915,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — As of 2026, Florida Medicaid does not cover doula services. Florida has not enacted legislation to add Medicaid doula coverage. Duval County families on Medicaid should check with their managed care plan (Staywell, Sunshine Health, Simply Healthcare, UnitedHealthcare Community Plan) about any maternal wellness benefits that might include doula support. Contact Florida Medicaid at 1-877-254-1055 or visit flmedicaidmanagedcare.com for current plan information.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Jacksonville area. TRICARE covers maternity care for military families \u2014 check TRICARE\u2019s current doula and support-person policy at tricare.mil. Jacksonville\u2019s employer market (CSX, Fidelity, Anthem Blue Cross, Naval Station Mayport) increasingly includes maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1880,6 +1949,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Guilford County\u2019s managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health, Healthy Blue). Contact NC Medicaid at 1-800-662-7030 or visit ncdhhs.gov to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Greensboro area. The Triad\u2019s employer market (Volvo Trucks, Honda Aircraft, Syngenta, VF Corporation, Lincoln Financial) increasingly includes maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1911,6 +1981,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — As of 2026, Florida Medicaid does not cover doula services. Florida has not enacted legislation to add Medicaid doula coverage. Tampa-area families on Medicaid should check with their managed care plan (Staywell, Sunshine Health, Simply Healthcare, Molina Healthcare) about any maternal wellness benefits that might include doula support. Contact Florida Medicaid at 1-877-254-1055 or visit flmedicaidmanagedcare.com for current plan information.",
     insuranceNote: "TRICARE covers maternity care for military families at MacDill AFB — check TRICARE's current doula and support-person policy at tricare.mil, as doula coverage is limited. Tampa's employer market (BayCare, Raymond James, Jabil, Citigroup) increasingly includes maternal wellness benefits — check your specific plan for doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1941,6 +2012,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "No — As of 2026, Florida Medicaid does not cover doula services. Florida has not enacted legislation to add Medicaid doula coverage. Orlando-area families on Medicaid should check with their managed care plan (Staywell, Sunshine Health, Simply Healthcare, UnitedHealthcare Community Plan) about any maternal wellness benefits. Contact Florida Medicaid at 1-877-254-1055 or visit flmedicaidmanagedcare.com for current plan information.",
     insuranceNote: "Orlando's employer market is one of the largest in Florida — Disney, Universal, AdventHealth, Lockheed Martin, and Darden all offer health plans that may include maternal wellness benefits. Check your specific plan for doula coverage, and whether HSA or FSA funds can help. Theme-park and hospitality employers sometimes have flexible benefits that cover doula services under wellness programs.",
     faqs: [
@@ -1971,6 +2043,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Mountain Midwifery Birth Center", paragraph: "Mountain Midwifery Birth Center, in Englewood just south of Denver, is a CABC-accredited freestanding birth center staffed by certified nurse-midwives. It's been serving Denver-area families for years and is the go-to birth center for families seeking an out-of-hospital birth in the metro. Mountain Midwifery also has a strong relationship with UCHealth for transfers, which matters if you're planning a birth center birth and want to know your backup hospital." },
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Colorado Medicaid now covers doula services as of January 2024 under HB 23-1027, including Health First Colorado (the state's Medicaid program) managed care plans in Denver County. The reimbursement rate is $750 per birth for a full-spectrum doula package (prenatal, labor, and postpartum visits). Contact Health First Colorado at 1-800-221-3943 or visit healthfirstcolorado.com to confirm your plan's doula coverage and find participating doulas.",
     insuranceNote: "Yes — Colorado's Medicaid doula coverage (HB 23-1027, effective January 2024) is among the most progressive in the country — $750 per birth for full-spectrum doula services under Health First Colorado. For families with private insurance, Denver's employer market (DaVita, Liberty Global, Arrow Electronics, Quest Communications) increasingly includes maternal wellness benefits. Check your plan for doula coverage, and HSA/FSA funds can supplement out-of-pocket costs.",
     faqs: [
@@ -1999,6 +2072,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Miami", paragraph: "NPI taxonomy 261QB0400X search on NPPES returned 0 results for Miami FL. No freestanding birth centers operate within Miami proper. The closest option is Delray Birth Center (~55 min north in Delray Beach). Families seeking out-of-hospital birth should plan for a significant drive or explore home birth with a licensed midwife." }
     ],
+    localDoulas: [],
     medicaidNote: "No — Florida Medicaid does not currently cover doula services. Doulas are not recognized as Medicaid providers in FL. Families using Medicaid in Miami should explore community-based doula programs that offer sliding-scale or volunteer support.",
     insuranceNote: "Most commercial insurance in FL does not cover doula fees. Some Florida Blue plans may partially reimburse under wellness benefits if the doula is a certified health educator.",
     faqs: [
@@ -2028,6 +2102,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in St. Petersburg", paragraph: "NPI taxonomy 261QB0400X returned 0 results for St. Petersburg FL. No freestanding birth centers in Pinellas County. The closest is Tampa Bay Birth Center (~30 min across the Howard Frankland Bridge). Families wanting an out-of-hospital birth should factor in bridge traffic during rush hour." }
     ],
+    localDoulas: [],
     medicaidNote: "No — Florida Medicaid does not cover doula services. Pinellas County has several community doula programs that offer sliding-scale fees for Medicaid-eligible families.",
     insuranceNote: "Commercial insurance in FL generally does not cover doula fees. Some employers offer doula benefits through Carrot, Maven, or similar platforms.",
     faqs: [
@@ -2057,6 +2132,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Mountain Midwifery Birth Center", paragraph: "Mountain Midwifery Birth Center at 425 S Howcroft St, Colorado Springs, CO 80913 (NPI: 1558839423) is one of the few freestanding birth centers in Colorado. They offer out-of-hospital birth with certified midwives in a home-like setting. This is the go-to option for families seeking a non-hospital birth experience in the Pikes Peak region." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Colorado Health First (Medicaid) covers doula services under HB 23-1027, effective January 2024. Colorado Medicaid reimburses doulas up to $750 per pregnancy ($150 prenatal, $150 labor/delivery, $150 postpartum, plus $300 in extended postpartum visits). Doulas must register with the state as Medicaid providers.",
     insuranceNote: "Yes — Colorado is one of the few states where both Medicaid and some commercial insurers cover doula services. Check with your specific plan — Cigna and United Healthcare have pilot programs in CO.",
     faqs: [
@@ -2086,6 +2162,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Augusta", paragraph: "NPI taxonomy 261QB0400X returned no active results for Augusta, GA. The closest freestanding birth centers are approximately 150 miles away in the Atlanta metro area (Intown Midwifery & Birth Center). Families seeking out-of-hospital birth should connect with local home birth midwives." }
     ],
+    localDoulas: [],
     medicaidNote: "No — Georgia does not currently cover doula services through Medicaid. A doula coverage bill has been proposed in the Georgia legislature but has not been enacted as of 2025. Families using Medicaid in Augusta should explore community doula programs that offer sliding-scale fees or volunteer support.",
     insuranceNote: "No — Georgia does not have a state mandate requiring commercial insurance to cover doula services. Some plans may include birth center or doula benefits — check with your specific provider. The closest pathway to covered doula care is through community programs.",
     faqs: [
@@ -2114,6 +2191,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Avalon Birth & Wellness Center", paragraph: "Avalon Birth & Wellness Center in Fort Collins operates as a freestanding birth center offering out-of-hospital birth in a home-like setting with certified nurse-midwives. It is one of the few birth centers in northern Colorado and serves families from Fort Collins, Loveland, and the surrounding region." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Colorado Health First (Medicaid) covers doula services under HB 23-1027, effective January 2024. Colorado Medicaid reimburses doulas up to $750 per pregnancy ($150 prenatal, $150 labor/delivery, $150 postpartum, plus $300 in extended postpartum visits). Doulas must register with the state as Medicaid providers.",
     insuranceNote: "Yes — Colorado is one of the few states where both Medicaid and some commercial insurers cover doula services. Colorado law also requires coverage for licensed midwife services at birth centers. Check your specific plan for doula and birth center benefits.",
     faqs: [
@@ -2146,6 +2224,7 @@ export const cities: Record<string, CityData> = {
       { name: "Center for Birth", paragraph: "A freestanding birth center in the Eastlake neighborhood staffed by certified nurse-midwives, offering water birth and a homelike setting minutes from Swedish's backup emergency services." },
       { name: "South Seattle Birth Center", paragraph: "Located in the Rainier Beach area, this midwifery-led birth center serves south Seattle families with a focus on culturally responsive, community-centered care." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Washington Apple Health (Medicaid) covers doula services statewide. Doulas register with the Washington State Department of Health and bill through ProviderOne, with reimbursement of approximately $1,500 per birth package covering prenatal visits, labor support, and postpartum follow-up. Washington also extended postpartum Medicaid coverage to 12 months.",
     insuranceNote: "Yes — Washington State law requires commercial plans to cover midwifery and birth center services. Most Blue Cross, Regence, Aetna, and Molina plans in Washington include birth-center and home-birth benefits, though out-of-network doula reimbursement varies by carrier and plan tier.",
     faqs: [
@@ -2175,6 +2254,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Tacoma", paragraph: "NPI taxonomy 261QB0400X returned no active results for Tacoma, WA. Tacoma does not currently have a licensed freestanding birth center. The closest options are south Seattle's birth centers roughly 30 miles north, or home birth with a licensed midwife." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Washington Apple Health (Medicaid) covers doula services statewide, including Pierce County. Doulas must register with the Washington State Department of Health and bill through ProviderOne, with reimbursement of approximately $1,500 per birth package covering prenatal visits, labor support, and postpartum follow-up.",
     insuranceNote: "Yes — Washington requires commercial insurance to cover midwifery and birth center care. Regence, Premera, Molina, and Aetna plans sold in Pierce County generally include these benefits, but doula reimbursement varies by plan tier and network status.",
     faqs: [
@@ -2205,6 +2285,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No licensed birth centers in Sacramento", paragraph: "NPI taxonomy 261QB0400X returned no active results for Sacramento, CA. Sacramento does not currently have a licensed freestanding birth center. Families seeking birth-center care typically travel to the San Francisco Bay Area or arrange home births with California Licensed Midwives (CLMs)." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — California's Medi-Cal covers doula services statewide as of January 2023 under SB-509. Reimbursement is approximately $1,587 per birth package, including prenatal visits, labor support, and postpartum visits. Doulas must enroll as Medi-Cal providers through the Department of Health Care Services (DHCS) and bill via the PAVE portal.",
     insuranceNote: "Yes — California law (SB 332) requires most commercial plans to cover licensed midwife and birth center care. Covered California marketplace plans and large-group plans must include these benefits, though out-of-network doula reimbursement still varies widely by carrier and plan type.",
     faqs: [
@@ -2236,6 +2317,7 @@ export const cities: Record<string, CityData> = {
       { name: "San Diego Birth Center", paragraph: "The San Diego Birth Center in Normal Heights is a CABC-accredited freestanding birth center staffed by certified nurse-midwives offering water birth, VBAC, and holistic prenatal care in a home-like setting." },
       { name: "Best Start Birth Center", paragraph: "Best Start Birth Center in Kearny Mesa provides midwife-led birth services including water birth with transfer agreements to nearby hospitals." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — California Medi-Cal covers doula services under SB-509, with a birth package reimbursement of approximately $1,587. Doulas must enroll through the PAVE portal to bill Medi-Cal directly. Contact your managed care plan (Community Health Group, Health Net, or Blue Shield Promise) for referral details.",
     insuranceNote: "Under California SB 332, commercial health plans are required to cover doula services and midwifery care. Check with your insurer for in-network doula providers and prior authorization requirements.",
     faqs: [
@@ -2265,6 +2347,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Fresno", paragraph: "NPI taxonomy 261QB0400X returned no active results for Fresno, CA. There are currently no freestanding birth centers operating in Fresno. Families seeking out-of-hospital birth work with home birth midwives; the closest birth center options are in the Sacramento or Bay Area." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — California Medi-Cal covers doula services under SB-509, with approximately $1,587 reimbursement for the birth package. Doulas must enroll through the PAVE portal. In Fresno, Medi-Cal managed care plans include CalViva Health and Health Net — contact them for doula referral lists.",
     insuranceNote: "Under California SB 332, commercial health plans must cover doula services. Given the limited supply of doulas in Fresno, ask your insurer about out-of-network coverage or telehealth doula options if in-network providers are unavailable.",
     faqs: [
@@ -2297,6 +2380,7 @@ export const cities: Record<string, CityData> = {
       { name: "The Birth Sanctuary", paragraph: "The Birth Sanctuary in Pasadena is a freestanding birth center offering midwife-led births, water birth, and holistic prenatal care with transfer agreements to nearby hospitals." },
       { name: "Gracefull Birth Center", paragraph: "Gracefull Birth Center in Silver Lake provides a warm, community-rooted out-of-hospital birth experience with certified midwives, water birth tubs, and a strong commitment to equitable care." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — California Medi-Cal covers doula services under SB-509, with approximately $1,587 reimbursement for the birth package. Doulas must enroll through the PAVE portal. LA County Medi-Cal managed care plans include L.A. Care, Health Net, and Molina Healthcare — contact your plan for doula referral lists.",
     insuranceNote: "Under California SB 332, commercial health plans must cover doula services. In LA, many doulas are familiar with billing Blue Shield of CA, Anthem, and Cigna, but always confirm your plan's specific authorization requirements.",
     faqs: [
@@ -2325,6 +2409,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Eugene Birth Center", paragraph: "Eugene Birth Center provides midwifery-led, out-of-hospital birth services in a freestanding setting, offering waterbirth and holistic prenatal and postpartum care to Eugene-area families." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Oregon Health Plan (OHP) covers doula services for Medicaid members in Eugene just as it does statewide. Doulas bill through Coordinated Care Organizations (CCOs) — Lane County's CCO is Trillium Community Health Plan. Contact Trillium or the Oregon Health Authority for enrollment and reimbursement details.",
     insuranceNote: "Yes — Oregon law requires insurance coverage for licensed midwifery services, including birth center and home births. Most major carriers in the Eugene market cover CNM-attended hospital and birth center deliveries; verify your plan's coverage for out-of-hospital birth and doula services.",
     faqs: [
@@ -2355,6 +2440,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No freestanding birth centers in Las Vegas", paragraph: "NPI taxonomy 261QB0400X returned no active results for Las Vegas, NV. There are no freestanding birth centers in the Las Vegas Valley. Families seeking out-of-hospital birth work with home-birth midwives; the nearest birth center options are in Southern California." }
     ],
+    localDoulas: [],
     medicaidNote: "No — Nevada Medicaid does not currently cover doula services as of 2025. Nevada has not enacted legislation to include doula reimbursement. Families on Nevada Medicaid must pay out of pocket for doula support, though some nonprofit programs offer no-cost or sliding-scale doula services in the Las Vegas area.",
     insuranceNote: "No — Nevada's insurance market includes large employer and union plans (especially the Culinary Health Fund). Many of these plans cover midwifery and some doula-related services, but coverage varies — check with your specific plan. Nevada does not have a state mandate for doula insurance coverage.",
     faqs: [
@@ -2385,6 +2471,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Yes — Minnesota Birth Center", paragraph: "Yes — Minnesota Birth Center is a CABC-accredited freestanding birth center with its Minneapolis location in the Phillips neighborhood, offering water birth, midwifery-led care, and seamless hospital transfer partnerships." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Minnesota Medicaid (Medical Assistance) covers doula services. Effective January 2024, MN DHS reimburses certified doulas up to $1,700 per pregnancy ($425 prenatal, $425 labor/delivery, $425 postpartum, $425 additional visits). Doulas must be listed on the Minnesota Doula Registry to bill Medical Assistance or MinnesotaCare.",
     insuranceNote: "Yes — Minnesota law requires most private insurers to cover midwifery services, and many major carriers (Blue Cross, HealthPartners, UCare) include doula benefits or offer flex-spending reimbursement. Always verify your specific plan's out-of-network doula coverage.",
     faqs: [
@@ -2414,6 +2501,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Yes — Minnesota Birth Center – St. Paul", paragraph: "Yes — Minnesota Birth Center opened a St. Paul location offering the same CABC-accredited midwifery-led care, with water birth options and a warm, home-like setting." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Minnesota Medicaid (Medical Assistance) covers doula services statewide. Effective January 2024, MN DHS reimburses certified doulas up to $1,700 per pregnancy. St. Paul families access the same MN Doula Registry and reimbursement schedule as the rest of the state.",
     insuranceNote: "St. Paul families insured through HealthPartners, Blue Cross Blue Shield of Minnesota, or Medica generally find strong midwifery coverage. Minnesota law mandates private-plan coverage of licensed midwifery, though doula coverage varies by plan — check your specific benefits.",
     faqs: [
@@ -2444,6 +2532,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Natural Birth Center & Women's Wellness", paragraph: "The Natural Birth Center & Women's Wellness in Mesa is one of the few freestanding birth centers in the Phoenix metro area, offering midwifery-led birth, water birth, and holistic prenatal care." }
     ],
+    localDoulas: [],
     medicaidNote: "No — Arizona does not currently cover doula services through its Medicaid program (AHCCCS) as of 2025. While advocacy efforts have pushed for doula reimbursement, AHCCCS has not yet implemented a doula benefit. Arizona families on Medicaid must pay out of pocket for doula support or seek volunteer/sliding-scale doulas.",
     insuranceNote: "No — Arizona private insurers are not required to cover doula services, though some plans offer partial reimbursement or flex-spending eligibility. Arizona does mandate coverage for licensed midwives and birth center births under certain plans, but coverage varies widely — verify with your insurer directly.",
     faqs: [
@@ -2474,6 +2563,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "The Birth Center of Chicago", paragraph: "The Birth Center of Chicago is a freestanding birth center offering midwifery-led, low-intervention births in a home-like setting for families seeking an alternative to hospital delivery." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Illinois Medicaid covers doula services starting January 2025 under SB334 (signed January 2024), reimbursing up to $1,500 per pregnancy for prenatal, labor, and postpartum support visits.",
     insuranceNote: "Yes — Illinois law requires Medicaid managed care plans to cover doula services. Private insurers vary — ask your plan if they reimburse doula care, and request a superbill from your doula for out-of-network submission.",
     faqs: [
@@ -2504,6 +2594,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Detroit", paragraph: "Detroit currently lacks licensed freestanding birth centers. Families seeking out-of-hospital birth may work with home birth midwives, though options in the city proper remain limited." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Michigan Medicaid covers doula services as of 2024, reimbursing up to approximately $1,500 per pregnancy for prenatal, labor and delivery, and postpartum support visits through enrolled doulas.",
     insuranceNote: "Michigan Medicaid managed care plans are required to cover doula services. For private insurance, coverage varies by plan — request a superbill from your doula and submit for potential out-of-network reimbursement.",
     faqs: [
@@ -2534,6 +2625,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No freestanding birth centers in New York City", paragraph: "Licensed freestanding birth centers are virtually nonexistent in New York City due to the state's stringent regulatory environment. Families seeking low-intervention birth typically work with midwives within hospital-based midwifery practices or explore home birth with certified midwives." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — New York State Medicaid covers doula services at approximately $1,710 per pregnancy, with reimbursement split across prenatal, labor/delivery, and postpartum visits. Doulas must enroll as Medicaid providers through the state's eMedNY system.",
     insuranceNote: "Yes — New York State law requires commercial insurers to cover lactation support and certain maternal services, but doula coverage varies by plan. Request a superbill from your doula and submit it for out-of-network reimbursement — many plans will partially reimburse.",
     faqs: [
@@ -2563,6 +2655,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Virginia Beach", paragraph: "There are currently no licensed freestanding birth centers operating within Virginia Beach. Families seeking birth center care may explore home birth options with certified professional midwives." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Virginia Medicaid covers doula services as of 2023, reimbursing approximately $1,500 per pregnancy through managed care organizations. Doulas must enroll as Virginia Medicaid providers to receive reimbursement for prenatal, intrapartum, and postpartum support.",
     insuranceNote: "Virginia's Medicaid expansion and state insurance regulations have improved maternity coverage access. TRICARE covers hospital births and some home birth scenarios for military families. Private insurance doula coverage varies by plan — contact your insurer directly.",
     faqs: [
@@ -2592,6 +2685,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Nashville", paragraph: "There are currently no licensed freestanding birth centers operating within Nashville. Tennessee's regulatory landscape for birth centers has been a barrier. Families seeking out-of-hospital birth typically work with home birth midwives serving the Middle Tennessee area." }
     ],
+    localDoulas: [],
     medicaidNote: "No — Tennessee does NOT cover doula services through Medicaid (TennCare) as of 2025. While neighboring states have implemented Medicaid doula coverage, Tennessee has not yet enacted similar legislation, leaving low-income families to seek sliding-scale or volunteer doula options.",
     insuranceNote: "Private insurance doula coverage in Tennessee varies significantly by plan and insurer. Tennessee has not mandated doula coverage for private plans. Contact your insurance provider directly to ask about reimbursement for doula services or out-of-network benefits.",
     faqs: [
@@ -2623,6 +2717,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Philadelphia Birth Center", paragraph: "The Philadelphia Birth Center in the Germantown section offers a warm, home-like setting with certified nurse-midwives for low-risk pregnancies seeking an out-of-hospital birth experience. It's one of Philly's few freestanding birth centers, and they welcome doula support throughout your labor." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Pennsylvania Medicaid covers doula services as of 2024, with reimbursement of up to $1,250 per pregnancy through the PA Doula Program — covering prenatal visits, labor support, and postpartum visits combined.",
     insuranceNote: "Yes — Pennsylvania private insurers vary widely on doula coverage — Aetna and UHC may partially reimburse with a superbill, while Cigna and Blue Cross of Pennsylvania often require pre-authorization. Always request a superbill from your doula and submit it with CPT code S9443 for the best chance of reimbursement.",
     faqs: [
@@ -2653,6 +2748,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Pittsburgh", paragraph: "Pittsburgh doesn't currently have a freestanding birth center, which we know is disappointing if that's the experience you're hoping for. The good news is that Magee-Womens Hospital and West Penn Hospital both offer midwifery-led care with more supportive, low-intervention options, and some doulas in the area can connect you with home birth midwives serving the greater Pittsburgh region." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Pennsylvania Medicaid covers doula services as of 2024, with reimbursement of up to $1,250 per pregnancy through the PA Doula Program — covering prenatal visits, labor support, and postpartum visits combined.",
     insuranceNote: "Yes — Pennsylvania private insurers vary widely on doula coverage — Aetna and UHC may partially reimburse with a superbill, while Cigna and Blue Cross of Pennsylvania often require pre-authorization. Always request a superbill from your doula and submit it with CPT code S9443 for the best chance of reimbursement.",
     faqs: [
@@ -2683,6 +2779,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Johns Hopkins Bayview Birth Center", paragraph: "The Johns Hopkins Bayview Birth Center offers a midwifery-led, low-intervention birth experience within a hospital campus — giving you the homey feel of a birth center with the safety net of hospital-level care steps away. It's one of the few birth center options in Baltimore and welcomes doula support throughout your labor." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Maryland Medicaid covers doula services as of 2024, with reimbursement rates including $450 for labor and delivery support, $75 per prenatal or postpartum visit (up to 4 visits), totaling up to $900 per pregnancy for Medicaid-enrolled doulas.",
     insuranceNote: "Yes — Maryland's state insurance regulations support broader maternity coverage, but doula-specific reimbursement through private insurance varies. CareFirst BlueCross BlueShield of Maryland and UHC may offer partial reimbursement with a superbill using CPT code S9443. Always ask your doula for a superbill and submit it promptly.",
     faqs: [
@@ -2712,6 +2809,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Hartford", paragraph: "There are currently no freestanding birth centers operating in Hartford, but midwifery practices at Hartford Hospital and Saint Francis offer low-intervention birth options. Connecticut law allows birth centers, so this landscape may evolve — talk to your provider about what's available." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Connecticut's HUSKY Health (Medicaid) covers doula services as of January 2024, with reimbursement of approximately $900 for a full package including prenatal visits, labor support, and postpartum visits. Your doula must be enrolled as a HUSKY Health provider.",
     insuranceNote: "Yes — Connecticut private insurers vary on doula coverage — some Aetna and Cigna plans in CT now include doula benefits. Call your insurance company and ask specifically about 'doula services' or 'labor support' to find out what's covered. If your plan doesn't cover doulas, ask about out-of-network reimbursement with a superbill.",
     faqs: [
@@ -2743,6 +2841,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Birth Sanctuary Cambridge", paragraph: "Birth Sanctuary Cambridge is a freestanding birth center near Alewife offering midwife-led births in a home-like setting. It's one of the few independent birth centers in the greater Boston area — a beautiful option if you're seeking a low-intervention birth outside the hospital." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Massachusetts MassHealth covers doula services as of January 2024, with reimbursement of approximately $1,200 for a full package — covering 2 prenatal visits, labor and delivery support, and 2 postpartum visits. Your doula must be enrolled as a MassHealth provider.",
     insuranceNote: "Yes — Massachusetts requires most private insurance plans through the state exchange (MA Health Connector) to cover maternity services. Doula coverage by private insurers is expanding — some Blue Cross Blue Shield of MA and Tufts Health Plan policies now include doula benefits. Check your plan documents or call member services and ask about 'certified doula services.'",
     faqs: [
@@ -2772,6 +2871,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Providence", paragraph: "There are currently no freestanding birth centers in Providence, though Women & Infants Hospital offers midwifery services within the hospital setting. Community advocates are working to expand birth center options in Rhode Island." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Rhode Island Medicaid began covering doula services in July 2023 — one of the earliest New England states to do so. The state reimburses approximately $1,500 for a full doula package covering up to 8 visits. Your doula must be enrolled as a RI Medicaid provider.",
     insuranceNote: "Yes — Rhode Island private insurers are increasingly offering doula coverage — Blue Cross Blue Shield of Rhode Island and UnitedHealthcare have pilot programs. Ask your insurer directly about 'doula services' coverage. If your doula accepts RI Medicaid, you should have no out-of-pocket cost.",
     faqs: [
@@ -2801,6 +2901,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "San Francisco Birth Center", paragraph: "The San Francisco Birth Center offers out-of-hospital midwifery care in a warm, home-like setting — one of the few freestanding birth centers in the city, welcoming families seeking a low-intervention birth experience." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — California covers doula services through Medi-Cal — since January 2023, you can receive up to ~$1,587 in doula coverage including prenatal, birth, and postpartum visits. Ask your Medi-Cal managed care plan how to get started.",
     insuranceNote: "Under CA law, private insurance plans must cover maternity services, and many now include doula benefits. Medi-Cal doula coverage has removed prior-authorization requirements to make access easier.",
     faqs: [
@@ -2830,6 +2931,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in San Jose", paragraph: "There are currently no freestanding birth centers operating within San Jose city limits. The Bay Area Birth Center in nearby Santa Clara or South Bay Midwifery may be options — or talk to your midwife about home birth if that's your preference." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — California covers doula services through Medi-Cal — since January 2023, you can receive up to ~$1,587 in doula coverage including prenatal, birth, and postpartum visits. Ask your Medi-Cal managed care plan how to get started.",
     insuranceNote: "If you have insurance through a Silicon Valley employer, check whether your plan includes doula benefits — many large tech-company plans now do. Medi-Cal doula coverage requires no prior authorization.",
     faqs: [
@@ -2858,6 +2960,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Long Beach", paragraph: "There are no freestanding birth centers currently operating in Long Beach. Nearby options include the South Bay Birth Center in Redondo Beach or exploring home birth with a licensed midwife." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — California covers doula services through Medi-Cal — since January 2023, you can receive up to ~$1,587 in doula coverage including prenatal, birth, and postpartum visits. Long Beach has a large Medi-Cal population, making this coverage especially impactful.",
     insuranceNote: "Medi-Cal is the primary insurer for many Long Beach families, and doula coverage is now available without prior authorization. For private insurance, check with your carrier — many Blue Shield and Health Net plans in the area now include doula benefits.",
     faqs: [
@@ -2886,6 +2989,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Bay Area Birth Center", paragraph: "The Bay Area Birth Center in nearby Santa Clara offers a freestanding midwifery-led birth option — a home-like environment for families seeking gentle, low-intervention birth outside the hospital setting. Oakland also has a strong home-birth midwifery community." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — California covers doula services through Medi-Cal — since January 2023, you can receive up to ~$1,587 in doula coverage including prenatal, birth, and postpartum visits. Oakland's community health centers have been early adopters of Medi-Cal doula billing.",
     insuranceNote: "If you have private insurance, many Alameda County employers include doula benefits — especially tech, university, and public-sector plans. Alameda County also has a Perinatal Equity Initiative funding additional support for Black families.",
     faqs: [
@@ -2914,6 +3018,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Bakersfield", paragraph: "There are currently no freestanding birth centers operating in Bakersfield. Some families choose home birth with a licensed midwife — the closest birth center options are a significant drive away in the LA or Bay areas." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — California covers doula services through Medi-Cal — since January 2023, you can receive up to ~$1,587 in doula coverage. Bakersfield has a large Medi-Cal population, making this coverage especially impactful for local families.",
     insuranceNote: "Medi-Cal is the primary insurer for many Bakersfield families, and doula coverage is now available without prior authorization. For privately insured families, check your plan — Kern County employer plans through Kaiser, Blue Shield, and Health Net may include doula benefits.",
     faqs: [
@@ -2942,6 +3047,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Stockton", paragraph: "There are no freestanding birth centers in Stockton currently. Families seeking out-of-hospital birth typically work with a licensed midwife for a home birth, or travel to the Bay Area for birth center options." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — California covers doula services through Medi-Cal — since January 2023, you can receive up to ~$1,587 in doula coverage. Stockton has a high Medi-Cal enrollment, so this coverage makes a real difference for local families.",
     insuranceNote: "Medi-Cal covers a significant portion of Stockton families, and doula coverage is now accessible without prior authorization. For those with private insurance, check your plan — some San Joaquin County and healthcare employer plans include doula benefits.",
     faqs: [
@@ -2970,6 +3076,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Buffalo", paragraph: "There are currently no freestanding birth centers in Buffalo. Some families pursue home birth with a licensed midwife, but the out-of-hospital birth infrastructure is still growing in Western New York." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — New York Medicaid covers doula services — since January 2024, you can receive up to ~$1,710 in doula coverage for prenatal, labor, and postpartum support. Contact your Medicaid managed care plan to find an enrolled doula near you.",
     insuranceNote: "NY Medicaid doula coverage launched in January 2024, and Buffalo's community doulas have been enrolling. New York also now requires commercial insurance plans to cover doula services — check with your employer plan for benefits.",
     faqs: [
@@ -2998,6 +3105,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Rochester", paragraph: "There are currently no freestanding birth centers in Rochester. Home birth with a licensed midwife is available, and some families travel to birth centers in the Syracuse area for out-of-hospital options." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — New York Medicaid covers doula services — since January 2024, you can receive up to ~$1,710 in doula coverage for prenatal, labor, and postpartum support. Contact your Medicaid managed care plan to find an enrolled doula near you.",
     insuranceNote: "NY Medicaid doula coverage took effect in January 2024, and Rochester doulas are actively enrolling. New York now also requires commercial insurance plans to cover doula services — contact your insurer to learn about your benefits.",
     faqs: [
@@ -3026,6 +3134,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Albany", paragraph: "There are currently no freestanding birth centers in Albany. Home birth with a licensed midwife is an option, and some Capital Region midwives offer home-birth services as an alternative to hospital delivery." }
     ],
+    localDoulas: [],
     medicaidNote: "Yes — New York Medicaid covers doula services — since January 2024, you can receive up to ~$1,710 in doula coverage for prenatal, labor, and postpartum support. Contact your Medicaid managed care plan to find an enrolled doula near you.",
     insuranceNote: "NY Medicaid doula coverage launched in January 2024 and is rolling out across the Capital Region. New York also now requires commercial insurance plans to cover doula services — check with your employer plan or individual insurance for benefit details.",
     faqs: [
@@ -3057,6 +3166,7 @@ export const cities: Record<string, CityData> = {
     // Oklahoma City and Oklahoma County. Google Maps search "birth center Oklahoma City"
     // found no freestanding birth centers currently operating. Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes — Oklahoma SoonerCare started covering doula services in 2024 — the program reimburses certified doulas for prenatal, labor, and postpartum visits, so if you\u2019re on SoonerCare ask your provider about connecting with a Medicaid-enrolled doula.",
     insuranceNote: "Even without Medicaid, many OKC doulas offer sliding-scale payment, and you can typically use HSA or FSA funds for doula services — just ask for a superbill to submit for reimbursement.",
     faqs: [
@@ -3085,6 +3195,7 @@ export const cities: Record<string, CityData> = {
     // Tulsa and Tulsa County. Google Maps search "birth center Tulsa OK" found no
     // freestanding birth centers currently operating. Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes — Oklahoma SoonerCare covers doula care for enrolled members — Tulsa County doulas who are SoonerCare-certified can bill for prenatal, birth-day, and postpartum visits, so ask your clinic if they can refer you to one.",
     insuranceNote: "Several Tulsa doulas offer tiered pricing or package discounts, and many accept HSA/FSA payments — it\u2019s worth asking about payment plans upfront since out-of-pocket rates in Tulsa run a bit lower than the national average.",
     faqs: [
@@ -3111,6 +3222,7 @@ export const cities: Record<string, CityData> = {
     ],
     birthCenterDetails: [],
     // Birth center search: NPI taxonomy 261QB0400X, Google Maps, and social media checked for Columbus OH. No verified freestanding birth center found.
+    localDoulas: [],
     medicaidNote: "Yes — Ohio Medicaid began covering doula services in 2024 — the state added doulas as an eligible provider type, so if you\u2019re on Ohio Medicaid you can find a certified doula who accepts your plan and get prenatal, labor, and postpartum visits covered.",
     insuranceNote: "In Columbus, you\u2019ll find doulas who take HSA/FSA cards directly, and several collectives like Central Ohio Doulas offer sliding-scale packages — always ask about payment plan options since costs vary widely between individual doulas and groups.",
     faqs: [
@@ -3137,6 +3249,7 @@ export const cities: Record<string, CityData> = {
     ],
     birthCenterDetails: [],
     // Birth center search: NPI taxonomy 261QB0400X, Google Maps, and social media checked for Cleveland OH. No verified freestanding birth center found.
+    localDoulas: [],
     medicaidNote: "Yes — Ohio Medicaid includes doula services as a covered benefit starting in 2024 — Cleveland-area doulas who complete state certification can bill Medicaid directly for your prenatal, birth, and postpartum appointments.",
     insuranceNote: "Many Cleveland doulas accept HSA and FSA payments, and a few local organizations like Birthing Beautiful Communities offer low-cost or free doula support to qualifying families — check both options before assuming you can\u2019t afford one.",
     faqs: [
@@ -3163,6 +3276,7 @@ export const cities: Record<string, CityData> = {
     ],
     birthCenterDetails: [],
     // Birth center search: NPI taxonomy 261QB0400X, Google Maps, and social media checked for Indianapolis IN. No verified freestanding birth center found.
+    localDoulas: [],
     medicaidNote: "Yes — Indiana Medicaid began covering doula services under HB 1008 effective January 1, 2025 — if you have Hoosier Healthwise or traditional Medicaid, you can work with a state-certified doula at no cost for prenatal, delivery, and postpartum visits.",
     insuranceNote: "Several Indy doulas accept HSA/FSA and some offer need-based sliding scales — the Indiana Doula Association maintains a directory of doulas organized by fee range, which makes it easier to find someone who fits your budget.",
     faqs: [
@@ -3192,6 +3306,7 @@ export const cities: Record<string, CityData> = {
     // birth work with licensed home-birth midwives; closest freestanding birth centers
     // are in the Sacramento, CA area (~130 miles west).
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No — Nevada Medicaid does NOT cover doula services as of 2026. HSA and FSA funds can be used for doula fees, and some doulas in the Reno area offer sliding-scale pricing. Community-based programs through the Washoe County Health District\u2019s Maternal & Child Health division and local birth equity collectives may offer reduced-cost or volunteer doula support \u2014 ask individual doulas what\u2019s available.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Reno area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -3223,6 +3338,7 @@ export const cities: Record<string, CityData> = {
     // services in conjunction with TMC but is not a freestanding birth center.
     // Verified 2026-05-27.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No — Arizona\u2019s AHCCCS (Medicaid) does NOT cover doula services as of 2026. State legislation for doula coverage has been proposed but not yet enacted. HSA and FSA funds can cover doula fees, and community organizations like Doula Train Pima County offer sliding-scale or reduced-cost support. Check with individual doulas about payment options.",
     insuranceNote: "Since AHCCCS doesn\u2019t cover doulas in Arizona, check whether your private insurance covers out-of-network doula services. HSA and FSA funds can be used for doula fees \u2014 ask your doula for a superbill for reimbursement. Contact your provider directly to confirm what\u2019s covered.",
     faqs: [
@@ -3254,6 +3370,7 @@ export const cities: Record<string, CityData> = {
     // midwifery consultations but does not operate a freestanding birth center.
     // Verified 2026-05-27.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No — Tennessee\u2019s Medicaid program, TennCare, does NOT cover doula services as of 2026. HSA and FSA funds can be used for doula fees, and some Memphis doulas offer sliding-scale pricing. Organizations like A Better Balanced Birth and the Shelby County Health Department\u2019s community doula program may offer reduced-cost or pro-bono support \u2014 ask when you interview.",
     insuranceNote: "Since TennCare doesn\u2019t cover doulas, check whether your private insurance covers out-of-network doula services. HSA and FSA reimbursement is available nationwide for doula fees. Contact your provider directly to confirm coverage details.",
     faqs: [
@@ -3282,6 +3399,7 @@ export const cities: Record<string, CityData> = {
     // birth centers currently operating. Verified 2026-05-27. Families seeking
     // out-of-hospital birth would need to travel to Jacksonville or Gainesville.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No — Florida Medicaid covers doula services as of July 1, 2024, under SB 264. Coverage includes prenatal, labor and delivery, and postpartum doula visits. Doulas must be certified by approved organizations (such as DONA International or CAPPA) and enrolled as Florida Medicaid providers. If you\u2019re on Medicaid in St. Johns County, call your managed care plan to confirm doula coverage and find enrolled doulas \u2014 or check with UF Health Flagler\u2019s patient navigation team.",
     insuranceNote: "No — Florida Medicaid now covers doula services under SB 264. If you\u2019re not on Medicaid, check whether your private insurance covers out-of-network doula services. HSA and FSA funds can also be used for doula fees. Contact your provider directly to confirm what\u2019s covered under your plan.",
     faqs: [
@@ -3311,6 +3429,7 @@ export const cities: Record<string, CityData> = {
     // centers currently operating. Verified 2026-05-27. Families seeking out-of-hospital
     // birth connect with local home-birth midwives or travel to Ocala or Jacksonville.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No — Florida Medicaid covers doula services as of July 1, 2024, under SB 264. Coverage includes prenatal, labor and delivery, and postpartum doula visits. Doulas must be certified by approved organizations and enrolled as Florida Medicaid providers. UF Health Shands\u2019 patient navigation team can help connect Medicaid patients with enrolled doulas, and student-doula programs through UF may offer reduced-cost support.",
     insuranceNote: "No — Florida Medicaid now covers doula services under SB 264. If you\u2019re not on Medicaid, check whether your private insurance covers out-of-network doula services. HSA and FSA funds can also be used for doula fees. Contact your provider directly to confirm what\u2019s covered under your plan.",
     faqs: [
@@ -3338,6 +3457,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Charleston Birth Place", paragraph: "Charleston Birth Place is the Lowcountry\u2019s only freestanding birth center, operating since 2008 with over 3,000 babies delivered. Located at 1300 Hospital Drive, Suite 270 in Mount Pleasant — just across the Ravenel Bridge from downtown — the center is closely integrated with its partner hospital for seamless transfer if needed. Certified midwives provide prenatal care, water birth, well-baby care, and women\u2019s health services in a home-like setting designed for comfort, privacy, and freedom of movement during labor." },
     ],
+    localDoulas: [],
     medicaidNote: "No — South Carolina Medicaid (Healthy Connections) began covering doula services in 2024 under an SCDHHS expansion. Medicaid-enrolled doulas can be reimbursed for prenatal, labor, and postpartum visits — verify your doula\u2019s enrollment status through the SCDHHS provider directory.",
     insuranceNote: "Most private insurers in South Carolina (BlueCross BlueShield of SC, UnitedHealthcare, Aetna, Cigna) do not yet cover doula services as a standard benefit, though some employer plans may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage and ask about out-of-network doula reimbursement before booking.",
     faqs: [
@@ -3368,6 +3488,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-27. Families seeking out-of-hospital birth connect with
     // home-birth midwives practicing in the greater Richmond area.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No — Virginia Medicaid does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Richmond families on Medicaid must pay out of pocket, though some doulas offer sliding-scale fees. Ask your doula about payment plans or reduced-rate options.",
     insuranceNote: "Most private insurers in Virginia (Anthem Blue Cross, UnitedHealthcare, Aetna, Cigna) do not cover doula services as a standard benefit. Check your plan for out-of-network reimbursement or HSA/FSA eligibility. Contact your provider directly to confirm what\u2019s covered.",
     faqs: [
@@ -3395,6 +3516,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "West Michigan Midwifery Birth Center", paragraph: "West Michigan Midwifery is the only freestanding birth center in the Grand Rapids area, offering both home birth and birth center options. Staffed by Michigan Board of Licensed Midwives, they provide water birth, prenatal care, postpartum care, and lactation support. Free consultations are available for families exploring out-of-hospital birth options." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Michigan Medicaid does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Grand Rapids families on Medicaid must pay out of pocket, though some doulas like Great Lakes Doulas offer sliding-scale fees or payment plans.",
     insuranceNote: "Most private insurers in Michigan (Blue Cross Blue Shield of Michigan, Priority Health, UnitedHealthcare, McLaren) do not cover doula services as a standard benefit. Check your plan for out-of-network reimbursement or HSA/FSA eligibility. Contact your provider directly to confirm what\u2019s covered.",
     faqs: [
@@ -3425,6 +3547,7 @@ export const cities: Record<string, CityData> = {
     // nearest freestanding birth center. No birth centers currently operate within
     // Aurora. Verified 2026-05-27.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes — Health First Colorado (Colorado Medicaid) covers doula services as of July 1, 2024. Medicaid-enrolled doulas can be reimbursed for prenatal, labor, and postpartum visits. Verify your doula\u2019s enrollment status through the Health First Colorado provider directory, and ask whether they accept Medicaid during your initial consultation.",
     insuranceNote: "If you\u2019re on Health First Colorado (Medicaid), doula services are now covered. For private insurance (UnitedHealthcare, Anthem Blue Cross, Kaiser, Cigna), doula coverage varies by plan. Many Aurora families use HSA or FSA funds for out-of-pocket doula costs. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -3455,6 +3578,7 @@ export const cities: Record<string, CityData> = {
     // centers have opened in the Greater New Haven area. Google Maps search confirmed no
     // freestanding birth centers currently operating. Verified 2026-05-27.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes — Connecticut Medicaid (HUSKY Health) does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. New Haven families on Medicaid must pay out of pocket, though some doulas offer sliding-scale fees. Ask your doula about payment plans or reduced-rate options.",
     insuranceNote: "Most private insurers in Connecticut (Anthem Blue Cross, ConnectiCare, UnitedHealthcare, Cigna) do not cover doula services as a standard benefit. Check your plan for out-of-network reimbursement or HSA/FSA eligibility. Contact your provider directly to confirm what\u2019s covered.",
     faqs: [
@@ -3486,6 +3610,7 @@ export const cities: Record<string, CityData> = {
     // zero results for Milwaukee. No freestanding birth centers identified within city.
     // Closest is Madison Birth Center (~80 mi west). Home-birth midwifery practices exist.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No — Wisconsin Medicaid (BadgerCare Plus) does not cover doula services as of May 2026. Wisconsin is not among states with active Medicaid doula reimbursement. Advocacy organizations continue pushing for legislation. Milwaukee County families on BadgerCare Plus are served by five managed care plans: iCare, Molina Healthcare, UnitedHealthcare Community Plan, Anthem BCBS (Elevance), and Children's Community Health Plan.",
     insuranceNote: "Wisconsin's lack of Medicaid doula coverage means Milwaukee families on BadgerCare Plus pay out of pocket for doula services unless their specific managed care plan offers a benefit — call your plan and ask. For families with private insurance, Milwaukee's employer market (Northwestern Mutual, Fiserv, Rockwell Automation) sometimes includes maternal wellness benefits that cover or subsidize doula care. Always verify with your HR department and insurance carrier. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -3516,6 +3641,7 @@ export const cities: Record<string, CityData> = {
     // Birth center search: No freestanding birth centers within KC MO city limits.
     // New Birth Company in Overland Park, KS is the nearest (~15 min south).
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No — Missouri does not cover doula services under Medicaid as of May 2026. Missouri has not enacted legislation mandating Medicaid doula reimbursement. Jackson County families on MO HealthNet (Medicaid) are served by UnitedHealthcare Community Plan, Home State Health (Centene), and Molina Healthcare of Missouri.",
     insuranceNote: "Missouri's lack of Medicaid doula coverage means Kansas City families on MO HealthNet pay out of pocket for doula services. For families with private insurance, KC's employer market (Cerner, Hallmark, H&R Block, Burns & McDonnell) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -3548,6 +3674,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Dar a Luz Birth and Health Center", paragraph: "Dar a Luz Birth and Health Center is Albuquerque's premier freestanding birth center, offering out-of-hospital birth with certified nurse-midwives in a warm, home-like setting. Dar a Luz has strong relationships with UNM and Presbyterian for transfers, which matters if you're planning a birth center birth and want to know your backup hospital. It's a cornerstone of Albuquerque's midwifery and doula community." },
     ],
+    localDoulas: [],
     medicaidNote: "Yes — New Mexico Medicaid (Centennial Care 2.0) covers doula services effective January 1, 2024, following the passage of the Doula Licensure Act (SB 195) and approval of a Medicaid State Plan Amendment. Bernalillo County families on Centennial Care are served by Blue Cross Blue Shield of NM, Western Sky Community Care (Centene), and Molina Healthcare of NM. Contact Centennial Care at 1-888-990-6789 or visitCentennialCareNM.com to confirm your plan's doula coverage.",
     insuranceNote: "New Mexico's Medicaid doula coverage (effective January 2024) makes it one of the more progressive states in the Southwest. For families with private insurance, Albuquerque's employer market (Sandia National Labs, Kirtland AFB, Intel Rio Rancho) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -3580,6 +3707,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Better Birth LLC", paragraph: "Better Birth LLC is a freestanding birth center in the Salt Lake City area offering out-of-hospital birth with certified professional midwives. Better Birth serves families seeking unmedicated birth in a home-like setting, with transfer relationships to local hospitals. Verify current operating status and CABC accreditation directly with the center." },
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Utah Medicaid covers doula services as of October 1, 2024, following the passage of HB 222 in the 2024 legislative session. Salt Lake County families on Medicaid are served by Molina Healthcare of Utah, UnitedHealthcare Community Plan, and SelectHealth (Intermountain). Contact Utah Medicaid at 1-866-608-4212 or visit health.utah.gov to confirm your plan's doula coverage and find participating doulas.",
     insuranceNote: "Utah's Medicaid doula coverage (HB 222, effective October 2024) is a significant win for SLC families. For families with private insurance, Salt Lake City's employer market (University of Utah, Intermountain Healthcare, Goldman Sachs, Qualtrics) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -3610,6 +3738,7 @@ export const cities: Record<string, CityData> = {
     // Birth center search: No freestanding birth centers identified within Birmingham.
     // Alabama has some of the most restrictive birth center regulations in the country.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No — Alabama does not cover doula services under Medicaid as of May 2026. Alabama has not enacted legislation mandating Medicaid doula reimbursement. Jefferson County families on Alabama Medicaid are served by Blue Cross Blue Shield of Alabama, UnitedHealthcare Community Plan, and Aetna Better Health of Alabama.",
     insuranceNote: "Alabama's lack of Medicaid doula coverage means Birmingham families on Medicaid pay out of pocket for doula services. For families with private insurance, Birmingham's employer market (UAB Health System, Regions Financial, Alabama Power, Encompass Health) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -3640,6 +3769,7 @@ export const cities: Record<string, CityData> = {
     // Birth center search: No CABC-accredited freestanding birth centers identified
     // within Louisville. Home-birth midwifery practices serve the area.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No — Kentucky does not cover doula services under Medicaid as of May 2026. While legislation has been discussed, no bill has been enacted into law with an implemented State Plan Amendment. Jefferson County families on Kentucky Medicaid are served by Aetna Better Health of Kentucky, Passport Health Plan by Molina, WellCare of Kentucky (Centene), and Humana/CareSource.",
     insuranceNote: "Kentucky's Medicaid program has not yet implemented doula coverage as of May 2026. For families with private insurance, Louisville's employer market (Humana, UPS, Ford, Yum! Brands) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -3676,6 +3806,7 @@ export const cities: Record<string, CityData> = {
       { name: "Boise Birth Center", paragraph: "Boise Birth Center is a freestanding birth center in the Treasure Valley offering out-of-hospital birth with certified professional midwives. Verify current operating status and CABC accreditation directly with the center. Boise Birth Center serves families seeking unmedicated birth in a home-like setting with transfer relationships to St. Luke's and Saint Alphonsus." },
       { name: "Treasure Valley Midwives Birth Center", paragraph: "Treasure Valley Midwives operates a birth center in the Boise area, offering out-of-hospital birth with certified nurse-midwives or certified professional midwives. Verify current operating status and CABC accreditation directly. Having two birth centers in the Treasure Valley gives Boise families a real choice in birth setting — rare for a metro this size." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Idaho does not cover doula services under Medicaid as of May 2026. Idaho has not enacted legislation mandating Medicaid doula reimbursement. Ada County families on Idaho Medicaid are served by Molina Healthcare of Idaho, Blue Cross of Idaho (Idaho Medicaid), and Aetna Better Health of Idaho.",
     insuranceNote: "Idaho's lack of Medicaid doula coverage means Boise families on Medicaid pay out of pocket for doula services. For families with private insurance, Boise's employer market (St. Luke's Health System, Micron, HP, Boise Cascade, Idaho Power) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity. Notably, families in the Spokane area (across the WA border) may qualify for Washington Apple Health doula coverage.",
     faqs: [
@@ -3708,6 +3839,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Iowa Midwifery Birth Center", paragraph: "Iowa Midwifery Birth Center is a freestanding birth center serving the Des Moines metro area, offering out-of-hospital birth with certified nurse-midwives. Verify current operating status and CABC accreditation directly with the center. Iowa Midwifery serves families seeking unmedicated birth in a home-like setting, with transfer relationships to MercyOne and Iowa Methodist." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Iowa does not cover doula services under Medicaid as of May 2026. Iowa has not enacted legislation mandating Medicaid doula reimbursement. Polk County families on Iowa Medicaid are served by AmeriHealth Caritas Iowa, Iowa Total Care (Centene), Molina Healthcare of Iowa, and Meridian (WellCare).",
     insuranceNote: "Iowa's lack of Medicaid doula coverage means Des Moines families on Medicaid pay out of pocket for doula services. For families with private insurance, Des Moines' employer market (Principal Financial, Wellmark BCBS, Pioneer Hi-Bred, Caseys) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -3740,6 +3872,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Gentle Birth Center", paragraph: "Gentle Birth Center is a freestanding birth center in the Omaha area offering out-of-hospital birth with midwives. Verify current operating status and CABC accreditation directly with the center. If you're considering birth center birth in Omaha, confirm transfer relationships with Nebraska Medical Center and Methodist Women's Hospital." },
     ],
+    localDoulas: [],
     medicaidNote: "No — Nebraska does not cover doula services under Medicaid as of May 2026. Nebraska has not enacted legislation mandating Medicaid doula reimbursement. Douglas County families on Nebraska Medicaid are served by UnitedHealthcare Community Plan, Molina Healthcare of Nebraska, and WellCare of Nebraska (Centene).",
     insuranceNote: "Nebraska's lack of Medicaid doula coverage means Omaha families on Medicaid pay out of pocket for doula services. For families with private insurance, Omaha's employer market (Berkshire Hathaway, Union Pacific, Mutual of Omaha, Werner Enterprises, TD Ameritrade) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -3774,6 +3907,7 @@ export const cities: Record<string, CityData> = {
       { name: "Andaluz Waterbirth Center", paragraph: "Andaluz Waterbirth Center is a well-known freestanding birth center in the Portland area offering out-of-hospital birth with waterbirth options and certified professional midwives. Andaluz is a cornerstone of Portland's progressive birth community. Verify CABC accreditation and current operating status directly with the center." },
       { name: "Portland Birth Center", paragraph: "Portland Birth Center is a freestanding birth center offering out-of-hospital birth with midwives in a home-like setting. Verify current operating status and CABC accreditation directly. Having multiple birth centers makes Portland one of the most option-rich cities in the country for families wanting birth center care." },
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Oregon Medicaid (through Coordinated Care Organizations / CCOs) covers doula services. Oregon was an early adopter: HB 3211 (2021, effective 2022) established doula coverage under the Traditional Health Worker (THW) program, strengthened by HB 4084 (2023). Multnomah County families are served by CareOregon, Jackson Care Connect, Health Share of Oregon, Trillium Community Health Plan, and PacificSource Community Solutions. Contact Oregon Health Plan at 1-800-675-0414 or visit oregon.gov to enroll as a doula or confirm your THW benefit.",
     insuranceNote: "Yes — Oregon's Medicaid doula coverage through the THW program is one of the most robust in the country. For families with private insurance, Portland's employer market (Nike, Intel, Providence Health, OHSU, Columbia Sportswear) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -3805,6 +3939,7 @@ export const cities: Record<string, CityData> = {
     // Jackson city limits. Mississippi's regulatory environment is very
     // challenging for birth centers. Home-birth midwifery practices exist.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No — Mississippi does not cover doula services under Medicaid as of May 2026. Mississippi has not enacted legislation mandating Medicaid doula reimbursement. Hinds County families on Mississippi Medicaid are served by Magnolia Health (Centene), UnitedHealthcare Community Plan, and Molina Healthcare of Mississippi.",
     insuranceNote: "Mississippi's lack of Medicaid doula coverage and the state's significant maternal health disparities make out-of-pocket doula services an equity issue. For families with private insurance, Jackson's employer market (UMMC, Nissan, Raytheon, Trustmark National) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity. Some grassroots doula collectives offer sliding-scale fees.",
     faqs: [
@@ -3839,6 +3974,7 @@ export const cities: Record<string, CityData> = {
     // (~280 miles west). Verified 2026-05-28.
     birthCenterDetails: [
     ],
+    localDoulas: [],
     medicaidNote: "Yes — Washington Medicaid (Apple Health) covers doula services. Washington is one of the most robust Medicaid doula states in the US. Doulas enroll as Apple Health providers. Spokane County families on Apple Health are served by Community Health Plan of Washington, Coordinated Care of Washington, Molina Healthcare of Washington, and UnitedHealthcare Community Plan of Washington. Contact Apple Health at 1-800-562-3022 or visit hca.wa.gov to enroll or confirm coverage.",
     insuranceNote: "Yes — Washington's Apple Health doula coverage is one of the strongest in the country — a real equity win. For families with private insurance, Spokane's employer market (Providence Health, MultiCare, Fairchild AFB, Gonzaga University) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity. North Idaho families: Washington's Medicaid doula coverage may apply if you receive care from a WA-licensed provider.",
     faqs: [
@@ -3868,6 +4004,7 @@ export const cities: Record<string, CityData> = {
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Wichita, KS. No freestanding birth centers found as of May 2026.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Kansas does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Wichita area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -3895,6 +4032,7 @@ export const cities: Record<string, CityData> = {
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for New Orleans, LA. No freestanding birth centers found as of May 2026.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Louisiana does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the New Orleans area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -3922,6 +4060,7 @@ export const cities: Record<string, CityData> = {
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Honolulu, HI. No freestanding birth centers found as of May 2026.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Hawaii does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Honolulu area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -3949,6 +4088,7 @@ export const cities: Record<string, CityData> = {
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Anchorage, AK. No freestanding birth centers found as of May 2026.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Alaska does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Anchorage area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -3975,6 +4115,7 @@ export const cities: Record<string, CityData> = {
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Sioux Falls, SD. No freestanding birth centers found as of May 2026.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 South Dakota does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Sioux Falls area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4002,6 +4143,7 @@ export const cities: Record<string, CityData> = {
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Little Rock, AR. No freestanding birth centers found as of May 2026.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Arkansas does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Little Rock area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4029,6 +4171,7 @@ export const cities: Record<string, CityData> = {
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Baton Rouge, LA. No freestanding birth centers found as of May 2026.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Louisiana does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Baton Rouge area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4055,6 +4198,7 @@ export const cities: Record<string, CityData> = {
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Fargo, ND. No freestanding birth centers found as of May 2026.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 North Dakota does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Fargo area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4082,6 +4226,7 @@ export const cities: Record<string, CityData> = {
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Manchester, NH. No freestanding birth centers found as of May 2026.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 New Hampshire does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Manchester area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4108,6 +4253,7 @@ export const cities: Record<string, CityData> = {
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Billings, MT. No freestanding birth centers found as of May 2026.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Montana does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Billings area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4134,6 +4280,7 @@ export const cities: Record<string, CityData> = {
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Cheyenne, WY. No freestanding birth centers found as of May 2026.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Wyoming does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Cheyenne area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4160,6 +4307,7 @@ export const cities: Record<string, CityData> = {
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Wilmington, DE. No freestanding birth centers found as of May 2026.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Delaware does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Wilmington area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4192,6 +4340,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Alabama Birth Center", paragraph: "Alabama Birth Center, reportedly located on Bailey Creek Circle in southeast Huntsville, is Alabama\u2019s first freestanding birth center, offering out-of-hospital birth with certified nurse-midwives. Verify current operating status and CABC accreditation directly with the center \u2014 the website (alabamabirthcenter.com) is active but independent confirmation of reviews and operating hours was limited at time of research. For families seeking a lower-intervention birth setting in North Alabama, this represents the only freestanding birth center option in the region." },
     ],
+    localDoulas: [],
     medicaidNote: "No \u2014 Alabama does not cover doula services under Medicaid as of May 2026. Alabama has not enacted legislation mandating Medicaid doula reimbursement. Madison County families on Alabama Medicaid are served by Blue Cross Blue Shield of Alabama, UnitedHealthcare Community Plan, and Aetna Better Health of Alabama.",
     insuranceNote: "Alabama\u2019s lack of Medicaid doula coverage means Huntsville families on Medicaid pay out of pocket for doula services. For families with private insurance, Huntsville\u2019s employer market (NASA Marshall, Redstone Arsenal, Toyota, ADTRAN) sometimes includes maternal wellness benefits \u2014 check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -4221,6 +4370,7 @@ export const cities: Record<string, CityData> = {
     // center regulations in the country, which has limited out-of-hospital birth
     // options across the state. Verified 2026-05-27.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Alabama does not cover doula services under Medicaid as of May 2026. Alabama has not enacted legislation mandating Medicaid doula reimbursement. Mobile County families on Alabama Medicaid are served by Blue Cross Blue Shield of Alabama, UnitedHealthcare Community Plan, and Aetna Better Health of Alabama.",
     insuranceNote: "Alabama\u2019s lack of Medicaid doula coverage means Mobile families on Medicaid pay out of pocket for doula services. For families with private insurance, Mobile\u2019s employer market (Austal USA, Airbus, ThyssenKrupp, University of South Alabama) sometimes includes maternal wellness benefits \u2014 check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -4249,6 +4399,7 @@ export const cities: Record<string, CityData> = {
     // freestanding birth centers. The nearest birth center option is the University of
     // Iowa Birth Center in Iowa City (~25 miles south). Verified 2026-05-27.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Iowa does not cover doula services under Medicaid as of May 2026. Iowa has not enacted legislation mandating Medicaid doula reimbursement. Linn County families on Iowa Medicaid are served by AmeriHealth Caritas Iowa, Iowa Total Care (Centene), Molina Healthcare of Iowa, and Meridian (WellCare).",
     insuranceNote: "Iowa\u2019s lack of Medicaid doula coverage means Cedar Rapids families on Medicaid pay out of pocket for doula services. For families with private insurance, Cedar Rapids\u2019 employer market (Cargill, Quaker Oats, Rockwell Collins, Transamerica) sometimes includes maternal wellness benefits \u2014 check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -4277,6 +4428,7 @@ export const cities: Record<string, CityData> = {
     // Birth Center) are approximately 20 minutes east and serve Nampa families.
     // Verified 2026-05-27.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Idaho does not cover doula services under Medicaid as of May 2026. Idaho has not enacted legislation mandating Medicaid doula reimbursement. Canyon County families on Idaho Medicaid are served by Molina Healthcare of Idaho, Blue Cross of Idaho (Idaho Medicaid), and Aetna Better Health of Idaho.",
     insuranceNote: "Idaho\u2019s lack of Medicaid doula coverage means Nampa families on Medicaid pay out of pocket for doula services. For families with private insurance, the Treasure Valley\u2019s employer market (St. Luke\u2019s Health System, Micron, HP, Boise Cascade, Idaho Power) sometimes includes maternal wellness benefits \u2014 check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -4306,6 +4458,7 @@ export const cities: Record<string, CityData> = {
     // in Naperville (~10 miles, blossombirthcenter.com, active website as of 2026-05-27)
     // and A Birth Center in Downers Grove (~18 miles). Verified 2026-05-27.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Illinois covers doula services under Medicaid as of March 2024. Managed care plans include IA/ACHI, Meridian, Molina, and Blue Cross Community. Contact your plan directly to confirm doula benefits.",
     insuranceNote: "If you\u2019re on Illinois Medicaid, doula services are covered. For private insurance in the Aurora area, coverage varies by plan \u2014 many Chicago-area employers (State Farm, Caterpillar, Aurora University, Hollywood Casino) include maternal wellness benefits. Ask your insurer about doula reimbursement and request a superbill from your doula for out-of-network submission. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -4334,6 +4487,7 @@ export const cities: Record<string, CityData> = {
     // freestanding birth centers. No birth centers currently operate in the Fort Wayne
     // metro area. Verified 2026-05-27.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Indiana covers doula services under Medicaid as of January 2025 (HB 1269). Managed care plans include MDwise, CareSource, Anthem Hoosier Healthwise, and United Healthcare. Contact your plan directly to confirm doula benefits.",
     insuranceNote: "If you\u2019re on Indiana Medicaid, doula services are covered as of January 2025. For private insurance in the Fort Wayne area, coverage varies by plan \u2014 Fort Wayne\u2019s employer market (Parkview Health, Steel Dynamics, Frontier Communications, Do it Best Corp.) sometimes includes maternal wellness benefits. Ask your insurer about doula reimbursement, and request a superbill from your doula for out-of-network submission. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -4363,6 +4517,7 @@ export const cities: Record<string, CityData> = {
     // found no freestanding birth centers currently operating in the Evansville metro area.
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Indiana covers doula services under Medicaid as of January 2025 (HB 1269). Vanderburgh County families on Medicaid are served by managed care plans including Anthem Blue Cross Blue Shield, CareSource, MDwise, and Managed Health Services (MHS). Contact your plan directly to confirm doula benefits.",
     insuranceNote: "If you\u2019re on Indiana Medicaid, doula services are covered as of January 2025. For private insurance in the Evansville area, coverage varies by plan \u2014 Anthem Blue Cross Blue Shield and some UnitedHealthcare policies may offer partial reimbursement. Ask your insurer about doula benefits, and request a superbill from your doula for out-of-network submission. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -4391,6 +4546,7 @@ export const cities: Record<string, CityData> = {
     // found no freestanding birth centers currently operating in the Lexington metro area.
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Kentucky does not cover doula services under Medicaid as of May 2026. While legislation has been discussed, no bill has been enacted into law with an implemented State Plan Amendment. Fayette County families on Kentucky Medicaid are served by Aetna Better Health of Kentucky, Passport Health Plan by Molina, WellCare of Kentucky, and Humana/CareSource.",
     insuranceNote: "Kentucky\u2019s Medicaid program has not yet implemented doula coverage as of May 2026. For families with private insurance, Lexington\u2019s employer market (UK HealthCare, Baptist Health, Lexmark, Valvoline) sometimes includes maternal wellness benefits \u2014 check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -4419,6 +4575,7 @@ export const cities: Record<string, CityData> = {
     // found no freestanding birth centers currently operating in the Worcester area.
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Massachusetts MassHealth covers doula services as of January 2024, with reimbursement of approximately $1,200 for a full package covering prenatal visits, labor and delivery support, and postpartum visits. Worcester County families on MassHealth are served by MassHealth, Fallon Health, BMC Health Net, and Accountable Blue. Your doula must be enrolled as a MassHealth provider.",
     insuranceNote: "Yes — Massachusetts requires most private insurance plans through the state exchange (MA Health Connector) to cover maternity services. Doula coverage by private insurers is expanding \u2014 some Blue Cross Blue Shield of MA, Tufts Health Plan, and Fallon Health policies now include doula benefits. Check your plan documents or call member services and ask about certified doula services.",
     faqs: [
@@ -4447,6 +4604,7 @@ export const cities: Record<string, CityData> = {
     // found no freestanding birth centers currently operating in the Springfield area.
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Massachusetts MassHealth covers doula services as of January 2024, with reimbursement of approximately $1,200 for a full package covering prenatal visits, labor and delivery support, and postpartum visits. Hampden County families on MassHealth are served by MassHealth, Fallon Health, BMC Health Net, and Accountable Blue. Your doula must be enrolled as a MassHealth provider.",
     insuranceNote: "Yes — Massachusetts requires most private insurance plans through the state exchange (MA Health Connector) to cover maternity services. Doula coverage by private insurers is expanding \u2014 some Blue Cross Blue Shield of MA, Tufts Health Plan, and Fallon Health policies now include doula benefits. Check your plan documents or call member services and ask about certified doula services.",
     faqs: [
@@ -4477,6 +4635,7 @@ export const cities: Record<string, CityData> = {
     // and Chesapeake Birth Center in Annapolis (~30 min SE).
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Maryland Medicaid covers doula services as of January 2024, with reimbursement of $450 for labor and delivery support, $75 per prenatal or postpartum visit (up to 4 visits), totaling up to $900 per pregnancy. Howard County families on Maryland Medicaid are served by managed care plans including Kaiser Permanente, UnitedHealthcare, MedStar, Jai Medical, Priority Partners, and Maryland Physicians Care. Your doula must be enrolled as a Maryland Medicaid provider.",
     insuranceNote: "Yes — Maryland\u2019s state insurance regulations support broader maternity coverage, but doula-specific reimbursement through private insurance varies. CareFirst BlueCross BlueShield of Maryland and UnitedHealthcare may offer partial reimbursement with a superbill using CPT code S9443. Always ask your doula for a superbill and submit it promptly. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -4508,6 +4667,7 @@ export const cities: Record<string, CityData> = {
     // and BirthCare & Women's Health in Falls Church, VA (~25 min SW).
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Maryland Medicaid covers doula services as of January 2024, with reimbursement of $450 for labor and delivery support, $75 per prenatal or postpartum visit (up to 4 visits), totaling up to $900 per pregnancy. Montgomery County families on Maryland Medicaid are served by managed care plans including Kaiser Permanente, UnitedHealthcare, MedStar, Jai Medical, Priority Partners, and Maryland Physicians Care. Your doula must be enrolled as a Maryland Medicaid provider.",
     insuranceNote: "Yes — Maryland\u2019s state insurance regulations support broader maternity coverage, but doula-specific reimbursement through private insurance varies. CareFirst BlueCross BlueShield of Maryland and UnitedHealthcare may offer partial reimbursement with a superbill using CPT code S9443. Always ask your doula for a superbill and submit it promptly. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -4537,6 +4697,7 @@ export const cities: Record<string, CityData> = {
     // birth centers. Some midwifery practices offer home birth services.
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No — Missouri does not yet have Medicaid doula coverage as of May 2026. No state legislation or Medicaid plan amendment has been enacted. Springfield families on MO HealthNet (Missouri Medicaid) must pay out-of-pocket for doula services, though some community organizations and volunteer doula programs offer free or reduced-cost support — ask at your local WIC office or community health center.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Springfield area. Mercy Health Plans and CoxHealth both offer some maternal wellness benefits — check whether your plan covers out-of-network doula services or includes maternal wellness dollars, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4566,6 +4727,7 @@ export const cities: Record<string, CityData> = {
     // birth centers. Some midwifery practices offer home birth services.
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No — Missouri does not yet have Medicaid doula coverage as of May 2026. No state legislation or Medicaid plan amendment has been enacted. Columbia families on MO HealthNet (Missouri Medicaid) must pay out-of-pocket for doula services, though some community organizations and university-affiliated volunteer programs offer free or reduced-cost support.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Columbia area. University of Missouri employee plans and some BCBS Missouri policies may offer partial maternal wellness benefits — check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4595,6 +4757,7 @@ export const cities: Record<string, CityData> = {
     // freestanding birth centers currently operating in the Gulf Coast area.
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No — Mississippi does not have Medicaid doula coverage as of May 2026. Mississippi Medicaid (administered by Magnolia Health, Molina Healthcare, UnitedHealthcare, and Humana) does not reimburse for doula services. Gulf Coast families on Medicaid must pay out-of-pocket for doula support, though some doulas offer sliding-scale fees. Military families at Keesler Air Force Base should check TRICARE's current maternity coverage — TRICARE does not cover doula services, but HSA/FSA funds can help.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Gulfport area. Note that some Blue Cross Blue Shield of Mississippi plans may exclude Ochsner Health System facilities (including Memorial Hospital) from network — verify your hospital is in-network before delivering. Check whether your plan covers out-of-network doula services or offers maternal wellness benefits, and whether HSA or FSA funds can help. Contact your provider directly to confirm.",
     faqs: [
@@ -4625,6 +4788,7 @@ export const cities: Record<string, CityData> = {
     // birth midwives or travel to Omaha.
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No — Nebraska does not have Medicaid doula coverage as of May 2026. No state legislation or Medicaid plan amendment has been enacted. Lincoln families on Heritage Health (Nebraska Medicaid) must pay out-of-pocket for doula services, though some community organizations and volunteer programs offer free or reduced-cost support — ask at your local WIC office.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Lincoln area. Bryan Health Plans and some Blue Cross Blue Shield of Nebraska policies may offer partial maternal wellness benefits — check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4655,6 +4819,7 @@ export const cities: Record<string, CityData> = {
     // Montclair, NJ (~25 min drive).
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes — New Jersey Medicaid (NJ FamilyCare) covers doula services as of January 1, 2024, with reimbursement of approximately $1,320 for a full package covering prenatal visits, labor and delivery support, and postpartum visits. Hudson County families on NJ FamilyCare are served by managed care plans including Horizon NJ Health, UnitedHealthcare Community Plan, Aetna Better Health, and WellCare. Your doula must be enrolled as a NJ Medicaid provider — ask your plan for a list of enrolled doulas near you.",
     insuranceNote: "New Jersey's state insurance regulations support broader maternity coverage, and doula-specific reimbursement through private insurance is expanding. Aetna, Cigna, and some UnitedHealthcare plans may offer partial reimbursement with a superbill using CPT code S9443. Always ask your doula for a superbill and submit it promptly. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -4685,6 +4850,7 @@ export const cities: Record<string, CityData> = {
     // Upper Montclair, NJ (~10 miles from downtown Newark).
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes — New Jersey Medicaid (NJ FamilyCare) covers doula services as of January 1, 2024, with reimbursement of approximately $1,320 for a full package covering prenatal visits, labor and delivery support, and postpartum visits. Essex County families on NJ FamilyCare are served by managed care plans including Horizon NJ Health, UnitedHealthcare Community Plan, Aetna Better Health, and WellCare. Your doula must be enrolled as a NJ Medicaid provider — ask your plan for a list of enrolled doulas near you.",
     insuranceNote: "New Jersey's state insurance regulations support broader maternity coverage, and doula-specific reimbursement through private insurance is expanding. Aetna, Cigna, and some UnitedHealthcare plans may offer partial reimbursement with a superbill using CPT code S9443. Always ask your doula for a superbill and submit it promptly. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -4714,6 +4880,7 @@ export const cities: Record<string, CityData> = {
     // out-of-hospital birth options are in Atlanta (approximately 2 hours east).
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 as of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. For Muscogee County families on Medicaid, call Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Check with your managed care plan (Peach State Health Plan, Amerigroup, or CareSource) about any maternal wellness benefits that might include doula support.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Columbus area. Military families on TRICARE should note that TRICARE does not currently cover doula services, but some employer plans through Fort Moore\u2019s civilian workforce do include maternal wellness benefits. Check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -4743,6 +4910,7 @@ export const cities: Record<string, CityData> = {
     // confirmed birth center is Morris Heights Health Center Birth Center in the
     // Bronx (~8\u201310 miles south). Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 as of January 2024, New York State Medicaid covers doula services for eligible enrollees, including Westchester County\u2019s managed care plans (Fidelis, Healthfirst, UnitedHealthcare Community, MetroPlus, MVP, Affinity). The statewide reimbursement is approximately $1,710 per pregnancy, covering prenatal visits, labor and delivery support, and postpartum visits. Doulas must enroll as Medicaid providers through the eMedNY system.",
     insuranceNote: "Yes — New York State law requires commercial insurers to cover lactation support and certain maternal services, but doula coverage varies by plan. Request a superbill from your doula and submit it for out-of-network reimbursement \u2014 many plans will partially reimburse. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -4775,6 +4943,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Nawiri Birth Center", paragraph: "Nawiri Birth Center at 575 S. Beach Blvd in Anaheim is a freestanding birth center offering waterbirth, VBAC support, and midwifery care in a home-like setting. They accept Tricare, Aetna, Cigna, and Blue Cross, and also offer home birth services. Verify with the center directly for current services and availability." },
     ],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 as of January 2023, California Medi-Cal covers doula services. Anaheim families on Medi-Cal managed care plans (Health Net, Blue Shield Promise, Molina, Aetna Better Health, CenCal, PHC, SCC) can access doula services at no cost. Doulas must enroll through the PAVE portal to bill Medi-Cal directly. The reimbursement covers prenatal visits, labor and delivery support, and postpartum visits.",
     insuranceNote: "Under California SB 332, commercial health plans are required to cover doula services and midwifery care. Check with your insurer about in-network doula providers and prior authorization requirements. HSA and FSA funds can typically be used for doula services. Request a superbill from your doula for out-of-network reimbursement.",
     faqs: [
@@ -4806,6 +4975,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "TruBirth Center", paragraph: "TruBirth Center in nearby Moreno Valley (~10 minutes from Riverside) is the only freestanding birth center in the Inland Empire region. Staffed by licensed midwives, it offers home-like birth settings, water birth, and holistic prenatal care. Verify with the center directly for current services, insurance coverage, and availability." },
     ],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 as of January 2023, California Medi-Cal covers doula services. Riverside County families on Medi-Cal managed care plans (Health Net, Blue Shield Promise, Molina, Aetna Better Health, IEHP, CenCal, PHC, SCC) can access doula services at no cost. The Riverside County Perinatal Equity Initiative also provides free doula services for Black birthing families. Doulas must enroll through the PAVE portal to bill Medi-Cal directly.",
     insuranceNote: "Under California SB 332, commercial health plans are required to cover doula services and midwifery care. Check with your insurer about in-network doula providers. IEHP (Inland Empire Health Plan) as a Medi-Cal managed care plan also covers doula services. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -4838,6 +5008,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Del Mar Birth Center", paragraph: "Del Mar Birth Center at 399 N. Tustin Ave, Suite 205 in Santa Ana offers midwifery-led birth services including water birth and natural birth in a home-like setting. Verify with the center directly for current services, insurance coverage (including Medi-Cal), and availability." },
     ],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 as of January 2023, California Medi-Cal covers doula services. Santa Ana families on Medi-Cal managed care plans (Health Net, Blue Shield Promise, Molina, Aetna Better Health, CenCal, PHC, SCC) can access doula services at no cost. Doulas must enroll through the PAVE portal to bill Medi-Cal directly. The county\u2019s large Medi-Cal-eligible population makes this coverage especially significant in Santa Ana.",
     insuranceNote: "Under California SB 332, commercial health plans are required to cover doula services and midwifery care. For Santa Ana\u2019s large Spanish-speaking population, ask insurers about bilingual doula provider directories. HSA and FSA funds can typically be used for doula services. Request a superbill for out-of-network reimbursement.",
     faqs: [
@@ -4869,6 +5040,7 @@ export const cities: Record<string, CityData> = {
     // or the Vermont Midwifery Association network.
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No - Vermont does not offer Medicaid doula coverage as of May 2026. Vermont has no state legislation mandating Medicaid doula reimbursement, and Green Mountain Care families must pay out of pocket for doula services. Some community organizations and volunteer doula programs offer free or reduced-cost support - ask at your local WIC office or the Vermont Department of Health.",
     insuranceNote: "Vermont\u2019s lack of Medicaid doula coverage means Burlington families on Medicaid pay out of pocket for doula services. For families with private insurance (BlueCross BlueShield of Vermont, MVP Health Care), check whether your plan covers out-of-network doula services or offers maternal wellness benefits. HSA and FSA funds can typically be used for doula services with a letter of medical necessity. Request a superbill for out-of-network reimbursement.",
     faqs: [
@@ -4902,6 +5074,7 @@ export const cities: Record<string, CityData> = {
     // or travel to Morgantown or out-of-state options.
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No - West Virginia does not offer Medicaid doula coverage as of May 2026. West Virginia has not enacted legislation mandating Medicaid doula reimbursement. Mountain Health Trust (West Virginia Medicaid) families must pay out of pocket for doula services, though some community organizations and volunteer programs offer free or reduced-cost support - ask at your local WIC office or the West Virginia Department of Health.",
     insuranceNote: "West Virginia\u2019s lack of Medicaid doula coverage means Charleston families on Medicaid pay out of pocket for doula services. For families with private insurance (Highmark BlueCross BlueShield of West Virginia, WV Family Health), check whether your plan covers out-of-network doula services or offers maternal wellness benefits. HSA and FSA funds can typically be used for doula services with a letter of medical necessity. Request a superbill for out-of-network reimbursement.",
     faqs: [
@@ -4934,6 +5107,7 @@ export const cities: Record<string, CityData> = {
     // out-of-hospital birth connect with home-birth midwives in the greater Wilmington area.
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 North Carolina Medicaid (NCDHHS) covers doula services as of October 2024. Pregnant and postpartum Medicaid enrollees in New Hanover County can receive doula support at no cost through enrolled managed care plans. Doulas must register as NC Medicaid providers through NCDHHS to bill for services. Contact your Medicaid managed care plan or NCDHHS to confirm your doula\u2019s enrollment status.",
     insuranceNote: "Most private insurers in North Carolina (Blue Cross Blue Shield of NC, Aetna, UnitedHealthcare) do not yet cover doula services as a standard benefit, though some employer plans may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage and ask about out-of-network doula reimbursement before booking.",
     faqs: [
@@ -4966,6 +5140,7 @@ export const cities: Record<string, CityData> = {
     // seeking out-of-hospital birth connect with home-birth midwives in the Lehigh Valley.
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Pennsylvania Medicaid covers doula services as of 2024, with reimbursement of approximately $1,350 for the full birth package (prenatal, labor, and postpartum visits). Allentown families on Medicaid managed care plans (including those through Lehigh County Assistance Office) can access doula services at no cost. Doulas must enroll as Medicaid providers through the Pennsylvania Department of Human Services. Contact your managed care plan to confirm your doula\u2019s enrollment status.",
     insuranceNote: "Most private insurers in the Lehigh Valley (Blue Cross of Northeastern Pennsylvania, Aetna, UnitedHealthcare) do not yet cover doula services as a standard benefit, though some employer plans may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage and ask about out-of-network doula reimbursement before booking.",
     faqs: [
@@ -4997,6 +5172,7 @@ export const cities: Record<string, CityData> = {
     // out-of-hospital birth connect with home-birth midwives in the Tampa Bay area.
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Florida Medicaid does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Pinellas County families on Medicaid must pay out of pocket, though some doulas offer sliding-scale fees. Ask your doula about payment plans or reduced-rate options.",
     insuranceNote: "Most private insurers in the Tampa Bay area (BlueCross BlueShield of Florida, UnitedHealthcare, Aetna, Cigna) do not cover doula services as a standard benefit. Check your plan for out-of-network reimbursement or HSA/FSA eligibility. Contact your provider directly to confirm what\u2019s covered.",
     faqs: [
@@ -5030,6 +5206,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "AdventHealth Birth Center Shawnee Mission", paragraph: "AdventHealth Shawnee Mission operates a birth center within its hospital campus in Merriam, offering a more home-like, low-intervention birth setting for low-risk pregnancies. It\u2019s the closest thing to a freestanding birth center in the Johnson County area. Families seeking the birth center experience should discuss eligibility with their OB or midwife, as availability and criteria can change. If we\u2019re being real, Kansas doesn\u2019t license CPMs, so true out-of-hospital birth center options are very limited in the state." },
     ],
+    localDoulas: [],
     medicaidNote: "No \u2014 Kansas does not cover doula services under Medicaid as of 2026. There is no statewide Medicaid reimbursement for doula care. Johnson County families on Medicaid (KanCare) must pay out of pocket for doula services, though some doulas offer sliding-scale fees or payment plans. Contact your KanCare plan directly to ask about any pilot programs.",
     insuranceNote: "Most private insurers in the Kansas City metro (BlueCross BlueShield of Kansas City, UnitedHealthcare, Aetna, Cigna) do not cover doula services as a standard benefit. Check your plan for out-of-network reimbursement or HSA/FSA eligibility. Contact your provider directly to confirm what\u2019s covered.",
     faqs: [
@@ -5060,6 +5237,7 @@ export const cities: Record<string, CityData> = {
     // families seeking birth center options may look to nearby New York or Massachusetts.
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Connecticut HUSKY Health (Medicaid) does not cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Stamford families on HUSKY must pay out of pocket for doula services, though some doulas offer sliding-scale fees or payment plans. Contact your HUSKY plan directly to ask about pilot programs.",
     insuranceNote: "Fairfield County\u2019s private insurance landscape (ConnectiCare, Anthem Blue Cross, UnitedHealthcare, Cigna) doesn\u2019t typically cover doula services as a standard benefit, though some employer plans may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage and ask about out-of-network doula reimbursement before booking.",
     faqs: [
@@ -5092,6 +5270,7 @@ export const cities: Record<string, CityData> = {
     // seeking birth center care can access Women's Birth & Wellness Center in Raleigh
     // (listed on raleigh-nc city page). Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 North Carolina Medicaid (NCDHHS) covers doula services as of October 2024. Pregnant and postpartum Medicaid enrollees in Wake County can receive doula support at no cost through enrolled managed care plans. Doulas must register as NC Medicaid providers through NCDHHS to bill for services. Contact your Medicaid managed care plan or NCDHHS to confirm your doula\u2019s enrollment status.",
     insuranceNote: "Most private insurers in the Research Triangle (Blue Cross Blue Shield of NC, Aetna, UnitedHealthcare, Cigna) do not yet cover doula services as a standard benefit, though some employer plans \u2014 particularly those from the area\u2019s major tech employers \u2014 may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5122,6 +5301,7 @@ export const cities: Record<string, CityData> = {
     // The nearest verified birth center is Genesis Birth Centers in Georgetown
     // (see georgetown-tx entry). Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \\u2014 Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children\\u2019s Health Plan) offer limited doula benefits \\u2014 ask your plan directly. For Williamson County\\u2019s STAR managed care plans, contact your plan directly to confirm doula coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Leander area. Austin\\u2019s tech-sector employers increasingly include maternity wellness benefits that may cover doula support \\u2014 check with your HR department. HSA and FSA funds can typically be applied toward out-of-pocket doula costs.",
     faqs: [
@@ -5150,6 +5330,7 @@ export const cities: Record<string, CityData> = {
     // Nearest birth center options are in north Austin and Georgetown (see austin-tx
     // and georgetown-tx entries). Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \\u2014 Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children\\u2019s Health Plan) offer limited doula benefits \\u2014 ask your plan directly. For Williamson/Travis County\\u2019s STAR managed care plans, contact your plan directly to confirm doula coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Pflugerville area. Austin tech employers increasingly offer maternity wellness benefits \\u2014 check with your HR department. HSA and FSA funds can typically supplement out-of-pocket doula costs. Contact your provider directly to confirm what\\u2019s covered.",
     faqs: [
@@ -5178,6 +5359,7 @@ export const cities: Record<string, CityData> = {
     // entry documents Better Birth LLC as the nearest freestanding birth center option
     // in the metro area. Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \\u2014 Utah Medicaid covers doula services as of October 1, 2024, following the passage of HB 222 in the 2024 legislative session. Salt Lake County families on Medicaid are served by Molina Healthcare of Utah, UnitedHealthcare Community Plan, and SelectHealth (Intermountain). Contact Utah Medicaid at 1-866-608-4212 or visit health.utah.gov to confirm your plan\\u2019s doula coverage and find participating doulas.",
     insuranceNote: "Utah\\u2019s Medicaid doula coverage (HB 222, effective October 2024) is a significant win for Salt Lake Valley families. For those with private insurance, employer plans through Intermountain Healthcare, the University of Utah, and tech-sector employers often include maternal wellness benefits \\u2014 ask your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -5207,6 +5389,7 @@ export const cities: Record<string, CityData> = {
     // birth options. Families seeking birth center care typically travel to the
     // DC metro area. Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \\u2014 Virginia Medicaid does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Loudoun County families on Medicaid must pay out of pocket, though some doulas offer sliding-scale fees. Ask your doula about payment plans or reduced-rate options.",
     insuranceNote: "Most private insurers in Northern Virginia (Anthem Blue Cross, UnitedHealthcare, Aetna, Cigna) do not cover doula services as a standard benefit. Loudoun County\\u2019s high-income employer market (Amazon Web Services, Raytheon, Northrop Grumman, government contractors) sometimes includes maternal wellness benefits \\u2014 check with your HR department. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -5235,6 +5418,7 @@ export const cities: Record<string, CityData> = {
     // The nearest birth center options are in the broader Chicago metro (see aurora-il
     // entry for Blossom Birth Center in Naperville, ~30 miles north). Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \\u2014 Illinois covers doula services under Medicaid as of March 2024 via HB 4430, reimbursing approximately $1,587 for full-spectrum doula support. Will County families on Medicaid are served by IA/ACHI, Meridian, Molina, and Blue Cross Community managed care plans. Contact your plan directly to confirm doula benefit enrollment and find participating doulas.",
     insuranceNote: "If you\\u2019re on Illinois Medicaid, doula services are covered at approximately $1,587 per full-spectrum package. For private insurance in the Joliet area, coverage varies \\u2014 some employer plans through Amazon (Joliet fulfillment center), exelon, and county employers include maternal wellness benefits. Ask your insurer about doula reimbursement and request a superbill from your doula for out-of-network submission. HSA and FSA funds can typically supplement any remaining costs.",
     faqs: [
@@ -5263,6 +5447,7 @@ export const cities: Record<string, CityData> = {
     // birth centers (see portland-or entry) are the nearest options, approximately 20-30
     // minutes west. Some Portland birth centers serve Gresham families. Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \\u2014 Oregon Health Plan (OHP) covers doula services for Medicaid members, reimbursing approximately $1,500 for a full-spectrum doula package. Gresham families on OHP are primarily served by Health Share of Oregon and Trillium Community Health Plan. Contact your CCO or visit oregon.gov/dhs to confirm doula benefit enrollment and find participating providers.",
     insuranceNote: "Oregon law requires insurance coverage for licensed midwifery services, including birth center and home births. For doula services specifically, OHP covers full-spectrum support at no cost to the member. Private insurers in the Portland metro (Providence, Kaiser, Regence BlueCross) vary on doula coverage \\u2014 ask your plan directly. HSA and FSA funds can typically supplement any remaining costs.",
     faqs: [
@@ -5291,6 +5476,7 @@ export const cities: Record<string, CityData> = {
     // Bridgeport, CT (Fairfield County). No freestanding birth centers currently operating.
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Connecticut HUSKY Health (Medicaid) does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Bridgeport families on HUSKY must pay out of pocket, though some community organizations like Bridgeport Healthy Start offer free or reduced-cost support.",
     insuranceNote: "Most private insurers in Connecticut (Anthem Blue Cross Blue Shield of CT, ConnectiCare, UnitedHealthcare, Aetna) do not cover doula services as a standard benefit. Some employer plans may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5318,6 +5504,7 @@ export const cities: Record<string, CityData> = {
     ],
     // No freestanding birth centers in Naperville/DuPage County. Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Illinois Medicaid covers doula services as of January 2024 under HB 4430, with reimbursement of approximately $1,587 per pregnancy episode. Naperville families on Medicaid managed care plans can access doula services at no cost. Doulas must enroll as Illinois Medicaid providers through HFS.",
     insuranceNote: "Most private insurers in the Naperville area (BCBS of IL, UnitedHealthcare, Aetna, Cigna) do not yet cover doula services as a standard benefit. Some employer plans may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5345,6 +5532,7 @@ export const cities: Record<string, CityData> = {
     ],
     // No freestanding birth centers in Ann Arbor/Washtenaw County. Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Michigan Medicaid covers doula services as of January 2023, with reimbursement of approximately $1,500 per pregnancy episode. Washtenaw County families on Medicaid can access doula services at no cost. Doulas must register as Michigan Medicaid providers through MDHHS.",
     insuranceNote: "Most private insurers (BCBS of MI, Priority Health, UnitedHealthcare, Aetna) do not yet cover doula services as a standard benefit. Some employer plans \u2014 especially from UM and tech employers \u2014 may offer HSA/FSA reimbursement. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5372,6 +5560,7 @@ export const cities: Record<string, CityData> = {
     ],
     // No freestanding birth centers in Rochester/Olmsted County. Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Minnesota Medicaid (Medical Assistance) covers doula services with one of the strongest programs in the country. Reimbursement is approximately $3,200 per pregnancy episode, with higher rates for doulas serving communities with health disparities. Olmsted County families on Medical Assistance can access doula services at no cost.",
     insuranceNote: "Most private insurers (BCBS of MN, Medica, UnitedHealthcare, Mayo Clinic Health Solutions) do not yet cover doula services as a standard benefit. Some employer plans \u2014 especially from Mayo Clinic and IBM \u2014 may offer HSA/FSA reimbursement. Minnesota\u2019s strong Medicaid doula coverage makes it one of the best states for low-income families to access doula care.",
     faqs: [
@@ -5399,6 +5588,7 @@ export const cities: Record<string, CityData> = {
     ],
     // No freestanding birth centers in Paterson/Passaic County. Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 New Jersey Medicaid (NJ FamilyCare) covers doula services under one of the first-in-the-nation programs, with reimbursement of approximately $1,800 per pregnancy episode. Passaic County families on NJ FamilyCare can access doula services at no cost through enrolled providers.",
     insuranceNote: "Most private insurers in New Jersey (Horizon BCBS of NJ, Aetna, UnitedHealthcare, Cigna) do not yet cover doula services as a standard benefit. Some employer plans may offer HSA/FSA reimbursement. NJ\u2019s Medicaid doula program makes doula care accessible regardless of income.",
     faqs: [
@@ -5426,6 +5616,7 @@ export const cities: Record<string, CityData> = {
     ],
     // No freestanding birth centers in Erie/Erie County. Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Pennsylvania Medicaid covers doula services as of 2024, with reimbursement of approximately $1,350 per pregnancy episode. Erie County families on Medicaid managed care plans can access doula services at no cost. Doulas must enroll as PA Medicaid providers through DHS.",
     insuranceNote: "Most private insurers in the Erie area (UPMC Health Plan, Highmark BCBS, UnitedHealthcare) do not yet cover doula services as a standard benefit. Some employer plans may offer HSA/FSA reimbursement. Erie\u2019s low cost of living means private-pay doula services are more affordable than in Pittsburgh or Philadelphia.",
     faqs: [
@@ -5452,6 +5643,7 @@ export const cities: Record<string, CityData> = {
     ],
     // No freestanding birth centers in Warwick/Kent County. Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Rhode Island Medicaid (RIte Care) covers doula services as of January 2024, with reimbursement of approximately $1,500 per pregnancy episode. Kent County families on RIte Care can access doula services at no cost through enrolled providers. Doulas must register as Rhode Island Medicaid providers through EOHHS.",
     insuranceNote: "Most private insurers in Rhode Island (Blue Cross Blue Shield of RI, UnitedHealthcare, Tufts Health Plan) do not yet cover doula services as a standard benefit. Some employer plans \u2014 particularly those from major Rhode Island employers like Lifespan, CVS Health, and Brown University \u2014 may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5479,6 +5671,7 @@ export const cities: Record<string, CityData> = {
     ],
     // No freestanding birth centers in Scottsdale/Maricopa County. Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "No \u2014 Arizona Medicaid (AHCCCS) does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Maricopa County families on AHCCCS must pay out of pocket for doula services, though some community organizations offer free or reduced-cost support \u2014 ask at your local WIC office.",
     insuranceNote: "Most private insurers in the Phoenix metro (Blue Cross Blue Shield of AZ, UnitedHealthcare, Aetna, Cigna) do not cover doula services as a standard benefit. However, Scottsdale\u2019s concentration of major employers (HonorHealth, CVS Health, Vanguard, Scottsdale Insurance) means some employer plans do offer doula reimbursement or HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5506,6 +5699,7 @@ export const cities: Record<string, CityData> = {
     ],
     // No freestanding birth centers in Chesapeake/Hampton Roads. Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Virginia Medicaid covers doula services as of January 2024, with reimbursement of approximately $1,280 per pregnancy episode. Chesapeake families on Medicaid managed care plans (including Optima Health and Anthem Healthkeepers Plus) can access doula services at no cost through enrolled providers.",
     insuranceNote: "Most private insurers in Hampton Roads (Optima Health, Anthem Blue Cross Blue Shield, UnitedHealthcare) do not yet cover doula services as a standard benefit. Military families with TRICARE should note that TRICARE does not cover doula services. Some employer plans may offer HSA/FSA reimbursement. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5533,6 +5727,7 @@ export const cities: Record<string, CityData> = {
     ],
     // No freestanding birth centers in Bowie/PG County. Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Maryland Medicaid covers doula services as of January 2024, with reimbursement of approximately $1,600 per pregnancy episode. Prince George\u2019s County families on Medicaid managed care plans (including Maryland Healthy Families and UnitedHealthcare Community Plan) can access doula services at no cost through enrolled providers.",
     insuranceNote: "Most private insurers in the DC metro (CareFirst Blue Cross Blue Shield, UnitedHealthcare, Aetna, Cigna) do not yet cover doula services as a standard benefit. However, Bowie\u2019s concentration of federal government and major employer plans means some do offer doula reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5560,6 +5755,7 @@ export const cities: Record<string, CityData> = {
     ],
     // No freestanding birth centers in Lakewood/Jefferson County. Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Colorado Medicaid (Health First Colorado) covers doula services as of 2024, with reimbursement of approximately $1,500 per pregnancy episode (prenatal, labor, and postpartum visits). Jefferson County families on Health First Colorado can access doula services at no cost through enrolled providers.",
     insuranceNote: "Most private insurers in the Denver metro (Kaiser Permanente, UnitedHealthcare, Anthem Blue Cross Blue Shield, Cigna) do not yet cover doula services as a standard benefit. Some employer plans \u2014 particularly those from major Colorado employers like Lockheed Martin, Coors, and the federal government \u2014 may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5588,6 +5784,7 @@ export const cities: Record<string, CityData> = {
     // No freestanding birth centers in Beaverton. Portland birth centers are accessible.
     // Verified 2026-05-28.
     birthCenterDetails: [],
+    localDoulas: [],
     medicaidNote: "Yes \u2014 Oregon Health Plan (OHP) covers doula services with one of the strongest programs in the country, reimbursing approximately $1,500 for a full-spectrum package. Beaverton families on OHP are served by Health Share of Oregon and other Coordinated Care Organizations (CCOs). Contact your CCO to confirm doula benefits and find an enrolled provider.",
     insuranceNote: "Most private insurers in the Portland metro (Kaiser Permanente, Providence Health Plan, Regence BlueCross BlueShield, PacificSource) do not yet cover doula services as a standard benefit. Some employer plans \u2014 particularly those from Nike, Intel, and major tech employers in the Tualatin Valley \u2014 may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
     faqs: [
