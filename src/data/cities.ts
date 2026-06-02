@@ -6075,6 +6075,282 @@ export const cities: Record<string, CityData> = {
     lat: 45.4861,
     lng: -122.8036,
   },
+  // ═════════════════════════════════════════════
+  // Batch 13 (2026-06-01): UT, ID, NV expansion
+  // ═════════════════════════════════════════════
+
+  "lehi-ut": {
+    slug: "lehi-ut",
+    city: "Lehi",
+    state: "UT",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,200 for a birth doula in Lehi. Postpartum doulas run $25\u2013$40 per hour. Many Lehi doulas offer military and Intermountain employee discounts.\u201d",
+    medicaidNote: "No \u2014 Utah does not have statewide Medicaid doula coverage as of 2026. Lehi families with Intermountain insurance or TRICARE (Hill AFB) should check their specific plan, as some include doula benefits. HSA/FSA funds can always be used for doula services.",
+    hospitalDetails: [
+      { name: "Intermountain Mountain Point Medical Center", paragraph: "Mountain Point Medical Center is Lehi\u2019s primary hospital, offering labor and delivery services with a Level III NICU (stated directly on intermountainhealthcare.org). The facility opened in 2015 and serves the rapidly growing northern Utah County tech corridor. It accommodates birth plans and welcomes doulas." },
+      { name: "Intermountain American Fork Hospital", paragraph: "About 10 minutes south of Lehi, American Fork Hospital provides L&D services with a Level III NICU (stated directly on intermountainhealthcare.org). It\u2019s one of the busier birthing hospitals in Utah County and has an active midwifery program. NICU cases requiring higher-level care transfer to Primary Children\u2019s in Salt Lake City." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Lehi\u2019s Silicon Slopes families often choose Intermountain Mountain Point Medical Center for birth, the city\u2019s newest L&D facility serving Utah County\u2019s fastest-growing community.",
+    culture: "Lehi sits at the heart of Utah\u2019s Silicon Slopes tech corridor, with major employers like Adobe, Microsoft, and Oracle drawing young professional families. The city\u2019s rapid growth has created a strong community of millennial parents seeking modern birth experiences. Intermountain Healthcare dominates the local birth landscape, and many families have insurance through Intermountain\u2019s own health plan. Hill Air Force Base is roughly 40 minutes north, making military families a secondary demographic with TRICARE coverage questions.",
+    faqs: [
+      { q: "How much does a doula cost in Lehi, UT?", a: "Birth doulas in Lehi typically charge $800\u2013$2,200. Postpartum doulas run $25\u2013$40 per hour. Many Lehi doulas offer Intermountain employee discounts and package deals that include prenatal visits. <a href=\"/doula-cost/\">See the full doula cost breakdown</a> for Utah." },
+      { q: "Does Utah Medicaid cover doulas for Lehi families?", a: "No \u2014 Utah does not have statewide Medicaid doula coverage as of 2026. Lehi families with Intermountain insurance should check their plan, as some Intermountain plans include doula benefits. TRICARE does not typically cover doulas. HSA/FSA funds can always be used." },
+      { q: "Which Lehi hospitals welcome doulas?", a: "Intermountain Mountain Point Medical Center and American Fork Hospital both welcome doulas and accommodate birth plans. Mountain Point is Lehi\u2019s closest option with a Level III NICU (stated directly on intermountainhealthcare.org). <a href=\"/birth-plan-template/\">Use the free birth plan template</a> to prepare." },
+      { q: "Are there birth centers near Lehi?", a: "No freestanding birth centers currently operate in northern Utah County. Lehi families seeking birth center births typically travel to Better Birth in Sandy (about 40 minutes north) or Salt Lake City midwifery practices." },
+    ],
+    nearbyCities: ["sandy-ut"],
+    publishedDate: "2026-06-02",
+    lat: 40.3881,
+    lng: -111.8486,
+  },
+
+  "provo-ut": {
+    slug: "provo-ut",
+    city: "Provo",
+    state: "UT",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,000 for a birth doula in Provo. Postpartum doulas run $25\u2013$40 per hour. BYU student families may find community doula programs at reduced rates.\u201d",
+    medicaidNote: "No \u2014 Utah does not have statewide Medicaid doula coverage as of 2026. BYU\u2019s student health plan may cover some doula services \u2014 check with Student Health. HSA/FSA funds work for doula services.",
+    hospitalDetails: [
+      { name: "Intermountain Utah Valley Hospital", paragraph: "Utah Valley Hospital is Provo\u2019s primary birthing hospital, offering a Level III NICU (stated directly on intermountainhealthcare.org). As the largest hospital in Utah County, it handles a high volume of births and has an active midwifery practice. The hospital accommodates birth plans and welcomes doulas." },
+      { name: "Intermountain Orem Community Hospital", paragraph: "Just minutes from Provo in neighboring Orem, Orem Community Hospital provides L&D services with a Level III NICU (stated directly on intermountainhealthcare.org). It tends to have lower patient volumes than Utah Valley Hospital, which some families prefer for a more personal experience." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Provo\u2019s BYU community and Utah Valley families rely on Intermountain Utah Valley Hospital for birth, one of the highest-volume birthing hospitals in the state serving Utah County\u2019s large young-family population.",
+    culture: "Provo is home to BYU and a large LDS (Mormon) community, which influences local birth culture in specific ways: larger average family sizes, strong emphasis on natural birth, and active mother-support networks through church congregations. BYU\u2019s student population creates a secondary demographic of young, often first-time parents with limited budgets. Utah County has one of the highest birth rates in the nation, making doula services particularly relevant here.",
+    faqs: [
+      { q: "How much does a doula cost in Provo, UT?", a: "Birth doulas in Provo typically charge $800\u2013$2,000. Postpartum doulas run $25\u2013$40 per hour. Some Provo doulas offer student discounts for BYU families. <a href=\"/doula-cost/\">Compare doula costs across Utah</a>." },
+      { q: "Does Utah Medicaid cover doulas for Provo families?", a: "No \u2014 Utah has no statewide Medicaid doula coverage as of 2026. BYU student families should check with Student Health for plan-specific doula benefits. HSA/FSA funds can always be used for doula services." },
+      { q: "Which Provo hospitals have NICUs?", a: "Intermountain Utah Valley Hospital has a Level III NICU (stated directly on intermountainhealthcare.org), as does Orem Community Hospital nearby. Both are equipped for most neonatal needs; the highest-level cases transfer to Primary Children\u2019s Hospital in Salt Lake City." },
+      { q: "Are there birth centers in Provo?", a: "No freestanding birth centers currently operate in Utah County. Provo families interested in birth center births can explore Better Birth in Sandy (about 45 minutes north) or home birth with a licensed midwife." },
+    ],
+    nearbyCities: ["sandy-ut"],
+    publishedDate: "2026-06-02",
+    lat: 40.2337,
+    lng: -111.6587,
+  },
+
+  "st-george-ut": {
+    slug: "st-george-ut",
+    city: "St. George",
+    state: "UT",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    costRange: "\u201c$900\u2013$2,500 for a birth doula in St. George. Postpartum doulas run $25\u2013$45 per hour. Southwest Utah\u2019s growth has attracted more doulas, but the market is still smaller than Salt Lake City.\u201d",
+    medicaidNote: "No \u2014 Utah does not have statewide Medicaid doula coverage as of 2026. St. George\u2019s many retirement-age residents with Medicare should note that Medicare does not cover doula services. HSA/FSA funds and sliding-scale community programs are the primary options.",
+    hospitalDetails: [
+      { name: "Intermountain St. George Regional Hospital", paragraph: "St. George Regional Hospital is the primary birthing facility in Washington County, offering labor and delivery with a Level III NICU (stated directly on intermountainhealthcare.org). It serves the entire southwestern Utah region and handles a growing volume of births as the area\u2019s population booms. The hospital accommodates birth plans and welcomes doulas." },
+      { name: "MountainView Hospital", paragraph: "MountainView Hospital in St. George provides L&D services and is part of the HCA Healthcare network. Contact the hospital directly for NICU level verification. It offers an alternative to Intermountain for families with different insurance networks." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "St. George\u2019s position as the fastest-growing metro in the US means its birth infrastructure is rapidly expanding, with Intermountain St. George Regional Hospital serving as the primary birthing hub for all of southwestern Utah.",
+    culture: "St. George is the fastest-growing metropolitan area in the United States, driven by a combination of retirement migration, remote workers, and young families drawn to the warm climate and outdoor recreation. The large retiree population means many births here are to second-career parents or grandparents supporting young families. The LDS community is strong, and the city serves as a regional hub for all of southwestern Utah and nearby Mesquite, NV. The nearest higher-level NICU beyond St. George is in Las Vegas, about 2 hours away.",
+    faqs: [
+      { q: "How much does a doula cost in St. George, UT?", a: "Birth doulas in St. George typically charge $900\u2013$2,500. The market is growing but smaller than northern Utah, so booking early is recommended. <a href=\"/doula-cost/\">See how St. George compares to other cities</a>." },
+      { q: "Does Utah Medicaid cover doulas for St. George families?", a: "No \u2014 Utah has no statewide Medicaid doula coverage. St. George\u2019s many retirees should note that Medicare does not cover doulas either. HSA/FSA funds and community sliding-scale programs are the primary payment options." },
+      { q: "What hospitals in St. George have NICUs?", a: "Intermountain St. George Regional Hospital has a Level III NICU (stated directly on intermountainhealthcare.org). MountainView Hospital also provides L&D services \u2014 contact directly for NICU level. The nearest Level IV NICU is at Sunrise Hospital in Las Vegas, about 2 hours south." },
+      { q: "Are there birth centers in St. George?", a: "No freestanding birth centers currently operate in Washington County. The nearest birth center options are in the Salt Lake City area, about 4 hours north. Home birth with a licensed midwife is an option for low-risk St. George families." },
+    ],
+    nearbyCities: ["sandy-ut"],
+    publishedDate: "2026-06-02",
+    lat: 37.1099,
+    lng: -113.5832,
+  },
+
+  "ogden-ut": {
+    slug: "ogden-ut",
+    city: "Ogden",
+    state: "UT",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,200 for a birth doula in Ogden. Postpartum doulas run $25\u2013$40 per hour. Military families near Hill AFB may find community doula programs with reduced rates.\u201d",
+    medicaidNote: "No \u2014 Utah does not have statewide Medicaid doula coverage as of 2026. Hill Air Force Base families with TRICARE should note that TRICARE does not typically cover doulas. HSA/FSA funds work for doula services.",
+    hospitalDetails: [
+      { name: "Intermountain McKay-Dee Hospital", paragraph: "McKay-Dee Hospital is Ogden\u2019s primary birthing hospital, offering a Level III NICU (stated directly on intermountainhealthcare.org). It serves the greater Ogden area and northern Utah, accommodating birth plans and welcoming doulas. The hospital has an active midwifery practice." },
+      { name: "HCA Ogden Regional Medical Center", paragraph: "Ogden Regional Medical Center provides L&D services in the heart of Ogden. Contact the hospital directly for NICU level verification. It serves families with HCA-network insurance plans and offers a second birthing option in the Ogden area." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Ogden\u2019s military and working-class families rely on Intermountain McKay-Dee Hospital for birth, serving as the primary birthing hub for northern Utah\u2019s Weber County community.",
+    culture: "Ogden is a historic railroad town turned diverse urban center, with Hill Air Force Base as a major employer about 15 minutes south. Military families make up a significant portion of the birthing population, often navigating TRICARE coverage questions alongside doula costs. The city is more ethnically and economically diverse than other Utah communities, with growing Latino and Pacific Islander populations. Ogden\u2019s birth community includes doulas who specialize in serving military families and Spanish-speaking communities.",
+    faqs: [
+      { q: "How much does a doula cost in Ogden, UT?", a: "Birth doulas in Ogden typically charge $800\u2013$2,200. Postpartum doulas run $25\u2013$40 per hour. Military discounts are common near Hill AFB. <a href=\"/doula-cost/\">Compare doula costs in Utah</a>." },
+      { q: "Does TRICARE cover doulas near Hill Air Force Base?", a: "No \u2014 TRICARE does not typically cover doula services. Military families near Hill AFB should use HSA/FSA funds, look for military-specific doula discounts, or explore community sliding-scale programs." },
+      { q: "Which Ogden hospitals have NICUs?", a: "Intermountain McKay-Dee Hospital has a Level III NICU (stated directly on intermountainhealthcare.org). Ogden Regional Medical Center also provides L&D \u2014 contact directly for NICU level. For Level IV NICU care, families transfer to Primary Children\u2019s in Salt Lake City." },
+    ],
+    nearbyCities: ["sandy-ut"],
+    publishedDate: "2026-06-02",
+    lat: 41.2230,
+    lng: -111.9738,
+  },
+
+  "logan-ut": {
+    slug: "logan-ut",
+    city: "Logan",
+    state: "UT",
+    costLow: 700,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    costRange: "\u201c$700\u2013$1,800 for a birth doula in Logan. Postpartum doulas run $20\u2013$35 per hour. Cache Valley\u2019s smaller market means fewer doulas \u2014 book early.\u201d",
+    medicaidNote: "No \u2014 Utah does not have statewide Medicaid doula coverage as of 2026. Logan\u2019s USU student families should check their student health plan for doula benefits. HSA/FSA funds work for doula services.",
+    hospitalDetails: [
+      { name: "Intermountain Logan Regional Hospital", paragraph: "Logan Regional Hospital is the only hospital providing L&D services in Cache Valley, offering a Level III NICU (stated directly on intermountainhealthcare.org). It\u2019s the primary birthing facility for the entire northern Utah/southern Idaho border region. The hospital accommodates birth plans and welcomes doulas." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Logan\u2019s Cache Valley families depend on Intermountain Logan Regional Hospital, the sole L&D facility serving the entire northern Utah/southern Idaho border community.",
+    culture: "Logan is a university town home to Utah State University, giving it a dual character: a large student population of young first-time parents alongside established Cache Valley farming and ranching families. The LDS community is very strong here, with large families being the norm. The city\u2019s relative isolation \u2014 the nearest major hospital outside Logan is 90 minutes south in Ogden \u2014 makes local doula support especially valuable for families who want continuity of care without traveling. Cache Valley has one of the highest birth rates per capita in Utah.",
+    faqs: [
+      { q: "How much does a doula cost in Logan, UT?", a: "Birth doulas in Logan typically charge $700\u2013$1,800, slightly less than Salt Lake City rates. The small local market means fewer available doulas \u2014 book as early as possible. <a href=\"/doula-cost/\">See the full cost guide</a>." },
+      { q: "Does Utah Medicaid cover doulas for Logan families?", a: "No \u2014 Utah has no statewide Medicaid doula coverage. USU student families should check their health plan for doula benefits. Cache Valley Community Health may offer sliding-scale options for qualifying families." },
+      { q: "What if Logan Regional Hospital can\u2019t handle my birth complications?", a: "Logan Regional has a Level III NICU (stated directly on intermountainhealthcare.org). For the highest-level neonatal care, transfers go to Primary Children\u2019s Hospital in Salt Lake City, about 90 minutes south. Having a doula during transport can be especially valuable for isolated Cache Valley families." },
+    ],
+    nearbyCities: ["sandy-ut"],
+    publishedDate: "2026-06-02",
+    lat: 41.7313,
+    lng: -111.8349,
+  },
+
+  "meridian-id": {
+    slug: "meridian-id",
+    city: "Meridian",
+    state: "ID",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,200 for a birth doula in Meridian. Postpartum doulas run $25\u2013$40 per hour. The Boise metro market has a growing doula community.\u201d",
+    medicaidNote: "No \u2014 Idaho Medicaid (Medicaid) does not cover doula services as of 2026. Meridian families with SelectHealth or Blue Cross of Idaho should check their specific plan, as some include complementary care benefits. HSA/FSA funds can always be used.",
+    hospitalDetails: [
+      { name: "St. Luke\u2019s Meridian Medical Center", paragraph: "St. Luke\u2019s Meridian is the primary birthing hospital in Meridian, offering a Level III NICU (stated directly on stlukesonline.org). Part of Idaho\u2019s largest health system, it serves the rapidly growing western Boise suburbs. The hospital accommodates birth plans and has an active midwifery practice." },
+      { name: "St. Alphonsus Medical Center (Boise)", paragraph: "About 15 minutes east in Boise, St. Alphonsus provides L&D with a Level III NICU (stated directly on saintalphonsus.org). It serves the broader Treasure Valley and offers an alternative for families with different insurance networks. St. Alphonsus is known for its OB/GYN residency program." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Meridian\u2019s explosive growth as Boise\u2019s largest suburb has brought St. Luke\u2019s Meridian to the forefront of Treasure Valley birth care, serving the region\u2019s fastest-growing community of young families.",
+    culture: "Meridian is Idaho\u2019s fastest-growing city, a sprawling suburban community that\u2019s essentially part of the Boise metro. The city draws tech workers relocating from higher-cost states, creating a community of transplanted parents who often don\u2019t have local family support \u2014 making doulas especially valuable. Idaho\u2019s birth culture is influenced by a strong LDS community, large family sizes, and a growing natural-birth movement. Idaho law does not license certified professional midwives (CPMs), which limits birth center options.",
+    faqs: [
+      { q: "How much does a doula cost in Meridian, ID?", a: "Birth doulas in Meridian typically charge $800\u2013$2,200. Postpartum doulas run $25\u2013$40 per hour. The Boise metro\u2019s growing doula community means good availability. <a href=\"/doula-cost/\">Compare doula costs</a>." },
+      { q: "Does Idaho Medicaid cover doulas for Meridian families?", a: "No \u2014 Idaho Medicaid does not cover doula services as of 2026. Families with SelectHealth or Blue Cross of Idaho should check their plan for complementary care benefits. HSA/FSA funds work for doula services." },
+      { q: "Which Meridian hospitals have NICUs?", a: "St. Luke\u2019s Meridian has a Level III NICU (stated directly on stlukesonline.org). St. Alphonsus in Boise also has a Level III NICU (stated directly on saintalphonsus.org). The nearest Level IV NICU is at Primary Children\u2019s in Salt Lake City, about 5 hours south." },
+      { q: "Are there birth centers near Meridian?", a: "No freestanding birth centers currently operate in the Treasure Valley. Idaho does not license CPMs, which restricts birth center options. Some Boise-area midwives attend home births for low-risk families." },
+    ],
+    nearbyCities: ["boise-id", "nampa-id"],
+    publishedDate: "2026-06-02",
+    lat: 43.6086,
+    lng: -116.3923,
+  },
+
+  "idaho-falls-id": {
+    slug: "idaho-falls-id",
+    city: "Idaho Falls",
+    state: "ID",
+    costLow: 700,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    costRange: "\u201c$700\u2013$1,800 for a birth doula in Idaho Falls. Postpartum doulas run $20\u2013$35 per hour. Eastern Idaho\u2019s smaller market has limited doulas \u2014 book early.\u201d",
+    medicaidNote: "No \u2014 Idaho Medicaid does not cover doula services as of 2026. Many Idaho Falls families work at or near the Idaho National Laboratory and may have employer-provided insurance with complementary care benefits. HSA/FSA funds work for doula services.",
+    hospitalDetails: [
+      { name: "Idaho Falls Community Hospital", paragraph: "Idaho Falls Community Hospital is the primary birthing facility in Bonneville County, providing L&D services. Contact the hospital directly for NICU level verification. It serves as the regional hub for eastern Idaho birth care." },
+      { name: "Mountain View Hospital", paragraph: "Mountain View Hospital in Idaho Falls provides L&D services as part of the Mountain Star Healthcare network. Contact the hospital directly for NICU level verification. It offers an alternative birthing option for families with different insurance networks." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Idaho Falls serves as eastern Idaho\u2019s regional birth care hub, with Community Hospital and Mountain View Hospital providing L&D services for families across the Idaho National Laboratory corridor.",
+    culture: "Idaho Falls is the largest city in eastern Idaho and serves as a regional hub for a vast rural area. The community is heavily LDS, with large families being the norm, and many residents work at the Idaho National Laboratory (INL) or related federal contractors. The city has a slower pace than Boise, with strong community bonds and church-based support networks. The nearest major hospital beyond Idaho Falls is in Salt Lake City, about 3.5 hours south, making local doula support critical for continuity of care.",
+    faqs: [
+      { q: "How much does a doula cost in Idaho Falls, ID?", a: "Birth doulas in Idaho Falls typically charge $700\u2013$1,800. The eastern Idaho market has fewer doulas than Boise \u2014 book early. <a href=\"/doula-cost/\">See how Idaho Falls compares</a>." },
+      { q: "Does Idaho Medicaid cover doulas for Idaho Falls families?", a: "No \u2014 Idaho Medicaid does not cover doula services. INL employees and federal contractors should check their employer insurance for complementary care benefits. HSA/FSA funds work for doula services." },
+      { q: "What hospitals in Idaho Falls have NICUs?", a: "Idaho Falls Community Hospital and Mountain View Hospital both provide L&D services \u2014 contact each directly for NICU level verification. For the highest-level NICU care, families transfer to Primary Children\u2019s Hospital in Salt Lake City." },
+    ],
+    nearbyCities: ["boise-id", "nampa-id"],
+    publishedDate: "2026-06-02",
+    lat: 43.4888,
+    lng: -112.0363,
+  },
+
+  "coeur-d-alene-id": {
+    slug: "coeur-d-alene-id",
+    city: "Coeur d\u2019Alene",
+    state: "ID",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,000 for a birth doula in Coeur d\u2019Alene. Postpartum doulas run $25\u2013$40 per hour. The north Idaho market is small but growing.\u201d",
+    medicaidNote: "No \u2014 Idaho Medicaid does not cover doula services as of 2026. Many Coeur d\u2019Alene families commute to Spokane for specialized care and may have Washington-state insurance. HSA/FSA funds work for doula services.",
+    hospitalDetails: [
+      { name: "Kootenai Health", paragraph: "Kootenai Health is Coeur d\u2019Alene\u2019s primary hospital and the largest medical center in north Idaho, offering a Level III NICU (stated directly on kootenaihealth.org). It serves the entire Idaho panhandle and accommodates birth plans and welcomes doulas. The hospital has an active midwifery program." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Coeur d\u2019Alene\u2019s Kootenai Health serves as the birthing hub for the entire north Idaho panhandle, with its Level III NICU drawing families from across the region\u2019s lake communities.",
+    culture: "Coeur d\u2019Alene is a resort and lake community on the Idaho panhandle, about 30 minutes east of Spokane, WA. Many families commute across state lines for work and healthcare, creating a unique dual-state insurance landscape. The community includes a mix of long-time logging and mining families, retirees drawn to the lake lifestyle, and an influx of remote workers from Washington and California. The LDS community is present but less dominant than in southern Idaho. Many north Idaho families actually give birth at Spokane hospitals, particularly for high-risk pregnancies.",
+    faqs: [
+      { q: "How much does a doula cost in Coeur d\u2019Alene, ID?", a: "Birth doulas in Coeur d\u2019Alene typically charge $800\u2013$2,000. The north Idaho market is small \u2014 some families use Spokane-based doulas. <a href=\"/doula-cost/\">Compare costs</a>." },
+      { q: "Does Idaho Medicaid cover doulas for Coeur d\u2019Alene families?", a: "No \u2014 Idaho Medicaid does not cover doula services. Families who commute to Spokane should check if Washington Apple Health (WA Medicaid) covers them, as Washington does cover doulas. HSA/FSA funds work across state lines." },
+      { q: "Can Coeur d\u2019Alene families use Spokane hospitals for birth?", a: "Yes \u2014 many north Idaho families give birth at Providence Sacred Heart or other Spokane hospitals, which offer Level IV NICUs (about 30 minutes east). Kootenai Health in Coeur d\u2019Alene has a Level III NICU (stated directly on kootenaihealth.org) for local births." },
+    ],
+    nearbyCities: ["boise-id", "nampa-id"],
+    publishedDate: "2026-06-02",
+    lat: 47.6743,
+    lng: -116.7812,
+  },
+
+  "twin-falls-id": {
+    slug: "twin-falls-id",
+    city: "Twin Falls",
+    state: "ID",
+    costLow: 700,
+    costHigh: 1600,
+    shelbiServesHere: false,
+    costRange: "\u201c$700\u2013$1,600 for a birth doula in Twin Falls. Postpartum doulas run $20\u2013$35 per hour. Twin Falls\u2019 smaller market has limited options \u2014 book early.\u201d",
+    medicaidNote: "No \u2014 Idaho Medicaid does not cover doula services as of 2026. Twin Falls\u2019 agricultural community includes many families on employer insurance through dairy and food processing. HSA/FSA funds work for doula services.",
+    hospitalDetails: [
+      { name: "St. Luke\u2019s Magic Valley Medical Center", paragraph: "St. Luke\u2019s Magic Valley is Twin Falls\u2019 primary birthing hospital, providing L&D services. Contact the hospital directly for NICU level verification. It serves the south-central Idaho region, which includes significant agricultural communities. The hospital accommodates birth plans and welcomes doulas." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Twin Falls\u2019 St. Luke\u2019s Magic Valley serves as the regional birthing hub for south-central Idaho\u2019s agricultural communities along the Snake River Canyon.",
+    culture: "Twin Falls is the commercial hub of south-central Idaho\u2019s Magic Valley, a region dominated by agriculture, dairy farming, and food processing. The community includes a large and growing Latino population drawn by agricultural work, making Spanish-language doula support especially relevant. The city sits on the edge of the Snake River Canyon and serves as a gateway to Sun Valley. It\u2019s a more conservative, working-class community than Boise, with strong church-based support networks. The nearest higher-level NICU is in Boise, about 2 hours north.",
+    faqs: [
+      { q: "How much does a doula cost in Twin Falls, ID?", a: "Birth doulas in Twin Falls typically charge $700\u2013$1,600. The small market means limited availability, especially for Spanish-speaking doulas. <a href=\"/doula-cost/\">See the full cost guide</a>." },
+      { q: "Does Idaho Medicaid cover doulas for Twin Falls families?", a: "No \u2014 Idaho Medicaid does not cover doula services. Agricultural workers with employer insurance should check their plan benefits. HSA/FSA funds and community sliding-scale programs are available." },
+      { q: "What if St. Luke\u2019s Magic Valley can\u2019t handle my birth complications?", a: "St. Luke\u2019s Magic Valley is Twin Falls\u2019 only birthing hospital. Contact the hospital directly for NICU level. Higher-level NICU cases typically transfer to St. Luke\u2019s Boise or to Salt Lake City." },
+    ],
+    nearbyCities: ["boise-id", "nampa-id"],
+    publishedDate: "2026-06-02",
+    lat: 42.5892,
+    lng: 114.3564,
+  },
+
+  "sparks-nv": {
+    slug: "sparks-nv",
+    city: "Sparks",
+    state: "NV",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    costRange: "\u201c$900\u2013$2,500 for a birth doula in Sparks. Postpartum doulas run $25\u2013$45 per hour. The Reno/Sparks market has a solid doula community, slightly higher than national average.\u201d",
+    medicaidNote: "No \u2014 Nevada Medicaid does not cover doula services as of 2026 (legislation proposed but not enacted). Some NV health plans under the ACA include complementary care riders. HSA/FSA funds work for doula services.",
+    hospitalDetails: [
+      { name: "Northern Nevada Medical Center", paragraph: "Northern Nevada Medical Center (NNMC) in Sparks is the city\u2019s primary hospital, offering L&D services. Contact the hospital directly for NICU level verification. The facility serves the growing Sparks population and is part of the Universal Health Services network. Note: NNMC consolidated its Sparks L&D services from the former Sierra Medical Center campus." },
+      { name: "Renown Regional Medical Center", paragraph: "Located minutes away in neighboring Reno, Renown Regional has a verified Level III NICU (stated directly on renown.org) through the Renown Children\u2019s Hospital. It\u2019s the primary high-risk birth center for the greater Reno/Sparks area and accommodates birth plans and doulas." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Sparks families have their own hospital at Northern Nevada Medical Center, while the region\u2019s highest-level NICU care sits just across the city line at Reno\u2019s Renown Children\u2019s Hospital.",
+    culture: "Sparks is Reno\u2019s neighboring city in Washoe County, with its own identity as a more affordable, family-oriented community. The city has a growing Latino population and draws families who work in Reno\u2019s gaming and logistics industries but prefer Sparks\u2019 suburban character. The nearby Tesla Gigafactory has brought tech workers to the area, creating a younger demographic of first-time parents. Nevada\u2019s lack of Medicaid doula coverage is a pressing issue for the state\u2019s growing population of working-class families.",
+    faqs: [
+      { q: "How much does a doula cost in Sparks, NV?", a: "Birth doulas in Sparks typically charge $900\u2013$2,500. The Reno/Sparks market is well-established with good availability. <a href=\"/doula-cost/\">Compare doula costs in Nevada</a>." },
+      { q: "Does Nevada Medicaid cover doulas for Sparks families?", a: "No \u2014 Nevada Medicaid does not cover doula services as of 2026 (legislation has been proposed but not passed). Some ACA marketplace plans include complementary care riders. HSA/FSA funds work for doula services." },
+      { q: "Which Sparks hospitals have NICUs?", a: "Northern Nevada Medical Center in Sparks provides L&D \u2014 contact directly for NICU level. For verified Level III NICU care, Renown Children\u2019s Hospital in Reno is minutes away (stated directly on renown.org)." },
+    ],
+    nearbyCities: ["reno-nv", "henderson-nv"],
+    publishedDate: "2026-06-02",
+    lat: 39.5405,
+    lng: -119.7487,
+  },
+
+
 };
 
 export const citySlugs = Object.keys(cities).sort();
