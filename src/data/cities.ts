@@ -6906,6 +6906,595 @@ export const cities: Record<string, CityData> = {
     lng: -104.8253,
   },
 
+  // ═══════════════════════════════════════
+  // Batch 16 — Wisconsin cities
+  // ═══════════════════════════════════════
+
+  "green-bay-wi": {
+    slug: "green-bay-wi",
+    city: "Green Bay",
+    state: "WI",
+    costLow: 700,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    costRange: "\u201c$700\u2013$2,000 for a birth doula in Green Bay. Postpartum doulas run $25\u2013$40 per hour. The Fox Valley market is smaller than Milwaukee but growing steadily.\u201d",
+    medicaidNote: "No \u2014 Wisconsin Medicaid (BadgerCare Plus) does not cover doula services as of June 2026. Wisconsin is not among states with active Medicaid doula reimbursement. Brown County families on BadgerCare Plus are served by managed care plans including Molina Healthcare, UnitedHealthcare Community Plan, and Anthem BCBS (Elevance).",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Green Bay area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm. Green Bay's employer market (Kohler, Georgia-Pacific, Schneider National) sometimes includes maternal wellness benefits — check with your HR department.",     hospitalDetails: [
+      { name: "HSHS St. Vincent Hospital", paragraph: "HSHS St. Vincent Hospital, on South Webster Avenue in Green Bay, is the region\u2019s primary birthing hospital with a Level III NICU (stated directly on hshs.org). It serves as the referral center for the greater Green Bay and Fox Valley area and handles high-risk pregnancies from across northeastern Wisconsin. The hospital accommodates birth plans and welcomes doulas. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to walk in prepared." },
+      { name: "Bellin Hospital", paragraph: "Bellin Hospital, on East Mason Street in Green Bay, is the other major birthing hospital in the area with a strong women\u2019s health program and a Level III NICU (stated directly on bellin.org). Bellin is known for a more personal, community-hospital feel compared to the larger St. Vincent campus. It accommodates birth plans and welcomes doulas as part of your support team." }
+    ],
+        // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Green Bay (Brown County). Google Maps search "birth center Green Bay WI" found
+    // no operational freestanding birth centers. Home-birth midwifery practices exist.
+    // Verified 2026-06-15.
+    birthCenterDetails: [],
+    heroLocalDetail: "Green Bay sits at the head of the Fox River where it empties into Green Bay, and families across northeastern Wisconsin \u2014 from Door County to the Upper Peninsula of Michigan \u2014 travel to St. Vincent or Bellin for delivery. US-41 and I-41 are your main arteries, and game-day traffic around Lambeau Field can back up I-41 for miles; if you\u2019re due during football season, have your hospital route mapped out before contractions start. The Fox River Trail along the waterfront and the paths at Bay Beach Wildlife Sanctuary are popular third-trimester walking spots \u2014 flat, quiet, and within 15 minutes of both hospitals.",
+    culture: "Green Bay is a mid-sized, family-oriented city shaped by its Packers fandom, paper-mill heritage, and strong Catholic and Lutheran communities. The city has a large Hmong population \u2014 one of the highest concentrations in the US \u2014 and culturally concordant doula support is both essential and limited. The birth community here is small but committed, with doulas who serve the entire Fox Valley corridor. Green Bay\u2019s relative isolation from Milwaukee (2 hours south) and Madison (2.5 hours southwest) means local birth support really matters.",
+    faqs: [
+      { q: "How much does a doula cost in Green Bay, WI?", a: "Birth doulas in Green Bay typically charge $700\u2013$2,000. The Fox Valley market is smaller than Milwaukee, so start your search early. <a href=\"/doula-cost/\">Compare Wisconsin costs</a>." },
+      { q: "Does Wisconsin Medicaid cover doulas for Green Bay families?", a: "Not yet \u2014 Wisconsin\u2019s BadgerCare Plus does not cover doula services as of June 2026. Call your managed care plan and ask about doula benefits \u2014 some may offer limited coverage on their own. You can reach BadgerCare Plus at 1-800-362-3002." },
+      { q: "Which Green Bay hospitals have NICUs?", a: "HSHS St. Vincent Hospital and Bellin Hospital both have Level III NICUs (stated directly on hshs.org and bellin.org respectively), serving the greater Green Bay and Fox Valley area. Children\u2019s Wisconsin in Milwaukee, about 2 hours south, provides Level IV NICU care for the most complex cases." },
+      { q: "Does True Joy Birthing work with Green Bay families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Green Bay birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["milwaukee-wi", "appleton-wi", "oshkosh-wi"],
+    publishedDate: "2026-06-15",
+    lat: 44.5133,
+    lng: -88.0133,
+  },
+
+  "madison-wi": {
+    slug: "madison-wi",
+    city: "Madison",
+    state: "WI",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,200 for a birth doula in Madison. Postpartum doulas run $25\u2013$45 per hour. The Madison market benefits from a strong progressive birth community and university-informed parents.\u201d",
+    medicaidNote: "No \u2014 Wisconsin Medicaid (BadgerCare Plus) does not cover doula services as of June 2026. Dane County families on BadgerCare Plus are served by managed care plans including Group Health Cooperative\u2013South Central Wisconsin, Molina Healthcare, and UnitedHealthcare Community Plan.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Madison area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm. Madison's university and state-government employer market often includes maternal wellness benefits — check with your HR department.",     hospitalDetails: [
+      { name: "UnityPoint Health\u2013Meriter Hospital", paragraph: "UnityPoint Health\u2013Meriter, on South Park Street near downtown Madison, is the city\u2019s primary birthing hospital with a Level III NICU (stated directly on unitypoint.org). It\u2019s adjacent to the UW Health campus and handles the highest volume of births in Dane County. Meriter accommodates birth plans and welcomes doulas as part of your care team. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to walk in prepared." },
+      { name: "UW Health UnityPoint Health\u2013Meriter (combined campus)", paragraph: "UW Health physicians deliver at Meriter, making this the go-to for families with UW Health providers. The proximity to American Family Children\u2019s Hospital provides access to pediatric subspecialty care. If you\u2019re delivering here, having your birth plan ready helps you navigate a busy hospital that serves the entire south-central Wisconsin region." }
+    ],
+    birthCenterDetails: [
+      { name: "Madison Birth Center", paragraph: "Madison Birth Center is the only freestanding birth center in the Madison area, offering midwife-led birth in a lower-intervention setting for low-risk pregnancies. It\u2019s the birth center option that Milwaukee doesn\u2019t have \u2014 and having a doula who knows the birth center\u2019s transfer protocols with Meriter makes the experience feel more supported. Call ahead to confirm availability and schedule a tour." }
+    ],
+    heroLocalDetail: "Madison is built on an isthmus between Lake Mendota and Lake Monona, and Meriter Hospital sits on South Park Street about 10 minutes from downtown. The Beltline (US-12/18) on the south side and University Avenue on the north are your main arteries \u2014 the Beltline between Whitney Way and Monona Drive backs up hard during afternoon rush, so if you\u2019re coming from the west side, know your back-route through the neighborhood grid. The paths along Lake Monona and Lake Mendota \u2014 especially the Howard Temin Lakeshore Path and Brittingham Park \u2014 are where Madison moms walk in the third trimester, flat and breezy off the water. The isthmus neighborhoods around Marquette, Tenney-Lapham, and Willy Street are where you\u2019ll find most young families.",
+    culture: "Madison is Wisconsin\u2019s progressive capital and a university town with one of the most educated birth populations in the Midwest. Home to UW-Madison and the state Capitol, the city attracts research-minded parents who value evidence-based birth practices, midwifery care, and informed decision-making. Madison Birth Center is the only freestanding birth center serving the Madison metro, and the local doula community is one of the strongest in Wisconsin. The Hmong and Latino communities on the south and east sides need culturally concordant support that remains limited relative to demand.",
+    faqs: [
+      { q: "How much does a doula cost in Madison, WI?", a: "Birth doulas in Madison typically charge $800\u2013$2,200. The university community means there\u2019s good availability and a range of price points. <a href=\"/doula-cost/\">Compare Wisconsin costs</a>." },
+      { q: "Does Wisconsin Medicaid cover doulas for Madison families?", a: "Not yet \u2014 BadgerCare Plus does not cover doula services as of June 2026. Call your managed care plan to ask about doula benefits \u2014 some Dane County plans may offer limited coverage. Reach BadgerCare Plus at 1-800-362-3002." },
+      { q: "Does Madison have a birth center?", a: "Yes \u2014 Madison Birth Center is the only freestanding birth center in the Madison area, offering midwife-led birth in a lower-intervention setting. It\u2019s a significant advantage over Milwaukee, which has no birth centers. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." },
+      { q: "Which Madison hospitals have NICUs?", a: "UnityPoint Health\u2013Meriter has a Level III NICU (stated directly on unitypoint.org). For Level IV NICU care, children with the most complex needs are transferred to American Family Children\u2019s Hospital on the adjacent campus or to Children\u2019s Wisconsin in Milwaukee, about 1.5 hours east." },
+      { q: "Does True Joy Birthing work with Madison families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Madison birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["milwaukee-wi", "la-crosse-wi"],
+    publishedDate: "2026-06-15",
+    lat: 43.0731,
+    lng: -89.4012,
+  },
+
+  "racine-wi": {
+    slug: "racine-wi",
+    city: "Racine",
+    state: "WI",
+    costLow: 700,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    costRange: "\u201c$700\u2013$1,800 for a birth doula in Racine. Postpartum doulas run $25\u2013$38 per hour. Racine\u2019s market is smaller and more affordable than Milwaukee, about 30 minutes north.\u201d",
+    medicaidNote: "No \u2014 Wisconsin Medicaid (BadgerCare Plus) does not cover doula services as of June 2026. Racine County families on BadgerCare Plus are served by managed care plans including Molina Healthcare, UnitedHealthcare Community Plan, and Anthem BCBS (Elevance).",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Racine area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",     hospitalDetails: [
+      { name: "Ascension All Saints Hospital", paragraph: "Ascension All Saints Hospital, on Spring Street in Racine, is the city\u2019s primary birthing hospital with a Level III NICU (contact the hospital directly for current level verification). It serves Racine County families and accommodates birth plans and welcomes doulas. If you\u2019re delivering at All Saints, having your birth plan ready helps you navigate a busy community hospital that serves a diverse population. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Aurora St. Luke\u2019s South Shore (nearby Cudahy)", paragraph: "Some Racine families choose to deliver at Aurora St. Luke\u2019s South Shore in Cudahy, about 20 minutes north, which provides additional L&D capacity for families in the southern Milwaukee suburbs. Contact the hospital directly for NICU level verification." }
+    ],
+        // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Racine (Racine County). Google Maps search "birth center Racine WI" found
+    // no operational freestanding birth centers. Nearest birth center is Madison Birth Center (~80 mi west).
+    // Verified 2026-06-15.
+    birthCenterDetails: [],
+    heroLocalDetail: "Racine sits on Lake Michigan about 30 minutes south of Milwaukee along I-94, and most families deliver at Ascension All Saints on Spring Street. If you\u2019re coming from the west side or Mount Pleasant, Highway 20 (Washington Avenue) gets you to the hospital faster than surface streets during rush. The Root River Pathway and the lakefront trails at North Beach and Zoo Beach are popular third-trimester walks \u2014 flat, paved, and off-water breezes that make summer heat bearable. Downtown Racine and the neighborhoods near the lake are where you\u2019ll find many young families.",
+    culture: "Racine is a working-class, diverse lakefront city with a large Latino community and deep industrial roots \u2014 S.C. Johnson, Modine, and Case Corporation built this town. The birth community here is small, and many Racine families either hire a Racine-based doula or pull from the larger Milwaukee pool 30 minutes north. Racine has one of Wisconsin\u2019s highest proportions of Spanish-speaking families, making bilingual doula support both critical and undersupplied.",
+    faqs: [
+      { q: "How much does a doula cost in Racine, WI?", a: "Birth doulas in Racine typically charge $700\u2013$1,800. If local availability is limited, Milwaukee doulas often serve Racine families, sometimes with a modest travel fee. <a href=\"/doula-cost/\">Compare Wisconsin costs</a>." },
+      { q: "Does Wisconsin Medicaid cover doulas for Racine families?", a: "Not yet \u2014 BadgerCare Plus does not cover doula services as of June 2026. Contact your managed care plan to ask about doula benefits. Reach BadgerCare Plus at 1-800-362-3002." },
+      { q: "Which Racine hospitals accommodate birth plans?", a: "Ascension All Saints Hospital is Racine\u2019s primary birthing hospital and accommodates birth plans and welcomes doulas. Some families also deliver at Aurora St. Luke\u2019s South Shore in Cudahy or at Milwaukee hospitals, about 30 minutes north." },
+      { q: "Does True Joy Birthing work with Racine families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Racine birth setting. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["milwaukee-wi", "kenosha-wi"],
+    publishedDate: "2026-06-15",
+    lat: 42.7261,
+    lng: -87.7829,
+  },
+
+  "kenosha-wi": {
+    slug: "kenosha-wi",
+    city: "Kenosha",
+    state: "WI",
+    costLow: 700,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    costRange: "\u201c$700\u2013$1,800 for a birth doula in Kenosha. Postpartum doulas run $25\u2013$38 per hour. Kenosha straddles the Milwaukee and Chicago markets, giving families more options.\u201d",
+    medicaidNote: "No \u2014 Wisconsin Medicaid (BadgerCare Plus) does not cover doula services as of June 2026. Kenosha County families on BadgerCare Plus are served by managed care plans including Molina Healthcare and UnitedHealthcare Community Plan.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Kenosha area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm. Kenosha families with Illinois employers may have different coverage options.",     hospitalDetails: [
+      { name: "Froedtert Holy Family Hospital", paragraph: "Froedtert Holy Family Hospital, on 80th Avenue in Kenosha, is the city\u2019s primary birthing hospital with an NICU (contact the hospital directly for current NICU level verification). Part of the Froedtert & Medical College of Wisconsin system, it serves Kenosha County families and accommodates birth plans and welcomes doulas. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Aurora Medical Center Kenosha", paragraph: "Aurora Medical Center Kenosha, on 75th Street, provides an alternative birthing option for Kenosha families within the Advocate Aurora system. Contact the hospital directly for NICU level verification. Having two hospital systems in a city this size gives Kenosha families options that most Wisconsin cities don\u2019t have." }
+    ],
+        // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Kenosha (Kenosha County). Google Maps search "birth center Kenosha WI" found
+    // no operational freestanding birth centers. Verified 2026-06-15.
+    birthCenterDetails: [],
+    heroLocalDetail: "Kenosha sits right on the Illinois\u2013Wisconsin state line along I-94, about 35 minutes south of Milwaukee and 60 minutes north of Chicago \u2014 and that position gives families access to both markets. The hospital district near 75th Street and 80th Avenue is easily reachable from anywhere in the city, and I-94 connects Kenosha to both Milwaukee and Chicago hospitals if you need a higher level of care. The Kenosha lakefront and Simonsen Park are popular third-trimester walking spots. Neighborhoods around Kenosha\u2019s downtown and the newer subdivisions on the west side are where most young families live.",
+    culture: "Kenosha is a blue-collar lakefront city that straddles the Milwaukee and Chicagoland metros, and its birth culture reflects that dual identity. Many Kenosha parents commute south to Illinois for work, and the city\u2019s healthcare access benefits from proximity to both Froedtert and Advocate Aurora systems. The local doula community draws from both Milwaukee and Chicago-area practitioners. Kenosha\u2019s diverse population \u2014 including a growing Latino community and historically Black neighborhoods on the north side \u2014 needs culturally concordant birth support that remains limited.",
+    faqs: [
+      { q: "How much does a doula cost in Kenosha, WI?", a: "Birth doulas in Kenosha typically charge $700\u2013$1,800. Because Kenosha sits between Milwaukee and Chicago, you may also find doulas from both markets who serve Kenosha families. <a href=\"/doula-cost/\">Compare Wisconsin costs</a>." },
+      { q: "Does Wisconsin Medicaid cover doulas for Kenosha families?", a: "Not yet \u2014 BadgerCare Plus does not cover doula services as of June 2026. Contact your managed care plan to ask about doula benefits. For Illinois-based coverage, note that Illinois Medicaid does cover doulas \u2014 but only for Illinois residents." },
+      { q: "Which Kenosha hospitals accommodate birth plans?", a: "Froedtert Holy Family Hospital and Aurora Medical Center Kenosha both accommodate birth plans and welcome doulas. Kenosha families also access Froedtert Hospital in Wauwatosa (Milwaukee) for higher-level NICU care." },
+      { q: "Does True Joy Birthing work with Kenosha families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Kenosha birth setting. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["milwaukee-wi", "racine-wi"],
+    publishedDate: "2026-06-15",
+    lat: 42.5847,
+    lng: -87.8212,
+  },
+
+  "waukesha-wi": {
+    slug: "waukesha-wi",
+    city: "Waukesha",
+    state: "WI",
+    costLow: 750,
+    costHigh: 2100,
+    shelbiServesHere: false,
+    costRange: "\u201c$750\u2013$2,100 for a birth doula in Waukesha. Postpartum doulas run $25\u2013$42 per hour. Waukesha\u2019s suburban market sits between Milwaukee and Madison pricing.\u201d",
+    medicaidNote: "No \u2014 Wisconsin Medicaid (BadgerCare Plus) does not cover doula services as of June 2026. Waukesha County families on BadgerCare Plus are served by managed care plans including Molina Healthcare, UnitedHealthcare Community Plan, and Anthem BCBS (Elevance).",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Waukesha area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm. Waukesha County's large employer market (GE Healthcare, Kohl's corporate, Quad/Graphics) sometimes includes maternal wellness benefits — check with your HR department.",     hospitalDetails: [
+      { name: "ProHealth Waukesha Memorial Hospital", paragraph: "ProHealth Waukesha Memorial Hospital, on Hadley Street in Waukesha, is the city\u2019s primary birthing hospital with an NICU (contact the hospital directly for current NICU level verification). It serves Waukesha County families and accommodates birth plans and welcomes doulas. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Aurora Medical Center Summit (nearby)", paragraph: "Aurora Medical Center in Summit, about 10 minutes west of Waukesha, provides an alternative birthing option in the Advocate Aurora system. Many Waukesha families also deliver at Aurora St. Luke\u2019s in Milwaukee, about 25 minutes east on I-94, which has a verified Level III NICU." }
+    ],
+        // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Waukesha (Waukesha County). Google Maps search "birth center Waukesha WI" found
+    // no operational freestanding birth centers. Verified 2026-06-15.
+    birthCenterDetails: [],
+    heroLocalDetail: "Waukesha sits about 20 miles west of Milwaukee along I-94, and most families deliver locally at ProHealth Waukesha Memorial or drive 25 minutes east to Aurora St. Luke\u2019s for a Level III NICU. I-94 between Waukesha and Milwaukee backs up during rush \u2014 if your OB delivers at an east-side Milwaukee hospital, know your route and timing. The Fox Riverwalk through downtown Waukesha and the trails at Minooka Park are popular third-trimester walking spots. The Brookfield and New Berlin areas just east of Waukesha are where many young suburban families cluster.",
+    culture: "Waukesha is the seat of Wisconsin\u2019s richest county and a fast-growing suburb of Milwaukee with a strong family demographic. The city blends a historic downtown with sprawling new subdivisions on the west side, and the birth community here draws from Milwaukee\u2019s larger doula pool. Waukesha County\u2019s employer market (GE Healthcare, Kohl\u2019s corporate, Quad/Graphics) includes many families with good private insurance, while the city\u2019s working-class neighborhoods need affordable doula options. The lack of a freestanding birth center in Waukesha means hospital birth is the primary option.",
+    faqs: [
+      { q: "How much does a doula cost in Waukesha, WI?", a: "Birth doulas in Waukesha typically charge $750\u2013$2,100. Many Milwaukee-based doulas serve Waukesha families without a travel fee since it\u2019s only 20 minutes away. <a href=\"/doula-cost/\">Compare Wisconsin costs</a>." },
+      { q: "Does Wisconsin Medicaid cover doulas for Waukesha families?", a: "Not yet \u2014 BadgerCare Plus does not cover doula services as of June 2026. Waukesha County\u2019s employer-based insurance market sometimes includes maternal wellness benefits \u2014 check with your HR department. Reach BadgerCare Plus at 1-800-362-3002." },
+      { q: "Which Waukesha hospitals have NICUs?", a: "ProHealth Waukesha Memorial provides L&D with an NICU (contact directly for level verification). For a verified Level III NICU, Aurora St. Luke\u2019s in Milwaukee is about 25 minutes east. Children\u2019s Wisconsin in Milwaukee provides Level IV NICU care." },
+      { q: "Does True Joy Birthing work with Waukesha families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Waukesha birth setting. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["milwaukee-wi", "madison-wi"],
+    publishedDate: "2026-06-15",
+    lat: 43.0118,
+    lng: -88.2315,
+  },
+
+  "eau-claire-wi": {
+    slug: "eau-claire-wi",
+    city: "Eau Claire",
+    state: "WI",
+    costLow: 700,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    costRange: "\u201c$700\u2013$1,800 for a birth doula in Eau Claire. Postpartum doulas run $25\u2013$38 per hour. The Chippewa Valley market is small but growing.\u201d",
+    medicaidNote: "No \u2014 Wisconsin Medicaid (BadgerCare Plus) does not cover doula services as of June 2026. Eau Claire County families on BadgerCare Plus are served by managed care plans including Molina Healthcare and Security Health Plan.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Eau Claire area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",     hospitalDetails: [
+      { name: "Mayo Clinic Health System \u2013 Eau Claire Hospital", paragraph: "Mayo Clinic Health System in Eau Claire, on Luther Drive on the city\u2019s west side, is the primary birthing hospital for the Chippewa Valley with an NICU (contact the hospital directly for current NICU level verification). Being part of the Mayo system means families benefit from evidence-based protocols and potential referral access to Mayo\u2019s Level IV NICU in Rochester, MN, about 90 miles west. The hospital accommodates birth plans and welcomes doulas. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "HSHS Sacred Heart Hospital", paragraph: "HSHS Sacred Heart Hospital, on Clairemont Avenue in Eau Claire, provides L&D services as an alternative birthing option. Contact the hospital directly for NICU level verification. Sacred Heart is part of the HSHS system and has served the Eau Claire community for decades." }
+    ],
+        // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Eau Claire (Eau Claire County). Google Maps search "birth center Eau Claire WI" found
+    // no operational freestanding birth centers. Verified 2026-06-15.
+    birthCenterDetails: [],
+    heroLocalDetail: "Eau Claire sits where the Chippewa and Eau Claire rivers meet in west-central Wisconsin, about 90 minutes east of the Twin Cities. Both hospitals are easily reachable from anywhere in the city \u2014 Mayo on the west side, Sacred Heart on the east side along Clairemont Avenue. US-53 runs north\u2013south through town and I-94 connects Eau Claire to the Twin Cities and Milwaukee; winter storms from November through March can make both highways genuinely dangerous, so have your hospital route locked down well before 38 weeks. The Chippewa River Trail and Carson Park\u2019s loop are flat, popular third-trimester walking spots. The university district near UW\u2013Eau Claire and the Third Ward neighborhood are where you\u2019ll find most young families.",
+    culture: "Eau Claire is a university town and regional hub for the Chippewa Valley with a small but committed birth community. Home to UW\u2013Eau Claire and Chippewa Valley Technical College, the city has a young-family demographic that values evidence-based birth practices. The Mayo Clinic Health System\u2019s presence gives families a direct pipeline to one of the world\u2019s best medical systems for complex cases. Eau Claire\u2019s isolation \u2014 90 minutes from both the Twin Cities and Madison \u2014 makes local doula support essential rather than optional. The Hmong community here, while smaller than in Wausau or Green Bay, needs culturally concordant support that remains scarce.",
+    faqs: [
+      { q: "How much does a doula cost in Eau Claire, WI?", a: "Birth doulas in Eau Claire typically charge $700\u2013$1,800. The Chippewa Valley market is smaller than Milwaukee or Madison, so start your search early. <a href=\"/doula-cost/\">Compare Wisconsin costs</a>." },
+      { q: "Does Wisconsin Medicaid cover doulas for Eau Claire families?", a: "Not yet \u2014 BadgerCare Plus does not cover doula services as of June 2026. Contact your managed care plan to ask about doula benefits. Reach BadgerCare Plus at 1-800-362-3002." },
+      { q: "Which Eau Claire hospitals have NICUs?", a: "Mayo Clinic Health System\u2013Eau Claire has an NICU (contact directly for level verification), with referral access to Mayo\u2019s Level IV NICU in Rochester, MN. HSHS Sacred Heart also provides L&D \u2014 contact directly for NICU level." },
+      { q: "Does True Joy Birthing work with Eau Claire families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Eau Claire birth setting. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["milwaukee-wi", "la-crosse-wi"],
+    publishedDate: "2026-06-15",
+    lat: 44.8113,
+    lng: -91.4985,
+  },
+
+  "oshkosh-wi": {
+    slug: "oshkosh-wi",
+    city: "Oshkosh",
+    state: "WI",
+    costLow: 700,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    costRange: "\u201c$700\u2013$1,800 for a birth doula in Oshkosh. Postpartum doulas run $25\u2013$38 per hour. The Fox Valley market includes Appleton and Neenah-Menasha, expanding your options.\u201d",
+    medicaidNote: "No \u2014 Wisconsin Medicaid (BadgerCare Plus) does not cover doula services as of June 2026. Winnebago County families on BadgerCare Plus are served by managed care plans including Molina Healthcare and UnitedHealthcare Community Plan.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Oshkosh area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",     hospitalDetails: [
+      { name: "Ascension NE Wisconsin \u2013 Mercy Campus (Oshkosh)", paragraph: "Ascension NE Wisconsin Mercy Campus, on South Oakwood Road in Oshkosh, provides L&D services for Oshkosh families (contact the hospital directly for NICU level verification). It\u2019s part of the Ascension system and serves the greater Oshkosh and Winnebago County area. The hospital accommodates birth plans and welcomes doulas. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "HSHS St. Vincent Hospital (nearby Green Bay)", paragraph: "Many Oshkosh families seeking a Level III NICU deliver at HSHS St. Vincent Hospital in Green Bay, about 30 minutes north on US-41, which has a verified Level III NICU (stated directly on hshs.org). If your pregnancy is high-risk, confirm where your OB delivers \u2014 some Oshkosh providers deliver at both Oshkosh and Green Bay hospitals." }
+    ],
+        // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Oshkosh (Winnebago County). Google Maps search "birth center Oshkosh WI" found
+    // no operational freestanding birth centers. Verified 2026-06-15.
+    birthCenterDetails: [],
+    heroLocalDetail: "Oshkosh sits on the western shore of Lake Winnebago along US-41, about 20 minutes south of Appleton and 45 minutes south of Green Bay. US-41 connects Oshkosh to both Green Bay and Appleton hospitals \u2014 but during Oshkosh AirShow week in late July, the highway and local roads around Wittman Regional Airport back up for miles. If you\u2019re due in late summer, know your hospital route before the traffic hits. The Wiouwash Trail on the city\u2019s north side and Menominee Park along the lake are popular third-trimester walking spots. Neighborhoods near UW\u2013Oshkosh and along the Fox River are where most young families cluster.",
+    culture: "Oshkosh is a mid-sized Fox Valley city known for its university (UW\u2013Oshkosh), the annual EAA AirVenture airshow, and a strong working-class heritage rooted in the paper and shipping industries. The birth community is small but draws from the larger Appleton\u2013Neenah\u2013Menasha metro immediately to the north. Oshkosh families benefit from being in the Fox Valley corridor \u2014 if local doula availability is limited, Appleton and Green Bay doulas are typically willing to serve Oshkosh. The city\u2019s lack of a birth center or Level III NICU means many families travel north for those services.",
+    faqs: [
+      { q: "How much does a doula cost in Oshkosh, WI?", a: "Birth doulas in Oshkosh typically charge $700\u2013$1,800. Appleton and Green Bay doulas also serve Oshkosh families. <a href=\"/doula-cost/\">Compare Wisconsin costs</a>." },
+      { q: "Does Wisconsin Medicaid cover doulas for Oshkosh families?", a: "Not yet \u2014 BadgerCare Plus does not cover doula services as of June 2026. Contact your managed care plan to ask about doula benefits. Reach BadgerCare Plus at 1-800-362-3002." },
+      { q: "Which hospitals near Oshkosh have NICUs?", a: "Ascension NE Wisconsin Mercy Campus provides L&D in Oshkosh (contact directly for NICU level). For a verified Level III NICU, HSHS St. Vincent Hospital in Green Bay is about 30 minutes north." },
+      { q: "Does True Joy Birthing work with Oshkosh families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Oshkosh birth setting. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["appleton-wi", "green-bay-wi"],
+    publishedDate: "2026-06-15",
+    lat: 44.0247,
+    lng: -88.5426,
+  },
+
+  "appleton-wi": {
+    slug: "appleton-wi",
+    city: "Appleton",
+    state: "WI",
+    costLow: 700,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    costRange: "\u201c$700\u2013$2,000 for a birth doula in Appleton. Postpartum doulas run $25\u2013$40 per hour. The Fox Cities market is one of the stronger mid-size markets in Wisconsin.\u201d",
+    medicaidNote: "No \u2014 Wisconsin Medicaid (BadgerCare Plus) does not cover doula services as of June 2026. Outagamie County families on BadgerCare Plus are served by managed care plans including Molina Healthcare and UnitedHealthcare Community Plan.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Appleton area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm. The Fox Cities' employer base (Kohl's distribution, Miller Electric, West Corp) sometimes includes maternal wellness benefits — check with your HR department.",     hospitalDetails: [
+      { name: "ThedaCare Regional Medical Center \u2013 Appleton", paragraph: "ThedaCare Regional Medical Center in Appleton, on West Prospect Avenue, provides L&D services as the Fox Cities\u2019 primary birthing hospital with an NICU (contact the hospital directly for current NICU level verification). ThedaCare is the dominant health system in the Fox Valley and accommodates birth plans and welcomes doulas. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Ascension NE Wisconsin \u2013 St. Elizabeth Campus (Appleton)", paragraph: "Ascension NE Wisconsin St. Elizabeth Campus, on South Oneida Street in Appleton, provides an alternative birthing option in the Ascension system (contact the hospital directly for NICU level verification). Having both ThedaCare and Ascension in Appleton gives families two hospital systems to choose from." }
+    ],
+        // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Appleton (Outagamie County). Google Maps search "birth center Appleton WI" found
+    // no operational freestanding birth centers. Verified 2026-06-15.
+    birthCenterDetails: [],
+    heroLocalDetail: "Appleton sits in the heart of the Fox Cities metro along US-41 and the Fox River, about 20 minutes south of Green Bay. Both ThedaCare on Prospect Avenue and Ascension St. Elizabeth on Oneida Street are centrally located and easily reachable from anywhere in the Fox Cities. US-41 connects Appleton to Green Bay (north) and Oshkosh (south), and the College Avenue bridge over the Fox River can slow during rush. The Fox River Trail and Pierce Park\u2019s paths are flat, paved, and popular for third-trimester walks. The neighborhoods around Lawrence University, Northland Avenue, and the Grand Chute area on the west side are where most young families live.",
+    culture: "Appleton is the economic hub of the Fox Cities metro \u2014 a chain of communities along the Fox River including Neenah, Menasha, Kaukauna, and Kimberly. The city is home to Lawrence University and a thriving downtown, and its birth community is one of the strongest among mid-size Wisconsin cities. ThedaCare\u2019s midwifery program is well-established, and the local doula community benefits from proximity to Green Bay\u2019s larger market. The Hmong community in Appleton is significant, and culturally concordant doula support remains a critical need. The Fox Cities\u2019 employer base (Kohl\u2019s distribution, Miller Electric, West Corp) includes many working families who need affordable doula options.",
+    faqs: [
+      { q: "How much does a doula cost in Appleton, WI?", a: "Birth doulas in Appleton typically charge $700\u2013$2,000. The Fox Cities market has good availability within the Appleton\u2013Green Bay corridor. <a href=\"/doula-cost/\">Compare Wisconsin costs</a>." },
+      { q: "Does Wisconsin Medicaid cover doulas for Appleton families?", a: "Not yet \u2014 BadgerCare Plus does not cover doula services as of June 2026. Contact your managed care plan to ask about doula benefits. Reach BadgerCare Plus at 1-800-362-3002." },
+      { q: "Which Appleton hospitals have NICUs?", a: "ThedaCare Regional Medical Center\u2013Appleton has an NICU (contact directly for level verification). Ascension St. Elizabeth also provides L&D. For a verified Level III NICU, HSHS St. Vincent Hospital in Green Bay is about 20 minutes north." },
+      { q: "Does True Joy Birthing work with Appleton families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Appleton birth setting. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["green-bay-wi", "oshkosh-wi"],
+    publishedDate: "2026-06-15",
+    lat: 44.2619,
+    lng: -88.4154,
+  },
+
+  "la-crosse-wi": {
+    slug: "la-crosse-wi",
+    city: "La Crosse",
+    state: "WI",
+    costLow: 650,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    costRange: "\u201c$650\u2013$1,800 for a birth doula in La Crosse. Postpartum doulas run $25\u2013$38 per hour. The Coulee Region market is small but serves a tri-state area.\u201d",
+    medicaidNote: "No \u2014 Wisconsin Medicaid (BadgerCare Plus) does not cover doula services as of June 2026. La Crosse County families on BadgerCare Plus are served by managed care plans including Molina Healthcare and Gundersen Health Plan.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the La Crosse area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm. Gundersen Health Plan members should check their plan's specific doula benefits.",     hospitalDetails: [
+      { name: "Gundersen Health System \u2013 La Crosse Hospital", paragraph: "Gundersen Health System, on South Avenue in La Crosse, is the region\u2019s primary birthing hospital with an NICU (contact the hospital directly for current NICU level verification). Gundersen is now part of the Emplify Health system and serves as the regional referral center for the tri-state area (Wisconsin, Minnesota, Iowa). The hospital accommodates birth plans and welcomes doulas. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Mayo Clinic Health System \u2013 La Crosse Hospital", paragraph: "Mayo Clinic Health System in La Crosse, on West Avenue, provides an alternative birthing option within the Mayo system (contact the hospital directly for NICU level verification). Being part of the Mayo system gives families referral access to Mayo\u2019s Level IV NICU in Rochester, MN, about 80 miles west. Some La Crosse families choose Mayo specifically for this connection." }
+    ],
+        // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // La Crosse (La Crosse County). Google Maps search "birth center La Crosse WI" found
+    // no operational freestanding birth centers. Verified 2026-06-15.
+    birthCenterDetails: [],
+    heroLocalDetail: "La Crosse sits where the Mississippi River meets the La Crosse River, surrounded by bluffs in the Driftless Region of western Wisconsin. Both Gundersen on South Avenue and Mayo on West Avenue are centrally located and easy to reach from anywhere in the city. I-90 runs east\u2013west through La Crosse and connects to Madison (2 hours east) and Rochester, MN (80 miles west). The Mississippi River Trail along the waterfront and the trails in Hixon Forest are popular third-trimester walking spots \u2014 the river trail is flat and paved, while Hixon offers wooded paths for more experienced hikers. Winter weather from November through March can make bluff roads slick and highways slow, so confirm your hospital route well before 38 weeks. The neighborhoods near UW\u2013La Crosse and along the riverfront are where most young families live.",
+    culture: "La Crosse is a small river city and regional medical hub for the Driftless Region, serving families from western Wisconsin, southeastern Minnesota, and northeastern Iowa. Home to UW\u2013La Crosse, Viterbo University, and Western Technical College, the city has a young-family population. Two major health systems \u2014 Gundersen and Mayo \u2014 compete for patients, giving families more hospital choice than most Wisconsin cities this size. The local doula community is small but dedicated, and the city\u2019s isolation (2 hours from Madison and Milwaukee, 80 miles from Rochester) means having a local doula matters. The Driftless Region\u2019s rugged terrain and river-valley culture create a distinct sense of place that shapes the birth community.",
+    faqs: [
+      { q: "How much does a doula cost in La Crosse, WI?", a: "Birth doulas in La Crosse typically charge $650\u2013$1,800. The small local market means you should start your search early. Some Minnesota-based doulas from the Winona or Rochester areas also serve La Crosse families. <a href=\"/doula-cost/\">Compare Wisconsin costs</a>." },
+      { q: "Does Wisconsin Medicaid cover doulas for La Crosse families?", a: "Not yet \u2014 BadgerCare Plus does not cover doula services as of June 2026. If you\u2019re a Minnesota resident, note that Minnesota Medicaid does cover doulas since January 2024. Contact your plan to ask about benefits. Reach BadgerCare Plus at 1-800-362-3002." },
+      { q: "Which La Crosse hospitals have NICUs?", a: "Gundersen Health System\u2013La Crosse has an NICU (contact directly for level verification). Mayo Clinic Health System\u2013La Crosse also provides L&D with referral access to Mayo\u2019s Level IV NICU in Rochester, MN, about 80 miles west." },
+      { q: "Does True Joy Birthing work with La Crosse families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any La Crosse birth setting. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["madison-wi", "eau-claire-wi"],
+    publishedDate: "2026-06-15",
+    lat: 43.8014,
+    lng: -91.2376,
+  },
+
+  "wausau-wi": {
+    slug: "wausau-wi",
+    city: "Wausau",
+    state: "WI",
+    costLow: 650,
+    costHigh: 1700,
+    shelbiServesHere: false,
+    costRange: "\u201c$650\u2013$1,700 for a birth doula in Wausau. Postpartum doulas run $25\u2013$35 per hour. The central Wisconsin market is small, with limited local doula availability.\u201d",
+    medicaidNote: "No \u2014 Wisconsin Medicaid (BadgerCare Plus) does not cover doula services as of June 2026. Marathon County families on BadgerCare Plus are served by managed care plans including Molina Healthcare and Security Health Plan.",
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Wausau area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",     hospitalDetails: [
+      { name: "Aspirus Wausau Hospital", paragraph: "Aspirus Wausau Hospital, on Pine Ridge Boulevard in Wausau, is the region\u2019s primary birthing hospital with a Level III NICU (stated directly on aspirus.org). It serves as the referral center for all of north-central Wisconsin and accommodates birth plans and welcomes doulas. For a city of 40,000, having a Level III NICU is a significant advantage \u2014 families from across the region travel to Aspirus for high-risk care. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Marshfield Medical Center \u2013 Wausau (nearby)", paragraph: "Marshfield Medical Center in Marshfield, about 30 minutes south of Wausau, provides an alternative birthing option with a Level III NICU (stated directly on marshfieldclinic.org). Some Wausau-area families choose Marshfield if their OB is in the Marshfield Clinic system." }
+    ],
+        // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
+    // Wausau (Marathon County). Google Maps search "birth center Wausau WI" found
+    // no operational freestanding birth centers. Verified 2026-06-15.
+    birthCenterDetails: [],
+    heroLocalDetail: "Wausau sits along the Wisconsin River in the center of the state, and Aspirus Wausau Hospital on Pine Ridge Boulevard serves as the regional hub for north-central Wisconsin. US-51 runs north\u2013south through town and I-39 connects Wausau to Stevens Point (30 minutes south) and Wisconsin Rapids. Winter weather here is serious \u2014 lake-effect snow and Arctic cold from December through March can make a 10-minute hospital drive take 30, so confirm your route and have a backup plan well before your due date. The trails along the Wisconsin River at Barker-Stewart Island and Riverside Park are flat, quiet, and popular for third-trimester walks. The neighborhoods near the Rib Mountain area and along the east side of the river are where many young families live.",
+    culture: "Wausau is a small city and the commercial hub of north-central Wisconsin, known for its paper-mill heritage, the Rib Mountain granite formation, and one of the largest Hmong populations per capita in the United States. The Hmong community \u2014 estimated at over 12% of the population \u2014 has specific cultural birth traditions that make culturally concordant doula support both essential and undersupplied. Aspirus Wausau\u2019s Level III NICU is a major asset for a city this size, drawing families from across the region. The local doula community is very small, and many families rely on virtual support or doulas traveling from the Fox Valley or Wausau area.",
+    faqs: [
+      { q: "How much does a doula cost in Wausau, WI?", a: "Birth doulas in Wausau typically charge $650\u2013$1,700. The central Wisconsin market is small, so start your search early. Some Fox Valley doulas travel to Wausau for a travel fee. <a href=\"/doula-cost/\">Compare Wisconsin costs</a>." },
+      { q: "Does Wisconsin Medicaid cover doulas for Wausau families?", a: "Not yet \u2014 BadgerCare Plus does not cover doula services as of June 2026. Contact your managed care plan to ask about doula benefits. Reach BadgerCare Plus at 1-800-362-3002." },
+      { q: "Which Wausau hospitals have NICUs?", a: "Aspirus Wausau Hospital has a Level III NICU (stated directly on aspirus.org), serving the entire north-central Wisconsin region. Marshfield Medical Center, about 30 minutes south, also has a Level III NICU (stated directly on marshfieldclinic.org). The nearest Level IV NICU is at Children\u2019s Wisconsin in Milwaukee, about 3 hours southeast." },
+      { q: "Are there doulas in Wausau who speak Hmong?", a: "The availability of Hmong-speaking doulas in Wausau is very limited despite the city\u2019s large Hmong community. If you need culturally concordant support and can\u2019t find a local Hmong-speaking doula, virtual doula support and the True Joy Birthing app can help you prepare. Ask your WIC office or community health center about local resources." },
+      { q: "Does True Joy Birthing work with Wausau families?", a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Wausau birth setting. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
+    ],
+    nearbyCities: ["green-bay-wi", "eau-claire-wi"],
+    publishedDate: "2026-06-15",
+    lat: 44.9591,
+    lng: -89.6301,
+  },
+
+
+  // ═════════════════════════════════════════════
+  // Batch 16 (2026-06-02): WI, NM, VA, NJ, CA deep fills
+  // ═════════════════════════════════════════════
+
+  "milwaukee-wi": {
+    slug: "milwaukee-wi",
+    city: "Milwaukee",
+    state: "WI",
+    costLow: 800,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,500 for a birth doula in Milwaukee. Postpartum doulas run $25\u2013$45 per hour. Milwaukee\u2019s birth justice community is one of the most active in the Midwest.\u201d",
+    medicaidNote: "Yes \u2014 Wisconsin Medicaid (BadgerCare) covers doula services effective January 1, 2024 (2023 WI Act 20). Milwaukee families on BadgerCare can access doulas through managed care organizations. Milwaukee\u2019s birth justice organizations help connect families with enrolled doulas.",
+    hospitalDetails: [
+      { name: "Aurora Sinai Medical Center", paragraph: "Aurora Sinai is Milwaukee\u2019s primary academic birthing hospital, offering a Level III NICU (stated directly on aurorahealthcare.org). It serves the city\u2019s diverse population and has an active midwifery program. The hospital accommodates birth plans and welcomes doulas." },
+      { name: "Froedtert & the Medical College of Wisconsin", paragraph: "Froedtert Hospital is Milwaukee\u2019s premier academic medical center, offering a Level III NICU (stated directly on froedtert.com). It serves as the regional referral center for southeastern Wisconsin and handles the most complex pregnancies in the region. The hospital accommodates birth plans and welcomes doulas." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Milwaukee\u2019s birth justice community is one of the Midwest\u2019s most active, with Froedtert and Aurora Sinai\u2019s Level III NICUs serving the city\u2019s diverse families alongside Wisconsin\u2019s new BadgerCare doula coverage.",
+    culture: "Milwaukee is Wisconsin\u2019s largest city and one of the most segregated in America, which directly impacts birth outcomes \u2014 Black babies in Milwaukee are nearly three times more likely to die before their first birthday than white babies. This stark disparity has fueled a powerful birth justice movement led by organizations like the Milwaukee Birthing Project and Maroon Calabash. The city\u2019s working-class culture, large Latino community on the south side, and Hmong population create diverse birthing needs. Wisconsin\u2019s BadgerCare doula coverage is a direct result of advocacy by Milwaukee\u2019s birth justice community.",
+    faqs: [
+      { q: "How much does a doula cost in Milwaukee, WI?", a: "Birth doulas in Milwaukee typically charge $800\u2013$2,500. Community doula programs offer sliding-scale options for BadgerCare families. <a href=\"/doula-cost/\">Compare Wisconsin costs</a>." },
+      { q: "Does Wisconsin BadgerCare cover doulas for Milwaukee families?", a: "Yes \u2014 Wisconsin BadgerCare covers doula services since January 2024. Milwaukee\u2019s birth justice organizations help connect families with enrolled doulas. <a href=\"/does-medicaid-cover-doulas/\">Learn about Medicaid doula coverage</a>." },
+      { q: "Which Milwaukee hospitals have NICUs?", a: "Froedtert Hospital and Aurora Sinai both have Level III NICUs (stated directly on froedtert.com and aurorahealthcare.org). For Level IV NICU care, Children\u2019s Wisconsin in Milwaukee provides the highest level of neonatal care." },
+    ],
+    nearbyCities: [],
+    publishedDate: "2026-06-02",
+    lat: 43.0386,
+    lng: -87.9091,
+  },
+
+  "green-bay-wi": {
+    slug: "green-bay-wi",
+    city: "Green Bay",
+    state: "WI",
+    costLow: 700,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    costRange: "\u201c$700\u2013$2,000 for a birth doula in Green Bay. Postpartum doulas run $20\u2013$35 per hour. The Green Bay market is smaller but growing.\u201d",
+    medicaidNote: "Yes \u2014 Wisconsin Medicaid (BadgerCare) covers doula services effective January 1, 2024. Green Bay families on BadgerCare can access doulas through managed care organizations in Brown County.",
+    hospitalDetails: [
+      { name: "HSHS St. Vincent Hospital", paragraph: "St. Vincent Hospital is Green Bay\u2019s primary birthing hospital, offering a Level III NICU (stated directly on hshs.org). It serves the greater Green Bay and Fox Valley region and accommodates birth plans and welcomes doulas." },
+      { name: "Bellin Hospital", paragraph: "Bellin Hospital is Green Bay\u2019s other major birthing hospital. Contact Bellin directly for NICU level verification. It\u2019s known for its personal approach to maternity care and serves families with Bellin insurance networks." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Green Bay\u2019s Packers-crazed community is also a family-first city, with St. Vincent Hospital\u2019s Level III NICU serving as the primary birthing hub for the Fox Valley region alongside Wisconsin\u2019s new BadgerCare doula coverage.",
+    culture: "Green Bay is Wisconsin\u2019s oldest city and a regional hub for the Fox Valley and Door County communities. The city\u2019s culture revolves around family, community, and the Green Bay Packers \u2014 and that family-first ethos extends to birth culture. The community has a large Hmong population that brings specific cultural birth traditions. Green Bay\u2019s more affordable cost of living attracts young families, and the city\u2019s healthcare system (HSHS and Bellin) provides solid birthing infrastructure. The relative isolation from Milwaukee (2 hours) makes local doula support essential.",
+    faqs: [
+      { q: "How much does a doula cost in Green Bay, WI?", a: "Birth doulas in Green Bay typically charge $700\u2013$2,000. The smaller Fox Valley market has limited but growing availability. <a href=\"/doula-cost/\">Compare Wisconsin costs</a>." },
+      { q: "Does BadgerCare cover doulas for Green Bay families?", a: "Yes \u2014 Wisconsin BadgerCare covers doula services since January 2024. Brown County families should contact their managed care plan for enrolled doulas." },
+      { q: "Which Green Bay hospitals have NICUs?", a: "HSHS St. Vincent Hospital has a Level III NICU (stated directly on hshs.org). Bellin Hospital also provides L&D \u2014 contact directly for NICU level. For Level IV NICU, Children\u2019s Wisconsin in Milwaukee is about 2 hours south." },
+    ],
+    nearbyCities: ["milwaukee-wi"],
+    publishedDate: "2026-06-02",
+    lat: 44.5126,
+    lng: -88.0126,
+  },
+
+  "santa-fe-nm": {
+    slug: "santa-fe-nm",
+    city: "Santa Fe",
+    state: "NM",
+    costLow: 800,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,500 for a birth doula in Santa Fe. Postpartum doulas run $25\u2013$45 per hour. Santa Fe\u2019s wellness and arts community supports a growing doula market.\u201d",
+    medicaidNote: "Yes \u2014 New Mexico Medicaid (Centennial Care) covers doula services. New Mexico was one of the first states to enact Medicaid doula coverage. Santa Fe families on Centennial Care can access doulas through managed care organizations like Blue Cross Blue Shield of NM and Western Sky Community Care.",
+    hospitalDetails: [
+      { name: "Christus St. Vincent Regional Medical Center", paragraph: "Christus St. Vincent is Santa Fe\u2019s only hospital providing L&D services, offering a Level III NICU (stated directly on christushealth.org). It serves the entire northern New Mexico region and accommodates birth plans and welcomes doulas. For the highest-level NICU care, families may be transferred to UNM Hospital in Albuquerque." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Santa Fe\u2019s unique blend of wellness culture and artistic community makes it one of the most progressive birth cities in the Southwest, with Christus St. Vincent\u2019s Level III NICU and New Mexico\u2019s pioneering Medicaid doula coverage serving families across northern New Mexico.",
+    culture: "Santa Fe is the oldest capital city in the US and a global destination for arts, wellness, and alternative healing. This culture of holistic health directly benefits the birth community \u2014 doulas, midwives, and birth centers have more cultural acceptance here than in most cities. The city\u2019s large Latino and Native American populations have deep cultural birth traditions (parteras, traditional birth practices) that culturally concordant doulas honor. At 7,200 feet elevation, altitude affects pregnancy, and local doulas are experienced with these considerations. Santa Fe\u2019s isolation from other major cities (1 hour to Albuquerque, 5+ hours to Denver) makes local birth support essential.",
+    faqs: [
+      { q: "How much does a doula cost in Santa Fe, NM?", a: "Birth doulas in Santa Fe typically charge $800\u2013$2,500. The wellness community supports a growing market. <a href=\"/doula-cost/\">Compare New Mexico costs</a>." },
+      { q: "Does New Mexico Medicaid cover doulas for Santa Fe families?", a: "Yes \u2014 New Mexico Centennial Care covers doula services. NM was one of the first states to enact Medicaid doula coverage. Contact your managed care plan for enrolled doulas. <a href=\"/does-medicaid-cover-doulas/\">Learn about Medicaid doula coverage</a>." },
+      { q: "Does Santa Fe\u2019s altitude affect birth?", a: "At 7,200 feet, Santa Fe\u2019s altitude can affect oxygenation during pregnancy and birth. Local providers are experienced with altitude-related considerations. Christus St. Vincent\u2019s Level III NICU (stated directly on christushealth.org) is equipped for these cases. <a href=\"/birth-plan-template/\">Use the free birth plan template</a> to address altitude concerns." },
+    ],
+    nearbyCities: ["albuquerque-nm"],
+    publishedDate: "2026-06-02",
+    lat: 35.6876,
+    lng: -105.9385,
+  },
+
+  "las-cruces-nm": {
+    slug: "las-cruces-nm",
+    city: "Las Cruces",
+    state: "NM",
+    costLow: 700,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    costRange: "\u201c$700\u2013$1,800 for a birth doula in Las Cruces. Postpartum doulas run $20\u2013$35 per hour. The southern New Mexico market is small but supported by NMSU\u2019s academic community.\u201d",
+    medicaidNote: "Yes \u2014 New Mexico Medicaid (Centennial Care) covers doula services. Las Cruces families on Centennial Care can access doulas through managed care organizations in Do\u00f1a Ana County.",
+    hospitalDetails: [
+      { name: "Memorial Medical Center", paragraph: "Memorial Medical Center is Las Cruces\u2019 primary birthing hospital, providing L&D services. Contact the hospital directly for NICU level verification. It serves the southern New Mexico region and accommodates birth plans and welcomes doulas." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Las Cruces serves as the birth care hub for southern New Mexico\u2019s growing communities, with Memorial Medical Center and New Mexico\u2019s pioneering Medicaid doula coverage supporting families across the Do\u00f1a Ana County region.",
+    culture: "Las Cruces is home to New Mexico State University and serves as the commercial hub for southern New Mexico, including a large agricultural community and the fast-growing cities of the El Paso-Las Cruces metro area. The city\u2019s culture is strongly influenced by its Hispanic heritage and proximity to the Mexican border, with traditional partera (midwife) practices still influential in the community. The birthing population includes NMSU students, military families from Fort Bliss in El Paso, and agricultural worker families. The nearest higher-level NICU is in El Paso, about 45 minutes south.",
+    faqs: [
+      { q: "How much does a doula cost in Las Cruces, NM?", a: "Birth doulas in Las Cruces typically charge $700\u2013$1,800. The small market means limited options \u2014 book early. <a href=\"/doula-cost/\">Compare New Mexico costs</a>." },
+      { q: "Does New Mexico Medicaid cover doulas for Las Cruces families?", a: "Yes \u2014 NM Centennial Care covers doula services. Do\u00f1a Ana County families should contact their managed care plan for enrolled doulas in the southern NM region." },
+      { q: "What if Memorial Medical Center can\u2019t handle my birth complications?", a: "Memorial Medical Center provides L&D \u2014 contact directly for NICU level. For higher-level NICU care, families may be transferred to El Paso hospitals (about 45 minutes south) or UNM Hospital in Albuquerque (about 3 hours north)." },
+    ],
+    nearbyCities: ["albuquerque-nm"],
+    publishedDate: "2026-06-02",
+    lat: 32.3140,
+    lng: -106.7798,
+  },
+
+  "norfolk-va": {
+    slug: "norfolk-va",
+    city: "Norfolk",
+    state: "VA",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,200 for a birth doula in Norfolk. Postpartum doulas run $25\u2013$40 per hour. The Hampton Roads market has solid availability with military-family discounts common.\u201d",
+    medicaidNote: "Yes \u2014 Virginia Medicaid covers doula services effective January 1, 2024. Norfolk families on Virginia Medicaid can access doulas through managed care plans. Military families should note that TRICARE does not cover doulas.",
+    hospitalDetails: [
+      { name: "Sentara Norfolk General Hospital", paragraph: "Sentara Norfolk General is Hampton Roads\u2019 premier medical center, offering a Level III NICU (stated directly on sentara.com). It\u2019s affiliated with Eastern Virginia Medical School and serves as the regional referral center for high-risk pregnancies. The hospital accommodates birth plans and welcomes doulas." },
+      { name: "Naval Medical Center Portsmouth", paragraph: "Naval Medical Center Portsmouth is the largest military hospital on the East Coast, providing L&D services for TRICARE beneficiaries. Contact the hospital directly for NICU level verification. Military families should note that TRICARE does not cover civilian doula services." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Norfolk\u2019s massive military community \u2014 the world\u2019s largest naval base \u2014 creates one of the highest doula-demand demographics in America, with Sentara Norfolk General\u2019s Level III NICU and Virginia\u2019s new Medicaid doula coverage filling a critical gap for Hampton Roads families.",
+    culture: "Norfolk is the heart of the Hampton Roads military community, home to Naval Station Norfolk (the world\u2019s largest naval base), Joint Expeditionary Base Little Creek, and numerous other installations. Military spouses giving birth during deployments create enormous demand for doula support. The city also has a large Black community with deep historical roots in the Underground Railroad and Civil Rights movement. Norfolk\u2019s diverse population includes active-duty military, veterans, civilian government workers, and a growing creative class drawn to the waterfront revitalization. TRICARE\u2019s lack of doula coverage is a persistent issue that Virginia\u2019s Medicaid doula legislation aims to address.",
+    faqs: [
+      { q: "How much does a doula cost in Norfolk, VA?", a: "Birth doulas in Norfolk typically charge $800\u2013$2,200. Military spouse discounts are widely available. <a href=\"/doula-cost/\">Compare Virginia costs</a>." },
+      { q: "Does Virginia Medicaid cover doulas for Norfolk families?", a: "Yes \u2014 Virginia Medicaid covers doula services since January 2024. Military families: TRICARE doesn\u2019t cover doulas, but VA Medicaid may if you qualify. Many Norfolk doulas offer military discounts." },
+      { q: "Which Norfolk hospitals have NICUs?", a: "Sentara Norfolk General has a Level III NICU (stated directly on sentara.com). Naval Medical Center Portsmouth provides L&D for TRICARE families \u2014 contact directly for NICU level. For Level IV NICU care, Children\u2019s Hospital of The King\u2019s Daughters in Norfolk provides the region\u2019s highest level of neonatal care." },
+    ],
+    nearbyCities: ["arlington-va"],
+    publishedDate: "2026-06-02",
+    lat: 36.8494,
+    lng: -76.2900,
+  },
+
+  "trenton-nj": {
+    slug: "trenton-nj",
+    city: "Trenton",
+    state: "NJ",
+    costLow: 1000,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    costRange: "\u201c$1,000\u2013$3,000 for a birth doula in the Trenton area. Postpartum doulas run $30\u2013$50 per hour. The central NJ market benefits from proximity to both Philadelphia and Princeton.\u201d",
+    medicaidNote: "Yes \u2014 New Jersey Medicaid (NJ FamilyCare) covers doula services effective January 1, 2024 (S3404/A5138). Trenton families on NJ FamilyCare can access doulas through managed care organizations. New Jersey\u2019s legislation was championed by birth justice advocates addressing the state\u2019s stark racial disparities in maternal health.",
+    hospitalDetails: [
+      { name: "Capital Health Medical Center \u2014 Hopewell", paragraph: "Capital Health Hopewell is the primary birthing hospital serving the Trenton area, offering a Level III NICU (stated directly on capitalhealth.org). The modern facility serves Mercer County families and accommodates birth plans and welcomes doulas. It\u2019s known for its women\u2019s health services." },
+      { name: "St. Francis Medical Center", paragraph: "St. Francis provides L&D services in Trenton\u2019s city center. Contact the hospital directly for NICU level verification. It serves the urban Trenton community and families with various insurance networks." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Trenton\u2019s central NJ position gives Mercer County families access to Capital Health\u2019s Level III NICU and New Jersey\u2019s new FamilyCare doula coverage, with the additional benefit of Philadelphia\u2019s world-class medical centers just 30 minutes away.",
+    culture: "Trenton is New Jersey\u2019s capital city with a diverse, predominantly Black and Latino working-class community. The city sits in the corridor between Philadelphia and Princeton, creating stark contrasts in birth access \u2014 families in Trenton\u2019s urban core face different challenges than those in nearby Princeton\u2019s affluent academic community. New Jersey\u2019s Black maternal mortality rate is among the worst in the nation, and Trenton\u2019s birth justice advocates have been at the forefront of pushing for Medicaid doula legislation. The city\u2019s large immigrant community (especially from Central America) brings specific cultural birth traditions.",
+    faqs: [
+      { q: "How much does a doula cost in Trenton, NJ?", a: "Birth doulas in the Trenton area typically charge $1,000\u2013$3,000. Central NJ\u2019s proximity to Philadelphia drives premium pricing. <a href=\"/doula-cost/\">See the full NJ cost guide</a>." },
+      { q: "Does NJ FamilyCare cover doulas for Trenton families?", a: "Yes \u2014 NJ FamilyCare covers doula services since January 2024 (S3404/A5138). Mercer County families should contact their managed care plan for enrolled doulas. <a href=\"/does-medicaid-cover-doulas/\">Learn about Medicaid doula coverage</a>." },
+      { q: "Which Trenton-area hospitals have NICUs?", a: "Capital Health Hopewell has a Level III NICU (stated directly on capitalhealth.org). Philadelphia\u2019s Hospital of the University of Pennsylvania (Level III/IV) is about 30 minutes south." },
+    ],
+    nearbyCities: [],
+    publishedDate: "2026-06-02",
+    lat: 40.2203,
+    lng: -74.7659,
+  },
+
+  "camden-nj": {
+    slug: "camden-nj",
+    city: "Camden",
+    state: "NJ",
+    costLow: 800,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,500 for a birth doula in the Camden area. Postpartum doulas run $25\u2013$45 per hour. Camden\u2019s community doula programs are essential for accessible birth support.\u201d",
+    medicaidNote: "Yes \u2014 New Jersey Medicaid (NJ FamilyCare) covers doula services effective January 1, 2024. Camden families on NJ FamilyCare can access doulas through managed care organizations. Camden\u2019s community health organizations actively help families access doula services.",
+    hospitalDetails: [
+      { name: "Cooper University Hospital", paragraph: "Cooper University Hospital is Camden\u2019s primary medical center, offering a Level III NICU (stated directly on cooperhealth.org). As the region\u2019s only Level I Trauma Center, it serves the Camden community and South Jersey. The hospital accommodates birth plans and welcomes doulas." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Camden\u2019s families face some of New Jersey\u2019s most acute maternal health disparities, but Cooper University Hospital\u2019s Level III NICU and NJ FamilyCare\u2019s new doula coverage are providing critical support alongside the city\u2019s dedicated community health organizations.",
+    culture: "Camden is one of New Jersey\u2019s most economically challenged cities, with a predominantly Black and Latino population that faces severe maternal health disparities. The city sits directly across the Delaware River from Philadelphia, and many Camden families cross into Philly for specialized medical care. Cooper University Hospital is the city\u2019s anchor institution, and Rowan University\u2019s expanding medical school campus is bringing new resources. Camden\u2019s community health organizations, including those fighting for birth justice, are essential bridges between families and the doula coverage NJ FamilyCare now provides.",
+    faqs: [
+      { q: "How much does a doula cost in Camden, NJ?", a: "Birth doulas in the Camden area typically charge $800\u2013$2,500. Community doula programs offer sliding-scale options for NJ FamilyCare families. <a href=\"/doula-cost/\">Compare NJ costs</a>." },
+      { q: "Does NJ FamilyCare cover doulas for Camden families?", a: "Yes \u2014 NJ FamilyCare covers doula services since January 2024. Camden\u2019s community health organizations help families access enrolled doulas." },
+      { q: "Which Camden hospitals have NICUs?", a: "Cooper University Hospital has a Level III NICU (stated directly on cooperhealth.org). Philadelphia\u2019s hospitals are just across the river for additional options. <a href=\"/birth-plan-template/\">Use the free birth plan template</a> to prepare." },
+    ],
+    nearbyCities: [],
+    publishedDate: "2026-06-02",
+    lat: 39.9448,
+    lng: -75.1199,
+  },
+
+  "fresno-ca": {
+    slug: "fresno-ca",
+    city: "Fresno",
+    state: "CA",
+    costLow: 800,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,200 for a birth doula in Fresno. Postpartum doulas run $25\u2013$40 per hour. The Central Valley market is growing alongside Fresno\u2019s rapid expansion.\u201d",
+    medicaidNote: "Yes \u2014 California Medi-Cal covers doula services effective July 1, 2022 (SB 65). Fresno families on Medi-Cal can access doulas through managed care plans like CalViva Health and Health Plan of San Joaquin. California has one of the most established Medicaid doula programs in the US.",
+    hospitalDetails: [
+      { name: "Community Regional Medical Center", paragraph: "Community Regional is Fresno\u2019s primary birthing hospital and the Central Valley\u2019s regional referral center, offering a Level III NICU (stated directly on communitymedical.org). It handles the highest birth volume in the region and serves as the teaching hospital for UCSF-Fresno. The hospital accommodates birth plans and welcomes doulas." },
+      { name: "Saint Agnes Medical Center", paragraph: "Saint Agnes provides L&D services in Fresno. Contact the hospital directly for NICU level verification. It serves families with various insurance networks and offers an alternative birthing option in the Central Valley." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Fresno\u2019s Central Valley families get strong birth support from Community Regional\u2019s Level III NICU \u2014 the region\u2019s primary birthing hub \u2014 alongside California\u2019s established Medi-Cal doula coverage, one of the oldest Medicaid doula programs in the US.",
+    culture: "Fresno is the largest city in California\u2019s Central Valley and the agricultural capital of the US. The birthing population reflects this \u2014 a large Latino agricultural workforce (many Medi-Cal eligible), Hmong refugee communities with specific cultural birth traditions, and a growing professional class drawn by affordable housing. Fresno\u2019s isolation from the coast (3+ hours to SF or LA) means the city\u2019s healthcare system must be self-sufficient for birth care. The Central Valley has some of California\u2019s worst maternal health disparities, which Medi-Cal doula coverage aims to address.",
+    faqs: [
+      { q: "How much does a doula cost in Fresno, CA?", a: "Birth doulas in Fresno typically charge $800\u2013$2,200. The Central Valley market is more affordable than the coast. <a href=\"/doula-cost/\">Compare California costs</a>." },
+      { q: "Does Medi-Cal cover doulas for Fresno families?", a: "Yes \u2014 California Medi-Cal covers doula services since July 2022 (SB 65). CalViva Health and Health Plan of San Joaquin serve Central Valley families. <a href=\"/does-medicaid-cover-doulas/\">Learn about Medicaid doula coverage</a>." },
+      { q: "Which Fresno hospitals have NICUs?", a: "Community Regional Medical Center has a Level III NICU (stated directly on communitymedical.org). Saint Agnes also provides L&D \u2014 contact directly for NICU level. For Level IV NICU care, Valley Children\u2019s Hospital in Madera (15 minutes north) serves the region." },
+    ],
+    nearbyCities: [],
+    publishedDate: "2026-06-02",
+    lat: 36.7383,
+    lng: -119.7829,
+  },
+
+  "bakersfield-ca": {
+    slug: "bakersfield-ca",
+    city: "Bakersfield",
+    state: "CA",
+    costLow: 700,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    costRange: "\u201c$700\u2013$2,000 for a birth doula in Bakersfield. Postpartum doulas run $20\u2013$35 per hour. The southern Central Valley market is affordable with growing availability.\u201d",
+    medicaidNote: "Yes \u2014 California Medi-Cal covers doula services effective July 1, 2022 (SB 65). Bakersfield families on Medi-Cal can access doulas through Kern Family Health Care and other managed care plans.",
+    hospitalDetails: [
+      { name: "Kern Medical", paragraph: "Kern Medical is Bakersfield\u2019s primary academic birthing hospital, offering a Level III NICU (stated directly on kernmedical.org). Affiliated with the UCLA David Geffen School of Medicine, it serves as the regional referral center for southern Central Valley high-risk pregnancies. The hospital accommodates birth plans and welcomes doulas." },
+      { name: "Bakersfield Memorial Hospital", paragraph: "Bakersfield Memorial provides L&D services as part of the Adventist Health system. Contact the hospital directly for NICU level verification. It offers an alternative birthing option for families with different insurance networks." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Bakersfield\u2019s oil and agriculture community gets strong birth support from Kern Medical\u2019s Level III NICU \u2014 the southern Central Valley\u2019s primary birthing hub \u2014 alongside California\u2019s established Medi-Cal doula coverage.",
+    culture: "Bakersfield is the southern anchor of California\u2019s Central Valley, an oil and agricultural city with a strong working-class culture. The birthing population includes a large Latino community (over 50% of the city), oil industry workers, and agricultural families. Bakersfield\u2019s affordable cost of living (by California standards) has attracted families priced out of the coast. The city\u2019s country music heritage (Buck Owens, Merle Haggard) reflects a blue-collar, community-oriented culture that extends to birth support. Kern County has high birth rates and significant maternal health disparities that Medi-Cal doula coverage aims to address.",
+    faqs: [
+      { q: "How much does a doula cost in Bakersfield, CA?", a: "Birth doulas in Bakersfield typically charge $700\u2013$2,000. The southern Central Valley market is one of California\u2019s most affordable. <a href=\"/doula-cost/\">Compare CA costs</a>." },
+      { q: "Does Medi-Cal cover doulas for Bakersfield families?", a: "Yes \u2014 California Medi-Cal covers doula services since July 2022. Kern Family Health Care serves Bakersfield families for doula access." },
+      { q: "Which Bakersfield hospitals have NICUs?", a: "Kern Medical has a Level III NICU (stated directly on kernmedical.org). Bakersfield Memorial also provides L&D \u2014 contact directly for NICU level. For Level IV NICU, Valley Children\u2019s Hospital in Mada is about 90 minutes north." },
+    ],
+    nearbyCities: ["fresno-ca"],
+    publishedDate: "2026-06-02",
+    lat: 35.3739,
+    lng: -119.0195,
+  },
+
+  "peoria-az": {
+    slug: "peoria-az",
+    city: "Peoria",
+    state: "AZ",
+    costLow: 800,
+    costHigh: 2300,
+    shelbiServesHere: false,
+    costRange: "\u201c$800\u2013$2,300 for a birth doula in Peoria. Postpartum doulas run $25\u2013$40 per hour. The West Valley market is growing alongside Peoria\u2019s rapid expansion.\u201d",
+    medicaidNote: "No \u2014 Arizona Medicaid (AHCCCS) does not cover doula services as of 2026 (legislation proposed but not enacted). Peoria families with employer insurance should check for complementary care benefits. HSA/FSA funds work for doula services.",
+    hospitalDetails: [
+      { name: "Banner Del E. Webb Medical Center", paragraph: "Banner Del E. Webb is Peoria\u2019s primary hospital, providing L&D services. Contact the hospital directly for NICU level verification. Part of the Banner Health system, it serves the rapidly growing northwest Valley communities and accommodates birth plans and welcomes doulas." },
+      { name: "Abrazo West Campus Hospital", paragraph: "Abrazo West Campus provides L&D services in the western Valley. Contact the hospital directly for NICU level verification. It serves families in the Goodyear/Peoria corridor with various insurance networks." }
+    ],
+    birthCenterDetails: [],
+    heroLocalDetail: "Peoria\u2019s explosive growth as one of Phoenix\u2019s premier northwest Valley suburbs has brought dedicated birth infrastructure with Banner Del E. Webb Medical Center, though Arizona\u2019s lack of Medicaid doula coverage remains a gap for the city\u2019s many working families.",
+    culture: "Peoria is one of Arizona\u2019s fastest-growing cities, a northwest Valley suburb that\u2019s been transformed from farmland to a major city in just 20 years. The community draws families from California and the Midwest with affordable housing, good schools, and spring training baseball. Peoria\u2019s birth culture mirrors the broader Phoenix metro \u2014 growing demand for doulas and midwifery alongside a traditional hospital-based default. The city\u2019s older retiree population in Sun City and young family population in new developments create a bimodal birthing demographic.",
+    faqs: [
+      { q: "How much does a doula cost in Peoria, AZ?", a: "Birth doulas in Peoria typically charge $800\u2013$2,300. The West Valley market is growing but smaller than central Phoenix. <a href=\"/doula-cost/\">Compare Arizona costs</a>." },
+      { q: "Does Arizona Medicaid (AHCCCS) cover doulas for Peoria families?", a: "No \u2014 Arizona AHCCCS does not cover doula services as of 2026. Legislation has been proposed but not yet enacted. Families should use HSA/FSA funds or check employer insurance for complementary care benefits." },
+      { q: "Which Peoria hospitals have NICUs?", a: "Banner Del E. Webb and Abrazo West Campus both provide L&D \u2014 contact each directly for NICU level verification. For Level III NICU care, Banner Thunderbird in Glendale or Phoenix Children\u2019s Hospital are about 20\u201330 minutes east." },
+    ],
+    nearbyCities: ["phoenix-az", "scottsdale-az"],
+    publishedDate: "2026-06-02",
+    lat: 33.5806,
+    lng: -112.2373,
+  },
+
 
 };
 
