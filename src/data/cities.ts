@@ -1786,6 +1786,7 @@ export const cities: Record<string, CityData> = {
     localDoulas: [
       { name: "Carole", practice: "Empowered By Birth", url: "https://empoweredbybirthcharlotte.com", isAmbassador: false },
       { name: "Lindsay Stowers", practice: "Heart of Grace Birth Services", url: "https://heartofgracebirth.com", isAmbassador: false },
+      { name: "Kopa Birth", url: "https://kopabirth.com", isAmbassador: false },
     ],
     medicaidNote: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Cabarrus County\u2019s managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health). Contact NC Medicaid at 1-800-662-7030 or visit ncdhhs.gov to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Concord area. Atrium Health\u2019s employer network and Charlotte-area insurers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
@@ -1857,6 +1858,7 @@ export const cities: Record<string, CityData> = {
     localDoulas: [
       { name: "Greenville Doulas", url: "https://greatexpectationsbirth.com", isAmbassador: false },
       { name: "Valiant Birth Collective", url: "https://valiantbirth.com", isAmbassador: false },
+      { name: "Kim", practice: "Mother's Touch Doula", url: "https://motherstouchdoula.com", isAmbassador: false },
     ],
     medicaidNote: "No — South Carolina does not yet have statewide Medicaid doula coverage as of May 2026. Advocacy groups like the South Carolina Doula Steering Committee are working toward it, but no State Plan Amendment has been approved yet. Check with your Medicaid managed care plan directly — some may offer limited doula benefits. Contact SCDHHS at 1-888-549-0820 or visit scdhhs.gov for updates.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Greenville area. Prisma Health\u2019s employer network and Upstate SC employers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
@@ -1964,7 +1966,7 @@ export const cities: Record<string, CityData> = {
       { name: "Atlanta Birth Center", paragraph: "Atlanta Birth Center, at 1442 Flat Shoals Ave SE in East Atlanta, is a freestanding birth center serving families seeking a community-centered, lower-intervention birth experience. It's located in the East Atlanta Village area, convenient for families in southeast intown neighborhoods. Verify with the center directly for current services, insurance coverage, and availability." },
     ],
     localDoulas: [
-      { name: "Intown Birth Center", url: "https://intownbirthcenter.com", isAmbassador: false },
+      { name: "Intown Birth Center", isAmbassador: false },
     ],
     medicaidNote: "No — As of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. Check with Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Fulton, DeKalb, and Clayton County families on Medicaid should also check with their managed care plan about any maternal wellness benefits that might include doula support.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Atlanta area. Atlanta's large employer market (Delta, Home Depot, Coca-Cola, Emory, CDC) increasingly includes maternal wellness benefits \u2014 check with your HR department about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
@@ -2544,7 +2546,9 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Eugene Birth Center", paragraph: "Eugene Birth Center provides midwifery-led, out-of-hospital birth services in a freestanding setting, offering waterbirth and holistic prenatal and postpartum care to Eugene-area families." }
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Rachel Basolo", practice: "Avocado Doulas", url: "https://avocadodoulas.com", isAmbassador: false },
+    ],
     medicaidNote: "Yes — Oregon Health Plan (OHP) covers doula services for Medicaid members in Eugene just as it does statewide. Doulas bill through Coordinated Care Organizations (CCOs) — Lane County's CCO is Trillium Community Health Plan. Contact Trillium or the Oregon Health Authority for enrollment and reimbursement details.",
     insuranceNote: "Yes — Oregon law requires insurance coverage for licensed midwifery services, including birth center and home births. Most major carriers in the Eugene market cover CNM-attended hospital and birth center deliveries; verify your plan's coverage for out-of-hospital birth and doula services.",
     faqs: [
