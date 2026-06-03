@@ -136,7 +136,7 @@ export const cities: Record<string, CityData> = {
       { name: "Birth & Wellness Center of Arlington", url: "https://birthandwellnesscenter.com", paragraph: "Birth & Wellness Center of Arlington (1001 W Randol Mill Rd) is directly across the street from Texas Health Arlington Memorial, offering out-of-hospital birth with CPM/LM midwives in a boutique-style birthing suite. Founded in 2019, it provides holistic prenatal care, water birth, chiropractic services, and doula partnerships. They also serve families from Fort Worth, Grand Prairie, Mansfield, and the broader mid-cities area." },
     ],
     localDoulas: [
-      { name: "Andrea Carter", credential: "CNM", isAmbassador: false },
+      { name: "Andrea Carter", credential: "CNM", practice: "Birth & Wellness Center of Arlington", url: "https://birthandwellnesscenter.com", isAmbassador: false },
     ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Tarrant County\u2019s STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Arlington area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
@@ -438,7 +438,7 @@ export const cities: Record<string, CityData> = {
       { name: "Birth Center of Frisco", url: "https://www.friscobirthcenter.com", paragraph: "Birth Center of Frisco is a freestanding, midwife-led birth center offering a lower-intervention setting for low-risk pregnancies. It's a good option if you want the birth center experience close to home \u2014 and having a doula there who knows the rhythm of that space makes it feel a lot less unknown." },
     ],
     localDoulas: [
-      { name: "Margaret Wallis", credential: "LM, CPM, FACCE, LCCE, BSS", isAmbassador: false },
+      { name: "Margaret Wallis", credential: "LM, CPM, FACCE, LCCE, BSS", practice: "Birth Center of Frisco", url: "https://www.friscobirthcenter.com", isAmbassador: false },
     ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Collin/Denton Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Frisco area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
@@ -712,7 +712,7 @@ export const cities: Record<string, CityData> = {
       { name: "Allen Birthing Center", url: "https://www.allenmidwifery.com", paragraph: "Allen Birthing Center (Allen Midwifery & Family Wellness), about 10 minutes south of McKinney in Allen, is the closest freestanding birth center for McKinney families seeking a lower-intervention setting. It's midwife-led and well-established in the Collin County birth community \u2014 and having a doula who knows the rhythm of that space makes it feel a lot less unknown." },
     ],
     localDoulas: [
-      { name: "Shanna Hinrichs", credential: "LM, CPM", practice: "North Texas Birth Collective", isAmbassador: false },
+      { name: "Shanna Hinrichs", credential: "LM, CPM", practice: "North Texas Birth Collective", url: "https://northtexasbirthcollective.org", isAmbassador: false },
     ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Collin County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the McKinney area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
@@ -804,7 +804,7 @@ export const cities: Record<string, CityData> = {
       { name: "The Birth Place", url: "https://www.planobirthplace.com", paragraph: "The Birth Place is a freestanding birth center in the Plano area offering a midwife-led, lower-intervention setting for low-risk pregnancies. It's a good option if you want a birth center experience without leaving the city \u2014 and having a doula who knows the space makes the whole thing feel more supported." },
     ],
     localDoulas: [
-      { name: "Margaret Wallis", credential: "LM, CPM", isAmbassador: false },
+      { name: "Margaret Wallis", credential: "LM, CPM", practice: "The Birth Place", url: "https://www.planobirthplace.com", isAmbassador: false },
       { name: "Elizabeth Boyce", isAmbassador: false },
     ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Collin County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
