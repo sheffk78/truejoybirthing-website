@@ -1785,7 +1785,7 @@ export const cities: Record<string, CityData> = {
     ],
     localDoulas: [
       { name: "Carole", practice: "Empowered By Birth", url: "https://empoweredbybirthcharlotte.com", isAmbassador: false },
-      { name: "Lindsay Stowers", practice: "Heart of Grace Birth Services", isAmbassador: false },
+      { name: "Lindsay Stowers", practice: "Heart of Grace Birth Services", url: "https://heartofgracebirth.com", isAmbassador: false },
     ],
     medicaidNote: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Cabarrus County\u2019s managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health). Contact NC Medicaid at 1-800-662-7030 or visit ncdhhs.gov to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Concord area. Atrium Health\u2019s employer network and Charlotte-area insurers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
@@ -1999,8 +1999,8 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
     ],
     localDoulas: [
-      { name: "Balanced Birth Doula Agency", isAmbassador: false },
-      { name: "Coastal Midwifery", isAmbassador: false },
+      { name: "Balanced Birth Doula Agency", url: "https://balancedbirthagency.com", isAmbassador: false },
+      { name: "Coastal Midwifery", url: "https://coastalmidwifery.com", isAmbassador: false },
     ],
     medicaidNote: "No — As of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. Check with Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Chatham County families on Medicaid should also check with their managed care plan (AmeriHealth Caritas, CareSource, PeachState Health Plan) about any maternal wellness benefits that might include doula support.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Savannah area. Gulfstream Aerospace, JCB, and other Savannah-area employers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
@@ -2037,7 +2037,7 @@ export const cities: Record<string, CityData> = {
     ],
     localDoulas: [
       { name: "Jessica Gillan", practice: "Bellies, Babies & Bliss", isAmbassador: false },
-      { name: "Bloom Birth Co.", isAmbassador: false },
+      { name: "Bloom Birth Co.", url: "https://bloombirthco.com", isAmbassador: false },
     ],
     medicaidNote: "No — As of 2026, Florida Medicaid does not cover doula services. Florida has not enacted legislation to add Medicaid doula coverage. Duval County families on Medicaid should check with their managed care plan (Staywell, Sunshine Health, Simply Healthcare, UnitedHealthcare Community Plan) about any maternal wellness benefits that might include doula support. Contact Florida Medicaid at 1-877-254-1055 or visit flmedicaidmanagedcare.com for current plan information.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Jacksonville area. TRICARE covers maternity care for military families \u2014 check TRICARE\u2019s current doula and support-person policy at tricare.mil. Jacksonville\u2019s employer market (CSX, Fidelity, Anthem Blue Cross, Naval Station Mayport) increasingly includes maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
@@ -2135,7 +2135,9 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Donna", practice: "Doulas of Orlando", url: "https://orlandodoulas.com", isAmbassador: false },
+    ],
     medicaidNote: "No — As of 2026, Florida Medicaid does not cover doula services. Florida has not enacted legislation to add Medicaid doula coverage. Orlando-area families on Medicaid should check with their managed care plan (Staywell, Sunshine Health, Simply Healthcare, UnitedHealthcare Community Plan) about any maternal wellness benefits. Contact Florida Medicaid at 1-877-254-1055 or visit flmedicaidmanagedcare.com for current plan information.",
     insuranceNote: "Orlando's employer market is one of the largest in Florida — Disney, Universal, AdventHealth, Lockheed Martin, and Darden all offer health plans that may include maternal wellness benefits. Check your specific plan for doula coverage, and whether HSA or FSA funds can help. Theme-park and hospitality employers sometimes have flexible benefits that cover doula services under wellness programs.",
     faqs: [
@@ -2166,7 +2168,11 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Mountain Midwifery Birth Center", paragraph: "Mountain Midwifery Birth Center, in Englewood just south of Denver, is a CABC-accredited freestanding birth center staffed by certified nurse-midwives. It's been serving Denver-area families for years and is the go-to birth center for families seeking an out-of-hospital birth in the metro. Mountain Midwifery also has a strong relationship with UCHealth for transfers, which matters if you're planning a birth center birth and want to know your backup hospital." },
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Melanie", practice: "Blissful Beginnings", url: "https://blissfulbeginnings.com", isAmbassador: false },
+      { name: "Krystal", practice: "Doulas of Denver", url: "https://doulasofdenver.com", isAmbassador: false },
+      { name: "Colorado Doula Project", url: "https://coloradodoulaproject.org", isAmbassador: false },
+    ],
     medicaidNote: "Yes — Colorado Medicaid now covers doula services as of January 2024 under HB 23-1027, including Health First Colorado (the state's Medicaid program) managed care plans in Denver County. The reimbursement rate is $750 per birth for a full-spectrum doula package (prenatal, labor, and postpartum visits). Contact Health First Colorado at 1-800-221-3943 or visit healthfirstcolorado.com to confirm your plan's doula coverage and find participating doulas.",
     insuranceNote: "Yes — Colorado's Medicaid doula coverage (HB 23-1027, effective January 2024) is among the most progressive in the country — $750 per birth for full-spectrum doula services under Health First Colorado. For families with private insurance, Denver's employer market (DaVita, Liberty Global, Arrow Electronics, Quest Communications) increasingly includes maternal wellness benefits. Check your plan for doula coverage, and HSA/FSA funds can supplement out-of-pocket costs.",
     faqs: [
@@ -2408,7 +2414,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No licensed birth centers in Sacramento", paragraph: "NPI taxonomy 261QB0400X returned no active results for Sacramento, CA. Sacramento does not currently have a licensed freestanding birth center. Families seeking birth-center care typically travel to the San Francisco Bay Area or arrange home births with California Licensed Midwives (CLMs)." }
     ],
-localDoulas: [
+    localDoulas: [
       { name: "Baby Bliss Care LLC", isAmbassador: false },
     ],
     medicaidNote: "Yes — California's Medi-Cal covers doula services statewide as of January 2023 under SB-509. Reimbursement is approximately $1,587 per birth package, including prenatal visits, labor support, and postpartum visits. Doulas must enroll as Medi-Cal providers through the Department of Health Care Services (DHCS) and bill via the PAVE portal.",
@@ -2442,7 +2448,7 @@ localDoulas: [
       { name: "San Diego Birth Center", paragraph: "The San Diego Birth Center in Normal Heights is a CABC-accredited freestanding birth center staffed by certified nurse-midwives offering water birth, VBAC, and holistic prenatal care in a home-like setting." },
       { name: "Best Start Birth Center", paragraph: "Best Start Birth Center in Kearny Mesa provides midwife-led birth services including water birth with transfer agreements to nearby hospitals." }
     ],
-localDoulas: [
+    localDoulas: [
       { name: "Best Start Birth Center", isAmbassador: false },
     ],
     medicaidNote: "Yes — California Medi-Cal covers doula services under SB-509, with a birth package reimbursement of approximately $1,587. Doulas must enroll through the PAVE portal to bill Medi-Cal directly. Contact your managed care plan (Community Health Group, Health Net, or Blue Shield Promise) for referral details.",
@@ -2507,7 +2513,7 @@ localDoulas: [
       { name: "The Birth Sanctuary", paragraph: "The Birth Sanctuary in Pasadena is a freestanding birth center offering midwife-led births, water birth, and holistic prenatal care with transfer agreements to nearby hospitals." },
       { name: "Gracefull Birth Center", paragraph: "Gracefull Birth Center in Silver Lake provides a warm, community-rooted out-of-hospital birth experience with certified midwives, water birth tubs, and a strong commitment to equitable care." }
     ],
-localDoulas: [
+    localDoulas: [
       { name: "Tracy", practice: "B*E*S*T Doula Service", url: "https://bestdoulas.com", isAmbassador: false },
     ],
     medicaidNote: "Yes — California Medi-Cal covers doula services under SB-509, with approximately $1,587 reimbursement for the birth package. Doulas must enroll through the PAVE portal. LA County Medi-Cal managed care plans include L.A. Care, Health Net, and Molina Healthcare — contact your plan for doula referral lists.",
@@ -2600,7 +2606,7 @@ localDoulas: [
     birthCenterDetails: [
       { name: "Yes — Minnesota Birth Center", paragraph: "Yes — Minnesota Birth Center is a CABC-accredited freestanding birth center with its Minneapolis location in the Phillips neighborhood, offering water birth, midwifery-led care, and seamless hospital transfer partnerships." }
     ],
-localDoulas: [
+    localDoulas: [
       { name: "Minnesota Birth Center", url: "https://minnesotabirthcenter.com", isAmbassador: false },
     ],
     medicaidNote: "Yes — Minnesota Medicaid (Medical Assistance) covers doula services. Effective January 2024, MN DHS reimburses certified doulas up to $1,700 per pregnancy ($425 prenatal, $425 labor/delivery, $425 postpartum, $425 additional visits). Doulas must be listed on the Minnesota Doula Registry to bill Medical Assistance or MinnesotaCare.",
@@ -2816,7 +2822,7 @@ localDoulas: [
     birthCenterDetails: [
       { name: "No birth centers in Nashville", paragraph: "There are currently no licensed freestanding birth centers operating within Nashville. Tennessee's regulatory landscape for birth centers has been a barrier. Families seeking out-of-hospital birth typically work with home birth midwives serving the Middle Tennessee area." }
     ],
-localDoulas: [
+    localDoulas: [
       { name: "Nashville Doula Services", url: "https://nashvilledoulaservices.com", isAmbassador: false },
     ],
     medicaidNote: "No — Tennessee does NOT cover doula services through Medicaid (TennCare) as of 2025. While neighboring states have implemented Medicaid doula coverage, Tennessee has not yet enacted similar legislation, leaving low-income families to seek sliding-scale or volunteer doula options.",
@@ -2881,7 +2887,7 @@ localDoulas: [
     birthCenterDetails: [
       { name: "No birth centers in Pittsburgh", paragraph: "Pittsburgh doesn't currently have a freestanding birth center, which we know is disappointing if that's the experience you're hoping for. The good news is that Magee-Womens Hospital and West Penn Hospital both offer midwifery-led care with more supportive, low-intervention options, and some doulas in the area can connect you with home birth midwives serving the greater Pittsburgh region." }
     ],
-localDoulas: [
+    localDoulas: [
       { name: "The Midwife Center for Birth & Women's Health", url: "https://midwifecenter.org", isAmbassador: false },
     ],
     medicaidNote: "Yes — Pennsylvania Medicaid covers doula services as of 2024, with reimbursement of up to $1,250 per pregnancy through the PA Doula Program — covering prenatal visits, labor support, and postpartum visits combined.",
@@ -3655,7 +3661,7 @@ localDoulas: [
     birthCenterDetails: [
       { name: "West Michigan Midwifery Birth Center", paragraph: "West Michigan Midwifery is the only freestanding birth center in the Grand Rapids area, offering both home birth and birth center options. Staffed by Michigan Board of Licensed Midwives, they provide water birth, prenatal care, postpartum care, and lactation support. Free consultations are available for families exploring out-of-hospital birth options." },
     ],
-localDoulas: [
+    localDoulas: [
       { name: "West Michigan Midwifery Birth Center", url: "https://westmichiganmidwifery.com", isAmbassador: false },
       { name: "Great Lakes Doulas", url: "https://greatlakesdoulas.com", isAmbassador: false },
     ],
@@ -3849,7 +3855,7 @@ localDoulas: [
     birthCenterDetails: [
       { name: "Better Birth LLC", paragraph: "Better Birth LLC is a freestanding birth center in the Salt Lake City area offering out-of-hospital birth with certified professional midwives. Better Birth serves families seeking unmedicated birth in a home-like setting, with transfer relationships to local hospitals. Verify current operating status and CABC accreditation directly with the center." },
     ],
-localDoulas: [
+    localDoulas: [
       { name: "Better Birth LLC", isAmbassador: false },
     ],
     medicaidNote: "Yes — Utah Medicaid covers doula services as of October 1, 2024, following the passage of HB 222 in the 2024 legislative session. Salt Lake County families on Medicaid are served by Molina Healthcare of Utah, UnitedHealthcare Community Plan, and SelectHealth (Intermountain). Contact Utah Medicaid at 1-866-608-4212 or visit health.utah.gov to confirm your plan's doula coverage and find participating doulas.",
@@ -3950,7 +3956,9 @@ localDoulas: [
       { name: "Boise Birth Center", paragraph: "Boise Birth Center is a freestanding birth center in the Treasure Valley offering out-of-hospital birth with certified professional midwives. Verify current operating status and CABC accreditation directly with the center. Boise Birth Center serves families seeking unmedicated birth in a home-like setting with transfer relationships to St. Luke's and Saint Alphonsus." },
       { name: "Treasure Valley Midwives Birth Center", paragraph: "Treasure Valley Midwives operates a birth center in the Boise area, offering out-of-hospital birth with certified nurse-midwives or certified professional midwives. Verify current operating status and CABC accreditation directly. Having two birth centers in the Treasure Valley gives Boise families a real choice in birth setting — rare for a metro this size." },
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Boise Birth Services", url: "https://boisebirth.com", isAmbassador: false },
+    ],
     medicaidNote: "No — Idaho does not cover doula services under Medicaid as of May 2026. Idaho has not enacted legislation mandating Medicaid doula reimbursement. Ada County families on Idaho Medicaid are served by Molina Healthcare of Idaho, Blue Cross of Idaho (Idaho Medicaid), and Aetna Better Health of Idaho.",
     insuranceNote: "Idaho's lack of Medicaid doula coverage means Boise families on Medicaid pay out of pocket for doula services. For families with private insurance, Boise's employer market (St. Luke's Health System, Micron, HP, Boise Cascade, Idaho Power) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity. Notably, families in the Spokane area (across the WA border) may qualify for Washington Apple Health doula coverage.",
     faqs: [
@@ -4051,7 +4059,7 @@ localDoulas: [
       { name: "Andaluz Waterbirth Center", paragraph: "Andaluz Waterbirth Center is a well-known freestanding birth center in the Portland area offering out-of-hospital birth with waterbirth options and certified professional midwives. Andaluz is a cornerstone of Portland's progressive birth community. Verify CABC accreditation and current operating status directly with the center." },
       { name: "Portland Birth Center", paragraph: "Portland Birth Center is a freestanding birth center offering out-of-hospital birth with midwives in a home-like setting. Verify current operating status and CABC accreditation directly. Having multiple birth centers makes Portland one of the most option-rich cities in the country for families wanting birth center care." },
     ],
-localDoulas: [
+    localDoulas: [
       { name: "Bella Vie Gentle Birth Center", url: "https://gentlebirthcenter.com", isAmbassador: false },
       { name: "Portland Doula Collective", isAmbassador: false },
     ],
