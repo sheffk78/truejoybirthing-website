@@ -1822,7 +1822,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
     ],
     localDoulas: [
-      { name: "Two Doulas & You", practice: "Emily Watkins & Colleen Goidel", isAmbassador: false },
+      { name: "Two Doulas & You", practice: "Emily Watkins & Colleen Goidel", url: "https://www.twodoulasandyou.com", isAmbassador: false },
     ],
     medicaidNote: "No — As of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. Check with Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Forsyth County families on Medicaid should also check with their managed care plan about any maternal wellness benefits that might include doula support.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Cumming area. Northside Hospital\u2019s affiliated insurance networks and Atlanta-area employers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
@@ -2039,7 +2039,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
     ],
     localDoulas: [
-      { name: "Jessica Gillan", practice: "Bellies, Babies & Bliss", isAmbassador: false },
+      { name: "Jessica Gillan", practice: "Bellies, Babies & Bliss", url: "https://www.jaxdoula.com", isAmbassador: false },
       { name: "Bloom Birth Co.", url: "https://bloombirthco.com", isAmbassador: false },
     ],
     medicaidNote: "No — As of 2026, Florida Medicaid does not cover doula services. Florida has not enacted legislation to add Medicaid doula coverage. Duval County families on Medicaid should check with their managed care plan (Staywell, Sunshine Health, Simply Healthcare, UnitedHealthcare Community Plan) about any maternal wellness benefits that might include doula support. Contact Florida Medicaid at 1-877-254-1055 or visit flmedicaidmanagedcare.com for current plan information.",
