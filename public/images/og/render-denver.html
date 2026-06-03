@@ -14,35 +14,92 @@ body { width: 1200px; height: 630px; overflow: hidden; background: #FAF8F5; }
   background: linear-gradient(180deg, #FAF8F5 0%, #E8E6F0 100%);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
-  padding: 60px 80px 70px 80px;
+  padding: 80px 80px 80px 90px;
   font-family: 'Source Sans 3', system-ui, sans-serif;
+  overflow: hidden;
 }
+
+/* Top accent bar */
 .og-card::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 6px;
   background: #D8A0C4;
+  z-index: 10;
 }
+/* Bottom accent bar */
 .og-card::after {
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 6px;
   background: #D8A0C4;
+  z-index: 10;
 }
 
+/* Oversized background watermark */
+.watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 260px;
+  font-weight: 700;
+  letter-spacing: -10px;
+  color: rgba(110, 108, 153, 0.06);
+  line-height: 1;
+  user-select: none;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+/* Decorative arc — top right */
+.arc-top {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 320px;
+  height: 320px;
+  border: 2.5px solid rgba(216, 160, 196, 0.25);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+/* Decorative line — bottom right */
+.line-accent {
+  position: absolute;
+  bottom: 70px;
+  right: 80px;
+  width: 80px;
+  height: 3px;
+  background: rgba(216, 160, 196, 0.4);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+/* Text content */
 .label {
   font-family: 'Source Sans 3', system-ui, sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
   color: #6E6C99;
   text-transform: uppercase;
   letter-spacing: 5px;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 5;
+}
+
+.city-line {
+  position: relative;
+  z-index: 5;
+  margin-bottom: 16px;
+  line-height: 1;
 }
 
 .city-name {
@@ -50,10 +107,7 @@ body { width: 1200px; height: 630px; overflow: hidden; background: #FAF8F5; }
   font-size: 80px;
   font-weight: 700;
   color: #2D2B55;
-  line-height: 1.05;
   letter-spacing: -2px;
-  text-align: center;
-  margin-bottom: 4px;
 }
 
 .state-abbr {
@@ -62,23 +116,24 @@ body { width: 1200px; height: 630px; overflow: hidden; background: #FAF8F5; }
   font-weight: 700;
   color: #6E6C99;
   letter-spacing: -1px;
-  text-align: center;
-  margin-bottom: 32px;
 }
 
 .subtext {
   font-family: 'Source Sans 3', system-ui, sans-serif;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 400;
   color: #6E6C99;
-  text-align: center;
   letter-spacing: 0.5px;
+  position: relative;
+  z-index: 5;
 }
 
+/* Logo bottom-left */
 .logo-wrap {
   position: absolute;
-  bottom: 22px;
-  left: 36px;
+  bottom: 24px;
+  left: 40px;
+  z-index: 10;
 }
 .logo-wrap img {
   height: 44px;
@@ -88,11 +143,21 @@ body { width: 1200px; height: 630px; overflow: hidden; background: #FAF8F5; }
 </head>
 <body>
 <div class="og-card">
+  <!-- Background watermark -->
+  <div class="watermark">DENVER</div>
+
+  <!-- Decorative elements -->
+  <div class="arc-top"></div>
+  <div class="line-accent"></div>
+
+  <!-- Text content -->
   <div class="label">Birth Support</div>
-  <div style="text-align: center;">
+  <div class="city-line">
     <span class="city-name">Denver, </span><span class="state-abbr">CO</span>
   </div>
   <div class="subtext">Doulas · Hospital Info · Joyful Birth Plan</div>
+
+  <!-- Logo -->
   <div class="logo-wrap">
     <img src="/images/logo.svg" alt="True Joy Birthing">
   </div>
