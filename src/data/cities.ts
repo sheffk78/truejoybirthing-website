@@ -70,7 +70,7 @@ export const cities: Record<string, CityData> = {
       { name: "Birth Haven", url: "https://beyondbirthmidwifery.com", paragraph: "Birth Haven, at 27 Medical Drive Suite 200 in Amarillo, is a freestanding birth center run by the midwives at Beyond Birth Midwifery Associates — the only practice in Amarillo that Google Maps categorizes explicitly as a \u201cbirth center.\u201d It\u2019s located just off Coulter near the medical district, which means you\u2019re minutes from both BSA and Northwest Texas hospitals if a transfer becomes necessary. For families seeking a lower-intervention, out-of-hospital birth in the Panhandle, this is the dedicated option \u2014 and having a doula who knows the Birth Haven team and transfer protocols makes that comfort level a lot higher. Call ahead to confirm availability and schedule a tour, since the birth community here is small and spots fill." },
     ],
     localDoulas: [
-      { name: "Salem Silvey", credential: "LM, CPM", practice: "Legacy Birth", isAmbassador: false },
+      { name: "Salem Silvey", credential: "LM, CPM", practice: "Legacy Birth", url: "https://panhandlebirth.com", isAmbassador: false },
     ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Potter/Randall Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Amarillo area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
@@ -900,7 +900,7 @@ export const cities: Record<string, CityData> = {
       { name: "The Birth Center of Midland", url: "https://midlandbirthcenter.com", paragraph: "The Birth Center of Midland is a freestanding, midwife-led birth center offering a lower-intervention setting for low-risk pregnancies. It\u2019s the only out-of-hospital birth center in the Permian Basin \u2014 and having a doula who knows the rhythm of that space makes the whole thing feel a lot less unknown." },
     ],
     localDoulas: [
-      { name: "The Birth Center of Midland", isAmbassador: false },
+      { name: "The Birth Center of Midland", url: "https://midlandbirthcenter.com", isAmbassador: false },
     ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Midland County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Midland-Odessa area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
