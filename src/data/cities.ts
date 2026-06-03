@@ -2648,7 +2648,9 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Yes — Minnesota Birth Center – St. Paul", paragraph: "Yes — Minnesota Birth Center opened a St. Paul location offering the same CABC-accredited midwifery-led care, with water birth options and a warm, home-like setting." }
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Minnesota Birth Center", url: "https://minnesotabirthcenter.com", isAmbassador: false },
+    ],
     medicaidNote: "Yes — Minnesota Medicaid (Medical Assistance) covers doula services statewide. Effective January 2024, MN DHS reimburses certified doulas up to $1,700 per pregnancy. St. Paul families access the same MN Doula Registry and reimbursement schedule as the rest of the state.",
     insuranceNote: "St. Paul families insured through HealthPartners, Blue Cross Blue Shield of Minnesota, or Medica generally find strong midwifery coverage. Minnesota law mandates private-plan coverage of licensed midwifery, though doula coverage varies by plan — check your specific benefits.",
     faqs: [
