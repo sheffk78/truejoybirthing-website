@@ -30,15 +30,15 @@ const ogImage = slug === 'denver-co'
   ? 'https://truejoybirthing.com/images/og/og-denver-co.png'
   : `https://truejoybirthing.com/images/og-city-${slug}.webp`;
 
-// Hero image — use safe library image instead of per-city AI skyline
-// Per-city skyline images are AI-generated with no anatomical risk
-// but show fictional hospital rooms, not real city skylines
-const heroImage = `/images/hospital-newborn.webp`;
-const heroAlt = `Supportive hospital birth environment in ${city}, ${state} — local doula and hospital info for expectant moms`;
+// Hero image — doula-breastfeeding is portrait (2:3), passes safety check
+// (correct cradle hold, proper latch alignment, no anatomical errors)
+// Warm, hospital-relevant, fills the hero column properly
+const heroImage = `/images/doula-breastfeeding.webp`;
+const heroAlt = `Mother with newborn in ${city}, ${state} — breastfeeding support and local doula care for expectant moms`;
 
 // Support section image — doula-walking passes safety check (no anatomical errors)
 const supportImage = `/images/doula-walking.webp`;
-const supportImageAlt = `A birth doula walking alongside an expectant mother — emotional support and companionship during pregnancy`;
+const supportImageAlt = `Birth doula walking with an expectant mom in ${city}, ${state} — companionship and emotional support during pregnancy`;
 
 // Full state name lookup for breadcrumbs and schema
 const stateNames: Record<string, string> = {
@@ -127,12 +127,15 @@ const schema = {
           <p class="text-tjb-gray leading-relaxed mb-8 max-w-[36rem]">
             Whether you're wondering if a doula is worth it, whether your hospital will let one in, or how you'll afford it — you're in the right place. This guide covers what {city} moms actually need to know.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+          <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-3">
             <a href="/birth-plan-template/" class="btn-primary">
               Get Your Free Joyful Birth Plan
             </a>
-            <span class="text-sm text-tjb-gray">Free template · No email required</span>
+            <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-secondary">
+              Or try the free app →
+            </a>
           </div>
+          <p class="text-sm text-tjb-gray">Free template (no email) · App walks you through it step by step</p>
           {heroLocalDetail && (
             <p class="text-sm text-tjb-gray mt-6 italic border-l-2 border-tjb-lavender-300 pl-4" set:html={heroLocalDetail} />
           )}
@@ -273,9 +276,15 @@ const schema = {
         {hospitalDetails.map((h) => (
           <div class="bg-white border border-tjb-lavender-200 rounded-lg p-5 hover:border-tjb-rose-400/50 transition">
             {h.url ? (
-              <h3 class="text-lg font-semibold mb-1"><a href={h.url} target="_blank" rel="noopener noreferrer" class="text-tjb-lavender-600 hover:underline">{h.name} ↗</a></h3>
+              <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
+                <svg class="w-4.5 h-4.5 text-tjb-rose-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                <a href={h.url} target="_blank" rel="noopener noreferrer" class="text-tjb-lavender-600 hover:underline">{h.name} ↗</a>
+              </h3>
             ) : (
-              <h3 class="text-lg font-semibold mb-1">{h.name}</h3>
+              <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
+                <svg class="w-4.5 h-4.5 text-tjb-rose-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                {h.name}
+              </h3>
             )}
             <p class="text-tjb-gray text-[0.9375rem] leading-relaxed" set:html={h.paragraph} />
           </div>
@@ -283,9 +292,15 @@ const schema = {
         {birthCenterDetails.map((bc) => (
           <div class="bg-white border border-tjb-lavender-200 rounded-lg p-5 hover:border-tjb-rose-400/50 transition">
             {bc.url ? (
-              <h3 class="text-lg font-semibold mb-1"><a href={bc.url} target="_blank" rel="noopener noreferrer" class="text-tjb-lavender-600 hover:underline">{bc.name} ↗</a></h3>
+              <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
+                <svg class="w-4.5 h-4.5 text-tjb-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                <a href={bc.url} target="_blank" rel="noopener noreferrer" class="text-tjb-lavender-600 hover:underline">{bc.name} ↗</a>
+              </h3>
             ) : (
-              <h3 class="text-lg font-semibold mb-1">{bc.name}</h3>
+              <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
+                <svg class="w-4.5 h-4.5 text-tjb-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                {bc.name}
+              </h3>
             )}
             <p class="text-tjb-gray text-[0.9375rem] leading-relaxed" set:html={bc.paragraph} />
           </div>
@@ -356,15 +371,15 @@ const schema = {
         <h3 class="font-semibold text-lg text-tjb-charcoal mb-2">Walk Into Your Birth Feeling Prepared — Not Anxious</h3>
         <p class="text-tjb-gray mb-3">The #1 thing {city} moms tell us they wish they'd had? <strong>A clear plan they'd actually thought through</strong> — not just a form, but a process that helped them understand their options before the contractions started.</p>
         <p class="text-tjb-gray mb-4">That's exactly what the free Joyful Birth Plan does. It walks you through every decision — who's in the room, what happens if things shift, what matters most to you — so you walk in confident.</p>
-        <div class="flex flex-col sm:flex-row gap-3">
-          <a href="/birth-plan-confidence-session/#book" class="btn-primary text-center no-underline">
-            Request a Confidence Session
-          </a>
-          <a href="/birth-plan-template/" class="btn-secondary text-center">
+        <div class="flex flex-col sm:flex-row gap-3 mb-4">
+          <a href="/birth-plan-template/" class="btn-primary text-center no-underline">
             Get Your Free Joyful Birth Plan
           </a>
+          <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-secondary text-center">
+            Try the Free App
+          </a>
         </div>
-        <p class="text-xs text-tjb-gray mt-3">Free. No email required for the template. The app walks you through it step by step.</p>
+        <p class="text-xs text-tjb-gray">Free template (no email required) · Or use the app — it walks you through every step.</p>
       </div>
     </div>
   </section>
