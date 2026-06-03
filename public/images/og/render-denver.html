@@ -6,57 +6,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { width: 1200px; height: 630px; overflow: hidden; background: #2D2B55; }
+body { width: 1200px; height: 630px; overflow: hidden; background: #FAF8F5; }
 
 .og-card {
   width: 1200px;
   height: 630px;
-  position: relative;
+  background: linear-gradient(180deg, #FAF8F5 0%, #E8E6F0 100%);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 60px 80px 70px 80px;
   font-family: 'Source Sans 3', system-ui, sans-serif;
-  overflow: hidden;
 }
-
-/* Top accent bar */
 .og-card::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 6px;
   background: #D8A0C4;
-  z-index: 10;
 }
-/* Bottom accent bar */
 .og-card::after {
   content: '';
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 6px;
   background: #D8A0C4;
-  z-index: 10;
-}
-
-/* Left side: text content */
-.left-side {
-  width: 55%;
-  background: #FAF8F5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 80px 50px 80px 70px;
-  position: relative;
-  z-index: 2;
 }
 
 .label {
   font-family: 'Source Sans 3', system-ui, sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
   color: #6E6C99;
   text-transform: uppercase;
   letter-spacing: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 .city-name {
@@ -64,88 +50,51 @@ body { width: 1200px; height: 630px; overflow: hidden; background: #2D2B55; }
   font-size: 80px;
   font-weight: 700;
   color: #2D2B55;
-  line-height: 1.0;
+  line-height: 1.05;
   letter-spacing: -2px;
-  margin-bottom: 8px;
+  text-align: center;
+  margin-bottom: 4px;
 }
 
-.state-name {
+.state-abbr {
   font-family: 'Source Sans 3', system-ui, sans-serif;
-  font-size: 36px;
+  font-size: 80px;
+  font-weight: 700;
+  color: #6E6C99;
+  letter-spacing: -1px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.subtext {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 26px;
   font-weight: 400;
   color: #6E6C99;
-  margin-bottom: 0;
+  text-align: center;
+  letter-spacing: 0.5px;
 }
 
 .logo-wrap {
   position: absolute;
-  bottom: 28px;
-  left: 70px;
+  bottom: 22px;
+  left: 36px;
 }
 .logo-wrap img {
-  height: 40px;
+  height: 44px;
   width: auto;
-  opacity: 0.85;
-}
-
-/* Right side: brand color block */
-.right-side {
-  width: 45%;
-  background: linear-gradient(135deg, #6E6C99 0%, #2D2B55 40%, #1a1840 100%);
-  position: relative;
-  z-index: 2;
-}
-/* Decorative circle pattern on right side */
-.right-side::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 280px;
-  height: 280px;
-  border: 2px solid rgba(216, 160, 196, 0.25);
-  border-radius: 50%;
-}
-.right-side::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 180px;
-  height: 180px;
-  border: 1.5px solid rgba(216, 160, 196, 0.15);
-  border-radius: 50%;
-}
-
-/* State abbreviation watermark on right side */
-.state-watermark {
-  position: absolute;
-  bottom: 30px;
-  right: 40px;
-  font-family: 'Source Sans 3', system-ui, sans-serif;
-  font-size: 120px;
-  font-weight: 700;
-  color: rgba(216, 160, 196, 0.08);
-  letter-spacing: -4px;
-  line-height: 1;
-  user-select: none;
 }
 </style>
 </head>
 <body>
 <div class="og-card">
-  <div class="left-side">
-    <div class="label">Birth Support</div>
-    <div class="city-name">Denver</div>
-    <div class="state-name">Colorado</div>
-    <div class="logo-wrap">
-      <img src="/images/logo.svg" alt="True Joy Birthing">
-    </div>
+  <div class="label">Birth Support</div>
+  <div style="text-align: center;">
+    <span class="city-name">Denver, </span><span class="state-abbr">CO</span>
   </div>
-  <div class="right-side">
-    <div class="state-watermark">CO</div>
+  <div class="subtext">Doulas · Hospital Info · Joyful Birth Plan</div>
+  <div class="logo-wrap">
+    <img src="/images/logo.svg" alt="True Joy Birthing">
   </div>
 </div>
 </body>
