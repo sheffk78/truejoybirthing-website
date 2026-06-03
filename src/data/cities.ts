@@ -2074,7 +2074,10 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "QueenBirth Services", url: "https://queenbirthservices.com", isAmbassador: false },
+      { name: "Triad Doulas", isAmbassador: false },
+    ],
     medicaidNote: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Guilford County\u2019s managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health, Healthy Blue). Contact NC Medicaid at 1-800-662-7030 or visit ncdhhs.gov to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Greensboro area. The Triad\u2019s employer market (Volvo Trucks, Honda Aircraft, Syngenta, VF Corporation, Lincoln Financial) increasingly includes maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -2106,7 +2109,9 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Tampa Doulas", isAmbassador: false },
+    ],
     medicaidNote: "No — As of 2026, Florida Medicaid does not cover doula services. Florida has not enacted legislation to add Medicaid doula coverage. Tampa-area families on Medicaid should check with their managed care plan (Staywell, Sunshine Health, Simply Healthcare, Molina Healthcare) about any maternal wellness benefits that might include doula support. Contact Florida Medicaid at 1-877-254-1055 or visit flmedicaidmanagedcare.com for current plan information.",
     insuranceNote: "TRICARE covers maternity care for military families at MacDill AFB — check TRICARE's current doula and support-person policy at tricare.mil, as doula coverage is limited. Tampa's employer market (BayCare, Raymond James, Jabil, Citigroup) increasingly includes maternal wellness benefits — check your specific plan for doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -2758,10 +2763,10 @@ export const cities: Record<string, CityData> = {
     culture: "Yes — New York City's birth culture is as diverse as its boroughs — from the hospital-intensive landscape of Manhattan to the community midwifery traditions of Brooklyn and the Bronx. The city has a robust doula community and has been a national leader in Medicaid doula coverage, though persistent maternal health disparities in Black and Brown communities drive ongoing birth justice activism.",
     heroLocalDetail: "From the brownstone-lined blocks of Park Slope to the bustling corridors along the Grand Concourse in the Bronx, New York families plan births across an enormous spectrum of settings. Manhattan's East Side hospital corridor near York Avenue houses some of the nation's top neonatal units, while birth justice organizers build grassroots support networks from Harlem to Bedford-Stuyvesant.",
     hospitalDetails: [
-      { name: "NewYork-Presbyterian/Columbia University Irving Medical Center", paragraph: "Located in Washington Heights, Columbia's medical center features a Level IV NICU — the highest designation — and is one of the premier maternal-fetal medicine programs in the country. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "NYU Langone Health — Tisch Hospital", paragraph: "NYU Langone on First Avenue in Midtown East operates a Level IV NICU and is known for its midwifery practice alongside top-tier obstetric care." },
-      { name: "Mount Sinai Hospital", paragraph: "Mount Sinai on the Upper East Side near Madison Avenue has a Level IV NICU and handles some of the city's most complex pregnancies and neonatal cases." },
-      { name: "NYC Health + Hospitals/Elmhurst", url: "https://www.nychealthandhospitals.org", paragraph: "Elmhurst Hospital in Queens provides a Level III NICU and serves as a vital safety-net hospital for immigrant and low-income families across the borough." }
+      { name: "NewYork-Presbyterian/Columbia University Irving Medical Center", url: "https://www.nyp.org", paragraph: "Located in Washington Heights, Columbia's medical center features a Level IV NICU — the highest designation — and is one of the premier maternal-fetal medicine programs in the country. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "NYU Langone Health — Tisch Hospital", url: "https://www.nyulangone.org", paragraph: "NYU Langone on First Avenue in Midtown East operates a Level IV NICU and is known for its midwifery practice alongside top-tier obstetric care." },
+      { name: "Mount Sinai Hospital", url: "https://www.mountsinai.org", paragraph: "Mount Sinai on the Upper East Side near Madison Avenue has a Level IV NICU and handles some of the city's most complex pregnancies and neonatal cases." },
+      { name: "NYC Health + Hospitals/Elmhurst", url: "https://www.nychealthandhospitals.org", paragraph: "Elmhurst Hospital in Queens provides a Level III NICU and serves as a vital safety-net hospital for immigrant and low-income families across the borough." },
     ],
     birthCenterDetails: [
       { name: "No freestanding birth centers in New York City", paragraph: "Licensed freestanding birth centers are virtually nonexistent in New York City due to the state's stringent regulatory environment. Families seeking low-intervention birth typically work with midwives within hospital-based midwifery practices or explore home birth with certified midwives." }
@@ -3730,7 +3735,11 @@ export const cities: Record<string, CityData> = {
     // centers have opened in the Greater New Haven area. Google Maps search confirmed no
     // freestanding birth centers currently operating. Verified 2026-05-27.
     birthCenterDetails: [],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Jennifer Edmonds", isAmbassador: false },
+      { name: "Shamica Frasier", isAmbassador: false },
+      { name: "Laurie Sweet", isAmbassador: false },
+    ],
     medicaidNote: "Yes — Connecticut Medicaid (HUSKY Health) does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. New Haven families on Medicaid must pay out of pocket, though some doulas offer sliding-scale fees. Ask your doula about payment plans or reduced-rate options.",
     insuranceNote: "Most private insurers in Connecticut (Anthem Blue Cross, ConnectiCare, UnitedHealthcare, Cigna) do not cover doula services as a standard benefit. Check your plan for out-of-network reimbursement or HSA/FSA eligibility. Contact your provider directly to confirm what\u2019s covered.",
     faqs: [
