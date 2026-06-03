@@ -138,8 +138,20 @@ These pages break the rules above. Don't fix yet — flag and schedule.
 
 | Page | Issue | Rule |
 |---|---|---|
-| `/birth-support/[city]/` | Two `bg-tjb-charcoal` buttons (PDF + Confidence Session CTAs) | Rule 1 |
-| `/birth-support/[state]/` | Two `bg-tjb-charcoal` buttons (PDF + Birth Plan CTAs) | Rule 1 |
 | `/contact/` | Form inputs use `rounded-lg` instead of `rounded-xl`; submit button uses inline style instead of `btn-primary` | Rules 5, 6 |
 | `/ambassador/` | Form inputs use `rounded-lg` instead of `rounded-xl`; submit button uses inline style instead of `btn-primary` | Rules 5, 6 |
 | Lead capture forms (`LeadCaptureForm.astro`, `city/LeadCaptureForm.astro`) | Inputs use `rounded-full border-tjb-lavender-300`; no focus ring; no cream card wrapper | Rules 5, 7 |
+
+## Completed Migrations
+
+| Change | Date | Scope |
+|---|---|---|
+| `bg-tjb-charcoal` buttons → `btn-primary` in city/state templates | June 2026 | `[city].astro`, `[state].astro` (all 180+ city pages, all 50 state pages) |
+| Custom outline buttons → `btn-secondary` in city/state templates | June 2026 | `[city].astro`, `[state].astro` |
+| AI-generated support images → `doula-teaching.webp` stock image | June 2026 | `[city].astro` (all 180+ city pages) |
+| Confidence Session page: hero two-column + form cream card | June 2026 | `birth-plan-confidence-session.astro` |
+| Confidence Session CTA: "Book" → "Request" | June 2026 | All pages site-wide |
+
+### Image asset note
+
+The per-city `*-birth-doula-support.webp` files (180 images, all 800×500 AI-generated with anatomical artifacts) are **deprecated**. They have been replaced in the template by `/images/doula-teaching.webp` (1024×1536, high-quality stock). The old files remain in `public/images/` but are no longer referenced. They can be safely deleted in a future cleanup.

@@ -27,8 +27,8 @@ const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 const ogImage = `https://truejoybirthing.com/images/og-city-${slug}.webp`;
 const heroImage = `/images/${slug}-birth-doula-skyline.webp`;
 const heroAlt = `Birth doula supporting a family during labor in ${city}, ${state} — local hospital birth support and doula cost info`;
-const supportImage = `/images/${slug}-birth-doula-support.webp`;
-const supportImageAlt = `Birth support and doula care in ${city}, ${state} — a doula helps expectant parents prepare for their hospital birth`;
+const supportImage = `/images/doula-teaching.webp`;
+const supportImageAlt = `A certified birth doula helping expectant parents prepare for their hospital birth — professional birth support and education`;
 
 // Full state name lookup for breadcrumbs and schema
 const stateNames: Record<string, string> = {
@@ -111,10 +111,10 @@ const schema = {
             <p class="text-base text-tjb-gray italic mb-6" set:html={heroLocalDetail} />
           )}
           <div class="flex flex-col sm:flex-row gap-3">
-            <a href="/birth-plan-template/" class="bg-tjb-charcoal text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-lavender-700 transition text-center">
+            <a href="/birth-plan-template/" class="btn-primary text-center">
               Get Your Free Joyful Birth Plan
             </a>
-            <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="bg-tjb-cream-50 text-tjb-lavender-600 border-2 border-tjb-lavender-600 px-6 py-3 rounded-full font-semibold hover:bg-tjb-cream transition text-center">
+            <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-secondary text-center">
               Download the Free App
             </a>
           </div>
@@ -159,9 +159,9 @@ const schema = {
       <img
         src={supportImage}
         alt={supportImageAlt}
-        class="w-full h-52 md:h-64 object-cover rounded-xl shadow-md my-6"
-        width="800"
-        height="500"
+        class="w-full max-w-md mx-auto h-auto rounded-xl shadow-md my-6"
+        width="1024"
+        height="1536"
         loading="lazy"
       />
 
@@ -282,10 +282,10 @@ const schema = {
         <p class="text-tjb-gray mb-3">The #1 thing {city} moms tell us they wish they'd had? <strong>A clear plan they'd actually thought through</strong> — not just a form, but a process that helped them understand their options before the contractions started.</p>
         <p class="text-tjb-gray mb-4">That's exactly what the free Joyful Birth Plan does. It walks you through every decision — who's in the room, what happens if things shift, what matters most to you — so you walk in confident.</p>
         <div class="flex flex-col sm:flex-row gap-3">
-          <a href="/birth-plan-confidence-session/#book" class="bg-tjb-charcoal text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-lavender-700 transition text-center no-underline">
-            Book a Birth Plan Confidence Session
+          <a href="/birth-plan-confidence-session/#book" class="btn-primary text-center no-underline">
+            Request a Confidence Session
           </a>
-          <a href="/birth-plan-template/" class="bg-white text-tjb-lavender-600 border-2 border-tjb-lavender-600 px-6 py-3 rounded-full font-semibold hover:bg-tjb-cream transition text-center">
+          <a href="/birth-plan-template/" class="btn-secondary text-center">
             Get Your Free Joyful Birth Plan
           </a>
         </div>
