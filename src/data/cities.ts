@@ -712,7 +712,7 @@ export const cities: Record<string, CityData> = {
       { name: "Allen Birthing Center", url: "https://www.allenmidwifery.com", paragraph: "Allen Birthing Center (Allen Midwifery & Family Wellness), about 10 minutes south of McKinney in Allen, is the closest freestanding birth center for McKinney families seeking a lower-intervention setting. It's midwife-led and well-established in the Collin County birth community \u2014 and having a doula who knows the rhythm of that space makes it feel a lot less unknown." },
     ],
     localDoulas: [
-      { name: "Shanna Hinrichs", credential: "LM, CPM", practice: "North Texas Birth Collective", url: "https://northtexasbirthcollective.com", isAmbassador: false },
+      { name: "Shanna Hinrichs", credential: "LM, CPM", practice: "North Texas Birth Collective", isAmbassador: false },
     ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Collin County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the McKinney area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
@@ -1962,11 +1962,11 @@ export const cities: Record<string, CityData> = {
     // categorized as "Birth center", 4.9\u2605/67 reviews, website atlantabirthcenter.com).
     // Verified 2026-05-26.
     birthCenterDetails: [
-      { name: "Intown Birth Center", url: "https://intownbirthcenter.com", paragraph: "Intown Birth Center, at 1401 Montgomery Ferry Drive NE in Atlanta's Morningside neighborhood, is a freestanding birth center offering midwife-led birth in a lower-intervention setting. It's one of Atlanta's most established birth centers, with CNM midwives and transfer agreements with nearby hospitals. If you're planning an out-of-hospital birth in intown Atlanta, Intown Birth Center is a primary option \u2014 and having a doula who knows the birth center space and transfer protocols makes the experience feel supported." },
+      { name: "Intown Birth Center", paragraph: "Intown Birth Center, at 1401 Montgomery Ferry Drive NE in Atlanta's Morningside neighborhood, is a freestanding birth center offering midwife-led birth in a lower-intervention setting. It's one of Atlanta's most established birth centers, with CNM midwives and transfer agreements with nearby hospitals. If you're planning an out-of-hospital birth in intown Atlanta, Intown Birth Center is a primary option \u2014 and having a doula who knows the birth center space and transfer protocols makes the experience feel supported." },
       { name: "Atlanta Birth Center", url: "https://www.atlantabirthcenter.org", paragraph: "Atlanta Birth Center, at 1442 Flat Shoals Ave SE in East Atlanta, is a freestanding birth center serving families seeking a community-centered, lower-intervention birth experience. It's located in the East Atlanta Village area, convenient for families in southeast intown neighborhoods. Verify with the center directly for current services, insurance coverage, and availability." },
     ],
     localDoulas: [
-      { name: "Intown Birth Center", url: "https://intownbirthcenter.com", isAmbassador: false },
+      { name: "Intown Birth Center", isAmbassador: false },
     ],
     medicaidNote: "No — As of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. Check with Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Fulton, DeKalb, and Clayton County families on Medicaid should also check with their managed care plan about any maternal wellness benefits that might include doula support.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Atlanta area. Atlanta's large employer market (Delta, Home Depot, Coca-Cola, Emory, CDC) increasingly includes maternal wellness benefits \u2014 check with your HR department about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
@@ -2616,7 +2616,7 @@ export const cities: Record<string, CityData> = {
       { name: "Yes — Minnesota Birth Center", paragraph: "Yes — Minnesota Birth Center is a CABC-accredited freestanding birth center with its Minneapolis location in the Phillips neighborhood, offering water birth, midwifery-led care, and seamless hospital transfer partnerships." }
     ],
     localDoulas: [
-      { name: "Minnesota Birth Center", url: "https://minnesotabirthcenter.com", isAmbassador: false },
+      { name: "Minnesota Birth Center", isAmbassador: false },
     ],
     medicaidNote: "Yes — Minnesota Medicaid (Medical Assistance) covers doula services. Effective January 2024, MN DHS reimburses certified doulas up to $1,700 per pregnancy ($425 prenatal, $425 labor/delivery, $425 postpartum, $425 additional visits). Doulas must be listed on the Minnesota Doula Registry to bill Medical Assistance or MinnesotaCare.",
     insuranceNote: "Yes — Minnesota law requires most private insurers to cover midwifery services, and many major carriers (Blue Cross, HealthPartners, UCare) include doula benefits or offer flex-spending reimbursement. Always verify your specific plan's out-of-network doula coverage.",

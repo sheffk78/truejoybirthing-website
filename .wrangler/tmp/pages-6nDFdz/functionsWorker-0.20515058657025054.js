@@ -273,7 +273,7 @@ var onRequest = /* @__PURE__ */ __name(async (context) => {
   }
 }, "onRequest");
 
-// ../.wrangler/tmp/pages-0QHcmA/functionsRoutes-0.8409170271447175.mjs
+// ../.wrangler/tmp/pages-6nDFdz/functionsRoutes-0.42142748853807277.mjs
 var routes = [
   {
     routePath: "/api/ambassador",
