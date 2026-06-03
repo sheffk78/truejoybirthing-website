@@ -1,106 +1,63 @@
 ---
 // ═══════════════════════════════════════════════════════════════
 // Dynamic state birth-support hub page — intermediate topology layer
-// Links to all city pages in the state, provides state-level Medicaid info
+// Links to all cities in the state, provides state-level Medicaid info
 // ═══════════════════════════════════════════════════════════════
 import Layout from '../../layouts/Layout.astro';
 import { cities, citySlugs } from '../../data/cities';
 
 export function getStaticPaths() {
-  const stateNames: Record<string, string> = {
-    AK: 'Alaska', AL: 'Alabama', AR: 'Arkansas', AZ: 'Arizona',
-    CA: 'California', CO: 'Colorado', CT: 'Connecticut',
-    DE: 'Delaware', FL: 'Florida', GA: 'Georgia',
-    HI: 'Hawaii', IA: 'Iowa', ID: 'Idaho', IL: 'Illinois',
-    IN: 'Indiana', KS: 'Kansas', KY: 'Kentucky',
-    LA: 'Louisiana', MA: 'Massachusetts', MD: 'Maryland',
-    MI: 'Michigan', MN: 'Minnesota', MO: 'Missouri', MS: 'Mississippi',
-    MT: 'Montana', NC: 'North Carolina', ND: 'North Dakota',
-    NE: 'Nebraska', NH: 'New Hampshire', NJ: 'New Jersey',
-    NM: 'New Mexico', NV: 'Nevada', NY: 'New York',
-    OH: 'Ohio', OK: 'Oklahoma', OR: 'Oregon',
-    PA: 'Pennsylvania', RI: 'Rhode Island',
-    SC: 'South Carolina', SD: 'South Dakota',
-    TN: 'Tennessee', TX: 'Texas',
-    UT: 'Utah', VA: 'Virginia', VT: 'Vermont',
-    WA: 'Washington', WI: 'Wisconsin', WV: 'West Virginia',
-    WY: 'Wyoming',
-  };
-
-  // ── Group cities by state ──
-  const groups: Record<string, { name: string; slug: string; costLow: number; costHigh: number }[]> = {};
+  // Group cities by state
+  const stateMap: Record<string, string[]> = {};
   for (const slug of citySlugs) {
     const city = cities[slug];
     if (!city) continue;
-    if (!groups[city.state]) groups[city.state] = [];
-    groups[city.state].push({
-      name: city.city,
-      slug: city.slug,
-      costLow: city.costLow,
-      costHigh: city.costHigh,
-    });
+    if (!stateMap[city.state]) stateMap[city.state] = [];
+    stateMap[city.state].push(slug);
   }
 
-  // ── Build state info array ──
-  const infos = Object.entries(groups).map(([stateCode, stateCities]) => {
-    const stateName = stateNames[stateCode] || stateCode;
-    const stateSlug = stateCode.toLowerCase();
-    const cityNotes = stateCities.map(c => cities[c.slug]?.medicaidNote || '');
-    const hasYes = cityNotes.some(n => n.startsWith('Yes'));
-    const hasNo = cityNotes.some(n => n !== undefined && n !== '' && !n.startsWith('Yes'));
-    const medicaidStatus: 'yes' | 'no' | 'mixed' = hasYes && hasNo ? 'mixed' : hasYes ? 'yes' : 'no';
-    const medicaidNote = cityNotes[0] || '';
-    const costLow = Math.min(...stateCities.map(c => c.costLow));
-    const costHigh = Math.max(...stateCities.map(c => c.costHigh));
-    return {
-      code: stateCode,
-      name: stateName,
-      slug: stateSlug,
-      cities: stateCities.sort((a, b) => a.name.localeCompare(b.name)),
-      medicaidStatus,
-      medicaidNote,
-      costLow,
-      costHigh,
-    };
-  });
+  const stateNames: Record<string, string> = {
+    AK: 'Alaska', AL: 'Alabama', AR: 'Arkansas', AZ: 'Arizona', CA: 'California',
+    CO: 'Colorado', CT: 'Connecticut', DE: 'Delaware', FL: 'Florida', GA: 'Georgia',
+    HI: 'Hawaii', IA: 'Iowa', ID: 'Idaho', IL: 'Illinois', IN: 'Indiana',
+    KS: 'Kansas', KY: 'Kentucky', LA: 'Louisiana', MA: 'Massachusetts', MD: 'Maryland',
+    MI: 'Michigan', MN: 'Minnesota', MO: 'Missouri', MS: 'Mississippi', MT: 'Montana',
+    NC: 'North Carolina', ND: 'North Dakota', NE: 'Nebraska', NH: 'New Hampshire',
+    NJ: 'New Jersey', NM: 'New Mexico', NV: 'Nevada', NY: 'New York', OH: 'Ohio',
+    OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', RI: 'Rhode Island', SC: 'South Carolina',
+    SD: 'South Dakota', TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VA: 'Virginia',
+    VT: 'Vermont', WA: 'Washington', WI: 'Wisconsin', WV: 'West Virginia', WY: 'Wyoming',
+  };
 
-  infos.sort((a, b) => {
-    if (a.code === 'TX') return -1;
-    if (b.code === 'TX') return 1;
-    return a.name.localeCompare(b.name);
-  });
-
-  return infos.map(info => ({
-    params: { state: info.slug },
-    props: {
-      stateCode: info.code,
-      stateName: info.name,
-      stateSlug: info.slug,
-      stateCities: info.cities,
-      medicaidStatus: info.medicaidStatus,
-      medicaidNote: info.medicaidNote,
-      costLow: info.costLow,
-      costHigh: info.costHigh,
-      allOtherStates: infos.filter(s => s.code !== info.code).map(s => ({ name: s.name, slug: s.slug })),
-    },
+  return Object.entries(stateMap).map(([stateCode, slugs]) => ({
+    params: { state: stateCode.toLowerCase() },
+    props: { stateCode, stateName: stateNames[stateCode] || stateCode, slugs },
   }));
 }
 
-const {
-  stateCode,
-  stateName,
-  stateSlug,
-  stateCities,
-  medicaidStatus,
-  medicaidNote,
-  costLow,
-  costHigh,
-  allOtherStates,
-} = Astro.props;
+const { stateCode, stateName, slugs } = Astro.props;
+
+// Gather city data for each slug
+const stateCities = slugs.map((s: string) => cities[s]).filter(Boolean);
+
+// Derive state-level Medicaid info from city data
+// Most cities in the same state share the same medicaid status, but extract the common thread
+const medicaidCovers = !stateCities.some((c: any) => c.medicaidNote.toLowerCase().includes('does not'));
+const sampleMedicaidNote = stateCities[0]?.medicaidNote || '';
+const sampleInsuranceNote = stateCities[0]?.insuranceNote || '';
+
+// Cost range across state
+const costLow = Math.min(...stateCities.map((c: any) => c.costLow));
+const costHigh = Math.max(...stateCities.map((c: any) => c.costHigh));
+
+// Collect unique hospital names and birth center presence
+const hasAnyBirthCenters = stateCities.some((c: any) => c.birthCenterDetails && c.birthCenterDetails.length > 0);
+const hospitalCount = new Set(stateCities.flatMap((c: any) => c.hospitalDetails?.map((h: any) => h.name) || [])).size;
+const doulaCount = stateCities.reduce((sum: number, c: any) => sum + (c.localDoulas?.length || 0), 0);
 
 const pageTitle = `${stateName} Birth Doula & Support Guide | Doula Costs, Medicaid & Hospitals`;
-const pageDesc = `Find birth doula support in ${stateName} — hospital info, doula costs ($${costLow.toLocaleString()}–$${costHigh.toLocaleString()}), Medicaid coverage details, and free birth planning tools for ${stateCities.length} ${stateName} cities.`;
-const pageUrl = `https://truejoybirthing.com/birth-support/${stateSlug}/`;
+const pageDesc = `Birth doula costs, Medicaid coverage, hospital info, and free birth planning tools for ${stateName} families. Covers ${slugs.length} ${slugs.length === 1 ? 'city' : 'cities'} across the state.`;
+const pageUrl = `https://truejoybirthing.com/birth-support/${stateCode.toLowerCase()}/`;
 
 const breadcrumbList = [
   { name: 'Home', url: 'https://truejoybirthing.com/' },
@@ -114,16 +71,16 @@ const schema = {
     {
       '@type': 'CollectionPage',
       '@id': `${pageUrl}#collection`,
-      name: `${stateName} Birth Doula & Support Guide`,
+      name: `Birth Support in ${stateName} — Doula Costs, Hospital Info & Joyful Birth Plans`,
       description: pageDesc,
       url: pageUrl,
       about: { '@id': 'https://truejoybirthing.com/#organization' },
       mainEntity: {
         '@type': 'ItemList',
-        itemListElement: stateCities.map((c: { name: string; slug: string }, i: number) => ({
+        itemListElement: stateCities.map((c: any, i: number) => ({
           '@type': 'ListItem',
           position: i + 1,
-          name: `Birth Support in ${c.name}, ${stateCode}`,
+          name: `Birth Support in ${c.city}, ${c.state}`,
           url: `https://truejoybirthing.com/birth-support/${c.slug}/`,
         })),
       },
@@ -131,148 +88,132 @@ const schema = {
     {
       '@type': 'BreadcrumbList',
       '@id': `${pageUrl}#breadcrumb`,
-      itemListElement: breadcrumbList.map((item: { name: string; url: string }, i: number) => ({
+      itemListElement: breadcrumbList.map((crumb, i) => ({
         '@type': 'ListItem',
         position: i + 1,
-        name: item.name,
-        item: item.url,
+        name: crumb.name,
+        item: crumb.url,
       })),
     },
   ],
 };
-
-// Medicaid badge text
-const medicaidBadge = medicaidStatus === 'yes'
-  ? '✓ Medicaid Covers Doulas'
-  : medicaidStatus === 'no'
-  ? '✗ Medicaid Does Not Cover Doulas'
-  : 'Partial Medicaid Coverage';
-
-const medicaidBadgeClass = medicaidStatus === 'yes'
-  ? 'bg-green-100 text-green-800'
-  : medicaidStatus === 'no'
-  ? 'bg-red-100 text-red-800'
-  : 'bg-yellow-100 text-yellow-800';
-
-const medicaidIntro = medicaidStatus === 'yes'
-  ? `${stateName} is one of the states where Medicaid covers doula services — that means if you're on Medicaid, you may be able to get a doula at no cost to you. Details vary by city and managed care plan, so check the city-specific pages below or our full Medicaid doula coverage guide.`
-  : medicaidStatus === 'no'
-  ? `${stateName} does not currently cover doula services through Medicaid. That said, many doulas offer sliding-scale fees, payment plans, or reduced packages — and HSA/FSA funds can often be used for doula services. Check individual city pages for local resources and community programs.`
-  : `Medicaid doula coverage in ${stateName} may vary by city and plan. Some areas have coverage while others don't yet — check the city-specific pages below for local details, or see our full Medicaid doula coverage guide.`;
 ---
 
 <Layout
   title={pageTitle}
   description={pageDesc}
   canonical={pageUrl}
-  ogImage="https://truejoybirthing.com/images/og-homepage.webp"
   breadcrumbList={breadcrumbList}
   schema={schema}
 >
   <!-- Hero -->
   <section class="bg-tjb-cream pt-16 pb-12">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="max-w-3xl">
-        <nav class="text-sm text-tjb-gray mb-4">
-          <a href="/" class="hover:text-tjb-lavender-600 transition">Home</a>
-          <span class="mx-2">›</span>
-          <a href="/birth-support/" class="hover:text-tjb-lavender-600 transition">Birth Support</a>
-          <span class="mx-2">›</span>
-          <span class="text-tjb-charcoal">{stateName}</span>
-        </nav>
-        <h1 class="text-3xl md:text-4xl font-bold mb-4">{stateName} Birth Doula & Hospital Guide</h1>
-        <p class="text-lg text-tjb-gray mb-4">
-          Whether you're in a major metro or a smaller town, birth support in {stateName} starts with knowing your options. Doula costs, hospital policies, Medicaid coverage, and a free birth plan — all organized city by city below.
-        </p>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span class={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium ${medicaidBadgeClass}`}>
-            {medicaidBadge}
-          </span>
-          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-tjb-lavender-100 text-tjb-lavender-700 text-sm font-medium">
-            $${costLow.toLocaleString()}–$${costHigh.toLocaleString()} doula cost range
-          </span>
-          <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-tjb-cream text-tjb-charcoal text-sm font-medium">
-            {stateCities.length} {stateCities.length === 1 ? 'city' : 'cities'}
-          </span>
+    <div class="max-w-4xl mx-auto px-6">
+      <nav aria-label="Breadcrumb" class="not-prose mb-6 text-sm text-tjb-gray">
+        <ol class="flex items-center gap-1.5 flex-wrap">
+          {breadcrumbList.map((crumb, i) => (
+            <li class="flex items-center gap-1.5">
+              {i > 0 && <span aria-hidden="true" class="text-tjb-lavender-300">›</span>}
+              {i < breadcrumbList.length - 1 ? (
+                <a href={crumb.url} class="text-tjb-lavender-600 hover:underline">{crumb.name}</a>
+              ) : (
+                <span class="text-tjb-charcoal font-medium" aria-current="page">{crumb.name}</span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </nav>
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">{stateName} Birth Doula & Hospital Guide</h1>
+      <p class="text-lg text-tjb-gray mb-6">
+        Whether you're in {stateCities.length === 1 ? stateCities[0].city : `a major metro or a smaller town`}, birth support in {stateName} looks different depending on where you are — different hospitals, different costs, different Medicaid rules. This state guide pulls it all together so you can find what's relevant to <em>your</em> city.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="/birth-plan-template/" class="bg-tjb-charcoal text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-lavender-700 transition text-center">
+          Get Your Free Joyful Birth Plan
+        </a>
+        <a href="/medicaid-doula-coverage/" class="bg-tjb-cream-50 text-tjb-lavender-600 border-2 border-tjb-lavender-600 px-6 py-3 rounded-full font-semibold hover:bg-tjb-cream transition text-center">
+          {stateName} Medicaid Coverage →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- At-a-glance stats -->
+  <section class="py-10 bg-white border-b border-tjb-lavender-200/40">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="bg-tjb-cream/50 rounded-xl p-4">
+          <p class="text-2xl font-bold text-tjb-lavender-600">{slugs.length}</p>
+          <p class="text-sm text-tjb-gray">{slugs.length === 1 ? 'City' : 'Cities'} Covered</p>
         </div>
-        <div class="flex flex-col sm:flex-row gap-3">
-          <a href="/birth-plan-template/" class="bg-tjb-lavender-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition text-center">
-            Get Your Free Joyful Birth Plan
-          </a>
-          <a href="/birth-support/" class="bg-tjb-cream-50 text-tjb-lavender-600 border-2 border-tjb-lavender-600 px-6 py-3 rounded-full font-semibold hover:bg-tjb-cream transition text-center">
-            All States & Cities
-          </a>
+        <div class="bg-tjb-cream/50 rounded-xl p-4">
+          <p class="text-2xl font-bold text-tjb-lavender-600">${costLow.toLocaleString()}–${costHigh.toLocaleString()}</p>
+          <p class="text-sm text-tjb-gray">Doula Cost Range</p>
+        </div>
+        <div class="bg-tjb-cream/50 rounded-xl p-4">
+          <p class="text-2xl font-bold text-tjb-lavender-600">{hospitalCount}</p>
+          <p class="text-sm text-tjb-gray">{hospitalCount === 1 ? 'Hospital' : 'Hospitals'} Listed</p>
+        </div>
+        <div class="bg-tjb-cream/50 rounded-xl p-4">
+          <p class="text-2xl font-bold text-tjb-lavender-600">{medicaidCovers ? 'Yes — Covered' : 'Not Yet'}</p>
+          <p class="text-sm text-tjb-gray">Medicaid Doula Coverage</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Medicaid & Cost Overview -->
+  <!-- Medicaid & Insurance -->
   <section class="py-12 bg-white">
-    <div class="max-w-3xl mx-auto px-6">
-      <h2 class="text-2xl font-bold mb-4">Does {stateName} Medicaid Cover Doulas?</h2>
-      <p class="text-tjb-gray mb-4">{medicaidIntro}</p>
-      <div class="bg-tjb-cream p-5 rounded-lg mb-6 not-prose">
-        <p class="font-semibold text-tjb-lavender-600 mb-1">
-          {medicaidStatus === 'yes' ? `${stateName} Medicaid covers doulas` : medicaidStatus === 'no' ? `${stateName} does not yet cover doulas through Medicaid` : `Medicaid coverage varies across ${stateName}`}
-        </p>
-        <p class="text-sm text-tjb-gray">{medicaidNote.substring(0, 300)}{medicaidNote.length > 300 ? '…' : ''}</p>
-        <a href="/medicaid-doula-coverage/" class="text-sm text-tjb-lavender-600 hover:underline mt-2 inline-block">See full Medicaid doula coverage guide →</a>
-      </div>
+    <div class="max-w-3xl mx-auto px-6 prose">
+      <h2>Does Medicaid Cover a Doula in {stateName}?</h2>
+      <p>{medicaidCovers
+        ? `${stateName} covers doula services through Medicaid — that's good news for families who need support and want it covered. See the details below, and for a full breakdown by state, check our Medicaid doula coverage guide.`
+        : `${stateName} does not yet have statewide Medicaid doula coverage. That means if you're on Medicaid, doula services likely aren't covered directly — but some health plan pilots and community organizations may offer limited benefits or sliding-scale support. Don't let that stop you from planning ahead.`
+      }</p>
+      <p class="text-sm text-tjb-gray italic">{sampleMedicaidNote}</p>
+      <p>{sampleInsuranceNote}</p>
+      <p>For the full picture of which states cover doulas through Medicaid, see our <a href="/medicaid-doula-coverage/">Medicaid doula coverage guide</a>.</p>
 
-      <h2 class="text-2xl font-bold mb-4">How Much Does a Doula Cost in {stateName}?</h2>
-      <p class="text-tjb-gray mb-2">
-        Across {stateName}, birth doula packages typically range from <strong>${costLow.toLocaleString()} to ${costHigh.toLocaleString()}</strong> — that usually includes prenatal visits, your birth, and postpartum follow-up. Costs vary by city (larger metros tend to be more expensive).
-      </p>
-      <ul class="text-tjb-gray mb-6 list-disc pl-6 space-y-1">
-        <li><strong>Medicaid:</strong> {medicaidStatus === 'yes' ? 'Your state covers doula services through Medicaid — see city pages for plan-specific details.' : medicaidStatus === 'no' ? 'Your state does not yet cover doulas through Medicaid. Check for community programs, sliding-scale doulas, or HSA/FSA options.' : 'Coverage varies by area — check the city pages below for local details.'}</li>
-        <li><strong>HSA/FSA:</strong> Many families use HSA or FSA funds for doula services, since birth support qualifies as a medical expense under most plans.</li>
-        <li><strong>Sliding-scale doulas:</strong> Many {stateName} doulas offer payment plans, sliding-scale fees, or reduced packages. Don't be afraid to ask.</li>
-      </ul>
-      <a href="/doula-cost/" class="text-tjb-lavender-600 font-semibold hover:underline">See full doula cost breakdown →</a>
+      <div class="bg-tjb-cream/30 border border-tjb-lavender-200 rounded-lg p-4 not-prose mt-6">
+        <p class="font-semibold text-tjb-lavender-600 mb-1">Can't afford a doula right now?</p>
+        <p class="text-sm text-tjb-gray">Many {stateName} doulas offer payment plans, sliding-scale fees, or reduced packages. Student doulas in training often attend births at lower rates. And the free <a href="/birth-plan-template/" class="text-tjb-lavender-600 hover:underline">Joyful Birth Plan</a> works whether or not you hire a doula — it helps you think through your preferences and walk in prepared.</p>
+      </div>
     </div>
   </section>
 
   <!-- City Grid -->
-  <section class="py-12 bg-white border-t border-tjb-lavender-200/40">
+  <section class="py-12 bg-tjb-cream">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-2xl font-bold mb-2">{stateName} Cities — Birth Support Guides</h2>
-      <p class="text-tjb-gray mb-8">Select your city for local doula costs, hospital info, Medicaid details, and a free birth plan template.</p>
+      <h2 class="text-2xl font-bold mb-2">{stateName} Cities — Find Your Local Guide</h2>
+      <p class="text-tjb-gray mb-8">Each city page has hospital NICU info, doula cost ranges, Medicaid details, birth center listings, and a free birth plan template built for that community.</p>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-        {stateCities.map((c: { name: string; slug: string; costLow: number; costHigh: number }) => {
-          const cityData = cities[c.slug];
-          const cityMedicaid = cityData?.medicaidNote?.startsWith('Yes') ? 'yes' : 'no';
-          return (
-            <a href={`/birth-support/${c.slug}/`} class="border border-tjb-lavender-300 p-4 rounded-lg hover:border-tjb-lavender-500 hover:bg-tjb-lavender-50 transition group">
-              <div class="font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition mb-1">{c.name}</div>
-              <div class="text-sm text-tjb-gray">${c.costLow.toLocaleString()}–${c.costHigh.toLocaleString()}</div>
-              {cityMedicaid === 'yes' && (
-                <span class="inline-block mt-1.5 text-xs font-medium px-2 py-0.5 rounded-full bg-green-100 text-green-700">Medicaid ✓</span>
-              )}
-              {cityMedicaid === 'no' && (
-                <span class="inline-block mt-1.5 text-xs font-medium px-2 py-0.5 rounded-full bg-red-100 text-red-700">No Medicaid ✗</span>
-              )}
-            </a>
-          );
-        })}
+        {stateCities.map((c: any) => (
+          <a href={`/birth-support/${c.slug}/`} class="border border-tjb-lavender-300 bg-white p-4 rounded-lg hover:border-tjb-lavender-500 hover:bg-tjb-lavender-50 transition group">
+            <h3 class="font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">{c.city}, {c.state}</h3>
+            <p class="text-sm text-tjb-gray mt-1">${c.costLow.toLocaleString()}–${c.costHigh.toLocaleString()} doula cost</p>
+            <p class="text-xs text-tjb-gray mt-0.5">
+              {c.hospitalDetails?.length || 0} hospital{(c.hospitalDetails?.length || 0) !== 1 ? 's' : ''}
+              {c.birthCenterDetails?.length > 0 ? ' · birth center' : ''}
+            </p>
+          </a>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- CTA: Birth Plan -->
-  <section class="py-12 bg-tjb-cream">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-2xl font-bold mb-3">Walk Into Your Birth Feeling Prepared</h2>
-      <p class="text-tjb-gray mb-6">The #1 thing {stateName} moms tell us they wish they'd had? <strong>A clear plan they'd actually thought through</strong> — not just a form, but a process that helped them understand their options before the contractions started. The free Joyful Birth Plan does exactly that.</p>
-      <div class="flex flex-col sm:flex-row justify-center gap-3">
-        <a href="/birth-plan-template/" class="bg-tjb-lavender-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 transition text-center">
-          Get Your Free Joyful Birth Plan
-        </a>
-        <a href="/birth-plan-confidence-session/" class="bg-white text-tjb-lavender-600 border-2 border-tjb-lavender-600 px-6 py-3 rounded-full font-semibold hover:bg-tjb-cream transition text-center">
-          Book a Birth Plan Confidence Session
-        </a>
-      </div>
-      <p class="text-xs text-tjb-gray mt-3">Free. No email required for the template.</p>
+  <!-- What you'll find on each city page -->
+  <section class="py-12 bg-white">
+    <div class="max-w-3xl mx-auto px-6 prose">
+      <h2>What's on Each {stateName} City Page</h2>
+      <p>Every city guide in {stateName} includes:</p>
+      <ul>
+        <li><strong>Hospital & birth center details</strong> — NICU levels, visitor policies, and whether doulas are welcome</li>
+        <li><strong>Doula cost range</strong> — what you'll typically pay in that city, and what's included</li>
+        <li><strong>Medicaid & insurance coverage</strong> — what your plan covers and what it doesn't</li>
+        <li><strong>Local doulas & midwives</strong> — verified providers serving that community</li>
+        <li><strong>Free birth plan template</strong> — built for {stateName} families preparing for any birth setting</li>
+      </ul>
+      <p>Find your city above, or <a href="/birth-plan-template/">start with the free birth plan</a> — it works no matter where in {stateName} you're delivering.</p>
     </div>
   </section>
 
@@ -313,17 +254,13 @@ const medicaidIntro = medicaidStatus === 'yes'
     </div>
   </section>
 
-  <!-- Other States -->
-  <section class="py-12 bg-tjb-cream-50">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-xl font-bold mb-4">Other States</h2>
-      <div class="flex flex-wrap gap-2">
-        {allOtherStates.map((s: { name: string; slug: string }) => (
-          <a href={`/birth-support/${s.slug}/`} class="inline-flex items-center gap-1 px-4 py-2 rounded-full border border-tjb-lavender-300 text-tjb-lavender-600 hover:bg-tjb-lavender-50 hover:border-tjb-lavender-500 transition text-sm font-medium">
-            {s.name}
-          </a>
-        ))}
-      </div>
+  <!-- CTA -->
+  <section class="py-12 bg-tjb-cream text-center">
+    <h2 class="text-xl font-semibold mb-4">Walk Into Your Birth Feeling Prepared</h2>
+    <p class="text-tjb-gray mb-6 max-w-xl mx-auto">The free Joyful Birth Plan works for every {stateName} family — no matter which city you're in, which hospital you're delivering at, or whether you hire a doula. Start building yours now.</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-3">
+      <a href="/birth-plan-template/" class="inline-block bg-tjb-charcoal text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-lavender-700 transition">Get Your Free Joyful Birth Plan</a>
+      <a href="/birth-support/" class="inline-block bg-white text-tjb-lavender-600 border-2 border-tjb-lavender-600 px-6 py-3 rounded-full font-semibold hover:bg-tjb-cream transition">See All Cities →</a>
     </div>
   </section>
 </Layout>

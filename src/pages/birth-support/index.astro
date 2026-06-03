@@ -90,12 +90,13 @@ const schema = {
       {stateOrder.map((stateCode) => {
         const stateCities = stateGroups[stateCode];
         const stateName = stateNames[stateCode] || stateCode;
+        const stateSlug = stateCode.toLowerCase();
         return (
           <div class="mb-10">
             <h2 class="text-xl font-semibold mb-4">
-            <a href={`/birth-support/${stateCode.toLowerCase()}/`} class="hover:text-tjb-rose-500 transition">{stateName}</a>
-            <span class="text-tjb-gray font-normal text-base ml-1">({stateCities.length} {stateCities.length === 1 ? 'city' : 'cities'})</span>
-          </h2>
+              <a href={`/birth-support/${stateSlug}/`} class="hover:text-tjb-rose-500 transition">{stateName}</a>
+              <span class="text-tjb-gray font-normal text-base ml-1">({stateCities.length} {stateCities.length === 1 ? 'city' : 'cities'})</span>
+            </h2>
             <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
               {stateCities.map((c) => (
                 <a href={`/birth-support/${c.slug}/`} class="border border-tjb-lavender-300 p-3 rounded-lg hover:border-tjb-lavender-500 hover:bg-tjb-lavender-50 transition text-sm font-medium text-tjb-charcoal">

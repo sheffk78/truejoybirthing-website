@@ -49,7 +49,7 @@ const stateFullName = stateNames[state] || state;
 const breadcrumbList = [
   { name: 'Home', url: 'https://truejoybirthing.com/' },
   { name: 'Birth Support', url: 'https://truejoybirthing.com/birth-support/' },
-  { name: stateFullName, url: `https://truejoybirthing.com/birth-support/#${state.toLowerCase()}` },
+  { name: stateFullName, url: `https://truejoybirthing.com/birth-support/${state.toLowerCase()}/` },
   { name: `${city}, ${state}`, url: pageUrl },
 ];
 
