@@ -8,7 +8,7 @@
 //
 // Design: responsive grid (1 col mobile, 2 col md, 3 col lg)
 // Card: white bg, rounded-xl, subtle shadow, lavender border
-// Matches Confidence Session card pattern (bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50)
+// Each card has a person icon (Heroicons user-circle) for warmth
 
 interface Props {
   doulas: Array<{
@@ -28,27 +28,32 @@ const { doulas, city } = Astro.props;
   <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 not-prose">
     {doulas.map((d) => (
       <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50 flex flex-col">
-        {/* Name + Ambassador badge */}
-        <div class="flex items-center gap-2 mb-1">
-          <h3 class="text-lg font-semibold text-tjb-charcoal leading-tight">
-            {d.name}
-          </h3>
-          {d.isAmbassador && (
-            <span class="shrink-0 inline-flex items-center bg-tjb-lavender-100 text-tjb-lavender-700 text-xs font-medium px-2 py-0.5 rounded-full">
-              TJB Ambassador
-            </span>
-          )}
+        {/* Person icon + Name + Ambassador badge */}
+        <div class="flex items-start gap-3 mb-2">
+          <svg class="w-7 h-7 text-tjb-lavender-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+          </svg>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 flex-wrap">
+              <h3 class="text-lg font-semibold text-tjb-charcoal leading-tight">
+                {d.name}
+              </h3>
+              {d.isAmbassador && (
+                <span class="shrink-0 inline-flex items-center bg-tjb-lavender-100 text-tjb-lavender-700 text-xs font-medium px-2 py-0.5 rounded-full">
+                  TJB Ambassador
+                </span>
+              )}
+            </div>
+            {/* Role / Credential */}
+            {d.credential && (
+              <p class="text-sm text-tjb-gray mt-0.5">{d.credential}</p>
+            )}
+            {/* Practice */}
+            {d.practice && (
+              <p class="text-sm text-tjb-gray mt-0.5">{d.practice}</p>
+            )}
+          </div>
         </div>
-
-        {/* Role / Credential */}
-        {d.credential && (
-          <p class="text-sm text-tjb-gray">{d.credential}</p>
-        )}
-
-        {/* Practice */}
-        {d.practice && (
-          <p class="text-sm text-tjb-gray mt-0.5">{d.practice}</p>
-        )}
 
         {/* Spacer pushes link to bottom */}
         <div class="flex-1"></div>

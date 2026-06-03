@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <!-- Map-style background pattern for hospital section -->
+  <!-- Subtle street grid + blocks that evoke a city map feel -->
+  <!-- Used at ~55% opacity with cream overlay for readability -->
+  
+  <!-- Background fill -->
+  <rect width="400" height="400" fill="#f8f6fa"/>
+  
+  <!-- Major streets (horizontal) -->
+  <line x1="0" y1="60" x2="400" y2="60" stroke="#a08fba" stroke-width="1.5" stroke-opacity="0.25"/>
+  <line x1="0" y1="140" x2="400" y2="140" stroke="#a08fba" stroke-width="2" stroke-opacity="0.3"/>
+  <line x1="0" y1="220" x2="400" y2="220" stroke="#a08fba" stroke-width="1.5" stroke-opacity="0.25"/>
+  <line x1="0" y1="300" x2="400" y2="300" stroke="#a08fba" stroke-width="2" stroke-opacity="0.3"/>
+  <line x1="0" y1="370" x2="400" y2="370" stroke="#a08fba" stroke-width="1.5" stroke-opacity="0.2"/>
+  
+  <!-- Major streets (vertical) -->
+  <line x1="80" y1="0" x2="80" y2="400" stroke="#a08fba" stroke-width="2" stroke-opacity="0.3"/>
+  <line x1="180" y1="0" x2="180" y2="400" stroke="#a08fba" stroke-width="1.5" stroke-opacity="0.25"/>
+  <line x1="260" y1="0" x2="260" y2="400" stroke="#a08fba" stroke-width="2" stroke-opacity="0.3"/>
+  <line x1="350" y1="0" x2="350" y2="400" stroke="#a08fba" stroke-width="1.5" stroke-opacity="0.2"/>
+  
+  <!-- Minor streets (horizontal) -->
+  <line x1="0" y1="25" x2="400" y2="25" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
+  <line x1="0" y1="95" x2="400" y2="95" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
+  <line x1="0" y1="175" x2="400" y2="175" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
+  <line x1="0" y1="255" x2="400" y2="255" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
+  <line x1="0" y1="335" x2="400" y2="335" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
+  
+  <!-- Minor streets (vertical) -->
+  <line x1="30" y1="0" x2="30" y2="400" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
+  <line x1="130" y1="0" x2="130" y2="400" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
+  <line x1="220" y1="0" x2="220" y2="400" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
+  <line x1="305" y1="0" x2="305" y2="400" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
+  
+  <!-- City blocks (faint filled areas) -->
+  <rect x="85" y="65" width="40" height="30" rx="2" fill="#a08fba" fill-opacity="0.07"/>
+  <rect x="135" y="65" width="38" height="30" rx="2" fill="#a08fba" fill-opacity="0.07"/>
+  <rect x="185" y="65" width="68" height="30" rx="2" fill="#a08fba" fill-opacity="0.07"/>
+  
+  <rect x="85" y="145" width="40" height="28" rx="2" fill="#a08fba" fill-opacity="0.07"/>
+  <rect x="135" y="145" width="38" height="28" rx="2" fill="#a08fba" fill-opacity="0.07"/>
+  <rect x="265" y="145" width="78" height="28" rx="2" fill="#a08fba" fill-opacity="0.07"/>
+  
+  <rect x="85" y="225" width="90" height="28" rx="2" fill="#a08fba" fill-opacity="0.07"/>
+  <rect x="265" y="225" width="78" height="28" rx="2" fill="#a08fba" fill-opacity="0.07"/>
+  
+  <rect x="85" y="305" width="40" height="24" rx="2" fill="#a08fba" fill-opacity="0.07"/>
+  <rect x="185" y="305" width="68" height="24" rx="2" fill="#a08fba" fill-opacity="0.07"/>
+  
+  <!-- Diagonal "river" or highway -->
+  <path d="M 0 180 Q 100 200 200 190 Q 300 180 400 195" stroke="#8b7da0" stroke-width="3" stroke-opacity="0.1" fill="none"/>
+  
+  <!-- Green park area -->
+  <ellipse cx="220" cy="190" rx="35" ry="20" fill="#7eb88a" fill-opacity="0.06"/>
+  
+  <!-- Small intersection dots -->
+  <circle cx="80" cy="60" r="2" fill="#a08fba" fill-opacity="0.15"/>
+  <circle cx="180" cy="60" r="2" fill="#a08fba" fill-opacity="0.15"/>
+  <circle cx="260" cy="60" r="2" fill="#a08fba" fill-opacity="0.15"/>
+  <circle cx="80" cy="140" r="2.5" fill="#a08fba" fill-opacity="0.18"/>
+  <circle cx="260" cy="140" r="2.5" fill="#a08fba" fill-opacity="0.18"/>
+  <circle cx="80" cy="220" r="2" fill="#a08fba" fill-opacity="0.15"/>
+  <circle cx="180" cy="220" r="2" fill="#a08fba" fill-opacity="0.15"/>
+  <circle cx="80" cy="300" r="2.5" fill="#a08fba" fill-opacity="0.18"/>
+  <circle cx="260" cy="300" r="2.5" fill="#a08fba" fill-opacity="0.18"/>
+</svg>
