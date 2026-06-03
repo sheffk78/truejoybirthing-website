@@ -1,0 +1,92 @@
+---
+// Reusable doula/midwife directory card grid
+// Used on city birth-support pages to display local providers
+//
+// Props:
+//   doulas: Array<{ name, credential?, practice?, url?, isAmbassador? }>
+//   city: string — used in the empty-state CTA
+//
+// Design: responsive grid (1 col mobile, 2 col md, 3 col lg)
+// Card: white bg, rounded-xl, subtle shadow, lavender border
+// Matches Confidence Session card pattern (bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50)
+
+interface Props {
+  doulas: Array<{
+    name: string;
+    credential?: string;
+    practice?: string;
+    url?: string;
+    isAmbassador?: boolean;
+  }>;
+  city: string;
+}
+
+const { doulas, city } = Astro.props;
+---
+
+{doulas.length > 0 ? (
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 not-prose">
+    {doulas.map((d) => (
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50 flex flex-col">
+        {/* Name + Ambassador badge */}
+        <div class="flex items-center gap-2 mb-1">
+          <h3 class="text-lg font-semibold text-tjb-charcoal leading-tight">
+            {d.name}
+          </h3>
+          {d.isAmbassador && (
+            <span class="shrink-0 inline-flex items-center bg-tjb-lavender-100 text-tjb-lavender-700 text-xs font-medium px-2 py-0.5 rounded-full">
+              TJB Ambassador
+            </span>
+          )}
+        </div>
+
+        {/* Role / Credential */}
+        {d.credential && (
+          <p class="text-sm text-tjb-gray">{d.credential}</p>
+        )}
+
+        {/* Practice */}
+        {d.practice && (
+          <p class="text-sm text-tjb-gray mt-0.5">{d.practice}</p>
+        )}
+
+        {/* Spacer pushes link to bottom */}
+        <div class="flex-1"></div>
+
+        {/* Website link */}
+        {d.url ? (
+          <a
+            href={d.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-secondary mt-4 text-center text-sm"
+          >
+            Visit website
+          </a>
+        ) : (
+          <div class="mt-4"></div>
+        )}
+      </div>
+    ))}
+  </div>
+) : (
+  <div class="bg-tjb-cream/30 border border-tjb-lavender-100 rounded-xl p-4 my-6 not-prose">
+    <p class="text-sm text-tjb-gray">
+      <strong>Looking for a doula in {city}?</strong>
+      We're building our local directory —
+      <a href="/ambassador/" class="text-tjb-lavender-600 hover:underline">
+        if you're a doula or midwife, apply to be listed here
+      </a>.
+      In the meantime,
+      <a
+        href="https://www.dona.org/get-a-doula/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-tjb-lavender-600 hover:underline"
+      >
+        search DONA International's directory
+      </a>
+      or check with your hospital's referral list.
+    </p>
+  </div>
+)}
