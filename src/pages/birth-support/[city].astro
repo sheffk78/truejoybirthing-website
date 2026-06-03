@@ -29,8 +29,14 @@ const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 const ogImage = slug === 'denver-co'
   ? 'https://truejoybirthing.com/images/og/og-denver-co.png'
   : `https://truejoybirthing.com/images/og-city-${slug}.webp`;
-const heroImage = `/images/${slug}-birth-doula-skyline.webp`;
-const heroAlt = `Birth doula supporting a family during labor in ${city}, ${state} — local hospital birth support and doula cost info`;
+
+// Hero image — use safe library image instead of per-city AI skyline
+// Per-city skyline images are AI-generated with no anatomical risk
+// but show fictional hospital rooms, not real city skylines
+const heroImage = `/images/hospital-newborn.webp`;
+const heroAlt = `Supportive hospital birth environment in ${city}, ${state} — local doula and hospital info for expectant moms`;
+
+// Support section image — doula-walking passes safety check (no anatomical errors)
 const supportImage = `/images/doula-walking.webp`;
 const supportImageAlt = `A birth doula walking alongside an expectant mother — emotional support and companionship during pregnancy`;
 
@@ -102,32 +108,41 @@ const schema = {
   breadcrumbList={breadcrumbList}
   schema={schema}
 >
-  <!-- Hero -->
-  <section class="bg-tjb-cream pt-16 pb-12">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-        <div>
-          <h1 class="text-3xl md:text-4xl font-bold mb-4">{city}, {state} Birth Doula & Hospital Info</h1>
-          <p class="text-lg text-tjb-gray mb-4">
-            Whether you're wondering if a doula is worth it, whether your hospital will let one in, or how you'll afford it — you're in the right place. This guide covers what {city} moms actually need to know about doulas, midwives, hospital policies, and costs.
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO — Warm, local, emotionally clear
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="bg-tjb-cream">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row">
+        <!-- Left: Text — 55% -->
+        <div class="md:w-[55%] px-6 md:px-12 py-16 md:py-20 flex flex-col justify-center">
+          <p class="eyebrow mb-3">Birth support in {city}, {state}</p>
+          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+          <h1 class="font-bold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(2.25rem, 5vw, 3.75rem);">
+            Your birth plan, your hospital, your team — all in {city}
+          </h1>
+          <p class="text-lg text-tjb-charcoal font-semibold mb-3">
+            Doulas, midwives, hospital policies, and costs — broken down so you can walk in prepared.
           </p>
-          {heroLocalDetail && (
-            <p class="text-base text-tjb-gray italic mb-6" set:html={heroLocalDetail} />
-          )}
-          <div class="flex flex-col sm:flex-row gap-3">
-            <a href="/birth-plan-template/" class="btn-primary text-center">
+          <p class="text-tjb-gray leading-relaxed mb-8 max-w-[36rem]">
+            Whether you're wondering if a doula is worth it, whether your hospital will let one in, or how you'll afford it — you're in the right place. This guide covers what {city} moms actually need to know.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+            <a href="/birth-plan-template/" class="btn-primary">
               Get Your Free Joyful Birth Plan
             </a>
-            <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-secondary text-center">
-              Download the Free App
-            </a>
+            <span class="text-sm text-tjb-gray">Free template · No email required</span>
           </div>
+          {heroLocalDetail && (
+            <p class="text-sm text-tjb-gray mt-6 italic border-l-2 border-tjb-lavender-300 pl-4" set:html={heroLocalDetail} />
+          )}
         </div>
-        <div class="relative">
+        <!-- Right: Image — 45% -->
+        <div class="md:w-[45%] flex items-center justify-center px-8 py-8 md:py-0">
           <img
             src={heroImage}
             alt={heroAlt}
-            class="w-full h-64 md:h-80 object-cover rounded-2xl shadow-lg"
+            class="w-full max-w-md rounded-xl shadow-md"
             width="1200"
             height="800"
             loading="eager"
@@ -137,12 +152,12 @@ const schema = {
     </div>
   </section>
 
-  <!-- Main content -->
-  <section class="py-16 bg-white">
-    <div class="max-w-3xl mx-auto px-6 prose">
-
-      <!-- Breadcrumb nav -->
-      <nav aria-label="Breadcrumb" class="not-prose mb-6 text-sm text-tjb-gray">
+  <!-- ═══════════════════════════════════════════════════════════
+       BREADCRUMB
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="bg-white pt-8">
+    <div class="max-w-3xl mx-auto px-6">
+      <nav aria-label="Breadcrumb" class="text-sm text-tjb-gray">
         <ol class="flex items-center gap-1.5 flex-wrap">
           {breadcrumbList.map((crumb, i) => (
             <li class="flex items-center gap-1.5">
@@ -156,28 +171,69 @@ const schema = {
           ))}
         </ol>
       </nav>
+    </div>
+  </section>
 
-      <!-- What Birth Support Looks Like -->
-      <h2>What Doula & Midwife Support Looks Like in {city}</h2>
-      <p>{culture}</p>
-      <img
-        src={supportImage}
-        alt={supportImageAlt}
-        class="w-full max-w-md mx-auto h-auto rounded-xl shadow-md my-6"
-        width="1024"
-        height="1536"
-        loading="lazy"
-      />
+  <!-- ═══════════════════════════════════════════════════════════
+       WHAT BIRTH SUPPORT LOOKS LIKE — Two-column story
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <p class="eyebrow mb-3">How it works</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-8"></div>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">What Doula & Midwife Support Looks Like in {city}</h2>
+      <p class="text-tjb-gray leading-relaxed mb-8 max-w-2xl">{culture}</p>
 
-      <!-- Quick clarification -->
-      <div class="bg-tjb-cream p-4 rounded-lg mb-6 not-prose">
-        <p class="font-semibold text-tjb-lavender-600 mb-1">Not sure what the difference is?</p>
-        <p class="text-sm text-tjb-gray">A <strong>midwife</strong> is your medical provider — she can deliver your baby, write prescriptions, and monitor your health. A <strong>doula</strong> is your support person — she keeps you comfortable, informed, and emotionally held, but doesn't do medical tasks. You can have both, and many {city} moms do. <a href="/what-is-a-doula/" class="text-tjb-lavender-600 hover:underline">Learn more about what a doula actually does →</a></p>
+      <!-- Two-column: image + quick answers -->
+      <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+        <div class="md:w-[45%] flex-shrink-0">
+          <img
+            src={supportImage}
+            alt={supportImageAlt}
+            class="w-full rounded-xl shadow-md"
+            width="1024"
+            height="1536"
+            loading="lazy"
+          />
+        </div>
+        <div class="md:w-[55%]">
+          <!-- Quick clarification -->
+          <div class="bg-tjb-cream p-5 rounded-lg mb-6">
+            <p class="font-semibold text-tjb-lavender-600 mb-1">Not sure what the difference is?</p>
+            <p class="text-sm text-tjb-gray">A <strong>midwife</strong> is your medical provider — she can deliver your baby, write prescriptions, and monitor your health. A <strong>doula</strong> is your support person — she keeps you comfortable, informed, and emotionally held, but doesn't do medical tasks. You can have both, and many {city} moms do. <a href="/what-is-a-doula/" class="text-tjb-lavender-600 hover:underline">Learn more about what a doula actually does →</a></p>
+          </div>
+
+          <!-- Scannable highlights -->
+          <div class="space-y-4">
+            <div class="border-l-2 border-tjb-lavender-500 pl-4">
+              <p class="font-semibold text-tjb-charcoal">Continuous labor support</p>
+              <p class="text-sm text-tjb-gray">A doula stays with you from early labor through delivery — no shift changes, no leaving the room.</p>
+            </div>
+            <div class="border-l-2 border-tjb-lavender-500 pl-4">
+              <p class="font-semibold text-tjb-charcoal">Evidence-based comfort techniques</p>
+              <p class="text-sm text-tjb-gray">Breathing, counter-pressure, position changes — proven to reduce C-section rates and shorten labor.</p>
+            </div>
+            <div class="border-l-2 border-tjb-lavender-500 pl-4">
+              <p class="font-semibold text-tjb-charcoal">Advocacy before and during birth</p>
+              <p class="text-sm text-tjb-gray">Your doula helps you understand your options and practice saying what you want — before you're in the delivery room.</p>
+            </div>
+            <div class="border-l-2 border-tjb-sage pl-4">
+              <p class="font-semibold text-tjb-charcoal">Postpartum follow-up, too</p>
+              <p class="text-sm text-tjb-gray">Most {city} doula packages include at least one postpartum visit — because birth support doesn't end at delivery.</p>
+            </div>
+          </div>
+
+          <p class="text-sm text-tjb-gray mt-6">Whether this is your first baby or you're preparing for a VBAC, <a href="/what-is-a-doula/" class="text-tjb-lavender-600 hover:underline">understanding what a doula does</a> — and <a href="/benefits-of-a-doula/" class="text-tjb-lavender-600 hover:underline">how a doula can change your birth experience</a> — can help you decide what support is right for you.</p>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <p>Whether this is your first baby or you're preparing for a VBAC, <a href="/what-is-a-doula/">understanding what a doula does</a> — and <a href="/benefits-of-a-doula/">how a doula can change your birth experience</a> — can help you decide what support is right for you.</p>
-
-      <!-- Can My Doula Come With Me? -->
+  <!-- ═══════════════════════════════════════════════════════════
+       CAN MY DOULA COME WITH ME?
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-16 bg-tjb-cream">
+    <div class="max-w-3xl mx-auto px-6 prose">
       <h2>Can My Doula Come to the Hospital With Me in {city}?</h2>
       <p>This is one of the top questions {city} moms ask — and the answer matters. Most hospitals in the {city} area <strong>do allow doulas</strong>, and many have explicit policies supporting continuous doula support during labor. Post-COVID visitor restrictions have mostly lifted, and hospitals generally recognize that doulas are not visitors — they're part of your care team.</p>
       <p>That said, it's smart to <strong>call your hospital before labor starts</strong> and ask directly about their doula policy. Some questions to ask:</p>
@@ -188,43 +244,64 @@ const schema = {
         <li>"Is there a limit on support people during a C-section?"</li>
       </ul>
       <p>Your doula will also know the policies at {city} hospitals and can help you navigate any hoops. And if your hospital pushes back, your birth plan gives you a written document that shows you've thought this through — <a href="/birth-plan-template/">grab the free template here</a>.</p>
+    </div>
+  </section>
 
-      <!-- Local Doulas & Midwives -->
+  <!-- ═══════════════════════════════════════════════════════════
+       LOCAL DOULAS
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 prose">
       {localDoulas.length > 0 && (
         <h2>Doulas & Midwives Serving {city}</h2>
       )}
       <DoulaCardGrid doulas={localDoulas} city={city} />
+    </div>
+  </section>
 
-      <!-- Hospital & Birth Center Info -->
-      {hospitalDetails.length > 0 && (
-        <h2>Hospital & Birth Center Info in {city}</h2>
+  <!-- ═══════════════════════════════════════════════════════════
+       HOSPITAL & BIRTH CENTER INFO
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-16 bg-tjb-cream">
+    <div class="max-w-3xl mx-auto px-6">
+      {(hospitalDetails.length > 0 || birthCenterDetails.length > 0) && (
+        <h2 class="text-2xl md:text-3xl font-bold mb-2">Hospital & Birth Center Info in {city}</h2>
       )}
-      <p>Here's what you need to know about the hospitals where {city} moms deliver — including NICU levels, which matters if your baby needs extra care after birth.</p>
-      {hospitalDetails.map((h) => (
-        <div class="mb-6">
-          {h.url ? (
-            <h3 class="text-lg font-semibold mb-1"><a href={h.url} target="_blank" rel="noopener noreferrer" class="text-tjb-lavender-600 hover:underline">{h.name} ↗</a></h3>
-          ) : (
-            <h3 class="text-lg font-semibold mb-1">{h.name}</h3>
-          )}
-          <p set:html={h.paragraph} />
-        </div>
-      ))}
-      {birthCenterDetails.map((bc) => (
-        <div class="mb-6">
-          {bc.url ? (
-            <h3 class="text-lg font-semibold mb-1"><a href={bc.url} target="_blank" rel="noopener noreferrer" class="text-tjb-lavender-600 hover:underline">{bc.name} ↗</a></h3>
-          ) : (
-            <h3 class="text-lg font-semibold mb-1">{bc.name}</h3>
-          )}
-          <p set:html={bc.paragraph} />
-        </div>
-      ))}
+      <p class="text-tjb-gray mb-8">Here's what you need to know about the hospitals where {city} moms deliver — including NICU levels, which matters if your baby needs extra care after birth.</p>
 
-      <p class="text-sm text-tjb-gray italic">Hospitals listed for reference only. True Joy Birthing does not endorse any specific provider. Always call ahead to confirm doula and visitor policies during your hospital tour.</p>
+      <div class="space-y-6">
+        {hospitalDetails.map((h) => (
+          <div class="bg-white border border-tjb-lavender-200 rounded-lg p-5 hover:border-tjb-rose-400/50 transition">
+            {h.url ? (
+              <h3 class="text-lg font-semibold mb-1"><a href={h.url} target="_blank" rel="noopener noreferrer" class="text-tjb-lavender-600 hover:underline">{h.name} ↗</a></h3>
+            ) : (
+              <h3 class="text-lg font-semibold mb-1">{h.name}</h3>
+            )}
+            <p class="text-tjb-gray text-[0.9375rem] leading-relaxed" set:html={h.paragraph} />
+          </div>
+        ))}
+        {birthCenterDetails.map((bc) => (
+          <div class="bg-white border border-tjb-lavender-200 rounded-lg p-5 hover:border-tjb-rose-400/50 transition">
+            {bc.url ? (
+              <h3 class="text-lg font-semibold mb-1"><a href={bc.url} target="_blank" rel="noopener noreferrer" class="text-tjb-lavender-600 hover:underline">{bc.name} ↗</a></h3>
+            ) : (
+              <h3 class="text-lg font-semibold mb-1">{bc.name}</h3>
+            )}
+            <p class="text-tjb-gray text-[0.9375rem] leading-relaxed" set:html={bc.paragraph} />
+          </div>
+        ))}
+      </div>
+
+      <p class="text-sm text-tjb-gray italic mt-6">Hospitals listed for reference only. True Joy Birthing does not endorse any specific provider. Always call ahead to confirm doula and visitor policies during your hospital tour.</p>
       <p class="text-sm text-tjb-gray mt-1">Reviewed by <a href="/about/" class="text-tjb-lavender-600 hover:underline">Shelbi Kohler</a></p>
+    </div>
+  </section>
 
-      <!-- Doula Costs -->
+  <!-- ═══════════════════════════════════════════════════════════
+       DOULA COSTS
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 prose">
       <h2>How Much Does a Doula Cost in {city}?</h2>
       <p>In the {city} area, birth doula packages typically range from <strong>${costLow.toLocaleString()} to ${costHigh.toLocaleString()}</strong> — that usually includes prenatal visits, your birth, and postpartum follow-up. <a href="/doula-cost/">See our full doula cost breakdown</a> for what's included and what to ask about. If you're also thinking about support after baby arrives, <a href="/postpartum-doula/">learn what a postpartum doula does and how one can help</a>.</p>
       <p>If that number feels steep, you're not alone — and there are options:</p>
@@ -234,14 +311,26 @@ const schema = {
         <li><strong>Sliding-scale doulas:</strong> Many {city} doulas offer payment plans, sliding-scale fees, or reduced packages. Don't be afraid to ask.</li>
         <li><strong>Student doulas:</strong> Doulas in training often attend births at reduced rates. It's a great option if budget is tight.</li>
       </ul>
+    </div>
+  </section>
 
-      <!-- Medicaid & Insurance -->
+  <!-- ═══════════════════════════════════════════════════════════
+       MEDICAID & INSURANCE
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-16 bg-tjb-cream">
+    <div class="max-w-3xl mx-auto px-6 prose">
       <h2>Does Medicaid or Insurance Cover a Doula in {state}?</h2>
       <p>{medicaidNote}</p>
       <p>{insuranceNote}</p>
       <p>Not sure what to look for in a doula? <a href="/how-to-choose-a-doula/">Here's how to choose a doula</a> who fits your birth preferences, your personality, and your budget. For a full breakdown of which states cover doulas through Medicaid, see our <a href="/medicaid-doula-coverage/">Medicaid doula coverage guide</a>.</p>
+    </div>
+  </section>
 
-      <!-- What About a Midwife? -->
+  <!-- ═══════════════════════════════════════════════════════════
+       MIDWIFE SECTION
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 prose">
       <h2>What About a Midwife in {city}?</h2>
       <p>If you're considering a midwife, you're in good company. More {city} moms are choosing midwifery care each year. Here's what to know:</p>
       <p>Not sure whether you need a doula, a midwife, or both? <a href="/doula-vs-midwife/">Our doula vs. midwife guide</a> breaks it down clearly.</p>
@@ -255,9 +344,15 @@ const schema = {
           <li><strong>No birth centers locally:</strong> {city} doesn't currently have a freestanding birth center, but midwifery care at local hospitals is still a great option.</li>
         )}
       </ul>
+    </div>
+  </section>
 
-      <!-- CTA: Your Birth Plan -->
-      <div class="bg-tjb-lavender-50 border-2 border-tjb-lavender-200 p-6 rounded-lg mt-8 not-prose">
+  <!-- ═══════════════════════════════════════════════════════════
+       CTA CARD — Your Birth Plan
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="bg-tjb-lavender-50 border-2 border-tjb-lavender-200 p-6 md:p-8 rounded-xl">
         <h3 class="font-semibold text-lg text-tjb-charcoal mb-2">Walk Into Your Birth Feeling Prepared — Not Anxious</h3>
         <p class="text-tjb-gray mb-3">The #1 thing {city} moms tell us they wish they'd had? <strong>A clear plan they'd actually thought through</strong> — not just a form, but a process that helped them understand their options before the contractions started.</p>
         <p class="text-tjb-gray mb-4">That's exactly what the free Joyful Birth Plan does. It walks you through every decision — who's in the room, what happens if things shift, what matters most to you — so you walk in confident.</p>
@@ -271,24 +366,30 @@ const schema = {
         </div>
         <p class="text-xs text-tjb-gray mt-3">Free. No email required for the template. The app walks you through it step by step.</p>
       </div>
-
     </div>
   </section>
 
-  <!-- TJBD card + Nearby + FAQ -->
-  <section class="py-16 bg-white">
+  <!-- ═══════════════════════════════════════════════════════════
+       WHAT TJB ACTUALLY DOES
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-12 bg-tjb-cream">
     <div class="max-w-3xl mx-auto px-6">
-
-      <!-- What True Joy Birthing Actually Does for You -->
-      <div class="bg-white border-2 border-tjb-lavender-200 p-5 rounded-lg mb-6">
+      <div class="bg-white border-2 border-tjb-lavender-200 p-5 md:p-6 rounded-xl">
         <h3 class="font-semibold text-lg text-tjb-charcoal mb-2">What True Joy Birthing Actually Does for You</h3>
         <p class="text-tjb-gray mb-2">True Joy Birthing isn't a doula matching service, and we're not necessarily your in-person doula in {city}. We're the step before — and alongside — all of that.</p>
         <p class="text-tjb-gray mb-2">Shelbi built the free Joyful Birth Plan because she saw families show up to the hospital without their preferences written down, <em>every single time</em>. The birth plan template, the checklist, the free app walkthrough — these are the tools that help you walk in prepared, whether you end up hiring a local doula or going it alone.</p>
         <p class="text-tjb-gray">If you do find a doula in {city}, great — bring your plan and use it together. If you're still looking, or if hiring a doula isn't in the budget right now, the birth plan is free and it works.</p>
       </div>
+    </div>
+  </section>
 
+  <!-- ═══════════════════════════════════════════════════════════
+       NEARBY CITIES
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-12 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
       {nearbyCities.length > 0 && (
-        <div class="mb-8">
+        <div class="mb-6">
           <h2 class="text-xl font-bold mb-3">Looking at Nearby Cities?</h2>
           <div class="flex flex-wrap gap-2">
             {nearbyCities.map((nSlug) => {
@@ -302,13 +403,13 @@ const schema = {
           </div>
         </div>
       )}
-
       <a href="/birth-support" class="text-tjb-lavender-600 font-semibold hover:underline">See all cities →</a>
-
     </div>
   </section>
 
-  <!-- Related Resources -->
+  <!-- ═══════════════════════════════════════════════════════════
+       RELATED RESOURCES
+       ═══════════════════════════════════════════════════════════ -->
   <section class="py-12 bg-white border-t border-tjb-lavender-200/40">
     <div class="max-w-3xl mx-auto px-6">
       <h2 class="text-2xl font-bold mb-6">Related Resources</h2>
@@ -345,7 +446,7 @@ const schema = {
           <svg class="w-5 h-5 mt-0.5 text-tjb-lavender-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
           <div>
             <span class="font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">How to Choose a Doula</span>
-            <p class="text-sm text-tjb-gray mt-0.5">Questions to ask and what to look for in a birth doula</p>
+            <p class="text-sm text-t-tjb-gray mt-0.5">Questions to ask and what to look for in a birth doula</p>
           </div>
         </a>
         <a href="/medicaid-doula-coverage/" class="flex items-start gap-3 p-4 border border-tjb-lavender-200 rounded-lg hover:border-tjb-rose-400 hover:bg-tjb-rose-50/30 transition group">
@@ -366,17 +467,22 @@ const schema = {
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- ═══════════════════════════════════════════════════════════
+       FAQ
+       ═══════════════════════════════════════════════════════════ -->
   <section class="py-16 bg-tjb-cream-50">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="text-2xl font-bold mb-2">Your Questions About Doulas & Midwives in {city}</h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Your Questions About Doulas & Midwives in {city}</h2>
       <p class="text-tjb-gray mb-8">The things {city} moms ask us most — answered honestly. For even more questions and detailed answers, check out our <a href="/faq/" class="text-tjb-lavender-600 hover:underline">full doula FAQ</a>.</p>
-      <div class="space-y-6">
+      <div class="space-y-4">
         {faqs.map((faq) => (
-          <div class="border border-tjb-lavender-200 rounded-lg p-5 bg-white">
-             <h3 class="text-lg font-semibold mb-2" id={`faq-${faq.q.toLowerCase().includes('cost') ? 'cost' : faq.q.toLowerCase().includes('medicaid') ? 'medicaid' : faq.q.toLowerCase().includes('true joy') ? 'brand' : 'hospital'}`}>{faq.q}</h3>
-             <p class="text-tjb-gray faq-answer" set:html={faq.a} />
-          </div>
+          <details class="border border-tjb-lavender-200 rounded-lg bg-white group">
+            <summary class="p-5 cursor-pointer font-semibold text-tjb-charcoal hover:text-tjb-lavender-600 transition list-none flex items-center justify-between">
+              <span>{faq.q}</span>
+              <svg class="w-5 h-5 text-tjb-lavender-500 group-open:rotate-180 transition-transform flex-shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-5 pb-5 text-tjb-gray leading-relaxed faq-answer" set:html={faq.a} />
+          </details>
         ))}
       </div>
     </div>
