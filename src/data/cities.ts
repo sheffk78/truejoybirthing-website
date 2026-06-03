@@ -1165,6 +1165,8 @@ export const cities: Record<string, CityData> = {
     localDoulas: [
       { name: "Circle Birth", url: "https://www.circlebirth.com/", isAmbassador: false },
       { name: "Doula Empowered Birth", url: "https://www.doulaempoweredbirth.com/", isAmbassador: false },
+      { name: "Lacey Dowlearn", practice: "Supporting Arms", url: "https://www.bornbir.com/lacey-dowlearn", isAmbassador: false },
+      { name: "Matriarch Doula Care", url: "https://matriarchdoulacare.com/", isAmbassador: false },
       { name: "The Natural Birthing Center", url: "https://www.naturalbirthingcenter.net/", isAmbassador: false },
     ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Williamson County\u2019s STAR managed care plans. Williamson County\u2019s rapid growth means a lot of newly enrolled families \u2014 contact your Medicaid managed care plan to confirm doula coverage, as some plans are still completing their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
@@ -1770,7 +1772,10 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Carole", practice: "Empowered By Birth", url: "https://empoweredbybirthcharlotte.com", isAmbassador: false },
+      { name: "Lindsay Stowers", practice: "Heart of Grace Birth Services", isAmbassador: false },
+    ],
     medicaidNote: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Cabarrus County\u2019s managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health). Contact NC Medicaid at 1-800-662-7030 or visit ncdhhs.gov to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Concord area. Atrium Health\u2019s employer network and Charlotte-area insurers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1804,7 +1809,9 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Two Doulas & You", practice: "Emily Watkins & Colleen Goidel", isAmbassador: false },
+    ],
     medicaidNote: "No — As of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. Check with Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Forsyth County families on Medicaid should also check with their managed care plan about any maternal wellness benefits that might include doula support.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Cumming area. Northside Hospital\u2019s affiliated insurance networks and Atlanta-area employers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1836,7 +1843,10 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Greenville Doulas", url: "https://greatexpectationsbirth.com", isAmbassador: false },
+      { name: "Valiant Birth Collective", url: "https://valiantbirth.com", isAmbassador: false },
+    ],
     medicaidNote: "No — South Carolina does not yet have statewide Medicaid doula coverage as of May 2026. Advocacy groups like the South Carolina Doula Steering Committee are working toward it, but no State Plan Amendment has been approved yet. Check with your Medicaid managed care plan directly — some may offer limited doula benefits. Contact SCDHHS at 1-888-549-0820 or visit scdhhs.gov for updates.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Greenville area. Prisma Health\u2019s employer network and Upstate SC employers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1869,7 +1879,10 @@ export const cities: Record<string, CityData> = {
       { name: "Baby+Co. Birth Center", paragraph: "Baby+Co. Birth Center, at 4211 Stuart Andrew Blvd in southwest Charlotte, is a freestanding birth center offering midwife-led birth in a lower-intervention setting. It's part of the Baby+Co. network with locations across the Southeast, staffed by certified nurse midwives with hospital transfer agreements in place. If you're planning an out-of-hospital birth in Charlotte, Baby+Co. is one of the most established options \u2014 and having a doula who knows the birth center space makes the whole experience feel a lot less unknown. Call ahead to confirm current availability and schedule a tour." },
       { name: "Queens Free Birth Center", paragraph: "Queens Free Birth Center, at 4709 Ashley Park Dr in Charlotte, offers midwife-led birth services in a freestanding birth center setting. It serves families seeking a lower-intervention, community-centered birth experience in the Charlotte metro. Verify with the center directly for current services, insurance coverage, and availability." },
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Carole", practice: "Empowered By Birth", url: "https://empoweredbybirthcharlotte.com", isAmbassador: false },
+      { name: "Kaitlyn Foster", practice: "Doulas of Charlotte", url: "https://doulasofcharlotte.com", isAmbassador: false },
+    ],
     medicaidNote: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Mecklenburg County's managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health, Healthy Blue). Contact NC Medicaid at 1-800-662-7030 or ncdhhs.gov to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Charlotte area. Atrium Health's employer network and Charlotte-area insurers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1901,7 +1914,10 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Raleigh Birth Center", paragraph: "Raleigh Birth Center, at 4700 Homewood Court Suite 120 in Raleigh, is a freestanding birth center offering midwife-led birth in a lower-intervention setting. It's the only dedicated birth center in Raleigh proper and has been serving Triangle families for years with CPM and CNM midwives. If you're planning an out-of-hospital birth in Wake County, this is the primary option \u2014 and having a doula who knows the transfer protocols to WakeMed or UNC REX makes the safety net feel solid. Call ahead to confirm current availability and schedule a tour." },
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Doulas of Raleigh", url: "https://doulasofraleigh.com", isAmbassador: false },
+      { name: "Special Beginnings Midwifery", practice: "Triangle Birth Suites", url: "https://specialbeginningsmidwifery.com", isAmbassador: false },
+    ],
     medicaidNote: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Wake County's managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health, Healthy Blue). Contact NC Medicaid at 1-800-662-7030 or ncdhhs.gov to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Raleigh area. The Triangle's employer market (Duke, IBM, Cisco, Red Hat) increasingly includes maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1936,7 +1952,9 @@ export const cities: Record<string, CityData> = {
       { name: "Intown Birth Center", paragraph: "Intown Birth Center, at 1401 Montgomery Ferry Drive NE in Atlanta's Morningside neighborhood, is a freestanding birth center offering midwife-led birth in a lower-intervention setting. It's one of Atlanta's most established birth centers, with CNM midwives and transfer agreements with nearby hospitals. If you're planning an out-of-hospital birth in intown Atlanta, Intown Birth Center is a primary option \u2014 and having a doula who knows the birth center space and transfer protocols makes the experience feel supported." },
       { name: "Atlanta Birth Center", paragraph: "Atlanta Birth Center, at 1442 Flat Shoals Ave SE in East Atlanta, is a freestanding birth center serving families seeking a community-centered, lower-intervention birth experience. It's located in the East Atlanta Village area, convenient for families in southeast intown neighborhoods. Verify with the center directly for current services, insurance coverage, and availability." },
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Intown Birth Center", url: "https://intownbirthcenter.com", isAmbassador: false },
+    ],
     medicaidNote: "No — As of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. Check with Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Fulton, DeKalb, and Clayton County families on Medicaid should also check with their managed care plan about any maternal wellness benefits that might include doula support.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Atlanta area. Atlanta's large employer market (Delta, Home Depot, Coca-Cola, Emory, CDC) increasingly includes maternal wellness benefits \u2014 check with your HR department about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -1969,7 +1987,10 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Balanced Birth Doula Agency", isAmbassador: false },
+      { name: "Coastal Midwifery", isAmbassador: false },
+    ],
     medicaidNote: "No — As of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. Check with Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Chatham County families on Medicaid should also check with their managed care plan (AmeriHealth Caritas, CareSource, PeachState Health Plan) about any maternal wellness benefits that might include doula support.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Savannah area. Gulfstream Aerospace, JCB, and other Savannah-area employers increasingly include maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -2003,7 +2024,10 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-26.
     birthCenterDetails: [
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Jessica Gillan", practice: "Bellies, Babies & Bliss", isAmbassador: false },
+      { name: "Bloom Birth Co.", isAmbassador: false },
+    ],
     medicaidNote: "No — As of 2026, Florida Medicaid does not cover doula services. Florida has not enacted legislation to add Medicaid doula coverage. Duval County families on Medicaid should check with their managed care plan (Staywell, Sunshine Health, Simply Healthcare, UnitedHealthcare Community Plan) about any maternal wellness benefits that might include doula support. Contact Florida Medicaid at 1-877-254-1055 or visit flmedicaidmanagedcare.com for current plan information.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Jacksonville area. TRICARE covers maternity care for military families \u2014 check TRICARE\u2019s current doula and support-person policy at tricare.mil. Jacksonville\u2019s employer market (CSX, Fidelity, Anthem Blue Cross, Naval Station Mayport) increasingly includes maternal wellness benefits \u2014 check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
