@@ -25,7 +25,10 @@ const {
 const pageTitle = `${city} Birth Doula | Costs & Hospital Info | TJB`;
 const pageDesc = `Doula costs, hospital policies, and Medicaid coverage in ${city}, ${state}. Plus a free Joyful Birth Plan template to walk in prepared.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
-const ogImage = `https://truejoybirthing.com/images/og-city-${slug}.webp`;
+// OG image: Pattern B for denver-co (first city), Pattern C fallback for others
+const ogImage = slug === 'denver-co'
+  ? 'https://truejoybirthing.com/images/og/og-denver-co.png'
+  : `https://truejoybirthing.com/images/og-city-${slug}.webp`;
 const heroImage = `/images/${slug}-birth-doula-skyline.webp`;
 const heroAlt = `Birth doula supporting a family during labor in ${city}, ${state} — local hospital birth support and doula cost info`;
 const supportImage = `/images/doula-teaching.webp`;

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1200px; height: 630px; overflow: hidden; background: #2D2B55; }
+
+.og-card {
+  width: 1200px;
+  height: 630px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  overflow: hidden;
+}
+
+/* Top accent bar */
+.og-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: #D8A0C4;
+  z-index: 10;
+}
+/* Bottom accent bar */
+.og-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 6px;
+  background: #D8A0C4;
+  z-index: 10;
+}
+
+/* Left side: text content */
+.left-side {
+  width: 55%;
+  background: #FAF8F5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 50px 80px 70px;
+  position: relative;
+  z-index: 2;
+}
+
+.label {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #6E6C99;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+
+.city-name {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  color: #2D2B55;
+  line-height: 1.0;
+  letter-spacing: -2px;
+  margin-bottom: 8px;
+}
+
+.state-name {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #6E6C99;
+  margin-bottom: 0;
+}
+
+.logo-wrap {
+  position: absolute;
+  bottom: 28px;
+  left: 70px;
+}
+.logo-wrap img {
+  height: 40px;
+  width: auto;
+  opacity: 0.85;
+}
+
+/* Right side: brand color block */
+.right-side {
+  width: 45%;
+  background: linear-gradient(135deg, #6E6C99 0%, #2D2B55 40%, #1a1840 100%);
+  position: relative;
+  z-index: 2;
+}
+/* Decorative circle pattern on right side */
+.right-side::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 280px;
+  border: 2px solid rgba(216, 160, 196, 0.25);
+  border-radius: 50%;
+}
+.right-side::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  border: 1.5px solid rgba(216, 160, 196, 0.15);
+  border-radius: 50%;
+}
+
+/* State abbreviation watermark on right side */
+.state-watermark {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 120px;
+  font-weight: 700;
+  color: rgba(216, 160, 196, 0.08);
+  letter-spacing: -4px;
+  line-height: 1;
+  user-select: none;
+}
+</style>
+</head>
+<body>
+<div class="og-card">
+  <div class="left-side">
+    <div class="label">Birth Support</div>
+    <div class="city-name">Denver</div>
+    <div class="state-name">Colorado</div>
+    <div class="logo-wrap">
+      <img src="/images/logo.svg" alt="True Joy Birthing">
+    </div>
+  </div>
+  <div class="right-side">
+    <div class="state-watermark">CO</div>
+  </div>
+</div>
+</body>
+</html>
