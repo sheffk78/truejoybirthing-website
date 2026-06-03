@@ -8,7 +8,7 @@
 //
 // Design: responsive grid (1 col mobile, 2 col md, 3 col lg)
 // Card: white bg, rounded-xl, subtle shadow, lavender border
-// Each card has a person icon (Heroicons user-circle) for warmth
+// Each card has a circle-initial monogram icon for warmth + personalization
 
 interface Props {
   doulas: Array<{
@@ -22,17 +22,22 @@ interface Props {
 }
 
 const { doulas, city } = Astro.props;
+
+// Extract first initial from name for monogram
+function getInitial(name) {
+  return name.charAt(0).toUpperCase();
+}
 ---
 
 {doulas.length > 0 ? (
   <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 not-prose">
     {doulas.map((d) => (
       <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50 flex flex-col">
-        {/* Person icon + Name + Ambassador badge */}
+        {/* Circle initial + Name + Ambassador badge */}
         <div class="flex items-start gap-3 mb-2">
-          <svg class="w-7 h-7 text-tjb-lavender-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-          </svg>
+          <div class="w-8 h-8 rounded-full bg-tjb-lavender-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <span class="text-sm font-semibold text-tjb-lavender-600" style="font-family: 'Cormorant Garamond', Georgia, serif;">{getInitial(d.name)}</span>
+          </div>
           <div class="flex-1 min-w-0">
             <div class="flex items-center gap-2 flex-wrap">
               <h3 class="text-lg font-semibold text-tjb-charcoal leading-tight">
