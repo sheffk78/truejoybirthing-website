@@ -155,3 +155,13 @@ These pages break the rules above. Don't fix yet — flag and schedule.
 ### Image asset note
 
 The per-city `*-birth-doula-support.webp` files (180 images, all 800×500 AI-generated with anatomical artifacts) are **deprecated**. They have been replaced in the template by `/images/doula-teaching.webp` (1024×1536, high-quality stock). The old files remain in `public/images/` but are no longer referenced. They can be safely deleted in a future cleanup.
+
+### DoulaCardGrid component
+
+`src/components/city/DoulaCardGrid.astro` — reusable card grid for local doula/midwife listings.
+- Props: `doulas` (LocalDoula[]), `city` (string)
+- Responsive: `grid gap-4 sm:grid-cols-2 lg:grid-cols-3`
+- Card pattern: `bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50 flex flex-col`
+- CTA link: `btn-secondary` with "Visit website" text, no ↗ symbol
+- Empty state: cream callout with Ambassador CTA and DONA directory link
+- Heading `h2` is rendered by the parent page (conditionally hidden when zero doulas)
