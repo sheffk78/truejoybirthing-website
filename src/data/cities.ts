@@ -43,6 +43,9 @@ export interface CityData {
   insuranceNote: string;
   faqs: FaqItem[];
   nearbyCities: string[];
+  publishedDate?: string;
+  lat?: number;
+  lng?: number;
 }
 
 export const cities: Record<string, CityData> = {
@@ -2189,7 +2192,10 @@ export const cities: Record<string, CityData> = {
       { q: "Which Denver hospitals accommodate birth plans?", a: "UCHealth University of Colorado Hospital (Level III NICU, verified), Saint Joseph Hospital (Level III NICU, contact for verification), and Presbyterian/St. Luke's Medical Center all offer labor and delivery. Denver also has Mountain Midwifery Birth Center in Englewood for moms and families seeking an out-of-hospital birth. Always confirm your hospital's current visitor and support-person policies during your tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
       { q: "Does True Joy Birthing work with Denver families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Denver birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
-    nearbyCities: ["colorado-springs-co"],
+    nearbyCities: ["colorado-springs-co", "fort-collins-co"],
+    publishedDate: "2026-06-03",
+    lat: 39.7392,
+    lng: -104.9903,
   },
   "miami-fl": {
     city: "Miami",
