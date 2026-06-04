@@ -162,6 +162,7 @@ if (breadcrumbList && breadcrumbList.length > 0) {
       ...((schema["@graph"] || [])),
       {
         "@type": "BreadcrumbList",
+        "@id": `${canonical || `https://truejoybirthing.com${currentPath}`}#breadcrumb`,
         "itemListElement": breadcrumbList.map((item, i) => ({
           "@type": "ListItem",
           "position": i + 1,
