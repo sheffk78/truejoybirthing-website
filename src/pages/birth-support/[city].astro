@@ -66,6 +66,18 @@ const breadcrumbList = [
 const hospitalThumbnails: Record<string, string> = {
   'UCHealth University of Colorado Hospital': '/images/denver-uchealth-university-colorado-exterior.webp',
   'Saint Joseph Hospital': '/images/denver-saint-joseph-exterior.webp',
+  'Presbyterian/St. Luke\'s Medical Center': '/images/denver-presbyterian-st-lukes-exterior.webp',
+  'Rose Medical Center': '/images/denver-rose-medical-center-exterior.webp',
+  'Denver Health Medical Center': '/images/denver-health-medical-center-exterior.webp',
+  'Swedish Medical Center': '/images/denver-swedish-medical-center-exterior.webp',
+};
+const hospitalCredits: Record<string, string> = {
+  'UCHealth University of Colorado Hospital': '',
+  'Saint Joseph Hospital': 'Tshonsey / Wikimedia Commons, CC BY-SA 4.0',
+  'Presbyterian/St. Luke\'s Medical Center': 'Xnatedawgx / Wikimedia Commons, CC BY-SA 4.0',
+  'Rose Medical Center': 'Craig Talbert / Flickr, CC BY 2.0',
+  'Denver Health Medical Center': 'Jeffrey Beall / Wikimedia Commons, CC BY-SA 3.0',
+  'Swedish Medical Center': 'Jeffrey Beall / Wikimedia Commons, CC BY 3.0',
 };
 const schema = {
   '@context': 'https://schema.org',
@@ -412,6 +424,14 @@ const schema = {
 
       <p class="text-sm text-tjb-gray italic mt-6">Hospitals listed for reference only. True Joy Birthing does not endorse any specific provider. Always call ahead to confirm doula and visitor policies during your hospital tour.</p>
       <p class="text-sm text-tjb-gray mt-1">Reviewed by <a href="/about/" class="text-tjb-lavender-600 hover:underline">Shelbi Kohler</a></p>
+      {hospitalDetails.some((h) => hospitalCredits[h.name]) && (
+        <p class="text-xs text-tjb-gray/60 mt-3">
+          Hospital photos: {hospitalDetails
+            .filter((h) => hospitalCredits[h.name])
+            .map((h) => `${hospitalCredits[h.name]}`)
+            .join(' · ')}
+        </p>
+      )}
     </div>
   </section>
 
