@@ -25,7 +25,21 @@ export interface LocalDoula {
   practice?: string;
   url?: string;          // Practice website
   isAmbassador?: boolean;
+  isVerified?: boolean;  // true = listing verified by provider; false/absent = stub from public research
   description?: string;
+  // Enrichment fields (populated via outreach — see tjb-city-page-outreach)
+  costRange?: string;        // e.g. "$1,000–$2,500" or "$800–$1,500 sliding scale"
+  serviceArea?: string;      // e.g. "Denver metro + 30mi" or "Aurora, Centennial, Lakewood"
+  acceptsMedicaid?: boolean; // true if provider accepts Medicaid doula reimbursement
+  services?: string[];       // e.g. ["Birth doula", "Postpartum doula", "Lactation support"]
+  acceptingClients?: boolean;// true if currently accepting new clients
+  isMidwife?: boolean;       // true if CNM, CPM, or LM — affects card label and search intent
+}
+
+export interface Testimonial {
+  quote: string;         // The exact quote text
+  attribution: string;   // "Client of Sarah Martinez, CD(DONA)" or "Maria, Denver mom"
+  source: 'client' | 'doula' | 'midwife';  // Who said it
 }
 
 export interface CityData {
@@ -45,6 +59,7 @@ export interface CityData {
   faqs: FaqItem[];
   nearbyCities: string[];
   publishedDate?: string;
+  testimonials?: Testimonial[];  // Real client quotes; if absent, show "What local moms ask" Q&A
   lat?: number;
   lng?: number;
 }

@@ -3,8 +3,14 @@
 // Used on city birth-support pages to display local providers
 //
 // Props:
-//   doulas: Array<{ name, credential?, practice?, url?, isAmbassador? }>
-//   city: string — used in the empty-state CTA
+//   doulas: Array<{ name, credential?, practice?, url?, isAmbassador?, isVerified?, description?,
+//                    costRange?, serviceArea?, acceptsMedicaid?, services?, acceptingClients?, isMidwife? }>
+//   city: string — used in the empty-state CTA and badges
+//
+// Card states:
+//   - Verified (isVerified=true, url present): Full card with enrichment data + "Visit website" button
+//   - Stub (isVerified=false or absent, no url): Card with "Claim This Listing" link + "Listed — not verified" note
+//   - Ambassador: Always verified; shows Ambassador badge
 //
 // Design: responsive grid (1 col mobile, 2 col md, 3 col lg)
 // Each card follows the centered monogram pattern:
@@ -12,8 +18,9 @@
 //   - Name in serif below
 //   - Credential/title in brand color
 //   - Practice name in gray
+//   - Enrichment badges: cost, Medicaid, services, availability (shown only when data exists)
 //   - Pill badges for Ambassador + city
-//   - "Visit website" as primary button
+//   - "Visit website" or "Claim This Listing" as CTA
 
 interface Props {
   doulas: Array<{
@@ -22,7 +29,14 @@ interface Props {
     practice?: string;
     url?: string;
     isAmbassador?: boolean;
+    isVerified?: boolean;
     description?: string;
+    costRange?: string;
+    serviceArea?: string;
+    acceptsMedicaid?: boolean;
+    services?: string[];
+    acceptingClients?: boolean;
+    isMidwife?: boolean;
   }>;
   city: string;
 }
@@ -34,11 +48,6 @@ function getInitial(name: string) {
   return name.charAt(0).toUpperCase();
 }
 
-// Derive display name (prefer first name only for monogram feel)
-function getFirstName(name: string) {
-  return name.split(' ')[0];
-}
-
 // City name without state abbreviation for the badge
 function getCityName(city: string) {
   return city.split(',')[0].trim();
@@ -46,62 +55,123 @@ function getCityName(city: string) {
 ---
 
 {doulas.length > 0 ? (
-  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 not-prose">
-    {doulas.map((d) => (
-      <div class="bg-tjb-cream rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50 flex flex-col items-center text-center hover:shadow-md hover:border-tjb-lavender-300 transition-shadow duration-200">
-        {/* Circle monogram */}
-        <div class="w-14 h-14 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-4">
-          <span class="text-2xl font-semibold text-tjb-lavender-700" style="font-family: 'Cormorant Garamond', Georgia, serif;">{getInitial(d.name)}</span>
-        </div>
+  <div>
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 not-prose">
+      {doulas.map((d) => {
+        const verified = d.isVerified !== false && !!d.url; // Default to verified if they have a URL
+        return (
+          <div class={`bg-tjb-cream rounded-xl p-6 shadow-sm border flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200 ${verified ? 'border-tjb-lavender-200/50 hover:border-tjb-lavender-300' : 'border-tjb-lavender-100 border-dashed'}`}>
+            {/* Circle monogram */}
+            <div class={`w-14 h-14 rounded-full flex items-center justify-center mb-4 ${verified ? 'bg-tjb-lavender-100' : 'bg-tjb-lavender-50'}`}>
+              <span class="text-2xl font-semibold text-tjb-lavender-700" style="font-family: 'Cormorant Garamond', Georgia, serif;">{getInitial(d.name)}</span>
+            </div>
 
-        {/* Name */}
-        <h3 class="text-lg font-semibold text-tjb-charcoal leading-tight mb-1" style="font-family: 'Cormorant Garamond', Georgia, serif;">
-          {d.name}
-        </h3>
+            {/* Name */}
+            <h3 class="text-lg font-semibold text-tjb-charcoal leading-tight mb-1" style="font-family: 'Cormorant Garamond', Georgia, serif;">
+              {d.name}
+            </h3>
 
-        {/* Credential */}
-        {d.credential && (
-          <p class="text-sm text-tjb-lavender-600 font-medium mb-2">{d.credential}</p>
-        )}
+            {/* Credential or role */}
+            {d.credential ? (
+              <p class="text-sm text-tjb-lavender-600 font-medium mb-2">{d.credential}</p>
+            ) : d.isMidwife ? (
+              <p class="text-sm text-tjb-lavender-600 font-medium mb-2">Midwife</p>
+            ) : null}
 
-        {/* Practice */}
-        {d.practice && (
-          <p class="text-sm text-tjb-gray mb-3">{d.practice}</p>
-        )}
+            {/* Practice */}
+            {d.practice && (
+              <p class="text-sm text-tjb-gray mb-3">{d.practice}</p>
+            )}
 
-        {/* Description */}
-        {d.description && (
-          <p class="text-sm text-tjb-gray mt-1">{d.description}</p>
-        )}
+            {/* Enrichment data — only shown for verified listings with data */}
+            {verified && (d.costRange || d.acceptsMedicaid !== undefined || d.acceptingClients !== undefined || (d.services && d.services.length > 0) || d.serviceArea) && (
+              <div class="w-full text-left mt-2 mb-3 space-y-1.5">
+                {d.costRange && (
+                  <p class="text-sm text-tjb-charcoal"><span class="font-medium">Cost:</span> {d.costRange}</p>
+                )}
+                {d.acceptsMedicaid !== undefined && (
+                  <p class="text-sm">
+                    {d.acceptsMedicaid ? (
+                      <span class="text-emerald-600 font-medium">✓ Accepts Medicaid</span>
+                    ) : (
+                      <span class="text-tjb-gray">No Medicaid</span>
+                    )}
+                  </p>
+                )}
+                {d.services && d.services.length > 0 && (
+                  <div class="flex flex-wrap gap-1">
+                    {d.services.map((s) => (
+                      <span class="text-xs bg-tjb-lavender-50 text-tjb-lavender-700 px-2 py-0.5 rounded-full border border-tjb-lavender-100">{s}</span>
+                    ))}
+                  </div>
+                )}
+                {d.serviceArea && (
+                  <p class="text-xs text-tjb-gray">Serves: {d.serviceArea}</p>
+                )}
+                {d.acceptingClients !== undefined && (
+                  <p class="text-sm">
+                    {d.acceptingClients ? (
+                      <span class="text-emerald-600 font-medium">Accepting clients</span>
+                    ) : (
+                      <span class="text-amber-600">Currently full</span>
+                    )}
+                  </p>
+                )}
+              </div>
+            )}
 
-        {/* Spacer */}
-        <div class="flex-1"></div>
+            {/* Description — only for verified listings */}
+            {verified && d.description && (
+              <p class="text-sm text-tjb-gray mt-1">{d.description}</p>
+            )}
 
-        {/* Badges */}
-        <div class="flex flex-wrap justify-center gap-2 mt-3">
-          {d.isAmbassador && (
-            <span class="inline-flex items-center bg-tjb-lavender-100 text-tjb-lavender-700 text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-lavender-200">
-              Ambassador
-            </span>
-          )}
-          <span class="inline-flex items-center bg-tjb-rose-50 text-tjb-rose-500 text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-rose-200">
-            {getCityName(city)}
-          </span>
-        </div>
+            {/* Spacer */}
+            <div class="flex-1"></div>
 
-        {/* Visit website button */}
-        {d.url && (
-          <a
-            href={d.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-primary mt-4 text-sm w-full"
-          >
-            Visit website
-          </a>
-        )}
-      </div>
-    ))}
+            {/* Badges */}
+            <div class="flex flex-wrap justify-center gap-2 mt-3">
+              {d.isAmbassador && (
+                <span class="inline-flex items-center bg-tjb-lavender-100 text-tjb-lavender-700 text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-lavender-200">
+                  Ambassador
+                </span>
+              )}
+              <span class="inline-flex items-center bg-tjb-rose-50 text-tjb-rose-500 text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-rose-200">
+                {getCityName(city)}
+              </span>
+              {!verified && (
+                <span class="inline-flex items-center bg-gray-50 text-gray-400 text-xs font-normal px-2.5 py-0.5 rounded-full border border-gray-200">
+                  Listed — not verified
+                </span>
+              )}
+            </div>
+
+            {/* CTA: Visit website OR Claim This Listing */}
+            {verified && d.url ? (
+              <a
+                href={d.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-primary mt-4 text-sm w-full"
+              >
+                Visit website
+              </a>
+            ) : (
+              <a
+                href="/ambassador/"
+                class="btn-secondary mt-4 text-sm w-full"
+              >
+                Claim This Listing
+              </a>
+            )}
+          </div>
+        );
+      })}
+    </div>
+
+    {/* Listing disclaimer — always shown when doulas are listed */}
+    <p class="text-xs text-tjb-gray mt-6 text-center max-w-2xl mx-auto">
+      Listings are for informational purposes only and do not imply endorsement by True Joy Birthing. Credentials and availability are self-reported — please verify directly with each provider. If you're a doula or midwife listed here, <a href="/ambassador/" class="text-tjb-lavender-600 hover:underline">claim your listing</a> to update your information.
+    </p>
   </div>
 ) : (
   <div class="bg-tjb-cream/30 border border-tjb-lavender-100 rounded-xl p-4 my-6 not-prose">
@@ -117,9 +187,7 @@ function getCityName(city: string) {
         target="_blank"
         rel="noopener noreferrer"
         class="text-tjb-lavender-600 hover:underline"
-      >
-        search DONA International's directory
-      </a>
+      >search DONA International's directory</a>
       or check with your hospital's referral list.
     </p>
   </div>

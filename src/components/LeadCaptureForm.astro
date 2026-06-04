@@ -5,11 +5,15 @@ interface Props {
   heading?: string;
   body?: string;
   eyebrow?: string;
+  bannerImage?: string;
+  bannerAlt?: string;
 }
 const {
   heading = 'Get Your Joyful Birth Plan',
   body = 'Enter your name and email and we\'ll send you the free fillable birth plan PDF plus a guided walkthrough in the app. No spam — just the tools you need.',
   eyebrow = 'Free Download',
+  bannerImage = '',
+  bannerAlt = '',
 } = Astro.props;
 ---
 
@@ -17,8 +21,19 @@ const {
   <div class="max-w-2xl mx-auto px-6 text-center">
     <p class="eyebrow mb-4">{eyebrow}</p>
     <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
-    <h2 class="mb-5 text-[2.25rem] md:text-[2.75rem] leading-[1.15]">{heading}</h2>
+    <h2 class="mb-5 text-[2.25rem] md:text-[2.75rem] leading-[1.15]" style="font-family: 'Cormorant Garamond', Georgia, serif;">{heading}</h2>
     <p class="text-tjb-gray mb-8 max-w-xl mx-auto leading-relaxed">{body}</p>
+
+    {bannerImage && (
+      <div class="mb-8 flex justify-center">
+        <img
+          src={bannerImage}
+          alt={bannerAlt}
+          class="max-w-lg w-full rounded-xl shadow-md"
+          loading="lazy"
+        />
+      </div>
+    )}
 
     <form id="lead-magnet-form" class="flex flex-col gap-3 max-w-lg mx-auto mb-4">
       <div class="flex flex-col sm:flex-row gap-3">
