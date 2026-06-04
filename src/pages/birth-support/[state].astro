@@ -1,21 +1,13 @@
 ---
 // ═══════════════════════════════════════════════════════════════
-// Dynamic state birth-support hub page — intermediate topology layer
-// Links to all cities in the state, provides state-level Medicaid info
+// State hub page — intermediate topology layer between /birth-support/ and city pages
+// Links to all cities in a state, provides state-specific Medicaid + doula info
 // ═══════════════════════════════════════════════════════════════
 import Layout from '../../layouts/Layout.astro';
-import { cities, citySlugs } from '../../data/cities';
+import { cities, citySlugs, type CityData } from '../../data/cities';
 
 export function getStaticPaths() {
-  // Group cities by state
-  const stateMap: Record<string, string[]> = {};
-  for (const slug of citySlugs) {
-    const city = cities[slug];
-    if (!city) continue;
-    if (!stateMap[city.state]) stateMap[city.state] = [];
-    stateMap[city.state].push(slug);
-  }
-
+  // Full state name lookup (must be inside getStaticPaths for Astro build isolation)
   const stateNames: Record<string, string> = {
     AK: 'Alaska', AL: 'Alabama', AR: 'Arkansas', AZ: 'Arizona', CA: 'California',
     CO: 'Colorado', CT: 'Connecticut', DE: 'Delaware', FL: 'Florida', GA: 'Georgia',
@@ -29,35 +21,54 @@ export function getStaticPaths() {
     VT: 'Vermont', WA: 'Washington', WI: 'Wisconsin', WV: 'West Virginia', WY: 'Wyoming',
   };
 
-  return Object.entries(stateMap).map(([stateCode, slugs]) => ({
-    params: { state: stateCode.toLowerCase() },
-    props: { stateCode, stateName: stateNames[stateCode] || stateCode, slugs },
-  }));
+  // Group cities by state
+  const stateGroups: Record<string, CityData[]> = {};
+  for (const slug of citySlugs) {
+    const city = cities[slug];
+    if (!city) continue;
+    if (!stateGroups[city.state]) stateGroups[city.state] = [];
+    stateGroups[city.state].push(city);
+  }
+
+  const paths = [];
+  for (const [stateCode, stateCities] of Object.entries(stateGroups)) {
+    const medicaidCovers = stateCities.some(c => {
+      const n = c.medicaidNote;
+      if (!n.startsWith('Yes —') && !n.startsWith('Yes \u2014')) return false;
+      if (n.includes('does NOT cover') || n.includes('does not cover')) return false;
+      return true;
+    });
+    const notes = stateCities.map(c => c.medicaidNote);
+    const yesNote = notes.find(n => {
+      if (!n.startsWith('Yes —') && !n.startsWith('Yes \u2014')) return false;
+      if (n.includes('does NOT cover') || n.includes('does not cover')) return false;
+      return true;
+    }) || '';
+    const noNote = notes.find(n => n.startsWith('No —') || n.startsWith('No \u2014')) || '';
+    const note = yesNote || noNote;
+    const medicaidSummary = note.split('.')[0] + '.';
+
+    paths.push({
+      params: { state: stateCode.toLowerCase() },
+      props: {
+        stateCode,
+        stateName: stateNames[stateCode] || stateCode,
+        stateSlug: stateCode.toLowerCase(),
+        cities: stateCities,
+        medicaidCovers,
+        medicaidSummary,
+        costLow: Math.min(...stateCities.map(c => c.costLow)),
+        costHigh: Math.max(...stateCities.map(c => c.costHigh)),
+      },
+    });
+  }
+  return paths;
 }
 
-const { stateCode, stateName, slugs } = Astro.props;
-
-// Gather city data for each slug
-const stateCities = slugs.map((s: string) => cities[s]).filter(Boolean);
-
-// Derive state-level Medicaid info from city data
-// Most cities in the same state share the same medicaid status, but extract the common thread
-const medicaidCovers = !stateCities.some((c: any) => c.medicaidNote.toLowerCase().includes('does not'));
-const sampleMedicaidNote = stateCities[0]?.medicaidNote || '';
-const sampleInsuranceNote = stateCities[0]?.insuranceNote || '';
-
-// Cost range across state
-const costLow = Math.min(...stateCities.map((c: any) => c.costLow));
-const costHigh = Math.max(...stateCities.map((c: any) => c.costHigh));
-
-// Collect unique hospital names and birth center presence
-const hasAnyBirthCenters = stateCities.some((c: any) => c.birthCenterDetails && c.birthCenterDetails.length > 0);
-const hospitalCount = new Set(stateCities.flatMap((c: any) => c.hospitalDetails?.map((h: any) => h.name) || [])).size;
-const doulaCount = stateCities.reduce((sum: number, c: any) => sum + (c.localDoulas?.length || 0), 0);
-
+const { stateCode, stateName, stateSlug, cities: stateCities, medicaidCovers, medicaidSummary, costLow, costHigh } = Astro.props;
 const pageTitle = `${stateName} Birth Doula & Support Guide | Doula Costs, Medicaid & Hospitals`;
-const pageDesc = `Birth doula costs, Medicaid coverage, hospital info, and free birth planning tools for ${stateName} families. Covers ${slugs.length} ${slugs.length === 1 ? 'city' : 'cities'} across the state.`;
-const pageUrl = `https://truejoybirthing.com/birth-support/${stateCode.toLowerCase()}/`;
+const pageDesc = `Find birth doula support across ${stateName} — doula costs ($${costLow.toLocaleString()}–$${costHigh.toLocaleString()}), Medicaid coverage${medicaidCovers ? ' (covered!' : ' status'}, hospital info, and free birth plan resources in ${stateCities.length} ${stateCities.length === 1 ? 'city' : 'cities'}.`;
+const pageUrl = `https://truejoybirthing.com/birth-support/${stateSlug}/`;
 
 const breadcrumbList = [
   { name: 'Home', url: 'https://truejoybirthing.com/' },
@@ -71,16 +82,16 @@ const schema = {
     {
       '@type': 'CollectionPage',
       '@id': `${pageUrl}#collection`,
-      name: `Birth Support in ${stateName} — Doula Costs, Hospital Info & Joyful Birth Plans`,
+      name: `${stateName} Birth Doula & Support Guide`,
       description: pageDesc,
       url: pageUrl,
       about: { '@id': 'https://truejoybirthing.com/#organization' },
       mainEntity: {
         '@type': 'ItemList',
-        itemListElement: stateCities.map((c: any, i: number) => ({
+        itemListElement: stateCities.map((c, i) => ({
           '@type': 'ListItem',
           position: i + 1,
-          name: `Birth Support in ${c.city}, ${c.state}`,
+          name: `Birth Support in ${c.city}, ${stateCode}`,
           url: `https://truejoybirthing.com/birth-support/${c.slug}/`,
         })),
       },
@@ -106,10 +117,12 @@ const schema = {
   breadcrumbList={breadcrumbList}
   schema={schema}
 >
-  <!-- Hero -->
-  <section class="bg-tjb-cream pt-16 pb-12">
-    <div class="max-w-4xl mx-auto px-6">
-      <nav aria-label="Breadcrumb" class="not-prose mb-6 text-sm text-tjb-gray">
+  <!-- ═══════════════════════════════════════════════════════════
+       BREADCRUMB
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="bg-tjb-cream pt-6">
+    <div class="max-w-7xl mx-auto px-6">
+      <nav aria-label="Breadcrumb" class="text-sm text-tjb-gray">
         <ol class="flex items-center gap-1.5 flex-wrap">
           {breadcrumbList.map((crumb, i) => (
             <li class="flex items-center gap-1.5">
@@ -123,144 +136,223 @@ const schema = {
           ))}
         </ol>
       </nav>
-      <h1 class="text-3xl md:text-4xl font-bold mb-4">{stateName} Birth Doula & Hospital Guide</h1>
-      <p class="text-lg text-tjb-gray mb-6">
-        Whether you're in {stateCities.length === 1 ? stateCities[0].city : `a major metro or a smaller town`}, birth support in {stateName} looks different depending on where you are — different hospitals, different costs, different Medicaid rules. This state guide pulls it all together so you can find what's relevant to <em>your</em> city.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-3">
-        <a href="/birth-plan-template/" class="btn-primary text-center">
-          Get Your Free Joyful Birth Plan
-        </a>
-        <a href="/medicaid-doula-coverage/" class="btn-secondary text-center">
-          {stateName} Medicaid Coverage →
-        </a>
-      </div>
     </div>
   </section>
 
-  <!-- At-a-glance stats -->
-  <section class="py-10 bg-white border-b border-tjb-lavender-200/40">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-        <div class="bg-tjb-cream/50 rounded-xl p-4">
-          <p class="text-2xl font-bold text-tjb-lavender-600">{slugs.length}</p>
-          <p class="text-sm text-tjb-gray">{slugs.length === 1 ? 'City' : 'Cities'} Covered</p>
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO — State-level overview
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="bg-tjb-cream pt-12 pb-16">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">{stateName} Birth Doula & Hospital Guide</h1>
+      <p class="text-lg text-tjb-gray max-w-2xl mx-auto">
+        Birth support resources for {stateCities.length} {stateCities.length === 1 ? 'city' : 'cities'} across {stateName} —
+        doula costs, Medicaid coverage, hospital info, and free birth planning tools,
+        organized city by city.
+      </p>
+
+      <!-- Quick stats -->
+      <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="bg-white rounded-xl p-4 shadow-sm border border-tjb-lavender-100">
+          <p class="text-2xl font-bold text-tjb-lavender-600">{stateCities.length}</p>
+          <p class="text-sm text-tjb-gray">{stateCities.length === 1 ? 'City' : 'Cities'}</p>
         </div>
-        <div class="bg-tjb-cream/50 rounded-xl p-4">
+        <div class="bg-white rounded-xl p-4 shadow-sm border border-tjb-lavender-100">
           <p class="text-2xl font-bold text-tjb-lavender-600">${costLow.toLocaleString()}–${costHigh.toLocaleString()}</p>
           <p class="text-sm text-tjb-gray">Doula Cost Range</p>
         </div>
-        <div class="bg-tjb-cream/50 rounded-xl p-4">
-          <p class="text-2xl font-bold text-tjb-lavender-600">{hospitalCount}</p>
-          <p class="text-sm text-tjb-gray">{hospitalCount === 1 ? 'Hospital' : 'Hospitals'} Listed</p>
+        <div class="bg-white rounded-xl p-4 shadow-sm border border-tjb-lavender-100">
+          {medicaidCovers ? (
+            <p class="text-2xl font-bold text-tjb-sage">Covered ✓</p>
+          ) : (
+            <p class="text-2xl font-bold text-tjb-rose-500">Not Yet</p>
+          )}
+          <p class="text-sm text-tjb-gray">Medicaid Doula</p>
         </div>
-        <div class="bg-tjb-cream/50 rounded-xl p-4">
-          <p class="text-2xl font-bold text-tjb-lavender-600">{medicaidCovers ? 'Yes — Covered' : 'Not Yet'}</p>
-          <p class="text-sm text-tjb-gray">Medicaid Doula Coverage</p>
+        <div class="bg-white rounded-xl p-4 shadow-sm border border-tjb-lavender-100">
+          <p class="text-2xl font-bold text-tjb-lavender-600">Free</p>
+          <p class="text-sm text-tjb-gray">Birth Plan Template</p>
         </div>
+      </div>
+
+      <div class="mt-6 flex flex-wrap justify-center gap-3 text-sm">
+        <a href="/what-is-a-doula/" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-tjb-lavender-300 text-tjb-lavender-600 hover:bg-tjb-lavender-50 transition font-medium">What Is a Doula?</a>
+        <a href="/benefits-of-a-doula/" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-tjb-lavender-300 text-tjb-lavender-600 hover:bg-tjb-lavender-50 transition font-medium">Benefits of a Doula</a>
+        <a href="/birth-plan-template/" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-tjb-rose-400 text-tjb-rose-500 hover:bg-tjb-rose-50 transition font-medium">Free Birth Plan →</a>
       </div>
     </div>
   </section>
 
-  <!-- Medicaid & Insurance -->
+  <!-- ═══════════════════════════════════════════════════════════
+       MEDICAID & DOULA COSTS — State-level overview
+       ═══════════════════════════════════════════════════════════ -->
   <section class="py-12 bg-white">
-    <div class="max-w-3xl mx-auto px-6 prose">
-      <h2>Does Medicaid Cover a Doula in {stateName}?</h2>
-      <p>{medicaidCovers
-        ? `${stateName} covers doula services through Medicaid — that's good news for families who need support and want it covered. See the details below, and for a full breakdown by state, check our Medicaid doula coverage guide.`
-        : `${stateName} does not yet have statewide Medicaid doula coverage. That means if you're on Medicaid, doula services likely aren't covered directly — but some health plan pilots and community organizations may offer limited benefits or sliding-scale support. Don't let that stop you from planning ahead.`
-      }</p>
-      <p class="text-sm text-tjb-gray italic">{sampleMedicaidNote}</p>
-      <p>{sampleInsuranceNote}</p>
-      <p>For the full picture of which states cover doulas through Medicaid, see our <a href="/medicaid-doula-coverage/">Medicaid doula coverage guide</a>.</p>
-
-      <div class="bg-tjb-cream/30 border border-tjb-lavender-200 rounded-lg p-4 not-prose mt-6">
-        <p class="font-semibold text-tjb-lavender-600 mb-1">Can't afford a doula right now?</p>
-        <p class="text-sm text-tjb-gray">Many {stateName} doulas offer payment plans, sliding-scale fees, or reduced packages. Student doulas in training often attend births at lower rates. And the free <a href="/birth-plan-template/" class="text-tjb-lavender-600 hover:underline">Joyful Birth Plan</a> works whether or not you hire a doula — it helps you think through your preferences and walk in prepared.</p>
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+        <div class="md:w-[58%] prose">
+          <h2 class="flex items-center gap-2.5">
+            <svg class="w-6 h-6 text-tjb-lavender-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-2.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            Does Medicaid Cover Doulas in {stateName}?
+          </h2>
+          {medicaidCovers ? (
+            <div class="bg-tjb-sage/10 border border-tjb-sage/30 rounded-lg p-4 mb-4 not-prose">
+              <p class="font-semibold text-tjb-sage mb-1">✓ {stateName} Medicaid covers doula services</p>
+              <p class="text-sm text-tjb-gray">{medicaidSummary}</p>
+            </div>
+          ) : (
+            <div class="bg-tjb-rose-50 border border-tjb-rose-200 rounded-lg p-4 mb-4 not-prose">
+              <p class="font-semibold text-tjb-rose-600 mb-1">✗ {stateName} does not yet have statewide Medicaid doula coverage</p>
+              <p class="text-sm text-tjb-gray">{medicaidSummary}</p>
+            </div>
+          )}
+          <p>For city-specific Medicaid details, hospital policies, and local doula recommendations, choose your city below. For a full breakdown of which states cover doulas through Medicaid, see our <a href="/medicaid-doula-coverage/">Medicaid doula coverage guide</a>.</p>
+          <h3 class="flex items-center gap-2.5">
+            <svg class="w-6 h-6 text-tjb-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.403 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.403-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Doula Costs in {stateName}
+          </h3>
+          <p>Across {stateName}, birth doula packages typically range from <strong>${costLow.toLocaleString()} to ${costHigh.toLocaleString()}</strong> — that usually includes prenatal visits, your birth, and postpartum follow-up. Costs vary by city, so check the city page below for local specifics. <a href="/doula-cost/">See our full doula cost breakdown</a> for what's included and what to ask about.</p>
+          <ul>
+            <li><strong>HSA/FSA:</strong> Many families don't realize that doula services can often be paid for with HSA or FSA funds, since birth support qualifies as a medical expense under most plans.</li>
+            <li><strong>Sliding-scale doulas:</strong> Many {stateName} doulas offer payment plans, sliding-scale fees, or reduced packages. Don't be afraid to ask.</li>
+            <li><strong>Student doulas:</strong> Doulas in training often attend births at reduced rates — a great option if budget is tight.</li>
+          </ul>
+        </div>
+        <div class="md:w-[42%] flex-shrink-0">
+          <img
+            src="/images/doula-holding-hands.webp"
+            alt="A doula providing emotional support during pregnancy — hands clasped together in a moment of trust and care"
+            class="w-full rounded-xl shadow-md"
+            width="1024"
+            height="1536"
+            loading="lazy"
+          />
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- City Grid -->
-  <section class="py-12 bg-tjb-cream">
+  <!-- ═══════════════════════════════════════════════════════════
+       CITY GRID — Links to all city pages in this state
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-16 bg-tjb-cream">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-2xl font-bold mb-2">{stateName} Cities — Find Your Local Guide</h2>
-      <p class="text-tjb-gray mb-8">Each city page has hospital NICU info, doula cost ranges, Medicaid details, birth center listings, and a free birth plan template built for that community.</p>
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">Birth Support in {stateName} — Choose Your City</h2>
+      <p class="text-tjb-gray mb-8">Select your city for local doula costs, hospital info, Medicaid details, and free birth planning resources.</p>
+
       <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-        {stateCities.map((c: any) => (
-          <a href={`/birth-support/${c.slug}/`} class="border border-tjb-lavender-300 bg-white p-4 rounded-lg hover:border-tjb-lavender-500 hover:bg-tjb-lavender-50 transition group">
-            <h3 class="font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">{c.city}, {c.state}</h3>
+        {stateCities.map((c: CityData) => (
+          <a
+            href={`/birth-support/${c.slug}/`}
+            class="group border border-tjb-lavender-200 p-4 rounded-xl hover:border-tjb-lavender-500 hover:bg-white hover:shadow-md transition bg-white/50"
+          >
+            <h3 class="font-semibold text-tjb-charcoal group-hover:text-tjb-lavender-600 transition">{c.city}</h3>
             <p class="text-sm text-tjb-gray mt-1">${c.costLow.toLocaleString()}–${c.costHigh.toLocaleString()} doula cost</p>
-            <p class="text-xs text-tjb-gray mt-0.5">
-              {c.hospitalDetails?.length || 0} hospital{(c.hospitalDetails?.length || 0) !== 1 ? 's' : ''}
-              {c.birthCenterDetails?.length > 0 ? ' · birth center' : ''}
-            </p>
+            {medicaidCovers ? (
+              <span class="inline-block mt-2 text-xs font-medium px-2 py-0.5 rounded-full bg-tjb-sage/10 text-tjb-sage border border-tjb-sage/20">Medicaid covers</span>
+            ) : (
+              <span class="inline-block mt-2 text-xs font-medium px-2 py-0.5 rounded-full bg-tjb-rose-50 text-tjb-rose-500 border border-tjb-rose-200">No Medicaid yet</span>
+            )}
+            <div class="mt-2 text-sm text-tjb-lavender-600 font-medium group-hover:underline">View guide →</div>
           </a>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- What you'll find on each city page -->
-  <section class="py-12 bg-white">
-    <div class="max-w-3xl mx-auto px-6 prose">
-      <h2>What's on Each {stateName} City Page</h2>
-      <p>Every city guide in {stateName} includes:</p>
-      <ul>
-        <li><strong>Hospital & birth center details</strong> — NICU levels, visitor policies, and whether doulas are welcome</li>
-        <li><strong>Doula cost range</strong> — what you'll typically pay in that city, and what's included</li>
-        <li><strong>Medicaid & insurance coverage</strong> — what your plan covers and what it doesn't</li>
-        <li><strong>Local doulas & midwives</strong> — verified providers serving that community</li>
-        <li><strong>Free birth plan template</strong> — built for {stateName} families preparing for any birth setting</li>
-      </ul>
-      <p>Find your city above, or <a href="/birth-plan-template/">start with the free birth plan</a> — it works no matter where in {stateName} you're delivering.</p>
+  <!-- ═══════════════════════════════════════════════════════════
+       WHAT BIRTH SUPPORT LOOKS LIKE — General info
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <p class="eyebrow mb-3">How it works</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-8"></div>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">What Birth Support Looks Like in {stateName}</h2>
+      <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+        <div class="md:w-1/2">
+          <div class="space-y-4">
+            <div class="border-l-2 border-tjb-lavender-500 pl-4">
+              <p class="font-semibold text-tjb-charcoal">Continuous labor support</p>
+              <p class="text-sm text-tjb-gray">A doula stays with you from early labor through delivery — no shift changes, no leaving the room.</p>
+            </div>
+            <div class="border-l-2 border-tjb-lavender-500 pl-4">
+              <p class="font-semibold text-tjb-charcoal">Evidence-based comfort techniques</p>
+              <p class="text-sm text-tjb-gray">Breathing, counter-pressure, position changes — proven to reduce C-section rates and shorten labor.</p>
+            </div>
+            <div class="border-l-2 border-tjb-lavender-500 pl-4">
+              <p class="font-semibold text-tjb-charcoal">Advocacy before and during birth</p>
+              <p class="text-sm text-tjb-gray">Your doula helps you understand your options and practice saying what you want — before you're in the delivery room.</p>
+            </div>
+            <div class="border-l-2 border-tjb-sage pl-4">
+              <p class="font-semibold text-tjb-charcoal">Postpartum follow-up, too</p>
+              <p class="text-sm text-tjb-gray">Most {stateName} doula packages include at least one postpartum visit — because birth support doesn't end at delivery.</p>
+            </div>
+          </div>
+
+          <p class="text-sm text-tjb-gray mt-6">Whether this is your first baby or you're preparing for a VBAC, <a href="/what-is-a-doula/" class="text-tjb-lavender-600 hover:underline">understanding what a doula does</a> — and <a href="/benefits-of-a-doula/" class="text-tjb-lavender-600 hover:underline">how a doula can change your birth experience</a> — can help you decide what support is right for you.</p>
+        </div>
+
+        <div class="md:w-1/2">
+          <div class="bg-tjb-cream/60 border border-tjb-lavender-100 rounded-xl p-5">
+            <p class="font-semibold text-tjb-lavender-600 mb-1">Not sure what the difference is?</p>
+            <p class="text-sm text-tjb-gray">A <strong>midwife</strong> is your medical provider — she can deliver your baby, write prescriptions, and monitor your health. A <strong>doula</strong> is your support person — she keeps you comfortable, informed, and emotionally held, but doesn't do medical tasks. You can have both, and many {stateName} moms do. <a href="/what-is-a-doula/" class="text-tjb-lavender-600 hover:underline">Learn more about what a doula actually does →</a></p>
+          </div>
+
+          <div class="mt-6 text-center">
+            <a href="/birth-plan-template/" class="inline-block bg-tjb-lavender-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 active:translate-y-0 transition">Get Your Free Joyful Birth Plan</a>
+            <p class="text-xs text-tjb-gray mt-2">Free · No account needed to start</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Related Resources -->
-  <section class="py-12 bg-white border-t border-tjb-lavender-200/40">
-    <div class="max-w-3xl mx-auto px-6">
-      <h2 class="text-2xl font-bold mb-6">Related Resources</h2>
-      <div class="grid sm:grid-cols-2 gap-3">
-        <a href="/birth-plan-template/" class="flex items-start gap-3 p-4 border border-tjb-lavender-200 rounded-lg hover:border-tjb-rose-400 hover:bg-tjb-rose-50/30 transition group">
-          <svg class="w-5 h-5 mt-0.5 text-tjb-lavender-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-          <div>
-            <span class="font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">Free Birth Plan Template</span>
-            <p class="text-sm text-tjb-gray mt-0.5">Downloadable fillable PDF for your hospital birth</p>
+  <!-- ═══════════════════════════════════════════════════════════
+       RELATED RESOURCES
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-12 bg-tjb-cream">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-xl font-semibold mb-6">Related Resources</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <a href="/doula-cost/" class="bg-white border border-tjb-lavender-200 rounded-xl p-4 hover:border-tjb-lavender-500 hover:shadow-md transition group">
+          <div class="w-10 h-10 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.403 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.403-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
+          <h3 class="font-semibold text-tjb-charcoal group-hover:text-tjb-lavender-600 transition text-sm">Doula Cost Guide</h3>
+          <p class="text-xs text-tjb-gray mt-1">What doulas charge and what's included</p>
         </a>
-        <a href="/what-is-a-doula/" class="flex items-start gap-3 p-4 border border-tjb-lavender-200 rounded-lg hover:border-tjb-rose-400 hover:bg-tjb-rose-50/30 transition group">
-          <svg class="w-5 h-5 mt-0.5 text-tjb-lavender-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <div>
-            <span class="font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">What Is a Doula?</span>
-            <p class="text-sm text-tjb-gray mt-0.5">What doulas do, how they help, and whether you need one</p>
+        <a href="/what-is-a-doula/" class="bg-white border border-tjb-lavender-200 rounded-xl p-4 hover:border-tjb-lavender-500 hover:shadow-md transition group">
+          <div class="w-10 h-10 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
+          <h3 class="font-semibold text-tjb-charcoal group-hover:text-tjb-lavender-600 transition text-sm">What Is a Doula?</h3>
+          <p class="text-xs text-tjb-gray mt-1">Role, scope, and how they help</p>
         </a>
-        <a href="/doula-cost/" class="flex items-start gap-3 p-4 border border-tjb-lavender-200 rounded-lg hover:border-tjb-rose-400 hover:bg-tjb-rose-50/30 transition group">
-          <svg class="w-5 h-5 mt-0.5 text-tjb-lavender-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          <div>
-            <span class="font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">Doula Cost Guide</span>
-            <p class="text-sm text-tjb-gray mt-0.5">What doulas cost, what's included, and how to pay</p>
+        <a href="/medicaid-doula-coverage/" class="bg-white border border-tjb-lavender-200 rounded-xl p-4 hover:border-tjb-lavender-500 hover:shadow-md transition group">
+          <div class="w-10 h-10 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-2.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
           </div>
+          <h3 class="font-semibold text-tjb-charcoal group-hover:text-tjb-lavender-600 transition text-sm">Medicaid Doula Coverage</h3>
+          <p class="text-xs text-tjb-gray mt-1">State-by-state guide to coverage</p>
         </a>
-        <a href="/medicaid-doula-coverage/" class="flex items-start gap-3 p-4 border border-tjb-lavender-200 rounded-lg hover:border-tjb-rose-400 hover:bg-tjb-rose-50/30 transition group">
-          <svg class="w-5 h-5 mt-0.5 text-tjb-lavender-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-          <div>
-            <span class="font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">Medicaid Doula Coverage</span>
-            <p class="text-sm text-tjb-gray mt-0.5">Which states cover doulas and how to get coverage</p>
+        <a href="/birth-plan-template/" class="bg-white border border-tjb-rose-100 rounded-xl p-4 hover:border-tjb-rose-400 hover:shadow-md transition group">
+          <div class="w-10 h-10 rounded-full bg-tjb-rose-50 flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           </div>
+          <h3 class="font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition text-sm">Free Birth Plan Template</h3>
+          <p class="text-xs text-tjb-gray mt-1">9 sections, fillable, no email needed</p>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="py-12 bg-tjb-cream text-center">
-    <h2 class="text-xl font-semibold mb-4">Walk Into Your Birth Feeling Prepared</h2>
-    <p class="text-tjb-gray mb-6 max-w-xl mx-auto">The free Joyful Birth Plan works for every {stateName} family — no matter which city you're in, which hospital you're delivering at, or whether you hire a doula. Start building yours now.</p>
-    <div class="flex flex-col sm:flex-row justify-center gap-3">
-      <a href="/birth-plan-template/" class="btn-primary">Get Your Free Joyful Birth Plan</a>
-      <a href="/birth-support/" class="btn-secondary">See All Cities →</a>
+  <!-- ═══════════════════════════════════════════════════════════
+       CTA
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-12 bg-white text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-2xl font-semibold mb-4">Don't see your {stateName} city?</h2>
+      <p class="text-tjb-gray mb-6">The free Joyful Birth Plan works anywhere in {stateName} — and we're adding new cities regularly. Download your plan and build it for your specific birth setting.</p>
+      <a href="/birth-plan-template/" class="inline-block bg-tjb-lavender-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 active:translate-y-0 transition">Get Your Free Joyful Birth Plan</a>
     </div>
   </section>
 </Layout>
