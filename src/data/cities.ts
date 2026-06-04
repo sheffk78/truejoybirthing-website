@@ -25,6 +25,7 @@ export interface LocalDoula {
   practice?: string;
   url?: string;          // Practice website
   isAmbassador?: boolean;
+  description?: string;
 }
 
 export interface CityData {
@@ -2180,9 +2181,9 @@ export const cities: Record<string, CityData> = {
       { name: "Mountain Midwifery Birth Center", url: "https://mountainmidwifery.com", paragraph: "Mountain Midwifery Birth Center, in Englewood just south of Denver, is a CABC-accredited freestanding birth center staffed by certified nurse-midwives. It's been serving Denver-area families for years and is the go-to birth center for families seeking an out-of-hospital birth in the metro. Mountain Midwifery also has a strong relationship with UCHealth for transfers, which matters if you're planning a birth center birth and want to know your backup hospital." },
     ],
     localDoulas: [
-      { name: "Melanie", practice: "Blissful Beginnings", url: "https://blissfulbeginnings.com", isAmbassador: false },
-      { name: "Krystal", practice: "Doulas of Denver", url: "https://doulasofdenver.com", isAmbassador: false },
-      { name: "Colorado Doula Project", url: "https://coloradodoulaproject.org", isAmbassador: false },
+      { name: "Melanie", practice: "Blissful Beginnings", url: "https://blissfulbeginnings.com", isAmbassador: false, description: "Supports families through every stage of birth with a calm, evidence-based approach." },
+      { name: "Krystal", practice: "Doulas of Denver", url: "https://doulasofdenver.com", isAmbassador: false, description: "Provides compassionate, personalized birth support with deep experience in Denver hospitals." },
+      { name: "Colorado Doula Project", url: "https://coloradodoulaproject.org", isAmbassador: false, description: "Community-based organization connecting families with volunteer and low-cost doula services across the Denver metro area." },
     ],
     medicaidNote: "Yes — Colorado Medicaid now covers doula services as of January 2024 under HB 23-1027, including Health First Colorado (the state's Medicaid program) managed care plans in Denver County. The reimbursement rate is $750 per birth for a full-spectrum doula package (prenatal, labor, and postpartum visits). Contact Health First Colorado at 1-800-221-3943 or visit healthfirstcolorado.com to confirm your plan's doula coverage and find participating doulas.",
     insuranceNote: "Yes — Colorado's Medicaid doula coverage (HB 23-1027, effective January 2024) is among the most progressive in the country — $750 per birth for full-spectrum doula services under Health First Colorado. For families with private insurance, Denver's employer market (DaVita, Liberty Global, Arrow Electronics, Quest Communications) increasingly includes maternal wellness benefits. Check your plan for doula coverage, and HSA/FSA funds can supplement out-of-pocket costs.",

@@ -22,6 +22,7 @@ interface Props {
     practice?: string;
     url?: string;
     isAmbassador?: boolean;
+    description?: string;
   }>;
   city: string;
 }
@@ -47,7 +48,7 @@ function getCityName(city: string) {
 {doulas.length > 0 ? (
   <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 not-prose">
     {doulas.map((d) => (
-      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50 flex flex-col items-center text-center hover:shadow-md hover:border-tjb-lavender-300 transition-shadow duration-200">
+      <div class="bg-tjb-cream rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50 flex flex-col items-center text-center hover:shadow-md hover:border-tjb-lavender-300 transition-shadow duration-200">
         {/* Circle monogram */}
         <div class="w-14 h-14 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-4">
           <span class="text-2xl font-semibold text-tjb-lavender-700" style="font-family: 'Cormorant Garamond', Georgia, serif;">{getInitial(d.name)}</span>
@@ -66,6 +67,11 @@ function getCityName(city: string) {
         {/* Practice */}
         {d.practice && (
           <p class="text-sm text-tjb-gray mb-3">{d.practice}</p>
+        )}
+
+        {/* Description */}
+        {d.description && (
+          <p class="text-sm text-tjb-gray mt-1">{d.description}</p>
         )}
 
         {/* Spacer */}

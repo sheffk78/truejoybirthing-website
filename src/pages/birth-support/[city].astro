@@ -340,13 +340,17 @@ const schema = {
     <div class="max-w-5xl mx-auto px-6">
       {localDoulas.length > 0 && (
         <h2 class="text-2xl font-semibold text-tjb-charcoal mb-6">Doulas & Midwives Serving {city}</h2>
+        <p class="text-tjb-gray leading-relaxed mb-8 max-w-2xl">These are the doulas and midwives serving {city}, {state} families right now — real people, real practices, and real options for your birth. Whether you want full labor support, a midwife-led birth, or just someone in your corner who knows the local hospitals, click through to learn more about each one.</p>
       )}
       <DoulaCardGrid doulas={localDoulas} city={city} />
       {localDoulas.length > 0 && (
-        <div class="mt-8 bg-tjb-cream/30 border border-tjb-lavender-100 rounded-xl p-6 text-center">
-          <p class="text-tjb-charcoal font-semibold text-lg mb-2">Looking for more options?</p>
-          <p class="text-tjb-gray mb-4">Use our free app to find and connect with doulas in {city}.</p>
-          <a href="/birth-plan-template/" class="btn-primary no-underline">Find a Doula in {city}</a>
+        <div class="mt-8 bg-tjb-cream/30 border border-tjb-lavender-100 rounded-xl p-6 flex flex-col md:flex-row gap-6 items-center">
+          <img src="/images/tjb-app-find-your-team.png" alt="True Joy Birthing app — find and connect with doulas in your area" class="w-full max-w-xs rounded-xl shadow-sm" loading="lazy" />
+          <div class="text-center md:text-left">
+            <p class="text-tjb-charcoal font-semibold text-lg mb-2">Looking for more options?</p>
+            <p class="text-tjb-gray mb-4">Use our free app to find and connect with doulas in {city}.</p>
+            <a href="/birth-plan-template/" class="btn-primary no-underline">Find a Doula in {city}</a>
+          </div>
         </div>
       )}
     </div>
