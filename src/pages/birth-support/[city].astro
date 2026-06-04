@@ -436,64 +436,106 @@ const schema = {
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       DOULA COSTS
+       DOULA COSTS — text + illustration
        ═══════════════════════════════════════════════════════════ -->
   <section class="py-16 bg-white">
-    <div class="max-w-3xl mx-auto px-6 prose">
-      <h2 class="flex items-center gap-2.5">
-        <!-- Dollar/cost icon -->
-        <svg class="w-6 h-6 text-tjb-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.403 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.403-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        How Much Does a Doula Cost in {city}?
-      </h2>
-      <p>In the {city} area, birth doula packages typically range from <strong>${costLow.toLocaleString()} to ${costHigh.toLocaleString()}</strong> — that usually includes prenatal visits, your birth, and postpartum follow-up. <a href="/doula-cost/">See our full doula cost breakdown</a> for what's included and what to ask about. If you're also thinking about support after baby arrives, <a href="/postpartum-doula/">learn what a postpartum doula does and how one can help</a>.</p>
-      <p>If that number feels steep, you're not alone — and there are options:</p>
-      <ul>
-        <li><strong>Medicaid:</strong> {medicaidNote.includes('does not') || medicaidNote.includes('does NOT') ? 'Unfortunately, your state does not yet cover doulas through Medicaid. Some community organizations and volunteer doula programs offer free or reduced-cost support — ask at your local WIC office or community health center.' : 'Good news — your state covers doula services through Medicaid. See the details below.'}</li>
-        <li><strong>HSA/FSA:</strong> Many families don't realize that doula services can often be paid for with HSA or FSA funds, since birth support qualifies as a medical expense under most plans. Check with your plan administrator.</li>
-        <li><strong>Sliding-scale doulas:</strong> Many {city} doulas offer payment plans, sliding-scale fees, or reduced packages. Don't be afraid to ask.</li>
-        <li><strong>Student doulas:</strong> Doulas in training often attend births at reduced rates. It's a great option if budget is tight.</li>
-      </ul>
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+        <div class="md:w-[58%] prose">
+          <h2 class="flex items-center gap-2.5">
+            <!-- Dollar/cost icon -->
+            <svg class="w-6 h-6 text-tjb-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.403 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.403-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            How Much Does a Doula Cost in {city}?
+          </h2>
+          <p>In the {city} area, birth doula packages typically range from <strong>${costLow.toLocaleString()} to ${costHigh.toLocaleString()}</strong> — that usually includes prenatal visits, your birth, and postpartum follow-up. <a href="/doula-cost/">See our full doula cost breakdown</a> for what's included and what to ask about. If you're also thinking about support after baby arrives, <a href="/postpartum-doula/">learn what a postpartum doula does and how one can help</a>.</p>
+          <p>If that number feels steep, you're not alone — and there are options:</p>
+          <ul>
+            <li><strong>Medicaid:</strong> {medicaidNote.includes('does not') || medicaidNote.includes('does NOT') ? 'Unfortunately, your state does not yet cover doulas through Medicaid. Some community organizations and volunteer doula programs offer free or reduced-cost support — ask at your local WIC office or community health center.' : 'Good news — your state covers doula services through Medicaid. See the details below.'}</li>
+            <li><strong>HSA/FSA:</strong> Many families don't realize that doula services can often be paid for with HSA or FSA funds, since birth support qualifies as a medical expense under most plans. Check with your plan administrator.</li>
+            <li><strong>Sliding-scale doulas:</strong> Many {city} doulas offer payment plans, sliding-scale fees, or reduced packages. Don't be afraid to ask.</li>
+            <li><strong>Student doulas:</strong> Doulas in training often attend births at reduced rates. It's a great option if budget is tight.</li>
+          </ul>
+        </div>
+        <div class="md:w-[42%] flex-shrink-0">
+          <img
+            src="/images/doula-holding-hands.webp"
+            alt="A doula providing emotional support during pregnancy — hands clasped together in a moment of trust and care"
+            class="w-full rounded-xl shadow-md"
+            width="1024"
+            height="1536"
+            loading="lazy"
+          />
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       MEDICAID & INSURANCE
+       MEDICAID & INSURANCE — text + illustration
        ═══════════════════════════════════════════════════════════ -->
   <section class="py-16 bg-tjb-cream">
-    <div class="max-w-3xl mx-auto px-6 prose">
-      <h2 class="flex items-center gap-2.5">
-        <!-- Insurance shield icon -->
-        <svg class="w-6 h-6 text-tjb-lavender-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-2.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-        Does Medicaid or Insurance Cover a Doula in {state}?
-      </h2>
-      <p>{medicaidNote}</p>
-      <p>{insuranceNote}</p>
-      <p>Not sure what to look for in a doula? <a href="/how-to-choose-a-doula/">Here's how to choose a doula</a> who fits your birth preferences, your personality, and your budget. For a full breakdown of which states cover doulas through Medicaid, see our <a href="/medicaid-doula-coverage/">Medicaid doula coverage guide</a>.</p>
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+        <div class="md:w-[58%] prose">
+          <h2 class="flex items-center gap-2.5">
+            <!-- Insurance shield icon -->
+            <svg class="w-6 h-6 text-tjb-lavender-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-2.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            Does Medicaid or Insurance Cover a Doula in {state}?
+          </h2>
+          <p>{medicaidNote}</p>
+          <p>{insuranceNote}</p>
+          <p>Not sure what to look for in a doula? <a href="/how-to-choose-a-doula/">Here's how to choose a doula</a> who fits your birth preferences, your personality, and your budget. For a full breakdown of which states cover doulas through Medicaid, see our <a href="/medicaid-doula-coverage/">Medicaid doula coverage guide</a>.</p>
+        </div>
+        <div class="md:w-[42%] flex-shrink-0">
+          <img
+            src="/images/hands-on-belly.jpg"
+            alt="A newborn baby moments after birth — the reason good coverage matters"
+            class="w-full rounded-xl shadow-md"
+            width="1024"
+            height="1536"
+            loading="lazy"
+          />
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       MIDWIFE SECTION
+       MIDWIFE SECTION — text + illustration
        ═══════════════════════════════════════════════════════════ -->
   <section class="py-16 bg-white">
-    <div class="max-w-3xl mx-auto px-6 prose">
-      <h2 class="flex items-center gap-2.5">
-        <!-- Heart-pulse midwife icon -->
-        <svg class="w-6 h-6 text-tjb-rose-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-        What About a Midwife in {city}?
-      </h2>
-      <p>If you're considering a midwife, you're in good company. More {city} moms are choosing midwifery care each year. Here's what to know:</p>
-      <p>Not sure whether you need a doula, a midwife, or both? <a href="/doula-vs-midwife/">Our doula vs. midwife guide</a> breaks it down clearly.</p>
-      <ul>
-        <li><strong>Certified Nurse-Midwives (CNMs)</strong> work in hospitals and birth centers and are covered by Medicaid in all 50 states.</li>
-        <li><strong>Midwives vs. OBs:</strong> Midwives spend more time with you — longer appointments, more conversation, less rushed. OBs are surgeons trained for complications. Both are valid choices for different situations.</li>
-        <li><strong>You can have both:</strong> Many {city} practices pair midwives and OBs so you get midwifery-style care with a doctor backing you up if needed.</li>
-        {birthCenterDetails.some((bc) => !bc.name.toLowerCase().includes('no ')) ? (
-          <li><strong>Birth centers:</strong> {city} has freestanding birth centers where midwives attend births in a home-like setting. See the details above.</li>
-        ) : (
-          <li><strong>No birth centers locally:</strong> {city} doesn't currently have a freestanding birth center, but midwifery care at local hospitals is still a great option.</li>
-        )}
-      </ul>
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+        <div class="md:w-[58%] prose">
+          <h2 class="flex items-center gap-2.5">
+            <!-- Heart-pulse midwife icon -->
+            <svg class="w-6 h-6 text-tjb-rose-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+            What About a Midwife in {city}?
+          </h2>
+          <p>If you're considering a midwife, you're in good company. More {city} moms are choosing midwifery care each year. Here's what to know:</p>
+          <p>Not sure whether you need a doula, a midwife, or both? <a href="/doula-vs-midwife/">Our doula vs. midwife guide</a> breaks it down clearly.</p>
+          <ul>
+            <li><strong>Certified Nurse-Midwives (CNMs)</strong> work in hospitals and birth centers and are covered by Medicaid in all 50 states.</li>
+            <li><strong>Midwives vs. OBs:</strong> Midwives spend more time with you — longer appointments, more conversation, less rushed. OBs are surgeons trained for complications. Both are valid choices for different situations.</li>
+            <li><strong>You can have both:</strong> Many {city} practices pair midwives and OBs so you get midwifery-style care with a doctor backing you up if needed.</li>
+            {birthCenterDetails.some((bc) => !bc.name.toLowerCase().includes('no ')) ? (
+              <li><strong>Birth centers:</strong> {city} has freestanding birth centers where midwives attend births in a home-like setting. See the details above.</li>
+            ) : (
+              <li><strong>No birth centers locally:</strong> {city} doesn't currently have a freestanding birth center, but midwifery care at local hospitals is still a great option.</li>
+            )}
+          </ul>
+        </div>
+        <div class="md:w-[42%] flex-shrink-0">
+          <img
+            src="/images/midwife-heartbeat.webp"
+            alt="A midwife listening to a baby's heartbeat during a prenatal visit, with a doula taking notes alongside"
+            class="w-full rounded-xl shadow-md"
+            width="1024"
+            height="683"
+            loading="lazy"
+          />
+        </div>
+      </div>
     </div>
   </section>
 
