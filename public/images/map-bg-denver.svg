@@ -1,66 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
-  <!-- Map-style background pattern for hospital section -->
-  <!-- Subtle street grid + blocks that evoke a city map feel -->
-  <!-- Used at ~55% opacity with cream overlay for readability -->
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <!-- Map-style background: subtle, ultra-light location feel -->
+  <!-- Color: very faint lavender-gray to match TJB brand -->
+  <rect width="600" height="600" fill="#FAF7F2"/>
   
-  <!-- Background fill -->
-  <rect width="400" height="400" fill="#f8f6fa"/>
+  <!-- Major roads (wider, slightly darker) -->
+  <line x1="0" y1="180" x2="600" y2="195" stroke="#E8E0EE" stroke-width="3"/>
+  <line x1="0" y1="380" x2="600" y2="370" stroke="#E8E0EE" stroke-width="3"/>
+  <line x1="200" y1="0" x2="190" y2="600" stroke="#E8E0EE" stroke-width="3"/>
+  <line x1="420" y1="0" x2="430" y2="600" stroke="#E8E0EE" stroke-width="3"/>
   
-  <!-- Major streets (horizontal) -->
-  <line x1="0" y1="60" x2="400" y2="60" stroke="#a08fba" stroke-width="1.5" stroke-opacity="0.25"/>
-  <line x1="0" y1="140" x2="400" y2="140" stroke="#a08fba" stroke-width="2" stroke-opacity="0.3"/>
-  <line x1="0" y1="220" x2="400" y2="220" stroke="#a08fba" stroke-width="1.5" stroke-opacity="0.25"/>
-  <line x1="0" y1="300" x2="400" y2="300" stroke="#a08fba" stroke-width="2" stroke-opacity="0.3"/>
-  <line x1="0" y1="370" x2="400" y2="370" stroke="#a08fba" stroke-width="1.5" stroke-opacity="0.2"/>
+  <!-- Diagonal highway/route -->
+  <line x1="0" y1="500" x2="600" y2="100" stroke="#E2D9EA" stroke-width="4"/>
   
-  <!-- Major streets (vertical) -->
-  <line x1="80" y1="0" x2="80" y2="400" stroke="#a08fba" stroke-width="2" stroke-opacity="0.3"/>
-  <line x1="180" y1="0" x2="180" y2="400" stroke="#a08fba" stroke-width="1.5" stroke-opacity="0.25"/>
-  <line x1="260" y1="0" x2="260" y2="400" stroke="#a08fba" stroke-width="2" stroke-opacity="0.3"/>
-  <line x1="350" y1="0" x2="350" y2="400" stroke="#a08fba" stroke-width="1.5" stroke-opacity="0.2"/>
+  <!-- River/waterway (organic curve, slightly blue-tinted) -->
+  <path d="M0,280 Q150,260 300,290 Q450,320 600,270" fill="none" stroke="#DDD8E8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M0,284 Q150,264 300,294 Q450,324 600,274" fill="none" stroke="#E5E0EE" stroke-width="4" stroke-linecap="round"/>
   
-  <!-- Minor streets (horizontal) -->
-  <line x1="0" y1="25" x2="400" y2="25" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
-  <line x1="0" y1="95" x2="400" y2="95" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
-  <line x1="0" y1="175" x2="400" y2="175" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
-  <line x1="0" y1="255" x2="400" y2="255" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
-  <line x1="0" y1="335" x2="400" y2="335" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
+  <!-- Secondary streets -->
+  <line x1="0" y1="90" x2="600" y2="85" stroke="#EDE7F2" stroke-width="1.5"/>
+  <line x1="0" y1="280" x2="600" y2="265" stroke="#EDE7F2" stroke-width="1.5"/>
+  <line x1="0" y1="460" x2="600" y2="470" stroke="#EDE7F2" stroke-width="1.5"/>
+  <line x1="0" y1="550" x2="600" y2="540" stroke="#EDE7F2" stroke-width="1.5"/>
+  <line x1="80" y1="0" x2="70" y2="600" stroke="#EDE7F2" stroke-width="1.5"/>
+  <line x1="300" y1="0" x2="310" y2="600" stroke="#EDE7F2" stroke-width="1.5"/>
+  <line x1="500" y1="0" x2="510" y2="600" stroke="#EDE7F2" stroke-width="1.5"/>
   
-  <!-- Minor streets (vertical) -->
-  <line x1="30" y1="0" x2="30" y2="400" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
-  <line x1="130" y1="0" x2="130" y2="400" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
-  <line x1="220" y1="0" x2="220" y2="400" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
-  <line x1="305" y1="0" x2="305" y2="400" stroke="#bfb2ce" stroke-width="0.7" stroke-opacity="0.15"/>
+  <!-- Minor streets (very faint) -->
+  <line x1="0" y1="45" x2="600" y2="42" stroke="#F0ECF4" stroke-width="1"/>
+  <line x1="0" y1="140" x2="600" y2="135" stroke="#F0ECF4" stroke-width="1"/>
+  <line x1="0" y1="230" x2="600" y2="225" stroke="#F0ECF4" stroke-width="1"/>
+  <line x1="0" y1="330" x2="600" y2="335" stroke="#F0ECF4" stroke-width="1"/>
+  <line x1="0" y1="420" x2="600" y2="415" stroke="#F0ECF4" stroke-width="1"/>
+  <line x1="0" y1="510" x2="600" y2="505" stroke="#F0ECF4" stroke-width="1"/>
+  <line x1="35" y1="0" x2="25" y2="600" stroke="#F0ECF4" stroke-width="1"/>
+  <line x1="140" y1="0" x2="130" y2="600" stroke="#F0ECF4" stroke-width="1"/>
+  <line x1="250" y1="0" x2="260" y2="600" stroke="#F0ECF4" stroke-width="1"/>
+  <line x1="360" y1="0" x2="350" y2="600" stroke="#F0ECF4" stroke-width="1"/>
+  <line x1="470" y1="0" x2="465" y2="600" stroke="#F0ECF4" stroke-width="1"/>
+  <line x1="550" y1="0" x2="560" y2="600" stroke="#F0ECF4" stroke-width="1"/>
   
-  <!-- City blocks (faint filled areas) -->
-  <rect x="85" y="65" width="40" height="30" rx="2" fill="#a08fba" fill-opacity="0.07"/>
-  <rect x="135" y="65" width="38" height="30" rx="2" fill="#a08fba" fill-opacity="0.07"/>
-  <rect x="185" y="65" width="68" height="30" rx="2" fill="#a08fba" fill-opacity="0.07"/>
+  <!-- Park areas (soft green blobs) -->
+  <ellipse cx="250" cy="200" rx="45" ry="35" fill="#E8EDE6" opacity="0.5"/>
+  <ellipse cx="450" cy="450" rx="55" ry="40" fill="#E8EDE6" opacity="0.4"/>
+  <ellipse cx="130" cy="480" rx="30" ry="25" fill="#E8EDE6" opacity="0.4"/>
   
-  <rect x="85" y="145" width="40" height="28" rx="2" fill="#a08fba" fill-opacity="0.07"/>
-  <rect x="135" y="145" width="38" height="28" rx="2" fill="#a08fba" fill-opacity="0.07"/>
-  <rect x="265" y="145" width="78" height="28" rx="2" fill="#a08fba" fill-opacity="0.07"/>
+  <!-- Intersection dots (small circles at major intersections) -->
+  <circle cx="200" cy="180" r="3" fill="#DDD6E8" opacity="0.7"/>
+  <circle cx="420" cy="195" r="3" fill="#DDD6E8" opacity="0.7"/>
+  <circle cx="200" cy="380" r="3" fill="#DDD6E8" opacity="0.7"/>
+  <circle cx="420" cy="370" r="3" fill="#DDD6E8" opacity="0.7"/>
+  <circle cx="300" cy="290" r="2" fill="#DDD6E8" opacity="0.5"/>
   
-  <rect x="85" y="225" width="90" height="28" rx="2" fill="#a08fba" fill-opacity="0.07"/>
-  <rect x="265" y="225" width="78" height="28" rx="2" fill="#a08fba" fill-opacity="0.07"/>
-  
-  <rect x="85" y="305" width="40" height="24" rx="2" fill="#a08fba" fill-opacity="0.07"/>
-  <rect x="185" y="305" width="68" height="24" rx="2" fill="#a08fba" fill-opacity="0.07"/>
-  
-  <!-- Diagonal "river" or highway -->
-  <path d="M 0 180 Q 100 200 200 190 Q 300 180 400 195" stroke="#8b7da0" stroke-width="3" stroke-opacity="0.1" fill="none"/>
-  
-  <!-- Green park area -->
-  <ellipse cx="220" cy="190" rx="35" ry="20" fill="#7eb88a" fill-opacity="0.06"/>
-  
-  <!-- Small intersection dots -->
-  <circle cx="80" cy="60" r="2" fill="#a08fba" fill-opacity="0.15"/>
-  <circle cx="180" cy="60" r="2" fill="#a08fba" fill-opacity="0.15"/>
-  <circle cx="260" cy="60" r="2" fill="#a08fba" fill-opacity="0.15"/>
-  <circle cx="80" cy="140" r="2.5" fill="#a08fba" fill-opacity="0.18"/>
-  <circle cx="260" cy="140" r="2.5" fill="#a08fba" fill-opacity="0.18"/>
-  <circle cx="80" cy="220" r="2" fill="#a08fba" fill-opacity="0.15"/>
-  <circle cx="180" cy="220" r="2" fill="#a08fba" fill-opacity="0.15"/>
-  <circle cx="80" cy="300" r="2.5" fill="#a08fba" fill-opacity="0.18"/>
-  <circle cx="260" cy="300" r="2.5" fill="#a08fba" fill-opacity="0.18"/>
+  <!-- Neighborhood labels (very faint, like a real map) -->
+  <text x="250" y="215" font-family="sans-serif" font-size="9" fill="#D5CCE0" opacity="0.5" font-weight="300">Capitol Hill</text>
+  <text x="430" y="465" font-family="sans-serif" font-size="9" fill="#D5CCE0" opacity="0.5" font-weight="300">Wash Park</text>
+  <text x="80" y="350" font-family="sans-serif" font-size="8" fill="#D5CCE0" opacity="0.4" font-weight="300">Highlands</text>
 </svg>
