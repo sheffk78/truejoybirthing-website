@@ -2687,7 +2687,9 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Natural Birth Center & Women's Wellness", paragraph: "The Natural Birth Center & Women's Wellness in Mesa is one of the few freestanding birth centers in the Phoenix metro area, offering midwifery-led birth, water birth, and holistic prenatal care." }
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Canyon Midwifery", credential: "CPM, LM", practice: "Canyon Midwifery", url: "https://www.canyonmidwiferyaz.com", isAmbassador: false },
+    ],
     medicaidNote: "No — Arizona does not currently cover doula services through its Medicaid program (AHCCCS) as of 2025. While advocacy efforts have pushed for doula reimbursement, AHCCCS has not yet implemented a doula benefit. Arizona families on Medicaid must pay out of pocket for doula support or seek volunteer/sliding-scale doulas.",
     insuranceNote: "No — Arizona private insurers are not required to cover doula services, though some plans offer partial reimbursement or flex-spending eligibility. Arizona does mandate coverage for licensed midwives and birth center births under certain plans, but coverage varies widely — verify with your insurer directly.",
     faqs: [
@@ -2718,7 +2720,9 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "The Birth Center of Chicago", url: "https://www.birthcenterofchicago.com", paragraph: "The Birth Center of Chicago is a freestanding birth center offering midwifery-led, low-intervention births in a home-like setting for families seeking an alternative to hospital delivery." }
     ],
-    localDoulas: [],
+    localDoulas: [
+      { name: "Birth Center of Chicago", credential: "birth center", practice: "Birth Center of Chicago", url: "https://birthcenterofchicago.com", isAmbassador: false },
+    ],
     medicaidNote: "Yes — Illinois Medicaid covers doula services starting January 2025 under SB334 (signed January 2024), reimbursing up to $1,500 per pregnancy for prenatal, labor, and postpartum support visits.",
     insuranceNote: "Yes — Illinois law requires Medicaid managed care plans to cover doula services. Private insurers vary — ask your plan if they reimburse doula care, and request a superbill from your doula for out-of-network submission.",
     faqs: [
