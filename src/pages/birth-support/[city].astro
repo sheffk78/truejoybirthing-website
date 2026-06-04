@@ -6,6 +6,8 @@
 import Layout from '../../layouts/Layout.astro';
 import CityLeadCaptureForm from '../../components/city/LeadCaptureForm.astro';
 import DoulaCardGrid from '../../components/city/DoulaCardGrid.astro';
+import DenverHero from '../../components/city/DenverHero.astro';
+import DefaultHero from '../../components/city/DefaultHero.astro';
 import { cities, citySlugs, type CityData } from '../../data/cities';
 
 export function getStaticPaths() {
@@ -27,14 +29,17 @@ const pageDesc = `Stressed about your ${city} birth plan? Get free hospital poli
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 // OG image: Pattern B for denver-co (first city), Pattern C fallback for others
 const ogImage = slug === 'denver-co'
-  ? 'https://truejoybirthing.com/images/og/og-denver-co.png'
+  ? 'https://truejoybirthing.com/images/denver-og-front-range.webp'
   : `https://truejoybirthing.com/images/og-city-${slug}.webp`;
 
-// Hero image — doula-breastfeeding is portrait (2:3), passes safety check
-// (correct cradle hold, proper latch alignment, no anatomical errors)
-// Warm, hospital-relevant, fills the hero column properly
-const heroImage = `/images/doula-breastfeeding.webp`;
-const heroAlt = `Mother with newborn in ${city}, ${state} — breastfeeding support and local doula care for expectant moms`;
+// Hero image — Denver gets a full-width landscape silhouette hero
+// Other cities use portrait doula-breastfeeding (passes safety check)
+const heroImage = slug === 'denver-co'
+  ? '/images/denver-hero-front-range.webp'
+  : '/images/doula-breastfeeding.webp';
+const heroAlt = slug === 'denver-co'
+  ? `Pregnant woman in silhouette with Colorado Front Range mountains through the window — birth support in Denver, Colorado`
+  : `Mother with newborn in ${city}, ${state} — breastfeeding support and local doula care for expectant moms`;
 
 // Support section image — doula-walking passes safety check (no anatomical errors)
 const supportImage = `/images/doula-walking.webp`;
@@ -147,51 +152,14 @@ const schema = {
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       HERO — Warm, local, emotionally clear
+       HERO — Denver: full-width silhouette hero with text overlay
+       Other cities: 55/45 split with portrait image
        ═══════════════════════════════════════════════════════════ -->
-  <section class="bg-tjb-cream">
-    <div class="max-w-7xl mx-auto">
-      <div class="flex flex-col md:flex-row">
-        <!-- Left: Text — 55% -->
-        <div class="md:w-[55%] px-6 md:px-12 py-16 md:py-20 flex flex-col justify-center">
-          <p class="eyebrow mb-3">Birth support in {city}, {state}</p>
-          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-          <h1 class="font-bold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(2.25rem, 5vw, 3.75rem);">
-            Your birth plan, your hospital, your team — all in {city}
-          </h1>
-          <p class="text-lg text-tjb-charcoal font-semibold mb-3">
-            You deserve to feel confident walking into your birth.
-          </p>
-          <p class="text-tjb-gray leading-relaxed mb-8 max-w-[36rem]">
-            Doulas, midwives, hospital policies, and costs — broken down so you can walk in prepared. This guide covers what {city} moms actually need to know, from whether Medicaid covers a doula to which hospitals welcome birth partners.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-3">
-            <a href="/birth-plan-template/" class="btn-primary">
-              Get Your Free Joyful Birth Plan
-            </a>
-            <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-secondary">
-              Or try the free app →
-            </a>
-          </div>
-          <p class="text-sm text-tjb-gray">Free template (no email) · Prefer the app? Build the same joyful birth plan step by step on your phone.</p>
-          {heroLocalDetail && (
-            <p class="text-sm text-tjb-gray mt-6 italic border-l-2 border-tjb-lavender-300 pl-4" set:html={heroLocalDetail} />
-          )}
-        </div>
-        <!-- Right: Image — 45% -->
-        <div class="md:w-[45%] flex items-center justify-center px-8 py-8 md:py-0">
-          <img
-            src={heroImage}
-            alt={heroAlt}
-            class="w-full max-w-md rounded-xl shadow-md"
-            width="1200"
-            height="800"
-            loading="eager"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
+  {slug === 'denver-co' ? (
+    <DenverHero city={city} state={state} heroLocalDetail={heroLocalDetail} />
+  ) : (
+    <DefaultHero city={city} state={state} heroLocalDetail={heroLocalDetail} heroImage={heroImage} heroAlt={heroAlt} />
+  )}
 
   <!-- ═══════════════════════════════════════════════════════════
        APP SHOWCASE — Two-phone overlap, CTA to download

@@ -1,0 +1,46 @@
+---
+interface Props {
+  city: string;
+  state: string;
+  heroLocalDetail?: string;
+}
+
+const { city, state, heroLocalDetail } = Astro.props;
+---
+
+<section class="relative bg-tjb-charcoal overflow-hidden">
+  <img
+    src="/images/denver-hero-front-range.webp"
+    alt={`Pregnant woman in silhouette with Colorado Front Range mountains through the window — birth support in ${city}, ${state}`}
+    class="absolute inset-0 w-full h-full object-cover"
+    width="1200"
+    height="675"
+    loading="eager"
+  />
+  <div class="absolute inset-0 bg-gradient-to-r from-tjb-charcoal/80 via-tjb-charcoal/50 to-transparent"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-28 min-h-[520px] md:min-h-[600px] flex flex-col justify-center">
+    <p class="eyebrow text-tjb-lavender-200 mb-3">Birth support in {city}, {state}</p>
+    <div class="w-10 h-0.5 bg-tjb-rose-400 mb-6"></div>
+    <h1 class="font-bold text-white leading-[1.15] mb-4" style="font-size: clamp(2.25rem, 5vw, 3.75rem);">
+      Your birth plan, your hospital, your team — all in {city}
+    </h1>
+    <p class="text-lg text-tjb-cream font-semibold mb-3">
+      You deserve to feel confident walking into your birth.
+    </p>
+    <p class="text-tjb-cream/80 leading-relaxed mb-8 max-w-[36rem]">
+      Doulas, midwives, hospital policies, and costs — broken down so you can walk in prepared. This guide covers what {city} moms actually need to know, from whether Medicaid covers a doula to which hospitals welcome birth partners.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-3">
+      <a href="/birth-plan-template/" class="btn-primary">
+        Get Your Free Joyful Birth Plan
+      </a>
+      <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-secondary border-tjb-cream/30 text-tjb-cream hover:bg-tjb-cream/10">
+        Or try the free app →
+      </a>
+    </div>
+    <p class="text-sm text-tjb-cream/60">Free template (no email) · Prefer the app? Build the same joyful birth plan step by step on your phone.</p>
+    {heroLocalDetail && (
+      <p class="text-sm text-tjb-cream/70 mt-6 italic border-l-2 border-tjb-lavender-300/50 pl-4" set:html={heroLocalDetail} />
+    )}
+  </div>
+</section>
