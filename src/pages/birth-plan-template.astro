@@ -54,7 +54,8 @@ const schema = {
         { "@type": "Question", "name": "Is this birth plan template really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The fillable PDF is completely free, no email, no upsell, no catch. You can also use the free app for a richer, updatable experience." } },
         { "@type": "Question", "name": "Can I edit the birth plan template?", "acceptedAnswer": { "@type": "Answer", "text": "The PDF is fillable, type directly into it or print it and fill it in by hand. For live updates, doula sharing, and a guided walkthrough, use the free True Joy Birthing app." } },
         { "@type": "Question", "name": "How is this different from a birth plan I find on Google?", "acceptedAnswer": { "@type": "Answer", "text": "Most free templates online are generic checklists. This one was built by a certified birth doula and organized around the decisions that actually come up in the delivery room, not just wish-list items." } },
-        { "@type": "Question", "name": "When should I fill out my birth plan?", "acceptedAnswer": { "@type": "Answer", "text": "Most families start around 28-32 weeks. Earlier is fine too. The sooner you understand your options, the more confident you'll feel when the time comes." } }
+        { "@type": "Question", "name": "When should I fill out my birth plan?", "acceptedAnswer": { "@type": "Answer", "text": "Most families start around 28-32 weeks. Earlier is fine too. The sooner you understand your options, the more confident you'll feel when the time comes." } },
+        { "@type": "Question", "name": "What's the difference between the PDF and the app?", "acceptedAnswer": { "@type": "Answer", "text": "The PDF is free, fillable, and designed for print — write in your preferences and bring hard copies to the hospital. The free app goes further: it walks you through each section with guided videos, lets you update your plan anytime, and shares your live plan with your doula or partner directly. Both cover the same five sections; the app is for families who want an interactive, always-current experience." } }
       ]
     }
   ]
@@ -97,8 +98,11 @@ const schema = {
             A <strong>birth plan template</strong> is a structured form that helps you write down your preferences for labor, pain management, delivery, and newborn care, so your medical team can read it at a glance. This one is built by a certified doula, not a generic hospital form. Download the fillable PDF free, or build your plan in the <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free app</a>.
           </p>
           <div>
-            <a href="#download" class="btn-primary">
-              Get the free PDF
+            <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-primary">
+              Build your birth plan in the app
+            </a>
+            <a href="#download" class="btn-secondary mt-3 inline-block">
+              Or download the free PDF →
             </a>
           </div>
         </div>
@@ -127,9 +131,78 @@ const schema = {
       <span class="hidden sm:inline text-tjb-rose-400 text-sm">·</span>
       <span class="text-sm text-tjb-gray-300 tracking-wide">Designed to be read in 30 seconds</span>
       <span class="hidden sm:inline text-tjb-rose-400 text-sm">·</span>
-      <span class="text-sm text-tjb-gray-300 tracking-wide">App Store · Google Play (coming soon)</span>
+      <span class="text-sm text-tjb-gray-300 tracking-wide">Guided walkthroughs in the app</span>
     </div>
   </div>
+
+  <!-- ═══════════════════════════════════════════
+       APP SHOWCASE — Free app with phone mockups
+       ═══════════════════════════════════════════ -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+
+        <!-- Left: Text — 55% -->
+        <div class="md:w-[55%]">
+          <p class="eyebrow mb-3">Free app</p>
+          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+          <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(1.75rem, 4vw, 2.75rem); font-family: 'Cormorant Garamond', Georgia, serif;">
+            Build your plan step by step
+          </h2>
+          <p class="text-tjb-gray text-lg leading-relaxed mb-6">
+            Nine guided sections. Hospital preferences, pain management, who's in the room, all walked through so nothing gets missed.
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-tjb-lavender-400 mt-2 flex-shrink-0"></span>
+              <span class="text-tjb-gray leading-relaxed">Walkthrough videos for each section</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-tjb-lavender-400 mt-2 flex-shrink-0"></span>
+              <span class="text-tjb-gray leading-relaxed">Update your plan anytime, not a static PDF</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-tjb-lavender-400 mt-2 flex-shrink-0"></span>
+              <span class="text-tjb-gray leading-relaxed">Share with your doula directly</span>
+            </li>
+          </ul>
+          <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180">
+            <img src="/images/app-store-badge.svg" alt="Download on the App Store" class="h-12" loading="lazy" />
+          </a>
+          <p class="text-sm text-tjb-gray mt-2">Free · No account needed</p>
+        </div>
+
+        <!-- Right: Phone mockups — 45% -->
+        <div class="md:w-[45%] flex justify-center">
+          <div class="relative w-full max-w-sm">
+            <!-- Back phone -->
+            <div class="absolute top-0 left-0 w-[75%] z-0">
+              <img
+                src="/images/tjb-app-dashboard.png"
+                alt="True Joy Birthing app dashboard showing birth plan sections"
+                class="w-full rounded-2xl shadow-lg"
+                width="390"
+                height="844"
+                loading="lazy"
+              />
+            </div>
+            <!-- Front phone — offset right and down -->
+            <div class="relative ml-[25%] mt-12 w-[75%] z-10">
+              <img
+                src="/images/tjb-app-birth-plan-builder.png"
+                alt="True Joy Birthing app birth plan builder showing guided preferences"
+                class="w-full rounded-2xl shadow-xl"
+                width="390"
+                height="844"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
   <!-- ═══════════════════════════════════════════
        WHAT'S INCLUDED — Editorial numbered list
@@ -271,26 +344,33 @@ const schema = {
        WHY THIS ONE — Editorial explainer
        ═══════════════════════════════════════════ -->
   <section class="bg-white py-16 md:py-20">
-    <div class="max-w-3xl mx-auto px-6">
-
-      <p class="eyebrow mb-4">Why this template</p>
-      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-      <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-6" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
-        Built for the delivery room, not a Pinterest board
-      </h2>
-      <p class="text-tjb-gray text-lg leading-relaxed mb-4">
-        Most free birth plan templates you find online are generic checklists, they ask if you want an epidural or not, if you want music or not, and leave it at that.
-      </p>
-      <p class="text-tjb-gray text-lg leading-relaxed mb-4">
-        This template was built by <strong>Shelbi Kohler</strong>, a certified birth doula who has sat in delivery rooms across Texas. It's organized around <em>the decisions that actually come up</em> when you're in labor, the ones your care team needs to see at a glance, not the ones that look nice on a Pinterest board.
-      </p>
-      <p class="text-tjb-gray text-lg leading-relaxed mb-4">
-        It's structured so a nurse can read it in 30 seconds. That matters. When you're 6 centimeters dilated and your nurse is covering for someone else's shift, your birth plan needs to speak for you immediately.
-      </p>
-      <p class="text-tjb-gray text-lg leading-relaxed">
-        And if your birth plan needs to account for a specific situation, like being induced, the template still works. <a href="/birth-plan-for-induction/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 transition">See how to fill it out for an induction</a>. For surgical deliveries, see <a href="/c-section-birth-plan/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 transition">what to include if you end up needing a C-section</a>.
-      </p>
-
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row gap-10 md:gap-12">
+        <!-- Left column — 58% -->
+        <div class="md:w-[58%]">
+          <p class="eyebrow mb-4">Why this template</p>
+          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+          <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-6" style="font-size: clamp(1.75rem, 4vw, 2.75rem); font-family: 'Cormorant Garamond', Georgia, serif;">
+            Built for the delivery room, not a Pinterest board
+          </h2>
+          <p class="text-tjb-gray text-lg leading-relaxed mb-4">
+            Most free birth plan templates you find online are generic checklists, they ask if you want an epidural or not, if you want music or not, and leave it at that.
+          </p>
+          <p class="text-tjb-gray text-lg leading-relaxed mb-4">
+            This template was built by <strong>Shelbi Kohler</strong>, a certified birth doula who has sat in delivery rooms across Texas. It's organized around <em>the decisions that actually come up</em> when you're in labor, the ones your care team needs to see at a glance, not the ones that look nice on a Pinterest board.
+          </p>
+          <p class="text-tjb-gray text-lg leading-relaxed mb-4">
+            It's structured so a nurse can read it in 30 seconds. That matters. When you're 6 centimeters dilated and your nurse is covering for someone else's shift, your birth plan needs to speak for you immediately.
+          </p>
+          <p class="text-tjb-gray text-lg leading-relaxed">
+            And if your birth plan needs to account for a specific situation, like being induced, the template still works. <a href="/birth-plan-for-induction/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 transition">See how to fill it out for an induction</a>. For surgical deliveries, see <a href="/c-section-birth-plan/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 transition">what to include if you end up needing a C-section</a>.
+          </p>
+        </div>
+        <!-- Right column — 42% -->
+        <div class="md:w-[42%] flex items-center">
+          <img src="/images/doula-walking.webp" alt="Birth doula walking with expectant mother in hospital hallway, preparing for labor and delivery" class="w-full rounded-xl" loading="lazy" width="1024" height="768" />
+        </div>
+      </div>
     </div>
   </section>
 
@@ -301,7 +381,16 @@ const schema = {
     <div class="max-w-3xl mx-auto px-6">
       <h2 class="font-semibold text-tjb-charcoal text-lg mb-4">Tailor your plan for your hospital</h2>
       <p class="text-tjb-gray mb-6">Birth plans work best when they're tailored to your actual care setting. Our city pages include local hospital details, doula costs, and what Medicaid covers:</p>
-      <ul class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2">
+
+      <h3 class="font-semibold text-tjb-charcoal text-sm mb-2">Colorado</h3>
+      <ul class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2 mb-4">
+        <li><a href="/birth-support/denver-co/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Denver</a></li>
+        <li><a href="/birth-support/colorado-springs-co/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Colorado Springs</a></li>
+      </ul>
+      <p class="mb-6"><a href="/birth-support/co/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 transition text-sm">See all Colorado cities →</a></p>
+
+      <h3 class="font-semibold text-tjb-charcoal text-sm mb-2">Texas</h3>
+      <ul class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2 mb-4">
         <li><a href="/birth-support/dallas-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Dallas</a></li>
         <li><a href="/birth-support/houston-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Houston</a></li>
         <li><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Austin</a></li>
@@ -309,7 +398,14 @@ const schema = {
         <li><a href="/birth-support/fort-worth-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Fort Worth</a></li>
         <li><a href="/birth-support/el-paso-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">El Paso</a></li>
       </ul>
-      <p class="mt-4"><a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 transition">See all 20 Texas cities →</a></p>
+      <p class="mb-6"><a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 transition text-sm">See all 20 Texas cities →</a></p>
+
+      <h3 class="font-semibold text-tjb-charcoal text-sm mb-2">More cities</h3>
+      <ul class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2">
+        <li><a href="/birth-support/phoenix-az/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Phoenix</a></li>
+        <li><a href="/birth-support/las-vegas-nv/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Las Vegas</a></li>
+        <li><a href="/birth-support/chicago-il/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Chicago</a></li>
+      </ul>
     </div>
   </section>
 
@@ -331,6 +427,31 @@ const schema = {
         Get the free app for the full walkthrough
       </a>
 
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CTA CARD — Get Your Free Joyful Birth Plan
+       ═══════════════════════════════════════════ -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="bg-tjb-lavender-50 border-2 border-tjb-lavender-200 p-6 md:p-8 rounded-xl text-center">
+        <img src="/images/responsive/birth-plan-booklet-1-480w.webp" alt="Joyful Birth Plan booklet preview showing structured cover page for labor, delivery, postpartum, and newborn care" class="w-full max-w-sm mx-auto rounded-lg mb-6" loading="lazy" width="480" height="267" />
+        <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(1.5rem, 3.5vw, 2.25rem);">
+          Get Your Free Joyful Birth Plan
+        </h2>
+        <p class="text-tjb-gray text-lg leading-relaxed mb-6 max-w-lg mx-auto">
+          The free Joyful Birth Plan covers every decision: labor preferences, pain management, who's in the room, what happens after delivery.
+        </p>
+        <div>
+          <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-primary">
+            Build your birth plan in the app
+          </a>
+          <a href="#download" class="btn-secondary mt-3 inline-block">
+            Download the free PDF →
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -359,6 +480,10 @@ const schema = {
         <div class="border-b border-tjb-lavender-300/40 pb-6">
           <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">How is this different from a birth plan I find on Google?</h3>
           <p class="text-tjb-gray leading-relaxed">Most free templates online are generic checklists. This one was built by a certified birth doula and organized around the decisions that actually come up in the delivery room, not just wish-list items.</p>
+        </div>
+        <div class="border-b border-tjb-lavender-300/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">What's the difference between the PDF and the app?</h3>
+          <p class="text-tjb-gray leading-relaxed">The PDF is free, fillable, and designed for print — write in your preferences and bring hard copies to the hospital. The free app goes further: it walks you through each section with guided videos, lets you update your plan anytime (not just before printing), and shares your live plan with your doula or partner directly. Both cover the same five sections; the app is for families who want an interactive, always-current experience.</p>
         </div>
         <div>
           <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">When should I fill out my birth plan?</h3>
