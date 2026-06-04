@@ -7,8 +7,11 @@
 //   city: string — used in the empty-state CTA
 //
 // Design: responsive grid (1 col mobile, 2 col md, 3 col lg)
-// Card: white bg, rounded-xl, subtle shadow, lavender border
-// Each card has a circle-initial monogram icon for warmth + personalization
+// Each card has:
+//   - Lavender-tinted header band with circle-initial monogram
+//   - Name, credential, practice
+//   - Warm "Visit website" CTA button
+//   - Ambassador badge when applicable
 
 interface Props {
   doulas: Array<{
@@ -24,19 +27,19 @@ interface Props {
 const { doulas, city } = Astro.props;
 
 // Extract first initial from name for monogram
-function getInitial(name) {
+function getInitial(name: string) {
   return name.charAt(0).toUpperCase();
 }
 ---
 
 {doulas.length > 0 ? (
-  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 not-prose">
+  <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 not-prose">
     {doulas.map((d) => (
-      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50 flex flex-col">
-        {/* Circle initial + Name + Ambassador badge */}
-        <div class="flex items-start gap-3 mb-2">
-          <div class="w-8 h-8 rounded-full bg-tjb-lavender-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-            <span class="text-sm font-semibold text-tjb-lavender-600" style="font-family: 'Cormorant Garamond', Georgia, serif;">{getInitial(d.name)}</span>
+      <div class="bg-white rounded-xl shadow-sm border border-tjb-lavender-200/50 overflow-hidden flex flex-col hover:shadow-md hover:border-tjb-lavender-300 transition-shadow duration-200">
+        {/* Card header — lavender tint with monogram */}
+        <div class="bg-tjb-lavender-50/60 px-5 pt-5 pb-4 flex items-center gap-3">
+          <div class="w-12 h-12 rounded-full bg-tjb-lavender-100 flex items-center justify-center flex-shrink-0">
+            <span class="text-xl font-semibold text-tjb-lavender-700" style="font-family: 'Cormorant Garamond', Georgia, serif;">{getInitial(d.name)}</span>
           </div>
           <div class="flex-1 min-w-0">
             <div class="flex items-center gap-2 flex-wrap">
@@ -44,38 +47,40 @@ function getInitial(name) {
                 {d.name}
               </h3>
               {d.isAmbassador && (
-                <span class="shrink-0 inline-flex items-center bg-tjb-lavender-100 text-tjb-lavender-700 text-xs font-medium px-2 py-0.5 rounded-full">
+                <span class="shrink-0 inline-flex items-center bg-tjb-lavender-100 text-tjb-lavender-700 text-xs font-medium px-2 py-0.5 rounded-full border border-tjb-lavender-200">
                   TJB Ambassador
                 </span>
               )}
             </div>
-            {/* Role / Credential */}
             {d.credential && (
-              <p class="text-sm text-tjb-gray mt-0.5">{d.credential}</p>
-            )}
-            {/* Practice */}
-            {d.practice && (
-              <p class="text-sm text-tjb-gray mt-0.5">{d.practice}</p>
+              <p class="text-sm text-tjb-lavender-600 font-medium mt-0.5">{d.credential}</p>
             )}
           </div>
         </div>
 
-        {/* Spacer pushes link to bottom */}
-        <div class="flex-1"></div>
+        {/* Card body */}
+        <div class="px-5 pt-3 pb-5 flex flex-col flex-1">
+          {d.practice && (
+            <p class="text-sm text-tjb-gray mb-3">{d.practice}</p>
+          )}
 
-        {/* Website link */}
-        {d.url ? (
-          <a
-            href={d.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-secondary mt-4 text-center text-sm"
-          >
-            Visit website
-          </a>
-        ) : (
-          <div class="mt-4"></div>
-        )}
+          {/* Spacer pushes link to bottom */}
+          <div class="flex-1"></div>
+
+          {/* Website link */}
+          {d.url ? (
+            <a
+              href={d.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary mt-3 text-center text-sm w-full"
+            >
+              Visit website
+            </a>
+          ) : (
+            <div class="mt-3"></div>
+          )}
+        </div>
       </div>
     ))}
   </div>

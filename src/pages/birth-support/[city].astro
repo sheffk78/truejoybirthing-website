@@ -332,9 +332,9 @@ const schema = {
        LOCAL DOULAS
        ═══════════════════════════════════════════════════════════ -->
   <section class="py-16 bg-white">
-    <div class="max-w-3xl mx-auto px-6 prose">
+    <div class="max-w-5xl mx-auto px-6">
       {localDoulas.length > 0 && (
-        <h2>Doulas & Midwives Serving {city}</h2>
+        <h2 class="text-2xl font-semibold text-tjb-charcoal mb-6">Doulas & Midwives Serving {city}</h2>
       )}
       <DoulaCardGrid doulas={localDoulas} city={city} />
     </div>
