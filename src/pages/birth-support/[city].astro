@@ -184,10 +184,10 @@ const schema = {
        ═══════════════════════════════════════════════════════════ -->
   <section class="py-20 bg-tjb-cream">
     <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-      <!-- Phones (centered on mobile, right-aligned on desktop) -->
-      <div class="relative flex justify-center md:justify-end order-1 md:order-1">
-        <!-- Background phone: Dashboard (offset) -->
-        <div class="absolute top-8 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-left-4 md:top-10 w-[55%] z-0">
+      <!-- Phones (visible overlap on all viewports) -->
+      <div class="relative order-1 md:order-1 flex justify-center">
+        <!-- Background phone: Dashboard (offset up-left to create visible diagonal overlap) -->
+        <div class="absolute top-4 left-4 md:top-6 md:left-6 w-[58%] z-0">
           <img
             src="/images/tjb-app-dashboard.png"
             alt="True Joy Birthing app dashboard showing birth plan progress and weekly pregnancy tips"
@@ -195,8 +195,8 @@ const schema = {
             loading="lazy"
           />
         </div>
-        <!-- Foreground phone: Birth Plan Builder -->
-        <div class="relative w-[60%] z-10">
+        <!-- Foreground phone: Birth Plan Builder (offset down-right) -->
+        <div class="relative w-[58%] mt-16 md:mt-20 ml-auto mr-4 md:ml-auto md:mr-8 z-10">
           <img
             src="/images/tjb-app-birth-plan-builder.png"
             alt="True Joy Birthing app birth plan builder — 9 guided sections, step-by-step birth preferences"
@@ -253,6 +253,10 @@ const schema = {
       <!-- Two-column: image + quick answers -->
       <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
         <div class="md:w-[45%] flex-shrink-0">
+          <div class="bg-tjb-cream p-5 rounded-lg mb-6">
+            <p class="font-semibold text-tjb-lavender-600 mb-1">Not sure what the difference is?</p>
+            <p class="text-sm text-tjb-gray">A <strong>midwife</strong> is your medical provider — she can deliver your baby, write prescriptions, and monitor your health. A <strong>doula</strong> is your support person — she keeps you comfortable, informed, and emotionally held, but doesn't do medical tasks. You can have both, and many {city} moms do. <a href="/what-is-a-doula/" class="text-tjb-lavender-600 hover:underline">Learn more about what a doula actually does →</a></p>
+          </div>
           <img
             src={supportImage}
             alt={supportImageAlt}
@@ -263,12 +267,6 @@ const schema = {
           />
         </div>
         <div class="md:w-[55%]">
-          <!-- Quick clarification -->
-          <div class="bg-tjb-cream p-5 rounded-lg mb-6">
-            <p class="font-semibold text-tjb-lavender-600 mb-1">Not sure what the difference is?</p>
-            <p class="text-sm text-tjb-gray">A <strong>midwife</strong> is your medical provider — she can deliver your baby, write prescriptions, and monitor your health. A <strong>doula</strong> is your support person — she keeps you comfortable, informed, and emotionally held, but doesn't do medical tasks. You can have both, and many {city} moms do. <a href="/what-is-a-doula/" class="text-tjb-lavender-600 hover:underline">Learn more about what a doula actually does →</a></p>
-          </div>
-
           <!-- Scannable highlights -->
           <div class="space-y-4">
             <div class="border-l-2 border-tjb-lavender-500 pl-4">
