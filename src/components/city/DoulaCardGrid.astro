@@ -7,11 +7,13 @@
 //   city: string — used in the empty-state CTA
 //
 // Design: responsive grid (1 col mobile, 2 col md, 3 col lg)
-// Each card has:
-//   - Lavender-tinted header band with circle-initial monogram
-//   - Name, credential, practice
-//   - Warm "Visit website" CTA button
-//   - Ambassador badge when applicable
+// Each card follows the centered monogram pattern:
+//   - Circle initial centered at top
+//   - Name in serif below
+//   - Credential/title in brand color
+//   - Practice name in gray
+//   - Pill badges for Ambassador + city
+//   - "Visit website" as primary button
 
 interface Props {
   doulas: Array<{
@@ -30,57 +32,68 @@ const { doulas, city } = Astro.props;
 function getInitial(name: string) {
   return name.charAt(0).toUpperCase();
 }
+
+// Derive display name (prefer first name only for monogram feel)
+function getFirstName(name: string) {
+  return name.split(' ')[0];
+}
+
+// City name without state abbreviation for the badge
+function getCityName(city: string) {
+  return city.split(',')[0].trim();
+}
 ---
 
 {doulas.length > 0 ? (
   <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 not-prose">
     {doulas.map((d) => (
-      <div class="bg-white rounded-xl shadow-sm border border-tjb-lavender-200/50 overflow-hidden flex flex-col hover:shadow-md hover:border-tjb-lavender-300 transition-shadow duration-200">
-        {/* Card header — lavender tint with monogram */}
-        <div class="bg-tjb-lavender-50/60 px-5 pt-5 pb-4 flex items-center gap-3">
-          <div class="w-12 h-12 rounded-full bg-tjb-lavender-100 flex items-center justify-center flex-shrink-0">
-            <span class="text-xl font-semibold text-tjb-lavender-700" style="font-family: 'Cormorant Garamond', Georgia, serif;">{getInitial(d.name)}</span>
-          </div>
-          <div class="flex-1 min-w-0">
-            <div class="flex items-center gap-2 flex-wrap">
-              <h3 class="text-lg font-semibold text-tjb-charcoal leading-tight">
-                {d.name}
-              </h3>
-              {d.isAmbassador && (
-                <span class="shrink-0 inline-flex items-center bg-tjb-lavender-100 text-tjb-lavender-700 text-xs font-medium px-2 py-0.5 rounded-full border border-tjb-lavender-200">
-                  TJB Ambassador
-                </span>
-              )}
-            </div>
-            {d.credential && (
-              <p class="text-sm text-tjb-lavender-600 font-medium mt-0.5">{d.credential}</p>
-            )}
-          </div>
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50 flex flex-col items-center text-center hover:shadow-md hover:border-tjb-lavender-300 transition-shadow duration-200">
+        {/* Circle monogram */}
+        <div class="w-14 h-14 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-4">
+          <span class="text-2xl font-semibold text-tjb-lavender-700" style="font-family: 'Cormorant Garamond', Georgia, serif;">{getInitial(d.name)}</span>
         </div>
 
-        {/* Card body */}
-        <div class="px-5 pt-3 pb-5 flex flex-col flex-1">
-          {d.practice && (
-            <p class="text-sm text-tjb-gray mb-3">{d.practice}</p>
-          )}
+        {/* Name */}
+        <h3 class="text-lg font-semibold text-tjb-charcoal leading-tight mb-1" style="font-family: 'Cormorant Garamond', Georgia, serif;">
+          {d.name}
+        </h3>
 
-          {/* Spacer pushes link to bottom */}
-          <div class="flex-1"></div>
+        {/* Credential */}
+        {d.credential && (
+          <p class="text-sm text-tjb-lavender-600 font-medium mb-2">{d.credential}</p>
+        )}
 
-          {/* Website link */}
-          {d.url ? (
-            <a
-              href={d.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-primary mt-3 text-center text-sm w-full"
-            >
-              Visit website
-            </a>
-          ) : (
-            <div class="mt-3"></div>
+        {/* Practice */}
+        {d.practice && (
+          <p class="text-sm text-tjb-gray mb-3">{d.practice}</p>
+        )}
+
+        {/* Spacer */}
+        <div class="flex-1"></div>
+
+        {/* Badges */}
+        <div class="flex flex-wrap justify-center gap-2 mt-3">
+          {d.isAmbassador && (
+            <span class="inline-flex items-center bg-tjb-lavender-100 text-tjb-lavender-700 text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-lavender-200">
+              Ambassador
+            </span>
           )}
+          <span class="inline-flex items-center bg-tjb-rose-50 text-tjb-rose-500 text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-rose-200">
+            {getCityName(city)}
+          </span>
         </div>
+
+        {/* Visit website button */}
+        {d.url && (
+          <a
+            href={d.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary mt-4 text-sm w-full"
+          >
+            Visit website
+          </a>
+        )}
       </div>
     ))}
   </div>

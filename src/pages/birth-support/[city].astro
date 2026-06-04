@@ -177,10 +177,10 @@ const schema = {
        ═══════════════════════════════════════════════════════════ -->
   <section class="py-16 bg-tjb-cream">
     <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
-      <!-- Phones (left on desktop, stacks above on mobile) -->
+      <!-- Phones (centered on mobile, right-aligned on desktop) -->
       <div class="relative flex justify-center md:justify-end order-1 md:order-1">
         <!-- Background phone: Dashboard (offset) -->
-        <div class="absolute top-8 -left-2 md:top-10 md:-left-4 w-[55%] z-0">
+        <div class="absolute top-8 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-left-4 md:top-10 w-[55%] z-0">
           <img
             src="/images/tjb-app-dashboard.png"
             alt="True Joy Birthing app dashboard showing birth plan progress and weekly pregnancy tips"
@@ -374,7 +374,7 @@ const schema = {
                   {h.url ? (
                     <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
                       <svg class="w-4.5 h-4.5 text-tjb-rose-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-                      <a href={h.url} target="_blank" rel="noopener noreferrer" class="text-tjb-lavender-600 hover:underline">{h.name} ↗</a>
+                      <a href={h.url} target="_blank" rel="noopener noreferrer" class="text-tjb-lavender-600 hover:underline">{h.name}</a>
                     </h3>
                   ) : (
                     <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
@@ -390,7 +390,7 @@ const schema = {
                 {h.url ? (
                   <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
                     <svg class="w-4.5 h-4.5 text-tjb-rose-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-                    <a href={h.url} target="_blank" rel="noopener noreferrer" class="text-tjb-lavender-600 hover:underline">{h.name} ↗</a>
+                    <a href={h.url} target="_blank" rel="noopener noreferrer" class="text-tjb-lavender-600 hover:underline">{h.name}</a>
                   </h3>
                 ) : (
                   <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
@@ -409,7 +409,7 @@ const schema = {
             {bc.url ? (
               <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
                 <svg class="w-4.5 h-4.5 text-tjb-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-                <a href={bc.url} target="_blank" rel="noopener noreferrer" class="text-tjb-lavender-600 hover:underline">{bc.name} ↗</a>
+                <a href={bc.url} target="_blank" rel="noopener noreferrer" class="text-tjb-lavender-600 hover:underline">{bc.name}</a>
               </h3>
             ) : (
               <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
