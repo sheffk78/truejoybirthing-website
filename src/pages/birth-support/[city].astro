@@ -26,7 +26,7 @@ const {
 }: CityData = data;
 
 const pageTitle = `${city} Birth Doula | Costs & Hospital Info | TJB`;
-const pageDesc = `Stressed about your ${city} birth plan? Get free hospital policy guides, doula costs, Medicaid coverage info, and a fillable birth plan template — no email required. Walk in prepared.`;
+const pageDesc = `Stressed about your ${city} birth plan? Get free hospital policy guides, doula costs, Medicaid coverage info, and a fillable birth plan template. Walk in prepared.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 // OG image: Pattern B for all city pages using per-city OG images
 const ogImage = `https://truejoybirthing.com/images/og-city-${slug}.webp`;
@@ -37,12 +37,12 @@ const heroImage = slug === 'denver-co'
   ? '/images/denver-hero-front-range.webp'
   : '/images/doula-breastfeeding.webp';
 const heroAlt = slug === 'denver-co'
-  ? `Pregnant woman in silhouette with Colorado Front Range mountains through the window — birth support in Denver, Colorado`
-  : `Mother with newborn in ${city}, ${state} — breastfeeding support and local doula care for expectant moms`;
+  ? `Denver birth support — pregnant woman with Colorado Front Range`
+  : `Birth support in ${city}, ${state} — local doula care for expectant moms`;
 
 // Support section image — doula-walking passes safety check (no anatomical errors)
 const supportImage = `/images/doula-walking.webp`;
-const supportImageAlt = `Birth doula walking with an expectant mom in ${city}, ${state} — companionship and emotional support during pregnancy`;
+const supportImageAlt = `Doula walking with expectant mom in ${city}, ${state}`;
 
 // Full state name lookup for breadcrumbs and schema
 const stateNames: Record<string, string> = {
@@ -322,7 +322,7 @@ const schema = {
        ═══════════════════════════════════════════════════════════ -->
   <section class="py-12 bg-tjb-cream">
     <div class="max-w-3xl mx-auto px-6 prose">
-      <h2>Can My Doula Come to the Hospital With Me in {city}?</h2>
+      <h2 class="font-bold text-tjb-charcoal" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">Can My Doula Come to the Hospital With Me in {city}?</h2>
       <p>This is one of the top questions {city} moms ask — and the answer matters. Most hospitals in the {city} area <strong>do allow doulas</strong>, and many have explicit policies supporting continuous doula support during labor. Post-COVID visitor restrictions have mostly lifted, and hospitals generally recognize that doulas are not visitors — they're part of your care team.</p>
       <p>That said, it's smart to <strong>call your hospital before labor starts</strong> and ask directly about their doula policy. Some questions to ask:</p>
       <ul>
@@ -456,7 +456,7 @@ const schema = {
     <div class="max-w-5xl mx-auto px-6">
       <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
         <div class="md:w-[58%] prose">
-          <h2 class="flex items-center gap-2.5">
+          <h2 class="flex items-center gap-2.5 font-bold text-tjb-charcoal" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">
             <!-- Dollar/cost icon -->
             <svg class="w-6 h-6 text-tjb-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.403 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.403-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             How Much Does a Doula Cost in {city}?
@@ -491,7 +491,7 @@ const schema = {
     <div class="max-w-5xl mx-auto px-6">
       <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
         <div class="md:w-[58%] prose">
-          <h2 class="flex items-center gap-2.5">
+          <h2 class="flex items-center gap-2.5 font-bold text-tjb-charcoal" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">
             <!-- Insurance shield icon -->
             <svg class="w-6 h-6 text-tjb-lavender-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-2.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
             Does Medicaid or Insurance Cover a Doula in {state}?
@@ -521,7 +521,7 @@ const schema = {
     <div class="max-w-5xl mx-auto px-6">
       <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
         <div class="md:w-[58%] prose">
-          <h2 class="flex items-center gap-2.5">
+          <h2 class="flex items-center gap-2.5 font-bold text-tjb-charcoal" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">
             <!-- Heart-pulse midwife icon -->
             <svg class="w-6 h-6 text-tjb-rose-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
             What About a Midwife in {city}?
@@ -596,7 +596,7 @@ const schema = {
             Try the Free App
           </a>
         </div>
-        <p class="text-xs text-tjb-gray">Free template (no email required) · Prefer the app? Build the same birth plan step by step on your phone.</p>
+        <p class="text-xs text-tjb-gray">Free template · Prefer the app? Build the same birth plan step by step on your phone.</p>
       </div>
     </div>
   </section>

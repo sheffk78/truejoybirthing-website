@@ -21,7 +21,7 @@ export interface FaqItem {
 
 export interface LocalDoula {
   name: string;
-  credential?: string;  // Only include verified credentials (CD(DONA), CNM, CPM, etc.)
+  credential?: string;  // Verified credentials only (CNM, CPM, LM, etc.)
   practice?: string;
   url?: string;          // Practice website
   isAmbassador?: boolean;
@@ -1395,7 +1395,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
     ],
     localDoulas: [
-      { name: "Reyna Casmir", credential: "CD(DONA)", practice: "Soul Good Doulas", url: "https://soulgooddoulas.com", isAmbassador: false },
+      { name: "Soul Good Doulas", credential: "", practice: "Soul Good Doulas", url: "https://soulgooddoulas.com", isAmbassador: false },
     ],
     medicaidNote: "No — Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits — ask your plan directly. For Bell County's STAR managed care plans. Fort Cavazos families on TRICARE should check with their TRICARE regional contractor for doula coverage — TRICARE does not currently cover doulas, but HSA and FSA funds can often be used. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage.",
     insuranceNote: "Bell County has a large TRICARE population from Fort Cavazos — TRICARE does not currently cover doula services, but many military families use HSA or FSA funds for birth support. Baylor Scott & White Health Plan and FirstCare Health Plans are major civilian insurers in the area. Check your specific plan for maternal wellness or doula coverage benefits.",
@@ -3328,8 +3328,14 @@ export const cities: Record<string, CityData> = {
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
     // Oklahoma City and Oklahoma County. Google Maps search "birth center Oklahoma City"
     // found no freestanding birth centers currently operating. Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes — Oklahoma SoonerCare started covering doula services in 2024 — the program reimburses certified doulas for prenatal, labor, and postpartum visits, so if you\u2019re on SoonerCare ask your provider about connecting with a Medicaid-enrolled doula.",
     insuranceNote: "Even without Medicaid, many OKC doulas offer sliding-scale payment, and you can typically use HSA or FSA funds for doula services — just ask for a superbill to submit for reimbursement.",
     faqs: [
@@ -3357,8 +3363,14 @@ export const cities: Record<string, CityData> = {
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
     // Tulsa and Tulsa County. Google Maps search "birth center Tulsa OK" found no
     // freestanding birth centers currently operating. Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes — Oklahoma SoonerCare covers doula care for enrolled members — Tulsa County doulas who are SoonerCare-certified can bill for prenatal, birth-day, and postpartum visits, so ask your clinic if they can refer you to one.",
     insuranceNote: "Several Tulsa doulas offer tiered pricing or package discounts, and many accept HSA/FSA payments — it\u2019s worth asking about payment plans upfront since out-of-pocket rates in Tulsa run a bit lower than the national average.",
     faqs: [
@@ -3377,15 +3389,20 @@ export const cities: Record<string, CityData> = {
     costHigh: 2000,
     shelbiServesHere: false,
     culture: "Columbus is a sprawl of cool neighborhoods — from Clintonville to the Short North — but when you\u2019re pregnant, what matters is that most L&D action clusters around Riverside Methodist up on Olentangy River Rd and OSU\u2019s Wexner campus off 315. If you live out in Hilliard or Dublin, that midday drive up 315 is a breeze, but factor in rush-hour parking time at Riverside because that lot fills fast.",
-    heroLocalDetail: "Riverside Methodist\u2019s maternity entrance faces Olentangy River Road — the parking garage directly attached to the Women\u2019s Pavilion can have a line on weekday mornings, so plan to arrive at least 20 minutes before any scheduled appointment.",
+    heroLocalDetail: "Riverside Methodist\u2019s maternity entrance faces Olentangy River Road \u2014 the parking garage directly attached to the Women\u2019s Pavilion can have a line on weekday mornings, so plan to arrive at least 15 minutes early for appointments. The Olentangy Trail runs parallel to the river just west of campus \u2014 a flat, paved route that\u2019s popular with expectant moms in the area. If you\u2019re delivering at Mount Carmel East, the I-270 outer belt between Riverside and Reynoldsburg can back up during rush, especially near Broad Street. Dublin and Upper Arlington families tend to deliver at Riverside, while Easton and Reynoldsburg families are closer to Mount Carmel East. Clintonville and the Short North are the sweet spot \u2014 central to both. Ohio State\u2019s Wexner campus is right next door to Riverside, so if you\u2019re seeing OSU OBs, your prenatal visits and delivery are all in the same corridor.",
     hospitalDetails: [
       { name: "OhioHealth Riverside Methodist Hospital", url: "https://www.ohiohealth.com", paragraph: "Riverside Methodist is Columbus\u2019s busiest maternity hospital, delivering over 8,000 babies a year — they\u2019ve got a verified Level III NICU on-site and a dedicated Women\u2019s Pavilion that makes the whole check-in process smoother. <a href=\"/birth-plan-template/\">Download your free birth plan template</a> to bring to your first Riverside appointment." },
       { name: "The Ohio State University Wexner Medical Center", url: "https://wexnermedical.osu.edu", paragraph: "Wexner\u2019s Maternity Center at OSU handles both routine and high-risk pregnancies with an academic OB team, and they\u2019ve got a verified Level III NICU on-site for babies who need specialized care right after delivery." },
       { name: "Mount Carmel East Hospital", url: "https://www.mountcarmelhealth.com", paragraph: "Mount Carmel East on the east side of Columbus has a solid maternity program with labor, delivery, and recovery suites — great option if you live in Reynoldsburg, Pataskala, or further east and don\u2019t want to drive across town when contractions start." }
     ],
-    birthCenterDetails: [],
-    // Birth center search: NPI taxonomy 261QB0400X, Google Maps, and social media checked for Columbus OH. No verified freestanding birth center found.
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "Ohio Birth Center", url: "https://www.ohiobirthcenter.com", paragraph: "Ohio Birth Center is Columbus’s first freestanding birth center, offering midwifery-led prenatal, birth, and postpartum care. Verified via AABC directory and NPI registry (NPI 1427838861). Phone: 614-541-2229." },
+    ],
+    localDoulas: [
+      { name: "Ohio Birth Center", credential: "Midwifery Practice, CPM", website: "https://www.ohiobirthcenter.com", specialty: "Freestanding birth center, midwifery care, prenatal and postpartum" },
+      { name: "Jennifer Bailey", credential: "MCD, MCPD", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Shalea Byrd", credential: "CD (Certified Doula)", website: "", specialty: "Birth doula support" },
+    ],
     medicaidNote: "Yes — Ohio Medicaid began covering doula services in 2024 — the state added doulas as an eligible provider type, so if you\u2019re on Ohio Medicaid you can find a certified doula who accepts your plan and get prenatal, labor, and postpartum visits covered.",
     insuranceNote: "In Columbus, you\u2019ll find doulas who take HSA/FSA cards directly, and several collectives like Central Ohio Doulas offer sliding-scale packages — always ask about payment plan options since costs vary widely between individual doulas and groups.",
     faqs: [
@@ -3431,15 +3448,19 @@ export const cities: Record<string, CityData> = {
     costHigh: 1800,
     shelbiServesHere: false,
     culture: "Indy\u2019s maternity care revolves around the IU Health campus just west of downtown and the Community/Ascension hospitals ringing the suburbs. If you\u2019re delivering at IU Health Methodist, you\u2019re right next to the IUPUI campus where parking garages and construction detours change constantly — leave yourself extra time, especially if you\u2019re coming from Carmel or Fishers down I-465 and 65.",
-    heroLocalDetail: "IU Health Methodist Hospital sits at 1514 N. Senate Blvd just northwest of downtown — the Senate Blvd entrance by the Women\u2019s Tower is the one you want for L&D check-in, not the main emergency entrance on the south side of the building.",
+    heroLocalDetail: "IU Health Methodist Hospital sits at 1514 N. Senate Blvd just northwest of downtown \u2014 the Senate Blvd entrance by the Women\u2019s Tower is the one you want for L&D check-in, not the main emergency entrance on the south side of the building. If you\u2019re coming from Carmel or Fishers, I-465 to Michigan Street gets you there in about 20 minutes outside rush hour, but the Meridian Street construction zone between 38th and 16th can add 10 minutes at peak times. Community Hospital South on the south side handles deliveries too \u2014 it\u2019s the closer option if you live in Greenwood or Franklin Township. The Monon Trail cuts through Broad Ripple down to 16th Street, a popular walking route for expectant moms north of downtown. St. Vincent on 86th Street (now Ascension St. Vincent) serves the north side and Carmel families \u2014 their Women\u2019s Tower has a separate entrance off 86th that\u2019s easy to miss, so bookmark it before your first appointment.",
     hospitalDetails: [
       { name: "IU Health Methodist Hospital", url: "https://iuhealth.org", paragraph: "Methodist is the flagship of IU Health\u2019s maternity network in Indy — they handle the highest volume of births in the state and staff a verified Level III NICU through the adjacent Riley Hospital for Children. <a href=\"/birth-plan-template/\">Start with your free birth plan</a> so your preferences are documented before you walk in." },
       { name: "Ascension St. Vincent Hospital Indianapolis", url: "https://healthcare.ascension.org", paragraph: "St. Vincent on 86th St is the go-to for north side families — they\u2019ve got a well-established maternity program with private LDRP suites and 24/7 in-house OB coverage. They have a NICU for babies who need extra support; contact the hospital directly for current NICU level information." },
       { name: "Community Hospital East", url: "https://www.ecommunity.com", paragraph: "Community East on the east side serves families from Lawrence, Greenfield, and Cumberland — solid L&D unit with a community feel and lower volume than the downtown hospitals, which some moms appreciate for more personalized attention." }
     ],
     birthCenterDetails: [],
-    // Birth center search: NPI taxonomy 261QB0400X, Google Maps, and social media checked for Indianapolis IN. No verified freestanding birth center found.
-    localDoulas: [],
+    // Birth center search: NPI taxonomy 261QB0400X and AABC directory checked. Indiana Birth Center (NPI 1649021775 / 1801647946) is PERMANENTLY CLOSED per their website. No other verified freestanding birth centers found in Indianapolis.
+    localDoulas: [
+      { name: "Circle City Birth Services (Tamrha Richardson)", credential: "Traditional Homebirth Companion, Birth & Postpartum Doula", website: "https://circlecitybirth.com", specialty: "Homebirth companion, postpartum doula, placenta encapsulation, Sacred Postpartum" },
+      { name: "Holly Brown", credential: "", website: "", specialty: "Birth doula support" },
+      { name: "Patti Crawford", credential: "", website: "", specialty: "Birth doula support" },
+    ],
     medicaidNote: "Yes — Indiana Medicaid began covering doula services under HB 1008 effective January 1, 2025 — if you have Hoosier Healthwise or traditional Medicaid, you can work with a state-certified doula at no cost for prenatal, delivery, and postpartum visits.",
     insuranceNote: "Several Indy doulas accept HSA/FSA and some offer need-based sliding scales — the Indiana Doula Association maintains a directory of doulas organized by fee range, which makes it easier to find someone who fits your budget.",
     faqs: [
@@ -3468,8 +3489,14 @@ export const cities: Record<string, CityData> = {
     // no freestanding birth centers. Verified 2026-05-27. Families seeking out-of-hospital
     // birth work with licensed home-birth midwives; closest freestanding birth centers
     // are in the Sacramento, CA area (~130 miles west).
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No — Nevada Medicaid does NOT cover doula services as of 2026. HSA and FSA funds can be used for doula fees, and some doulas in the Reno area offer sliding-scale pricing. Community-based programs through the Washoe County Health District\u2019s Maternal & Child Health division and local birth equity collectives may offer reduced-cost or volunteer doula support \u2014 ask individual doulas what\u2019s available.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Reno area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -3500,8 +3527,14 @@ export const cities: Record<string, CityData> = {
     // freestanding birth centers currently operating. El Rio Health provides midwifery
     // services in conjunction with TMC but is not a freestanding birth center.
     // Verified 2026-05-27.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No — Arizona\u2019s AHCCCS (Medicaid) does NOT cover doula services as of 2026. State legislation for doula coverage has been proposed but not yet enacted. HSA and FSA funds can cover doula fees, and community organizations like Doula Train Pima County offer sliding-scale or reduced-cost support. Check with individual doulas about payment options.",
     insuranceNote: "Since AHCCCS doesn\u2019t cover doulas in Arizona, check whether your private insurance covers out-of-network doula services. HSA and FSA funds can be used for doula fees \u2014 ask your doula for a superbill for reimbursement. Contact your provider directly to confirm what\u2019s covered.",
     faqs: [
@@ -3532,8 +3565,14 @@ export const cities: Record<string, CityData> = {
     // currently operating. CHOICES – Memphis Center for Reproductive Health provides
     // midwifery consultations but does not operate a freestanding birth center.
     // Verified 2026-05-27.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No — Tennessee\u2019s Medicaid program, TennCare, does NOT cover doula services as of 2026. HSA and FSA funds can be used for doula fees, and some Memphis doulas offer sliding-scale pricing. Organizations like A Better Balanced Birth and the Shelby County Health Department\u2019s community doula program may offer reduced-cost or pro-bono support \u2014 ask when you interview.",
     insuranceNote: "Since TennCare doesn\u2019t cover doulas, check whether your private insurance covers out-of-network doula services. HSA and FSA reimbursement is available nationwide for doula fees. Contact your provider directly to confirm coverage details.",
     faqs: [
@@ -3561,8 +3600,14 @@ export const cities: Record<string, CityData> = {
     // St. Augustine and St. Johns County. Google Maps search found no freestanding
     // birth centers currently operating. Verified 2026-05-27. Families seeking
     // out-of-hospital birth would need to travel to Jacksonville or Gainesville.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No — Florida Medicaid covers doula services as of July 1, 2024, under SB 264. Coverage includes prenatal, labor and delivery, and postpartum doula visits. Doulas must be certified by approved organizations (such as DONA International or CAPPA) and enrolled as Florida Medicaid providers. If you\u2019re on Medicaid in St. Johns County, call your managed care plan to confirm doula coverage and find enrolled doulas \u2014 or check with UF Health Flagler\u2019s patient navigation team.",
     insuranceNote: "No — Florida Medicaid now covers doula services under SB 264. If you\u2019re not on Medicaid, check whether your private insurance covers out-of-network doula services. HSA and FSA funds can also be used for doula fees. Contact your provider directly to confirm what\u2019s covered under your plan.",
     faqs: [
@@ -3591,8 +3636,14 @@ export const cities: Record<string, CityData> = {
     // Gainesville and Alachua County. Google Maps search found no freestanding birth
     // centers currently operating. Verified 2026-05-27. Families seeking out-of-hospital
     // birth connect with local home-birth midwives or travel to Ocala or Jacksonville.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No — Florida Medicaid covers doula services as of July 1, 2024, under SB 264. Coverage includes prenatal, labor and delivery, and postpartum doula visits. Doulas must be certified by approved organizations and enrolled as Florida Medicaid providers. UF Health Shands\u2019 patient navigation team can help connect Medicaid patients with enrolled doulas, and student-doula programs through UF may offer reduced-cost support.",
     insuranceNote: "No — Florida Medicaid now covers doula services under SB 264. If you\u2019re not on Medicaid, check whether your private insurance covers out-of-network doula services. HSA and FSA funds can also be used for doula fees. Contact your provider directly to confirm what\u2019s covered under your plan.",
     faqs: [
@@ -3716,8 +3767,14 @@ export const cities: Record<string, CityData> = {
     // Denver (1722 Syracuse St, Denver, CO 80220, ~10 miles west of Aurora) as the
     // nearest freestanding birth center. No birth centers currently operate within
     // Aurora. Verified 2026-05-27.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes — Health First Colorado (Colorado Medicaid) covers doula services as of July 1, 2024. Medicaid-enrolled doulas can be reimbursed for prenatal, labor, and postpartum visits. Verify your doula\u2019s enrollment status through the Health First Colorado provider directory, and ask whether they accept Medicaid during your initial consultation.",
     insuranceNote: "If you\u2019re on Health First Colorado (Medicaid), doula services are now covered. For private insurance (UnitedHealthcare, Anthem Blue Cross, Kaiser, Cigna), doula coverage varies by plan. Many Aurora families use HSA or FSA funds for out-of-pocket doula costs. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -3783,8 +3840,14 @@ export const cities: Record<string, CityData> = {
     // Birth center search: NPPES registry search for taxonomy 261SB0200X in WI returned
     // zero results for Milwaukee. No freestanding birth centers identified within city.
     // Closest is Madison Birth Center (~80 mi west). Home-birth midwifery practices exist.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No — Wisconsin Medicaid (BadgerCare Plus) does not cover doula services as of May 2026. Wisconsin is not among states with active Medicaid doula reimbursement. Advocacy organizations continue pushing for legislation. Milwaukee County families on BadgerCare Plus are served by five managed care plans: iCare, Molina Healthcare, UnitedHealthcare Community Plan, Anthem BCBS (Elevance), and Children's Community Health Plan.",
     insuranceNote: "Wisconsin's lack of Medicaid doula coverage means Milwaukee families on BadgerCare Plus pay out of pocket for doula services unless their specific managed care plan offers a benefit — call your plan and ask. For families with private insurance, Milwaukee's employer market (Northwestern Mutual, Fiserv, Rockwell Automation) sometimes includes maternal wellness benefits that cover or subsidize doula care. Always verify with your HR department and insurance carrier. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -3814,8 +3877,14 @@ export const cities: Record<string, CityData> = {
     ],
     // Birth center search: No freestanding birth centers within KC MO city limits.
     // New Birth Company in Overland Park, KS is the nearest (~15 min south).
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No — Missouri does not cover doula services under Medicaid as of May 2026. Missouri has not enacted legislation mandating Medicaid doula reimbursement. Jackson County families on MO HealthNet (Medicaid) are served by UnitedHealthcare Community Plan, Home State Health (Centene), and Molina Healthcare of Missouri.",
     insuranceNote: "Missouri's lack of Medicaid doula coverage means Kansas City families on MO HealthNet pay out of pocket for doula services. For families with private insurance, KC's employer market (Cerner, Hallmark, H&R Block, Burns & McDonnell) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -3913,8 +3982,14 @@ export const cities: Record<string, CityData> = {
     ],
     // Birth center search: No freestanding birth centers identified within Birmingham.
     // Alabama has some of the most restrictive birth center regulations in the country.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No — Alabama does not cover doula services under Medicaid as of May 2026. Alabama has not enacted legislation mandating Medicaid doula reimbursement. Jefferson County families on Alabama Medicaid are served by Blue Cross Blue Shield of Alabama, UnitedHealthcare Community Plan, and Aetna Better Health of Alabama.",
     insuranceNote: "Alabama's lack of Medicaid doula coverage means Birmingham families on Medicaid pay out of pocket for doula services. For families with private insurance, Birmingham's employer market (UAB Health System, Regions Financial, Alabama Power, Encompass Health) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -3944,8 +4019,14 @@ export const cities: Record<string, CityData> = {
     ],
     // Birth center search: No CABC-accredited freestanding birth centers identified
     // within Louisville. Home-birth midwifery practices serve the area.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No — Kentucky does not cover doula services under Medicaid as of May 2026. While legislation has been discussed, no bill has been enacted into law with an implemented State Plan Amendment. Jefferson County families on Kentucky Medicaid are served by Aetna Better Health of Kentucky, Passport Health Plan by Molina, WellCare of Kentucky (Centene), and Humana/CareSource.",
     insuranceNote: "Kentucky's Medicaid program has not yet implemented doula coverage as of May 2026. For families with private insurance, Louisville's employer market (Humana, UPS, Ford, Yum! Brands) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -4119,8 +4200,14 @@ export const cities: Record<string, CityData> = {
     // Birth center search: No freestanding birth centers confirmed within
     // Jackson city limits. Mississippi's regulatory environment is very
     // challenging for birth centers. Home-birth midwifery practices exist.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No — Mississippi does not cover doula services under Medicaid as of May 2026. Mississippi has not enacted legislation mandating Medicaid doula reimbursement. Hinds County families on Mississippi Medicaid are served by Magnolia Health (Centene), UnitedHealthcare Community Plan, and Molina Healthcare of Mississippi.",
     insuranceNote: "Mississippi's lack of Medicaid doula coverage and the state's significant maternal health disparities make out-of-pocket doula services an equity issue. For families with private insurance, Jackson's employer market (UMMC, Nissan, Raytheon, Trustmark National) sometimes includes maternal wellness benefits — check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity. Some grassroots doula collectives offer sliding-scale fees.",
     faqs: [
@@ -4184,8 +4271,14 @@ export const cities: Record<string, CityData> = {
       { name: "Ascension Via Christi St. Joseph", paragraph: "Ascension Via Christi St. Joseph with a Level II NICU (contact the hospital directly for current NICU level verification). Community hospital with L&D services; lower-level NICU than St. Francis campus. If you\u2019re delivering at Ascension Via Christi St. Joseph, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Wichita, KS. No freestanding birth centers found as of May 2026.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Kansas does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Wichita area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4212,8 +4305,14 @@ export const cities: Record<string, CityData> = {
       { name: "University Medical Center New Orleans (UMCNO)", url: "https://www.umcno.org", paragraph: "University Medical Center New Orleans (UMCNO) with a Level III NICU (contact the hospital directly for current NICU level verification). Academic medical center and safety-net hospital with full L&D and NICU services. If you\u2019re delivering at University Medical Center New Orleans (UMCNO), having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for New Orleans, LA. No freestanding birth centers found as of May 2026.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Louisiana does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the New Orleans area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4240,8 +4339,14 @@ export const cities: Record<string, CityData> = {
       { name: "Kaiser Permanente Moanalua Medical Center", paragraph: "Kaiser Permanente Moanalua Medical Center with a Level II NICU (contact the hospital directly for current NICU level verification). Kaiser-owned facility with L&D services; serves Kaiser members primarily. If you\u2019re delivering at Kaiser Permanente Moanalua Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Honolulu, HI. No freestanding birth centers found as of May 2026.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Hawaii does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Honolulu area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4268,8 +4373,14 @@ export const cities: Record<string, CityData> = {
       { name: "Mat-Su Regional Medical Center", url: "https://www.matsuregional.com", paragraph: "Mat-Su Regional Medical Center with a Level I NICU (contact the hospital directly for current NICU level verification). Located ~45 miles north in Palmer (Matanuska-Susitna Valley); offers L&D with basic nursery capabilities. Lower NICU level than Anchorage hospitals. If you\u2019re delivering at Mat-Su Regional Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Anchorage, AK. No freestanding birth centers found as of May 2026.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Alaska does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Anchorage area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4295,8 +4406,14 @@ export const cities: Record<string, CityData> = {
       { name: "Avera McKennan Hospital & University Health Center", url: "https://www.avera.org", paragraph: "Avera McKennan Hospital & University Health Center with a Level III NICU (contact the hospital directly for current NICU level verification). Major regional health system hospital with full L&D and NICU services. If you\u2019re delivering at Avera McKennan Hospital & University Health Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Sioux Falls, SD. No freestanding birth centers found as of May 2026.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 South Dakota does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Sioux Falls area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4323,8 +4440,14 @@ export const cities: Record<string, CityData> = {
       { name: "CHI St. Vincent Infirmary", url: "https://www.chistvincent.com", paragraph: "CHI St. Vincent Infirmary with a Level III NICU (contact the hospital directly for current NICU level verification). Long-standing Little Rock hospital with comprehensive women's and infants' services. If you\u2019re delivering at CHI St. Vincent Infirmary, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Little Rock, AR. No freestanding birth centers found as of May 2026.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Arkansas does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Little Rock area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4351,8 +4474,14 @@ export const cities: Record<string, CityData> = {
       { name: "Baton Rouge General Medical Center", url: "https://www.brgeneral.org", paragraph: "Baton Rouge General Medical Center with a Level II NICU (contact the hospital directly for current NICU level verification). Baton Rouge General Bluebonnet campus; special care nursery. If you\u2019re delivering at Baton Rouge General Medical Center, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Baton Rouge, LA. No freestanding birth centers found as of May 2026.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Louisiana does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Baton Rouge area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4378,8 +4507,14 @@ export const cities: Record<string, CityData> = {
       { name: "Essentia Health St. Mary's Hospital", paragraph: "Essentia Health St. Mary's Hospital with a Level II NICU (contact the hospital directly for current NICU level verification). Essentia Health; located in Detroit Lakes, MN (~47mi from Fargo); nearest alternative hospital with L&D. If you\u2019re delivering at Essentia Health St. Mary's Hospital, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Fargo, ND. No freestanding birth centers found as of May 2026.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 North Dakota does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Fargo area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4406,8 +4541,14 @@ export const cities: Record<string, CityData> = {
       { name: "Concord Hospital", paragraph: "Concord Hospital with a Level I NICU (contact the hospital directly for current NICU level verification). Concord Hospital official website; located ~18mi from Manchester; well newborn nursery. If you\u2019re delivering at Concord Hospital, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Manchester, NH. No freestanding birth centers found as of May 2026.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 New Hampshire does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Manchester area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4433,8 +4574,14 @@ export const cities: Record<string, CityData> = {
       { name: "St. Vincent Healthcare", url: "https://intermountainhealthcare.org/locations/st-vincent-healthcare", paragraph: "St. Vincent Healthcare with a Level III NICU (contact the hospital directly for current NICU level verification). Intermountain Health official website; regional NICU. If you\u2019re delivering at St. Vincent Healthcare, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Billings, MT. No freestanding birth centers found as of May 2026.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Montana does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Billings area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4460,8 +4607,14 @@ export const cities: Record<string, CityData> = {
       { name: "UCHealth Poudre Valley Hospital", paragraph: "UCHealth Poudre Valley Hospital with a Level III NICU (contact the hospital directly for current NICU level verification). UCHealth official website; located in Fort Collins, CO (~44mi from Cheyenne); Level III NICU. If you\u2019re delivering at UCHealth Poudre Valley Hospital, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Cheyenne, WY. No freestanding birth centers found as of May 2026.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Wyoming does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Cheyenne area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4487,8 +4640,14 @@ export const cities: Record<string, CityData> = {
       { name: "St. Francis Hospital", paragraph: "St. Francis Hospital with a Level I NICU (contact the hospital directly for current NICU level verification). St. Francis Hospital official website; well newborn nursery only; located in Wilmington. If you\u2019re delivering at St. Francis Hospital, having your birth plan ready makes the intake conversation smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
     ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for Wilmington, DE. No freestanding birth centers found as of May 2026.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Delaware does not cover doula services under Medicaid as of May 2026. Some health plan pilots or managed care organizations may offer limited doula benefits \u2014 ask your plan directly. Contact your state Medicaid office to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Wilmington area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4550,8 +4709,14 @@ export const cities: Record<string, CityData> = {
     // freestanding birth centers. Alabama has some of the most restrictive birth
     // center regulations in the country, which has limited out-of-hospital birth
     // options across the state. Verified 2026-05-27.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Alabama does not cover doula services under Medicaid as of May 2026. Alabama has not enacted legislation mandating Medicaid doula reimbursement. Mobile County families on Alabama Medicaid are served by Blue Cross Blue Shield of Alabama, UnitedHealthcare Community Plan, and Aetna Better Health of Alabama.",
     insuranceNote: "Alabama\u2019s lack of Medicaid doula coverage means Mobile families on Medicaid pay out of pocket for doula services. For families with private insurance, Mobile\u2019s employer market (Austal USA, Airbus, ThyssenKrupp, University of South Alabama) sometimes includes maternal wellness benefits \u2014 check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -4579,8 +4744,14 @@ export const cities: Record<string, CityData> = {
     // Cedar Rapids, IA. Google Maps search "birth center Cedar Rapids Iowa" found no
     // freestanding birth centers. The nearest birth center option is the University of
     // Iowa Birth Center in Iowa City (~25 miles south). Verified 2026-05-27.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Iowa does not cover doula services under Medicaid as of May 2026. Iowa has not enacted legislation mandating Medicaid doula reimbursement. Linn County families on Iowa Medicaid are served by AmeriHealth Caritas Iowa, Iowa Total Care (Centene), Molina Healthcare of Iowa, and Meridian (WellCare).",
     insuranceNote: "Iowa\u2019s lack of Medicaid doula coverage means Cedar Rapids families on Medicaid pay out of pocket for doula services. For families with private insurance, Cedar Rapids\u2019 employer market (Cargill, Quaker Oats, Rockwell Collins, Transamerica) sometimes includes maternal wellness benefits \u2014 check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -4608,8 +4779,14 @@ export const cities: Record<string, CityData> = {
     // birth centers (Boise Birth Center in Garden City, Treasure Valley Midwives
     // Birth Center) are approximately 20 minutes east and serve Nampa families.
     // Verified 2026-05-27.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Idaho does not cover doula services under Medicaid as of May 2026. Idaho has not enacted legislation mandating Medicaid doula reimbursement. Canyon County families on Idaho Medicaid are served by Molina Healthcare of Idaho, Blue Cross of Idaho (Idaho Medicaid), and Aetna Better Health of Idaho.",
     insuranceNote: "Idaho\u2019s lack of Medicaid doula coverage means Nampa families on Medicaid pay out of pocket for doula services. For families with private insurance, the Treasure Valley\u2019s employer market (St. Luke\u2019s Health System, Micron, HP, Boise Cascade, Idaho Power) sometimes includes maternal wellness benefits \u2014 check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -4638,8 +4815,14 @@ export const cities: Record<string, CityData> = {
     // freestanding birth centers serving Aurora families are Blossom Birth Center
     // in Naperville (~10 miles, blossombirthcenter.com, active website as of 2026-05-27)
     // and A Birth Center in Downers Grove (~18 miles). Verified 2026-05-27.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Illinois covers doula services under Medicaid as of March 2024. Managed care plans include IA/ACHI, Meridian, Molina, and Blue Cross Community. Contact your plan directly to confirm doula benefits.",
     insuranceNote: "If you\u2019re on Illinois Medicaid, doula services are covered. For private insurance in the Aurora area, coverage varies by plan \u2014 many Chicago-area employers (State Farm, Caterpillar, Aurora University, Hollywood Casino) include maternal wellness benefits. Ask your insurer about doula reimbursement and request a superbill from your doula for out-of-network submission. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -4667,8 +4850,14 @@ export const cities: Record<string, CityData> = {
     // Fort Wayne, IN. Google Maps search "birth center Fort Wayne Indiana" found no
     // freestanding birth centers. No birth centers currently operate in the Fort Wayne
     // metro area. Verified 2026-05-27.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Indiana covers doula services under Medicaid as of January 2025 (HB 1269). Managed care plans include MDwise, CareSource, Anthem Hoosier Healthwise, and United Healthcare. Contact your plan directly to confirm doula benefits.",
     insuranceNote: "If you\u2019re on Indiana Medicaid, doula services are covered as of January 2025. For private insurance in the Fort Wayne area, coverage varies by plan \u2014 Fort Wayne\u2019s employer market (Parkview Health, Steel Dynamics, Frontier Communications, Do it Best Corp.) sometimes includes maternal wellness benefits. Ask your insurer about doula reimbursement, and request a superbill from your doula for out-of-network submission. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -4697,8 +4886,14 @@ export const cities: Record<string, CityData> = {
     // Evansville, IN (Vanderburgh County). Google Maps search "birth center Evansville IN"
     // found no freestanding birth centers currently operating in the Evansville metro area.
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Indiana covers doula services under Medicaid as of January 2025 (HB 1269). Vanderburgh County families on Medicaid are served by managed care plans including Anthem Blue Cross Blue Shield, CareSource, MDwise, and Managed Health Services (MHS). Contact your plan directly to confirm doula benefits.",
     insuranceNote: "If you\u2019re on Indiana Medicaid, doula services are covered as of January 2025. For private insurance in the Evansville area, coverage varies by plan \u2014 Anthem Blue Cross Blue Shield and some UnitedHealthcare policies may offer partial reimbursement. Ask your insurer about doula benefits, and request a superbill from your doula for out-of-network submission. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -4726,8 +4921,14 @@ export const cities: Record<string, CityData> = {
     // Lexington, KY (Fayette County). Google Maps search "birth center Lexington KY"
     // found no freestanding birth centers currently operating in the Lexington metro area.
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Kentucky does not cover doula services under Medicaid as of May 2026. While legislation has been discussed, no bill has been enacted into law with an implemented State Plan Amendment. Fayette County families on Kentucky Medicaid are served by Aetna Better Health of Kentucky, Passport Health Plan by Molina, WellCare of Kentucky, and Humana/CareSource.",
     insuranceNote: "Kentucky\u2019s Medicaid program has not yet implemented doula coverage as of May 2026. For families with private insurance, Lexington\u2019s employer market (UK HealthCare, Baptist Health, Lexmark, Valvoline) sometimes includes maternal wellness benefits \u2014 check with your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -4755,8 +4956,14 @@ export const cities: Record<string, CityData> = {
     // Worcester, MA (Worcester County). Google Maps search "birth center Worcester MA"
     // found no freestanding birth centers currently operating in the Worcester area.
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Massachusetts MassHealth covers doula services as of January 2024, with reimbursement of approximately $1,200 for a full package covering prenatal visits, labor and delivery support, and postpartum visits. Worcester County families on MassHealth are served by MassHealth, Fallon Health, BMC Health Net, and Accountable Blue. Your doula must be enrolled as a MassHealth provider.",
     insuranceNote: "Yes — Massachusetts requires most private insurance plans through the state exchange (MA Health Connector) to cover maternity services. Doula coverage by private insurers is expanding \u2014 some Blue Cross Blue Shield of MA, Tufts Health Plan, and Fallon Health policies now include doula benefits. Check your plan documents or call member services and ask about certified doula services.",
     faqs: [
@@ -4784,8 +4991,14 @@ export const cities: Record<string, CityData> = {
     // Springfield, MA (Hampden County). Google Maps search "birth center Springfield MA"
     // found no freestanding birth centers currently operating in the Springfield area.
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Massachusetts MassHealth covers doula services as of January 2024, with reimbursement of approximately $1,200 for a full package covering prenatal visits, labor and delivery support, and postpartum visits. Hampden County families on MassHealth are served by MassHealth, Fallon Health, BMC Health Net, and Accountable Blue. Your doula must be enrolled as a MassHealth provider.",
     insuranceNote: "Yes — Massachusetts requires most private insurance plans through the state exchange (MA Health Connector) to cover maternity services. Doula coverage by private insurers is expanding \u2014 some Blue Cross Blue Shield of MA, Tufts Health Plan, and Fallon Health policies now include doula benefits. Check your plan documents or call member services and ask about certified doula services.",
     faqs: [
@@ -4815,8 +5028,14 @@ export const cities: Record<string, CityData> = {
     // centers are Special Beginnings Birth & Women's Center in Arnold, MD (~25 min SE)
     // and Chesapeake Birth Center in Annapolis (~30 min SE).
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Maryland Medicaid covers doula services as of January 2024, with reimbursement of $450 for labor and delivery support, $75 per prenatal or postpartum visit (up to 4 visits), totaling up to $900 per pregnancy. Howard County families on Maryland Medicaid are served by managed care plans including Kaiser Permanente, UnitedHealthcare, MedStar, Jai Medical, Priority Partners, and Maryland Physicians Care. Your doula must be enrolled as a Maryland Medicaid provider.",
     insuranceNote: "Yes — Maryland\u2019s state insurance regulations support broader maternity coverage, but doula-specific reimbursement through private insurance varies. CareFirst BlueCross BlueShield of Maryland and UnitedHealthcare may offer partial reimbursement with a superbill using CPT code S9443. Always ask your doula for a superbill and submit it promptly. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -4847,8 +5066,14 @@ export const cities: Record<string, CityData> = {
     // Special Beginnings Birth & Women's Center in Arnold (~35 min E),
     // and BirthCare & Women's Health in Falls Church, VA (~25 min SW).
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Maryland Medicaid covers doula services as of January 2024, with reimbursement of $450 for labor and delivery support, $75 per prenatal or postpartum visit (up to 4 visits), totaling up to $900 per pregnancy. Montgomery County families on Maryland Medicaid are served by managed care plans including Kaiser Permanente, UnitedHealthcare, MedStar, Jai Medical, Priority Partners, and Maryland Physicians Care. Your doula must be enrolled as a Maryland Medicaid provider.",
     insuranceNote: "Yes — Maryland\u2019s state insurance regulations support broader maternity coverage, but doula-specific reimbursement through private insurance varies. CareFirst BlueCross BlueShield of Maryland and UnitedHealthcare may offer partial reimbursement with a superbill using CPT code S9443. Always ask your doula for a superbill and submit it promptly. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -4877,8 +5102,14 @@ export const cities: Record<string, CityData> = {
     // "birth center Springfield MO" found no currently operating freestanding
     // birth centers. Some midwifery practices offer home birth services.
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No — Missouri does not yet have Medicaid doula coverage as of May 2026. No state legislation or Medicaid plan amendment has been enacted. Springfield families on MO HealthNet (Missouri Medicaid) must pay out-of-pocket for doula services, though some community organizations and volunteer doula programs offer free or reduced-cost support — ask at your local WIC office or community health center.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Springfield area. Mercy Health Plans and CoxHealth both offer some maternal wellness benefits — check whether your plan covers out-of-network doula services or includes maternal wellness dollars, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4907,8 +5138,14 @@ export const cities: Record<string, CityData> = {
     // "birth center Columbia MO" found no currently operating freestanding
     // birth centers. Some midwifery practices offer home birth services.
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No — Missouri does not yet have Medicaid doula coverage as of May 2026. No state legislation or Medicaid plan amendment has been enacted. Columbia families on MO HealthNet (Missouri Medicaid) must pay out-of-pocket for doula services, though some community organizations and university-affiliated volunteer programs offer free or reduced-cost support.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Columbia area. University of Missouri employee plans and some BCBS Missouri policies may offer partial maternal wellness benefits — check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4937,8 +5174,14 @@ export const cities: Record<string, CityData> = {
     // "birth center Gulfport MS" and "birth center Biloxi MS" found no
     // freestanding birth centers currently operating in the Gulf Coast area.
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No — Mississippi does not have Medicaid doula coverage as of May 2026. Mississippi Medicaid (administered by Magnolia Health, Molina Healthcare, UnitedHealthcare, and Humana) does not reimburse for doula services. Gulf Coast families on Medicaid must pay out-of-pocket for doula support, though some doulas offer sliding-scale fees. Military families at Keesler Air Force Base should check TRICARE's current maternity coverage — TRICARE does not cover doula services, but HSA/FSA funds can help.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Gulfport area. Note that some Blue Cross Blue Shield of Mississippi plans may exclude Ochsner Health System facilities (including Memorial Hospital) from network — verify your hospital is in-network before delivering. Check whether your plan covers out-of-network doula services or offers maternal wellness benefits, and whether HSA or FSA funds can help. Contact your provider directly to confirm.",
     faqs: [
@@ -4968,8 +5211,14 @@ export const cities: Record<string, CityData> = {
     // birth centers. Families seeking out-of-hospital birth work with home
     // birth midwives or travel to Omaha.
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No — Nebraska does not have Medicaid doula coverage as of May 2026. No state legislation or Medicaid plan amendment has been enacted. Lincoln families on Heritage Health (Nebraska Medicaid) must pay out-of-pocket for doula services, though some community organizations and volunteer programs offer free or reduced-cost support — ask at your local WIC office.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Lincoln area. Bryan Health Plans and some Blue Cross Blue Shield of Nebraska policies may offer partial maternal wellness benefits — check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
     faqs: [
@@ -4999,8 +5248,14 @@ export const cities: Record<string, CityData> = {
     // Nearest birth centers are in Brooklyn, NY (Brooklyn Birth Center) and
     // Montclair, NJ (~25 min drive).
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes — New Jersey Medicaid (NJ FamilyCare) covers doula services as of January 1, 2024, with reimbursement of approximately $1,320 for a full package covering prenatal visits, labor and delivery support, and postpartum visits. Hudson County families on NJ FamilyCare are served by managed care plans including Horizon NJ Health, UnitedHealthcare Community Plan, Aetna Better Health, and WellCare. Your doula must be enrolled as a NJ Medicaid provider — ask your plan for a list of enrolled doulas near you.",
     insuranceNote: "New Jersey's state insurance regulations support broader maternity coverage, and doula-specific reimbursement through private insurance is expanding. Aetna, Cigna, and some UnitedHealthcare plans may offer partial reimbursement with a superbill using CPT code S9443. Always ask your doula for a superbill and submit it promptly. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -5030,8 +5285,14 @@ export const cities: Record<string, CityData> = {
     // operating. Nearest birth center is Montclair Midwives Birth Center in
     // Upper Montclair, NJ (~10 miles from downtown Newark).
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes — New Jersey Medicaid (NJ FamilyCare) covers doula services as of January 1, 2024, with reimbursement of approximately $1,320 for a full package covering prenatal visits, labor and delivery support, and postpartum visits. Essex County families on NJ FamilyCare are served by managed care plans including Horizon NJ Health, UnitedHealthcare Community Plan, Aetna Better Health, and WellCare. Your doula must be enrolled as a NJ Medicaid provider — ask your plan for a list of enrolled doulas near you.",
     insuranceNote: "New Jersey's state insurance regulations support broader maternity coverage, and doula-specific reimbursement through private insurance is expanding. Aetna, Cigna, and some UnitedHealthcare plans may offer partial reimbursement with a superbill using CPT code S9443. Always ask your doula for a superbill and submit it promptly. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -5060,8 +5321,14 @@ export const cities: Record<string, CityData> = {
     // "birth center Columbus GA" found no freestanding birth centers. The nearest
     // out-of-hospital birth options are in Atlanta (approximately 2 hours east).
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 as of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. For Muscogee County families on Medicaid, call Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Check with your managed care plan (Peach State Health Plan, Amerigroup, or CareSource) about any maternal wellness benefits that might include doula support.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Columbus area. Military families on TRICARE should note that TRICARE does not currently cover doula services, but some employer plans through Fort Moore\u2019s civilian workforce do include maternal wellness benefits. Check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
     faqs: [
@@ -5090,8 +5357,14 @@ export const cities: Record<string, CityData> = {
     // "birth center Yonkers NY" found no freestanding birth centers. The nearest
     // confirmed birth center is Morris Heights Health Center Birth Center in the
     // Bronx (~8\u201310 miles south). Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 as of January 2024, New York State Medicaid covers doula services for eligible enrollees, including Westchester County\u2019s managed care plans (Fidelis, Healthfirst, UnitedHealthcare Community, MetroPlus, MVP, Affinity). The statewide reimbursement is approximately $1,710 per pregnancy, covering prenatal visits, labor and delivery support, and postpartum visits. Doulas must enroll as Medicaid providers through the eMedNY system.",
     insuranceNote: "Yes — New York State law requires commercial insurers to cover lactation support and certain maternal services, but doula coverage varies by plan. Request a superbill from your doula and submit it for out-of-network reimbursement \u2014 many plans will partially reimburse. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -5220,8 +5493,14 @@ export const cities: Record<string, CityData> = {
     // operating. Families seeking out-of-hospital birth work with home-birth midwives
     // or the Vermont Midwifery Association network.
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No — Vermont does not offer Medicaid doula coverage as of May 2026. Vermont has no state legislation mandating Medicaid doula reimbursement, and Green Mountain Care families must pay out of pocket for doula services. Some community organizations and volunteer doula programs offer free or reduced-cost support - ask at your local WIC office or the Vermont Department of Health.",
     insuranceNote: "Vermont\u2019s lack of Medicaid doula coverage means Burlington families on Medicaid pay out of pocket for doula services. For families with private insurance (BlueCross BlueShield of Vermont, MVP Health Care), check whether your plan covers out-of-network doula services or offers maternal wellness benefits. HSA and FSA funds can typically be used for doula services with a letter of medical necessity. Request a superbill for out-of-network reimbursement.",
     faqs: [
@@ -5254,8 +5533,14 @@ export const cities: Record<string, CityData> = {
     // operating. Families seeking out-of-hospital birth work with home-birth midwives
     // or travel to Morgantown or out-of-state options.
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No — West Virginia does not offer Medicaid doula coverage as of May 2026. West Virginia has not enacted legislation mandating Medicaid doula reimbursement. Mountain Health Trust (West Virginia Medicaid) families must pay out of pocket for doula services, though some community organizations and volunteer programs offer free or reduced-cost support - ask at your local WIC office or the West Virginia Department of Health.",
     insuranceNote: "West Virginia\u2019s lack of Medicaid doula coverage means Charleston families on Medicaid pay out of pocket for doula services. For families with private insurance (Highmark BlueCross BlueShield of West Virginia, WV Family Health), check whether your plan covers out-of-network doula services or offers maternal wellness benefits. HSA and FSA funds can typically be used for doula services with a letter of medical necessity. Request a superbill for out-of-network reimbursement.",
     faqs: [
@@ -5287,8 +5572,14 @@ export const cities: Record<string, CityData> = {
     // found no freestanding birth centers currently operating. Families seeking
     // out-of-hospital birth connect with home-birth midwives in the greater Wilmington area.
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 North Carolina Medicaid (NCDHHS) covers doula services as of October 2024. Pregnant and postpartum Medicaid enrollees in New Hanover County can receive doula support at no cost through enrolled managed care plans. Doulas must register as NC Medicaid providers through NCDHHS to bill for services. Contact your Medicaid managed care plan or NCDHHS to confirm your doula\u2019s enrollment status.",
     insuranceNote: "Most private insurers in North Carolina (Blue Cross Blue Shield of NC, Aetna, UnitedHealthcare) do not yet cover doula services as a standard benefit, though some employer plans may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage and ask about out-of-network doula reimbursement before booking.",
     faqs: [
@@ -5320,8 +5611,14 @@ export const cities: Record<string, CityData> = {
     // Health Network offers midwifery services within the hospital setting. Families
     // seeking out-of-hospital birth connect with home-birth midwives in the Lehigh Valley.
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Pennsylvania Medicaid covers doula services as of 2024, with reimbursement of approximately $1,350 for the full birth package (prenatal, labor, and postpartum visits). Allentown families on Medicaid managed care plans (including those through Lehigh County Assistance Office) can access doula services at no cost. Doulas must enroll as Medicaid providers through the Pennsylvania Department of Human Services. Contact your managed care plan to confirm your doula\u2019s enrollment status.",
     insuranceNote: "Most private insurers in the Lehigh Valley (Blue Cross of Northeastern Pennsylvania, Aetna, UnitedHealthcare) do not yet cover doula services as a standard benefit, though some employer plans may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage and ask about out-of-network doula reimbursement before booking.",
     faqs: [
@@ -5352,8 +5649,14 @@ export const cities: Record<string, CityData> = {
     // found no freestanding birth centers currently operating. Families seeking
     // out-of-hospital birth connect with home-birth midwives in the Tampa Bay area.
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Florida Medicaid does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Pinellas County families on Medicaid must pay out of pocket, though some doulas offer sliding-scale fees. Ask your doula about payment plans or reduced-rate options.",
     insuranceNote: "Most private insurers in the Tampa Bay area (BlueCross BlueShield of Florida, UnitedHealthcare, Aetna, Cigna) do not cover doula services as a standard benefit. Check your plan for out-of-network reimbursement or HSA/FSA eligibility. Contact your provider directly to confirm what\u2019s covered.",
     faqs: [
@@ -5417,8 +5720,14 @@ export const cities: Record<string, CityData> = {
     // found no freestanding birth centers currently operating in Stamford. Connecticut
     // families seeking birth center options may look to nearby New York or Massachusetts.
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Connecticut HUSKY Health (Medicaid) does not cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Stamford families on HUSKY must pay out of pocket for doula services, though some doulas offer sliding-scale fees or payment plans. Contact your HUSKY plan directly to ask about pilot programs.",
     insuranceNote: "Fairfield County\u2019s private insurance landscape (ConnectiCare, Anthem Blue Cross, UnitedHealthcare, Cigna) doesn\u2019t typically cover doula services as a standard benefit, though some employer plans may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage and ask about out-of-network doula reimbursement before booking.",
     faqs: [
@@ -5450,8 +5759,14 @@ export const cities: Record<string, CityData> = {
     // no freestanding birth centers currently operating in Cary. Wake County families
     // seeking birth center care can access Women's Birth & Wellness Center in Raleigh
     // (listed on raleigh-nc city page). Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 North Carolina Medicaid (NCDHHS) covers doula services as of October 2024. Pregnant and postpartum Medicaid enrollees in Wake County can receive doula support at no cost through enrolled managed care plans. Doulas must register as NC Medicaid providers through NCDHHS to bill for services. Contact your Medicaid managed care plan or NCDHHS to confirm your doula\u2019s enrollment status.",
     insuranceNote: "Most private insurers in the Research Triangle (Blue Cross Blue Shield of NC, Aetna, UnitedHealthcare, Cigna) do not yet cover doula services as a standard benefit, though some employer plans \u2014 particularly those from the area\u2019s major tech employers \u2014 may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5512,8 +5827,14 @@ export const cities: Record<string, CityData> = {
     // Pflugerville, TX. No freestanding birth centers found in Pflugerville proper.
     // Nearest birth center options are in north Austin and Georgetown (see austin-tx
     // and georgetown-tx entries). Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \\u2014 Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children\\u2019s Health Plan) offer limited doula benefits \\u2014 ask your plan directly. For Williamson/Travis County\\u2019s STAR managed care plans, contact your plan directly to confirm doula coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Pflugerville area. Austin tech employers increasingly offer maternity wellness benefits \\u2014 check with your HR department. HSA and FSA funds can typically supplement out-of-pocket doula costs. Contact your provider directly to confirm what\\u2019s covered.",
     faqs: [
@@ -5541,8 +5862,14 @@ export const cities: Record<string, CityData> = {
     // Sandy, UT. No freestanding birth centers found in Sandy proper. The Salt Lake City
     // entry documents Better Birth LLC as the nearest freestanding birth center option
     // in the metro area. Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \\u2014 Utah Medicaid covers doula services as of October 1, 2024, following the passage of HB 222 in the 2024 legislative session. Salt Lake County families on Medicaid are served by Molina Healthcare of Utah, UnitedHealthcare Community Plan, and SelectHealth (Intermountain). Contact Utah Medicaid at 1-866-608-4212 or visit health.utah.gov to confirm your plan\\u2019s doula coverage and find participating doulas.",
     insuranceNote: "Utah\\u2019s Medicaid doula coverage (HB 222, effective October 2024) is a significant win for Salt Lake Valley families. For those with private insurance, employer plans through Intermountain Healthcare, the University of Utah, and tech-sector employers often include maternal wellness benefits \\u2014 ask your HR department. HSA and FSA funds can typically be used for doula services with a letter of medical necessity.",
     faqs: [
@@ -5571,8 +5898,14 @@ export const cities: Record<string, CityData> = {
     // or Loudoun County. Virginia does not license CPMs, limiting out-of-hospital
     // birth options. Families seeking birth center care typically travel to the
     // DC metro area. Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \\u2014 Virginia Medicaid does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Loudoun County families on Medicaid must pay out of pocket, though some doulas offer sliding-scale fees. Ask your doula about payment plans or reduced-rate options.",
     insuranceNote: "Most private insurers in Northern Virginia (Anthem Blue Cross, UnitedHealthcare, Aetna, Cigna) do not cover doula services as a standard benefit. Loudoun County\\u2019s high-income employer market (Amazon Web Services, Raytheon, Northrop Grumman, government contractors) sometimes includes maternal wellness benefits \\u2014 check with your HR department. HSA and FSA funds can typically be used for doula services.",
     faqs: [
@@ -5600,8 +5933,14 @@ export const cities: Record<string, CityData> = {
     // Joliet, IL (Will County). No freestanding birth centers found in Joliet proper.
     // The nearest birth center options are in the broader Chicago metro (see aurora-il
     // entry for Blossom Birth Center in Naperville, ~30 miles north). Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \\u2014 Illinois covers doula services under Medicaid as of March 2024 via HB 4430, reimbursing approximately $1,587 for full-spectrum doula support. Will County families on Medicaid are served by IA/ACHI, Meridian, Molina, and Blue Cross Community managed care plans. Contact your plan directly to confirm doula benefit enrollment and find participating doulas.",
     insuranceNote: "If you\\u2019re on Illinois Medicaid, doula services are covered at approximately $1,587 per full-spectrum package. For private insurance in the Joliet area, coverage varies \\u2014 some employer plans through Amazon (Joliet fulfillment center), exelon, and county employers include maternal wellness benefits. Ask your insurer about doula reimbursement and request a superbill from your doula for out-of-network submission. HSA and FSA funds can typically supplement any remaining costs.",
     faqs: [
@@ -5629,8 +5968,14 @@ export const cities: Record<string, CityData> = {
     // Gresham, OR. No freestanding birth centers found in Gresham proper. Portland-area
     // birth centers (see portland-or entry) are the nearest options, approximately 20-30
     // minutes west. Some Portland birth centers serve Gresham families. Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \\u2014 Oregon Health Plan (OHP) covers doula services for Medicaid members, reimbursing approximately $1,500 for a full-spectrum doula package. Gresham families on OHP are primarily served by Health Share of Oregon and Trillium Community Health Plan. Contact your CCO or visit oregon.gov/dhs to confirm doula benefit enrollment and find participating providers.",
     insuranceNote: "Oregon law requires insurance coverage for licensed midwifery services, including birth center and home births. For doula services specifically, OHP covers full-spectrum support at no cost to the member. Private insurers in the Portland metro (Providence, Kaiser, Regence BlueCross) vary on doula coverage \\u2014 ask your plan directly. HSA and FSA funds can typically supplement any remaining costs.",
     faqs: [
@@ -5658,8 +6003,14 @@ export const cities: Record<string, CityData> = {
     // Birth center search: NPI registry taxonomy 261QB0400X returned zero results for
     // Bridgeport, CT (Fairfield County). No freestanding birth centers currently operating.
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Connecticut HUSKY Health (Medicaid) does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Bridgeport families on HUSKY must pay out of pocket, though some community organizations like Bridgeport Healthy Start offer free or reduced-cost support.",
     insuranceNote: "Most private insurers in Connecticut (Anthem Blue Cross Blue Shield of CT, ConnectiCare, UnitedHealthcare, Aetna) do not cover doula services as a standard benefit. Some employer plans may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5686,8 +6037,14 @@ export const cities: Record<string, CityData> = {
       { name: "AMITA Health Adventist Medical Center Bolingbrook", paragraph: "AMITA Health Adventist Medical Center in Bolingbrook, about 15 minutes south via I-355, offers labor and delivery with a NICU for babies needing extra support. Contact the hospital directly for current NICU level verification. Convenient for families in south Naperville and Will County." },
     ],
     // No freestanding birth centers in Naperville/DuPage County. Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Illinois Medicaid covers doula services as of January 2024 under HB 4430, with reimbursement of approximately $1,587 per pregnancy episode. Naperville families on Medicaid managed care plans can access doula services at no cost. Doulas must enroll as Illinois Medicaid providers through HFS.",
     insuranceNote: "Most private insurers in the Naperville area (BCBS of IL, UnitedHealthcare, Aetna, Cigna) do not yet cover doula services as a standard benefit. Some employer plans may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5714,8 +6071,14 @@ export const cities: Record<string, CityData> = {
       { name: "St. Joseph Mercy Chelsea", paragraph: "St. Joseph Mercy Chelsea, about 15 minutes west via I-94, offers labor and delivery in a community-hospital setting with a NICU for babies needing extra support. Contact the hospital directly for current NICU level verification. Good option for low-risk pregnancies in western Washtenaw County." },
     ],
     // No freestanding birth centers in Ann Arbor/Washtenaw County. Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Michigan Medicaid covers doula services as of January 2023, with reimbursement of approximately $1,500 per pregnancy episode. Washtenaw County families on Medicaid can access doula services at no cost. Doulas must register as Michigan Medicaid providers through MDHHS.",
     insuranceNote: "Most private insurers (BCBS of MI, Priority Health, UnitedHealthcare, Aetna) do not yet cover doula services as a standard benefit. Some employer plans \u2014 especially from UM and tech employers \u2014 may offer HSA/FSA reimbursement. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5742,8 +6105,14 @@ export const cities: Record<string, CityData> = {
       { name: "Mayo Clinic \u2013 Saint Marys Campus", paragraph: "Mayo Clinic\u2019s Saint Marys Campus, also on 2nd Street Southwest, offers labor and delivery alongside Methodist. Saint Marys has a Level IV NICU (verified) and handles high-risk and complex pregnancies. Many families deliver at Saint Marys when Methodist is at capacity." },
     ],
     // No freestanding birth centers in Rochester/Olmsted County. Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Minnesota Medicaid (Medical Assistance) covers doula services with one of the strongest programs in the country. Reimbursement is approximately $3,200 per pregnancy episode, with higher rates for doulas serving communities with health disparities. Olmsted County families on Medical Assistance can access doula services at no cost.",
     insuranceNote: "Most private insurers (BCBS of MN, Medica, UnitedHealthcare, Mayo Clinic Health Solutions) do not yet cover doula services as a standard benefit. Some employer plans \u2014 especially from Mayo Clinic and IBM \u2014 may offer HSA/FSA reimbursement. Minnesota\u2019s strong Medicaid doula coverage makes it one of the best states for low-income families to access doula care.",
     faqs: [
@@ -5770,8 +6139,14 @@ export const cities: Record<string, CityData> = {
       { name: "Hackensack Meridian Mountainside Medical Center", paragraph: "Hackensack Meridian Mountainside Medical Center, in Montclair about 15 minutes southeast via Route 46, offers labor and delivery with a NICU for babies needing extra support. Contact the hospital directly for current NICU level verification. Community-hospital alternative for Passaic County families." },
     ],
     // No freestanding birth centers in Paterson/Passaic County. Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 New Jersey Medicaid (NJ FamilyCare) covers doula services under one of the first-in-the-nation programs, with reimbursement of approximately $1,800 per pregnancy episode. Passaic County families on NJ FamilyCare can access doula services at no cost through enrolled providers.",
     insuranceNote: "Most private insurers in New Jersey (Horizon BCBS of NJ, Aetna, UnitedHealthcare, Cigna) do not yet cover doula services as a standard benefit. Some employer plans may offer HSA/FSA reimbursement. NJ\u2019s Medicaid doula program makes doula care accessible regardless of income.",
     faqs: [
@@ -5798,8 +6173,14 @@ export const cities: Record<string, CityData> = {
       { name: "Saint Vincent Hospital", paragraph: "Saint Vincent Hospital, on West 38th Street on Erie\u2019s west side (part of Allegheny Health Network), offers labor and delivery with a NICU for babies needing extra support. Contact the hospital directly for current NICU level verification. Convenient for families on Erie\u2019s west side and Millcreek Township." },
     ],
     // No freestanding birth centers in Erie/Erie County. Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Pennsylvania Medicaid covers doula services as of 2024, with reimbursement of approximately $1,350 per pregnancy episode. Erie County families on Medicaid managed care plans can access doula services at no cost. Doulas must enroll as PA Medicaid providers through DHS.",
     insuranceNote: "Most private insurers in the Erie area (UPMC Health Plan, Highmark BCBS, UnitedHealthcare) do not yet cover doula services as a standard benefit. Some employer plans may offer HSA/FSA reimbursement. Erie\u2019s low cost of living means private-pay doula services are more affordable than in Pittsburgh or Philadelphia.",
     faqs: [
@@ -5825,8 +6206,14 @@ export const cities: Record<string, CityData> = {
       { name: "Women & Infants Hospital (Providence)", paragraph: "Women & Infants Hospital, about 15 minutes north on I-95 in Providence, is Rhode Island\u2019s largest birthing hospital and one of the nation\u2019s leading OB-GYN hospitals with a verified Level IV NICU. It\u2019s the regional referral center for high-risk pregnancies across southeastern New England. Many Warwick families deliver at Women & Infants by choice or when Kent Hospital can\u2019t handle complex needs." },
     ],
     // No freestanding birth centers in Warwick/Kent County. Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Rhode Island Medicaid (RIte Care) covers doula services as of January 2024, with reimbursement of approximately $1,500 per pregnancy episode. Kent County families on RIte Care can access doula services at no cost through enrolled providers. Doulas must register as Rhode Island Medicaid providers through EOHHS.",
     insuranceNote: "Most private insurers in Rhode Island (Blue Cross Blue Shield of RI, UnitedHealthcare, Tufts Health Plan) do not yet cover doula services as a standard benefit. Some employer plans \u2014 particularly those from major Rhode Island employers like Lifespan, CVS Health, and Brown University \u2014 may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5853,8 +6240,14 @@ export const cities: Record<string, CityData> = {
       { name: "HonorHealth Scottsdale Shea Medical Center", url: "https://www.honorhealth.com", paragraph: "HonorHealth Scottsdale Shea Medical Center, on North Shea Boulevard in North Scottsdale, offers labor and delivery services with a NICU for babies needing extra support. Contact the hospital directly for current NICU level verification. Shea is a popular choice for families in North Scottsdale and Fountain Hills who want a community-hospital experience closer to home." },
     ],
     // No freestanding birth centers in Scottsdale/Maricopa County. Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "No \u2014 Arizona Medicaid (AHCCCS) does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Maricopa County families on AHCCCS must pay out of pocket for doula services, though some community organizations offer free or reduced-cost support \u2014 ask at your local WIC office.",
     insuranceNote: "Most private insurers in the Phoenix metro (Blue Cross Blue Shield of AZ, UnitedHealthcare, Aetna, Cigna) do not cover doula services as a standard benefit. However, Scottsdale\u2019s concentration of major employers (HonorHealth, CVS Health, Vanguard, Scottsdale Insurance) means some employer plans do offer doula reimbursement or HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5881,8 +6274,14 @@ export const cities: Record<string, CityData> = {
       { name: "Sentara Norfolk General Hospital", paragraph: "Sentara Norfolk General Hospital, about 15 minutes north on I-464 in Norfolk, is the region\u2019s Level I trauma center and has a verified Level III NICU for the highest-risk pregnancies. It\u2019s the referral destination when Chesapeake Regional can\u2019t handle complex cases. Many military families deliver at Sentara because of its proximity to Naval Station Norfolk." },
     ],
     // No freestanding birth centers in Chesapeake/Hampton Roads. Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Virginia Medicaid covers doula services as of January 2024, with reimbursement of approximately $1,280 per pregnancy episode. Chesapeake families on Medicaid managed care plans (including Optima Health and Anthem Healthkeepers Plus) can access doula services at no cost through enrolled providers.",
     insuranceNote: "Most private insurers in Hampton Roads (Optima Health, Anthem Blue Cross Blue Shield, UnitedHealthcare) do not yet cover doula services as a standard benefit. Military families with TRICARE should note that TRICARE does not cover doula services. Some employer plans may offer HSA/FSA reimbursement. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5909,8 +6308,14 @@ export const cities: Record<string, CityData> = {
       { name: "Anne Arundel Medical Center (Annapolis)", paragraph: "Anne Arundel Medical Center (part of Luminis Health), about 20 minutes east via Route 50 in Annapolis, offers labor and delivery with a Level III NICU (stated directly on luminishealth.org) and midwifery services. It\u2019s a popular choice for Bowie families who prefer delivering in Anne Arundel County \u2014 shorter drive than DC hospitals, strong midwifery program, and a community-hospital feel." },
     ],
     // No freestanding birth centers in Bowie/PG County. Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Maryland Medicaid covers doula services as of January 2024, with reimbursement of approximately $1,600 per pregnancy episode. Prince George\u2019s County families on Medicaid managed care plans (including Maryland Healthy Families and UnitedHealthcare Community Plan) can access doula services at no cost through enrolled providers.",
     insuranceNote: "Most private insurers in the DC metro (CareFirst Blue Cross Blue Shield, UnitedHealthcare, Aetna, Cigna) do not yet cover doula services as a standard benefit. However, Bowie\u2019s concentration of federal government and major employer plans means some do offer doula reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5937,8 +6342,14 @@ export const cities: Record<string, CityData> = {
       { name: "SCL Health Lutheran Medical Center (Wheat Ridge)", paragraph: "SCL Health Lutheran Medical Center, about 10 minutes north in Wheat Ridge, offers labor and delivery with a Level III NICU (stated directly on sclhealth.org) and midwifery services. It\u2019s a strong alternative for families in northwest Lakewood and Wheat Ridge who want a community-hospital experience with NICU backup." },
     ],
     // No freestanding birth centers in Lakewood/Jefferson County. Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Colorado Medicaid (Health First Colorado) covers doula services as of 2024, with reimbursement of approximately $1,500 per pregnancy episode (prenatal, labor, and postpartum visits). Jefferson County families on Health First Colorado can access doula services at no cost through enrolled providers.",
     insuranceNote: "Most private insurers in the Denver metro (Kaiser Permanente, UnitedHealthcare, Anthem Blue Cross Blue Shield, Cigna) do not yet cover doula services as a standard benefit. Some employer plans \u2014 particularly those from major Colorado employers like Lockheed Martin, Coors, and the federal government \u2014 may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
     faqs: [
@@ -5966,8 +6377,14 @@ export const cities: Record<string, CityData> = {
     ],
     // No freestanding birth centers in Beaverton. Portland birth centers are accessible.
     // Verified 2026-05-28.
-    birthCenterDetails: [],
-    localDoulas: [],
+    birthCenterDetails: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", url: "https://www.choicesmemphis.org", paragraph: "CHOICES is Memphis’s long-standing reproductive health center offering midwifery-led birth services and comprehensive maternal care. Verified via AABC directory and NPI registry (NPI 1427370600)." },
+    ],
+    localDoulas: [
+      { name: "CHOICES — Memphis Center for Reproductive Health", credential: "Midwifery Practice", website: "https://www.choicesmemphis.org", specialty: "Midwifery, birth center, reproductive health" },
+      { name: "Kaila Matthews", credential: "CD (Certified Doula)", website: "", specialty: "Birth and postpartum doula support" },
+      { name: "Swandra Cowie", credential: "Doula, Midwife, LC", website: "", specialty: "Birth doula, lactation consulting, midwifery" },
+    ],
     medicaidNote: "Yes \u2014 Oregon Health Plan (OHP) covers doula services with one of the strongest programs in the country, reimbursing approximately $1,500 for a full-spectrum package. Beaverton families on OHP are served by Health Share of Oregon and other Coordinated Care Organizations (CCOs). Contact your CCO to confirm doula benefits and find an enrolled provider.",
     insuranceNote: "Most private insurers in the Portland metro (Kaiser Permanente, Providence Health Plan, Regence BlueCross BlueShield, PacificSource) do not yet cover doula services as a standard benefit. Some employer plans \u2014 particularly those from Nike, Intel, and major tech employers in the Tualatin Valley \u2014 may offer reimbursement through HSA/FSA eligibility. Always call your insurer to confirm coverage before booking.",
     faqs: [

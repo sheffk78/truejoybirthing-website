@@ -109,7 +109,7 @@ h3 {
 }
 
 .prose a {
-  color: var(--color-tjb-rose-500);
+  color: var(--color-tjb-rose-600);
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color 0.2s ease;
