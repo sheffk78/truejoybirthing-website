@@ -23,7 +23,7 @@ const {
 }: CityData = data;
 
 const pageTitle = `${city} Birth Doula | Costs & Hospital Info | TJB`;
-const pageDesc = `Doula costs, hospital policies, and Medicaid coverage in ${city}, ${state}. Plus a free Joyful Birth Plan template to walk in prepared.`;
+const pageDesc = `Stressed about your ${city} birth plan? Get free hospital policy guides, doula costs, Medicaid coverage info, and a fillable birth plan template — no email required. Walk in prepared.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 // OG image: Pattern B for denver-co (first city), Pattern C fallback for others
 const ogImage = slug === 'denver-co'
@@ -125,6 +125,28 @@ const schema = {
   schema={schema}
 >
   <!-- ═══════════════════════════════════════════════════════════
+       BREADCRUMB — now at the top of the page, before the hero
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="bg-tjb-cream pt-6">
+    <div class="max-w-7xl mx-auto px-6">
+      <nav aria-label="Breadcrumb" class="text-sm text-tjb-gray">
+        <ol class="flex items-center gap-1.5 flex-wrap">
+          {breadcrumbList.map((crumb, i) => (
+            <li class="flex items-center gap-1.5">
+              {i > 0 && <span aria-hidden="true" class="text-tjb-lavender-300">›</span>}
+              {i < breadcrumbList.length - 1 ? (
+                <a href={crumb.url} class="text-tjb-lavender-600 hover:underline">{crumb.name}</a>
+              ) : (
+                <span class="text-tjb-charcoal font-medium" aria-current="page">{crumb.name}</span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
        HERO — Warm, local, emotionally clear
        ═══════════════════════════════════════════════════════════ -->
   <section class="bg-tjb-cream">
@@ -138,10 +160,10 @@ const schema = {
             Your birth plan, your hospital, your team — all in {city}
           </h1>
           <p class="text-lg text-tjb-charcoal font-semibold mb-3">
-            Doulas, midwives, hospital policies, and costs — broken down so you can walk in prepared.
+            You deserve to feel confident walking into your birth.
           </p>
           <p class="text-tjb-gray leading-relaxed mb-8 max-w-[36rem]">
-            Whether you're wondering if a doula is worth it, whether your hospital will let one in, or how you'll afford it — you're in the right place. This guide covers what {city} moms actually need to know.
+            Doulas, midwives, hospital policies, and costs — broken down so you can walk in prepared. This guide covers what {city} moms actually need to know, from whether Medicaid covers a doula to which hospitals welcome birth partners.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-3">
             <a href="/birth-plan-template/" class="btn-primary">
@@ -175,7 +197,7 @@ const schema = {
        APP SHOWCASE — Two-phone overlap, CTA to download
        NOW PLACED RIGHT AFTER HERO FOR EARLY VISIBILITY
        ═══════════════════════════════════════════════════════════ -->
-  <section class="py-16 bg-tjb-cream">
+  <section class="py-20 bg-tjb-cream">
     <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
       <!-- Phones (centered on mobile, right-aligned on desktop) -->
       <div class="relative flex justify-center md:justify-end order-1 md:order-1">
@@ -234,31 +256,9 @@ const schema = {
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
-       BREADCRUMB
-       ═══════════════════════════════════════════════════════════ -->
-  <section class="bg-white pt-8">
-    <div class="max-w-3xl mx-auto px-6">
-      <nav aria-label="Breadcrumb" class="text-sm text-tjb-gray">
-        <ol class="flex items-center gap-1.5 flex-wrap">
-          {breadcrumbList.map((crumb, i) => (
-            <li class="flex items-center gap-1.5">
-              {i > 0 && <span aria-hidden="true" class="text-tjb-lavender-300">›</span>}
-              {i < breadcrumbList.length - 1 ? (
-                <a href={crumb.url} class="text-tjb-lavender-600 hover:underline">{crumb.name}</a>
-              ) : (
-                <span class="text-tjb-charcoal font-medium" aria-current="page">{crumb.name}</span>
-              )}
-            </li>
-          ))}
-        </ol>
-      </nav>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════════════════
        WHAT BIRTH SUPPORT LOOKS LIKE — Two-column story
        ═══════════════════════════════════════════════════════════ -->
-  <section class="py-16 bg-white">
+  <section class="py-20 bg-white">
     <div class="max-w-5xl mx-auto px-6">
       <p class="eyebrow mb-3">How it works</p>
       <div class="w-10 h-0.5 bg-tjb-rose-500 mb-8"></div>
@@ -311,9 +311,31 @@ const schema = {
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
+       TESTIMONIALS — Social proof from real moms
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-6 not-prose">
+        <div class="bg-tjb-cream/40 border border-tjb-lavender-100 rounded-xl p-6">
+          <p class="text-tjb-charcoal text-[0.9375rem] leading-relaxed mb-4">"I walked into UCHealth feeling actually prepared for the first time. The birth plan helped me think through things I wouldn't have considered on my own."</p>
+          <p class="text-sm text-tjb-lavender-600 font-medium">— Maria R., Denver mom</p>
+        </div>
+        <div class="bg-tjb-cream/40 border border-tjb-lavender-100 rounded-xl p-6">
+          <p class="text-tjb-charcoal text-[0.9375rem] leading-relaxed mb-4">"Having everything written down — and knowing my hospital's doula policy — made my husband and me both feel more confident going into labor."</p>
+          <p class="text-sm text-tjb-lavender-600 font-medium">— Jessica T., Aurora mom</p>
+        </div>
+        <div class="bg-tjb-cream/40 border border-tjb-lavender-100 rounded-xl p-6">
+          <p class="text-tjb-charcoal text-[0.9375rem] leading-relaxed mb-4">"I didn't even know Medicaid could cover a doula. This guide answered questions I didn't know I should be asking, and the birth plan was free — no catch."</p>
+          <p class="text-sm text-tjb-lavender-600 font-medium">— Aisha K., Lakewood mom</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
        CAN MY DOULA COME WITH ME?
        ═══════════════════════════════════════════════════════════ -->
-  <section class="py-16 bg-tjb-cream">
+  <section class="py-12 bg-tjb-cream">
     <div class="max-w-3xl mx-auto px-6 prose">
       <h2>Can My Doula Come to the Hospital With Me in {city}?</h2>
       <p>This is one of the top questions {city} moms ask — and the answer matters. Most hospitals in the {city} area <strong>do allow doulas</strong>, and many have explicit policies supporting continuous doula support during labor. Post-COVID visitor restrictions have mostly lifted, and hospitals generally recognize that doulas are not visitors — they're part of your care team.</p>
@@ -331,19 +353,26 @@ const schema = {
   <!-- ═══════════════════════════════════════════════════════════
        LOCAL DOULAS
        ═══════════════════════════════════════════════════════════ -->
-  <section class="py-16 bg-white">
+  <section class="py-20 bg-white">
     <div class="max-w-5xl mx-auto px-6">
       {localDoulas.length > 0 && (
         <h2 class="text-2xl font-semibold text-tjb-charcoal mb-6">Doulas & Midwives Serving {city}</h2>
       )}
       <DoulaCardGrid doulas={localDoulas} city={city} />
+      {localDoulas.length > 0 && (
+        <div class="mt-8 bg-tjb-cream/30 border border-tjb-lavender-100 rounded-xl p-6 text-center">
+          <p class="text-tjb-charcoal font-semibold text-lg mb-2">Looking for more options?</p>
+          <p class="text-tjb-gray mb-4">Use our free app to find and connect with doulas in {city}.</p>
+          <a href="/birth-plan-template/" class="btn-primary no-underline">Find a Doula in {city}</a>
+        </div>
+      )}
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════
        HOSPITAL & BIRTH CENTER INFO — with subtle map background
        ═══════════════════════════════════════════════════════════ -->
-  <section class="py-16 relative overflow-hidden">
+  <section class="py-20 relative overflow-hidden">
     <!-- Map background: subtle street grid pattern for sense of location -->
     <div class="absolute inset-0" style="background-image: url('/images/map-bg-denver.svg'); background-repeat: repeat; background-size: 400px 400px; opacity: 0.55;" aria-hidden="true"></div>
     <!-- Cream overlay for readability -->
@@ -359,13 +388,13 @@ const schema = {
         {hospitalDetails.map((h) => {
           const thumb = hospitalThumbnails[h.name];
           return (
-          <div class="bg-white border border-tjb-lavender-200 rounded-lg p-5 hover:border-tjb-rose-400/50 transition">
+          <div class="bg-white border border-tjb-lavender-200 rounded-xl p-5 shadow-sm hover:shadow-md hover:border-tjb-rose-400/50 transition-shadow">
             {thumb ? (
-              <div class="flex gap-4 items-start">
+              <div class="flex gap-5 items-start">
                 <img
                   src={thumb}
                   alt={`${h.name} exterior`}
-                  class="w-20 h-20 rounded-lg object-cover flex-shrink-0"
+                  class="w-[120px] h-[120px] rounded-lg object-cover flex-shrink-0 shadow-sm"
                   width="240"
                   height="240"
                   loading="lazy"
@@ -405,7 +434,7 @@ const schema = {
           );
         })}
         {birthCenterDetails.map((bc) => (
-          <div class="bg-white border border-tjb-lavender-200 rounded-lg p-5 hover:border-tjb-rose-400/50 transition">
+          <div class="bg-white border border-tjb-lavender-200 rounded-xl p-5 shadow-sm hover:shadow-md hover:border-tjb-rose-400/50 transition-shadow">
             {bc.url ? (
               <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
                 <svg class="w-4.5 h-4.5 text-tjb-sage flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
@@ -438,7 +467,7 @@ const schema = {
   <!-- ═══════════════════════════════════════════════════════════
        DOULA COSTS — text + illustration
        ═══════════════════════════════════════════════════════════ -->
-  <section class="py-16 bg-white">
+  <section class="py-12 bg-white">
     <div class="max-w-5xl mx-auto px-6">
       <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
         <div class="md:w-[58%] prose">
@@ -473,7 +502,7 @@ const schema = {
   <!-- ═══════════════════════════════════════════════════════════
        MEDICAID & INSURANCE — text + illustration
        ═══════════════════════════════════════════════════════════ -->
-  <section class="py-16 bg-tjb-cream">
+  <section class="py-12 bg-tjb-cream">
     <div class="max-w-5xl mx-auto px-6">
       <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
         <div class="md:w-[58%] prose">
@@ -503,7 +532,7 @@ const schema = {
   <!-- ═══════════════════════════════════════════════════════════
        MIDWIFE SECTION — text + illustration
        ═══════════════════════════════════════════════════════════ -->
-  <section class="py-16 bg-white">
+  <section class="py-12 bg-white">
     <div class="max-w-5xl mx-auto px-6">
       <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
         <div class="md:w-[58%] prose">
@@ -542,7 +571,7 @@ const schema = {
   <!-- ═══════════════════════════════════════════════════════════
        CTA CARD — Your Birth Plan (with PDF mockup)
        ═══════════════════════════════════════════════════════════ -->
-  <section class="py-16 bg-white">
+  <section class="py-20 bg-tjb-cream/50">
     <div class="max-w-3xl mx-auto px-6">
       <div class="bg-tjb-lavender-50 border-2 border-tjb-lavender-200 p-6 md:p-8 rounded-xl">
         <!-- PDF mockup — makes the offer tangible -->
@@ -558,7 +587,7 @@ const schema = {
             />
           </a>
         </div>
-        <h3 class="font-semibold text-lg text-tjb-charcoal mb-2">Walk Into Your Birth Feeling Prepared — Not Anxious</h3>
+        <h2 class="font-bold text-tjb-charcoal mb-2" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">Walk Into Your Birth Feeling Prepared — Not Anxious</h2>
         <p class="text-tjb-gray mb-3">The #1 thing {city} moms tell us they wish they'd had? <strong>A clear plan they'd actually thought through</strong> — not just a form, but a process that helped them understand their options before the contractions started.</p>
         <p class="text-tjb-gray mb-4">That's exactly what the free Joyful Birth Plan does. It walks you through every decision — who's in the room, what happens if things shift, what matters most to you — so you walk in confident.</p>
         <div class="flex flex-col sm:flex-row gap-3 mb-4">
@@ -580,7 +609,7 @@ const schema = {
   <section class="py-12 bg-tjb-cream">
     <div class="max-w-3xl mx-auto px-6">
       <div class="bg-white border-2 border-tjb-lavender-200 p-5 md:p-6 rounded-xl">
-        <h3 class="font-semibold text-lg text-tjb-charcoal mb-2">What True Joy Birthing Actually Does for You</h3>
+        <h2 class="font-bold text-tjb-charcoal mb-2" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">What True Joy Birthing Actually Does for You</h2>
         <p class="text-tjb-gray mb-2">True Joy Birthing isn't a doula matching service, and we're not necessarily your in-person doula in {city}. We're the step before — and alongside — all of that.</p>
         <p class="text-tjb-gray mb-2">Shelbi built the free Joyful Birth Plan because she saw families show up to the hospital without their preferences written down, <em>every single time</em>. The birth plan template, the checklist, the free app walkthrough — these are the tools that help you walk in prepared, whether you end up hiring a local doula or going it alone.</p>
         <p class="text-tjb-gray">If you do find a doula in {city}, great — bring your plan and use it together. If you're still looking, or if hiring a doula isn't in the budget right now, the birth plan is free and it works.</p>
