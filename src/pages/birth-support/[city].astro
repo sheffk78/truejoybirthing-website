@@ -752,10 +752,11 @@ const schema = {
         <p class="text-tjb-gray">If you do find a doula in {city}, great. Bring your plan and use it together. If you're still looking, or if hiring a doula isn't in the budget right now, the birth plan is free and it works.</p>
       </div>
 
-      <!-- ═══ Related Resources (9 blog-style cards) ═══ -->
+      <!-- ═══ Related Resources ═══ -->
+      {data.enableBlogResources ? (
       <div class="mt-12 pt-8 border-t border-tjb-lavender-200/50">
         <p class="text-xs font-semibold tracking-widest text-tjb-rose-500 uppercase mb-2">Keep Reading</p>
-        <h2 class="text-xl font-bold mb-6 text-tjb-charcoal" style="font-family: 'DM Sans', sans-serif;">Related Resources for {city} Families</h2>
+...[truncated]
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <a href="/what-is-a-doula/" class="bg-white rounded-xl border border-tjb-lavender-200 hover:border-tjb-rose-300 hover:shadow-md transition group overflow-hidden">
             <img src="/images/hero-what-is-a-doula.webp" alt="What is a doula?" class="w-full aspect-[3/4] object-cover group-hover:scale-[1.02] transition-transform duration-300" width="300" height="400" loading="lazy" />
@@ -831,8 +832,77 @@ const schema = {
           </a>
         </div>
       </div>
-
-      {nearbyCities.length > 0 && (
+      ) : (
+      <div class="mt-12 pt-8 border-t border-tjb-lavender-200/50">
+        <p class="text-xs font-semibold tracking-widest text-tjb-rose-500 uppercase mb-2">Keep Reading</p>
+        <h2 class="text-xl font-bold mb-6 text-tjb-charcoal" style="font-family: 'DM Sans', sans-serif;">Related Resources</h2>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="/what-is-a-doula/" class="flex items-start gap-3 p-4 bg-white rounded-xl border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+            <span class="text-2xl">🤝</span>
+            <div>
+              <h3 class="text-sm font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">What Is a Doula?</h3>
+              <p class="text-xs text-tjb-gray">What doulas do and why families hire one.</p>
+            </div>
+          </a>
+          <a href="/benefits-of-a-doula/" class="flex items-start gap-3 p-4 bg-white rounded-xl border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+            <span class="text-2xl">💪</span>
+            <div>
+              <h3 class="text-sm font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">Benefits of a Doula</h3>
+              <p class="text-xs text-tjb-gray">Better outcomes, less pain, more satisfaction.</p>
+            </div>
+          </a>
+          <a href="/how-to-choose-a-doula/" class="flex items-start gap-3 p-4 bg-white rounded-xl border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+            <span class="text-2xl">🔍</span>
+            <div>
+              <h3 class="text-sm font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">How to Choose a Doula</h3>
+              <p class="text-xs text-tjb-gray">Interview tips and red flags to watch for.</p>
+            </div>
+          </a>
+          <a href="/doula-cost/" class="flex items-start gap-3 p-4 bg-white rounded-xl border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+            <span class="text-2xl">💲</span>
+            <div>
+              <h3 class="text-sm font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">Doula Costs</h3>
+              <p class="text-xs text-tjb-gray">What doulas charge and how to afford one.</p>
+            </div>
+          </a>
+          <a href="/postpartum-doula/" class="flex items-start gap-3 p-4 bg-white rounded-xl border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+            <span class="text-2xl">👶</span>
+            <div>
+              <h3 class="text-sm font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">Postpartum Doula</h3>
+              <p class="text-xs text-tjb-gray">Support after birth for recovery and newborn care.</p>
+            </div>
+          </a>
+          <a href="/birth-plan-template/" class="flex items-start gap-3 p-4 bg-white rounded-xl border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+            <span class="text-2xl">📋</span>
+            <div>
+              <h3 class="text-sm font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">Birth Plan Template</h3>
+              <p class="text-xs text-tjb-gray">Free template to write your birth preferences.</p>
+            </div>
+          </a>
+          <a href="/faq/" class="flex items-start gap-3 p-4 bg-white rounded-xl border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+            <span class="text-2xl">❓</span>
+            <div>
+              <h3 class="text-sm font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">Doula FAQ</h3>
+              <p class="text-xs text-tjb-gray">Common questions about hiring a doula.</p>
+            </div>
+          </a>
+          <a href="/doula-vs-midwife/" class="flex items-start gap-3 p-4 bg-white rounded-xl border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+            <span class="text-2xl">⚖️</span>
+            <div>
+              <h3 class="text-sm font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">Doula vs. Midwife</h3>
+              <p class="text-xs text-tjb-gray">Key differences and why you might want both.</p>
+            </div>
+          </a>
+          <a href="/medicaid-doula-coverage/" class="flex items-start gap-3 p-4 bg-white rounded-xl border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+            <span class="text-2xl">🏥</span>
+            <div>
+              <h3 class="text-sm font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">Medicaid Doula Coverage</h3>
+              <p class="text-xs text-tjb-gray">Which states cover doulas and how to use it.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      )}
         <div class="mb-8 mt-8">
           <h2 class="text-xl font-bold mb-3" style="font-family: 'DM Sans', sans-serif;">Looking at Nearby Cities?</h2>
           <div class="flex flex-wrap gap-2">

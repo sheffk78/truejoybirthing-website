@@ -78,6 +78,7 @@ export interface CityData {
   faqs: FaqItem[];
   nearbyCities: string[];
   testimonials?: Testimonial[];  // Real client quotes; if absent, show 'What local moms ask' Q&A
+  enableBlogResources?: boolean;  // Show hero-image blog cards vs icon cards in Related Resources
 }
 
 export const cities: Record<string, CityData> = {
@@ -2062,6 +2063,7 @@ export const cities: Record<string, CityData> = {
     lat: 39.7392,
     lng: -104.9903,
     publishedDate: "2026-06-04",
+    enableBlogResources: true,
     culture: "Denver is Colorado's largest birth market and one of the most doula-friendly cities in the Mountain West, the state's Medicaid doula coverage (since January 2024 via HB 23-1027) has accelerated adoption, and the local birth community is organized around a strong network of doulas and birth centers. UCHealth and HealthOne (HCA Healthcare) split the hospital market, and families who know which system their OB delivers at have a real advantage in navigating Denver's sprawl.",
     heroLocalDetail: "UCHealth University of Colorado Hospital is on the Anschutz Medical Campus in Aurora, about 20 minutes east of downtown via I-70 or Colfax Avenue, and during afternoon rush, I-70 between downtown and the medical campus backs up hard, so Hampden Avenue or MLK Boulevard can be faster. Saint Joseph Hospital is on Lafayette Street just east of downtown, about 5 minutes from City Park. Presbyterian/St. Luke's is at 20th and High Street in the City Park South neighborhood, adjacent to Saint Joe's within the CarePoint Health system. Washington Park's 2.5-mile outer loop and Cheesman Park's paved paths are where Denver moms walk in the third trimester, both are flat, shaded, and close to the major hospitals.",
     hospitalDetails: [
@@ -2271,6 +2273,7 @@ export const cities: Record<string, CityData> = {
     costHigh: 4500,
     shelbiServesHere: false,
     publishedDate: "2026-06-04",
+    enableBlogResources: true,
     lat: 47.6062,
     lng: -122.3321,
     culture: "Seattle is a powerhouse of progressive birth culture, with one of the highest rates of midwifery and out-of-hospital birth in the nation. The city's doulas, birth photographers, and community groups form a tight-knit ecosystem, and organizations like Perinatal Support Washington push relentlessly for equity and access. From Capitol Hill to Ballard, expecting families have no shortage of holistic and collaborative care options.",
