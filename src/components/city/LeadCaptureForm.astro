@@ -1,6 +1,6 @@
 ---
 // City page lead capture — name + email → free PDF + app walkthrough.
-// Email gate before PDF download, with a low-visibility bypass for accessibility.
+// Birth plan banner image positioned above the text for visual anchoring.
 interface Props {
   city?: string;
   class?: string;
@@ -10,9 +10,21 @@ const { city = '', class: wrapClass = '' } = Astro.props;
 
 <section id="download-pdf" class={`bg-white border-y border-tjb-lavender-200/60 py-16 ${wrapClass}`}>
   <div class="max-w-2xl mx-auto px-6 text-center">
+    <!-- Birth plan banner image — desk scene with checklist -->
+    <div class="flex justify-center mb-6">
+      <img
+        src="/images/birth-plan-banner.webp"
+        alt="Joyful Birth Plan: fillable PDF checklist for labor, monitoring, and postpartum preferences"
+        class="w-full max-w-lg rounded-xl shadow-md"
+        width="1024"
+        height="320"
+        loading="lazy"
+      />
+    </div>
+
     <h2 class="text-2xl md:text-3xl font-bold mb-4">Get Your Joyful Birth Plan</h2>
     <p class="text-tjb-gray mb-8 max-w-xl mx-auto leading-relaxed">
-      Enter your name and email and we'll send you the free fillable Joyful Birth Plan PDF plus a guided walkthrough in the app. No spam — just the tools you need.
+      Enter your name and email and we'll send you the free fillable Joyful Birth Plan PDF plus a guided walkthrough in the app. No spam. Just the tools you need.
     </p>
 
     <form id="city-lead-form" class="flex flex-col gap-3 max-w-lg mx-auto mb-4">
@@ -42,12 +54,12 @@ const { city = '', class: wrapClass = '' } = Astro.props;
 
     <!-- Success state -->
     <div id="city-lead-success" class="hidden">
-      <p class="text-green-700 font-semibold mb-4">✓ Check your inbox — your birth plan is on its way.</p>
+      <p class="text-green-700 font-semibold mb-4">✓ Check your inbox: your birth plan is on its way.</p>
       <p class="text-tjb-gray mb-6">While you wait, get even more from the free app:</p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
         <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="inline-flex items-center gap-2 text-tjb-lavender-600 font-semibold hover:text-tjb-lavender-700 transition-colors">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-          Get the free app — richer, updatable, shareable
+          Get the free app: richer, updatable, shareable
         </a>
       </div>
     </div>

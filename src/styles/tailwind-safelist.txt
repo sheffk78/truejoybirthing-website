@@ -10,6 +10,7 @@ after:h-0.5
 after:left-0
 after:transition-all
 after:w-0
+aspect-[4/3]
 aspect-video
 backdrop-blur-sm
 bg-tjb-charcoal

@@ -11,13 +11,15 @@ interface Props {
   breadcrumbList?: { name: string; url: string }[];
 }
 
-const { title, description = "True Joy Birthing — birth education and planning tools for moms, doulas, and midwives.", canonical, // OG IMAGE POLICY — use the real TJB logo card as default.
+const { title, description = "True Joy Birthing — birth education and planning tools for moms, doulas, and midwives.", canonical, // OG IMAGE POLICY — never use og-default.webp (old invented logo) on consumer pages.
   // Fallback hierarchy:
-  //   - Default: true-joy-birthing-main.png (logo card — used on homepage and any page without a custom OG)
+  //   - Homepage, About: https://truejoybirthing.com/images/og-homepage.webp (Shelbi portrait)
   //   - Education/scenario pages: use page-specific editorial OG, or nearest content-family OG
+  //   - Offer pages: use page-specific offer OG, or nearest content-family OG temporarily
   //   - City pages: use per-city OG pattern (og-city-{slug}.webp)
-  // Never use og-homepage.webp (AI portrait) or og-default.webp (invented geometric icon).
-  ogImage = "https://truejoybirthing.com/images/og/true-joy-birthing-main.png"  } = Astro.props;
+  // Never fall back to og-default.webp. If a page lacks a custom OG, use the closest
+  // content-family match or og-homepage.webp as a last resort.
+  ogImage = "https://truejoybirthing.com/images/og-homepage.webp"  } = Astro.props;
 const breadcrumbList = Astro.props.breadcrumbList;
 const currentPath = Astro.url.pathname;
 
@@ -31,7 +33,7 @@ const schemaBase = {
       "legalName": "True Joy Birthing",
       "url": "https://truejoybirthing.com/",
       "email": "support@truejoybirthing.com",
-      "description": "Birth education and planning tools — free for moms, Pro for doulas and midwives. Build your birth plan, learn your options, and feel confident about your delivery.",
+      "description": "Birth education and planning tools: free for moms, Pro for doulas and midwives. Build your birth plan, learn your options, and feel confident about your delivery.",
       "logo": {
         "@type": "ImageObject",
         "@id": "https://truejoybirthing.com/#logo",
@@ -43,7 +45,10 @@ const schemaBase = {
         "copyrightHolder": { "@id": "https://truejoybirthing.com/#organization" }
       },
       "image": { "@id": "https://truejoybirthing.com/#logo" },
-      "areaServed": { "@type": "Country", "name": "United States" },
+      "areaServed": [
+        { "@type": "State", "name": "Texas" },
+        { "@type": "Country", "name": "United States" }
+      ],
       "priceRange": "Free–$250",
       "foundingDate": "2025",
       "founder": {
@@ -162,7 +167,7 @@ if (breadcrumbList && breadcrumbList.length > 0) {
       ...((schema["@graph"] || [])),
       {
         "@type": "BreadcrumbList",
-        "@id": `${canonical || `https://truejoybirthing.com${currentPath}`}#breadcrumb`,
+        "@id": `${canonical}#breadcrumb`,
         "itemListElement": breadcrumbList.map((item, i) => ({
           "@type": "ListItem",
           "position": i + 1,
@@ -259,7 +264,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
       <div class="max-w-6xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-3">
         <div>
           <img src="/images/logo-white.svg" alt="True Joy Birthing" class="h-10 w-auto mb-4" />
-          <p class="text-sm text-tjb-gray-300 leading-relaxed">Birth education and planning tools — free for moms, Pro for doulas and midwives.</p>
+          <p class="text-sm text-tjb-gray-300 leading-relaxed">Birth education and planning tools: free for moms, Pro for doulas and midwives.</p>
           <div class="mt-3 text-sm text-tjb-gray-300 space-y-1">
             <p>True Joy Birthing</p>
             <p><a href="mailto:support@truejoybirthing.com" class="hover:text-tjb-lavender-light transition">support@truejoybirthing.com</a></p>
@@ -276,7 +281,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
           </ul>
         </div>
         <div>
-          <p class="font-semibold text-white mb-4 tracking-wide text-sm uppercase">Download the app — free for moms</p>
+          <p class="font-semibold text-white mb-4 tracking-wide text-sm uppercase">Download the app: free for moms</p>
           <p class="text-sm text-tjb-gray-300 mb-5 leading-relaxed">Build your birth plan, learn your options, and feel confident.</p>
           <div class="space-y-3">
             <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="inline-block focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 transition-opacity hover:opacity-90">

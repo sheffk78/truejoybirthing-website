@@ -1,0 +1,345 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { cities, citySlugs } from '../data/cities';
+
+// Identify cities that have midwives listed (isMidwife: true in localDoulas)
+const citiesWithMidwives: { slug: string; city: string; state: string; midwives: { name: string; credential?: string; practice?: string }[] }[] = [];
+const citiesWithoutMidwives: { slug: string; city: string; state: string }[] = [];
+
+for (const slug of citySlugs) {
+  const data = cities[slug];
+  if (!data) continue;
+  const midwives = (data.localDoulas || []).filter((d: any) => d.isMidwife);
+  if (midwives.length > 0) {
+    citiesWithMidwives.push({
+      slug,
+      city: data.city,
+      state: data.state,
+      midwives: midwives.map((m: any) => ({
+        name: m.name,
+        credential: m.credential,
+        practice: m.practice,
+      })),
+    });
+  } else {
+    citiesWithoutMidwives.push({ slug, city: data.city, state: data.state });
+  }
+}
+
+// Group cities with midwives by state
+const stateNames: Record<string, string> = {
+  TX: 'Texas', FL: 'Florida', NC: 'North Carolina', GA: 'Georgia', CA: 'California',
+  WA: 'Washington', CO: 'Colorado', OR: 'Oregon', MN: 'Minnesota', AZ: 'Arizona',
+  IL: 'Illinois', MI: 'Michigan', NY: 'New York', NJ: 'New Jersey', VA: 'Virginia',
+  TN: 'Tennessee', NV: 'Nevada', SC: 'South Carolina',
+};
+
+const midwifeStateGroups: Record<string, typeof citiesWithMidwives> = {};
+for (const c of citiesWithMidwives) {
+  if (!midwifeStateGroups[c.state]) midwifeStateGroups[c.state] = [];
+  midwifeStateGroups[c.state].push(c);
+}
+const midwifeStateOrder = Object.keys(midwifeStateGroups).sort();
+
+const noMidwifeStateGroups: Record<string, typeof citiesWithoutMidwives> = {};
+for (const c of citiesWithoutMidwives) {
+  if (!noMidwifeStateGroups[c.state]) noMidwifeStateGroups[c.state] = [];
+  noMidwifeStateGroups[c.state].push(c);
+}
+const noMidwifeStateOrder = Object.keys(noMidwifeStateGroups).sort((a, b) => {
+  if (a === 'TX') return -1;
+  if (b === 'TX') return 1;
+  return a.localeCompare(b);
+});
+
+const breadcrumbList = [
+  {"name": "Home", "url": "https://truejoybirthing.com/"},
+  {"name": "Find a Midwife", "url": "https://truejoybirthing.com/midwife-near-me/"}
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://truejoybirthing.com/midwife-near-me/#webpage",
+      "name": "Find a Midwife Near You | Midwife Directory",
+      "description": "Search for midwives near you by city. Learn the difference between CNMs, CPMs, and RMs, and find local midwife listings with credentials, services, and cost information.",
+      "url": "https://truejoybirthing.com/midwife-near-me/",
+      "about": { "@id": "https://truejoybirthing.com/#organization" },
+      "isPartOf": { "@id": "https://truejoybirthing.com/#website" }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://truejoybirthing.com/midwife-near-me/#midwife-directory",
+      "name": "Midwife Directory by City",
+      "description": "Directory of midwives organized by city, with credentials, services, and cost information.",
+      "numberOfItems": citiesWithMidwives.length,
+      "itemListElement": citiesWithMidwives.map((c, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": `Midwives in ${c.city}, ${c.state}`,
+        "url": `https://truejoybirthing.com/birth-support/${c.slug}/`
+      }))
+    },
+    {
+      "@type": "Service",
+      "@id": "https://truejoybirthing.com/midwife-near-me/#service",
+      "name": "Midwife Directory & Home Birth Guide",
+      "description": "Search for midwives near you. Learn the difference between CNMs, CPMs, and RMs, what midwives do, home birth safety, and how to find a midwife in your area.",
+      "provider": { "@id": "https://truejoybirthing.com/#organization" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "serviceType": "Midwifery Care Directory"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://truejoybirthing.com/midwife-near-me/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "What's the difference between a doula and a midwife?", "acceptedAnswer": { "@type": "Answer", "text": "A midwife is a medical professional who provides clinical care during pregnancy, labor, and birth — including monitoring vitals, performing exams, and delivering babies. A doula is a non-medical support person who provides emotional, physical, and informational support but does not perform clinical tasks. You can have both: many families hire a midwife for clinical care and a doula for continuous support." } },
+        { "@type": "Question", "name": "Can I have a midwife at a hospital?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Certified Nurse-Midwives (CNMs) practice in hospitals and birth centers across the United States. They have prescriptive authority in most states and can admit patients, order labs, and manage uncomplicated births alongside OB backup." } },
+        { "@type": "Question", "name": "Does insurance cover midwife care?", "acceptedAnswer": { "@type": "Answer", "text": "Most insurance plans cover CNM care in hospitals and birth centers. Home birth coverage varies — some Medicaid programs and private insurers are expanding coverage, but CPM and out-of-hospital midwifery may not be covered in all states. Check with your specific plan." } },
+        { "@type": "Question", "name": "Is home birth safe?", "acceptedAnswer": { "@type": "Answer", "text": "For low-risk pregnancies, research shows planned home birth with a qualified midwife is a safe option. A large 2014 study in the New England Journal of Medicine found that planned home births with midwives had comparable outcomes to hospital births for low-risk women, with fewer interventions." } },
+        { "@type": "Question", "name": "How do I find a midwife near me?", "acceptedAnswer": { "@type": "Answer", "text": "Start by checking if your state licenses midwives, then search the North American Registry of Midwives (NARM) for a CPM, the American Midwifery Certification Board (AMCB) for a CNM, or your state's midwifery regulatory board. You can also ask your OB-GYN, local birth center, or search our city birth support pages." } }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Find a Midwife Near You | Midwife Directory"
+  description="Search for midwives near you by city. Learn the difference between CNMs, CPMs, and RMs, and find local midwife listings with credentials, services, and cost information."
+  canonical="https://truejoybirthing.com/midwife-near-me/"
+  ogImage="/images/og-homepage.webp"
+  breadcrumbList={breadcrumbList}
+  schema={schema}
+>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Midwife Support</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h1 class="text-[2.5rem] md:text-[3.25rem] font-bold mb-6 leading-[1.12]" style="font-family: 'Cormorant Garamond', Georgia, serif;">Find a Midwife Near You</h1>
+      <p class="text-lg md:text-xl text-tjb-gray leading-relaxed max-w-2xl mb-8">
+        A midwife is a trained medical professional who provides clinical care throughout pregnancy, labor, and birth — whether you're planning a hospital delivery, a birth center birth, or a home birth. Here's how to understand your options and find the right midwife for you.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="/birth-plan-app/" class="btn-primary">Plan Your Birth</a>
+        <a href="/home-birth-midwife/" class="btn-secondary">Home Birth Guide →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MIDWIFE TYPES ═══ -->
+  <section class="py-16 bg-tjb-cream">
+    <div class="max-w-5xl mx-auto px-6">
+      <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Credentials & Scope</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-10" style="font-family: 'Cormorant Garamond', Georgia, serif;">Three Types of Midwives You'll Encounter</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6 border border-tjb-lavender-200/60">
+          <div class="w-10 h-10 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-tjb-lavender-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-tjb-charcoal mb-3" style="font-family: 'Cormorant Garamond', Georgia, serif;">Certified Nurse-Midwife (CNM)</h3>
+          <ul class="text-sm text-tjb-gray space-y-2">
+            <li><strong class="text-tjb-charcoal">Credential:</strong> RN + graduate degree in midwifery; certified by AMCB</li>
+            <li><strong class="text-tjb-charcoal">Settings:</strong> Hospitals, birth centers, and home births</li>
+            <li><strong class="text-tjb-charcoal">Scope:</strong> Full well-woman care, prescriptions, lab orders, and birth attendance. Can practice independently in most states.</li>
+            <li><strong class="text-tjb-charcoal">Insurance:</strong> Widely covered by private insurance and Medicaid</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-tjb-lavender-200/60">
+          <div class="w-10 h-10 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-tjb-lavender-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-tjb-charcoal mb-3" style="font-family: 'Cormorant Garamond', Georgia, serif;">Certified Professional Midwife (CPM)</h3>
+          <ul class="text-sm text-tjb-gray space-y-2">
+            <li><strong class="text-tjb-charcoal">Credential:</strong> Trained in out-of-hospital birth; certified by NARM</li>
+            <li><strong class="text-tjb-charcoal">Settings:</strong> Home births and freestanding birth centers</li>
+            <li><strong class="text-tjb-charcoal">Scope:</strong> Prenatal, intrapartum, and postpartum care for normal pregnancies. Does not hold a nursing license and cannot prescribe medications.</li>
+            <li><strong class="text-tjb-charcoal">Insurance:</strong> Coverage varies by state — expanding but not universal</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 border border-tjb-lavender-200/60">
+          <div class="w-10 h-10 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-tjb-lavender-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A11.955 11.955 0 003.5 8.38c0 5.273 3.38 10.196 8.5 11.726 5.12-1.53 8.5-6.453 8.5-11.726 0-1.18-.138-2.322-.382-3.404z" /></svg>
+          </div>
+          <h3 class="text-lg font-semibold text-tjb-charcoal mb-3" style="font-family: 'Cormorant Garamond', Georgia, serif;">Registered Midwife (RM)</h3>
+          <ul class="text-sm text-tjb-gray space-y-2">
+            <li><strong class="text-tjb-charcoal">Credential:</strong> State-licensed midwife in specific states (e.g., Colorado, New Mexico); not a national certification</li>
+            <li><strong class="text-tjb-charcoal">Settings:</strong> Home births and birth centers (state-dependent)</li>
+            <li><strong class="text-tjb-charcoal">Scope:</strong> Similar to CPM — prenatal through postpartum care for low-risk pregnancies. Requirements vary by state.</li>
+            <li><strong class="text-tjb-charcoal">Insurance:</strong> Limited — check your specific state and plan</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="max-w-3xl mt-8">
+        <p class="text-sm text-tjb-gray italic">Which type of midwife you can see depends on your state's licensing laws and your planned birth setting. CNMs practice in all 50 states. CPMs are licensed in 38+ states. RMs are licensed in a handful of states, primarily in the Mountain West and Southwest.</p>
+      </div>
+
+      <div class="mt-6 p-5 bg-white rounded-xl border border-tjb-lavender-200/60 not-prose">
+        <p class="text-sm text-tjb-gray"><strong class="text-tjb-charcoal">Not sure what the difference is?</strong> A <strong>midwife</strong> is your medical provider — she can deliver your baby, write prescriptions, and monitor your health. A <strong>doula</strong> is your support person — she keeps you comfortable, informed, and emotionally held, but doesn't do medical tasks. You can have both, and many moms do. <a href="/what-is-a-doula/" class="text-tjb-lavender-600 hover:underline">Learn more about what a doula does →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CITY DIRECTORY ═══ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Local Midwives</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-4" style="font-family: 'Cormorant Garamond', Georgia, serif;">Midwives by City</h2>
+      <p class="text-tjb-gray max-w-2xl mb-8">Find midwives who serve your area. Each city page includes midwife credentials, services offered, cost ranges, and whether they accept Medicaid — alongside doula listings, hospital info, and birth planning tools.</p>
+
+      {citiesWithMidwives.length > 0 && (
+        <div class="mb-12">
+          {midwifeStateOrder.map((stateCode) => {
+            const stateCities = midwifeStateGroups[stateCode];
+            const stateName = stateNames[stateCode] || stateCode;
+            return (
+              <div class="mb-8">
+                <h3 class="text-lg font-semibold text-tjb-charcoal mb-4" style="font-family: 'Cormorant Garamond', Georgia, serif;">{stateName}</h3>
+                <div class="grid sm:grid-cols-2 gap-4">
+                  {stateCities.map((c) => (
+                    <a href={`/birth-support/${c.slug}/`} class="group block bg-tjb-cream rounded-xl p-5 border border-tjb-lavender-200/60 hover:border-tjb-lavender-400 hover:shadow-md transition-all duration-200">
+                      <div class="flex items-start justify-between mb-2">
+                        <h4 class="text-lg font-semibold text-tjb-charcoal group-hover:text-tjb-lavender-600 transition-colors" style="font-family: 'Cormorant Garamond', Georgia, serif;">{c.city}, {c.state}</h4>
+                        <span class="inline-flex items-center bg-green-50 text-green-700 text-xs font-medium px-2 py-0.5 rounded-full border border-green-200 flex-shrink-0 ml-2">
+                          <svg class="w-3 h-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
+                          Midwife{c.midwives.length > 1 ? 's' : ''}
+                        </span>
+                      </div>
+                      <div class="space-y-1">
+                        {c.midwives.map((m) => (
+                          <div class="text-sm text-tjb-gray">
+                            <span class="font-medium text-tjb-charcoal">{m.name}</span>
+                            {m.credential && <span class="text-tjb-gray/70"> — {m.credential}</span>}
+                          </div>
+                        ))}
+                      </div>
+                      <p class="text-xs text-tjb-lavender-600 mt-2 group-hover:underline">View full listing →</p>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      <div class="mt-4">
+        <h3 class="text-lg font-semibold text-tjb-charcoal mb-4" style="font-family: 'Cormorant Garamond', Georgia, serif;">More Cities — Doula & Hospital Info Available</h3>
+        <p class="text-sm text-tjb-gray mb-4">We're building midwife directories for these cities. Each city page already has doula listings, hospital policies, Medicaid info, and free birth planning tools. <a href="/home-birth-midwife/" class="text-tjb-lavender-600 hover:underline">Read our home birth midwife guide</a> while we add more midwife listings.</p>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
+          {citiesWithoutMidwives.map((c) => (
+            <a href={`/birth-support/${c.slug}/`} class="text-center border border-tjb-lavender-200/50 rounded-lg px-3 py-2 text-sm text-tjb-charcoal hover:border-tjb-lavender-400 hover:bg-tjb-lavender-50 transition">
+              {c.city}
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FINDING A MIDWIFE ═══ -->
+  <section class="py-16 bg-tjb-cream">
+    <div class="max-w-5xl mx-auto px-6">
+      <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Your Search</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-6" style="font-family: 'Cormorant Garamond', Georgia, serif;">Finding a Midwife Near You</h2>
+
+      <div class="max-w-3xl">
+        <p class="text-tjb-gray text-lg leading-relaxed mb-6">Start your search based on the type of midwife and birth setting you want:</p>
+        <ul class="text-tjb-gray space-y-3 mb-8">
+          <li><strong class="text-tjb-charcoal">For a CNM in a hospital or birth center</strong> — Search the <a href="https://www.midwife.org/find-a-midwife" target="_blank" rel="noopener" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">American College of Nurse-Midwives directory</a> or ask your OB-GYN for a referral.</li>
+          <li><strong class="text-tjb-charcoal">For a CPM for home birth</strong> — Search the <a href="https://narm.org/pasfr/" target="_blank" rel="noopener" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">NARM state-specific directory</a> or your state midwifery organization.</li>
+          <li><strong class="text-tjb-charcoal">For a local midwife</strong> — Browse our city directories above for midwife listings with credentials, services, and cost info. <a href="/birth-support/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">See all cities →</a></li>
+        </ul>
+        <p class="text-tjb-gray mb-4">Regardless of where you live, a birth plan helps you communicate your preferences clearly — whether your birth team includes a midwife, an OB, or both.</p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="/birth-plan-app/" class="btn-primary">Try the Free Birth Plan App</a>
+          <a href="/birth-plan-template/" class="btn-secondary">Download Free PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOME BIRTH HUB LINK ═══ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="bg-tjb-lavender-50 border-2 border-tjb-lavender-200 rounded-2xl p-8 md:p-10">
+        <div class="flex flex-col md:flex-row gap-8 items-center">
+          <div class="md:w-[60%]">
+            <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-3">Home Birth Guide</p>
+            <div class="w-10 h-0.5 bg-tjb-rose-500 mb-4"></div>
+            <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-4" style="font-family: 'Cormorant Garamond', Georgia, serif;">Planning a Home Birth?</h2>
+            <p class="text-tjb-gray mb-6">Our complete home birth midwife guide covers safety data, what midwives bring to a home birth, costs, insurance coverage, how to prepare, and when hospital transfer is needed. It's the resource we wish every expectant family had before making this decision.</p>
+            <a href="/home-birth-midwife/" class="btn-primary">Read the Home Birth Guide →</a>
+          </div>
+          <div class="md:w-[40%] flex justify-center">
+            <div class="bg-white rounded-xl p-6 shadow-md border border-tjb-lavender-200/60 text-center max-w-[240px]">
+              <div class="w-16 h-16 rounded-full bg-tjb-lavender-100 flex items-center justify-center mx-auto mb-4">
+                <svg class="w-8 h-8 text-tjb-lavender-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75c.621 0 1.125-.504 1.125-1.125V14.25c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v5.625c0 .621.504 1.125 1.125 1.125h4.125c.621 0 1.125-.504 1.125-1.125V9.75" /></svg>
+              </div>
+              <p class="text-sm font-semibold text-tjb-charcoal mb-1">Is home birth safe?</p>
+              <p class="text-xs text-tjb-gray">Safety data, transfer protocols, and what to expect</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="py-16 bg-tjb-cream">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Common Questions</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal" style="font-family: 'Cormorant Garamond', Georgia, serif;">Frequently Asked Questions</h2>
+
+      <div class="space-y-3 mt-8">
+        <details class="bg-white rounded-lg border border-tjb-lavender-200/60 group">
+          <summary class="cursor-pointer font-semibold text-tjb-charcoal px-6 py-4 flex items-center justify-between"><span>What's the difference between a doula and a midwife?</span><svg class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+          <div class="px-6 pb-4 text-tjb-gray leading-relaxed"><p>A <strong>midwife</strong> is a medical professional who provides clinical care — prenatal exams, monitoring during labor, catching the baby, and postpartum checkups. A <strong>doula</strong> is a non-medical support person who provides emotional, physical, and informational support during labor and delivery. You can have both: many families hire a midwife for clinical care and a doula for continuous support. <a href="/what-is-a-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">Learn more about what a doula does →</a></p></div>
+        </details>
+        <details class="bg-white rounded-lg border border-tjb-lavender-200/60 group">
+          <summary class="cursor-pointer font-semibold text-tjb-charcoal px-6 py-4 flex items-center justify-between"><span>Can I have a midwife at a hospital?</span><svg class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+          <div class="px-6 pb-4 text-tjb-gray leading-relaxed"><p>Yes. Certified Nurse-Midwives (CNMs) practice in hospitals and birth centers across the United States. They have prescriptive authority in most states and can admit patients, order labs, and manage uncomplicated births alongside OB backup. In fact, the majority of CNM-attended births happen in hospitals. If you want midwifery care in a hospital setting, ask your provider if they have CNMs on staff, or search the <a href="https://www.midwife.org/find-a-midwife" target="_blank" rel="noopener" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">ACNM directory</a>.</p></div>
+        </details>
+        <details class="bg-white rounded-lg border border-tjb-lavender-200/60 group">
+          <summary class="cursor-pointer font-semibold text-tjb-charcoal px-6 py-4 flex items-center justify-between"><span>Does insurance cover midwife care?</span><svg class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+          <div class="px-6 pb-4 text-tjb-gray leading-relaxed"><p><strong>CNM care</strong> in hospitals and birth centers is covered by most private insurance and Medicaid. <strong>CPM and out-of-hospital midwifery</strong> coverage varies widely — some states have expanded Medicaid to cover home birth midwives, and some private insurers cover CPMs, but it's not universal. Check your specific plan and ask the midwife's office about billing. Some midwives offer payment plans or sliding-scale fees for uninsured families.</p></div>
+        </details>
+        <details class="bg-white rounded-lg border border-tjb-lavender-200/60 group">
+          <summary class="cursor-pointer font-semibold text-tjb-charcoal px-6 py-4 flex items-center justify-between"><span>Is home birth safe?</span><svg class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+          <div class="px-6 pb-4 text-tjb-gray leading-relaxed"><p>For low-risk pregnancies, planned home birth with a qualified midwife is supported by research as a safe option. Studies show comparable outcomes to hospital birth for appropriate candidates, with significantly fewer interventions like induction, episiotomy, and cesarean section. The critical safety factors are: a trained and licensed midwife, a low-risk pregnancy, a clear transfer plan, and proximity to a hospital. <a href="/home-birth-midwife/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">Read our full home birth guide →</a></p></div>
+        </details>
+        <details class="bg-white rounded-lg border border-tjb-lavender-200/60 group">
+          <summary class="cursor-pointer font-semibold text-tjb-charcoal px-6 py-4 flex items-center justify-between"><span>How do I find a midwife near me?</span><svg class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 shrink-0 ml-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></summary>
+          <div class="px-6 pb-4 text-tjb-gray leading-relaxed"><p>Start by identifying what type of midwife and birth setting you want:</p><ul class="mt-2 space-y-1"><li><strong>CNM (hospital/birth center):</strong> Search the <a href="https://www.midwife.org/find-a-midwife" target="_blank" rel="noopener" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">ACNM directory</a> or ask your OB-GYN for a referral</li><li><strong>CPM (home birth):</strong> Search <a href="https://narm.org/pasfr/" target="_blank" rel="noopener" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">NARM</a> or your state midwifery organization</li><li><strong>Local directories:</strong> Browse our city listings above for midwives with verified credentials, services, and cost info</li></ul></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA ═══ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="bg-tjb-lavender-50 border-2 border-tjb-lavender-200 rounded-2xl p-8 md:p-10 text-center">
+        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-4" style="font-family: 'Cormorant Garamond', Georgia, serif;">Plan your birth with confidence</h2>
+        <p class="text-tjb-gray text-lg mb-6 max-w-xl mx-auto">Whether you're working with a midwife, an OB, or both — a birth plan helps you communicate your preferences clearly. Build yours free in the app.</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="/birth-plan-app/" class="btn-primary">Try the Free Birth Plan App</a>
+          <a href="/birth-plan-template/" class="btn-secondary">Download Free PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
