@@ -411,15 +411,10 @@ const schema = {
         <div class="mt-10 max-w-5xl mx-auto not-prose">
           <div class="bg-tjb-lavender-50 border-2 border-tjb-lavender-200 rounded-xl p-6 md:p-8">
             <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
-              <div class="md:w-[15%] flex-shrink-0 flex justify-center">
-                <div class="w-20 h-20 rounded-full bg-tjb-lavender-100 flex items-center justify-center">
-                  <svg class="w-10 h-10 text-tjb-lavender-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.5-7.5 12-7.5 12s-7.5-4.5-7.5-12a7.5 7.5 0 1115 0z" />
-                  </svg>
-                </div>
+              <div class="md:w-[30%] flex-shrink-0 flex justify-center">
+                <img src="/images/tjb-app-find-your-team.png" alt="True Joy Birthing app: find doulas and midwives near you" class="w-full max-w-[200px] rounded-2xl shadow-lg" width="200" height="433" loading="lazy" />
               </div>
-              <div class="md:w-[85%]">
+              <div class="md:w-[70%]">
                 <h3 class="text-xl font-bold text-tjb-charcoal mb-3" style="font-family: 'DM Sans', sans-serif;">Find a doula or midwife near you</h3>
                 <p class="text-tjb-gray leading-relaxed mb-4">The True Joy Birthing app lets you search for doulas, midwives, and birth professionals in your area. Filter by certification, services offered, and insurance coverage, so you can find the right support before your due date.</p>
                 <a href="/birth-plan-app/" class="btn-primary">Try the free app →</a>
@@ -444,15 +439,10 @@ const schema = {
         <div class="not-prose">
           <div class="bg-tjb-lavender-50 border-2 border-tjb-lavender-200 rounded-xl p-6 md:p-8">
             <div class="flex flex-col md:flex-row gap-6 md:gap-8 items-center">
-              <div class="md:w-[15%] flex-shrink-0 flex justify-center">
-                <div class="w-20 h-20 rounded-full bg-tjb-lavender-100 flex items-center justify-center">
-                  <svg class="w-10 h-10 text-tjb-lavender-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.5-7.5 12-7.5 12s-7.5-4.5-7.5-12a7.5 7.5 0 1115 0z" />
-                  </svg>
-                </div>
+              <div class="md:w-[30%] flex-shrink-0 flex justify-center">
+                <img src="/images/tjb-app-find-your-team.png" alt="True Joy Birthing app: find doulas and midwives near you" class="w-full max-w-[200px] rounded-2xl shadow-lg" width="200" height="433" loading="lazy" />
               </div>
-              <div class="md:w-[85%]">
+              <div class="md:w-[70%]">
                 <h3 class="text-xl font-bold text-tjb-charcoal mb-3" style="font-family: 'DM Sans', sans-serif;">Find a doula or midwife near you</h3>
                 <p class="text-tjb-gray leading-relaxed mb-4">The True Joy Birthing app lets you search for doulas, midwives, and birth professionals in your area. Filter by certification, services offered, and insurance coverage, so you can find the right support before your due date.</p>
                 <a href="/birth-plan-app/" class="btn-primary">Try the free app →</a>
@@ -757,9 +747,10 @@ const schema = {
       <div class="mt-12 pt-8 border-t border-tjb-lavender-200/50">
         <p class="text-xs font-semibold tracking-widest text-tjb-rose-500 uppercase mb-2">Keep Reading</p>
 ...[truncated]
+        <h2 class="text-xl font-bold mb-2 text-tjb-charcoal" style="font-family: 'DM Sans', sans-serif;">Related Resources for {city} Families</h2>
+        <p class="text-sm text-tjb-gray mb-6">Dive deeper into the topics that matter most: how doulas work, what they cost, whether insurance covers it, and how to build a birth plan that actually reflects what you want.</p>
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <a href="/what-is-a-doula/" class="bg-white rounded-xl border border-tjb-lavender-200 hover:border-tjb-rose-300 hover:shadow-md transition group overflow-hidden">
-            <img src="/images/hero-what-is-a-doula.webp" alt="What is a doula?" class="w-full aspect-[3/4] object-cover group-hover:scale-[1.02] transition-transform duration-300" width="300" height="400" loading="lazy" />
+          <a href="/what-is-a-doula/"
             <div class="p-4">
               <h3 class="text-sm font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition mb-1">What Is a Doula?</h3>
               <p class="text-xs text-tjb-gray leading-relaxed mb-3">What doulas do, how they help, and why families hire one.</p>
@@ -835,7 +826,8 @@ const schema = {
       ) : (
       <div class="mt-12 pt-8 border-t border-tjb-lavender-200/50">
         <p class="text-xs font-semibold tracking-widest text-tjb-rose-500 uppercase mb-2">Keep Reading</p>
-        <h2 class="text-xl font-bold mb-6 text-tjb-charcoal" style="font-family: 'DM Sans', sans-serif;">Related Resources</h2>
+        <h2 class="text-xl font-bold mb-2 text-tjb-charcoal" style="font-family: 'DM Sans', sans-serif;">Related Resources</h2>
+        <p class="text-sm text-tjb-gray mb-6">Dive deeper into the topics that matter most: how doulas work, what they cost, whether insurance covers it, and how to build a birth plan that actually reflects what you want.</p>
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <a href="/what-is-a-doula/" class="flex items-start gap-3 p-4 bg-white rounded-xl border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
             <span class="text-2xl">🤝</span>
