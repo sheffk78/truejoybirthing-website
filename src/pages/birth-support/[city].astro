@@ -322,9 +322,14 @@ const schema = {
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 not-prose">
           {localDoulas.map((doula) => (
             <div class={`bg-white rounded-xl p-6 shadow-sm border hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center ${doula.isAmbassador ? 'border-2 border-tjb-rose-300 shadow-md' : 'border-tjb-lavender-200/50 hover:border-tjb-lavender-300'}`}>
-              <div class={`w-14 h-14 rounded-full flex items-center justify-center mb-4 ${doula.isMidwife ? 'bg-tjb-lavender-100' : 'bg-tjb-lavender-100'}`}>
-                <span class="text-2xl font-semibold" style="font-family: 'Cormorant Garamond', Georgia, serif;" className={doula.isAmbassador ? 'text-tjb-rose-600' : doula.isMidwife ? 'text-tjb-lavender-700' : 'text-tjb-charcoal'}>{doula.name.split(' ').map((n: string) => n[0]).join('')}</span>
-              </div>
+              {/* Photo or initial monogram */}
+              {doula.photo ? (
+                <img src={doula.photo} alt={`Photo of ${doula.name}`} class="w-14 h-14 rounded-full object-cover mb-4" width="56" height="56" loading="lazy" />
+              ) : (
+                <div class={`w-14 h-14 rounded-full flex items-center justify-center mb-4 ${doula.isMidwife ? 'bg-tjb-lavender-100' : 'bg-tjb-lavender-100'}`}>
+                  <span class="text-2xl font-semibold" style="font-family: 'Cormorant Garamond', Georgia, serif;" className={doula.isAmbassador ? 'text-tjb-rose-600' : doula.isMidwife ? 'text-tjb-lavender-700' : 'text-tjb-charcoal'}>{doula.name.split(' ').map((n: string) => n[0]).join('')}</span>
+                </div>
+              )}
               <h3 class="text-lg font-semibold text-tjb-charcoal leading-tight mb-1" style="font-family: 'Cormorant Garamond', Georgia, serif;">{doula.name}</h3>
               {doula.credential && <p class="text-sm text-tjb-lavender-600 font-medium mb-2">{doula.credential}</p>}
               {doula.practice && <p class="text-sm text-tjb-gray mb-1">{doula.practice}</p>}
