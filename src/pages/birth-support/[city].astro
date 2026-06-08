@@ -61,6 +61,13 @@ const supportImageAlt = supportSceneAlt || `A doula walking alongside an expecta
 
 // Section images — same across all locations (Jeff approved keeping
 // photos consistent across cities; 4:3 aspect ratio for proper fit)
+// ANTI-DISTORTION RULE: Every <img> in this template uses an explicit
+// aspect-[X/Y] class + object-cover. Image files MUST match their
+// container's aspect ratio. If the file doesn't match, REGENERATE the
+// image at the correct ratio — never rely on object-cover to hide mismatches.
+// Hero images: always 3:4 portrait (900×1200)
+// Support images: always 4:3 landscape (1024×768)
+// OG images: always 40:21 landscape (1200×630), same source as hero
 const doulaCostImage = '/images/doula-holding-hands.webp';
 const medicaidImage = '/images/hands-on-belly.jpg';
 const midwifeImage = '/images/midwife-heartbeat.webp';
@@ -185,8 +192,8 @@ const schema = {
             src={heroImage}
             alt={heroAlt}
             class="w-full aspect-[3/4] object-cover rounded-2xl shadow-lg"
-            width="1200"
-            height="1600"
+            width="900"
+            height="1200"
             loading="eager"
           />
         </div>
@@ -212,7 +219,7 @@ const schema = {
           <img
             src={supportImage}
             alt={supportImageAlt}
-            class="w-full rounded-xl shadow-md"
+            class="w-full aspect-[4/3] object-cover rounded-xl shadow-md"
             width="1024"
             height="768"
             loading="lazy"
