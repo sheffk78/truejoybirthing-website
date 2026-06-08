@@ -138,34 +138,38 @@ const schema = {
   <!-- ═══════════════════════════════════════════
        APP SHOWCASE — Free app with phone mockups
        ═══════════════════════════════════════════ -->
-  <section class="bg-white py-16 md:py-20">
+  <section class="bg-tjb-lavender-50 py-16 md:py-20">
     <div class="max-w-6xl mx-auto px-6">
-      <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+      <div class="flex flex-col md:flex-row items-center gap-10 md:gap-14">
 
         <!-- Left: Phone mockups — 45% -->
         <div class="md:w-[45%] flex justify-center">
-          <div class="flex items-start gap-4 md:gap-6 w-full">
-            <!-- Left phone — dashboard, offset down slightly -->
-            <div class="w-[47%] flex-shrink-0 pt-8">
-              <img
-                src="/images/tjb-app-dashboard.png"
-                alt="True Joy Birthing app home screen with pregnancy week tracker, birth plan progress, and weekly tips"
-                class="w-full rounded-2xl shadow-lg"
-                width="390"
-                height="844"
-                loading="lazy"
-              />
+          <div class="relative flex items-start">
+            <!-- Left phone — dashboard, offset down -->
+            <div class="phone-frame w-[46%] flex-shrink-0 mt-10 md:mt-16 z-10">
+              <div class="phone-screen">
+                <img
+                  src="/images/tjb-app-dashboard.png"
+                  alt="True Joy Birthing app home screen with pregnancy week tracker, birth plan progress, and weekly tips"
+                  class="w-full h-full object-cover"
+                  width="390"
+                  height="844"
+                  loading="lazy"
+                />
+              </div>
             </div>
             <!-- Right phone — birth plan builder -->
-            <div class="w-[47%] flex-shrink-0">
-              <img
-                src="/images/tjb-app-birth-plan-builder.png"
-                alt="True Joy Birthing app birth plan showing completed sections for labor preferences, pain management, and delivery"
-                class="w-full rounded-2xl shadow-xl"
-                width="390"
-                height="844"
-                loading="lazy"
-              />
+            <div class="phone-frame w-[46%] flex-shrink-0 -ml-3 md:-ml-4 z-20">
+              <div class="phone-screen">
+                <img
+                  src="/images/tjb-app-birth-plan-builder.png"
+                  alt="True Joy Birthing app birth plan showing completed sections for labor preferences, pain management, and delivery"
+                  class="w-full h-full object-cover"
+                  width="390"
+                  height="844"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -507,3 +511,97 @@ const schema = {
   <LeadCaptureForm bannerImage="/images/birth-plan-banner.webp" bannerAlt="Joyful Birth Plan checklist with sections for labor, monitoring, and postpartum preferences" />
 
 </Layout>
+
+<style>
+  /* ═══════════════════════════════════════════
+     Phone mockup frame — CSS-only iPhone bezel
+     Makes screenshots unmistakably read as "app screens"
+     ═══════════════════════════════════════════ */
+  .phone-frame {
+    position: relative;
+    background: #111;
+    border-radius: 2.25rem;
+    padding: 0.6rem;
+    box-shadow:
+      0 30px 60px -15px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+
+  /* Dynamic Island */
+  .phone-frame::before {
+    content: '';
+    position: absolute;
+    top: 0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 1.2rem;
+    background: #111;
+    border-radius: 1.25rem;
+    z-index: 30;
+  }
+
+  /* Home indicator bar */
+  .phone-frame::after {
+    content: '';
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 38%;
+    height: 0.3rem;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 0.15rem;
+    z-index: 30;
+  }
+
+  .phone-screen {
+    position: relative;
+    border-radius: 1.65rem;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  /* Screen reflection — subtle gradient overlay for realism */
+  .phone-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.02) 40%,
+      transparent 100%
+    );
+    z-index: 10;
+    pointer-events: none;
+    border-radius: 1.65rem 1.65rem 0 0;
+  }
+
+  /* Status bar time — adds "live app" feel */
+  .phone-screen::after {
+    content: '9:41';
+    position: absolute;
+    top: 0.9rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.02em;
+    z-index: 20;
+    pointer-events: none;
+  }
+
+  .phone-screen img {
+    display: block;
+    border-radius: 1.65rem;
+    width: 100%;
+    height: auto;
+  }
+</style>
