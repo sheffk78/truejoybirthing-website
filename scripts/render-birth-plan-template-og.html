@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1200px;
+    height: 630px;
+    background: #FAF8F5;
+    overflow: hidden;
+  }
+  .og-card {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    height: 630px;
+  }
+
+  /* LEFT: Text content on cream gradient — matches Pattern B exactly */
+  .left-column {
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 52px 64px;
+    background: linear-gradient(180deg, #FAF8F5 0%, #EDE5F5 100%);
+    position: relative;
+  }
+  .left-column::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: #D8A0C4;
+  }
+  .left-column::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 6px;
+    background: #D8A0C4;
+  }
+
+  /* RIGHT: PDF mockup on lavender background */
+  .right-column {
+    width: 540px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #E8E6F0 0%, #D8D6E8 50%, #C5C3D9 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Rose accent bars on image side — matches Pattern B */
+  .right-column::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: #D8A0C4;
+    z-index: 2;
+  }
+  .right-column::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 6px;
+    background: #D8A0C4;
+    z-index: 2;
+  }
+
+  /* Text elements — matches Pattern B tokens exactly */
+  .accent-line {
+    width: 40px;
+    height: 3px;
+    background: #D8A0C4;
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+  .eyebrow {
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #B87AA0;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 10px;
+  }
+  .headline {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 52px;
+    color: #2A2A2A;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .summary {
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #555555;
+    letter-spacing: 0.005em;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    max-width: 520px;
+  }
+  .subhead {
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #6A6B6C;
+    letter-spacing: 0.02em;
+  }
+  .subhead span {
+    margin: 0 8px;
+    color: #D8A0C4;
+  }
+  .logo-area {
+    margin-top: auto;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .logo-area img {
+    height: 56px;
+    width: auto;
+  }
+
+  /* PDF mockup — stacked document pages */
+  .mockup-stack {
+    position: relative;
+    width: 240px;
+    height: 520px;
+  }
+  .mockup-page {
+    position: absolute;
+    width: 240px;
+    height: 440px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(45, 43, 85, 0.15), 0 1px 3px rgba(45, 43, 85, 0.08);
+    overflow: hidden;
+  }
+  .mockup-page:nth-child(1) {
+    top: 0; left: 0;
+    transform: rotate(-3deg);
+    z-index: 1;
+  }
+  .mockup-page:nth-child(2) {
+    top: 14px; left: 18px;
+    transform: rotate(-1deg);
+    z-index: 2;
+  }
+  .mockup-page:nth-child(3) {
+    top: 28px; left: 36px;
+    transform: rotate(1deg);
+    z-index: 3;
+  }
+  .page-header {
+    background: #7C6FA0;
+    padding: 10px 14px;
+    text-align: center;
+  }
+  .page-header span {
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+  }
+  .page-title {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #2D2B55;
+    text-align: center;
+    padding: 12px 14px 6px;
+    line-height: 1.2;
+  }
+  .page-title .small {
+    font-size: 10px;
+    font-weight: 500;
+    color: #6E6C99;
+    display: block;
+    margin-top: 3px;
+  }
+  .page-body { padding: 4px 14px; }
+  .field-row { display: flex; gap: 6px; margin-bottom: 5px; }
+  .field { flex: 1; }
+  .field-label {
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    font-size: 6.5px;
+    font-weight: 600;
+    color: #9B98B8;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 1px;
+  }
+  .field-line { height: 1px; background: #E0DEEF; margin-top: 3px; }
+  .section-header {
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    font-size: 7px;
+    font-weight: 700;
+    color: #7C6FA0;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-top: 7px;
+    margin-bottom: 3px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #E0DEEF;
+  }
+  .check-row { display: flex; align-items: center; gap: 4px; margin-bottom: 2.5px; }
+  .check-box {
+    width: 7px; height: 7px;
+    border: 1px solid #C5C3D9;
+    border-radius: 1.5px;
+    flex-shrink: 0;
+  }
+  .check-box.checked { background: #7C6FA0; border-color: #7C6FA0; }
+  .check-label {
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    font-size: 7px;
+    color: #4A4870;
+    line-height: 1;
+  }
+</style>
+</head>
+<body>
+<div class="og-card">
+  <!-- LEFT: Text content — Pattern B structure -->
+  <div class="left-column">
+    <div class="accent-line"></div>
+    <div class="eyebrow">Free Birth Plan Template</div>
+    <div class="headline">Doulas &amp; Birth Plans<br>for Every Mom</div>
+    <div class="summary">A nurse-readable birth plan built by a certified doula. Fillable PDF you can bring to your next appointment. Structured, concise, and easy for your care team to read.</div>
+    <div class="subhead">Fillable PDF <span>·</span> 5 sections <span>·</span> Nurse-readable <span>·</span> Free app walkthrough</div>
+    <div class="logo-area">
+      <img src="https://truejoybirthing.com/images/logo-mono.svg" alt="True Joy Birthing" />
+    </div>
+  </div>
+
+  <!-- RIGHT: Birth plan PDF mockup -->
+  <div class="right-column">
+    <div class="mockup-stack">
+      <!-- Back page -->
+      <div class="mockup-page">
+        <div class="page-header"><span>True Joy Birthing</span></div>
+        <div class="page-title">The Joyful Birth Plan</div>
+        <div class="page-body">
+          <div class="field-row"><div class="field"><div class="field-label">Mother's Name</div><div class="field-line"></div></div><div class="field"><div class="field-label">Due Date</div><div class="field-line"></div></div></div>
+          <div class="field-row"><div class="field"><div class="field-label">Partner's Name</div><div class="field-line"></div></div><div class="field"><div class="field-label">Doctor's Name</div><div class="field-line"></div></div></div>
+          <div class="section-header">Labor Preferences</div>
+          <div class="check-row"><div class="check-box checked"></div><div class="check-label">Dim lighting in labor room</div></div>
+          <div class="check-row"><div class="check-box"></div><div class="check-label">Freedom to move and change positions</div></div>
+          <div class="check-row"><div class="check-box checked"></div><div class="check-label">Intermittent monitoring preferred</div></div>
+          <div class="section-header">Pain Management</div>
+          <div class="check-row"><div class="check-box"></div><div class="check-label">Epidural when requested</div></div>
+          <div class="check-row"><div class="check-box checked"></div><div class="check-label">Breathing and counter-pressure</div></div>
+          <div class="section-header">Delivery</div>
+          <div class="check-row"><div class="check-box"></div><div class="check-label">Skin-to-skin immediately after birth</div></div>
+          <div class="check-row"><div class="check-box checked"></div><div class="check-label">Delayed cord clamping</div></div>
+        </div>
+      </div>
+      <!-- Middle page -->
+      <div class="mockup-page">
+        <div class="page-header"><span>True Joy Birthing</span></div>
+        <div class="page-title">The Joyful Birth Plan<span class="small">Page 2 of 5</span></div>
+        <div class="page-body">
+          <div class="section-header">Postpartum Care</div>
+          <div class="check-row"><div class="check-box checked"></div><div class="check-label">Breastfeeding support requested</div></div>
+          <div class="check-row"><div class="check-box"></div><div class="check-label">Rooming-in with baby</div></div>
+          <div class="section-header">Newborn Care</div>
+          <div class="check-row"><div class="check-box"></div><div class="check-label">Vitamin K shot</div></div>
+          <div class="check-row"><div class="check-box checked"></div><div class="check-label">Delayed first bath</div></div>
+        </div>
+      </div>
+      <!-- Front page (most visible) -->
+      <div class="mockup-page">
+        <div class="page-header"><span>True Joy Birthing</span></div>
+        <div class="page-title">To My Healthcare Provider(s)<span class="small">A clear, nurse-readable birth plan</span></div>
+        <div class="page-body">
+          <div class="field-row"><div class="field"><div class="field-label">Mother's Name</div><div class="field-line"></div></div><div class="field"><div class="field-label">Due Date</div><div class="field-line"></div></div></div>
+          <div class="field-row"><div class="field"><div class="field-label">Partner's Name</div><div class="field-line"></div></div><div class="field"><div class="field-label">Doctor / Midwife</div><div class="field-line"></div></div></div>
+          <div class="section-header">Labor Preferences</div>
+          <div class="check-row"><div class="check-box checked"></div><div class="check-label">Freedom to move and change positions</div></div>
+          <div class="check-row"><div class="check-box checked"></div><div class="check-label">Dim lighting, calm environment</div></div>
+          <div class="check-row"><div class="check-box"></div><div class="check-label">Intermittent monitoring preferred</div></div>
+          <div class="section-header">Pain Management</div>
+          <div class="check-row"><div class="check-box"></div><div class="check-label">Epidural available on request</div></div>
+          <div class="check-row"><div class="check-box checked"></div><div class="check-label">Breathing and comfort techniques first</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
