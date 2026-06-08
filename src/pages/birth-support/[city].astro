@@ -9,6 +9,7 @@
 // ═══════════════════════════════════════════════════════════════
 import Layout from '../../layouts/Layout.astro';
 import CityLeadCaptureForm from '../../components/city/LeadCaptureForm.astro';
+import AppShowcase from '../../components/AppShowcase.astro';
 import { cities, citySlugs, type CityData } from '../../data/cities';
 
 export function getStaticPaths() {
@@ -190,62 +191,7 @@ const schema = {
   </section>
 
   <!-- ═══ App Showcase ═══ -->
-  <section class="py-20 bg-tjb-cream">
-    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row gap-10 items-center">
-      <!-- Left: Overlapping phone mockups -->
-      <div class="md:w-[48%] relative order-2 md:order-1">
-        <!-- Background phone (dashboard) — offset upper-left -->
-        <img
-          src="/images/tjb-app-dashboard.png"
-          alt="True Joy Birthing app dashboard showing birth plan progress and weekly pregnancy tips"
-          class="absolute -top-3 -left-3 md:-top-5 md:-left-5 w-[48%] rounded-2xl shadow-lg opacity-75 z-0"
-          width="600"
-          height="1300"
-          loading="lazy"
-        />
-        <!-- Foreground phone (birth plan builder) — offset lower-right -->
-        <img
-          src="/images/tjb-app-birth-plan-builder.png"
-          alt="True Joy Birthing app birth plan builder: 9 guided sections, step-by-step birth preferences"
-          class="relative mt-8 md:mt-10 ml-auto w-[48%] rounded-2xl shadow-xl z-10"
-          width="600"
-          height="1300"
-          loading="lazy"
-        />
-      </div>
-      <!-- Right: Marketing text + CTAs -->
-      <div class="md:w-[52%] order-1 md:order-2">
-        <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Free App</p>
-        <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-4" style="font-family: 'DM Sans', sans-serif;">Build your birth plan step by step in the app</h2>
-        <p class="text-tjb-gray mb-5">Nine guided sections. Hospital preferences, pain management, who's in the room — all walked through so nothing gets missed.</p>
-        <ul class="space-y-2 mb-6">
-          <li class="flex items-start gap-2">
-            <svg class="w-5 h-5 text-tjb-lavender-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-tjb-gray text-sm">Step-by-step guidance for every section</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <svg class="w-5 h-5 text-tjb-lavender-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-tjb-gray text-sm">Update your plan anytime — not a static PDF</span>
-          </li>
-          <li class="flex items-start gap-2">
-            <svg class="w-5 h-5 text-tjb-lavender-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
-            <span class="text-tjb-gray text-sm">Share directly with your care team or doula</span>
-          </li>
-        </ul>
-        <div class="flex flex-col sm:flex-row items-start gap-3">
-          <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="inline-block">
-            <img src="/images/app-store-badge.png" alt="Download on the App Store" class="h-10" loading="lazy" />
-          </a>
-          <div class="relative group inline-block cursor-not-allowed">
-            <img src="/images/google-play-badge.png" alt="Get it on Google Play: coming soon" class="h-10" loading="lazy" />
-            <span class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white text-tjb-charcoal text-xs font-medium px-2.5 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Coming soon</span>
-          </div>
-        </div>
-        <p class="text-sm text-tjb-gray/70 mt-3">Free · No account needed to start</p>
-      </div>
-    </div>
-  </section>
+  <AppShowcase variant="sans" />
 
   <!-- ═══ What Doula & Midwife Support Looks Like ═══ -->
   <section class="py-20 bg-white">

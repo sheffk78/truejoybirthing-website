@@ -1,0 +1,214 @@
+---
+/**
+ * AppShowcase — Reusable app promotion section
+ *
+ * Shows two phone mockups with CSS bezels alongside marketing copy,
+ * bullet points, and store badges. Used on birth-plan-template and
+ * city pages.
+ *
+ * Props:
+ *   variant — 'serif' (Cormorant Garamond, lavender bg, dot bullets) | 'sans' (DM Sans, cream bg, check bullets)
+ *   eyebrow — Optional override for the eyebrow text (default: "Free app")
+ *   heading — Optional override for the h2 (default: "Build your birth plan step by step in the app")
+ *   body    — Optional override for the body paragraph
+ */
+
+const {
+  variant = 'serif',
+  eyebrow = 'Free app',
+  heading = 'Build your birth plan step by step in the app',
+  body = 'Nine guided sections. Hospital preferences, pain management, who\'s in the room — all walked through so nothing gets missed.',
+} = Astro.props;
+
+const isSerif = variant === 'serif';
+const sectionBg = isSerif ? 'bg-tjb-lavender-50' : 'bg-tjb-cream';
+const headingFont = isSerif ? "'Cormorant Garamond', Georgia, serif" : "'DM Sans', sans-serif";
+const headingWeight = isSerif ? 'font-semibold' : 'font-bold';
+---
+
+<section class={`${sectionBg} py-16 md:py-20`}>
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-14">
+
+      <!-- Left: Phone mockups — 45% -->
+      <div class="md:w-[45%] flex justify-center">
+        <div class="relative flex items-start">
+          <!-- Left phone — dashboard, offset down -->
+          <div class="phone-frame w-[46%] flex-shrink-0 mt-10 md:mt-16 z-10">
+            <div class="phone-screen">
+              <img
+                src="/images/tjb-app-dashboard.png"
+                alt="True Joy Birthing app home screen with pregnancy week tracker, birth plan progress, and weekly tips"
+                class="w-full h-full object-cover"
+                width="390"
+                height="844"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <!-- Right phone — birth plan builder -->
+          <div class="phone-frame w-[46%] flex-shrink-0 -ml-3 md:-ml-4 z-20">
+            <div class="phone-screen">
+              <img
+                src="/images/tjb-app-birth-plan-builder.png"
+                alt="True Joy Birthing app birth plan showing completed sections for labor preferences, pain management, and delivery"
+                class="w-full h-full object-cover"
+                width="390"
+                height="844"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Text — 55% -->
+      <div class="md:w-[55%]">
+        <p class="eyebrow mb-3">{eyebrow}</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+        <h2 class={`${headingWeight} text-tjb-charcoal leading-[1.15] mb-4`} style={`font-size: clamp(1.75rem, 4vw, 2.75rem); font-family: ${headingFont};`}>
+          {heading}
+        </h2>
+        <p class="text-tjb-gray text-lg leading-relaxed mb-6" set:html={body} />
+
+        {isSerif ? (
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-tjb-lavender-400 mt-2 flex-shrink-0"></span>
+              <span class="text-tjb-gray leading-relaxed">Step-by-step guidance for every section</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-tjb-lavender-400 mt-2 flex-shrink-0"></span>
+              <span class="text-tjb-gray leading-relaxed">Update your plan anytime — not a static PDF</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-tjb-lavender-400 mt-2 flex-shrink-0"></span>
+              <span class="text-tjb-gray leading-relaxed">Share directly with your care team or doula</span>
+            </li>
+          </ul>
+        ) : (
+          <ul class="space-y-2 mb-6">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-tjb-lavender-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+              <span class="text-tjb-gray text-sm">Step-by-step guidance for every section</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-tjb-lavender-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+              <span class="text-tjb-gray text-sm">Update your plan anytime — not a static PDF</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-tjb-lavender-600 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+              <span class="text-tjb-gray text-sm">Share directly with your care team or doula</span>
+            </li>
+          </ul>
+        )}
+
+        <div class="flex items-center gap-3 mb-2">
+          <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180">
+            <img src="/images/app-store-badge.svg" alt="Download on the App Store" class="h-12" loading="lazy" />
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.truejoybirthing.app" class="relative group">
+            <img src="/images/google-play-badge.png" alt="Get it on Google Play" class="h-14" loading="lazy" />
+            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full bg-tjb-charcoal text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Coming soon</span>
+          </a>
+        </div>
+        <p class="text-sm text-tjb-gray">Free · No account needed to start</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ═══════════════════════════════════════════
+     Phone mockup frame — CSS-only iPhone bezel
+     Makes screenshots unmistakably read as "app screens"
+     ═══════════════════════════════════════════ */
+  .phone-frame {
+    position: relative;
+    background: #111;
+    border-radius: 1.75rem;
+    padding: 0.3rem;
+    box-shadow:
+      0 25px 50px -12px rgba(0, 0, 0, 0.28),
+      0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  }
+
+  /* Dynamic Island */
+  .phone-frame::before {
+    content: '';
+    position: absolute;
+    top: 0.45rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 26%;
+    height: 0.85rem;
+    background: #111;
+    border-radius: 1rem;
+    z-index: 30;
+  }
+
+  /* Home indicator bar */
+  .phone-frame::after {
+    content: '';
+    position: absolute;
+    bottom: 0.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    height: 0.22rem;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 0.11rem;
+    z-index: 30;
+  }
+
+  .phone-screen {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  /* Screen reflection — subtle gradient overlay for realism */
+  .phone-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.02) 40%,
+      transparent 100%
+    );
+    z-index: 10;
+    pointer-events: none;
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+
+  /* Status bar time — adds "live app" feel */
+  .phone-screen::after {
+    content: '9:41';
+    position: absolute;
+    top: 0.55rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.45);
+    letter-spacing: 0.02em;
+    z-index: 20;
+    pointer-events: none;
+  }
+
+  .phone-screen img {
+    display: block;
+    border-radius: 1.5rem;
+    width: 100%;
+    height: auto;
+  }
+</style>
