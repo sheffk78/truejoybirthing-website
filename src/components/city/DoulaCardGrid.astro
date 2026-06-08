@@ -28,6 +28,7 @@ interface Props {
     credential?: string;
     practice?: string;
     url?: string;
+    photo?: string;
     isAmbassador?: boolean;
     isVerified?: boolean;
     description?: string;
@@ -35,7 +36,7 @@ interface Props {
     serviceArea?: string;
     acceptsMedicaid?: boolean;
     services?: string[];
-    acceptingClients?: boolean;
+    acceptingClients?: boolean | string;
     isMidwife?: boolean;
   }>;
   city: string;
@@ -61,10 +62,21 @@ function getCityName(city: string) {
         const verified = d.isVerified !== false && !!d.url; // Default to verified if they have a URL
         return (
           <div class={`bg-tjb-cream rounded-xl p-6 shadow-sm border flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200 ${verified ? 'border-tjb-lavender-200/50 hover:border-tjb-lavender-300' : 'border-tjb-lavender-100 border-dashed'}`}>
-            {/* Circle monogram */}
-            <div class={`w-14 h-14 rounded-full flex items-center justify-center mb-4 ${verified ? 'bg-tjb-lavender-100' : 'bg-tjb-lavender-50'}`}>
-              <span class="text-2xl font-semibold text-tjb-lavender-700" style="font-family: 'Cormorant Garamond', Georgia, serif;">{getInitial(d.name)}</span>
-            </div>
+            {/* Photo or circle monogram */}
+            {d.photo ? (
+              <img
+                src={d.photo}
+                alt={`Photo of ${d.name}`}
+                class="w-14 h-14 rounded-full object-cover mb-4"
+                width="56"
+                height="56"
+                loading="lazy"
+              />
+            ) : (
+              <div class={`w-14 h-14 rounded-full flex items-center justify-center mb-4 ${verified ? 'bg-tjb-lavender-100' : 'bg-tjb-lavender-50'}`}>
+                <span class="text-2xl font-semibold text-tjb-lavender-700" style="font-family: 'Cormorant Garamond', Georgia, serif;">{getInitial(d.name)}</span>
+              </div>
+            )}
 
             {/* Name */}
             <h3 class="text-lg font-semibold text-tjb-charcoal leading-tight mb-1" style="font-family: 'Cormorant Garamond', Georgia, serif;">
