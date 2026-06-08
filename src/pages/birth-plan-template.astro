@@ -142,44 +142,14 @@ const schema = {
     <div class="max-w-6xl mx-auto px-6">
       <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
 
-        <!-- Left: Text — 55% -->
-        <div class="md:w-[55%]">
-          <p class="eyebrow mb-3">Free app</p>
-          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-          <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(1.75rem, 4vw, 2.75rem); font-family: 'Cormorant Garamond', Georgia, serif;">
-            Build your plan step by step
-          </h2>
-          <p class="text-tjb-gray text-lg leading-relaxed mb-6">
-            Nine guided sections. Hospital preferences, pain management, who's in the room, all walked through so nothing gets missed.
-          </p>
-          <ul class="space-y-3 mb-6">
-            <li class="flex items-start gap-3">
-              <span class="w-2 h-2 rounded-full bg-tjb-lavender-400 mt-2 flex-shrink-0"></span>
-              <span class="text-tjb-gray leading-relaxed">Walkthrough videos for each section</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-2 h-2 rounded-full bg-tjb-lavender-400 mt-2 flex-shrink-0"></span>
-              <span class="text-tjb-gray leading-relaxed">Update your plan anytime, not a static PDF</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-2 h-2 rounded-full bg-tjb-lavender-400 mt-2 flex-shrink-0"></span>
-              <span class="text-tjb-gray leading-relaxed">Share with your doula directly</span>
-            </li>
-          </ul>
-          <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180">
-            <img src="/images/app-store-badge.svg" alt="Download on the App Store" class="h-12" loading="lazy" />
-          </a>
-          <p class="text-sm text-tjb-gray mt-2">Free · No account needed</p>
-        </div>
-
-        <!-- Right: Phone mockups — 45% -->
+        <!-- Left: Phone mockups — 45% -->
         <div class="md:w-[45%] flex justify-center">
           <div class="relative w-full max-w-sm">
             <!-- Back phone -->
             <div class="absolute top-0 left-0 w-[75%] z-0">
               <img
                 src="/images/tjb-app-dashboard.png"
-                alt="True Joy Birthing app dashboard showing birth plan sections"
+                alt="True Joy Birthing app dashboard showing pregnancy journey and birth plan"
                 class="w-full rounded-2xl shadow-lg"
                 width="390"
                 height="844"
@@ -198,6 +168,42 @@ const schema = {
               />
             </div>
           </div>
+        </div>
+
+        <!-- Right: Text — 55% -->
+        <div class="md:w-[55%]">
+          <p class="eyebrow mb-3">Free app</p>
+          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+          <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(1.75rem, 4vw, 2.75rem); font-family: 'Cormorant Garamond', Georgia, serif;">
+            Build your birth plan step by step in the app
+          </h2>
+          <p class="text-tjb-gray text-lg leading-relaxed mb-6">
+            Nine guided sections. Hospital preferences, pain management, who's in the room — all walked through so nothing gets missed.
+          </p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-tjb-lavender-400 mt-2 flex-shrink-0"></span>
+              <span class="text-tjb-gray leading-relaxed">Step-by-step guidance for every section</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-tjb-lavender-400 mt-2 flex-shrink-0"></span>
+              <span class="text-tjb-gray leading-relaxed">Update your plan anytime — not a static PDF</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-tjb-lavender-400 mt-2 flex-shrink-0"></span>
+              <span class="text-tjb-gray leading-relaxed">Share directly with your care team or doula</span>
+            </li>
+          </ul>
+          <div class="flex items-center gap-3 mb-2">
+            <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180">
+              <img src="/images/app-store-badge.svg" alt="Download on the App Store" class="h-12" loading="lazy" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.truejoybirthing.app" class="relative group">
+              <img src="/images/google-play-badge.svg" alt="Get it on Google Play" class="h-12" loading="lazy" />
+              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full bg-tjb-charcoal text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Coming soon</span>
+            </a>
+          </div>
+          <p class="text-sm text-tjb-gray">Free · No account needed to start</p>
         </div>
 
       </div>
