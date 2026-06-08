@@ -144,9 +144,9 @@ const schema = {
 
         <!-- Left: Phone mockups — 45% -->
         <div class="md:w-[45%] flex justify-center">
-          <div class="relative w-full max-w-sm">
-            <!-- Back phone -->
-            <div class="absolute top-0 left-0 w-[75%] z-0">
+          <div class="flex items-start gap-4 md:gap-6 w-full">
+            <!-- Left phone — dashboard, offset down slightly -->
+            <div class="w-[47%] flex-shrink-0 pt-8">
               <img
                 src="/images/tjb-app-dashboard.png"
                 alt="True Joy Birthing app home screen with pregnancy week tracker, birth plan progress, and weekly tips"
@@ -156,8 +156,8 @@ const schema = {
                 loading="lazy"
               />
             </div>
-            <!-- Front phone — offset right and down -->
-            <div class="relative ml-[25%] mt-12 w-[75%] z-10">
+            <!-- Right phone — birth plan builder -->
+            <div class="w-[47%] flex-shrink-0">
               <img
                 src="/images/tjb-app-birth-plan-builder.png"
                 alt="True Joy Birthing app birth plan showing completed sections for labor preferences, pain management, and delivery"
