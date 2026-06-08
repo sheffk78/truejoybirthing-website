@@ -79,6 +79,15 @@ export interface CityData {
   nearbyCities: string[];
   testimonials?: Testimonial[];  // Real client quotes; if absent, show 'What local moms ask' Q&A
   enableBlogResources?: boolean;  // Show hero-image blog cards vs icon cards in Related Resources
+  heroImage?: string;             // City-specific hero skyline image (e.g. '/images/denver-co-birth-doula-skyline.webp')
+  supportSceneImage?: string;     // City-specific support scene image (e.g. '/images/denver-support-scene.webp')
+  supportSceneAlt?: string;       // City-specific support scene alt text
+  ogImage?: string;               // City-specific OG image URL (e.g. 'https://truejoybirthing.com/images/og-city-denver-co.webp')
+  midwifeInfo?: {                 // City-specific midwife section text (if absent, generic text is used)
+    paragraph: string;            // Full midwife landscape paragraph
+    credentialTypes: string;      // e.g. " and RMs" for CO, " and LMs" for WA, "" for generic
+    credentialDetail: string;     // e.g. "In Colorado, Registered Midwives (RMs) are specifically licensed..."
+  };
 }
 
 export const cities: Record<string, CityData> = {
@@ -2064,6 +2073,15 @@ export const cities: Record<string, CityData> = {
     lng: -104.9903,
     publishedDate: "2026-06-04",
     enableBlogResources: true,
+    heroImage: "/images/denver-co-birth-doula-skyline.webp",
+    supportSceneImage: "/images/denver-support-scene.webp",
+    supportSceneAlt: "A doula walking alongside an expectant mom on a tree-lined path with the Colorado Front Range in the distance: Denver birth support",
+    ogImage: "https://truejoybirthing.com/images/og-city-denver-co-v2.webp",
+    midwifeInfo: {
+      paragraph: "Colorado licenses Certified Professional Midwives (CPMs) and Registered Midwives (RMs), making home birth midwifery legally regulated in the state. That means if you're planning a home birth or birth center birth in {city}, your midwife operates under a state-issued license, not in a legal gray area. On the hospital side, Certified Nurse-Midwives (CNMs) practice in all major Denver hospitals, including UCHealth, Saint Joe's, and P/SL, so hospital-based midwifery care is widely available for {city} families.",
+      credentialTypes: " and RMs",
+      credentialDetail: "In Colorado, Registered Midwives (RMs) are specifically licensed by the state to attend out-of-hospital births, giving",
+    },
     culture: "Denver is Colorado's largest birth market and one of the most doula-friendly cities in the Mountain West, the state's Medicaid doula coverage (since January 2024 via HB 23-1027) has accelerated adoption, and the local birth community is organized around a strong network of doulas and birth centers. UCHealth and HealthOne (HCA Healthcare) split the hospital market, and families who know which system their OB delivers at have a real advantage in navigating Denver's sprawl.",
     heroLocalDetail: "UCHealth University of Colorado Hospital is on the Anschutz Medical Campus in Aurora, about 20 minutes east of downtown via I-70 or Colfax Avenue, and during afternoon rush, I-70 between downtown and the medical campus backs up hard, so Hampden Avenue or MLK Boulevard can be faster. Saint Joseph Hospital is on Lafayette Street just east of downtown, about 5 minutes from City Park. Presbyterian/St. Luke's is at 20th and High Street in the City Park South neighborhood, adjacent to Saint Joe's within the CarePoint Health system. Washington Park's 2.5-mile outer loop and Cheesman Park's paved paths are where Denver moms walk in the third trimester, both are flat, shaded, and close to the major hospitals.",
     hospitalDetails: [
@@ -2276,6 +2294,15 @@ export const cities: Record<string, CityData> = {
     enableBlogResources: true,
     lat: 47.6062,
     lng: -122.3321,
+    heroImage: "/images/seattle-wa-birth-doula-skyline.webp",
+    supportSceneImage: "/images/seattle-support-scene.webp",
+    supportSceneAlt: "A doula walking alongside an expectant mom on a forested path with the Cascade Mountains in the distance: Seattle birth support",
+    ogImage: "https://truejoybirthing.com/images/og-city-seattle-wa-v3.webp",
+    midwifeInfo: {
+      paragraph: "Washington licenses Certified Professional Midwives (CPMs) and Licensed Midwives (LMs), making home birth and birth center midwifery legally regulated and accessible statewide. That means if you're planning a home birth or birth center birth in {city}, your midwife operates under a state-issued license. On the hospital side, Certified Nurse-Midwives (CNMs) practice in all major Seattle hospitals, including Swedish First Hill and UW Medical Center, so hospital-based midwifery care is widely available for {city} families.",
+      credentialTypes: " and LMs",
+      credentialDetail: "In Washington, Licensed Midwives (LMs) are specifically licensed by the state to attend out-of-hospital births, giving",
+    },
     culture: "Seattle is a powerhouse of progressive birth culture, with one of the highest rates of midwifery and out-of-hospital birth in the nation. The city's doulas, birth photographers, and community groups form a tight-knit ecosystem, and organizations like Perinatal Support Washington push relentlessly for equity and access. From Capitol Hill to Ballard, expecting families have no shortage of holistic and collaborative care options.",
     heroLocalDetail: "If you're giving birth in Seattle, your hospital experience likely centers on Pill Hill near Broadway and Jefferson, where UW Medical Center and Swedish First Hill sit blocks apart, or you might head to Eastlake for a birth-center vibe. Interstate 5 can be brutal during rush hour, so factor commute time from neighborhoods like West Seattle or Beacon Hill carefully when choosing your birth location.",
     hospitalDetails: [
@@ -2283,22 +2310,30 @@ export const cities: Record<string, CityData> = {
         name: "Swedish Medical Center First Hill",
         address: "747 Broadway, Seattle, WA 98122",
         thumbnail: "/images/seattle-swedish-first-hill.webp",
-        paragraph: "The largest birthing hospital in Western Washington, delivering more babies annually than any other facility in the region. Swedish offers comprehensive OB/GYN and midwifery services with a Level III NICU, perinatologists for high-risk pregnancies, and their TeamBirth collaborative care model.",
+        paragraph: "The largest birthing hospital in Western Washington, delivering more babies annually than any other facility in the region. Swedish offers comprehensive OB/GYN and midwifery services with a Level III NICU, perinatologists for high-risk pregnancies, and their TeamBirth collaborative care model. If you're delivering at Swedish, having your birth plan ready helps you navigate a busy hospital that serves families from across the region. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started.",
         nicuLevel: "III",
-        medicaid: true,
-        privateRooms: true,
+        vbacPolicy: "Allows TOLAC/VBAC with physician approval",
+        doulaPolicy: "Doulas welcome as support persons",
         midwifeFriendly: true,
+        waterBirth: "Labor tubs available for hydrotherapy; water birth varies by provider",
+        medicaid: true,
+        lactation: true,
+        privateRooms: true,
         url: "https://www.swedish.org/services/pregnancy-and-childbirth",
       },
       {
         name: "UW Medical Center – Montlake",
         address: "1959 NE Pacific Street, Seattle, WA 98195",
         thumbnail: "/images/seattle-uw-montlake.webp",
-        paragraph: "The flagship academic medical center of UW Medicine, offering high-risk obstetrics, certified nurse midwifery services, and a Level III NICU with close partnership to Seattle Children's Hospital for the most complex neonatal cases. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here.",
+        paragraph: "The flagship academic medical center of UW Medicine, offering high-risk obstetrics, certified nurse midwifery services, and a Level III NICU with close partnership to Seattle Children's Hospital for the most complex neonatal cases. UW Medicine's midwifery program is one of the strongest in the region. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here.",
         nicuLevel: "III",
-        medicaid: true,
-        privateRooms: true,
+        vbacPolicy: "Allows TOLAC/VBAC, dedicated VBAC program with midwives",
+        doulaPolicy: "Doulas welcome as support persons, integrated into care team",
         midwifeFriendly: true,
+        waterBirth: "Labor tubs available for hydrotherapy; water birth not routinely offered per hospital protocol",
+        medicaid: true,
+        lactation: true,
+        privateRooms: true,
         url: "https://www.uwmedicine.org/locations/uw-medical-center-montlake/birth-unit",
       },
       {
@@ -2307,9 +2342,12 @@ export const cities: Record<string, CityData> = {
         thumbnail: "/images/seattle-uw-northwest.webp",
         paragraph: "A community-oriented hospital in north Seattle, part of UW Medicine since 2010, offering a family birth center with midwifery support and a Level II NICU for babies who need extra care.",
         nicuLevel: "II",
-        medicaid: true,
-        privateRooms: true,
+        vbacPolicy: "VBAC available with physician approval; discuss with your provider",
+        doulaPolicy: "Doulas welcome as support persons",
         midwifeFriendly: true,
+        medicaid: true,
+        lactation: true,
+        privateRooms: true,
         url: "https://www.uwmedicine.org/locations/uw-medical-center-northwest",
       },
       {
@@ -2318,9 +2356,12 @@ export const cities: Record<string, CityData> = {
         thumbnail: "/images/seattle-overlake.webp",
         paragraph: "Serving Bellevue and the Eastside, Overlake features a Level III NICU and a well-regarded midwifery practice integrated into its family birth center, with private labor and delivery rooms.",
         nicuLevel: "III",
-        medicaid: true,
-        privateRooms: true,
+        vbacPolicy: "Allows TOLAC/VBAC with physician approval",
+        doulaPolicy: "Doulas welcome as support persons",
         midwifeFriendly: true,
+        medicaid: true,
+        lactation: true,
+        privateRooms: true,
         url: "https://www.overlakehospital.org",
       },
       {
@@ -2328,9 +2369,12 @@ export const cities: Record<string, CityData> = {
         address: "751 NE Blakely Drive, Issaquah, WA 98029",
         paragraph: "A growing suburban campus of Swedish offering a full birth center with labor and delivery services, midwifery care, and a Level II NICU, serving families on the Eastside and Sammamish Plateau.",
         nicuLevel: "II",
-        medicaid: true,
-        privateRooms: true,
+        vbacPolicy: "VBAC available with physician approval; consult your provider",
+        doulaPolicy: "Doulas welcome as support persons",
         midwifeFriendly: true,
+        medicaid: true,
+        lactation: true,
+        privateRooms: true,
         url: "https://www.swedish.org/services/pregnancy-and-childbirth",
       },
     ],

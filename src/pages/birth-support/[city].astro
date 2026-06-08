@@ -25,6 +25,8 @@ const {
   heroLocalDetail, hospitalDetails, birthCenterDetails,
   localDoulas, medicaidNote, insuranceNote, faqs, nearbyCities,
   testimonials,
+  heroImage: heroImageSlug, supportSceneImage, supportSceneAlt, ogImage: ogImageSlug,
+  midwifeInfo,
 }: CityData = data;
 
 // Medicaid helper (must come before pageDesc)
@@ -51,9 +53,11 @@ const stateFullName = stateNames[state] || state;
 const pageTitle = `${city} Doula | Costs & Medicaid Info`;
 const pageDesc = `Looking for a doula in ${city}? Costs $${costLow}–$${costHigh}, ${medicaidCovers ? 'Medicaid covers doulas' : 'Medicaid does not cover doulas'}, hospital policies, and the free Joyful Birth Plan to walk in prepared.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
-const ogImage = slug === 'seattle-wa' ? 'https://truejoybirthing.com/images/og-city-seattle-wa-v3.webp' : `https://truejoybirthing.com/images/og-city-${slug}-v2.webp`;
-const heroImage = `/images/${slug}-birth-doula-skyline.webp`;
+const ogImage = ogImageSlug || `https://truejoybirthing.com/images/og-city-${slug}-v2.webp`;
+const heroImage = heroImageSlug || '/images/doula-breastfeeding.webp';
 const heroAlt = `${city} birth doula: costs, Medicaid, and hospital info for ${state} families`;
+const supportImage = supportSceneImage || '/images/doula-walking.webp';
+const supportImageAlt = supportSceneAlt || `A doula walking alongside an expectant mom, offering continuous labor support`;
 
 // Section images — same across all locations (Jeff approved keeping
 // photos consistent across cities; 4:3 aspect ratio for proper fit)
@@ -178,7 +182,7 @@ const schema = {
         </div>
         <div class="relative">
           <img
-            src={slug === 'denver-co' ? '/images/denver-co-birth-doula-skyline.webp' : slug === 'seattle-wa' ? '/images/seattle-wa-birth-doula-skyline.webp' : '/images/doula-breastfeeding.webp'}
+            src={heroImage}
             alt={heroAlt}
             class="w-full aspect-[3/4] object-cover rounded-2xl shadow-lg"
             width="1200"
@@ -206,11 +210,11 @@ const schema = {
             <p class="text-sm text-tjb-gray">A <strong>midwife</strong> is your medical provider: she can deliver your baby, write prescriptions, and monitor your health. A <strong>doula</strong> is your support person: she keeps you comfortable, informed, and emotionally held, but doesn't do medical tasks. You can have both, and many {city} moms do. <a href="/what-is-a-doula/" class="text-tjb-lavender-600 hover:underline">Learn more about what a doula actually does →</a></p>
           </div>
           <img
-            src={slug === 'denver-co' ? '/images/denver-support-scene.webp' : slug === 'seattle-wa' ? '/images/seattle-support-scene.webp' : '/images/doula-walking.webp'}
-            alt={slug === 'denver-co' ? `A doula walking alongside an expectant mom on a tree-lined path with the Colorado Front Range in the distance: ${city} birth support` : slug === 'seattle-wa' ? `A doula walking alongside an expectant mom on a forested path with the Cascade Mountains in the distance: ${city} birth support` : `A doula walking alongside an expectant mom, offering continuous labor support`}
+            src={supportImage}
+            alt={supportImageAlt}
             class="w-full rounded-xl shadow-md"
-            width={slug === 'denver-co' || slug === 'seattle-wa' ? '1024' : '1024'}
-            height={slug === 'denver-co' ? '576' : slug === 'seattle-wa' ? '768' : '1536'}
+            width="1024"
+            height="768"
             loading="lazy"
           />
         </div>
@@ -411,14 +415,12 @@ const schema = {
         <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
         <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-6" style="font-family: 'Cormorant Garamond', Georgia, serif;">Midwife Care in {city}</h2>
       </div>
-      {slug === 'denver-co' ? (
-        <p>Colorado licenses Certified Professional Midwives (CPMs) and Registered Midwives (RMs), making home birth midwifery legally regulated in the state. That means if you're planning a home birth or birth center birth in {city}, your midwife operates under a state-issued license, not in a legal gray area. On the hospital side, Certified Nurse-Midwives (CNMs) practice in all major Denver hospitals, including UCHealth, Saint Joe's, and P/SL, so hospital-based midwifery care is widely available for {city} families.</p>
-      ) : slug === 'seattle-wa' ? (
-        <p>Washington licenses Certified Professional Midwives (CPMs) and Licensed Midwives (LMs), making home birth and birth center midwifery legally regulated and accessible statewide. That means if you're planning a home birth or birth center birth in {city}, your midwife operates under a state-issued license. On the hospital side, Certified Nurse-Midwives (CNMs) practice in all major Seattle hospitals, including Swedish First Hill and UW Medical Center, so hospital-based midwifery care is widely available for {city} families.</p>
+      {midwifeInfo ? (
+        <p>{midwifeInfo.paragraph.replace(/{city}/g, city)}</p>
       ) : (
         <p>Many states license Certified Professional Midwives (CPMs) and regulate home birth and birth center midwifery. Check your state's specific licensing requirements. On the hospital side, Certified Nurse-Midwives (CNMs) practice in most major hospitals, so hospital-based midwifery care is widely available.</p>
       )}
-      <p>The distinction matters: <strong>CNMs</strong> are nurse-practitioners who attend hospital births and can write prescriptions, while <strong>CPMs{slug === 'denver-co' ? ' and RMs' : slug === 'seattle-wa' ? ' and LMs' : ''}</strong> attend home and birth center births. {slug === 'denver-co' ? 'In Colorado, Registered Midwives (RMs) are specifically licensed by the state to attend out-of-hospital births, giving' : slug === 'seattle-wa' ? 'In Washington, Licensed Midwives (LMs) are specifically licensed by the state to attend out-of-hospital births, giving' : 'In states that license them, these midwives give'} {city} families a regulated, legal pathway to midwifery care outside the hospital setting.</p>
+      <p>The distinction matters: <strong>CNMs</strong> are nurse-practitioners who attend hospital births and can write prescriptions, while <strong>CPMs{midwifeInfo?.credentialTypes || ''}</strong> attend home and birth center births. {midwifeInfo ? midwifeInfo.credentialDetail.replace(/{city}/g, city) : 'In states that license them, these midwives give'} {city} families a regulated, legal pathway to midwifery care outside the hospital setting.</p>
       <p><a href="/midwife-near-me/" class="text-tjb-lavender-600 hover:underline">Learn more about midwife types</a> and <a href="/home-birth-midwife/" class="text-tjb-lavender-600 hover:underline">finding a midwife near you</a>.</p>
     </div>
   </section>
