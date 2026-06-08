@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { width: 1200px; height: 630px; overflow: hidden; background: #FAF8F5; }
+body { width: 1200px; height: 630px; overflow: hidden; background: #2D2B55; }
 
 .og-card {
   width: 1200px;
@@ -17,7 +17,7 @@ body { width: 1200px; height: 630px; overflow: hidden; background: #FAF8F5; }
   overflow: hidden;
 }
 
-/* LEFT HALF — PDF mockup */
+/* LEFT HALF — PDF mockup on lavender gradient */
 .image-half {
   width: 50%;
   height: 630px;
@@ -27,7 +27,6 @@ body { width: 1200px; height: 630px; overflow: hidden; background: #FAF8F5; }
   justify-content: center;
   position: relative;
   overflow: hidden;
-  padding: 40px;
 }
 
 /* Stacked document mockup effect */
@@ -172,7 +171,7 @@ body { width: 1200px; height: 630px; overflow: hidden; background: #FAF8F5; }
   line-height: 1;
 }
 
-/* RIGHT HALF — text content */
+/* RIGHT HALF — text content on brand cream */
 .text-half {
   width: 50%;
   height: 630px;
@@ -180,49 +179,58 @@ body { width: 1200px; height: 630px; overflow: hidden; background: #FAF8F5; }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px 70px 60px 50px;
+  padding: 60px 60px 60px 50px;
   position: relative;
   overflow: hidden;
 }
 
-/* Top accent bar */
+/* Accent bars — matches Denver template */
 .text-half::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 5px;
-  background: linear-gradient(90deg, #D8A0C4, #7C6FA0);
+  height: 6px;
+  background: #D8A0C4;
+  z-index: 10;
+}
+.text-half::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 6px;
+  background: #D8A0C4;
   z-index: 10;
 }
 
-/* Watermark */
+/* Subtle watermark behind text */
 .watermark {
   position: absolute;
-  bottom: -30px;
+  bottom: -20px;
   right: -10px;
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 180px;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 200px;
   font-weight: 700;
   letter-spacing: -8px;
-  color: rgba(110, 108, 153, 0.04);
+  color: rgba(110, 108, 153, 0.05);
   line-height: 1;
   user-select: none;
   white-space: nowrap;
   z-index: 1;
 }
 
+/* Rose accent line above label — matches Denver template */
 .rose-line {
   width: 40px;
   height: 3px;
   background: #D8A0C4;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   position: relative;
   z-index: 5;
 }
 
 .label {
   font-family: 'Source Sans 3', system-ui, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: #6E6C99;
   text-transform: uppercase;
@@ -232,90 +240,48 @@ body { width: 1200px; height: 630px; overflow: hidden; background: #FAF8F5; }
   z-index: 5;
 }
 
-.heading {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 52px;
-  font-weight: 700;
-  color: #2D2B55;
-  line-height: 1.1;
-  margin-bottom: 16px;
+.heading-line {
   position: relative;
   z-index: 5;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.heading-name {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: #2D2B55;
+  letter-spacing: -1px;
+}
+
+.heading-detail {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: #6E6C99;
+  letter-spacing: -1px;
 }
 
 .subtext {
   font-family: 'Source Sans 3', system-ui, sans-serif;
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 400;
   color: #6E6C99;
-  line-height: 1.5;
-  margin-bottom: 28px;
+  letter-spacing: 0.5px;
   position: relative;
   z-index: 5;
 }
 
-.features {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 32px;
-  position: relative;
-  z-index: 5;
-}
-
-.features li {
-  font-family: 'Source Sans 3', system-ui, sans-serif;
-  font-size: 16px;
-  color: #4A4870;
-  padding: 6px 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.features li .dot {
-  width: 7px;
-  height: 7px;
-  background: #7C6FA0;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.cta-row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  position: relative;
-  z-index: 5;
-}
-
-.cta-btn {
-  font-family: 'Source Sans 3', system-ui, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  background: #7C6FA0;
-  padding: 12px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  letter-spacing: 0.3px;
-}
-
-.cta-tag {
-  font-family: 'Source Sans 3', system-ui, sans-serif;
-  font-size: 14px;
-  color: #9B98B8;
-  font-weight: 500;
-}
-
-/* Logo bottom */
+/* Logo bottom-right — matches Denver template */
 .logo-wrap {
   position: absolute;
-  bottom: 28px;
-  right: 50px;
+  bottom: 24px;
+  right: 40px;
   z-index: 10;
 }
 .logo-wrap img {
-  height: 36px;
+  height: 40px;
   width: auto;
 }
 </style>
@@ -376,22 +342,18 @@ body { width: 1200px; height: 630px; overflow: hidden; background: #FAF8F5; }
     </div>
   </div>
 
-  <!-- RIGHT: Text content -->
+  <!-- RIGHT: Brand text content — matches Denver template style -->
   <div class="text-half">
-    <div class="watermark">BIRTH</div>
+    <div class="watermark">BIRTH PLAN</div>
     <div class="rose-line"></div>
-    <div class="label">Free template</div>
-    <div class="heading">Free Birth Plan<br>Template</div>
-    <div class="subtext">A nurse-readable birth plan built by a certified doula. Fillable PDF you can bring to your next appointment.</div>
-    <ul class="features">
-      <li><span class="dot"></span>5 sections, fillable PDF</li>
-      <li><span class="dot"></span>Nurse-readable in 30 seconds</li>
-      <li><span class="dot"></span>Guided walkthrough in the free app</li>
-    </ul>
-    <div class="cta-row">
-      <span class="cta-btn">Download Free Template</span>
-      <span class="cta-tag">No email required</span>
+    <div class="label">Free Template</div>
+    <div class="heading-line">
+      <span class="heading-name">Birth Plan</span>
     </div>
+    <div class="heading-line">
+      <span class="heading-detail">Template</span>
+    </div>
+    <div class="subtext">Fillable PDF · Nurse-Readable · Built by a Doula</div>
     <div class="logo-wrap">
       <img src="/Users/socializerender/Projects/truejoybirthing-website/public/images/logo-white.svg" alt="True Joy Birthing">
     </div>
