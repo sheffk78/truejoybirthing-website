@@ -203,7 +203,7 @@ const schema = {
               <img src="/images/app-store-badge.svg" alt="Download on the App Store" class="h-12" loading="lazy" />
             </a>
             <a href="https://play.google.com/store/apps/details?id=com.truejoybirthing.app" class="relative group">
-              <img src="/images/google-play-badge.svg" alt="Get it on Google Play" class="h-12" loading="lazy" />
+              <img src="/images/google-play-badge.png" alt="Get it on Google Play" class="h-12" loading="lazy" />
               <span class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full bg-tjb-charcoal text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Coming soon</span>
             </a>
           </div>
@@ -520,25 +520,25 @@ const schema = {
   .phone-frame {
     position: relative;
     background: #111;
-    border-radius: 2.25rem;
-    padding: 0.6rem;
+    border-radius: 1.75rem;
+    padding: 0.3rem;
     box-shadow:
-      0 30px 60px -15px rgba(0, 0, 0, 0.3),
+      0 25px 50px -12px rgba(0, 0, 0, 0.28),
       0 0 0 1px rgba(255, 255, 255, 0.08) inset,
-      inset 0 1px 0 rgba(255, 255, 255, 0.15);
+      inset 0 1px 0 rgba(255, 255, 255, 0.12);
   }
 
   /* Dynamic Island */
   .phone-frame::before {
     content: '';
     position: absolute;
-    top: 0.75rem;
+    top: 0.45rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 30%;
-    height: 1.2rem;
+    width: 26%;
+    height: 0.85rem;
     background: #111;
-    border-radius: 1.25rem;
+    border-radius: 1rem;
     z-index: 30;
   }
 
@@ -546,19 +546,19 @@ const schema = {
   .phone-frame::after {
     content: '';
     position: absolute;
-    bottom: 0.5rem;
+    bottom: 0.3rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 38%;
-    height: 0.3rem;
+    width: 35%;
+    height: 0.22rem;
     background: rgba(255, 255, 255, 0.35);
-    border-radius: 0.15rem;
+    border-radius: 0.11rem;
     z-index: 30;
   }
 
   .phone-screen {
     position: relative;
-    border-radius: 1.65rem;
+    border-radius: 1.5rem;
     overflow: hidden;
     background: #fff;
   }
@@ -579,20 +579,20 @@ const schema = {
     );
     z-index: 10;
     pointer-events: none;
-    border-radius: 1.65rem 1.65rem 0 0;
+    border-radius: 1.5rem 1.5rem 0 0;
   }
 
   /* Status bar time — adds "live app" feel */
   .phone-screen::after {
     content: '9:41';
     position: absolute;
-    top: 0.9rem;
+    top: 0.55rem;
     left: 50%;
     transform: translateX(-50%);
     font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     font-weight: 600;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.45);
     letter-spacing: 0.02em;
     z-index: 20;
     pointer-events: none;
@@ -600,7 +600,7 @@ const schema = {
 
   .phone-screen img {
     display: block;
-    border-radius: 1.65rem;
+    border-radius: 1.5rem;
     width: 100%;
     height: auto;
   }
