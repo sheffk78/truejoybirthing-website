@@ -132,6 +132,9 @@ export const cities: Record<string, CityData> = {
     costLow: 650,
     costHigh: 1600,
     shelbiServesHere: false,
+    localDoulas: [
+      { name: "Abilene Birth & Wellness", credential: "Midwifery Practice", practice: "Abilene Birth & Wellness" },
+    ],
     culture: "Abilene is a West Texas regional hub anchored by Dyess Air Force Base and three Christian universities. The birth community is small but growing \u2014 a military and college-town mix of young families, deployed-though-pregnant spouses, and first-time parents who value practical, evidence-based preparation. Hendrick Medical Center consolidating all L&D services to its north campus in June 2026 means the whole region\u2019s hospital births now flow through one location.",
     heroLocalDetail: "Hendrick Medical Center sits at 1900 Pine Street in north Abilene, and if you\u2019re coming from the south side or the Dyess AFB area, Pine Street between South 14th and the hospital entrance can slow down during rush. I-20 is the main east\u2013west artery through town \u2014 exits 279B (Pine Street) and 284 (Judge Ely Boulevard) both get you to the hospital, but Judge Ely tends to move faster at peak times. Nelson Park\u2019s walking trail on the east side of town is where a lot of Abilene moms head for third-trimester evenings \u2014 flat, well-lit, and about 10 minutes from the hospital.",
     hospitalDetails: [
@@ -219,6 +222,9 @@ export const cities: Record<string, CityData> = {
     costLow: 700,
     costHigh: 1600,
     shelbiServesHere: false,
+    localDoulas: [
+      { name: "Birth Center of Beaumont", credential: "Birth Center", practice: "Birth Center of Beaumont" },
+    ],
     culture: "Beaumont sits in the Golden Triangle of southeast Texas, where families from Jefferson, Hardin, and Orange counties come for hospital births. The birth community is small but committed, and families here tend to plan carefully \u2014 often traveling from rural areas into the city for delivery.",
     heroLocalDetail: "Families across the Golden Triangle \u2014 from Beaumont, Port Arthur, and Orange \u2014 deliver at St. Elizabeth, where the L&D unit sees a steady volume of births from across the region.",
     hospitalDetails: [
@@ -317,6 +323,9 @@ export const cities: Record<string, CityData> = {
     costLow: 900,
     costHigh: 2800,
     shelbiServesHere: true,
+    localDoulas: [
+      { name: "Urban Family Co-op", credential: "Birth Center", practice: "Dallas Birth Center" },
+    ],
     culture: "Dallas is the largest city in the DFW metroplex and Dallas County, with a huge and diverse birth community. Families deliver at everything from high-volume academic hospitals to community facilities and a midwife-led birth center in Deep Ellum. SB 750 is making doula support more accessible through Medicaid coverage, and the city\u2019s sheer size means there\u2019s a doula for nearly every birth preference and budget \u2014 but that also means navigating a lot of options.",
     heroLocalDetail: "If you\u2019re delivering at Texas Health Dallas, know that the LBJ Freeway (I-635) stretch near Forest Lane can turn a 15-minute drive into 40 during afternoon rush \u2014 plan your route to the hospital before contractions start. Baylor University Medical Center sits at Gaston and Hall in Deep Ellum, where Greenville Avenue weekend traffic and Deep Ellum event nights can gum up your approach; the easiest route from East Dallas is Gaston Ave straight in. Parkland Memorial Hospital is on Harry Hines near I-35E, and that whole Stemmons Corridor corridor backs up hard during 7\u20139 AM and 4\u20136 PM commutes. Medical City Dallas is off Forest Lane at the intersection of I-635 and Central Expressway \u2014 two of the busiest highways in DFW converging right there. If you\u2019re heading to any of these hospitals during rush, know your back-route before you need it. And when those third-trimester evening walks become non-negotiable, White Rock Lake\u2019s 9-mile loop trail is the go-to \u2014 shaded, flat, plenty of parking at White Rock Lake Park and Winfrey Point, with enough bathrooms along the way that you\u2019re never too far from one. The Katy Trail, running from Highland Park through Oak Lawn up to SMU, is another solid option if you\u2019re closer to the center of town.",
     hospitalDetails: [
@@ -679,6 +688,9 @@ export const cities: Record<string, CityData> = {
     costLow: 950,
     costHigh: 2700,
     shelbiServesHere: true,
+    localDoulas: [
+      { name: "North Texas Birth Collective", credential: "Birth Collective", practice: "North Texas Birth Collective" },
+    ],
     culture: "McKinney is one of the fastest-growing suburbs in North Texas, with a mix of established neighborhoods and new development. Families here tend to plan ahead and value detailed preparation \u2014 which makes birth planning especially relevant. The Collin County birth community is active and welcoming.",
     heroLocalDetail: "McKinney families delivering at Baylor Scott & White on Lake Forest Drive \u2014 US-75 construction has been a constant, and if you're coming from the west side of town, the detour routes add real time when you're not in any mood for surprises. Towne Lake's walking loop is where a lot of McKinney moms head for third-trimester evenings \u2014 the path around the lake is flat, well-lit, and close enough to both hospitals that you're not far if things start picking up.",
     hospitalDetails: [
@@ -847,6 +859,9 @@ export const cities: Record<string, CityData> = {
     costLow: 800,
     costHigh: 2000,
     shelbiServesHere: false,
+    localDoulas: [
+      { name: "The Birth Center of Midland", credential: "Birth Center", practice: "The Birth Center of Midland" },
+    ],
     culture: "Midland is the largest city in the Permian Basin and the administrative hub of West Texas oil and gas. The birth community here is small but growing \u2014 the Midland Doula Collective serves the Midland-Odessa area, and The Birth Center of Midland gives families an out-of-hospital option that most cities this size don\u2019t have. Housing costs and infrastructure boom and bust with oil prices, which means the local birth support network has learned to be resourceful.",
     heroLocalDetail: "Midland Memorial sits on Rosalind Redfern Grover Parkway off Loop 250 on the west side of town, and if you\u2019re heading to ORMC in Odessa you\u2019ll take I-20 east about 20 minutes \u2014 both hospitals are accessible, but I-20 between Midland and Odessa can back up during oil-field shift changes. Rock the Basin at Centennial Park is where a lot of Midland moms walk in the third trimester \u2014 flat, shaded, and close enough to both hospitals that you\u2019re not stranded if something picks up.",
     hospitalDetails: [
@@ -928,6 +943,9 @@ export const cities: Record<string, CityData> = {
     costLow: 800,
     costHigh: 2000,
     shelbiServesHere: false,
+    localDoulas: [
+      { name: "Azalea Birth Center", credential: "Birth Center", practice: "Azalea Birth Center" },
+    ],
     culture: "Tyler is the largest city in Northeast Texas and the seat of Smith County, known as the Rose Capital of America for its rose industry and the annual Texas Rose Festival. The regional healthcare hub for East Texas, Tyler draws families from across the region for hospital births \u2014 and the birth community, while smaller than in the big metros, is steady and growing.",
     heroLocalDetail: "CHRISTUS Mother Frances sits off South Broadway in central Tyler, and UT Health Tyler is on the south side near Beckham Avenue. South Broadway between the hospitals can back up during afternoon rush and on Texas Rose Festival weekends in October \u2014 if you\u2019re due in the fall, know your fastest route before contractions start.",
     hospitalDetails: [
@@ -954,6 +972,9 @@ export const cities: Record<string, CityData> = {
     costLow: 700,
     costHigh: 1800,
     shelbiServesHere: false,
+    localDoulas: [
+      { name: "Dulce Birth & Wellness Center", credential: "Birth Center", practice: "Dulce Birth & Wellness Center" },
+    ],
     culture: "Killeen is a military town anchored by Fort Cavazos (formerly Fort Hood) in Bell County, part of the Killeen-Temple-Fort Hood metro. The military population means a high proportion of young families and Tricare-covered births, and the community cycles with deployments and PCS moves. Birth support here runs practical and tight-knit \u2014 doulas who understand military life, Tricare maternity benefits, and the reality of giving birth while a partner is deployed fill a real gap.",
     heroLocalDetail: "AdventHealth Central Texas sits off Clear Creek Road on Killeen\u2019s south side, and Baylor Scott & White in Temple is about a 20-minute drive up US-190 / I-35. If you\u2019re heading to BSW Temple from Killeen during morning rush, expect I-35 between Belton and Temple to slow down \u2014 build in an extra 10\u201315 minutes. The Killeen-Fort Cavazos area is flat and spread out, so most hospital drives are straightforward unless you\u2019re coming from the far west side near Copperas Cove.",
     hospitalDetails: [
@@ -1104,6 +1125,13 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals in Round Rock have labor and delivery?", a: "St. David\u2019s Round Rock Medical Center at 2400 Round Rock Ave is the primary hospital for labor and delivery in Round Rock, with a verified Level II NICU and a full women\u2019s health program. Some Round Rock moms and families also deliver at St. David\u2019s South Austin or St. David\u2019s North Austin Medical Center for additional options. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
       { q: "Does True Joy Birthing work with Round Rock families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Round Rock birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
+    localDoulas: [
+      { name: "Circle Birth", credential: "Birth Doula", practice: "Circle Birth" },
+      { name: "Doula Empowered Birth", credential: "Birth Doula", practice: "Doula Empowered Birth" },
+      { name: "Lacey Dowlearn", credential: "Birth Doula", practice: "Supporting Arms" },
+      { name: "Matriarch Doula Care", credential: "Birth Doula", practice: "Matriarch Doula Care" },
+      { name: "The Natural Birthing Center", credential: "Birth Center", practice: "The Natural Birthing Center" },
+    ],
     nearbyCities: ["austin-tx", "killeen-tx"],
   },
   "richardson-tx": {
@@ -1141,6 +1169,9 @@ export const cities: Record<string, CityData> = {
     costLow: 800,
     costHigh: 2000,
     shelbiServesHere: true,
+    localDoulas: [
+      { name: "Shelbie Cunningham", credential: "Birth Doula", practice: "Shelbie Cunningham Doula Services" },
+    ],
     culture: "Conroe is the seat of Montgomery County and the gateway to Lake Conroe, sitting about 40 minutes north of Houston on I-45. The city has grown fast alongside The Woodlands, and HCA Houston Healthcare Conroe is the only hospital with labor and delivery in Montgomery County. Journey Birth Center, a freestanding birth center in downtown Conroe, gives families an out-of-hospital option that most neighboring counties lack. The mix of long-time Conroe residents and Houston transplants means you\u2019ll find both hospital-first and birth-center preferences in the same community.",
     heroLocalDetail: "HCA Houston Healthcare Conroe sits at 504 Medical Drive, just off I-45 North at the Loop 336 exit. If you\u2019re coming from The Woodlands or Spring, take I-45 North to Exit 87 (Loop 336 West) and follow the hospital signs. Journey Birth Center is at 1202 N San Jacinto St, about 5 minutes from the hospital in downtown Conroe.",
     hospitalDetails: [
