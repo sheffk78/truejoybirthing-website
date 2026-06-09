@@ -109,7 +109,7 @@ import AppShowcase from '../components/AppShowcase.astro';
           <img
             src="/images/birth-plan-mockup-square-new-7.webp"
             alt="The free Joyful Birth Plan — a single page showing the About Me and Labor & Delivery sections"
-            class="w-full max-w-xs h-auto"
+            class="w-full max-w-xs h-auto rounded-lg shadow-lg"
             loading="eager"
             fetchpriority="high"
             width="600"
@@ -209,7 +209,7 @@ import AppShowcase from '../components/AppShowcase.astro';
             <img
               src="/images/birth-plan-mockup-square-new-5.webp"
               alt="The free Joyful Birth Plan — newborn care preferences and the birth plan introduction letter"
-              class="w-full h-full object-contain"
+              class="w-full h-full object-contain rounded shadow-sm"
               loading="lazy"
               width="1200"
               height="973"
@@ -287,27 +287,15 @@ import AppShowcase from '../components/AppShowcase.astro';
 
   <!-- ═══════════════════════════════════════════
        LEAD CAPTURE — Centered single column: image above heading + form
+       Uses shared LeadCaptureForm with bannerImage prop
        ═══════════════════════════════════════════ -->
-  <div id="download" class="bg-white border-t border-tjb-lavender-200/60 py-20 md:py-28">
-    <div class="max-w-2xl mx-auto px-6 text-center">
-      <!-- Mockup image centered above heading -->
-      <div class="flex justify-center mb-8">
-        <img
-          src="/images/birth-plan-mockup-square-new-8.webp"
-          alt="The free Joyful Birth Plan — a two-page overlapping stack showing the introduction letter and newborn care location preferences"
-          class="w-full max-w-xs h-auto"
-          loading="lazy"
-          width="600"
-          height="508"
-        />
-      </div>
-      <LeadCaptureForm
-        heading="Get Your Free Birth Plan"
-        body="Enter your name and email and we'll send you the free fillable birth plan PDF plus a guided walkthrough in the app. Free, no spam, just the tools you need."
-        eyebrow="Free Download"
-      />
-    </div>
-  </div>
+  <LeadCaptureForm
+    heading="Get Your Free Birth Plan"
+    body="Enter your name and email and we'll send you the free fillable birth plan PDF plus a guided walkthrough in the app. Free, no spam, just the tools you need."
+    eyebrow="Free Download"
+    bannerImage="/images/birth-plan-mockup-square-new-8.webp"
+    bannerAlt="The free Joyful Birth Plan — a two-page overlapping stack showing the introduction letter and newborn care location preferences"
+  />
 
   <div class="max-w-3xl mx-auto px-6 -mt-4 text-center">
     <p class="text-sm text-tjb-gray">Already have a plan? <a href="/birth-plan-confidence-session/#book" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">Book a Birth Plan Confidence Session</a></p>
