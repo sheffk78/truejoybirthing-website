@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+import AppShowcase from '../components/AppShowcase.astro';
 ---
 
 <Layout
@@ -32,19 +33,25 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
       <div class="flex flex-col md:flex-row">
 
         <!-- Left: Text — 55% -->
-        <div class="md:w-[55%] px-12 py-24 flex flex-col justify-center">
+        <div class="md:w-[55%] px-6 md:px-12 py-20 md:py-24 flex flex-col justify-center">
           <p class="eyebrow mb-3">Free Joyful Birth Plan</p>
           <h1 class="font-bold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(2.25rem, 5vw, 3.75rem);">
             Your birth plan gives you the words when your doctor recommends something you didn't expect
           </h1>
           <p class="text-tjb-gray text-lg leading-[1.7] mb-8 max-w-[36rem]">
-            A <strong>birth plan</strong> is a document that spells out your preferences for labor, delivery, and postpartum care — so your medical team knows what matters to you. The <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Joyful Birth Plan</a> covers every stage of birth and works in your real hospital room. Download the fillable PDF free, or build your plan in the <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free app</a>.
+            A <strong>birth plan</strong> is a document that spells out your preferences for labor, delivery, and postpartum care — so your medical team knows what matters to you. The <a href="/birth-plan-template/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">Joyful Birth Plan</a> covers every stage of birth and works in your real hospital room. Download the fillable PDF free, or build your plan in the <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">free app</a>.
           </p>
-          <div>
+          <div class="flex flex-wrap items-center gap-4">
             <a href="#download" class="btn-primary">
-              Download free birth plan
+              Get Your Free Joyful Birth Plan
+            </a>
+            <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-secondary">
+              Or try the free app →
             </a>
           </div>
+          <p class="text-sm text-tjb-gray mt-4">
+            Free template · Prefer the app? Build the same joyful birth plan step by step on your phone.
+          </p>
         </div>
 
         <!-- Right: Product mockup — branded placeholder until real PDF screenshots -->
@@ -85,9 +92,14 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
   </div>
 
   <!-- ═══════════════════════════════════════════
+       APP SHOWCASE — Two-phone mockup layout
+       ═══════════════════════════════════════════ -->
+  <AppShowcase variant="serif" />
+
+  <!-- ═══════════════════════════════════════════
        TESTIMONIALS — Pull-quote editorial layout
        ═══════════════════════════════════════════ -->
-  <section class="bg-tjb-cream py-20 md:py-28">
+  <section class="bg-white py-20 md:py-28">
     <div class="max-w-3xl mx-auto px-6">
       <div class="text-center mb-12">
         <p class="eyebrow mb-3 fade-up">What moms are saying</p>
@@ -138,7 +150,7 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
         <p class="eyebrow mb-4 fade-up">What You Get</p>
         <!-- Editorial rule between eyebrow and heading -->
         <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
-        <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15] max-w-2xl mx-auto">
+        <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15] max-w-2xl mx-auto" style="font-family: 'Cormorant Garamond', Georgia, serif;">
           Your Birth Plan Should Be a Communication Tool — Not a Wish List
         </h2>
       </div>
@@ -154,9 +166,9 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
               <h3 class="text-2xl mb-1">Joyful Birth Plan</h3>
               <p class="text-sm text-tjb-lavender-500 font-semibold mb-3">Free · Fillable PDF</p>
               <p class="text-tjb-gray leading-relaxed mb-4 max-w-xl">
-                The free <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Joyful Birth Plan</a> that covers every stage of birth — designed to be read by a nurse in two minutes. Download the free PDF or build your plan in the <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free app</a>. <a href="/birth-plan-for-induction/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Being induced? There's a scenario guide for that</a>. Planning for a specific situation? See our <a href="/c-section-birth-plan/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">C-section birth plan</a> and <a href="/vbac-birth-plan/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">VBAC birth plan</a>, or explore <a href="/birth-plan-scenarios/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">all birth plan scenarios</a>.
+                The free <a href="/birth-plan-template/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">Joyful Birth Plan</a> that covers every stage of birth — designed to be read by a nurse in two minutes. Download the free PDF or build your plan in the <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">free app</a>. <a href="/birth-plan-for-induction/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">Being induced? There's a scenario guide for that</a>. Planning for a specific situation? See our <a href="/c-section-birth-plan/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">C-section birth plan</a> and <a href="/vbac-birth-plan/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">VBAC birth plan</a>, or explore <a href="/birth-plan-scenarios/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">all birth plan scenarios</a>.
               </p>
-              <a href="#download" class="text-tjb-rose-500 font-semibold text-sm border-b border-transparent hover:border-tjb-rose-500 transition-all inline-block pb-0.5">
+              <a href="#download" class="text-tjb-rose-600 font-semibold text-sm border-b border-transparent hover:border-tjb-rose-500 transition-all inline-block pb-0.5">
                 Download free birth plan
               </a>
             </div>
@@ -183,7 +195,7 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
               <h3 class="text-2xl mb-1">Guided Birth Plan Walkthrough</h3>
               <p class="text-sm text-tjb-lavender-500 font-semibold mb-3">$47 one-time · ~60 min of short videos · Watch at your own pace</p>
               <p class="text-tjb-gray leading-relaxed mb-4 max-w-xl">
-                You downloaded the template. Now a certified birth doula walks you through every section — what each choice means, what the tradeoffs are, and what to say when your provider recommends something you didn't expect. Use the <a href="/birth-plan-checklist/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">birth plan checklist</a> to work through each preference point as you go.
+                You downloaded the template. Now a certified birth doula walks you through every section — what each choice means, what the tradeoffs are, and what to say when your provider recommends something you didn't expect. Use the <a href="/birth-plan-checklist/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">birth plan checklist</a> to work through each preference point as you go.
               </p>
               <div class="border-t border-tjb-lavender-300/40 mt-4 mb-4">
                 <div class="py-2.5 border-b border-tjb-lavender-300/40 flex gap-3 items-baseline">
@@ -203,7 +215,7 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
                   <span class="text-sm text-tjb-gray">What to say when a provider surprises you</span>
                 </div>
               </div>
-              <a href="/guided-birth-plan-walkthrough/" class="text-tjb-rose-500 font-semibold text-sm border-b border-transparent hover:border-tjb-rose-500 transition-all inline-block pb-0.5">
+              <a href="/guided-birth-plan-walkthrough/" class="text-tjb-rose-600 font-semibold text-sm border-b border-transparent hover:border-tjb-rose-500 transition-all inline-block pb-0.5">
                 Enroll in the birth plan course
               </a>
             </div>
@@ -217,9 +229,9 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
             <div>
               <h3 class="text-2xl mb-3">Birth Plan Confidence Session</h3>
               <p class="text-tjb-gray leading-relaxed mb-4 max-w-xl">
-                Sit down with a certified birth doula via Zoom and walk through your plan line by line. Get the words. Practice the conversations. Walk in prepared. <a href="/benefits-of-a-doula/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">See how a doula changes outcomes</a>.
+                Sit down with a certified birth doula via Zoom and walk through your plan line by line. Get the words. Practice the conversations. Walk in prepared. <a href="/benefits-of-a-doula/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">See how a doula changes outcomes</a>.
               </p>
-              <a href="/birth-plan-confidence-session/#book" class="text-tjb-rose-500 font-semibold text-sm border-b border-transparent hover:border-tjb-rose-500 transition-all inline-block pb-0.5">
+              <a href="/birth-plan-confidence-session/#book" class="text-tjb-rose-600 font-semibold text-sm border-b border-transparent hover:border-tjb-rose-500 transition-all inline-block pb-0.5">
                 Book a Birth Plan Confidence Session
               </a>
             </div>
@@ -242,11 +254,38 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
     </div>
   </section>
 
-  <LeadCaptureForm />
+  <!-- ═══════════════════════════════════════════
+       LEAD CAPTURE — Email form with product mockup
+       ═══════════════════════════════════════════ -->
+  <div class="bg-white border-t border-tjb-lavender-200/60">
+    <div class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+      <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+        <!-- Left: Product mockup -->
+        <div class="md:w-[45%] flex justify-center">
+          <img
+            src="/images/birth-plan-banner.webp"
+            alt="Joyful Birth Plan — fillable PDF checklist for labor, monitoring, and postpartum preferences"
+            class="w-full max-w-sm rounded-xl shadow-md"
+            loading="lazy"
+            width="800"
+            height="250"
+          />
+        </div>
+        <!-- Right: Form -->
+        <div class="md:w-[55%]">
+          <LeadCaptureForm
+            heading="Get Your Free Birth Plan"
+            body="Enter your name and email and we'll send you the free fillable birth plan PDF plus a guided walkthrough in the app. Free, no spam, just the tools you need."
+            eyebrow="Free Download"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="max-w-3xl mx-auto px-6 -mt-4 text-center">
-    <p class="text-sm text-tjb-gray">Already have a plan? <a href="/birth-plan-confidence-session/#book" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Book a Birth Plan Confidence Session</a></p>
-    <p class="text-sm text-tjb-gray mt-1">Want to understand every choice on it? <a href="/guided-birth-plan-walkthrough/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Enroll in the birth plan course</a></p>
+    <p class="text-sm text-tjb-gray">Already have a plan? <a href="/birth-plan-confidence-session/#book" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">Book a Birth Plan Confidence Session</a></p>
+    <p class="text-sm text-tjb-gray mt-1">Want to understand every choice on it? <a href="/guided-birth-plan-walkthrough/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">Enroll in the birth plan course</a></p>
   </div>
 
   <!-- ═══════════════════════════════════════════
@@ -258,30 +297,51 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
 
         <!-- Left: Text — 55% -->
         <div class="md:w-[55%]">
-          <p class="eyebrow mb-3 fade-up">For Birth Professionals</p>
+          <p class="eyebrow mb-3 fade-up">For Doulas & Midwives</p>
           <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-          <h2 class="mb-5 text-[2.25rem] md:text-[2.75rem] leading-[1.15]">Built for Doulas and Midwives, Too</h2>
-          <p class="text-lg text-tjb-gray leading-relaxed mb-10">
+          <h2 class="mb-5 text-[2.25rem] md:text-[2.75rem] leading-[1.15]" style="font-family: 'DM Sans', sans-serif;">Built for Birth Professionals</h2>
+          <p class="text-lg text-tjb-gray leading-relaxed mb-6">
             When your clients build their plan in the True Joy Birthing app, it flows directly into your Pro Mode dashboard — no copy-paste, no lost details.
           </p>
-          <!-- Primary CTA — official pill style per VISUAL-TOKENS -->
-          <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="inline-block bg-tjb-lavender-600 text-white px-8 py-3.5 rounded-full font-semibold text-[0.9375rem] border border-transparent hover:bg-tjb-rose-500 focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 active:translate-y-0 transition-all duration-300">
-            Start Pro for doulas and midwives
+          <!-- 3-bullet benefit list -->
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-tjb-rose-500 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-tjb-gray">Free Pro Mode with your ambassador status</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-tjb-rose-500 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-tjb-gray">A listing on your city page so families find you</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-tjb-rose-500 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <span class="text-tjb-gray">No quotas, no contracts, no tracking</span>
+            </li>
+          </ul>
+          <!-- Primary CTA — btn-primary class -->
+          <a href="/ambassador/" class="btn-primary inline-block">
+            Join the Ambassador Program
           </a>
-          <p class="text-sm text-tjb-gray-300 mt-4">In-app subscription. Available on App Store (Android coming soon).</p>
+          <p class="text-sm text-tjb-gray-300 mt-4">Free for doulas, midwives, and birth professionals. No minimums.</p>
         </div>
 
         <!-- Right: Photo — 45% -->
         <div class="md:w-[45%] flex items-center justify-center">
           <img
-            src="/images/doula-teaching.webp"
-            srcset="/images/responsive/doula-teaching-480w.webp 480w, /images/responsive/doula-teaching-960w.webp 960w, /images/doula-teaching.webp 1024w"
-            sizes="(max-width: 480px) 480px, (max-width: 960px) 960px, 1024px"
-            alt="A birth doula reviews a client's birth plan together — Pro Mode gives doulas and midwives the same collaborative tools"
+            src="/images/doula-walking.webp"
+            srcset="/images/responsive/doula-walking-480w.webp 480w, /images/responsive/doula-walking-960w.webp 960w, /images/doula-walking.webp 1536w"
+            sizes="(max-width: 480px) 480px, (max-width: 960px) 960px, 1536px"
+            alt="A doula walking alongside an expectant mom — Pro Mode gives doulas and midwives the tools to support their clients"
             class="w-full max-w-md"
             loading="lazy"
-            width="1024"
-            height="1536"
+            width="1536"
+            height="1024"
           />
         </div>
 
@@ -297,29 +357,29 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
       <div class="text-center mb-12">
         <p class="eyebrow mb-3 fade-up">Plan Your Birth</p>
         <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
-        <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15]">Everything You Need to Feel Prepared</h2>
+        <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15]" style="font-family: 'DM Sans', sans-serif;">Everything You Need to Feel Prepared</h2>
       </div>
 
       <div>
-        <a href="/birth-plan-template/" class="flex items-baseline justify-between gap-4 py-5 border-t border-tjb-cream-200 group">
+        <a href="/birth-plan-template/" class="flex items-baseline justify-between gap-4 py-5 border-t border-tjb-lavender-200/40 group">
           <span class="text-tjb-charcoal font-semibold group-hover:text-tjb-rose-500 transition">Birth Plan Template <span class="font-normal text-tjb-gray">— Free template built by a doula. Download and fill it out.</span></span>
         </a>
-        <a href="/birth-plan-checklist/" class="flex items-baseline justify-between gap-4 py-5 border-t border-tjb-cream-200 group">
+        <a href="/birth-plan-checklist/" class="flex items-baseline justify-between gap-4 py-5 border-t border-tjb-lavender-200/40 group">
           <span class="text-tjb-charcoal font-semibold group-hover:text-tjb-rose-500 transition">Birth Plan Checklist <span class="font-normal text-tjb-gray">— Every preference point, organized by category.</span></span>
         </a>
-        <a href="/doula-cost/" class="flex items-baseline justify-between gap-4 py-5 border-t border-tjb-cream-200 group">
+        <a href="/doula-cost/" class="flex items-baseline justify-between gap-4 py-5 border-t border-tjb-lavender-200/40 group">
           <span class="text-tjb-charcoal font-semibold group-hover:text-tjb-rose-500 transition">Doula Cost Guide <span class="font-normal text-tjb-gray">— What doulas cost, what's included, and insurance coverage.</span></span>
         </a>
-        <a href="/postpartum-doula/" class="flex items-baseline justify-between gap-4 py-5 border-t border-tjb-cream-200 group">
+        <a href="/postpartum-doula/" class="flex items-baseline justify-between gap-4 py-5 border-t border-tjb-lavender-200/40 group">
           <span class="text-tjb-charcoal font-semibold group-hover:text-tjb-rose-500 transition">Postpartum Doula <span class="font-normal text-tjb-gray">— What they do, what they cost, and why postpartum support matters.</span></span>
         </a>
-        <a href="/how-to-choose-a-doula/" class="flex items-baseline justify-between gap-4 py-5 border-t border-tjb-cream-200 group">
+        <a href="/how-to-choose-a-doula/" class="flex items-baseline justify-between gap-4 py-5 border-t border-tjb-lavender-200/40 group">
           <span class="text-tjb-charcoal font-semibold group-hover:text-tjb-rose-500 transition">How to Choose a Doula <span class="font-normal text-tjb-gray">— Questions to ask and what to look for in a birth doula.</span></span>
         </a>
-        <a href="/faq/" class="flex items-baseline justify-between gap-4 py-5 border-t border-tjb-cream-200 group">
+        <a href="/faq/" class="flex items-baseline justify-between gap-4 py-5 border-t border-tjb-lavender-200/40 group">
           <span class="text-tjb-charcoal font-semibold group-hover:text-tjb-rose-500 transition">Birth Plan FAQ <span class="font-normal text-tjb-gray">— Common questions about birth plans, doulas, and hospital advocacy.</span></span>
         </a>
-        <a href="/new-doula-start-here/" class="flex items-baseline justify-between gap-4 py-5 border-t border-tjb-cream-200 group">
+        <a href="/new-doula-start-here/" class="flex items-baseline justify-between gap-4 py-5 border-t border-tjb-lavender-200/40 group">
           <span class="text-tjb-charcoal font-semibold group-hover:text-tjb-rose-500 transition">New Doula Start Here <span class="font-normal text-tjb-gray">— Everything a new doula needs to build their practice and serve clients.</span></span>
         </a>
       </div>
@@ -334,7 +394,7 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
       <div class="text-center mb-10">
         <p class="eyebrow mb-3 fade-up">Top Cities</p>
         <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
-        <h2 class="mb-3 text-[2.25rem] md:text-[2.75rem] leading-[1.15]">Most Popular Cities for Birth Support</h2>
+        <h2 class="mb-3 text-[2.25rem] md:text-[2.75rem] leading-[1.15]" style="font-family: 'DM Sans', sans-serif;">Most Popular Cities for Birth Support</h2>
         <p class="text-tjb-gray max-w-xl mx-auto leading-relaxed">
           Doula costs, hospital info, Medicaid coverage, and free birth plans — city by city.
         </p>
@@ -393,7 +453,7 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
       <div class="text-center mb-10">
         <p class="eyebrow mb-3 fade-up">Local Support</p>
         <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
-        <h2 class="mb-3 text-[2.25rem] md:text-[2.75rem] leading-[1.15]">Birth Support Resources by City</h2>
+        <h2 class="mb-3 text-[2.25rem] md:text-[2.75rem] leading-[1.15]" style="font-family: 'DM Sans', sans-serif;">Birth Support Resources by City</h2>
         <p class="text-tjb-gray max-w-xl mx-auto leading-relaxed">
           Local hospital info, doula costs, and Medicaid status — city by city.
         </p>
@@ -401,21 +461,23 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
 
       <!-- Horizontal typographic strip -->
       <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-tjb-gray text-[1.0625rem]">
-        <a href="/birth-support/dallas-tx" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Dallas, TX</a>
+        <a href="/birth-support/denver-co/" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Denver, CO</a>
         <span class="text-tjb-rose-400">·</span>
-        <a href="/birth-support/houston-tx" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Houston, TX</a>
+        <a href="/birth-support/new-york-ny/" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">New York, NY</a>
         <span class="text-tjb-rose-400">·</span>
-        <a href="/birth-support/austin-tx" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Austin, TX</a>
+        <a href="/birth-support/chicago-il/" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Chicago, IL</a>
         <span class="text-tjb-rose-400">·</span>
-        <a href="/birth-support/san-antonio-tx" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">San Antonio, TX</a>
+        <a href="/birth-support/phoenix-az/" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Phoenix, AZ</a>
         <span class="text-tjb-rose-400">·</span>
-        <a href="/birth-support/fort-worth-tx" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Fort Worth, TX</a>
+        <a href="/birth-support/dallas-tx/" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Dallas, TX</a>
         <span class="text-tjb-rose-400">·</span>
-        <a href="/birth-support/el-paso-tx" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">El Paso, TX</a>
+        <a href="/birth-support/austin-tx/" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Austin, TX</a>
+        <span class="text-tjb-rose-400">·</span>
+        <a href="/birth-support/houston-tx/" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Houston, TX</a>
       </div>
 
       <p class="text-center mt-8">
-        <a href="/birth-support" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all inline-block pb-0.5">
+        <a href="/birth-support/co/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all inline-block pb-0.5">
           See all cities
         </a>
       </p>
