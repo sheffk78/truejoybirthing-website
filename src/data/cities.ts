@@ -4117,6 +4117,105 @@ export const cities: Record<string, CityData> = {
     lat: 39.2139,
     lng: -76.8558,
   },
+  "norfolk-va": {
+    city: "Norfolk",
+    state: "VA",
+    slug: "norfolk-va",
+    costLow: 1200,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Norfolk is a Navy town with a strong military medical presence thanks to EVMS and Sentara. The birth community reflects the city\u2019s diversity \u2014 families of active-duty service members, young professionals, and longtime residents all navigating Hampton Roads hospitals together. CHKD and Sentara Norfolk General sit side by side in the Ghent neighborhood, making this one of the most resource-rich birth cities in Virginia.",
+    heroLocalDetail: "At 38 weeks in Norfolk, you\u2019re likely thinking about the Ghent-to-downtown route on I-264 or Hampton Boulevard. Sentara Norfolk General and CHKD sit right off Brambleton Avenue in the Ghent neighborhood, so if you\u2019re delivering during Navy change-of-command season \u2014 May through August \u2014 expect heavier traffic on I-564 and around the base exits. The Elizabeth River Trail along the waterfront gives you flat, shaded walking for those final-weeks strolls.",
+    hospitalDetails: [
+      { name: "Sentara Norfolk General Hospital", paragraph: "Sentara Norfolk General Hospital is a 563-bed academic teaching hospital for Eastern Virginia Medical School and the Hampton Roads region\u2019s only Level I trauma center. It has a full obstetrics program with a NICU for babies who need extra support and direct access to CHKD\u2019s pediatric specialists for higher-risk cases. Doulas are generally welcome \u2014 confirm current visitor policies during your hospital tour. If you\u2019re delivering here, having your birth plan ready makes the whole check-in process smoother. <a href=\\\"/birth-plan-template/\\\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Children\u2019s Hospital of The King\u2019s Daughters", paragraph: "Children\u2019s Hospital of The King\u2019s Daughters (CHKD) is a 206-bed freestanding children\u2019s hospital adjacent to Sentara Norfolk General in Ghent. While CHKD itself does not handle deliveries, its pediatric and neonatal specialists work closely with Sentara\u2019s L&D team for any infant needing advanced care after birth." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned zero results for Norfolk VA.
+    // Google Maps search "birth center Norfolk VA" found no verified freestanding birth centers in Norfolk or Hampton Roads.
+    // Verified 2026-06-08.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Yes \u2014 Virginia Medicaid covers doula services effective January 1, 2024. Families enrolled in VA Medicaid can access doula support through their managed care plan. Reimbursement rates and doula enrollment requirements are managed through the Virginia Department of Medical Assistance Services. Ask your doula upfront whether they accept Virginia Medicaid.",
+    insuranceNote: "In Norfolk, many families have Tricare (military coverage through the nearby naval base) or employer-sponsored insurance through Sentara. Doula coverage by private insurers is expanding \u2014 some policies now include doula benefits. Check your specific plan documents. HSA and FSA funds can also help cover out-of-pocket doula costs.",
+    faqs: [
+      { q: "How much does a doula cost in Norfolk?", a: "Expect to pay $1,200 to $2,500 for a doula in Norfolk. Hampton Roads rates are generally lower than Northern Virginia or Richmond. The investment typically covers prenatal visits, labor support, and postpartum check-ins. <a href=\\\"/birth-plan-template/\\\">Download the free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Norfolk?", a: "Yes \u2014 Virginia Medicaid covers doula services effective January 1, 2024. Families enrolled in VA Medicaid can access doula support through their managed care plan. This is real coverage, not a pilot \u2014 ask your doula upfront whether they accept Virginia Medicaid. <a href=\\\"/birth-plan-template/\\\">Grab the free birth plan template</a> and make sure your doula team knows your preferences." },
+      { q: "Which hospitals in Norfolk accommodate birth plans?", a: "Sentara Norfolk General Hospital, connected to the EVMS teaching program, accommodates birth plans and works closely with CHKD for any neonatal needs. Doulas are generally welcome \u2014 confirm current visitor policies during your hospital tour. <a href=\\\"/birth-plan-template/\\\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Are there birth centers in Norfolk?", a: "No \u2014 there are no verified freestanding birth centers in Norfolk as of 2026. Families seeking a birth center experience can explore options in the Richmond area or consider midwifery-model care at Sentara Norfolk General. <a href=\\\"/birth-plan-template/\\\">Grab the free birth plan template</a> to think through your options." },
+      { q: "Does True Joy Birthing work with Norfolk families?", a: "True Joy Birthing provides free birth-prep tools for Norfolk families. The free birth plan, checklist, and guided walkthrough in the app work for any Norfolk birth setting. The app also helps you connect with local doulas and midwives in your area." },
+      { q: "What about postpartum support in Norfolk?", a: "Norfolk has hospital-based lactation support at Sentara and CHKD. The postpartum doula community in Hampton Roads is growing. Start your search during pregnancy if you want ongoing postpartum support. <a href=\\\"/postpartum-doula/\\\">Learn more about postpartum doula support</a>." },
+    ],
+    nearbyCities: ["chesapeake-va", "virginia-beach-va", "newport-news-va", "hampton-va"],
+    publishedDate: "2026-06-08",
+    lat: 36.8945,
+    lng: -76.259,
+  },
+  "fremont-ca": {
+    city: "Fremont",
+    state: "CA",
+    slug: "fremont-ca",
+    costLow: 1500,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    culture: "Fremont is a diverse, family-oriented city in the East Bay where the birth community reflects the area\u2019s tech-driven population and strong immigrant communities. Washington Hospital provides the only hospital-based maternity care in town, and many families also look into birth options in nearby Palo Alto, San Jose, and Oakland. The doula community here pulls from both the South Bay and East Bay networks, giving Fremont families more options than the city size suggests.",
+    heroLocalDetail: "At 38 weeks in Fremont, you\u2019re probably planning the drive to Washington Hospital on Mowry Avenue near I-880 \u2014 that interchange can back up significantly during commute hours. If you\u2019re heading to Stanford or El Camino for a higher-level NICU, the drive down 237 or over the Dumbarton Bridge adds 30\u201345 minutes depending on traffic. Central Park and Lake Elizabeth offer flat walking paths for those final-weeks strolls.",
+    hospitalDetails: [
+      { name: "Washington Hospital", paragraph: "Washington Hospital in Fremont is a community hospital with a full maternity unit featuring a Special Care Nursery for babies who need extra support. Labor and delivery has 24/7 OB hospitalist coverage \u2014 meaning a doctor is in-house at all times. Doulas are welcome, and the unit\u2019s midsize feel (around 2,000 births per year) means more personalized attention than the huge Stanford or UCSF units. If you\u2019re delivering here, having your birth plan ready makes everything smoother. <a href=\\\"/birth-plan-template/\\\">Use our free hospital birth plan template</a> to get started." },
+      { name: "El Camino Health \u2014 Mountain View", paragraph: "El Camino Health in Mountain View, about 15 minutes south of Fremont, is a popular choice for East Bay families wanting a dedicated birth center with a Level III NICU and one of the region\u2019s highest-rated maternity programs. If you want the reassurance of a higher NICU level and don\u2019t mind the short drive, El Camino is worth registering at." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned zero results for Fremont CA.
+    // Google Maps search "birth center Fremont CA" found no verified freestanding birth centers in Fremont.
+    // Nearest birth centers are in Palo Alto and Oakland. Verified 2026-06-08.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Yes \u2014 California\u2019s Medi-Cal program covers doula services as a state benefit, with reimbursement rates around $1,587 per pregnancy. Families on Medi-Cal can access doula support through the PAVE (Providing Access and doula Viability through Equity) program. Ask your doula whether they are a PAVE-enrolled Medi-Cal provider.",
+    insuranceNote: "In Fremont, many families have employer-sponsored insurance through Bay Area tech companies. Doula coverage by private insurers is expanding \u2014 check your specific plan for \u2018doula services\u2019 or \u2018certified doula\u2019 benefits. HSA and FSA funds can help cover out-of-pocket doula costs. Some East Bay doulas offer sliding-scale pricing for families without doula benefits.",
+    faqs: [
+      { q: "How much does a doula cost in Fremont?", a: "Expect to pay $1,500 to $3,000 for a doula in Fremont. East Bay rates are typically lower than San Francisco but higher than the Central Valley. The investment typically covers prenatal visits, labor support, and postpartum check-ins. <a href=\\\"/birth-plan-template/\\\">Download the free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medi-Cal cover doulas in Fremont?", a: "Yes \u2014 California\u2019s Medi-Cal program covers doula services, reimbursing around $1,587 per pregnancy. Doulas enroll through the PAVE program. This is a well-established benefit, not a pilot \u2014 ask your doula upfront whether they accept Medi-Cal. <a href=\\\"/birth-plan-template/\\\">Grab the free birth plan template</a> and make sure your doula team knows your preferences." },
+      { q: "Which hospitals in Fremont accommodate birth plans?", a: "Washington Hospital in Fremont accommodates birth plans and has 24/7 OB hospitalist coverage. For higher NICU level support, El Camino Health in Mountain View (about 15 minutes south) has a Level III NICU and is a popular choice for Fremont families. Doulas are welcomed at both. <a href=\\\"/birth-plan-template/\\\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Are there birth centers in Fremont?", a: "No \u2014 there are no verified freestanding birth centers in Fremont as of 2026. The nearest birth center options are in Palo Alto and Oakland. For hospital-based care, many Fremont families choose between Washington Hospital and El Camino Health in Mountain View. <a href=\\\"/birth-plan-template/\\\">Grab the free birth plan template</a> to think through your options." },
+      { q: "Does True Joy Birthing work with Fremont families?", a: "True Joy Birthing provides free birth-prep tools for Fremont families. The free birth plan, checklist, and guided walkthrough in the app work for any Fremont birth setting. The app also helps you connect with local doulas and midwives in your area." },
+      { q: "What about postpartum support in Fremont?", a: "Fremont has hospital-based lactation support at Washington Hospital and several local pediatric practices. The East Bay postpartum doula community is strong. Start your search during pregnancy if you want ongoing postpartum support. <a href=\\\"/postpartum-doula/\\\">Learn more about postpartum doula support</a>." },
+    ],
+    nearbyCities: ["san-jose-ca", "oakland-ca", "fresno-ca", "bakersfield-ca"],
+    publishedDate: "2026-06-08",
+    lat: 37.5256,
+    lng: -121.987,
+  },
+  "vancouver-wa": {
+    city: "Vancouver",
+    state: "WA",
+    slug: "vancouver-wa",
+    costLow: 1200,
+    costHigh: 2800,
+    shelbiServesHere: false,
+    culture: "Vancouver is a border city with a unique birth landscape \u2014 families on the Washington side of the Columbia River have Apple Health (Medicaid) doula coverage, while their Oregon neighbors across the river do not. PeaceHealth Southwest is the busiest OB unit north of San Francisco on the West Coast, and Legacy Salmon Creek adds another option for Vancouver families. The birth community here is growing fast as more Portland-area families move north for lower housing costs.",
+    heroLocalDetail: "At 38 weeks in Vancouver, you\u2019re probably thinking about which hospital to aim for \u2014 PeaceHealth Southwest off 87th Avenue near Highway 500, or Legacy Salmon Creek off I-205 near 134th Street. The I-5 and I-205 bridge traffic into Portland is notorious, but the good news is both Vancouver hospitals are north of the river, so you don\u2019t need to cross into Oregon during labor. Salmon Creek and Felida areas are the most common family neighborhoods.",
+    hospitalDetails: [
+      { name: "PeaceHealth Southwest Medical Center", paragraph: "PeaceHealth Southwest Medical Center is a 450-bed community hospital with the Holtzman Twins Neonatal Intensive Care Unit and the second-busiest obstetrics unit in the Portland metropolitan area. With around 3,000 births per year, the Family Birth Center handles a high volume and is used to working with doulas. Doulas are generally welcome \u2014 confirm current policies during your hospital tour. If you\u2019re delivering at PeaceHealth, having your birth plan ready makes everything smoother. <a href=\\\"/birth-plan-template/\\\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Legacy Salmon Creek Medical Center", paragraph: "Legacy Salmon Creek Medical Center, also in Vancouver, opened in 2005 and offers a birthing center with a neonatal intensive care unit and a dedicated children\u2019s-only emergency room. Families on the north side of Vancouver often find Legacy Salmon Creek more convenient, especially those living near I-205. Doulas are welcome, and the facility has a more modern feel than PeaceHealth\u2019s older campus." },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned zero results for Vancouver WA.
+    // Google Maps search "birth center Vancouver WA" found no verified freestanding birth centers in Vancouver.
+    // Nearest freestanding birth centers are in the Portland metro (Oregon side). Verified 2026-06-08.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Yes \u2014 Washington State\u2019s Apple Health (Medicaid) program covers doula services. Washington was an early adopter of Medicaid doula coverage and has one of the more established programs in the country. Families on Apple Health should confirm their doula is a Washington State Medicaid-enrolled provider.",
+    insuranceNote: "In Vancouver, many families have employer-sponsored coverage through PeaceHealth, Legacy Health, or tech companies with Portland offices. Doula coverage by private insurers is expanding. Check your plan for doula benefits. HSA and FSA funds can help cover out-of-pocket costs. Some Vancouver doulas serve both sides of the river \u2014 confirm their state-specific credentialing.",
+    faqs: [
+      { q: "How much does a doula cost in Vancouver?", a: "Expect to pay $1,200 to $2,800 for a doula in Vancouver. Vancouver rates are comparable to Portland pricing. The investment typically covers prenatal visits, labor support, and postpartum check-ins. <a href=\\\"/birth-plan-template/\\\">Download the free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Apple Health cover doulas in Vancouver?", a: "Yes \u2014 Washington\u2019s Apple Health program covers doula services. Washington was an early adopter of Medicaid doula coverage and has one of the most established programs in the nation. Ask your doula upfront whether they are a Washington State Medicaid-enrolled provider. <a href=\\\"/birth-plan-template/\\\">Grab the free birth plan template</a> and make sure your doula team knows your preferences." },
+      { q: "Which hospitals in Vancouver accommodate birth plans?", a: "PeaceHealth Southwest Medical Center and Legacy Salmon Creek Medical Center both accommodate birth plans and are used to working with doulas. PeaceHealth has the Holtzman Twins NICU and is the busiest OB unit north of San Francisco. Legacy Salmon Creek has a modern facility with its own NICU and children\u2019s ER. <a href=\\\"/birth-plan-template/\\\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Are there birth centers in Vancouver?", a: "No \u2014 there are no verified freestanding birth centers in Vancouver as of 2026. The nearest birth center options are on the Oregon side of the Columbia River in Portland. Both PeaceHealth Southwest and Legacy Salmon Creek offer midwifery-model care within the hospital setting. <a href=\\\"/birth-plan-template/\\\">Grab the free birth plan template</a> to think through your options." },
+      { q: "Does True Joy Birthing work with Vancouver families?", a: "True Joy Birthing provides free birth-prep tools for Vancouver families. The free birth plan, checklist, and guided walkthrough in the app work for any Vancouver birth setting. The app also helps you connect with local doulas and midwives in your area." },
+      { q: "What about postpartum support in Vancouver?", a: "Vancouver has hospital-based lactation support at both PeaceHealth and Legacy Salmon Creek. The postpartum doula community in the Portland-Vancouver metro is strong. Start your search during pregnancy if you want ongoing postpartum support. <a href=\\\"/postpartum-doula/\\\">Learn more about postpartum doula support</a>." },
+    ],
+    nearbyCities: ["portland-or", "tacoma-wa", "seattle-wa", "eugene-or"],
+    publishedDate: "2026-06-08",
+    lat: 45.6352,
+    lng: -122.5972,
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
