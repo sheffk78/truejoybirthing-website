@@ -87,19 +87,37 @@ const schema = {
 
   <section class="py-16 bg-white">
     <div class="max-w-5xl mx-auto px-6">
+
+      <!-- Search all cities -->
+      <div class="max-w-lg mx-auto mb-10">
+        <div class="relative">
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-tjb-gray-300 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input
+            type="text"
+            id="city-search"
+            placeholder="Search your city or area..."
+            class="w-full pl-11 pr-4 py-3 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-rose-400 bg-white transition-colors text-sm text-tjb-charcoal"
+          />
+        </div>
+        <p id="city-search-status" class="text-center text-sm text-tjb-gray mt-3" style="display:none"></p>
+      </div>
+
+      <div id="city-directory">
       {stateOrder.map((stateCode) => {
         const stateCities = stateGroups[stateCode];
         const stateName = stateNames[stateCode] || stateCode;
         const stateSlug = stateCode.toLowerCase();
         return (
-          <div class="mb-10">
+          <div class="mb-10 city-state-group">
             <h2 class="text-xl font-semibold mb-4">
               <a href={`/birth-support/${stateSlug}/`} class="hover:text-tjb-rose-500 transition">{stateName}</a>
               <span class="text-tjb-gray font-normal text-base ml-1">({stateCities.length} {stateCities.length === 1 ? 'city' : 'cities'})</span>
             </h2>
             <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
               {stateCities.map((c) => (
-                <a href={`/birth-support/${c.slug}/`} class="border border-tjb-lavender-300 p-3 rounded-lg hover:border-tjb-lavender-500 hover:bg-tjb-lavender-50 transition text-sm font-medium text-tjb-charcoal">
+                <a href={`/birth-support/${c.slug}/`} class="border border-tjb-lavender-300 p-3 rounded-lg hover:border-tjb-lavender-500 hover:bg-tjb-lavender-50 transition text-sm font-medium text-tjb-charcoal city-link">
                   {c.name}, {stateCode}
                 </a>
               ))}
@@ -107,7 +125,7 @@ const schema = {
           </div>
         );
       })}
-    </div>
+      </div>
   </section>
 
   <section class="py-12 bg-tjb-cream text-center">
@@ -115,4 +133,40 @@ const schema = {
     <p class="text-tjb-gray mb-4">The free Joyful Birth Plan works anywhere — and we're adding new cities regularly. Download your plan and build it for your specific birth setting.</p>
     <a href="/birth-plan-template/" class="inline-block bg-tjb-lavender-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 active:translate-y-0 transition">Get Your Free Joyful Birth Plan</a>
   </section>
+
 </Layout>
+
+<script>
+  const searchInput = document.getElementById('city-search');
+  const statusEl = document.getElementById('city-search-status');
+  const groups = document.querySelectorAll('.city-state-group');
+  if (searchInput) {
+    const allLinks = document.querySelectorAll('.city-link');
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.toLowerCase().trim();
+      let totalVisible = 0;
+      allLinks.forEach(link => {
+        const match = !q || link.textContent.toLowerCase().includes(q);
+        link.style.display = match ? '' : 'none';
+        if (match) totalVisible++;
+      });
+      groups.forEach(g => {
+        const visible = Array.from(g.querySelectorAll('.city-link')).some(l => l.style.display !== 'none');
+        g.style.display = visible ? '' : 'none';
+        const heading = g.querySelector('h2');
+        if (heading) heading.style.display = visible ? '' : 'none';
+      });
+      if (statusEl) {
+        if (q && totalVisible === 0) {
+          statusEl.textContent = 'We don\'t have that city yet — check back, we add new cities regularly.';
+          statusEl.style.display = '';
+        } else if (q) {
+          statusEl.textContent = totalVisible + ' cit' + (totalVisible === 1 ? 'y' : 'ies') + ' found';
+          statusEl.style.display = '';
+        } else {
+          statusEl.style.display = 'none';
+        }
+      }
+    });
+  }
+</script>

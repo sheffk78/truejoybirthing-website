@@ -504,6 +504,7 @@ import AppShowcase from '../components/AppShowcase.astro';
           />
         </div>
       </div>
+      <p id="city-search-status" class="text-center text-sm text-tjb-gray mt-4" style="display:none"></p>
 
       <div id="city-grid" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         <a href="/birth-support/new-york-ny/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
@@ -777,14 +778,26 @@ import AppShowcase from '../components/AppShowcase.astro';
     // City search — live filter
     const searchInput = document.getElementById('city-search');
     const cityGrid = document.getElementById('city-grid');
+    const citySearchStatus = document.getElementById('city-search-status');
     if (searchInput && cityGrid) {
       const cards = cityGrid.querySelectorAll('a');
       searchInput.addEventListener('input', () => {
         const q = searchInput.value.toLowerCase().trim();
+        let visible = 0;
         cards.forEach(card => {
           const name = card.querySelector('h3')?.textContent?.toLowerCase() || '';
-          card.style.display = (!q || name.includes(q)) ? '' : 'none';
+          const match = !q || name.includes(q);
+          card.style.display = match ? '' : 'none';
+          if (match) visible++;
         });
+        if (citySearchStatus) {
+          if (q && visible === 0) {
+            citySearchStatus.innerHTML = 'Not finding your city? <a href="/birth-support/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">Browse all ' + (cityGrid.querySelectorAll('a').length > 8 ? '131+ cities →' : 'cities →') + '</a>';
+            citySearchStatus.style.display = '';
+          } else {
+            citySearchStatus.style.display = 'none';
+          }
+        }
       });
     }
   </script>
