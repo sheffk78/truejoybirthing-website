@@ -50,8 +50,8 @@ const stateNames: Record<string, string> = {
 };
 const stateFullName = stateNames[state] || state;
 
-const pageTitle = `${city} Doula | Costs & Medicaid Info`;
-const pageDesc = `Looking for a doula in ${city}? Costs $${costLow}–$${costHigh}, ${medicaidCovers ? 'Medicaid covers doulas' : 'Medicaid does not cover doulas'}, hospital policies, and the free Joyful Birth Plan to walk in prepared.`;
+const pageTitle = `${city} Doula & Midwife | Costs, Hospitals & Medicaid`;
+const pageDesc = `Looking for a doula or midwife in ${city}? Costs $${costLow}–$${costHigh}, ${medicaidCovers ? 'Medicaid covers doulas and midwives' : 'Medicaid does not cover doulas'}, hospital policies, and the free Joyful Birth Plan to walk in prepared.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 const ogImage = ogImageSlug || `https://truejoybirthing.com/images/og-city-${slug}-v2.webp`;
 const heroImage = heroImageSlug || '/images/doula-breastfeeding.webp';
@@ -84,7 +84,7 @@ const schema = {
     {
       '@type': 'Article',
       '@id': `${pageUrl}#article`,
-      headline: `${city} Doula: Costs, Hospitals & Medicaid`,
+      headline: `${city} Doula & Midwife: Costs, Hospitals & Medicaid`,
       description: pageDesc,
       author: { '@type': 'Organization', '@id': 'https://truejoybirthing.com/#organization' },
       publisher: { '@type': 'Organization', '@id': 'https://truejoybirthing.com/#organization' },
@@ -120,7 +120,7 @@ const schema = {
       },
       provider: { '@id': 'https://truejoybirthing.com/#organization' },
       serviceType: 'Birth Plan Resources',
-      description: `Joyful Birth Plan tools, hospital info, and doula cost guides for families in ${city}, ${state}.`,
+      description: `Joyful Birth Plan tools, hospital info, and doula and midwife cost guides for families in ${city}, ${state}.`,
       ...(data.publishedDate ? { datePublished: data.publishedDate } : {}),
     },
     // MedicalOrganization for each hospital with a URL
@@ -182,10 +182,10 @@ const schema = {
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div>
-          <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">{city} Doula & Birth Support</p>
+          <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">{city} Doula & Midwife Support</p>
           <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-          <h1 class="text-3xl md:text-4xl font-bold mb-4" style="font-family: 'DM Serif Display', Georgia, serif;">{city} Doula: Costs, Hospitals & Medicaid</h1>
-          <p class="text-lg text-tjb-charcoal font-semibold mb-2">True Joy Birthing is a free birth plan app and doula directory for first-time moms in {city}. Whether you're looking for a <strong>doula in {city}</strong>, building your birth plan, or figuring out what doula support even looks like — everything here is free.</p>
+          <h1 class="text-3xl md:text-4xl font-bold mb-4" style="font-family: 'DM Serif Display', Georgia, serif;">{city} Doula & Midwife: Costs, Hospitals & Medicaid</h1>
+          <p class="text-lg text-tjb-charcoal font-semibold mb-2">True Joy Birthing is a free birth plan app and doula directory for first-time moms in {city}. Whether you're looking for a <strong>doula or midwife in {city}</strong>, building your birth plan, or figuring out what support even looks like — everything here is free.</p>
           <p class="text-tjb-gray mb-6">Doulas, midwives, hospital policies, and costs, broken down so you can walk in prepared. This guide covers <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">how much doulas cost</a>, <a href="/medicaid-doula-coverage/" class="text-tjb-rose-600 hover:underline">whether Medicaid covers a doula</a>, and which hospitals welcome birth partners. New here? <a href="/what-is-a-doula/" class="text-tjb-rose-600 hover:underline">Learn what a doula actually does</a>.</p>
           <div class="flex flex-col sm:flex-row gap-3">
             <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-primary text-center">Build Your Birth Plan in the App</a>
@@ -549,13 +549,13 @@ const schema = {
   </section>
 
 
-  <!-- ═══ Doula Costs Section (two-column with 4:3 image, no H2 icon) ═══ -->
+  <!-- ═══ Doula & Midwife Costs Section (two-column with 4:3 image, no H2 icon) ═══ -->
   <section class="py-12 bg-white">
     <div class="max-w-5xl mx-auto px-6">
       <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
         <div class="md:w-[58%] prose">
-          <h2 class="font-bold text-tjb-charcoal" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">How Much Does a Doula Cost in {city}?</h2>
-          <p>In the {city} area, birth doula packages typically range from <strong>${costLow.toLocaleString()} to ${costHigh.toLocaleString()}</strong>. That usually includes prenatal visits, your birth, and postpartum follow-up. <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">See our full doula cost breakdown</a> for what's included and what to ask about. If you're also thinking about support after baby arrives, <a href="/postpartum-doula/" class="text-tjb-rose-600 hover:underline">learn what a postpartum doula does and how one can help</a>.</p>
+          <h2 class="font-bold text-tjb-charcoal" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">How Much Does a Doula or Midwife Cost in {city}?</h2>
+          <p>In the {city} area, birth doula packages typically range from <strong>${costLow.toLocaleString()} to ${costHigh.toLocaleString()}</strong>. Midwife fees vary by type and setting — home birth midwives usually charge a global fee of $4,000–$8,000, while hospital-based CNM care is billed through insurance like a doctor's visit. <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">See our full doula cost breakdown</a> for what's included and what to ask about. If you're also thinking about support after baby arrives, <a href="/postpartum-doula/" class="text-tjb-rose-600 hover:underline">learn what a postpartum doula does and how one can help</a>.</p>
           <p>If that number feels steep, you're not alone, and there are options:</p>
           <ul>
             <li><strong>Medicaid:</strong> {medicaidCovers ? 'Good news: your state covers doula services through Medicaid. See the details below.' : 'Unfortunately, your state does not yet cover doulas through Medicaid. Some community organizations and volunteer doula programs offer free or reduced-cost support. Ask at your local WIC office or community health center.'}</li>
@@ -579,15 +579,15 @@ const schema = {
   </section>
 
 
-  <!-- ═══ Medicaid & Insurance Section (two-column with 4:3 image, no H2 icon) ═══ -->
+  <!-- ═══ Medicaid & Insurance Section — Doula & Midwife (two-column with 4:3 image, no H2 icon) ═══ -->
   <section class="py-12 bg-tjb-cream">
     <div class="max-w-5xl mx-auto px-6">
       <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
         <div class="md:w-[58%] prose">
-          <h2 class="font-bold text-tjb-charcoal" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">Does Medicaid or Insurance Cover a Doula in {state}?</h2>
+          <h2 class="font-bold text-tjb-charcoal" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">Does Medicaid or Insurance Cover a Doula or Midwife in {state}?</h2>
           <p>{medicaidNote}</p>
           <p>{insuranceNote}</p>
-          <p>Not sure what to look for in a doula? <a href="/how-to-choose-a-doula/" class="text-tjb-rose-600 hover:underline">Here's how to choose a doula</a> who fits your birth preferences, your personality, and your budget. For a full breakdown of which states cover doulas through Medicaid, see our <a href="/medicaid-doula-coverage/" class="text-tjb-rose-600 hover:underline">Medicaid doula coverage guide</a>.</p>
+          <p>Not sure what to look for in a doula or midwife? <a href="/how-to-choose-a-doula/" class="text-tjb-rose-600 hover:underline">Here's how to choose a doula</a> who fits your birth preferences, your personality, and your budget. For a full breakdown of which states cover doulas and midwives through Medicaid, see our <a href="/medicaid-doula-coverage/" class="text-tjb-rose-600 hover:underline">Medicaid doula coverage guide</a>.</p>
         </div>
         <div class="md:w-[42%] flex-shrink-0">
           <img
@@ -634,12 +634,12 @@ const schema = {
   </section>
 
 
-  <!-- ═══ When to Start Looking for a Doula ═══ -->
+  <!-- ═══ When to Start Looking for a Doula or Midwife ═══ -->
   <section class="py-16 bg-white">
     <div class="max-w-3xl mx-auto px-6">
       <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Planning ahead</p>
       <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-      <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-4" style="font-family: 'DM Sans', sans-serif;">When to Start Looking for a Doula in {city}</h2>
+      <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-4" style="font-family: 'DM Sans', sans-serif;">When to Start Looking for a Doula or Midwife in {city}</h2>
       <p class="text-tjb-gray leading-relaxed mb-4">Start looking around <strong>12 to 20 weeks</strong>. That gives you time to meet a few doulas, compare approaches, and lock someone in before their calendar fills up — popular {city} doulas often book up by the third trimester. Already past 20 weeks? Start now. Most doulas have room in their schedule and would rather work with you late than not at all.</p>
       <p class="text-tjb-gray leading-relaxed mb-4">The earlier you connect, the more time your doula has to learn your preferences, understand your hospital's policies, and build trust before labor day. Use the free app to <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-rose-600 hover:underline">browse doulas serving {city}</a> and start reaching out today.</p>
     </div>
@@ -672,7 +672,7 @@ const schema = {
           </div>
           <div class="grid md:grid-cols-2 gap-4">
             <div class="bg-tjb-cream/40 rounded-lg p-4">
-              <p class="font-semibold text-tjb-charcoal text-sm">How much does a doula cost in {city}?</p>
+              <p class="font-semibold text-tjb-charcoal text-sm">How much does a doula or midwife cost in {city}?</p>
               <p class="text-sm text-tjb-gray mt-1">Expect ${costLow.toLocaleString()} to ${costHigh.toLocaleString()} for a birth doula. {medicaidCovers ? `${stateFullName} Medicaid covers doula services.` : 'Check with local doulas for sliding-scale options.'}</p>
             </div>
             <div class="bg-tjb-cream/40 rounded-lg p-4">
