@@ -257,8 +257,17 @@ const schema = {
           <p class="text-tjb-gray max-w-2xl mx-auto">Real people, real support: here are doulas and midwives who serve {city} families. Every listing is a practicing provider, not an ad.</p>
         </div>
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 not-prose">
-          {localDoulas.map((doula) => (
-            <div class={`bg-white rounded-xl p-6 shadow-sm border hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center ${doula.isAmbassador ? 'border-2 border-tjb-rose-300 shadow-md' : 'border-tjb-lavender-200/50 hover:border-tjb-lavender-300'}`}>
+          {localDoulas.map((doula) => {
+            const verified = doula.isVerified !== false && !!doula.url;
+            return (
+            <div class={`bg-white relative rounded-xl p-6 shadow-sm border hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center ${doula.isAmbassador ? 'border-2 border-tjb-rose-300 shadow-md' : 'border-tjb-lavender-200/50 hover:border-tjb-lavender-300'}`}>
+              {/* Verified badge — sage corner pill */}
+              {verified && (
+                <span class="absolute top-3 right-3 inline-flex items-center gap-1 bg-tjb-sage-100 text-tjb-charcoal text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-sage" role="status" aria-label="Verified listing">
+                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M10 3L4.5 8.5L2 6" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Verified
+                </span>
+              )}
               {/* Photo or initial monogram */}
               {doula.photo ? (
                 <img src={doula.photo} alt={`Photo of ${doula.name}`} class="w-14 h-14 rounded-full object-cover mb-4" width="56" height="56" loading="lazy" />
@@ -302,7 +311,7 @@ const schema = {
               )}
               {doula.url && <a href={doula.url} target="_blank" rel="noopener noreferrer" class="btn-primary mt-4 text-sm w-full">Visit website</a>}
             </div>
-          ))}
+          )})}
         </div>
         <!-- Find a Doula CTA -->
         <div class="mt-10 max-w-5xl mx-auto not-prose">
