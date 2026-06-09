@@ -498,6 +498,7 @@ const schema = {
         </div>
         <p class="text-sm text-tjb-gray italic mt-4">Hospitals listed for reference only. True Joy Birthing does not endorse any specific provider. Always call ahead to confirm doula and visitor policies during your hospital tour. For more questions, see our <a href="/faq/" class="text-tjb-lavender-600 hover:underline">doula FAQ</a> or our <a href="/birth-plan-checklist/" class="text-tjb-lavender-600 hover:underline">birth plan checklist</a>.</p>
         <p class="text-sm text-tjb-gray mt-1">Reviewed by <a href="/about/" class="text-tjb-lavender-600 hover:underline">Shelbi Kohler</a></p>
+        {slug === 'carrollton-tx' && <p class="text-xs text-tjb-gray/60 mt-3">Hospital photo: Michael Barera, CC BY-SA 4.0, via Wikimedia Commons</p>}
       </div>
     </section>
   )}
@@ -517,9 +518,9 @@ const schema = {
           <img
             src={supportImage}
             alt={supportImageAlt}
-            class="w-full aspect-video object-cover rounded-xl shadow-md"
+            class={`w-full ${slug === 'carrollton-tx' ? 'aspect-[4/3]' : 'aspect-video'} object-cover rounded-xl shadow-md`}
             width="1024"
-            height="576"
+            height={slug === 'carrollton-tx' ? '768' : '576'}
             loading="lazy"
           />
         </div>
