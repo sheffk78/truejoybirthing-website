@@ -135,6 +135,26 @@ def search_npi(city: str, state: str, taxonomy: str = "midwife", limit: int = 20
 # Firecrawl: URL validation + enrichment + search
 # ═══════════════════════════════════════════════════════════════
 
+def head_check_url(url: str, timeout: int = 8) -> dict:
+    """Quick HEAD request to check if URL is live before spending a Firecrawl call.
+    Returns {'valid': True, 'content_type': str} or {'valid': False, 'reason': str}."""
+    if not url:
+        return {"valid": False, "reason": "no_url"}
+    try:
+        req = urllib.request.Request(url, method="HEAD")
+        # Set a realistic User-Agent to avoid blocks
+        req.add_header("User-Agent", "Mozilla/5.0 (compatible; TJB-Research/1.0)")
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            status = resp.status
+            ct = resp.headers.get("Content-Type", "")
+            cl = resp.headers.get("Content-Length", "0")
+            if 200 <= status < 400:
+                return {"valid": True, "status": status, "content_type": ct, "content_length": int(cl) if cl.isdigit() else 0}
+            return {"valid": False, "reason": f"HTTP {status}"}
+    except Exception as e:
+        return {"valid": False, "reason": str(e)[:60]}
+
+
 def firecrawl_validate_url(url: str) -> dict:
     """Check if a URL is live via Firecrawl scrape. Returns status + content."""
     if not url:
@@ -491,19 +511,27 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
     doula_names = set(d["name"].lower() for d in result["doulas"])
     result["midwives"] = [m for m in result["midwives"] if m["name"].lower() not in doula_names]
 
-    # Phase 4: URL validation + enrichment (single pass)
-    # When --enrich is set, every scrape does double duty: validates AND returns content.
+    # Phase 4: HEAD pre-filter + URL validation + enrichment (single pass)
+    # HEAD check is free — filters dead URLs before spending a Firecrawl call.
     print("  Phase 4: URL validation...", file=sys.stderr)
     all_providers = (
         result["doulas"] + result["midwives"] +
         result["birth_centers"] + result["hospitals"]
     )
     for p in all_providers:
-        if p.get("website"):
-            val_result = firecrawl_validate_url(p["website"])
-            p["url_valid"] = val_result
-            if enrich and val_result.get("valid") and val_result.get("content"):
-                p["enriched"] = {"markdown": val_result["content"], "title": val_result.get("title", "")}
+        url = p.get("website")
+        if url:
+            # Step 1: Free HEAD check first
+            head_result = head_check_url(url)
+            p["head_check"] = head_result
+            if head_result.get("valid"):
+                # Step 2: Only Firecrawl-scrape if HEAD passed
+                val_result = firecrawl_validate_url(url)
+                p["url_valid"] = val_result
+                if enrich and val_result.get("valid") and val_result.get("content"):
+                    p["enriched"] = {"markdown": val_result["content"], "title": val_result.get("title", "")}
+            else:
+                p["url_valid"] = {"valid": False, "reason": f"HEAD: {head_result.get('reason','')}"}
         else:
             p["url_valid"] = {"valid": False, "reason": "no_url"}
         if p["url_valid"].get("valid"):
@@ -511,10 +539,14 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
         else:
             p["url_status"] = f"❌ dead ({p['url_valid'].get('reason','')})"
 
-    # Phase 5: Firecrawl search fallback for dead URLs
+    # Phase 5: Firecrawl search fallback for dead URLs (only for transient failures)
     print("  Phase 5: Fallback search for dead URLs...", file=sys.stderr)
     for p in all_providers:
         if p.get("url_valid", {}).get("valid"):
+            continue
+        # Skip clearly dead domains — only try search for transient failures
+        head_reason = p.get("head_check", {}).get("reason", "")
+        if any(kw in head_reason for kw in ["Name or service not known", "getaddrinfo", "Connection refused", "nodename nor servname"]):
             continue
         search_query = f"{p['name']} {city} {state} doula birth"
         search_results = firecrawl_search(search_query, 3)
