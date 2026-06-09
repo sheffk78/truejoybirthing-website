@@ -82,6 +82,16 @@ const schema = {
   '@context': 'https://schema.org',
   '@graph': [
     {
+      '@type': 'Article',
+      '@id': `${pageUrl}#article`,
+      headline: `${city} Doula: Costs, Hospitals & Medicaid`,
+      description: pageDesc,
+      author: { '@type': 'Organization', '@id': 'https://truejoybirthing.com/#organization' },
+      publisher: { '@type': 'Organization', '@id': 'https://truejoybirthing.com/#organization' },
+      ...(data.publishedDate ? { datePublished: data.publishedDate } : {}),
+      mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+    },
+    {
       '@type': 'FAQPage',
       '@id': `${pageUrl}#faq`,
       mainEntity: faqs.map((f) => ({
@@ -174,7 +184,7 @@ const schema = {
           <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">{city} Doula & Birth Support</p>
           <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
           <h1 class="text-3xl md:text-4xl font-bold mb-4" style="font-family: 'DM Serif Display', Georgia, serif;">{city} Doula: Costs, Hospitals & Medicaid</h1>
-          <p class="text-lg text-tjb-charcoal font-semibold mb-2">You deserve to feel confident walking into your birth.</p>
+          <p class="text-lg text-tjb-charcoal font-semibold mb-2">True Joy Birthing is a free birth plan app and doula directory for first-time moms in {city}. Whether you're looking for a <strong>doula in {city}</strong>, building your birth plan, or figuring out what doula support even looks like — everything here is free.</p>
           <p class="text-tjb-gray mb-6">Doulas, midwives, hospital policies, and costs, broken down so you can walk in prepared. This guide covers <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">how much doulas cost</a>, <a href="/medicaid-doula-coverage/" class="text-tjb-rose-600 hover:underline">whether Medicaid covers a doula</a>, and which hospitals welcome birth partners. New here? <a href="/what-is-a-doula/" class="text-tjb-rose-600 hover:underline">Learn what a doula actually does</a>.</p>
           <div class="flex flex-col sm:flex-row gap-3">
             <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-primary text-center">Build Your Birth Plan in the App</a>
@@ -246,6 +256,98 @@ const schema = {
           <p class="text-tjb-gray mt-6">Whether this is your first baby or you're preparing for a VBAC, <a href="/what-is-a-doula/" class="text-tjb-rose-600 hover:underline">understanding what a doula does</a>, and <a href="/benefits-of-a-doula/" class="text-tjb-rose-600 hover:underline">how a doula can change your birth experience</a>, can help you decide what support is right for you. Planning for a specific scenario? Read our <a href="/vbac-birth-plan/" class="text-tjb-rose-600 hover:underline">VBAC birth plan guide</a> or our <a href="/c-section-birth-plan/" class="text-tjb-rose-600 hover:underline">C-section birth plan template</a>.</p>
         </div>
       </div>
+
+  <!-- ═══ What the Free App Offers ═══ -->
+  <section class="py-16 bg-tjb-cream-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4 text-center">Free app</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+      <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-6 text-center" style="font-family: 'DM Sans', sans-serif;">What the Free App Offers</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+          <p class="font-semibold text-tjb-charcoal mb-2">9 guided sections</p>
+          <p class="text-sm text-tjb-gray">Hospital preferences, pain management options, who's in the room, feeding preferences, postpartum plans — each section walks you through what each choice means so nothing gets missed.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+          <p class="font-semibold text-tjb-charcoal mb-2">Find local doulas</p>
+          <p class="text-sm text-tjb-gray">Browse and connect with doulas serving {city} right inside the app. See their services, cost ranges, and availability without searching elsewhere.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+          <p class="font-semibold text-tjb-charcoal mb-2">Printable PDF birth plan</p>
+          <p class="text-sm text-tjb-gray">Export your finished plan as a PDF to share with your provider, doula, or hospital. Easy to update anytime — not a static document you fill out once.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+          <p class="font-semibold text-tjb-charcoal mb-2">Completely free</p>
+          <p class="text-sm text-tjb-gray">No account needed, no credit card, no time limit. Works on iPhone. Download it, build your plan, share it — that's it.</p>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-primary">Download on the App Store →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ When to Start Looking for a Doula ═══ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Planning ahead</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-4" style="font-family: 'DM Sans', sans-serif;">When to Start Looking for a Doula in {city}</h2>
+      <p class="text-tjb-gray leading-relaxed mb-4">Start looking around <strong>12 to 20 weeks</strong>. That gives you time to meet a few doulas, compare approaches, and lock someone in before their calendar fills up — popular {city} doulas often book up by the third trimester. Already past 20 weeks? Start now. Most doulas have room in their schedule and would rather work with you late than not at all.</p>
+      <p class="text-tjb-gray leading-relaxed mb-4">The earlier you connect, the more time your doula has to learn your preferences, understand your hospital's policies, and build trust before labor day. Use the free app to <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-rose-600 hover:underline">browse doulas serving {city}</a> and start reaching out today.</p>
+    </div>
+  </section>
+
+  <!-- ═══ Questions to Ask When Interviewing Doulas ═══ -->
+  <section class="py-16 bg-tjb-cream-50">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Interviewing doulas</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-4" style="font-family: 'DM Sans', sans-serif;">Questions to Ask When Interviewing {city} Doulas</h2>
+      <p class="text-tjb-gray mb-6">Not sure what to ask when you meet a doula? These questions help you find someone who fits your personality, your budget, and your birth preferences.</p>
+      <ul class="space-y-3">
+        <li class="flex gap-3 p-4 bg-white rounded-xl shadow-sm border border-tjb-lavender-200/50">
+          <span class="text-tjb-rose-500 font-bold text-lg flex-shrink-0">1</span>
+          <div>
+            <p class="font-semibold text-tjb-charcoal text-sm">How many births have you attended in {city}?</p>
+            <p class="text-sm text-tjb-gray">Local experience means they know the hospitals, the staff, and what to expect at each one.</p>
+          </div>
+        </li>
+        <li class="flex gap-3 p-4 bg-white rounded-xl shadow-sm border border-tjb-lavender-200/50">
+          <span class="text-tjb-rose-500 font-bold text-lg flex-shrink-0">2</span>
+          <div>
+            <p class="font-semibold text-tjb-charcoal text-sm">What happens if you're unavailable when I go into labor?</p>
+            <p class="text-sm text-tjb-gray">A solid backup plan is non-negotiable. Ask about their backup doula and how handoffs work.</p>
+          </div>
+        </li>
+        <li class="flex gap-3 p-4 bg-white rounded-xl shadow-sm border border-tjb-lavender-200/50">
+          <span class="text-tjb-rose-500 font-bold text-lg flex-shrink-0">3</span>
+          <div>
+            <p class="font-semibold text-tjb-charcoal text-sm">How do you support my partner during labor?</p>
+            <p class="text-sm text-tjb-gray">A good doula includes your support person — she gives them confidence, not sidelines them.</p>
+          </div>
+        </li>
+        <li class="flex gap-3 p-4 bg-white rounded-xl shadow-sm border border-tjb-lavender-200/50">
+          <span class="text-tjb-rose-500 font-bold text-lg flex-shrink-0">4</span>
+          <div>
+            <p class="font-semibold text-tjb-charcoal text-sm">What's included in your fee?</p>
+            <p class="text-sm text-tjb-gray">Ask about prenatal visits, labor support, postpartum follow-ups, and whether they offer sliding-scale or Medicaid packages.</p>
+          </div>
+        </li>
+        <li class="flex gap-3 p-4 bg-white rounded-xl shadow-sm border border-tjb-lavender-200/50">
+          <span class="text-tjb-rose-500 font-bold text-lg flex-shrink-0">5</span>
+          <div>
+            <p class="font-semibold text-tjb-charcoal text-sm">Can you help me review my birth plan?</p>
+            <p class="text-sm text-tjb-gray">They should be comfortable working with whatever format you bring — PDF, app printout, or a list of preferences.</p>
+          </div>
+        </li>
+      </ul>
+      <div class="text-center mt-8">
+        <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-primary">Download the App to Find a Doula →</a>
+      </div>
+    </div>
+  </section>
+
     <!-- ═══ Social Proof: Testimonials or Q&A ═══ -->
     {testimonials && testimonials.length > 0 ? (
       <section class="py-20 bg-white">
