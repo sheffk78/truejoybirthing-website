@@ -10,6 +10,7 @@ import AppShowcase from '../components/AppShowcase.astro';
   canonical="https://truejoybirthing.com/"
   ogImage="https://truejoybirthing.com/images/og/true-joy-birthing-main.png"
   schema={{
+    "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebPage",
@@ -18,7 +19,54 @@ import AppShowcase from '../components/AppShowcase.astro';
         "name": "Joyful Birth Plan — True Joy Birthing",
         "description": "Build your birth plan with confidence. Free doula-crafted birth plan, guided walkthrough course, and 1:1 coaching sessions.",
         "mainEntity": {"@id": "https://truejoybirthing.com/#organization"},
-        "isPartOf": {"@id": "https://truejoybirthing.com/#website"}
+        "isPartOf": {"@id": "https://truejoybirthing.com/#website"},
+        "about": {"@id": "https://truejoybirthing.com/#organization"},
+        "dateModified": "2026-06-09"
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://truejoybirthing.com/#organization",
+        "name": "True Joy Birthing",
+        "url": "https://truejoybirthing.com/",
+        "description": "Free doula-crafted birth plan templates, guided walkthrough course, and 1:1 coaching sessions for expecting families.",
+        "foundingDate": "2024",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "support@truejoybirthing.com",
+          "contactType": "customer service",
+          "availableLanguage": ["English"]
+        },
+        "knowsAbout": ["Birth planning", "Birth doula support", "Birth plan template", "Pregnancy preparation", "Labor and delivery preferences"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://truejoybirthing.com/#website",
+        "url": "https://truejoybirthing.com/",
+        "name": "True Joy Birthing",
+        "publisher": {"@id": "https://truejoybirthing.com/#organization"}
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://truejoybirthing.com/#app",
+        "name": "True Joy Birthing",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "iOS",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Parent Mode",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          },
+          {
+            "@type": "Offer",
+            "name": "Pro Mode",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        ]
       }
     ]
   }}
@@ -35,9 +83,11 @@ import AppShowcase from '../components/AppShowcase.astro';
         <!-- Left: Text — 55% -->
         <div class="md:w-[55%] px-6 md:px-12 py-20 md:py-24 flex flex-col justify-center">
           <p class="eyebrow mb-3">Free Joyful Birth Plan</p>
-          <h1 class="font-bold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(2.25rem, 5vw, 3.75rem);">
+          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+          <h1 class="font-bold text-tjb-charcoal leading-[1.15] mb-4" style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(2.25rem, 5vw, 3.75rem);">
             Your birth plan gives you the words when your doctor recommends something you didn't expect
           </h1>
+          <p class="text-lg text-tjb-charcoal font-semibold mb-2">True Joy Birthing is a free birth plan tool and app for first-time moms building confidence for the delivery room.</p>
           <p class="text-tjb-gray text-lg leading-[1.7] mb-8 max-w-[36rem]">
             A <strong>birth plan</strong> is a document that spells out your preferences for labor, delivery, and postpartum care — so your medical team knows what matters to you. The <a href="/birth-plan-template/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">Joyful Birth Plan</a> covers every stage of birth and works in your real hospital room. Download the fillable PDF free, or build your plan in the <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">free app</a>.
           </p>
@@ -350,6 +400,41 @@ import AppShowcase from '../components/AppShowcase.astro';
   </section>
 
   <!-- ═══════════════════════════════════════════
+       CTA CARD — Conversion anchor with mockup
+       ═══════════════════════════════════════════ -->
+  <section class="py-20 bg-tjb-cream/50">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="bg-tjb-lavender-50 border-2 border-tjb-lavender-200 p-6 md:p-8 rounded-xl">
+        <!-- Booklet mockup at top of card -->
+        <div class="flex justify-center mb-5">
+          <a href="/birth-plan-template/" class="block group max-w-xs">
+            <img
+              src="/images/birth-plan-booklet-1.webp"
+              alt="Joyful Birth Plan: cover page showing 'To My Healthcare Providers' section"
+              class="w-full rounded-lg shadow-md group-hover:shadow-lg transition-shadow"
+              width="1024"
+              height="768"
+              loading="lazy"
+            />
+          </a>
+        </div>
+        <h2 class="font-bold text-tjb-charcoal mb-2 text-center" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">Walk Into Your Birth Feeling Prepared, Not Anxious</h2>
+        <p class="text-tjb-gray mb-3 text-center">The #1 thing moms tell us they wish they'd had? <strong>A clear plan they'd actually thought through</strong> — not just a form, but a process that helped them understand their options before the contractions started.</p>
+        <p class="text-tjb-gray mb-5 text-center">The free Joyful Birth Plan app walks you through every decision: who's in the room, what happens if things shift, what matters most to you. Prefer paper? Download the free PDF template instead.</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center mb-4">
+          <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-primary text-center no-underline">
+            Build Your Birth Plan in the Free App
+          </a>
+          <a href="/birth-plan-template/" class="btn-secondary text-center">
+            Or download the free PDF →
+          </a>
+        </div>
+        <p class="text-xs text-tjb-gray text-center">Free · iPhone app or printable PDF · No account needed</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
        RESOURCES — Editorial typographic strip
        ═══════════════════════════════════════════ -->
   <section class="py-16 md:py-20 bg-tjb-cream">
@@ -481,6 +566,63 @@ import AppShowcase from '../components/AppShowcase.astro';
           See all cities
         </a>
       </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FAQ — Accordion section
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-tjb-cream">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-2 text-center" style="font-family: 'DM Sans', sans-serif;">Your Questions About Birth Plans, Answered</h2>
+      <p class="text-tjb-gray mb-8 text-center">The things first-time moms ask us most, answered honestly.</p>
+      <div class="space-y-4">
+        <details class="border border-tjb-lavender-200 rounded-xl p-5 bg-white group">
+          <summary class="text-base font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
+            <span>What is a birth plan, and do I really need one?</span>
+            <svg class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="text-tjb-gray mt-3 text-sm leading-relaxed">A birth plan is a document that spells out your preferences for labor, delivery, and postpartum care. It's not a rigid checklist — it's a communication tool that helps your medical team know what matters to you. The <a href="/birth-plan-template/" class="text-tjb-lavender-600 hover:underline">free Joyful Birth Plan</a> covers every stage and works in your real hospital room.</p>
+        </details>
+        <details class="border border-tjb-lavender-200 rounded-xl p-5 bg-white group">
+          <summary class="text-base font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
+            <span>Can I fill out a birth plan on my phone?</span>
+            <svg class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="text-tjb-gray mt-3 text-sm leading-relaxed">Yes! The <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-lavender-600 hover:underline">True Joy Birthing app</a> lets you build your birth plan step by step on your phone. Nine guided sections walk you through hospital preferences, pain management, and more — and you can update it anytime. Prefer the fillable PDF? <a href="/birth-plan-template/" class="text-tjb-lavender-600 hover:underline">Download it free here</a>.</p>
+        </details>
+        <details class="border border-tjb-lavender-200 rounded-xl p-5 bg-white group">
+          <summary class="text-base font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
+            <span>What if my doctor recommends something I didn't expect?</span>
+            <svg class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="text-tjb-gray mt-3 text-sm leading-relaxed">That's exactly what a birth plan is for. It gives you the words when your doctor recommends something you hadn't thought about. The <a href="/guided-birth-plan-walkthrough/" class="text-tjb-lavender-600 hover:underline">Guided Birth Plan Walkthrough</a> course covers what to say in these moments, and the <a href="/birth-plan-confidence-session/#book" class="text-tjb-lavender-600 hover:underline">1:1 Confidence Session</a> lets you practice the conversation.</p>
+        </details>
+        <details class="border border-tjb-lavender-200 rounded-xl p-5 bg-white group">
+          <summary class="text-base font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
+            <span>How do I choose between the PDF and the app?</span>
+            <svg class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="text-tjb-gray mt-3 text-sm leading-relaxed">Both are free! The <strong>app</strong> is best if you want step-by-step guidance, the ability to update your plan anytime, and share it with your care team. The <strong>PDF</strong> is best if you want a printable one-pager your nurse can read in two minutes. Many families use both — build in the app, print the PDF for the hospital bag.</p>
+        </details>
+        <details class="border border-tjb-lavender-200 rounded-xl p-5 bg-white group">
+          <summary class="text-base font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
+            <span>Is there a doula or midwife directory?</span>
+            <svg class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <p class="text-tjb-gray mt-3 text-sm leading-relaxed">Yes — use the <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-lavender-600 hover:underline">True Joy Birthing app</a> to find doulas and midwives in your area. You can also browse our <a href="/birth-support/" class="text-tjb-lavender-600 hover:underline">city-by-city guides</a> for local hospital info, doula costs, and Medicaid status.</p>
+        </details>
+      </div>
     </div>
   </section>
 
