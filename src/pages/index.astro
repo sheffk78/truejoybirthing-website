@@ -490,7 +490,22 @@ import AppShowcase from '../components/AppShowcase.astro';
         </p>
       </div>
 
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+      <!-- City search — live filter -->
+      <div class="max-w-lg mx-auto mb-8">
+        <div class="relative">
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-tjb-gray-300 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input
+            type="text"
+            id="city-search"
+            placeholder="Search your city or area..."
+            class="w-full pl-11 pr-4 py-3 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-rose-400 bg-white transition-colors text-sm text-tjb-charcoal"
+          />
+        </div>
+      </div>
+
+      <div id="city-grid" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         <a href="/birth-support/new-york-ny/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
           <div class="aspect-[4/3] overflow-hidden">
             <img src="/images/new-york-ny-birth-doula-skyline.webp" alt="New York" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
@@ -755,6 +770,22 @@ import AppShowcase from '../components/AppShowcase.astro';
     } else {
       // Fallback: show everything immediately
       fadeEls.forEach(el => el.classList.add('is-visible'));
+    }
+  </script>
+
+  <script>
+    // City search — live filter
+    const searchInput = document.getElementById('city-search');
+    const cityGrid = document.getElementById('city-grid');
+    if (searchInput && cityGrid) {
+      const cards = cityGrid.querySelectorAll('a');
+      searchInput.addEventListener('input', () => {
+        const q = searchInput.value.toLowerCase().trim();
+        cards.forEach(card => {
+          const name = card.querySelector('h3')?.textContent?.toLowerCase() || '';
+          card.style.display = (!q || name.includes(q)) ? '' : 'none';
+        });
+      });
     }
   </script>
 
