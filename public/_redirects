@@ -96,6 +96,13 @@
 /birth-plan-session /#download 301
 /birth-plan-session/ /#download 301
 
+# ════════════════════════════════════════════════════════════
+# CONTENT MERGE: Walkthrough course → free on template page
+# ════════════════════════════════════════════════════════════
+
+/guided-birth-plan-walkthrough /birth-plan-template/#walkthrough 301
+/guided-birth-plan-walkthrough/ /birth-plan-template/#walkthrough 301
+
 /thanks /#download 301
 /thanks/ /#download 301
 /cancel /#download 301

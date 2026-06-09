@@ -101,7 +101,7 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
           body: JSON.stringify({
             email,
             attributes: { FIRSTNAME: brevoContactName },
-            listIds: [2, 5],
+            listIds: [2, 5, 6], // 6 = Video Walkthrough (free course leads)
             updateEnabled: true,
           }),
         });
