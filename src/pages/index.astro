@@ -104,17 +104,19 @@ import AppShowcase from '../components/AppShowcase.astro';
           </p>
         </div>
 
-        <!-- Right: Product mockup — real PDF pages -->
-        <div class="md:w-[45%] flex items-center justify-center px-6 py-12 md:py-0">
-          <img
-            src="/images/birth-plan-mockup-square-new-7.webp"
-            alt="The free Joyful Birth Plan — a single page showing the About Me and Labor & Delivery sections"
-            class="w-full max-w-xs h-auto rounded-lg shadow-lg"
-            loading="eager"
-            fetchpriority="high"
-            width="600"
-            height="600"
-          />
+        <!-- Right: Product mockup — PDF page 1, portrait for max vertical space -->
+        <div class="md:w-[45%] flex items-center justify-center px-6 py-8 md:py-0">
+          <div class="w-full max-w-[400px]">
+            <img
+              src="/images/pdf-page-1-hero.webp"
+              alt="The free Joyful Birth Plan — full page showing About Me, Labor & Delivery, and newborn care preferences"
+              class="w-full h-auto rounded-lg shadow-xl"
+              loading="eager"
+              fetchpriority="high"
+              width="612"
+              height="792"
+            />
+          </div>
         </div>
 
       </div>
@@ -297,13 +299,8 @@ import AppShowcase from '../components/AppShowcase.astro';
     bannerAlt="The free Joyful Birth Plan — a two-page overlapping stack showing the introduction letter and newborn care location preferences"
   />
 
-  <div class="max-w-3xl mx-auto px-6 -mt-4 text-center">
-    <p class="text-sm text-tjb-gray">Already have a plan? <a href="/birth-plan-confidence-session/#book" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">Book a Birth Plan Confidence Session</a></p>
-    <p class="text-sm text-tjb-gray mt-1">Want to understand every choice on it? <a href="/guided-birth-plan-walkthrough/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">Enroll in the birth plan course</a></p>
-  </div>
-
   <!-- ═══════════════════════════════════════════
-       FOR PROS — Expanded two-column layout with app screenshots
+       FOR PROS — Two-column layout with phone-frame app screenshots
        ═══════════════════════════════════════════ -->
   <section class="bg-tjb-lavender-100 py-20 md:py-28">
     <div class="max-w-6xl mx-auto px-6">
@@ -365,27 +362,35 @@ import AppShowcase from '../components/AppShowcase.astro';
           <p class="text-sm text-tjb-gray-300 mt-4">Free for doulas, midwives, and birth professionals. No quotas, no contracts, no tracking.</p>
         </div>
 
-        <!-- Right: App screenshots — 45% -->
-        <div class="md:w-[45%] flex flex-col items-center justify-center gap-6">
-          <div class="w-full max-w-[280px] rounded-2xl shadow-xl overflow-hidden border border-tjb-lavender-200/60 bg-white">
-            <img
-              src="/images/app-my-clients.webp"
-              alt="Pro Mode client dashboard showing client profile with due date, status, and key actions"
-              class="w-full h-auto"
-              loading="lazy"
-              width="369"
-              height="800"
-            />
-          </div>
-          <div class="w-full max-w-[280px] -mt-4 rounded-2xl shadow-lg overflow-hidden border border-tjb-lavender-200/40 bg-white opacity-85">
-            <img
-              src="/images/app-wellness-record.webp"
-              alt="Pro Mode wellness visit record form tracking prenatal visits, blood pressure, and fetal heart rate"
-              class="w-full h-auto"
-              loading="lazy"
-              width="369"
-              height="800"
-            />
+        <!-- Right: App screenshots — 45%, phone frames matching AppShowcase -->
+        <div class="md:w-[45%] flex justify-center">
+          <div class="relative flex items-start">
+            <!-- Left phone — client dashboard, offset down -->
+            <div class="phone-frame w-[46%] flex-shrink-0 mt-10 md:mt-16 z-10">
+              <div class="phone-screen">
+                <img
+                  src="/images/app-my-clients.webp"
+                  alt="Pro Mode client dashboard showing client profile with due date, status, and key actions"
+                  class="w-full h-full object-cover"
+                  width="390"
+                  height="844"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <!-- Right phone — wellness record -->
+            <div class="phone-frame w-[46%] flex-shrink-0 -ml-3 md:-ml-4 z-20">
+              <div class="phone-screen">
+                <img
+                  src="/images/app-wellness-record.webp"
+                  alt="Pro Mode wellness visit record form tracking prenatal visits, blood pressure, and fetal heart rate"
+                  class="w-full h-full object-cover"
+                  width="390"
+                  height="844"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -644,6 +649,94 @@ import AppShowcase from '../components/AppShowcase.astro';
         transform: none;
         transition: none;
       }
+    }
+
+    /* ═══════════════════════════════════════════
+       Phone mockup frame — CSS-only iPhone bezel
+       Matches AppShowcase component, used in For Pros section
+       ═══════════════════════════════════════════ */
+    .phone-frame {
+      position: relative;
+      background: #111;
+      border-radius: 1.75rem;
+      padding: 0.3rem;
+      box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.28),
+        0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
+
+    .phone-frame::before {
+      content: '';
+      position: absolute;
+      top: 0.45rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 26%;
+      height: 0.85rem;
+      background: #111;
+      border-radius: 1rem;
+      z-index: 30;
+    }
+
+    .phone-frame::after {
+      content: '';
+      position: absolute;
+      bottom: 0.3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 35%;
+      height: 0.22rem;
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 0.11rem;
+      z-index: 30;
+    }
+
+    .phone-screen {
+      position: relative;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .phone-screen::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 40%;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.08) 0%,
+        rgba(255, 255, 255, 0.02) 40%,
+        transparent 100%
+      );
+      z-index: 10;
+      pointer-events: none;
+      border-radius: 1.5rem 1.5rem 0 0;
+    }
+
+    .phone-screen::after {
+      content: '9:41';
+      position: absolute;
+      top: 0.55rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.45);
+      letter-spacing: 0.02em;
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    .phone-screen img {
+      display: block;
+      border-radius: 1.5rem;
+      width: 100%;
+      height: auto;
     }
   </style>
   <script>
