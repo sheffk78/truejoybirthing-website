@@ -7,31 +7,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body {
-    width: 1200px;
-    height: 630px;
-    background: #FAF8F5;
-    overflow: hidden;
-  }
+  html, body { width: 1200px; height: 630px; background: #FAF8F5; overflow: hidden; }
   .og-card { display: flex; flex-direction: row; width: 1200px; height: 630px; }
-  .left-column {
-    width: 660px; display: flex; flex-direction: column; justify-content: center;
-    padding: 52px 64px;
-    background: linear-gradient(180deg, #FAF8F5 0%, #EDE5F5 100%);
-    position: relative;
-  }
-  .left-column::before, .left-column::after { content: ''; position: absolute; left: 0; right: 0; height: 6px; background: #D8A0C4; }
-  .left-column::before { top: 0; }
-  .left-column::after { bottom: 0; }
-  .right-column {
-    width: 540px; position: relative; overflow: hidden;
-    background: linear-gradient(135deg, #E6BBD8 0%, #8E8CB5 50%, #A8B5A0 100%);
-  }
-  .right-column::before, .right-column::after {
-    content: ''; position: absolute; left: 0; right: 0; height: 6px; background: #D8A0C4; z-index: 2;
-  }
-  .right-column::before { top: 0; }
-  .right-column::after { bottom: 0; }
+  .left-column { width: 660px; display: flex; flex-direction: column; justify-content: center; padding: 52px 64px; background: linear-gradient(180deg, #FAF8F5 0%, #EDE5F5 100%); position: relative; }
+  .left-column::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: #D8A0C4; }
+  .left-column::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 6px; background: #D8A0C4; }
+  .right-column { width: 540px; position: relative; overflow: hidden; }
+  .right-column img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  .right-column::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: #D8A0C4; z-index: 2; }
+  .right-column::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 6px; background: #D8A0C4; z-index: 2; }
   .accent-line { width: 40px; height: 3px; background: #D8A0C4; border-radius: 2px; margin-bottom: 20px; }
   .eyebrow { font-family: 'Source Sans 3', sans-serif; font-weight: 600; font-size: 15px; color: #B87AA0; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 10px; }
   .headline { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 700; font-size: 52px; color: #2A2A2A; letter-spacing: -0.01em; line-height: 1.1; margin-bottom: 16px; }
@@ -54,7 +38,9 @@
       <img src="https://truejoybirthing.com/images/logo-mono.svg" alt="True Joy Birthing" />
     </div>
   </div>
-  <div class="right-column"></div>
+  <div class="right-column">
+    <img src="https://truejoybirthing.com/images/fremont-ca-birth-doula-skyline.webp" alt="Fremont, CA" />
+  </div>
 </div>
 </body>
 </html>
