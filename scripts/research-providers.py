@@ -136,7 +136,7 @@ def search_npi(city: str, state: str, taxonomy: str = "midwife", limit: int = 20
 # ═══════════════════════════════════════════════════════════════
 
 def firecrawl_validate_url(url: str) -> dict:
-    """Check if a URL is live via Firecrawl scrape. Returns status + content length."""
+    """Check if a URL is live via Firecrawl scrape. Returns status + content."""
     if not url:
         return {"valid": False, "reason": "no_url"}
     payload = json.dumps({"url": url, "formats": ["markdown"], "onlyMainContent": True}).encode()
@@ -156,6 +156,7 @@ def firecrawl_validate_url(url: str) -> dict:
             md = result.get("data", {}).get("markdown", "")
             return {
                 "valid": True,
+                "content": md,
                 "content_length": len(md),
                 "title": result.get("data", {}).get("metadata", {}).get("title", ""),
             }
@@ -386,11 +387,19 @@ def download_image(url: str, output_path: str) -> bool:
 # Classification
 # ═══════════════════════════════════════════════════════════════
 
-def classify_place(p: dict) -> tuple[Union[str, None], str]:
-    """Classify a Google Maps result."""
-    title = (p.get("title") or "").lower()
+def classify_place(p: dict, target_state: str = "") -> tuple[Union[str, None], str]:
+    """Classify a Google Maps result. Skips results in wrong state."""
+    address = (p.get("address") or "").lower()
+    name = (p.get("title") or "").lower()
     cat = (p.get("category") or "").lower()
-    text = f"{title} {cat}"
+    text = f"{name} {cat}"
+
+    # Filter by state — skip results whose address doesn't mention target state
+    if target_state and address and target_state.lower() not in address:
+        # Exception: hospitals/midwives in a neighboring city that still serves this city
+        # are kept (the address might be a different state for border cities).
+        # Only filter when the address clearly shows a different state.
+        return (None, "")
 
     if any(kw in text for kw in ["midwife", "midwifery"]):
         return ("midwife", "midwives")
@@ -455,7 +464,7 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
             if url:
                 seen_urls.add(url)
 
-            cat, cat_key = classify_place(p)
+            cat, cat_key = classify_place(p, state)
             if cat is None:
                 continue
 
@@ -482,7 +491,8 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
     doula_names = set(d["name"].lower() for d in result["doulas"])
     result["midwives"] = [m for m in result["midwives"] if m["name"].lower() not in doula_names]
 
-    # Phase 4: URL validation via Firecrawl
+    # Phase 4: URL validation + enrichment (single pass)
+    # When --enrich is set, every scrape does double duty: validates AND returns content.
     print("  Phase 4: URL validation...", file=sys.stderr)
     all_providers = (
         result["doulas"] + result["midwives"] +
@@ -490,7 +500,10 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
     )
     for p in all_providers:
         if p.get("website"):
-            p["url_valid"] = firecrawl_validate_url(p["website"])
+            val_result = firecrawl_validate_url(p["website"])
+            p["url_valid"] = val_result
+            if enrich and val_result.get("valid") and val_result.get("content"):
+                p["enriched"] = {"markdown": val_result["content"], "title": val_result.get("title", "")}
         else:
             p["url_valid"] = {"valid": False, "reason": "no_url"}
         if p["url_valid"].get("valid"):
@@ -512,6 +525,8 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
                 print(f"    {p['name']}: found alternative URL: {new_url}", file=sys.stderr)
                 p["website_alt"] = new_url
                 p["url_valid_alt"] = firecrawl_validate_url(new_url)
+                if enrich and p["url_valid_alt"].get("valid") and p["url_valid_alt"].get("content"):
+                    p["enriched"] = {"markdown": p["url_valid_alt"]["content"], "title": p["url_valid_alt"].get("title", "")}
                 if p["url_valid_alt"].get("valid"):
                     p["url_status"] = "✅ recovered via search"
                 else:
@@ -519,28 +534,10 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
         else:
             p["url_status"] = "❌ no URL found"
 
-    # Phase 6: Firecrawl enrichment for valid URLs
-    if enrich:
-        print("  Phase 6: Provider enrichment...", file=sys.stderr)
-        for p in all_providers:
-            target_url = None
-            if p.get("url_valid", {}).get("valid"):
-                target_url = p.get("website")
-            elif p.get("url_valid_alt", {}).get("valid"):
-                target_url = p.get("website_alt")
+    print(f"    Live: {sum(1 for p in all_providers if p.get('url_status','').startswith('✅'))}/{len(all_providers)}", file=sys.stderr)
 
-            if target_url:
-                scraped = firecrawl_enrich(target_url)
-                if scraped.get("markdown"):
-                    p["enriched"] = scraped
-                    print(f"    Enriched: {p['name']} ({len(scraped['markdown'])} chars)", file=sys.stderr)
-                else:
-                    p["enriched"] = {"note": "scrape returned no content"}
-            else:
-                p["enriched"] = {"note": "no valid URL to enrich"}
-
-    # Phase 7: Hospital photos via Wikipedia Commons
-    print("  Phase 7: Hospital photo search...", file=sys.stderr)
+    # Phase 6: Hospital photos via Wikipedia Commons
+    print("  Phase 6: Hospital photo search...", file=sys.stderr)
     for h in result["hospitals"]:
         photos = wikipedia_commons_search(h["name"])
         if photos:

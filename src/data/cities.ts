@@ -248,6 +248,10 @@ export const cities: Record<string, CityData> = {
     city: "Carrollton",
     state: "TX",
     slug: "carrollton-tx",
+    heroImage: "/images/carrollton-tx-birth-doula-skyline.webp",
+    supportSceneImage: "/images/doula-walking.webp",
+    supportSceneAlt: "A doula walking alongside an expectant mom in Carrollton, Texas: continuous labor support for DFW families",
+    enableBlogResources: true,
     costLow: 900,
     costHigh: 2500,
     shelbiServesHere: true,
@@ -278,6 +282,17 @@ export const cities: Record<string, CityData> = {
     // Lovers Lane Birth Center (4.5★/89 reviews, Dallas, ~18 mi, categorized
     // "Birth center", no NPI-registered org found). Verified 2026-05-26.
     birthCenterDetails: [
+    ],
+    localDoulas: [
+      { name: "Great Expectations Doulas", credential: "Award-Winning Doula Agency Since 2007", practice: "Great Expectations Doulas", url: "https://www.bestdallasdoulas.com", description: "Dallas's premier doula agency since 2007, serving Carrollton and the entire DFW metroplex. Offering birth doula, postpartum doula, and lactation support with over 200 five-star reviews.", services: ["Birth Doula", "Postpartum", "Lactation Support"], costRange: "$1,500–$2,800", serviceArea: ["Carrollton", "Dallas", "Addison", "Plano", "Frisco"], acceptingClients: true },
+      { name: "North Dallas Doula Associates", credential: "Guiding Families Since 1999", practice: "North Dallas Doula Associates", url: "https://www.northdallasdoulas.com", description: "Over 5,000 births attended since 1999. Birth doula, postpartum doula, lactation support, and placenta encapsulation services serving Carrollton and the DFW area.", services: ["Birth Doula", "Postpartum", "Lactation", "Placenta Encapsulation"], costRange: "$800–$2,500", serviceArea: ["Carrollton", "Dallas", "Lewisville", "Plano"], acceptingClients: true },
+      { name: "Cheryl Walker", credential: "Birth Doula & Educator", practice: "Cheryl Walker Birth Doula", url: "https://www.cherylwalkerbirthdoula.com", description: "Professional birth doula and educator serving Carrollton and the Dallas-Fort Worth area. Passionate about supporting families through pregnancy, labor, and postpartum.", services: ["Birth Doula", "Childbirth Education"], costRange: "$900–$1,800", serviceArea: ["Carrollton", "Dallas", "Lewisville", "Flower Mound"], acceptingClients: true },
+      { name: "Misty Gigler", credential: "Certified Birth Doula (DONA)", practice: "Misty Gigler, Certified Birth Doula", url: "https://mistygiglerbirthdoula.com", description: "DONA-certified birth doula providing evidence-based support for families in Carrollton and the DFW metroplex.", services: ["Birth Doula", "Postpartum"], costRange: "$1,000–$2,000", serviceArea: ["Carrollton", "Dallas", "Plano"], acceptingClients: true },
+      { name: "Doulas of Dallas", credential: "Professional Doula Agency", practice: "Doulas of Dallas", url: "https://www.doulasofdallas.com", description: "Compassionate doula support for families across the DFW area including Carrollton.", services: ["Birth Doula", "Postpartum"], serviceArea: ["Carrollton", "Dallas", "Irving", "Plano"] },
+      { name: "Magdala Doula Services", credential: "Birth & Postpartum Doula", practice: "Magdala Doula Services", url: "https://www.magdaladoulaservices.com", description: "Providing doula support for families in Carrollton and the DFW area.", services: ["Birth Doula", "Postpartum", "Loss Support"], serviceArea: ["Carrollton", "Dallas"] },
+      { name: "Barefoot Midwifery", credential: "Cori Lively, LM, CPM", practice: "Barefoot Midwifery", url: "https://www.barefootmidwifery.com", description: "Homebirth midwife serving the DFW area since 2003. Licensed midwife and Certified Professional Midwife providing personalized, evidence-based midwifery care for Carrollton families.", isMidwife: true, services: ["Home Birth", "Prenatal Care", "Postpartum Care", "Water Birth"], serviceArea: ["Carrollton", "Dallas", "Fort Worth", "Arlington"] },
+      { name: "Serenity Midwifery, PLLC", credential: "Licensed Midwife", practice: "Serenity Midwifery", url: "https://www.serenitymidwifery.net", description: "Dallas homebirth midwifery practice serving the DFW area with holistic, family-centered care.", isMidwife: true, services: ["Home Birth", "Prenatal Care", "Postpartum Care"], serviceArea: ["Carrollton", "Dallas", "Irving"] },
+      { name: "Wise Womb Midwifery", credential: "Midwife", practice: "Wise Womb Midwifery", url: "https://www.wisewombmidwifery.com", description: "Empowering birth journeys with love and wisdom. Serving Carrollton and the DFW area with comprehensive midwifery care.", isMidwife: true, services: ["Home Birth", "Prenatal Care", "Postpartum Care"], serviceArea: ["Carrollton", "Dallas", "Lewisville"] },
     ],
     medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas/Denton/Collin Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Carrollton area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",

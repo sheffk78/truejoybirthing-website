@@ -107,13 +107,13 @@ import AppShowcase from '../components/AppShowcase.astro';
         <!-- Right: Product mockup — real PDF pages -->
         <div class="md:w-[45%] flex items-center justify-center px-6 py-12 md:py-0">
           <img
-            src="/images/birth-plan-pdf-stack.webp"
-            alt="The free Joyful Birth Plan — a fillable PDF template covering labor preferences, pain management, delivery, postpartum, and newborn care"
-            class="w-full max-w-sm rounded-xl shadow-lg"
+            src="/images/birth-plan-mockup-landscape-new-1.webp"
+            alt="The free Joyful Birth Plan — an open two-page view showing the labor preferences and post-delivery sections"
+            class="w-full max-w-md h-auto rounded-xl shadow-md"
             loading="eager"
             fetchpriority="high"
-            width="560"
-            height="480"
+            width="1200"
+            height="738"
           />
         </div>
 
@@ -205,14 +205,14 @@ import AppShowcase from '../components/AppShowcase.astro';
 
         <!-- Card 1 — Joyful Birth Plan -->
         <div class="bg-white border border-tjb-lavender-200/50 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden">
+          <div class="aspect-[4/3] overflow-hidden flex items-center justify-center p-3">
             <img
-              src="/images/birth-plan-pdf-stack.webp"
-              alt="The free Joyful Birth Plan — a structured multi-page fillable PDF"
-              class="w-full h-full object-cover"
+              src="/images/birth-plan-mockup-square-new-5.webp"
+              alt="The free Joyful Birth Plan — newborn care preferences and the birth plan introduction letter"
+              class="w-full h-full object-contain"
               loading="lazy"
-              width="560"
-              height="480"
+              width="1200"
+              height="973"
             />
           </div>
           <div class="p-5 flex flex-col flex-1">
@@ -294,12 +294,12 @@ import AppShowcase from '../components/AppShowcase.astro';
         <!-- Left: Product mockup — real PDF pages -->
         <div class="md:w-[42%] flex justify-center">
           <img
-            src="/images/birth-plan-pdf-stack.webp"
-            alt="The free Joyful Birth Plan — a structured multi-page fillable PDF"
-            class="w-full max-w-xs rounded-xl shadow-md"
+            src="/images/birth-plan-mockup-square-new-8.webp"
+            alt="The free Joyful Birth Plan — a two-page overlapping stack showing the introduction letter and newborn care location preferences"
+            class="w-full max-w-xs h-auto rounded-xl shadow-sm"
             loading="lazy"
-            width="350"
-            height="300"
+            width="600"
+            height="508"
           />
         </div>
         <!-- Right: Form -->
@@ -320,7 +320,7 @@ import AppShowcase from '../components/AppShowcase.astro';
   </div>
 
   <!-- ═══════════════════════════════════════════
-       FOR PROS — Two-column: text left, photo right
+       FOR PROS — Expanded two-column layout with app screenshots
        ═══════════════════════════════════════════ -->
   <section class="bg-tjb-lavender-100 py-20 md:py-28">
     <div class="max-w-6xl mx-auto px-6">
@@ -330,50 +330,80 @@ import AppShowcase from '../components/AppShowcase.astro';
         <div class="md:w-[55%]">
           <p class="eyebrow mb-3 fade-up">For Doulas & Midwives</p>
           <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-          <h2 class="mb-5 text-[2.25rem] md:text-[2.75rem] leading-[1.15]" style="font-family: 'DM Sans', sans-serif;">Built for Birth Professionals</h2>
-          <p class="text-lg text-tjb-gray leading-relaxed mb-6">
-            When your clients build their plan in the True Joy Birthing app, it flows directly into your Pro Mode dashboard — no copy-paste, no lost details.
+          <h2 class="mb-5 text-[2.25rem] md:text-[2.75rem] leading-[1.15]" style="font-family: 'DM Sans', sans-serif;">Your Practice, Your Clients — All in One Place</h2>
+          <p class="text-lg text-tjb-gray leading-relaxed mb-4">
+            You already know the value you bring to families. But keeping track of client notes, prenatal records, birth plan progress, and visit schedules — that part shouldn't eat time you'd rather spend supporting your clients.
           </p>
-          <!-- 3-bullet benefit list -->
-          <ul class="space-y-3 mb-8">
+          <p class="text-base text-tjb-gray leading-relaxed mb-6">
+            The True Joy Birthing app gives you a Pro Mode dashboard that pulls everything together. When your clients build their birth plan in the app, you see their progress, their preferences, and their key info — without a single spreadsheet tab.
+          </p>
+          <!-- Benefit list -->
+          <ul class="space-y-4 mb-8">
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-tjb-rose-500 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
               </svg>
-              <span class="text-tjb-gray">Free Pro Mode with your ambassador status</span>
+              <div>
+                <span class="font-semibold text-tjb-charcoal">Client dashboard</span>
+                <p class="text-sm text-tjb-gray">Every client's due date, status, upcoming visits, and birth plan progress on one screen. No more digging through message threads to find what you need.</p>
+              </div>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-tjb-rose-500 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
               </svg>
-              <span class="text-tjb-gray">A listing on your city page so families find you</span>
+              <div>
+                <span class="font-semibold text-tjb-charcoal">Wellness visit tracking</span>
+                <p class="text-sm text-tjb-gray">Log prenatal visits, blood pressure, fetal heart rate, weight, and visit notes — all attached to the right client. Export when you need to share with providers.</p>
+              </div>
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-5 h-5 text-tjb-rose-500 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
               </svg>
-              <span class="text-tjb-gray">No quotas, no contracts, no tracking</span>
+              <div>
+                <span class="font-semibold text-tjb-charcoal">Birth plan visibility</span>
+                <p class="text-sm text-tjb-gray">Know exactly where each client is in their planning. See completed sections, what they've prioritized, and where they might need extra guidance — before they ask.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-tjb-rose-500 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              <div>
+                <span class="font-semibold text-tjb-charcoal">A free listing so families find you</span>
+                <p class="text-sm text-tjb-gray">Get listed in our city-by-city directory on <a href="/birth-support/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">truejoybirthing.com</a>. When moms search for doula support in your city, your name comes up.</p>
+              </div>
             </li>
           </ul>
-          <!-- Primary CTA — btn-primary class -->
           <a href="/ambassador/" class="btn-primary inline-block">
             Join the Ambassador Program
           </a>
-          <p class="text-sm text-tjb-gray-300 mt-4">Free for doulas, midwives, and birth professionals. No minimums.</p>
+          <p class="text-sm text-tjb-gray-300 mt-4">Free for doulas, midwives, and birth professionals. No quotas, no contracts, no tracking.</p>
         </div>
 
-        <!-- Right: Photo — 45% -->
-        <div class="md:w-[45%] flex items-center justify-center">
-          <img
-            src="/images/doula-walking.webp"
-            srcset="/images/responsive/doula-walking-480w.webp 480w, /images/responsive/doula-walking-960w.webp 960w, /images/doula-walking.webp 1536w"
-            sizes="(max-width: 480px) 480px, (max-width: 960px) 960px, 1536px"
-            alt="A doula walking alongside an expectant mom — Pro Mode gives doulas and midwives the tools to support their clients"
-            class="w-full max-w-md"
-            loading="lazy"
-            width="1536"
-            height="1024"
-          />
+        <!-- Right: App screenshots — 45% -->
+        <div class="md:w-[45%] flex flex-col items-center justify-center gap-6">
+          <div class="w-full max-w-[280px] rounded-2xl shadow-xl overflow-hidden border border-tjb-lavender-200/60 bg-white">
+            <img
+              src="/images/app-my-clients.webp"
+              alt="Pro Mode client dashboard showing client profile with due date, status, and key actions"
+              class="w-full h-auto"
+              loading="lazy"
+              width="369"
+              height="800"
+            />
+          </div>
+          <div class="w-full max-w-[280px] -mt-4 rounded-2xl shadow-lg overflow-hidden border border-tjb-lavender-200/40 bg-white opacity-85">
+            <img
+              src="/images/app-wellness-record.webp"
+              alt="Pro Mode wellness visit record form tracking prenatal visits, blood pressure, and fetal heart rate"
+              class="w-full h-auto"
+              loading="lazy"
+              width="369"
+              height="800"
+            />
+          </div>
         </div>
 
       </div>
@@ -459,150 +489,102 @@ import AppShowcase from '../components/AppShowcase.astro';
   </section>
 
   <!-- ═══════════════════════════════════════════
-       MOST POPULAR CITIES — Skyline card grid
+       MOST POPULAR CITIES — Skyline card grid (4-column)
        ═══════════════════════════════════════════ -->
   <section class="bg-white py-20 md:py-24 border-t border-tjb-lavender-200/50">
     <div class="max-w-6xl mx-auto px-6">
       <div class="text-center mb-12">
-        <p class="eyebrow mb-3 fade-up">Top Cities</p>
+        <p class="eyebrow mb-3 fade-up">Find Your City</p>
         <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
         <h2 class="mb-3 text-[2.25rem] md:text-[2.75rem] leading-[1.15]" style="font-family: 'DM Sans', sans-serif;">Most Popular Cities for Birth Support</h2>
         <p class="text-tjb-gray max-w-xl mx-auto leading-relaxed">
-          Doula costs, hospital info, Medicaid coverage, and free birth plans — city by city.
+          Doula costs, hospital policies, Medicaid coverage, and free birth plans — city by city. Click your city to see what's available near you.
         </p>
       </div>
 
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         <a href="/birth-support/new-york-ny/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
           <div class="aspect-[4/3] overflow-hidden">
             <img src="/images/new-york-ny-birth-doula-skyline.webp" alt="New York" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
           </div>
-          <div class="p-3 bg-white">
-            <h3 class="font-semibold text-tjb-charcoal text-sm group-hover:text-tjb-rose-500 transition">New York, NY</h3>
-            <p class="text-xs text-tjb-gray mt-0.5">Doula costs, hospitals & birth plans</p>
+          <div class="p-4 bg-white">
+            <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">New York, NY</h3>
+            <p class="text-xs text-tjb-gray mt-1 leading-relaxed">Doula costs, hospital policies, and local birth plan resources</p>
           </div>
         </a>
         <a href="/birth-support/los-angeles-ca/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
           <div class="aspect-[4/3] overflow-hidden">
             <img src="/images/los-angeles-ca-birth-doula-skyline.webp" alt="Los Angeles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
           </div>
-          <div class="p-3 bg-white">
-            <h3 class="font-semibold text-tjb-charcoal text-sm group-hover:text-tjb-rose-500 transition">Los Angeles, CA</h3>
-            <p class="text-xs text-tjb-gray mt-0.5">Doula costs, hospitals & birth plans</p>
+          <div class="p-4 bg-white">
+            <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">Los Angeles, CA</h3>
+            <p class="text-xs text-tjb-gray mt-1 leading-relaxed">Doula costs, hospital policies, and local birth plan resources</p>
           </div>
         </a>
         <a href="/birth-support/chicago-il/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
           <div class="aspect-[4/3] overflow-hidden">
             <img src="/images/chicago-il-birth-doula-skyline.webp" alt="Chicago" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
           </div>
-          <div class="p-3 bg-white">
-            <h3 class="font-semibold text-tjb-charcoal text-sm group-hover:text-tjb-rose-500 transition">Chicago, IL</h3>
-            <p class="text-xs text-tjb-gray mt-0.5">Doula costs, hospitals & birth plans</p>
+          <div class="p-4 bg-white">
+            <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">Chicago, IL</h3>
+            <p class="text-xs text-tjb-gray mt-1 leading-relaxed">Doula costs, hospital policies, and local birth plan resources</p>
+          </div>
+        </a>
+        <a href="/birth-support/denver-co/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="/images/denver-co-birth-doula-skyline.webp" alt="Denver" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
+          </div>
+          <div class="p-4 bg-white">
+            <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">Denver, CO</h3>
+            <p class="text-xs text-tjb-gray mt-1 leading-relaxed">Doula costs, hospital policies, and local birth plan resources</p>
           </div>
         </a>
         <a href="/birth-support/houston-tx/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
           <div class="aspect-[4/3] overflow-hidden">
             <img src="/images/houston-tx-birth-doula-skyline.webp" alt="Houston" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
           </div>
-          <div class="p-3 bg-white">
-            <h3 class="font-semibold text-tjb-charcoal text-sm group-hover:text-tjb-rose-500 transition">Houston, TX</h3>
-            <p class="text-xs text-tjb-gray mt-0.5">Doula costs, hospitals & birth plans</p>
+          <div class="p-4 bg-white">
+            <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">Houston, TX</h3>
+            <p class="text-xs text-tjb-gray mt-1 leading-relaxed">Doula costs, hospital policies, and local birth plan resources</p>
           </div>
         </a>
         <a href="/birth-support/phoenix-az/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
           <div class="aspect-[4/3] overflow-hidden">
             <img src="/images/phoenix-az-birth-doula-skyline.webp" alt="Phoenix" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
           </div>
-          <div class="p-3 bg-white">
-            <h3 class="font-semibold text-tjb-charcoal text-sm group-hover:text-tjb-rose-500 transition">Phoenix, AZ</h3>
-            <p class="text-xs text-tjb-gray mt-0.5">Doula costs, hospitals & birth plans</p>
-          </div>
-        </a>
-        <a href="/birth-support/philadelphia-pa/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
-          <div class="aspect-[4/3] overflow-hidden">
-            <img src="/images/philadelphia-pa-birth-doula-skyline.webp" alt="Philadelphia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
-          </div>
-          <div class="p-3 bg-white">
-            <h3 class="font-semibold text-tjb-charcoal text-sm group-hover:text-tjb-rose-500 transition">Philadelphia, PA</h3>
-            <p class="text-xs text-tjb-gray mt-0.5">Doula costs, hospitals & birth plans</p>
-          </div>
-        </a>
-        <a href="/birth-support/san-antonio-tx/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
-          <div class="aspect-[4/3] overflow-hidden">
-            <img src="/images/san-antonio-tx-birth-doula-skyline.webp" alt="San Antonio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
-          </div>
-          <div class="p-3 bg-white">
-            <h3 class="font-semibold text-tjb-charcoal text-sm group-hover:text-tjb-rose-500 transition">San Antonio, TX</h3>
-            <p class="text-xs text-tjb-gray mt-0.5">Doula costs, hospitals & birth plans</p>
-          </div>
-        </a>
-        <a href="/birth-support/san-diego-ca/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
-          <div class="aspect-[4/3] overflow-hidden">
-            <img src="/images/san-diego-ca-birth-doula-skyline.webp" alt="San Diego" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
-          </div>
-          <div class="p-3 bg-white">
-            <h3 class="font-semibold text-tjb-charcoal text-sm group-hover:text-tjb-rose-500 transition">San Diego, CA</h3>
-            <p class="text-xs text-tjb-gray mt-0.5">Doula costs, hospitals & birth plans</p>
+          <div class="p-4 bg-white">
+            <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">Phoenix, AZ</h3>
+            <p class="text-xs text-tjb-gray mt-1 leading-relaxed">Doula costs, hospital policies, and local birth plan resources</p>
           </div>
         </a>
         <a href="/birth-support/dallas-tx/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
           <div class="aspect-[4/3] overflow-hidden">
             <img src="/images/dallas-tx-birth-doula-skyline.webp" alt="Dallas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
           </div>
-          <div class="p-3 bg-white">
-            <h3 class="font-semibold text-tjb-charcoal text-sm group-hover:text-tjb-rose-500 transition">Dallas, TX</h3>
-            <p class="text-xs text-tjb-gray mt-0.5">Doula costs, hospitals & birth plans</p>
+          <div class="p-4 bg-white">
+            <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">Dallas, TX</h3>
+            <p class="text-xs text-tjb-gray mt-1 leading-relaxed">Doula costs, hospital policies, and local birth plan resources</p>
           </div>
         </a>
         <a href="/birth-support/austin-tx/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
           <div class="aspect-[4/3] overflow-hidden">
             <img src="/images/austin-tx-birth-doula-skyline.webp" alt="Austin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
           </div>
-          <div class="p-3 bg-white">
-            <h3 class="font-semibold text-tjb-charcoal text-sm group-hover:text-tjb-rose-500 transition">Austin, TX</h3>
-            <p class="text-xs text-tjb-gray mt-0.5">Doula costs, hospitals & birth plans</p>
+          <div class="p-4 bg-white">
+            <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">Austin, TX</h3>
+            <p class="text-xs text-tjb-gray mt-1 leading-relaxed">Doula costs, hospital policies, and local birth plan resources</p>
           </div>
         </a>
       </div>
-    </div>
-  </section>
 
-  <!-- ═══════════════════════════════════════════
-       CITY RESOURCES — Typographic strip, no cards
-       ═══════════════════════════════════════════ -->
-  <section class="bg-tjb-cream py-20 md:py-24 border-t border-tjb-lavender-200/50">
-    <div class="max-w-5xl mx-auto px-6">
-      <div class="text-center mb-10">
-        <p class="eyebrow mb-3 fade-up">Local Support</p>
-        <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
-        <h2 class="mb-3 text-[2.25rem] md:text-[2.75rem] leading-[1.15]" style="font-family: 'DM Sans', sans-serif;">Birth Support Resources by City</h2>
-        <p class="text-tjb-gray max-w-xl mx-auto leading-relaxed">
-          Local hospital info, doula costs, and Medicaid status — city by city.
-        </p>
-      </div>
-
-      <!-- Horizontal typographic strip -->
-      <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-tjb-gray text-[1.0625rem]">
-        <a href="/birth-support/denver-co/" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Denver, CO</a>
-        <span class="text-tjb-rose-400">·</span>
-        <a href="/birth-support/new-york-ny/" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">New York, NY</a>
-        <span class="text-tjb-rose-400">·</span>
-        <a href="/birth-support/chicago-il/" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Chicago, IL</a>
-        <span class="text-tjb-rose-400">·</span>
-        <a href="/birth-support/phoenix-az/" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Phoenix, AZ</a>
-        <span class="text-tjb-rose-400">·</span>
-        <a href="/birth-support/dallas-tx/" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Dallas, TX</a>
-        <span class="text-tjb-rose-400">·</span>
-        <a href="/birth-support/austin-tx/" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Austin, TX</a>
-        <span class="text-tjb-rose-400">·</span>
-        <a href="/birth-support/houston-tx/" class="text-tjb-charcoal font-semibold hover:text-tjb-rose-500 transition">Houston, TX</a>
-      </div>
-
-      <p class="text-center mt-8">
-        <a href="/birth-support/co/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all inline-block pb-0.5">
-          See all cities
+      <div class="text-center mt-10">
+        <a href="/birth-support/" class="inline-flex items-center gap-2 text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all pb-0.5">
+          Browse all cities
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
         </a>
-      </p>
+      </div>
     </div>
   </section>
 
