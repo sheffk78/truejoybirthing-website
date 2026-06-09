@@ -8,7 +8,7 @@
 //   city: string — used in the empty-state CTA and badges
 //
 // Card states:
-//   - Verified (isVerified=true, url present): Full card with enrichment data + "Visit website" button
+//   - Verified (isVerified=true, url present): Full card with enrichment data + "Visit website" button + sage "Verified" corner badge
 //   - Stub (isVerified=false or absent, no url): Card with "Claim This Listing" link + "Listed — not verified" note
 //   - Ambassador: Always verified; shows Ambassador badge
 //
@@ -61,7 +61,14 @@ function getCityName(city: string) {
       {doulas.map((d) => {
         const verified = d.isVerified !== false && !!d.url; // Default to verified if they have a URL
         return (
-          <div class={`bg-tjb-cream rounded-xl p-6 shadow-sm border flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200 ${verified ? 'border-tjb-lavender-200/50 hover:border-tjb-lavender-300' : 'border-tjb-lavender-100 border-dashed'}`}>
+          <div class={`bg-tjb-cream relative rounded-xl p-6 shadow-sm border flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200 ${verified ? 'border-tjb-lavender-200/50 hover:border-tjb-lavender-300' : 'border-tjb-lavender-100 border-dashed'}`}>
+            {/* Verified badge — sage corner pill, shown only when provider has confirmed their info */}
+            {verified && (
+              <span class="absolute top-3 right-3 inline-flex items-center gap-1 bg-tjb-sage-100 text-tjb-charcoal text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-sage" role="status" aria-label="Verified listing">
+                <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M10 3L4.5 8.5L2 6" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Verified
+              </span>
+            )}
             {/* Photo or circle monogram */}
             {d.photo ? (
               <img
