@@ -1,42 +1,52 @@
 #!/usr/bin/env python3
 """
-TJB Provider Research Pipeline
-===============================
-Parallel multi-source provider research for TJB city pages.
+TJB Provider Research Pipeline v2
+==================================
+Multi-source provider research for TJB city pages with URL validation,
+Firecrawl enrichment, and Camofox fallback.
 
 Sources:
-  1. Apify Google Maps Scraper — doulas, midwives, birth centers, hospitals
+  1. Apify Google Maps Scraper — raw listings (names, addresses, phones)
   2. NPI Registry API — credentialed midwives (CNM, CPM, LM)
+  3. Firecrawl API — URL validation, structured enrichment, photo extraction
+  4. Camofox Browser — anti-detection fallback for sites that block scrapers
+  5. Wikipedia Commons — hospital exterior photos
 
 Usage:
-  python scripts/research-providers.py "Seattle" "WA"
-  python scripts/research-providers.py "Denver" "CO" --output /tmp/denver.json
+  python scripts/research-providers.py "Norfolk" "VA" --output /tmp/norfolk.json
+  python scripts/research-providers.py "Norfolk" "VA" --enrich --output /tmp/norfolk.json
 """
 
 import argparse
 import json
 import os
 import re
+import subprocess
 import sys
 import time
-import urllib.request
 import urllib.parse
+import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import Union
 
 APIFY_KEY = os.environ.get("APIFY_API_KEY", "")
 GOOGLE_MAPS_ACTOR = "nwua9Gu5YrADL7ZDj"
 NPI_BASE = "https://npiregistry.cms.hhs.gov/api/"
+FIRECRAWL_KEY = os.environ.get("FIRECRAWL_API_KEY", "fc-3772e3f753f7438dbfb8e7b8aad88304")
+FIRECRAWL_BASE = "https://api.firecrawl.dev/v1"
+CAMOFOX_BASE = "http://localhost:9377"
 
 
-def apify_run(actor_id: str, body: dict) -> list[dict] | dict:
+# ═══════════════════════════════════════════════════════════════
+# Apify Google Maps
+# ═══════════════════════════════════════════════════════════════
+
+def apify_run(actor_id: str, body: dict) -> Union[list[dict], dict]:
     """Start an Apify actor run, poll until done, return results."""
     req = urllib.request.Request(
         f"https://api.apify.com/v2/acts/{actor_id}/runs",
         data=json.dumps(body).encode(),
-        headers={
-            "Authorization": f"Bearer {APIFY_KEY}",
-            "Content-Type": "application/json",
-        },
+        headers={"Authorization": f"Bearer {APIFY_KEY}", "Content-Type": "application/json"},
         method="POST",
     )
     try:
@@ -88,8 +98,12 @@ def search_maps(query: str, max_results: int = 10) -> list[dict]:
     return r if isinstance(r, list) else []
 
 
+# ═══════════════════════════════════════════════════════════════
+# NPI Registry
+# ═══════════════════════════════════════════════════════════════
+
 def search_npi(city: str, state: str, taxonomy: str = "midwife", limit: int = 20) -> list[dict]:
-    """Search NPI Registry."""
+    """Search NPI Registry for credentialed midwives."""
     params = urllib.parse.urlencode({
         "version": "2.1", "enumeration_type": "NPI-1",
         "taxonomy_description": taxonomy,
@@ -117,8 +131,263 @@ def search_npi(city: str, state: str, taxonomy: str = "midwife", limit: int = 20
     return results
 
 
-def classify_place(p: dict) -> tuple[str | None, str]:
-    """Classify a Google Maps result. Returns (category_key, readable_name) or (None, '')."""
+# ═══════════════════════════════════════════════════════════════
+# Firecrawl: URL validation + enrichment + search
+# ═══════════════════════════════════════════════════════════════
+
+def firecrawl_validate_url(url: str) -> dict:
+    """Check if a URL is live via Firecrawl scrape. Returns status + content length."""
+    if not url:
+        return {"valid": False, "reason": "no_url"}
+    payload = json.dumps({"url": url, "formats": ["markdown"], "onlyMainContent": True}).encode()
+    req = urllib.request.Request(
+        f"{FIRECRAWL_BASE}/scrape",
+        data=payload,
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {FIRECRAWL_KEY}",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            result = json.loads(resp.read())
+        if result.get("success"):
+            md = result.get("data", {}).get("markdown", "")
+            return {
+                "valid": True,
+                "content_length": len(md),
+                "title": result.get("data", {}).get("metadata", {}).get("title", ""),
+            }
+        return {"valid": False, "reason": result.get("error", "scrape_failed")}
+    except Exception as e:
+        return {"valid": False, "reason": str(e)}
+
+
+def firecrawl_search(query: str, limit: int = 5) -> list[dict]:
+    """Search the web via Firecrawl."""
+    payload = json.dumps({"query": query, "limit": limit}).encode()
+    req = urllib.request.Request(
+        f"{FIRECRAWL_BASE}/search",
+        data=payload,
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {FIRECRAWL_KEY}",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            result = json.loads(resp.read())
+        return result.get("data", [])
+    except Exception as e:
+        return []
+
+
+def firecrawl_enrich(url: str) -> dict:
+    """Extract structured provider data from a working website via Firecrawl scrape."""
+    if not url:
+        return {}
+    payload = json.dumps({
+        "url": url,
+        "formats": ["markdown"],
+        "onlyMainContent": True,
+    }).encode()
+    req = urllib.request.Request(
+        f"{FIRECRAWL_BASE}/scrape",
+        data=payload,
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {FIRECRAWL_KEY}",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            result = json.loads(resp.read())
+        if not result.get("success"):
+            return {}
+        md = result.get("data", {}).get("markdown", "")
+        metadata = result.get("data", {}).get("metadata", {})
+        return {
+            "markdown": md,
+            "title": metadata.get("title", ""),
+            "description": metadata.get("description", ""),
+            "language": metadata.get("language", ""),
+        }
+    except Exception:
+        return {}
+
+
+# ═══════════════════════════════════════════════════════════════
+# Camofox: anti-detection browser fallback
+# ═══════════════════════════════════════════════════════════════
+
+def camofox_create_tab(url: Union[str, None] = None) -> Union[str, None]:
+    """Create a Camofox browser tab, return tabId."""
+    body = {"userId": "tjb-research", "sessionKey": "provider-research"}
+    if url:
+        body["url"] = url
+    req = urllib.request.Request(
+        f"{CAMOFOX_BASE}/tabs",
+        data=json.dumps(body).encode(),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            return json.loads(resp.read())["tabId"]
+    except Exception:
+        return None
+
+
+def camofox_navigate(tab_id: str, url: str) -> bool:
+    """Navigate a Camofox tab to a URL."""
+    req = urllib.request.Request(
+        f"{CAMOFOX_BASE}/tabs/{tab_id}/navigate",
+        data=json.dumps({"userId": "tjb-research", "url": url}).encode(),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            return True
+    except Exception:
+        return False
+
+
+def camofox_evaluate(tab_id: str, expression: str) -> str:
+    """Evaluate JS in a Camofox tab."""
+    req = urllib.request.Request(
+        f"{CAMOFOX_BASE}/tabs/{tab_id}/evaluate",
+        data=json.dumps({"userId": "tjb-research", "expression": expression}).encode(),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            return json.loads(resp.read()).get("result", "")
+    except Exception:
+        return ""
+
+
+def camofox_get_images(tab_id: str) -> list[str]:
+    """Get all image URLs from the current page."""
+    js = """
+    JSON.stringify(Array.from(document.querySelectorAll('img[src]'))
+      .filter(i => {
+        const s = i.src.toLowerCase();
+        return (s.endsWith('.jpg') || s.endsWith('.jpeg') || s.endsWith('.png') || s.endsWith('.webp'))
+          && !s.includes('logo') && !s.includes('icon') && !s.includes('button')
+          && i.width > 100 && i.height > 100;
+      })
+      .map(i => ({ src: i.src, alt: i.alt, w: i.width, h: i.height }))
+    );
+    """
+    result = camofox_evaluate(tab_id, js)
+    try:
+        return json.loads(result) if result else []
+    except Exception:
+        return []
+
+
+def camofox_google_search(query: str, limit: int = 5) -> list[dict]:
+    """Search Google via Camofox (bypasses CAPTCHA)."""
+    tab_id = camofox_create_tab()
+    if not tab_id:
+        return []
+
+    camofox_navigate(tab_id, f"https://www.google.com/search?q={urllib.parse.quote(query)}")
+    time.sleep(3)
+
+    js = """
+    JSON.stringify(Array.from(document.querySelectorAll('div.g a[href^=\"http\"]'))
+      .slice(0, %d)
+      .map(a => ({ title: a.textContent.trim(), url: a.href }))
+    );
+    """ % limit
+    result = camofox_evaluate(tab_id, js)
+
+    # Close tab
+    try:
+        req = urllib.request.Request(f"{CAMOFOX_BASE}/tabs/{tab_id}", method="DELETE")
+        urllib.request.urlopen(req, timeout=5)
+    except Exception:
+        pass
+
+    try:
+        return json.loads(result) if result else []
+    except Exception:
+        return []
+
+
+def camofox_extract_provider_data(tab_id: str) -> dict:
+    """Extract provider info: services, cost, bio, headshot from the current page."""
+    js = """
+    JSON.stringify({
+      body: document.body.innerText.substring(0, 3000),
+      headshots: Array.from(document.querySelectorAll('img[src]'))
+        .filter(i => {
+          const s = i.src.toLowerCase();
+          return (s.endsWith('.jpg') || s.endsWith('.jpeg') || s.endsWith('.png'))
+            && !s.includes('logo') && !s.includes('icon')
+            && i.width > 150 && i.height > 150;
+        })
+        .map(i => i.src),
+      title: document.title,
+    });
+    """
+    result = camofox_evaluate(tab_id, js)
+    try:
+        return json.loads(result) if result else {}
+    except Exception:
+        return {}
+
+
+# ═══════════════════════════════════════════════════════════════
+# Wikipedia Commons: hospital photo search
+# ═══════════════════════════════════════════════════════════════
+
+def wikipedia_commons_search(hospital_name: str) -> list[dict]:
+    """Search Wikipedia Commons for hospital exterior photos."""
+    query = urllib.parse.quote(hospital_name)
+    url = f"https://commons.wikimedia.org/w/api.php?action=query&list=search&srsearch={query}+hospital+exterior&format=json&srlimit=5"
+    try:
+        with urllib.request.urlopen(url, timeout=10) as resp:
+            data = json.loads(resp.read())
+        results = []
+        for r in data.get("query", {}).get("search", []):
+            title = r.get("title", "")
+            # Get actual image URL
+            img_url = f"https://commons.wikimedia.org/wiki/Special:FilePath/{urllib.parse.quote(title.replace(' ', '_'))}"
+            results.append({
+                "title": title,
+                "url": f"https://commons.wikimedia.org/wiki/{urllib.parse.quote(title.replace(' ', '_'))}",
+                "image_url": img_url,
+            })
+        return results
+    except Exception:
+        return []
+
+
+def download_image(url: str, output_path: str) -> bool:
+    """Download an image and save to disk."""
+    try:
+        with urllib.request.urlopen(url, timeout=15) as resp:
+            data = resp.read()
+        with open(output_path, "wb") as f:
+            f.write(data)
+        return True
+    except Exception:
+        return False
+
+
+# ═══════════════════════════════════════════════════════════════
+# Classification
+# ═══════════════════════════════════════════════════════════════
+
+def classify_place(p: dict) -> tuple[Union[str, None], str]:
+    """Classify a Google Maps result."""
     title = (p.get("title") or "").lower()
     cat = (p.get("category") or "").lower()
     text = f"{title} {cat}"
@@ -134,8 +403,12 @@ def classify_place(p: dict) -> tuple[str | None, str]:
     return (None, "")
 
 
-def research_city(city: str, state: str) -> dict:
-    """Complete provider research for a city — runs all Apify searches in parallel."""
+# ═══════════════════════════════════════════════════════════════
+# Main research pipeline
+# ═══════════════════════════════════════════════════════════════
+
+def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[str, None] = None) -> dict:
+    """Complete provider research pipeline for a city."""
     print(f"Researching {city}, {state}...", file=sys.stderr)
 
     queries = [
@@ -145,7 +418,8 @@ def research_city(city: str, state: str) -> dict:
         f"hospital labor delivery {city} {state}",
     ]
 
-    # Run all Apify searches in parallel
+    # Phase 1: Apify parallel searches
+    print("  Phase 1: Apify Google Maps...", file=sys.stderr)
     results = {}
     with ThreadPoolExecutor(max_workers=4) as pool:
         futures = {pool.submit(search_maps, q, 10): q for q in queries}
@@ -157,13 +431,11 @@ def research_city(city: str, state: str) -> dict:
                 results[q] = []
                 print(f"  Search failed: {q[:40]}... — {e}", file=sys.stderr)
 
-    # Also get NPI data in parallel
-    npi_future = None
-    with ThreadPoolExecutor(max_workers=1) as pool:
-        npi_future = pool.submit(search_npi, city, state, "midwife", 20)
-        npi_results = npi_future.result()
+    # Phase 2: NPI
+    print("  Phase 2: NPI Registry...", file=sys.stderr)
+    npi_results = search_npi(city, state, "midwife", 20)
 
-    # Classify results by category
+    # Phase 3: Classify and deduplicate
     result = {
         "city": city,
         "state": state,
@@ -196,41 +468,121 @@ def research_city(city: str, state: str) -> dict:
                 "reviews": p.get("totalReviews"),
                 "state": "open",
                 "source": "Google Maps",
+                "url_valid": None,
+                "enriched": None,
             }
             if p.get("isPermanentlyClosed"):
                 entry["state"] = "permanently_closed"
 
-            # Deduplicate by name
             name_lower = entry["name"].lower()
-            existing = [e for e in result[cat_key]
-                        if name_lower in e["name"].lower()]
+            existing = [e for e in result[cat_key] if name_lower in e["name"].lower()]
             if not existing:
                 result[cat_key].append(entry)
 
-    # Deduplicate: remove from midwives if already in doulas (or vice versa)
-    # If a practice offers both, keep in whichever had more specific category match
     doula_names = set(d["name"].lower() for d in result["doulas"])
     result["midwives"] = [m for m in result["midwives"] if m["name"].lower() not in doula_names]
 
-    print(f"  Found: {len(result['doulas'])} doulas, {len(result['midwives'])} midwives, "
+    # Phase 4: URL validation via Firecrawl
+    print("  Phase 4: URL validation...", file=sys.stderr)
+    all_providers = (
+        result["doulas"] + result["midwives"] +
+        result["birth_centers"] + result["hospitals"]
+    )
+    for p in all_providers:
+        if p.get("website"):
+            p["url_valid"] = firecrawl_validate_url(p["website"])
+        else:
+            p["url_valid"] = {"valid": False, "reason": "no_url"}
+        if p["url_valid"].get("valid"):
+            p["url_status"] = "✅ live"
+        else:
+            p["url_status"] = f"❌ dead ({p['url_valid'].get('reason','')})"
+
+    # Phase 5: Firecrawl search fallback for dead URLs
+    print("  Phase 5: Fallback search for dead URLs...", file=sys.stderr)
+    for p in all_providers:
+        if p.get("url_valid", {}).get("valid"):
+            continue
+        search_query = f"{p['name']} {city} {state} doula birth"
+        search_results = firecrawl_search(search_query, 3)
+        if search_results:
+            best = search_results[0]
+            new_url = best.get("url", "").rstrip("/")
+            if new_url and new_url != p.get("website"):
+                print(f"    {p['name']}: found alternative URL: {new_url}", file=sys.stderr)
+                p["website_alt"] = new_url
+                p["url_valid_alt"] = firecrawl_validate_url(new_url)
+                if p["url_valid_alt"].get("valid"):
+                    p["url_status"] = "✅ recovered via search"
+                else:
+                    p["url_status"] = "❌ no valid URL found"
+        else:
+            p["url_status"] = "❌ no URL found"
+
+    # Phase 6: Firecrawl enrichment for valid URLs
+    if enrich:
+        print("  Phase 6: Provider enrichment...", file=sys.stderr)
+        for p in all_providers:
+            target_url = None
+            if p.get("url_valid", {}).get("valid"):
+                target_url = p.get("website")
+            elif p.get("url_valid_alt", {}).get("valid"):
+                target_url = p.get("website_alt")
+
+            if target_url:
+                scraped = firecrawl_enrich(target_url)
+                if scraped.get("markdown"):
+                    p["enriched"] = scraped
+                    print(f"    Enriched: {p['name']} ({len(scraped['markdown'])} chars)", file=sys.stderr)
+                else:
+                    p["enriched"] = {"note": "scrape returned no content"}
+            else:
+                p["enriched"] = {"note": "no valid URL to enrich"}
+
+    # Phase 7: Hospital photos via Wikipedia Commons
+    print("  Phase 7: Hospital photo search...", file=sys.stderr)
+    for h in result["hospitals"]:
+        photos = wikipedia_commons_search(h["name"])
+        if photos:
+            h["wiki_photos"] = photos
+            print(f"    Found {len(photos)} photo(s) for {h['name']}", file=sys.stderr)
+            # Download if photo_dir specified
+            if photo_dir and photos:
+                os.makedirs(photo_dir, exist_ok=True)
+                slug = re.sub(r'[^a-z0-9]+', '-', h["name"].lower()).strip("-")
+                for i, photo in enumerate(photos[:2]):
+                    ext = photo.get("image_url", "").split(".")[-1][:4] or "jpg"
+                    path = os.path.join(photo_dir, f"{slug}.{ext}")
+                    if download_image(photo["image_url"], path):
+                        h["photo_saved"] = path
+                        print(f"    Downloaded: {path}", file=sys.stderr)
+
+    print(f"\n  Results: {len(result['doulas'])} doulas, {len(result['midwives'])} midwives, "
           f"{len(result['birth_centers'])} birth centers, {len(result['hospitals'])} hospitals, "
           f"{len(result['npi_midwives'])} NPI midwives", file=sys.stderr)
+
+    if enrich:
+        live_urls = sum(1 for p in all_providers if p.get("url_status", "").startswith("✅"))
+        enriched = sum(1 for p in all_providers if p.get("enriched"))
+        print(f"  URL validation: {live_urls}/{len(all_providers)} live | Enriched: {enriched}", file=sys.stderr)
 
     return result
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Research providers for a TJB city page")
+    parser = argparse.ArgumentParser(description="TJB Provider Research Pipeline v2")
     parser.add_argument("city", help="City name")
     parser.add_argument("state", help="State code")
     parser.add_argument("--output", "-o", help="Output file path")
+    parser.add_argument("--enrich", action="store_true", help="Enable Firecrawl enrichment (scrapes provider sites)")
+    parser.add_argument("--photos", help="Download hospital photos to this directory")
     args = parser.parse_args()
 
     if not APIFY_KEY:
         print("ERROR: APIFY_API_KEY not set", file=sys.stderr)
         sys.exit(1)
 
-    result = research_city(args.city, args.state)
+    result = research_city(args.city, args.state, enrich=args.enrich, photo_dir=args.photos)
     output = json.dumps(result, indent=2)
 
     if args.output:

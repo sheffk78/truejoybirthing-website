@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1200px; height: 630px; overflow: hidden; background: #FAF8F5; }
+
+.og-card {
+  width: 1200px;
+  height: 630px;
+  background: linear-gradient(180deg, #FAF8F5 0%, #EDE5F5 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 60px 80px 70px 80px;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+}
+.og-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: #D8A0C4;
+}
+.og-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 6px;
+  background: #D8A0C4;
+}
+
+.headline {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  color: #2D2B55;
+  text-align: center;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  max-width: 920px;
+  margin-bottom: 14px;
+}
+
+.subhead {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #6E6C99;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+}
+
+.bullets {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #6A6B6C;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.bullets .dot {
+  margin: 0 10px;
+  color: #D8A0C4;
+}
+
+.logo-wrap {
+  position: absolute;
+  bottom: 22px;
+  left: 36px;
+}
+.logo-wrap img {
+  height: 56px;
+  width: auto;
+}
+</style>
+</head>
+<body>
+<div class="og-card">
+  <div class="headline">Free Doula-Crafted<br>Birth Plan</div>
+  <div class="subhead">Fillable PDF template &nbsp;·&nbsp; Free app &nbsp;·&nbsp; Nurse-readable</div>
+  <div class="bullets"><span class="dot">·</span> Hospital preferences <span class="dot">·</span> Pain management <span class="dot">·</span> Postpartum <span class="dot">·</span></div>
+  <div class="logo-wrap">
+    <img src="https://truejoybirthing.com/images/logo-mono.svg" alt="True Joy Birthing">
+  </div>
+</div>
+</body>
+</html>
