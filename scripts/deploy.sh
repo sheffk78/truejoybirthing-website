@@ -20,6 +20,15 @@
 set -euo pipefail
 
 PROJECT_DIR="/Users/socializerender/Projects/truejoybirthing-website"
+
+# 🔴 GATE 1: Working directory must be canonical tree
+if [[ "$PWD" != "$PROJECT_DIR" ]]; then
+  echo "❌ FATAL: Working directory must be $PROJECT_DIR"
+  echo "  Current: $PWD"
+  echo "  The alternate tree at ~/.openclaw/... was deleted and symlinked on June 10."
+  echo "  Run: cd $PROJECT_DIR && bash scripts/deploy.sh"
+  exit 1
+fi
 SITE_URL="https://truejoybirthing.com"
 DRY_RUN=false
 
@@ -96,6 +105,13 @@ echo ""
 echo "--- Step 3/4: Push to main (triggers CF auto-deploy) ---"
 
 CURRENT_MSG=$(git log -1 --format=%s HEAD)
+
+# 🔴 GATE: Commit message must include preflight: pass for city deploys
+if echo "$CURRENT_MSG" | grep -qi "upgrade\|feat:.*city\|add.*city" && \
+   ! echo "$CURRENT_MSG" | grep -qi "preflight"; then
+  echo "  ⚠ WARNING: City deploy commit does not include 'preflight: pass' in message."
+  echo "  → Continuing anyway, but consider adding it next time."
+fi
 
 # Check for uncommitted changes
 if git diff --quiet --ignore-submodules HEAD 2>/dev/null &&

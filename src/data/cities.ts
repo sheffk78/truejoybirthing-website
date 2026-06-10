@@ -346,6 +346,10 @@ export const cities: Record<string, CityData> = {
     costLow: 900,
     costHigh: 2800,
     shelbiServesHere: true,
+    publishedDate: "2026-06-10",
+    lat: 32.7767,
+    lng: -96.7970,
+    ogImage: "https://truejoybirthing.com/images/og-city-dallas-tx.webp",
     heroImage: "/images/dallas-tx-birth-doula-skyline.webp",
     supportSceneImage: "/images/dallas-support-scene.webp",
     supportSceneAlt: "Two women walking side by side in a Dallas neighborhood with Texas Hill Country in the distance",
@@ -2576,9 +2580,21 @@ export const cities: Record<string, CityData> = {
     city: "Tacoma",
     state: "WA",
     slug: "tacoma-wa",
+    lat: 47.2431,
+    lng: -122.4531,
     costLow: 1200,
     costHigh: 3500,
+    publishedDate: "2026-06-10",
     shelbiServesHere: false,
+    heroImage: "/images/tacoma-wa-birth-doula-skyline.webp",
+    enableBlogResources: true,
+    supportSceneAlt: "A doula walking alongside an expectant mom: Tacoma birth support",
+    ogImage: "https://truejoybirthing.com/images/og-city-tacoma-wa.webp",
+    midwifeInfo: {
+      paragraph: "Washington licenses Certified Professional Midwives (CPMs) and Licensed Midwives (LMs), making home birth and birth center midwifery legally regulated and accessible statewide. That means if you're planning a home birth or birth center birth in Tacoma, your midwife operates under a state-issued license, not in a legal gray area. On the hospital side, Certified Nurse-Midwives (CNMs) practice in Tacoma's major hospitals, including Tacoma General and St. Joseph's, so hospital-based midwifery care is widely available.",
+      credentialTypes: " (CPMs and LMs)",
+      credentialDetail: "In Washington, Licensed Midwives (LMs) are specifically licensed by the state to attend out-of-hospital births, giving",
+    },
     culture: "Tacoma's birth community is growing and increasingly vocal, supported by grassroots networks of doulas and midwives committed to closing Pierce County's maternal health disparities. The city blends military families from Joint Base Lewis-McChord with a thriving arts-and-activism scene that centers reproductive justice. Local organizations like the Tacoma-Pierce County Health Department's perinatal programs work to connect families with equitable, culturally appropriate care.",
     heroLocalDetail: "Most Tacoma families deliver at Tacoma General near Wright Park and 6th Avenue, or at St. Joseph's just up the hill on South J Street near Stadium District. If you're commuting from Puyallup or Lakewood, factor in SR-16 and I-5 interchange congestion — it can add 20+ minutes during afternoon rush, which matters when you're in active labor.",
     hospitalDetails: [
@@ -2586,18 +2602,28 @@ export const cities: Record<string, CityData> = {
       { name: "St. Joseph Medical Center – Virginia Mason Franciscan", paragraph: "A Level III NICU hospital on Tacoma's Hilltop offering maternal-fetal medicine, a collaborative midwifery program, and a redesigned family birth unit." },
       { name: "Good Samaritan Hospital – MultiCare (Puyallup)", paragraph: "Located just east of Tacoma in Puyallup, Good Sam features a Level II NICU and a well-regarded midwifery-integrated birth unit." }
     ],
+    // Birth center search: NPI taxonomy 261QB0400X returned no active results for Tacoma, WA (verified 2026-06-10)
     birthCenterDetails: [
-      { name: "No birth centers in Tacoma", paragraph: "NPI taxonomy 261QB0400X returned no active results for Tacoma, WA. Tacoma does not currently have a licensed freestanding birth center. The closest options are south Seattle's birth centers roughly 30 miles north, or home birth with a licensed midwife." }
     ],
-    medicaidNote: "Washington Apple Health (Medicaid) covers doula services statewide, including Pierce County. Doulas must register with the Washington State Department of Health and bill through ProviderOne, with reimbursement of approximately $1,500 per birth package covering prenatal visits, labor support, and postpartum follow-up.",
+    localDoulas: [
+      { name: "Katie Pumphrey", credential: "Birth Doula", practice: "MamaEarth Doula", url: "https://www.mamaearthdoula.com", acceptsMedicaid: true, services: ["Birth Doula", "Postpartum", "Breastfeeding Support", "Childbirth Education"] },
+      { name: "Deb Crawford", credential: "Birth Doula, Postpartum Doula, Sleep Doula", practice: "Doula Deb LLC", url: "http://www.douladeb.com", services: ["Birth Doula", "Postpartum", "Sleep Coaching", "Overnight Care"] },
+      { name: "Adrianne Buyer", credential: "Birth Doula", practice: "Adrianne Buyer Birth Doula", url: "https://adriannebuyer.com", acceptsMedicaid: true, services: ["Birth Doula", "Postpartum", "Lactation"] },
+      { name: "Kristin Lanning", credential: "Birth Doula, Postpartum Doula", practice: "Called To Birth Doulas & Birth Services", url: "https://www.calledtobirth.com", acceptsMedicaid: true, services: ["Birth Doula", "Postpartum", "Childbirth Education", "Lactation"] },
+      { name: "Allie Wright", credential: "Birth Doula", practice: "Alma Birth Doula", url: "http://almabirthdoula.com", services: ["Birth Doula", "Postpartum", "Prenatal Care"] },
+      { name: "Compass Doula & Lactation PLLC", credential: "Birth Doula, Lactation Consultant", practice: "Compass Doula & Lactation", url: "https://www.compassdoulas.com", acceptsMedicaid: true, services: ["Birth Doula", "Postpartum", "Lactation", "Breastfeeding Support"] },
+      { name: "Jennifer Ruggles", credential: "Birth Doula", practice: "Jennifer Ruggles Doula Services", url: "http://www.jennrugglesdoula.com", acceptsMedicaid: true, services: ["Birth Doula", "Postpartum"] },
+      { name: "Little Mitzvah Doula Care", credential: "Birth Doula, Postpartum Doula", practice: "Little Mitzvah Doula Care", url: "https://www.littlemitzvahdoulacare.com", services: ["Birth Doula", "Postpartum", "Overnight Care"] }
+    ],
+    medicaidNote: "Yes \u2014 Washington Apple Health (Medicaid) covers doula services statewide, including Pierce County. Doulas must register with the Washington State Department of Health and bill through ProviderOne, with reimbursement of approximately $1,500 per birth package covering prenatal visits, labor support, and postpartum follow-up.",
     insuranceNote: "Washington requires commercial insurance to cover midwifery and birth center care. Regence, Premera, Molina, and Aetna plans sold in Pierce County generally include these benefits, but doula reimbursement varies by plan tier and network status.",
     faqs: [
-      { q: "Does Medicaid cover doulas in Tacoma?", a: "Yes! Great news — Medicaid covers doula services in Tacoma. Here's your next step: call your Medicaid plan and ask \"Do you cover doula services?\" — they'll walk you through it. You deserve support, and now your insurance helps pay for it." },
+      { q: "Does Medicaid cover doulas in Tacoma?", a: "Yes! Great news \u2014 Medicaid covers doula services in Tacoma. Here's your next step: call your Medicaid plan and ask \"Do you cover doula services?\" \u2014 they'll walk you through it. You deserve support, and now your insurance helps pay for it." },
       { q: "What NICU level does Tacoma General have?", a: "Tacoma General has a Level III NICU capable of caring for babies born as early as 28 weeks, with 24/7 neonatal nurse practitioners and transfer protocols to UW's Level IV NICU in Seattle. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
       { q: "Are there any freestanding birth centers in Tacoma?", a: "No. Tacoma does not have a licensed freestanding birth center. Families seeking a birth-center experience typically travel to Seattle's Center for Birth or arrange a home birth with a licensed midwife. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." },
-      { q: "What's the average cost of a doula in Tacoma?", a: "Tacoma doula fees generally range from $1,200 to $3,500, slightly lower than Seattle rates. Postpartum doulas typically charge $30–$50 per hour." },
-      { q: "Can I give birth at JBLM (Joint Base Lewis-McChord)?", a: "Madigan Army Medical Center at JBLM serves active-duty and TRICARE-eligible military families like yours with a Level III NICU and full obstetric services, including a midwifery program for eligible beneficiaries. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> — military life means plans change, but knowing what you want for your birth doesn't have to." },
-      { q: "How far is the drive to Seattle for a Level IV NICU?", a: "UW Medical Center's Level IV NICU is approximately 35 miles from downtown Tacoma, typically a 45–60 minute drive via I-5 — longer during peak commute times. Knowing your drive time before you're in labor takes one more worry off your plate." }
+      { q: "What's the average cost of a doula in Tacoma?", a: "Tacoma doula fees generally range from $1,200 to $3,500, slightly lower than Seattle rates. Postpartum doulas typically charge $30\u2013$50 per hour." },
+      { q: "Can I give birth at JBLM (Joint Base Lewis-McChord)?", a: "Madigan Army Medical Center at JBLM serves active-duty and TRICARE-eligible military families like yours with a Level III NICU and full obstetric services, including a midwifery program for eligible beneficiaries. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> \u2014 military life means plans change, but knowing what you want for your birth doesn't have to." },
+      { q: "How far is the drive to Seattle for a Level IV NICU?", a: "UW Medical Center's Level IV NICU is approximately 35 miles from downtown Tacoma, typically a 45\u201360 minute drive via I-5 \u2014 longer during peak commute times. Knowing your drive time before you're in labor takes one more worry off your plate." }
     ],
     nearbyCities: ["seattle-wa", "spokane-wa"],
   },
