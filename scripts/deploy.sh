@@ -2,12 +2,17 @@
 # =============================================================================
 # TJB Safe Deploy — Git Push Only (CF auto-deploys from git)
 #
+# Usage:
+#   bash scripts/deploy.sh              — regular deploy (no completeness check)
+#   bash scripts/deploy.sh {slug}       — upgrade deploy (runs G7 completeness check)
+#
 # Cloudflare Pages auto-deploys from git pushes to main. This script:
 #   1. Syncs local repo with origin/main (git pull --rebase)
 #   2. Verifies HEAD matches origin/main
-#   3. Builds locally to validate
-#   4. Pushes to main — CF auto-deploys
-#   5. Verifies live site returns 200
+#   3. [Optional] Runs G7 upgrade completeness check if slug provided
+#   4. Builds locally to validate
+#   5. Pushes to main — CF auto-deploys
+#   6. Verifies live site returns 200
 #
 # NO wrangler calls needed — CF auto-deploy handles the rest.
 #
@@ -32,9 +37,12 @@ fi
 SITE_URL="https://truejoybirthing.com"
 DRY_RUN=false
 
+# Parse optional slug argument (for upgrade completeness check)
+UPGRADE_SLUG=""
 for arg in "$@"; do
   case "$arg" in
     --dry-run) DRY_RUN=true ;;
+    *) UPGRADE_SLUG="$arg" ;;
   esac
 done
 
@@ -87,6 +95,24 @@ if [ "$DRY_RUN" = true ]; then
   echo "=== DRY RUN — stopping before build ==="
   echo "Would push HEAD: $(git rev-parse --short HEAD)"
   exit 0
+fi
+
+# ---------------------------------------------------------------
+# 🔴 GATE 7: Upgrade completeness check (if slug provided)
+# ---------------------------------------------------------------
+if [ -n "$UPGRADE_SLUG" ]; then
+  echo ""
+  echo "--- GATE 7: Upgrade completeness check (${UPGRADE_SLUG}) ---"
+  if [ -f "$PROJECT_DIR/scripts/check-upgrade-completeness.py" ]; then
+    if python3 "$PROJECT_DIR/scripts/check-upgrade-completeness.py" "$UPGRADE_SLUG"; then
+      echo "  → G7 PASSED"
+    else
+      echo "  ❌ G7 FAILED — fix content gaps before deploying"
+      exit 1
+    fi
+  else
+    echo "  ⚠ check-upgrade-completeness.py not found — skipping G7"
+  fi
 fi
 
 # ---------------------------------------------------------------
