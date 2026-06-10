@@ -222,6 +222,7 @@ export const cities: Record<string, CityData> = {
     costLow: 700,
     costHigh: 1600,
     shelbiServesHere: false,
+    enableBlogResources: true,
     localDoulas: [
       { name: "Birth Center of Beaumont", credential: "Birth Center", practice: "Birth Center of Beaumont" },
     ],
@@ -338,6 +339,7 @@ export const cities: Record<string, CityData> = {
     costLow: 900,
     costHigh: 2800,
     shelbiServesHere: true,
+    enableBlogResources: true,
     localDoulas: [
       { name: "Urban Family Co-op", credential: "Birth Center", practice: "Dallas Birth Center" },
     ],
@@ -703,6 +705,7 @@ export const cities: Record<string, CityData> = {
     costLow: 950,
     costHigh: 2700,
     shelbiServesHere: true,
+    enableBlogResources: true,
     localDoulas: [
       { name: "North Texas Birth Collective", credential: "Birth Collective", practice: "North Texas Birth Collective" },
     ],
@@ -874,6 +877,7 @@ export const cities: Record<string, CityData> = {
     costLow: 800,
     costHigh: 2000,
     shelbiServesHere: false,
+    enableBlogResources: true,
     localDoulas: [
       { name: "The Birth Center of Midland", credential: "Birth Center", practice: "The Birth Center of Midland" },
     ],
@@ -958,6 +962,7 @@ export const cities: Record<string, CityData> = {
     costLow: 800,
     costHigh: 2000,
     shelbiServesHere: false,
+    enableBlogResources: true,
     localDoulas: [
       { name: "Azalea Birth Center", credential: "Birth Center", practice: "Azalea Birth Center" },
     ],
@@ -1121,6 +1126,7 @@ export const cities: Record<string, CityData> = {
     costLow: 900,
     costHigh: 2200,
     shelbiServesHere: false,
+    enableBlogResources: true,
     culture: "Round Rock sits in fast-growing Williamson County, just north of Austin on I-35. It\u2019s the birthplace of Dell Technologies and one of the fastest-growing cities in the metro \u2014 young families are moving here for the schools and the cost of living, and the birth community is catching up with them. Williamson County\u2019s explosive growth means many families are driving from new subdivisions in Liberty Hill, Leander, and Hutto to deliver at St. David\u2019s Round Rock, so advance planning matters more than it does closer in to Austin.",
     heroLocalDetail: "St. David\u2019s Round Rock Medical Center sits at 2400 Round Rock Ave, just off I-35 and Round Rock Ave exit 252. From the 45 Toll Road, take the Round Rock Ave exit and head east \u2014 you\u2019ll hit the hospital in about 3 minutes. During afternoon rush, I-35 between SH 45 and the hospital exit can slow to a crawl, so build in an extra 10\u201315 minutes if you\u2019re coming from Cedar Park or Leander. Old Settlers Park is the unofficial walking spot for third-trimester Round Rock moms \u2014 flat trails, shade, and about 5 minutes from the hospital entrance.",
     hospitalDetails: [
