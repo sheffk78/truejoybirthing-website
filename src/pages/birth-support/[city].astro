@@ -305,7 +305,8 @@ const schema = {
               {doula.costRange && <p class="text-sm text-tjb-charcoal font-medium mb-2">{doula.costRange}</p>}
               {(doula.services && doula.services.length > 0) && (
                 <div class="flex flex-wrap justify-center gap-1.5 mt-1 mb-2">
-                  {doula.services.map((svc: string) => (
+                  {/* Deduplicate — skip service tags that duplicate the credential text */}
+                  {doula.services.filter((svc: string) => !doula.credential || svc !== doula.credential).map((svc: string) => (
                     <span class="inline-flex items-center bg-tjb-lavender-50 text-tjb-lavender-700 text-xs font-medium px-2 py-0.5 rounded-full border border-tjb-lavender-200">{svc}</span>
                   ))}
                 </div>
@@ -653,7 +654,14 @@ const schema = {
       <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
         <div class="md:w-[58%] prose">
           <h2 class="font-bold text-tjb-charcoal" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">What About a Midwife in {city}?</h2>
-          <p>If you're considering a midwife, you're in good company. More {city} moms are choosing midwifery care each year. Here's what to know:</p>
+          {midwifeInfo && midwifeInfo.paragraph ? (
+            <>
+              <p>{midwifeInfo.paragraph}</p>
+              {midwifeInfo.credentialDetail && <p>{midwifeInfo.credentialDetail}</p>}
+            </>
+          ) : (
+            <p>If you're considering a midwife, you're in good company. More {city} moms are choosing midwifery care each year. Here's what to know:</p>
+          )}
           <p>Not sure whether you need a doula, a midwife, or both? <a href="/doula-vs-midwife/" class="text-tjb-rose-600 hover:underline">Our doula vs. midwife guide</a> breaks it down clearly.</p>
           <ul>
             <li><strong>Certified Nurse-Midwives (CNMs)</strong> work in hospitals and birth centers and are covered by Medicaid in all 50 states.</li>

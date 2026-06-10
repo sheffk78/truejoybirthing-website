@@ -2606,14 +2606,14 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
     ],
     localDoulas: [
-      { name: "Katie Pumphrey", credential: "Birth Doula", practice: "MamaEarth Doula", url: "https://www.mamaearthdoula.com", acceptsMedicaid: true, services: ["Birth Doula", "Postpartum", "Breastfeeding Support", "Childbirth Education"] },
-      { name: "Deb Crawford", credential: "Birth Doula, Postpartum Doula, Sleep Doula", practice: "Doula Deb LLC", url: "http://www.douladeb.com", services: ["Birth Doula", "Postpartum", "Sleep Coaching", "Overnight Care"] },
-      { name: "Adrianne Buyer", credential: "Birth Doula", practice: "Adrianne Buyer Birth Doula", url: "https://adriannebuyer.com", acceptsMedicaid: true, services: ["Birth Doula", "Postpartum", "Lactation"] },
-      { name: "Kristin Lanning", credential: "Birth Doula, Postpartum Doula", practice: "Called To Birth Doulas & Birth Services", url: "https://www.calledtobirth.com", acceptsMedicaid: true, services: ["Birth Doula", "Postpartum", "Childbirth Education", "Lactation"] },
-      { name: "Allie Wright", credential: "Birth Doula", practice: "Alma Birth Doula", url: "http://almabirthdoula.com", services: ["Birth Doula", "Postpartum", "Prenatal Care"] },
-      { name: "Compass Doula & Lactation PLLC", credential: "Birth Doula, Lactation Consultant", practice: "Compass Doula & Lactation", url: "https://www.compassdoulas.com", acceptsMedicaid: true, services: ["Birth Doula", "Postpartum", "Lactation", "Breastfeeding Support"] },
-      { name: "Jennifer Ruggles", credential: "Birth Doula", practice: "Jennifer Ruggles Doula Services", url: "http://www.jennrugglesdoula.com", acceptsMedicaid: true, services: ["Birth Doula", "Postpartum"] },
-      { name: "Little Mitzvah Doula Care", credential: "Birth Doula, Postpartum Doula", practice: "Little Mitzvah Doula Care", url: "https://www.littlemitzvahdoulacare.com", services: ["Birth Doula", "Postpartum", "Overnight Care"] }
+      { name: "Katie Pumphrey", credential: "Birth Doula", practice: "MamaEarth Doula", url: "https://www.mamaearthdoula.com", acceptsMedicaid: true, services: ["Postpartum", "Breastfeeding Support", "Childbirth Education"] },
+      { name: "Deb Crawford", credential: "Birth Doula, Postpartum Doula, Sleep Doula", practice: "Doula Deb LLC", url: "http://www.douladeb.com", services: ["Sleep Coaching", "Overnight Care"] },
+      { name: "Adrianne Buyer", credential: "Birth Doula", practice: "Adrianne Buyer Birth Doula", url: "https://adriannebuyer.com", acceptsMedicaid: true, services: ["Postpartum", "Lactation"] },
+      { name: "Kristin Lanning", credential: "Birth Doula, Postpartum Doula", practice: "Called To Birth Doulas & Birth Services", url: "https://www.calledtobirth.com", acceptsMedicaid: true, services: ["Childbirth Education", "Lactation"] },
+      { name: "Allie Wright", credential: "Birth Doula", practice: "Alma Birth Doula", url: "http://almabirthdoula.com", services: ["Postpartum", "Prenatal Care"] },
+      { name: "Compass Doula & Lactation PLLC", credential: "Birth Doula, Lactation Consultant", practice: "Compass Doula & Lactation", url: "https://www.compassdoulas.com", acceptsMedicaid: true, services: ["Postpartum", "Breastfeeding Support"] },
+      { name: "Jennifer Ruggles", credential: "Birth Doula", practice: "Jennifer Ruggles Doula Services", url: "http://www.jennrugglesdoula.com", acceptsMedicaid: true, services: ["Postpartum"] },
+      { name: "Little Mitzvah Doula Care", credential: "Birth Doula, Postpartum Doula", practice: "Little Mitzvah Doula Care", url: "https://www.littlemitzvahdoulacare.com", services: ["Overnight Care"] },
     ],
     medicaidNote: "Yes \u2014 Washington Apple Health (Medicaid) covers doula services statewide, including Pierce County. Doulas must register with the Washington State Department of Health and bill through ProviderOne, with reimbursement of approximately $1,500 per birth package covering prenatal visits, labor support, and postpartum follow-up.",
     insuranceNote: "Washington requires commercial insurance to cover midwifery and birth center care. Regence, Premera, Molina, and Aetna plans sold in Pierce County generally include these benefits, but doula reimbursement varies by plan tier and network status.",
