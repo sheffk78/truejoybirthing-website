@@ -250,6 +250,7 @@ export const cities: Record<string, CityData> = {
     ],
     nearbyCities: ["houston-tx", "port-arthur-tx"],
   },
+  "carrollton-tx": {
     city: "Carrollton",
     state: "TX",
     slug: "carrollton-tx",
