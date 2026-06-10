@@ -50,8 +50,8 @@ const stateNames: Record<string, string> = {
 };
 const stateFullName = stateNames[state] || state;
 
-const pageTitle = `${city} Doula & Midwife | Costs, Hospitals & Medicaid`;
-const pageDesc = `Looking for a doula or midwife in ${city}? Costs $${costLow}–$${costHigh}, ${medicaidCovers ? 'Medicaid covers doulas and midwives' : 'Medicaid does not cover doulas'}, hospital policies, and the free Joyful Birth Plan to walk in prepared.`;
+const pageTitle = `${city}, ${state} Birth Doula & Midwife | Costs & Medicaid`;
+const pageDesc = `Looking for a doula or midwife in ${city}? Costs $${costLow}–$${costHigh}, ${medicaidCovers ? 'Medicaid covers doulas' : 'Medicaid does not cover doulas'}, hospital policies, and the free Joyful Birth Plan included.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 const ogImage = ogImageSlug || `https://truejoybirthing.com/images/og-city-${slug}.webp`;
 const heroImage = heroImageSlug || '/images/doula-breastfeeding.webp';
