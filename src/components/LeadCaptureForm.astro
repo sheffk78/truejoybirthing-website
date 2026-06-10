@@ -9,8 +9,8 @@ interface Props {
   bannerAlt?: string;
 }
 const {
-  heading = 'Get Your Free Birth Plan + Video Walkthrough',
-  body = 'Enter your name and email and we\'ll send you the free fillable birth plan PDF plus access to a free 5-video walkthrough — a certified doula guiding you through every section. No spam. Just the tools and guidance you need.',
+  heading = 'Get the Free Video Walkthrough',
+  body = 'Enter your name and email and we\'ll send you immediate access to all 5 walkthrough videos — a certified doula guiding you through every section of your birth plan. Already have the PDF? The videos work alongside it. No spam, just the guidance you need.',
   eyebrow = 'Free Download',
   bannerImage,
   bannerAlt = '',
@@ -56,15 +56,15 @@ const {
         />
       </div>
       <button type="submit" id="lead-submit" class="btn-primary whitespace-nowrap">
-        Get the free PDF + walkthrough
+        Get the free video walkthrough
       </button>
     </form>
     <p id="lead-status" class="text-xs hidden text-tjb-gray-300"></p>
 
     <!-- Success state -->
     <div id="lead-success" class="hidden">
-      <p class="text-green-700 font-semibold mb-4">✓ Check your inbox: your birth plan PDF is on its way!</p>
-      <p class="text-tjb-gray mb-6">Your free video walkthrough is ready — scroll down to start watching.</p>
+      <p class="text-green-700 font-semibold mb-4">✓ Check your inbox — your walkthrough access is on its way!</p>
+      <p class="text-tjb-gray mb-6">Your free video walkthrough is ready below — start watching now.</p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
         <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="inline-flex items-center gap-2 text-tjb-lavender-600 font-semibold hover:text-tjb-lavender-700 transition-colors">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
@@ -135,7 +135,7 @@ const {
       leadStatus.classList.remove('hidden');
     } finally {
       leadBtn.disabled = false;
-      leadBtn.textContent = 'Get the free PDF + walkthrough';
+      leadBtn.textContent = 'Get the free video walkthrough';
     }
   });
 </script>
