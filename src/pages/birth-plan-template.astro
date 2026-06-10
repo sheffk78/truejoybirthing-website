@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+import AppShowcase from '../components/AppShowcase.astro';
 
 const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Free Birth Plan Template", "url": "https://truejoybirthing.com/birth-plan-template/"}];
 
@@ -51,11 +52,13 @@ const schema = {
       "@id": "https://truejoybirthing.com/birth-plan-template/#faq",
       "mainEntity": [
         { "@type": "Question", "name": "What should a birth plan template include?", "acceptedAnswer": { "@type": "Answer", "text": "A good birth plan template covers labor preferences, pain management options, delivery positions, postpartum care preferences, and newborn care decisions. It should be organized, concise, and easy for your care team to scan quickly." } },
-        { "@type": "Question", "name": "Is this birth plan template really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The fillable PDF is completely free, no email, no upsell, no catch. You can also use the free app for a richer, updatable experience." } },
+        { "@type": "Question", "name": "Is this birth plan template really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The fillable PDF and the full 5-video walkthrough are both completely free — just enter your name and email and youll get immediate access to everything. No payment, no trial, no upsell." } },
         { "@type": "Question", "name": "Can I edit the birth plan template?", "acceptedAnswer": { "@type": "Answer", "text": "The PDF is fillable, type directly into it or print it and fill it in by hand. For live updates, doula sharing, and a guided walkthrough, use the free True Joy Birthing app." } },
         { "@type": "Question", "name": "How is this different from a birth plan I find on Google?", "acceptedAnswer": { "@type": "Answer", "text": "Most free templates online are generic checklists. This one was built by a certified birth doula and organized around the decisions that actually come up in the delivery room, not just wish-list items." } },
         { "@type": "Question", "name": "When should I fill out my birth plan?", "acceptedAnswer": { "@type": "Answer", "text": "Most families start around 28-32 weeks. Earlier is fine too. The sooner you understand your options, the more confident you'll feel when the time comes." } },
-        { "@type": "Question", "name": "What's the difference between the PDF and the app?", "acceptedAnswer": { "@type": "Answer", "text": "The PDF is free, fillable, and designed for print — write in your preferences and bring hard copies to the hospital. The free app goes further: it walks you through each section with guided videos, lets you update your plan anytime, and shares your live plan with your doula or partner directly. Both cover the same five sections; the app is for families who want an interactive, always-current experience." } }
+        { "@type": "Question", "name": "What's the difference between the PDF and the app?", "acceptedAnswer": { "@type": "Answer", "text": "The PDF is free, fillable, and designed for print — write in your preferences and bring hard copies to the hospital. The free app goes further: it walks you through each section with guided videos, lets you update your plan anytime, and shares your live plan with your doula or partner directly. Both cover the same five sections; the app is for families who want an interactive, always-current experience." } },
+        { "@type": "Question", "name": "Is the video walkthrough really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The 5-video walkthrough is completely free — just enter your name and email and youll get immediate access to every module. No payment, no trial, no upsell. We ask for your email so we can send you the PDF and check in with tips as you fill out your plan." } },
+        { "@type": "Question", "name": "How is the walkthrough different from the PDF?", "acceptedAnswer": { "@type": "Answer", "text": "The PDF is the template — the form you fill out. The walkthrough is a certified doula explaining what each section means, why each choice matters, and how to talk to your provider about it. They work together: download the PDF, then watch the videos as you fill it in." } }
       ]
     }
   ]
@@ -66,7 +69,7 @@ const schema = {
   title="Free Birth Plan Template"
   description="Free fillable birth plan template by a certified doula. Structured, concise, and easy for your care team to read. Covers labor through newborn care."
   canonical="https://truejoybirthing.com/birth-plan-template/"
-  ogImage="/images/og/og-birth-plan-template.webp"
+  ogImage="/images/og/og-birth-plan-template.webp?v=2"
   breadcrumbList={breadcrumbList}
   schema={schema}
 >
@@ -95,7 +98,10 @@ const schema = {
             </p>
           </div>
           <p class="text-tjb-gray text-lg leading-[1.7] mb-8 max-w-[36rem]">
-            A <strong>birth plan template</strong> is a structured form that helps you write down your preferences for labor, pain management, delivery, and newborn care, so your medical team can read it at a glance. This one is built by a certified doula, not a generic hospital form. Download the fillable PDF free, or build your plan in the <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free app</a>.
+            A <strong>birth plan template</strong> is a structured form that helps you write down your preferences for labor, pain management, delivery, and newborn care, so your medical team can read it at a glance.
+          </p>
+          <p class="text-tjb-gray text-base leading-relaxed mb-8 max-w-[36rem]">
+            This one is built by a certified doula, not a generic hospital form. <strong>Choose your path:</strong> print the fillable PDF, watch the free video walkthrough with Shelbi, or build your plan step by step in the <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free app</a>.
           </p>
           <div>
             <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-primary">
@@ -127,92 +133,200 @@ const schema = {
        ═══════════════════════════════════════════ -->
   <div class="bg-tjb-cream border-y border-tjb-lavender-200/40">
     <div class="max-w-3xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
-      <span class="text-sm text-tjb-gray-300 tracking-wide">5 sections · fillable PDF · nurse-readable format</span>
+      <span class="text-sm text-tjb-gray-300 tracking-wide">📄 Free PDF</span>
       <span class="hidden sm:inline text-tjb-rose-400 text-sm">·</span>
-      <span class="text-sm text-tjb-gray-300 tracking-wide">Designed to be read in 30 seconds</span>
+      <span class="text-sm text-tjb-gray-300 tracking-wide">🎬 Free video walkthrough</span>
       <span class="hidden sm:inline text-tjb-rose-400 text-sm">·</span>
-      <span class="text-sm text-tjb-gray-300 tracking-wide">Guided walkthroughs in the app</span>
+      <span class="text-sm text-tjb-gray-300 tracking-wide">📱 Free app</span>
     </div>
   </div>
 
   <!-- ═══════════════════════════════════════════
-       APP SHOWCASE — Free app with phone mockups
+       THREE WAYS — Comparison block
        ═══════════════════════════════════════════ -->
-  <section class="bg-tjb-lavender-50 py-16 md:py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="flex flex-col md:flex-row items-center gap-10 md:gap-14">
+  <section class="bg-white py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="eyebrow mb-4 text-center">Three ways to build your birth plan</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-8 mx-auto"></div>
+      <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-12 text-center" style="font-size: clamp(1.5rem, 3.5vw, 2.25rem);">
+        Choose how you want to get started — all three are free
+      </h2>
 
-        <!-- Left: Phone mockups — 45% -->
-        <div class="md:w-[45%] flex justify-center">
-          <div class="relative flex items-start">
-            <!-- Left phone — dashboard, offset down -->
-            <div class="phone-frame w-[46%] flex-shrink-0 mt-10 md:mt-16 z-10">
-              <div class="phone-screen">
-                <img
-                  src="/images/tjb-app-dashboard.png"
-                  alt="True Joy Birthing app home screen with pregnancy week tracker, birth plan progress, and weekly tips"
-                  class="w-full h-full object-cover"
-                  width="390"
-                  height="844"
-                  loading="lazy"
-                />
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- PDF Column -->
+        <div class="bg-tjb-cream rounded-xl p-6 text-center border border-tjb-lavender-200/50">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-tjb-lavender-100 flex items-center justify-center">
+            <svg class="w-7 h-7 text-tjb-lavender-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          </div>
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Free PDF</h3>
+          <p class="text-tjb-gray text-sm leading-relaxed mb-4">Download, fill in by hand or type. Print copies for your hospital bag. No email needed.</p>
+          <a href="#download" class="btn-secondary">Get the PDF →</a>
+        </div>
+
+        <!-- Video Column — highlighted with thumbnail -->
+        <div class="bg-white rounded-xl overflow-hidden border-2 border-tjb-rose-400 shadow-md relative">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-tjb-rose-500 text-white text-xs font-semibold px-3 py-1 rounded-full z-10">Most popular</span>
+          <a href="/walkthrough/" class="block">
+            <div class="relative">
+              <img src="/images/video-thumbnails/module-01-intro.webp" alt="Free birth plan video walkthrough preview" class="w-full aspect-video object-cover" loading="lazy" width="640" height="360" />
+              <div class="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors">
+                <div class="w-16 h-16 rounded-full bg-tjb-rose-500/90 flex items-center justify-center shadow-lg">
+                  <svg class="w-8 h-8 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 20,12 8,19" /></svg>
+                </div>
               </div>
             </div>
-            <!-- Right phone — birth plan builder -->
-            <div class="phone-frame w-[46%] flex-shrink-0 -ml-3 md:-ml-4 z-20">
-              <div class="phone-screen">
-                <img
-                  src="/images/tjb-app-birth-plan-builder.png"
-                  alt="True Joy Birthing app birth plan showing completed sections for labor preferences, pain management, and delivery"
-                  class="w-full h-full object-cover"
-                  width="390"
-                  height="844"
-                  loading="lazy"
-                />
-              </div>
-            </div>
+          </a>
+          <div class="p-5 text-center">
+            <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Free Video Walkthrough</h3>
+            <p class="text-tjb-gray text-sm leading-relaxed mb-4">5 short videos with a certified doula explaining every section. Watch in one evening.</p>
+            <a href="/walkthrough/" class="btn-primary">Watch the walkthrough</a>
           </div>
         </div>
 
-        <!-- Right: Text — 55% -->
-        <div class="md:w-[55%]">
-          <p class="eyebrow mb-3">Free app</p>
-          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-          <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(1.75rem, 4vw, 2.75rem); font-family: 'Cormorant Garamond', Georgia, serif;">
-            Build your birth plan step by step in the app
-          </h2>
-          <p class="text-tjb-gray text-lg leading-relaxed mb-6">
-            Nine guided sections. Hospital preferences, pain management, who's in the room — all walked through so nothing gets missed.
-          </p>
-          <ul class="space-y-3 mb-6">
-            <li class="flex items-start gap-3">
-              <span class="w-2 h-2 rounded-full bg-tjb-lavender-400 mt-2 flex-shrink-0"></span>
-              <span class="text-tjb-gray leading-relaxed">Step-by-step guidance for every section</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-2 h-2 rounded-full bg-tjb-lavender-400 mt-2 flex-shrink-0"></span>
-              <span class="text-tjb-gray leading-relaxed">Update your plan anytime — not a static PDF</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="w-2 h-2 rounded-full bg-tjb-lavender-400 mt-2 flex-shrink-0"></span>
-              <span class="text-tjb-gray leading-relaxed">Share directly with your care team or doula</span>
-            </li>
-          </ul>
-          <div class="flex items-center gap-3 mb-2">
-            <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180">
-              <img src="/images/app-store-badge.svg" alt="Download on the App Store" class="h-12" loading="lazy" />
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.truejoybirthing.app" class="relative group">
-              <img src="/images/google-play-badge.svg" alt="Get it on Google Play" class="h-12" loading="lazy" />
-              <span class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full bg-tjb-charcoal text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Coming soon</span>
-            </a>
+        <!-- App Column -->
+        <div class="bg-tjb-cream rounded-xl p-6 text-center border border-tjb-lavender-200/50">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-tjb-lavender-100 flex items-center justify-center">
+            <svg class="w-7 h-7 text-tjb-lavender-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/></svg>
           </div>
-          <p class="text-sm text-tjb-gray">Free · No account needed to start</p>
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Free App</h3>
+          <p class="text-tjb-gray text-sm leading-relaxed mb-4">Interactive step-by-step guide. Update your plan anytime, share with your care team and doula.</p>
+          <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-secondary">Get the app</a>
         </div>
-
       </div>
+
+      <p class="text-center text-sm text-tjb-gray mt-6">All three cover the same five sections. Use them together or pick the one that works for you.</p>
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════════
+       VIDEO MODULE PREVIEWS — Show what's inside the walkthrough
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-cream py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <p class="eyebrow mb-4">Free birth plan walkthrough</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
+        Walk through every section with a certified doula — free
+      </h2>
+      <p class="text-tjb-gray text-lg leading-relaxed mb-8">
+        Want to understand <em>why</em> each section matters before you fill it out? These 5 short videos walk through the entire Joyful Birth Plan — from labor preferences to backup plans — so you fill it out with confidence, not confusion.
+      </p>
+
+      <div class="space-y-4 mb-8">
+        <!-- Module 1 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-tjb-lavender-200/50 hover:shadow-md transition-shadow cursor-pointer" onclick="window.location.href='/walkthrough/'">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="relative shrink-0 sm:w-44 w-full aspect-video rounded-lg overflow-hidden">
+              <img src="/images/video-thumbnails/module-01-intro.webp" alt="Video thumbnail: Shelbi introduces the Joyful Birth Plan" class="w-full h-full object-cover" loading="lazy" width="440" height="248" />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-tjb-rose-500/90 flex items-center justify-center shadow-md">
+                  <svg class="w-5 h-5 text-white ml-0.5" viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 20,12 8,19" /></svg>
+                </div>
+              </div>
+            </div>
+            <div>
+              <span class="text-sm font-semibold text-tjb-lavender-500">Module 1</span>
+              <h3 class="font-semibold text-lg text-tjb-charcoal mb-1">About Me & Your Birth Plan</h3>
+              <p class="text-tjb-gray text-sm leading-relaxed">How to fill in the section that helps your care team see you as a person. What to include in your flexibility statement and how to note your preferences.</p>
+              <span class="text-xs text-tjb-gray-400 mt-1 inline-block">▶ ~5 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-tjb-lavender-200/50 hover:shadow-md transition-shadow cursor-pointer" onclick="window.location.href='/walkthrough/'">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="relative shrink-0 sm:w-44 w-full aspect-video rounded-lg overflow-hidden">
+              <img src="/images/video-thumbnails/module-02-labor.webp" alt="Video thumbnail: Labor, delivery, and pain management walkthrough" class="w-full h-full object-cover" loading="lazy" width="440" height="248" />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-tjb-rose-500/90 flex items-center justify-center shadow-md">
+                  <svg class="w-5 h-5 text-white ml-0.5" viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 20,12 8,19" /></svg>
+                </div>
+              </div>
+            </div>
+            <div>
+              <span class="text-sm font-semibold text-tjb-rose-500">Module 2</span>
+              <h3 class="font-semibold text-lg text-tjb-charcoal mb-1">Labor, Delivery & Pain Management</h3>
+              <p class="text-tjb-gray text-sm leading-relaxed">Monitoring, IV, movement, environment, and the full pain management ladder — what each choice looks like in the room and how to talk to your provider about it.</p>
+              <span class="text-xs text-tjb-gray-400 mt-1 inline-block">▶ ~8 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-tjb-lavender-200/50 hover:shadow-md transition-shadow cursor-pointer" onclick="window.location.href='/walkthrough/'">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="relative shrink-0 sm:w-44 w-full aspect-video rounded-lg overflow-hidden">
+              <img src="/images/video-thumbnails/module-03-post.webp" alt="Video thumbnail: Post-delivery preferences walkthrough" class="w-full h-full object-cover" loading="lazy" width="440" height="248" />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-tjb-rose-500/90 flex items-center justify-center shadow-md">
+                  <svg class="w-5 h-5 text-white ml-0.5" viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 20,12 8,19" /></svg>
+                </div>
+              </div>
+            </div>
+            <div>
+              <span class="text-sm font-semibold text-tjb-lavender-500">Module 3</span>
+              <h3 class="font-semibold text-lg text-tjb-charcoal mb-1">Post-Delivery Preferences</h3>
+              <p class="text-tjb-gray text-sm leading-relaxed">Skin-to-skin, cord clamping, golden hour, feeding preferences — the decisions that happen fast after delivery, explained before you're in the moment.</p>
+              <span class="text-xs text-tjb-gray-400 mt-1 inline-block">▶ ~6 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-tjb-lavender-200/50 hover:shadow-md transition-shadow cursor-pointer" onclick="window.location.href='/walkthrough/'">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="relative shrink-0 sm:w-44 w-full aspect-video rounded-lg overflow-hidden">
+              <img src="/images/video-thumbnails/module-04-newborn.webp" alt="Video thumbnail: Newborn care preferences walkthrough" class="w-full h-full object-cover" loading="lazy" width="440" height="248" />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-tjb-rose-500/90 flex items-center justify-center shadow-md">
+                  <svg class="w-5 h-5 text-white ml-0.5" viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 20,12 8,19" /></svg>
+                </div>
+              </div>
+            </div>
+            <div>
+              <span class="text-sm font-semibold text-tjb-rose-500">Module 4</span>
+              <h3 class="font-semibold text-lg text-tjb-charcoal mb-1">Newborn Care Preferences</h3>
+              <p class="text-tjb-gray text-sm leading-relaxed">Vitamin K, Hep B, eye ointment, circumcision, rooming-in, newborn screenings — what's standard, what's optional, and how to state your preference clearly.</p>
+              <span class="text-xs text-tjb-gray-400 mt-1 inline-block">▶ ~5 min</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="bg-white rounded-xl p-5 shadow-sm border border-tjb-lavender-200/50 hover:shadow-md transition-shadow cursor-pointer" onclick="window.location.href='/walkthrough/'">
+          <div class="flex flex-col sm:flex-row gap-4">
+            <div class="relative shrink-0 sm:w-44 w-full aspect-video rounded-lg overflow-hidden">
+              <img src="/images/video-thumbnails/module-05-other.webp" alt="Video thumbnail: Advocacy, backup plans and flexibility language" class="w-full h-full object-cover" loading="lazy" width="440" height="248" />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-12 h-12 rounded-full bg-tjb-rose-500/90 flex items-center justify-center shadow-md">
+                  <svg class="w-5 h-5 text-white ml-0.5" viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 20,12 8,19" /></svg>
+                </div>
+              </div>
+            </div>
+            <div>
+              <span class="text-sm font-semibold text-tjb-sage">Module 5</span>
+              <h3 class="font-semibold text-lg text-tjb-charcoal mb-1">Advocacy, Backup Plans & More</h3>
+              <p class="text-tjb-gray text-sm leading-relaxed">What to say when something unexpected comes up — consent phrases, flexibility language for when plans change, and how to stay in the conversation.</p>
+              <span class="text-xs text-tjb-gray-400 mt-1 inline-block">▶ ~7 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="/walkthrough/" class="btn-primary">Watch the free walkthrough</a>
+        <p class="text-sm text-tjb-gray mt-3">Free with your email. 5 short videos — watch in one evening or one module at a time.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       APP SHOWCASE — Reusable component
+       ═══════════════════════════════════════════ -->
+  <AppShowcase variant="serif" />
 
   <!-- ═══════════════════════════════════════════
        WHAT'S INCLUDED — Editorial numbered list
@@ -385,57 +499,32 @@ const schema = {
   </section>
 
   <!-- ═══════════════════════════════════════════
-       CITY RESOURCES — Typographic link strip
+       CITY RESOURCES — Compact link
        ═══════════════════════════════════════════ -->
-  <section class="bg-tjb-cream py-12 border-y border-tjb-lavender-200/50">
-    <div class="max-w-3xl mx-auto px-6">
-      <h2 class="font-semibold text-tjb-charcoal text-lg mb-4">Tailor your plan for your hospital</h2>
-      <p class="text-tjb-gray mb-6">Birth plans work best when they're tailored to your actual care setting. Our city pages include local hospital details, doula costs, and what Medicaid covers:</p>
-
-      <h3 class="font-semibold text-tjb-charcoal text-sm mb-2">Colorado</h3>
-      <ul class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2 mb-4">
-        <li><a href="/birth-support/denver-co/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Denver</a></li>
-        <li><a href="/birth-support/colorado-springs-co/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Colorado Springs</a></li>
-      </ul>
-      <p class="mb-6"><a href="/birth-support/co/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 transition text-sm">See all Colorado cities →</a></p>
-
-      <h3 class="font-semibold text-tjb-charcoal text-sm mb-2">Texas</h3>
-      <ul class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2 mb-4">
-        <li><a href="/birth-support/dallas-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Dallas</a></li>
-        <li><a href="/birth-support/houston-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Houston</a></li>
-        <li><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Austin</a></li>
-        <li><a href="/birth-support/san-antonio-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">San Antonio</a></li>
-        <li><a href="/birth-support/fort-worth-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Fort Worth</a></li>
-        <li><a href="/birth-support/el-paso-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">El Paso</a></li>
-      </ul>
-      <p class="mb-6"><a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 transition text-sm">See all 20 Texas cities →</a></p>
-
-      <h3 class="font-semibold text-tjb-charcoal text-sm mb-2">More cities</h3>
-      <ul class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2">
-        <li><a href="/birth-support/phoenix-az/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Phoenix</a></li>
-        <li><a href="/birth-support/las-vegas-nv/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Las Vegas</a></li>
-        <li><a href="/birth-support/chicago-il/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">Chicago</a></li>
-      </ul>
+  <section class="bg-tjb-cream py-8 border-y border-tjb-lavender-200/50">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-tjb-gray text-sm">Tailor your plan for your hospital — <a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 transition">see city-specific doula costs and hospital policies →</a></p>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
-       WALKTHROUGH — Editorial callout on cream
+       CONFIDENCE SESSION UPSELL (NEW — between walkthrough & CTA)
        ═══════════════════════════════════════════ -->
-  <section class="bg-white py-16 md:py-20">
+  <section class="bg-tjb-cream py-16 md:py-20 border-t border-tjb-lavender-200/50">
     <div class="max-w-3xl mx-auto px-6">
 
-      <p class="eyebrow mb-4">Go deeper</p>
+      <p class="eyebrow mb-4">Want personalized support?</p>
       <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
       <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
-        Free birth plan walkthrough
+        Need someone to review your plan with you — line by line?
       </h2>
       <p class="text-tjb-gray text-lg leading-relaxed mb-6">
-        Want to understand <em>why</em> each section matters before you fill it out? The free guided walkthrough in the app walks you through every category of your birth plan, labor preferences, newborn care, postpartum, and more.
+        The free PDF and walkthrough give you the tools and the knowledge. But if you want a certified birth doula to look at <em>your</em> plan, <em>your</em> hospital, and <em>your</em> concerns — that's the <a href="/birth-plan-confidence-session/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 transition">Birth Plan Confidence Session</a>.
       </p>
-      <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-secondary">
-        Get the free app for the full walkthrough
-      </a>
+      <p class="text-tjb-gray leading-relaxed mb-8">
+        A 60–75 minute live Zoom call with Shelbi. Real feedback on your specific plan. Advocacy role-play for the conversations you're most worried about. <strong>$250 per session.</strong> Limited spots.
+      </p>
+      <a href="/birth-plan-confidence-session/#book" class="btn-primary">Learn about the Confidence Session</a>
 
     </div>
   </section>
@@ -481,7 +570,15 @@ const schema = {
         </div>
         <div class="border-b border-tjb-lavender-300/40 pb-6">
           <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Is this birth plan template really free?</h3>
-          <p class="text-tjb-gray leading-relaxed">Yes. The fillable PDF is completely free, no email, no upsell, no catch. You can also use the free app for a richer, updatable experience.</p>
+          <p class="text-tjb-gray leading-relaxed">Yes. The fillable PDF is completely free — no email, no upsell, no catch. The 5-video walkthrough is also free; we ask for your email so we can send you access and check in with tips as you fill out your plan.</p>
+        </div>
+        <div class="border-b border-tjb-lavender-300/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Is the video walkthrough really free?</h3>
+          <p class="text-tjb-gray leading-relaxed">Yes. The 5-video walkthrough is completely free — just enter your name and email and youll get immediate access to every module. No payment, no trial, no upsell. We ask for your email so we can send you the link and check in with tips as you fill out your plan.</p>
+        </div>
+        <div class="border-b border-tjb-lavender-300/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">How is the walkthrough different from the PDF?</h3>
+          <p class="text-tjb-gray leading-relaxed">The PDF is the template — the form you fill out. The walkthrough is a certified doula explaining what each section means, why each choice matters, and how to talk to your provider about it. They work together: download the PDF, then watch the videos as you fill it in.</p>
         </div>
         <div class="border-b border-tjb-lavender-300/40 pb-6">
           <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Can I edit the birth plan template?</h3>
@@ -512,96 +609,3 @@ const schema = {
 
 </Layout>
 
-<style>
-  /* ═══════════════════════════════════════════
-     Phone mockup frame — CSS-only iPhone bezel
-     Makes screenshots unmistakably read as "app screens"
-     ═══════════════════════════════════════════ */
-  .phone-frame {
-    position: relative;
-    background: #111;
-    border-radius: 2.25rem;
-    padding: 0.6rem;
-    box-shadow:
-      0 30px 60px -15px rgba(0, 0, 0, 0.3),
-      0 0 0 1px rgba(255, 255, 255, 0.08) inset,
-      inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  }
-
-  /* Dynamic Island */
-  .phone-frame::before {
-    content: '';
-    position: absolute;
-    top: 0.75rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30%;
-    height: 1.2rem;
-    background: #111;
-    border-radius: 1.25rem;
-    z-index: 30;
-  }
-
-  /* Home indicator bar */
-  .phone-frame::after {
-    content: '';
-    position: absolute;
-    bottom: 0.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 38%;
-    height: 0.3rem;
-    background: rgba(255, 255, 255, 0.35);
-    border-radius: 0.15rem;
-    z-index: 30;
-  }
-
-  .phone-screen {
-    position: relative;
-    border-radius: 1.65rem;
-    overflow: hidden;
-    background: #fff;
-  }
-
-  /* Screen reflection — subtle gradient overlay for realism */
-  .phone-screen::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 40%;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.08) 0%,
-      rgba(255, 255, 255, 0.02) 40%,
-      transparent 100%
-    );
-    z-index: 10;
-    pointer-events: none;
-    border-radius: 1.65rem 1.65rem 0 0;
-  }
-
-  /* Status bar time — adds "live app" feel */
-  .phone-screen::after {
-    content: '9:41';
-    position: absolute;
-    top: 0.9rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: -apple-system, 'SF Pro Text', 'Helvetica Neue', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: rgba(0, 0, 0, 0.5);
-    letter-spacing: 0.02em;
-    z-index: 20;
-    pointer-events: none;
-  }
-
-  .phone-screen img {
-    display: block;
-    border-radius: 1.65rem;
-    width: 100%;
-    height: auto;
-  }
-</style>
