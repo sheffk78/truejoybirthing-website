@@ -1,0 +1,140 @@
+#!/bin/bash
+# =============================================================================
+# TJB Safe Deploy — Git Push Only (CF auto-deploys from git)
+#
+# Cloudflare Pages auto-deploys from git pushes to main. This script:
+#   1. Syncs local repo with origin/main (git pull --rebase)
+#   2. Verifies HEAD matches origin/main
+#   3. Builds locally to validate
+#   4. Pushes to main — CF auto-deploys
+#   5. Verifies live site returns 200
+#
+# NO wrangler calls needed — CF auto-deploy handles the rest.
+#
+# Exit codes:
+#   0 — Deploy succeeded
+#   1 — Preflight failed
+#   3 — Verification failed
+# =============================================================================
+
+set -euo pipefail
+
+PROJECT_DIR="/Users/socializerender/Projects/truejoybirthing-website"
+SITE_URL="https://truejoybirthing.com"
+DRY_RUN=false
+
+for arg in "$@"; do
+  case "$arg" in
+    --dry-run) DRY_RUN=true ;;
+  esac
+done
+
+echo "=== TJB Safe Deploy (CF Auto-Deploy) ==="
+echo "URL:     $SITE_URL"
+echo "Time:    $(date '+%Y-%m-%d %H:%M:%S %Z')"
+
+cd "$PROJECT_DIR"
+
+# ---------------------------------------------------------------
+# STEP 1: Git sync — pull latest from origin/main
+# ---------------------------------------------------------------
+echo ""
+echo "--- Step 1/4: Git sync ---"
+
+STASHED=false
+if ! git diff --quiet --ignore-submodules HEAD 2>/dev/null; then
+  echo "  → Stashing local changes..."
+  git stash -q
+  STASHED=true
+fi
+
+PRE_PULL_HEAD=$(git rev-parse HEAD)
+echo "  → Pre-pull HEAD: $(git rev-parse --short HEAD) ($(git log -1 --format=%s HEAD))"
+
+git pull --rebase origin main 2>&1 | sed 's/^/  /'
+
+POST_PULL_HEAD=$(git rev-parse HEAD)
+if [ "$PRE_PULL_HEAD" != "$POST_PULL_HEAD" ]; then
+  echo "  → Updated to: $(git rev-parse --short HEAD) ($(git log -1 --format=%s HEAD))"
+else
+  echo "  → Already at latest."
+fi
+
+# Verify HEAD matches origin/main
+LOCAL_HEAD=$(git rev-parse HEAD)
+REMOTE_HEAD=$(git rev-parse origin/main 2>/dev/null || echo "")
+if [ "$LOCAL_HEAD" != "$REMOTE_HEAD" ]; then
+  echo "  ⚠ WARNING: Local HEAD differs from origin/main."
+  echo "  → Pushing will deploy this state regardless."
+fi
+
+# Pop stash if we stashed
+if [ "$STASHED" = true ]; then
+  git stash pop -q 2>/dev/null || true
+fi
+
+if [ "$DRY_RUN" = true ]; then
+  echo ""
+  echo "=== DRY RUN — stopping before build ==="
+  echo "Would push HEAD: $(git rev-parse --short HEAD)"
+  exit 0
+fi
+
+# ---------------------------------------------------------------
+# STEP 2: Build (validate code compiles)
+# ---------------------------------------------------------------
+echo ""
+echo "--- Step 2/4: Build ---"
+
+npm run build 2>&1 | tail -3 | sed 's/^/  /'
+echo "  → Build complete."
+
+# ---------------------------------------------------------------
+# STEP 3: Commit and push (triggers CF auto-deploy)
+# ---------------------------------------------------------------
+echo ""
+echo "--- Step 3/4: Push to main (triggers CF auto-deploy) ---"
+
+CURRENT_MSG=$(git log -1 --format=%s HEAD)
+
+# Check for uncommitted changes
+if git diff --quiet --ignore-submodules HEAD 2>/dev/null &&
+   git diff --cached --quiet --ignore-submodules 2>/dev/null; then
+  echo "  → No uncommitted changes. Pushing current HEAD only."
+  git push origin main 2>&1 | sed 's/^/  /'
+  echo "  → Push complete. CF will auto-deploy."
+else
+  echo "  → Uncommitted changes found:"
+  git status --short 2>/dev/null | head -10 | sed 's/^/  → /'
+  git add -A
+  git commit -m "deploy: $(date '+%Y-%m-%d %H:%M') — $CURRENT_MSG" 2>&1 | sed 's/^/  /'
+  git push origin main 2>&1 | sed 's/^/  /'
+  echo "  → Committed and pushed. CF will auto-deploy."
+fi
+
+# ---------------------------------------------------------------
+# STEP 4: Verify live site
+# ---------------------------------------------------------------
+echo ""
+echo "--- Step 4/4: Verification ---"
+
+sleep 3
+
+HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL/" --max-time 10)
+BIRTH_SUPPORT_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL/birth-support/" --max-time 10)
+TEMPLATE_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL/birth-plan-template/" --max-time 10)
+
+echo "  → Homepage:             $HTTP_CODE"
+echo "  → /birth-support/:      $BIRTH_SUPPORT_CODE"
+echo "  → /birth-plan-template/: $TEMPLATE_CODE"
+
+if [ "$HTTP_CODE" != "200" ]; then
+  echo "  ❌ Homepage returned $HTTP_CODE — auto-deploy may still be running."
+  exit 3
+fi
+
+echo ""
+echo "=== Deploy complete ==="
+echo "HEAD:   $(git commit)"
+echo "URL:    $SITE_URL (CF auto-deploy in progress)"
+echo "Status: PUSHED ✅"
