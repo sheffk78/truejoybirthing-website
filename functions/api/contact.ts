@@ -111,23 +111,8 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
         // Don't block — continue to try sending welcome email anyway
       }
 
-      // 2. Send welcome email with birth plan PDF (template 7)
-      try {
-        await fetch('https://api.brevo.com/v3/smtp/email', {
-          method: 'POST',
-          headers: {
-            'api-key': env.BREVO_API_KEY,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            templateId: 7,
-            to: [{ email, name: brevoContactName }],
-            params: { FIRSTNAME: firstName || brevoContactName },
-          }),
-        });
-      } catch (sendErr) {
-        console.error('Brevo welcome email send error (non-fatal):', sendErr);
-      }
+      // 2. Welcome email is handled by Brevo automation (JBP sequence triggered by list add)
+      // No direct transactional send — avoids double-emailing
     }
 
     // ── Secondary: AgentMail inbox notification (fire-and-forget) ──
