@@ -1008,17 +1008,16 @@ const schema = {
   <!-- ═══ Lead Capture (with banner image) ═══ -->
   <CityLeadCaptureForm city={city} />
 
-  {slug === 'denver-co' && (
+  {cityVideoEmbeds[slug] && (
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "VideoObject",
-      "name": "Denver Doula & Birth Plan Guide: Costs, Hospitals & Medicaid",
-      "description": "Your complete Denver birth guide covering doulas and midwives, hospital policies, real costs ($1,000-$3,000), and Colorado Medicaid doula coverage. Created by Shelbi Kohler, certified birth doula.",
-      "thumbnailUrl": "https://truejoybirthing.com/images/yt-thumb-denver-co.png",
-      "uploadDate": "2026-06-10",
-      "duration": "PT4M36S",
-      "contentUrl": "https://www.youtube.com/watch?v=qmpu7-f_Aio",
-      "embedUrl": "https://www.youtube-nocookie.com/embed/qmpu7-f_Aio"
+      "name": `${cityVideoEmbeds[slug].title}`,
+      "description": cityVideoEmbeds[slug].description,
+      "thumbnailUrl": `https://truejoybirthing.com/images/yt-thumb-${slug}.png`,
+      "uploadDate": data.publishedDate || "2026-06-11",
+      "contentUrl": `https://www.youtube.com/watch?v=${cityVideoEmbeds[slug].videoId}`,
+      "embedUrl": `https://www.youtube-nocookie.com/embed/${cityVideoEmbeds[slug].videoId}`
     })} />
   )}
 </Layout>
