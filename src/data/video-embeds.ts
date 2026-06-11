@@ -29,4 +29,9 @@ export const cityVideoEmbeds: Record<string, { videoId: string; title: string; d
     title: "Vancouver WA Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and Washington Apple Health, all in under 4 minutes.",
   },
+  "cary-nc": {
+    videoId: "AikYJXhlJNo",
+    title: "Cary Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and NC Medicaid, all in under 3 minutes.",
+  },
 };

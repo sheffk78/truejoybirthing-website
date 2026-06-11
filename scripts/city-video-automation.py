@@ -94,7 +94,17 @@ def create_scene_data(data):
     st = {'Colorado': 'CO', 'California': 'CA', 'Virginia': 'VA', 'Washington': 'WA', 'North Carolina': 'NC', 'Texas': 'TX'}.get(data['state'], data['state'][:2].upper())
     has_mc = 'true' if data['is_medicaid'] else 'false'
     
-    medicaid_line = f"Colorado's Health First Colorado (Medicaid) reimburses doulas up to $750 per birth. Midwives are covered through managed care plans." if data['is_medicaid'] else f"{data['state']} Medicaid doesn't cover doulas right now. Most doulas offer sliding-scale fees and payment plans."
+    # State-specific Medicaid programs
+    medicaid_programs = {
+        'Colorado': "Colorado's Health First Colorado (Medicaid) reimburses doulas up to $750 per birth. Midwives are covered through managed care plans.",
+        'California': "California's Medi-Cal covers doula services for eligible enrollees. Medi-Cal also covers midwifery care through CNMs and CPMs where licensed.",
+        'Virginia': "Virginia Medicaid covers doula services for eligible enrollees through the state's managed care plans. CNM midwifery care is covered by most plans.",
+        'Washington': "Washington Apple Health covers doula services for eligible enrollees. CNM midwifery care is widely covered; check your specific plan for doula reimbursement.",
+        'North Carolina': "North Carolina Medicaid covers doula services as of October 2024 through the state's managed care plans. Midwife care is covered through CNMs.",
+        'Texas': "Texas Medicaid does not currently cover doula services. Most doulas offer sliding-scale fees and payment plans. CNM midwifery care is covered through most plans.",
+        'Oregon': "Oregon Health Plan covers doula services for eligible enrollees. Midwifery care is well-supported through CNMs and licensed CPMs.",
+    }
+    medicaid_line = medicaid_programs.get(data['state'], f"{data['state']} Medicaid covers doula services for eligible enrollees. Contact your managed care plan to confirm doula reimbursement and midwife coverage details.") if data['is_medicaid'] else f"{data['state']} Medicaid doesn't cover doulas right now. Most doulas offer sliding-scale fees and payment plans." 
     
     ts_content = f'''// ════════════════════════════════════════════════════════════════════════════
 // {city} — Scene data for the {city}, {st} city guide video
@@ -265,8 +275,19 @@ def generate_tts(data_file):
                 print(f'    ⚠️  TTS failed for {scene_id}: HTTP {resp.status_code} - {resp.text[:200]}')
                 continue
             
+            # Voxtral returns base64 JSON, not raw WAV — must decode
+            import base64
+            try:
+                resp_data = resp.json()
+                if 'audio_data' in resp_data:
+                    wav_bytes = base64.b64decode(resp_data['audio_data'])
+                else:
+                    # Fallback: maybe it is raw WAV
+                    wav_bytes = resp.content
+            except (json.JSONDecodeError, ValueError):
+                wav_bytes = resp.content
             with open(out_wav, 'wb') as f:
-                f.write(resp.content)
+                f.write(wav_bytes)
             
             # Get actual duration via ffprobe
             dur_result = run(f'ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "{out_wav}"', check=False)
@@ -317,7 +338,7 @@ def generate_tts(data_file):
             for w in wav_files:
                 f.write(f"file '{w}'\n")
         
-        master_wav = audio_dir / 'denver-master.wav'
+        master_wav = audio_dir / f'{slug}-master.wav'
         run(f'ffmpeg -y -f concat -safe 0 -i "{concat_list}" -c copy "{master_wav}" >/dev/null 2>&1', check=False)
         
         # Verify master duration
@@ -329,7 +350,7 @@ def generate_tts(data_file):
             # Pad master to match
             pad = total_duration - master_dur
             if pad > 0:
-                padded = audio_dir / 'denver-master-padded.wav'
+                padded = audio_dir / f'{slug}-master-padded.wav'
                 run(f'ffmpeg -y -i "{master_wav}" -af "apad=pad_dur={pad}" -t {total_duration} "{padded}" >/dev/null 2>&1', check=False)
                 shutil.move(str(padded), str(master_wav))
                 dur_result = run(f'ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "{master_wav}"', check=False)
@@ -423,11 +444,11 @@ def register_composition(slug, data_file):
         <Composition
           id="{slug.replace('-', '-')}-City-Guide"
           component={{TJBCityVideo}}
-          durationInFrames={{fps * Math.ceil({var_name}.video_metadata.duration_seconds)}}
+          durationInFrames={{{total_frames}}}
           fps={{fps}}
           width={{1920}}
           height={{1080}}
-          defaultProps={{{{videoData: {var_name}, audioPath: 'audio/{slug}/denver-master.wav'}}}}
+          defaultProps={{{{videoData: {var_name}, audioPath: 'audio/{slug}/{slug}-master.wav'}}}}
         />
 '''
     
@@ -449,7 +470,7 @@ def render_video(slug):
     print(f'  Rendering {comp_id}...')
     
     result = run(
-        f'npx remotion render --log=error {comp_id} out/{slug}-city-guide.mp4',
+        f'npx remotion render --log=error src/index.tsx {comp_id} out/{slug}-city-guide.mp4',
         timeout=600,
         check=False
     )
