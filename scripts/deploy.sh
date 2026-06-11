@@ -145,13 +145,14 @@ echo "--- Step 4/5: Push to main (triggers CF auto-deploy) ---"
 
 CURRENT_MSG=$(git log -1 --format=%s HEAD)
 
-# 🔴 HARD GATE: Commit message must include preflight: pass for city deploys
-if echo "$CURRENT_MSG" | grep -qi "upgrade\|feat:.*city\|add.*city" && \
-   ! echo "$CURRENT_MSG" | grep -qi "preflight"; then
-  echo "  ❌ FATAL: City deploy commit MUST include 'preflight: pass' in message."
-  echo "  → Current commit: $CURRENT_MSG"
-  echo "  → Fix: git commit --amend -m \"${CURRENT_MSG} [preflight: pass]\""
-  exit 1
+# 🔴 HARD GATE: Commit message must include preflight: pass for city deploys and video updates
+if echo "$CURRENT_MSG" | grep -qi "upgrade\|feat:.*city\|add.*city\|video.*embed\|embed.*video"; then
+  if ! echo "$CURRENT_MSG" | grep -qi "preflight"; then
+    echo "  ❌ FATAL: City deploy/video-embed commit MUST include 'preflight: pass' in message."
+    echo "  → Current commit: $CURRENT_MSG"
+    echo "  → Fix: git commit --amend -m \"${CURRENT_MSG} [preflight: pass]\""
+    exit 1
+  fi
 fi
 
 # Check for uncommitted changes
