@@ -14,4 +14,9 @@ export const cityVideoEmbeds: Record<string, { videoId: string; title: string; d
     title: "Tacoma Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and Washington Apple Health, all in under 4 minutes.",
   },
+  "norfolk-va": {
+    videoId: "5aq3MIXYelI",
+    title: "Norfolk Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Virginia Medicaid, all in under 4 minutes.",
+  },
 };
