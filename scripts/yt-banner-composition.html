@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 2048px;
+    height: 1152px;
+    overflow: hidden;
+  }
+  .bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 2048px; height: 1152px;
+    background: linear-gradient(
+      135deg,
+      #FAF8F5 0%,
+      #F1F1FB 30%,
+      #E6E4F4 50%,
+      #F1F1FB 70%,
+      #FAF8F5 100%
+    );
+  }
+  /* Subtle rose accent — a soft diagonal sweep */
+  .accent {
+    position: absolute;
+    top: -300px;
+    right: -200px;
+    width: 900px;
+    height: 900px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(216,160,196,0.15) 0%, transparent 65%);
+  }
+  /* Subtle lavender sweep bottom-left */
+  .accent2 {
+    position: absolute;
+    bottom: -200px;
+    left: -150px;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(110,108,153,0.08) 0%, transparent 60%);
+  }
+  /* Very subtle sage sweep */
+  .accent3 {
+    position: absolute;
+    top: 400px;
+    left: 300px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(168,181,160,0.06) 0%, transparent 65%);
+  }
+</style>
+</head>
+<body>
+  <div class="bg"></div>
+  <div class="accent"></div>
+  <div class="accent2"></div>
+  <div class="accent3"></div>
+</body>
+</html>
