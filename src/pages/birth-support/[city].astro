@@ -11,6 +11,7 @@ import Layout from '../../layouts/Layout.astro';
 import CityLeadCaptureForm from '../../components/city/LeadCaptureForm.astro';
 import AppShowcase from '../../components/AppShowcase.astro';
 import { cities, citySlugs, type CityData } from '../../data/cities';
+import { cityVideoEmbeds } from '../../data/video-embeds';
 
 export function getStaticPaths() {
   return citySlugs.map((slug) => ({
@@ -270,22 +271,22 @@ const schema = {
   </section>
 
 
-  <!-- ═══ Denver City Video Guide (YouTube Embed) ═══ -->
-  {slug === 'denver-co' && (
+  <!-- ═══ City Video Guide (YouTube Embed) ═══ -->
+  {cityVideoEmbeds[slug] && (
     <section class="py-12 bg-tjb-cream">
       <div class="max-w-4xl mx-auto px-6">
         <div class="text-center mb-8">
           <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Video guide</p>
           <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
-          <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-3" style="font-family: 'DM Sans', sans-serif;">Denver Doula & Birth Plan Guide</h2>
-          <p class="text-tjb-gray max-w-2xl mx-auto">Watch the full city guide — doulas, hospitals, costs, and Colorado Medicaid, all in under 5 minutes.</p>
+          <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-3" style="font-family: 'DM Sans', sans-serif;">{cityVideoEmbeds[slug].title}</h2>
+          <p class="text-tjb-gray max-w-2xl mx-auto">{cityVideoEmbeds[slug].description}</p>
         </div>
         <div class="aspect-video rounded-xl overflow-hidden shadow-lg bg-black">
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube-nocookie.com/embed/qmpu7-f_Aio"
-            title="Denver Doula & Birth Plan Guide"
+            src={`https://www.youtube-nocookie.com/embed/${cityVideoEmbeds[slug].videoId}`}
+            title={cityVideoEmbeds[slug].title}
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
@@ -321,7 +322,7 @@ const schema = {
               )}
               {/* Photo or initial monogram */}
               {doula.photo ? (
-                <img src={doula.photo} alt={`Photo of ${doula.name}`} class="w-14 h-14 rounded-full object-cover mb-4" width="56" height="56" loading="lazy" />
+                <img src={doula.photo} alt={`${doula.name}, doula`} class="w-14 h-14 rounded-full object-cover mb-4" width="56" height="56" loading="lazy" />
               ) : (
                 <div class={`w-14 h-14 rounded-full flex items-center justify-center mb-4 ${doula.isMidwife ? 'bg-tjb-lavender-100' : 'bg-tjb-lavender-100'}`}>
                   <span class="text-2xl font-semibold" style="font-family: 'Cormorant Garamond', Georgia, serif;" className={doula.isAmbassador ? 'text-tjb-rose-600' : doula.isMidwife ? 'text-tjb-lavender-700' : 'text-tjb-charcoal'}>{doula.name.split(' ').map((n: string) => n[0]).join('')}</span>
@@ -436,7 +437,7 @@ const schema = {
               <div class="bg-white border border-tjb-lavender-200/50 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow flex flex-col sm:flex-row gap-5 items-start" itemscope itemtype="https://schema.org/Hospital">
                 <img
                   src={h.thumbnail}
-                  alt={`Photo of ${h.name}`}
+                  alt={`${h.name} hospital`}
                   class="w-full sm:w-[140px] aspect-[4/3] object-cover rounded-lg flex-shrink-0"
                   width="140"
                   height="105"
@@ -519,7 +520,7 @@ const schema = {
               {bc.thumbnail ? (
                 <img
                   src={bc.thumbnail}
-                  alt={`Photo of ${bc.name}`}
+                  alt={`${bc.name} birth center`}
                   class="w-full sm:w-[140px] aspect-[4/3] object-cover rounded-lg flex-shrink-0 shadow-sm"
                   width="140"
                   height="105"
@@ -593,6 +594,7 @@ const schema = {
             width="1024"
             height={slug === 'carrollton-tx' ? '768' : '576'}
             loading="lazy"
+            decoding="async"
           />
         </div>
         <div class="md:w-[55%]">
