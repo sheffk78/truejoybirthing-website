@@ -1,16 +1,15 @@
 ---
 import { topicCities, stateNames, stateHubs } from '../data/city-links';
-import { seededPick, seededPickOne } from '../utils/hash';
 
 export interface Props {
   topic: string;
   limit?: number;
   showStateHubs?: boolean;
   stateHubsCount?: number;
-  currentCitySlug?: string;
+  variant?: 'grid-2col' | 'stacked' | 'card-3col';
 }
 
-const { topic, limit = 15, showStateHubs = true, stateHubsCount = 4, currentCitySlug } = Astro.props;
+const { topic, limit = 15, showStateHubs = true, stateHubsCount = 4 } = Astro.props;
 
 // Get cities for this topic
 const allCities = topicCities[topic] || topicCities['general'] || [];
@@ -30,9 +29,10 @@ const topicStates = Object.keys(groupedByState);
 const relevantHubs = stateHubs.filter(h => topicStates.some(s => h.slug.includes(`/${s}/`)));
 const displayHubs = showStateHubs ? relevantHubs.slice(0, stateHubsCount) : [];
 
-// Layout variant — deterministic by topic name
+// Layout variant — can be overridden via prop, else deterministic by topic name
 const variants = ['grid-2col', 'stacked', 'card-3col'] as const;
-const variant = variants[topic.length % 3];
+// Use explicit variant if provided, otherwise derive from topic name
+const variant = Astro.props.variant || variants[topic.length % 3];
 ---
 
 {
@@ -112,16 +112,16 @@ const variant = variants[topic.length % 3];
 {
   variant === 'card-3col' && (
     <section class="bg-tjb-cream-50 py-12 border-t border-tjb-lavender-200/50">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-2">Local Birth Support Resources</h2>
-        <p class="text-tjb-gray mb-8">Find doulas, hospitals, and birth support information for cities across the country.</p>
-        <div class="grid md:grid-cols-3 gap-4">
-          {Object.entries(groupedByState).slice(0, 2).map(([stateCode, cities]) => (
-            <div class="bg-white rounded-xl p-5 border border-tjb-lavender-200">
-              <h3 class="font-semibold text-tjb-lavender-600 text-sm uppercase tracking-wide mb-3">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-2 text-center">Local Birth Support Resources</h2>
+        <p class="text-tjb-gray mb-8 text-center max-w-2xl mx-auto">Find doulas, hospitals, and birth support information for cities across the country.</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {Object.entries(groupedByState).map(([stateCode, cities]) => (
+            <div class="bg-white rounded-xl p-4 border border-tjb-lavender-200">
+              <h3 class="font-semibold text-tjb-lavender-600 text-sm uppercase tracking-wide mb-2">
                 {stateNames[stateCode] || stateCode.toUpperCase()}
               </h3>
-              <ul class="space-y-2">
+              <ul class="space-y-1.5">
                 {cities.map(city => (
                   <li>
                     <a
@@ -133,17 +133,16 @@ const variant = variants[topic.length % 3];
               </ul>
             </div>
           ))}
-          <div class="bg-tjb-lavender-50 rounded-xl p-5 border border-tjb-lavender-200">
-            <h3 class="font-semibold text-tjb-lavender-600 text-sm uppercase tracking-wide mb-3">More States</h3>
-            <ul class="space-y-1">
-              {displayHubs.slice(0, 6).map(hub => (
-                <li>
-                  <a href={hub.slug} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition text-sm">{hub.label}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
+        {displayHubs.length > 0 && (
+          <div class="mt-6 pt-4 border-t border-tjb-lavender-300/30 text-center">
+            <p class="text-sm text-tjb-gray">
+              Explore more: {displayHubs.map((hub, i) => (
+                <><a href={hub.slug} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">{hub.label}</a>{i < displayHubs.length - 1 ? ' · ' : ''}</>
+              ))}
+            </p>
+          </div>
+        )}
       </div>
     </section>
   )
