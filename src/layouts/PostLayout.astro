@@ -113,14 +113,80 @@ const schemaJson = JSON.stringify(schema);
       <slot />
     </main>
 
-    <!-- CTA Band — Blog conversion -->
-    <section class="bg-white py-12 border-t border-tjb-lavender-300/20">
-      <div class="max-w-3xl mx-auto px-6 text-center">
-        <h3 class="text-xl md:text-2xl font-bold mb-3">Build Your Birth Plan — Free</h3>
-        <p class="text-tjb-gray mb-6">Download the doula-crafted birth plan that actually works in a hospital room.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/birth-plan-template/" class="btn-primary">Get Your Joyful Birth Plan</a>
-          <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-secondary">Get the Free App</a>
+    <!-- App Showcase — Blog conversion (matches Denver city page design) -->
+    <section class="bg-tjb-cream-50 py-16 md:py-20 border-t border-tjb-lavender-300/20">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-10">
+          <p class="eyebrow text-tjb-lavender-500 font-semibold text-sm tracking-widest uppercase mb-3">Free App</p>
+          <h3 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-3">Build Your Birth Plan Step by Step in the App</h3>
+          <p class="text-tjb-gray max-w-2xl mx-auto">Nine guided sections. Hospital preferences, pain management, who's in the room — all walked through so nothing gets missed.</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-10">
+          <div class="flex -space-x-4">
+            <img src="/images/app-birth-plan.webp" alt="True Joy Birthing app birth plan showing completed sections" class="h-80 w-auto rounded-2xl shadow-xl" loading="lazy" />
+            <img src="/images/app-mom-dashboard.webp" alt="True Joy Birthing app home screen with pregnancy week tracker" class="h-80 w-auto rounded-2xl shadow-xl" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto mb-10">
+          <div class="text-center">
+            <div class="w-12 h-12 bg-tjb-lavender-100 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            </div>
+            <p class="font-semibold text-tjb-charcoal text-sm">Step-by-Step Guidance</p>
+            <p class="text-xs text-tjb-gray mt-1">Every section walks you through what each choice means.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-12 h-12 bg-tjb-lavender-100 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            </div>
+            <p class="font-semibold text-tjb-charcoal text-sm">Update Anytime</p>
+            <p class="text-xs text-tjb-gray mt-1">Your plan builds as you go — never just a static PDF.</p>
+          </div>
+          <div class="text-center">
+            <div class="w-12 h-12 bg-tjb-lavender-100 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
+            </div>
+            <p class="font-semibold text-tjb-charcoal text-sm">Share with Your Team</p>
+            <p class="text-xs text-tjb-gray mt-1">Send your plan directly to your doula or care team.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="inline-block focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 transition-opacity hover:opacity-90" style="line-height:0">
+            <img src="/images/app-store-badge.svg" alt="Download on the App Store" class="h-12 w-auto" />
+          </a>
+          <a href="/birth-plan-template/" class="btn-primary">Get the Joyful Birth Plan</a>
+        </div>
+        <p class="text-center text-sm text-tjb-gray mt-4">Free · No account needed · Works on iPhone</p>
+      </div>
+    </section>
+
+    <!-- What the Free App Offers — Extended details -->
+    <section class="bg-white py-16 border-t border-tjb-lavender-300/20">
+      <div class="max-w-4xl mx-auto px-6">
+        <h3 class="text-xl md:text-2xl font-bold text-tjb-charcoal text-center mb-10">What the Free App Offers</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <p class="font-semibold text-tjb-charcoal mb-1">9 Guided Sections</p>
+            <p class="text-sm text-tjb-gray leading-relaxed">Hospital preferences, pain management options, who's in the room, feeding preferences, postpartum plans — each section walks you through what each choice means. Answer a few questions at a time, save your progress, and come back whenever you want.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-tjb-charcoal mb-1">Find Local Doulas</p>
+            <p class="text-sm text-tjb-gray leading-relaxed">Browse and connect with doulas and midwives serving your area right inside the app. See their services, cost ranges, and availability without searching elsewhere.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-tjb-charcoal mb-1">Printable PDF Birth Plan</p>
+            <p class="text-sm text-tjb-gray leading-relaxed">Export your finished plan as a PDF to share with your provider, doula, or hospital. Easy to update anytime — not a static document you fill out once.</p>
+          </div>
+          <div>
+            <p class="font-semibold text-tjb-charcoal mb-1">Completely Free</p>
+            <p class="text-sm text-tjb-gray leading-relaxed">No account needed, no credit card, no time limit. Works on iPhone. Download it, build your plan, share it — that's it.</p>
+          </div>
+        </div>
+        <div class="text-center mt-10">
+          <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-primary">Download on the App Store →</a>
         </div>
       </div>
     </section>
