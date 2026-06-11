@@ -92,3 +92,15 @@ A postpartum doula educates and empowers you to care for your baby. A baby nurse
 When you're ready to build your birth plan, the <a href="/birth-plan-template/">Joyful Birth Plan</a> includes a postpartum section so you can think about what support you'll want in those early weeks — before you're too tired to decide. You shouldn't have to figure this out alone.
 
 For more on postpartum support, check our <a href="/blog/postpartum-doula/">postpartum doula guide</a>.
+
+<div class="mt-10 pt-8 border-t border-tjb-rose-200/30">
+  <p class="text-sm font-semibold text-tjb-charcoal mb-4">Find Postpartum Doula Resources for Cities Near You</p>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+    <p><a href="/birth-support/denver-co/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Denver postpartum doula resources →</a></p>
+    <p><a href="/birth-support/dallas-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Dallas postpartum doula resources →</a></p>
+    <p><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Austin postpartum doula resources →</a></p>
+    <p><a href="/birth-support/portland-or/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Portland postpartum doula resources →</a></p>
+    <p><a href="/birth-support/seattle-wa/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Seattle postpartum doula resources →</a></p>
+    <p><a href="/birth-support/charlotte-nc/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Charlotte postpartum doula resources →</a></p>
+  </div>
+</div>
