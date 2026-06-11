@@ -4350,10 +4350,11 @@ export const cities: Record<string, CityData> = {
     culture: "Fremont is a diverse, family-oriented city in the East Bay where the birth community reflects the area\u2019s tech-driven population and strong immigrant communities. Washington Hospital provides the only hospital-based maternity care in town, and many families also look into birth options in nearby Palo Alto, San Jose, and Oakland. The doula community here pulls from both the South Bay and East Bay networks, giving Fremont families more options than the city size suggests.",
     heroLocalDetail: "At 38 weeks in Fremont, you\u2019re probably planning the drive to Washington Hospital on Mowry Avenue near I-880 \u2014 that interchange can back up significantly during commute hours. If you\u2019re heading to Stanford or El Camino for a higher-level NICU, the drive down 237 or over the Dumbarton Bridge adds 30\u201345 minutes depending on traffic. Central Park and Lake Elizabeth offer flat walking paths for those final-weeks strolls.",
     hospitalDetails: [
-      { name: "Washington Hospital", paragraph: "Washington Hospital in Fremont is a community hospital with a full maternity unit featuring a Special Care Nursery for babies who need extra support. Labor and delivery has 24/7 OB hospitalist coverage \u2014 meaning a doctor is in-house at all times. Doulas are welcome, and the unit\u2019s midsize feel (around 2,000 births per year) means more personalized attention than the huge Stanford or UCSF units. If you\u2019re delivering here, having your birth plan ready makes everything smoother. <a href=\\\"/birth-plan-template/\\\">Use our free hospital birth plan template</a> to get started." },
-      { name: "El Camino Health \u2014 Mountain View", thumbnail: "/images/el-camino-hospital.webp", paragraph: "El Camino Health in Mountain View, about 15 minutes south of Fremont, is a popular choice for East Bay families wanting a dedicated birth center with a Level III NICU and one of the region\u2019s highest-rated maternity programs. If you want the reassurance of a higher NICU level and don\u2019t mind the short drive, El Camino is worth registering at." },
+      { name: "Washington Hospital", paragraph: "Washington Hospital in Fremont is a community hospital with a full maternity unit featuring a Special Care Nursery for babies who need extra support. Labor and delivery has 24/7 OB hospitalist coverage \u2014 meaning a doctor is in-house at all times. Doulas are welcome, and the unit\u2019s midsize feel (around 2,000 births per year) means more personalized attention than the huge Stanford or UCSF units. If you\u2019re delivering here, having your birth plan ready makes everything smoother. <a href=\\\"/birth-plan-template/\\\">Use our free hospital birth plan template</a> to get started.", url: "https://www.whhs.com", address: "2000 Mowry Ave, Fremont, CA 94538", nicuLevel: "II" },
+      { name: "El Camino Health \u2014 Mountain View", thumbnail: "/images/el-camino-hospital.webp", paragraph: "El Camino Health in Mountain View, about 15 minutes south of Fremont, is a popular choice for East Bay families wanting a dedicated birth center with a Level III NICU (stated directly on elcaminohealth.org) and one of the region\u2019s highest-rated maternity programs. If you want the reassurance of a higher NICU level and don\u2019t mind the short drive, El Camino is worth registering at.", url: "https://www.elcaminohealth.org", address: "2500 Grant Rd, Mountain View, CA 94040", nicuLevel: "III" },
     ],
     // Birth center search: NPI taxonomy 261QB0400X returned zero results for Fremont CA.
+    // Google Maps search "birth center Fremont CA" found no verified freestanding birth centers in Fremont.
     // Google Maps search "birth center Fremont CA" found no verified freestanding birth centers in Fremont.
     // Nearest birth centers are in Palo Alto and Oakland. Verified 2026-06-08.
     birthCenterDetails: [
@@ -4408,6 +4409,7 @@ export const cities: Record<string, CityData> = {
     publishedDate: "2026-06-08",
     lat: 37.5256,
     lng: -121.987,
+    ogImage: "https://truejoybirthing.com/images/og-city-fremont-ca.webp",
   },
   "vancouver-wa": {
     city: "Vancouver",
