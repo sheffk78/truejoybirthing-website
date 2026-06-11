@@ -24,4 +24,9 @@ export const cityVideoEmbeds: Record<string, { videoId: string; title: string; d
     title: "Fremont Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 3 minutes.",
   },
+  "vancouver-wa": {
+    videoId: "jQ4DN52K2HY",
+    title: "Vancouver WA Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Washington Apple Health, all in under 4 minutes.",
+  },
 };
