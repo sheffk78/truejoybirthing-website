@@ -20,9 +20,9 @@ export const cityVideoEmbeds: Record<string, { videoId: string; title: string; d
     description: "Watch the full city guide — doulas, hospitals, costs, and Virginia Medicaid, all in under 4 minutes.",
   },
   "fremont-ca": {
-    videoId: "xHzX2g3IFBU",
+    videoId: "LOnANIoKjag",
     title: "Fremont Doula & Birth Plan Guide",
-    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 3 minutes.",
+    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 4 minutes.",
   },
   "vancouver-wa": {
     videoId: "jQ4DN52K2HY",
