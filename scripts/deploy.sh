@@ -9,10 +9,11 @@
 # Cloudflare Pages auto-deploys from git pushes to main. This script:
 #   1. Syncs local repo with origin/main (git pull --rebase)
 #   2. Verifies HEAD matches origin/main
-#   3. [Optional] Runs G7 upgrade completeness check if slug provided
-#   4. Builds locally to validate
-#   5. Pushes to main — CF auto-deploys
-#   6. Verifies live site returns 200
+#   3. Runs pre-deploy gate (G1-G5: working dir, preflight, data validation, OG, commit msg)
+#   4. [Optional] Runs G7 upgrade completeness check if slug provided
+#   5. Builds locally to validate
+#   6. Pushes to main — CF auto-deploys
+#   7. Verifies live site returns 200
 #
 # NO wrangler calls needed — CF auto-deploy handles the rest.
 #
@@ -56,7 +57,7 @@ cd "$PROJECT_DIR"
 # STEP 1: Git sync — pull latest from origin/main
 # ---------------------------------------------------------------
 echo ""
-echo "--- Step 1/4: Git sync ---"
+echo "--- Step 1/5: Git sync ---"
 
 STASHED=false
 if ! git diff --quiet --ignore-submodules HEAD 2>/dev/null; then
@@ -98,6 +99,18 @@ if [ "$DRY_RUN" = true ]; then
 fi
 
 # ---------------------------------------------------------------
+# 🔴 PRE-DEPLOY GATE: All hard checks before build
+# ---------------------------------------------------------------
+echo ""
+echo "--- PRE-DEPLOY GATE ---"
+if bash scripts/pre-deploy-gate.sh ${UPGRADE_SLUG:+"$UPGRADE_SLUG"}; then
+  echo "  → Pre-deploy gate PASSED"
+else
+  echo "  ❌ Pre-deploy gate FAILED — fix before deploying"
+  exit 1
+fi
+
+# ---------------------------------------------------------------
 # 🔴 GATE 7: Upgrade completeness check (if slug provided)
 # ---------------------------------------------------------------
 if [ -n "$UPGRADE_SLUG" ]; then
@@ -119,7 +132,7 @@ fi
 # STEP 2: Build (validate code compiles)
 # ---------------------------------------------------------------
 echo ""
-echo "--- Step 2/4: Build ---"
+echo "--- Step 3/5: Build ---"
 
 npm run build 2>&1 | tail -3 | sed 's/^/  /'
 echo "  → Build complete."
@@ -128,15 +141,17 @@ echo "  → Build complete."
 # STEP 3: Commit and push (triggers CF auto-deploy)
 # ---------------------------------------------------------------
 echo ""
-echo "--- Step 3/4: Push to main (triggers CF auto-deploy) ---"
+echo "--- Step 4/5: Push to main (triggers CF auto-deploy) ---"
 
 CURRENT_MSG=$(git log -1 --format=%s HEAD)
 
-# 🔴 GATE: Commit message must include preflight: pass for city deploys
+# 🔴 HARD GATE: Commit message must include preflight: pass for city deploys
 if echo "$CURRENT_MSG" | grep -qi "upgrade\|feat:.*city\|add.*city" && \
    ! echo "$CURRENT_MSG" | grep -qi "preflight"; then
-  echo "  ⚠ WARNING: City deploy commit does not include 'preflight: pass' in message."
-  echo "  → Continuing anyway, but consider adding it next time."
+  echo "  ❌ FATAL: City deploy commit MUST include 'preflight: pass' in message."
+  echo "  → Current commit: $CURRENT_MSG"
+  echo "  → Fix: git commit --amend -m \"${CURRENT_MSG} [preflight: pass]\""
+  exit 1
 fi
 
 # Check for uncommitted changes
@@ -158,7 +173,7 @@ fi
 # STEP 4: Verify live site
 # ---------------------------------------------------------------
 echo ""
-echo "--- Step 4/4: Verification ---"
+echo "--- Step 5/5: Verification ---"
 
 sleep 3
 

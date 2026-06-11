@@ -125,6 +125,27 @@ function run(): void {
     results.push({ gate: 'G4', status: 'PASS', detail: `${checkOgs.length} OG(s) exist, ≥30KB, no -v2 variants` });
   }
 
+  // ── V1: No phantom verified badges (isVerified must be explicitly boolean) ──
+  try {
+    const citiesContent = fs.readFileSync(path.join(PROJECT_DIR, 'src/data/cities.ts'), 'utf-8');
+    const verifiedMatches = citiesContent.match(/isVerified:\s*[^,\n}]+/g) || [];
+    const badVerifications: string[] = [];
+    for (const match of verifiedMatches) {
+      const val = match.replace('isVerified:', '').trim();
+      if (val === 'true') {
+        badVerifications.push(match.trim());
+      }
+    }
+    if (badVerifications.length > 0) {
+      results.push({ gate: 'V1', status: 'FAIL', detail: `${badVerifications.length} provider(s) have isVerified: true. Only set after positive outreach response.` });
+      badVerifications.forEach(v => results.push({ gate: 'V1', status: 'FAIL', detail: `  ${v}` }));
+    } else {
+      results.push({ gate: 'V1', status: 'PASS', detail: 'No phantom verified badges — isVerified: true not found in any city data' });
+    }
+  } catch {
+    results.push({ gate: 'V1', status: 'SKIP', detail: 'Could not read cities.ts for verification audit' });
+  }
+
   // ── S5: No standalone "Free Birth Plan" ──
   try {
     const grepResult = execSync(`grep -r '"Free Birth Plan"' src/ --include="*.ts" --include="*.astro" 2>/dev/null || true`, {
