@@ -58,13 +58,13 @@ QUALITY = {
     'support': 75,    # Below fold — perceptual difference vs 80 is negligible
     'og': 85,         # Social platforms recompress anyway — 90 was wasteful
     'thumbnail': 75,  # YouTube recompresses — contains overlay text/graphics
-    'thumb_avif': 60,  # AVIF for thumbnail overlay content
 }
 
 # Size budgets (enforced — script exits non-zero if exceeded)
 BUDGETS = {
     'hero': 120 * 1024,
     'hero_600w': 60 * 1024,
+    'hero_1200w': 120 * 1024,
     'hero_avif_1200w': 80 * 1024,
     'hero_avif_600w': 40 * 1024,
     'support': 100 * 1024,
@@ -341,6 +341,23 @@ def optimize_city_images(slug: str) -> dict:
             if not passed:
                 report['budget_failures'].append(f'{avif_1200.name}: {msg}')
 
+    # --- Copy hero to heroes/ directory (dual-path requirement) ---
+    heroes_dir = PUBLIC_IMAGES / 'heroes'
+    if hero_path.exists():
+        heroes_dir.mkdir(parents=True, exist_ok=True)
+        import shutil
+        hero_name = f'{slug}-birth-doula-skyline.webp'
+        hero_dest = heroes_dir / hero_name
+        shutil.copy2(hero_path, hero_dest)
+        print(f'  ✅ Copied hero to heroes/{hero_name}')
+        report['heroes_copy'] = 'ok'
+
+    # --- Clean up stale -600w variants (old naming convention) ---
+    stale_600w = PUBLIC_IMAGES / f'{slug}-birth-doula-skyline-600w.webp'
+    if stale_600w.exists():
+        stale_600w.unlink()
+        print(f'  🧹 Cleaned up old variant: {stale_600w.name}')
+
     return report
 
 
@@ -383,7 +400,7 @@ if __name__ == '__main__':
         print(f'\n  ❌ Budget failures:')
         for b in report['budget_failures']:
             print(f'     ⚠️  {b}')
-        print(f'\n  ❌ Some images exceeded size budgets. Hero < 120KB, Support < 100KB, OG < 80KB, Thumb < 60KB.')
+        print(f'\n  ❌ Some images exceeded size budgets. Hero WebP < 120KB, 600w WebP < 60KB, 1200w WebP < 120KB, AVIF 1200w < 80KB, AVIF 600w < 40KB, Support < 100KB, OG < 80KB, Thumb < 75KB.')
         sys.exit(1)
 
     all_ok = len(report['errors']) == 0
