@@ -9,4 +9,9 @@ export const cityVideoEmbeds: Record<string, { videoId: string; title: string; d
     title: "Denver Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and Colorado Medicaid, all in under 5 minutes.",
   },
+  "tacoma-wa": {
+    videoId: "Iv9FDtil6hw",
+    title: "Tacoma Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Washington Apple Health, all in under 4 minutes.",
+  },
 };
