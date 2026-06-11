@@ -4,7 +4,7 @@ date: "2026-06-11"
 slug: "postpartum-doula-cost"
 author: "Shelbi Kohler"
 description: "Postpartum doula costs vary by location and services. Learn typical pricing, what's included, and how to make postpartum doula support fit your budget."
-canonical: "https://truejoybirthing.com/blog/postpartum-doula-cost/"
+canonical: "https://truejoybirthing.com/postpartum-doula/"
 layout: "../../layouts/PostLayout.astro"
 featuredImage: "/images/postpartum-doula.webp"
 ---

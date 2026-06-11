@@ -71,14 +71,29 @@ const faqSchema = {
   schema={faqSchema}
 >
 
+  <!-- Hero — Split Layout (55% text / 45% image) -->
   <section class="bg-tjb-cream pt-16 pb-12">
-    <div class="max-w-4xl mx-auto px-6">
-      <p class="eyebrow mb-4">Local Doula Support</p>
-      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-      <h1 class="text-[2.5rem] md:text-[3.25rem] font-bold mb-6 leading-[1.12]">Looking for a Doula Near You?</h1>
-      <p class="text-lg md:text-xl text-tjb-gray leading-relaxed max-w-2xl">
-        <strong>Typing "doula near me" into a search bar</strong> means you want someone close by who can actually be there for you. Not a generic article. Not a national directory that leaves you scrolling. Real, local support for one of the most important days of your life. Here is how to find it.
-      </p>
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <p class="eyebrow mb-4">Local Doula Support</p>
+          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+          <h1 class="text-[2.5rem] md:text-[3.25rem] font-bold mb-6 leading-[1.12]">Looking for a Doula Near You?</h1>
+          <p class="text-lg md:text-xl text-tjb-gray leading-relaxed max-w-2xl">
+            <strong>Typing "doula near me" into a search bar</strong> means you want someone close by who can actually be there for you. Not a generic article. Not a national directory that leaves you scrolling. Real, local support for one of the most important days of your life. Here is how to find it.
+          </p>
+        </div>
+        <div class="relative">
+          <img
+            src="/images/hero-doula-near-me.webp"
+            alt="A birth doula supporting a laboring mother with comfort measures and encouragement"
+            class="w-full aspect-[3/4] object-cover rounded-2xl shadow-lg"
+            width="900"
+            height="1200"
+            loading="eager"
+          />
+        </div>
+      </div>
     </div>
   </section>
 

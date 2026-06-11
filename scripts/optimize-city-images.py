@@ -198,6 +198,36 @@ def optimize_city_images(slug: str) -> dict:
         'budget_failures': [],
     }
 
+    # Source formats to check (in priority order) when .webp doesn't exist
+    SOURCE_FORMATS = ['.png', '.jpg', '.jpeg']
+
+    def _resolve_source(fname: str, directory: Path) -> Path | None:
+        """Resolve actual source file: prefer .webp, fall back to PNG/JPEG conversion."""
+        path = directory / fname
+        if path.exists():
+            return path  # Already .webp, use as-is
+
+        # Try to find a source image in another format
+        stem = Path(fname).stem
+        for ext in SOURCE_FORMATS:
+            src = directory / f'{stem}{ext}'
+            if src.exists():
+                print(f'  ↻  Converting {stem}{ext} → {fname}...')
+                img = Image.open(src)
+                if img.mode not in ('RGB', 'RGBA'):
+                    img = img.convert('RGB')
+                img.save(path, 'WEBP', quality=QUALITY.get(
+                    'hero' if '-doula-skyline' in fname else
+                    'og' if fname.startswith('og-') else
+                    'thumbnail' if fname.startswith('yt-thumb') else
+                    'support',
+                    80
+                ), method=6)
+                print(f'     {purpose}: {src.stat().st_size / 1024:.0f}KB → {path.stat().st_size / 1024:.0f}KB')
+                return path
+
+        return None  # No source file found in any format
+
     # Define image pairs: (filename_pattern, quality, purpose, directory)
     # Support scene can be either {slug}-birth-doula-support.webp or {slug}-support-scene.webp
     image_defs = [
@@ -215,11 +245,13 @@ def optimize_city_images(slug: str) -> dict:
         image_defs[support_idx] = (alt_support, QUALITY['support'], 'support scene', PUBLIC_IMAGES)
 
     for fname, quality, purpose, directory in image_defs:
-        path = directory / fname
-        if not path.exists():
-            report['warnings'].append(f'{purpose}: {fname} not found, skipping')
+        # Resolve source file — auto-convert from PNG/JPEG if needed
+        resolved = _resolve_source(fname, directory)
+        if resolved is None:
+            report['warnings'].append(f'{purpose}: {fname} not found in any format, skipping')
             report['images'][fname] = {'status': 'not_found'}
             continue
+        path = resolved
 
         print(f'  Processing {fname} ({purpose})...')
         img_report = {'status': 'ok', 'purpose': purpose}

@@ -4,7 +4,7 @@ date: "2026-06-11"
 slug: "doula-vs-midwife"
 author: "Shelbi Kohler"
 description: "Wondering whether to hire a doula or a midwife? The answer is both. Learn how these roles differ, how they work together, and what fits your birth plan."
-canonical: "https://truejoybirthing.com/blog/doula-vs-midwife/"
+canonical: "https://truejoybirthing.com/doula-vs-midwife/"
 layout: "../../layouts/PostLayout.astro"
 featuredImage: "/images/hero-doula-vs-midwife.webp"
 ---
