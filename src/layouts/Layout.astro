@@ -51,7 +51,7 @@ const schemaBase = {
         { "@type": "Country", "name": "United States" }
       ],
       "priceRange": "Free–$250",
-      "foundingDate": "2025",
+      "foundingDate": "2025-01",
       "founder": {
         "@type": "Person",
         "@id": "https://truejoybirthing.com/about/#founder",
@@ -62,7 +62,7 @@ const schemaBase = {
       },
       "sameAs": [
         "https://instagram.com/truejoybirthing",
-        "https://apps.apple.com/app/true-joy-birthing/id6741691495"
+        "https://apps.apple.com/us/app/true-joy-birthing/id6760793180"
       ],
       "knowsAbout": [
         "Birth planning",
@@ -143,6 +143,11 @@ const schemaBase = {
       "url": "https://truejoybirthing.com/",
       "name": "True Joy Birthing",
       "publisher": { "@id": "https://truejoybirthing.com/#organization" }
+    },
+    {
+      "@type": "SpeakableSpecification",
+      "@id": "https://truejoybirthing.com/#speakable",
+      "cssSelector": [".prose h2", ".prose h3", ".faq-answer"]
     }
   ]
 };

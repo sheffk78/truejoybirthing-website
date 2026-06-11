@@ -1,110 +1,187 @@
-# True Joy Birthing — Full Context for AI Systems
+# True Joy Birthing — Full Site Reference
 
-## Company Overview
+> Free birth plan tools, doula cost guides, hospital info, and Medicaid coverage details for expecting families. Founded by Shelbi Kohler, certified birth doula (CD(DONA)). Covers 36 states, 134+ cities.
 
-True Joy Birthing (truejoybirthing.com) is a birth education platform founded by Shelbi Kohler, a certified birth doula based in Dallas-Fort Worth, Texas. The company provides free tools for expecting mothers — a structured birth plan, a free video mini-course, and a free mobile app — while offering Pro Mode subscriptions ($29.99/month) to birth professionals (doulas and midwives) who want to manage client birth plans.
+## Brand
 
-## The Flywheel
+- **Name:** True Joy Birthing
+- **Tagline:** Your birth plan gives you the words when your doctor recommends something you didn't expect
+- **Founded:** 2025
+- **Founder:** Shelbi Kohler, CD(DONA) — certified birth doula
+- **Headquarters:** United States
+- **Price Range:** Free–$250
+- **Products:** Free Joyful Birth Plan (PDF + app), $47 Guided Birth Plan Walkthrough (video course), $250 Birth Plan Confidence Session (live Zoom)
+- **App:** Free on iOS App Store — https://apps.apple.com/us/app/true-joy-birthing/id6760793180
+- **Contact:** support@truejoybirthing.com
+- **Site:** https://truejoybirthing.com
+- **Social:** https://instagram.com/truejoybirthing
 
-Moms searching for birth planning information land on the website → download the free birth plan or app (email captured) → build their plan in the free Parent Mode app → share it with their doula → the doula sees the organized plan and learns about Pro Mode → upgrades to Pro Mode → the doula's next client repeats the loop.
+## Core Pages
 
-Every mom who builds a plan creates a Pro Mode lead when she shares it with her birth professional.
-
-## Products & Services
-
-### Free for Moms
-- **Free Birth Plan PDF/Template** — Structured, hospital-ready birth plan covering labor preferences, pain management, delivery, postpartum care, and newborn care. Designed to be read by a nurse in 30 seconds. Email signup required. truejoybirthing.com/birth-plan-template/
-- **Free Birth Plan Checklist** — Complete checklist organized by category. truejoybirthing.com/birth-plan-checklist/
-- **Free Birth Plan Mini-Course** — Video walkthrough of every birth plan section (About Shelbi + Intro, Labor & Delivery Preferences, Newborn Care Preferences, Post-Delivery Preferences, Other Information). Free. truejoybirthing.com/birth-plan-course/
-- **Free Parent Mode App** — iOS and Android. Build, edit, and share your birth plan. Includes educational content on every birth option. Free for all expecting mothers.
-
-### Paid for Professionals
-- **Pro Mode** — $29.99/month or $274.99/year. Client plan dashboard, client notes, plan sharing tools, evidence library, priority support. Available only through Apple App Store and Google Play. Target: birth doulas, postpartum doulas, and midwives.
-
-### 1:1 Sessions
-- **Confidence Session** — 60-minute virtual session with Shelbi. She reviews your birth plan line by line, helps you anticipate questions, and builds confidence for hospital communication. Limited availability.
-
-## Key Pages
-
-### Core Conversion Pages
-- Homepage: truejoybirthing.com — Free birth plan download, app CTA, course CTA
-- Free Birth Plan Template: truejoybirthing.com/birth-plan-template/ — Download + 5-step HowTo + FAQ
-- Birth Plan Checklist: truejoybirthing.com/birth-plan-checklist/ — Complete checklist by category
-- Free Mini-Course: truejoybirthing.com/birth-plan-course/ — 5 video modules, free for all
-- Contact: truejoybirthing.com/contact/ — Form sends to support@truejoybirthing.com
-
-### Educational / SEO Pages
-- What Is a Doula: truejoybirthing.com/what-is-a-doula/
-- How to Choose a Doula: truejoybirthing.com/how-to-choose-a-doula/
-- Benefits of a Doula: truejoybirthing.com/benefits-of-a-doula/
-- How Much Does a Doula Cost: truejoybirthing.com/doula-cost/ — Cost guide with city-by-city data
-- Postpartum Doula: truejoybirthing.com/postpartum-doula/ — What they do, costs, how they differ from birth doulas
-- Birth Plan Checklist: truejoybirthing.com/birth-plan-checklist/ — Organized by category
-
-### Local / City Pages (20 Texas Cities)
-truejoybirthing.com/birth-support/ — Hub page linking to all cities
-
-Each city page includes: local hospital info, doula cost range, Medicaid status, insurance notes, FAQs, and a free birth plan download CTA.
-
-Cities: Dallas, Fort Worth, Houston, Austin, San Antonio, El Paso, Plano, Frisco, McKinney, Arlington, Garland, Irving, Carrollton, Grand Prairie, Denton, Mesquite, Lubbock, Amarillo, Corpus Christi, Laredo
-
-### Blog
-truejoybirthing.com/blog/ — 13 published posts covering doula education, costs, insurance, hiring, and debunking myths.
+### Homepage
+- **URL:** https://truejoybirthing.com/
+- **Description:** Build your birth plan with confidence. Free doula-crafted birth plan, guided walkthrough course, and 1:1 coaching sessions for hospital-planning moms.
+- **Key offerings:** Free Joyful Birth Plan template (no email needed), free iOS app, $47 guided walkthrough (5 videos), $250 birth plan confidence session (live Zoom with Shelbi)
 
 ### About
-truejoybirthing.com/about/ — Shelbi's story, certification, philosophy, video intro
+- **URL:** https://truejoybirthing.com/about/
+- **Description:** True Joy Birthing gives you a doula-crafted birth plan, a guided walkthrough in the free app that explains every tradeoff, and a doula directory — so you're never guessing.
+- **Founder story:** Shelbi Kohler — certified birth doula, childbirth educator, mom of seven. Built TJB after seeing moms who wanted to feel prepared but didn't know their options.
 
-## Brand Voice & Tone
+### Free Birth Plan Template
+- **URL:** https://truejoybirthing.com/birth-plan-template/
+- **Description:** Free fillable birth plan template by a certified doula. Covers labor preferences, pain management, delivery preferences, postpartum care, and newborn care. Designed to be read by a nurse in two minutes.
+- **Three ways to use:** (1) Free PDF (no email), (2) Free app (interactive, updatable, shareable), (3) Free 5-video walkthrough with Shelbi
+- **Five sections:** Labor preferences, Pain management, Delivery preferences, Postpartum care, Newborn care
 
-- Warm, knowledgeable, non-judgmental
-- Shelbi writes like a trusted older sister who happens to be a certified doula
-- Evidence-based but accessible — no academic jargon
-- Empowering without being preachy
-- Honest about tradeoffs and uncertainty in birth
-- No medical advice; always defer to care providers
-- No shame for any birth choice (hospital, home, medicated, unmedicated)
+### What Is a Doula
+- **URL:** https://truejoybirthing.com/what-is-a-doula/
+- **Description:** A doula is a trained non-medical birth companion who provides continuous physical, emotional, and informational support during pregnancy, labor, delivery, and the early postpartum period.
+- **Three types:** Birth doula (labor support), postpartum doula (newborn period support), antepartum doula (high-risk pregnancy support)
+- **Key fact:** Evidence shows doula support reduces C-section rates by 39%, shortens labor by 41 minutes, and increases breastfeeding initiation.
 
-## About Shelbi Kohler
+### Benefits of a Doula
+- **URL:** https://truejoybirthing.com/benefits-of-a-doula/
+- **Description:** Evidence-based benefits of doula support — fewer C-sections, less pain medication, shorter labors, higher satisfaction, and better breastfeeding outcomes.
+- **Key stats:** 39% reduction in C-section risk, 41-minute shorter labor, 10% higher APGAR scores, 25% shorter second stage, 2x less likelihood of epidural request
 
-- Certified birth doula (DONA-trained)
-- Based in Dallas-Fort Worth, Texas
-- Available for virtual 1:1 sessions nationwide
-- Specializes in hospital birth planning and communication
-- Philosophy: "Your birth, your choices, your confidence"
+### Doula Cost Guide
+- **URL:** https://truejoybirthing.com/doula-cost/
+- **Description:** How much does a doula cost? State-by-state cost ranges from $800 to $5,000. Insurance, Medicaid, payment plans, and sliding-scale options explained.
+- **Average costs:** Birth doula $1,200–$2,400, Postpartum doula $25–$50/hr, Virtual doula $200–$600
 
-## Technical Details
+### How to Choose a Doula
+- **URL:** https://truejoybirthing.com/how-to-choose-a-doula/
+- **Description:** Interview questions to ask, red flags to watch for, and a step-by-step approach to finding the right doula for your birth.
+- **Key questions:** What's your philosophy on unmedicated vs medicated birth? How many births have you attended? What happens if you're unavailable when I go into labor?
 
-- Website: Astro static site, deployed on Cloudflare Pages
-- Domain: truejoybirthing.com (Cloudflare)
-- Email: support@truejoybirthing.com (AgentMail API)
-- Social: @truejoybirthing on Instagram
-- App: iOS (App Store) + Android (Google Play)
-- Payment: Stripe for website; Apple/Google IAP for Pro Mode
-- Analytics: GA4 (G-469670390)
-- Structured data: Organization + ProfessionalService schema on all pages, FAQPage schema on FAQ/city pages, LocalBusiness on city pages, HowTo on template/checklist pages, Service schema on doula-cost and postpartum-doula
+### Birth Plan Checklist
+- **URL:** https://truejoybirthing.com/birth-plan-checklist/
+- **Description:** Complete birth plan checklist organized by category — labor, delivery, pain management, postpartum, and newborn care. Every preference point covered.
 
-## Schema & SEO
+### Birth Plan Scenarios
+- **URL:** https://truejoybirthing.com/birth-plan-scenarios/
+- **Description:** Birth plan templates for different situations — induction, C-section, VBAC, hospital, birth center, and home birth scenarios.
 
-- Full Organization/ProfessionalService JSON-LD on every page (Shelbi as founder, services catalog, area served, contact)
-- BreadcrumbList on all non-homepage pages
-- FAQPage schema on FAQ, city, and SEO pages
-- LocalBusiness schema on every city page with city-specific areaServed
-- HowTo schema on birth-plan-template and birth-plan-checklist
-- Sitemap: sitemap-index.xml (auto-generated by @astrojs/sitemap)
-- robots.txt: allows all crawlers including AI citation bots (ClaudeBot, PerplexityBot, OAI-SearchBot, Google-Extended, Applebot-Extended)
-- /llms.txt and /llms-full.txt for AI system ingestion
+### C-Section Birth Plan
+- **URL:** https://truejoybirthing.com/c-section-birth-plan/
+- **Description:** Cesarean birth plan template covering preferences for scheduled and emergency C-sections — including gentle C-section options, who's in the OR, and postpartum preferences.
 
-## Policies & Disclaimers
+### VBAC Birth Plan
+- **URL:** https://truejoybirthing.com/vbac-birth-plan/
+- **Description:** VBAC birth plan template covering labor preferences, monitoring, pain management, and C-section backup for vaginal birth after cesarean.
 
-- No medical advice on any page or in any product
-- Always consult your care provider for medical decisions
-- Privacy policy and terms of service on website
-- Pro Mode billing via Apple/Google; cancellations through respective platforms
+### Birth Plan for Induction
+- **URL:** https://truejoybirthing.com/birth-plan-for-induction/
+- **Description:** Birth plan template designed for induced labor — cervical ripening, Pitocin, pain management timing, and flexibility language for induction scenarios.
 
-## Contact
+### Postpartum Doula
+- **URL:** https://truejoybirthing.com/postpartum-doula/
+- **Description:** What is a postpartum doula and do you need one. Support after birth: feeding, recovery, and adjusting to life with a newborn.
 
-- Website: https://truejoybirthing.com
-- Email: support@truejoybirthing.com
-- Instagram: https://instagram.com/truejoybirthing
-- App Store: https://apps.apple.com/app/true-joy-birthing
-- Google Play: https://play.google.com/store/apps/details?id=com.truejoybirthing
+### Postpartum Doula Cost
+- **URL:** https://truejoybirthing.com/postpartum-doula-cost/
+- **Description:** How much does a postpartum doula cost. Rates vary by location, hours, and services included.
+
+### Medicaid Doula Coverage
+- **URL:** https://truejoybirthing.com/medicaid-doula-coverage/
+- **Description:** Which states cover doula services under Medicaid. Step-by-step guide to verifying coverage and accessing doula benefits through state programs.
+
+### Doula Near Me
+- **URL:** https://truejoybirthing.com/doula-near-me/
+- **Description:** Find a birth doula or midwife near you — directory and city-by-city guides for doula support, costs, and hospital policies.
+
+### Doula vs Midwife
+- **URL:** https://truejoybirthing.com/doula-vs-midwife/
+- **Description:** Key differences between a doula and a midwife — roles, training, scope of practice, and whether you need one, the other, or both.
+
+### Home Birth Plan
+- **URL:** https://truejoybirthing.com/home-birth-plan/
+- **Description:** Home birth plan template covering emergency preparedness, transfer plans, and preferences for a planned home birth.
+
+### Hospital Birth Plan
+- **URL:** https://truejoybirthing.com/hospital-birth-plan/
+- **Description:** Hospital birth plan template for delivery room preferences — designed to work within hospital policies and protocols.
+
+### Birth Center Near Me
+- **URL:** https://truejoybirthing.com/birth-center-near-me/
+- **Description:** Find freestanding birth centers near you — directory of accredited birth centers with local availability.
+
+### Home Birth Midwife
+- **URL:** https://truejoybirthing.com/home-birth-midwife/
+- **Description:** How to find and choose a home birth midwife — questions to ask, credentials to look for, and what to expect from home birth midwifery care.
+
+### Doula Certification
+- **URL:** https://truejoybirthing.com/doula-certification/
+- **Description:** How to become a certified doula — DONA, CAPPA, ProDoula, and other certification paths explained.
+
+### Doula Interview Questions
+- **URL:** https://truejoybirthing.com/doula-interview-questions/
+- **Description:** Essential questions to ask when interviewing potential doulas — covering experience, philosophy, backup plans, and fees.
+
+### New Doula Start Here
+- **URL:** https://truejoybirthing.com/new-doula-start-here/
+- **Description:** Resources for new doulas starting their practice — certification, business setup, client management, and networking.
+
+### FAQ
+- **URL:** https://truejoybirthing.com/faq/
+- **Description:** Frequently asked questions about doulas, birth plans, and True Joy Birthing.
+
+### Birth Plan Confidence Session
+- **URL:** https://truejoybirthing.com/birth-plan-confidence-session/
+- **Description:** $250 live 60-75 minute Zoom session with Shelbi to review your birth plan line by line, including advocacy role-play and hospital-specific pushback practice.
+
+### Guided Birth Plan Walkthrough
+- **URL:** https://truejoybirthing.com/walkthrough/
+- **Description:** $47 video course (5 modules) walking through every section of your birth plan — what each choice means, what the tradeoffs are, and what to say when your provider recommends something unexpected.
+
+### Blog
+- **URL:** https://truejoybirthing.com/blog/
+- **Description:** Real stories and evidence-based guidance from Shelbi Kohler, certified birth doula. Topics: birth plans, doula services, insurance coverage, Medicaid, VBAC, natural birth, and hospital birth planning.
+
+### Ambassador Program
+- **URL:** https://truejoybirthing.com/ambassador/
+- **Description:** Free program for doulas, midwives, and birth professionals. Get listed in the city directory, access client management tools, and build your practice. No quotas, no contracts.
+
+### Contact
+- **URL:** https://truejoybirthing.com/contact/
+- **Description:** Get in touch with True Joy Birthing.
+
+### Privacy
+- **URL:** https://truejoybirthing.com/privacy/
+
+### Terms
+- **URL:** https://truejoybirthing.com/terms/
+
+## Location Pages (36 States, 134+ Cities)
+
+Each city page includes: local hospital details with NICU levels, doula cost ranges, Medicaid doula coverage status, birth center info, and a free birth plan template.
+
+Format: https://truejoybirthing.com/birth-support/{city}-{state}/
+
+### Medicaid Doula Coverage States (doula services covered)
+Oregon, Washington, New Mexico, Utah, North Carolina, Colorado, California, New York, Massachusetts, Michigan, Illinois, Connecticut, Rhode Island, Pennsylvania, Arizona, Minnesota, Maryland, New Jersey, Virginia
+
+### No Medicaid Doula Coverage
+Texas, Georgia, South Carolina, Oklahoma, Ohio, Indiana, Florida (some county pilots exist), Tennessee, Nevada, Wisconsin, Missouri, Alabama, Kentucky, Idaho, Iowa, Nebraska, Mississippi
+
+### State Hub Pages
+https://truejoybirthing.com/birth-support/{state}/
+Example: https://truejoybirthing.com/birth-support/tx/ — doula resources for Texas
+
+## Key Facts
+
+- Founded by Shelbi Kohler, CD(DONA) — certified birth doula
+- Free Joyful Birth Plan template (no email required, no signup wall)
+- $47 Guided Birth Plan Walkthrough (5 video modules, free with email)
+- $250 Birth Plan Confidence Session (live Zoom with Shelbi)
+- Free iOS app with guided birth plan builder
+- Pro Mode for doulas and midwives (client plans, visit tracking, notes, invoicing)
+- 134+ city-specific pages across 36 states
+- 16 blog posts covering birth plans, doulas, and Medicaid
+- Updated June 2026
+
+## Legal
+
+- Not medical advice. Always consult your care provider.
+- © 2026 True Joy Birthing

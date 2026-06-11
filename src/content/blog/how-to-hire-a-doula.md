@@ -1,5 +1,5 @@
 ---
-title: "How To Hire A Doula 7 Essential Birth Questions"
+title: "How to Hire a Doula: Questions to Ask Before You Book"
 date: "2024-12-09"
 slug: "how-to-hire-a-doula"
 author: "Shelbi Kohler"

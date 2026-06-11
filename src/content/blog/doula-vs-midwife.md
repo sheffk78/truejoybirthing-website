@@ -1,5 +1,5 @@
 ---
-title: "Doula Vs Midwife Birth Helper Showdown"
+title: "Doula vs Midwife: Key Differences and How to Choose"
 date: "2024-12-09"
 slug: "doula-vs-midwife"
 author: "Shelbi Kohler"

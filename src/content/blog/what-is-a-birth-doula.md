@@ -1,5 +1,5 @@
 ---
-title: "Birth Doula Your Gateway To Calm Birth"
+title: "What Is a Birth Doula? Your Guide to Labor Support"
 date: "2024-12-09"
 slug: "what-is-a-birth-doula"
 author: "Shelbi Kohler"

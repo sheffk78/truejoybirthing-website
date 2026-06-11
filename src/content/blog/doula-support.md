@@ -1,5 +1,5 @@
 ---
-title: "Doula Support Birth Magic Unleashed"
+title: "Doula Support: How a Birth Doula Helps During Labor and Delivery"
 date: "2024-12-09"
 slug: "doula-support"
 author: "Shelbi Kohler"

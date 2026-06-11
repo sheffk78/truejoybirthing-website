@@ -1,5 +1,5 @@
 ---
-title: "Doula Insurance Coverage Protect Serve"
+title: "Doula Insurance Coverage: What You Need to Know"
 date: "2024-12-09"
 slug: "doula-insurance-coverage"
 author: "Shelbi Kohler"

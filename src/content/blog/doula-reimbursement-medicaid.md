@@ -1,5 +1,5 @@
 ---
-title: "Doula Reimbursement Medicaid Birth Pay"
+title: "Doula Medicaid Reimbursement: How to Get Paid as a Doula"
 date: "2024-12-09"
 slug: "doula-reimbursement-medicaid"
 author: "Shelbi Kohler"

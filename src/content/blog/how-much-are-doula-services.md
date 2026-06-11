@@ -1,5 +1,5 @@
 ---
-title: "How Much Are Doula Services Birth Care Fees"
+title: "How Much Are Doula Services? Cost Breakdown and Payment Options"
 date: "2024-12-09"
 slug: "how-much-are-doula-services"
 author: "Shelbi Kohler"

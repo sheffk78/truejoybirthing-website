@@ -1,5 +1,5 @@
 ---
-title: "Debunking Doula Myths Hidden Birth Truths"
+title: "Debunking Doula Myths: What Doulas Actually Do (and Don't Do)"
 date: "2024-12-09"
 slug: "debunking-doula-myths"
 author: "Shelbi Kohler"

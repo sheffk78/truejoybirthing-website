@@ -1,5 +1,5 @@
 ---
-title: "Doula Services What Is It Birth Magic"
+title: "What Are Doula Services? Everything a Doula Provides"
 date: "2024-12-09"
 slug: "what-are-doula-services"
 author: "Shelbi Kohler"
