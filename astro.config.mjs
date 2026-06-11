@@ -5,6 +5,10 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
+  build: {
+    inlineStylesheets: 'auto',
+  },
+  compressHTML: true,
   trailingSlash: 'always',
   site: 'https://truejoybirthing.com',
   integrations: [

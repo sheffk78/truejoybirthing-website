@@ -49,7 +49,7 @@
    Font loading via preconnect in Layout
    ──────────────────────────────────────────── */
 body {
-  font-family: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+  font-family: 'Source Sans 3', 'Source Sans 3 Fallback', system-ui, -apple-system, sans-serif;
   font-weight: 400;
   background-color: var(--color-tjb-cream);
   color: var(--color-tjb-charcoal);
@@ -60,7 +60,7 @@ body {
 
 /* ── Editorial serif headings ── */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-family: 'Cormorant Garamond', 'Cormorant Garamond Fallback', Georgia, 'Times New Roman', serif;
   font-weight: 600;
   line-height: 1.15;
   color: var(--color-tjb-charcoal);
@@ -220,7 +220,7 @@ html {
 
 /* ── Eyebrow label ── */
 .eyebrow {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Source Sans 3', 'Source Sans 3 Fallback', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.15em;

@@ -82,3 +82,25 @@
   font-display: swap;
   src: url(/fonts/nwpStKy2OAdR1K-IwhWudF-R7w0QYsrd.woff2) format('woff2');
 }
+
+/* ── Font fallback metrics to prevent CLS ── */
+
+/* Cormorant Garamond fallback → Georgia (size-adjusted to match) */
+@font-face {
+  font-family: 'Cormorant Garamond Fallback';
+  src: local('Georgia');
+  size-adjust: 104%;
+  ascent-override: 100%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+}
+
+/* Source Sans 3 fallback → Helvetica/Arial (size-adjusted to match) */
+@font-face {
+  font-family: 'Source Sans 3 Fallback';
+  src: local('Helvetica Neue'), local('Helvetica'), local('Arial');
+  size-adjust: 98%;
+  ascent-override: 96%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+}
