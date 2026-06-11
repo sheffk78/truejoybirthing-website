@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+import ContextualCityLinks from '../components/ContextualCityLinks.astro';
 
 const breadcrumbList = [
   {"name": "Home", "url": "https://truejoybirthing.com/"},
@@ -149,13 +150,8 @@ const breadcrumbList = [
         <li><strong>CABC Accreditation Search</strong> (birthcenteraccreditation.org): Look for CABC-accredited centers, which meet the highest national standards for safety and quality.</li>
         <li><strong>Ask your midwife</strong>: If you're already seeing a midwife for prenatal care, she likely knows the birth centers in your area and can refer you.</li>
         <li><strong>Local mom groups</strong>: Search "[your city] birth center" or "[your city] natural birth" on Facebook or local parenting forums.</li>
-        <li><strong>True Joy Birthing city pages</strong>: We cover birth resources, doula communities, and local options for cities across the country:
-          <ul>
-            <li><a href="/birth-support/portland-or/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Birth support in Portland, OR</a></li>
-            <li><a href="/birth-support/albuquerque-nm/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Birth support in Albuquerque, NM</a></li>
-            <li><a href="/birth-support/salt-lake-city-ut/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Birth support in Salt Lake City, UT</a></li>
-            <li><a href="/birth-support/boise-id/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Birth support in Boise, ID</a></li>
-          </ul>
+        <li><strong>True Joy Birthing city pages</strong>: We cover birth resources, doula communities, and local options for cities across the country.
+          <ContextualCityLinks topic="hospital" />
         </li>
       </ul>
 
@@ -245,21 +241,7 @@ const breadcrumbList = [
     </div>
   </section>
 
-  <!-- Local Resources -->
-  <section class="bg-tjb-cream-50 py-12">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-8">Find Birth Centers in Cities Near You</h2>
-      <div class="grid md:grid-cols-2 gap-3">
-        <p class="mb-2"><a href="/birth-support/portland-or/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Portland doula resources →</a></p>
-        <p class="mb-2"><a href="/birth-support/denver-co/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Denver doula resources →</a></p>
-        <p class="mb-2"><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Austin doula resources →</a></p>
-        <p class="mb-2"><a href="/birth-support/albuquerque-nm/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Albuquerque doula resources →</a></p>
-        <p class="mb-2"><a href="/birth-support/salt-lake-city-ut/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Salt Lake City doula resources →</a></p>
-        <p class="mb-2"><a href="/birth-support/raleigh-nc/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Raleigh doula resources →</a></p>
-        <p class="mb-2"><a href="/birth-support/asheville-nc/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Asheville doula resources →</a></p>
-      </div>
-    </div>
-  </section>
+  <ContextualCityLinks topic="hospital" />
 
   <section class="py-16 bg-tjb-cream-50 border-t border-tjb-lavender-200/50">
     <div class="max-w-4xl mx-auto px-6">

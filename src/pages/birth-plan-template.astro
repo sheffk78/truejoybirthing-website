@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import LeadCaptureForm from '../components/LeadCaptureForm.astro';
 import AppShowcase from '../components/AppShowcase.astro';
+import ContextualCityLinks from '../components/ContextualCityLinks.astro';
 
 const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Free Birth Plan Template", "url": "https://truejoybirthing.com/birth-plan-template/"}];
 
@@ -501,11 +502,7 @@ const schema = {
   <!-- ═══════════════════════════════════════════
        CITY RESOURCES — Compact link
        ═══════════════════════════════════════════ -->
-  <section class="bg-tjb-cream py-8 border-y border-tjb-lavender-200/50">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <p class="text-tjb-gray text-sm">Tailor your plan for your hospital — <a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 transition">see city-specific doula costs and hospital policies →</a></p>
-    </div>
-  </section>
+  <ContextualCityLinks topic="birth-plan" />
 
   <!-- ═══════════════════════════════════════════
        CONFIDENCE SESSION UPSELL (NEW — between walkthrough & CTA)

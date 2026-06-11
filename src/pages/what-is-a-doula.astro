@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+import ContextualCityLinks from '../components/ContextualCityLinks.astro';
 
 const breadcrumbList = [
   {"name": "Home", "url": "https://truejoybirthing.com/"},
@@ -173,16 +174,7 @@ const breadcrumbList = [
         </li>
       </ol>
 
-      <p><strong>Looking for a local doula?</strong> Browse birth support resources by city:</p>
-      <ul>
-        <li><a href="/birth-support/dallas-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Dallas doula directory</a></li>
-        <li><a href="/birth-support/houston-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Houston doula directory</a></li>
-        <li><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Austin doula directory</a></li>
-        <li><a href="/birth-support/san-antonio-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">San Antonio doula directory</a></li>
-        <li><a href="/birth-support/fort-worth-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Fort Worth doula directory</a></li>
-        <li><a href="/birth-support/el-paso-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">El Paso doula directory</a></li>
-      </ul>
-      <p><a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:underline">See all 20 Texas cities →</a></p>
+      <ContextualCityLinks topic="doula-basics" />
 
       <LeadCaptureForm />
 

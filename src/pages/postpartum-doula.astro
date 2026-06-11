@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+import ContextualCityLinks from '../components/ContextualCityLinks.astro';
 
 const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Postpartum Doula", "url": "https://truejoybirthing.com/postpartum-doula/"}];
 
@@ -158,16 +159,7 @@ const schema = {
         <li><strong>Free guided walkthrough</strong> — the "Post-Delivery Preferences" section walks through what to plan for after birth</li>
         <li><strong>Free app</strong> — build your birth plan including postpartum preferences, and reference it from your phone</li>
       </ul>
-      <p>For hands-on postpartum doula support in your area, see your local city page:</p>
-      <ul>
-        <li><a href="/birth-support/dallas-tx/" class="text-tjb-lavender-600 hover:underline">Postpartum doula support in Dallas</a></li>
-        <li><a href="/birth-support/houston-tx/" class="text-tjb-lavender-600 hover:underline">Postpartum doula support in Houston</a></li>
-        <li><a href="/birth-support/austin-tx/" class="text-tjb-lavender-600 hover:underline">Postpartum doula support in Austin</a></li>
-        <li><a href="/birth-support/san-antonio-tx/" class="text-tjb-lavender-600 hover:underline">Postpartum doula support in San Antonio</a></li>
-        <li><a href="/birth-support/fort-worth-tx/" class="text-tjb-lavender-600 hover:underline">Postpartum doula support in Fort Worth</a></li>
-        <li><a href="/birth-support/el-paso-tx/" class="text-tjb-lavender-600 hover:underline">Postpartum doula support in El Paso</a></li>
-      </ul>
-      <p><a href="/birth-support/" class="text-tjb-lavender-600 font-semibold hover:underline">See all 20 Texas cities →</a></p>
+      <ContextualCityLinks topic="postpartum" />
 
       <h2>Common Questions</h2>
       <div class="space-y-4">

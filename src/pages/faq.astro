@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ContextualCityLinks from '../components/ContextualCityLinks.astro';
 
 const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "FAQ", "url": "https://truejoybirthing.com/faq/"}];
 ---
@@ -116,4 +117,6 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
       <p class="text-sm text-tjb-gray mt-8 text-center">Still have questions? <a href="/contact/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Contact us</a></p>
     </div>
   </section>
+
+  <ContextualCityLinks topic="general" />
 </Layout>

@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+import ContextualCityLinks from '../components/ContextualCityLinks.astro';
 
 const breadcrumbList = [
   {"name": "Home", "url": "https://truejoybirthing.com/"},
@@ -126,17 +127,7 @@ const breadcrumbList = [
 
       <p>A doula is one of the few birth interventions that has strong evidence of benefit with no evidence of harm. Unlike medical procedures that carry risks, a doula's presence only adds support, information, and calm. The research is clear: continuous labor support improves outcomes, shortens labor, and makes the experience better — regardless of how the birth unfolds.</p>
 
-      <h2>Find Support Near You</h2>
-      <p>The benefits of doula support are clear — now find local resources near you. Our city pages cover doula costs, hospital details, and Medicaid coverage for 20 Texas cities:</p>
-      <ul>
-        <li><a href="/birth-support/dallas-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Doula support in Dallas</a></li>
-        <li><a href="/birth-support/houston-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Doula support in Houston</a></li>
-        <li><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Doula support in Austin</a></li>
-        <li><a href="/birth-support/san-antonio-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Doula support in San Antonio</a></li>
-        <li><a href="/birth-support/fort-worth-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Doula support in Fort Worth</a></li>
-        <li><a href="/birth-support/el-paso-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Doula support in El Paso</a></li>
-      </ul>
-      <p><a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:underline">See all 20 Texas cities →</a></p>
+      <ContextualCityLinks topic="benefits" />
 
     </div>
   </section>
