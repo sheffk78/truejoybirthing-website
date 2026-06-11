@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
 interface Props {
   title: string;
   description?: string;
@@ -58,6 +59,10 @@ const schemaJson = JSON.stringify(schema);
     <!-- Preload critical font weights used above the fold -->
     <link rel="preload" href="/fonts/co3bmX5slCNuHLi8bLeY9MK7whWMhyjoq3FNsS8.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/nwpStKy2OAdR1K-IwhWudF-R7w0QYsrd.woff2" as="font" type="font/woff2" crossorigin />
+    <ClientRouter />
+    <!-- Preconnect to third-party analytics origins -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.redditstatic.com" />
     <script type="application/ld+json" set:html={schemaJson} />
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RVZVN0F9T"></script>
