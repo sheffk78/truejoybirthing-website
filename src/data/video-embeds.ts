@@ -15,7 +15,7 @@ export const cityVideoEmbeds: Record<string, { videoId: string; title: string; d
     description: "Watch the full city guide — doulas, hospitals, costs, and Washington Apple Health, all in under 4 minutes.",
   },
   "norfolk-va": {
-    videoId: "wo19crIxhiM",
+    videoId: "eknYgS3_Sao",
     title: "Norfolk Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and Virginia Medicaid, all in under 4 minutes.",
   },
