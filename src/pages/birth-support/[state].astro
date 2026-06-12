@@ -69,7 +69,7 @@ const representativeInsuranceNote = stateCities[0]?.insuranceNote || '';
 const allHospitals = stateCities.flatMap((c) => c.hospitalDetails.map((h) => h.name));
 const uniqueHospitals = [...new Set(allHospitals)];
 
-const pageTitle = `${stateFullName} Birth Doula & Support Guide | Doula Costs, Medicaid & Hospitals`;
+const pageTitle = `${stateFullName} Doula Guide | Costs & Medicaid`;
 const pageDesc = `Find birth doula support across ${totalCities} ${totalCities === 1 ? 'city' : 'cities'} in ${stateFullName}. Compare doula costs ($${costLow.toLocaleString()}–$${costHigh.toLocaleString()}), check Medicaid coverage, and see which hospitals welcome doulas.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/${stateCode.toLowerCase()}/`;
 

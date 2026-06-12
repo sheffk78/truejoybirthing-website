@@ -183,6 +183,47 @@ function run(): void {
     results.push({ gate: 'S7', status: 'SKIP', detail: 'Skipping medicaidNote check in audit mode (run with slug)' });
   }
 
+  // ── A3: No broken internal links ──
+  try {
+    const grepResult = execSync(`grep -rn 'href.*birth-plan-app' dist/ --include='*.html' 2>/dev/null || true`, {
+      cwd: PROJECT_DIR,
+      encoding: 'utf-8',
+      timeout: 10000,
+    });
+    if (grepResult.trim()) {
+      const lines = grepResult.trim().split('\n').filter(l => l.trim());
+      results.push({ gate: 'A3', status: 'FAIL', detail: `${lines.length} broken link(s) to /birth-plan-app/ in dist — fix before deploy` });
+    } else {
+      results.push({ gate: 'A3', status: 'PASS', detail: 'No broken internal links to /birth-plan-app/' });
+    }
+  } catch {
+    results.push({ gate: 'A3', status: 'SKIP', detail: 'Could not check broken links (dist may not exist)' });
+  }
+
+  // ── A4: Title lengths ≤70 chars ──
+  try {
+    const shellResult = execSync(
+      `pass=true; for f in dist/birth-support/*/index.html; do ` +
+      `slug=$(basename $(dirname "$f")); ` +
+      `title=$(grep -o '<title>[^<]*</title>' "$f" | sed 's/<[^>]*>//g' | sed 's/&amp;/\\&/g'); ` +
+      `len=$(echo -n "$title" | wc -c | tr -d ' '); ` +
+      `if [ "$len" -gt 70 ]; then ` +
+      `echo "LONG: $slug ($len chars: $title)"; pass=false; ` +
+      `fi; done; $pass`,
+      { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 30000 }
+    );
+    results.push({ gate: 'A4', status: 'PASS', detail: 'All city + state page titles ≤70 chars' });
+  } catch (e: any) {
+    const output = e.stdout?.toString() || '';
+    const longPages = output.split('\n').filter(l => l.includes('LONG:'));
+    if (longPages.length > 0) {
+      results.push({ gate: 'A4', status: 'FAIL', detail: `${longPages.length} page(s) with title >70 chars` });
+      longPages.forEach(l => results.push({ gate: 'A4', status: 'FAIL', detail: `  ${l.trim()}` }));
+    } else {
+      results.push({ gate: 'A4', status: 'FAIL', detail: 'Title check command failed' });
+    }
+  }
+
   // ── Print summary ──
   console.log('\n─── RESULTS ───\n');
 
