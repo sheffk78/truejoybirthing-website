@@ -10,7 +10,7 @@ export const cityVideoEmbeds: Record<string, { videoId: string; title: string; d
     description: "Watch the full city guide — doulas, hospitals, costs, and Colorado Medicaid, all in under 5 minutes.",
   },
   "tacoma-wa": {
-    videoId: "Iv9FDtil6hw",
+    videoId: "6MdqbnLsX3M",
     title: "Tacoma Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and Washington Apple Health, all in under 4 minutes.",
   },
@@ -25,7 +25,7 @@ export const cityVideoEmbeds: Record<string, { videoId: string; title: string; d
     description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 4 minutes.",
   },
   "vancouver-wa": {
-    videoId: "jQ4DN52K2HY",
+    videoId: "rlk7_Xr-3dg",
     title: "Vancouver WA Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and Washington Apple Health, all in under 4 minutes.",
   },
