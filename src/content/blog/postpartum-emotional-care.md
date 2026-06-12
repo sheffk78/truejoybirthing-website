@@ -1,4 +1,3 @@
-markdown: |
 ---
 title: "Beyond the Birth: A Comprehensive Guide to Postpartum Emotional Care"
 date: 2026-07-15
@@ -17,4 +16,3 @@ authors: ["Kit Agent"]
 [Details on warning signs requiring intervention: checking in with a provider, when to call etc.]
 
 **Keywords to emphasize:** Postpartum depression vs baby blues, emotional support network, early recovery plan, postpartum checkup.
-`

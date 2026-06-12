@@ -1,4 +1,3 @@
-markdown: |
 ---
 title: "Navigating Labor Pain: A Deep Dive into Management Options"
 date: 2026-07-15
@@ -18,4 +17,3 @@ authors: ["Kit Agent"]
 *   **Natural/Non-Pharmacological Methods:** Combining movement, aromatherapy, hydrotherapy, massage techniques. Tips for maximizing their effectiveness alongside other methods.
 
 **Goal:** Create comparison content that answers "What is best for *my* birth plan?" without giving medical advice.
-`

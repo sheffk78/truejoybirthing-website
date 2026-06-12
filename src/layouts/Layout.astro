@@ -10,6 +10,7 @@ interface Props {
   ogImage?: string;
   schema?: object;
   breadcrumbList?: { name: string; url: string }[];
+  noindex?: boolean;
 }
 
 const { title, description = "True Joy Birthing — birth education and planning tools for moms, doulas, and midwives.", canonical, // OG IMAGE POLICY — never use og-default.webp (old invented logo) on consumer pages.
@@ -20,7 +21,8 @@ const { title, description = "True Joy Birthing — birth education and planning
   //   - City pages: use per-city OG pattern (og-city-{slug}.webp)
   // Never fall back to og-default.webp. If a page lacks a custom OG, use the closest
   // content-family match or og-homepage.webp as a last resort.
-  ogImage = "https://truejoybirthing.com/images/og-homepage.webp"  } = Astro.props;
+  ogImage = "https://truejoybirthing.com/images/og-homepage.webp",
+  noindex = false } = Astro.props;
 const breadcrumbList = Astro.props.breadcrumbList;
 const currentPath = Astro.url.pathname;
 
@@ -196,6 +198,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />

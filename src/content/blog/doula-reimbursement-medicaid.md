@@ -3,7 +3,7 @@ title: "Doula Medicaid Reimbursement: How to Get Paid as a Doula"
 date: "2024-12-09"
 slug: "doula-reimbursement-medicaid"
 author: "Shelbi Kohler"
-description: "Supporting families through pregnancy brings me so much joy as a mother of seven. Many Medicaid programs now help families access professional birth support, creating opportunit..."
+description: "Learn how Medicaid doula reimbursement works, which states cover doula services, and how doulas can get paid through Medicaid programs."
 canonical: "https://truejoybirthing.com/blog/doula-reimbursement-medicaid/"
 layout: "../../layouts/PostLayout.astro"
 ---

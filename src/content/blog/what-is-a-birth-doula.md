@@ -3,7 +3,7 @@ title: "What Is a Birth Doula? Your Guide to Labor Support"
 date: "2024-12-09"
 slug: "what-is-a-birth-doula"
 author: "Shelbi Kohler"
-description: "Starting your pregnancy opens a world of fresh possibilities and tender moments. As your experienced companion, I bring peaceful guidance and steady encouragement to shape your ..."
+description: "What is a birth doula? Learn how a labor doula provides emotional support, physical comfort, and advocacy during childbirth — and why continuous support matters."
 canonical: "https://truejoybirthing.com/blog/what-is-a-birth-doula/"
 layout: "../../layouts/PostLayout.astro"
 ---

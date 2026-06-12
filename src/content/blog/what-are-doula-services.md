@@ -3,7 +3,7 @@ title: "What Are Doula Services? Everything a Doula Provides"
 date: "2024-12-09"
 slug: "what-are-doula-services"
 author: "Shelbi Kohler"
-description: "Motherhood begins with a profound journey, where gentle support creates lasting memories. As your companion, I bring heart-centered guidance and experienced doula wisdom to this..."
+description: "What are doula services? A complete guide to what doulas provide — from prenatal visits and labor support to postpartum care, comfort techniques, and birth advocacy."
 canonical: "https://truejoybirthing.com/blog/what-are-doula-services/"
 layout: "../../layouts/PostLayout.astro"
 ---

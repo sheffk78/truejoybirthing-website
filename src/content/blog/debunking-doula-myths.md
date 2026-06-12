@@ -3,7 +3,7 @@ title: "Debunking Doula Myths: What Doulas Actually Do (and Don't Do)"
 date: "2024-12-09"
 slug: "debunking-doula-myths"
 author: "Shelbi Kohler"
-description: "Experience speaks volumes through seven personal births and hundreds of supported deliveries. Each story reveals fresh insights about labor companionship and care. Professional ..."
+description: "Common doula myths debunked — learn what doulas actually do (and don't do), whether they replace medical staff, and how doula support reduces C-section rates."
 canonical: "https://truejoybirthing.com/blog/debunking-doula-myths/"
 layout: "../../layouts/PostLayout.astro"
 ---

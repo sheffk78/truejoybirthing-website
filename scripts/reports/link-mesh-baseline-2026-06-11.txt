@@ -1,0 +1,186 @@
+========================================================================
+  A3 LINK MESH BASELINE REPORT
+  Generated: 2026-06-11T23:54:47Z
+  Build status: OK
+========================================================================
+
+1. PILLAR → CITY LINKS (ContextualCityLinks)
+========================================================================
+
+   Topic mapping (cities per topic):
+
+     cost                 15 cities
+     medicaid             15 cities
+     benefits             14 cities
+     birth-plan           14 cities
+     doula-basics         15 cities
+     postpartum           15 cities
+     hospital             15 cities
+     home-birth           13 cities
+     c-section            14 cities
+     vbac                 14 cities
+     interview            14 cities
+     general              16 cities
+
+   Total pillar->city link entries in data: 174
+
+   Pages using ContextualCityLinks:
+
+     src/pages/benefits-of-a-doula.astro                 topic=benefits         cities=14
+     src/pages/birth-center-near-me.astro                topic=hospital         cities=15
+     src/pages/birth-plan-template.astro                 topic=birth-plan       cities=14
+     src/pages/doula-cost.astro                          topic=cost             cities=15
+     src/pages/doula-near-me.astro                       topic=general          cities=16
+     src/pages/faq.astro                                 topic=general          cities=16
+     src/pages/how-to-choose-a-doula.astro               topic=interview        cities=14
+     src/pages/medicaid-doula-coverage.astro             topic=medicaid         cities=15
+     src/pages/postpartum-doula.astro                    topic=postpartum       cities=15
+     src/pages/what-is-a-doula.astro                     topic=doula-basics     cities=15
+
+   Default topic fallback: 'general' (from ContextualCityLinks.astro)
+   Variants available: grid-2col, stacked, card-3col
+
+   Summary: 10 pillar pages use ContextualCityLinks
+   Unique topic values used across pages: 9
+
+2. BLOG → CITY LINKS
+========================================================================
+
+   Blog posts linking to /birth-support/:
+
+     birth-plan-for-hospital-delivery.md                 3 link(s)
+     debunking-doula-myths.md                            2 link(s)
+     doula-care-for-every-stage.md                       2 link(s)
+     doula-covered-by-insurance.md                       3 link(s)
+     doula-insurance-coverage.md                         3 link(s)
+     doula-reimbursement-medicaid.md                     3 link(s)
+     doula-support.md                                    2 link(s)
+     how-much-are-doula-services.md                      3 link(s)
+     how-to-hire-a-doula.md                              3 link(s)
+     natural-birth-plan.md                               9 link(s)
+     postpartum-doula-cost.md                            6 link(s)
+     postpartum-doula.md                                 2 link(s)
+     vbac-birth-plan.md                                  10 link(s)
+     what-are-doula-services.md                          2 link(s)
+     what-is-a-birth-doula.md                            3 link(s)
+     what-to-include-in-a-birth-plan.md                  3 link(s)
+
+   Blog posts with city links: 16 / 25 total
+   Total blog→city links: 59
+
+   Unique city/state slugs linked from blog posts:
+     austin-tx/
+     charlotte-nc/
+     chicago-il/
+     co/
+     dallas-tx/
+     denver-co/
+     houston-tx/
+     il/
+     los-angeles-ca/
+     minneapolis-mn/
+     new-york-ny/
+     philadelphia-pa/
+     phoenix-az/
+     portland-or/
+     raleigh-nc/
+     san-diego-ca/
+     seattle-wa/
+     tx/
+
+3. CITY → PILLAR LINK VARIATION
+========================================================================
+
+   Template: src/pages/birth-support/[city].astro
+
+   Hardcoded pillar links in city template (excluding /birth-support/):
+
+     href="/birth-plan-template/"                        x6
+     href="/what-is-a-doula/"                            x5
+     href="/medicaid-doula-coverage/"                    x4
+     href="/doula-cost/"                                 x4
+     href="/postpartum-doula/"                           x3
+     href="/how-to-choose-a-doula/"                      x3
+     href="/faq/"                                        x3
+     href="/doula-vs-midwife/"                           x3
+     href="/benefits-of-a-doula/"                        x3
+     href="/birth-plan-app/"                             x2
+     href="/about/"                                      x2
+     href="/vbac-birth-plan/"                            x1
+     href="/c-section-birth-plan/"                       x1
+     href="/birth-plan-checklist/"                       x1
+
+   Unique pillar pages linked from city template:
+     /about/
+     /benefits-of-a-doula/
+     /birth-plan-app/
+     /birth-plan-checklist/
+     /birth-plan-template/
+     /c-section-birth-plan/
+     /doula-cost/
+     /doula-vs-midwife/
+     /faq/
+     /how-to-choose-a-doula/
+     /medicaid-doula-coverage/
+     /postpartum-doula/
+     /vbac-birth-plan/
+     /what-is-a-doula/
+
+   Dynamic cross-links in city template:
+     - nearbyCities: rendered per-city from data (nearbyCities field)
+     - State hub link: /birth-support/{state}/ (dynamic per city)
+     - Related Resources section: 9 pillar page cards (conditional)
+
+   ── State template: src/pages/birth-support/[state].astro ──
+
+   Hardcoded pillar links in state template:
+
+     href="/what-is-a-doula/"                            x3
+     href="/medicaid-doula-coverage/"                    x3
+     href="/birth-plan-template/"                        x3
+     href="/hospital-birth-plan/"                        x1
+     href="/doula-cost/"                                 x1
+     href="/benefits-of-a-doula/"                        x1
+
+   Unique pillar pages linked from state template:
+     /benefits-of-a-doula/
+     /birth-plan-template/
+     /doula-cost/
+     /hospital-birth-plan/
+     /medicaid-doula-coverage/
+     /what-is-a-doula/
+
+   ── Index template: src/pages/birth-support/index.astro ──
+
+   Hardcoded pillar links in index template:
+
+     href="/birth-plan-template/"                        x2
+     href="/what-is-a-doula/"                            x1
+     href="/benefits-of-a-doula/"                        x1
+
+   Unique pillar pages linked from index template:
+     /benefits-of-a-doula/
+     /birth-plan-template/
+     /what-is-a-doula/
+
+4. LINK MESH SUMMARY
+========================================================================
+
+   Total city pages (from cities.ts):         132
+   Total topics in city-links.ts:              12
+   Pillar pages using ContextualCityLinks:     10
+   Blog posts with city links:                 16 / 25
+   Total blog→city links:                      59
+
+   ── Link direction analysis ──
+
+   Pillar → City:  Each pillar page links to N cities via ContextualCityLinks
+   City → Pillar:  Each city page links to ~9 pillar pages (hardcoded)
+   City → City:    Each city page links to nearby cities (dynamic)
+   City → State:   Each city page links to state hub (dynamic)
+   Blog → City:    Blog posts link to specific city pages
+   Blog → Pillar:  Blog posts also link to pillar pages (not counted here)
+
+========================================================================
+  END OF REPORT
+========================================================================

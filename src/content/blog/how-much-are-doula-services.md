@@ -3,7 +3,7 @@ title: "How Much Are Doula Services? Cost Breakdown and Payment Options"
 date: "2024-12-09"
 slug: "how-much-are-doula-services"
 author: "Shelbi Kohler"
-description: "Professional support during pregnancy creates lasting positive memories. As a mom of seven and experienced care provider, I help families discover affordable options while addre..."
+description: "How much do doula services cost? Breakdown of doula fees ($800–$2,500), what's included, plus payment options like insurance, HSA/FSA, and sliding scales."
 canonical: "https://truejoybirthing.com/blog/how-much-are-doula-services/"
 layout: "../../layouts/PostLayout.astro"
 ---

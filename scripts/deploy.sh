@@ -6,16 +6,10 @@
 #   bash scripts/deploy.sh              — regular deploy (no completeness check)
 #   bash scripts/deploy.sh {slug}       — upgrade deploy (runs G7 completeness check)
 #
-# Cloudflare Pages auto-deploys from git pushes to main. This script:
-#   1. Syncs local repo with origin/main (git pull --rebase)
-#   2. Verifies HEAD matches origin/main
-#   3. Runs pre-deploy gate (G1-G5: working dir, preflight, data validation, OG, commit msg)
-#   4. [Optional] Runs G7 upgrade completeness check if slug provided
-#   5. Builds locally to validate
-#   6. Pushes to main — CF auto-deploys
-#   7. Verifies live site returns 200
-#
-# NO wrangler calls needed — CF auto-deploy handles the rest.
+# Cloudflare Pages is set up with DIRECT UPLOAD (no git integration).
+# Deploy via wrangler: npx wrangler pages deploy dist --project-name=truejoybirthing-website --branch=main
+# The custom domain truejoybirthing.com follows the main branch.
+# After wrangler deploy, wait ~30s for CF edge to propagate.
 #
 # Exit codes:
 #   0 — Deploy succeeded

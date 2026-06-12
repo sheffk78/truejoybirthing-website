@@ -42,6 +42,8 @@ export function getStaticPaths() {
     const filePath = path.join(contentDir, filename);
     const raw = fs.readFileSync(filePath, 'utf-8');
     const { data: frontmatter } = matter(raw);
+    // Skip draft posts — they're not ready for production
+    if (frontmatter.draft) continue;
     paths.push({
       params: { slug: frontmatter.slug || filename.replace('.md', '') },
       props: {
