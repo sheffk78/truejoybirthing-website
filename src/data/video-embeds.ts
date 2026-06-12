@@ -34,4 +34,9 @@ export const cityVideoEmbeds: Record<string, { videoId: string; title: string; d
     title: "Cary Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and NC Medicaid, all in under 3 minutes.",
   },
+  "dallas-tx": {
+    videoId: "9Q6XUA_MFFA",
+    title: "Dallas Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 4 minutes.",
+  },
 };
