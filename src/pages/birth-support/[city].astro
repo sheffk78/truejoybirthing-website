@@ -10,6 +10,7 @@
 import Layout from '../../layouts/Layout.astro';
 import CityLeadCaptureForm from '../../components/city/LeadCaptureForm.astro';
 import AppShowcase from '../../components/AppShowcase.astro';
+import ContextualCityLinks from '../../components/ContextualCityLinks.astro';
 import { cities, citySlugs, type CityData } from '../../data/cities';
 import { cityVideoEmbeds } from '../../data/video-embeds';
 
@@ -1047,6 +1048,9 @@ const schema = {
 
   <!-- ═══ Lead Capture (with banner image) ═══ -->
   <CityLeadCaptureForm city={city} />
+
+  <!-- ═══ Contextual City Links (browse other cities) ═══ -->
+  <ContextualCityLinks topic="general" />
 
   {cityVideoEmbeds[slug] && (
     <script type="application/ld+json" set:html={JSON.stringify({

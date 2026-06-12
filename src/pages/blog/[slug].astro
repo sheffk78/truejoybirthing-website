@@ -4,6 +4,35 @@ import fs from 'node:fs';
 import path from 'node:path';
 import matter from 'gray-matter';
 import PostLayout from '../../layouts/PostLayout.astro';
+import ContextualCityLinks from '../../components/ContextualCityLinks.astro';
+
+const slugToTopic: Record<string, string> = {
+  'doula-support': 'general',
+  'doula-care-for-every-stage': 'doula-basics',
+  'doula-insurance-coverage': 'medicaid',
+  'doula-reimbursement-medicaid': 'medicaid',
+  'what-is-a-birth-doula': 'doula-basics',
+  'how-to-hire-a-doula': 'interview',
+  'postpartum-doula': 'postpartum',
+  'postpartum-doula-cost': 'cost',
+  'postpartum-emotional-care': 'postpartum',
+  'debunking-doula-myths': 'general',
+  'labor-pain-management-options': 'birth-plan',
+  'what-to-include-in-a-birth-plan': 'birth-plan',
+  'natural-birth-plan': 'home-birth',
+  'vbac-birth-plan': 'vbac',
+  'birth-plan-for-hospital-delivery': 'hospital',
+  'doula-covered-by-insurance': 'medicaid',
+  'birth-plan-examples': 'birth-plan',
+  'medicaid-doula-coverage': 'medicaid',
+  'doula-near-me': 'general',
+  'doula-vs-midwife': 'doula-basics',
+  'doula-interview-questions': 'interview',
+  'hospital-birth-plan': 'hospital',
+  'birth-center-near-me': 'hospital',
+  'how-much-are-doula-services': 'cost',
+  'what-are-doula-services': 'doula-basics',
+};
 
 export function getStaticPaths() {
   const contentDir = path.join(process.cwd(), 'src', 'content', 'blog');
@@ -30,6 +59,8 @@ export function getStaticPaths() {
 }
 
 const { title, date, author, description, canonical, featuredImage, rawFile } = Astro.props;
+const currentSlug = Astro.params.slug || '';
+const topic = slugToTopic[currentSlug] || 'general';
 
 // Render markdown to HTML server-side
 const raw = fs.readFileSync(rawFile, 'utf-8');
@@ -52,4 +83,5 @@ const htmlContent = marked.parse(content);
       <p class="text-sm text-tjb-gray">Written by <span class="font-semibold text-tjb-lavender-500">{author}</span></p>
     </div>
   </article>
+  <ContextualCityLinks topic={topic} />
 </PostLayout>
