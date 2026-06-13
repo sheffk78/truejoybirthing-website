@@ -38,11 +38,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-13",
   },
   "fremont-ca": {
-    videoId: "LOnANIoKjag",
+    videoId: "nSAXPxef8O8",
     title: "Fremont Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 4 minutes.",
-    duration: "PT3M2S",
-    uploadDate: "2026-06-08",
+    duration: "PT3M1S",
+    uploadDate: "2026-06-13",
   },
   "vancouver-wa": {
     videoId: "rlk7_Xr-3dg",
