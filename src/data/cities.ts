@@ -4474,7 +4474,7 @@ export const cities: Record<string, CityData> = {
     // Google Maps search "birth center Vancouver WA" found no verified freestanding birth centers in Vancouver.
     // Nearest freestanding birth centers are in the Portland metro (Oregon side). Verified 2026-06-08.
     birthCenterDetails: [
-      { name: "The Bridge Birth Center", credential: "Freestanding Birth Center", address: "3300 NE 54th St, Vancouver, WA 98663", url: "http://www.bridgebirth.com", paragraph: "A freestanding birth center in Vancouver offering personalized midwifery care in a home-like setting. Serves families seeking out-of-hospital birth with licensed midwives." },
+      { name: "The Bridge Birth Center", credential: "Freestanding Birth Center", address: "3300 NE 54th St, Vancouver, WA 98663", url: "http://www.bridgebirth.com", thumbnail: "/images/bridge-birth-center.webp", paragraph: "A freestanding birth center in Vancouver offering personalized midwifery care in a home-like setting. Serves families seeking out-of-hospital birth with licensed midwives." },
     ],
     localDoulas: [
       { name: "Suwannee Doula and Infant Care", credential: "Postpartum Doula", practice: "Suwannee Doula and Infant Care", url: "http://suwanneedoulacare.com", description: "Postpartum and overnight doula care serving Vancouver families. Specializing in breastfeeding support and overnight newborn care.", photo: "https://img1.wsimg.com/isteam/ip/850a11fe-671e-4c7f-8194-598ca4291beb/blob-3055cb9.png", services: ["Postpartum", "Breastfeeding Support", "Overnight Care"] },

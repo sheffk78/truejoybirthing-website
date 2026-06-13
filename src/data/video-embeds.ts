@@ -45,11 +45,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-13",
   },
   "vancouver-wa": {
-    videoId: "rlk7_Xr-3dg",
+    videoId: "iRVJ8H3OCgg",
     title: "Vancouver WA Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and Washington Apple Health, all in under 4 minutes.",
-    duration: "PT3M11S",
-    uploadDate: "2026-06-12",
+    duration: "PT3M35S",
+    uploadDate: "2026-06-13",
   },
   "cary-nc": {
     videoId: "lefiI0I0jmg",
