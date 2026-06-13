@@ -146,6 +146,34 @@ function run(): void {
     results.push({ gate: 'V1', status: 'SKIP', detail: 'Could not read cities.ts for verification audit' });
   }
 
+  // ── S6: Provider costRange validation ──
+    if (targetSlug) {
+      try {
+        const pyResult = execSync(
+          `python3 scripts/s6-costrange-check.py ${targetSlug}`,
+          { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+        );
+        const output = pyResult.trim();
+        if (output.startsWith('PASS:')) {
+          const count = output.split(':')[1];
+          results.push({ gate: 'S6', status: 'PASS', detail: `All ${count} providers have costRange` });
+        } else if (output.startsWith('FAIL:')) {
+          const missingNames = output.substring(5).split(',');
+          results.push({ gate: 'S6', status: 'FAIL', detail: `${missingNames.length} provider(s) missing costRange: ${missingNames.join(', ')}` });
+        } else if (output === 'NO_CITY') {
+          results.push({ gate: 'S6', status: 'SKIP', detail: `City slug ${targetSlug} not found` });
+        } else if (output === 'NO_DOULAS') {
+          results.push({ gate: 'S6', status: 'SKIP', detail: 'No localDoulas section found' });
+        } else {
+          results.push({ gate: 'S6', status: 'SKIP', detail: `Unexpected output: ${output}` });
+        }
+      } catch (e: any) {
+        results.push({ gate: 'S6', status: 'SKIP', detail: `Could not check provider costRange` });
+      }
+    } else {
+      results.push({ gate: 'S6', status: 'SKIP', detail: 'Skipping costRange check in audit mode (run with slug)' });
+    }
+
   // ── S5: No standalone "Free Birth Plan" ──
   try {
     const grepResult = execSync(`grep -r '"Free Birth Plan"' src/ --include="*.ts" --include="*.astro" 2>/dev/null || true`, {
