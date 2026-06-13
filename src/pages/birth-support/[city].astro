@@ -92,6 +92,7 @@ const schema = {
       publisher: { '@type': 'Organization', '@id': 'https://truejoybirthing.com/#organization' },
       ...(data.publishedDate ? { datePublished: data.publishedDate } : {}),
       mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+      ...(cityVideoEmbeds[slug] ? { video: { '@id': `${pageUrl}#video` } } : {}),
     },
     {
       '@type': 'FAQPage',
@@ -329,11 +330,23 @@ const schema = {
             src={`https://www.youtube-nocookie.com/embed/${cityVideoEmbeds[slug].videoId}`}
             title={cityVideoEmbeds[slug].title}
             frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
             loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+        {/*
+          @todo: In a future iteration, add a collapsible <details> transcript below the video
+          by fetching auto-captions via YouTube API (captions.download?tfmt=srt&tlang=en&id=...)
+          and rendering them here. Clean up SRT formatting and wrap in:
+          <details class="mt-4 bg-white rounded-xl border-2 border-tjb-lavender-200 p-4">
+            <summary class="text-sm font-semibold text-tjb-charcoal cursor-pointer">Read the transcript</summary>
+            <div class="prose prose-sm mt-2 max-w-none text-tjb-gray">
+              {cleanedTranscriptText}
+            </div>
+          </details>
+        */}
       </div>
     </section>
   )}
@@ -1056,12 +1069,22 @@ const schema = {
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "VideoObject",
+      "@id": `${pageUrl}#video`,
       "name": `${cityVideoEmbeds[slug].title}`,
       "description": cityVideoEmbeds[slug].description,
       "thumbnailUrl": `https://truejoybirthing.com/images/yt-thumb-${slug}.png`,
       "uploadDate": data.publishedDate || "2026-06-11",
       "contentUrl": `https://www.youtube.com/watch?v=${cityVideoEmbeds[slug].videoId}`,
-      "embedUrl": `https://www.youtube-nocookie.com/embed/${cityVideoEmbeds[slug].videoId}`
+      "embedUrl": `https://www.youtube-nocookie.com/embed/${cityVideoEmbeds[slug].videoId}`,
+      ...(cityVideoEmbeds[slug].duration ? { "duration": cityVideoEmbeds[slug].duration } : {}),
+      ...(cityVideoEmbeds[slug].chapters ? {
+        "hasPart": cityVideoEmbeds[slug].chapters.map((c, i) => ({
+          "@type": "Clip",
+          "name": c[1],
+          "startOffset": c[0],
+          "url": `https://www.youtube.com/watch?v=${cityVideoEmbeds[slug].videoId}&t=${c[0]}s`,
+        }))
+      } : {}),
     })} />
   )}
 </Layout>
