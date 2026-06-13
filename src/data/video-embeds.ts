@@ -31,11 +31,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-08",
   },
   "norfolk-va": {
-    videoId: "eknYgS3_Sao",
+    videoId: "6-24wEnRnXA",
     title: "Norfolk Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and Virginia Medicaid, all in under 4 minutes.",
     duration: "PT3M17S",
-    uploadDate: "2026-06-08",
+    uploadDate: "2026-06-13",
   },
   "fremont-ca": {
     videoId: "LOnANIoKjag",
