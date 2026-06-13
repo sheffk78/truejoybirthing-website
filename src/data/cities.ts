@@ -4508,6 +4508,57 @@ export const cities: Record<string, CityData> = {
     lat: 45.6352,
     lng: -122.5972,
   },
+  "chesapeake-va": {
+    city: "Chesapeake",
+    state: "VA",
+    slug: "chesapeake-va",
+    heroImage: "/images/chesapeake-va-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-chesapeake-va.webp",
+    enableBlogResources: true,
+    supportSceneAlt: "A doula walking alongside an expectant mom in Chesapeake, Virginia",
+    supportSceneImage: "/images/doula-walking.webp",
+    midwifeInfo: {
+      paragraph: "Virginia licenses Certified Nurse-Midwives (CNMs) and Certified Professional Midwives (CPMs), with CNMs practicing in hospitals and CPMs attending out-of-hospital births. Virginia was among the first states to cover doula services through Medicaid (effective January 2024), making Chesapeake a strong market for doula-supported births. Chesapeake Regional Medical Center's The BirthPlace provides hospital-based maternity care, and the Hampton Roads midwifery community includes both hospital and home-birth practitioners serving Chesapeake families.",
+      credentialTypes: " (CNMs and CPMs)",
+      credentialDetail: "Virginia recognizes both CNMs (hospital practice) and CPMs (out-of-hospital), giving Chesapeake families more provider options than states that only license CNMs,",
+    },
+    costLow: 1200,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Chesapeake is the second-largest city in Virginia by land area, blending suburban neighborhoods with rural farmland and extensive canal waterways. The birth community reflects the city's family-oriented character, with many families choosing Chesapeake Regional Medical Center for its dedicated BirthPlace unit. The Hampton Roads doula community serves Chesapeake alongside Norfolk and Virginia Beach, giving families access to a strong network of birth professionals.",
+    heroLocalDetail: "At 38 weeks in Chesapeake, you're likely thinking about the drive to The BirthPlace on Battlefield Boulevard near I-64. That stretch of Battlefield can back up during commute hours, especially around the Greenbrier shopping area. If you're delivering during rush hour, give yourself an extra 20 minutes. The Dismal Swamp Canal Trail and Northwest River Park offer flat walking paths for those final-weeks strolls.",
+    hospitalDetails: [
+      { name: "The BirthPlace at Chesapeake Regional Medical Center", thumbnail: "/images/chesapeake-regional-hospital.webp", paragraph: "The BirthPlace at Chesapeake Regional Medical Center is a dedicated maternity unit with a Level III NICU, OB hospitalists available 24/7, and a locked unit with security bands for mom and baby. Amenities include nitrous oxide for pain management, IBCLC-certified lactation consultants, private showers, Rest Easy Rooms for partners, and free parking. Doulas are generally welcome — confirm current visitor policies during your hospital tour. If you're delivering here, having your birth plan ready makes the whole check-in process smoother. <a href=\\\"/birth-plan-template/\\\">Use our free hospital birth plan template</a> to get started.", nicuLevel: "III", address: "736 Battlefield Blvd N, Chesapeake, VA 23320", url: "https://chesapeakeregional.com/locations/birthplace" },
+    ],
+    // Birth center search: NPI taxonomy 261QB0400X returned zero results for Chesapeake VA.
+    // Google Maps search "birth center Chesapeake VA" found no verified freestanding birth centers in Chesapeake.
+    // Verified 2026-06-12.
+    birthCenterDetails: [
+    ],
+    localDoulas: [
+      { name: "Tina the Postpartum Doula", credential: "Postpartum Doula", practice: "Tina the Postpartum Doula", url: "http://www.tinathedoula.com", description: "You've done everything to prepare for the birth... but what about your Postpartum Journey? Let us help bring the Village to you! Myself and my team are here to help you transition into parenthood as smoothly as possible.", photo: "https://images.squarespace-cdn.com/content/v1/6028005e705ea36f1bfec7a8/e1847608-0bc0-479c-bbfa-906a72618dd3/TINA+THE+POSTPARTUM+DOULA+%2811%29.png", services: ["Postpartum", "Breastfeeding Support"], costRange: "Contact for pricing" },
+      { name: "Wholesome Hearts Doula Services", credential: "Birth Doula", practice: "Wholesome Hearts Doula Services", url: "https://www.facebook.com/WholesomeHeartsDoula", description: "Professional doula serving families in the Chesapeake area.", costRange: "Contact for pricing" },
+      { name: "The Village Midwife Birth Center", credential: "CPM", practice: "The Village Midwife Birth Center", url: "https://www.thevillagemidwife.com", description: "You shouldn't have to conform to someone else's expectations to be taken seriously in pregnancy. Relationship-based midwifery care that helps you understand your options, make informed choices, and experience birth in a way that aligns with your family.", photo: "https://images.squarespace-cdn.com/content/v1/6914d73b6bb72f3b99693f92/5f600f66-c79f-499f-89df-9b78fa89a2d1/TVM+Baby+Scale+2+Lights+On+Small.jpeg", services: ["Postpartum", "VBAC Support", "Home Birth", "Evidence-Based Care"], isMidwife: true, costRange: "Contact for pricing" },
+      { name: "Hampton Roads Midwifery", credential: "LM", practice: "Hampton Roads Midwifery", url: "http://www.hrmidwife.com", description: "Serving moms, babies and their families throughout Hampton Roads as a homebirth and birth center midwife.", photo: "http://hrmidwife.com/wp-content/uploads/2017/03/DSC_9755.jpg", services: ["Postpartum", "Placenta Encapsulation", "VBAC Support"], isMidwife: true, costRange: "Contact for pricing" },
+      { name: "Seven Cities Midwifery Care, LLC", credential: "CPM", practice: "Seven Cities Midwifery Care, LLC", url: "http://www.sevencitiesmidwifery.com", description: "Empowering Birth, Embracing Life. At Seven Cities Midwifery Care, we believe in the power of personalized, compassionate homebirth experiences.", photo: "https://images.squarespace-cdn.com/content/v1/6377b78aa3d5bf1f3fd5f460/7e3ca4df-44ae-4280-80e3-c48378f5630c/Veronica-2934+%281%29.jpg", services: ["Postpartum", "Breastfeeding Support", "Prenatal Care", "Home Birth"], acceptsMedicaid: true, isMidwife: true, costRange: "Contact for pricing" },
+      { name: "Three Rivers Midwifery Service, LLC", credential: "CNM", practice: "Three Rivers Midwifery Service, LLC", url: "http://www.threeriversmidwifery.com", description: "Nurse-Midwifery care for your pregnancy and home birth. Cindi Wylie is a certified nurse-midwife trained in providing care to healthy women and newborns.", isMidwife: true, costRange: "Contact for pricing" },
+      { name: "Sunflower Babies Midwifery", credential: "CPM", practice: "Sunflower Babies Midwifery", url: "https://sunflowerbabiesmidwifery.com", description: "Tierra Jackson, CPM, LM — Licensed Certified Professional Midwife providing pregnancy, birth, and postpartum care in the Hampton Roads and surrounding areas.", photo: "https://sunflowerbabiesmidwifery.com/_assets/media/aa3ae68c326244d012502cedbb49ef10.jpg", services: ["Postpartum"], isMidwife: true, costRange: "Contact for pricing" },
+    ],
+    medicaidNote: "Yes — Virginia Medicaid covers doula services effective January 1, 2024. Families enrolled in VA Medicaid can access doula support through their managed care plan. Reimbursement rates and doula enrollment requirements are managed through the Virginia Department of Medical Assistance Services. Ask your doula upfront whether they accept Virginia Medicaid.",
+    insuranceNote: "In Chesapeake, many families have employer-sponsored coverage through Chesapeake Regional Healthcare, Sentara, or military coverage through nearby naval bases. Doula coverage by private insurers is expanding — some policies now include doula benefits. Check your specific plan documents. HSA and FSA funds can also help cover out-of-pocket doula costs.",
+    faqs: [
+      { q: "How much does a doula cost in Chesapeake?", a: "Expect to pay $1,200 to $2,500 for a doula in Chesapeake. Hampton Roads rates are generally lower than Northern Virginia or Richmond. The investment typically covers prenatal visits, labor support, and postpartum check-ins. <a href=\\\"/birth-plan-template/\\\">Download the free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Chesapeake?", a: "Yes — Virginia Medicaid covers doula services effective January 1, 2024. Families enrolled in VA Medicaid can access doula support through their managed care plan. This is real coverage, not a pilot — ask your doula upfront whether they accept Virginia Medicaid. <a href=\\\"/birth-plan-template/\\\">Grab the free birth plan template</a> and make sure your doula team knows your preferences." },
+      { q: "Which hospitals in Chesapeake accommodate birth plans?", a: "The BirthPlace at Chesapeake Regional Medical Center accommodates birth plans and has a Level III NICU, OB hospitalists 24/7, and a locked unit with security bands. Doulas are generally welcome — confirm current visitor policies during your hospital tour. <a href=\\\"/birth-plan-template/\\\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Are there birth centers in Chesapeake?", a: "No — there are no verified freestanding birth centers in Chesapeake as of 2026. Families seeking a birth center experience can explore options in the Richmond area or consider midwifery-model care at Chesapeake Regional Medical Center. <a href=\\\"/birth-plan-template/\\\">Grab the free birth plan template</a> to think through your options." },
+      { q: "Does True Joy Birthing work with Chesapeake families?", a: "True Joy Birthing provides free birth-prep tools for Chesapeake families. The free birth plan, checklist, and guided walkthrough in the app work for any Chesapeake birth setting. The app also helps you connect with local doulas and midwives in your area." },
+      { q: "What about postpartum support in Chesapeake?", a: "Chesapeake has hospital-based lactation support at The BirthPlace. The postpartum doula community in Hampton Roads is growing. Start your search during pregnancy if you want ongoing postpartum support. <a href=\\\"/postpartum-doula/\\\">Learn more about postpartum doula support</a>." },
+    ],
+    nearbyCities: ["norfolk-va", "virginia-beach-va", "portsmouth-va", "suffolk-va"],
+    publishedDate: "2026-06-12",
+    lat: 36.6778,
+    lng: -76.3024,
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();

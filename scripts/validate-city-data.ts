@@ -4,7 +4,9 @@
  * that cause template rendering regressions (emoji fallback,
  * broken images, missing sections).
  *
- * Usage: npx tsx scripts/validate-city-data.ts [--fix]
+ * Usage: npx tsx scripts/validate-city-data.ts [slug] [--fix]
+ *   - Without slug: validates ALL cities (full audit)
+ *   - With slug: validates only that city (targeted check)
  */
 
 import { cities, type CityData } from '../src/data/cities';
@@ -48,7 +50,12 @@ function validate(): { results: ValidationResult[]; totalErrors: number } {
   const results: ValidationResult[] = [];
   let totalErrors = 0;
 
+  const args = process.argv.slice(2);
+  const targetSlug = args[0] && !args[0].startsWith('--') ? args[0] : null;
+
   for (const [slug, data] of Object.entries(cities)) {
+    // If a target slug was provided, skip all others
+    if (targetSlug && slug !== targetSlug) continue;
     const result: ValidationResult = {
       city: data.city || slug,
       slug,
