@@ -52,11 +52,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-13",
   },
   "cary-nc": {
-    videoId: "_4RaZyOaYeY",
+    videoId: "lYbsg7onepM",
     title: "Cary Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and NC Medicaid, all in under 3 minutes.",
-    duration: "PT3M18S",
-    uploadDate: "2026-06-13",
+    duration: "PT3M14S",
+    uploadDate: "2026-06-15",
   },
   "dallas-tx": {
     videoId: "fZ5UVWc3OAQ",
