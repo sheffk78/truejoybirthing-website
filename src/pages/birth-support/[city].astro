@@ -417,6 +417,7 @@ const schema = {
                 </div>
               )}
               {doula.url && <a href={doula.url} target="_blank" rel="noopener noreferrer" class="btn-primary mt-4 text-sm w-full">Visit website</a>}
+              {!doula.url && <span class="btn-primary mt-4 text-sm w-full opacity-40 cursor-not-allowed">No website listed</span>}
             </div>
           )})}
         </div>
