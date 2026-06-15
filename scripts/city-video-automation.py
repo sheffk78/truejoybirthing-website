@@ -146,7 +146,7 @@ export const {slug.replace('-', '_')}Data: TJBCityVideoData = {{
       narration: "Here's what we're covering in this video: which hospitals welcome doulas and midwives, the doulas and midwives you can work with in {city}, what everything costs including midwifery care, {'how ' + data['state'] + ' Medicaid can help' if data['is_medicaid'] else 'your insurance options'}, and a free app that builds your birth plan step by step. Let's start with where you can deliver.",
       text_content: {{
         city: "{city}",
-        state: "{st}",
+        state: "{data['state']}",
       }},
     }},
     {{
