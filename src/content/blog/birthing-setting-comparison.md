@@ -4,6 +4,7 @@ date: 2026-06-14
 slug: birthing-setting-comparison
 description: "Compare birthing centers and hospitals to find the right setting for your birth plan — covering medical support, comfort, costs, and what each option offers."
 author: "True Joy Birthing Team"
+featuredImage: "/images/birthing-room-2.webp"
 canonical: "https://truejoybirthing.com/blog/birthing-setting-comparison/"
 ---
 

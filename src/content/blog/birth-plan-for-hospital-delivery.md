@@ -6,6 +6,7 @@ author: "Shelbi Kohler"
 description: "Free hospital birth plan template with every section you need — labor preferences, pain management, C-section backup, and newborn care. Written by a certified doula."
 canonical: "https://truejoybirthing.com/blog/birth-plan-for-hospital-delivery/"
 layout: "../../layouts/PostLayout.astro"
+featuredImage: "/images/birth-plan-mockup-square-new-6.webp"
 ---
 
 You're planning for a hospital birth — and you want it to feel like *your* birth, not just a procedure on a schedule. That's exactly what a hospital birth plan does. It gives your care team a clear picture of what matters to you before the contractions start talking louder than you can.

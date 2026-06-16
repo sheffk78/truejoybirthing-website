@@ -6,6 +6,7 @@ author: "Shelbi Kohler"
 description: "VBAC birth plan covering labor preferences, monitoring, pain management, and C-section backup. Free template by a certified doula with VBAC experience."
 canonical: "https://truejoybirthing.com/blog/vbac-birth-plan/"
 layout: "../../layouts/PostLayout.astro"
+featuredImage: "/images/birth-plan-mockup-square-new-6.webp"
 ---
 
 Planning a vaginal birth after a cesarean takes courage. You've been through surgery once, and now you're choosing a different path. A VBAC birth plan gives that path structure, clarity, and a voice when you need it most.

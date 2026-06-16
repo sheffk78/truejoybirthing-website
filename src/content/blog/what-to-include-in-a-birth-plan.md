@@ -6,6 +6,7 @@ author: "Shelbi Kohler"
 description: "Every section your birth plan needs, explained by a certified doula. From labor preferences to newborn care to backup plans — here's what actually matters."
 canonical: "https://truejoybirthing.com/blog/what-to-include-in-a-birth-plan/"
 layout: "../../layouts/PostLayout.astro"
+featuredImage: "/images/birth-plan-mockup-square-new-6.webp"
 ---
 
 You know you need a birth plan, but every template you find is either three pages of checkboxes or so vague it's useless. You keep staring at a blank page wondering what actually matters and what's just filler.

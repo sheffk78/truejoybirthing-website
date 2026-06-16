@@ -6,6 +6,7 @@ author: "Shelbi Kohler"
 description: "Natural birth plan for unmedicated delivery with comfort measures, labor positions, and hospital advocacy. Free template by a certified doula."
 canonical: "https://truejoybirthing.com/blog/natural-birth-plan/"
 layout: "../../layouts/PostLayout.astro"
+featuredImage: "/images/birth-plan-mockup-square-new-6.webp"
 ---
 
 Planning a natural birth means you've decided to labor without an epidural or IV pain medication. That's a powerful choice, and a natural birth plan gives you the structure to make it happen on your terms, in any setting.

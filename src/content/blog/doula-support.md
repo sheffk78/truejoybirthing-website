@@ -8,217 +8,110 @@ canonical: "https://truejoybirthing.com/blog/doula-support/"
 layout: "../../layouts/PostLayout.astro"
 ---
 
-The transformative journey of welcoming new life unfolds uniquely for every family. As your birth companion, I create a nurturing space where your wishes and comfort take center stage. 
+So you're looking into doula support — or maybe you just heard the word "doula" for the first time and want to know what it actually means. Either way, I'm glad you're here.
 
- Having supported countless families through their unique birth experiences, I witness how continuous emotional guidance transforms moments into empowering victories. 
+I'm Shelbi Kohler. I'm a certified birth doula and a mother of seven. That means I've been on both sides of this — seven times over. I know what it's like to labor for hours wondering if you can keep going. I know what it's like to look at your partner and think, "I need more help here." And I know what a difference it makes when someone in that room is focused entirely on you.
 
- Each birth holds its own special magic, waiting to unfold naturally and beautifully. 
+Let me walk you through what a birth doula actually does, because there's a lot of confusion out there.
 
- Your Sacred Birth Space**
-Together, we’ll build your ideal birthing environment – one that honors your preferences and helps you feel secure. Whether you’re seeking quiet meditation or active movement, I’m here to protect your chosen atmosphere and support your birth vision. 
+## What a Birth Doula Actually Does
 
- Drawing from both professional expertise and my experience as a mother of seven, I offer time-tested comfort techniques that work with your body’s natural rhythms. From soothing touch to position changes, we’ll discover what helps you feel most confident and comfortable. 
+A doula is not a medical provider. I don't check your cervix, monitor the baby's heart rate, or make clinical decisions. That's your doctor or midwife's job. My job is different — I'm there for you, the whole time, no shift changes.
 
- Every mother deserves gentle guidance through this sacred experience. 
+Here's what that looks like in practice:
 
-Let’s embrace your strength and welcome your baby exactly as you envision.
+- **Prenatal visits** — We meet before your due date to talk through your birth preferences, practice comfort techniques, and sort through whatever worries you. We build a plan, but more importantly, we build trust.
+- **Continuous labor support** — When labor starts, I come to you. I stay with you through the entire process — at home, at the hospital or birth center, wherever you're delivering. No clocking out.
+- **Physical comfort measures** — Counter-pressure on your lower back. Hip squeezes. Position changes to help things along. Breathing techniques that actually work when you're in the thick of it.
+- **Emotional support** — Reminding you that you can do this. Helping you stay calm when things get intense. Being a steady presence when you feel anything but steady.
+- **Advocacy** — I can't speak for you, but I can remind you of your options. I can help you ask the right questions. I can make sure you understand what's happening before you consent to anything.
+- **Postpartum check-in** — After your baby is here, I follow up. We talk about how you're doing — physically and mentally. If you need referrals or resources, I help you find them.
 
-[\2](\1)
+## The Numbers Behind Doula Support
 
-[\2](\1)
+This isn't just my opinion. The research on continuous labor support is clear and consistent:
 
-## Understanding Birth Advocacy Options
-
- Every mother’s path to welcoming her baby brings unique hopes and dreams. Having brought seven little ones into the world, I deeply value the importance of clear communication during the birthing experience. 
-
- Your personal choices and comfort guide our partnership when planning for hospital care. 
-
- Your vision begins with recognizing what matters most to you. 
-
- We’ll explore natural childbirth approaches while building your voice to express these preferences with confidence and grace.
-
-Your Birth Planning Journey:**
-– Document your ideal birth environment and preferences**
-– Learn about your maternal rights and informed consent**
-– Develop clear communication with your obstetrics team**
-– Create flexible plans honoring your birthing choices**
-Your personal story shapes each decision, and our work together strengthens your voice during medical discussions. 
-
- We’ll collaborate to help your midwife team understand your wishes while preparing for unexpected moments with wisdom and flexibility.
-
-Knowledge empowers positive experiences. 
-
-We’ll review evidence-based resources and practice expressing your preferences, keeping you supported through every step toward meeting your little one.
-
-## Gentle Support Through Your Journey
-
- Each birth unfolds with its own beautiful rhythm and flow. Your journey becomes smoother when guided by someone who walks beside you with experience and heart. 
-
- Through seven personal births and countless births with families, I bring compassionate doula care that adapts to your individual path. 
-
- Gentle touch and practiced breathing create a peaceful space during labor. 
-
- I offer proven comfort techniques drawn from years of birth support experience. 
-
- Your body’s natural wisdom guides our approach while aromatherapy and positioning enhance your comfort. We discover together what helps you feel most centered. 
-
-**Your Journey Includes:**
-
-– Soothing massage and touch techniques**
-– Personalized breathing patterns**
-– Calming essential oil blends**
-– Guided visualization practices**
-– Movement and position guidance
-
- Working in harmony with your medical team, we maintain the environment that helps you feel most secure. 
-
- Some mothers prefer quiet encouragement, while others thrive with active support and movement. Your birth unfolds naturally as we honor your preferences and strengthen your inner confidence. From early labor through those precious first moments with your baby, a birth doula provides essential emotional support and care to help you navigate childbirth with confidence. 
-
-###  Birth Support- Studies show continuous labor support reduces cesarean rates by 25% and shortens labor duration by 41 minutes on average
-- Women with doula support are 31% less likely to use synthetic oxytocin during labor
-- Research indicates aromatherapy can reduce anxiety and pain perception during childbirth by up to 50%
-- Mothers with continuous doula support report 35% higher satisfaction with their birth experience
-## Natural Ways To Welcome New Life
-
- Your body holds deep wisdom when preparing to meet your precious baby. As your doula, I’ve witnessed countless mamas discover their strength through gentle movement and mindful positioning. 
-
- Working with your body’s natural rhythm creates a beautiful birth experience. 
-
- Simple movements like swaying, walking, or using a birth ball help your baby find the optimal position. 
-
- During my own seven births, I discovered how gentle positioning can make such a difference.
-
-Comfort Through Nature’s Ways:**
-Warm water soothes and relaxes tense muscles during labor. 
-
- Whether it’s a calming shower or peaceful bath, hydrotherapy offers natural relief. Specific pressure points along your lower back and hips can ease discomfort while supporting your body’s natural processes. 
-
- Together, we’ll explore herbal support options that align with your birth plan. 
-
- I’ll guide you through movement-based comfort measures that feel right for you. 
-
-Each mama’s journey brings unique beauty, and we’ll find the perfect blend of natural techniques to support yours.
-
-These gentle approaches honor your inner wisdom, creating space for welcoming your little one peacefully.
-
-## Creating Sacred Birth Spaces
-
- The environment where you welcome your little one shapes lasting memories of your transformation. Your doula provides guidance while preparing a space that honors your unique journey and supports your birthing experience. 
-
- Gentle illumination from dimmable lamps or battery-operated candles helps maintain your natural rhythm. 
-
- Fresh air circulation and adjustable temperature controls ensure physical comfort throughout labor. 
-
- Having your preferred playlist or nature sounds readily available offers emotional support during each phase.
-
-Movement remains key when preparing your sanctuary:**
-• Open pathways allow free walking and swaying**
-• Cushioned areas with birth balls support various positions**
-• Strategically placed screens maintain privacy**
-• Diffusers ready for calming essential oils**
-Small touches make powerful differences during labor. 
-
- Position cherished photos, affirmations, or meaningful objects within view. Your doula provides suggestions while respecting these deeply personal choices. 
-
- The right atmosphere connects seamlessly with natural birthing methods, keeping you centered and supported. 
-
- For specific hospital doula policies and local birth environment details, check our city guides like <a href="/birth-support/phoenix-az/">Phoenix, AZ</a> and <a href="/birth-support/philadelphia-pa/">Philadelphia, PA</a> — they include which hospitals allow doulas, NICU levels, and local birth center options.
-
-Each element works together, creating a foundation for bringing your baby earthside with confidence and peace.
-
-## Empowering Your Birth Experience
-
- Preparing for childbirth opens a world of possibilities when paired with knowledgeable guidance and care. As a mother of seven, I’ve learned that each birth journey needs personal attention and care team support to help you feel ready. 
-
- Creating your ideal birth starts with discovering your wishes and values. 
-
- We’ll craft a flexible plan while providing emotional support that adapts to your changing needs throughout pregnancy. 
-
- Your Preparation Journey:**
-During our workshops, you’ll practice real-world choices and learn medical terms explained simply. These tools help support your discussions with care providers, making each conversation clear and productive. 
-
- We take practical steps forward together. You’ll develop birth preferences, explore comfort methods, and create plans for various scenarios. 
-
- As your doula, I bring giving birth experience to guide you through each decision with clarity. 
-
- Our sessions build your knowledge using evidence-based information and hands-on practice. 
-
- My ongoing support ensures you stay centered while advocating for your needs during labor, connecting smoothly with your entire birth team.
-
-Your birth space becomes a foundation of strength where you can focus on bringing your baby earthside. 
-
-Each choice and preparation step builds toward the moment you meet your little one, supported by those you trust.
-
-## Essential Birth Team Members
-
- Bringing new life into the world requires the right mix of caring professionals working together for your comfort and safety. Having experienced seven births myself, I know firsthand how beautiful support makes all the difference. 
-
- A professional doula provides the foundation of personalized care, working harmoniously with healthcare providers and family members. 
-
- Your partner or chosen support person brings intimate comfort, while medical staff ensure your physical wellbeing through labor and childbirth. 
-
-**Building Your Support Network:****
-– Your chosen doctor or midwife directs medical care**
-– A birth doula offers continuous emotional and physical comfort**
-– Your partner or family member provides familiar presence**
-– Backup doula ensures 24/7 coverage when needed**
-– Hospital staff collaborate alongside your team**
-Your birthing preferences guide how each member contributes to your experience. Open dialogue helps everyone work together smoothly. 
-
- Regular updates and shared birth wishes keep your team focused on your goals.
-
-Planning early allows time to define specific roles. 
-
-Your doula helps coordinate between medical staff and family, empowering each person to support you confidently during this transformative journey.
-
-###  Birth Support- Studies show continuous labor support reduces cesarean rates by 25% and shortens labor by 41 minutes on average
-- 93% of mothers report improved birth experiences with professional doula support
+- Continuous doula support reduces cesarean rates by roughly 25%
+- Labors with doula support average 41 minutes shorter
+- Women with doulas are 31% less likely to need synthetic oxytocin (Pitocin)
+- Mothers with continuous support report 35% higher satisfaction with their birth experience
+- 93% of mothers who had doula support said it improved their birth experience
 - Having multiple support people during labor decreases interventions by up to 31%
-- Women with continuous support are 15% more likely to have spontaneous vaginal birth
-## Navigating Labor With Expert Care
 
- Birth unfolds uniquely for every woman and family. As a mother of seven, I recognize how continuous support transforms the entire experience. 
+Those numbers come from systematic reviews published in the Cochrane Library — not from marketing materials. Continuous support works.
 
- My role focuses on strengthening your confidence while providing physical support that evolves with your changing needs. 
+## Comfort Measures: What I Actually Use During Labor
 
-**Reading Your Labor Signs****
-Each contraction pattern tells its own story. 
+Forget the vague language about "creating a peaceful space." Here's what I bring to your labor:
 
- Working together, we’ll find the right movements and breathing techniques that help you stay comfortable. 
+- **Counter-pressure and hip squeezes** — These aren't backrubs. They're specific, targeted pressure techniques that take the edge off contraction pain. I'll teach your partner how to do them too.
+- **Position changes** — Sitting on a birth ball, walking the hallway, leaning over the bed, side-lying with a peanut ball. Different positions help your baby move down and can speed things along.
+- **Breathing techniques** — Not the old "hee-hee-hoo" from childbirth class. Real, practical breathing that keeps you focused and keeps oxygen flowing to your baby during tough contractions.
+- **Hydrotherapy** — A warm shower or bath can make a huge difference. I'll help you figure out what's available at your birth location and when to use it.
+- **Essential oils** — If you're into it, I bring lavender, peppermint, and a few others. Research shows aromatherapy can reduce anxiety and pain perception by up to 50% during childbirth. If you hate scents, we skip it.
+- **Heat and cold** — Rice packs you can heat in the microwave. Cold washcloths for your forehead. Simple stuff that works.
 
- My gentle guidance helps you flow through each wave while maintaining your strength and focus. 
+Not every technique works for every person. Part of my job is reading what's helping and what's not, and adjusting. What felt right at 4cm might feel wrong at 7cm. That's normal. We pivot.
 
-**Clear Communication****
-Your medical team receives regular updates about your progress and wishes. Through my partnership with hospital staff, your birth preferences remain central as we explore options during labor. 
+## Advocacy: Helping You Stay in the Driver's Seat
 
- This relationship with your doula keeps everyone aligned with your vision while respecting medical guidance. 
+One of the biggest things I do is make sure you understand what's happening and what your options are — before, during, and after labor.
 
-**Comfort Through Transitions****
-Labor changes call for flexible support methods. From soothing touch techniques to creating a peaceful environment, my support adapts to match your needs. 
+During our prenatal visits, we'll talk through:
 
-Physical comfort measures blend with emotional encouragement, helping you stay centered as your baby’s birth approaches.
+- Your birth preferences and what matters most to you
+- Common interventions and what they involve — induction, episiotomy, continuous monitoring, and others
+- How to ask for time when a provider suggests something — "Can you explain that?" and "What are the alternatives?" are powerful questions
+- What informed consent actually looks like in practice
+- How to communicate with your care team clearly and respectfully
 
-## Building Your Birth Support Network
+I'm not there to argue with your doctor. I'm there to make sure you understand your choices and feel confident making them. Sometimes that means helping you phrase a question. Sometimes it means reminding you of something we discussed at a prenatal visit when you're too focused on contractions to remember.
 
- The journey toward motherhood flourishes when surrounded by caring professionals who share your vision. As a mama of 7, I’ve learned that having steady guidance makes all the difference in creating your empowering birthing experience. 
+## Supporting Your Partner, Too
 
- Your path begins with finding local experts who match your preferences. 
+Here's something people don't always think about: your partner needs support during labor too.
 
- Take time to meet with childbirth educators and explore pediatric options in your area. 
+I've been the partner in that room — watching someone I love in pain, not knowing what to do, feeling helpless. It's awful. And it's hard to be useful when you're also scared.
 
- Your support team should include both medical professionals and emotional care providers who resonate with your birth wishes.
+I make sure your partner knows exactly how to help. I show them where to put their hands, what to say, and when to step back. I handle the physical support so your partner can focus on being present with you emotionally. And if things get stressful, I'm the calm person in the room who can explain what's happening.
 
-Strong Steps Forward:**
-• Meet with local doulas and midwives offering continuous care**
-• Learn from experienced childbirth educators**
-• Select a pediatrician aligned with your values**
-• Map out postpartum help with family and friends**
-Keep your support contacts organized where you can easily find them. 
+Your partner doesn't get replaced. They get backed up.
 
- A simple schedule helps coordinate practical assistance during those precious first weeks after birth. Positive birth experiences come from having reliable support ready before labor starts. 
+## Your Birth Environment Matters
 
-Working together, we’ll build the circle of care that brings you confidence and peace while preparing for your beautiful birth experience.
+The space where you give birth affects how labor goes. I'll help you set it up so it works for you:
 
-[\2](\1)**
-[\2](\1)**
-[\2](\1)
+- **Lighting** — Dim lights or battery-operated candles if you want it dark. Bright lights if you need to see what's happening. Your call.
+- **Sound** — Your playlist, white noise, or silence. I'll make sure we can control it.
+- **Movement space** — Clear walkways, a birth ball, room to sway and change positions without tripping over monitors.
+- **Privacy** — I'll run interference with hospital staff who keep coming in, ask before exams, and keep the door closed if that's what you want.
+- **Temperature** — Hospitals are cold. I bring blankets and can ask for the thermostat to be adjusted.
+
+For specifics on what different hospitals allow, check our local guides like [Phoenix, AZ](/birth-support/phoenix-az/) and [Philadelphia, PA](/birth-support/philadelphia-pa/). They cover which hospitals allow doulas, NICU levels, and birth center options in each area.
+
+## Prenatal Preparation: Before Labor Starts
+
+Good doula support begins well before your first contraction. During our prenatal visits, we cover:
+
+- Writing your birth preferences — not a rigid plan, but a clear document that tells your care team what you want and don't want
+- Practicing comfort techniques so they feel familiar when you need them
+- Discussing your medical history and any concerns with your provider
+- Planning for different scenarios — what if labor stalls? What if you want an epidural after all? What if you need a cesarean?
+- Getting your partner comfortable with their role
+
+I also make sure you know your rights as a patient. You can decline any intervention. You can ask for a second opinion. You can change your mind at any point. Knowing that going in changes how you show up.
+
+## Building Your Full Support Team
+
+A doula is one piece of your support system. You'll also want:
+
+- **A provider you trust** — Whether that's an OB, a midwife, or a midwife practice, find someone who listens to you and respects your preferences.
+- **A pediatrician lined up** — Don't wait until the baby is here. Meet a few before your due date.
+- **Postpartum help** — Family, friends, a postpartum doula — whoever you've got. Those first weeks are harder than most people tell you, and having meals and help with older kids makes a real difference.
+- **A backup plan** — I have a backup doula on call in case I'm at another birth when you go into labor. You'll meet her beforehand so you're not getting a stranger.
+
+## Let's Talk
+
+If you're pregnant and wondering whether a doula is right for you, let's have a conversation. No pressure, no sales pitch — just an honest talk about what you're hoping for and whether I can help you get there.
+
+[Contact me here](/contact/) to set up a free consultation. I'd love to hear your story.

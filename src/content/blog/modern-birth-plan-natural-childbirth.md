@@ -5,7 +5,7 @@ slug: modern-birth-plan-natural-childbirth
 description: "Learn how to create a comprehensive, realistic birth plan that respects your unique preferences while ensuring the best outcomes for you and your baby."
 author: "True Joy Birthing Team"
 canonical: "https://truejoybirthing.com/blog/modern-birth-plan-natural-childbirth/"
-featuredImage: "https://v3b.fal.media/files/b/0a9e3e3a/6ms4VkwJbc-qGQhIn7uFe_ZxA3RSVB.png"
+featuredImage: "/images/birth-plan-mockup-square-new-6.webp"
 ---
 
 # Crafting Your Ideal Birth Experience: A Modern Guide to the Birth Plan

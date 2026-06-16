@@ -5,7 +5,7 @@ slug: choosing-your-birth-setting-guide
 description: "A comprehensive guide to choosing between hospital birth and birth center, including the pros, cons, and ideal patient profiles for each setting."
 author: "True Joy Birthing Team"
 canonical: "https://truejoybirthing.com/blog/choosing-your-birth-setting-guide/"
-featuredImage: "https://v3b.fal.media/files/b/0a9e3e40/8DJsQwxttwTtrjxWcJK-w_yd8AgRhF.png"
+featuredImage: "/images/birthing-center.webp"
 ---
 
 # Making Your Choice: Hospital vs. Dedicated Birth Center for a Natural Birth

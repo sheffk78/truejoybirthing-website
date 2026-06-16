@@ -8,235 +8,141 @@ canonical: "https://truejoybirthing.com/blog/what-are-doula-services/"
 layout: "../../layouts/PostLayout.astro"
 ---
 
-Motherhood begins with a profound journey, where gentle support creates lasting memories. As your companion, I bring heart-centered guidance and experienced doula wisdom to this sacred passage. 
+If you're reading this, you've probably heard the word "doula" and you're trying to figure out what they actually do. Maybe someone told you to hire one. Maybe your OB mentioned it. Maybe you're three months pregnant and realizing you don't want to do this alone.
 
- Each breath and wave of labor flows naturally when supported with caring hands. 
+I get it. I'm Shelbi Kohler — certified birth doula and mother of seven. I've been on both sides of this. I know what it's like to walk into a delivery room not knowing what to expect, and I know what a difference it makes when someone in that room is focused entirely on you.
 
- My presence combines soothing comfort measures with childbirth encouragement, weaving together moments of strength and serenity during your birthing time. 
+Let me break down exactly what doula services include, what they don't, and whether it makes sense for you.
 
-**Your Sacred Birth Space**
+## What Doula Services Actually Include
 
- We shape your birthing room into a peaceful haven where confidence blooms naturally. 
+Doula services aren't one appointment or one moment in labor. It's a package of support that starts well before your due date and continues after your baby is here. Here's what that looks like:
 
- Your medical team and I flow together smoothly while keeping your pregnancy wishes central, supporting each choice with quiet wisdom. 
+**Prenatal visits (2-3 meetings before your due date)**
 
- Sweet moments reveal pure birth magic – a soft whisper, a steadying touch, or peaceful presence as your baby arrives earthside. 
+- We talk through your birth preferences — not a rigid plan, but a clear picture of what you want and don't want
+- We practice comfort techniques so they're familiar when you actually need them
+- We discuss your medical history, any concerns, and what scenarios might come up
+- We build trust so that when labor gets hard, you already know me and I already know you
 
-My experiences as a mother of seven and birth companion have shown me how continuous postpartum support nurtures this precious transition.
+**Labor and birth support**
 
-[\2](\1)
+- I'm on call for you around your due date
+- When labor starts, I come to you — at home, at the hospital, at the birth center, wherever you're delivering
+- I stay with you the entire time. No shift changes. No stepping out to check on another patient
+- I use counter-pressure, hip squeezes, position changes, breathing techniques, and whatever else works to keep you as comfortable as possible
+- I help you understand what's happening and what your options are at every point
+- I support your partner so they know how to help instead of standing around feeling useless
 
-[\2](\1)
+**Postpartum visits (1-2 meetings after birth)**
 
-## Understanding Birth Support Specialists
+- We check in on how you're healing — physically and emotionally
+- I help with breastfeeding, bottle feeding, pumping — whatever your feeding plan looks like
+- We talk through your birth experience because sometimes you need to process what happened
+- If you need referrals — lactation consultants, therapists, pediatricians — I connect you
 
- The quiet strength of professional companions during pregnancy creates lasting ripples through your family’s story. Birth companions work with different certifications and skills, each bringing special ways to support growing families. 
+Some doulas also include birth photography, placenta encapsulation, or additional postpartum hours. Every doula's package is a little different. The core is prenatal, labor, and postpartum support.
 
- Training & Professional Standards**
-DONA and CAPPA programs shape skilled birth professionals through intensive learning paths. 
+## The Three Types of Doulas
 
- These health professionals master comfort techniques, study birth physiology, and develop proven ways to ease your journey through labor. 
+Not all doulas do the same thing. Here are the three main types:
 
- Support Role Differences**
-Midwives focus on medical aspects of your care, while birth companions provide steady emotional presence. We practice massage and guided breathing to keep you comfortable, working seamlessly with your chosen medical team. 
+**Birth doula** — This is what most people mean when they say "doula." A birth doula supports you during pregnancy and labor. She's the one at your side from early contractions through delivery, providing physical comfort measures, emotional support, and advocacy. This is what I do.
 
- Complete Care Journey**
-Your support begins weeks before birth when we map out your wishes. During labor, gentle guidance helps you find positions bringing relief. 
+**Postpartum doula** — A postpartum doula comes to your home after the baby is born. She helps with feeding, newborn care, sibling transitions, meal prep, and emotional support during those rough first weeks. Some doulas (including me) offer both birth and postpartum services, but they can also be separate. If you want to go deep on this, check out our <a href="/blog/postpartum-doula/">postpartum doula guide</a>.
 
- After welcoming baby, we continue walking beside you through early parenting moments. 
+**Antepartum doula** — This is a less common type. An antepartum doula supports you during a high-risk pregnancy — if you're on bed rest, dealing with complications, or just need extra help before delivery. Not every doula offers this, but it's worth asking about if your pregnancy isn't following a standard path.
 
- Every birthing story writes its own unique path, which inspires blending time-tested wisdom with fresh approaches. 
+Some families hire just one type. Some hire both a birth doula and a postpartum doula. It depends on your situation, your budget, and what kind of support you know you'll need.
 
-Together, we’ll build the positive experience you envision.
+## What a Doula Does NOT Do
 
-## What Makes Labor Assistance Special
+This is important and it confuses a lot of people.
 
- Medical studies continue to reveal meaningful results from personalized birth support through every stage of labor. As a mother of seven, I’ve experienced and observed how doula support creates lasting positive changes during childbirth. 
+A doula is not a medical provider. I do not:
 
- Studies highlight clear benefits: women who receive continuous labor support see a 31% decrease in cesarean births. 
+- Check your cervix or monitor the baby's heart rate
+- Diagnose complications or make medical decisions
+- Deliver your baby or catch the baby
+- Prescribe medication or give medical advice
+- Replace your doctor, midwife, or nurse
 
- The birth process flows more smoothly, with shorter labors and greater satisfaction reported by mothers. 
+If something goes wrong during labor, I don't step in clinically. I step in supportively — making sure you understand what's happening, helping you ask the right questions, and keeping you as calm and informed as possible while your medical team handles the situation.
 
- Newborns show improved Apgar scores when their mothers have steady support throughout delivery.
+For a full breakdown of how doulas and midwives differ (because yes, people mix these up all the time), read our <a href="/blog/doula-vs-midwife/">doula vs midwife guide</a>.
 
-Creating Your Ideal Birth Environment**
-A birth doula brings both gentle presence and practical knowledge, empowering you to welcome your baby. 
+## How a Doula Is Different From a Midwife
 
- We shape your space into a peaceful setting where you can follow your natural instincts. This caring partnership builds strong family connections while boosting your confidence as a new parent. 
+This comes up constantly, so let me be direct:
 
- When mothers look back on their childbirth experience, they often share sweet memories of feeling heard and supported. 
+A **midwife** is a licensed medical professional who provides prenatal care, manages labor, delivers babies, and handles clinical decisions. She can write prescriptions, order tests, and catch your baby. Midwives are trained to handle low-risk pregnancies and births, and they work in hospitals, birth centers, and homes.
 
-The comfort and guidance received during labor creates a strong foundation for those precious early days with your newborn.
+A **doula** provides emotional, physical, and informational support. I don't deliver babies. I don't make medical decisions. I don't replace your OB or midwife. I complement them.
 
-###  Birth Support- Continuous labor support reduces cesarean births by 31%
-- Women report shorter labor times and higher satisfaction with doula assistance
-- Newborns demonstrate better Apgar scores with continuous birth support
-- Supportive birth environments help mothers follow natural birthing instincts
-## Professional Care During Your Journey
+Think of it this way: your midwife or OB is focused on the clinical side — keeping you and your baby safe and healthy. I'm focused on the experience side — keeping you comfortable, informed, and supported. Many families hire both because they want the full picture.
 
- Every birthing experience holds special meaning through personal connection and gentle guidance. As your doula, I offer complete support that evolves with your path ahead. 
+For more on this, our <a href="/blog/doula-vs-midwife/">doula vs midwife comparison</a> goes into detail on training, scope, cost, and how the roles work together.
 
- We begin with 2-3 prenatal meetings to explore your wishes and discuss questions. 
+## What the Research Says About Doula Support
 
- Physical support starts right away, helping prepare your mind and body for the experience ahead. 
+This isn't just opinion. The data on continuous labor support is solid:
 
- Labor and Birth Support**
-When your labor starts, my full attention belongs to you. The care team remains available 24/7 throughout active labor. 
+- Continuous doula support reduces cesarean rates by roughly 25%
+- Labors with doula support are shorter — about 41 minutes on average
+- Women with doulas are 31% less likely to need Pitocin
+- Mothers with continuous support report higher satisfaction with their birth experience
+- 93% of mothers who had doula support said it improved their birth
 
- While providing emotional support, I’ll capture beautiful birth photography moments you’ll cherish forever.
+These numbers come from systematic reviews in the Cochrane Library, not marketing materials. Continuous support works, and it doesn't have to come from a doula — but a trained doula is the most reliable way to get it.
 
-Postpartum Care**
-Your story continues after birth with 1-2 postpartum visits. 
+## What a Typical Doula Package Looks Like
 
- We’ll focus on baby care guidance, comfort measures, and smooth transitions into parenthood. 
+Every doula structures their services a little differently, but most birth doula packages include:
 
- Each family brings unique needs, which shapes how we build your support plan together. 
+- An initial consultation (usually free) to see if you're a good fit
+- 2-3 prenatal visits to build your birth preferences and practice techniques
+- On-call availability starting around 37-38 weeks
+- Continuous labor support from the time you want me there through delivery
+- Immediate postpartum support in the first hours after birth
+- 1-2 postpartum visits in the weeks following delivery
+- Phone and text support throughout your pregnancy
 
-From flexible timing to personalized birth preferences, we’ll create the right framework for welcoming your little one.
+Some doulas include extras like birth photography, lactation support, or placenta encapsulation. Some offer payment plans, sliding scale fees, or bartering. It's always worth asking.
 
-## Birth Planning And Preparation Tips
+For specifics on pricing, our <a href="/blog/how-much-are-doula-services/">doula cost guide</a> breaks down what you can expect to pay in different areas and what factors affect the price.
 
- Creating a joyful path toward your baby’s arrival starts with thoughtful preparation and clear choices. My experience birthing seven little ones taught me how simple steps make positive childbirth experiences possible. 
+## How to Know If a Doula Is Right for You
 
- Writing down your birth preferences helps you communicate clearly with your care team. 
+You don't need a specific reason to hire a doula. But here are the situations where I see families benefit the most:
 
- Share what positions feel right for you, which comfort measures you prefer, and who you want supporting your birth journey. 
+- This is your first baby and you have no idea what to expect
+- You want support but your partner doesn't know what to do either
+- You're planning an unmedicated birth and want someone who's been through it
+- You're planning an epidural but still want someone advocating for you
+- You've had a previous birth that didn't go the way you wanted
+- You don't have family nearby or your family isn't supportive
+- You just plain don't want to do this alone
 
- Consider this document a flexible guide that adapts with you.
+If any of those sound like you, a doula is probably worth looking into.
 
-Essential Comfort Tools:**
-Select items bringing peace to your birthing space. 
+Not sure where to start? Our <a href="/blog/what-is-a-birth-doula/">birth doula guide</a> goes deeper into what happens during labor support specifically.
 
- Massage rollers offer support during labor, while calming scents and meaningful photos create your ideal environment. Small touches often bring the most comfort when welcoming your baby. 
+## Finding the Right Doula
 
- Building Your Birth Team:**
-List your support people’s contact details and preferred ways to reach them. 
+Not every doula is the right fit for every family. Here's what I'd look for:
 
- Define how each person – partner, family member, or doula care provider – will offer emotional and physical support. 
+- **Certification** — DONA, CAPPA, and PRODOULA are the main certifying organizations. Certification isn't legally required, but it means the doula has completed training and attends regular continuing education.
+- **Experience** — Ask how many births they've attended. Someone with 50+ births has seen more scenarios than someone with three.
+- **Personality fit** — You're going to be vulnerable with this person during one of the most intense experiences of your life. If you don't feel comfortable with them in a consultation, trust that instinct.
+- **Clear scope** — A good doula knows what's in their lane and what's a medical question for your provider.
+- **Backup plan** — What happens if your doula is at another birth when you go into labor? Every professional doula should have a backup.
 
- Having everyone aligned allows you to focus fully on birthing your baby.
+For questions to ask during a consultation, our <a href="/blog/doula-interview-questions/">doula interview questions guide</a> has you covered.
 
-Take quiet moments to identify what brings you confidence. 
+## The Bottom Line
 
-Your unique preferences about movement, environment, and comfort techniques shape how you'll find a doula or support person matching your needs. Each choice builds toward the birth experience you envision. For help finding local doula costs and hospital policies, check our city guides like <a href="/birth-support/dallas-tx/">Dallas, TX</a> and <a href="/birth-support/chicago-il/">Chicago, IL</a>.
+Doula services are prenatal visits, continuous labor support, and postpartum care — from someone whose only job is to focus on you. Not your baby's heart rate. Not your dilation. You.
 
-###  Birth Preparation- Studies show women who create birth plans are 59% more likely to have positive birth experiences
-- 93% of mothers report that having a dedicated support person during labor reduced their anxiety levels
-- Research indicates aromatherapy and familiar objects can reduce labor pain perception by up to 40%
-- Women with doula support experience 31% fewer cesarean births and 10% fewer medical interventions
-## Natural Pain Management Methods
+After seven births of my own and supporting hundreds of families, I can tell you this: the families who have continuous support look back on their births and feel better about them. Not because everything went perfectly — it rarely does — but because they didn't feel alone. They had someone who knew them, stayed with them, and helped them understand what was happening.
 
- While preparing mothers for their upcoming births, I’ve discovered gentle techniques through my seven deliveries and hundreds of births I’ve attended as a doula. These approaches create lasting comfort during the most intense moments of labor. 
-
- Your body instinctively moves in ways that bring relief. 
-
- The support of a doula helps you find positions that work uniquely for you. 
-
- Swaying on a birth ball opens your hips while walking and gentle rocking motions ease pressure naturally. These movements mirror what worked during my own birth experiences. 
-
- Simple Breathing Patterns That Work:**
-Begin with slow, deep breathing as labor starts. When contractions grow stronger, count your breaths – four counts in, six counts out. 
-
- Physical and emotional support through steady breathing creates natural rhythm and stability. 
-
- Comfort Techniques:**
-Warm water soothes muscles and eases tension beautifully. 
-
- Whether choosing a shower or birth pool, water brings immediate comfort. Specific pressure points along your lower back and hips release discomfort when touched with steady pressure. 
-
- I’ll show you exactly which spots bring the most relief.
-
-During active labor, these methods work together seamlessly. 
-
- The support of a doula helps you transition between different comfort measures as your needs change. This combination of movement, breath, and touch provides physical and emotional support during labor. 
-
-## Emotional Guidance Through Delivery
-
- Every birth unfolds as a deeply personal journey filled with powerful moments. As a mother of seven, I know firsthand how continuous support transforms the experience into one of strength and inner peace. 
-
- Building on our natural pain management techniques, we’ll create your personal confidence toolkit together. 
-
- I’ll show you calming visualization exercises tailored to your specific needs. 
-
- Simple mantras like Each wave brings me closer and I am strong, my body knows become powerful anchors during labor and delivery. 
-
- Your partner grows into their role through focused preparation. 
-
- Through gentle coaching, they’ll learn practical ways to provide emotional and physical support when you need it most. We’ll practice effective communication techniques that work seamlessly in the delivery room. 
-
- Your voice and choices lead the way. 
-
- Having support from a doula means someone who understands your wishes and helps express them clearly. We’ll explore your birth preferences and build strategies that reflect your vision. 
-
- Moving toward your recovery journey, each birth story unfolds uniquely. 
-
-My role is to help you write yours with knowledge, peace, and inner strength.
-
-Doula Support Benefits
-Birth Without Support
-
-Personalized pain management techniques and visualization exercises
-Limited coping strategies during labor
-
-Partner receives coaching and practical support training
-Partner may feel unprepared and uncertain
-
-Clear communication of birth preferences and choices
-Difficulty expressing needs during labor
-
-## After Birth Recovery Support
-
- Welcoming a new baby transforms your entire world in beautiful and unexpected ways. Your mind and body need gentle care while discovering your new rhythm together. 
-
- I’ve experienced this sacred time seven times myself, and now share that wisdom with growing families like yours. 
-
- My personalized support provides emotional guidance that naturally builds from your birthing experience into these tender early days. 
-
- You’ll receive practical help with everyday needs while processing your unique journey:**
-– Breastfeeding guidance and positioning to support your feeding goals**
-– Baby wearing demonstrations to keep your little one close**
-– Nourishing meal preparation focused on postpartum healing**
-– Light housework maintenance for a calm, restful environment**
-Experience shows that mothers thrive when given space to rest and bond while receiving gentle assistance with daily tasks. I work alongside you and your family, offering evidence-based information and heartfelt encouragement as you grow into your new role. 
-
- Your journey deserves thoughtful, personalized care. Drawing from both professional training and maternal experience, I help create a peaceful transition that honors your family’s unique path. 
-
-Together we’ll establish routines and practices that support your physical healing and emotional wellbeing during this precious time.
-
-## Finding The Right Birth Partner
-
- Building a connection with someone who supports your pregnancy means creating a relationship focused on trust and understanding. Working with a doula brings the opportunity to share your deepest hopes while receiving expert guidance through each milestone. 
-
- Your ideal birth supporter listens carefully and responds thoughtfully to your questions. 
-
- They will provide emotional support that aligns naturally with your vision. 
-
- Each conversation should leave you feeling uplifted and confident about your choices. 
-
-**What to Look For:**
-
- Ask about specific birth scenarios they’ve supported and which comfort techniques they use most. 
-
- Certified doulas maintain current training in positioning, massage, and breathing methods. Read through testimonials from past clients to learn how they helped during different birth situations. 
-
- My experience giving birth to seven babies taught me the value of genuine connection during labor. 
-
- Your birth supporter should feel like a steady presence, ready to suggest helpful positions while respecting your preferences and keeping communication open with medical staff. 
-
-The right match brings both wisdom and warmth to your birth space. Schedule meetings with several doulas, observe how they share information, and pay attention to how comfortable you feel discussing your plans.
-
-Qualities of Effective Birth Support
-Benefits for Mother
-
-Current certification in comfort techniques
-Increased confidence in birth choices
-
-Experience with various birth scenarios
-Emotional support aligned with vision
-
-Strong communication with medical staff
-Trusted guidance through milestones
-
-[\2](\1)
-
-[\2](\1)
+If you want to talk about what doula support might look like for your birth, <a href="/contact/">reach out</a>. No pressure, no sales pitch — just an honest conversation about what you're hoping for and whether I can help you get there.
