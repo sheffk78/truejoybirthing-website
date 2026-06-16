@@ -4592,8 +4592,8 @@ export const cities: Record<string, CityData> = {
     city: "Fontana",
     state: "CA",
     slug: "fontana-ca",
-    heroImage: "/images/fontana-ca-birth-doula-skyline.webp",
-    ogImage: "https://truejoybirthing.com/images/og-city-fontana-ca.webp",
+    heroImage: "/images/fontana-ca-birth-doula-skyline-v2.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-fontana-ca-v2.webp",
     enableBlogResources: true,
     supportSceneAlt: "A doula walking alongside an expectant mom in Fontana, California",
     supportSceneImage: "/images/doula-walking.webp",
@@ -4616,10 +4616,10 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
     ],
     localDoulas: [
-      { name: "Doula127 - Doula Services", credential: "Birth Doula", practice: "Doula127 - Doula Services", url: "https://www.iamdoula127.com", description: "Professional doula serving families in the Fontana area.", costRange: "Contact for pricing" },
+      { name: "Doula127 - Doula Services", credential: "Birth Doula", practice: "Doula127 - Doula Services", url: "https://www.iamdoula127.com", description: "Professional doula serving families in the Fontana area.", photo: "", costRange: "Contact for pricing", acceptingClients: false },
       { name: "Holistic Doula LLC", credential: "Birth Doula", practice: "Holistic Doula LLC", url: "https://www.holistic-doula.com", description: "Acompañamiento integral y culturalmente sensible. Acompañamos a mujeres y familias latinas en cada etapa de la maternidad.", photo: "https://cdn.b12.io/client_media/fTG1dIFa/8eb8ac6d-9f0c-11f0-b54c-0242ac110002-png-regular_image.png", services: ["Birth Doula", "Postpartum", "Prenatal Care"], costRange: "Contact for pricing" },
       { name: "4 The Moms Southern California Postpartum Doula Support", credential: "Postpartum Doula", practice: "4 The Moms Southern California Postpartum Doula Support", url: "https://www.4themoms.org", description: "A holistic, evidence-based postpartum doula service supporting families through the transitional period of the 4th trimester.", photo: "https://images.squarespace-cdn.com/content/v1/697814bdb7e6713bfeef8179/4c5454d8-c32c-4112-9456-fd3d83ef1189/Souther+California+Doula%2C+postpartum+doula%2C+birth+recovery%2C+day+shifts%2C+overnights%2C+insurance+options%2C+newborn+care.jpg", services: ["Postpartum", "Lactation", "Breastfeeding Support", "Overnight Care"], costRange: "Contact for pricing" },
-      { name: "Two Moons Doula Services", credential: "Birth Doula", practice: "Two Moons Doula Services", url: "https://m.yelp.com/biz/two-moons-doula-services-san-bernardino-county-3", description: "Professional doula serving families in San Bernardino County.", costRange: "Contact for pricing" },
+      { name: "Two Moons Doula Services", credential: "Birth Doula", practice: "Two Moons Doula Services", url: "https://m.yelp.com/biz/two-moons-doula-services-san-bernardino-county-3", description: "Professional doula serving families in San Bernardino County.", photo: "", costRange: "Contact for pricing", acceptingClients: false },
       { name: "Raising Birth Doula Care", credential: "Birth Doula", practice: "Raising Birth Doula Care", url: "https://www.instagram.com/raisingbirthdoula", description: "Professional doula serving families in the Inland Empire.", costRange: "Contact for pricing" },
     ],
     medicaidNote: "Yes — California's Medi-Cal program covers doula services as a state benefit, with reimbursement rates around $1,587 per pregnancy. Families on Medi-Cal can access doula support through the PAVE (Providing Access and doula Viability through Equity) program. Kaiser Permanente members may also have access to contracted doula services at no extra cost. Ask your doula whether they accept Medi-Cal or are Kaiser-contracted.",
