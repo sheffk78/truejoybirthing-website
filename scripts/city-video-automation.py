@@ -130,7 +130,7 @@ export const {slug.replace('-', '_')}Data: TJBCityVideoData = {{
       scene_id: "01_hook",
       scene_type: "tjb_city_hook",
       duration_seconds: 0,
-      narration: "Just found out you're pregnant in {city}? Awesome. Now you've got eighty tabs open on hospitals, doulas, midwives, insurance. Let's close every single one of them right now.",
+      narration: "Just found out you're pregnant in {city}? Congratulations! Now you've got eighty tabs open on hospitals, doulas, midwives, insurance. Let's close every single one of them right now.",
       text_content: {{
         city: "{city}",
         state: "{data['state']}",

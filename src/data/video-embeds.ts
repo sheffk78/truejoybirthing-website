@@ -24,11 +24,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-04",
   },
   "tacoma-wa": {
-    videoId: "6MdqbnLsX3M",
+    videoId: "CSf-KlvPXWg",
     title: "Tacoma Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and Washington Apple Health, all in under 4 minutes.",
     duration: "PT3M14S",
-    uploadDate: "2026-06-08",
+    uploadDate: "2026-06-15",
   },
   "norfolk-va": {
     videoId: "6-24wEnRnXA",
@@ -59,10 +59,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-15",
   },
   "dallas-tx": {
-    videoId: "fZ5UVWc3OAQ",
+    videoId: "gInUgjaym5Q",
     title: "Dallas Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 4 minutes.",
     duration: "PT3M47S",
-    uploadDate: "2026-06-12",
+    uploadDate: "2026-06-15",
   },
 };

@@ -363,7 +363,7 @@ const schema = {
           <p class="text-tjb-gray max-w-2xl mx-auto">Real people, real support: here are doulas and midwives who serve {city} families. Every listing is a practicing provider, not an ad.</p>
         </div>
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 not-prose">
-          {localDoulas.map((doula) => {
+          {[...localDoulas].sort((a, b) => (b.isVerified === true ? 1 : 0) - (a.isVerified === true ? 1 : 0)).map((doula) => {
             const verified = doula.isVerified === true;
             return (
             <div class={`bg-white relative rounded-xl p-6 shadow-sm border hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center ${doula.isAmbassador ? 'border-2 border-tjb-rose-300 shadow-md' : 'border-tjb-lavender-200/50 hover:border-tjb-lavender-300'}`}>
