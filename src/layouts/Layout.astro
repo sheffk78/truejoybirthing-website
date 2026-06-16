@@ -216,32 +216,41 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="stylesheet" href="/fonts/fonts.css" />
+    <!-- Fonts: non-render-blocking via media-print swap pattern -->
+    <link rel="stylesheet" href="/fonts/fonts.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
     <!-- Preload critical font weights used above the fold -->
-    <link rel="preload" href="/fonts/co3bmX5slCNuHLi8bLeY9MK7whWMhyjoq3FNsS8.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="/fonts/nwpStKy2OAdR1K-IwhWudF-R7w0QYsrd.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin />
     <ClientRouter />
     <!-- Preconnect to third-party analytics origins -->
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://www.redditstatic.com" />
     <script type="application/ld+json" set:html={schemaJson} />
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RVZVN0F9T"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-2RVZVN0F9T');
-    </script>
-    <!-- Reddit Pixel -->
-    <script is:inline>
-      !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js?pixel_id=a2_j5hvsdn7sctb",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_j5hvsdn7sctb');rdt('track', 'PageVisit');
-    </script>
-    <!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
-    <!-- End Reddit Pixel -->
   </head>
   <body class="min-h-dvh flex flex-col font-sans">
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-tjb-charcoal focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>
+    <!-- Google Analytics (GA4) — deferred to after onload for LCP -->
+    <script>
+      window.addEventListener('load', function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-2RVZVN0F9T';
+        s.async = true;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-2RVZVN0F9T');
+      });
+    </script>
+    <!-- Reddit Pixel — deferred to after onload for LCP -->
+    <script>
+      window.addEventListener('load', function() {
+        !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js?pixel_id=a2_j5hvsdn7sctb",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','a2_j5hvsdn7sctb');rdt('track', 'PageVisit');
+      });
+    </script>
+    <!-- DO NOT MODIFY UNLESS TO REPLACE A USER IDENTIFIER -->
+    <!-- End Reddit Pixel -->
     <!-- Header -->
     <header class="bg-tjb-cream/95 backdrop-blur-sm sticky top-0 z-50 border-b border-tjb-lavender-300/30">
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -250,6 +259,8 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
             src="/images/logo.svg" 
             alt="True Joy Birthing" 
             class="h-14 max-w-[200px] w-auto transition-transform duration-300 group-hover:scale-[1.02]"
+            width="200"
+            height="56"
           />
         </a>
         <nav class="hidden md:flex gap-8 text-sm font-semibold tracking-wide text-tjb-gray" aria-label="Main">
