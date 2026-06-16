@@ -64,7 +64,7 @@ The decision between a hospital and a birth center is not just about risk tolera
 4. **How close is the nearest hospital?** If your birth center is 45 minutes from the nearest hospital, that transfer time matters. Ask about the center's transfer agreement and average transfer time.
 5. **Who is on your support team?** A doula can support you in either setting. Having someone who knows the space — whether that is a hospital L&D floor or a birth center birth suite — changes the experience entirely.
 
-Want help thinking through these questions? The <a href="/what-to-include-in-a-birth-plan/">birth plan guide</a> walks you through every preference, from pain management to postpartum care, so nothing gets left to chance.
+Want help thinking through these questions? The <a href="/blog/what-to-include-in-a-birth-plan/">birth plan guide</a> walks you through every preference, from pain management to postpartum care, so nothing gets left to chance.
 
 ## What a Doula Brings to Either Setting
 
@@ -82,7 +82,7 @@ For hospital births, your plan should address monitoring preferences, pain manag
 
 I created the <a href="/birth-plan-template/">free birth plan template</a> because I saw families walking into their births without anything written down and then feeling overwhelmed when decisions came fast. Do not let that be you. The template takes 15 minutes and covers everything from your first contraction to your first hours postpartum.
 
-And if you want to go even deeper on what to include — your pain management preferences, who cuts the cord, how you want the room to feel — the <a href="/what-to-include-in-a-birth-plan/">detailed birth plan guide</a> breaks it all down.
+And if you want to go even deeper on what to include — your pain management preferences, who cuts the cord, how you want the room to feel — the <a href="/blog/what-to-include-in-a-birth-plan/">detailed birth plan guide</a> breaks it all down.
 
 ## What If Plans Change?
 
@@ -90,7 +90,7 @@ One of the most important things I tell every family: your birth plan is a map, 
 
 If you start at a birth center and need to transfer, that is not a failure — it is the system working exactly as it should. Most birth center transfers are non-emergency and happen for reasons like prolonged labor or fatigue, not crisis. If you start at a hospital and end up needing a C-section, that does not mean your birth plan was pointless — it means you made informed decisions every step of the way.
 
-The goal is not a specific outcome. The goal is walking into your birth feeling informed, supported, and confident that you understand your options. That is what <a href="/what-to-include-in-a-birth-plan/">thoughtful birth planning</a> gives you.
+The goal is not a specific outcome. The goal is walking into your birth feeling informed, supported, and confident that you understand your options. That is what <a href="/blog/what-to-include-in-a-birth-plan/">thoughtful birth planning</a> gives you.
 
 ## Finding the Right Setting Near You
 

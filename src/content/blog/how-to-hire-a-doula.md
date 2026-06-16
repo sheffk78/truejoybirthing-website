@@ -106,7 +106,7 @@ A standard birth doula package usually includes:
 - 1 postpartum visit
 - Phone and text support throughout
 
-Some doulas offer expanded packages with extra prenatal visits, birth photography, [prenatal massage](/services/prenatal-massage/), or placenta encapsulation. Those cost more, obviously.
+Some doulas offer expanded packages with extra prenatal visits, birth photography, <a href="/doula-cost/">prenatal massage</a>, or placenta encapsulation. Those cost more, obviously.
 
 You should receive a written contract that spells out exactly what's included, the fee and payment schedule, backup doula arrangements, and what happens in various scenarios (early labor, cesarean, etc.). Read it. Ask questions about anything unclear. A good contract protects both of you.
 
@@ -118,6 +118,6 @@ For insurance: ask your doula for a superbill (a detailed receipt with billing c
 
 Hiring a doula doesn't have to be complicated. Start your search, ask the right questions, trust your gut, and don't settle for someone who makes you feel small or unclear. The right doula will make you feel more prepared — not more anxious.
 
-If you're looking for doula support in [Houston](/birth-support/houston-tx/), [Chicago](/birth-support/chicago-il/), or [Phoenix](/birth-support/phoenix-az/), I'd love to talk. You can also learn more about my [birth doula services](/services/birth-doula/) and [postpartum support](/services/postpartum-doula/) right here on the site.
+If you're looking for doula support in [Houston](/birth-support/houston-tx/), [Chicago](/birth-support/chicago-il/), or [Phoenix](/birth-support/phoenix-az/), I'd love to talk. You can also learn more about <a href="/what-is-a-doula/">what a birth doula does</a> and <a href="/postpartum-doula/">postpartum support</a> right here on the site.
 
 — Shelbi

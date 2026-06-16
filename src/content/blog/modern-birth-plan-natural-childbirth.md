@@ -22,7 +22,7 @@ More families than ever are choosing to labor without routine interventions. Tha
 
 When I sit down with clients, I hear the same thing over and over: "I want to feel like I was part of the decisions." Natural childbirth preferences aren't about ideology—they're about informed consent and bodily autonomy. You want to know why something is being recommended, what the alternatives are, and what happens if you wait. That's not controversial. That's standard of care.
 
-If you're not sure what specific preferences to include, <a href="/what-to-include-in-a-birth-plan/">this guide on what to include in a birth plan</a> walks you through every section.
+If you're not sure what specific preferences to include, <a href="/blog/what-to-include-in-a-birth-plan/">this guide on what to include in a birth plan</a> walks you through every section.
 
 ## What Makes a Birth Plan "Modern"
 
