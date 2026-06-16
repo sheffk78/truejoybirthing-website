@@ -1,5 +1,5 @@
 ---
-title: "Birth Plan Examples: Real Templates for Every Birth"
+title: "Birth Plan Examples: Templates for Every Birth"
 date: "2026-06-11"
 slug: "birth-plan-examples"
 author: "Shelbi Kohler"

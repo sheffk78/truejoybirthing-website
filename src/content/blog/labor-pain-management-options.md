@@ -1,5 +1,5 @@
 ---
-title: "Labor Pain Management Options: Your Complete Guide to Comfort During Birth"
+title: "Labor Pain Management Options: A Complete Guide"
 date: 2026-06-15
 slug: labor-pain-management-options
 author: "Shelbi Kohler"

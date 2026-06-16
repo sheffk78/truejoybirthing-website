@@ -1,5 +1,5 @@
 ---
-title: "Beyond the Birth: A Comprehensive Guide to Postpartum Emotional Care"
+title: "Postpartum Emotional Care: Recovery After Birth"
 date: "2026-06-15"
 slug: "postpartum-emotional-care"
 author: "Shelbi Kohler"
