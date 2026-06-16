@@ -5,6 +5,7 @@ slug: "postpartum-doula"
 author: "Shelbi Kohler"
 description: "What does a postpartum doula do? Learn how postpartum doula services help with newborn care, breastfeeding, sleep support, and recovery after birth."
 canonical: "https://truejoybirthing.com/blog/postpartum-doula/"
+featuredImage: "/images/postpartum-doula.webp"
 layout: "../../layouts/PostLayout.astro"
 ---
 

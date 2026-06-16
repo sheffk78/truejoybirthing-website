@@ -5,6 +5,7 @@ slug: "doula-insurance-coverage"
 author: "Shelbi Kohler"
 description: "Understand doula insurance coverage — what policies cover doula services, how liability insurance works, and what to ask your provider about birth support benefits."
 canonical: "https://truejoybirthing.com/blog/doula-insurance-coverage/"
+featuredImage: "/images/doula-meeting.webp"
 layout: "../../layouts/PostLayout.astro"
 ---
 

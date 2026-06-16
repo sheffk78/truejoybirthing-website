@@ -5,6 +5,7 @@ slug: "how-to-hire-a-doula"
 author: "Shelbi Kohler"
 description: "Learn how to hire a doula with confidence — what questions to ask, when to start your search, and how to find a doula who matches your birth preferences."
 canonical: "https://truejoybirthing.com/blog/how-to-hire-a-doula/"
+featuredImage: "/images/doula-meeting.webp"
 layout: "../../layouts/PostLayout.astro"
 ---
 

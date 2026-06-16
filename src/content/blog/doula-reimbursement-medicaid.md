@@ -5,6 +5,7 @@ slug: "doula-reimbursement-medicaid"
 author: "Shelbi Kohler"
 description: "Learn how Medicaid doula reimbursement works, which states cover doula services, and how doulas can get paid through Medicaid programs."
 canonical: "https://truejoybirthing.com/blog/doula-reimbursement-medicaid/"
+featuredImage: "/images/doula-meeting.webp"
 layout: "../../layouts/PostLayout.astro"
 ---
 

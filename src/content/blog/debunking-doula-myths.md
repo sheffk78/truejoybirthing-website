@@ -5,6 +5,7 @@ slug: "debunking-doula-myths"
 author: "Shelbi Kohler"
 description: "Common doula myths debunked — learn what doulas actually do (and don't do), whether they replace medical staff, and how doula support reduces C-section rates."
 canonical: "https://truejoybirthing.com/blog/debunking-doula-myths/"
+featuredImage: "/images/doula-teaching.webp"
 layout: "../../layouts/PostLayout.astro"
 ---
 

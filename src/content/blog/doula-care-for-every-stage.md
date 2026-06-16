@@ -5,6 +5,7 @@ slug: "doula-care-for-every-stage"
 author: "Shelbi Kohler"
 description: "Doula care supports you through every stage — pregnancy, labor, birth, and postpartum. Learn how continuous doula support improves outcomes at each phase."
 canonical: "https://truejoybirthing.com/blog/doula-care-for-every-stage/"
+featuredImage: "/images/doula-labor-support.webp"
 layout: "../../layouts/PostLayout.astro"
 ---
 

@@ -5,6 +5,7 @@ slug: "doula-covered-by-insurance"
 author: "Shelbi Kohler"
 description: "Is doula care covered by insurance? Guide to FSA/HSA reimbursement, which insurance plans cover doulas, and step-by-step instructions to get your claim paid."
 canonical: "https://truejoybirthing.com/blog/doula-covered-by-insurance/"
+featuredImage: "/images/doula-meeting.webp"
 layout: "../../layouts/PostLayout.astro"
 ---
 

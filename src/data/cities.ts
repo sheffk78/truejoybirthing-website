@@ -4375,7 +4375,7 @@ export const cities: Record<string, CityData> = {
     midwifeInfo: {
       paragraph: "California licenses Licensed Midwives (LMs) and Certified Nurse-Midwives (CNMs), with LMs attending home births and CNMs practicing in hospitals. California\u2019s Medi-Cal program covers doula services through the PAVE program, reimbursing around $1,587 per pregnancy. Fremont\u2019s East Bay location gives families access to both hospital-based midwifery at Washington Hospital and home birth midwives serving the wider Bay Area.",
       credentialTypes: " (LMs and CNMs)",
-      credentialDetail: "California\u2019s Licensed Midwife (LM) credential is one of the most established in the country, with clear regulations for out-of-hospital birth, meaning",
+      credentialDetail: "California\u2019s Licensed Midwife (LM) credential is one of the most established in the country, with clear regulations for out-of-hospital birth, meaning California families have more midwifery options than states that only license CNMs.",
     },
     costLow: 1500,
     costHigh: 3000,
@@ -4551,7 +4551,7 @@ export const cities: Record<string, CityData> = {
     midwifeInfo: {
       paragraph: "California licenses Licensed Midwives (LMs) and Certified Nurse-Midwives (CNMs), with LMs attending home births and CNMs practicing in hospitals. California's Medi-Cal program covers doula services through the PAVE program, reimbursing around $1,587 per pregnancy. Moreno Valley's Inland Empire location gives families access to Kaiser Permanente Moreno Valley Medical Center for hospital-based maternity care, as well as home birth midwives serving the wider IE region.",
       credentialTypes: " (LMs and CNMs)",
-      credentialDetail: "California's Licensed Midwife (LM) credential is one of the most established in the country, with clear regulations for out-of-hospital birth, meaning",
+      credentialDetail: "California's Licensed Midwife (LM) credential is one of the most established in the country, with clear regulations for out-of-hospital birth, meaning California families have more midwifery options than states that only license CNMs.",
     },
     costLow: 1200,
     costHigh: 2500,
@@ -4595,12 +4595,12 @@ export const cities: Record<string, CityData> = {
     heroImage: "/images/fontana-ca-birth-doula-skyline-v2.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-fontana-ca-v2.webp",
     enableBlogResources: true,
-    supportSceneAlt: "A doula walking alongside an expectant mom in Fontana, California",
-    supportSceneImage: "/images/doula-walking.webp",
+    supportSceneAlt: "A doula walking alongside an expectant mom on the Pacific Electric Trail in Fontana, with the San Gabriel Mountains in the distance",
+    supportSceneImage: "/images/fontana-support-scene.webp",
     midwifeInfo: {
       paragraph: "California licenses Licensed Midwives (LMs) and Certified Nurse-Midwives (CNMs), with LMs attending home births and CNMs practicing in hospitals. California's Medi-Cal program covers doula services through the PAVE program, reimbursing around $1,587 per pregnancy. Fontana's Inland Empire location gives families access to Kaiser Permanente Fontana Medical Center for hospital-based maternity care, as well as home birth midwives serving the wider IE region.",
       credentialTypes: " (LMs and CNMs)",
-      credentialDetail: "California's Licensed Midwife (LM) credential is one of the most established in the country, with clear regulations for out-of-hospital birth, meaning",
+      credentialDetail: "California's Licensed Midwife (LM) credential is one of the most established in the country, with clear regulations for out-of-hospital birth, meaning California families have more midwifery options than states that only license CNMs.",
     },
     costLow: 1200,
     costHigh: 2500,
@@ -4608,7 +4608,7 @@ export const cities: Record<string, CityData> = {
     culture: "Fontana is a rapidly growing Inland Empire city with Kaiser Permanente Fontana Medical Center as its primary maternity hospital. The birth community reflects the city's diverse, family-oriented population with a strong Spanish-speaking community. Kaiser members have access to contracted doula services at no extra cost through Kaiser's doula benefit program, making Fontana one of the most doula-accessible cities in the IE for families with Kaiser coverage.",
     heroLocalDetail: "At 38 weeks in Fontana, you're likely planning the drive to Kaiser Permanente Fontana Medical Center on Sierra Avenue near the 210 freeway. The 210 can back up significantly during commute hours, especially around the Sierra Avenue interchange. If you're delivering during rush hour, give yourself extra time. The Pacific Electric Trail and Southridge Park offer walking paths for those final-weeks strolls.",
     hospitalDetails: [
-      { name: "Kaiser Permanente Fontana Medical Center", paragraph: "Kaiser Permanente Fontana Medical Center offers comprehensive maternity care with private labor rooms and family-centered postpartum rooms, each with a private bathroom and shower. Kaiser members can access contracted doula services at no extra cost through Kaiser's doula benefit program. The hospital also offers CenteringPregnancy group prenatal care. Doulas are welcome. If you're delivering here, having your birth plan ready makes everything smoother. <a href=\\\"/birth-plan-template/\\\">Use our free hospital birth plan template</a> to get started.", address: "9961 Sierra Ave, Fontana, CA 92335", url: "https://healthy.kaiserpermanente.org/southern-california/facilities/Fontana-Medical-Center-100127" },
+      { name: "Kaiser Permanente Fontana Medical Center", thumbnail: "/images/kaiser-fontana-medical-center.webp", paragraph: "Kaiser Permanente Fontana Medical Center offers comprehensive maternity care with private labor rooms and family-centered postpartum rooms, each with a private bathroom and shower. Kaiser members can access contracted doula services at no extra cost through Kaiser's doula benefit program. The hospital also offers CenteringPregnancy group prenatal care. Doulas are welcome. If you're delivering here, having your birth plan ready makes everything smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started.", nicuLevel: "III", doulaPolicy: "Doulas welcome as support persons", midwifeFriendly: true, waterBirth: "Labor tubs available", medicaid: true, lactation: true, privateRooms: true, address: "9961 Sierra Ave, Fontana, CA 92335", url: "https://healthy.kaiserpermanente.org/southern-california/facilities/Fontana-Medical-Center-100127" },
     ],
     // Birth center search: NPI taxonomy 261QB0400X returned results for Fontana CA.
     // Google Maps search "birth center Fontana CA" found freestanding birth centers in the wider IE area.
@@ -4616,11 +4616,11 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
     ],
     localDoulas: [
-      { name: "Doula127 - Doula Services", credential: "Birth Doula", practice: "Doula127 - Doula Services", url: "https://www.iamdoula127.com", description: "Professional doula serving families in the Fontana area.", photo: "", costRange: "Contact for pricing", acceptingClients: false },
-      { name: "Holistic Doula LLC", credential: "Birth Doula", practice: "Holistic Doula LLC", url: "https://www.holistic-doula.com", description: "Acompañamiento integral y culturalmente sensible. Acompañamos a mujeres y familias latinas en cada etapa de la maternidad.", photo: "https://cdn.b12.io/client_media/fTG1dIFa/8eb8ac6d-9f0c-11f0-b54c-0242ac110002-png-regular_image.png", services: ["Birth Doula", "Postpartum", "Prenatal Care"], costRange: "Contact for pricing" },
-      { name: "4 The Moms Southern California Postpartum Doula Support", credential: "Postpartum Doula", practice: "4 The Moms Southern California Postpartum Doula Support", url: "https://www.4themoms.org", description: "A holistic, evidence-based postpartum doula service supporting families through the transitional period of the 4th trimester.", photo: "https://images.squarespace-cdn.com/content/v1/697814bdb7e6713bfeef8179/4c5454d8-c32c-4112-9456-fd3d83ef1189/Souther+California+Doula%2C+postpartum+doula%2C+birth+recovery%2C+day+shifts%2C+overnights%2C+insurance+options%2C+newborn+care.jpg", services: ["Postpartum", "Lactation", "Breastfeeding Support", "Overnight Care"], costRange: "Contact for pricing" },
-      { name: "Two Moons Doula Services", credential: "Birth Doula", practice: "Two Moons Doula Services", url: "https://m.yelp.com/biz/two-moons-doula-services-san-bernardino-county-3", description: "Professional doula serving families in San Bernardino County.", photo: "", costRange: "Contact for pricing", acceptingClients: false },
-      { name: "Raising Birth Doula Care", credential: "Birth Doula", practice: "Raising Birth Doula Care", url: "https://www.instagram.com/raisingbirthdoula", description: "Professional doula serving families in the Inland Empire.", costRange: "Contact for pricing" },
+      { name: "Doula127 - Doula Services", credential: "Birth Doula", practice: "Doula127 - Doula Services", url: "", description: "Doula127 provides birth doula support for families in the Fontana and Inland Empire area. Currently not accepting new clients.", photo: "", costRange: "Contact for pricing", acceptingClients: false },
+      { name: "Holistic Doula LLC", credential: "Birth Doula", practice: "Holistic Doula LLC", url: "https://www.holistic-doula.com", description: "Acompañamiento integral y culturalmente sensible. Acompañamos a mujeres y familias latinas en cada etapa de la maternidad.", photo: "/images/provider-fontana-ca-holistic-doula.webp", services: ["Birth Doula", "Postpartum", "Prenatal Care"], costRange: "Contact for pricing" },
+      { name: "4 The Moms Southern California Postpartum Doula Support", credential: "Postpartum Doula", practice: "4 The Moms Southern California Postpartum Doula Support", url: "https://www.4themoms.org", description: "A holistic, evidence-based postpartum doula service supporting families through the transitional period of the 4th trimester.", photo: "/images/provider-fontana-ca-4themoms.webp", services: ["Postpartum", "Lactation", "Breastfeeding Support", "Overnight Care"], costRange: "Contact for pricing" },
+      { name: "Two Moons Doula Services", credential: "Birth Doula", practice: "Two Moons Doula Services", url: "", description: "Formerly offered birth doula support, Bengkung belly binding, yoni steaming, and Closing of the Bones ceremonies in San Bernardino County. This practice is currently closed.", photo: "", costRange: "Contact for pricing", acceptingClients: false },
+      { name: "Raising Birth Doula Care", credential: "Birth Doula", practice: "Raising Birth Doula Care", url: "https://www.instagram.com/raisingbirthdoula", description: "Birth doula serving families in the Inland Empire. Contact via Instagram for availability and pricing.", costRange: "Contact for pricing" },
     ],
     medicaidNote: "Yes — California's Medi-Cal program covers doula services as a state benefit, with reimbursement rates around $1,587 per pregnancy. Families on Medi-Cal can access doula support through the PAVE (Providing Access and doula Viability through Equity) program. Kaiser Permanente members may also have access to contracted doula services at no extra cost. Ask your doula whether they accept Medi-Cal or are Kaiser-contracted.",
     insuranceNote: "In Fontana, many families have Kaiser Permanente coverage through the nearby Fontana Medical Center. Kaiser offers contracted doula services at no extra cost for eligible members. Doula coverage by other private insurers is expanding — check your specific plan for doula benefits. HSA and FSA funds can help cover out-of-pocket doula costs.",
@@ -4649,7 +4649,7 @@ export const cities: Record<string, CityData> = {
     midwifeInfo: {
       paragraph: "California licenses Licensed Midwives (LMs) and Certified Nurse-Midwives (CNMs), with LMs attending home births and CNMs practicing in hospitals. California's Medi-Cal program covers doula services through the PAVE program, reimbursing around $1,587 per pregnancy. San Bernardino's Inland Empire location gives families access to both hospital-based midwifery at St. Bernardine Medical Center and Community Hospital of San Bernardino, as well as home birth midwives serving the wider IE region.",
       credentialTypes: " (LMs and CNMs)",
-      credentialDetail: "California's Licensed Midwife (LM) credential is one of the most established in the country, with clear regulations for out-of-hospital birth, meaning",
+      credentialDetail: "California's Licensed Midwife (LM) credential is one of the most established in the country, with clear regulations for out-of-hospital birth, meaning California families have more midwifery options than states that only license CNMs.",
     },
     costLow: 1200,
     costHigh: 2500,
@@ -4666,7 +4666,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
     ],
     localDoulas: [
-      { name: "Doula127 - Doula Services", credential: "Birth Doula", practice: "Doula127 - Doula Services", url: "https://www.iamdoula127.com", description: "Professional doula serving families in the San Bernardino area.", costRange: "Contact for pricing" },
+      { name: "Doula127 - Doula Services", credential: "Birth Doula", practice: "Doula127 - Doula Services", url: "", description: "Professional doula serving families in the San Bernardino area.", photo: "", costRange: "Contact for pricing", acceptingClients: false },
       { name: "Holistic Doula LLC", credential: "Birth Doula", practice: "Holistic Doula LLC", url: "https://www.holistic-doula.com", description: "Acompañamiento integral y culturalmente sensible. Acompañamos a mujeres y familias latinas en cada etapa de la maternidad.", photo: "https://cdn.b12.io/client_media/fTG1dIFa/8eb8ac6d-9f0c-11f0-b54c-0242ac110002-png-regular_image.png", services: ["Birth Doula", "Postpartum", "Prenatal Care"], costRange: "Contact for pricing" },
       { name: "4 The Moms Southern California Postpartum Doula Support", credential: "Postpartum Doula", practice: "4 The Moms Southern California Postpartum Doula Support", url: "https://www.4themoms.org", description: "A holistic, evidence-based postpartum doula service supporting families through the transitional period of the 4th trimester.", photo: "https://images.squarespace-cdn.com/content/v1/697814bdb7e6713bfeef8179/4c5454d8-c32c-4112-9456-fd3d83ef1189/Souther+California+Doula%2C+postpartum+doula%2C+birth+recovery%2C+day+shifts%2C+overnights%2C+insurance+options%2C+newborn+care.jpg", services: ["Postpartum", "Lactation", "Breastfeeding Support", "Overnight Care"], costRange: "Contact for pricing" },
       { name: "Two Moons Doula Services", credential: "Birth Doula", practice: "Two Moons Doula Services", url: "https://m.yelp.com/biz/two-moons-doula-services-san-bernardino-county-3", description: "Professional doula serving families in San Bernardino County.", costRange: "Contact for pricing" },

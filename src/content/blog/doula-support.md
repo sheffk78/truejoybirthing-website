@@ -5,6 +5,7 @@ slug: "doula-support"
 author: "Shelbi Kohler"
 description: "Discover how doula support during labor and delivery provides emotional, physical, and advocacy help. Learn what a birth doula does from prenatal to postpartum."
 canonical: "https://truejoybirthing.com/blog/doula-support/"
+featuredImage: "/images/doula-labor-support.webp"
 layout: "../../layouts/PostLayout.astro"
 ---
 
