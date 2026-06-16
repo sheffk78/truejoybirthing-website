@@ -37,7 +37,7 @@ One mom I supported in Chicago told me that when her labor stalled at 6 centimet
 
 ## What a Birth Doula Does NOT Do
 
-This matters, because the line between a doula and a midwife trips people up all the time. I cover this in more detail in our <a href="/blog/doula-vs-midwife/">doula vs. midwife guide</a>, but here's the short version:
+This matters, because the line between a doula and a midwife trips people up all the time. I cover this in more detail in our <a href="/doula-vs-midwife/">doula vs. midwife guide</a>, but here's the short version:
 
 **A doula does not:**
 - Check your cervix or monitor the baby's heart rate

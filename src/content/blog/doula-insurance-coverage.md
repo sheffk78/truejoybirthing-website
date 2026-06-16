@@ -34,7 +34,7 @@ Professional liability insurance for doulas typically covers:
 - Legal defense costs if a claim is filed against the doula
 - Coverage across different birth settings — hospital, birth center, or home birth
 
-It does **not** cover medical advice or medical procedures. A doula is not a medical provider, and our insurance reflects that distinction. If you want to understand the difference, read [our breakdown of doulas vs. midwives](/blog/doula-vs-midwife/).
+It does **not** cover medical advice or medical procedures. A doula is not a medical provider, and our insurance reflects that distinction. If you want to understand the difference, read [our breakdown of doulas vs. midwives](/doula-vs-midwife/).
 
 ### How Doulas Get Liability Insurance
 

@@ -81,4 +81,4 @@ After you've interviewed two or three doulas, here's how to make your decision:
 
 When you're ready to start building your birth plan, the <a href="/birth-plan-template/">Joyful Birth Plan</a> walks you through every section — including who you want on your support team. You shouldn't have to figure this out alone.
 
-For more on choosing a doula, check our <a href="/blog/doula-near-me/">guide to finding a doula near you</a> and our <a href="/blog/doula-vs-midwife/">doula vs midwife comparison</a>.
+For more on choosing a doula, check our <a href="/blog/doula-near-me/">guide to finding a doula near you</a> and our <a href="/doula-vs-midwife/">doula vs midwife comparison</a>.

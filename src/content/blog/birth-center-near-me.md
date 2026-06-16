@@ -108,4 +108,4 @@ Many first-time parents choose birth centers successfully. The key factors are: 
 
 When you're ready to build your birth plan, the <a href="/birth-plan-template/">Joyful Birth Plan</a> walks you through every section — including preferences that work for birth centers, hospitals, and home births. You shouldn't have to figure this out alone.
 
-For more on choosing your birth setting, check our <a href="/blog/doula-vs-midwife/">doula vs midwife guide</a> and our <a href="/blog/hospital-birth-plan/">hospital birth plan guide</a>.
+For more on choosing your birth setting, check our <a href="/doula-vs-midwife/">doula vs midwife guide</a> and our <a href="/blog/hospital-birth-plan/">hospital birth plan guide</a>.

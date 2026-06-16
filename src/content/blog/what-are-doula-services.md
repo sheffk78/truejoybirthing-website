@@ -69,7 +69,7 @@ A doula is not a medical provider. I do not:
 
 If something goes wrong during labor, I don't step in clinically. I step in supportively — making sure you understand what's happening, helping you ask the right questions, and keeping you as calm and informed as possible while your medical team handles the situation.
 
-For a full breakdown of how doulas and midwives differ (because yes, people mix these up all the time), read our <a href="/blog/doula-vs-midwife/">doula vs midwife guide</a>.
+For a full breakdown of how doulas and midwives differ (because yes, people mix these up all the time), read our <a href="/doula-vs-midwife/">doula vs midwife guide</a>.
 
 ## How a Doula Is Different From a Midwife
 
@@ -81,7 +81,7 @@ A **doula** provides emotional, physical, and informational support. I don't del
 
 Think of it this way: your midwife or OB is focused on the clinical side — keeping you and your baby safe and healthy. I'm focused on the experience side — keeping you comfortable, informed, and supported. Many families hire both because they want the full picture.
 
-For more on this, our <a href="/blog/doula-vs-midwife/">doula vs midwife comparison</a> goes into detail on training, scope, cost, and how the roles work together.
+For more on this, our <a href="/doula-vs-midwife/">doula vs midwife comparison</a> goes into detail on training, scope, cost, and how the roles work together.
 
 ## What the Research Says About Doula Support
 
