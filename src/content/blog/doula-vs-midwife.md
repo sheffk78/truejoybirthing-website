@@ -1,5 +1,5 @@
 ---
-title: "Doula vs Midwife: What's the Difference and Which One Is Right for You"
+title: "Doula vs Midwife: What's the Difference?"
 date: "2026-06-11"
 slug: "doula-vs-midwife"
 author: "Shelbi Kohler"

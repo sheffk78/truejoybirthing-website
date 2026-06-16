@@ -1,5 +1,5 @@
 ---
-title: "Postpartum Doula Cost: What to Expect and How to Afford It"
+title: "Postpartum Doula Cost: What to Expect"
 date: "2026-06-11"
 slug: "postpartum-doula-cost"
 author: "Shelbi Kohler"

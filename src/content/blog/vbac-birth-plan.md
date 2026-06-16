@@ -1,5 +1,5 @@
 ---
-title: "VBAC Birth Plan: What to Include When Planning a Vaginal Birth After Cesarean"
+title: "VBAC Birth Plan: What to Include for VBAC"
 date: "2026-06-10"
 slug: "vbac-birth-plan"
 author: "Shelbi Kohler"

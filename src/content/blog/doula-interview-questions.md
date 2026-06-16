@@ -1,5 +1,5 @@
 ---
-title: "Doula Interview Questions: What to Ask Before Hiring"
+title: "Doula Interview Questions: What to Ask"
 date: "2026-06-11"
 slug: "doula-interview-questions"
 author: "Shelbi Kohler"

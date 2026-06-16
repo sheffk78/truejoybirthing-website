@@ -1,5 +1,5 @@
 ---
-title: "Doula Support: How a Birth Doula Helps During Labor and Delivery"
+title: "Doula Support: How a Birth Doula Helps"
 date: "2024-12-09"
 slug: "doula-support"
 author: "Shelbi Kohler"

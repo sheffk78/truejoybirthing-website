@@ -1,5 +1,5 @@
 ---
-title: "What Are Doula Services? Everything a Doula Provides"
+title: "What Are Doula Services? What a Doula Provides"
 date: "2024-12-09"
 slug: "what-are-doula-services"
 author: "Shelbi Kohler"

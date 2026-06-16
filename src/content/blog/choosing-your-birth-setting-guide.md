@@ -1,5 +1,5 @@
 ---
-title: "Beyond the Hospital Room: Choosing Your Birth Setting Guide"
+title: "Beyond the Hospital Room: Choosing a Birth Setting"
 date: 2026-06-14
 slug: choosing-your-birth-setting-guide
 description: "A comprehensive guide to choosing between hospital birth and birth center, including the pros, cons, and ideal patient profiles for each setting."

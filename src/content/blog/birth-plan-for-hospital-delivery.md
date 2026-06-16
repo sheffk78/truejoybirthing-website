@@ -1,5 +1,5 @@
 ---
-title: "Hospital Birth Plan Template: What to Include for Every Delivery Room"
+title: "Hospital Birth Plan Template: What to Include"
 date: "2025-06-01"
 slug: "birth-plan-for-hospital-delivery"
 author: "Shelbi Kohler"

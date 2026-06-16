@@ -1,5 +1,5 @@
 ---
-title: "Hospital Birth Plan: What to Include and How to Write One"
+title: "Hospital Birth Plan: What to Include"
 date: "2026-06-11"
 slug: "hospital-birth-plan"
 author: "Shelbi Kohler"

@@ -1,5 +1,5 @@
 ---
-title: "What to Include in a Birth Plan: A Complete Section-by-Section Guide"
+title: "What to Include in a Birth Plan: A Complete Guide"
 date: "2025-06-01"
 slug: "what-to-include-in-a-birth-plan"
 author: "Shelbi Kohler"

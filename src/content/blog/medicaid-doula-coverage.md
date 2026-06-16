@@ -1,5 +1,5 @@
 ---
-title: "Does Medicaid Cover Doula Services? State-by-State Guide"
+title: "Does Medicaid Cover Doula Services? State Guide"
 date: "2026-06-11"
 slug: "medicaid-doula-coverage"
 author: "Shelbi Kohler"

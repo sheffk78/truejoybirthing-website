@@ -1,5 +1,5 @@
 ---
-title: "Doula Care for Every Stage of Pregnancy, Birth, and Postpartum"
+title: "Doula Care for Every Stage of Pregnancy and Birth"
 date: "2024-12-09"
 slug: "doula-care-for-every-stage"
 author: "Shelbi Kohler"

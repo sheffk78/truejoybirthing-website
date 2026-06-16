@@ -1,5 +1,5 @@
 ---
-title: "Birthing Center vs. Hospital: Which Setting Matches Your Birth Plan?"
+title: "Birthing Center vs. Hospital: Which Setting Fits?"
 date: 2026-06-14
 slug: birthing-setting-comparison
 description: "Compare birthing centers and hospitals to find the right setting for your birth plan — covering medical support, comfort, costs, and what each option offers."

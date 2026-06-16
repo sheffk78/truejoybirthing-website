@@ -1,5 +1,5 @@
 ---
-title: "Natural Birth Plan: How to Plan for an Unmedicated Birth in Any Setting"
+title: "Natural Birth Plan: Planning for Unmedicated Birth"
 date: "2026-06-10"
 slug: "natural-birth-plan"
 author: "Shelbi Kohler"

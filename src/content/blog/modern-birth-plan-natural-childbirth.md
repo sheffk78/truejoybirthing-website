@@ -1,5 +1,5 @@
 ---
-title: "The Modern Birth Plan: Prioritizing Your Needs in Natural Childbirth"
+title: "The Modern Birth Plan: Prioritizing Your Needs"
 date: 2026-06-14
 slug: modern-birth-plan-natural-childbirth
 description: "Learn how to create a comprehensive, realistic birth plan that respects your unique preferences while ensuring the best outcomes for you and your baby."
