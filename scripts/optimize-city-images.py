@@ -34,6 +34,7 @@ Budget targets:
 
 import subprocess, sys, os, json
 from pathlib import Path
+from typing import Optional
 from PIL import Image
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -76,7 +77,7 @@ BUDGETS = {
 RESPONSIVE_WIDTHS = [600, 1200]  # Generate both widths for hero
 
 
-def run_exiftool(path: Path, extra_args: list[str] | None = None) -> bool:
+def run_exiftool(path: Path, extra_args: Optional[list[str]] = None) -> bool:
     """Run exiftool on a file with IPTC args. Returns True on success."""
     args = ['exiftool'] + IPTC_ARGS
     if extra_args:
@@ -115,7 +116,7 @@ def reencode_webp(path: Path, quality: int) -> tuple[int, int]:
     return old_size, new_size
 
 
-def generate_responsive_variant(src_path: Path, width: int, quality: int, suffix: str) -> Path | None:
+def generate_responsive_variant(src_path: Path, width: int, quality: int, suffix: str) -> Optional[Path]:
     """
     Generate a width-limited variant of an image.
     suffix e.g., '-600' → {stem}-600{ext}
@@ -140,7 +141,7 @@ def generate_responsive_variant(src_path: Path, width: int, quality: int, suffix
         return None
 
 
-def generate_avif_variant(src_path: Path, quality: int) -> Path | None:
+def generate_avif_variant(src_path: Path, quality: int) -> Optional[Path]:
     """Generate an AVIF variant next to the source file."""
     try:
         img = Image.open(src_path)
@@ -201,7 +202,7 @@ def optimize_city_images(slug: str) -> dict:
     # Source formats to check (in priority order) when .webp doesn't exist
     SOURCE_FORMATS = ['.png', '.jpg', '.jpeg']
 
-    def _resolve_source(fname: str, directory: Path) -> Path | None:
+    def _resolve_source(fname: str, directory: Path) -> Optional[Path]:
         """Resolve actual source file: prefer .webp, fall back to PNG/JPEG conversion."""
         path = directory / fname
         if path.exists():
