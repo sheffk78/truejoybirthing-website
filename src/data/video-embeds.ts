@@ -93,4 +93,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M27S",
     uploadDate: "2026-06-17T00:00:00-06:00",
   },
+  "beaumont-tx": {
+    videoId: "Mi8juGEzesM",
+    title: "Beaumont TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 4 minutes.",
+    duration: "PT3M09S",
+    uploadDate: "2026-06-17T00:00:00-06:00",
+  },
 };
