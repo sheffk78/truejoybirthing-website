@@ -1936,7 +1936,7 @@ export const cities: Record<string, CityData> = {
     enableBlogResources: true,
     heroImage: "/images/cary-nc-birth-doula-skyline.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-cary-nc.webp",
-    supportSceneImage: "/images/cary-support-scene.webp",
+    supportSceneImage: "/images/cary-nc-birth-doula-support.webp",
     supportSceneAlt: "A doula walking alongside an expectant mom in Cary: North Carolina birth support",
     midwifeInfo: {
       paragraph: "North Carolina licenses Certified Professional Midwives (CPMs) through the NC Midwifery Joint Committee, and Certified Nurse-Midwives (CNMs) through the NC Board of Nursing. That means if you're planning a home birth or birth center birth in {city}, your midwife operates under a state-regulated license. CNMs practice in all major Triangle hospitals, including WakeMed Cary, UNC REX, and Duke, so hospital-based midwifery care is widely available for {city} families.",
