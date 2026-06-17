@@ -10,12 +10,13 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
   canonical="https://truejoybirthing.com/privacy/"
   breadcrumbList={breadcrumbList}
   schema={{
-    "@type": "WebPage",
-    "name": "Privacy Policy",
-    "description": "Privacy Policy for True Joy Birthing products and services.",
-    "url": "https://truejoybirthing.com/privacy"
-  }}
->
+    "@graph": [{
+      "@type": "WebPage",
+      "name": "Privacy Policy",
+      "description": "Privacy Policy for True Joy Birthing products and services.",
+      "url": "https://truejoybirthing.com/privacy"
+    }]
+  }}>
   <!-- Hero -->
   <section class="bg-tjb-cream pt-16 pb-12">
     <div class="max-w-3xl mx-auto px-6 text-center">

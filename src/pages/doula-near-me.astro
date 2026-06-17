@@ -68,9 +68,10 @@ const faqSchema = {
   description="Looking for a doula near you? Find local doula support, understand costs, and see if Medicaid covers doulas in your state. Free birth plan included."
   canonical="https://truejoybirthing.com/doula-near-me/"
   breadcrumbList={breadcrumbList}
-  ogImage="/images/og-doula-near-me.webp"
-  schema={faqSchema}
->
+  ogImage="/images/og/og-doula-near-me.png"
+  schema={{
+    "@graph": [faqSchema]
+  }}>
 
   <!-- Hero — Split Layout (55% text / 45% image) -->
   <section class="bg-tjb-cream pt-16 pb-12">

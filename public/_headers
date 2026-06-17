@@ -5,10 +5,11 @@
   Cache-Control: public, max-age=31536000, immutable
 
 /images/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=31536000, immutable, no-transform
+  CDN-Cache-Control: public, max-age=31536000, immutable, no-transform
 
 /*.webp
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=31536000, immutable, no-transform
 
 /*.png
   Cache-Control: public, max-age=31536000, immutable

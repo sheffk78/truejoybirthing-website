@@ -14,11 +14,12 @@ const breadcrumbList = [
   description="Learn what freestanding birth centers offer, how they differ from hospitals, and where to find one near you. Free birth plan template included."
   canonical="https://truejoybirthing.com/birth-center-near-me/"
   breadcrumbList={breadcrumbList}
-  ogImage="/images/og-birth-center-near-me.webp"
+  ogImage="/images/og/og-birth-center-near-me.png"
   schema={{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [{
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
       {
         "@type": "Question",
         "name": "What's the difference between a birth center and a hospital?",
@@ -68,9 +69,9 @@ const breadcrumbList = [
         }
       }
     ]
-  }}
+    }]
+  }}>
 >
-
   <!-- Hero — Split Layout (55% text / 45% image) -->
   <section class="bg-tjb-cream pt-16 pb-12">
     <div class="max-w-6xl mx-auto px-6">

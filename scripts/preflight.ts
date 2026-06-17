@@ -95,42 +95,83 @@ function run(): void {
     results.push({ gate: 'G3', status: 'SKIP', detail: 'Skipping full build for targeted check' });
   }
 
-  // ── G4: OG image exists, ≥30KB, no -v2 suffix ──
+  // ── G4: OG image exists, ≥10KB ──
+  // -v2 (and -v3, -v4, etc.) variants are INTENTIONAL CDN cache-busting suffixes.
+  // Cloudflare Pages sets 1-year immutable cache on static assets, so renaming
+  // the file is the only way to force a fresh serve. The preflight accepts any
+  // variant that exists and is ≥10KB.
   const checkOgs = targetSlug ? [targetSlug] : getCitySlugs();
   let ogPass = true;
   for (const slug of checkOgs) {
-    const canonicalPath = `public/images/og-city-${slug}.webp`;
-    const fullPath = path.join(PROJECT_DIR, canonicalPath);
+    // Check all variants: canonical, -v2, -v3, etc.
+    const dir = path.join(PROJECT_DIR, 'public/images');
+    const pattern = new RegExp(`^og-city-${slug}(-v\\d+)?\\.webp$`);
+    const files = fs.readdirSync(dir).filter(f => pattern.test(f));
 
-    if (!fs.existsSync(fullPath)) {
-      results.push({ gate: 'G4', status: 'FAIL', detail: `OG missing: ${canonicalPath}` });
+    if (files.length === 0) {
+      results.push({ gate: 'G4', status: 'FAIL', detail: `OG missing for ${slug} (no variant found)` });
       ogPass = false;
       continue;
     }
 
+    // Use the highest-variant file (most recent)
+    files.sort();
+    const bestFile = files[files.length - 1];
+    const fullPath = path.join(dir, bestFile);
     const size = fs.statSync(fullPath).size;
-    // Relaxed threshold: typographic-only OG images often land at 18-28KB.
-    // The real requirement is visual quality, not file size.
-    if (size < 10000) {
-      results.push({ gate: 'G4', status: 'FAIL', detail: `OG too small (${size} bytes): ${canonicalPath}` });
-      ogPass = false;
-    }
 
-    // Check for -v2 variants that shouldn't exist
-    const v2Path = `public/images/og-city-${slug}-v2.webp`;
-    if (fs.existsSync(path.join(PROJECT_DIR, v2Path))) {
-      results.push({ gate: 'G4', status: 'FAIL', detail: `Stale -v2 variant found: ${v2Path}. Delete it.` });
+    if (size < 10000) {
+      results.push({ gate: 'G4', status: 'FAIL', detail: `OG too small (${size} bytes): ${bestFile}` });
       ogPass = false;
+    } else {
+      // Verify the file decodes correctly (not corrupted)
+      try {
+        execSync(`python3 -c "from PIL import Image; Image.open('${fullPath}').verify()"`, { timeout: 5000 });
+      } catch {
+        results.push({ gate: 'G4', status: 'FAIL', detail: `OG corrupted (decode error): ${bestFile}` });
+        ogPass = false;
+      }
     }
   }
-  if (ogPass && !results.some(r => r.gate === 'G4' && r.status === 'FAIL')) {
-    results.push({ gate: 'G4', status: 'PASS', detail: `${checkOgs.length} OG(s) exist, ≥30KB, no -v2 variants` });
+  if (ogPass) {
+    results.push({ gate: 'G4', status: 'PASS', detail: `${checkOgs.length} OG(s) exist, ≥10KB, decodable` });
   }
 
   // ── V1: No phantom verified badges (isVerified must be explicitly boolean) ──
+  // Scoped to the target city block when a slug is provided, to avoid false
+  // positives from legitimate verified providers in other cities.
   try {
     const citiesContent = fs.readFileSync(path.join(PROJECT_DIR, 'src/data/cities.ts'), 'utf-8');
-    const verifiedMatches = citiesContent.match(/isVerified:\s*[^,\n}]+/g) || [];
+    let searchBlock = citiesContent;
+
+    if (targetSlug) {
+      // Scope to the target city's block only
+      const slugMatch = citiesContent.match(new RegExp(`"${targetSlug}":\\s*\\{`));
+      if (slugMatch) {
+        const blockStart = slugMatch.index!;
+        // Find the closing of this city block (next top-level `},` or end of file)
+        let depth = 0;
+        let blockEnd = citiesContent.length;
+        for (let i = blockStart; i < citiesContent.length; i++) {
+          const c = citiesContent[i];
+          if (c === '{') depth++;
+          else if (c === '}') {
+            depth--;
+            if (depth === 0) {
+              // Check if next non-whitespace is a comma (end of city block)
+              const rest = citiesContent.slice(i + 1).trimStart();
+              if (rest.startsWith(',')) {
+                blockEnd = i + 1 + (citiesContent.length - citiesContent.slice(i + 1).length - rest.length) + 1;
+                break;
+              }
+            }
+          }
+        }
+        searchBlock = citiesContent.slice(blockStart, blockEnd);
+      }
+    }
+
+    const verifiedMatches = searchBlock.match(/isVerified:\s*[^,\n}]+/g) || [];
     const badVerifications: string[] = [];
     for (const match of verifiedMatches) {
       const val = match.replace('isVerified:', '').trim();
@@ -139,10 +180,10 @@ function run(): void {
       }
     }
     if (badVerifications.length > 0) {
-      results.push({ gate: 'V1', status: 'FAIL', detail: `${badVerifications.length} provider(s) have isVerified: true. Only set after positive outreach response.` });
+      results.push({ gate: 'V1', status: 'FAIL', detail: `${badVerifications.length} provider(s) in ${targetSlug || 'all cities'} have isVerified: true. Only set after positive outreach response.` });
       badVerifications.forEach(v => results.push({ gate: 'V1', status: 'FAIL', detail: `  ${v}` }));
     } else {
-      results.push({ gate: 'V1', status: 'PASS', detail: 'No phantom verified badges — isVerified: true not found in any city data' });
+      results.push({ gate: 'V1', status: 'PASS', detail: `No phantom verified badges in ${targetSlug || 'all cities'}` });
     }
   } catch {
     results.push({ gate: 'V1', status: 'SKIP', detail: 'Could not read cities.ts for verification audit' });
@@ -252,6 +293,217 @@ function run(): void {
     } else {
       results.push({ gate: 'A4', status: 'FAIL', detail: 'Title check command failed' });
     }
+  }
+
+  // ── G18: YouTube embed returns 200 (not deleted/unlisted) ──
+  if (targetSlug) {
+    try {
+      const cityBlock = execSync(
+        `awk '/slug: "${targetSlug}"/{p=1} p; /^  },/{if(p) exit}' src/data/cities.ts`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+      // Look for YouTube embed URL in the dist HTML
+      const distFile = `dist/birth-support/${targetSlug}/index.html`;
+      if (fs.existsSync(path.join(PROJECT_DIR, distFile))) {
+        const html = fs.readFileSync(path.join(PROJECT_DIR, distFile), 'utf-8');
+        const ytMatch = html.match(/youtube-nocookie\.com\/embed\/([a-zA-Z0-9_-]+)/);
+        if (ytMatch) {
+          const videoId = ytMatch[1];
+          try {
+            const ytResult = execSync(
+              `curl -sI "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json" | head -1`,
+              { timeout: 10000, encoding: 'utf-8' }
+            );
+            if (ytResult.includes('200')) {
+              results.push({ gate: 'G18', status: 'PASS', detail: `YouTube embed ${videoId} is accessible` });
+            } else {
+              results.push({ gate: 'G18', status: 'FAIL', detail: `YouTube video ${videoId} returned non-200 — may be deleted or unlisted` });
+            }
+          } catch {
+            results.push({ gate: 'G18', status: 'SKIP', detail: 'Could not verify YouTube embed (network issue)' });
+          }
+        } else {
+          results.push({ gate: 'G18', status: 'SKIP', detail: 'No YouTube embed found in dist HTML' });
+        }
+      } else {
+        results.push({ gate: 'G18', status: 'SKIP', detail: 'Dist HTML not found (run build first)' });
+      }
+    } catch {
+      results.push({ gate: 'G18', status: 'SKIP', detail: 'Could not check YouTube embed' });
+    }
+  } else {
+    results.push({ gate: 'G18', status: 'SKIP', detail: 'Skipping YouTube embed check in audit mode (run with slug)' });
+  }
+
+  // ── G19: All provider photos return 200 on live URL ──
+  if (targetSlug) {
+    try {
+      const distFile = `dist/birth-support/${targetSlug}/index.html`;
+      if (fs.existsSync(path.join(PROJECT_DIR, distFile))) {
+        const html = fs.readFileSync(path.join(PROJECT_DIR, distFile), 'utf-8');
+        // Find all image src attributes
+        const imgMatches = html.matchAll(/src="([^"]+\.webp)"/g);
+        const providerPhotos = [...imgMatches]
+          .map(m => m[1])
+          .filter(src => src.includes('/images/') && !src.includes('og-city-') && !src.includes('logo'));
+
+        let brokenCount = 0;
+        for (const src of providerPhotos) {
+          const localPath = path.join(PROJECT_DIR, 'public', src.replace(/^\//, ''));
+          if (!fs.existsSync(localPath)) {
+            brokenCount++;
+            results.push({ gate: 'G19', status: 'FAIL', detail: `Missing on disk: ${src}` });
+          } else {
+            const size = fs.statSync(localPath).size;
+            if (size < 1000) {
+              brokenCount++;
+              results.push({ gate: 'G19', status: 'FAIL', detail: `Too small (${size}B): ${src}` });
+            }
+          }
+        }
+
+        if (brokenCount === 0) {
+          results.push({ gate: 'G19', status: 'PASS', detail: `All ${providerPhotos.length} provider/hospital photos exist on disk, ≥1KB` });
+        }
+      } else {
+        results.push({ gate: 'G19', status: 'SKIP', detail: 'Dist HTML not found (run build first)' });
+      }
+    } catch {
+      results.push({ gate: 'G19', status: 'SKIP', detail: 'Could not check provider photos' });
+    }
+  } else {
+    results.push({ gate: 'G19', status: 'SKIP', detail: 'Skipping provider photo check in audit mode (run with slug)' });
+  }
+
+  // ── G20: All hospital/birth center thumbnails exist on disk ──
+  if (targetSlug) {
+    try {
+      const cityBlock = execSync(
+        `awk '/slug: "${targetSlug}"/{p=1} p; /^  },/{if(p) exit}' src/data/cities.ts`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+
+      // Find all thumbnail references
+      const thumbMatches = cityBlock.matchAll(/thumbnail:\s*"([^"]+)"/g);
+      const thumbnails = [...thumbMatches].map(m => m[1]);
+      let missingThumbs = 0;
+
+      for (const thumb of thumbnails) {
+        const localPath = path.join(PROJECT_DIR, 'public', thumb.replace(/^\//, ''));
+        if (!fs.existsSync(localPath)) {
+          missingThumbs++;
+          results.push({ gate: 'G20', status: 'FAIL', detail: `Thumbnail missing on disk: ${thumb}` });
+        } else {
+          const size = fs.statSync(localPath).size;
+          if (size < 1000) {
+            missingThumbs++;
+            results.push({ gate: 'G20', status: 'FAIL', detail: `Thumbnail too small (${size}B): ${thumb}` });
+          }
+        }
+      }
+
+      if (thumbnails.length === 0) {
+        results.push({ gate: 'G20', status: 'SKIP', detail: 'No hospital/birth center thumbnails found' });
+      } else if (missingThumbs === 0) {
+        results.push({ gate: 'G20', status: 'PASS', detail: `All ${thumbnails.length} thumbnails exist on disk, ≥1KB` });
+      }
+    } catch {
+      results.push({ gate: 'G20', status: 'SKIP', detail: 'Could not check thumbnails' });
+    }
+  } else {
+    results.push({ gate: 'G20', status: 'SKIP', detail: 'Skipping thumbnail check in audit mode (run with slug)' });
+  }
+
+  // ── G21: Hero, OG, and YT thumbnail are distinct files ──
+  if (targetSlug) {
+    try {
+      const dir = path.join(PROJECT_DIR, 'public/images');
+      const heroPattern = new RegExp(`^${targetSlug}-birth-doula`);
+      const ogPattern = new RegExp(`^og-city-${targetSlug}(-v\\d+)?\\.webp$`);
+
+      const heroFiles = fs.readdirSync(dir).filter(f => heroPattern.test(f));
+      const ogFiles = fs.readdirSync(dir).filter(f => ogPattern.test(f));
+
+      if (heroFiles.length > 0 && ogFiles.length > 0) {
+        // Sort to get the latest variant
+        heroFiles.sort();
+        ogFiles.sort();
+        const heroPath = path.join(dir, heroFiles[heroFiles.length - 1]);
+        const ogPath = path.join(dir, ogFiles[ogFiles.length - 1]);
+
+        const heroSize = fs.statSync(heroPath).size;
+        const ogSize = fs.statSync(ogPath).size;
+
+        // If they're the same file size, they might be the same image
+        // This is a heuristic — not perfect, but catches the obvious case
+        if (heroSize === ogSize) {
+          // Do a byte-level comparison
+          const heroBuf = fs.readFileSync(heroPath);
+          const ogBuf = fs.readFileSync(ogPath);
+          if (heroBuf.equals(ogBuf)) {
+            results.push({ gate: 'G21', status: 'FAIL', detail: `Hero and OG images are identical files (${heroFiles[heroFiles.length - 1]} == ${ogFiles[ogFiles.length - 1]})` });
+          } else {
+            results.push({ gate: 'G21', status: 'PASS', detail: 'Hero and OG images are distinct files' });
+          }
+        } else {
+          results.push({ gate: 'G21', status: 'PASS', detail: 'Hero and OG images are distinct files (different sizes)' });
+        }
+      } else {
+        results.push({ gate: 'G21', status: 'SKIP', detail: 'Could not find hero or OG image files for comparison' });
+      }
+    } catch {
+      results.push({ gate: 'G21', status: 'SKIP', detail: 'Could not compare hero/OG images' });
+    }
+  } else {
+    results.push({ gate: 'G21', status: 'SKIP', detail: 'Skipping image distinctness check in audit mode (run with slug)' });
+  }
+
+  // ── G22: YouTube thumbnail is branded (not auto-generated) ──
+  if (targetSlug) {
+    try {
+      const distFile = `dist/birth-support/${targetSlug}/index.html`;
+      if (fs.existsSync(path.join(PROJECT_DIR, distFile))) {
+        const html = fs.readFileSync(path.join(PROJECT_DIR, distFile), 'utf-8');
+        const ytMatch = html.match(/youtube-nocookie\.com\/embed\/([a-zA-Z0-9_-]+)/);
+        if (ytMatch) {
+          const videoId = ytMatch[1];
+          // Check if a branded thumbnail file exists locally
+          const ytThumbPattern = new RegExp(`^yt-thumbnail-${targetSlug}(-v\\d+)?\\.(webp|jpg|png)$`);
+          const ytThumbFiles = fs.readdirSync(path.join(PROJECT_DIR, 'public/images')).filter(f => ytThumbPattern.test(f));
+
+          if (ytThumbFiles.length > 0) {
+            results.push({ gate: 'G22', status: 'PASS', detail: `Branded YouTube thumbnail found: ${ytThumbFiles.join(', ')}` });
+          } else {
+            // Check if the YouTube API returns a custom thumbnail (not auto-generated)
+            try {
+              const ytResult = execSync(
+                `curl -s "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json"`,
+                { timeout: 10000, encoding: 'utf-8' }
+              );
+              const ytData = JSON.parse(ytResult);
+              const thumbUrl = ytData.thumbnail_url || '';
+              // Auto-generated thumbnails follow the pattern hqdefault.jpg
+              // Custom thumbnails have a different URL pattern
+              if (thumbUrl.includes('hqdefault')) {
+                results.push({ gate: 'G22', status: 'FAIL', detail: `YouTube thumbnail is auto-generated (hqdefault pattern) for video ${videoId}. Upload a branded thumbnail.` });
+              } else {
+                results.push({ gate: 'G22', status: 'PASS', detail: `YouTube thumbnail appears custom for video ${videoId}` });
+              }
+            } catch {
+              results.push({ gate: 'G22', status: 'SKIP', detail: 'Could not verify YouTube thumbnail type' });
+            }
+          }
+        } else {
+          results.push({ gate: 'G22', status: 'SKIP', detail: 'No YouTube embed found' });
+        }
+      } else {
+        results.push({ gate: 'G22', status: 'SKIP', detail: 'Dist HTML not found (run build first)' });
+      }
+    } catch {
+      results.push({ gate: 'G22', status: 'SKIP', detail: 'Could not check YouTube thumbnail' });
+    }
+  } else {
+    results.push({ gate: 'G22', status: 'SKIP', detail: 'Skipping YT thumbnail check in audit mode (run with slug)' });
   }
 
   // ── Print summary ──

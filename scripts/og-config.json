@@ -1,0 +1,270 @@
+{
+  "_description": "TJB OG Image Configuration",
+  "_patterns": {
+    "A": "Text-only cream-to-lavender gradient (pillar pages, service pages)",
+    "B": "Split layout with hero photo (city pages — Denver-style)"
+  },
+  "pages": [
+    {
+      "slug": "what-is-a-doula",
+      "label": "What Is a Doula",
+      "pattern": "A",
+      "eyebrow": "Doula Guide",
+      "headline": "What Is a Doula?<br>Your Complete Guide",
+      "tagline": "Understand the role, the training, and why doulas matter for better birth outcomes. Free birth plan template included.",
+      "bullets": "Role & Training <span>·</span> Benefits <span>·</span> How to Find One <span>·</span> Free Template"
+    },
+    {
+      "slug": "how-to-choose-a-doula",
+      "label": "How to Choose a Doula",
+      "pattern": "A",
+      "eyebrow": "Doula Guide",
+      "headline": "How to Choose a Doula<br>That Fits Your Family",
+      "tagline": "Questions to ask, red flags to watch, and how to find the right doula for your birth preferences and budget.",
+      "bullets": "Interview Questions <span>·</span> Red Flags <span>·</span> Budget Tips <span>·</span> Free Template"
+    },
+    {
+      "slug": "doula-cost",
+      "label": "Doula Cost Guide",
+      "pattern": "A",
+      "eyebrow": "Doula Guide",
+      "headline": "How Much Does a<br>Doula Cost?",
+      "tagline": "Average doula fees by region, what's included, payment plans, and whether insurance or Medicaid covers doula services.",
+      "bullets": "Average Fees <span>·</span> Regional Costs <span>·</span> Insurance <span>·</span> Payment Plans"
+    },
+    {
+      "slug": "doula-vs-midwife",
+      "label": "Doula vs Midwife",
+      "pattern": "A",
+      "eyebrow": "Birth Team Guide",
+      "headline": "Doula vs Midwife:<br>What's the Difference?",
+      "tagline": "Roles, training, costs, and when you need one, the other, or both. Clear comparison for building your birth team.",
+      "bullets": "Roles Compared <span>·</span> Training <span>·</span> Costs <span>·</span> Can You Have Both?"
+    },
+    {
+      "slug": "medicaid-doula-coverage",
+      "label": "Medicaid Doula Coverage",
+      "pattern": "A",
+      "eyebrow": "Insurance Guide",
+      "headline": "Does Medicaid Cover<br>Doula Services?",
+      "tagline": "State-by-state guide to Medicaid doula coverage, reimbursement rates, and how to find a doula who accepts Medicaid.",
+      "bullets": "State-by-State <span>·</span> Reimbursement <span>·</span> How to Qualify <span>·</span> Find a Doula"
+    },
+    {
+      "slug": "doula-certification",
+      "label": "Doula Certification",
+      "pattern": "A",
+      "eyebrow": "Career Guide",
+      "headline": "How to Become a<br>Certified Doula",
+      "tagline": "Certification options, training programs, costs, and first steps. Complete guide for aspiring birth doulas.",
+      "bullets": "Training Programs <span>·</span> Costs <span>·</span> Timeline <span>·</span> First Clients"
+    },
+    {
+      "slug": "doula-interview-questions",
+      "label": "Doula Interview Questions",
+      "pattern": "A",
+      "eyebrow": "Doula Guide",
+      "headline": "Questions to Ask<br>When Interviewing a Doula",
+      "tagline": "The right questions to find a doula who matches your values, birth preferences, and personality.",
+      "bullets": "Must-Ask Questions <span>·</span> Red Flags <span>·</span> Compatibility <span>·</span> Free Template"
+    },
+    {
+      "slug": "doula-near-me",
+      "label": "Doula Near Me",
+      "pattern": "A",
+      "eyebrow": "Local Guide",
+      "headline": "Find a Doula<br>Near You",
+      "tagline": "How to find local doula support, understand costs, and see if Medicaid covers doulas in your state. Free birth plan included.",
+      "bullets": "Local Doulas <span>·</span> Costs <span>·</span> Medicaid <span>·</span> Free Template"
+    },
+    {
+      "slug": "birth-center-near-me",
+      "label": "Birth Center Near Me",
+      "pattern": "A",
+      "eyebrow": "Local Guide",
+      "headline": "Find a Birth Center<br>Near You",
+      "tagline": "What freestanding birth centers offer, how they differ from hospitals, and where to find one near you.",
+      "bullets": "What They Offer <span>·</span> Safety <span>·</span> Insurance <span>·</span> Find One"
+    },
+    {
+      "slug": "midwife-near-me",
+      "label": "Midwife Near Me",
+      "pattern": "A",
+      "eyebrow": "Local Guide",
+      "headline": "Find a Midwife<br>Near You",
+      "tagline": "How to find a midwife in your area, understand the types of midwives, costs, and what to expect.",
+      "bullets": "Types of Midwives <span>·</span> Costs <span>·</span> Insurance <span>·</span> Find One"
+    },
+    {
+      "slug": "postpartum-doula",
+      "label": "Postpartum Doula",
+      "pattern": "A",
+      "eyebrow": "Postpartum Guide",
+      "headline": "What Is a<br>Postpartum Doula?",
+      "tagline": "How a postpartum doula supports your family after birth — overnight care, feeding support, and emotional recovery.",
+      "bullets": "What They Do <span>·</span> Benefits <span>·</span> Costs <span>·</span> How to Hire"
+    },
+    {
+      "slug": "what-is-a-postpartum-doula",
+      "label": "What Is a Postpartum Doula",
+      "pattern": "A",
+      "eyebrow": "Postpartum Guide",
+      "headline": "What Is a<br>Postpartum Doula?",
+      "tagline": "The complete guide to postpartum doula support — overnight newborn care, breastfeeding help, and emotional recovery.",
+      "bullets": "Role & Training <span>·</span> Benefits <span>·</span> Costs <span>·</span> How to Hire"
+    },
+    {
+      "slug": "postpartum-doula-cost",
+      "label": "Postpartum Doula Cost",
+      "pattern": "A",
+      "eyebrow": "Postpartum Guide",
+      "headline": "How Much Does a<br>Postpartum Doula Cost?",
+      "tagline": "Average postpartum doula fees, what's included, and how to budget for overnight and daytime support.",
+      "bullets": "Average Fees <span>·</span> Day vs Night <span>·</span> Insurance <span>·</span> Payment Plans"
+    },
+    {
+      "slug": "home-birth-plan",
+      "label": "Home Birth Plan",
+      "pattern": "A",
+      "eyebrow": "Birth Planning",
+      "headline": "How to Write a<br>Home Birth Plan",
+      "tagline": "Step-by-step guide to creating a home birth plan that covers transfer plans, emergency protocols, and your preferences.",
+      "bullets": "What to Include <span>·</span> Transfer Plans <span>·</span> Emergency Prep <span>·</span> Free Template"
+    },
+    {
+      "slug": "home-birth-midwife",
+      "label": "Home Birth Midwife",
+      "pattern": "A",
+      "eyebrow": "Birth Planning",
+      "headline": "How to Find a<br>Home Birth Midwife",
+      "tagline": "What to look for in a home birth midwife, questions to ask, and how to prepare for a planned home birth.",
+      "bullets": "What to Look For <span>·</span> Questions <span>·</span> Costs <span>·</span> Preparation"
+    },
+    {
+      "slug": "hospital-birth-plan",
+      "label": "Hospital Birth Plan",
+      "pattern": "A",
+      "eyebrow": "Birth Planning",
+      "headline": "How to Write a Hospital<br>Birth Plan That Works",
+      "tagline": "How to write a hospital birth plan that nurses and doctors actually read. Step-by-step guide with a free template.",
+      "bullets": "What to Include <span>·</span> Nurse Tips <span>·</span> Hospital Policies <span>·</span> Free Template"
+    },
+    {
+      "slug": "birth-plan-template",
+      "label": "Birth Plan Template",
+      "pattern": "A",
+      "eyebrow": "Free Tool",
+      "headline": "Free Birth Plan<br>Template",
+      "tagline": "A doula-crafted, fillable birth plan template designed so a nurse can read it in two minutes. Download free.",
+      "bullets": "Fillable PDF <span>·</span> Doula-Designed <span>·</span> One Page <span>·</span> Free"
+    },
+    {
+      "slug": "birth-plan-examples",
+      "label": "Birth Plan Examples",
+      "pattern": "A",
+      "eyebrow": "Birth Planning",
+      "headline": "Birth Plan Examples<br>for Every Type of Birth",
+      "tagline": "Real birth plan examples for hospital, birth center, home birth, VBAC, C-section, and induction. Free template included.",
+      "bullets": "Hospital <span>·</span> Home Birth <span>·</span> VBAC <span>·</span> C-Section <span>·</span> Free Template"
+    },
+    {
+      "slug": "birth-plan-checklist",
+      "label": "Birth Plan Checklist",
+      "pattern": "A",
+      "eyebrow": "Birth Planning",
+      "headline": "Birth Plan Checklist:<br>What to Include",
+      "tagline": "Complete checklist of everything to consider for your birth plan — from labor preferences to postpartum and newborn care.",
+      "bullets": "Labor <span>·</span> Pain Management <span>·</span> Delivery <span>·</span> Postpartum <span>·</span> Free Template"
+    },
+    {
+      "slug": "birth-plan-scenarios",
+      "label": "Birth Plan Scenarios",
+      "pattern": "A",
+      "eyebrow": "Birth Planning",
+      "headline": "Birth Plan Scenarios:<br>Plan for Every Outcome",
+      "tagline": "How to build a birth plan that flexes with unexpected changes — induction, C-section, NICU, and more.",
+      "bullets": "Induction <span>·</span> C-Section <span>·</span> NICU <span>·</span> VBAC <span>·</span> Free Template"
+    },
+    {
+      "slug": "birth-plan-for-induction",
+      "label": "Birth Plan for Induction",
+      "pattern": "A",
+      "eyebrow": "Birth Planning",
+      "headline": "How to Write a<br>Birth Plan for Induction",
+      "tagline": "What to include in your induction birth plan — cervical ripening, pain management, and how to stay in control.",
+      "bullets": "What to Include <span>·</span> Pain Management <span>·</span> Timeline <span>·</span> Free Template"
+    },
+    {
+      "slug": "c-section-birth-plan",
+      "label": "C-Section Birth Plan",
+      "pattern": "A",
+      "eyebrow": "Birth Planning",
+      "headline": "Gentle C-Section<br>Birth Plan",
+      "tagline": "Create a gentle C-section birth plan with clear preferences for the OR, skin-to-skin, delayed cord clamping, and recovery.",
+      "bullets": "OR Preferences <span>·</span> Skin-to-Skin <span>·</span> Recovery <span>·</span> Free Template"
+    },
+    {
+      "slug": "vbac-birth-plan",
+      "label": "VBAC Birth Plan",
+      "pattern": "A",
+      "eyebrow": "Birth Planning",
+      "headline": "VBAC Birth Plan:<br>Plan Your Vaginal Birth",
+      "tagline": "How to write a VBAC birth plan that addresses hospital policies, monitoring preferences, and your birth goals.",
+      "bullets": "Hospital Policies <span>·</span> Monitoring <span>·</span> Labor Preferences <span>·</span> Free Template"
+    },
+    {
+      "slug": "benefits-of-a-doula",
+      "label": "Benefits of a Doula",
+      "pattern": "A",
+      "eyebrow": "Doula Guide",
+      "headline": "Benefits of Having<br>a Doula",
+      "tagline": "Research-backed benefits of doula support: shorter labor, fewer interventions, and better birth outcomes.",
+      "bullets": "Shorter Labor <span>·</span> Fewer Interventions <span>·</span> Better Outcomes <span>·</span> Find a Doula"
+    },
+    {
+      "slug": "faq",
+      "label": "Birth Plan FAQ",
+      "pattern": "A",
+      "eyebrow": "Help Center",
+      "headline": "Birth Plan &amp;<br>Doula FAQ",
+      "tagline": "Answers to common questions about birth plans, doula costs, Medicaid coverage, and the free Joyful Birth Plan template.",
+      "bullets": "Birth Plans <span>·</span> Doulas <span>·</span> Costs <span>·</span> App <span>·</span> Free Template"
+    },
+    {
+      "slug": "about",
+      "label": "About TJB",
+      "pattern": "A",
+      "eyebrow": "About Us",
+      "headline": "About True<br>Joy Birthing",
+      "tagline": "We help families prepare for birth with confidence. Free tools, doula-designed resources, and a community that supports you.",
+      "bullets": "Our Mission <span>·</span> Free Tools <span>·</span> Doula-Designed <span>·</span> Get Started"
+    },
+    {
+      "slug": "contact",
+      "label": "Contact TJB",
+      "pattern": "A",
+      "eyebrow": "Get in Touch",
+      "headline": "Contact True<br>Joy Birthing",
+      "tagline": "Have questions about birth plans, doula support, or the app? Reach out to our team and we'll help you prepare with confidence.",
+      "bullets": "Email <span>·</span> Support <span>·</span> Ambassador Program <span>·</span> Partnerships"
+    },
+    {
+      "slug": "new-doula-start-here",
+      "label": "New Doula Start Here",
+      "pattern": "A",
+      "eyebrow": "Career Guide",
+      "headline": "New Doula?<br>Start Here",
+      "tagline": "Everything a new doula needs to know: certification, building your practice, finding clients, and growing your business.",
+      "bullets": "Certification <span>·</span> Building a Practice <span>·</span> Finding Clients <span>·</span> Growing"
+    },
+    {
+      "slug": "walkthrough",
+      "label": "Birth Plan Walkthrough",
+      "pattern": "A",
+      "eyebrow": "Free Course",
+      "headline": "Guided Birth Plan<br>Walkthrough",
+      "tagline": "A self-paced video walkthrough that teaches you every section of your birth plan — what each choice means and the tradeoffs.",
+      "bullets": "60-Min Course <span>·</span> Self-Paced <span>·</span> Expert-Led <span>·</span> Free"
+    }
+  ]
+}

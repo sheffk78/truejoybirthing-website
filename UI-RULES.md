@@ -139,7 +139,6 @@ These pages break the rules above. Don't fix yet — flag and schedule.
 | Page | Issue | Rule |
 |---|---|---|
 | `/contact/` | Form inputs use `rounded-lg` instead of `rounded-xl`; submit button uses inline style instead of `btn-primary` | Rules 5, 6 |
-| `/ambassador/` | Form inputs use `rounded-lg` instead of `rounded-xl`; submit button uses inline style instead of `btn-primary` | Rules 5, 6 |
 | Lead capture forms (`LeadCaptureForm.astro`, `city/LeadCaptureForm.astro`) | Inputs use `rounded-full border-tjb-lavender-300`; no focus ring; no cream card wrapper | Rules 5, 7 |
 
 ## Completed Migrations
@@ -151,6 +150,7 @@ These pages break the rules above. Don't fix yet — flag and schedule.
 | AI-generated support images → `doula-teaching.webp` stock image | June 2026 | `[city].astro` (all 180+ city pages) |
 | Confidence Session page: hero two-column + form cream card | June 2026 | `birth-plan-confidence-session.astro` |
 | Confidence Session CTA: "Book" → "Request" | June 2026 | All pages site-wide |
+| Ambassador page: form inputs `rounded-lg` → `rounded-xl`, submit button inline → `btn-primary`, FAQ accordion, social proof | June 2026 | `/ambassador/` |
 
 ### Image asset note
 

@@ -76,22 +76,30 @@ else
 fi
 
 for s in "${SLUGS[@]}"; do
-  canonical="public/images/og-city-${s}.webp"
-  v2="public/images/og-city-${s}-v2.webp"
-  full="${PROJECT_DIR}/${canonical}"
-
-  if [ ! -f "$full" ]; then
-    gate_fail "OG image MISSING: $canonical"
-    continue
-  fi
-
-  size=$(stat -f%z "$full" 2>/dev/null || stat -c%s "$full")
-  if [ "$size" -lt 30000 ]; then
-    gate_fail "OG image too small (${size}B): $canonical (min 30KB)"
-  fi
-
-  if [ -f "${PROJECT_DIR}/${v2}" ]; then
-    gate_fail "STALE -v2 variant exists: $v2 — delete it"
+  # Check all variants: canonical, -v2, -v3, etc.
+  # -v2+ variants are INTENTIONAL CDN cache-busting suffixes
+  found=false
+  for variant in "" "-v2" "-v3" "-v4"; do
+    file="public/images/og-city-${s}${variant}.webp"
+    full="${PROJECT_DIR}/${file}"
+    if [ -f "$full" ]; then
+      found=true
+      size=$(stat -f%z "$full" 2>/dev/null || stat -c%s "$full")
+      if [ "$size" -lt 10000 ]; then
+        gate_fail "OG image too small (${size}B): $file (min 10KB)"
+      else
+        # Verify decodable
+        if python3 -c "from PIL import Image; Image.open('$full').verify()" 2>/dev/null; then
+          gate_pass "OG image OK: $file (${size}B)"
+        else
+          gate_fail "OG image CORRUPTED (decode error): $file"
+        fi
+      fi
+      break
+    fi
+  done
+  if [ "$found" = false ]; then
+    gate_fail "OG image MISSING for $s (no variant found)"
   fi
 done
 

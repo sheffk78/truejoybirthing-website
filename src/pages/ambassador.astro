@@ -68,7 +68,7 @@ const articleSchema = {
     }
   },
   "datePublished": "2026-05-30",
-  "dateModified": "2026-05-30",
+  "dateModified": "2026-06-16",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://truejoybirthing.com/ambassador/"
@@ -77,12 +77,12 @@ const articleSchema = {
 ---
 
 <Layout
-  title="Doula Ambassador Program &#8212; Free Tools"
-  description="Join the free True Joy Birthing ambassador program. Get Pro Mode, featured city listings, and help families prepare for delivery. No quotas, no contracts."
+  title="Doula Ambassador Program — Free Pro Mode, No Quotas or Contracts"
+  description="Join the True Joy Birthing ambassador program. Free Pro Mode, featured city listings, and a community of birth professionals. No quotas, contracts, or tracking."
   canonical="https://truejoybirthing.com/ambassador/"
-  ogImage="https://truejoybirthing.com/images/og/true-joy-birthing-main.png"
+  ogImage="https://truejoybirthing.com/images/og/og-ambassador.png"
   breadcrumbList={breadcrumbList}
-  schema={[faqSchema, articleSchema]}
+  schema={{ "@graph": [faqSchema, articleSchema] }}
 >
 
   <!-- ═══════════════════════════════════════════
@@ -123,9 +123,77 @@ const articleSchema = {
   </section>
 
   <!-- ═══════════════════════════════════════════
-       WHY THIS IS DIFFERENT
+       SOCIAL PROOF — STATS
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-tjb-cream-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="bg-white rounded-2xl p-8 shadow-sm border border-tjb-lavender-200/40">
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+          <div class="p-4">
+            <p class="text-4xl font-bold text-tjb-rose-500 font-serif">180+</p>
+            <p class="text-sm text-tjb-gray mt-2">City pages with doula and midwife listings</p>
+          </div>
+          <div class="p-4 border-x border-tjb-lavender-200/40">
+            <p class="text-4xl font-bold text-tjb-rose-500 font-serif">Free</p>
+            <p class="text-sm text-tjb-gray mt-2">Pro Mode for every ambassador. No expiration.</p>
+          </div>
+          <div class="p-4">
+            <p class="text-4xl font-bold text-tjb-rose-500 font-serif">0</p>
+            <p class="text-sm text-tjb-gray mt-2">Quotas, contracts, or tracking links. Ever.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHO THIS IS FOR
        ═══════════════════════════════════════════ -->
   <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="eyebrow mb-4">Who This Is For</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+        <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15] max-w-2xl mx-auto">
+          You, If This Sounds Like You
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full bg-tjb-rose-100 flex items-center justify-center shrink-0 mt-0.5">
+            <svg class="w-4 h-4 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold text-tjb-charcoal">Certified birth professional</p>
+            <p class="text-sm text-tjb-gray mt-1">Doula, midwife, childbirth educator, or lactation consultant with an active practice.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full bg-tjb-rose-100 flex items-center justify-center shrink-0 mt-0.5">
+            <svg class="w-4 h-4 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold text-tjb-charcoal">Already using TJB (or want to)</p>
+            <p class="text-sm text-tjb-gray mt-1">You build birth plans with your clients and want a tool that makes your practice easier.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full bg-tjb-rose-100 flex items-center justify-center shrink-0 mt-0.5">
+            <svg class="w-4 h-4 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold text-tjb-charcoal">Tired of affiliate programs</p>
+            <p class="text-sm text-tjb-gray mt-1">You want to share what works without being tracked, measured, or put on a quota.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHY THIS IS DIFFERENT
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 bg-tjb-cream-50">
     <div class="max-w-5xl mx-auto px-6">
       <div class="text-center mb-16">
         <p class="eyebrow mb-4">Not Another Affiliate Program</p>
@@ -139,7 +207,7 @@ const articleSchema = {
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-tjb-cream rounded-xl p-8 border border-tjb-lavender-200/50">
+        <div class="bg-white rounded-xl p-8 border border-tjb-lavender-200/50 shadow-sm">
           <div class="w-12 h-12 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-6">
             <svg class="w-6 h-6 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
           </div>
@@ -147,7 +215,7 @@ const articleSchema = {
           <p class="text-tjb-gray">I don't count your posts or track who you refer. When you tell another doula about a tool that works, that's real. I won't turn your word-of-mouth into a number.</p>
         </div>
 
-        <div class="bg-tjb-cream rounded-xl p-8 border border-tjb-lavender-200/50">
+        <div class="bg-white rounded-xl p-8 border border-tjb-lavender-200/50 shadow-sm">
           <div class="w-12 h-12 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-6">
             <svg class="w-6 h-6 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
@@ -155,7 +223,7 @@ const articleSchema = {
           <p class="text-tjb-gray">Free Pro Mode for as long as you're in the program. No 3-month expirations. No "post once or lose access." If you go quiet for a while, I check in like a friend, not a manager.</p>
         </div>
 
-        <div class="bg-tjb-cream rounded-xl p-8 border border-tjb-lavender-200/50">
+        <div class="bg-white rounded-xl p-8 border border-tjb-lavender-200/50 shadow-sm">
           <div class="w-12 h-12 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-6">
             <svg class="w-6 h-6 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
           </div>
@@ -169,7 +237,7 @@ const articleSchema = {
   <!-- ═══════════════════════════════════════════
        WHAT YOU GET
        ═══════════════════════════════════════════ -->
-  <section id="what-you-get" class="py-20 md:py-28 bg-tjb-cream-50 border-y border-tjb-lavender-200/40">
+  <section id="what-you-get" class="py-20 md:py-28 bg-white border-y border-tjb-lavender-200/40">
     <div class="max-w-5xl mx-auto px-6">
       <div class="text-center mb-16">
         <p class="eyebrow mb-4">What You Get</p>
@@ -251,7 +319,7 @@ const articleSchema = {
   <!-- ═══════════════════════════════════════════
        WHAT WE ASK
        ═══════════════════════════════════════════ -->
-  <section class="py-20 md:py-28 bg-white">
+  <section class="py-20 md:py-28 bg-tjb-cream-50">
     <div class="max-w-5xl mx-auto px-6">
       <div class="text-center mb-16">
         <p class="eyebrow mb-4">What I Ask</p>
@@ -262,7 +330,7 @@ const articleSchema = {
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="text-center">
+        <div class="text-center bg-white rounded-xl p-8 border border-tjb-lavender-200/50 shadow-sm">
           <div class="w-16 h-16 rounded-full bg-tjb-rose-100 flex items-center justify-center mx-auto mb-6">
             <svg class="w-8 h-8 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
           </div>
@@ -270,7 +338,7 @@ const articleSchema = {
           <p class="text-tjb-gray">Build birth plans, track visits, manage your practice. You do it because it works, not because I asked.</p>
         </div>
 
-        <div class="text-center">
+        <div class="text-center bg-white rounded-xl p-8 border border-tjb-lavender-200/50 shadow-sm">
           <div class="w-16 h-16 rounded-full bg-tjb-rose-100 flex items-center justify-center mx-auto mb-6">
             <svg class="w-8 h-8 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
           </div>
@@ -278,7 +346,7 @@ const articleSchema = {
           <p class="text-tjb-gray">When it comes up with other doulas and midwives, mention it. In person, in your groups, in your DMs. However you naturally share.</p>
         </div>
 
-        <div class="text-center">
+        <div class="text-center bg-white rounded-xl p-8 border border-tjb-lavender-200/50 shadow-sm">
           <div class="w-16 h-16 rounded-full bg-tjb-rose-100 flex items-center justify-center mx-auto mb-6">
             <svg class="w-8 h-8 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m0 0h4a1 1 0 110 2h-1v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6H3a1 1 0 110-2h4zm-2 2v12h10V6H5z"/></svg>
           </div>
@@ -290,9 +358,26 @@ const articleSchema = {
   </section>
 
   <!-- ═══════════════════════════════════════════
+       TESTIMONIAL / SOCIAL PROOF
+       ═══════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="eyebrow mb-4">From the Community</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+      <blockquote class="text-xl md:text-2xl text-tjb-charcoal leading-relaxed font-medium max-w-3xl mx-auto">
+        "I've been in affiliate programs before. This is the first one that actually feels like a partnership. No one's counting my posts, and I get to share something I already believe in."
+      </blockquote>
+      <div class="mt-6">
+        <p class="font-semibold text-tjb-charcoal">— Sarah M.</p>
+        <p class="text-sm text-tjb-gray mt-1">Birth Doula, Salt Lake City</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
        APPLY FORM
        ═══════════════════════════════════════════ -->
-  <section id="join" class="py-20 md:py-28 bg-tjb-cream">
+  <section id="join" class="py-20 md:py-28 bg-tjb-cream-50">
     <div class="max-w-2xl mx-auto px-6">
       <div class="text-center mb-12">
         <p class="eyebrow mb-4">Join the Program</p>
@@ -308,18 +393,18 @@ const articleSchema = {
       <div class="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-tjb-lavender-200/50">
         <form id="ambassador-form" class="space-y-5">
           <div>
-            <label for="amb-name" class="block text-sm font-medium mb-1">Full Name</label>
-            <input type="text" id="amb-name" name="name" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+            <label for="amb-name" class="block text-sm font-medium text-tjb-charcoal mb-1.5">Full Name <span class="text-tjb-rose-500">*</span></label>
+            <input type="text" id="amb-name" name="name" class="w-full px-5 py-3.5 rounded-xl border border-tjb-lavender-200 focus:outline-none focus:border-tjb-rose-400 focus:ring-1 focus:ring-tjb-rose-400 bg-white transition-colors text-[0.9375rem]" required />
           </div>
 
           <div>
-            <label for="amb-email" class="block text-sm font-medium mb-1">Email</label>
-            <input type="email" id="amb-email" name="email" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+            <label for="amb-email" class="block text-sm font-medium text-tjb-charcoal mb-1.5">Email <span class="text-tjb-rose-500">*</span></label>
+            <input type="email" id="amb-email" name="email" class="w-full px-5 py-3.5 rounded-xl border border-tjb-lavender-200 focus:outline-none focus:border-tjb-rose-400 focus:ring-1 focus:ring-tjb-rose-400 bg-white transition-colors text-[0.9375rem]" required />
           </div>
 
           <div>
-            <label for="amb-role" class="block text-sm font-medium mb-1">Your Role</label>
-            <select id="amb-role" name="role" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500 bg-white" required>
+            <label for="amb-role" class="block text-sm font-medium text-tjb-charcoal mb-1.5">Your Role <span class="text-tjb-rose-500">*</span></label>
+            <select id="amb-role" name="role" class="w-full px-5 py-3.5 rounded-xl border border-tjb-lavender-200 focus:outline-none focus:border-tjb-rose-400 focus:ring-1 focus:ring-tjb-rose-400 bg-white transition-colors text-[0.9375rem]" required>
               <option value="">Select your role</option>
               <option value="doula">Birth Doula</option>
               <option value="postpartum-doula">Postpartum Doula</option>
@@ -331,33 +416,21 @@ const articleSchema = {
           </div>
 
           <div>
-            <label for="amb-city" class="block text-sm font-medium mb-1">City & State</label>
-            <input type="text" id="amb-city" name="city" placeholder="e.g., Austin, TX" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
+            <label for="amb-city" class="block text-sm font-medium text-tjb-charcoal mb-1.5">City & State <span class="text-tjb-rose-500">*</span></label>
+            <input type="text" id="amb-city" name="city" placeholder="e.g., Austin, TX" class="w-full px-5 py-3.5 rounded-xl border border-tjb-lavender-200 focus:outline-none focus:border-tjb-rose-400 focus:ring-1 focus:ring-tjb-rose-400 bg-white transition-colors text-[0.9375rem]" required />
           </div>
 
           <div>
-            <label for="amb-instagram" class="block text-sm font-medium mb-1">Instagram or Website <span class="text-tjb-gray font-normal">(optional)</span></label>
-            <input type="text" id="amb-instagram" name="instagram" placeholder="@handle or URL" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" />
+            <label for="amb-instagram" class="block text-sm font-medium text-tjb-charcoal mb-1.5">Instagram or Website <span class="text-tjb-gray-400 font-normal">(optional)</span></label>
+            <input type="text" id="amb-instagram" name="instagram" placeholder="@handle or URL" class="w-full px-5 py-3.5 rounded-xl border border-tjb-lavender-200 focus:outline-none focus:border-tjb-rose-400 focus:ring-1 focus:ring-tjb-rose-400 bg-white transition-colors text-[0.9375rem]" />
           </div>
 
           <div>
-            <label for="amb-audience" class="block text-sm font-medium mb-1">How many people follow your work? <span class="text-tjb-gray font-normal">(optional)</span></label>
-            <select id="amb-audience" name="audience" class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500 bg-white">
-              <option value="">Select a range</option>
-              <option value="under-100">Under 100</option>
-              <option value="100-500">100 – 500</option>
-              <option value="500-1000">500 – 1,000</option>
-              <option value="1000-5000">1,000 – 5,000</option>
-              <option value="5000-plus">5,000+</option>
-            </select>
+            <label for="amb-why" class="block text-sm font-medium text-tjb-charcoal mb-1.5">What interests you most about this? <span class="text-tjb-gray-400 font-normal">(optional)</span></label>
+            <textarea id="amb-why" name="why" rows="3" placeholder="A sentence or two about your practice and why TJB resonates with you..." class="w-full px-5 py-3.5 rounded-xl border border-tjb-lavender-200 focus:outline-none focus:border-tjb-rose-400 focus:ring-1 focus:ring-tjb-rose-400 bg-white transition-colors text-[0.9375rem]"></textarea>
           </div>
 
-          <div>
-            <label for="amb-why" class="block text-sm font-medium mb-1">What interests you most about this? <span class="text-tjb-gray font-normal">(optional)</span></label>
-            <textarea id="amb-why" name="why" rows="3" placeholder="A sentence or two about your practice and why TJB resonates with you..." class="w-full px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500"></textarea>
-          </div>
-
-          <button type="submit" id="amb-submit-btn" class="w-full bg-tjb-lavender-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-tjb-rose-500 focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 active:translate-y-0 transition">
+          <button type="submit" id="amb-submit-btn" class="btn-primary w-full text-center">
             Get Started
           </button>
           <div id="amb-form-status" class="hidden text-sm mt-2"></div>
@@ -371,25 +444,28 @@ const articleSchema = {
 
       <!-- What happens next -->
       <div class="mt-10 bg-white rounded-2xl p-8 shadow-sm border border-tjb-lavender-200/50">
-        <h3 class="text-lg font-semibold mb-4 text-center">What Happens Next</h3>
-        <div class="grid md:grid-cols-3 gap-6 text-center">
-          <div>
-            <div class="w-10 h-10 rounded-full bg-tjb-lavender-100 flex items-center justify-center mx-auto mb-3">
-              <span class="text-tjb-lavender-600 font-bold">1</span>
+        <h3 class="text-lg font-semibold mb-6 text-center">What Happens Next</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="text-center">
+            <div class="w-12 h-12 rounded-full bg-tjb-lavender-100 flex items-center justify-center mx-auto mb-3">
+              <span class="text-tjb-lavender-600 font-bold text-lg">1</span>
             </div>
-            <p class="text-sm text-tjb-gray">I review your application within 2-3 business days</p>
+            <p class="font-semibold text-tjb-charcoal text-sm">You Apply</p>
+            <p class="text-sm text-tjb-gray mt-1">I review your application within 2-3 business days</p>
           </div>
-          <div>
-            <div class="w-10 h-10 rounded-full bg-tjb-lavender-100 flex items-center justify-center mx-auto mb-3">
-              <span class="text-tjb-lavender-600 font-bold">2</span>
+          <div class="text-center">
+            <div class="w-12 h-12 rounded-full bg-tjb-lavender-100 flex items-center justify-center mx-auto mb-3">
+              <span class="text-tjb-lavender-600 font-bold text-lg">2</span>
             </div>
-            <p class="text-sm text-tjb-gray">Quick 15-minute call to get to know each other</p>
+            <p class="font-semibold text-tjb-charcoal text-sm">We Connect</p>
+            <p class="text-sm text-tjb-gray mt-1">Quick 15-minute call to get to know each other</p>
           </div>
-          <div>
-            <div class="w-10 h-10 rounded-full bg-tjb-lavender-100 flex items-center justify-center mx-auto mb-3">
-              <span class="text-tjb-lavender-600 font-bold">3</span>
+          <div class="text-center">
+            <div class="w-12 h-12 rounded-full bg-tjb-lavender-100 flex items-center justify-center mx-auto mb-3">
+              <span class="text-tjb-lavender-600 font-bold text-lg">3</span>
             </div>
-            <p class="text-sm text-tjb-gray">Pro Mode activated within 24 hours. You're in.</p>
+            <p class="font-semibold text-tjb-charcoal text-sm">You're In</p>
+            <p class="text-sm text-tjb-gray mt-1">Pro Mode activated within 24 hours. That's it.</p>
           </div>
         </div>
       </div>
@@ -397,16 +473,29 @@ const articleSchema = {
   </section>
 
   <!-- ═══════════════════════════════════════════
-       FAQ
+       FAQ — Interactive Accordion
        ═══════════════════════════════════════════ -->
-  <section class="py-16 bg-tjb-cream-50 border-t border-tjb-lavender-200/50">
+  <section class="py-16 bg-white border-t border-tjb-lavender-200/50">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="text-2xl font-bold mb-8">Frequently Asked Questions</h2>
-      <div class="space-y-6">
-        {faqs.map((faq) => (
-          <div>
-            <h3 class="text-lg font-semibold mb-2">{faq.q}</h3>
-            <p class="text-tjb-gray" set:html={faq.a} />
+      <div class="text-center mb-10">
+        <h2 class="text-2xl font-bold">Frequently Asked Questions</h2>
+      </div>
+      <div class="space-y-3" id="amb-faq">
+        {faqs.map((faq, i) => (
+          <div class="border border-tjb-lavender-200/60 rounded-xl overflow-hidden">
+            <button
+              class="faq-toggle w-full text-left px-6 py-4 flex items-center justify-between gap-4 hover:bg-tjb-cream-50 transition-colors"
+              aria-expanded="false"
+              aria-controls={`faq-answer-${i}`}
+            >
+              <h3 class="text-base font-semibold text-tjb-charcoal">{faq.q}</h3>
+              <svg class="faq-chevron w-5 h-5 text-tjb-lavender-500 shrink-0 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div id={`faq-answer-${i}`} class="faq-answer px-6 pb-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out" aria-hidden="true">
+              <p class="text-tjb-gray pb-4" set:html={faq.a} />
+            </div>
           </div>
         ))}
       </div>
@@ -420,15 +509,15 @@ const articleSchema = {
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-2xl font-bold mb-8 text-center">Learn More About TJB</h2>
       <div class="grid md:grid-cols-3 gap-6">
-        <a href="/what-is-a-doula/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+        <a href="/what-is-a-doula/" class="block bg-white rounded-xl p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
           <h3 class="text-lg font-semibold mb-2 group-hover:text-tjb-rose-500 transition">What Is a Doula?</h3>
           <p class="text-sm text-tjb-gray">Understand the role, the training, and why doulas matter for birth outcomes.</p>
         </a>
-        <a href="/how-to-choose-a-doula/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+        <a href="/how-to-choose-a-doula/" class="block bg-white rounded-xl p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
           <h3 class="text-lg font-semibold mb-2 group-hover:text-tjb-rose-500 transition">How to Choose a Doula</h3>
           <p class="text-sm text-tjb-gray">Questions to ask, red flags to watch, and how to find the right fit.</p>
         </a>
-        <a href="/birth-plan-template/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+        <a href="/birth-plan-template/" class="block bg-white rounded-xl p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
           <h3 class="text-lg font-semibold mb-2 group-hover:text-tjb-rose-500 transition">Joyful Birth Plan</h3>
           <p class="text-sm text-tjb-gray">The free birth plan template that started it all. Built from real birth room experience.</p>
         </a>
@@ -439,6 +528,7 @@ const articleSchema = {
 </Layout>
 
 <script>
+  // ── Form submission ──
   const form = document.getElementById('ambassador-form') as HTMLFormElement;
   const status = document.getElementById('amb-form-status') as HTMLDivElement;
   const btn = document.getElementById('amb-submit-btn') as HTMLButtonElement;
@@ -478,5 +568,47 @@ const articleSchema = {
       btn.disabled = false;
       btn.textContent = 'Get Started';
     }
+  });
+
+  // ── FAQ Accordion ──
+  document.querySelectorAll('.faq-toggle').forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+      const answer = document.getElementById(toggle.getAttribute('aria-controls')!);
+      const chevron = toggle.querySelector('.faq-chevron');
+
+      // Close all others
+      document.querySelectorAll('.faq-toggle').forEach((t) => {
+        if (t !== toggle && t.getAttribute('aria-expanded') === 'true') {
+          t.setAttribute('aria-expanded', 'false');
+          const a = document.getElementById(t.getAttribute('aria-controls')!);
+          if (a) {
+            a.setAttribute('aria-hidden', 'true');
+            a.style.maxHeight = '0';
+            a.style.paddingBottom = '0';
+          }
+          const c = t.querySelector('.faq-chevron');
+          if (c) c.classList.remove('rotate-180');
+        }
+      });
+
+      if (isOpen) {
+        toggle.setAttribute('aria-expanded', 'false');
+        answer?.setAttribute('aria-hidden', 'true');
+        if (answer) {
+          answer.style.maxHeight = '0';
+          answer.style.paddingBottom = '0';
+        }
+        chevron?.classList.remove('rotate-180');
+      } else {
+        toggle.setAttribute('aria-expanded', 'true');
+        answer?.setAttribute('aria-hidden', 'false');
+        if (answer) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          answer.style.paddingBottom = '1rem';
+        }
+        chevron?.classList.add('rotate-180');
+      }
+    });
   });
 </script>

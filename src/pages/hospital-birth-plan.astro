@@ -12,9 +12,10 @@ const breadcrumbList = [
   title="Hospital Birth Plan for Care Teams"
   description="How to write a hospital birth plan that nurses and doctors actually read. Step-by-step guide with a free template and tips for getting your plan honored."
   canonical="https://truejoybirthing.com/hospital-birth-plan/"
-  ogImage="/images/og-hospital-birth-plan.webp"
+  ogImage="/images/og/og-hospital-birth-plan.png"
   breadcrumbList={breadcrumbList}
-  schema={[
+  schema={{
+    "@graph": [
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -45,32 +46,31 @@ const breadcrumbList = [
         },
         {
           "@type": "Question",
-          "name": "How early should I give my birth plan to my nurse?",
+          "name": "What's the difference between a birth plan and a birth preferences sheet?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Hand your birth plan to your triage nurse or labor nurse as soon as you are admitted. You can also bring copies to a prenatal appointment at your hospital around 34-36 weeks to discuss your preferences with your provider ahead of time."
+            "text": "They are essentially the same thing. Some hospitals and providers prefer the term birth preferences sheet because it sounds less rigid. The content is the same: your wishes for labor, delivery, and postpartum care. Some hospitals have their own preference forms. You can bring your own plan and attach it to the hospital form."
           }
         },
         {
           "@type": "Question",
-          "name": "What if my hospital doesn't allow some of my preferences?",
+          "name": "Should I bring my birth plan to the hospital?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Some hospital policies are firm, like food restrictions during labor or required monitoring for high-risk pregnancies. Others are flexible if you ask. Talk to your provider at a prenatal visit to learn which rules are true policy and which are standard practice you can negotiate. A doula can also help you navigate these conversations."
+            "text": "Yes. Bring at least three printed copies: one for your nurse, one for your partner or doula, and one for yourself. Digital copies on your phone are helpful as a backup, but paper is what nurses actually read in the moment. Hand it to your nurse at admission, not to the front desk."
           }
         },
         {
           "@type": "Question",
-          "name": "Does True Joy Birthing's template work for any hospital?",
+          "name": "What if my hospital doesn't allow certain birth plan requests?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Our hospital birth plan template is designed to work at any hospital. It covers the most common decisions you will face and gives you space to add hospital-specific preferences. Grab the free template and customize it for your facility."
+            "text": "Every hospital has policies that may limit some options. Waterbirth, intermittent monitoring, and certain labor positions may not be available at every facility. Ask your OB or midwife during a prenatal visit what your hospital's policies are so you can adjust your plan before labor starts. If a policy matters that much to you, consider touring other hospitals or birth centers."
           }
         }
       ]
     }
-  ]}
->
+  ]}}>
 
   <!-- Hero — Split Layout (55% text / 45% image) -->
   <section class="bg-tjb-cream pt-16 pb-12">

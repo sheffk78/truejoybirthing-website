@@ -79,4 +79,18 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M15S",
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
+  "carrollton-tx": {
+    videoId: "cHeJuVuUyJA",
+    title: "Carrollton TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 3 minutes.",
+    duration: "PT2M42S",
+    uploadDate: "2026-06-16T00:00:00-06:00",
+  },
+  "san-bernardino-ca": {
+    videoId: "sTii3z6iJh4",
+    title: "San Bernardino CA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal doula coverage, all in under 3 minutes.",
+    duration: "PT2M27S",
+    uploadDate: "2026-06-17T00:00:00-06:00",
+  },
 };
