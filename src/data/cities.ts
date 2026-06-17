@@ -1136,7 +1136,7 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Killeen families?", a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Killeen birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." },
     ],
     nearbyCities: ["temple-tx", "waco-tx", "austin-tx"],
-  },,
+  },
   "brownsville-tx": {
     city: "Brownsville",
     state: "TX",
