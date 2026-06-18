@@ -161,7 +161,8 @@ function run(): void {
               // Check if next non-whitespace is a comma (end of city block)
               const rest = citiesContent.slice(i + 1).trimStart();
               if (rest.startsWith(',')) {
-                blockEnd = i + 1 + (citiesContent.length - citiesContent.slice(i + 1).length - rest.length) + 1;
+                // Block ends just past the closing brace + comma
+                blockEnd = i + 1;
                 break;
               }
             }
