@@ -73,11 +73,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
   "moreno-valley-ca": {
-    videoId: "5MEpWqacUVw",
+    videoId: "uYxhNupSsME",
     title: "Moreno Valley Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 3 minutes.",
-    duration: "PT2M15S",
-    uploadDate: "2026-06-16T00:00:00-06:00",
+    duration: "PT2M59S",
+    uploadDate: "2026-06-18T00:00:00-06:00",
   },
   "carrollton-tx": {
     videoId: "cHeJuVuUyJA",
