@@ -114,4 +114,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M47S",
     uploadDate: "2026-06-18T00:00:00-06:00",
   },
+  "tyler-tx": {
+    videoId: "BMptedwJJvw",
+    title: "Tyler TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 4 minutes.",
+    duration: "PT3M54S",
+    uploadDate: "2026-06-18T00:00:00-06:00",
+  },
 };

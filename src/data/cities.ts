@@ -1040,7 +1040,7 @@ export const cities: Record<string, CityData> = {
     city: "Tyler",
     state: "TX",
     slug: "tyler-tx",
-    heroImage: "/images/tyler-tx-birth-doula-skyline-v2.webp",
+    heroImage: "/images/tyler-tx-birth-doula-hero.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-tyler-tx-v2.webp",
     supportSceneImage: "/images/tyler-support-scene.webp",
     supportSceneAlt: "Two women walking side by side in a Tyler neighborhood with East Texas pine trees in the distance",

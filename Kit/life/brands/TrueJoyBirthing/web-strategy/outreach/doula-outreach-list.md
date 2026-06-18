@@ -25,3 +25,26 @@ Tracking listing notification and verification outreach for TrueJoyBirthing city
 | 10 | Genesis Midwifery Services | genesisforbirth.com | Contact form only | Midwife (CNM) | Yes | Needs manual form | | "Same midwife every visit every push", contact via genesisforbirth.com/contact-us |
 
 ---
+
+## Moreno Valley, CA
+
+**City page:** https://truejoybirthing.com/birth-support/moreno-valley-ca/
+**Total listed:** 5 providers
+**Outreach sent:** 2026-06-18
+**Sending method:** AgentMail CLI (agentmail message send) from shelbi@truejoybirthing.com
+**Template:** Updated Killeen/Moreno Valley listing notification template
+**Prior sends:** 2026-06-16 (first round, older template); 2 replies received (Holistic Doula LLC, The Serene Mother)
+
+| # | Provider | Website | Contact Email | Type | Status | Date Sent | Notes |
+|---|----------|---------|---------------|------|--------|-----------|-------|
+| 1 | Holistic Doula LLC | holistic-doula.com | holisticdoula2024@gmail.com | Birth/postpartum doula (bilingual) | Sent (2nd round) | 2026-06-18 | Serves Latina families bilingually; replied to 1st round on 6/16 |
+| 2 | 4 The Moms Southern California Postpartum Doula Support | 4themoms.org | hello@4themoms.org | Postpartum doula | Sent (2nd round) | 2026-06-18 | Squarespace site; holistic 4th trimester support |
+| 3 | The Serene Mother Birth Doula (Rochelle) | theserenemother.com | theserenemother@gmail.com | Birth doula (BRM Pro) | Sent (2nd round) | 2026-06-18 | Wix site; replied to 1st round on 6/16 noting birth-only focus |
+| 4 | Gem of the Valley Doula Services | yelp.com/biz/gem-of-the-valley-doula-services-murrieta | gemofthevalleydoula@gmail.com | Birth/postpartum doula | Sent (2nd round) | 2026-06-18 | Yelp-only listing; email found via prior research |
+| 5 | Raising Birth Doula Care | instagram.com/raisingbirthdoula | No email | Birth doula | Cannot email | — | Instagram-only, no email address available |
+
+**Replies received (1st round):**
+- Holistic Doula LLC (Laura Colin Fernandez) — thanked TJB for inclusion, will review listing
+- The Serene Mother (Rochelle Kusicki) — clarified she provides birth doula services only, not traditional postpartum
+
+---
