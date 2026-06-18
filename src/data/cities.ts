@@ -4619,7 +4619,7 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Moreno Valley families?", a: "True Joy Birthing provides free birth-prep tools for Moreno Valley families. The free birth plan, checklist, and guided walkthrough in the app work for any Moreno Valley birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Moreno Valley?", a: "Moreno Valley has hospital-based lactation support at Kaiser Permanente Moreno Valley Medical Center. The Inland Empire postpartum doula community is growing. Start your search during pregnancy if you want ongoing postpartum support. <a href=\"/postpartum-doula/\">Learn more about postpartum doula support</a>." },
     ],
-    nearbyCities: ["riverside-ca", "san-bernardino-ca", "perris-ca", "redlands-ca"],
+    nearbyCities: ["san-bernardino-ca", "fontana-ca", "riverside-ca"],
     publishedDate: "2026-06-12",
     lat: 33.9244,
     lng: -117.2045,
