@@ -107,4 +107,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M12S",
     uploadDate: "2026-06-17T00:00:00-06:00",
   },
+  "killeen-tx": {
+    videoId: "MZ73jDb49jY",
+    title: "Killeen TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 4 minutes.",
+    duration: "PT3M47S",
+    uploadDate: "2026-06-18T00:00:00-06:00",
+  },
 };
