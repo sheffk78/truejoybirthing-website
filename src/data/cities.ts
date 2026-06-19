@@ -234,7 +234,7 @@ export const cities: Record<string, CityData> = {
     city: "Beaumont",
     state: "TX",
     slug: "beaumont-tx",
-    heroImage: "/images/beaumont-tx-birth-doula-skyline.webp",
+    heroImage: "/images/beaumont-tx-birth-doula-hero.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-beaumont-tx-v2.webp",
     supportSceneImage: "/images/beaumont-support-scene.webp",
     supportSceneAlt: "Two women walking side by side in Beaumont with East Texas pine trees in the distance",
