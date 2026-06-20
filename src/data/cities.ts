@@ -752,7 +752,7 @@ export const cities: Record<string, CityData> = {
     costLow: 950,
     costHigh: 2700,
     shelbiServesHere: true,
-    heroImage: "/images/mckinney-tx-birth-doula-hero.webp",
+    heroImage: "/images/mckinney-tx-birth-doula-hero-v2.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-mckinney-tx-v2.webp",
     supportSceneImage: "/images/mckinney-tx-support-scene.webp",
     supportSceneAlt: "A doula supporting a pregnant woman on a quiet walk in a McKinney neighborhood with historic homes in the background",
