@@ -772,7 +772,7 @@ export const cities: Record<string, CityData> = {
       { name: "Medical City McKinney", thumbnail: "/images/medical-city-mckinney.webp", paragraph: "Medical City McKinney, serving northern Collin County, has a NICU \u2014 contact the hospital directly for current NICU level verification \u2014 and a solid obstetric program. McKinney families are well-served by both hospitals." },
     ],
     birthCenterDetails: [
-      { name: "Allen Birthing Center", paragraph: "Allen Birthing Center (Allen Midwifery & Family Wellness), about 10 minutes south in Allen, is the closest freestanding birth center for McKinney families seeking a lower-intervention setting." },
+      { name: "Allen Birthing Center", thumbnail: "/images/allen-birthing-center-mckinney.webp", paragraph: "Allen Birthing Center (Allen Midwifery & Family Wellness), about 10 minutes south in Allen, is the closest freestanding birth center for McKinney families seeking a lower-intervention setting." },
     ],
     medicaidNote: "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Collin County\u2019s STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the McKinney area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs.",
