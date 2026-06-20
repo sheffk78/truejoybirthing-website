@@ -57,7 +57,7 @@ const pageDesc = `Looking for a doula or midwife in ${city}? Costs $${costLow}â€
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 const ogImage = ogImageSlug || `https://truejoybirthing.com/images/og-city-${slug}.webp`;
 const heroImage = heroImageSlug || '/images/doula-breastfeeding.webp';
-const heroImage600 = heroImageSlug ? heroImageSlug.replace('.webp', '-600.webp') : '/images/doula-breastfeeding-600.webp';
+const heroImage600 = heroImageSlug ? heroImageSlug.replace('.webp', '-600.webp').replace('-v2-600', '-600-v2') : '/images/doula-breastfeeding-600.webp';
 const heroAlt = `${city} birth doula: costs, Medicaid, and hospital info for ${state} families`;
 const supportImage = supportSceneImage || '/images/doula-walking.webp';
 const supportImageAlt = supportSceneAlt || `A doula walking alongside an expectant mom, offering continuous labor support`;
@@ -228,8 +228,8 @@ const schema = {
             <picture>
               <source
                 type="image/webp"
-                srcset={`/images/${heroImage600} 600w,
-                        /images/${heroImage} 1200w`}
+                srcset={`${heroImage600} 600w,
+                        ${heroImage} 1200w`}
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               <img
