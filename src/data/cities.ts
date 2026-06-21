@@ -1299,9 +1299,9 @@ export const cities: Record<string, CityData> = {
     shelbiServesHere: true,
     enableBlogResources: true,
     publishedDate: "2026-06-21",
-    heroImage: "/images/conroe-tx-birth-doula-hero.webp",
-    ogImage: "https://truejoybirthing.com/images/og-city-conroe-tx-v2.webp",
-    supportSceneImage: "/images/conroe-tx-support-scene.webp",
+    heroImage: "/images/conroe-tx-birth-doula-hero-v2.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-conroe-tx-v3.webp",
+    supportSceneImage: "/images/conroe-tx-support-scene-v2.webp",
     supportSceneAlt: "Pregnant woman silhouette overlooking Lake Conroe at sunset",
     localDoulas: [
       { name: "Shelbie Cunningham", credential: "Birth Doula", practice: "Shelbie Cunningham Doula Services", costRange: "Contact for pricing", photo: "", acceptingClients: true },
