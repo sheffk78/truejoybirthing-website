@@ -122,10 +122,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-18T00:00:00-06:00",
   },
   "mckinney-tx": {
-    videoId: "HhoyMtPBkOk",
+    videoId: "o_up6jyMcLU",
     title: "McKinney TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 3 minutes.",
-    duration: "PT2M30S",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in about 3 minutes.",
+    duration: "PT3M1S",
     uploadDate: "2026-06-20T00:00:00-06:00",
   },
 };
