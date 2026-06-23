@@ -125,7 +125,7 @@ Preparation makes every option more effective. Here are the steps I recommend:
 
 4. **Practice comfort measures in advance.** Breathing techniques, position changes, and massage strokes all benefit from practice. The more familiar they feel, the more naturally they will come during labor.
 
-5. **Build your support team.** Whether that means hiring a doula, recruiting a knowledgeable partner, or both, having continuous support is one of the most evidence-based ways to improve your birth experience.
+5. **Build your support team.** Whether that means hiring a doula, recruiting a knowledgeable partner, or both, having continuous support is one of the most evidence-based ways to improve your birth experience. If you are planning a birth in <a href="/birth-support/austin-tx/">Austin, TX</a>, a local doula can help you practice these comfort measures and tailor your pain management plan to your birth setting.
 
 ## Making Peace With Changing Your Plan
 
@@ -139,4 +139,4 @@ I have seen clients switch plans mid-labor with grace and confidence because the
 
 Pain management during labor is not a test of endurance or willpower. It is a personal decision shaped by your health, your values, your baby, and the circumstances of your labor on any given day. The more you know, the more empowered your choices will be.
 
-If you are looking for personalized support as you navigate these decisions, I would love to walk alongside you. As a certified doula serving families across central Pennsylvania, I help you understand your options, practice comfort measures, and advocate for your preferences — whatever they are. Reach out anytime. You do not have to figure this out alone.
+If you are looking for personalized support as you navigate these decisions, I would love to walk alongside you. As a certified doula serving families across central Pennsylvania, I help you understand your options, practice comfort measures, and advocate for your preferences — whatever they are. Whether you are preparing for your first birth in <a href="/birth-support/chicago-il/">Chicago, IL</a> or refining your plan for your third, reach out anytime. You do not have to figure this out alone.

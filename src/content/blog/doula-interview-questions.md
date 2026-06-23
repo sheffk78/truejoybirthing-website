@@ -13,7 +13,7 @@ Let's talk about doula interview questions — because who you choose to support
 
 A doula interview is a conversation between you and a potential doula to determine whether she's the right fit for your birth. Most doulas offer free initial consultations specifically for this purpose. Taking advantage of these consultations and coming prepared with good questions is how you find someone you'll trust with one of the most important experiences of your life.
 
-One Austin mom told me she interviewed four doulas before choosing one. The first three were perfectly qualified — great training, lots of births attended, warm personalities. But the fourth one asked *her* questions during the interview. She said that flipped everything — she realized she wanted a doula who was curious about her story, not just one who could tell her own.
+One mom <a href="/birth-support/austin-tx/">in Austin, TX</a> told me she interviewed four doulas before choosing one. The first three were perfectly qualified — great training, lots of births attended, warm personalities. But the fourth one asked *her* questions during the interview. She said that flipped everything — she realized she wanted a doula who was curious about her story, not just one who could tell her own.
 
 ## Training and Experience Questions
 
@@ -41,7 +41,7 @@ These questions help you understand how your doula thinks about birth and whethe
 
 - **How do you support partners?** A great doula doesn't replace your partner — she helps your partner support you better. She shows them comfort techniques, helps them find their role, and makes sure they feel included.
 
-One doula in Denver shared that the families she works with most successfully are the ones who ask her about how she's handled situations where the plan changed. She said a doula who can talk honestly about a birth that didn't go as planned — without judgment or trauma — is usually someone you can trust when things get complicated.
+One doula <a href="/birth-support/denver-co/">in Denver, CO</a> shared that the families she works with most successfully are the ones who ask her about how she's handled situations where the plan changed. She said a doula who can talk honestly about a birth that didn't go as planned — without judgment or trauma — is usually someone you can trust when things get complicated.
 
 ## Practical and Logistics Questions
 
@@ -81,4 +81,4 @@ After you've interviewed two or three doulas, here's how to make your decision:
 
 When you're ready to start building your birth plan, the <a href="/birth-plan-template/">Joyful Birth Plan</a> walks you through every section — including who you want on your support team. You shouldn't have to figure this out alone.
 
-For more on choosing a doula, check our <a href="/blog/doula-near-me/">guide to finding a doula near you</a> and our <a href="/doula-vs-midwife/">doula vs midwife comparison</a>.
+For more on choosing a doula, check our <a href="/blog/doula-near-me/">guide to finding a doula near you</a>, our <a href="/doula-vs-midwife/">doula vs midwife comparison</a>, or explore birth support options <a href="/birth-support/portland-or/">in Portland, OR</a> and other cities.

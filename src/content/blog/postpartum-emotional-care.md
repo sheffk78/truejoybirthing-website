@@ -84,7 +84,7 @@ Your support network should include:
 
 **A healthcare provider you trust.** Not just your OB or midwife for the six-week checkup. A therapist, counselor, or psychiatrist who specializes in perinatal mental health. You don't need to wait until you're struggling to establish this relationship.
 
-**Peer support.** Whether it's a local new-parents group, an online community, or a circle of friends who've been through it — hearing from people who get it matters. Isolation feeds postpartum depression. Connection is part of the cure.
+**Peer support.** Whether it's a local new-parents group, an online community, or a circle of friends who've been through it — hearing from people who get it matters. Isolation feeds postpartum depression. Connection is part of the cure. If you're looking for local resources, our <a href="/birth-support/austin-tx/">Austin birth support</a> guide can connect you with doulas and postpartum services in the area.
 
 If you're wondering whether a doula fits into your support plan, our article on <a href="/blog/doula-support/">how doula support helps</a> breaks down the emotional and practical difference a doula makes during the postpartum period.
 
@@ -149,7 +149,7 @@ Recovery — emotional and physical — is not a straight line. You'll have good
 
 I've seen hundreds of families through this phase. The ones who do best are the ones who ask for help early, set realistic expectations, and give themselves grace when things are messy. Not the ones who power through alone.
 
-If you're pregnant right now, start building your support team before the baby arrives. Talk to your provider about postpartum mental health resources. Consider hiring a postpartum doula. Fill your freezer. Make a plan for who's checking on you — not just the baby.
+If you're pregnant right now, start building your support team before the baby arrives. Talk to your provider about postpartum mental health resources. Consider hiring a postpartum doula. Fill your freezer. Make a plan for who's checking on you — not just the baby. And if you're in Colorado, our <a href="/birth-support/denver-co/">Denver birth support</a> guide can help you find local doulas and providers who understand postpartum mental health.
 
 And if you're reading this in the thick of it, wondering if what you're feeling is normal: it might be. And it might not be. Either way, you deserve support. You deserve someone to talk to. You deserve to feel like yourself again.
 

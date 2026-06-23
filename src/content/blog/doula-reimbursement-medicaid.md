@@ -25,9 +25,9 @@ As of 2026, these states have active Medicaid doula coverage where doulas can en
 - **Colorado** (Health First Colorado) — Covers doula services through regional accountable care organizations and managed care plans. One Colorado mom I worked with found her doula through her managed care plan — the online directory was outdated, but a phone call got her connected in under a week.
 - **New Jersey** — Doulas can bill for prenatal visits, labor support, and postpartum care under Medicaid.
 - **Rhode Island** — Covers up to eight doula visits through Medicaid.
-- **Florida** — Launched a Medicaid doula pilot covering prenatal and postpartum visits.
+- **Florida** — Launched a Medicaid doula pilot covering prenatal and postpartum visits. If you're practicing in South Florida, our <a href="/birth-support/miami-fl/">Miami doula guide</a> has local details on managed care plans and enrollment.
 - **Maryland** — Expanded Medicaid to cover doula services through its health benefit exchange.
-- **Massachusetts** — Covers doula services through MassHealth.
+- **Massachusetts** — Covers doula services through MassHealth. Doulas in the Greater Boston area can learn more about local resources and billing on our <a href="/birth-support/boston-ma/">Boston birth support page</a>.
 - **Washington, DC** — Covers doula services through its Medicaid program.
 
 Several other states — including California, Illinois, Virginia, and Nevada — have passed legislation or are running pilot programs. The landscape changes fast, so check your state's Medicaid office for the most current status.

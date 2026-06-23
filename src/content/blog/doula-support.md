@@ -106,13 +106,13 @@ I also make sure you know your rights as a patient. You can decline any interven
 
 A doula is one piece of your support system. You'll also want:
 
-- **A provider you trust** — Whether that's an OB, a midwife, or a midwife practice, find someone who listens to you and respects your preferences.
+- **A provider you trust** — Whether that's an OB, a midwife, or a midwife practice, find someone who listens to you and respects your preferences. If you're looking for local resources, we've put together guides for families in <a href="/birth-support/austin-tx/">Austin, TX</a> and <a href="/birth-support/denver-co/">Denver, CO</a> covering providers, birth centers, and hospital policies in each area.
 - **A pediatrician lined up** — Don't wait until the baby is here. Meet a few before your due date.
 - **Postpartum help** — Family, friends, a postpartum doula — whoever you've got. Those first weeks are harder than most people tell you, and having meals and help with older kids makes a real difference.
 - **A backup plan** — I have a backup doula on call in case I'm at another birth when you go into labor. You'll meet her beforehand so you're not getting a stranger.
 
 ## Let's Talk
 
-If you're pregnant and wondering whether a doula is right for you, let's have a conversation. No pressure, no sales pitch — just an honest talk about what you're hoping for and whether I can help you get there.
+If you're pregnant and wondering whether a doula is right for you, let's have a conversation. No pressure, no sales pitch — just an honest talk about what you're hoping for and whether I can help you get there. Whether you're planning a birth in <a href="/birth-support/chicago-il/">Chicago, IL</a> or <a href="/birth-support/atlanta-ga/">Atlanta, GA</a>, I'd love to hear your story.
 
 [Contact me here](/contact/) to set up a free consultation. I'd love to hear your story.

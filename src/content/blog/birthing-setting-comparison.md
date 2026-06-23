@@ -36,7 +36,7 @@ Birth is not just a medical event. It's a deeply personal, physical, and emotion
 
 In a **hospital**, you'll typically labor in a clinical room with a bed, monitors, and fluorescent lighting. Some hospitals have made real efforts to create more welcoming spaces — dimmable lights, tubs, and birth balls — but you're still in a medical building with shift changes, protocols, and policies that may not align with your preferences. You may be told when to eat, when to push, and how long you can labor before interventions are recommended. That said, many hospitals now have midwifery practices and more flexible policies than they used to, and I've seen beautiful hospital births where families felt genuinely supported.
 
-In a **birth center**, the space is designed to help your body do what it already knows how to do. You can move freely, eat and drink throughout labor, labor in a tub, choose your delivery position, and keep lighting low. There are no shift changes — typically one midwife and one or two support staff stay with you from start to finish. The rooms feel like a comfortable bedroom, not a medical suite, and that sense of safety and privacy can make a real difference in how labor progresses.
+In a **birth center**, the space is designed to help your body do what it already knows how to do. You can move freely, eat and drink throughout labor, labor in a tub, choose your delivery position, and keep lighting low. There are no shift changes — typically one midwife and one or two support staff stay with you from start to finish. The rooms feel like a comfortable bedroom, not a medical suite, and that sense of safety and privacy can make a real difference in how labor progresses. Families I've worked with through our <a href="/birth-support/denver-co/">Denver birth support services</a> have consistently described how that home-like environment helped them feel calm and in control throughout labor.
 
 One mom I worked with in Dallas described her birth center experience this way: "I didn't feel like a patient. I felt like I was having a baby in my own home, except someone was making sure everything was safe." That's the birth center ethos in a sentence.
 
@@ -80,7 +80,7 @@ There's no wrong choice — only the choice that fits your circumstances and val
 - Your insurance coverage is better for hospital births
 - You prefer a longer postpartum stay (24-48 hours) for recovery and newborn monitoring
 
-Many families I work with start at a birth center and transfer if needed, which is exactly how the system is designed. Others choose a hospital with a midwifery practice and get the medical backup they want with the holistic care they value. Both paths can lead to a positive, empowering birth.
+Many families I work with start at a birth center and transfer if needed, which is exactly how the system is designed. Others choose a hospital with a midwifery practice and get the medical backup they want with the holistic care they value. Both paths can lead to a positive, empowering birth. For example, families using our <a href="/birth-support/austin-tx/">Austin birth support services</a> have successfully navigated both birth center and hospital options, finding the right fit for their unique circumstances.
 
 For a deeper dive into the decision-making framework, check out our <a href="/blog/choosing-your-birth-setting-guide/">complete birth setting guide</a> — it walks through every factor in detail and includes a decision matrix to help you weigh what matters most.
 
@@ -90,7 +90,7 @@ Here's something most people don't realize: a doula's support looks different de
 
 In a **birth center**, I'm often the continuity piece. Your midwife may have another client in labor, and in some centers, you might not meet the on-call midwife until you arrive. I'm the person who knows your preferences, your worries, and your partner's role — and I stay with you the entire time, whether you're laboring in the tub or deciding whether to transfer.
 
-In a **hospital**, I'm your advocate in a system that can feel overwhelming. Hospital staff are rotating in and out, and they may not know your preferences. I help you understand what's being offered, what's required, and what's optional. I remind you of your <a href="/birth-plan-template/">birth plan</a> when things get intense. I hold space so your partner can be present rather than overwhelmed.
+In a **hospital**, I'm your advocate in a system that can feel overwhelming. Hospital staff are rotating in and out, and they may not know your preferences. I help you understand what's being offered, what's required, and what's optional. I remind you of your <a href="/birth-plan-template/">birth plan</a> when things get intense. I hold space so your partner can be present rather than overwhelmed. Whether you're delivering at a birth center or a hospital, having that consistent advocate by your side is invaluable — and families I've supported through our <a href="/birth-support/portland-or/">Portland birth support services</a> have told me how much that continuity mattered in a hospital setting.
 
 If you're still exploring birth center options in your area, our <a href="/blog/birth-center-near-me/">guide to finding a birth center near you</a> covers what to look for, what questions to ask on a tour, and how to verify accreditation and licensing.
 

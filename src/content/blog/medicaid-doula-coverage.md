@@ -13,7 +13,7 @@ Let's talk about Medicaid doula coverage — because this is one of the most con
 
 Medicaid doula coverage means that your state's Medicaid program will pay for doula services during pregnancy, labor, and the postpartum period — either partially or in full. As of 2026, an increasing number of states have added doula coverage to their Medicaid benefits, recognizing that doula support improves birth outcomes and reduces costs.
 
-One Colorado mom told me her doula was fully covered through Health First Colorado, the state's Medicaid program. She said the key was calling her managed care plan directly — the online directory wasn't up to date, but once she asked the right person, she found a doula who accepted Medicaid in under a week.
+One Colorado mom told me her doula was fully covered through Health First Colorado, the state's Medicaid program. She said the key was calling her managed care plan directly — the online directory wasn't up to date, but once she asked the right person, she found a doula who accepted Medicaid in under a week. If you're in Colorado, you can also browse <a href="/birth-support/denver-co/">doulas in the Denver area</a> to find providers near you.
 
 ## Which States Cover Doula Services Through Medicaid?
 
@@ -23,7 +23,7 @@ Medicaid doula coverage is expanding rapidly, but it's still not available every
 
 These states have active programs where doula services are covered under Medicaid:
 
-**Oregon** was one of the first states to cover doula services through Medicaid and has one of the most established programs. Doulas must be enrolled as Medicaid providers and can bill for prenatal, birth, and postpartum support.
+**Oregon** was one of the first states to cover doula services through Medicaid and has one of the most established programs. Doulas must be enrolled as Medicaid providers and can bill for prenatal, birth, and postpartum support. Families looking for <a href="/birth-support/portland-or/">birth support in Portland</a> can find Medicaid-enrolled doulas through the Oregon Health Plan.
 
 **Minnesota** expanded its doula coverage in recent years, covering up to 12 visits per pregnancy including prenatal, birth, and postpartum support. The program is administered through managed care plans.
 
@@ -59,7 +59,7 @@ Several states are in the process of adding doula coverage or have active pilot 
 
 In many states, doula services are not yet covered by Medicaid. However, this is changing rapidly — more states introduce doula coverage legislation every year. If your state isn't listed, check with your local doula organizations or state Medicaid office for the most current information.
 
-One Texas family told me they assumed doula support was out of reach because Texas Medicaid doesn't yet cover doula services. They found a doula who offered a sliding scale fee based on their income — bringing the cost down to $400 for complete prenatal and birth support. They said it was the best money they spent on their entire birth.
+One Texas family told me they assumed doula support was out of reach because Texas Medicaid doesn't yet cover doula services. They found a doula who offered a sliding scale fee based on their income — bringing the cost down to $400 for complete prenatal and birth support. They said it was the best money they spent on their entire birth. If you're in Texas, you can explore <a href="/birth-support/austin-tx/">doula options in Austin</a> to connect with doulas who may offer flexible pricing.
 
 ## How Does Medicaid Doula Coverage Work?
 

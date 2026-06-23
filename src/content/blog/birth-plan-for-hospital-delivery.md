@@ -23,7 +23,7 @@ The best hospital birth plans are clear, concise, and collaborative. They tell y
 
 ## Why You Need a Birth Plan for the Hospital
 
-Here's what no one tells you about hospital births: the default is their routine, not your preference. Without a plan, you get whatever that hospital does by habit — and every hospital's habits are different.
+Here's what no one tells you about hospital births: the default is their routine, not your preference. Without a plan, you get whatever that hospital does by habit — and every hospital's habits are different. If you're delivering in <a href="/birth-support/austin-tx/">Austin, TX</a>, <a href="/birth-support/denver-co/">Denver, CO</a>, or <a href="/birth-support/portland-or/">Portland, OR</a>, our local city guides break down hospital-specific policies and doula support so you can plan for your exact setting.
 
 A birth plan puts you in the conversation. It tells your team:
 
@@ -169,7 +169,7 @@ Every hospital runs differently, and some standard policies catch families off g
 
 **Newborn procedures.** Eye ointment, vitamin K, and first bath timing are often done by default. If you have preferences, write them down.
 
-These policies look different depending on where you deliver. Our city guides break down local hospital details so you can plan for your specific area — check out <a href="/birth-support/dallas-tx/">Dallas, TX</a>, <a href="/birth-support/chicago-il/">Chicago, IL</a>, and <a href="/birth-support/new-york-ny/">New York, NY</a> for hospital-specific info.
+These policies look different depending on where you deliver. Our city guides break down local hospital details so you can plan for your specific area — check out <a href="/birth-support/dallas-tx/">Dallas, TX</a>, <a href="/birth-support/chicago-il/">Chicago, IL</a>, and <a href="/birth-support/new-york-ny/">New York, NY</a> for hospital-specific info. You can also explore <a href="/birth-support/seattle-wa/">Seattle, WA</a> for local hospital policies and doula resources in the Pacific Northwest.
 
 ## Talk to Your Provider Before Delivery Day
 

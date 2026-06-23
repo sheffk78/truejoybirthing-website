@@ -13,7 +13,7 @@ Let's talk about birth plan examples — because seeing a real one makes the who
 
 A birth plan is a written document that communicates your preferences for labor, delivery, and postpartum care to your medical team, doula, and partner. It's not a contract — it's a guide that helps everyone understand what matters most to you.
 
-One Portland mom told me she brought a three-page birth plan to her first birth and the nurse barely looked at it. For her second, she used a single page with the essentials highlighted — and her care team actually read it. She said the difference wasn't the content, it was the format.
+One <a href="/birth-support/portland-or/">Portland mom preparing for birth</a> told me she brought a three-page birth plan to her first birth and the nurse barely looked at it. For her second, she used a single page with the essentials highlighted — and her care team actually read it. She said the difference wasn't the content, it was the format.
 
 ## The Essential Birth Plan Template
 
@@ -53,7 +53,7 @@ This is the most common type of birth plan and the one that needs to be the clea
 - Please place baby skin-to-skin immediately after birth
 - I'm planning to breastfeed — please don't offer formula or pacifiers without asking me first
 
-One Austin mom shared that the most important part of her hospital birth plan was a single line: "Please explain everything before doing it." She said that simple request changed how her nurses communicated with her throughout labor and made her feel like a partner in her care, not just a patient.
+One <a href="/birth-support/austin-tx/">Austin mom working with birth support</a> shared that the most important part of her hospital birth plan was a single line: "Please explain everything before doing it." She said that simple request changed how her nurses communicated with her throughout labor and made her feel like a partner in her care, not just a patient.
 
 ## Natural Birth Plan Example
 
@@ -85,7 +85,7 @@ One Austin mom shared that the most important part of her hospital birth plan wa
 - I want delayed cord clamping and immediate skin-to-skin if baby is stable
 - If a repeat C-section becomes necessary, I want my partner in the OR and skin-to-skin in recovery as soon as possible
 
-One Denver doula shared that most of her VBAC clients found that hospitals with dedicated VBAC coordinators had much smoother experiences. She said the key was confirming the hospital's VBAC policies before creating the birth plan — not assuming anything.
+One <a href="/birth-support/denver-co/">Denver doula supporting VBAC families</a> shared that most of her VBAC clients found that hospitals with dedicated VBAC coordinators had much smoother experiences. She said the key was confirming the hospital's VBAC policies before creating the birth plan — not assuming anything.
 
 ## C-Section Birth Plan Example
 

@@ -13,7 +13,7 @@ Let's talk about hospital birth plans — because writing one for a hospital is 
 
 A hospital birth plan is a one-page document that communicates your preferences for labor, delivery, and postpartum care to the hospital staff who will be caring for you. It's not a contract or a demand — it's a guide that helps your nurse, doctor, and support team understand what matters most to you.
 
-One Portland mom told me she brought a three-page birth plan to her first birth and the nurse barely looked at it. For her second, she used a single page with the essentials highlighted — and her care team actually read it. She said the difference wasn't the content, it was the format.
+One mom from <a href="/birth-support/portland-or/">Portland, OR</a> told me she brought a three-page birth plan to her first birth and the nurse barely looked at it. For her second, she used a single page with the essentials highlighted — and her care team actually read it. She said the difference wasn't the content, it was the format.
 
 ## Why Hospital Birth Plans Are Different
 
@@ -25,7 +25,7 @@ A hospital is a different environment than a birth center or your home. Understa
 
 **Multiple patients.** Your nurse is probably managing more than one patient. A birth plan that takes 30 seconds to scan will be read. A three-page document will be skimmed or set aside.
 
-A Denver mom told me her birth plan worked because she'd shared it with her OB at a prenatal visit before labor started. Her provider flagged two things that the hospital didn't allow, and she had time to adjust before she was in the delivery room. She said that single conversation saved her from being disappointed in the moment.
+A mom from <a href="/birth-support/denver-co/">Denver, CO</a> told me her birth plan worked because she'd shared it with her OB at a prenatal visit before labor started. Her provider flagged two things that the hospital didn't allow, and she had time to adjust before she was in the delivery room. She said that single conversation saved her from being disappointed in the moment.
 
 ## What to Include in Your Hospital Birth Plan
 
@@ -99,7 +99,7 @@ Yes. Most hospitals welcome doulas and many now have doula programs or referral 
 Yes. Bring it to a prenatal appointment around 34 to 36 weeks. Your provider can tell you what's realistic at their hospital and you can adjust before labor. This is the most effective thing you can do to make your birth plan work.
 
 ### Can I use a doula in a hospital setting?
-Absolutely. Doulas work alongside hospital staff. Many L&D nurses appreciate having a doula present because the doula handles the continuous emotional support while the nurse manages the clinical care. If you don't have one yet, our <a href="/blog/doula-near-me/">guide to finding a doula</a> can help you start the search.
+Absolutely. Doulas work alongside hospital staff. Many L&D nurses appreciate having a doula present because the doula handles the continuous emotional support while the nurse manages the clinical care. If you don't have one yet, our <a href="/blog/doula-near-me/">guide to finding a doula</a> can help you start the search, or you can look for <a href="/birth-support/austin-tx/">birth support in Austin, TX</a> if you're in that area.
 
 ### What if my labor happens during a shift change?
 Your birth plan carries over between shifts. Hand a copy to your new nurse when she introduces herself. If your partner or doula is awake, they can also summarize your preferences. This is another reason to keep your plan to one page — it's easy to pass along.

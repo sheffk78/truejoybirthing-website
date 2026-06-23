@@ -56,7 +56,7 @@ Most families book postpartum support for 2–12 weeks depending on their situat
 Location is one of the biggest factors in doula pricing. Here's what I've seen working with families across different areas:
 
 - **Major cities (NYC, Boston, San Francisco, LA):** $1,500–$3,000 for a birth package. Higher cost of living, higher training requirements, and more demand all push prices up.
-- **Mid-size cities (Dallas, Denver, Atlanta):** $1,000–$2,000. Still solid options, moderate pricing.
+- **Mid-size cities (Dallas, Denver, Atlanta):** $1,000–$2,000. Still solid options, moderate pricing. If you're in one of these areas, check out our guide to <a href="/birth-support/denver-co/">doula services in Denver</a> for local cost details.
 - **Rural areas and small towns:** $800–$1,500. Lower base rates, but watch for travel fees if you're outside the doula's usual radius.
 
 Doula costs also vary significantly by location — for example, doulas in [New York City](/birth-support/new-york-ny/) typically charge more than those in [Dallas](/birth-support/dallas-tx/) or [Los Angeles](/birth-support/los-angeles-ca/). Our city-by-city guides break down local pricing, Medicaid coverage, and hospital policies so you can plan your budget with confidence.
@@ -98,7 +98,7 @@ Price matters, but it shouldn't be the only thing you consider. Here's my honest
 - **Ask about certification.** DONA, CAPPA, and ProDoula are the main certifying organizations. Certification doesn't guarantee a great fit, but it means baseline training standards.
 - **Newer doulas charge less** and often bring real enthusiasm and current training. If budget is tight, this can be a solid option.
 - **Experienced doulas cost more** but bring knowledge you can't get from a textbook — they've seen the things that come up and know how to handle them.
-- **Interview at least two or three doulas.** Share your birth preferences, ask about their approach, find out about backup coverage, and talk budget openly. The right doula for you is the one you click with — not necessarily the most expensive one.
+- **Interview at least two or three doulas.** Share your birth preferences, ask about their approach, find out about backup coverage, and talk budget openly. The right doula for you is the one you click with — not necessarily the most expensive one. For example, if you're looking for <a href="/birth-support/chicago-il/">a birth doula in Chicago</a>, local guides can help you connect with experienced doulas in your area.
 
 ## Making It Work: Real Budget Tips
 

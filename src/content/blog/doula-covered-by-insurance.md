@@ -90,7 +90,7 @@ Medicaid coverage for doula care varies widely. Here's what's currently availabl
 
 - **New York** — Some Medicaid plans cover up to 60% of doula costs with proper documentation
 - **California** — Expanding coverage across 27 counties; payments range from $450–$900
-- **Washington** — Select private and Medicaid plans offer coverage, usually with pre-authorization
+- **Washington** — Select private and Medicaid plans offer coverage, usually with pre-authorization. See our <a href="/birth-support/seattle-wa/">Seattle, WA birth support guide</a> for local details
 
 For city-by-city details, check our guides for <a href="/birth-support/denver-co/">Denver, CO</a> (Medicaid-covered), <a href="/birth-support/portland-or/">Portland, OR</a> (full Medicaid coverage), and <a href="/birth-support/dallas-tx/">Dallas, TX</a> (not yet covered statewide).
 
@@ -106,6 +106,6 @@ Not every plan covers doula care yet. If yours doesn't, here are practical alter
 - **HSA/FSA** — Even without direct insurance coverage, pre-tax accounts still work for doula expenses.
 - **Employer wellness benefits** — Some companies offer wellness stipends that can go toward birth support.
 
-Don't let insurance confusion keep you from getting the support you deserve. A phone call and some paperwork can save you hundreds or even over a thousand dollars. And if the whole process feels overwhelming, that's exactly what I'm here for — I help my clients navigate this every day.
+Don't let insurance confusion keep you from getting the support you deserve. A phone call and some paperwork can save you hundreds or even over a thousand dollars. And if the whole process feels overwhelming, that's exactly what I'm here for — I help my clients navigate this every day, whether you're exploring <a href="/birth-support/austin-tx/">doula coverage in Austin, TX</a> or anywhere else.
 
 For more on what doula services cost and what's included, check out my full [doula cost breakdown](/blog/how-much-are-doula-services/). And if you're ready to talk about what coverage might look like for your specific situation, [reach out](/contact/) — I'm happy to help you figure it out.

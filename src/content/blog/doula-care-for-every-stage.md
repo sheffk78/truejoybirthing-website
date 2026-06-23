@@ -48,7 +48,7 @@ Most doulas offer 2-3 prenatal visits. Here's what we actually do during those:
 
 ### When to Hire a Doula
 
-The earlier, the better. I know families who've reached out in their first trimester and others who called me at 38 weeks. We can work with either timeline, but earlier gives us more time to build trust and work through your preferences. Somewhere around 20-30 weeks is the sweet spot for most families.
+The earlier, the better. I know families who've reached out in their first trimester and others who called me at 38 weeks. We can work with either timeline, but earlier gives us more time to build trust and work through your preferences. Somewhere around 20-30 weeks is the sweet spot for most families. If you're ready to start looking, our <a href="/birth-support/denver-co/">Denver, CO birth support guide</a> walks you through local options and what to expect.
 
 Worried about cost? Most doulas charge $800-2500 for full care packages. Some insurance plans now cover doula services, and many states' Medicaid programs do too. Check our <a href="/medicaid-doula-coverage/">Medicaid doula coverage guide</a> for your state, or our <a href="/doula-cost/">doula cost breakdown</a> to understand what you're paying for.
 
@@ -111,7 +111,7 @@ Not every doula is the right fit for every family. Here's what actually matters 
 - **What's their backup plan?** Doulas are human. We get sick. We have other births. Ask who covers for them.
 - **Do they mesh with your partner?** Your partner has to be comfortable too.
 
-Our <a href="/how-to-choose-a-doula/">how to choose a doula</a> guide and <a href="/doula-interview-questions/">doula interview questions</a> page walk you through this in more detail.
+Our <a href="/how-to-choose-a-doula/">how to choose a doula</a> guide and <a href="/doula-interview-questions/">doula interview questions</a> page walk you through this in more detail. You can also browse local resources — for example, our <a href="/birth-support/chicago-il/">Chicago, IL birth support guide</a> lists experienced doulas serving the area.
 
 ## The Bottom Line
 

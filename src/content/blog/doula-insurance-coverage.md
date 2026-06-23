@@ -90,6 +90,8 @@ If you have private insurance, here's exactly what to do:
 
 3. **Get it in writing.** Write down the representative's name, reference number, and the date of the call. Ask them to send you the coverage details in writing. This matters if you have to appeal a denied claim later.
 
+Keep in mind that what your plan covers can depend heavily on where you live — families in <a href="/birth-support/denver-co/">Denver</a>, for instance, may find different coverage options and provider networks than those in other regions.
+
 ### HSA and FSA Options
 
 Even if your health insurance doesn't directly cover doula services, you can often use HSA or FSA funds to pay for a doula. Here's how:
@@ -104,7 +106,7 @@ If your plan doesn't cover doula services, you still have options:
 
 - **Sliding scale fees** — Many doulas, including me, offer adjusted pricing based on income. Ask. It's not rude.
 - **Payment plans** — Spread the cost out over your pregnancy instead of one lump sum.
-- **Community doula programs** — Some areas have volunteer or reduced-fee programs run by local organizations.
+- **Community doula programs** — Some areas have volunteer or reduced-fee programs run by local organizations. Availability varies by city — check our guide for <a href="/birth-support/atlanta-ga/">Atlanta</a> to see what local resources may exist in your area.
 - **Negotiate with your insurance after the fact** — Submit your doula's superbill and a letter explaining why doula support is medically beneficial. Some plans will reimburse even if they initially say no.
 
 For a full breakdown of what doulas charge and what affects pricing, see [how much doula services cost](/blog/how-much-are-doula-services/).

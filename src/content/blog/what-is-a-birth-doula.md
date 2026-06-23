@@ -58,7 +58,7 @@ This isn't just my opinion. The Cochrane Review — one of the most respected so
 - **28% fewer instrumental deliveries** (forceps or vacuum)
 - **34% fewer reports of dissatisfaction** with the birth experience
 
-Those numbers tell a clear story. When someone stays with you through labor — someone whose only job is your comfort and your voice — things tend to go better. Not because doulas have special powers, but because continuous support is something most hospital environments just don't provide. Nurses have other patients. Doctors come and go. A doula stays.
+Those numbers tell a clear story. When someone stays with you through labor — someone whose only job is your comfort and your voice — things tend to go better. Not because doulas have special powers, but because continuous support is something most hospital environments just don't provide. Nurses have other patients. Doctors come and go. A doula stays — whether you're delivering at a major hospital in <a href="/birth-support/houston-tx/">Houston, TX</a> or a smaller community setting.
 
 ## How a Doula Supports Your Partner
 
@@ -118,7 +118,7 @@ Finding a doula isn't like finding a doctor — you don't need the most credenti
 - Pay attention to how you feel talking to them. Can you be honest? Do you feel heard?
 
 **Ask about logistics and cost**
-- Most birth doulas charge between $800 and $2,000 depending on your location — our <a href="/blog/how-much-are-doula-services/">doula cost guide</a> breaks this down
+- Most birth doulas charge between $800 and $2,000 depending on your location — our <a href="/blog/how-much-are-doula-services/">doula cost guide</a> breaks this down, and you can see local pricing in city guides like <a href="/birth-support/austin-tx/">Austin, TX</a>
 - Some offer sliding scale or payment plans
 - Ask what's included — prenatal visits, the birth itself, postpartum follow-up
 - Check whether your insurance or Medicaid covers doula services — more states are adding this benefit, and our <a href="/blog/doula-covered-by-insurance/">insurance coverage guide</a> has current details

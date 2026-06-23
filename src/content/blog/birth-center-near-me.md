@@ -13,7 +13,7 @@ Let's talk about birth centers — because for many families, they're the perfec
 
 A birth center is a healthcare facility designed for low-risk pregnancies that offers a more home-like environment than a hospital, staffed by midwives and nurses. Birth centers focus on physiologic birth — letting labor unfold naturally with minimal intervention — while still having protocols and equipment for emergencies.
 
-One first-time mom in Portland chose a birth center after touring both a hospital and the center. She told me the difference was immediate: at the hospital, she felt like a patient being processed. At the birth center, she felt like a person having a baby. She ended up having a water birth, went home six hours after delivery, and said she couldn't imagine doing it any other way.
+One first-time mom in <a href="/birth-support/portland-or/">Portland</a> chose a birth center after touring both a hospital and the center. She told me the difference was immediate: at the hospital, she felt like a patient being processed. At the birth center, she felt like a person having a baby. She ended up having a water birth, went home six hours after delivery, and said she couldn't imagine doing it any other way.
 
 ## What Makes a Birth Center Different From a Hospital?
 
@@ -50,7 +50,7 @@ Birth centers are designed for people with low-risk pregnancies. You may be a go
 
 If any of these don't apply to you, a hospital birth may be a safer choice. Birth centers have transfer protocols for when things move outside their scope, but if you know you have risk factors, starting at a hospital means you're already where you need to be if intervention becomes necessary.
 
-One doula in Denver told me she's seen families fall in love with the idea of a birth center without fully understanding the transfer reality. About 10-15% of first-time birth center clients end up transferring to a hospital during labor — sometimes for pain management, sometimes for medical reasons. She said the families who did best were the ones who had a transfer plan before labor started.
+One doula in <a href="/birth-support/denver-co/">Denver</a> told me she's seen families fall in love with the idea of a birth center without fully understanding the transfer reality. About 10-15% of first-time birth center clients end up transferring to a hospital during labor — sometimes for pain management, sometimes for medical reasons. She said the families who did best were the ones who had a transfer plan before labor started.
 
 ## How to Find a Birth Center Near You
 
@@ -61,6 +61,8 @@ Finding a birth center is different from finding a hospital. There are fewer of 
 **Your midwife or doula.** If you've already chosen a midwife or doula, they can usually recommend birth centers they've worked with and know the quality of.
 
 **Local parenting groups.** Facebook groups and local birth communities are excellent sources for real recommendations from families who've given birth at specific centers.
+
+If you're looking for birth support in <a href="/birth-support/austin-tx/">Austin</a> or another city with a growing birth center community, local midwives and doulas can point you toward accredited options nearby.
 
 ## What to Look for When Touring a Birth Center
 

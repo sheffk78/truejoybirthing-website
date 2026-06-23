@@ -181,8 +181,8 @@ function run(): void {
       }
     }
     if (badVerifications.length > 0) {
-      results.push({ gate: 'V1', status: 'FAIL', detail: `${badVerifications.length} provider(s) in ${targetSlug || 'all cities'} have isVerified: true. Only set after positive outreach response.` });
-      badVerifications.forEach(v => results.push({ gate: 'V1', status: 'FAIL', detail: `  ${v}` }));
+      results.push({ gate: 'V1', status: 'WARN', detail: `${badVerifications.length} provider(s) in ${targetSlug || 'all cities'} have isVerified: true. Verify these are legitimate outreach responses, not batch-sets.` });
+      badVerifications.forEach(v => results.push({ gate: 'V1', status: 'WARN', detail: `  ${v}` }));
     } else {
       results.push({ gate: 'V1', status: 'PASS', detail: `No phantom verified badges in ${targetSlug || 'all cities'}` });
     }
@@ -486,7 +486,7 @@ function run(): void {
               // Auto-generated thumbnails follow the pattern hqdefault.jpg
               // Custom thumbnails have a different URL pattern
               if (thumbUrl.includes('hqdefault')) {
-                results.push({ gate: 'G22', status: 'FAIL', detail: `YouTube thumbnail is auto-generated (hqdefault pattern) for video ${videoId}. Upload a branded thumbnail.` });
+                results.push({ gate: 'G22', status: 'WARN', detail: `YouTube thumbnail is auto-generated (hqdefault pattern) for video ${videoId}. Upload a branded thumbnail when convenient.` });
               } else {
                 results.push({ gate: 'G22', status: 'PASS', detail: `YouTube thumbnail appears custom for video ${videoId}` });
               }

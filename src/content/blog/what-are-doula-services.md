@@ -110,7 +110,7 @@ Every doula structures their services a little differently, but most birth doula
 
 Some doulas include extras like birth photography, lactation support, or placenta encapsulation. Some offer payment plans, sliding scale fees, or bartering. It's always worth asking.
 
-For specifics on pricing, our <a href="/blog/how-much-are-doula-services/">doula cost guide</a> breaks down what you can expect to pay in different areas and what factors affect the price.
+For specifics on pricing, our <a href="/blog/how-much-are-doula-services/">doula cost guide</a> breaks down what you can expect to pay in different areas and what factors affect the price. If you're ready to find support near you, browse <a href="/birth-support/chicago-il/">doula services in Chicago, IL</a> or other city pages to connect with doulas in your area.
 
 ## How to Know If a Doula Is Right for You
 
@@ -124,7 +124,7 @@ You don't need a specific reason to hire a doula. But here are the situations wh
 - You don't have family nearby or your family isn't supportive
 - You just plain don't want to do this alone
 
-If any of those sound like you, a doula is probably worth looking into.
+If any of those sound like you, a doula is probably worth looking into. Whether you're looking for <a href="/birth-support/austin-tx/">doula services in Austin, TX</a>, <a href="/birth-support/denver-co/">doula services in Denver, CO</a>, or <a href="/birth-support/portland-or/">doula services in Portland, OR</a>, finding a local doula who knows your hospitals and providers makes a real difference.
 
 Not sure where to start? Our <a href="/blog/what-is-a-birth-doula/">birth doula guide</a> goes deeper into what happens during labor support specifically.
 
@@ -140,10 +140,14 @@ Not every doula is the right fit for every family. Here's what I'd look for:
 
 For questions to ask during a consultation, our <a href="/blog/doula-interview-questions/">doula interview questions guide</a> has you covered.
 
+No matter where you live, from <a href="/birth-support/miami-fl/">doula services in Miami, FL</a> to <a href="/birth-support/boston-ma/">doula services in Boston, MA</a>, the same principles apply — find someone certified, experienced, and the right personality fit.
+
 ## The Bottom Line
 
 Doula services are prenatal visits, continuous labor support, and postpartum care — from someone whose only job is to focus on you. Not your baby's heart rate. Not your dilation. You.
 
 After seven births of my own and supporting hundreds of families, I can tell you this: the families who have continuous support look back on their births and feel better about them. Not because everything went perfectly — it rarely does — but because they didn't feel alone. They had someone who knew them, stayed with them, and helped them understand what was happening.
+
+Wherever you are in the country — whether that's <a href="/birth-support/seattle-wa/">doula services in Seattle, WA</a> or anywhere else — you deserve someone in your corner.
 
 If you want to talk about what doula support might look like for your birth, <a href="/contact/">reach out</a>. No pressure, no sales pitch — just an honest conversation about what you're hoping for and whether I can help you get there.

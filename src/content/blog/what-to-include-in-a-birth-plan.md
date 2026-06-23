@@ -85,7 +85,7 @@ The first hour after birth is often called the golden hour. It's a big deal, but
 - Placenta delivery preferences
 - Perineal care preferences
 
-This section matters because postpartum protocols vary widely between hospitals. Without stating your preferences, you'll get whatever that facility does by default.
+This section matters because postpartum protocols vary widely between hospitals. Without stating your preferences, you'll get whatever that facility does by default. If you're in the Chicago area, our <a href="/birth-support/chicago-il/">Chicago birth support guide</a> breaks down postpartum protocols at local hospitals so you can plan ahead.
 
 ### 5. Newborn Care
 
@@ -145,7 +145,7 @@ After reading hundreds of birth plans, here are the mistakes I see again and aga
 
 **Forgetting your partner's role.** Your partner isn't just there for moral support. Tell your team how you want your partner involved — counter-pressure, reminding you of your preferences, being the one to announce the baby's sex, cutting the cord.
 
-**Ignoring hospital-specific policies.** Every hospital has different standard procedures. A plan that works perfectly at one hospital might conflict with routine at another. Talk to your provider about what's typical at your location.
+**Ignoring hospital-specific policies.** Every hospital has different standard procedures. A plan that works perfectly at one hospital might conflict with routine at another. Talk to your provider about what's typical at your location. For example, if you're in the Phoenix area, our <a href="/birth-support/phoenix-az/">Phoenix birth support guide</a> covers local hospital policies so you can align your plan with what to expect.
 
 For examples of birth plans that work — and ones that don't — our <a href="/birth-plan-examples/">birth plan examples</a> page breaks down real plans with notes on what's effective and what to change.
 

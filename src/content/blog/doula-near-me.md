@@ -33,7 +33,7 @@ Doulas I work with tell me that the number one thing they wish families knew abo
 
 This is where many families actually find their doula. Local "mom groups," neighborhood parenting pages, and city-specific birth groups on Facebook are full of real recommendations from families who've been through it.
 
-One Austin mom told me she found her doula through a local Facebook group after three dead ends on Google. Knowing that someone she trusted had already vetted this doula gave her confidence she wouldn't have had from a directory listing alone.
+One mom who was searching for a <a href="/birth-support/austin-tx/">doula in Austin, TX</a> told me she found her doula through a local Facebook group after three dead ends on Google. Knowing that someone she trusted had already vetted this doula gave her confidence she wouldn't have had from a directory listing alone.
 
 When you ask for recommendations in a local group, try being specific about what you're looking for:
 - Type of birth support (home birth, hospital, unmedicated, epidural-friendly)
@@ -45,7 +45,7 @@ When you ask for recommendations in a local group, try being specific about what
 
 Your OB, midwife, or hospital's childbirth education department often keeps a list of doulas they've worked with and trust. Many hospitals now offer doula referral lists specifically because they've seen the difference doula support makes in birth outcomes.
 
-One Denver doula shared that most of her new clients come from midwife referrals. She told me that midwives and doulas naturally work well together — the midwife handles the medical side, and the doula focuses on continuous emotional support. When a provider recommends a doula, it's usually because they've seen that partnership work well.
+One <a href="/birth-support/denver-co/">Denver-area doula</a> shared that most of her new clients come from midwife referrals. She told me that midwives and doulas naturally work well together — the midwife handles the medical side, and the doula focuses on continuous emotional support. When a provider recommends a doula, it's usually because they've seen that partnership work well.
 
 ## What Should You Look for When Choosing a Doula?
 
@@ -107,7 +107,7 @@ If you truly can't find or afford a doula, consider a partner preparation class.
 
 At the end of the day, what matters most is how you feel walking into your birth. Having a doula by your side means someone's there who stays with you the whole time, who knows what you want, and who's focused on you — not just the clinical side of your birth.
 
-One Austin mom told me, "I didn't realize how much I needed my doula until she was there. Now I can't imagine doing it without her."
+One mom who worked with a <a href="/birth-support/portland-or/">doula in Portland, OR</a> told me, "I didn't realize how much I needed my doula until she was there. Now I can't imagine doing it without her."
 
 When you're ready to start building your birth plan, the <a href="/birth-plan-template/" class="btn-primary">Joyful Birth Plan</a> walks you through every step — because you shouldn't have to figure this out alone.
 

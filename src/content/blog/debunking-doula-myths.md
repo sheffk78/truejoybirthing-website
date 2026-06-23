@@ -23,7 +23,7 @@ Here's what actually happens: I make partners better at supporting you.
 
 Your partner knows you. They love you. They know that you hate being touched on your lower back and that you need cold water, not warm. What they don't know is how to use counter-pressure during contractions, which positions help labor progress, or when to suggest a walk vs. when to let you rest.
 
-I've watched partners go from anxious and unsure to confident and hands-on — because they had someone showing them what to do instead of standing helplessly on the sidelines. One dad in Denver told me after his daughter's birth, "I finally felt useful instead of just scared."
+I've watched partners go from anxious and unsure to confident and hands-on — because they had someone showing them what to do instead of standing helplessly on the sidelines. One dad I worked with through our <a href="/birth-support/denver-co/">Denver, CO birth support services</a> told me after his daughter's birth, "I finally felt useful instead of just scared."
 
 Your partner will always be your person. I'm there to help them help you.
 
@@ -79,7 +79,7 @@ This myth probably comes from the idea that doulas push clients toward unmedicat
 
 Every time I walk into a hospital, I introduce myself to the nursing staff. I share my client's birth preferences. I ask about hospital protocols. I make it clear that I'm there to support my client — not to challenge the medical team.
 
-The result? Nurses have told me they love when their patients have doulas. One L&D nurse in Austin put it this way: "When a doula is in the room, my patient is calmer, better informed, and needs less intervention. That's better for everyone."
+The result? Nurses have told me they love when their patients have doulas. One L&D nurse I work with at a hospital in <a href="/birth-support/austin-tx/">Austin, TX</a> put it this way: "When a doula is in the room, my patient is calmer, better informed, and needs less intervention. That's better for everyone."
 
 Here's how the roles break down:
 
@@ -123,6 +123,6 @@ Most of the myths about doulas come from people who haven't worked with one. The
 
 Continuous support during labor means shorter labors, fewer interventions, better communication with your medical team, and higher satisfaction with your birth experience. That's not my opinion — that's what the research shows.
 
-If you're still on the fence, start with our guide to <a href="/blog/what-is-a-birth-doula/">what a birth doula actually does</a>. And when you're ready to find the right person for your birth, our <a href="/blog/doula-interview-questions/">doula interview questions</a> will help you hire with confidence.
+If you're still on the fence, start with our guide to <a href="/blog/what-is-a-birth-doula/">what a birth doula actually does</a>. And when you're ready to find the right person for your birth, our <a href="/blog/doula-interview-questions/">doula interview questions</a> will help you hire with confidence. We also offer local birth support guides for families in <a href="/birth-support/portland-or/">Portland, OR</a> and other cities across the country.
 
 You deserve support. Not the kind that replaces your partner or argues with your doctor — the kind that holds space, shares information, and stays by your side the whole way through.
