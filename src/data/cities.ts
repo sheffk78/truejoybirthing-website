@@ -5634,6 +5634,7 @@ export const cities: Record<string, CityData> = {
     city: "Chesapeake" ,
     state: "VA" ,
     slug: "chesapeake-va" ,
+    publishedDate: "2026-06-22",
     heroImage: "/images/chesapeake-va-birth-doula-skyline.webp" ,
     ogImage: "https://truejoybirthing.com/images/og-city-chesapeake-va.webp" ,
     enableBlogResources: true,
