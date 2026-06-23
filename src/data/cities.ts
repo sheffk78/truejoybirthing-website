@@ -5576,6 +5576,7 @@ export const cities: Record<string, CityData> = {
     lat: 34.0967,
     lng: -117.4599},
   "san-bernardino-ca": {
+    publishedDate: "2026-06-22",
     city: "San Bernardino" ,
     state: "CA" ,
     slug: "san-bernardino-ca" ,
