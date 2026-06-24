@@ -26,8 +26,8 @@ def _read_city_block(slug: str) -> str | None:
         return None
     text = open(cities_path).read()
 
-    # Match slug: "slug" pattern
-    slug_pattern = re.compile(rf'slug:\s*"{re.escape(slug)}"')
+    # Match "slug": { pattern
+    slug_pattern = re.compile(rf'"{re.escape(slug)}":\s*{{')
     match = slug_pattern.search(text)
     if not match:
         return None
@@ -176,6 +176,8 @@ def hospital_dimensions(slug: str) -> dict:
             name = name_m.group(1) if name_m else "Unknown facility"
 
             if not thumb_m or not thumb_m.group(1):
+                if 'No birth centers' in name or 'No hospitals' in name:
+                    continue  # Allow empty thumbnails for placeholder entries
                 issues.append(f"{name}: no thumbnail field")
                 continue
 

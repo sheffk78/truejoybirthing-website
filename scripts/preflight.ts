@@ -101,7 +101,7 @@ function run(): void {
     // Targeted mode: quick awk check instead of full validator flood
     try {
       const cityBlock = execSync(
-        `awk '/slug: "${targetSlug}"/{p=1} p; /^  "[a-z].*": \\{/{if(p && NR>start) exit} p{start=NR}' src/data/cities.ts`,
+        `awk '/"${targetSlug}": \\{/{p=1; start=NR} p; /^  "[a-z].*": \\{/{if(p && NR>start) exit}' src/data/cities.ts`,
         { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
       );
       const missing: string[] = [];
@@ -217,7 +217,7 @@ function run(): void {
       // (avoids brace-in-string false positives from manual depth counter)
       try {
         const blockContent = execSync(
-          `awk '/slug: "${targetSlug}"/{p=1} p; /^  "[a-z].*": \\{/{if(p && NR>start) exit} p{start=NR}' src/data/cities.ts`,
+          `awk '/"${targetSlug}": \\{/{p=1; start=NR} p; /^  "[a-z].*": \\{/{if(p && NR>start) exit}' src/data/cities.ts`,
           { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
         );
         searchBlock = blockContent;
@@ -355,7 +355,7 @@ function run(): void {
   if (targetSlug) {
     try {
       const cityBlock = execSync(
-        `awk '/slug: "${targetSlug}"/{p=1} p; /^  "[a-z].*": \\{/{if(p && NR>start) exit} p{start=NR}' src/data/cities.ts`,
+        `awk '/"${targetSlug}": \\{/{p=1; start=NR} p; /^  "[a-z].*": \\{/{if(p && NR>start) exit}' src/data/cities.ts`,
         { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
       );
       // Look for YouTube embed URL in the dist HTML
@@ -435,7 +435,7 @@ function run(): void {
   if (targetSlug) {
     try {
       const cityBlock = execSync(
-        `awk '/slug: "${targetSlug}"/{p=1} p; /^  "[a-z].*": \\{/{if(p && NR>start) exit} p{start=NR}' src/data/cities.ts`,
+        `awk '/"${targetSlug}": \\{/{p=1; start=NR} p; /^  "[a-z].*": \\{/{if(p && NR>start) exit}' src/data/cities.ts`,
         { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
       );
 
@@ -613,10 +613,8 @@ function run(): void {
   // ── G9: Support scene is city-specific, not generic ──
   if (targetSlug) {
     try {
-      const g9Result = execSync(
-        `awk '/slug: "${targetSlug}"/{p=1} p; /^  "[a-z].*": \\\\{/{if(p && NR>start) exit} p{start=NR}' src/data/cities.ts | grep -oE 'supportSceneImage:\\s*"[^"]+"' | head -1 | sed 's/supportSceneImage: *"//' | sed 's/"$//'`,
-        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
-      );
+      const g9Cmd = `awk '/"${targetSlug}": \\{/{p=1; start=NR} p; /^  "[a-z].*": \\{/{if(p && NR>start) exit}' src/data/cities.ts | grep -oE 'supportSceneImage:\\s*"[^"]+"' | head -1 | sed 's/supportSceneImage: *"//' | sed 's/"$//'`;
+      const g9Result = execSync(g9Cmd, { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 });
       const supportScene = g9Result.trim();
       if (!supportScene) {
         results.push({ gate: 'G9', status: 'SKIP', detail: 'No supportSceneImage field found' });

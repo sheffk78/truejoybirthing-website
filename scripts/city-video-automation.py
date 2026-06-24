@@ -478,6 +478,12 @@ def copy_assets(slug):
         src = PROJECT_ROOT / 'public' / 'images' / app
         if src.exists():
             shutil.copy2(str(src), str(dest_dir / app))
+
+    # Copy fullpage-scroll screenshot
+    scroll_src = PROJECT_ROOT / 'public' / 'images' / f'{slug}-fullpage-scroll.png'
+    if scroll_src.exists():
+        shutil.copy2(str(scroll_src), str(dest_dir / f'{slug}-fullpage-scroll.png'))
+        print(f'  ✅ Fullpage-scroll screenshot copied')
     
     print(f'  ✅ Assets copied')
 
