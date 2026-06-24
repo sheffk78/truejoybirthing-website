@@ -115,7 +115,9 @@ export const cities: Record<string, CityData> = {
     slug: "amarillo-tx" ,
     costLow: 650,
     costHigh: 1800,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Doulas" , credential: "Birth Doula" , practice: "Doulas" , url: "https://www.beyondbirthmidwifery.com/resource/doula" , photo: "" , description: "Liz Hensley Birth Doula. Liz Hensley (575) 318-4576 · lizhensley17 ... Amarillo, TX 79106 (806) 437-1537. Hours. Tuesday, Wednesday, and ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Amarillo, TX"] },
       { name: "Macy Smith Doula Services" , credential: "Birth Doula" , practice: "Macy Smith Doula Services" , url: "https://www.facebook.com/p/Macy-Smith-Doula-Services-61557069352950/" , photo: "" , description: "I'm Macy, your dedicated doula and birth companion based in Amarillo, Texas. Passionate about creating empowering and nurturing birth experiences.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Amarillo, TX"] },
       { name: "Abbie Whitfield" , credential: "Birth Doula" , practice: "Abbie Whitfield" , url: "https://www.bornbir.com/abbie-whitfield" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/oologk9c43i3fwlis2wx0qc8t1ih.jpeg", description: "I offer a complete birth package which includes a free consultation, 2 prenatal classes, monthly check-ins, 24-7 on call support from 37 weeks until birth, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Amarillo, TX"] },
@@ -196,6 +198,10 @@ export const cities: Record<string, CityData> = {
     slug: "arlington-tx" ,
     costLow: 850,
     costHigh: 2500,
+    heroImage: "/images/philadelphia-pa-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-philadelphia-pa.webp",
+    supportSceneImage: "/images/philadelphia-pa-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Philadelphia: Pennsylvania birth support and doula care",
     shelbiServesHere: true,    localDoulas: [
       { name: "Community" , credential: "Birth Doula" , practice: "Community" , url: "https://mrhelab.uta.edu/community-led-projects/" , photo: "" , description: "ABLE provides DONA-approved birth doula training, post-training support for doulas, and mentorship and coaching for Black doula leaders.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Arlington, TX"] },
       { name: "Community Doulas" , credential: "Birth Doula" , practice: "Community Doulas" , url: "https://www.unitedwaytarrant.org/community-doulas" , photo: "https://www.unitedwaytarrant.org/sites/default/files/2024-05/Doulas%20Thumbnail%20%281%29.png", description: "Through our Maternal Health program, we offer free in-person and virtual doula services to expectant mothers in Tarrant County. 8000 ARLINGTON OFFICE 401 W. ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Arlington, TX"] },
@@ -232,7 +238,9 @@ export const cities: Record<string, CityData> = {
     slug: "austin-tx" ,
     costLow: 1000,
     costHigh: 3000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Texas Doula Agency" , credential: "Birth Doula" , practice: "Texas Doula Agency" , url: "https://www.circlebirth.com/" , photo: "https://images.squarespace-cdn.com/content/v1/6508c44693e166597f53d1c9/e84d1231-044c-4037-8a61-1ab1537494b4/austin-doula-care.jpg", description: "Birth is an Austin-based, family-operated doula agency providing non-clinical birth and postpartum support. Our team offers daytime and overnight postpartum ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Austin, TX"] },
       { name: "Doulas of Austin" , credential: "Birth Doula" , practice: "Doulas of Austin" , url: "https://www.doulasofaustin.com/" , photo: "https://images.squarespace-cdn.com/content/v1/5ed79edc7cd4541bda0d02c1/e9e9b89c-3dd3-4fbf-87bd-d1f291240426/doulas-of-austin-hospital-birth.jpg", description: "Comprehensive Doula Services In Austin, TX & Online Expert, personalized support for birth, postpartum, and newborn care. Based in Austin, Texas and available ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Austin, TX"] },
       { name: "ATX Doulas" , credential: "Birth Doula" , practice: "ATX Doulas" , url: "https://www.atxdoulas.com/" , photo: "https://static.wixstatic.com/media/8d196f_ea6f648b0cf24a888971ca8c4ade0595~mv2.jpg/v1/fill/w_1905,h_616,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/8d196f_ea6f648b0cf24a888971ca8c4ade0595~mv2.jpg", description: "We are an experienced team of passionate birth and postpartum doulas supporting over 200 births per year and providing thousands of hours of postpartum care.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Austin, TX"] },
@@ -319,6 +327,10 @@ export const cities: Record<string, CityData> = {
     enableBlogResources: true,
     costLow: 900,
     costHigh: 2500,
+    heroImage: "/images/philadelphia-pa-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-philadelphia-pa.webp",
+    supportSceneImage: "/images/philadelphia-pa-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Philadelphia: Pennsylvania birth support and doula care",
     shelbiServesHere: true,
     culture: "Carrollton sits at the junction of Dallas, Denton, and Collin counties \u2014 a central location that draws families from multiple directions. The city itself doesn't have a major hospital, so residents typically deliver at nearby facilities in Lewisville, Flower Mound, or Plano. This makes advance planning especially important." ,
     heroLocalDetail: "Carrollton families typically deliver at Medical City Lewisville or Texas Health Flower Mound \u2014 both about a 15\u201320 minute drive depending on where you are in the city. The I-35E/President George Bush Turnpike interchange and Belt Line Road are your main arteries, and afternoon traffic around that interchange can easily add 10 minutes you don\u2019t want to be figuring out in labor; the Sam Rayburn Tollway covers the far north end of town if you\u2019re coming from that direction. DART\u2019s Green Line terminates at North Carrollton/Frankford Station, and the A-train connects from Trinity Mills to Lewisville \u2014 helpful if your partner doesn\u2019t drive, but not how you want to get to the hospital in active labor. Sandy Lake Park and McInnish Park on the west side have flat, paved trails that work well for third-trimester walks, and the Greenbelt Trail along the creek running through Carrollton into Plano is another popular go-to. Historic Downtown Carrollton around the DART station is where many young families cluster, and the Koreatown district near Old Denton Road and the Bush Turnpike gives the city a distinct cultural identity." ,
@@ -353,9 +365,9 @@ export const cities: Record<string, CityData> = {
     photo: "/images/provider-carrollton-tx-great-expectations-doulas.webp" },
       { name: "North Dallas Doula Associates" , credential: "Guiding Families Since 1999" , practice: "North Dallas Doula Associates" , photo: "/images/north-dallas-doula-associates.webp" , url: "https://www.northdallasdoulas.com" , description: "Over 5,000 births attended since 1999. Birth doula, postpartum doula, lactation support, and placenta encapsulation services serving Carrollton and the DFW area." , services: ["Birth Doula" , "Postpartum" , "Lactation" , "Placenta Encapsulation"], costRange: "$800–$2,500" , serviceArea: ["Carrollton" , "Dallas" , "Lewisville" , "Plano"], acceptingClients: "true" },
       { name: "Cheryl Walker" , credential: "Lamaze CCE, DONA Certified Doula" , practice: "Cheryl Walker Birth Doula & Education" , photo: "/images/cheryl-walker.webp" , url: "https://www.cherylwalkerbirthdoula.com" , description: "Lamaze Certified Childbirth Educator and DONA Certified Doula serving Carrollton and the Dallas-Fort Worth area. Cheryl offers private in-home childbirth and parenting classes, prenatal and baby yoga, and personalized doula support with a focus on education and helping families feel informed and empowered." , services: ["Birth Doula" , "Childbirth Education" , "Private Classes" , "Prenatal Yoga" , "Baby Yoga"], costRange: "$1,000–$3,000" , serviceArea: ["Carrollton" , "Dallas" , "Lewisville" , "Flower Mound"], acceptingClients: "true" , isVerified: true },
-      { name: "Misty Gigler" , credential: "Certified Birth Doula (DONA)" , practice: "Misty Gigler, Certified Birth Doula" , photo: "/images/misty-gigler.webp" , url: "https://mistygiglerbirthdoula.com" , description: "DONA-certified birth doula providing evidence-based support for families in Carrollton and the DFW metroplex." , services: ["Birth Doula" , "Postpartum"], costRange: "$1,000–$2,000" , serviceArea: ["Carrollton" , "Dallas" , "Plano"], acceptingClients: "true" },
+      { name: "Misty Gigler" , credential: "Certified Birth Doula (DONA)" , practice: "Misty Gigler, Certified Birth Doula" , photo: "/images/misty-gigler.webp" , url: "https://mistygiglerbirthdoula.com" , description: "DONA-certified birth doula providing evidence-based support for families in Carrollton and the DFW metroplex." , services: ["Birth Doula" , "Postpartum"], costRange: "$1,000–$2,000" , serviceArea: ["Carrollton" , "Dallas" , "Plano"], acceptingClients: "true" , isVerified: true },
       { name: "Doulas of Dallas" , credential: "Professional Doula Agency" , practice: "Doulas of Dallas" , photo: "/images/doulas-of-dallas-group.webp" , url: "https://www.doulasofdallas.com" , description: "Compassionate doula support for families across the DFW area including Carrollton." , services: ["Birth Doula" , "Postpartum"], serviceArea: ["Carrollton" , "Dallas" , "Irving" , "Plano"] ,
-    acceptingClients: "true" , costRange: "Contact for pricing" },
+    acceptingClients: "true" , costRange: "$1,500–$2,000" , isVerified: true },
       { name: "Magdala Doula Services" , credential: "Birth & Postpartum Doula" , practice: "Magdala Doula Services" , photo: "/images/magdala-doula-services.webp" , url: "https://www.magdaladoulaservices.com" , description: "Providing doula support for families in Carrollton and the DFW area." , services: ["Birth Doula" , "Postpartum" , "Loss Support"], serviceArea: ["Carrollton" , "Dallas"] ,
     acceptingClients: "true" , costRange: "Contact for pricing" },
       { name: "Barefoot Midwifery" , credential: "Cori Lively, LM, CPM" , practice: "Barefoot Midwifery" , photo: "/images/barefoot-midwifery.webp" , url: "https://www.barefootmidwifery.com" , description: "Homebirth midwife serving the DFW area since 2003. Licensed midwife and Certified Professional Midwife providing personalized, evidence-based midwifery care for Carrollton families." , isMidwife: true, services: ["Home Birth" , "Prenatal Care" , "Postpartum Care" , "Water Birth"], serviceArea: ["Carrollton" , "Dallas" , "Fort Worth" , "Arlington"] ,
@@ -382,7 +394,9 @@ export const cities: Record<string, CityData> = {
     slug: "corpus-christi-tx" ,
     costLow: 750,
     costHigh: 2100,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Sweet Violets Doula Services" , credential: "Birth Doula" , practice: "Sweet Violets Doula Services" , url: "https://www.facebook.com/p/Sweet-Violets-Doula-Services-61553089193568/" , photo: "" , description: "Their goal is to provide a mom with emotional, physical, and informational support during labor, but also before and after. During a birth they are present ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Corpus Christi, TX"] },
     ],
     culture: "Corpus Christi is a coastal city where the Gulf breeze meets South Texas culture — families here are shaped by the water, the heat, and a deep-rooted sense of community. Nueces County has a high Medicaid birth rate, and the Coastal Bend's birth community is small but dedicated, with doulas who serve the entire region. Driscoll Children's Hospital gives Corpus an advantage most cities this size don't have — a Level IV NICU for the most complex neonatal cases." ,
@@ -421,7 +435,7 @@ export const cities: Record<string, CityData> = {
     enableBlogResources: true,
     localDoulas: [
       { name: "Great Expectations" , photo: "/images/great-expectations.webp" , practice: "Best Dallas Doulas" , url: "https://www.bestdallasdoulas.com" , services: ["Birth Doula" , "Postpartum" , "Childbirth Education" , "Placenta Encapsulation"], serviceArea: ["Dallas" , "Fort Worth" , "DFW"], costRange: "$900\\u2013$2,800" , acceptingClients: "true" , description: "Dallas\\u2019s premier doula agency matching families with experienced birth and postpartum doulas across the DFW metroplex." },
-      { name: "Circle Birth" , photo: "/images/circle-birth.webp" , practice: "Circle Birth" , url: "https://www.circlebirth.com" , services: ["Birth Doula" , "Postpartum" , "Childbirth Education"], serviceArea: ["Dallas" , "Austin" , "Houston"], costRange: "$1,000\\u2013$2,800" , acceptingClients: "true" , description: "Circle Birth provides expert doula matching across Texas, serving Dallas families with experienced doulas for all birth settings." },
+      { name: "Circle Birth" , photo: "/images/circle-birth.webp" , practice: "Circle Birth" , url: "https://www.circlebirth.com" , services: ["Birth Doula" , "Postpartum" , "Childbirth Education" , "Lactation Support" , "Placenta Encapsulation"], serviceArea: ["Dallas" , "Austin" , "Houston" , "San Antonio"], costRange: "$1,000\\u2013$2,800" , acceptingClients: "true" , isVerified: true , description: "Circle Birth is a family-operated doula agency and statewide network providing expert doula matching across Texas, serving Dallas, Austin, Houston, and San Antonio families with experienced doulas for all birth settings." },
       { name: "North Dallas Doulas" , photo: "/images/north-dallas-doulas.webp" , practice: "North Dallas Doulas" , url: "https://www.northdallasdoulas.com" , services: ["Birth Doula" , "Postpartum" , "Lactation Support"], serviceArea: ["Dallas" , "Plano" , "Richardson" , "Addison"], acceptingClients: "true" , costRange: "$1,200–$2,500" , description: "North Dallas Doulas provides personalized birth and postpartum doula support across the northern Dallas suburbs." },
       { name: "Delighted to Doula" , photo: "/images/delighted-to-doula.webp" , practice: "Delighted to Doula" , url: "https://www.delightedtodoula.org" , services: ["Birth Doula" , "Postpartum"], serviceArea: ["Dallas" , "DFW"], costRange: "$900\\u2013$2,500" , acceptingClients: "true" , description: "Dallas postpartum and birth doula services offering compassionate, evidence-based support." },
       { name: "Partum Health" , photo: "/images/partum-health.webp" , practice: "Partum Health Dallas" , url: "https://www.partumhealth.com/care/dallas-texas-postpartum-doula" , services: ["Postpartum" , "Lactation"], serviceArea: ["Dallas" , "DFW"], costRange: "$35\\u2013$50/hour" , acceptingClients: "true" , description: "Partum Health connects Dallas families with vetted postpartum doulas and lactation consultants." },
@@ -494,7 +508,13 @@ export const cities: Record<string, CityData> = {
     slug: "el-paso-tx" ,
     costLow: 800,
     costHigh: 2200,
-    shelbiServesHere: false,    localDoulas: [
+    heroImage: "/images/baltimore-md-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-baltimore-md.webp",
+    supportSceneImage: "/images/baltimore-md-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Baltimore: Maryland birth support and doula care",
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Birth Doula" , credential: "Birth Doula" , practice: "Birth Doula" , url: "https://www.dandelionbirthandbeyond.com/" , photo: "https://static.wixstatic.com/media/46b163_9146f7609b464555aab0845b83183e21~mv2.jpg/v1/fill/w_1905,h_993,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/46b163_9146f7609b464555aab0845b83183e21~mv2.jpg", description: "A birth doula provider of calm and caring prenatal, birth, and postpartum services through evidence-based action.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["El Paso, TX"] },
       { name: "Cindy Mancha" , credential: "Birth Doula" , practice: "Cindy Mancha" , url: "https://www.bornbir.com/cindy-mancha" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/lzq7u0ay68y526memf8yzzqxoxp9.png", description: "I offer birth doula services which includes prenatal visits, on call services from 38 weeks until delivery and postpartum visit as well.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["El Paso, TX"] },
       { name: "Home" , credential: "Birth Doula" , practice: "Home" , url: "https://www.dioncathedoula.com/" , photo: "https://static.wixstatic.com/media/0e93c0_cb932fe1589b48d98e09a25381dd1d10~mv2.jpg/v1/fill/w_460,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_0033.jpg", description: "Dionca the Doula offers personalized care to pregnant and postpartum families in El Paso, TX and Fort Bliss. Services include birth support, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["El Paso, TX"] },
@@ -627,6 +647,10 @@ export const cities: Record<string, CityData> = {
     slug: "grand-prairie-tx" ,
     costLow: 850,
     costHigh: 2500,
+    heroImage: "/images/philadelphia-pa-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-philadelphia-pa.webp",
+    supportSceneImage: "/images/philadelphia-pa-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Philadelphia: Pennsylvania birth support and doula care",
     shelbiServesHere: true,    localDoulas: [
       { name: "Meet Jennifer Swiney" , credential: "Birth Doula" , practice: "Meet Jennifer Swiney" , url: "https://birthbootcamp.com/meet-jennifer-swiney-doula-in-grand-prairie-tx/" , photo: "https://pinterest.com/pin/create/button/?url=https://birthbootcamp.com/meet-jennifer-swiney-doula-in-grand-prairie-tx/&media=https://birthbootcamp.com/wp-content/uploads/2021/03/Jennifer-Swiney-Spotlight.png", description: "My name is Jennifer, and I'm a birth doula in the DFW area of north Texas. Find me at www.grandprairiedoula.com,", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Grand Prairie, TX"] },
       { name: "Taylor Williams" , credential: "Birth Doula" , practice: "Taylor Williams" , url: "https://www.bornbir.com/taylor-williams" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/development/psk2n9usn9rv99nk8powdhobbgds.jpg", description: "I'm Taylor, your dedicated birth and postpartum doula. As a native of Dallas, my life's journey has been a blend of enriching experiences and fulfilling ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Grand Prairie, TX"] },
@@ -669,7 +693,9 @@ export const cities: Record<string, CityData> = {
     slug: "houston-tx" ,
     costLow: 800,
     costHigh: 2600,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Best Houston Doulas" , credential: "Birth Doula" , practice: "Best Houston Doulas" , url: "https://www.besthoustondoulas.com/" , photo: "https://images.squarespace-cdn.com/content/v1/683a55c00a5fe2409216ec0f/76025ffe-a4f4-4fa6-ac85-e45e6fb200dd/Add%2Ba%2Bheading%2B%283%29.png", description: "We specialize in VBAC, natural birth, pregnancy after infertility, multiples, surrogacy, Cesarean birth, 1st time parents and out of hospital birth.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Houston, TX"] },
       { name: "The Doula Emily" , credential: "Birth Doula" , practice: "The Doula Emily" , url: "https://www.thedoulaemily.com/" , photo: "https://images.squarespace-cdn.com/content/v1/63bda92de4f6992c14d66e64/ef1a408b-5a88-48fb-8101-4f181b1d2f74/Postpartum+Mom+Daughter+Baby.jpg", description: "Thoughtful & practical postpartum doula care for mothers and their families in Houston. Certified Postpartum Doula through DONA International. Doula care ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Houston, TX"] },
     ],
@@ -784,7 +810,9 @@ export const cities: Record<string, CityData> = {
     slug: "lubbock-tx" ,
     costLow: 700,
     costHigh: 2000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Lubbock Doula" , credential: "Birth Doula" , practice: "Lubbock Doula" , url: "https://magnoliabirths.com/" , photo: "https://img1.wsimg.com/isteam/ip/543964a0-1908-420d-8789-d4aee92eb329/Business%20Cards.png", description: "Magnolia Births offers Lubbock doula services, personalized support for pregnancy and postpartum care for the hospital, birth center, or home.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Lubbock, TX"] },
       { name: "Request a Doula" , credential: "Birth Doula" , practice: "Request a Doula" , url: "https://www.umchealthsystem.com/services/maternity-newborn/resources/request-a-doula/" , photo: "" , description: "UMC offers doulas free of charge to mothers giving birth at UMC. A doula is a specially trained labor companion.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Lubbock, TX"] },
       { name: "MAGNOLIA BIRTH DOULA SERVICES" , credential: "Birth Doula" , practice: "MAGNOLIA BIRTH DOULA SERVICES" , url: "https://www.yelp.com/biz/magnolia-birth-doula-services-lubbock" , photo: "https://s3-media0.fl.yelpcdn.com/bphoto/F0Et2Zac_8MvTrlCujkDyg/l.jpg", description: "More info about Magnolia Birth Doula Services ; Lubbock, TX 79401. Directions ; (806) 500-9811. Call Now ; Visit Website.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Lubbock, TX"] },
@@ -818,7 +846,9 @@ export const cities: Record<string, CityData> = {
     slug: "longview-tx" ,
     costLow: 700,
     costHigh: 1600,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Motherly Transitions" , credential: "Birth Doula" , practice: "Motherly Transitions" , url: "https://www.motherlytransitions.com/" , photo: "https://lirp.cdn-website.com/cd011625/dms3rep/multi/opt/lg1-1920w.png", description: "Motherly Transitions is a birth center in Lufkin & Nacogdoches, TX. Offering midwifery care, doula support, home birth, massages, prenatal yoga & more!", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Longview, TX"] },
       { name: "The Crunchy" , credential: "Birth Doula" , practice: "The Crunchy" , url: "https://www.crunchydoula.com/" , photo: "https://static.wixstatic.com/media/11062b_b17c9500e8e9479e956636e03049dc04f000.jpg/v1/fill/w_1905,h_993,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/11062b_b17c9500e8e9479e956636e03049dc04f000.jpg", description: "Led by certified birth doula and childbirth educator Mallory Villafuerte, The Crunchy-ish Doula serves families across Tyler and the greater East Texas region, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Longview, TX"] },
       { name: "Alissa January" , credential: "Birth Doula" , practice: "Alissa January" , url: "https://www.bornbir.com/alissa-january" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/uihv4o056zwsw9t6toariwcxwbd7.jpeg", description: "Hey Everyone! My name is Alissa January and I am a certified birth doula in Longview, Tx. However, I serve all of East Texas! My passion is serving mamas ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Longview, TX"] },
@@ -894,7 +924,9 @@ export const cities: Record<string, CityData> = {
     slug: "odessa-tx" ,
     costLow: 700,
     costHigh: 1600,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Wonderfully Made Doula and Lactation Support" , credential: "Birth Doula" , practice: "Wonderfully Made Doula and Lactation Support" , url: "https://www.facebook.com/wonderfullymadewtx/" , photo: "" , description: "Wonderfully Made Doula and Lactation Support, Odessa. 911 likes · 195 talking about this. Lactation Counselor serving Midland-Odessa area. IBCLC Candidate.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Odessa, TX"] },
       { name: "Wonderfully Made WTX Doula and Lactation Support Photos" , credential: "Birth Doula" , practice: "Wonderfully Made WTX Doula and Lactation Support Photos" , url: "https://www.yelp.com/biz/wonderfully-made-wtx-doula-and-lactation-support-no-title" , photo: "https://s3-media0.fl.yelpcdn.com/bphoto/a0PzptOgl5PdfWPKropa6g/l.jpg", description: "WONDERFULLY MADE WTX DOULA AND LACTATION SUPPORT, X, Odessa, TX 79762, 19 Photos, (432) 296-2676, Mon - 9:00 am - 4:30 pm, Tue - 9:00 am - 4:30 pm, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Odessa, TX"] },
     ],
@@ -992,7 +1024,13 @@ export const cities: Record<string, CityData> = {
     slug: "san-antonio-tx" ,
     costLow: 700,
     costHigh: 2200,
-    shelbiServesHere: false,    localDoulas: [
+    heroImage: "/images/san-antonio-tx-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-san-antonio-tx.webp",
+    supportSceneImage: "/images/san-antonio-tx-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in San Antonio: Texas birth support and doula care",
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Rooted Birth" , credential: "Birth Doula" , practice: "Rooted Birth" , url: "https://www.rooteddoula.com/" , photo: "https://images.squarespace-cdn.com/content/v1/5e0d0cde0c172144c364d699/bc8a85bf-7bfa-44b9-aea6-e871c868bcec/Overlapping+Images+1+tessa+%281%29.png", description: "Tranquil Seasons is now Rooted Birth San Antonio Doula Collective! We would love to serve your family through pregnancy, birth, and postpartum.", costRange: "Contact for pricing", acceptingClients: "true", services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["San Antonio, TX"] },
       { name: "Services" , credential: "Birth Doula" , practice: "Services" , url: "https://sabirthdoulas.org/services/" , photo: "https://sabirthdoulas.org/wp-content/uploads/2021/05/sabd-eligibility-1.jpg", description: "All services are FREE OF CHARGE. For more information, or to schedule a session contact SABD at 210-222-0988.", costRange: "Contact for pricing", acceptingClients: "true", services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["San Antonio, TX"] },
       { name: "San Antonio Birth Doula" , credential: "Birth Doula" , practice: "San Antonio Birth Doula" , url: "https://www.circlebirth.com/san-antonio-doula-care" , photo: "https://images.squarespace-cdn.com/content/v1/6508c44693e166597f53d1c9/7087e15d-fa80-4b99-9e48-f3a1a9385e7c/austin%2Bdoula%2Bbaby%2Baustin%2Bdoula%2Bcare.jpg", description: "Our all-inclusive doula package offers two prenatal appointments, each lasting 60 to 90 minutes, held in the comfort of your home.", costRange: "Contact for pricing", acceptingClients: "true", services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["San Antonio, TX"] },
@@ -1001,15 +1039,15 @@ export const cities: Record<string, CityData> = {
     culture: "San Antonio has a rich, diverse birth community with strong cultural traditions around family-centered birth. The city has a mix of large hospital systems and a growing interest in midwife-attended and doula-supported births." ,
     heroLocalDetail: "If you're heading to University Hospital from the North Side during rush hour, skip Loop 410 \u2014 take Babcock to Wurzbach to Medical Drive instead. It'll save you 15\u201320 minutes when you're already running late for an appointment. And if evening walks are helping with those Braxton Hicks contractions, the River Walk loop near the Pearl is shaded and flat \u2014 a lot of San Antonio moms swear by it in the third trimester." ,
     hospitalDetails: [
-      { name: "Methodist Hospital" , paragraph: "Methodist Hospital, at 7700 Floyd Curl Dr in the South Texas Medical Center, has a Level IV NICU and is San Antonio\u2019s largest hospital with 1,536 beds. Their Women\u2019s Pavilion (Suzell Waller Women\u2019s & Children\u2019s Center) is one of the most established maternity programs in South Texas. CNM midwifery services are available on staff. If you\u2019re delivering at Methodist, a birth plan helps the nursing team understand your preferences quickly in a busy Level IV facility. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
-      { name: "University Hospital / Women\u2019s & Children\u2019s Hospital" , paragraph: "University Hospital, at 4502 Medical Dr in the Medical Center, is Bexar County\u2019s public hospital with a Level IV NICU and Level IV Maternal Center \u2014 one of only a handful of dual Level IV facilities in Texas. They\u2019re Baby-Friendly designated, a Newsweek Best Maternity Hospital (2022\u20132025), and the only SA hospital with a 24/7 OB/GYN emergency center. Doulas are generally welcome, and having someone who knows how to navigate this busy teaching hospital makes a real difference." },
-      { name: "Baptist Medical Center" , paragraph: "Baptist Medical Center, at 111 Dallas St in downtown San Antonio, is a high-volume L&D hospital. Contact the hospital directly for current NICU level verification. Baptist Health System also operates North Central Baptist Hospital in Stone Oak, which serves the fast-growing northern suburbs with L&D and NICU services." },
-      { name: "The Children\u2019s Hospital of San Antonio (formerly CHRISTUS Santa Rosa)" , paragraph: "The Children\u2019s Hospital of San Antonio, at 333 N Santa Rosa St, is the premier freestanding children\u2019s hospital in South Texas with a Level I Pediatric Trauma Center. Affiliated with Baylor College of Medicine, they handle the most complex pediatric cases. Contact the hospital directly for current NICU level verification. The hospital has been rebranded from CHRISTUS Santa Rosa \u2014 if you\u2019re looking for their maternity program, check with their current referral process." },
+      { name: "Methodist Hospital" , thumbnail: "/images/methodist-san-antonio.webp", paragraph: "Methodist Hospital, at 7700 Floyd Curl Dr in the South Texas Medical Center, has a Level IV NICU and is San Antonio\u2019s largest hospital with 1,536 beds. Their Women\u2019s Pavilion (Suzell Waller Women\u2019s & Children\u2019s Center) is one of the most established maternity programs in South Texas. CNM midwifery services are available on staff. If you\u2019re delivering at Methodist, a birth plan helps the nursing team understand your preferences quickly in a busy Level IV facility. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "University Hospital / Women\u2019s & Children\u2019s Hospital" , thumbnail: "/images/university-hospital-san-antonio.webp" , paragraph: "University Hospital, at 4502 Medical Dr in the Medical Center, is Bexar County\u2019s public hospital with a Level IV NICU and Level IV Maternal Center \u2014 one of only a handful of dual Level IV facilities in Texas. They\u2019re Baby-Friendly designated, a Newsweek Best Maternity Hospital (2022\u20132025), and the only SA hospital with a 24/7 OB/GYN emergency center. Doulas are generally welcome, and having someone who knows how to navigate this busy teaching hospital makes a real difference." },
+      { name: "Baptist Medical Center" , thumbnail: "/images/baptist-medical-center-sa.webp", paragraph: "Baptist Medical Center, at 111 Dallas St in downtown San Antonio, is a high-volume L&D hospital. Contact the hospital directly for current NICU level verification. Baptist Health System also operates North Central Baptist Hospital in Stone Oak, which serves the fast-growing northern suburbs with L&D and NICU services." },
+      { name: "The Children\u2019s Hospital of San Antonio (formerly CHRISTUS Santa Rosa)" , thumbnail: "/images/childrens-san-antonio.webp" , paragraph: "The Children\u2019s Hospital of San Antonio, at 333 N Santa Rosa St, is the premier freestanding children\u2019s hospital in South Texas with a Level I Pediatric Trauma Center. Affiliated with Baylor College of Medicine, they handle the most complex pediatric cases. Contact the hospital directly for current NICU level verification. The hospital has been rebranded from CHRISTUS Santa Rosa \u2014 if you\u2019re looking for their maternity program, check with their current referral process." },
     ],
     birthCenterDetails: [
-      { name: "Birth Center Stone Oak" , paragraph: "Birth Center Stone Oak, at 27031 Granite Path in the Stone Oak area (78258), is a freestanding birth center serving San Antonio\u2019s fastest-growing northern suburb corridor. NPI-verified (1225396542)." },
-      { name: "Community Birth Group" , paragraph: "Community Birth Group, at 216 Tower Rd on San Antonio\u2019s East Side (78223), provides birth center services for families seeking out-of-hospital birth options. NPI-verified (1972393783)." },
-      { name: "Central Texas Birth Center" , paragraph: "Central Texas Birth Center, at 410 W Nakoma St (78216), offers freestanding birth center services in central San Antonio. NPI-verified (1477852986)." },
+      { name: "Birth Center Stone Oak" , thumbnail: "/images/birth-center-stone-oak.webp", paragraph: "Birth Center Stone Oak, at 27031 Granite Path in the Stone Oak area (78258), is a freestanding birth center serving San Antonio\u2019s fastest-growing northern suburb corridor. NPI-verified (1225396542)." },
+      { name: "Community Birth Group" , thumbnail: "/images/community-birth-group.webp", paragraph: "Community Birth Group, at 216 Tower Rd on San Antonio\u2019s East Side (78223), provides birth center services for families seeking out-of-hospital birth options. NPI-verified (1972393783)." },
+      { name: "Central Texas Birth Center" , thumbnail: "/images/central-texas-birth-center.webp", paragraph: "Central Texas Birth Center, at 410 W Nakoma St (78216), offers freestanding birth center services in central San Antonio. NPI-verified (1477852986)." },
     ],
     medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Bexar County's STAR managed care plans (Superior HealthPlan, Community First Health Plans, and others). Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring." ,
     insuranceNote: "Whether doula services are partially covered varies by plan in the San Antonio area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm. Military families: TRICARE does not currently cover doula services, but HSA and FSA funds can often help." ,
@@ -1044,7 +1082,7 @@ export const cities: Record<string, CityData> = {
       { name: "Abigail (Let\u2019s Doula This Waco)" , credential: "Certified Full Spectrum Doula" , practice: "Let\u2019s Doula This Waco" , url: "https://www.letsdoulathiswaco.com" , description: "Waco native and Certified Full Spectrum Doula specializing in fertility, birth, bereavement, and postpartum support. Also certified as a Placenta Encapsulation Specialist." , services: ["Birth Doula" , "Full Spectrum Doula" , "Placenta Encapsulation" , "Childbirth Education"], costRange: "Contact for pricing" , serviceArea: ["Waco" , "McLennan County"], photo: "/images/provider-waco-tx-abigail-(let\u2019s-doula-this-waco).webp" , acceptingClients: "true" },
     ],
     midwifeInfo: {
-      paragraph: "Waco Birth Center and Clinic, on Austin Avenue near downtown, is a licensed freestanding birth center staffed by certified nurse-midwives including Brenda Keep (Founder and Lead Midwife) and Jennifer Meyer (Licensed Midwife). They accept insurance and Medicaid for out-of-hospital birth care. For families planning hospital births, both Hillcrest and Providence have CNMs on staff for low-intervention deliveries." },
+      paragraph: "Waco Birth Center and Clinic, on Austin Avenue near downtown, is a licensed freestanding birth center staffed by certified nurse-midwives including Brenda Keep (Founder and Lead Midwife) and Jennifer Meyer (Licensed Midwife). They accept insurance and Medicaid for out-of-hospital birth care. Waco families seeking out-of-hospital midwifery also have two home-birth CPM practices to choose from: 3 Sisters Midwifery (CPMs with a birth center) and Eastgate (CPMs, home births only). For families planning hospital births, both Hillcrest and Providence have CNMs on staff for low-intervention deliveries." },
     culture: "Waco sits halfway between Dallas and Austin on I-35, anchored by Baylor University and the visitor draw of Magnolia Market at the Silos. The city blends a college-town feel with small-town affordability \u2014 lower cost of living means birth support budgets stretch a bit further here than in the big metros. For expectant families, Waco\u2019s advantage is accessibility: two solid hospitals with NICU access and a freestanding birth center, which most cities this size don\u2019t have." ,
     heroLocalDetail: "Both of Waco\u2019s hospitals sit along the I-35 corridor \u2014 Hillcrest near the Baylor campus and Providence up on Medical Parkway by the VA. I-35 construction through downtown can slow you down, so build in an extra 10\u201315 minutes when you\u2019re heading in. The Bosque River trail near both hospitals is a go-to for third-trimester evening walks." ,
     hospitalDetails: [
@@ -1114,7 +1152,9 @@ export const cities: Record<string, CityData> = {
     slug: "mcallen-tx" ,
     costLow: 600,
     costHigh: 1400,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Doula Care" , credential: "Birth Doula" , practice: "Doula Care" , url: "https://www.rgvmidwives.com/doula-care" , photo: "https://static.wixstatic.com/media/fd860d_d6bb5a0d6e6f4c10ba27a5bed2618f93~mv2.jpg/v1/fill/w_561,h_524,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DoulaCare_JPG.jpg", description: "We can still help you with doula care. This basically involves physical and emotional support in the run-up to and during labor and birth.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["McAllen, TX"] },
       { name: "Sojourning BirthNorma Hess Photography" , credential: "Birth Doula" , practice: "Sojourning BirthNorma Hess Photography" , url: "http://sojourningbirth.com/" , photo: "https://images.squarespace-cdn.com/content/v1/58002f58893fc04b448c272d/ce409aec-dcd8-4af5-91db-c2768fe4cb7f/home-birth-in-Alamo-Texas-with-jordan-the-doula.jpg", description: "Norma Hess is birth doula and photographer in McAllen, Texas. She offers on-location documentary photography, film and doula services. Norma has been ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["McAllen, TX"] },
       { name: "Doula Services" , credential: "Birth Doula" , practice: "Doula Services" , url: "http://sojourningbirth.com/mcallen-doula-services" , photo: "https://images.squarespace-cdn.com/content/v1/58002f58893fc04b448c272d/1582737192040-BW93TXS3QMMHE4JDGN4C/Sojourning-Birth-2019-85.jpg", description: "Sojourning Birth. 300 West Jonquil Avenue. McAllen, TX, 78501. 956.369.5777. McAllen, Texas Birth Doula, Photography, and Films. Your Custom Text Here ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["McAllen, TX"] },
@@ -1147,7 +1187,9 @@ export const cities: Record<string, CityData> = {
     slug: "college-station-tx" ,
     costLow: 800,
     costHigh: 1500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Birthly" , credential: "Birth Doula" , practice: "Birthly" , url: "https://www.birthlymoms.com/" , photo: "https://images.squarespace-cdn.com/content/v1/61cb47cf1478454833a1fb46/07f373d6-efec-452b-93dd-1d48a6452b0c/tempImageRGeuuD.jpg" , description: "Trusted Christian birth doula in College Station, TX, providing experienced birth and postpartum support along with licensed prenatal massage so you can ..." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["College Station, TX"] },
       { name: "Miranda Slaydon" , credential: "Birth Doula" , practice: "Miranda Slaydon" , url: "https://mirandaslaydon.com/" , photo: "https://mirandaslaydon.com/wp-content/uploads/2024/06/5-DSC06771-2-scaled.jpg" , description: "Serving the Bryan, College Station, Tx & surrounding areas, helping mamas feel empowered to meet their new baby and have a supported postpartum season." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["College Station, TX"] },
       { name: "Katherine Ellis" , credential: "Birth Doula" , practice: "Katherine Ellis" , url: "https://www.bornbir.com/katherine-ellis" , photo: "" , description: "I am a Birth Bootcamp certified birth and postpartum doula! Birth is a beautiful process that I believe is meant to be celebrated and embraced." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["College Station, TX"] },
@@ -1314,7 +1356,9 @@ export const cities: Record<string, CityData> = {
     slug: "edinburg-tx" ,
     costLow: 600,
     costHigh: 1400,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Doula Care" , credential: "Birth Doula" , practice: "Doula Care" , url: "https://www.rgvmidwives.com/doula-care" , photo: "https://static.wixstatic.com/media/fd860d_d6bb5a0d6e6f4c10ba27a5bed2618f93~mv2.jpg/v1/fill/w_561,h_524,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DoulaCare_JPG.jpg", description: "We can still help you with doula care. This basically involves physical and emotional support in the run-up to and during labor and birth.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Edinburg, TX"] },
       { name: "Find a Doula" , credential: "Birth Doula" , practice: "Find a Doula" , url: "https://blessedwomb.com/find-a-doula" , photo: "https://img1.wsimg.com/isteam/ip/1cd18b92-3c77-4fd4-90c5-45fcd700c3b5/1N1A3173.jpg", description: "Hello! My name is Stacy Villarreal Leon and I am a doula, a mother of five, and a student midwife. I fell in love with the idea of becoming a midwife when I ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Edinburg, TX"] },
     ],
@@ -1346,7 +1390,9 @@ export const cities: Record<string, CityData> = {
     slug: "harlingen-tx" ,
     costLow: 600,
     costHigh: 1400,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "The Crunchy" , credential: "Birth Doula" , practice: "The Crunchy" , url: "https://www.crunchydoula.com/" , photo: "https://static.wixstatic.com/media/11062b_b17c9500e8e9479e956636e03049dc04f000.jpg/v1/fill/w_1905,h_993,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/11062b_b17c9500e8e9479e956636e03049dc04f000.jpg", description: "Led by certified birth doula and childbirth educator Mallory Villafuerte, The Crunchy-ish Doula serves families across Tyler and the greater East Texas region, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Harlingen, TX"] },
       { name: "Home" , credential: "Birth Doula" , practice: "Home" , url: "https://adorebirthservices.com/" , photo: "https://adorebirthservices.com/wp-content/uploads/2021/05/AdoreBirthServices-AndreaBrannock-BirthDoula-Texas.jpg", description: "Adore Birth Services supports Texas families through pregnancy, birth, and beyond. We offer doula services, childbirth classes, and childbirth educator ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Harlingen, TX"] },
       { name: "Doula Care" , credential: "Birth Doula" , practice: "Doula Care" , url: "https://www.rgvmidwives.com/doula-care" , photo: "https://static.wixstatic.com/media/fd860d_d6bb5a0d6e6f4c10ba27a5bed2618f93~mv2.jpg/v1/fill/w_561,h_524,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DoulaCare_JPG.jpg", description: "We can still help you with doula care. This basically involves physical and emotional support in the run-up to and during labor and birth.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Harlingen, TX"] },
@@ -1378,6 +1424,10 @@ export const cities: Record<string, CityData> = {
     slug: "round-rock-tx" ,
     costLow: 900,
     costHigh: 2200,
+    heroImage: "/images/baltimore-md-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-baltimore-md.webp",
+    supportSceneImage: "/images/baltimore-md-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Baltimore: Maryland birth support and doula care",
     shelbiServesHere: false,
     heroImage: "/images/round-rock-tx-birth-doula-skyline.webp" ,
     supportSceneImage: "/images/round-rock-support-scene.webp" ,
@@ -1430,7 +1480,9 @@ export const cities: Record<string, CityData> = {
     slug: "richardson-tx" ,
     costLow: 900,
     costHigh: 2400,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Dallas Birth Doula" , credential: "Birth Doula" , practice: "Dallas Birth Doula" , url: "https://www.birthingb.com/" , photo: "https://images.squarespace-cdn.com/content/v1/5d151785e498ff00019244a2/1679441268281-Y6LCL5G8THTRQTSF8UWE/Dean+Previews-14.jpg", description: "I provide education around birth, postpartum and breastfeeding to both parents. My Childbirth Education classes are offered in-home or in group settings.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Richardson, TX"] },
       { name: "Great Expectations" , credential: "Birth Doula" , practice: "Great Expectations" , url: "https://www.bestdallasdoulas.com/" , photo: "https://images.squarespace-cdn.com/content/v1/5db1e4145165f3064e198453/1571940038773-Y34Y4WHPYZXQ12M1RL96/PNG-+COLORED.png", description: "We support all types of birth with doulas specializing in VBAC, natural birth, pregnancy after infertility, multiples, surrogacy, Cesarean birth and 1st time ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Richardson, TX"] },
       { name: "Welcome to Delighted to Doula" , credential: "Birth Doula" , practice: "Welcome to Delighted to Doula" , url: "https://www.delightedtodoula.org/" , photo: "https://www.delightedtodoula.org/wp-content/uploads/2024/06/Vector.png", description: "Our mission is to provide free/low-cost postpartum support to women in Dallas County and surrounding areas. Visit us today to learn more.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Richardson, TX"] },
@@ -1466,13 +1518,13 @@ export const cities: Record<string, CityData> = {
     shelbiServesHere: true,
     enableBlogResources: true,
     publishedDate: "2026-06-21" ,
-    heroImage: "/images/conroe-tx-birth-doula-hero-v2.webp" ,
+    heroImage: "/images/conroe-tx-birth-doula-hero.webp" ,
     ogImage: "https://truejoybirthing.com/images/og-city-conroe-tx-v3.webp" ,
     supportSceneImage: "/images/conroe-tx-support-scene-v2.webp" ,
     supportSceneAlt: "Pregnant woman silhouette overlooking Lake Conroe at sunset" ,
     localDoulas: [
       { name: "Shelbie Cunningham" , credential: "Birth Doula" , practice: "Shelbie Cunningham Doula Services" , description: "Shelbie Cunningham is a dedicated birth doula serving Conroe and Montgomery County, offering continuous labor support, birth planning, and postpartum care for families welcoming their newest members." , costRange: "Contact for pricing", photo: "/images/provider-conroe-tx-shelbie-cunningham.webp", acceptingClients: "true"},
-      { name: "Max Burrus" , credential: "Birth Doula" , practice: "Maximum Doula Services" , url: "http://maximumdoulaservices.com" , description: "Full-spectrum birth doula based in Spring, TX with a 60-mile service range that covers Conroe. Certified through Cornerstone Doula Trainings and the Labor Enabler apprenticeship program. Attends hospital, birth center, and home births. Offers LGBTQIA+ support, military family support, and virtual doula services. Medicaid-approved through Azova and The Doula Network.", services: ["Birth doula support" , "LGBTQIA+ support" , "Military families" , "Virtual doula support" , "Miscarriage support"], costRange: "$2,000 to $2,400", serviceArea: ["Spring, TX (60-mile range covers Conroe)"], photo: "/images/provider-conroe-tx-max-burrus.webp", acceptingClients: "true"},
+      { name: "Max Burrus" , credential: "Birth Doula" , practice: "Maximum Doula Services" , url: "http://maximumdoulaservices.com" , description: "Full-spectrum birth doula based in Spring, TX with a 60-mile service range that covers Conroe. Certified through Cornerstone Doula Trainings and the Labor Enabler apprenticeship program. Attends hospital, birth center, and home births. Offers LGBTQIA+ support, military family support, and virtual doula services. Medicaid-approved through Azova and The Doula Network.", services: ["Birth doula support" , "LGBTQIA+ support" , "Military families" , "Virtual doula support" , "Miscarriage support"], costRange: "$2,000 to $2,400", serviceArea: ["Spring, TX (60-mile range covers Conroe)"], photo: "/images/provider-conroe-tx-max-burrus.webp", acceptingClients: "true", isVerified: true},
       { name: "Kathleen Wilson" , credential: "Birth Doula" , practice: "Labor Enabler" , url: "https://laborenabler.com/" , description: "Highly experienced birth doula based in Spring, TX with 23 years of practice and over 226 client testimonials. Serves a wide area including Conroe with travel fees for long distances. Known as a leader in the Houston birthing community. Attends hospital, birth center, and home births. Experienced with VBAC support and works with Rebel Birth Center in Spring.", services: ["Birth doula support" , "VBAC support" , "Extensive referral network" , "Birth center support"], costRange: "$1,000 to $2,900", serviceArea: ["Spring, TX (wide area covers Conroe)"], photo: "/images/provider-conroe-tx-kathleen-wilson.webp", acceptingClients: "true"},
       { name: "Joli Ammons" , credential: "Birth Doula" , practice: "The Painted Doula" , url: "https://www.thepainteddoula.com" , description: "Certified birth doula based in Spring, TX with 12 years of experience and 104 client testimonials. Serves the greater Houston area including Conroe. Known for her calming presence, extensive knowledge, and ability to support various birth scenarios including VBAC, inductions, and c-sections. Offers rebozo techniques, essential oils, and birth photography. Attends hospital, birth center, and home births.", services: ["Birth doula support" , "Rebozo techniques" , "Essential oils" , "Birth photography" , "VBAC support"], costRange: "$1,000 to $2,800", serviceArea: ["Spring, TX (wide area covers Conroe)"], photo: "/images/provider-conroe-tx-joli-ammons.webp", acceptingClients: "true"},
       { name: "Jennifer Anderson" , credential: "Birth & Postpartum Doula" , practice: "Lone Star Birth Christian Doula Network" , url: "https://lonestarbirth.com/" , description: "Founder of Lone Star Birth Christian Doula Network, based in Cypress, TX with a 30-mile service range that covers Conroe. Both a birth and postpartum doula with 15+ years of experience and over 200 births attended. Offers childbirth education, placenta encapsulation, photography, bereavement support, and overnight postpartum support. Attends hospital, birth center, and home births.", services: ["Birth doula support" , "Postpartum doula support" , "Childbirth education" , "Placenta encapsulation" , "Overnight postpartum support" , "Bereavement support"], costRange: "$1,400 to $2,800", serviceArea: ["Cypress, TX (30-mile range covers Conroe)"], photo: "/images/provider-conroe-tx-jennifer-anderson.webp", acceptingClients: "true"},
@@ -1632,6 +1684,10 @@ export const cities: Record<string, CityData> = {
     slug: "temple-tx" ,
     costLow: 800,
     costHigh: 2200,
+    heroImage: "/images/baltimore-md-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-baltimore-md.webp",
+    supportSceneImage: "/images/baltimore-md-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Baltimore: Maryland birth support and doula care",
     shelbiServesHere: false,
     localDoulas: [
       { name: "The Starting Place Birth & Wellness Center" , credential: "Licensed Midwife" , practice: "The Starting Place Birth & Wellness Center" , url: "https://www.thestartingplace.com/" , photo: "" , description: "Birth and wellness center in Temple offering full-scope midwifery care with a nurturing, trauma-informed approach. Provides personalized prenatal care, skilled labor and delivery support, and postpartum care throughout Central Texas." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Midwifery Care" , "Prenatal Care" , "Postpartum Care"], serviceArea: ["Temple, TX"] },
@@ -1667,7 +1723,9 @@ export const cities: Record<string, CityData> = {
     slug: "new-braunfels-tx" ,
     costLow: 850,
     costHigh: 2300,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Meet the Doula" , credential: "Birth Doula" , practice: "Meet the Doula" , url: "https://www.inspiredtothrivedoula.com/meet-the-doula" , photo: "https://images.squarespace-cdn.com/content/v1/5da4e07c005a9c20f3384762/1623867663649-STPRDX927RA5VMMPPWQR/100_2188.jpg", description: "Certified Birth and Postpartum Doula ... Supporting growing families in Seguin, New Braunfels, San Marcos, and surrounding communities. Contact. 210.216.6913", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["New Braunfels, TX"] },
       { name: "Doula Care" , credential: "Birth Doula" , practice: "Doula Care" , url: "https://www.bloomingwaterlilies.com/" , photo: "https://www.bloomingwaterlilies.com/wp-content/uploads/2014/02/home-header.jpg", description: "Doula care to meet all your pregnancy, birth and postpartum needs. Plus natural childbirth education, breastfeeding support, and placenta encapsulation.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["New Braunfels, TX"] },
     ],
@@ -1699,7 +1757,9 @@ export const cities: Record<string, CityData> = {
     slug: "san-marcos-tx" ,
     costLow: 800,
     costHigh: 2100,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Rooted Birth" , credential: "Birth Doula" , practice: "Rooted Birth" , url: "https://www.rooteddoula.com/" , photo: "https://images.squarespace-cdn.com/content/v1/5e0d0cde0c172144c364d699/bc8a85bf-7bfa-44b9-aea6-e871c868bcec/Overlapping+Images+1+tessa+%281%29.png", description: "Tranquil Seasons is now Rooted Birth San Antonio Doula Collective! We would love to serve your family through pregnancy, birth, and postpartum.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["San Marcos, TX"] },
       { name: "Doula Care" , credential: "Birth Doula" , practice: "Doula Care" , url: "https://www.bloomingwaterlilies.com/" , photo: "https://www.bloomingwaterlilies.com/wp-content/uploads/2014/02/home-header.jpg", description: "Doula care to meet all your pregnancy, birth and postpartum needs. Plus natural childbirth education, breastfeeding support, and placenta encapsulation.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["San Marcos, TX"] },
     ],
@@ -1732,7 +1792,13 @@ export const cities: Record<string, CityData> = {
     slug: "pearland-tx" ,
     costLow: 900,
     costHigh: 2500,
-    shelbiServesHere: false,    localDoulas: [
+    heroImage: "/images/philadelphia-pa-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-philadelphia-pa.webp",
+    supportSceneImage: "/images/philadelphia-pa-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Philadelphia: Pennsylvania birth support and doula care",
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Houston Birth Doula" , credential: "Birth Doula" , practice: "Houston Birth Doula" , url: "https://www.circlebirth.com/houston-birth-doula" , photo: "https://images.squarespace-cdn.com/content/v1/6508c44693e166597f53d1c9/f5577434-8b52-4022-86a7-0904aec45c74/san%2Bantonio%2Bdoula%2Bbaby%2Bdoula%2Bcare.jpg", description: "Circle Birth provides professional, non-clinical birth doula support for families in Houston, as well as Katy, Sugar Land, The Woodlands, Pearland, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pearland, TX"] },
       { name: "Jamela Houston" , credential: "Birth Doula" , practice: "Jamela Houston" , url: "https://www.partumhealth.com/provider/jamela-houston" , photo: "https://cdn.prod.website-files.com/62acc048a41db22010c384b3/695871cd61b3148e4211823e_Jamela-Houston-Houston-Doula.jpeg", description: "Jamela Houston is a certified holistic birth and postpartum doula based in Houston, TX, with a passion for advocating for women's health, pregnancy, and ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pearland, TX"] },
       { name: "Doulightful Beginnings Birth Care" , credential: "Birth Doula" , practice: "Doulightful Beginnings Birth Care" , url: "https://www.doulightfulbeginningsbirthcare.com/" , photo: "https://static.wixstatic.com/media/a30541_0edceff521804f788b11720d6dd5af7a~mv2.png/v1/fill/w_874,h_500,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/a30541_0edceff521804f788b11720d6dd5af7a~mv2.png", description: "A doula offers emotional and physical support during pregnancy, birth, and postpartum to help women make informed decisions about the care they receive.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pearland, TX"] },
@@ -1767,7 +1833,9 @@ export const cities: Record<string, CityData> = {
     slug: "cedar-park-tx" ,
     costLow: 900,
     costHigh: 2500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Texas Doula Agency" , credential: "Birth Doula" , practice: "Texas Doula Agency" , url: "https://www.circlebirth.com/" , photo: "https://images.squarespace-cdn.com/content/v1/6508c44693e166597f53d1c9/e84d1231-044c-4037-8a61-1ab1537494b4/austin-doula-care.jpg", description: "Circle Birth is a professional doula agency serving Austin, Houston, Dallas, and San Antonio. Birth doulas, postpartum doulas, and childbirth classes.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Cedar Park, TX"] },
       { name: "Sacred Work Doula Services" , credential: "Birth Doula" , practice: "Sacred Work Doula Services" , url: "https://www.facebook.com/sacredworkdoula/" , photo: "" , description: "Sacred Work Doula Services, Cedar Park. 557 likes · 2 were here. My name is Sarah Parente and I am a Certified Labor Doula (CBI.) Find more information...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Cedar Park, TX"] },
     ],
@@ -1834,7 +1902,9 @@ export const cities: Record<string, CityData> = {
     slug: "georgetown-tx" ,
     costLow: 900,
     costHigh: 2500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Georgetown Doula and Pregnancy Resources" , credential: "Birth Doula" , practice: "Georgetown Doula and Pregnancy Resources" , url: "https://www.circlebirth.com/georgetown-doula-and-pregnancy-resources" , photo: "https://images.squarespace-cdn.com/content/v1/6508c44693e166597f53d1c9/e35827a9-21cf-4c27-a1d9-37178aa95845/Newborn%2BCare.jpg", description: "Discover a wealth of pregnancy resources in Georgetown, TX. Prenatal care, childbirth classes, or expert guidance.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Georgetown, TX"] },
       { name: "Georgetown Resources" , credential: "Birth Doula" , practice: "Georgetown Resources" , url: "http://www.austinareadoula.com/georgetown" , photo: "https://images.squarespace-cdn.com/content/v1/540fce04e4b0dd87d85730af/1611696365687-GA36MCEY6A6BT0T3E0EG/9L7A1489.jpg", description: "Birth Photographer | Childbirth Educator Street Address Austin Area, TX 512-730-1941 101 W Cooperative Way, Georgetown, TX 78626. Way, Suite 105, Georgetown, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Georgetown, TX"] },
     ],
@@ -1868,7 +1938,9 @@ export const cities: Record<string, CityData> = {
     slug: "spring-tx" ,
     costLow: 1000,
     costHigh: 2800,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "TLC Doula Group" , credential: "Birth Doula" , practice: "TLC Doula Group" , url: "https://www.facebook.com/tlcdoulagroup/" , photo: "" , description: "Total Labor Care (TLC) is a group of like minded doulas working together to provide education, guidance and support throughout fertility, pregnancy and ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Spring, TX"] },
       { name: "THE PAINTED DOULA" , credential: "Birth Doula" , practice: "THE PAINTED DOULA" , url: "https://www.yelp.com/biz/the-painted-doula-spring" , photo: "https://s3-media0.fl.yelpcdn.com/bphoto/0XzJ8b1HPHgN7YRoE9BKhw/60s.jpg", description: "More info about The Painted Doula · Map · 26600 Keith St. Spring, TX 77373. Directions · (281) 686-2877. Call Now · Hours. What time does The Painted Doula open?", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Spring, TX"] },
       { name: "Faith" , credential: "Birth Doula" , practice: "Faith" , url: "https://www.guidinghandsbirth.com/" , photo: "https://static.wixstatic.com/media/11062b_cef3b719166a4815b446d4dcfcb6120d~mv2.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_cef3b719166a4815b446d4dcfcb6120d~mv2.png", description: "Debbie Thomas is an award-winning faith-based doula at Guiding Hands Birth Services. Doula services, birth, postpartum, & lactation support in Spring, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Spring, TX"] },
@@ -1902,7 +1974,9 @@ export const cities: Record<string, CityData> = {
     slug: "galveston-tx" ,
     costLow: 700,
     costHigh: 1800,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Above The Waves" , credential: "Birth Doula" , practice: "Above The Waves" , url: "https://www.abovethewavesbirth.com/" , photo: "https://images.squarespace-cdn.com/content/v1/6468e171804a6233ce9f3550/b8c09be5-c877-4cbe-a352-9bd605436f2b/doula-birth-services-brazoria-harris-galveston-county-houston.jpg", description: "We are a premier Doula Agency serving Brazoria, Harris, Matagorda, Galveston and the Houston area. We offer a variety of birth services including prenatal ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Galveston, TX"] },
       { name: "Lashai Guidry" , credential: "Birth Doula" , practice: "Lashai Guidry" , url: "https://www.bornbir.com/shai-james" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/g7lrpod9t1rdbxs4q2ubhgaxxspv.jpg", description: "Doula Galveston, Texas 11 years of experience. I am a full spectrum Doula who's mission is to assist women I'm having the birthing experience they DESIRE and ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Galveston, TX"] },
       { name: "Doulightful Beginnings Birth Care" , credential: "Birth Doula" , practice: "Doulightful Beginnings Birth Care" , url: "https://www.doulightfulbeginningsbirthcare.com/" , photo: "https://static.wixstatic.com/media/a30541_0edceff521804f788b11720d6dd5af7a~mv2.png/v1/fill/w_874,h_500,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/a30541_0edceff521804f788b11720d6dd5af7a~mv2.png", description: "A doula offers emotional and physical support during pregnancy, birth, and postpartum to help women make informed decisions about the care they receive.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Galveston, TX"] },
@@ -1937,7 +2011,13 @@ export const cities: Record<string, CityData> = {
     slug: "lewisville-tx" ,
     costLow: 900,
     costHigh: 2200,
-    shelbiServesHere: false,    localDoulas: [
+    heroImage: "/images/baltimore-md-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-baltimore-md.webp",
+    supportSceneImage: "/images/baltimore-md-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Baltimore: Maryland birth support and doula care",
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Dallas Birth Doula" , credential: "Birth Doula" , practice: "Dallas Birth Doula" , url: "https://www.birthingb.com/" , photo: "https://images.squarespace-cdn.com/content/v1/5d151785e498ff00019244a2/1679441268281-Y6LCL5G8THTRQTSF8UWE/Dean+Previews-14.jpg", description: "Anna Verwaal Doula Support. I am a Certified Doula & Childbirth Educator offering comprehensive support. Dallas 631-478-9017 birthingbdoula@gmail.com", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Lewisville, TX"] },
       { name: "Bluebonnet Birth Services" , credential: "Birth Doula" , practice: "Bluebonnet Birth Services" , url: "https://www.bluebonnetbirthservices.com/" , photo: "https://static.wixstatic.com/media/875c29_fc545b5a20f146ab8d3e25225332d75e~mv2.jpg/v1/fill/w_953,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/875c29_fc545b5a20f146ab8d3e25225332d75e~mv2.jpg", description: "Maggie has been a full-time Certified Doula since 2016 with a deep love for serving parents no matter where and how they choose to give birth.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Lewisville, TX"] },
       { name: "Welcome to Delighted to Doula" , credential: "Birth Doula" , practice: "Welcome to Delighted to Doula" , url: "https://www.delightedtodoula.org/" , photo: "https://www.delightedtodoula.org/wp-content/uploads/2024/06/Vector.png", description: "Our mission is to provide free/low-cost postpartum support to women in Dallas County and surrounding areas. Phone: (469) 828-1833 Weekend Call Line: (945) 237- ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Lewisville, TX"] },
@@ -1972,7 +2052,9 @@ export const cities: Record<string, CityData> = {
     slug: "pasadena-tx" ,
     costLow: 750,
     costHigh: 1800,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Houston Postpartum Doula" , credential: "Birth Doula" , practice: "Houston Postpartum Doula" , url: "https://www.circlebirth.com/houston-postpartum-doula" , photo: "https://images.squarespace-cdn.com/content/v1/6508c44693e166597f53d1c9/fd285245-33e4-41d6-8d3a-ff1a2a46c656/austin-postpartum-doula-main.jpg", description: "Our postpartum doula services offer comprehensive support, including newborn care, feeding assistance, meal preparation, and light housekeeping.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pasadena, TX"] },
       { name: "Bay Area Community Birth Center" , credential: "Birth Doula" , practice: "Bay Area Community Birth Center" , url: "https://www.facebook.com/BayAreaCommunityBirthCenter/" , photo: "" , description: "8453 Howard Drive, Suite B, Pasadena, TX, United States, 77017. 󰥷. Houston, TX ... If you are in need of a doula, we have worked with the best in Houston!", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pasadena, TX"] },
     ],
@@ -2003,7 +2085,9 @@ export const cities: Record<string, CityData> = {
     slug: "allen-tx" ,
     costLow: 900,
     costHigh: 2500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Misty Gigler" , credential: "Birth Doula" , practice: "Misty Gigler" , url: "https://www.bornbir.com/misty-gigler" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/iyg7jgt45ilhuu3x1tq6r1cpw01j.jpeg", description: ": I am a DONA Certified. Certified birth doula and my passion is supporting women in pregnancy and labor. $2,500.00 USD Flat rate $1,500.00 USD Flat rate", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Allen, TX"] },
       { name: "Allen Childbirth Classes" , credential: "Birth Doula" , practice: "Allen Childbirth Classes" , url: "https://www.bestdallasdoulas.com/allen-doula" , photo: "https://images.squarespace-cdn.com/content/v1/5db1e4145165f3064e198453/1571940038773-Y34Y4WHPYZXQ12M1RL96/PNG-+COLORED.png", description: "Our doulas are experts in happy BIRTH days. preparation for birth and baby's first weeks. Schedule Your Free Consulation", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Allen, TX"] },
       { name: "birthingnaturallydfw" , credential: "Birth Doula" , practice: "birthingnaturallydfw" , url: "https://www.instagram.com/birthingnaturallydfw/" , photo: "" , description: "Childbirth Educators • Doulas • Empower • Educate • Support Follow Message The Birth of Charlevoix. Record your own at our Open House ・ birth team of doulas, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Allen, TX"] },
@@ -2064,7 +2148,9 @@ export const cities: Record<string, CityData> = {
     slug: "concord-nc" ,
     costLow: 800,
     costHigh: 2000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Birth doula services in Charlotte area" , credential: "Birth Doula" , practice: "Birth doula services in Charlotte area" , url: "https://www.facebook.com/groups/1596769150871163/posts/1965109434037131/" , photo: "" , description: "Hi Concord! My name is Renee, and I am a birth doula serving expecting families in the greater Charlotte area. I am newly practicing as a professional ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Concord, NC"] },
       { name: "Home" , credential: "Birth Doula" , practice: "Home" , url: "https://whatthebumpclt.com/" , photo: "https://static.showit.com/1600/d7yvLQ6TSjCmvrYI-jPRzw/160825/60dbbe99-9065-4527-bdd6-57c2a8b6dd47.jpg", description: "Personalized birth and postpartum care with expert guidance and unwavering support. Birth and. Postpartum Doulas serving Charlotte NC. let's chat! PREPARED ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Concord, NC"] },
       { name: "Pregnancy and Labor Doula" , credential: "Birth Doula" , practice: "Pregnancy and Labor Doula" , url: "https://uptowndoula.com/labor-doula" , photo: "https://static.showit.co/1600/eIpmOlWSSzSPsNBnTufSQw/185772/charlotte_birth_doula.jpg", description: "Our birth and postpartum doulas are experienced in all forms of labor. Our goal is to prepare you with ample evidence-based information.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Concord, NC"] },
@@ -2099,7 +2185,9 @@ export const cities: Record<string, CityData> = {
     slug: "cumming-ga" ,
     costLow: 900,
     costHigh: 2500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Julie Trotter" , credential: "Birth Doula" , practice: "Julie Trotter" , url: "https://www.bornbir.com/julie-trotter-801" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/mni4jrrxbs9tbakx5rzb1tjnzwsm.jpeg", description: "I'm a Mother of 5 and have been a Birth and Postpartum Doula since 2005. I believe informed, supported families make confident decisions and that emotional ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Cumming, GA"] },
       { name: "Alexis Chambers Doula" , credential: "Birth Doula" , practice: "Alexis Chambers Doula" , url: "https://alexischambersdoula.com/" , photo: "https://static.showit.co/1600/G2rx6qzCRli-oi-h9H99jg/shared/camille-brodard-qdi-my4hwtq-unsplash.jpg", description: "I am located in Cumming, Ga. and feel comfortable supporting births within a 90 min radius. The most common hospitals I frequent are Northside Forsyth, NEGMC ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Cumming, GA"] },
       { name: "Atlanta Birth Doulas" , credential: "Birth Doula" , practice: "Atlanta Birth Doulas" , url: "https://theatlantadoula.com/atlanta-birth-doulas/" , photo: "https://theatlantadoula.com/wp-content/uploads/2024/07/Atlanta-Lamaze-Class-300x200.jpg", description: "We offer concierge Atlanta birth doula services to bring expertise, confidence, and joy to your birth story. When you hire us you get a team of two birth doulas ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Cumming, GA"] },
@@ -2140,7 +2228,9 @@ export const cities: Record<string, CityData> = {
     slug: "greenville-sc" ,
     costLow: 800,
     costHigh: 2200,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Greenville Doulas" , credential: "Birth Doula" , practice: "Greenville Doulas" , url: "https://www.greenvilledoulas.com/" , photo: "https://images.squarespace-cdn.com/content/v1/62031728b7d3b63104050c89/0de8373f-a2e7-4391-953a-f6044d918f61/Copy+of+Due+Diligence+Consulting.jpg", description: "Providing expert birth and postpartum doula support across the Upstate. We proudly serve families throughout Greenville, SC, in VBAC, natural birth, pregnancy", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Greenville, SC"] },
       { name: "Anna Ciesielczyk" , credential: "Birth Doula" , practice: "Anna Ciesielczyk" , url: "https://www.bornbir.com/anna-ciesielczyk" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/lqtkc8307li27pme8syl17rwxi1i.jpeg", description: "Doula Greenville, South Carolina 7 years of experience. I am a full spectrum certified birth + postpartum doula serving in upstate SC! 3 nights/week for six ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Greenville, SC"] },
       { name: "Home" , credential: "Birth Doula" , practice: "Home" , url: "https://thedoulagroup.com/" , photo: "https://thedoulagroup.com/wp-content/uploads/2025/10/The-Doula-Group-Birth-Support.png", description: "Our birth doulas support you wherever you give birth, whether it is a home birth, birth center birth, or hospital birth, We have the experience, knowledge, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Greenville, SC"] },
@@ -2176,7 +2266,9 @@ export const cities: Record<string, CityData> = {
     slug: "charlotte-nc" ,
     costLow: 900,
     costHigh: 2500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Charlotte Doulas" , credential: "Birth Doula" , practice: "Charlotte Doulas" , url: "https://queencitydoulas.com/" , photo: "https://queencitydoulas.com/wp-content/uploads/2024/05/Queen-City-Doula-Services.png", description: "Wimmer Charlotte's leading labor doula, postpartum doula, night nurse, and overnight newborn care services. Serving the Charlotte metro area", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Charlotte, NC"] },
       { name: "Home" , credential: "Birth Doula" , practice: "Home" , url: "https://whatthebumpclt.com/" , photo: "https://static.showit.com/1600/d7yvLQ6TSjCmvrYI-jPRzw/160825/60dbbe99-9065-4527-bdd6-57c2a8b6dd47.jpg", description: "Personalized birth and postpartum care with expert guidance and unwavering support. Birth and Postpartum Doulas serving Charlotte NC 419-266-2346 Work with us ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Charlotte, NC"] },
     ],
@@ -2212,7 +2304,9 @@ export const cities: Record<string, CityData> = {
     slug: "raleigh-nc" ,
     costLow: 850,
     costHigh: 2300,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Raleigh Doula" , credential: "Birth Doula" , practice: "Raleigh Doula" , url: "https://www.eastraleighdoula.com/" , photo: "https://static.wixstatic.com/media/6dad51_4ddce14cf3f7436db32fd0795aca3cfd~mv2.jpg/v1/fill/w_475,h_521,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_1971.jpg", description: "East Raleigh Doula Collective offers education and support for women during pregnancy, labor and postpartum.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Raleigh, NC"] },
       { name: "Postpartum Doulas Raleigh NC" , credential: "Birth Doula" , practice: "Postpartum Doulas Raleigh NC" , url: "https://www.babiesandbeyond.org/doulas/" , photo: "https://bnbdoulas.s3.amazonaws.com/images/ShellyDoula.jpeg", description: "Amanda is a birth and certified postpartum doula. (919) 830-0899 babiesandbeyond@rocketmail.com", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Raleigh, NC"] },
       { name: "Birth Doulas" , credential: "Birth Doula" , practice: "Birth Doulas" , url: "https://www.northcarolinabirthcenter.com/postpartum-doula" , photo: "https://images.squarespace-cdn.com/content/v1/64051dc9ece80729ee419d12/1716920082704-VV0XR20RLVVM76DOT6KS/image-asset.jpeg", description: "An experienced Postpartum Doula is a great option for families wanting extra support during their postpartum journey. 930 Martin Luther King Jr Blvd Chapel ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Raleigh, NC"] },
@@ -2349,7 +2443,13 @@ export const cities: Record<string, CityData> = {
     slug: "atlanta-ga" ,
     costLow: 1000,
     costHigh: 3000,
-    shelbiServesHere: false,    localDoulas: [
+    heroImage: "/images/atlanta-ga-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-atlanta-ga.webp",
+    supportSceneImage: "/images/atlanta-ga-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Atlanta: Georgia birth support and doula care",
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Atlanta Doula Services and Birth Classes" , credential: "Birth Doula" , practice: "Atlanta Doula Services and Birth Classes" , url: "https://theatlantadoula.com/" , photo: "https://theatlantadoula.com/wp-content/uploads/bb-plugin/cache/the-Atlanta-Doulas-square-7689bc02b4e15e01d2dadd53c9c3e203-f80nzygaiv4l.jpg", description: "As your seasoned Atlanta Doula team, we have the knowledge and expertise to help you experience pregnancy, birth, and postpartum with confidence.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Atlanta, GA"] },
       { name: "Home" , credential: "Birth Doula" , practice: "Home" , url: "https://alaboroflove.org/" , photo: "https://alaboroflove.org/wp-content/uploads/2022/02/eZy-Watermark_22-02-2021_09-14-39AM.jpg", description: "We offer birth and postpartum support services within the metro Atlanta area and central Georgia. Placenta encapsulation services are available anywhere in the ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Atlanta, GA"] },
       { name: "The Atlanta Postpartum Doula Agency" , credential: "Birth Doula" , practice: "The Atlanta Postpartum Doula Agency" , url: "https://www.theatlantappd.com/" , photo: "https://images.squarespace-cdn.com/content/v1/5f4931bf1686fc4a4f5e034f/1722267059923-2UZHGPHEZ9C32FRBB7T0/rikonavt-min.jpg", description: "Located in Metro Atlanta, Georgia, our team specializes in overnight newborn care and daytime postpartum support to help you feel rested, cared for, and ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Atlanta, GA"] },
@@ -2360,9 +2460,9 @@ export const cities: Record<string, CityData> = {
     culture: "Atlanta is the largest city in the Southeast and the undisputed medical hub of Georgia, with Northside Hospital delivering more babies than any other single hospital in the country. The birth community here is massive and diverse \u2014 Black maternal health organizations, Spanish-speaking doulas, VBAC advocates, and birth center communities all have a strong presence. Atlanta families have more birth options than anywhere else in Georgia, but navigating a metro this large also means planning your route and your team carefully." ,
     heroLocalDetail: "Northside Hospital Atlanta sits at 1000 Johnson Ferry Road NE in Sandy Springs, just inside the Perimeter (I-285) on the north side \u2014 and the Glenridge Drive/Johnson Ferry Road intersection backs up during morning and afternoon rush, so add 15 minutes if you're coming from inside I-285. Emory University Hospital Midtown is at 550 Peachtree Street NE in Midtown Atlanta, where Peachtree Street traffic and Midtown event congestion can slow your approach on any given day. Piedmont Atlanta Hospital is at 1968 Peachtree Road NW in Buckhead, accessible via I-75/85 to the Peachtree Road exit. The Atlanta BeltLine's Eastside Trail and Piedmont Park's loop are where Atlanta moms walk in the third trimester \u2014 the BeltLine is flat, shaded, and connects some of the city's most family-friendly neighborhoods." ,
     hospitalDetails: [
-      { name: "Northside Hospital Atlanta" , paragraph: "Northside Hospital Atlanta, at 1000 Johnson Ferry Road NE in Sandy Springs, delivers more babies than any other hospital in the country \u2014 over 16,000 births a year across the Northside system. It has a Level III NICU (stated directly on northside.com) and Level IV Maternal Care verification (the first hospital in the country to receive this designation from the Joint Commission). Northside's sheer volume means they've seen every kind of birth plan and every level of complexity \u2014 but that also means they move fast, so coming in with your preferences written down keeps your voice in the room. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something specific to work from." },
-      { name: "Emory University Hospital Midtown" , paragraph: "Emory University Hospital Midtown, at 550 Peachtree Street NE in Midtown Atlanta, is part of the Emory Healthcare system with a Level III NICU (verified on emoryhealthcare.org) and a full maternal-fetal medicine program. As an academic medical center, Emory Midtown handles both routine and high-risk pregnancies with 24/7 obstetric and neonatal coverage. If you're navigating a high-risk pregnancy and want an academic hospital, Emory Midtown's team is one of the strongest in the Southeast \u2014 and having a doula who knows how academic hospitals work makes the whole experience feel more grounded." },
-      { name: "Piedmont Atlanta Hospital" , paragraph: "Piedmont Atlanta Hospital, at 1968 Peachtree Road NW in Buckhead, has a Level III NICU (verified on piedmont.org) and a comprehensive women's services program including maternal-fetal medicine. Piedmont is a well-established Buckhead hospital that serves a large portion of Atlanta's intown and northside families. If we're being real, Atlanta has more hospital options than most cities \u2014 know which hospital your OB delivers at and plan your route from home before contractions start." },
+      { name: "Northside Hospital Atlanta" , thumbnail: "/images/northside-atlanta-hospital.webp", paragraph: "Northside Hospital Atlanta, at 1000 Johnson Ferry Road NE in Sandy Springs, delivers more babies than any other hospital in the country \u2014 over 16,000 births a year across the Northside system. It has a Level III NICU (stated directly on northside.com) and Level IV Maternal Care verification (the first hospital in the country to receive this designation from the Joint Commission). Northside's sheer volume means they've seen every kind of birth plan and every level of complexity \u2014 but that also means they move fast, so coming in with your preferences written down keeps your voice in the room. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something specific to work from." },
+      { name: "Emory University Hospital Midtown" , thumbnail: "/images/emory-midtown-hospital.webp", paragraph: "Emory University Hospital Midtown, at 550 Peachtree Street NE in Midtown Atlanta, is part of the Emory Healthcare system with a Level III NICU (verified on emoryhealthcare.org) and a full maternal-fetal medicine program. As an academic medical center, Emory Midtown handles both routine and high-risk pregnancies with 24/7 obstetric and neonatal coverage. If you're navigating a high-risk pregnancy and want an academic hospital, Emory Midtown's team is one of the strongest in the Southeast \u2014 and having a doula who knows how academic hospitals work makes the whole experience feel more grounded." },
+      { name: "Piedmont Atlanta Hospital" , thumbnail: "/images/piedmont-atlanta-hospital.webp", paragraph: "Piedmont Atlanta Hospital, at 1968 Peachtree Road NW in Buckhead, has a Level III NICU (verified on piedmont.org) and a comprehensive women's services program including maternal-fetal medicine. Piedmont is a well-established Buckhead hospital that serves a large portion of Atlanta's intown and northside families. If we're being real, Atlanta has more hospital options than most cities \u2014 know which hospital your OB delivers at and plan your route from home before contractions start." },
     ],
     // Birth center search: Google Maps search "birth center Atlanta GA" found
     // Intown Birth Center (1401 Montgomery Ferry Drive NE, Atlanta, GA 30306,
@@ -2371,8 +2471,8 @@ export const cities: Record<string, CityData> = {
     // categorized as "Birth center" , 4.9\u2605/67 reviews, website atlantabirthcenter.com).
     // Verified 2026-05-26.
     birthCenterDetails: [
-      { name: "Intown Birth Center" , paragraph: "Intown Birth Center, at 1401 Montgomery Ferry Drive NE in Atlanta's Morningside neighborhood, is a freestanding birth center offering midwife-led birth in a lower-intervention setting. It's one of Atlanta's most established birth centers, with CNM midwives and transfer agreements with nearby hospitals. If you're planning an out-of-hospital birth in intown Atlanta, Intown Birth Center is a primary option \u2014 and having a doula who knows the birth center space and transfer protocols makes the experience feel supported." },
-      { name: "Atlanta Birth Center" , paragraph: "Atlanta Birth Center, at 1442 Flat Shoals Ave SE in East Atlanta, is a freestanding birth center serving families seeking a community-centered, lower-intervention birth experience. It's located in the East Atlanta Village area, convenient for families in southeast intown neighborhoods. Verify with the center directly for current services, insurance coverage, and availability." },
+      { name: "Intown Birth Center" , thumbnail: "/images/intown-birth-center.webp", paragraph: "Intown Birth Center, at 1401 Montgomery Ferry Drive NE in Atlanta's Morningside neighborhood, is a freestanding birth center offering midwife-led birth in a lower-intervention setting. It's one of Atlanta's most established birth centers, with CNM midwives and transfer agreements with nearby hospitals. If you're planning an out-of-hospital birth in intown Atlanta, Intown Birth Center is a primary option \u2014 and having a doula who knows the birth center space and transfer protocols makes the experience feel supported." },
+      { name: "Atlanta Birth Center" , thumbnail: "/images/atlanta-birth-center.webp", paragraph: "Atlanta Birth Center, at 1442 Flat Shoals Ave SE in East Atlanta, is a freestanding birth center serving families seeking a community-centered, lower-intervention birth experience. It's located in the East Atlanta Village area, convenient for families in southeast intown neighborhoods. Verify with the center directly for current services, insurance coverage, and availability." },
     ],
     medicaidNote: "As of 2026, Georgia Medicaid does not yet cover doula services. Georgia House Bill 290, which would add Medicaid doula coverage, has been introduced but not yet enacted into law. Check with Georgia Medicaid at 1-877-423-4746 or visit dph.georgia.gov for the most current status. Fulton, DeKalb, and Clayton County families on Medicaid should also check with their managed care plan about any maternal wellness benefits that might include doula support." ,
     insuranceNote: "Whether doula services are partially covered varies by plan in the Atlanta area. Atlanta's large employer market (Delta, Home Depot, Coca-Cola, Emory, CDC) increasingly includes maternal wellness benefits \u2014 check with your HR department about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs." ,
@@ -2391,7 +2491,9 @@ export const cities: Record<string, CityData> = {
     slug: "savannah-ga" ,
     costLow: 800,
     costHigh: 2000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Erin Mullins" , credential: "Birth Doula" , practice: "Erin Mullins" , url: "https://www.bornbir.com/erin-mullins" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/ipm98ywey0ddr7jb2x9mh6oukpw0.jpeg", description: "I am a certified birth doula as well as a childbirth educator located in Savannah, Georgia. I have a passion for homebirth and VBACs, and assisting women as ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Savannah, GA"] },
       { name: "Doula Savannah GA" , credential: "Birth Doula" , practice: "Doula Savannah GA" , url: "https://versaguis.com/2021/09/11/doula-savannah-ga-birth-support-more/" , photo: "https://versaguis.com/wp-content/uploads/sites/17466/2021/09/doula-savannah-ga-1.jpg", description: "We provide birth doula services: two prenatal meet and greets, a birth plan, on call labor support, birth support, and a postpartum check in.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Savannah, GA"] },
       { name: "BIRTH DOULA SUPPORT" , credential: "Birth Doula" , practice: "BIRTH DOULA SUPPORT" , url: "https://www.peacefullyrooted.com/labormassagedoulasupport" , photo: "https://static.wixstatic.com/media/1249eb_5947b22840ad42ee9ef446535aba39ef~mv2.jpg/v1/fill/w_1170,h_243,al_c,q_80,enc_avif,quality_auto/1249eb_5947b22840ad42ee9ef446535aba39ef~mv2.jpg", description: "​. ​. ​. ​. OUR LOCATION - BY APPOINTMENT ONLY: 1010 EAST VICTORY DRIVE, UNIT D SAVANNAH GA 31401. ​. Facebook; Instagram. 912-482-9325 · SCHEDULE NOW · TOP OF ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Savannah, GA"] },
@@ -2430,7 +2532,9 @@ export const cities: Record<string, CityData> = {
     slug: "jacksonville-fl" ,
     costLow: 900,
     costHigh: 2500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Meet Our Jacksonville Doulas" , credential: "Birth Doula" , practice: "Meet Our Jacksonville Doulas" , url: "https://www.northfloridadoulas.com/meet-our-jacksonville-doulas" , photo: "https://images.squarespace-cdn.com/content/v1/63c02242b4ac5231f32778eb/1673541899829-26F5QU3BH9JMWZPW3YIE/unsplash-image-xL66l--msXU.jpg", description: "Meet our doulas. Kelly Googe, Womb to World Doula Services, birth doula, lactation counselor, childbirth educator.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Jacksonville, FL"] },
       { name: "Meet Mary" , credential: "Birth Doula" , practice: "Meet Mary" , url: "http://www.apeacefulbirthdoula.com/meet-mary.html" , photo: "http://www.apeacefulbirthdoula.com/uploads/2/6/1/1/26113626/382581426_orig.jpg", description: "I am trained in Spinning Babies techniques that assist with a more comfortable pregnancy and an easier birth. ​I am a Certified Postpartum & Infant Care Doula ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Jacksonville, FL"] },
       { name: "Jacksonville Doula Training" , credential: "Birth Doula" , practice: "Jacksonville Doula Training" , url: "https://bestdoulatraining.com/doula-training-dates/Jacksonville-doula-training" , photo: "" , description: "We can't wait to meet you - in person or virtually! Birth Doula Investment: $699. Doula Training Times: Saturday and Sunday - 9am-7:30pm. Placenta Encapsulation ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Jacksonville, FL"] },
@@ -2470,7 +2574,9 @@ export const cities: Record<string, CityData> = {
     slug: "greensboro-nc" ,
     costLow: 850,
     costHigh: 2200,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Natural Baby Doulas" , credential: "Birth Doula" , practice: "Natural Baby Doulas" , url: "https://www.naturalbabydoulas.com/" , photo: "https://static.wixstatic.com/media/b3dfc0_852b1861178b499bafce2f79df1b70ac~mv2_d_4256_2832_s_4_2.jpg/v1/fill/w_1905,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b3dfc0_852b1861178b499bafce2f79df1b70ac~mv2_d_4256_2832_s_4_2.jpg", description: "Natural Baby Doulas is a group of six doulas provide families with support during their pregnancy, labor, birth, and postpartum period.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Greensboro, NC"] },
       { name: "Greensboro Doula" , credential: "Birth Doula" , practice: "Greensboro Doula" , url: "https://piedmontdoulas.com/" , photo: "https://piedmontdoulas.com/wp-content/uploads/2016/09/Depositphotos_101474470_original.jpg", description: "Piedmont Doulas is happy to provide birth and postpartum doula services to all types of families throughout the Greensboro, a free consultation.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Greensboro, NC"] },
       { name: "Doula Training" , credential: "Birth Doula" , practice: "Doula Training" , url: "https://ywcagsonc.org/doula/" , photo: "https://ywcagsonc.org/wp-content/uploads/2017/04/donate.png", description: "We offer a subsidized training for 25 new doulas through Doulas of North America (DONA). An experienced DONA trainer provides a comprehensive 16-hour training.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Greensboro, NC"] },
@@ -2549,7 +2655,9 @@ export const cities: Record<string, CityData> = {
     slug: "orlando-fl" ,
     costLow: 850,
     costHigh: 2500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "In Joy Birth" , credential: "Birth Doula" , practice: "In Joy Birth" , url: "https://www.injoybirth.com/" , photo: "https://static.wixstatic.com/media/4f1358_7cdbdb0a40a249088bfe6b20cf57ee67~mv2.jpg/v1/fill/w_460,h_460,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/20240723-J33A7093.jpg", description: "In Joy Birth offers expert birth and postpartum doula support in Central Florida. Compassionate care, lactation support, sleep consulting, and mentorship ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Orlando, FL"] },
       { name: "Postpartum Doula Support" , credential: "Birth Doula" , practice: "Postpartum Doula Support" , url: "https://childbirthconcierge.com/postpartum-doula/" , photo: "https://childbirthconcierge.com/wp-content/uploads/2025/05/28.png", description: "Postpartum doula support tailored for newborn feeding, healing, and emotional support—so you can rest, bond, and recover with confidence.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Orlando, FL"] },
       { name: "Zory Soto" , credential: "Birth Doula" , practice: "Zory Soto" , url: "https://www.bornbir.com/zory-soto" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/qsnbrkczkj4zgeshgo9u3zshtok1.jpg", description: "My name is Zory, I'm a Birth Doula and Orgasmic Birth Practitioner. virtual (90 mins max) On-call at week 37 until birth. Orlando, FL Ocoee,", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Orlando, FL"] },
@@ -2632,23 +2740,29 @@ export const cities: Record<string, CityData> = {
     slug: "miami-fl" ,
     costLow: 1200,
     costHigh: 3500,
-    shelbiServesHere: false,    localDoulas: [
+    heroImage: "/images/miami-fl-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-miami-fl.webp",
+    supportSceneImage: "/images/miami-fl-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Miami: Florida birth support and doula care",
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Miami Doula costs and package prices" , credential: "Birth Doula" , practice: "Miami Doula costs and package prices" , url: "https://www.magnoliabirthhouse.com/doula-support" , photo: "https://images.squarespace-cdn.com/content/v1/563e5741e4b02dccf8af82fc/1453434501265-VNNXYTLAALWW3JJJ5TTS/1798440_281414242010504_2090296396_n.jpg", description: "Average Miami prices for a birthing doulas range from $500 (brand new doula) to $3000 (seasoned doula + concierge services) and postpartum doulas $20 (brand new) ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Miami, FL"] },
       { name: "BIRTHday Doulas of South Florida" , credential: "Birth Doula" , practice: "BIRTHday Doulas of South Florida" , url: "https://birthdaydoulasofsouthflorida.com/index.html" , photo: "" , description: "Professional, trustworthy and committed to our families, we are BIRTHday Doulas of South Florida. Now serving Coconut Grove, Bal Harbour, Miami Beach and ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Miami, FL"] },
       { name: "Presently Blooming" , credential: "Birth Doula" , practice: "Presently Blooming" , url: "https://www.presentlyblooming.com/" , photo: "https://images.squarespace-cdn.com/content/v1/5ed2c7572bc5dc1defc3528c/c3117182-f61f-4d68-8aec-34ca19281e71/tempImage6ZWiji.jpg", description: "We serve to educate expecting families in an effort to maximize the outcome of safer and more joyful birth experiences.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Miami, FL"] },
       { name: "Postpartum Doulas" , credential: "Birth Doula" , practice: "Postpartum Doulas" , url: "https://amazingbirthsandbeyond.com/doula/postpartum-doulas/" , photo: "" , description: "Hire a professional postpartum doula to support you in the early days of becoming a parent. Call 786-955-6560 to schedule an interview!", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Miami, FL"] },
-      { name: "motheretreat" , credential: "Birth Doula" , practice: "motheretreat" , url: "https://www.instagram.com/motheretreat/" , photo: "" , description: "+1 (786) 646-9461. Google 5⭐️rating Carrot&Maven approved High VBAC rate Overnight & day time support after birth. We're looking for future doulas ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Miami, FL"] },
+      { name: "motheretreat" , credential: "Birth Doula" , practice: "motheretreat" , url: "https://www.instagram.com/motheretreat/" , photo: "" , description: "+1 (786) 646-9461. Google 5 star rating Carrot and Maven approved High VBAC rate Overnight and day time support after birth. We are looking for future doulas ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Miami, FL"] },
     ],
     culture: "Miami is one of the most diverse birth markets in the country — bilingual doulas (English/Spanish/Creole) are common and often command a premium. The hospital landscape is large and competitive, with Jackson Memorial anchoring the county system and multiple private systems (Baptist Health, Mount Sinai) offering alternatives. Hurricane season (June–November) adds a planning layer that most cities don't have." ,
     heroLocalDetail: "From the I-95 corridor through downtown to the palmetto neighborhoods off US-1, Miami families navigate one of Florida's busiest birth corridors. Jackson Memorial anchors the county system, while Baptist Health and Mount Sinai serve South Dade and the Beaches. Hurricane season (June–November) adds planning considerations — pack a go-bag early and identify a backup hospital." ,
     hospitalDetails: [
-      { name: "Jackson Memorial Hospital" , paragraph: "Jackson Memorial Hospital is Miami-Dade's public safety-net hospital and home to the Ryder Trauma Center and a Level IV NICU — the highest level available, providing care for the most critically ill newborns. As a teaching hospital affiliated with UM, Jackson handles high-risk pregnancies from across South Florida. If you're delivering here, a birth plan is essential — the volume is high and staff rotates, so your preferences need to be clear and easy to read. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
-      { name: "Mercy Hospital" , paragraph: "Mercy Hospital, part of HCA Florida Healthcare, offers a Level III NICU and a more intimate birth experience than Jackson. Located in Coconut Grove, it's popular with families on the south side of Miami. Doulas are generally welcome, and the smaller unit means staff may have more time for your preferences." },
-      { name: "Mount Sinai Medical Center" , paragraph: "Mount Sinai Medical Center on Miami Beach provides a Level III NICU and serves families from Miami Beach, Surfside, and the northeastern corridor. The location means beachside traffic can affect your drive time — plan your route during rush hour before you need it." },
-      { name: "Baptist Health South Florida" , paragraph: "Baptist Health South Florida (South Miami campus) offers a Level III NICU and one of the busiest maternity programs in the state. Their multiple campuses across South Florida mean you likely have a Baptist facility within 20 minutes, but confirm which campus handles deliveries before your third trimester." }
+      { name: "Jackson Memorial Hospital" , thumbnail: "/images/jackson-memorial.webp", paragraph: "Jackson Memorial Hospital is Miami-Dade's public safety-net hospital and home to the Ryder Trauma Center and a Level IV NICU — the highest level available, providing care for the most critically ill newborns. As a teaching hospital affiliated with UM, Jackson handles high-risk pregnancies from across South Florida. If you're delivering here, a birth plan is essential — the volume is high and staff rotates, so your preferences need to be clear and easy to read. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Mercy Hospital" , thumbnail: "/images/mercy-miami.webp", paragraph: "Mercy Hospital, part of HCA Florida Healthcare, offers a Level III NICU and a more intimate birth experience than Jackson. Located in Coconut Grove, it's popular with families on the south side of Miami. Doulas are generally welcome, and the smaller unit means staff may have more time for your preferences." },
+      { name: "Mount Sinai Medical Center" , thumbnail: "/images/mount-sinai-miami.webp", paragraph: "Mount Sinai Medical Center on Miami Beach provides a Level III NICU and serves families from Miami Beach, Surfside, and the northeastern corridor. The location means beachside traffic can affect your drive time — plan your route during rush hour before you need it." },
+      { name: "Baptist Health South Florida" , thumbnail: "/images/baptist-health-sf.webp", paragraph: "Baptist Health South Florida (South Miami campus) offers a Level III NICU and one of the busiest maternity programs in the state. Their multiple campuses across South Florida mean you likely have a Baptist facility within 20 minutes, but confirm which campus handles deliveries before your third trimester." }
     ],
     birthCenterDetails: [
-      { name: "No birth centers in Miami" , paragraph: "NPI taxonomy 261QB0400X search on NPPES returned 0 results for Miami FL. No freestanding birth centers operate within Miami proper. The closest option is Delray Birth Center (~55 min north in Delray Beach). Families seeking out-of-hospital birth should plan for a significant drive or explore home birth with a licensed midwife." }
+      { name: "No birth centers in Miami" , thumbnail: "/images/no-birth-center.webp", paragraph: "NPI taxonomy 261QB0400X search on NPPES returned 0 results for Miami FL. No freestanding birth centers operate within Miami proper. The closest option is Delray Birth Center (~55 min north in Delray Beach). Families seeking out-of-hospital birth should plan for a significant drive or explore home birth with a licensed midwife." }
     ],
     medicaidNote: "Florida Medicaid does not currently cover doula services. Doulas are not recognized as Medicaid providers in FL. Families using Medicaid in Miami should explore community-based doula programs that offer sliding-scale or volunteer support." ,
     insuranceNote: "Most commercial insurance in FL does not cover doula fees. Some Florida Blue plans may partially reimburse under wellness benefits if the doula is a certified health educator." ,
@@ -2669,7 +2783,9 @@ export const cities: Record<string, CityData> = {
     slug: "st-petersburg-fl" ,
     costLow: 900,
     costHigh: 2800,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "About Me" , credential: "Birth Doula" , practice: "About Me" , url: "https://stpetersburgdoula.com/about-me/" , photo: "https://stpetersburgdoula.com/wp-content/uploads/2018/09/amandawaltersbirth-142-e1538617530788.jpg", description: "I'm Jessica Olarte-Thompson and I help families achieve better birth and postpartum outcomes so you and your baby can get the best start in life.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["St. Petersburg, FL"] },
       { name: "Barefoot Birth" , credential: "Birth Doula" , practice: "Barefoot Birth" , url: "https://www.barefootbirth.com/doula" , photo: "https://images.squarespace-cdn.com/content/v1/4fff823c24ac03cb5e6ad69a/198d7f91-19b9-4bcc-982a-43b6c25d7fd8/Screen+Shot+2024-01-22+at+9.49.45+PM.png", description: "Our team of holistic doulas offers unwavering support during pregnancy, birthing, and postpartum for families in Tampa, St. Pete, and surrounding areas.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["St. Petersburg, FL"] },
     ],
@@ -2702,7 +2818,9 @@ export const cities: Record<string, CityData> = {
     slug: "colorado-springs-co" ,
     costLow: 800,
     costHigh: 2500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "The Doula Circle" , credential: "Birth Doula" , practice: "The Doula Circle" , url: "https://www.doulacircle.com/" , photo: "https://static.wixstatic.com/media/b5b90e_7bd4fe226c194d55be7ef4cdb8ca2ee4~mv2.jpg/v1/fill/w_1905,h_993,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b5b90e_7bd4fe226c194d55be7ef4cdb8ca2ee4~mv2.jpg", description: "The Doula Circle supports & documents every step of your sacred journey through parenthood. We offer birth & postpartum support, photography, & education.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Colorado Springs, CO"] },
       { name: "Empowered Life Birth Collective" , credential: "Birth Doula" , practice: "Empowered Life Birth Collective" , url: "https://www.empoweredlifebirthcollective.com/" , photo: "https://static.wixstatic.com/media/61e1ea_eff145bd40994ab2b74a515f54509f6d~mv2.jpg/v1/fill/w_953,h_920,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/61e1ea_eff145bd40994ab2b74a515f54509f6d~mv2.jpg", description: "We offer a variety of services including childbirth education, birth doula support, postpartum support, lactation support and massage therapy.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Colorado Springs, CO"] },
       { name: "Time to Push" , credential: "Birth Doula" , practice: "Time to Push" , url: "https://www.timetopush.com/" , photo: "https://static.wixstatic.com/media/298dc7_b21ca35ddcda4e149fc33b254ec76a20~mv2.jpg/v1/crop/x_0,y_1636,w_4480,h_3447/fill/w_417,h_268,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/WingsofGlory-1406.jpg", description: "**Now accepting Select Medicaid, Kaiser insurance & Carrot pay for Labor support**. Approved Birth doula and childbirth educator at Beginnings Birth Center.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Colorado Springs, CO"] },
@@ -2737,7 +2855,13 @@ export const cities: Record<string, CityData> = {
     slug: "augusta-ga" ,
     costLow: 1200,
     costHigh: 3500,
-    shelbiServesHere: false,    localDoulas: [
+    heroImage: "/images/nashville-tn-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-nashville-tn.webp",
+    supportSceneImage: "/images/nashville-tn-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Nashville: Tennessee birth support and doula care",
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "LITTLE HANDS AND LITTLE FEET" , credential: "Birth Doula" , practice: "LITTLE HANDS AND LITTLE FEET" , url: "https://www.littlehandsandfeetdoula.com/" , photo: "https://www.littlehandsandfeetdoula.com/uploads/8/8/3/4/88344064/published/dsc-8338.jpg", description: "My name is Julia Davidson and I am a student midwife, childbirth educator and certified doula located in Augusta, GA (serving the CSRA and surrounding areas).", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Augusta, GA"] },
       { name: "Susan The Birth Doula" , credential: "Birth Doula" , practice: "Susan The Birth Doula" , url: "https://www.susanthebirthdoula.com/" , photo: "https://6e2fe6886d.clvaw-cdnwnd.com/5f9fe43709fe9879f3cf6fe15002af51/200000221-2b0512b053/pexels-rodnae-productions-6148907.jpg", description: "We provide doula support for home births, water births, and hospital births in the Augusta, Ga & Surrounding areas.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Augusta, GA"] },
       { name: "Susan Robinson" , credential: "Birth Doula" , practice: "Susan Robinson" , url: "https://www.bornbir.com/susan-spells" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/7hh5f0neqjd3jljbgdyqmuk2h1tj.jpeg", description: "We provide doula services for home births, water births, and hospital births in the Metro-Atlanta area, Augusta, and surrounding areas. Call (904) 386-7184 to ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Augusta, GA"] },
@@ -2772,7 +2896,9 @@ export const cities: Record<string, CityData> = {
     slug: "fort-collins-co" ,
     costLow: 1400,
     costHigh: 4000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Home" , credential: "Birth Doula" , practice: "Home" , url: "https://juliannecurtis.com/" , photo: "https://juliannecurtis.com/wp-content/uploads/2022/02/Be-Still-Short-Film-Image-1.jpeg", description: "Proud to be listed in 2017-2023 as one of the Top Best Doulas of Fort Collins. Exciting news! We're growing and adding more birth and postpartum services ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Fort Collins, CO"] },
       { name: "Julianne Curtis" , credential: "Birth Doula" , practice: "Julianne Curtis" , url: "https://womensclinicnoco.com/team-member/julianne-curtis/" , photo: "https://womensclinicnoco.com/wp-content/uploads/2018/04/Julianne-Curtis-1.png", description: "Julianne has certifications as a Certified. Certified Birth and Bereavement Doula 1107 South Lemay Ave Suite 300 Fort Collins, CO 80524 Directions Phone: (970) ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Fort Collins, CO"] },
       { name: "NoCo Doula Collective" , credential: "Birth Doula" , practice: "NoCo Doula Collective" , url: "https://www.facebook.com/NoCoDoulaCollective/" , photo: "" , description: "⭐️ Professional doulas for birth, postpartum, overnight care, NICU stays and bereavement support ⭐️ Certified lactation counselors to help meet your feeding goals ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Fort Collins, CO"] },
@@ -2805,7 +2931,9 @@ export const cities: Record<string, CityData> = {
     slug: "spokane-wa" ,
     costLow: 1300,
     costHigh: 3800,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Birth Doulas" , credential: "Birth Doula" , practice: "Birth Doulas" , url: "https://www.spokanedoulapros.com/our-doulas/birth-doulas/" , photo: "https://spokanedoulapros.com/wp/wp-content/uploads/2022/06/Nicki-1024x1024.jpg" , description: "Certified Birth & Postpartum Doula Provider. Services offered free of charge to Teens, In-home and virtual lactation and feeding support Offering Full-Spectrum ..." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Spokane, WA"] },
       { name: "Sarah McDonald" , credential: "Birth Doula" , practice: "Sarah McDonald" , url: "https://www.sarahmdoula.com/" , photo: "https://images.squarespace-cdn.com/content/v1/624cb05c08931a5889b946bb/83ec424f-3318-48e4-8c6f-9ce869298df5/sarah-doula-105.jpg" , description: "I am a compassionate doula who cares about you and your family's needs. I emphasize equity toward clients of all shapes, backgrounds, colors, and cultures." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Spokane, WA"] },
       { name: "Spokane Doula" , credential: "Birth Doula" , practice: "Spokane Doula" , url: "https://www.bandbdoulaservices.com/" , photo: "https://static.wixstatic.com/media/caae6f_2c8604e59ddf452aaff5004a2e50c36e~mv2.jpg/v1/fill/w_1905,h_993,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/caae6f_2c8604e59ddf452aaff5004a2e50c36e~mv2.jpg" , description: "Birth & Beyond Doula Services offers support during pregnancy, labor and delivery, postpartum, and in bereavement/loss." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Spokane, WA"] },
@@ -2846,7 +2974,7 @@ export const cities: Record<string, CityData> = {
     heroImage: "/images/seattle-wa-birth-doula-skyline.webp" ,
     supportSceneImage: "/images/seattle-support-scene.webp" ,
     supportSceneAlt: "A doula walking alongside an expectant mom on a forested path with the Cascade Mountains in the distance: Seattle birth support" ,
-    ogImage: "https://truejoybirthing.com/images/og-city-seattle-wa-v3.webp" ,
+    ogImage: "https://truejoybirthing.com/images/og-city-seattle-wa.webp" ,
     midwifeInfo: {
       paragraph: "Washington licenses Certified Professional Midwives (CPMs) and Licensed Midwives (LMs), making home birth and birth center midwifery legally regulated and accessible statewide. That means if you're planning a home birth or birth center birth in {city}, your midwife operates under a state-issued license. On the hospital side, Certified Nurse-Midwives (CNMs) practice in all major Seattle hospitals, including Swedish First Hill and UW Medical Center, so hospital-based midwifery care is widely available for {city} families." ,
       credentialTypes: " and LMs" ,
@@ -2909,7 +3037,7 @@ export const cities: Record<string, CityData> = {
         privateRooms: true,
         url: "https://www.overlakehospital.org" },
       {
-        name: "Swedish Medical Center – Issaquah" ,
+        name: "Swedish Medical Center – Issaquah" , thumbnail: "/images/swedish-issaquah.webp" ,
         address: "751 NE Blakely Drive, Issaquah, WA 98029" ,
         paragraph: "A growing suburban campus of Swedish offering a full birth center with labor and delivery services, midwifery care, and a Level II NICU, serving families on the Eastside and Sammamish Plateau." ,
         nicuLevel: "II" ,
@@ -2925,6 +3053,7 @@ export const cities: Record<string, CityData> = {
       {
         name: "Center for Birth" ,
         address: "1500 Eastlake Ave E, Seattle, WA 98102" ,
+        thumbnail: "/images/center-for-birth-seattle.webp" ,
         paragraph: "Seattle's only nationally accredited (CABC) freestanding birth center, located in the Eastlake neighborhood. Founded in 2010, it offers spacious rooms with extra-deep soaking tubs for water birth, staffed by independent certified nurse-midwife practices, just minutes from Swedish First Hill's emergency backup." ,
         credential: "CABC Accredited" ,
         services: ["Water Birth" , "Prenatal Care" , "Postpartum Care" , "VBAC"],
@@ -2933,6 +3062,7 @@ export const cities: Record<string, CityData> = {
       {
         name: "Puget Sound Birth Center" ,
         address: "13128 Totem Lake Blvd NE, Suite 101, Kirkland, WA 98034" ,
+        thumbnail: "/images/puget-sound-birth-center.webp" ,
         paragraph: "A CABC-accredited freestanding birth center in Kirkland, serving Eastside and greater Puget Sound families for over 30 years. Licensed midwives attend both home and birth-center births, with over 6,000 babies welcomed since founding." ,
         credential: "CABC Accredited" ,
         services: ["Water Birth" , "Home Birth" , "Prenatal Care" , "Postpartum Care"],
@@ -2965,6 +3095,7 @@ export const cities: Record<string, CityData> = {
         acceptingClients: "true"},
       {
         name: "Giulia" ,
+        credential: "Birth Doula" ,
         practice: "Seattle Gentle Beginnings" ,
         url: "https://www.seattlegentlebeginnings.com" ,
         description: "Postpartum doula and pediatric sleep consultant serving West Seattle and greater Seattle, with NAPS doula training and Sleep Counseling Institute certification. Giulia supports families throughout the Fourth Trimester with calm, evidence-based care including newborn feeding support, sleep education, and guidance in understanding newborn cues.",
@@ -2980,7 +3111,7 @@ export const cities: Record<string, CityData> = {
         practice: "Seattle Doula Services" ,
         url: "https://www.seattledoulaservices.com" ,
         photo: "/images/doulas/hannah-sds.webp",
-        description: "DONA-trained and Washington State Certified Doula serving families in the Greater Seattle area. Hannah brings over a decade of experience supporting children and families, and is trained in comfort measures including breathing techniques, positioning, and relaxation methods. She offers sliding-scale and pro bono doula support to ensure finances are never an obstacle.",
+        description: "DONA-trained and Washington State Certified Doula based in Seattle's Capitol Hill neighborhood, serving families across the city from Ballard to Beacon Hill. Hannah brings over a decade of experience supporting Seattle-area children and families, and is trained in comfort measures including breathing techniques, positioning, and relaxation methods tailored to laboring at hospitals like Swedish First Hill and UW Medical Center. She offers sliding-scale and pro bono doula support to ensure finances are never an obstacle for Seattle families.",
         costRange: "$2,100-$2,500",
         serviceArea: ["Seattle" , "Greater Seattle area"],
         services: ["Birth Doula" , "Postpartum Doula"],
@@ -3005,6 +3136,7 @@ export const cities: Record<string, CityData> = {
         photo: "/images/doulas/brooke-prudhomme.webp",
         isMidwife: true,
         description: "Certified Professional Midwife and Licensed Midwife offering home birth, VBAC, and holistic women's health care in Seattle. Brooke provides comprehensive midwifery care including home birth, integrative prenatal and postpartum care, fertility support, and water birth — with pricing plans for both comprehensive home birth and collaborative care with OB/GYNs.",
+        costRange: "Contact for pricing",
         serviceArea: ["Seattle" , "Greater Seattle area"],
         services: ["Home Birth" , "VBAC Support" , "Water Birth" , "Prenatal Care" , "Postpartum Care" , "Fertility Support"],
         acceptingClients: "true"},
@@ -3013,6 +3145,7 @@ export const cities: Record<string, CityData> = {
         credential: "CNM, ARNP" ,
         practice: "Full Moon Midwifery" ,
         url: "https://www.fullmoonmidwiferyseattle.com" ,
+        photo: "",
         isMidwife: true,
         description: "Certified Nurse Midwife with over 20 years of experience in hospitals, homes, and birth centers. Ceci offers full-spectrum midwifery care combining modern western medicine with traditional and spiritual healing, including Arvigo Maya Abdominal Massage, CranioSacral Therapy, home birth, and birth center birth in the greater Seattle area.",
         serviceArea: ["Seattle" , "University District" , "Greater Seattle area"],
@@ -3063,13 +3196,13 @@ export const cities: Record<string, CityData> = {
     ],
     localDoulas: [
       { name: "Katie Pumphrey" , photo: "/images/provider-tacoma-wa-katie-pumphrey.webp" , credential: "Birth Doula" , practice: "MamaEarth Doula" , url: "https://www.mamaearthdoula.com" , description: "Tacoma-area doula serving families since 2012, specializing in empowering birth experiences across all settings — from out-of-hospital births to planned cesareans." , costRange: "$1,200–$3,000" , serviceArea: ["Tacoma" , "University Place" , "Gig Harbor"], acceptsMedicaid: true, acceptingClients: "true" , services: ["Postpartum" , "Breastfeeding Support" , "Childbirth Education"] },
-      { name: "Deb Jimenez" ,  photo: "/images/provider-tacoma-wa-deb-jimenez.webp" , credential: "Birth Doula, Postpartum Doula, Sleep Doula" , practice: "Doula Deb LLC" , url: "http://www.douladeb.com" , description: "Experienced birth, postpartum, and sleep doula offering in-home and virtual postpartum care and sleep coaching for Tacoma families adjusting to life with a new baby." , costRange: "$65–$75/hr" , serviceArea: ["Tacoma" , "Puyallup" , "Lakewood"], acceptingClients: "true" , services: ["Birth Doula" , "Postpartum Doula" , "Sleep Doula" , "Sleep Coaching" , "Overnight Care"] },
+      { name: "Deb Jimenez" ,  photo: "/images/provider-tacoma-wa-deb-jimenez.webp" , credential: "Birth Doula, Postpartum Doula, Sleep Doula" , practice: "Doula Deb LLC" , url: "http://www.douladeb.com" , description: "Experienced birth, postpartum, and sleep doula offering in-home and virtual postpartum care and sleep coaching for Tacoma families adjusting to life with a new baby." , costRange: "$65\u2013$75/hr" , serviceArea: ["Tacoma" , "Puyallup" , "Lakewood"], acceptingClients: "true" , isVerified: true , services: ["Birth Doula" , "Postpartum Doula" , "Sleep Doula" , "Sleep Coaching" , "Overnight Care"] },
       { name: "Adrianne Buyer" , photo: "/images/provider-tacoma-wa-adrianne-buyer.webp" , credential: "Birth Doula" , practice: "Adrianne Buyer Birth Doula" , url: "https://adriannebuyer.com" , description: "Birth doula supporting Tacoma families through labor and early postpartum with a focus on breastfeeding and lactation support." , costRange: "$1,200–$2,500" , serviceArea: ["Tacoma" , "University Place" , "Fircrest"], acceptsMedicaid: true, acceptingClients: "true" , services: ["Postpartum" , "Lactation"] },
       { name: "Kristin Lanning" , photo: "" , credential: "Birth Doula, Postpartum Doula" , practice: "Called To Birth Doulas & Birth Services" , url: "https://www.calledtobirth.com" , description: "Doula and childbirth educator providing birth doula support, postpartum care, and lactation guidance to Tacoma and South Sound families." , costRange: "$1,400–$3,000" , serviceArea: ["Tacoma" , "Puyallup" , "Graham"], acceptsMedicaid: true, acceptingClients: "true" , services: ["Childbirth Education" , "Lactation"] },
       { name: "Allie Wright" , photo: "/images/provider-tacoma-wa-allie-wright.webp" , credential: "Birth Doula" , practice: "Alma Birth Doula" , url: "http://almabirthdoula.com" , description: "Birth doula offering prenatal and postpartum support for families in the Tacoma area, helping them feel prepared and confident for their birth." , costRange: "$1,500–$2,800" , serviceArea: ["Tacoma" , "Gig Harbor" , "Port Orchard"], acceptingClients: "true" , services: ["Postpartum" , "Prenatal Care"] },
       { name: "Compass Doula & Lactation PLLC" , photo: "/images/provider-tacoma-wa-compass-doula.webp" , credential: "Birth Doula, Lactation Consultant" , practice: "Compass Doula & Lactation" , url: "https://www.compassdoulas.com" , description: "Doula and lactation support practice serving Tacoma families with compassionate, evidence-based care for birth, postpartum, and breastfeeding." , costRange: "$1,500–$3,500" , serviceArea: ["Tacoma" , "Lakewood" , "Steilacoom"], acceptsMedicaid: true, acceptingClients: "true" , services: ["Postpartum" , "Breastfeeding Support"] },
       { name: "Jennifer Ruggles" , photo: "/images/provider-tacoma-wa-jennifer-ruggles.webp" , credential: "Birth Doula" , practice: "Jennifer Ruggles Doula Services" , url: "http://www.jennrugglesdoula.com" , description: "Dedicated birth and postpartum doula serving Pierce County families with compassionate labor support and postpartum care." , costRange: "$1,200–$2,500" , serviceArea: ["Tacoma" , "Parkland" , "Spanaway"], acceptsMedicaid: true, acceptingClients: "true" , services: ["Postpartum"] },
-      { name: "Little Mitzvah Doula Care" ,  photo: "/images/provider-tacoma-wa-little-mitzvah.webp" , credential: "Birth Doula, Pediatric Sleep Coach" , practice: "Little Mitzvah Doula Care" , url: "https://www.littlemitzvahdoulacare.com" , description: "Birth doula and pediatric sleep coach supporting Tacoma families with compassionate support through birth and sleep training. Accepts Medicaid and Carrot fertility benefits." , costRange: "$2,400" , serviceArea: ["Tacoma" , "Fife" , "Edgewood"], acceptsMedicaid: true, acceptingClients: "true" , services: ["Birth Doula" , "Sleep Coaching"] },
+      { name: "Little Mitzvah Doula Care" ,  photo: "/images/provider-tacoma-wa-little-mitzvah.webp" , credential: "Birth Doula, Pediatric Sleep Coach" , practice: "Little Mitzvah Doula Care" , url: "https://www.littlemitzvahdoulacare.com" , description: "Birth doula and pediatric sleep coach supporting Tacoma families with compassionate support through birth and sleep training. Accepts Medicaid and Carrot fertility benefits." , costRange: "$2,400" , serviceArea: ["Tacoma" , "Fife" , "Edgewood"], acceptsMedicaid: true, acceptingClients: "true" , isVerified: true , services: ["Birth Doula" , "Sleep Coaching"] },
       { name: "Katie Pumphrey" , credential: "Birth Doula" , practice: "MamaEarth Doula" , url: "https://www.mamaearthdoula.com" , description: "Tacoma-area doula serving families since 2012, specializing in empowering birth experiences across all settings — from out-of-hospital births to planned cesareans." , costRange: "$1,200–$3,000" , serviceArea: ["Tacoma" , "University Place" , "Gig Harbor"], acceptsMedicaid: true, acceptingClients: "true" , services: ["Postpartum" , "Breastfeeding Support" , "Childbirth Education"], photo: "/images/provider-tacoma-wa-katie-pumphrey.webp" },
       { name: "Deb Crawford" , credential: "Birth Doula, Postpartum Doula, Sleep Doula" , practice: "Doula Deb LLC" , url: "http://www.douladeb.com" , description: "Experienced postpartum and sleep doula offering overnight newborn care and sleep coaching for Tacoma families adjusting to life with a new baby." , costRange: "$35–$50/hr" , serviceArea: ["Tacoma" , "Puyallup" , "Lakewood"], acceptingClients: "true" , services: ["Sleep Coaching" , "Overnight Care"], photo: "/images/doulas/deb-crawford.webp" },
       { name: "Adrianne Buyer" , credential: "Birth Doula" , practice: "Adrianne Buyer Birth Doula" , url: "https://adriannebuyer.com" , description: "Birth doula supporting Tacoma families through labor and early postpartum with a focus on breastfeeding and lactation support." , costRange: "$1,200–$2,500" , serviceArea: ["Tacoma" , "University Place" , "Fircrest"], acceptsMedicaid: true, acceptingClients: "true" , services: ["Postpartum" , "Lactation"], photo: "/images/provider-tacoma-wa-adrianne-buyer.webp" },
@@ -3098,7 +3231,9 @@ export const cities: Record<string, CityData> = {
     slug: "sacramento-ca" ,
     costLow: 1500,
     costHigh: 4000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Rebecca Rose Doula Services" , credential: "Birth Doula" , practice: "Rebecca Rose Doula Services" , url: "https://www.rebeccarosedoulaservices.net/" , photo: "https://images.squarespace-cdn.com/content/v1/5e7e4cabf6881e47c9321182/cb7ef1cb-7ea2-4456-a5cc-898acfc6cd11/A7401310.jpg", description: "Connect with our inclusive Birth and Postpartum team today! Call (916) 218-8867 or message us to get started. Serving Sacramento, Placer County, and ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Sacramento, CA"] },
       { name: "Mama in Mind Doula Services" , credential: "Birth Doula" , practice: "Mama in Mind Doula Services" , url: "https://www.mamainminddoula.com/" , photo: "https://static.wixstatic.com/media/834188_d5fbc15bc30a4ae3b54e0cf62518c1e4~mv2.jpg/v1/fill/w_1905,h_636,al_t,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/834188_d5fbc15bc30a4ae3b54e0cf62518c1e4~mv2.jpg", description: "Certified Labor and Pospartum Doula | Kerynn Jetton | Mama in Mind Doula Services | Sacramento, CA | Schedule a free consultation and interview!", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Sacramento, CA"] },
       { name: "Sacramento Doula" , credential: "Birth Doula" , practice: "Sacramento Doula" , url: "https://www.seasonsofbirth.com/" , photo: "https://static.wixstatic.com/media/77e704_51c9e6969c9f46c4b7ba2f1bac818a8e~mv2_d_2380_1219_s_2.png/v1/fill/w_76,h_46,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/butterfly.png", description: "We have over 25 years of working with expecting and new families in the Sacramento area. Not to mention 12 children and 18 grandchildren of our own!", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Sacramento, CA"] },
@@ -3135,7 +3270,9 @@ export const cities: Record<string, CityData> = {
     slug: "san-diego-ca" ,
     costLow: 1500,
     costHigh: 4500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Doula Services" , credential: "Birth Doula" , practice: "Doula Services" , url: "https://health.ucsd.edu/care/pregnancy-birth/giving-birth/doula-services/" , photo: "https://health.ucsd.edu/globalassets/usnwr/badge-block/usnwr-2025-badge-obgyn.png", description: "Our doulas attend births with midwives or physicians at both our La Jolla or Hillcrest Labor & Delivery suites and at our La Jolla Birth Center.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["San Diego, CA"] },
       { name: "Birth Doula Training Workshops" , credential: "Birth Doula" , practice: "Birth Doula Training Workshops" , url: "https://www.doulatrainingworkshops.com/" , photo: "https://www.doulatrainingworkshops.com/wp-content/uploads/2024/02/home-header.jpg", description: "During our DONA-approved birth doula training, aspiring doulas learn the skills to provide excellent service to all supported families.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["San Diego, CA"] },
     ],
@@ -3170,7 +3307,9 @@ export const cities: Record<string, CityData> = {
     slug: "fresno-ca" ,
     costLow: 1000,
     costHigh: 3000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "BLACK Doula Training" , credential: "Birth Doula" , practice: "BLACK Doula Training" , url: "https://www.blackwpc.org/black-doula-training" , photo: "https://static.wixstatic.com/media/11062b_456508eb632042e683ed37c0da5f131df000.jpg/v1/fill/w_369,h_266,al_c,q_80,usm_0.33_1.00_0.00,enc_avif,quality_auto/11062b_456508eb632042e683ed37c0da5f131df000.jpg", description: "Doulas trained in our program are equipped to provide culturally responsive non-medical support to pregnant persons and their families during pregnancy, birth, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Fresno, CA"] },
       { name: "Child Birth" , credential: "Birth Doula" , practice: "Child Birth" , url: "https://www.mayabeesbirthingservices.com/" , photo: "https://static.wixstatic.com/media/403f41_2e670fb0bc344adeb90be1eeb1f4d086~mv2.png/v1/fill/w_350,h_343,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Copy%20of%20Maya%20Bees.png", description: "Local Fresno Doula from Maya Bee's Birthing Services takes a holistic approach to pregnancy, birth, and postpartum time.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Fresno, CA"] },
       { name: "Lisa marie Flores" , credential: "Birth Doula" , practice: "Lisa marie Flores" , url: "https://www.bornbir.com/lisa-marie-flores" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/8e5jkx0v2yssuc1xlefbck0c3l9i.jpeg", description: "I'm Lisa Marie and I am a birth, postpartum, and stillbirth doula proudly serving the Central Valley of California and beyond.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Fresno, CA"] },
@@ -3204,7 +3343,13 @@ export const cities: Record<string, CityData> = {
     slug: "los-angeles-ca" ,
     costLow: 1800,
     costHigh: 5500,
-    shelbiServesHere: false,    localDoulas: [
+    heroImage: "/images/los-angeles-ca-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-los-angeles-ca-v2.webp",
+    supportSceneImage: "/images/los-angeles-ca-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Los Angeles: California birth support and doula care",
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Postpartum Doula Services" , credential: "Birth Doula" , practice: "Postpartum Doula Services" , url: "https://motherbabysupport.net/parent-support/postpartum-doula-services/" , photo: "https://motherbabysupport.net/wp-content/uploads/2019/09/cropped-Pregnant-African-queen.jpg", description: "Call us at (626) 388-2191 ext. 1 | Email us at: doula@motherbabysupport.net free and low-cost Doula support in Los Angeles County since 2010.", costRange: "Contact for pricing", acceptingClients: "true", services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Los Angeles, CA"] },
       { name: "SHERRY JONES" , credential: "Birth Doula" , practice: "SHERRY JONES" , url: "https://www.sherrythedoula.com/" , photo: "https://images.squarespace-cdn.com/content/v1/69abb3176635a7730903e7d2/1773086609127-AOUMKSJ4EUI7OB45G12K/unsplash-image-1vnB2l7j3bY.jpg", description: "Holistic birth, postpartum, and recovery support for growing families in Los Angeles. I am here to join you in your birthing journey, building bridges of ...", costRange: "Contact for pricing", acceptingClients: "true", services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Los Angeles, CA"] },
       { name: "Doula Services" , credential: "Birth Doula" , practice: "Doula Services" , url: "https://yourvillagebirth.com/doula-services/" , photo: "/images/provider-norfolk-va-amara-s-childbirth-education-and-doula-services.webp", description: "Amara's Childbirth Education and Doula Services provides birth doula, postpartum, childbirth education to families in the Norfolk, Virginia area.", costRange: "Contact for pricing", acceptingClients: "true", services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Los Angeles, CA"] },
@@ -3213,15 +3358,15 @@ export const cities: Record<string, CityData> = {
     culture: "Los Angeles has one of the largest and most diverse birth communities in the country, spanning from celebrity-endorsed boutique doulas to grassroots organizations providing free culturally centered care in South LA and the Eastside. The city's sheer size creates distinct birth microcultures — Silver Lake and Pasadena families often choose birth centers, while Westside families gravitate toward Cedars-Sinai and UCLA. Organizations like the Los Angeles Doula Project and SQUATS are expanding access for underserved communities." ,
     heroLocalDetail: "Navigating birth logistics in LA means factoring in notorious traffic on the 405, 10, and 101 freeways — a 10-mile hospital trip from Venice to Cedars-Sinai can take 20 minutes or over an hour depending on the time of day. Families in the San Fernando Valley typically deliver at Providence Tarzana or Northridge Hospital, while Eastside families use White Memorial or USC Verdugo Hills, and South LA families rely on Centinela or Martin Luther King Jr. Community Hospital." ,
     hospitalDetails: [
-      { name: "Cedars-Sinai Medical Center" , paragraph: "Cedars-Sinai in Mid-City Los Angeles features a Level IV NICU and is one of the top-ranked hospitals in the nation for obstetric care, with a dedicated maternal-fetal medicine program. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "UCLA Ronald Reagan Medical Center" , paragraph: "UCLA Medical Center in Westwood offers a Level III NICU with world-class maternal-fetal medicine specialists and is a top choice for high-risk pregnancies on LA's Westside." },
-      { name: "Kaiser Permanente West LA Medical Center" , paragraph: "Kaiser West LA in Mid-City provides a Level III NICU with integrated OB-midwifery care and is popular with Kaiser members across central and west Los Angeles." },
-      { name: "Providence Cedars-Sinai Tarzana Medical Center" , paragraph: "Providence Tarzana in the San Fernando Valley offers a Level III NICU and is the primary destination for Valley families needing high-level neonatal care close to home." },
-      { name: "Martin Luther King Jr. Community Hospital" , paragraph: "MLK Community Hospital in Willowbrook serves South LA with a Level III NICU and is a critical access point for families in communities that historically lacked quality maternity care." }
+      { name: "Cedars-Sinai Medical Center" , thumbnail: "/images/cedars-sinai.webp", paragraph: "Cedars-Sinai in Mid-City Los Angeles features a Level IV NICU and is one of the top-ranked hospitals in the nation for obstetric care, with a dedicated maternal-fetal medicine program. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "UCLA Ronald Reagan Medical Center" , thumbnail: "/images/ucla-ronald-reagan.webp", paragraph: "UCLA Medical Center in Westwood offers a Level III NICU with world-class maternal-fetal medicine specialists and is a top choice for high-risk pregnancies on LA's Westside." },
+      { name: "Kaiser Permanente West LA Medical Center" , thumbnail: "/images/kaiser-west-la.webp", paragraph: "Kaiser West LA in Mid-City provides a Level III NICU with integrated OB-midwifery care and is popular with Kaiser members across central and west Los Angeles." },
+      { name: "Providence Cedars-Sinai Tarzana Medical Center" , thumbnail: "/images/providence-tarzana.webp", paragraph: "Providence Tarzana in the San Fernando Valley offers a Level III NICU and is the primary destination for Valley families needing high-level neonatal care close to home." },
+      { name: "Martin Luther King Jr. Community Hospital" , thumbnail: "/images/mlk-community.webp", paragraph: "MLK Community Hospital in Willowbrook serves South LA with a Level III NICU and is a critical access point for families in communities that historically lacked quality maternity care." }
     ],
     birthCenterDetails: [
-      { name: "The Birth Sanctuary" , paragraph: "The Birth Sanctuary in Pasadena is a freestanding birth center offering midwife-led births, water birth, and holistic prenatal care with transfer agreements to nearby hospitals." },
-      { name: "Gracefull Birth Center" , paragraph: "Gracefull Birth Center in Silver Lake provides a warm, community-rooted out-of-hospital birth experience with certified midwives, water birth tubs, and a strong commitment to equitable care." }
+      { name: "The Birth Sanctuary" , thumbnail: "/images/birth-sanctuary-la.webp", paragraph: "The Birth Sanctuary in Pasadena is a freestanding birth center offering midwife-led births, water birth, and holistic prenatal care with transfer agreements to nearby hospitals." },
+      { name: "Gracefull Birth Center" , thumbnail: "/images/gracefull-birth-center.webp", paragraph: "Gracefull Birth Center in Silver Lake provides a warm, community-rooted out-of-hospital birth experience with certified midwives, water birth tubs, and a strong commitment to equitable care." }
     ],
     medicaidNote: "California Medi-Cal covers doula services under SB-509, with approximately $1,587 reimbursement for the birth package. Doulas must enroll through the PAVE portal. LA County Medi-Cal managed care plans include L.A. Care, Health Net, and Molina Healthcare — contact your plan for doula referral lists." ,
     insuranceNote: "Under California SB 332, commercial health plans must cover doula services. In LA, many doulas are familiar with billing Blue Shield of CA, Anthem, and Cigna, but always confirm your plan's specific authorization requirements." ,
@@ -3242,7 +3387,9 @@ export const cities: Record<string, CityData> = {
     slug: "portland-or" ,
     costLow: 1500,
     costHigh: 4500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Wildwood Birth" , credential: "Birth Doula" , practice: "Wildwood Birth" , url: "https://www.wildwoodbirthpdx.com/" , photo: "https://images.squarespace-cdn.com/content/v1/55bd3986e4b0d9f007aefe2d/e8b74fe6-adee-47e0-9724-f4e9a39d8c86/image-asset2.jpg" , description: "Wildwood Birth's experienced Portland doula team offers birth doula support, creative photography & postpartum doula services in Portland, Oregon." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Portland, OR"] },
       { name: "Portland Doulas" , credential: "Birth Doula" , practice: "Portland Doulas" , url: "https://birthfirstdoulas.com/" , photo: "https://birthfirstdoulas.com/wp-content/uploads/2019/10/portland-doula-pregnant-woman.jpg" , description: "Our Birth First Portland Doulas offer birth doula support, postpartum doula care, and evidence-based childbirth classes in Portland, Oregon." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Portland, OR"] },
       { name: "Portland Doulas" , credential: "Birth Doula" , practice: "Portland Doulas" , url: "https://lionandoakphotos.com/portland-doulas-the-ultimate-guide/" , photo: "https://birthfirstdoulas.com/wp-content/uploads/2019/10/portland-doula-pregnant-woman.jpg" , description: "Our Birth First Portland Doulas offer birth doula support, postpartum doula care, and evidence-based childbirth classes in Portland, Oregon." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Portland, OR"] },
@@ -3276,7 +3423,9 @@ export const cities: Record<string, CityData> = {
     slug: "eugene-or" ,
     costLow: 1000,
     costHigh: 3000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Certified Birth Doula Eugene Oregon" , credential: "Birth Doula" , practice: "Certified Birth Doula Eugene Oregon" , url: "https://insightdoula.com/" , photo: "https://insightdoula.com/wp-content/uploads/2020/08/Stork.png", description: "InsightDoula serves as a certified birth doula Eugene Oregon. I provide labor support for expecting mothers who want a successful birth.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Eugene, OR"] },
       { name: "Avocado Doulas" , credential: "Birth Doula" , practice: "Avocado Doulas" , url: "https://avocadodoulas.com/" , photo: "https://avocadodoulas.com/wp-content/uploads/2022/06/AvoDou-home-hero-train-4.jpg", description: "We provide <b>doula</b> services from conception to early parenting. Address anxiety, relieve worry, and embrace balance. All-natural, drug-free deliveries", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Eugene, OR"] },
       { name: "Jasmine Rose Doula Services" , credential: "Birth Doula" , practice: "Jasmine Rose Doula Services" , url: "https://www.facebook.com/jasminerosedoula/" , photo: "" , description: "I am a DTi birth and postpartum doula serving Eugene and the surrounding areas. I also have years of experience teaching prenatal yoga, and I am a certified ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Eugene, OR"] },
@@ -3312,7 +3461,13 @@ export const cities: Record<string, CityData> = {
     slug: "las-vegas-nv" ,
     costLow: 1200,
     costHigh: 3500,
-    shelbiServesHere: false,    localDoulas: [
+    heroImage: "/images/phoenix-az-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-phoenix-az.webp",
+    supportSceneImage: "/images/phoenix-az-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Phoenix: Arizona birth support and doula care",
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Birth Doula Services" , credential: "Birth Doula" , practice: "Birth Doula Services" , url: "https://www.kathleensdoulaservices.com/" , photo: "https://static.wixstatic.com/media/8fc030_1d4ce8cbd9584ba0bab77373cd3736fe~mv2_d_2400_3600_s_4_2.jpg/v1/crop/x_0,y_778,w_2400,h_1129/fill/w_1060,h_500,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Well%20Rounded%20Momma%20Doula.jpg", description: "Las Vegas Doula Supporting Women and Families through Pregnancy, Birth and Postpartum in the greater Las Vegas area. services personalized for each birthing ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Las Vegas, NV"] },
       { name: "Become a Certified Doula" , credential: "Birth Doula" , practice: "Become a Certified Doula" , url: "https://bestdoulatraining.com/doula-training-dates/las-vegas-doula-training" , photo: "" , description: "Join us online from ANWHERE! This will be a group of doulas from all over joining together to become certified doulas. Birth Doula Investment: $649.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Las Vegas, NV"] },
     ],
@@ -3346,7 +3501,9 @@ export const cities: Record<string, CityData> = {
     slug: "minneapolis-mn" ,
     costLow: 1500,
     costHigh: 4000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Top" , credential: "Birth Doula" , practice: "Top" , url: "https://midwestdoulas.com/" , photo: "https://midwestdoulas.com/wp-content/uploads/2019/01/1600x900-Meet-the-Doulas-Header.jpg", description: "Top-rated doula services in Minnesota, offering birth support, childbirth education, craniosacral therapy, and family support.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Minneapolis, MN"] },
       { name: "Twin Cities Doulas" , credential: "Birth Doula" , practice: "Twin Cities Doulas" , url: "https://www.everyday-miracles.org/twin-cities-doulas-1" , photo: "https://images.squarespace-cdn.com/content/v1/577d7562ff7c5018d6ea200a/1480445852617-BDEG8ZA3RJH4SBKSQJ7T/white.png", description: "My name is Brianna, I am a COPE trained birth Doula located in Minneapolis MN. ... I am a birth doula, childbirth and breastfeeding educator located in the twin ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Minneapolis, MN"] },
       { name: "Birth Doulas for the Twin Cities" , credential: "Birth Doula" , practice: "Birth Doulas for the Twin Cities" , url: "https://blooma.com/doulas/birth-support" , photo: "https://blooma.com/wp-content/uploads/2024/01/BDS_Professional_Experienced_Doulas-500x500.jpg", description: "Get top-notch pregnancy and birth support from our certified doulas. Offering emotional, informational and physical care for you and your family.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Minneapolis, MN"] },
@@ -3383,7 +3540,13 @@ export const cities: Record<string, CityData> = {
     slug: "st-paul-mn" ,
     costLow: 1200,
     costHigh: 3500,
-    shelbiServesHere: false,    localDoulas: [
+    heroImage: "/images/nashville-tn-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-nashville-tn.webp",
+    supportSceneImage: "/images/nashville-tn-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Nashville: Tennessee birth support and doula care",
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Top" , credential: "Birth Doula" , practice: "Top" , url: "https://midwestdoulas.com/" , photo: "https://midwestdoulas.com/wp-content/uploads/2019/01/1600x900-Meet-the-Doulas-Header.jpg", description: "Top-rated doula services in Minnesota, offering birth support, childbirth education, craniosacral therapy, and family support.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["St. Paul, MN"] },
       { name: "Birth Doulas for the Twin Cities" , credential: "Birth Doula" , practice: "Birth Doulas for the Twin Cities" , url: "https://blooma.com/doulas/birth-support" , photo: "https://blooma.com/wp-content/uploads/2024/01/BDS_Professional_Experienced_Doulas-500x500.jpg", description: "Get top-notch pregnancy and birth support from our certified doulas. Offering emotional, informational and physical care for you and your family.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["St. Paul, MN"] },
       { name: "Twin Cities Doulas" , credential: "Birth Doula" , practice: "Twin Cities Doulas" , url: "https://www.everyday-miracles.org/twin-cities-doulas-1" , photo: "https://images.squarespace-cdn.com/content/v1/577d7562ff7c5018d6ea200a/1480445852617-BDEG8ZA3RJH4SBKSQJ7T/white.png", description: "Scroll through to learn about all of our BIRTH doulas that serve clients in the Twin Cities/Metro area. Complete our request form.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["St. Paul, MN"] },
@@ -3418,7 +3581,13 @@ export const cities: Record<string, CityData> = {
     slug: "phoenix-az" ,
     costLow: 1200,
     costHigh: 3500,
-    shelbiServesHere: false,    localDoulas: [
+    heroImage: "/images/phoenix-az-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-phoenix-az.webp",
+    supportSceneImage: "/images/phoenix-az-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Phoenix: Arizona birth support and doula care",
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Cherry Blossom Doula" , credential: "Birth Doula" , practice: "Cherry Blossom Doula" , url: "https://cbdoulaservices.com/" , photo: "https://static.showit.co/1600/3pjrLPSkzKwRVUystw30wA/114699/unadjustednonraw_thumb_4096.jpg", description: "We are a collective of doulas in Phoenix, AZ passionate about providing families resources for evidence based care with holistic minded birth philosophies.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Phoenix, AZ"] },
       { name: "birth doulas in Arizona" , credential: "Birth Doula" , practice: "birth doulas in Arizona" , url: "https://doulamatch.net/list/birth/az" , photo: "https://doulamatch.net/doulafiles/28796/28796_thumb.jpg", description: "52 birth doulas in Arizona. · Janelle Moore · Victoria Calleja · Grace Lape CD(DONA) · Missy Waite · Harmony Zhang · Noleen Thurman CD(DONA) & Birth Photographer.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Phoenix, AZ"] },
       { name: "Birth Doula Support" , credential: "Birth Doula" , practice: "Birth Doula Support" , url: "https://www.doulabygrace.com/" , photo: "https://static.wixstatic.com/media/40898a93cfff4578b1779073137eb1b4.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/40898a93cfff4578b1779073137eb1b4.png", description: "By Grace is a certified <b>birth doula</b> providing experienced and non-judgmental support during pregnancy, doulabygrace@gmail.com 480.276.4146 Doula", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Phoenix, AZ"] },
@@ -3428,13 +3597,13 @@ export const cities: Record<string, CityData> = {
     culture: "Phoenix's birth culture is shaped by its sprawling valley geography and a growing community of Latinx, Indigenous, and Black birth workers advocating for culturally congruent care in a state where out-of-hospital birth options are expanding but remain fewer per capita than in progressive northern states. The Valley's warm-weather lifestyle and large transplanted population create a diverse client base seeking everything from traditional hospital births to home births guided by partera traditions." ,
     heroLocalDetail: "Phoenix families navigate a vast metro spread along the Loop 101 and I-10, with birth resources concentrated in the Central Phoenix and Scottsdale medical districts near Camelback Road and Indian School Road. The Camelback Mountain silhouette marks the geographic center of the Valley's birth corridor, with hospitals clustering along Central Avenue north of downtown." ,
     hospitalDetails: [
-      { name: "Banner University Medical Center Phoenix" , paragraph: "Banner University Medical Center Phoenix is the Valley's academic medical center with a Level IV NICU — the highest available — as well as maternal-fetal medicine specialists and a high-risk pregnancy program. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to coordinate your care team here." },
-      { name: "St. Joseph's Hospital and Medical Center (Dignity Health)" , paragraph: "St. Joseph's in central Phoenix features a Level III NICU and one of the busiest OB departments in Arizona, with a long-standing midwifery collaboration and a reputation for high-volume, high-quality birth care." },
-      { name: "Phoenix Children's Hospital" , paragraph: "Phoenix Children's Hospital operates the state's largest Level IV NICU and serves as the regional referral center for the most critically ill newborns, working in partnership with nearby maternal-fetal medicine programs." },
-      { name: "HonorHealth Scottsdale Shea Medical Center" , paragraph: "HonorHealth Shea in Scottsdale offers a Level III NICU with a family birth center known for private suites, comfortable amenities, and strong lactation support in the northeast Valley." }
+      { name: "Banner University Medical Center Phoenix" , thumbnail: "/images/banner-phoenix.webp", paragraph: "Banner University Medical Center Phoenix is the Valley's academic medical center with a Level IV NICU — the highest available — as well as maternal-fetal medicine specialists and a high-risk pregnancy program. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to coordinate your care team here." },
+      { name: "St. Joseph's Hospital and Medical Center (Dignity Health)" , thumbnail: "/images/st-josephs-phoenix.webp", paragraph: "St. Joseph's in central Phoenix features a Level III NICU and one of the busiest OB departments in Arizona, with a long-standing midwifery collaboration and a reputation for high-volume, high-quality birth care." },
+      { name: "Phoenix Children's Hospital" , thumbnail: "/images/phoenix-childrens.webp", paragraph: "Phoenix Children's Hospital operates the state's largest Level IV NICU and serves as the regional referral center for the most critically ill newborns, working in partnership with nearby maternal-fetal medicine programs." },
+      { name: "HonorHealth Scottsdale Shea Medical Center" , thumbnail: "/images/honorhealth-scottsdale.webp", paragraph: "HonorHealth Shea in Scottsdale offers a Level III NICU with a family birth center known for private suites, comfortable amenities, and strong lactation support in the northeast Valley." }
     ],
     birthCenterDetails: [
-      { name: "Natural Birth Center & Women's Wellness" , paragraph: "The Natural Birth Center & Women's Wellness in Mesa is one of the few freestanding birth centers in the Phoenix metro area, offering midwifery-led birth, water birth, and holistic prenatal care." }
+      { name: "Natural Birth Center & Women's Wellness" , thumbnail: "/images/natural-birth-center-phoenix.webp", paragraph: "The Natural Birth Center & Women's Wellness in Mesa is one of the few freestanding birth centers in the Phoenix metro area, offering midwifery-led birth, water birth, and holistic prenatal care." }
     ],
     medicaidNote: "Arizona does not currently cover doula services through its Medicaid program (AHCCCS) as of 2025. While advocacy efforts have pushed for doula reimbursement, AHCCCS has not yet implemented a doula benefit. Arizona families on Medicaid must pay out of pocket for doula support or seek volunteer/sliding-scale doulas." ,
     insuranceNote: "Arizona private insurers are not required to cover doula services, though some plans offer partial reimbursement or flex-spending eligibility. Arizona does mandate coverage for licensed midwives and birth center births under certain plans, but coverage varies widely — verify with your insurer directly." ,
@@ -3455,7 +3624,13 @@ export const cities: Record<string, CityData> = {
     slug: "chicago-il" ,
     costLow: 1500,
     costHigh: 5000,
-    shelbiServesHere: false,    localDoulas: [
+    heroImage: "/images/chicago-il-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-chicago-il-v2.webp",
+    supportSceneImage: "/images/chicago-il-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Chicago: Illinois birth support and doula care",
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Chicago Doula Agency" , credential: "Birth Doula" , practice: "Chicago Doula Agency" , url: "https://chicagofamilydoulas.com/" , photo: "https://chicagofamilydoulas.com/wp-content/uploads/2026/05/newborn-care-postpartum-doula-chicago.webp", description: "Our birth doulas offer support in all area hospitals and birth centers. We support with VBACS, unmedicated births and medicated births. We support families with ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Chicago, IL"] },
       { name: "Doula Resources" , credential: "Birth Doula" , practice: "Doula Resources" , url: "https://www.birthcenterofchicago.com/doula-library" , photo: "https://images.squarespace-cdn.com/content/v1/5f60c7c591ef002f2a71c842/e973cde2-deb2-4170-acdb-a87164368979/birth+tub.png", description: "doulas can help support you and your partner in labor, birth and the postpartum period? ula@gmail.com 312-725-3313 doulas serving chicagoland, 773-232-2299 ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Chicago, IL"] },
       { name: "Chicago Volunteer Doulas" , credential: "Birth Doula" , practice: "Chicago Volunteer Doulas" , url: "https://www.thecvd.org/" , photo: "https://static.wixstatic.com/media/888992_70b43498934a4b95a30daf7b8fad038b~mv2.png/v1/fill/w_636,h_320,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/888992_70b43498934a4b95a30daf7b8fad038b~mv2.png", description: "Chicago Volunteer Doulas provides professional birth and postpartum doula support in Chicago, offering skilled, culturally responsive care for every family.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Chicago, IL"] },
@@ -3463,13 +3638,13 @@ export const cities: Record<string, CityData> = {
     culture: "Chicago's birth culture is shaped by a strong network of Black and Latina doulas working across the South and West Sides, with a growing push for birth equity amid well-documented maternal health disparities. The city blends world-class academic medical centers with a vibrant community birth worker scene, and advocacy groups were instrumental in pushing for Illinois Medicaid doula coverage." ,
     heroLocalDetail: "From the sweeping views along Lake Shore Drive to the historic brownstones of Hyde Park, Chicago families navigate birth across a sprawling mosaic of neighborhoods. The Illinois Medical District near Polk Street houses some of the city's largest labor and delivery units, while community birth workers build connections from Bronzeville to Logan Square." ,
     hospitalDetails: [
-      { name: "Northwestern Memorial Hospital — Prentice Women's Hospital" , paragraph: "Prentice Women's Hospital on East Huron Street in Streeterville is one of the busiest birthing hospitals in the Midwest with a Level III NICU and over 12,000 births annually. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "Rush University Medical Center" , paragraph: "Rush University Medical Center near Harrison Street in the Illinois Medical District features a Level III NICU and a midwifery practice, offering a blend of medical and supportive birth options." },
-      { name: "University of Chicago Medical Center" , paragraph: "Located in Hyde Park, the University of Chicago Medical Center operates a Level III NICU and serves as a critical resource for South Side families with a strong maternal-fetal medicine program." },
-      { name: "Advocate Illinois Masonic Medical Center" , paragraph: "Advocate Illinois Masonic in Lakeview on Wellington Avenue has a Level III NICU and is known for its midwifery-friendly approach within a hospital setting." }
+      { name: "Northwestern Memorial Hospital — Prentice Women's Hospital" , thumbnail: "/images/northwestern-prentice.webp" , paragraph: "Prentice Women's Hospital on East Huron Street in Streeterville is one of the busiest birthing hospitals in the Midwest with a Level III NICU and over 12,000 births annually. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Rush University Medical Center" , thumbnail: "/images/rush.webp", paragraph: "Rush University Medical Center near Harrison Street in the Illinois Medical District features a Level III NICU and a midwifery practice, offering a blend of medical and supportive birth options." },
+      { name: "University of Chicago Medical Center" , thumbnail: "/images/uchicago.webp", paragraph: "Located in Hyde Park, the University of Chicago Medical Center operates a Level III NICU and serves as a critical resource for South Side families with a strong maternal-fetal medicine program." },
+      { name: "Advocate Illinois Masonic Medical Center" , thumbnail: "/images/advocate-illinois-masonic.webp", paragraph: "Advocate Illinois Masonic in Lakeview on Wellington Avenue has a Level III NICU and is known for its midwifery-friendly approach within a hospital setting." }
     ],
     birthCenterDetails: [
-      { name: "The Birth Center of Chicago" , paragraph: "The Birth Center of Chicago is a freestanding birth center offering midwifery-led, low-intervention births in a home-like setting for families seeking an alternative to hospital delivery." }
+      { name: "The Birth Center of Chicago" , thumbnail: "/images/birth-center-chicago.webp", paragraph: "The Birth Center of Chicago is a freestanding birth center offering midwifery-led, low-intervention births in a home-like setting for families seeking an alternative to hospital delivery." }
     ],
     medicaidNote: "Illinois Medicaid covers doula services starting January 2025 under SB334 (signed January 2024), reimbursing up to $1,500 per pregnancy for prenatal, labor, and postpartum support visits." ,
     insuranceNote: "Illinois law requires Medicaid managed care plans to cover doula services. Private insurers vary — ask your plan if they reimburse doula care, and request a superbill from your doula for out-of-network submission." ,
@@ -3490,7 +3665,9 @@ export const cities: Record<string, CityData> = {
     slug: "detroit-mi" ,
     costLow: 800,
     costHigh: 3000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Doula Services" , credential: "Birth Doula" , practice: "Doula Services" , url: "https://www.dmc.org/services/obstetrics/doula-services" , photo: "https://www.dmc.org/images/dmclibraries/default-album/doulaobgyn_02.jpg", description: "Explore doula services for guidance and support during pregnancy and labor. Learn how doulas assist and consider adding support to your plan.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Detroit, MI"] },
       { name: "In" , credential: "Birth Doula" , practice: "In" , url: "https://smcdoulas.com/courses/detroit/" , photo: "https://smcdoulas.com/wp-content/uploads/2023/05/December-online-doula-training.png", description: "SMC In-Person Full Circle Doula Birth Companion Training in Detroit, Michigan from July 25 - 28, 2024. A four 4-day (32 hours) training for dual certification ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Detroit, MI"] },
       { name: "Postpartum Doulas" , credential: "Birth Doula" , practice: "Postpartum Doulas" , url: "https://michiganfamilydoulas.com/" , photo: "https://michiganfamilydoulas.com/wp-content/uploads/2025/10/Untitled-design-2.png", description: "Michigan Family Doulas is a certified Birth Doula, Postpartum Doula Agency. We provide the skilled compassionate care your new family needs.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Detroit, MI"] },
@@ -3525,7 +3702,9 @@ export const cities: Record<string, CityData> = {
     slug: "new-york-ny" ,
     costLow: 1500,
     costHigh: 5000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Doula Care" , credential: "Birth Doula" , practice: "Doula Care" , url: "https://www.nyc.gov/site/doh/health/health-topics/doula-care.page" , photo: "https://www.nyc.gov/assets/home/images/global/nyc_white.png", description: "Doulas provide non-medical support to pregnant people and their families before, during and after childbirth. 917-751-6579 Doula Care 212-749-6613. Birth ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["New York, NY"] },
       { name: "NYC Birth Village Doulas" , credential: "Birth Doula" , practice: "NYC Birth Village Doulas" , url: "https://www.nycbirthvillage.com/" , photo: "https://images.squarespace-cdn.com/content/v1/6393858611bed4742bbf03ea/8df30965-6fbc-46d3-9a3a-8f54ef24a9a9/Home+Banner+%282%29.png", description: "Hand-picked, fully vetted, warm, hands-on and evidence-based doulas, ready to support you! Prepare for birth, lactation, and infant care with classes", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["New York, NY"] },
       { name: "birth doulas in New York" , credential: "Birth Doula" , practice: "birth doulas in New York" , url: "https://doulamatch.net/list/birth/ny" , photo: "https://doulamatch.net/doulafiles/36564/36564_thumb.jpg", description: "236 birth doulas in New York. Birth Fee: $2750 to $3500 Postpartum Rate: $70 to $85 ・ 3 Years on DoulaMatch ・ $1000 to $2200 Postpartum Rate: $45 to $65 ・ $ ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["New York, NY"] },
@@ -3561,7 +3740,9 @@ export const cities: Record<string, CityData> = {
     slug: "newark-nj" ,
     costLow: 1200,
     costHigh: 4000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Doula Policy" , credential: "Birth Doula" , practice: "Doula Policy" , url: "https://www.rwjbh.org/treatment-care/maternity/doulas/" , photo: "https://www.rwjbh.org/images/services/maternity/doula-with-pregnant-woman-yoga.jpg", description: "New Jersey law provides patients with the right to choose to use a doula for labor and postpartum support, and all doula services are to be contracted ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Newark, NJ"] },
       { name: "The Nesting Place" , credential: "Birth Doula" , practice: "The Nesting Place" , url: "https://www.thenestingplacenj.com/" , photo: "https://static.wixstatic.com/media/c97f25_21e674a6c840470ba02e62fefc840f37~mv2.jpg/v1/fill/w_873,h_2072,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c97f25_21e674a6c840470ba02e62fefc840f37~mv2.jpg", description: "The Nesting Place is a New Jersey–based perinatal support practice offering birth doula support, postpartum doula care, overnight newborn care, lactation ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Newark, NJ"] },
     ],
@@ -3629,7 +3810,13 @@ export const cities: Record<string, CityData> = {
     slug: "nashville-tn" ,
     costLow: 1200,
     costHigh: 3500,
-    shelbiServesHere: false,    localDoulas: [
+    heroImage: "/images/nashville-tn-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-nashville-tn.webp",
+    supportSceneImage: "/images/nashville-tn-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Nashville: Tennessee birth support and doula care",
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "East Nashville Doula" , credential: "Birth Doula" , practice: "East Nashville Doula" , url: "https://www.eastnashvilledoula.com/" , photo: "https://images.squarespace-cdn.com/content/v1/661e74e9da6e5b03514a25ab/e07d4857-c0e5-4adf-a458-f599e024b702/EastNashvilleDoulas-2024-KaileeRichesPhotography-72.jpg", description: "We connect families to professional birth doulas & postpartum doulas, and teach group & private childbirth, newborn care & lactation classes. As Nashville's ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Nashville, TN"] },
       { name: "Best Nashville Doula Service" , credential: "Birth Doula" , practice: "Best Nashville Doula Service" , url: "https://nashvilledoulaservices.com/" , photo: "https://images.squarespace-cdn.com/content/v1/5d6fcd39787fd700010c35d3/84026597-349f-4016-828a-8dc98de31175/Untitled+design.png", description: "Nashville Doula Services helps you find the best doula for you in the Nashville and surrounding areas like Brentwood, Franklin and Murfreesboro.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Nashville, TN"] },
       { name: "Blissful Birthing TN" , credential: "Birth Doula" , practice: "Blissful Birthing TN" , url: "https://www.blissfulbirthingtn.com/" , photo: "https://static.wixstatic.com/media/f3cbcb2359704ab48f17b6d0adfb43b1.jpg/v1/fill/w_38,h_2016,al_c,q_80,enc_avif,quality_auto/f3cbcb2359704ab48f17b6d0adfb43b1.jpg", description: "Blissful Birthing TN is a Christian doula agency in Franklin, TN that strives to strengthen marriages/ families, educate to empower, and nurture you to find ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Nashville, TN"] },
@@ -3640,12 +3827,12 @@ export const cities: Record<string, CityData> = {
     culture: "Nashville's birth culture is evolving alongside its booming population, with a growing community of doulas, midwives, and birth advocates working to address significant racial disparities in maternal health outcomes across Middle Tennessee. While the city is home to world-class medical institutions, grassroots organizations are pushing for more culturally centered, community-based birth support." ,
     heroLocalDetail: "From the historic streets of North Nashville near Jefferson Street to the bustling Medical District along 21st Avenue South and the 12 South neighborhood popular with young families, Nashville blends Southern heritage with rapid growth. Vanderbilt University Medical Center anchors the West End healthcare corridor, while community health centers serve neighborhoods across Davidson County." ,
     hospitalDetails: [
-      { name: "Vanderbilt University Medical Center" , paragraph: "Vanderbilt University Medical Center is a nationally ranked academic hospital with a Level IV NICU — the highest level of neonatal care — providing comprehensive maternal-fetal medicine and specialized high-risk obstetric services. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "Ascension Saint Thomas Midtown Hospital" , paragraph: "Ascension Saint Thomas Midtown Hospital is one of Nashville's busiest maternity hospitals with a Level III NICU, delivering thousands of babies annually and serving as a key provider in the Middle Tennessee region." },
-      { name: "TriStar Centennial Medical Center" , paragraph: "TriStar Centennial Medical Center offers labor and delivery services with a Level III NICU and serves families across the Nashville metro area with a full range of obstetric and neonatal care." }
+      { name: "Vanderbilt University Medical Center" , thumbnail: "/images/vanderbilt.webp", paragraph: "Vanderbilt University Medical Center is a nationally ranked academic hospital with a Level IV NICU — the highest level of neonatal care — providing comprehensive maternal-fetal medicine and specialized high-risk obstetric services. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Ascension Saint Thomas Midtown Hospital" , thumbnail: "/images/ascension-st-thomas.webp", paragraph: "Ascension Saint Thomas Midtown Hospital is one of Nashville's busiest maternity hospitals with a Level III NICU, delivering thousands of babies annually and serving as a key provider in the Middle Tennessee region." },
+      { name: "TriStar Centennial Medical Center" , thumbnail: "/images/tristar-centennial.webp", paragraph: "TriStar Centennial Medical Center offers labor and delivery services with a Level III NICU and serves families across the Nashville metro area with a full range of obstetric and neonatal care." }
     ],
     birthCenterDetails: [
-      { name: "No birth centers in Nashville" , paragraph: "There are currently no licensed freestanding birth centers operating within Nashville. Tennessee's regulatory landscape for birth centers has been a barrier. Families seeking out-of-hospital birth typically work with home birth midwives serving the Middle Tennessee area." }
+      { name: "No birth centers in Nashville" , thumbnail: "/images/no-birth-center.webp", paragraph: "There are currently no licensed freestanding birth centers operating within Nashville. Tennessee's regulatory landscape for birth centers has been a barrier. Families seeking out-of-hospital birth typically work with home birth midwives serving the Middle Tennessee area." }
     ],
     medicaidNote: "Tennessee does NOT cover doula services through Medicaid (TennCare) as of 2025. While neighboring states have implemented Medicaid doula coverage, Tennessee has not yet enacted similar legislation, leaving low-income families to seek sliding-scale or volunteer doula options." ,
     insuranceNote: "Private insurance doula coverage in Tennessee varies significantly by plan and insurer. Tennessee has not mandated doula coverage for private plans. Contact your insurance provider directly to ask about reimbursement for doula services or out-of-network benefits." ,
@@ -3666,7 +3853,13 @@ export const cities: Record<string, CityData> = {
     slug: "philadelphia-pa" ,
     costLow: 800,
     costHigh: 2500,
-    shelbiServesHere: false,    localDoulas: [
+    heroImage: "/images/philadelphia-pa-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-philadelphia-pa.webp",
+    supportSceneImage: "/images/philadelphia-pa-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Philadelphia: Pennsylvania birth support and doula care",
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Doulas of Philadelphia" , credential: "Birth Doula" , practice: "Doulas of Philadelphia" , url: "https://www.doulasofphiladelphia.com/" , photo: "https://images.squarespace-cdn.com/content/v1/57c1ad2d9f74564329737d56/4589f590-a9ab-4cdf-af09-238cd3e76f86/DoP_and_HFA.png", description: "Expert postpartum and infant care in Greater Philadelphia. We serve Philadelphia, PA and surrounding areas including Main Line, Delaware County, Montgomery ...", costRange: "Contact for pricing", acceptingClients: "true", services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Philadelphia, PA"] },
       { name: "Philly Doula Co" , credential: "Birth Doula" , practice: "Philly Doula Co" , url: "http://www.phillydoulacoop.com/" , photo: "http://www.phillydoulacoop.com/uploads/6/5/0/3/65039379/7362495.png", description: "​The Philly Doula Co-Op is a network of birth professionals who are committed to providing quality services to support optimal pregnancy, labor, delivery ...", costRange: "Contact for pricing", acceptingClients: "true", services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Philadelphia, PA"] },
       { name: "Community Doula Support Program" , credential: "Birth Doula" , practice: "Community Doula Support Program" , url: "https://www.phillylovesfamilies.com/doula-support" , photo: "https://cdn.prod.website-files.com/61f041dfd2a7e61a25f59209/6267094ce1e721e22cc36e11_img--doula--hero%402x.jpg", description: "Offering individualized physical, emotional, and educational support throughout pregnancy, birth, and up to 12 months postpartum.", costRange: "Contact for pricing", acceptingClients: "true", services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Philadelphia, PA"] },
@@ -3675,14 +3868,14 @@ export const cities: Record<string, CityData> = {
     culture: "Philadelphia has a rich, community-rooted doula culture shaped by powerful Black birthworkers and organizations like the Philadelphia Doula Network who have been championing birth justice for decades. You'll find doulas here who truly understand the city's racial disparities in maternal health and fight alongside you for better care. Whether you're delivering at a major medical center or exploring home birth, Philly doulas bring both fierce advocacy and deep, sister-level support." ,
     heroLocalDetail: "At 38 weeks pregnant, you're probably mapping the quickest route from your rowhome in West Philly or Fishtown to your delivery hospital — dodging construction on Broad Street and praying the Vine Street Expressway isn't a parking lot. Spruce Street Harbor Park is a peaceful spot for those final walking-the-baby-out strolls along the Delaware River waterfront, and the Schuylkill River Trail behind the Philadelphia Museum of Art gives you a breezier path when summer humidity hits hard." ,
     hospitalDetails: [
-      { name: "Hospital of the University of Pennsylvania" , paragraph: "HUP is a Level IV NICU hospital and Philadelphia's top-tier academic medical center, offering 24/7 maternal-fetal medicine specialists and a state-of-the-art labor and delivery unit. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "Thomas Jefferson University Hospital" , paragraph: "Jefferson holds a Level III NICU designation with a dedicated high-risk pregnancy program and private labor suites on their Center City campus. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "Temple University Hospital" , paragraph: "Temple is a Level III NICU facility known for its strong community presence in North Philadelphia and comprehensive obstetric care including midwifery services. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "Einstein Medical Center Philadelphia" , paragraph: "Einstein carries a Level III NICU and serves as a cornerstone maternity hospital in North Philly with a long-standing midwifery program and robust lactation support. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "Pennsylvania Hospital" , paragraph: "Pennsylvania Hospital — the nation's first hospital — features a Level III NICU and is beloved for its historic maternity unit with private rooms on 8th and Spruce Streets. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
+      { name: "Hospital of the University of Pennsylvania" , thumbnail: "/images/hup.webp", paragraph: "HUP is a Level IV NICU hospital and Philadelphia's top-tier academic medical center, offering 24/7 maternal-fetal medicine specialists and a state-of-the-art labor and delivery unit. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Thomas Jefferson University Hospital" , thumbnail: "/images/jefferson.webp", paragraph: "Jefferson holds a Level III NICU designation with a dedicated high-risk pregnancy program and private labor suites on their Center City campus. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Temple University Hospital" , thumbnail: "/images/temple.webp", paragraph: "Temple is a Level III NICU facility known for its strong community presence in North Philadelphia and comprehensive obstetric care including midwifery services. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Einstein Medical Center Philadelphia" , thumbnail: "/images/einstein.webp", paragraph: "Einstein carries a Level III NICU and serves as a cornerstone maternity hospital in North Philly with a long-standing midwifery program and robust lactation support. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Pennsylvania Hospital" , thumbnail: "/images/penn-hospital.webp", paragraph: "Pennsylvania Hospital — the nation's first hospital — features a Level III NICU and is beloved for its historic maternity unit with private rooms on 8th and Spruce Streets. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
     ],
     birthCenterDetails: [
-      { name: "Philadelphia Birth Center" , paragraph: "The Philadelphia Birth Center in the Germantown section offers a warm, home-like setting with certified nurse-midwives for low-risk pregnancies seeking an out-of-hospital birth experience. It's one of Philly's few freestanding birth centers, and they welcome doula support throughout your labor." }
+      { name: "Philadelphia Birth Center" , thumbnail: "/images/philadelphia-birth-center.webp", paragraph: "The Philadelphia Birth Center in the Germantown section offers a warm, home-like setting with certified nurse-midwives for low-risk pregnancies seeking an out-of-hospital birth experience. It's one of Philly's few freestanding birth centers, and they welcome doula support throughout your labor." }
     ],
     medicaidNote: "Pennsylvania Medicaid covers doula services as of 2024, with reimbursement of up to $1,250 per pregnancy through the PA Doula Program — covering prenatal visits, labor support, and postpartum visits combined." ,
     insuranceNote: "Pennsylvania private insurers vary widely on doula coverage — Aetna and UHC may partially reimburse with a superbill, while Cigna and Blue Cross of Pennsylvania often require pre-authorization. Always request a superbill from your doula and submit it with CPT code S9443 for the best chance of reimbursement." ,
@@ -3703,7 +3896,9 @@ export const cities: Record<string, CityData> = {
     slug: "pittsburgh-pa" ,
     costLow: 700,
     costHigh: 2000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Birth Doulas of Pittsburgh" , credential: "Birth Doula" , practice: "Birth Doulas of Pittsburgh" , url: "https://www.birthdoulasofpittsburgh.com/" , photo: "https://www.birthdoulasofpittsburgh.com/uploads/3/1/4/3/31431189/evaluation-1_orig.png", description: "Birth Doulas of Pittsburgh has been providing DONA certified, supportive birth doulas to women and their partners in hospitals, birth centers and at home ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pittsburgh, PA"] },
       { name: "Golden Lotus Doula Services" , credential: "Birth Doula" , practice: "Golden Lotus Doula Services" , url: "https://www.goldenlotusdoulaservices.com/" , photo: "https://images.squarespace-cdn.com/content/v1/5924b3b11b10e3f0ccdcf457/cf311393-c9ad-43d3-a153-e56445464706/unnamed.png", description: "Serving Pittsburgh Families. Trained and Certified. Full-time. We are allies in your birth and postpartum experience. We support families of all kinds, LGBTQ, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pittsburgh, PA"] },
       { name: "Birth Circle Doulas" , credential: "Birth Doula" , practice: "Birth Circle Doulas" , url: "https://providers.upmc.com/provider/birth-circle-doulas-upmc-magee-womens-virtual-care-center/4223699" , photo: "https://kyruus-app-static.kyruus.com/providermatch/upmc/photos/200/location-birthcircledoulasmageewomensvirtualcarecenter-9000010021.jpg", description: "The Birth Circle Doulas clinic offers consultative video visits with a specially trained labor and support person. Hours 8:30 AM - 8:00 PM 300 Halket Street, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pittsburgh, PA"] },
@@ -3740,7 +3935,13 @@ export const cities: Record<string, CityData> = {
     slug: "baltimore-md" ,
     costLow: 800,
     costHigh: 2200,
-    shelbiServesHere: false,    localDoulas: [
+    heroImage: "/images/baltimore-md-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-baltimore-md.webp",
+    supportSceneImage: "/images/baltimore-md-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Baltimore: Maryland birth support and doula care",
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Doulas of Baltimore" , credential: "Birth Doula" , practice: "Doulas of Baltimore" , url: "https://doulasofbaltimore.com/" , photo: "https://doulasofbaltimore.com/wp-content/uploads/2026/01/4.png" , description: "Whether seeking childbirth classes, birth doulas, in-home postpartum support, or overnight newborn care, Doulas of Baltimore has you covered!" , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Baltimore, MD"] },
       { name: "Support from Baltimore Doulas with Experience" , credential: "Birth Doula" , practice: "Support from Baltimore Doulas with Experience" , url: "https://www.wombroom.mom/baltimore-doulas" , photo: "https://static.wixstatic.com/media/942a90_7468f3aa09c34f11893483510fb5bc66~mv2.jpg/v1/fill/w_147,h_98,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/942a90_7468f3aa09c34f11893483510fb5bc66~mv2.jpg" , description: "The Womb Room Virtual & In-Person Doulas in Baltimore are your sacred guides for extended support through pregnancy, childbirth and parenting." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Baltimore, MD"] },
       { name: "Doulas of Baltimore" , credential: "Birth Doula" , practice: "Doulas of Baltimore" , url: "https://www.charmcare.org/locations/baltimore-community-doulas" , photo: "https://doulasofbaltimore.com/wp-content/uploads/2026/01/4.png" , description: "Whether seeking childbirth classes, birth doulas, in-home postpartum support, or overnight newborn care, Doulas of Baltimore has you covered!" , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Baltimore, MD"] },
@@ -3750,13 +3951,13 @@ export const cities: Record<string, CityData> = {
     culture: "Baltimore's birth worker community is powered by a fierce network of Black doulas and birth justice organizations that have been fighting for equitable maternal care in a city with stark disparities. Groups like the Baltimore Doula Project and community-based collectives bring culturally grounded support that centers your voice and your choices. Whether you're delivering at a downtown academic center or a community hospital, Baltimore doulas show up with both strategy and soul." ,
     heroLocalDetail: "At 38 weeks pregnant, you're probably figuring out the fastest route from your Canton rowhouse or Reservoir Hill apartment to your hospital — banking on Greenmount Avenue being clear or bracing for Charles Street traffic. The promenade along the Inner Harbor waterfront gives you flat, easy walking when contractions start feeling like they might mean business, and Druid Hill Park's shaded loop is a neighborhood favorite for those last-weeks waddles under the old-growth canopy." ,
     hospitalDetails: [
-      { name: "The Johns Hopkins Hospital" , paragraph: "Johns Hopkins holds a Level IV NICU — Maryland's highest — with world-class maternal-fetal medicine specialists, 24/7 neonatologists, and a recently renovated labor and delivery unit on their East Baltimore campus. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "University of Maryland Medical Center" , paragraph: "UMMC operates a Level III NICU with a strong midwifery program, high-risk obstetric care, and serves as the primary teaching hospital for West Baltimore. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "Sinai Hospital of Baltimore" , paragraph: "Sinai Hospital carries a Level III NICU on its Greenspring campus in Northwest Baltimore, with a supportive maternity unit, lactation consultants, and midwifery options. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "MedStar Franklin Square Medical Center" , paragraph: "MedStar Franklin Square has a Level III NICU and is a key community hospital serving Baltimore's eastern neighborhoods with full obstetric services. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
+      { name: "The Johns Hopkins Hospital" , thumbnail: "/images/johns-hopkins.webp", paragraph: "Johns Hopkins holds a Level IV NICU — Maryland's highest — with world-class maternal-fetal medicine specialists, 24/7 neonatologists, and a recently renovated labor and delivery unit on their East Baltimore campus. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "University of Maryland Medical Center" , thumbnail: "/images/umd-medical-center.webp", paragraph: "UMMC operates a Level III NICU with a strong midwifery program, high-risk obstetric care, and serves as the primary teaching hospital for West Baltimore. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Sinai Hospital of Baltimore" , thumbnail: "/images/sinai-baltimore.webp", paragraph: "Sinai Hospital carries a Level III NICU on its Greenspring campus in Northwest Baltimore, with a supportive maternity unit, lactation consultants, and midwifery options. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "MedStar Franklin Square Medical Center" , thumbnail: "/images/medstar-franklin.webp", paragraph: "MedStar Franklin Square has a Level III NICU and is a key community hospital serving Baltimore's eastern neighborhoods with full obstetric services. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
     ],
     birthCenterDetails: [
-      { name: "Johns Hopkins Bayview Birth Center" , paragraph: "The Johns Hopkins Bayview Birth Center offers a midwifery-led, low-intervention birth experience within a hospital campus — giving you the homey feel of a birth center with the safety net of hospital-level care steps away. It's one of the few birth center options in Baltimore and welcomes doula support throughout your labor." }
+      { name: "Johns Hopkins Bayview Birth Center" , thumbnail: "/images/hopkins-bayview-birth-center.webp", paragraph: "The Johns Hopkins Bayview Birth Center offers a midwifery-led, low-intervention birth experience within a hospital campus — giving you the homey feel of a birth center with the safety net of hospital-level care steps away. It's one of the few birth center options in Baltimore and welcomes doula support throughout your labor." }
     ],
     medicaidNote: "Maryland Medicaid covers doula services as of 2024, with reimbursement rates including $450 for labor and delivery support, $75 per prenatal or postpartum visit (up to 4 visits), totaling up to $900 per pregnancy for Medicaid-enrolled doulas." ,
     insuranceNote: "Maryland's state insurance regulations support broader maternity coverage, but doula-specific reimbursement through private insurance varies. CareFirst BlueCross BlueShield of Maryland and UHC may offer partial reimbursement with a superbill using CPT code S9443. Always ask your doula for a superbill and submit it promptly." ,
@@ -3835,7 +4036,9 @@ export const cities: Record<string, CityData> = {
     slug: "providence-ri" ,
     costLow: 800,
     costHigh: 1800,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Doula Access Collaborative" , credential: "Birth Doula" , practice: "Doula Access Collaborative" , url: "https://www.providence.org/locations/or/doula-access-collaborative" , photo: "" , description: "Providence contracts with birth doulas to support families with Medicaid insurance. The program aims to advance birth equity for childbearing families.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Providence, RI"] },
       { name: "Bellwether Doulas" , credential: "Birth Doula" , practice: "Bellwether Doulas" , url: "https://www.bellwetherdoulas.com/" , photo: "https://static.wixstatic.com/media/b9039b_ff1d2f960a224f8bb8cb36e53225a054~mv2.png/v1/fill/w_68,h_68,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b9039b_ff1d2f960a224f8bb8cb36e53225a054~mv2.png", description: "Doulas supports births at Women and Infants and Landmark Hospitals, plus home births and postpartum care in RI/nearby MA. Live classes are offered virtually. ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Providence, RI"] },
       { name: "birth doulas in Rhode Island" , credential: "Birth Doula" , practice: "birth doulas in Rhode Island" , url: "https://doulamatch.net/list/birth/ri" , photo: "https://doulamatch.net/doulafiles/19184/19184_thumb.jpg", description: "13 birth doulas in Rhode Island. Doula Birth Fee: $1500 to $2000 Postpartum Rate: $50 to $75 $1700 to $2000 Postpartum Rate: $35 to $50. Birth Fee: $1975 to $ ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Providence, RI"] },
@@ -3872,7 +4075,9 @@ export const cities: Record<string, CityData> = {
     slug: "san-francisco-ca" ,
     costLow: 1800,
     costHigh: 3500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "DOULAS by the BAY" , credential: "Birth Doula" , practice: "DOULAS by the BAY" , url: "https://www.doulasbythebay.com/" , photo: "https://www.doulasbythebay.com/wp-content/uploads/2026/05/Kaiser-2.png", description: "We are a team of Birth, Postpartum Doulas and Newborn Care Specialists who are dedicated to supporting families before, during and immediately after ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["San Francisco, CA"] },
       { name: "BORN Collective" , credential: "Birth Doula" , practice: "BORN Collective" , url: "https://www.borncollectivesf.com/" , photo: "https://images.squarespace-cdn.com/content/v1/5cbf6fc501232c7b9bfbfc51/1556059611182-HMYZMNRAOIVYL1DJAQ5G/Artboard+1+copy+8%402x.png", description: "Born Collective offers birth & postpartum doula services, photography, placenta encapsulation, and LGBTQIA+ parent support groups in the San Francisco Bay ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["San Francisco, CA"] },
       { name: "Doula Services" , credential: "Birth Doula" , practice: "Doula Services" , url: "https://www.sfhp.org/for-members/medi-cal/benefits/doula-services/" , photo: "" , description: "Doula services are for prenatal (before birth) and postpartum (after pregnancy) visits. You may have a doula during labor and birth, miscarriage, or abortion ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["San Francisco, CA"] },
@@ -3908,7 +4113,9 @@ export const cities: Record<string, CityData> = {
     slug: "san-jose-ca" ,
     costLow: 1500,
     costHigh: 3000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Doula San Jose CA" , credential: "Birth Doula" , practice: "Doula San Jose CA" , url: "https://himaladoulaservices.com/" , photo: "" , description: "Expert doula services in San Jose, CA. Personalized care for pregnancy, birth, and postpartum. Book your consultation today!", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["San Jose, CA"] },
       { name: "ALICE THE DOULA" , credential: "Birth Doula" , practice: "ALICE THE DOULA" , url: "https://www.alicethedoula.com/" , photo: "https://www.alicethedoula.com/uploads/1/3/2/7/132729267/published/alicethedoula.png", description: "Offering Doula services in Silicon Valley California. Childbirth education, labor and birth preparation and direct assistance, and in-home postpartum care.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["San Jose, CA"] },
       { name: "Family Programs" , credential: "Birth Doula" , practice: "Family Programs" , url: "https://rootscommunityhealth.org/our-work/health-wellness-services/family-programs/" , photo: "https://rootscommunityhealth.org/wp-content/uploads/2025/01/Family-Programs-South-Bay.png", description: "The Doula program offers: Personal support during pregnancy, childbirth, and postpartum Assistance. Phone: (408) 343-3773 , Suite D, San Jose, CA 95122", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["San Jose, CA"] },
@@ -3943,7 +4150,9 @@ export const cities: Record<string, CityData> = {
     slug: "long-beach-ca" ,
     costLow: 1200,
     costHigh: 2800,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "DOULAS OF LONG BEACH" , credential: "Birth Doula" , practice: "DOULAS OF LONG BEACH" , url: "https://www.yelp.com/biz/doulas-of-long-beach-long-beach-2" , photo: "https://s3-media0.fl.yelpcdn.com/bphoto/5SU56hO3r-gsWy1Z0eVqJQ/l.jpg", description: "Hands-on guidance through massage, relaxation, breathing and +4 (562) 546-3786 Call Beach, California. Birth Midwife Services in Long Beach, Comprehensive ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Long Beach, CA"] },
       { name: "Birth Doula" , credential: "Birth Doula" , practice: "Birth Doula" , url: "https://www.togetherinbirth.com/" , photo: "https://static.wixstatic.com/media/f5ed83_85b66b0bc6b64eb387d60fb44978a698~mv2_d_4441_3037_s_4_2.jpg/v1/fill/w_980,h_558,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/f5ed83_85b66b0bc6b64eb387d60fb44978a698~mv2_d_4441_3037_s_4_2.jpg", description: "Birth Doula | Southern California 4647 Long Beach Blvd. Suite B3 Long Beach, CA 90805 11am-5pm. Contact: 562-472-5437", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Long Beach, CA"] },
       { name: "Birthworkers of Color Collective" , credential: "Birth Doula" , practice: "Birthworkers of Color Collective" , url: "https://www.longbeachgives.org/organization/BWOCC" , photo: "" , description: "We provide culturally relevant, accessible, sliding scale full spectrum doula services using the diverse list of doulas from our collective to fit the...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Long Beach, CA"] },
@@ -3977,7 +4186,9 @@ export const cities: Record<string, CityData> = {
     slug: "oakland-ca" ,
     costLow: 1500,
     costHigh: 3200,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Urban Flora Doula Care" , credential: "Birth Doula" , practice: "Urban Flora Doula Care" , url: "https://www.urbanfloradoula.com/" , photo: "https://static.wixstatic.com/media/d1cc18_f88a6f900bf44adf978ceaa157d24c84~mv2.jpg/v1/crop/x_33,y_727,w_2109,h_2273/fill/w_450,h_485,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5473_edited_edited.jpg", description: "Urban Flora Doula Care offers birth & postpartum support in the Bay Area that is committed to finding the beauty & balance between deep-rooted human needs & ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Oakland, CA"] },
       { name: "Holistic Birth Support" , credential: "Birth Doula" , practice: "Holistic Birth Support" , url: "https://www.samsarahmorgandoula.com/" , photo: "https://lirp.cdn-website.com/7c41d456/dms3rep/multi/opt/Samsarah_Morgan_Doula_Home_New-720w.jpg", description: "I am an experienced doula dedicated to providing compassionate care, personalized support, and evidence-based services to empower you to have a positive and ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Oakland, CA"] },
       { name: "Evidence" , credential: "Birth Doula" , practice: "Evidence" , url: "https://www.doulasbythebay.com/discovery/" , photo: "https://www.doulasbythebay.com/wp-content/uploads/2026/05/Kaiser-2.png", description: "Evidence-Based Birth & Postpartum Doula Care in California. Trusted since 2009 • 70+ employed doulas • 3,000+ families supported. Book your free consultation.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Oakland, CA"] },
@@ -4013,7 +4224,9 @@ export const cities: Record<string, CityData> = {
     slug: "bakersfield-ca" ,
     costLow: 900,
     costHigh: 2200,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Bakersfield Medi" , credential: "Birth Doula" , practice: "Bakersfield Medi" , url: "https://www.instagram.com/inthewaitingdoulaservices/" , photo: "" , description: "Bakersfield, CA ✨ Prenatal • Labor & Birth • Postpartum Transitions • Loss Support #InTheWaitingDoulaServices #ITWDS #SacredBirthCare #MayanRoots ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Bakersfield, CA"] },
       { name: "Nikki Avila" , credential: "Birth Doula" , practice: "Nikki Avila" , url: "https://www.bornbir.com/nikki-avila" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/bkx1xvkgu6w0sg3fcf2jvg4l5bxx.jpeg", description: "Hi, I'm Nikki Avila—Certified Birth Doula, Childbirth Educator, and Cofounder of Three Moons Doula Collective. My work is rooted in the belief that birth is ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Bakersfield, CA"] },
       { name: "Doula" , credential: "Birth Doula" , practice: "Doula" , url: "https://www.bakersfieldhomebirths.com/doula" , photo: "https://www.bakersfieldhomebirths.com/images/1284128/0_0.jpg", description: "Our doula services include two prenatal visits and devoted attention and support throughout your labor and delivery.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Bakersfield, CA"] },
@@ -4049,7 +4262,9 @@ export const cities: Record<string, CityData> = {
     slug: "stockton-ca" ,
     costLow: 900,
     costHigh: 2000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Harmony Doula" , credential: "Birth Doula" , practice: "Harmony Doula" , url: "https://harmonydoula.com/" , photo: "https://harmonydoula.com/JQuery/imageJQR-1.jpg", description: "Teri Nava-Anderson is a certified, professional birth and postpartum doula and aromatherapist, providing comprehensive childbirth and lactation education ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Stockton, CA"] },
       { name: "Bykema Mobley" , credential: "Birth Doula" , practice: "Bykema Mobley" , url: "https://www.bornbir.com/bykema-mobley" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/l5mlqgkvevzwwu58n2a72pk2zhal.jpeg", description: "As an herbal full spectrum holistic doula, my focus is on nurturing womb wellness and providing comprehensive support throughout your journey of pregnancy, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Stockton, CA"] },
       { name: "Lodi Birth Doula" , credential: "Birth Doula" , practice: "Lodi Birth Doula" , url: "https://www.goldenstatebirths.com/" , photo: "https://static.wixstatic.com/media/14df13e4a2e04e39a34a477052234743.jpg/v1/fill/w_830,h_550,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Sleeping%20Newborn.jpg", description: "As a DONA certified Birth Doula, Golden State Birth Services offers Lodi, Galt & Stockton families support during your pregnancy, birth and postpartum period.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Stockton, CA"] },
@@ -4083,7 +4298,9 @@ export const cities: Record<string, CityData> = {
     slug: "buffalo-ny" ,
     costLow: 1000,
     costHigh: 2500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Buffalo Doula Services LLC" , credential: "Birth Doula" , practice: "Buffalo Doula Services LLC" , url: "https://www.buffalodoulaservices.com/" , photo: "https://images.squarespace-cdn.com/content/v1/567ffbf157eb8dca48fa1977/1694014226384-B8CUTDLAX8SEPE8YXG3R/Coitt_House_Buffalo_NY_Buffalo_Doula_Services-1.jpg" , description: "Personalized and professional pregnancy, birth, and postpartum doula services, night nanny, birth photography, and childbirth education in Buffalo and the ..." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Buffalo, NY"] },
       { name: "Maternity Services" , credential: "Birth Doula" , practice: "Maternity Services" , url: "https://www.ochbuffalo.org/Practicing-Doula-Program/" , photo: "" , description: "Children's Hospital of Buffalo ・ offering emotional, physical and informational support to mothers before, during and after labor. 716-249-1958 ・ 818 ..." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Buffalo, NY"] },
       { name: "Doula Services" , credential: "Birth Doula" , practice: "Doula Services" , url: "https://www.caryhousebuffalo.com/doula-services" , photo: "https://images.squarespace-cdn.com/content/v1/5d4382a66271600001a48053/acea50c6-9326-4947-a602-020a7c1a49bf/%C2%A9Shawna_Stanley_2017-78.jpg" , description: "Buffalo Birth & Baby at Cary House provides expert birth doula services, postpartum support, and childbirth education in Buffalo, NY." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Buffalo, NY"] },
@@ -4119,7 +4336,9 @@ export const cities: Record<string, CityData> = {
     slug: "rochester-ny" ,
     costLow: 1000,
     costHigh: 2400,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Postpartum Doula" , credential: "Birth Doula" , practice: "Postpartum Doula" , url: "https://doulacooperative.com/doulas/tag/postpartum-doula/" , photo: "https://ik.imagekit.io/doulacoop/tr:w-300,h-300,fo-face,z-0.5,di-default-profile.png", description: "The Rochester Doula Cooperative connects families with professional birth and postpartum doulas in the Rochester, NY area. Find compassionate support for ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Rochester, NY"] },
     ],
     culture: "Rochester's birth community is fueled by a powerful legacy — this is the home of Susan B. Anthony and a long tradition of women's advocacy, and that energy carries into today's birth-justice movement. You'll find a growing network of doulas here, especially organizers who center Black maternal health and who are pushing hard for equitable birth outcomes across the city's diverse neighborhoods." ,
@@ -4150,7 +4369,9 @@ export const cities: Record<string, CityData> = {
     slug: "albany-ny" ,
     costLow: 1000,
     costHigh: 2300,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "The Doula Network of the Capital Region" , credential: "Birth Doula" , practice: "The Doula Network of the Capital Region" , url: "https://www.thedoulanetwork.org/" , photo: "https://static.wixstatic.com/media/d04c66_0e1aeb7380244c52ad19f18511827ffc~mv2.jpg/v1/fill/w_1905,h_1192,al_b,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/d04c66_0e1aeb7380244c52ad19f18511827ffc~mv2.jpg" , description: "A community of independent birth professionals who provide birthing families with emotional, physical and informational support throughout pregnancy, birth and ..." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Albany, NY"] },
       { name: "Albany Full Spectrum Doula Training" , credential: "Birth Doula" , practice: "Albany Full Spectrum Doula Training" , url: "https://birthnewyork.org/doula-training/" , photo: "https://birthnewyork.org/wp-content/uploads/2022/04/Full-Spectrum-Doula-Training-1.jpg" , description: "Community Doula trainings are not just an intervention to improve birth outcomes for BIPOC families but also an opportunity to give back to the community." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Albany, NY"] },
       { name: "Doula Program" , credential: "Birth Doula" , practice: "Doula Program" , url: "https://www.albanymed.org/specialty/doula-program/" , photo: "https://www.albanymed.org/wp-content/uploads/sites/2/fly-images/60500/Erika-Sorgen-Bull-280x280-c.jpeg" , description: "The Birth Place at Albany Medical Center is proud to offer support from doulas, as part of your health care team, during your birthing experience." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Albany, NY"] },
@@ -4188,7 +4409,9 @@ export const cities: Record<string, CityData> = {
     slug: "oklahoma-city-ok" ,
     costLow: 800,
     costHigh: 1500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Doula Services" , credential: "Birth Doula" , practice: "Doula Services" , url: "https://oklahoma.gov/ohca/providers/types/prenatal-and-perinatal-services/doula.html" , photo: "" , description: "A doula or birth worker is a trained professional who provides emotional, physical and informational support services during the prenatal, labor and delivery, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Oklahoma City, OK"] },
       { name: "Ashlee Byrd" , credential: "Birth Doula" , practice: "Ashlee Byrd" , url: "https://www.nestedoak.com/" , photo: "https://images.squarespace-cdn.com/content/v1/5e2f1116b300426a71327014/8e40f17d-0a02-4a56-a6c7-ddf7306f3617/IMG_2023.jpg", description: "An Oklahoma City based agency providing Birth Doula Services, Postpartum Doula Services, Lactation Support, and Childbirth Education.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Oklahoma City, OK"] },
       { name: "Postpartum Doula Care" , credential: "Birth Doula" , practice: "Postpartum Doula Care" , url: "https://thrivemamacollective.com/our-services/postpartum-doula-care/" , photo: "https://thrivemamacollective.com/wp-content/uploads/2018/07/pp-services-300x300.png", description: "We have several Postpartum Doulas that help to prepare and support you and your family in the postpartum period in Oklahoma City and surrounding cities.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Oklahoma City, OK"] },
@@ -4256,7 +4479,9 @@ export const cities: Record<string, CityData> = {
     slug: "columbus-oh" ,
     costLow: 900,
     costHigh: 2000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Peaceful Doula Care" , credential: "Birth Doula" , practice: "Peaceful Doula Care" , url: "https://peacefuldoulacare.com/" , photo: "https://static.showit.co/1600/JTzwQu83Ztx2poAjbHo__Q/298962/boho-room-with-curtains.jpg", description: "Peaceful Doula Care, is a certified birth doula and Lamaze childbirth educator in Columbus, Ohio. Connect 614-806-4489 carolinepitts.doula@gmail.com", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Columbus, OH"] },
       { name: "Birth Doula" , credential: "Birth Doula" , practice: "Birth Doula" , url: "https://www.choicemidwives.org/services/birth-doula/" , photo: "https://www.choicemidwives.org/wp-content/uploads/2017/04/doula3.jpg", description: "Columbus Midwives Center. A Doula is an experienced and informed labor coach who meets with you prenatally to help you understand the birthing process.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Columbus, OH"] },
       { name: "Columbus Doula Services" , credential: "Birth Doula" , practice: "Columbus Doula Services" , url: "https://www.thrive-doula-services.com/" , photo: "https://images.squarespace-cdn.com/content/v1/641256153af0e119f468554a/1715957813727-GDPIIC1KD5JGFIOA5NMN/Thrive-Instagram-1080x1080-3.jpeg", description: "Doula Services in Columbus, Ohio For Pregnancy, Birth & Postpartum Support columbus@gmail.com (614) 636-0963 2691 E. Main St. Bexley, OH 43209", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Columbus, OH"] },
@@ -4292,7 +4517,9 @@ export const cities: Record<string, CityData> = {
     slug: "cleveland-oh" ,
     costLow: 900,
     costHigh: 2200,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Cleveland Birth Doulas" , credential: "Birth Doula" , practice: "Cleveland Birth Doulas" , url: "https://www.4thdown.org/pages/birth-doula-services" , photo: "https://www.4thdown.org/cdn/shop/files/12.png", description: "Our birth doulas are trained to provide the emotional and physical support mothers need during childbirth. Meet a doula in Cleveland from Fourth Down.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Cleveland, OH"] },
     ],
     culture: "Cleveland moms will tell you — everything healthcare-wise funnels toward the Clinic or University Hospitals, both clustered near University Circle on the east side. If you live in Westlake or Avon, that commute down I-90 and into the Health Campus can turn ugly in winter lake-effect snow, so have a backup route and a packed hospital bag by 35 weeks." ,
@@ -4321,7 +4548,9 @@ export const cities: Record<string, CityData> = {
     slug: "indianapolis-in" ,
     costLow: 800,
     costHigh: 1800,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Discover Doulas" , credential: "Birth Doula" , practice: "Discover Doulas" , url: "https://www.ecommunity.com/services/womens-care/pregnancy-and-planning/discover-doulas" , photo: "https://www.ecommunity.com/sites/default/files/styles/hero_image_1600x500/public/2021-04/Doula-hero.jpg", description: "Our Community Health Network doulas are caring, trained birth professionals who offer physical comfort, emotional encouragement, and helpful information", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Indianapolis, IN"] },
       { name: "In His Image" , credential: "Birth Doula" , practice: "In His Image" , url: "https://www.inhisimagedoula.com/" , photo: "https://images.squarespace-cdn.com/content/v1/659c6f0dbd98cc4809871904/ed4bf0c1-5468-4dd7-be7b-79650cd07c1b/IMG_4711+Copy.jpg", description: "I believe God created our bodies for childbirth and when given time and encouragement, women can achieve natural labor without any intervention.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Indianapolis, IN"] },
       { name: "Rachael Wilson" , credential: "Birth Doula" , practice: "Rachael Wilson" , url: "https://www.bornbir.com/rachael-wilson" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/crheqfwfylzuzcorw8r7cykdtjxe.jpeg", description: "I offer birth support with comfort measures and steady emotional care during labor. Postpartum services include in-home support, light household ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Indianapolis, IN"] },
@@ -4352,7 +4581,9 @@ export const cities: Record<string, CityData> = {
     slug: "reno-nv" ,
     costLow: 800,
     costHigh: 2000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "DOULA CO" , credential: "Birth Doula" , practice: "DOULA CO" , url: "https://www.doulacoop.org/" , photo: "https://images.squarespace-cdn.com/content/v1/62eaefd14ac09c6c5a7ebbf9/f219cb10-770c-412e-b7be-daaf8de61983/bankim-desai-AdK3KrfBhzg-unsplash.jpg", description: "Doulas are trained in everything from the physiological and emotional processes of labor, childbirth & the postpartum period to fertility, loss & miscarriage.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Reno, NV"] },
       { name: "Welcome To Doula In Reno" , credential: "Birth Doula" , practice: "Welcome To Doula In Reno" , url: "https://doulainreno.com/" , photo: "https://images.squarespace-cdn.com/content/v1/6a28299347bbe16bd859ee66/8d1ee79e-3754-4d7a-9815-dc8bcb077aa9/BANNER-Picsart-AiImageEnhancer.jpeg", description: "Doula in Reno helping you navigate pregnancy, positive birth experiences, miscarriage and infant loss, adoption, surrogacy, and your breastfeeding journey.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Reno, NV"] },
       { name: "Ashley Maas Birth Services" , credential: "Birth Doula" , practice: "Ashley Maas Birth Services" , url: "https://renodoula.com/" , photo: "https://renodoula.com/wp-content/uploads/2014/05/face02.png", description: "A doula who is versed in the signs of labor, can normalize what you're experiencing, is knowledgeable about obstetrical language and options.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Reno, NV"] },
@@ -4425,7 +4656,9 @@ export const cities: Record<string, CityData> = {
     slug: "memphis-tn" ,
     costLow: 700,
     costHigh: 1700,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Memphis Doulas" , credential: "Birth Doula" , practice: "Memphis Doulas" , url: "https://www.naturallynurturedbirthservices.com/" , photo: "https://static.wixstatic.com/media/415fed4e07af40f098cc8106297fd586.jpg/v1/fill/w_1905,h_410,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/415fed4e07af40f098cc8106297fd586.jpg", description: "We are a Memphis, TN based doula support center for families and industry professionals. labor and postpartum. includes natural births, epidurals, cesarean ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Memphis, TN"] },
       { name: "Black Doula in Memphis" , credential: "Birth Doula" , practice: "Black Doula in Memphis" , url: "https://www.whatthedoula.com/" , photo: "https://static.wixstatic.com/media/abc80c_125cbafacaf24675b3d19c32a21b7fcc~mv2.jpg/v1/fill/w_1905,h_475,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/abc80c_125cbafacaf24675b3d19c32a21b7fcc~mv2.jpg", description: "Hi, I'm Kaila, I am a Certified Birth and Postpartum Doula who supports families in the Memphis, TN area and virtually across the United States.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Memphis, TN"] },
       { name: "River City Doulas" , credential: "Birth Doula" , practice: "River City Doulas" , url: "https://rivercitydoulas.com/" , photo: "https://img77.uenicdn.com/image/upload/v1713045969/business/c2e847ac-cdfe-42fd-a590-724b55a4bfde.jpg", description: "Birth Services -901-500-0773. Package includes 4- childbirth classes, birth education book, 7001 Sunset Place, Memphis, Tennessee, 38138 +1 901-500-0773 ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Memphis, TN"] },
@@ -4462,7 +4695,9 @@ export const cities: Record<string, CityData> = {
     slug: "st-augustine-fl" ,
     costLow: 800,
     costHigh: 2000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Nicole Stewart" , credential: "Birth Doula" , practice: "Nicole Stewart" , url: "https://www.hypnobirthingstaug.com/" , photo: "https://images.squarespace-cdn.com/content/v1/5f50047eb4c4c5533359b847/1599080127933-5RX1LP2OYHOQ0PQM23ME/Screen+Shot+2020-07-02+at+1.14.41+PM.png", description: "Hello! As a seasoned doula, I would be honored to support you during your pregnancy, birth and postpartum in St. Augustine, FL and Jacksonville, FL.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["St. Augustine, FL"] },
       { name: "Emily Miller" , credential: "Birth Doula" , practice: "Emily Miller" , url: "https://www.bornbir.com/emily-miller" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/y322bkq6q4skgjm0o55c7qpphk5d.png", description: "She will cater the prenatal appointments and style to your needs, whether you want to focus on movement and labor positions, breathing techniques, deep dive ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["St. Augustine, FL"] },
     ],
@@ -4494,7 +4729,9 @@ export const cities: Record<string, CityData> = {
     slug: "gainesville-fl" ,
     costLow: 700,
     costHigh: 1800,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Holli" , credential: "Birth Doula" , practice: "Holli" , url: "https://www.instagram.com/gainesvilledoula/" , photo: "" , description: "supporting women through pregnancy & postpartum birth prep homebirth VBAC twins doula mentoring 1:1 classes virtual/local in person.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Gainesville, FL"] },
       { name: "Birth Culture" , credential: "Birth Doula" , practice: "Birth Culture" , url: "https://birthculture.org/" , photo: "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/Hcg4Rp4QnrbW3xhEcUMP/media/68fbea07f1ef98853ff5d283.png", description: "Based in Gainesville, Florida, Birth Culture is expanding nationally through hybrid doula training programs. A Doula Training Program Setting the Standard ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Gainesville, FL"] },
       { name: "Belinda Slappy" , credential: "Birth Doula" , practice: "Belinda Slappy" , url: "https://www.bornbir.com/belinda-slappy" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/development/584rgypn8g1bi478r5egn2pd56ab.jpg", description: "Birth Doula Package: Starting at $1200 Includes prenatal visits, continuous labor support, and postpartum follow-up. Postpartum Doula Package: Starting at $40/ ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Gainesville, FL"] },
@@ -4606,7 +4843,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "West Michigan Midwifery Birth Center" , paragraph: "West Michigan Midwifery is the only freestanding birth center in the Grand Rapids area, offering both home birth and birth center options. Staffed by Michigan Board of Licensed Midwives, they provide water birth, prenatal care, postpartum care, and lactation support. Free consultations are available for families exploring out-of-hospital birth options." },
     ],
-    medicaidNote: "Michigan Medicaid does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Grand Rapids families on Medicaid must pay out of pocket, though some doulas like Great Lakes Doulas offer sliding-scale fees or payment plans." ,
+    medicaidNote: "Yes — Michigan Medicaid covers doula services. Michigan expanded Medicaid doula coverage, and Grand Rapids families on Medicaid can access reimbursable doula support. Some doulas like Great Lakes Doulas also offer sliding-scale fees or payment plans. Note: West Michigan Midwifery (WMM) is located in Muskegon, not Grand Rapids — families seeking their birth center should plan for the drive." ,
     insuranceNote: "Most private insurers in Michigan (Blue Cross Blue Shield of Michigan, Priority Health, UnitedHealthcare, McLaren) do not cover doula services as a standard benefit. Check your plan for out-of-network reimbursement or HSA/FSA eligibility. Contact your provider directly to confirm what\u2019s covered." ,
     faqs: [
       { q: "Does Michigan Medicaid cover doula services?" , a: "No. As of 2026, Michigan Medicaid does not cover doula services. If you\u2019re on Medicaid in the Grand Rapids area, you\u2019ll need to pay for a doula out of pocket \u2014 but some doulas like Great Lakes Doulas offer sliding-scale fees or payment plans. You deserve support regardless of insurance status. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> while you figure out your options." },
@@ -4691,7 +4928,9 @@ export const cities: Record<string, CityData> = {
     slug: "henderson-nv" ,
     costLow: 1000,
     costHigh: 3000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Well Rounded Childbirth" , credential: "Birth Doula" , practice: "Well Rounded Childbirth" , url: "https://www.hendersonhospital.com/well-rounded-childbirth" , photo: "https://www.hendersonhospital.com/sites/default/files/images/banner/pregnancyclass.jpg", description: "Price: $125 per couple, Labor Doula Class Dates (6:30 to 9:30 p.m.): January 11, 18 (Henderson Hospital) Henderson Hospital 1050 W. Galleria Drive Henderson, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Henderson, NV"] },
       { name: "Ashamii Henderson" , credential: "Birth Doula" , practice: "Ashamii Henderson" , url: "https://www.bornbir.com/ashamii-henderson" , photo: "" , description: "I offer prenatal, birth/labor, and postpartum support. Let's chat to see what's best for you! Ratings and reviews. Be the first to write Ashamii ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Henderson, NV"] },
     ],
@@ -4728,7 +4967,9 @@ export const cities: Record<string, CityData> = {
     slug: "hendersonville-tn" ,
     costLow: 800,
     costHigh: 2500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "East Nashville Doula" , credential: "Birth Doula" , practice: "East Nashville Doula" , url: "https://www.eastnashvilledoula.com/" , photo: "https://images.squarespace-cdn.com/content/v1/661e74e9da6e5b03514a25ab/e07d4857-c0e5-4adf-a458-f599e024b702/EastNashvilleDoulas-2024-KaileeRichesPhotography-72.jpg", description: "EAST NASHVILLE DOULAS. We are professional, experienced doulas and childbirth educators who come with Nashville families' highest recommendation.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Hendersonville, TN"] },
       { name: "Hallee Watson" , credential: "Birth Doula" , practice: "Hallee Watson" , url: "https://www.bornbir.com/hallee-watson" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/fudi3z2pofg7faccala1xjl2bhi9.jpeg", description: "I offer birth and postpartum doula services. For my birth doula services I offer a flat fee for the birth and pre and post birth meetings, along with a free ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Hendersonville, TN"] },
       { name: "By Your Side Family Doula" , credential: "Birth Doula" , practice: "By Your Side Family Doula" , url: "https://www.facebook.com/ByYourSideFamilyDoula/" , photo: "" , description: "As your Postpartum Doula and Newborn Care Specialist, I'm here to listen and support you without judgment as you process your birth, whether it went as planned ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Hendersonville, TN"] },
@@ -4761,7 +5002,9 @@ export const cities: Record<string, CityData> = {
     slug: "meridian-id" ,
     costLow: 900,
     costHigh: 1800,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Boise Birth Services" , credential: "Birth Doula" , practice: "Boise Birth Services" , url: "https://boisebirth.com/" , photo: "https://boisebirth.com/images/bbs_web_parts_24.png" , description: "Boise Birth Services provides individually tailored maternity and postpartum care to growing families in the greater Treasure Valley and beyond." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Meridian, ID"] },
       { name: "Doula Services" , credential: "Birth Doula" , practice: "Doula Services" , url: "https://www.thrivebirthco.com/" , photo: "" , description: "Birth Doula Services and Photographer in the Treasure Valley. Let's schedule a meet up to discuss how doula support can impact your birth." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Meridian, ID"] },
       { name: "Treasure Valley Doulas" , credential: "Birth Doula" , practice: "Treasure Valley Doulas" , url: "https://www.treasurevalleydoulas.com/" , photo: "https://www.treasurevalleydoulas.com/uploads/1/1/1/4/11148338/dsc3611-copy_orig.jpg" , description: "Treasure Valley Doulas is a membership organization of birth and postpartum doulas from diverse backgrounds. Each doula operates her own business and has their ..." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Meridian, ID"] },
@@ -4804,7 +5047,9 @@ export const cities: Record<string, CityData> = {
     slug: "lehi-ut" ,
     costLow: 800,
     costHigh: 1800,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Postpartum Doula Utah" , credential: "Birth Doula" , practice: "Postpartum Doula Utah" , url: "https://doulasofutah.com/" , photo: "https://i0.wp.com/doulasofutah.com/wp-content/uploads/2025/12/DOULAHS-OF-UTAH139-3872.jpg", description: "Explore Doulas of Utah for expert postpartum support and nurturing overnight newborn care during your early parenting journey.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Lehi, UT"] },
       { name: "Elise Monson" , credential: "Birth Doula" , practice: "Elise Monson" , url: "https://www.bornbir.com/elise-monson" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/hegd218bxukh6aqzy7ujwc9k8t0w.png", description: "I am a Birth Doula located in Lehi Utah. I serve in both Utah and Salt Lake Counties. I love all things birth. It's my mission to empower mothers.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Lehi, UT"] },
       { name: "birth doulas in Utah" , credential: "Birth Doula" , practice: "birth doulas in Utah" , url: "https://doulamatch.net/list/birth/ut" , photo: "https://doulamatch.net/doulafiles/69/69_thumb.jpg", description: "25 birth doulas in Utah. ; Sidsie Rubow. The Embraced Mother · $1000 to $1500 ; Bev Ann Warner. Bev Ann Life Doula · $1325 to $2550 ; Terah Motzkus. Birthday by ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Lehi, UT"] },
@@ -4843,7 +5088,9 @@ export const cities: Record<string, CityData> = {
     slug: "port-st-lucie-fl" ,
     costLow: 1200,
     costHigh: 2500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Michelle Jackson" , credential: "Birth Doula" , practice: "Michelle Jackson" , url: "https://www.meetyourdoula.com/united-states/port-st-lucie/doulas/michelle-jackson" , photo: "https://www.meetyourdoula.com/pictures/profile/pimage-984-204-photo.jpg", description: "I am 43 years old and the proud mother of 5 children ages 22 (twins), 20, 17, and 8. I currently serve Port Saint Lucie, Florida and the greater Treasure Coast ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Port St. Lucie, FL"] },
       { name: "Maternal and Child Health" , credential: "Birth Doula" , practice: "Maternal and Child Health" , url: "https://stlucie.floridahealth.gov/programs-and-services/clinical-and-nutrition-services/maternal-and-child-health/" , photo: "https://stlucie.floridahealth.gov/wp-content/uploads/sites/4/2025/08/GettyImages-2186975413-e1754426241701-1024x388.jpg", description: "Sisters Empowering Sisters Doula and Breastfeeding Program. Creating a Positive Birth Experience. Learn more about the birth experience, be supported and ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Port St. Lucie, FL"] },
       { name: "My Baby Lady" , credential: "Birth Doula" , practice: "My Baby Lady" , url: "https://www.mybabylady.com/" , photo: "https://cdn-cbhcf.nitrocdn.com/wqHjgExzmxJXKNlASEMSYdmJELJJyrQc/assets/images/optimized/rev-5bd6ab5/www.mybabylady.com/wp-content/uploads/2024/08/doula-birth-coach.jpg", description: "My Baby Lady is a Birth Coach and Doula with 10+yrs experience helping women to a positive birth experience. In-person (Treasure Coast) and Virtual Doula.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Port St. Lucie, FL"] },
@@ -4914,7 +5161,9 @@ export const cities: Record<string, CityData> = {
     slug: "springfield-il" ,
     costLow: 800,
     costHigh: 2000,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Golden Hour Doula Services" , credential: "Birth Doula" , practice: "Golden Hour Doula Services" , url: "https://www.facebook.com/p/Golden-Hour-Doula-Services-100091202327428/" , photo: "" , description: "I offer virtual doula services designed to meet you right where you are — literally and emotionally. ✨ Whether you're looking for: Prenatal-only support ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Springfield, IL"] },
       { name: "Illinois Medicaid" , credential: "Birth Doula" , practice: "Illinois Medicaid" , url: "https://www.siumed.edu/fcm/illinois-medicaid-certified-doula-program" , photo: "https://www.siumed.edu/sites/default/files/styles/landscape_1120/public/2024-02/SIU-Medicine-Doula-Cert.-Program.jpg", description: "“Perinatal doula services include regular visits beginning in the prenatal period and continuing into the postnatal period, inclusive of continuous support ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Springfield, IL"] },
       { name: "Grayce Eubanks" , credential: "Birth Doula" , practice: "Grayce Eubanks" , url: "https://www.meetyourdoula.com/illinois/springfield/doulas/grayce-eubanks" , photo: "https://www.meetyourdoula.com/pictures/profile/pimage-783-439-photo.jpg", description: "How many birth clients do you book per month? Up to 2. Birth doula fee: $1100 for prenatal, continuous labor support, and 1 postpartum visit.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Springfield, IL"] },
@@ -4950,7 +5199,9 @@ export const cities: Record<string, CityData> = {
     slug: "columbia-md" ,
     costLow: 900,
     costHigh: 2500,
-    shelbiServesHere: false,    localDoulas: [
+    shelbiServesHere: false,
+    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    localDoulas: [
       { name: "Black Doulas in Baltimore" , credential: "Birth Doula" , practice: "Black Doulas in Baltimore" , url: "https://www.dmvbirthdoulasllc.com/" , photo: "https://static.wixstatic.com/media/0c8f6e_4fe015911a3e4d42aadc96310cd8fee2~mv2.jpg/v1/fill/w_1905,h_415,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0c8f6e_4fe015911a3e4d42aadc96310cd8fee2~mv2.jpg", description: "provide elevated birth and postpartum support 5457 Twin Knolls Rd Suite #300 Columbia, Md 21045 443-898-4914", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Columbia, MD"] },
       { name: "Darshal Smith" , credential: "Birth Doula" , practice: "Darshal Smith" , url: "https://www.bornbir.com/darshal-smith" , photo: "https://res.cloudinary.com/bornbir/image/upload/c_thumb,f_auto,g_faces,h_200,w_200/v1/production/whmrb6n9ijkomedo9e7agbcjxwwh.jpeg", description: "She is not only a certified birth & postpartum doula but also a student midwife with an incredible depth of knowledge about pregnancy, birth, and postpartum ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Columbia, MD"] },
       { name: "DMV Birth Doulas LLC" , credential: "Birth Doula" , practice: "DMV Birth Doulas LLC" , url: "https://www.facebook.com/dmvbirthdoulasllc/" , photo: "" , description: "At DMV Birth Doulas, we specialize in helping families navigate Cesarean births with confidence and recover with dignity, strategy, and support — not overwhelm.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Columbia, MD"] },
@@ -5011,10 +5262,10 @@ export const cities: Record<string, CityData> = {
     localDoulas: [
       { name: "Dynamic Family Doulas" , credential: "Birth Doula, Lactation Support" , practice: "Dynamic Family Doulas" , url: "https://www.bornbir.com/norfolk/va/doula" , description: "Dynamic Family Doulas provides birth doula, postpartum, lactation, breastfeeding support, placenta encapsulation to families in the Norfolk, Virginia area." , photo: "/images/provider-norfolk-va-dynamic-family-doulas.webp" , services: ["Birth Doula" , "Postpartum" , "Lactation" , "Breastfeeding Support" , "Placenta Encapsulation"], costRange: "$800–$2000" , acceptsMedicaid: true ,
     acceptingClients: "true" },
-      { name: "Your Doula In Love LLC" , credential: "Postpartum Doula" , practice: "Your Doula In Love LLC" , url: "http://yourdoulainlove.com" , description: "Your Doula In Love LLC provides postpartum, evidence-based care to families in the Norfolk, Virginia area." , photo: "/images/provider-norfolk-va-your-doula-in-love-llc.webp" , services: ["Postpartum" , "Evidence-Based Care"], acceptsMedicaid: true ,
-    costRange: "Contact for pricing" ,
-    acceptingClients: "true" },
-      { name: "Tina the Postpartum Doula" , isVerified: false, credential: "Postpartum Doula" , practice: "Tina the Postpartum Doula" , url: "http://www.tinathedoula.com" , description: "Tina the Postpartum Doula provides postpartum, breastfeeding support to families in the Norfolk, Virginia area." , photo: "/images/provider-norfolk-va-tina-the-postpartum-doula.webp" , services: ["Postpartum" , "Breastfeeding Support"] ,
+      { name: "Your Doula In Love LLC" , credential: "Birth Doula, Perinatal Specialist" , practice: "Your Doula In Love LLC" , url: "https://yourdoulainlove.com" , description: "Your Doula In Love provides pregnancy, birth, and bereavement support, placenta encapsulation, and childbirth education to families in Virginia Beach and all of Hampton Roads. Accepts Medicaid, Tricare, and FSA/HSA." , photo: "/images/provider-norfolk-va-your-doula-in-love-llc.webp" , services: ["Birth Doula" , "Bereavement Support" , "Placenta Encapsulation" , "Childbirth Education"], acceptsMedicaid: true ,
+    costRange: "Contact for pricing" , serviceArea: ["Virginia Beach" , "Norfolk" , "Hampton Roads"],
+    acceptingClients: "true" , isVerified: true },
+      { name: "Tina the Postpartum Doula" , isVerified: true, credential: "Postpartum Doula" , practice: "Tina the Postpartum Doula" , url: "http://www.tinathedoula.com" , description: "Tina the Postpartum Doula provides postpartum, breastfeeding support to families in the Norfolk, Virginia area." , photo: "/images/provider-norfolk-va-tina-the-postpartum-doula.webp" , services: ["Postpartum" , "Breastfeeding Support"] ,
     costRange: "Contact for pricing" ,
     acceptingClients: "true" },
       { name: "Amara's Childbirth Education and Doula Services" , credential: "Birth Doula" , practice: "Amara's Childbirth Education and Doula Services" , url: "http://www.amaradoula.com" , description: "Amara's Childbirth Education and Doula Services provides birth doula, postpartum, childbirth education to families in the Norfolk, Virginia area." , photo: "/images/provider-norfolk-va-amara-s-childbirth-education-and-doula-services.webp" , services: ["Birth Doula" , "Postpartum" , "Childbirth Education"] ,
@@ -5038,7 +5289,7 @@ export const cities: Record<string, CityData> = {
       { name: "Laurie Ann's Postpartum Doula Services" , credential: "Postpartum Doula" , practice: "Laurie Ann's Postpartum Doula Services" , url: "http://www.lafdoula.com" , description: "Laurie Ann's Postpartum Doula Services provides postpartum, lactation, breastfeeding support to families in the Norfolk, Virginia area." , photo: "/images/provider-norfolk-va-laurie-ann-s-postpartum-doula-services.webp" , services: ["Postpartum" , "Lactation" , "Breastfeeding Support"], isVerified: false ,
     costRange: "Contact for pricing" ,
     acceptingClients: "true" },
-      { name: "Compass Birth Partners, LLC" , isVerified: false, credential: "Birth Doula, Lactation Support" , practice: "Compass Birth Partners, LLC" , url: "https://rniesen.wordpress.com" , description: "Compass Birth Partners, LLC provides birth doula, lactation to families in the Norfolk, Virginia area." , photo: "/images/provider-norfolk-va-compass-birth-partners-llc.webp" , services: ["Birth Doula" , "Lactation"] ,
+      { name: "Compass Birth Partners, LLC" , isVerified: true, credential: "Birth Doula, Lactation Support" , practice: "Compass Birth Partners, LLC" , url: "https://rniesen.wordpress.com" , description: "Compass Birth Partners, LLC provides birth doula, lactation to families in the Norfolk, Virginia area." , photo: "/images/provider-norfolk-va-compass-birth-partners-llc.webp" , services: ["Birth Doula" , "Lactation"] ,
     costRange: "Contact for pricing" ,
     acceptingClients: "true" },
       { name: "Calming Touch Doula & Massage Services" , credential: "Birth Doula" , practice: "Calming Touch Doula & Massage Services" , url: "https://pocketsuite.io/book/calming-touch-doula-and-massage?fbclid=Iwb21leAPSXcVjbGNrA9Jdv2V4dG4DYWVtAjExAHNydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABHqmetSe_WdyxTC7dy_SmpLrJpyUN3kuqA8Ui7cG3Aw4_dT5tRgwnh1QBoFnT_aem_EmZB787IN8RlGqsGinPR1A" , description: "Calming Touch Doula & Massage Services provides birth doula, postpartum, prenatal care to families in the Norfolk, Virginia area." , photo: "/images/provider-norfolk-va-calming-touch-doula-massage-services.webp" , services: ["Birth Doula" , "Postpartum" , "Prenatal Care"] ,
@@ -5178,10 +5429,10 @@ export const cities: Record<string, CityData> = {
 { name: "Harmony Doula Group" , credential: "Birth Doula, Lactation Support" , practice: "Harmony Doula Group" , url: "https://harmonydoula.com" , description: "Childbirth and Lactation Education Calm." , photo: "/images/provider-fremont-ca-harmony-doula-group.webp" , costRange: "Contact for pricing" ,
     services: ["Birth Doula" , "Postpartum" , "Lactation" , "Placenta Encapsulation" , "Childbirth Education"] ,
     acceptingClients: "true" },
-{ name: "Postpartum Doula Services by Tamra" , credential: "Birth Doula, Lactation Support" , practice: "Postpartum Doula Services by Tamra" , url: "http://doulatamra.com" , description: "Birth and postpartum doula offering overnight care, lactation, and breastfeeding support. Accepts Medi-Cal." , photo: "/images/provider-fremont-ca-postpartum-doula-services-by-tamra.webp" , costRange: "Contact for fee; min 4hr shifts" ,
-    services: ["Birth Doula" , "Postpartum" , "Lactation" , "Breastfeeding Support" , "Overnight Care"], acceptsMedicaid: true ,
-    acceptingClients: "true" },
-{ name: "Redwood Doulas" , isVerified: false, credential: "Birth Doula" , practice: "Redwood Doulas" , url: "https://redwooddoulas.com" , description: "Congratulations on this exciting time in your life." , photo: "/images/provider-fremont-ca-redwood-doulas.webp" , costRange: "Contact for pricing" ,
+{ name: "Postpartum Doula Services by Tamra" , credential: "Birth Doula, Lactation Support" , practice: "Postpartum Doula Services by Tamra" , url: "http://doulatamra.com" , description: "Postpartum doula offering daytime postpartum support, lactation, and breastfeeding support. Currently serving San Jose; pausing work in Fremont indefinitely." , photo: "/images/provider-fremont-ca-postpartum-doula-services-by-tamra.webp" , costRange: "Contact for fee; min 4hr shifts" ,
+    services: ["Postpartum" , "Lactation" , "Breastfeeding Support"] ,
+    acceptingClients: "false" },
+{ name: "Redwood Doulas" , isVerified: true, credential: "Birth Doula" , practice: "Redwood Doulas" , url: "https://redwooddoulas.com" , description: "Congratulations on this exciting time in your life." , photo: "/images/provider-fremont-ca-redwood-doulas.webp" , costRange: "Contact for pricing" ,
     services: ["Birth Doula" , "Postpartum" , "Breastfeeding Support" , "Placenta Encapsulation" , "Evidence-Based Care"] ,
     acceptingClients: "true" },
 { name: "DOULAS by the BAY LLC" , credential: "Birth Doula, Lactation Support" , practice: "DOULAS by the BAY LLC" , url: "https://www.doulasbythebay.com/discovery" , description: "Evidence-Based Birth & Postpartum Doula Care in California Trusted since 2009 • 70+ employed doulas • 3,000+ families supported." , photo: "/images/provider-fremont-ca-doulas-by-the-bay-llc.webp" , costRange: "Contact for pricing" ,
@@ -5200,7 +5451,7 @@ export const cities: Record<string, CityData> = {
     services: ["Birth Doula" , "Postpartum" , "Placenta Encapsulation" , "Childbirth Education" , "Prenatal Care"],
     acceptingClients: "false" },
 { name: "Bay Area Night Doulas Collective" , credential: "Postpartum Doula" , practice: "Bay Area Night Doulas Collective" , url: "https://bayareanightdoulas.com" , description: "San Francisco Bay Area postpartum doulas providing overnight care, lactation, and breastfeeding support." , photo: "/images/provider-fremont-ca-bay-area-night-doulas-collective.webp" , costRange: "Contact for pricing" ,
-    services: ["Postpartum" , "Lactation" , "Breastfeeding Support" , "Overnight Care"] ,
+    services: ["Postpartum" , "Lactation" , "Breastfeeding Support" , "Overnight Care"] , isVerified: true ,
     acceptingClients: "true" },
 { name: "Plumeria Doula Care" , credential: "Birth Doula" , practice: "Plumeria Doula Care" , url: "https://plumeriadoula.com" , description: "Birth and postpartum doula serving the San Francisco Bay Area." , photo: "/images/provider-fremont-ca-plumeria-doula-care.webp" , costRange: "Contact for pricing" ,
     services: ["Birth Doula" , "Postpartum" , "Breastfeeding Support"] ,
@@ -5252,8 +5503,8 @@ export const cities: Record<string, CityData> = {
 { name: "Bay Area Doula Training" , credential: "Birth Doula, Lactation Support" , practice: "Bay Area Doula Training" , url: "https://bayareadoula.com/bay-area-doula-training" , description: "Community-driven, evidence-based doula training in the Bay Area. Accepts Medi-Cal." , photo: "/images/doulas/bay-area-doula-training.webp" , costRange: "Contact for pricing" ,
     services: ["Birth Doula" , "Postpartum" , "Lactation" , "Breastfeeding Support" , "Childbirth Education"], acceptsMedicaid: true ,
     acceptingClients: "true" },
-{ name: "Marcy Hogan Postpartum Doula" , credential: "Postpartum Doula" , practice: "Marcy Hogan Postpartum Doula" , url: "https://www.marcythedoula.com" , description: "Postpartum doula soothing babies and empowering parents in the SF Bay Area." , photo: "/images/provider-fremont-ca-marcy-hogan-postpartum-doula.webp" , costRange: "$25-$45/hr; $125 consultation" ,
-    services: ["Postpartum"] ,
+{ name: "Marcy Hogan Postpartum Doula" , credential: "Postpartum Doula" , practice: "Marcy Hogan Postpartum Doula" , url: "https://www.marcythedoula.com" , description: "Postpartum doula soothing babies and empowering parents in the SF Bay Area." , photo: "/images/provider-fremont-ca-marcy-hogan-postpartum-doula.webp" , costRange: "$45/hr; $125 consultation" ,
+    services: ["Postpartum"] , isVerified: true ,
     acceptingClients: "true" },
 { name: "Pamela Lopes Doula" , credential: "Birth Doula" , practice: "Pamela Lopes Doula" , url: "http://www.pamelalopesdoula.com" , description: "Birth doula serving the Bay Area." , photo: "" ,
     costRange: "Contact for pricing" ,
@@ -5274,10 +5525,10 @@ export const cities: Record<string, CityData> = {
     acceptingClients: "true" },
       { name: "Harmony Doula Group" , credential: "Birth Doula, Lactation Support" , practice: "Harmony Doula Group" , url: "https://harmonydoula.com" , description: "Childbirth and Lactation Education Calm." , photo: "/images/provider-fremont-ca-harmony-doula-group.webp" , services: ["Birth Doula" , "Postpartum" , "Lactation" , "Placenta Encapsulation" , "Childbirth Education"], costRange: "Contact for pricing" ,
     acceptingClients: "true" },
-      { name: "Postpartum Doula Services by Tamra" , credential: "Birth Doula, Lactation Support" , practice: "Postpartum Doula Services by Tamra" , url: "http://doulatamra.com" , description: "Birth and postpartum doula offering overnight care, lactation, and breastfeeding support. Accepts Medi-Cal." , photo: "/images/provider-fremont-ca-postpartum-doula-services-by-tamra.webp" , services: ["Birth Doula" , "Postpartum" , "Lactation" , "Breastfeeding Support" , "Overnight Care"], acceptsMedicaid: true, costRange: "Contact for fee; min 4hr shifts" ,
-    acceptingClients: "true" },
+      { name: "Postpartum Doula Services by Tamra" , credential: "Birth Doula, Lactation Support" , practice: "Postpartum Doula Services by Tamra" , url: "http://doulatamra.com" , description: "Postpartum doula offering daytime postpartum support, lactation, and breastfeeding support. Currently serving San Jose; pausing work in Fremont indefinitely." , photo: "/images/provider-fremont-ca-postpartum-doula-services-by-tamra.webp" , services: ["Postpartum" , "Lactation" , "Breastfeeding Support"], costRange: "Contact for fee; min 4hr shifts" ,
+    acceptingClients: "false" },
       { name: "Redwood Doulas" , credential: "Birth Doula" , practice: "Redwood Doulas" , url: "https://redwooddoulas.com" , description: "Congratulations on this exciting time in your life." , photo: "/images/provider-fremont-ca-redwood-doulas.webp" , services: ["Birth Doula" , "Postpartum" , "Breastfeeding Support" , "Placenta Encapsulation" , "Evidence-Based Care"], costRange: "Contact for pricing" ,
-    acceptingClients: "true" },
+    acceptingClients: "true" , isVerified: true },
       { name: "DOULAS by the BAY LLC" , credential: "Birth Doula, Lactation Support" , practice: "DOULAS by the BAY LLC" , url: "https://www.doulasbythebay.com/discovery" , description: "Evidence-Based Birth & Postpartum Doula Care in California Trusted since 2009 • 70+ employed doulas • 3,000+ families supported." , photo: "/images/provider-fremont-ca-doulas-by-the-bay-llc.webp" , services: ["Birth Doula" , "Postpartum" , "Lactation" , "Breastfeeding Support" , "Overnight Care"], acceptsMedicaid: true, costRange: "Contact for pricing" ,
     acceptingClients: "true" },
       { name: "Quetzal Doula" , credential: "Birth Doula" , practice: "Quetzal Doula" , url: "https://www.quetzaldoula.com" , description: "Birth doula providing care and support in the Bay Area." , photo: "/images/provider-fremont-ca-quetzal-doula.webp" , services: ["Birth Doula" , "Postpartum"], costRange: "Contact for pricing" ,
@@ -5291,7 +5542,7 @@ export const cities: Record<string, CityData> = {
   },
       // Removed 2026-06-09: Doula Studios is a hardware product development company, not a doula practice.
       { name: "Bay Area Night Doulas Collective" , credential: "Postpartum Doula" , practice: "Bay Area Night Doulas Collective" , url: "https://bayareanightdoulas.com" , description: "San Francisco Bay Area postpartum doulas providing overnight care, lactation, and breastfeeding support." , photo: "/images/provider-fremont-ca-bay-area-night-doulas-collective.webp" , services: ["Postpartum" , "Lactation" , "Breastfeeding Support" , "Overnight Care"], costRange: "Contact for pricing" ,
-    acceptingClients: "true" },
+    acceptingClients: "true" , isVerified: true },
       { name: "Plumeria Doula Care" , credential: "Birth Doula" , practice: "Plumeria Doula Care" , url: "https://plumeriadoula.com" , description: "Birth and postpartum doula serving the San Francisco Bay Area." , photo: "/images/provider-fremont-ca-plumeria-doula-care.webp" , services: ["Birth Doula" , "Postpartum" , "Breastfeeding Support"], costRange: "Contact for pricing" ,
     acceptingClients: "true" },
       { name: "Baby Bliss Doula" , credential: "Birth Doula" , practice: "Baby Bliss Doula" , url: "https://www.babybliss-doula.com" , description: "Empowering New Families, Nurturing Newborns Mother lovingly holding her newborn, with postpartum support services to help new parents with early childhood care and nurturing." , photo: "/images/provider-fremont-ca-baby-bliss-doula.webp" , services: ["Birth Doula" , "Postpartum" , "Breastfeeding Support" , "Evidence-Based Care"], costRange: "Contact for pricing" ,
@@ -5329,8 +5580,8 @@ export const cities: Record<string, CityData> = {
       { name: "Bay Area Doula Training" , credential: "Birth Doula, Lactation Support" , practice: "Bay Area Doula Training" , url: "https://bayareadoula.com/bay-area-doula-training" , description: "Community-driven, evidence-based doula training in the Bay Area. Accepts Medi-Cal." , services: ["Birth Doula" , "Postpartum" , "Lactation" , "Breastfeeding Support" , "Childbirth Education"], acceptsMedicaid: true, costRange: "Contact for pricing" ,
     photo: "/images/doulas/bay-area-doula-training.webp" ,
     acceptingClients: "true" },
-      { name: "Marcy Hogan Postpartum Doula" , credential: "Postpartum Doula" , practice: "Marcy Hogan Postpartum Doula" , url: "https://www.marcythedoula.com" , description: "Postpartum doula soothing babies and empowering parents in the SF Bay Area." , photo: "/images/provider-fremont-ca-marcy-hogan-postpartum-doula.webp" , services: ["Postpartum"], costRange: "$25-$45/hr; $125 consultation" ,
-    acceptingClients: "true" },
+      { name: "Marcy Hogan Postpartum Doula" , credential: "Postpartum Doula" , practice: "Marcy Hogan Postpartum Doula" , url: "https://www.marcythedoula.com" , description: "Postpartum doula soothing babies and empowering parents in the SF Bay Area." , photo: "/images/provider-fremont-ca-marcy-hogan-postpartum-doula.webp" , services: ["Postpartum"], costRange: "$45/hr; $125 consultation" ,
+    acceptingClients: "true" , isVerified: true },
       { name: "Pamela Lopes Doula" , credential: "Birth Doula" , practice: "Pamela Lopes Doula" , url: "http://www.pamelalopesdoula.com" , description: "Birth doula serving the Bay Area." , costRange: "Contact for pricing" ,
     acceptingClients: "true" },
       { name: "Amelia Protiva, Birth Doula & Photographer" , credential: "Postpartum Doula" , practice: "Amelia Protiva, Birth Doula & Photographer" , url: "http://ameliaprotiva.com" , description: "Doula care rooted in rural Missouri." , photo: "/images/provider-fremont-ca-amelia-protiva-birth-doula-photographer.webp" , services: ["Postpartum"], costRange: "Contact for pricing" ,
@@ -5385,7 +5636,7 @@ export const cities: Record<string, CityData> = {
     localDoulas: [
       { name: "Suwannee Doula and Infant Care" , credential: "Postpartum Doula" , practice: "Suwannee Doula and Infant Care" , url: "http://suwanneedoulacare.com" , description: "Postpartum and overnight doula care serving Vancouver families. Specializing in breastfeeding support and overnight newborn care." , photo: "/images/provider-vancouver-wa-suwannee-doula-and-infant-care.webp" , services: ["Postpartum" , "Breastfeeding Support" , "Overnight Care"], costRange: "Contact for pricing" ,
     acceptingClients: "true" },
-      { name: "EnCourage Doula Care LLC" , credential: "Birth Doula" , practice: "EnCourage Doula Care LLC" , url: "https://www.encouragedoulacare.com" , description: "Birth and bereavement doula serving Vancouver and Portland metro families. Offering childbirth education, breastfeeding support, and prenatal care." , photo: "/images/provider-vancouver-wa-encourage-doula-care-llc.webp" , services: ["Birth Doula" , "Postpartum" , "Breastfeeding Support" , "Childbirth Education" , "Prenatal Care"], costRange: "$2400–$2700" , acceptsMedicaid: true ,
+      { name: "EnCourage Doula Care LLC" , credential: "Birth Doula" , practice: "EnCourage Doula Care LLC" , url: "https://www.encouragedoulacare.com" , description: "Birth and bereavement doula serving Vancouver and Portland metro families. Offering childbirth education, breastfeeding support, prenatal care, and Medicaid-covered doula services." , photo: "/images/provider-vancouver-wa-encourage-doula-care-llc.webp" , services: ["Birth Doula" , "Postpartum" , "Breastfeeding Support" , "Childbirth Education" , "Prenatal Care"], costRange: "$2400–$2700" , acceptsMedicaid: true , isVerified: true ,
     acceptingClients: "true" },
       { name: "Heather Ward Birth Doula" , credential: "Birth Doula" , practice: "BirthLore" , url: "http://www.birthlore.com" , description: "Experienced birth and postpartum doula offering breastfeeding support and prenatal education for Vancouver families." , photo: "/images/provider-vancouver-wa-heather-ward-birth-doula.webp" , services: ["Breastfeeding Support" , "Prenatal Care"], costRange: "Contact for pricing" ,
     acceptingClients: "true" },
@@ -5416,7 +5667,7 @@ export const cities: Record<string, CityData> = {
     acceptingClients: "true" },
       { name: "Suwannee Doula and Infant Care" , credential: "Postpartum Doula" , practice: "Suwannee Doula and Infant Care" , url: "http://suwanneedoulacare.com" , description: "Postpartum and overnight doula care serving Vancouver families. Specializing in breastfeeding support and overnight newborn care." , photo: "/images/provider-vancouver-wa-suwannee-doula-and-infant-care.webp" , services: ["Postpartum" , "Breastfeeding Support" , "Overnight Care"], costRange: "Contact for pricing" ,
     acceptingClients: "true" },
-      { name: "EnCourage Doula Care LLC" , credential: "Birth Doula" , practice: "EnCourage Doula Care LLC" , url: "https://www.encouragedoulacare.com" , description: "Birth and bereavement doula serving Vancouver and Portland metro families. Offering childbirth education, breastfeeding support, and prenatal care." , photo: "/images/provider-vancouver-wa-encourage-doula-care-llc.webp" , services: ["Birth Doula" , "Postpartum" , "Breastfeeding Support" , "Childbirth Education" , "Prenatal Care"], costRange: "$2400–$2700" , acceptsMedicaid: true ,
+      { name: "EnCourage Doula Care LLC" , credential: "Birth Doula" , practice: "EnCourage Doula Care LLC" , url: "https://www.encouragedoulacare.com" , description: "Birth and bereavement doula serving Vancouver and Portland metro families. Offering childbirth education, breastfeeding support, prenatal care, and Medicaid-covered doula services." , photo: "/images/provider-vancouver-wa-encourage-doula-care-llc.webp" , services: ["Birth Doula" , "Postpartum" , "Breastfeeding Support" , "Childbirth Education" , "Prenatal Care"], costRange: "$2400–$2700" , acceptsMedicaid: true , isVerified: true ,
     acceptingClients: "true" },
       { name: "Heather Ward Birth Doula" , credential: "Birth Doula" , practice: "BirthLore" , url: "http://www.birthlore.com" , description: "Experienced birth and postpartum doula offering breastfeeding support and prenatal education for Vancouver families." , photo: "/images/provider-vancouver-wa-heather-ward-birth-doula.webp" , services: ["Breastfeeding Support" , "Prenatal Care"], costRange: "Contact for pricing" ,
     acceptingClients: "true" },
@@ -5491,12 +5742,12 @@ export const cities: Record<string, CityData> = {
     ],
     localDoulas: [
       { name: "Holistic Doula LLC" , credential: "Birth Doula" , practice: "Holistic Doula LLC" , url: "https://www.holistic-doula.com" , description: "Holistic Doula LLC provides culturally sensitive bilingual doula support for Latina women and families across the Inland Empire. Services include pregnancy, birth, and postpartum support with Home Visitation and coverage through IEHP and Kaiser." , photo: "/images/doulas/moreno-valley-ca-holistic-doula.webp" , services: ["Birth Doula" , "Postpartum" , "Prenatal Care"], costRange: "Contact for pricing" ,
-    acceptingClients: "true"
+    acceptingClients: "true" , isVerified: true
   },
       { name: "4 The Moms Southern California Postpartum Doula Support" , credential: "Postpartum Doula" , practice: "4 The Moms Southern California Postpartum Doula Support" , url: "https://www.4themoms.org" , description: "4 The Moms is a holistic, evidence-based postpartum doula service supporting families through the 4th trimester — bringing home your baby. Serving the Inland Empire, Coachella Valley, and Orange County with in-home care including emotional support, lactation guidance, newborn care, overnight shifts, and birth recovery support." , photo: "/images/doulas/moreno-valley-ca-4themoms.webp" , services: ["Postpartum" , "Lactation" , "Breastfeeding Support" , "Overnight Care"], costRange: "Contact for pricing" ,
     acceptingClients: "true"
   },
-      { name: "The Serene Mother Birth Doula" , credential: "Birth Doula" , practice: "The Serene Mother Birth Doula" , url: "https://www.theserenemother.com" , description: "Certified Birth Doula and Certified Body Ready Method Pro serving Murrieta, Temecula, and surrounding Inland Empire areas. Offers personalized pregnancy and labor support including birth planning, emotional guidance, and hands-on labor support. Accepts Kaiser, Medi-Cal, and IEHP." , photo: "/images/doulas/moreno-valley-ca-serenemother.webp" , services: ["Birth Doula" , "Postpartum" , "Prenatal Care"], costRange: "Contact for pricing" ,
+      { name: "The Serene Mother Birth Doula" , credential: "Birth Doula" , practice: "The Serene Mother Birth Doula" , url: "https://www.theserenemother.com" , description: "Certified Birth Doula and Certified Body Ready Method Pro serving Murrieta, Temecula, and surrounding Inland Empire areas. Offers personalized pregnancy and labor support including birth planning, emotional guidance, and hands-on labor support. Accepts Kaiser, Medi-Cal, and IEHP." , photo: "/images/doulas/moreno-valley-ca-serenemother.webp" , services: ["Birth Doula" , "Prenatal Care"], costRange: "Contact for pricing" ,
     acceptingClients: "true"
   },
       { name: "Gem of the Valley Doula Services" , credential: "Birth Doula" , practice: "Gem of the Valley Doula Services" , url: "https://www.yelp.com/biz/gem-of-the-valley-doula-services-murrieta" , description: "Birth and postpartum doula based in Murrieta serving families across the wider Inland Empire, including Moreno Valley. Contact via Yelp for availability and pricing." , photo: "/images/doulas/gem-valley-moreno-valley-ca.webp" , services: ["Birth Doula" , "Postpartum"], costRange: "Contact for pricing" ,
@@ -5551,7 +5802,7 @@ export const cities: Record<string, CityData> = {
     localDoulas: [
       { name: "Doula127 - Doula Services" , credential: "Birth Doula" , practice: "Doula127 - Doula Services" , url: "" , description: "Doula127 provides birth doula support for families in the Fontana and Inland Empire area. Currently not accepting new clients." , photo: "/images/provider-fontana-ca-doula127---doula-services.webp" , costRange: "Contact for pricing" , acceptingClients: "false" },
       { name: "Holistic Doula LLC" , credential: "Birth Doula" , practice: "Holistic Doula LLC" , url: "https://www.holistic-doula.com" , description: "Acompañamiento integral y culturalmente sensible. Acompañamos a mujeres y familias latinas en cada etapa de la maternidad." , photo: "/images/provider-fontana-ca-holistic-doula.webp" , services: ["Birth Doula" , "Postpartum" , "Prenatal Care"], costRange: "Contact for pricing" ,
-    acceptingClients: "true"
+    acceptingClients: "true" , isVerified: true
   },
       { name: "4 The Moms Southern California Postpartum Doula Support" , credential: "Postpartum Doula" , practice: "4 The Moms Southern California Postpartum Doula Support" , url: "https://www.4themoms.org" , description: "A holistic, evidence-based postpartum doula service supporting families through the transitional period of the 4th trimester." , photo: "/images/provider-fontana-ca-4themoms.webp" , services: ["Postpartum" , "Lactation" , "Breastfeeding Support" , "Overnight Care"], costRange: "Contact for pricing" ,
     acceptingClients: "true"
@@ -5658,22 +5909,22 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
     ],
     localDoulas: [
-      { name: "Tina the Postpartum Doula" , credential: "Postpartum Doula" , practice: "Tina the Postpartum Doula" , url: "http://www.tinathedoula.com" , description: "You've done everything to prepare for the birth... but what about your Postpartum Journey? Let us help bring the Village to you! Myself and my team are here to help you transition into parenthood as smoothly as possible.", photo: "https://images.squarespace-cdn.com/content/v1/6028005e705ea36f1bfec7a8/e1847608-0bc0-479c-bbfa-906a72618dd3/TINA+THE+POSTPARTUM+DOULA+%2811%29.png", services: ["Postpartum" , "Breastfeeding Support"], costRange: "Contact for pricing" ,
+      { name: "Tina the Postpartum Doula" , credential: "Postpartum Doula" , practice: "Tina the Postpartum Doula" , url: "http://www.tinathedoula.com" , description: "You've done everything to prepare for the birth... but what about your Postpartum Journey? Let us help bring the Village to you! Myself and my team are here to help you transition into parenthood as smoothly as possible.", photo: "https://images.squarespace-cdn.com/content/v1/6028005e705ea36f1bfec7a8/e1847608-0bc0-479c-bbfa-906a72618dd3/TINA+THE+POSTPARTUM+DOULA+%2811%29.png", services: ["Postpartum" , "Breastfeeding Support"], serviceArea: ["Chesapeake, VA"], costRange: "Contact for pricing" ,
     acceptingClients: "true"
   },
-      { name: "Wholesome Hearts Doula Services" , credential: "Birth Doula" , practice: "Wholesome Hearts Doula Services" , url: "https://www.facebook.com/WholesomeHeartsDoula" , description: "Professional doula serving families in the Chesapeake area.", photo: "", costRange: "Contact for pricing" ,
+      { name: "Wholesome Hearts Doula Services" , credential: "Birth Doula" , practice: "Wholesome Hearts Doula Services" , url: "https://www.facebook.com/WholesomeHeartsDoula" , description: "Serving Chesapeake families with compassionate birth and postpartum doula support, Wholesome Hearts Doula Services helps you feel confident and cared for through pregnancy, labor, and the early weeks at home.", photo: "/images/providers/wholesome-hearts-doula.webp", services: ["Birth Doula", "Postpartum Doula"], serviceArea: ["Chesapeake, VA"], costRange: "Contact for pricing" ,
     acceptingClients: "true"
   },
-      { name: "The Village Midwife Birth Center" , credential: "LM, CPM, DEM" , practice: "The Village Midwife Birth Center" , url: "https://www.thevillagemidwife.com" , description: "Home, birth center, and hospital birth options with the only low-cost maternity clinic in SE Virginia. Accepts Medicaid and offers payment plans. Trauma-informed care from an experienced LM, CPM, DEM.", photo: "https://images.squarespace-cdn.com/content/v1/6914d73b6bb72f3b99693f92/5f600f66-c79f-499f-89df-9b78fa89a2d1/TVM+Baby+Scale+2+Lights+On+Small.jpeg", services: ["Postpartum" , "VBAC Support" , "Home Birth" , "Evidence-Based Care"], acceptsMedicaid: true,  isMidwife: true, costRange: "Contact for pricing" ,
+      { name: "The Village Midwife Birth Center" , credential: "LM, CPM, DEM" , practice: "The Village Midwife Birth Center" , url: "https://www.thevillagemidwife.com" , description: "Home, birth center, and hospital birth options with the only low-cost maternity clinic in SE Virginia. Accepts Medicaid and offers payment plans. Trauma-informed care from an experienced LM, CPM, DEM.", photo: "https://images.squarespace-cdn.com/content/v1/6914d73b6bb72f3b99693f92/5f600f66-c79f-499f-89df-9b78fa89a2d1/TVM+Baby+Scale+2+Lights+On+Small.jpeg", services: ["Postpartum" , "VBAC Support" , "Home Birth" , "Evidence-Based Care"], serviceArea: ["Chesapeake, VA"], acceptsMedicaid: true,  isMidwife: true, costRange: "Contact for pricing" ,
     acceptingClients: "true"
   },
-      { name: "Seven Cities Midwifery Care, LLC" , credential: "CPM" , practice: "Seven Cities Midwifery Care, LLC" , url: "http://www.sevencitiesmidwifery.com" , description: "Empowering Birth, Embracing Life. At Seven Cities Midwifery Care, we believe in the power of personalized, compassionate homebirth experiences.", photo: "https://images.squarespace-cdn.com/content/v1/6377b78aa3d5bf1f3fd5f460/7e3ca4df-44ae-4280-80e3-c48378f5630c/Veronica-2934+%281%29.jpg", services: ["Postpartum" , "Breastfeeding Support" , "Prenatal Care" , "Home Birth"], acceptsMedicaid: true, isMidwife: true, costRange: "Contact for pricing" ,
+      { name: "Seven Cities Midwifery Care, LLC" , credential: "CPM" , practice: "Seven Cities Midwifery Care, LLC" , url: "http://www.sevencitiesmidwifery.com" , description: "Empowering Birth, Embracing Life. At Seven Cities Midwifery Care, we believe in the power of personalized, compassionate homebirth experiences.", photo: "https://images.squarespace-cdn.com/content/v1/6377b78aa3d5bf1f3fd5f460/7e3ca4df-44ae-4280-80e3-c48378f5630c/Veronica-2934+%281%29.jpg", services: ["Postpartum" , "Breastfeeding Support" , "Prenatal Care" , "Home Birth"], serviceArea: ["Chesapeake, VA"], acceptsMedicaid: true, isMidwife: true, costRange: "Contact for pricing" ,
     acceptingClients: "true"
   },
-      { name: "Three Rivers Midwifery Service, LLC" , credential: "CNM" , practice: "Three Rivers Midwifery Service, LLC" , url: "http://www.threeriversmidwifery.com" , description: "Nurse-Midwifery care for your pregnancy and home birth. Cindi Wylie is a certified nurse-midwife trained in providing care to healthy women and newborns.", photo: "", isMidwife: true, costRange: "Contact for pricing" ,
-    acceptingClients: "true"
+      { name: "Three Rivers Midwifery Service, LLC" , credential: "CNM" , practice: "Three Rivers Midwifery Service, LLC" , url: "http://www.threeriversmidwifery.com" , description: "Nurse-Midwifery care for your pregnancy and home birth. Cindi Wylie is a certified nurse-midwife trained in providing care to healthy women and newborns. NOTE: This practice has relocated to Frederick, MD and is no longer serving the Chesapeake, VA area.", photo: "/images/providers/three-rivers-midwifery.webp", services: ["Birth Doula", "Postpartum Doula"], serviceArea: ["Frederick, MD"], isMidwife: true, costRange: "Contact for pricing" ,
+    acceptingClients: "false"
   },
-      { name: "Sunflower Babies Midwifery" , credential: "CPM" , practice: "Sunflower Babies Midwifery" , url: "https://sunflowerbabiesmidwifery.com" , description: "Tierra Jackson, CPM, LM — Licensed Certified Professional Midwife providing pregnancy, birth, and postpartum care in the Hampton Roads and surrounding areas.", photo: "https://sunflowerbabiesmidwifery.com/_assets/media/aa3ae68c326244d012502cedbb49ef10.jpg", services: ["Postpartum"], isMidwife: true, costRange: "Contact for pricing" ,
+      { name: "Sunflower Babies Midwifery" , credential: "CPM" , practice: "Sunflower Babies Midwifery" , url: "https://sunflowerbabiesmidwifery.com" , description: "Tierra Jackson, CPM, LM — Licensed Certified Professional Midwife providing pregnancy, birth, and postpartum care in the Hampton Roads and surrounding areas.", photo: "https://sunflowerbabiesmidwifery.com/_assets/media/aa3ae68c326244d012502cedbb49ef10.jpg", services: ["Postpartum"], serviceArea: ["Chesapeake, VA"], isMidwife: true, costRange: "Contact for pricing" ,
     acceptingClients: "true"
   },
     ],
