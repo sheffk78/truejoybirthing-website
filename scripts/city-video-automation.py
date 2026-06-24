@@ -9,7 +9,8 @@ Usage:
     python3 scripts/city-video-automation.py norfolk-va
 """
 
-import subprocess, sys, os, json, re, shutil, time, math
+import subprocess, sys, os, json, re, shutil, time, math, base64
+from datetime import datetime
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -86,6 +87,51 @@ def get_city_data(slug):
     }
 
 
+def _build_hospital_scenes(data, city, slug):
+    """Build individual hospital scenes, one per facility."""
+    scenes = []
+    hospitals = data.get('hospitals', [])
+    for i, hospital in enumerate(hospitals):
+        idx = i + 1
+        scene_id = f"03_hospital_{idx}"
+        # Unique narration mentioning only this hospital
+        if idx == 1:
+            narration = f"Let's start with {hospital}. It welcomes doulas and has NICU support for babies who need extra care."
+        else:
+            narration = f"{hospital} also welcomes doulas and provides NICU support. Each hospital in {city} has its own policies around birth plans and support people."
+        scenes.append(f'''    {{
+      scene_id: "{scene_id}",
+      scene_type: "tjb_hospital_card",
+      duration_seconds: 0,
+      narration: "{narration}",
+      text_content: {{
+        hospitalName: "{hospital}",
+        badges: ["Doula-Friendly", "NICU", "Medicaid"],
+      }},
+      image_source: "images/{slug}-birth-doula-hero.webp",
+    }}''')
+    return scenes
+
+
+def _build_provider_scene(data, city, slug):
+    """Build the provider scene as tjb_provider_scroll."""
+    provider_scene = f'''    {{
+      scene_id: "04_providers",
+      scene_type: "tjb_provider_scroll",
+      duration_seconds: 0,
+      narration: "{{city}} has experienced doulas and midwives ready to support you. See who's serving your area — and message them directly — in the app.",
+      text_content: {{
+        city: "{city}",
+        providerCount: 0,
+        screenshotPath: "images/{slug}-fullpage-scroll.png",
+        maxScroll: 0,
+      }},
+    }}'''
+    # Use a marker so we can inject city into narration at render time
+    provider_scene = provider_scene.replace('{{city}}', city)
+    return provider_scene
+
+
 def create_scene_data(data):
     """Create scene data TypeScript file for Remotion."""
     city = data['city']
@@ -105,6 +151,113 @@ def create_scene_data(data):
         'Oregon': "Oregon Health Plan covers doula services for eligible enrollees. Midwifery care is well-supported through CNMs and licensed CPMs.",
     }
     medicaid_line = medicaid_programs.get(data['state'], f"{data['state']} Medicaid covers doula services for eligible enrollees. Contact your managed care plan to confirm doula reimbursement and midwife coverage details.") if data['is_medicaid'] else f"{data['state']} Medicaid doesn't cover doulas right now. Most doulas offer sliding-scale fees and payment plans." 
+    
+    # Build hospital scenes — one per facility
+    hospital_scenes = _build_hospital_scenes(data, city, slug)
+    # Use first hospital for hook context narration
+    first_hospital = data['hospitals'][0] if data['hospitals'] else 'your local hospital'
+    num_hospitals = len(data['hospitals'])
+    if num_hospitals > 1:
+        hospital_hook_context = f"{first_hospital} and {num_hospitals - 1} other {'hospital' if num_hospitals == 2 else 'hospitals'}"
+    elif num_hospitals == 1:
+        hospital_hook_context = first_hospital
+    else:
+        hospital_hook_context = "your local hospital"
+    
+    # Build provider scene with correct type
+    provider_scene = _build_provider_scene(data, city, slug)
+    
+    bridge_narration = (
+        f"Here's what we're covering in this video: which hospitals welcome doulas and midwives, "
+        f"the doulas and midwives you can work with in {city}, what everything costs including "
+        f"midwifery care, {'how ' + data['state'] + ' Medicaid can help' if data['is_medicaid'] else 'your insurance options'}, "
+        f"and a free app that builds your birth plan step by step. Let's start with where you can deliver."
+    )
+    
+    scenes_list = [
+        f'''    {{
+      scene_id: "01_hook",
+      scene_type: "tjb_city_hook",
+      duration_seconds: 0,
+      narration: "Just found out you're pregnant in {city}? Congratulations! Now you've got eighty tabs open on hospitals, doulas, midwives, insurance. Let's close every single one of them right now.",
+      text_content: {{
+        city: "{city}",
+        state: "{data['state']}",
+        slug: "{slug}",
+        subtitle: "Your Birth Planning Guide",
+      }},
+      image_source: "images/{slug}-birth-doula-hero.webp",
+    }}''',
+        f'''    {{
+      scene_id: "02_overview",
+      scene_type: "tjb_city_bridge",
+      duration_seconds: 0,
+      narration: "{bridge_narration}",
+      text_content: {{
+        city: "{city}",
+        state: "{data['state']}",
+      }},
+    }}'''
+    ]
+    
+    # Add per-hospital scenes
+    scenes_list.extend(hospital_scenes)
+    
+    # Provider scroll scene
+    scenes_list.append(provider_scene)
+    
+    # Remaining standard scenes
+    scenes_list.append(f'''    {{
+      scene_id: "05_app",
+      scene_type: "tjb_app_feature",
+      duration_seconds: 0,
+      narration: "Here's the part every {city} mom should know about. The True Joy Birthing app is completely free — no account, no catch. Nine guided sections walk you through your entire birth plan. You can find and message doulas and midwives near you right inside the app. Then export your plan as a PDF to share with your provider. It's the tool every mom needs in her pocket.",
+      text_content: {{
+        headline: "Build Your Birth Plan",
+        features: [
+          "Nine guided sections — hospital preferences, pain management, who's in the room",
+          "Find and connect with doulas and midwives near you",
+          "Export a PDF to share with your provider",
+          "Free. No account needed. Works on iPhone.",
+        ],
+      }},
+    }}''')
+    
+    scenes_list.append(f'''    {{
+      scene_id: "06_cost",
+      scene_type: "tjb_cost_reveal",
+      duration_seconds: 0,
+      narration: "Here's the reality: a doula in {city} typically costs ${data['cost_low']:,} to ${data['cost_high']:,}. Most doulas offer payment plans, and some accept Medicaid. Midwifery care runs $5,000 to $8,000 for home birth or birth center care, and many midwives accept insurance. The investment is real, but the support is worth every dollar.",
+      text_content: {{
+        costRange: "${data['cost_low']:,}–${data['cost_high']:,}",
+        label: "Doulas · $1K–$3K · Midwives · $5K–$8K",
+        description: "Most doulas offer payment plans. Midwives often accept insurance.",
+      }},
+    }}''')
+    
+    scenes_list.append(f'''    {{
+      scene_id: "07_insurance",
+      scene_type: "tjb_insurance_branch",
+      duration_seconds: 0,
+      narration: "{medicaid_line}. Even if you have private insurance, some plans now include doula benefits — it's worth a call to check. The app has resources to help you navigate your options.",
+      text_content: {{
+        branch: "{'covers' if data['is_medicaid'] else 'no_coverage'}",
+        stateName: "{data['state']}",
+      }},
+    }}''')
+    
+    scenes_list.append(f'''    {{
+      scene_id: "08_cta",
+      scene_type: "tjb_city_cta",
+      duration_seconds: 0,
+      narration: "A birth plan tells your care team exactly what matters to you. You can build yours with the free PDF birth plan, watch our walkthrough series, or use the mobile app. It's all free, and it's all ready for you right now. We'll put the link below.",
+      text_content: {{
+        city: "{city}",
+        slug: "{slug}",
+      }},
+    }}''')
+    
+    scenes_joined = ",\n".join(scenes_list)
     
     ts_content = f'''// ════════════════════════════════════════════════════════════════════════════
 // {city} — Scene data for the {city}, {st} city guide video
@@ -126,95 +279,7 @@ export const {slug.replace('-', '_')}Data: TJBCityVideoData = {{
     hasAppScreenshot: false,
   }},
   scenes: [
-    {{
-      scene_id: "01_hook",
-      scene_type: "tjb_city_hook",
-      duration_seconds: 0,
-      narration: "Just found out you're pregnant in {city}? Congratulations! Now you've got eighty tabs open on hospitals, doulas, midwives, insurance. Let's close every single one of them right now.",
-      text_content: {{
-        city: "{city}",
-        state: "{data['state']}",
-        slug: "{slug}",
-        subtitle: "Your Birth Planning Guide",
-      }},
-      image_source: "images/{slug}-birth-doula-skyline.webp",
-    }},
-    {{
-      scene_id: "02_overview",
-      scene_type: "tjb_city_bridge",
-      duration_seconds: 0,
-      narration: "Here's what we're covering in this video: which hospitals welcome doulas and midwives, the doulas and midwives you can work with in {city}, what everything costs including midwifery care, {'how ' + data['state'] + ' Medicaid can help' if data['is_medicaid'] else 'your insurance options'}, and a free app that builds your birth plan step by step. Let's start with where you can deliver.",
-      text_content: {{
-        city: "{city}",
-        state: "{data['state']}",
-      }},
-    }},
-    {{
-      scene_id: "03_hospital_1",
-      scene_type: "tjb_hospital_card",
-      duration_seconds: 0,
-      narration: "{city}'s top hospital{'s include' if len(data['hospitals']) > 1 else ' is'} {', '.join(data['hospitals'][:2])}. {'All of them' if len(data['hospitals']) > 1 else 'It'} {'welcome' if len(data['hospitals']) > 1 else 'welcomes'} doulas and have{'s' if len(data['hospitals']) == 1 else ''} NICU support for babies who need extra care.",
-      text_content: {{
-        hospitalName: "{data['hospitals'][0] if data['hospitals'] else ''}",
-        badges: ["Doula-Friendly", "NICU", "Medicaid"],
-      }},
-      image_source: "images/{slug}-birth-doula-skyline.webp",
-    }},
-    {{
-      scene_id: "04_providers",
-      scene_type: "tjb_provider_portrait",
-      duration_seconds: 0,
-      narration: "{city} has experienced doulas and midwives ready to support you. See who's serving your area — and message them directly — in the app.",
-      text_content: {{
-        city: "{city}",
-      }},
-    }},
-    {{
-      scene_id: "05_app",
-      scene_type: "tjb_app_feature",
-      duration_seconds: 0,
-      narration: "Here's the part every {city} mom should know about. The True Joy Birthing app is completely free — no account, no catch. Nine guided sections walk you through your entire birth plan. You can find and message doulas and midwives near you right inside the app. Then export your plan as a PDF to share with your provider. It's the tool every mom needs in her pocket.",
-      text_content: {{
-        headline: "Build Your Birth Plan",
-        features: [
-          "Nine guided sections — hospital preferences, pain management, who's in the room",
-          "Find and connect with doulas and midwives near you",
-          "Export a PDF to share with your provider",
-          "Free. No account needed. Works on iPhone.",
-        ],
-      }},
-    }},
-    {{
-      scene_id: "06_cost",
-      scene_type: "tjb_cost_reveal",
-      duration_seconds: 0,
-      narration: "Here's the reality: a doula in {city} typically costs ${data['cost_low']:,} to ${data['cost_high']:,}. Most doulas offer payment plans, and some accept Medicaid. Midwifery care runs $5,000 to $8,000 for home birth or birth center care, and many midwives accept insurance. The investment is real, but the support is worth every dollar.",
-      text_content: {{
-        costRange: "${data['cost_low']:,}–${data['cost_high']:,}",
-        label: "Doulas · $1K–$3K · Midwives · $5K–$8K",
-        description: "Most doulas offer payment plans. Midwives often accept insurance.",
-      }},
-    }},
-    {{
-      scene_id: "07_insurance",
-      scene_type: "tjb_insurance_branch",
-      duration_seconds: 0,
-      narration: "{medicaid_line}. Even if you have private insurance, some plans now include doula benefits — it's worth a call to check. The app has resources to help you navigate your options.",
-      text_content: {{
-        branch: "{'covers' if data['is_medicaid'] else 'no_coverage'}",
-        stateName: "{data['state']}",
-      }},
-    }},
-    {{
-      scene_id: "08_cta",
-      scene_type: "tjb_city_cta",
-      duration_seconds: 0,
-      narration: "A birth plan tells your care team exactly what matters to you. You can build yours with the free PDF birth plan, watch our walkthrough series, or use the mobile app. It's all free, and it's all ready for you right now. We'll put the link below.",
-      text_content: {{
-        city: "{city}",
-        slug: "{slug}",
-      }},
-    }},
+{scenes_joined}
   ],
 }};
 '''
@@ -394,12 +459,12 @@ def update_scene_durations(data_file, timing):
 
 def copy_assets(slug):
     """Copy hero image to Remotion public/images directory."""
-    hero_src = PROJECT_ROOT / 'public' / 'images' / f'{slug}-birth-doula-skyline.webp'
+    hero_src = PROJECT_ROOT / 'public' / 'images' / f'{slug}-birth-doula-hero.webp'
     dest_dir = REMOTION_DIR / 'public' / 'images'
     dest_dir.mkdir(parents=True, exist_ok=True)
     
     if hero_src.exists():
-        shutil.copy2(str(hero_src), str(dest_dir / f'{slug}-birth-doula-skyline.webp'))
+        shutil.copy2(str(hero_src), str(dest_dir / f'{slug}-birth-doula-hero.webp'))
         print(f'  ✅ Hero image copied')
     
     # Copy logo SVGs
@@ -528,31 +593,51 @@ def upload_to_youtube(slug):
 
 
 def embed_on_page(slug, video_id, city_name=None):
-    """Embed YouTube video on city page."""
-    page_path = PROJECT_ROOT / 'src' / 'pages' / 'birth-support' / '[city].astro'
-    with open(page_path) as f:
+    """Embed YouTube video by adding entry to video-embeds.ts."""
+    embed_path = PROJECT_ROOT / 'src' / 'data' / 'video-embeds.ts'
+    if not embed_path.exists():
+        print(f'  ⚠️  video-embeds.ts not found at {embed_path}')
+        return False
+
+    with open(embed_path) as f:
         content = f.read()
 
-    embed_marker = f'youtube-nocookie.com/embed/{video_id}'
-    if embed_marker in content:
-        print(f'  ⏭️  Video already embedded')
+    # Check if already embedded
+    if f'"{slug}":' in content:
+        print(f'  ⏭️  Entry already exists for {slug}')
         return True
 
-    # Find the video embed section
-    if 'slug ===' in content:
-        old_embed = re.search(r'\{/\* Denver video \*/}.*?</section>', content, re.DOTALL)
-        if old_embed:
-            city = city_name or slug.split('-')[0].title()
-            new_embed = f'{{/* {slug} video */}}\n      {{slug === "{slug}" && (\n        <section class="py-12 bg-tjb-cream">\n          <div class="max-w-4xl mx-auto px-6">\n            <div class="text-center mb-8">\n              <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Video guide</p>\n              <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>\n              <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-3" style="font-family: \'DM Sans\', sans-serif;">{city} Doula & Birth Plan Guide</h2>\n              <p class="text-tjb-gray max-w-2xl mx-auto">Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.</p>\n            </div>\n            <div class="aspect-video rounded-xl overflow-hidden shadow-lg bg-black">\n              <iframe width="100%" height="100%" src="https://www.youtube-nocookie.com/embed/{video_id}" title="{city} Doula & Birth Plan Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>\n            </div>\n          </div>\n        </section>\n      )}}\n    '
-            content = content.replace(old_embed.group(0), new_embed)
-
-            with open(page_path, 'w') as f:
-                f.write(content)
-            print(f'  ✅ Video embedded on city page')
-            return True
-
-    print(f'  ⚠️  Could not auto-embed video — template may need manual update')
-    return False
+    city = city_name or slug.split('-')[0].title()
+    state_code = slug.split('-')[-1].upper() if '-' in slug else ''
+    
+    # Build ISO 8601 duration placeholder — actual duration set later via ffprobe
+    duration_str = 'PT3M00S'
+    today = datetime.now()
+    upload_date = f'2026-06-{min(24, today.day):02d}T00:00:00-06:00'
+    
+    new_entry = f'''  "{slug}": {{
+    videoId: "{video_id}",
+    title: "{city} Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "{duration_str}",
+    uploadDate: "{upload_date}",
+  }},
+'''
+    # Insert before the closing brace of the record
+    last_brace = content.rfind('}')
+    if last_brace > 0:
+        # Find the last '};' that closes the record
+        semicolon_pos = content.rfind('};')
+        if semicolon_pos > 0:
+            content = content[:semicolon_pos] + new_entry + '};\n'
+        else:
+            content = content[:last_brace] + new_entry + content[last_brace:]
+    
+    with open(embed_path, 'w') as f:
+        f.write(content)
+    
+    print(f'  ✅ Video embed added to video-embeds.ts for {slug}')
+    return True
 
 
 def update_csv(slug, video_id):

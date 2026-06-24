@@ -45,6 +45,10 @@ echo "=== TJB Safe Deploy (CF Auto-Deploy) ==="
 echo "URL:     $SITE_URL"
 echo "Time:    $(date '+%Y-%m-%d %H:%M:%S %Z')"
 
+# Set authorization flag — gates in pre-deploy and scripts check this
+# to prevent direct `wrangler pages deploy` from bypassing the gate pipeline
+export TJB_DEPLOY_AUTHORIZED=1
+
 cd "$PROJECT_DIR"
 
 # ---------------------------------------------------------------
@@ -97,6 +101,12 @@ fi
 # ---------------------------------------------------------------
 echo ""
 echo "--- PRE-DEPLOY GATE ---"
+# Run self-test first to verify the gate code itself is correct
+if ! bash scripts/preflight-self-test.sh; then
+  echo "  ❌ Preflight self-test FAILED — gate code may be broken. Fix before deploying."
+  exit 1
+fi
+echo "  → Self-test passed"
 if bash scripts/pre-deploy-gate.sh ${UPGRADE_SLUG:+"$UPGRADE_SLUG"}; then
   echo "  → Pre-deploy gate PASSED"
 else
@@ -141,10 +151,16 @@ CURRENT_MSG=$(git log -1 --format=%s HEAD)
 
 # 🔴 HARD GATE: Commit message must include preflight: pass for city deploys and video updates
 if echo "$CURRENT_MSG" | grep -qi "upgrade\|feat:.*city\|add.*city\|video.*embed\|embed.*video"; then
-  if ! echo "$CURRENT_MSG" | grep -qi "preflight"; then
+  if ! echo "$CURRENT_MSG" | grep -qi "preflight: pass"; then
     echo "  ❌ FATAL: City deploy/video-embed commit MUST include 'preflight: pass' in message."
     echo "  → Current commit: $CURRENT_MSG"
     echo "  → Fix: git commit --amend -m \"${CURRENT_MSG} [preflight: pass]\""
+    exit 1
+  fi
+  # Double-check: [preflight: passthrough] is NOT a valid substitute
+  if echo "$CURRENT_MSG" | grep -qi "passthrough"; then
+    echo "  ❌ FATAL: 'passthrough' is not a valid preflight result. Use 'preflight: pass'."
+    echo "  → Current commit: $CURRENT_MSG"
     exit 1
   fi
 fi

@@ -10,6 +10,11 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "deploy": "bash scripts/deploy.sh",
+    "deploy:city": "bash scripts/deploy.sh",
+    "wrangler": "bash scripts/wrangler-guard.sh",
+    "preflight": "npx tsx scripts/preflight.ts",
+    "preflight:self-test": "npx tsx scripts/preflight.ts --self-test",
     "test:city-pages": "tsx scripts/city-pages.test.ts",
     "validate": "tsx scripts/validate-cities.ts"
   },

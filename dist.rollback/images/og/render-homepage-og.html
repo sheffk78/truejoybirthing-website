@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1200px; height: 630px; overflow: hidden; background: #2D2B55; }
+
+.og-card {
+  width: 1200px;
+  height: 630px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
+}
+
+/* LEFT HALF — text content on brand cream */
+.text-half {
+  width: 50%;
+  height: 630px;
+  background: linear-gradient(180deg, #FAF8F5 0%, #E8E6F0 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 50px 60px 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Accent bars */
+.text-half::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 6px;
+  background: #D8A0C4;
+  z-index: 10;
+}
+.text-half::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 6px;
+  background: #D8A0C4;
+  z-index: 10;
+}
+
+/* Rose accent line */
+.rose-line {
+  width: 40px;
+  height: 3px;
+  background: #D8A0C4;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 5;
+}
+
+.label {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6E6C99;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 5;
+}
+
+.headline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #2D2B55;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 12px;
+  max-width: 460px;
+}
+
+.subtext {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #6E6C99;
+  letter-spacing: 0.3px;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 20px;
+  max-width: 420px;
+  line-height: 1.4;
+}
+
+.cta {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #C17BAF;
+  letter-spacing: 0.5px;
+  z-index: 5;
+  position: relative;
+}
+
+/* RIGHT HALF — PDF mockup on lavender gradient */
+.image-half {
+  width: 50%;
+  height: 630px;
+  background: linear-gradient(135deg, #E8E6F0 0%, #D8D6E8 50%, #C5C3D9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Stacked document mockup effect */
+.mockup-stack {
+  position: relative;
+  width: 260px;
+  height: 520px;
+}
+
+.mockup-page {
+  position: absolute;
+  width: 260px;
+  height: 480px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(45, 43, 85, 0.15), 0 1px 3px rgba(45, 43, 85, 0.08);
+  overflow: hidden;
+}
+
+.mockup-page:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform: rotate(-3deg);
+  z-index: 1;
+}
+
+.mockup-page:nth-child(2) {
+  top: 15px;
+  left: 20px;
+  transform: rotate(-1deg);
+  z-index: 2;
+}
+
+.mockup-page:nth-child(3) {
+  top: 30px;
+  left: 40px;
+  transform: rotate(1deg);
+  z-index: 3;
+}
+
+/* Page content — mimics the birth plan PDF */
+.page-header {
+  background: #7C6FA0;
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.page-header span {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.page-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2D2B55;
+  text-align: center;
+  padding: 14px 16px 8px;
+  line-height: 1.2;
+}
+
+.page-title .small {
+  font-size: 11px;
+  font-weight: 500;
+  color: #6E6C99;
+  display: block;
+  margin-top: 4px;
+}
+
+.page-body {
+  padding: 4px 16px;
+}
+
+.field-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.field {
+  flex: 1;
+}
+
+.field-label {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 7px;
+  font-weight: 600;
+  color: #9B98B8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.field-line {
+  height: 1px;
+  background: #E0DEEF;
+  margin-bottom: 1px;
+}
+
+.field-line-short {
+  width: 60%;
+  height: 1px;
+  background: #E0DEEF;
+  margin-bottom: 1px;
+}
+
+.section-break {
+  border: none;
+  border-top: 1px dashed #D8D0E8;
+  margin: 10px 0;
+}
+
+.section-header {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  color: #7C6FA0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 3px;
+}
+
+.check-box {
+  width: 8px;
+  height: 8px;
+  border: 1px solid #C0BDD5;
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.check-label {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 7px;
+  color: #6E6C99;
+  line-height: 1;
+}
+
+/* Logo bottom-left of right half */
+.logo-wrap {
+  position: absolute;
+  bottom: 24px;
+  right: 40px;
+  z-index: 10;
+}
+.logo-wrap img {
+  height: 40px;
+  width: auto;
+}
+</style>
+</head>
+<body>
+<div class="og-card">
+  <!-- LEFT: Brand text content -->
+  <div class="text-half">
+    <div class="rose-line"></div>
+    <div class="label">Free Doula-Crafted Birth Plan</div>
+    <div class="headline">Your birth plan gives you the words when your doctor recommends something you didn't expect</div>
+    <div class="subtext">Free fillable PDF template · Guided app walkthrough · Nurse-readable design</div>
+    <div class="cta">truejoybirthing.com →</div>
+  </div>
+
+  <!-- RIGHT: PDF mockup stack -->
+  <div class="image-half">
+    <div class="mockup-stack">
+      <div class="mockup-page">
+        <div class="page-header"><span>Joyful Birth Plan</span></div>
+        <div class="page-title">About Me <span class="small">Preferences for birth support</span></div>
+        <div class="page-body">
+          <div class="field-row">
+            <div class="field">
+              <div class="field-label">Name</div>
+              <div class="field-line"></div>
+            </div>
+            <div class="field">
+              <div class="field-label">Due date</div>
+              <div class="field-line"></div>
+            </div>
+          </div>
+          <hr class="section-break">
+          <div class="section-header">Labor &amp; Delivery</div>
+          <div class="check-row"><div class="check-box"></div><span class="check-label">Pain management preferences</span></div>
+          <div class="check-row"><div class="check-box"></div><span class="check-label">Who I want in the room</span></div>
+          <div class="check-row"><div class="check-box"></div><span class="check-label">Mobility &amp; monitoring</span></div>
+          <hr class="section-break">
+          <div class="section-header">Newborn Care</div>
+          <div class="check-row"><div class="check-box"></div><span class="check-label">Skin-to-skin contact</span></div>
+          <div class="check-row"><div class="check-box"></div><span class="check-label">Feeding plan</span></div>
+          <div class="field-label" style="margin-top:6px">Notes for my care team</div>
+          <div class="field-line"></div>
+          <div class="field-line"></div>
+          <div class="field-line-short"></div>
+        </div>
+      </div>
+      <div class="mockup-page"></div>
+      <div class="mockup-page"></div>
+    </div>
+    <div class="logo-wrap">
+      <img src="https://truejoybirthing.com/images/logo-mono.svg" alt="True Joy Birthing">
+    </div>
+  </div>
+</div>
+</body>
+</html>

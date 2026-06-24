@@ -78,27 +78,41 @@ fi
 for s in "${SLUGS[@]}"; do
   # Check all variants: canonical, -v2, -v3, etc.
   # -v2+ variants are INTENTIONAL CDN cache-busting suffixes
+  # ⚠️ Sort by variant number descending (not ASCII) to pick the most recent
+  #    ASCII sort puts -v2 BEFORE the base name because '-' (0x2D) < '.' (0x2E)
   found=false
+  best_file=""
+  best_variant=-1
   for variant in "" "-v2" "-v3" "-v4"; do
     file="public/images/og-city-${s}${variant}.webp"
     full="${PROJECT_DIR}/${file}"
     if [ -f "$full" ]; then
-      found=true
-      size=$(stat -f%z "$full" 2>/dev/null || stat -c%s "$full")
-      if [ "$size" -lt 10000 ]; then
-        gate_fail "OG image too small (${size}B): $file (min 10KB)"
-      else
-        # Verify decodable
-        if python3 -c "from PIL import Image; Image.open('$full').verify()" 2>/dev/null; then
-          gate_pass "OG image OK: $file (${size}B)"
-        else
-          gate_fail "OG image CORRUPTED (decode error): $file"
-        fi
+      # Extract variant number: ""=0, "-v2"=2, "-v3"=3, etc.
+      v=0
+      if [[ "$variant" =~ -v([0-9]+) ]]; then
+        v="${BASH_REMATCH[1]}"
       fi
-      break
+      if [ "$v" -gt "$best_variant" ]; then
+        best_variant=$v
+        best_file="$file"
+        best_full="$full"
+      fi
+      found=true
     fi
   done
-  if [ "$found" = false ]; then
+  if [ "$found" = true ]; then
+    size=$(stat -f%z "$best_full" 2>/dev/null || stat -c%s "$best_full")
+    if [ "$size" -lt 10000 ]; then
+      gate_fail "OG image too small (${size}B): $best_file (min 10KB)"
+    else
+      # Verify decodable
+      if python3 -c "from PIL import Image; Image.open('$best_full').verify()" 2>/dev/null; then
+        gate_pass "OG image OK: $best_file (${size}B)"
+      else
+        gate_fail "OG image CORRUPTED (decode error): $best_file"
+      fi
+    fi
+  else
     gate_fail "OG image MISSING for $s (no variant found)"
   fi
 done
@@ -107,11 +121,17 @@ done
 gate_header "G5: Commit Message"
 CURRENT_MSG=$(git log -1 --format=%s HEAD 2>/dev/null || echo "")
 
-if echo "$CURRENT_MSG" | grep -qi "upgrade\|feat:.*city\|add.*city" && \
-   ! echo "$CURRENT_MSG" | grep -qi "preflight"; then
-  gate_fail "City deploy commit MUST include 'preflight: pass' in message."
-  echo "  → Current commit: $CURRENT_MSG"
-  echo "  → Fix: git commit --amend -m \"${CURRENT_MSG} [preflight: pass]\""
+if echo "$CURRENT_MSG" | grep -qi "upgrade\|feat:.*city\|add.*city\|video.*embed\|embed.*video"; then
+  if ! echo "$CURRENT_MSG" | grep -qi "preflight: pass"; then
+    gate_fail "City deploy commit MUST include 'preflight: pass' in message."
+    echo "  → Current commit: $CURRENT_MSG"
+    echo "  → Fix: git commit --amend -m \"${CURRENT_MSG} [preflight: pass]\""
+  fi
+  # Double-check: [preflight: passthrough] is NOT a valid substitute
+  if echo "$CURRENT_MSG" | grep -qi "passthrough"; then
+    gate_fail "'passthrough' is not a valid preflight result. Use 'preflight: pass'."
+    echo "  → Current commit: $CURRENT_MSG"
+  fi
 fi
 
 # ── Summary ──────────────────────────────────────────────────

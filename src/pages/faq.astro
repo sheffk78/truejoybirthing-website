@@ -1,45 +1,170 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AppShowcase from '../components/AppShowcase.astro';
 import ContextualCityLinks from '../components/ContextualCityLinks.astro';
 
 const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "FAQ", "url": "https://truejoybirthing.com/faq/"}];
----
 
+const categories = [
+  {
+    id: "birth-plans",
+    label: "Birth Plans",
+    questions: [
+      {
+        q: "What is a birth plan and do I really need one?",
+        a: `A birth plan is a one-page document that tells your care team what matters most to you during labor and delivery. It's not a binding contract — it's a communication tool. Nurses and doctors rotate shifts; your birth plan travels with the chart so every provider knows what you want, even if you're in active labor and can't speak for yourself. Do you need one? Every mom deserves to walk in knowing her options. Our <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free Joyful Birth Plan template</a> covers everything in one page.`
+      },
+      {
+        q: "When should I start writing my birth plan?",
+        a: `Most families start around 28–32 weeks — the beginning of your third trimester. Starting early gives you time to discuss your preferences with your OB or midwife at a prenatal visit and adjust if your hospital has policies you didn't expect. Earlier is always fine. The sooner you understand your options, the more confident you'll feel when choices come up in the delivery room.`
+      },
+      {
+        q: "Do doctors and nurses actually read birth plans?",
+        a: `Yes — when they're short, organized, and respectful in tone. Your nurse is the one who reads it most closely since they're at your bedside throughout labor. Hand your plan to your <strong>nurse at admission</strong> (not the front desk) and ask them to add it to your chart. One page with clear bullet points is infinitely more effective than a multi-page document.`
+      },
+      {
+        q: "Can I change my birth plan during labor?",
+        a: `Absolutely. A birth plan is a set of preferences, not a contract. If you planned to go unmedicated and want an epidural, that is okay. If you planned on an epidural and labor is moving fast, you can skip it. Your team should support your current wishes, not the ones you wrote down weeks ago. The key is communicating clearly with your nurse and partner when things change.`
+      },
+      {
+        q: "What if my birth doesn't go according to plan?",
+        a: `That is normal — most births deviate from the plan in some way. A good birth plan is not about controlling every outcome. It's about communicating your preferences so your care team knows what you want when choices come up. When the plan changes, your preferences still guide the conversation. That is why we include space for "if things change" notes in the <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free template</a>.`
+      },
+      {
+        q: "What's the difference between the PDF and the app?",
+        a: `The <strong>PDF</strong> is free, fillable, and designed for print — write in your preferences and bring hard copies to the hospital. The <strong>free app</strong> goes further: it walks you through each section with guided videos, lets you update your plan anytime, and shares your live plan with your doula or partner directly. Both cover the same sections. The app is for families who want an interactive, always-current experience. <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Download the free app →</a>`
+      }
+    ]
+  },
+  {
+    id: "doulas",
+    label: "Doulas & Birth Support",
+    questions: [
+      {
+        q: "What is a doula and how do they help?",
+        a: `A doula is a trained, non-medical support person who provides emotional, physical, and informational support during labor and delivery. They stay with you through every contraction — holding space, suggesting position changes, helping you communicate with your care team. Research shows doula support leads to <strong>28% fewer cesareans</strong>, <strong>31% less Pitocin use</strong>, and labors that are <strong>40 minutes shorter on average</strong>. <a href="/what-is-a-doula/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Learn more about what a doula does →</a>`
+      },
+      {
+        q: "What's the difference between a doula and a midwife?",
+        a: `A doula provides non-medical emotional and physical support. A midwife is a medical care provider who can deliver babies, prescribe medications, and manage clinical care. They serve completely different roles on your birth team — and many families have both. The doula supports <em>you</em> while the midwife manages the medical side. <a href="/doula-vs-midwife/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Full comparison →</a>`
+      },
+      {
+        q: "Does True Joy Birthing replace having a doula?",
+        a: `No. Our tools <em>complement</em> doula support. The <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">free app</a> helps you build your plan and understand your options. The <a href="/walkthrough/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">guided walkthrough</a> teaches you what each choice means. But a doula knows your specific situation and adapts in real-time during labor — no app can do that. If you are considering hiring one, <a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">find a doula in your city</a>.`
+      },
+      {
+        q: "How do I find a doula near me?",
+        a: `Start with doula directories like DONA International or ProDoula, ask your OB or midwife for referrals, or check local Facebook mom groups. You can also browse our <a href="/birth-support/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">city-specific pages</a> — we list local doulas, hospitals, and cost information. When you find candidates, <a href="/how-to-choose-a-doula/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">interview at least two or three</a> before deciding.`
+      },
+      {
+        q: "When should I hire a doula?",
+        a: `Start looking around <strong>24–28 weeks</strong>. Good doulas book up, especially in metro areas. Starting early also gives you time to meet with 2–3 candidates and think it over without pressure. That said, even a doula hired at 38 weeks can provide meaningful support. It's never too late.`
+      }
+    ]
+  },
+  {
+    id: "costs",
+    label: "Costs & Insurance",
+    questions: [
+      {
+        q: "How much does a doula cost?",
+        a: `Birth doula fees in the US typically range from <strong>$650 to $3,000</strong> for a standard birth package. The national average is around <strong>$1,200–$1,500</strong>. A standard package includes 1–2 prenatal visits, on-call availability from 37 weeks, continuous labor support, and 1–2 postpartum visits. Costs vary by region — metro areas tend to be higher, rural areas lower. <a href="/doula-cost/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">See cost by city →</a>`
+      },
+      {
+        q: "Does Medicaid cover doulas?",
+        a: `As of 2026, states including <strong>Oregon, Washington, California, Colorado, New Mexico, Minnesota, Nevada, North Carolina, Utah, and others</strong> have implemented Medicaid doula coverage. Coverage details vary by state. Some states cover the full cost; others pay a portion. <a href="/medicaid-doula-coverage/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Check your state →</a>`
+      },
+      {
+        q: "Does private insurance cover doulas?",
+        a: `Some private insurers are beginning to cover doula services, particularly as part of maternal wellness benefits. Coverage varies widely by plan and state. Call your insurance provider and ask if doula services are covered under your maternity benefits. If they say no, ask about a "maternal wellness benefit" or "birth support benefit" — sometimes it is available even if the agent does not know to mention it.`
+      },
+      {
+        q: "Are there low-cost or free doula options?",
+        a: `Yes. Many communities have volunteer doula programs, and some doulas offer sliding-scale fees or payment plans. Student doulas completing certification often charge reduced rates while being supervised by experienced mentors. Look into local doula collectives, community birth centers, and nonprofits focused on maternal health equity.`
+      },
+      {
+        q: "How much does postpartum doula care cost?",
+        a: `Postpartum doulas typically charge <strong>$25–$50 per hour</strong> for daytime support and <strong>$200–$400 per overnight shift</strong>. Package rates for 3–5 days of support often bring the effective hourly rate down. Most families book 8–20 hours per week for the first 2–6 weeks. <a href="/postpartum-doula-cost/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Full cost guide →</a>`
+      }
+    ]
+  },
+  {
+    id: "app",
+    label: "The Free App",
+    questions: [
+      {
+        q: "Is the app really free for moms?",
+        a: `Yes. <strong>Parent Mode</strong> — the interactive birth plan builder, educational content, and guided walkthrough — is completely free. <strong>Pro Mode</strong> with tools for doulas and midwives is a paid subscription. No trial, no credit card. Just download it from the App Store and start building your plan. <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Download the free app →</a>`
+      },
+      {
+        q: "What is the Joyful Birth Plan?",
+        a: `A <strong>free, fillable birth plan template</strong> designed by a certified doula. It covers labor preferences, pain management, delivery, postpartum, and newborn care — organized so a nurse can read it in two minutes. Type directly into the PDF, print it, or fill it in by hand. <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Download the free Joyful Birth Plan →</a>`
+      },
+      {
+        q: "What is the Guided Birth Plan Walkthrough?",
+        a: `A <strong>free, self-paced video walkthrough</strong> with a certified doula guiding you through every section of your birth plan. About 60 minutes of short lessons covering labor choices, pain management tradeoffs, newborn procedures, and what to say when your provider recommends something unexpected. Free with your email. <a href="/walkthrough/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Watch the free walkthrough →</a>`
+      },
+      {
+        q: "What is the Birth Plan Confidence Session?",
+        a: `A <strong>60–75 minute live Zoom call</strong> with a certified birth doula who reviews your completed birth plan line by line — including advocacy role-play and hospital-specific pushback practice. Bring your questions and your plan. <strong>$250 per session</strong>, limited availability. <a href="/birth-plan-confidence-session/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Book a session →</a>`
+      }
+    ]
+  }
+];
+
+const allFaqSchemaItems = categories.flatMap(cat =>
+  cat.questions.map(q => ({
+    "@type": "Question",
+    name: q.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: q.a.replace(/<[^>]*>/g, '')
+    }
+  }))
+);
+---
 <Layout
-  title="Birth Plan &amp; Doula FAQ"
-  description="Answers to common questions about birth plans, doula costs, Medicaid doula coverage, and how the free Joyful Birth Plan template works."
-    canonical="https://truejoybirthing.com/faq/"
-    ogImage="/images/og/og-faq.png"
-    breadcrumbList={breadcrumbList}
+  title="Birth Plan &amp; Doula FAQ — Your Questions Answered"
+  description="Everything you need to know about birth plans, doulas, costs, insurance coverage, the free True Joy Birthing app, and getting started with confidence."
+  canonical="https://truejoybirthing.com/faq/"
+  ogImage="/images/og/og-faq-v6.webp"
+  breadcrumbList={breadcrumbList}
   schema={{
     "@graph": [
       {
         "@type": "FAQPage",
-        "mainEntity": [
-          {"@type":"Question","name":"What is a birth doula?","acceptedAnswer":{"@type":"Answer","text":"A trained, non-medical support person who provides emotional, physical, and informational support during birth. Doulas do not replace your doctor or midwife."}},
-          {"@type":"Question","name":"Does True Joy Birthing replace having a doula?","acceptedAnswer":{"@type":"Answer","text":"No. Our tools complement doula support. The free app helps you build a plan. The guided walkthrough teaches you your options. For personalized help, connect with a doula in your area."}},
-          {"@type":"Question","name":"Is the app really free for moms?","acceptedAnswer":{"@type":"Answer","text":"Yes. Parent Mode — the birth plan builder and education — is free. Pro Mode with tools for doulas and midwives is a paid subscription."}},
-          {"@type":"Question","name":"What's the difference between a doula and a midwife?","acceptedAnswer":{"@type":"Answer","text":"A doula provides non-medical support. A midwife is a medical care provider who can deliver babies. You can have both."}},
-          {"@type":"Question","name":"When should I start my birth plan?","acceptedAnswer":{"@type":"Answer","text":"Most families start around 28-32 weeks, but earlier is fine too. The sooner you understand your options, the more confident you'll feel."}},
-          {"@type":"Question","name":"What's Pro Mode?","acceptedAnswer":{"@type":"Answer","text":"Pro Mode is our paid subscription for doulas and midwives. It includes client management, visit tracking, notes, and invoicing — all built around birth-specific workflows."}},
-          {"@type":"Question","name":"What's the Joyful Birth Plan?","acceptedAnswer":{"@type":"Answer","text":"A free, fillable birth plan template designed by a certified doula — structured so a nurse can read it in two minutes. It covers every stage of birth: labor preferences, pain management, delivery, postpartum, and newborn care."}},
-          {"@type":"Question","name":"What's the Guided Birth Plan Walkthrough?","acceptedAnswer":{"@type":"Answer","text":"A self-paced video walkthrough that picks up where the free plan leaves off. About 60 minutes of short lessons that walk you through each section of your birth plan — what each choice means, what the tradeoffs are, and what to say when your provider recommends something you didn't expect. Free with your email."}},
-          {"@type":"Question","name":"What's the Birth Plan Confidence Session?","acceptedAnswer":{"@type":"Answer","text":"A 60–75 minute live Zoom call with a certified birth doula who reviews your completed birth plan with you line by line — including advocacy role-play and hospital-specific pushback practice. Bring your questions and your plan. $250 per session, limited spots."}}
-        ]
+        "mainEntity": allFaqSchemaItems
       }
     ]
   }}
 >
-  <!-- Hero — Split Layout (55% text / 45% image) -->
-  <section class="bg-tjb-cream pt-16 pb-12">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-        <div class="text-center md:text-left">
-          <p class="eyebrow mb-3">Free Joyful Birth Plan</p>
-          <h1 class="text-3xl md:text-4xl font-bold mb-4">FAQ</h1>
-          <p class="text-lg text-tjb-gray">Common questions about birth plans, doulas, and the Joyful Birth Plan.</p>
+
+  <!-- ═══════════════════════════════════════════
+       HERO — Product-first two-column archetype
+       Matches Denver page hero style
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-cream">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row">
+
+        <!-- Left: Text — 55% -->
+        <div class="md:w-[55%] px-6 md:px-12 py-16 md:py-24 flex flex-col justify-center">
+          <p class="eyebrow mb-3">Help Center</p>
+          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+          <h1 class="font-bold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(2.25rem, 5vw, 3.75rem);">
+            Birth Plan &amp; Doula FAQ
+          </h1>
+          <p class="text-tjb-gray text-lg leading-[1.7] mb-8 max-w-[36rem]">
+            Everything you need to know about birth plans, doulas, costs, insurance, the free app, and getting started — answered by a certified birth doula. Whether you're wondering what a birth plan actually covers, how to find and afford a doula in your city, what your insurance will pay for, or just want a simpler way to organize your preferences, this guide walks you through it all. We also cover how the free Joyful Birth Plan app helps you build, share, and update your plan in minutes — so you walk into the delivery room confident and prepared.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="/birth-plan-template/" class="btn-primary">Get the free birth plan</a>
+            <a href="#questions" class="btn-secondary">Browse questions</a>
+          </div>
         </div>
-        <div class="relative">
+
+        <!-- Right: Photo — 45% -->
+        <div class="md:w-[45%] flex items-center justify-center px-6 py-12 md:py-0">
           <img
             src="/images/hero-faq.webp"
             alt="Frequently asked questions about birth plans, doulas, and the Joyful Birth Plan"
@@ -47,76 +172,206 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
             width="900"
             height="1200"
             loading="eager"
+            fetchpriority="high"
           />
         </div>
+
       </div>
     </div>
   </section>
 
-  <section class="py-16 bg-white">
+  <!-- ═══════════════════════════════════════════
+       JUMP LINKS — Quick navigation to categories
+       ═══════════════════════════════════════════ -->
+  <section id="questions" class="py-8 border-t border-tjb-lavender-300/30">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="text-sm font-semibold text-tjb-gray uppercase tracking-wide mb-4">Jump to topic:</p>
+      <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+        {categories.map(cat => (
+          <a href={`#${cat.id}`} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">{cat.label}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FAQ CATEGORIES — Editorial stacked layout
+       No card grids, no emoji, no AI slop
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 bg-white">
     <div class="max-w-3xl mx-auto px-6">
-      <h2 class="text-2xl font-bold text-center mb-10 text-tjb-charcoal">Common Questions</h2>
-      <div class="space-y-6">
-      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
-        <h3 class="font-semibold text-lg mb-2">What is a birth doula?</h3>
-        <p class="text-tjb-gray">A trained, non-medical support person who provides emotional, physical, and informational support during birth. Doulas do not replace your doctor or midwife. Think of a doula as your advocate and coach — someone who knows the system, helps you navigate decisions, and stays with you through every contraction when hospital staff rotates. <a href="/what-is-a-doula/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Learn more about what a doula does →</a></p>
-      </div>
-      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
-        <h3 class="font-semibold text-lg mb-2">Does True Joy Birthing replace having a doula?</h3>
-        <p class="text-tjb-gray">No. Our tools complement doula support. The free app helps you build a plan. The guided walkthrough teaches you your options. For personalized help, connect with a doula in your area or find one at /birth-support/. A doula knows your specific situation and can adapt in real-time during labor — no app can do that.</p>
-      </div>
-      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
-        <h3 class="font-semibold text-lg mb-2">Is the app really free for moms?</h3>
-        <p class="text-tjb-gray">Yes. Parent Mode — the birth plan builder and education — is free. Pro Mode with tools for doulas and midwives is a paid subscription available on the App Store and Google Play.</p>
-      </div>
-      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
-        <h3 class="font-semibold text-lg mb-2">What's the difference between a doula and a midwife?</h3>
-        <p class="text-tjb-gray">A doula provides non-medical emotional and physical support. A midwife is a medical care provider who can deliver babies, prescribe, and perform clinical procedures. You can have both — they serve completely different roles on your birth team. <a href="/benefits-of-a-doula/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">See the evidence on doula benefits →</a></p>
-      </div>
-      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
-        <h3 class="font-semibold text-lg mb-2">When should I start my birth plan?</h3>
-        <p class="text-tjb-gray">Most families start around 28-32 weeks, but earlier is fine too. The sooner you understand your options, the more confident you'll feel. Starting early also gives you time to have real conversations with your provider — and to course-correct if needed. It's also the right time to start thinking about <a href="/doula-cost/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">what doula support costs</a> if you're considering hiring one.</p>
-      </div>
-      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
-        <h3 class="font-semibold text-lg mb-2">What's Pro Mode?</h3>
-        <p class="text-tjb-gray">Pro Mode is our paid subscription for doulas and midwives. It includes client management, visit tracking, notes, and simple invoicing — all built around birth-specific workflows. Available on the App Store and Google Play.</p>
-      </div>
-      <div class="bg-tjb-cream rounded-xl p-6 border border-tjb-lavender-200/50">
-        <h3 class="font-semibold text-lg mb-2">What's the Joyful Birth Plan?</h3>
-        <p class="text-tjb-gray">A free, fillable birth plan template designed by a certified doula — structured so a nurse can read it in two minutes. It covers every stage of birth: labor preferences, pain management, delivery, postpartum, and newborn care. <a href="/birth-plan-template/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Download free birth plan</a></p>
-      </div>
-      <div class="bg-tjb-cream rounded-xl p-6 border border-tjb-lavender-200/50">
-        <h3 class="font-semibold text-lg mb-2">What's the Guided Birth Plan Walkthrough?</h3>
-        <p class="text-tjb-gray">A self-paced video walkthrough that picks up where the free plan leaves off. About 60 minutes of short lessons that walk you through each section of your birth plan — what each choice means, what the tradeoffs are, and what to say when your provider recommends something you didn't expect. Free with your email. <a href="/birth-plan-template/#walkthrough" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Watch the free walkthrough</a></p>
-      </div>
-      <div class="bg-tjb-cream rounded-xl p-6 border border-tjb-lavender-200/50">
-        <h3 class="font-semibold text-lg mb-2">What's the Birth Plan Confidence Session?</h3>
-        <p class="text-tjb-gray">A 60–75 minute live Zoom call with a certified birth doula who reviews your completed birth plan with you line by line — including advocacy role-play and hospital-specific pushback practice. Bring your questions and your plan. $250 per session, limited spots. <a href="/birth-plan-confidence-session/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Book a Birth Plan Confidence Session</a></p>
-      </div>
-      </div>
-    </div>
 
-    <div class="max-w-3xl mx-auto px-6 mt-16">
-      <h2 class="text-2xl font-bold text-center mb-10 text-tjb-charcoal">Start here</h2>
+      {categories.map((cat, catIdx) => (
+        <div id={cat.id} class="mb-16 last:mb-0 scroll-mt-20">
+          <!-- Category header — editorial with number + rule -->
+          <div class="flex items-baseline gap-4 mb-10">
+            <span class="text-5xl font-bold text-tjb-lavender-300 font-serif opacity-60 leading-none">{String(catIdx + 1).padStart(2, '0')}</span>
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal">{cat.label}</h2>
+              <div class="w-10 h-0.5 bg-tjb-rose-500 mt-2"></div>
+            </div>
+          </div>
 
-      <div class="space-y-6">
-        <a href="/birth-plan-template/" class="block bg-tjb-lavender-50 rounded-xl p-6 border-2 border-tjb-lavender-300 hover:border-tjb-rose-300 transition group">
-          <h3 class="text-lg font-bold text-tjb-charcoal group-hover:text-tjb-rose-500 transition mb-1">Download free birth plan</h3>
-          <p class="text-sm text-tjb-gray">The free Joyful Birth Plan — structured, fillable, and designed to be read by a nurse in two minutes.</p>
-        </a>
-        <a href="/birth-plan-template/#walkthrough" class="block bg-white rounded-xl p-6 border border-tjb-lavender-200/50 hover:border-tjb-rose-300 transition group">
-          <h3 class="text-lg font-bold text-tjb-charcoal group-hover:text-tjb-rose-500 transition mb-1">Watch the free walkthrough</h3>
-          <p class="text-sm text-tjb-gray">Walk through every section of your plan with a doula's context. Free with your email.</p>
-        </a>
-        <a href="/birth-plan-confidence-session/" class="block bg-white rounded-xl p-6 border border-tjb-lavender-200/50 hover:border-tjb-rose-300 transition group">
-          <h3 class="text-lg font-bold text-tjb-charcoal group-hover:text-tjb-rose-500 transition mb-1">Book a Birth Plan Confidence Session</h3>
-          <p class="text-sm text-tjb-gray">A 60–75 minute live Zoom call to review your plan with a doula line by line. $250 per session.</p>
-        </a>
-      </div>
+          <!-- Questions — editorial list with horizontal rules -->
+          <div class="space-y-0">
+            {cat.questions.map((q, qIdx) => (
+              <div class="py-6 first:pt-0 border-b border-tjb-lavender-200/30 last:border-b-0">
+                <h3 class="font-bold text-lg text-tjb-charcoal mb-3">{q.q}</h3>
+                <div class="text-tjb-gray leading-relaxed text-[0.9375rem]" set:html={q.a}></div>
+              </div>
+            ))}
+          </div>
 
-      <p class="text-sm text-tjb-gray mt-8 text-center">Still have questions? <a href="/contact/" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Contact us</a></p>
+          {cat.id === 'doulas' && (
+            <div class="my-12 not-prose">
+              <div class="relative rounded-2xl overflow-hidden shadow-lg shadow-tjb-lavender-300/20">
+                <img
+                  src="/images/doula-holding-hands.webp"
+                  alt="A doula providing comfort and support to a mother during labor — holding hands in a warm, reassuring moment"
+                  class="w-full aspect-[3/2] object-cover"
+                  loading="lazy"
+                  width="1024"
+                  height="682"
+                />
+              </div>
+              <p class="text-sm text-tjb-gray-400 mt-3 text-center max-w-xl mx-auto">A doula's support goes beyond the birth room — continuous presence, comfort, and advocacy are the foundation of better birth outcomes.</p>
+            </div>
+          )}
+        </div>
+      ))}
+
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════
+       APP SHOWCASE — Phone mockup + store badges
+       Same archetype as Denver city page
+       ═══════════════════════════════════════════ -->
+  <section class="py-16 md:py-20 bg-tjb-cream border-t border-tjb-lavender-200/50">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="eyebrow mb-3">Free for moms</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+      <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15] mb-4">
+        Your Birth Plan, In Your Pocket
+      </h2>
+      <p class="text-tjb-gray text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+        The free True Joy Birthing app walks you through every section of your birth plan with guided videos, lets you update anytime, and shares your preferences with your doula or partner. Download it free — no trial, no credit card.
+      </p>
+
+      <div class="flex justify-center">
+        <AppShowcase />
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+        <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-primary">
+          Download the Free App
+        </a>
+        <a href="/walkthrough/" class="btn-secondary">
+          Watch the Free Walkthrough
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       LEAD CAPTURE — Get the free birth plan + walkthrough
+       ═══════════════════════════════════════════ -->
+  <section class="bg-white border-y border-tjb-lavender-200/60 py-16 md:py-20">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <p class="eyebrow mb-4">Free Download</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+      <h2 class="text-[2.25rem] md:text-[2.5rem] leading-[1.15] mb-4">Get the Free Joyful Birth Plan</h2>
+      <p class="text-tjb-gray mb-6 max-w-lg mx-auto leading-relaxed">
+        Enter your name and email and we'll send you the free fillable PDF birth plan template plus access to all 5 guided walkthrough videos — a certified doula walking you through every decision.
+      </p>
+
+      <form id="faq-lead-form" class="flex flex-col gap-3 max-w-md mx-auto mb-4">
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input
+            id="faq-lead-name"
+            name="name"
+            type="text"
+            placeholder="Your first name"
+            class="flex-1 px-5 py-3.5 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-rose-400 bg-white transition-colors text-[0.9375rem]"
+            required
+          />
+          <input
+            id="faq-lead-email"
+            name="email"
+            type="email"
+            placeholder="Your email"
+            class="flex-1 px-5 py-3.5 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-rose-400 bg-white transition-colors text-[0.9375rem]"
+            required
+          />
+        </div>
+        <button type="submit" id="faq-lead-submit" class="btn-primary whitespace-nowrap">
+          Get the free birth plan &amp; walkthrough
+        </button>
+      </form>
+      <p id="faq-lead-status" class="text-xs hidden text-tjb-gray-300"></p>
+
+      <div id="faq-lead-success" class="hidden">
+        <p class="text-green-700 font-semibold mb-4">✓ Check your inbox — your birth plan is on its way!</p>
+        <p class="text-tjb-gray mb-6">While you wait, download the free app to explore your birth plan interactively.</p>
+        <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-primary inline-block">
+          Download the Free App
+        </a>
+      </div>
+
+      <p class="text-xs text-tjb-gray-300 mt-2">No spam. Just your birth plan and occasional tips you can actually use.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTEXTUAL CITY LINKS — For local birth support
+       ═══════════════════════════════════════════ -->
   <ContextualCityLinks topic="general" />
+
 </Layout>
+
+<script>
+  const leadForm = document.getElementById('faq-lead-form') as HTMLFormElement;
+  const leadStatus = document.getElementById('faq-lead-status') as HTMLParagraphElement;
+  const leadSuccess = document.getElementById('faq-lead-success') as HTMLDivElement;
+  const leadBtn = document.getElementById('faq-lead-submit') as HTMLButtonElement;
+  const leadName = document.getElementById('faq-lead-name') as HTMLInputElement;
+  const leadEmail = document.getElementById('faq-lead-email') as HTMLInputElement;
+
+  leadForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = leadName.value.trim();
+    const email = leadEmail.value.trim();
+    if (!email) return;
+
+    leadBtn.disabled = true;
+    leadBtn.textContent = 'Sending...';
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: name || 'FAQ Lead', email, message: `Birth plan PDF request from FAQ page: ${name || email}` }),
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        leadForm.classList.add('hidden');
+        leadStatus.classList.add('hidden');
+        leadSuccess.classList.remove('hidden');
+        leadForm.reset();
+        localStorage.setItem('tjb_lead_captured', 'true');
+        window.dispatchEvent(new CustomEvent('lead-captured'));
+      } else {
+        leadStatus.textContent = 'Something went wrong. Please try again.';
+        leadStatus.className = 'text-xs text-red-600 mt-2';
+        leadStatus.classList.remove('hidden');
+      }
+    } catch {
+      leadStatus.textContent = 'Network error. Please try again.';
+      leadStatus.className = 'text-xs text-red-600 mt-2';
+      leadStatus.classList.remove('hidden');
+    } finally {
+      leadBtn.disabled = false;
+      leadBtn.textContent = 'Get the free birth plan & walkthrough';
+    }
+  });
+</script>

@@ -10,9 +10,11 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 const PROJECT_DIR = '/Users/socializerender/Projects/truejoybirthing-website';
 const CANONICAL_DIR = '/Users/socializerender/Projects/truejoybirthing-website';
+const __filename = fileURLToPath(import.meta.url);
 
 interface GateResult {
   gate: string;
@@ -24,6 +26,61 @@ function run(): void {
   const args = process.argv.slice(2);
   const targetSlug = args[0] || null;
   const results: GateResult[] = [];
+
+  // ── Self-test mode: verify gate code integrity ──
+  if (args.includes('--self-test')) {
+    console.log('  Running self-test...');
+    let selfTestPass = true;
+    const source = fs.readFileSync(__filename, 'utf-8');
+    // Check 1: No WARN status values (all gates must be PASS/FAIL/SKIP)
+    // Only check the actual gate code (lines after the self-test block)
+    const lines = source.split('\n');
+    // Find the end of the self-test block via marker comment
+    // Search from line 50 onward to avoid finding our own includes() call
+    let gateStart = 0;
+    for (let i = 50; i < lines.length; i++) {
+      if (lines[i].includes('// --- END SELF-TEST ---')) {
+        gateStart = i + 1;
+        break;
+      }
+    }
+    const gateLines = lines.slice(gateStart).join('\n');
+    if (gateLines.includes("'WARN'")) {
+      console.log('  ❌ Self-test FAILED: preflight.ts contains WARN status values');
+      selfTestPass = false;
+    } else {
+      console.log('  ✅ No WARN downgrades');
+    }
+
+    // Check 2: All AWK patterns use the correct terminator (not ^  },)
+    const awkLines = source.match(/awk\s+.*slug.*/g) || [];
+    for (const line of awkLines) {
+      if (line.includes('^  },')) {
+        console.log(`  ❌ Self-test FAILED: AWK pattern uses wrong terminator: ${line.trim()}`);
+        selfTestPass = false;
+      }
+    }
+    if (selfTestPass) {
+      console.log('  ✅ All AWK patterns use correct terminator');
+    }
+
+    // Check 3: G4/G21 use numeric variant sort (not ASCII sort)
+    if (gateLines.includes('files.sort();')) {
+      console.log('  ❌ Self-test FAILED: files.sort() without custom comparator found');
+      selfTestPass = false;
+    } else {
+      console.log('  ✅ All file sorts use numeric variant comparator');
+    }
+
+    if (selfTestPass) {
+      console.log('  ✅ Self-test passed');
+    } else {
+      console.log('  ❌ Self-test FAILED — fix gate code before deploying');
+      process.exit(1);
+    }
+    return;
+  }
+// --- END SELF-TEST ---
 
   console.log('═══════════════════════════════════════');
   console.log('  TJB Preflight Gate');
@@ -44,7 +101,7 @@ function run(): void {
     // Targeted mode: quick awk check instead of full validator flood
     try {
       const cityBlock = execSync(
-        `awk '/slug: "${targetSlug}"/{p=1} p; /^  },/{if(p) exit}' src/data/cities.ts`,
+        `awk '/slug: "${targetSlug}"/{p=1} p; /^  "[a-z].*": \\{/{if(p && NR>start) exit} p{start=NR}' src/data/cities.ts`,
         { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
       );
       const missing: string[] = [];
@@ -100,6 +157,9 @@ function run(): void {
   // Cloudflare Pages sets 1-year immutable cache on static assets, so renaming
   // the file is the only way to force a fresh serve. The preflight accepts any
   // variant that exists and is ≥10KB.
+  // ⚠️ Sorting fix (June 2026): ASCII sort puts -v2 BEFORE the base name
+  // because '-' (0x2D) < '.' (0x2E), so files[length-1] picks corrupted v1
+  // instead of valid v2. Fix: sort by variant number descending.
   const checkOgs = targetSlug ? [targetSlug] : getCitySlugs();
   let ogPass = true;
   for (const slug of checkOgs) {
@@ -114,9 +174,17 @@ function run(): void {
       continue;
     }
 
-    // Use the highest-variant file (most recent)
-    files.sort();
-    const bestFile = files[files.length - 1];
+    // Sort by variant number descending so files[0] = most recent version
+    // Fixes ASCII sort bug: '-' (0x2D) < '.' (0x2E) was picking v1 over v2
+    files.sort((a, b) => {
+      const va = parseInt(a.match(/-v(\d+)/)?.[1] ?? '0');
+      const vb = parseInt(b.match(/-v(\d+)/)?.[1] ?? '0');
+      // Highest variant first (most recent)
+      if (va !== vb) return vb - va;
+      // Same variant (or none) — put file with non-zero variant first
+      return (va === 0 ? 1 : 0) - (vb === 0 ? 1 : 0);
+    });
+    const bestFile = files[0];
     const fullPath = path.join(dir, bestFile);
     const size = fs.statSync(fullPath).size;
 
@@ -145,30 +213,17 @@ function run(): void {
     let searchBlock = citiesContent;
 
     if (targetSlug) {
-      // Scope to the target city's block only
-      const slugMatch = citiesContent.match(new RegExp(`"${targetSlug}":\\s*\\{`));
-      if (slugMatch) {
-        const blockStart = slugMatch.index!;
-        // Find the closing of this city block (next top-level `},` or end of file)
-        let depth = 0;
-        let blockEnd = citiesContent.length;
-        for (let i = blockStart; i < citiesContent.length; i++) {
-          const c = citiesContent[i];
-          if (c === '{') depth++;
-          else if (c === '}') {
-            depth--;
-            if (depth === 0) {
-              // Check if next non-whitespace is a comma (end of city block)
-              const rest = citiesContent.slice(i + 1).trimStart();
-              if (rest.startsWith(',')) {
-                // Block ends just past the closing brace + comma
-                blockEnd = i + 1;
-                break;
-              }
-            }
-          }
-        }
-        searchBlock = citiesContent.slice(blockStart, blockEnd);
+      // Scope to the target city's block only — use AWK for reliable block extraction
+      // (avoids brace-in-string false positives from manual depth counter)
+      try {
+        const blockContent = execSync(
+          `awk '/slug: "${targetSlug}"/{p=1} p; /^  "[a-z].*": \\{/{if(p && NR>start) exit} p{start=NR}' src/data/cities.ts`,
+          { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+        );
+        searchBlock = blockContent;
+      } catch {
+        // Fallback: use the whole file if AWK fails
+        searchBlock = citiesContent;
       }
     }
 
@@ -181,8 +236,8 @@ function run(): void {
       }
     }
     if (badVerifications.length > 0) {
-      results.push({ gate: 'V1', status: 'WARN', detail: `${badVerifications.length} provider(s) in ${targetSlug || 'all cities'} have isVerified: true. Verify these are legitimate outreach responses, not batch-sets.` });
-      badVerifications.forEach(v => results.push({ gate: 'V1', status: 'WARN', detail: `  ${v}` }));
+      results.push({ gate: 'V1', status: 'FAIL', detail: `${badVerifications.length} provider(s) in ${targetSlug || 'all cities'} have isVerified: true. Verify these are legitimate outreach responses, not batch-sets.` });
+      badVerifications.forEach(v => results.push({ gate: 'V1', status: 'FAIL', detail: `  ${v}` }));
     } else {
       results.push({ gate: 'V1', status: 'PASS', detail: `No phantom verified badges in ${targetSlug || 'all cities'}` });
     }
@@ -300,7 +355,7 @@ function run(): void {
   if (targetSlug) {
     try {
       const cityBlock = execSync(
-        `awk '/slug: "${targetSlug}"/{p=1} p; /^  },/{if(p) exit}' src/data/cities.ts`,
+        `awk '/slug: "${targetSlug}"/{p=1} p; /^  "[a-z].*": \\{/{if(p && NR>start) exit} p{start=NR}' src/data/cities.ts`,
         { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
       );
       // Look for YouTube embed URL in the dist HTML
@@ -380,7 +435,7 @@ function run(): void {
   if (targetSlug) {
     try {
       const cityBlock = execSync(
-        `awk '/slug: "${targetSlug}"/{p=1} p; /^  },/{if(p) exit}' src/data/cities.ts`,
+        `awk '/slug: "${targetSlug}"/{p=1} p; /^  "[a-z].*": \\{/{if(p && NR>start) exit} p{start=NR}' src/data/cities.ts`,
         { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
       );
 
@@ -404,7 +459,14 @@ function run(): void {
       }
 
       if (thumbnails.length === 0) {
-        results.push({ gate: 'G20', status: 'SKIP', detail: 'No hospital/birth center thumbnails found' });
+        // Check if hospitals or birth centers exist in this city block
+        // If they do, missing thumbnail fields is a FAIL (silent miss)
+        const hasHospitals = /hospitalDetails|birthCenterDetails/.test(cityBlock);
+        if (hasHospitals) {
+          results.push({ gate: 'G20', status: 'FAIL', detail: `Hospital/birth center entries exist but ZERO thumbnail fields found — add thumbnail: fields to each facility` });
+        } else {
+          results.push({ gate: 'G20', status: 'SKIP', detail: 'No hospital/birth center thumbnails found (no facilities in this city)' });
+        }
       } else if (missingThumbs === 0) {
         results.push({ gate: 'G20', status: 'PASS', detail: `All ${thumbnails.length} thumbnails exist on disk, ≥1KB` });
       }
@@ -419,18 +481,26 @@ function run(): void {
   if (targetSlug) {
     try {
       const dir = path.join(PROJECT_DIR, 'public/images');
-      const heroPattern = new RegExp(`^${targetSlug}-birth-doula`);
+      // Narrow hero pattern to specifically match -hero variants (not -skyline, -support)
+      const heroPattern = new RegExp(`^${targetSlug}-birth-doula-hero(-v\\d+)?\\.webp$`);
       const ogPattern = new RegExp(`^og-city-${targetSlug}(-v\\d+)?\\.webp$`);
 
       const heroFiles = fs.readdirSync(dir).filter(f => heroPattern.test(f));
       const ogFiles = fs.readdirSync(dir).filter(f => ogPattern.test(f));
 
       if (heroFiles.length > 0 && ogFiles.length > 0) {
-        // Sort to get the latest variant
-        heroFiles.sort();
-        ogFiles.sort();
-        const heroPath = path.join(dir, heroFiles[heroFiles.length - 1]);
-        const ogPath = path.join(dir, ogFiles[ogFiles.length - 1]);
+        // Sort by variant number descending to get the most recent version
+        // (same fix as G4 — ASCII sort puts -v2 before base name)
+        const sortByVariant = (a: string, b: string) => {
+          const va = parseInt(a.match(/-v(\d+)/)?.[1] ?? '0');
+          const vb = parseInt(b.match(/-v(\d+)/)?.[1] ?? '0');
+          if (va !== vb) return vb - va;
+          return (va === 0 ? 1 : 0) - (vb === 0 ? 1 : 0);
+        };
+        heroFiles.sort(sortByVariant);
+        ogFiles.sort(sortByVariant);
+        const heroPath = path.join(dir, heroFiles[0]);
+        const ogPath = path.join(dir, ogFiles[0]);
 
         const heroSize = fs.statSync(heroPath).size;
         const ogSize = fs.statSync(ogPath).size;
@@ -483,10 +553,12 @@ function run(): void {
               );
               const ytData = JSON.parse(ytResult);
               const thumbUrl = ytData.thumbnail_url || '';
-              // Auto-generated thumbnails follow the pattern hqdefault.jpg
-              // Custom thumbnails have a different URL pattern
-              if (thumbUrl.includes('hqdefault')) {
-                results.push({ gate: 'G22', status: 'WARN', detail: `YouTube thumbnail is auto-generated (hqdefault pattern) for video ${videoId}. Upload a branded thumbnail when convenient.` });
+              const thumbWidth = ytData.thumbnail_width || 0;
+              // Auto-generated thumbnails are 480×360 (hqdefault).
+              // Custom/branded thumbnails uploaded via API are 1280×720 (maxresdefault).
+              // Check width: 1280 = branded, 480 = auto-generated.
+              if (thumbWidth < 1000 || thumbUrl.includes('hqdefault')) {
+                results.push({ gate: 'G22', status: 'FAIL', detail: `YouTube thumbnail appears auto-generated (${thumbWidth}px wide, hqdefault pattern) for video ${videoId}. Upload a branded thumbnail.` });
               } else {
                 results.push({ gate: 'G22', status: 'PASS', detail: `YouTube thumbnail appears custom for video ${videoId}` });
               }
@@ -505,6 +577,155 @@ function run(): void {
     }
   } else {
     results.push({ gate: 'G22', status: 'SKIP', detail: 'Skipping YT thumbnail check in audit mode (run with slug)' });
+  }
+
+  // ── G8: Hero image is a pregnant silhouette, not a city skyline (PIL) ──
+  if (targetSlug) {
+    try {
+      const g8Result = execSync(
+        `python3 scripts/preflight-image-helper.py hero-silhouette ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 15000 }
+      );
+      const g8Data = JSON.parse(g8Result.trim());
+      if (g8Data.pass) {
+        results.push({ gate: 'G8', status: 'PASS', detail: g8Data.detail });
+      } else {
+        results.push({ gate: 'G8', status: 'FAIL', detail: g8Data.detail });
+      }
+    } catch (e: any) {
+      // Try parsing JSON from stderr or partial output
+      const output = typeof e.stdout === 'string' ? e.stdout : typeof e === 'object' && e.message ? e.message : '';
+      try {
+        const g8Data = JSON.parse(output.trim());
+        if (g8Data.pass) {
+          results.push({ gate: 'G8', status: 'PASS', detail: g8Data.detail });
+        } else {
+          results.push({ gate: 'G8', status: 'FAIL', detail: g8Data.detail });
+        }
+      } catch {
+        results.push({ gate: 'G8', status: 'SKIP', detail: 'Could not check hero silhouette' });
+      }
+    }
+  } else {
+    results.push({ gate: 'G8', status: 'SKIP', detail: 'Skipping hero silhouette check in audit mode (run with slug)' });
+  }
+
+  // ── G9: Support scene is city-specific, not generic ──
+  if (targetSlug) {
+    try {
+      const g9Result = execSync(
+        `awk '/slug: "${targetSlug}"/{p=1} p; /^  "[a-z].*": \\\\{/{if(p && NR>start) exit} p{start=NR}' src/data/cities.ts | grep -oE 'supportSceneImage:\\s*"[^"]+"' | head -1 | sed 's/supportSceneImage: *"//' | sed 's/"$//'`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+      const supportScene = g9Result.trim();
+      if (!supportScene) {
+        results.push({ gate: 'G9', status: 'SKIP', detail: 'No supportSceneImage field found' });
+      } else if (supportScene.includes('doula-walking') || supportScene.includes('generic')) {
+        results.push({ gate: 'G9', status: 'FAIL', detail: `Support scene is generic: ${supportScene}. Generate a city-specific scene.` });
+      } else {
+        // Check file exists
+        const scenePath = path.join(PROJECT_DIR, 'public', supportScene.replace(/^\//, ''));
+        if (fs.existsSync(scenePath)) {
+          results.push({ gate: 'G9', status: 'PASS', detail: `City-specific support scene: ${supportScene}` });
+        } else {
+          results.push({ gate: 'G9', status: 'FAIL', detail: `Support scene file not found on disk: ${supportScene}` });
+        }
+      }
+    } catch {
+      results.push({ gate: 'G9', status: 'SKIP', detail: 'Could not check support scene (city block not found)' });
+    }
+  } else {
+    results.push({ gate: 'G9', status: 'SKIP', detail: 'Skipping support scene check in audit mode (run with slug)' });
+  }
+
+  // ── G10: Provider descriptions are specific, not generic placeholders (Python) ──
+  if (targetSlug) {
+    try {
+      const g10Result = execSync(
+        `python3 scripts/preflight-image-helper.py provider-descriptions ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 15000 }
+      );
+      const g10Data = JSON.parse(g10Result.trim());
+      if (g10Data.pass) {
+        results.push({ gate: 'G10', status: 'PASS', detail: g10Data.detail });
+      } else {
+        results.push({ gate: 'G10', status: 'FAIL', detail: g10Data.detail });
+      }
+    } catch (e: any) {
+      const output = typeof e.stdout === 'string' ? e.stdout : '';
+      try {
+        const g10Data = JSON.parse(output.trim());
+        if (g10Data.pass) {
+          results.push({ gate: 'G10', status: 'PASS', detail: g10Data.detail });
+        } else {
+          results.push({ gate: 'G10', status: 'FAIL', detail: g10Data.detail });
+        }
+      } catch {
+        results.push({ gate: 'G10', status: 'SKIP', detail: 'Could not check provider descriptions' });
+      }
+    }
+  } else {
+    results.push({ gate: 'G10', status: 'SKIP', detail: 'Skipping provider description check in audit mode (run with slug)' });
+  }
+
+  // ── P11: Hospital/birth center images are landscape, not square (PIL) ──
+  if (targetSlug) {
+    try {
+      const p11Result = execSync(
+        `python3 scripts/preflight-image-helper.py hospital-dimensions ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 15000 }
+      );
+      const p11Data = JSON.parse(p11Result.trim());
+      if (p11Data.pass) {
+        results.push({ gate: 'P11', status: 'PASS', detail: p11Data.detail });
+      } else {
+        results.push({ gate: 'P11', status: 'FAIL', detail: p11Data.detail });
+      }
+    } catch (e: any) {
+      const output = typeof e.stdout === 'string' ? e.stdout : '';
+      try {
+        const p11Data = JSON.parse(output.trim());
+        if (p11Data.pass) {
+          results.push({ gate: 'P11', status: 'PASS', detail: p11Data.detail });
+        } else {
+          results.push({ gate: 'P11', status: 'FAIL', detail: p11Data.detail });
+        }
+      } catch {
+        results.push({ gate: 'P11', status: 'SKIP', detail: 'Could not check hospital dimensions' });
+      }
+    }
+  } else {
+    results.push({ gate: 'P11', status: 'SKIP', detail: 'Skipping hospital dimension check in audit mode (run with slug)' });
+  }
+
+  // ── A12: serviceArea is a string array, not a plain string (Python) ──
+  if (targetSlug) {
+    try {
+      const a12Result = execSync(
+        `python3 scripts/preflight-image-helper.py service-area ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 15000 }
+      );
+      const a12Data = JSON.parse(a12Result.trim());
+      if (a12Data.pass) {
+        results.push({ gate: 'A12', status: 'PASS', detail: a12Data.detail });
+      } else {
+        results.push({ gate: 'A12', status: 'FAIL', detail: a12Data.detail });
+      }
+    } catch (e: any) {
+      const output = typeof e.stdout === 'string' ? e.stdout : '';
+      try {
+        const a12Data = JSON.parse(output.trim());
+        if (a12Data.pass) {
+          results.push({ gate: 'A12', status: 'PASS', detail: a12Data.detail });
+        } else {
+          results.push({ gate: 'A12', status: 'FAIL', detail: a12Data.detail });
+        }
+      } catch {
+        results.push({ gate: 'A12', status: 'SKIP', detail: 'Could not check serviceArea format' });
+      }
+    }
+  } else {
+    results.push({ gate: 'A12', status: 'SKIP', detail: 'Skipping serviceArea check in audit mode (run with slug)' });
   }
 
   // ── Print summary ──

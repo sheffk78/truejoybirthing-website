@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="en" data-astro-cid-oconwo3y> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>TJB Ambassador Admin</title><meta name="robots" content="noindex,nofollow"><link rel="stylesheet" href="/_astro/ambassadors.ANg7nDMA.css"></head> <body data-astro-cid-oconwo3y> <div class="container" id="app" data-astro-cid-oconwo3y> <!-- Login screen (shown when no valid token) --> <div id="login-screen" class="login" data-astro-cid-oconwo3y> <h2 data-astro-cid-oconwo3y>TJB Ambassador Admin</h2> <p style="color:var(--muted);margin-bottom:24px;" data-astro-cid-oconwo3y>Enter admin token to continue</p> <input type="password" id="token-input" placeholder="Admin token" data-astro-cid-oconwo3y> <button id="login-btn" data-astro-cid-oconwo3y>Sign In</button> <div id="login-error" class="error" style="display:none;" data-astro-cid-oconwo3y></div> </div> <!-- Dashboard (shown after auth) --> <div id="dashboard" style="display:none;" data-astro-cid-oconwo3y> <header data-astro-cid-oconwo3y> <div style="display:flex;justify-content:space-between;align-items:center;" data-astro-cid-oconwo3y> <div data-astro-cid-oconwo3y> <h1 data-astro-cid-oconwo3y>TJB Ambassador Program</h1> <p id="last-refresh" data-astro-cid-oconwo3y>Loading...</p> </div> <button class="refresh-btn" id="refresh-btn" data-astro-cid-oconwo3y>↻ Refresh</button> </div> </header> <div class="stats" id="stats" data-astro-cid-oconwo3y></div> <div class="filters" id="filters" data-astro-cid-oconwo3y> <button class="filter-btn active" data-status="all" data-astro-cid-oconwo3y>All</button> <button class="filter-btn" data-status="applied" data-astro-cid-oconwo3y>Applied</button> <button class="filter-btn" data-status="reviewing" data-astro-cid-oconwo3y>Reviewing</button> <button class="filter-btn" data-status="active" data-astro-cid-oconwo3y>Active</button> <button class="filter-btn" data-status="paused" data-astro-cid-oconwo3y>Paused</button> <button class="filter-btn" data-status="declined" data-astro-cid-oconwo3y>Declined</button> <button class="filter-btn" data-status="left" data-astro-cid-oconwo3y>Left</button> </div> <div class="table-wrap" data-astro-cid-oconwo3y> <div id="loading" class="loading" data-astro-cid-oconwo3y>Loading ambassadors...</div> <table id="ambassador-table" style="display:none;" data-astro-cid-oconwo3y> <thead data-astro-cid-oconwo3y> <tr data-astro-cid-oconwo3y> <th data-astro-cid-oconwo3y>Name</th> <th data-astro-cid-oconwo3y>Role</th> <th data-astro-cid-oconwo3y>City</th> <th data-astro-cid-oconwo3y>Instagram / Website</th> <th data-astro-cid-oconwo3y>Audience</th> <th data-astro-cid-oconwo3y>Applied</th> <th data-astro-cid-oconwo3y>Status</th> <th data-astro-cid-oconwo3y>Actions</th> </tr> </thead> <tbody id="ambassador-body" data-astro-cid-oconwo3y></tbody> </table> <div id="empty-state" class="empty" style="display:none;" data-astro-cid-oconwo3y> <p data-astro-cid-oconwo3y>No ambassadors found</p> <p data-astro-cid-oconwo3y>Applications will appear here when doulas and midwives submit the form.</p> </div> </div> </div> </div> <div id="toast" class="toast" data-astro-cid-oconwo3y></div> <script>
+    var token = '';
+    var API_BASE = '/api/admin/ambassadors';
+
+    function init() {
+      // Check for token in URL hash (from bookmark)
+      var hashToken = window.location.hash.slice(1);
+      if (hashToken) {
+        token = hashToken;
+        verifyAndLoad();
+      }
+
+      document.getElementById('login-btn').addEventListener('click', function() {
+        token = document.getElementById('token-input').value.trim();
+        if (token) verifyAndLoad();
+      });
+
+      document.getElementById('token-input').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') document.getElementById('login-btn').click();
+      });
+
+      // Filter buttons
+      document.getElementById('filters').addEventListener('click', function(e) {
+        if (e.target.classList.contains('filter-btn')) {
+          document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+          e.target.classList.add('active');
+          loadAmbassadors(e.target.dataset.status);
+        }
+      });
+
+      document.getElementById('refresh-btn').addEventListener('click', function() {
+        var activeFilter = document.querySelector('.filter-btn.active');
+        loadAmbassadors(activeFilter ? activeFilter.dataset.status : 'all');
+      });
+    }
+
+    // Run on DOM ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+
+    function verifyAndLoad() {
+      fetch(API_BASE + '?token=' + encodeURIComponent(token) + '&limit=1')
+        .then(function(res) {
+          if (res.ok) {
+            window.location.hash = token;
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'block';
+            loadAmbassadors('all');
+          } else {
+            showLoginError('Invalid token');
+          }
+        })
+        .catch(function() { showLoginError('Connection error'); });
+    }
+
+    function showLoginError(msg) {
+      var el = document.getElementById('login-error');
+      el.textContent = msg;
+      el.style.display = 'block';
+    }
+
+    var allAmbassadors = [];
+
+    function loadAmbassadors(status) {
+      var loadingEl = document.getElementById('loading');
+      var tableEl = document.getElementById('ambassador-table');
+      var emptyEl = document.getElementById('empty-state');
+      
+      loadingEl.style.display = 'block';
+      tableEl.style.display = 'none';
+      emptyEl.style.display = 'none';
+
+      fetch(API_BASE + '?token=' + encodeURIComponent(token) + '&status=' + status + '&limit=100')
+        .then(function(res) {
+          if (!res.ok) { showToast('Failed to load ambassadors', 'error'); loadingEl.style.display = 'none'; return null; }
+          return res.json();
+        })
+        .then(function(data) {
+          if (!data) return;
+          allAmbassadors = data.contacts || [];
+          updateStats(allAmbassadors);
+
+          var tbody = document.getElementById('ambassador-body');
+          tbody.innerHTML = '';
+
+          if (allAmbassadors.length === 0) {
+            loadingEl.style.display = 'none';
+            emptyEl.style.display = 'block';
+            return;
+          }
+
+          allAmbassadors.forEach(function(amb) {
+            var tr = document.createElement('tr');
+            var appliedDate = amb.appliedAt ? new Date(amb.appliedAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'N/A';
+            var whyPreview = amb.why ? (amb.why.length > 60 ? amb.why.substring(0, 60) + '...' : amb.why) : '\u2014';
+            var whyFull = amb.why || '';
+            var whyEl = amb.why 
+              ? '<span class="why-toggle" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display===\'none\'?\'block\':\'none\';this.style.display=\'none\';">' + whyPreview + '</span><span style="display:none;" class="why-text">' + whyFull + '</span>'
+              : '\u2014';
+            
+            var socialLink = '\u2014';
+            if (amb.instagram) {
+              if (amb.instagram.startsWith('@')) {
+                socialLink = '<a href="https://instagram.com/' + amb.instagram.slice(1) + '" target="_blank">' + amb.instagram + '</a>';
+              } else if (amb.instagram.startsWith('http')) {
+                var displayUrl = amb.instagram.replace(/^https?:\/\/(www\.)?/, '').split('/')[0];
+                socialLink = '<a href="' + amb.instagram + '" target="_blank">' + displayUrl + '</a>';
+              } else {
+                socialLink = amb.instagram;
+              }
+            }
+
+            tr.innerHTML = '<td><strong>' + (amb.firstName || '') + ' ' + (amb.lastName || '') + '</strong><br><span style="font-size:0.75rem;color:var(--muted);">' + amb.email + '</span></td>' +
+              '<td>' + formatRole(amb.role) + '</td>' +
+              '<td>' + (amb.city || '\u2014') + '</td>' +
+              '<td>' + socialLink + '</td>' +
+              '<td>' + formatAudience(amb.audience) + '</td>' +
+              '<td>' + appliedDate + '</td>' +
+              '<td><span class="badge badge-' + amb.status + '">' + amb.status + '</span></td>' +
+              '<td><div class="actions">' +
+              '<select id="status-' + amb.email + '" data-email="' + amb.email + '">' +
+              '<option value="applied"' + (amb.status === 'applied' ? ' selected' : '') + '>Applied</option>' +
+              '<option value="reviewing"' + (amb.status === 'reviewing' ? ' selected' : '') + '>Reviewing</option>' +
+              '<option value="active"' + (amb.status === 'active' ? ' selected' : '') + '>Active</option>' +
+              '<option value="paused"' + (amb.status === 'paused' ? ' selected' : '') + '>Paused</option>' +
+              '<option value="declined"' + (amb.status === 'declined' ? ' selected' : '') + '>Declined</option>' +
+              '<option value="left"' + (amb.status === 'left' ? ' selected' : '') + '>Left</option>' +
+              '</select><button onclick="updateStatus(\'' + amb.email + '\')">Save</button></div>' +
+              (whyFull ? '<div style="margin-top:6px;">' + whyEl + '</div>' : '') +
+              '</td>';
+            tbody.appendChild(tr);
+          });
+
+          loadingEl.style.display = 'none';
+          tableEl.style.display = 'table';
+          document.getElementById('last-refresh').textContent = 'Last updated: ' + new Date().toLocaleTimeString();
+        })
+        .catch(function() { showToast('Error loading ambassadors', 'error'); loadingEl.style.display = 'none'; });
+    }
+
+    function updateStats(contacts) {
+      var counts = {
+        total: contacts.length,
+        applied: contacts.filter(function(c) { return c.status === 'applied'; }).length,
+        reviewing: contacts.filter(function(c) { return c.status === 'reviewing'; }).length,
+        active: contacts.filter(function(c) { return c.status === 'active'; }).length,
+      };
+      document.getElementById('stats').innerHTML = '<div class="stat-card"><div class="number">' + counts.total + '</div><div class="label">Total</div></div>' +
+        '<div class="stat-card"><div class="number" style="color:var(--yellow)">' + counts.applied + '</div><div class="label">Applied</div></div>' +
+        '<div class="stat-card"><div class="number" style="color:var(--accent)">' + counts.reviewing + '</div><div class="label">Reviewing</div></div>' +
+        '<div class="stat-card"><div class="number" style="color:var(--green)">' + counts.active + '</div><div class="label">Active</div></div>';
+    }
+
+    function formatRole(role) {
+      var roles = {
+        'doula': 'Birth Doula',
+        'postpartum-doula': 'Postpartum Doula',
+        'midwife': 'Midwife',
+        'childbirth-educator': 'Childbirth Educator',
+        'lactation-consultant': 'IBCLC',
+        'other': 'Other',
+      };
+      return roles[role] || role || '\u2014';
+    }
+
+    function formatAudience(audience) {
+      var sizes = {
+        'under-100': '< 100',
+        '100-500': '100\u2013500',
+        '500-1000': '500\u20131K',
+        '1000-5000': '1K\u20135K',
+        '5000-plus': '5K+',
+      };
+      return sizes[audience] || audience || '\u2014';
+    }
+
+    function updateStatus(email) {
+      var select = document.getElementById('status-' + email);
+      var newStatus = select.value;
+      var btn = select.nextElementSibling;
+      btn.disabled = true;
+      btn.textContent = '...';
+
+      fetch(API_BASE + '?token=' + encodeURIComponent(token), {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email, status: newStatus }),
+      })
+        .then(function(res) {
+          if (res.ok) {
+            showToast('Updated ' + email + ' \u2192 ' + newStatus, 'success');
+            var activeFilter = document.querySelector('.filter-btn.active');
+            loadAmbassadors(activeFilter ? activeFilter.dataset.status : 'all');
+          } else {
+            showToast('Failed to update status', 'error');
+            btn.disabled = false;
+            btn.textContent = 'Save';
+          }
+        })
+        .catch(function() { showToast('Connection error', 'error'); btn.disabled = false; btn.textContent = 'Save'; });
+    }
+
+    function showToast(msg, type) {
+      var toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.className = 'toast ' + type + ' show';
+      setTimeout(function() { toast.className = 'toast ' + type; }, 3000);
+    }
+  </script> </body> </html>
