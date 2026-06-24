@@ -24,7 +24,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-04T00:00:00-06:00",
   },
   "tacoma-wa": {
-    videoId: "CSf-KlvPXWg",
+    videoId: "CV41jPys-S8",
     title: "Tacoma Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and Washington Apple Health, all in under 4 minutes.",
     duration: "PT3M14S",
@@ -52,10 +52,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
   "cary-nc": {
-    videoId: "1C1Zq6lfb9Y",
-    title: "Cary Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    videoId: "_4RaZyOaYeY",
+    title: "Cary Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and NC Medicaid, all in under 3 minutes.",
-    duration: "PT3M14S",
+    duration: "PT3M18S",
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
   "dallas-tx": {
@@ -295,5 +295,12 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     description: "Watch the full city guide — doulas, hospitals, costs, and Tennessee Medicaid, all in under 3 minutes.",
     duration: "PT2M10S",
     uploadDate: "2026-06-23T00:00:00-07:00",
+  },
+  "el-paso-tx": {
+    videoId: "hneTz7wbV60",
+    title: "El Paso Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT3M00S",
+    uploadDate: "2026-06-24T00:00:00-06:00",
   },
 };
