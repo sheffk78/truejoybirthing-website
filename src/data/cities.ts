@@ -304,7 +304,7 @@ export const cities: Record<string, CityData> = {
     ],
     // Birth Center of Beaumont confirmed via website (June 2026). Information in the sheet.
     birthCenterDetails: [
-      { name: "Birth Center of Beaumont" , url: "https://www.birthcenterofbeaumont.com" , paragraph: "Birth Center of Beaumont is a freestanding birth center offering midwife-led care for low-risk pregnancies in the Golden Triangle area. Led by Jackie Griggs, CNM, the center provides an alternative to hospital birth with personalized prenatal care, natural birth support, and breastfeeding assistance in a home-like setting." },
+      { name: "Birth Center of Beaumont" , thumbnail: "/images/birth-center-beaumont.webp" , url: "https://www.birthcenterofbeaumont.com" , paragraph: "Birth Center of Beaumont is a freestanding birth center offering midwife-led care for low-risk pregnancies in the Golden Triangle area. Led by Jackie Griggs, CNM, the center provides an alternative to hospital birth with personalized prenatal care, natural birth support, and breastfeeding assistance in a home-like setting." },
     ],
     midwifeInfo: [
       { name: "Taylor Moonflower" , credential: "CNM" , practice: "Moonflower Midwifery" , url: "" , description: "Certified nurse-midwife serving Beaumont and Southeast Texas families with personalized midwifery care, home birth support, and prenatal education." , services: ["Midwifery" , "Home Birth" , "Prenatal Care"], acceptingClients: "Contact for availability" },
