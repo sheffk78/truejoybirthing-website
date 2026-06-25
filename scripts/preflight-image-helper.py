@@ -20,7 +20,7 @@ PROJECT_DIR = os.path.expanduser('~/Projects/truejoybirthing-website')
 PUBLIC_IMAGES = os.path.join(PROJECT_DIR, 'public/images')
 
 
-def _read_city_block(slug: str) -> str | None:
+def _read_city_block(slug: str):
     """Extract the city block from cities.ts using slug matching."""
     cities_path = os.path.join(PROJECT_DIR, 'src/data/cities.ts')
     if not os.path.exists(cities_path):
