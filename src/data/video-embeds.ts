@@ -319,7 +319,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
   "san-jose-ca": {
     videoId: "ScsUgI8_v94",
-    title: "San Doula & Birth Plan Guide",
+    title: "San Jose Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
     duration: "PT3M00S",
     uploadDate: "2026-06-24T00:00:00-06:00",
@@ -341,13 +341,6 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   "st-paul-mn": {
     videoId: "W9rYPFXr9Ic",
     title: "St. Paul Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
-    duration: "PT3M00S",
-    uploadDate: "2026-06-24T00:00:00-06:00",
-  },
-  "augusta-ga": {
-    videoId: "vGQM1enHBeM",
-    title: "Augusta GA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 3 minutes.",
     duration: "PT2M22S",
     uploadDate: "2026-06-24T00:00:00-06:00",
@@ -366,5 +359,18 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M22S",
     uploadDate: "2026-06-24T00:00:00-06:00",
   },
-
+  "augusta-ga": {
+    videoId: "vGQM1enHBeM",
+    title: "Augusta GA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 3 minutes.",
+    duration: "PT2M22S",
+    uploadDate: "2026-06-24T00:00:00-06:00",
+  },
+  "arlington-tx": {
+    videoId: "PENDING",
+    title: "Arlington Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT3M00S",
+    uploadDate: "2026-06-24T00:00:00-06:00",
+  },
 };
