@@ -2749,7 +2749,7 @@ export const cities: Record<string, CityData> = {
     heroImage: "/images/denver-co-birth-doula-skyline.webp" ,
     supportSceneImage: "/images/denver-support-scene.webp" ,
     supportSceneAlt: "A doula walking alongside an expectant mom on a tree-lined path with the Colorado Front Range in the distance: Denver birth support" ,
-    ogImage: "https://truejoybirthing.com/images/og-city-denver-co-v4.webp" ,
+    ogImage: "https://truejoybirthing.com/images/og-city-denver-co-v5.webp" ,
     midwifeInfo: {
       paragraph: "Colorado licenses Certified Professional Midwives (CPMs) and Registered Midwives (RMs), making home birth midwifery legally regulated in the state. That means if you're planning a home birth or birth center birth in {city}, your midwife operates under a state-issued license, not in a legal gray area. On the hospital side, Certified Nurse-Midwives (CNMs) practice in all major Denver hospitals, including UCHealth, Saint Joe's, and P/SL, so hospital-based midwifery care is widely available for {city} families." ,
       credentialTypes: " and RMs" ,
