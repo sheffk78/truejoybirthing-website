@@ -40,11 +40,25 @@ def _read_city_block(slug: str):
     else:
         block_start += 1  # skip the newline
 
-    # Find next top-level entry (pattern: line starting with 2 spaces, quoted string, colon, brace)
+    # Find next top-level entry by tracking brace depth (skips entries inside arrays)
     remainder = text[match.end():]
-    next_entry = re.search(r'\n  "[a-z][^"]*":\s*\{', remainder)
-    if next_entry:
-        block_end = match.end() + next_entry.start()
+    depth = 1  # We're inside the city's opening {
+    next_entry = None
+    for i, ch in enumerate(remainder):
+        if ch == '{':
+            depth += 1
+        elif ch == '}':
+            depth -= 1
+            if depth == 0:
+                # Found the closing } of this city's block
+                # Now look for the next top-level entry after this
+                after_close = remainder[i+1:]
+                next_match = re.search(r'\n  "[a-z][^"]*":\s*\{', after_close)
+                if next_match:
+                    block_end = match.end() + i + 1 + next_match.start()
+                else:
+                    block_end = match.end() + i + 1
+                break
     else:
         block_end = len(text)
 
@@ -425,6 +439,101 @@ def support_scene_quality(slug: str) -> dict:
     return {"pass": True, "detail": "Support scene is unique to this city"}
 
 
+def hero_aspect(slug: str):
+    """G25: Check hero image is 3:2 aspect ratio (not 16:9)."""
+    block = _read_city_block(slug)
+    if block is None:
+        return {"pass": False, "detail": f"Could not read city block for {slug}"}
+
+    m = re.search(r'heroImage:\s*"([^"]+)"', block)
+    if not m:
+        return {"pass": False, "detail": "No heroImage field found"}
+
+    hero_path = m.group(1).lstrip('/')
+    full_path = os.path.join(PROJECT_DIR, 'public', hero_path)
+    if not os.path.exists(full_path):
+        return {"pass": False, "detail": f"Hero image not found: {hero_path}"}
+
+    try:
+        from PIL import Image
+        img = Image.open(full_path)
+        w, h = img.size
+        ratio = w / h
+        # 3:2 = 1.5, allow ±0.05 tolerance
+        if 1.45 <= ratio <= 1.55:
+            return {"pass": True, "detail": f"Hero image is 3:2 ({w}x{h}, ratio={ratio:.2f})"}
+        else:
+            return {"pass": False, "detail": f"Hero image is {ratio:.2f}:1 ({w}x{h}) — expected 3:2 (1.5). Regenerate at 1200x800."}
+    except Exception as e:
+        return {"pass": False, "detail": f"Could not analyze hero image: {e}"}
+
+
+def support_aspect(slug: str):
+    """G26: Check support scene image is 16:9 aspect ratio."""
+    block = _read_city_block(slug)
+    if block is None:
+        return {"pass": False, "detail": f"Could not read city block for {slug}"}
+
+    m = re.search(r'supportSceneImage:\s*"([^"]+)"', block)
+    if not m:
+        return {"pass": False, "detail": "No supportSceneImage field found"}
+
+    img_path = m.group(1).lstrip('/')
+    full_path = os.path.join(PROJECT_DIR, 'public', img_path)
+    if not os.path.exists(full_path):
+        return {"pass": False, "detail": f"Support scene image not found: {img_path}"}
+
+    try:
+        from PIL import Image
+        img = Image.open(full_path)
+        w, h = img.size
+        ratio = w / h
+        # 16:9 = 1.778, allow ±0.05 tolerance
+        if 1.72 <= ratio <= 1.83:
+            return {"pass": True, "detail": f"Support scene is 16:9 ({w}x{h}, ratio={ratio:.2f})"}
+        else:
+            return {"pass": False, "detail": f"Support scene is {ratio:.2f}:1 ({w}x{h}) — expected 16:9 (1.78). Regenerate at 1024x576."}
+    except Exception as e:
+        return {"pass": False, "detail": f"Could not analyze support scene: {e}"}
+
+
+def check_provider_credentials(slug: str):
+    """G27: Check provider credentials are specific (not generic 'Birth Doula')."""
+    block = _read_city_block(slug)
+    if block is None:
+        return {"pass": False, "detail": f"Could not read city block for {slug}"}
+
+    # Find localDoulas array using brace-depth tracking
+    ld_start = block.find('localDoulas: [')
+    if ld_start < 0:
+        return {"pass": False, "detail": "No localDoulas section found"}
+
+    depth = 0
+    i = ld_start
+    while i < len(block):
+        if block[i] == '[':
+            depth += 1
+        elif block[i] == ']':
+            depth -= 1
+            if depth == 0:
+                break
+        i += 1
+
+    ld_section = block[ld_start:i+1]
+    credentials = re.findall(r'credential:\s*"([^"]+)"', ld_section)
+
+    if not credentials:
+        return {"pass": False, "detail": "No provider credentials found"}
+
+    generic_creds = ['Birth Doula', 'Postpartum Doula', 'Doula']
+    bad_creds = [c for c in credentials if c.strip() in generic_creds]
+
+    if bad_creds:
+        return {"pass": False, "detail": f"{len(bad_creds)} provider(s) have generic credentials: {', '.join(bad_creds)}. Replace with specific certifications (e.g. CD(DONA), CAPPA, etc.)."}
+
+    return {"pass": True, "detail": f"All {len(credentials)} providers have specific credentials"}
+
+
 def main():
     if len(sys.argv) < 3:
         print(json.dumps({"pass": False, "detail": "Usage: preflight-image-helper.py <check> <slug>"}))
@@ -440,6 +549,9 @@ def main():
         'service-area': check_service_area,
         'yt-thumbnail-matches-hero': yt_thumbnail_matches_hero,
         'support-scene-quality': support_scene_quality,
+        'hero-aspect': hero_aspect,
+        'support-aspect': support_aspect,
+        'provider-credentials': check_provider_credentials,
     }
 
     fn = checks.get(command)

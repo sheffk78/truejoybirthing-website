@@ -786,6 +786,57 @@ function run(): void {
     results.push({ gate: 'A12', status: 'SKIP', detail: 'Skipping serviceArea check in audit mode (run with slug)' });
   }
 
+  // ── G25: Hero image aspect ratio is 3:2 (not 16:9) ──
+  if (targetSlug) {
+    try {
+      const result = execSync(`python3 scripts/preflight-image-helper.py hero-aspect ${targetSlug}`, { cwd: PROJECT_DIR, timeout: 10000 }).toString().trim();
+      const data = JSON.parse(result);
+      if (data.pass) {
+        results.push({ gate: 'G25', status: 'PASS', detail: data.detail });
+      } else {
+        results.push({ gate: 'G25', status: 'FAIL', detail: data.detail });
+      }
+    } catch {
+      results.push({ gate: 'G25', status: 'SKIP', detail: 'Could not check hero aspect ratio' });
+    }
+  } else {
+    results.push({ gate: 'G25', status: 'SKIP', detail: 'Skipping hero aspect check in audit mode (run with slug)' });
+  }
+
+  // ── G26: Support scene image aspect ratio is 16:9 ──
+  if (targetSlug) {
+    try {
+      const result = execSync(`python3 scripts/preflight-image-helper.py support-aspect ${targetSlug}`, { cwd: PROJECT_DIR, timeout: 10000 }).toString().trim();
+      const data = JSON.parse(result);
+      if (data.pass) {
+        results.push({ gate: 'G26', status: 'PASS', detail: data.detail });
+      } else {
+        results.push({ gate: 'G26', status: 'FAIL', detail: data.detail });
+      }
+    } catch {
+      results.push({ gate: 'G26', status: 'SKIP', detail: 'Could not check support scene aspect ratio' });
+    }
+  } else {
+    results.push({ gate: 'G26', status: 'SKIP', detail: 'Skipping support scene aspect check in audit mode (run with slug)' });
+  }
+
+  // ── G27: Provider credentials are specific (not generic "Birth Doula") ──
+  if (targetSlug) {
+    try {
+      const result = execSync(`python3 scripts/preflight-image-helper.py provider-credentials ${targetSlug}`, { cwd: PROJECT_DIR, timeout: 10000 }).toString().trim();
+      const data = JSON.parse(result);
+      if (data.pass) {
+        results.push({ gate: 'G27', status: 'PASS', detail: data.detail });
+      } else {
+        results.push({ gate: 'G27', status: 'FAIL', detail: data.detail });
+      }
+    } catch {
+      results.push({ gate: 'G27', status: 'SKIP', detail: 'Could not check provider credentials' });
+    }
+  } else {
+    results.push({ gate: 'G27', status: 'SKIP', detail: 'Skipping provider credential check in audit mode (run with slug)' });
+  }
+
   // ── Print summary ──
   console.log('\n─── RESULTS ───\n');
 
