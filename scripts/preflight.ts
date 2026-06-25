@@ -579,6 +579,66 @@ function run(): void {
     results.push({ gate: 'G22', status: 'SKIP', detail: 'Skipping YT thumbnail check in audit mode (run with slug)' });
   }
 
+  // -- G23: YouTube branded thumbnail uses the same hero image as the page --
+  if (targetSlug) {
+    try {
+      const g23Result = execSync(
+        `python3 scripts/preflight-image-helper.py yt-thumbnail-matches-hero ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 15000 }
+      );
+      const g23Data = JSON.parse(g23Result.trim());
+      if (g23Data.pass) {
+        results.push({ gate: 'G23', status: 'PASS', detail: g23Data.detail });
+      } else {
+        results.push({ gate: 'G23', status: 'FAIL', detail: g23Data.detail });
+      }
+    } catch (e: any) {
+      const output = typeof e.stdout === 'string' ? e.stdout : '';
+      try {
+        const g23Data = JSON.parse(output.trim());
+        if (g23Data.pass) {
+          results.push({ gate: 'G23', status: 'PASS', detail: g23Data.detail });
+        } else {
+          results.push({ gate: 'G23', status: 'FAIL', detail: g23Data.detail });
+        }
+      } catch {
+        results.push({ gate: 'G23', status: 'SKIP', detail: 'Could not check YT thumbnail vs hero match' });
+      }
+    }
+  } else {
+    results.push({ gate: 'G23', status: 'SKIP', detail: 'Skipping YT thumbnail comparison in audit mode (run with slug)' });
+  }
+
+  // -- G24: Support scene is unique to this city (not a duplicate of another city's) --
+  if (targetSlug) {
+    try {
+      const g24Result = execSync(
+        `python3 scripts/preflight-image-helper.py support-scene-quality ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 15000 }
+      );
+      const g24Data = JSON.parse(g24Result.trim());
+      if (g24Data.pass) {
+        results.push({ gate: 'G24', status: 'PASS', detail: g24Data.detail });
+      } else {
+        results.push({ gate: 'G24', status: 'FAIL', detail: g24Data.detail });
+      }
+    } catch (e: any) {
+      const output = typeof e.stdout === 'string' ? e.stdout : '';
+      try {
+        const g24Data = JSON.parse(output.trim());
+        if (g24Data.pass) {
+          results.push({ gate: 'G24', status: 'PASS', detail: g24Data.detail });
+        } else {
+          results.push({ gate: 'G24', status: 'FAIL', detail: g24Data.detail });
+        }
+      } catch {
+        results.push({ gate: 'G24', status: 'SKIP', detail: 'Could not check support scene quality' });
+      }
+    }
+  } else {
+    results.push({ gate: 'G24', status: 'SKIP', detail: 'Skipping support scene quality check in audit mode (run with slug)' });
+  }
+
   // ── G8: Hero image is a pregnant silhouette, not a city skyline (PIL) ──
   if (targetSlug) {
     try {

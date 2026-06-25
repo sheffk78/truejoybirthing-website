@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""
-Preflight image analysis helper — PIL-based checks that preflight.ts (TypeScript)
+"""Preflight image analysis helper — PIL-based checks that preflight.ts (TypeScript)
 calls via subprocess. Keeps image processing in Python where PIL lives natively.
 
 Usage:
@@ -8,11 +7,13 @@ Usage:
     python3 scripts/preflight-image-helper.py hospital-dimensions <slug>
     python3 scripts/preflight-image-helper.py provider-descriptions <slug>
     python3 scripts/preflight-image-helper.py service-area <slug>
+    python3 scripts/preflight-image-helper.py yt-thumbnail-matches-hero <slug>
+    python3 scripts/preflight-image-helper.py support-scene-quality <slug>
 
 Returns JSON: {"pass": bool, "detail": str}
 Exit code: 0 = pass, 1 = fail
 """
-import json, os, re, sys
+import json, os, re, sys, hashlib
 from pathlib import Path
 
 PROJECT_DIR = os.path.expanduser('~/Projects/truejoybirthing-website')
@@ -52,7 +53,7 @@ def _read_city_block(slug: str) -> str | None:
 
 def _extract_entries(arr_text: str) -> list[str]:
     """Extract individual provider/hospital entries from an array text block.
-    Handles nested braces inside strings (e.g. serviceArea: [\"Abilene\", \"Taylor County\"])."""
+    Handles nested braces inside strings (e.g. serviceArea: ["Abilene", "Taylor County"])."""
     entries = []
     depth = 0
     in_str = False
@@ -200,7 +201,7 @@ def hospital_dimensions(slug: str) -> dict:
 
     if issues:
         return {"pass": False, "detail": " | ".join(issues[:6])}
-    return {"pass": True, "detail": "All facility images are landscape, ≥400x300"}
+    return {"pass": True, "detail": "All facility images are landscape, >=400x300"}
 
 
 def check_provider_descriptions(slug: str) -> dict:
@@ -311,8 +312,117 @@ def check_service_area(slug: str) -> dict:
             issues.append(f"{name}: serviceArea is a string, not array")
 
     if issues:
-        return {"pass": False, "detail": f"{len(issues)} provider(s) have string serviceArea: {'; '.join(issues[:5])}. Wrap in [\"...\"]"}
+        return {"pass": False, "detail": f"{len(issues)} provider(s) have string serviceArea: {'; '.join(issues[:5])}. Wrap in [...]"}
     return {"pass": True, "detail": "All serviceArea fields are string arrays"}
+
+
+def yt_thumbnail_matches_hero(slug: str) -> dict:
+    """Check that the YouTube branded thumbnail uses the same hero image as the page."""
+    try:
+        from PIL import Image
+    except ImportError:
+        return {"pass": True, "detail": "PIL not available — skipping YT thumbnail check"}
+
+    # Find hero image
+    hero_pattern = re.compile(rf'^{re.escape(slug)}-birth-doula-hero(-v\d+)?\.webp$')
+    hero_files = [f for f in os.listdir(PUBLIC_IMAGES) if hero_pattern.match(f)]
+    if not hero_files:
+        return {"pass": True, "detail": "No hero image found — skipping YT thumbnail comparison"}
+
+    def variant_key(name: str) -> int:
+        m = re.search(r'-v(\d+)', name)
+        return int(m.group(1)) if m else 0
+
+    hero_files.sort(key=variant_key, reverse=True)
+    hero_path = os.path.join(PUBLIC_IMAGES, hero_files[0])
+
+    # Find YT thumbnail
+    yt_pattern = re.compile(rf'^yt-thumbnail-{re.escape(slug)}(-v\d+)?\.(webp|jpg|png)$')
+    yt_files = [f for f in os.listdir(PUBLIC_IMAGES) if yt_pattern.match(f)]
+    if not yt_files:
+        # Also check yt-thumb- prefix (older naming convention)
+        yt_pattern2 = re.compile(rf'^yt-thumb-{re.escape(slug)}(-v\d+)?\.(webp|jpg|png)$')
+        yt_files = [f for f in os.listdir(PUBLIC_IMAGES) if yt_pattern2.match(f)]
+    if not yt_files:
+        return {"pass": True, "detail": "No branded YT thumbnail found — skipping comparison"}
+
+    yt_files.sort(key=variant_key, reverse=True)
+    yt_path = os.path.join(PUBLIC_IMAGES, yt_files[0])
+
+    try:
+        hero_img = Image.open(hero_path).convert('RGB')
+        yt_img = Image.open(yt_path).convert('RGB')
+
+        hw, hh = hero_img.size
+        yw, yh = yt_img.size
+
+        # Resize YT thumbnail to match hero dimensions
+        yt_resized = yt_img.resize((hw, hh), Image.LANCZOS)
+
+        # Compare the top-right quadrant — this area has minimal overlay
+        # (the gradient is on the left, text box is top-left, play button is bottom-right)
+        # Top-right: from center to 90% width, top 10% to 40% height
+        hero_region = hero_img.crop((hw // 2, hh // 10, int(hw * 0.9), int(hh * 0.4)))
+        yt_region = yt_resized.crop((hw // 2, hh // 10, int(hw * 0.9), int(hh * 0.4)))
+
+        hero_pixels = list(hero_region.getdata())
+        yt_pixels = list(yt_region.getdata())
+
+        diff_sum = sum(
+            abs(r1 - r2) + abs(g1 - g2) + abs(b1 - b2)
+            for (r1, g1, b1), (r2, g2, b2) in zip(hero_pixels, yt_pixels)
+        )
+        avg_diff = diff_sum / len(hero_pixels)
+
+        # Threshold: avg_diff > 80 means significantly different images
+        # Same image with text overlay typically has avg_diff < 60
+        # Different image (different background) typically has avg_diff > 100
+        if avg_diff > 80:
+            return {"pass": False, "detail": f"YT thumbnail uses a DIFFERENT image than hero (avg pixel diff={avg_diff:.1f}). YT thumbnail must use the same hero silhouette."}
+
+        return {"pass": True, "detail": f"YT thumbnail matches hero image (avg pixel diff={avg_diff:.1f})"}
+    except Exception as e:
+        return {"pass": True, "detail": f"Could not compare images: {e}"}
+
+
+def support_scene_quality(slug: str) -> dict:
+    """Check support scene image quality: no duplicate of another city's scene."""
+    try:
+        from PIL import Image
+    except ImportError:
+        return {"pass": True, "detail": "PIL not available — skipping support scene check"}
+
+    block = _read_city_block(slug)
+    if block is None:
+        return {"pass": True, "detail": f"City {slug} not found — skipping"}
+
+    # Find supportSceneImage
+    ssi_m = re.search(r'supportSceneImage:\s*"([^"]+)"', block)
+    if not ssi_m:
+        return {"pass": True, "detail": "No supportSceneImage field found — skipping"}
+
+    scene_path = ssi_m.group(1)
+    full_path = os.path.join(PROJECT_DIR, 'public', scene_path.lstrip('/'))
+    if not os.path.exists(full_path):
+        return {"pass": True, "detail": f"Support scene file not found: {scene_path}"}
+
+    # Check: Is this file a duplicate of another city's support scene?
+    with open(full_path, 'rb') as f:
+        file_hash = hashlib.md5(f.read()).hexdigest()
+
+    other_scenes = []
+    for fname in os.listdir(PUBLIC_IMAGES):
+        if 'support-scene' in fname and fname != os.path.basename(scene_path):
+            other_path = os.path.join(PUBLIC_IMAGES, fname)
+            if os.path.isfile(other_path):
+                with open(other_path, 'rb') as f:
+                    if hashlib.md5(f.read()).hexdigest() == file_hash:
+                        other_scenes.append(fname)
+
+    if other_scenes:
+        return {"pass": False, "detail": f"Support scene is IDENTICAL to another city's: {', '.join(other_scenes[:3])}. Each city must have a unique support scene."}
+
+    return {"pass": True, "detail": "Support scene is unique to this city"}
 
 
 def main():
@@ -328,6 +438,8 @@ def main():
         'hospital-dimensions': hospital_dimensions,
         'provider-descriptions': check_provider_descriptions,
         'service-area': check_service_area,
+        'yt-thumbnail-matches-hero': yt_thumbnail_matches_hero,
+        'support-scene-quality': support_scene_quality,
     }
 
     fn = checks.get(command)

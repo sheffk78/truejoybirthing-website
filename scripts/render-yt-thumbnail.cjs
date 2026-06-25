@@ -68,8 +68,8 @@ function encodeSvgForUrl(filePath) {
     process.exit(1);
   }
 
-  // Hero image — base64 data URI
-  const heroLocalPath = path.resolve(outputDir, `${slug}-birth-doula-skyline.webp`);
+  // Hero image — base64 data URI (use -hero, not -skyline)
+  const heroLocalPath = path.resolve(outputDir, `${slug}-birth-doula-hero.webp`);
   const heroDataUri = fileToDataUri(heroLocalPath);
 
   // Brand logo — use the heart icon-mark (not the full wordmark)
