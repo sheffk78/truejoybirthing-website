@@ -382,7 +382,13 @@ def yt_thumbnail_matches_hero(slug: str) -> dict:
             hero_files = [f for f in os.listdir(PUBLIC_IMAGES) if broad_pattern.match(f) and 'support' not in f.lower() and '-600' not in f]
         if not hero_files:
             return {"pass": True, "detail": "No hero image found — skipping YT thumbnail comparison"}
-        hero_files.sort(key=variant_key, reverse=True)
+        # Prefer -hero over -skyline when both exist (same variant level)
+        def hero_sort_key(name: str) -> tuple:
+            v = variant_key(name)
+            # -hero files sort before -skyline files at the same variant level
+            priority = 0 if '-hero' in name else 1
+            return (v, priority)
+        hero_files.sort(key=hero_sort_key, reverse=True)
         hero_path = os.path.join(PUBLIC_IMAGES, hero_files[0])
 
     # Find YT thumbnail
