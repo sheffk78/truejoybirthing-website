@@ -6,7 +6,7 @@ author: "Shelbi Kohler"
 description: "Research proves the benefits of doula support: shorter labors, fewer C-sections, better outcomes. Learn the 6 evidence-backed advantages for your birth."
 canonical: "https://truejoybirthing.com/blog/benefits-of-a-doula-companion/"
 layout: "../../layouts/PostLayout.astro"
-featuredImage: "/images/blog/benefits-of-a-doula-companion.webp"
+featuredImage: "/images/og-benefits-of-a-doula-companion-v2.webp"
 ---
 
 If you're wondering whether a doula is worth it, the research has a clear answer. The <strong>benefits of doula support</strong> are among the best-documented in maternal health, backed by Cochrane reviews, randomized trials, and decades of clinical data. I've seen this play out across hundreds of births I've attended as a doula, and the evidence matches what I've watched mothers experience firsthand: shorter labors, fewer interventions, higher satisfaction, and better outcomes for both mom and baby.
