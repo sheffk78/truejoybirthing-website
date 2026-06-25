@@ -234,12 +234,17 @@ def hospital_dimensions(slug: str) -> dict:
                 continue
 
             try:
-                img = Image.open(full_path)
+                img = Image.open(full_path).convert('RGB')
                 w, h = img.size
                 if w == h:
                     issues.append(f"{name}: square image ({w}x{h}) — may be logo, not building photo")
                 elif w < 400 or h < 300:
                     issues.append(f"{name}: too small ({w}x{h})")
+                # Placeholder detection: solid-color graphics have very few unique colors
+                px = list(img.getdata())
+                unique = len(set(px))
+                if unique < 500:
+                    issues.append(f"{name}: appears to be a placeholder/solid-color graphic ({unique} unique colors, threshold=500). Source a REAL photo from Google Maps or hospital website.")
             except Exception:
                 issues.append(f"{name}: could not decode image")
 
