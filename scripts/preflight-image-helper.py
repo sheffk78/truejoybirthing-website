@@ -112,7 +112,9 @@ def hero_silhouette(slug: str) -> dict:
             hero_ref = m.group(1)
             if hero_ref.startswith('http'):
                 hero_ref = '/images/' + hero_ref.rstrip('/').split('/')[-1]
-            candidate = os.path.join(PROJECT_DIR, hero_ref.lstrip('/'))
+            # Fix: hero_ref starts with /images/ but files live in public/images/
+            # Prepend public/ to avoid PROJECT_DIR/images/ (which doesn't exist)
+            candidate = os.path.join(PROJECT_DIR, 'public', hero_ref.lstrip('/'))
             if os.path.exists(candidate):
                 full_path = candidate
                 best = os.path.basename(candidate)
@@ -154,10 +156,20 @@ def hero_silhouette(slug: str) -> dict:
         center = avg_brightness(center_region)
         top = avg_brightness(top_region)
 
+        # Photo-vs-graphic check: CSS gradient compositions have very few unique
+        # colors in the sky region (top third). Real photos — even heavily
+        # compressed WebP — have 500+ unique colors from natural texture.
+        # HTML/Playwright renders of gradient compositions have <200.
+        # Threshold: <350 unique colors in top third → likely graphic, not photo.
+        top_pixels = list(top_region.getdata())
+        top_unique = len(set(top_pixels))
+        if top_unique < 350:
+            return {"pass": False, "detail": f"Hero appears to be a CSS/HTML gradient graphic, not a photo (top_unique_colors={top_unique}, threshold=350). Use image_generate with silhouette prompt from tjb-ai-photo-generation skill, NOT render-hero.cjs."}
+
         if center < top and (top - center) > 0.5:
-            return {"pass": True, "detail": f"Silhouette confirmed (center={center:.1f} < top={top:.1f})"}
+            return {"pass": True, "detail": f"Silhouette confirmed (center={center:.1f} < top={top:.1f}, top_colors={top_unique})"}
         else:
-            return {"pass": False, "detail": f"No silhouette detected (center={center:.1f}, top={top:.1f}) — may be skyline"}
+            return {"pass": False, "detail": f"No silhouette detected (center={center:.1f}, top={top:.1f}, top_colors={top_unique}) — may be skyline"}
     except Exception as e:
         return {"pass": True, "detail": f"Could not analyze hero image: {e}"}
 
