@@ -68,8 +68,25 @@ function encodeSvgForUrl(filePath) {
     process.exit(1);
   }
 
-  // Hero image — base64 data URI (use -hero, not -skyline)
-  const heroLocalPath = path.resolve(outputDir, `${slug}-birth-doula-hero.webp`);
+  // Hero image — use the actual city heroImage from cities.ts first.
+  // Older completed cities can have legacy filenames like -skyline.webp even
+  // when that file is the canonical hero. Do not silently render without it.
+  let heroLocalPath = path.resolve(outputDir, `${slug}-birth-doula-hero.webp`);
+  const citiesPath = path.resolve(__dirname, '..', 'src', 'data', 'cities.ts');
+  if (fs.existsSync(citiesPath)) {
+    const citiesText = fs.readFileSync(citiesPath, 'utf-8');
+    const slugIdx = citiesText.indexOf(`"${slug}"`);
+    if (slugIdx >= 0) {
+      const nextIdx = citiesText.indexOf('\n  "', slugIdx + 1);
+      const block = citiesText.slice(slugIdx, nextIdx > 0 ? nextIdx : undefined);
+      const m = block.match(/heroImage:\s*["']([^"']+)["']/);
+      if (m) {
+        const fileName = m[1].split('/').pop();
+        const candidate = path.resolve(outputDir, fileName);
+        if (fs.existsSync(candidate)) heroLocalPath = candidate;
+      }
+    }
+  }
   const heroDataUri = fileToDataUri(heroLocalPath);
 
   // Brand logo — use the heart icon-mark (not the full wordmark)

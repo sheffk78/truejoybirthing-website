@@ -539,7 +539,7 @@ function run(): void {
         if (ytMatch) {
           const videoId = ytMatch[1];
           // Check if a branded thumbnail file exists locally
-          const ytThumbPattern = new RegExp(`^yt-thumbnail-${targetSlug}(-v\\d+)?\\.(webp|jpg|png)$`);
+          const ytThumbPattern = new RegExp(`^yt-(?:thumbnail|thumb)-${targetSlug}(-v\\d+)?\\.(webp|jpg|png)$`);
           const ytThumbFiles = fs.readdirSync(path.join(PROJECT_DIR, 'public/images')).filter(f => ytThumbPattern.test(f));
 
           if (ytThumbFiles.length > 0) {

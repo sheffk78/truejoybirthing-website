@@ -100,25 +100,43 @@ def hero_silhouette(slug: str) -> dict:
     except ImportError:
         return {"pass": True, "detail": "PIL not available — skipping silhouette check"}
 
-    # Match hero files specifically
-    pattern = re.compile(rf'^{re.escape(slug)}-birth-doula-hero(-v\d+)?\.webp$')
-    files = [f for f in os.listdir(PUBLIC_IMAGES) if pattern.match(f)]
-    if not files:
-        # Fallback: broader pattern excluding support scenes
-        broad_pattern = re.compile(rf'^{re.escape(slug)}-birth-doula(-v\d+)?\.webp$')
-        files = [f for f in os.listdir(PUBLIC_IMAGES) if broad_pattern.match(f) and 'support' not in f.lower()]
+    # Prefer the actual heroImage value from cities.ts. Older completed cities
+    # may use legacy names like "-skyline.webp" even when that file is the
+    # canonical hero. Filename-pattern-only checks create false failures.
+    block = _read_city_block(slug)
+    full_path = None
+    best = None
+    if block:
+        m = re.search(r'heroImage:\s*["\']([^"\']+)["\']', block)
+        if m:
+            hero_ref = m.group(1)
+            if hero_ref.startswith('http'):
+                hero_ref = '/images/' + hero_ref.rstrip('/').split('/')[-1]
+            candidate = os.path.join(PROJECT_DIR, hero_ref.lstrip('/'))
+            if os.path.exists(candidate):
+                full_path = candidate
+                best = os.path.basename(candidate)
 
-    if not files:
-        return {"pass": False, "detail": f"No hero image found for {slug}"}
+    if full_path is None:
+        # Match new hero files specifically
+        pattern = re.compile(rf'^{re.escape(slug)}-birth-doula-hero(-v\d+)?\.webp$')
+        files = [f for f in os.listdir(PUBLIC_IMAGES) if pattern.match(f)]
+        if not files:
+            # Fallback: broader legacy pattern excluding support scenes/variants
+            broad_pattern = re.compile(rf'^{re.escape(slug)}-birth-doula(?:-[a-z]+)?(-v\d+)?\.webp$')
+            files = [f for f in os.listdir(PUBLIC_IMAGES) if broad_pattern.match(f) and 'support' not in f.lower() and '-600' not in f]
 
-    # Sort by variant number descending
-    def variant_key(name: str) -> int:
-        m = re.search(r'-v(\d+)', name)
-        return int(m.group(1)) if m else 0
+        if not files:
+            return {"pass": False, "detail": f"No hero image found for {slug}"}
 
-    files.sort(key=variant_key, reverse=True)
-    best = files[0]
-    full_path = os.path.join(PUBLIC_IMAGES, best)
+        # Sort by variant number descending
+        def variant_key(name: str) -> int:
+            m = re.search(r'-v(\d+)', name)
+            return int(m.group(1)) if m else 0
+
+        files.sort(key=variant_key, reverse=True)
+        best = files[0]
+        full_path = os.path.join(PUBLIC_IMAGES, best)
 
     try:
         img = Image.open(full_path).convert('RGB')
@@ -337,18 +355,35 @@ def yt_thumbnail_matches_hero(slug: str) -> dict:
     except ImportError:
         return {"pass": True, "detail": "PIL not available — skipping YT thumbnail check"}
 
-    # Find hero image
-    hero_pattern = re.compile(rf'^{re.escape(slug)}-birth-doula-hero(-v\d+)?\.webp$')
-    hero_files = [f for f in os.listdir(PUBLIC_IMAGES) if hero_pattern.match(f)]
-    if not hero_files:
-        return {"pass": True, "detail": "No hero image found — skipping YT thumbnail comparison"}
+    # Find hero image from city data first, then fall back to filename patterns.
+    block = _read_city_block(slug)
+    hero_path = None
+    hero_name = None
+    if block:
+        m = re.search(r'heroImage:\s*["\']([^"\']+)["\']', block)
+        if m:
+            hero_ref = m.group(1)
+            if hero_ref.startswith('http'):
+                hero_ref = '/images/' + hero_ref.rstrip('/').split('/')[-1]
+            candidate = os.path.join(PROJECT_DIR, hero_ref.lstrip('/'))
+            if os.path.exists(candidate):
+                hero_path = candidate
+                hero_name = os.path.basename(candidate)
 
     def variant_key(name: str) -> int:
         m = re.search(r'-v(\d+)', name)
         return int(m.group(1)) if m else 0
 
-    hero_files.sort(key=variant_key, reverse=True)
-    hero_path = os.path.join(PUBLIC_IMAGES, hero_files[0])
+    if hero_path is None:
+        hero_pattern = re.compile(rf'^{re.escape(slug)}-birth-doula-hero(-v\d+)?\.webp$')
+        hero_files = [f for f in os.listdir(PUBLIC_IMAGES) if hero_pattern.match(f)]
+        if not hero_files:
+            broad_pattern = re.compile(rf'^{re.escape(slug)}-birth-doula(?:-[a-z]+)?(-v\d+)?\.webp$')
+            hero_files = [f for f in os.listdir(PUBLIC_IMAGES) if broad_pattern.match(f) and 'support' not in f.lower() and '-600' not in f]
+        if not hero_files:
+            return {"pass": True, "detail": "No hero image found — skipping YT thumbnail comparison"}
+        hero_files.sort(key=variant_key, reverse=True)
+        hero_path = os.path.join(PUBLIC_IMAGES, hero_files[0])
 
     # Find YT thumbnail
     yt_pattern = re.compile(rf'^yt-thumbnail-{re.escape(slug)}(-v\d+)?\.(webp|jpg|png)$')
@@ -367,17 +402,28 @@ def yt_thumbnail_matches_hero(slug: str) -> dict:
         hero_img = Image.open(hero_path).convert('RGB')
         yt_img = Image.open(yt_path).convert('RGB')
 
+        # The thumbnail renders the hero with CSS object-fit: cover into 16:9.
+        # Recreate that crop before comparison; resizing the whole 3:2 hero to
+        # 16:9 distorts/crops differently and creates false failures.
         hw, hh = hero_img.size
+        target_ratio = 16 / 9
+        current_ratio = hw / hh
+        if current_ratio > target_ratio:
+            new_w = int(hh * target_ratio)
+            left = (hw - new_w) // 2
+            hero_img = hero_img.crop((left, 0, left + new_w, hh))
+        elif current_ratio < target_ratio:
+            new_h = int(hw / target_ratio)
+            top = (hh - new_h) // 2
+            hero_img = hero_img.crop((0, top, hw, top + new_h))
+
+        hero_resized = hero_img.resize(yt_img.size, Image.LANCZOS)
         yw, yh = yt_img.size
 
-        # Resize YT thumbnail to match hero dimensions
-        yt_resized = yt_img.resize((hw, hh), Image.LANCZOS)
-
-        # Compare the top-right quadrant — this area has minimal overlay
-        # (the gradient is on the left, text box is top-left, play button is bottom-right)
-        # Top-right: from center to 90% width, top 10% to 40% height
-        hero_region = hero_img.crop((hw // 2, hh // 10, int(hw * 0.9), int(hh * 0.4)))
-        yt_region = yt_resized.crop((hw // 2, hh // 10, int(hw * 0.9), int(hh * 0.4)))
+        # Compare a mostly unobstructed right-side window/background region.
+        # Avoid left text overlays, bottom brand/play controls, and top badge.
+        hero_region = hero_resized.crop((int(yw * 0.58), int(yh * 0.12), int(yw * 0.92), int(yh * 0.48)))
+        yt_region = yt_img.crop((int(yw * 0.58), int(yh * 0.12), int(yw * 0.92), int(yh * 0.48)))
 
         hero_pixels = list(hero_region.getdata())
         yt_pixels = list(yt_region.getdata())
