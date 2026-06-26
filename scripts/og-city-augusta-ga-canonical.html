@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1200px;
+    height: 630px;
+    background: #FAF8F5;
+    overflow: hidden;
+  }
+  .og-card {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    height: 630px;
+  }
+  /* LEFT: Text content on cream gradient */
+  .left-column {
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 52px 64px;
+    background: linear-gradient(180deg, #FAF8F5 0%, #EDE5F5 100%);
+    position: relative;
+  }
+  /* Rose accent bar at top */
+  .left-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #D8A0C4;
+  }
+  /* Rose accent bar at bottom */
+  .left-column::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #D8A0C4;
+  }
+  /* RIGHT: Hero image */
+  .right-column {
+    width: 540px;
+    position: relative;
+    overflow: hidden;
+  }
+  .right-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  /* Rose accent bars on image side */
+  .right-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #D8A0C4;
+    z-index: 2;
+  }
+  .right-column::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #D8A0C4;
+    z-index: 2;
+  }
+  .accent-line {
+    width: 40px;
+    height: 3px;
+    background: #D8A0C4;
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+  .eyebrow {
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #B87AA0;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 10px;
+  }
+  .headline {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 700;
+    font-size: 52px;
+    color: #2A2A2A;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .summary {
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #555555;
+    letter-spacing: 0.005em;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    max-width: 520px;
+  }
+  .subhead {
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #6A6B6C;
+    letter-spacing: 0.02em;
+  }
+  .subhead span {
+    margin: 0 8px;
+    color: #D8A0C4;
+  }
+  /* Logo — mono SVG for contrast on cream backgrounds, minimum 56px height */
+  .logo-area {
+    margin-top: auto;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+  }
+  .logo-area img {
+    height: 56px;
+    width: auto;
+  }
+</style>
+</head>
+<!--
+  CANONICAL Pattern B OG Template for TJB Location/City Pages
+  ============================================================
+  
+  REPLACE THESE PLACEHOLDERS before rendering:
+  
+  AUGUSTA BIRTH SUPPORT     → e.g. "DENVER BIRTH SUPPORT" (uppercase, city name + "BIRTH SUPPORT")
+  Doulas & Birth Plans<br>in Augusta, GA    → e.g. "Doulas & Birth Plans<br>in Denver, CO" (Cormorant Garamond, max 2 lines)
+  From the Savannah River to the 15th Street medical corridor, Augusta families deserve birth support that gets it. Local doulas, real hospital policies, and a free birth plan template built for CSRA moms.     → City-specific 1-2 sentence pitch. Reference local landmarks/geography.
+                     e.g. "From the Front Range to the Platte, Denver families deserve birth support
+                     that gets it. Local doulas, real hospital policies, and a free birth plan
+                     template built for Colorado moms."
+  Free birth plan template <span>·</span> Hospital info <span>·</span> Real costs <span>·</span> Medicaid updates     → e.g. "Free birth plan template · Hospital info · Real costs · Medicaid coverage"
+                     (Use · separator between items)
+  ../public/images/augusta-ga-birth-doula-skyline.webp  → Production URL of city hero image, or gradient fallback.
+                     Denver: https://truejoybirthing.com/images/denver-hero-front-range.webp
+                     Other cities without hero: Use branded gradient div instead (see below)
+  {{LOGO_SRC}}    → https://truejoybirthing.com/images/logo-mono.svg
+                     (ALWAYS use mono — the color logo washes out on cream backgrounds)
+  
+  FOR CITIES WITHOUT A HERO IMAGE:
+  Replace the <div class="right-column"><img .../></div> with:
+  <div class="right-column" style="background: linear-gradient(135deg, #E6BBD8 0%, #8E8CB5 50%, #A8B5A0 100%);"></div>
+  This is the same gradient as Pattern A cards — a safe branded fallback.
+  
+  RENDERING:
+  Use Playwright with viewport 1200×630, deviceScaleFactor=1. See og-creation-workflow.md.
+  
+  DESIGN RULES:
+  - Logo MUST be logo-mono.svg (black line art). The color logo.svg uses pastel fills 
+    that are invisible on cream backgrounds.
+  - Logo MUST be ≥56px height. The old 14px wordmark was invisible at thumbnail scale.
+  - Summary text is city-specific — NOT generic. Reference local geography/landmarks.
+  - Photo goes on the RIGHT (540px). Text stack on the LEFT (660px).
+  - Rose bars (6px #D8A0C4) at top/bottom of BOTH columns.
+  - PNG format for output (LinkedIn/X don't reliably render WebP).
+  
+  VERSION HISTORY:
+  - v1: Gradient right panel, 14px text-only wordmark, no summary, no photo
+  - v2 (June 2026): Photo right column, 56px mono logo, city-specific summary, eyebrow
+-->
+<body>
+<div class="og-card">
+  <div class="left-column">
+    <div class="accent-line"></div>
+    <div class="eyebrow">AUGUSTA BIRTH SUPPORT</div>
+    <div class="headline">Doulas & Birth Plans<br>in Augusta, GA</div>
+    <div class="summary">From the Savannah River to the 15th Street medical corridor, Augusta families deserve birth support that gets it. Local doulas, real hospital policies, and a free birth plan template built for CSRA moms.</div>
+    <div class="subhead">Free birth plan template <span>·</span> Hospital info <span>·</span> Real costs <span>·</span> Medicaid updates</div>
+    <div class="logo-area">
+      <img src="https://truejoybirthing.com/images/logo-mono.svg" alt="True Joy Birthing" />
+    </div>
+  </div>
+  <div class="right-column">
+    <img src="../public/images/augusta-ga-birth-doula-skyline.webp" alt="Augusta, GA" />
+  </div>
+</div>
+</body>
+</html>
