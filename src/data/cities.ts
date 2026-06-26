@@ -2505,7 +2505,7 @@ export const cities: Record<string, CityData> = {
     costHigh: 3000,
     heroImage: "/images/atlanta-ga-birth-doula-skyline-v2.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-atlanta-ga-v2.webp",
-    supportSceneImage: "/images/atlanta-ga-birth-doula-support-v2.webp",
+    supportSceneImage: "/images/atlanta-ga-birth-doula-support-v2.jpg",
     supportSceneAlt: "A doula supporting an expectant mom in Atlanta: Georgia birth support and doula care",
     shelbiServesHere: false,
     localDoulas: [
