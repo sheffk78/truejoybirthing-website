@@ -28,7 +28,18 @@
   }
   .right-column {
     width: 540px;
-    background: linear-gradient(135deg, #E6BBD8 0%, #8E8CB5 50%, #A8B5A0 100%);
+    background: url('../public/images/charlotte-nc-birth-doula-skyline-v2.webp') center/cover no-repeat;
+    position: relative;
+  }
+  .right-column::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    background: linear-gradient(to right, #FAF8F5 0%, rgba(250,248,245,0) 100%);
+    z-index: 1;
   }
   .accent-line {
     width: 36px;
