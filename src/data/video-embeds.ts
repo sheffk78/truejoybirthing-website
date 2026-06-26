@@ -317,4 +317,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M00S",
     uploadDate: "2026-06-24T00:00:00-06:00",
   },
+  "charlotte-nc": {
+    videoId: "emKMmDogiLs",
+    title: "Charlotte NC Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and North Carolina Medicaid, all in under 3 minutes.",
+    duration: "PT2M21S",
+    uploadDate: "2026-06-26T00:00:00-06:00",
+  },
 };
