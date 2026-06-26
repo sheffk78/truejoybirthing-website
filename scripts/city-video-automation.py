@@ -479,21 +479,12 @@ def copy_assets(slug):
         if src.exists():
             shutil.copy2(str(src), str(dest_dir / app))
 
-<<<<<<< Updated upstream
-    # Copy fullpage-scroll screenshot
-    scroll_src = PROJECT_ROOT / 'public' / 'images' / f'{slug}-fullpage-scroll.png'
-    if scroll_src.exists():
-        shutil.copy2(str(scroll_src), str(dest_dir / f'{slug}-fullpage-scroll.png'))
-        print(f'  ✅ Fullpage-scroll screenshot copied')
-    
-=======
     # Copy fullpage scroll screenshot (provider scene)
     scroll_src = PROJECT_ROOT / 'public' / 'images' / f'{slug}-fullpage-scroll.png'
     if scroll_src.exists():
         shutil.copy2(str(scroll_src), str(dest_dir / f'{slug}-fullpage-scroll.png'))
         print(f'  ✅ Fullpage scroll screenshot copied')
 
->>>>>>> Stashed changes
     print(f'  ✅ Assets copied')
 
 
