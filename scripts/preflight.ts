@@ -351,6 +351,30 @@ function run(): void {
     }
   }
 
+  // ── A4b: Meta/OG description ≤130 chars (opengraph.xyz compliance) ──
+  try {
+    const shellResult = execSync(
+      `pass=true; for f in dist/birth-support/*/index.html; do ` +
+      `slug=$(basename $(dirname "$f")); ` +
+      `desc=$(grep -o '<meta name="description" content="[^"]*"' "$f" | sed 's/<meta name="description" content="//;s/"$//'); ` +
+      `len=$(echo -n "$desc" | wc -c | tr -d ' '); ` +
+      `if [ "$len" -gt 130 ]; then ` +
+      `echo "LONG: $slug ($len chars)"; pass=false; ` +
+      `fi; done; $pass`,
+      { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 30000 }
+    );
+    results.push({ gate: 'A4b', status: 'PASS', detail: 'All city page descriptions ≤130 chars' });
+  } catch (e: any) {
+    const output = e.stdout?.toString() || '';
+    const longPages = output.split('\n').filter(l => l.includes('LONG:'));
+    if (longPages.length > 0) {
+      results.push({ gate: 'A4b', status: 'FAIL', detail: `${longPages.length} page(s) with description >130 chars` });
+      longPages.forEach(l => results.push({ gate: 'A4b', status: 'FAIL', detail: `  ${l.trim()}` }));
+    } else {
+      results.push({ gate: 'A4b', status: 'FAIL', detail: 'Description check command failed' });
+    }
+  }
+
   // ── G18: YouTube embed returns 200 (not deleted/unlisted) ──
   if (targetSlug) {
     try {
@@ -835,6 +859,71 @@ function run(): void {
     }
   } else {
     results.push({ gate: 'G27', status: 'SKIP', detail: 'Skipping provider credential check in audit mode (run with slug)' });
+  }
+
+  // ── G28: OG meta tag completeness (opengraph.xyz compliance) ──
+  // Checks built HTML for all required OG/Twitter meta tags that opengraph.xyz flags:
+  //   og:locale, og:type=article, twitter:site, twitter:creator, og:image:alt
+  // These are NOT checked on the source cities.ts — they're checked on the built
+  // dist/birth-support/{slug}/index.html so they catch layout-level omissions.
+  if (targetSlug) {
+    const htmlPath = path.join(PROJECT_DIR, 'dist', 'birth-support', targetSlug, 'index.html');
+    if (fs.existsSync(htmlPath)) {
+      const html = fs.readFileSync(htmlPath, 'utf-8');
+      const missing: string[] = [];
+
+      // og:locale
+      if (!html.includes('property="og:locale"')) missing.push('og:locale');
+      // og:type = article (city pages should be article, not website)
+      const ogTypeMatch = html.match(/property="og:type"\s+content="([^"]*)"/);
+      if (!ogTypeMatch || ogTypeMatch[1] !== 'article') missing.push('og:type (expected article)');
+      // twitter:site
+      if (!html.includes('name="twitter:site"')) missing.push('twitter:site');
+      // twitter:creator
+      if (!html.includes('name="twitter:creator"')) missing.push('twitter:creator');
+      // og:image:alt
+      if (!html.includes('property="og:image:alt"')) missing.push('og:image:alt');
+
+      if (missing.length === 0) {
+        results.push({ gate: 'G28', status: 'PASS', detail: 'All OG/Twitter meta tags present (opengraph.xyz compliant)' });
+      } else {
+        results.push({ gate: 'G28', status: 'FAIL', detail: `Missing OG meta tags: ${missing.join(', ')}` });
+      }
+    } else {
+      results.push({ gate: 'G28', status: 'SKIP', detail: 'Built HTML not found — run npm run build first' });
+    }
+  } else {
+    results.push({ gate: 'G28', status: 'SKIP', detail: 'Skipping OG meta check in audit mode (run with slug)' });
+  }
+
+  // ── G29: OG image contains a real photograph, not just a gradient (PIL) ──
+  if (targetSlug) {
+    try {
+      const g29Result = execSync(
+        `python3 scripts/preflight-image-helper.py og-photo-quality ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 15000 }
+      );
+      const g29Data = JSON.parse(g29Result.trim());
+      if (g29Data.pass) {
+        results.push({ gate: 'G29', status: 'PASS', detail: g29Data.detail });
+      } else {
+        results.push({ gate: 'G29', status: 'FAIL', detail: g29Data.detail });
+      }
+    } catch (e: any) {
+      const output = typeof e.stdout === 'string' ? e.stdout : '';
+      try {
+        const g29Data = JSON.parse(output.trim());
+        if (g29Data.pass) {
+          results.push({ gate: 'G29', status: 'PASS', detail: g29Data.detail });
+        } else {
+          results.push({ gate: 'G29', status: 'FAIL', detail: g29Data.detail });
+        }
+      } catch {
+        results.push({ gate: 'G29', status: 'SKIP', detail: 'Could not check OG photo quality' });
+      }
+    }
+  } else {
+    results.push({ gate: 'G29', status: 'SKIP', detail: 'Skipping OG photo quality check in audit mode (run with slug)' });
   }
 
   // ── Print summary ──

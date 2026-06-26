@@ -157,14 +157,17 @@ def hero_silhouette(slug: str) -> dict:
         top = avg_brightness(top_region)
 
         # Photo-vs-graphic check: CSS gradient compositions have very few unique
-        # colors in the sky region (top third). Real photos — even heavily
-        # compressed WebP — have 500+ unique colors from natural texture.
-        # HTML/Playwright renders of gradient compositions have <200.
-        # Threshold: <350 unique colors in top third → likely graphic, not photo.
+        # colors in the sky region (top quarter). Real photos — even heavily
+        # compressed WebP — have 2000+ unique colors from natural texture.
+        # HTML/Playwright renders of gradient compositions have <700 even with
+        # text anti-aliasing. The old threshold of 350 let 28 gradient cities
+        # slip through because WebP compression + text edges pushed them to 400-700.
+        # New threshold: <2000 unique colors in top quarter → likely graphic.
+        # Verified against real photos (min ~3000) and gradients (max ~700).
         top_pixels = list(top_region.getdata())
         top_unique = len(set(top_pixels))
-        if top_unique < 350:
-            return {"pass": False, "detail": f"Hero appears to be a CSS/HTML gradient graphic, not a photo (top_unique_colors={top_unique}, threshold=350). Use image_generate with silhouette prompt from tjb-ai-photo-generation skill, NOT render-hero.cjs."}
+        if top_unique < 2000:
+            return {"pass": False, "detail": f"Hero appears to be a CSS/HTML gradient graphic, not a photo (top_unique_colors={top_unique}, threshold=2000). Use image_generate with silhouette prompt from tjb-ai-photo-generation skill. Gradient hero composition files have been DELETED — they must never be used."}
 
         if center < top and (top - center) > 0.5:
             return {"pass": True, "detail": f"Silhouette confirmed (center={center:.1f} < top={top:.1f}, top_colors={top_unique})"}
@@ -603,6 +606,44 @@ def check_provider_credentials(slug: str):
     return {"pass": True, "detail": f"All {len(credentials)} providers have specific credentials"}
 
 
+def og_photo_quality(slug: str) -> dict:
+    """Check OG image contains a real photograph, not just a gradient + text.
+
+    The canonical OG template (Pattern B) has a real city hero photo on the
+    right column. Gradient-only OGs have <5000 unique full-image colors because
+    they're just CSS gradients with text. Real photo OGs have 10000+.
+    """
+    try:
+        from PIL import Image
+    except ImportError:
+        return {"pass": True, "detail": "PIL not available — skipping OG quality check"}
+
+    # Find the OG file — check for variants (v2, v3 etc.)
+    pattern = re.compile(rf'^og-city-{re.escape(slug)}(-v\d+)?\.webp$')
+    files = [f for f in os.listdir(PUBLIC_IMAGES) if pattern.match(f)]
+    if not files:
+        return {"pass": False, "detail": f"No OG image found for {slug}"}
+
+    def variant_key(name: str) -> int:
+        m = re.search(r'-v(\d+)', name)
+        return int(m.group(1)) if m else 0
+
+    files.sort(key=variant_key, reverse=True)
+    og_path = os.path.join(PUBLIC_IMAGES, files[0])
+
+    try:
+        img = Image.open(og_path).convert('RGB')
+        colors = img.getcolors(maxcolors=200000)
+        color_count = len(colors) if colors else 200001
+
+        if color_count < 5000:
+            return {"pass": False, "detail": f"OG appears to be gradient-only, no real photo (full_unique_colors={color_count}, threshold=5000). OG must use the canonical Pattern B template with the city hero photo on the right column. Re-render from scripts/render-city-og-template.html with the hero image embedded."}
+        else:
+            return {"pass": True, "detail": f"OG has photo content (full_unique_colors={color_count})"}
+    except Exception as e:
+        return {"pass": True, "detail": f"Could not analyze OG image: {e}"}
+
+
 def main():
     if len(sys.argv) < 3:
         print(json.dumps({"pass": False, "detail": "Usage: preflight-image-helper.py <check> <slug>"}))
@@ -621,6 +662,7 @@ def main():
         'hero-aspect': hero_aspect,
         'support-aspect': support_aspect,
         'provider-credentials': check_provider_credentials,
+        'og-photo-quality': og_photo_quality,
     }
 
     fn = checks.get(command)

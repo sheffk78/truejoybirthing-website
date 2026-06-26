@@ -255,11 +255,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
   "atlanta-ga": {
-    videoId: "cWTH4pQuI2c",
+    videoId: "Zu4JLkgYfEY",
     title: "Atlanta Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Georgia Medicaid, all in under 3 minutes.",
-    duration: "PT2M04S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Georgia Medicaid, all in under 4 minutes.",
+    duration: "PT4M01S",
+    uploadDate: "2026-06-26T00:00:00-06:00",
   },
   "baltimore-md": {
     videoId: "0jPV5LUlyvg",
@@ -318,10 +318,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-24T00:00:00-06:00",
   },
   "charlotte-nc": {
-    videoId: "emKMmDogiLs",
+    videoId: "xPqaBX9OIsg",
     title: "Charlotte NC Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and North Carolina Medicaid, all in under 3 minutes.",
-    duration: "PT2M21S",
+    description: "Watch the full city guide — doulas, hospitals, costs, and North Carolina Medicaid, all in under 4 minutes.",
+    duration: "PT3M46S",
     uploadDate: "2026-06-26T00:00:00-06:00",
   },
 };

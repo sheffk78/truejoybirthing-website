@@ -50,7 +50,14 @@ function getCitySlugs(): string[] {
   if (!existsSync(CITY_DIR)) return [];
   return readdirSync(CITY_DIR, { withFileTypes: true })
     .filter((d) => d.isDirectory())
-    .map((d) => d.name);
+    .map((d) => d.name)
+    .filter((slug) => {
+      // State hub pages are 2-letter codes (az, ca, co, etc.) — exclude them.
+      // City pages are always "city-st" format (e.g., denver-co, arlington-tx).
+      // Also exclude any slug that doesn't contain a hyphen (custom routes).
+      if (slug.length === 2) return false;  // state hub
+      return slug.includes("-");
+    });
 }
 
 function loadPage(slug: string): { html: string; doc: ReturnType<typeof parse> } | null {
@@ -454,29 +461,45 @@ function assertSeoLlm(slug: string, doc: ReturnType<typeof parse>, html: string,
       : `SpeakableSpecification schema present (correct)`,
   });
 
-  // F9a: og:locale (WARNING — Sprint 2)
+  // F9a: og:locale (HARD FAILURE — upgraded from WARN June 25, 2026)
   const ogLocale = doc.querySelector('meta[property="og:locale"]');
   if (!ogLocale || ogLocale.getAttribute("content") !== "en_US") {
-    warnings.push({ id: "F9a", city: slug, message: !ogLocale ? `SEO: Missing og:locale meta tag` : `SEO: og:locale is "${ogLocale.getAttribute("content")}" — expected "en_US"` });
+    results.push({ id: "F9a", city: slug, passed: false, message: !ogLocale ? `SEO: Missing og:locale meta tag` : `SEO: og:locale is "${ogLocale.getAttribute("content")}" — expected "en_US"` });
   } else {
     results.push({ id: "F9a", city: slug, passed: true, message: `og:locale = en_US (correct)` });
   }
 
-  // F9b: og:type = article (WARNING — Sprint 2)
+  // F9b: og:type = article (HARD FAILURE — upgraded from WARN June 25, 2026)
   const ogType = doc.querySelector('meta[property="og:type"]');
   const ogTypeContent = ogType?.getAttribute("content") ?? "";
   if (ogTypeContent !== "article") {
-    warnings.push({ id: "F9b", city: slug, message: `SEO: og:type is "${ogTypeContent}" — expected "article" for city pages` });
+    results.push({ id: "F9b", city: slug, passed: false, message: `SEO: og:type is "${ogTypeContent}" — expected "article" for city pages` });
   } else {
     results.push({ id: "F9b", city: slug, passed: true, message: `og:type = article (correct)` });
   }
 
-  // F9e: twitter:site (WARNING — Sprint 2)
+  // F9c: twitter:site (HARD FAILURE — upgraded from WARN June 25, 2026)
   const twitterSite = doc.querySelector('meta[name="twitter:site"]');
   if (!twitterSite) {
-    warnings.push({ id: "F9e", city: slug, message: `SEO: Missing twitter:site meta tag` });
+    results.push({ id: "F9e", city: slug, passed: false, message: `SEO: Missing twitter:site meta tag` });
   } else {
     results.push({ id: "F9e", city: slug, passed: true, message: `twitter:site present (correct)` });
+  }
+
+  // F9d: twitter:creator (HARD FAILURE — added June 25, 2026)
+  const twitterCreator = doc.querySelector('meta[name="twitter:creator"]');
+  if (!twitterCreator) {
+    results.push({ id: "F9d", city: slug, passed: false, message: `SEO: Missing twitter:creator meta tag` });
+  } else {
+    results.push({ id: "F9d", city: slug, passed: true, message: `twitter:creator present (correct)` });
+  }
+
+  // F9e: og:image:alt (HARD FAILURE — added June 25, 2026)
+  const ogImageAlt = doc.querySelector('meta[property="og:image:alt"]');
+  if (!ogImageAlt) {
+    results.push({ id: "F9f", city: slug, passed: false, message: `SEO: Missing og:image:alt meta tag` });
+  } else {
+    results.push({ id: "F9f", city: slug, passed: true, message: `og:image:alt present (correct)` });
   }
 
   return { assertions: results, warnings };

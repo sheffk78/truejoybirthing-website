@@ -8,10 +8,11 @@ interface Props {
   date?: string;
   author?: string;
   featuredImage?: string;
+  featuredImageAlt?: string;
   pageType?: string;
 }
 
-const { title, description, canonical, date, author = "Shelbi Kohler", featuredImage, pageType = "BlogPosting" } = Astro.props;
+const { title, description, canonical, date, author = "Shelbi Kohler", featuredImage, featuredImageAlt, pageType = "BlogPosting" } = Astro.props;
 
 const pubDate = date ? new Date(date) : null;
 const formattedDate = pubDate ? pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
@@ -61,7 +62,11 @@ const schemaJson = JSON.stringify(schema);
     <meta property="og:url" content={pageUrl} />
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="True Joy Birthing" />
+    <meta property="og:locale" content="en_US" />
+    {featuredImageAlt && <meta property="og:image:alt" content={featuredImageAlt} />}
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@TrueJoyBirth" />
+    <meta name="twitter:creator" content="@TrueJoyBirth" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />

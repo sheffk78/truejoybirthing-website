@@ -110,34 +110,32 @@ case "$ASSET_TYPE" in
     ;;
 
   hero)
-    COMP_FILE="$SCRIPT_DIR/hero-city-$SLUG-composition.html"
-    if [ ! -f "$COMP_FILE" ]; then
-      echo "  ❌ No hero composition at: hero-city-$SLUG-composition.html"
-      echo "     Create a composition HTML file first."
-      exit 1
-    fi
-
-    COMP_RELATIVE="$(basename "$COMP_FILE")"
-    node "$SCRIPT_DIR/render-hero.cjs" "$COMP_RELATIVE" "hero-city-$SLUG"
-    echo "  ✅ Hero image rendered"
-
-    verify_image "$OUTPUT_DIR/hero-city-$SLUG.webp" 1200 800 "Hero"
+    echo "  ❌ Hero images must be generated via image_generate (AI photo generation)."
+    echo "     The render-hero.cjs tool and hero-city-*-composition.html files have been DELETED."
+    echo "     They produced CSS gradient graphics, not photographs."
+    echo ""
+    echo "     To create a hero image:"
+    echo "     1. Load the tjb-ai-photo-generation skill"
+    echo "     2. Inspect 2-3 approved reference heroes (Norfolk, Carrollton, Fremont, Vancouver)"
+    echo "     3. Use image_generate with the pregnant silhouette prompt"
+    echo "     4. Run preflight G8 gate to verify it passes"
+    echo ""
+    echo "     This script cannot generate hero images. Exiting."
+    exit 1
     ;;
 
   support)
-    COMP_FILE="$SCRIPT_DIR/support-city-$SLUG-composition.html"
-    if [ ! -f "$COMP_FILE" ]; then
-      echo "  ❌ No support composition at: support-city-$SLUG-composition.html"
-      echo "     The support scene must be city-specific, not the generic doula-walking.webp"
-      echo "     Create a composition HTML file first."
-      exit 1
-    fi
-
-    COMP_RELATIVE="$(basename "$COMP_FILE")"
-    node "$SCRIPT_DIR/render-hero.cjs" "$COMP_RELATIVE" "support-city-$SLUG"
-    echo "  ✅ Support scene rendered"
-
-    verify_image "$OUTPUT_DIR/support-city-$SLUG.webp" 1200 800 "Support"
+    echo "  ❌ Support scene images must be generated via image_generate (AI photo generation)."
+    echo "     The render-hero.cjs tool has been DELETED."
+    echo "     It produced CSS gradient graphics, not photographs."
+    echo ""
+    echo "     To create a support scene:"
+    echo "     1. Load the tjb-ai-photo-generation skill"
+    echo "     2. Use image_generate with a city-specific doula support prompt"
+    echo "     3. Run preflight to verify it passes"
+    echo ""
+    echo "     This script cannot generate support images. Exiting."
+    exit 1
     ;;
 
   thumbnail)

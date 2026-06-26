@@ -8,6 +8,8 @@ interface Props {
   description?: string;
   canonical?: string;
   ogImage?: string;
+  ogImageAlt?: string;
+  ogType?: string;
   schema?: object;
   breadcrumbList?: { name: string; url: string }[];
   noindex?: boolean;
@@ -22,6 +24,8 @@ const { title, description = "True Joy Birthing — birth education and planning
   // Never fall back to og-default.webp. If a page lacks a custom OG, use the closest
   // content-family match or og-homepage.webp as a last resort.
   ogImage = "https://truejoybirthing.com/images/og-homepage.webp",
+  ogImageAlt,
+  ogType = "website",
   noindex = false } = Astro.props;
 const breadcrumbList = Astro.props.breadcrumbList;
 const currentPath = Astro.url.pathname;
@@ -206,8 +210,12 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="True Joy Birthing" />
     <meta property="og:url" content={canonical || `https://truejoybirthing.com${currentPath}`} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:locale" content="en_US" />
+    {ogImageAlt && <meta property="og:image:alt" content={ogImageAlt} />}
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@TrueJoyBirth" />
+    <meta name="twitter:creator" content="@TrueJoyBirth" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
