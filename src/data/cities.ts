@@ -4041,7 +4041,7 @@ export const cities: Record<string, CityData> = {
     costLow: 800,
     costHigh: 2200,
     heroImage: "/images/baltimore-md-birth-doula-hero.webp",
-    ogImage: "https://truejoybirthing.com/images/og-city-baltimore-md.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-baltimore-md-v2.webp",
     supportSceneImage: "/images/baltimore-md-birth-doula-support.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Baltimore: Maryland birth support and doula care",
     shelbiServesHere: false,
