@@ -644,6 +644,51 @@ def og_photo_quality(slug: str) -> dict:
         return {"pass": True, "detail": f"Could not analyze OG image: {e}"}
 
 
+def cdn_match(slug: str) -> dict:
+    """G34: Verify the live CDN is serving the same hero image as the repo.
+    Catches Cloudflare cache staleness — the #1 cause of 'fixed but not live'."""
+    import urllib.request, hashlib
+
+    block = _read_city_block(slug)
+    if not block:
+        return {"pass": False, "detail": f"Could not read city block for {slug}"}
+
+    m = re.search(r'heroImage:\s*["\']([^"\']+)["\']', block)
+    if not m:
+        return {"pass": False, "detail": f"No heroImage found for {slug}"}
+
+    hero_ref = m.group(1)
+    if hero_ref.startswith('http'):
+        live_url = hero_ref
+        local_name = hero_ref.rstrip('/').split('/')[-1]
+    else:
+        local_name = hero_ref.lstrip('/').split('/')[-1]
+        live_url = f"https://truejoybirthing.com{hero_ref}"
+
+    local_path = os.path.join(PUBLIC_IMAGES, local_name)
+    if not os.path.exists(local_path):
+        return {"pass": False, "detail": f"Local hero file not found: {local_name}"}
+
+    local_size = os.path.getsize(local_path)
+    try:
+        req = urllib.request.Request(live_url, headers={'User-Agent': 'TJB-Preflight/1.0', 'Cache-Control': 'no-cache'})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            live_data = resp.read()
+        live_size = len(live_data)
+    except Exception as e:
+        return {"pass": False, "detail": f"Could not fetch live hero from CDN: {e}"}
+
+    if live_size == local_size:
+        local_hash = hashlib.md5(open(local_path, 'rb').read()).hexdigest()[:8]
+        live_hash = hashlib.md5(live_data).hexdigest()[:8]
+        if local_hash == live_hash:
+            return {"pass": True, "detail": f"CDN serving correct hero ({local_name}, {local_size}b, md5={local_hash})"}
+        else:
+            return {"pass": False, "detail": f"CDN size matches but content differs (local={local_hash}, live={live_hash}) — investigate"}
+    else:
+        return {"pass": False, "detail": f"CDN serving stale hero: live={live_size}b vs repo={local_size}b. Cloudflare cache is stale. Rename file (add -vN suffix) to bust CDN cache."}
+
+
 def main():
     if len(sys.argv) < 3:
         print(json.dumps({"pass": False, "detail": "Usage: preflight-image-helper.py <check> <slug>"}))
@@ -663,6 +708,7 @@ def main():
         'support-aspect': support_aspect,
         'provider-credentials': check_provider_credentials,
         'og-photo-quality': og_photo_quality,
+        'cdn-match': cdn_match,
     }
 
     fn = checks.get(command)

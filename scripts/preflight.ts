@@ -926,6 +926,36 @@ function run(): void {
     results.push({ gate: 'G29', status: 'SKIP', detail: 'Skipping OG photo quality check in audit mode (run with slug)' });
   }
 
+  // ── G34: CDN serving same hero as repo (catches CF cache staleness) ──
+  if (targetSlug) {
+    try {
+      const g34Result = execSync(
+        `python3 scripts/preflight-image-helper.py cdn-match ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 15000 }
+      );
+      const g34Data = JSON.parse(g34Result.trim());
+      if (g34Data.pass) {
+        results.push({ gate: 'G34', status: 'PASS', detail: g34Data.detail });
+      } else {
+        results.push({ gate: 'G34', status: 'FAIL', detail: g34Data.detail });
+      }
+    } catch (e: any) {
+      const output = typeof e.stdout === 'string' ? e.stdout : '';
+      try {
+        const g34Data = JSON.parse(output.trim());
+        if (g34Data.pass) {
+          results.push({ gate: 'G34', status: 'PASS', detail: g34Data.detail });
+        } else {
+          results.push({ gate: 'G34', status: 'FAIL', detail: g34Data.detail });
+        }
+      } catch {
+        results.push({ gate: 'G34', status: 'SKIP', detail: 'Could not check CDN match' });
+      }
+    }
+  } else {
+    results.push({ gate: 'G34', status: 'SKIP', detail: 'Skipping CDN match check in audit mode (run with slug)' });
+  }
+
   // ── Print summary ──
   console.log('\n─── RESULTS ───\n');
 
