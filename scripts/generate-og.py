@@ -18,7 +18,7 @@ W, H = 1200, 630
 FONT_PATH = "/System/Library/Fonts/Helvetica.ttc"
 PROJECT_DIR = "/Users/socializerender/Projects/truejoybirthing-website"
 
-def generate_og(slug: str, title_lines: list[str] | None = None):
+def generate_og(slug: str, title_lines=None):
     img = Image.new('RGB', (W, H), (107, 91, 149))
     draw = ImageDraw.Draw(img)
 
