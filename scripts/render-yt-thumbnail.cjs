@@ -75,8 +75,12 @@ function encodeSvgForUrl(filePath) {
   const citiesPath = path.resolve(__dirname, '..', 'src', 'data', 'cities.ts');
   if (fs.existsSync(citiesPath)) {
     const citiesText = fs.readFileSync(citiesPath, 'utf-8');
-    const slugIdx = citiesText.indexOf(`"${slug}"`);
-    if (slugIdx >= 0) {
+    // Use regex to find the actual city block: "slug": { — not a nearbyCities reference
+    const blockRe = new RegExp(`"${slug}"\\s*:\\s*\\{`);
+    const blockMatch = blockRe.exec(citiesText);
+    if (blockMatch) {
+      const slugIdx = blockMatch.index;
+      // Find the next top-level city entry after this one
       const nextIdx = citiesText.indexOf('\n  "', slugIdx + 1);
       const block = citiesText.slice(slugIdx, nextIdx > 0 ? nextIdx : undefined);
       const m = block.match(/heroImage:\s*["']([^"']+)["']/);
