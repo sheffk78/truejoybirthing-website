@@ -248,11 +248,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
   "philadelphia-pa": {
-    videoId: "61PInhr-XZI",
+    videoId: "LyYRGCPhNi0",
     title: "Philadelphia Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Pennsylvania Medicaid, all in under 3 minutes.",
-    duration: "PT2M06S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Pennsylvania Medicaid, all in under 4 minutes.",
+    duration: "PT3M58S",
+    uploadDate: "2026-06-27T00:00:00-06:00",
   },
   "atlanta-ga": {
     videoId: "Zu4JLkgYfEY",

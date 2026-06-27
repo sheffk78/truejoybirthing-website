@@ -166,8 +166,16 @@ def hero_silhouette(slug: str) -> dict:
         # Verified against real photos (min ~3000) and gradients (max ~700).
         top_pixels = list(top_region.getdata())
         top_unique = len(set(top_pixels))
-        if top_unique < 2000:
-            return {"pass": False, "detail": f"Hero appears to be a CSS/HTML gradient graphic, not a photo (top_unique_colors={top_unique}, threshold=2000). Use image_generate with silhouette prompt from tjb-ai-photo-generation skill. Gradient hero composition files have been DELETED — they must never be used."}
+        full_pixels = list(img.getdata())
+        full_unique = len(set(full_pixels))
+        # Photo-vs-graphic check: CSS gradient compositions have very few unique
+        # colors both in the sky region AND overall. Real photos may have smooth
+        # skies (low top_unique) but rich overall content (high full_unique).
+        # Gate: fail only if BOTH top < 2000 AND full < 20000.
+        # Gradient graphics: top ~178-700, full ~3000-7000.
+        # Real photos with smooth skies: top ~477-1400, full ~25000+.
+        if top_unique < 2000 and full_unique < 20000:
+            return {"pass": False, "detail": f"Hero appears to be a CSS/HTML gradient graphic, not a photo (top_unique_colors={top_unique}, full_unique_colors={full_unique}, thresholds=2000/20000). Use image_generate with silhouette prompt from tjb-ai-photo-generation skill. Gradient hero composition files have been DELETED — they must never be used."}
 
         if center < top and (top - center) > 0.5:
             return {"pass": True, "detail": f"Silhouette confirmed (center={center:.1f} < top={top:.1f}, top_colors={top_unique})"}
