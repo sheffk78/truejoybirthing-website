@@ -2807,9 +2807,9 @@ export const cities: Record<string, CityData> = {
     publishedDate: "2026-06-22",
     costLow: 1200,
     costHigh: 3500,
-    heroImage: "/images/miami-fl-birth-doula-hero-v2.webp",
+    heroImage: "/images/miami-fl-birth-doula-hero-v3.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-miami-fl.webp",
-    supportSceneImage: "/images/miami-fl-birth-doula-support-v2.webp",
+    supportSceneImage: "/images/miami-fl-birth-doula-support-v3.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Miami: Florida birth support and doula care",
     shelbiServesHere: false,
     localDoulas: [
