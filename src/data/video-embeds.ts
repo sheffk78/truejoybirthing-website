@@ -290,11 +290,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
   "nashville-tn": {
-    videoId: "nu_EMjwbm04",
+    videoId: "a6dW2-BfIfU",
     title: "Nashville Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and Tennessee Medicaid, all in under 3 minutes.",
-    duration: "PT2M10S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
+    duration: "PT2M30S",
+    uploadDate: "2026-06-27T00:00:00-07:00",
   },
   "el-paso-tx": {
     videoId: "hneTz7wbV60",
