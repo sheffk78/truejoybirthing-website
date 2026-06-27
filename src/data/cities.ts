@@ -3908,12 +3908,11 @@ export const cities: Record<string, CityData> = {
     publishedDate: "2026-06-22",
     costLow: 1200,
     costHigh: 3500,
-    heroImage: "/images/nashville-tn-birth-doula-hero.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-nashville-tn.webp",
     supportSceneImage: "/images/nashville-tn-birth-doula-support.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Nashville: Tennessee birth support and doula care",
     shelbiServesHere: false,
-    heroImage: "/images/nashville-tn-birth-doula-hero.webp",
+    heroImage: "/images/nashville-tn-birth-doula-hero-v2.webp",
     localDoulas: [
       { name: "East Nashville Doula" , credential: "Birth Doula" , practice: "East Nashville Doula" , url: "https://www.eastnashvilledoula.com/" , photo: "https://images.squarespace-cdn.com/content/v1/661e74e9da6e5b03514a25ab/e07d4857-c0e5-4adf-a458-f599e024b702/EastNashvilleDoulas-2024-KaileeRichesPhotography-72.jpg", description: "We connect families to professional birth doulas & postpartum doulas, and teach group & private childbirth, newborn care & lactation classes. As Nashville's ...", costRange: "$1,200-$3,500", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Nashville, TN"] },
       { name: "Best Nashville Doula Service" , credential: "Birth Doula" , practice: "Best Nashville Doula Service" , url: "https://nashvilledoulaservices.com/" , photo: "https://images.squarespace-cdn.com/content/v1/5d6fcd39787fd700010c35d3/84026597-349f-4016-828a-8dc98de31175/Untitled+design.png", description: "Nashville Doula Services helps you find the best doula for you in the Nashville and surrounding areas like Brentwood, Franklin and Murfreesboro.", costRange: "$1,200-$3,500", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Nashville, TN"] },
