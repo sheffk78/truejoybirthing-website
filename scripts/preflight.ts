@@ -989,7 +989,7 @@ function run(): void {
         // Check 2: Unique color count < 5000 is a placeholder/graphic
         try {
           const colorResult = execSync(
-            `python3 -c "from PIL import Image; img=Image.open('${localPath}').convert('RGB'); c=img.getcolors(maxcolors=100000); print(len(c) if c else 100000)"`,
+            `python3 -c "from PIL import Image; img=Image.open(\\"${localPath.replace(/"/g, '\\"')}\").convert('RGB'); c=img.getcolors(maxcolors=100000); print(len(c) if c else 100000)"`,
             { encoding: 'utf-8', timeout: 10000 }
           );
           const colorCount = parseInt(colorResult.trim());
