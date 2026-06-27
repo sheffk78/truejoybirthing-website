@@ -247,14 +247,16 @@ import AppShowcase from '../components/AppShowcase.astro';
 
         <!-- Card 2 — Guided Birth Plan Walkthrough -->
         <div class="bg-white border border-tjb-lavender-200/50 rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col">
-          <div class="aspect-[4/3] overflow-hidden flex items-center justify-center bg-tjb-lavender-100/50 p-8">
-            <div class="text-center">
-              <span class="block text-5xl font-bold text-tjb-lavender-500/40 font-serif">02</span>
-              <svg class="w-16 h-16 text-tjb-lavender-400 mx-auto mt-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
-              </svg>
+          <a href="/walkthrough/" class="block">
+            <div class="aspect-[4/3] overflow-hidden relative">
+              <img src="/images/video-thumbnails/module-01-intro.webp" alt="Free birth plan video walkthrough preview" class="w-full h-full object-cover" loading="lazy" width="640" height="360">
+              <div class="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors">
+                <div class="w-16 h-16 rounded-full bg-tjb-rose-500/90 flex items-center justify-center shadow-lg">
+                  <svg class="w-8 h-8 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 20,12 8,19"></polygon></svg>
+                </div>
+              </div>
             </div>
-          </div>
+          </a>
           <div class="p-5 flex flex-col flex-1">
             <span class="text-xs font-bold text-tjb-rose-500 font-serif text-sm">02</span>
             <h3 class="text-xl font-bold text-tjb-charcoal mt-1 mb-1">Guided Birth Plan Walkthrough</h3>
