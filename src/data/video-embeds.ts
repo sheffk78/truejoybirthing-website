@@ -276,10 +276,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
   "miami-fl": {
-    videoId: "UZ1PREld8dI",
+    videoId: "ur7zHfhWiWE",
     title: "Miami Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and Florida Medicaid, all in under 3 minutes.",
-    duration: "PT2M05S",
+    duration: "PT4M27S",
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
   "phoenix-az": {
