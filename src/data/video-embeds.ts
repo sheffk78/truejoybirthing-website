@@ -262,10 +262,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-26T00:00:00-06:00",
   },
   "baltimore-md": {
-    videoId: "XsuvZQ1bDg4",
+    videoId: "CVb6u01Okqs",
     title: "Baltimore Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and Maryland Medicaid, all in under 3 minutes.",
-    duration: "PT2M08S",
+    duration: "PT3M56S",
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
   "chicago-il": {
