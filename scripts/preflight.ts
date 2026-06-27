@@ -269,8 +269,25 @@ function run(): void {
       } catch (e: any) {
         results.push({ gate: 'S6', status: 'SKIP', detail: `Could not check provider costRange` });
       }
+
+      // ── S8: No "Contact for pricing" (ship-blocker) ──
+      try {
+        const cityBlock = execSync(
+          `awk '/"${targetSlug}": \\{/{p=1; start=NR} p; /^  "[a-z].*": \\{/{if(p && NR>start) exit}' src/data/cities.ts`,
+          { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+        );
+        const contactPricingCount = (cityBlock.match(/costRange:\s*"Contact for pricing"/g) || []).length;
+        if (contactPricingCount === 0) {
+          results.push({ gate: 'S8', status: 'PASS', detail: 'No "Contact for pricing" found' });
+        } else {
+          results.push({ gate: 'S8', status: 'FAIL', detail: `${contactPricingCount} provider(s) have "Contact for pricing" — use market-estimate from costLow/costHigh instead` });
+        }
+      } catch {
+        results.push({ gate: 'S8', status: 'SKIP', detail: 'Could not check for "Contact for pricing"' });
+      }
     } else {
       results.push({ gate: 'S6', status: 'SKIP', detail: 'Skipping costRange check in audit mode (run with slug)' });
+      results.push({ gate: 'S8', status: 'SKIP', detail: 'Skipping "Contact for pricing" check in audit mode (run with slug)' });
     }
 
   // ── S5: No standalone "Free Birth Plan" ──
