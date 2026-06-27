@@ -53,7 +53,7 @@ const stateNames: Record<string, string> = {
 const stateFullName = stateNames[state] || state;
 
 const pageTitle = `${city}, ${state} Doula & Midwife Guide`;
-const pageDesc = `Looking for a doula or midwife in ${city}? Costs $${costLow}–$${costHigh}, ${medicaidCovers ? 'Medicaid covers doulas' : 'Medicaid does not cover doulas'}, hospital policies, free birth plan.`;
+const pageDesc = `Doula or midwife in ${city}? Costs $${costLow}–$${costHigh}, ${medicaidCovers ? 'Medicaid covers doulas' : 'no Medicaid coverage'}, hospital policies, free birth plan.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 const ogImage = ogImageSlug || `https://truejoybirthing.com/images/og-city-${slug}.webp`;
 const heroImage = heroImageSlug || '/images/doula-breastfeeding.webp';
