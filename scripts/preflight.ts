@@ -1033,11 +1033,34 @@ function run(): void {
       );
 
       // Extract hospitalDetails block
-      const hospitalMatch = cityBlock.match(/hospitalDetails:\s*\[([\s\S]*?)\]/);
+      const hospitalMatch = cityBlock.match(/hospitalDetails:\s*\[/);
       if (hospitalMatch) {
-        const hospitalBlock = hospitalMatch[1];
-        // Split into individual hospital entries
-        const entries = hospitalBlock.split(/\{[^}]*name:/).slice(1); // Skip preamble
+        // Use brace-depth tracking to find the matching close bracket
+        const arrStart = cityBlock.indexOf('[', hospitalMatch.index!);
+        let depth = 0;
+        let arrEnd = arrStart;
+        for (let i = arrStart; i < cityBlock.length; i++) {
+          if (cityBlock[i] === '[') depth++;
+          else if (cityBlock[i] === ']') { depth--; if (depth === 0) { arrEnd = i; break; } }
+        }
+        const hospitalBlock = cityBlock.slice(arrStart + 1, arrEnd);
+        
+        // Use brace-depth tracking to split into individual hospital entries
+        const entries: string[] = [];
+        let entryStart = -1;
+        depth = 0;
+        for (let i = 0; i < hospitalBlock.length; i++) {
+          if (hospitalBlock[i] === '{') {
+            if (depth === 0) entryStart = i;
+            depth++;
+          } else if (hospitalBlock[i] === '}') {
+            depth--;
+            if (depth === 0 && entryStart >= 0) {
+              entries.push(hospitalBlock.slice(entryStart, i + 1));
+              entryStart = -1;
+            }
+          }
+        }
 
         const requiredFields = ['address', 'nicuLevel', 'doulaPolicy', 'medicaid'];
         let missingCount = 0;
@@ -1047,7 +1070,7 @@ function run(): void {
           for (const field of requiredFields) {
             if (!new RegExp(`${field}:`).test(entry)) {
               missingCount++;
-              const nameMatch = entry.match(/"([^"]+)"/);
+              const nameMatch = entry.match(/name:\s*"([^"]+)"/);
               const hospitalName = nameMatch ? nameMatch[1] : `hospital ${i + 1}`;
               results.push({ gate: 'G36', status: 'FAIL', detail: `Hospital "${hospitalName}" missing field: ${field}` });
             }
