@@ -956,6 +956,119 @@ function run(): void {
     results.push({ gate: 'G34', status: 'SKIP', detail: 'Skipping CDN match check in audit mode (run with slug)' });
   }
 
+  // ── G35: Hospital thumbnails are real photos (not placeholders) ──
+  if (targetSlug) {
+    try {
+      const cityBlock = execSync(
+        `python3 scripts/extract-city-block.py ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+
+      const thumbMatches = cityBlock.matchAll(/thumbnail:\s*"([^"]+)"/g);
+      const thumbnails = [...thumbMatches].map(m => m[1]).filter(
+        t => !t.includes('no-birth-center') // Skip shared birth center placeholder
+      );
+
+      let placeholderCount = 0;
+      const fileHashes: Record<string, string> = {};
+
+      for (const thumb of thumbnails) {
+        const localPath = path.join(PROJECT_DIR, 'public', thumb.replace(/^\//, ''));
+        if (!fs.existsSync(localPath)) continue;
+
+        const size = fs.statSync(localPath).size;
+        const buffer = fs.readFileSync(localPath);
+
+        // Check 1: File size < 15KB is likely a placeholder
+        if (size < 15000) {
+          placeholderCount++;
+          results.push({ gate: 'G35', status: 'FAIL', detail: `Hospital thumbnail too small (${size}B, likely placeholder): ${thumb}` });
+          continue;
+        }
+
+        // Check 2: Unique color count < 5000 is a placeholder/graphic
+        try {
+          const colorResult = execSync(
+            `python3 -c "from PIL import Image; img=Image.open('${localPath}').convert('RGB'); c=img.getcolors(maxcolors=100000); print(len(c) if c else 100000)"`,
+            { encoding: 'utf-8', timeout: 10000 }
+          );
+          const colorCount = parseInt(colorResult.trim());
+          if (colorCount < 5000) {
+            placeholderCount++;
+            results.push({ gate: 'G35', status: 'FAIL', detail: `Hospital thumbnail has only ${colorCount} colors (likely placeholder/graphic): ${thumb}` });
+            continue;
+          }
+        } catch {
+          // PIL not available, skip color check
+        }
+
+        // Check 3: Byte-identical to another hospital thumbnail (same placeholder reused)
+        const hash = buffer.length + '_' + buffer.slice(0, 100).toString('hex').slice(0, 20);
+        if (fileHashes[hash]) {
+          placeholderCount++;
+          results.push({ gate: 'G35', status: 'FAIL', detail: `Hospital thumbnail identical to another: ${thumb} == ${fileHashes[hash]}` });
+        } else {
+          fileHashes[hash] = thumb;
+        }
+      }
+
+      if (thumbnails.length > 0 && placeholderCount === 0) {
+        results.push({ gate: 'G35', status: 'PASS', detail: `All ${thumbnails.length} hospital thumbnails are real photos (≥15KB, ≥5K colors, unique)` });
+      } else if (thumbnails.length === 0) {
+        results.push({ gate: 'G35', status: 'SKIP', detail: 'No hospital thumbnails to check' });
+      }
+    } catch {
+      results.push({ gate: 'G35', status: 'SKIP', detail: 'Could not check hospital thumbnail quality' });
+    }
+  } else {
+    results.push({ gate: 'G35', status: 'SKIP', detail: 'Skipping hospital thumbnail quality check in audit mode (run with slug)' });
+  }
+
+  // ── G36: Hospital entries have complete data (address + badges) ──
+  if (targetSlug) {
+    try {
+      const cityBlock = execSync(
+        `python3 scripts/extract-city-block.py ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+
+      // Extract hospitalDetails block
+      const hospitalMatch = cityBlock.match(/hospitalDetails:\s*\[([\s\S]*?)\]/);
+      if (hospitalMatch) {
+        const hospitalBlock = hospitalMatch[1];
+        // Split into individual hospital entries
+        const entries = hospitalBlock.split(/\{[^}]*name:/).slice(1); // Skip preamble
+
+        const requiredFields = ['address', 'nicuLevel', 'doulaPolicy', 'medicaid'];
+        let missingCount = 0;
+
+        for (let i = 0; i < entries.length; i++) {
+          const entry = entries[i];
+          for (const field of requiredFields) {
+            if (!new RegExp(`${field}:`).test(entry)) {
+              missingCount++;
+              const nameMatch = entry.match(/"([^"]+)"/);
+              const hospitalName = nameMatch ? nameMatch[1] : `hospital ${i + 1}`;
+              results.push({ gate: 'G36', status: 'FAIL', detail: `Hospital "${hospitalName}" missing field: ${field}` });
+            }
+          }
+        }
+
+        if (missingCount === 0 && entries.length > 0) {
+          results.push({ gate: 'G36', status: 'PASS', detail: `All ${entries.length} hospitals have address, NICU level, doula policy, and Medicaid fields` });
+        } else if (entries.length === 0) {
+          results.push({ gate: 'G36', status: 'SKIP', detail: 'No hospital entries found' });
+        }
+      } else {
+        results.push({ gate: 'G36', status: 'SKIP', detail: 'No hospitalDetails found in city block' });
+      }
+    } catch {
+      results.push({ gate: 'G36', status: 'SKIP', detail: 'Could not check hospital data completeness' });
+    }
+  } else {
+    results.push({ gate: 'G36', status: 'SKIP', detail: 'Skipping hospital data check in audit mode (run with slug)' });
+  }
+
   // ── Print summary ──
   console.log('\n─── RESULTS ───\n');
 
