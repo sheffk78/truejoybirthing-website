@@ -3672,7 +3672,7 @@ export const cities: Record<string, CityData> = {
     slug: "phoenix-az" ,
     costLow: 1200,
     costHigh: 3500,
-    heroImage: "/images/phoenix-az-birth-doula-hero-v2.webp",
+    heroImage: "/images/phoenix-az-birth-doula-hero-v3.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-phoenix-az.webp",
     supportSceneImage: "/images/phoenix-az-birth-doula-support-v2.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Phoenix: Arizona birth support and doula care",
