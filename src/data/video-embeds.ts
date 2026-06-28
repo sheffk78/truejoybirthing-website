@@ -234,11 +234,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-28T00:00:00-07:00",
   },
   "los-angeles-ca": {
-    videoId: "5_9703RwPb0",
+    videoId: "zaX5gteUk6k",
     title: "Los Angeles Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 3 minutes.",
-    duration: "PT2M13S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
+    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 4 minutes.",
+    duration: "PT3M51S",
+    uploadDate: "2026-06-28T00:00:00-07:00",
   },
   "san-antonio-tx": {
     videoId: "qsdYLJrrEb8",
