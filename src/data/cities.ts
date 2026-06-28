@@ -1063,7 +1063,7 @@ export const cities: Record<string, CityData> = {
     publishedDate: "2026-06-22",
     costLow: 700,
     costHigh: 2200,
-    heroImage: "/images/san-antonio-tx-birth-doula-hero-v2.webp",
+    heroImage: "/images/san-antonio-tx-birth-doula-hero-v3.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-san-antonio-tx.webp",
     supportSceneImage: "/images/san-antonio-tx-birth-doula-support.webp",
     supportSceneAlt: "A doula supporting an expectant mom in San Antonio: Texas birth support and doula care",
