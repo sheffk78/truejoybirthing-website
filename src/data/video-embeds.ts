@@ -283,11 +283,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
   "phoenix-az": {
-    videoId: "lHGm4nJdGgc",
+    videoId: "IOXkcp8JMP4",
     title: "Phoenix Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Arizona Medicaid, all in under 3 minutes.",
-    duration: "PT2M09S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Arizona Medicaid, all in under 4 minutes.",
+    duration: "PT3M36S",
+    uploadDate: "2026-06-27T00:00:00-07:00",
   },
   "nashville-tn": {
     videoId: "a6dW2-BfIfU",
