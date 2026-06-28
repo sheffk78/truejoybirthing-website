@@ -227,11 +227,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
   "seattle-wa": {
-    videoId: "xX0hrUEVNQ0",
-    title: "Seattle Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    videoId: "IFFABAqH7K0",
+    title: "Seattle Birth Guide: Hospitals, Doulas, Midwives & More",
     description: "Watch the full city guide — doulas, hospitals, costs, and Washington Apple Health, all in under 3 minutes.",
-    duration: "PT2M07S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
+    duration: "PT3M56S",
+    uploadDate: "2026-06-28T00:00:00-07:00",
   },
   "los-angeles-ca": {
     videoId: "5_9703RwPb0",
@@ -241,11 +241,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
   "san-antonio-tx": {
-    videoId: "m_0TXdTTD9s",
+    videoId: "qsdYLJrrEb8",
     title: "San Antonio Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid, all in under 3 minutes.",
-    duration: "PT2M14S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid, all in under 5 minutes.",
+    duration: "PT4M23S",
+    uploadDate: "2026-06-27T00:00:00-07:00",
   },
   "philadelphia-pa": {
     videoId: "LyYRGCPhNi0",

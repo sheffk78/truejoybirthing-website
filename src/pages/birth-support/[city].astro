@@ -1077,7 +1077,7 @@ const schema = {
       "name": `${cityVideoEmbeds[slug].title}`,
       "description": cityVideoEmbeds[slug].description,
       "thumbnailUrl": `https://truejoybirthing.com/images/yt-thumb-${slug}.png`,
-      "uploadDate": data.publishedDate ? `${data.publishedDate}T00:00:00-06:00` : "2026-06-11T00:00:00-06:00",
+      "uploadDate": cityVideoEmbeds[slug].uploadDate || (data.publishedDate ? `${data.publishedDate}T00:00:00-06:00` : "2026-06-11T00:00:00-06:00"),
       "contentUrl": `https://www.youtube.com/watch?v=${cityVideoEmbeds[slug].videoId}`,
       "embedUrl": `https://www.youtube-nocookie.com/embed/${cityVideoEmbeds[slug].videoId}`,
       ...(cityVideoEmbeds[slug].duration ? { "duration": cityVideoEmbeds[slug].duration } : {}),
