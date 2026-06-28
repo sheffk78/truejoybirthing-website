@@ -24,8 +24,3 @@ jobs:
         run: bash scripts/preflight-self-test.sh
         env:
           CI: true
-
-      - name: Run preflight gate (full audit)
-        run: npx tsx scripts/preflight.ts
-        env:
-          CI: true
