@@ -11,7 +11,7 @@
 
 set -euo pipefail
 
-PROJECT_DIR="/Users/socializerender/Projects/truejoybirthing-website"
+PROJECT_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 FIXTURE_DIR="$PROJECT_DIR/test-fixtures"
 PASS=0
 FAIL=0

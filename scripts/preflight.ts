@@ -12,9 +12,10 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const PROJECT_DIR = '/Users/socializerender/Projects/truejoybirthing-website';
-const CANONICAL_DIR = '/Users/socializerender/Projects/truejoybirthing-website';
 const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const PROJECT_DIR = path.resolve(__dirname, '..');
+const CANONICAL_DIR = PROJECT_DIR;
 
 interface GateResult {
   gate: string;
