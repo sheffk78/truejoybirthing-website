@@ -133,7 +133,7 @@ const schema = {
       '@type': 'MedicalOrganization',
       '@id': `${pageUrl}#hospital-${i}`,
       name: h.name,
-      ...(h.address ? {
+      ...(h.address && typeof h.address === 'string' ? {
         address: {
           '@type': 'PostalAddress',
           addressLocality: city,
