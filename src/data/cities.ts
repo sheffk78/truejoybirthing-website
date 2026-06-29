@@ -3777,6 +3777,7 @@ export const cities: Record<string, CityData> = {
   "detroit-mi": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
+    ogImage: "https://truejoybirthing.com/images/og-city-detroit-mi-v2.webp" ,
     city: "Detroit" ,
     state: "MI" ,
     slug: "detroit-mi" ,
