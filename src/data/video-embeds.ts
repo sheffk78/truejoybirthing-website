@@ -129,11 +129,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-20T00:00:00-06:00",
   },
   "conroe-tx": {
-    videoId: "YTAQjRphDFk",
+    videoId: "R24nme59zGw",
     title: "Conroe TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 3 minutes.",
     duration: "PT2M29S",
-    uploadDate: "2026-06-20T00:00:00-06:00",
+    uploadDate: "2026-06-29T00:00:00-06:00",
   },
   "fontana-ca": {
     videoId: "Jade544lfCI",
