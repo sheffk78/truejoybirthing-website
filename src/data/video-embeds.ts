@@ -150,10 +150,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
   "detroit-mi": {
-    videoId: "2cCnD9pINnk",
+    videoId: "M_JhAauqo4Q",
     title: "Detroit Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and Michigan Medicaid, all in under 4 minutes.",
-    duration: "PT3M47S",
+    duration: "PT3M27S",
     uploadDate: "2026-06-29T00:00:00-07:00",
   },
   "las-vegas-nv": {
