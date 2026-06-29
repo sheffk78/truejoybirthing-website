@@ -5923,7 +5923,6 @@ export const cities: Record<string, CityData> = {
     lat: 33.9244,
     lng: -117.2045},
   "fontana-ca": {
-    publishedDate: "2026-06-22",
     city: "Fontana" ,
     state: "CA" ,
     slug: "fontana-ca" ,
@@ -5944,22 +5943,25 @@ export const cities: Record<string, CityData> = {
     heroLocalDetail: "At 38 weeks in Fontana, you're likely planning the drive to Kaiser Permanente Fontana Medical Center on Sierra Avenue near the 210 freeway. The 210 can back up significantly during commute hours, especially around the Sierra Avenue interchange. If you're delivering during rush hour, give yourself extra time. The Pacific Electric Trail and Southridge Park offer walking paths for those final-weeks strolls." ,
     hospitalDetails: [
       { name: "Kaiser Permanente Fontana Medical Center" , thumbnail: "/images/kaiser-fontana-medical-center.webp" , paragraph: "Kaiser Permanente Fontana Medical Center offers comprehensive maternity care with private labor rooms and family-centered postpartum rooms, each with a private bathroom and shower. Kaiser members can access contracted doula services at no extra cost through Kaiser's doula benefit program. The hospital also offers CenteringPregnancy group prenatal care. Doulas are welcome. If you're delivering here, having your birth plan ready makes everything smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." , nicuLevel: "III" , doulaPolicy: "Doulas welcome as support persons" , midwifeFriendly: true, waterBirth: "Labor tubs available" , medicaid: true, lactation: true, privateRooms: true, address: "9961 Sierra Ave, Fontana, CA 92335" , url: "https://healthy.kaiserpermanente.org/southern-california/facilities/Fontana-Medical-Center-100127" },
+      { name: "San Antonio Regional Hospital" , thumbnail: "/images/san-antonio-regional-hospital.webp" , paragraph: "San Antonio Regional Hospital in nearby Upland (about 5 miles from Fontana) offers a Family Birth Center with private labor suites and a Level II NICU. The hospital provides childbirth education classes and lactation consulting. Doulas are welcome as support persons. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery." , nicuLevel: "II" , doulaPolicy: "Doulas welcome as support persons" , midwifeFriendly: true, waterBirth: "Labor tubs available" , medicaid: true, lactation: true, privateRooms: true, address: "999 San Bernardino Rd, Upland, CA 91786" , url: "https://www.sarh.org" },
     ],
-    // Birth center search: NPI taxonomy 261QB0400X returned results for Fontana CA.
-    // Google Maps search "birth center Fontana CA" found freestanding birth centers in the wider IE area.
-    // Verified 2026-06-12.
+    // Birth center search: NPI taxonomy 261QB0400X returned no results within Fontana city limits.
+    // Google Maps search "birth center Fontana CA" found freestanding birth centers in nearby IE cities.
+    // The Natural Birth Place in Rancho Cucamonga (~8 miles from Fontana) verified via Google Maps: 4.9 stars, 47 reviews.
+    // Verified 2026-06-29.
     birthCenterDetails: [
+      { name: "The Natural Birth Place" , address: "1881 Business Center Dr S #8a, Rancho Cucamonga, CA 91730" , url: "" , paragraph: "The Natural Birth Place is a freestanding birth center in Rancho Cucamonga, about 8 miles from Fontana. They offer out-of-hospital birth with licensed midwives in a home-like setting. Water birth is available. The center accepts some insurance plans and offers personalized prenatal care. Phone: (909) 567-2165." , thumbnail: "/images/natural-birth-place-rancho-cucamonga.webp" , services: ["Water Birth" , "Midwife-Led Care" , "Prenatal Care" , "Postpartum Support"], medicaid: false, distance: "8 miles from Fontana" },
     ],
     localDoulas: [
-      { name: "Doula127 - Doula Services" , credential: "Birth Doula" , practice: "Doula127 - Doula Services" , url: "" , description: "Doula127 provides birth doula support for families in the Fontana and Inland Empire area. Currently not accepting new clients." , photo: "/images/provider-fontana-ca-doula127---doula-services.webp" , costRange: "Contact for pricing" , acceptingClients: "false" },
-      { name: "Holistic Doula LLC" , credential: "Birth Doula" , practice: "Holistic Doula LLC" , url: "https://www.holistic-doula.com" , description: "Acompañamiento integral y culturalmente sensible. Acompañamos a mujeres y familias latinas en cada etapa de la maternidad." , photo: "/images/provider-fontana-ca-holistic-doula.webp" , services: ["Birth Doula" , "Postpartum" , "Prenatal Care"], costRange: "Contact for pricing" ,
-    acceptingClients: "true" , isVerified: true
-  },
-      { name: "4 The Moms Southern California Postpartum Doula Support" , credential: "Postpartum Doula" , practice: "4 The Moms Southern California Postpartum Doula Support" , url: "https://www.4themoms.org" , description: "A holistic, evidence-based postpartum doula service supporting families through the transitional period of the 4th trimester." , photo: "/images/provider-fontana-ca-4themoms.webp" , services: ["Postpartum" , "Lactation" , "Breastfeeding Support" , "Overnight Care"], costRange: "Contact for pricing" ,
+      { name: "Doula127 - Doula Services" , credential: "Birth Doula" , practice: "Doula127 - Doula Services" , url: "" , description: "Doula127 provides birth doula support for families in the Fontana and Inland Empire area. Currently not accepting new clients." , photo: "/images/provider-fontana-ca-doula127---doula-services.webp" , costRange: "$1,200-$2,500" , acceptingClients: "false" },
+      { name: "Holistic Doula LLC" , credential: "Birth Doula" , practice: "Holistic Doula LLC" , url: "https://www.holistic-doula.com" , description: "Acompañamiento integral y culturalmente sensible. Acompañamos a mujeres y familias latinas en cada etapa de la maternidad." , photo: "/images/provider-fontana-ca-holistic-doula.webp" , services: ["Birth Doula" , "Postpartum" , "Prenatal Care"], costRange: "$1,200-$2,500" ,
     acceptingClients: "true"
   },
-      { name: "Two Moons Doula Services" , credential: "Birth Doula" , practice: "Two Moons Doula Services" , url: "" , description: "Formerly offered birth doula support, Bengkung belly binding, yoni steaming, and Closing of the Bones ceremonies in San Bernardino County. This practice is currently closed." , photo: "/images/provider-fontana-ca-two-moons-doula-services.webp" , costRange: "Contact for pricing" , acceptingClients: "false" },
-      { name: "Raising Birth Doula Care" , credential: "Birth Doula" , practice: "Raising Birth Doula Care" , url: "https://www.instagram.com/raisingbirthdoula" , description: "Birth doula serving families in the Inland Empire. Contact via Instagram for availability and pricing." , costRange: "Contact for pricing" ,
+      { name: "4 The Moms Southern California Postpartum Doula Support" , credential: "Postpartum Doula" , practice: "4 The Moms Southern California Postpartum Doula Support" , url: "https://www.4themoms.org" , description: "A holistic, evidence-based postpartum doula service supporting families through the transitional period of the 4th trimester." , photo: "/images/provider-fontana-ca-4themoms.webp" , services: ["Postpartum" , "Lactation" , "Breastfeeding Support" , "Overnight Care"], costRange: "$25-$45/hr" ,
+    acceptingClients: "true"
+  },
+      { name: "Two Moons Doula Services" , credential: "Birth Doula" , practice: "Two Moons Doula Services" , url: "" , description: "Formerly offered birth doula support, Bengkung belly binding, yoni steaming, and Closing of the Bones ceremonies in San Bernardino County. This practice is currently closed." , photo: "/images/provider-fontana-ca-two-moons-doula-services.webp" , costRange: "$1,200-$2,500" , acceptingClients: "false" },
+      { name: "Raising Birth Doula Care" , credential: "Birth Doula" , practice: "Raising Birth Doula Care" , url: "https://www.instagram.com/raisingbirthdoula" , description: "Birth doula providing personalized labor support, prenatal preparation, and postpartum care to Inland Empire families. Offers customized birth plans, breathing techniques, and continuous labor presence. Connect via Instagram for current availability." , costRange: "$1,200-$2,500" ,
     acceptingClients: "true"
   },
     ],
@@ -5969,12 +5971,11 @@ export const cities: Record<string, CityData> = {
       { q: "How much does a doula cost in Fontana?" , a: "Expect to pay $1,200 to $2,500 for a doula in Fontana. Inland Empire rates are generally lower than Los Angeles or Orange County. The investment typically covers prenatal visits, labor support, and postpartum check-ins. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start thinking about what matters most to you." },
       { q: "Does Medi-Cal cover doulas in Fontana?" , a: "Yes — California's Medi-Cal program covers doula services, reimbursing around $1,587 per pregnancy. Doulas enroll through the PAVE program. Kaiser Permanente members may also have access to contracted doula services at no extra cost. Ask your doula upfront whether they accept Medi-Cal or are Kaiser-contracted. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> and make sure your doula team knows your preferences." },
       { q: "Which hospitals in Fontana accommodate birth plans?" , a: "Kaiser Permanente Fontana Medical Center accommodates birth plans and offers private labor and delivery rooms. Kaiser members can also deliver at Kaiser Ontario Medical Center. Doulas are welcome at both. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
-      { q: "Are there birth centers in Fontana?" , a: "Fontana does not have freestanding birth centers within city limits. Families seeking a birth center experience can explore options in the wider Inland Empire or Los Angeles areas. Kaiser Fontana provides hospital-based maternity care with private rooms. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through your options." },
+      { q: "Are there birth centers in Fontana?" , a: "Fontana does not have freestanding birth centers within city limits, but The Natural Birth Place in nearby Rancho Cucamonga (about 8 miles away) offers out-of-hospital birth with licensed midwives and water birth options. Kaiser Fontana provides hospital-based maternity care with private rooms. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through your options." },
       { q: "Does True Joy Birthing work with Fontana families?" , a: "True Joy Birthing provides free birth-prep tools for Fontana families. The free birth plan, checklist, and guided walkthrough in the app work for any Fontana birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Fontana?" , a: "Fontana has hospital-based lactation support at Kaiser Permanente Fontana Medical Center. The Inland Empire postpartum doula community is growing. Start your search during pregnancy if you want ongoing postpartum support. <a href=\"/postpartum-doula/\">Learn more about postpartum doula support</a>." },
     ],
     nearbyCities: ["san-bernardino-ca" , "rancho-cucamonga-ca" , "ontario-ca" , "riverside-ca"],
-    publishedDate: "2026-06-12" ,
     lat: 34.0967,
     lng: -117.4599},
   "san-bernardino-ca": {
