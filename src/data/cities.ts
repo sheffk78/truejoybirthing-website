@@ -1593,12 +1593,23 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       {
         name: "Journey Birth Center" ,
+        address: "1202 N San Jacinto St, Conroe, TX 77301" ,
+        url: "https://journeybirthconroe.com" ,
+        services: ["Water Birth", "Midwife-Led Care", "Home-Like Setting"] ,
         paragraph: "Journey Birth Center, at 1202 N San Jacinto St in downtown Conroe, is a freestanding birth center offering low-intervention, midwife-led births in a home-like setting. They serve families from Conroe, The Woodlands, and Montgomery County who want an alternative to hospital birth. Verify with the center directly for current services and insurance coverage." , thumbnail: "/images/birth-center-journey-birth-center.webp" },
       {
         name: "Bliss Women’s Wellness & Birth Center" ,
-        paragraph: "Bliss Women’s Wellness & Birth Center, at 14157 Horseshoe Bend in Conroe (NPI 1457935439), is an NPI-verified freestanding birth center offering midwife-led birth and women’s wellness services. Verify with the center directly for current services, insurance coverage, and availability." , thumbnail: "/images/birth-center-bliss-womens-wellness-and-birth-center.webp" },
+        address: "14157 Horseshoe Bend, Conroe, TX 77384" ,
+        url: "https://blissbirthcenter.com" ,
+        services: ["Midwife-Led Birth", "Women's Wellness", "Water Birth"] ,
+        medicaid: true ,
+        paragraph: "Bliss Women’s Wellness & Birth Center, at 14157 Horseshoe Bend in Conroe (NPI 1457935439), is an NPI-verified freestanding birth center offering midwife-led birth and women’s wellness services. Accepts Medicaid. Call (936) 271-4902 to verify current services, insurance coverage, and availability." , thumbnail: "/images/birth-center-bliss-womens-wellness-and-birth-center.webp" },
       {
         name: "Nativiti Family Birth Center" ,
+        address: "26614 Oak Ridge Dr, The Woodlands, TX 77385" ,
+        distance: "15 minutes south of Conroe" ,
+        url: "https://nativitibirthcenter.com" ,
+        services: ["CNM-Led Birth", "Prenatal Care", "Well-Woman Care"] ,
         paragraph: "Nativiti Family Birth Center, at 26614 Oak Ridge Dr in The Woodlands (NPI 1245638287), is an NPI-verified freestanding birth center about 15 minutes south of Conroe. They offer CNM-led births and serve the broader Montgomery County area. Verify with the center directly for current services and insurance coverage." , thumbnail: "/images/birth-center-nativiti-family-birth-center.webp" },
     ],
     medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Montgomery County’s STAR managed care plans. Contact your plan directly to confirm coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com." ,
