@@ -59,11 +59,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
   "dallas-tx": {
-    videoId: "gInUgjaym5Q",
+    videoId: "FWBt55sIgAY",
     title: "Dallas Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 4 minutes.",
     duration: "PT3M47S",
-    uploadDate: "2026-06-15T00:00:00-06:00",
+    uploadDate: "2026-06-29T00:00:00-06:00",
   },
   "chesapeake-va": {
     videoId: "RAvfrkNKmOQ",
@@ -150,11 +150,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
   "detroit-mi": {
-    videoId: "TZX1oZMsNew",
+    videoId: "MXXLMvfXQyY",
     title: "Detroit Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Michigan Medicaid, all in under 3 minutes.",
-    duration: "PT2M04S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Michigan Medicaid, all in under 4 minutes.",
+    duration: "PT3M30S",
+    uploadDate: "2026-06-29T00:00:00-07:00",
   },
   "las-vegas-nv": {
     videoId: "r319yZgnxeE",
