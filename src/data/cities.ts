@@ -4840,7 +4840,7 @@ export const cities: Record<string, CityData> = {
     costLow: 900,
     costHigh: 1800,
     shelbiServesHere: false,
-    heroImage: "/images/meridian-id-birth-doula-skyline-v2.webp" ,
+    heroImage: "/images/meridian-id-birth-doula-skyline-v3.webp" ,
     ogImage: "/images/og-city-meridian-id.webp" ,
     supportSceneImage: "/images/meridian-id-support-scene.webp" ,
     supportSceneAlt: "Two women walking together on a tree-lined path in Meridian, Idaho with rolling foothills in the distance",
