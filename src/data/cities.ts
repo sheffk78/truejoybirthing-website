@@ -5206,7 +5206,7 @@ export const cities: Record<string, CityData> = {
     city: "Fremont" ,
     state: "CA" ,
     slug: "fremont-ca" ,
-    heroImage: "/images/fremont-ca-birth-doula-skyline-v2.webp" ,
+    heroImage: "/images/fremont-ca-birth-doula-skyline-v3.webp" ,
     enableBlogResources: true,
     supportSceneAlt: "A doula walking alongside an expectant mom near Lake Elizabeth in Fremont, California" ,
     supportSceneImage: "/images/fremont-support-scene.webp" ,
