@@ -1067,7 +1067,7 @@ const schema = {
   <CityLeadCaptureForm city={city} />
 
   <!-- ═══ Contextual City Links (browse other cities) ═══ -->
-  <ContextualCityLinks topic="general" />
+  <ContextualCityLinks topic="general" currentSlug={slug} currentState={state.toLowerCase()} />
 
   {cityVideoEmbeds[slug] && (
     <script type="application/ld+json" set:html={JSON.stringify({

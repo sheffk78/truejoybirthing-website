@@ -1,19 +1,80 @@
 ---
 import { topicCities, stateNames, stateHubs } from '../data/city-links';
+import { cities, citySlugs } from '../data/cities';
 
 export interface Props {
-  topic: string;
+  topic?: string;
   limit?: number;
   showStateHubs?: boolean;
   stateHubsCount?: number;
   variant?: 'grid-2col' | 'stacked' | 'card-3col';
+  /** Current city slug — when on a city page, excludes self and prioritizes same-state + nearby cities */
+  currentSlug?: string;
+  /** Current state code (lowercase, e.g. "tx") — drives the state hub link */
+  currentState?: string;
 }
 
-const { topic, limit = 15, showStateHubs = true, stateHubsCount = 4 } = Astro.props;
+const {
+  topic = 'general',
+  limit = 15,
+  showStateHubs = true,
+  stateHubsCount = 4,
+  currentSlug,
+  currentState,
+} = Astro.props;
 
-// Get cities for this topic
-const allCities = topicCities[topic] || topicCities['general'] || [];
-const selectedCities = allCities.slice(0, limit);
+// ── City page mode: build a contextual list ──────────────────────────
+// Priority: (1) same-state cities (excluding self), (2) nearby cities
+// from cities.ts data, (3) fill remaining with topic-based or major cities.
+let selectedCities: { slug: string; state: string; label: string }[] = [];
+
+if (currentSlug) {
+  const currentData = cities[currentSlug];
+  const stateLower = currentState || (currentData?.state || '').toLowerCase();
+
+  // 1. Same-state cities (excluding current)
+  const sameStateCities: { slug: string; state: string; label: string }[] = [];
+  for (const s of citySlugs) {
+    if (s === currentSlug) continue;
+    const cd = cities[s];
+    if (cd && cd.state.toLowerCase() === stateLower) {
+      sameStateCities.push({ slug: s, state: stateLower, label: cd.city });
+    }
+  }
+
+  // 2. Nearby cities from cities.ts data (excluding same-state, already shown)
+  const nearbyFromData: { slug: string; state: string; label: string }[] = [];
+  if (currentData?.nearbyCities) {
+    for (const nSlug of currentData.nearbyCities) {
+      if (nSlug === currentSlug) continue;
+      const nd = cities[nSlug];
+      if (nd && nd.state.toLowerCase() !== stateLower) {
+        nearbyFromData.push({
+          slug: nSlug,
+          state: nd.state.toLowerCase(),
+          label: nd.city,
+        });
+      }
+    }
+  }
+
+  // 3. Fill remaining slots with topic-based cities (excluding already included)
+  const includedSlugs = new Set([
+    ...sameStateCities.map((c) => c.slug),
+    ...nearbyFromData.map((c) => c.slug),
+    currentSlug,
+  ]);
+  const topicFallback = topicCities[topic] || topicCities['general'] || [];
+  const fillCities = topicFallback
+    .filter((c) => !includedSlugs.has(c.slug))
+    .slice(0, limit - sameStateCities.length - nearbyFromData.length);
+
+  selectedCities = [...sameStateCities, ...nearbyFromData, ...fillCities].slice(0, limit);
+} else {
+  // ── Content page mode: use topic-based list as before ──────────────
+  const allCities = topicCities[topic] || topicCities['general'] || [];
+  selectedCities = allCities.slice(0, limit);
+}
 
 // Group by state for rendering
 const groupedByState: Record<string, typeof selectedCities> = {};
@@ -24,30 +85,62 @@ for (const city of selectedCities) {
   groupedByState[city.state].push(city);
 }
 
-// Pick state hubs relevant to this topic's states
+// ── State hub links ──────────────────────────────────────────────────
+// City page: show the user's own state hub first, then other relevant states.
+// Content page: show state hubs relevant to the displayed cities.
 const topicStates = Object.keys(groupedByState);
-const relevantHubs = stateHubs.filter(h => topicStates.some(s => h.slug.includes(`/${s}/`)));
-const displayHubs = showStateHubs ? relevantHubs.slice(0, stateHubsCount) : [];
+let displayHubs: { slug: string; label: string }[] = [];
 
-// Layout variant — can be overridden via prop, else deterministic by topic name
+if (showStateHubs) {
+  if (currentSlug && currentState) {
+    // City page: own state hub first, then other states from the displayed list
+    const ownHub = stateHubs.find((h) => h.slug.includes(`/${currentState}/`));
+    const otherHubs = stateHubs.filter(
+      (h) =>
+        h.slug !== ownHub?.slug &&
+        topicStates.some((s) => h.slug.includes(`/${s}/`))
+    );
+    displayHubs = [ownHub, ...otherHubs]
+      .filter((h): h is { slug: string; label: string } => !!h)
+      .slice(0, stateHubsCount);
+  } else {
+    // Content page: relevant hubs from displayed states
+    const relevantHubs = stateHubs.filter((h) =>
+      topicStates.some((s) => h.slug.includes(`/${s}/`))
+    );
+    displayHubs = relevantHubs.slice(0, stateHubsCount);
+  }
+}
+
+// Layout variant — deterministic by topic name if not overridden
 const variants = ['grid-2col', 'stacked', 'card-3col'] as const;
-// Use explicit variant if provided, otherwise derive from topic name
 const variant = Astro.props.variant || variants[topic.length % 3];
+
+// Heading context — personalize on city pages
+const heading = currentSlug
+  ? `Explore Birth Support in Other Cities`
+  : topic === 'general'
+    ? 'Browse Birth Support by City'
+    : 'Birth Resources by City';
+const subheading = currentSlug
+  ? `More cities with doula costs, hospital info, and Medicaid coverage.`
+  : undefined;
 ---
 
 {
   variant === 'grid-2col' && (
     <section class="bg-tjb-cream-50 py-12 border-t border-tjb-lavender-200/50">
       <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-6">Birth Resources</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-6">{heading}</h2>
+        {subheading && <p class="text-tjb-gray mb-6 -mt-3">{subheading}</p>}
         <div class="grid md:grid-cols-2 gap-4">
-          {Object.entries(groupedByState).map(([stateCode, cities]) => (
+          {Object.entries(groupedByState).map(([stateCode, cityList]) => (
             <div>
               <h3 class="font-semibold text-tjb-lavender-600 text-sm uppercase tracking-wide mb-2">
                 {stateNames[stateCode] || stateCode.toUpperCase()}
               </h3>
               <ul class="space-y-1">
-                {cities.map(city => (
+                {cityList.map(city => (
                   <li>
                     <a
                       href={`/birth-support/${city.slug}/`}
@@ -61,8 +154,15 @@ const variant = Astro.props.variant || variants[topic.length % 3];
           {displayHubs.length > 0 && (
             <div class="md:col-span-2 mt-4 pt-4 border-t border-tjb-lavender-300/30">
               <p class="text-sm text-tjb-gray">
-                Explore more state resources: {displayHubs.map((hub, i) => (
-                  <><a href={hub.slug} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">{hub.label}</a>{i < displayHubs.length - 1 ? ' · ' : ''}</>
+                {currentSlug && currentState ? (
+                  <>Browse all cities in <a href={`/birth-support/${currentState}/`} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">{stateNames[currentState] || currentState.toUpperCase()}</a>{displayHubs.length > 1 ? ' or explore other states: ' : '.'}</>
+                ) : (
+                  <>Explore state resources: </>
+                )}
+                {displayHubs
+                  .filter(h => !(currentSlug && currentState && h.slug.includes(`/${currentState}/`)))
+                  .map((hub, i, arr) => (
+                  <><a href={hub.slug} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">{hub.label}</a>{i < arr.length - 1 ? ' · ' : ''}</>
                 ))}
               </p>
             </div>
@@ -77,9 +177,10 @@ const variant = Astro.props.variant || variants[topic.length % 3];
   variant === 'stacked' && (
     <section class="bg-tjb-cream-50 py-12 border-t border-tjb-lavender-200/50">
       <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-6">Browse Birth Support by City</h2>
+        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-6">{heading}</h2>
+        {subheading && <p class="text-tjb-gray mb-6 -mt-3">{subheading}</p>}
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4">
-          {Object.entries(groupedByState).map(([stateCode, cities]) => (
+          {Object.entries(groupedByState).map(([stateCode, cityList]) => (
             <div class="group">
               <p class="font-semibold text-tjb-lavender-600 mb-1.5 text-xs uppercase tracking-wide">
                 <a href={`/birth-support/${stateCode}/`} class="hover:text-tjb-rose-500 transition">
@@ -87,7 +188,7 @@ const variant = Astro.props.variant || variants[topic.length % 3];
                 </a>
               </p>
               <div class="flex flex-wrap gap-1.5">
-                {cities.map(city => (
+                {cityList.map(city => (
                   <a
                     href={`/birth-support/${city.slug}/`}
                     class="inline-block px-2.5 py-1 bg-white rounded-full border border-tjb-lavender-200 text-xs text-tjb-charcoal hover:border-tjb-rose-400 hover:text-tjb-rose-500 transition"
@@ -100,8 +201,15 @@ const variant = Astro.props.variant || variants[topic.length % 3];
         {displayHubs.length > 0 && (
           <div class="mt-8 pt-4 border-t border-tjb-lavender-300/30">
             <p class="text-sm text-tjb-gray">
-              Explore more: {displayHubs.map((hub, i) => (
-                <><a href={hub.slug} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">{hub.label}</a>{i < displayHubs.length - 1 ? ' · ' : ''}</>
+              {currentSlug && currentState ? (
+                <>Browse all cities in <a href={`/birth-support/${currentState}/`} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">{stateNames[currentState] || currentState.toUpperCase()}</a>{displayHubs.length > 1 ? ' or explore other states: ' : '.'}</>
+              ) : (
+                <>Explore state resources: </>
+              )}
+              {displayHubs
+                .filter(h => !(currentSlug && currentState && h.slug.includes(`/${currentState}/`)))
+                .map((hub, i, arr) => (
+                <><a href={hub.slug} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">{hub.label}</a>{i < arr.length - 1 ? ' · ' : ''}</>
               ))}
             </p>
           </div>
@@ -115,16 +223,20 @@ const variant = Astro.props.variant || variants[topic.length % 3];
   variant === 'card-3col' && (
     <section class="bg-tjb-cream-50 py-12 border-t border-tjb-lavender-200/50">
       <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-2 text-center">Local Birth Support Resources</h2>
-        <p class="text-tjb-gray mb-8 text-center max-w-2xl mx-auto">Find doulas, hospitals, and birth support information for cities across the country.</p>
+        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-2 text-center">{heading}</h2>
+        {subheading ? (
+          <p class="text-tjb-gray mb-8 text-center max-w-2xl mx-auto">{subheading}</p>
+        ) : (
+          <p class="text-tjb-gray mb-8 text-center max-w-2xl mx-auto">Find doulas, hospitals, and birth support information for cities across the country.</p>
+        )}
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {Object.entries(groupedByState).map(([stateCode, cities]) => (
+          {Object.entries(groupedByState).map(([stateCode, cityList]) => (
             <div class="bg-white rounded-xl p-4 border border-tjb-lavender-200">
               <h3 class="font-semibold text-tjb-lavender-600 text-sm uppercase tracking-wide mb-2">
                 {stateNames[stateCode] || stateCode.toUpperCase()}
               </h3>
               <ul class="space-y-1.5">
-                {cities.map(city => (
+                {cityList.map(city => (
                   <li>
                     <a
                       href={`/birth-support/${city.slug}/`}
@@ -139,8 +251,15 @@ const variant = Astro.props.variant || variants[topic.length % 3];
         {displayHubs.length > 0 && (
           <div class="mt-6 pt-4 border-t border-tjb-lavender-300/30 text-center">
             <p class="text-sm text-tjb-gray">
-              Explore more: {displayHubs.map((hub, i) => (
-                <><a href={hub.slug} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">{hub.label}</a>{i < displayHubs.length - 1 ? ' · ' : ''}</>
+              {currentSlug && currentState ? (
+                <>Browse all cities in <a href={`/birth-support/${currentState}/`} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">{stateNames[currentState] || currentState.toUpperCase()}</a>{displayHubs.length > 1 ? ' or explore other states: ' : '.'}</>
+              ) : (
+                <>Explore state resources: </>
+              )}
+              {displayHubs
+                .filter(h => !(currentSlug && currentState && h.slug.includes(`/${currentState}/`)))
+                .map((hub, i, arr) => (
+                <><a href={hub.slug} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">{hub.label}</a>{i < arr.length - 1 ? ' · ' : ''}</>
               ))}
             </p>
           </div>
