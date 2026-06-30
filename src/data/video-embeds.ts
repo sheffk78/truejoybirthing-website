@@ -297,10 +297,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-27T00:00:00-07:00",
   },
   "el-paso-tx": {
-    videoId: "QvYyu98sjJQ",
-    title: "El Paso Doula & Birth Plan Guide",
-    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
-    duration: "PT2M45S",
+    videoId: "MFRXfYBoO3U",
+    title: "El Paso Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 4 minutes.",
+    duration: "PT3M20S",
     uploadDate: "2026-06-30T00:00:00-06:00",
   },
   "fort-worth-tx": {
