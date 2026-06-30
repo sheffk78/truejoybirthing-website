@@ -1,5 +1,5 @@
 ---
-title: "What to Include in a Birth Plan: A Complete Guide"
+title: "What to Include in a Birth Plan"
 date: "2025-06-01"
 slug: "what-to-include-in-a-birth-plan"
 author: "Shelbi Kohler"
@@ -187,7 +187,7 @@ Use the checklist alongside the template for a complete birth plan that covers e
 
 Not every birth starts the same way. If your situation has specific needs, these guides go deeper:
 
-- **Induction planned?** Our <a href="/birth-plan-for-induction/">birth plan for induction</a> covers what changes when labor is started medically — timing, pain management differences, and how to advocate for yourself during a longer process.
+- **Induction planned?** Our <a href="/birth-plan-for-induction/">induction birth plan template</a> covers what changes when labor is started medically — timing, pain management differences, and how to advocate for yourself during a longer process.
 - **C-section planned or possible?** Our <a href="/c-section-birth-plan/">C-section birth plan</a> walks you through surgical birth preferences — from clear drapes to skin-to-skin in the OR.
 - **Planning a home birth?** Our <a href="/home-birth-plan/">home birth plan</a> covers what's different when you're planning to birth at home — transfer plans, supply lists, and how to prepare your space.
 

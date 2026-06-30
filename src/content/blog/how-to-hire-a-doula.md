@@ -1,5 +1,5 @@
 ---
-title: "How to Hire a Doula: Questions Before Booking"
+title: "How to Hire a Doula: Questions to Ask"
 date: "2024-12-09"
 slug: "how-to-hire-a-doula"
 author: "Shelbi Kohler"

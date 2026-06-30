@@ -1,5 +1,5 @@
 ---
-title: "Doula Medicaid Reimbursement: How to Get Paid"
+title: "Doula Medicaid Reimbursement: Get Paid"
 date: "2024-12-09"
 slug: "doula-reimbursement-medicaid"
 author: "Shelbi Kohler"

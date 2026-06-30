@@ -1,5 +1,5 @@
 ---
-title: "VBAC Birth Plan: What to Include for VBAC"
+title: "VBAC Birth Plan: What to Include"
 date: "2026-06-10"
 slug: "vbac-birth-plan"
 author: "Shelbi Kohler"
@@ -92,7 +92,7 @@ This is a critical section for VBAC births. Not all induction methods are recomm
 - How long you'd like to labor before considering augmentation
 - Whether you want to discuss any intervention before it's started
 
-ACOG guidelines recommend against certain induction agents for VBAC because they increase the risk of uterine rupture. Knowing this ahead of time lets you write informed preferences instead of making split-second decisions in active labor. Our <a href="/birth-plan-for-induction/">birth plan for induction guide</a> covers induction planning in more detail.
+ACOG guidelines recommend against certain induction agents for VBAC because they increase the risk of uterine rupture. Knowing this ahead of time lets you write informed preferences instead of making split-second decisions in active labor. Our <a href="/birth-plan-for-induction/">induction birth plan template</a> covers induction planning in more detail.
 
 ### 5. Delivery Preferences for VBAC
 

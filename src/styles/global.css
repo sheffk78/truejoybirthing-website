@@ -119,6 +119,31 @@ h3 {
   color: var(--color-tjb-charcoal);
 }
 
+/* Buttons inside prose: reset link styles so .btn-primary/.btn-secondary/.btn-accent keep their design */
+.prose a.btn-primary,
+.prose a.btn-secondary,
+.prose a.btn-accent,
+.prose button.btn-primary,
+.prose button.btn-secondary,
+.prose button.btn-accent {
+  color: #FFFFFF;
+  text-decoration: none;
+  text-underline-offset: unset;
+}
+
+.prose a.btn-secondary {
+  color: var(--color-tjb-lavender-600);
+}
+
+.prose a.btn-secondary:hover {
+  color: #FFFFFF;
+}
+
+.prose a.btn-primary:hover,
+.prose a.btn-accent:hover {
+  color: #FFFFFF;
+}
+
 /* ── Selection ── */
 ::selection {
   background-color: var(--color-tjb-rose-100);

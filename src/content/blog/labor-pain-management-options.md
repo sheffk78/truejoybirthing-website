@@ -1,5 +1,5 @@
 ---
-title: "Labor Pain Management Options: A Complete Guide"
+title: "Labor Pain Management Options Guide"
 date: 2026-06-15
 slug: labor-pain-management-options
 author: "Shelbi Kohler"

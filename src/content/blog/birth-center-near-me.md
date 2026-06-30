@@ -1,5 +1,5 @@
 ---
-title: "How to Find and Choose a Birth Center Near You"
+title: "How to Find a Birth Center Near You"
 date: "2026-06-11"
 slug: "birth-center-near-me"
 author: "Shelbi Kohler"

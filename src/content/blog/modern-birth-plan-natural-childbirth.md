@@ -1,5 +1,5 @@
 ---
-title: "The Modern Birth Plan: Prioritizing Your Needs"
+title: "The Modern Birth Plan: Your Needs"
 date: 2026-06-14
 slug: modern-birth-plan-natural-childbirth
 description: "Learn how to create a comprehensive, realistic birth plan that respects your unique preferences while ensuring the best outcomes for you and your baby."
@@ -74,7 +74,7 @@ Here's what I mean by "the work": knowing your preferences isn't the same as und
 Build your contingency section with specific "if/then" scenarios:
 
 - **If labor stalls at 6 cm:** I'd like to try walking, position changes, and rest before augmentation is discussed.
-- **If my water breaks before contractions start:** I'd like up to 24 hours of monitoring before induction is considered, as long as there's no sign of infection.
+- **If my water breaks before contractions start:** I'd like up to 24 hours of monitoring before induction is considered, as long as there's no sign of infection. If an induction does become necessary, our <a href="/birth-plan-for-induction/">induction birth plan template</a> helps you adjust your preferences without starting over.
 - **If a cesarean becomes necessary:** I'd like a clear explanation of why, and I'd like my partner and/or doula present in the OR if possible.
 
 This kind of planning doesn't make you rigid—it makes you ready.

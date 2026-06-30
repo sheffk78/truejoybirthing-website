@@ -1,5 +1,5 @@
 ---
-title: "What Does a Postpartum Doula Do? Complete Guide"
+title: "What Does a Postpartum Doula Do?"
 date: "2026-06-29"
 slug: "what-is-a-postpartum-doula-companion"
 author: "Shelbi Kohler"

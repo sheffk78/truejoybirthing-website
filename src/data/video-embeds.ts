@@ -324,4 +324,12 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M46S",
     uploadDate: "2026-06-26T00:00:00-06:00",
   },
+
+"austin-tx": {
+    videoId: "oy3BafNkls8",
+    title: "Austin Texas Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 4 minutes.",
+    duration: "PT3M50S",
+    uploadDate: "2026-06-30T00:00:00-06:00",
+},
 };

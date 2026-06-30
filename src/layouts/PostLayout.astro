@@ -14,6 +14,42 @@ interface Props {
 
 const { title, description, canonical, date, author = "Shelbi Kohler", featuredImage, featuredImageAlt, pageType = "BlogPosting" } = Astro.props;
 
+import fs from 'node:fs';
+import path from 'node:path';
+import matter from 'gray-matter';
+
+// Read all blog posts for related posts section
+const contentDir = 'src/content/blog';
+let allPosts = [];
+try {
+  const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.md') && !f.startsWith('_'));
+  for (const filename of files) {
+    const raw = fs.readFileSync(path.join(contentDir, filename), 'utf-8');
+    const { data } = matter(raw);
+    if (data.draft) continue;
+    allPosts.push({
+      slug: data.slug || filename.replace('.md', ''),
+      title: data.title,
+      description: data.description,
+      date: data.date,
+    });
+  }
+  allPosts.sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf());
+} catch (e) { /* ignore */ }
+
+// Find related posts: exclude current post, rotate based on date so different posts get exposure
+const currentSlug = canonical ? canonical.replace(/.*\/blog\//, '').replace(/\/$/, '') : '';
+const otherPosts = allPosts.filter(p => p.slug !== currentSlug);
+
+// Get current post index to rotate selection
+const currentIdx = allPosts.findIndex(p => p.slug === currentSlug);
+// Pick 3 posts starting from a rotated position so every post gets cross-linked
+const startIdx = currentIdx >= 0 ? (currentIdx + 1) % otherPosts.length : 0;
+const relatedPosts = [
+  ...otherPosts.slice(startIdx, startIdx + 3),
+  ...otherPosts.slice(0, Math.max(0, startIdx + 3 - otherPosts.length))
+].slice(0, 3);
+
 const pubDate = date ? new Date(date) : null;
 const formattedDate = pubDate ? pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
 
@@ -133,6 +169,24 @@ const schemaJson = JSON.stringify(schema);
       <slot />
     </main>
 
+    <!-- Related Blog Posts -->
+    {relatedPosts.length > 0 && (
+      <section class="bg-white py-12 border-t border-tjb-lavender-200/50">
+        <div class="max-w-4xl mx-auto px-6">
+          <h2 class="text-2xl font-bold text-tjb-charcoal mb-6">More from the Blog</h2>
+          <div class="grid md:grid-cols-3 gap-6">
+            {relatedPosts.map(post => (
+              <a href={`/blog/${post.slug}/`} class="group block bg-tjb-cream-50 rounded-xl p-5 border border-tjb-lavender-200/60 hover:border-tjb-rose-300 hover:shadow-md transition">
+                <p class="text-xs text-tjb-lavender-500 font-semibold mb-2">{new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</p>
+                <h3 class="text-sm font-bold text-tjb-charcoal mb-2 group-hover:text-tjb-lavender-500 transition leading-snug">{post.title}</h3>
+                <p class="text-xs text-tjb-gray line-clamp-2">{post.description}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
     <!-- App Showcase — Blog conversion (matches Denver city page design) -->
     <section class="bg-tjb-cream-50 py-16 md:py-20 border-t border-tjb-lavender-300/20">
       <div class="max-w-5xl mx-auto px-6">
@@ -212,19 +266,33 @@ const schemaJson = JSON.stringify(schema);
     </section>
 
     <footer class="bg-tjb-charcoal text-tjb-cream/80 mt-auto">
-      <div class="max-w-6xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-3">
-        <div>
+      <div class="max-w-6xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-4">
+        <div class="md:col-span-1">
           <img src="/images/logo-white.svg" alt="True Joy Birthing" class="h-10 w-auto mb-4" />
-          <p class="text-sm text-tjb-gray-300 leading-relaxed">Birth education and planning tools — free for moms, Pro for doulas and midwives.</p>
+          <p class="text-sm text-tjb-gray-300 leading-relaxed">Birth education and planning tools, free for moms, Pro for doulas and midwives.</p>
         </div>
         <div>
           <p class="font-semibold text-white mb-4 tracking-wide text-sm uppercase">Resources</p>
           <ul class="text-sm space-y-2">
             <li><a href="/blog/" class="hover:text-tjb-lavender-light transition">Blog</a></li>
-            <li><a href="/about/" class="hover:text-tjb-lavender-light transition">About</a></li>
+            <li><a href="/birth-plan-template/" class="hover:text-tjb-lavender-light transition">Birth Plan Template</a></li>
+            <li><a href="/what-is-a-doula/" class="hover:text-tjb-lavender-light transition">What Is a Doula?</a></li>
+            <li><a href="/doula-cost/" class="hover:text-tjb-lavender-light transition">Doula Cost Guide</a></li>
+            <li><a href="/doula-vs-midwife/" class="hover:text-tjb-lavender-light transition">Doula vs Midwife</a></li>
+            <li><a href="/medicaid-doula-coverage/" class="hover:text-tjb-lavender-light transition">Medicaid Doula Coverage</a></li>
             <li><a href="/faq/" class="hover:text-tjb-lavender-light transition">FAQ</a></li>
-            <li><a href="/privacy/" class="hover:text-tjb-lavender-light transition">Privacy</a></li>
-            <li><a href="/terms/" class="hover:text-tjb-lavender-light transition">Terms</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-white mb-4 tracking-wide text-sm uppercase">Find Support</p>
+          <ul class="text-sm space-y-2">
+            <li><a href="/birth-support/" class="hover:text-tjb-lavender-light transition">Birth Support by City</a></li>
+            <li><a href="/doula-near-me/" class="hover:text-tjb-lavender-light transition">Find a Doula Near You</a></li>
+            <li><a href="/midwife-near-me/" class="hover:text-tjb-lavender-light transition">Find a Midwife Near You</a></li>
+            <li><a href="/birth-center-near-me/" class="hover:text-tjb-lavender-light transition">Find a Birth Center</a></li>
+            <li><a href="/doula-certification/" class="hover:text-tjb-lavender-light transition">Doula Certification</a></li>
+            <li><a href="/ambassador/" class="hover:text-tjb-lavender-light transition">Doula Ambassador Program</a></li>
+            <li><a href="/about/" class="hover:text-tjb-lavender-light transition">About</a></li>
           </ul>
         </div>
         <div>

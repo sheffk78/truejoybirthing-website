@@ -1,5 +1,5 @@
 ---
-title: "How Much Are Doula Services? Cost Breakdown"
+title: "How Much Are Doula Services? Costs"
 date: "2024-12-09"
 slug: "how-much-are-doula-services"
 author: "Shelbi Kohler"

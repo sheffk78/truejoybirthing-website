@@ -1,5 +1,5 @@
 ---
-title: "Hospital Birth Plan Template: What to Include"
+title: "Hospital Birth Plan Template: Include"
 date: "2025-06-01"
 slug: "birth-plan-for-hospital-delivery"
 author: "Shelbi Kohler"
@@ -128,7 +128,7 @@ This is the "what if" section. It covers scenarios you hope won't happen but wan
 - What you want if labor stalls (how long before interventions)
 - Preferences if the baby needs NICU care (partner accompanies baby, updates to you)
 - Whether you want to be informed and asked before any intervention
-- Your feelings about induction augmentation if labor slows
+- Your feelings about induction augmentation if labor slows — and if you're scheduled for an induction, our <a href="/birth-plan-for-induction/">induction birth plan template</a> walks you through what changes
 - Who makes decisions if you're unable to
 
 This section isn't about expecting the worst. It's about staying in the conversation even when the unexpected happens.

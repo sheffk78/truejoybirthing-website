@@ -61,7 +61,7 @@ One of the biggest things I do is make sure you understand what's happening and 
 During our prenatal visits, we'll talk through:
 
 - Your birth preferences and what matters most to you
-- Common interventions and what they involve — induction, episiotomy, continuous monitoring, and others
+- Common interventions and what they involve — induction, episiotomy, continuous monitoring, and others. If your provider has scheduled an induction, I'll help you adapt your preferences using our <a href="/birth-plan-for-induction/">induction birth plan template</a>
 - How to ask for time when a provider suggests something — "Can you explain that?" and "What are the alternatives?" are powerful questions
 - What informed consent actually looks like in practice
 - How to communicate with your care team clearly and respectfully

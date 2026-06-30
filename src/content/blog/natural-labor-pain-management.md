@@ -1,5 +1,5 @@
 ---
-title: "Mastering Natural Labor Pain Management Techniques"
+title: "Natural Labor Pain Management Techniques"
 date: 2026-06-14
 slug: natural-labor-pain-management
 description: "Explore evidence-based, non-medication techniques for managing labor pain naturally — from breathing and movement to water therapy and positioning."

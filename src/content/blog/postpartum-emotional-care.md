@@ -1,5 +1,5 @@
 ---
-title: "Postpartum Emotional Care: Recovery After Birth"
+title: "Postpartum Emotional Care: Recovery"
 date: "2026-06-15"
 slug: "postpartum-emotional-care"
 author: "Shelbi Kohler"

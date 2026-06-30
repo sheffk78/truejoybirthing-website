@@ -53,11 +53,18 @@ const stateNames: Record<string, string> = {
 const stateFullName = stateNames[state] || state;
 
 const pageTitle = `${city}, ${state} Doula & Midwife Guide`;
-const pageDesc = `Doula or midwife in ${city}? Costs $${costLow}–$${costHigh}, ${medicaidCovers ? 'Medicaid covers doulas' : 'no Medicaid coverage'}, hospital policies, free birth plan.`;
+const medicaidDesc = medicaidCovers ? 'Medicaid covers doulas' : 'no Medicaid doula coverage';
+const baseDesc = `Birth in ${city}, ${state}: doula costs $${costLow}–$${costHigh}, ${medicaidDesc}, hospitals, birth centers, free plan template.`;
+// Pad short descriptions to reach 120+ chars (ideal: 120-130)
+const pageDesc = baseDesc.length < 120
+  ? baseDesc.replace('free plan template.', 'free birth plan template.')
+  : baseDesc;
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 const ogImage = ogImageSlug || `https://truejoybirthing.com/images/og-city-${slug}.webp`;
 const heroImage = heroImageSlug || '/images/doula-breastfeeding.webp';
-const heroImage600 = heroImageSlug ? heroImageSlug.replace('.webp', '-600.webp').replace('-v2-600', '-600-v2') : '/images/doula-breastfeeding-600.webp';
+const heroImage600 = heroImageSlug
+  ? heroImageSlug.replace(/\.(webp|jpg|jpeg|png)$/i, '-600.$1')
+  : '/images/doula-breastfeeding-600.webp';
 const heroAlt = `${city} birth doula: costs, Medicaid, and hospital info for ${state} families`;
 const supportImage = supportSceneImage || '/images/doula-support-conversation.webp';
 const supportImageAlt = supportSceneAlt || `A doula walking alongside an expectant mom, offering continuous labor support`;

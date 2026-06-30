@@ -119,9 +119,9 @@ const moduleData = [
 
       <p class="eyebrow mb-4">Free birth plan walkthrough</p>
       <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-      <h1 class="mb-5 text-[2.25rem] md:text-[2.75rem] leading-[1.15] text-tjb-charcoal font-bold">
+      <h2 class="mb-5 text-[2.25rem] md:text-[2.75rem] leading-[1.15] text-tjb-charcoal font-bold">
         Your free walkthrough videos
-      </h1>
+      </h2>
       <p class="text-tjb-gray mb-8 text-lg leading-relaxed">
         Download the PDF from your inbox and follow along. Each module maps to a section of the Joyful Birth Plan.
       </p>
@@ -132,7 +132,7 @@ const moduleData = [
       {
         moduleData.map((mod) => (
           <div class="mb-10 bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
-            <h2 class="text-xl font-semibold text-tjb-charcoal mb-1">{mod.id} — {mod.title}</h2>
+            <h3 class="text-xl font-semibold text-tjb-charcoal mb-1">{mod.id} — {mod.title}</h3>
             <p class="text-tjb-gray text-sm mb-4">{mod.desc} <span class="text-tjb-gray-400">(~{mod.duration})</span></p>
             <div style="position:relative;padding-top:56.25%;">
               <iframe

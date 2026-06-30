@@ -1,5 +1,5 @@
 ---
-title: "Is Doula Care Covered by Insurance? A Guide"
+title: "Is Doula Care Covered by Insurance?"
 date: "2024-12-09"
 slug: "doula-covered-by-insurance"
 author: "Shelbi Kohler"

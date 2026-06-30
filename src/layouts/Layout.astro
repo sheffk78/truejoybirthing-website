@@ -225,8 +225,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <!-- Fonts: non-render-blocking via media-print swap pattern -->
-    <link rel="stylesheet" href="/fonts/fonts.css" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="/fonts/fonts.css" /></noscript>
+    <link rel="stylesheet" href="/fonts/fonts.css" />
     <!-- Preload critical font weights used above the fold -->
     <link rel="preload" href="/fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin />
@@ -301,8 +300,8 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
 
     <!-- Footer -->
     <footer class="bg-tjb-charcoal text-tjb-cream/80 mt-auto">
-      <div class="max-w-6xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-3">
-        <div>
+      <div class="max-w-6xl mx-auto px-6 py-16 grid gap-10 md:grid-cols-4">
+        <div class="md:col-span-1">
           <img src="/images/logo-white.svg" alt="True Joy Birthing" class="h-16 w-auto mb-4" />
           <p class="text-sm text-tjb-gray-300 leading-relaxed">Free birth plan app and education for expecting moms. Find local doulas and midwives, understand your hospital's policies, and walk into your birth knowing exactly what you want. Pro tools available for birth professionals.</p>
           <div class="mt-3 text-sm text-tjb-gray-300 space-y-1">
@@ -314,10 +313,24 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
           <p class="font-semibold text-white mb-4 tracking-wide text-sm uppercase">Resources</p>
           <ul class="text-sm space-y-2">
             <li><a href="/blog/" class="hover:text-tjb-lavender-light transition">Blog</a></li>
-            <li><a href="/about/" class="hover:text-tjb-lavender-light transition">About</a></li>
+            <li><a href="/birth-plan-template/" class="hover:text-tjb-lavender-light transition">Birth Plan Template</a></li>
+            <li><a href="/what-is-a-doula/" class="hover:text-tjb-lavender-light transition">What Is a Doula?</a></li>
+            <li><a href="/doula-cost/" class="hover:text-tjb-lavender-light transition">Doula Cost Guide</a></li>
+            <li><a href="/doula-vs-midwife/" class="hover:text-tjb-lavender-light transition">Doula vs Midwife</a></li>
+            <li><a href="/medicaid-doula-coverage/" class="hover:text-tjb-lavender-light transition">Medicaid Doula Coverage</a></li>
             <li><a href="/faq/" class="hover:text-tjb-lavender-light transition">FAQ</a></li>
-            <li><a href="/privacy/" class="hover:text-tjb-lavender-light transition">Privacy</a></li>
-            <li><a href="/terms/" class="hover:text-tjb-lavender-light transition">Terms</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-semibold text-white mb-4 tracking-wide text-sm uppercase">Find Support</p>
+          <ul class="text-sm space-y-2">
+            <li><a href="/birth-support/" class="hover:text-tjb-lavender-light transition">Birth Support by City</a></li>
+            <li><a href="/doula-near-me/" class="hover:text-tjb-lavender-light transition">Find a Doula Near You</a></li>
+            <li><a href="/midwife-near-me/" class="hover:text-tjb-lavender-light transition">Find a Midwife Near You</a></li>
+            <li><a href="/birth-center-near-me/" class="hover:text-tjb-lavender-light transition">Find a Birth Center</a></li>
+            <li><a href="/doula-certification/" class="hover:text-tjb-lavender-light transition">Doula Certification</a></li>
+            <li><a href="/ambassador/" class="hover:text-tjb-lavender-light transition">Doula Ambassador Program</a></li>
+            <li><a href="/about/" class="hover:text-tjb-lavender-light transition">About</a></li>
           </ul>
         </div>
         <div>

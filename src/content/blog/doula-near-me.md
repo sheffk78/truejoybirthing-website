@@ -1,5 +1,5 @@
 ---
-title: "Finding a Doula Near You: How to Choose Support"
+title: "Finding a Doula Near You: How to Choose"
 date: "2026-06-11"
 slug: "doula-near-me"
 author: "Shelbi Kohler"

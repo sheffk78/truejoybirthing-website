@@ -1,5 +1,5 @@
 ---
-title: "Cultural Traditions and Breastfeeding: What Every Doula Should Know"
+title: "Cultural Birth Traditions for Doulas"
 date: "2026-06-24"
 slug: "cultural-traditions-breastfeeding-doulas"
 author: "Shelbi Kohler"

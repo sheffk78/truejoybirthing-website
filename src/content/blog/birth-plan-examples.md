@@ -1,5 +1,5 @@
 ---
-title: "Birth Plan Examples: Templates for Every Birth"
+title: "Birth Plan Examples: Every Birth Type"
 date: "2026-06-11"
 slug: "birth-plan-examples"
 author: "Shelbi Kohler"
@@ -23,7 +23,7 @@ Before we get into specific scenarios, here's the core structure every birth pla
 Your name, due date, provider, hospital or birth center, partner and support team names. Keep it simple so the intake nurse can quickly match it to your chart.
 
 **Labor preferences**
-Who you want in the room, your preferred comfort measures, mobility preferences (walking, changing positions, using a birth ball or tub), whether you want intermittent or continuous fetal monitoring, and your stance on induction methods if needed.
+Who you want in the room, your preferred comfort measures, mobility preferences (walking, changing positions, using a birth ball or tub), whether you want intermittent or continuous fetal monitoring, and your stance on induction methods if needed. If your provider schedules an induction, use our <a href="/birth-plan-for-induction/">induction birth plan template</a> to adapt these preferences for that scenario.
 
 **Pain management**
 Your preferences for non-medical comfort measures (massage, counter-pressure, breathing techniques, hydrotherapy) and medical pain relief (nitrous oxide, IV pain medication, epidural). Be specific about what you want — and what you want to avoid.

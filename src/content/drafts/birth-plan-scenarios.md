@@ -132,7 +132,7 @@ No spam. Just a free birth plan and occasional tips you can actually use.
 -->
 
 ---
-title: "Birth Plan Scenarios — Find the Right Plan for Your Birth"
+title: "Birth Plan Scenarios: Find Your Plan"
 description: "Birth plans aren't one-size-fits-all. Choose your scenario — induction, C-section, VBAC, natural birth, twins, anxiety, or provider disagreements — and get scenario-specific language your care team can actually read."
 canonical: "https://truejoybirthing.com/birth-plan-scenarios/"
 breadcrumb:

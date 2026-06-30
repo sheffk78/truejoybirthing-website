@@ -70,7 +70,7 @@ const allHospitals = stateCities.flatMap((c) => c.hospitalDetails.map((h) => h.n
 const uniqueHospitals = [...new Set(allHospitals)];
 
 const pageTitle = `${stateFullName} Doula Guide | Costs & Medicaid`;
-const pageDesc = `Find doula support across ${totalCities} ${totalCities === 1 ? 'city' : 'cities'} in ${stateFullName}. Compare costs ($${costLow.toLocaleString()}–$${costHigh.toLocaleString()}), Medicaid, and hospital policies.`;
+const pageDesc = `Doula support in ${stateFullName}: costs $${costLow.toLocaleString()}–$${costHigh.toLocaleString()}, Medicaid coverage, hospitals, birth centers, and a free birth plan template.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/${stateCode.toLowerCase()}/`;
 
 const breadcrumbList = [

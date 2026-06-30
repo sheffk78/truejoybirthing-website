@@ -142,15 +142,20 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
       <p>So I built something practical. A birth plan that actually works in a hospital room. Education that explains the tradeoffs, not just the buzzwords. And for doulas — tools that finally make running a practice feel organized instead of overwhelming.</p>
 
       <div class="my-8 not-prose">
-        <div class="aspect-video rounded-2xl overflow-hidden shadow-lg shadow-tjb-lavender-300/20 bg-tjb-charcoal">
-          <iframe
-            src="https://iframe.mediadelivery.net/embed/602267/adc27428-031a-4c06-9115-c842bef0fb6e"
-            loading="lazy"
-            class="w-full h-full border-0"
-            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-            allowfullscreen
-          ></iframe>
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-lg shadow-tjb-lavender-300/20 bg-tjb-charcoal relative cursor-pointer group" id="video-facade" data-src="https://iframe.mediadelivery.net/embed/602267/adc27428-031a-4c06-9115-c842bef0fb6e">
+          <img src="/images/tjb-video-thumb.webp" alt="Video walkthrough — press play" class="w-full h-full object-cover" width="560" height="315" loading="lazy" />
+          <div class="absolute inset-0 flex items-center justify-center bg-tjb-charcoal/30 group-hover:bg-tjb-charcoal/20 transition">
+            <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition">
+              <svg class="w-7 h-7 text-tjb-lavender-600 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
         </div>
+        <script is:inline>
+          document.getElementById('video-facade')?.addEventListener('click', function() {
+            var src = this.dataset.src;
+            this.innerHTML = '<iframe src="' + src + '?autoplay=true" class="w-full h-full border-0 absolute inset-0" width="560" height="315" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+          });
+        </script>
         <p class="text-sm text-tjb-gray-300 mt-3 text-center">Hear why Shelbi became a doula and what she's building.</p>
       </div>
 
