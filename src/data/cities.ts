@@ -3103,7 +3103,7 @@ export const cities: Record<string, CityData> = {
     lng: -121.4944,
     ogImage: "https://truejoybirthing.com/images/og-city-sacramento-ca.webp" ,
     heroImage: "/images/sacramento-ca-birth-doula-skyline-v2.webp" ,
-    supportSceneImage: "/images/sacramento-ca-birth-doula-support.webp" ,
+    supportSceneImage: "/images/sacramento-ca-birth-doula-support-v2.webp" ,
     supportSceneAlt: "A doula walking alongside an expectant mom through a Sacramento neighborhood near Capitol Park" ,
     localDoulas: [
       { name: "Rebecca Rose Doula Services" , credential: "Birth Doula" , practice: "Rebecca Rose Doula Services" , url: "https://www.rebeccarosedoulaservices.net/" , photo: "/images/sacramento-ca-doula-rebecca-rose.webp", description: "Connect with our inclusive Birth and Postpartum team today! Call (916) 218-8867 or message us to get started. Serving Sacramento, Placer County, and surrounding areas with compassionate, family-centered support.", costRange: "$1,500-$3,500", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Sacramento, CA"] },
