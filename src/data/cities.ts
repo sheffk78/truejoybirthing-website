@@ -2199,7 +2199,7 @@ export const cities: Record<string, CityData> = {
     costLow: 800,
     costHigh: 2000,
     shelbiServesHere: false,
-    heroImage: "/images/raleigh-nc-birth-doula-skyline-v2.webp",
+    heroImage: "/images/raleigh-nc-birth-doula-skyline-v3.webp",
     ogImage: "/images/og-city-raleigh-nc.webp",
     supportSceneImage: "/images/raleigh-nc-birth-doula-support.webp",
     supportSceneAlt: "Raleigh doula supporting a new mother during postpartum visit",
