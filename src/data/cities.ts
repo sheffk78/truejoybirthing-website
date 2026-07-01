@@ -2529,7 +2529,7 @@ export const cities: Record<string, CityData> = {
     costLow: 850 ,
     costHigh: 2500 ,
     shelbiServesHere: false ,
-    heroImage: "/images/orlando-fl-birth-doula-skyline-v2.webp" ,
+    heroImage: "/images/orlando-fl-birth-doula-skyline-v3.webp" ,
     ogImage: "/images/og-city-orlando-fl.webp" ,
     supportSceneImage: "/images/orlando-fl-support-scene.webp" ,
     localDoulas: [
