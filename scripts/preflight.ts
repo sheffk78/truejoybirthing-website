@@ -1281,10 +1281,14 @@ function run(): void {
   // ── G38: Hero image filename matches city slug ──
   // Catches the "Houston showing NYC skyline" class of bug.
   // The heroImage filename must contain the city slug.
+  // Uses extract-city-block.py for correct city block extraction (brace-depth tracked).
   if (targetSlug) {
     try {
-      const citiesContent = fs.readFileSync(path.join(PROJECT_DIR, 'src/data/cities.ts'), 'utf-8');
-      const heroMatch = citiesContent.match(new RegExp(`"${targetSlug}":\\s*\\{[\\s\\S]*?heroImage:\\s*"([^"]+)"`));
+      const cityBlock = execSync(
+        `python3 scripts/extract-city-block.py ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+      const heroMatch = cityBlock.match(/heroImage:\s*"([^"]+)"/);
       if (heroMatch) {
         const heroPath = heroMatch[1];
         const basename = path.basename(heroPath).replace(/\.(webp|jpg|jpeg|png)$/i, '');
@@ -1338,10 +1342,14 @@ function run(): void {
 
   // ── G40: OG image filename matches city slug ──
   // Same principle as G38 but for OG image.
+  // Uses extract-city-block.py for correct city block extraction (brace-depth tracked).
   if (targetSlug) {
     try {
-      const citiesContent = fs.readFileSync(path.join(PROJECT_DIR, 'src/data/cities.ts'), 'utf-8');
-      const ogMatch = citiesContent.match(new RegExp(`"${targetSlug}":\\s*\\{[\\s\\S]*?ogImage:\\s*"([^"]+)"`));
+      const cityBlock = execSync(
+        `python3 scripts/extract-city-block.py ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+      const ogMatch = cityBlock.match(/ogImage:\s*"([^"]+)"/);
       if (ogMatch) {
         const ogPath = ogMatch[1];
         const basename = path.basename(ogPath).replace(/\.(webp|jpg|jpeg|png)$/i, '');
