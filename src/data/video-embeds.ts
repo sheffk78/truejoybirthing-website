@@ -332,4 +332,18 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M50S",
     uploadDate: "2026-06-30T00:00:00-06:00",
 },
+"orlando-fl": {
+    videoId: "YwVwMD2SAkE",
+    title: "Orlando Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Florida Medicaid, all in under 5 minutes.",
+    duration: "PT4M08S",
+    uploadDate: "2026-06-30T00:00:00-06:00",
+},
+"tampa-fl": {
+    videoId: "qB2LJXWAsFM",
+    title: "Tampa Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Florida Medicaid, all in under 5 minutes.",
+    duration: "PT5M23S",
+    uploadDate: "2026-07-01T00:00:00-06:00",
+},
 };
