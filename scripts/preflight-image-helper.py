@@ -232,7 +232,7 @@ def hospital_dimensions(slug: str) -> dict:
             name = name_m.group(1) if name_m else "Unknown facility"
 
             if not thumb_m or not thumb_m.group(1):
-                if 'No birth centers' in name or 'No hospitals' in name:
+                if 'No birth centers' in name or 'No freestanding' in name or 'No hospitals' in name:
                     continue  # Allow empty thumbnails for placeholder entries
                 issues.append(f"{name}: no thumbnail field")
                 continue
