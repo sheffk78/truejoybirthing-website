@@ -206,11 +206,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-30T00:00:00-06:00",
   },
   "portland-or": {
-    videoId: "DnwodifP1aQ",
-    title: "Portland Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Oregon Health Plan, all in under 3 minutes.",
-    duration: "PT2M10S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
+    videoId: "2jLTU5IPVW4",
+    title: "Portland OR Doula & Birth Plan Guide: Costs, Hospitals & OHP Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Oregon Health Plan covers doula services, all in under 4 minutes.",
+    duration: "PT3M54S",
+    uploadDate: "2026-06-30T00:00:00-07:00",
   },
   "providence-ri": {
     videoId: "Tnekc1LCMrg",
