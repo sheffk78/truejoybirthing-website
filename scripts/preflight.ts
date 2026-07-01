@@ -1278,6 +1278,31 @@ function run(): void {
     results.push({ gate: 'G37', status: 'SKIP', detail: 'Skipping proportional provider check in audit mode (run with slug)' });
   }
 
+  // ── G38: Hero image filename matches city slug ──
+  // Catches the "Houston showing NYC skyline" class of bug.
+  // The heroImage filename must contain the city slug.
+  if (targetSlug) {
+    try {
+      const citiesContent = fs.readFileSync(path.join(PROJECT_DIR, 'src/data/cities.ts'), 'utf-8');
+      const heroMatch = citiesContent.match(new RegExp(`"${targetSlug}":\\s*\\{[\\s\\S]*?heroImage:\\s*"([^"]+)"`));
+      if (heroMatch) {
+        const heroPath = heroMatch[1];
+        const basename = path.basename(heroPath).replace(/\.(webp|jpg|jpeg|png)$/i, '');
+        if (basename.includes(targetSlug)) {
+          results.push({ gate: 'G38', status: 'PASS', detail: `Hero image filename matches city: ${basename}` });
+        } else {
+          results.push({ gate: 'G38', status: 'FAIL', detail: `Hero image "${basename}" does not contain city slug "${targetSlug}" — wrong city image` });
+        }
+      } else {
+        results.push({ gate: 'G38', status: 'FAIL', detail: `No heroImage field found for ${targetSlug}` });
+      }
+    } catch {
+      results.push({ gate: 'G38', status: 'SKIP', detail: 'Could not check hero image filename match' });
+    }
+  } else {
+    results.push({ gate: 'G38', status: 'SKIP', detail: 'Skipping hero image filename check in audit mode (run with slug)' });
+  }
+
   // ── Print summary ──
   console.log('\n─── RESULTS ───\n');
 
