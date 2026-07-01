@@ -1110,6 +1110,174 @@ function run(): void {
     results.push({ gate: 'G36', status: 'SKIP', detail: 'Skipping hospital data check in audit mode (run with slug)' });
   }
 
+  // ── G37: Proportional provider count vs city population ──
+  // Ensures major cities have proportionally more doulas/hospitals/birth centers.
+  // Birth center minimum is waived if the city block contains an NPI registry
+  // search comment documenting zero results (the absence is factual, not a gap).
+  if (targetSlug) {
+    try {
+      const cityBlock = execSync(
+        `python3 scripts/extract-city-block.py ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+
+      // Population data for US cities in the TJB pipeline.
+      // Sources: US Census 2023 estimates. Updated as new cities are added.
+      const POPULATION_DATA: Record<string, number> = {
+        'new-york-ny': 8336000, 'los-angeles-ca': 3849000, 'chicago-il': 2664000,
+        'houston-tx': 2308000, 'phoenix-az': 1812000, 'philadelphia-pa': 1568000,
+        'san-antonio-tx': 1472000, 'san-diego-ca': 1379000, 'dallas-tx': 1304000,
+        'jacksonville-fl': 1287000, 'austin-tx': 978000, 'san-jose-ca': 971000,
+        'fort-worth-tx': 946000, 'columbus-oh': 906000, 'charlotte-nc': 879000,
+        'indianapolis-in': 871000, 'san-francisco-ca': 808000, 'seattle-wa': 755000,
+        'denver-co': 716000, 'boston-ma': 651000, 'el-paso-tx': 643000,
+        'nashville-tn': 689000, 'detroit-mi': 627000, 'oklahoma-city-ok': 690000,
+        'portland-or': 635000, 'las-vegas-nv': 641000, 'memphis-tn': 633000,
+        'louisville-ky': 626000, 'baltimore-md': 569000, 'milwaukee-wi': 564000,
+        'albuquerque-nm': 558000, 'tucson-az': 542000, 'fresno-ca': 545000,
+        'sacramento-ca': 514000, 'kansas-city-mo': 510000, 'mesa-az': 512000,
+        'atlanta-ga': 501000, 'colorado-springs-co': 484000, 'raleigh-nc': 470000,
+        'long-beach-ca': 467000, 'miami-fl': 442000, 'oakland-ca': 426000,
+        'minneapolis-mn': 425000, 'tampa-fl': 407000, 'tulsa-ok': 413000,
+        'arlington-tx': 409000, 'new-orleans-la': 364000, 'wichita-ks': 400000,
+        'cleveland-oh': 363000, 'bakersfield-ca': 408000, 'aurora-co': 399000,
+        'honolulu-hi': 346000, 'anaheim-ca': 347000, 'santa-ana-ca': 310000,
+        'riverside-ca': 322000, 'corpus-christi-tx': 316000, 'lexington-fy': 323000,
+        'stockton-ca': 319000, 'st-louis-mo': 281000, 'pittsburgh-pa': 303000,
+        'saint-paul-mn': 309000, 'henderson-nv': 337000, 'cincinnati-oh': 309000,
+        'anchorage-ak': 293000, 'greensboro-nc': 299000, 'plano-tx': 286000,
+        'newark-nj': 282000, 'lincoln-ne': 287000, 'orlando-fl': 309000,
+        'irving-tx': 257000, 'chandler-az': 275000, 'scottsdale-az': 242000,
+        'north-las-vegas-nv': 274000, 'norfolk-va': 236000, 'winston-salem-nc': 251000,
+        'chula-vista-ca': 275000, 'madison-wi': 272000, 'boise-id': 237000,
+        'fremont-ca': 237000, 'spokane-wa': 235000, 'richmond-va': 231000,
+        'san-bernardino-ca': 222000, 'birmingham-al': 200000, 'modesto-ca': 218000,
+        'rochester-ny': 211000, 'huntsville-al': 215000,
+        'fontana-ca': 212000, 'des-moines-ia': 214000, 'moreno-valley-ca': 211000,
+        'lubbock-tx': 262000, 'garland-tx': 246000, 'sugar-land-tx': 111000,
+        'mcallen-tx': 144000, 'brownsville-tx': 186000, 'chattanooga-tn': 182000,
+        'buffalo-ny': 279000, 'fort-collins-co': 169000,
+        'durham-nc': 285000, 'st-petersburg-fl': 258000, 'virginia-beach-va': 453000,
+        'chesapeake-va': 247000, 'lexington-ky': 323000,
+        'abilene-tx': 127000, 'amarillo-tx': 202000, 'beaumont-tx': 110000, 'midland-tx': 139000,
+        'tyler-tx': 110000, 'college-station-tx': 123000, 'killeen-tx': 159000,
+        'waco-tx': 142000, 'round-rock-tx': 133000, 'georgetown-tx': 80000,
+        'san-marcos-tx': 67000, 'conroe-tx': 98000, 'cedar-park-tx': 80000,
+        'new-braunfels-tx': 90000, 'allen-tx': 105000, 'galveston-tx': 50000,
+        'pasadena-tx': 153000, 'pearland-tx': 125000, 'longview-tx': 82000,
+        'laredo-tx': 263000, 'edinburg-tx': 106000, 'mission-tx': 85000,
+        'pharr-tx': 79000, 'harlingen-tx': 71000, 'carrollton-tx': 133000,
+        'lewisville-tx': 131000, 'grand-prairie-tx': 197000, 'richardson-tx': 120000,
+        'spring-tx': 200000, 'cary-nc': 180000, 'concord-nc': 105000,
+        'wake-forest-nc': 48000, 'hendersonville-tn': 61000,
+        'cumming-ga': 7500, 'eugene-or': 177000, 'vancouver-wa': 190000,
+        'providence-ri': 191000, 'hartford-ct': 119000, 'new-haven-ct': 136000,
+        'springfield-il': 113000, 'charleston-sc': 155000, 'greenville-sc': 72000,
+        'augusta-ga': 202000, 'savannah-ga': 149000, 'columbia-md': 105000,
+        'st-augustine-fl': 15000, 'port-st-lucie-fl': 218000,
+        'gainesville-fl': 141000, 'meridian-id': 120000, 'lehi-ut': 75000,
+        'wichita-falls-tx': 102000,
+        'worcester-ma': 186000, 'grand-rapids-mi': 199000,
+        'rochester-mn': 121000, 'reno-nv': 272000,
+        'albany-ny': 101000, 'frisco-tx': 219000, 'mesquite-tx': 150000,
+        'st-paul-mn': 309000, 'tacoma-wa': 219000, 'temple-tx': 83000,
+        'victoria-tx': 67000,
+      };
+
+      const population = POPULATION_DATA[targetSlug] || 0;
+
+      if (population === 0) {
+        results.push({ gate: 'G37', status: 'SKIP', detail: `No population data for ${targetSlug} — add to POPULATION_DATA map` });
+      } else {
+        // Determine tier and minimums
+        let tier: string;
+        let minDoulas: number;
+        let minHospitals: number;
+        let minBirthCenters: number;
+
+        if (population > 1_000_000) {
+          tier = '>1M';
+          minDoulas = 5;
+          minHospitals = 4;
+          minBirthCenters = 2;
+        } else if (population > 500_000) {
+          tier = '500K-1M';
+          minDoulas = 3;
+          minHospitals = 3;
+          minBirthCenters = 1;
+        } else if (population > 100_000) {
+          tier = '100K-500K';
+          minDoulas = 2;
+          minHospitals = 2;
+          minBirthCenters = 1;
+        } else {
+          tier = '<100K';
+          minDoulas = 1;
+          minHospitals = 1;
+          minBirthCenters = 0;
+        }
+
+        // Count providers in the city block using brace-depth tracking
+        function countArrayEntries(block: string, fieldName: string): number {
+          const match = block.match(new RegExp(`${fieldName}:\\s*\\[`));
+          if (!match) return 0;
+          const arrStart = block.indexOf('[', match.index!);
+          let depth = 0;
+          let arrEnd = arrStart;
+          for (let i = arrStart; i < block.length; i++) {
+            if (block[i] === '[') depth++;
+            else if (block[i] === ']') { depth--; if (depth === 0) { arrEnd = i; break; } }
+          }
+          const arrBlock = block.slice(arrStart + 1, arrEnd);
+          // Count entries by name: field
+          return (arrBlock.match(/name:\s*"/g) || []).length;
+        }
+
+        const doulaCount = countArrayEntries(cityBlock, 'localDoulas');
+        const hospitalCount = countArrayEntries(cityBlock, 'hospitalDetails');
+        const birthCenterCount = countArrayEntries(cityBlock, 'birthCenterDetails');
+
+        // Check for documented NPI registry search (waives birth center minimum)
+        const hasNpiZeroDoc = /NPI registry.*returned zero/i.test(cityBlock) ||
+                              /NPI.*taxonomy.*zero/i.test(cityBlock) ||
+                              /birth center search.*returned zero/i.test(cityBlock);
+
+        const failures: string[] = [];
+
+        if (doulaCount < minDoulas) {
+          failures.push(`doulas: ${doulaCount} (need ${minDoulas})`);
+        }
+        if (hospitalCount < minHospitals) {
+          failures.push(`hospitals: ${hospitalCount} (need ${minHospitals})`);
+        }
+        if (birthCenterCount < minBirthCenters && !hasNpiZeroDoc) {
+          failures.push(`birth centers: ${birthCenterCount} (need ${minBirthCenters}${hasNpiZeroDoc ? ' — waived by NPI zero doc' : ''})`);
+        }
+
+        if (failures.length === 0) {
+          const bcNote = hasNpiZeroDoc && birthCenterCount < minBirthCenters
+            ? ` (BC min waived: NPI zero documented)`
+            : '';
+          results.push({
+            gate: 'G37',
+            status: 'PASS',
+            detail: `Pop ${tier} (${population.toLocaleString()}): ${doulaCount} doulas, ${hospitalCount} hospitals, ${birthCenterCount} birth centers${bcNote}`
+          });
+        } else {
+          results.push({
+            gate: 'G37',
+            status: 'FAIL',
+            detail: `Pop ${tier} (${population.toLocaleString()}): ${failures.join(', ')}`
+          });
+        }
+      }
+    } catch {
+      results.push({ gate: 'G37', status: 'SKIP', detail: 'Could not check proportional provider counts' });
+    }
+  } else {
+    results.push({ gate: 'G37', status: 'SKIP', detail: 'Skipping proportional provider check in audit mode (run with slug)' });
+  }
+
   // ── Print summary ──
   console.log('\n─── RESULTS ───\n');
 
