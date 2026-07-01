@@ -5306,9 +5306,7 @@ export const cities: Record<string, CityData> = {
 { name: "Bay City Doulas" , credential: "Postpartum Doula" , practice: "Bay City Doulas" , url: "https://baycitydoulas.com" , description: "Postpartum doula care offering overnight support and breastfeeding assistance in the Bay Area." , photo: "/images/provider-fremont-ca-bay-city-doulas.webp" , costRange: "$1,500 - $3,000" ,
     services: ["Postpartum" , "Breastfeeding Support" , "Overnight Care"] ,
     acceptingClients: "true" },
-{ name: "Lauren Noble, Doula" , credential: "Birth Doula" , practice: "Lauren Noble, Doula" , url: "http://nobledoula.com" , description: "Thanks so much for coming I'm no longer taking doula clients." , photo: "/images/provider-fremont-ca-lauren-noble-doula.webp" , costRange: "$1,500 - $3,000" ,
-    services: ["Birth Doula" , "Postpartum" , "Placenta Encapsulation" , "Childbirth Education" , "Prenatal Care"],
-    acceptingClients: "false" },
+// Removed 2026-06-30: Lauren Noble requested removal - her recommendations don't serve Fremont.
 { name: "Bay Area Night Doulas Collective" , credential: "Postpartum Doula" , practice: "Bay Area Night Doulas Collective" , url: "https://bayareanightdoulas.com" , description: "San Francisco Bay Area postpartum doulas providing overnight care, lactation, and breastfeeding support." , photo: "/images/provider-fremont-ca-bay-area-night-doulas-collective.webp" , costRange: "$1,500 - $3,000" ,
     services: ["Postpartum" , "Lactation" , "Breastfeeding Support" , "Overnight Care"],
     acceptingClients: "true" },
@@ -5396,9 +5394,7 @@ export const cities: Record<string, CityData> = {
     acceptingClients: "true" },
       { name: "Bay City Doulas" , credential: "Postpartum Doula" , practice: "Bay City Doulas" , url: "https://baycitydoulas.com" , description: "Postpartum doula care offering overnight support and breastfeeding assistance in the Bay Area." , photo: "/images/provider-fremont-ca-bay-city-doulas.webp" , services: ["Postpartum" , "Breastfeeding Support" , "Overnight Care"], costRange: "$1,500 - $3,000" ,
     acceptingClients: "true" },
-      { name: "Lauren Noble, Doula" , credential: "Birth Doula" , practice: "Lauren Noble, Doula" , url: "http://nobledoula.com" , description: "Thanks so much for coming I'm no longer taking doula clients." , photo: "/images/provider-fremont-ca-lauren-noble-doula.webp" , services: ["Birth Doula" , "Postpartum" , "Placenta Encapsulation" , "Childbirth Education" , "Prenatal Care"], costRange: "$1,500 - $3,000" ,
-    acceptingClients: "false"
-  },
+      // Removed 2026-06-30: Lauren Noble requested removal - her recommendations don't serve Fremont.
       // Removed 2026-06-09: Doula Studios is a hardware product development company, not a doula practice.
       { name: "Bay Area Night Doulas Collective" , credential: "Postpartum Doula" , practice: "Bay Area Night Doulas Collective" , url: "https://bayareanightdoulas.com" , description: "San Francisco Bay Area postpartum doulas providing overnight care, lactation, and breastfeeding support." , photo: "/images/provider-fremont-ca-bay-area-night-doulas-collective.webp" , services: ["Postpartum" , "Lactation" , "Breastfeeding Support" , "Overnight Care"], costRange: "$1,500 - $3,000" ,
     acceptingClients: "true" },
