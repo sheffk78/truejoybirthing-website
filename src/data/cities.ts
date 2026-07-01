@@ -3269,7 +3269,7 @@ export const cities: Record<string, CityData> = {
     costLow: 1500,
     costHigh: 4500,
     shelbiServesHere: false,
-    heroImage: "/images/portland-or-birth-doula-skyline-v2.webp",
+    heroImage: "/images/portland-or-birth-doula-skyline-v4.webp",
     ogImage: "/images/og-city-portland-or-v5.webp",
     supportSceneImage: "/images/portland-or-birth-doula-support-v2.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Portland: Oregon birth support and doula care",

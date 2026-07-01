@@ -351,7 +351,7 @@ function run(): void {
       `pass=true; for f in dist/birth-support/*/index.html; do ` +
       `slug=$(basename $(dirname "$f")); ` +
       `title=$(grep -o '<title>[^<]*</title>' "$f" | sed 's/<[^>]*>//g' | sed 's/&amp;/\\&/g'); ` +
-      `len=$(echo -n "$title" | wc -c | tr -d ' '); ` +
+      `len=$(printf '%s' "$title" | wc -c | tr -d ' '); ` +
       `if [ "$len" -gt 70 ]; then ` +
       `echo "LONG: $slug ($len chars: $title)"; pass=false; ` +
       `fi; done; $pass`,
@@ -375,7 +375,7 @@ function run(): void {
       `pass=true; for f in dist/birth-support/*/index.html; do ` +
       `slug=$(basename $(dirname "$f")); ` +
       `desc=$(grep -o '<meta name="description" content="[^"]*"' "$f" | sed 's/<meta name="description" content="//;s/"$//'); ` +
-      `len=$(echo -n "$desc" | wc -c | tr -d ' '); ` +
+      `len=$(printf '%s' "$desc" | wc -c | tr -d ' '); ` +
       `if [ "$len" -gt 130 ]; then ` +
       `echo "LONG: $slug ($len chars)"; pass=false; ` +
       `fi; done; $pass`,
