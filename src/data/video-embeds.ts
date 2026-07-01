@@ -185,11 +185,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
   "sacramento-ca": {
-    videoId: "Knz9Gjq_c9w",
+    videoId: "MDxP7DxoOf8",
     title: "Sacramento Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 3 minutes.",
-    duration: "PT2M11S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
+    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 5 minutes.",
+    duration: "PT4M18S",
+    uploadDate: "2026-06-30T00:00:00-07:00",
   },
   "colorado-springs-co": {
     videoId: "bxieuKIKeb8",
