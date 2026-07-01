@@ -1303,6 +1303,63 @@ function run(): void {
     results.push({ gate: 'G38', status: 'SKIP', detail: 'Skipping hero image filename check in audit mode (run with slug)' });
   }
 
+  // ── G39: No provider/facility name is a generic placeholder ──
+  // Catches "Doula", "Home", "Welcome to...", "Birth Doula" etc used as provider names.
+  // These are scraping artifacts where the website's nav/heading was captured instead of the business name.
+  if (targetSlug) {
+    try {
+      const cityBlock = execSync(
+        `python3 scripts/extract-city-block.py ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+
+      const GENERIC_NAMES = new Set([
+        'home', 'doula', 'doulas', 'birth doula', 'birth doulas',
+        'doula services', 'doula care', 'doula training', 'doula support',
+        'birth doula services', 'about', 'top', 'welcome to delighted to doula',
+        'doula support', 'victoria'
+      ]);
+
+      // Extract all name: "..." values from the city block
+      const names = [...cityBlock.matchAll(/name:\s*"([^"]+)"/g)].map(m => m[1]);
+      const genericFound = names.filter(n => GENERIC_NAMES.has(n.toLowerCase().trim()));
+
+      if (genericFound.length === 0) {
+        results.push({ gate: 'G39', status: 'PASS', detail: `All ${names.length} provider/facility names are specific (not generic placeholders)` });
+      } else {
+        results.push({ gate: 'G39', status: 'FAIL', detail: `Generic placeholder names found: ${genericFound.join(', ')}` });
+      }
+    } catch {
+      results.push({ gate: 'G39', status: 'SKIP', detail: 'Could not check for generic placeholder names' });
+    }
+  } else {
+    results.push({ gate: 'G39', status: 'SKIP', detail: 'Skipping generic name check in audit mode (run with slug)' });
+  }
+
+  // ── G40: OG image filename matches city slug ──
+  // Same principle as G38 but for OG image.
+  if (targetSlug) {
+    try {
+      const citiesContent = fs.readFileSync(path.join(PROJECT_DIR, 'src/data/cities.ts'), 'utf-8');
+      const ogMatch = citiesContent.match(new RegExp(`"${targetSlug}":\\s*\\{[\\s\\S]*?ogImage:\\s*"([^"]+)"`));
+      if (ogMatch) {
+        const ogPath = ogMatch[1];
+        const basename = path.basename(ogPath).replace(/\.(webp|jpg|jpeg|png)$/i, '');
+        if (basename.includes(targetSlug)) {
+          results.push({ gate: 'G40', status: 'PASS', detail: `OG image filename matches city: ${basename}` });
+        } else {
+          results.push({ gate: 'G40', status: 'FAIL', detail: `OG image "${basename}" does not contain city slug "${targetSlug}" — wrong city OG image` });
+        }
+      } else {
+        results.push({ gate: 'G40', status: 'FAIL', detail: `No ogImage field found for ${targetSlug}` });
+      }
+    } catch {
+      results.push({ gate: 'G40', status: 'SKIP', detail: 'Could not check OG image filename match' });
+    }
+  } else {
+    results.push({ gate: 'G40', status: 'SKIP', detail: 'Skipping OG image filename check in audit mode (run with slug)' });
+  }
+
   // ── Print summary ──
   console.log('\n─── RESULTS ───\n');
 
