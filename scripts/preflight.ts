@@ -1368,6 +1368,202 @@ function run(): void {
     results.push({ gate: 'G40', status: 'SKIP', detail: 'Skipping OG image filename check in audit mode (run with slug)' });
   }
 
+  // ── G41: Hero image file size check (city pages) ──
+  // Hero images over 80KB hurt LCP on mobile. Check the heroImage from cities.ts.
+  if (targetSlug) {
+    try {
+      const cityBlock = execSync(
+        `python3 scripts/extract-city-block.py ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+      const heroMatch = cityBlock.match(/heroImage:\s*"([^"]+)"/);
+      if (heroMatch) {
+        const heroPath = heroMatch[1];
+        const localPath = path.join(PROJECT_DIR, 'public', heroPath.replace(/^\//, ''));
+        if (fs.existsSync(localPath)) {
+          const sizeKB = Math.round(fs.statSync(localPath).size / 1024);
+          if (sizeKB > 80) {
+            results.push({ gate: 'G41', status: 'FAIL', detail: `Hero image ${path.basename(heroPath)} is ${sizeKB}KB (max 80KB)` });
+          } else {
+            results.push({ gate: 'G41', status: 'PASS', detail: `Hero image ${path.basename(heroPath)} is ${sizeKB}KB (≤80KB)` });
+          }
+        } else {
+          results.push({ gate: 'G41', status: 'FAIL', detail: `Hero image file not found: public${heroPath}` });
+        }
+      } else {
+        // No heroImage — check fallback image
+        const fallbackPath = '/images/doula-breastfeeding.webp';
+        const fallbackLocal = path.join(PROJECT_DIR, 'public', fallbackPath.replace(/^\//, ''));
+        if (fs.existsSync(fallbackLocal)) {
+          const sizeKB = Math.round(fs.statSync(fallbackLocal).size / 1024);
+          if (sizeKB > 80) {
+            results.push({ gate: 'G41', status: 'FAIL', detail: `Fallback hero image ${path.basename(fallbackPath)} is ${sizeKB}KB (max 80KB)` });
+          } else {
+            results.push({ gate: 'G41', status: 'PASS', detail: `Fallback hero image ${path.basename(fallbackPath)} is ${sizeKB}KB (≤80KB)` });
+          }
+        } else {
+          results.push({ gate: 'G41', status: 'SKIP', detail: 'No heroImage field and fallback image not found' });
+        }
+      }
+    } catch {
+      results.push({ gate: 'G41', status: 'SKIP', detail: 'Could not check hero image file size' });
+    }
+  } else {
+    results.push({ gate: 'G41', status: 'SKIP', detail: 'Skipping hero image file size check in audit mode (run with slug)' });
+  }
+
+  // ── G42: Hero image 600w srcset variant exists (city pages) ──
+  // Checks that a -600 width variant exists for responsive srcset.
+  if (targetSlug) {
+    try {
+      const cityBlock = execSync(
+        `python3 scripts/extract-city-block.py ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+      const heroMatch = cityBlock.match(/heroImage:\s*"([^"]+)"/);
+      if (heroMatch) {
+        const heroPath = heroMatch[1];
+        // Build 600w variant path: /images/cities/dallas.webp -> /images/cities/dallas-600.webp
+        const variantPath = heroPath.replace(/\.(webp|jpg|jpeg|png)$/i, '-600.$1');
+        const variantLocal = path.join(PROJECT_DIR, 'public', variantPath.replace(/^\//, ''));
+        if (fs.existsSync(variantLocal)) {
+          results.push({ gate: 'G42', status: 'PASS', detail: `600w srcset variant exists: ${path.basename(variantPath)}` });
+        } else {
+          results.push({ gate: 'G42', status: 'FAIL', detail: `600w srcset variant missing for ${path.basename(heroPath)}` });
+        }
+      } else {
+        results.push({ gate: 'G42', status: 'SKIP', detail: 'No heroImage field — skipping 600w variant check' });
+      }
+    } catch {
+      results.push({ gate: 'G42', status: 'SKIP', detail: 'Could not check 600w srcset variant' });
+    }
+  } else {
+    results.push({ gate: 'G42', status: 'SKIP', detail: 'Skipping 600w srcset variant check in audit mode (run with slug)' });
+  }
+
+  // ── G43: Above-fold hero image has width and height attributes ──
+  // Width/height attributes prevent CLS (layout shift) during image load.
+  {
+    const cityDistFile = targetSlug ? `dist/birth-support/${targetSlug}/index.html` : null;
+    const staticDistFile = targetSlug ? `dist/${targetSlug}/index.html` : null;
+    const distFile = (cityDistFile && fs.existsSync(path.join(PROJECT_DIR, cityDistFile)))
+      ? cityDistFile
+      : (staticDistFile && fs.existsSync(path.join(PROJECT_DIR, staticDistFile)))
+        ? staticDistFile
+        : null;
+    if (distFile && fs.existsSync(path.join(PROJECT_DIR, distFile))) {
+      const html = fs.readFileSync(path.join(PROJECT_DIR, distFile), 'utf-8');
+      const imgTags = html.match(/<img[^>]*>/gi) || [];
+      const heroImg = imgTags.find(t => /loading\s*=\s*["']eager["']/i.test(t) || /fetchpriority\s*=\s*["']high["']/i.test(t));
+      if (heroImg) {
+        const hasWidth = /\swidth\s*=/i.test(heroImg);
+        const hasHeight = /\sheight\s*=/i.test(heroImg);
+        if (hasWidth && hasHeight) {
+          results.push({ gate: 'G43', status: 'PASS', detail: 'Hero image has width and height attributes' });
+        } else {
+          const missing = [];
+          if (!hasWidth) missing.push('width');
+          if (!hasHeight) missing.push('height');
+          results.push({ gate: 'G43', status: 'FAIL', detail: `Hero image missing ${missing.join(' and ')} attribute(s)` });
+        }
+      } else {
+        results.push({ gate: 'G43', status: 'SKIP', detail: 'No eager-loaded hero image found in HTML' });
+      }
+    } else {
+      results.push({ gate: 'G43', status: 'SKIP', detail: 'Dist HTML not found for width/height check' });
+    }
+  }
+
+  // ── G44: Above-fold hero image has fetchpriority="high" ──
+  // fetchpriority="high" tells the browser to load the hero image first, improving LCP.
+  {
+    const cityDistFile = targetSlug ? `dist/birth-support/${targetSlug}/index.html` : null;
+    const staticDistFile = targetSlug ? `dist/${targetSlug}/index.html` : null;
+    const distFile = (cityDistFile && fs.existsSync(path.join(PROJECT_DIR, cityDistFile)))
+      ? cityDistFile
+      : (staticDistFile && fs.existsSync(path.join(PROJECT_DIR, staticDistFile)))
+        ? staticDistFile
+        : null;
+    if (distFile && fs.existsSync(path.join(PROJECT_DIR, distFile))) {
+      const html = fs.readFileSync(path.join(PROJECT_DIR, distFile), 'utf-8');
+      const imgTags = html.match(/<img[^>]*>/gi) || [];
+      const heroImg = imgTags.find(t => /loading\s*=\s*["']eager["']/i.test(t));
+      if (heroImg) {
+        if (/fetchpriority\s*=\s*["']high["']/i.test(heroImg)) {
+          results.push({ gate: 'G44', status: 'PASS', detail: 'Hero image has fetchpriority="high"' });
+        } else {
+          results.push({ gate: 'G44', status: 'FAIL', detail: 'Hero image missing fetchpriority="high"' });
+        }
+      } else {
+        results.push({ gate: 'G44', status: 'SKIP', detail: 'No eager-loaded hero image found in HTML' });
+      }
+    } else {
+      results.push({ gate: 'G44', status: 'SKIP', detail: 'Dist HTML not found for fetchpriority check' });
+    }
+  }
+
+  // ── G45: Non-city static page hero has srcset ──
+  // Static (non-city) pages should use srcset for responsive hero images.
+  {
+    const staticDistFile = targetSlug ? `dist/${targetSlug}/index.html` : null;
+    const cityDistFile = targetSlug ? `dist/birth-support/${targetSlug}/index.html` : null;
+    const isCityPage = cityDistFile ? fs.existsSync(path.join(PROJECT_DIR, cityDistFile)) : false;
+    const isStaticPage = staticDistFile ? fs.existsSync(path.join(PROJECT_DIR, staticDistFile)) : false;
+    if (isStaticPage && !isCityPage) {
+      const html = fs.readFileSync(path.join(PROJECT_DIR, staticDistFile!), 'utf-8');
+      const imgTags = html.match(/<img[^>]*>/gi) || [];
+      const heroImg = imgTags.find(t => /loading\s*=\s*["']eager["']/i.test(t));
+      if (heroImg) {
+        if (/\ssrcset\s*=/i.test(heroImg)) {
+          results.push({ gate: 'G45', status: 'PASS', detail: 'Static page hero image has srcset' });
+        } else {
+          results.push({ gate: 'G45', status: 'FAIL', detail: 'Static page hero image missing srcset attribute' });
+        }
+      } else {
+        results.push({ gate: 'G45', status: 'SKIP', detail: 'No eager-loaded hero image found on static page' });
+      }
+    } else {
+      results.push({ gate: 'G45', status: 'SKIP', detail: 'Not a static page (city page or no dist HTML)' });
+    }
+  }
+
+  // ── G46: Below-fold images have loading="lazy" ──
+  // All images after the hero (first eager image) should be lazy-loaded.
+  {
+    const cityDistFile = targetSlug ? `dist/birth-support/${targetSlug}/index.html` : null;
+    const staticDistFile = targetSlug ? `dist/${targetSlug}/index.html` : null;
+    const distFile = (cityDistFile && fs.existsSync(path.join(PROJECT_DIR, cityDistFile)))
+      ? cityDistFile
+      : (staticDistFile && fs.existsSync(path.join(PROJECT_DIR, staticDistFile)))
+        ? staticDistFile
+        : null;
+    if (distFile && fs.existsSync(path.join(PROJECT_DIR, distFile))) {
+      const html = fs.readFileSync(path.join(PROJECT_DIR, distFile), 'utf-8');
+      const imgTags = html.match(/<img[^>]*>/gi) || [];
+      // Find the first eager-loaded image (the hero); all others should be lazy
+      const heroIdx = imgTags.findIndex(t => /loading\s*=\s*["']eager["']/i.test(t) || /fetchpriority\s*=\s*["']high["']/i.test(t));
+      if (heroIdx >= 0) {
+        const belowFold = imgTags.slice(heroIdx + 1);
+        const missingLazy = belowFold.filter(t => !/loading\s*=\s*["']lazy["']/i.test(t));
+        if (missingLazy.length === 0) {
+          results.push({ gate: 'G46', status: 'PASS', detail: `All ${belowFold.length} below-fold image(s) have loading="lazy"` });
+        } else {
+          results.push({ gate: 'G46', status: 'FAIL', detail: `${missingLazy.length} below-fold image(s) missing loading="lazy"` });
+        }
+      } else {
+        // No eager hero found — check all images for lazy
+        const missingLazy = imgTags.filter(t => !/loading\s*=\s*["']lazy["']/i.test(t) && !/loading\s*=\s*["']eager["']/i.test(t));
+        if (missingLazy.length === 0) {
+          results.push({ gate: 'G46', status: 'PASS', detail: `All ${imgTags.length} image(s) have loading attribute` });
+        } else {
+          results.push({ gate: 'G46', status: 'FAIL', detail: `${missingLazy.length} image(s) missing loading attribute` });
+        }
+      }
+    } else {
+      results.push({ gate: 'G46', status: 'SKIP', detail: 'Dist HTML not found for lazy-loading check' });
+    }
+  }
+
   // ── Print summary ──
   console.log('\n─── RESULTS ───\n');
 
