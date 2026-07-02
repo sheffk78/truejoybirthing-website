@@ -51,13 +51,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M31S",
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
-  "cary-nc": {
-    videoId: "_4RaZyOaYeY",
-    title: "Cary Doula & Birth Plan Guide",
-    description: "Watch the full city guide — doulas, hospitals, costs, and NC Medicaid, all in under 3 minutes.",
-    duration: "PT3M18S",
-    uploadDate: "2026-06-16T00:00:00-06:00",
-  },
+  // cary-nc video removed: _4RaZyOaYeY was set to private/deleted. Needs re-record.
   "dallas-tx": {
     videoId: "FWBt55sIgAY",
     title: "Dallas Doula & Birth Plan Guide",
@@ -178,11 +172,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
   "pittsburgh-pa": {
-    videoId: "BEU0vXPv6Ss",
+    videoId: "bFXPqPMgibs",
     title: "Pittsburgh Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Pennsylvania Medicaid, all in under 3 minutes.",
-    duration: "PT2M06S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Pennsylvania Medicaid, all in under 4 minutes.",
+    duration: "PT4M00S",
+    uploadDate: "2026-07-01T00:00:00-07:00",
   },
   "sacramento-ca": {
     videoId: "MDxP7DxoOf8",
@@ -220,11 +214,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
   "raleigh-nc": {
-    videoId: "iCq2gPP_1WM",
-    title: "Raleigh Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and North Carolina Medicaid, all in under 3 minutes.",
-    duration: "PT2M13S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
+    videoId: "P1yRJueaaEU",
+    title: "Raleigh NC Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and North Carolina Medicaid, all in under 4 minutes.",
+    duration: "PT3M38S",
+    uploadDate: "2026-07-01T00:00:00-07:00",
   },
   "seattle-wa": {
     videoId: "IFFABAqH7K0",

@@ -68,11 +68,42 @@ def get_city_data(slug):
     cost_low = get_num('costLow', 1000)
     cost_high = get_num('costHigh', 3000)
     medicaid_note = get_field('medicaidNote')
-    is_medicaid = medicaid_note.lower().startswith('yes') if medicaid_note else False
+    # Fix: check for "yes" or "accepted" anywhere in the note, not just startswith
+    is_medicaid = any(kw in medicaid_note.lower() for kw in ['yes', 'accepted', 'covers', 'reimburs']) if medicaid_note else False
     
-    # Extract hospital names
+    # Extract hospital data with thumbnails and paragraphs
     h_section = block.split('hospitalDetails:')[1].split(']')[0] if 'hospitalDetails:' in block else ''
-    hospitals = re.findall(r'name:\s*"([^"]*)"', h_section)
+    hospital_names = re.findall(r'name:\s*"([^"]*)"', h_section)
+    hospital_thumbs = re.findall(r'thumbnail:\s*"([^"]*)"', h_section)
+    hospital_paragraphs = re.findall(r'paragraph:\s*"([^"]*)"', h_section)
+    hospital_addresses = re.findall(r'address:\s*"([^"]*)"', h_section)
+    hospitals = []
+    for i, name in enumerate(hospital_names[:3]):
+        h = {'name': name}
+        if i < len(hospital_thumbs) and hospital_thumbs[i]:
+            h['thumbnail'] = hospital_thumbs[i]
+        if i < len(hospital_paragraphs) and hospital_paragraphs[i]:
+            h['paragraph'] = hospital_paragraphs[i]
+        if i < len(hospital_addresses) and hospital_addresses[i]:
+            h['address'] = hospital_addresses[i]
+        hospitals.append(h)
+    
+    # Extract provider data
+    d_section = block.split('localDoulas:')[1].split(']')[0] if 'localDoulas:' in block else ''
+    provider_names = re.findall(r'name:\s*"([^"]*)"', d_section)
+    provider_photos = re.findall(r'photo:\s*"([^"]*)"', d_section)
+    providers = []
+    for i, name in enumerate(provider_names):
+        p = {'name': name}
+        if i < len(provider_photos) and provider_photos[i]:
+            p['photo'] = provider_photos[i]
+        providers.append(p)
+    
+    # Extract birth center data
+    bc_section = block.split('birthCenterDetails:')[1].split(']')[0] if 'birthCenterDetails:' in block else ''
+    bc_names = re.findall(r'name:\s*"([^"]*)"', bc_section)
+    # Filter out "no birth centers" entries
+    has_birth_center = bool(bc_names) and not any('no birth' in n.lower() for n in bc_names)
     
     return {
         'city': city,
@@ -82,7 +113,10 @@ def get_city_data(slug):
         'cost_high': cost_high,
         'is_medicaid': is_medicaid,
         'medicaid_note': medicaid_note,
-        'hospitals': hospitals[:3],
+        'hospitals': hospitals,
+        'providers': providers,
+        'provider_count': len(providers),
+        'has_birth_center': has_birth_center,
         'published': get_bool('publishedDate', True),
     }
 
@@ -94,41 +128,68 @@ def _build_hospital_scenes(data, city, slug):
     for i, hospital in enumerate(hospitals):
         idx = i + 1
         scene_id = f"03_hospital_{idx}"
+        h_name = hospital.get('name', f'Hospital {idx}')
+        h_thumb = hospital.get('thumbnail', '')
+        h_para = hospital.get('paragraph', '')
+        h_addr = hospital.get('address', '')
         # Unique narration mentioning only this hospital
         if idx == 1:
-            narration = f"Let's start with {hospital}. It welcomes doulas and has NICU support for babies who need extra care."
+            narration = f"Let's start with {h_name}. {h_para[:200]}" if h_para else f"Let's start with {h_name}. It welcomes doulas and has NICU support for babies who need extra care."
         else:
-            narration = f"{hospital} also welcomes doulas and provides NICU support. Each hospital in {city} has its own policies around birth plans and support people."
+            narration = f"{h_name} also welcomes doulas and provides NICU support. {h_para[:150]}" if h_para else f"{h_name} also welcomes doulas and provides NICU support. Each hospital in {city} has its own policies around birth plans and support people."
+        # Escape quotes for TS output
+        narration_esc = narration.replace('"', "'")
+        para_esc = h_para[:300].replace('"', "'") if h_para else ''
+        addr_esc = h_addr.replace('"', "'")
+        # Build image line only if hospital has a real thumbnail
+        image_line = f'      image_source: "images/{h_thumb}",' if h_thumb else ''
         scenes.append(f'''    {{
       scene_id: "{scene_id}",
       scene_type: "tjb_hospital_card",
       duration_seconds: 0,
-      narration: "{narration}",
+      narration: "{narration_esc}",
       text_content: {{
-        hospitalName: "{hospital}",
+        name: "{h_name}",
+        address: "{addr_esc}",
+        description: "{para_esc}",
         badges: ["Doula-Friendly", "NICU", "Medicaid"],
       }},
-      image_source: "images/{slug}-birth-doula-hero.webp",
+{image_line}
     }}''')
     return scenes
 
 
 def _build_provider_scene(data, city, slug):
-    """Build the provider scene as tjb_provider_scroll."""
+    """Build the provider scene as tjb_provider_scroll with real provider data."""
+    providers = data.get('providers', [])
+    provider_count = data.get('provider_count', len(providers))
+    # Calculate scroll height based on provider count
+    max_scroll = max(provider_count * 200, 400) if provider_count > 0 else 400
+    # Build narration that references real providers
+    if provider_count > 0:
+        names = [p.get('name', 'a provider') for p in providers[:3]]
+        if len(names) == 1:
+            name_list = names[0]
+        elif len(names) == 2:
+            name_list = f"{names[0]} and {names[1]}"
+        else:
+            name_list = f"{', '.join(names[:-1])}, and {names[-1]}"
+        narration = f"{city} has {provider_count} experienced doulas and midwives ready to support you, including {name_list}. See who's serving your area, and message them directly, in the app."
+    else:
+        narration = f"{city} has experienced doulas and midwives ready to support you. See who's serving your area, and message them directly, in the app."
+    
     provider_scene = f'''    {{
       scene_id: "04_providers",
       scene_type: "tjb_provider_scroll",
       duration_seconds: 0,
-      narration: "{{city}} has experienced doulas and midwives ready to support you. See who's serving your area — and message them directly — in the app.",
+      narration: "{narration}",
       text_content: {{
         city: "{city}",
-        providerCount: 0,
+        providerCount: {provider_count},
         screenshotPath: "images/{slug}-fullpage-scroll.png",
-        maxScroll: 0,
+        maxScroll: {max_scroll},
       }},
     }}'''
-    # Use a marker so we can inject city into narration at render time
-    provider_scene = provider_scene.replace('{{city}}', city)
     return provider_scene
 
 
@@ -139,6 +200,7 @@ def create_scene_data(data):
     slug = data['slug']
     st = {'Colorado': 'CO', 'California': 'CA', 'Virginia': 'VA', 'Washington': 'WA', 'North Carolina': 'NC', 'Texas': 'TX'}.get(data['state'], data['state'][:2].upper())
     has_mc = 'true' if data['is_medicaid'] else 'false'
+    has_bc = 'true' if data.get('has_birth_center', False) else 'false'
     
     # State-specific Medicaid programs
     medicaid_programs = {
@@ -239,10 +301,15 @@ def create_scene_data(data):
       scene_id: "07_insurance",
       scene_type: "tjb_insurance_branch",
       duration_seconds: 0,
-      narration: "{medicaid_line}. Even if you have private insurance, some plans now include doula benefits — it's worth a call to check. The app has resources to help you navigate your options.",
+      narration: "{medicaid_line}. Even if you have private insurance, some plans now include doula benefits, it's worth a call to check. The app has resources to help you navigate your options.",
       text_content: {{
         branch: "{'covers' if data['is_medicaid'] else 'no_coverage'}",
         stateName: "{data['state']}",
+        headline: "{'Medicaid Covers Doulas' if data['is_medicaid'] else 'Medicaid Does Not Cover Doulas'}",
+        detail: "{medicaid_line}",
+        policyBadge: "{'Covered' if data['is_medicaid'] else 'Not Covered'}",
+        amount: "${data['cost_low']:,}-${data['cost_high']:,}",
+        phoneNumber: "1-800-362-8412",
       }},
     }}''')
     
@@ -275,7 +342,7 @@ export const {slug.replace('-', '_')}Data: TJBCityVideoData = {{
     duration_seconds: 0,
     fps: 30,
     medicaid: {has_mc},
-    hasBirthCenter: false,
+    hasBirthCenter: {has_bc},
     hasAppScreenshot: false,
   }},
   scenes: [
@@ -508,7 +575,7 @@ def register_composition(slug, data_file):
     )
     
     # Calculate frames
-    total_frames = f"{var_name}.scenes.reduce((s, c) => s + Math.max(Math.round(c.duration_seconds * 30), 1), 0)"
+    total_frames = f"{var_name}.scenes.reduce((s, c) => s + Math.max(Math.ceil(c.duration_seconds * 30), 1), 0)"
     
     # Add composition after Denver's
     comp_block = f'''
@@ -692,10 +759,26 @@ def update_og_image(slug):
 
 
 def main():
-    slug = sys.argv[1] if len(sys.argv) > 1 else None
+    args = sys.argv[1:]
+    slug = None
+    skip_scene_data = False
+    do_upload = False
+    
+    for arg in args:
+        if arg == '--skip-scene-data':
+            skip_scene_data = True
+        elif arg == '--upload':
+            do_upload = True
+        elif arg == '--no-upload':
+            do_upload = False
+        elif not arg.startswith('--'):
+            slug = arg
+    
     if not slug:
-        print('Usage: python3 scripts/city-video-automation.py {slug}')
+        print('Usage: python3 scripts/city-video-automation.py {slug} [--skip-scene-data] [--upload]')
         print('Example: python3 scripts/city-video-automation.py tacoma-wa')
+        print('  --skip-scene-data  Do NOT overwrite existing scene data file')
+        print('  --upload           Upload to YouTube (default: no upload, requires manual step)')
         sys.exit(1)
     
     print(f'\n🎬 TJB City Video Automation — {slug}')
@@ -718,8 +801,18 @@ def main():
     update_og_image(slug)
     
     # Step 2: Create scene data
-    print('\n[Step 2] Creating scene data...')
-    data_file = create_scene_data(data)
+    if skip_scene_data:
+        print('\n[Step 2] Skipping scene data creation (--skip-scene-data)')
+        data_file = REMOTION_DIR / 'src' / 'data' / f'{slug}-data.ts'
+        if not data_file.exists():
+            print(f'  ⚠️  No existing scene data file found at {data_file}')
+            print(f'  Creating fresh scene data anyway...')
+            data_file = create_scene_data(data)
+        else:
+            print(f'  ✅ Using existing scene data: {data_file}')
+    else:
+        print('\n[Step 2] Creating scene data...')
+        data_file = create_scene_data(data)
     
     # Step 3: Optimize city images
     print('\n[Step 3] Optimizing images...')
@@ -755,11 +848,15 @@ def main():
     generate_thumbnail(slug, data['city'], st_code)
     
     # Step 9: Upload to YouTube
-    print('\n[Step 9] Uploading to YouTube...')
-    video_id = upload_to_youtube(slug)
-    
-    if not video_id:
-        print(f'  ⏭️  YouTube upload skipped or deferred — will need manual follow-up')
+    video_id = None
+    if do_upload:
+        print('\n[Step 9] Uploading to YouTube...')
+        video_id = upload_to_youtube(slug)
+        if not video_id:
+            print(f'  ⏭️  YouTube upload skipped or deferred, will need manual follow-up')
+    else:
+        print('\n[Step 9] Skipping YouTube upload (default: no auto-upload. Pass --upload to enable)')
+        print(f'  Video is ready for manual review at: {REMOTION_DIR / "out" / f"{slug}-city-guide.mp4"}')
     
     # Step 10: Embed on page
     print('\n[Step 10] Embedding video on city page...')
