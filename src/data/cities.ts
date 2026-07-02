@@ -3411,7 +3411,7 @@ export const cities: Record<string, CityData> = {
     costLow: 1500,
     costHigh: 4000,
     shelbiServesHere: false,
-    heroImage: "/images/minneapolis-mn-birth-doula-skyline-v2.webp",
+    heroImage: "/images/minneapolis-mn-birth-doula-skyline-v3.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-minneapolis-mn-v2.webp" ,
     supportSceneImage: "/images/minneapolis-mn-birth-doula-support-v2.webp" ,
     supportSceneAlt: "A doula supporting an expectant mom in Minneapolis: Minnesota birth support and doula care",
