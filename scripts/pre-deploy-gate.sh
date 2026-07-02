@@ -59,10 +59,18 @@ fi
 
 # ── G3: Validate city data ────────────────────────────────────
 gate_header "G3: Data Validation"
-if npx tsx scripts/validate-city-data.ts 2>&1 | tail -5 | sed 's/^/  /'; then
-  gate_pass "validate-city-data.ts exit 0"
+if [ -n "$SLUG" ]; then
+  if npx tsx scripts/validate-city-data.ts "$SLUG" 2>&1 | tail -5 | sed 's/^/  /'; then
+    gate_pass "validate-city-data.ts exit 0 for $SLUG"
+  else
+    gate_fail "Data validation failed for $SLUG"
+  fi
 else
-  gate_fail "Data validation failed"
+  if npx tsx scripts/validate-city-data.ts 2>&1 | tail -5 | sed 's/^/  /'; then
+    gate_pass "validate-city-data.ts exit 0 (full audit)"
+  else
+    gate_fail "Data validation failed"
+  fi
 fi
 
 # ── G4: OG image check ───────────────────────────────────────
