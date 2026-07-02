@@ -21,3 +21,4 @@ public/images/.optimize-originals/
 yarn-debug.log*
 yarn-error.log*
 .firecrawl/
+.preflight-result.json

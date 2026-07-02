@@ -1,0 +1,64 @@
+#!/bin/bash
+# ═════════════════════════════════════════════════════════════════
+# TJB Pre-Push Hook — blocks direct `git push origin main`
+# unless preflight has been run and passed within the last 5 minutes.
+# ═════════════════════════════════════════════════════════════════
+# This file lives in the repo at scripts/hooks/pre-push so it's
+# version-controlled. Install it with: bash scripts/hooks/install.sh
+# Closes the biggest bypass gap: anyone could run `git push origin main`
+# directly, skipping deploy.sh and all preflight gates.
+
+# Resolve project dir from the hook's location (works from .git/hooks/
+# after install, and from scripts/hooks/ during testing)
+HOOK_DIR="$(cd "$(dirname "$0")" && pwd)"
+if [[ "$HOOK_DIR" == *"/scripts/hooks"* ]]; then
+  PROJECT_DIR="$(cd "$HOOK_DIR/../.." && pwd)"
+else
+  PROJECT_DIR="$(cd "$HOOK_DIR/../../.." && pwd)"
+fi
+RESULT_FILE="$PROJECT_DIR/.preflight-result.json"
+
+# Only protect pushes to main
+protected_branch="main"
+while read local_ref local_oid remote_ref remote_oid; do
+  if [[ "$remote_ref" == *"refs/heads/main"* ]] || [[ "$remote_ref" == *"refs/heads/master"* ]]; then
+    # Check if preflight result file exists
+    if [[ ! -f "$RESULT_FILE" ]]; then
+      echo "❌ BLOCKED: Preflight has not been run."
+      echo "   Run: bash scripts/deploy.sh"
+      echo "   Or: npx tsx scripts/preflight.ts {slug} && echo '{\"status\":\"pass\",\"timestamp\":'''$(date +%s)'''}' > .preflight-result.json"
+      exit 1
+    fi
+
+    # Read and validate the result
+    result=$(cat "$RESULT_FILE")
+    status=$(echo "$result" | python3 -c "import sys,json; print(json.load(sys.stdin).get('status',''))" 2>/dev/null)
+    timestamp=$(echo "$result" | python3 -c "import sys,json; print(json.load(sys.stdin).get('timestamp',0))" 2>/dev/null)
+    slug=$(echo "$result" | python3 -c "import sys,json; print(json.load(sys.stdin).get('slug',''))" 2>/dev/null)
+
+    if [[ "$status" != "pass" ]]; then
+      echo "❌ BLOCKED: Last preflight result was '$status', not 'pass'."
+      echo "   Fix all gate failures, then re-run preflight."
+      rm -f "$RESULT_FILE"
+      exit 1
+    fi
+
+    # Check freshness (must be within 5 minutes = 300 seconds)
+    now=$(date +%s)
+    age=$((now - timestamp))
+    if [[ $age -gt 300 ]]; then
+      echo "❌ BLOCKED: Preflight result is stale ($age seconds old, max 300)."
+      echo "   Re-run: npx tsx scripts/preflight.ts {slug}"
+      rm -f "$RESULT_FILE"
+      exit 1
+    fi
+
+    # Note: We don't check HEAD hash because deploy.sh commits changes
+    # after preflight runs, which changes HEAD. The 300s freshness
+    # window + status=pass is sufficient to ensure preflight was recent.
+
+    echo "✅ Pre-push check passed (preflight: pass, ${age}s old, slug=$slug)"
+  fi
+done
+
+exit 0
