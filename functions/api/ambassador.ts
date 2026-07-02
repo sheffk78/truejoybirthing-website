@@ -90,8 +90,28 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
       }
     }
 
+    // ── Brevo: Send welcome email to applicant with Pro Mode code ──
+    // Template 38: Ambassador Welcome - Free Pro Mode Code
+    if (env.BREVO_API_KEY) {
+      try {
+        await fetch('https://api.brevo.com/v3/smtp/email', {
+          method: 'POST',
+          headers: {
+            'api-key': env.BREVO_API_KEY,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            templateId: 38,
+            to: [{ email, name }],
+            params: { FIRSTNAME: firstName },
+          }),
+        });
+      } catch (emailErr) {
+        console.error('Brevo ambassador welcome email failed (non-fatal):', emailErr);
+      }
+    }
+
     // ── AgentMail: Notify team of new application ──
-    // Using support@ inbox until ambassador@ inbox is created in AgentMail
     const inboxId = 'support@truejoybirthing.com';
     const emailSubject = `[Ambassador] New Application: ${name} (${role})`;
     const emailBody = [
