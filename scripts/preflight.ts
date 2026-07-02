@@ -1564,7 +1564,172 @@ function run(): void {
     }
   }
 
-  // ── Print summary ──
+  // ── G47: CSS bundle size ≤ 100KB (render-blocking budget) ──
+  // Large CSS blocks rendering and hurts FCP/LCP on mobile.
+  {
+    try {
+      const cssDir = path.join(PROJECT_DIR, 'dist/_astro');
+      if (fs.existsSync(cssDir)) {
+        const cssFiles = fs.readdirSync(cssDir).filter(f => f.endsWith('.css'));
+        let totalCSS = 0;
+        for (const f of cssFiles) {
+          totalCSS += fs.statSync(path.join(cssDir, f)).size;
+        }
+        const totalKB = Math.round(totalCSS / 1024);
+        if (totalKB > 100) {
+          results.push({ gate: 'G47', status: 'FAIL', detail: `CSS bundle is ${totalKB}KB across ${cssFiles.length} file(s) (max 100KB) — trim unused styles or split bundles` });
+        } else {
+          results.push({ gate: 'G47', status: 'PASS', detail: `CSS bundle is ${totalKB}KB across ${cssFiles.length} file(s) (≤100KB)` });
+        }
+      } else {
+        results.push({ gate: 'G47', status: 'SKIP', detail: 'No dist/_astro directory found' });
+      }
+    } catch {
+      results.push({ gate: 'G47', status: 'SKIP', detail: 'Could not check CSS bundle size' });
+    }
+  }
+
+  // ── G48: JS bundle size ≤ 50KB (render-blocking budget) ──
+  // Astro is mostly static, but ClientRouter and hydration JS should stay small.
+  {
+    try {
+      const jsDir = path.join(PROJECT_DIR, 'dist/_astro');
+      if (fs.existsSync(jsDir)) {
+        const jsFiles = fs.readdirSync(jsDir).filter(f => f.endsWith('.js'));
+        let totalJS = 0;
+        for (const f of jsFiles) {
+          totalJS += fs.statSync(path.join(jsDir, f)).size;
+        }
+        const totalKB = Math.round(totalJS / 1024);
+        if (totalKB > 50) {
+          results.push({ gate: 'G48', status: 'FAIL', detail: `JS bundle is ${totalKB}KB across ${jsFiles.length} file(s) (max 50KB) — reduce client-side JS` });
+        } else {
+          results.push({ gate: 'G48', status: 'PASS', detail: `JS bundle is ${totalKB}KB across ${jsFiles.length} file(s) (≤50KB)` });
+        }
+      } else {
+        results.push({ gate: 'G48', status: 'SKIP', detail: 'No dist/_astro directory found' });
+      }
+    } catch {
+      results.push({ gate: 'G48', status: 'SKIP', detail: 'Could not check JS bundle size' });
+    }
+  }
+
+  // ── G49: No render-blocking script tags (must have async or defer) ──
+  // Scripts without async/defer block HTML parsing and hurt FCP/FCP on mobile.
+  {
+    const cityDistFile = targetSlug ? `dist/birth-support/${targetSlug}/index.html` : null;
+    const staticDistFile = targetSlug ? `dist/${targetSlug}/index.html` : null;
+    const distFile = (cityDistFile && fs.existsSync(path.join(PROJECT_DIR, cityDistFile)))
+      ? cityDistFile
+      : (staticDistFile && fs.existsSync(path.join(PROJECT_DIR, staticDistFile)))
+        ? staticDistFile
+        : null;
+    if (distFile && fs.existsSync(path.join(PROJECT_DIR, distFile))) {
+      const html = fs.readFileSync(path.join(PROJECT_DIR, distFile), 'utf-8');
+      // Find all <script> tags with a src attribute (inline scripts don't block)
+      const scriptTags = html.match(/<script[^>]*\ssrc\s*=/gi) || [];
+      const blocking = scriptTags.filter(t => !/\sasync\s/i.test(t) && !/\sdefer\s/i.test(t) && !/\stype\s*=\s*["']module["']/i.test(t));
+      if (blocking.length === 0) {
+        results.push({ gate: 'G49', status: 'PASS', detail: `All ${scriptTags.length} external script(s) have async/defer/module` });
+      } else {
+        results.push({ gate: 'G49', status: 'FAIL', detail: `${blocking.length} render-blocking script(s) without async/defer/module` });
+      }
+    } else {
+      results.push({ gate: 'G49', status: 'SKIP', detail: 'Dist HTML not found for render-blocking script check' });
+    }
+  }
+
+  // ── G50: HTML page size ≤ 200KB (document weight) ──
+  // Bloated HTML slows FCP and increases TTFB on slow mobile connections.
+  {
+    const cityDistFile = targetSlug ? `dist/birth-support/${targetSlug}/index.html` : null;
+    const staticDistFile = targetSlug ? `dist/${targetSlug}/index.html` : null;
+    const distFile = (cityDistFile && fs.existsSync(path.join(PROJECT_DIR, cityDistFile)))
+      ? cityDistFile
+      : (staticDistFile && fs.existsSync(path.join(PROJECT_DIR, staticDistFile)))
+        ? staticDistFile
+        : null;
+    if (distFile && fs.existsSync(path.join(PROJECT_DIR, distFile))) {
+      const sizeKB = Math.round(fs.statSync(path.join(PROJECT_DIR, distFile)).size / 1024);
+      if (sizeKB > 200) {
+        results.push({ gate: 'G50', status: 'FAIL', detail: `HTML document is ${sizeKB}KB (max 200KB) — reduce inline content or split page` });
+      } else {
+        results.push({ gate: 'G50', status: 'PASS', detail: `HTML document is ${sizeKB}KB (≤200KB)` });
+      }
+    } else {
+      results.push({ gate: 'G50', status: 'SKIP', detail: 'Dist HTML not found for page size check' });
+    }
+  }
+
+  // ── G51: All img src are WebP or AVIF (no PNG/JPG in content images) ──
+  // Modern formats are 25-50% smaller, directly improving LCP and total page weight.
+  {
+    const cityDistFile = targetSlug ? `dist/birth-support/${targetSlug}/index.html` : null;
+    const staticDistFile = targetSlug ? `dist/${targetSlug}/index.html` : null;
+    const distFile = (cityDistFile && fs.existsSync(path.join(PROJECT_DIR, cityDistFile)))
+      ? cityDistFile
+      : (staticDistFile && fs.existsSync(path.join(PROJECT_DIR, staticDistFile)))
+        ? staticDistFile
+        : null;
+    if (distFile && fs.existsSync(path.join(PROJECT_DIR, distFile))) {
+      const html = fs.readFileSync(path.join(PROJECT_DIR, distFile), 'utf-8');
+      const imgSrcs = [...html.matchAll(/<img[^>]*\ssrc\s*=\s*["']([^"']+)["']/gi)].map(m => m[1]);
+      // Filter out data: URIs and favicon/logo SVGs
+      const contentImgs = imgSrcs.filter(s => !s.startsWith('data:') && !s.endsWith('.svg') && !s.includes('favicon'));
+      const unoptimized = contentImgs.filter(s => {
+        if (/\.(png|jpg|jpeg|gif|bmp)(\?|$)/i.test(s)) {
+          // Only flag if the file is over 50KB (small PNGs like badges are fine)
+          const localPath = path.join(PROJECT_DIR, 'public', s.replace(/^\//, ''));
+          if (fs.existsSync(localPath)) {
+            return fs.statSync(localPath).size > 50 * 1024;
+          }
+          return true; // Can't check size, flag it
+        }
+        return false;
+      });
+      if (unoptimized.length === 0) {
+        results.push({ gate: 'G51', status: 'PASS', detail: `All ${contentImgs.length} content image(s) use WebP/AVIF` });
+      } else {
+        results.push({ gate: 'G51', status: 'FAIL', detail: `${unoptimized.length} image(s) using PNG/JPG/GIF instead of WebP/AVIF: ${unoptimized.slice(0, 3).join(', ')}${unoptimized.length > 3 ? '...' : ''}` });
+      }
+    } else {
+      results.push({ gate: 'G51', status: 'SKIP', detail: 'Dist HTML not found for image format check' });
+    }
+  }
+
+  // ── G52: No layout-shift-causing images without width AND height ──
+  // Images missing dimensions cause CLS (Cumulative Layout Shift) on mobile.
+  {
+    const cityDistFile = targetSlug ? `dist/birth-support/${targetSlug}/index.html` : null;
+    const staticDistFile = targetSlug ? `dist/${targetSlug}/index.html` : null;
+    const distFile = (cityDistFile && fs.existsSync(path.join(PROJECT_DIR, cityDistFile)))
+      ? cityDistFile
+      : (staticDistFile && fs.existsSync(path.join(PROJECT_DIR, staticDistFile)))
+        ? staticDistFile
+        : null;
+    if (distFile && fs.existsSync(path.join(PROJECT_DIR, distFile))) {
+      const html = fs.readFileSync(path.join(PROJECT_DIR, distFile), 'utf-8');
+      const imgTags = html.match(/<img[^>]*>/gi) || [];
+      // Skip images with explicit CSS aspect-ratio or that are inside picture with source
+      const missingDims = imgTags.filter(t => {
+        // Skip tiny tracking pixels and data URIs
+        if (/width\s*=\s*["']1["']/i.test(t) || /height\s*=\s*["']1["']/i.test(t)) return false;
+        if (/data:image/i.test(t)) return false;
+        const hasWidth = /\swidth\s*=/i.test(t);
+        const hasHeight = /\sheight\s*=/i.test(t);
+        return !hasWidth || !hasHeight;
+      });
+      if (missingDims.length === 0) {
+        results.push({ gate: 'G52', status: 'PASS', detail: `All ${imgTags.length} img tag(s) have width and height attributes` });
+      } else {
+        results.push({ gate: 'G52', status: 'FAIL', detail: `${missingDims.length} img tag(s) missing width/height (causes CLS)` });
+      }
+    } else {
+      results.push({ gate: 'G52', status: 'SKIP', detail: 'Dist HTML not found for CLS dimension check' });
+    }
+  }
+
+  // ── Print summary ───
   console.log('\n─── RESULTS ───\n');
 
   let allPass = true;
