@@ -17,11 +17,11 @@ export interface CityVideoEmbed {
 
 export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   "denver-co": {
-    videoId: "qmpu7-f_Aio",
+    videoId: "Kksgztfkn1I",
     title: "Denver Doula & Birth Plan Guide",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Colorado Medicaid, all in under 5 minutes.",
-    duration: "PT3M18S",
-    uploadDate: "2026-06-04T00:00:00-06:00",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Colorado Medicaid, all in under 4 minutes.",
+    duration: "PT3M51S",
+    uploadDate: "2026-07-04T00:00:00-06:00",
   },
   "tacoma-wa": {
     videoId: "CV41jPys-S8",
