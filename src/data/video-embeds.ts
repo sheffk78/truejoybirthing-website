@@ -157,13 +157,15 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M07S",
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
-  "minneapolis-mn": {
-    videoId: "PisXj2I4Kxc",
-    title: "Minneapolis Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Minnesota Medicaid, all in under 3 minutes.",
-    duration: "PT2M10S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
-  },
+  // minneapolis-mn video removed: PisXj2I4Kxc was deleted/unlisted on YouTube.
+  // Local MP4 and scene data still exist in the remotion project — needs re-upload to YouTube.
+  // "minneapolis-mn": {
+  //   videoId: "PisXj2I4Kxc",
+  //   title: "Minneapolis Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+  //   description: "Watch the full city guide — doulas, hospitals, costs, and Minnesota Medicaid, all in under 3 minutes.",
+  //   duration: "PT2M10S",
+  //   uploadDate: "2026-06-23T00:00:00-07:00",
+  // },
   "new-york-ny": {
     videoId: "d8wNiNe1VCc",
     title: "New York City Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -320,11 +322,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
 "austin-tx": {
-    videoId: "oy3BafNkls8",
+    videoId: "goIwPTplnic",
     title: "Austin Texas Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 4 minutes.",
-    duration: "PT3M50S",
-    uploadDate: "2026-06-30T00:00:00-06:00",
+    duration: "PT3M49S",
+    uploadDate: "2026-07-03T00:00:00-06:00",
 },
 "orlando-fl": {
     videoId: "YwVwMD2SAkE",
@@ -339,5 +341,12 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     description: "Watch the full city guide — doulas, hospitals, costs, and Florida Medicaid, all in under 5 minutes.",
     duration: "PT5M23S",
     uploadDate: "2026-07-01T00:00:00-06:00",
+},
+"oakland-ca": {
+    videoId: "",
+    title: "Oakland CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT4M29S",
+    uploadDate: "2026-07-02T00:00:00-07:00",
 },
 };
