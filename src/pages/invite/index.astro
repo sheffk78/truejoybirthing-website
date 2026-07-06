@@ -1,0 +1,252 @@
+---
+// ═══════════════════════════════════════════════════════════════
+// Invite landing page — "Invite Your Doula" feature
+// Static page: invite data fetched client-side via JS
+// No server-side fetching. Works without JS (shows generic welcome).
+// ═══════════════════════════════════════════════════════════════
+import Layout from '../../layouts/Layout.astro';
+
+const pageTitle = "You're Invited to True Joy Birthing";
+const pageDesc = "You've been invited to join True Joy Birthing — the free birth plan app and birth team communication tool.";
+const APP_STORE_URL = "https://apps.apple.com/us/app/true-joy-birthing/id6760793180";
+const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.truejoybirthing";
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDesc}
+  canonical="https://truejoybirthing.com/invite/"
+  noindex={true}
+>
+  <!-- ═══ Hero — Split Layout ═══ -->
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <!-- Loading indicator (hidden once JS runs) -->
+          <div id="invite-loading" class="flex items-center gap-3 text-tjb-gray text-sm mb-4">
+            <svg class="animate-spin h-4 w-4 text-tjb-lavender-600" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+            </svg>
+            <span>Loading your invitation…</span>
+          </div>
+
+          <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">You've been invited</p>
+          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+          <h1 id="invite-headline" class="text-3xl md:text-4xl font-bold mb-4" style="font-family: 'DM Serif Display', Georgia, serif;">
+            Welcome to True Joy Birthing
+          </h1>
+          <p id="invite-subtitle" class="text-lg text-tjb-charcoal font-semibold mb-2">
+            True Joy Birthing is a free birth plan app and birth team communication tool for expectant moms, doulas, and midwives.
+          </p>
+          <p id="invite-subtitle-2" class="text-tjb-gray mb-6">
+            Build your birth plan, connect with your care team, and feel confident going into your delivery.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href={APP_STORE_URL} class="btn-primary text-center" id="hero-cta-appstore">Download on the App Store</a>
+            <a href={GOOGLE_PLAY_URL} class="btn-secondary text-center" id="hero-cta-googleplay">Get it on Google Play</a>
+          </div>
+          <p class="text-xs text-tjb-gray mt-3">Free · No account needed to start</p>
+          <!-- Personal message container (hidden until invite data loads) -->
+          <div id="invite-message-wrap" class="hidden mt-6 p-4 bg-white rounded-xl border border-tjb-lavender-200/60">
+            <p class="text-xs uppercase tracking-widest text-tjb-rose-500 font-semibold mb-2">A message from <span id="invite-message-from">your inviter</span></p>
+            <p id="invite-message-text" class="text-sm text-tjb-charcoal italic leading-relaxed"></p>
+          </div>
+        </div>
+        <div class="relative">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="/images/tjb-app-birth-plan-builder.webp"
+            />
+            <img
+              src="/images/tjb-app-birth-plan-builder.png"
+              alt="True Joy Birthing app — birth plan builder screen"
+              class="w-full rounded-2xl shadow-lg"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Value Props — 4 Cards ═══ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Why join</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-3" style="font-family: 'DM Sans', sans-serif;">
+          Everything you need for a supported birth
+        </h2>
+        <p class="text-tjb-gray max-w-2xl mx-auto" id="value-props-intro">
+          True Joy Birthing brings birth plans, your care team, and practice tools together in one free app.
+        </p>
+      </div>
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+          <div class="w-10 h-10 rounded-lg bg-tjb-lavender-100 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <p class="font-semibold text-tjb-charcoal mb-2" id="value-prop-1">See birth plans instantly</p>
+          <p class="text-sm text-tjb-gray">View shared birth plans in the app the moment you join — no email attachments, no lost PDFs.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+          <div class="w-10 h-10 rounded-lg bg-tjb-rose-50 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+          </div>
+          <p class="font-semibold text-tjb-charcoal mb-2">Message and schedule appointments</p>
+          <p class="text-sm text-tjb-gray">Chat with your birth team inside the app. Schedule appointments, share updates, and keep everything in one place.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+          <div class="w-10 h-10 rounded-lg bg-tjb-lavender-100 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <p class="font-semibold text-tjb-charcoal mb-2">Manage your practice with TJB Pro</p>
+          <p class="text-sm text-tjb-gray">Birth professionals get a 14-day free trial of TJB Pro — manage clients, birth plans, and scheduling in one place.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+          <div class="w-10 h-10 rounded-lg bg-tjb-rose-50 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <p class="font-semibold text-tjb-charcoal mb-2">Join free in seconds</p>
+          <p class="text-sm text-tjb-gray">Download the app, create a free account, and you're in. No credit card, no commitment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Download CTA ═══ -->
+  <section class="py-20 bg-tjb-cream">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Get started</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+      <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-4" style="font-family: 'DM Serif Display', Georgia, serif;" id="download-headline">
+        Download True Joy Birthing
+      </h2>
+      <p class="text-tjb-gray mb-8" id="download-subtitle">
+        Free for moms. 14-day free trial for birth professionals.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center items-center mb-6">
+        <a href={APP_STORE_URL} class="inline-block focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 transition-opacity hover:opacity-90" style="line-height:0">
+          <img src="/images/app-store-badge.svg" alt="Download on the App Store" class="h-12 w-auto" width="120" height="40" loading="lazy" />
+        </a>
+        <a href={GOOGLE_PLAY_URL} class="inline-block focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 transition-opacity hover:opacity-90" style="line-height:0">
+          <img src="/images/google-play-badge.png" alt="Get it on Google Play" class="h-12 w-auto" width="159" height="48" loading="lazy" />
+        </a>
+      </div>
+      <a href="/" class="text-sm text-tjb-lavender-600 hover:underline font-medium">I already have the app →</a>
+    </div>
+  </section>
+
+  <!-- ═══ Client-side invite data fetch ═══ -->
+  <script is:inline>
+    (function () {
+      const API_BASE = 'https://api.truejoybirthing.com';
+      // Extract invite_id from URL path: /invite/inv_abc123 -> inv_abc123
+      const path = window.location.pathname;
+      const parts = path.split('/').filter(Boolean); // ['invite', 'inv_abc123']
+      const inviteId = parts.length > 1 && parts[0] === 'invite' ? parts[1] : null;
+
+      // If no invite_id in URL, leave the generic welcome as-is
+      if (!inviteId) return;
+
+      const headlineEl = document.getElementById('invite-headline');
+      const subtitleEl = document.getElementById('invite-subtitle');
+      const subtitle2El = document.getElementById('invite-subtitle-2');
+      const msgWrap = document.getElementById('invite-message-wrap');
+      const msgFromEl = document.getElementById('invite-message-from');
+      const msgTextEl = document.getElementById('invite-message-text');
+      const valueIntroEl = document.getElementById('value-props-intro');
+      const vp1El = document.getElementById('value-prop-1');
+      const dlHeadlineEl = document.getElementById('download-headline');
+      const dlSubtitleEl = document.getElementById('download-subtitle');
+      const loadingEl = document.getElementById('invite-loading');
+
+      // Fire-and-forget track-open
+      try {
+        fetch(API_BASE + '/api/invites/' + encodeURIComponent(inviteId) + '/track-open', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({}),
+          keepalive: true,
+        }).catch(function () {});
+      } catch (e) {}
+
+      // Fetch invite data
+      fetch(API_BASE + '/api/invites/' + encodeURIComponent(inviteId), {
+        headers: { 'Accept': 'application/json' },
+      })
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          loadingEl && loadingEl.classList.add('hidden');
+
+          if (!data || data.status === 'expired' || data.status === 'invalid' || data.status === 'not_found') {
+            // Keep generic welcome — already rendered
+            return;
+          }
+
+          var inviterName = (data.inviter_name || '').trim();
+          if (!inviterName) return; // generic fallback
+
+          // Hero
+          if (headlineEl) {
+            headlineEl.textContent = inviterName + ' invited you to join True Joy Birthing';
+          }
+          if (subtitleEl) {
+            subtitleEl.textContent = inviterName + ' uses True Joy Birthing to share birth plans and communicate with their birth team.';
+          }
+          if (subtitle2El) {
+            subtitle2El.textContent = "Join free to see " + inviterName + "'s birth plan and start messaging.";
+          }
+
+          // Personal message
+          if (data.personal_message && data.personal_message.trim()) {
+            if (msgFromEl) msgFromEl.textContent = inviterName;
+            if (msgTextEl) msgTextEl.textContent = '"' + data.personal_message.trim() + '"';
+            if (msgWrap) msgWrap.classList.remove('hidden');
+          }
+
+          // Value props intro
+          if (valueIntroEl) {
+            valueIntroEl.textContent = inviterName + " uses True Joy Birthing to plan and share. Here's what you get when you join:";
+          }
+
+          // Value prop 1 — personalize
+          if (vp1El) {
+            vp1El.textContent = "See " + inviterName + "'s birth plan instantly";
+          }
+
+          // Download section
+          if (dlHeadlineEl) {
+            dlHeadlineEl.textContent = "Join " + inviterName + " on True Joy Birthing";
+          }
+          if (dlSubtitleEl) {
+            var role = (data.invitee_role || '').toLowerCase();
+            var isPro = role.includes('doula') || role.includes('midwife') || role.includes('professional');
+            dlSubtitleEl.textContent = isPro
+              ? 'Free for moms. Birth professionals get a 14-day free trial of TJB Pro.'
+              : 'Free for moms. No credit card needed.';
+          }
+
+          // Update document title
+          document.title = inviterName + ' invited you to True Joy Birthing';
+        })
+        .catch(function () {
+          // On error, keep generic welcome (already rendered)
+          loadingEl && loadingEl.classList.add('hidden');
+        });
+    })();
+  </script>
+</Layout>

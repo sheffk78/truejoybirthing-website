@@ -9,6 +9,7 @@
 
 import { execSync } from 'child_process';
 import fs from 'fs';
+import os from 'os';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -1767,6 +1768,262 @@ function run(): void {
     }
   }
 
+  // ── G53: Video scene data matches page data (staleness check) ──
+  if (targetSlug) {
+    try {
+      // Find video scene data file
+      const videoDataDir = process.env.TJB_VIDEO_DATA_DIR
+        || path.join(os.homedir(), '.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/src/data');
+      
+      // Try multiple filename patterns: {slug}-data.ts, {slug}-example.ts, {first-part}-example.ts
+      const slugParts = targetSlug.split('-');
+      const firstName = slugParts.length > 1 ? slugParts[0] : targetSlug;
+      const candidateFiles = [
+        path.join(videoDataDir, `${targetSlug}-data.ts`),
+        path.join(videoDataDir, `${targetSlug}-example.ts`),
+        path.join(videoDataDir, `${firstName}-example.ts`),
+      ];
+      
+      let sceneFile: string | null = null;
+      for (const f of candidateFiles) {
+        if (fs.existsSync(f)) { sceneFile = f; break; }
+      }
+      
+      if (!sceneFile) {
+        results.push({ gate: 'G53', status: 'SKIP', detail: `No video scene data found for ${targetSlug}. Set TJB_VIDEO_DATA_DIR if data is elsewhere. Checked: ${videoDataDir}` });
+      } else {
+        const sceneContent = fs.readFileSync(sceneFile, 'utf-8');
+        
+        // Extract city block from cities.ts
+        const citiesContent = fs.readFileSync(path.join(PROJECT_DIR, 'src/data/cities.ts'), 'utf-8');
+        const cityBlock = execSync(`python3 ${path.join(PROJECT_DIR, 'scripts/extract-city-block.py')} ${targetSlug}`, { encoding: 'utf-8' });
+        
+        if (!cityBlock.trim()) {
+          results.push({ gate: 'G53', status: 'FAIL', detail: `Could not extract city block for ${targetSlug} from cities.ts` });
+        } else {
+          // Count providers in scene data (scroll + portrait scenes)
+          const scrollProviderCount = (sceneContent.match(/tjb_provider_scroll/g) || []).length;
+          const portraitProviderCount = (sceneContent.match(/tjb_provider_portrait/g) || []).length;
+          const sceneProviderCount = scrollProviderCount + portraitProviderCount;
+          
+          // Count providers in cities.ts (doula or midwife entries in provider array)
+          // Provider entries have `name: "..."` followed by credential/practice fields
+          // Count entries that have credential field with doula/midwife, or isMidwife field
+          const providerEntries = cityBlock.match(/{\s*name:\s*"[^"]+"[^}]*?(credential|isMidwife)/g) || [];
+          const pageProviderCount = providerEntries.length;
+          
+          // Count hospitals
+          const sceneHospitalCount = (sceneContent.match(/tjb_hospital/g) || []).length;
+          const hospitalMatch = cityBlock.match(/hospitalDetails:\s*\[([\s\S]*?)\]\s*[,}]/);
+          const pageHospitalCount = hospitalMatch ? (hospitalMatch[1].match(/{/g) || []).length : 0;
+          
+          // Count birth centers
+          const sceneBirthCenterCount = (sceneContent.match(/tjb_birth_center/g) || []).length;
+          const birthCenterMatch = cityBlock.match(/birthCenterDetails:\s*\[([\s\S]*?)\]\s*[,}]/);
+          const pageBirthCenterCount = birthCenterMatch ? (birthCenterMatch[1].match(/{/g) || []).length : 0;
+          
+          // Check for unreplaced narration tokens (only inside string literals)
+          const tokenPattern = /\{[A-Z_][A-Z_0-9]*\}/g;
+          const narrationTokens = sceneContent.match(tokenPattern) || [];
+          const unreplacedTokens = narrationTokens.filter(t => !t.startsWith('${'));
+          
+          // Check hero image reference
+          const heroRefInScene = sceneContent.includes('hero') || sceneContent.includes(targetSlug);
+          
+          const mismatches: string[] = [];
+          
+          if (sceneProviderCount !== pageProviderCount) {
+            mismatches.push(`providers: scene=${sceneProviderCount} vs page=${pageProviderCount}`);
+          }
+          
+          if (pageHospitalCount <= 3) {
+            if (sceneHospitalCount !== pageHospitalCount) {
+              mismatches.push(`hospitals: scene=${sceneHospitalCount} vs page=${pageHospitalCount}`);
+            }
+          } else {
+            // For >3 hospitals, allow scene to show a subset
+            if (Math.abs(sceneHospitalCount - pageHospitalCount) > 2) {
+              mismatches.push(`hospitals: scene=${sceneHospitalCount} vs page=${pageHospitalCount} (delta > 2)`);
+            }
+          }
+          
+          if (sceneBirthCenterCount !== pageBirthCenterCount) {
+            mismatches.push(`birth centers: scene=${sceneBirthCenterCount} vs page=${pageBirthCenterCount}`);
+          }
+          
+          if (unreplacedTokens.length > 0) {
+            mismatches.push(`unreplaced narration tokens: ${unreplacedTokens.slice(0, 5).join(', ')}${unreplacedTokens.length > 5 ? '...' : ''}`);
+          }
+          
+          if (mismatches.length > 0) {
+            results.push({ gate: 'G53', status: 'FAIL', detail: `Video scene data is stale: ${mismatches.join('; ')}. Re-render video after page changes. Scene file: ${path.basename(sceneFile)}` });
+          } else {
+            results.push({ gate: 'G53', status: 'PASS', detail: `Video scene data matches page: ${sceneProviderCount} providers, ${sceneHospitalCount} hospitals, ${sceneBirthCenterCount} birth centers. Scene: ${path.basename(sceneFile)}` });
+          }
+        }
+      }
+    } catch (e: any) {
+      results.push({ gate: 'G53', status: 'SKIP', detail: `Video staleness check error: ${e.message}` });
+    }
+  } else {
+    results.push({ gate: 'G53', status: 'SKIP', detail: 'Video staleness check requires a slug (single-city mode only)' });
+  }
+
+  // ── G54: Support scene image not shared across cities ──
+  // Catches the "Augusta showing Nashville's support scene" class of bug.
+  // Uses cross-city duplicate detection instead of filename matching, because
+  // support scene naming is inconsistent (some use full slug, some use abbreviations
+  // like "sb" for San Bernardino, some use "denver-support-scene").
+  if (targetSlug) {
+    try {
+      const citiesContent = fs.readFileSync(path.join(PROJECT_DIR, 'src/data/cities.ts'), 'utf-8');
+      const targetBlock = execSync(
+        `python3 scripts/extract-city-block.py ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+      const sceneMatch = targetBlock.match(/supportSceneImage:\s*"([^"]+)"/);
+      if (sceneMatch) {
+        const scenePath = sceneMatch[1];
+        const escapedPath = scenePath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const sceneRegex = new RegExp(`supportSceneImage:\\s*"${escapedPath}"`, 'g');
+        // Count all occurrences in the full file
+        const allMatches = [...citiesContent.matchAll(sceneRegex)];
+        if (allMatches.length > 1) {
+          // Find the position of the target city's block in the full content
+          // and count matches that are NOT in the target city's block range.
+          // extract-city-block.py returns the object body (starts with '{'),
+          // but in cities.ts the entry is "slug": { ... }, so we locate the
+          // slug key to find the true start position.
+          const slugKey = `"${targetSlug}":`;
+          const slugPos = citiesContent.indexOf(slugKey);
+          if (slugPos >= 0) {
+            // The target block in the file starts at slugPos and extends
+            // for the length of the extracted block plus the slug key prefix
+            const blockStart = slugPos;
+            const blockEnd = slugPos + slugKey.length + targetBlock.length;
+            // Count matches outside the target block's range
+            const outsideMatches = allMatches.filter(m => m.index < blockStart || m.index >= blockEnd);
+            if (outsideMatches.length > 0) {
+              results.push({ gate: 'G54', status: 'FAIL', detail: `Support scene image shared with ${outsideMatches.length} other city/cities: ${scenePath} — likely wrong city image` });
+            } else {
+              results.push({ gate: 'G54', status: 'PASS', detail: `Support scene image unique to this city: ${path.basename(scenePath)}` });
+            }
+          } else {
+            // Fallback: can't find slug key, use simple count > 1 as fail
+            results.push({ gate: 'G54', status: 'FAIL', detail: `Support scene image appears ${allMatches.length} times in cities.ts: ${scenePath} — likely shared across cities` });
+          }
+        } else {
+          results.push({ gate: 'G54', status: 'PASS', detail: `Support scene image unique to this city: ${path.basename(scenePath)}` });
+        }
+      } else {
+        results.push({ gate: 'G54', status: 'SKIP', detail: 'No supportSceneImage field found for this city' });
+      }
+    } catch {
+      results.push({ gate: 'G54', status: 'SKIP', detail: 'Could not check support scene cross-city sharing' });
+    }
+  } else {
+    results.push({ gate: 'G54', status: 'SKIP', detail: 'Skipping support scene check in audit mode (run with slug)' });
+  }
+
+  // ── G55: No empty videoId for target city in video-embeds.ts ──
+  // Catches broken YouTube player renders when videoId is set to "".
+  if (targetSlug) {
+    try {
+      const embedsContent = fs.readFileSync(path.join(PROJECT_DIR, 'src/data/video-embeds.ts'), 'utf-8');
+      const slugPattern = new RegExp(`"${targetSlug}"\\s*:\\s*\\{`);
+      const slugMatch = slugPattern.exec(embedsContent);
+      if (slugMatch) {
+        // Extract the block for this city
+        const blockStart = slugMatch.index + slugMatch[0].length;
+        const blockEnd = embedsContent.indexOf('},', blockStart);
+        const cityBlock = embedsContent.slice(blockStart, blockEnd > 0 ? blockEnd : embedsContent.length);
+        const videoIdMatch = cityBlock.match(/videoId:\s*"([^"]*)"/);
+        if (videoIdMatch) {
+          const videoId = videoIdMatch[1];
+          if (videoId.trim() === '') {
+            results.push({ gate: 'G55', status: 'FAIL', detail: `Empty videoId for ${targetSlug} — YouTube player will render broken. Set the videoId or remove the entry.` });
+          } else {
+            results.push({ gate: 'G55', status: 'PASS', detail: `VideoId set: ${videoId}` });
+          }
+        } else {
+          results.push({ gate: 'G55', status: 'FAIL', detail: `No videoId field found for ${targetSlug} in video-embeds.ts` });
+        }
+      } else {
+        // City not in video-embeds.ts at all — that's fine, video may not be done yet
+        results.push({ gate: 'G55', status: 'SKIP', detail: `No video embed entry for ${targetSlug} (video not yet produced)` });
+      }
+    } catch {
+      results.push({ gate: 'G55', status: 'SKIP', detail: 'Could not check video-embeds.ts' });
+    }
+  } else {
+    // Audit mode: scan ALL entries for empty videoIds
+    try {
+      const embedsContent = fs.readFileSync(path.join(PROJECT_DIR, 'src/data/video-embeds.ts'), 'utf-8');
+      const emptyMatches = embedsContent.matchAll(/"([a-z0-9-]+)"\s*:\s*\{[^}]*videoId:\s*""/g);
+      const empties = [...emptyMatches].map(m => m[1]);
+      if (empties.length > 0) {
+        results.push({ gate: 'G55', status: 'FAIL', detail: `Empty videoId found for: ${empties.join(', ')}` });
+      } else {
+        results.push({ gate: 'G55', status: 'PASS', detail: 'No empty videoIds found in video-embeds.ts' });
+      }
+    } catch {
+      results.push({ gate: 'G55', status: 'SKIP', detail: 'Could not read video-embeds.ts' });
+    }
+  }
+
+  // ── G56: Hospital/birth center thumbnails not shared across cities ──
+  // Catches the "Augusta using Nashville's hospital photo" class of bug.
+  // If a thumbnail path appears in 2+ different city blocks, it's a wrong-city reference.
+  if (targetSlug) {
+    try {
+      const citiesContent = fs.readFileSync(path.join(PROJECT_DIR, 'src/data/cities.ts'), 'utf-8');
+      // Extract the target city's thumbnail paths
+      const targetBlock = execSync(
+        `python3 scripts/extract-city-block.py ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+      const targetThumbs = [...targetBlock.matchAll(/thumbnail:\s*"([^"]+)"/g)].map(m => m[1]);
+
+      if (targetThumbs.length === 0) {
+        results.push({ gate: 'G56', status: 'SKIP', detail: 'No hospital thumbnails found for this city' });
+      } else {
+        // Find the target city's block position in the full content
+        // (extract-city-block.py returns the object body, not the slug key)
+        const slugKey = `"${targetSlug}":`;
+        const slugPos = citiesContent.indexOf(slugKey);
+        const blockStart = slugPos >= 0 ? slugPos : 0;
+        const blockEnd = slugPos >= 0 ? slugPos + slugKey.length + targetBlock.length : 0;
+
+        // For each target thumbnail, check if it appears outside the target block
+        const sharedThumbs: string[] = [];
+        for (const thumb of targetThumbs) {
+          const escapedThumb = thumb.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          const thumbRegex = new RegExp(`thumbnail:\\s*"${escapedThumb}"`, 'g');
+          const allMatches = [...citiesContent.matchAll(thumbRegex)];
+          if (allMatches.length > 1) {
+            // Count matches outside the target block's range
+            const outsideMatches = allMatches.filter(m => 
+              (m.index < blockStart || m.index >= blockEnd)
+            );
+            if (outsideMatches.length > 0) {
+              sharedThumbs.push(thumb);
+            }
+          }
+        }
+
+        if (sharedThumbs.length > 0) {
+          results.push({ gate: 'G56', status: 'FAIL', detail: `Hospital thumbnail(s) shared with other cities: ${sharedThumbs.join(', ')} — likely wrong-city image` });
+        } else {
+          results.push({ gate: 'G56', status: 'PASS', detail: `All ${targetThumbs.length} hospital thumbnail(s) unique to this city` });
+        }
+      }
+    } catch {
+      results.push({ gate: 'G56', status: 'SKIP', detail: 'Could not check hospital thumbnail cross-city sharing' });
+    }
+  } else {
+    results.push({ gate: 'G56', status: 'SKIP', detail: 'Skipping thumbnail cross-city check in audit mode (run with slug)' });
+  }
+
   // ── Print summary ───
   console.log('\n─── RESULTS ───\n');
 
@@ -1784,9 +2041,16 @@ function run(): void {
   console.log(`\n${passCount} passed, ${failCount} failed, ${skipCount} skipped`);
 
   if (allPass) {
+    // Write result file for pre-push hook verification
+    const resultFile = path.join(PROJECT_DIR, '.preflight-result.json');
+    const result = { status: 'pass', timestamp: Math.floor(Date.now() / 1000), slug: targetSlug || 'all' };
+    fs.writeFileSync(resultFile, JSON.stringify(result));
     console.log('\n✅ ALL GATES PASSED — ready to deploy');
     process.exit(0);
   } else {
+    // Remove stale result file if it exists
+    const resultFile = path.join(PROJECT_DIR, '.preflight-result.json');
+    if (fs.existsSync(resultFile)) fs.unlinkSync(resultFile);
     console.log('\n❌ SOME GATES FAILED — fix before deploying');
     process.exit(1);
   }
