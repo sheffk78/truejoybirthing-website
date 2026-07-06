@@ -2819,44 +2819,203 @@ export const cities: Record<string, CityData> = {
     city: "Spokane" ,
     state: "WA" ,
     slug: "spokane-wa" ,
-    costLow: 1300,
-    costHigh: 3800,
+    lat: 47.6588,
+    lng: -117.4260,
+    costLow: 800,
+    costHigh: 3000,
     shelbiServesHere: false,
-    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    heroImage: "/images/spokane-wa-birth-doula-hero-spk.webp" ,
+    supportSceneImage: "/images/spokane-wa-birth-doula-support.webp" ,
+    supportSceneAlt: "A doula providing comfort measures to a laboring mother in a warm, supportive Spokane birth space" ,
+    ogImage: "https://truejoybirthing.com/images/og-city-spokane-wa-rva.webp" ,
+    midwifeInfo: {
+      paragraph: "Washington licenses Certified Professional Midwives (CPMs) and Licensed Midwives (LMs), making home birth and birth center midwifery legally regulated and accessible in Spokane. That means if you are planning a home birth or birth center birth in Spokane, your midwife operates under a state-issued license. On the hospital side, Certified Nurse-Midwives (CNMs) practice at Providence Sacred Heart and MultiCare Deaconess, so hospital-based midwifery care is available for Spokane families." ,
+      credentialTypes: " and LMs" ,
+      credentialDetail: "In Washington, Licensed Midwives (LMs) are specifically licensed by the state to attend out-of-hospital births, giving"
+    },
     localDoulas: [
-      { name: "Birth Doulas" , credential: "Birth Doula" , practice: "Birth Doulas" , url: "https://www.spokanedoulapros.com/our-doulas/birth-doulas/" , photo: "https://spokanedoulapros.com/wp/wp-content/uploads/2022/06/Nicki-1024x1024.jpg" , description: "Certified Birth & Postpartum Doula Provider. Services offered free of charge to Teens, In-home and virtual lactation and feeding support Offering Full-Spectrum ..." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Spokane, WA"] },
-      { name: "Sarah McDonald" , credential: "Birth Doula" , practice: "Sarah McDonald" , url: "https://www.sarahmdoula.com/" , photo: "https://images.squarespace-cdn.com/content/v1/624cb05c08931a5889b946bb/83ec424f-3318-48e4-8c6f-9ce869298df5/sarah-doula-105.jpg" , description: "I am a compassionate doula who cares about you and your family's needs. I emphasize equity toward clients of all shapes, backgrounds, colors, and cultures." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Spokane, WA"] },
-      { name: "Spokane Doula" , credential: "Birth Doula" , practice: "Spokane Doula" , url: "https://www.bandbdoulaservices.com/" , photo: "https://static.wixstatic.com/media/caae6f_2c8604e59ddf452aaff5004a2e50c36e~mv2.jpg/v1/fill/w_1905,h_993,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/caae6f_2c8604e59ddf452aaff5004a2e50c36e~mv2.jpg" , description: "Birth & Beyond Doula Services offers support during pregnancy, labor and delivery, postpartum, and in bereavement/loss." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Spokane, WA"] },
-      { name: "Spokane Doula" , credential: "Birth Doula" , practice: "Spokane Doula" , url: "https://www.evergreenvalleydoula.com/" , photo: "https://static.wixstatic.com/media/caae6f_2c8604e59ddf452aaff5004a2e50c36e~mv2.jpg/v1/fill/w_1905,h_993,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/caae6f_2c8604e59ddf452aaff5004a2e50c36e~mv2.jpg" , description: "Birth & Beyond Doula Services offers support during pregnancy, labor and delivery, postpartum, and in bereavement/loss." , costRange: "Contact for pricing" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Spokane, WA"] } ],
-    culture: "Spokane is the Inland Northwest's regional birth hub, with a tight-knit doula and midwife community that's smaller but deeply connected compared to Seattle. The city has a growing interest in evidence-based birth options and midwifery care, supported by organizations like the Inland Northwest Doula collective." ,
-    heroLocalDetail: "Spokane's major birth hospitals cluster along the Maple Street and Division Street corridors — Providence Sacred Heart on West 8th Avenue and MultiCare Deaconess on West 5th Avenue are just minutes apart on the South Hill. Families in Spokane Valley and Liberty Lake drive about 15–20 minutes west via I-90 to reach these facilities." ,
+      {
+        name: "Nicki Ament" ,
+        credential: "CD, ILFS" ,
+        practice: "Birth and Beyond Doula Services, LLC" ,
+        url: "https://www.bandbdoulaservices.com/" ,
+        photo: "https://spokanedoulapros.com/wp/wp-content/uploads/2022/06/Nicki-1024x1024.jpg" ,
+        description: "Certified full-spectrum birth and postpartum doula and integrative lactation and feeding specialist. Co-owner of Birth and Beyond Doula Services with 70+ families served since 2020. Nicki offers emotional support throughout pregnancy, labor, and postpartum, with specialized training in bereavement, TENS unit use, and transmasculine fertility support. Services are offered free of charge to teen parents." ,
+        costRange: "$1,800-$2,000" ,
+        acceptingClients: true,
+        acceptsMedicaid: true,
+        services: ["Birth Doula" , "Postpartum Doula" , "Lactation Support" , "Bereavement Support"],
+        serviceArea: ["Spokane" , "Greater Spokane Area" , "Coeur d'Alene"]
+      },
+      {
+        name: "Sarah McDonald" ,
+        credential: "Certified Birth Doula" ,
+        practice: "Sarah McDonald Birth Services" ,
+        url: "https://www.sarahmdoula.com/" ,
+        photo: "https://images.squarespace-cdn.com/content/v1/624cb05c08931a5889b946bb/83ec424f-3318-48e4-8c6f-9ce869298df5/sarah-doula-105.jpg" ,
+        description: "Compassionate certified birth doula with a strong emphasis on equity for clients of all backgrounds, colors, and cultures. Sarah offers combined birth and postpartum packages with sliding scale options, and also runs the Lilac City Doula Training program for aspiring doulas in Spokane." ,
+        costRange: "$2,750-$3,500" ,
+        acceptingClients: true,
+        services: ["Birth Doula" , "Postpartum Doula" , "Childbirth Education"],
+        serviceArea: ["Spokane" , "Greater Spokane Area"]
+      },
+      {
+        name: "Kelly Kathrens" ,
+        credential: "CD, ILFS" ,
+        practice: "Birth and Beyond Doula Services, LLC" ,
+        url: "https://www.bandbdoulaservices.com/" ,
+        photo: "https://doulamatch.net/doulafiles/28017/28017_thumb.jpg?v=4" ,
+        description: "Co-owner of Birth and Beyond Doula Services and certified full-spectrum doula with lactation and feeding specialist credentials. Kelly brings 26 years of fascination with birth work into tailored, client-centered care. She provides weekly check-ins, comprehensive birth prep, and postpartum support including overnight care and meal preparation." ,
+        costRange: "$1,300-$2,000" ,
+        acceptingClients: true,
+        acceptsMedicaid: true,
+        services: ["Birth Doula" , "Postpartum Doula" , "Lactation Support"],
+        serviceArea: ["Spokane" , "Greater Spokane Area" , "Coeur d'Alene"]
+      },
+      {
+        name: "Melanie Shaul Alban" ,
+        credential: "Certified Birth Doula" ,
+        practice: "Precious Star Doula Services" ,
+        url: "https://www.preciousstardoulaservices.com/" ,
+        photo: "https://doulamatch.net/doulafiles/27072/27072_thumb.jpg?v=5" ,
+        description: "Certified birth doula with Birthing From Within training and 190+ families served since 2012. Melanie specializes in virtual childbirth education, full-spectrum doula services, and bereavement support. She is a Medicaid provider through Quilted Health and serves the Spokane and Coeur d'Alene areas." ,
+        costRange: "$1,800-$2,000" ,
+        acceptingClients: true,
+        acceptsMedicaid: true,
+        services: ["Birth Doula" , "Childbirth Education" , "Bereavement Support"],
+        serviceArea: ["Spokane" , "Coeur d'Alene"]
+      },
+      {
+        name: "Olli Gluskin" ,
+        credential: "Certified Birth Doula" ,
+        practice: "Clover Blossom Doula Care, LLC" ,
+        url: "https://www.cloverblossomdoula.com/" ,
+        photo: "https://doulamatch.net/doulafiles/41084/41084_thumb.jpg?v=5" ,
+        description: "Certified birth and postpartum doula through Birth Arts International with training in Spinning Babies, trauma-informed perinatal care, and placenta encapsulation. Olli provides inclusive, holistic support for LGBTQIA+ families and offers sliding scale pricing from $800 to $1,200." ,
+        costRange: "$800-$1,200" ,
+        acceptingClients: true,
+        acceptsMedicaid: true,
+        services: ["Birth Doula" , "Postpartum Doula" , "Placenta Encapsulation"],
+        serviceArea: ["Spokane" , "Spokane County" , "Coeur d'Alene"]
+      },
+      {
+        name: "Lisa Viehouser" ,
+        credential: "CD(DONA), PALS" ,
+        practice: "Doula Mama Bear" ,
+        url: "http://www.doulamamabear.com/" ,
+        photo: "https://spokanedoulapros.com/wp/wp-content/uploads/2022/06/LisaV-1024x1024.jpg" ,
+        description: "DONA and PALS certified birth doula with 40+ families served since 2020. Lisa is passionate about supporting families experiencing anxiety, depression, past trauma, or medically difficult pregnancies. She is a provider for Quilted Health, Tricare, and Medicaid, with additional training in childbirth education and LGBTQ+ reproductive support." ,
+        costRange: "$1,200-$1,500" ,
+        acceptingClients: true,
+        acceptsMedicaid: true,
+        services: ["Birth Doula" , "Postpartum Doula" , "Childbirth Education"],
+        serviceArea: ["Spokane" , "Greater Spokane Area" , "Coeur d'Alene" , "Pullman" , "Moscow"]
+      },
+      {
+        name: "Evergreen Valley Doula Services" ,
+        credential: "Birth and Postpartum Doula" ,
+        practice: "Evergreen Valley Doula Services" ,
+        url: "https://www.evergreenvalleydoula.com/" ,
+        photo: "" ,
+        description: "Established Spokane doula practice offering tiered birth packages from basic to ultimate, with options including belly mapping, herbal sitz baths, placenta encapsulation, and postpartum family meals. Also provides hourly postpartum and overnight care with a focus on healing, bonding, and postpartum wellness." ,
+        costRange: "$1,350-$1,600" ,
+        acceptingClients: true,
+        services: ["Birth Doula" , "Postpartum Doula" , "Placenta Encapsulation" , "Belly Mapping"],
+        serviceArea: ["Spokane" , "Greater Spokane Area"]
+      },
+      {
+        name: "Taylor Jaderquist" ,
+        credential: "Birth Doula" ,
+        practice: "Sage and Steele Birthworks" ,
+        url: "https://doulamatch.net/profile/41838/taylor-jaderquist" ,
+        photo: "https://doulamatch.net/doulafiles/41838/41838_thumb.jpg?v=1" ,
+        description: "Emerging birth doula in Spokane offering personalized support with a fresh perspective. Taylor brings grounded, attentive care to growing Spokane-area families." ,
+        costRange: "$1,200" ,
+        acceptingClients: true,
+        services: ["Birth Doula"],
+        serviceArea: ["Spokane" , "Greater Spokane Area"]
+      }
+    ],
+    culture: "Spokane is the Inland Northwest's regional birth hub, serving families across eastern Washington, north Idaho, and western Montana. The city has a tight-knit but growing doula and midwife community that is deeply connected and collaborative rather than competitive. Two licensed freestanding birth centers serve the area, both accepting Medicaid, and Washington State's progressive doula and midwifery licensure framework makes out-of-hospital birth more accessible here than in most of the country. Providence Sacred Heart's Level IV NICU draws high-risk referrals from a five-state region, while Deaconess's BirthWise program offers a rare in-hospital natural birth center option. The Spokane Professional Doula Association supports a growing network of birth workers, and the city's proximity to Coeur d'Alene means families often cross state lines for care, since Idaho does not cover doulas through Medicaid while Washington does." ,
+    heroLocalDetail: "Spokane's major birth hospitals cluster along the Maple Street and Division Street corridors. Providence Sacred Heart on West 8th Avenue and MultiCare Deaconess on West 5th Avenue are just minutes apart on the South Hill. Families in Spokane Valley and Liberty Lake drive about 15 to 20 minutes west via I-90 to reach these facilities. Spokane River Birth Center on North Pines Road offers an out-of-hospital option in Spokane Valley." ,
     hospitalDetails: [
-      { name: "Providence Sacred Heart Medical Center" , paragraph: "Providence Sacred Heart is Spokane's largest birth hospital and features a Level IV NICU — the highest in the Inland Northwest — making it the regional referral center for high-risk pregnancies and premature infants. It delivers over 4,000 babies annually and offers MFM specialists, midwifery options, and a dedicated birth center unit. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your Sacred Heart delivery." ,
-    thumbnail: "/images/spokane-wa-hospital-providence-sacred-heart-medical-center.webp"
-  },
-      { name: "MultiCare Deaconess Hospital" , paragraph: "MultiCare Deaconess Hospital provides labor and delivery services with a Level II NICU, serving families on Spokane's South Hill and surrounding areas. It offers comfortable private suites and a family-centered approach, with neonatology support for moderately complex births." ,
-    thumbnail: "/images/spokane-wa-hospital-multicare-deaconess-hospital.webp"
-  },
-      { name: "Kootenai Health (Coeur d'Alene, ID)" , paragraph: "Just across the Idaho border about 35 miles east via I-90, Kootenai Health in Coeur d'Alene has a Level III NICU and serves many Spokane-area families, especially those in the Spokane Valley and Liberty Lake corridor. Verify insurance coverage for out-of-state care before choosing this option." ,
-    thumbnail: "/images/spokane-wa-hospital-kootenai-health-coeur-dalene-id.webp"
-  }
+      {
+        name: "Providence Sacred Heart Medical Center" ,
+        address: "101 W 8th Ave, Spokane, WA 99204" ,
+        paragraph: "Providence Sacred Heart Medical Center (101 W 8th Ave) is Spokane's largest birth hospital and the Inland Northwest's regional referral center for high-risk pregnancies. The Level IV NICU is the highest available in the region, meaning premature and critically ill newborns from across eastern Washington, north Idaho, and western Montana are transferred here. Sacred Heart delivers over 4,000 babies annually and offers maternal-fetal medicine specialists, an in-house midwifery program, and a dedicated birth center unit called The Birth Place. The hospital is located on the South Hill just off Maple Street, about 10 minutes from downtown and 20 minutes from Spokane Valley via I-90. Doulas are welcomed as support persons, and lactation consultants are available for every postpartum family. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your Sacred Heart delivery." ,
+        thumbnail: "/images/spokane-wa-hospital-providence-sacred-heart-medical-center.webp" ,
+        nicuLevel: "IV" ,
+        vbacPolicy: "Allows TOLAC/VBAC with physician approval" ,
+        doulaPolicy: "Doulas welcome as support persons" ,
+        midwifeFriendly: true,
+        medicaid: true,
+        lactation: true,
+        privateRooms: true,
+        url: "https://www.providence.org/locations/wa/sacred-heart-medical-center/birth-place"
+      },
+      {
+        name: "MultiCare Deaconess Hospital" ,
+        address: "8003 W 5th Ave, Spokane, WA 99204" ,
+        paragraph: "MultiCare Deaconess Hospital (8003 W 5th Ave) provides labor and delivery services on Spokane's South Hill, about 5 minutes from Providence Sacred Heart. It features a Level II NICU with neonatology support for moderately complex births, comfortable private L&D suites, and a family-centered approach to maternity care. Deaconess is home to BirthWise, the only in-hospital natural birthing center in Spokane, which offers hydrotherapy, unmedicated labor options, and midwife-led care within the hospital setting. This makes Deaconess a strong choice for families who want a more natural birth experience with the safety net of a hospital NICU just down the hall. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." ,
+        thumbnail: "/images/spokane-wa-hospital-multicare-deaconess-hospital.webp" ,
+        nicuLevel: "II" ,
+        vbacPolicy: "Allows TOLAC/VBAC with physician approval" ,
+        doulaPolicy: "Doulas welcome as support persons" ,
+        midwifeFriendly: true,
+        medicaid: true,
+        lactation: true,
+        privateRooms: true,
+        url: "https://www.multicare.org/deaconess-hospital/"
+      },
+      {
+        name: "Kootenai Health (Coeur d'Alene, ID)" ,
+        address: "2003 Kootenai Health Way, Coeur d'Alene, ID 83814" ,
+        paragraph: "Just across the Idaho border about 35 miles east via I-90, Kootenai Health in Coeur d'Alene serves many Spokane-area families, especially those in Spokane Valley, Liberty Lake, and Post Falls. The hospital has a Level III NICU, meaning it can care for babies born as early as 28 weeks, and offers a full range of maternal-fetal medicine services. Many families choose Kootenai because it is closer than driving into Spokane, and the smaller setting can feel less overwhelming than a major medical center. If you have Washington Apple Health (Medicaid), verify out-of-state coverage with your managed care plan before choosing Kootenai, as cross-border Medicaid billing can require pre-authorization. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> if you are considering delivering here." ,
+        thumbnail: "/images/spokane-wa-hospital-kootenai-health-coeur-dalene-id.webp" ,
+        nicuLevel: "III" ,
+        vbacPolicy: "Allows TOLAC/VBAC with physician approval" ,
+        doulaPolicy: "Doulas welcome as support persons" ,
+        midwifeFriendly: true,
+        medicaid: true,
+        lactation: true,
+        privateRooms: true,
+        url: "https://www.kootenaihealth.org/"
+      }
     ],
     birthCenterDetails: [
-      { name: "No birth centers in Spokane" , paragraph: "NPI taxonomy 261QB0400X returned no active results for Spokane, WA. There are no freestanding birth centers in Spokane. Families seeking birth center care typically work with home birth midwives, as the nearest birth centers are approximately 280 miles west in the Seattle metro area." ,
-    thumbnail: ""
-  }
+      {
+        name: "Spokane River Birth Center" ,
+        address: "915 N Pines Rd, Spokane Valley, WA 99206" ,
+        thumbnail: "/images/spokane-wa-birth-center-spokane-river-birth-center.webp" ,
+        paragraph: "A licensed freestanding birth center in Spokane Valley (915 N Pines Rd) operated by Spokane River Midwives, offering water birth, holistic midwifery care, and a home-like setting with dedicated birth suites and soaking tubs. The practice is led by licensed midwives who attend both birth center and home births, with a two-midwife team present at every delivery for added safety. Spokane River Midwives accepts most major insurance plans including Washington Apple Health (Medicaid), making out-of-hospital birth accessible to families regardless of income. Prenatal visits are typically longer and more personalized than hospital-based care, with 45-60 minute appointments that cover nutrition, emotional wellbeing, and birth preparation alongside clinical checks." ,
+        credential: "Washington State Licensed Birth Center" ,
+        services: ["Water Birth" , "Prenatal Care" , "Postpartum Care" , "Home Birth" , "Well Baby Care" , "Lactation Support"] ,
+        medicaid: true,
+        url: "https://spokanerivermidwives.com/"
+      },
+      {
+        name: "Spokane Midwives Birth Center" ,
+        address: "127 E Euclid Ave, Spokane, WA 99208" ,
+        thumbnail: "/images/spokane-wa-birth-center-spokane-midwives-birth-center.webp" ,
+        paragraph: "A freestanding birth center in north Spokane (127 E Euclid Ave) operated by Spokane Midwives, featuring home-like birth suites with large birthing tubs for labor and water birth. Founded by Victoria Garwood LM, CPM with over 20 years of midwifery experience, the center focuses on individualized, low-intervention prenatal and birth care. The practice offers both birth center and home birth options, and accepts Washington Apple Health (Medicaid) as well as private insurance. Spokane Midwives is known for longer prenatal visits, continuous labor support from a known midwife, and comprehensive postpartum care through six weeks, including lactation support and newborn screening." ,
+        credential: "Washington State Licensed Birth Center" ,
+        services: ["Water Birth" , "Home Birth" , "Prenatal Care" , "Postpartum Care" , "Natural Birth"] ,
+        medicaid: true,
+        url: "http://www.spokanemidwives.com/"
+      }
     ],
-    medicaidNote: "Washington Apple Health (Medicaid) covers doula services. Under state rules effective 2024, Washington Medicaid reimburses enrolled doulas for prenatal, labor, and postpartum support. Washington also extended postpartum Medicaid coverage to 12 months, and has some of the most robust doula Medicaid coverage in the nation." ,
-    insuranceNote: "Washington State is among the most progressive for birth access — Medicaid covers doula care, and the state requires most insurance plans to cover midwifery and birth center services. Check your specific plan for doula benefits." ,
+    medicaidNote: "Yes — Washington Apple Health (Medicaid) covers doula services. Under state rules effective 2024, Washington Medicaid reimburses enrolled doulas for prenatal, labor, and postpartum support. Washington also extended postpartum Medicaid coverage to 12 months, and has some of the most robust doula Medicaid coverage in the nation." ,
+    insuranceNote: "Washington State is among the most progressive for birth access. Medicaid covers doula care, and the state requires most insurance plans to cover midwifery and birth center services. Check your specific plan for doula benefits." ,
     faqs: [
-      { q: "Does Spokane have any freestanding birth centers?" , a: "No. Spokane currently has no freestanding birth centers. Families interested in out-of-hospital birth typically hire home birth midwives, as the nearest birth centers are in the Seattle metro area, roughly 280 miles away. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." },
+      { q: "Does Spokane have any freestanding birth centers?" , a: "Yes. Spokane has two licensed freestanding birth centers: Spokane River Birth Center in Spokane Valley and Spokane Midwives Birth Center on East Euclid. Both offer water birth, midwifery care, and a home-like setting. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." },
       { q: "Which Spokane hospital has the highest-level NICU?" , a: "Providence Sacred Heart Medical Center has a Level IV NICU, the highest level available, serving as the regional referral center for the Inland Northwest's most critically ill newborns. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
-      { q: "Does Washington Medicaid cover doula services in Spokane?" , a: "Yes! Great news — Medicaid covers doula services in Spokane. Here's your next step: call your Medicaid plan and ask \"Do you cover doula services?\" — they'll walk you through it. You deserve support, and now your insurance helps pay for it." },
-      { q: "Can I give birth at Kootenai Health if I live in Spokane?" , a: "Yes, many Spokane-area you and your family choose Kootenai Health in Coeur d'Alene, Idaho, about 35 miles east. It has a Level III NICU. Some Washington Medicaid plans may cover out-of-state care there, but verify coverage with your insurance first." },
-      { q: "Are there home birth midwives in Spokane?" , a: "Yes. Spokane has several licensed midwives (LMs and CPMs) offering home birth services, supported by Washington State's licensure framework for out-of-hospital birth providers. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether home birth is right for you." },
-      { q: "What's the average cost of a doula in Spokane?" , a: "Doulas in Spokane typically charge $1,300–$3,800, with most packages averaging around $2,000. Medicaid-covered doulas are available at no cost to qualifying you and your family through Apple Health." }
+      { q: "Does Washington Medicaid cover doula services in Spokane?" , a: "Yes! Great news — Medicaid covers doula services in Spokane. Here is your next step: call your Medicaid plan and ask \"Do you cover doula services?\" — they will walk you through it. You deserve support, and now your insurance helps pay for it." },
+      { q: "Can I give birth at Kootenai Health if I live in Spokane?" , a: "Yes, many Spokane-area families choose Kootenai Health in Coeur d'Alene, Idaho, about 35 miles east. It has a Level III NICU. Some Washington Medicaid plans may cover out-of-state care there, but verify coverage with your insurance first." },
+      { q: "Are there home birth midwives in Spokane?" , a: "Yes. Spokane has several licensed midwives (LMs and CPMs) offering home birth services, supported by Washington State's licensure framework for out-of-hospital birth providers. Spokane River Midwives and Spokane Midwives both offer home birth options alongside their birth center services." },
+      { q: "What is the average cost of a doula in Spokane?" , a: "Doulas in Spokane typically charge $800 to $3,000, with most birth packages averaging around $1,500 to $2,000. Postpartum doulas charge $30 to $55 per hour. Medicaid-covered doulas are available at no cost to qualifying families through Apple Health." }
     ],
-    nearbyCities: []},
+    nearbyCities: ["seattle-wa" , "tacoma-wa" , "portland-or"]},
+
   "seattle-wa": {
     city: "Seattle" ,
     state: "WA" ,
