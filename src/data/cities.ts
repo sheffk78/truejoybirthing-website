@@ -4753,7 +4753,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-27. Families seeking out-of-hospital birth connect with
     // home-birth midwives practicing in the greater Richmond area.
     birthCenterDetails: [],
-    medicaidNote: "No — Virginia Medicaid does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Richmond families on Medicaid must pay out of pocket, though some doulas offer sliding-scale fees. Ask your doula about payment plans or reduced-rate options." ,
+    medicaidNote: "No \u2014 Virginia Medicaid does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Richmond families on Medicaid must pay out of pocket, though some doulas offer sliding-scale fees. Ask your doula about payment plans or reduced-rate options." ,
     insuranceNote: "Most private insurers in Virginia (Anthem Blue Cross, UnitedHealthcare, Aetna, Cigna) do not cover doula services as a standard benefit. Check your plan for out-of-network reimbursement or HSA/FSA eligibility. Contact your provider directly to confirm what\u2019s covered." ,
     faqs: [
       { q: "Does Virginia Medicaid cover doula services?" , a: "No. As of 2026, Virginia Medicaid does not cover doula services. If you\u2019re on Medicaid in the Richmond area, you\u2019ll need to pay for a doula out of pocket — but many Richmond doulas offer sliding-scale fees or payment plans. You deserve support regardless of insurance status. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> while you figure out your options." },
