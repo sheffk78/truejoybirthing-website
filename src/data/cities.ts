@@ -4730,6 +4730,8 @@ export const cities: Record<string, CityData> = {
     ogImage: "/images/og-city-richmond-va.webp",
     enableBlogResources: true,
     publishedDate: "2026-06-22",
+    lat: 37.5407,
+    lng: -77.4360,
     city: "Richmond" ,
     state: "VA" ,
     slug: "richmond-va" ,
@@ -4751,7 +4753,7 @@ export const cities: Record<string, CityData> = {
     // Verified 2026-05-27. Families seeking out-of-hospital birth connect with
     // home-birth midwives practicing in the greater Richmond area.
     birthCenterDetails: [],
-    medicaidNote: "Virginia Medicaid does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Richmond families on Medicaid must pay out of pocket, though some doulas offer sliding-scale fees. Ask your doula about payment plans or reduced-rate options." ,
+    medicaidNote: "No — Virginia Medicaid does NOT cover doula services as of 2026. There is no statewide Medicaid reimbursement for doula care. Richmond families on Medicaid must pay out of pocket, though some doulas offer sliding-scale fees. Ask your doula about payment plans or reduced-rate options." ,
     insuranceNote: "Most private insurers in Virginia (Anthem Blue Cross, UnitedHealthcare, Aetna, Cigna) do not cover doula services as a standard benefit. Check your plan for out-of-network reimbursement or HSA/FSA eligibility. Contact your provider directly to confirm what\u2019s covered." ,
     faqs: [
       { q: "Does Virginia Medicaid cover doula services?" , a: "No. As of 2026, Virginia Medicaid does not cover doula services. If you\u2019re on Medicaid in the Richmond area, you\u2019ll need to pay for a doula out of pocket — but many Richmond doulas offer sliding-scale fees or payment plans. You deserve support regardless of insurance status. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> while you figure out your options." },
@@ -4759,6 +4761,11 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Richmond families?" , a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Richmond birth setting, whether you\u2019re delivering at VCU, St. Mary\u2019s, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
       { q: "Are there doulas in Richmond?" , a: "Richmond has an active, connected doula community. Organizations like Birth Matters RVA and individual practices offer birth and postpartum support across the metro. Start with the True Joy Birthing app to find local doulas, and interview a few until one feels right." },
       { q: "Can my doula come to the hospital with me in Richmond?" , a: "Yes \u2014 both VCU Medical Center and Bon Secours St. Mary\u2019s allow doulas in labor and delivery. VCU\u2019s academic setting means they\u2019re especially accustomed to working with birth plans and doula support. Confirm during your hospital tour, and bring your birth plan to help your care team support your preferences." } ],
+    midwifeInfo: {
+      paragraph: "Virginia does not license Certified Professional Midwives (CPMs), so home birth midwifery is limited to Certified Nurse-Midwives (CNMs) practicing under physician supervision. Richmond families seeking home birth should connect with CNMs who have collaborative practice agreements. In-hospital midwifery is available at VCU Medical Center and Bon Secours St. Mary's, both offering CNM-led care options.",
+      midwifeType: "CNM only (no CPM licensing)",
+      homeBirthLegal: "Restricted — CNMs only, physician supervision required"
+    } ,
     nearbyCities: ["virginia-beach-va"]},
   "grand-rapids-mi": {
     enableBlogResources: true,
