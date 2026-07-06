@@ -4725,7 +4725,7 @@ export const cities: Record<string, CityData> = {
       { q: "Should I worry about hurricane season when planning a Charleston birth?" , a: "Charleston\u2019s hurricane season runs June 1 through November 30, which overlaps with many due dates. It\u2019s wise to have an evacuation plan, a hospital bag packed early, and a communication plan with your doula in case of severe weather. MUSC and Roper both have robust emergency protocols; your care team can guide you." } ],
     nearbyCities: ["greenville-sc"]},
   "richmond-va": {
-    heroImage: "/images/richmond-va-birth-doula-hero.webp",
+    heroImage: "/images/richmond-va-birth-doula-hero-v2.webp",
     supportSceneImage: "/images/richmond-va-birth-doula-support.webp",
     ogImage: "/images/og-city-richmond-va.webp",
     enableBlogResources: true,
