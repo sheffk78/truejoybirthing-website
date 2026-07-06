@@ -349,4 +349,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT4M29S",
     uploadDate: "2026-07-02T00:00:00-07:00",
 },
+"richmond-va": {
+    videoId: "orQupd9pT7U",
+    title: "Richmond VA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 4 minutes.",
+    duration: "PT3M58S",
+    uploadDate: "2026-07-06T00:00:00-04:00",
+},
 };
