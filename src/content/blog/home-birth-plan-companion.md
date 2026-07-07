@@ -99,7 +99,7 @@ Bring it to a prenatal visit around 34 to 36 weeks and review it together. Here 
 
 Your midwife may adjust your plan based on her protocols. That is a conversation, not a rejection. You want to know where your preferences align before labor starts.
 
-If you are still deciding what to include, read our <a href="/blog/what-to-include-in-a-birth-plan/">guide to what to include in a birth plan</a>. And if you are working through different scenarios, our <a href="/blog/birth-plan-scenarios-companion/">birth plan scenarios guide</a> walks you through the unexpected.
+If you are still deciding what to include, read our <a href="/blog/what-to-include-in-a-birth-plan/">guide to what to include in a birth plan</a>. And if you are working through different scenarios, our <a href="/birth-plan-scenarios/">birth plan scenarios guide</a> walks you through the unexpected.
 
 ## What About Postpartum Planning at Home?
 

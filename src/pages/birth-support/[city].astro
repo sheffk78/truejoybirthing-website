@@ -34,6 +34,20 @@ const {
 // Medicaid helper (must come before pageDesc)
 const medicaidCovers = !medicaidNote.includes('does not') && !medicaidNote.includes('does NOT');
 const stateHubSlug = state.toLowerCase().replace(/\s+/g, '-');
+
+// Deterministic anchor text rotation for /doula-cost/ inline link (costs section).
+// Prevents over-optimization: 5 full-sentence variants distributed across 90+ city pages.
+// Same city always gets the same variant (deterministic via slug hash).
+// Each variant wraps a different natural anchor phrase in the <a> tag.
+const doulaCostLinkVariants = [
+  'See our <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">full doula cost breakdown</a> for what\'s included and what to ask about.',
+  'Want to know <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">how much a doula costs</a>? Our complete guide breaks down typical packages and what\'s included.',
+  'For a <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">complete doula cost breakdown</a> — including what\'s included and what to ask about — see our full guide.',
+  'Compare <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">doula pricing and what\'s included</a> in our detailed cost guide for {city} families.',
+  'Curious <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">what doulas charge in your area</a>? Our cost guide covers typical ranges, what\'s included, and what to ask about.',
+];
+const doulaCostLinkIndex = slug.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0) % doulaCostLinkVariants.length;
+const doulaCostLinkHtml = doulaCostLinkVariants[doulaCostLinkIndex].replace(/{city}/g, city);
 const hasBirthCenters = birthCenterDetails.some((bc) => !bc.name.toLowerCase().includes('no '));
 
 // State full name for breadcrumbs (SEO: "Colorado" not "CO")
@@ -694,7 +708,7 @@ const schema = {
       <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
         <div class="md:w-[58%] prose">
           <h2 class="font-bold text-tjb-charcoal" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">How Much Does a Doula or Midwife Cost in {city}?</h2>
-          <p>In the {city} area, birth doula packages typically range from <strong>${costLow.toLocaleString()} to ${costHigh.toLocaleString()}</strong>. Midwife fees vary by type and setting — home birth midwives usually charge a global fee of $4,000–$8,000, while hospital-based CNM care is billed through insurance like a doctor's visit. <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">See our full doula cost breakdown</a> for what's included and what to ask about. If you're also thinking about support after baby arrives, <a href="/postpartum-doula/" class="text-tjb-rose-600 hover:underline">learn what a postpartum doula does and how one can help</a>.</p>
+          <p>In the {city} area, birth doula packages typically range from <strong>${costLow.toLocaleString()} to ${costHigh.toLocaleString()}</strong>. Midwife fees vary by type and setting — home birth midwives usually charge a global fee of $4,000–$8,000, while hospital-based CNM care is billed through insurance like a doctor's visit. <span set:html={doulaCostLinkHtml} /> If you're also thinking about support after baby arrives, <a href="/postpartum-doula/" class="text-tjb-rose-600 hover:underline">learn what a postpartum doula does and how one can help</a>.</p>
           <p>If that number feels steep, you're not alone, and there are options:</p>
           <ul>
             <li><strong>Medicaid:</strong> {medicaidCovers ? 'Good news: your state covers doula services through Medicaid. See the details below.' : 'Unfortunately, your state does not yet cover doulas through Medicaid. Some community organizations and volunteer doula programs offer free or reduced-cost support. Ask at your local WIC office or community health center.'}</li>
