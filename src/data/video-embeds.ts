@@ -389,4 +389,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT4M12S",
     uploadDate: "2026-07-07T00:00:00-04:00",
 },
+  "reno-nv": {
+    videoId: "8LH05xoCH-c",
+    title: "Reno NV Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT5M20S",
+    uploadDate: "2026-07-07T00:00:00-04:00",
+},
 };
