@@ -14,7 +14,7 @@ HOOK_DIR="$(cd "$(dirname "$0")" && pwd)"
 if [[ "$HOOK_DIR" == *"/scripts/hooks"* ]]; then
   PROJECT_DIR="$(cd "$HOOK_DIR/../.." && pwd)"
 else
-  PROJECT_DIR="$(cd "$HOOK_DIR/../../.." && pwd)"
+  PROJECT_DIR="$(cd "$HOOK_DIR/../.." && pwd)"
 fi
 RESULT_FILE="$PROJECT_DIR/.preflight-result.json"
 

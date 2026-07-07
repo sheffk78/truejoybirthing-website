@@ -68,11 +68,13 @@ const stateFullName = stateNames[state] || state;
 
 const pageTitle = `${city}, ${state} Doula & Midwife Guide`;
 const medicaidDesc = medicaidCovers ? 'Medicaid covers doulas' : 'no Medicaid doula coverage';
-const baseDesc = `Birth in ${city}, ${state}: doula costs $${costLow}–$${costHigh}, ${medicaidDesc}, hospitals, birth centers, free plan template.`;
-// Pad short descriptions to reach 120+ chars (ideal: 120-130)
-const pageDesc = baseDesc.length < 120
-  ? baseDesc.replace('free plan template.', 'free birth plan template.')
-  : baseDesc;
+// Always use "free birth plan template" (never the shorter "free plan template")
+// to keep meta descriptions in the 120-160 char sweet spot.
+let pageDesc = `Birth in ${city}, ${state}: doula costs $${costLow}–$${costHigh}, ${medicaidDesc}, hospitals, birth centers, free birth plan template.`;
+// If still under 120 chars, add "and midwife info" to reach the sweet spot
+if (pageDesc.length < 120) {
+  pageDesc = pageDesc.replace('free birth plan template.', 'free birth plan template and midwife info.');
+}
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 const ogImage = ogImageSlug || `https://truejoybirthing.com/images/og-city-${slug}.webp`;
 const heroImage = heroImageSlug || '/images/doula-breastfeeding.webp';

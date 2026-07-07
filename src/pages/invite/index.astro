@@ -3,20 +3,79 @@
 // Invite landing page — "Invite Your Doula" feature
 // Static page: invite data fetched client-side via JS
 // No server-side fetching. Works without JS (shows generic welcome).
+// SEO: indexable, with FAQ schema, breadcrumbs, and organic content.
 // ═══════════════════════════════════════════════════════════════
 import Layout from '../../layouts/Layout.astro';
 
 const pageTitle = "You're Invited to True Joy Birthing";
-const pageDesc = "You've been invited to join True Joy Birthing — the free birth plan app and birth team communication tool.";
+const pageDesc = "You've been invited to True Joy Birthing, the free birth plan app connecting moms with doulas and midwives. Build your plan and share with your care team.";
 const APP_STORE_URL = "https://apps.apple.com/us/app/true-joy-birthing/id6760793180";
 const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.truejoybirthing";
+
+const breadcrumbList = [
+  { name: 'Home', url: 'https://truejoybirthing.com/' },
+  { name: 'Invite', url: 'https://truejoybirthing.com/invite/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://truejoybirthing.com/invite/#webpage',
+      name: 'True Joy Birthing Invite',
+      url: 'https://truejoybirthing.com/invite/',
+      description: pageDesc,
+      publisher: { '@id': 'https://truejoybirthing.com/#organization' },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://truejoybirthing.com/invite/#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Is True Joy Birthing free?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. The birth plan builder, care team messaging, and birth education content are completely free for expecting moms. Birth professionals get a 14-day free trial of TJB Pro, then $29/month.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do I need an invite code to join?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No. You can download the app and create a free account anytime. An invite link from your doula or midwife simply personalizes your experience by connecting you to their care team automatically.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What does True Joy Birthing do?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'True Joy Birthing is a free birth plan app that lets you build a structured birth plan, share it with your care team, message your doula or midwife, and walk through every birth decision with video guidance from a certified doula.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can my doula or midwife see my birth plan?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. When you join through an invite link from your doula or midwife, your birth plan is shared with them automatically. You can also share it manually inside the app at any time.',
+          },
+        },
+      ],
+    },
+  ],
+};
 ---
 
 <Layout
   title={pageTitle}
   description={pageDesc}
   canonical="https://truejoybirthing.com/invite/"
-  noindex={true}
+  breadcrumbList={breadcrumbList}
+  schema={schema}
 >
   <!-- ═══ Hero — Split Layout ═══ -->
   <section class="bg-tjb-cream pt-16 pb-12">
@@ -47,7 +106,7 @@ const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.truej
             <a href={APP_STORE_URL} class="btn-primary text-center" id="hero-cta-appstore">Download on the App Store</a>
             <a href={GOOGLE_PLAY_URL} class="btn-secondary text-center" id="hero-cta-googleplay">Get it on Google Play</a>
           </div>
-          <p class="text-xs text-tjb-gray mt-3">Free · No account needed to start</p>
+          <p class="text-xs text-tjb-gray mt-3">Free. No account needed to start.</p>
           <!-- Personal message container (hidden until invite data loads) -->
           <div id="invite-message-wrap" class="hidden mt-6 p-4 bg-white rounded-xl border border-tjb-lavender-200/60">
             <p class="text-xs uppercase tracking-widest text-tjb-rose-500 font-semibold mb-2">A message from <span id="invite-message-from">your inviter</span></p>
@@ -62,10 +121,12 @@ const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.truej
             />
             <img
               src="/images/tjb-app-birth-plan-builder.png"
-              alt="True Joy Birthing app — birth plan builder screen"
+              alt="True Joy Birthing app, birth plan builder screen"
               class="w-full rounded-2xl shadow-lg"
               loading="eager"
               fetchpriority="high"
+              width="600"
+              height="400"
             />
           </picture>
         </div>
@@ -94,7 +155,7 @@ const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.truej
             </svg>
           </div>
           <p class="font-semibold text-tjb-charcoal mb-2" id="value-prop-1">See birth plans instantly</p>
-          <p class="text-sm text-tjb-gray">View shared birth plans in the app the moment you join — no email attachments, no lost PDFs.</p>
+          <p class="text-sm text-tjb-gray">View shared birth plans in the app the moment you join. No email attachments, no lost PDFs.</p>
         </div>
         <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
           <div class="w-10 h-10 rounded-lg bg-tjb-rose-50 flex items-center justify-center mb-4">
@@ -112,7 +173,7 @@ const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.truej
             </svg>
           </div>
           <p class="font-semibold text-tjb-charcoal mb-2">Manage your practice with TJB Pro</p>
-          <p class="text-sm text-tjb-gray">Birth professionals get a 14-day free trial of TJB Pro — manage clients, birth plans, and scheduling in one place.</p>
+          <p class="text-sm text-tjb-gray">Birth professionals get a 14-day free trial of TJB Pro. Manage clients, birth plans, and scheduling in one place.</p>
         </div>
         <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
           <div class="w-10 h-10 rounded-lg bg-tjb-rose-50 flex items-center justify-center mb-4">
@@ -122,6 +183,70 @@ const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.truej
           </div>
           <p class="font-semibold text-tjb-charcoal mb-2">Join free in seconds</p>
           <p class="text-sm text-tjb-gray">Download the app, create a free account, and you're in. No credit card, no commitment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ How It Works — 3 Steps ═══ -->
+  <section class="py-16 bg-tjb-cream">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Getting started</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-3" style="font-family: 'DM Serif Display', Georgia, serif;">
+          How True Joy Birthing works
+        </h2>
+        <p class="text-tjb-gray max-w-2xl mx-auto">
+          Three simple steps from download to a birth plan your whole care team can see.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-tjb-lavender-600 text-white flex items-center justify-center mx-auto mb-4 font-bold text-lg">1</div>
+          <h3 class="font-semibold text-tjb-charcoal mb-2">Download the app</h3>
+          <p class="text-sm text-tjb-gray">Free on the App Store. Create an account in under 60 seconds. No credit card needed.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-tjb-lavender-600 text-white flex items-center justify-center mx-auto mb-4 font-bold text-lg">2</div>
+          <h3 class="font-semibold text-tjb-charcoal mb-2">Build your birth plan</h3>
+          <p class="text-sm text-tjb-gray">Answer guided questions about labor, delivery, and newborn care. Get a clean, structured plan your care team can actually read.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-tjb-lavender-600 text-white flex items-center justify-center mx-auto mb-4 font-bold text-lg">3</div>
+          <h3 class="font-semibold text-tjb-charcoal mb-2">Share with your team</h3>
+          <p class="text-sm text-tjb-gray">Send your birth plan to your doula, midwife, or OB directly in the app. Message, schedule, and stay aligned.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ — SEO + Schema ═══ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Questions</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-3" style="font-family: 'DM Serif Display', Georgia, serif;">
+          Common questions about True Joy Birthing
+        </h2>
+      </div>
+      <div class="space-y-6">
+        <div class="border-b border-tjb-lavender-200/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal mb-2 text-lg">Is True Joy Birthing free?</h3>
+          <p class="text-tjb-gray leading-relaxed faq-answer">Yes. The birth plan builder, care team messaging, and birth education content are completely free for expecting moms. Birth professionals get a 14-day free trial of TJB Pro, then $29/month.</p>
+        </div>
+        <div class="border-b border-tjb-lavender-200/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal mb-2 text-lg">Do I need an invite code to join?</h3>
+          <p class="text-tjb-gray leading-relaxed faq-answer">No. You can download the app and create a free account anytime. An invite link from your doula or midwife simply personalizes your experience by connecting you to their care team automatically.</p>
+        </div>
+        <div class="border-b border-tjb-lavender-200/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal mb-2 text-lg">What does True Joy Birthing do?</h3>
+          <p class="text-tjb-gray leading-relaxed faq-answer">True Joy Birthing is a free birth plan app that lets you build a structured birth plan, share it with your care team, message your doula or midwife, and walk through every birth decision with video guidance from a certified doula.</p>
+        </div>
+        <div class="border-b border-tjb-lavender-200/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal mb-2 text-lg">Can my doula or midwife see my birth plan?</h3>
+          <p class="text-tjb-gray leading-relaxed faq-answer">Yes. When you join through an invite link from your doula or midwife, your birth plan is shared with them automatically. You can also share it manually inside the app at any time.</p>
         </div>
       </div>
     </div>
@@ -146,7 +271,7 @@ const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.truej
           <img src="/images/google-play-badge.png" alt="Get it on Google Play" class="h-12 w-auto" width="159" height="48" loading="lazy" />
         </a>
       </div>
-      <a href="/" class="text-sm text-tjb-lavender-600 hover:underline font-medium">I already have the app →</a>
+      <a href="/" class="text-sm text-tjb-lavender-600 hover:underline font-medium">I already have the app</a>
     </div>
   </section>
 

@@ -363,4 +363,23 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT4M13S",
     uploadDate: "2026-07-06T00:00:00-07:00",
 },
+"tucson-az": {
+    videoId: "Kv24j1vmjtw",
+    title: "Tucson AZ Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Arizona AHCCCS, all in under 4 minutes.",
+    duration: "PT4M3S",
+    uploadDate: "2026-07-06T00:00:00-07:00",
+    chapters: [
+      [0, "Welcome to Tucson"],
+      [11, "What This Guide Covers"],
+      [29, "Tucson Medical Center"],
+      [63, "Banner University Medical Center Tucson"],
+      [96, "Northwest Medical Center"],
+      [124, "Doulas & Midwives Serving Tucson"],
+      [147, "Free Birth Plan App"],
+      [169, "Doula Costs in Tucson"],
+      [196, "Insurance & Arizona Medicaid"],
+      [228, "Make Your Birth Plan"],
+    ],
+},
 };
