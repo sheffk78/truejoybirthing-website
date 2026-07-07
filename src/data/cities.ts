@@ -2825,8 +2825,8 @@ export const cities: Record<string, CityData> = {
     costHigh: 3000,
     shelbiServesHere: false,
     heroImage: "/images/spokane-wa-birth-doula-hero-spk.webp" ,
-    supportSceneImage: "/images/spokane-wa-birth-doula-support.webp" ,
-    supportSceneAlt: "A doula providing comfort measures to a laboring mother in a warm, supportive Spokane birth space" ,
+    supportSceneImage: "/images/spokane-wa-birth-doula-support-v2.webp" ,
+    supportSceneAlt: "A pregnant woman in silhouette overlooking the Spokane River and Palouse hills at golden hour" ,
     ogImage: "https://truejoybirthing.com/images/og-city-spokane-wa-rva.webp" ,
     midwifeInfo: {
       paragraph: "Washington licenses Certified Professional Midwives (CPMs) and Licensed Midwives (LMs), making home birth and birth center midwifery legally regulated and accessible in Spokane. That means if you are planning a home birth or birth center birth in Spokane, your midwife operates under a state-issued license. On the hospital side, Certified Nurse-Midwives (CNMs) practice at Providence Sacred Heart and MultiCare Deaconess, so hospital-based midwifery care is available for Spokane families." ,

@@ -357,7 +357,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-07-06T00:00:00-04:00",
 },
 "spokane-wa": {
-    videoId: "B7XtcCvtM78",
+    videoId: "51p23NhP-vk",
     title: "Spokane Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and Washington Apple Health, all in under 3 minutes.",
     duration: "PT2M47S",
