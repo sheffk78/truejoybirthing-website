@@ -382,4 +382,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [228, "Make Your Birth Plan"],
     ],
 },
+  "rochester-ny": {
+    videoId: "s5GyWNnSgBs",
+    title: "Rochester NY Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT4M12S",
+    uploadDate: "2026-07-07T00:00:00-04:00",
+},
 };
