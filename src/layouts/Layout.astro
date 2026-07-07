@@ -229,10 +229,9 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
     <!-- Preload critical font weights used above the fold -->
     <link rel="preload" href="/fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- View transitions — non-blocking (opt-in via speculation rules API) -->
     <ClientRouter />
-    <!-- Preconnect to third-party analytics origins -->
-    <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <link rel="preconnect" href="https://www.redditstatic.com" />
+    <!-- Analytics are deferred to after onload, so no preconnect needed -->
     <script type="application/ld+json" set:html={schemaJson} />
   </head>
   <body class="min-h-dvh flex flex-col font-sans">

@@ -87,11 +87,14 @@ const breadcrumbList = [
         <div class="relative">
           <img
             src="/images/hero-birth-center-near-me.webp"
+            srcset="/images/responsive/hero-birth-center-near-me-480w.webp 480w, /images/responsive/hero-birth-center-near-me-960w.webp 960w, /images/hero-birth-center-near-me.webp 900w"
+            sizes="(max-width: 768px) 100vw, 50vw"
             alt="Pregnant women meditating together in a supportive birth community circle"
             class="w-full aspect-[3/4] object-cover rounded-2xl shadow-lg"
             width="900"
             height="1200"
             loading="eager"
+            fetchpriority="high"
           />
         </div>
       </div>

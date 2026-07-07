@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   output: 'static',
   build: {
-    inlineStylesheets: 'auto',
+    inlineStylesheets: 'always',
   },
   compressHTML: true,
   trailingSlash: 'always',

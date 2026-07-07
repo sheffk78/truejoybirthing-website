@@ -2024,6 +2024,46 @@ function run(): void {
     results.push({ gate: 'G56', status: 'SKIP', detail: 'Skipping thumbnail cross-city check in audit mode (run with slug)' });
   }
 
+  // ── G57: No providers with empty photo field (grey initials = failed enrichment) ──
+  // Jeff has reported this gap multiple times: a page full of grey circles with letter
+  // initials looks unfinished. This gate warns when providers are missing headshots.
+  if (targetSlug) {
+    try {
+      const targetBlock = execSync(
+        `python3 scripts/extract-city-block.py ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+      // Find all provider entries with photo: "" in the localDoulas array
+      const providerEntries: string[] = [];
+      const providerRegex = /\{[^{}]*name:\s*"([^"]+)"[^{}]*?photo:\s*""[^{}]*?\}/g;
+      let m;
+      while ((m = providerRegex.exec(targetBlock)) !== null) {
+        providerEntries.push(m[1]);
+      }
+      // Also check midwives array
+      const midwifeRegex = /\{[^{}]*name:\s*"([^"]+)"[^{}]*?photo:\s*""[^{}]*?\}/g;
+      while ((m = midwifeRegex.exec(targetBlock)) !== null) {
+        if (!providerEntries.includes(m[1])) {
+          providerEntries.push(m[1]);
+        }
+      }
+
+      if (providerEntries.length > 0) {
+        results.push({
+          gate: 'G57',
+          status: 'FAIL',
+          detail: `${providerEntries.length} provider(s) missing photos (showing grey initials): ${providerEntries.slice(0, 5).join(', ')}${providerEntries.length > 5 ? '...' : ''}. Source headshots from provider websites or DoulaMatch before deploying.`
+        });
+      } else {
+        results.push({ gate: 'G57', status: 'PASS', detail: 'All providers have photo fields set' });
+      }
+    } catch {
+      results.push({ gate: 'G57', status: 'SKIP', detail: 'Could not check provider photo fields' });
+    }
+  } else {
+    results.push({ gate: 'G57', status: 'SKIP', detail: 'Skipping provider photo check in audit mode (run with slug)' });
+  }
+
   // ── Print summary ───
   console.log('\n─── RESULTS ───\n');
 
