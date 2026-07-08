@@ -396,4 +396,18 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT5M20S",
     uploadDate: "2026-07-07T00:00:00-04:00",
 },
+"abilene-tx": {
+    videoId: "yZqjAc6hPp8",
+    title: "Abilene TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT4M42S",
+    uploadDate: "2026-07-07T00:00:00-05:00",
+},
+"albany-ny": {
+    videoId: "E2NP4hAGK7c",
+    title: "Albany NY Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT2M43S",
+    uploadDate: "2026-07-08T00:00:00-04:00",
+},
 };

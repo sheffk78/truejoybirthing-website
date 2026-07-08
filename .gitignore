@@ -22,3 +22,9 @@ yarn-debug.log*
 yarn-error.log*
 .firecrawl/
 .preflight-result.json
+
+# provider email research (contains PII)
+doula-provider-emails.json
+
+# python cache
+scripts/__pycache__/

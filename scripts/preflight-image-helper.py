@@ -393,7 +393,7 @@ def yt_thumbnail_matches_hero(slug: str) -> dict:
             hero_ref = m.group(1)
             if hero_ref.startswith('http'):
                 hero_ref = '/images/' + hero_ref.rstrip('/').split('/')[-1]
-            candidate = os.path.join(PROJECT_DIR, hero_ref.lstrip('/'))
+            candidate = os.path.join(PROJECT_DIR, 'public', hero_ref.lstrip('/'))
             if os.path.exists(candidate):
                 hero_path = candidate
                 hero_name = os.path.basename(candidate)
