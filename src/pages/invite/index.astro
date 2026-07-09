@@ -8,7 +8,7 @@
 import Layout from '../../layouts/Layout.astro';
 
 const pageTitle = "You're Invited to True Joy Birthing";
-const pageDesc = "You've been invited to True Joy Birthing, the free birth plan app connecting moms with doulas and midwives. Build your plan and share with your care team.";
+const pageDesc = "True Joy Birthing is a free birth plan app connecting moms with doulas and midwives. Build your plan and share with your care team.";
 const APP_STORE_URL = "https://apps.apple.com/us/app/true-joy-birthing/id6760793180";
 const GOOGLE_PLAY_URL = "https://play.google.com/store/apps/details?id=com.truejoybirthing";
 
@@ -27,6 +27,16 @@ const schema = {
       url: 'https://truejoybirthing.com/invite/',
       description: pageDesc,
       publisher: { '@id': 'https://truejoybirthing.com/#organization' },
+      isPartOf: { '@id': 'https://truejoybirthing.com/#website' },
+      breadcrumb: { '@id': 'https://truejoybirthing.com/invite/#breadcrumb' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://truejoybirthing.com/invite/#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://truejoybirthing.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Invite', item: 'https://truejoybirthing.com/invite/' },
+      ],
     },
     {
       '@type': 'FAQPage',
@@ -76,9 +86,12 @@ const schema = {
   canonical="https://truejoybirthing.com/invite/"
   breadcrumbList={breadcrumbList}
   schema={schema}
+  noindex={true}
+  ogImageAlt="True Joy Birthing app, birth plan builder screen"
 >
   <!-- ═══ Hero — Split Layout ═══ -->
   <section class="bg-tjb-cream pt-16 pb-12">
+    <nav class="max-w-6xl mx-auto px-6 pt-4" aria-label="Breadcrumb"><ol class="flex items-center gap-2 text-sm text-tjb-gray"><li><a href="/" class="hover:underline">Home</a></li><li aria-hidden="true">/</li><li class="text-tjb-charcoal font-medium" aria-current="page">Invite</li></ol></nav>
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div>
@@ -90,6 +103,7 @@ const schema = {
             </svg>
             <span>Loading your invitation…</span>
           </div>
+          <noscript><style>#invite-loading { display: none !important; }</style></noscript>
 
           <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">You've been invited</p>
           <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
@@ -97,16 +111,21 @@ const schema = {
             Welcome to True Joy Birthing
           </h1>
           <p id="invite-subtitle" class="text-lg text-tjb-charcoal font-semibold mb-2">
-            True Joy Birthing is a free birth plan app and birth team communication tool for expectant moms, doulas, and midwives.
+            The free app your birth team uses to share your plan and stay connected.
           </p>
           <p id="invite-subtitle-2" class="text-tjb-gray mb-6">
-            Build your birth plan, connect with your care team, and feel confident going into your delivery.
+            Build your <a href="/birth-plan-template/" class="text-tjb-lavender-600 hover:underline">birth plan</a>, connect with your care team, and feel confident going into your delivery.
           </p>
-          <div class="flex flex-col sm:flex-row gap-3">
-            <a href={APP_STORE_URL} class="btn-primary text-center" id="hero-cta-appstore">Download on the App Store</a>
-            <a href={GOOGLE_PLAY_URL} class="btn-secondary text-center" id="hero-cta-googleplay">Get it on Google Play</a>
+          <div class="flex flex-col sm:flex-row gap-3 items-start">
+            <a href={APP_STORE_URL} class="inline-block focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 transition-opacity hover:opacity-90" style="line-height:0" id="hero-cta-appstore" rel="noopener">
+              <img src="/images/app-store-badge.svg" alt="Download on the App Store" class="h-12 w-auto" width="120" height="40" loading="eager" />
+            </a>
+            <a href={GOOGLE_PLAY_URL} class="inline-block focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 transition-opacity hover:opacity-90" style="line-height:0" id="hero-cta-googleplay" rel="noopener">
+              <img src="/images/google-play-badge.png" alt="Get it on Google Play" class="h-12 w-auto" width="159" height="48" loading="eager" />
+            </a>
           </div>
           <p class="text-xs text-tjb-gray mt-3">Free. No account needed to start.</p>
+          <p class="text-xs text-tjb-gray mt-2">Your birth plan is private. Only your care team can see it.</p>
           <!-- Personal message container (hidden until invite data loads) -->
           <div id="invite-message-wrap" class="hidden mt-6 p-4 bg-white rounded-xl border border-tjb-lavender-200/60">
             <p class="text-xs uppercase tracking-widest text-tjb-rose-500 font-semibold mb-2">A message from <span id="invite-message-from">your inviter</span></p>
@@ -125,8 +144,8 @@ const schema = {
               class="w-full rounded-2xl shadow-lg"
               loading="eager"
               fetchpriority="high"
-              width="600"
-              height="400"
+              width="390"
+              height="844"
             />
           </picture>
         </div>
@@ -167,13 +186,13 @@ const schema = {
           <p class="text-sm text-tjb-gray">Chat with your birth team inside the app. Schedule appointments, share updates, and keep everything in one place.</p>
         </div>
         <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
-          <div class="w-10 h-10 rounded-lg bg-tjb-lavender-100 flex items-center justify-center mb-4">
-            <svg class="w-5 h-5 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          <div class="w-10 h-10 rounded-lg bg-tjb-rose-50 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
             </svg>
           </div>
-          <p class="font-semibold text-tjb-charcoal mb-2">Manage your practice with TJB Pro</p>
-          <p class="text-sm text-tjb-gray">Birth professionals get a 14-day free trial of TJB Pro. Manage clients, birth plans, and scheduling in one place.</p>
+          <p class="font-semibold text-tjb-charcoal mb-2">Birth education video guidance</p>
+          <p class="text-sm text-tjb-gray">Walk through every birth decision with video guidance from a certified doula. Understand your options before you deliver.</p>
         </div>
         <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
           <div class="w-10 h-10 rounded-lg bg-tjb-rose-50 flex items-center justify-center mb-4">
@@ -252,6 +271,13 @@ const schema = {
     </div>
   </section>
 
+  <!-- ═══ Creator Trust Marker ═══ -->
+  <section class="py-8 bg-white">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-sm text-tjb-gray">Created by Shelbi, certified birth doula</p>
+    </div>
+  </section>
+
   <!-- ═══ Download CTA ═══ -->
   <section class="py-20 bg-tjb-cream">
     <div class="max-w-3xl mx-auto px-6 text-center">
@@ -264,10 +290,10 @@ const schema = {
         Free for moms. 14-day free trial for birth professionals.
       </p>
       <div class="flex flex-wrap gap-4 justify-center items-center mb-6">
-        <a href={APP_STORE_URL} class="inline-block focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 transition-opacity hover:opacity-90" style="line-height:0">
+        <a href={APP_STORE_URL} class="inline-block focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 transition-opacity hover:opacity-90" style="line-height:0" rel="noopener">
           <img src="/images/app-store-badge.svg" alt="Download on the App Store" class="h-12 w-auto" width="120" height="40" loading="lazy" />
         </a>
-        <a href={GOOGLE_PLAY_URL} class="inline-block focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 transition-opacity hover:opacity-90" style="line-height:0">
+        <a href={GOOGLE_PLAY_URL} class="inline-block focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 transition-opacity hover:opacity-90" style="line-height:0" rel="noopener">
           <img src="/images/google-play-badge.png" alt="Get it on Google Play" class="h-12 w-auto" width="159" height="48" loading="lazy" />
         </a>
       </div>
@@ -278,44 +304,130 @@ const schema = {
   <!-- ═══ Client-side invite data fetch ═══ -->
   <script is:inline>
     (function () {
-      const API_BASE = 'https://api.truejoybirthing.com';
+      var API_BASE = 'https://api.truejoybirthing.com';
+      var FETCH_TIMEOUT_MS = 8000;
+      var TRACK_KEY_PREFIX = 'tjb_invite_tracked_';
+      var INVITE_ID_RE = /^[a-zA-Z0-9_-]+$/;
+
+      // Abort any in-flight fetch from a previous view transition to prevent
+      // out-of-order resolution races.
+      if (window.__tjbInviteController) {
+        try { window.__tjbInviteController.abort(); } catch (e) {}
+      }
+      var controller = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+      window.__tjbInviteController = controller;
+      var timeoutId = null;
+      if (controller) {
+        timeoutId = window.setTimeout(function () { controller.abort(); }, FETCH_TIMEOUT_MS);
+      }
+
       // Extract invite_id from URL path: /invite/inv_abc123 -> inv_abc123
-      const path = window.location.pathname;
-      const parts = path.split('/').filter(Boolean); // ['invite', 'inv_abc123']
-      const inviteId = parts.length > 1 && parts[0] === 'invite' ? parts[1] : null;
+      var path = window.location.pathname;
+      var parts = path.split('/').filter(Boolean); // ['invite', 'inv_abc123']
+      var inviteId = parts.length > 1 && parts[0] === 'invite' ? parts[1] : null;
 
-      // If no invite_id in URL, leave the generic welcome as-is
-      if (!inviteId) return;
+      // Query param fallback: /invite/?id=inv_abc123
+      if (!inviteId) {
+        try {
+          var qp = new URLSearchParams(window.location.search).get('id');
+          if (qp) inviteId = qp;
+        } catch (e) {}
+      }
 
-      const headlineEl = document.getElementById('invite-headline');
-      const subtitleEl = document.getElementById('invite-subtitle');
-      const subtitle2El = document.getElementById('invite-subtitle-2');
-      const msgWrap = document.getElementById('invite-message-wrap');
-      const msgFromEl = document.getElementById('invite-message-from');
-      const msgTextEl = document.getElementById('invite-message-text');
-      const valueIntroEl = document.getElementById('value-props-intro');
-      const vp1El = document.getElementById('value-prop-1');
-      const dlHeadlineEl = document.getElementById('download-headline');
-      const dlSubtitleEl = document.getElementById('download-subtitle');
-      const loadingEl = document.getElementById('invite-loading');
+      var loadingEl = document.getElementById('invite-loading');
 
-      // Fire-and-forget track-open
+      function hideLoading() {
+        if (loadingEl) loadingEl.classList.add('hidden');
+      }
+
+      // If no invite_id in URL, hide spinner and leave the generic welcome as-is
+      if (!inviteId) {
+        hideLoading();
+        return;
+      }
+
+      // Sanitize + validate inviteId format
+      inviteId = (inviteId || '').trim();
+      if (!inviteId || !INVITE_ID_RE.test(inviteId)) {
+        hideLoading();
+        return;
+      }
+
+      var headlineEl = document.getElementById('invite-headline');
+      var subtitleEl = document.getElementById('invite-subtitle');
+      var subtitle2El = document.getElementById('invite-subtitle-2');
+      var msgWrap = document.getElementById('invite-message-wrap');
+      var msgFromEl = document.getElementById('invite-message-from');
+      var msgTextEl = document.getElementById('invite-message-text');
+      var valueIntroEl = document.getElementById('value-props-intro');
+      var vp1El = document.getElementById('value-prop-1');
+      var dlHeadlineEl = document.getElementById('download-headline');
+      var dlSubtitleEl = document.getElementById('download-subtitle');
+
+      // Fire-and-forget track-open with sessionStorage dedup (once per session per invite)
+      var trackKey = TRACK_KEY_PREFIX + inviteId;
+      var alreadyTracked = false;
       try {
-        fetch(API_BASE + '/api/invites/' + encodeURIComponent(inviteId) + '/track-open', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({}),
-          keepalive: true,
-        }).catch(function () {});
+        alreadyTracked = sessionStorage.getItem(trackKey) === '1';
       } catch (e) {}
 
+      if (!alreadyTracked) {
+        try {
+          var trackUrl = API_BASE + '/api/invites/' + encodeURIComponent(inviteId) + '/track-open';
+          var trackBody = JSON.stringify({});
+          if (navigator && typeof navigator.sendBeacon === 'function') {
+            var blob = new Blob([trackBody], { type: 'application/json' });
+            var queued = navigator.sendBeacon(trackUrl, blob);
+            // sendBeacon returns false if the browser couldn't queue it
+            if (queued) {
+              try { sessionStorage.setItem(trackKey, '1'); } catch (e) {}
+            } else {
+              // Fall back to fetch with keepalive
+              fetch(trackUrl, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: trackBody,
+                keepalive: true,
+              }).then(function () {
+                try { sessionStorage.setItem(trackKey, '1'); } catch (e) {}
+              }).catch(function () {
+                // Remove flag so it can retry next load — but if no flag was
+                // set, just leave things as-is (nothing to remove).
+              });
+            }
+          } else {
+            // sendBeacon not available — use fetch with keepalive
+            fetch(trackUrl, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: trackBody,
+              keepalive: true,
+            }).then(function () {
+              try { sessionStorage.setItem(trackKey, '1'); } catch (e) {}
+            }).catch(function () {
+              // Remove flag so it can retry next load
+              try { sessionStorage.removeItem(trackKey); } catch (e) {}
+            });
+          }
+        } catch (e) {}
+      }
+
       // Fetch invite data
-      fetch(API_BASE + '/api/invites/' + encodeURIComponent(inviteId), {
-        headers: { 'Accept': 'application/json' },
-      })
-        .then(function (res) { return res.json(); })
+      var fetchOpts = { headers: { 'Accept': 'application/json' } };
+      if (controller) {
+        fetchOpts.signal = controller.signal;
+      }
+
+      fetch(API_BASE + '/api/invites/' + encodeURIComponent(inviteId), fetchOpts)
+        .then(function (res) {
+          if (!res.ok) {
+            throw new Error('HTTP ' + res.status);
+          }
+          return res.json();
+        })
         .then(function (data) {
-          loadingEl && loadingEl.classList.add('hidden');
+          if (timeoutId) window.clearTimeout(timeoutId);
+          hideLoading();
 
           if (!data || data.status === 'expired' || data.status === 'invalid' || data.status === 'not_found') {
             // Keep generic welcome — already rendered
@@ -368,9 +480,10 @@ const schema = {
           // Update document title
           document.title = inviterName + ' invited you to True Joy Birthing';
         })
-        .catch(function () {
+        .catch(function (err) {
+          if (timeoutId) window.clearTimeout(timeoutId);
           // On error, keep generic welcome (already rendered)
-          loadingEl && loadingEl.classList.add('hidden');
+          hideLoading();
         });
     })();
   </script>

@@ -3,6 +3,13 @@
 # https://developers.cloudflare.com/pages/configuration/redirects/
 
 # ════════════════════════════════════════════════════════════
+# INVITE DEEP-LINK REWRITES (must be first — top-down processing)
+# Rewrite /invite/* paths to the static invite page so deep-linked
+# invite URLs (e.g. /invite/inv_abc123) don't 404 on Cloudflare Pages.
+# ════════════════════════════════════════════════════════════
+/invite/* /invite/index.html 200
+
+# ════════════════════════════════════════════════════════════
 # OLD WORDPRESS BLOG POSTS → NEW ASTRO SLUGS
 # ════════════════════════════════════════════════════════════
 

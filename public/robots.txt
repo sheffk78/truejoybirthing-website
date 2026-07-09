@@ -1,6 +1,7 @@
 # Allow all search and citation crawlers
 User-agent: *
 Allow: /
+Disallow: /invite/inv_*
 
 # Block Cloudflare Pages preview URLs
 User-agent: *
