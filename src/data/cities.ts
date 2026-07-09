@@ -1949,7 +1949,7 @@ export const cities: Record<string, CityData> = {
     costLow: 900,
     costHigh: 2200,
     shelbiServesHere: false,
-    heroImage: "/images/bakersfield-ca-birth-doula-skyline.webp",
+    heroImage: "/images/bakersfield-ca-birth-doula-skyline-v2.webp",
     ogImage: "/images/og-city-bakersfield-ca.webp",
     localDoulas: [
       { name: "In the Waiting Doula Services" , credential: "Birth Doula" , practice: "In the Waiting Doula Services" , url: "https://www.instagram.com/inthewaitingdoulaservices/" , photo: "/images/providers/bakersfield-ca-in-the-waiting-doula-services.webp" , description: "In the Waiting Doula Services provides culturally conscious birth support for Black, Indigenous, and Latino families in Bakersfield. Founded with a mission to ensure all communities have access to skilled doula care, their services include prenatal education, labor and birth support, and postpartum transitions.", costRange: "$900–$2,200", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Bakersfield, CA"] },
