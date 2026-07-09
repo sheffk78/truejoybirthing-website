@@ -417,4 +417,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M59S",
     uploadDate: "2026-07-09T00:00:00-05:00",
 },
+"aurora-co": {
+    videoId: "CEbAcPaEOqE",
+    title: "Aurora CO Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Colorado Medicaid, all in under 3 minutes.",
+    duration: "PT3M3S",
+    uploadDate: "2026-07-09T00:00:00-06:00",
+},
 };
