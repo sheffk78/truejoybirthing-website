@@ -52,13 +52,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
   // cary-nc video removed: _4RaZyOaYeY was set to private/deleted. Needs re-record.
-  "dallas-tx": {
-    videoId: "FWBt55sIgAY",
-    title: "Dallas Doula & Birth Plan Guide",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 4 minutes.",
-    duration: "PT3M59S",
-    uploadDate: "2026-06-29T00:00:00-06:00",
-  },
+  // dallas-tx video removed: city page never built (404), stale embed causing false health sweep alarms.
   "chesapeake-va": {
     videoId: "RAvfrkNKmOQ",
     title: "Chesapeake Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -250,13 +244,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M58S",
     uploadDate: "2026-06-27T00:00:00-06:00",
   },
-  "atlanta-ga": {
-    videoId: "Zu4JLkgYfEY",
-    title: "Atlanta Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Georgia Medicaid, all in under 4 minutes.",
-    duration: "PT4M01S",
-    uploadDate: "2026-06-26T00:00:00-06:00",
-  },
+  // atlanta-ga video removed: city page returns 404, removed from cities.ts. Stale embed causing false alarms.
   "baltimore-md": {
     videoId: "CVb6u01Okqs",
     title: "Baltimore Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -409,5 +397,26 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
     duration: "PT2M43S",
     uploadDate: "2026-07-08T00:00:00-04:00",
+},
+"allen-tx": {
+    videoId: "99qnLrYJGMg",
+    title: "Allen TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT4M48S",
+    uploadDate: "2026-07-08T00:00:00-05:00",
+},
+"amarillo-tx": {
+    videoId: "IvyDHqxqkgk",
+    title: "Amarillo TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 4 minutes.",
+    duration: "PT3M52S",
+    uploadDate: "2026-07-08T00:00:00-05:00",
+},
+"arlington-tx": {
+    videoId: "9U9P3biXry8",
+    title: "Arlington TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 4 minutes.",
+    duration: "PT3M59S",
+    uploadDate: "2026-07-09T00:00:00-05:00",
 },
 };
