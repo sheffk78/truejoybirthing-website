@@ -151,15 +151,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M07S",
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
-  // minneapolis-mn video removed: PisXj2I4Kxc was deleted/unlisted on YouTube.
-  // Local MP4 and scene data still exist in the remotion project — needs re-upload to YouTube.
-  // "minneapolis-mn": {
-  //   videoId: "PisXj2I4Kxc",
-  //   title: "Minneapolis Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-  //   description: "Watch the full city guide — doulas, hospitals, costs, and Minnesota Medicaid, all in under 3 minutes.",
-  //   duration: "PT2M10S",
-  //   uploadDate: "2026-06-23T00:00:00-07:00",
-  // },
+  "minneapolis-mn": {
+    videoId: "vbf80zB_5aU",
+    title: "Minneapolis Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Minnesota Medicaid, all in under 3 minutes.",
+    duration: "PT2M10S",
+    uploadDate: "2026-07-09T00:00:00-05:00",
+  },
   "new-york-ny": {
     videoId: "d8wNiNe1VCc",
     title: "New York City Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
