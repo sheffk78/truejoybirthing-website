@@ -114,6 +114,14 @@ export interface CityData {
     credentialTypes: string;      // e.g. " and RMs" for CO, " and LMs" for WA, "" for generic
     credentialDetail: string;     // e.g. "In Colorado, Registered Midwives (RMs) are specifically licensed..."
   };
+  birthStats?: {                   // City/state birth statistics for "Birth in {City}: By the Numbers" section
+    cesareanRate?: number;          // Percentage of births via cesarean (e.g. 34.5)
+    maternalMortalityRate?: number; // Deaths per 100,000 live births (e.g. 28.2)
+    homeBirthRate?: number;         // Percentage of births at home (e.g. 1.5)
+    birthCenterBirthRate?: number;  // Percentage of births in freestanding birth centers (e.g. 0.5)
+    dataYear?: number;             // Year the data was collected (e.g. 2023)
+    dataSource?: string;           // Source attribution (e.g. "CDC NCHS, National Vital Statistics System")
+  };
 }
 
 export const cities: Record<string, CityData> = {
@@ -361,7 +369,7 @@ export const cities: Record<string, CityData> = {
     supportSceneImage: "/images/austin-tx-birth-doula-support.webp",
     supportSceneAlt: "A doula walking alongside a pregnant woman in an Austin park at golden hour",
     localDoulas: [
-      { name: "Circle Birth" , credential: "Birth Doula" , practice: "Circle Birth" , url: "https://www.circlebirth.com/" , photo: "/images/provider-austin-tx-circle-birth.webp", description: "Birth is an Austin-based, family-operated doula agency providing non-clinical birth and postpartum support. Our team offers daytime and overnight postpartum ...", costRange: "$1,000-$3,000", acceptingClients: true, isVerified: false, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Austin, TX"] },
+      { name: "Circle Birth" , credential: "Birth Doula" , practice: "Circle Birth" , url: "https://www.circlebirth.com/" , photo: "/images/provider-austin-tx-circle-birth.webp", description: "Birth is an Austin-based, family-operated doula agency providing non-clinical birth and postpartum support. Our team offers daytime and overnight postpartum ...", costRange: "$1,000-$3,000", acceptingClients: true, isVerified: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Austin, TX"] },
       { name: "Doulas of Austin" , credential: "Birth Doula" , practice: "Doulas of Austin" , url: "https://www.doulasofaustin.com/" , photo: "/images/provider-austin-tx-doulas-of-austin.webp", description: "Comprehensive Doula Services In Austin, TX & Online Expert, personalized support for birth, postpartum, and newborn care. Based in Austin, Texas and available ...", costRange: "$1,200-$2,800", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Austin, TX"] },
       { name: "ATX Doulas" , credential: "Birth Doula" , practice: "ATX Doulas" , url: "https://www.atxdoulas.com/" , photo: "/images/provider-austin-tx-atx-doulas.webp", description: "We are an experienced team of passionate birth and postpartum doulas supporting over 200 births per year and providing thousands of hours of postpartum care.", costRange: "$1,200-$3,000", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Austin, TX"] },
       { name: "Austin Birth Company" , credential: "Birth Doula" , practice: "Austin Birth Company" , url: "https://austinbirthcompany.com/our-doulas/" , photo: "/images/provider-austin-tx-austin-birth-company.webp" , description: "Austin Birth Company is a collective of experienced birth and postpartum doulas serving Austin families. Located at 2111 Dickson Drive, Suite 20, Austin, TX 78704. Call (512) 900-5987.", costRange: "$1,000-$2,500", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Austin, TX"] },
@@ -388,7 +396,16 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in Austin?" , a: "Yes, Austin hospitals generally welcome doulas as part of your labor support team. Call your hospital's maternity unit before your due date to confirm their current policies." },
       { q: "What should I budget for a doula in Austin?" , a: "Doula costs in Austin typically range from $1,200 to $2,500 depending on experience and services included. Some doulas offer sliding scale or payment plans." }
     ],
-    nearbyCities: ["denver-co"]},
+    nearbyCities: ["denver-co"],
+    birthStats: {
+      cesareanRate: 34.5,
+      maternalMortalityRate: 28.2,
+      homeBirthRate: 1.4,
+      birthCenterBirthRate: 0.4,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+  },
   "augusta-ga": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -457,7 +474,7 @@ export const cities: Record<string, CityData> = {
       { name: "Atlanta Family Doulas" , credential: "Birth Doula" , practice: "Atlanta Family Doulas" , url: "https://www.atlantafamilydoulas.com/" , photo: "/images/providers/atlanta-ga-family-doulas.webp", description: "BEST DOULAS IN ATLANTA! Atlanta Family Doulas' exceptional support is backed by our evidence-based knowledge, and our decades of hands-on experience. As an ...", costRange: "$1,000–$3,000", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Atlanta, GA"] },
       { name: "Atlanta Birth Doulas" , credential: "Birth Doula" , practice: "Atlanta Birth Doulas" , url: "https://theatlantadoula.com/atlanta-birth-doulas/" , photo: "/images/providers/atlanta-ga-birth-doulas.webp", description: "Atlanta Birth Doula Services. BOOK A FREE ... Our office is located within the Atlanta Birth Center. 1 Baltimore Place NW Suite 140. Atlanta, GA 30308.", costRange: "$1,000–$3,000", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Atlanta, GA"] },
       { name: "Lauren Hise & Courtney" , credential: "Birth Doula" , practice: "Doulas of ATL" , url: "https://www.doulasofatl.com/" , photo: "/images/provider-atlanta-ga-doulas-of-atl.webp", description: "Doulas of ATL provides mindful and inclusive birth and postpartum support in Metro Atlanta. Co-founders Lauren and Courtney view birth as a transformative portal, combining evidence-based resources with ancestral wisdom. They work in teams so you get TWO doulas, offer 1:1 coaching calls with each parent, and are Carrot Fertility Approved Doulas.", costRange: "$2,600–$3,080", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Childbirth Education" , "Prenatal Yoga"], serviceArea: ["Atlanta, GA" , "Roswell, GA" , "Sandy Springs, GA" , "Decatur, GA"] },
-      { name: "Evonna Christmon" , credential: "Birth Doula (DONA Certified)" , practice: "Earthside with Evonna Birth Services" , url: "https://www.evonnachristmon.com/" , photo: "/images/provider-atlanta-ga-evonna-christmon.webp", description: "Earthside with Evonna Birth Services is a team of full-spectrum doulas rooted in Afro-Indigenous and Southern African American traditions, integrating ancestral practices with modern care. Founder Evonna Christmon is a DONA Certified Doula, Holistic Birth Doula, CAPPA Certified Childbirth Educator, and Community Health Worker. They specialize in maternal healing ceremonies including womb massage, closing of the bones, and blessingways for Black and rural Georgia families.", costRange: "$1,000–$3,000", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Childbirth Education" , "Placenta Encapsulation" , "Lactation Education"], serviceArea: ["Atlanta, GA" , "Griffin, GA" , "Spalding County, GA" , "Central Georgia"] },
+      { name: "Evonna Christmon Marshall" , credential: "Birth Doula (DONA Certified)" , practice: "Earthside with Evonna Birth Services" , url: "https://www.evonnachristmon.com/" , photo: "/images/provider-atlanta-ga-evonna-christmon.webp", description: "Birth is deeply personal and so is the support you deserve. I care for pregnant and postpartum families through doula services to restorative postpartum ceremonies with a genuine respect for your unique journey.", costRange: "$1,000–$3,000", acceptingClients: true, isVerified: true, services: ["Birth Doula" , "Postpartum Doula" , "Childbirth Education" , "Placenta Encapsulation" , "Lactation Education"], serviceArea: ["Atlanta, GA" , "Griffin, GA" , "Spalding County, GA" , "Central Georgia"] },
       { name: "Crystal Bailey, CNM" , credential: "Certified Nurse Midwife (CNM)" , practice: "Moonlight Midwifery" , url: "https://moonlightmidwifery.com/" , photo: "/images/provider-atlanta-ga-crystal-bailey.webp", description: "Crystal Bailey is a Certified Nurse Midwife, Advanced Practice Registered Nurse, and Doctor of Naturopathy with over 19 years of midwifery experience and 1,200+ births. She graduated from Emory University's Nurse Midwifery program and offers holistic homebirth midwifery in Atlanta, combining the midwifery model with naturopathic care. Her global midwifery fee covers prenatal care, birth attendance, and newborn care with on-call availability 24/7 from 37-42 weeks.", costRange: "$3,000–$5,000 (global midwifery fee, $500 deposit, monthly payments, pay in full by 37 weeks)", acceptingClients: true, services: ["Homebirth Midwifery" , "Prenatal Care" , "Postpartum Care" , "Newborn Care" , "Naturopathy"], serviceArea: ["Atlanta, GA" , "Decatur, GA" , "Metro Atlanta, GA"] },
       { name: "Columbia" , credential: "Birth Doula" , practice: "A Helping Hand Doula Services" , url: "https://ahelpinghanddoula.com/" , photo: "/images/provider-atlanta-ga-columbia-helping-hand.webp", description: "A Helping Hand Doula Services offers holistic, evidence-based doula care across Metro Atlanta. Columbia is a full-spectrum doula who supports births at home, Atlanta Birth Center, Kennestone, North Fulton, and other area hospitals. She also provides abortion doula services and birth photography, believing information is the greatest tool for empowered birthing.", costRange: "$1,200–$2,200", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Birth Photography" , "Abortion Doula Support"], serviceArea: ["Atlanta, GA" , "Metro Atlanta, GA"] },
       { name: "Margaret Byrne, CPM" , credential: "Certified Professional Midwife (CPM), Licensed Midwife, DONA Certified Doula, LMT" , practice: "Empowered Birth Atlanta" , url: "https://www.empoweredbirthatlanta.com/" , photo: "/images/provider-atlanta-ga-margaret-byrne.webp", description: "Empowered Birth Atlanta was founded in 2013 by Margaret Byrne, a Certified Professional Midwife, DONA Certified Doula, and Licensed Massage Therapist specializing in Arvigo Maya Abdominal Therapy. She has attended hundreds of births in homes, hospitals, and birth centers, offering homebirth midwifery with hour-long prenatal visits, in-home postpartum care, and trained birth assistant attendance.", costRange: "$3,000–$5,000", acceptingClients: true, services: ["Homebirth Midwifery" , "Birth Doula" , "Postpartum Care" , "Prenatal Massage" , "Arvigo Maya Abdominal Therapy"], serviceArea: ["Atlanta, GA"] },
@@ -484,7 +501,16 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals in Atlanta accommodate birth plans?" , a: "Northside Hospital Atlanta (Level III NICU and Level IV Maternal Care, verified on northside.com), Emory University Hospital Midtown (Level III NICU, verified on emoryhealthcare.org), and Piedmont Atlanta Hospital (Level III NICU, verified on piedmont.org) all accommodate birth plans. Northside handles the highest birth volume in the country. Always confirm your hospital's current visitor and support-person policies during your tour." },
       { q: "How much does a doula cost in Atlanta?" , a: "Expect to pay $1,000 to $3,000 for a doula in Atlanta. If you're looking for bilingual support, reach out early — those spots fill fast. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
       { q: "Does True Joy Birthing work with Atlanta families?" , a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Atlanta birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." } ],
-    nearbyCities: ["cumming-ga" , "greenville-sc"]},
+    nearbyCities: ["cumming-ga" , "greenville-sc"],
+    birthStats: {
+      cesareanRate: 34.9,
+      maternalMortalityRate: 32.1,
+      homeBirthRate: 0.9,
+      birthCenterBirthRate: 0.3,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+  },
   "fort-collins-co": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -923,7 +949,16 @@ export const cities: Record<string, CityData> = {
       { q: "What does a doula cost in Seattle?" , a: "Seattle birth doula fees typically range from $1,500 to $4,500, with most experienced doulas in the $2,000 to $3,000 range. Postpartum doulas run $35 to $65 per hour. If you have Apple Health (Medicaid), doula services are covered at approximately $1,500 per birth package." },
       { q: "Are birth centers in Seattle covered by insurance?" , a: "Yes. Most Washington commercial plans and Apple Health (Medicaid) cover licensed birth center births. The Center for Birth in Eastlake is in-network with most major insurers and accepts Apple Health. Verify your specific plan's in-network status before booking." },
       { q: "How far are Seattle birth centers from hospital backup?" , a: "The Center for Birth in Eastlake is approximately 5 minutes from Swedish First Hill by car. Puget Sound Birth Center in Kirkland is about 15 minutes from Overlake Medical Center in Bellevue. Factor in I-5 traffic during rush hour when planning your route." } ],
-  nearbyCities: ["tacoma-wa" , "spokane-wa" , "portland-or"]},
+  nearbyCities: ["tacoma-wa" , "spokane-wa" , "portland-or"],
+  birthStats: {
+    cesareanRate: 30.5,
+    maternalMortalityRate: 18.0,
+    homeBirthRate: 2.3,
+    birthCenterBirthRate: 0.9,
+    dataYear: 2023,
+    dataSource: "CDC NCHS, National Vital Statistics System",
+  },
+  },
   "tacoma-wa": {
     city: "Tacoma" ,
     state: "WA" ,
@@ -1119,7 +1154,7 @@ export const cities: Record<string, CityData> = {
       { name: "Libby Doyle" , credential: "Birth Doula (DONA-trained)" , practice: "Singing Earth Births" , url: "https://www.singing-earth.com/" , photo: "/images/provider-los-angeles-ca-libby-doyle.webp", description: "Birth doula serving LA families with personalized support. Package includes 2-3 prenatal appointments, unlimited phone and text support, on-call availability, continuous labor support, and 1 postpartum visit. Volunteer with Joy in Birthing Foundation.", costRange: "$1,850-$2,250 (birth); $50-$75/hr (postpartum)", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Los Angeles, CA"] },
       { name: "Raquel Manini" , credential: "ProDoula Certified Birth & Postpartum Doula" , practice: "All Things Babies LLC" , url: "https://allthingsbabies.com" , photo: "/images/provider-los-angeles-ca-raquel-manini.webp", description: "Over a decade of experience walking alongside families through pregnancy, birth, and postpartum. Bilingual support in English, Spanish, and Portuguese. Birth and postpartum packages available.", costRange: "$2,100-$3,250 (birth); $60-$85/hr (postpartum)", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Los Angeles, CA"] },
       { name: "Sherry Jones" , credential: "Birth Doula" , practice: "Sherry Jones Doula" , url: "https://www.sherrythedoula.com/" , photo: "/images/provider-los-angeles-ca-sherry-jones.webp", description: "Holistic birth, postpartum, and recovery support for growing families in Los Angeles. Building bridges of care that honor your birthing journey with personalized attention.", costRange: "$2,500-$4,000 (birth)", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Los Angeles, CA"] },
-      { name: "Tracy Hartley" , credential: "Birth Doula, Childbirth Educator" , practice: "B*E*S*T Doula Service" , url: "https://bestdoulas.com/" , photo: "", description: "Birth doula and childbirth educator with 30 years of experience supporting 700+ hospital births in Los Angeles. Specializes in hospital birth preparation, virtual and in-person support, and childbirth classes. Recognized expert in hospital birth with documented experience across Los Angeles area hospitals.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Childbirth Education"], serviceArea: ["Los Angeles, CA"] },
+      { name: "tracy hartley" , credential: "Birth Doula, Childbirth Educator" , practice: "B*E*S*T Doula Service" , url: "https://bestdoulas.com/" , photo: "/images/providers/los-angeles-ca-tracy-hartley.jpg", description: "Birth doula and childbirth educator with 30 years of experience supporting 700+ hospital births in Los Angeles. Specializes in hospital birth preparation, virtual and in-person support, and childbirth classes. Recognized expert in hospital birth with documented experience across Los Angeles area hospitals.", costRange: "Contact for pricing", acceptingClients: true, isVerified: true, services: ["Birth Doula" , "Childbirth Education"], serviceArea: ["Los Angeles, CA"] },
       { name: "Postpartum Doula Services" , credential: "Birth Doula" , practice: "MotherBaby Support" , url: "https://motherbabysupport.net/parent-support/postpartum-doula-services/" , photo: "", description: "Free and low-cost doula support in Los Angeles County since 2010. Call (626) 388-2191 ext. 1 or email doula@motherbabysupport.net for community-based care options.", costRange: "Free-$1,500 (sliding scale)", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Los Angeles, CA"] } ],
     culture: "Los Angeles has one of the largest and most diverse birth communities in the country, spanning from celebrity-endorsed boutique doulas to grassroots organizations providing free culturally centered care in South LA and the Eastside. The city's sheer size creates distinct birth microcultures — Silver Lake and Pasadena families often choose birth centers, while Westside families gravitate toward Cedars-Sinai and UCLA. Organizations like the Los Angeles Doula Project and SQUATS are expanding access for underserved communities." ,
     heroLocalDetail: "Navigating birth logistics in LA means factoring in notorious traffic on the 405, 10, and 101 freeways — a 10-mile hospital trip from Venice to Cedars-Sinai can take 20 minutes or over an hour depending on the time of day. Families in the San Fernando Valley typically deliver at Providence Tarzana or Northridge Hospital, while Eastside families use White Memorial or USC Verdugo Hills, and South LA families rely on Centinela or Martin Luther King Jr. Community Hospital." ,
@@ -1413,7 +1448,15 @@ export const cities: Record<string, CityData> = {
       { q: "Can I have a water birth in Phoenix?" , a: "Water birth is available at freestanding birth centers like Natural Birth Center & Women's Wellness. Most Phoenix hospitals allow water immersion during labor but not water birth itself — check your hospital's current policy. Ask your provider about water birth options — and if they say no, it's okay to ask for a second opinion." },
       { q: "Are there Spanish-speaking doulas in Phoenix?" , a: "You deserve a doula who gets your experience. Phoenix has doulas of color who serve families with cultural understanding and real care. Don't settle — keep asking until you find someone who feels right." }
     ],
-    nearbyCities: ["las-vegas-nv"]
+    nearbyCities: ["las-vegas-nv"],
+    birthStats: {
+      cesareanRate: 29.5,
+      maternalMortalityRate: 30.0,
+      homeBirthRate: 1.8,
+      birthCenterBirthRate: 0.6,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
   },
   "chicago-il": {
     enableBlogResources: true,
@@ -1457,7 +1500,16 @@ export const cities: Record<string, CityData> = {
       { q: "Can I have a midwife-attended birth at a Chicago hospital?" , a: "Several Chicago hospitals, including Rush University Medical Center and Advocate Illinois Masonic, have midwifery practices that support low-intervention births within a hospital setting. Ask your provider directly about midwife-attended birth options — you might have more choices than you think." },
       { q: "How do I find a Black doula in Chicago?" , a: "You deserve a doula who gets your experience. Chicago has doulas of color who serve families with cultural understanding and real care. Don't settle — keep asking until you find someone who feels right." }
     ],
-    nearbyCities: ["minneapolis-mn" , "st-paul-mn"]},
+    nearbyCities: ["minneapolis-mn" , "st-paul-mn"],
+    birthStats: {
+      cesareanRate: 30.8,
+      maternalMortalityRate: 18.1,
+      homeBirthRate: 1.1,
+      birthCenterBirthRate: 0.3,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+  },
   "detroit-mi": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
