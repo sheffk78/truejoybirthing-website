@@ -243,6 +243,9 @@ const schema = {
           <h1 class="text-3xl md:text-4xl font-bold mb-4" style="font-family: 'DM Serif Display', Georgia, serif;">{city} Doula & Midwife: Costs, Hospitals & Medicaid</h1>
           <p class="text-lg text-tjb-charcoal font-semibold mb-2">True Joy Birthing is a free birth plan app and doula directory for first-time moms in {city}. Whether you're looking for a <strong>doula or midwife in {city}</strong>, building your birth plan, or figuring out what support even looks like — everything here is free.</p>
           <p class="text-tjb-gray mb-6">Doulas, midwives, hospital policies, and costs, broken down so you can walk in prepared. This guide covers <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">how much doulas cost</a>, <a href="/medicaid-doula-coverage/" class="text-tjb-rose-600 hover:underline">whether Medicaid covers a doula</a>, and which hospitals welcome birth partners. New here? <a href="/what-is-a-doula/" class="text-tjb-rose-600 hover:underline">Learn what a doula actually does</a>.</p>
+          {costLow > 0 && (
+            <p class="mb-6"><span class="inline-flex items-center bg-tjb-rose-50 text-tjb-rose-600 text-sm font-semibold px-3 py-1 rounded-full border border-tjb-rose-200">Birth doula support in {city} starts at ${costLow}</span></p>
+          )}
           <div class="flex flex-col sm:flex-row gap-3">
             <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-primary text-center">Build Your Birth Plan in the App</a>
             <a href="/birth-plan-template/" class="btn-secondary text-center">Or download the free PDF →</a>
@@ -383,13 +386,20 @@ const schema = {
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 not-prose">
           {[...localDoulas].sort((a, b) => (b.isVerified === true ? 1 : 0) - (a.isVerified === true ? 1 : 0)).map((doula) => {
             const verified = doula.isVerified === true;
+            const webVerified = !verified && !!doula.enrichedAt;
             return (
             <div class={`bg-white relative rounded-xl p-6 shadow-sm border hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center ${doula.isAmbassador ? 'border-2 border-tjb-rose-300 shadow-md' : 'border-tjb-lavender-200/50 hover:border-tjb-lavender-300'}`}>
-              {/* Verified badge — sage corner pill */}
+              {/* Verification tier badge */}
               {verified && (
-                <span class="absolute top-3 right-3 inline-flex items-center gap-1 bg-tjb-sage-100 text-tjb-charcoal text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-sage" role="status" aria-label="Verified listing">
+                <span class="absolute top-3 right-3 inline-flex items-center gap-1 bg-tjb-sage-100 text-tjb-charcoal text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-sage" role="status" aria-label="Provider-verified listing">
                   <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M10 3L4.5 8.5L2 6" stroke="#2A2A2A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  Verified
+                  Provider-verified
+                </span>
+              )}
+              {webVerified && (
+                <span class="absolute top-3 right-3 inline-flex items-center gap-1 bg-gray-100 text-gray-500 text-xs font-medium px-2.5 py-0.5 rounded-full border border-gray-300" role="status" aria-label="Web-verified listing">
+                  <svg width="11" height="11" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M10 3L4.5 8.5L2 6" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Web-verified
                 </span>
               )}
               {/* Photo or initial monogram */}

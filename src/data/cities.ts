@@ -76,6 +76,12 @@ export interface LocalDoula {
    * If absent, the provider may not have been individually researched yet.
    */
   enrichedAt?: string;
+  languages?: string[];           // e.g. ["Spanish", "ASL"]
+  virtualConsultations?: boolean; // offers virtual consults
+  slidingScale?: boolean;         // offers sliding scale pricing
+  homeBirthSupport?: boolean;     // supports home births
+  vbacSupportive?: boolean;       // explicitly supports VBAC clients
+  waterBirthSupport?: boolean;    // offers water birth support
 }
 
 export interface CityData {
