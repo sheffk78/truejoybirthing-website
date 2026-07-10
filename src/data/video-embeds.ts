@@ -242,7 +242,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M58S",
     uploadDate: "2026-06-27T00:00:00-06:00",
   },
-  // atlanta-ga video removed: city page returns 404, removed from cities.ts. Stale embed causing false alarms.
+  "atlanta-ga": {
+    videoId: "Zu4JLkgYfEY",
+    title: "Atlanta Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Georgia Medicaid, all in under 4 minutes.",
+    duration: "PT4M01S",
+    uploadDate: "2026-06-26T00:00:00-06:00",
+  },
   "baltimore-md": {
     videoId: "CVb6u01Okqs",
     title: "Baltimore Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",

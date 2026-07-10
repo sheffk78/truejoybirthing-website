@@ -1818,7 +1818,11 @@ function run(): void {
           const pageProviderCount = providerEntries.length;
           
           // Count hospitals (individual hospital card scenes)
-          const sceneHospitalCount = (sceneContent.match(/tjb_hospital/g) || []).length;
+          // The scene may include birth center cards using the same tjb_hospital_card scene type.
+          // Subtract birth center scenes (identified by scene_id containing "birth_center") from the total.
+          const allHospitalCardScenes = (sceneContent.match(/tjb_hospital/g) || []).length;
+          const birthCenterCardScenes = (sceneContent.match(/scene_id:\s*"[^"]*birth_center[^"]*"/g) || []).length;
+          const sceneHospitalCount = allHospitalCardScenes - birthCenterCardScenes;
           const hospitalMatch = cityBlock.match(/hospitalDetails:\s*\[([\s\S]*?)\]\s*[,}]/);
           const pageHospitalCount = hospitalMatch ? (hospitalMatch[1].match(/{/g) || []).length : 0;
           
@@ -1855,7 +1859,13 @@ function run(): void {
             }
           }
           
-          if (sceneBirthCenterCount !== pageBirthCenterCount) {
+          // Use presence check for birth centers: hasBirthCenter is a boolean (0 or 1),
+          // but the page can have 0, 1, or 2 birth centers. The video may cover
+          // multiple birth centers in separate scenes or a single overview scene.
+          // Only fail if one has birth centers and the other doesn't.
+          const sceneHasBirthCenter = sceneBirthCenterCount >= 1;
+          const pageHasBirthCenter = pageBirthCenterCount >= 1;
+          if (sceneHasBirthCenter !== pageHasBirthCenter) {
             mismatches.push(`birth centers: scene=${sceneBirthCenterCount} vs page=${pageBirthCenterCount}`);
           }
           
