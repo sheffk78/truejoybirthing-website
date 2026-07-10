@@ -5,6 +5,7 @@
 // ═══════════════════════════════════════════════════════════════
 import Layout from '../../layouts/Layout.astro';
 import { cities, citySlugs, type CityData } from '../../data/cities';
+import { stateData, type StateData } from '../../data/states';
 
 const stateNames: Record<string, string> = {
   AK: 'Alaska', AL: 'Alabama', AR: 'Arkansas', AZ: 'Arizona',
@@ -57,6 +58,10 @@ const stateCities = allStateGroups[stateCode] || [];
 const allStateCodes = Object.keys(allStateGroups);
 const totalCities = stateCities.length;
 
+// Look up state-specific enrichment data (falls back to undefined for states
+// not yet in the stateData registry — all 27 pages still render via city aggregates)
+const stateInfo: StateData | undefined = stateData[stateCode];
+
 // Derive aggregate state data from cities
 const costLow = Math.min(...stateCities.map((c) => c.costLow));
 const costHigh = Math.max(...stateCities.map((c) => c.costHigh));
@@ -65,6 +70,10 @@ const medicaidCovers = stateCities.some(
 );
 const representativeMedicaidNote = stateCities[0]?.medicaidNote || '';
 const representativeInsuranceNote = stateCities[0]?.insuranceNote || '';
+
+// Use state-specific Medicaid narrative when available, otherwise fall back
+// to the representative city Medicaid note.
+const medicaidNarrative = stateInfo?.medicaidNarrative || representativeMedicaidNote;
 
 const allHospitals = stateCities.flatMap((c) => c.hospitalDetails.map((h) => h.name));
 const uniqueHospitals = [...new Set(allHospitals)];
@@ -78,6 +87,22 @@ const breadcrumbList = [
   { name: 'Birth Support', url: 'https://truejoybirthing.com/birth-support/' },
   { name: stateFullName, url: pageUrl },
 ];
+
+// Build FAQ schema entries when state-level FAQ data is available
+const stateFaqSchema = stateInfo?.faq && stateInfo.faq.length > 0
+  ? [{
+      '@type': 'FAQPage',
+      '@id': `${pageUrl}#faq`,
+      mainEntity: stateInfo.faq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    }]
+  : [];
 
 const schema = {
   '@context': 'https://schema.org',
@@ -109,6 +134,7 @@ const schema = {
         item: crumb.url,
       })),
     },
+    ...stateFaqSchema,
   ],
 };
 
@@ -194,7 +220,7 @@ const sortedCities = [...stateCities].sort((a, b) => a.city.localeCompare(b.city
             <svg class="w-6 h-6 text-tjb-lavender-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-2.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
             Does Medicaid Cover a Doula in {stateFullName}?
           </h2>
-          <p>{representativeMedicaidNote.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim()}</p>
+          <p>{medicaidNarrative}</p>
           <p>For the full breakdown of which states cover doulas and how to get coverage, see our <a href="/medicaid-doula-coverage/" class="text-tjb-lavender-600 hover:underline">Medicaid doula coverage guide</a>.</p>
           {representativeInsuranceNote && (
             <p class="text-sm text-tjb-gray mt-2" set:html={representativeInsuranceNote} />
@@ -213,6 +239,85 @@ const sortedCities = [...stateCities].sort((a, b) => a.city.localeCompare(b.city
       </div>
     </div>
   </section>
+
+  <!-- DOULA REGULATIONS — State-specific (only when available) -->
+  {stateInfo?.doulaRegulations && (
+    <section class="py-12 bg-white">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="prose">
+          <h2 class="flex items-center gap-2.5 font-bold text-tjb-charcoal" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">
+            <svg class="w-6 h-6 text-tjb-lavender-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Doula Licensing & Regulations in {stateFullName}
+          </h2>
+          <p>{stateInfo.doulaRegulations}</p>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- BIRTH STATS — State-level (only when available) -->
+  {stateInfo?.birthStats && (
+    <section class="py-12 bg-tjb-cream/50">
+      <div class="max-w-5xl mx-auto px-6">
+        <p class="eyebrow mb-3">Birth in {stateFullName}</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">{stateFullName} Birth Statistics: By the Numbers</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {stateInfo.birthStats.cesareanRate !== undefined && (
+            <div class="bg-white border border-tjb-lavender-200 rounded-xl p-5 text-center">
+              <p class="text-3xl font-bold text-tjb-charcoal">{stateInfo.birthStats.cesareanRate}%</p>
+              <p class="text-sm text-tjb-gray mt-1">Cesarean section rate</p>
+            </div>
+          )}
+          {stateInfo.birthStats.maternalMortalityRate !== undefined && (
+            <div class="bg-white border border-tjb-lavender-200 rounded-xl p-5 text-center">
+              <p class="text-3xl font-bold text-tjb-charcoal">{stateInfo.birthStats.maternalMortalityRate}</p>
+              <p class="text-sm text-tjb-gray mt-1">Maternal deaths per 100k live births</p>
+            </div>
+          )}
+          {stateInfo.birthStats.homeBirthRate !== undefined && (
+            <div class="bg-white border border-tjb-lavender-200 rounded-xl p-5 text-center">
+              <p class="text-3xl font-bold text-tjb-charcoal">{stateInfo.birthStats.homeBirthRate}%</p>
+              <p class="text-sm text-tjb-gray mt-1">Home birth rate</p>
+            </div>
+          )}
+          {stateInfo.birthStats.birthCenterBirthRate !== undefined && (
+            <div class="bg-white border border-tjb-lavender-200 rounded-xl p-5 text-center">
+              <p class="text-3xl font-bold text-tjb-charcoal">{stateInfo.birthStats.birthCenterBirthRate}%</p>
+              <p class="text-sm text-tjb-gray mt-1">Birth center birth rate</p>
+            </div>
+          )}
+        </div>
+        {stateInfo.birthStats.dataSource && (
+          <p class="text-xs text-tjb-gray/70 mt-4 italic">
+            Source: {stateInfo.birthStats.dataSource}{stateInfo.birthStats.dataYear ? ` (${stateInfo.birthStats.dataYear} data)` : ''}
+          </p>
+        )}
+      </div>
+    </section>
+  )}
+
+  <!-- STATE FAQ — State-specific (only when available) -->
+  {stateInfo?.faq && stateInfo.faq.length > 0 && (
+    <section class="py-12 bg-white">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="eyebrow mb-3">Common Questions</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+        <h2 class="text-2xl md:text-3xl font-bold mb-6">{stateFullName} Doula FAQ</h2>
+        <div class="space-y-4">
+          {stateInfo.faq.map((item) => (
+            <details class="group border border-tjb-lavender-200 rounded-xl p-5 hover:border-tjb-lavender-300 transition">
+              <summary class="font-semibold text-tjb-charcoal cursor-pointer flex items-start gap-3 list-none">
+                <svg class="w-5 h-5 text-tjb-lavender-500 mt-0.5 flex-shrink-0 transition-transform group-open:rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                {item.question}
+              </summary>
+              <p class="text-tjb-gray mt-3 ml-8 leading-relaxed">{item.answer}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- CITY GRID — All cities in this state -->
   <section class="py-16 bg-white">

@@ -29,6 +29,7 @@ const {
   testimonials,
   heroImage: heroImageSlug, supportSceneImage, supportSceneAlt, ogImage: ogImageSlug,
   midwifeInfo,
+  birthStats,
 }: CityData = data;
 
 // Medicaid helper (must come before pageDesc)
@@ -50,6 +51,121 @@ const doulaCostLinkIndex = slug.split('').reduce((acc, c) => acc + c.charCodeAt(
 const doulaCostLinkHtml = doulaCostLinkVariants[doulaCostLinkIndex].replace(/{city}/g, city);
 const hasBirthCenters = birthCenterDetails.some((bc) => !bc.name.toLowerCase().includes('no '));
 
+// ═══ Filter bar data — collect available filter values from localDoulas ═══
+// Only show filter chips for values that exist in this city's doulas
+const filterServiceValues = new Set<string>();
+const filterLanguageValues = new Set<string>();
+let filterHasMedicaid = false;
+let filterHasAccepting = false;
+let filterHasMidwife = false;
+const filterCostTiers = new Set<string>();
+
+const slugify = (s: string) => s.toLowerCase().trim().replace(/\s+/g, '-');
+
+localDoulas?.forEach((d) => {
+  d.services?.forEach((s) => filterServiceValues.add(s));
+  d.languages?.forEach((l) => filterLanguageValues.add(l));
+  if (d.acceptsMedicaid) filterHasMedicaid = true;
+  if (d.acceptingClients) filterHasAccepting = true;
+  if (d.isMidwife) filterHasMidwife = true;
+  if (d.costRange) {
+    const m = d.costRange.match(/\$([\d,]+)/);
+    if (m) {
+      const low = parseInt(m[1].replace(/,/g, ''));
+      if (low < 1000) filterCostTiers.add('under-1000');
+      else if (low <= 2000) filterCostTiers.add('1000-2000');
+      else filterCostTiers.add('over-2000');
+    }
+  }
+});
+
+const showFilterBar = (localDoulas?.length || 0) >= 2 && (
+  filterServiceValues.size > 0 || filterHasMedicaid || filterHasAccepting ||
+  filterHasMidwife || filterCostTiers.size > 0 || filterLanguageValues.size > 0
+);
+
+// ═══ Phase 3B: Compute neighborhoods for internal linking ═══
+// Collect valid neighborhood names from serviceArea[] using same filter logic
+// as [neighborhood].astro, so we can link to neighborhood pages from the city page.
+const GARBAGE_KEYWORDS_NH = [
+  'mile', 'service range', 'county', 'metroplex', 'greater',
+  'surrounding', 'area', 'region', 'central', 'radius',
+  'metropolitan', 'metro area', 'metro', 'driving', 'travel',
+  'within', 'extended', 'including', 'throughout', 'miles',
+  'mile radius', 'statewide', 'nearby', 'virtual', 'panhandle',
+  'remote', 'online', 'all of', 'east bay', 'west bay',
+  'hampton roads', 'western pa',
+];
+const STATE_NAMES_LOWER_NH = new Set([
+  'al','ak','az','ar','ca','co','ct','de','fl','ga','hi','id','il','in','ia',
+  'ks','ky','la','me','md','ma','mi','mn','ms','mo','mt','ne','nv','nh','nj',
+  'nm','ny','nc','nd','oh','ok','or','pa','ri','sc','sd','tn','tx','ut','vt',
+  'va','wa','wv','wi','wy','dc',
+  'alabama','alaska','arizona','arkansas','california','colorado','connecticut',
+  'delaware','florida','georgia','hawaii','idaho','illinois','indiana','iowa',
+  'kansas','kentucky','louisiana','maine','maryland','massachusetts','michigan',
+  'minnesota','mississippi','missouri','montana','nebraska','nevada','new hampshire',
+  'new jersey','new mexico','new york','north carolina','north dakota','ohio',
+  'oklahoma','oregon','pennsylvania','rhode island','south carolina','south dakota',
+  'tennessee','texas','utah','vermont','virginia','washington','west virginia',
+  'wisconsin','wyoming','district of columbia',
+]);
+function isNhName(val: string, cityName: string): boolean {
+  const lower = val.toLowerCase().trim();
+  if (!lower) return false;
+  if (lower === cityName.toLowerCase().trim()) return false;
+  for (const kw of GARBAGE_KEYWORDS_NH) { if (lower.includes(kw)) return false; }
+  if (/\bcounty$/.test(lower) || /\barea$/.test(lower)) return false;
+  if (STATE_NAMES_LOWER_NH.has(lower)) return false;
+  if (/^[A-Z]{2}$/.test(val.trim())) return false;
+  if (/^\d/.test(val.trim())) return false;
+  const wordCount = val.trim().split(/\s+/).length;
+  if (wordCount > 4) return false;
+  return true;
+}
+function nhSlug(name: string): string {
+  return name.toLowerCase().replace(/'/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').replace(/-+/g, '-');
+}
+// Build set of all city names for cross-rejection
+const allCityNamesSet = new Set<string>();
+for (const s of citySlugs) { if (cities[s]) allCityNamesSet.add(cities[s]!.city.toLowerCase()); }
+
+// Blocklist of larger cities that should never be neighborhoods
+const BLOCKED_CITY_NAMES_NH = new Set([
+  'dallas', 'fort worth',   // DFW — larger cities, not neighborhoods
+  'moscow',                 // Moscow, ID — cross-state from Spokane, WA
+  'coeur d\'alene',         // Idaho city near Spokane, WA
+  'pullman',               // Idaho/WA border city near Spokane, WA
+]);
+
+// State abbreviations for cross-state rejection
+const STATE_ABBREVS_NH = new Set([
+  'AL','AK','AZ','AR','CA','CO','CT','DE','FL','GA','HI','ID','IL','IN','IA',
+  'KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ',
+  'NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT',
+  'VA','WA','WV','WI','WY','DC',
+]);
+
+const neighborhoodLinks: Array<{ name: string; slug: string }> = [];
+const nhSeen = new Set<string>();
+localDoulas?.forEach((d) => {
+  d.serviceArea?.forEach((area) => {
+    // Cross-state rejection: skip if area has ", XX" suffix with different state
+    const stateMatchNh = area.match(/,\s*([A-Z]{2})\s*$/);
+    if (stateMatchNh && STATE_ABBREVS_NH.has(stateMatchNh[1]) && stateMatchNh[1] !== state) return;
+
+    const cleaned = area.replace(/,\s*[A-Z]{2}\s*$/, '').trim();
+    if (!cleaned || !isNhName(cleaned, city)) return;
+    if (allCityNamesSet.has(cleaned.toLowerCase().trim())) return;
+    if (BLOCKED_CITY_NAMES_NH.has(cleaned.toLowerCase().trim())) return;
+    const s = nhSlug(cleaned);
+    if (!s || nhSeen.has(s)) return;
+    nhSeen.add(s);
+    neighborhoodLinks.push({ name: cleaned, slug: s });
+  });
+});
+neighborhoodLinks.sort((a, b) => a.name.localeCompare(b.name));
+
 // State full name for breadcrumbs (SEO: "Colorado" not "CO")
 const stateNames: Record<string, string> = {
   AL: 'Alabama', AK: 'Alaska', AZ: 'Arizona', AR: 'Arkansas', CA: 'California',
@@ -65,6 +181,117 @@ const stateNames: Record<string, string> = {
   DC: 'District of Columbia',
 };
 const stateFullName = stateNames[state] || state;
+
+// ═══ Phase 3A: Niche-Down Filter SEO data ═══
+// Build list of available "niche" filters for internal linking and SEO.
+// Each entry maps a URL filter param value to display info.
+// We only include filters that have matching providers in this city.
+const nicheFilters: Array<{ param: string; label: string; titleTemplate: string; metaTemplate: string }> = [];
+
+if (filterHasMedicaid) {
+  nicheFilters.push({
+    param: 'medicaid:yes',
+    label: 'Medicaid doulas',
+    titleTemplate: 'Medicaid-Accepting Birth Doulas in {city}, {state}',
+    metaTemplate: 'Find Medicaid-accepting birth doulas in {city}, {state}. Filter by insurance, services, and more on True Joy Birthing.',
+  });
+}
+
+// Check for VBAC-supportive doulas (service contains "VBAC" or "vbac")
+const hasVbac = [...filterServiceValues].some((s) => s.toLowerCase().includes('vbac'));
+if (hasVbac) {
+  nicheFilters.push({
+    param: 'service:vbac',
+    label: 'VBAC doulas',
+    titleTemplate: 'VBAC-Supportive Birth Doulas in {city}, {state}',
+    metaTemplate: 'Find VBAC-supportive birth doulas in {city}, {state}. Filter by VBAC experience and services on True Joy Birthing.',
+  });
+}
+
+// Check for Spanish-speaking doulas
+const hasSpanish = [...filterLanguageValues].some((l) => l.toLowerCase().includes('spanish'));
+if (hasSpanish) {
+  nicheFilters.push({
+    param: 'language:spanish',
+    label: 'Spanish-speaking doulas',
+    titleTemplate: 'Spanish-Speaking Birth Doulas in {city}, {state}',
+    metaTemplate: 'Find Spanish-speaking birth doulas in {city}, {state}. Filter by language and services on True Joy Birthing.',
+  });
+}
+
+// Check for home birth support
+const hasHomeBirth = [...filterServiceValues].some((s) => s.toLowerCase().includes('home birth'));
+if (hasHomeBirth) {
+  nicheFilters.push({
+    param: 'service:home-birth',
+    label: 'Home birth',
+    titleTemplate: 'Home Birth Midwives & Doulas in {city}, {state}',
+    metaTemplate: 'Find home birth midwives and doulas in {city}, {state}. Filter by home birth support and services on True Joy Birthing.',
+  });
+}
+
+// Check for water birth support
+const hasWaterBirth = [...filterServiceValues].some((s) => s.toLowerCase().includes('water birth'));
+if (hasWaterBirth) {
+  nicheFilters.push({
+    param: 'service:water-birth',
+    label: 'Water birth',
+    titleTemplate: 'Water Birth Support in {city}, {state}',
+    metaTemplate: 'Find water birth support and doulas in {city}, {state}. Filter by water birth options and services on True Joy Birthing.',
+  });
+}
+
+// Check for birth center support
+const hasBirthCenterService = [...filterServiceValues].some((s) => s.toLowerCase().includes('birth center'));
+if (hasBirthCenterService || hasBirthCenters) {
+  nicheFilters.push({
+    param: 'service:birth-center',
+    label: 'Birth centers',
+    titleTemplate: 'Birth Centers in {city}, {state}',
+    metaTemplate: 'Find birth centers in {city}, {state}. Filter by birth center support and services on True Joy Birthing.',
+  });
+}
+
+// Build a JSON-serializable map of filter param → {title, meta, faqs} for client-side JS
+const filterSEOMap: Record<string, { title: string; meta: string; faqs: Array<{ q: string; a: string }> }> = {};
+for (const nf of nicheFilters) {
+  const title = nf.titleTemplate.replace(/{city}/g, city).replace(/{state}/g, state);
+  const meta = nf.metaTemplate.replace(/{city}/g, city).replace(/{state}/g, state);
+  let faqs: Array<{ q: string; a: string }> = [];
+  if (nf.param === 'medicaid:yes') {
+    faqs = [
+      { q: `How do I find a Medicaid-accepting doula in ${city}?`, a: `Use the filter bar above and select "Medicaid" to see doulas in ${city}, ${state} who accept Medicaid. You can also check with your local WIC office or Medicaid managed care plan for a list of enrolled doula providers.` },
+      { q: `Does ${state} Medicaid cover doula services?`, a: medicaidCovers ? `Yes, ${stateFullName} Medicaid covers doula services. Contact your Medicaid plan to confirm coverage details and find enrolled providers in the ${city} area.` : `Currently, ${stateFullName} does not cover doulas through Medicaid. Some community organizations and volunteer doula programs in ${city} may offer free or reduced-cost support.` },
+    ];
+  } else if (nf.param === 'service:vbac') {
+    faqs = [
+      { q: `Can I get VBAC support from a doula in ${city}?`, a: `Yes, the doulas listed above offer VBAC support. Use the "VBAC" filter to see providers in ${city} who have experience supporting vaginal birth after cesarean.` },
+      { q: `What should I ask a VBAC doula in ${city}?`, a: `Ask about their experience with VBAC births, which ${city} hospitals support VBAC, and how they help you prepare mentally and physically for a VBAC labor.` },
+    ];
+  } else if (nf.param === 'language:spanish') {
+    faqs = [
+      { q: `How do I find a Spanish-speaking doula in ${city}?`, a: `Use the language filter above and select "Spanish" to see doulas in ${city}, ${state} who offer services in Spanish. You can also ask providers directly if they have Spanish-speaking staff.` },
+      { q: `Are there bilingual doulas in ${city}?`, a: `Yes, several doulas in ${city} offer bilingual support. Filter by language to find Spanish-speaking providers who can communicate with you and your family in your preferred language.` },
+    ];
+  } else if (nf.param === 'service:home-birth') {
+    faqs = [
+      { q: `Can I have a home birth in ${city}?`, a: `Yes, there are doulas and midwives in ${city} who support home births. Use the "Home birth" filter to see providers who offer home birth services in the ${city} area.` },
+      { q: `What does a home birth doula in ${city} do?`, a: `A home birth doula provides the same emotional, physical, and informational support as a hospital doula, but in your home. They help with labor comfort techniques and work alongside your home birth midwife.` },
+    ];
+  } else if (nf.param === 'service:water-birth') {
+    faqs = [
+      { q: `Is water birth available in ${city}?`, a: `Some hospitals and birth centers in ${city} offer water birth options. Use the "Water birth" filter to see doulas who have experience supporting water births in the ${city} area.` },
+      { q: `How do I find a water birth doula in ${city}?`, a: `Filter the doula list above by selecting "Water birth" to see providers in ${city} who are experienced with water labor and water birth support.` },
+    ];
+  } else if (nf.param === 'service:birth-center') {
+    faqs = [
+      { q: `Are there birth centers in ${city}?`, a: hasBirthCenters ? `Yes, ${city} has freestanding birth centers. See the birth center details above and use the "Birth center" filter to find doulas who work with birth centers in the area.` : `There are currently no freestanding birth centers in ${city}, but some hospitals offer midwifery care in a birth-center-like setting. Use the filter to find doulas experienced with birth center-style care.` },
+      { q: `What is a birth center doula?`, a: `A birth center doula supports you during labor at a freestanding birth center. They work alongside the midwife to provide comfort, advocacy, and continuous support throughout your birth.` },
+    ];
+  }
+  filterSEOMap[nf.param] = { title, meta, faqs };
+}
+const filterSEOJson = JSON.stringify(filterSEOMap);
 
 const pageTitle = `${city}, ${state} Doula & Midwife Guide`;
 const medicaidDesc = medicaidCovers ? 'Medicaid covers doulas' : 'no Medicaid doula coverage';
@@ -299,6 +526,35 @@ const schema = {
   </section>
 
 
+  {/* ═══ Phase 3A: Internal linking to filter views ═══ */}
+  {showFilterBar && nicheFilters.length > 0 && (
+    <nav class="bg-tjb-cream pb-6" aria-label="Browse by filter">
+      <div class="max-w-6xl mx-auto px-6">
+        <p class="text-sm text-tjb-gray mb-2">
+          <span class="font-semibold text-tjb-charcoal">Browse:</span>
+          {nicheFilters.map((nf, i) => (
+            <span>
+              {i > 0 && <span class="text-tjb-gray/40 mx-1">|</span>}
+              <a href={`?filter=${nf.param}`} class="text-tjb-rose-600 hover:underline font-medium" data-filter-link={nf.param}>{nf.label}</a>
+            </span>
+          ))}
+        </p>
+      </div>
+    </nav>
+  )}
+
+  {/* ═══ Phase 3A: Filter-specific FAQ section (hidden, shown by JS) ═══ */}
+  {showFilterBar && nicheFilters.length > 0 && (
+    <div id="filter-faq" class="hidden py-12 bg-tjb-cream-50" aria-hidden="true">
+      <div class="max-w-3xl mx-auto px-6">
+        <h2 id="filter-faq-title" class="text-2xl font-bold mb-6" style="font-family: 'DM Sans', sans-serif;"></h2>
+        <div id="filter-faq-items" class="space-y-4">
+          {/* FAQ items injected by client-side JS */}
+        </div>
+      </div>
+    </div>
+  )}
+
   <!-- ═══ App Showcase ═══ -->
   <AppShowcase variant="sans" />
 
@@ -383,12 +639,66 @@ const schema = {
           <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-4" style="font-family: 'DM Sans', sans-serif;">Doulas & Midwives Serving {city}</h2>
           <p class="text-tjb-gray max-w-2xl mx-auto">Real people, real support: here are doulas and midwives who serve {city} families. Every listing is a practicing provider, not an ad.</p>
         </div>
-        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 not-prose">
+        {/* Filter bar — only when 2+ doulas and filters exist */}
+        {showFilterBar && (
+          <div class="mb-6 not-prose" id="doula-filters">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-xs font-semibold text-tjb-gray uppercase tracking-wide mr-1">Filter:</span>
+              {[...filterServiceValues].sort().map((svc) => (
+                <button class="filter-chip inline-flex items-center bg-white text-tjb-charcoal text-xs font-medium px-3 py-1.5 rounded-full border border-tjb-lavender-200 hover:border-tjb-rose-300 hover:bg-tjb-rose-50 transition" data-filter={`service:${slugify(svc)}`}>{svc}</button>
+              ))}
+              {filterHasMedicaid && (
+                <button class="filter-chip inline-flex items-center bg-white text-tjb-charcoal text-xs font-medium px-3 py-1.5 rounded-full border border-green-200 hover:border-green-400 hover:bg-green-50 transition" data-filter="medicaid:yes">Medicaid</button>
+              )}
+              {filterHasAccepting && (
+                <button class="filter-chip inline-flex items-center bg-white text-tjb-charcoal text-xs font-medium px-3 py-1.5 rounded-full border border-tjb-lavender-200 hover:border-tjb-rose-300 hover:bg-tjb-rose-50 transition" data-filter="accepting:yes">Accepting clients</button>
+              )}
+              {filterHasMidwife && (
+                <button class="filter-chip inline-flex items-center bg-white text-tjb-charcoal text-xs font-medium px-3 py-1.5 rounded-full border border-tjb-lavender-200 hover:border-tjb-rose-300 hover:bg-tjb-rose-50 transition" data-filter="midwife:yes">Midwife</button>
+              )}
+              {filterCostTiers.has('under-1000') && (
+                <button class="filter-chip inline-flex items-center bg-white text-tjb-charcoal text-xs font-medium px-3 py-1.5 rounded-full border border-tjb-lavender-200 hover:border-tjb-rose-300 hover:bg-tjb-rose-50 transition" data-filter="cost:under-1000">Under $1,000</button>
+              )}
+              {filterCostTiers.has('1000-2000') && (
+                <button class="filter-chip inline-flex items-center bg-white text-tjb-charcoal text-xs font-medium px-3 py-1.5 rounded-full border border-tjb-lavender-200 hover:border-tjb-rose-300 hover:bg-tjb-rose-50 transition" data-filter="cost:1000-2000">$1,000-$2,000</button>
+              )}
+              {filterCostTiers.has('over-2000') && (
+                <button class="filter-chip inline-flex items-center bg-white text-tjb-charcoal text-xs font-medium px-3 py-1.5 rounded-full border border-tjb-lavender-200 hover:border-tjb-rose-300 hover:bg-tjb-rose-50 transition" data-filter="cost:over-2000">$2,000+</button>
+              )}
+              {[...filterLanguageValues].sort().map((lang) => (
+                <button class="filter-chip inline-flex items-center bg-white text-tjb-charcoal text-xs font-medium px-3 py-1.5 rounded-full border border-tjb-lavender-200 hover:border-tjb-rose-300 hover:bg-tjb-rose-50 transition" data-filter={`language:${slugify(lang)}`}>{lang}</button>
+              ))}
+              <button id="clear-filters" class="hidden text-xs text-tjb-rose-600 hover:text-tjb-rose-700 font-medium underline ml-2">Clear filters</button>
+            </div>
+            <p id="no-filter-results" class="hidden text-sm text-tjb-gray mt-4 text-center">No doulas match your filters. <button class="text-tjb-rose-600 hover:text-tjb-rose-700 font-medium underline">Clear filters</button></p>
+          </div>
+        )}
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 not-prose" id="doula-grid">
           {[...localDoulas].sort((a, b) => (b.isVerified === true ? 1 : 0) - (a.isVerified === true ? 1 : 0)).map((doula) => {
             const verified = doula.isVerified === true;
             const webVerified = !verified && !!doula.enrichedAt;
+            // Compute data attributes for filter bar
+            const cardServices = (doula.services || []).map((s: string) => slugify(s)).join(',');
+            const cardLanguages = (doula.languages || []).map((l: string) => slugify(l)).join(',');
+            let cardCostTier = '';
+            if (doula.costRange) {
+              const m = doula.costRange.match(/\$([\d,]+)/);
+              if (m) {
+                const low = parseInt(m[1].replace(/,/g, ''));
+                if (low < 1000) cardCostTier = 'under-1000';
+                else if (low <= 2000) cardCostTier = '1000-2000';
+                else cardCostTier = 'over-2000';
+              }
+            }
             return (
-            <div class={`bg-white relative rounded-xl p-6 shadow-sm border hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center ${doula.isAmbassador ? 'border-2 border-tjb-rose-300 shadow-md' : 'border-tjb-lavender-200/50 hover:border-tjb-lavender-300'}`}>
+            <div class={`doula-card bg-white relative rounded-xl p-6 shadow-sm border hover:shadow-md transition-shadow duration-200 flex flex-col items-center text-center ${doula.isAmbassador ? 'border-2 border-tjb-rose-300 shadow-md' : 'border-tjb-lavender-200/50 hover:border-tjb-lavender-300'}`}
+              data-services={cardServices}
+              data-medicaid={doula.acceptsMedicaid ? 'yes' : ''}
+              data-accepting={doula.acceptingClients ? 'yes' : ''}
+              data-midwife={doula.isMidwife ? 'yes' : ''}
+              data-cost-tier={cardCostTier}
+              data-languages={cardLanguages}
+            >
               {/* Verification tier badge */}
               {verified && (
                 <span class="absolute top-3 right-3 inline-flex items-center gap-1 bg-tjb-sage-100 text-tjb-charcoal text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-sage" role="status" aria-label="Provider-verified listing">
@@ -495,7 +805,7 @@ const schema = {
               <div class="md:w-[70%]">
                 <h3 class="text-xl font-bold text-tjb-charcoal mb-3" style="font-family: 'DM Sans', sans-serif;">Find a doula or midwife near you</h3>
                 <p class="text-tjb-gray leading-relaxed mb-4">The True Joy Birthing app lets you search for doulas, midwives, and birth professionals in your area. Filter by certification, services offered, and insurance coverage, so you can find the right support before your due date.</p>
-                <a href="/birth-plan-template/" class="btn-primary">Try the free app →</a>
+                <a href="/birth-plan-template/" class="btn-primary">Try the free app &rarr;</a>
               </div>
             </div>
           </div>
@@ -505,6 +815,267 @@ const schema = {
         </div>
       </div>
     </section>
+  )}
+
+  {/* ═══ Phase 3B: Neighborhoods in {City} — internal linking ═══ */}
+  {neighborhoodLinks.length > 0 && (
+    <section class="py-16 bg-tjb-cream">
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="text-center mb-8">
+          <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-3">Local neighborhoods</p>
+          <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-5"></div>
+          <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-3" style="font-family: 'DM Sans', sans-serif;">
+            Neighborhoods in {city}
+          </h2>
+          <p class="text-tjb-gray max-w-2xl mx-auto">
+            Browse doula and midwife listings for specific neighborhoods and communities in the {city} area.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-2.5 justify-center">
+          {neighborhoodLinks.map((nh) => (
+            <a
+              href={`/birth-support/${slug}/${nh.slug}/`}
+              class="inline-flex items-center px-4 py-2.5 rounded-full border border-tjb-lavender-300 bg-white text-tjb-lavender-700 hover:bg-tjb-lavender-50 hover:border-tjb-lavender-400 transition text-sm font-medium"
+            >
+              {nh.name}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {/* ═══ Filter bar inline JS (with Phase 3A SEO enhancements) ═══ */}
+  {showFilterBar && (
+    <script data-filter-seo-map={filterSEOJson}>
+      (function() {
+        const activeFilters = new Set();
+        const cards = document.querySelectorAll('.doula-card');
+        const chips = document.querySelectorAll('.filter-chip');
+        const clearBtn = document.getElementById('clear-filters');
+        const noResults = document.getElementById('no-filter-results');
+
+        // ═══ Phase 3A: SEO data ═══
+        const filterSEOMap = JSON.parse(document.currentScript?.dataset.filterSeoMap || '{}');
+        const baseTitle = document.title;
+        const baseMeta = document.querySelector('meta[name="description"]')?.getAttribute('content') || '';
+        const filterFaqSection = document.getElementById('filter-faq');
+        const filterFaqTitle = document.getElementById('filter-faq-title');
+        const filterFaqItems = document.getElementById('filter-faq-items');
+        let faqSchemaScript = document.getElementById('filter-faq-schema');
+
+        function updateSEO() {
+          // Find the first active filter that has SEO data
+          let seoData = null;
+          for (const f of activeFilters) {
+            if (filterSEOMap[f]) {
+              seoData = filterSEOMap[f];
+              break;
+            }
+          }
+
+          if (seoData) {
+            // Update title
+            document.title = seoData.title;
+
+            // Update meta description
+            let metaTag = document.querySelector('meta[name="description"]');
+            if (metaTag) {
+              metaTag.setAttribute('content', seoData.meta);
+            } else {
+              metaTag = document.createElement('meta');
+              metaTag.setAttribute('name', 'description');
+              metaTag.setAttribute('content', seoData.meta);
+              document.head.appendChild(metaTag);
+            }
+
+            // Update canonical URL
+            const params = new URLSearchParams(window.location.search);
+            const filterVal = params.get('filter');
+            if (filterVal) {
+              const canonicalUrl = window.location.origin + window.location.pathname + '?filter=' + filterVal;
+              let canonicalTag = document.querySelector('link[rel="canonical"]');
+              if (canonicalTag) {
+                canonicalTag.setAttribute('href', canonicalUrl);
+              } else {
+                canonicalTag = document.createElement('link');
+                canonicalTag.setAttribute('rel', 'canonical');
+                canonicalTag.setAttribute('href', canonicalUrl);
+                document.head.appendChild(canonicalTag);
+              }
+            }
+
+            // Update FAQ section
+            if (filterFaqSection && filterFaqTitle && filterFaqItems && seoData.faqs && seoData.faqs.length > 0) {
+              filterFaqTitle.textContent = seoData.title;
+              filterFaqItems.innerHTML = '';
+              seoData.faqs.forEach((faq) => {
+                const details = document.createElement('details');
+                details.className = 'border border-tjb-lavender-200 rounded-xl p-5 bg-white group';
+                const summary = document.createElement('summary');
+                summary.className = 'text-lg font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center';
+                const span = document.createElement('span');
+                span.textContent = faq.q;
+                const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                svg.setAttribute('class', 'w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2');
+                svg.setAttribute('fill', 'none');
+                svg.setAttribute('viewBox', '0 0 24 24');
+                svg.setAttribute('stroke', 'currentColor');
+                svg.setAttribute('stroke-width', '2');
+                const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                path.setAttribute('stroke-linecap', 'round');
+                path.setAttribute('stroke-linejoin', 'round');
+                path.setAttribute('d', 'M19 9l-7 7-7-7');
+                svg.appendChild(path);
+                summary.appendChild(span);
+                summary.appendChild(svg);
+                const p = document.createElement('p');
+                p.className = 'text-tjb-gray mt-3 faq-answer';
+                p.textContent = faq.a;
+                details.appendChild(summary);
+                details.appendChild(p);
+                filterFaqItems.appendChild(details);
+              });
+              filterFaqSection.classList.remove('hidden');
+              filterFaqSection.setAttribute('aria-hidden', 'false');
+
+              // Update FAQ JSON-LD schema
+              if (faqSchemaScript) {
+                faqSchemaScript.remove();
+              }
+              const faqSchema = {
+                '@context': 'https://schema.org',
+                '@type': 'FAQPage',
+                mainEntity: seoData.faqs.map((f) => ({
+                  '@type': 'Question',
+                  name: f.q,
+                  acceptedAnswer: { '@type': 'Answer', text: f.a },
+                })),
+              };
+              faqSchemaScript = document.createElement('script');
+              faqSchemaScript.id = 'filter-faq-schema';
+              faqSchemaScript.type = 'application/ld+json';
+              faqSchemaScript.textContent = JSON.stringify(faqSchema);
+              document.head.appendChild(faqSchemaScript);
+            }
+          } else {
+            // Restore base title and meta
+            document.title = baseTitle;
+            let metaTag = document.querySelector('meta[name="description"]');
+            if (metaTag) {
+              metaTag.setAttribute('content', baseMeta);
+            }
+
+            // Restore canonical to base URL
+            const baseCanonical = window.location.origin + window.location.pathname;
+            let canonicalTag = document.querySelector('link[rel="canonical"]');
+            if (canonicalTag) {
+              canonicalTag.setAttribute('href', baseCanonical);
+            }
+
+            // Hide FAQ section and clear stale FAQ DOM
+            if (filterFaqSection) {
+              filterFaqSection.classList.add('hidden');
+              filterFaqSection.setAttribute('aria-hidden', 'true');
+            }
+            if (filterFaqItems) {
+              filterFaqItems.innerHTML = '';
+            }
+            if (faqSchemaScript) {
+              faqSchemaScript.remove();
+              faqSchemaScript = null;
+            }
+          }
+        }
+
+        function applyFilters() {
+          let visibleCount = 0;
+          cards.forEach(card => {
+            const visible = [...activeFilters].every(f => {
+              const [type, value] = f.split(':');
+              const attr = 'data-' + type.replace('service', 'services').replace('cost', 'cost-tier').replace('language', 'languages');
+              const val = card.getAttribute(attr) || '';
+              if (type === 'medicaid' || type === 'accepting' || type === 'midwife') {
+                return val === value;
+              }
+              return val.split(',').includes(value);
+            });
+            card.style.display = visible ? '' : 'none';
+            if (visible) visibleCount++;
+          });
+          if (noResults) noResults.classList.toggle('hidden', visibleCount > 0);
+          if (clearBtn) clearBtn.classList.toggle('hidden', activeFilters.size === 0);
+        }
+
+        function updateURL() {
+          const params = new URLSearchParams(window.location.search);
+          if (activeFilters.size > 0) {
+            params.set('filter', [...activeFilters].join(','));
+          } else {
+            params.delete('filter');
+          }
+          const newURL = window.location.pathname + (params.toString() ? '?' + params.toString() : '') + window.location.hash;
+          window.history.replaceState({}, '', newURL);
+        }
+
+        chips.forEach(chip => {
+          chip.addEventListener('click', () => {
+            const filter = chip.dataset.filter;
+            if (activeFilters.has(filter)) {
+              activeFilters.delete(filter);
+              chip.classList.remove('active');
+              chip.style.background = '';
+              chip.style.borderColor = '';
+              chip.style.color = '';
+            } else {
+              activeFilters.add(filter);
+              chip.classList.add('active');
+              chip.style.background = '#fce7f3';
+              chip.style.borderColor = '#f9a8d4';
+              chip.style.color = '#be185d';
+            }
+            applyFilters();
+            updateURL();
+            updateSEO();
+          });
+        });
+
+        function clearAll() {
+          activeFilters.clear();
+          chips.forEach(chip => {
+            chip.classList.remove('active');
+            chip.style.background = '';
+            chip.style.borderColor = '';
+            chip.style.color = '';
+          });
+          applyFilters();
+          updateURL();
+          updateSEO();
+        }
+
+        if (clearBtn) clearBtn.addEventListener('click', clearAll);
+        const noResultsClear = noResults?.querySelector('button');
+        if (noResultsClear) noResultsClear.addEventListener('click', clearAll);
+
+        // Read filters from URL on load
+        const params = new URLSearchParams(window.location.search);
+        const filterParam = params.get('filter');
+        if (filterParam) {
+          filterParam.split(',').forEach(f => {
+            const chip = document.querySelector(`[data-filter="${f}"]`);
+            if (chip) {
+              activeFilters.add(f);
+              chip.classList.add('active');
+              chip.style.background = '#fce7f3';
+              chip.style.borderColor = '#f9a8d4';
+              chip.style.color = '#be185d';
+            }
+          });
+          applyFilters();
+          updateSEO();
+        }
+      })();
+    </script>
   )}
 
 
@@ -547,6 +1118,8 @@ const schema = {
                     </span>}
                     {h.lactation && <span class="inline-flex items-center bg-blue-50 text-blue-700 text-xs font-medium px-2 py-0.5 rounded-full border border-blue-200">IBCLC</span>}
                     {h.privateRooms && <span class="inline-flex items-center bg-amber-50 text-amber-700 text-xs font-medium px-2 py-0.5 rounded-full border border-amber-200">Private rooms</span>}
+                    {h.vbacPolicy && /allow|available|supports|permits/i.test(h.vbacPolicy) && <span class="inline-flex items-center bg-purple-50 text-purple-700 text-xs font-medium px-2 py-0.5 rounded-full border border-purple-200">VBAC</span>}
+                    {h.waterBirth && /water\s*birth\s+is\s+available|waterbirth\s+available|^yes|water birth available/i.test(h.waterBirth) && !/not/i.test(h.waterBirth) && <span class="inline-flex items-center bg-cyan-50 text-cyan-700 text-xs font-medium px-2 py-0.5 rounded-full border border-cyan-200">Water birth</span>}
                   </div>
                   <p set:html={h.paragraph} />
                   {hasDetails && (
@@ -584,6 +1157,8 @@ const schema = {
                     </span>}
                     {h.lactation && <span class="inline-flex items-center bg-blue-50 text-blue-700 text-xs font-medium px-2 py-0.5 rounded-full border border-blue-200">IBCLC</span>}
                     {h.privateRooms && <span class="inline-flex items-center bg-amber-50 text-amber-700 text-xs font-medium px-2 py-0.5 rounded-full border border-amber-200">Private rooms</span>}
+                    {h.vbacPolicy && /allow|available|supports|permits/i.test(h.vbacPolicy) && <span class="inline-flex items-center bg-purple-50 text-purple-700 text-xs font-medium px-2 py-0.5 rounded-full border border-purple-200">VBAC</span>}
+                    {h.waterBirth && /water\s*birth\s+is\s+available|waterbirth\s+available|^yes|water birth available/i.test(h.waterBirth) && !/not/i.test(h.waterBirth) && <span class="inline-flex items-center bg-cyan-50 text-cyan-700 text-xs font-medium px-2 py-0.5 rounded-full border border-cyan-200">Water birth</span>}
                   </div>
                   <p set:html={h.paragraph} />
                   {hasDetails && (
@@ -632,7 +1207,8 @@ const schema = {
                       <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                     </a>}
                   </div>
-                  {bc.credential && <span class="inline-flex items-center bg-tjb-rose-50 text-tjb-rose-600 text-xs font-medium px-2 py-0.5 rounded-full border border-tjb-rose-200 mb-1">{bc.credential}</span>}
+                  {bc.credential && <span class={`inline-flex items-center text-xs font-medium px-2 py-0.5 rounded-full border mb-1 ${bc.credential.toLowerCase().includes('cabc') ? 'bg-tjb-rose-100 text-tjb-rose-700 border-tjb-rose-300' : 'bg-tjb-rose-50 text-tjb-rose-600 border-tjb-rose-200'}`}>{bc.credential}</span>}
+                  {bc.bilingual && <span class="inline-flex items-center bg-indigo-50 text-indigo-700 text-xs font-medium px-2 py-0.5 rounded-full border border-indigo-200 mb-1">Bilingual</span>}
                   {bc.distance && <p class="text-sm text-tjb-rose-400 mb-1">{bc.distance}</p>}
                   {bc.address && <p class="text-sm text-tjb-gray/70 mb-1 flex items-center gap-1">
                     <svg class="w-3.5 h-3.5 flex-shrink-0 text-tjb-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.5-7.5 12-7.5 12s-7.5-4.5-7.5-12a7.5 7.5 0 1115 0z" /></svg>
@@ -747,6 +1323,52 @@ const schema = {
     </div>
   </section>
 
+  {birthStats && (
+  <!-- ═══ Birth Statistics: "Birth in {City}: By the Numbers" ═══ -->
+  <section class="py-16 bg-tjb-cream-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">By the Numbers</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-4" style="font-family: 'DM Sans', sans-serif;">Birth in {city}: By the Numbers</h2>
+        <p class="text-tjb-gray leading-relaxed max-w-2xl mx-auto">Key birth statistics for {state} families — because knowing the landscape helps you make informed choices about your birth.</p>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 not-prose">
+        {birthStats.cesareanRate != null && (
+          <div class="bg-white rounded-xl border border-tjb-lavender-200/50 p-6 shadow-sm hover:shadow-md transition-shadow text-center">
+            <p class="text-4xl md:text-5xl font-bold text-tjb-rose-500 mb-2" style="font-family: 'DM Sans', sans-serif;">{birthStats.cesareanRate}%</p>
+            <p class="text-sm font-semibold text-tjb-charcoal mb-1">Cesarean Rate</p>
+            <p class="text-xs text-tjb-gray">Percentage of births via C-section</p>
+          </div>
+        )}
+        {birthStats.maternalMortalityRate != null && (
+          <div class="bg-white rounded-xl border border-tjb-lavender-200/50 p-6 shadow-sm hover:shadow-md transition-shadow text-center">
+            <p class="text-4xl md:text-5xl font-bold text-tjb-rose-500 mb-2" style="font-family: 'DM Sans', sans-serif;">{birthStats.maternalMortalityRate}</p>
+            <p class="text-sm font-semibold text-tjb-charcoal mb-1">Maternal Mortality Rate</p>
+            <p class="text-xs text-tjb-gray">Deaths per 100,000 live births</p>
+          </div>
+        )}
+        {birthStats.homeBirthRate != null && (
+          <div class="bg-white rounded-xl border border-tjb-lavender-200/50 p-6 shadow-sm hover:shadow-md transition-shadow text-center">
+            <p class="text-4xl md:text-5xl font-bold text-tjb-rose-500 mb-2" style="font-family: 'DM Sans', sans-serif;">{birthStats.homeBirthRate}%</p>
+            <p class="text-sm font-semibold text-tjb-charcoal mb-1">Home Birth Rate</p>
+            <p class="text-xs text-tjb-gray">Percentage of births at home</p>
+          </div>
+        )}
+        {birthStats.birthCenterBirthRate != null && (
+          <div class="bg-white rounded-xl border border-tjb-lavender-200/50 p-6 shadow-sm hover:shadow-md transition-shadow text-center">
+            <p class="text-4xl md:text-5xl font-bold text-tjb-rose-500 mb-2" style="font-family: 'DM Sans', sans-serif;">{birthStats.birthCenterBirthRate}%</p>
+            <p class="text-sm font-semibold text-tjb-charcoal mb-1">Birth Center Birth Rate</p>
+            <p class="text-xs text-tjb-gray">Births in freestanding birth centers</p>
+          </div>
+        )}
+      </div>
+      {birthStats.dataYear && birthStats.dataSource && (
+        <p class="text-center text-xs text-tjb-gray mt-6 italic">Data from {birthStats.dataSource}, {birthStats.dataYear}.</p>
+      )}
+    </div>
+  </section>
+  )}
 
   <!-- ═══ Medicaid & Insurance Section — Doula & Midwife (two-column with 4:3 image, no H2 icon) ═══ -->
   <section class="py-12 bg-tjb-cream">
