@@ -425,4 +425,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M3S",
     uploadDate: "2026-07-09T00:00:00-06:00",
 },
+"bakersfield-ca": {
+    videoId: "f4-7jr-nXQw",
+    title: "Bakersfield Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 3 minutes.",
+    duration: "PT2M45S",
+    uploadDate: "2026-07-10T00:00:00-07:00",
+},
 };

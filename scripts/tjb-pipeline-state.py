@@ -29,6 +29,12 @@ RECURRING_MISTAKES_PATH = SKILL_DIR / "references" / "recurring-mistakes-block.m
 # Pipeline stages in execution order
 STAGE_ORDER = [
     "needs_research",
+    "needs_verification",
+    "needs_services",
+    "needs_cost_data",
+    "needs_photos",
+    "needs_service_areas",
+    "needs_deal_breakers",
     "needs_enrichment",
     "needs_images",
     "needs_preflight",
@@ -46,9 +52,39 @@ STAGE_CONTEXTS = {
         "goal_template": "Research providers, hospitals, and birth centers for {slug}. Write the data into cities.ts using Python heredoc via terminal (NEVER use write_file or patch on cities.ts). Find at least the minimum provider count for the city's population tier. Verify data accuracy.",
         "toolsets": ["terminal", "file", "web", "browser"],
     },
+    "needs_verification": {
+        "skill": "tjb-provider-enrichment",
+        "goal_template": "Verification pass for {slug}: For each provider, verify the business is real, active, and is actually a doula/midwife. Check their website URL (if present) returns a live page. If the provider has a URL, crawl it to confirm the business is active and is birth-related. Set enrichedAt timestamp for each verified provider. Remove any providers that are clearly not doulas/midwives or have dead URLs. Only populate the enrichedAt field and remove invalid providers — do NOT fill other fields yet.",
+        "toolsets": ["terminal", "file", "web", "browser"],
+    },
+    "needs_services": {
+        "skill": "tjb-provider-enrichment",
+        "goal_template": "Services pass for {slug}: For each provider, extract their services list from their website or known data. Populate the services[] array with specific service strings (e.g., 'Birth Doula', 'Postpartum Doula', 'Lactation Consultant'). Only populate services[] — do NOT fill other fields.",
+        "toolsets": ["terminal", "file", "web", "browser"],
+    },
+    "needs_cost_data": {
+        "skill": "tjb-provider-enrichment",
+        "goal_template": "Cost data pass for {slug}: For each provider, find pricing information. Populate costRange with a dollar range (e.g., '$800-$1,200'). If no pricing is publicly available, use 'Contact for pricing'. Less than 50% of providers should have 'Contact for pricing'. Only populate costRange — do NOT fill other fields.",
+        "toolsets": ["terminal", "file", "web", "browser"],
+    },
+    "needs_photos": {
+        "skill": "tjb-provider-enrichment",
+        "goal_template": "Photos pass for {slug}: For each provider, find the best headshot or professional photo from their website or social media. Download to public/images/providers/ and set the photo field path. If no photo is available, leave photo empty (the template handles monogram fallback). Only populate photo — do NOT fill other fields.",
+        "toolsets": ["terminal", "file", "web", "browser", "vision"],
+    },
+    "needs_service_areas": {
+        "skill": "tjb-provider-enrichment",
+        "goal_template": "Service areas pass for {slug}: For each provider, extract their geographic coverage area. Populate serviceArea[] with specific areas (e.g., 'Collin County, TX', 'DFW Metroplex', 'Downtown Dallas'). Only populate serviceArea[] — do NOT fill other fields.",
+        "toolsets": ["terminal", "file", "web", "browser"],
+    },
+    "needs_deal_breakers": {
+        "skill": "tjb-provider-enrichment",
+        "goal_template": "Deal-breakers pass for {slug}: For each provider, extract VBAC support (vbacSupportive), water birth support (waterBirthSupport), home birth support (homeBirthSupport), languages (languages[]), and Medicaid acceptance (acceptsMedicaid). Set these boolean and array fields based on website data. Only populate these fields — do NOT fill other fields.",
+        "toolsets": ["terminal", "file", "web", "browser"],
+    },
     "needs_enrichment": {
         "skill": "tjb-provider-enrichment",
-        "goal_template": "Enrich provider data for {slug}: add photos, descriptions, cost ranges, hospital thumbnails, birth center details. Replace any 'Contact for pricing' with real dollar ranges. Run preflight after edits to verify.",
+        "goal_template": "Final enrichment pass for {slug}: Add provider descriptions, hospital thumbnails, birth center details, and any remaining fields not covered by the field-specific passes (verification, services, cost_data, photos, service_areas, deal_breakers). Run preflight after edits to verify.",
         "toolsets": ["terminal", "file", "web", "browser", "vision"],
     },
     "needs_images": {
@@ -147,6 +183,25 @@ def determine_stage(slug: str, run_preflight: bool = True) -> str:
     providers_have_photos = probe.get("providers_have_photos", False)
     providers_have_descs = probe.get("providers_have_descriptions", False)
     providers_have_costs = probe.get("providers_have_cost_ranges", False)
+    providers_have_verification = probe.get("providers_have_verification", False)
+    providers_have_services = probe.get("providers_have_services", False)
+    providers_have_service_areas = probe.get("providers_have_service_areas", False)
+    providers_have_deal_breakers = probe.get("providers_have_deal_breakers", False)
+    
+    # Phase 4A: Check sub-stages sequentially
+    if not providers_have_verification:
+        return "needs_verification"
+    if not providers_have_services:
+        return "needs_services"
+    if not providers_have_costs:
+        return "needs_cost_data"
+    if not providers_have_photos:
+        return "needs_photos"
+    if not providers_have_service_areas:
+        return "needs_service_areas"
+    if not providers_have_deal_breakers:
+        return "needs_deal_breakers"
+    
     enrichment_ok = providers_have_photos and providers_have_descs and providers_have_costs
     
     if not enrichment_ok:
@@ -281,20 +336,27 @@ ADDITIONAL RULES:
     print(json.dumps(output, indent=2))
 
 
-def run_enrichment_review(slug: str) -> dict:
+def run_enrichment_review(slug: str, pass_focus: str | None = None) -> dict:
     """Run the enrichment reviewer gate. Returns the review result dict.
     
     This is the "voice reviewer" pattern — a stronger model in fresh context
     reviews the enrichment output against a quality standard. If it fails,
     the orchestrator should loop back to enrichment with the failures.
+    
+    Args:
+        pass_focus: If provided, focus the review on only this field's quality.
     """
     review_script = Path(PROJECT_DIR) / "scripts" / "enrichment-review.py"
     if not review_script.exists():
         return {"pass": True, "score": 100, "failures": [], "notes": "Reviewer script not found, skipping"}
     
+    cmd = ["python3", str(review_script), slug]
+    if pass_focus:
+        cmd.extend(["--pass", pass_focus])
+    
     try:
         result = subprocess.run(
-            ["python3", str(review_script), slug],
+            cmd,
             capture_output=True, text=True, timeout=90,
             cwd=str(PROJECT_DIR)
         )
@@ -332,11 +394,24 @@ def cmd_done(slug: str, stage: str):
     state["history"] = history
     
     # ── Enrichment review gate ──
-    # When enrichment is marked done, run the reviewer model gate.
+    # When enrichment (or a sub-stage) is marked done, run the reviewer model gate.
     # If the reviewer fails (score < 80), block advancement and report failures.
     # The orchestrator should re-run enrichment with the failure list, then call done again.
-    if stage == "needs_enrichment":
-        review = run_enrichment_review(slug)
+    enrichment_stages = {"needs_enrichment", "needs_verification", "needs_services",
+                         "needs_cost_data", "needs_photos", "needs_service_areas",
+                         "needs_deal_breakers"}
+    if stage in enrichment_stages:
+        # Map stage to pass_focus for field-specific review
+        pass_map = {
+            "needs_verification": "verification",
+            "needs_services": "services",
+            "needs_cost_data": "cost_data",
+            "needs_photos": "photos",
+            "needs_service_areas": "service_areas",
+            "needs_deal_breakers": "deal_breakers",
+        }
+        pass_focus = pass_map.get(stage)
+        review = run_enrichment_review(slug, pass_focus=pass_focus)
         review_loops = state.get("enrichment_review_loops", 0)
         
         if not review.get("pass", False) and review.get("score", 0) < 80:
@@ -396,7 +471,9 @@ def cmd_done(slug: str, stage: str):
     # Re-probe to determine actual next stage
     # Skip preflight for fast transitions (saves 30-60s per stage)
     # Only run preflight when we're likely at or past the preflight stage
-    stage_order = ["needs_research", "needs_enrichment", "needs_images", 
+    stage_order = ["needs_research", "needs_verification", "needs_services",
+                   "needs_cost_data", "needs_photos", "needs_service_areas",
+                   "needs_deal_breakers", "needs_enrichment", "needs_images", 
                    "needs_preflight", "needs_deploy", "needs_outreach", 
                    "needs_video", "needs_embed", "complete"]
     run_preflight = stage_order.index(stage) >= stage_order.index("needs_preflight") - 1
@@ -467,12 +544,120 @@ def cmd_status(slug: str):
     print(json.dumps(state, indent=2))
 
 
+def cmd_staleness_check(slug: str | None = None):
+    """Check all cities (or a single city) for stale enrichment data.
+    
+    A provider is stale if its enrichedAt timestamp is older than 180 days.
+    Cities with stale providers are flagged for re-verification.
+    
+    Output: JSON with staleness report.
+    """
+    STALE_THRESHOLD_DAYS = 180
+    now = time.time()
+    stale_threshold = now - (STALE_THRESHOLD_DAYS * 86400)
+    
+    cities_file = Path(PROJECT_DIR) / "src" / "data" / "cities.ts"
+    if not cities_file.exists():
+        print(json.dumps({"error": "cities.ts not found"}))
+        return
+    
+    content = cities_file.read_text()
+    
+    # Find all city slugs
+    import re
+    slugs = re.findall(r'"([a-z]+-[a-z]+)"\s*:\s*\{', content)
+    
+    if slug:
+        slugs = [s for s in slugs if s == slug]
+    
+    report = {
+        "threshold_days": STALE_THRESHOLD_DAYS,
+        "checked_at": int(now),
+        "total_cities": len(slugs),
+        "cities_with_stale": 0,
+        "cities_never_enriched": 0,
+        "cities_current": 0,
+        "stale_details": [],
+    }
+    
+    for city_slug in slugs:
+        # Extract city block
+        start = content.find(f'"{city_slug}"')
+        if start == -1:
+            continue
+        i = content.index('{', start) + 1
+        depth = 1
+        while i < len(content) and depth > 0:
+            if content[i] == '{':
+                depth += 1
+            elif content[i] == '}':
+                depth -= 1
+            i += 1
+        block = content[start:i]
+        
+        # Find all enrichedAt timestamps in provider objects
+        timestamps = re.findall(r'enrichedAt:\s*"([^"]+)"', block)
+        
+        if not timestamps:
+            report["cities_never_enriched"] += 1
+            continue
+        
+        # Parse timestamps and check staleness
+        from datetime import datetime
+        stale_providers = []
+        fresh_providers = 0
+        
+        for ts in timestamps:
+            try:
+                # Handle ISO format: 2025-01-15 or 2025-01-15T10:30:00Z
+                dt = datetime.fromisoformat(ts.replace('Z', '+00:00'))
+                ts_epoch = dt.timestamp()
+                
+                if ts_epoch < stale_threshold:
+                    days_stale = int((now - ts_epoch) / 86400)
+                    stale_providers.append({
+                        "enrichedAt": ts,
+                        "days_stale": days_stale,
+                    })
+                else:
+                    fresh_providers += 1
+            except (ValueError, TypeError):
+                stale_providers.append({
+                    "enrichedAt": ts,
+                    "days_stale": "unknown (unparseable timestamp)",
+                })
+        
+        if stale_providers:
+            report["cities_with_stale"] += 1
+            report["stale_details"].append({
+                "slug": city_slug,
+                "total_providers_enriched": len(timestamps),
+                "stale_count": len(stale_providers),
+                "fresh_count": fresh_providers,
+                "stale_providers": stale_providers,
+                "recommended_action": "re-verify providers using verify-providers.py",
+            })
+        else:
+            report["cities_current"] += 1
+    
+    print(json.dumps(report, indent=2))
+
+
 def main():
-    if len(sys.argv) < 3:
-        print("Usage: tjb-pipeline-state.py {init|next|done|fail|status} {slug} [args]")
+    if len(sys.argv) < 2:
+        print("Usage: tjb-pipeline-state.py {init|next|done|fail|status|staleness} {slug} [args]")
         sys.exit(1)
     
     command = sys.argv[1]
+    
+    if command == "staleness":
+        slug = sys.argv[2] if len(sys.argv) > 2 else None
+        cmd_staleness_check(slug)
+        return
+    elif len(sys.argv) < 3:
+        print("Usage: tjb-pipeline-state.py {init|next|done|fail|status} {slug} [args]")
+        sys.exit(1)
+    
     slug = sys.argv[2]
     
     if command == "init":
@@ -488,6 +673,8 @@ def main():
         cmd_fail(slug, stage, reason)
     elif command == "status":
         cmd_status(slug)
+    elif command == "staleness":
+        cmd_staleness_check(slug)
     else:
         print(f"Unknown command: {command}")
         sys.exit(1)

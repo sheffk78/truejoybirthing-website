@@ -94,8 +94,12 @@ def extract_city_block(slug: str) -> str | None:
     return None
 
 
-def call_reviewer_model(city_block: str, standard: str, slug: str, model: str) -> dict | None:
-    """Call the reviewer model via ollama-cloud proxy. Returns parsed JSON or None."""
+def call_reviewer_model(city_block: str, standard: str, slug: str, model: str, pass_focus: str | None = None) -> dict | None:
+    """Call the reviewer model via ollama-cloud proxy. Returns parsed JSON or None.
+    
+    Args:
+        pass_focus: If provided, instruct the reviewer to focus on only this field's quality.
+    """
     import urllib.request
 
     system_prompt = """You are a quality reviewer for True Joy Birthing city pages.
@@ -126,14 +130,27 @@ City slug: {slug}
 Review this city's enriched data against the quality standard above.
 Check every section of the standard: hospital descriptions, provider data quality,
 provider count proportionality, birth center data, cultural context, and data formatting.
-
+"""
+    if pass_focus:
+        focus_instructions = {
+            "verification": "FOCUS ONLY on verifying providers are real, active doula/midwife businesses. Check that enrichedAt timestamps exist. Ignore other field quality.",
+            "services": "FOCUS ONLY on the services[] arrays. Are they populated with specific, real service types? Ignore other field quality.",
+            "cost_data": "FOCUS ONLY on costRange fields. Are they real dollar ranges (not 'Contact for pricing' for more than 50%)? Ignore other field quality.",
+            "photos": "FOCUS ONLY on photo fields. Are they populated with real image paths? Ignore other field quality.",
+            "service_areas": "FOCUS ONLY on serviceArea[] arrays. Are they populated with specific geographic areas matching the city? Ignore other field quality.",
+            "deal_breakers": "FOCUS ONLY on vbacSupportive, waterBirthSupport, homeBirthSupport, languages[], and acceptsMedicaid fields. Are they populated? Ignore other field quality.",
+        }
+        focus_text = focus_instructions.get(pass_focus, f"FOCUS ONLY on the {pass_focus} pass's field quality. Ignore other field quality.")
+        user_prompt += f"\n## Pass Focus\n\n{focus_text}\n"
+    
+    user_prompt += """
 Return your verdict as JSON:
-{{
+{
   "pass": true/false,
   "score": <0-100>,
   "failures": ["specific failure 1", "specific failure 2", ...],
   "notes": "optional context"
-}}
+}
 
 Pass threshold: score >= 80
 Remember: return ONLY the JSON, no other text."""
@@ -175,8 +192,13 @@ Remember: return ONLY the JSON, no other text."""
         return None
 
 
-def review_city(slug: str, model_override: str | None = None, loop: int = 1) -> dict:
-    """Review a city's enrichment quality. Returns the review result dict."""
+def review_city(slug: str, model_override: str | None = None, loop: int = 1, pass_focus: str | None = None) -> dict:
+    """Review a city's enrichment quality. Returns the review result dict.
+    
+    Args:
+        pass_focus: If provided, focus the review on only this enrichment pass's field(s).
+                   One of: verification, services, cost_data, photos, service_areas, deal_breakers
+    """
     # Load quality standard
     if not STANDARD_PATH.exists():
         return {
@@ -199,11 +221,13 @@ def review_city(slug: str, model_override: str | None = None, loop: int = 1) -> 
 
     # Call the reviewer model
     model = model_override or REVIEWER_MODEL
-    print(f"  Reviewing {slug} with {model} (loop {loop})...", file=sys.stderr)
-    result = call_reviewer_model(city_block, standard, slug, model)
+    focus_note = f" (focused on: {pass_focus})" if pass_focus else ""
+    print(f"  Reviewing {slug} with {model} (loop {loop}){focus_note}...", file=sys.stderr)
+    result = call_reviewer_model(city_block, standard, slug, model, pass_focus=pass_focus)
     if result is not None:
         result["model_used"] = model
         result["loop"] = loop
+        result["pass_focus"] = pass_focus
         return result
 
     # API call failed
@@ -219,12 +243,14 @@ def review_city(slug: str, model_override: str | None = None, loop: int = 1) -> 
 def main():
     args = sys.argv[1:]
     if not args:
-        print("Usage: python3 scripts/enrichment-review.py <slug> [--model <model>] [--loop <n>]", file=sys.stderr)
+        print("Usage: python3 scripts/enrichment-review.py <slug> [--model <model>] [--loop <n>] [--pass <focus>]", file=sys.stderr)
+        print("  --pass <focus>: Review only this field's quality (verification, services, cost_data, photos, service_areas, deal_breakers)", file=sys.stderr)
         sys.exit(2)
 
     slug = args[0]
     model_override = None
     loop = 1
+    pass_focus = None
 
     for i, arg in enumerate(args[1:], 1):
         if arg == "--model" and i + 1 < len(args):
@@ -234,8 +260,10 @@ def main():
                 loop = int(args[i + 1])
             except ValueError:
                 pass
+        elif arg == "--pass" and i + 1 < len(args):
+            pass_focus = args[i + 1]
 
-    result = review_city(slug, model_override, loop)
+    result = review_city(slug, model_override, loop, pass_focus=pass_focus)
     print(json.dumps(result, indent=2))
 
     if "error" in result:
