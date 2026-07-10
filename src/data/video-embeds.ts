@@ -334,13 +334,8 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT5M23S",
     uploadDate: "2026-07-01T00:00:00-06:00",
 },
-"oakland-ca": {
-    videoId: "",
-    title: "Oakland CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
-    duration: "PT4M29S",
-    uploadDate: "2026-07-02T00:00:00-07:00",
-},
+// oakland-ca video entry removed: empty videoId was failing G55 preflight gate.
+// Re-add when the YouTube video is produced and a real videoId is available.
 "richmond-va": {
     videoId: "orQupd9pT7U",
     title: "Richmond VA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",

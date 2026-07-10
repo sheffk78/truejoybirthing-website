@@ -80,7 +80,7 @@ if [ -n "$SLUG" ]; then
   SLUGS=("$SLUG")
 else
   # Extract all slugs from cities.ts
-  SLUGS=($(grep -oP '(?<="slug": ")[^"]+' "$PROJECT_DIR/src/data/cities.ts"))
+  SLUGS=($(grep -o 'slug: "[^"]*"' "$PROJECT_DIR/src/data/cities.ts" | sed 's/slug: "//;s/"//'))
 fi
 
 for s in "${SLUGS[@]}"; do
