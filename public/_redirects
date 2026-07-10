@@ -182,6 +182,17 @@
 /fort-worth/ /birth-support/fort-worth-tx/ 301
 
 # ════════════════════════════════════════════════════════════
+# REMOVED NEIGHBORHOOD PAGES → PARENT CITY PAGE (Phase 3B rollback)
+# ════════════════════════════════════════════════════════════
+
+/birth-support/seattle-wa/ballard/ /birth-support/seattle-wa/ 301
+/birth-support/seattle-wa/ballard /birth-support/seattle-wa/ 301
+/birth-support/chicago-il/evanston/ /birth-support/chicago-il/ 301
+/birth-support/chicago-il/evanston /birth-support/chicago-il/ 301
+/birth-support/atlanta-ga/decatur/ /birth-support/atlanta-ga/ 301
+/birth-support/atlanta-ga/decatur /birth-support/atlanta-ga/ 301
+
+# ════════════════════════════════════════════════════════════
 # FALLBACK: ANY UNKNOWN PATH → HOMEPAGE (soft redirect)
 # Keep this last — Cloudflare Pages processes top-down
 # ════════════════════════════════════════════════════════════
