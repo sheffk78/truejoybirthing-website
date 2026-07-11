@@ -64,6 +64,25 @@ const redirects: Record<string, string> = {
   "/birth-support/seattle-wa/ballard": "/birth-support/seattle-wa/",
   "/birth-support/chicago-il/evanston": "/birth-support/chicago-il/",
   "/birth-support/atlanta-ga/decatur": "/birth-support/atlanta-ga/",
+  // Solo rules moved from _redirects (had no trailing-slash pair, now handled here)
+  "/postpartum-doula": "/blog/postpartum-doula/",
+  "/feed": "/blog/",
+  "/plan": "/#download",
+  "/course": "/#download",
+  "/session": "/#download",
+  "/consult": "/#download",
+  "/book": "/#download",
+  "/pro": "/new-doula-start-here/",
+  "/doula": "/new-doula-start-here/",
+  "/app": "/",
+  "/download": "/#download",
+  "/free": "/#download",
+  "/help": "/faq/",
+  "/support": "/faq/",
+  "/template": "/birth-plan-template/",
+  "/checklist": "/birth-plan-checklist/",
+  "/cost": "/doula-cost/",
+  "/postpartum": "/postpartum-doula/",
 };
 
 interface EventContext {

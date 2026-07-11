@@ -22,7 +22,6 @@
 /how-to-hire-a-doula/ /blog/how-to-hire-a-doula/ 301
 /is-a-doula-covered-by-insurance /blog/doula-covered-by-insurance/ 301
 /is-a-doula-covered-by-insurance/ /blog/doula-covered-by-insurance/ 301
-/postpartum-doula /blog/postpartum-doula/ 301
 # NOTE: /postpartum-doula/ now serves the dedicated SEO landing page.
 # The blog post lives at /blog/postpartum-doula/.
 /doula-myths /blog/debunking-doula-myths/ 301
@@ -60,7 +59,6 @@
 # WORDPRESS FEEDS / XML → GONE
 # ════════════════════════════════════════════════════════════
 
-/feed /blog/ 301
 /feed/* /blog/ 301
 /comments/feed/* /blog/ 301
 /sitemap.xml /sitemap.xml 301
@@ -114,22 +112,6 @@
 # CONVENIENCE SHORTCUTS
 # ════════════════════════════════════════════════════════════
 
-/plan /#download 301
-/course /#download 301
-/session /#download 301
-/consult /#download 301
-/book /#download 301
-/pro /new-doula-start-here/ 301
-/doula /new-doula-start-here/ 301
-/app / 301
-/download /#download 301
-/free /#download 301
-/help /faq/ 301
-/support /faq/ 301
-/template /birth-plan-template/ 301
-/checklist /birth-plan-checklist/ 301
-/cost /doula-cost/ 301
-/postpartum /postpartum-doula/ 301
 
 # ════════════════════════════════════════════════════════════
 # ADDITIONAL OLD WORDPRESS SLUGS → NEW PAGES (analytics 404 audit)
