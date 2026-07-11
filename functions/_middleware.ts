@@ -82,7 +82,7 @@ const redirects: Record<string, string> = {
   "/template": "/birth-plan-template/",
   "/checklist": "/birth-plan-checklist/",
   "/cost": "/doula-cost/",
-  "/postpartum": "/postpartum-doula/",
+  "/postpartum": "/blog/postpartum-doula/",
 };
 
 interface EventContext {
