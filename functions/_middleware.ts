@@ -54,6 +54,16 @@ const redirects: Record<string, string> = {
   // Unbuilt city pages with existing state hub → state page
   "/birth-support/pflugerville-tx": "/birth-support/tx/",
   "/birth-support/santa-ana-ca": "/birth-support/ca/",
+  // Existing redirects moved from _redirects (rules 101-118, past CF's 100-rule limit)
+  "/birth-center-near": "/birth-center-near-me/",
+  "/dallas": "/birth-support/dallas-tx/",
+  "/houston": "/birth-support/houston-tx/",
+  "/austin": "/birth-support/austin-tx/",
+  "/san-antonio": "/birth-support/san-antonio-tx/",
+  "/fort-worth": "/birth-support/fort-worth-tx/",
+  "/birth-support/seattle-wa/ballard": "/birth-support/seattle-wa/",
+  "/birth-support/chicago-il/evanston": "/birth-support/chicago-il/",
+  "/birth-support/atlanta-ga/decatur": "/birth-support/atlanta-ga/",
 };
 
 interface EventContext {

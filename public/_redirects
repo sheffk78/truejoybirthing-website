@@ -53,8 +53,6 @@
 
 /author/shelbi /about/ 301
 /author/shelbi/ /about/ 301
-/category/uncategorized /blog/ 301
-/category/uncategorized/ /blog/ 301
 /category/* /blog/ 301
 /tag/* /blog/ 301
 
@@ -63,10 +61,8 @@
 # ════════════════════════════════════════════════════════════
 
 /feed /blog/ 301
-/feed/ /blog/ 301
 /feed/* /blog/ 301
-/comments/feed /blog/ 301
-/comments/feed/ /blog/ 301
+/comments/feed/* /blog/ 301
 /sitemap.xml /sitemap.xml 301
 /wp-sitemap.xml /sitemap.xml 301
 
@@ -163,34 +159,16 @@
 /doula-interview/ /doula-interview-questions/ 301
 /how-to-choose-a-birth-doula /how-to-choose-a-doula/ 301
 /how-to-choose-a-birth-doula/ /how-to-choose-a-doula/ 301
-/birth-center-near /birth-center-near-me/ 301
-/birth-center-near/ /birth-center-near-me/ 301
 
 # ════════════════════════════════════════════════════════════
 # OLD CITY PAGES → NEW CITY PAGES
 # ════════════════════════════════════════════════════════════
 
-/dallas /birth-support/dallas-tx/ 301
-/dallas/ /birth-support/dallas-tx/ 301
-/houston /birth-support/houston-tx/ 301
-/houston/ /birth-support/houston-tx/ 301
-/austin /birth-support/austin-tx/ 301
-/austin/ /birth-support/austin-tx/ 301
-/san-antonio /birth-support/san-antonio-tx/ 301
-/san-antonio/ /birth-support/san-antonio-tx/ 301
-/fort-worth /birth-support/fort-worth-tx/ 301
-/fort-worth/ /birth-support/fort-worth-tx/ 301
 
 # ════════════════════════════════════════════════════════════
 # REMOVED NEIGHBORHOOD PAGES → PARENT CITY PAGE (Phase 3B rollback)
 # ════════════════════════════════════════════════════════════
 
-/birth-support/seattle-wa/ballard/ /birth-support/seattle-wa/ 301
-/birth-support/seattle-wa/ballard /birth-support/seattle-wa/ 301
-/birth-support/chicago-il/evanston/ /birth-support/chicago-il/ 301
-/birth-support/chicago-il/evanston /birth-support/chicago-il/ 301
-/birth-support/atlanta-ga/decatur/ /birth-support/atlanta-ga/ 301
-/birth-support/atlanta-ga/decatur /birth-support/atlanta-ga/ 301
 
 # ════════════════════════════════════════════════════════════
 # FALLBACK: ANY UNKNOWN PATH → HOMEPAGE (soft redirect)
