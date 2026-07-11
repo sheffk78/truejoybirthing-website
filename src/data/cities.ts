@@ -388,7 +388,7 @@ export const cities: Record<string, CityData> = {
       { name: "Dell Children's Medical Center" , thumbnail: "/images/dell-childrens-austin.webp" , address: "4900 Mueller Blvd, Austin, TX 78723" , nicuLevel: "Level IV" , doulaPolicy: "Doulas welcome in NICU, check current visitor policy" , medicaid: true , url: "https://www.dellchildrens.net" , paragraph: "Dell Children's Medical Center, part of Ascension Texas, is a Level IV NICU facility in Central Austin's Mueller neighborhood. It serves as the regional referral center for the most complex neonatal cases and works closely with maternal-fetal medicine specialists. The hospital features a dedicated pediatric emergency department, comprehensive neonatal surgery capabilities, and family-centered care. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." }
     ],
     birthCenterDetails: [
-      { name: "No birth centers in Austin" , paragraph: "There are currently no freestanding birth centers in Austin. Home birth with a licensed midwife is available, and Central Texas families may explore birth center options in San Antonio or Houston." }
+      { name: "Austin Area Birthing Center" , paragraph: "Austin Area Birthing Center is the only freestanding, CABC accredited birth center in Austin, TX. Located at 4100 Duval Rd, Building 2, Suite 101, Austin, TX 78759. They offer low-intervention birth services with two locations. Contact: (512) 346-3224." }
     ],
     faqs: [
       { q: "What hospitals in Austin have the highest level NICU?" , a: "Dell Children's Medical Center has a Level IV NICU, the highest level available. St. David's Women's Center of Texas and Seton Medical Center Austin both have Level III NICUs." },
