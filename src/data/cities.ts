@@ -2846,6 +2846,9 @@ export const cities: Record<string, CityData> = {
     costHigh: 3000,
     shelbiServesHere: false,
     heroImage: "/images/henderson-nv-birth-doula-skyline.webp",
+    ogImage: "/images/og-city-henderson-nv.webp",
+    supportSceneImage: "/images/phoenix-az-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Henderson, Nevada: desert birth support and doula care",
     localDoulas: [
       { name: "Well Rounded Childbirth" , credential: "Birth Doula" , practice: "Well Rounded Childbirth" , url: "https://www.hendersonhospital.com/well-rounded-childbirth" , photo: "", description: "Price: $125 per couple, Labor Doula Class Dates (6:30 to 9:30 p.m.): January 11, 18 (Henderson Hospital) Henderson Hospital 1050 W. Galleria Drive Henderson, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Henderson, NV"] },
       { name: "Ashamii Henderson" , credential: "Birth Doula" , practice: "Ashamii Henderson" , url: "https://www.bornbir.com/ashamii-henderson" , photo: "" , description: "I offer prenatal, birth/labor, and postpartum support. Let's chat to see what's best for you! Ratings and reviews. Be the first to write Ashamii ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Henderson, NV"] } ],

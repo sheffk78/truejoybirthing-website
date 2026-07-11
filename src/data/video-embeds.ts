@@ -151,6 +151,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M07S",
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
+  "henderson-nv": {
+    videoId: "JUeHxUiIg14",
+    title: "Henderson NV Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Nevada Medicaid, all in under 5 minutes.",
+    duration: "PT4M11S",
+    uploadDate: "2026-06-23T00:00:00-07:00",
+  },
   "minneapolis-mn": {
     videoId: "vbf80zB_5aU",
     title: "Minneapolis Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -334,8 +341,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT5M23S",
     uploadDate: "2026-07-01T00:00:00-06:00",
 },
-// oakland-ca video entry removed: empty videoId was failing G55 preflight gate.
-// Re-add when the YouTube video is produced and a real videoId is available.
+"oakland-ca": {
+    videoId: "VvRVfdgx-5Q",
+    title: "Oakland CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Medi-Cal coverage, all in under 5 minutes.",
+    duration: "PT4M28S",
+    uploadDate: "2026-07-10T00:00:00-06:00",
+},
 "richmond-va": {
     videoId: "orQupd9pT7U",
     title: "Richmond VA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",

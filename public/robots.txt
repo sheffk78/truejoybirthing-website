@@ -12,6 +12,17 @@ Disallow: /preview/
 Disallow: /staging/
 Disallow: /*?preview=*
 
+# Block WordPress system paths (site migrated to Astro, these are gone)
+Disallow: /wp-admin/
+Disallow: /wp-json/
+Disallow: /wp-includes/
+Disallow: /wp-login.php
+Disallow: /cdn-cgi/l/email-protection
+
+# Block old Thrive Apprentice pagination artifacts
+Disallow: /*/page/[thrive_page_number]/
+Disallow: /page/[thrive_page_number]/
+
 # Explicitly allow AI citation crawlers (GEO optimization)
 User-agent: ClaudeBot
 Allow: /
