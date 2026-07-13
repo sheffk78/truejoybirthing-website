@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Doula Nathalie & Associates",
+    "website": "https://www.doulanathalie.com/",
+    "email": "nathalie@doulanathalie.com",
+    "contact_form_url": "https://www.doulanathalie.com/contact-a-doula",
+    "notes": "Primary email nathalie@doulanathalie.com listed on contact page. Secondary email info@doulanathalie.com also listed for form issues. Owner: Nathalie Grolleman. Phone: (202) 279-1089. Contact page at /contact-a-doula."
+  },
+  {
+    "name": "Dina Piccioni (Nurturing Hands Doula Support)",
+    "website": "https://www.nhdoulas.com/",
+    "email": null,
+    "contact_form_url": "https://www.nhdoulas.com/",
+    "notes": "No public email address found. Website (Wix-based) only has a contact form on the homepage. Checked nhdoulas.com page source, doulamatch.net profile, bornbir.com profile, and web searches — no email published. Note: Dina is also listed as a doula associate at doulanathalie.com. Doulamatch and Bornbir use internal messaging, not public emails."
+  },
+  {
+    "name": "Rose Quintilian (Silver Spring Doula / My Gentle Birth, LLC)",
+    "website": "https://silverspringdoula.com/",
+    "email": "jenny@silverspringdoula.com",
+    "contact_form_url": "https://silverspringdoula.com/doula-services-inquiry/",
+    "notes": "Email jenny@silverspringdoula.com is the shared contact email for both doulas (Jenny Corbett and Rose Quintilian) listed on /contact-us page. Phone: (202) 486-7727. Note: Yahoo email addresses cannot reach this domain. Contact form (Wufoo) at /doula-services-inquiry/."
+  },
+  {
+    "name": "Katie Baxter (Katie Baxter Doula Services)",
+    "website": "https://www.washingtondcbirth.com/",
+    "email": "KatieBaxterDoula@gmail.com",
+    "contact_form_url": null,
+    "notes": "Email KatieBaxterDoula@gmail.com confirmed in website HTML source (appears in footer). No contact form on site. Website is a Wix landing page. Katie also co-founded The Postpartum Collective. Note: a second email kmbbaxter@gmail.com appears on her Facebook page but the website email should be used for outreach."
+  }
+]

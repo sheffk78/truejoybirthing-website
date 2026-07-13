@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1200px;
+    height: 630px;
+    background: #FAF8F5;
+    overflow: hidden;
+  }
+  .og-card {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    height: 630px;
+  }
+  .left-column {
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 52px 64px;
+    background: linear-gradient(180deg, #FAF8F5 0%, #EDE5F5 100%);
+    position: relative;
+  }
+  .left-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #D8A0C4;
+  }
+  .left-column::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #D8A0C4;
+  }
+  .right-column {
+    width: 540px;
+    position: relative;
+    overflow: hidden;
+  }
+  .right-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .right-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #D8A0C4;
+    z-index: 2;
+  }
+  .right-column::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #D8A0C4;
+    z-index: 2;
+  }
+  .eyebrow {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #8E7AA2;
+    margin-bottom: 16px;
+  }
+  .headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #2D2A3E;
+    margin-bottom: 20px;
+  }
+  .summary {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #4A4A5E;
+    margin-bottom: 20px;
+  }
+  .subhead {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #8E7AA2;
+    margin-bottom: 32px;
+  }
+  .subhead span {
+    margin: 0 6px;
+    color: #D8A0C4;
+  }
+  .logo-area {
+    position: absolute;
+    bottom: 24px;
+    left: 64px;
+  }
+  .logo-area img {
+    height: 56px;
+    width: auto;
+  }
+</style>
+</head>
+<body>
+<div class="og-card">
+  <div class="left-column">
+    <div class="eyebrow">LAUREL BIRTH SUPPORT</div>
+    <div class="headline">Doulas &amp; Birth Plans<br>in Laurel, MD</div>
+    <div class="summary">From Main Street to the Patuxent River, Laurel families deserve birth support that gets it. Real hospital policies at UM Capital Region and Holy Cross, local doulas, and a free birth plan template built for Maryland moms.</div>
+    <div class="subhead">Free birth plan template <span>·</span> Hospital info <span>·</span> Real costs <span>·</span> Medicaid coverage</div>
+    <div class="logo-area">
+      <img src="https://truejoybirthing.com/images/logo-mono.svg" alt="True Joy Birthing" />
+    </div>
+  </div>
+  <div class="right-column">
+    <img src="../public/images/laurel-md-birth-doula-skyline.webp" alt="Laurel, MD" />
+  </div>
+</div>
+</body>
+</html>
