@@ -465,4 +465,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT5M22S",
     uploadDate: "2026-07-13T20:40:00Z",
 },
+"hartford-ct": {
+    videoId: "04qCKKTB9wA",
+    title: "Hartford CT Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Connecticut Medicaid (HUSKY Health), all in under 5 minutes.",
+    duration: "PT4M09S",
+    uploadDate: "2026-07-13T16:10:00Z",
+},
 };
