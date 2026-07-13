@@ -4002,7 +4002,7 @@ export const cities: Record<string, CityData> = {
     costLow: 800,
     costHigh: 2200,
     shelbiServesHere: false,
-    heroImage: "/images/greenbelt-md-birth-doula-hero.webp",
+    heroImage: "/images/greenbelt-md-birth-doula-hero-v2.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-greenbelt-md.webp",
     supportSceneImage: "/images/greenbelt-md-birth-doula-support.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Greenbelt: Prince George's County birth support and doula care in Maryland",
