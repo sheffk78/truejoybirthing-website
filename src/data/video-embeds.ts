@@ -458,4 +458,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT6M5S",
     uploadDate: "2026-07-13T00:00:00-04:00",
 },
+"greenbelt-md": {
+    videoId: "dePHsXbfYVc",
+    title: "Greenbelt MD Birth Guide: Hospitals, Doulas, Costs & Medicaid",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 6 minutes.",
+    duration: "PT5M22S",
+    uploadDate: "2026-07-13T20:40:00Z",
+},
 };
