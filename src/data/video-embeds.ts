@@ -444,4 +444,18 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M45S",
     uploadDate: "2026-07-10T00:00:00-07:00",
 },
+"rockville-md": {
+    videoId: "Z8ME-Kv_Gzg",
+    title: "Rockville MD Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Maryland Medicaid, all in under 7 minutes.",
+    duration: "PT6M25S",
+    uploadDate: "2026-07-13T00:00:00-04:00",
+},
+"laurel-md": {
+    videoId: "wvRNvfNtV1c",
+    title: "Laurel MD Birth Guide: Hospitals, Doulas, Costs & Medicaid",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Maryland Medicaid, all in under 7 minutes.",
+    duration: "PT6M5S",
+    uploadDate: "2026-07-13T00:00:00-04:00",
+},
 };
