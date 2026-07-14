@@ -25,7 +25,7 @@ A hospital is a different environment than a birth center or your home. Understa
 
 **Multiple patients.** Your nurse is probably managing more than one patient. A birth plan that takes 30 seconds to scan will be read. A three-page document will be skimmed or set aside.
 
-A mom from <a href="/birth-support/denver-co/">Denver, CO</a> told me her birth plan worked because she'd shared it with her OB at a prenatal visit before labor started. Her provider flagged two things that the hospital didn't allow, and she had time to adjust before she was in the delivery room. She said that single conversation saved her from being disappointed in the moment.
+A mom from <a href="/birth-support/aurora-co/">Aurora, CO</a> told me her birth plan worked because she'd shared it with her OB at a prenatal visit before labor started. Her provider flagged two things that the hospital didn't allow, and she had time to adjust before she was in the delivery room. She said that single conversation saved her from being disappointed in the moment.
 
 ## What to Include in Your Hospital Birth Plan
 

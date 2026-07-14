@@ -45,7 +45,7 @@ When you ask for recommendations in a local group, try being specific about what
 
 Your OB, midwife, or hospital's childbirth education department often keeps a list of doulas they've worked with and trust. Many hospitals now offer doula referral lists specifically because they've seen the difference doula support makes in birth outcomes.
 
-One <a href="/birth-support/denver-co/">Denver-area doula</a> shared that most of her new clients come from midwife referrals. She told me that midwives and doulas naturally work well together — the midwife handles the medical side, and the doula focuses on continuous emotional support. When a provider recommends a doula, it's usually because they've seen that partnership work well.
+One <a href="/birth-support/aurora-co/">Aurora-area doula</a> shared that most of her new clients come from midwife referrals. She told me that midwives and doulas naturally work well together — the midwife handles the medical side, and the doula focuses on continuous emotional support. When a provider recommends a doula, it's usually because they've seen that partnership work well.
 
 ## What Should You Look for When Choosing a Doula?
 

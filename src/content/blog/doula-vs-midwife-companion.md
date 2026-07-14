@@ -31,7 +31,7 @@ What midwives do that doulas don't: perform clinical exams like cervical checks 
 
 One mom I spoke with had midwives for her first two births and described the experience as far more personal than OB care. Her midwife for her first birth spent time with her, answered questions thoroughly, and made her feel like a person rather than a patient. For her third pregnancy, she needed OB care because she was carrying twins, but she still credits her midwife experiences with shaping how she advocates for herself in medical settings.
 
-If you're looking for midwife-friendly birth settings, check out birth support resources in <a href="/birth-support/denver-co/">Denver, CO</a> or <a href="/birth-support/portland-or/">Portland, OR</a>, where midwifery care is well-integrated into both birth centers and hospital systems. You can also browse our <a href="/birth-support/co/">Colorado birth support hub</a> for hospital policies and provider information across the state.
+If you're looking for midwife-friendly birth settings, check out birth support resources in <a href="/birth-support/aurora-co/">Aurora, CO</a> or <a href="/birth-support/portland-or/">Portland, OR</a>, where midwifery care is well-integrated into both birth centers and hospital systems. You can also browse our <a href="/birth-support/co/">Colorado birth support hub</a> for hospital policies and provider information across the state.
 
 ## How Is a Doula Different From a Midwife?
 
@@ -63,7 +63,7 @@ One mom in a birth community forum shared that she had a home birth with a midwi
 
 **If cost is a factor:** Midwifery care is usually covered by insurance. Doula services are often out-of-pocket, though some Medicaid programs and private insurers now cover doula care. Check our <a href="/blog/medicaid-doula-coverage/">Medicaid doula coverage guide</a> to see if your state covers doula services. If budget forces a choice, prioritize the clinical provider your situation requires, then explore sliding-scale or community doula programs.
 
-For specific cost ranges in your area, see doula costs in <a href="/birth-support/dallas-tx/">Dallas, TX</a> or <a href="/birth-support/chicago-il/">Chicago, IL</a>. You can also check our <a href="/birth-support/tx/">Texas birth support hub</a> for statewide Medicaid coverage and cost data.
+For specific cost ranges in your area, see doula costs in <a href="/birth-support/austin-tx/">Austin, TX</a> or <a href="/birth-support/chicago-il/">Chicago, IL</a>. You can also check our <a href="/birth-support/tx/">Texas birth support hub</a> for statewide Medicaid coverage and cost data.
 
 ## Doula vs Midwife vs OB: How Do They Compare?
 
@@ -116,7 +116,7 @@ Midwifery care (CNM) is widely covered by private insurance and Medicaid. Doula 
 
 **How much does a doula cost compared to a midwife?**
 
-A birth doula typically costs $800 to $2,500 out-of-pocket. A CNM in a hospital setting is usually covered by insurance with standard copays. Out-of-hospital midwifery care costs $3,000 to $9,000, sometimes partially covered. See our <a href="/postpartum-doula/">postpartum doula guide</a> for postpartum-specific pricing.
+A birth doula typically costs $800 to $2,500 out-of-pocket. A CNM in a hospital setting is usually covered by insurance with standard copays. Out-of-hospital midwifery care costs $3,000 to $9,000, sometimes partially covered. See our <a href="/blog/postpartum-doula/">postpartum doula guide</a> for postpartum-specific pricing.
 
 **Can I hire a doula if I'm having a planned C-section?**
 
@@ -132,4 +132,4 @@ Whether you choose a doula, a midwife, or both, the single most important thing 
 
 Start with the <a href="/birth-plan-template/">free Joyful Birth Plan template</a>. It walks you through every decision point, from pain management to delivery preferences to newborn procedures. Then schedule a <a href="/birth-plan-confidence-session/">Birth Plan Confidence Session</a> to review your completed plan with a certified doula line by line.
 
-If you're still deciding between providers, our <a href="/faq/">frequently asked questions page</a> covers common concerns about birth support, costs, and what to expect from each role. And if you want to explore local options, browse birth support in <a href="/birth-support/houston-tx/">Houston, TX</a> or your nearest city to see what doulas and midwives are available in your area.
+If you're still deciding between providers, our <a href="/faq/">frequently asked questions page</a> covers common concerns about birth support, costs, and what to expect from each role. And if you want to explore local options, browse birth support in <a href="/birth-support/beaumont-tx/">Beaumont, TX</a> or your nearest city to see what doulas and midwives are available in your area.

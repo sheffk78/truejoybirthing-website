@@ -48,7 +48,7 @@ Most doulas offer 2-3 prenatal visits. Here's what we actually do during those:
 
 ### When to Hire a Doula
 
-The earlier, the better. I know families who've reached out in their first trimester and others who called me at 38 weeks. We can work with either timeline, but earlier gives us more time to build trust and work through your preferences. Somewhere around 20-30 weeks is the sweet spot for most families. If you're ready to start looking, our <a href="/birth-support/denver-co/">Denver, CO birth support guide</a> walks you through local options and what to expect.
+The earlier, the better. I know families who've reached out in their first trimester and others who called me at 38 weeks. We can work with either timeline, but earlier gives us more time to build trust and work through your preferences. Somewhere around 20-30 weeks is the sweet spot for most families. If you're ready to start looking, our <a href="/birth-support/aurora-co/">Aurora, CO birth support guide</a> walks you through local options and what to expect.
 
 Worried about cost? Most doulas charge $800-2500 for full care packages. Some insurance plans now cover doula services, and many states' Medicaid programs do too. Check our <a href="/medicaid-doula-coverage/">Medicaid doula coverage guide</a> for your state, or our <a href="/doula-cost/">doula cost breakdown</a> to understand what you're paying for.
 
@@ -87,7 +87,7 @@ And when your baby is placed on your chest, I step back. That moment is yours.
 
 The birth is over and you're home with a newborn. Now what?
 
-This is where a lot of families struggle hardest, and it's where postpartum support makes the biggest difference. A <a href="/postpartum-doula/">postpartum doula</a> — which can be the same person who attended your birth — helps with:
+This is where a lot of families struggle hardest, and it's where postpartum support makes the biggest difference. A <a href="/blog/postpartum-doula/">postpartum doula</a> — which can be the same person who attended your birth — helps with:
 
 - **Feeding support** — whether you're breastfeeding, bottle feeding, or somewhere in between, we help you figure out what works
 - **Recovery** — your body just did something incredible. We talk through what's normal healing and what needs a call to your provider

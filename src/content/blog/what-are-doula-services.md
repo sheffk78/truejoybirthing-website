@@ -124,7 +124,7 @@ You don't need a specific reason to hire a doula. But here are the situations wh
 - You don't have family nearby or your family isn't supportive
 - You just plain don't want to do this alone
 
-If any of those sound like you, a doula is probably worth looking into. Whether you're looking for <a href="/birth-support/austin-tx/">doula services in Austin, TX</a>, <a href="/birth-support/denver-co/">doula services in Denver, CO</a>, or <a href="/birth-support/portland-or/">doula services in Portland, OR</a>, finding a local doula who knows your hospitals and providers makes a real difference.
+If any of those sound like you, a doula is probably worth looking into. Whether you're looking for <a href="/birth-support/austin-tx/">doula services in Austin, TX</a>, <a href="/birth-support/aurora-co/">doula services in Aurora, CO</a>, or <a href="/birth-support/portland-or/">doula services in Portland, OR</a>, finding a local doula who knows your hospitals and providers makes a real difference.
 
 Not sure where to start? Our <a href="/blog/what-is-a-birth-doula/">birth doula guide</a> goes deeper into what happens during labor support specifically.
 
@@ -140,7 +140,7 @@ Not every doula is the right fit for every family. Here's what I'd look for:
 
 For questions to ask during a consultation, our <a href="/blog/doula-interview-questions/">doula interview questions guide</a> has you covered.
 
-No matter where you live, from <a href="/birth-support/miami-fl/">doula services in Miami, FL</a> to <a href="/birth-support/boston-ma/">doula services in Boston, MA</a>, the same principles apply — find someone certified, experienced, and the right personality fit.
+No matter where you live, from <a href="/birth-support/gainesville-fl/">doula services in Gainesville, FL</a> to <a href="/birth-support/boston-ma/">doula services in Boston, MA</a>, the same principles apply — find someone certified, experienced, and the right personality fit.
 
 ## The Bottom Line
 

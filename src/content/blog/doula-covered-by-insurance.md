@@ -92,7 +92,7 @@ Medicaid coverage for doula care varies widely. Here's what's currently availabl
 - **California** — Expanding coverage across 27 counties; payments range from $450–$900
 - **Washington** — Select private and Medicaid plans offer coverage, usually with pre-authorization. See our <a href="/birth-support/seattle-wa/">Seattle, WA birth support guide</a> for local details
 
-For city-by-city details, check our guides for <a href="/birth-support/denver-co/">Denver, CO</a> (Medicaid-covered), <a href="/birth-support/portland-or/">Portland, OR</a> (full Medicaid coverage), and <a href="/birth-support/dallas-tx/">Dallas, TX</a> (not yet covered statewide).
+For city-by-city details, check our guides for <a href="/birth-support/aurora-co/">Aurora, CO</a> (Medicaid-covered), <a href="/birth-support/portland-or/">Portland, OR</a> (full Medicaid coverage), and <a href="/birth-support/austin-tx/">Austin, TX</a> (not yet covered statewide).
 
 This landscape changes fast. Check your state's current Medicaid policy or reach out to me directly — I stay on top of these updates because they matter to the families I serve.
 

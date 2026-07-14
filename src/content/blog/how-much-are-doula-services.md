@@ -56,10 +56,10 @@ Most families book postpartum support for 2–12 weeks depending on their situat
 Location is one of the biggest factors in doula pricing. Here's what I've seen working with families across different areas:
 
 - **Major cities (NYC, Boston, San Francisco, LA):** $1,500–$3,000 for a birth package. Higher cost of living, higher training requirements, and more demand all push prices up.
-- **Mid-size cities (Dallas, Denver, Atlanta):** $1,000–$2,000. Still solid options, moderate pricing. If you're in one of these areas, check out our guide to <a href="/birth-support/denver-co/">doula services in Denver</a> for local cost details.
+- **Mid-size cities (Dallas, Denver, Atlanta):** $1,000–$2,000. Still solid options, moderate pricing. If you're in one of these areas, check out our guide to <a href="/birth-support/aurora-co/">doula services in Aurora</a> for local cost details.
 - **Rural areas and small towns:** $800–$1,500. Lower base rates, but watch for travel fees if you're outside the doula's usual radius.
 
-Doula costs also vary significantly by location — for example, doulas in [New York City](/birth-support/new-york-ny/) typically charge more than those in [Dallas](/birth-support/dallas-tx/) or [Los Angeles](/birth-support/los-angeles-ca/). Our city-by-city guides break down local pricing, Medicaid coverage, and hospital policies so you can plan your budget with confidence.
+Doula costs also vary significantly by location — for example, doulas in [New York City](/birth-support/new-york-ny/) typically charge more than those in [Austin](/birth-support/austin-tx/) or [Los Angeles](/birth-support/los-angeles-ca/). Our city-by-city guides break down local pricing, Medicaid coverage, and hospital policies so you can plan your budget with confidence.
 
 ## Can Insurance Cover a Doula?
 

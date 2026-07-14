@@ -26,7 +26,7 @@ You've got options. Here's where I'd start:
 - **Local Facebook groups** — Search for birth groups in your area. Doulas post there, and other parents share honest reviews. These groups are gold for finding people who actually show up in your community.
 - **Provider referrals** — Ask your midwife, OB, or childbirth educator. They work with doulas regularly and know who's reliable and who's not. A referral from someone already on your care team carries weight.
 
-If you're in one of our service areas, check our local guides for specifics: [Houston, TX](/birth-support/houston-tx/), [Chicago, IL](/birth-support/chicago-il/), and [Phoenix, AZ](/birth-support/phoenix-az/) — each one covers hospital policies, local doula cost ranges, and Medicaid coverage info.
+If you're in one of our service areas, check our local guides for specifics: [Beaumont, TX](/birth-support/beaumont-tx/), [Chicago, IL](/birth-support/chicago-il/), and [Phoenix, AZ](/birth-support/phoenix-az/) — each one covers hospital policies, local doula cost ranges, and Medicaid coverage info.
 
 ## What to Ask in an Interview
 
@@ -118,6 +118,6 @@ For insurance: ask your doula for a superbill (a detailed receipt with billing c
 
 Hiring a doula doesn't have to be complicated. Start your search, ask the right questions, trust your gut, and don't settle for someone who makes you feel small or unclear. The right doula will make you feel more prepared — not more anxious.
 
-If you're looking for doula support in [Houston](/birth-support/houston-tx/), [Chicago](/birth-support/chicago-il/), or [Phoenix](/birth-support/phoenix-az/), I'd love to talk. You can also learn more about <a href="/what-is-a-doula/">what a birth doula does</a> and <a href="/postpartum-doula/">postpartum support</a> right here on the site.
+If you're looking for doula support in [Beaumont](/birth-support/beaumont-tx/), [Chicago](/birth-support/chicago-il/), or [Phoenix](/birth-support/phoenix-az/), I'd love to talk. You can also learn more about <a href="/what-is-a-doula/">what a birth doula does</a> and <a href="/blog/postpartum-doula/">postpartum support</a> right here on the site.
 
 — Shelbi

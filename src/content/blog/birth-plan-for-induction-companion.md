@@ -19,7 +19,7 @@ A labor induction changes your timeline, your options, and how your contractions
 
 None of this means induction is a bad experience. It means your birth plan needs to be more specific, because the default settings are more of everything. A generic plan does not account for those. An induction birth plan does.
 
-I worked with a mom in <a href="/birth-support/denver-co/">Denver</a> who was induced at 39 weeks for gestational hypertension. She had originally written a plan for spontaneous labor. When we rewrote it for the induction, she told me she finally understood what was about to happen. The unknowns became knowns.
+I worked with a mom in <a href="/birth-support/aurora-co/">Aurora</a> who was induced at 39 weeks for gestational hypertension. She had originally written a plan for spontaneous labor. When we rewrote it for the induction, she told me she finally understood what was about to happen. The unknowns became knowns.
 
 ## How Do You Prepare for a Pitocin Birth Plan?
 
@@ -101,7 +101,7 @@ Failed induction is one of the most common reasons for a cesarean. I am not tell
 
 Your induction birth plan should include what you want if labor stalls. Write down whether you want to be informed of risks and benefits before any new intervention, whether you want time to discuss with your partner, and what you want if a cesarean becomes necessary.
 
-One mother I supported in <a href="/birth-support/dallas-tx/">Dallas</a> had a 22-hour induction that stalled at 7 cm. Her plan said that if a cesarean became necessary, she wanted her partner present and a clear explanation before consent. She also wanted skin-to-skin in the OR if her baby was stable. That is what happened. Having those preferences written down meant she did not have to make every decision in the moment.
+One mother I supported in <a href="/birth-support/austin-tx/">Austin</a> had a 22-hour induction that stalled at 7 cm. Her plan said that if a cesarean became necessary, she wanted her partner present and a clear explanation before consent. She also wanted skin-to-skin in the OR if her baby was stable. That is what happened. Having those preferences written down meant she did not have to make every decision in the moment.
 
 If you want to prepare for that possibility, read our <a href="/blog/c-section-birth-plan-companion/">C-section birth plan guide</a>.
 
@@ -118,7 +118,7 @@ If your support person is your partner and they have never been in a hospital bi
 - Ask questions on your behalf. If your nurse suggests a new intervention, your support person can ask about benefits, risks, and what happens if you wait.
 - Take breaks. A rested support person is more useful than one who has been awake for 36 hours.
 
-For local support, we have directories for <a href="/birth-support/houston-tx/">birth support in Houston</a>, <a href="/birth-support/phoenix-az/">Phoenix</a>, and state-level resources for <a href="/birth-support/co/">birth support across Colorado</a>.
+For local support, we have directories for <a href="/birth-support/beaumont-tx/">birth support in Beaumont</a>, <a href="/birth-support/phoenix-az/">Phoenix</a>, and state-level resources for <a href="/birth-support/co/">birth support across Colorado</a>.
 
 ## Frequently Asked Questions About Induction Birth Plans
 

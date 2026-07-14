@@ -72,7 +72,7 @@ Here is something I want you to know: a doula supports you wherever you give bir
 
 In a **hospital**, I help you advocate for your preferences when the room gets busy, remind you of your options before interventions are offered, and provide continuous physical and emotional support when nurses change shifts. In a **birth center**, I work alongside your midwife, offer hands-on comfort techniques, and help you stay grounded and focused through the intensity of unmedicated labor.
 
-The research is consistent: families who have continuous doula support have shorter labors, lower rates of C-section, and report higher satisfaction with their birth experience — regardless of the setting. Whether you are at <a href="/birth-support/dallas-tx/">Dallas</a> or <a href="/birth-support/austin-tx/">Austin</a>, local doulas understand the specific hospitals and birth centers in your area and can help you navigate each one.
+The research is consistent: families who have continuous doula support have shorter labors, lower rates of C-section, and report higher satisfaction with their birth experience — regardless of the setting. Whether you are at <a href="/birth-support/austin-tx/">Austin</a> or <a href="/birth-support/portland-or/">Portland</a>, local doulas understand the specific hospitals and birth centers in your area and can help you navigate each one.
 
 ## Preparing for Either Setting: Your Birth Plan
 
@@ -94,8 +94,8 @@ The goal is not a specific outcome. The goal is walking into your birth feeling 
 
 ## Finding the Right Setting Near You
 
-Birth settings vary dramatically by region. What is available in a major metro like <a href="/birth-support/dallas-tx/">Dallas</a> might not exist in smaller cities. And each state has its own licensing requirements, Medicaid coverage, and midwife regulations that shape your options.
+Birth settings vary dramatically by region. What is available in a major metro like <a href="/birth-support/austin-tx/">Austin</a> might not exist in smaller cities. And each state has its own licensing requirements, Medicaid coverage, and midwife regulations that shape your options.
 
-Texas families can explore <a href="/birth-support/tx/">birth support options across the state</a> to find hospitals, birth centers, and doulas in their specific area. If you are in the DFW metroplex, the <a href="/birth-support/fort-worth-tx/">Fort Worth</a> and <a href="/birth-support/dallas-tx/">Dallas</a> city pages break down every hospital and birth center with details on NICU levels, doula policies, and Medicaid acceptance.
+Texas families can explore <a href="/birth-support/tx/">birth support options across the state</a> to find hospitals, birth centers, and doulas in their specific area. If you are in the DFW metroplex, the <a href="/birth-support/arlington-tx/">Arlington</a> and <a href="/birth-support/arlington-tx/">Arlington</a> city pages break down every hospital and birth center with details on NICU levels, doula policies, and Medicaid acceptance.
 
 The bottom line: choose the setting that aligns with your health, your values, and your vision for birth — then write it down, build your team, and walk in ready. You have got this.

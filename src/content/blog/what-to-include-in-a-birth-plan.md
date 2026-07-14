@@ -191,7 +191,7 @@ Not every birth starts the same way. If your situation has specific needs, these
 - **C-section planned or possible?** Our <a href="/c-section-birth-plan/">C-section birth plan</a> walks you through surgical birth preferences — from clear drapes to skin-to-skin in the OR.
 - **Planning a home birth?** Our <a href="/home-birth-plan/">home birth plan</a> covers what's different when you're planning to birth at home — transfer plans, supply lists, and how to prepare your space.
 
-Hospital policies look different depending on where you live. For local details on hospital policies, doula availability, and birth center options, check our city guides: <a href="/birth-support/austin-tx/">Austin, TX</a>, <a href="/birth-support/houston-tx/">Houston, TX</a>, and <a href="/birth-support/denver-co/">Denver, CO</a>.
+Hospital policies look different depending on where you live. For local details on hospital policies, doula availability, and birth center options, check our city guides: <a href="/birth-support/austin-tx/">Austin, TX</a>, <a href="/birth-support/beaumont-tx/">Beaumont, TX</a>, and <a href="/birth-support/aurora-co/">Aurora, CO</a>.
 
 ## How to Talk to Your Provider About Your Birth Plan
 

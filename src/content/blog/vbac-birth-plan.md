@@ -64,7 +64,7 @@ VBAC labor typically involves more monitoring than a standard labor. This is one
 
 Many hospitals require continuous electronic fetal monitoring for VBAC labors. If your hospital does, ask whether wireless or waterproof monitors are available so you can still move during labor. Movement helps labor progress, and being stuck in bed wired to monitors works against you.
 
-For city-specific hospital policies on VBAC monitoring, check our local guides for <a href="/birth-support/denver-co/">Denver, CO</a>, <a href="/birth-support/portland-or/">Portland, OR</a>, and <a href="/birth-support/austin-tx/">Austin, TX</a>. You can also explore all <a href="/birth-support/tx/">Texas birth support cities</a> for hospital details across the state.
+For city-specific hospital policies on VBAC monitoring, check our local guides for <a href="/birth-support/aurora-co/">Aurora, CO</a>, <a href="/birth-support/portland-or/">Portland, OR</a>, and <a href="/birth-support/austin-tx/">Austin, TX</a>. You can also explore all <a href="/birth-support/tx/">Texas birth support cities</a> for hospital details across the state.
 
 ### 3. Pain Management for VBAC Labor
 
@@ -166,7 +166,7 @@ VBAC policies vary significantly by hospital, and some hospitals don't support V
 
 **Anesthesia availability.** Hospitals that support VBAC need 24/7 anesthesia coverage. Confirm this is available at your hospital so an epidural is an option when you want one.
 
-These policies differ by location and hospital system. For local hospital details, check our city guides for <a href="/birth-support/houston-tx/">Houston, TX</a>, <a href="/birth-support/chicago-il/">Chicago, IL</a>, and <a href="/birth-support/phoenix-az/">Phoenix, AZ</a>. See our <a href="/birth-support/il/">Illinois birth support hub</a> for hospital policies across all Illinois cities. If you're in a state with Medicaid doula coverage like <a href="/birth-support/raleigh-nc/">Raleigh, NC</a> or <a href="/birth-support/seattle-wa/">Seattle, WA</a>, a doula's advocacy support may be covered.
+These policies differ by location and hospital system. For local hospital details, check our city guides for <a href="/birth-support/beaumont-tx/">Beaumont, TX</a>, <a href="/birth-support/chicago-il/">Chicago, IL</a>, and <a href="/birth-support/phoenix-az/">Phoenix, AZ</a>. See our <a href="/birth-support/il/">Illinois birth support hub</a> for hospital policies across all Illinois cities. If you're in a state with Medicaid doula coverage like <a href="/birth-support/raleigh-nc/">Raleigh, NC</a> or <a href="/birth-support/seattle-wa/">Seattle, WA</a>, a doula's advocacy support may be covered.
 
 ## Tips for Discussing Your VBAC Birth Plan With Your Provider
 

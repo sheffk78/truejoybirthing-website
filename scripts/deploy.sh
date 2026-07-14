@@ -133,6 +133,19 @@ if [ -n "$UPGRADE_SLUG" ]; then
 fi
 
 # ---------------------------------------------------------------
+# 🔴 GATE: Cross-reference validation (catches dangling city slugs)
+# ---------------------------------------------------------------
+echo ""
+echo "--- GATE: Cross-reference validation ---"
+if npx tsx scripts/validate-xrefs.ts 2>&1; then
+  echo "  → Xref validation PASSED"
+else
+  echo "  ❌ Xref validation FAILED — fix dangling slug references before deploying"
+  echo "  → Run: npx tsx scripts/validate-xrefs.ts"
+  exit 1
+fi
+
+# ---------------------------------------------------------------
 # STEP 2: Build (validate code compiles)
 # ---------------------------------------------------------------
 echo ""

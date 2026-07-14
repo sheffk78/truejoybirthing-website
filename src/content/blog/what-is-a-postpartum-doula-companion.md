@@ -28,7 +28,7 @@ Here is what a typical daytime shift looks like:
 - **Emotional check-ins**: watching for signs of postpartum anxiety or depression, listening without judgment, reminding you that what you are feeling is normal.
 - **Sibling support**: helping older siblings adjust, keeping them occupied, or taking them to the park so you can nap.
 
-One mom I worked with in <a href="/birth-support/denver-co/">Denver, CO</a> had her first baby after a 36-hour labor. By day five, she was crying at every feeding because the latch was painful and her milk had not fully come in. Her postpartum doula spent one afternoon adjusting her positioning, showing her a laid-back nursing hold, and making her a proper meal. By that evening, the pain was manageable and she had eaten three times that day instead of once. That single shift changed the trajectory of her entire postpartum recovery.
+One mom I worked with in <a href="/birth-support/aurora-co/">Aurora, CO</a> had her first baby after a 36-hour labor. By day five, she was crying at every feeding because the latch was painful and her milk had not fully come in. Her postpartum doula spent one afternoon adjusting her positioning, showing her a laid-back nursing hold, and making her a proper meal. By that evening, the pain was manageable and she had eaten three times that day instead of once. That single shift changed the trajectory of her entire postpartum recovery.
 
 That is what a postpartum doula does. Not indulgence. Not luxury. Practical, hands-on help from someone who has been through it hundreds of times.
 
@@ -95,7 +95,7 @@ Postpartum doula costs vary by location, experience, and shift type. Here are th
 - **Package rates**: Some doulas offer packages like 20 hours for $600 to $1,200, depending on location
 - **Minimum shift**: Most doulas require a 3 to 4 hour minimum for daytime shifts
 
-Location matters a lot. In <a href="/birth-support/dallas-tx/">Dallas, TX</a>, expect $30 to $50 per hour for daytime support. In <a href="/birth-support/new-york-ny/">New York, NY</a>, rates are closer to $50 to $80 per hour. In <a href="/birth-support/nashville-tn/">Nashville, TN</a>, you might find experienced doulas at $25 to $40 per hour.
+Location matters a lot. In <a href="/birth-support/austin-tx/">Austin, TX</a>, expect $30 to $50 per hour for daytime support. In <a href="/birth-support/new-york-ny/">New York, NY</a>, rates are closer to $50 to $80 per hour. In <a href="/birth-support/nashville-tn/">Nashville, TN</a>, you might find experienced doulas at $25 to $40 per hour.
 
 For a full breakdown of costs, including how package rates work and what to budget for the first six weeks, our <a href="/blog/postpartum-doula-cost/">postpartum doula cost guide</a> has detailed numbers by city and shift type.
 

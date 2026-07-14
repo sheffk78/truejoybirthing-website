@@ -50,7 +50,7 @@ Birth centers are designed for people with low-risk pregnancies. You may be a go
 
 If any of these don't apply to you, a hospital birth may be a safer choice. Birth centers have transfer protocols for when things move outside their scope, but if you know you have risk factors, starting at a hospital means you're already where you need to be if intervention becomes necessary.
 
-One doula in <a href="/birth-support/denver-co/">Denver</a> told me she's seen families fall in love with the idea of a birth center without fully understanding the transfer reality. About 10-15% of first-time birth center clients end up transferring to a hospital during labor — sometimes for pain management, sometimes for medical reasons. She said the families who did best were the ones who had a transfer plan before labor started.
+One doula in <a href="/birth-support/aurora-co/">Aurora</a> told me she's seen families fall in love with the idea of a birth center without fully understanding the transfer reality. About 10-15% of first-time birth center clients end up transferring to a hospital during labor — sometimes for pain management, sometimes for medical reasons. She said the families who did best were the ones who had a transfer plan before labor started.
 
 ## How to Find a Birth Center Near You
 

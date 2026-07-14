@@ -85,7 +85,7 @@ One <a href="/birth-support/austin-tx/">Austin mom working with birth support</a
 - I want delayed cord clamping and immediate skin-to-skin if baby is stable
 - If a repeat C-section becomes necessary, I want my partner in the OR and skin-to-skin in recovery as soon as possible
 
-One <a href="/birth-support/denver-co/">Denver doula supporting VBAC families</a> shared that most of her VBAC clients found that hospitals with dedicated VBAC coordinators had much smoother experiences. She said the key was confirming the hospital's VBAC policies before creating the birth plan — not assuming anything.
+One <a href="/birth-support/aurora-co/">Aurora doula supporting VBAC families</a> shared that most of her VBAC clients found that hospitals with dedicated VBAC coordinators had much smoother experiences. She said the key was confirming the hospital's VBAC policies before creating the birth plan — not assuming anything.
 
 ## C-Section Birth Plan Example
 

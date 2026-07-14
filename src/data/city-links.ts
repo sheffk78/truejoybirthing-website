@@ -13,8 +13,8 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     { slug: "long-beach-ca", state: "ca", label: "Long Beach" },
     { slug: "sacramento-ca", state: "ca", label: "Sacramento" },
     // Colorado
-    { slug: "denver-co", state: "co", label: "Denver" },
-    { slug: "colorado-springs-co", state: "co", label: "Colorado Springs" },
+    { slug: "aurora-co", state: "co", label: "Aurora" },
+    { slug: "aurora-co", state: "co", label: "Aurora" },
     // Massachusetts
     { slug: "boston-ma", state: "ma", label: "Boston" },
     // North Carolina — affordable
@@ -23,9 +23,9 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     // New York
     { slug: "new-york-ny", state: "ny", label: "New York" },
     // Texas — affordable metros
-    { slug: "houston-tx", state: "tx", label: "Houston" },
-    { slug: "dallas-tx", state: "tx", label: "Dallas" },
-    { slug: "san-antonio-tx", state: "tx", label: "San Antonio" },
+    { slug: "beaumont-tx", state: "tx", label: "Beaumont" },
+    { slug: "austin-tx", state: "tx", label: "Austin" },
+    { slug: "abilene-tx", state: "tx", label: "Abilene" },
     // Washington
     { slug: "seattle-wa", state: "wa", label: "Seattle" },
   ],
@@ -36,7 +36,7 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     { slug: "san-francisco-ca", state: "ca", label: "San Francisco" },
     { slug: "sacramento-ca", state: "ca", label: "Sacramento" },
     // Colorado
-    { slug: "denver-co", state: "co", label: "Denver" },
+    { slug: "aurora-co", state: "co", label: "Aurora" },
     // Connecticut
     { slug: "hartford-ct", state: "ct", label: "Hartford" },
     // Illinois
@@ -65,9 +65,9 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     { slug: "los-angeles-ca", state: "ca", label: "Los Angeles" },
     { slug: "san-diego-ca", state: "ca", label: "San Diego" },
     // Colorado
-    { slug: "denver-co", state: "co", label: "Denver" },
+    { slug: "aurora-co", state: "co", label: "Aurora" },
     // Florida
-    { slug: "miami-fl", state: "fl", label: "Miami" },
+    { slug: "gainesville-fl", state: "fl", label: "Gainesville" },
     { slug: "orlando-fl", state: "fl", label: "Orlando" },
     // Georgia
     { slug: "atlanta-ga", state: "ga", label: "Atlanta" },
@@ -81,8 +81,8 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     { slug: "nashville-tn", state: "tn", label: "Nashville" },
     // Texas
     { slug: "austin-tx", state: "tx", label: "Austin" },
-    { slug: "houston-tx", state: "tx", label: "Houston" },
-    { slug: "dallas-tx", state: "tx", label: "Dallas" },
+    { slug: "beaumont-tx", state: "tx", label: "Beaumont" },
+    { slug: "austin-tx", state: "tx", label: "Austin" },
     // Washington
     { slug: "seattle-wa", state: "wa", label: "Seattle" },
   ],
@@ -95,10 +95,10 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     { slug: "san-diego-ca", state: "ca", label: "San Diego" },
     { slug: "san-francisco-ca", state: "ca", label: "San Francisco" },
     // Colorado
-    { slug: "denver-co", state: "co", label: "Denver" },
+    { slug: "aurora-co", state: "co", label: "Aurora" },
     // Florida
-    { slug: "jacksonville-fl", state: "fl", label: "Jacksonville" },
-    { slug: "miami-fl", state: "fl", label: "Miami" },
+    { slug: "gainesville-fl", state: "fl", label: "Gainesville" },
+    { slug: "gainesville-fl", state: "fl", label: "Gainesville" },
     // Georgia
     { slug: "atlanta-ga", state: "ga", label: "Atlanta" },
     // Nevada
@@ -106,9 +106,9 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     // Tennessee
     { slug: "nashville-tn", state: "tn", label: "Nashville" },
     // Texas
-    { slug: "dallas-tx", state: "tx", label: "Dallas" },
-    { slug: "houston-tx", state: "tx", label: "Houston" },
-    { slug: "san-antonio-tx", state: "tx", label: "San Antonio" },
+    { slug: "austin-tx", state: "tx", label: "Austin" },
+    { slug: "beaumont-tx", state: "tx", label: "Beaumont" },
+    { slug: "abilene-tx", state: "tx", label: "Abilene" },
     // Washington
     { slug: "seattle-wa", state: "wa", label: "Seattle" },
   ],
@@ -119,7 +119,7 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     { slug: "portland-or", state: "or", label: "Portland" },
     { slug: "seattle-wa", state: "wa", label: "Seattle" },
     // Mountain
-    { slug: "denver-co", state: "co", label: "Denver" },
+    { slug: "aurora-co", state: "co", label: "Aurora" },
     { slug: "phoenix-az", state: "az", label: "Phoenix" },
     // Midwest
     { slug: "chicago-il", state: "il", label: "Chicago" },
@@ -128,13 +128,13 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     // South
     { slug: "atlanta-ga", state: "ga", label: "Atlanta" },
     { slug: "nashville-tn", state: "tn", label: "Nashville" },
-    { slug: "houston-tx", state: "tx", label: "Houston" },
+    { slug: "beaumont-tx", state: "tx", label: "Beaumont" },
     // East
     { slug: "boston-ma", state: "ma", label: "Boston" },
     { slug: "new-york-ny", state: "ny", label: "New York" },
     { slug: "philadelphia-pa", state: "pa", label: "Philadelphia" },
     // Florida
-    { slug: "miami-fl", state: "fl", label: "Miami" },
+    { slug: "gainesville-fl", state: "fl", label: "Gainesville" },
   ],
 
   postpartum: [
@@ -142,10 +142,10 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     { slug: "los-angeles-ca", state: "ca", label: "Los Angeles" },
     { slug: "san-diego-ca", state: "ca", label: "San Diego" },
     // Colorado
-    { slug: "denver-co", state: "co", label: "Denver" },
+    { slug: "aurora-co", state: "co", label: "Aurora" },
     // Florida
-    { slug: "miami-fl", state: "fl", label: "Miami" },
-    { slug: "tampa-fl", state: "fl", label: "Tampa" },
+    { slug: "gainesville-fl", state: "fl", label: "Gainesville" },
+    { slug: "port-st-lucie-fl", state: "fl", label: "Port St. Lucie" },
     // Georgia
     { slug: "atlanta-ga", state: "ga", label: "Atlanta" },
     // Illinois
@@ -159,8 +159,8 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     // Ohio
     { slug: "columbus-oh", state: "oh", label: "Columbus" },
     // Texas
-    { slug: "houston-tx", state: "tx", label: "Houston" },
-    { slug: "dallas-tx", state: "tx", label: "Dallas" },
+    { slug: "beaumont-tx", state: "tx", label: "Beaumont" },
+    { slug: "austin-tx", state: "tx", label: "Austin" },
     { slug: "austin-tx", state: "tx", label: "Austin" },
     // Washington
     { slug: "seattle-wa", state: "wa", label: "Seattle" },
@@ -172,11 +172,11 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     { slug: "san-francisco-ca", state: "ca", label: "San Francisco" },
     { slug: "sacramento-ca", state: "ca", label: "Sacramento" },
     // Colorado
-    { slug: "denver-co", state: "co", label: "Denver" },
+    { slug: "aurora-co", state: "co", label: "Aurora" },
     // Florida
-    { slug: "jacksonville-fl", state: "fl", label: "Jacksonville" },
-    { slug: "miami-fl", state: "fl", label: "Miami" },
-    { slug: "tampa-fl", state: "fl", label: "Tampa" },
+    { slug: "gainesville-fl", state: "fl", label: "Gainesville" },
+    { slug: "gainesville-fl", state: "fl", label: "Gainesville" },
+    { slug: "port-st-lucie-fl", state: "fl", label: "Port St. Lucie" },
     // Georgia
     { slug: "atlanta-ga", state: "ga", label: "Atlanta" },
     // New York
@@ -187,27 +187,27 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     // Pennsylvania
     { slug: "philadelphia-pa", state: "pa", label: "Philadelphia" },
     // Texas
-    { slug: "dallas-tx", state: "tx", label: "Dallas" },
-    { slug: "houston-tx", state: "tx", label: "Houston" },
+    { slug: "austin-tx", state: "tx", label: "Austin" },
+    { slug: "beaumont-tx", state: "tx", label: "Beaumont" },
     // Washington
     { slug: "seattle-wa", state: "wa", label: "Seattle" },
   ],
 
   "home-birth": [
     // Colorado
-    { slug: "denver-co", state: "co", label: "Denver" },
+    { slug: "aurora-co", state: "co", label: "Aurora" },
     { slug: "fort-collins-co", state: "co", label: "Fort Collins" },
     // North Carolina
     { slug: "raleigh-nc", state: "nc", label: "Raleigh" },
-    { slug: "greensboro-nc", state: "nc", label: "Greensboro" },
+    { slug: "charlotte-nc", state: "nc", label: "Charlotte" },
     // Oregon
     { slug: "portland-or", state: "or", label: "Portland" },
     { slug: "eugene-or", state: "or", label: "Eugene" },
     // Texas
     { slug: "austin-tx", state: "tx", label: "Austin" },
-    { slug: "houston-tx", state: "tx", label: "Houston" },
-    { slug: "dallas-tx", state: "tx", label: "Dallas" },
-    { slug: "san-antonio-tx", state: "tx", label: "San Antonio" },
+    { slug: "beaumont-tx", state: "tx", label: "Beaumont" },
+    { slug: "austin-tx", state: "tx", label: "Austin" },
+    { slug: "abilene-tx", state: "tx", label: "Abilene" },
     // Washington
     { slug: "seattle-wa", state: "wa", label: "Seattle" },
     { slug: "tacoma-wa", state: "wa", label: "Tacoma" },
@@ -219,10 +219,10 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     { slug: "los-angeles-ca", state: "ca", label: "Los Angeles" },
     { slug: "san-francisco-ca", state: "ca", label: "San Francisco" },
     // Colorado
-    { slug: "denver-co", state: "co", label: "Denver" },
+    { slug: "aurora-co", state: "co", label: "Aurora" },
     // Florida
-    { slug: "miami-fl", state: "fl", label: "Miami" },
-    { slug: "jacksonville-fl", state: "fl", label: "Jacksonville" },
+    { slug: "gainesville-fl", state: "fl", label: "Gainesville" },
+    { slug: "gainesville-fl", state: "fl", label: "Gainesville" },
     // Georgia
     { slug: "atlanta-ga", state: "ga", label: "Atlanta" },
     // Minnesota
@@ -234,9 +234,9 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     // Pennsylvania
     { slug: "philadelphia-pa", state: "pa", label: "Philadelphia" },
     // Texas
-    { slug: "dallas-tx", state: "tx", label: "Dallas" },
-    { slug: "houston-tx", state: "tx", label: "Houston" },
-    { slug: "san-antonio-tx", state: "tx", label: "San Antonio" },
+    { slug: "austin-tx", state: "tx", label: "Austin" },
+    { slug: "beaumont-tx", state: "tx", label: "Beaumont" },
+    { slug: "abilene-tx", state: "tx", label: "Abilene" },
     // Washington
     { slug: "seattle-wa", state: "wa", label: "Seattle" },
   ],
@@ -247,11 +247,11 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     { slug: "san-francisco-ca", state: "ca", label: "San Francisco" },
     { slug: "sacramento-ca", state: "ca", label: "Sacramento" },
     // Colorado
-    { slug: "denver-co", state: "co", label: "Denver" },
+    { slug: "aurora-co", state: "co", label: "Aurora" },
     // Connecticut
     { slug: "new-haven-ct", state: "ct", label: "New Haven" },
     // Florida
-    { slug: "tampa-fl", state: "fl", label: "Tampa" },
+    { slug: "port-st-lucie-fl", state: "fl", label: "Port St. Lucie" },
     // Minnesota
     { slug: "minneapolis-mn", state: "mn", label: "Minneapolis" },
     // North Carolina
@@ -261,7 +261,7 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     { slug: "portland-or", state: "or", label: "Portland" },
     // Texas
     { slug: "austin-tx", state: "tx", label: "Austin" },
-    { slug: "houston-tx", state: "tx", label: "Houston" },
+    { slug: "beaumont-tx", state: "tx", label: "Beaumont" },
     // Utah
     { slug: "lehi-ut", state: "ut", label: "Lehi" },
     // Washington
@@ -274,7 +274,7 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     // California
     { slug: "san-diego-ca", state: "ca", label: "San Diego" },
     // Colorado
-    { slug: "denver-co", state: "co", label: "Denver" },
+    { slug: "aurora-co", state: "co", label: "Aurora" },
     // Florida
     { slug: "orlando-fl", state: "fl", label: "Orlando" },
     // Georgia
@@ -306,10 +306,10 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     { slug: "fresno-ca", state: "ca", label: "Fresno" },
     { slug: "los-angeles-ca", state: "ca", label: "Los Angeles" },
     // Colorado
-    { slug: "denver-co", state: "co", label: "Denver" },
+    { slug: "aurora-co", state: "co", label: "Aurora" },
     // Florida
-    { slug: "jacksonville-fl", state: "fl", label: "Jacksonville" },
-    { slug: "tampa-fl", state: "fl", label: "Tampa" },
+    { slug: "gainesville-fl", state: "fl", label: "Gainesville" },
+    { slug: "port-st-lucie-fl", state: "fl", label: "Port St. Lucie" },
     // Georgia
     { slug: "atlanta-ga", state: "ga", label: "Atlanta" },
     // Illinois
@@ -322,9 +322,9 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     // Tennessee
     { slug: "nashville-tn", state: "tn", label: "Nashville" },
     // Texas
-    { slug: "dallas-tx", state: "tx", label: "Dallas" },
-    { slug: "houston-tx", state: "tx", label: "Houston" },
-    { slug: "el-paso-tx", state: "tx", label: "El Paso" },
+    { slug: "austin-tx", state: "tx", label: "Austin" },
+    { slug: "beaumont-tx", state: "tx", label: "Beaumont" },
+    { slug: "austin-tx", state: "tx", label: "Austin" },
     // Washington
     { slug: "seattle-wa", state: "wa", label: "Seattle" },
   ],

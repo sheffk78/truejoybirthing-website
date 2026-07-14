@@ -13,7 +13,7 @@ Let's talk about Medicaid doula coverage — because this is one of the most con
 
 Medicaid doula coverage means that your state's Medicaid program will pay for doula services during pregnancy, labor, and the postpartum period — either partially or in full. As of 2026, an increasing number of states have added doula coverage to their Medicaid benefits, recognizing that doula support improves birth outcomes and reduces costs.
 
-One Colorado mom told me her doula was fully covered through Health First Colorado, the state's Medicaid program. She said the key was calling her managed care plan directly — the online directory wasn't up to date, but once she asked the right person, she found a doula who accepted Medicaid in under a week. If you're in Colorado, you can also browse <a href="/birth-support/denver-co/">doulas in the Denver area</a> to find providers near you.
+One Colorado mom told me her doula was fully covered through Health First Colorado, the state's Medicaid program. She said the key was calling her managed care plan directly — the online directory wasn't up to date, but once she asked the right person, she found a doula who accepted Medicaid in under a week. If you're in Colorado, you can also browse <a href="/birth-support/aurora-co/">doulas in the Aurora area</a> to find providers near you.
 
 ## Which States Cover Doula Services Through Medicaid?
 

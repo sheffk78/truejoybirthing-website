@@ -24,6 +24,8 @@
 /is-a-doula-covered-by-insurance/ /blog/doula-covered-by-insurance/ 301
 # NOTE: /postpartum-doula/ now serves the dedicated SEO landing page.
 # The blog post lives at /blog/postpartum-doula/.
+/postpartum-doula /blog/postpartum-doula/ 301
+/postpartum-doula/ /blog/postpartum-doula/ 301
 /doula-myths /blog/debunking-doula-myths/ 301
 /doula-myths/ /blog/debunking-doula-myths/ 301
 /doula-support /blog/doula-support/ 301
@@ -150,6 +152,36 @@
 # ════════════════════════════════════════════════════════════
 # REMOVED NEIGHBORHOOD PAGES → PARENT CITY PAGE (Phase 3B rollback)
 # ════════════════════════════════════════════════════════════
+
+
+# ════════════════════════════════════════════════════════════
+# NON-EXISTENT CITY PAGES → STATE HUB (broken nearbyCities refs)
+# These 5 slugs were referenced in nearbyCities arrays but never
+# had their own city page entries, causing 404s.
+# ════════════════════════════════════════════════════════════
+
+/birth-support/denver-co /birth-support/co/ 301
+/birth-support/denver-co/ /birth-support/co/ 301
+/birth-support/jacksonville-fl /birth-support/fl/ 301
+/birth-support/jacksonville-fl/ /birth-support/fl/ 301
+/birth-support/tampa-fl /birth-support/fl/ 301
+/birth-support/tampa-fl/ /birth-support/fl/ 301
+/birth-support/dallas-tx /birth-support/tx/ 301
+/birth-support/dallas-tx/ /birth-support/tx/ 301
+/birth-support/houston-tx /birth-support/tx/ 301
+/birth-support/houston-tx/ /birth-support/tx/ 301
+/birth-support/colorado-springs-co /birth-support/co/ 301
+/birth-support/colorado-springs-co/ /birth-support/co/ 301
+/birth-support/el-paso-tx /birth-support/tx/ 301
+/birth-support/el-paso-tx/ /birth-support/tx/ 301
+/birth-support/fort-worth-tx /birth-support/tx/ 301
+/birth-support/fort-worth-tx/ /birth-support/tx/ 301
+/birth-support/greensboro-nc /birth-support/nc/ 301
+/birth-support/greensboro-nc/ /birth-support/nc/ 301
+/birth-support/miami-fl /birth-support/fl/ 301
+/birth-support/miami-fl/ /birth-support/fl/ 301
+/birth-support/san-antonio-tx /birth-support/tx/ 301
+/birth-support/san-antonio-tx/ /birth-support/tx/ 301
 
 
 # ════════════════════════════════════════════════════════════

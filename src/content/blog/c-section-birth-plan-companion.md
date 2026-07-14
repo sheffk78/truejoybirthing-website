@@ -105,7 +105,7 @@ Include:
 - Who will be with your baby if you and your partner are separated
 - Anyone you specifically do not want present, if that applies
 
-If you want doula support during your cesarean, check whether your hospital allows it. Many do, especially for planned procedures. If you are looking for a local doula, we have directories for <a href="/birth-support/dallas-tx/">birth support in Dallas</a>, <a href="/birth-support/fort-worth-tx/">Fort Worth</a>, and <a href="/birth-support/austin-tx/">Austin</a>. We also have state-level resources for <a href="/birth-support/tx/">birth support across Texas</a> if you are outside those cities.
+If you want doula support during your cesarean, check whether your hospital allows it. Many do, especially for planned procedures. If you are looking for a local doula, we have directories for <a href="/birth-support/austin-tx/">birth support in Austin</a>, <a href="/birth-support/arlington-tx/">Arlington</a>, and <a href="/birth-support/arlington-tx/">Arlington</a>. We also have state-level resources for <a href="/birth-support/tx/">birth support across Texas</a> if you are outside those cities.
 
 ## What Should You Plan for Going Home?
 

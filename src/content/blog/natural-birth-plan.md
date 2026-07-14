@@ -82,7 +82,7 @@ Movement is one of the most effective tools for unmedicated labor. Being upright
 - Your preference for intermittent monitoring so you can move freely (if your hospital allows it)
 - How you'd like your support person to help with position changes
 
-Hospitals that require continuous monitoring can make movement difficult, but wireless and waterproof monitors are increasingly available. Ask your provider what your hospital offers. For hospital-specific information on monitoring and movement policies, check our city guides for <a href="/birth-support/portland-or/">Portland, OR</a>, <a href="/birth-support/minneapolis-mn/">Minneapolis, MN</a>, and <a href="/birth-support/dallas-tx/">Dallas, TX</a>.
+Hospitals that require continuous monitoring can make movement difficult, but wireless and waterproof monitors are increasingly available. Ask your provider what your hospital offers. For hospital-specific information on monitoring and movement policies, check our city guides for <a href="/birth-support/portland-or/">Portland, OR</a>, <a href="/birth-support/minneapolis-mn/">Minneapolis, MN</a>, and <a href="/birth-support/austin-tx/">Austin, TX</a>.
 
 ### 4. Medication Preferences and Boundaries
 
@@ -156,7 +156,7 @@ Your natural birth plan changes depending on where you deliver. Here's how the s
 
 **Home natural birth.** Home birth gives you the most control over your environment and experience. Your plan focuses on your birth team, your supplies, and your transfer plan. Home birth requires a low-risk pregnancy and a qualified midwife. Our <a href="/home-birth-plan/">home birth plan guide</a> covers home birth planning in detail.
 
-For local birth center and hospital information, our city guides provide location-specific details. Check out <a href="/birth-support/chicago-il/">Chicago, IL</a>, <a href="/birth-support/denver-co/">Denver, CO</a>, and <a href="/birth-support/houston-tx/">Houston, TX</a> for hospital and birth center options in your area. Our <a href="/birth-support/co/">Colorado birth support hub</a> also has statewide information.
+For local birth center and hospital information, our city guides provide location-specific details. Check out <a href="/birth-support/chicago-il/">Chicago, IL</a>, <a href="/birth-support/aurora-co/">Aurora, CO</a>, and <a href="/birth-support/beaumont-tx/">Beaumont, TX</a> for hospital and birth center options in your area. Our <a href="/birth-support/co/">Colorado birth support hub</a> also has statewide information.
 
 ## Preparing Your Body and Mind for Natural Birth
 
@@ -170,7 +170,7 @@ A natural birth plan works best when it's backed by preparation. Writing prefere
 
 **Prepare your body.** Regular exercise, perineal massage, and optimal fetal positioning techniques (like spending time on hands and knees in late pregnancy) can all support an easier labor.
 
-**Plan for postpartum recovery.** Unmedicated birth often means faster initial recovery, but you still need a plan for rest, nutrition, and support after birth. Our <a href="/postpartum-doula/">postpartum doula guide</a> covers what to expect and how to get support.
+**Plan for postpartum recovery.** Unmedicated birth often means faster initial recovery, but you still need a plan for rest, nutrition, and support after birth. Our <a href="/blog/postpartum-doula/">postpartum doula guide</a> covers what to expect and how to get support.
 
 ## Talk to Your Provider Before Delivery Day
 
@@ -184,7 +184,7 @@ This conversation does three things:
 
 Bring a printed copy. Walk through it section by section. Ask what's realistic and what might need adjusting. Then bring several copies on delivery day. One for your chart, one for your nurse, one for you.
 
-If you're looking for doula support, our <a href="/how-to-choose-a-doula/">how to choose a doula guide</a> covers what to look for in a doula who specializes in natural birth support. And if you're in a state where Medicaid covers doula services, like <a href="/birth-support/raleigh-nc/">Raleigh, NC</a> or <a href="/birth-support/denver-co/">Denver, CO</a>, check our city guides for coverage details.
+If you're looking for doula support, our <a href="/how-to-choose-a-doula/">how to choose a doula guide</a> covers what to look for in a doula who specializes in natural birth support. And if you're in a state where Medicaid covers doula services, like <a href="/birth-support/raleigh-nc/">Raleigh, NC</a> or <a href="/birth-support/aurora-co/">Aurora, CO</a>, check our city guides for coverage details.
 
 ## Free Natural Birth Plan Template
 

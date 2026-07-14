@@ -24,7 +24,7 @@ Here's what that looks like in practice:
 - **Sibling adjustment** — helping older kids cope when the new baby takes over the house.
 - **Emotional support** — sometimes you just need someone to sit with you who gets it. No judgment, no advice you didn't ask for.
 
-Need postpartum doula info for your city? See our local guides for [Houston, TX](/birth-support/houston-tx/) and [San Diego, CA](/birth-support/san-diego-ca/) for cost and availability details.
+Need postpartum doula info for your city? See our local guides for [Beaumont, TX](/birth-support/beaumont-tx/) and [San Diego, CA](/birth-support/san-diego-ca/) for cost and availability details.
 
 ## Postpartum Doula vs. Night Nurse — What's the Difference?
 
@@ -82,7 +82,7 @@ Daytime shifts are usually 4-8 hours. Some families book me once a week, others 
 
 Let's talk numbers because that's what everyone wants to know.
 
-Overnight postpartum doula support typically runs **$25–$45 per hour** depending on where you live and the doula's experience. In [Houston](/birth-support/houston-tx/) you're looking at the lower end of that range. In [San Diego](/birth-support/san-diego-ca/) and other higher-cost areas, expect closer to the top.
+Overnight postpartum doula support typically runs **$25–$45 per hour** depending on where you live and the doula's experience. In [Beaumont](/birth-support/beaumont-tx/) you're looking at the lower end of that range. In [San Diego](/birth-support/san-diego-ca/) and other higher-cost areas, expect closer to the top.
 
 Daytime support is usually in the same range, sometimes slightly less.
 
@@ -112,7 +112,7 @@ Not every doula is the right fit for every family. Here's what I'd look for:
 - **Personality fit** — you're going to be vulnerable with this person at 3 AM. You need to feel comfortable with them in your home.
 - **Clear scope** — a good doula knows what's in their lane and what's a doctor or lactation consultant's job.
 
-If you're in Houston or San Diego, check out our [Houston postpartum doula guide](/birth-support/houston-tx/) or [San Diego postpartum doula guide](/birth-support/san-diego-ca/) for local options, pricing, and availability.
+If you're in Beaumont or San Diego, check out our [Beaumont postpartum doula guide](/birth-support/beaumont-tx/) or [San Diego postpartum doula guide](/birth-support/san-diego-ca/) for local options, pricing, and availability.
 
 ## The Bottom Line
 

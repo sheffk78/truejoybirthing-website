@@ -23,7 +23,7 @@ Here's what actually happens: I make partners better at supporting you.
 
 Your partner knows you. They love you. They know that you hate being touched on your lower back and that you need cold water, not warm. What they don't know is how to use counter-pressure during contractions, which positions help labor progress, or when to suggest a walk vs. when to let you rest.
 
-I've watched partners go from anxious and unsure to confident and hands-on — because they had someone showing them what to do instead of standing helplessly on the sidelines. One dad I worked with through our <a href="/birth-support/denver-co/">Denver, CO birth support services</a> told me after his daughter's birth, "I finally felt useful instead of just scared."
+I've watched partners go from anxious and unsure to confident and hands-on — because they had someone showing them what to do instead of standing helplessly on the sidelines. One dad I worked with through our <a href="/birth-support/aurora-co/">Aurora, CO birth support services</a> told me after his daughter's birth, "I finally felt useful instead of just scared."
 
 Your partner will always be your person. I'm there to help them help you.
 
@@ -51,7 +51,7 @@ I bridge the gap between medical language and real understanding. I help you fin
 
 After supporting hundreds of births alongside nurses, midwives, and OBs, I can tell you that most medical professionals appreciate having a doula in the room. We stay in our lane. We communicate birth preferences clearly. We keep clients calm and informed, which makes the whole team's job easier.
 
-Not sure what your hospital's doula policy is? Our city guides — like <a href="/birth-support/dallas-tx/">Dallas, TX</a> and <a href="/birth-support/denver-co/">Denver, CO</a> — break down which hospitals allow doulas and what to ask during your tour.
+Not sure what your hospital's doula policy is? Our city guides — like <a href="/birth-support/austin-tx/">Austin, TX</a> and <a href="/birth-support/aurora-co/">Aurora, CO</a> — break down which hospitals allow doulas and what to ask during your tour.
 
 ## Myth #4: Doulas Are Too Expensive
 

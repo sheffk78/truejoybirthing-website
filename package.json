@@ -16,7 +16,9 @@
     "preflight": "npx tsx scripts/preflight.ts",
     "preflight:self-test": "npx tsx scripts/preflight.ts --self-test",
     "test:city-pages": "tsx scripts/city-pages.test.ts",
-    "validate": "tsx scripts/validate-cities.ts"
+    "validate": "tsx scripts/validate-cities.ts && tsx scripts/validate-xrefs.ts",
+    "validate:xrefs": "tsx scripts/validate-xrefs.ts",
+    "build:safe": "tsx scripts/validate-cities.ts && tsx scripts/validate-xrefs.ts && astro build"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",

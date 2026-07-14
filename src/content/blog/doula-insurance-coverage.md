@@ -73,7 +73,7 @@ This is where the biggest changes are happening. As of 2024, several states now 
 
 Medicaid coverage typically requires the doula to be enrolled as a provider in your state's Medicaid program. If you're on Medicaid, [our Medicaid doula coverage guide](/blog/medicaid-doula-coverage/) has state-by-state details.
 
-For specifics on what insurance and Medicaid cover in your area, check our city guides — [New York](/birth-support/new-york-ny/), [Dallas](/birth-support/dallas-tx/), and [Chicago](/birth-support/chicago-il/) all have different coverage landscapes, Medicaid status, and hospital policies that affect your options.
+For specifics on what insurance and Medicaid cover in your area, check our city guides — [New York](/birth-support/new-york-ny/), [Austin](/birth-support/austin-tx/), and [Chicago](/birth-support/chicago-il/) all have different coverage landscapes, Medicaid status, and hospital policies that affect your options.
 
 ### Private Insurance: How to Check Your Benefits
 
@@ -90,7 +90,7 @@ If you have private insurance, here's exactly what to do:
 
 3. **Get it in writing.** Write down the representative's name, reference number, and the date of the call. Ask them to send you the coverage details in writing. This matters if you have to appeal a denied claim later.
 
-Keep in mind that what your plan covers can depend heavily on where you live — families in <a href="/birth-support/denver-co/">Denver</a>, for instance, may find different coverage options and provider networks than those in other regions.
+Keep in mind that what your plan covers can depend heavily on where you live — families in <a href="/birth-support/aurora-co/">Aurora</a>, for instance, may find different coverage options and provider networks than those in other regions.
 
 ### HSA and FSA Options
 

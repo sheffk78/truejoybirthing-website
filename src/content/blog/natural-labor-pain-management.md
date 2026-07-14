@@ -65,7 +65,7 @@ Water is one of the most underrated comfort measures in labor, and the research 
 
 **Birth tub.** If you are at a birth center or a hospital with tub access, water immersion changes everything. The buoyancy takes the weight off your joints, the warmth relaxes your muscles, and the sensory input of the water gives your brain something to focus on besides the contraction. Many of my clients describe getting into the tub as the moment labor shifted from overwhelming to manageable.
 
-If you are in the <a href="/birth-support/denver-co/">Denver</a> area, several hospitals and birth centers offer tubs for labor — it is worth asking during your tour. And if you are planning a home birth, rental tubs are easy to find.
+If you are in the <a href="/birth-support/aurora-co/">Aurora</a> area, several hospitals and birth centers offer tubs for labor — it is worth asking during your tour. And if you are planning a home birth, rental tubs are easy to find.
 
 ## Mental Strategies and Visualization
 
@@ -99,6 +99,6 @@ I believe in natural comfort measures because I have seen them work. I also beli
 
 Natural pain management is not about suffering to prove something. It is about having a full toolkit so you can choose what works for you, when it works. Maybe you use breathing and movement through early labor, water through active labor, and then decide you want medication during transition. Every one of those choices is valid.
 
-What I want for you is a birth where you feel informed, supported, and respected — no matter how the pain management piece unfolds. If you want someone by your side who knows all of these techniques and can help you use them in real time, learn more about <a href="/blog/what-is-a-birth-doula/">what a birth doula does</a>. If you are in Colorado, check out our <a href="/birth-support/co/">Colorado birth support hub</a> for local resources, or find specific guidance for your area on our <a href="/birth-support/denver-co/">Denver</a> and <a href="/birth-support/portland-or/">Portland</a> city pages.
+What I want for you is a birth where you feel informed, supported, and respected — no matter how the pain management piece unfolds. If you want someone by your side who knows all of these techniques and can help you use them in real time, learn more about <a href="/blog/what-is-a-birth-doula/">what a birth doula does</a>. If you are in Colorado, check out our <a href="/birth-support/co/">Colorado birth support hub</a> for local resources, or find specific guidance for your area on our <a href="/birth-support/co/">Colorado</a> and <a href="/birth-support/portland-or/">Portland</a> city pages.
 
 You are capable of more than you think. Let's prepare together.

@@ -41,7 +41,7 @@ These questions help you understand how your doula thinks about birth and whethe
 
 - **How do you support partners?** A great doula doesn't replace your partner — she helps your partner support you better. She shows them comfort techniques, helps them find their role, and makes sure they feel included.
 
-One doula <a href="/birth-support/denver-co/">in Denver, CO</a> shared that the families she works with most successfully are the ones who ask her about how she's handled situations where the plan changed. She said a doula who can talk honestly about a birth that didn't go as planned — without judgment or trauma — is usually someone you can trust when things get complicated.
+One doula <a href="/birth-support/aurora-co/">in Aurora, CO</a> shared that the families she works with most successfully are the ones who ask her about how she's handled situations where the plan changed. She said a doula who can talk honestly about a birth that didn't go as planned — without judgment or trauma — is usually someone you can trust when things get complicated.
 
 ## Practical and Logistics Questions
 

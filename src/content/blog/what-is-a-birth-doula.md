@@ -58,7 +58,7 @@ This isn't just my opinion. The Cochrane Review — one of the most respected so
 - **28% fewer instrumental deliveries** (forceps or vacuum)
 - **34% fewer reports of dissatisfaction** with the birth experience
 
-Those numbers tell a clear story. When someone stays with you through labor — someone whose only job is your comfort and your voice — things tend to go better. Not because doulas have special powers, but because continuous support is something most hospital environments just don't provide. Nurses have other patients. Doctors come and go. A doula stays — whether you're delivering at a major hospital in <a href="/birth-support/houston-tx/">Houston, TX</a> or a smaller community setting.
+Those numbers tell a clear story. When someone stays with you through labor — someone whose only job is your comfort and your voice — things tend to go better. Not because doulas have special powers, but because continuous support is something most hospital environments just don't provide. Nurses have other patients. Doctors come and go. A doula stays — whether you're delivering at a major hospital in <a href="/birth-support/beaumont-tx/">Beaumont, TX</a> or a smaller community setting.
 
 ## How a Doula Supports Your Partner
 
@@ -126,7 +126,7 @@ Finding a doula isn't like finding a doctor — you don't need the most credenti
 **Trust your gut**
 After a few conversations, you'll know. The right doula makes you feel like your questions matter, your preferences matter, and you'll have someone in your corner no matter what happens on delivery day.
 
-For local doula directories, hospital policies, and cost ranges in your area, check our city guides — <a href="/birth-support/dallas-tx/">Dallas, TX</a>, <a href="/birth-support/new-york-ny/">New York, NY</a>, <a href="/birth-support/chicago-il/">Chicago, IL</a>, and more cities are covered in detail.
+For local doula directories, hospital policies, and cost ranges in your area, check our city guides — <a href="/birth-support/austin-tx/">Austin, TX</a>, <a href="/birth-support/new-york-ny/">New York, NY</a>, <a href="/birth-support/chicago-il/">Chicago, IL</a>, and more cities are covered in detail.
 
 ## What to Expect Working With Me
 

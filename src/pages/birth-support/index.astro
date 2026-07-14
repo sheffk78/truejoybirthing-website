@@ -52,7 +52,7 @@ const totalCities = citySlugs.length;
 const totalStates = stateOrder.length;
 
 // Featured cities — top 6 completed cities with best hero images and videos
-const featuredSlugs = ['beaumont-tx', 'conroe-tx', 'moreno-valley-ca', 'tyler-tx', 'dallas-tx', 'seattle-wa'];
+const featuredSlugs = ['beaumont-tx', 'conroe-tx', 'moreno-valley-ca', 'tyler-tx', 'austin-tx', 'seattle-wa'];
 const featuredCities = featuredSlugs
   .map(slug => ({ slug, data: cities[slug], video: cityVideoEmbeds[slug] }))
   .filter(c => c.data);

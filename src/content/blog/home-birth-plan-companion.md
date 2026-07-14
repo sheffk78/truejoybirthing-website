@@ -65,7 +65,7 @@ One family I worked with in <a href="/birth-support/austin-tx/">Austin</a> had t
 
 If you do want older siblings present, prepare them in advance with books or conversations, designate a dedicated support person, and have a backup plan if they want to leave. A mom I supported in Nashville had her seven-year-old present for early labor. When things intensified, his grandmother took him to the park for two hours. He came back in time to meet his sister. That happened because it was written in the plan.
 
-If you are looking for local doula support, we have directories for <a href="/birth-support/denver-co/">birth support in Denver</a> and <a href="/birth-support/seattle-wa/">Seattle</a>, plus state-level resources for <a href="/birth-support/tx/">birth support across Texas</a>.
+If you are looking for local doula support, we have directories for <a href="/birth-support/aurora-co/">birth support in Aurora</a> and <a href="/birth-support/seattle-wa/">Seattle</a>, plus state-level resources for <a href="/birth-support/tx/">birth support across Texas</a>.
 
 ## What Is Your Transport Plan and Why Does It Matter?
 

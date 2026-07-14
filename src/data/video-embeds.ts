@@ -16,9 +16,9 @@ export interface CityVideoEmbed {
 }
 
 export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
-  "denver-co": {
+  "aurora-co": {
     videoId: "Kksgztfkn1I",
-    title: "Denver Doula & Birth Plan Guide",
+    title: "Aurora Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and Colorado Medicaid, all in under 4 minutes.",
     duration: "PT3M51S",
     uploadDate: "2026-07-04T00:00:00-06:00",
@@ -334,9 +334,9 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT4M08S",
     uploadDate: "2026-06-30T00:00:00-06:00",
 },
-"tampa-fl": {
+"port-st-lucie-fl": {
     videoId: "qB2LJXWAsFM",
-    title: "Tampa Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    title: "Port St. Lucie Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and Florida Medicaid, all in under 5 minutes.",
     duration: "PT5M23S",
     uploadDate: "2026-07-01T00:00:00-06:00",

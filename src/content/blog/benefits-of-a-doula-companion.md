@@ -31,7 +31,7 @@ The mechanism here is well understood. Stress and fear trigger adrenaline, which
 
 One mother in Austin who had planned an unmedicated hospital birth ended up with a surprise breech presentation. She told me later that even though her birth didn't go remotely as she'd planned, her doula kept her calm through the whole thing. Because she avoided an epidural, she was never tethered to continuous monitors and could move freely, trying different positions as labor progressed. Her doula helped her stay in an upright, forward-leaning position that may have helped her baby navigate a tricky station. She credits the doula's confident presence and positional guidance with keeping her out of the operating room.
 
-If you're planning a hospital birth, it's worth checking what policies your local hospital has around doula access. <a href="/birth-support/dallas-tx/">Dallas, TX hospitals</a> generally allow doulas, and I've compiled details on specific hospital policies in the <a href="/birth-support/portland-or/">Portland, OR</a> and <a href="/birth-support/austin-tx/">Austin, TX</a> city guides.
+If you're planning a hospital birth, it's worth checking what policies your local hospital has around doula access. <a href="/birth-support/austin-tx/">Austin, TX hospitals</a> generally allow doulas, and I've compiled details on specific hospital policies in the <a href="/birth-support/portland-or/">Portland, OR</a> and <a href="/birth-support/austin-tx/">Austin, TX</a> city guides.
 
 <h2>Benefit 2: Lower Cesarean Rates Across All Settings</h2>
 
@@ -41,7 +41,7 @@ What's particularly important is that doula support reduced C-section rates with
 
 I've seen this play out with a mom in Chicago who was terrified of needing a C-section after two previous losses. She hired a doula specifically to have someone who could help her navigate the hospital system and advocate for her preferences. When her labor slowed around 6 centimeters, her doula suggested position changes and counter-pressure techniques that helped her baby descend. She delivered vaginally after 14 hours and told me afterward, "I honestly don't think I would have made it without her. The nurses were great, but they had other patients. My doula had only me."
 
-For more on doula care in different cities, check our <a href="/birth-support/chicago-il/">Chicago doula guide</a> and our <a href="/birth-support/houston-tx/">Houston doula guide</a>.
+For more on doula care in different cities, check our <a href="/birth-support/chicago-il/">Chicago doula guide</a> and our <a href="/birth-support/beaumont-tx/">Beaumont doula guide</a>.
 
 <h2>Benefit 3: Better Emotional Outcomes and Higher Birth Satisfaction</h2>
 
@@ -72,7 +72,7 @@ For more on building your birth team, see our <a href="/how-to-choose-a-doula/">
 
 The benefits of doula support extend well past delivery. Studies show that women who had continuous labor support are more likely to initiate breastfeeding and to breastfeed exclusively at hospital discharge. The mechanism is practical, not mysterious. Doulas often assist with the first latch, help position the baby for effective feeding, and normalize the early challenges that can derail breastfeeding in the first 24 hours.
 
-Beyond breastfeeding, the emotional buffer a doula provides during labor correlates with lower postpartum depression risk. Mothers who feel supported and heard during birth are less likely to experience the sense of powerlessness that can trigger postpartum mood disorders. This same support continues with <a href="/postpartum-doula/">postpartum doulas</a>, who specifically help with feeding, sleep, recovery, and the overwhelming transition home.
+Beyond breastfeeding, the emotional buffer a doula provides during labor correlates with lower postpartum depression risk. Mothers who feel supported and heard during birth are less likely to experience the sense of powerlessness that can trigger postpartum mood disorders. This same support continues with <a href="/blog/postpartum-doula/">postpartum doulas</a>, who specifically help with feeding, sleep, recovery, and the overwhelming transition home.
 
 For a deeper look at the emotional side of the fourth trimester, read our post on <a href="/blog/postpartum-emotional-care/">postpartum emotional care</a>.
 
