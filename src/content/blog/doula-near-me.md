@@ -112,3 +112,25 @@ One mom who worked with a <a href="/birth-support/portland-or/">doula in Portlan
 When you're ready to start building your birth plan, the <a href="/birth-plan-template/" class="btn-primary">Joyful Birth Plan</a> walks you through every step — because you shouldn't have to figure this out alone.
 
 Looking for doula costs in your area? Check our <a href="/blog/how-much-are-doula-services/">full doula cost guide</a> for pricing breakdowns by state and city. And if you're comparing options, our <a href="/doula-vs-midwife/">doula vs midwife guide</a> breaks down the differences between these two types of birth support. For a deeper dive into <a href="/blog/what-is-a-birth-doula/">what a doula actually does</a>, we've got you covered there too.
+
+## Frequently Asked Questions
+
+### How do I find a doula near me?
+
+Start with DONA International's directory or Doula Match, both of which let you search by location. You can also ask your OB or midwife for referrals, or post in local Facebook parenting groups. If you want a faster route, our <a href="/birth-support/">birth support guides</a> list doulas by city.
+
+### How much does a doula cost?
+
+Birth doula fees typically range from $800 to $2,500 depending on your location, the doula's experience, and what is included. Postpartum doulas usually charge hourly, from $25 to $60 per hour. See our <a href="/blog/how-much-are-doula-services/">full doula cost guide</a> for details.
+
+### Should I interview more than one doula?
+
+Yes. Interviewing at least two doulas gives you a comparison point and helps you recognize what matters most to you. Most doulas offer free initial consultations, so take advantage of them. Our <a href="/blog/doula-interview-questions/">doula interview questions guide</a> has a full list of what to ask.
+
+### Can I get a doula if I can't afford one?
+
+Many doulas offer sliding scale fees, payment plans, or reduced rates for families in need. Some states cover doula services through Medicaid. Doulas-in-training may also offer low-cost or free services as part of their certification. Check our <a href="/blog/medicaid-doula-coverage/">Medicaid doula coverage guide</a> to see if your state participates.
+
+### What if there are no doulas in my area?
+
+Virtual doula support is a growing option. You meet via video calls for prenatal visits, and during labor the doula stays on the phone or video call offering guidance. It is not the same as in-person support, but many families find it valuable, especially in rural areas.

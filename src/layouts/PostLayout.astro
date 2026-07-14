@@ -55,6 +55,9 @@ const formattedDate = pubDate ? pubDate.toLocaleDateString('en-US', { year: 'num
 
 const pageTitle = `${title} | True Joy Birthing`;
 
+const ogImageRaw = featuredImage || "/images/og/og-homepage.webp";
+const ogImage = ogImageRaw.startsWith("http") ? ogImageRaw : `https://truejoybirthing.com${ogImageRaw}`;
+
 const schema = {
   "@context": "https://schema.org",
   "@type": pageType,
@@ -71,14 +74,13 @@ const schema = {
     "logo": { "@type": "ImageObject", "url": "https://truejoybirthing.com/images/logo.svg" }
   },
   "datePublished": date,
-  ...(featuredImage && { "image": featuredImage }),
+  ...(featuredImage && { "image": ogImage }),
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": canonical || "https://truejoybirthing.com/blog/"
   }
 };
 
-const ogImage = featuredImage || "https://truejoybirthing.com/images/og/og-homepage.webp";
 const pageUrl = canonical || `https://truejoybirthing.com${Astro.url.pathname}`;
 const schemaJson = JSON.stringify(schema);
 ---

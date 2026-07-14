@@ -90,7 +90,7 @@ Most overnights are 8-10 hours, so you're looking at roughly **$200–$450 per n
 
 Yes, it's an investment. But compare that to the cost of a c-section recovery that drags on because you're not resting, or formula you didn't plan to use because your milk supply tanked from exhaustion, or a partner who's running on fumes and barely functioning at work. Support pays for itself.
 
-Some insurance plans cover postpartum doula services. It's worth checking your benefits — more plans are adding this coverage than ever before. I can also provide a superbill you can submit for reimbursement.
+Some insurance plans cover postpartum doula services. It's worth checking your benefits — more plans are adding this coverage than ever before. I can also provide a superbill you can submit for reimbursement. For more on payment options, see our <a href="/blog/postpartum-doula-cost/">postpartum doula cost guide</a>.
 
 ## How Long Do You Need a Postpartum Doula?
 
@@ -123,3 +123,25 @@ You don't get a medal for doing it alone. You get exhausted, overwhelmed, and so
 If you're expecting or just had a baby and you're wondering whether you need support — you do. That's not weakness. That's wisdom.
 
 [Contact me](/contact/) and let's figure out what kind of support makes sense for your family.
+
+## Frequently Asked Questions
+
+### What exactly does a postpartum doula do?
+
+A postpartum doula comes to your home after birth to help with newborn care, feeding support, light meal prep, sibling transitions, and emotional recovery. She is not a medical provider. She is someone who has been through it and can guide you through the early weeks with practical help and reassurance.
+
+### When should I hire a postpartum doula?
+
+Ideally, before your baby arrives. Families who arrange support during pregnancy have a much smoother transition than those scrambling to find help at 4 AM on day three. That said, many doulas can accommodate last-minute bookings if you are already in the thick of it.
+
+### How is a postpartum doula different from a night nurse?
+
+A night nurse (or newborn care specialist) focuses primarily on the baby overnight. A postpartum doula supports the whole family, including checking on the mother's recovery, emotional wellbeing, and feeding journey. Postpartum doulas also work daytime shifts, which night nurses typically do not.
+
+### How much does a postpartum doula cost?
+
+Overnight support typically runs $25 to $45 per hour, with most shifts lasting 8 to 10 hours. Daytime support is in a similar range. Most families spend $200 to $450 per overnight or $150 to $270 per daytime shift. See our <a href="/blog/postpartum-doula-cost/">postpartum doula cost guide</a> for a full breakdown.
+
+### Does insurance cover postpartum doula services?
+
+Some insurance plans are beginning to cover postpartum doula care, and a growing number of state Medicaid programs include it. Check with your specific plan. Your doula can also provide a superbill for you to submit for reimbursement.

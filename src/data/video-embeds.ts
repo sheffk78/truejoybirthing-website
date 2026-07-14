@@ -44,6 +44,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M57S",
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
+  "fresno-ca": {
+    videoId: "A-yB39S7RPc",
+    title: "Fresno Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 4 minutes.",
+    duration: "PT3M26S",
+    uploadDate: "2026-07-13T00:00:00-06:00",
+  },
   "vancouver-wa": {
     videoId: "z4YlQEkJzRo",
     title: "Vancouver WA Doula & Birth Plan Guide",
@@ -94,20 +101,6 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 4 minutes.",
     duration: "PT2M12S",
     uploadDate: "2026-06-17T00:00:00-06:00",
-  },
-  "killeen-tx": {
-    videoId: "wWxfZ8QL9MM",
-    title: "Killeen TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 4 minutes.",
-    duration: "PT3M47S",
-    uploadDate: "2026-06-18T00:00:00-06:00",
-  },
-  "tyler-tx": {
-    videoId: "BMptedwJJvw",
-    title: "Tyler TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 4 minutes.",
-    duration: "PT3M54S",
-    uploadDate: "2026-06-18T00:00:00-06:00",
   },
   "mckinney-tx": {
     videoId: "o_up6jyMcLU",
@@ -186,13 +179,6 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT4M18S",
     uploadDate: "2026-06-30T00:00:00-07:00",
   },
-  "colorado-springs-co": {
-    videoId: "bxieuKIKeb8",
-    title: "Colorado Springs Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Colorado Medicaid, all in under 3 minutes.",
-    duration: "PT2M11S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
-  },
   "meridian-id": {
     videoId: "D7Zlm67ALcM",
     title: "Meridian ID Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -235,13 +221,6 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M51S",
     uploadDate: "2026-06-28T00:00:00-07:00",
   },
-  "san-antonio-tx": {
-    videoId: "qsdYLJrrEb8",
-    title: "San Antonio Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid, all in under 5 minutes.",
-    duration: "PT4M23S",
-    uploadDate: "2026-06-27T00:00:00-07:00",
-  },
   "philadelphia-pa": {
     videoId: "LyYRGCPhNi0",
     title: "Philadelphia Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -270,13 +249,6 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M07S",
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
-  "miami-fl": {
-    videoId: "ur7zHfhWiWE",
-    title: "Miami Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Florida Medicaid, all in under 3 minutes.",
-    duration: "PT4M27S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
-  },
   "phoenix-az": {
     videoId: "IOXkcp8JMP4",
     title: "Phoenix Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -290,20 +262,6 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     description: "Watch the full city guide — doulas, hospitals, costs, and Tennessee Medicaid, all in under 3 minutes.",
     duration: "PT2M30S",
     uploadDate: "2026-06-27T00:00:00-07:00",
-  },
-  "el-paso-tx": {
-    videoId: "MFRXfYBoO3U",
-    title: "El Paso Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 4 minutes.",
-    duration: "PT3M20S",
-    uploadDate: "2026-06-30T00:00:00-06:00",
-  },
-  "fort-worth-tx": {
-    videoId: "kkFwp6ZrnJI",
-    title: "Fort Doula & Birth Plan Guide",
-    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
-    duration: "PT3M00S",
-    uploadDate: "2026-06-24T00:00:00-06:00",
   },
   "augusta-ga": {
     videoId: "vGQM1enHBeM",
@@ -479,4 +437,19 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
         duration: "PT6M16S",
         uploadDate: "2026-07-14T00:00:00-06:00",
     },
+
+"norwalk-ct": {
+    videoId: "drkZEsmuVeo",
+    title: "Norwalk CT Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT4M09S",
+    uploadDate: "2026-07-13T00:00:00-06:00",
+},
+"long-beach-ca": {
+    videoId: "8_X79ELJs9M",
+    title: "Long Beach CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
+    description: "Watch the full city guide, doulas, hospitals, costs, and more, all in under 4 minutes.",
+    duration: "PT3M35S",
+    uploadDate: "2026-07-14T06:42:58-06:00",
+},
 };

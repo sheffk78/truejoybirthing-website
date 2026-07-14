@@ -98,7 +98,7 @@ For more on postpartum support, check our <a href="/blog/postpartum-doula/">post
   <div class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
     <p><a href="/birth-support/aurora-co/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Aurora postpartum doula resources →</a></p>
     <p><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Austin postpartum doula resources →</a></p>
-    <p><a href="/birth-support/austin-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Austin postpartum doula resources →</a></p>
+    <p><a href="/birth-support/dallas-tx/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Dallas postpartum doula resources →</a></p>
     <p><a href="/birth-support/portland-or/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Portland postpartum doula resources →</a></p>
     <p><a href="/birth-support/seattle-wa/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Seattle postpartum doula resources →</a></p>
     <p><a href="/birth-support/charlotte-nc/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Charlotte postpartum doula resources →</a></p>

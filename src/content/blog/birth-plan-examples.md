@@ -122,3 +122,25 @@ After watching hundreds of families walk through L&D with their birth plans, her
 When you're ready to build your birth plan, the <a href="/birth-plan-template/">Joyful Birth Plan</a> walks you through every section step by step — built by a doula who's helped hundreds of families write plans that actually work. You shouldn't have to figure this out alone.
 
 For more on specific scenarios, check our guides for <a href="/blog/vbac-birth-plan/">VBAC birth planning</a> and <a href="/blog/natural-birth-plan/">natural birth plans</a>.
+
+## Frequently Asked Questions
+
+### How long should a birth plan be?
+
+One page. Hospital staff are busy and a single page with clear sections and bullet points gets read. A three-page document gets skimmed or set aside. If you cannot fit it on one page, cut the nice-to-haves and keep the must-haves. Highlight your top three priorities so they stand out even in a quick scan.
+
+### What are the most important parts of a birth plan?
+
+Every birth plan should cover: who is in the room (partner, doula, family), pain management preferences (epidural, unmedicated, open to options), and immediate postpartum preferences (delayed cord clamping, skin-to-skin, feeding plans). These three areas are what your nurse and provider most need to know.
+
+### Should I include C-section preferences in my birth plan?
+
+Yes. Even if you are planning a vaginal birth, include a brief section for what you want if a C-section becomes necessary. Preferences like partner in the OR, clear drape, and skin-to-skin in recovery should be documented before you are in labor, not decided in a moment of crisis.
+
+### When should I share my birth plan with my provider?
+
+Bring it to a prenatal appointment around 34 to 36 weeks. Your provider can flag anything that will not work at their hospital and you can adjust before labor. This is the single most effective thing you can do to make your birth plan work.
+
+### Can I use a birth plan at a birth center or home birth?
+
+Yes. Birth plans work in any setting. In fact, birth centers and home births often have fewer hospital defaults to navigate, so your plan can focus more on comfort measures and your postpartum preferences. See our <a href="/blog/natural-birth-plan/">natural birth plan guide</a> for setting-specific considerations.

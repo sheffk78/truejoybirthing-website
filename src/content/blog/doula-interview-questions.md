@@ -82,3 +82,25 @@ After you've interviewed two or three doulas, here's how to make your decision:
 When you're ready to start building your birth plan, the <a href="/birth-plan-template/">Joyful Birth Plan</a> walks you through every section — including who you want on your support team. You shouldn't have to figure this out alone.
 
 For more on choosing a doula, check our <a href="/blog/doula-near-me/">guide to finding a doula near you</a>, our <a href="/doula-vs-midwife/">doula vs midwife comparison</a>, or explore birth support options <a href="/birth-support/portland-or/">in Portland, OR</a> and other cities.
+
+## Frequently Asked Questions
+
+### What questions should I ask a doula before hiring?
+
+Focus on three areas: training and experience (certification, number of births attended, experience with your birth type), philosophy and approach (how they support different types of births, how they work with hospital staff, how they support partners), and practical logistics (what is included in the package, backup arrangements, fees and payment options). See the full question list above for specifics.
+
+### How many doulas should I interview?
+
+Interview at least two, ideally three. Having a comparison point helps you recognize what matters most to you. Most doulas offer free initial consultations, so the only cost is your time. The right doula is not always the one with the most credentials. She is the one who makes you feel confident and heard.
+
+### What is a doula consultation?
+
+A doula consultation is a free initial conversation, usually 20 to 45 minutes, where you and the doula get to know each other. You ask questions about her experience and approach, and she asks about your birth goals and preferences. Think of it as a mutual interview. Both sides are checking for fit.
+
+### How do I know if a doula is the right fit?
+
+Trust your gut. Did she listen more than she talked? Did she make you feel more confident or more anxious? Did she ask about your story, or just tell hers? You will be vulnerable with this person during one of the most intense experiences of your life. If something felt off during a 30-minute consultation, it will not feel better during 12 hours of labor.
+
+### What if I can't afford a doula?
+
+Many doulas offer sliding scale fees, payment plans, or reduced rates for first-time families. Some accept HSA or FSA funds. In states with Medicaid doula coverage, you may be able to get doula services at no cost. Doulas-in-training may offer reduced or free services as part of their certification. Check our <a href="/blog/medicaid-doula-coverage/">Medicaid doula coverage guide</a> to see if your state participates.

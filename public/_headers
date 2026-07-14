@@ -34,3 +34,27 @@
 
 /
   Cache-Control: public, max-age=3600
+
+# XML files (sitemaps, RSS) — short cache so search engines always get fresh versions
+/sitemap-index.xml
+  Content-Type: application/xml; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/sitemap-0.xml
+  Content-Type: application/xml; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/robots.txt
+  Content-Type: text/plain; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+# IndexNow key file — must be served as text/plain with 200 status
+/*.txt
+  Cache-Control: public, max-age=86400
+
+# Security headers on all HTML pages
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()

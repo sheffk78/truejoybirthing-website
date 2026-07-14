@@ -189,3 +189,25 @@ Ready to put your plan together? Our <a href="/birth-plan-template/">free Joyful
 For a structured walkthrough of every birth plan decision, our <a href="/birth-plan-checklist/">birth plan checklist</a> helps you make sure nothing falls through the cracks.
 
 You deserve a VBAC birth that reflects your research, your courage, and your priorities. A thoughtful VBAC birth plan makes that possible. Start with our free template, make it yours, and walk into that delivery room knowing you've prepared for the birth you want and the birth that happens.
+
+## Frequently Asked Questions
+
+### What is a VBAC birth plan?
+
+A VBAC birth plan is a written document that shares your preferences for attempting a vaginal birth after a previous cesarean. It covers your medical history, labor and monitoring preferences, pain management approach, induction and augmentation preferences, delivery preferences, and a backup plan in case a repeat cesarean becomes necessary.
+
+### Can all hospitals support VBAC?
+
+No. Not every hospital offers VBAC. ACOG recommends that hospitals offering VBAC have the ability to begin a cesarean within 30 minutes of deciding one is needed. Some smaller or rural hospitals cannot meet this standard. Confirm with your provider that your hospital supports VBAC before writing your plan.
+
+### What is the success rate for VBAC?
+
+VBAC success rates range from 60 to 80 percent for women with one prior low-transverse cesarean. Your individual chances depend on the reason for your first cesarean, your age, and your overall health. Spontaneous labor has higher success rates than induced labor.
+
+### Is VBAC safe?
+
+VBAC is considered a safe option for most women with one prior low-transverse cesarean. The risk of uterine rupture is low, approximately 0.5 to 0.9 percent. Your provider will assess your individual risk factors, including the type of incision from your previous cesarean and the reason for it.
+
+### Do I need a doula for a VBAC?
+
+A doula is not required for VBAC, but many families find the advocacy and emotional support invaluable. A doula who understands VBAC can help you navigate hospital protocols, support you through longer labors, and advocate for your preferences when you are focused on labor. See our <a href="/how-to-choose-a-doula/">how to choose a doula guide</a> for what to look for in VBAC-experienced support.

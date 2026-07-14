@@ -190,6 +190,28 @@ If you're looking for doula support, our <a href="/how-to-choose-a-doula/">how t
 
 Ready to put your plan together? Our <a href="/birth-plan-template/">free Joyful Birth Plan template</a> gives you a fill-in-the-blank format that covers every section above, with space for your comfort measures strategy and medication boundaries. Print it, customize it, and bring it to your next prenatal appointment.
 
-For real examples of how other mothers have structured their natural birth plans, our <a href="/birth-plan-examples/">birth plan examples</a> page shows completed plans across different birth settings.
+For real examples of how other mothers have structured their natural birth plans, our <a href="/blog/birth-plan-examples/">birth plan examples</a> page shows completed plans across different birth settings.
 
 You deserve a natural birth that reflects your preparation, your courage, and your priorities. A thoughtful natural birth plan makes that possible. Start with our free template, make it yours, and walk into that delivery room knowing you've done the work to prepare for the birth you want.
+
+## Frequently Asked Questions
+
+### Can I have a natural birth in a hospital?
+
+Yes. Many mothers successfully have unmedicated births in hospital settings. It requires more advocacy than a birth center or home birth because hospitals default to interventions like continuous monitoring and IV access. A clear natural birth plan, a supportive provider, and a doula all increase your chances. Our <a href="/blog/hospital-birth-plan/">hospital birth plan guide</a> covers navigating hospital protocols in detail.
+
+### What if I change my mind during labor?
+
+That is completely okay. A good natural birth plan includes a section on what you want your team to do if you ask for medication. Some mothers want their partner to remind them of their goals. Others want immediate support for whatever they decide. Write what you actually need, not what you think sounds strong.
+
+### Does a doula help with natural birth?
+
+A doula is one of the strongest predictors of a successful unmedicated birth. Research shows that mothers with continuous doula support are less likely to use pain medication and more likely to report a positive birth experience. A doula provides hands-on comfort measures, positioning guidance, and emotional support throughout labor. See our <a href="/what-is-a-doula/">what is a doula guide</a> for more.
+
+### What is the difference between a natural birth plan and a standard birth plan?
+
+A standard birth plan covers general preferences for labor and delivery. A natural birth plan goes further by addressing specific challenges of unmedicated labor: your pain management strategy, how to respond to offers of medication, your support team's specific roles, and navigating hospital defaults that assume you will want an epidural.
+
+### How do I prepare my body for a natural birth?
+
+Take a childbirth class focused on unmedicated techniques (Hypnobirthing, Bradley, or Lamaze). Practice breathing daily starting at 28 to 30 weeks. Stay active with walking and prenatal exercise. Consider perineal massage in late pregnancy. Most importantly, build a support team that believes in your ability to do this.

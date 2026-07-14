@@ -63,8 +63,9 @@
 
 /feed/* /blog/ 301
 /comments/feed/* /blog/ 301
-/sitemap.xml /sitemap.xml 301
-/wp-sitemap.xml /sitemap.xml 301
+# Old WordPress sitemap → new Astro sitemap index
+/sitemap.xml /sitemap-index.xml 301
+/wp-sitemap.xml /sitemap-index.xml 301
 
 # ════════════════════════════════════════════════════════════
 # WORDPRESS ASSETS → GONE (serve 404 naturally)
