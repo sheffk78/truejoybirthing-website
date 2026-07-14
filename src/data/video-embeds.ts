@@ -466,4 +466,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M24S",
     uploadDate: "2026-06-24T00:00:00-06:00",
   },
+  "stockton-ca": {
+    videoId: "TP7HxNd6Tro",
+    title: "Stockton CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 3 minutes.",
+    duration: "PT2M46S",
+    uploadDate: "2026-07-14T05:30:00-06:00",
+  },
 };
