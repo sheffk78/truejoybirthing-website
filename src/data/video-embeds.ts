@@ -480,4 +480,25 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT4M44S",
     uploadDate: "2026-07-14T12:00:00-06:00",
   },
-};
+  "gaithersburg-md": {
+    videoId: "U4hsVHrz3Nc",
+    title: "Gaithersburg MD Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Maryland Medicaid, all in under 6 minutes.",
+    duration: "PT5M47S",
+    uploadDate: "2026-07-14T13:00:00-06:00",
+  },
+  "fort-collins-co": {
+    videoId: "wtlSlj_oaJg",
+    title: "Fort Collins Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT3M54S",
+    uploadDate: "2026-07-14T13:30:00-06:00",
+  },
+"new-haven-ct": {
+    videoId: "QpbP7UBRGo4",
+    title: "New Haven CT Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 4 minutes.",
+    duration: "PT3M51S",
+    uploadDate: "2026-07-14T14:10:00-06:00",
+},
+}
