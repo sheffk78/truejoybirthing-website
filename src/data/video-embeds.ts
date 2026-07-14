@@ -130,6 +130,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M07S",
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
+  "san-francisco-ca": {
+    videoId: "ucjWrh5iuMs",
+    title: "San Francisco Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 4 minutes.",
+    duration: "PT3M43S",
+    uploadDate: "2026-07-14T00:00:00-06:00",
+  },
   "detroit-mi": {
     videoId: "M_JhAauqo4Q",
     title: "Detroit Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -452,4 +459,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M35S",
     uploadDate: "2026-07-14T06:42:58-06:00",
 },
+  "san-jose-ca": {
+    videoId: "ScsUgI8_v94",
+    title: "San Jose Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 3 minutes.",
+    duration: "PT2M24S",
+    uploadDate: "2026-06-24T00:00:00-06:00",
+  },
 };
