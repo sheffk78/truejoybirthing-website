@@ -473,4 +473,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M46S",
     uploadDate: "2026-07-14T05:30:00-06:00",
   },
+  "columbia-md": {
+    videoId: "Zqi27KevbWs",
+    title: "Columbia MD Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Maryland Medicaid, all in under 5 minutes.",
+    duration: "PT4M44S",
+    uploadDate: "2026-07-14T12:00:00-06:00",
+  },
 };
