@@ -2289,7 +2289,7 @@ export const cities: Record<string, CityData> = {
     costLow: 900,
     costHigh: 2000,
     shelbiServesHere: false,
-    heroImage: "/images/stockton-ca-birth-doula-hero.webp",
+    heroImage: "/images/stockton-ca-birth-doula-hero-v2.webp",
     supportSceneImage: "/images/stockton-ca-birth-doula-support.webp",
     supportSceneAlt: "Doula supporting a pregnant woman in Stockton, California",
     ogImage: "https://truejoybirthing.com/images/og-city-stockton-ca.webp",
