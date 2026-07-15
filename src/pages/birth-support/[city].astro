@@ -537,7 +537,7 @@ const schema = {
           <p class="text-tjb-gray max-w-2xl mx-auto">{cityVideoEmbeds[slug].description}</p>
         </div>
         <div class="aspect-video rounded-xl overflow-hidden shadow-lg bg-black relative cursor-pointer group" data-video-facade={`https://www.youtube-nocookie.com/embed/${cityVideoEmbeds[slug].videoId}`}>
-          <img src={`/images/yt-thumb-${slug}.png`} alt={cityVideoEmbeds[slug].title} class="w-full h-full object-cover" width="560" height="315" loading="lazy" onerror="this.style.display='none'" />
+          <img src={`/images/yt-thumb-${slug}.webp`} alt={cityVideoEmbeds[slug].title} class="w-full h-full object-cover" width="560" height="315" loading="lazy" onerror="this.style.display='none'" />
           <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition">
             <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition">
               <svg class="w-7 h-7 ml-1 text-tjb-rose-500" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -1656,7 +1656,7 @@ const schema = {
       "@id": `${pageUrl}#video`,
       "name": `${cityVideoEmbeds[slug].title}`,
       "description": cityVideoEmbeds[slug].description,
-      "thumbnailUrl": `https://truejoybirthing.com/images/yt-thumb-${slug}.png`,
+      "thumbnailUrl": `https://truejoybirthing.com/images/yt-thumb-${slug}.webp`,
       "uploadDate": cityVideoEmbeds[slug].uploadDate || (data.publishedDate ? `${data.publishedDate}T00:00:00-06:00` : "2026-06-11T00:00:00-06:00"),
       "contentUrl": `https://www.youtube.com/watch?v=${cityVideoEmbeds[slug].videoId}`,
       "embedUrl": `https://www.youtube-nocookie.com/embed/${cityVideoEmbeds[slug].videoId}`,
