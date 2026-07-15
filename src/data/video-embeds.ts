@@ -203,8 +203,8 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   "providence-ri": {
     videoId: "sy9F-O8yHyI",
     title: "Providence RI Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Rhode Island Medicaid, all in under 3 minutes.",
-    duration: "PT4M19S",
+    description: "Watch the full Providence city guide — doulas, hospitals, costs, and Rhode Island Medicaid, all in about 2 minutes.",
+    duration: "PT2M10S",
     uploadDate: "2026-07-07T00:00:00-04:00",
   },
   "raleigh-nc": {
