@@ -2025,8 +2025,6 @@ export const cities: Record<string, CityData> = {
     costHigh: 1800,
     shelbiServesHere: false,
     heroImage: "/images/providence-ri-birth-doula-hero-pvd-v2.webp",
-    supportSceneImage: "/images/providence-ri-birth-doula-support.webp",
-    supportSceneAlt: "Providence doula providing hands-on support during pregnancy",
     ogImage: "https://truejoybirthing.com/images/og-city-providence-ri-v2.webp" ,
     localDoulas: [
       { name: "Bellwether Doulas" , credential: "Birth Doula" , practice: "Bellwether Doulas" , url: "https://www.bellwetherdoulas.com/" , photo: "/images/provider-providence-ri-bellwether-doulas.webp", description: "A team of experienced birth and postpartum doulas serving Rhode Island and nearby Massachusetts. Bellwether supports births at Women & Infants, Landmark, and home births, with virtual Evidence Based Birth classes and lactation support.", costRange: "$1,200-$2,000", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Childbirth Education"], 
