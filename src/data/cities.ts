@@ -2035,7 +2035,7 @@ export const cities: Record<string, CityData> = {
     lat: 41.8240,
     lng: -71.4128,
     serviceArea: ["Providence, RI" , "RI Statewide"] },
-      { name: "Susie Finnerty" , credential: "CPD, CLC" , practice: "Susie Finnerty Doula" , url: "https://www.susiefinnerty.com/" , photo: "/images/provider-providence-ri-susie-finnerty-v2.webp", description: "Certified Perinatal Doula and Lactation Counselor serving Providence and all of Rhode Island. Susie supports physiologic birth, inductions, cesareans, VBACs, trauma, and loss, and accepts RI Medicaid and private insurance.", costRange: "$1,500-$2,000", acceptingClients: true, acceptsMedicaid: true, services: ["Birth Doula" , "Postpartum Doula" , "Lactation Support"], 
+      { name: "Susie Finnerty" , credential: "CPD, CLC" , practice: "Susie Finnerty Doula" , url: "https://www.susiefinnerty.com/" , photo: "/images/provider-providence-ri-susie-finnerty-v3.webp", description: "Certified Perinatal Doula and Lactation Counselor serving Providence and all of Rhode Island. Susie supports physiologic birth, inductions, cesareans, VBACs, trauma, and loss, and accepts RI Medicaid and private insurance.", costRange: "$1,500-$2,000", acceptingClients: true, acceptsMedicaid: true, services: ["Birth Doula" , "Postpartum Doula" , "Lactation Support"], 
     lat: 41.8240,
     lng: -71.4128,
     serviceArea: ["Providence, RI" , "RI Statewide"] },
