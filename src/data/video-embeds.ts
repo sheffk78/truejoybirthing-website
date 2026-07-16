@@ -42,7 +42,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
   "aurora-co": {
-    videoId: "Kksgztfkn1I",
+    videoId: "CEbAcPaEOqE",
     title: "Aurora Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and Colorado Medicaid, all in under 4 minutes.",
     duration: "PT3M51S",
