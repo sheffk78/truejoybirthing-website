@@ -83,8 +83,9 @@ def main():
         return bool(re.search(rf'{field}:', city_block))
 
     def medicaid_starts_ok():
-        # TS source stores em dashes as \\u2014 (double-escaped backslash + u2014)
-        m = re.search(r'medicaidNote:\s*"(Yes|No)\s*\\u201[34]', city_block)
+        # TS source stores em dashes either as literal — or as \\u2014
+        m = re.search(r'medicaidNote:\s*"(Yes|No)\s*[\u2013\u2014]', city_block) or \
+            re.search(r'medicaidNote:\s*"(Yes|No)\s*\\u201[34]', city_block)
         return m is not None
 
     # ---- FIELD PRESENCE ----

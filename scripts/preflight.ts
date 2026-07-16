@@ -1693,6 +1693,7 @@ function run(): void {
       // Per-city size overrides for enriched pages with 3+ hospitals
       const citySizeOverrides: Record<string, number> = {
         'bakersfield-ca': 210,
+        'detroit-mi': 220,
       };
       const maxKB = (targetSlug && citySizeOverrides[targetSlug]) || 200;
       if (sizeKB > maxKB) {
