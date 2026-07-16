@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Accessibility Statement", "url": "https://truejoybirthing.com/accessibility-statement/"}];
+---
+
+<Layout
+  title="Accessibility Statement"
+  description="True Joy Birthing is committed to making our website and app accessible to all users, including those with disabilities. Learn about our accessibility efforts and how to report issues."
+  canonical="https://truejoybirthing.com/accessibility-statement/"
+  breadcrumbList={breadcrumbList}
+  schema={{
+    "@graph": [{
+      "@type": "WebPage",
+      "name": "Accessibility Statement",
+      "description": "True Joy Birthing is committed to making our website and app accessible to all users, including those with disabilities.",
+      "url": "https://truejoybirthing.com/accessibility-statement"
+    }]
+  }}>
+  <!-- Hero -->
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold mb-4">Accessibility Statement</h1>
+      <p class="text-lg text-tjb-gray">Last updated: July 2026</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 space-y-8">
+
+      <p class="text-tjb-gray leading-relaxed">True Joy Birthing, operated by Agentic Trust, is committed to making our website and mobile app accessible to all users, including those with disabilities. We believe everyone deserves access to birth education, planning tools, and the resources they need to prepare for a confident birth experience.</p>
+
+      <!-- 1. Our Commitment -->
+      <div class="bg-tjb-cream-50 rounded-xl p-6 border border-tjb-lavender-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">1. Our Commitment</h2>
+        <p class="text-tjb-gray leading-relaxed">We are committed to providing a website and app that is accessible to the widest possible audience, regardless of ability or technology. We actively work to increase the accessibility and usability of our digital products, and we adhere to widely accepted accessibility standards and guidelines to the extent practicable.</p>
+      </div>
+
+      <!-- 2. Conformance Standard -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">2. Conformance Standard</h2>
+        <p class="text-tjb-gray leading-relaxed">We aim to conform to <strong class="text-tjb-charcoal">WCAG 2.1 Level AA</strong> (Web Content Accessibility Guidelines 2.1, Level AA), which is widely recognized as the industry standard for digital accessibility. WCAG 2.1 is a set of guidelines developed by the World Wide Web Consortium (W3C) to make web content more accessible to people with disabilities, including visual, auditory, physical, cognitive, and neurological disabilities.</p>
+        <p class="text-tjb-gray leading-relaxed mt-3">We use "aim to conform" intentionally — accessibility is an ongoing process, not a one-time certification. We are committed to continuous improvement and regularly evaluate our conformance against these standards.</p>
+      </div>
+
+      <!-- 3. What We Do -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">3. What We Do</h2>
+        <p class="text-tjb-gray leading-relaxed mb-3">To advance accessibility, we implement the following practices:</p>
+        <ul class="space-y-2 text-tjb-gray">
+          <li class="flex items-start gap-2"><span class="text-tjb-lavender-500 mt-1">●</span> <span><strong class="text-tjb-charcoal">Semantic HTML:</strong> We use proper HTML structure so screen readers and assistive technologies can interpret our content correctly.</span></li>
+          <li class="flex items-start gap-2"><span class="text-tjb-lavender-500 mt-1">●</span> <span><strong class="text-tjb-charcoal">Keyboard navigation:</strong> Our site can be navigated using a keyboard alone, with visible focus indicators for all interactive elements.</span></li>
+          <li class="flex items-start gap-2"><span class="text-tjb-lavender-500 mt-1">●</span> <span><strong class="text-tjb-charcoal">Color contrast:</strong> We design with sufficient color contrast ratios to ensure readability for users with low vision or color blindness.</span></li>
+          <li class="flex items-start gap-2"><span class="text-tjb-lavender-500 mt-1">●</span> <span><strong class="text-tjb-charcoal">Form labels:</strong> All form fields have clear, associated labels and instructions so users understand what is being asked.</span></li>
+          <li class="flex items-start gap-2"><span class="text-tjb-lavender-500 mt-1">●</span> <span><strong class="text-tjb-charcoal">Alt text:</strong> Images include descriptive alternative text where appropriate, so screen readers can convey their meaning.</span></li>
+          <li class="flex items-start gap-2"><span class="text-tjb-lavender-500 mt-1">●</span> <span><strong class="text-tjb-charcoal">Screen reader compatibility:</strong> We test our pages with common screen readers and assistive technologies.</span></li>
+          <li class="flex items-start gap-2"><span class="text-tjb-lavender-500 mt-1">●</span> <span><strong class="text-tjb-charcoal">Skip-to-content link:</strong> A skip link is available at the top of each page for keyboard users to bypass repetitive navigation.</span></li>
+        </ul>
+      </div>
+
+      <!-- 4. Known Limitations -->
+      <div class="bg-tjb-rose-50 rounded-xl p-6 border border-tjb-rose-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">4. Known Limitations</h2>
+        <p class="text-tjb-gray leading-relaxed">We acknowledge that some areas of our website and app may not yet be fully optimized for accessibility. Known limitations include:</p>
+        <ul class="space-y-2 text-tjb-gray mt-3">
+          <li class="flex items-start gap-2"><span class="text-tjb-rose-500 mt-1">●</span> <span><strong class="text-tjb-charcoal">Third-party content:</strong> Some content embedded from third parties (such as maps, videos, or interactive widgets) may not fully meet our accessibility standards. We encourage third parties to provide accessible content but cannot guarantee their conformance.</span></li>
+          <li class="flex items-start gap-2"><span class="text-tjb-rose-500 mt-1">●</span> <span><strong class="text-tjb-charcoal">Older content:</strong> Some pages, blog posts, or app features published before our current accessibility standards were implemented may not yet be fully updated.</span></li>
+          <li class="flex items-start gap-2"><span class="text-tjb-rose-500 mt-1">●</span> <span><strong class="text-tjb-charcoal">Mobile app:</strong> Our mobile app is continually being improved. Some features may have accessibility gaps that we are actively working to address.</span></li>
+        </ul>
+        <p class="text-tjb-gray leading-relaxed mt-3">If you encounter a specific accessibility barrier, please let us know — see the contact section below.</p>
+      </div>
+
+      <!-- 5. Accommodation Requests -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">5. Accommodation Requests &amp; Reporting Issues</h2>
+        <p class="text-tjb-gray leading-relaxed">If you need an accommodation to access our content, use our tools, or participate in our programs — or if you encounter an accessibility barrier on our website or app — please contact us. We take accessibility feedback seriously and will work to address the issue promptly.</p>
+        <p class="text-tjb-gray leading-relaxed mt-3">Email us at <a href="mailto:support@truejoybirthing.com" class="text-tjb-rose-500 hover:text-tjb-charcoal underline underline-offset-3 transition-colors">support@truejoybirthing.com</a> with a description of the issue or the accommodation you need. Please include the page URL or app screen where you encountered the problem, and a brief description of what happened.</p>
+        <div class="mt-4 bg-tjb-cream-50 rounded-lg p-4 border border-tjb-lavender-200/50">
+          <p class="text-sm text-tjb-gray"><strong class="text-tjb-charcoal">Response time:</strong> We aim to respond to accessibility inquiries within <strong class="text-tjb-charcoal">5 business days</strong>.</p>
+        </div>
+      </div>
+
+      <!-- 6. Ongoing Improvement -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">6. Ongoing Improvement</h2>
+        <p class="text-tjb-gray leading-relaxed">Accessibility is an ongoing commitment, not a one-time project. We regularly review and improve our website, app, and content for accessibility. This includes periodic audits, user feedback review, staff training, and integrating accessibility considerations into our design and development processes.</p>
+        <p class="text-tjb-gray leading-relaxed mt-3">We also monitor changes to accessibility standards and guidelines and update our practices accordingly.</p>
+      </div>
+
+      <!-- 7. Contact -->
+      <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+        <h2 class="text-xl font-bold text-tjb-charcoal mb-3">7. Contact</h2>
+        <p class="text-tjb-gray leading-relaxed">For accessibility questions, accommodation requests, or to report an issue, contact us at <a href="mailto:support@truejoybirthing.com" class="text-tjb-rose-500 hover:text-tjb-charcoal underline underline-offset-3 transition-colors">support@truejoybirthing.com</a>.</p>
+        <div class="mt-3 text-sm text-tjb-gray">
+          <p>Agentic Trust</p>
+          <p>104 E 600 S, #519</p>
+          <p>Heber City, UT 84032</p>
+        </div>
+      </div>
+
+      <!-- Related links -->
+      <div class="pt-8 border-t border-tjb-lavender-200/50 text-center">
+        <p class="text-tjb-gray mb-4">Related: <a href="/privacy/" class="text-tjb-rose-500 hover:text-tjb-charcoal underline underline-offset-3 transition-colors font-semibold">Privacy Policy</a> · <a href="/terms/" class="text-tjb-rose-500 hover:text-tjb-charcoal underline underline-offset-3 transition-colors font-semibold">Terms of Use</a></p>
+        <a href="/" class="btn-primary">Back to Home →</a>
+      </div>
+
+    </div>
+  </section>
+</Layout>
