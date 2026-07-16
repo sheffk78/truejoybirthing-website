@@ -705,13 +705,41 @@ const stages = Object.keys(stageLabels);
 
   document.getElementById('search').addEventListener('input', render);
   document.getElementById('filterStage').addEventListener('change', render);
-  document.getElementById('hideComplete').addEventListener('change', render);
+  const hideCompleteEl = document.getElementById('hideComplete');
+  if (localStorage.getItem('tjb_hideComplete') === 'true') {
+    hideCompleteEl.checked = true;
+  }
+  hideCompleteEl.addEventListener('change', function() {
+    localStorage.setItem('tjb_hideComplete', this.checked);
+    render();
+  });
 
-  // Click city name to copy pipeline prompt
+  // Click city name to copy targeted pipeline prompt
   document.getElementById('tbody').addEventListener('click', function(e) {
     if (e.target.classList.contains('city-name')) {
       const slug = e.target.dataset.slug;
-      const prompt = `Run the full tjb-pipeline-dag on ${slug} — load the DAG and orchestrator, probe current state, execute all remaining stages through outreach.`;
+      const city = data.cities.find(c => c.slug === slug);
+      if (!city) return;
+
+      const stageLabels = {
+        hero: 'hero image',
+        og: 'OG image',
+        support: 'support scene image',
+        hospitals: 'hospital enrichment (paragraphs, thumbnails, URLs)',
+        doulas: 'doula/provider enrichment (photos, cost ranges, descriptions)',
+        video: 'video embed',
+        outreach: 'outreach',
+      };
+
+      const failing = Object.keys(stageLabels).filter(s => !city[s]);
+      let prompt;
+      if (failing.length === 0) {
+        prompt = `Probe ${slug} — run preflight to verify all gates pass, then confirm the live page matches the repo. If any gates fail, fix the root cause.`;
+      } else if (failing.length >= 5) {
+        prompt = `Run the full tjb-city-pipeline on ${slug} — probe current state, then execute all stages through outreach. Failing: ${failing.map(s => stageLabels[s]).join(', ')}.`;
+      } else {
+        prompt = `Fix ${slug} — probe current state, then complete only the failing stages: ${failing.map(s => stageLabels[s]).join(', ')}. Do not re-run stages that are already passing.`;
+      }
       navigator.clipboard.writeText(prompt).then(function() {
         e.target.classList.add('copied');
         setTimeout(function() { e.target.classList.remove('copied'); }, 1500);
