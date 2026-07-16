@@ -1,0 +1,725 @@
+---
+import fs from 'fs';
+import path from 'path';
+
+const auditPath = path.join(process.cwd(), 'public', 'city-audit.json');
+const auditData = JSON.parse(fs.readFileSync(auditPath, 'utf-8'));
+
+const cities = auditData.sort((a, b) => b.score - a.score);
+const total = cities.length;
+const auditDate = fs.statSync(auditPath).mtime.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+
+const stageLabels = {
+  hero: 'Hero Image',
+  og: 'OG Image',
+  support: 'Support Scene',
+  hospitals: 'Hospitals',
+  doulas: 'Doulas',
+  video: 'Video',
+  outreach: 'Outreach'
+};
+
+const stages = Object.keys(stageLabels);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TJB City Pages Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --lavender-50: #F7F7FC;
+    --lavender-100: #F1F1FB;
+    --lavender-200: #E6E4F4;
+    --lavender-300: #D5D3E8;
+    --lavender-400: #B9B7D4;
+    --lavender-500: #8E8CB5;
+    --lavender-600: #6E6C99;
+    --lavender-700: #504E7A;
+    --rose-50: #FCF5F9;
+    --rose-100: #F5E5EE;
+    --rose-200: #EFD3E5;
+    --rose-300: #E6BBD8;
+    --rose-400: #D8A0C4;
+    --rose-500: #B87AA0;
+    --rose-600: #9A5E84;
+    --cream: #FAF8F5;
+    --cream-100: #F5F3EF;
+    --cream-200: #EBE7E1;
+    --charcoal: #2A2A2A;
+    --charcoal-400: #4A4A4A;
+    --gray: #6A6B6C;
+    --gray-200: #B8B9BA;
+    --gray-300: #9A9B9C;
+    --sage: #A8B5A0;
+    --sage-100: #E8EDE5;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    padding: 0;
+    line-height: 1.7;
+  }
+
+  .page-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+
+  /* Header */
+  .header {
+    margin-bottom: 2rem;
+  }
+  .header .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--rose-500);
+    margin-bottom: 0.5rem;
+  }
+  .header h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 600;
+    color: var(--charcoal);
+    line-height: 1.15;
+    margin-bottom: 0.25rem;
+  }
+  .header .subtitle {
+    font-size: 0.9375rem;
+    color: var(--gray);
+  }
+  .header .updated {
+    font-size: 0.8125rem;
+    color: var(--gray-300);
+    margin-top: 0.75rem;
+  }
+
+  /* Rose divider */
+  .divider {
+    width: 40px;
+    height: 2px;
+    background: var(--rose-500);
+    margin: 1rem 0 1.5rem;
+    border-radius: 2px;
+  }
+
+  /* Stats bar */
+  .stats-bar {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .stat-card {
+    background: white;
+    border: 1px solid var(--lavender-200);
+    border-radius: 12px;
+    padding: 0.875rem 1.125rem;
+    min-width: 110px;
+    flex: 1 1 110px;
+    transition: box-shadow 0.2s;
+  }
+  .stat-card:hover { box-shadow: 0 2px 8px rgba(110,108,153,0.08); }
+  .stat-card.overall {
+    background: var(--lavender-50);
+    border-color: var(--lavender-300);
+    border-width: 2px;
+  }
+  .stat-card .label {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+  .stat-card .value {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+  .stat-card .value .done { color: var(--lavender-600); }
+  .stat-card .value .sep { color: var(--gray-200); margin: 0 1px; }
+  .stat-card .value .total { color: var(--gray-300); }
+  .stat-card .bar {
+    height: 5px;
+    background: var(--lavender-100);
+    border-radius: 3px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+  }
+  .stat-card .bar .fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.3s;
+  }
+
+  /* Legend */
+  .legend {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.8125rem;
+    color: var(--gray);
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .legend span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .legend .dot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    font-size: 0.6875rem;
+    font-weight: 700;
+  }
+  .legend .dot.green-dot { background: var(--sage-100); color: #5a7050; }
+  .legend .dot.red-dot { background: var(--rose-100); color: var(--rose-600); }
+
+  /* Controls */
+  .controls {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .controls input[type="text"] {
+    background: white;
+    border: 1px solid var(--lavender-200);
+    border-radius: 9999px;
+    padding: 0.5rem 1.25rem;
+    color: var(--charcoal);
+    font-family: inherit;
+    font-size: 0.875rem;
+    width: 250px;
+    transition: border-color 0.2s;
+  }
+  .controls input[type="text"]:focus {
+    outline: none;
+    border-color: var(--lavender-400);
+    box-shadow: 0 0 0 3px var(--lavender-100);
+  }
+  .controls input::placeholder { color: var(--gray-300); }
+  .controls select {
+    background: white;
+    border: 1px solid var(--lavender-200);
+    border-radius: 9999px;
+    padding: 0.5rem 1.25rem;
+    color: var(--charcoal);
+    font-family: inherit;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+  .controls select:focus {
+    outline: none;
+    border-color: var(--lavender-400);
+    box-shadow: 0 0 0 3px var(--lavender-100);
+  }
+  .controls label {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.875rem;
+    color: var(--gray);
+    cursor: pointer;
+  }
+  .controls label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--lavender-600);
+    cursor: pointer;
+  }
+
+  /* Table */
+  .table-wrap {
+    overflow-x: auto;
+    overflow-y: visible;
+    max-height: 75vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background: white;
+    border: 1px solid var(--lavender-200);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(110,108,153,0.06);
+  }
+  table {
+    width: 100%;
+    min-width: 780px;
+    border-collapse: collapse;
+    font-size: 0.8125rem;
+  }
+  thead th {
+    background: var(--cream-100);
+    color: var(--gray);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.6875rem;
+    padding: 0.75rem 0.5rem;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 2px solid var(--lavender-200);
+    border-right: 1px solid var(--lavender-100);
+  }
+  thead th:last-child { border-right: none; }
+  thead th.center { text-align: center; }
+  thead th:first-child { padding-left: 1rem; text-align: center; }
+  thead th:nth-child(2) { padding-left: 0.75rem; }
+
+  tbody tr {
+    border-bottom: 1px solid var(--lavender-100);
+    transition: background 0.15s;
+  }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:nth-child(odd) { background: var(--cream); }
+  tbody tr:hover { background: var(--rose-50); }
+
+  tbody td {
+    padding: 0.5rem 0.5rem;
+    color: var(--charcoal);
+    border-right: 1px solid var(--lavender-100);
+  }
+  tbody td:last-child { border-right: none; }
+  tbody td:first-child { padding-left: 1rem; color: var(--gray-300); font-size: 0.75rem; text-align: center; }
+  tbody td:nth-child(2) { padding-left: 0.75rem; }
+  tbody td.center { text-align: center; }
+
+  .city-name {
+    font-weight: 500;
+    color: var(--charcoal);
+    font-size: 0.875rem;
+  }
+  .city-link {
+    color: var(--lavender-600);
+    text-decoration: none;
+    font-size: 0.6875rem;
+    margin-left: 0.5rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .city-link:hover { color: var(--rose-500); text-decoration: underline; }
+  .city-name {
+    cursor: pointer;
+    transition: color 0.15s;
+  }
+  .city-name:hover { color: var(--lavender-600); }
+  .city-name.copied { color: var(--sage); }
+  .city-name.copied::after {
+    content: ' \u2713 copied';
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--sage);
+  }
+
+  /* Score badge */
+  .score-badge {
+    display: inline-block;
+    padding: 0.125rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    min-width: 30px;
+    text-align: center;
+    border: 1px solid transparent;
+    line-height: 1.5;
+  }
+  .score-red { background: var(--rose-100); color: var(--rose-600); border-color: var(--rose-200); }
+  .score-orange { background: #FDF4E3; color: #B8860B; border-color: #F5E5C3; }
+  .score-yellow { background: var(--cream-100); color: var(--lavender-700); border-color: var(--lavender-200); }
+  .score-green { background: var(--sage-100); color: #5a7050; border-color: var(--sage); }
+
+  /* Indicators — kept in scoped CSS for reference, but actual styles are in is:inline below */
+  .indicator { display: inline-flex; align-items: center; justify-content: center; }
+  .green-dot { }
+  .red-dot { }
+
+  /* Completed row highlight — scoped, but also duplicated in is:inline below for dynamic rows */
+  tbody tr.completed-row {
+    background: var(--sage-100) !important;
+  }
+  tbody tr.completed-row:hover {
+    background: #dbe5d5 !important;
+  }
+  tbody tr.completed-row td {
+    border-right-color: #c8d4c0;
+  }
+  tbody tr.completed-row .city-name {
+    color: #4a6040;
+  }
+  tbody tr.completed-row .city-name::after {
+    content: ' ✓';
+    color: var(--sage);
+    font-weight: 600;
+  }
+  tbody tr.completed-row .score-badge {
+    background: var(--sage);
+    color: #fff;
+    border-color: #8a9a82;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 1.5rem;
+    font-size: 0.8125rem;
+    color: var(--gray-300);
+    text-align: center;
+  }
+
+  /* In-progress indicator */
+  .in-progress-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    background: var(--lavender-100);
+    color: var(--lavender-600);
+    border: 1px solid var(--lavender-300);
+  }
+  .in-progress-badge .pulse {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--lavender-600);
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  .idle-badge {
+    color: var(--gray-300);
+    font-size: 0.6875rem;
+  }
+
+  .empty-row {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--gray-300);
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+  <div class="page-wrap">
+    <div class="header">
+      <div class="eyebrow">Internal Dashboard</div>
+      <h1>City Pages Pipeline</h1>
+      <div class="subtitle" id="subtitle">— city pages tracked across 7 pipeline stages</div>
+      <div class="updated">Audit data: {auditDate}</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="stats-bar" id="statsBar"></div>
+
+    <div class="legend">
+      <span><span class="dot green-dot" style="background:#6b9e5e;color:#fff;border:1.5px solid #5a8a4d">✓</span> Done</span>
+      <span><span class="dot red-dot" style="background:#c25b6a;color:#fff;border:1.5px solid #a8455a">✗</span> Needs work</span>
+      <span style="display:inline-flex;align-items:center;gap:0.3rem"><span style="display:inline-block;width:14px;height:14px;border-radius:3px;background:var(--sage-100);border:1px solid #c8d4c0"></span> Completed city</span>
+      <span><span class="in-progress-badge"><span class="pulse"></span>Working</span> Cron in progress</span>
+      <span style="margin-left: auto; color: var(--gray-300);">In-progress cities shown first, then by score (most complete at top)</span>
+    </div>
+
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search city or state..." />
+      <select id="filterStage">
+        <option value="">All stages</option>
+        <option value="hero">Hero Image issues</option>
+        <option value="og">OG Image missing</option>
+        <option value="support">Support Scene missing</option>
+        <option value="hospitals">Hospitals not enriched</option>
+        <option value="doulas">Doulas incomplete</option>
+        <option value="video">Video missing</option>
+        <option value="outreach">Outreach not started</option>
+      </select>
+      <label>
+        <input type="checkbox" id="hideComplete" />
+        Hide fully complete (100%)
+      </label>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>City</th>
+            <th class="center">Score</th>
+            <th class="center">Status</th>
+            <th class="center">Hero</th>
+            <th class="center">OG Image</th>
+            <th class="center">Support</th>
+            <th class="center">Hospitals</th>
+            <th class="center">Doulas</th>
+            <th class="center">Video</th>
+            <th class="center">Outreach</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      Click a city's "view" link to open the live page. Click a city name to copy its slug. Dashboard regenerates on each deploy.
+    </div>
+  </div>
+
+<style is:inline>
+  /* Dynamic element styles — unscoped so they apply to JS-generated content */
+  .indicator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border: 1.5px solid transparent;
+  }
+  .green-dot {
+    background: var(--sage);
+    color: #fff;
+    border-color: #8a9a82;
+    box-shadow: 0 0 0 2px rgba(168,181,160,0.15);
+  }
+  .red-dot {
+    background: var(--rose-200);
+    color: var(--rose-600);
+    border-color: var(--rose-300);
+  }
+  tbody tr.completed-row {
+    background: var(--sage-100) !important;
+  }
+  tbody tr.completed-row:hover {
+    background: #dbe5d5 !important;
+  }
+  tbody tr.completed-row td {
+    border-right-color: #c8d4c0;
+  }
+  tbody tr.completed-row .city-name {
+    color: #4a6040;
+  }
+  tbody tr.completed-row .city-name::after {
+    content: ' ✓';
+    color: var(--sage);
+    font-weight: 600;
+  }
+  tbody tr.completed-row .score-badge {
+    background: var(--sage) !important;
+    color: #fff !important;
+    border-color: #8a9a82 !important;
+  }
+  .in-progress-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 9999px;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    background: var(--lavender-100);
+    color: var(--lavender-600);
+    border: 1px solid var(--lavender-300);
+  }
+  .in-progress-badge .pulse {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--lavender-600);
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+  .idle-badge {
+    color: var(--gray-300);
+    font-size: 0.6875rem;
+  }
+  .score-badge {
+    display: inline-block;
+    padding: 0.125rem 0.625rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    min-width: 30px;
+    text-align: center;
+    border: 1px solid transparent;
+    line-height: 1.5;
+  }
+  .score-red { background: var(--rose-100); color: var(--rose-600); border-color: var(--rose-200); }
+  .score-orange { background: #FDF4E3; color: #B8860B; border-color: #F5E5C3; }
+  .score-yellow { background: var(--cream-100); color: var(--lavender-700); border-color: var(--lavender-200); }
+  .score-green { background: var(--sage-100); color: #5a7050; border-color: var(--sage); }
+  .city-name {
+    font-weight: 500;
+    color: var(--charcoal);
+    font-size: 0.875rem;
+  }
+  .city-link {
+    color: var(--lavender-600);
+    text-decoration: none;
+    font-size: 0.6875rem;
+    margin-left: 0.5rem;
+    font-weight: 500;
+  }
+  .city-link:hover { color: var(--rose-500); text-decoration: underline; }
+</style>
+
+<script is:inline define:vars={{ cityData: cities, totalCount: total }}>
+  const data = {cities: cityData, total: totalCount};
+  const stageLabels = {hero: 'Hero Image', og: 'OG Image', support: 'Support Scene', hospitals: 'Hospitals', doulas: 'Doulas', video: 'Video', outreach: 'Outreach'};
+  const stages = Object.keys(stageLabels);
+
+  document.getElementById('subtitle').textContent = data.total + ' city pages — tracked across 7 pipeline stages';
+
+  function scoreClass(score) {
+    if (score >= 100) return 'score-green';
+    if (score >= 80) return 'score-yellow';
+    if (score >= 40) return 'score-orange';
+    return 'score-red';
+  }
+
+  function updateStats() {
+    const statsBar = document.getElementById('statsBar');
+    let html = '';
+
+    const overallDone = data.cities.filter(c => c.score >= 100).length;
+    const overallPct = Math.round(overallDone / data.total * 100);
+    const overallColor = overallPct >= 50 ? '#A8B5A0' : overallPct >= 25 ? '#D8A0C4' : '#B87AA0';
+    html += `
+      <div class="stat-card overall">
+        <div class="label">Overall Complete</div>
+        <div class="value"><span class="done">${overallDone}</span><span class="sep">/</span><span class="total">${data.total}</span></div>
+        <div class="bar"><div class="fill" style="width: ${overallPct}%; background: ${overallColor};"></div></div>
+      </div>`;
+
+    stages.forEach(s => {
+      const done = data.cities.filter(c => c[s]).length;
+      const t = data.total;
+      const pct = Math.round(done / t * 100);
+      const color = pct >= 75 ? '#A8B5A0' : pct >= 50 ? '#D8A0C4' : pct >= 25 ? '#E6BBD8' : '#B87AA0';
+      html += `
+        <div class="stat-card">
+          <div class="label">${stageLabels[s]}</div>
+          <div class="value"><span class="done">${done}</span><span class="sep">/</span><span class="total">${t}</span></div>
+          <div class="bar"><div class="fill" style="width: ${pct}%; background: ${color};"></div></div>
+        </div>`;
+    });
+
+    statsBar.innerHTML = html;
+  }
+
+  function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+  }
+
+  function render() {
+    const search = document.getElementById('search').value.toLowerCase();
+    const filterStage = document.getElementById('filterStage').value;
+    const hideComplete = document.getElementById('hideComplete').checked;
+
+    let filtered = data.cities.filter(c => {
+      if (hideComplete && c.score >= 100) return false;
+      if (filterStage && c[filterStage]) return false;
+      if (search) {
+        const match = (c.city + ' ' + c.state + ' ' + c.slug).toLowerCase().includes(search);
+        if (!match) return false;
+      }
+      return true;
+    });
+
+    const tbody = document.getElementById('tbody');
+    if (filtered.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="11" class="empty-row">No cities match your filters</td></tr>';
+      return;
+    }
+
+    let html = '';
+    filtered.forEach((c, i) => {
+      const isComplete = c.score >= 100;
+      const rowClass = isComplete ? 'completed-row' : '';
+      html += `<tr class="${rowClass}"><td>${i + 1}</td>`;
+      html += `<td><span class="city-name" data-slug="${escapeHtml(c.slug)}" title="Click to copy slug">${escapeHtml(c.city)}, ${escapeHtml(c.state)}</span><a href="https://truejoybirthing.com/birth-support/${encodeURIComponent(c.slug)}/" target="_blank" class="city-link">view</a></td>`;
+      html += `<td class="center"><span class="score-badge ${scoreClass(c.score)}">${c.score}</span></td>`;
+      // Status column
+      if (c.in_progress) {
+        const slotLabel = c.slot ? `Slot ${c.slot}` : 'Working';
+        html += `<td class="center"><span class="in-progress-badge"><span class="pulse"></span>${escapeHtml(slotLabel)}</span></td>`;
+      } else {
+        html += `<td class="center"><span class="idle-badge">—</span></td>`;
+      }
+      stages.forEach(s => {
+        const ok = c[s];
+        const icon = ok ? '✓' : '✗';
+        const cls = ok ? 'green-dot' : 'red-dot';
+        let title = ok ? `${stageLabels[s]} ✓` : `${stageLabels[s]} ✗`;
+        if (!ok && s === 'hero' && c.hero_issue) title += ' — ' + c.hero_issue;
+        if (ok && s === 'hospitals' && c.hospital_count) title += ` (${c.hospital_count})`;
+        if (ok && s === 'doulas' && c.doula_count) title += ` (${c.doula_count})`;
+        html += `<td class="center" title="${escapeHtml(title)}"><span class="indicator ${cls}">${icon}</span></td>`;
+      });
+      html += '</tr>';
+    });
+    tbody.innerHTML = html;
+  }
+
+  document.getElementById('search').addEventListener('input', render);
+  document.getElementById('filterStage').addEventListener('change', render);
+  document.getElementById('hideComplete').addEventListener('change', render);
+
+  // Click city name to copy slug
+  document.getElementById('tbody').addEventListener('click', function(e) {
+    if (e.target.classList.contains('city-name')) {
+      const slug = e.target.dataset.slug;
+      navigator.clipboard.writeText(slug).then(function() {
+        e.target.classList.add('copied');
+        setTimeout(function() { e.target.classList.remove('copied'); }, 1500);
+      }).catch(function() {
+        // Fallback for browsers without clipboard API
+        const ta = document.createElement('textarea');
+        ta.value = slug;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        e.target.classList.add('copied');
+        setTimeout(function() { e.target.classList.remove('copied'); }, 1500);
+      });
+    }
+  });
+
+  updateStats();
+  render();
+</script>
+</body>
+</html>
