@@ -490,7 +490,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M35S",
     uploadDate: "2026-07-14T06:42:58-06:00",
 },
-  // san-jose-ca video removed: ScsUgI8_v94 has stale data. Needs re-record.
+  "san-jose-ca": {
+    videoId: "gYfH397LCvk",
+    title: "San Jose CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 4 minutes.",
+    duration: "PT4M2S",
+    uploadDate: "2026-07-15T17:33:00-06:00",
+  },
   "stockton-ca": {
     videoId: "TP7HxNd6Tro",
     title: "Stockton CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
