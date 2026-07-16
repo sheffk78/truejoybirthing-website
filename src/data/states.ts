@@ -27,7 +27,21 @@ export interface StateData {
   doulaRegulations: string;   // State doula licensing/regulation info
   birthStats?: StateBirthStats;  // State-level birth statistics
   faq?: StateFaqItem[];        // State-level FAQ items
+  heroImage?: string;          // Path to state-specific hero image (e.g. "/images/state-co-rocky-mountains.webp")
+  heroImageAlt?: string;       // Alt text for the hero image
+  ogImage?: string;           // Path to state-specific OG image (e.g. "/images/og/og-state-co.png")
 }
+
+// State hero/OG image registry. Maps state code to image paths.
+// Images are AI-generated photos of iconic state landmarks at golden hour,
+// matching the city page hero style. OG images use the split-panel template.
+export const stateImages: Record<string, { heroImage: string; heroImageAlt: string; ogImage: string }> = {
+  CO: {
+    heroImage: '/images/state-co-rocky-mountains.webp',
+    heroImageAlt: 'Colorado Rocky Mountains at golden hour, a pregnant woman silhouetted against the peaks',
+    ogImage: '/images/og/og-state-co.png',
+  },
+};
 
 export const stateData: Record<string, StateData> = {
   CA: {
