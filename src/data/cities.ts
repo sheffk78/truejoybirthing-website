@@ -4138,7 +4138,7 @@ export const cities: Record<string, CityData> = {
     shelbiServesHere: false,
     heroImage: "/images/laurel-md-birth-doula-skyline.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-laurel-md.webp",
-    supportSceneImage: "/images/laurel-md-birth-doula-support.webp",
+    supportSceneImage: "/images/laurel-md-birth-doula-support-v2.webp",
     supportSceneAlt: "A doula supporting an expectant mom on a tree-lined path in Laurel, Maryland at golden hour" ,
     midwifeInfo: {
       paragraph: "Maryland licenses CNMs through the Board of Nursing and Licensed Direct-Entry Midwives (LDEMs) under COMAR 10.64, making both hospital and home birth midwifery legally regulated. CNMs practice at UM Capital Region and Holy Cross Hospital, while LDEMs attend home births statewide. My Way Birth and Women's Services offers home birth midwifery care from a local Laurel office." ,
