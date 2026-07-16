@@ -582,6 +582,16 @@ const stages = Object.keys(stageLabels);
     font-weight: 500;
     color: var(--charcoal);
     font-size: 0.875rem;
+    cursor: pointer;
+    transition: color 0.15s;
+  }
+  .city-name:hover { color: var(--lavender-600); }
+  .city-name.copied { color: var(--sage); }
+  .city-name.copied::after {
+    content: ' \2713 copied';
+    font-size: 0.6875rem;
+    font-weight: 600;
+    color: var(--sage);
   }
   .city-link {
     color: var(--lavender-600);
