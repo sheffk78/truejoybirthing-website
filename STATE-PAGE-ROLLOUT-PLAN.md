@@ -1,4 +1,20 @@
-# State Page Rollout Plan: Hero Images, OG Images, and Content Enrichment
+# State Page Rollout Plan: COMPLETE (July 16, 2026)
+
+## Final Status
+
+All 28 state pages are live with:
+- Hero images (1200x800, 3:2, no black bars)
+- OG images (1200x630, split-panel composition)
+- Responsive variants (600x400)
+- Full content enrichment (medicaidNarrative, doulaRegulations, birthStats, faq)
+- SEO checklist passing (see tjb-state-page-system skill)
+
+## Template and process
+
+The template and process for state pages is documented in the `tjb-state-page-system` skill.
+Load it with `skill_view(name='tjb-state-page-system')` before working on state pages.
+
+## Original plan (preserved for reference)
 
 ## Current State (as of July 16, 2026)
 

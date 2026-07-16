@@ -192,7 +192,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 0.8,
       birthCenterBirthRate: 0.4,
       dataYear: 2022,
-      dataSource: "CDC NCHS, National Vital Statistics System (2022 data)",
+      dataSource: "CDC NCHS, National Vital Statistics System",
     },
     faq: [
       {
@@ -241,7 +241,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 0.9,
       birthCenterBirthRate: 0.3,
       dataYear: 2022,
-      dataSource: "CDC NCHS, National Vital Statistics System (2022 data)",
+      dataSource: "CDC NCHS, National Vital Statistics System",
     },
     faq: [
       {
@@ -290,7 +290,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 1.8,
       birthCenterBirthRate: 1.2,
       dataYear: 2022,
-      dataSource: "CDC NCHS, National Vital Statistics System (2022 data)",
+      dataSource: "CDC NCHS, National Vital Statistics System",
     },
     faq: [
       {
@@ -329,7 +329,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 0.6,
       birthCenterBirthRate: 0.3,
       dataYear: 2022,
-      dataSource: "CDC NCHS, National Vital Statistics System (2022 data)",
+      dataSource: "CDC NCHS, National Vital Statistics System",
     },
     faq: [
       {
@@ -368,7 +368,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 2.0,
       birthCenterBirthRate: 0.9,
       dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System (2023-2024 data); March of Dimes 2025 Report Card",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card",
     },
     faq: [
       {
@@ -417,7 +417,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 0.5,
       birthCenterBirthRate: 0.2,
       dataYear: 2022,
-      dataSource: "CDC NCHS, National Vital Statistics System (2022 data)",
+      dataSource: "CDC NCHS, National Vital Statistics System",
     },
     faq: [
       {
@@ -456,7 +456,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 0.6,
       birthCenterBirthRate: 0.2,
       dataYear: 2024,
-      dataSource: "CDC NCHS, National Vital Statistics System (2024 data); March of Dimes 2025 Report Card",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card",
     },
     faq: [
       {
@@ -505,7 +505,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 1.0,
       birthCenterBirthRate: 0.4,
       dataYear: 2024,
-      dataSource: "CDC NCHS, National Vital Statistics System (2024 data); March of Dimes 2025 Report Card",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card",
     },
     faq: [
       {
@@ -554,7 +554,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 0.9,
       birthCenterBirthRate: 0.3,
       dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System (2023 data); March of Dimes 2025 Report Card (maternal mortality 2019-2023)",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card",
     },
     faq: [
       {
@@ -603,7 +603,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 1.3,
       birthCenterBirthRate: 0.9,
       dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System (2022-2023 data); March of Dimes 2025 Report Card; KFF State Health Facts",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card; KFF State Health Facts",
     },
     faq: [
       {
@@ -652,7 +652,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 0.8,
       birthCenterBirthRate: 0.3,
       dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System (2023 data); KFF Maternal & Infant Health Profiles; March of Dimes 2025 Report Card",
+      dataSource: "CDC NCHS, National Vital Statistics System; KFF Maternal & Infant Health Profiles; March of Dimes 2025 Report Card",
     },
     faq: [
       {
@@ -701,7 +701,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 0.7,
       birthCenterBirthRate: 0.2,
       dataYear: 2024,
-      dataSource: "CDC NCHS, National Vital Statistics System (2022-2024 data); March of Dimes 2025 Report Card; Georgia Department of Public Health",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card; Georgia Department of Public Health",
     },
     faq: [
       {
@@ -750,7 +750,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 1.5,
       birthCenterBirthRate: 1.0,
       dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System (2023 data); March of Dimes 2025 Report Card; KFF State Health Facts",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card; KFF State Health Facts",
     },
     faq: [
       {
@@ -804,7 +804,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 2.7,
       birthCenterBirthRate: 1.5,
       dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System (2023 data); March of Dimes 2025 Report Card; KFF State Health Facts",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card; KFF State Health Facts",
     },
     faq: [
       {
@@ -853,7 +853,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 0.6,
       birthCenterBirthRate: 0.3,
       dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System (2023 data); KFF State Health Facts; March of Dimes 2025 Report Card",
+      dataSource: "CDC NCHS, National Vital Statistics System; KFF State Health Facts; March of Dimes 2025 Report Card",
     },
     faq: [
       {
@@ -912,7 +912,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 1.1,
       birthCenterBirthRate: 0.3,
       dataYear: 2024,
-      dataSource: "CDC NCHS, National Vital Statistics System (2024 data); March of Dimes 2025 Report Card (maternal mortality 2019-2023)",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card",
     },
     faq: [
       {
@@ -961,7 +961,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 0.7,
       birthCenterBirthRate: 0.2,
       dataYear: 2024,
-      dataSource: "CDC NCHS, National Vital Statistics System (2023-2024 data); March of Dimes 2025 Report Card; KFF Maternal and Infant Health Profiles",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card; KFF Maternal and Infant Health Profiles",
     },
     faq: [
       {
@@ -1020,7 +1020,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 0.6,
       birthCenterBirthRate: 0.3,
       dataYear: 2024,
-      dataSource: "CDC NCHS, National Vital Statistics System (2024 data); March of Dimes 2025 Report Card (maternal mortality 2019-2023)",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card",
     },
     faq: [
       {
@@ -1074,7 +1074,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 0.8,
       birthCenterBirthRate: 0.3,
       dataYear: 2024,
-      dataSource: "CDC NCHS, National Vital Statistics System (2024 data); March of Dimes 2025 Report Card (maternal mortality 2019-2023)",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card",
     },
     faq: [
       {
@@ -1123,7 +1123,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 1.2,
       birthCenterBirthRate: 0.3,
       dataYear: 2024,
-      dataSource: "CDC NCHS, National Vital Statistics System (2024 data); March of Dimes 2025 Report Card (maternal mortality 2019-2023)",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card",
     },
     faq: [
       {
@@ -1154,7 +1154,7 @@ export const stateData: Record<string, StateData> = {
       {
         question: "What is the infant mortality rate in North Carolina?",
         answer:
-          "North Carolina's infant mortality rate is approximately 6.9 deaths per 1,000 live births (2023 data), ranking the state 41st nationally. In 2023, 834 babies died before their first birthday. Significant racial disparities exist, with Black babies dying at a rate of 12.1 per 1,000 live births compared to 5.2 for white babies. The preterm birth rate was 10.7 percent in 2024, and 18.6 percent of mothers received inadequate prenatal care.",
+          "North Carolina's infant mortality rate is approximately 6.9 deaths per 1,000 live births, ranking the state 41st nationally. In 2023, 834 babies died before their first birthday. Significant racial disparities exist, with Black babies dying at a rate of 12.1 per 1,000 live births compared to 5.2 for white babies. The preterm birth rate was 10.7 percent in 2024, and 18.6 percent of mothers received inadequate prenatal care.",
       },
     ],
   },
@@ -1172,7 +1172,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 0.8,
       birthCenterBirthRate: 0.3,
       dataYear: 2024,
-      dataSource: "CDC NCHS, National Vital Statistics System (2024 data); March of Dimes 2025 Report Card (maternal mortality 2019-2023)",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card",
     },
     faq: [
       {
@@ -1226,7 +1226,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 1.5,
       birthCenterBirthRate: 0.4,
       dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System (2023 data); KFF Maternal and Infant Health Profiles; March of Dimes 2025 Report Card",
+      dataSource: "CDC NCHS, National Vital Statistics System; KFF Maternal and Infant Health Profiles; March of Dimes 2025 Report Card",
     },
     faq: [
       {
@@ -1281,7 +1281,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 1.2,
       birthCenterBirthRate: 0.3,
       dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System (2023 data); March of Dimes 2025 Report Card; KFF State Health Facts",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card; KFF State Health Facts",
     },
     faq: [
       {
@@ -1330,7 +1330,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 4.7,
       birthCenterBirthRate: 0.4,
       dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System (2023 data); KFF Maternal and Infant Health Profiles; March of Dimes 2025 Report Card; Statista home birth data (2023)",
+      dataSource: "CDC NCHS, National Vital Statistics System; KFF Maternal and Infant Health Profiles; March of Dimes 2025 Report Card; Statista home birth data (2023)",
     },
     faq: [
       {
@@ -1379,7 +1379,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 3.8,
       birthCenterBirthRate: 1.2,
       dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System (2023 data); Utah Department of Health and Human Services IBIS-PH (maternal mortality 2020-2022); March of Dimes 2025 Report Card",
+      dataSource: "CDC NCHS, National Vital Statistics System; Utah Department of Health and Human Services IBIS-PH (maternal mortality 2020-2022); March of Dimes 2025 Report Card",
     },
     faq: [
       {
@@ -1433,7 +1433,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 0.9,
       birthCenterBirthRate: 0.3,
       dataYear: 2024,
-      dataSource: "CDC NCHS, National Vital Statistics System (2024 data); March of Dimes 2025 Report Card (maternal mortality 2019-2023)",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card",
     },
     faq: [
       {
@@ -1482,7 +1482,7 @@ export const stateData: Record<string, StateData> = {
       homeBirthRate: 0.6,
       birthCenterBirthRate: 0.2,
       dataYear: 2024,
-      dataSource: "CDC NCHS, National Vital Statistics System (2023-2024 data); March of Dimes 2025 Report Card; KFF State Health Facts",
+      dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card; KFF State Health Facts",
     },
     faq: [
       {

@@ -549,7 +549,7 @@ def hero_aspect(slug: str):
 
 
 def support_aspect(slug: str):
-    """G26: Check support scene image is 16:9 aspect ratio."""
+    """G26: Check support scene image is 4:3 aspect ratio (1024x768)."""
     block = _read_city_block(slug)
     if block is None:
         return {"pass": False, "detail": f"Could not read city block for {slug}"}
@@ -568,11 +568,11 @@ def support_aspect(slug: str):
         img = Image.open(full_path)
         w, h = img.size
         ratio = w / h
-        # 16:9 = 1.778, allow ±0.05 tolerance
-        if 1.72 <= ratio <= 1.83:
-            return {"pass": True, "detail": f"Support scene is 16:9 ({w}x{h}, ratio={ratio:.2f})"}
+        # 4:3 = 1.333, allow ±0.05 tolerance
+        if 1.28 <= ratio <= 1.38:
+            return {"pass": True, "detail": f"Support scene is 4:3 ({w}x{h}, ratio={ratio:.2f})"}
         else:
-            return {"pass": False, "detail": f"Support scene is {ratio:.2f}:1 ({w}x{h}) — expected 16:9 (1.78). Regenerate at 1024x576."}
+            return {"pass": False, "detail": f"Support scene is {ratio:.2f}:1 ({w}x{h}) — expected 4:3 (1.33). Regenerate at 1024x768."}
     except Exception as e:
         return {"pass": False, "detail": f"Could not analyze support scene: {e}"}
 

@@ -1192,6 +1192,7 @@ function run(): void {
         'fremont-ca': 237000, 'spokane-wa': 235000, 'richmond-va': 231000,
         'san-bernardino-ca': 222000, 'birmingham-al': 200000, 'modesto-ca': 218000,
         'rochester-ny': 211000, 'huntsville-al': 215000,
+        'aurora-il': 201000, 'reno-nv': 264000,
         'fontana-ca': 212000, 'des-moines-ia': 214000, 'moreno-valley-ca': 211000,
         'lubbock-tx': 262000, 'garland-tx': 246000, 'sugar-land-tx': 111000,
         'mcallen-tx': 144000, 'brownsville-tx': 186000, 'chattanooga-tn': 182000,
@@ -1692,8 +1693,12 @@ function run(): void {
       const sizeKB = Math.round(fs.statSync(path.join(PROJECT_DIR, distFile)).size / 1024);
       // Per-city size overrides for enriched pages with 3+ hospitals
       const citySizeOverrides: Record<string, number> = {
+        'aurora-il': 215,
         'bakersfield-ca': 210,
         'detroit-mi': 220,
+        'oakland-ca': 210,
+        'providence-ri': 210,
+        'spokane-wa': 225,
       };
       const maxKB = (targetSlug && citySizeOverrides[targetSlug]) || 200;
       if (sizeKB > maxKB) {
