@@ -486,7 +486,7 @@ const stages = Object.keys(stageLabels);
     </div>
 
     <div class="footer">
-      Click a city's "view" link to open the live page. Click a city name to copy its slug. Dashboard regenerates on each deploy.
+      Click a city name to copy a pipeline prompt you can paste back to Kit. Click "view" to open the live page. Dashboard regenerates on each deploy.
     </div>
   </div>
 
@@ -679,7 +679,7 @@ const stages = Object.keys(stageLabels);
       const isComplete = c.score >= 100;
       const rowClass = isComplete ? 'completed-row' : '';
       html += `<tr class="${rowClass}"><td>${i + 1}</td>`;
-      html += `<td><span class="city-name" data-slug="${escapeHtml(c.slug)}" title="Click to copy slug">${escapeHtml(c.city)}, ${escapeHtml(c.state)}</span><a href="https://truejoybirthing.com/birth-support/${encodeURIComponent(c.slug)}/" target="_blank" class="city-link">view</a></td>`;
+      html += `<td><span class="city-name" data-slug="${escapeHtml(c.slug)}" title="Click to copy pipeline prompt">${escapeHtml(c.city)}, ${escapeHtml(c.state)}</span><a href="https://truejoybirthing.com/birth-support/${encodeURIComponent(c.slug)}/" target="_blank" class="city-link">view</a></td>`;
       html += `<td class="center"><span class="score-badge ${scoreClass(c.score)}">${c.score}</span></td>`;
       // Status column
       if (c.in_progress) {
@@ -707,17 +707,18 @@ const stages = Object.keys(stageLabels);
   document.getElementById('filterStage').addEventListener('change', render);
   document.getElementById('hideComplete').addEventListener('change', render);
 
-  // Click city name to copy slug
+  // Click city name to copy pipeline prompt
   document.getElementById('tbody').addEventListener('click', function(e) {
     if (e.target.classList.contains('city-name')) {
       const slug = e.target.dataset.slug;
-      navigator.clipboard.writeText(slug).then(function() {
+      const prompt = `Run the full tjb-pipeline-dag on ${slug} — load the DAG and orchestrator, probe current state, execute all remaining stages through outreach.`;
+      navigator.clipboard.writeText(prompt).then(function() {
         e.target.classList.add('copied');
         setTimeout(function() { e.target.classList.remove('copied'); }, 1500);
       }).catch(function() {
         // Fallback for browsers without clipboard API
         const ta = document.createElement('textarea');
-        ta.value = slug;
+        ta.value = prompt;
         document.body.appendChild(ta);
         ta.select();
         document.execCommand('copy');
