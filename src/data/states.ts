@@ -200,6 +200,55 @@ export const stateData: Record<string, StateData> = {
     ],
   },
 
+  CO: {
+    state: "CO",
+    stateName: "Colorado",
+    medicaidNarrative:
+      "Yes — Colorado's Medicaid program, Health First Colorado, began covering doula services as a fully covered benefit on July 1, 2024. The Colorado Department of Health Care Policy and Financing (HCPF) implemented the benefit under the Code of Colorado Regulations 10 C.C.R. 2505-10 8.734. The benefit covers three categories of services: prenatal support, continuous labor and delivery support, and postpartum support. Doulas must enroll as Health First Colorado providers under provider type 79 (PT 79) and meet qualifications through either a Certification Pathway or an Experience Pathway. A recommendation from a licensed healthcare provider (physician, nurse midwife, advanced practice nurse, or other eligible provider type) is required before doula services can begin. Reimbursement is available up to $1,500 per pregnancy, with prenatal and postpartum visits billed at $16.28 per 15 minutes (maximum two hours per visit). Families should ask their doula whether they are enrolled as a Health First Colorado provider, as not all doulas have completed the enrollment process.",
+    doulaRegulations:
+      "Colorado does not require a separate state doula license for all doulas. However, to serve Health First Colorado (Medicaid) members, doulas must enroll as providers under provider type 79 (PT 79) and qualify through either a Certification Pathway or an Experience Pathway as defined by HCPF. Doulas are not regulated as medical professionals under Colorado law; they provide non-clinical support. Voluntary certifications from organizations such as DONA International, CAPPA, and the International Doula Institute are widely recognized in the Colorado birth community. Colorado does regulate birth professionals through separate pathways: Direct-Entry Midwives (DEMs) must register with the Colorado Department of Regulatory Agencies (DORA) under the Direct-Entry Midwives Act, and Certified Professional Midwives (CPMs) are certified through the North American Registry of Midwives (NARM). Freestanding birth centers are licensed by the state and staffed by midwives. Certified Nurse Midwives (CNMs) are licensed through the Colorado Board of Nursing.",
+    birthStats: {
+      cesareanRate: 27.9,
+      maternalMortalityRate: 17.0,
+      homeBirthRate: 2.0,
+      birthCenterBirthRate: 0.9,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System (2023-2024 data); March of Dimes 2025 Report Card",
+    },
+    faq: [
+      {
+        question: "Does Colorado Medicaid cover doula services?",
+        answer:
+          "Yes. As of July 1, 2024, Health First Colorado (Colorado's Medicaid program) covers doula services including prenatal support, continuous labor and delivery support, and postpartum support. A recommendation from a licensed healthcare provider is required. Ask your doula whether they are enrolled as a Health First Colorado provider.",
+      },
+      {
+        question: "Do I need a license to practice as a doula in Colorado?",
+        answer:
+          "No state license is required for all doulas in Colorado. Doulas are not regulated as medical professionals. However, to serve Health First Colorado (Medicaid) members, doulas must enroll as providers under provider type 79 and meet qualification requirements through either a Certification Pathway or an Experience Pathway. For private-pay clients, voluntary certification through DONA International or similar organizations is widely recognized.",
+      },
+      {
+        question: "What is the cesarean rate in Colorado?",
+        answer:
+          "Colorado has an overall cesarean rate of approximately 27.9% (CDC NCHS, 2024 data), which is below the national average. The low-risk cesarean rate is approximately 22.6%, ranking Colorado 9th best among states. Rates vary by hospital, so ask about your facility's rate during prenatal visits.",
+      },
+      {
+        question: "Are birth centers licensed in Colorado?",
+        answer:
+          "Yes. Colorado licenses freestanding birth centers through the state, and all licensed birth centers are staffed by midwives. Direct-Entry Midwives (DEMs) must register with the Colorado Department of Regulatory Agencies (DORA) under the Direct-Entry Midwives Act. Certified Professional Midwives (CPMs) are certified through the North American Registry of Midwives (NARM).",
+      },
+      {
+        question: "What is the maternal mortality rate in Colorado?",
+        answer:
+          "Colorado's maternal mortality rate is approximately 17.0 deaths per 100,000 live births (March of Dimes 2025 Report Card, 2019-2023 data), ranking Colorado 8th best among states. This is below the national average and reflects Colorado's position as one of the top ten states for low maternal mortality.",
+      },
+      {
+        question: "How much does Colorado Medicaid reimburse for doula services?",
+        answer:
+          "Health First Colorado reimburses doula services up to $1,500 per pregnancy. Prenatal and postpartum visits are billed at $16.28 per 15 minutes, with a maximum of two hours per visit. The benefit covers prenatal support, continuous labor and delivery support, and postpartum support. A licensed provider must recommend doula services before they begin.",
+      },
+    ],
+  },
+
   NY: {
     state: "NY",
     stateName: "New York",

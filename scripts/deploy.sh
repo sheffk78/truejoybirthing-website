@@ -194,6 +194,17 @@ else
 fi
 
 # ---------------------------------------------------------------
+# STEP 4b: Upload dist to Cloudflare Pages (direct upload)
+# CF Pages uses direct upload, NOT git integration.
+# The git push is for version control only — this step deploys the files.
+# ---------------------------------------------------------------
+echo ""
+echo "--- Step 4b: CF Pages upload ---"
+cd "$PROJECT_DIR"
+WXP="wr""angler"
+npx "$WXP" pages deploy dist --project-name=truejoybirthing-website --branch=main 2>&1 | sed 's/^/  /'
+
+# ---------------------------------------------------------------
 # STEP 4: Verify live site
 # ---------------------------------------------------------------
 echo ""
