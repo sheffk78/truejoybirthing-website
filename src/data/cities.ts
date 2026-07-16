@@ -2247,7 +2247,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Bay Area Birth Center" , paragraph: "The Bay Area Birth Center offers a freestanding, midwifery-led birth option in a home-like environment for families seeking gentle, low-intervention birth outside the hospital setting. Oakland also has a strong home-birth midwifery community with several CPMs and CNMs serving East Bay families.", thumbnail: "/images/oakland-ca-birth-center-bay-area.webp", url: "https://www.bayareabirthcenter.com/", address: "2600 San Ramon Valley Blvd, Suite 115, San Ramon, CA 94583", services: ["Water Birth", "VBAC", "Prenatal Care", "Postpartum Care", "Home Birth"] }
     ],
-    medicaidNote: "Yes \u2014 California covers doula services through Medi-Cal. Since January 2023, you can receive up to ~$1,587 in doula coverage including prenatal, birth, and postpartum visits. Oakland's community health centers have been early adopters of Medi-Cal doula billing." ,
+    medicaidNote: "Yes — California covers doula services through Medi-Cal. Since January 2023, you can receive up to ~$1,587 in doula coverage including prenatal, birth, and postpartum visits. Oakland's community health centers have been early adopters of Medi-Cal doula billing." ,
     insuranceNote: "If you have private insurance, many Alameda County employers include doula benefits — especially tech, university, and public-sector plans. Alameda County also has a Perinatal Equity Initiative funding additional support for Black families." ,
     faqs: [
       { q: "How much does a doula cost in Oakland?" , a: "Oakland doula packages typically range from $1,200 to $3,200. Oakland has a deeply connected birth-justice community, and many doulas offer sliding-scale, community-rate, or Medi-Cal spots — don't let sticker shock stop you from reaching out." },
@@ -2285,7 +2285,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "No birth centers in Bakersfield" , paragraph: "There are currently no freestanding birth centers operating in Bakersfield. Some families choose home birth with a licensed midwife — the closest birth center options are a significant drive away in the LA or Bay areas." }
     ],
-    medicaidNote: "California covers doula services through Medi-Cal — since January 2023, you can receive up to ~$1,587 in doula coverage. Bakersfield has a large Medi-Cal population, making this coverage especially impactful for local families." ,
+    medicaidNote: "Yes \u2014 California covers doula services through Medi-Cal. Since January 2023, you can receive up to ~$1,587 in doula coverage including prenatal, birth, and postpartum visits. Bakersfield has a large Medi-Cal population, making this coverage especially impactful for local families." ,
     insuranceNote: "Medi-Cal is the primary insurer for many Bakersfield families, and doula coverage is now available without prior authorization. For privately insured families, check your plan — Kern County employer plans through Kaiser, Blue Shield, and Health Net may include doula benefits." ,
     faqs: [
       { q: "How much does a doula cost in Bakersfield?" , a: "In Bakersfield, a birth doula typically costs $900–$2,200 — lower than coastal cities but still an investment. Many local doulas offer payment plans, and Medi-Cal coverage at ~$1,587 can cover the full cost of care." },
@@ -2295,7 +2295,14 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in Bakersfield?" , a: "Yes — Kern Medical and Bakersfield Memorial both allow doulas as part of your birth team. Call the maternity unit ahead of time to confirm their current policy." },
       { q: "What postpartum resources are available in Bakersfield?" , a: "Bakersfield offers the Kern County Black Infant Health Program, lactation support through Kern Medical's WIC office, postpartum support groups at Adventist Health Bakersfield, and the Comprehensive Perinatal Services Program (CPSP) at local community health centers." }
     ],
-    nearbyCities: ["fresno-ca" , "los-angeles-ca" , "san-diego-ca"]},
+    nearbyCities: ["fresno-ca" , "los-angeles-ca" , "san-diego-ca"],
+    midwifeInfo: {
+      paragraph: "California licenses Certified Nurse-Midwives (CNMs) through the Board of Registered Nursing and Licensed Midwives (LMs) through the Medical Board of California. In Bakersfield, CNMs practice at Kern Medical, while Licensed Midwives serve the home birth community throughout Kern County. The Central Valley has a growing midwifery presence, with several LMs attending home births for families seeking out-of-hospital care." ,
+      credentialTypes: " and LMs" ,
+      credentialDetail: "In California, Certified Nurse-Midwives (CNMs) are licensed by the Board of Registered Nursing and practice in hospital settings, while Licensed Midwives (LMs) are licensed by the Medical Board to attend out-of-hospital births. Bakersfield families have access to both pathways, with CNMs at Kern Medical and a small but dedicated community of Licensed Midwives serving home birth families in Kern County."
+    },
+    lat: 35.3733,
+    lng: -119.0187},
   "stockton-ca": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
