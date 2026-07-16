@@ -2129,6 +2129,8 @@ export const cities: Record<string, CityData> = {
     city: "San Jose" ,
     state: "CA" ,
     slug: "san-jose-ca" ,
+    lat: 37.3382,
+    lng: -121.8863,
     costLow: 1000,
     costHigh: 3750,
     shelbiServesHere: false,
@@ -2157,7 +2159,7 @@ export const cities: Record<string, CityData> = {
     thumbnail: ""
   }
     ],
-    medicaidNote: "Yes — California covers doula services through Medi-Cal — since January 2023, you can receive up to ~$1,587 in doula coverage including prenatal, birth, and postpartum visits. Ask your Medi-Cal managed care plan how to get started." ,
+    medicaidNote: "Yes \u2014 California covers doula services through Medi-Cal \u2014 since January 2023, you can receive up to ~$1,587 in doula coverage including prenatal, birth, and postpartum visits. Ask your Medi-Cal managed care plan how to get started." ,
     insuranceNote: "If you have insurance through a Silicon Valley employer, check whether your plan includes doula benefits — many large tech-company plans now do. Medi-Cal doula coverage requires no prior authorization." ,
     faqs: [
       { q: "How much does a doula cost in San Jose?" , a: "San Jose doula services typically run $1,500–$3,000. Costs vary based on experience and package scope — many doulas in this area offer payment plans or sliding-scale options, so don't hesitate to ask." },
@@ -2167,6 +2169,10 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in San Jose?" , a: "Absolutely — Good Samaritan, Regional Medical Center, and Kaiser San Jose all allow doulas as support persons. Call ahead to your hospital's maternity triage to confirm current policies." },
       { q: "What postpartum resources are available in San Jose?" , a: "San Jose has solid postpartum support: lactation consultants at Santa Clara Valley Medical Center, postpartum groups through the YWCA Golden Gate Silicon Valley, Vietnamese postpartum meal services in East San Jose, and Santa Clara County's Perinatal Equity Initiative for Black moms." }
     ],
+    midwifeInfo: {
+      paragraph: "California licenses Certified Nurse-Midwives (CNMs) through the Board of Registered Nursing and Licensed Midwives (LMs) through the Medical Board of California. This means both hospital-based and out-of-hospital midwifery care are legally regulated and accessible in San Jose. Good Samaritan and Regional Medical Center have CNM-attended births, and several LMs serve the South Bay for home birth. If you are planning a home birth in San Jose, your midwife operates under a state-issued license." ,
+      credentialTypes: " and LMs" ,
+    },
     nearbyCities: ["san-francisco-ca" , "oakland-ca" , "sacramento-ca"]},
   "long-beach-ca": {
     enableBlogResources: true,
