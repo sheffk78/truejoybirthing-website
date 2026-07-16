@@ -1728,9 +1728,13 @@ function run(): void {
       // Filter out data: URIs and favicon/logo SVGs
       const contentImgs = imgSrcs.filter(s => !s.startsWith('data:') && !s.endsWith('.svg') && !s.includes('favicon'));
       const unoptimized = contentImgs.filter(s => {
+        // Skip external URLs (YouTube thumbnails, third-party CDNs) — not under our control
+        if (s.startsWith('http') && !s.startsWith('https://truejoybirthing.com')) {
+          return false;
+        }
         if (/\.(png|jpg|jpeg|gif|bmp)(\?|$)/i.test(s)) {
           // Only flag if the file is over 50KB (small PNGs like badges are fine)
-          const localPath = path.join(PROJECT_DIR, 'public', s.replace(/^\//, ''));
+          const localPath = path.join(PROJECT_DIR, 'public', s.replace(/^https?:\/\/[^/]+/, '').replace(/^\//, ''));
           if (fs.existsSync(localPath)) {
             return fs.statSync(localPath).size > 50 * 1024;
           }
