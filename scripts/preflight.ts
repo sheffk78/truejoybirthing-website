@@ -1214,6 +1214,7 @@ function run(): void {
         'providence-ri': 191000, 'hartford-ct': 119000, 'new-haven-ct': 136000,
         'springfield-il': 113000, 'charleston-sc': 155000, 'greenville-sc': 72000,
         'augusta-ga': 202000, 'savannah-ga': 149000, 'columbia-md': 105000,
+        'laurel-md': 30000,
         'st-augustine-fl': 15000, 'port-st-lucie-fl': 218000,
         'gainesville-fl': 141000, 'meridian-id': 120000, 'lehi-ut': 75000,
         'wichita-falls-tx': 102000,
