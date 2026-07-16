@@ -2136,7 +2136,7 @@ export const cities: Record<string, CityData> = {
     shelbiServesHere: false,
     heroImage: "/images/san-jose-ca-birth-doula-hero-v4.webp",
     ogImage: "/images/og-city-san-jose-ca-v4.webp",
-    supportSceneImage: "/images/san-jose-ca-birth-doula-support-v2.webp",
+    supportSceneImage: "/images/san-jose-ca-birth-doula-support.webp",
     supportSceneAlt: "San Jose doula providing hands-on support during pregnancy",
     localDoulas: [
       { name: "Himala Doula Services" , credential: "Birth Doula" , practice: "Himala Doula Services" , url: "https://himaladoulaservices.com/" , photo: "/images/provider-san-jose-ca-sheryll-randazzo.webp", description: "Sheryll Randazzo offers personalized birth and postpartum doula services throughout San Jose and the South Bay. Her practice emphasizes evidence-based care with cultural sensitivity.", costRange: "$1,000-$2,500", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Placenta Encapsulation"], serviceArea: ["San Jose, CA" , "Santa Clara, CA" , "Sunnyvale, CA"] },
