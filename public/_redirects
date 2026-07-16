@@ -161,8 +161,6 @@
 # had their own city page entries, causing 404s.
 # ════════════════════════════════════════════════════════════
 
-/birth-support/denver-co /birth-support/co/ 301
-/birth-support/denver-co/ /birth-support/co/ 301
 /birth-support/jacksonville-fl /birth-support/fl/ 301
 /birth-support/jacksonville-fl/ /birth-support/fl/ 301
 /birth-support/tampa-fl /birth-support/fl/ 301

@@ -16,6 +16,31 @@ export interface CityVideoEmbed {
 }
 
 export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
+  "denver-co": {
+    videoId: "lInVRtpi5Fw",
+    title: "Denver Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — 4 hospitals, 2 birth centers, doulas, midwives, costs, and Colorado Medicaid, all in under 7 minutes.",
+    duration: "PT6M11S",
+    uploadDate: "2026-07-15T00:00:00-06:00",
+    chapters: [
+      [0, "Welcome to Denver"],
+      [10, "What This Video Covers"],
+      [31, "UCHealth University of Colorado Hospital"],
+      [61, "HCA HealthONE Rose Medical Center"],
+      [87, "HCA HealthONE Presbyterian St. Luke's"],
+      [113, "Denver Health Medical Center"],
+      [141, "Colorado Birth & Wellness"],
+      [167, "Birth Center of Denver"],
+      [190, "Sonja Spitzer — Embrace Birth Services"],
+      [213, "Meadowsweet Midwifery"],
+      [237, "Sena Johnson — Birth Choice Association"],
+      [257, "Krystal — Doulas of Denver"],
+      [280, "The True Joy Birthing App"],
+      [303, "Cost Reality ($1K-$3.5K)"],
+      [322, "Colorado Medicaid Covers Doulas"],
+      [348, "Your Next Step"],
+    ],
+  },
   "aurora-co": {
     videoId: "Kksgztfkn1I",
     title: "Aurora Doula & Birth Plan Guide",
@@ -394,13 +419,6 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 4 minutes.",
     duration: "PT3M59S",
     uploadDate: "2026-07-09T00:00:00-05:00",
-},
-"aurora-co": {
-    videoId: "CEbAcPaEOqE",
-    title: "Aurora CO Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Colorado Medicaid, all in under 3 minutes.",
-    duration: "PT3M3S",
-    uploadDate: "2026-07-09T00:00:00-06:00",
 },
 "bakersfield-ca": {
     videoId: "f4-7jr-nXQw",

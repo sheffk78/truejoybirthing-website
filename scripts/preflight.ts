@@ -2082,6 +2082,76 @@ function run(): void {
     results.push({ gate: 'G57', status: 'SKIP', detail: 'Skipping provider photo check in audit mode (run with slug)' });
   }
 
+  // ── G58: Hero image has no black bars / letterboxing ──
+  if (targetSlug) {
+    try {
+      const cityBlock = execSync(
+        `python3 scripts/extract-city-block.py ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+      const heroMatch = cityBlock.match(/heroImage:\s*"([^"]+)"/);
+      if (heroMatch && heroMatch[1]) {
+        const heroPath = heroMatch[1].replace(/^\//, ''); // strip leading / for join
+        const heroFile = path.join(PROJECT_DIR, 'public', heroPath);
+        if (fs.existsSync(heroFile)) {
+          const colorResult = execSync(
+            `python3 -c "from PIL import Image; import numpy as np; img=Image.open('${heroFile}').convert('RGB'); arr=np.array(img); top=arr[0:5,:,:].mean(); bot=arr[-5:,:,:].mean(); print(f'{top:.1f},{bot:.1f}')"`,
+            { encoding: 'utf-8', timeout: 10000 }
+          ).trim();
+          const [topMean, botMean] = colorResult.split(',').map(Number);
+          if (topMean < 10 && botMean < 10) {
+            results.push({ gate: 'G58', status: 'FAIL', detail: `Hero image has black bars (top=${topMean.toFixed(1)}, bottom=${botMean.toFixed(1)}). Crop the letterboxing out — never deploy a hero with black bars.` });
+          } else if (topMean < 10 || botMean < 10) {
+            results.push({ gate: 'G58', status: 'FAIL', detail: `Hero image has black bar on one edge (top=${topMean.toFixed(1)}, bottom=${botMean.toFixed(1)}). Crop the letterboxing out.` });
+          } else {
+            results.push({ gate: 'G58', status: 'PASS', detail: `Hero image has no black bars (top=${topMean.toFixed(1)}, bottom=${botMean.toFixed(1)})` });
+          }
+        } else {
+          results.push({ gate: 'G58', status: 'SKIP', detail: 'Hero image file not found on disk' });
+        }
+      } else {
+        results.push({ gate: 'G58', status: 'SKIP', detail: 'No heroImage field found' });
+      }
+    } catch {
+      results.push({ gate: 'G58', status: 'SKIP', detail: 'Could not check hero for black bars' });
+    }
+  } else {
+    results.push({ gate: 'G58', status: 'SKIP', detail: 'Skipping hero black bar check in audit mode (run with slug)' });
+  }
+
+  // ── G59: Hospital entries have website URLs ──
+  if (targetSlug) {
+    try {
+      const cityBlock = execSync(
+        `python3 scripts/extract-city-block.py ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+      const hospitalSectionMatch = cityBlock.match(/hospitalDetails:\s*\[([\s\S]*?)\]\s*,/);
+      if (hospitalSectionMatch) {
+        const hospitalEntries = hospitalSectionMatch[1].split(/(?=\{)/).filter((s: string) => s.trim().startsWith('{'));
+        const missingUrl: string[] = [];
+        for (const entry of hospitalEntries) {
+          const nameMatch = entry.match(/name:\s*"([^"]+)"/);
+          const hasUrl = /url:\s*"[^"]+"/.test(entry);
+          if (nameMatch && !hasUrl) {
+            missingUrl.push(nameMatch[1]);
+          }
+        }
+        if (missingUrl.length > 0) {
+          results.push({ gate: 'G59', status: 'FAIL', detail: `${missingUrl.length} hospital(s) missing website URL: ${missingUrl.join(', ')}. Add url field so hospital cards link out.` });
+        } else {
+          results.push({ gate: 'G59', status: 'PASS', detail: `All hospitals have website URLs` });
+        }
+      } else {
+        results.push({ gate: 'G59', status: 'SKIP', detail: 'No hospitalDetails found' });
+      }
+    } catch {
+      results.push({ gate: 'G59', status: 'SKIP', detail: 'Could not check hospital URLs' });
+    }
+  } else {
+    results.push({ gate: 'G59', status: 'SKIP', detail: 'Skipping hospital URL check in audit mode (run with slug)' });
+  }
+
   // ── Print summary ───
   console.log('\n─── RESULTS ───\n');
 
