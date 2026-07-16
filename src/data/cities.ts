@@ -2134,8 +2134,8 @@ export const cities: Record<string, CityData> = {
     costLow: 1000,
     costHigh: 3750,
     shelbiServesHere: false,
-    heroImage: "/images/san-jose-ca-birth-doula-hero-v2.webp",
-    ogImage: "/images/og-city-san-jose-ca-v2.webp",
+    heroImage: "/images/san-jose-ca-birth-doula-hero-v3.webp",
+    ogImage: "/images/og-city-san-jose-ca-v3.webp",
     supportSceneImage: "/images/san-jose-ca-birth-doula-support.webp",
     supportSceneAlt: "San Jose doula providing hands-on support during pregnancy",
     localDoulas: [
