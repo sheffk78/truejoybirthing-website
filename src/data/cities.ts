@@ -2021,7 +2021,7 @@ export const cities: Record<string, CityData> = {
     city: "Providence" ,
     state: "RI" ,
     slug: "providence-ri" ,
-    supportSceneImage: "/images/providence-ri-birth-doula-support.webp",
+    supportSceneImage: "/images/providence-ri-birth-doula-support-v2.webp",
     supportSceneAlt: "A pregnant woman walking along the waterfront at India Point Park in Providence, Rhode Island — New England fall foliage and Narragansett Bay",
     costLow: 800,
     costHigh: 1800,
