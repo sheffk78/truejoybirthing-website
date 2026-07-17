@@ -474,7 +474,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-07-14T12:00:00-06:00",
   },
   // gaithersburg-md video removed: gradient-only opening, missing hero image. Needs re-render.
-  // fort-collins-co video removed: gradient-only opening, missing hero image. Needs re-render.
+"fort-collins-co": {
+    videoId: "l_sFXlps57E",
+    title: "Fort Collins CO Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT4M49S",
+    uploadDate: "2026-07-17T13:15:00-06:00",
+  },
 "new-haven-ct": {
     videoId: "QpbP7UBRGo4",
     title: "New Haven CT Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
