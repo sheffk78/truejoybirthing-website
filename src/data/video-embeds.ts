@@ -108,10 +108,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
   // san-bernardino-ca video removed: Denver text bug + state abbreviation. Needs re-render.
   "beaumont-tx": {
-    videoId: "d00dB_QS0i8",
+    videoId: "hyIFsQbpmxQ",
     title: "Beaumont TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 6 minutes.",
-    duration: "PT5M08S",
+    description: "Watch the full city guide — 6 doulas and midwives, 2 hospitals, 1 birth center, costs, and Texas Medicaid (SB 750 covers doula care), all in about 5 minutes.",
+    duration: "PT5M27S",
     uploadDate: "2026-07-17T00:00:00-06:00",
   },
   "waco-tx": {
