@@ -214,7 +214,27 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M56S",
     uploadDate: "2026-06-28T00:00:00-07:00",
   },
-  // los-angeles-ca video removed: Denver text bug. Needs re-render.
+  "los-angeles-ca": {
+    videoId: "kbXdVRC_Z04",
+    title: "Los Angeles Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — 3 hospitals, 2 birth centers, 8 doulas, costs, and California Medi-Cal, all in under 4 minutes.",
+    duration: "PT3M51S",
+    uploadDate: "2026-07-17T13:00:00-07:00",
+    chapters: [
+      [0, "Welcome to Los Angeles"],
+      [12, "What This Video Covers"],
+      [30, "Cedars-Sinai Medical Center"],
+      [37, "UCLA Ronald Reagan Medical Center"],
+      [49, "Kaiser Permanente West LA"],
+      [61, "Moxie Birth Center"],
+      [80, "Pure Births Birth Center"],
+      [98, "Doulas & Midwives in Los Angeles"],
+      [139, "The True Joy Birthing App"],
+      [159, "Cost Reality ($1,800–$5,500)"],
+      [183, "Insurance & California Medi-Cal"],
+      [217, "Your Next Step"],
+    ],
+  },
   "philadelphia-pa": {
     videoId: "LyYRGCPhNi0",
     title: "Philadelphia Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
