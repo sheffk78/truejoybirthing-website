@@ -1110,7 +1110,7 @@ export const cities: Record<string, CityData> = {
     costLow: 1000,
     costHigh: 3000,
     shelbiServesHere: false,
-    heroImage: "/images/fresno-ca-birth-doula-skyline-v2.webp",
+    heroImage: "/images/fresno-ca-birth-doula-hero-v2.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-fresno-ca.webp",
     supportSceneImage: "/images/fresno-ca-birth-doula-support.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Fresno: California birth support and doula care",

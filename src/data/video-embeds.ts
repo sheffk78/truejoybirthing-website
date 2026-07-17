@@ -69,13 +69,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M57S",
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
-  "fresno-ca": {
-    videoId: "A-yB39S7RPc",
-    title: "Fresno Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 4 minutes.",
-    duration: "PT3M26S",
-    uploadDate: "2026-07-13T00:00:00-06:00",
-  },
+  // fresno-ca video removed: video is stale (3 providers, page now has 7). Needs re-record.
   "vancouver-wa": {
     videoId: "z4YlQEkJzRo",
     title: "Vancouver WA Doula & Birth Plan Guide",
