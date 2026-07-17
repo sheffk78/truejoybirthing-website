@@ -106,19 +106,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M42S",
     uploadDate: "2026-06-19T00:00:00-06:00",
   },
-  "san-bernardino-ca": {
-    videoId: "sTii3z6iJh4",
-    title: "San Bernardino CA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal doula coverage, all in under 3 minutes.",
-    duration: "PT2M27S",
-    uploadDate: "2026-06-17T00:00:00-06:00",
-  },
+  // san-bernardino-ca video removed: Denver text bug + state abbreviation. Needs re-render.
   "beaumont-tx": {
-    videoId: "8Rqz37nFy6w",
+    videoId: "d00dB_QS0i8",
     title: "Beaumont TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 4 minutes.",
-    duration: "PT3M09S",
-    uploadDate: "2026-06-17T00:00:00-06:00",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 6 minutes.",
+    duration: "PT5M08S",
+    uploadDate: "2026-07-17T00:00:00-06:00",
   },
   "waco-tx": {
     videoId: "HokaLZ_mHxw",
@@ -127,13 +121,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M12S",
     uploadDate: "2026-06-17T00:00:00-06:00",
   },
-  "mckinney-tx": {
-    videoId: "o_up6jyMcLU",
-    title: "McKinney TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in about 3 minutes.",
-    duration: "PT3M1S",
-    uploadDate: "2026-06-20T00:00:00-06:00",
-  },
+  // mckinney-tx video removed: gradient-only opening, missing hero image. Needs re-render.
   "conroe-tx": {
     videoId: "R24nme59zGw",
     title: "Conroe TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -169,13 +157,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M07S",
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
-  "henderson-nv": {
-    videoId: "JUeHxUiIg14",
-    title: "Henderson NV Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Nevada Medicaid, all in under 5 minutes.",
-    duration: "PT4M11S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
-  },
+  // henderson-nv video removed: gradient-only opening, missing hero image. Needs re-render.
   "minneapolis-mn": {
     videoId: "vbf80zB_5aU",
     title: "Minneapolis Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -232,13 +214,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M56S",
     uploadDate: "2026-06-28T00:00:00-07:00",
   },
-  "los-angeles-ca": {
-    videoId: "zaX5gteUk6k",
-    title: "Los Angeles Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 4 minutes.",
-    duration: "PT3M51S",
-    uploadDate: "2026-06-28T00:00:00-07:00",
-  },
+  // los-angeles-ca video removed: Denver text bug. Needs re-render.
   "philadelphia-pa": {
     videoId: "LyYRGCPhNi0",
     title: "Philadelphia Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -433,13 +409,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT5M22S",
     uploadDate: "2026-07-13T20:40:00Z",
 },
-"hartford-ct": {
-    videoId: "04qCKKTB9wA",
-    title: "Hartford CT Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Connecticut Medicaid (HUSKY Health), all in under 5 minutes.",
-    duration: "PT4M09S",
-    uploadDate: "2026-07-13T16:10:00Z",
-},
+  // hartford-ct video removed: gradient-only opening, missing hero image. Needs re-render.
     "stamford-ct": {
         videoId: "GA4DJeZZ8cM",
         title: "Stamford CT Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -483,20 +453,8 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT4M44S",
     uploadDate: "2026-07-14T12:00:00-06:00",
   },
-  "gaithersburg-md": {
-    videoId: "U4hsVHrz3Nc",
-    title: "Gaithersburg MD Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Maryland Medicaid, all in under 6 minutes.",
-    duration: "PT5M47S",
-    uploadDate: "2026-07-14T13:00:00-06:00",
-  },
-  "fort-collins-co": {
-    videoId: "wtlSlj_oaJg",
-    title: "Fort Collins Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
-    duration: "PT3M54S",
-    uploadDate: "2026-07-14T13:30:00-06:00",
-  },
+  // gaithersburg-md video removed: gradient-only opening, missing hero image. Needs re-render.
+  // fort-collins-co video removed: gradient-only opening, missing hero image. Needs re-render.
 "new-haven-ct": {
     videoId: "QpbP7UBRGo4",
     title: "New Haven CT Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",

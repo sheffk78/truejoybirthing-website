@@ -1874,10 +1874,11 @@ function run(): void {
           const scrollProviders = scrollCountMatch ? parseInt(scrollCountMatch[1], 10) : scrollProviderCount;
           const sceneProviderCount = scrollProviders + portraitProviderCount;
           
-          // Count providers in cities.ts (doula or midwife entries in provider array)
-          // Provider entries have `name: "..."` followed by credential/practice fields
-          // Count entries that have credential field with doula/midwife, or isMidwife field
-          const providerEntries = cityBlock.match(/{\s*name:\s*"[^"]+"[^}]*?(credential|isMidwife)/g) || [];
+          // Count providers in cities.ts — ONLY within localDoulas array, not birthCenterDetails
+          // (birth centers also have a `credential` field like "CNM-led" which must NOT be counted as a doula)
+          const localDoulasMatch = cityBlock.match(/localDoulas:\s*\[([\s\S]*?)\]\s*,\s*(?:hospitalDetails|culture|medicaidNote|insuranceNote|faqs|nearbyCities|heroLocalDetail|supportScene)/);
+          const doulasBlock = localDoulasMatch ? localDoulasMatch[1] : cityBlock;
+          const providerEntries = doulasBlock.match(/{\s*name:\s*"[^"]+"[^}]*?(credential|isMidwife)/g) || [];
           const pageProviderCount = providerEntries.length;
           
           // Count hospitals (individual hospital card scenes)
