@@ -1166,7 +1166,7 @@ export const cities: Record<string, CityData> = {
     costHigh: 5500,
     heroImage: "/images/los-angeles-ca-birth-doula-skyline-v3.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-los-angeles-ca-v3.webp",
-    supportSceneImage: "/images/los-angeles-ca-birth-doula-support.webp",
+    supportSceneImage: "/images/los-angeles-ca-birth-doula-support-v2.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Los Angeles: California birth support and doula care",
     shelbiServesHere: false,
     lat: 34.0522,
