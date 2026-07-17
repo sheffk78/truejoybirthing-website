@@ -523,10 +523,12 @@ export const cities: Record<string, CityData> = {
     city: "Fort Collins" ,
     state: "CO" ,
     slug: "fort-collins-co" ,
+    lat: 40.5853,
+    lng: -105.0844,
     costLow: 1400,
     costHigh: 4000,
     shelbiServesHere: false,
-    heroImage: "/images/fort-collins-co-birth-doula-hero-v2.webp",
+    heroImage: "/images/fort-collins-co-birth-doula-hero-v3.webp",
     supportSceneImage: "/images/fort-collins-co-birth-doula-support.webp" ,
     supportSceneAlt: "A doula supporting a pregnant woman during labor in Fort Collins, Colorado" ,
     ogImage: "https://truejoybirthing.com/images/og-city-fort-collins-co-v2.webp" ,
@@ -542,13 +544,13 @@ export const cities: Record<string, CityData> = {
     culture: "Fort Collins has a vibrant, progressive birth community shaped by its outdoorsy, wellness-oriented culture and proximity to Colorado State University. The city supports a strong network of doulas, lactation consultants, and midwives, with many families choosing birth center or home birth options alongside hospital delivery. Colorado's Medicaid doula coverage makes this one of the more affordable cities for supported birth." ,
     heroLocalDetail: "Most Fort Collins births happen at UCHealth Poudre Valley Hospital on Lemay Avenue or Banner Health's North Colorado Medical Center in Greeley about 15 minutes south via US-287. Families in Old Town and the west side have quick access to PVH, while those in the southeastern Harmony Road corridor may find the drive to Greeley equally convenient." ,
     hospitalDetails: [
-      { name: "UCHealth Poudre Valley Hospital" , thumbnail: "/images/uchealth-poudre-valley-fort-collins.webp", address: "1024 S. Lemay Avenue, Fort Collins, CO 80524", nicuLevel: "III", doulaPolicy: "Doulas welcome", medicaid: "Yes", paragraph: "UCHealth Poudre Valley Hospital is Fort Collins' primary birth hospital, featuring a Level III NICU and delivering over 2,500 babies annually. It offers spacious labor and delivery suites, midwifery integration, and a family-centered approach with 24/7 neonatology coverage. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to organize your preferences for PVH." },
-      { name: "Banner North Colorado Medical Center (Greeley)" , thumbnail: "/images/banner-ncmc-greeley.webp", address: "1801 16th St., Greeley, CO 80631", nicuLevel: "III", doulaPolicy: "Doulas welcome", medicaid: "Yes", paragraph: "Located about 15 miles southeast in Greeley, Banner NCMC has a Level III NICU and serves as a secondary option for Fort Collins-area families, particularly those in the southeast part of the city. It provides full OB services and maternal-fetal medicine referrals." }
+      { name: "UCHealth Poudre Valley Hospital" , thumbnail: "/images/uchealth-poudre-valley-fort-collins.webp", address: "1024 S. Lemay Avenue, Fort Collins, CO 80524", url: "https://www.uchealth.org/locations/uchealth-poudre-valley-hospital/", nicuLevel: "III", doulaPolicy: "Doulas welcome", medicaid: "Yes", paragraph: "UCHealth Poudre Valley Hospital is Fort Collins' primary birth hospital, featuring a Level III NICU and delivering over 2,500 babies annually. It offers spacious labor and delivery suites, midwifery integration, and a family-centered approach with 24/7 neonatology coverage. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to organize your preferences for PVH." },
+      { name: "Banner North Colorado Medical Center (Greeley)" , thumbnail: "/images/banner-ncmc-greeley.webp", address: "1801 16th St., Greeley, CO 80631", url: "https://www.bannerhealth.com/locations/greeley/north-colorado-medical-center", nicuLevel: "III", doulaPolicy: "Doulas welcome", medicaid: "Yes", paragraph: "Located about 15 miles southeast in Greeley, Banner North Colorado Medical Center has a Level III NICU and serves as a secondary option for Fort Collins-area families, particularly those in the southeastern Harmony Road corridor. The hospital provides full obstetric services, maternal-fetal medicine referrals, and a dedicated labor and delivery unit with private rooms. Banner NCMC also offers lactation consulting and a Level II nursery for babies needing extra support after birth." }
     ],
     birthCenterDetails: [
       { name: "Avalon Birth & Wellness Center" , thumbnail: "/images/avalon-birth-wellness-fort-collins.webp", paragraph: "Avalon Birth & Wellness Center in Fort Collins operates as a freestanding birth center offering out-of-hospital birth in a home-like setting with certified nurse-midwives. It is one of the few birth centers in northern Colorado and serves families from Fort Collins, Loveland, and the surrounding region." }
     ],
-    medicaidNote: "Colorado Health First (Medicaid) covers doula services under HB 23-1027, effective January 2024. Colorado Medicaid reimburses doulas up to $750 per pregnancy ($150 prenatal, $150 labor/delivery, $150 postpartum, plus $300 in extended postpartum visits). Doulas must register with the state as Medicaid providers." ,
+    medicaidNote: "Yes — Colorado Health First (Medicaid) covers doula services under HB 23-1027, effective January 2024. Colorado Medicaid reimburses doulas up to $750 per pregnancy ($150 prenatal, $150 labor/delivery, $150 postpartum, plus $300 in extended postpartum visits). Doulas must register with the state as Medicaid providers." ,
     insuranceNote: "Colorado is one of the few states where both Medicaid and some commercial insurers cover doula services. Colorado law also requires coverage for licensed midwife services at birth centers. Check your specific plan for doula and birth center benefits." ,
     faqs: [
       { q: "Does Fort Collins have a freestanding birth center?" , a: "Yes. Avalon Birth & Wellness Center operates as a freestanding birth center in Fort Collins, offering midwife-led births outside the hospital setting. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." },
