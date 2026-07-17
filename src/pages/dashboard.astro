@@ -486,7 +486,7 @@ const stages = Object.keys(stageLabels);
     </div>
 
     <div class="footer">
-      Click a city name to copy a pipeline prompt you can paste back to Kit. Click "view" to open the live page. Dashboard regenerates on each deploy.
+      Click a city name to copy a pipeline prompt you can paste back to Kit. The prompt references the new pipeline structure (tjb-pipeline-dag → tjb-pipeline-rules → tjb-city-orchestrator). Click "view" to open the live page. Dashboard regenerates on each deploy.
     </div>
   </div>
 
@@ -722,23 +722,23 @@ const stages = Object.keys(stageLabels);
       if (!city) return;
 
       const stageLabels = {
-        hero: 'hero image',
-        og: 'OG image',
-        support: 'support scene image',
-        hospitals: 'hospital enrichment (paragraphs, thumbnails, URLs)',
-        doulas: 'doula/provider enrichment (photos, cost ranges, descriptions)',
-        video: 'video embed',
-        outreach: 'outreach',
+        hero: 'hero image (R9-R11: pregnant silhouette, 3:2, reused across OG/YT/video)',
+        og: 'OG image (R9, R14: derived from hero, correct logo)',
+        support: 'support scene image (R12: one pregnant woman + professional, 4:3, vision-verified)',
+        hospitals: 'hospital enrichment (R18: 300+ char descriptions, R20: clean NICU labels, R19: population-scaled counts)',
+        doulas: 'doula/provider enrichment (R13: photo sourcing headshot-logo-initials, R17: best-guess pricing never Contact-for-pricing, R21: specific credentials)',
+        video: 'video embed (R31-R32: must reflect final page state, re-render if data changed)',
+        outreach: 'outreach (R4: always last after deploy, R5: re-outreach after page updates)',
       };
 
       const failing = Object.keys(stageLabels).filter(s => !city[s]);
       let prompt;
       if (failing.length === 0) {
-        prompt = `Probe ${slug} — run preflight to verify all gates pass, then confirm the live page matches the repo. If any gates fail, fix the root cause.`;
+        prompt = `Probe ${slug} — run preflight to verify all gates pass, then confirm the live page matches the repo. If any gates fail, fix the root cause. Load tjb-pipeline-rules for all standards.`;
       } else if (failing.length >= 5) {
-        prompt = `Run the full tjb-city-pipeline on ${slug} — probe current state, then execute all stages through outreach. Failing: ${failing.map(s => stageLabels[s]).join(', ')}.`;
+        prompt = `Work on ${slug} — load tjb-pipeline-dag first, then tjb-pipeline-rules. Probe current state with tjb-city-orchestrator, then execute all 4 stages through outreach. Failing: ${failing.map(s => stageLabels[s]).join('; ')}.`;
       } else {
-        prompt = `Fix ${slug} — probe current state, then complete only the failing stages: ${failing.map(s => stageLabels[s]).join(', ')}. Do not re-run stages that are already passing.`;
+        prompt = `Work on ${slug} — load tjb-pipeline-dag first, then tjb-pipeline-rules. Probe current state, then complete only the failing stages: ${failing.map(s => stageLabels[s]).join('; ')}. Do not re-run stages that are already passing.`;
       }
       navigator.clipboard.writeText(prompt).then(function() {
         e.target.classList.add('copied');
