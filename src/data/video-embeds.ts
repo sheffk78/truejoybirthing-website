@@ -69,7 +69,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M57S",
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
-  // fresno-ca video removed: video is stale (3 providers, page now has 7). Needs re-record.
+  "fresno-ca": {
+    videoId: "0uLCgRQFCrw",
+    title: "Fresno Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — 7 doulas, 3 hospitals, costs, and California Medi-Cal, all in under 4 minutes.",
+    duration: "PT3M35S",
+    uploadDate: "2026-07-17T00:00:00-06:00",
+  },
   "vancouver-wa": {
     videoId: "z4YlQEkJzRo",
     title: "Vancouver WA Doula & Birth Plan Guide",
@@ -142,13 +148,6 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT4M23S",
     uploadDate: "2026-06-22T00:00:00-07:00",
   },
-  "san-diego-ca": {
-    videoId: "OKHWMCLZ8gw",
-    title: "San Diego Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 3 minutes.",
-    duration: "PT2M07S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
-  },
   "san-francisco-ca": {
     videoId: "ucjWrh5iuMs",
     title: "San Francisco Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -183,13 +182,6 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     description: "Watch the full city guide — doulas, hospitals, costs, and Minnesota Medicaid, all in under 3 minutes.",
     duration: "PT2M10S",
     uploadDate: "2026-07-09T00:00:00-05:00",
-  },
-  "new-york-ny": {
-    videoId: "d8wNiNe1VCc",
-    title: "New York City Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and New York Medicaid, all in under 3 minutes.",
-    duration: "PT2M14S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
   },
   "pittsburgh-pa": {
     videoId: "LFJ6qqvzaGc",
@@ -268,13 +260,6 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M56S",
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
-  "chicago-il": {
-    videoId: "armlysjMqo8",
-    title: "Chicago Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Illinois Medicaid, all in under 3 minutes.",
-    duration: "PT2M07S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
-  },
   "phoenix-az": {
     videoId: "IOXkcp8JMP4",
     title: "Phoenix Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -317,13 +302,6 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     description: "Watch the full city guide — doulas, hospitals, costs, and Florida Medicaid, all in under 5 minutes.",
     duration: "PT4M08S",
     uploadDate: "2026-06-30T00:00:00-06:00",
-},
-"port-st-lucie-fl": {
-    videoId: "qB2LJXWAsFM",
-    title: "Port St. Lucie Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Florida Medicaid, all in under 5 minutes.",
-    duration: "PT5M23S",
-    uploadDate: "2026-07-01T00:00:00-06:00",
 },
 "oakland-ca": {
     videoId: "VvRVfdgx-5Q",

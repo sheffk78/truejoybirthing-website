@@ -865,7 +865,7 @@ function run(): void {
     results.push({ gate: 'G25', status: 'SKIP', detail: 'Skipping hero aspect check in audit mode (run with slug)' });
   }
 
-  // ── G26: Support scene image aspect ratio is 16:9 ──
+  // ── G26: Support scene image aspect ratio is 4:3 ──
   if (targetSlug) {
     try {
       const result = execSync(`python3 scripts/preflight-image-helper.py support-aspect ${targetSlug}`, { cwd: PROJECT_DIR, timeout: 10000 }).toString().trim();
