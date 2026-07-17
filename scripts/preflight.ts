@@ -1149,6 +1149,53 @@ function run(): void {
     results.push({ gate: 'G36', status: 'SKIP', detail: 'Skipping hospital data check in audit mode (run with slug)' });
   }
 
+  // ── G36b: NICU level field should be a clean display label, not contain source citations ──
+  if (targetSlug) {
+    try {
+      const cityBlock = execSync(
+        `python3 scripts/extract-city-block.py ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+      const hospitalMatch = cityBlock.match(/hospitalDetails:\s*\[/);
+      if (hospitalMatch) {
+        const arrStart = cityBlock.indexOf('[', hospitalMatch.index!);
+        let depth = 0;
+        let arrEnd = arrStart;
+        for (let i = arrStart; i < cityBlock.length; i++) {
+          if (cityBlock[i] === '[') depth++;
+          else if (cityBlock[i] === ']') { depth--; if (depth === 0) { arrEnd = i; break; } }
+        }
+        const hospitalBlock = cityBlock.slice(arrStart + 1, arrEnd);
+        const nicuMatches = [...hospitalBlock.matchAll(/nicuLevel:\s*"([^"]+)"/g)];
+        let failCount = 0;
+        for (const m of nicuMatches) {
+          const val = m[1];
+          // Flag if nicuLevel contains parenthetical source citations
+          if (/\(.*stated|\(.*listed|\(.*source|\(.*operated|\(.*confirmed|\(.*verified|\(.*per\b/i.test(val)) {
+            failCount++;
+            results.push({ gate: 'G36b', status: 'FAIL', detail: `nicuLevel "${val}" contains source citation — should be clean label (e.g., "III"). Move sources to paragraph text.` });
+          }
+          // Flag if nicuLevel starts with "Level" (template already prepends it)
+          if (/^\s*Level\s/i.test(val)) {
+            failCount++;
+            results.push({ gate: 'G36b', status: 'FAIL', detail: `nicuLevel "${val}" starts with "Level" — template prepends "Level" automatically. Use just the roman numeral (e.g., "III").` });
+          }
+        }
+        if (failCount === 0 && nicuMatches.length > 0) {
+          results.push({ gate: 'G36b', status: 'PASS', detail: `All ${nicuMatches.length} NICU level fields are clean display labels` });
+        } else if (nicuMatches.length === 0) {
+          results.push({ gate: 'G36b', status: 'SKIP', detail: 'No nicuLevel fields found' });
+        }
+      } else {
+        results.push({ gate: 'G36b', status: 'SKIP', detail: 'No hospitalDetails found' });
+      }
+    } catch {
+      results.push({ gate: 'G36b', status: 'SKIP', detail: 'Could not check NICU level fields' });
+    }
+  } else {
+    results.push({ gate: 'G36b', status: 'SKIP', detail: 'Skipping NICU label check in audit mode' });
+  }
+
   // ── G37: Proportional provider count vs city population ──
   // Ensures major cities have proportionally more doulas/hospitals/birth centers.
   // Birth center minimum is waived if the city block contains an NPI registry
