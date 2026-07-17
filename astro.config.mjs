@@ -39,7 +39,7 @@ for (const [slug, city] of Object.entries(cities)) {
 export default defineConfig({
   output: 'static',
   build: {
-    inlineStylesheets: 'always',
+    inlineStylesheets: 'auto',
   },
   compressHTML: true,
   trailingSlash: 'always',
