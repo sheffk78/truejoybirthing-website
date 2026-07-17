@@ -230,15 +230,23 @@ const heroImage = heroImageSlug || '/images/doula-breastfeeding.webp';
 const heroImage600 = heroImageSlug
   ? heroImageSlug.replace(/\.(webp|jpg|jpeg|png)$/i, '-600.$1')
   : '/images/doula-breastfeeding-600.webp';
-// AVIF versions: try exact match, then without version suffixes (-v2, -v3, -v4, -1200)
-const heroImageAvifBase = heroImageSlug
-  ? heroImageSlug.replace(/\.(webp|jpg|jpeg|png)$/i, '.avif').replace(/(-v\d+|-1200)\.avif$/, '.avif')
-  : '/images/doula-breastfeeding.avif';
-const heroImageAvif600 = heroImageSlug
-  ? heroImageSlug.replace(/\.(webp|jpg|jpeg|png)$/i, '-600.avif').replace(/(-v\d+)-600\.avif$/, '-600.avif')
-  : '/images/doula-breastfeeding-600.avif';
+// AVIF versions: try exact versioned match first, then fall back to non-versioned
 import { existsSync } from 'fs';
 import { join } from 'path';
+const heroAvifExact = heroImageSlug
+  ? heroImageSlug.replace(/\.(webp|jpg|jpeg|png)$/i, '.avif')
+  : '/images/doula-breastfeeding.avif';
+const heroAvifExact600 = heroImageSlug
+  ? heroImageSlug.replace(/\.(webp|jpg|jpeg|png)$/i, '-600.avif')
+  : '/images/doula-breastfeeding-600.avif';
+const heroAvifStripped = heroAvifExact.replace(/(-v\d+|-1200)\.avif$/, '.avif');
+const heroAvifStripped600 = heroAvifExact600.replace(/(-v\d+)-600\.avif$/, '-600.avif');
+const heroImageAvifBase = existsSync(join(process.cwd(), 'public', heroAvifExact))
+  ? heroAvifExact
+  : heroAvifStripped;
+const heroImageAvif600 = existsSync(join(process.cwd(), 'public', heroAvifExact600))
+  ? heroAvifExact600
+  : heroAvifStripped600;
 const heroHasAvif = existsSync(join(process.cwd(), 'public', heroImageAvifBase));
 const heroAlt = `${city} birth doula: costs, Medicaid, and hospital info for ${state} families`;
 const supportImage = supportSceneImage || '/images/doula-support-conversation.webp';

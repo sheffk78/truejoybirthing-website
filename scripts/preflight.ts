@@ -739,7 +739,7 @@ function run(): void {
       const g9Result = execSync(g9Cmd, { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 });
       const supportScene = g9Result.trim();
       if (!supportScene) {
-        results.push({ gate: 'G9', status: 'SKIP', detail: 'No supportSceneImage field found' });
+        results.push({ gate: 'G9', status: 'FAIL', detail: 'No supportSceneImage field found — every enriched city page must have a city-specific support scene image. Generate one and add the field.' });
       } else if (supportScene.includes('doula-walking') || supportScene.includes('generic')) {
         results.push({ gate: 'G9', status: 'FAIL', detail: `Support scene is generic: ${supportScene}. Generate a city-specific scene.` });
       } else {
