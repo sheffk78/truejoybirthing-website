@@ -1,9 +1,9 @@
 ---
-title: "Postpartum Doula Cost: What to Expect"
+title: "Postpartum Doula Cost: $25 to $75/Hour"
 date: "2026-06-11"
 slug: "postpartum-doula-cost"
 author: "Shelbi Kohler"
-description: "Postpartum doula costs vary by location and services. Learn typical pricing, what's included, and how to make postpartum doula support fit your budget."
+description: "Postpartum doulas charge $25 to $75 per hour. See typical rates, overnight costs, and what's included. Plus tips for affording postpartum support."
 canonical: "https://truejoybirthing.com/blog/postpartum-doula-cost/"
 layout: "../../layouts/PostLayout.astro"
 featuredImage: "/images/postpartum-doula.webp"
