@@ -459,7 +459,7 @@ const stages = Object.keys(stageLabels);
         <option value="outreach">Outreach not started</option>
       </select>
       <label>
-        <input type="checkbox" id="hideComplete" />
+        <input type="checkbox" id="hideComplete" checked />
         Hide fully complete (100%)
       </label>
     </div>
@@ -706,8 +706,9 @@ const stages = Object.keys(stageLabels);
   document.getElementById('search').addEventListener('input', render);
   document.getElementById('filterStage').addEventListener('change', render);
   const hideCompleteEl = document.getElementById('hideComplete');
-  if (localStorage.getItem('tjb_hideComplete') === 'true') {
-    hideCompleteEl.checked = true;
+  // Default is checked (HTML attribute). Only override if user previously unchecked it.
+  if (localStorage.getItem('tjb_hideComplete') === 'false') {
+    hideCompleteEl.checked = false;
   }
   hideCompleteEl.addEventListener('change', function() {
     localStorage.setItem('tjb_hideComplete', this.checked);
