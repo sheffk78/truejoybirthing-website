@@ -22,7 +22,7 @@ Most people hear "doula" and picture someone rubbing your back during contractio
 A birth doula provides:
 
 - **Prenatal support** — helping you figure out what you want, practicing comfort techniques, answering questions your doctor doesn't have time for
-- **Labor support** — staying with you from early labor through delivery, offering physical comfort measures and emotional grounding
+- **Labor support** — providing continuous support from early labor through delivery, offering physical comfort measures and emotional grounding
 - **Advocacy** — making sure your voice is heard when you're too focused on contractions to advocate for yourself
 - **Postpartum follow-up** — checking in after birth, helping with feeding questions, processing your birth story
 
@@ -62,7 +62,7 @@ I'm available by phone and text from the moment you think something is happening
 
 ### Active Labor
 
-This is when I join you in person and stay until your baby is born and you're settled. No shift changes. No going home at 5pm. I'm there the whole time.
+This is when I join you in person and provide continuous support until your baby is born and you're settled. No shift changes. No going home at 5pm. I'm dedicated to you throughout.
 
 What I'm doing during active labor:
 

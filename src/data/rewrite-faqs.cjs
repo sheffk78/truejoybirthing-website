@@ -260,10 +260,10 @@ function rewriteBirthCenter(origA, q, ctx) {
       if (!a.endsWith('.')) a += '.';
       a += ' ';
     } else {
-      a += `You can still have a doula by your side in the hospital — that support makes a huge difference no matter where you deliver. `;
+      a += `You can still have a doula supporting you in the hospital — that support makes a huge difference no matter where you deliver. `;
     }
   } else {
-    a += `There aren't any freestanding birth centers in ${city} right now, but you can still have a doula by your side in the hospital — that support makes a huge difference no matter where you deliver. `;
+    a += `There aren't any freestanding birth centers in ${city} right now, but you can still have a doula supporting you in the hospital — that support makes a huge difference no matter where you deliver. `;
   }
 
   a += `<a href="/birth-plan-template/">Grab the free birth plan template</a> and think through what matters most to you — you have more choices than you might think.`;

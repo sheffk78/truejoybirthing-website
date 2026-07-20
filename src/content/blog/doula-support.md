@@ -17,12 +17,12 @@ Let me walk you through what a birth doula actually does, because there's a lot 
 
 ## What a Birth Doula Actually Does
 
-A doula is not a medical provider. I don't check your cervix, monitor the baby's heart rate, or make clinical decisions. That's your doctor or midwife's job. My job is different — I'm there for you, the whole time, no shift changes.
+A doula is not a medical provider. I don't check your cervix, monitor the baby's heart rate, or make clinical decisions. That's your doctor or midwife's job. My job is different — I'm there for you, providing continuous support with no shift changes.
 
 Here's what that looks like in practice:
 
 - **Prenatal visits** — We meet before your due date to talk through your birth preferences, practice comfort techniques, and sort through whatever worries you. We build a plan, but more importantly, we build trust.
-- **Continuous labor support** — When labor starts, I come to you. I stay with you through the entire process — at home, at the hospital or birth center, wherever you're delivering. No clocking out.
+- **Continuous labor support** — When labor starts, I come to you. I provide continuous support throughout your labor — at home, at the hospital or birth center, wherever you're delivering. No clocking out.
 - **Physical comfort measures** — Counter-pressure on your lower back. Hip squeezes. Position changes to help things along. Breathing techniques that actually work when you're in the thick of it.
 - **Emotional support** — Reminding you that you can do this. Helping you stay calm when things get intense. Being a steady presence when you feel anything but steady.
 - **Advocacy** — I can't speak for you, but I can remind you of your options. I can help you ask the right questions. I can make sure you understand what's happening before you consent to anything.

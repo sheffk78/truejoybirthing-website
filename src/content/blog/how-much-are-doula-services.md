@@ -29,7 +29,7 @@ When you hire me as your birth doula, here's what you're getting:
 
 - **Two to three prenatal visits** — We talk through your birth preferences, practice comfort measures, and make sure we're on the same page before labor starts.
 - **24/7 on-call availability** — From 37 weeks until you deliver, I'm a phone call or text away. No wondering if someone will show up.
-- **Continuous labor support** — I'm there from the time you need me through delivery. Not popping in and out — there with you the whole time.
+- **Continuous labor support** — I'm there from the time you need me through delivery. Not popping in and out — providing continuous support throughout your labor.
 - **One to two postpartum visits** — After you're home, I check in to make sure you're recovering well, help with feeding questions, and process how things went.
 
 Some doulas also include:

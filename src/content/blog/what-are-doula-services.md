@@ -30,7 +30,7 @@ Doula services aren't one appointment or one moment in labor. It's a package of 
 
 - I'm on call for you around your due date
 - When labor starts, I come to you — at home, at the hospital, at the birth center, wherever you're delivering
-- I stay with you the entire time. No shift changes. No stepping out to check on another patient
+- I provide continuous support throughout your labor. No shift changes. No handing you off to someone else
 - I use counter-pressure, hip squeezes, position changes, breathing techniques, and whatever else works to keep you as comfortable as possible
 - I help you understand what's happening and what your options are at every point
 - I support your partner so they know how to help instead of standing around feeling useless

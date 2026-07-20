@@ -125,4 +125,4 @@ Continuous support during labor means shorter labors, fewer interventions, bette
 
 If you're still on the fence, start with our guide to <a href="/blog/what-is-a-birth-doula/">what a birth doula actually does</a>. And when you're ready to find the right person for your birth, our <a href="/blog/doula-interview-questions/">doula interview questions</a> will help you hire with confidence. We also offer local birth support guides for families in <a href="/birth-support/portland-or/">Portland, OR</a> and other cities across the country.
 
-You deserve support. Not the kind that replaces your partner or argues with your doctor — the kind that holds space, shares information, and stays by your side the whole way through.
+You deserve support. Not the kind that replaces your partner or argues with your doctor — the kind that holds space, shares information, and provides continuous support through every phase of your labor.

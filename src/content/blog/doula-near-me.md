@@ -105,7 +105,7 @@ If you truly can't find or afford a doula, consider a partner preparation class.
 
 ## How Do You Make the Final Decision?
 
-At the end of the day, what matters most is how you feel walking into your birth. Having a doula by your side means someone's there who stays with you the whole time, who knows what you want, and who's focused on you — not just the clinical side of your birth.
+At the end of the day, what matters most is how you feel walking into your birth. Having a doula means someone's there who provides continuous support throughout your labor, who knows what you want, and who's focused on you — not just the clinical side of your birth.
 
 One mom who worked with a <a href="/birth-support/portland-or/">doula in Portland, OR</a> told me, "I didn't realize how much I needed my doula until she was there. Now I can't imagine doing it without her."
 

@@ -88,7 +88,7 @@ For a deeper dive into the decision-making framework, check out our <a href="/bl
 
 Here's something most people don't realize: a doula's support looks different depending on your setting, but it's equally valuable in both.
 
-In a **birth center**, I'm often the continuity piece. Your midwife may have another client in labor, and in some centers, you might not meet the on-call midwife until you arrive. I'm the person who knows your preferences, your worries, and your partner's role — and I stay with you the entire time, whether you're laboring in the tub or deciding whether to transfer.
+In a **birth center**, I'm often the continuity piece. Your midwife may have another client in labor, and in some centers, you might not meet the on-call midwife until you arrive. I'm the person who knows your preferences, your worries, and your partner's role — and I provide continuous support throughout your labor, whether you're laboring in the tub or deciding whether to transfer.
 
 In a **hospital**, I'm your advocate in a system that can feel overwhelming. Hospital staff are rotating in and out, and they may not know your preferences. I help you understand what's being offered, what's required, and what's optional. I remind you of your <a href="/birth-plan-template/">birth plan</a> when things get intense. I hold space so your partner can be present rather than overwhelmed. Whether you're delivering at a birth center or a hospital, having that consistent advocate by your side is invaluable — and families I've supported through our <a href="/birth-support/portland-or/">Portland birth support services</a> have told me how much that continuity mattered in a hospital setting.
 

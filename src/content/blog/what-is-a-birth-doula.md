@@ -9,7 +9,7 @@ featuredImage: "/images/doula-teaching.webp"
 layout: "../../layouts/PostLayout.astro"
 ---
 
-When I had my first baby, I had no idea what a doula was. By my seventh, I couldn't imagine doing it without one — and I became one myself. A birth doula is a trained professional who stays with you through your entire labor, offering physical comfort, emotional support, and help advocating for what you want. She doesn't replace your doctor or midwife. She fills the gap that no medical provider can — continuous, one-on-one support from the moment you need it until after your baby is born.
+When I had my first baby, I had no idea what a doula was. By my seventh, I couldn't imagine doing it without one — and I became one myself. A birth doula is a trained professional who provides continuous support throughout your labor, offering physical comfort, emotional support, and help advocating for what you want. She doesn't replace your doctor or midwife. She fills the gap that no medical provider can — continuous, one-on-one support from the moment you need it until after your baby is born. What that looks like varies from doula to doula, so ask about their approach when you interview.
 
 ## What Does a Birth Doula Actually Do?
 
@@ -21,9 +21,9 @@ A birth doula does three things: keeps you as comfortable as possible, makes sur
 - Reminds you to eat, drink, and rest between contractions
 - Explains what's happening and what your options are when things change
 - Helps you and your partner communicate your preferences to the medical team
-- Stays with you continuously — no shift changes, no stepping out to catch another patient
+- Provides continuous support — no shift changes, no handing you off to someone else
 
-One mom I supported in Chicago told me that when her labor stalled at 6 centimeters, her nurse was in and out handling three other patients. Her doula never left the room. She changed positions, used a birth ball, and within two hours she was ready to push. "I honestly don't think I would have gotten there without her," she said.
+One mom I supported in Chicago told me that when her labor stalled at 6 centimeters, her nurse was in and out handling three other patients. Her doula was the one focused on her the whole time. She changed positions, used a birth ball, and within two hours she was ready to push. "I honestly don't think I would have gotten there without her," she said.
 
 **During pregnancy, a doula:**
 - Meets with you to understand your birth preferences and concerns
@@ -58,7 +58,7 @@ This isn't just my opinion. The Cochrane Review — one of the most respected so
 - **28% fewer instrumental deliveries** (forceps or vacuum)
 - **34% fewer reports of dissatisfaction** with the birth experience
 
-Those numbers tell a clear story. When someone stays with you through labor — someone whose only job is your comfort and your voice — things tend to go better. Not because doulas have special powers, but because continuous support is something most hospital environments just don't provide. Nurses have other patients. Doctors come and go. A doula stays — whether you're delivering at a major hospital in <a href="/birth-support/beaumont-tx/">Beaumont, TX</a> or a smaller community setting.
+Those numbers tell a clear story. When someone provides continuous support through labor — someone whose only job is your comfort and your voice — things tend to go better. Not because doulas have special powers, but because continuous support is something most hospital environments just don't provide. Nurses have other patients. Doctors come and go. A doula is the one focused on you — whether you're delivering at a major hospital in <a href="/birth-support/beaumont-tx/">Beaumont, TX</a> or a smaller community setting.
 
 ## How a Doula Supports Your Partner
 
