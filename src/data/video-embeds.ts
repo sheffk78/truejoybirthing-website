@@ -431,11 +431,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
 },
   // hartford-ct video removed: gradient-only opening, missing hero image. Needs re-render.
     "stamford-ct": {
-        videoId: "GA4DJeZZ8cM",
+        videoId: "97buu-Ygq3Q",
         title: "Stamford CT Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
         description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 7 minutes.",
-        duration: "PT6M16S",
-        uploadDate: "2026-07-14T00:00:00-06:00",
+        duration: "PT6M07S",
+        uploadDate: "2026-07-20T00:00:00-06:00",
     },
 
 "norwalk-ct": {
