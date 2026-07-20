@@ -1933,7 +1933,7 @@ export const cities: Record<string, CityData> = {
     shelbiServesHere: false,
     heroImage: "/images/stamford-ct-birth-doula-skyline-v3.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-stamford-ct.webp",
-    supportSceneImage: "/images/stamford-ct-birth-doula-support-v3.webp",
+    supportSceneImage: "/images/stamford-ct-birth-doula-support-v4.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Stamford with Long Island Sound nearby",
     lat: 41.0534,
     lng: -73.0540,
@@ -2349,7 +2349,7 @@ export const cities: Record<string, CityData> = {
     costHigh: 2000,
     shelbiServesHere: false,
     heroImage: "/images/stockton-ca-birth-doula-hero-v2.webp",
-    supportSceneImage: "/images/stockton-ca-birth-doula-support-v2.webp",
+    supportSceneImage: "/images/stockton-ca-birth-doula-support-v3.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Stockton with Central Valley golden hills",
     ogImage: "https://truejoybirthing.com/images/og-city-stockton-ca.webp",
     localDoulas: [
@@ -3048,7 +3048,7 @@ export const cities: Record<string, CityData> = {
     shelbiServesHere: false,
     heroImage: "/images/henderson-nv-birth-doula-skyline.webp",
     ogImage: "/images/og-city-henderson-nv.webp",
-    supportSceneImage: "/images/henderson-nv-birth-doula-support-v2.webp",
+    supportSceneImage: "/images/henderson-nv-birth-doula-support-v3.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Henderson with Nevada desert landscape nearby",
     localDoulas: [
       { name: "Well Rounded Childbirth" , credential: "Birth Doula" , practice: "Well Rounded Childbirth" , url: "https://www.hendersonhospital.com/well-rounded-childbirth" , photo: "", description: "Price: $125 per couple, Labor Doula Class Dates (6:30 to 9:30 p.m.): January 11, 18 (Henderson Hospital) Henderson Hospital 1050 W. Galleria Drive Henderson, ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Henderson, NV"] },
