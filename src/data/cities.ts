@@ -166,7 +166,7 @@ export const cities: Record<string, CityData> = {
       { q: "How much does a doula cost in Amarillo?" , a: "Expect to pay $650 to $1,800 for a doula in Amarillo. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
       { q: "Does True Joy Birthing work with Amarillo families?" , a: "Yes. and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Amarillo birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way. no signup required." },
       { q: "Are there doulas in Amarillo?" , a: "Amarillo has a small but growing doula community. If local availability is limited, virtual support and the free birth plan app can help you prepare. You can also use the True Joy Birthing app to find local doulas. start there and interview a few until one clicks." } ],
-    nearbyCities: ["lubbock-tx"]},
+    nearbyCities: ["abilene-tx"]},
   "allen-tx": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -200,7 +200,7 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals in Allen have labor and delivery?" , a: "Texas Health Presbyterian Hospital Allen at 1105 N Central Expressway is Allen\u2019s primary maternity hospital, with a verified Level II NICU and Baby-Friendly designation. the first hospital in Texas to receive that designation. Medical City Women's Hospital McKinney, about 8 miles north, offers a Level III NICU for families needing higher-level neonatal care. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
       { q: "Are there birth centers in Allen?" , a: "Allen Birthing Center on W Main St (NPI 1629192562, est. 2007) is an NPI-verified freestanding birth center offering midwife-led births. One of the few freestanding birth centers in Collin County. Verify with the center directly for current services and insurance coverage. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." },
       { q: "Does True Joy Birthing work with Allen families?" , a: "Yes. and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Allen birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way. no signup required." } ],
-    nearbyCities: ["arlington-tx" , "plano-tx" , "mckinney-tx"]},
+    nearbyCities: ["arlington-tx", "carrollton-tx", "mckinney-tx"]},
   "abilene-tx": {
     city: "Abilene" ,
     state: "TX" ,
@@ -237,7 +237,7 @@ export const cities: Record<string, CityData> = {
       { q: "Does Medicaid cover doulas in Abilene?" , a: "Yes! Great news. Medicaid covers doula services in Abilene. This is thanks to SB 750. That includes Taylor County\u2019s STAR managed care plans. Here's your next step: call your Medicaid plan and ask \"Do you cover doula services?\". they'll walk you through it. You deserve support, and now your insurance helps pay for it." },
       { q: "Which hospitals in Abilene accommodate birth plans?" , a: "Hendrick Medical Center at 1900 Pine Street is Abilene\u2019s only hospital providing labor and delivery as of June 2026, with a verified Level III NICU and dedicated OB Emergency Department stated directly on hendrickhealth.org. Hendrick Medical Center South\u2019s L&D unit closed May 31, 2026, with all maternity services centralized to the north campus. Abilene also has Crowned Birth Place on North 20th Street for you and your family seeking an out-of-hospital birth." },
       { q: "Does True Joy Birthing work with Abilene families?" , a: "Yes. and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Abilene birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way. no signup required." } ],
-    nearbyCities: ["midland-tx" , "lubbock-tx"]},
+    nearbyCities: ["abilene-tx", "allen-tx"]},
   "beaumont-tx": {
     enableBlogResources: true,
     publishedDate: "2026-07-10",
@@ -255,7 +255,7 @@ export const cities: Record<string, CityData> = {
       { name: "Krista Matlock" , credential: "BEST Certified Birth & Postpartum Doula" , practice: "Hygge Birth" , url: "https://www.bornbir.com/krista-matlock" , photo: "/images/provider-beaumont-tx-krista-matlock-v2.webp" , description: "Birth and postpartum doula based in Sour Lake, just north of Beaumont, with 5 years of experience. Krista brings a holistic approach to birth support, incorporating herbs, tinctures, homeopathy, and nourishing foods to empower women through pregnancy, birth, and postpartum. Offers childbirth education, 2 prenatal sessions, labor support, and placenta encapsulation. 5.0 rating on Bornbir." , costRange: "$700-$1,800" , serviceArea: ["Beaumont" , "Sour Lake" , "Jefferson County"], services: ["Birth Doula" , "Postpartum Doula" , "Childbirth Education" , "Placenta Encapsulation"], acceptingClients: true },
       { name: "Sacred Arrow Birth Services" , credential: "HERBAL Certified Birthkeeper/Doula" , practice: "Sacred Arrow Birth Services" , url: "https://facebook.com/sacredarrowbirthservices" , photo: "/images/provider-beaumont-tx-sacred-arrow-birth-services-v2.webp" , description: "Birth doula service founded by Amanda Smith, serving Beaumont and Southeast Texas families with personalized labor and birth support. Amanda is a HERBAL certified birthkeeper with 4 years of experience and 35 families supported, offering birth doula support, postpartum care, placenta encapsulation, and virtual lactation visits. Works closely with the Birth Center of Beaumont and local hospital systems to provide continuity of care across birth settings." , costRange: "$700-$1,800" , serviceArea: ["Beaumont" , "Port Arthur" , "Orange" , "Jefferson County"], services: ["Birth Doula" , "Postpartum Doula"], acceptingClients: true },
       { name: "Taylor Lee" , credential: "LM, CPM" , practice: "Moonflower Midwifery" , url: "https://dot.cards/moonflowermidwifery" , photo: "/images/provider-beaumont-tx-taylor-lee-v2.webp" , description: "Homebirth midwife based in Buna, Texas, serving Southeast Texas families as a Licensed Midwife and Certified Professional Midwife. Taylor teaches childbirth education at the Birth Center of Beaumont and provides comprehensive prenatal care, home birth attendance, and postpartum care for mother and baby. With 1,239 likes on Facebook, her practice is an active part of the SETX birth community." , costRange: "$3,000-$6,500" , serviceArea: ["Beaumont" , "Buna" , "Jasper" , "Sour Lake" , "Southeast Texas"] , services: ["Home Birth" , "Prenatal Care" , "Postpartum Care" , "Childbirth Education"] , acceptingClients: true , isMidwife: true },
-      { name: "Bridget Wojtowich" , credential: "CPM, LM (TX & LA)" , practice: "Family First Midwifery" , url: "https://www.bornbir.com/bridget-wojtowich" , photo: "/images/provider-beaumont-tx-bridget-wojtowich-tx2.webp" , description: "Certified Professional Midwife licensed in both Texas and Louisiana, serving Southwest Louisiana and Southeast Texas from her base in Singer, LA. Bridget offers comprehensive prenatal care, home birth attendance, and postpartum care for mother and baby, with a $500 discount for low-income clients and Medicaid lab billing. Accepting families across the SETX and SWLA region." , costRange: "$6,000-$6,500" , serviceArea: ["Beaumont" , "Singer, LA" , "Lake Charles, LA" , "Southeast Texas" , "Southwest Louisiana"] , services: ["Home Birth" , "Prenatal Care" , "Postpartum Care"] , acceptingClients: true , isMidwife: true },
+      { name: "Bridget Kourtney" , credential: "CPM, LM (TX & LA)" , practice: "Family First Midwifery" , url: "https://www.bornbir.com/bridget-wojtowich" , photo: "/images/provider-beaumont-tx-bridget-wojtowich-tx2.webp" , description: "Certified Professional Midwife licensed in both Texas and Louisiana, serving Southwest Louisiana and Southeast Texas from her base in Singer, LA. Bridget offers comprehensive prenatal care, home birth attendance, and postpartum care for mother and baby, with a $500 discount for low-income clients and Medicaid lab billing. Accepting families across the SETX and SWLA region." , costRange: "$6,000-$6,500" , serviceArea: ["Beaumont" , "Singer, LA" , "Lake Charles, LA" , "Southeast Texas" , "Southwest Louisiana"] , services: ["Home Birth" , "Prenatal Care" , "Postpartum Care"] , acceptingClients: true , isVerified: true , isMidwife: true },
       { name: "Patricia Joseph" , credential: "BEST Certified Birth & Postpartum Doula" , practice: "PMarie Birth Services" , url: "https://www.bornbir.com/patricia-joseph" , photo: "/images/provider-beaumont-tx-patricia-joseph-tx2.webp" , description: "BEST Certified Birth and Postpartum Doula based in Lake Charles, Louisiana, about 60 miles from Beaumont. Patricia brings lived experience as a mother, grandmother, and steady presence to families across the Lake Charles and Southeast Texas region. She relocated to Lake Charles in 2020 and serves the broader Southwest Louisiana and SETX birth community." , costRange: "$700-$1,800" , serviceArea: ["Lake Charles, LA" , "Beaumont" , "Sulphur, LA" , "Southwest Louisiana" , "Southeast Texas"] , services: ["Birth Doula" , "Postpartum Doula"] , acceptingClients: true },
       { name: "Aniya Booker" , credential: "Certified Faith-Based Doula & Birth Photographer" , practice: "CommunionCare" , url: "https://www.bornbir.com/aniya-booker" , photo: "/images/provider-beaumont-tx-aniya-booker-tx2.webp" , description: "Certified faith-based doula and birth photographer serving Chambers, Harris, Galveston, and Brazoria counties with a 409 Beaumont-area phone number. Aniya offers birth doula packages ($750-$1,375), postpartum care ($30-$38/hr), and birth photography ($3,500 full package). Her practice, CommunionCare, welcomes families across the greater Houston and Beaumont corridor." , costRange: "$750-$3,500" , serviceArea: ["Beaumont" , "Houston" , "Chambers County" , "Galveston" , "Brazoria County"] , services: ["Birth Doula" , "Postpartum Doula" , "Birth Photography"] , acceptingClients: true }
     ],
@@ -274,7 +274,7 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals in Beaumont have labor and delivery?" , a: "Two hospitals in Beaumont provide labor and delivery: Baptist Hospitals of Southeast Texas (3080 College St) with a Level III NICU and the Birth Center, and CHRISTUS Southeast Texas - St. Elizabeth Hospital (2830 Calder St) with a Level III NICU, certified nurse midwives, and the only IBLCE Award-winning lactation program in Beaumont. The Medical Center of Southeast Texas suspended its L&D and NICU services due to low birth volumes, so hospital births are now consolidated at Baptist and CHRISTUS. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
       { q: "Are there birth centers in Beaumont?" , a: "Yes \u2014 the Birth Center of Beaumont at 1357 Broadway is the only freestanding birth center in the Beaumont area. Led by Certified Nurse Midwife Jackie Griggs, it offers natural birth in a home-like setting for low-risk pregnancies, with prenatal care, childbirth education, and postpartum support. The center maintains relationships with local hospitals for seamless transfers when needed. Contact them directly at jcgriggscnm@gmail.com to schedule a consultation. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." },
       { q: "Does True Joy Birthing work with Beaumont families?" , a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Beaumont birth setting, whether you\u2019re delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." } ],
-    nearbyCities: ["conroe-tx" , "port-arthur-tx"]},
+    nearbyCities: ["conroe-tx", "beaumont-tx"]},
   "carrollton-tx": {
     publishedDate: "2026-06-22" ,
     city: "Carrollton" ,
@@ -319,7 +319,7 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals in Carrollton accommodate birth plans?" , a: "Medical City Lewisville and Texas Health Flower Mound generally accommodate birth plans, but policies vary. Always confirm your hospital's policy during your hospital tour." },
       { q: "How much does a doula cost in Carrollton?" , a: "Expect to pay $900 to $2,500 for a doula in Carrollton. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
       { q: "Does True Joy Birthing work with Carrollton families?" , a: "Yes \u2014 and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Carrollton birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." } ],
-    nearbyCities: ["mckinney-tx" , "plano-tx" , "denton-tx" , "irving-tx"]},
+    nearbyCities: ["mckinney-tx", "carrollton-tx", "arlington-tx", "allen-tx"]},
   "arlington-tx": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -360,7 +360,7 @@ export const cities: Record<string, CityData> = {
       { q: "Are there birth centers in Arlington?" , a: "Yes. Birth & Wellness Center of Arlington (1001 W Randol Mill Rd) offers out-of-hospital birth with midwives, directly across from Texas Health Arlington Memorial. Additional birth centers in Tarrant County include Beautiful Beginnings Birth & Women\u2019s Center and Fort Worth Birthing & Wellness Center in Fort Worth, The Nest Birth Center in Mansfield, and Origins Birth Services in south Fort Worth. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." },
       { q: "How much does a doula cost in Arlington?" , a: "Expect to pay $850 to $2,500 for a doula in Arlington. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
       { q: "Does True Joy Birthing work with Arlington families?" , a: "Yes. and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Arlington birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way. no signup required." } ],
-    nearbyCities: ["abilene-tx" , "fort-worth-tx" , "grand-prairie-tx"]},
+    nearbyCities: ["abilene-tx", "arlington-tx", "allen-tx"]},
   "austin-tx": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -458,7 +458,7 @@ export const cities: Record<string, CityData> = {
       { q: "How far is the nearest birth center from Augusta?" , a: "The nearest freestanding birth centers are approximately 150 miles away in the Atlanta metro area. roughly a 2.5-hour drive. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." },
       { q: "What's the average cost of a doula in Augusta?" , a: "Doulas in Augusta typically charge $1,200–$3,500, depending on experience and package. Since Georgia Medicaid doesn't cover doulas, community programs are the main pathway for low-cost support." }
     ],
-    nearbyCities: ["atlanta-ga" , "savannah-ga" , "greenville-sc"]},
+    nearbyCities: ["atlanta-ga", "augusta-ga", "charleston-sc"]},
   "atlanta-ga": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -507,7 +507,7 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals in Atlanta accommodate birth plans?" , a: "Northside Hospital Atlanta (Level III NICU and Level IV Maternal Care, verified on northside.com), Emory University Hospital Midtown (Level III NICU, verified on emoryhealthcare.org), and Piedmont Atlanta Hospital (Level III NICU, verified on piedmont.org) all accommodate birth plans. Northside handles the highest birth volume in the country. Always confirm your hospital's current visitor and support-person policies during your tour." },
       { q: "How much does a doula cost in Atlanta?" , a: "Expect to pay $1,000 to $3,000 for a doula in Atlanta. If you're looking for bilingual support, reach out early. those spots fill fast. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
       { q: "Does True Joy Birthing work with Atlanta families?" , a: "Yes. and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Atlanta birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way. no signup required." } ],
-    nearbyCities: ["cumming-ga" , "greenville-sc"],
+    nearbyCities: ["atlanta-ga", "charleston-sc"],
     birthStats: {
       cesareanRate: 34.9,
       maternalMortalityRate: 32.1,
@@ -570,7 +570,7 @@ export const cities: Record<string, CityData> = {
       { q: "Are there home birth midwives in Fort Collins?" , a: "Yes. Several certified professional midwives (CPMs) and certified nurse-midwives (CNMs) offer home birth services, supported by Colorado's licensure for out-of-hospital birth providers. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether home birth is right for you." },
       { q: "What's the average cost of a doula in Fort Collins?" , a: "Doulas in Fort Collins typically charge $1,400–$4,000, with most around $2,200. Medicaid-covered doulas are available at no out-of-pocket cost to qualifying you and your family." }
     ],
-    nearbyCities: ["aurora-co" , "colorado-springs-co"]},
+    nearbyCities: ["aurora-co", "denver-co"]},
   "spokane-wa": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -774,7 +774,7 @@ export const cities: Record<string, CityData> = {
       { q: "Are there home birth midwives in Spokane?" , a: "Yes. Spokane has several licensed midwives (LMs and CPMs) offering home birth services, supported by Washington State's licensure framework for out-of-hospital birth providers. Spokane River Midwives and Spokane Midwives both offer home birth options alongside their birth center services." },
       { q: "What is the average cost of a doula in Spokane?" , a: "Doulas in Spokane typically charge $800 to $3,000, with most birth packages averaging around $1,500 to $2,000. Postpartum doulas charge $30 to $55 per hour. Medicaid-covered doulas are available at no cost to qualifying families through Apple Health." }
     ],
-    nearbyCities: ["seattle-wa" , "tacoma-wa" , "portland-or"]},
+    nearbyCities: ["seattle-wa", "tacoma-wa", "portland-or"]},
 
   "seattle-wa": {
     city: "Seattle" ,
@@ -976,7 +976,7 @@ export const cities: Record<string, CityData> = {
       { q: "What does a doula cost in Seattle?" , a: "Seattle birth doula fees typically range from $1,500 to $4,500, with most experienced doulas in the $2,000 to $3,000 range. Postpartum doulas run $35 to $65 per hour. If you have Apple Health (Medicaid), doula services are covered at approximately $1,500 per birth package." },
       { q: "Are birth centers in Seattle covered by insurance?" , a: "Yes. Most Washington commercial plans and Apple Health (Medicaid) cover licensed birth center births. The Center for Birth in Eastlake is in-network with most major insurers and accepts Apple Health. Verify your specific plan's in-network status before booking." },
       { q: "How far are Seattle birth centers from hospital backup?" , a: "The Center for Birth in Eastlake is approximately 5 minutes from Swedish First Hill by car. Puget Sound Birth Center in Kirkland is about 15 minutes from Overlake Medical Center in Bellevue. Factor in I-5 traffic during rush hour when planning your route." } ],
-  nearbyCities: ["tacoma-wa" , "spokane-wa" , "portland-or"],
+  nearbyCities: ["tacoma-wa", "spokane-wa", "portland-or"],
   birthStats: {
     cesareanRate: 30.5,
     maternalMortalityRate: 18.0,
@@ -1034,7 +1034,7 @@ export const cities: Record<string, CityData> = {
       { q: "Can I give birth at JBLM (Joint Base Lewis-McChord)?" , a: "Madigan Army Medical Center at JBLM serves active-duty and TRICARE-eligible military families like yours with a Level III NICU and full obstetric services, including a midwifery program for eligible beneficiaries. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> \u2014 military life means plans change, but knowing what you want for your birth doesn't have to." },
       { q: "How far is the drive to Seattle for a Level IV NICU?" , a: "UW Medical Center's Level IV NICU is approximately 35 miles from downtown Tacoma, typically a 45\u201360 minute drive via I-5 \u2014 longer during peak commute times. Knowing your drive time before you're in labor takes one more worry off your plate." }
     ],
-    nearbyCities: ["seattle-wa" , "spokane-wa"]},
+    nearbyCities: ["seattle-wa", "spokane-wa"]},
   "sacramento-ca": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -1081,7 +1081,7 @@ export const cities: Record<string, CityData> = {
       { q: "Does Kaiser Sacramento allow doulas?" , a: "Yes. Kaiser Permanente Sacramento permits doulas in the labor and delivery room, though they are not employed by Kaiser. Families hire independent doulas; some Kaiser plans may offer partial reimbursement for out-of-network doula services. Call your insurance and ask directly: \"Do you cover doula services?\" That one phone call gets you a clear answer." },
       { q: "How long is the drive from Elk Grove to Sacramento hospitals?" , a: "Elk Grove to UC Davis Medical Center is roughly 20 miles via Highway 99, typically 25–35 minutes outside rush hour but potentially 45–60 minutes during peak commute times on the 99 corridor. Knowing your drive time before you're in labor takes one more worry off your plate." }
     ],
-    nearbyCities: ["oakland-ca" , "san-jose-ca" , "fresno-ca"]},
+    nearbyCities: ["oakland-ca", "san-jose-ca", "fresno-ca"]},
   "san-diego-ca": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -1261,7 +1261,7 @@ export const cities: Record<string, CityData> = {
       { q: "How do I find an OHP-covered doula in Portland?" , a: "Search the Oregon Health Authority's provider directory or ask your CCO care coordinator for a list of enrolled doulas. Many Portland doulas are registering as OHP providers as the program expands." },
       { q: "Is home birth legal in Oregon?" , a: "Yes. Oregon licenses direct-entry midwives (LDMs) and certified nurse-midwives (CNMs) who attend home births. Home birth is a legally recognized, covered option under many insurance plans. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether home birth is right for you." }
     ],
-    nearbyCities: ["seattle-wa" , "eugene-or"]},
+    nearbyCities: ["seattle-wa", "eugene-or"]},
   "eugene-or": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -1298,7 +1298,7 @@ export const cities: Record<string, CityData> = {
       { q: "Can I use OHP for a birth center delivery in Eugene?" , a: "Yes. OHP covers births at licensed birth centers with enrolled providers. Confirm with Trillium Community Health Plan that the Eugene Birth Center is in-network. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." },
       { q: "How far is Eugene from Portland for specialized care?" , a: "Eugene is roughly 110 miles south of Portland. about a two-hour drive. Families with high-risk pregnancies requiring a Level IV NICU would be referred to OHSU in Portland. Knowing your drive time before you're in labor takes one more worry off your plate." }
     ],
-    nearbyCities: ["portland-or" , "seattle-wa"]},
+    nearbyCities: ["portland-or", "seattle-wa"]},
   "las-vegas-nv": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -1337,7 +1337,7 @@ export const cities: Record<string, CityData> = {
       { q: "Is home birth legal in Nevada?" , a: "Yes. Home birth with a licensed midwife is legal in Nevada. Certified professional midwives (CPMs) and certified nurse-midwives (CNMs) may attend home births, though the pool of attending midwives in Las Vegas is small. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether home birth is right for you." },
       { q: "Does the Culinary Health Fund cover doula services?" , a: "The Culinary Health Fund covers midwifery and hospital maternity care for its members, but doula coverage is not a standard benefit. Contact the fund directly to verify whether doula services can be reimbursed under your specific plan. Call your insurance and ask directly: \"Do you cover doula services?\" That one phone call gets you a clear answer." }
     ],
-    nearbyCities: ["henderson-nv" , "sacramento-ca" , "los-angeles-ca"]},
+    nearbyCities: ["henderson-nv", "sacramento-ca", "los-angeles-ca"]},
   "minneapolis-mn": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -1501,8 +1501,8 @@ export const cities: Record<string, CityData> = {
     slug: "chicago-il" ,
     costLow: 600,
     costHigh: 5000,
-    heroImage: "/images/chicago-il-birth-doula-hero-v3.webp",
-    ogImage: "https://truejoybirthing.com/images/og-city-chicago-il-v3.webp",
+    heroImage: "/images/chicago-il-birth-doula-hero-v4.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-chicago-il-v4.webp",
     supportSceneImage: "/images/chicago-il-birth-doula-support-v2.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Chicago: Illinois birth support and doula care",
     shelbiServesHere: false,
@@ -1536,7 +1536,7 @@ export const cities: Record<string, CityData> = {
       { q: "Can I have a midwife-attended birth at a Chicago hospital?" , a: "Several Chicago hospitals, including Rush University Medical Center and Advocate Illinois Masonic, have midwifery practices that support low-intervention births within a hospital setting. Ask your provider directly about midwife-attended birth options. you might have more choices than you think." },
       { q: "How do I find a Black doula in Chicago?" , a: "You deserve a doula who gets your experience. Chicago has doulas of color who serve families with cultural understanding and real care. Don't settle. keep asking until you find someone who feels right." }
     ],
-    nearbyCities: ["minneapolis-mn" , "st-paul-mn"],
+    nearbyCities: ["minneapolis-mn", "st-paul-mn"],
     birthStats: {
       cesareanRate: 30.8,
       maternalMortalityRate: 18.1,
@@ -1596,7 +1596,16 @@ export const cities: Record<string, CityData> = {
       { q: "How do I find a community doula in Detroit?" , a: "You deserve a doula who gets your experience. Detroit has doulas of color who serve families with cultural understanding and real care. Don't settle. keep asking until you find someone who feels right." },
       { q: "Is Hutzel Women's Hospital still open for deliveries?" , a: "Yes. DMC Hutzel Women's Hospital continues to operate as a dedicated women's hospital with a Level III NICU and remains a cornerstone of obstetric care in Detroit." }
     ],
-    nearbyCities: ["chicago-il" , "minneapolis-mn"]},
+    nearbyCities: ["chicago-il", "minneapolis-mn"],
+    birthStats: {
+      cesareanRate: 34.3,
+      maternalMortalityRate: 23.4,
+      homeBirthRate: 1.2,
+      birthCenterBirthRate: 0.3,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "new-york-ny": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -1701,7 +1710,7 @@ export const cities: Record<string, CityData> = {
       { name: "With Grayce" , credential: "Birth & Postpartum Doula" , practice: "With Grayce" , url: "https://www.with-grayce.com/" , photo: "" , description: "Exclusive doula care serving Virginia Beach and Hampton Roads families with birth and postpartum support." , services: ["Birth Doula" , "Postpartum"], costRange: "Contact for pricing" , acceptingClients: "true" },
       { name: "Your Doula In Love" , credential: "Birth Doula" , practice: "Your Doula In Love" , url: "https://yourdoulainlove.com/" , photo: "" , description: "Virginia Beach doula offering pregnancy, birth, and postpartum support. Medicaid and Tricare approved." , services: ["Birth Doula" , "Postpartum"], acceptsMedicaid: true, costRange: "Contact for pricing" , acceptingClients: "true" },
       { name: "Blissful Baby Steps" , credential: "Birth & Postpartum Doula" , practice: "Blissful Baby Steps" , url: "https://www.blissfulbabysteps.com/" , photo: "" , description: "Supporting Virginia Beach and Chesapeake families with birth doula, postpartum doula, and childbirth education services." , services: ["Birth Doula" , "Postpartum" , "Childbirth Education"], costRange: "Contact for pricing" , acceptingClients: "true" } ],
-    nearbyCities: ["new-york-ny" , "chicago-il"]},
+    nearbyCities: ["new-york-ny", "chicago-il"]},
   "nashville-tn": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -1744,7 +1753,16 @@ export const cities: Record<string, CityData> = {
       { q: "How do I find a doula of color in Nashville?" , a: "You deserve a doula who gets your experience. Start with Nashville Birth Collective. they connect you with doulas who share your lived experience. Don't settle. keep asking until you find someone who feels right." },
       { q: "What postpartum resources are available in Nashville?" , a: "You're not supposed to do this alone. Nashville has lactation consultants, WIC offices, local parenting groups to lean on. Note: postpartum Medicaid coverage is available, though doula services aren't included under current policy. And grab the <a href=\"/birth-plan-template/\">free birth plan template</a>. knowing what's normal (and what's not) after birth is everything." }
     ],
-    nearbyCities: ["atlanta-ga" , "chicago-il"]},
+    nearbyCities: ["atlanta-ga", "chicago-il"],
+    birthStats: {
+      cesareanRate: 33.8,
+      maternalMortalityRate: 26.4,
+      homeBirthRate: 1.1,
+      birthCenterBirthRate: 0.3,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "philadelphia-pa": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -1785,7 +1803,16 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in Philadelphia?" , a: "Most Philly hospitals allow doulas in the delivery room alongside your medical team, but policies can vary. especially during flu season or if visitor restrictions are in place. Call your hospital's labor and delivery unit a few weeks before your due date to confirm their current policy." },
       { q: "What postpartum resources are available in Philadelphia?" , a: "Philly has strong postpartum support: Maternity Care Coalition offers home visiting and breastfeeding help across the city, the Philadelphia Department of Public Health runs free parenting groups, CHOP's Lactation Center provides expert breastfeeding support, and the Postpartum Support International PA helpline (1-800-773-6667) is available for perinatal mood concerns." }
     ],
-    nearbyCities: ["new-york-ny" , "baltimore-md"]},
+    nearbyCities: ["new-york-ny", "baltimore-md"],
+    birthStats: {
+      cesareanRate: 32.3,
+      maternalMortalityRate: 22.8,
+      homeBirthRate: 1.0,
+      birthCenterBirthRate: 0.3,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "pittsburgh-pa": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -1842,7 +1869,16 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in Pittsburgh?" , a: "Yes, most Pittsburgh hospitals welcome doulas as part of your support team during labor and delivery. Magee-Womens and West Penn are especially doula-friendly. but it's always smart to call your hospital's labor and delivery unit a few weeks before your due date to confirm their current visitor and support person policies." },
       { q: "What postpartum resources are available in Pittsburgh?" , a: "Pittsburgh offers several great postpartum resources: Healthy Start Pittsburgh supports moms through pregnancy and postpartum with wraparound services, the Allegheny County Health Department has a free home visiting program, Western Psychiatric Institute provides perinatal mood support, and La Leche League Pittsburgh runs free breastfeeding support groups across the city." }
     ],
-    nearbyCities: ["philadelphia-pa"]},
+    nearbyCities: ["philadelphia-pa"],
+    birthStats: {
+      cesareanRate: 32.3,
+      maternalMortalityRate: 22.8,
+      homeBirthRate: 1.0,
+      birthCenterBirthRate: 0.3,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "baltimore-md": {
     publishedDate: "2026-06-22" ,
     enableBlogResources: true,
@@ -1885,7 +1921,16 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in Baltimore?" , a: "Most Baltimore hospitals welcome doulas as part of your birth team. Johns Hopkins, UMMC, and Sinai are generally doula-friendly. It's still a good idea to call your hospital's labor and delivery unit a couple of weeks before delivery to confirm their current support person policies." },
       { q: "What postpartum resources are available in Baltimore?" , a: "Baltimore has strong postpartum support: Baltimore Healthy Start provides wraparound services from pregnancy through the first year, the Baltimore City Health Department offers free home visiting programs, Sinai Hospital's Center for Pregnancy and New Parents provides lactation and newborn support, and the Maryland PSI warmline (1-800-773-6667) is available for perinatal mood and anxiety support." }
     ],
-    nearbyCities: ["philadelphia-pa" , "virginia-beach-va"]},
+    nearbyCities: ["philadelphia-pa", "virginia-beach-va"],
+    birthStats: {
+      cesareanRate: 33.4,
+      maternalMortalityRate: 26.6,
+      homeBirthRate: 0.8,
+      birthCenterBirthRate: 0.2,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "hartford-ct": {
     city: "Hartford" ,
     state: "CT" ,
@@ -1934,7 +1979,16 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in Hartford?" , a: "Yes. all major Hartford hospitals allow doulas as part of your birth team. Call the hospital's maternity floor ahead of time to confirm their current visitor and support person policies so there are no surprises on your big day." },
       { q: "What postpartum resources are available in Hartford?" , a: "Hartford has solid postpartum support: Connecticut's HUSKY Health offers postpartum coverage up to 12 months, the Hartford WIC program provides nutrition and breastfeeding support, the Family Life Center at Saint Francis offers parenting programs, and community-based groups through the Hispanic Health Council and Hartford's home visiting programs are available." }
     ],
-    nearbyCities: ["boston-ma" , "providence-ri" , "new-york-ny"]},
+    nearbyCities: ["boston-ma", "providence-ri", "new-york-ny"],
+    birthStats: {
+      cesareanRate: 33.2,
+      maternalMortalityRate: 12.8,
+      homeBirthRate: 1.0,
+      birthCenterBirthRate: 0.3,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "stamford-ct": {
     city: "Stamford" ,
     state: "CT" ,
@@ -1981,7 +2035,16 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in Stamford?" , a: "Yes. Stamford Hospital welcomes doulas as part of your birth team and allows a doula in addition to two designated care partners. Norwalk Hospital has an in-house doula program and supports doulas as additional care partners. Greenwich Hospital also supports doulas. Always call the maternity floor ahead to confirm current policies." },
       { q: "What postpartum resources are available in Stamford?" , a: "Stamford has strong postpartum support: Connecticut's HUSKY Health offers postpartum coverage up to 12 months, Stamford Hospital provides lactation consultants and postpartum support groups, the Fairfield County WIC program offers nutrition and breastfeeding support, and community-based doulas like those at Birth Partners and MothersCare offer overnight postpartum care and newborn support." }
     ],
-    nearbyCities: ["hartford-ct" , "new-haven-ct" , "new-york-ny" , "boston-ma"]},
+    nearbyCities: ["hartford-ct", "new-haven-ct", "new-york-ny", "boston-ma"],
+    birthStats: {
+      cesareanRate: 33.2,
+      maternalMortalityRate: 12.8,
+      homeBirthRate: 1.0,
+      birthCenterBirthRate: 0.3,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "norwalk-ct": {
     city: "Norwalk" ,
     state: "CT" ,
@@ -2025,7 +2088,16 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in Norwalk?" , a: "Yes. Norwalk Hospital welcomes doulas as part of your birth team and has an in-house doula program. Stamford Hospital allows a doula in addition to two designated care partners. Greenwich Hospital also supports doulas. Always call the maternity floor ahead to confirm current policies." },
       { q: "What postpartum resources are available in Norwalk?" , a: "Norwalk has strong postpartum support: Connecticut's HUSKY Health offers postpartum coverage up to 12 months, Norwalk Hospital provides lactation consultants and postpartum support groups, the Fairfield County WIC program offers nutrition and breastfeeding support, and community-based doulas like those at Birth Partners and MothersCare offer overnight postpartum care and newborn support." }
     ],
-    nearbyCities: ["stamford-ct" , "hartford-ct" , "new-haven-ct" , "bridgeport-ct"]
+    nearbyCities: ["stamford-ct", "hartford-ct", "new-haven-ct", "norwalk-ct"],
+    birthStats: {
+      cesareanRate: 33.2,
+      maternalMortalityRate: 12.8,
+      homeBirthRate: 1.0,
+      birthCenterBirthRate: 0.3,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+
   },
   "boston-ma": {
     enableBlogResources: true,
@@ -2058,7 +2130,7 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in Boston?" , a: "Yes. Boston's major hospitals generally welcome doulas as part of your support team. Policies can shift, so call your hospital's maternity floor before your due date to confirm their current support person policy." },
       { q: "What postpartum resources are available in Boston?" , a: "Boston has strong postpartum support: MassHealth covers postpartum care up to 12 months, the Boston Public Health Commission's MOMCARE program provides wraparound services, Birth Sisters at Boston Medical Center offers culturally centered doula support, postpartum groups run through Brigham and Women's Center for Women's Health, and WIC offices serve Dorchester, Roxbury, and Jamaica Plain." }
     ],
-    nearbyCities: ["hartford-ct" , "providence-ri" , "new-york-ny"]},
+    nearbyCities: ["hartford-ct", "providence-ri", "new-york-ny"]},
   "providence-ri": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2116,7 +2188,16 @@ export const cities: Record<string, CityData> = {
     ],
     
     midwifeInfo: "RI licensed midwives provide home birth services. The RI Department of Health licenses CPMs. Midwifery care typically costs $5,000-$8,000 for home birth.",
-    nearbyCities: ["boston-ma" , "hartford-ct" , "new-york-ny"]},
+    nearbyCities: ["boston-ma", "hartford-ct", "new-york-ny"],
+    birthStats: {
+      cesareanRate: 31.8,
+      maternalMortalityRate: 14.5,
+      homeBirthRate: 1.2,
+      birthCenterBirthRate: 0.4,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "san-francisco-ca": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2164,7 +2245,7 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in San Francisco?" , a: "Yes. UCSF, CPMC, and SF General all allow doulas as part of your support team. Call your hospital's maternity unit ahead of time to confirm their current visitor and support-person policies." },
       { q: "What postpartum resources are available in San Francisco?" , a: "San Francisco has strong postpartum support: UCSF's Lactation Center provides expert breastfeeding help, Day One Centers in SoMa offer postpartum groups, Black Mama's Village provides culturally centered care, and the SF Department of Public Health's Black Infant Health Program serves local families." }
     ],
-    nearbyCities: ["oakland-ca" , "san-jose-ca" , "sacramento-ca"]},
+    nearbyCities: ["oakland-ca", "san-jose-ca", "sacramento-ca"]},
   "san-jose-ca": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2213,7 +2294,16 @@ export const cities: Record<string, CityData> = {
       paragraph: "California licenses Certified Nurse-Midwives (CNMs) through the Board of Registered Nursing and Licensed Midwives (LMs) through the Medical Board of California. This means both hospital-based and out-of-hospital midwifery care are legally regulated and accessible in San Jose. Good Samaritan and Regional Medical Center have CNM-attended births, and several LMs serve the South Bay for home birth. If you are planning a home birth in San Jose, your midwife operates under a state-issued license." ,
       credentialTypes: " and LMs" ,
     },
-    nearbyCities: ["san-francisco-ca" , "oakland-ca" , "sacramento-ca"]},
+    nearbyCities: ["san-francisco-ca", "oakland-ca", "sacramento-ca"],
+    birthStats: {
+      cesareanRate: 32.0,
+      maternalMortalityRate: 4.0,
+      homeBirthRate: 1.0,
+      birthCenterBirthRate: 0.4,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "long-beach-ca": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2251,7 +2341,7 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in Long Beach?" , a: "Yes. both MemorialCare Long Beach and St. Mary allow doulas as support persons. Call your hospital's maternity department before your due date to confirm their current visitor policy." },
       { q: "What postpartum resources are available in Long Beach?" , a: "Long Beach offers the Comprehensive Perinatal Services Program through community clinics, lactation support at MemorialCare, the Cambodian Advocacy Collaborative for culturally rooted postpartum care, and the Black Infant Health Program through the City of Long Beach Health Department." }
     ],
-    nearbyCities: ["los-angeles-ca" , "san-diego-ca" , "bakersfield-ca"]},
+    nearbyCities: ["los-angeles-ca", "san-diego-ca", "bakersfield-ca"]},
   "oakland-ca": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2299,7 +2389,16 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in Oakland?" , a: "Yes. Highland and Kaiser Oakland both allow doulas. Oakland hospitals have been especially supportive of doula accompaniment given the city's birth-justice culture. Still, call ahead to confirm current policies." },
       { q: "What postpartum resources are available in Oakland?" , a: "Oakland is rich in postpartum support: the Black Infant Health Program through Alameda County Public Health, Roots Community Birth Center's postpartum circles, lactation support at Highland Hospital, and Alameda County WIC offices for breastfeeding help and nutrition support." }
     ],
-    nearbyCities: ["san-francisco-ca" , "san-jose-ca" , "sacramento-ca" , "stockton-ca"]},
+    nearbyCities: ["san-francisco-ca", "san-jose-ca", "sacramento-ca", "stockton-ca"],
+    birthStats: {
+      cesareanRate: 32.0,
+      maternalMortalityRate: 4.0,
+      homeBirthRate: 1.0,
+      birthCenterBirthRate: 0.4,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "bakersfield-ca": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2340,14 +2439,23 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in Bakersfield?" , a: "Yes. Kern Medical and Bakersfield Memorial both allow doulas as part of your birth team. Call the maternity unit ahead of time to confirm their current policy." },
       { q: "What postpartum resources are available in Bakersfield?" , a: "Bakersfield offers the Kern County Black Infant Health Program, lactation support through Kern Medical's WIC office, postpartum support groups at Adventist Health Bakersfield, and the Comprehensive Perinatal Services Program (CPSP) at local community health centers." }
     ],
-    nearbyCities: ["fresno-ca" , "los-angeles-ca" , "san-diego-ca"],
+    nearbyCities: ["fresno-ca", "los-angeles-ca", "san-diego-ca"],
     midwifeInfo: {
       paragraph: "California licenses Certified Nurse-Midwives (CNMs) through the Board of Registered Nursing and Licensed Midwives (LMs) through the Medical Board of California. In Bakersfield, CNMs practice at Kern Medical and Adventist Health, while Licensed Midwives serve the home birth and birth center community throughout Kern County. Justine Backhaus, LM, CPM, IBCLC, founded Bakersfield Birth Center and has attended births for over 12 years. Leah Elliott, DNP, MSN-ED, RNC, IBCLC, CNM, is a Certified Nurse Midwife who also teaches obstetrics at Bakersfield College. The Central Valley has a growing midwifery presence, with several LMs attending home births for families seeking out-of-hospital care." ,
       credentialTypes: " and LMs" ,
       credentialDetail: "In California, Certified Nurse-Midwives (CNMs) are licensed by the Board of Registered Nursing and practice in hospital settings, while Licensed Midwives (LMs) are licensed by the Medical Board to attend out-of-hospital births. Bakersfield families have access to both pathways, with CNMs at Kern Medical and Adventist Health, and Licensed Midwife Justine Backhaus, LM, CPM, IBCLC, serving home birth and birth center families through Bakersfield Birth Center."
     },
     lat: 35.3733,
-    lng: -119.0187},
+    lng: -119.0187,
+    birthStats: {
+      cesareanRate: 32.0,
+      maternalMortalityRate: 4.0,
+      homeBirthRate: 1.0,
+      birthCenterBirthRate: 0.4,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "stockton-ca": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2385,7 +2493,7 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in Stockton?" , a: "Yes. St. Joseph's and Dameron both allow doulas to accompany you during labor. It's always smart to call the maternity unit ahead of your delivery to confirm their current support-person policies." },
       { q: "What postpartum resources are available in Stockton?" , a: "Stockton offers postpartum support through the San Joaquin County Black Infant Health Program, WIC lactation consultants at community clinics, the Comprehensive Perinatal Services Program (CPSP) at local health centers, and parenting groups through the Family Resource and Referral Center." }
     ],
-    nearbyCities: ["sacramento-ca" , "fresno-ca" , "oakland-ca" , "san-francisco-ca"]},
+    nearbyCities: ["sacramento-ca", "fresno-ca", "oakland-ca", "san-francisco-ca"]},
   "buffalo-ny": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2422,7 +2530,7 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in Buffalo?" , a: "Yes. Oishei Children's Hospital and Mercy Hospital both allow doulas as part of your support team. Call the maternity unit ahead of time to confirm their current visitor and support-person policies." },
       { q: "What postpartum resources are available in Buffalo?" , a: "Buffalo offers the Erie County WIC program's lactation consultants, the Buffalo Prenatal Perinatal Network's home visiting program, Jericho Road Community Health Center for culturally responsive care, and postpartum depression support groups through the Mental Health Advocates of WNY." }
     ],
-    nearbyCities: ["rochester-ny" , "albany-ny" , "new-york-ny"]},
+    nearbyCities: ["rochester-ny", "albany-ny", "new-york-ny"]},
   "rochester-ny": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2463,7 +2571,16 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in Rochester?" , a: "Yes \u2014 Strong Memorial and Rochester General both welcome doulas as part of your labor support team. Call your hospital's maternity unit before your due date to confirm their current policies." },
       { q: "What postpartum resources are available in Rochester?" , a: "Rochester has solid postpartum resources: the Monroe County WIC program's lactation services, Highland Hospital midwifery practice's postpartum care, the Baby Love Program at Anthony L. Jordan Health Center for Black moms, and the Perinatal Network of Monroe County for peer support and referrals." }
     ],
-    nearbyCities: ["buffalo-ny" , "albany-ny" , "new-york-ny"]},
+    nearbyCities: ["buffalo-ny", "albany-ny", "new-york-ny"],
+    birthStats: {
+      cesareanRate: 33.1,
+      maternalMortalityRate: 20.5,
+      homeBirthRate: 0.7,
+      birthCenterBirthRate: 0.2,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "albany-ny": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2507,7 +2624,7 @@ export const cities: Record<string, CityData> = {
       { q: "Can I bring my doula to hospitals in Albany?" , a: "Yes. Albany Medical Center and St. Peter's both allow doulas during labor and delivery. Call ahead to your hospital's maternity unit to confirm their current support-person policies." },
       { q: "What postpartum resources are available in Albany?" , a: "Albany offers the Albany County WIC program for lactation support and nutrition, the REACH Program at Albany Med for high-risk moms, postpartum support groups through St. Peter's maternity services, and the Capital District Perinatal Network for peer support and home visiting programs." }
     ],
-    nearbyCities: ["rochester-ny" , "buffalo-ny" , "new-york-ny" , "hartford-ct"]},
+    nearbyCities: ["rochester-ny", "buffalo-ny", "new-york-ny", "hartford-ct"]},
 
   "oklahoma-city-ok": {
     enableBlogResources: true,
@@ -2613,7 +2730,7 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals in Columbus accommodate birth plans?" , a: "OhioHealth Riverside Methodist Hospital, The Ohio State University Wexner Medical Center, and Mount Carmel East Hospital all have active L&D departments. There are no freestanding birth centers currently operating in the Columbus metro area." },
       { q: "Does True Joy Birthing work with Columbus families?" , a: "True Joy Birthing provides free birth-prep tools for Columbus families. The free birth plan, checklist, and guided walkthrough in the app work for any Columbus birth setting. The app also helps you connect with local doulas and midwives in your area." }
     ],
-    nearbyCities: ["detroit-mi" , "pittsburgh-pa"]},
+    nearbyCities: ["detroit-mi", "pittsburgh-pa"]},
   "cleveland-oh": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2643,7 +2760,7 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals in Cleveland accommodate birth plans?" , a: "Cleveland Clinic, University Hospitals MacDonald Women\u2019s Hospital, and MetroHealth Medical Center all have L&D departments. There are no freestanding birth centers currently operating in the Cleveland area." },
       { q: "Does True Joy Birthing work with Cleveland families?" , a: "True Joy Birthing provides free birth-prep tools for Cleveland families. The free birth plan, checklist, and guided walkthrough in the app work for any Cleveland birth setting. The app also helps you connect with local doulas and midwives in your area." }
     ],
-    nearbyCities: ["pittsburgh-pa" , "detroit-mi"]},
+    nearbyCities: ["pittsburgh-pa", "detroit-mi"]},
   "indianapolis-in": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2716,7 +2833,16 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Reno families?" , a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Reno birth setting, whether you\u2019re delivering at Renown, Sierra, Carson Tahoe, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
       { q: "Are there doulas in Reno?" , a: "Reno has a growing doula community anchored by the DOULA CO-OP of Nevada, which lists 20+ birth and postpartum doulas serving the greater Truckee Meadows. The co-op\u2019s partnership with Renown Medical Center means some doulas are hospital-credentialed with volunteer badge access. Start with the True Joy Birthing app to find local doulas, and interview a few until one clicks." },
       { q: "Can my doula come to the hospital with me in Reno?" , a: "Yes \u2014 Renown Regional Medical Center, Sierra Medical Center, Carson Tahoe, and Barton Memorial all allow doulas in L&D. Policies can change, especially during flu season or COVID surges, so confirm with your hospital during your tour. Having your birth plan ready helps your care team know your preferences from the moment you walk in." } ],
-    nearbyCities: ["las-vegas-nv"]},
+    nearbyCities: ["las-vegas-nv"],
+    birthStats: {
+      cesareanRate: 30.5,
+      maternalMortalityRate: 16.7,
+      homeBirthRate: 1.5,
+      birthCenterBirthRate: 0.3,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "tucson-az": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2763,7 +2889,16 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Tucson families?" , a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Tucson birth setting, whether you\u2019re delivering at TMC, Banner, Northwest, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
       { q: "Are there doulas in Tucson?" , a: "Tucson has an active doula community, from independent birth doulas to organizations like Doula Train Pima County that offer sliding-scale support. The Arizona Birth Network maintains a local provider directory. Start with the True Joy Birthing app to find local doulas, and interview a few until one feels right." },
       { q: "Can my doula come to the hospital with me in Tucson?" , a: "Yes \u2014 TMC, Banner UMC, and Northwest Medical Center all allow doulas in labor and delivery. Visitor policies can shift, especially during flu season, so confirm with your hospital during your tour. Having a birth plan ready helps your care team support your preferences from the start." } ],
-    nearbyCities: ["phoenix-az"]},
+    nearbyCities: ["phoenix-az"],
+    birthStats: {
+      cesareanRate: 29.5,
+      maternalMortalityRate: 30.0,
+      homeBirthRate: 1.8,
+      birthCenterBirthRate: 0.6,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "memphis-tn": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2830,7 +2965,7 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with St. Augustine families?" , a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any St. Augustine birth setting. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
       { q: "Are there doulas in St. Augustine?" , a: "St. Augustine has a small local doula community, and Jacksonville-based doulas regularly serve St. Augustine families. The True Joy Birthing app can help you find local doulas \u2014 start there and interview a few until one feels right." },
       { q: "Can my doula come to the hospital with me in St. Augustine?" , a: "Yes \u2014 UF Health Flagler Hospital allows doulas in labor and delivery. Since Flagler is the only L&D hospital in St. Johns County, confirming your birth plan and doula arrangements during your hospital tour is especially important. Your doula will be familiar with Flagler\u2019s layout and policies." } ],
-    nearbyCities: ["gainesville-fl" , "orlando-fl"]},
+    nearbyCities: ["gainesville-fl", "orlando-fl"]},
   "gainesville-fl": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2866,7 +3001,7 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Gainesville families?" , a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Gainesville birth setting \u2014 whether you\u2019re delivering at Shands, North Florida Regional, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
       { q: "Are there doulas in Gainesville?" , a: "Gainesville has an active doula community, including student-doula programs through UF\u2019s nursing and public health programs. Sliding-scale support is available through community organizations. Start with the True Joy Birthing app to find local doulas, and interview a few until one feels right." },
       { q: "Can my doula come to the hospital with me in Gainesville?" , a: "Yes \u2014 both UF Health Shands and North Florida Regional allow doulas in labor and delivery. UF Health Shands\u2019 academic setting means they\u2019re used to working with doulas and birth plans. Confirm during your hospital tour, and bring your birth plan to help your care team support your preferences." } ],
-    nearbyCities: ["st-augustine-fl" , "orlando-fl"]},
+    nearbyCities: ["st-augustine-fl", "orlando-fl"]},
   "charleston-sc": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2900,7 +3035,16 @@ export const cities: Record<string, CityData> = {
       { q: "Is there a birth center in Charleston?" , a: "Yes. Charleston Birth Place in Mount Pleasant is the area\u2019s only freestanding birth center. It\u2019s run by certified midwives, offers water birth, and has a close transfer partnership with a nearby hospital. It\u2019s been serving Lowcountry families since 2008." },
       { q: "How much does a doula cost in Charleston, SC?" , a: "Expect to pay $900 to $2,200 for a doula in Charleston, depending on experience level and package inclusions. If you\u2019re on Medicaid, SCDHHS covers doula services. ask your doula if they\u2019re enrolled. <a href=\"/birth-plan-template/\">Start with the free birth plan template</a> to figure out what matters most to you." },
       { q: "Should I worry about hurricane season when planning a Charleston birth?" , a: "Charleston\u2019s hurricane season runs June 1 through November 30, which overlaps with many due dates. It\u2019s wise to have an evacuation plan, a hospital bag packed early, and a communication plan with your doula in case of severe weather. MUSC and Roper both have robust emergency protocols; your care team can guide you." } ],
-    nearbyCities: ["greenville-sc"]},
+    nearbyCities: ["charleston-sc"],
+    birthStats: {
+      cesareanRate: 33.0,
+      maternalMortalityRate: 29.7,
+      homeBirthRate: 1.0,
+      birthCenterBirthRate: 0.2,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "richmond-va": {
     heroImage: "/images/richmond-va-birth-doula-hero-rva.webp",
     supportSceneImage: "/images/richmond-va-birth-doula-support.webp",
@@ -2946,7 +3090,16 @@ export const cities: Record<string, CityData> = {
       midwifeType: "CNM only (no CPM licensing)",
       homeBirthLegal: "Restricted. CNMs only, physician supervision required"
     } ,
-    nearbyCities: ["virginia-beach-va"]},
+    nearbyCities: ["virginia-beach-va"],
+    birthStats: {
+      cesareanRate: 31.6,
+      maternalMortalityRate: 20.9,
+      homeBirthRate: 1.1,
+      birthCenterBirthRate: 0.3,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "grand-rapids-mi": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -3013,7 +3166,16 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Aurora families?" , a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Aurora birth setting \u2014 whether you\u2019re delivering at UCHealth, Sky Ridge, or at home. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
       { q: "Are there birth centers near Aurora?" , a: "There are no freestanding birth centers within Aurora city limits. Mountain Midwifery & Birth Center in Denver (about 10 miles west) is the nearest option, offering water birth and midwifery care. For families in south Aurora, Sky Ridge Medical Center provides midwifery options within a hospital setting." },
       { q: "Can my doula come to the hospital with me in Aurora?" , a: "Yes \u2014 both UCHealth and Sky Ridge allow doulas in labor and delivery. The Anschutz campus\u2019s academic setting means they\u2019re especially accustomed to birth plans and doula support. Confirm during your hospital tour, and bring your birth plan to help your care team support your preferences." } ],
-    nearbyCities: ["fort-collins-co"]},
+    nearbyCities: ["fort-collins-co"],
+    birthStats: {
+      cesareanRate: 30.5,
+      maternalMortalityRate: 18.0,
+      homeBirthRate: 2.3,
+      birthCenterBirthRate: 0.9,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "new-haven-ct": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -3165,7 +3327,16 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Meridian families?" , a: "Yes \u2014 and it\\u2019s free. True Joy Birthing\\u2019s birth plan app, checklist, and guided walkthrough work for any Meridian birth setting, whether you\\u2019re delivering at St. Luke\\u2019s Meridian, Boise Birth Center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." },
       { q: "Which hospitals in Meridian accommodate birth plans?" , a: "St. Luke\\u2019s Meridian is the primary in-city hospital with a Level II Special Care Nursery and Baby-Friendly designation. St. Luke\\u2019s Nampa (15\\u201320 min west) serves Canyon County families. For high-risk pregnancies, St. Luke\\u2019s Boise has Idaho\\u2019s only Level IV NICU and full maternal-fetal medicine \u2014 about 15\\u201320 minutes east. Doulas are generally welcome at all three. Always confirm current visitor and support-person policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
       { q: "Are there birth centers near Meridian?" , a: "No freestanding birth centers currently operate within Meridian city limits. Boise Birth Center, about 8\\u201310 miles away, is the Treasure Valley\\u2019s established freestanding birth center \u2014 offering water birth and midwife-led care. Several licensed CPMs and CNMs also attend home births throughout the Meridian/Boise metro. Idaho has licensed CPMs since 2010, giving the state a more robust out-of-hospital birth infrastructure than many places. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center, hospital, or home birth is right for you." } ],
-    nearbyCities: ["boise-id"]},
+    nearbyCities: ["meridian-id"],
+    birthStats: {
+      cesareanRate: 28.1,
+      maternalMortalityRate: 16.2,
+      homeBirthRate: 2.5,
+      birthCenterBirthRate: 0.6,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "lehi-ut": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -3203,7 +3374,7 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals near Lehi accommodate birth plans?" , a: "American Fork Hospital (Level II NICU, ~6 miles), Utah Valley Hospital (Level III NICU, ~15 miles), and Timpanogos Regional Hospital in Orem (Level II NICU, ~10 miles) all offer L&D services and generally accommodate birth plans under Intermountain Health\u2019s policy. Utah Valley Hospital is the go-to for high-risk pregnancies \u2014 it\u2019s the only Level III NICU in Utah County. Always confirm your hospital\u2019s current visitor and support-person policy during your tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
       { q: "Are there birth centers in Lehi?" , a: "No \u2014 there are currently no freestanding birth centers in Lehi or anywhere in Utah County. The nearest birth centers are in Salt Lake City, about 30\u201345 minutes north. Utah families seeking an out-of-hospital birth typically work with licensed home-birth midwives. CPMs became licensable in Utah starting around 2017, which has expanded home birth options. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a hospital or home birth is right for you." },
       { q: "Does True Joy Birthing work with Lehi families?" , a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Lehi birth setting, whether you\u2019re delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." } ],
-    nearbyCities: ["sandy-ut" , "salt-lake-city-ut"]},
+    nearbyCities: ["lehi-ut"]},
   "port-st-lucie-fl": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -3245,7 +3416,7 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals in Port St. Lucie accommodate birth plans?" , a: "Cleveland Clinic Martin Health \u2013 Tradition Hospital (Level II NICU), Cleveland Clinic Martin Health \u2013 Martin North Hospital in Stuart (Level III NICU, highest-level in the Treasure Coast), and St. Lucie Medical Center (Level II NICU) all offer labor and delivery and generally accommodate birth plans. Doulas are welcomed at all three \u2014 confirm current visitor and support-person policies during your hospital tour. For the most complex neonatal cases, Martin North\u2019s Level III NICU is the regional referral center. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
       { q: "Are there birth centers in Port St. Lucie?" , a: "No \u2014 there are no freestanding birth centers in Port St. Lucie, Jensen Beach, or the broader Treasure Coast region as of 2026. Florida\u2019s birth center regulations and lack of CPM licensure make out-of-hospital birth options very limited. Cleveland Clinic Martin Health offers midwifery-model care within the hospital setting for families seeking a lower-intervention approach. The nearest freestanding birth centers are approximately 45\u201360 minutes south in Palm Beach County. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a hospital birth center-style program or a longer drive to a freestanding birth center is right for you." },
       { q: "Does True Joy Birthing work with Port St. Lucie families?" , a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Port St. Lucie birth setting, whether you\u2019re delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." } ],
-    nearbyCities: ["st-augustine-fl" , "orlando-fl" , "miami-fl"]},
+    nearbyCities: ["st-augustine-fl", "orlando-fl", "port-st-lucie-fl"]},
   "worcester-ma": {
     enableBlogResources: true,
     city: "Worcester" ,
@@ -3271,7 +3442,7 @@ export const cities: Record<string, CityData> = {
       { q: "Are there birth centers in Worcester?" , a: "No \u2014 there are no freestanding birth centers in Worcester as of 2026. The nearest birth center is Birth Sanctuary Cambridge, approximately 45 minutes east. UMass Memorial offers midwifery-model care within the hospital setting for families seeking a lower-intervention approach. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through your options." },
       { q: "Does True Joy Birthing work with Worcester families?" , a: "True Joy Birthing provides free birth-prep tools for Worcester families. The free birth plan, checklist, and guided walkthrough in the app work for any Worcester birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Worcester?" , a: "Worcester has a growing postpartum support network, including community health centers that offer lactation consulting and support groups. UMass Memorial\u2019s postpartum unit provides initial lactation support, and local doulas often include postpartum visits in their packages. If you\u2019re looking for ongoing postpartum doula support, start your search during pregnancy \u2014 the community is smaller than Boston\u2019s and providers book up. <a href=\"/blog/postpartum-doula/\">Learn more about postpartum doula support</a>." } ],
-    nearbyCities: ["boston-ma" , "providence-ri" , "hartford-ct"],
+    nearbyCities: ["boston-ma", "providence-ri", "hartford-ct"],
     publishedDate: "2026-06-08" ,
     lat: 42.2626,
     lng: -71.8019},
@@ -3306,7 +3477,7 @@ export const cities: Record<string, CityData> = {
       { q: "Are there birth centers in Springfield?" , a: "No \u2014 there are no freestanding birth centers in Springfield as of 2026. Both Memorial Medical Center and HSHS St. John\u2019s offer midwifery-model care within the hospital setting. For families seeking a birth center experience, the nearest options are in the Chicago area, approximately 200 miles north. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through your options." },
       { q: "Does True Joy Birthing work with Springfield families?" , a: "True Joy Birthing provides free birth-prep tools for Springfield families. The free birth plan, checklist, and guided walkthrough in the app work for any Springfield birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Springfield?" , a: "Springfield has community health centers and hospital-based lactation support, but the postpartum doula community is small. If you\u2019re looking for ongoing postpartum support, start your search during pregnancy. Some local doulas include postpartum visits in their birth packages, and a few offer postpartum-only packages. <a href=\"/blog/postpartum-doula/\">Learn more about postpartum doula support</a>." } ],
-    nearbyCities: ["chicago-il" , "indianapolis-in"],
+    nearbyCities: ["chicago-il", "indianapolis-in"],
     publishedDate: "2026-06-08" ,
     lat: 39.7990,
     lng: -89.6440},
@@ -3345,7 +3516,7 @@ export const cities: Record<string, CityData> = {
       { q: "Are there birth centers in Columbia?" , a: "No \u2014 there are no freestanding birth centers in Columbia or Howard County as of 2026. Howard County General Hospital offers midwifery-model care within the hospital setting. The nearest freestanding birth center options are in the Baltimore area. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through what\u2019s right for your birth." },
       { q: "Does True Joy Birthing work with Columbia families?" , a: "True Joy Birthing provides free birth-prep tools for Columbia families. The free birth plan, checklist, and guided walkthrough in the app work for any Columbia birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Columbia?" , a: "Columbia has strong lactation support through Howard County General Hospital and local pediatric practices. The postpartum doula community draws from both Baltimore and DC networks, so you\u2019ll find more options than in most suburbs. Start your search during pregnancy if you want ongoing postpartum support. <a href=\"/blog/postpartum-doula/\">Learn more about postpartum doula support</a>." } ],
-    nearbyCities: ["baltimore-md" , "richmond-va" , "virginia-beach-va"],
+    nearbyCities: ["baltimore-md", "richmond-va", "virginia-beach-va"],
     publishedDate: "2026-06-08" ,
     lat: 39.2139,
     lng: -76.8558},
@@ -3387,7 +3558,7 @@ export const cities: Record<string, CityData> = {
       { q: "Are there birth centers in Gaithersburg?" , a: "No. there are no freestanding birth centers in Gaithersburg as of 2026. Adventist HealthCare’s “Birth Center” at Shady Grove is a hospital-based labor and delivery unit, not a freestanding birth center. Rock Creek Midwifery offers home birth services in Montgomery County for families seeking an out-of-hospital option. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through what’s right for your birth." },
       { q: "Does True Joy Birthing work with Gaithersburg families?" , a: "True Joy Birthing provides free birth-prep tools for Gaithersburg families. The free birth plan, checklist, and guided walkthrough in the app work for any Gaithersburg birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Gaithersburg?" , a: "Gaithersburg has hospital-based lactation support through Adventist HealthCare Shady Grove and local pediatric practices. The postpartum doula community draws from the broader Montgomery County and DC network, so you’ll find options ranging from affordable community doulas to premium overnight support. Start your search during pregnancy if you want ongoing postpartum support. <a href=\"/blog/postpartum-doula/\">Learn more about postpartum doula support</a>." } ],
-    nearbyCities: ["columbia-md" , "rockville-md" , "silver-spring-md"],
+    nearbyCities: ["columbia-md", "rockville-md", "baltimore-md"],
     publishedDate: "2026-07-12" ,
     lat: 39.1434,
     lng: -77.2014},
@@ -3536,10 +3707,19 @@ export const cities: Record<string, CityData> = {
       { q: "Are there birth centers in Norfolk?" , a: "No \u2014 there are no verified freestanding birth centers in Norfolk as of 2026. Families seeking a birth center experience can explore options in the Richmond area or consider midwifery-model care at Sentara Norfolk General. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through your options." },
       { q: "Does True Joy Birthing work with Norfolk families?" , a: "True Joy Birthing provides free birth-prep tools for Norfolk families. The free birth plan, checklist, and guided walkthrough in the app work for any Norfolk birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Norfolk?" , a: "Norfolk has hospital-based lactation support at Sentara and CHKD. The postpartum doula community in Hampton Roads is growing. Start your search during pregnancy if you want ongoing postpartum support. <a href=\"/blog/postpartum-doula/\">Learn more about postpartum doula support</a>." } ],
-    nearbyCities: ["chesapeake-va" , "virginia-beach-va" , "newport-news-va" , "hampton-va"],
+    nearbyCities: ["chesapeake-va", "virginia-beach-va", "norfolk-va", "richmond-va"],
     publishedDate: "2026-06-08" ,
     lat: 36.8945,
-    lng: -76.259},
+    lng: -76.259,
+    birthStats: {
+      cesareanRate: 31.6,
+      maternalMortalityRate: 20.9,
+      homeBirthRate: 1.1,
+      birthCenterBirthRate: 0.3,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "fremont-ca": {
     publishedDate: "2026-06-22",
     city: "Fremont" ,
@@ -3755,7 +3935,7 @@ export const cities: Record<string, CityData> = {
       { q: "Are there birth centers in Fremont?" , a: "No \u2014 there are no verified freestanding birth centers in Fremont as of 2026. The nearest birth center options are in Palo Alto and Oakland. For hospital-based care, many Fremont families choose between Washington Hospital and El Camino Health in Mountain View. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through your options." },
       { q: "Does True Joy Birthing work with Fremont families?" , a: "True Joy Birthing provides free birth-prep tools for Fremont families. The free birth plan, checklist, and guided walkthrough in the app work for any Fremont birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Fremont?" , a: "Fremont has hospital-based lactation support at Washington Hospital and several local pediatric practices. The East Bay postpartum doula community is strong. Start your search during pregnancy if you want ongoing postpartum support. <a href=\"/blog/postpartum-doula/\">Learn more about postpartum doula support</a>." } ],
-    nearbyCities: ["san-jose-ca" , "oakland-ca" , "hayward-ca" , "pleasanton-ca"],
+    nearbyCities: ["san-jose-ca", "oakland-ca", "fremont-ca", "sacramento-ca"],
     publishedDate: "2026-06-08" ,
     lat: 37.5256,
     lng: -121.987,
@@ -3858,13 +4038,31 @@ export const cities: Record<string, CityData> = {
       { q: "How much does a doula cost in Vancouver?" , a: "Expect to pay $1,200 to $2,800 for a doula in Vancouver. Vancouver rates are comparable to Portland pricing. The investment typically covers prenatal visits, labor support, and postpartum check-ins. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start thinking about what matters most to you." },
       { q: "Does Apple Health cover doulas in Vancouver?" , a: "Yes \u2014 Washington\u2019s Apple Health program covers doula services. Washington was an early adopter of Medicaid doula coverage and has one of the most established programs in the nation. Ask your doula upfront whether they are a Washington State Medicaid-enrolled provider. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> and make sure your doula team knows your preferences." },
       { q: "Which hospitals in Vancouver accommodate birth plans?" , a: "PeaceHealth Southwest Medical Center and Legacy Salmon Creek Medical Center both accommodate birth plans and are used to working with doulas. PeaceHealth has the Holtzman Twins NICU and is the busiest OB unit north of San Francisco. Legacy Salmon Creek has a modern facility with its own NICU and children\u2019s ER. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
-      { q: "Are there birth centers in Vancouver?" , a: "Yes \u2014 The Bridge Birth Center is Vancouver's freestanding birth center, offering full-service midwifery care at 3300 NE 54th Street. Both PeaceHealth Southwest and Legacy Salmon Creek also offer midwifery-model care within the hospital setting. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through your options." },
+      { q: "Are there birth centers in Vancouver?" , a: "Yes \u2014 The Bridge Birth Center is Vancouver's freestanding birth center, offering full-service midwifery care at 3300 NE 54th Street. Both PeaceHealth Southwest and Legacy Salmon Creek also offer midwifery-model care within the hospital setting. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through your options.",
+    birthStats: {
+      cesareanRate: 32.0,
+      maternalMortalityRate: 4.0,
+      homeBirthRate: 1.0,
+      birthCenterBirthRate: 0.4,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+ },
       { q: "Does True Joy Birthing work with Vancouver families?" , a: "True Joy Birthing provides free birth-prep tools for Vancouver families. The free birth plan, checklist, and guided walkthrough in the app work for any Vancouver birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Vancouver?" , a: "Vancouver has hospital-based lactation support at both PeaceHealth and Legacy Salmon Creek. The postpartum doula community in the Portland-Vancouver metro is strong. Start your search during pregnancy if you want ongoing postpartum support. <a href=\"/blog/postpartum-doula/\">Learn more about postpartum doula support</a>." } ],
-    nearbyCities: ["portland-or" , "beaverton-or" , "hillsboro-or" , "tacoma-wa"],
+    nearbyCities: ["portland-or", "eugene-or", "tacoma-wa"],
     publishedDate: "2026-06-08" ,
     lat: 45.6352,
-    lng: -122.5972},
+    lng: -122.5972,
+    birthStats: {
+      cesareanRate: 30.5,
+      maternalMortalityRate: 18.0,
+      homeBirthRate: 2.3,
+      birthCenterBirthRate: 0.9,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+  },
   "moreno-valley-ca": {
     publishedDate: "2026-06-22",
     city: "Moreno Valley" ,
@@ -3917,10 +4115,19 @@ export const cities: Record<string, CityData> = {
       { q: "Are there birth centers in Moreno Valley?" , a: "Moreno Valley does not have freestanding birth centers within city limits. Families seeking a birth center experience can explore options in the wider Inland Empire or Los Angeles areas. Kaiser Moreno Valley provides hospital-based maternity care with private rooms. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through your options." },
       { q: "Does True Joy Birthing work with Moreno Valley families?" , a: "True Joy Birthing provides free birth-prep tools for Moreno Valley families. The free birth plan, checklist, and guided walkthrough in the app work for any Moreno Valley birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Moreno Valley?" , a: "Moreno Valley has hospital-based lactation support at Kaiser Permanente Moreno Valley Medical Center. The Inland Empire postpartum doula community is growing. Start your search during pregnancy if you want ongoing postpartum support. <a href=\"/blog/postpartum-doula/\">Learn more about postpartum doula support</a>." } ],
-    nearbyCities: ["san-bernardino-ca" , "fontana-ca" , "riverside-ca"],
+    nearbyCities: ["san-bernardino-ca", "fontana-ca", "sacramento-ca"],
     publishedDate: "2026-06-12" ,
     lat: 33.9244,
-    lng: -117.2045},
+    lng: -117.2045,
+    birthStats: {
+      cesareanRate: 32.0,
+      maternalMortalityRate: 4.0,
+      homeBirthRate: 1.0,
+      birthCenterBirthRate: 0.4,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "fontana-ca": {
     city: "Fontana" ,
     state: "CA" ,
@@ -3970,9 +4177,18 @@ export const cities: Record<string, CityData> = {
       { q: "Are there birth centers in Fontana?" , a: "Fontana does not have freestanding birth centers within city limits, but The Natural Birth Place in nearby Rancho Cucamonga (about 8 miles away) offers out-of-hospital birth with licensed midwives and water birth options. Kaiser Fontana provides hospital-based maternity care with private rooms. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through your options." },
       { q: "Does True Joy Birthing work with Fontana families?" , a: "True Joy Birthing provides free birth-prep tools for Fontana families. The free birth plan, checklist, and guided walkthrough in the app work for any Fontana birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Fontana?" , a: "Fontana has hospital-based lactation support at Kaiser Permanente Fontana Medical Center. The Inland Empire postpartum doula community is growing. Start your search during pregnancy if you want ongoing postpartum support. <a href=\"/blog/postpartum-doula/\">Learn more about postpartum doula support</a>." } ],
-    nearbyCities: ["san-bernardino-ca" , "rancho-cucamonga-ca" , "ontario-ca" , "riverside-ca"],
+    nearbyCities: ["san-bernardino-ca", "sacramento-ca", "san-francisco-ca", "moreno-valley-ca"],
     lat: 34.0967,
-    lng: -117.4599},
+    lng: -117.4599,
+    birthStats: {
+      cesareanRate: 32.0,
+      maternalMortalityRate: 4.0,
+      homeBirthRate: 1.0,
+      birthCenterBirthRate: 0.4,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "san-bernardino-ca": {
     publishedDate: "2026-06-22",
     city: "San Bernardino" ,
@@ -4020,7 +4236,7 @@ export const cities: Record<string, CityData> = {
       { q: "Are there birth centers in San Bernardino?" , a: "San Bernardino has hospital-based birth centers at both Dignity Health facilities. For freestanding birth center options, families can explore choices in the greater Inland Empire or Los Angeles areas. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through your options." },
       { q: "Does True Joy Birthing work with San Bernardino families?" , a: "True Joy Birthing provides free birth-prep tools for San Bernardino families. The free birth plan, checklist, and guided walkthrough in the app work for any San Bernardino birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in San Bernardino?" , a: "San Bernardino has hospital-based lactation support at both Dignity Health hospitals. The Inland Empire postpartum doula community is growing. Start your search during pregnancy if you want ongoing postpartum support. <a href=\"/blog/postpartum-doula/\">Learn more about postpartum doula support</a>." } ],
-    nearbyCities: ["riverside-ca" , "fontana-ca" , "rancho-cucamonga-ca" , "ontario-ca"],
+    nearbyCities: ["san-bernardino-ca", "fontana-ca", "sacramento-ca", "san-francisco-ca"],
     publishedDate: "2026-06-12" ,
     lat: 34.1412,
     lng: -117.2936},
@@ -4077,10 +4293,19 @@ export const cities: Record<string, CityData> = {
       { q: "Are there birth centers in Chesapeake?" , a: "No. there are no freestanding birth centers in Fremont itself, but Pacifica Family Maternity Center in Berkeley, Casa Natal in Los Gatos, and San Francisco Birth Center all serve Bay Area families willing to travel centers in Chesapeake as of 2026. Families seeking a birth center experience can explore options in the Richmond area or consider midwifery-model care at Chesapeake Regional Medical Center. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through your options." },
       { q: "Does True Joy Birthing work with Chesapeake families?" , a: "True Joy Birthing provides free birth-prep tools for Chesapeake families. The free birth plan, checklist, and guided walkthrough in the app work for any Chesapeake birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Chesapeake?" , a: "Chesapeake has hospital-based lactation support at The BirthPlace. The postpartum doula community in Hampton Roads is growing. Start your search during pregnancy if you want ongoing postpartum support. <a href=\"/blog/postpartum-doula/\">Learn more about postpartum doula support</a>." } ],
-    nearbyCities: ["norfolk-va" , "virginia-beach-va" , "portsmouth-va" , "suffolk-va"],
+    nearbyCities: ["norfolk-va", "virginia-beach-va", "chesapeake-va", "richmond-va"],
     publishedDate: "2026-06-12" ,
     lat: 36.6778,
-    lng: -76.3024},
+    lng: -76.3024,
+    birthStats: {
+      cesareanRate: 31.6,
+      maternalMortalityRate: 20.9,
+      homeBirthRate: 1.1,
+      birthCenterBirthRate: 0.3,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "charlotte-nc": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -4122,7 +4347,16 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals in Charlotte accommodate birth plans?" , a: "Atrium Health Carolinas Medical Center (Level IV NICU, verified on atriumhealth.org) and Novant Health Presbyterian Medical Center (Level III NICU, verified on novanthealth.org) both accommodate birth plans and handle high volumes of births. Always confirm your hospital's current visitor and support-person policies during your tour." },
       { q: "How much does a doula cost in Charlotte?" , a: "Expect to pay $900 to $2,500 for a doula in Charlotte. If you're looking for bilingual support, reach out early. those spots fill fast. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
       { q: "Does True Joy Birthing work with Charlotte families?" , a: "Yes. and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Charlotte birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way. no signup required." } ],
-    nearbyCities: ["concord-nc" , "greenville-sc"]},
+    nearbyCities: ["charlotte-nc", "charleston-sc"],
+    birthStats: {
+      cesareanRate: 32.9,
+      maternalMortalityRate: 27.9,
+      homeBirthRate: 1.2,
+      birthCenterBirthRate: 0.3,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "rockville-md": {
     enableBlogResources: true,
     publishedDate: "2026-07-13",
@@ -4163,10 +4397,19 @@ export const cities: Record<string, CityData> = {
       { q: "Are there birth centers in Rockville?" , a: "No \u2014 there are no freestanding birth centers in Rockville as of 2026. Adventist HealthCare\u2019s \u201cBirth Center\u201d at Shady Grove is a hospital-based labor and delivery unit, not a freestanding birth center. Rock Creek Midwifery offers home birth services in Montgomery County for families seeking an out-of-hospital option. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through what\u2019s right for your birth." },
       { q: "Does True Joy Birthing work with Rockville families?" , a: "True Joy Birthing provides free birth-prep tools for Rockville families. The free birth plan, checklist, and guided walkthrough in the app work for any Rockville birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Rockville?" , a: "Rockville has hospital-based lactation support through Adventist HealthCare Shady Grove and local pediatric practices. The postpartum doula community draws from the broader Montgomery County and DC network, including agencies like Metropolitan Doulas and independent practitioners. Start your search during pregnancy if you want ongoing postpartum support. <a href=\"/blog/postpartum-doula/\">Learn more about postpartum doula support</a>." } ],
-    nearbyCities: ["gaithersburg-md" , "columbia-md" , "baltimore-md"],
+    nearbyCities: ["gaithersburg-md", "columbia-md", "baltimore-md"],
     publishedDate: "2026-07-13" ,
     lat: 39.0840,
-    lng: -77.1528},
+    lng: -77.1528,
+    birthStats: {
+      cesareanRate: 33.4,
+      maternalMortalityRate: 26.6,
+      homeBirthRate: 0.8,
+      birthCenterBirthRate: 0.2,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
   "laurel-md": {
     enableBlogResources: true,
     publishedDate: "2026-07-13",
@@ -4207,13 +4450,22 @@ export const cities: Record<string, CityData> = {
     medicaidNote: "Yes \u2014 Maryland Medicaid covers doula services under the 8:1 model, with $800 for labor and delivery support and up to 8 perinatal visits. Doulas must be Maryland Medicaid-enrolled providers. This is real coverage \u2014 ask upfront whether your doula accepts Medicaid." ,
     insuranceNote: "In the Laurel and Prince George's County area, many families have employer-sponsored insurance through CareFirst BlueCross BlueShield, UnitedHealthcare, Kaiser Permanente, or Aetna. Some local doulas, like Essence of Peace Doula, accept Medicaid and multiple private insurers directly. Check your specific plan documents and ask about \u2018certified doula services.\u2019 HSA and FSA funds can also help cover out-of-pocket doula costs." ,
     faqs: [
-      { q: "How much does a doula cost in Laurel?" , a: "Expect to pay $800 to $2,200 for a doula in Laurel. Birth doulas like Merasha Bailey charge $1,350\u2013$1,650, while postpartum doulas like Erin Hughes charge $60\u2013$75 per hour. The investment typically covers prenatal visits, labor support, and postpartum check-ins. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "How much does a doula cost in Laurel?" , a: "Expect to pay $800 to $2,200 for a doula in Laurel. Birth doulas like Merasha Bailey charge $1,350\u2013$1,650, while postpartum doulas like Erin Hughes charge $60\u2013$75 per hour. The investment typically covers prenatal visits, labor support, and postpartum check-ins. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start thinking about what matters most to you.",
+    birthStats: {
+      cesareanRate: 33.4,
+      maternalMortalityRate: 26.6,
+      homeBirthRate: 0.8,
+      birthCenterBirthRate: 0.2,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+ },
       { q: "Does Medicaid cover doulas in Laurel?" , a: "Yes \u2014 Maryland Medicaid covers doula services under the 8:1 model: $800 for labor and delivery support plus up to 8 perinatal visits. Your doula must be a Maryland Medicaid-enrolled provider. Some Laurel doulas, like Essence of Peace Doula, accept Medicaid directly. This is real coverage, not a pilot \u2014 ask upfront whether your doula accepts Medicaid. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> and make sure your doula team knows your preferences." },
       { q: "Which hospitals near Laurel accommodate birth plans?" , a: "UM Capital Region Medical Center in Largo (20 minutes away) and Holy Cross Hospital in Silver Spring (25 minutes away) both accommodate birth plans. UM Capital Region has the only Level III NICU in Prince George's County and was named a 2026 Best Hospital for Maternity Care. Holy Cross Silver Spring has a 46-bed Level III NICU and handles more than 7,900 births annually across its system. Doulas are welcomed at both \u2014 confirm current visitor policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
       { q: "Are there birth centers in Laurel?" , a: "No freestanding birth centers operate in Laurel as of 2026. My Way Birth and Women's Services has a Laurel office and offers home birth midwifery care as an out-of-hospital option. Chesapeake Midwifery in nearby Beltsville (about 10 minutes away) also provides home birth services. For a hospital-based midwifery experience, UM Capital Region Medical Center employs certified nurse midwives. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through what\u2019s right for your birth." },
       { q: "Does True Joy Birthing work with Laurel families?" , a: "True Joy Birthing provides free birth-prep tools for Laurel families. The free birth plan, checklist, and guided walkthrough in the app work for any Laurel birth setting \u2014 whether you\u2019re delivering at UM Capital Region, Holy Cross, or at home with a midwife. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Laurel?" , a: "Laurel has postpartum doula support through local practitioners like Erin Hughes (overnight support and sleep education) and Iyonna Hester (fourth-trimester care). Hospital-based lactation support is available at UM Capital Region and Holy Cross. The postpartum doula community draws from both Baltimore and DC networks, so you\u2019ll find options ranging from affordable community doulas to specialized overnight support. Start your search during pregnancy if you want ongoing postpartum support. <a href=\"/blog/postpartum-doula/\">Learn more about postpartum doula support</a>." } ],
-    nearbyCities: ["columbia-md" , "baltimore-md" , "gaithersburg-md"],
+    nearbyCities: ["columbia-md", "baltimore-md", "gaithersburg-md"],
     publishedDate: "2026-07-13" ,
     lat: 39.0988,
     lng: -76.8553
@@ -4262,9 +4514,18 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Greenbelt families?" , a: "True Joy Birthing provides free birth-prep tools for Greenbelt families. The free birth plan, checklist, and guided walkthrough in the app work for any Greenbelt birth setting \u2014 whether you\u2019re delivering at UM Capital Region, MedStar Southern Maryland, or at home with a midwife from Chesapeake Midwifery or College Park Homebirth. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Greenbelt?" , a: "Greenbelt families have access to postpartum doula support through practitioners like Celina Sargusingh (overnight newborn care) and the broader DMV doula network. Hospital-based lactation support is available at UM Capital Region and MedStar Southern Maryland. M.A.M.A.S. Midwives in nearby Takoma Park offers postpartum midwifery care including home visits, breastfeeding support, and sleep guidance. Start your search during pregnancy if you want ongoing postpartum support. <a href=\"/blog/postpartum-doula/\">Learn more about postpartum doula support</a>." }
     ],
-    nearbyCities: ["laurel-md" , "columbia-md" , "baltimore-md"],
+    nearbyCities: ["laurel-md", "columbia-md", "baltimore-md"],
     lat: 39.0046,
-    lng: -76.8755
+    lng: -76.8755,
+    birthStats: {
+      cesareanRate: 33.4,
+      maternalMortalityRate: 26.6,
+      homeBirthRate: 0.8,
+      birthCenterBirthRate: 0.2,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+
   },
   "conroe-tx": {
     enableBlogResources: true,
@@ -4305,7 +4566,7 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals in Conroe have labor and delivery?", a: "HCA Houston Healthcare Conroe, at 504 Medical Drive, is the only hospital with labor and delivery in Montgomery County. Contact the hospital directly for current NICU level verification. Journey Birth Center at 1202 N San Jacinto St offers midwife-led out-of-hospital birth for low-risk pregnancies. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
       { q: "Does True Joy Birthing work for Conroe families?", a: "Yes. and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Conroe birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way. no signup required." },
     ],
-    nearbyCities: ["austin-tx", "college-station-tx", "beaumont-tx"],
+    nearbyCities: ["austin-tx", "beaumont-tx", "allen-tx"],
   },
   "mckinney-tx": {
     enableBlogResources: true,
@@ -4334,7 +4595,7 @@ export const cities: Record<string, CityData> = {
       { q: "How much does a doula cost in McKinney?", a: "Expect to pay $950 to $2,700 for a doula in McKinney. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free Joyful Birth Plan</a> and start thinking about what matters most to you." },
       { q: "Does True Joy Birthing work with McKinney families?", a: "Yes. and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any McKinney birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way. no signup required." },
     ],
-    nearbyCities: ["plano-tx", "frisco-tx", "denton-tx"],
+    nearbyCities: ["carrollton-tx", "arlington-tx", "allen-tx"],
   },
   "raleigh-nc": {
     enableBlogResources: true,
@@ -4367,7 +4628,7 @@ export const cities: Record<string, CityData> = {
       { q: "How much does a doula cost in Raleigh?", a: "Expect to pay $850 to $2,300 for a doula in Raleigh. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free Joyful Birth Plan</a> and start thinking about what matters most to you." },
       { q: "Does True Joy Birthing work with Raleigh families?", a: "Yes. and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Raleigh birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way. no signup required." },
     ],
-    nearbyCities: ["charlotte-nc", "greensboro-nc"],
+    nearbyCities: ["charlotte-nc", "raleigh-nc"],
   },
   "orlando-fl": {
     enableBlogResources: true,
@@ -4436,7 +4697,7 @@ export const cities: Record<string, CityData> = {
       { q: "Can doulas attend births at Waco hospitals?", a: "Yes. doulas are welcome at both Baylor Scott & White \u2013 Hillcrest and Ascension Providence as part of your support team. Hillcrest handles the highest volume of births in the Waco area, so having a doula who knows the unit can make a real difference. Confirm your hospital\u2019s current visitor policy during your tour." },
       { q: "What postpartum support is available in Waco?", a: "Waco has a growing postpartum community. Both Hillcrest and Providence offer lactation support after delivery, and Waco Birth Center provides postpartum midwifery care for their clients. The Texas WIC program has offices in McLennan County with breastfeeding support and nutrition resources. If you\u2019re looking for community-based support, local groups like Mommies in Need and the Waco Birth Community offer free or low-cost postpartum meetups. <a href=\"/blog/postpartum-doula/\">Learn more about postpartum doula support</a> and how it can help after birth." },
     ],
-    nearbyCities: ["temple-tx", "austin-tx", "arlington-tx", "fort-worth-tx"],
+    nearbyCities: ["austin-tx", "arlington-tx", "allen-tx", "amarillo-tx"],
   },
 
   "denver-co": {
@@ -4489,9 +4750,18 @@ export const cities: Record<string, CityData> = {
       { q: "Can doulas attend births at Denver hospitals?", a: "Yes. doulas are welcome at all major Denver birth hospitals including Rose Medical Center, UCHealth, Presbyterian St. Luke's, and Denver Health. Rose Medical Center even has a credentialed doula program. Denver Health provides free in-house doulas through its nationally recognized program. Confirm your hospital's current visitor and doula policy during your tour." },
       { q: "Are there home birth midwives in Denver?", a: "Yes. Colorado licenses Certified Professional Midwives (CPMs) for out-of-hospital births, and several CPMs and CNMs serve the Denver metro area. Colorado Birth & Wellness also offers birth center births with midwives. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether home birth is right for you." },
     ],
-    nearbyCities: ["aurora-co", "fort-collins-co", "colorado-springs-co"],
+    nearbyCities: ["aurora-co", "fort-collins-co", "denver-co"],
     lat: 39.7392,
     lng: -104.9903,
+    birthStats: {
+      cesareanRate: 30.5,
+      maternalMortalityRate: 18.0,
+      homeBirthRate: 2.3,
+      birthCenterBirthRate: 0.9,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+
   },
   "aurora-il": {
     enableBlogResources: true,
