@@ -105,7 +105,7 @@ export interface CityData {
   nearbyCities: string[];
   testimonials?: Testimonial[];  // Real client quotes; if absent, show 'What local moms ask' Q&A
   enableBlogResources?: boolean;  // Show hero-image blog cards vs icon cards in Related Resources
-  heroImage?: string;             // City-specific hero skyline image (e.g. '/images/denver-co-birth-doula-skyline.webp')
+  heroImage?: string;             // City-specific pregnant woman silhouette hero image (e.g. '/images/denver-co-birth-doula-hero-v2.webp')
   supportSceneImage?: string;     // City-specific support scene image (e.g. '/images/denver-support-scene.webp')
   supportSceneAlt?: string;       // City-specific support scene alt text
   ogImage?: string;               // City-specific OG image URL (e.g. 'https://truejoybirthing.com/images/og-city-denver-co.webp')
@@ -1895,7 +1895,7 @@ export const cities: Record<string, CityData> = {
     costLow: 800,
     costHigh: 2000,
     shelbiServesHere: false,
-    heroImage: "/images/hartford-ct-birth-doula-hero-v2.webp",
+    heroImage: "/images/hartford-ct-birth-doula-hero-v3.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-hartford-ct.webp",
     supportSceneImage: "/images/hartford-ct-birth-doula-support-v2.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Hartford with Connecticut River autumn foliage",
