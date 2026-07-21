@@ -38,19 +38,23 @@ const {
 
     <form id="lead-magnet-form" class="flex flex-col gap-3 max-w-lg mx-auto mb-4">
       <div class="flex flex-col sm:flex-row gap-3">
+        <label for="lead-name" class="sr-only">Your first name</label>
         <input
           id="lead-name"
           name="name"
           type="text"
           placeholder="Your first name"
+          aria-label="Your first name"
           class="flex-1 px-5 py-3.5 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-rose-400 bg-white transition-colors text-[0.9375rem]"
           required
         />
+        <label for="lead-email" class="sr-only">Your email</label>
         <input
           id="lead-email"
           name="email"
           type="email"
           placeholder="Your email"
+          aria-label="Your email"
           class="flex-1 px-5 py-3.5 rounded-full border border-tjb-lavender-300 focus:outline-none focus:border-tjb-rose-400 bg-white transition-colors text-[0.9375rem]"
           required
         />
@@ -67,7 +71,7 @@ const {
       <p class="text-tjb-gray mb-6">Your free video walkthrough is ready below — start watching now.</p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
         <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="inline-flex items-center gap-2 text-tjb-lavender-600 font-semibold hover:text-tjb-lavender-700 transition-colors">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
           Get the free app: richer, updatable, shareable
         </a>
       </div>

@@ -1,0 +1,296 @@
+---
+import Layout from '../layouts/Layout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+import matter from 'gray-matter';
+import { cities } from '../data/cities';
+
+// ── Build a search index at build time ──────────────────────────
+// Walks src/pages/*.astro, src/content/blog/*.md, and src/data/cities.ts
+// to produce a JSON array of { url, title, description } entries.
+
+interface SearchEntry {
+  url: string;
+  title: string;
+  description: string;
+}
+
+const searchIndex: SearchEntry[] = [];
+const pagesDir = path.resolve('./src/pages');
+
+// 1. Static .astro pages — extract title/description from frontmatter or inline props
+function extractAstroProps(filePath: string): { title?: string; description?: string } {
+  const raw = fs.readFileSync(filePath, 'utf-8');
+  const titleMatch = raw.match(/title\s*=\s*["'`]([^"'`]+)["'`]/);
+  const descMatch = raw.match(/description\s*=\s*["'`]([^"'`]+)["'`]/);
+  return {
+    title: titleMatch ? titleMatch[1] : undefined,
+    description: descMatch ? descMatch[1] : undefined,
+  };
+}
+
+function scanAstroPages(dir: string, basePath = '') {
+  if (!fs.existsSync(dir)) return;
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      scanAstroPages(fullPath, basePath + entry.name + '/');
+    } else if (entry.name.endsWith('.astro')) {
+      const slug = entry.name.replace(/\.astro$/, '');
+      // Skip admin, dashboard, 404
+      if (slug === '404' || basePath.startsWith('admin/')) continue;
+      const urlPath = basePath + (slug === 'index' ? '' : slug);
+      const url = '/' + urlPath + (urlPath && !urlPath.endsWith('/') ? '/' : '');
+      const { title, description } = extractAstroProps(fullPath);
+      if (!title) continue; // skip pages without a title
+      searchIndex.push({
+        url,
+        title,
+        description: description || '',
+      });
+    }
+  }
+}
+scanAstroPages(pagesDir);
+
+// 2. Blog posts — read frontmatter from markdown
+const blogDir = path.resolve('./src/content/blog');
+if (fs.existsSync(blogDir)) {
+  for (const file of fs.readdirSync(blogDir)) {
+    if (!file.endsWith('.md') || file.startsWith('_')) continue;
+    const raw = fs.readFileSync(path.join(blogDir, file), 'utf-8');
+    const { data } = matter(raw);
+    if (data.draft) continue;
+    const slug = data.slug || file.replace(/\.md$/, '');
+    searchIndex.push({
+      url: `/blog/${slug}/`,
+      title: data.title || slug,
+      description: data.description || '',
+    });
+  }
+}
+
+// 3. City pages — from cities.ts
+for (const [slug, city] of Object.entries(cities)) {
+  searchIndex.push({
+    url: `/birth-support/${slug}/`,
+    title: `Birth Support in ${city.city}, ${city.state}`,
+    description: `Find doulas, midwives, hospitals, and birth centers in ${city.city}, ${city.state}. Local cost info and hospital policies.`,
+  });
+}
+
+// Deduplicate by URL (static pages may overlap with manually added entries)
+const seen = new Set<string>();
+const dedupedIndex = searchIndex.filter((entry) => {
+  if (seen.has(entry.url)) return false;
+  seen.add(entry.url);
+  return true;
+});
+
+// Sort: homepage first, then alphabetical
+dedupedIndex.sort((a, b) => {
+  if (a.url === '/') return -1;
+  if (b.url === '/') return 1;
+  return a.title.localeCompare(b.title);
+});
+
+const searchIndexJson = JSON.stringify(dedupedIndex);
+
+const breadcrumbList = [
+  { name: 'Home', url: 'https://truejoybirthing.com/' },
+  { name: 'Search', url: 'https://truejoybirthing.com/search/' },
+];
+---
+
+<Layout
+  title="Search True Joy Birthing"
+  description="Search all True Joy Birthing pages — birth plans, doula guides, city directories, blog posts, and more."
+  canonical="https://truejoybirthing.com/search/"
+  noindex={true}
+  breadcrumbList={breadcrumbList}
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://truejoybirthing.com/#website",
+        "url": "https://truejoybirthing.com/",
+        "name": "True Joy Birthing",
+        "publisher": { "@id": "https://truejoybirthing.com/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://truejoybirthing.com/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://truejoybirthing.com/search/#webpage",
+        "url": "https://truejoybirthing.com/search/",
+        "name": "Search True Joy Birthing",
+        "description": "Search all True Joy Birthing pages — birth plans, doula guides, city directories, blog posts, and more.",
+        "isPartOf": { "@id": "https://truejoybirthing.com/#website" },
+        "about": { "@id": "https://truejoybirthing.com/#organization" }
+      }
+    ]
+  }}
+>
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="eyebrow mb-3">Find what you need</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+      <h1 class="text-3xl md:text-5xl font-bold text-tjb-charcoal mb-4 leading-tight" style="font-family: 'Cormorant Garamond', Georgia, serif;">
+        Search <span class="text-tjb-lavender-600">True Joy Birthing</span>
+      </h1>
+      <p class="text-lg text-tjb-gray max-w-xl mx-auto">Search birth plans, doula guides, city directories, blog posts, and more.</p>
+    </div>
+  </section>
+
+  <section class="py-12 bg-tjb-cream-50 min-h-[50vh]">
+    <div class="max-w-3xl mx-auto px-6">
+      <!-- Search input -->
+      <div class="relative mb-8">
+        <label for="tjb-search-input" class="sr-only">Search True Joy Birthing</label>
+        <div class="relative">
+          <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-tjb-lavender-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <input
+            type="search"
+            id="tjb-search-input"
+            name="q"
+            placeholder="Search for birth plans, doulas, cities, FAQ…"
+            autocomplete="off"
+            class="w-full pl-12 pr-4 py-4 text-base rounded-xl border border-tjb-lavender-300 bg-white text-tjb-charcoal placeholder:text-tjb-gray focus:outline-none focus:border-tjb-lavender-500 focus:ring-2 focus:ring-tjb-lavender-200 transition"
+          />
+        </div>
+      </div>
+
+      <!-- Results status -->
+      <p id="tjb-search-status" class="text-sm text-tjb-gray mb-4" role="status" aria-live="polite"></p>
+
+      <!-- Results list -->
+      <ul id="tjb-search-results" class="space-y-3" role="list"></ul>
+
+      <!-- No results message (hidden by default) -->
+      <div id="tjb-no-results" class="hidden text-center py-12">
+        <p class="text-tjb-gray text-lg mb-2">No results found.</p>
+        <p class="text-sm text-tjb-gray-300">Try a different search term, or browse the <a href="/blog/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">blog</a> or <a href="/birth-support/" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 border-b border-transparent hover:border-tjb-rose-500 transition-all">city guides</a>.</p>
+      </div>
+
+      <!-- Initial state suggestion (visible before any search) -->
+      <div id="tjb-initial-state" class="text-center py-8">
+        <p class="text-sm text-tjb-gray-300">Start typing to search {dedupedIndex.length} pages on True Joy Birthing.</p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script is:inline define:vars={{ searchIndexJson }}>
+  // Client-side search
+  const searchIndex = JSON.parse(searchIndexJson);
+  const input = document.getElementById('tjb-search-input');
+  const resultsList = document.getElementById('tjb-search-results');
+  const statusEl = document.getElementById('tjb-search-status');
+  const noResults = document.getElementById('tjb-no-results');
+  const initialState = document.getElementById('tjb-initial-state');
+
+  function performSearch(query) {
+    const q = query.trim().toLowerCase();
+
+    if (!q) {
+      resultsList.innerHTML = '';
+      statusEl.textContent = '';
+      noResults.classList.add('hidden');
+      initialState.classList.remove('hidden');
+      return;
+    }
+
+    initialState.classList.add('hidden');
+
+    // Filter: match title or description, case-insensitive
+    const results = searchIndex.filter(function(entry) {
+      return (
+        entry.title.toLowerCase().includes(q) ||
+        entry.description.toLowerCase().includes(q) ||
+        entry.url.toLowerCase().includes(q)
+      );
+    });
+
+    // Render status
+    if (results.length === 0) {
+      resultsList.innerHTML = '';
+      statusEl.textContent = 'No results for "' + query + '"';
+      noResults.classList.remove('hidden');
+      return;
+    }
+
+    noResults.classList.add('hidden');
+    const count = results.length;
+    statusEl.textContent = count + (count === 1 ? ' result' : ' results') + ' for "' + query + '"';
+
+    // Render results as list items
+    resultsList.innerHTML = results.map(function(entry, i) {
+      var desc = entry.description
+        ? '<p class="text-sm text-tjb-gray leading-relaxed mt-1">' + escapeHtml(entry.description) + '</p>'
+        : '';
+      return '<li>' +
+        '<a href="' + entry.url + '" class="block bg-white border border-tjb-lavender-200/50 rounded-xl p-5 hover:shadow-md hover:border-tjb-lavender-300 transition-all focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2" style="animation: fadeIn 0.2s ease-out ' + (i * 0.03) + 's both;">' +
+          '<h2 class="text-lg font-bold text-tjb-charcoal group-hover:text-tjb-lavender-600 transition">' + escapeHtml(entry.title) + '</h2>' +
+          desc +
+          '<p class="text-xs text-tjb-lavender-500 font-semibold mt-2">' + entry.url + '</p>' +
+        '</a>' +
+      '</li>';
+    }).join('');
+  }
+
+  function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  // Debounce input
+  var debounceTimer;
+  input.addEventListener('input', function() {
+    clearTimeout(debounceTimer);
+    var value = input.value;
+    debounceTimer = setTimeout(function() {
+      performSearch(value);
+      // Update URL without reload
+      var url = new URL(window.location);
+      if (value.trim()) {
+        url.searchParams.set('q', value);
+      } else {
+        url.searchParams.delete('q');
+      }
+      window.history.replaceState({}, '', url);
+    }, 150);
+  });
+
+  // Read ?q= on page load and pre-populate
+  var params = new URLSearchParams(window.location.search);
+  var initialQuery = params.get('q') || '';
+  if (initialQuery) {
+    input.value = initialQuery;
+    performSearch(initialQuery);
+  }
+
+  // Keyboard: focus input on / key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === '/' && document.activeElement !== input) {
+      e.preventDefault();
+      input.focus();
+    }
+  });
+</script>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

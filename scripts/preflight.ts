@@ -1283,9 +1283,17 @@ function run(): void {
         let minHospitals: number;
         let minBirthCenters: number;
 
-        if (population > 1_000_000) {
-          tier = '>1M';
-          minDoulas = 5;
+        if (population > 5_000_000) {
+          tier = '>5M';
+          // Mega cities (NYC 8.3M, LA 3.8M) need proportionally more providers.
+          // Scale: 1 doula per ~500K population, floor 10, ceil 20.
+          minDoulas = Math.min(20, Math.max(10, Math.floor(population / 500_000)));
+          minHospitals = 4;
+          minBirthCenters = 2;
+        } else if (population > 1_000_000) {
+          tier = '1M-5M';
+          // Large cities: 1 doula per ~300K, floor 5, ceil 12.
+          minDoulas = Math.min(12, Math.max(5, Math.floor(population / 300_000)));
           minHospitals = 4;
           minBirthCenters = 2;
         } else if (population > 500_000) {
@@ -1715,7 +1723,9 @@ function run(): void {
     if (distFile && fs.existsSync(path.join(PROJECT_DIR, distFile))) {
       const html = fs.readFileSync(path.join(PROJECT_DIR, distFile), 'utf-8');
       // Find all <script> tags with a src attribute (inline scripts don't block)
-      const scriptTags = html.match(/<script[^>]*\ssrc\s*=/gi) || [];
+      // FIX: Must match the full tag (>), not just up to src=, so async/defer/module
+      // attributes after src= are visible to the blocking check.
+      const scriptTags = html.match(/<script[^>]*\ssrc\s*=[^>]*>/gi) || [];
       const blocking = scriptTags.filter(t => !/\sasync\s/i.test(t) && !/\sdefer\s/i.test(t) && !/\stype\s*=\s*["']module["']/i.test(t));
       if (blocking.length === 0) {
         results.push({ gate: 'G49', status: 'PASS', detail: `All ${scriptTags.length} external script(s) have async/defer/module` });
@@ -2131,23 +2141,14 @@ function run(): void {
       }
 
       if (providerEntries.length > 0) {
-        // If at least 1 provider has a real photo, this is PASS (enrichment succeeded).
-        // Not every doula has a findable headshot — that's expected for collectives
-        // and providers without DoulaMatch listings.
-        const hasAnyPhoto = /photo:\s*"\/images\//.test(targetBlock);
-        if (hasAnyPhoto) {
-          results.push({
-            gate: 'G57',
-            status: 'PASS',
-            detail: `${providerEntries.length} provider(s) missing photos but at least 1 real headshot present: ${providerEntries.slice(0, 5).join(', ')}${providerEntries.length > 5 ? '...' : ''}`
-          });
-        } else {
-          results.push({
-            gate: 'G57',
-            status: 'FAIL',
-            detail: `${providerEntries.length} provider(s) missing photos (showing grey initials): ${providerEntries.slice(0, 5).join(', ')}${providerEntries.length > 5 ? '...' : ''}. Source headshots from provider websites or DoulaMatch before deploying.`
-          });
-        }
+        // FAIL on any empty photo field. Every provider must have a headshot.
+        // Jeff has reported missing/broken photos multiple times — the "at least 1"
+        // leniency let pages ship with 2-3 grey placeholder circles.
+        results.push({
+          gate: 'G57',
+          status: 'FAIL',
+          detail: `${providerEntries.length} provider(s) missing photos (showing grey initials): ${providerEntries.slice(0, 5).join(', ')}${providerEntries.length > 5 ? '...' : ''}. Every provider must have a photo field set. Generate headshots if no real photo is available.`
+        });
       } else {
         results.push({ gate: 'G57', status: 'PASS', detail: 'All providers have photo fields set' });
       }
@@ -2226,6 +2227,54 @@ function run(): void {
     }
   } else {
     results.push({ gate: 'G59', status: 'SKIP', detail: 'Skipping hospital URL check in audit mode (run with slug)' });
+  }
+
+  // ── G60: birthStats present and all 6 fields populated ──
+  // R33: Every city at 100/100 must have birthStats populated. Data source is
+  // CDC NCHS National Vital Statistics System. Only runs for targeted cities
+  // (verifying), not in full audit mode and not for brand-new skeleton cities.
+  if (targetSlug) {
+    try {
+      const cityBlock = execSync(
+        `python3 scripts/extract-city-block.py ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+      // Skeleton cities (no localDoulas field) skip this gate — birthStats is
+      // added during enrichment, not during initial build.
+      if (!/localDoulas:/.test(cityBlock)) {
+        results.push({ gate: 'G60', status: 'SKIP', detail: 'Skeleton city (no localDoulas) — birthStats added during enrichment' });
+      } else {
+        const birthStatsMatch = cityBlock.match(/birthStats:\s*\{([^}]*)\}/);
+        if (birthStatsMatch) {
+          const birthStatsBlock = birthStatsMatch[1];
+          const requiredFields = ['cesareanRate', 'maternalMortalityRate', 'homeBirthRate', 'birthCenterBirthRate', 'dataYear', 'dataSource'];
+          const missing: string[] = [];
+          for (const field of requiredFields) {
+            const fieldRegex = new RegExp(`${field}:\\s*([^,}\\n]+)`);
+            const fieldMatch = birthStatsBlock.match(fieldRegex);
+            if (!fieldMatch || fieldMatch[1].trim() === '' || fieldMatch[1].trim() === 'undefined') {
+              missing.push(field);
+            }
+          }
+          if (missing.length > 0) {
+            results.push({ gate: 'G60', status: 'FAIL', detail: `birthStats missing or incomplete — add ${missing.join(', ')}` });
+          } else {
+            // Extract values for the pass message
+            const cesarean = birthStatsBlock.match(/cesareanRate:\s*([\d.]+)/)?.[1] ?? '?';
+            const mortality = birthStatsBlock.match(/maternalMortalityRate:\s*([\d.]+)/)?.[1] ?? '?';
+            const homeBirth = birthStatsBlock.match(/homeBirthRate:\s*([\d.]+)/)?.[1] ?? '?';
+            const birthCenter = birthStatsBlock.match(/birthCenterBirthRate:\s*([\d.]+)/)?.[1] ?? '?';
+            results.push({ gate: 'G60', status: 'PASS', detail: `birthStats present (cesarean=${cesarean}%, mortality=${mortality}/100k, homeBirth=${homeBirth}%, birthCenter=${birthCenter}%)` });
+          }
+        } else {
+          results.push({ gate: 'G60', status: 'FAIL', detail: 'birthStats missing or incomplete — add cesareanRate, maternalMortalityRate, homeBirthRate, birthCenterBirthRate, dataYear, dataSource' });
+        }
+      }
+    } catch {
+      results.push({ gate: 'G60', status: 'SKIP', detail: 'Could not check birthStats' });
+    }
+  } else {
+    results.push({ gate: 'G60', status: 'SKIP', detail: 'Skipping birthStats check in audit mode (run with slug)' });
   }
 
   // ── Print summary ───

@@ -154,6 +154,46 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ────────────────────────────────────────────
+   Accessibility: cursor & tap targets (D5)
+   ──────────────────────────────────────────── */
+
+/* D5.3b: Ensure all buttons show pointer cursor */
+button,
+[type="submit"],
+[type="button"],
+[type="reset"] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type="submit"]:disabled,
+[type="button"]:disabled,
+[type="reset"]:disabled {
+  cursor: not-allowed;
+}
+
+/* D5.3a: Minimum tap target size for interactive elements (44x44px per WCAG 2.5.5) */
+button,
+[type="submit"],
+[type="button"],
+[type="reset"],
+a.btn-primary,
+a.btn-secondary,
+a.btn-accent {
+  min-height: 44px;
+}
+
+/* Ensure small/icon-only interactive elements meet minimum size */
+input[type="checkbox"],
+input[type="radio"],
+input[type="file"],
+input[type="color"],
+input[type="range"] {
+  min-height: 32px;
+  min-width: 32px;
+}
+
 /* ═══════════════════════════════════════════
    Components
    ═══════════════════════════════════════════ */

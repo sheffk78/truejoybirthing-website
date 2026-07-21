@@ -1,0 +1,24 @@
+{
+  "slug": "new-york-ny",
+  "current_stage": "complete",
+  "stages_completed": [
+    "needs_research",
+    "needs_verification",
+    "needs_services",
+    "needs_cost_data",
+    "needs_photos",
+    "needs_service_areas",
+    "needs_deal_breakers",
+    "needs_enrichment",
+    "needs_images",
+    "needs_preflight",
+    "needs_deploy",
+    "needs_outreach",
+    "needs_video",
+    "needs_embed",
+    "complete"
+  ],
+  "stages_failed": [],
+  "created_at": "2026-07-21T09:00:00Z",
+  "updated_at": "2026-07-21T11:30:00Z"
+}

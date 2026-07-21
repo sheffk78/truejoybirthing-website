@@ -17,48 +17,11 @@ import AppShowcase from '../components/AppShowcase.astro';
         "@id": "https://truejoybirthing.com/#webpage",
         "url": "https://truejoybirthing.com/",
         "name": "Joyful Birth Plan — True Joy Birthing",
-        "description": "Build your birth plan with confidence. Free doula-crafted birth plan, guided walkthrough course, and 1:1 coaching sessions.",
+        "description": "Build your birth plan with confidence. Free doula-crafted birth plan, guided walkthrough course, and 1:1 coaching for hospital-planning moms.",
         "mainEntity": {"@id": "https://truejoybirthing.com/#organization"},
         "isPartOf": {"@id": "https://truejoybirthing.com/#website"},
         "about": {"@id": "https://truejoybirthing.com/#organization"},
         "dateModified": "2026-06-09"
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://truejoybirthing.com/#organization",
-        "name": "True Joy Birthing",
-        "url": "https://truejoybirthing.com/",
-        "description": "Free doula-crafted birth plan templates, guided walkthrough course, and 1:1 coaching sessions for expecting families.",
-        "foundingDate": "2025-01",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "support@truejoybirthing.com",
-          "contactType": "customer service",
-          "availableLanguage": ["English"]
-        },
-        "knowsAbout": ["Birth planning", "Birth doula support", "Pregnancy preparation", "Labor and delivery preferences"],
-        "logo": {
-          "@type": "ImageObject",
-          "@id": "https://truejoybirthing.com/#logo",
-          "url": "https://truejoybirthing.com/images/logo.svg",
-          "contentUrl": "https://truejoybirthing.com/images/logo.svg",
-          "width": 480,
-          "height": 128,
-          "creditText": "True Joy Birthing",
-          "copyrightHolder": { "@id": "https://truejoybirthing.com/#organization" }
-        },
-        "image": { "@id": "https://truejoybirthing.com/#logo" },
-        "sameAs": [
-          "https://instagram.com/truejoybirthing",
-          "https://apps.apple.com/us/app/true-joy-birthing/id6760793180"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://truejoybirthing.com/#website",
-        "url": "https://truejoybirthing.com/",
-        "name": "True Joy Birthing",
-        "publisher": {"@id": "https://truejoybirthing.com/#organization"}
       },
       {
         "@type": "SoftwareApplication",
@@ -100,7 +63,7 @@ import AppShowcase from '../components/AppShowcase.astro';
           <p class="eyebrow mb-3">Free Joyful Birth Plan</p>
           <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
           <h1 class="font-bold text-tjb-charcoal leading-[1.15] mb-4" style="font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(2.25rem, 5vw, 3.75rem);">
-            Your birth plan gives you the words when your doctor recommends something you didn't expect
+            Your <strong class="font-bold">birth plan</strong> gives you the words when your doctor recommends something you didn't expect
           </h1>
           <p class="text-lg text-tjb-charcoal font-semibold mb-2">True Joy Birthing is a free birth plan tool and app for first-time moms building confidence for the delivery room.</p>
           <p class="text-tjb-gray text-lg leading-[1.7] mb-8 max-w-[36rem]">
@@ -159,6 +122,28 @@ import AppShowcase from '../components/AppShowcase.astro';
   </div>
 
   <!-- ═══════════════════════════════════════════
+       STATS BAR — Quantitative proof (D3 trust signals)
+       ═══════════════════════════════════════════ -->
+  <div class="bg-tjb-cream border-b border-tjb-lavender-200/40">
+    <div class="max-w-4xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-center">
+      <div class="flex items-baseline gap-2">
+        <span class="text-2xl font-bold text-tjb-lavender-600" style="font-family: 'DM Serif Display', Georgia, serif;">131+</span>
+        <span class="text-sm text-tjb-gray">city guides across 28 states</span>
+      </div>
+      <span class="hidden sm:inline text-tjb-rose-300">·</span>
+      <div class="flex items-baseline gap-2">
+        <span class="text-2xl font-bold text-tjb-lavender-600" style="font-family: 'DM Serif Display', Georgia, serif;">Free</span>
+        <span class="text-sm text-tjb-gray">birth plan app on iOS</span>
+      </div>
+      <span class="hidden sm:inline text-tjb-rose-300">·</span>
+      <div class="flex items-baseline gap-2">
+        <span class="text-2xl font-bold text-tjb-lavender-600" style="font-family: 'DM Serif Display', Georgia, serif;">100%</span>
+        <span class="text-sm text-tjb-gray">doula-founded & certified</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
        APP SHOWCASE — Two-phone mockup layout
        ═══════════════════════════════════════════ -->
   <AppShowcase variant="serif" />
@@ -200,6 +185,22 @@ import AppShowcase from '../components/AppShowcase.astro';
             "I filled mine out in one sitting with my partner. By the time I got to the hospital, I wasn't anxious about what to ask for — I already knew."
           </blockquote>
           <p class="text-sm text-tjb-gray font-semibold">— Danielle R., second-time mom, Fort Worth</p>
+        </div>
+        <!-- Founder quote — fully attributed, verifiable -->
+        <div class="relative pl-8 md:pl-12 border-l-2 border-tjb-lavender-400">
+          <svg class="absolute -top-2 left-3 md:left-5 w-8 h-8 text-tjb-lavender-300" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"/>
+          </svg>
+          <blockquote class="text-xl md:text-[1.375rem] text-tjb-charcoal leading-[1.65] font-serif italic mb-4">
+            "I built the Joyful Birth Plan because every mom deserves to walk into the delivery room knowing her options — not hoping someone will ask her what she wants."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <img src="/images/shelbi-thumb.webp" alt="Shelbi Kohler, Certified Birth Doula & Founder" width="40" height="40" class="w-10 h-10 rounded-full object-cover" />
+            <div>
+              <p class="text-sm text-tjb-charcoal font-semibold">— <a href="/about/" class="text-tjb-lavender-600 hover:text-tjb-lavender-700 no-underline">Shelbi Kohler</a></p>
+              <p class="text-xs text-tjb-gray">Certified Birth Doula & Founder, True Joy Birthing</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -546,7 +547,7 @@ import AppShowcase from '../components/AppShowcase.astro';
       <div id="city-grid" class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         <a href="/birth-support/new-york-ny/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
           <div class="aspect-[4/3] overflow-hidden">
-            <img src="/images/new-york-ny-birth-doula-skyline.webp" alt="New York" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
+            <img src="/images/new-york-ny-birth-doula-skyline-v2-600.webp" alt="New York" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
           </div>
           <div class="p-4 bg-white">
             <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">New York, NY</h3>
@@ -555,7 +556,7 @@ import AppShowcase from '../components/AppShowcase.astro';
         </a>
         <a href="/birth-support/los-angeles-ca/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
           <div class="aspect-[4/3] overflow-hidden">
-            <img src="/images/los-angeles-ca-birth-doula-skyline.webp" alt="Los Angeles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
+            <img src="/images/los-angeles-ca-birth-doula-skyline-v3-600.webp" alt="Los Angeles" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
           </div>
           <div class="p-4 bg-white">
             <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">Los Angeles, CA</h3>
@@ -564,7 +565,7 @@ import AppShowcase from '../components/AppShowcase.astro';
         </a>
         <a href="/birth-support/chicago-il/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
           <div class="aspect-[4/3] overflow-hidden">
-            <img src="/images/chicago-il-birth-doula-skyline.webp" alt="Chicago" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
+            <img src="/images/chicago-il-birth-doula-hero-v4-600.webp" alt="Chicago" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
           </div>
           <div class="p-4 bg-white">
             <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">Chicago, IL</h3>
@@ -573,7 +574,7 @@ import AppShowcase from '../components/AppShowcase.astro';
         </a>
         <a href="/birth-support/aurora-co/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
           <div class="aspect-[4/3] overflow-hidden">
-            <img src="/images/aurora-co-birth-doula-skyline.webp" alt="Aurora" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
+            <img src="/images/aurora-co-birth-doula-skyline-v2-600.webp" alt="Aurora" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
           </div>
           <div class="p-4 bg-white">
             <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">Aurora, CO</h3>
@@ -582,7 +583,7 @@ import AppShowcase from '../components/AppShowcase.astro';
         </a>
         <a href="/birth-support/austin-tx/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
           <div class="aspect-[4/3] overflow-hidden">
-            <img src="/images/austin-tx-birth-doula-skyline.webp" alt="Austin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
+            <img src="/images/austin-tx-birth-doula-hero-v2-600.webp" alt="Austin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
           </div>
           <div class="p-4 bg-white">
             <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">Austin, TX</h3>
@@ -591,7 +592,7 @@ import AppShowcase from '../components/AppShowcase.astro';
         </a>
         <a href="/birth-support/phoenix-az/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
           <div class="aspect-[4/3] overflow-hidden">
-            <img src="/images/phoenix-az-birth-doula-skyline.webp" alt="Phoenix" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
+            <img src="/images/phoenix-az-birth-doula-hero-v3-600.webp" alt="Phoenix" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
           </div>
           <div class="p-4 bg-white">
             <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">Phoenix, AZ</h3>
@@ -600,19 +601,19 @@ import AppShowcase from '../components/AppShowcase.astro';
         </a>
         <a href="/birth-support/beaumont-tx/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
           <div class="aspect-[4/3] overflow-hidden">
-            <img src="/images/beaumont-tx-birth-doula-skyline.webp" alt="Beaumont" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
+            <img src="/images/beaumont-tx-birth-doula-hero-v2-600.webp" alt="Beaumont" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
           </div>
           <div class="p-4 bg-white">
             <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">Beaumont, TX</h3>
             <p class="text-xs text-tjb-gray mt-1 leading-relaxed">Local doulas, hospital policies, and birth planning resources</p>
           </div>
         </a>
-        <a href="/birth-support/austin-tx/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
+        <a href="/birth-support/seattle-wa/" class="group block rounded-xl overflow-hidden border border-tjb-lavender-200 hover:border-tjb-rose-400 hover:shadow-lg transition-all duration-200">
           <div class="aspect-[4/3] overflow-hidden">
-            <img src="/images/austin-tx-birth-doula-skyline.webp" alt="Austin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
+            <img src="/images/seattle-wa-birth-doula-hero-v3-600.webp" alt="Seattle" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" width="400" height="300" loading="lazy" />
           </div>
           <div class="p-4 bg-white">
-            <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">Austin, TX</h3>
+            <h3 class="font-semibold text-tjb-charcoal text-base group-hover:text-tjb-rose-500 transition">Seattle, WA</h3>
             <p class="text-xs text-tjb-gray mt-1 leading-relaxed">Find local birth support, hospital info, and Medicaid coverage</p>
           </div>
         </a>
@@ -720,45 +721,57 @@ import AppShowcase from '../components/AppShowcase.astro';
       <p class="text-tjb-gray mb-8 text-center">The things first-time moms ask us most, answered honestly.</p>
       <div class="space-y-4">
         <details class="border border-tjb-lavender-200 rounded-xl p-5 bg-white group">
-          <summary class="text-base font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
+          <summary role="button" tabindex="0" class="text-base font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
             <span>What is a birth plan, and do I really need one?</span>
-            <svg class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <svg aria-hidden="true" class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
           </summary>
           <p class="text-tjb-gray mt-3 text-sm leading-relaxed">A birth plan is a document that spells out your preferences for labor, delivery, and postpartum care. It's not a rigid checklist — it's a communication tool that helps your medical team know what matters to you. The <a href="/birth-plan-template/" class="text-tjb-lavender-600 hover:underline">free Joyful Birth Plan</a> covers every stage and works in your real hospital room.</p>
         </details>
         <details class="border border-tjb-lavender-200 rounded-xl p-5 bg-white group">
-          <summary class="text-base font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
+          <summary role="button" tabindex="0" class="text-base font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
             <span>Can I fill out a birth plan on my phone?</span>
-            <svg class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <svg aria-hidden="true" class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
           </summary>
           <p class="text-tjb-gray mt-3 text-sm leading-relaxed">Yes! The <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-lavender-600 hover:underline">True Joy Birthing app</a> lets you build your birth plan step by step on your phone. Nine guided sections walk you through hospital preferences, pain management, and more — and you can update it anytime. Prefer the fillable PDF? <a href="/birth-plan-template/" class="text-tjb-lavender-600 hover:underline">Download it free here</a>.</p>
         </details>
         <details class="border border-tjb-lavender-200 rounded-xl p-5 bg-white group">
-          <summary class="text-base font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
+          <summary role="button" tabindex="0" class="text-base font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
             <span>What if my doctor recommends something I didn't expect?</span>
-            <svg class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <svg aria-hidden="true" class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
           </summary>
           <p class="text-tjb-gray mt-3 text-sm leading-relaxed">That's exactly what a birth plan is for. It gives you the words when your doctor recommends something you hadn't thought about. The <a href="/birth-plan-template/#walkthrough" class="text-tjb-lavender-600 hover:underline">Guided Birth Plan Walkthrough</a> free video series covers what to say in these moments, and the <a href="/birth-plan-confidence-session/#book" class="text-tjb-lavender-600 hover:underline">1:1 Confidence Session</a> lets you practice the conversation.</p>
         </details>
         <details class="border border-tjb-lavender-200 rounded-xl p-5 bg-white group">
-          <summary class="text-base font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
+          <summary role="button" tabindex="0" class="text-base font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
             <span>How do I choose between the PDF and the app?</span>
-            <svg class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <svg aria-hidden="true" class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
           </summary>
           <p class="text-tjb-gray mt-3 text-sm leading-relaxed">Both are free! The <strong>app</strong> is best if you want step-by-step guidance, the ability to update your plan anytime, and share it with your care team. The <strong>PDF</strong> is best if you want a printable one-pager your nurse can read in two minutes. Many families use both — build in the app, print the PDF for the hospital bag.</p>
         </details>
         <details class="border border-tjb-lavender-200 rounded-xl p-5 bg-white group">
-          <summary class="text-base font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
+          <summary role="button" tabindex="0" class="text-base font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
+            <span>Does doula support actually make a difference?</span>
+            <svg aria-hidden="true" class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="text-tjb-gray mt-3 text-sm leading-relaxed space-y-3">
+            <p>Yes. Research from the <a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD003766.pub5/full" class="text-tjb-lavender-600 hover:underline" rel="noopener" target="_blank">Cochrane Review (Hodnett et al., 2012)</a> — a systematic review of 22 trials involving over 15,000 women — found that continuous doula support was associated with shorter labors, fewer requests for epidural pain relief, and higher rates of spontaneous vaginal birth compared to usual care.</p>
+            <p>The <a href="https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2019/02/approaches-to-limit-intervention-during-labor-and-birth" class="text-tjb-lavender-600 hover:underline" rel="noopener" target="_blank">American College of Obstetricians and Gynecologists (ACOG)</a> also recognizes doula support as a safe, effective way to improve birth satisfaction and reduce unnecessary interventions.</p>
+          </div>
+        </details>
+        <details class="border border-tjb-lavender-200 rounded-xl p-5 bg-white group">
+          <summary role="button" tabindex="0" class="text-base font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
             <span>Is there a doula or midwife directory?</span>
-            <svg class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <svg aria-hidden="true" class="w-5 h-5 text-tjb-lavender-500 transition-transform group-open:rotate-180 flex-shrink-0 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
           </summary>

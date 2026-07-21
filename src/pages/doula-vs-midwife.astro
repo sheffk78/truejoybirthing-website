@@ -6,6 +6,74 @@ const breadcrumbList = [
   {"name": "Home", "url": "https://truejoybirthing.com/"},
   {"name": "Doula vs Midwife", "url": "https://truejoybirthing.com/doula-vs-midwife/"}
 ];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": "https://truejoybirthing.com/doula-vs-midwife/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between a doula and a midwife?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A doula provides emotional, physical, and informational support before, during, and after labor, but does not provide medical care or deliver babies. A midwife is a licensed medical provider who manages your pregnancy, labor, and delivery, including clinical exams, prescribing medications, and catching the baby. Most families benefit from having both: the midwife keeps you medically safe, and the doula keeps you emotionally supported."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a doula the same as a midwife?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, a doula is not the same as a midwife. A midwife is a licensed clinician who delivers babies and provides medical care. A doula is a trained support professional who focuses on comfort, advocacy, and continuous presence, but does not perform any medical tasks. They are different roles that complement each other, not competing ones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you need both a doula and a midwife?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most families benefit from having both. A midwife manages your clinical care and delivery. A doula provides continuous emotional and physical support throughout labor. Research shows that births with both a midwife and a doula have the lowest intervention rates and highest satisfaction scores. If budget is a concern, prioritize the clinical provider your situation requires, then explore sliding-scale or community doula programs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a doula deliver a baby?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. A doula cannot deliver a baby. Only a licensed medical provider like a midwife, OB, or physician can manage a delivery. A doula supports you through labor but does not perform any clinical task, including cervical checks, fetal monitoring, or catching the baby."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does insurance cover a doula?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Midwifery care is widely covered by insurance, especially Certified Nurse-Midwives in hospital settings. Doula services are often out-of-pocket, though some Medicaid programs and private insurers now cover doula care. Check your plan directly, and see our guide to Medicaid doula coverage for state-specific details."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "https://truejoybirthing.com/doula-vs-midwife/#article",
+      "headline": "Doula vs Midwife: Key Differences",
+      "description": "A doula supports you emotionally. A midwife delivers your baby. Learn the key differences, training, scope, cost, and when to use each.",
+      "author": {
+        "@type": "Person",
+        "name": "Shelbi Kohler",
+        "url": "https://truejoybirthing.com/about/"
+      },
+      "publisher": {
+        "@id": "https://truejoybirthing.com/#organization"
+      },
+      "datePublished": "2025-06-01",
+      "dateModified": "2026-07-20"
+    }
+  ]
+};
 ---
 
 <Layout
@@ -14,6 +82,7 @@ const breadcrumbList = [
   canonical="https://truejoybirthing.com/doula-vs-midwife/"
   breadcrumbList={breadcrumbList}
   ogImage="/images/og/og-doula-vs-midwife.png"
+  schema={schema}
 >
 
   <!-- Hero — Split Layout (55% text / 45% image) -->
@@ -78,7 +147,7 @@ const breadcrumbList = [
         <li>Provide continuous labor support, even when your nurse changes shifts</li>
       </ul>
 
-      <p>Before birth, most doulas meet with you once or twice to discuss your birth plan, your priorities, and any fears or concerns. After birth, they typically visit to check on your recovery, help with initial feeding questions, and debrief the experience.</p>
+      <p>Before birth, most doulas meet with you once or twice to discuss your birth plan, your priorities, and any fears or concerns. After birth, they typically visit to check on your recovery, help with initial feeding questions, and debrief the experience. Some doulas are also certified lactation consultants, which means breastfeeding support can be built right into their package rather than requiring a separate specialist.</p>
 
       <div class="my-8 not-prose bg-tjb-lavender-50 rounded-xl p-6">
         <p class="text-lg font-serif italic text-tjb-charcoal mb-3">"My doula was the person who looked me in the eye when I said I couldn't do it anymore and told me — calmly, without drama — that I was already doing it. That changed everything."</p>
@@ -112,7 +181,9 @@ const breadcrumbList = [
 
       <h2 id="key-differences">Key Differences: Doula vs. Midwife</h2>
 
-      <p>The simplest way to understand the doula vs midwife distinction: a <strong>midwife is your medical provider</strong>, and a <strong>doula is your support partner</strong>. One delivers your baby. The other makes sure you feel strong enough to push.</p>
+      <p>We've talked to plenty of expectant parents who weren't sure which one they needed, or whether they could have both. The confusion is understandable, since both roles center on birth. The short answer: they serve completely different roles.</p>
+
+      <p>The simplest way to understand the doula vs midwife distinction: a <strong>midwife is your medical provider</strong>, and a <strong>doula is your support partner</strong>. One delivers your baby. The other makes sure you feel strong enough to push. Many parents put it even more plainly: a midwife delivers your baby, and a doula helps you through the experience of birthing your baby. That framing has resonated with almost every family we've heard from.</p>
 
       <div class="my-8 not-prose overflow-x-auto">
         <table class="w-full border-collapse text-sm">
@@ -177,7 +248,7 @@ const breadcrumbList = [
 
       <h2 id="can-you-have-both">Can You Have Both a Doula and a Midwife?</h2>
 
-      <p><strong>Yes — and most families should.</strong> Having both a doula and a midwife gives you the most complete support possible for your birth.</p>
+      <p><strong>Yes — and most families should.</strong> Having both a doula and a midwife gives you the most complete support possible for your birth. In practice, many parents do exactly this: a midwife for medical care and a doula for the emotional and physical support that medical staff simply can't always provide.</p>
 
       <p>Here's how they work together in practice:</p>
 
@@ -259,6 +330,38 @@ const breadcrumbList = [
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="py-16 bg-white border-t border-tjb-lavender-200/50">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="eyebrow mb-4">Common questions</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+
+      <div class="space-y-6">
+        <div class="border-b border-tjb-lavender-300/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">What is the difference between a doula and a midwife?</h3>
+          <p class="text-tjb-gray leading-relaxed" set:html={`A doula provides emotional, physical, and informational support before, during, and after labor, but does not provide medical care or deliver babies. A midwife is a licensed medical provider who manages your pregnancy, labor, and delivery, including clinical exams, prescribing medications, and catching the baby. Most families benefit from having both. Learn more in our guides to <a href="/what-is-a-doula/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">what a doula does</a> and <a href="/midwife-near-me/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">finding a midwife</a>.`} />
+        </div>
+        <div class="border-b border-tjb-lavender-300/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Is a doula the same as a midwife?</h3>
+          <p class="text-tjb-gray leading-relaxed">No. A midwife is a licensed clinician who delivers babies and provides medical care. A doula is a trained support professional who focuses on comfort, advocacy, and continuous presence, but does not perform any medical tasks. They are different roles that complement each other, not competing ones.</p>
+        </div>
+        <div class="border-b border-tjb-lavender-300/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Do you need both a doula and a midwife?</h3>
+          <p class="text-tjb-gray leading-relaxed" set:html={`Most families benefit from having both. A midwife manages your clinical care and delivery. A doula provides continuous emotional and physical support throughout labor. Research shows that births with both a midwife and a doula have the lowest intervention rates and highest satisfaction scores. If budget is a concern, prioritize the clinical provider your situation requires, then explore sliding-scale or community doula programs. See our <a href="/doula-cost/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">doula cost guide</a> for affordable options.`} />
+        </div>
+        <div class="border-b border-tjb-lavender-300/40 pb-6">
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Can a doula deliver a baby?</h3>
+          <p class="text-tjb-gray leading-relaxed">No. A doula cannot deliver a baby. Only a licensed medical provider like a midwife, OB, or physician can manage a delivery. A doula supports you through labor but does not perform any clinical task, including cervical checks, fetal monitoring, or catching the baby.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-tjb-charcoal text-lg mb-2">Does insurance cover a doula?</h3>
+          <p class="text-tjb-gray leading-relaxed" set:html={`Midwifery care is widely covered by insurance, especially Certified Nurse-Midwives in hospital settings. Doula services are often out-of-pocket, though some Medicaid programs and private insurers now cover doula care. Check your plan directly, and see our guide to <a href="/medicaid-doula-coverage/" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition">Medicaid doula coverage</a> for state-specific details.`} />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- Local Resources -->
   <section class="bg-tjb-cream-50 py-12">
     <div class="max-w-4xl mx-auto px-6">
@@ -302,6 +405,10 @@ const breadcrumbList = [
         <a href="/doula-cost/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
           <h3 class="text-base font-semibold mb-1 group-hover:text-tjb-rose-500 transition">How Much Does a Doula Cost?</h3>
           <p class="text-sm text-tjb-gray">City-by-city pricing, what's included, and how to find affordable doula support.</p>
+        </a>
+        <a href="/midwife-near-me/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-base font-semibold mb-1 group-hover:text-tjb-rose-500 transition">Find a Midwife Near You</h3>
+          <p class="text-sm text-tjb-gray">Search for midwives by state and city, compare practice types, and learn what to ask.</p>
         </a>
         <a href="/benefits-of-a-doula/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
           <h3 class="text-base font-semibold mb-1 group-hover:text-tjb-rose-500 transition">Benefits of a Doula — What the Research Says</h3>

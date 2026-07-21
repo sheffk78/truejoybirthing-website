@@ -1,0 +1,362 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+import ContextualCityLinks from '../components/ContextualCityLinks.astro';
+
+const breadcrumbList = [
+  {"name": "Home", "url": "https://truejoybirthing.com/"},
+  {"name": "HSA FSA Doula Services", "url": "https://truejoybirthing.com/hsa-fsa-doula-services/"}
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://truejoybirthing.com/hsa-fsa-doula-services/#article",
+      "headline": "Are Doula Services HSA Eligible? Using HSA and FSA Funds for Birth Support",
+      "description": "Yes, you can use HSA or FSA funds to pay for doula services with a Letter of Medical Necessity. Learn the steps, what qualifies, and how to get reimbursed.",
+      "url": "https://truejoybirthing.com/hsa-fsa-doula-services/",
+      "datePublished": "2026-07-21",
+      "dateModified": "2026-07-21",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://truejoybirthing.com/images/og/og-hsa-fsa-doula.png",
+        "width": 1200,
+        "height": 630
+      },
+      "publisher": { "@id": "https://truejoybirthing.com/#organization" },
+      "author": { "@id": "https://truejoybirthing.com/about/#founder" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://truejoybirthing.com/hsa-fsa-doula-services/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Are doula services HSA eligible?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, doula services can be HSA eligible when you have a Letter of Medical Necessity from your healthcare provider. The IRS does not explicitly list or exclude doula services in Publication 502, which means eligibility depends on how the expense is classified. With a doctor's letter stating that doula support is medically necessary for your pregnancy or birth, most HSA administrators will approve the expense." } },
+        { "@type": "Question", "name": "Can I use my FSA to pay for a doula?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, FSA funds can be used for doula services under the same rules as HSA funds. You will need an invoice or receipt from your doula and a signed Letter of Medical Necessity from your doctor. Some FSA administrators classify doula services similarly to medical massage or acupuncture, meaning they require a prescription or letter of medical necessity to qualify." } },
+        { "@type": "Question", "name": "How do I get a Letter of Medical Necessity for doula services?", "acceptedAnswer": { "@type": "Answer", "text": "Ask your OB, midwife, or primary care provider to sign a letter stating that doula support is medically necessary for your pregnancy. Bring the paperwork to your next in-person appointment rather than sending it through a patient portal. If office staff push back, ask to discuss it directly with your provider. Many doctors sign these letters without hesitation once they understand the request." } },
+        { "@type": "Question", "name": "What if my insurance says doula services are not covered?", "acceptedAnswer": { "@type": "Answer", "text": "HSA eligibility is determined by IRS rules, not by your insurance company. Even if your insurance plan does not cover doula services, you may still be able to use HSA or FSA funds. Some families have successfully requested in-network exceptions from their insurance provider for doula care, though results vary by insurer and even by which representative you speak to. Persistence pays off." } },
+        { "@type": "Question", "name": "Can I use HSA funds for a postpartum doula?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on how your FSA or HSA administrator classifies the expense. Some administrators allow HSA funds for labor and delivery doula services but not for postpartum follow-up visits. Check with your HSA administrator directly. If your postpartum doula support is documented as medically necessary by your provider, it is more likely to be approved." } },
+        { "@type": "Question", "name": "Are doula services HSA eligible in Texas?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. HSA and FSA eligibility is based on federal IRS rules, not state law. Families in Dallas, Houston, San Antonio, and other Texas cities can use HSA or FSA funds for doula services with a Letter of Medical Necessity. The process is the same regardless of which state you live in." } },
+        { "@type": "Question", "name": "What should my doula receipt include for HSA reimbursement?", "acceptedAnswer": { "@type": "Answer", "text": "Ask your doula to provide an itemized invoice that lists the services as birth support services or labor support services. Include the date, cost, and a description of services provided. Some families have had success when the receipt specifically mentions labor and delivery support rather than generic doula services." } }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="HSA FSA Doula Services Eligibility"
+  description="Are doula services HSA eligible? Yes, with a Letter of Medical Necessity. Learn how to use HSA and FSA funds for doula care, step by step."
+  canonical="https://truejoybirthing.com/hsa-fsa-doula-services/"
+  breadcrumbList={breadcrumbList}
+  ogImage="https://truejoybirthing.com/images/og/og-hsa-fsa-doula.png"
+  ogType="article"
+  schema={schema}
+>
+
+  <!-- Hero -->
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <p class="eyebrow mb-4">Paying for a Doula</p>
+          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+          <h1 class="text-[2.5rem] md:text-[3.25rem] font-bold mb-6 leading-[1.12]">Are Doula Services HSA Eligible?</h1>
+          <p class="text-lg md:text-xl text-tjb-gray leading-relaxed max-w-2xl">
+            Yes, you can use your HSA or FSA to pay for doula services. The key is getting a Letter of Medical Necessity from your healthcare provider. Here is exactly how to do it, what qualifies, and what to do if you hit a roadblock.
+          </p>
+        </div>
+        <div class="relative">
+          <img
+            src="/images/hero-medicaid-doula-coverage.webp"
+            alt="A pregnant woman planning how to use HSA funds for doula services"
+            class="w-full aspect-[3/4] object-cover rounded-2xl shadow-lg"
+            width="900"
+            height="1200"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Direct Answer -->
+  <section class="py-12 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-4">The Short Answer</h2>
+      <p class="text-lg text-tjb-gray leading-relaxed mb-4">
+        Doula services <strong>can</strong> be HSA and FSA eligible when you have a Letter of Medical Necessity from your doctor or midwife. The IRS does not explicitly list doula services in Publication 502, which covers qualified medical expenses. This means the expense is neither automatically included nor excluded. The letter bridges that gap by establishing medical necessity.
+      </p>
+      <p class="text-lg text-tjb-gray leading-relaxed mb-4">
+        We've heard from families who successfully used their HSA or FSA to cover doula services with no issues. We've also heard from families who hit roadblocks with office staff or insurance representatives. The difference usually comes down to preparation and persistence.
+      </p>
+      <p class="text-lg text-tjb-gray leading-relaxed">
+        Some FSA administrators classify doula services similarly to medical massage or acupuncture: eligible with a doctor's prescription, but not without one. The same logic applies to HSA funds. Getting that letter is the single most important step.
+      </p>
+    </div>
+  </section>
+
+  <!-- What Makes It Eligible -->
+  <section class="py-12 bg-tjb-lavender-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8">What Makes Doula Services HSA-Eligible</h2>
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="text-xl font-semibold mb-3 text-tjb-lavender-700">Letter of Medical Necessity</h3>
+          <p class="text-tjb-gray leading-relaxed">
+            This is the document that makes everything work. It is a letter signed by your doctor, midwife, or other healthcare provider stating that doula support is medically necessary for your pregnancy or birth. Some providers sign these without hesitation. Others may be unfamiliar with the process. In practice, we've seen that bringing the paperwork to your next in-person appointment works far better than sending it through a patient portal.
+          </p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="text-xl font-semibold mb-3 text-tjb-lavender-700">Proper Receipt or Invoice</h3>
+          <p class="text-tjb-gray leading-relaxed">
+            Your doula should provide an itemized invoice that lists the services as "birth support services" or "labor support services." Include the date, cost, and a description. Some families have had better results when the receipt specifically mentions "labor and delivery support" rather than generic "doula services."
+          </p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="text-xl font-semibold mb-3 text-tjb-lavender-700">IRS Publication 502</h3>
+          <p class="text-tjb-gray leading-relaxed">
+            IRS Publication 502 defines qualified medical expenses for HSA and FSA purposes. Doula services are not explicitly listed, which creates ambiguity. However, expenses that are medically necessary and prescribed by a healthcare provider generally qualify. The Letter of Medical Necessity is what connects doula services to this framework.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How To Steps -->
+  <section class="py-12 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8">How to Use Your HSA or FSA for Doula Services</h2>
+      <ol class="space-y-6">
+        <li class="flex gap-4">
+          <span class="flex-shrink-0 w-10 h-10 rounded-full bg-tjb-rose-500 text-white flex items-center justify-center font-bold text-lg">1</span>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Ask your provider for a Letter of Medical Necessity</h3>
+            <p class="text-tjb-gray leading-relaxed">Talk to your OB, midwife, or primary care doctor at your next appointment. Explain that you need a letter stating doula support is medically necessary for your pregnancy. Bring the form with you if your FSA administrator provides a specific template. It can happen that a nurse or office staff member pushes back on the request, sometimes saying a doula would "interfere" with care. If that happens, ask to discuss it directly with your provider at your next visit. Most doctors are supportive once they understand what you are asking for.</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="flex-shrink-0 w-10 h-10 rounded-full bg-tjb-rose-500 text-white flex items-center justify-center font-bold text-lg">2</span>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Get an itemized invoice from your doula</h3>
+            <p class="text-tjb-gray leading-relaxed">Ask your doula for a receipt that lists services as "birth support services" or "labor support services" with the date and cost. Many doulas are familiar with this process and have provided HSA-compatible receipts for other clients.</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="flex-shrink-0 w-10 h-10 rounded-full bg-tjb-rose-500 text-white flex items-center justify-center font-bold text-lg">3</span>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Submit to your HSA or FSA administrator</h3>
+            <p class="text-tjb-gray leading-relaxed">Submit both the Letter of Medical Necessity and the doula invoice through your HSA or FSA portal. Some administrators approve quickly. Others may ask for additional documentation. If your claim is denied, you can appeal. We've heard from mothers who got approved by one representative and denied by another at the same insurance company. Persistence pays off.</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="flex-shrink-0 w-10 h-10 rounded-full bg-tjb-rose-500 text-white flex items-center justify-center font-bold text-lg">4</span>
+          <div>
+            <h3 class="text-xl font-semibold mb-2">Keep all documentation</h3>
+            <p class="text-tjb-gray leading-relaxed">Save copies of the letter, invoice, and any correspondence with your HSA or FSA administrator. If you are audited, you will need to show that the expense was medically necessary and properly documented.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- HSA vs FSA vs HRA -->
+  <section class="py-12 bg-tjb-lavender-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8">HSA vs FSA vs HRA: Which Works for Doula Services?</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full bg-white rounded-xl shadow-sm">
+          <thead>
+            <tr class="border-b border-tjb-lavender-200">
+              <th class="text-left p-4 font-semibold">Feature</th>
+              <th class="text-left p-4 font-semibold">HSA</th>
+              <th class="text-left p-4 font-semibold">FSA</th>
+              <th class="text-left p-4 font-semibold">HRA</th>
+            </tr>
+          </thead>
+          <tbody class="text-tjb-gray">
+            <tr class="border-b border-tjb-lavender-100">
+              <td class="p-4 font-medium">Requires medical necessity letter</td>
+              <td class="p-4">Yes</td>
+              <td class="p-4">Yes</td>
+              <td class="p-4">Depends on plan</td>
+            </tr>
+            <tr class="border-b border-tjb-lavender-100">
+              <td class="p-4 font-medium">Funds roll over year to year</td>
+              <td class="p-4">Yes</td>
+              <td class="p-4">No (use it or lose it)</td>
+              <td class="p-4">Yes</td>
+            </tr>
+            <tr class="border-b border-tjb-lavender-100">
+              <td class="p-4 font-medium">Can pay for doula services</td>
+              <td class="p-4">Yes, with letter</td>
+              <td class="p-4">Yes, with letter</td>
+              <td class="p-4">Employer determines</td>
+            </tr>
+            <tr class="border-b border-tjb-lavender-100">
+              <td class="p-4 font-medium">You own the account</td>
+              <td class="p-4">Yes</td>
+              <td class="p-4">No (employer-owned)</td>
+              <td class="p-4">No (employer-owned)</td>
+            </tr>
+            <tr>
+              <td class="p-4 font-medium">Postpartum doula coverage</td>
+              <td class="p-4">Possible with letter</td>
+              <td class="p-4">Possible with letter</td>
+              <td class="p-4">Varies by plan</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-tjb-gray mt-4">
+        Note: HSA eligibility is based on IRS rules. FSA rules follow the same medical expense definitions but are administered by your employer's chosen provider. HRA rules are set by your employer. Always check with your specific plan administrator.
+      </p>
+    </div>
+  </section>
+
+  <!-- Real Experiences -->
+  <section class="py-12 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8">What Real Families Report</h2>
+      <div class="space-y-6">
+        <div class="bg-tjb-lavender-50 rounded-xl p-6">
+          <p class="text-tjb-gray leading-relaxed mb-3">
+            Many families have successfully used HSA or FSA funds to pay for doula services, but the process requires a Letter of Medical Necessity from your healthcare provider.
+          </p>
+          <p class="text-tjb-gray leading-relaxed mb-3">
+            It can happen that a nurse or office staff member pushes back on the request, sometimes before the doctor even sees it. One mother sent the form through her patient portal and within ten minutes the nurse responded refusing to pass it along, claiming a doula would "hinder" the doctor. Other mothers urged her to bring the paperwork to her next in-person appointment and discuss it directly with the provider.
+          </p>
+          <p class="text-tjb-gray leading-relaxed">
+            We've heard from mothers who got approved by one representative and denied by another at the same insurance company. If the first person you talk to says no, call back and speak to someone else. Persistence pays off.
+          </p>
+        </div>
+        <div class="bg-tjb-lavender-50 rounded-xl p-6">
+          <p class="text-tjb-gray leading-relaxed mb-3">
+            Some insurance companies have specific rules. With Cigna, for example, HSA funds can be used for doula expenses related to labor and delivery, but not for post-birth follow-up visits. Aetna's published HSA expense table lists doula fees as not qualified, but one mother successfully got an in-network exception approved by calling and requesting it directly.
+          </p>
+          <p class="text-tjb-gray leading-relaxed">
+            One mother even used her husband's old HSA from a previous job to pay for a postpartum doula with no issue. HSA funds belong to you, not your employer, so they stay with you even if you change jobs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HSA Eligibility by City -->
+  <section class="py-12 bg-tjb-lavender-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-4">HSA Eligibility by City</h2>
+      <p class="text-tjb-gray leading-relaxed mb-8">
+        HSA and FSA eligibility is based on federal IRS rules, not state or city law. The process is the same whether you live in Dallas, Houston, San Antonio, or anywhere else in the country. The difference is simply in how many families in your area are already using this strategy.
+      </p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-2 text-tjb-lavender-700">Dallas, TX</h3>
+          <p class="text-tjb-gray leading-relaxed">Families in Dallas are actively searching whether doula services are HSA eligible. The answer is yes, with a Letter of Medical Necessity. The process is identical to any other city.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-2 text-tjb-lavender-700">Houston, TX</h3>
+          <p class="text-tjb-gray leading-relaxed">Houston families can use HSA or FSA funds for doula services with the same federal requirements. Texas does not have state-specific HSA rules that differ from federal IRS guidelines.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="text-lg font-semibold mb-2 text-tjb-lavender-700">San Antonio, TX</h3>
+          <p class="text-tjb-gray leading-relaxed">San Antonio families follow the same process. Ask your healthcare provider for a Letter of Medical Necessity and submit it with your doula invoice to your HSA or FSA administrator.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What to Ask Your Doula -->
+  <section class="py-12 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8">What to Ask Your Doula</h2>
+      <div class="space-y-4">
+        <div class="border-l-4 border-tjb-rose-500 pl-6 py-2">
+          <p class="text-tjb-gray leading-relaxed">"Can you provide an itemized invoice that lists services as birth support or labor support?"</p>
+        </div>
+        <div class="border-l-4 border-tjb-rose-500 pl-6 py-2">
+          <p class="text-tjb-gray leading-relaxed">"Have you had other clients use HSA or FSA funds for your services?"</p>
+        </div>
+        <div class="border-l-4 border-tjb-rose-500 pl-6 py-2">
+          <p class="text-tjb-gray leading-relaxed">"Can you provide a superbill or detailed receipt that I can submit for reimbursement?"</p>
+        </div>
+        <div class="border-l-4 border-tjb-rose-500 pl-6 py-2">
+          <p class="text-tjb-gray leading-relaxed">"Do you have experience working with families who use HSA or FSA funds?"</p>
+        </div>
+      </div>
+      <p class="text-tjb-gray leading-relaxed mt-6">
+        Many doulas are familiar with this process and have provided HSA-compatible receipts for other clients. If your doula has not done this before, the process is straightforward: they just need to provide a standard invoice with the right service description.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 bg-tjb-lavender-50">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details open class="bg-white rounded-xl p-6 shadow-sm">
+          <summary class="font-semibold text-lg cursor-pointer">Are doula services HSA eligible?</summary>
+          <p class="mt-4 text-tjb-gray leading-relaxed">Yes, doula services can be HSA eligible when you have a Letter of Medical Necessity from your healthcare provider. The IRS does not explicitly list or exclude doula services in Publication 502, which means eligibility depends on how the expense is classified. With a doctor's letter stating that doula support is medically necessary for your pregnancy or birth, most HSA administrators will approve the expense.</p>
+        </details>
+        <details open class="bg-white rounded-xl p-6 shadow-sm">
+          <summary class="font-semibold text-lg cursor-pointer">Can I use my FSA to pay for a doula?</summary>
+          <p class="mt-4 text-tjb-gray leading-relaxed">Yes, FSA funds can be used for doula services under the same rules as HSA funds. You will need an invoice or receipt from your doula and a signed Letter of Medical Necessity from your doctor. Some FSA administrators classify doula services similarly to medical massage or acupuncture, meaning they require a prescription or letter of medical necessity to qualify.</p>
+        </details>
+        <details open class="bg-white rounded-xl p-6 shadow-sm">
+          <summary class="font-semibold text-lg cursor-pointer">How do I get a Letter of Medical Necessity?</summary>
+          <p class="mt-4 text-tjb-gray leading-relaxed">Ask your OB, midwife, or primary care provider to sign a letter stating that doula support is medically necessary for your pregnancy. Bring the paperwork to your next in-person appointment rather than sending it through a patient portal. If office staff push back, ask to discuss it directly with your provider. Many doctors sign these letters without hesitation once they understand the request.</p>
+        </details>
+        <details open class="bg-white rounded-xl p-6 shadow-sm">
+          <summary class="font-semibold text-lg cursor-pointer">What if my insurance says doula services are not covered?</summary>
+          <p class="mt-4 text-tjb-gray leading-relaxed">HSA eligibility is determined by IRS rules, not by your insurance company. Even if your insurance plan does not cover doula services, you may still be able to use HSA or FSA funds. Some families have successfully requested in-network exceptions from their insurance provider for doula care, though results vary by insurer. We've heard from mothers who got approved by one representative and denied by another at the same insurance company. Persistence pays off.</p>
+        </details>
+        <details open class="bg-white rounded-xl p-6 shadow-sm">
+          <summary class="font-semibold text-lg cursor-pointer">Can I use HSA funds for a postpartum doula?</summary>
+          <p class="mt-4 text-tjb-gray leading-relaxed">It depends on how your FSA or HSA administrator classifies the expense. Some administrators allow HSA funds for labor and delivery doula services but not for postpartum follow-up visits. Check with your HSA administrator directly. If your postpartum doula support is documented as medically necessary by your provider, it is more likely to be approved.</p>
+        </details>
+        <details open class="bg-white rounded-xl p-6 shadow-sm">
+          <summary class="font-semibold text-lg cursor-pointer">Are doula services HSA eligible in Texas?</summary>
+          <p class="mt-4 text-tjb-gray leading-relaxed">Yes. HSA and FSA eligibility is based on federal IRS rules, not state law. Families in Dallas, Houston, San Antonio, and other Texas cities can use HSA or FSA funds for doula services with a Letter of Medical Necessity. The process is the same regardless of which state you live in.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Resources -->
+  <section class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-6">Related Resources</h2>
+      <div class="grid md:grid-cols-3 gap-4">
+        <a href="/doula-cost/" class="block bg-tjb-lavender-50 rounded-xl p-6 hover:bg-tjb-lavender-100 transition-colors">
+          <h3 class="font-semibold mb-2 text-tjb-lavender-700">How Much Does a Doula Cost?</h3>
+          <p class="text-sm text-tjb-gray">Complete guide to doula pricing, including city-specific costs and what affects the price.</p>
+        </a>
+        <a href="/medicaid-doula-coverage/" class="block bg-tjb-lavender-50 rounded-xl p-6 hover:bg-tjb-lavender-100 transition-colors">
+          <h3 class="font-semibold mb-2 text-tjb-lavender-700">Medicaid Doula Coverage</h3>
+          <p class="text-sm text-tjb-gray">Which states cover doula services through Medicaid and how to access coverage.</p>
+        </a>
+        <a href="/birth-support/dallas-tx/" class="block bg-tjb-lavender-50 rounded-xl p-6 hover:bg-tjb-lavender-100 transition-colors">
+          <h3 class="font-semibold mb-2 text-tjb-lavender-700">Find a Doula in Dallas</h3>
+          <p class="text-sm text-tjb-gray">Browse doulas and birth support services in the Dallas area.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contextual City Links -->
+  <section class="py-8 bg-tjb-cream">
+    <div class="max-w-4xl mx-auto px-6">
+      <ContextualCityLinks topic="general" />
+    </div>
+  </section>
+
+  <!-- Lead Capture -->
+  <section class="py-12 bg-tjb-lavender-50">
+    <div class="max-w-3xl mx-auto px-6">
+      <LeadCaptureForm />
+    </div>
+  </section>
+
+</Layout>

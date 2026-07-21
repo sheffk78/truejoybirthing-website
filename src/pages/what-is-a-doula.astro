@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import LeadCaptureForm from '../components/LeadCaptureForm.astro';
 import ContextualCityLinks from '../components/ContextualCityLinks.astro';
+import AppShowcase from '../components/AppShowcase.astro';
 
 const breadcrumbList = [
   {"name": "Home", "url": "https://truejoybirthing.com/"},
@@ -15,10 +16,10 @@ const schema = {
       "@type": "Article",
       "@id": "https://truejoybirthing.com/what-is-a-doula/#article",
       "headline": "What Is a Doula? The Complete Guide for Expecting Moms",
-      "description": "A doula provides continuous support through labor, providing comfort, advocacy, and emotional support. Learn what doulas do, how much they cost, and how to find one.",
+      "description": "A doula is a trained professional who provides emotional, physical, and informational support to a mother before, during, and after childbirth. Learn what doulas do, the types of doulas, how much they cost, and how to find one.",
       "url": "https://truejoybirthing.com/what-is-a-doula/",
       "datePublished": "2025-06-01",
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-07-20",
       "image": {
         "@type": "ImageObject",
         "url": "https://truejoybirthing.com/images/og/og-what-is-a-doula.png",
@@ -32,13 +33,15 @@ const schema = {
       "@type": "FAQPage",
       "@id": "https://truejoybirthing.com/what-is-a-doula/#faq",
       "mainEntity": [
-        { "@type": "Question", "name": "What is a doula?", "acceptedAnswer": { "@type": "Answer", "text": "A doula is a trained birth professional who provides emotional, physical, and informational support during pregnancy, labor, and postpartum. Doulas do not perform medical tasks. They provide continuous support through labor, helping with comfort measures, breathing, positions, and advocacy for your birth plan." } },
-        { "@type": "Question", "name": "What does a doula do?", "acceptedAnswer": { "@type": "Answer", "text": "During labor, a doula helps you find positions that ease pain, reminds you to breathe, gives your partner suggestions for how to help, explains what is happening in plain language, speaks up for your preferences, and steps in if your partner needs to step out. Before birth, doulas help you build your birth plan. After birth, they check in on healing, feeding, and emotional recovery." } },
-        { "@type": "Question", "name": "What is the difference between a doula and a midwife?", "acceptedAnswer": { "@type": "Answer", "text": "A midwife is a medical professional who provides prenatal care, delivers your baby, and manages clinical aspects of birth. A doula is a non-medical support person who provides continuous support through labor, focusing on comfort, emotional support, and advocacy. A midwife handles the medical side. A doula handles the emotional and physical side. Many families hire both." } },
+        { "@type": "Question", "name": "What is a doula?", "acceptedAnswer": { "@type": "Answer", "text": "A doula is a trained professional who provides emotional, physical, and informational support to a mother before, during, and after childbirth. Doulas do not perform medical tasks. They provide continuous support through labor, helping with comfort measures, breathing, positions, and advocacy for your birth plan." } },
+        { "@type": "Question", "name": "What does a doula do?", "acceptedAnswer": { "@type": "Answer", "text": "A doula supports you continuously through pregnancy, labor, and postpartum. During labor she helps you find positions that ease pain, reminds you to breathe, guides your partner on how to help, explains what is happening in plain language, and speaks up for your preferences. Before birth she helps you build your birth plan. After birth she checks in on healing, feeding, and emotional recovery." } },
+        { "@type": "Question", "name": "What is a birth doula?", "acceptedAnswer": { "@type": "Answer", "text": "A birth doula, also called a labor doula, is a trained support person who stays with you continuously from active labor through delivery. She meets with you once or twice during pregnancy to help build your birth plan, provides hands-on comfort and advocacy during labor, and visits once or twice after birth to check on recovery. A birth doula does not perform medical tasks." } },
+        { "@type": "Question", "name": "What is a postpartum doula?", "acceptedAnswer": { "@type": "Answer", "text": "A postpartum doula supports you after the baby arrives. She helps with breastfeeding, newborn care, light household tasks, meal prep, and emotional recovery. Many mothers hire a postpartum doula for the first two to six weeks at home, when sleep deprivation and feeding challenges peak. A postpartum doula complements your birth doula, and some doulas offer both services." } },
+        { "@type": "Question", "name": "Is a doula the same as a midwife?", "acceptedAnswer": { "@type": "Answer", "text": "No. A midwife is a medical professional who provides prenatal care, delivers your baby, and manages clinical aspects of birth. A doula is a non-medical support person who provides continuous support through labor, focusing on comfort, emotional support, and advocacy. A midwife handles the medical side. A doula handles the emotional and physical side. Many families hire both." } },
         { "@type": "Question", "name": "How much does a doula cost?", "acceptedAnswer": { "@type": "Answer", "text": "In most US cities, birth doulas charge between $800 and $2,500 for a full package including prenatal visits, on-call availability, continuous labor support, and postpartum visits. The national average is around $1,200 to $1,500. Some doulas offer sliding-scale fees, and Medicaid covers doulas in more than a dozen states." } },
+        { "@type": "Question", "name": "How do I find a doula near me?", "acceptedAnswer": { "@type": "Answer", "text": "Start your search 3 to 4 months before your due date. Look in doula directories like DONA International, local Facebook birth groups, ask your childbirth class instructor or care provider for referrals, or check with local birth centers. You can also browse our city birth support guides for local resources, or search our directory of doulas near you." } },
         { "@type": "Question", "name": "Does a doula replace my partner?", "acceptedAnswer": { "@type": "Answer", "text": "No. A doula complements your partner, not replaces them. A doula knows birth and can guide your partner on how to help with counter-pressure, breathing, and positioning. When your partner needs a break, your doula is there. Many partners say having a doula made them feel more confident and useful, not less involved." } },
         { "@type": "Question", "name": "Can a doula help if I am having an induction or C-section?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Doulas are especially valuable during inductions and cesareans, where Pitocin, continuous monitoring, and more interventions are standard. A doula helps you adapt your birth plan for the experience you are actually having, advocates for your preferences, and provides continuous support through a longer or more complex labor." } },
-        { "@type": "Question", "name": "How do I find a doula near me?", "acceptedAnswer": { "@type": "Answer", "text": "Start your search 3 to 4 months before your due date. Look in doula directories like DONA International, local Facebook birth groups, ask your childbirth class instructor or care provider for referrals, or check with local birth centers. You can also browse our city birth support guides for local resources." } },
         { "@type": "Question", "name": "Are doulas evidence-based?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. A landmark Cochrane review of over 15,000 women found that continuous labor support from a doula leads to 28% fewer C-sections, 31% less Pitocin use, 9% less pain medication, shorter labors by an average of 40 minutes, and higher satisfaction with the birth experience overall." } }
       ]
     }
@@ -48,7 +51,7 @@ const schema = {
 
 <Layout
   title="What Is a Doula? Complete Guide"
-  description="A doula is a trained support person who provides continuous support through labor. Learn what doulas do, what they don't do, how much they cost, and how to find one."
+  description="A doula is a trained professional who provides emotional, physical, and informational support before, during, and after childbirth. Learn what doulas do and cost."
   canonical="https://truejoybirthing.com/what-is-a-doula/"
   breadcrumbList={breadcrumbList}
   ogImage="https://truejoybirthing.com/images/og/og-what-is-a-doula.png"
@@ -65,7 +68,7 @@ const schema = {
           <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
           <h1 class="text-[2.5rem] md:text-[3.25rem] font-bold mb-6 leading-[1.12]">What Is a Doula? The Complete Guide for Expecting Moms</h1>
           <p class="text-lg md:text-xl text-tjb-gray leading-relaxed max-w-2xl">
-            A doula is a trained birth professional who provides continuous support throughout your labor, not to deliver your baby, but to make sure you feel supported, informed, and heard. What continuous support looks like varies from doula to doula, but the core is the same: someone focused on you, not just the clinical side of your birth. If you are searching for the doula meaning, the simplest definition is this: a doula is someone who supports you continuously during birth. A birth plan gives you the words. A doula helps you use them.
+            A doula is a trained professional who provides emotional, physical, and informational support to a mother before, during, and after childbirth. Doulas do not deliver babies or perform medical tasks. They stay with you continuously, focused on your comfort, your confidence, and your experience. If you are searching for the doula meaning, the simplest doula definition is this: a doula is someone who supports you through birth, start to finish. A <a href="/birth-plan-template/" class="text-tjb-rose-500 hover:underline">birth plan</a> gives you the words. A doula helps you use them.
           </p>
         </div>
         <div class="relative">
@@ -93,8 +96,8 @@ const schema = {
         <a href="#types-of-doulas" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">Types of Doulas</a>
         <a href="#benefits" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">Proven Benefits</a>
         <a href="#cost" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">Cost</a>
+        <a href="#find" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">How to Find a Doula</a>
         <a href="#faq" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">FAQ</a>
-        <a href="#next-step" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">Start Your Birth Plan</a>
       </div>
     </div>
   </section>
@@ -118,7 +121,11 @@ const schema = {
         <li>Stay with you if your partner needs to step out, eat, or sleep</li>
       </ul>
 
-      <p>Before birth, doulas often meet with you once or twice to talk through your birth plan, your fears, and your hopes. After birth, many doulas check in to see how you're healing, how feeding is going, and whether you need referrals for additional support.</p>
+      <p>In practice, the advocacy role is where many families say their doula made the biggest difference. We've heard from mothers who describe that pivotal moment in labor when their doula stepped in to advocate with the medical team, helping them feel heard and in control. One mother told us the nurses were yelling at her to push, drill sergeant style, while she panicked. Her doula calmly intervened, got the nurses to back off, and helped her regroup and find her rhythm again. Those are the moments that stay with you.</p>
+
+      <p>It's not uncommon for partners to be the biggest beneficiaries of doula support. Many fathers feel anxious about seeing their partner in pain and not knowing what to do. A doula guides both of you. She shows your partner where to put his hands, when to apply counter-pressure, when to step back, when to get water. One mother told us she hired a doula primarily because her husband was terrified of birth, and by the end he said it was the best decision they made. The doula supported her, and she supported him.</p>
+
+      <p>Before birth, doulas often meet with you once or twice to talk through your birth plan, your fears, and your hopes. After birth, many doulas check in to see how you're healing, how feeding is going, and whether you need referrals for additional support. An unexpected benefit many parents discover: some doulas are part of collectives that offer birth classes, lactation support, prenatal yoga, and other services. Access to that broader network can be a real bonus, especially for first-time parents figuring out where to start.</p>
 
       <div class="my-8 not-prose bg-tjb-lavender-50 rounded-xl p-6">
         <p class="text-lg font-serif italic text-tjb-charcoal mb-3">"My doula didn't touch the medical side at all. But when I was crying at 3 AM because the contractions were coming faster than I expected, she was the one who reminded me I could do this, and told my husband exactly where to put his hands."</p>
@@ -137,6 +144,8 @@ const schema = {
       </ul>
 
       <p>This non-medical role is what makes doulas so valuable, and the <a href="/benefits-of-a-doula/" class="text-tjb-rose-500 hover:underline">evidence on doula benefits</a> backs this up. Because they aren't managing clinical tasks, their entire attention is on <em>you</em>, your comfort, your confidence, your experience. A nurse may have multiple patients. A doctor comes in for checks and delivery. A doula is the one focused on you throughout.</p>
+
+      <p>A doula isn't a necessity the way an OBGYN or midwife is. You can absolutely birth without one, and many mothers do, happily, with a trusted partner and a solid hospital team. But a doula also isn't a luxury, like a fancy bassinet or a designer diaper bag. It's professional support that fills a real gap between medical care and partner support. Medical staff change shifts. Nurses come and go. Your partner loves you but may not know what to do when labor gets intense. A doula is the steady, experienced presence who stays with you through all of it.</p>
 
       <p>Doulas are especially valuable when your birth takes an unexpected path, whether that's an induction, a long labor, or a surgical delivery. If you're preparing for the possibility of a cesarean, a <a href="/c-section-birth-plan/" class="text-tjb-rose-500 font-semibold hover:underline">C-section birth plan guide</a> can help you think through those preferences in advance.</p>
 
@@ -178,6 +187,8 @@ const schema = {
         <li><strong>Higher satisfaction</strong> with the birth experience overall</li>
       </ul>
       <p>Having a doula is especially valuable during an induction, where Pitocin, continuous monitoring, and more interventions are standard protocol. <a href="/birth-plan-for-induction/" class="text-tjb-rose-500 font-semibold hover:underline">See how a doula supports an induced birth plan</a>.</p>
+
+      <p>Many parents tell us this research is exactly what helped them decide. We've heard from mothers who referenced these studies when explaining their choice to skeptical partners or family members. The numbers are reassuring, but what families describe after the fact is even more telling: they felt calmer, more in control, and more satisfied with how their birth unfolded, even when things didn't go according to plan.</p>
 
       <p class="text-sm text-tjb-gray italic">Source: Hodnett ED et al. "Continuous support for women during childbirth." Cochrane Database of Systematic Reviews. Results vary by setting; hospital births with continuous support show the strongest effects.</p>
 

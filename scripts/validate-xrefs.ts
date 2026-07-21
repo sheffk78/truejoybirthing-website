@@ -156,13 +156,23 @@ async function main(): Promise<void> {
     }
   }
 
+  // 3b. Load _redirects — slugs with redirects are NOT dangling
+  const redirectsContent = await loadFile("public/_redirects");
+  const redirectedSlugs = new Set<string>();
+  if (redirectsContent) {
+    for (const line of redirectsContent.split("\n")) {
+      const m = line.match(/\/birth-support\/([\w-]+)\/?\s/);
+      if (m) redirectedSlugs.add(m[1]);
+    }
+  }
+
   // 4. Check hardcoded href attributes in source files
   const sourceFiles = await findSourceFiles(SRC_DIR);
   for (const filePath of sourceFiles) {
     const content = await readFile(filePath, "utf-8");
     const hrefSlugs = extractHrefSlugs(content);
     for (const slug of [...new Set(hrefSlugs)]) {
-      if (!knownSlugs.has(slug)) {
+      if (!knownSlugs.has(slug) && !redirectedSlugs.has(slug)) {
         const relPath = filePath.replace(PROJECT_DIR + "/", "");
         violations.push({ source: relPath, slug, context: "href=/birth-support/{slug}/" });
       }

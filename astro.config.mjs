@@ -69,7 +69,7 @@ export default defineConfig({
   integrations: [
     sitemap({
       // No global lastmod — each URL gets its own from serialize()
-      filter: (page) => !page.includes('/404') && !page.includes('/admin/'),
+      filter: (page) => !page.includes('/404') && !page.includes('/admin/') && !page.includes('/dashboard'),
       serialize(item) {
         const parsed = new URL(item.url);
         const pathname = parsed.pathname;

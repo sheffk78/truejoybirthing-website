@@ -48,3 +48,25 @@ Tracking listing notification and verification outreach for TrueJoyBirthing city
 - The Serene Mother (Rochelle Kusicki) — clarified she provides birth doula services only, not traditional postpartum
 
 ---
+## San Francisco, CA
+
+**City page:** https://truejoybirthing.com/birth-support/san-francisco-ca/
+**Total listed:** 12 providers
+**Outreach started:** 2026-07-21
+**Page updated:** Added 8 new doulas, removed duplicate SisterWeb entry, fixed all credentials, added birthStats, added hospital URLs
+
+| # | Provider | Website | Contact Email | Type | Status | Date Sent | Notes |
+|---|----------|---------|---------------|------|--------|-----------|-------|
+| 1 | DOULAS by the BAY | doulasbythebay.com | info@doulasbythebay.com | Birth/PP Doula | Sent | 2026-07-21 | DONA-trained, team model since 2009. Follow-up email |
+| 2 | BORN Collective | borncollectivesf.com | Contact form only | Birth/PP Doula | Needs manual form | | Squarespace site, no email exposed. Follow-up |
+| 3 | SisterWeb Community Doulas | sisterweb.org | info@sisterweb.org | Community Doula | Sent | 2026-07-21 | Black community doula program. Follow-up |
+| 4 | The San Francisco Doula Group | sfdoulagroup.com | SFDoulaGroup@gmail.com | Birth/PP Doula | Sent | 2026-07-21 | Follow-up |
+| 5 | Lea Azevedo | ggparentingsolutions.com | hello@ggparentingsolutions.com | ProDoula CD | Sent | 2026-07-21 | 20 years, bilingual EN/PT/ES, Medi-Cal approved |
+| 6 | Asha Woodall | ashawoodalldoulaservices.com | Contact form only | Cornerstone CD, DONA PP | Needs manual form | | Google MX, no email exposed |
+| 7 | Heather Charmatz | sfbirthdoulaandplacentaencapsulationservices.com | Contact form only | Certified BD, CMA | Needs manual form | | Squarespace, 300+ families since 2012 |
+| 8 | Claudia Penate | claudiapenate.com | sfdoulaclaudia@gmail.com | NR Trained, RN | Sent | 2026-07-21 | Nursing background, fertility/birth/PP |
+| 9 | Kim Knapp | bundlesofjoydoula.org | thatdoulakim@gmail.com | Certified BD, CCE | Sent | 2026-07-21 | LGBTQ+ affirming, 250+ families |
+| 10 | Alla Irwin | moonheartdoula.com | alla@moonheartdoula.com | Certified BD | Sent | 2026-07-21 | MoonHeartDoula, 9 years |
+| 11 | Juliana Strassburger | sweetnestbyjuju.com | justrassburger@hotmail.com | Certified BD | Sent | 2026-07-21 | Sweet Nest by Juju, 3 years |
+| 12 | Ke'xia Draper | DoulaMatch only | DoulaMatch contact | Certified BD | Needs DM | | Incite Change, 6 years, culturally responsive |
+

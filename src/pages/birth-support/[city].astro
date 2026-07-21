@@ -215,14 +215,13 @@ const pageTitle = `${city}, ${state} Doula & Midwife Guide`;
 const medicaidDesc = medicaidCovers ? 'Medicaid covers doulas' : 'no Medicaid doula coverage';
 // Always use "free birth plan template" (never the shorter "free plan template")
 // to keep meta descriptions in the 120-160 char sweet spot.
-let pageDesc = `Birth in ${city}, ${state}: doula costs $${costLow}-$${costHigh}, ${medicaidDesc}, hospitals, birth centers, free birth plan template.`;
-// If still under 120 chars, add "and midwife info" to reach the sweet spot
-if (pageDesc.length < 120) {
-  pageDesc = pageDesc.replace('free birth plan template.', 'free birth plan template and midwife info.');
-}
-// Hard cap at 130 chars (opengraph.xyz compliance)
-if (pageDesc.length > 127) {
-  pageDesc = pageDesc.slice(0, 124) + '...';
+let pageDesc = `Planning a birth in ${city}, ${state}? Compare doula costs ($${costLow}-$${costHigh}), ${medicaidDesc}, hospitals, birth centers, and a free birth plan template.`;
+// Hard cap at 130 chars (A4b: opengraph.xyz compliance, truncate at word boundary)
+if (pageDesc.length > 130) {
+  let trimmed = pageDesc.slice(0, 127);
+  const lastSpace = trimmed.lastIndexOf(' ');
+  if (lastSpace > 100) trimmed = trimmed.slice(0, lastSpace);
+  pageDesc = trimmed + '...';
 }
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 const ogImage = ogImageSlug || `https://truejoybirthing.com/images/og-city-${slug}.webp`;
@@ -763,7 +762,7 @@ const schema = {
 
   {/* ═══ Filter bar inline JS (with Phase 3A SEO enhancements) ═══ */}
   {showFilterBar && (
-    <script data-filter-seo-map={filterSEOJson}>
+    <script type="module" data-filter-seo-map={filterSEOJson}>
       (function() {
         const activeFilters = new Set();
         const cards = document.querySelectorAll('.doula-card');
@@ -772,7 +771,8 @@ const schema = {
         const noResults = document.getElementById('no-filter-results');
 
         // ═══ Phase 3A: SEO data ═══
-        const filterSEOMap = JSON.parse(document.currentScript?.dataset.filterSeoMap || '{}');
+        const scriptTag = document.querySelector('script[data-filter-seo-map]');
+        const filterSEOMap = JSON.parse(scriptTag?.dataset.filterSeoMap || '{}');
         const baseTitle = document.title;
         const baseMeta = document.querySelector('meta[name="description"]')?.getAttribute('content') || '';
         const filterFaqSection = document.getElementById('filter-faq');
@@ -1238,6 +1238,32 @@ const schema = {
       </div>
     </div>
   </section>
+
+  {/* ═══ Doula Cost in {City} — focused section targeting "how much does a doula cost in {city}" queries ═══ */}
+  {costLow > 0 && costHigh > 0 && (
+  <section class="py-12 bg-tjb-cream-50" id="doula-cost">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="font-bold text-tjb-charcoal mb-4" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">How Much Does a Doula Cost in {city}?</h2>
+      <p class="text-tjb-charcoal mb-4">In {city}, a birth doula typically costs between <strong>${costLow.toLocaleString()} and ${costHigh.toLocaleString()}</strong>. This usually includes two prenatal visits, continuous labor support, and at least one postpartum check-in. Prices vary based on experience, the number of visits included, and whether add-ons like childbirth education or placenta encapsulation are bundled in.</p>
+      <div class="grid sm:grid-cols-2 gap-4 my-6 not-prose">
+        <div class="bg-white rounded-xl border border-tjb-lavender-200/50 p-5 shadow-sm">
+          <p class="text-sm font-semibold text-tjb-rose-600 uppercase tracking-wide mb-1">Birth Doula</p>
+          <p class="text-2xl font-bold text-tjb-charcoal mb-1" style="font-family: 'DM Sans', sans-serif;">${costLow.toLocaleString()}–${costHigh.toLocaleString()}</p>
+          <p class="text-sm text-tjb-gray">Prenatal visits, labor support, and postpartum follow-up.</p>
+        </div>
+        <div class="bg-white rounded-xl border border-tjb-lavender-200/50 p-5 shadow-sm">
+          <p class="text-sm font-semibold text-tjb-rose-600 uppercase tracking-wide mb-1">Postpartum Doula</p>
+          <p class="text-2xl font-bold text-tjb-charcoal mb-1" style="font-family: 'DM Sans', sans-serif;">$25–$45/hr</p>
+          <p class="text-sm text-tjb-gray">In-home newborn care, feeding support, and recovery help.</p>
+        </div>
+      </div>
+      <p class="text-tjb-gray text-sm mb-3">Doula rates in {city} typically reflect the local cost of living, with experienced doulas charging more as they build their practice. It's not uncommon for doulas with 10 or more years of experience to charge at the higher end of the range, while newer doulas may charge less as they build their client base. The personal connection matters too. Families who chose a more experienced doula often say the investment was worth it.</p>
+      <p class="text-tjb-gray text-sm mb-3">In markets like this, we've seen birth doula packages ranging widely, with the biggest variables being experience level and what's included in the package. Some doulas offer sliding scale pricing or payment plans, so it's always worth asking, even if the listed rate feels out of reach. We've heard from doulas who volunteered a payment plan before the family even raised cost as a concern.</p>
+      <p class="text-tjb-gray text-sm mb-3">We've heard from families who successfully used their HSA or FSA to cover doula services with a Letter of Medical Necessity from their doctor. It can take persistence, especially if office staff push back on the paperwork, but many families get it approved. If a nurse or gatekeeper declines to pass the form along, bring it to your next in-person appointment and discuss it directly with your provider. We've also seen families request in-network exceptions from their insurance for doula care, though results vary widely by insurer and even by which representative you speak to.</p>
+      <p class="text-tjb-gray text-sm">For a full breakdown of what is included in a doula package and what to ask about during consultations, see our <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">complete doula cost guide</a>.</p>
+    </div>
+  </section>
+  )}
 
   {birthStats && (
   <!-- ═══ Birth Statistics: "Birth in {City}: By the Numbers" ═══ -->
