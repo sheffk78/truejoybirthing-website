@@ -3047,6 +3047,8 @@ export const cities: Record<string, CityData> = {
     city: "Gainesville" ,
     state: "FL" ,
     slug: "gainesville-fl" ,
+    lat: 29.6516,
+    lng: -82.3248,
     costLow: 700,
     costHigh: 1800,
     shelbiServesHere: false,
@@ -3054,6 +3056,11 @@ export const cities: Record<string, CityData> = {
     ogImage: "https://truejoybirthing.com/images/og-city-gainesville-fl.webp",
     supportSceneImage: "/images/gainesville-fl-birth-doula-support-v2.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Gainesville with Spanish moss and live oaks",
+    midwifeInfo: {
+      paragraph: "Florida licenses Certified Professional Midwives (CPMs) and Licensed Midwives (LMs) through the Department of Health, making home birth and birth center midwifery legally regulated in Gainesville. Vision Birth Center of Gainesville offers midwife-led births with CPMs and LMs on staff. For home birth, Doniece Talley (Deeply Rooted Midwifery) and Christina Owens (EVA Homebirth) are licensed CPMs serving Alachua County. On the hospital side, UF Health Shands has Certified Nurse-Midwives (CNMs) in their OB/GYN practice, so hospital-based midwifery care is available for Gainesville families." ,
+      credentialTypes: " and LMs" ,
+      credentialDetail: "In Florida, Licensed Midwives (LMs) are licensed by the state to attend out-of-hospital births, and Certified Professional Midwives (CPMs) meet national standards for out-of-hospital midwifery. Certified Nurse-Midwives (CNMs) practice in hospital settings. Gainesville has all three types practicing locally."
+    },
     localDoulas: [
       { name: "Holli" , credential: "Birth Doula" , practice: "Holli" , url: "https://www.instagram.com/gainesvilledoula/" , photo: "/images/provider-gainesville-fl-holli.webp" , description: "supporting women through pregnancy & postpartum birth prep homebirth VBAC twins doula mentoring 1:1 classes virtual/local in person.", costRange: "$700-$1,800", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Gainesville, FL"] },
       { name: "Birth Culture" , credential: "Birth Doula" , practice: "Birth Culture" , url: "https://birthculture.org/" , photo: "/images/provider-gainesville-fl-birth-culture.webp", description: "Based in Gainesville, Florida, Birth Culture is expanding nationally through hybrid doula training programs. A Doula Training Program Setting the Standard ...", costRange: "$700-$1,800", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Gainesville, FL"] },
@@ -3074,7 +3081,7 @@ export const cities: Record<string, CityData> = {
     // Owner: Practical Midwifery Inc. Verified via FL Health Finder 2026-07-21.
     birthCenterDetails: [
       { name: "Vision Birth Center of Gainesville" , thumbnail: "/images/gainesville-fl-birth-center-vision-birth-center.webp" , url: "https://visionbirthcenter.com/" , address: "810 E University Ave, Gainesville, FL 32601" , services: ["Midwife-Led Births" , "Prenatal Care" , "Postpartum Care" , "Water Birth" , "Newborn Care"] , medicaid: false, paragraph: "Vision Birth Center of Gainesville, at 810 E University Ave near downtown, is a state-licensed freestanding birth center (FL AHCA License #388) with two birthing rooms. Licensed in June 2025 under Practical Midwifery Inc, it is the first freestanding birth center in Alachua County. The center offers midwife-led prenatal, birth, postpartum, and newborn care with water birth options, lactation support, nutritional counseling, free pregnancy testing, and lab work. Located on University Avenue near UF campus, it provides an out-of-hospital birth option for low-risk families who want a natural birth experience with midwifery care. Schedule a free consultation to see if birth center care is right for you." } ],
-    medicaidNote: "Yes, Florida Medicaid covers doula services as of July 1, 2024, under SB 264. Coverage includes prenatal, labor and delivery, and postpartum doula visits. Doulas must be certified by approved organizations and enrolled as Florida Medicaid providers. UF Health Shands\u2019 patient navigation team can help connect Medicaid patients with enrolled doulas, and student-doula programs through UF may offer reduced-cost support." ,
+    medicaidNote: "Yes — Florida Medicaid covers doula services as of July 1, 2024, under SB 264. Coverage includes prenatal, labor and delivery, and postpartum doula visits. Doulas must be certified by approved organizations and enrolled as Florida Medicaid providers. UF Health Shands\u2019 patient navigation team can help connect Medicaid patients with enrolled doulas, and student-doula programs through UF may offer reduced-cost support." ,
     insuranceNote: "Florida Medicaid now covers doula services under SB 264. If you\u2019re not on Medicaid, check whether your private insurance covers out-of-network doula services. HSA and FSA funds can also be used for doula fees. Contact your provider directly to confirm what\u2019s covered under your plan." ,
     faqs: [
       { q: "Does Medicaid cover doulas in Gainesville?" , a: "Yes! Florida Medicaid covers doula services as of July 2024 under SB 264. That includes prenatal visits, labor support, and postpartum care. If you\u2019re on Medicaid in Alachua County, call your managed care plan or ask UF Health\u2019s patient navigation team about finding an enrolled doula. You deserve support, and now your insurance helps pay for it." },
