@@ -1897,7 +1897,7 @@ export const cities: Record<string, CityData> = {
     shelbiServesHere: false,
     heroImage: "/images/hartford-ct-birth-doula-hero-v3.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-hartford-ct.webp",
-    supportSceneImage: "/images/hartford-ct-birth-doula-support-v2.webp",
+    supportSceneImage: "/images/hartford-ct-birth-doula-support-v3.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Hartford with Connecticut River autumn foliage",
     lat: 41.7658,
     lng: -72.6734,
