@@ -429,7 +429,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT5M22S",
     uploadDate: "2026-07-13T20:40:00Z",
 },
-  // hartford-ct video removed: gradient-only opening, missing hero image. Needs re-render.
+  "hartford-ct": {
+        videoId: "HqMw73I8M9A",
+        title: "Hartford CT Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+        description: "Watch the full city guide — doulas, midwives, hospital policies, costs, and Medicaid coverage for Hartford, CT families. Everything first-time moms need in under 5 minutes.",
+        duration: "PT4M44S",
+        uploadDate: "2026-07-20T18:35:00Z",
+    },
     "stamford-ct": {
         videoId: "97buu-Ygq3Q",
         title: "Stamford CT Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
