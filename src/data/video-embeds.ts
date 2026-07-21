@@ -108,7 +108,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
   "san-bernardino-ca": {
     videoId: "jnLMhBnbZ54",
-    title: "San Bernardino Doula and Birth Plan Guide: Costs, Hospitals and Medi-Cal (First-Time Mom)",
+    title: "San Bernardino Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
     description: "Watch the full city guide — 4 hospitals, 13 doulas and midwives, 1 birth center, costs, and California Medi-Cal, all in under 5 minutes.",
     duration: "PT4M12S",
     uploadDate: "2026-07-21T00:00:00-07:00",
@@ -117,13 +117,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [16, "What This Video Covers"],
       [33, "St. Bernardine Medical Center"],
       [63, "Community Hospital of San Bernardino"],
-      [90, "Loma Linda University Childrens Hospital"],
+      [90, "Loma Linda University Children's Hospital"],
       [118, "The Natural Birth Place"],
-      [142, "Doulas and Midwives in San Bernardino"],
+      [142, "Doulas & Midwives in San Bernardino"],
       [168, "The True Joy Birthing App"],
       [191, "What It Costs"],
-      [214, "Medi-Cal and Insurance"],
-      [237, "Build Your Birth Plan"]
+      [214, "Medi-Cal & Insurance"],
+      [237, "Build Your Birth Plan"],
     ],
   },
   "beaumont-tx": {
@@ -156,7 +156,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-22T00:00:00-07:00",
   },
   "san-francisco-ca": {
-    videoId: "V0-StNlMtN0",
+    videoId: "ucjWrh5iuMs",
     title: "San Francisco Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 4 minutes.",
     duration: "PT3M43S",
