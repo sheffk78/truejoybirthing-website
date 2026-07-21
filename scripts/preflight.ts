@@ -313,11 +313,11 @@ function run(): void {
   if (targetSlug) {
     try {
       const grepResult = execSync(
-        `grep -A10 '"slug": "${targetSlug}"' src/data/cities.ts | grep -o '"medicaidNote": "[^"]*"'`,
+        `grep -A60 'slug: "${targetSlug}"' src/data/cities.ts | grep -o 'medicaidNote: "[^"]*"'`,
         { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
       );
       const note = grepResult.trim();
-      if (note.startsWith('"medicaidNote": "Yes') || note.startsWith('"medicaidNote": "No')) {
+      if (note.startsWith('medicaidNote: "Yes') || note.startsWith('medicaidNote: "No')) {
         results.push({ gate: 'S7', status: 'PASS', detail: `medicaidNote format OK` });
       } else {
         results.push({ gate: 'S7', status: 'FAIL', detail: `medicaidNote must start with "Yes —" or "No —"` });
@@ -640,7 +640,22 @@ function run(): void {
     } catch {}
 
     if (heroIsV2Plus) {
-      results.push({ gate: 'G23', status: 'SKIP', detail: 'Hero is v2+ upload — YT thumbnail regen deferred to video stage' });
+      // For v2+ heroes, try the actual thumbnail comparison first.
+      // If the YT thumbnail has already been regenerated to match, let it pass.
+      try {
+        const g23ResultEarly = execSync(
+          `python3 scripts/preflight-image-helper.py yt-thumbnail-matches-hero ${targetSlug}`,
+          { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 15000 }
+        );
+        const g23DataEarly = JSON.parse(g23ResultEarly.trim());
+        if (g23DataEarly.pass) {
+          results.push({ gate: 'G23', status: 'PASS', detail: g23DataEarly.detail });
+        } else {
+          results.push({ gate: 'G23', status: 'SKIP', detail: 'Hero is v2+ upload — YT thumbnail regen deferred to video stage' });
+        }
+      } catch {
+        results.push({ gate: 'G23', status: 'SKIP', detail: 'Hero is v2+ upload — YT thumbnail regen deferred to video stage' });
+      }
     } else {
       try {
         const g23Result = execSync(
@@ -982,7 +997,32 @@ function run(): void {
     } catch {}
 
     if (heroIsV2PlusG34) {
-      results.push({ gate: 'G34', status: 'SKIP', detail: 'Hero is v2+ upload — CDN match deferred to post-deploy verification' });
+      // For v2+ heroes, try the actual CDN check first.
+      // If the CDN has already been purged/propagated, let it pass.
+      try {
+        const g34ResultEarly = execSync(
+          `python3 scripts/preflight-image-helper.py cdn-match ${targetSlug}`,
+          { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 15000 }
+        );
+        const g34DataEarly = JSON.parse(g34ResultEarly.trim());
+        if (g34DataEarly.pass) {
+          results.push({ gate: 'G34', status: 'PASS', detail: g34DataEarly.detail });
+        } else {
+          results.push({ gate: 'G34', status: 'FAIL', detail: g34DataEarly.detail });
+        }
+      } catch (e: any) {
+        const outputEarly = typeof e.stdout === 'string' ? e.stdout : '';
+        try {
+          const g34DataEarlyFail = JSON.parse(outputEarly.trim());
+          if (g34DataEarlyFail.pass) {
+            results.push({ gate: 'G34', status: 'PASS', detail: g34DataEarlyFail.detail });
+          } else {
+            results.push({ gate: 'G34', status: 'FAIL', detail: g34DataEarlyFail.detail });
+          }
+        } catch {
+          results.push({ gate: 'G34', status: 'SKIP', detail: 'Hero is v2+ upload — CDN match deferred to post-deploy verification' });
+        }
+      }
     } else {
       try {
         const g34Result = execSync(

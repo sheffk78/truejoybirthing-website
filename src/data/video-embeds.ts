@@ -299,6 +299,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT4M08S",
     uploadDate: "2026-06-30T00:00:00-06:00",
 },
+"gainesville-fl": {
+    videoId: "xKAMi0RZawU",
+    title: "Gainesville Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Florida Medicaid, all in under 3 minutes.",
+    duration: "PT2M45S",
+    uploadDate: "2026-07-21T00:00:00-04:00",
+},
 "oakland-ca": {
     videoId: "VvRVfdgx-5Q",
     title: "Oakland CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
