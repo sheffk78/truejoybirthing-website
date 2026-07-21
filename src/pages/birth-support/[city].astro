@@ -30,6 +30,8 @@ const {
   heroImage: heroImageSlug, supportSceneImage, supportSceneAlt, ogImage: ogImageSlug,
   midwifeInfo,
   birthStats,
+  postpartumSection,
+  providerReviewSection,
 }: CityData = data;
 
 // Medicaid helper (must come before pageDesc)
@@ -992,6 +994,27 @@ const schema = {
         }
       })();
     </script>
+  )}
+
+
+  {/* ═══ Postpartum Care Providers section (city-specific, e.g. Allen TX) ═══ */}
+  {postpartumSection && (
+    <section class="py-16 bg-tjb-cream-50">
+      <div class="max-w-3xl mx-auto px-6 not-prose">
+        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-6" style="font-family: 'DM Sans', sans-serif;">{postpartumSection.split('\n\n')[0]}</h2>
+        <p class="text-tjb-gray leading-relaxed" set:html={postpartumSection.split('\n\n').slice(1).join('\n\n')} />
+      </div>
+    </section>
+  )}
+
+  {/* ═══ Provider Review / Comparison section (city-specific, e.g. Austin TX) ═══ */}
+  {providerReviewSection && (
+    <section class="py-16 bg-tjb-cream-50">
+      <div class="max-w-3xl mx-auto px-6 not-prose">
+        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-6" style="font-family: 'DM Sans', sans-serif;">{providerReviewSection.split('\n\n')[0]}</h2>
+        <p class="text-tjb-gray leading-relaxed" set:html={providerReviewSection.split('\n\n').slice(1).join('\n\n')} />
+      </div>
+    </section>
   )}
 
 
