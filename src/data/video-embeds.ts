@@ -505,8 +505,30 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT4M44S",
     uploadDate: "2026-07-14T12:00:00-06:00",
   },
-  // gaithersburg-md video removed: gradient-only opening, missing hero image. Needs re-render.
-"fort-collins-co": {
+  "gaithersburg-md": {
+    videoId: "9ZEItY2sI_0",
+    title: "Gaithersburg MD Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — 2 hospitals, 1 birth center, 5 doulas, costs, and Maryland Medicaid, all in under 7 minutes.",
+    duration: "PT6M30S",
+    uploadDate: "2026-07-22T00:00:00-04:00",
+    chapters: [
+      [0, "Welcome to Gaithersburg"],
+      [14, "What This Guide Covers"],
+      [36, "Adventist HealthCare Shady Grove Medical Center (Level III NICU)"],
+      [68, "Holy Cross Germantown Hospital (Level II Nursery)"],
+      [97, "Rock Creek Midwifery (Home Birth Option)"],
+      [136, "Nashare Butts — That Community Helper"],
+      [163, "Doula Nathalie & Associates"],
+      [194, "Womb Room Maryland Doulas"],
+      [219, "Joni Wallace — Sun Moon & Herbs Wellness"],
+      [248, "Jennifer Whelan — Postpartum Doula LLC"],
+      [282, "The True Joy Birthing App"],
+      [305, "Cost Reality ($600–$5,000)"],
+      [338, "Insurance & Maryland Medicaid"],
+      [374, "Your Next Step"],
+    ],
+  },
+  "fort-collins-co": {
     videoId: "l_sFXlps57E",
     title: "Fort Collins CO Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",

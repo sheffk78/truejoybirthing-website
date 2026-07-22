@@ -1317,8 +1317,55 @@ function run(): void {
 
       const population = POPULATION_DATA[targetSlug] || 0;
 
+      // Count providers in the city block using brace-depth tracking
+        function countArrayEntries(block: string, fieldName: string): number {
+          const match = block.match(new RegExp(`${fieldName}:\\s*\\[`));
+          if (!match) return 0;
+          const arrStart = block.indexOf('[', match.index!);
+          let depth = 0;
+          let arrEnd = arrStart;
+          for (let i = arrStart; i < block.length; i++) {
+            if (block[i] === '[') depth++;
+            else if (block[i] === ']') { depth--; if (depth === 0) { arrEnd = i; break; } }
+          }
+          const arrBlock = block.slice(arrStart + 1, arrEnd);
+          // Count entries by name: field
+          return (arrBlock.match(/name:\s*"/g) || []).length;
+        }
+
+      // Check for documented NPI registry search (waives birth center minimum)
+        const hasNpiZeroDoc = /NPI registry.*returned zero/i.test(cityBlock) ||
+                              /NPI.*taxonomy.*zero/i.test(cityBlock) ||
+                              /birth center search.*returned zero/i.test(cityBlock);
+
       if (population === 0) {
-        results.push({ gate: 'G37', status: 'SKIP', detail: `No population data for ${targetSlug} — add to POPULATION_DATA map` });
+        // Fallback: unknown cities get the 100K-500K tier minimums (most common tier).
+        // This prevents new cities from silently bypassing the count check.
+        // Add the city to POPULATION_DATA for accurate tier-based enforcement.
+        const fallbackMinDoulas = 2;
+        const fallbackMinHospitals = 2;
+        const fallbackMinBirthCenters = 1;
+
+        const doulaCount = countArrayEntries(cityBlock, 'localDoulas');
+        const hospitalCount = countArrayEntries(cityBlock, 'hospitalDetails');
+        const birthCenterCount = countArrayEntries(cityBlock, 'birthCenterDetails');
+
+        const failures: string[] = [];
+        if (doulaCount < fallbackMinDoulas) {
+          failures.push(`doulas/midwives: ${doulaCount} (need ${fallbackMinDoulas} — fallback tier, add to POPULATION_DATA for accurate check)`);
+        }
+        if (hospitalCount < fallbackMinHospitals) {
+          failures.push(`hospitals: ${hospitalCount} (need ${fallbackMinHospitals} — fallback tier)`);
+        }
+        if (birthCenterCount < fallbackMinBirthCenters && !hasNpiZeroDoc) {
+          failures.push(`birth centers: ${birthCenterCount} (need ${fallbackMinBirthCenters} — fallback tier)`);
+        }
+
+        if (failures.length === 0) {
+          results.push({ gate: 'G37', status: 'PASS', detail: `Unknown population (fallback 100K-500K tier): ${doulaCount} doulas/midwives, ${hospitalCount} hospitals, ${birthCenterCount} birth centers — add to POPULATION_DATA` });
+        } else {
+          results.push({ gate: 'G37', status: 'FAIL', detail: `Unknown population (fallback 100K-500K tier): ${failures.join(', ')}` });
+        }
       } else {
         // Determine tier and minimums
         let tier: string;
@@ -1328,16 +1375,13 @@ function run(): void {
 
         if (population > 5_000_000) {
           tier = '>5M';
-          // Mega cities (NYC 8.3M, LA 3.8M) need proportionally more providers.
-          // Scale: 1 doula per ~500K population, floor 10, ceil 20.
           minDoulas = Math.min(20, Math.max(10, Math.floor(population / 500_000)));
-          minHospitals = 4;
+          minHospitals = 5;
           minBirthCenters = 2;
         } else if (population > 1_000_000) {
           tier = '1M-5M';
-          // Large cities: 1 doula per ~300K, floor 5, ceil 12.
           minDoulas = Math.min(12, Math.max(5, Math.floor(population / 300_000)));
-          minHospitals = 4;
+          minHospitals = 5;
           minBirthCenters = 2;
         } else if (population > 500_000) {
           tier = '500K-1M';
@@ -1356,35 +1400,14 @@ function run(): void {
           minBirthCenters = 0;
         }
 
-        // Count providers in the city block using brace-depth tracking
-        function countArrayEntries(block: string, fieldName: string): number {
-          const match = block.match(new RegExp(`${fieldName}:\\s*\\[`));
-          if (!match) return 0;
-          const arrStart = block.indexOf('[', match.index!);
-          let depth = 0;
-          let arrEnd = arrStart;
-          for (let i = arrStart; i < block.length; i++) {
-            if (block[i] === '[') depth++;
-            else if (block[i] === ']') { depth--; if (depth === 0) { arrEnd = i; break; } }
-          }
-          const arrBlock = block.slice(arrStart + 1, arrEnd);
-          // Count entries by name: field
-          return (arrBlock.match(/name:\s*"/g) || []).length;
-        }
-
         const doulaCount = countArrayEntries(cityBlock, 'localDoulas');
         const hospitalCount = countArrayEntries(cityBlock, 'hospitalDetails');
         const birthCenterCount = countArrayEntries(cityBlock, 'birthCenterDetails');
 
-        // Check for documented NPI registry search (waives birth center minimum)
-        const hasNpiZeroDoc = /NPI registry.*returned zero/i.test(cityBlock) ||
-                              /NPI.*taxonomy.*zero/i.test(cityBlock) ||
-                              /birth center search.*returned zero/i.test(cityBlock);
-
         const failures: string[] = [];
 
         if (doulaCount < minDoulas) {
-          failures.push(`doulas: ${doulaCount} (need ${minDoulas})`);
+          failures.push(`doulas/midwives: ${doulaCount} (need ${minDoulas})`);
         }
         if (hospitalCount < minHospitals) {
           failures.push(`hospitals: ${hospitalCount} (need ${minHospitals})`);
@@ -1400,7 +1423,7 @@ function run(): void {
           results.push({
             gate: 'G37',
             status: 'PASS',
-            detail: `Pop ${tier} (${population.toLocaleString()}): ${doulaCount} doulas, ${hospitalCount} hospitals, ${birthCenterCount} birth centers${bcNote}`
+            detail: `Pop ${tier} (${population.toLocaleString()}): ${doulaCount} doulas/midwives, ${hospitalCount} hospitals, ${birthCenterCount} birth centers${bcNote}`
           });
         } else {
           results.push({
