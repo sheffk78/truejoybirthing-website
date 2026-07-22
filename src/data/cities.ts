@@ -3323,7 +3323,7 @@ export const cities: Record<string, CityData> = {
     costLow: 1000,
     costHigh: 3000,
     shelbiServesHere: false,
-    heroImage: "/images/henderson-nv-birth-doula-skyline-v2.webp",
+    heroImage: "/images/henderson-nv-birth-doula-skyline-v3.webp",
     ogImage: "/images/og-city-henderson-nv.webp",
     supportSceneImage: "/images/henderson-nv-birth-doula-support-v3.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Henderson with Nevada desert landscape nearby",
