@@ -3646,7 +3646,7 @@ export const cities: Record<string, CityData> = {
     costLow: 900,
     costHigh: 2500,
     shelbiServesHere: false,
-    heroImage: "/images/gaithersburg-md-birth-doula-skyline-v2.webp",
+    heroImage: "/images/gaithersburg-md-birth-doula-skyline-v3.webp",
     supportSceneImage: "/images/gaithersburg-md-birth-doula-support.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-gaithersburg-md.webp",
     localDoulas: [
