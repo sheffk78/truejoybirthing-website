@@ -524,8 +524,8 @@ function run(): void {
   if (targetSlug) {
     try {
       const dir = path.join(PROJECT_DIR, 'public/images');
-      // Narrow hero pattern to specifically match -hero variants (not -skyline, -support)
-      const heroPattern = new RegExp(`^${targetSlug}-birth-doula-hero(-v\\d+)?\\.webp$`);
+      // Match both -hero and -skyline naming patterns (different cities use different conventions)
+      const heroPattern = new RegExp(`^${targetSlug}-birth-doula-(hero|skyline)(-v\\d+)?\\.webp$`);
       const ogPattern = new RegExp(`^og-city-${targetSlug}(-v\\d+)?\\.webp$`);
 
       const heroFiles = fs.readdirSync(dir).filter(f => heroPattern.test(f));
