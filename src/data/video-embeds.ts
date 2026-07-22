@@ -614,4 +614,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [197, "Your Next Step"],
     ],
   },
-}
+  "st-paul-mn": {
+    videoId: "URevONHJpKY",
+    title: "St. Paul Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas and midwives serving St. Paul, hospital policies, real costs, and whether Minnesota Medical Assistance covers a doula.",
+    duration: "PT5M39S",
+  },
+};

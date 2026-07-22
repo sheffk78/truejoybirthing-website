@@ -13,6 +13,7 @@ import AppShowcase from '../../components/AppShowcase.astro';
 import ContextualCityLinks from '../../components/ContextualCityLinks.astro';
 import { cities, citySlugs, type CityData } from '../../data/cities';
 import { cityVideoEmbeds } from '../../data/video-embeds';
+import { getRelatedCities } from '../../data/related-cities';
 
 export function getStaticPaths() {
   return citySlugs.map((slug) => ({
@@ -52,6 +53,9 @@ const doulaCostLinkVariants = [
 const doulaCostLinkIndex = slug.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0) % doulaCostLinkVariants.length;
 const doulaCostLinkHtml = doulaCostLinkVariants[doulaCostLinkIndex].replace(/{city}/g, city);
 const hasBirthCenters = birthCenterDetails.some((bc) => !bc.name.toLowerCase().includes('no '));
+
+// Cross-city provider data: cities that share doulas/midwives with this city
+const sharedProviderCities = getRelatedCities(slug);
 
 // ═══ Filter bar data — collect available filter values from localDoulas ═══
 // Only show filter chips for values that exist in this city's doulas
@@ -1659,6 +1663,25 @@ const schema = {
             })}
           </div>
         </div>
+
+      {/* ═══ Doulas Who Also Serve Nearby Cities (cross-city provider data) ═══ */}
+      {sharedProviderCities.length > 0 && (
+        <div class="mb-8 mt-8 pt-8 border-t border-tjb-lavender-100">
+          <h2 class="text-xl font-bold mb-2" style="font-family: 'DM Sans', sans-serif;">Doulas Who Also Serve Nearby</h2>
+          <p class="text-sm text-tjb-gray mb-4">Some of the birth support providers on this page also serve families in these nearby communities.</p>
+          <div class="flex flex-wrap gap-2">
+            {sharedProviderCities.map((rc) => {
+              const nearCity = cities[rc.slug];
+              return nearCity ? (
+                <a href={`/birth-support/${rc.slug}/`} class="inline-block px-4 py-2 rounded-full border border-tjb-rose-200 text-tjb-rose-600 hover:bg-tjb-rose-50 transition text-sm font-medium">
+                  {nearCity.city}
+                  <span class="text-tjb-gray-400 text-xs ml-1">({rc.sharedProviders} {rc.sharedProviders === 1 ? 'provider' : 'providers'})</span>
+                </a>
+              ) : null;
+            })}
+          </div>
+        </div>
+      )}
 
       <a href={`/birth-support/${stateHubSlug}/`} class="text-tjb-lavender-600 font-semibold hover:underline">All {stateFullName} Cities →</a>
     </div>

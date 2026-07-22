@@ -1,0 +1,189 @@
+{
+  "amarillo-tx": [],
+  "allen-tx": [
+    {
+      "slug": "carrollton-tx",
+      "sharedProviders": 1
+    }
+  ],
+  "carrollton-tx": [
+    {
+      "slug": "allen-tx",
+      "sharedProviders": 1
+    }
+  ],
+  "abilene-tx": [],
+  "beaumont-tx": [],
+  "arlington-tx": [],
+  "austin-tx": [],
+  "augusta-ga": [],
+  "atlanta-ga": [],
+  "spokane-wa": [],
+  "seattle-wa": [],
+  "tacoma-wa": [],
+  "sacramento-ca": [
+    {
+      "slug": "fremont-ca",
+      "sharedProviders": 1
+    }
+  ],
+  "fremont-ca": [
+    {
+      "slug": "sacramento-ca",
+      "sharedProviders": 1
+    }
+  ],
+  "fresno-ca": [],
+  "portland-or": [
+    {
+      "slug": "vancouver-wa",
+      "sharedProviders": 1
+    }
+  ],
+  "vancouver-wa": [
+    {
+      "slug": "portland-or",
+      "sharedProviders": 1
+    }
+  ],
+  "eugene-or": [
+    {
+      "slug": "nashville-tn",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "buffalo-ny",
+      "sharedProviders": 1
+    }
+  ],
+  "nashville-tn": [
+    {
+      "slug": "eugene-or",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "buffalo-ny",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "hendersonville-tn",
+      "sharedProviders": 1
+    }
+  ],
+  "buffalo-ny": [
+    {
+      "slug": "eugene-or",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "nashville-tn",
+      "sharedProviders": 1
+    }
+  ],
+  "minneapolis-mn": [],
+  "phoenix-az": [],
+  "chicago-il": [],
+  "detroit-mi": [],
+  "newark-nj": [],
+  "hendersonville-tn": [
+    {
+      "slug": "nashville-tn",
+      "sharedProviders": 1
+    }
+  ],
+  "philadelphia-pa": [],
+  "pittsburgh-pa": [],
+  "baltimore-md": [],
+  "hartford-ct": [
+    {
+      "slug": "stamford-ct",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "norwalk-ct",
+      "sharedProviders": 1
+    }
+  ],
+  "stamford-ct": [
+    {
+      "slug": "norwalk-ct",
+      "sharedProviders": 3
+    },
+    {
+      "slug": "hartford-ct",
+      "sharedProviders": 1
+    }
+  ],
+  "norwalk-ct": [
+    {
+      "slug": "stamford-ct",
+      "sharedProviders": 3
+    },
+    {
+      "slug": "hartford-ct",
+      "sharedProviders": 1
+    }
+  ],
+  "providence-ri": [],
+  "oakland-ca": [],
+  "bakersfield-ca": [],
+  "stockton-ca": [],
+  "rochester-ny": [],
+  "albany-ny": [],
+  "tulsa-ok": [],
+  "columbus-oh": [],
+  "cleveland-oh": [],
+  "indianapolis-in": [],
+  "reno-nv": [],
+  "tucson-az": [],
+  "memphis-tn": [],
+  "gainesville-fl": [],
+  "charleston-sc": [],
+  "richmond-va": [],
+  "aurora-co": [],
+  "henderson-nv": [],
+  "meridian-id": [],
+  "lehi-ut": [],
+  "springfield-il": [],
+  "columbia-md": [
+    {
+      "slug": "gaithersburg-md",
+      "sharedProviders": 1
+    }
+  ],
+  "gaithersburg-md": [
+    {
+      "slug": "columbia-md",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "rockville-md",
+      "sharedProviders": 1
+    }
+  ],
+  "rockville-md": [
+    {
+      "slug": "gaithersburg-md",
+      "sharedProviders": 1
+    }
+  ],
+  "norfolk-va": [
+    {
+      "slug": "chesapeake-va",
+      "sharedProviders": 5
+    }
+  ],
+  "chesapeake-va": [
+    {
+      "slug": "norfolk-va",
+      "sharedProviders": 5
+    }
+  ],
+  "fontana-ca": [],
+  "charlotte-nc": [],
+  "laurel-md": [],
+  "greenbelt-md": [],
+  "orlando-fl": [],
+  "denver-co": [],
+  "aurora-il": []
+}
