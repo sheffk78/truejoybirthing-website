@@ -574,4 +574,22 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [413, "Start Your Birth Plan"],
     ],
   },
+  "aurora-il": {
+    videoId: "NP6aipn4S2s",
+    title: "Aurora IL Doula & Birth Plan Guide: Costs, Hospitals & Medicaid",
+    description: "Complete birth guide for Aurora, IL: 8 local doulas, 4 hospitals (Rush-Copley, Northwestern Delnor, Edward, Mercy), real costs ($800-$2,500), and Illinois Medicaid doula coverage up to $3,500 per pregnancy.",
+    duration: "PT3M31S",
+    chapters: [
+      [0, "Welcome to Aurora"],
+      [13, "Where Aurora Families Deliver"],
+      [31, "Rush-Copley Medical Center"],
+      [56, "Northwestern Medicine Delnor Hospital"],
+      [82, "Edward Hospital"],
+      [108, "Doulas & Midwives in Aurora"],
+      [129, "The True Joy Birthing App"],
+      [151, "Cost Reality ($800-$2,500)"],
+      [173, "Illinois Medicaid Covers Doulas"],
+      [197, "Your Next Step"],
+    ],
+  },
 }
