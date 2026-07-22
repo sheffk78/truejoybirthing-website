@@ -991,7 +991,7 @@ function run(): void {
         { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 5000 }
       );
       const heroMatchG34 = cityBlockForG34.match(/heroImage:\s*"([^"]+)"/);
-      if (heroMatchG34 && /-v[2-9]\./.test(heroMatchG34[1])) {
+      if (heroMatchG34 && (/-v[2-9]\./.test(heroMatchG34[1]) || /-hero\./.test(heroMatchG34[1]))) {
         heroIsV2PlusG34 = true;
       }
     } catch {}
