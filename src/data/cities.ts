@@ -3592,7 +3592,7 @@ export const cities: Record<string, CityData> = {
     costLow: 900,
     costHigh: 2500,
     shelbiServesHere: false,
-    heroImage: "/images/columbia-md-birth-doula-skyline.webp",
+    heroImage: "/images/columbia-md-birth-doula-skyline-v2.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-columbia-md.webp",
     supportSceneImage: "/images/columbia-md-birth-doula-support-v2.webp",
     supportSceneAlt: "A doula providing supportive care to an expectant mother in Columbia, Maryland",
@@ -3645,7 +3645,8 @@ export const cities: Record<string, CityData> = {
     costLow: 900,
     costHigh: 2500,
     shelbiServesHere: false,
-    heroImage: "/images/gaithersburg-md-birth-doula-skyline.webp",
+    heroImage: "/images/gaithersburg-md-birth-doula-skyline-v2.webp",
+    supportSceneImage: "/images/gaithersburg-md-birth-doula-support.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-gaithersburg-md.webp",
     localDoulas: [
       { name: "Nashare Butts" , credential: "Birth and Postpartum Doula" , practice: "That Community Helper" , url: "https://doulamatch.net/profile/39325/nashare-butts" , photo: "/images/provider-gaithersburg-md-nashare-butts.webp" , description: "Nashare Butts is a trained birth and postpartum doula based in Gaithersburg, serving Montgomery County families through her practice That Community Helper. She offers affordable birth support ($600 to $950) and postpartum care ($30 to $60 per hour), making doula services accessible to families across the income spectrum. Her community-centered approach focuses on evidence-based care and personalized support throughout pregnancy, labor, and the postpartum period." , costRange: "$600–$950" , acceptingClients: true , services: ["Birth Doula" , "Postpartum Doula"] , serviceArea: ["Gaithersburg, MD" , "Montgomery County, MD" , "Montgomery Village, MD"] , acceptsMedicaid: true },
