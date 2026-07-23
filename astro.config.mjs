@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import astroIcon from 'astro-icon';
 import { cities } from './src/data/cities';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -67,6 +68,7 @@ export default defineConfig({
   trailingSlash: 'always',
   site: 'https://truejoybirthing.com',
   integrations: [
+    astroIcon(),
     sitemap({
       // No global lastmod — each URL gets its own from serialize()
       filter: (page) => !page.includes('/404') && !page.includes('/admin/') && !page.includes('/dashboard'),
