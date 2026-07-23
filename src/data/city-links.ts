@@ -302,6 +302,7 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
   general: [
     // Arizona
     { slug: "phoenix-az", state: "az", label: "Phoenix" },
+    { slug: "tucson-az", state: "az", label: "Tucson" },
     // California
     { slug: "fresno-ca", state: "ca", label: "Fresno" },
     { slug: "los-angeles-ca", state: "ca", label: "Los Angeles" },
@@ -312,19 +313,41 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
     { slug: "port-st-lucie-fl", state: "fl", label: "Port St. Lucie" },
     // Georgia
     { slug: "atlanta-ga", state: "ga", label: "Atlanta" },
+    { slug: "augusta-ga", state: "ga", label: "Augusta" },
+    // Idaho
+    { slug: "meridian-id", state: "id", label: "Meridian" },
     // Illinois
     { slug: "chicago-il", state: "il", label: "Chicago" },
+    { slug: "aurora-il", state: "il", label: "Aurora" },
+    { slug: "springfield-il", state: "il", label: "Springfield" },
+    // Indiana
+    { slug: "indianapolis-in", state: "in", label: "Indianapolis" },
     // Maryland
     { slug: "baltimore-md", state: "md", label: "Baltimore" },
+    // Massachusetts
+    { slug: "worcester-ma", state: "ma", label: "Worcester" },
+    // Michigan
+    { slug: "grand-rapids-mi", state: "mi", label: "Grand Rapids" },
+    // Minnesota
+    { slug: "st-paul-mn", state: "mn", label: "St. Paul" },
+    // Nevada
+    { slug: "henderson-nv", state: "nv", label: "Henderson" },
+    { slug: "reno-nv", state: "nv", label: "Reno" },
+    // New Jersey
+    { slug: "newark-nj", state: "nj", label: "Newark" },
     // North Carolina
     { slug: "charlotte-nc", state: "nc", label: "Charlotte" },
     { slug: "raleigh-nc", state: "nc", label: "Raleigh" },
+    // Oklahoma
+    { slug: "oklahoma-city-ok", state: "ok", label: "Oklahoma City" },
+    { slug: "tulsa-ok", state: "ok", label: "Tulsa" },
     // Tennessee
     { slug: "nashville-tn", state: "tn", label: "Nashville" },
+    { slug: "hendersonville-tn", state: "tn", label: "Hendersonville" },
+    { slug: "memphis-tn", state: "tn", label: "Memphis" },
     // Texas
     { slug: "austin-tx", state: "tx", label: "Austin" },
     { slug: "beaumont-tx", state: "tx", label: "Beaumont" },
-    { slug: "austin-tx", state: "tx", label: "Austin" },
     // Washington
     { slug: "seattle-wa", state: "wa", label: "Seattle" },
   ],
