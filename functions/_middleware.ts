@@ -65,7 +65,8 @@ const redirects: Record<string, string> = {
   "/birth-support/chicago-il/evanston": "/birth-support/chicago-il/",
   "/birth-support/atlanta-ga/decatur": "/birth-support/atlanta-ga/",
   // Solo rules moved from _redirects (had no trailing-slash pair, now handled here)
-  "/postpartum-doula": "/blog/postpartum-doula/",
+  // /postpartum-doula now serves the dedicated SEO landing page directly — no redirect
+  // "/postpartum-doula": "/blog/postpartum-doula/",  // removed: landing page exists
   "/feed": "/blog/",
   "/plan": "/#download",
   "/course": "/#download",
