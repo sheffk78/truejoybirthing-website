@@ -3950,9 +3950,6 @@ export const cities: Record<string, CityData> = {
 { name: "East Bay Postpartum Doula Circle" , credential: "Birth Doula, Lactation Support" , practice: "East Bay Postpartum Doula Circle" , url: "https://www.eastbaypostpartum.com" , description: "Your Fourth Trimester, Covered A guild of 30+ certified doulas providing daytime, nighttime, and live-in postpartum care to Bay Area families." , photo: "/images/provider-fremont-ca-east-bay-postpartum-doula-circle.webp" , costRange: "$1,500 - $3,000" ,
     services: ["Birth Doula" , "Postpartum" , "Lactation" , "Breastfeeding Support" , "Overnight Care"], acceptsMedicaid: true ,
     acceptingClients: "true" },
-{ name: "Golden Gate Doula Associates" , credential: "Birth Doula, Lactation Support" , practice: "Golden Gate Doula Associates" , url: "http://www.goldengatedoula.com" , description: "Trusted maternity and postpartum resource in the Bay Area since 2016." , photo: "/images/provider-fremont-ca-golden-gate-doula-associates.webp" , costRange: "$1,500 - $3,000" ,
-    services: ["Birth Doula" , "Postpartum" , "Lactation" , "Breastfeeding Support" , "Prenatal Care"] ,
-    acceptingClients: "true" },
 { name: "Mama Bear Birth Services: Pre/Postnatal Pilates, Doula Support & Childbirth Education" , credential: "Postpartum Doula" , practice: "Mama Bear Birth Services: Pre/Postnatal Pilates, Doula Support & Childbirth Education" , url: "https://sites.google.com/view/sfbirthservices/home" , description: "Pre/postnatal Pilates, doula support, and childbirth education serving the Bay Area." , photo: "/images/doulas/mama-bear-birth-services.webp" , costRange: "$1,500 - $3,000" ,
     services: ["Postpartum" , "Childbirth Education" , "Prenatal Care"] ,
     acceptingClients: "true"
@@ -3978,6 +3975,7 @@ export const cities: Record<string, CityData> = {
     acceptingClients: "true" },
 { name: "Haven Baby Doula" , credential: "Birth Doula, Lactation Support" , practice: "Haven Baby Doula" , url: "https://www.havenbabydoula.com" , description: "Welcome, I'm Ruth Nuñez a birth and postpartum Doula from Palo Alto, CA." , photo: "/images/provider-fremont-ca-haven-baby-doula.webp" , costRange: "$1,500 - $3,000" ,
     services: ["Birth Doula" , "Postpartum" , "Lactation" , "Home Birth" , "Evidence-Based Care"] ,
+    isVerified: true ,
     acceptingClients: "true" },
 { name: "Nebula Doulas" , credential: "Postpartum Doula" , practice: "Nebula Doulas" , url: "https://www.nebuladoulaservices.com" , description: "Who We Are At Nebula, we specialize in Postpartum and Newborn Care." , photo: "/images/provider-fremont-ca-nebula-doulas.webp" , costRange: "$1,500 - $3,000" ,
     services: ["Postpartum"] ,
@@ -4033,8 +4031,6 @@ export const cities: Record<string, CityData> = {
       { name: "Do Well Doula" , credential: "Birth Doula" , practice: "Do Well Doula" , url: "http://www.dowelldoula.com" , description: "Birth and postpartum doula providing childbirth education and evidence-based support." , photo: "/images/provider-fremont-ca-do-well-doula.webp" , services: ["Birth Doula" , "Postpartum" , "Breastfeeding Support" , "Childbirth Education" , "Overnight Care"], costRange: "$1,500 - $3,000" ,
     acceptingClients: "true" },
       { name: "East Bay Postpartum Doula Circle" , credential: "Birth Doula, Lactation Support" , practice: "East Bay Postpartum Doula Circle" , url: "https://www.eastbaypostpartum.com" , description: "Your Fourth Trimester, Covered A guild of 30+ certified doulas providing daytime, nighttime, and live-in postpartum care to Bay Area families." , photo: "/images/provider-fremont-ca-east-bay-postpartum-doula-circle.webp" , services: ["Birth Doula" , "Postpartum" , "Lactation" , "Breastfeeding Support" , "Overnight Care"], acceptsMedicaid: true, costRange: "$1,500 - $3,000" ,
-    acceptingClients: "true" },
-      { name: "Golden Gate Doula Associates" , credential: "Birth Doula, Lactation Support" , practice: "Golden Gate Doula Associates" , url: "http://www.goldengatedoula.com" , description: "Trusted maternity and postpartum resource in the Bay Area since 2016." , photo: "/images/provider-fremont-ca-golden-gate-doula-associates.webp" , services: ["Birth Doula" , "Postpartum" , "Lactation" , "Breastfeeding Support" , "Prenatal Care"], costRange: "$1,500 - $3,000" ,
     acceptingClients: "true" },
       { name: "Mama Bear Birth Services: Pre/Postnatal Pilates, Doula Support & Childbirth Education" , credential: "Postpartum Doula" , practice: "Mama Bear Birth Services: Pre/Postnatal Pilates, Doula Support & Childbirth Education" , url: "https://sites.google.com/view/sfbirthservices/home" , description: "Pre/postnatal Pilates, doula support, and childbirth education serving the Bay Area." , services: ["Postpartum" , "Childbirth Education" , "Prenatal Care"], costRange: "$1,500 - $3,000" ,
     photo: "/images/doulas/mama-bear-birth-services.webp"
