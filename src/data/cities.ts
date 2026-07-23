@@ -5008,6 +5008,172 @@ export const cities: Record<string, CityData> = {
       dataSource: "CDC NCHS National Vital Statistics System",
     },
     nearbyCities: ["chicago-il"]},
+  "bozeman-mt": {
+    enableBlogResources: true,
+    publishedDate: "2026-07-23",
+    city: "Bozeman" ,
+    state: "MT" ,
+    slug: "bozeman-mt" ,
+    lat: 45.6770,
+    lng: -111.0429,
+    costLow: 800,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    heroImage: "/images/bozeman-mt-birth-doula-hero.webp" ,
+    supportSceneImage: "/images/bozeman-mt-birth-doula-support.webp" ,
+    supportSceneAlt: "A pregnant woman in silhouette overlooking the Bridger Mountains and golden grassland at golden hour in Bozeman, Montana" ,
+    ogImage: "https://truejoybirthing.com/images/og-city-bozeman-mt.webp" ,
+    midwifeInfo: {
+      paragraph: "Montana licenses Certified Professional Midwives (CPMs) as Licensed Direct-Entry Midwives through the Department of Labor and Industry, making home birth and birth center midwifery legally regulated and accessible in Bozeman. Bozeman Birth Center has a team of CPMs and LMs offering both birth center and home birth options, and they accept Montana Medicaid. On the hospital side, Certified Nurse-Midwives (CNMs) practice at Bozeman Health Women's Specialists, so hospital-based midwifery care is available for Bozeman families." ,
+      credentialTypes: " and Licensed Direct-Entry Midwives" ,
+      credentialDetail: "In Montana, Licensed Direct-Entry Midwives are specifically licensed by the state to attend out-of-hospital births, giving"
+    },
+    localDoulas: [
+      {
+        name: "Julie Humphrey" ,
+        credential: "CD(DONA)" ,
+        practice: "Julie Doula Love" ,
+        url: "https://juliadoulalove.com" ,
+        photo: "/images/doulas/bozeman-mt-julie-humphrey.webp" ,
+        description: "DONA-certified birth doula with 19 years of experience offering continuous emotional, physical, and informational support throughout pregnancy, labor, and early postpartum. Accepts Carrot insurance and offers flexible payment options for Bozeman-area families." ,
+        costRange: "$2,100-$2,400" ,
+        acceptingClients: true,
+        services: ["Birth Doula" , "Postpartum Doula"],
+        serviceArea: ["Bozeman" , "Gallatin Valley"]
+      },
+      {
+        name: "Hannah Jennaway" ,
+        credential: "CPM, Birth and Postpartum Doula" ,
+        practice: "Divine Transitions" ,
+        url: "https://divinetransitions.org" ,
+        photo: "/images/doulas/bozeman-mt-hannah-jennaway.webp" ,
+        description: "Birth and postpartum doula with 15 years of experience who is also a newly certified CPM, offering a unique blend of clinical standards and compassionate care. Speaks English and Spanish, supports all birth settings." ,
+        costRange: "$1,200" ,
+        acceptingClients: true,
+        services: ["Birth Doula" , "Postpartum Doula" , "Midwife Support"],
+        serviceArea: ["Bozeman"]
+      },
+      {
+        name: "Kirsten Robinson" ,
+        credential: "CD(DTI)" ,
+        practice: "Move On Mama" ,
+        url: "https://moveonmama.com" ,
+        photo: "/images/doulas/bozeman-mt-kirsten-robinson.webp" ,
+        description: "Birth and postpartum doula with 5 years of experience who also works as a pre and postnatal fitness trainer, helping families feel comfortable, supported, and confident through pregnancy and postpartum." ,
+        costRange: "$800" ,
+        acceptingClients: true,
+        services: ["Birth Doula" , "Postpartum Doula" , "Childbirth Education"],
+        serviceArea: ["Bozeman"]
+      },
+      {
+        name: "Jessica Energy" ,
+        credential: "Birth Doula, Prenatal Yoga Teacher" ,
+        practice: "Jessica Energy" ,
+        url: "https://jessicaenergy.com" ,
+        photo: "/images/doulas/bozeman-mt-jessica-energy.webp" ,
+        description: "Birth and postpartum doula who combines doula support with prenatal yoga, partner workshops, and Ayurvedic women's health wisdom. Has helped hundreds of couples prepare for birth in the Bozeman area." ,
+        costRange: "$1,745-$3,495" ,
+        acceptingClients: true,
+        services: ["Birth Doula" , "Postpartum Doula" , "Prenatal Yoga"],
+        serviceArea: ["Bozeman"]
+      },
+      {
+        name: "Heather" ,
+        credential: "Doula, Childbirth Educator" ,
+        practice: "Ezer Birth" ,
+        url: "https://ezerbirth.com" ,
+        photo: "/images/doulas/bozeman-mt-heather-ezer-birth.webp" ,
+        description: "Ezer Birth offers holistic birth education and doula support for Bozeman families, partnering with mothers through pregnancy, birth, and postpartum with a focus on the sacred transition into motherhood." ,
+        costRange: "$1,200-$2,000" ,
+        acceptingClients: true,
+        services: ["Birth Doula" , "Childbirth Education" , "Postpartum Support"],
+        serviceArea: ["Bozeman"]
+      },
+      {
+        name: "Aeriel Schlender" ,
+        credential: "Doula, Childbirth Educator, Labor Photographer" ,
+        practice: "Olive Blossom Services" ,
+        url: "https://oliveblossomservices.com" ,
+        photo: "/images/doulas/bozeman-mt-aeriel-schlender.webp" ,
+        description: "Doula, childbirth educator, and labor photographer serving the Gallatin Valley. Offers childbirth classes at Bozeman Birth Center and provides comprehensive birth support with photography services." ,
+        costRange: "$1,200-$2,000" ,
+        acceptingClients: true,
+        services: ["Birth Doula" , "Childbirth Education" , "Labor Photography"],
+        serviceArea: ["Bozeman" , "Gallatin Valley"]
+      },
+      {
+        name: "Tree of Life Family Care" ,
+        credential: "Doula Practice" ,
+        practice: "Tree of Life Family Care" ,
+        url: "https://treeoflifefamilycare.com" ,
+        photo: "/images/doulas/bozeman-mt-tree-of-life-family-care.webp" ,
+        description: "Full-service doula practice offering perinatal and pediatric care, childbirth education, and doula certification training. Specializes in perinatal mental health support and crisis care coordination for Bozeman families." ,
+        costRange: "$1,200-$2,500" ,
+        acceptingClients: true,
+        services: ["Birth Doula" , "Postpartum Doula" , "Lactation Support" , "Childbirth Education"],
+        serviceArea: ["Bozeman"]
+      },
+      {
+        name: "Wildly Essential" ,
+        credential: "Doula, Lactation Consultant" ,
+        practice: "Wildly Essential" ,
+        url: "https://wildlyessentialmt.com" ,
+        photo: "/images/doulas/bozeman-mt-wildly-essential.webp" ,
+        description: "Offers labor doula, postpartum doula, and lactation consultant services to Bozeman families with a focus on evidence-based, nurturing care." ,
+        costRange: "$1,000-$2,000" ,
+        acceptingClients: true,
+        services: ["Birth Doula" , "Postpartum Doula" , "Lactation Support"],
+        serviceArea: ["Bozeman"]
+      }
+    ],
+    culture: "Bozeman blends a young, active Montana State University crowd with families who build their lives around the outdoor lifestyle and the Bridger Mountains towering over town. Raising a family here means navigating a cost of living sitting 29 percent above the national average, which makes the Bozeman Birth Center a vital community asset since its founding in 2008 by offering free childbirth classes and accepting Montana Medicaid. You also have access to Bozeman Health Deaconess CNMs, and the state's commitment to physiological birth shows in Montana's low c-section rate of 22.1 percent compared to the 32.3 percent national average. Unfortunately, the recent pause on SB 319 doula Medicaid coverage means access to continuous labor support is currently in flux for many local families." ,
+    heroLocalDetail: "Bozeman's birth infrastructure centers on Highland Boulevard, where Bozeman Health Deaconess Hospital and Bozeman Health Women's Specialists are located. Bozeman Birth Center on West Villard Street provides the primary out-of-hospital option. Families in Belgrade, Manhattan, and Three Forks drive 10 to 30 minutes to reach these facilities, and the rural nature of Gallatin County means some families travel an hour or more for specialized care." ,
+    hospitalDetails: [
+      {
+        name: "Bozeman Health Deaconess Regional Medical Center" ,
+        address: "915 Highland Blvd, Bozeman, MT 59715" ,
+        paragraph: "Bozeman Health Deaconess Regional Medical Center (915 Highland Blvd) is the primary hospital birth facility in Bozeman, delivering 1,100 to 1,300 babies annually. The Family Birth Center opened in fall 2020 with 8 private birth suites, several featuring spa tubs for water labor and birth. A Level II NICU with 10 beds provides care for babies born at 32 weeks or later, with 24/7 neonatal coverage. Four full-time Certified Nurse-Midwives practice through Bozeman Health Women's Specialists, offering hospital-based midwifery care alongside 9 OB/GYN physicians. VBAC is allowed with physician approval, doulas are welcomed as support persons, and lactation consultants are available for every postpartum family. Skin-to-skin contact is encouraged and in-room newborn exams are standard. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." ,
+        thumbnail: "/images/bozeman-mt-hospital-bozeman-health-deaconess.webp" ,
+        nicuLevel: "II" ,
+        vbacPolicy: "Allows TOLAC/VBAC with physician approval" ,
+        doulaPolicy: "Doulas welcome as support persons" ,
+        midwifeFriendly: true,
+        medicaid: true,
+        lactation: true,
+        privateRooms: true,
+        url: "https://bozemanhealth.org/services/family-birth-center/"
+      }
+    ],
+    birthCenterDetails: [
+      {
+        name: "Bozeman Birth Center" ,
+        address: "601 W Villard St, Bozeman, MT 59715" ,
+        thumbnail: "/images/bozeman-mt-birth-center-bozeman-birth-center.webp" ,
+        paragraph: "Founded in 2008, Bozeman Birth Center (601 W Villard St) is the primary out-of-hospital birth facility in Bozeman, staffed by a team of Certified Professional Midwives and Licensed Midwives. The center offers both birth center and home birth options, with water birth available at no additional cost in large soaking tubs. The full care package costs $7,200 and includes 13 prenatal visits, labor and delivery, and 5 postpartum visits with home visits for families within 30 miles. Bozeman Birth Center accepts Montana Medicaid and offers Credee financing, early pay discounts, and health share program acceptance. Free consultations and childbirth education classes are available to the community, and doulas are required for first-time out-of-hospital births. Emergency transfer protocols to Bozeman Health Deaconess are in place for safety." ,
+        credential: "Montana Licensed Birth Center" ,
+        services: ["Water Birth" , "Home Birth" , "Prenatal Care" , "Postpartum Care" , "Well Baby Care" , "Lactation Support" , "Childbirth Education"] ,
+        medicaid: true,
+        costRange: "$7,200",
+        url: "https://bozemanbirthcenter.com"
+      }
+    ],
+    medicaidNote: "Montana Medicaid covers out-of-hospital midwifery through licensed CPMs and birth centers like Bozeman Birth Center. However, doula Medicaid reimbursement approved under SB 319 is currently paused due to federal budget uncertainty. Private insurance may cover doula services, and many Bozeman doulas offer sliding scale or payment plan options." ,
+    insuranceNote: "Montana licenses Certified Professional Midwives as Direct-Entry Midwives, making birth center and home birth services regulated and potentially insurance-eligible. Bozeman Birth Center accepts Medicaid and offers Credee financing. For doula services, private pay is the primary pathway while Medicaid implementation is paused." ,
+    faqs: [
+      { q: "Does Bozeman have any freestanding birth centers?" , a: "Yes. Bozeman Birth Center on West Villard Street has been providing out-of-hospital birth care since 2008 with a team of CPMs and LMs. They offer water birth, home birth, and accept Montana Medicaid. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." },
+      { q: "Which hospital in Bozeman has a NICU?" , a: "Bozeman Health Deaconess Regional Medical Center has a Level II NICU with 10 beds, caring for babies born at 32 weeks or later. For higher-level NICU care, families may be transferred to Billings or Salt Lake City. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "Does Montana Medicaid cover doula services in Bozeman?" , a: "Montana passed SB 319 to cover doula services through Medicaid, but implementation is currently paused due to federal budget uncertainty. Private insurance may cover doula services, and many Bozeman doulas offer payment plans. Call your insurance plan to ask about doula benefits." },
+      { q: "Can I have a home birth in Bozeman?" , a: "Yes. Montana licenses CPMs for home birth, and Bozeman has several experienced home birth midwives including Bridger Birthing, Saddle Peak Birth, and frigg Birth and Wellness. Bozeman Birth Center also offers home birth services." }
+    ],
+    birthStats: {
+      cesareanRate: 22.1,
+      maternalMortalityRate: 18.2,
+      homeBirthRate: 1.8,
+      birthCenterBirthRate: 0.8,
+      dataYear: 2023,
+      dataSource: "CDC NCHS National Vital Statistics System",
+    },
+    nearbyCities: ["missoula-mt", "billings-mt", "spokane-wa"]},
 };
 
 export const citySlugs = Object.keys(cities).sort();
