@@ -626,4 +626,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     description: "Watch the full city guide — doulas and midwives serving St. Paul, hospital policies, real costs, and whether Minnesota Medical Assistance covers a doula.",
     duration: "PT5M39S",
   },
+  "bozeman-mt": {
+    videoId: "GxVP-Uc45qQ",
+    title: "Bozeman MT Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas and midwives serving Bozeman, hospital policies, real costs, and Montana Medicaid coverage status.",
+    duration: "PT4M51S",
+    uploadDate: "2026-07-23T00:00:00-06:00",
+  },
 };
