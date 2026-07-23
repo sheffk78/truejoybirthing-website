@@ -177,7 +177,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
   "henderson-nv": {
-    videoId: "o3IdhVthNwk",
+    videoId: "5CZCNASCKWo",
     title: "Henderson NV Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — 3 hospitals, 4 doulas, costs, and Nevada Medicaid (SB 392), all in under 5 minutes.",
     duration: "PT5M0S",
