@@ -176,7 +176,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M07S",
     uploadDate: "2026-06-23T00:00:00-07:00",
   },
-  // henderson-nv video removed: gradient-only opening, missing hero image. Needs re-render.
+  "henderson-nv": {
+    videoId: "o3IdhVthNwk",
+    title: "Henderson NV Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — 3 hospitals, 4 doulas, costs, and Nevada Medicaid (SB 392), all in under 5 minutes.",
+    duration: "PT5M0S",
+    uploadDate: "2026-07-22T00:00:00-07:00",
+  },
   "minneapolis-mn": {
     videoId: "vbf80zB_5aU",
     title: "Minneapolis Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
