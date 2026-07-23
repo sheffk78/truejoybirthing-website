@@ -24,8 +24,7 @@
 /is-a-doula-covered-by-insurance/ /blog/doula-covered-by-insurance/ 301
 # NOTE: /postpartum-doula/ now serves the dedicated SEO landing page.
 # The blog post lives at /blog/postpartum-doula/.
-/postpartum-doula /blog/postpartum-doula/ 301
-/postpartum-doula/ /blog/postpartum-doula/ 301
+# Redirect removed — the .astro landing page handles this URL directly.
 /doula-myths /blog/debunking-doula-myths/ 301
 /doula-myths/ /blog/debunking-doula-myths/ 301
 /doula-support /blog/doula-support/ 301
