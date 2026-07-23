@@ -5157,7 +5157,7 @@ export const cities: Record<string, CityData> = {
         url: "https://bozemanbirthcenter.com"
       }
     ],
-    medicaidNote: "Montana Medicaid covers out-of-hospital midwifery through licensed CPMs and birth centers like Bozeman Birth Center. However, doula Medicaid reimbursement approved under SB 319 is currently paused due to federal budget uncertainty. Private insurance may cover doula services, and many Bozeman doulas offer sliding scale or payment plan options." ,
+    medicaidNote: "No — Montana Medicaid does not currently cover doula services. SB 319 was passed to authorize doula Medicaid reimbursement, but implementation is paused due to federal budget uncertainty. Montana Medicaid does cover out-of-hospital midwifery through licensed CPMs and birth centers like Bozeman Birth Center. Private insurance may cover doula services, and many Bozeman doulas offer sliding scale or payment plan options." ,
     insuranceNote: "Montana licenses Certified Professional Midwives as Direct-Entry Midwives, making birth center and home birth services regulated and potentially insurance-eligible. Bozeman Birth Center accepts Medicaid and offers Credee financing. For doula services, private pay is the primary pathway while Medicaid implementation is paused." ,
     faqs: [
       { q: "Does Bozeman have any freestanding birth centers?" , a: "Yes. Bozeman Birth Center on West Villard Street has been providing out-of-hospital birth care since 2008 with a team of CPMs and LMs. They offer water birth, home birth, and accept Montana Medicaid. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." },
