@@ -1,0 +1,63 @@
+{
+  "template_name": "TJB LocalBusiness Schema for City Page Provider Listings",
+  "description": "Apply this schema to each provider listing on TJB city pages. Replace bracketed values with real data. Can be used for doulas, midwives, and birth centers.",
+  "schema": {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "[PROVIDER_NAME]",
+    "description": "[BRIEF_DESCRIPTION_OF_SERVICES]",
+    "url": "[PROVIDER_WEBSITE_IF_AVAILABLE]",
+    "telephone": "[PROVIDER_PHONE_IF_AVAILABLE]",
+    "email": "[PROVIDER_EMAIL_IF_AVAILABLE]",
+    "image": "[PROVIDER_PHOTO_URL_IF_AVAILABLE]",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "[CITY_NAME]",
+      "addressRegion": "[STATE_CODE]",
+      "postalCode": "[ZIP_CODE_IF_AVAILABLE]",
+      "streetAddress": "[STREET_ADDRESS_IF_AVAILABLE]"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "[LATITUDE]",
+      "longitude": "[LONGITUDE]"
+    },
+    "areaServed": "[CITY_NAME_AND_SURROUNDING_AREAS]",
+    "serviceType": "Doula Services",
+    "priceRange": "$[COST_RANGE_IF_KNOWN]",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  },
+  "additional_types": {
+    "midwife": {
+      "@type": "MedicalBusiness",
+      "medicalSpecialty": "Midwifery"
+    },
+    "birth_center": {
+      "@type": "MedicalBusiness",
+      "medicalSpecialty": "Obstetrics",
+      "name": "[BIRTH_CENTER_NAME]"
+    }
+  },
+  "collection_page_schema": {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Doulas and Birth Support in [CITY_NAME], [STATE]",
+    "description": "Find doulas, midwives, and birth centers in [CITY_NAME]. True Joy Birthing provides a directory of local birth support professionals with contact information and services.",
+    "url": "https://truejoybirthing.com/[CITY_SLUG]",
+    "about": {
+      "@type": "Thing",
+      "name": "Doula Services in [CITY_NAME]"
+    },
+    "mainContentOfPage": {
+      "@type": "WebPageElement",
+      "name": "Provider Directory",
+      "hasPart": "[ARRAY_OF_PROVIDER_LOCALBUSINESS_SCHEMAS]"
+    }
+  },
+  "implementation_notes": "1. For providers without a physical address (mobile doulas), use the city-level address and add 'areaServed' with specific neighborhoods. 2. For birth centers, use MedicalBusiness type with Obstetrics specialty. 3. For midwives, use MedicalBusiness with Midwifery specialty. 4. Price range should use $ to $$$$ format based on local market rates. 5. Include the CollectionPage schema on the city page itself, with hasPart containing all provider schemas for that city."
+}

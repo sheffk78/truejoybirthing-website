@@ -188,6 +188,40 @@ const breadcrumbList = [
     </div>
   </section>
 
+  <!-- Evidence-Based Stats Section -->
+  <section class="bg-white py-12 border-t border-tjb-lavender-200/50">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-tjb-charcoal mb-6">What the Research Shows</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-tjb-cream rounded-lg p-6">
+          <p class="text-3xl font-bold text-tjb-rose-500 mb-2">52.9%</p>
+          <p class="text-sm text-tjb-gray">Lower odds of cesarean delivery with doula support (The Lancet, 2022)</p>
+        </div>
+        <div class="bg-tjb-cream rounded-lg p-6">
+          <p class="text-3xl font-bold text-tjb-rose-500 mb-2">57.5%</p>
+          <p class="text-sm text-tjb-gray">Lower odds of postpartum depression with doula care (The Lancet, 2022)</p>
+        </div>
+        <div class="bg-tjb-cream rounded-lg p-6">
+          <p class="text-3xl font-bold text-tjb-rose-500 mb-2">28-56%</p>
+          <p class="text-sm text-tjb-gray">Reduction in C-sections across studies (DONA International, citing Hodnett et al.)</p>
+        </div>
+        <div class="bg-tjb-cream rounded-lg p-6">
+          <p class="text-3xl font-bold text-tjb-rose-500 mb-2">$1,200-$1,500</p>
+          <p class="text-sm text-tjb-gray">National average cost for a birth doula package in the US (True Joy Birthing, 2026)</p>
+        </div>
+        <div class="bg-tjb-cream rounded-lg p-6">
+          <p class="text-3xl font-bold text-tjb-rose-500 mb-2">26 states + DC</p>
+          <p class="text-sm text-tjb-gray">Provide Medicaid reimbursement for doula services as of March 2026 (NASHP)</p>
+        </div>
+        <div class="bg-tjb-cream rounded-lg p-6">
+          <p class="text-3xl font-bold text-tjb-rose-500 mb-2">$4,459</p>
+          <p class="text-sm text-tjb-gray">Average cost savings per cesarean delivery prevented by doula care (Bixby/HeLP, 2024)</p>
+        </div>
+      </div>
+      <p class="text-xs text-tjb-gray mt-4">Sources: The Lancet (Falconi et al., 2022); DONA International; National Institutes of Health (Fortier, 2015); HHS ASPE Doula Care Evidence Review (2022); National Academy for State Health Policy (2026); Bixby Foundation/HeLP Cost-Benefit Analysis (2024).</p>
+    </div>
+  </section>
+
   <!-- Related Resources -->
   <section class="bg-tjb-cream-50 py-12 border-t border-tjb-lavender-200/50">
     <div class="max-w-4xl mx-auto px-6">
@@ -201,5 +235,51 @@ const breadcrumbList = [
     </div>
   </section>
 
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between a doula and a midwife?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A doula provides emotional, physical, and informational support but does not provide medical care. A midwife is a trained medical professional who provides prenatal care, delivers babies, and manages clinical aspects of birth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I have a doula if I am planning a C-section?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Doulas can support planned C-sections by helping you prepare emotionally, providing support before and after surgery, and assisting with recovery and breastfeeding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far in advance should I hire a doula?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most doulas recommend booking by your second trimester, especially in larger cities where popular doulas book up months in advance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Medicaid cover doula services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As of March 2026, 26 states and Washington DC provide Medicaid reimbursement for doula services. Check your state's Medicaid program for coverage details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I cannot afford a doula?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check if your state Medicaid covers doula services, look for community-based doula programs that offer free or sliding-scale services, or ask doulas about payment plans and reduced rates."
+      }
+    }
+  ]
+})} />
 
 </Layout>
