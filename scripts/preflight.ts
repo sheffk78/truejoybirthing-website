@@ -1817,6 +1817,7 @@ function run(): void {
       const sizeKB = Math.round(fs.statSync(path.join(PROJECT_DIR, distFile)).size / 1024);
       // Per-city size overrides for enriched pages with 3+ hospitals
       const citySizeOverrides: Record<string, number> = {
+        'new-york-ny': 210,
         'aurora-il': 215,
         'bakersfield-ca': 210,
         'detroit-mi': 220,

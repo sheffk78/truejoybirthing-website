@@ -1323,6 +1323,27 @@
     "url": "https://truejoybirthing.com/birth-support/aurora-il/"
   },
   {
+    "slug": "bozeman-mt",
+    "city": "Bozeman",
+    "state": "MT",
+    "score": 100,
+    "hero": true,
+    "hero_issue": "",
+    "og": true,
+    "support": true,
+    "hospitals": true,
+    "hospital_count": 1,
+    "doulas": true,
+    "doula_count": 8,
+    "video": true,
+    "outreach": true,
+    "placeholder": false,
+    "in_progress": false,
+    "started_at": "",
+    "slot": "",
+    "url": "https://truejoybirthing.com/birth-support/bozeman-mt/"
+  },
+  {
     "slug": "las-vegas-nv",
     "city": "Las Vegas",
     "state": "NV",
