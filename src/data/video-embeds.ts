@@ -637,4 +637,25 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   "san-diego-ca": { videoId: "CtAJ83EaKUQ", uploadDate: "2026-07-24", duration: "PT2M44S" } as any,
   "st-augustine-fl": { videoId: "KXaLgwuuiwo", uploadDate: "2026-07-24", duration: "PT5M35S" } as any,
   "mckinney-tx": { videoId: "LBZ4GSX1q8I", uploadDate: "2026-07-24", duration: "PT5M08S" },
-}
+  "cleveland-oh": {
+    videoId: "xF0hWu4AAuY",
+    title: "Cleveland Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — 3 Cleveland hospitals, 3 doulas, real costs, and Ohio Medicaid doula coverage, all in under 5 minutes.",
+    duration: "PT4M23S",
+    uploadDate: "2026-07-25",
+    chapters: [
+      [0, "Welcome to Cleveland"],
+      [12, "What This Guide Covers"],
+      [30, "Cleveland Clinic"],
+      [48, "UH MacDonald Women's Hospital"],
+      [72, "MetroHealth Medical Center"],
+      [95, "Doula: Roman Rice"],
+      [115, "Doula: Marlene Morris"],
+      [140, "Doula: Kristen Bindel"],
+      [163, "The True Joy Birthing App"],
+      [189, "Cost Reality ($800-$2,500)"],
+      [219, "Insurance & Ohio Medicaid"],
+      [248, "Your Next Step"],
+    ],
+  },
+};
