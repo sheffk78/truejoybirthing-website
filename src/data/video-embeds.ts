@@ -636,4 +636,5 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   "boston-ma": { videoId: "qRZhhQ7lNU8", uploadDate: "2026-07-24", duration: "PT2M52S" } as any,
   "san-diego-ca": { videoId: "CtAJ83EaKUQ", uploadDate: "2026-07-24", duration: "PT2M44S" } as any,
   "st-augustine-fl": { videoId: "KXaLgwuuiwo", uploadDate: "2026-07-24", duration: "PT5M35S" } as any,
-};
+  "mckinney-tx": { videoId: "LBZ4GSX1q8I", uploadDate: "2026-07-24", duration: "PT5M08S" },
+}

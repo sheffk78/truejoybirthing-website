@@ -1176,7 +1176,7 @@ export const cities: Record<string, CityData> = {
     thumbnail: ""
   }
     ],
-    medicaidNote: "California Medi-Cal covers doula services under SB-509, with approximately $1,587 reimbursement for the birth package. Doulas must enroll through the PAVE portal. In Fresno, Medi-Cal managed care plans include CalViva Health and Health Net. contact them for doula referral lists." ,
+    medicaidNote: "Yes — California Medi-Cal covers doula services under SB-509, with approximately $1,587 reimbursement for the birth package. Doulas must enroll through the PAVE portal. In Fresno, Medi-Cal managed care plans include CalViva Health and Health Net. Contact them for doula referral lists." ,
     insuranceNote: "Under California SB 332, commercial health plans must cover doula services. Given the limited supply of doulas in Fresno, ask your insurer about out-of-network coverage or telehealth doula options if in-network providers are unavailable." ,
     faqs: [
       { q: "Can I get a free doula through Medi-Cal in Fresno?" , a: "Yes. Medi-Cal covers doula services under SB-509 at approximately $1,587 for the birth package. Contact CalViva Health or Health Net (Fresno's Medi-Cal managed care plans) for an enrolled doula referral list." },
@@ -1186,7 +1186,16 @@ export const cities: Record<string, CityData> = {
       { q: "Are there Spanish-speaking doulas in Fresno?" , a: "Yes! Fresno has bilingual doulas, and if you're more comfortable in another language, that support is out there. Ask when you interview: \"Do you offer support in my language?\" is a great question to start with." },
       { q: "What if I live in a rural area outside Fresno?" , a: "Families in rural communities like Sanger, Selma, Kerman, or Reedley should plan hospital routes carefully. Community Regional is the only Level III NICU option, and travel times along Hwy 99 or Hwy 180 can vary significantly during peak hours. If you're outside the city, virtual doula support and the <a href=\"/birth-plan-template/\">free birth plan app</a> can help you prepare no matter your distance." }
     ],
-    nearbyCities: ["sacramento-ca"]},
+    nearbyCities: ["sacramento-ca"],
+    birthStats: {
+      cesareanRate: 31.5,
+      maternalMortalityRate: 18.0,
+      homeBirthRate: 1.4,
+      birthCenterBirthRate: 0.9,
+      dataYear: 2023,
+      dataSource: "California Department of Public Health, Center for Health Statistics and Informatics, Vital Statistics Branch",
+    },
+  },
   "los-angeles-ca": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",

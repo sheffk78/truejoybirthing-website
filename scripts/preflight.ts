@@ -1973,7 +1973,14 @@ function run(): void {
           const hasBirthCenterMatch = sceneContent.match(/hasBirthCenter:\s*(true|false)/);
           const sceneBirthCenterCount = hasBirthCenterMatch ? (hasBirthCenterMatch[1] === 'true' ? 1 : 0) : 0;
           const birthCenterMatch = cityBlock.match(/birthCenterDetails:\s*\[([\s\S]*?)\]\s*[,}]/);
-          const pageBirthCenterCount = birthCenterMatch ? (birthCenterMatch[1].match(/{/g) || []).length : 0;
+          let pageBirthCenterCount = birthCenterMatch ? (birthCenterMatch[1].match(/{/g) || []).length : 0;
+          // If the only birth center entry is a "No birth centers in {City}" info note, count as 0
+          if (pageBirthCenterCount === 1 && birthCenterMatch) {
+            const noBcMatch = birthCenterMatch[1].match(/name:\s*"[Nn]o\s+(?:freestanding\s+)?birth\s+centers?\s+in/i);
+            if (noBcMatch) {
+              pageBirthCenterCount = 0;
+            }
+          }
           
           // Check for unreplaced narration tokens (only inside string literals)
           const tokenPattern = /\{[A-Z_][A-Z_0-9]*\}/g;
