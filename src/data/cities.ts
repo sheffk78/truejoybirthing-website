@@ -1152,6 +1152,8 @@ export const cities: Record<string, CityData> = {
     costLow: 1000,
     costHigh: 3000,
     shelbiServesHere: false,
+    lat: 36.7378,
+    lng: -119.7871,
     heroImage: "/images/fresno-ca-birth-doula-hero-v2.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-fresno-ca.webp",
     supportSceneImage: "/images/fresno-ca-birth-doula-support.webp",
@@ -1176,6 +1178,11 @@ export const cities: Record<string, CityData> = {
     thumbnail: ""
   }
     ],
+    midwifeInfo: {
+      paragraph: "Fresno's midwifery community is small but dedicated, primarily centered on hospital-based Certified Nurse-Midwives (CNMs) at Community Regional and Clovis Community Medical Center. California licenses CNMs through the Board of Registered Nursing and Licensed Midwives (LMs) through the Medical Board of California. In the Central Valley, home birth midwives serve families in Fresno and surrounding rural communities, though the supply is limited compared to coastal California. Families seeking out-of-hospital birth typically work with LMs who attend home births, as there are no freestanding birth centers in Fresno.",
+      credentialTypes: " and LMs",
+      credentialDetail: "In California, Certified Nurse-Midwives (CNMs) are licensed through the Board of Registered Nursing and practice in hospitals. Licensed Midwives (LMs) are licensed through the Medical Board of California under the Licensed Midwifery Practice Act and primarily attend out-of-hospital births. Both credentials require extensive clinical training.",
+    },
     medicaidNote: "Yes — California Medi-Cal covers doula services under SB-509, with approximately $1,587 reimbursement for the birth package. Doulas must enroll through the PAVE portal. In Fresno, Medi-Cal managed care plans include CalViva Health and Health Net. Contact them for doula referral lists." ,
     insuranceNote: "Under California SB 332, commercial health plans must cover doula services. Given the limited supply of doulas in Fresno, ask your insurer about out-of-network coverage or telehealth doula options if in-network providers are unavailable." ,
     faqs: [
