@@ -4732,13 +4732,13 @@ export const cities: Record<string, CityData> = {
     population: 98000,
     costLow: 800,
     costHigh: 2000,
-    heroImage: "/images/conroe-tx-birth-doula-skyline.webp",
+    heroImage: "/images/conroe-tx-birth-doula-skyline-v2.webp",
     supportSceneImage: "/images/conroe-tx-birth-doula-support.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Conroe: Texas birth support and doula care",
     ogImage: "https://truejoybirthing.com/images/og-city-conroe-tx.webp",
     shelbiServesHere: true,
-    doulas: [
-      { name: "Lake Conroe Doula Services" , credential: "Birth Doula" , practice: "Lake Conroe Doula Services" , url: "" , photo: "" , description: "Birth and postpartum doula serving Conroe, The Woodlands, and Montgomery County. Offers personalized support for hospital and birth center births." , costRange: "$800-$2,000" , acceptingClients: true , services: ["Birth Doula" , "Postpartum Doula"] , serviceArea: ["Conroe, TX" , "The Woodlands, TX" , "Montgomery County, TX"] },
+    localDoulas: [
+      { name: "Lake Conroe Doula Services" , credential: "Birth Doula" , practice: "Lake Conroe Doula Services" , url: "" , photo: "/images/provider-conroe-tx-lake-conroe-doula.webp" , description: "Birth and postpartum doula serving Conroe, The Woodlands, and Montgomery County. Offers personalized support for hospital and birth center births." , costRange: "$800-$2,000" , acceptingClients: true , services: ["Birth Doula" , "Postpartum Doula"] , serviceArea: ["Conroe, TX" , "The Woodlands, TX" , "Montgomery County, TX"] },
     ],
         culture: "Conroe is the seat of Montgomery County and the gateway to Lake Conroe, sitting about 40 minutes north of Houston on I-45. The city has grown fast alongside The Woodlands, and HCA Houston Healthcare Conroe is the only hospital with labor and delivery in Montgomery County. Journey Birth Center, a freestanding birth center in downtown Conroe, gives families an out-of-hospital option that most neighboring counties lack. The mix of long-time Conroe residents and Houston transplants means you\u2019ll find both hospital-first and birth-center preferences in the same community.",
     heroLocalDetail: "HCA Houston Healthcare Conroe sits at 504 Medical Drive, just off I-45 North at the Loop 336 exit. If you\u2019re coming from The Woodlands or Spring, take I-45 North to Exit 87 (Loop 336 West) and follow the hospital signs. Journey Birth Center is at 1202 N San Jacinto St, about 5 minutes from the hospital in downtown Conroe.",
