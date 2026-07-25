@@ -882,6 +882,27 @@
     "url": "https://truejoybirthing.com/birth-support/tucson-az/"
   },
   {
+    "slug": "st-augustine-fl",
+    "city": "St. Augustine",
+    "state": "FL",
+    "score": 100,
+    "hero": true,
+    "hero_issue": "",
+    "og": true,
+    "support": true,
+    "hospitals": true,
+    "hospital_count": 1,
+    "doulas": true,
+    "doula_count": 6,
+    "video": true,
+    "outreach": true,
+    "placeholder": false,
+    "in_progress": false,
+    "started_at": "",
+    "slot": "",
+    "url": "https://truejoybirthing.com/birth-support/st-augustine-fl/"
+  },
+  {
     "slug": "gainesville-fl",
     "city": "Gainesville",
     "state": "FL",
@@ -1365,9 +1386,9 @@
     "url": "https://truejoybirthing.com/birth-support/bozeman-mt/"
   },
   {
-    "slug": "st-augustine-fl",
-    "city": "St. Augustine",
-    "state": "FL",
+    "slug": "conroe-tx",
+    "city": "Conroe",
+    "state": "TX",
     "score": 85,
     "hero": true,
     "hero_issue": "",
@@ -1376,14 +1397,14 @@
     "hospitals": true,
     "hospital_count": 1,
     "doulas": false,
-    "doula_count": 2,
+    "doula_count": 1,
     "video": true,
     "outreach": true,
     "placeholder": false,
     "in_progress": false,
     "started_at": "",
     "slot": "",
-    "url": "https://truejoybirthing.com/birth-support/st-augustine-fl/"
+    "url": "https://truejoybirthing.com/birth-support/conroe-tx/"
   },
   {
     "slug": "san-diego-ca",
@@ -1428,8 +1449,8 @@
     "url": "https://truejoybirthing.com/birth-support/port-st-lucie-fl/"
   },
   {
-    "slug": "conroe-tx",
-    "city": "Conroe",
+    "slug": "mckinney-tx",
+    "city": "McKinney",
     "state": "TX",
     "score": 30,
     "hero": false,
@@ -1437,7 +1458,7 @@
     "og": false,
     "support": false,
     "hospitals": false,
-    "hospital_count": 1,
+    "hospital_count": 2,
     "doulas": false,
     "doula_count": 0,
     "video": true,
@@ -1446,7 +1467,7 @@
     "in_progress": false,
     "started_at": "",
     "slot": "",
-    "url": "https://truejoybirthing.com/birth-support/conroe-tx/"
+    "url": "https://truejoybirthing.com/birth-support/mckinney-tx/"
   },
   {
     "slug": "raleigh-nc",
@@ -1720,27 +1741,6 @@
     "started_at": "",
     "slot": "",
     "url": "https://truejoybirthing.com/birth-support/springfield-il/"
-  },
-  {
-    "slug": "mckinney-tx",
-    "city": "McKinney",
-    "state": "TX",
-    "score": 15,
-    "hero": false,
-    "hero_issue": "Missing",
-    "og": false,
-    "support": false,
-    "hospitals": false,
-    "hospital_count": 2,
-    "doulas": false,
-    "doula_count": 0,
-    "video": false,
-    "outreach": true,
-    "placeholder": false,
-    "in_progress": false,
-    "started_at": "",
-    "slot": "",
-    "url": "https://truejoybirthing.com/birth-support/mckinney-tx/"
   },
   {
     "slug": "newark-nj",
