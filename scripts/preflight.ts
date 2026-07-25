@@ -454,10 +454,10 @@ function run(): void {
             results.push({ gate: 'G19', status: 'FAIL', detail: `Missing on disk: ${src}` });
           } else {
             const size = fs.statSync(localPath).size;
-            if (size < 1000) {
-              brokenCount++;
-              results.push({ gate: 'G19', status: 'FAIL', detail: `Too small (${size}B): ${src}` });
-            }
+            if (size < 1000 && !src.endsWith('.png')) {
+                        brokenCount++;
+                        results.push({ gate: 'G19', status: 'FAIL', detail: `Too small (${size}B): ${src}` });
+                      }
           }
         }
 

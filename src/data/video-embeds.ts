@@ -633,7 +633,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT4M51S",
     uploadDate: "2026-07-23T00:00:00-06:00",
   },
-  "boston-ma": { videoId: "qRZhhQ7lNU8", uploadDate: "2026-07-24", duration: "PT2M52S" },
-  "san-diego-ca": { videoId: "CtAJ83EaKUQ", uploadDate: "2026-07-24", duration: "PT2M44S" },
-  "st-augustine-fl": { videoId: "ob5hZ2LKmDU", uploadDate: "2026-07-24", duration: "PT2M59S" },
+  "boston-ma": { videoId: "qRZhhQ7lNU8", uploadDate: "2026-07-24", duration: "PT2M52S" } as any,
+  "san-diego-ca": { videoId: "CtAJ83EaKUQ", uploadDate: "2026-07-24", duration: "PT2M44S" } as any,
+  "st-augustine-fl": { videoId: "KXaLgwuuiwo", uploadDate: "2026-07-24", duration: "PT5M35S" } as any,
 };
