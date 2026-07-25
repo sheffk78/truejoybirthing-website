@@ -2876,7 +2876,7 @@ export const cities: Record<string, CityData> = {
     costLow: 800,
     costHigh: 2500,
     shelbiServesHere: false,
-    heroImage: "/images/cleveland-oh-birth-doula-skyline-v2.webp",
+    heroImage: "/images/cleveland-oh-birth-doula-skyline-v3.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-cleveland-oh.webp",
     supportSceneImage: "/images/cleveland-oh-birth-doula-support.webp",
     localDoulas: [
