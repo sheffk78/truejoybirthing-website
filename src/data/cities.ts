@@ -3081,7 +3081,20 @@ export const cities: Record<string, CityData> = {
     // St. Augustine and St. Johns County. Google Maps search found no freestanding
     // birth centers currently operating. Verified 2026-05-27. Families seeking
     // out-of-hospital birth would need to travel to Jacksonville or Gainesville.
-    birthCenterDetails: [],
+    birthCenterDetails: [
+      {
+        name: "Island Birth House",
+        thumbnail: "",
+        url: "https://stabirthcollective.com/birth-center/",
+        paragraph: "Island Birth House is a freestanding birth center on Anastasia Island in St. Augustine, operated by the St. Augustine Birth Collective. Licensed midwives provide prenatal care, water birth, postpartum care, and well-woman care in a home-like setting. Located at 906 Anastasia Blvd, St. Augustine, FL 32080. They also offer home birth midwifery, chiropractic care, lactation consulting, acupuncture, and community support groups.",
+      },
+      {
+        name: "Birth Center of Jacksonville",
+        thumbnail: "",
+        url: "",
+        paragraph: "Birth Center of Jacksonville is a freestanding birth center in the Riverside neighborhood of Jacksonville, about 45 minutes north of St. Augustine. Located at 804 Margaret St, Jacksonville, FL 32204. Midwife-led care for low-risk pregnancies offering water birth, prenatal care, and postpartum support. A good option for St. Augustine families willing to drive north for an out-of-hospital birth.",
+      },
+    ],
     birthStats: {
       cesareanRate: 33.2,
       maternalMortalityRate: 24.3,
