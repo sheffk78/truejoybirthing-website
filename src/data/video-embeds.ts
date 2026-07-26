@@ -679,4 +679,23 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [288, "Your Next Step"],
     ],
   },
+  "columbus-oh": {
+    videoId: "W962IgDWsm8",
+    title: "Columbus Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — 3 hospitals, 8 doulas, costs, and Ohio Medicaid coverage, all in under 4 minutes.",
+    duration: "PT3M3S",
+    uploadDate: "2026-07-26T00:00:00-04:00",
+    chapters: [
+      [0, "Welcome to Columbus"],
+      [12, "What This Video Covers"],
+      [30, "OhioHealth Riverside Methodist Hospital"],
+      [49, "OSU Wexner Medical Center"],
+      [68, "Mount Carmel East Hospital"],
+      [87, "Doulas & Midwives"],
+      [103, "True Joy Birthing App"],
+      [127, "Cost of Doulas in Columbus"],
+      [149, "Ohio Medicaid Coverage"],
+      [169, "Get Your Birth Plan"]
+    ],
+  },
 };

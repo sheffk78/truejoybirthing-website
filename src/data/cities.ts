@@ -2956,6 +2956,8 @@ export const cities: Record<string, CityData> = {
     shelbiServesHere: false,
     heroImage: "/images/oklahoma-city-ok-birth-doula-hero-v3.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-oklahoma-city-ok.webp",
+    videoEmbed: "https://www.youtube-nocookie.com/embed/YKEHjxmHSrA",
+    videoId: "YKEHjxmHSrA",
     supportSceneImage: "/images/oklahoma-city-ok-support-scene.webp",
     localDoulas: [
       { name: "Ashlee Byrd" , credential: "Birth Doula & Childbirth Educator" , practice: "Expectant OKC" , url: "https://www.expectantokc.com/" , photo: "/images/provider-oklahoma-city-ok-ashlee-byrd.webp", description: "Oklahoma City agency (formerly Nested Oak) providing birth doula services, postpartum doula care, lactation support, and childbirth education across the OKC metro.", costRange: "$1,200-$2,500 birth package (market estimate)", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Childbirth Education" , "Lactation Support"], serviceArea: ["Oklahoma City, OK"] },
