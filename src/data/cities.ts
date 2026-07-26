@@ -3796,7 +3796,15 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals in Port St. Lucie accommodate birth plans?" , a: "Cleveland Clinic Martin Health \u2013 Tradition Hospital (Level II NICU), Cleveland Clinic Martin Health \u2013 Martin North Hospital in Stuart (Level III NICU, highest-level in the Treasure Coast), and St. Lucie Medical Center (Level II NICU) all offer labor and delivery and generally accommodate birth plans. Doulas are welcomed at all three \u2014 confirm current visitor and support-person policies during your hospital tour. For the most complex neonatal cases, Martin North\u2019s Level III NICU is the regional referral center. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
       { q: "Are there birth centers in Port St. Lucie?" , a: "No \u2014 there are no freestanding birth centers in Port St. Lucie, Jensen Beach, or the broader Treasure Coast region as of 2026. Florida\u2019s birth center regulations and lack of CPM licensure make out-of-hospital birth options very limited. Cleveland Clinic Martin Health offers midwifery-model care within the hospital setting for families seeking a lower-intervention approach. The nearest freestanding birth centers are approximately 45\u201360 minutes south in Palm Beach County. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a hospital birth center-style program or a longer drive to a freestanding birth center is right for you." },
       { q: "Does True Joy Birthing work with Port St. Lucie families?" , a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Port St. Lucie birth setting, whether you\u2019re delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way \u2014 no signup required." } ],
-    nearbyCities: ["st-augustine-fl", "orlando-fl", "port-st-lucie-fl"]},
+        birthStats: {
+        cesareanRate: 29.8,
+        maternalMortalityRate: 17.2,
+        homeBirthRate: 1.9,
+        birthCenterBirthRate: 0.0,
+        dataYear: 2023,
+        dataSource: "CDC NCHS National Vital Statistics System" 
+    },
+nearbyCities: ["st-augustine-fl", "orlando-fl", "port-st-lucie-fl"]},
   "worcester-ma": {
     enableBlogResources: true,
     city: "Worcester" ,
