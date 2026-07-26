@@ -2190,38 +2190,186 @@ export const cities: Record<string, CityData> = {
 
   },
   "boston-ma": {
-    enableBlogResources: true,
-    publishedDate: "2026-06-22",
-    city: "Boston" ,
-    state: "MA" ,
-    slug: "boston-ma" ,
-    costLow: 1000,
-    costHigh: 3000,
-    shelbiServesHere: false,
-    culture: "Boston is a powerhouse for birth justice. home to some of the country's most storied teaching hospitals and a growing community of doulas who are making sure your voice gets heard no matter where you deliver. From the Black maternal health advocates in Roxbury and Dorchester to the midwifery champions in Cambridge, Boston moms have options and a community that fights for them. Massachusetts MassHealth doula coverage launched in 2024, making support more accessible than ever." ,
-    heroLocalDetail: "At 38 weeks, you're probably mapping the fastest route from your place in Jamaica Plain or Southie to your hospital. hoping the Longwood area isn't a parking lot and that Centre Street construction is done. The Arnold Arboretum gives you gorgeous, shaded walking paths for those final coax-baby-out strolls, and the Charles River Esplanade is flat and breezy when you need easy movement." ,
-    hospitalDetails: [
-      { name: "Brigham and Women's Hospital" , paragraph: "Brigham and Women's operates a Level III NICU and is one of the busiest maternity hospitals in New England, with midwifery and physician options. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "Boston Medical Center" , paragraph: "BMC offers a Level III NICU and is known for its commitment to serving diverse families and its strong midwifery practice. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "Massachusetts General Hospital" , paragraph: "Mass General provides a Level III NICU and a full-spectrum maternity program integrated with one of the top research hospitals in the world. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "Beth Israel Deaconess Medical Center" , paragraph: "BIDMC offers a Level III NICU and a well-established midwifery practice in the Longwood area. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "Boston Children's Hospital" , paragraph: "While primarily a pediatric hospital, Boston Children's operates a Level IV NICU. the highest level. for the most complex neonatal conditions, working closely with Brigham and Women's." }
-    ],
-    birthCenterDetails: [
-      { name: "Birth Sanctuary Cambridge" , paragraph: "Birth Sanctuary Cambridge is a freestanding birth center near Alewife offering midwife-led births in a home-like setting. It's one of the few independent birth centers in the greater Boston area. a beautiful option if you're seeking a low-intervention birth outside the hospital." }
-    ],
-    medicaidNote: "Massachusetts MassHealth covers doula services as of January 2024, with reimbursement of approximately $1,200 for a full package. covering 2 prenatal visits, labor and delivery support, and 2 postpartum visits. Your doula must be enrolled as a MassHealth provider." ,
-    insuranceNote: "Massachusetts requires most private insurance plans through the state exchange (MA Health Connector) to cover maternity services. Doula coverage by private insurers is expanding. some Blue Cross Blue Shield of MA and Tufts Health Plan policies now include doula benefits. Check your plan documents or call member services and ask about 'certified doula services.'" ,
-    faqs: [
-      { q: "How much does a doula cost in Boston?" , a: "In Boston, a birth doula typically charges between $1,000 and $3,000 for a full package. Boston's higher cost of living and concentration of experienced doulas drives the upper range. If you have MassHealth, your doula services may be fully covered . And some doulas offer sliding scale or payment plans." },
-      { q: "Does Massachusetts Medicaid cover doula services?" , a: "Yes. MassHealth started covering doula services in January 2024, reimbursing approximately $1,200 for a full package. Your doula needs to be enrolled as a MassHealth provider. Call your MassHealth health plan to get a list of enrolled doulas near you." },
-      { q: "What hospitals in Boston have the highest level NICU?" , a: "Boston Children's Hospital operates a Level IV NICU. the highest level possible. Brigham and Women's, Boston Medical Center, Massachusetts General Hospital, and Beth Israel Deaconess all have Level III NICUs." },
-      { q: "Are there birth centers in Boston?" , a: "Birth Sanctuary Cambridge near Alewife is a freestanding birth center offering midwife-led births in a home-like setting. Most other birth options in Boston are hospital-based midwifery practices. If you want a birth center experience, Birth Sanctuary is worth exploring." },
-      { q: "Can I bring my doula to hospitals in Boston?" , a: "Yes. Boston's major hospitals generally welcome doulas as part of your support team. Policies can shift, so call your hospital's maternity floor before your due date to confirm their current support person policy." },
-      { q: "What postpartum resources are available in Boston?" , a: "Boston has strong postpartum support: MassHealth covers postpartum care up to 12 months, the Boston Public Health Commission's MOMCARE program provides wraparound services, Birth Sisters at Boston Medical Center offers culturally centered doula support, postpartum groups run through Brigham and Women's Center for Women's Health, and WIC offices serve Dorchester, Roxbury, and Jamaica Plain." }
-    ],
-    {
-    nearbyCities: ["hartford-ct", "providence-ri", "new-york-ny"]},
+      enableBlogResources: true,
+      publishedDate: "2026-06-22",
+      city: "Boston",
+      state: "MA",
+      slug: "boston-ma",
+      costLow: 1000,
+      costHigh: 3000,
+      shelbiServesHere: false,
+      population: 672973,
+      culture: "Boston is a powerhouse for birth justice, home to some of the country's most storied teaching hospitals and a growing community of doulas who are making sure your voice gets heard no matter where you deliver. From the Black maternal health advocates in Roxbury and Dorchester to the midwifery champions in Cambridge, Boston moms have options and a community that fights for them. Massachusetts MassHealth doula coverage launched in 2024, making support more accessible than ever.",
+      heroLocalDetail: "At 38 weeks, you're probably mapping the fastest route from your place in Jamaica Plain or Southie to your hospital. Hoping the Longwood area isn't a parking lot and that Centre Street construction is done. The Arnold Arboretum gives you gorgeous, shaded walking paths for those final coax-baby-out strolls, and the Charles River Esplanade is flat and breezy when you need easy movement.",
+      heroImage: "/images/boston-ma-v2-1200.webp",
+      ogImage: "https://truejoybirthing.com/images/og-city-boston-ma-v2.webp",
+      supportSceneImage: "/images/boston-ma-birth-support-v2.webp",
+      supportSceneAlt: "A pregnant woman receiving birth doula support in a hospital room, with warm emotional connection",
+      localDoulas: [
+        {
+          name: "Tara Campbell",
+          credential: "CD(DONA), LCCE",
+          practice: "Birthing Gently",
+          url: "https://www.birthinggently.com/tara",
+          photo: "/images/provider-boston-ma-tara-campbell.webp",
+          description: "Founder of Birthing Gently, Tara Campbell is a high-risk birth doula and DONA International Certification Director with over 24 years of experience supporting birthing families in Boston. She holds the highest DONA certification (CD(DONA)) and is a Lamaze Certified Childbirth Educator (LCCE), bringing advanced clinical knowledge and deep emotional support to medically complex pregnancies.",
+          costRange: "$2,200-$3,000",
+          acceptingClients: true,
+          services: ["Birth Doula", "Postpartum Doula", "Childbirth Education", "Lactation Support"],
+          lat: 42.3601,
+          lng: -71.0589,
+          serviceArea: ["Boston, MA", "Greater Boston"]
+        },
+        {
+          name: "Emily Goodman-Simeone",
+          credential: "CLC, MassHealth Provider",
+          practice: "Birthing Gently",
+          url: "https://www.birthinggently.com/emilygoodman-simeone",
+          photo: "/images/provider-boston-ma-emily-goodman-simeone.webp",
+          description: "Emily is a birth doula and Lactation Counselor serving Boston families, with specialized focus on maternal mental health. She is an active MassHealth provider making doula support accessible to more families. Emily offers a holistic approach combining emotional support, evidence-based information, and practical lactation guidance throughout the perinatal period.",
+          costRange: "$1,500-$2,500",
+          acceptingClients: true,
+          acceptsMedicaid: true,
+          services: ["Birth Doula", "Postpartum Doula", "Lactation Support", "Maternal Mental Health Support"],
+          lat: 42.3601,
+          lng: -71.0589,
+          serviceArea: ["Boston, MA", "Greater Boston"]
+        },
+        {
+          name: "Lantharra Langlois",
+          credential: "Birth Doula",
+          practice: "Birthing Gently",
+          url: "https://www.birthinggently.com/lantharra-langlois",
+          photo: "/images/provider-boston-ma-lantharra-langlois.webp",
+          description: "A bilingual birth doula and MassHealth Provider serving Boston's diverse communities, Lantharra brings culturally grounded support to families seeking doula care. She specializes in supporting families through all birth experiences, with particular focus on creating welcoming, affirming care for BIPOC and first-time parents. Lantharra offers continuous presence through labor and connection to resources.",
+          costRange: "$1,200-$2,200",
+          acceptingClients: true,
+          acceptsMedicaid: true,
+          services: ["Birth Doula", "Postpartum Doula", "Postpartum Support"],
+          lat: 42.3601,
+          lng: -71.0589,
+          serviceArea: ["Boston, MA", "Greater Boston"]
+        },
+        {
+          name: "Nina Graham",
+          credential: "NICU RN, Birth Doula",
+          practice: "Birthing Gently",
+          url: "https://www.birthinggently.com/nina-graham",
+          photo: "/images/provider-boston-ma-nina-graham.webp",
+          description: "Nina brings unique perspective as both an NICU Registered Nurse and birth doula, combining clinical knowledge with compassionate labor support. Her nursing background gives her expertise in high-risk pregnancies and complex birth scenarios. Nina is experienced supporting families through NICU admissions, induction, cesarean birth, and medically complicated deliveries.",
+          costRange: "$1,500-$2,800",
+          acceptingClients: true,
+          services: ["Birth Doula", "Postpartum Doula", "High-Risk Birth Support", "NICU Education"],
+          lat: 42.3601,
+          lng: -71.0589,
+          serviceArea: ["Boston, MA", "Greater Boston"]
+        }
+      ],
+      hospitalDetails: [
+        {
+          name: "Brigham and Women's Hospital",
+          paragraph: "Brigham and Women's Hospital operates a Level III NICU and is one of the busiest maternity hospitals in New England. The hospital delivers over 6,500 babies annually and features a comprehensive maternity program with family-friendly cesarean options that include clear sterile drape access for family birth plan viewing, hydrotherapy labor tubs for low-risk natural childbirth, and nitrous oxide (laughing gas) for pain management. Doulas are explicitly welcome as part of the birth team and can remain in the operating room during cesarean birth. The hospital emphasizes skin-to-skin care immediately after delivery and offers abundant lactation support through IBCLC-certified consultants. Family rooms are private and designed for postpartum bonding. Brigham's midwifery practice works in collaboration with obstetricians and offers low-intervention options.",
+          thumbnail: "/images/boston-ma-hospital-brigham.webp",
+          address: "75 Francis St, Boston, MA 02115",
+          nicuLevel: "III",
+          doulaPolicy: "Doulas welcome as support persons. Can remain during cesarean birth. Family-friendly cesarean options include clear sterile drape access. Hydrotherapy tubs available for low-risk natural childbirth.",
+          midwifeFriendly: true,
+          waterBirth: "Hydrotherapy tubs available in labor rooms for low-risk pregnancies",
+          medicaid: true,
+          lactation: true,
+          privateRooms: true,
+          url: "https://www.brighamandwomens.org/obgyn/connors-center-for-women-and-newborns/information-about-your-pregnancy"
+        },
+        {
+          name: "Boston Medical Center",
+          paragraph: "Boston Medical Center offers a Level III NICU and is known for its commitment to serving diverse families with a strong midwifery practice. The hospital delivers approximately 5,000 births annually and runs the innovative Birth Sisters program, which employs trained doulas from within the staff to provide culturally grounded support. Birth Sisters offer prenatal education, continuous labor support, and postpartum visits for eligible families, with evidence linking the program to significantly higher breastfeeding rates and fewer cesarean deliveries. BMC accepts RI Medicaid and MassHealth. The hospital features LDRP (Labor-Delivery-Recovery-Postpartum) rooms, IBCLC lactation consultants on staff, and private rooms for new families. Women & Infants Hospital Medical Center consistently serves as Boston's safety-net hospital for diverse and underserved populations.",
+          thumbnail: "/images/boston-ma-hospital-bmc.webp",
+          address: "88 E Newton St, Boston, MA 02118",
+          nicuLevel: "III",
+          doulaPolicy: "Doulas welcome through Birth Sisters program. Ask your care team to refer you to receive trained doula support. Program prioritizes socially isolated parents, families with complex psychosocial issues, and those having infants with significant medical problems.",
+          midwifeFriendly: true,
+          waterBirth: "Water birth not routinely offered",
+          medicaid: true,
+          lactation: true,
+          privateRooms: true,
+          url: "https://www.bmc.org/departments/obstetrics-and-gynecology/obstetrics/resources-patients/birth-sisters"
+        },
+        {
+          name: "Massachusetts General Hospital",
+          paragraph: "Mass General provides a Level III NICU and full-spectrum maternity program integrated with one of the top research hospitals in the world. The hospital delivers approximately 8,000 babies annually and runs The Birth Partners Doula project, a Mass General Brigham initiative that matches eligible pregnant patients—particularly those most at risk of negative outcomes—with doulas who speak their language and understand their cultural values. This program, launched as part of United Against Racism efforts, has matched over 140 pregnant patients with doulas since 2022. Evidence-based doula support has been linked to increased spontaneous vaginal births, improved Apgar scores, and decreased cesarean rates. Doulas are actively integrated into care plans and can meet with patients twice prenatally, during labor and birth, and twice postpartum. Mass General features spacious LDRP rooms, robust lactation support, and a strong commitment to reducing racial inequities in maternal health outcomes.",
+          thumbnail: "/images/boston-ma-hospital-mgh.webp",
+          address: "55 Fruit St, Boston, MA 02114",
+          nicuLevel: "III",
+          doulaPolicy: "Doulas welcome as part of care team. Birth Partners program pairs doulas with families of color and those at highest risk of adverse outcomes. Contact maternity care coordinator to learn about doula integration options. Can meet twice prenatally, during labor, and twice postpartum.",
+          midwifeFriendly: true,
+          waterBirth: "Water birth available for eligible pregnancies",
+          medicaid: true,
+          lactation: true,
+          privateRooms: true,
+          url: "https://www.massgeneralbrigham.org/en/about/newsroom/articles/doula-program"
+        },
+        {
+          name: "Beth Israel Deaconess Medical Center",
+          paragraph: "BIDMC offers a Level III NICU and well-established midwifery practice in the Longwood area. The hospital delivers approximately 4,500 births annually and provides comprehensive maternity care with emphasis on evidence-based practices, patient-centered support, and culturally competent care. BIDMC has the expertise and equipment to safely offer VBAC (Vaginal Birth After Cesarean) and welcomes doulas as part of the birth team. Doulas do not provide clinical support but offer one-on-one comfort measures, reassurance, and information to help with birth decisions. The hospital features private LDRP rooms where families can adjust lighting and maintain preferred comfort levels. BIDMC provides comprehensive postpartum care including newborn care, and offers lactation consultation services. The facility emphasizes pain management options beyond epidurals, including nitrous oxide. Staff welcome support persons and provide badges to ensure support persons can remain with birthing families.",
+          thumbnail: "/images/boston-ma-hospital-bidmc.webp",
+          address: "330 Brookline Ave, Boston, MA 02215",
+          nicuLevel: "III",
+          doulaPolicy: "Doulas welcome. Contact maternity unit to confirm current support person policies and doula integration. Doulas offer comfort measures, reassurance, and information to help with decisions. Can assist with newborn feeding and maternal recovery.",
+          midwifeFriendly: true,
+          waterBirth: "Water birth available for appropriate candidates",
+          medicaid: true,
+          lactation: true,
+          privateRooms: true,
+          url: "https://bidmc.org/services/pregnancy-birth/labor-delivery"
+        },
+        {
+          name: "Boston Children's Hospital",
+          paragraph: "Boston Children's Hospital operates a Level IV NICU, the highest level available for the most complex neonatal conditions, primarily serving pediatric and high-risk maternal-fetal needs. The hospital delivers approximately 2,500 births annually, primarily through its partnerships with Brigham and Women's for maternal-fetal transport and coordinated care for families with medically complex pregnancies. Boston Children's accepts MassHealth and provides specialized family support services including lactation consultation and social work for NICU families. While not a primary obstetrics facility, the hospital offers specialized care for complicated births and coordinates with maternal-fetal medicine specialists to ensure safety. The Level IV NICU is staffed 24/7 by board-certified neonatologists and provides advanced treatment for premature infants and those with complex medical conditions. The hospital's proximity to major medical centers like Brigham and Women's makes it a key resource for Boston's highest-risk births.",
+          thumbnail: "/images/boston-ma-hospital-childrens.webp",
+          address: "300 Longwood Ave, Boston, MA 02115",
+          nicuLevel: "IV",
+          doulaPolicy: "Doulas welcome as support persons in NICU. Confirm current visitor policies with NICU staff. Support persons receive badges allowing presence during visits. The hospital provides family-centered support for NICU families.",
+          midwifeFriendly: false,
+          waterBirth: "Not applicable - pediatric/NICU facility",
+          medicaid: true,
+          lactation: true,
+          privateRooms: true,
+          url: "https://www.childrenshospital.org/about-us/contact-us"
+        }
+      ],
+      birthCenterDetails: [
+        {
+          name: "Birth Sanctuary Cambridge",
+          paragraph: "Birth Sanctuary Cambridge is a freestanding birth center near Alewife offering midwife-led births in a home-like setting. One of the few independent birth centers in the greater Boston area, it provides a peaceful alternative to hospital birth for low-risk pregnancies. Families receive personalized, midwife-led care focused on physiological birth and family-centered support. The center offers a welcoming environment with comfortable suites, hydrotherapy tubs for labor comfort, and access to medical support if needed. Birth Sanctuary accepts MassHealth and is committed to making birth center options accessible to diverse families. The center provides comprehensive care from pregnancy through the postpartum period, with postpartum visits and ongoing support. By offering out-of-hospital birth center care, families can experience low-intervention births with reduced risks of cesarean sections and improved maternal and infant outcomes compared to hospital settings.",
+          thumbnail: "/images/boston-ma-birth-sanctuary.webp",
+          address: "1 Alewife Center, Suite 400, Cambridge, MA 02140",
+          services: ["Home-like birth center births", "Midwife-led care", "Low-risk pregnancy support"],
+          url: "https://www.birthsanctuary.com/",
+          costRange: "$6,000-$9,000",
+          medicaid: true
+        }
+      ],
+      medicaidNote: "Yes — Massachusetts MassHealth covers doula services as of January 2024, reimbursing approximately $1,200 for a full package covering 2 prenatal visits, labor and delivery support, and 2 postpartum visits. Your doula must be enrolled as a MassHealth provider. Contact your MassHealth health plan to get a list of enrolled doulas near you.",
+      insuranceNote: "Massachusetts requires most private insurance plans through the state exchange (MA Health Connector) to cover maternity services. Doula coverage by private insurers is expanding - some Blue Cross Blue Shield of MA and Tufts Health Plan policies now include doula benefits. Check your plan documents or call member services and ask about 'certified doula services' coverage.",
+      faqs: [
+        { q: "How much does a doula cost in Boston?", a: "In Boston, a birth doula typically charges between $1,000 and $3,000 for a full package. Boston's higher cost of living and concentration of experienced doulas drives the upper range. If you have MassHealth, your doula services may be fully covered by insurance, and some doulas offer sliding scale or payment plans." },
+        { q: "Does Massachusetts Medicaid cover doula services?", a: "Yes. MassHealth started covering doula services in January 2024, reimbursing approximately $1,200 for a full package. Your doula needs to be enrolled as a MassHealth provider. Call your MassHealth health plan to get a list of enrolled doulas near you." },
+        { q: "What hospitals in Boston have the highest level NICU?", a: "Boston Children's Hospital operates a Level IV NICU, the highest level possible. Brigham and Women's, Boston Medical Center, Massachusetts General Hospital, and Beth Israel Deaconess all have Level III NICUs." },
+        { q: "Are there birth centers in Boston?", a: "Birth Sanctuary Cambridge near Alewife is a freestanding birth center offering midwife-led births in a home-like setting. Most other birth options in Boston are hospital-based midwifery practices. If you want a birth center experience, Birth Sanctuary is worth exploring." },
+        { q: "Can I bring my doula to hospitals in Boston?", a: "Yes. Boston's major hospitals generally welcome doulas as part of your support team. Brigham and Women's, Boston Medical Center, Massachusetts General Hospital, and BIDMC all have explicit doula-friendly policies or programs. Policies can shift, so call your hospital's maternity floor before your due date to confirm their current support person policy." },
+        { q: "What postpartum resources are available in Boston?", a: "Boston has strong postpartum support: MassHealth covers postpartum care up to 12 months, Birth Sisters at BMC offers culturally centered doula support, postpartum groups run through Brigham and Women's Center for Women's Health, and WIC offices serve Dorchester, Roxbury, and Jamaica Plain. Several doulas offer lactation support and postpartum visiting services." }
+      ],
+      nearbyCities: ["hartford-ct", "providence-ri", "new-york-ny"],
+      birthStats: {
+        cesareanRate: 32.3,
+        maternalMortalityRate: 16.4,
+        homeBirthRate: 1.2,
+        birthCenterBirthRate: 0.4,
+        dataYear: 2023,
+        dataSource: "CDC NCHS, National Vital Statistics System; MA Department of Public Health"
+      },
+      enrichedAt: "2026-07-25"
+    },
   "providence-ri": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -2881,7 +3029,7 @@ export const cities: Record<string, CityData> = {
     ogImage: "https://truejoybirthing.com/images/og-city-cleveland-oh.webp",
     supportSceneImage: "/images/cleveland-oh-birth-doula-support.webp",
     localDoulas: [
-      { name: "Roman Rice" , credential: "Perinatal Support Specialist" , practice: "Birth Through Waves LLC" , url: "https://birththroughwaves.org/" , photo: "/images/doulas/roman-rice-cleveland-oh.webp", description: "Roman Rice is a full-spectrum doula and founder of Birth Through Waves LLC in Cleveland. With six years of experience and 25 births attended, Roman offers birth and postpartum support, childbirth education, lactation counseling, bereavement services, and trauma-informed postpartum healing. His practice centers ancestral wisdom and ceremonial birth practices, serving families across the Cleveland metro area within a 65-mile radius.", costRange: "$900-$1,500", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Childbirth Education", "Lactation Counseling", "Bereavement Support"], serviceArea: ["Cleveland, OH", "Cleveland metro area"] },
+      { name: "Roman Rice" , credential: "Perinatal Support Specialist" , practice: "Birth Through Waves LLC" , url: "https://birththroughwaves.org/" , photo: "/images/doulas/roman-rice-cleveland-oh.webp", description: "Roman Rice is a full-spectrum doula and founder of Birth Through Waves LLC in Cleveland. With six years of experience and 26 births attended, Roman offers birth and postpartum support, childbirth education, lactation counseling, bereavement services, and trauma-informed postpartum healing. She also attends home births. Her practice centers ancestral wisdom and ceremonial birth practices, serving families across the Cleveland metro area within a 65-mile radius.", costRange: "$900-$1,500", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Childbirth Education", "Lactation Counseling", "Bereavement Support"], serviceArea: ["Cleveland, OH", "Cleveland metro area"], isVerified: true },
       { name: "Marlene Morris" , credential: "CD, CHW, Montrice" , practice: "AgapeCode Doula LLC" , url: "https://www.bornbir.com/marlene-morris" , photo: "/images/doulas/marlene-morris-cleveland-oh.webp", description: "Marlene Morris is a certified doula and community health worker with 10 years of birth experience and 251 births attended. She offers birth and postpartum doula services, antepartum support, bereavement care, newborn care specialization, overnight postpartum support, and NICU family support. Marlene accepts Ohio Medicaid, Stork Club, and TRICARE, making her services accessible to families across the economic spectrum.", costRange: "$900-$2,500", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Antepartum Support", "Newborn Care", "Overnight Support"], serviceArea: ["Cleveland, OH", "Cleveland metro area", "100 mile radius"] },
       { name: "Kristen Bindel" , credential: "CD, PCD, CLC" , practice: "Bamboo Birth" , url: "https://bamboo-birth.com/" , photo: "/images/doulas/kristen-bindel-cleveland-oh.webp", description: "Kristen Bindel is a certified birth doula, postpartum doula, and lactation counselor with nine years of experience serving Cleveland families. Through Bamboo Birth, she provides birth and postpartum support, childbirth education, birth planning, and lactation counseling. Kristen also offers virtual support nationwide and is fluent in American Sign Language, expanding access for deaf and hard-of-hearing families.", costRange: "$1,200-$2,200", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Lactation Counseling", "Childbirth Education"], serviceArea: ["Cleveland, OH", "Surrounding areas"] }
     ],
@@ -3625,9 +3773,10 @@ export const cities: Record<string, CityData> = {
     culture: "Port St. Lucie is one of the fastest-growing cities in the United States \u2014 population has surged past 240,000 with roughly 50% growth over the past decade, driven by South Florida families relocating north for affordable housing and remote-work flexibility. The birth community is still catching up to the population boom. Cleveland Clinic Martin Health and HCA\u2019s St. Lucie Medical Center anchor a hospital-only birth landscape \u2014 there are no freestanding birth centers in the Treasure Coast region, which is a significant gap for a city this size. CNMs practice within hospital systems, and Florida\u2019s refusal to license CPMs means out-of-hospital birth options are extremely limited. Doula support exists through groups like Treasure Coast Doulas, but the community is small relative to the volume of young families arriving every month." ,
     heroLocalDetail: "Cleveland Clinic Martin Health \u2013 Tradition Hospital sits at 10000 SW Innovation Way in the master-planned Tradition community on PSL\u2019s west side, right off I-95 at the Gatlin Boulevard exit \u2014 and that I-95/Gatlin interchange backs up steadily during afternoon rush, so if you\u2019re coming from St. Lucie West or southern PSL, add 10 minutes to your estimate. St. Lucie Medical Center is at 1800 SE Tiffany Ave on the east side of town, reachable via US-1 (South Federal Highway) or the Turnpike\u2019s Becker Road exit. PSL is roughly 120 square miles of suburban sprawl \u2014 if you live in western communities like Tradition or St. Lucie West, you\u2019re 20\u201325 minutes from St. Lucie Medical Center on the east side, so know which hospital your OB delivers at before you\u2019re timing contractions. The Turnpike runs north\u2013south through the center of the city and I-95 runs along the western edge \u2014 both are your main arteries, and both slow down between 4 and 6 PM. Jensen Beach families typically deliver at Cleveland Clinic Martin North in Stuart, about 5\u201310 minutes south across the county line. For third-trimester walks, the Savannas Preserve State Park on the east side has flat trails through wetlands, and Tradition Square near the hospital has a walkable lakefront area that\u2019s popular with young families in the evening." ,
     hospitalDetails: [
-      { name: "Cleveland Clinic Martin Health \u2013 Tradition Hospital" , paragraph: "Cleveland Clinic Martin Health \u2013 Tradition Hospital, at 10000 SW Innovation Way in PSL\u2019s Tradition community, opened in 2014 and is the newest hospital in the city. It has a Level II Special Care Nursery (managing babies \u226532 weeks gestation; transfers complex cases to Martin North\u2019s Level III NICU), 24/7 OB hospitalist coverage, epidural availability, CNM-friendly policies, and lactation consultants. The hospital handles an estimated 1,200\u20131,500 births per year and draws heavily from the young families relocating into the Tradition and St. Lucie West communities. If you\u2019re delivering at Tradition, having your birth plan ready keeps your preferences clear in a hospital that\u2019s busy and growing fast. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
-      { name: "Cleveland Clinic Martin Health \u2013 Martin North Hospital" , paragraph: "Cleveland Clinic Martin Health \u2013 Martin North Hospital, at 800 SE Hospital Ave in Stuart (Martin County, about 10\u201315 miles from PSL), has the Treasure Coast\u2019s only Level III NICU \u2014 the regional referral center for high-risk pregnancies and critically ill newborns, with 24/7 neonatologists, sustained ventilation capability, and the highest-acuity neonatal care in the immediate region. It\u2019s also the highest-volume birthing hospital in the area with an estimated 2,000\u20132,500 births per year. Martin North\u2019s dedicated maternity wing, CNM practices, lactation support, and childbirth education make it the go-to for complex pregnancies throughout St. Lucie and Martin counties. If you\u2019re navigating a high-risk pregnancy, this is likely where your OB will refer you. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something specific to work from." },
-      { name: "St. Lucie Medical Center" , paragraph: "St. Lucie Medical Center, at 1800 SE Tiffany Ave on PSL\u2019s east side, is an HCA Healthcare hospital that\u2019s been serving the community since 1983. It has a Level II Special Care Nursery (transfers complex cases to Martin North\u2019s Level III NICU), 24/7 OB/GYN and anesthesia coverage, midwifery care through affiliated practices, lactation consultants, and childbirth classes. The hospital handles an estimated 1,000\u20131,400 births per year and serves central and eastern PSL. If we\u2019re being real, PSL\u2019s sprawl means this east-side hospital is a long drive from the Tradition area \u2014 so confirm which hospital your provider delivers at early, not at 38 weeks. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to walk in prepared." } ],
+          { name: "Cleveland Clinic Martin Health \u2013 Tradition Hospital" , paragraph: "Cleveland Clinic Martin Health \u2013 Tradition Hospital, at 10000 SW Innovation Way in PSL\u2019s Tradition community, opened in 2014 and is the newest hospital in the city. It has a Level II Special Care Nursery (managing babies \u226532 weeks gestation; transfers complex cases to Martin North\u2019s Level III NICU), 24/7 OB hospitalist coverage, epidural availability, CNM-friendly policies, and lactation consultants. The hospital handles an estimated 1,200\u20131,500 births per year and draws heavily from the young families relocating into the Tradition and St. Lucie West communities. If you\u2019re delivering at Tradition, having your birth plan ready keeps your preferences clear in a hospital that\u2019s busy and growing fast. <a href=\\\"/birth-plan-template/\\\">Use our free hospital birth plan template</a> to get started." },
+          { name: "Cleveland Clinic Martin Health \u2013 Martin North Hospital" , paragraph: "Cleveland Clinic Martin Health \u2013 Martin North Hospital, at 800 SE Hospital Ave in Stuart (Martin County, about 10\u201315 miles from PSL), has the Treasure Coast\u2019s only Level III NICU \u2014 the regional referral center for high-risk pregnancies and critically ill newborns, with 24/7 neonatologists, sustained ventilation capability, and the highest-acuity neonatal care in the immediate region. It\u2019s also the highest-volume birthing hospital in the area with an estimated 2,000\u20132,500 births per year. Martin North\u2019s dedicated maternity wing, CNM practices, lactation support, and childbirth education make it the go-to for complex pregnancies throughout St. Lucie and Martin counties. If you\u2019re navigating a high-risk pregnancy, this is likely where your OB will refer you. <a href=\\\"/birth-plan-template/\\\">Use our free hospital birth plan template</a> so your team has something specific to work from." },
+          { name: "St. Lucie Medical Center" , paragraph: "St. Lucie Medical Center, at 1800 SE Tiffany Ave on PSL's east side, is an HCA Healthcare hospital that's been serving the community since 1983. It has a Level II Special Care Nursery (transfers complex cases to Martin North's Level III NICU), 24/7 OB/GYN and anesthesia coverage, midwifery care through affiliated practices, lactation consultants, and childbirth classes. The hospital handles an estimated 1,000–1,400 births per year and serves central and eastern PSL. If we're being real, PSL's sprawl means this east-side hospital is a long drive from the Tradition area — so confirm which hospital your provider delivers at early, not at 38 weeks. Use our free hospital birth plan template to walk in prepared." , address: "1800 SE Tiffany Ave, Port St. Lucie, FL", nicuLevel: "Level II", doulaPolicy: "Welcomed" }
+        ],
     // Birth center search: No freestanding birth centers operate in Port St. Lucie,
     // Jensen Beach, or the broader Treasure Coast region (St. Lucie County, Martin County)
     // as of 2026. Florida's restrictive birth center licensing (ACHC), high malpractice
