@@ -12,7 +12,7 @@ export const bostonMaSceneData: Scene = {
       duration_seconds: 5,
       script: "In Boston, Massachusetts, you're not alone on this journey. True Joy Birthing connects you with trusted birth professionals.",
       visual: {
-        image: '/images/boston-ma-v2-1200.webp',
+        image: '/images/boston-ma-v3-1200.webp',
         alt: 'Pregnant woman silhouette against Boston city landscape at golden hour'
       }
     },
@@ -22,7 +22,7 @@ export const bostonMaSceneData: Scene = {
       duration_seconds: 8,
       script: "Meet Tara Campbell, a high-risk birth doula with over 24 years of experience. She brings advanced clinical knowledge and deep emotional support to medically complex pregnancies.",
       visual: {
-        image: '/images/provider-boston-ma-tara-campbell-boston-ma.webp',
+        image: '/images/provider-boston-ma-tara-campbell.webp',
         alt: 'Tara Campbell, birth doula in Boston'
       }
     },
@@ -32,7 +32,7 @@ export const bostonMaSceneData: Scene = {
       duration_seconds: 8,
       script: "Emily Goodman-Simeone combines birth doula work with lactation counseling. Her holistic approach supports families through the perinatal period.",
       visual: {
-        image: '/images/provider-boston-ma-emily-goodman-simeone-boston-ma.webp',
+        image: '/images/provider-boston-ma-emily-goodman-simeone.webp',
         alt: 'Emily Goodman-Simeone, birth doula and lactation counselor'
       }
     },
@@ -42,7 +42,7 @@ export const bostonMaSceneData: Scene = {
       duration_seconds: 8,
       script: "Lantharra Langlois serves Boston's diverse communities with culturally grounded doula care. She specializes in creating welcoming support for BIPOC and first-time parents.",
       visual: {
-        image: '/images/provider-boston-ma-lantharra-langlois-boston-ma.webp',
+        image: '/images/provider-boston-ma-lantharra-langlois.webp',
         alt: 'Lantharra Langlois, birth doula serving Boston's diverse communities'
       }
     },
@@ -52,7 +52,7 @@ export const bostonMaSceneData: Scene = {
       duration_seconds: 8,
       script: "Nina Graham combines her experience as an NICU Registered Nurse with compassionate birth doula support. She brings clinical expertise to high-risk pregnancies.",
       visual: {
-        image: '/images/provider-boston-ma-nina-graham-boston-ma.webp',
+        image: '/images/provider-boston-ma-nina-graham.webp',
         alt: 'Nina Graham, NICU nurse and birth doula'
       }
     },
@@ -98,7 +98,7 @@ export const bostonMaSceneData: Scene = {
       duration_seconds: 5,
       script: "Connect with True Joy Birthing to find your birth support team in Boston. Your journey deserves to be supported by people who understand.",
       visual: {
-        image: '/images/boston-ma-v2-1200.webp',
+        image: '/images/boston-ma-v3-1200.webp',
         alt: 'Boston birth support team'
       }
     }

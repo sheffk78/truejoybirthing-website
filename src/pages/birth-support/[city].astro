@@ -29,6 +29,7 @@ const {
   localDoulas, medicaidNote, insuranceNote, faqs, nearbyCities,
   testimonials,
   heroImage: heroImageSlug, supportSceneImage, supportSceneAlt, ogImage: ogImageSlug,
+  costSectionImage, insuranceSectionImage, midwifeSectionImage,
   midwifeInfo,
   birthStats,
   postpartumSection,
@@ -264,9 +265,9 @@ const supportImageAlt = supportSceneAlt || `A doula walking alongside an expecta
 // ratio. If they don't match exactly, object-cover crops gracefully — but large
 // mismatches mean significant content loss. Prefer matching ratios when possible.
 // OG images are composed design assets (text + image), NOT raw photo crops.
-const doulaCostImage = '/images/doula-holding-hands.webp';
-const medicaidImage = '/images/hands-on-belly.webp';
-const midwifeImage = '/images/midwife-heartbeat.webp';
+const doulaCostImage = costSectionImage || '/images/doula-holding-hands.webp';
+const medicaidImage = insuranceSectionImage || '/images/hands-on-belly.webp';
+const midwifeImage = midwifeSectionImage || '/images/midwife-heartbeat.webp';
 
 // Build structured-data
 const breadcrumbList = [
