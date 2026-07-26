@@ -2954,7 +2954,7 @@ export const cities: Record<string, CityData> = {
     costLow: 1200,
     costHigh: 2500,
     shelbiServesHere: false,
-    heroImage: "/images/oklahoma-city-ok-birth-doula-hero-v2.webp",
+    heroImage: "/images/oklahoma-city-ok-birth-doula-hero-v3.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-oklahoma-city-ok.webp",
     supportSceneImage: "/images/oklahoma-city-ok-support-scene.webp",
     localDoulas: [
