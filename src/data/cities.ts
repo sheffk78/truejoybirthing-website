@@ -3617,7 +3617,7 @@ export const cities: Record<string, CityData> = {
     costLow: 1200,
     costHigh: 2500,
     shelbiServesHere: false,
-    heroImage: "/images/port-st-lucie-fl-birth-doula-skyline.webp",
+    heroImage: "/images/port-st-lucie-fl-birth-doula-skyline-v2.webp",
     localDoulas: [
       { name: "Michelle Jackson" , credential: "Birth Doula" , practice: "Michelle Jackson" , url: "https://www.meetyourdoula.com/united-states/port-st-lucie/doulas/michelle-jackson" , photo: "/images/provider-port-st-lucie-fl-michelle-jackson.webp", description: "I am 43 years old and the proud mother of 5 children ages 22 (twins), 20, 17, and 8. I currently serve Port Saint Lucie, Florida and the greater Treasure Coast ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Port St. Lucie, FL"] },
       { name: "Maternal and Child Health" , credential: "Birth Doula" , practice: "Maternal and Child Health" , url: "https://stlucie.floridahealth.gov/programs-and-services/clinical-and-nutrition-services/maternal-and-child-health/" , photo: "/images/provider-port-st-lucie-fl-maternal-and-child-health.webp", description: "Sisters Empowering Sisters Doula and Breastfeeding Program. Creating a Positive Birth Experience. Learn more about the birth experience, be supported and ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Port St. Lucie, FL"] },
