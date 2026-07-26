@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1200px;
+    height: 630px;
+    background: #FAF8F5;
+    overflow: hidden;
+  }
+  .og-card {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    height: 630px;
+  }
+  /* LEFT: Text content on cream gradient */
+  .left-column {
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 52px 64px;
+    background: linear-gradient(180deg, #FAF8F5 0%, #EDE5F5 100%);
+    position: relative;
+  }
+  /* Rose accent bar at top */
+  .left-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #D8A0C4;
+  }
+  /* Rose accent bar at bottom */
+  .left-column::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #D8A0C4;
+  }
+  /* RIGHT: Hero image */
+  .right-column {
+    width: 540px;
+    position: relative;
+    overflow: hidden;
+  }
+  .right-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  /* Rose accent bars on image side */
+  .right-column::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #D8A0C4;
+    z-index: 2;
+  }
+  .right-column::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: #D8A0C4;
+    z-index: 2;
+  }
+  /* Typography */
+  .eyebrow {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #D8A0C4;
+    margin-bottom: 16px;
+  }
+  .headline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #2D2926;
+    margin-bottom: 20px;
+  }
+  .subheadline {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #5A534F;
+  }
+  .logo {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    width: 120px;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+  <div class="og-card">
+    <!-- LEFT: Text content -->
+    <div class="left-column">
+      <div class="eyebrow">Port St. Lucie, FL</div>
+      <div class="headline">Birth Support You Can Trust</div>
+      <div class="subheadline">Local doulas, hospitals, and birth resources in the Treasure Coast.</div>
+      <!-- Logo -->
+      <img class="logo" src="/images/logo-mono.svg" alt="True Joy Birthing">
+    </div>
+
+    <!-- RIGHT: Hero image -->
+    <div class="right-column">
+      <img src="/images/port-st-lucie-fl-hero.webp" alt="Pregnant woman silhouette in Port St. Lucie">
+    </div>
+  </div>
+</body>
+</html>
