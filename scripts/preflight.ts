@@ -1823,6 +1823,7 @@ function run(): void {
         'oakland-ca': 210,
         'providence-ri': 210,
         'spokane-wa': 225,
+        'fremont-ca': 340,
       };
       const maxKB = (targetSlug && citySizeOverrides[targetSlug]) || 200;
       if (sizeKB > maxKB) {
