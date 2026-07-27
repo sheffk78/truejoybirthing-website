@@ -1827,6 +1827,13 @@ export const cities: Record<string, CityData> = {
     costLow: 1000,
     costHigh: 3000,
     shelbiServesHere: false,
+    lat: 36.8529,
+    lng: -75.9780,
+    midwifeInfo: {
+      paragraph: "Virginia licenses Certified Nurse-Midwives (CNMs) through the Board of Medicine and Board of Nursing, with CNMs attending hospital births at Sentara Princess Anne and other regional facilities. Virginia does not currently license Certified Professional Midwives (CPMs) for out-of-hospital birth, so home birth options in the Virginia Beach area are limited; families seeking out-of-hospital midwifery typically work with CNMs willing to attend home births or explore birth center options in neighboring regions." ,
+      credentialTypes: " (CNMs only; CPMs not licensed)" ,
+      credentialDetail: "Virginia regulates Certified Nurse-Midwives (CNMs) under joint Board of Medicine and Board of Nursing licensure, permitting them to practice in hospitals and, in some cases, out-of-hospital settings. Certified Professional Midwives (CPMs) are not licensed by the state, which limits legal home birth midwifery options for Virginia Beach families."
+    },
     culture: "Virginia Beach's birth culture blends military-family practicality with a growing natural birth community shaped by the city's coastal lifestyle. With a large active-duty military population, many families navigate TRICARE benefits alongside local birth support options. The broader Hampton Roads area has seen a rise in community doulas addressing maternal health disparities." ,
     heroLocalDetail: "From the bustling corridor along Virginia Beach Boulevard to the oceanfront neighborhoods near the Boardwalk and Atlantic Avenue, families in Virginia Beach live where suburban sprawl meets coastal charm. The Hilltop area near Laskin Road and the growing Town Center district provide healthcare access and community gathering spots for new parents." ,
     hospitalDetails: [
