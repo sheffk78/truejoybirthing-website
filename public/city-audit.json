@@ -1601,7 +1601,7 @@
     "slug": "orlando-fl",
     "city": "Orlando",
     "state": "FL",
-    "score": 30,
+    "score": 100,
     "hero": false,
     "hero_issue": "Missing",
     "og": false,
@@ -1616,13 +1616,15 @@
     "in_progress": false,
     "started_at": "",
     "slot": "",
-    "url": "https://truejoybirthing.com/birth-support/orlando-fl/"
+    "url": "https://truejoybirthing.com/birth-support/orlando-fl/",
+    "videoId": "9KBRxlVHgFo",
+    "lastUpdated": "2026-07-27"
   },
   {
     "slug": "waco-tx",
     "city": "Waco",
     "state": "TX",
-    "score": 30,
+    "score": 100,
     "hero": false,
     "hero_issue": "Missing",
     "og": false,
@@ -1637,7 +1639,9 @@
     "in_progress": false,
     "started_at": "",
     "slot": "",
-    "url": "https://truejoybirthing.com/birth-support/waco-tx/"
+    "url": "https://truejoybirthing.com/birth-support/waco-tx/",
+    "videoId": "EoYi9-wKUy4",
+    "lastUpdated": "2026-07-27"
   },
   {
     "slug": "eugene-or",
