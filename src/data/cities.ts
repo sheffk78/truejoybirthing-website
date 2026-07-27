@@ -5352,7 +5352,7 @@ midwifeInfo: {
       { name: "The Birth Place", thumbnail: "/images/orlando-fl-the-birth-place.webp", address: "213 S Dillard St, Ste 340, Winter Garden, FL 34787", url: "https://thebirthplace.org/", services: ["Midwifery Care", "Prenatal Care", "Birth Center Birth", "Hospital Delivery Options", "Breastfeeding Support", "Postpartum Care"] },
       { name: "Tree of Life Birth & Gynecology", thumbnail: "/images/orlando-fl-tree-of-life-birth-center.webp", address: "Central Florida (20 minutes from downtown Orlando)", url: "https://www.tolbirth.com/", services: ["Birth Center Birth", "Water Birth", "Home Birth", "Midwifery Care", "Holistic Care", "Medicaid Accepted"] },
     ],
-    medicaidNote: "No. As of 2026, Florida Medicaid does not cover doula services. Florida has not enacted legislation to add Medicaid doula coverage. Orlando-area families on Medicaid should check with their managed care plan (Staywell, Sunshine Health, Simply Healthcare, UnitedHealthcare Community Plan) about any maternal wellness benefits. Contact Florida Medicaid at 1-877-254-1055 or visit flmedicaidmanagedcare.com for current plan information.",
+    medicaidNote: "No — As of 2026, Florida Medicaid does not cover doula services. Florida has not enacted legislation to add Medicaid doula coverage. Orlando-area families on Medicaid should check with their managed care plan (Staywell, Sunshine Health, Simply Healthcare, UnitedHealthcare Community Plan) about any maternal wellness benefits. Contact Florida Medicaid at 1-877-254-1055 or visit flmedicaidmanagedcare.com for current plan information.",
     insuranceNote: "Orlando's employer market is one of the largest in Florida. Disney, Universal, AdventHealth, Lockheed Martin, and Darden all offer health plans that may include maternal wellness benefits. Check your specific plan for doula coverage, and whether HSA or FSA funds can help. Theme-park and hospitality employers sometimes have flexible benefits that cover doula services under wellness programs.",
     faqs: [
       { q: "How much does a doula cost in Orlando?", a: "Expect to pay $700 to $2,500 for a doula in Orlando. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free Joyful Birth Plan</a> and start thinking about what matters most to you." },
@@ -5368,7 +5368,10 @@ midwifeInfo: {
       dataYear: 2023,
       dataSource: "CDC NCHS, National Vital Statistics System; March of Dimes 2025 Report Card; KFF State Health Facts",
     },
+    midwifeInfo: "Orlando has several Certified Nurse-Midwives (CNMs) practicing at Winnie Palmer Hospital, AdventHealth Orlando, and AdventHealth Celebration. Licensed Midwives (LMs) serve the home birth community, and birth centers like Heart 2 Heart and The Birth Place offer midwife-led care.",
     nearbyCities: ["gainesville-fl", "port-st-lucie-fl"],
+    lat: 28.5383,
+    lng: -81.3792,
   },
   "waco-tx": {
     enableBlogResources: true,
