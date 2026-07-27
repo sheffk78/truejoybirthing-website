@@ -1352,11 +1352,16 @@ export const cities: Record<string, CityData> = {
     costLow: 1000,
     costHigh: 3000,
     shelbiServesHere: false,
+    lat: 44.0521,
+    lng: -123.0868,
     heroImage: "/images/eugene-or-birth-doula-skyline-v2.webp",
-    ogImage: "/images/og-city-eugene-or.webp",
+    ogImage: "/images/og-city-eugene-or-v2.webp",
     supportSceneImage: "/images/eugene-or-birth-doula-support.webp",
-    ogImage: "/images/og-city-eugene-or.webp",
-    supportSceneImage: "/images/eugene-or-birth-doula-support.webp",
+    midwifeInfo: {
+      paragraph: "Oregon licenses Certified Professional Midwives (CPMs) and Certified Nurse-Midwives (CNMs), making both home birth and birth center midwifery legally regulated in Eugene. PeaceHealth Sacred Heart Medical Center has CNM-attended births, and the Eugene Birth Center offers midwife-led out-of-hospital birth. For home birth, several licensed midwives (LMs) serve the Eugene area.",
+      credentialTypes: " and LMs",
+      credentialDetail: "In Oregon, Licensed Midwives (LMs) are licensed by the state to attend out-of-hospital births, giving Eugene families regulated midwife options for home and birth center births."
+    },
     localDoulas: [
       { name: "Certified Birth Doula Eugene Oregon" , credential: "CD(DONA)" , practice: "Certified Birth Doula Eugene Oregon" , url: "https://insightdoula.com/" , photo: "/images/provider-eugene-or-certified-birth-doula.webp", description: "InsightDoula serves as a certified birth doula Eugene Oregon. I provide labor support for expecting mothers who want a successful birth. 5.0 stars on Google with 48 reviews.", costRange: "$1,200-$2,500", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Eugene, OR"] },
       { name: "Avocado Doulas" , credential: "CD(BAI)" , practice: "Avocado Doulas" , url: "https://avocadodoulas.com/" , photo: "/images/provider-eugene-or-avocado-doulas.webp", description: "We provide <b>doula</b> services from conception to early parenting. Address anxiety, relieve worry, and embrace balance. All-natural, drug-free deliveries. 5.0 stars on Google with 40 reviews.", costRange: "$1,200-$2,500", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Eugene, OR"] },
