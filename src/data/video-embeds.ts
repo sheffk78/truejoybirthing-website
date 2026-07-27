@@ -63,10 +63,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
   "fremont-ca": {
-    videoId: "XTRsj8RpAw0",
+    videoId: "oE9Zcd8SuJc",
     title: "Fremont Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — 62 doulas & midwives, 8 hospitals, 3 birth centers, costs, and Medi-Cal PAVE coverage, all in under 5 minutes.",
-    duration: "PT4M51S",
+    description: "Watch the full city guide — 18 doulas & midwives, 8 hospitals, 3 birth centers, costs, and Medi-Cal PAVE coverage, all in under 5 minutes.",
+    duration: "PT4M49S",
     uploadDate: "2026-07-27T00:00:00-07:00",
   },
   "fresno-ca": {
@@ -672,7 +672,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     videoId: "GxVP-Uc45qQ",
     title: "Bozeman MT Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas and midwives serving Bozeman, hospital policies, real costs, and Montana Medicaid coverage status.",
-    duration: "PT4M51S",
+    duration: "PT4M49S",
     uploadDate: "2026-07-23T00:00:00-06:00",
   },
   "boston-ma": { videoId: "J-S4IjKwADs", uploadDate: "2026-07-26", duration: "PT3M34S" } as any,
