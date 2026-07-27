@@ -567,6 +567,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M51S",
     uploadDate: "2026-07-14T14:10:00-06:00",
 },
+"buffalo-ny": {
+    videoId: "F36uxUnU4W4",
+    title: "Buffalo NY Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and New York Medicaid, all in under 6 minutes.",
+    duration: "PT5M6S",
+    uploadDate: "2026-07-27T00:00:00-04:00",
+},
 "charleston-sc": {
     videoId: "Qmld51LJhm8",
     title: "Charleston SC Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
