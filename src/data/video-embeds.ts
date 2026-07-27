@@ -318,11 +318,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-07-03T00:00:00-06:00",
 },
 "orlando-fl": {
-    videoId: "YwVwMD2SAkE",
+    videoId: "9KBRxlVHgFo",
     title: "Orlando Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Florida Medicaid, all in under 5 minutes.",
-    duration: "PT4M08S",
-    uploadDate: "2026-06-30T00:00:00-06:00",
+    description: "Watch the full city guide — 5 hospitals, 3 birth centers, 10 doulas, costs, and Florida Medicaid, all in about 6.5 minutes.",
+    duration: "PT6M26S",
+    uploadDate: "2026-07-27T00:00:00-04:00",
 },
 "gainesville-fl": {
     videoId: "xKAMi0RZawU",
