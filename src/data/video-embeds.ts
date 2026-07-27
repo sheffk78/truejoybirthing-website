@@ -601,6 +601,22 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [248, "Your Next Step"],
     ],
 },
+  "springfield-il": {
+    videoId: "p56y8cxQzI4",
+    title: "Springfield IL Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — 2 hospitals, 3 doulas, costs, and Illinois Medicaid (HB 4430), all in under 5 minutes.",
+    duration: "PT4M35S",
+    uploadDate: "2026-07-27T00:00:00-05:00",
+    chapters: [
+      [0, "Welcome to Springfield"],
+      [29, "Where Springfield Families Deliver (Hospitals)"],
+      [97, "Doulas & Midwives in Springfield"],
+      [178, "The True Joy Birthing App"],
+      [202, "Cost Reality ($800–$2,000)"],
+      [227, "Insurance & Illinois Medicaid"],
+      [258, "Your Next Step"],
+    ],
+  },
 
   "new-york-ny": {
     videoId: "IhkxV0iWm-U",
