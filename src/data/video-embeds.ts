@@ -63,11 +63,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
   "fremont-ca": {
-    videoId: "SfZueZ_UDpo",
-    title: "Fremont Doula & Birth Plan Guide",
-    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 3 minutes.",
-    duration: "PT2M57S",
-    uploadDate: "2026-06-16T00:00:00-06:00",
+    videoId: "XTRsj8RpAw0",
+    title: "Fremont Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — 62 doulas & midwives, 8 hospitals, 3 birth centers, costs, and Medi-Cal PAVE coverage, all in under 5 minutes.",
+    duration: "PT4M51S",
+    uploadDate: "2026-07-27T00:00:00-07:00",
   },
   "fresno-ca": {
     videoId: "0uLCgRQFCrw",
