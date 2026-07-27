@@ -62,6 +62,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M17S",
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
+  "virginia-beach-va": {
+    videoId: "tYqyYzLRWw4",
+    title: "Virginia Beach Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Virginia Medicaid, all in under 6 minutes.",
+    duration: "PT5M39S",
+    uploadDate: "2026-07-27T00:00:00-06:00",
+  },
   "fremont-ca": {
     videoId: "oE9Zcd8SuJc",
     title: "Fremont Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
