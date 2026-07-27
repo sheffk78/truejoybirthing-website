@@ -662,7 +662,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   "boston-ma": { videoId: "J-S4IjKwADs", uploadDate: "2026-07-26", duration: "PT3M34S" } as any,
   "san-diego-ca": { videoId: "CtAJ83EaKUQ", uploadDate: "2026-07-24", duration: "PT2M44S" } as any,
   "st-augustine-fl": { videoId: "KXaLgwuuiwo", uploadDate: "2026-07-24", duration: "PT5M35S" } as any,
-  "mckinney-tx": { videoId: "LBZ4GSX1q8I", uploadDate: "2026-07-24", duration: "PT5M08S" },
+  "mckinney-tx": { videoId: "JdGxmylZ37w", uploadDate: "2026-07-27", duration: "PT5M10S" },
   "cleveland-oh": {
     videoId: "xF0hWu4AAuY",
     title: "Cleveland Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
