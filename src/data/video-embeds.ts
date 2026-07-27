@@ -191,11 +191,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-07-09T00:00:00-05:00",
   },
   "pittsburgh-pa": {
-    videoId: "LFJ6qqvzaGc",
+    videoId: "4Q8_n4mg9Zo",
     title: "Pittsburgh Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and Pennsylvania Medicaid, all in under 4 minutes.",
-    duration: "PT4M00S",
-    uploadDate: "2026-07-01T00:00:00-07:00",
+    duration: "PT3M58S",
+    uploadDate: "2026-07-26T00:00:00-05:00",
   },
   "sacramento-ca": {
     videoId: "MDxP7DxoOf8",
