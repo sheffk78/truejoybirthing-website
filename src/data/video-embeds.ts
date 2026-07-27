@@ -134,11 +134,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-07-17T00:00:00-06:00",
   },
   "waco-tx": {
-    videoId: "HokaLZ_mHxw",
-    title: "Waco TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid (SB 750 covers doula care), all in under 4 minutes.",
-    duration: "PT2M12S",
-    uploadDate: "2026-06-17T00:00:00-06:00",
+    videoId: "EoYi9-wKUy4",
+    title: "Waco TX Doula & Birth Plan Guide: Costs, Hospitals & Insurance (First-Time Mom)",
+    description: "Watch the full city guide — 6 doulas, 2 hospitals, 3 birth centers, costs, and Texas insurance details, all in 5 minutes.",
+    duration: "PT5M8S",
+    uploadDate: "2026-07-27T00:00:00-06:00",
   },
   // mckinney-tx video removed: gradient-only opening, missing hero image. Needs re-render.
   "conroe-tx": {
