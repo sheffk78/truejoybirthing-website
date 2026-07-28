@@ -119,10 +119,10 @@ export interface CityData {
     credentialDetail: string;     // e.g. "In Colorado, Registered Midwives (RMs) are specifically licensed..."
   };
   birthStats?: {                   // City/state birth statistics for "Birth in {City}: By the Numbers" section
-    cesareanRate?: number;          // Percentage of births via cesarean (e.g. 34.5)
-    maternalMortalityRate?: number; // Deaths per 100,000 live births (e.g. 28.2)
-    homeBirthRate?: number;         // Percentage of births at home (e.g. 1.5)
-    birthCenterBirthRate?: number;  // Percentage of births in freestanding birth centers (e.g. 0.5)
+    cesareanRate?: number;          // Percentage (e.g. 34.5) — NO % sign, template adds it
+    maternalMortalityRate?: number; // Raw number (e.g. 28.2) — NO units, template shows "per 100,000 live births"
+    homeBirthRate?: number;         // Percentage (e.g. 1.5) — NO % sign, template adds it
+    birthCenterBirthRate?: number;  // Percentage (e.g. 0.5) — NO % sign, template adds it
     dataYear?: number;             // Year the data was collected (e.g. 2023)
     dataSource?: string;           // Source attribution (e.g. "CDC NCHS, National Vital Statistics System")
   };
@@ -1157,11 +1157,11 @@ export const cities: Record<string, CityData> = {
     medicaidNote: "Yes — California Medi-Cal covers doula services under SB-509, with a birth package reimbursement of approximately $1,587. Doulas must enroll through the PAVE portal to bill Medi-Cal directly. Contact your managed care plan (Community Health Group, Health Net, or Blue Shield Promise) for referral details. Best Start Birth Center also accepts Medi-Cal for birth center deliveries." ,
     insuranceNote: "Under California SB 332, commercial health plans are required to cover doula services and midwifery care. Check with your insurer for in-network doula providers and prior authorization requirements. Many San Diego doulas offer superbills for out-of-network reimbursement, and some practices like Night & Day San Diego have contracts with major insurers including United Healthcare, Aetna, Cigna, and UCSD health plans." ,
     birthStats: {
-      cesareanRate: "32.1%",
-      maternalMortalityRate: "10.2 per 100,000",
-      homeBirthRate: "1.6%",
-      birthCenterBirthRate: "1.2%",
-      dataYear: "2023",
+      cesareanRate: 32.1,
+      maternalMortalityRate: 10.2,
+      homeBirthRate: 1.6,
+      birthCenterBirthRate: 1.2,
+      dataYear: 2023,
       dataSource: "CDC NCHS National Vital Statistics System — California"
     },
     faqs: [
@@ -1217,11 +1217,11 @@ export const cities: Record<string, CityData> = {
     medicaidNote: "Yes — California Medi-Cal covers doula services under SB-509, with approximately $1,587 reimbursement for the birth package. Doulas must enroll through the PAVE portal. In Fresno, Medi-Cal managed care plans include CalViva Health and Health Net. Contact them for doula referral lists." ,
     insuranceNote: "Under California SB 332, commercial health plans must cover doula services. Given the limited supply of doulas in Fresno, ask your insurer about out-of-network coverage or telehealth doula options if in-network providers are unavailable." ,
     birthStats: {
-      cesareanRate: "32.1%",
-      maternalMortalityRate: "10.2 per 100,000",
-      homeBirthRate: "1.6%",
-      birthCenterBirthRate: "1.2%",
-      dataYear: "2023",
+      cesareanRate: 32.1,
+      maternalMortalityRate: 10.2,
+      homeBirthRate: 1.6,
+      birthCenterBirthRate: 1.2,
+      dataYear: 2023,
       dataSource: "CDC NCHS National Vital Statistics System — California"
     },
     faqs: [
@@ -1870,7 +1870,7 @@ export const cities: Record<string, CityData> = {
       maternalMortalityRate: 21.5,
       homeBirthRate: 0.8,
       birthCenterBirthRate: 0.3,
-      dataYear: "2022",
+      dataYear: 2022,
       dataSource: "CDC NCHS National Vital Statistics System"
     } ,
     nearbyCities: ["new-york-ny", "chicago-il"]},
@@ -3088,7 +3088,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [
       { name: "Oklahoma City Birth Center" , thumbnail: "/images/oklahoma-city-ok-birth-center.webp" , url: "https://www.okcbirthcenter.com/" , address: "814 NW 13th St, Oklahoma City, OK 73106" , services: ["Midwife-Led Births" , "Water Birth" , "Prenatal Care" , "Postpartum Care" , "Hydrotherapy"] , medicaid: false, paragraph: "The Oklahoma City Birth Center, at 814 NW 13th St in Midtown, is the metro\u2019s freestanding, midwife-run birth and wellness center. A group of midwives provides pre-conception, prenatal, birth, and postnatal care in birth suites with large hydrotherapy tubs, attached bathrooms, and a home-like setting just a few miles from the major hospital district. It\u2019s the dedicated out-of-hospital option for low-risk OKC families who want midwifery care with hospital backup close by. Tours are available in person or virtually. call ahead to schedule, since the birth community here is tight-knit and spots fill." } ],
     medicaidNote: "Yes — Oklahoma SoonerCare started covering doula services in 2024. the program reimburses certified doulas for prenatal, labor, and postpartum visits, so if you\u2019re on SoonerCare ask your provider about connecting with a Medicaid-enrolled doula." ,
-    birthStats: { cesareanRate: "31.8%", maternalMortalityRate: "23.5 per 100K", homeBirthRate: "1.2%", birthCenterBirthRate: "0.4%", dataYear: "2023", dataSource: "CDC NCHS National Vital Statistics System" },
+    birthStats: { cesareanRate: 31.8, maternalMortalityRate: 23.5, homeBirthRate: 1.2, birthCenterBirthRate: 0.4, dataYear: 2023, dataSource: "CDC NCHS National Vital Statistics System" },
     insuranceNote: "Even without Medicaid, many OKC doulas offer sliding-scale payment, and you can typically use HSA or FSA funds for doula services. just ask for a superbill to submit for reimbursement." ,
     faqs: [
       { q: "How much does a doula cost in Oklahoma City?" , a: "In Oklahoma City, a full birth doula package typically runs $1,200 to $2,500. Postpartum doula care is usually hourly, around $25 to $45 per hour. Some doulas offer sliding-scale pricing or payment plans, and Beautifully Connected publishes package pricing from $1,649 to $1,849." },
@@ -3136,11 +3136,11 @@ export const cities: Record<string, CityData> = {
       { name: "Given Women\u2019s Health Oasis" , thumbnail: "/images/birth-centers/given-womens-health-oasis-tulsa-ok.webp" , address: "7503 W 60th Pl N, Tulsa, OK" , url: "https://www.ifwinc.org/given-womens-health-oasis" , services: ["Birth Center Birth", "Prenatal Care", "Postpartum Care", "Lactation Support", "Holistic Care", "Community-Based"] , paragraph: "Given Women\u2019s Health Oasis is a community-based birth center in north Tulsa run by Innovations Family Wellness, serving families of color with compassionate, culturally-responsive perinatal care. The center offers midwifery care, holistic lactation support, and childbirth classes, with a mission to expand access to quality perinatal care for all families regardless of income or background." }
     ],
     birthStats: {
-      cesareanRate: "33%",
-      maternalMortalityRate: "27.3 per 100,000 births",
-      homeBirthRate: "~1.5% (national average; Oklahoma-specific data not separately reported)",
-      birthCenterBirthRate: "~0.5% (national average; Oklahoma-specific data not separately reported)",
-      dataYear: "2023",
+      cesareanRate: 33,
+      maternalMortalityRate: 27.3,
+      homeBirthRate: 1.5,
+      birthCenterBirthRate: 0.5,
+      dataYear: 2023,
       dataSource: "CDC NCHS National Vital Statistics System, March of Dimes 2025 Report Card, KFF Women's Health Profile Oklahoma"
     },
     medicaidNote: "Yes \u2014 Oklahoma SoonerCare covers doula care for enrolled members. Tulsa County doulas who are SoonerCare-certified can bill for prenatal, birth-day, and postpartum visits, so ask your clinic if they can refer you to one." ,
@@ -3171,7 +3171,7 @@ export const cities: Record<string, CityData> = {
       { name: "Linsey Griffith" , credential: "Birth & Postpartum Doula, HypnoBirthing CBE" , practice: "The Ohio Doulas" , url: "http://www.theohiodoula.com/" , photo: "/images/provider-columbus-oh-the-ohio-doulas.webp", description: "Linsey Griffith leads The Ohio Doulas, a Central Ohio doula group serving both the Columbus and Dayton metro areas for over a decade. She offers birth doula support, postpartum doula care, and HypnoBirthing childbirth education, with a team that provides backup coverage so every family has continuous support through labor and the early weeks at home." , costRange: "$1,800-$2,500" , costRange_source: "doulamatch" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "HypnoBirthing" , "Childbirth Education"], serviceArea: ["Columbus, OH" , "Dayton, OH" , "Central Ohio"] },
       { name: "Sarah Finisterre" , credential: "CD(DONA), State-Certified (Ohio)" , practice: "Radiant Beginnings Doula Care" , url: "https://doulamatch.net/profile/39166/sarah-finisterre" , photo: "/images/provider-columbus-oh-sarah-finisterre.webp", description: "Sarah Finisterre is a DONA-certified birth doula serving Columbus families through Radiant Beginnings Doula Care. She is certified through the state of Ohio and accepts Medicaid. Sarah specializes in birth support and currently focuses on labor and delivery, with trusted referrals for postpartum care.", costRange: "$700-$2,000 (birth)", acceptingClients: true, services: ["Birth Doula"], serviceArea: ["Columbus, OH"], medicaid: true },
             { name: "Janelle Montgomery" , credential: "Birth Doula, Postpartum Doula" , practice: "FlourisHER Way Birth & Wellness" , url: "https://doulamatch.net/profile/40696/janelle-montgomery" , photo: "/images/provider-columbus-oh-janelle-montgomery.webp", description: "Janelle Montgomery is a Columbus birth and postpartum doula and founder of FlourisHER Way Birth & Wellness, a practice focused on helping families flourish through pregnancy, birth, and the postpartum transition. She offers personalized birth support packages, health coaching, and wellness guidance, with perinatal mental health advocacy through her volunteer work with the Ohio Perinatal Mental Health Task Force.", costRange: "$1,500-$2,200 (birth)", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Columbus, OH"] },
-      { name: "Kelli Blinn" , credential: "Certified Elite ProDoula Labor Doula" , practice: "Kelli Blinn LLC" , url: "https://www.kelliblinn.com/",
+      { name: "Kelli Blinn" , credential: "Certified Elite ProDoula Labor Doula" , practice: "Kelli Blinn LLC" , url: "https://www.kelliblinn.com/" },
       { name: "Megan Neal" , credential: "Birth Doula" , practice: "Birth Your Way" , url: "https://www.bornbir.com/megan-neal" , photo: "/images/provider-columbus-oh-megan-neal.webp", description: "Megan Neal is a Columbus birth doula and childbirth educator behind Birth Your Way, specializing in support for unmedicated and physiologic vaginal birth. She combines childbirth classes with hands-on doula services, helping families prepare for labor with evidence-based education, comfort measures, and advocacy in both hospital and out-of-hospital settings." , costRange: "$1,200-$2,500" , costRange_source: "market-estimate" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Childbirth Education"], serviceArea: ["Columbus, OH" , "Central Ohio"] } ],
     culture: "Columbus is a sprawl of cool neighborhoods. from Clintonville to the Short North. but when you\u2019re pregnant, what matters is that most L&D action clusters around Riverside Methodist up on Olentangy River Rd and OSU\u2019s Wexner campus off 315. If you live out in Hilliard or Dublin, that midday drive up 315 is a breeze, but factor in rush-hour parking time at Riverside because that lot fills fast." ,
     heroLocalDetail: "Riverside Methodist\u2019s maternity entrance faces Olentangy River Road. the parking garage directly attached to the Women\u2019s Pavilion can have a line on weekday mornings, so plan to arrive at least 20 minutes before any scheduled appointment." ,
@@ -3272,11 +3272,11 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [],
     // Birth center search: Indiana Birth Center (formerly Sacred Roots) on NW side of Indianapolis closed permanently May 2026. No other freestanding birth centers found in Indianapolis metro.
     birthStats: {
-      cesareanRate: "31.2%",
-      maternalMortalityRate: "21.5 per 100,000",
-      homeBirthRate: "1.5%",
-      birthCenterBirthRate: "0.52%",
-      dataYear: "2023",
+      cesareanRate: 31.2,
+      maternalMortalityRate: 21.5,
+      homeBirthRate: 1.5,
+      birthCenterBirthRate: 0.52,
+      dataYear: 2023,
       dataSource: "CDC NCHS National Vital Statistics System; Indiana Maternal Mortality Review Committee"
     },
     medicaidNote: "Yes \u2014 Indiana Medicaid began covering doula services under HB 1008 effective January 1, 2025. if you have Hoosier Healthwise or traditional Medicaid, you can work with a state-certified doula at no cost for prenatal, delivery, and postpartum visits." ,
@@ -3438,11 +3438,11 @@ export const cities: Record<string, CityData> = {
       { q: "Are there doulas in Memphis?" , a: "Memphis has a growing doula community, including organizations like A Better Balanced Birth that focus on Black maternal health equity, and CHOICES for reproductive justice. The True Joy Birthing app can help you find local doulas \u2014 start there and interview a few until you find the right fit." },
       { q: "Can my doula come to the hospital with me in Memphis?" , a: "Yes \u2014 Methodist Le Bonheur, Baptist Memorial, and Regional One Health all allow doulas in labor and delivery. Policies can shift during flu season or surges, so confirm during your hospital tour. Having your birth plan ready helps your care team understand and support your preferences." } ],
     birthStats: {
-      cesareanRate: "31.8%",
-      maternalMortalityRate: "42.1 per 100,000 live births",
-      homeBirthRate: "~1.5%",
-      birthCenterBirthRate: "~0.5%",
-      dataYear: "2023",
+      cesareanRate: 31.8,
+      maternalMortalityRate: 42.1,
+      homeBirthRate: 1.5,
+      birthCenterBirthRate: 0.5,
+      dataYear: 2023,
       dataSource: "CDC NCHS National Vital Statistics System; America's Health Rankings"
     },
     nearbyCities: ["nashville-tn"]},
@@ -3875,7 +3875,7 @@ export const cities: Record<string, CityData> = {
     birthCenterDetails: [],
     medicaidNote: "No — Tennessee does NOT cover doula services through Medicaid (TennCare) as of 2026. While neighboring states have implemented Medicaid doula coverage, Tennessee has not yet enacted similar legislation, leaving low-income families to seek sliding-scale or volunteer doula options." ,
     insuranceNote: "Private insurance doula coverage in Tennessee varies significantly by plan and insurer. Tennessee has not mandated doula coverage for private plans. Contact your insurance provider directly to ask about reimbursement for doula services or out-of-network benefits, and check whether HSA or FSA funds can help cover out-of-pocket costs." ,
-    birthStats: { cesareanRate: "31.8%", maternalMortalityRate: "42.1 per 100,000", homeBirthRate: "~1.5%", birthCenterBirthRate: "~0.5%", dataYear: "2024 (cesarean); 2019-2023 (maternal mortality)", dataSource: "CDC NCHS National Vital Statistics System" } ,
+    birthStats: { cesareanRate: 31.8, maternalMortalityRate: 42.1, homeBirthRate: 1.5, birthCenterBirthRate: 0.5, dataYear: 2023, dataSource: "CDC NCHS National Vital Statistics System" } ,
     midwifeInfo: "Tennessee licenses Certified Professional Midwives (CPMs) for out-of-hospital births. Gaylea McDougal, CPM, serves Hendersonville and Sumner County with home birth services. Tennessee does not license Certified Nurse-Midwives (CNMs) for home births, but CNMs practice in hospital settings at TriStar and Vanderbilt. For home birth, verify your midwife\u2019s license status with the Tennessee Department of Health." ,
     faqs: [
       { q: "How much does a doula cost in Hendersonville?" , a: "Expect to pay $800 to $2,500 for a doula in Hendersonville. Most doulas serving Hendersonville are based in Nashville and travel north, so start your search early and ask about travel fees upfront. Can\u2019t swing the full price? Ask about sliding-scale options \u2014 most doulas would rather work with your budget than see you go without. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href='/birth-plan-template/'>free birth plan template</a> and start thinking about what matters most to you." },
@@ -3944,18 +3944,24 @@ export const cities: Record<string, CityData> = {
     slug: "lehi-ut" ,
     costLow: 800,
     costHigh: 1800,
+    lat: 40.3916,
+    lng: -111.8508,
     shelbiServesHere: false,
-    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    heroImage: "/images/lehi-ut-birth-doula-silhouette-v2.webp",
+    supportScene: "/images/lehi-ut-support-scene.webp",
+    supportSceneImage: "/images/lehi-ut-support-scene.webp",
+    ogImage: "/images/og-city-lehi-ut.webp",
     localDoulas: [
-      { name: "Postpartum Doula Utah" , credential: "Birth Doula" , practice: "Postpartum Doula Utah" , url: "https://doulasofutah.com/" , photo: "/images/provider-lehi-ut-postpartum-doula-utah.webp", description: "Explore Doulas of Utah for expert postpartum support and nurturing overnight newborn care during your early parenting journey.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Lehi, UT"] },
-      { name: "Elise Monson" , credential: "Birth Doula" , practice: "Elise Monson" , url: "https://www.bornbir.com/elise-monson" , photo: "/images/provider-lehi-ut-elise-monson.webp", description: "I am a Birth Doula located in Lehi Utah. I serve in both Utah and Salt Lake Counties. I love all things birth. It's my mission to empower mothers.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Lehi, UT"] },
-      { name: "birth doulas in Utah" , credential: "Birth Doula" , practice: "birth doulas in Utah" , url: "https://doulamatch.net/list/birth/ut" , photo: "/images/provider-lehi-ut-birth-doulas-in-utah.webp", description: "25 birth doulas in Utah. ; Sidsie Rubow. The Embraced Mother · $1000 to $1500 ; Bev Ann Warner. Bev Ann Life Doula · $1325 to $2550 ; Terah Motzkus. Birthday by ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Lehi, UT"] } ],
+      { name: "Aleece Weaver" , credential: "CD(DONA), ProDoula Postpartum" , practice: "EggBaby Doula Services" , url: "https://eggbabyds.com" , photo: "/images/provider-lehi-ut-aleece-weaver.webp", description: "Aleece Weaver is a DONA-certified birth doula and ProDoula-certified postpartum doula serving Lehi and the broader Utah County area through EggBaby Doula Services. She offers tiered birth support packages, overnight postpartum care, and bereavement support through Stillbirthday certification. As a biracial (Mexican and White) doula, she is LGBTQIA+ inclusive and affiliated with the University of Utah Health SUPERAD program. Her full-spectrum practice covers prenatal through postpartum, including grief and loss support.", costRange: "$1,200-$2,500", costRange_source: "market-estimate", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Bereavement Support"], serviceArea: ["Lehi, UT" , "Utah County" , "Salt Lake County"] },
+      { name: "Madison Gordon" , credential: "Stillbirthday Certified, BS Family Science" , practice: "Catching Bubbles" , url: "https://www.bornbir.com/madison-gordon" , photo: "/images/provider-lehi-ut-madison-gordon.webp", description: "Madison Gordon is a Lehi-based birth and postpartum doula with 7 years of experience and a Bachelor's degree in Family, Community, and Human Development. She holds Stillbirthday bereavement certification and is a student midwife. Her practice, Catching Bubbles, offers birth doula support at a flat $2,000 rate, postpartum care at $45/hour, overnight doula support at $450/night, and empowered parenting coaching.", costRange: "$2,000 (birth), $45/hr (postpartum)", costRange_source: "bornbir", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Overnight Doula" , "Childbirth Education"], serviceArea: ["Lehi, UT"] },
+      { name: "Krystalyn Leffler-Macon" , credential: "CD(DTI), EMT" , practice: "The Space Doula Care" , url: "https://www.bornbir.com/krystalyn-leffler-macon" , photo: "/images/provider-lehi-ut-krystalyn-leffler-macon.webp", description: "Krystalyn Leffler-Macon is a Lehi-based doula certified through Doulas Training International (CD(DTI)) with an EMT and Army Medic background. She offers birth and postpartum support with a unique medical-adjacent perspective. Her practice, The Space Doula Care, provides prenatal and birth care at $1,200 flat, postpartum day support at $30/hour, and a full-spectrum package including 80 hours of postpartum care at $3,500.", costRange: "$1,200 (birth), $30/hr (postpartum)", costRange_source: "bornbir", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Overnight Newborn Care"], serviceArea: ["Lehi, UT"] },
+      { name: "Shay Crowther" , credential: "CD(DONA)" , practice: "RootedBirth Doulas" , url: "https://www.bornbir.com/shay-crowther" , photo: "/images/provider-lehi-ut-shay-crowther.webp", description: "Shay Crowther is a DONA-certified birth doula and co-founder of RootedBirth Doulas in Lehi, Utah. With 8+ years of experience in pediatric dentistry specializing in oral ties before becoming a doula, she brings a unique lens to infant feeding and oral health. Her birth package includes 2 prenatal appointments, 24/7 on-call availability starting 2 weeks before the due date, labor support, and 1 postpartum visit for $1,200 flat.", costRange: "$1,200 (birth package)", costRange_source: "bornbir", acceptingClients: true, services: ["Birth Doula"], serviceArea: ["Lehi, UT"] } ],
     culture: "Lehi sits in the heart of Utah County \u2014 the highest-birth-rate county in the highest-birth-rate state in the nation. The LDS (Church of Jesus Christ of Latter-day Saints) culture deeply shapes birth here: large families are the norm, young marriage ages mean many first-time moms in their early twenties, and the doula community is unusually large and affordable because many LDS doulas view birth support as ministry and service rather than purely commerce. The Silicon Slopes tech corridor has brought an influx of young, high-income families to Lehi, creating an interesting mix of traditional LDS birth culture and evidence-based, tech-savvy parenting. Utah County\u2019s birth volume means the hospital L&D units run busy \u2014 and having your preferences in writing matters even more." ,
     heroLocalDetail: "Lehi sits at the northern edge of Utah County where I-15 crosses Point of the Mountain \u2014 the bottleneck between Utah and Salt Lake counties. American Fork Hospital is about 6 miles north up I-15 (exit 279, 1100 East), and Utah Valley Hospital in Provo is about 15 miles south (exit 273, 500 West). During morning and evening rush, that I-15 stretch between Lehi and Provo can slow to a crawl, and the Point of the Mountain construction zone near the Traverse Mountain/Lehi tech corridor exit adds unpredictable delays \u2014 know your back route via State Street (US-89) through Pleasant Grove before you need it. Timpanogos Regional Hospital in Orem is about 10 miles south, also off I-15. Lehi itself doesn\u2019t have a hospital with L&D, so you\u2019re driving no matter what. Winters bring lake-effect snow off Utah Lake and periodic inversion advisories; summers break 100\u00B0F regularly. Murdock Canal Trail and the trails around Thanksgiving Point are popular third-trimester walks \u2014 flat, paved, and close enough to I-15 that you\u2019re not stranded if something picks up. The Traverse Mountain and Thanksgiving Point neighborhoods are where most of the young Silicon Slopes families cluster." ,
     hospitalDetails: [
-      { name: "American Fork Hospital (Intermountain Health)" , thumbnail: "/images/lehi-ut-american-fork-hospital.webp" , paragraph: "American Fork Hospital, at 170 N 1100 E in American Fork just 6 miles north of Lehi, is the closest hospital with labor and delivery for Lehi families. It has a Level II NICU (special care nursery) \u2014 verified on intermountainhealthcare.org \u2014 and is known for a more intimate, boutique-style maternity experience compared to the larger regional hospitals. The unit sees a steady volume but maintains a community-hospital feel: private LDR rooms, lactation consultants, midwifery services, and a stabilization-and-transfer protocol for infants needing Level III NICU care at Utah Valley Hospital. Doulas are welcome under Intermountain Health\u2019s general policy. If you\u2019re delivering at American Fork, having your birth plan ready keeps your preferences clear in a busy unit that sees a lot of Utah County families. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to get started." },
-      { name: "Utah Valley Hospital (Intermountain Health)" , thumbnail: "/images/lehi-ut-utah-valley-hospital.webp" , paragraph: "Utah Valley Hospital, at 1034 N 500 W in Provo about 15 miles south of Lehi, has the highest-level NICU in Utah County \u2014 a Level III NICU verified on intermountainhealthcare.org \u2014 with 24/7 neonatologists, maternal-fetal medicine specialists, neonatal transport capability, and the capacity to handle births as early as 23\u201324 weeks gestation. It\u2019s the regional referral center for high-risk pregnancies across Utah County, which means the L&D unit runs busy. Doulas are generally welcome as part of your support team. If you\u2019re navigating a high-risk pregnancy, this is where your OB will likely send you \u2014 and a doula who knows the rhythm of this hospital makes a real difference when you\u2019re already processing a lot. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> so your team has something specific to work from." },
-      { name: "Timpanogos Regional Hospital (Intermountain Health)" , thumbnail: "/images/lehi-ut-timpanogos-regional-hospital.webp" , paragraph: "Timpanogos Regional Hospital, at 750 W 800 N in Orem about 10 miles south of Lehi, is another Intermountain Health option with a Level II NICU (contact the hospital directly for current NICU level verification). It offers full L&D services, private birthing suites, and midwifery care \u2014 another community-hospital alternative for Lehi families who want to avoid the drive to Provo. Same Intermountain doula-welcome policy. <a href='/birth-plan-template/'>Download the free birth plan template</a> before your hospital tour." } ],
+      { name: "American Fork Hospital (Intermountain Health)" , thumbnail: "/images/lehi-ut-american-fork-hospital.webp" , url: "https://intermountainhealthcare.org/locations/american-fork-hospital" , address: "170 N 1100 E, American Fork, UT 84003" , doulaPolicy: "Doulas welcome" , medicaid: "Yes" , nicuLevel: "II" , paragraph: "American Fork Hospital, at 170 N 1100 E in American Fork just 6 miles north of Lehi, is the closest hospital with labor and delivery for Lehi families. It has a Level II NICU (special care nursery) \u2014 verified on intermountainhealthcare.org \u2014 and is known for a more intimate, boutique-style maternity experience compared to the larger regional hospitals. The unit sees a steady volume but maintains a community-hospital feel: private LDR rooms, lactation consultants, midwifery services, and a stabilization-and-transfer protocol for infants needing Level III NICU care at Utah Valley Hospital. Doulas are welcome under Intermountain Health\u2019s general policy. If you\u2019re delivering at American Fork, having your birth plan ready keeps your preferences clear in a busy unit that sees a lot of Utah County families. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to get started." },
+      { name: "Utah Valley Hospital (Intermountain Health)" , thumbnail: "/images/lehi-ut-utah-valley-hospital.webp" , url: "https://intermountainhealthcare.org/locations/utah-valley-hospital" , address: "1034 N 500 W, Provo, UT 84604" , doulaPolicy: "Doulas welcome" , medicaid: "Yes" , nicuLevel: "III" , paragraph: "Utah Valley Hospital, at 1034 N 500 W in Provo about 15 miles south of Lehi, has the highest-level NICU in Utah County \u2014 a Level III NICU verified on intermountainhealthcare.org \u2014 with 24/7 neonatologists, maternal-fetal medicine specialists, neonatal transport capability, and the capacity to handle births as early as 23\u201324 weeks gestation. It\u2019s the regional referral center for high-risk pregnancies across Utah County, which means the L&D unit runs busy. Doulas are generally welcome as part of your support team. If you\u2019re navigating a high-risk pregnancy, this is where your OB will likely send you \u2014 and a doula who knows the rhythm of this hospital makes a real difference when you\u2019re already processing a lot. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> so your team has something specific to work from." },
+      { name: "Timpanogos Regional Hospital (Intermountain Health)" , thumbnail: "/images/lehi-ut-timpanogos-regional-hospital.webp" , url: "https://intermountainhealthcare.org/locations/timpanogos-regional-hospital" , address: "750 W 800 N, Orem, UT 84057" , doulaPolicy: "Doulas welcome" , medicaid: "Yes" , nicuLevel: "II" , paragraph: "Timpanogos Regional Hospital, at 750 W 800 N in Orem about 10 miles south of Lehi, is another Intermountain Health option with a Level II NICU (contact the hospital directly for current NICU level verification). It offers full L&D services, private birthing suites, and midwifery care \u2014 another community-hospital alternative for Lehi families who want to avoid the drive to Provo. Same Intermountain doula-welcome policy. <a href='/birth-plan-template/'>Download the free birth plan template</a> before your hospital tour." } ],
     // Birth center search: NPI registry taxonomy 261QB0400X returned no confirmed results
     // for Lehi, American Fork, Pleasant Grove, Orem, or Provo in Utah County.
     // Google Maps search "birth center Lehi UT" and "birth center Utah County" found
@@ -3965,7 +3971,8 @@ export const cities: Record<string, CityData> = {
     // typically work with licensed home-birth midwives (CPMs licensable in Utah since ~2017).
     // Verified 2026-05-27.
     birthCenterDetails: [],
-    medicaidNote: "Utah Medicaid does NOT cover doula services as of 2026. HB 222 (2024) proposed adding postpartum doula coverage but did not pass. Advocacy groups including the Utah Doula Association and Birth Matters Utah continue pushing for legislation. HSA and FSA funds can cover doula fees, and Utah\u2019s large community of LDS doulas often offer sliding-scale or donation-based pricing \u2014 ask individual doulas what\u2019s available." ,
+    medicaidNote: "No \u2014 Utah Medicaid does not currently cover doula services. HB 222 (2024) proposed adding postpartum doula coverage but did not pass. Advocacy groups including the Utah Doula Association and Birth Matters Utah continue pushing for legislation. HSA and FSA funds can cover doula fees, and Utah\u2019s large community of LDS doulas often offer sliding-scale or donation-based pricing \u2014 ask individual doulas what\u2019s available." ,
+    midwifeInfo: "Utah licenses Certified Professional Midwives (CPMs) for home birth \u2014 licensure became available around 2017, expanding out-of-hospital options. Certified Nurse-Midwives (CNMs) practice at Intermountain Health hospitals including American Fork, Utah Valley, and Timpanogos Regional. Lay midwives also practice in Utah but without state licensure. For home birth, look for a CPM or a licensed direct-entry midwife through the Utah Midwives Association." ,
     insuranceNote: "Utah has no state mandate requiring private insurers to cover doula services. Some tech employers in the Silicon Slopes corridor (Lehi area) offer doula benefits through platforms like Maven Clinic or Carrot Fertility as part of maternal wellness packages \u2014 check with your HR department. Otherwise, check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm." ,
     faqs: [
       { q: "Does Medicaid cover doulas in Lehi?" , a: "Not yet \u2014 Utah Medicaid does not currently cover doula services. HB 222 tried to change that in 2024 but didn\u2019t pass. But you still have options: Utah has one of the largest per-capita doula communities in the country, many offering sliding-scale or donation-based pricing. HSA and FSA funds can cover doula fees. And some tech employers in the Silicon Slopes area offer doula benefits \u2014 check with HR. Ask any doula you interview about payment flexibility; most would rather work with your budget than see you go without." },
@@ -3973,6 +3980,14 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals near Lehi accommodate birth plans?" , a: "American Fork Hospital (Level II NICU, ~6 miles), Utah Valley Hospital (Level III NICU, ~15 miles), and Timpanogos Regional Hospital in Orem (Level II NICU, ~10 miles) all offer L&D services and generally accommodate birth plans under Intermountain Health\u2019s policy. Utah Valley Hospital is the go-to for high-risk pregnancies \u2014 it\u2019s the only Level III NICU in Utah County. Always confirm your hospital\u2019s current visitor and support-person policy during your tour. <a href='/birth-plan-template/'>Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
       { q: "Are there birth centers in Lehi?" , a: "No \u2014 there are currently no freestanding birth centers in Lehi or anywhere in Utah County. The nearest birth centers are in Salt Lake City, about 30\u201345 minutes north. Utah families seeking an out-of-hospital birth typically work with licensed home-birth midwives. CPMs became licensable in Utah starting around 2017, which has expanded home birth options. <a href='/birth-plan-template/'>Grab the free birth plan template</a> to think through whether a hospital or home birth is right for you." },
       { q: "Does True Joy Birthing work with Lehi families?" , a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any Lehi birth setting, whether you\u2019re delivering at a hospital or at home. The app also helps you find and connect with local doulas and midwives. <a href='/birth-plan-template/'>Download the free birth plan template</a> and start preparing your way \u2014 no signup required." } ],
+    birthStats: {
+      cesareanRate: 24.7,
+      maternalMortalityRate: 20.3,
+      homeBirthRate: 3.11,
+      birthCenterBirthRate: 0.3,
+      dataYear: 2024,
+      dataSource: "CDC NCHS National Vital Statistics System, March of Dimes PeriStats, Utah Department of Health"
+    },
     nearbyCities: ["lehi-ut"]},
   "port-st-lucie-fl": {
     enableBlogResources: true,
@@ -4068,11 +4083,11 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
     supportSceneImage: "/images/springfield-il-doula-support-scene.webp",
     ogImage: "/images/og-city-springfield-il-v2.webp",
     birthStats: {
-      cesareanRate: "30.8%",
-      maternalMortalityRate: "20.0 per 100,000",
-      homeBirthRate: "1.5%",
-      birthCenterBirthRate: "0.52%",
-      dataYear: "2023-2024",
+      cesareanRate: 30.8,
+      maternalMortalityRate: 20.0,
+      homeBirthRate: 1.5,
+      birthCenterBirthRate: 0.52,
+      dataYear: 2023,
       dataSource: "CDC NCHS National Vital Statistics System, March of Dimes 2025 Report Card"
     },
     localDoulas: [
@@ -4759,11 +4774,11 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
     lat: 34.1412,
     lng: -117.2936,
       birthStats: {
-        cesareanRate: "31.8%",
-        maternalMortalityRate: "10.1 per 100,000",
-        homeBirthRate: "0.9%",
-        birthCenterBirthRate: "0.5%",
-        dataYear: "2023",
+        cesareanRate: 31.8,
+        maternalMortalityRate: 10.1,
+        homeBirthRate: 0.9,
+        birthCenterBirthRate: 0.5,
+        dataYear: 2023,
         dataSource: "CDC National Vital Statistics System, March of Dimes California Report Card"
       }
     },
@@ -5297,11 +5312,11 @@ midwifeInfo: {
       credentialDetail: "In North Carolina, Certified Nurse Midwives (CNMs) are licensed through the NC Board of Nursing and must have a collaborative practice agreement with a physician. The state does not currently license Certified Professional Midwives (CPMs), though legislative efforts continue. CNMs can attend births in hospitals, freestanding birth centers, and at home.",
     },
     birthStats: {
-      cesareanRate: "22.8%",
-      maternalMortalityRate: "29.8 per 100,000",
-      homeBirthRate: "0.5%",
-      birthCenterBirthRate: "0.4%",
-      dataYear: "2024",
+      cesareanRate: 22.8,
+      maternalMortalityRate: 29.8,
+      homeBirthRate: 0.5,
+      birthCenterBirthRate: 0.4,
+      dataYear: 2024,
       dataSource: "CDC NCHS National Vital Statistics System, March of Dimes 2025 Report Card",
     },
     medicaidNote: "Yes \u2014 as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Wake County's managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health, Healthy Blue). Contact NC Medicaid at 1-800-662-7030 or ncdhhs.gov to confirm your plan's doula coverage before hiring.",
@@ -5469,11 +5484,11 @@ midwifeInfo: {
       { name: "East Gate Birth and Wellness", thumbnail: "/images/eastgate-birth-waco.webp", address: "Waco Drive, Waco, TX", url: "https://eastgatebirthandwellness.com/", services: ["Home Birth", "Water Birth", "Prenatal Care", "Postpartum Care", "Lactation Support"], paragraph: "East Gate Birth and Wellness, on Waco Drive in Waco, provides home birth and waterbirth services with Certified Professional Midwives (CPMs). Home births only. no birth center facility. Services include comprehensive prenatal care, childbirth education, postpartum care, and lactation support for families in Waco and the surrounding central Texas area." },
     ],
     birthStats: {
-      cesareanRate: "32.2%",
-      maternalMortalityRate: "18.9 per 100,000",
-      homeBirthRate: "1.1%",
-      birthCenterBirthRate: "0.4%",
-      dataYear: "2023",
+      cesareanRate: 32.2,
+      maternalMortalityRate: 18.9,
+      homeBirthRate: 1.1,
+      birthCenterBirthRate: 0.4,
+      dataYear: 2023,
       dataSource: "CDC NCHS National Vital Statistics System",
     },
     medicaidNote: "No \u2014 Texas does not yet have statewide Medicaid doula coverage as of May 2026. Some health plan pilots (like BCBS TX Special Beginning, Dell Children's Health Plan) offer limited doula benefits. ask your plan directly. For McLennan County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
