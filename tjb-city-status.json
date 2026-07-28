@@ -1,0 +1,27 @@
+{
+  "eugene-or": {
+    "has_outreach": true,
+    "outreach_sent_at": "2026-07-27T17:06:45.271127",
+    "outreach_provider_count": 4,
+    "outreach_emails_sent": 4,
+    "outreach_no_email": 0,
+    "outreach_date": "2026-07-27"
+  },
+  "tulsa-ok": {
+    "slug": "tulsa-ok",
+    "city": "Tulsa",
+    "state": "OK",
+    "stage": "verify_deploy",
+    "hero_image": "tulsa-ok-v2.webp",
+    "og_image": "og-tulsa-ok-v2.webp",
+    "support_scene": "tulsa-ok-support-scene.webp",
+    "provider_count": 4,
+    "hospital_count": 3,
+    "birth_center_count": 3,
+    "has_birth_stats": true,
+    "has_video": false,
+    "has_outreach": false,
+    "preflight_passed": true,
+    "last_updated": "2026-07-27T18:30:00Z"
+  }
+}

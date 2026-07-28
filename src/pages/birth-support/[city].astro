@@ -550,9 +550,24 @@ const schema = {
           <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-3" style="font-family: 'DM Sans', sans-serif;">{cityVideoEmbeds[slug].title}</h2>
           <p class="text-tjb-gray max-w-2xl mx-auto">{cityVideoEmbeds[slug].description}</p>
         </div>
-        <div class="aspect-video rounded-xl overflow-hidden shadow-lg bg-black relative">
-          <iframe src={`https://www.youtube-nocookie.com/embed/${cityVideoEmbeds[slug].videoId}`} class="w-full h-full border-0 absolute inset-0" width="100%" height="100%" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        <div class="aspect-video rounded-xl overflow-hidden shadow-lg bg-black relative cursor-pointer group" id="city-video-facade" data-video-id={cityVideoEmbeds[slug].videoId}>
+          <img src={`https://img.youtube.com/vi/${cityVideoEmbeds[slug].videoId}/maxresdefault.jpg`} alt={`${cityVideoEmbeds[slug].title} — press play to watch`} class="w-full h-full object-cover" width="1280" height="720" loading="lazy" />
+          <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-colors">
+            <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 ml-1 text-tjb-charcoal" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
         </div>
+        <script is:inline>
+          (function() {
+            var facade = document.getElementById('city-video-facade');
+            if (!facade) return;
+            facade.addEventListener('click', function() {
+              var videoId = this.dataset.videoId;
+              this.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + videoId + '?autoplay=true" class="w-full h-full border-0 absolute inset-0" width="100%" height="100%" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+            });
+          })();
+        </script>
         {/*
           @todo: In a future iteration, add a collapsible <details> transcript below the video
           by fetching auto-captions via YouTube API (captions.download?tfmt=srt&tlang=en&id=...)

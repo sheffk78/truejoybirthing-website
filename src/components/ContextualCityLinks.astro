@@ -183,7 +183,7 @@ const subheading = currentSlug
           {Object.entries(groupedByState).map(([stateCode, cityList]) => (
             <div class="group">
               <p class="font-semibold text-tjb-lavender-600 mb-1.5 text-xs uppercase tracking-wide">
-                <a href={`/birth-support/${stateCode}/`} class="hover:text-tjb-rose-500 transition">
+                <a href={`/birth-support/${stateCode === 'MT' ? cityList[0].slug : stateCode}/`} class="hover:text-tjb-rose-500 transition">
                   {stateNames[stateCode] || stateCode.toUpperCase()}
                 </a>
               </p>

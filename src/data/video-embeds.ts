@@ -63,10 +63,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
   "virginia-beach-va": {
-    videoId: "tYqyYzLRWw4",
+    videoId: "F7OoHJKyXGs",
     title: "Virginia Beach Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and Virginia Medicaid, all in under 6 minutes.",
-    duration: "PT5M39S",
+    duration: "PT6M56S",
     uploadDate: "2026-07-27T00:00:00-06:00",
   },
   "fremont-ca": {
@@ -764,5 +764,12 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [149, "Ohio Medicaid Coverage"],
       [169, "Get Your Birth Plan"]
     ],
+  },
+    "eugene-or": {
+    videoId: "6ihaaNemK-c",
+    title: "Eugene OR Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Full city guide — doulas, hospitals, costs, and more, all in under 5 minutes. #eugenedorla #eugenebirth #oregonbirth #eugenefamily #oregonpregnancy",
+    duration: "PT5M42S",
+    uploadDate: "2026-07-28T00:00:00-07:00",
   },
 };

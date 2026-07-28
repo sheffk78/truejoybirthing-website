@@ -27,7 +27,7 @@ This is the core of your hospital bag, the items you'll reach for during active 
 
 ## What to Pack for Your Birth Partner
 
-Your partner or support person needs their own bag. They'll be there for hours, sometimes overnight, and a prepared partner makes a calmer room. If your partner is unsure how to help during labor, read my <a href="/blog/birth-partner-guide/">birth partner guide</a> for specific ways to offer support.
+Your partner or support person needs their own bag. They'll be there for hours, sometimes overnight, and a prepared partner makes a calmer room. If your partner is unsure how to help during labor, read my <a href="/blog/birth-plan-checklist-companion/">birth plan checklist</a> for specific ways to prepare and offer support.
 
 - **Change of clothes:** At minimum, a fresh shirt and underwear. Labor can be messy for everyone in the room.
 - **Toiletries:** Toothbrush, toothpaste, deodorant. You'll both feel better after a quick freshen-up.

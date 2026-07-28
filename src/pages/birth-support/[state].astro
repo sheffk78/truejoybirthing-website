@@ -478,7 +478,7 @@ const sortedCities = [...stateCities].sort((a, b) => a.city.localeCompare(b.city
     <div class="max-w-3xl mx-auto px-6">
       <h2 class="text-xl font-bold mb-4">Explore Other States</h2>
       <div class="flex flex-wrap gap-2">
-        {allStateCodes.sort((a, b) => {
+        {allStateCodes.filter((sc) => sc !== 'MT').sort((a, b) => {
           if (a === 'TX') return -1;
           if (b === 'TX') return 1;
           return (stateNames[a] || a).localeCompare(stateNames[b] || b);

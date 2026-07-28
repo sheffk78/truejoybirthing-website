@@ -324,10 +324,11 @@ const schema = {
           const stateName = stateNames[stateCode] || stateCode;
           const stateSlug = stateCode.toLowerCase();
           const cityCount = stateCities.length;
+          const stateHref = stateCode === 'MT' ? `/birth-support/${stateCities[0].slug}/` : `/birth-support/${stateSlug}/`;
           return (
             <div class="mb-8 city-state-group" id={`state-${stateSlug}`}>
               <a
-                href={`/birth-support/${stateSlug}/`}
+                href={stateHref}
                 class="group inline-flex items-center gap-2 mb-4 hover:text-tjb-rose-500 transition"
               >
                 <h2 class="text-xl font-semibold text-tjb-charcoal group-hover:text-tjb-rose-500 transition">{stateName}</h2>
