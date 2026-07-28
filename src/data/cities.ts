@@ -3401,12 +3401,18 @@ export const cities: Record<string, CityData> = {
     city: "Memphis" ,
     state: "TN" ,
     slug: "memphis-tn" ,
+    lat: 35.1495,
+    lng: -90.0490,
     costLow: 700,
     costHigh: 1700,
     shelbiServesHere: false,
     heroImage: "/images/memphis-tn-birth-doula-skyline-v2.webp",
     ogImage: "/images/og-city-memphis-tn-v2.webp",
     supportSceneImage: "/images/memphis-tn-birth-doula-support-v2.webp",
+    midwifeInfo: {
+      paragraph: "Tennessee licenses Certified Professional Midwives (CPMs) through the Tennessee Department of Health. Certified Nurse Midwives (CNMs) practice in hospital settings like Regional One Health, which is the only Memphis hospital with a CNM midwifery program. Home birth is legal with a licensed midwife, though Tennessee has relatively few practicing CPMs outside of Nashville and Knoxville.",
+      available: true
+    },
     localDoulas: [
       { name: "Memphis Doulas" , credential: "CD(DONA)" , practice: "Naturally Nurtured Birth Services" , url: "https://www.naturallynurturedbirthservices.com/" , photo: "/images/provider-memphis-tn-memphis-doulas.webp", description: "We are a Memphis, TN based doula support center for families and industry professionals. labor and postpartum. includes natural births, epidurals, cesarean ...", costRange: "$700-$1,700 (market-estimate)", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Memphis, TN"] },
       { name: "Black Doula in Memphis" , credential: "CD(Rebyrth), LC, RYT-200" , practice: "WhatTheDoula" , url: "https://www.whatthedoula.com/" , photo: "/images/provider-memphis-tn-black-doula-in-memphis.webp", description: "Hi, I'm Kaila, I am a Certified Birth and Postpartum Doula who supports families in the Memphis, TN area and virtually across the United States.", costRange: "$1,200-$2,500 (market-estimate)", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Memphis, TN"] },
