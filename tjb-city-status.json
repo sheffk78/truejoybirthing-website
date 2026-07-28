@@ -23,5 +23,16 @@
     "has_outreach": false,
     "preflight_passed": true,
     "last_updated": "2026-07-27T18:30:00Z"
+  },
+  "grand-rapids-mi": {
+    "slug": "grand-rapids-mi",
+    "city": "Grand Rapids",
+    "state": "MI",
+    "has_outreach": true,
+    "outreach_sent_at": "2026-07-28T20:55:23.507195+00:00",
+    "outreach_provider_count": 3,
+    "outreach_emails_sent": 3,
+    "outreach_no_email": 0,
+    "outreach_date": "2026-07-28"
   }
 }

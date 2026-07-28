@@ -14,3 +14,19 @@
 
 **No-email providers:** 0 (all providers had discoverable emails)
 **Bounces/failures:** 0
+
+---
+
+## Grand Rapids, MI (grand-rapids-mi) - 2026-07-28
+
+**Page:** https://truejoybirthing.com/birth-support/grand-rapids-mi/
+**Status:** Outreach sent (3 emails, 3 providers covered)
+
+| Provider | Email | Status | Notes |
+|---|---|---|---|
+| Blessed Birth Doulas (Ashley Korff) | ashley.k.korff@gmail.com | Sent | First-touch, Birth Doula, Spinning Babies-trained, WIC family pricing |
+| Bump to Birth (Kiara Baskin) | bumptobirthdoulagrr@gmail.com | Sent | First-touch, CD, CLC, birth justice focus, Day One Doula Collective PM |
+| Great Lakes Doulas | info@greatlakesdoulas.com | Sent | First-touch, Birth Doula, multi-service agency (birth/postpartum/lactation/body work), ZeroBounce flagged role-based but sent with caution |
+
+**No-email providers:** 0 (all providers had discoverable emails)
+**Bounces/failures:** 0

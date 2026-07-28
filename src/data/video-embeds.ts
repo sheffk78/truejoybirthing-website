@@ -879,4 +879,24 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
 
+  "grand-rapids-mi": {
+    videoId: "19NzNTwphw8",
+    title: "Grand Rapids MI Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — 2 hospitals, 1 birth center, 3 doulas, midwives, costs, and Michigan Medicaid, all in under 4 minutes.",
+    duration: "PT3M38S",
+    uploadDate: "2026-07-28T00:00:00-04:00",
+    chapters: [
+      [0, "Congratulations — Grand Rapids Birth Guide"],
+      [12, "What This Video Covers"],
+      [29, "Corewell Health Butterworth Hospital (Level IV NICU)"],
+      [44, "Trinity Health Grand Rapids (Level II NICU)"],
+      [61, "West Michigan Midwifery Birth Center"],
+      [81, "Doulas & Midwives Serving Grand Rapids"],
+      [98, "Free Birth Plan App"],
+      [137, "Doula Costs in Grand Rapids"],
+      [161, "Michigan Medicaid Covers Doulas"],
+      [183, "Build Your Birth Plan"],
+    ],
+  },
+
 };
