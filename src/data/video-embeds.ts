@@ -798,4 +798,22 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [318, "Your Next Step"],
     ],
   },
+  "hendersonville-tn": {
+    videoId: "wJRk-6Bg_OE",
+    title: "Hendersonville TN Doula & Birth Plan Guide: Costs, Hospitals & Insurance (First-Time Mom)",
+    description: "Full city guide — doulas, hospitals, costs, and more, all in under 6 minutes. #hendersonvilledoula #tennesseebirth #sumnercounty #birthplan #doula #midwife #tristarhendersonville #tenncare #homebirthtennessee #firsttimemom #freebirthplan #truejoybirthing",
+    duration: "PT5M21S",
+    uploadDate: "2026-07-28T00:00:00-05:00",
+    chapters: [
+      [0, "Welcome to Hendersonville"],
+      [15, "What This Guide Covers"],
+      [32, "TriStar Hendersonville (Level II NICU)"],
+      [69, "Sumner Regional Medical Center (Level II NICU)"],
+      [102, "Doulas & Midwives in Hendersonville"],
+      [219, "The True Joy Birthing App"],
+      [245, "Cost Reality ($800-$2,500)"],
+      [270, "Insurance & Tennessee Medicaid"],
+      [303, "Your Next Step"],
+    ],
+  },
 };
