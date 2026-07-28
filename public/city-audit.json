@@ -1767,7 +1767,7 @@
     "slug": "lehi-ut",
     "city": "Lehi",
     "state": "UT",
-    "score": 85,
+    "score": 100,
     "hero": true,
     "hero_issue": "",
     "og": true,
@@ -1776,14 +1776,15 @@
     "hospital_count": 3,
     "doulas": true,
     "doula_count": 4,
-    "video": false,
+    "video": true,
     "outreach": true,
     "placeholder": false,
     "in_progress": false,
     "started_at": "",
     "slot": "",
     "url": "https://truejoybirthing.com/birth-support/lehi-ut/",
-    "last_updated": "2026-07-28T11:00:00Z"
+    "last_updated": "2026-07-28T11:35:00Z",
+    "video_id": "9IBiWykxGtU"
   },
   {
     "slug": "newark-nj",
