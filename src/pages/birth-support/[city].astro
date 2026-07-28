@@ -327,8 +327,9 @@ const schema = {
     // the medical facilities serving this city, whether or not they have a URL)
     ...hospitalDetails.map((h, i) => {
       // Extract hospital city from address string (e.g., "170 N 1100 E, American Fork, UT 84003")
+      // City is the second-to-last comma-separated part (before state abbreviation)
       const hospitalCity = h.address && typeof h.address === 'string'
-        ? (h.address.split(',').slice(-3, -2)[0] || city).trim()
+        ? (h.address.split(',').map(s => s.trim()).slice(-2, -1)[0] || city)
         : city;
       return {
         '@type': 'MedicalOrganization',

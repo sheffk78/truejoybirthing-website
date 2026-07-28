@@ -1790,7 +1790,7 @@
     "slug": "newark-nj",
     "city": "Newark",
     "state": "NJ",
-    "score": 90,
+    "score": 95,
     "hero": true,
     "hero_issue": "Wrong (NY)",
     "og": true,
@@ -1800,7 +1800,7 @@
     "doulas": true,
     "doula_count": 7,
     "video": true,
-    "outreach": false,
+    "outreach": true,
     "placeholder": false,
     "in_progress": false,
     "started_at": "",
@@ -1808,7 +1808,8 @@
     "url": "https://truejoybirthing.com/birth-support/newark-nj/",
     "youtubeId": "mzbzonoG1fs",
     "videoDuration": "PT3M57S",
-    "lastUpdated": "2026-07-28T12:17:23.950220"
+    "lastUpdated": "2026-07-28T12:36:39.898420",
+    "outreachCount": 5
   },
   {
     "slug": "grand-rapids-mi",
