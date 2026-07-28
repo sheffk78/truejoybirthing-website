@@ -1828,6 +1828,12 @@ export const cities: Record<string, CityData> = {
       { q: "What postpartum resources are available in Newark?" , a: "You're not supposed to do this alone. In Newark, you've got community health centers, plus lactation consultants and WIC offices and local parenting groups. And grab the <a href='/birth-plan-template/'>free birth plan template</a>. knowing what's normal (and what's not) after birth is everything." }
     ],
     birthStats: { cesareanRate: 33.0, maternalMortalityRate: 26.0, homeBirthRate: 0.5, birthCenterBirthRate: 0.3, dataYear: 2023, dataSource: "CDC NCHS National Vital Statistics System; KFF State Health Facts; March of Dimes 2025 Report Card" },
+    midwifeInfo: {
+      title: "Midwife-Friendly Birth Options in Newark",
+      body: "Newark offers several midwifery options including the Collaborative Practice Midwifery Program at Newark Beth Israel Medical Center, where midwives attend over 37% of births. University Hospital also provides midwifery services as part of its Baby-Friendly designated maternity care. New Jersey requires Certified Nurse-Midwives to be licensed through the NJ Board of Medical Examiners."
+    },
+    lat: 40.7357,
+    lng: -74.1724,
     nearbyCities: ["new-york-ny"]},
   "virginia-beach-va": {
     enableBlogResources: true,
