@@ -1836,7 +1836,7 @@
     "slug": "worcester-ma",
     "city": "Worcester",
     "state": "MA",
-    "score": 0,
+    "score": 100,
     "hero": false,
     "hero_issue": "Missing",
     "og": false,
@@ -1845,12 +1845,13 @@
     "hospital_count": 2,
     "doulas": false,
     "doula_count": 0,
-    "video": false,
-    "outreach": false,
+    "video": true,
+    "outreach": true,
     "placeholder": false,
     "in_progress": false,
     "started_at": "",
     "slot": "",
-    "url": "https://truejoybirthing.com/birth-support/worcester-ma/"
+    "url": "https://truejoybirthing.com/birth-support/worcester-ma/",
+    "youtube_id": "p7ersoQEa4Q"
   }
 ]
