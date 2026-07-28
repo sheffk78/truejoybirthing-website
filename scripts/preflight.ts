@@ -369,24 +369,24 @@ function run(): void {
     }
   }
 
-  // ── A4b: Meta/OG description ≤130 chars (opengraph.xyz compliance) ──
+  // ── A4b: Meta/OG description ≤155 chars (Google SERP display limit) ──
   try {
     const shellResult = execSync(
       `pass=true; for f in dist/birth-support/*/index.html; do ` +
       `slug=$(basename $(dirname "$f")); ` +
       `desc=$(grep -o '<meta name="description" content="[^"]*"' "$f" | sed 's/<meta name="description" content="//;s/"$//'); ` +
       `len=$(printf '%s' "$desc" | wc -c | tr -d ' '); ` +
-      `if [ "$len" -gt 130 ]; then ` +
+      `if [ "$len" -gt 155 ]; then ` +
       `echo "LONG: $slug ($len chars)"; pass=false; ` +
       `fi; done; $pass`,
       { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 30000 }
     );
-    results.push({ gate: 'A4b', status: 'PASS', detail: 'All city page descriptions ≤130 chars' });
+    results.push({ gate: 'A4b', status: 'PASS', detail: 'All city page descriptions ≤155 chars' });
   } catch (e: any) {
     const output = e.stdout?.toString() || '';
     const longPages = output.split('\n').filter(l => l.includes('LONG:'));
     if (longPages.length > 0) {
-      results.push({ gate: 'A4b', status: 'FAIL', detail: `${longPages.length} page(s) with description >130 chars` });
+      results.push({ gate: 'A4b', status: 'FAIL', detail: `${longPages.length} page(s) with description >155 chars` });
       longPages.forEach(l => results.push({ gate: 'A4b', status: 'FAIL', detail: `  ${l.trim()}` }));
     } else {
       results.push({ gate: 'A4b', status: 'FAIL', detail: 'Description check command failed' });

@@ -860,4 +860,23 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [313, "Your Next Step"],
     ],
   },
+  "newark-nj": {
+    videoId: "mzbzonoG1fs",
+    title: "Newark, NJ Doula & Birth Support Guide | True Joy Birthing",
+    description: "Complete birth support guide for Newark, NJ. Local doulas, hospital policies, costs, Medicaid coverage, and a free birth plan app.",
+    duration: "PT3M57S",
+    uploadDate: "2026-07-28",
+    chapters: [
+      [0, "Introduction"],
+      [15, "Newark Birth Support Overview"],
+      [45, "Newark Beth Israel Medical Center"],
+      [75, "University Hospital"],
+      [105, "Saint Michael's Medical Center"],
+      [135, "Local Doulas & Midwives"],
+      [165, "Free Birth Plan App"],
+      [195, "Costs & Insurance"],
+      [210, "Get Started"],
+    ],
+  },
+
 };

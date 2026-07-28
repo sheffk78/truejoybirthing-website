@@ -218,14 +218,14 @@ for (const nf of nicheFilters) {
 }
 const filterSEOJson = JSON.stringify(filterSEOMap);
 
-const pageTitle = `${city}, ${state} Doula & Midwife Guide`;
+const pageTitle = `${city}, ${state} Doula Costs, Hospitals & Medicaid`;
 const medicaidDesc = medicaidCovers ? 'Medicaid covers doulas' : 'no Medicaid doula coverage';
 // Always use "free birth plan template" (never the shorter "free plan template")
 // to keep meta descriptions in the 120-160 char sweet spot.
 let pageDesc = `Planning a birth in ${city}, ${state}? Compare doula costs ($${costLow}-$${costHigh}), ${medicaidDesc}, hospitals, birth centers, and a free birth plan template.`;
-// Hard cap at 130 chars (A4b: opengraph.xyz compliance, truncate at word boundary)
-if (pageDesc.length > 130) {
-  let trimmed = pageDesc.slice(0, 127);
+// Hard cap at 155 chars (Google desktop SERP shows ~155-160)
+if (pageDesc.length > 155) {
+  let trimmed = pageDesc.slice(0, 152);
   const lastSpace = trimmed.lastIndexOf(' ');
   if (lastSpace > 100) trimmed = trimmed.slice(0, lastSpace);
   pageDesc = trimmed + '...';
@@ -325,21 +325,27 @@ const schema = {
     },
     // MedicalOrganization for each hospital (schema helps Google understand
     // the medical facilities serving this city, whether or not they have a URL)
-    ...hospitalDetails.map((h, i) => ({
-      '@type': 'MedicalOrganization',
-      '@id': `${pageUrl}#hospital-${i}`,
-      name: h.name,
-      ...(h.address && typeof h.address === 'string' ? {
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: city,
-          addressRegion: state,
-          addressCountry: 'US',
-          streetAddress: h.address.split(',')[0].trim(),
-        },
-      } : {}),
-      ...(h.url ? { url: h.url } : { url: pageUrl }),
-    })),
+    ...hospitalDetails.map((h, i) => {
+      // Extract hospital city from address string (e.g., "170 N 1100 E, American Fork, UT 84003")
+      const hospitalCity = h.address && typeof h.address === 'string'
+        ? (h.address.split(',').slice(-3, -2)[0] || city).trim()
+        : city;
+      return {
+        '@type': 'MedicalOrganization',
+        '@id': `${pageUrl}#hospital-${i}`,
+        name: h.name,
+        ...(h.address && typeof h.address === 'string' ? {
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: hospitalCity,
+            addressRegion: state,
+            addressCountry: 'US',
+            streetAddress: h.address.split(',')[0].trim(),
+          },
+        } : {}),
+        ...(h.url ? { url: h.url } : { url: pageUrl }),
+      };
+    }),
     {
       '@type': 'LocalBusiness',
       '@id': `${pageUrl}#local-business`,

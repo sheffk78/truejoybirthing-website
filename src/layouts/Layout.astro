@@ -205,6 +205,8 @@ if (breadcrumbList && breadcrumbList.length > 0) {
 }
 const schemaJson = JSON.stringify(finalSchema);
 const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True Joy Birthing`;
+// Use TJB abbreviation if full title exceeds 70 chars (SEO best practice)
+const finalTitle = pageTitle.length > 70 ? pageTitle.replace(" | True Joy Birthing", " | TJB") : pageTitle;
 ---
 
 <!DOCTYPE html>
@@ -212,7 +214,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{pageTitle}</title>
+    <title>{finalTitle}</title>
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta property="og:title" content={pageTitle} />
@@ -228,7 +230,7 @@ const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@TrueJoyBirth" />
     <meta name="twitter:creator" content="@TrueJoyBirth" />
-    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:title" content={finalTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
     {canonical && <link rel="canonical" href={canonical} />}
