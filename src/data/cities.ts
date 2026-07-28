@@ -1794,10 +1794,13 @@ export const cities: Record<string, CityData> = {
     costLow: 1200,
     costHigh: 4000,
     shelbiServesHere: false,
-    heroImage: "/images/new-york-ny-birth-doula-skyline.webp",
+    heroImage: "/images/newark-nj-birth-doula-skyline-v2.webp",
+    ogImage: "/images/og-city-newark-nj.webp",
+    supportSceneImage: "/images/newark-nj-birth-doula-support-v2.webp",
+    supportSceneAlt: "A doula walking with an expectant mom in Newark: New Jersey birth support and doula care",
     localDoulas: [
-      { name: "Doula Policy" , credential: "Birth Doula" , practice: "Doula Policy" , url: "https://www.rwjbh.org/treatment-care/maternity/doulas/" , photo: "/images/provider-port-st-lucie-fl-my-baby-lady.webp", description: "New Jersey law provides patients with the right to choose to use a doula for labor and postpartum support, and all doula services are to be contracted ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Newark, NJ"] },
-      { name: "The Nesting Place" , credential: "Birth Doula" , practice: "The Nesting Place" , url: "https://www.thenestingplacenj.com/" , photo: "/images/provider-newark-nj-the-nesting-place.webp", description: "The Nesting Place is a New Jersey–based perinatal support practice offering birth doula support, postpartum doula care, overnight newborn care, lactation ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Newark, NJ"] } ],
+      { name: "Doula Policy" , credential: "Birth Doula (RWJBH program)" , practice: "Doula Policy" , url: "https://www.rwjbh.org/treatment-care/maternity/doulas/" , photo: "", description: "New Jersey law provides patients with the right to choose to use a doula for labor and postpartum support, and all doula services are to be contracted ...", costRange: "$1,500-$3,000 (market estimate)", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Newark, NJ"] },
+      { name: "The Nesting Place" , credential: "CD(DONA)" , practice: "The Nesting Place" , url: "https://www.thenestingplacenj.com/" , photo: "/images/provider-newark-nj-the-nesting-place.webp", description: "The Nesting Place is a New Jersey–based perinatal support practice offering birth doula support, postpartum doula care, overnight newborn care, lactation ...", costRange: "$1,200-$2,500 (market estimate)", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Newark, NJ"] } ],
     culture: "Newark's birth culture is deeply rooted in its Black and Latinx communities, where maternal health advocacy has grown significantly in recent years. Grassroots organizations and community doulas work to address stark racial disparities in maternal outcomes across Essex County, while the city's proximity to NYC academic medical centers gives families additional options." ,
     heroLocalDetail: "From the brownstones along Clinton Avenue to the revitalized streets around Broad Street and Military Park, Newark families navigate a city where historic neighborhoods meet a growing healthcare corridor. University Heights and the area surrounding Rutgers-Newark anchor the city's medical and academic community." ,
     hospitalDetails: [
