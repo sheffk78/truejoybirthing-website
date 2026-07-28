@@ -879,7 +879,30 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
 
-  "grand-rapids-mi": {
+
+  "worcester-ma": {
+    videoId: "p7ersoQEa4Q",
+    title: "Worcester Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Complete birth support guide for Worcester, MA families. Find doulas, compare hospitals, understand costs and MassHealth coverage.",
+    duration: "PT6M7S",
+    uploadDate: "2026-07-28",
+    chapters: [
+      [0, "Welcome to Worcester"],
+      [11, "What We Cover"],
+      [29, "UMass Memorial Medical Center (Level III NICU)"],
+      [63, "Saint Vincent Hospital (Level II Special Care)"],
+      [95, "Embrace Midwifery (Home Birth)"],
+      [118, "Venette Maurice"],
+      [152, "Candace Laura"],
+      [181, "Myriam Lukoff"],
+      [215, "Shantel Collins"],
+      [244, "Loreal Drayton"],
+      [274, "The True Joy Birthing App"],
+      [297, "Cost Reality ($1,200-$3,000)"],
+      [324, "Insurance & Massachusetts Medicaid"],
+      [353, "Your Next Step"],
+    ],
+  },  "grand-rapids-mi": {
     videoId: "19NzNTwphw8",
     title: "Grand Rapids MI Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — 2 hospitals, 1 birth center, 3 doulas, midwives, costs, and Michigan Medicaid, all in under 4 minutes.",
