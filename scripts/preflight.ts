@@ -1289,7 +1289,7 @@ function run(): void {
         'durham-nc': 285000, 'st-petersburg-fl': 258000, 'virginia-beach-va': 453000,
         'chesapeake-va': 247000, 'lexington-ky': 323000,
         'abilene-tx': 127000, 'amarillo-tx': 202000, 'beaumont-tx': 110000, 'midland-tx': 139000,
-        'tyler-tx': 110000, 'college-station-tx': 123000, 'killeen-tx': 159000,
+        'tyler-tx': 110000, 'college-station-tx': 123000, 'mckinney-tx': 195000, 'killeen-tx': 159000,
         'waco-tx': 142000, 'round-rock-tx': 133000, 'georgetown-tx': 80000,
         'san-marcos-tx': 67000, 'conroe-tx': 98000, 'cedar-park-tx': 80000,
         'new-braunfels-tx': 90000, 'allen-tx': 105000, 'galveston-tx': 50000,
