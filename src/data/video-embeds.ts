@@ -922,4 +922,20 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
 
+  "albuquerque-nm": {
+    videoId: "d_siwut-Uds",
+    scenes: [
+      [0, "Congratulations! You're pregnant in Albuquerque"],
+      [13, "What this guide covers"],
+      [36, "UNM Hospital (Level IV NICU)"],
+      [60, "Presbyterian Hospital (Level III NICU)"],
+      [82, "Lovelace Women's Hospital (Level III NICU)"],
+      [106, "Dar a Luz Birth Center (water birth)"],
+      [136, "Doulas serving Albuquerque"],
+      [204, "Free birth plan app"],
+      [226, "How much does a doula cost?"],
+      [247, "Does Medicaid cover doulas?"],
+      [273, "Get your free birth plan"],
+    ],
+  },
 };
