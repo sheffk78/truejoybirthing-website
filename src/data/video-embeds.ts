@@ -71,11 +71,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-07-27T00:00:00-06:00",
   },
   "fremont-ca": {
-    videoId: "oE9Zcd8SuJc",
+    videoId: "alF3MZ2oL5Y",
     title: "Fremont Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — 18 doulas & midwives, 8 hospitals, 3 birth centers, costs, and Medi-Cal PAVE coverage, all in under 5 minutes.",
-    duration: "PT4M49S",
-    uploadDate: "2026-07-27T00:00:00-07:00",
+    description: "Watch the full city guide — 18 doulas & midwives, 5 featured hospitals, 3 birth centers, costs, and Medi-Cal PAVE coverage, all in under 5 minutes.",
+    duration: "PT5M54S",
+    uploadDate: "2026-07-31T00:00:00-07:00",
   },
   "fresno-ca": {
     videoId: "0uLCgRQFCrw",
@@ -565,7 +565,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     videoId: "l_sFXlps57E",
     title: "Fort Collins CO Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
-    duration: "PT4M49S",
+    duration: "PT5M54S",
     uploadDate: "2026-07-17T13:15:00-06:00",
   },
 "new-haven-ct": {
@@ -680,7 +680,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     videoId: "GxVP-Uc45qQ",
     title: "Bozeman MT Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas and midwives serving Bozeman, hospital policies, real costs, and Montana Medicaid coverage status.",
-    duration: "PT4M49S",
+    duration: "PT5M54S",
     uploadDate: "2026-07-23T00:00:00-06:00",
   },
   "boston-ma": { videoId: "J-S4IjKwADs", uploadDate: "2026-07-26", duration: "PT3M34S" } as any,
