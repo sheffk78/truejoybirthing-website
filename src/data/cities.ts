@@ -340,7 +340,7 @@ export const cities: Record<string, CityData> = {
     costHigh: 2500,
     shelbiServesHere: false,
     heroImage: "/images/celina-tx-birth-doula-skyline-v2.webp",
-    ogImage: "https://truejoybirthing.com/images/og-city-celina-tx-v2.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-celina-tx-v3.webp",
     supportSceneImage: "/images/celina-support-scene.webp",
     supportSceneAlt: "A pregnant woman walking with her doula on a peaceful neighborhood path in Celina, Texas: doula support for Collin County families",
     culture: "Celina is one of the fastest-growing cities in the United States, located in Collin County about 40 miles north of Dallas. Despite its rapid growth, Celina has maintained its small-town charm with a historic downtown square, annual festivals, and a strong sense of community. Most Celina families deliver at nearby hospitals in Frisco, McKinney, or Plano, as Celina's own Methodist Celina Medical Center opened its maternity unit in 2025. The city's growth has brought new healthcare options, but advance planning is still essential for birth support." ,
