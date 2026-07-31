@@ -6435,7 +6435,7 @@ midwifeInfo: {
     costLow: 400,
     costHigh: 3500,
     shelbiServesHere: false,
-    heroImage: "/images/naperville-il-birth-doula-skyline-v2.webp",
+    heroImage: "/images/naperville-il-birth-doula-skyline-v3.webp",
     supportSceneImage: "/images/naperville-il-doula-support-scene.webp",
     supportSceneAlt: "A doula supporting a pregnant mother during labor in a warm Naperville, Illinois home setting",
     ogImage: "/images/og-city-naperville-il-v2.webp",
