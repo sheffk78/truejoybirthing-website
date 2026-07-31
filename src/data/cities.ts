@@ -334,6 +334,8 @@ export const cities: Record<string, CityData> = {
     city: "Celina" ,
     state: "TX" ,
     slug: "celina-tx" ,
+    lat: 33.3079,
+    lng: -96.7714,
     costLow: 800,
     costHigh: 2500,
     shelbiServesHere: false,
@@ -360,6 +362,11 @@ export const cities: Record<string, CityData> = {
       { q: "Which hospitals in Celina accommodate birth plans?" , a: "Methodist Celina Medical Center, Medical City Frisco, and Texas Health Presbyterian Plano all generally accommodate birth plans, but policies vary. Always confirm your hospital's policy during your hospital tour." },
       { q: "How much does a doula cost in Celina?" , a: "Expect to pay $800 to $2,500 for a doula in Celina. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href='/birth-plan-template/'>free birth plan template</a> and start thinking about what matters most to you." },
       { q: "Does True Joy Birthing work with Celina families?" , a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Celina birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href='/birth-plan-template/'>Download the free birth plan template</a> and start preparing your way — no signup required." } ],
+    midwifeInfo: {
+      paragraph: "Texas licenses Certified Nurse-Midwives (CNMs) and Certified Professional Midwives (CPMs), giving Celina families regulated midwife options for home birth, birth center birth, and hospital-based midwifery. In the DFW area, midwives practice at several hospitals and birth centers, with home birth options available through CPMs serving the Collin County region.",
+      credentialTypes: " and CPMs",
+      credentialDetail: "In Texas, Certified Nurse-Midwives (CNMs) are licensed by the Texas Board of Nursing and practice in hospital and birth center settings. Certified Professional Midwives (CPMs) are licensed by the Texas Department of Licensing and Regulation to attend out-of-hospital births, giving Celina families regulated midwife options for home and birth center births."
+    },
     birthStats: {
       cesareanRate: 32.3,
       maternalMortalityRate: 29.3,
