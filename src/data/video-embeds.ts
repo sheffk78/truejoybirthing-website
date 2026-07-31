@@ -1043,5 +1043,25 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [276, "Your Next Step"],
     ],
   },
+  "naperville-il": {
+    videoId: "PnfwASVanTE",
+    title: "Naperville IL Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — 3 hospitals, a birth center, 4 doulas, costs, and Illinois Medicaid coverage.",
+    duration: "PT6M2S",
+    uploadDate: "2026-07-31T00:00:00-06:00",
+    chapters: [
+      [0, "Welcome to Naperville"],
+      [12, "What This Video Covers"],
+      [31, "Edward Hospital"],
+      [64, "Advocate Good Samaritan"],
+      [98, "Rush Copley Medical Center"],
+      [129, "Sacred Circle Birth Center"],
+      [157, "Doulas & Midwives in Naperville"],
+      [245, "The True Joy Birthing App"],
+      [270, "Cost Reality ($900-$3,500)"],
+      [298, "Illinois Medicaid & Insurance"],
+      [328, "Your Next Step"],
+    ],
+  },
 
 };

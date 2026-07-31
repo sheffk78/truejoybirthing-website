@@ -68,7 +68,7 @@
     "started_at": "",
     "slot": "",
     "batch_id": "",
-    "blocked_reason": "4 of 5 providers have no public email — only New Life Birth Services (admin@newlifebirthservices.org) contacted. Katie Schmierer, Laura Dehne, Gabriella Sarate, and Tintawi Kaigziabiher are listed on Bornbir but have no public email addresses. Contact forms on Bornbir require account login.",
+    "blocked_reason": "4 of 5 providers have no public email \u2014 only New Life Birth Services (admin@newlifebirthservices.org) contacted. Katie Schmierer, Laura Dehne, Gabriella Sarate, and Tintawi Kaigziabiher are listed on Bornbir but have no public email addresses. Contact forms on Bornbir require account login.",
     "url": "https://truejoybirthing.com/birth-support/albuquerque-nm/"
   },
   {
@@ -2379,7 +2379,7 @@
     "slug": "celina-tx",
     "city": "Celina",
     "state": "TX",
-    "score": 70,
+    "score": 100,
     "stage": "video_outreach",
     "hero": true,
     "hero_issue": "Not in cities.ts",
@@ -2389,7 +2389,7 @@
     "hospital_count": 3,
     "doulas": true,
     "doula_count": 1,
-    "video": false,
+    "video": true,
     "outreach": false,
     "placeholder": false,
     "in_progress": true,
@@ -2397,7 +2397,9 @@
     "slot": "",
     "batch_id": "",
     "blocked_reason": null,
-    "url": "https://truejoybirthing.com/birth-support/celina-tx/"
+    "url": "https://truejoybirthing.com/birth-support/celina-tx/",
+    "outreach_blocked": true,
+    "outreach_blocked_reason": "No direct emails found \u2014 3 providers use platform contact forms only"
   },
   {
     "slug": "naperville-il",
