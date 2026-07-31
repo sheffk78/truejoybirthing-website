@@ -1021,5 +1021,27 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [299, "Your Next Step"],
     ],
   },
+  "celina-tx": {
+    videoId: "Ys2TCx3RG6o",
+    title: "Celina TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — 3 hospitals, a birth center, 3 doulas, costs, and Texas Medicaid SB 750 coverage, all in under 5 minutes.",
+    duration: "PT4M50S",
+    uploadDate: "2026-07-31T00:00:00-06:00",
+    chapters: [
+      [0, "Welcome to Celina"],
+      [12, "What This Video Covers"],
+      [30, "Methodist Celina Medical Center"],
+      [54, "Medical City Frisco"],
+      [75, "Texas Health Presbyterian Plano"],
+      [96, "Grapevine Birthing Center"],
+      [121, "Shannon Chung — DONA Doula"],
+      [152, "LaQuintta — Precious Moments Doula"],
+      [180, "Rachael Nelson — Sage Mama Birth"],
+      [206, "The True Joy Birthing App"],
+      [229, "Cost Reality ($800-$2,500)"],
+      [252, "Texas Medicaid Covers Doulas"],
+      [276, "Your Next Step"],
+    ],
+  },
 
 };
