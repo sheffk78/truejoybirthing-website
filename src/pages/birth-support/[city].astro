@@ -676,7 +676,9 @@ const schema = {
               )}
               {/* Photo or initial monogram */}
               {doula.photo ? (
-                <img src={doula.photo} alt={`${doula.name}, doula`} class="w-14 h-14 rounded-full object-cover mb-4" width="56" height="56" loading="lazy" />
+                <div class:list={["w-14 h-14 flex items-center justify-center mb-4", doula.photoIsLogo ? "rounded-lg bg-white border border-tjb-lavender-200 p-2" : "rounded-full overflow-hidden"]}>
+                  <img src={doula.photo} alt={`${doula.name} logo`} class:list={["w-full h-full", doula.photoIsLogo ? "object-contain" : "object-cover"]} width="56" height="56" loading="lazy" />
+                </div>
               ) : (
                 <div class={`w-14 h-14 rounded-full flex items-center justify-center mb-4 ${doula.isMidwife ? 'bg-tjb-lavender-100' : 'bg-tjb-lavender-100'}`}>
                   <span class="text-2xl font-semibold" style="font-family: 'Cormorant Garamond', Georgia, serif;" className={doula.isAmbassador ? 'text-tjb-rose-600' : doula.isMidwife ? 'text-tjb-lavender-700' : 'text-tjb-charcoal'}>{doula.name.split(' ').map((n: string) => n[0]).join('')}</span>

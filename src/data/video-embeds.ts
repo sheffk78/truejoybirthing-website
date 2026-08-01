@@ -17,6 +17,26 @@ export interface CityVideoEmbed {
 }
 
 export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
+  "alexandria-va": {
+    videoId: "RPIfpmygL2g",
+    title: "Alexandria VA Doula and Birth Plan Guide: Costs, Hospitals and Medicaid",
+    description: "Alexandria birth guide covering local doulas, midwives, hospitals, BirthCare and Women's Health, costs, and Virginia Medicaid.",
+    duration: "PT5M47S",
+    uploadDate: "2026-08-01T00:00:00-04:00",
+    chapters: [
+      [0, "Welcome to Alexandria"],
+      [13, "What this guide covers"],
+      [31, "Inova Alexandria Hospital"],
+      [61, "VHC Health"],
+      [92, "Inova Fairfax Hospital"],
+      [127, "BirthCare and Women's Health"],
+      [150, "Alexandria doulas and midwives"],
+      [264, "True Joy Birthing app"],
+      [290, "Doula costs"],
+      [317, "Virginia Medicaid coverage"],
+      [351, "Your next step"],
+    ],
+  },
   "denver-co": {
     videoId: "lInVRtpi5Fw",
     title: "Denver Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
