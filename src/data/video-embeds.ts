@@ -1064,4 +1064,21 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
 
+  "newport-news-va": {
+    videoId: "_LckBVSVtog",
+    title: "Newport News VA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT5M14S",
+    uploadDate: "2026-07-31T00:00:00-04:00",
+    chapters: [
+      [0, "Newport News Birth Support"],
+      [31, "Hospitals & Birth Centers"],
+      [64, "Doulas & Midwives in Newport News"],
+      [157, "The True Joy Birthing App"],
+      [270, "Cost Reality"],
+      [298, "Virginia Medicaid & Insurance"],
+      [328, "Your Next Step"],
+    ],
+  },
+
 };

@@ -68,7 +68,7 @@
     "started_at": "",
     "slot": "",
     "batch_id": "",
-    "blocked_reason": "4 of 5 providers have no public email \u2014 only New Life Birth Services (admin@newlifebirthservices.org) contacted. Katie Schmierer, Laura Dehne, Gabriella Sarate, and Tintawi Kaigziabiher are listed on Bornbir but have no public email addresses. Contact forms on Bornbir require account login.",
+    "blocked_reason": "4 of 5 providers have no public email — only New Life Birth Services (admin@newlifebirthservices.org) contacted. Katie Schmierer, Laura Dehne, Gabriella Sarate, and Tintawi Kaigziabiher are listed on Bornbir but have no public email addresses. Contact forms on Bornbir require account login.",
     "url": "https://truejoybirthing.com/birth-support/albuquerque-nm/"
   },
   {
@@ -456,6 +456,30 @@
     "url": "https://truejoybirthing.com/birth-support/cary-nc/"
   },
   {
+    "slug": "celina-tx",
+    "city": "Celina",
+    "state": "TX",
+    "score": 100,
+    "stage": "complete",
+    "hero": true,
+    "hero_issue": "",
+    "og": true,
+    "support": true,
+    "hospitals": true,
+    "hospital_count": 3,
+    "doulas": true,
+    "doula_count": 3,
+    "video": true,
+    "outreach": true,
+    "placeholder": false,
+    "in_progress": false,
+    "started_at": "",
+    "slot": "",
+    "batch_id": "",
+    "blocked_reason": "3 providers, 0 with public email. Shannon Chung (Bornbir profile, no email), LaQuintta (preciousmomentsdoula.com, no email on site), Rachael Nelson (Instagram-only, no email).",
+    "url": "https://truejoybirthing.com/birth-support/celina-tx/"
+  },
+  {
     "slug": "charleston-sc",
     "city": "Charleston",
     "state": "SC",
@@ -837,8 +861,7 @@
     "slot": "",
     "batch_id": "",
     "blocked_reason": null,
-    "url": "https://truejoybirthing.com/birth-support/fremont-ca/",
-    "youtube_id": "alF3MZ2oL5Y"
+    "url": "https://truejoybirthing.com/birth-support/fremont-ca/"
   },
   {
     "slug": "fresno-ca",
@@ -2401,30 +2424,6 @@
     "url": "https://truejoybirthing.com/birth-support/yonkers-ny/"
   },
   {
-    "slug": "celina-tx",
-    "city": "Celina",
-    "state": "TX",
-    "score": 100,
-    "stage": "blocked",
-    "hero": true,
-    "hero_issue": "",
-    "og": true,
-    "support": true,
-    "hospitals": true,
-    "hospital_count": 3,
-    "doulas": true,
-    "doula_count": 3,
-    "video": true,
-    "outreach": true,
-    "placeholder": false,
-    "in_progress": false,
-    "started_at": "",
-    "slot": "",
-    "batch_id": "",
-    "blocked_reason": "3 providers, 0 with public email. Shannon Chung (Bornbir profile, no email), LaQuintta (preciousmomentsdoula.com, no email on site), Rachael Nelson (Instagram-only, no email).",
-    "url": "https://truejoybirthing.com/birth-support/celina-tx/"
-  },
-  {
     "slug": "newport-news-va",
     "city": "Newport News",
     "state": "VA",
@@ -2438,7 +2437,7 @@
     "hospital_count": 3,
     "doulas": true,
     "doula_count": 8,
-    "video": false,
+    "video": true,
     "outreach": false,
     "placeholder": false,
     "in_progress": false,
