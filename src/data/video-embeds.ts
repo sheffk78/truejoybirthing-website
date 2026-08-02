@@ -595,13 +595,6 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M51S",
     uploadDate: "2026-07-14T14:10:00-06:00",
 },
-"buffalo-ny": {
-    videoId: "F36uxUnU4W4",
-    title: "Buffalo NY Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and New York Medicaid, all in under 6 minutes.",
-    duration: "PT5M6S",
-    uploadDate: "2026-07-27T00:00:00-04:00",
-},
 "charleston-sc": {
     videoId: "Qmld51LJhm8",
     title: "Charleston SC Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -1098,6 +1091,24 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [270, "Cost Reality"],
       [298, "Virginia Medicaid & Insurance"],
       [328, "Your Next Step"],
+    ],
+  },
+
+  "lakewood-co": {
+    videoId: "4ZZKO35sIGE",
+    title: "Lakewood CO Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full Lakewood birth guide — local doulas, midwives, hospitals, costs, and Colorado Medicaid.",
+    duration: "PT6M42S",
+    uploadDate: "2026-07-31T00:00:00-06:00",
+    chapters: [
+      [0, "Welcome to Lakewood"],
+      [14, "What this guide covers"],
+      [34, "Hospitals and birth centers near Lakewood"],
+      [177, "Lakewood doulas and midwives"],
+      [245, "The True Joy Birthing app"],
+      [270, "Doula costs"],
+      [298, "Colorado Medicaid coverage"],
+      [328, "Your next step"],
     ],
   },
 
