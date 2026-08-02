@@ -6540,7 +6540,7 @@ midwifeInfo: {
     slug: "lakewood-co" ,
     publishedDate: "2026-07-29",
     heroImage: "/images/lakewood-co-birth-doula-skyline.webp" ,
-    ogImage: "https://truejoybirthing.com/images/og-city-lakewood-co.webp" ,
+    ogImage: "https://truejoybirthing.com/images/og-city-lakewood-co-v2.webp" ,
     enableBlogResources: true,
     supportSceneAlt: "A doula walking alongside an expectant mom with the Rocky Mountain foothills visible from Lakewood, Colorado" ,
     supportSceneImage: "/images/lakewood-support-scene.webp" ,
