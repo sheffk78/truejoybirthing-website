@@ -1957,7 +1957,15 @@ function run(): void {
           const localDoulasMatch = cityBlock.match(/localDoulas:\s*\[([\s\S]*?)\]\s*,\s*(?:hospitalDetails|culture|medicaidNote|insuranceNote|faqs|nearbyCities|heroLocalDetail|supportScene)/);
           const doulasBlock = localDoulasMatch ? localDoulasMatch[1] : cityBlock;
           const providerEntries = doulasBlock.match(/{\s*name:\s*"[^"]+"[^}]*?(credential|isMidwife)/g) || [];
-          const pageProviderCount = providerEntries.length;
+          // Video portrait scenes require a photo, so a photo-less page provider is
+          // legitimately absent from the video. Compare against photo-bearing providers only.
+          // Split the doulas block into individual provider objects and keep those with a photo.
+          const photoProviderEntries = providerEntries.filter(e => {
+            const objEnd = doulasBlock.indexOf('}', doulasBlock.indexOf(e));
+            const obj = objEnd >= 0 ? doulasBlock.slice(doulasBlock.indexOf(e), objEnd + 1) : e;
+            return obj.includes('photo:');
+          });
+          const pageProviderCount = photoProviderEntries.length || providerEntries.length;
           
           // Count hospitals (individual hospital card scenes)
           // The scene may include birth center cards using the same tjb_hospital_card scene type.
