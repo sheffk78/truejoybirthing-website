@@ -757,8 +757,9 @@ function run(): void {
       } else if (supportScene.includes('doula-walking') || supportScene.includes('generic')) {
         results.push({ gate: 'G9', status: 'FAIL', detail: `Support scene is generic: ${supportScene}. Generate a city-specific scene.` });
       } else {
-        // Check file exists
-        const scenePath = path.join(PROJECT_DIR, 'public', supportScene.replace(/^\//, ''));
+        // Check file exists (strip query-string cache-buster if present)
+        const cleanScene = supportScene.split('?')[0];
+        const scenePath = path.join(PROJECT_DIR, 'public', cleanScene.replace(/^\//, ''));
         if (fs.existsSync(scenePath)) {
           results.push({ gate: 'G9', status: 'PASS', detail: `City-specific support scene: ${supportScene}` });
         } else {
