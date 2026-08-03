@@ -70,3 +70,26 @@ Tracking listing notification and verification outreach for TrueJoyBirthing city
 | 11 | Juliana Strassburger | sweetnestbyjuju.com | justrassburger@hotmail.com | Certified BD | Sent | 2026-07-21 | Sweet Nest by Juju, 3 years |
 | 12 | Ke'xia Draper | DoulaMatch only | DoulaMatch contact | Certified BD | Needs DM | | Incite Change, 6 years, culturally responsive |
 
+
+
+## Alexandria, VA (alexandria-va) - 2026-08-03
+**Page:** https://truejoybirthing.com/birth-support/alexandria-va/
+**Status:** Outreach complete (5 providers covered; 2 fresh sends today, 3 sent Aug 1)
+
+| Provider | Email | Status | Notes |
+|---|---|---|---|
+| SoulSpark Birth Services (Rebecca Baker) | info@soulsparkbirthservices.com | Sent (Aug 1) | RN + physiologic birth doula |
+| Del Ray Midwifery (Ryann Bernard) | ryann@novabirth.org | Sent (Aug 1) | CPM, JD |
+| Balanced Birth Support | info@balancedbirthsupport.com | Sent (Aug 1) | 50+ professional agency |
+| Sunflowers Healing & Wellness (Lindsey Vick) | info@sunflowerswellness.com | Sent | Largest Black-owned DMV doula agency |
+| MomEase | hello@momease.com | Sent | info@/contact@ bounced (catch-all), hello@ works |
+
+## Lakewood, CO (lakewood-co) - 2026-08-03
+**Page:** https://truejoybirthing.com/birth-support/lakewood-co/
+**Status:** Outreach complete (3 providers covered)
+
+| Provider | Email | Status | Notes |
+|---|---|---|---|
+| Genesis Birth Doula (Jennifer Wisse) | jenniferlwisse@gmail.com | Sent | ICEA certified, VBAC, CLC |
+| Life On Purpose Doulas (Beth Brooks) | beth@lifeonpurposedoulas.com | Sent | DONA certified, 25+ yrs |
+| Sanctuary Doulas & Family Care | hello@sanctuarydoulas.com | Sent | Largest CO doula team |
