@@ -13,10 +13,20 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Service",
+      "@id": "https://truejoybirthing.com/what-is-a-doula/#service",
+      "serviceType": "Birth doula services",
+      "name": "Birth Doula Services",
+      "description": "Doula services include prenatal visits, continuous labor support, and postpartum check-ins. A birth doula provides emotional, physical, and informational support before, during, and after childbirth.",
+      "url": "https://truejoybirthing.com/what-is-a-doula/",
+      "provider": { "@id": "https://truejoybirthing.com/#organization" },
+      "areaServed": "US"
+    },
+    {
       "@type": "Article",
       "@id": "https://truejoybirthing.com/what-is-a-doula/#article",
-      "headline": "What Is a Doula? The Complete Guide for Expecting Moms",
-      "description": "A doula is a trained professional who provides emotional, physical, and informational support to a mother before, during, and after childbirth. Learn what doulas do, the types of doulas, how much they cost, and how to find one.",
+      "headline": "What Is a Birth Doula? Doula Services & What's Included",
+      "description": "A birth doula is a trained professional who provides emotional, physical, and informational support before, during, and after childbirth. Learn what doula services include, the types of doulas, how much they cost, and how to find one.",
       "url": "https://truejoybirthing.com/what-is-a-doula/",
       "datePublished": "2025-06-01",
       "dateModified": "2026-07-20",
@@ -34,6 +44,7 @@ const schema = {
       "@id": "https://truejoybirthing.com/what-is-a-doula/#faq",
       "mainEntity": [
         { "@type": "Question", "name": "What is a doula?", "acceptedAnswer": { "@type": "Answer", "text": "A doula is a trained professional who provides emotional, physical, and informational support to a mother before, during, and after childbirth. Doulas do not perform medical tasks. They provide continuous support through labor, helping with comfort measures, breathing, positions, and advocacy for your birth plan." } },
+        { "@type": "Question", "name": "What doula services are included?", "acceptedAnswer": { "@type": "Answer", "text": "A standard birth doula package includes 1 to 2 prenatal visits to build your birth plan, on-call availability from around 38 weeks, continuous labor support from active labor through delivery, immediate postpartum help with feeding and skin-to-skin, and 1 to 2 postpartum check-in visits. Some doulas also offer postpartum doula services as a separate hourly package for newborn care, breastfeeding support, and emotional recovery." } },
         { "@type": "Question", "name": "What does a doula do?", "acceptedAnswer": { "@type": "Answer", "text": "A doula supports you continuously through pregnancy, labor, and postpartum. During labor she helps you find positions that ease pain, reminds you to breathe, guides your partner on how to help, explains what is happening in plain language, and speaks up for your preferences. Before birth she helps you build your birth plan. After birth she checks in on healing, feeding, and emotional recovery." } },
         { "@type": "Question", "name": "What is a birth doula?", "acceptedAnswer": { "@type": "Answer", "text": "A birth doula, also called a labor doula, is a trained support person who stays with you continuously from active labor through delivery. She meets with you once or twice during pregnancy to help build your birth plan, provides hands-on comfort and advocacy during labor, and visits once or twice after birth to check on recovery. A birth doula does not perform medical tasks." } },
         { "@type": "Question", "name": "What is a postpartum doula?", "acceptedAnswer": { "@type": "Answer", "text": "A postpartum doula supports you after the baby arrives. She helps with breastfeeding, newborn care, light household tasks, meal prep, and emotional recovery. Many mothers hire a postpartum doula for the first two to six weeks at home, when sleep deprivation and feeding challenges peak. A postpartum doula complements your birth doula, and some doulas offer both services." } },
@@ -50,8 +61,8 @@ const schema = {
 ---
 
 <Layout
-  title="What Is a Doula? Complete Guide"
-  description="A doula is a trained professional who provides emotional, physical, and informational support before, during, and after childbirth. Learn what doulas do and cost."
+  title="What Is a Birth Doula? Doula Services & What's Included"
+  description="A birth doula is a trained professional who provides emotional, physical, and informational support before, during, and after childbirth. Learn what doula services include, the types of doulas, how much they cost, and how to find one."
   canonical="https://truejoybirthing.com/what-is-a-doula/"
   breadcrumbList={breadcrumbList}
   ogImage="https://truejoybirthing.com/images/og/og-what-is-a-doula.png"
@@ -66,9 +77,9 @@ const schema = {
         <div>
           <p class="eyebrow mb-4">Birth Support Explained</p>
           <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
-          <h1 class="text-[2.5rem] md:text-[3.25rem] font-bold mb-6 leading-[1.12]">What Is a Doula? The Complete Guide for Expecting Moms</h1>
+          <h1 class="text-[2.5rem] md:text-[3.25rem] font-bold mb-6 leading-[1.12]">What Is a Birth Doula? Doula Services &amp; What's Included</h1>
           <p class="text-lg md:text-xl text-tjb-gray leading-relaxed max-w-2xl">
-            A doula is a trained professional who provides emotional, physical, and informational support to a mother before, during, and after childbirth. Doulas do not deliver babies or perform medical tasks. They stay with you continuously, focused on your comfort, your confidence, and your experience. If you are searching for the doula meaning, the simplest doula definition is this: a doula is someone who supports you through birth, start to finish. A <a href="/birth-plan-template/" class="text-tjb-rose-500 hover:underline">birth plan</a> gives you the words. A doula helps you use them.
+            A <strong>birth doula</strong> is a trained professional who provides emotional, physical, and informational support to a mother before, during, and after childbirth. Doulas do not deliver babies or perform medical tasks. They stay with you continuously, focused on your comfort, your confidence, and your experience. If you are searching for the doula meaning, the simplest doula definition is this: a doula is someone who supports you through birth, start to finish. <strong>Doula services</strong> typically include prenatal visits, continuous labor support, and postpartum check-ins. A <a href="/birth-plan-template/" class="text-tjb-rose-500 hover:underline">birth plan</a> gives you the words. A doula helps you use them.
           </p>
         </div>
         <div class="relative">
@@ -91,6 +102,7 @@ const schema = {
       <p class="text-sm font-semibold text-tjb-gray uppercase tracking-wide mb-4">In this guide:</p>
       <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
         <a href="#what-doulas-do" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">What Does a Doula Do</a>
+        <a href="#doula-services" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">What Doula Services Include</a>
         <a href="#what-doulas-dont-do" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">What Doulas Don't Do</a>
         <a href="#doula-vs-midwife" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">Doula vs Midwife</a>
         <a href="#types-of-doulas" class="text-tjb-rose-500 hover:text-tjb-rose-600 transition border-b border-transparent hover:border-tjb-rose-500 pb-0.5">Types of Doulas</a>
@@ -131,6 +143,22 @@ const schema = {
         <p class="text-lg font-serif italic text-tjb-charcoal mb-3">"My doula didn't touch the medical side at all. But when I was crying at 3 AM because the contractions were coming faster than I expected, she was the one who reminded me I could do this, and told my husband exactly where to put his hands."</p>
         <p class="text-sm text-tjb-gray">Mia R., first-time mom, Houston</p>
       </div>
+
+      <h2 id="doula-services">What Doula Services Are Included</h2>
+
+      <p>When families ask what <strong>doula services</strong> include, the answer is a package of support that spans pregnancy, labor, and the early postpartum weeks. A standard birth doula package typically includes:</p>
+
+      <ul>
+        <li><strong>Prenatal visits (1&ndash;2 meetings):</strong> You meet before your due date to talk through your birth preferences, practice comfort techniques, and build trust. This is where your doula learns what matters to you and helps you write your birth plan.</li>
+        <li><strong>On-call availability:</strong> From around 38 weeks, your doula is on call day and night. When labor starts, she comes to you, whether at home, a birth center, or a hospital.</li>
+        <li><strong>Continuous labor support:</strong> From active labor through delivery, your doula stays with you. No shift changes. She helps with position changes, breathing, counter-pressure, and advocacy, and guides your partner on how to help.</li>
+        <li><strong>Immediate postpartum support:</strong> Right after birth, your doula helps with initial feeding, skin-to-skin, and the first emotional processing of the birth.</li>
+        <li><strong>Postpartum check-in (1&ndash;2 visits):</strong> A few days to a week after birth, your doula visits to see how you are healing, how feeding is going, and whether you need referrals for lactation support, mental health resources, or other care.</li>
+      </ul>
+
+      <p>Some doulas also offer <strong>postpartum doula services</strong> as a separate package, with hourly support for newborn care, breastfeeding, meal prep, light household tasks, and emotional recovery in the first weeks at home. <a href="/what-is-a-postpartum-doula/" class="text-tjb-rose-500 hover:underline">Learn what a postpartum doula does</a>.</p>
+
+      <p>What doula services <em>do not</em> include: clinical tasks. Your doula does not perform cervical checks, monitor fetal heart rate, deliver the baby, prescribe medication, or make medical decisions. That is your midwife or OB's role. For a first-hand account of what continuous labor support looks like hour by hour, read <a href="/blog/doula-support/" class="text-tjb-rose-500 hover:underline">how a birth doula helps during labor</a>.</p>
 
       <h2 id="what-doulas-dont-do">What Doulas Don't Do (And Why That Matters)</h2>
 
@@ -209,7 +237,7 @@ const schema = {
 
       <h2 id="find">How to Find a Doula Near You</h2>
 
-      <p>Start your search 3-4 months before your due date. Good doulas book up. Here's where to look, and for a deeper dive on evaluating candidates, see our guide on <a href="/how-to-choose-a-doula/" class="text-tjb-rose-500 hover:underline">how to choose a doula</a>:</p>
+      <p>Start your search 3-4 months before your due date. Good doulas book up. The fastest way to find <strong>doula services</strong> in your area is to browse our city-by-city <a href="/doula-near-me/" class="text-tjb-rose-500 hover:underline">doula near me</a> directory, which lists vetted local doulas, hospital policies, and Medicaid coverage for your state. For a deeper dive on evaluating candidates, see our guide on <a href="/how-to-choose-a-doula/" class="text-tjb-rose-500 hover:underline">how to choose a doula</a>:</p>
 
       <ul>
         <li><strong>DONA International directory</strong>, the largest certification body; search by zip code</li>
@@ -247,6 +275,10 @@ const schema = {
         <details open class="bg-tjb-cream-50 rounded-lg border border-tjb-lavender-200/50 group">
           <summary class="cursor-pointer p-4 font-semibold text-tjb-charcoal">What is a doula?</summary>
           <div class="px-4 pb-4 text-tjb-gray leading-relaxed">A doula is a trained birth professional who provides emotional, physical, and informational support during pregnancy, labor, and postpartum. Doulas do not perform medical tasks. They provide continuous support through labor, helping with comfort measures, breathing, positions, and advocacy for your birth plan.</div>
+        </details>
+        <details open class="bg-tjb-cream-50 rounded-lg border border-tjb-lavender-200/50 group">
+          <summary class="cursor-pointer p-4 font-semibold text-tjb-charcoal">What doula services are included?</summary>
+          <div class="px-4 pb-4 text-tjb-gray leading-relaxed">A standard birth doula package includes 1 to 2 prenatal visits to build your birth plan, on-call availability from around 38 weeks, continuous labor support from active labor through delivery, immediate postpartum help with feeding and skin-to-skin, and 1 to 2 postpartum check-in visits. Some doulas also offer postpartum doula services as a separate hourly package for newborn care, breastfeeding support, and emotional recovery.</div>
         </details>
         <details open class="bg-tjb-cream-50 rounded-lg border border-tjb-lavender-200/50 group">
           <summary class="cursor-pointer p-4 font-semibold text-tjb-charcoal">What does a doula do?</summary>
@@ -319,6 +351,10 @@ const schema = {
         <a href="/doula-cost/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
           <h3 class="text-base font-semibold mb-1 group-hover:text-tjb-rose-500 transition">How Much Does a Doula Cost?</h3>
           <p class="text-sm text-tjb-gray">City-by-city pricing, what's included in a package, and insurance coverage options.</p>
+        </a>
+        <a href="/doula-near-me/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
+          <h3 class="text-base font-semibold mb-1 group-hover:text-tjb-rose-500 transition">Find a Doula Near You</h3>
+          <p class="text-sm text-tjb-gray">City-by-city directory of vetted doulas, hospital policies, and Medicaid coverage across the US.</p>
         </a>
         <a href="/doula-vs-midwife/" class="block bg-white rounded-lg p-5 border border-tjb-lavender-200 hover:border-tjb-rose-300 transition group">
           <h3 class="text-base font-semibold mb-1 group-hover:text-tjb-rose-500 transition">Doula vs. Midwife, What's the Difference?</h3>

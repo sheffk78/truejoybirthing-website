@@ -13,7 +13,7 @@ So you're looking into doula support — or maybe you just heard the word "doula
 
 I'm Shelbi Kohler. I'm a certified birth doula and a mother of seven. That means I've been on both sides of this — seven times over. I know what it's like to labor for hours wondering if you can keep going. I know what it's like to look at your partner and think, "I need more help here." And I know what a difference it makes when someone in that room is focused entirely on you.
 
-Let me walk you through what a birth doula actually does, because there's a lot of confusion out there.
+Let me walk you through what a birth doula actually does, because there's a lot of confusion out there. For the full overview of doula services and types of doulas, see our complete <a href="/what-is-a-doula/">guide to what a doula is</a>.
 
 ## What a Birth Doula Actually Does
 
@@ -27,6 +27,24 @@ Here's what that looks like in practice:
 - **Emotional support** — Reminding you that you can do this. Helping you stay calm when things get intense. Being a steady presence when you feel anything but steady.
 - **Advocacy** — I can't speak for you, but I can remind you of your options. I can help you ask the right questions. I can make sure you understand what's happening before you consent to anything.
 - **Postpartum check-in** — After your baby is here, I follow up. We talk about how you're doing — physically and mentally. If you need referrals or resources, I help you find them.
+
+## How Much Do Doula Services Cost?
+
+If you're reading this far, you probably have one practical question: what does all this cost? Here's the straightforward answer.
+
+A standard birth doula package — which includes the prenatal visits, continuous labor support, and postpartum check-in I just described — costs **$650 to $3,000** in the US, with a national average of **$1,200 to $1,500**. That's a flat package fee, not an hourly rate. It covers 30 to 50+ hours of combined work across prenatal visits, the birth itself (which can run 12 to 24+ hours), and postpartum follow-up.
+
+Postpartum doulas charge differently — typically **$25 to $50 per hour** for daytime support, with a four-hour minimum per visit. Night doulas cost more, usually **$35 to $75 per hour**, because they're awake with your baby overnight so you can sleep.
+
+What drives the price up or down:
+
+- **Location** — In major metros like New York and Los Angeles, packages run $1,500 to $3,000. In smaller towns and rural areas, you'll see $650 to $1,500.
+- **Experience** — A newly certified doula charges less than someone with 20+ years and hundreds of births. In the same city, a $1,500 spread between the two is common.
+- **What's included** — Some packages add birth plan help, unlimited texting, lactation guidance, or a backup doula. More inclusions mean a higher fee.
+
+Some families bring the cost down with HSA or FSA funds (a [Letter of Medical Necessity](/hsa-fsa-doula-services/) from your provider can make doula services eligible), state [Medicaid doula coverage](/medicaid-doula-coverage/) in states that offer it, or sliding-scale fees from doulas who offer them. It's always worth asking a doula you love whether they have a sliding scale, even if they don't advertise one.
+
+For the full pricing breakdown — city-by-city ranges, a cost calculator, insurance guidance, and ways to find affordable support — see our complete [doula cost guide](/doula-cost/). And if you're weighing whether the investment is worth it, the [evidence on doula benefits](/benefits-of-a-doula/) is clear: continuous support leads to shorter labors, fewer interventions, and higher satisfaction. For many families, that pays for itself.
 
 ## The Numbers Behind Doula Support
 
@@ -116,3 +134,5 @@ A doula is one piece of your support system. You'll also want:
 If you're pregnant and wondering whether a doula is right for you, let's have a conversation. No pressure, no sales pitch — just an honest talk about what you're hoping for and whether I can help you get there. Whether you're planning a birth in <a href="/birth-support/chicago-il/">Chicago, IL</a> or <a href="/birth-support/atlanta-ga/">Atlanta, GA</a>, I'd love to hear your story.
 
 [Contact me here](/contact/) to set up a free consultation. I'd love to hear your story.
+
+For more, read our complete [guide to what a doula is and what doula services include](/what-is-a-doula/), the research on the [benefits of a doula](/benefits-of-a-doula/), or find [doula services near you](/doula-near-me/).
