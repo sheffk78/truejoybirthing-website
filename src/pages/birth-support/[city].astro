@@ -39,6 +39,11 @@ const {
 // Medicaid helper (must come before pageDesc)
 const medicaidCovers = !medicaidNote.includes('does not') && !medicaidNote.includes('does NOT');
 const stateHubSlug = state.toLowerCase().replace(/\s+/g, '-');
+// MT has no dedicated state hub (its only city is Bozeman). Link the state-hub
+// breadcrumb / "All Montana Cities" CTA directly to the real city page so we
+// avoid the /birth-support/mt/ path, which is intentionally not surfaced elsewhere
+// (see index.astro, [state].astro, and ContextualCityLinks.astro).
+const effectiveStateHubSlug = state.toUpperCase() === 'MT' ? 'bozeman-mt' : stateHubSlug;
 
 // Deterministic anchor text rotation for /doula-cost/ inline link (costs section).
 // Prevents over-optimization: 5 full-sentence variants distributed across 90+ city pages.
@@ -273,7 +278,7 @@ const midwifeImage = midwifeSectionImage || '/images/midwife-heartbeat.webp';
 const breadcrumbList = [
   { name: 'Home', url: 'https://truejoybirthing.com/' },
   { name: 'Birth Support', url: 'https://truejoybirthing.com/birth-support/' },
-  { name: stateFullName, url: `https://truejoybirthing.com/birth-support/${state.toLowerCase()}/` },
+  { name: stateFullName, url: `https://truejoybirthing.com/birth-support/${state.toUpperCase() === 'MT' ? 'bozeman-mt' : state.toLowerCase()}/` },
   { name: `${city}, ${state}`, url: pageUrl },
 ];
 
@@ -401,7 +406,7 @@ const schema = {
           <span class="text-tjb-gray/50">›</span>
         </li>
         <li class="flex items-center gap-1.5">
-          <a href={`/birth-support/${stateHubSlug}/`} class="text-tjb-lavender-600 hover:underline">{stateFullName}</a>
+          <a href={`/birth-support/${effectiveStateHubSlug}/`} class="text-tjb-lavender-600 hover:underline">{stateFullName}</a>
           <span class="text-tjb-gray/50">›</span>
         </li>
         <li class="text-tjb-charcoal font-medium">{city}, {state}</li>
@@ -1709,7 +1714,7 @@ const schema = {
         </div>
       )}
 
-      <a href={`/birth-support/${stateHubSlug}/`} class="text-tjb-lavender-600 font-semibold hover:underline">All {stateFullName} Cities →</a>
+      <a href={`/birth-support/${effectiveStateHubSlug}/`} class="text-tjb-lavender-600 font-semibold hover:underline">All {stateFullName} Cities →</a>
     </div>
   </section>
 

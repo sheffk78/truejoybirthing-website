@@ -28,6 +28,14 @@ const {
 // from cities.ts data, (3) fill remaining with topic-based or major cities.
 let selectedCities: { slug: string; state: string; label: string }[] = [];
 
+// MT has no dedicated state hub (only city is Bozeman); link its "Browse all
+// cities" CTA to the real city page to avoid the /birth-support/mt/ path.
+// Hoisted to module scope so it's always defined for the render path.
+const effectiveHubSlug = (() => {
+  const stateLower = (currentState || (currentSlug ? cities[currentSlug]?.state || '' : '')).toLowerCase();
+  return stateLower === 'mt' ? 'bozeman-mt' : stateLower;
+})();
+
 if (currentSlug) {
   const currentData = cities[currentSlug];
   const stateLower = currentState || (currentData?.state || '').toLowerCase();
@@ -155,7 +163,7 @@ const subheading = currentSlug
             <div class="md:col-span-2 mt-4 pt-4 border-t border-tjb-lavender-300/30">
               <p class="text-sm text-tjb-gray">
                 {currentSlug && currentState ? (
-                  <>Browse all cities in <a href={`/birth-support/${currentState}/`} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">{stateNames[currentState] || currentState.toUpperCase()}</a>{displayHubs.length > 1 ? ' or explore other states: ' : '.'}</>
+                  <>Browse all cities in <a href={`/birth-support/${effectiveHubSlug}/`} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">{stateNames[currentState] || currentState.toUpperCase()}</a>{displayHubs.length > 1 ? ' or explore other states: ' : '.'}</>
                 ) : (
                   <>Explore state resources: </>
                 )}
@@ -202,7 +210,7 @@ const subheading = currentSlug
           <div class="mt-8 pt-4 border-t border-tjb-lavender-300/30">
             <p class="text-sm text-tjb-gray">
               {currentSlug && currentState ? (
-                <>Browse all cities in <a href={`/birth-support/${currentState}/`} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">{stateNames[currentState] || currentState.toUpperCase()}</a>{displayHubs.length > 1 ? ' or explore other states: ' : '.'}</>
+                <>Browse all cities in <a href={`/birth-support/${effectiveHubSlug}/`} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">{stateNames[currentState] || currentState.toUpperCase()}</a>{displayHubs.length > 1 ? ' or explore other states: ' : '.'}</>
               ) : (
                 <>Explore state resources: </>
               )}
@@ -252,7 +260,7 @@ const subheading = currentSlug
           <div class="mt-6 pt-4 border-t border-tjb-lavender-300/30 text-center">
             <p class="text-sm text-tjb-gray">
               {currentSlug && currentState ? (
-                <>Browse all cities in <a href={`/birth-support/${currentState}/`} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">{stateNames[currentState] || currentState.toUpperCase()}</a>{displayHubs.length > 1 ? ' or explore other states: ' : '.'}</>
+                <>Browse all cities in <a href={`/birth-support/${effectiveHubSlug}/`} class="text-tjb-rose-500 hover:text-tjb-rose-600 transition font-semibold">{stateNames[currentState] || currentState.toUpperCase()}</a>{displayHubs.length > 1 ? ' or explore other states: ' : '.'}</>
               ) : (
                 <>Explore state resources: </>
               )}
