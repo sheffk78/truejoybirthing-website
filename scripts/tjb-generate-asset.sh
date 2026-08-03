@@ -5,25 +5,15 @@
 # Usage: bash scripts/tjb-generate-asset.sh <asset-type> <slug> [city-name state]
 #
 # Asset types:
-#   og          — OG/social preview image (1200×630, Playwright HTML→screenshot)
-#   hero        — Hero image (1200×800, Playwright HTML→screenshot)
-#   support     — Support scene image (Playwright HTML→screenshot)
-#   thumbnail   — YouTube thumbnail (1280×720, render-yt-thumbnail.cjs)
+#   og          — OG/social preview image (1200×630, canonical Pattern B)
+#   hero        — Hero image (image_generate only; this script refuses rendering)
+#   support     — Support scene (image_generate only; this script refuses rendering)
+#   thumbnail   — YouTube thumbnail (template renderer)
 #
-# This script:
-#   1. Routes to the correct generation pipeline
-#   2. Verifies the output (file exists, correct dimensions, valid image)
-#   3. Exits 0 on success, 1 on failure
-#
-# The agent NEVER calls image_generate, node render-og.cjs, or PIL directly.
-# Every visual asset routes through this script.
-#
-# NOTE: The sentinel-based pre-work gate (tjb-visual-work-gate.sh) was
-# deprecated June 2026. Quality is now enforced by artifact-based gates
-# in preflight.ts (G8: hero silhouette, G9: support scene, P11: dimensions).
-# Run `npx tsx scripts/preflight.ts <slug>` after generating assets.
+# Every OG must have a city-specific composition derived from
+# render-city-og-template.html. Falling back to the placeholder template is a
+# hard failure: render-og.cjs is intentionally dumb and does not fill variables.
 # =============================================================================
-
 set -euo pipefail
 
 ASSET_TYPE="${1:?Usage: bash scripts/tjb-generate-asset.sh <asset-type> <slug>}"
@@ -34,138 +24,50 @@ PROJECT_DIR="/Users/socializerender/Projects/truejoybirthing-website"
 SCRIPT_DIR="$PROJECT_DIR/scripts"
 OUTPUT_DIR="$PROJECT_DIR/public/images"
 
-echo ""
-echo "======================================"
-echo "  TJB Generate Asset"
-echo "  Type: $ASSET_TYPE"
-echo "  Slug: $SLUG"
-echo "======================================"
-echo ""
-
 cd "$PROJECT_DIR"
 
-# Helper: verify image dimensions using Python + PIL
 verify_image() {
-  local file="$1"
-  local exp_w="$2"
-  local exp_h="$3"
-  local label="$4"
-
-  if [ ! -f "$file" ]; then
-    echo "  ❌ [$label] File not found: $file"
-    return 1
-  fi
-
-  local size
-  size=$(stat -f%z "$file" 2>/dev/null || stat --format=%s "$file" 2>/dev/null)
-  echo "  ✅ [$label] File size: ${size} bytes"
-
-  # Only check dimensions if PIL is available
-  if python3 -c "from PIL import Image" 2>/dev/null; then
-    local dims
-    dims=$(python3 -c "
+  local file="$1"; local exp_w="$2"; local exp_h="$3"; local label="$4"
+  [ -f "$file" ] || { echo "❌ [$label] File not found: $file"; return 1; }
+  python3 - "$file" "$exp_w" "$exp_h" "$label" <<'PY'
 import sys
 from PIL import Image
-try:
-    img = Image.open('$file')
-    print(f'{img.size[0]} {img.size[1]}')
-except Exception as e:
-    print(f'ERROR: {e}')
-    sys.exit(1)
-" 2>/dev/null) || dims=""
-
-    if [ -n "$dims" ]; then
-      local w="${dims%% *}"
-      local h="${dims##* }"
-      if [ "${w:-0}" = "$exp_w" ] && [ "${h:-0}" = "$exp_h" ]; then
-        echo "  ✅ [$label] Dimensions: ${w}×${h} (matches expected ${exp_w}×${exp_h})"
-      else
-        echo "  ⚠️  [$label] Dimensions: ${w}×${h} (expected ${exp_w}×${exp_h})"
-      fi
-    fi
-  fi
+path, ew, eh, label = sys.argv[1], int(sys.argv[2]), int(sys.argv[3]), sys.argv[4]
+im = Image.open(path)
+if im.size != (ew, eh): raise SystemExit(f'❌ [{label}] Dimensions {im.size}, expected {(ew,eh)}')
+colors = im.convert('RGB').getcolors(1_000_000)
+unique = len(colors) if colors else 1_000_001
+if label == 'OG' and unique < 5000: raise SystemExit(f'❌ [OG] Only {unique} colors; likely placeholder/gradient')
+print(f'✅ [{label}] {im.size[0]}×{im.size[1]}, {unique} unique colors, {path}')
+PY
 }
 
 case "$ASSET_TYPE" in
   og)
-    # OG image: use city-specific composition or canonical template
+    TEMPLATE="$SCRIPT_DIR/render-city-og-template.html"
     COMP_FILE="$SCRIPT_DIR/og-city-$SLUG-composition.html"
     if [ ! -f "$COMP_FILE" ]; then
-      echo "  ⚠️  No city-specific composition (og-city-$SLUG-composition.html)"
-      echo "     Falling back to canonical template."
-      if [ -f "$SCRIPT_DIR/render-city-og-template.html" ]; then
-        COMP_FILE="$SCRIPT_DIR/render-city-og-template.html"
-      else
-        echo "  ❌ No OG template found at scripts/render-city-og-template.html"
-        echo "     Create a composition file first from an existing pattern."
-        exit 1
-      fi
+      echo "❌ Missing required city-specific OG composition: $COMP_FILE"
+      echo "   Copy $TEMPLATE, fill every placeholder, and rerun."
+      exit 1
     fi
-
-    COMP_RELATIVE="$(basename "$COMP_FILE")"
-    node "$SCRIPT_DIR/render-og.cjs" "$COMP_RELATIVE" "og-city-$SLUG"
-    echo "  ✅ OG image rendered"
-
-    verify_image "$OUTPUT_DIR/og-city-$SLUG.webp" 1200 630 "OG"
+    if grep -qE '\{\{[A-Z_]+\}\}' "$COMP_FILE"; then
+      echo "❌ Unfilled OG placeholder in $COMP_FILE"; exit 1
+    fi
+    for required in '.left-column::before' '.left-column::after' '.right-column::before' '.right-column::after' '.eyebrow' '.headline' '.summary' '.subhead' '.logo-area' '.right-column img'; do
+      grep -q "$required" "$COMP_FILE" || { echo "❌ OG composition missing required template element: $required"; exit 1; }
+    done
+    node "$SCRIPT_DIR/render-og.cjs" "$(basename "$COMP_FILE")" "og-city-$SLUG"
+    verify_image "$OUTPUT_DIR/og-city-$SLUG.webp" 1200 630 OG
     ;;
-
   hero)
-    echo "  ❌ Hero images must be generated via image_generate (AI photo generation)."
-    echo "     The render-hero.cjs tool and hero-city-*-composition.html files have been DELETED."
-    echo "     They produced CSS gradient graphics, not photographs."
-    echo ""
-    echo "     To create a hero image:"
-    echo "     1. Load the tjb-ai-photo-generation skill"
-    echo "     2. Inspect 2-3 approved reference heroes (Norfolk, Carrollton, Fremont, Vancouver)"
-    echo "     3. Use image_generate with the pregnant silhouette prompt"
-    echo "     4. Run preflight G8 gate to verify it passes"
-    echo ""
-    echo "     This script cannot generate hero images. Exiting."
-    exit 1
-    ;;
-
+    echo "❌ Hero images require image_generate; HTML rendering is forbidden."; exit 1 ;;
   support)
-    echo "  ❌ Support scene images must be generated via image_generate (AI photo generation)."
-    echo "     The render-hero.cjs tool has been DELETED."
-    echo "     It produced CSS gradient graphics, not photographs."
-    echo ""
-    echo "     To create a support scene:"
-    echo "     1. Load the tjb-ai-photo-generation skill"
-    echo "     2. Use image_generate with a city-specific doula support prompt"
-    echo "     3. Run preflight to verify it passes"
-    echo ""
-    echo "     This script cannot generate support images. Exiting."
-    exit 1
-    ;;
-
+    echo "❌ Support scenes require image_generate; HTML rendering is forbidden."; exit 1 ;;
   thumbnail)
-    if [ -z "$CITY_NAME" ] || [ -z "$STATE_ABBR" ]; then
-      echo "  ❌ Thumbnail generation requires city name and state abbreviation."
-      echo "     Usage: bash scripts/tjb-generate-asset.sh thumbnail <slug> \"<City>\" <ST>"
-      echo "     Example: bash scripts/tjb-generate-asset.sh thumbnail conroe-tx \"Conroe\" TX"
-      exit 1
-    fi
-
+    [ -n "$CITY_NAME" ] && [ -n "$STATE_ABBR" ] || { echo "❌ Thumbnail requires city and state"; exit 1; }
     node "$SCRIPT_DIR/render-yt-thumbnail.cjs" "$SLUG" "$CITY_NAME" "$STATE_ABBR"
-    echo "  ✅ Thumbnail rendered"
-
-    if [ -f "$OUTPUT_DIR/yt-thumb-$SLUG.png" ]; then
-      verify_image "$OUTPUT_DIR/yt-thumb-$SLUG.png" 1280 720 "YT Thumb (PNG)"
-    elif [ -f "$OUTPUT_DIR/yt-thumb-$SLUG.webp" ]; then
-      verify_image "$OUTPUT_DIR/yt-thumb-$SLUG.webp" 1280 720 "YT Thumb (WebP)"
-    else
-      echo "  ❌ Thumbnail output file not found at yt-thumb-$SLUG.png or .webp"
-      exit 1
-    fi
+    if [ -f "$OUTPUT_DIR/yt-thumb-$SLUG.png" ]; then verify_image "$OUTPUT_DIR/yt-thumb-$SLUG.png" 1280 720 'YT Thumb'; else verify_image "$OUTPUT_DIR/yt-thumb-$SLUG.webp" 1280 720 'YT Thumb'; fi
     ;;
-
-  *)
-    echo "❌ Unknown asset type: $ASSET_TYPE"
-    echo "   Valid types: og, hero, support, thumbnail"
-    exit 1
-    ;;
+  *) echo "❌ Unknown asset type: $ASSET_TYPE"; exit 1 ;;
 esac
-
-echo ""
-echo "✅ Done: $ASSET_TYPE for $SLUG"
-echo "======================================"

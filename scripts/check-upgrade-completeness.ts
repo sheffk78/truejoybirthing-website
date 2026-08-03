@@ -22,11 +22,13 @@ const src = readFileSync(resolve(__dirname, '..', 'src', 'data', 'cities.ts'), '
 // Find city block by scanning for the slug key, then extracting until
 // the next top-level key (matched by a line starting with 2 spaces + quote)
 const slugMarker = `"${slug}": {`;
-const idx = src.indexOf(slugMarker);
+const cityKey = new RegExp(`^\\s*"${slug.replace(/[.*+?^${}()|[\\]\\]/g, '\\\\$&')}"\\s*:\\s*\\{`, 'm');
+const cityMatch = cityKey.exec(src);
+const idx = cityMatch?.index ?? -1;
 if (idx === -1) { console.error(`City ${slug} not found`); process.exit(1); }
 
 // Start from the opening brace
-const openBrace = idx + slugMarker.length - 1; // position of {
+const openBrace = idx + (cityMatch?.[0].indexOf('{') ?? 0); // position of {
 let depth = 0;
 let endIdx = -1;
 for (let i = openBrace; i < src.length; i++) {
@@ -76,12 +78,13 @@ check('nearbyCities present', inBlock(/nearbyCities:/m), 'Missing nearbyCities')
 check('lat/lng present', inBlock(/lat:\s*[\d.\-]+/m) && inBlock(/lng:\s*[\d.\-]+/m), 'Missing lat/lng');
 
 // --- HOSPITAL DEPTH ---
-const hospitalCount = countInBlock(/^\s+name:\s*"/m);
+const hospitalSectionForCount = cityBlock.match(/hospitalDetails:\s*\[([\s\S]*?)\],\s*birthCenterDetails:/m)?.[1] || '';
+const hospitalCount = (hospitalSectionForCount.match(/name:\s*"/g) || []).length;
 if (hospitalCount > 0) {
-  const hasNICU = countInBlock(/nicuLevel:/);
-  const hasAddr = countInBlock(/address:/);
-  const hasUrl = countInBlock(/^(\s+)url:/m);
-  const hasThumb = countInBlock(/thumbnail:/);
+  const hasNICU = (hospitalSectionForCount.match(/nicuLevel:/g) || []).length;
+  const hasAddr = (hospitalSectionForCount.match(/address:/g) || []).length;
+  const hasUrl = (hospitalSectionForCount.match(/url:/g) || []).length;
+  const hasThumb = (hospitalSectionForCount.match(/thumbnail:/g) || []).length;
 
   warn(`Hospitals NICU fields: ${hasNICU}/${hospitalCount}`, hasNICU >= hospitalCount,
     `Only ${hasNICU}/${hospitalCount} hospitals have nicuLevel`);
@@ -96,16 +99,33 @@ if (hospitalCount > 0) {
   check(`Hospital depth: ${totalEnrich}/${hospitalCount * 3}`,
     totalEnrich >= hospitalCount * 2,
     `Hospitals are bare-minimum (${totalEnrich} enrichment fields across ${hospitalCount} hospitals). Need at least ${hospitalCount * 2}`);
+
+  // The card copy is a user-facing research asset, not a placeholder sentence.
+  const hospitalSection = cityBlock.match(/hospitalDetails:\s*\[([\s\S]*?)\],\s*birthCenterDetails:/m)?.[1] || '';
+  const paragraphs = [...hospitalSection.matchAll(/paragraph:\s*"([^"]*)"/g)].map(m => m[1]);
+  const short = paragraphs.filter(p => p.length < 260);
+  check(`Hospital paragraph depth: ${paragraphs.length - short.length}/${hospitalCount}`,
+    paragraphs.length === hospitalCount && short.length === 0,
+    `Hospital paragraphs must each be at least 260 characters; short entries: ${short.length}`);
 } else {
   failures.push('❌ hospitalDetails is empty');
 }
+
+// --- BIRTH CENTER DEPTH ---
+const birthCenterSection = cityBlock.match(/birthCenterDetails:\s*\[([\s\S]*?)\],\s*medicaidNote:/m)?.[1] || '';
+const birthCenterEntries = [...birthCenterSection.matchAll(/paragraph:\s*"([^"]*)"/g)].map(m => m[1]);
+const realBirthCenters = birthCenterEntries.filter(p => !/no (verified |freestanding )?birth centers/i.test(p));
+const shortBirthCenters = realBirthCenters.filter(p => p.length < 220);
+check(`Birth center paragraph depth: ${realBirthCenters.length - shortBirthCenters.length}/${realBirthCenters.length}`,
+  shortBirthCenters.length === 0,
+  `Birth center paragraphs must each be at least 220 characters; short entries: ${shortBirthCenters.length}`);
 
 // --- DOULA DEPTH ---
 const doulaCount = countInBlock(/^\s+name:\s*"/m); // from localDoulas section
 // We need to count only doulas, not hospitals. Estimate by checking unique count
 // of entries inside the localDoulas array
-const doulasSection = cityBlock.match(/localDoulas:\s*\[([\s\S]*?)\]/m);
-const actualDoulaCount = doulasSection ? (doulasSection[1].match(/^\s+\{/gm) || []).length : 0;
+const doulasSection = cityBlock.match(/localDoulas:\s*\[([\s\S]*?)\],\s*faqs:/m);
+const actualDoulaCount = doulasSection ? (doulasSection[1].match(/\bname:\s*"/g) || []).length : 0;
 
 check(`Doula listings: ${actualDoulaCount}`, actualDoulaCount >= 3,
   `Only ${actualDoulaCount} doulas listed — Denver has 4+`);

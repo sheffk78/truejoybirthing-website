@@ -646,8 +646,22 @@ def og_photo_quality(slug: str) -> dict:
 
         if color_count < 5000:
             return {"pass": False, "detail": f"OG appears to be gradient-only, no real photo (full_unique_colors={color_count}, threshold=5000). OG must use the canonical Pattern B template with the city hero photo on the right column. Re-render from scripts/render-city-og-template.html with the hero image embedded."}
-        else:
-            return {"pass": True, "detail": f"OG has photo content (full_unique_colors={color_count})"}
+
+        # File existence/color entropy is not enough: enforce the locked Pattern B
+        # composition artifacts so a raw hero crop or legacy text card cannot pass.
+        composition = Path(PROJECT_DIR) / "scripts" / f"og-city-{slug}-composition.html"
+        if not composition.exists():
+            return {"pass": False, "detail": f"Missing city-specific OG composition {composition}; refusing template fallback."}
+        html = composition.read_text(errors="replace")
+        required = [".left-column::before", ".left-column::after", ".right-column::before", ".right-column::after", ".eyebrow", ".headline", ".summary", ".subhead", ".logo-area", ".right-column img"]
+        missing = [token for token in required if token not in html]
+        if missing:
+            return {"pass": False, "detail": f"OG composition is not locked Pattern B; missing: {', '.join(missing)}"}
+        if re.search(r"\{\{[A-Z_]+\}\}", html):
+            return {"pass": False, "detail": "OG composition contains unfilled template placeholders."}
+        if "logo-mono.svg" not in html:
+            return {"pass": False, "detail": "OG composition must use the approved logo-mono.svg asset."}
+        return {"pass": True, "detail": f"OG has photo content (full_unique_colors={color_count}) and locked Pattern B composition"}
     except Exception as e:
         return {"pass": True, "detail": f"Could not analyze OG image: {e}"}
 
