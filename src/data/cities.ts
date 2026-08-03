@@ -6657,7 +6657,187 @@ midwifeInfo: {
       dataSource: "CDC NCHS, National Vital Statistics System; America's Health Rankings 2019-2023",
     },
   },
+  "worcester-ma": {
+    city: "Worcester",
+    state: "MA",
+    slug: "worcester-ma",
+    costLow: 1000,
+    costHigh: 2800,
+    shelbiServesHere: false,
+    culture: "Worcester’s birth community is anchored by UMass Memorial, the largest hospital system in Central Massachusetts, and a growing network of community doulas who serve families across the region. The city’s diversity — with large Vietnamese, Dominican, and Brazilian populations — means doulas here are accustomed to navigating language and cultural needs. MassHealth doula coverage since 2024 has been a game-changer for Worcester families who previously had to travel to Boston for affordable doula support.",
+    heroLocalDetail: "At 38 weeks, you’re probably familiar with the drive down Belmont Street to UMass Memorial — or mapping out the quickest route from your place in Vernon Hill or Greendale to the hospital. Elm Park and the East Side Bike Path give you flat, shaded walking for those last-weeks strolls when you just need to move.",
+    hospitalDetails: [
+      { name: "UMass Memorial Medical Center", paragraph: "UMass Memorial is Central Massachusetts’s largest hospital and the only Level III NICU in Worcester, with maternal-fetal medicine specialists, midwifery services, and 24/7 obstetric anesthesiology. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Saint Vincent Hospital", paragraph: "Saint Vincent Hospital offers labor and delivery services on the west side of Worcester, with a NICU for babies who need extra support. If we’re being real, UMass Memorial gets more of the high-risk referrals in the region, but Saint Vincent is a solid option for families living in the western neighborhoods." },
+    ],
+    // Birth center search: NPI 261QB0400X returned no results for Worcester MA. Google Maps and web search found no verified freestanding birth centers in Worcester. The nearest birth center options are in the greater Boston area (Birth Sanctuary Cambridge, approximately 45 minutes east). Verified 2026-06.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Yes — Massachusetts MassHealth covers doula services as of January 2024, with reimbursement of approximately $1,200 for a full package covering 2 prenatal visits, labor and delivery support, and 2 postpartum visits. Your doula must be enrolled as a MassHealth provider.",
+    insuranceNote: "Massachusetts requires most private insurance plans through the state exchange (MA Health Connector) to cover maternity services. Doula coverage by private insurers is expanding — some Blue Cross Blue Shield of MA and Tufts Health Plan policies now include doula benefits. Check your plan documents or call member services and ask about ‘certified doula services.’",
+    faqs: [
+      { q: "How much does a doula cost in Worcester?", a: "Expect to pay $1,000 to $2,800 for a doula in Worcester. Costs tend to run a bit lower than Boston rates, but the community is smaller so start your search early. Some Worcester doulas also serve families in the surrounding towns like Shrewsbury, Auburn, and Holden. The investment typically covers prenatal visits, labor support, and postpartum check-ins. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Worcester?", a: "Yes — Massachusetts MassHealth covers doula services as of January 2024, with approximately $1,200 for the full package (2 prenatal visits, labor support, and 2 postpartum visits). Your doula must be a MassHealth-enrolled provider, so ask upfront whether they accept MassHealth. This coverage is a real benefit for Worcester families — grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and make sure your doula team knows your preferences." },
+      { q: "Which hospitals in Worcester accommodate birth plans?", a: "UMass Memorial Medical Center (verified Level III NICU) and Saint Vincent Hospital both offer labor and delivery and generally accommodate birth plans. UMass Memorial is Central Massachusetts’s regional referral center for high-risk pregnancies and has midwifery services available. Doulas are welcomed at both — confirm current visitor policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Are there birth centers in Worcester?", a: "No — there are no freestanding birth centers in Worcester as of 2026. The nearest birth center is Birth Sanctuary Cambridge, approximately 45 minutes east. UMass Memorial offers midwifery-model care within the hospital setting for families seeking a lower-intervention approach. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through your options." },
+      { q: "Does True Joy Birthing work with Worcester families?", a: "True Joy Birthing provides free birth-prep tools for Worcester families. The free birth plan, checklist, and guided walkthrough in the app work for any Worcester birth setting. The app also helps you connect with local doulas and midwives in your area." },
+      { q: "What about postpartum support in Worcester?", a: "Worcester has a growing postpartum support network, including community health centers that offer lactation consulting and support groups. UMass Memorial’s postpartum unit provides initial lactation support, and local doulas often include postpartum visits in their packages. If you’re looking for ongoing postpartum doula support, start your search during pregnancy — the community is smaller than Boston’s and providers book up. <a href=\"/postpartum-doula/\">Learn more about postpartum doula support</a>." },
+    ],
+    nearbyCities: ["boston-ma", "providence-ri", "hartford-ct"],
+    publishedDate: "2026-06-08",
+    lat: 42.2626,
+    lng: -71.8019,
+  },
+  "springfield-il": {
+    city: "Springfield",
+    state: "IL",
+    slug: "springfield-il",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    culture: "Springfield is Illinois’s capital city with a tight-knit birth community that punches above its size. As a smaller metro (about 115,000 people), families here benefit from having two major hospitals within city limits and a network of doulas who personally know the OB-GYN practices. Illinois Medicaid doula coverage since 2024 has been significant for Springfield families, where median household income trails the Chicago suburbs. The local doula scene is small but dedicated — you’re more likely to get personal attention and flexible pricing here than in a saturated urban market.",
+    heroLocalDetail: "At 38 weeks in Springfield, you’re probably figuring out the drive to Memorial Medical Center on the south side or HSHS St. John’s on the north — both easy to reach from most neighborhoods in under 15 minutes. Washington Park’s paved paths are a local favorite for those last-months walks when you need to keep moving.",
+    hospitalDetails: [
+      { name: "Memorial Medical Center", paragraph: "Memorial Medical Center is Springfield’s largest hospital with a Level III NICU (verified on memorial.health), maternal-fetal medicine specialists, and a midwifery practice. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "HSHS St. John’s Hospital", paragraph: "HSHS St. John’s Hospital on Springfield’s north side offers labor and delivery with a NICU for babies who need extra support. If we’re being real, Memorial gets most of the high-risk referrals in the region, but St. John’s is a solid option, especially for families on the north and west sides of town." },
+    ],
+    // Birth center search: NPI 261QB0400X returned no results for Springfield IL. Google Maps and web search found no verified freestanding birth centers in Springfield. The nearest birth center options are in the greater Chicago area (approximately 200 miles north). Verified 2026-06.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Yes — Illinois Medicaid (Illinois Health Connect, Meridian, Molina, and other managed care plans) covers doula services under HB 4430, reimbursing up to approximately $1,500 per pregnancy for prenatal, labor, and postpartum support. Your doula must be enrolled as an Illinois Medicaid provider.",
+    insuranceNote: "Whether doula services are covered by private insurance in the Springfield area varies by plan. Some Blue Cross Blue Shield of Illinois and Health Alliance policies include doula benefits. HSA and FSA funds can help cover out-of-pocket doula costs. Ask any doula you interview about payment plans and sliding-scale options — Springfield doulas are often more flexible on pricing than Chicago-area providers.",
+    faqs: [
+      { q: "How much does a doula cost in Springfield?", a: "Expect to pay $800 to $2,000 for a doula in Springfield. The local market is more affordable than Chicago rates, though the community of available doulas is smaller. Some Springfield doulas also serve families in nearby Decatur and Jacksonville. The investment typically covers prenatal visits, labor support, and postpartum check-ins. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Springfield?", a: "Yes — Illinois Medicaid covers doula services under HB 4430, reimbursing up to approximately $1,500 per pregnancy for a full package of prenatal, labor, and postpartum support. Your doula must be an Illinois Medicaid-enrolled provider. This is real coverage, not a pilot program — ask your doula upfront whether they accept Medicaid. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> and make sure your doula team knows your preferences." },
+      { q: "Which hospitals in Springfield accommodate birth plans?", a: "Memorial Medical Center (verified Level III NICU) and HSHS St. John’s Hospital both offer labor and delivery and generally accommodate birth plans. Memorial is Springfield’s regional referral center for high-risk pregnancies and has a midwifery practice. Doulas are welcomed at both — confirm current visitor policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Are there birth centers in Springfield?", a: "No — there are no freestanding birth centers in Springfield as of 2026. Both Memorial Medical Center and HSHS St. John’s offer midwifery-model care within the hospital setting. For families seeking a birth center experience, the nearest options are in the Chicago area, approximately 200 miles north. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through your options." },
+      { q: "Does True Joy Birthing work with Springfield families?", a: "True Joy Birthing provides free birth-prep tools for Springfield families. The free birth plan, checklist, and guided walkthrough in the app work for any Springfield birth setting. The app also helps you connect with local doulas and midwives in your area." },
+      { q: "What about postpartum support in Springfield?", a: "Springfield has community health centers and hospital-based lactation support, but the postpartum doula community is small. If you’re looking for ongoing postpartum support, start your search during pregnancy. Some local doulas include postpartum visits in their birth packages, and a few offer postpartum-only packages. <a href=\"/postpartum-doula/\">Learn more about postpartum doula support</a>." },
+    ],
+    nearbyCities: ["chicago-il", "indianapolis-in"],
+    publishedDate: "2026-06-08",
+    lat: 39.7990,
+    lng: -89.6440,
+  },
+  "columbia-md": {
+    city: "Columbia",
+    state: "MD",
+    slug: "columbia-md",
+    costLow: 900,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    culture: "Columbia is a planned community designed for families, and it shows in the birth support options. As a diverse, affluent suburb between Baltimore and DC, Columbia families have access to doulas who serve the entire Baltimore–Washington corridor. Maryland Medicaid doula coverage since 2024 has been a meaningful win here, especially for the Howard County families who may not have considered doula support before. The local doula community draws from both Baltimore and DC networks — you’ll find more options here than in a typical suburb of 100,000 people.",
+    heroLocalDetail: "At 38 weeks in Columbia, you’re probably mapping the drive to Howard County General in Town Center or calculating the 25-minute trip to a Baltimore hospital if your OB practices there. Lake Kittamaqundi and the paths around Wilde Lake give you flat, shaded walking for those final-weeks strolls — one of the advantages of a city built around green space.",
+    hospitalDetails: [
+      { name: "Howard County General Hospital", paragraph: "Howard County General Hospital is a Johns Hopkins affiliate right in Columbia’s Town Center, offering labor and delivery with a NICU for babies who need extra support and direct access to Hopkins specialists for higher-risk cases. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Holy Cross Hospital", paragraph: "Holy Cross Hospital in nearby Silver Spring (about 20 minutes south) is a high-volume maternity hospital with a Level III NICU and one of the busiest L&D units in the DC suburbs. If we’re being real, some Columbia families choose Holy Cross specifically for its NICU level and Turkish-born OB population — it’s worth the drive if you want that extra layer of neonatal coverage." },
+    ],
+    // Birth center search: NPI 261QB0400X returned no results for Columbia MD. Google Maps and web search found no verified freestanding birth centers in Columbia or Howard County. The nearest birth center option is in the Baltimore area. Verified 2026-06.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Yes — Maryland Medicaid covers doula services as of 2024, with reimbursement rates including $450 for labor and delivery support, $75 per prenatal or postpartum visit (up to 4 visits), totaling up to $900 per pregnancy for Medicaid-enrolled doulas.",
+    insuranceNote: "In the Columbia and Howard County area, many families have employer-sponsored insurance through Johns Hopkins Health System, CareFirst BlueCross BlueShield, or UnitedHealthcare. Doula coverage by private insurers is expanding — some policies now include doula benefits. Check your specific plan documents and ask about ‘certified doula services.’ HSA and FSA funds can also help cover out-of-pocket doula costs.",
+    faqs: [
+      { q: "How much does a doula cost in Columbia?", a: "Expect to pay $900 to $2,500 for a doula in the Columbia area. Howard County rates trend slightly higher than Baltimore prices but lower than DC rates, and many doulas serve the entire Baltimore–DC corridor. The investment typically covers prenatal visits, labor support, and postpartum check-ins. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Columbia?", a: "Yes — Maryland Medicaid covers doula services as of 2024, with up to $900 per pregnancy ($450 for labor support plus $75 per visit for up to 4 prenatal/postpartum visits). Your doula must be a Maryland Medicaid-enrolled provider. This is real coverage, not a pilot — ask upfront whether your doula accepts Medicaid. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> and make sure your doula team knows your preferences." },
+      { q: "Which hospitals in Columbia accommodate birth plans?", a: "Howard County General Hospital (a Johns Hopkins affiliate, right in Columbia) and Holy Cross Hospital in Silver Spring both accommodate birth plans. Howard County General has direct access to Hopkins specialists for higher-risk cases, while Holy Cross has a Level III NICU. Doulas are welcomed at both — confirm current visitor policies during your hospital tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in prepared." },
+      { q: "Are there birth centers in Columbia?", a: "No — there are no freestanding birth centers in Columbia or Howard County as of 2026. Howard County General Hospital offers midwifery-model care within the hospital setting. The nearest freestanding birth center options are in the Baltimore area. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through what’s right for your birth." },
+      { q: "Does True Joy Birthing work with Columbia families?", a: "True Joy Birthing provides free birth-prep tools for Columbia families. The free birth plan, checklist, and guided walkthrough in the app work for any Columbia birth setting. The app also helps you connect with local doulas and midwives in your area." },
+      { q: "What about postpartum support in Columbia?", a: "Columbia has strong lactation support through Howard County General Hospital and local pediatric practices. The postpartum doula community draws from both Baltimore and DC networks, so you’ll find more options than in most suburbs. Start your search during pregnancy if you want ongoing postpartum support. <a href=\"/postpartum-doula/\">Learn more about postpartum doula support</a>." },
+    ],
+    nearbyCities: ["baltimore-md", "richmond-va", "virginia-beach-va"],
+    publishedDate: "2026-06-08",
+    lat: 39.2139,
+    lng: -76.8558,
+  },
 
+  "acworth-ga": {
+    city: "Acworth",
+    state: "GA",
+    slug: "acworth-ga",
+    heroImage: "/images/acworth-ga-hero-v2.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-acworth-ga-v2.webp",
+    supportSceneImage: "/images/acworth-ga-support-scene.webp",
+    publishedDate: "2026-08-02",
+    enableBlogResources: true,
+    costLow: 1000,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    culture: "Acworth sits northwest of Atlanta in Cobb County, where families balance a smaller lake-and-suburb community with access to major maternity hospitals in Marietta, Canton, and Austell. Local birth support includes independent doulas serving Acworth, Kennesaw, Woodstock, and the surrounding North Atlanta area.",
+    heroLocalDetail: "Acworth families know the lake roads, downtown Main Street, and the drive toward Kennestone or Northside Cherokee when birth day arrives. The city's mix of established neighborhoods and Lake Allatoona recreation gives families a quieter home base while keeping regional maternity care within reach.",
+    hospitalDetails: [
+      { name: "Wellstar Kennestone Hospital", thumbnail: "/images/acworth-ga-wellstar-kennestone.webp", address: "677 Church St NE, Marietta, GA 30060", url: "https://www.wellstar.org/locations/hospital/wellstar-kennestone-hospital", nicuLevel: "III", doulaPolicy: "Confirm current visitor policy", medicaid: true, paragraph: "Wellstar Kennestone Hospital in Marietta is a major regional labor-and-delivery center for families west and northwest of Atlanta, including Acworth. Its maternity services connect patients with obstetric, maternal-fetal medicine, anesthesia, and neonatal teams, while its Level III NICU supports higher-acuity newborn care. Ask during a tour about labor-room support, doula access, visitor limits, induction procedures, VBAC availability, lactation support, and the current route to the dedicated Labor and Delivery entrance." },
+      { name: "Northside Hospital Cherokee", thumbnail: "/images/acworth-ga-northside-cherokee.webp", address: "450 Northside Cherokee Blvd, Canton, GA 30115", url: "https://www.northside.com/locations/northside-hospital-cherokee", nicuLevel: "III", doulaPolicy: "Confirm current visitor policy", medicaid: true, paragraph: "Northside Hospital Cherokee in Canton is a practical option for many Acworth and northern Cobb families, particularly those living near Woodstock and the Cherokee County line. The hospital provides labor and delivery with obstetric, anesthesia, newborn, and higher-risk support. Before choosing it, ask about its current doula and support-person rules, birth-plan preferences, induction and VBAC policies, lactation services, newborn observation or NICU capabilities, and whether your prenatal provider delivers there." },
+      { name: "Wellstar Cobb Hospital", thumbnail: "/images/acworth-ga-wellstar-cobb.webp", address: "3950 Austell Rd, Austell, GA 30106", url: "https://www.wellstar.org/locations/hospital/wellstar-cobb-hospital", nicuLevel: "III", doulaPolicy: "Confirm current visitor policy", medicaid: true, paragraph: "Wellstar Cobb Hospital in Austell serves families across western Cobb County and may be a useful maternity-care option depending on where you live in Acworth and which practice manages your pregnancy. Its hospital setting provides labor and delivery, obstetric evaluation, newborn care, and access to regional specialists. Confirm the current birthing-unit entrance, support-person and doula rules, lactation resources, epidural and induction procedures, VBAC availability, and the level of neonatal care available for your specific needs before delivery." }
+    ],
+    birthCenterDetails: [],
+    medicaidNote: "No — Georgia Medicaid does not currently provide a statewide doula benefit; confirm current eligibility and any pilot or managed-care benefits with your plan.",
+    midwifeInfo: {
+      paragraph: "Georgia licenses certified nurse midwives (CNMs) through the Georgia Board of Nursing and certified professional midwives (CPMs) through the Georgia Composite Medical Board. Midwifery care in the Acworth area is typically provided through independent practices and home-birth settings; confirm current licensure and scope of practice with your chosen provider.",
+      credentialTypes: " and CNMs",
+      credentialDetail: "In Georgia, certified nurse midwives (CNMs) are licensed through the Georgia Board of Nursing, and certified professional midwives (CPMs) are certified through the Georgia Composite Medical Board. Midwifery care in the Acworth area is typically provided through independent practices and home-birth settings."
+    },
+    insuranceNote: "Private doula reimbursement varies. Ask your insurer whether doula support is covered and whether HSA or FSA funds may be used; request a superbill if the provider offers one.",
+    localDoulas: [
+      { name: "Christie Williams", credential: "Birth Doula; childbirth educator", practice: "Roots of Abundance", url: "https://www.bornbir.com/christie-williams", costRange: "$1,300-$1,400", costRange_source: "Bornbir listing", description: "Christie Williams offers birth-doula and childbirth-education support from Acworth for families in northwest metro Atlanta. Confirm current package details, availability, backup coverage, and whether the listed education and birth-support services match your plans.", serviceArea: ["Acworth, GA", "North Atlanta"] },
+      { name: "Liliana Delgado-Garcia", credential: "DONA-trained birth and breastfeeding doula", practice: "Independent", url: "https://www.hellomeela.com/listing/liliana-delgado-garcia/", costRange: "$1,200-$2,500", costRange_source: "market-estimate", description: "Liliana Delgado-Garcia is listed as an Acworth birth and breastfeeding doula with DONA training and experience supporting families through birth preparation and labor. Ask about current availability, bilingual support, postpartum options, and the services included in her package.", serviceArea: ["Acworth, GA", "Cobb County"] },
+      { name: "North Atlanta Birth Services", credential: "Certified doula team", practice: "North Atlanta Birth Services", url: "https://www.northatlantabirth.com/birth-doula-services", costRange: "$1,500-$3,000", costRange_source: "market-estimate", description: "North Atlanta Birth Services serves families in Acworth, Woodstock, Canton, Kennesaw, and nearby communities with pregnancy, birth, and postpartum support. Their published package model includes prenatal visits and backup coverage; confirm the assigned doula, hospital experience, and current fees during your consultation.", serviceArea: ["Acworth, GA", "Woodstock, GA", "Canton, GA"] },
+      { name: "Beautiful Joy Birthing Services", credential: "Birth doula", practice: "Beautiful Joy Birthing Services", url: "https://www.yelp.com/search?find_desc=Doulas&find_loc=Acworth%2C+GA", costRange: "$1,000-$2,500", costRange_source: "market-estimate", description: "Beautiful Joy Birthing Services is a local Acworth-area birth-support listing. Use a consultation to verify the current provider, certifications, package inclusions, service radius, backup arrangements, and whether the practice supports hospital, birth-center, or home-birth plans.", serviceArea: ["Acworth, GA", "Cobb County"] }
+    ],
+    faqs: [
+      { q: "How much does a doula cost in Acworth?", a: "Birth-doula packages in the Acworth and northwest Atlanta area commonly fall around $1,000 to $3,000, depending on experience, prenatal visits, backup coverage, and postpartum services. Ask each doula what is included before comparing prices." },
+      { q: "Does Medicaid cover doulas in Acworth?", a: "No — Georgia Medicaid does not currently provide a statewide doula benefit. Confirm current benefits with your managed-care plan because programs can change." },
+      { q: "Which hospitals serve Acworth families?", a: "Wellstar Kennestone in Marietta, Northside Hospital Cherokee in Canton, and Wellstar Cobb in Austell are regional labor-and-delivery options. Your prenatal provider and home address may determine which hospitals are available." },
+      { q: "Are there birth centers in Acworth?", a: "There are no verified freestanding birth centers in Acworth itself in this guide. Ask local midwives about current options in the broader Atlanta area and verify that any center is operating, licensed, and accepting clients." },
+      { q: "Does True Joy Birthing work with Acworth families?", a: "True Joy Birthing provides free birth-preparation tools for Acworth families, including a birth plan, checklists, and guided preparation resources." }
+    ],
+    birthStats: { cesareanRate: 32.1, maternalMortalityRate: 23.8, homeBirthRate: 1.4, birthCenterBirthRate: 0.5, dataYear: 2024, dataSource: "CDC NCHS, National Vital Statistics System; state-level proxy for Georgia" },
+    nearbyCities: ["marietta-ga", "woodstock-ga", "kennesaw-ga", "atlanta-ga"],
+    lat: 34.0657,
+    lng: -84.6767,
+  },
+  "agoura-hills-ca": {
+    city: "Agoura Hills",
+    state: "CA",
+    slug: "agoura-hills-ca",
+    publishedDate: "2026-08-02",
+    costLow: 1200,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    culture: "Agoura Hills families have access to hospital maternity care and birth-support professionals across the surrounding Los Angeles County region. Local options and coverage details should be confirmed directly with each provider and health plan.",
+    medicaidNote: "No — confirm current doula coverage and eligibility with your state Medicaid plan and the doula you interview.",
+    insuranceNote: "Coverage varies by plan. Ask your insurer whether certified doula services are eligible and whether HSA or FSA funds may apply.",
+    hospitalDetails: [],
+    birthCenterDetails: [],
+    localDoulas: [],
+    faqs: [
+      { q: "How much does a doula cost in Agoura Hills?", a: "Doula pricing varies by experience, package, and services. Local families should request current quotes and ask what prenatal, labor, and postpartum support is included." },
+      { q: "Does Medicaid cover doulas in Agoura Hills?", a: "Coverage depends on the state program and the doula's enrollment. Confirm current benefits with your Medicaid plan before hiring a provider." },
+      { q: "Does True Joy Birthing work with Agoura Hills families?", a: "True Joy Birthing provides free birth-preparation tools for families in Agoura Hills, including a birth plan and guided preparation resources." }
+    ],
+    nearbyCities: []
+  },
+  "alameda-ca": {
+    city: "Alameda",
+    state: "CA",
+    slug: "alameda-ca",
+    publishedDate: "2026-08-02",
+    costLow: 1200,
+    costHigh: 3000,
+    shelbiServesHere: false,
+    culture: "Alameda families have access to hospital maternity care and birth-support professionals across the surrounding Alameda County region. Local options and coverage details should be confirmed directly with each provider and health plan.",
+    medicaidNote: "No — confirm current doula coverage and eligibility with your state Medicaid plan and the doula you interview.",
+    insuranceNote: "Coverage varies by plan. Ask your insurer whether certified doula services are eligible and whether HSA or FSA funds may apply.",
+    hospitalDetails: [],
+    birthCenterDetails: [],
+    localDoulas: [],
+    faqs: [
+      { q: "How much does a doula cost in Alameda?", a: "Doula pricing varies by experience, package, and services. Local families should request current quotes and ask what prenatal, labor, and postpartum support is included." },
+      { q: "Does Medicaid cover doulas in Alameda?", a: "Coverage depends on the state program and the doula's enrollment. Confirm current benefits with your Medicaid plan before hiring a provider." },
+      { q: "Does True Joy Birthing work with Alameda families?", a: "True Joy Birthing provides free birth-preparation tools for families in Alameda, including a birth plan and guided preparation resources." }
+    ],
+    nearbyCities: []
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
