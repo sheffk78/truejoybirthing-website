@@ -17,7 +17,18 @@
   "arlington-tx": [],
   "austin-tx": [],
   "augusta-ga": [],
-  "atlanta-ga": [],
+  "atlanta-ga": [
+    {
+      "slug": "acworth-ga",
+      "sharedProviders": 1
+    }
+  ],
+  "acworth-ga": [
+    {
+      "slug": "atlanta-ga",
+      "sharedProviders": 1
+    }
+  ],
   "spokane-wa": [],
   "seattle-wa": [],
   "tacoma-wa": [],

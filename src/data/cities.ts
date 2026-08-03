@@ -6755,7 +6755,8 @@ midwifeInfo: {
     city: "Acworth",
     state: "GA",
     slug: "acworth-ga",
-    heroImage: "/images/acworth-ga-hero-v2.webp",
+    heroImage: "/images/acworth-ga-hero-v3.webp",
+    heroAlt: "Pregnant woman beside a wooded Georgia lake near Acworth",
     ogImage: "https://truejoybirthing.com/images/og-city-acworth-ga-v2.webp",
     supportSceneImage: "/images/acworth-ga-support-scene.webp",
     publishedDate: "2026-08-02",
@@ -6779,11 +6780,22 @@ midwifeInfo: {
     },
     insuranceNote: "Private doula reimbursement varies. Ask your insurer whether doula support is covered and whether HSA or FSA funds may be used; request a superbill if the provider offers one.",
     localDoulas: [
-      { name: "Christie Williams", credential: "Birth Doula; childbirth educator", practice: "Roots of Abundance", url: "https://www.bornbir.com/christie-williams", costRange: "$1,300-$1,400", costRange_source: "Bornbir listing", description: "Christie Williams offers birth-doula and childbirth-education support from Acworth for families in northwest metro Atlanta. Confirm current package details, availability, backup coverage, and whether the listed education and birth-support services match your plans.", serviceArea: ["Acworth, GA", "North Atlanta"] },
-      { name: "Liliana Delgado-Garcia", credential: "DONA-trained birth and breastfeeding doula", practice: "Independent", url: "https://www.hellomeela.com/listing/liliana-delgado-garcia/", costRange: "$1,200-$2,500", costRange_source: "market-estimate", description: "Liliana Delgado-Garcia is listed as an Acworth birth and breastfeeding doula with DONA training and experience supporting families through birth preparation and labor. Ask about current availability, bilingual support, postpartum options, and the services included in her package.", serviceArea: ["Acworth, GA", "Cobb County"] },
-      { name: "North Atlanta Birth Services", credential: "Certified doula team", practice: "North Atlanta Birth Services", url: "https://www.northatlantabirth.com/birth-doula-services", costRange: "$1,500-$3,000", costRange_source: "market-estimate", description: "North Atlanta Birth Services serves families in Acworth, Woodstock, Canton, Kennesaw, and nearby communities with pregnancy, birth, and postpartum support. Their published package model includes prenatal visits and backup coverage; confirm the assigned doula, hospital experience, and current fees during your consultation.", serviceArea: ["Acworth, GA", "Woodstock, GA", "Canton, GA"] },
-      { name: "Beautiful Joy Birthing Services", credential: "Birth doula", practice: "Beautiful Joy Birthing Services", url: "https://www.yelp.com/search?find_desc=Doulas&find_loc=Acworth%2C+GA", costRange: "$1,000-$2,500", costRange_source: "market-estimate", description: "Beautiful Joy Birthing Services is a local Acworth-area birth-support listing. Use a consultation to verify the current provider, certifications, package inclusions, service radius, backup arrangements, and whether the practice supports hospital, birth-center, or home-birth plans.", serviceArea: ["Acworth, GA", "Cobb County"] }
-    ],
+      { name: "Christie Williams", credential: "Birth Doula; childbirth educator", practice: "Roots of Abundance", url: "https://www.bornbir.com/christie-williams", costRange: "$1,300-$1,400", costRange_source: "Bornbir listing", description: "Christie Williams offers birth-doula and childbirth-education support from Acworth for families in northwest metro Atlanta. Confirm current package details, availability, backup coverage, and whether the listed education and birth-support services match your plans.", serviceArea: ["Acworth, GA", "North Atlanta"] ,
+    photo: "/images/provider-acworth-ga-christie-williams.webp"
+  ,
+    acceptingClients: "true"
+  },
+      { name: "Liliana Delgado-Garcia", credential: "DONA-trained birth and breastfeeding doula", practice: "Independent", url: "https://www.hellomeela.com/listing/liliana-delgado-garcia/", costRange: "$1,200-$2,500", costRange_source: "market-estimate", description: "Liliana Delgado-Garcia is listed as an Acworth birth and breastfeeding doula with DONA training and experience supporting families through birth preparation and labor. Ask about current availability, bilingual support, postpartum options, and the services included in her package.", serviceArea: ["Acworth, GA", "Cobb County"] ,
+    acceptingClients: "true"
+  },
+      { name: "North Atlanta Birth Services", credential: "Certified doula team", practice: "North Atlanta Birth Services", url: "https://www.northatlantabirth.com/birth-doula-services", costRange: "$1,500-$3,000", costRange_source: "market-estimate", description: "North Atlanta Birth Services serves families in Acworth, Woodstock, Canton, Kennesaw, and nearby communities with pregnancy, birth, and postpartum support. Their published package model includes prenatal visits and backup coverage; confirm the assigned doula, hospital experience, and current fees during your consultation.", serviceArea: ["Acworth, GA", "Woodstock, GA", "Canton, GA"] ,
+    photo: "/images/provider-acworth-ga-north-atlanta-birth-services.webp"
+  ,
+    acceptingClients: "true"
+  },
+      { name: "Beautiful Joy Birthing Services", credential: "Birth doula", practice: "Beautiful Joy Birthing Services", url: "https://www.yelp.com/search?find_desc=Doulas&find_loc=Acworth%2C+GA", costRange: "$1,000-$2,500", costRange_source: "market-estimate", description: "Beautiful Joy Birthing Services is a local Acworth-area birth-support listing. Use a consultation to verify the current provider, certifications, package inclusions, service radius, backup arrangements, and whether the practice supports hospital, birth-center, or home-birth plans.", serviceArea: ["Acworth, GA", "Cobb County"] ,
+    acceptingClients: "true"
+  }],
     faqs: [
       { q: "How much does a doula cost in Acworth?", a: "Birth-doula packages in the Acworth and northwest Atlanta area commonly fall around $1,000 to $3,000, depending on experience, prenatal visits, backup coverage, and postpartum services. Ask each doula what is included before comparing prices." },
       { q: "Does Medicaid cover doulas in Acworth?", a: "No — Georgia Medicaid does not currently provide a statewide doula benefit. Confirm current benefits with your managed-care plan because programs can change." },
