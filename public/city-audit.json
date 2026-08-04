@@ -140,7 +140,7 @@
     "started_at": "",
     "slot": "",
     "batch_id": "",
-    "blocked_reason": "4 of 5 providers have no public email — only New Life Birth Services (admin@newlifebirthservices.org) contacted. Katie Schmierer, Laura Dehne, Gabriella Sarate, and Tintawi Kaigziabiher are listed on Bornbir but have no public email addresses. Contact forms on Bornbir require account login.",
+    "blocked_reason": "4 of 5 providers have no public email \u2014 only New Life Birth Services (admin@newlifebirthservices.org) contacted. Katie Schmierer, Laura Dehne, Gabriella Sarate, and Tintawi Kaigziabiher are listed on Bornbir but have no public email addresses. Contact forms on Bornbir require account login.",
     "url": "https://truejoybirthing.com/birth-support/albuquerque-nm/"
   },
   {
@@ -658,9 +658,9 @@
     "og": true,
     "support": true,
     "hospitals": true,
-    "hospital_count": 4,
+    "hospital_count": 5,
     "doulas": true,
-    "doula_count": 6,
+    "doula_count": 8,
     "video": true,
     "outreach": true,
     "placeholder": false,
@@ -669,7 +669,8 @@
     "slot": "",
     "batch_id": "",
     "blocked_reason": null,
-    "url": "https://truejoybirthing.com/birth-support/chicago-il/"
+    "url": "https://truejoybirthing.com/birth-support/chicago-il/",
+    "video_id": "4bxkdW7pQDM"
   },
   {
     "slug": "cleveland-oh",
