@@ -74,12 +74,13 @@
     "city": "Alameda",
     "state": "CA",
     "stage": "complete",
-    "has_video": false,
+    "has_video": true,
     "has_outreach": false,
     "last_updated": "2026-08-03T18:40:49.053277",
     "providers_total": 4,
     "hospitals_total": 3,
     "has_birth_stats": true,
-    "deployed": true
+    "deployed": true,
+    "video_id": "vKDB5B8bDKY"
   }
 }
