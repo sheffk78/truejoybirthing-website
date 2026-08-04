@@ -92,7 +92,7 @@
     "started_at": "",
     "slot": "",
     "batch_id": "",
-    "blocked_reason": "4 of 5 providers have no public email — only New Life Birth Services (admin@newlifebirthservices.org) contacted. Katie Schmierer, Laura Dehne, Gabriella Sarate, and Tintawi Kaigziabiher are listed on Bornbir but have no public email addresses. Contact forms on Bornbir require account login.",
+    "blocked_reason": "4 of 5 providers have no public email \u2014 only New Life Birth Services (admin@newlifebirthservices.org) contacted. Katie Schmierer, Laura Dehne, Gabriella Sarate, and Tintawi Kaigziabiher are listed on Bornbir but have no public email addresses. Contact forms on Bornbir require account login.",
     "url": "https://truejoybirthing.com/birth-support/albuquerque-nm/"
   },
   {
@@ -621,7 +621,8 @@
     "slot": "",
     "batch_id": "",
     "blocked_reason": null,
-    "url": "https://truejoybirthing.com/birth-support/chicago-il/"
+    "url": "https://truejoybirthing.com/birth-support/chicago-il/",
+    "video_id": "4bxkdW7pQDM"
   },
   {
     "slug": "cleveland-oh",
@@ -2349,7 +2350,8 @@
     "slot": "",
     "batch_id": "",
     "blocked_reason": null,
-    "url": "https://truejoybirthing.com/birth-support/torrance-ca/"
+    "url": "https://truejoybirthing.com/birth-support/torrance-ca/",
+    "video_id": "IR6s2L-0K7Y"
   },
   {
     "slug": "tucson-az",
@@ -2691,12 +2693,12 @@
     "slug": "alameda-ca",
     "city": "Alameda",
     "state": "CA",
-    "score": 0,
-    "stage": "build",
-    "hero": false,
-    "hero_issue": "Missing",
-    "og": false,
-    "support": false,
+    "score": 100,
+    "stage": "complete",
+    "hero": true,
+    "hero_issue": null,
+    "og": true,
+    "support": true,
     "hospitals": false,
     "hospital_count": 0,
     "doulas": false,
