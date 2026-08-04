@@ -6869,6 +6869,8 @@ midwifeInfo: {
     state: "CA",
     slug: "alameda-ca",
     publishedDate: "2026-08-02",
+    lat: 37.7652,
+    lng: -122.2416,
     costLow: 1200,
     costHigh: 3000,
     shelbiServesHere: false,
@@ -6881,6 +6883,10 @@ midwifeInfo: {
     enableBlogResources: true,
     medicaidNote: "Yes — California covers doula services through Medi-Cal. Since January 2023, you can receive free doula care during pregnancy, labor, and the postpartum period if you qualify for Medi-Cal coverage.",
     insuranceNote: "Coverage varies by plan. Ask your insurer whether certified doula services are eligible and whether HSA or FSA funds may apply.",
+    midwifeInfo: {
+      paragraph: "California licenses Certified Nurse-Midwives (CNMs) to practice in hospitals and birth centers, with the Midwifery Bridge Certificate (2024) also allowing Licensed Midwives (LMs) who meet requirements to attend home births. Alameda families have excellent midwifery access: Highland Hospital\u2019s Family Birthing Center is midwife-led, and licensed midwives like Evaly Long of Island Midwife offer home birth in Alameda. For out-of-hospital birth, Pacifica Family Birth Center in the East Bay provides accredited freestanding birth center care.",
+      credentialTypes: " (CNMs, LMs)",
+      credentialDetail: "California recognizes CNMs (hospital and birth-center practice) and LMs (out-of-hospital and home birth), giving Alameda families strong provider choice across all birth settings." },
     birthStats: {
       cesareanRate: 32.0,
       maternalMortalityRate: 10.5,
