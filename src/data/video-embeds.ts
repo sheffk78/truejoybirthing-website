@@ -1172,4 +1172,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
 
+  "leesburg-fl": {
+    videoId: "QyOVa0x5Af0",
+    title: "Leesburg, FL Doula & Midwife Guide: Costs, Hospitals & Medicaid",
+    description: "Complete birth support guide for Leesburg, Florida. Meet local doulas and midwives, compare hospital policies, and learn about doula costs and Medicaid coverage in Lake County.",
+  },
+
 };
