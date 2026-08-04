@@ -7072,7 +7072,7 @@ midwifeInfo: {
     shelbiServesHere: false,
     heroImage: "/images/fulshear-tx-doula-hero-rva.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-fulshear-tx.webp",
-    supportSceneImage: "/images/fulshear-tx-birth-doula-support.webp",
+    supportSceneImage: "/images/fulshear-tx-birth-doula-support-v2.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Fulshear: Fort Bend County birth support and doula care",
     localDoulas: [
       { name: "Yvonne Estrada" , credential: "Certified Birth Doula (Harmonious Birthing)" , practice: "One2One Doula Services" , url: "https://doulamatch.net/profile/39998/yvonne-estrada" , photo: "/images/provider-fulshear-tx-yvonne-estrada.webp" , description: "Birth and postpartum doula based in Fulshear, TX, serving Houston and surrounding areas within a 45-mile range. Yvonne is certified through Harmonious Birthing and offers birth, postpartum, childbirth education, belly binding, infant massage, and photography services. Bilingual in English and Spanish, she provides prenatal and postpartum stretching classes in Katy. Her packages include Labor Only, Standard (3 prenatal visits, labor, 2 postpartum), and Premium with extra postpartum support." , costRange: "$875-$1,675" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Childbirth Education" , "Placenta Encapsulation"] , serviceArea: ["Fulshear, TX" , "Katy, TX" , "Houston, TX" , "Fort Bend County, TX"] },
