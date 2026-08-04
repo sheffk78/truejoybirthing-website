@@ -6815,7 +6815,7 @@ midwifeInfo: {
     publishedDate: "2026-08-03",
     lat: 34.1433,
     lng: -118.7620,
-    heroImage: "/images/agoura-hills-ca-birth-doula-hero-rva2.webp" ,
+    heroImage: "/images/agoura-hills-ca-birth-doula-hero-rva3.webp" ,
     ogImage: "https://truejoybirthing.com/images/og-city-agoura-hills-ca-v2.webp" ,
     supportSceneImage: "/images/agoura-hills-ca-support-scene.webp" ,
     enableBlogResources: true,
