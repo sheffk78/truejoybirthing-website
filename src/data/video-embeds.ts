@@ -373,6 +373,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-26T00:00:00-06:00",
   },
 
+"el-paso-tx": {
+    videoId: "jFeA5eWK2Vc",
+    title: "El Paso Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — 5 doulas, 4 hospitals, 1 birth center, costs, and Texas Medicaid, all in under 3.5 minutes.",
+    duration: "PT3M25S",
+    uploadDate: "2026-08-03T00:00:00-06:00",
+},
 "austin-tx": {
     videoId: "goIwPTplnic",
     title: "Austin Texas Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
