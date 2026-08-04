@@ -140,7 +140,7 @@
     "started_at": "",
     "slot": "",
     "batch_id": "",
-    "blocked_reason": "4 of 5 providers have no public email — only New Life Birth Services (admin@newlifebirthservices.org) contacted. Katie Schmierer, Laura Dehne, Gabriella Sarate, and Tintawi Kaigziabiher are listed on Bornbir but have no public email addresses. Contact forms on Bornbir require account login.",
+    "blocked_reason": "4 of 5 providers have no public email \u2014 only New Life Birth Services (admin@newlifebirthservices.org) contacted. Katie Schmierer, Laura Dehne, Gabriella Sarate, and Tintawi Kaigziabiher are listed on Bornbir but have no public email addresses. Contact forms on Bornbir require account login.",
     "url": "https://truejoybirthing.com/birth-support/albuquerque-nm/"
   },
   {
@@ -2763,14 +2763,14 @@
     "slug": "alhambra-ca",
     "city": "Alhambra",
     "state": "CA",
-    "score": 0,
+    "score": 85,
     "stage": "build",
     "hero": false,
     "hero_issue": "",
     "og": false,
     "support": false,
     "hospitals": false,
-    "hospital_count": 0,
+    "hospital_count": 3,
     "doulas": false,
     "doula_count": 0,
     "video": false,
@@ -2781,7 +2781,14 @@
     "slot": "",
     "batch_id": "",
     "blocked_reason": null,
-    "url": "https://truejoybirthing.com/birth-support/alhambra-ca/"
+    "url": "https://truejoybirthing.com/birth-support/alhambra-ca/",
+    "has_video": false,
+    "has_outreach": false,
+    "hero_image": true,
+    "og_image": true,
+    "provider_count": 5,
+    "birth_center_count": 1,
+    "deployed": true
   },
   {
     "slug": "allen-park-mi",
