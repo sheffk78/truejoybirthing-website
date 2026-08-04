@@ -204,6 +204,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT4M23S",
     uploadDate: "2026-06-22T00:00:00-07:00",
   },
+  "agoura-hills-ca": {
+    videoId: "I6FZs6BRkkI",
+    title: "Agoura Hills Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — Agoura Hills doulas and midwives, hospitals, costs, and California Medicaid (Medi-Cal covers doula care), all in under 5 minutes.",
+    duration: "PT4M26S",
+    uploadDate: "2026-08-03T00:00:00-07:00",
+  },
   "san-francisco-ca": {
     videoId: "ucjWrh5iuMs",
     title: "San Francisco Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",

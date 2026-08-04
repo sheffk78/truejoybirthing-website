@@ -50,5 +50,36 @@
     "birth_centers_total": 1,
     "deployed": true,
     "published_date": "2026-07-29"
+  },
+  "chicago-il": {
+    "slug": "chicago-il",
+    "stage": "complete",
+    "has_video": true,
+    "video_id": "4bxkdW7pQDM",
+    "video_url": "https://youtu.be/4bxkdW7pQDM",
+    "has_outreach": true,
+    "last_updated": "2026-08-03T18:40:49.053277"
+  },
+  "torrance-ca": {
+    "slug": "torrance-ca",
+    "stage": "complete",
+    "has_video": true,
+    "video_id": "IR6s2L-0K7Y",
+    "video_url": "https://youtu.be/IR6s2L-0K7Y",
+    "has_outreach": true,
+    "last_updated": "2026-08-03T18:40:49.053277"
+  },
+  "alameda-ca": {
+    "slug": "alameda-ca",
+    "city": "Alameda",
+    "state": "CA",
+    "stage": "complete",
+    "has_video": false,
+    "has_outreach": false,
+    "last_updated": "2026-08-03T18:40:49.053277",
+    "providers_total": 4,
+    "hospitals_total": 3,
+    "has_birth_stats": true,
+    "deployed": true
   }
 }
