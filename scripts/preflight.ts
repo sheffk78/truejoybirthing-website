@@ -983,72 +983,88 @@ function run(): void {
   // Skip for v2+ hero uploads — the new file isn't on the CDN yet (chicken-and-egg).
   // G34 becomes meaningful AFTER deploy, as a post-deploy verification gate.
   if (targetSlug) {
-    // Check if hero is a v2+ variant (new upload, not yet on CDN)
-    let heroIsV2PlusG34 = false;
+    // Pre-check: if the city page itself isn't live on CDN yet, skip G34 entirely.
+    // A new city's hero can't be on the CDN if the page doesn't exist yet.
+    let cityPageIsLive = true;
     try {
-      const cityBlockForG34 = execSync(
-        `awk '/"${targetSlug}": \\{/{p=1; start=NR} p; /^  "[a-z].*": \\{/{if(p && NR>start) exit}' src/data/cities.ts`,
-        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 5000 }
-      );
-      const heroMatchG34 = cityBlockForG34.match(/heroImage:\s*"([^"]+)"/);
-      if (heroMatchG34 && (/-v[2-9]\./.test(heroMatchG34[1]) || /-hero\./.test(heroMatchG34[1]) || /-(?:hero|skyline)-[a-z0-9]{2,}\.webp/.test(heroMatchG34[1]))) {
-        heroIsV2PlusG34 = true;
+      const pageCheck = execSync(
+        `curl -s -o /dev/null -w "%{http_code}" "https://truejoybirthing.com/birth-support/${targetSlug}/"`,
+        { encoding: 'utf-8', timeout: 10000 }
+      ).trim();
+      if (pageCheck === '404' || pageCheck === '000') {
+        cityPageIsLive = false;
       }
     } catch {}
-
-    if (heroIsV2PlusG34) {
-      // For v2+ heroes, try the actual CDN check first.
-      // If the CDN has already been purged/propagated, let it pass.
+    if (!cityPageIsLive) {
+      results.push({ gate: 'G34', status: 'SKIP', detail: 'New city — page not yet deployed, CDN check deferred to post-deploy verification' });
+    } else {
+      // City page is live — run the normal G34 CDN hero check.
+      // Check if hero is a v2+ variant (new upload, not yet on CDN)
+      let heroIsV2PlusG34 = false;
       try {
-        const g34ResultEarly = execSync(
-          `python3 scripts/preflight-image-helper.py cdn-match ${targetSlug}`,
-          { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 15000 }
+        const cityBlockForG34 = execSync(
+          `awk '/"${targetSlug}": \\{/{p=1; start=NR} p; /^  "[a-z].*": \\{/{if(p && NR>start) exit}' src/data/cities.ts`,
+          { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 5000 }
         );
-        const g34DataEarly = JSON.parse(g34ResultEarly.trim());
-        if (g34DataEarly.pass) {
-          results.push({ gate: 'G34', status: 'PASS', detail: g34DataEarly.detail });
-        } else {
-          results.push({ gate: 'G34', status: 'SKIP', detail: 'Hero is v2+ upload — CDN match deferred to post-deploy verification' });
+        const heroMatchG34 = cityBlockForG34.match(/heroImage:\s*"([^"]+)"/);
+        if (heroMatchG34 && (/-v[2-9]\./.test(heroMatchG34[1]) || /-hero\./.test(heroMatchG34[1]) || /-(?:hero|skyline)-[a-z0-9]{2,}\.webp/.test(heroMatchG34[1]))) {
+          heroIsV2PlusG34 = true;
         }
-      } catch (e: any) {
-        const outputEarly = typeof e.stdout === 'string' ? e.stdout : '';
+      } catch {}
+
+      if (heroIsV2PlusG34) {
+        // For v2+ heroes, try the actual CDN check first.
+        // If the CDN has already been purged/propagated, let it pass.
         try {
-          const g34DataEarlyFail = JSON.parse(outputEarly.trim());
-          if (g34DataEarlyFail.pass) {
-            results.push({ gate: 'G34', status: 'PASS', detail: g34DataEarlyFail.detail });
-          } else if (g34DataEarlyFail.detail && g34DataEarlyFail.detail.includes('404')) {
-            // v2+ hero not on CDN yet — this is expected before deploy, SKIP
-            results.push({ gate: 'G34', status: 'SKIP', detail: 'Hero is v2+ upload — CDN match deferred to post-deploy verification' });
+          const g34ResultEarly = execSync(
+            `python3 scripts/preflight-image-helper.py cdn-match ${targetSlug}`,
+            { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 15000 }
+          );
+          const g34DataEarly = JSON.parse(g34ResultEarly.trim());
+          if (g34DataEarly.pass) {
+            results.push({ gate: 'G34', status: 'PASS', detail: g34DataEarly.detail });
           } else {
             results.push({ gate: 'G34', status: 'SKIP', detail: 'Hero is v2+ upload — CDN match deferred to post-deploy verification' });
           }
-        } catch {
-          results.push({ gate: 'G34', status: 'SKIP', detail: 'Hero is v2+ upload — CDN match deferred to post-deploy verification' });
+        } catch (e: any) {
+          const outputEarly = typeof e.stdout === 'string' ? e.stdout : '';
+          try {
+            const g34DataEarlyFail = JSON.parse(outputEarly.trim());
+            if (g34DataEarlyFail.pass) {
+              results.push({ gate: 'G34', status: 'PASS', detail: g34DataEarlyFail.detail });
+            } else if (g34DataEarlyFail.detail && g34DataEarlyFail.detail.includes('404')) {
+              results.push({ gate: 'G34', status: 'SKIP', detail: 'Hero is v2+ upload — CDN match deferred to post-deploy verification' });
+            } else {
+              results.push({ gate: 'G34', status: 'SKIP', detail: 'Hero is v2+ upload — CDN match deferred to post-deploy verification' });
+            }
+          } catch {
+            results.push({ gate: 'G34', status: 'SKIP', detail: 'Hero is v2+ upload — CDN match deferred to post-deploy verification' });
+          }
         }
-      }
-    } else {
-      try {
-        const g34Result = execSync(
-          `python3 scripts/preflight-image-helper.py cdn-match ${targetSlug}`,
-          { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 15000 }
-        );
-        const g34Data = JSON.parse(g34Result.trim());
-        if (g34Data.pass) {
-          results.push({ gate: 'G34', status: 'PASS', detail: g34Data.detail });
-        } else {
-          results.push({ gate: 'G34', status: 'FAIL', detail: g34Data.detail });
-        }
-      } catch (e: any) {
-        const output = typeof e.stdout === 'string' ? e.stdout : '';
+      } else {
         try {
-          const g34Data = JSON.parse(output.trim());
+          const g34Result = execSync(
+            `python3 scripts/preflight-image-helper.py cdn-match ${targetSlug}`,
+            { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 15000 }
+          );
+          const g34Data = JSON.parse(g34Result.trim());
           if (g34Data.pass) {
             results.push({ gate: 'G34', status: 'PASS', detail: g34Data.detail });
           } else {
             results.push({ gate: 'G34', status: 'FAIL', detail: g34Data.detail });
           }
-        } catch {
-          results.push({ gate: 'G34', status: 'SKIP', detail: 'Could not check CDN match' });
+        } catch (e: any) {
+          const output = typeof e.stdout === 'string' ? e.stdout : '';
+          try {
+            const g34Data = JSON.parse(output.trim());
+            if (g34Data.pass) {
+              results.push({ gate: 'G34', status: 'PASS', detail: g34Data.detail });
+            } else {
+              results.push({ gate: 'G34', status: 'FAIL', detail: g34Data.detail });
+            }
+          } catch {
+            results.push({ gate: 'G34', status: 'SKIP', detail: 'Could not check CDN match' });
+          }
         }
       }
     }
