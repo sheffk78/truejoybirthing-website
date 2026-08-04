@@ -1153,5 +1153,23 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [328, "Your next step"],
     ],
   },
+  "fulshear-tx": {
+    videoId: "bLqCtzkNO4s",
+    title: "Fulshear, TX Doula and Birth Plan Guide: Costs, Hospitals and Medicaid",
+    description: "Fulshear birth guide covering local doulas, Memorial Hermann Katy, Houston Methodist West, Katy Birth Center, costs, and Texas Medicaid.",
+    duration: "PT6M52S",
+    uploadDate: "2026-08-04T00:00:00-06:00",
+    chapters: [
+      [0, "Welcome to Fulshear"],
+      [15, "Doula costs overview"],
+      [35, "Meet doulas serving Fulshear"],
+      [155, "Memorial Hermann Katy Hospital"],
+      [200, "Houston Methodist West Hospital"],
+      [245, "Katy Birth Center"],
+      [290, "Texas Medicaid coverage"],
+      [320, "Build your birth plan"],
+      [400, "Start your joyful birth"],
+    ],
+  },
 
 };
