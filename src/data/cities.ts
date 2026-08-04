@@ -7174,7 +7174,7 @@ midwifeInfo: {
     state: "CA",
     slug: "alhambra-ca",
     publishedDate: "2026-08-04",
-    heroImage: "/images/alhambra-ca-birth-doula-skyline-v2.webp",
+    heroImage: "/images/alhambra-ca-birth-doula-skyline-v3.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-alhambra-ca-v2.webp",
     enableBlogResources: true,
     supportSceneAlt: "A doula providing comfort measures to an expectant mom near Main Street in Alhambra, with the San Gabriel Mountains in the distance",

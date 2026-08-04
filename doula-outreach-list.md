@@ -30,3 +30,17 @@
 
 **No-email providers:** 0 (all providers had discoverable emails)
 **Bounces/failures:** 0
+
+---
+
+## Alhambra, CA (alhambra-ca) - 2026-08-04
+
+**Page:** https://truejoybirthing.com/birth-support/alhambra-ca/
+**Status:** Outreach sent (1 email, 1 provider covered)
+
+| Provider | Email | Status | Notes |
+|---|---|---|---|
+| Monique Salgado (DOULA is Doula Services) | monique@doulais.com | Sent | First-touch, CD(DONA), 11 yrs experience, Spinning Babies certified, accepts Kaiser |
+
+**No-email providers:** 4 (Tracy Hartley — blocked by duplicate send protection for another city; Happy Baby Journey — no public email; Catherine Roche — no public email; Hannah Struwe — no public email)
+**Bounces/failures:** 0
