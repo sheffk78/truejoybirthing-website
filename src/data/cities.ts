@@ -7169,6 +7169,183 @@ midwifeInfo: {
       credentialDetail: "In Florida, Licensed Midwives (LMs) are licensed by the state to attend out-of-hospital births, and Certified Professional Midwives (CPMs) meet national standards for out-of-hospital midwifery. Certified Nurse-Midwives (CNMs) practice in hospital settings. Leesburg has all three types practicing in the surrounding Lake County area."
     }
   },
+    "alhambra-ca": {
+    city: "Alhambra",
+    state: "CA",
+    slug: "alhambra-ca",
+    publishedDate: "2026-08-04",
+    heroImage: "/images/alhambra-ca-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-alhambra-ca-v2.webp",
+    enableBlogResources: true,
+    supportSceneAlt: "A doula providing comfort measures to an expectant mom near Main Street in Alhambra, with the San Gabriel Mountains in the distance",
+    supportSceneImage: "/images/alhambra-ca-support-scene.webp",
+    midwifeInfo: {
+      paragraph: "California licenses both Licensed Midwives (LMs) and Certified Nurse-Midwives (CNMs), with LMs attending home and birth center births and CNMs practicing in hospitals. California Medi-Cal covers doula services through the PAVE program, reimbursing approximately $1,587 per pregnancy. Alhambra families have access to several nearby hospitals with maternity services, including Garfield Medical Center in Monterey Park, San Gabriel Valley Medical Center in San Gabriel, and USC Arcadia Hospital in Arcadia. Moxie Birth in nearby South Pasadena offers freestanding birth center care about 5 miles from Alhambra.",
+      credentialTypes: " (LMs and CNMs)",
+      credentialDetail: "California's Licensed Midwife (LM) credential is one of the most established in the country, with clear regulations for out-of-hospital birth, meaning California families have more midwifery options than states that only license CNMs."
+    },
+    costLow: 1200,
+    costHigh: 3500,
+    shelbiServesHere: false,
+    culture: "Alhambra is a diverse San Gabriel Valley city with a large Asian-American community and strong family-centered culture. The city does not have its own hospital with labor and delivery services, but families have easy access to several nearby hospitals within a 10-minute drive, including Garfield Medical Center in Monterey Park, San Gabriel Valley Medical Center in San Gabriel, and USC Arcadia Hospital in Arcadia. California's Medi-Cal doula benefit makes doula care accessible for low-income families through the PAVE program.",
+    heroLocalDetail: "At 38 weeks in Alhambra, you're likely planning the short drive to Garfield Medical Center on Garfield Avenue in Monterey Park or San Gabriel Valley Medical Center on Las Tunas Drive in San Gabriel. Both are within 10 minutes via surface streets. Main Street and Valley Boulevard offer flat walking paths for those final-weeks strolls. Give yourself extra time if you're traveling during rush hour on the 10 or 710 freeways.",
+    hospitalDetails: [
+      {
+        name: "Garfield Medical Center",
+        thumbnail: "/images/garfield-medical-center-monterey-park.webp",
+        paragraph: "Garfield Medical Center, located in neighboring Monterey Park about 3 miles from Alhambra, features a comprehensive Maternity Center with Labor, Delivery, and Recovery (LDR) suites that allow you to remain in one room throughout the birthing process. The hospital has two dedicated C-section operating rooms, a Level II 20-bed Neonatal Intensive Care Unit staffed by neonatologists available 24 hours a day, and OB anesthesiologists on-site around the clock. The hospital offers a Breastfeeding and Couplet Care Program that keeps mom and baby together, multilingual prenatal and childbirth classes in English and Chinese, private postpartum rooms upon request, and social services for families with special needs. Doulas are welcome as support persons. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery.",
+        nicuLevel: "II",
+        doulaPolicy: "Doulas welcome as support persons",
+        midwifeFriendly: true,
+        waterBirth: "Labor tubs available",
+        medicaid: true,
+        lactation: true,
+        privateRooms: true,
+        address: "525 N Garfield Ave, Monterey Park, CA 91754",
+        url: "https://www.ahmchealth.com/gmc/getpage.php?name=Maternity_Center"
+      },
+      {
+        name: "San Gabriel Valley Medical Center",
+        thumbnail: "/images/san-gabriel-valley-medical-center.webp",
+        paragraph: "San Gabriel Valley Medical Center, located in San Gabriel about 4 miles from Alhambra, is designated as a Baby-Friendly hospital by the World Health Organization and UNICEF for its commitment to optimal mother-baby bonding and breastfeeding support. The Women's Pavilion features beautifully furnished Labor-Delivery-Recovery (LDR) suites with private showers and sleep chairs for labor coaches, dedicated cesarean delivery surgical suites within the unit, and comfortable postpartum rooms with rooming-in encouraged. The hospital has a Newborn Intensive Care Unit (NICU) equipped with the latest technology, with neonatologists and specially trained nurses available for infants requiring specialized care. The hospital offers maternity tours, celebration meals for new parents, and breastfeeding support in English, Chinese, Spanish, and Vietnamese. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to get started.",
+        nicuLevel: "II",
+        doulaPolicy: "Doulas welcome as support persons",
+        midwifeFriendly: true,
+        waterBirth: "Labor tubs available",
+        medicaid: true,
+        lactation: true,
+        privateRooms: true,
+        address: "438 W Las Tunas Dr, San Gabriel, CA 91776",
+        url: "https://www.ahmchealth.com/sgvmc/sgvmc/sgvmc/getpage.php?name=Womens_Pavilion"
+      },
+      {
+        name: "USC Arcadia Hospital",
+        thumbnail: "/images/usc-arcadia-hospital.webp",
+        paragraph: "USC Arcadia Hospital (formerly Methodist Hospital of Southern California), located in Arcadia about 5 miles from Alhambra, offers comprehensive maternity care with private and semi-private labor and delivery suites designed for comfort and safety. The hospital features a 17-bed Level II Neonatal Intensive Care Unit (NICU) for newborns requiring specialized care, with experienced OB-GYNs, certified nurses, and laborists on-call 24/7. USC Arcadia provides prepared childbirth classes, maternity tours in both English and Mandarin Chinese, a Mommy and Baby Bistro breastfeeding support group, and dedicated lactation consultants. The hospital handles routine deliveries as well as high-risk pregnancies with specialized prenatal testing. Doulas are welcome as support persons. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery.",
+        nicuLevel: "II",
+        doulaPolicy: "Doulas welcome as support persons",
+        midwifeFriendly: true,
+        waterBirth: "Labor tubs available",
+        medicaid: true,
+        lactation: true,
+        privateRooms: true,
+        address: "300 W Huntington Dr, Arcadia, CA 91007",
+        url: "https://www.keckmedicine.org/centers-and-programs/usc-arcadia-hospital/maternity-care-and-services/"
+      }
+    ],
+    // Birth center search: No freestanding birth centers within Alhambra city limits.
+    // Moxie Birth in South Pasadena (~5 miles from Alhambra) is the nearest freestanding birth center.
+    // Verified via Google Maps and Yelp: 4.5 stars, 11 reviews. 1416 El Centro St, South Pasadena.
+    // Verified 2026-08-04.
+    birthCenterDetails: [
+      {
+        name: "Moxie Birth",
+        address: "1416 El Centro St, Ste 100, South Pasadena, CA 91030",
+        url: "https://www.moxiecare.com/birth",
+        paragraph: "Moxie Birth is LA's only freestanding birth center founded and operated by both a midwife and an obstetrician, located about 5 miles from Alhambra in South Pasadena. They offer out-of-hospital birth in a home-like setting, water birth, and full-spectrum reproductive care from IUI to postpartum. The center accepts some insurance plans and offers personalized prenatal care. Phone: (626) 399-0649.",
+        thumbnail: "/images/moxie-birth-south-pasadena-alhambra.webp",
+        services: ["Water Birth", "Midwife-Led Care", "Prenatal Care", "Postpartum Support"],
+        medicaid: false,
+        distance: "5 miles from Alhambra"
+      }
+    ],
+    localDoulas: [
+      {
+        name: "Tracy Hartley",
+        credential: "CD(DONA), CCCE, CHBE",
+        practice: "B*E*S*T Doula Service",
+        url: "https://www.bestdoulas.com",
+        description: "Birth doula and childbirth educator with 30 years of experience and over 700 births attended. Certified through DONA International, ICEA, CAPPA, and Childbirth International. Offers private childbirth classes, in-person and virtual birth support, and her unique Best of Both Worlds option pairing a newer in-person doula with her virtual expertise. Serves all hospitals within a 25-mile radius of Alhambra. Speaks English and American Sign Language.",
+        photo: "/images/provider-alhambra-ca-tracy-hartley.webp",
+        services: ["Birth Doula", "Childbirth Education", "Virtual Support", "Birth Photography"],
+        costRange: "$1,500-$5,000",
+        acceptingClients: true
+      },
+      {
+        name: "Happy Baby Journey",
+        credential: "CD(DONA)",
+        practice: "Happy Baby Journey",
+        url: "https://www.happybabyjourney.com",
+        description: "Alhambra-based doula agency offering birth support, postpartum care, antepartum care for high-risk pregnancies, lactation support, and holistic wellness services including placenta encapsulation and herbalist services. Accepts insurance including Medi-Cal, Kaiser, and other plans. Provides 24/7 virtual support and connects families with trusted doulas through video interviews. Phone: (626) 628-0205.",
+        photo: "/images/provider-alhambra-ca-happy-baby-journey.webp",
+        services: ["Birth Doula", "Postpartum", "Lactation Support", "Antepartum", "Placenta Encapsulation"],
+        costRange: "$1,200-$3,500",
+        acceptingClients: true
+      },
+      {
+        name: "Monique Salgado",
+        credential: "CD(DONA)",
+        practice: "DOULA is Doula Services",
+        url: "https://www.doulais.com",
+        description: "DONA International certified birth doula based in San Gabriel with 11 years of experience and 135 births attended. Offers the Intentional Birth curriculum, prenatal lactation sessions, Spinning Babies parent classes, and up to 18 hours of in-person labor support with immediate postpartum care. Accepts Kaiser insurance. Spinning Babies certified.",
+        photo: "/images/provider-alhambra-ca-monique-salgado.webp",
+        services: ["Birth Doula", "Lactation Counseling", "Infant Massage", "Childbirth Education"],
+        costRange: "$950-$3,500",
+        acceptingClients: true
+      },
+      {
+        name: "Catherine (Cat) Roche",
+        credential: "Birth Doula",
+        practice: "Cat Roche Doula Services",
+        url: "",
+        description: "Birth doula based in Pasadena specializing in unmedicated births with 3 years of experience. Accepts Kaiser and Health Net insurance, with L.A. Care Health Plan coming soon. Serves Alhambra and the greater San Gabriel Valley area with personalized support for empowering, Christ-centered birth experiences.",
+        photo: "/images/provider-alhambra-ca-catherine-roche.webp",
+        services: ["Birth Doula"],
+        costRange: "$1,200-$2,800",
+        acceptingClients: true
+      },
+      {
+        name: "Hannah Struwe",
+        credential: "Postpartum Doula (DONA certifying)",
+        practice: "Hannah Struwe Doula Services",
+        url: "",
+        description: "Postpartum doula based in Temple City, currently certifying with DONA International. With a background in psychology and personal experience as a mom, she provides grounded, empathetic postpartum support to families in Alhambra and the San Gabriel Valley. Offers empowering, educational, and practical newborn care guidance.",
+        photo: "/images/provider-alhambra-ca-hannah-struwe.webp",
+        services: ["Postpartum"],
+        costRange: "$25-$35/hr",
+        acceptingClients: true
+      }
+    ],
+    medicaidNote: "Yes — California's Medi-Cal program covers doula services as a state benefit, with reimbursement rates around $1,587 per pregnancy through the PAVE (Providing Access and doula Viability through Equity) program. Families on Medi-Cal can access doula support at no cost. Ask your doula whether they accept Medi-Cal directly.",
+    insuranceNote: "In Alhambra, many families have private insurance through Anthem Blue Cross, Blue Shield, or Kaiser Permanente. Kaiser members can access contracted doula services at no extra cost. Happy Baby Journey in Alhambra accepts Medi-Cal and multiple insurance plans. Doula coverage by other private insurers is expanding under California law. Check your specific plan for doula benefits. HSA and FSA funds can help cover out-of-pocket doula costs.",
+    faqs: [
+      {
+        q: "How much does a doula cost in Alhambra?",
+        a: "Expect to pay $1,200 to $3,500 for a birth doula in Alhambra. Los Angeles-area rates are higher than inland areas, reflecting the higher cost of living. The investment typically covers prenatal visits, labor support, and postpartum check-ins. <a href='/birth-plan-template/'>Download the free birth plan template</a> and start thinking about what matters most to you."
+      },
+      {
+        q: "Does Medi-Cal cover doulas in Alhambra?",
+        a: "Yes. California's Medi-Cal program covers doula services, reimbursing around $1,587 per pregnancy through the PAVE program. Happy Baby Journey in Alhambra accepts Medi-Cal directly. Ask your doula upfront whether they accept Medi-Cal. <a href='/birth-plan-template/'>Grab the free birth plan template</a> and make sure your doula team knows your preferences."
+      },
+      {
+        q: "Which hospitals near Alhambra accommodate birth plans?",
+        a: "Garfield Medical Center in Monterey Park, San Gabriel Valley Medical Center in San Gabriel, and USC Arcadia Hospital in Arcadia all accommodate birth plans and welcome doulas. All three have Level II NICUs for advanced neonatal care. San Gabriel Valley Medical Center is Baby-Friendly designated. <a href='/birth-plan-template/'>Grab the free birth plan template</a> so you walk in prepared."
+      },
+      {
+        q: "Are there birth centers in Alhambra?",
+        a: "Alhambra does not have freestanding birth centers within city limits, but Moxie Birth in nearby South Pasadena (about 5 miles away) offers out-of-hospital birth with licensed midwives and water birth options. All three nearby hospitals provide hospital-based maternity care with private rooms. <a href='/birth-plan-template/'>Grab the free birth plan template</a> to think through your options."
+      },
+      {
+        q: "Does True Joy Birthing work with Alhambra families?",
+        a: "True Joy Birthing provides free birth-prep tools for Alhambra families. The free birth plan, checklist, and guided walkthrough in the app work for any Alhambra birth setting. The app also helps you connect with local doulas and midwives in your area."
+      },
+      {
+        q: "What about postpartum support in Alhambra?",
+        a: "Alhambra has hospital-based lactation support at nearby Garfield Medical Center and San Gabriel Valley Medical Center. The San Gabriel Valley postpartum doula community is well-established, with providers like Happy Baby Journey offering in-home postpartum care. Start your search during pregnancy if you want ongoing postpartum support. <a href='/blog/postpartum-doula/'>Learn more about postpartum doula support</a>."
+      }
+    ],
+    nearbyCities: ["los-angeles-ca", "glendale-ca", "pasadena-ca", "long-beach-ca"],
+    lat: 34.0951,
+    lng: -118.1270,
+    birthStats: {
+      cesareanRate: 32.0,
+      maternalMortalityRate: 10.5,
+      homeBirthRate: 0.9,
+      birthCenterBirthRate: 0.4,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System",
+    },
+},
 };
 
 
