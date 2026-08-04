@@ -7128,7 +7128,7 @@ midwifeInfo: {
     shelbiServesHere: false,
     heroImage: "/images/leesburg-fl-birth-doula-hero-v2.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-leesburg-fl.webp",
-    supportSceneImage: "/images/leesburg-fl-birth-doula-support.webp",
+    supportSceneImage: "/images/leesburg-fl-birth-doula-support-v2.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Leesburg: Lake County Florida birth support and doula care",
     localDoulas: [
       { name: "Anna Heintzelman" , credential: "DONA-Trained Birth & Postpartum Doula" , practice: "Eden Doula Services" , url: "https://www.hellomeela.com/listing/anna-heintzelman/" , photo: "/images/provider-leesburg-fl-anna-heintzelman.webp" , description: "DONA-trained birth and postpartum doula, childbirth educator, and midwife assistant based in Mount Dora, just east of Leesburg in Lake County. Anna has supported over 276 families in 5+ years, taking only 2-3 clients per month to give each her full attention. Her birth package includes 2 prenatal visits, unlimited phone and text support, unlimited labor and birth support, 20-30 birth photos, and 1 postpartum visit. Also offers placenta encapsulation, tinctures, and in-home childbirth classes for couples. Works as a midwife assistant for local birth centers and home birth midwives, giving her deep familiarity with Lake County birth settings." , costRange: "$1,200-$1,800" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Childbirth Education" , "Placenta Encapsulation"], serviceArea: ["Leesburg, FL" , "Mount Dora, FL" , "Lake County, FL" , "Central Florida"] },
