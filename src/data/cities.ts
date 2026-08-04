@@ -7356,7 +7356,7 @@ midwifeInfo: {
     heroImage: "/images/allen-park-mi-birth-doula-hero-v2.webp" ,
     heroAlt: "Pregnant woman silhouette at golden hour overlooking the Downriver Michigan landscape near Allen Park" ,
     ogImage: "https://truejoybirthing.com/images/og-city-allen-park-mi.webp" ,
-    supportSceneImage: "/images/allen-park-mi-support-scene-v2.webp" ,
+    supportSceneImage: "/images/allen-park-mi-support-scene-v3.webp" ,
     publishedDate: "2026-08-04",
     enableBlogResources: true,
     costLow: 650,
