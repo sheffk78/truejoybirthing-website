@@ -204,6 +204,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT4M23S",
     uploadDate: "2026-06-22T00:00:00-07:00",
   },
+  "alameda-ca": {
+    videoId: "vKDB5B8bDKY",
+    title: "Alameda CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
+    description: "Watch the full city guide — Alameda doulas and midwives, hospitals, costs, and California Medi-Cal (doula care covered since Jan 2023), all in under 5 minutes.",
+    duration: "PT5M59S",
+    uploadDate: "2026-08-03T00:00:00-07:00",
+  },
   "agoura-hills-ca": {
     videoId: "I6FZs6BRkkI",
     title: "Agoura Hills Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
