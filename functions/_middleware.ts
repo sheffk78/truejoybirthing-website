@@ -34,8 +34,6 @@ const redirects: Record<string, string> = {
   "/course/filling-out-the-birth-plan": "/birth-plan-template/",
   // Unbuilt birth-support state pages → hub
   "/birth-support/ks": "/birth-support/",
-  "/birth-support/mt": "/birth-support/",
-  "/birth-support/nm": "/birth-support/",
   "/birth-support/sd": "/birth-support/",
   "/birth-support/wv": "/birth-support/",
   "/birth-support/wy": "/birth-support/",
