@@ -75,12 +75,15 @@
     "state": "CA",
     "stage": "complete",
     "has_video": true,
-    "has_outreach": false,
+    "has_outreach": true,
     "last_updated": "2026-08-03T18:40:49.053277",
     "providers_total": 4,
     "hospitals_total": 3,
     "has_birth_stats": true,
     "deployed": true,
-    "video_id": "vKDB5B8bDKY"
+    "video_id": "vKDB5B8bDKY",
+    "outreach_sent_at": "2026-08-03T21:30:25.828478",
+    "outreach_provider_count": 4,
+    "outreach_emails_sent": 4
   }
 }
