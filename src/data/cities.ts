@@ -6870,7 +6870,7 @@ midwifeInfo: {
     costHigh: 3000,
     shelbiServesHere: false,
     culture: "Alameda families have access to hospital maternity care and birth-support professionals across the surrounding Alameda County region. Local options and coverage details should be confirmed directly with each provider and health plan.",
-    medicaidNote: "No — confirm current doula coverage and eligibility with your state Medicaid plan and the doula you interview.",
+    medicaidNote: "Yes — California covers doula services through Medi-Cal. Since January 2023, you can receive free doula care during pregnancy, labor, and the postpartum period if you qualify for Medi-Cal coverage.",
     insuranceNote: "Coverage varies by plan. Ask your insurer whether certified doula services are eligible and whether HSA or FSA funds may apply.",
     hospitalDetails: [],
     birthCenterDetails: [],
