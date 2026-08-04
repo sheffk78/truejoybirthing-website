@@ -7126,7 +7126,7 @@ midwifeInfo: {
     costLow: 800,
     costHigh: 1800,
     shelbiServesHere: false,
-    heroImage: "/images/leesburg-fl-birth-doula-hero-rva.webp",
+    heroImage: "/images/leesburg-fl-birth-doula-hero-v2.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-leesburg-fl.webp",
     supportSceneImage: "/images/leesburg-fl-birth-doula-support.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Leesburg: Lake County Florida birth support and doula care",
