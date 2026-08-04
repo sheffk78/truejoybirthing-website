@@ -624,11 +624,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-07-16T19:50:00-06:00",
 },
 "chicago-il": {
-    videoId: "wl7_7AvPY8I",
+    videoId: "4bxkdW7pQDM",
     title: "Chicago Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — 4 hospitals, 2 birth centers, 6 doulas, midwives, costs, and Illinois Medicaid, all in under 5 minutes.",
-    duration: "PT4M22S",
-    uploadDate: "2026-07-20T18:05:00-05:00",
+    duration: "PT6M16S",
+    uploadDate: "2026-08-03T19:29:17-05:00",
     chapters: [
       [0, "Welcome to Chicago"],
       [13, "What This Video Covers"],
@@ -996,11 +996,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-07-30T00:00:00-07:00",
   },
   "torrance-ca": {
-    videoId: "zerWj9GuwHk",
+    videoId: "IR6s2L-0K7Y",
     title: "Torrance CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
     description: "Watch the full city guide — 2 hospitals, 1 birth center, 7 doulas, costs, and California Medi-Cal, all in under 5 minutes.",
     duration: "PT4M08S",
-    uploadDate: "2026-07-30T00:00:00-07:00",
+    uploadDate: "2026-08-03T00:00:00-07:00",
     chapters: [
       [0, "Introduction"],
       [12, "What we cover"],

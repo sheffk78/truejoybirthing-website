@@ -1279,7 +1279,7 @@ function run(): void {
         'irving-tx': 257000, 'chandler-az': 275000, 'scottsdale-az': 242000,
         'north-las-vegas-nv': 274000, 'norfolk-va': 236000, 'winston-salem-nc': 251000,
         'chula-vista-ca': 275000, 'madison-wi': 272000, 'boise-id': 237000,
-        'fremont-ca': 237000, 'spokane-wa': 235000, 'richmond-va': 231000,
+        'fremont-ca': 237000, 'alameda-ca': 78000, 'spokane-wa': 235000, 'richmond-va': 231000,
         'san-bernardino-ca': 222000, 'birmingham-al': 200000, 'modesto-ca': 218000,
         'rochester-ny': 211000, 'huntsville-al': 215000,
         'aurora-il': 201000, 'reno-nv': 264000,
