@@ -93,8 +93,7 @@
     "slot": "",
     "batch_id": "",
     "blocked_reason": null,
-    "url": "https://truejoybirthing.com/birth-support/alameda-ca/",
-    "video_id": "vKDB5B8bDKY"
+    "url": "https://truejoybirthing.com/birth-support/alameda-ca/"
   },
   {
     "slug": "albany-ny",
@@ -141,7 +140,7 @@
     "started_at": "",
     "slot": "",
     "batch_id": "",
-    "blocked_reason": "4 of 5 providers have no public email \u2014 only New Life Birth Services (admin@newlifebirthservices.org) contacted. Katie Schmierer, Laura Dehne, Gabriella Sarate, and Tintawi Kaigziabiher are listed on Bornbir but have no public email addresses. Contact forms on Bornbir require account login.",
+    "blocked_reason": "4 of 5 providers have no public email — only New Life Birth Services (admin@newlifebirthservices.org) contacted. Katie Schmierer, Laura Dehne, Gabriella Sarate, and Tintawi Kaigziabiher are listed on Bornbir but have no public email addresses. Contact forms on Bornbir require account login.",
     "url": "https://truejoybirthing.com/birth-support/albuquerque-nm/"
   },
   {
@@ -2609,8 +2608,8 @@
     "video": false,
     "outreach": true,
     "placeholder": false,
-    "in_progress": false,
-    "started_at": "",
+    "in_progress": true,
+    "started_at": "1785817388",
     "slot": "",
     "batch_id": "",
     "blocked_reason": null,
