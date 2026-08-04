@@ -7070,7 +7070,7 @@ midwifeInfo: {
     costLow: 800,
     costHigh: 2200,
     shelbiServesHere: false,
-    heroImage: "/images/fulshear-tx-birth-doula-skyline-v2.webp",
+    heroImage: "/images/fulshear-tx-doula-hero-rva.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-fulshear-tx.webp",
     supportSceneImage: "/images/fulshear-tx-birth-doula-support.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Fulshear: Fort Bend County birth support and doula care",
