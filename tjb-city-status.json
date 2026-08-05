@@ -85,5 +85,14 @@
     "outreach_sent_at": "2026-08-03T21:30:25.828478",
     "outreach_provider_count": 4,
     "outreach_emails_sent": 4
+  },
+  "allen-park-mi": {
+    "has_outreach": true,
+    "outreach_sent_at": "2026-08-05T00:13:48.753007Z",
+    "outreach_provider_count": 4,
+    "outreach_no_email_count": 1,
+    "outreach_no_email_providers": [
+      "Kayla Connors (Google Form only, no email)"
+    ]
   }
 }
