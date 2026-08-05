@@ -1136,6 +1136,24 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [298, "Illinois Medicaid & Insurance"],
       [328, "Your Next Step"],
     ],
+  "arlington-heights-il": {
+    videoId: "-q-NelTEdKo",
+    title: "Arlington Heights Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Complete guide to doulas, midwives, hospitals, and birth support in Arlington Heights, IL",
+    duration: "PT5M53S",
+    uploadDate: "2026-08-05",
+    chapters: [
+      [0, "Congratulations"],
+      [15, "Cost Overview"],
+      [42, "Endeavor Health Northwest Community Hospital"],
+      [112, "Advocate Lutheran General Hospital"],
+      [188, "Meet the Doulas"],
+      [270, "Free Birth Plan App"],
+      [300, "Cost Breakdown"],
+      [328, "Insurance & Medicaid"],
+      [340, "Your Next Step"]
+    ],
+  },
   },
 
   "newport-news-va": {

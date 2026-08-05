@@ -124,14 +124,27 @@
   "apple-valley-ca": {
     "city": "Apple Valley",
     "state": "CA",
-    "stage": "deployed",
-    "score": 80,
+    "stage": "complete",
+    "score": 100,
     "url": "https://truejoybirthing.com/birth-support/apple-valley-ca/",
     "providers": 4,
     "hospitals": 1,
     "birthCenters": 1,
-    "video": "pending",
-    "outreach": "pending",
+    "video": {
+      "youtubeId": "MJk2BIFwBlc",
+      "duration": "2m25s",
+      "status": "embedded"
+    },
+    "outreach": {
+      "sent": [
+        "midwifelareina@highdesertbirths.com",
+        "info@preciouspathwaysmidwifery.com"
+      ],
+      "pending": [
+        "Lakisha Calvin (no public email - Bornbir only)",
+        "Beautiful Blessings (no public email - Instagram only)"
+      ]
+    },
     "lastUpdated": "2026-08-05"
   }
 }
