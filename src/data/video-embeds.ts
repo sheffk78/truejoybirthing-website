@@ -1197,7 +1197,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     description: "Complete birth support guide for Leesburg, Florida. Meet local doulas and midwives, compare hospital policies, and learn about doula costs and Medicaid coverage in Lake County.",
   },
   "allen-park-mi": {
-    videoId: "VYWx2jPDMnM",
+    videoId: "zlhdgZPaHSs",
     title: "Allen Park Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     duration: "PT5M6S",
     uploadDate: "2026-08-04",
