@@ -1346,7 +1346,7 @@ function run(): void {
         'laurel-md': 30000, 'stamford-ct': 136000,
         'st-augustine-fl': 15000, 'port-st-lucie-fl': 218000,
         'gainesville-fl': 141000, 'meridian-id': 120000, 'lehi-ut': 75000,
-        'wichita-falls-tx': 102000,
+        'wichita-falls-tx': 102000, 'arlington-heights-il': 75000,
         'worcester-ma': 186000, 'grand-rapids-mi': 199000,
         'rochester-mn': 121000,
         'albany-ny': 101000, 'frisco-tx': 219000, 'mesquite-tx': 150000,

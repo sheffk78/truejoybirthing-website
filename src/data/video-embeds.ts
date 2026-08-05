@@ -1310,4 +1310,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
 
+  "apple-valley-ca": {
+    videoId: "MJk2BIFwBlc",
+    title: "Apple Valley Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 3 minutes.",
+    duration: "PT2M25S",
+    uploadDate: "2026-08-05T00:00:00-07:00",
+  },
 };
