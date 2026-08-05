@@ -1271,6 +1271,25 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
 
+  "anna-tx": {
+    videoId: "gregPu-5Mss",
+    title: "Anna Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Guide to doulas, hospitals, birth centers, and Medicaid coverage in Anna, Texas.",
+    duration: "PT7M58S",
+    uploadDate: "2026-08-05",
+    chapters: [
+      [0, "Hook"],
+      [17, "Overview"],
+      [40, "Hospitals"],
+      [141, "Birth Center"],
+      [180, "Doulas & Midwives"],
+      [324, "Free App"],
+      [360, "Costs"],
+      [385, "Medicaid"],
+      [420, "Call to Action"],
+    ],
+  },
+
   "anaheim-ca": {
     videoId: "n_cx9tuJxvw",
     title: "Anaheim Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
