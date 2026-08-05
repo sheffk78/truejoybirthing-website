@@ -1233,4 +1233,21 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
 
+  "princeton-tx": {
+    videoId: "E1BG-fxwFFQ",
+    title: "Princeton Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    duration: "PT5M41S",
+    uploadDate: "2026-08-05",
+    chapters: [
+      [0, "Hook"],
+      [13, "Overview"],
+      [31, "Hospitals"],
+      [94, "Doulas & Midwives"],
+      [191, "Free App"],
+      [218, "Costs"],
+      [245, "Medicaid"],
+      [272, "Call to Action"],
+    ],
+  },
+
 };
