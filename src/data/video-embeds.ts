@@ -1270,4 +1270,25 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
 
+
+  "anaheim-ca": {
+    videoId: "n_cx9tuJxvw",
+    title: "Anaheim Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Guide to doulas, hospitals, birth centers, and Medicaid coverage in Anaheim, California.",
+    duration: "PT5M53S",
+    uploadDate: "2026-08-05",
+    chapters: [
+      [0, "Introduction"],
+      [15, "What We Cover"],
+      [35, "Hospitals"],
+      [82, "Birth Center"],
+      [116, "Doulas & Midwives"],
+      [231, "Free App"],
+      [251, "Costs"],
+      [274, "Medicaid"],
+      [301, "Call to Action"],
+    ],
+  },
+
+
 };
