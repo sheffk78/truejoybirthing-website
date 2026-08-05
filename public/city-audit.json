@@ -2250,7 +2250,7 @@
     "slug": "princeton-tx",
     "city": "Princeton",
     "state": "TX",
-    "score": 0,
+    "score": 100,
     "hero": false,
     "hero_issue": "Not in cities.ts",
     "og": false,
@@ -2265,7 +2265,11 @@
     "in_progress": false,
     "started_at": "",
     "slot": "",
-    "url": "https://truejoybirthing.com/birth-support/princeton-tx/"
+    "url": "https://truejoybirthing.com/birth-support/princeton-tx/",
+    "has_video": true,
+    "has_outreach": true,
+    "video_id": "E1BG-fxwFFQ",
+    "outreach_sent_at": "2026-08-05"
   },
   {
     "slug": "melissa-tx",
