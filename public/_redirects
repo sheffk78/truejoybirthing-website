@@ -178,12 +178,9 @@
 /birth-support/miami-fl/ /birth-support/fl/ 301
 /birth-support/san-antonio-tx /birth-support/tx/ 301
 /birth-support/san-antonio-tx/ /birth-support/tx/ 301
-/birth-support/corpus-christi-tx /birth-support/tx/ 301
-/birth-support/corpus-christi-tx/ /birth-support/tx/ 301
-/birth-support/laredo-tx /birth-support/tx/ 301
-/birth-support/laredo-tx/ /birth-support/tx/ 301
-/birth-support/lubbock-tx /birth-support/tx/ 301
-/birth-support/lubbock-tx/ /birth-support/tx/ 301
+# NOTE: corpus-christi-tx, laredo-tx, lubbock-tx removed — these now have
+# real .astro pages; redirects caused canonical mismatches and orphan pages.
+# el-paso-tx redirect kept (no page exists for it yet).
 
 
 # ════════════════════════════════════════════════════════════

@@ -1191,6 +1191,26 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
 
+  "alvin-tx": {
+    videoId: "aDB_LUS5JBo",
+    title: "Alvin, TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid",
+    description: "Alvin birth guide covering local doulas, HCA Houston Clear Lake, HCA Houston Southeast, BioBirth Birth Center, costs, and Texas Medicaid.",
+    duration: "PT4M33S",
+    uploadDate: "2026-08-04T22:41:00-06:00",
+    chapters: [
+      [0, "Welcome to Alvin"],
+      [10, "What this guide covers"],
+      [27, "HCA Houston Healthcare Clear Lake"],
+      [62, "HCA Houston Healthcare Southeast"],
+      [97, "BioBirth Birth Center"],
+      [127, "Meet doulas serving Alvin"],
+      [258, "The free birth plan app"],
+      [288, "How much does a doula cost in Alvin?"],
+      [318, "Texas Medicaid coverage"],
+      [358, "Start your joyful birth"],
+    ],
+  },
+
   "leesburg-fl": {
     videoId: "QyOVa0x5Af0",
     title: "Leesburg, FL Doula & Midwife Guide: Costs, Hospitals & Medicaid",

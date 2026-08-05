@@ -347,23 +347,26 @@ function run(): void {
 
   // ── A4: Title lengths ≤70 chars ──
   try {
-    const shellResult = execSync(
-      `pass=true; for f in dist/birth-support/*/index.html; do ` +
-      `slug=$(basename $(dirname "$f")); ` +
-      `title=$(grep -o '<title>[^<]*</title>' "$f" | sed 's/<[^>]*>//g' | sed 's/&amp;/\\&/g'); ` +
-      `len=$(printf '%s' "$title" | wc -c | tr -d ' '); ` +
-      `if [ "$len" -gt 70 ]; then ` +
-      `echo "LONG: $slug ($len chars: $title)"; pass=false; ` +
-      `fi; done; $pass`,
-      { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 30000 }
-    );
-    results.push({ gate: 'A4', status: 'PASS', detail: 'All city + state page titles ≤70 chars' });
-  } catch (e: any) {
-    const output = e.stdout?.toString() || '';
-    const longPages = output.split('\n').filter(l => l.includes('LONG:'));
+    const scanGlob = targetSlug
+        ? `dist/birth-support/${targetSlug}/index.html`
+        : `dist/birth-support/*/index.html`;
+      const shellResult = execSync(
+        `pass=true; for f in ${scanGlob}; do ` +
+        `slug=$(basename $(dirname "$f")); ` +
+        `title=$(grep -o '<title>[^<]*</title>' "$f" | sed 's/<[^>]*>//g' | sed 's/&amp;/\\\\&/g'); ` +
+        `len=$(printf '%s' "$title" | wc -c | tr -d ' '); ` +
+        `if [ "$len" -gt 70 ]; then ` +
+        `echo "LONG: $slug ($len chars: $title)"; pass=false; ` +
+        `fi; done; $pass`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 30000 }
+      );
+      results.push({ gate: 'A4', status: 'PASS', detail: targetSlug ? `Title length ≤70 chars for ${targetSlug}` : 'All city + state page titles ≤70 chars' });
+    } catch (e: any) {
+      const output = e.stdout?.toString() || '';
+      const longPages = output.split('\n').filter((l: string) => l.includes('LONG:'));
     if (longPages.length > 0) {
       results.push({ gate: 'A4', status: 'FAIL', detail: `${longPages.length} page(s) with title >70 chars` });
-      longPages.forEach(l => results.push({ gate: 'A4', status: 'FAIL', detail: `  ${l.trim()}` }));
+      longPages.forEach((l: string) => results.push({ gate: 'A4', status: 'FAIL', detail: `  ${l.trim()}` }));
     } else {
       results.push({ gate: 'A4', status: 'FAIL', detail: 'Title check command failed' });
     }
@@ -371,23 +374,26 @@ function run(): void {
 
   // ── A4b: Meta/OG description ≤155 chars (Google SERP display limit) ──
   try {
-    const shellResult = execSync(
-      `pass=true; for f in dist/birth-support/*/index.html; do ` +
-      `slug=$(basename $(dirname "$f")); ` +
-      `desc=$(grep -o '<meta name="description" content="[^"]*"' "$f" | sed 's/<meta name="description" content="//;s/"$//'); ` +
-      `len=$(printf '%s' "$desc" | wc -c | tr -d ' '); ` +
-      `if [ "$len" -gt 155 ]; then ` +
-      `echo "LONG: $slug ($len chars)"; pass=false; ` +
-      `fi; done; $pass`,
-      { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 30000 }
-    );
-    results.push({ gate: 'A4b', status: 'PASS', detail: 'All city page descriptions ≤155 chars' });
-  } catch (e: any) {
-    const output = e.stdout?.toString() || '';
-    const longPages = output.split('\n').filter(l => l.includes('LONG:'));
-    if (longPages.length > 0) {
-      results.push({ gate: 'A4b', status: 'FAIL', detail: `${longPages.length} page(s) with description >155 chars` });
-      longPages.forEach(l => results.push({ gate: 'A4b', status: 'FAIL', detail: `  ${l.trim()}` }));
+    const scanGlob = targetSlug
+        ? `dist/birth-support/${targetSlug}/index.html`
+        : `dist/birth-support/*/index.html`;
+      const shellResult = execSync(
+        `pass=true; for f in ${scanGlob}; do ` +
+        `slug=$(basename $(dirname "$f")); ` +
+        `desc=$(grep -o '<meta name="description" content="[^"]*"' "$f" | sed 's/<meta name="description" content="//;s/"$//'); ` +
+        `len=$(printf '%s' "$desc" | wc -c | tr -d ' '); ` +
+        `if [ "$len" -gt 155 ]; then ` +
+        `echo "LONG: $slug ($len chars)"; pass=false; ` +
+        `fi; done; $pass`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 30000 }
+      );
+      results.push({ gate: 'A4b', status: 'PASS', detail: targetSlug ? `Description length ≤155 chars for ${targetSlug}` : 'All city page descriptions ≤155 chars' });
+    } catch (e: any) {
+      const output = e.stdout?.toString() || '';
+      const longPages = output.split('\n').filter((l: string) => l.includes('LONG:'));
+      if (longPages.length > 0) {
+        results.push({ gate: 'A4b', status: 'FAIL', detail: `${longPages.length} page(s) with description >155 chars` });
+        longPages.forEach((l: string) => results.push({ gate: 'A4b', status: 'FAIL', detail: `  ${l.trim()}` }));
     } else {
       results.push({ gate: 'A4b', status: 'FAIL', detail: 'Description check command failed' });
     }
@@ -2374,6 +2380,357 @@ function run(): void {
     }
   } else {
     results.push({ gate: 'G60', status: 'SKIP', detail: 'Skipping birthStats check in audit mode (run with slug)' });
+  }
+
+  // ── H1: Malformed escaped hrefs (%5C%22 = over-escaped quotes) ──
+  // Catches URLs where quotes were double-encoded (e.g. %5C%22 instead of ").
+  // These produce broken links that silently fail in browsers.
+  {
+    try {
+      const distDir = path.join(PROJECT_DIR, 'dist');
+      if (!fs.existsSync(distDir)) {
+        results.push({ gate: 'H1', status: 'SKIP', detail: 'No dist/ directory found' });
+      } else {
+        // Collect all HTML files in dist
+        const htmlFiles: string[] = [];
+        function walkDir(dir: string) {
+          for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+            const full = path.join(dir, entry.name);
+            if (entry.isDirectory()) walkDir(full);
+            else if (entry.name.endsWith('.html')) htmlFiles.push(full);
+          }
+        }
+        walkDir(distDir);
+
+        const badHrefs: string[] = [];
+        for (const file of htmlFiles) {
+          const html = fs.readFileSync(file, 'utf-8');
+          // Find href attributes containing %5C (backslash-encoded) followed by %22 (quote)
+          // This indicates over-escaped quotes like href="/path%5C%22something%5C%22"
+          const re = /href="([^"]*%5C%22[^"]*)"/gi;
+          let m;
+          while ((m = re.exec(html)) !== null) {
+            badHrefs.push(`${path.relative(distDir, file)}: ${m[1].slice(0, 120)}`);
+          }
+          // Also check src attributes for the same pattern
+          const srcRe = /src="([^"]*%5C%22[^"]*)"/gi;
+          while ((m = srcRe.exec(html)) !== null) {
+            badHrefs.push(`${path.relative(distDir, file)}: ${m[1].slice(0, 120)}`);
+          }
+        }
+
+        if (badHrefs.length > 0) {
+          results.push({
+            gate: 'H1',
+            status: 'FAIL',
+            detail: `${badHrefs.length} malformed escaped href(s) found (over-escaped quotes %5C%22): ${badHrefs.slice(0, 5).join('; ')}${badHrefs.length > 5 ? '…' : ''}`,
+          });
+        } else {
+          results.push({ gate: 'H1', status: 'PASS', detail: `Checked ${htmlFiles.length} HTML files — no over-escaped hrefs` });
+        }
+      }
+    } catch {
+      results.push({ gate: 'H1', status: 'SKIP', detail: 'Could not check for malformed escaped hrefs' });
+    }
+  }
+
+  // ── H2: Internal links target known redirect paths ──
+  // Parses public/_redirects and checks that no built HTML page links to a
+  // redirect-source URL when the final destination is different.
+  {
+    try {
+      const redirectsFile = path.join(PROJECT_DIR, 'public', '_redirects');
+      if (!fs.existsSync(redirectsFile)) {
+        results.push({ gate: 'H2', status: 'SKIP', detail: 'No _redirects file found' });
+      } else {
+        const redirectMap = new Map<string, string>();
+        const lines = fs.readFileSync(redirectsFile, 'utf-8').split('\n');
+        for (const line of lines) {
+          const trimmed = line.trim();
+          if (!trimmed || trimmed.startsWith('#')) continue;
+          const parts = trimmed.split(/\s+/);
+          // Cloudflare Pages format: source destination [code]
+          // Skip wildcard patterns (contain *)
+          if (parts.length >= 2 && !parts[0].includes('*')) {
+            const source = parts[0].replace(/\/+$/, ''); // strip trailing slash
+            const dest = parts[1].replace(/\/+$/, '');
+            redirectMap.set(source, dest);
+          }
+        }
+
+        // Collect all internal <a> hrefs from dist HTML
+        const distDir = path.join(PROJECT_DIR, 'dist');
+        const htmlFiles: string[] = [];
+        function walkDir(dir: string) {
+          for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+            const full = path.join(dir, entry.name);
+            if (entry.isDirectory()) walkDir(full);
+            else if (entry.name.endsWith('.html')) htmlFiles.push(full);
+          }
+        }
+        walkDir(distDir);
+
+        const badLinks: string[] = [];
+        for (const file of htmlFiles) {
+          const html = fs.readFileSync(file, 'utf-8');
+          const re = /<a[^>]*href="(\/[^"]*)"/gi;
+          let m;
+          while ((m = re.exec(html)) !== null) {
+            const href = m[1].replace(/\/+$/, ''); // strip trailing slash
+            const redirectDest = redirectMap.get(href);
+            if (redirectDest && redirectDest !== href) {
+              badLinks.push(`${path.relative(distDir, file)} links to ${href} → redirects to ${redirectDest}`);
+            }
+          }
+        }
+
+        if (badLinks.length > 0) {
+          results.push({
+            gate: 'H2',
+            status: 'FAIL',
+            detail: `${badLinks.length} link(s) target known redirect paths: ${badLinks.slice(0, 8).join('; ')}${badLinks.length > 8 ? '…' : ''}`,
+          });
+        } else {
+          results.push({ gate: 'H2', status: 'PASS', detail: `Checked ${htmlFiles.length} HTML files, ${redirectMap.size} redirect rules — no links to redirect sources` });
+        }
+      }
+    } catch {
+      results.push({ gate: 'H2', status: 'SKIP', detail: 'Could not check internal links against redirects' });
+    }
+  }
+
+  // ── H3: Sitemap entries that redirect ──
+  // Checks sitemap-*.xml in dist/ against public/_redirects.
+  // If a <loc> matches a redirect source, the sitemap should contain the final URL.
+  {
+    try {
+      const distDir = path.join(PROJECT_DIR, 'dist');
+      const redirectsFile = path.join(PROJECT_DIR, 'public', '_redirects');
+
+      // Build redirect map
+      const redirectSources = new Set<string>();
+      const redirectMap = new Map<string, string>();
+      if (fs.existsSync(redirectsFile)) {
+        const lines = fs.readFileSync(redirectsFile, 'utf-8').split('\n');
+        for (const line of lines) {
+          const trimmed = line.trim();
+          if (!trimmed || trimmed.startsWith('#')) continue;
+          const parts = trimmed.split(/\s+/);
+          if (parts.length >= 2 && !parts[0].includes('*')) {
+            redirectSources.add(parts[0].replace(/\/+$/, ''));
+            redirectMap.set(parts[0].replace(/\/+$/, ''), parts[1].replace(/\/+$/, ''));
+          }
+        }
+      }
+
+      // Find all sitemap files
+      const sitemaps = fs.readdirSync(distDir).filter(f => f.startsWith('sitemap-') && f.endsWith('.xml'));
+      const badEntries: string[] = [];
+
+      for (const sitemapName of sitemaps) {
+        const sitemapPath = path.join(distDir, sitemapName);
+        const xml = fs.readFileSync(sitemapPath, 'utf-8');
+        const locRe = /<loc>([^<]+)<\/loc>/g;
+        let m;
+        while ((m = locRe.exec(xml)) !== null) {
+          const loc = m[1];
+          try {
+            const parsed = new URL(loc);
+            const pathname = parsed.pathname.replace(/\/+$/, '');
+            if (redirectSources.has(pathname)) {
+              const dest = redirectMap.get(pathname);
+              badEntries.push(`${sitemapName}: ${loc} → should be ${dest}`);
+            }
+          } catch {
+            // Skip non-parseable URLs
+          }
+        }
+      }
+
+      if (badEntries.length > 0) {
+        results.push({
+          gate: 'H3',
+          status: 'FAIL',
+          detail: `${badEntries.length} sitemap entry/entries point to redirecting URLs: ${badEntries.slice(0, 8).join('; ')}${badEntries.length > 8 ? '…' : ''}`,
+        });
+      } else if (sitemaps.length > 0) {
+        results.push({ gate: 'H3', status: 'PASS', detail: `Checked ${sitemaps.join(', ')} — no sitemap entries point to redirect paths` });
+      } else {
+        results.push({ gate: 'H3', status: 'SKIP', detail: 'No sitemap files found in dist/' });
+      }
+    } catch {
+      results.push({ gate: 'H3', status: 'SKIP', detail: 'Could not check sitemap entries for redirects' });
+    }
+  }
+
+  // ── G61: Doula-to-midwife ratio ──
+  // Hard failure if ratio exceeds 6:1 (too few midwives relative to doulas).
+  // Warning if ratio exceeds 3:1.
+  // Counts providers in localDoulas where isMidwife is explicitly true vs false/absent.
+  if (targetSlug) {
+    try {
+      const cityBlock = execSync(
+        `python3 scripts/extract-city-block.py ${targetSlug}`,
+        { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+      );
+
+      // Check if localDoulas exists
+      if (!/localDoulas:\s*\[/.test(cityBlock)) {
+        results.push({ gate: 'G61', status: 'SKIP', detail: 'No localDoulas section found' });
+      } else {
+        // Extract the localDoulas array block using brace-depth tracking
+        const arrStart = cityBlock.indexOf('[', cityBlock.indexOf('localDoulas'));
+        let depth = 0;
+        let arrEnd = arrStart;
+        for (let i = arrStart; i < cityBlock.length; i++) {
+          if (cityBlock[i] === '[') depth++;
+          else if (cityBlock[i] === ']') { depth--; if (depth === 0) { arrEnd = i; break; } }
+        }
+        const doulasBlock = cityBlock.slice(arrStart + 1, arrEnd);
+
+        // Split into individual provider entries using brace-depth tracking
+        const providers: string[] = [];
+        let entryStart = -1;
+        depth = 0;
+        for (let i = 0; i < doulasBlock.length; i++) {
+          if (doulasBlock[i] === '{') {
+            if (depth === 0) entryStart = i;
+            depth++;
+          } else if (doulasBlock[i] === '}') {
+            depth--;
+            if (depth === 0 && entryStart >= 0) {
+              providers.push(doulasBlock.slice(entryStart, i + 1));
+              entryStart = -1;
+            }
+          }
+        }
+
+        let doulaCount = 0;
+        let midwifeCount = 0;
+        for (const provider of providers) {
+          if (/isMidwife:\s*true/.test(provider)) {
+            midwifeCount++;
+          } else {
+            doulaCount++;
+          }
+        }
+
+        const total = doulaCount + midwifeCount;
+        if (total === 0) {
+          results.push({ gate: 'G61', status: 'SKIP', detail: 'No providers found in localDoulas' });
+        } else {
+          const ratio = doulaCount / Math.max(midwifeCount, 1);
+          if (ratio > 6) {
+            results.push({
+              gate: 'G61',
+              status: 'FAIL',
+              detail: `Doula:midwife ratio is ${ratio.toFixed(1)}:1 (${doulaCount} doulas / ${midwifeCount} midwives) — exceeds 6:1 maximum. Add more midwives to the localDoulas list.`,
+            });
+          } else if (ratio > 3) {
+            results.push({
+              gate: 'G61',
+              status: 'PASS',
+              detail: `Doula:midwife ratio is ${ratio.toFixed(1)}:1 (${doulaCount} doulas / ${midwifeCount} midwives) — above 3:1 warning threshold but within limits`,
+            });
+          } else {
+            results.push({
+              gate: 'G61',
+              status: 'PASS',
+              detail: `Doula:midwife ratio is ${ratio.toFixed(1)}:1 (${doulaCount} doulas / ${midwifeCount} midwives)`,
+            });
+          }
+        }
+      }
+    } catch {
+      results.push({ gate: 'G61', status: 'SKIP', detail: 'Could not calculate doula:midwife ratio' });
+    }
+  } else {
+    // Audit mode: check all cities
+    try {
+      const citiesContent = fs.readFileSync(path.join(PROJECT_DIR, 'src/data/cities.ts'), 'utf-8');
+      const slugs = getCitySlugs();
+      let worstRatio = 0;
+      let worstSlug = '';
+      let totalFails = 0;
+      let totalWarns = 0;
+
+      for (const slug of slugs) {
+        try {
+          const cityBlock = execSync(
+            `python3 scripts/extract-city-block.py ${slug}`,
+            { cwd: PROJECT_DIR, encoding: 'utf-8', timeout: 10000 }
+          );
+
+          if (!/localDoulas:\s*\[/.test(cityBlock)) continue;
+
+          const arrStart = cityBlock.indexOf('[', cityBlock.indexOf('localDoulas'));
+          let depth = 0;
+          let arrEnd = arrStart;
+          for (let i = arrStart; i < cityBlock.length; i++) {
+            if (cityBlock[i] === '[') depth++;
+            else if (cityBlock[i] === ']') { depth--; if (depth === 0) { arrEnd = i; break; } }
+          }
+          const doulasBlock = cityBlock.slice(arrStart + 1, arrEnd);
+
+          const providers: string[] = [];
+          let entryStart = -1;
+          depth = 0;
+          for (let i = 0; i < doulasBlock.length; i++) {
+            if (doulasBlock[i] === '{') {
+              if (depth === 0) entryStart = i;
+              depth++;
+            } else if (doulasBlock[i] === '}') {
+              depth--;
+              if (depth === 0 && entryStart >= 0) {
+                providers.push(doulasBlock.slice(entryStart, i + 1));
+                entryStart = -1;
+              }
+            }
+          }
+
+          let doulaCount = 0;
+          let midwifeCount = 0;
+          for (const provider of providers) {
+            if (/isMidwife:\s*true/.test(provider)) {
+              midwifeCount++;
+            } else {
+              doulaCount++;
+            }
+          }
+
+          const total = doulaCount + midwifeCount;
+          if (total === 0) continue;
+
+          const ratio = doulaCount / Math.max(midwifeCount, 1);
+          if (ratio > worstRatio) {
+            worstRatio = ratio;
+            worstSlug = slug;
+          }
+          if (ratio > 6) totalFails++;
+          else if (ratio > 3) totalWarns++;
+        } catch {
+          // Skip individual city errors in audit mode
+        }
+      }
+
+      if (totalFails > 0) {
+        results.push({
+          gate: 'G61',
+          status: 'FAIL',
+          detail: `${totalFails} city/cities have doula:midwife ratio > 6:1 (worst: ${worstSlug} at ${worstRatio.toFixed(1)}:1). Add more midwives.`,
+        });
+      } else if (totalWarns > 0) {
+        results.push({
+          gate: 'G61',
+          status: 'PASS',
+          detail: `${totalWarns} city/cities above 3:1 ratio (highest: ${worstSlug} at ${worstRatio.toFixed(1)}:1) — no hard failures`,
+        });
+      } else {
+        results.push({ gate: 'G61', status: 'PASS', detail: `All cities have doula:midwife ratio ≤ 3:1` });
+      }
+    } catch {
+      results.push({ gate: 'G61', status: 'SKIP', detail: 'Could not audit doula:midwife ratios in audit mode' });
+    }
   }
 
   // ── Print summary ───
