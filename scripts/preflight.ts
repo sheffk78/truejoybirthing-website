@@ -353,7 +353,7 @@ function run(): void {
       const shellResult = execSync(
         `pass=true; for f in ${scanGlob}; do ` +
         `slug=$(basename $(dirname "$f")); ` +
-        `title=$(grep -o '<title>[^<]*</title>' "$f" | sed 's/<[^>]*>//g' | sed 's/&amp;/\\\\&/g'); ` +
+        `title=$(grep -o '<title>[^<]*</title>' "$f" | sed 's/<[^>]*>//g' | python3 -c 'import html,sys; print(html.unescape(sys.stdin.read().strip()))'); ` +
         `len=$(printf '%s' "$title" | wc -c | tr -d ' '); ` +
         `if [ "$len" -gt 70 ]; then ` +
         `echo "LONG: $slug ($len chars: $title)"; pass=false; ` +

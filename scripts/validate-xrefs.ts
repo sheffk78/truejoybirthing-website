@@ -143,20 +143,7 @@ async function main(): Promise<void> {
     }
   }
 
-  // 3. Check nearbyCities in cities.ts
-  const citiesContent = await loadFile("src/data/cities.ts");
-  if (citiesContent) {
-    const nearbyRefs = extractNearbyCities(citiesContent);
-    for (const { source, refs } of nearbyRefs) {
-      for (const ref of refs) {
-        if (!knownSlugs.has(ref)) {
-          violations.push({ source: `src/data/cities.ts (${source}.nearbyCities)`, slug: ref, context: "nearbyCities reference" });
-        }
-      }
-    }
-  }
-
-  // 3b. Load _redirects — slugs with redirects are NOT dangling
+  // 3. Pre-load redirect and static page slugs (needed for checks below)
   const redirectsContent = await loadFile("public/_redirects");
   const redirectedSlugs = new Set<string>();
   if (redirectsContent) {
@@ -166,13 +153,35 @@ async function main(): Promise<void> {
     }
   }
 
+  const staticPageSlugs = new Set<string>();
+  try {
+    const astroFiles = await findSourceFiles("src/pages/birth-support");
+    for (const filePath of astroFiles) {
+      const m = filePath.match(/\/birth-support\/([a-z][a-z0-9]+(?:-[a-z0-9]+)*-[a-z]{2})\.astro$/);
+      if (m) staticPageSlugs.add(m[1]);
+    }
+  } catch {}
+
+  // 3a. Check nearbyCities in cities.ts
+  const citiesContent = await loadFile("src/data/cities.ts");
+  if (citiesContent) {
+    const nearbyRefs = extractNearbyCities(citiesContent);
+    for (const { source, refs } of nearbyRefs) {
+      for (const ref of refs) {
+        if (!knownSlugs.has(ref) && !redirectedSlugs.has(ref) && !staticPageSlugs.has(ref)) {
+          violations.push({ source: `src/data/cities.ts (${source}.nearbyCities)`, slug: ref, context: "nearbyCities reference" });
+        }
+      }
+    }
+  }
+
   // 4. Check hardcoded href attributes in source files
   const sourceFiles = await findSourceFiles(SRC_DIR);
   for (const filePath of sourceFiles) {
     const content = await readFile(filePath, "utf-8");
     const hrefSlugs = extractHrefSlugs(content);
     for (const slug of [...new Set(hrefSlugs)]) {
-      if (!knownSlugs.has(slug) && !redirectedSlugs.has(slug)) {
+      if (!knownSlugs.has(slug) && !redirectedSlugs.has(slug) && !staticPageSlugs.has(slug)) {
         const relPath = filePath.replace(PROJECT_DIR + "/", "");
         violations.push({ source: relPath, slug, context: "href=/birth-support/{slug}/" });
       }
