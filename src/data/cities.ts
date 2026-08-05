@@ -5835,7 +5835,7 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
     heroImage: "/images/melissa-tx-birth-doula-hero-v2.webp",
     supportSceneImage: "/images/melissa-tx-birth-doula-support-v2.webp",
     supportSceneAlt: "A doula supporting a pregnant woman during labor in Melissa, Texas",
-    ogImage: "https://truejoybirthing.com/images/og-city-melissa-tx-v2.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-melissa-tx.webp",
     midwifeInfo: {
       paragraph: "Texas licenses Certified Nurse-Midwives (CNMs) through the Texas Board of Nursing, and Certified Professional Midwives (CPMs) can attend home and birth center births. Rebecca Joy Hicks, a CPM based in Melissa, offers home birth services for local families. Bella Births birth center in nearby McKinney provides midwife-led birth center care. Baylor Scott and White McKinney and Medical City McKinney both have CNM-attended births in their labor and delivery units.",
       credentialTypes: " and CPMs",

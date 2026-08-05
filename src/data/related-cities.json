@@ -28,6 +28,10 @@
     {
       "slug": "carrollton-tx",
       "sharedProviders": 1
+    },
+    {
+      "slug": "melissa-tx",
+      "sharedProviders": 1
     }
   ],
   "abilene-tx": [],
@@ -250,5 +254,11 @@
   "newport-news-va": [],
   "agoura-hills-ca": [],
   "alameda-ca": [],
-  "alvin-tx": []
+  "alvin-tx": [],
+  "melissa-tx": [
+    {
+      "slug": "princeton-tx",
+      "sharedProviders": 1
+    }
+  ]
 }
