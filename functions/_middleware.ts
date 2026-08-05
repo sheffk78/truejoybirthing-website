@@ -38,7 +38,6 @@ const redirects: Record<string, string> = {
   "/birth-support/wv": "/birth-support/",
   "/birth-support/wy": "/birth-support/",
   // Unbuilt birth-support city pages → hub
-  "/birth-support/anchorage-ak": "/birth-support/",
   "/birth-support/ann-arbor-mi": "/birth-support/",
   "/birth-support/charleston-wv": "/birth-support/",
   "/birth-support/erie-pa": "/birth-support/",
