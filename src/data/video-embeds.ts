@@ -1233,6 +1233,26 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
 
+  "american-canyon-ca": {
+    videoId: "94_CE_v_Ay0",
+    title: "American Canyon, CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
+    description: "American Canyon birth guide covering local doulas, midwives, Providence Queen of the Valley, Kaiser Permanente Vallejo, Napa Valley Birth Center, costs, and California Medi-Cal PAVE program.",
+    duration: "PT3M37S",
+    uploadDate: "2026-08-05",
+    chapters: [
+      [0, "Welcome to American Canyon"],
+      [14, "What this guide covers"],
+      [34, "Providence Queen of the Valley"],
+      [58, "Kaiser Permanente Vallejo"],
+      [81, "Napa Valley Birth Center"],
+      [107, "Doulas serving American Canyon"],
+      [127, "The free birth plan app"],
+      [151, "How much does a doula cost?"],
+      [176, "Does Medi-Cal cover doulas?"],
+      [202, "Start your joyful birth"],
+    ],
+  },
+
   "princeton-tx": {
     videoId: "E1BG-fxwFFQ",
     title: "Princeton Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
