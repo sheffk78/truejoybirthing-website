@@ -71,7 +71,26 @@ export default defineConfig({
     astroIcon(),
     sitemap({
       // No global lastmod — each URL gets its own from serialize()
-      filter: (page) => !page.includes('/404') && !page.includes('/admin/') && !page.includes('/dashboard'),
+      // Exclude: 404/admin/dashboard, plus thin/redirected URLs that shouldn't
+      // be in the sitemap:
+      //   - el-paso-tx: city served via [city].astro route but intentionally
+      //     not surfaced in the sitemap (no dedicated .astro page, redirected
+      //     intent in _redirects comment).
+      //   - mt, nm: single-city state hub pages — thin, not worth indexing.
+      filter: (page) => {
+        if (page.includes('/404') || page.includes('/admin/') || page.includes('/dashboard')) {
+          return false;
+        }
+        const excludedPaths = [
+          '/birth-support/el-paso-tx/',
+          '/birth-support/mt/',
+          '/birth-support/nm/',
+        ];
+        for (const p of excludedPaths) {
+          if (page.endsWith(p)) return false;
+        }
+        return true;
+      },
       serialize(item) {
         const parsed = new URL(item.url);
         const pathname = parsed.pathname;
