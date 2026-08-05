@@ -1014,7 +1014,7 @@ function run(): void {
         `curl -s -o /dev/null -w "%{http_code}" "https://truejoybirthing.com/birth-support/${targetSlug}/"`,
         { encoding: 'utf-8', timeout: 10000 }
       ).trim();
-      if (pageCheck === '404' || pageCheck === '000') {
+      if (pageCheck === '404' || pageCheck === '000' || pageCheck === '301') {
         cityPageIsLive = false;
       }
     } catch {}
