@@ -7561,7 +7561,183 @@ hospitalDetails: [
     },
   },
 
-
+  "american-canyon-ca": {
+    enableBlogResources: true,
+    publishedDate: "2026-08-05",
+    city: "American Canyon",
+    state: "CA",
+    slug: "american-canyon-ca",
+    lat: 38.1749,
+    lng: -122.2608,
+    costLow: 1000,
+    costHigh: 4000,
+    shelbiServesHere: false,
+    heroImage: "/images/american-canyon-ca-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-american-canyon-ca.webp",
+    supportSceneImage: "/images/american-canyon-ca-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in American Canyon: Napa County birth support and doula care",
+    culture: "American Canyon is the southernmost city in Napa County, a diverse, fast-growing community of about 21,000 along the Napa River at the edge of the San Pablo Bay wetlands. Families here straddle two worlds: the wine-country identity of Napa Valley to the north and the working-waterfront, diverse-suburb character of Vallejo and Solano County to the south. American Canyon has no hospital of its own, so families deliver at Providence Queen of the Valley Medical Center in Napa (about 20 minutes north) or Kaiser Permanente Vallejo Medical Center (about 15 minutes south). The Napa Valley Birth Center in Napa is the only freestanding birth center in Napa County, and doulas based in Vallejo, Fairfield, and Napa serve American Canyon families. California\u2019s Medi-Cal doula benefit (PAVE program) makes doula care accessible to low-income families, with reimbursement around $1,587 per pregnancy.",
+    heroLocalDetail: "American Canyon sits at the junction of Highway 29 and Highway 12/Waterworld Way, with I-80 about 10 minutes south via American Canyon Road. Providence Queen of the Valley Medical Center at 1000 Trancas Street in Napa is about a 20-minute drive north via Highway 29. Kaiser Permanente Vallejo Medical Center at 975 Sereno Drive in Vallejo is about 15 minutes south. Sutter Solano Medical Center in Vallejo closed its maternity ward in 2021, so Kaiser Vallejo is now the only hospital with active labor and delivery services in Vallejo. The Napa Valley Birth Center at 525 Lincoln Avenue in Napa is about 20 minutes north. During afternoon rush, Highway 29 between American Canyon and Napa can slow, so add 10-15 minutes if you\u2019re heading to Queen of the Valley between 4-7 PM. The Wetlands Edge trail along the Napa River is a popular flat walking route for third-trimester moms.",
+    midwifeInfo: {
+      paragraph: "California licenses both Licensed Midwives (LMs) and Certified Nurse-Midwives (CNMs), with LMs attending home and birth center births and CNMs practicing in hospitals. American Canyon families have access to midwife-led birth at the Napa Valley Birth Center in Napa, the only freestanding birth center in Napa County, staffed by Licensed Midwife Paula Grady (LM #198, CPM). Providence Queen of the Valley Medical Center in Napa has Certified Nurse-Midwives on staff for hospital-based midwifery care. California Medi-Cal covers doula services through the PAVE program, reimbursing approximately $1,587 per pregnancy.",
+      credentialTypes: " (LMs and CNMs)",
+      credentialDetail: "California's Licensed Midwife (LM) credential is one of the most established in the country, with clear regulations for out-of-hospital birth, meaning Napa County families have more midwifery options than states that only license CNMs."
+    },
+    hospitalDetails: [
+      {
+        name: "Providence Queen of the Valley Medical Center",
+        thumbnail: "/images/american-canyon-ca-queen-of-the-valley.webp",
+        paragraph: "Providence Queen of the Valley Medical Center at 1000 Trancas Street in Napa, about 20 minutes north of American Canyon via Highway 29, is the only hospital with labor and delivery services in Napa County. The Center for Maternal and Infant Care features five labor and delivery rooms, large private after-birth suites with sleeper chairs, and a team that includes board-certified lactation consultants, certified nurse anesthetists, a neonatologist, pediatricians, OB/GYNs, and registered nurses. For babies needing extra support, the hospital offers four intensive care nursery beds. Queen of the Valley earned the IBCLC Care Award and was listed on the Cal Hospital Compare Honor Roll for meeting the statewide C-section reduction target. U.S. News & World Report recognized it for high performance in maternity care. The hospital offers childbirth classes, tours, and personalized birth planning. Doulas are welcome as part of your birth team. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here.",
+        url: "https://www.providence.org/locations/norcal/queen-of-the-valley/center-for-maternal-and-infant-care",
+        address: "1000 Trancas St, Napa, CA 94558",
+        nicuLevel: "II",
+        doulaPolicy: "Doulas welcome as support persons; confirm current visitor policy during your hospital tour",
+        midwifeFriendly: true,
+        waterBirth: "Water birth not routinely offered; labor tubs not confirmed",
+        medicaid: true,
+        lactation: true,
+        privateRooms: true
+      },
+      {
+        name: "Kaiser Permanente Vallejo Medical Center",
+        thumbnail: "/images/american-canyon-ca-kaiser-vallejo.webp",
+        paragraph: "Kaiser Permanente Vallejo Medical Center at 975 Sereno Drive in Vallejo, about 15 minutes south of American Canyon, is the closest hospital with labor and delivery services for many American Canyon families. Each room in the labor, delivery, and recovery unit is private, and a neonatologist is available to assess babies needing special care in the NICU. Kaiser Vallejo supports two support persons during labor, delivery, and recovery, and all labor and delivery and postpartum nurses are trained breastfeeding specialists with internationally board-certified lactation consultants on staff. Kaiser's integrated care model keeps prenatal visits, lab work, and delivery within the same system. Doulas are welcome as part of your birth team. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here.",
+        url: "https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity/find-hospital/vallejo",
+        address: "975 Sereno Dr, Vallejo, CA 94589",
+        nicuLevel: "III",
+        doulaPolicy: "Doulas welcome as support persons. Two people may be with you during labor, delivery, and recovery.",
+        midwifeFriendly: true,
+        waterBirth: "Water birth not routinely offered",
+        medicaid: true,
+        lactation: true,
+        privateRooms: true
+      }
+    ],
+    // Birth center search: Napa Valley Birth Center at 525 Lincoln Ave, Napa, CA 94558
+    // is the ONLY freestanding birth center in Napa County. Operated by The Midwives
+    // Childbirth Services, California Licensed Midwife Paula Grady (LM #198, CPM).
+    // ~20 minutes north of American Canyon via Highway 29. Phone: (707) 287-2822.
+    // Sutter Solano Medical Center in Vallejo closed its maternity ward in 2021.
+    // Verified 2026-08-05 via themidwives.com and calmatters.org.
+    birthCenterDetails: [
+      {
+        name: "Napa Valley Birth Center",
+        thumbnail: "/images/american-canyon-ca-napa-valley-birth-center.webp",
+        url: "https://www.themidwives.com/birth-center-in-napa.html",
+        address: "525 Lincoln Ave, Napa, CA 94558",
+        services: ["Midwife-Led Births", "Water Birth", "Prenatal Care", "Postpartum Care", "Childbirth Education"],
+        medicaid: false,
+        paragraph: "Napa Valley Birth Center at 525 Lincoln Avenue in Napa, about 20 minutes north of American Canyon via Highway 29, is the only freestanding birth center in Napa County. Founded and operated by senior midwife Paula Grady, LM #198, CPM, the center is staffed by licensed and certified professional midwives including Ashley Gerhard, TerriAnne Gutierrez, Carolyn Hernandez, and Savannah Howland. The center is medically equipped for out-of-hospital birth and is less than 4 minutes from Providence Queen of the Valley Medical Center's emergency room if a transfer becomes necessary. Services span prenatal care, water birth, childbirth, and postpartum care. For American Canyon families seeking a lower-intervention, out-of-hospital birth, this is the dedicated option in Napa County. Having a doula who knows the Napa Valley Birth Center midwives makes the experience feel more connected. Call (707) 287-2822 to schedule a free consultation and confirm availability."
+      }
+    ],
+    localDoulas: [
+      {
+        name: "Tiffany Murphy",
+        credential: "Birth Doula Certification (2024), Lactation Specialist (2024), BS",
+        practice: "HER 4 Black Births",
+        url: "https://www.bornbir.com/tiffany-murphy",
+        description: "Community doula based in Vallejo with 20 years of birth work and 17+ years of Medi-Cal experience, serving American Canyon and Solano County families. Tiffany is a Medi-Cal enrolled provider and also accepts Kaiser, Tricare, UnitedHealthcare, Alameda Alliance, and Contra Costa Health Plan. She offers birth planning, intrapartum care, and postpartum visits, with packages ranging from a birth-only option ($1,650) to a comprehensive Connections Package ($3,000). Culturally responsive care centered on Black birthing people and inclusive of all families, including immigrant and non-English-speaking communities.",
+        photo: "/images/providers/american-canyon-ca-tiffany-murphy.webp",
+        services: ["Birth Doula", "Postpartum Doula", "Lactation Support", "Childbirth Education"],
+        costRange: "$1,650-$3,000",
+        acceptingClients: true,
+        serviceArea: ["American Canyon, CA", "Vallejo, CA", "Napa County, CA", "Solano County, CA"]
+      },
+      {
+        name: "Grace Magnini",
+        credential: "CD(Childbirth International), Birth Photographer (Birth Becomes You)",
+        practice: "Birthing With Grace",
+        url: "https://www.winecountrydoula.com/",
+        description: "Napa-based certified birth doula and birth photographer serving Napa, Solano, and Sonoma Counties, including American Canyon. Grace offers full-spectrum birth doula support from pregnancy through postpartum and specializes in VBAC support, partner education, and unbiased, evidence-based guidance. Client reviews highlight her advocacy, comfort measures, and ability to help families achieve empowered birth experiences including successful unmedicated VBAC. Located in Napa, about 20 minutes from American Canyon.",
+        photo: "/images/providers/american-canyon-ca-grace-magnini.webp",
+        services: ["Birth Doula", "Birth Photography", "Postpartum Doula"],
+        costRange: "$1,200-$2,500",
+        acceptingClients: true,
+        serviceArea: ["American Canyon, CA", "Napa, CA", "Napa County, CA", "Solano County, CA", "Sonoma County, CA"]
+      },
+      {
+        name: "Imani Lopez",
+        credential: "Full Spectrum Doula, Childbirth Educator",
+        practice: "Now You Know A Doula",
+        url: "https://www.nowyouknowadoula.com/",
+        description: "Full spectrum doula and childbirth educator based in Vallejo, serving American Canyon and Solano County families. Imani is a Medi-Cal enrolled doula, meaning eligible families receive full services at no cost, and also accepts Kaiser Permanente, Partnership HealthPlan, and Health Net. They offer sliding-scale pricing using the green bottle method, with birth support ranging $1,000-$4,000 and postpartum support $30-$50/hour. Specialties include LGBTQ+ support, VBAC, water birth, hypnobirthing, and home/hospital/birth center births. Pronouns: they/them.",
+        photo: "/images/providers/american-canyon-ca-imani-lopez.webp",
+        services: ["Birth Doula", "Postpartum Doula", "Childbirth Education", "LGBTQ+ Support"],
+        costRange: "$1,000-$4,000",
+        acceptingClients: true,
+        serviceArea: ["American Canyon, CA", "Vallejo, CA", "Solano County, CA", "Napa County, CA"]
+      },
+      {
+        name: "Gabriela Tripp",
+        credential: "Certified Birth & Postpartum Doula (2024), Newborn Sleep Specialist",
+        practice: "Doula Gabi Tripp",
+        url: "https://www.doulagabitripp.com/",
+        description: "Certified birth and postpartum doula and newborn sleep specialist based in Vallejo, serving American Canyon and most of the Bay Area. Gabriela holds a BS in Biomedicine and offers birth support packages including three prenatal visits, labor and birth support, and a postpartum follow-up ($2,500). Postpartum care is available at $60/hour for day or overnight support. Bilingual in English and Portuguese. Accepts Carrot, Anthem Blue Cross, Anthem BCBS, and UnitedHealthcare.",
+        photo: "/images/providers/american-canyon-ca-gabriela-tripp.webp",
+        services: ["Birth Doula", "Postpartum Doula", "Newborn Sleep Support", "Birth Photography"],
+        costRange: "$2,500 (birth), $60/hr (postpartum)",
+        acceptingClients: true,
+        serviceArea: ["American Canyon, CA", "Vallejo, CA", "Bay Area, CA", "Napa County, CA"]
+      },
+      {
+        name: "Crystal Franco",
+        credential: "Birth & Postpartum Doula (Ether and Instinct Doula Mentorship, 2021)",
+        practice: "Aria Rose Doula",
+        url: "https://ariarosedoula.com/",
+        description: "Birth and postpartum doula based in Fairfield serving Solano County families including American Canyon. Crystal is a first-generation Mexican-American whose practice is rooted in reclaiming ancestral wisdom and indigenous traditions. Bilingual in English and Spanish, she offers birth-only packages ($1,000), postpartum-only packages ($1,000 for 3 months), and combined birth+postpartum packages ($1,500), with sliding-scale options for families who cannot afford full price. Specialties include home birth, hospital birth, water birth, VBAC, aromatherapy, herbal postpartum care, and partner/family support. 5.0-star rated on Bornbir.",
+        photo: "/images/providers/american-canyon-ca-crystal-franco.webp",
+        services: ["Birth Doula", "Postpartum Doula", "Childbirth Education", "Lactation Support", "Placenta Encapsulation"],
+        costRange: "$1,000-$1,500",
+        acceptingClients: true,
+        serviceArea: ["American Canyon, CA", "Fairfield, CA", "Solano County, CA", "Napa County, CA"]
+      },
+      {
+        name: "Briahna Baskett",
+        credential: "Birth Doula Certification (Mama Glow, 2022), Lactation Counselor",
+        practice: "Mama Nova",
+        url: "https://mamanova.squarespace.com/",
+        description: "Full spectrum doula and lactation counselor based in Vallejo with 8 years of experience, serving American Canyon and Solano County families. Briahna is a mother of three who began her birth work journey after birthing her son in 2016. She is a Kaiser Permanente enrolled doula and offers childbirth education, labor and delivery support, lactation counseling, and postpartum care, with a focus on holistic practices and tradition. Belly binding and breastfeeding support are among her specialties.",
+        photo: "/images/providers/american-canyon-ca-briahna-baskett.webp",
+        services: ["Birth Doula", "Postpartum Doula", "Lactation Support", "Belly Binding"],
+        costRange: "$1,200-$2,500",
+        acceptingClients: true,
+        serviceArea: ["American Canyon, CA", "Vallejo, CA", "Solano County, CA", "Napa County, CA"]
+      }
+    ],
+    medicaidNote: "Yes \u2014 California's Medi-Cal program covers doula services as a state benefit through the PAVE (Providing Access and doula Viability through Equity) program, reimbursing approximately $1,587 per pregnancy. Families on Medi-Cal can access doula support at no cost. Ask your doula whether they accept Medi-Cal directly, or search for enrolled doulas through your Medi-Cal health plan. Napa County families can also contact First 5 Napa County's Doula Task Force for free doula training and connections.",
+    insuranceNote: "In American Canyon, many families have private insurance through Kaiser Permanente, Anthem Blue Cross, or Blue Shield. Kaiser members can access contracted doula services at no extra cost. Several doulas serving American Canyon accept Medi-Cal, Kaiser, and other plans. Doula coverage by private insurers is expanding under California law. Check your specific plan for doula benefits. HSA and FSA funds can help cover out-of-pocket doula costs.",
+    faqs: [
+      {
+        q: "How much does a doula cost in American Canyon?",
+        a: "Expect to pay $1,000 to $3,000 for a birth doula in the American Canyon area. Bay Area and Napa County rates reflect the higher cost of living. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Several local doulas offer sliding-scale pricing and accept Medi-Cal at no cost to you. <a href='/birth-plan-template/'>Download the free birth plan template</a> and start thinking about what matters most to you."
+      },
+      {
+        q: "Does Medi-Cal cover doulas in American Canyon?",
+        a: "Yes. California's Medi-Cal program covers doula services through the PAVE program, reimbursing around $1,587 per pregnancy. Ask your doula upfront whether they accept Medi-Cal directly \u2014 many doulas serving American Canyon are enrolled Medi-Cal providers. You can also contact First 5 Napa County's Doula Task Force for help connecting with a doula. <a href='/birth-plan-template/'>Grab the free birth plan template</a> to share your preferences with your doula team."
+      },
+      {
+        q: "Which hospitals near American Canyon have labor and delivery?",
+        a: "Providence Queen of the Valley Medical Center at 1000 Trancas Street in Napa (about 20 minutes north) is the only hospital with L&D in Napa County. Kaiser Permanente Vallejo Medical Center at 975 Sereno Drive in Vallejo (about 15 minutes south) also offers labor and delivery. Sutter Solano Medical Center in Vallejo closed its maternity ward in 2021. The Napa Valley Birth Center at 525 Lincoln Avenue in Napa offers an out-of-hospital option. <a href='/birth-plan-template/'>Grab the free birth plan template</a> so you walk in knowing exactly what you want."
+      },
+      {
+        q: "Are there birth centers near American Canyon?",
+        a: "The Napa Valley Birth Center at 525 Lincoln Avenue in Napa, about 20 minutes north of American Canyon, is the only freestanding birth center in Napa County. Founded by Licensed Midwife Paula Grady (LM #198, CPM), it offers midwife-led births, water birth, prenatal care, and postpartum services. Call (707) 287-2822 to schedule a free consultation. <a href='/birth-plan-template/'>Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you."
+      },
+      {
+        q: "Does True Joy Birthing work with American Canyon families?",
+        a: "Yes \u2014 and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any American Canyon birth setting, whether you're delivering at Queen of the Valley, Kaiser Vallejo, Napa Valley Birth Center, or at home. The app also helps you find and connect with local doulas and midwives. <a href='/birth-plan-template/'>Download the free birth plan template</a> and start preparing your way. No signup required."
+      }
+    ],
+    nearbyCities: ["napa-ca", "vallejo-ca", "fairfield-ca"],
+    birthStats: {
+      cesareanRate: 32.0,
+      maternalMortalityRate: 10.5,
+      homeBirthRate: 0.9,
+      birthCenterBirthRate: 0.4,
+      dataYear: 2023,
+      dataSource: "CDC NCHS, National Vital Statistics System; KFF Women\u2019s Health Profiles 2023 (California state-level proxy)",
+    },
+  },
 };
 
 
