@@ -44,3 +44,22 @@
 
 **No-email providers:** 4 (Tracy Hartley — blocked by duplicate send protection for another city; Happy Baby Journey — no public email; Catherine Roche — no public email; Hannah Struwe — no public email)
 **Bounces/failures:** 0
+
+## Princeton, TX (princeton-tx) - 2026-08-05
+
+**Page:** https://truejoybirthing.com/birth-support/princeton-tx/
+**Status:** Outreach sent (2 emails sent, 3 providers covered, 2 no-email, 1 already-contacted)
+
+| Provider | Email | Status | Notes |
+|---|---|---|---|
+| Micah Bower | thepinkhaireddoula@gmail.com | Sent | First-touch, birth doula, thepinkhaireddoula.com (Wix site) |
+| Kourtney McGowan | Doulathingsyourway@gmail.com | Sent | First-touch, birth doula, doulathingsyourway.com |
+| Misty Gigler | mistygigler@gmail.com | Blocked (duplicate) | Already contacted in allen-tx and carrollton-tx; inbox duplicate gate blocked re-send |
+| LaDereka Carter | (none found) | No email | Wix domain (cartercomprehensivebirth.com) returns 404/expired; no public email on partumhealth, LinkedIn, or social profiles |
+| Rosina Maluche | (none found) | No email | Only listed on bornbir.com directory; email gated behind bornbir messaging system, no personal website |
+
+**No-email providers:** 2 (LaDereka Carter, Rosina Maluche)
+**Bounces/failures:** 0
+**Blocked by duplicate gate:** 1 (Misty Gigler, already contacted in other cities)
+
+---

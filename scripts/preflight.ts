@@ -903,6 +903,23 @@ function run(): void {
     results.push({ gate: 'G26', status: 'SKIP', detail: 'Skipping support scene aspect check in audit mode (run with slug)' });
   }
 
+  // ── G63: Support scene image not distorted (R41/M46: crop, never resize) ──
+  if (targetSlug) {
+    try {
+      const result = execSync(`python3 scripts/preflight-image-helper.py support-distortion-check ${targetSlug}`, { cwd: PROJECT_DIR, timeout: 10000 }).toString().trim();
+      const data = JSON.parse(result);
+      if (data.pass) {
+        results.push({ gate: 'G63', status: 'PASS', detail: data.detail });
+      } else {
+        results.push({ gate: 'G63', status: 'FAIL', detail: data.detail });
+      }
+    } catch {
+      results.push({ gate: 'G63', status: 'SKIP', detail: 'Could not run distortion check' });
+    }
+  } else {
+    results.push({ gate: 'G63', status: 'SKIP', detail: 'Skipping distortion check in audit mode (run with slug)' });
+  }
+
   // ── G27: Provider credentials are specific (not generic "Birth Doula") ──
   if (targetSlug) {
     try {

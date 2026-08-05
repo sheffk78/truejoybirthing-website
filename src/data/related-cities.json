@@ -4,11 +4,29 @@
     {
       "slug": "carrollton-tx",
       "sharedProviders": 1
+    },
+    {
+      "slug": "princeton-tx",
+      "sharedProviders": 1
     }
   ],
   "carrollton-tx": [
     {
       "slug": "allen-tx",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "princeton-tx",
+      "sharedProviders": 1
+    }
+  ],
+  "princeton-tx": [
+    {
+      "slug": "allen-tx",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "carrollton-tx",
       "sharedProviders": 1
     }
   ],
