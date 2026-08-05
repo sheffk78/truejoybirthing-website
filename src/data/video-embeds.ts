@@ -1136,6 +1136,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [298, "Illinois Medicaid & Insurance"],
       [328, "Your Next Step"],
     ],
+  },
   "arlington-heights-il": {
     videoId: "-q-NelTEdKo",
     title: "Arlington Heights Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -1154,8 +1155,6 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [340, "Your Next Step"]
     ],
   },
-  },
-
   "newport-news-va": {
     videoId: "_LckBVSVtog",
     title: "Newport News VA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
