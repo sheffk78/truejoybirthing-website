@@ -63,3 +63,21 @@
 **Blocked by duplicate gate:** 1 (Misty Gigler, already contacted in other cities)
 
 ---
+
+## American Canyon, CA (american-canyon-ca) - 2026-08-05
+
+**Page:** https://truejoybirthing.com/birth-support/american-canyon-ca/
+**Status:** Outreach sent (5 emails, 5 providers covered)
+
+| Provider | Email | Status | Notes |
+|---|---|---|---|
+| Tiffany Murphy | tiffanym@her4blackbirths.com | Sent | First-touch, birth doula, postpartum doula, lactation support |
+| Grace Magnini | grace@winecountrydoula.com | Sent | First-touch, birth doula, birth photography, Wine Country Doula |
+| Gabriela Tripp | doulagabrielatripp@gmail.com | Sent | First-touch, birth doula |
+| Crystal Franco | ariarosedoulaservices@gmail.com | Sent | First-touch, Ariarose Doula Services |
+| Briahna Baskett | mamanovadoula@gmail.com | Sent | First-touch, Mama Nova Doula |
+| Imani Lopez | (none found) | No email | Contact form only, Vallejo-based, Medi-Cal enrolled |
+
+**No-email providers:** 1 (Imani Lopez)
+**Bounces/failures:** 0
+---

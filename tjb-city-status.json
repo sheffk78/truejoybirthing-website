@@ -94,5 +94,31 @@
     "outreach_no_email_providers": [
       "Kayla Connors (Google Form only, no email)"
     ]
+  },
+  "alhambra-ca": {
+    "stage": "complete",
+    "video": true,
+    "has_video": true,
+    "outreach": true,
+    "has_outreach": true,
+    "score": 100,
+    "video_id": "SPfd_sX3N10",
+    "provider_count": 5,
+    "hospital_count": 3,
+    "completed_at": "2026-08-04T16:00:00-07:00"
+  },
+  "american-canyon-ca": {
+    "stage": "complete",
+    "video": true,
+    "has_video": true,
+    "outreach": true,
+    "has_outreach": true,
+    "score": 100,
+    "video_id": "94_CE_v_Ay0",
+    "provider_count": 1,
+    "hospital_count": 2,
+    "completed_at": "2026-08-05T09:00:00-07:00",
+    "in_progress": false,
+    "started_at": ""
   }
 }
