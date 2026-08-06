@@ -1328,7 +1328,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
 
 
   "apple-valley-ca": {
-    videoId: "MJk2BIFwBlc",
+    videoId: "WvTKqmozBbs",
     title: "Apple Valley Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 3 minutes.",
     duration: "PT2M25S",
