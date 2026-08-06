@@ -1368,5 +1368,8 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
 
-  "cincinnati-oh": "ot_trC0MtxY",
+  "cincinnati-oh": {
+    videoId: "ot_trC0MtxY",
+    title: "Cincinnati Birth Guide: Hospitals, Doulas, Midwives & More",
+  },
 };
