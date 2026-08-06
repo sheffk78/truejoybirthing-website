@@ -1443,4 +1443,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [195, "Build Your Birth Plan"],
     ],
   },
+  "palm-springs-fl": {
+    videoId: "bpsjMiuuii0",
+    title: "Palm Springs FL Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 8 minutes.",
+    duration: "PT7M16S",
+    uploadDate: "2026-08-06T00:00:00-06:00",
+  }
 };

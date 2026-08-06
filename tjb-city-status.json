@@ -154,5 +154,21 @@
     "video_embedded": true,
     "youtube_url": "https://youtu.be/rRpsNAsqFrE",
     "has_outreach": true
+  },
+  "palm-springs-fl": {
+    "has_outreach": true,
+    "outreach_sent_at": "2026-08-06T14:05:00Z",
+    "outreach_provider_count": 2,
+    "outreach_no_email_count": 3,
+    "outreach_no_email_providers": [
+      "Dana Jacobs",
+      "Coastal Doulas of Palm Beach",
+      "Bonnie Kelly"
+    ],
+    "has_video": true,
+    "video_id": "bpsjMiuuii0",
+    "video_url": "https://youtu.be/bpsjMiuuii0",
+    "stage": "complete",
+    "score": 100
   }
 }
