@@ -1424,7 +1424,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
   "fort-worth-tx": {
-    videoId: "FP34hUIShRU",
+    videoId: "D0oVDzQwD8I",
     title: "Fort Worth Birth Guide: Hospitals, Doulas, Midwives & More",
     description: "Complete birth support guide for Fort Worth, TX. Hospital policies, doula costs, Medicaid coverage, and a free birth plan app.",
     duration: "PT3M35S",

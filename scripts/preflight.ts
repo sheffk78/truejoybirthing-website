@@ -2263,18 +2263,27 @@ function run(): void {
         }
       }
 
-      // Count total providers for ratio check
+      // Count total providers (all name: fields in localDoulas, tracking bracket depth)
       const totalProviderMatch = targetBlock.match(/localDoulas:\s*\[/);
       let totalProviders = 0;
       if (totalProviderMatch) {
         const ldSection = targetBlock.slice(totalProviderMatch.index!);
-        const arrEnd = ldSection.indexOf(']');
+        let bdepth = 0;
+        let arrEnd = -1;
+        for (let j = 0; j < ldSection.length; j++) {
+          if (ldSection[j] === '[') bdepth++;
+          else if (ldSection[j] === ']') {
+            bdepth--;
+            if (bdepth === 0) { arrEnd = j; break; }
+          }
+        }
         if (arrEnd > 0) {
-          totalProviders = (ldSection.slice(0, arrEnd).match(/name:\s*"/g) || []).length;
+          const ldContent = ldSection.slice(0, arrEnd);
+          totalProviders = (ldContent.match(/name:\s*"/g) || []).length;
         }
       }
 
-      if (emptyPhotoProviders.length > 0 && emptyPhotoProviders.length === totalProviders && totalProviders > 0) {
+      if (totalProviders > 0 && emptyPhotoProviders.length === totalProviders) {
         // FAIL only when ALL providers have empty photos — template monogram fallback
         // is the correct approach for individual missing photos (M41), not a failure.
         results.push({
