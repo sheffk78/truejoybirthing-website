@@ -293,6 +293,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT4M36S",
     uploadDate: "2026-06-30T00:00:00-06:00",
   },
+  "boise-id": {
+    videoId: "opchGImtrco",
+    title: "Boise ID Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Idaho Medicaid, all in under 7 minutes.",
+    duration: "PT6M39S",
+    uploadDate: "2026-08-05T00:00:00-06:00",
+  },
   "portland-or": {
     videoId: "2jLTU5IPVW4",
     title: "Portland OR Doula & Birth Plan Guide: Costs, Hospitals & OHP Medicaid (First-Time Mom)",
