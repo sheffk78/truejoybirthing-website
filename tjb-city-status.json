@@ -146,5 +146,13 @@
       ]
     },
     "lastUpdated": "2026-08-05"
+  },
+  "melissa-tx": {
+    "score": 100,
+    "status": "complete",
+    "video_id": "rRpsNAsqFrE",
+    "video_embedded": true,
+    "youtube_url": "https://youtu.be/rRpsNAsqFrE",
+    "has_outreach": true
   }
 }
