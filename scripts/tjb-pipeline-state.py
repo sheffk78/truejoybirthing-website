@@ -49,17 +49,17 @@ STAGE_ORDER = [
 STAGE_CONTEXTS = {
     "needs_research": {
         "skill": "tjb-city-pipeline",
-        "goal_template": "Research providers, hospitals, and birth centers for {slug}. Write the data into cities.ts using Python heredoc via terminal (NEVER use write_file or patch on cities.ts). Find at least the minimum provider count for the city's population tier. Verify data accuracy.",
+        "goal_template": "Research providers, hospitals, birth centers, and lactation specialists for {slug}. Write the data into cities.ts using Python heredoc via terminal (NEVER use write_file or patch on cities.ts). Find at least the minimum provider count for the city's population tier. Find lactation specialists (IBCLC/CLC) if available; if none in the area, note it and proceed. Verify data accuracy.",
         "toolsets": ["terminal", "file", "web", "browser"],
     },
     "needs_verification": {
         "skill": "tjb-provider-enrichment",
-        "goal_template": "Verification pass for {slug}: For each provider, verify the business is real, active, and is actually a doula/midwife. Check their website URL (if present) returns a live page. If the provider has a URL, crawl it to confirm the business is active and is birth-related. Set enrichedAt timestamp for each verified provider. Remove any providers that are clearly not doulas/midwives or have dead URLs. Only populate the enrichedAt field and remove invalid providers — do NOT fill other fields yet.",
+        "goal_template": "Verification pass for {slug}: For each provider, verify the business is real, active, and is actually a doula, midwife, or lactation specialist. Check their website URL (if present) returns a live page. If the provider has a URL, crawl it to confirm the business is active and is birth-related. Set enrichedAt timestamp for each verified provider. Remove any providers that are clearly not doulas/midwives/lactation specialists or have dead URLs. Only populate the enrichedAt field and remove invalid providers — do NOT fill other fields yet.",
         "toolsets": ["terminal", "file", "web", "browser"],
     },
     "needs_services": {
         "skill": "tjb-provider-enrichment",
-        "goal_template": "Services pass for {slug}: For each provider, extract their services list from their website or known data. Populate the services[] array with specific service strings (e.g., 'Birth Doula', 'Postpartum Doula', 'Lactation Consultant'). Only populate services[] — do NOT fill other fields.",
+        "goal_template": "Services pass for {slug}: For each provider, extract their services list from their website or known data. Populate the services[] array with specific service strings (e.g., 'Birth Doula', 'Postpartum Doula', 'Lactation Consultant'). Set isLactation: true for providers whose primary practice is lactation consulting (IBCLC/CLC/CLS). Only populate services[] and isLactation — do NOT fill other fields.",
         "toolsets": ["terminal", "file", "web", "browser"],
     },
     "needs_cost_data": {
@@ -84,7 +84,7 @@ STAGE_CONTEXTS = {
     },
     "needs_enrichment": {
         "skill": "tjb-provider-enrichment",
-        "goal_template": "Final enrichment pass for {slug}: Add provider descriptions, hospital thumbnails, birth center details, and any remaining fields not covered by the field-specific passes (verification, services, cost_data, photos, service_areas, deal_breakers). Run preflight after edits to verify.",
+        "goal_template": "Final enrichment pass for {slug}: Add provider descriptions, hospital thumbnails, birth center details, and any remaining fields not covered by the field-specific passes (verification, services, cost_data, photos, service_areas, deal_breakers). For lactation specialists, ensure credential reflects their IBCLC/CLC/CLS credential and services[] includes Lactation or Breastfeeding Support. Run preflight after edits to verify.",
         "toolsets": ["terminal", "file", "web", "browser", "vision"],
     },
     "needs_images": {

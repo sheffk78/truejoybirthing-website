@@ -131,6 +131,35 @@ def search_npi(city: str, state: str, taxonomy: str = "midwife", limit: int = 20
     return results
 
 
+def search_npi_lactation(city: str, state: str, limit: int = 20) -> list[dict]:
+    """Search NPI Registry for lactation consultants (IBCLC/CLC)."""
+    results = []
+    for taxonomy_code in ["163WL0100X", "174N00000X"]:
+        params = urllib.parse.urlencode({
+            "version": "2.1", "enumeration_type": "NPI-1",
+            "taxonomy_code": taxonomy_code,
+            "city": city, "state": state, "limit": limit,
+        })
+        try:
+            with urllib.request.urlopen(f"{NPI_BASE}?{params}", timeout=10) as resp:
+                data = json.loads(resp.read())
+        except Exception:
+            continue
+        for r in data.get("results", []):
+            basic = r.get("basic", {})
+            addrs = r.get("addresses", [])
+            prac = [a for a in addrs if a.get("address_purpose") == "LOCATION"]
+            name = f"{basic.get('first_name','')} {basic.get('last_name','')}".strip() or basic.get("organization_name", "")
+            results.append({
+                "name": name,
+                "credential": basic.get("credential", ""),
+                "taxonomy": r.get("taxonomies", [{}])[0].get("desc", ""),
+                "phone": prac[0].get("telephone_number", "") if prac else "",
+                "source": "NPI-lactation",
+            })
+    return results
+
+
 # ═══════════════════════════════════════════════════════════════
 # Firecrawl: URL validation + enrichment + search
 # ═══════════════════════════════════════════════════════════════
@@ -423,6 +452,8 @@ def classify_place(p: dict, target_state: str = "") -> tuple[Union[str, None], s
 
     if any(kw in text for kw in ["midwife", "midwifery"]):
         return ("midwife", "midwives")
+    if any(kw in text for kw in ["lactation", "breastfeeding", "ibclc", "clc "]):
+        return ("lactation", "lactation_specialists")
     if "doula" in text:
         return ("doula", "doulas")
     if any(kw in text for kw in ["birth center", "birth-center", "freestanding birth"]):
@@ -445,12 +476,14 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
         f"midwife {city} {state}",
         f"birth center {city} {state}",
         f"hospital labor delivery {city} {state}",
+        f"lactation consultant {city} {state}",
+        f"breastfeeding support {city} {state}",
     ]
 
     # Phase 1: Apify parallel searches
     print("  Phase 1: Apify Google Maps...", file=sys.stderr)
     results = {}
-    with ThreadPoolExecutor(max_workers=4) as pool:
+    with ThreadPoolExecutor(max_workers=6) as pool:
         futures = {pool.submit(search_maps, q, 10): q for q in queries}
         for fut in as_completed(futures):
             q = futures[fut]
@@ -463,6 +496,7 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
     # Phase 2: NPI
     print("  Phase 2: NPI Registry...", file=sys.stderr)
     npi_results = search_npi(city, state, "midwife", 20)
+    npi_lactation = search_npi_lactation(city, state, 20)
 
     # Phase 3: Classify and deduplicate
     result = {
@@ -470,9 +504,11 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
         "state": state,
         "doulas": [],
         "midwives": [],
+        "lactation_specialists": [],
         "birth_centers": [],
         "hospitals": [],
         "npi_midwives": npi_results,
+        "npi_lactation": npi_lactation,
     }
 
     seen_urls = set()
@@ -511,11 +547,15 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
     doula_names = set(d["name"].lower() for d in result["doulas"])
     result["midwives"] = [m for m in result["midwives"] if m["name"].lower() not in doula_names]
 
+    lactation_names = set(l["name"].lower() for l in result["lactation_specialists"])
+    result["doulas"] = [d for d in result["doulas"] if d["name"].lower() not in lactation_names]
+
     # Phase 4: HEAD pre-filter + URL validation + enrichment (single pass)
     # HEAD check is free — filters dead URLs before spending a Firecrawl call.
     print("  Phase 4: URL validation...", file=sys.stderr)
     all_providers = (
         result["doulas"] + result["midwives"] +
+        result["lactation_specialists"] +
         result["birth_centers"] + result["hospitals"]
     )
     for p in all_providers:
@@ -587,8 +627,9 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
                         print(f"    Downloaded: {path}", file=sys.stderr)
 
     print(f"\n  Results: {len(result['doulas'])} doulas, {len(result['midwives'])} midwives, "
+          f"{len(result['lactation_specialists'])} lactation specialists, "
           f"{len(result['birth_centers'])} birth centers, {len(result['hospitals'])} hospitals, "
-          f"{len(result['npi_midwives'])} NPI midwives", file=sys.stderr)
+          f"{len(result['npi_midwives'])} NPI midwives, {len(result['npi_lactation'])} NPI lactation", file=sys.stderr)
 
     if enrich:
         live_urls = sum(1 for p in all_providers if p.get("url_status", "").startswith("✅"))

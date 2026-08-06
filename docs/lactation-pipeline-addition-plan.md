@@ -589,12 +589,18 @@ Add the "Lactation" badge next to the "Midwife" badge:
 
 ```astro
 {doula.isMidwife && <span class="inline-flex items-center bg-tjb-lavender-100 text-tjb-lavender-700 text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-lavender-200">Midwife</span>}
-{doula.isLactation && <span class="inline-flex items-center bg-tjb-sage-100 text-tjb-sage-700 text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-sage-200">Lactation</span>}
+{doula.isLactation && <span class="inline-flex items-center bg-tjb-sage-100 text-tjb-sage text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-sage">Lactation</span>}
 ```
 
-Using a sage color for the lactation badge visually distinguishes it from the
-lavender midwife badge. (Confirm `tjb-sage` tokens exist in the Tailwind config;
-if not, reuse `tjb-lavender-100/700/200` as a safe fallback.)
+The `tjb-sage` palette only defines `--color-tjb-sage` (#A8B5A0) and
+`--color-tjb-sage-100` (#E8EDE5) in `src/styles/global.css` — there is no
+`tjb-sage-200` or `-700`. The badge above uses the two existing tokens:
+`bg-tjb-sage-100` (light sage background) + `text-tjb-sage` (medium sage text) +
+`border-tjb-sage`. This visually distinguishes the lactation badge from the
+lavender midwife badge using only defined tokens. If a sage border is too
+subtle, swap `border-tjb-sage` for `border-tjb-lavender-200` (already
+safelisted) as a safe fallback. Add the new classes to `src/styles/safelist.ts`
+if using the JIT safelist.
 
 ### 7D. Filter JavaScript
 

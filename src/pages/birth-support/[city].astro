@@ -31,6 +31,8 @@ const {
   heroImage: heroImageSlug, supportSceneImage, supportSceneAlt, ogImage: ogImageSlug,
   costSectionImage, insuranceSectionImage, midwifeSectionImage,
   midwifeInfo,
+  lactationSectionImage,
+  lactationInfo,
   birthStats,
   postpartumSection,
   providerReviewSection,
@@ -70,6 +72,7 @@ const filterLanguageValues = new Set<string>();
 let filterHasMedicaid = false;
 let filterHasAccepting = false;
 let filterHasMidwife = false;
+let filterHasLactation = false;
 const filterCostTiers = new Set<string>();
 
 const slugify = (s: string) => s.toLowerCase().trim().replace(/\s+/g, '-');
@@ -80,6 +83,7 @@ localDoulas?.forEach((d) => {
   if (d.acceptsMedicaid) filterHasMedicaid = true;
   if (d.acceptingClients) filterHasAccepting = true;
   if (d.isMidwife) filterHasMidwife = true;
+  if (d.isLactation) filterHasLactation = true;
   if (d.costRange) {
     const m = d.costRange.match(/\$([\d,]+)/);
     if (m) {
@@ -93,7 +97,7 @@ localDoulas?.forEach((d) => {
 
 const showFilterBar = (localDoulas?.length || 0) >= 2 && (
   filterServiceValues.size > 0 || filterHasMedicaid || filterHasAccepting ||
-  filterHasMidwife || filterCostTiers.size > 0 || filterLanguageValues.size > 0
+  filterHasMidwife || filterHasLactation || filterCostTiers.size > 0 || filterLanguageValues.size > 0
 );
 
 // State full name for breadcrumbs (SEO: "Colorado" not "CO")
@@ -182,6 +186,19 @@ if (hasBirthCenterService || hasBirthCenters) {
   });
 }
 
+// Check for lactation support — show when any localDoulas entry has
+// isLactation: true OR a "Lactation" service tag.
+const hasLactationService = filterHasLactation
+  || [...filterServiceValues].some((s) => s.toLowerCase().includes('lactation'));
+if (hasLactationService) {
+  nicheFilters.push({
+    param: 'service:lactation',
+    label: 'Lactation support',
+    titleTemplate: 'Lactation Consultants & Support in {city}, {state}',
+    metaTemplate: 'Find IBCLC lactation consultants and lactation support in {city}, {state}. Filter by insurance, home visits, and virtual consults on True Joy Birthing.',
+  });
+}
+
 // Build a JSON-serializable map of filter param → {title, meta, faqs} for client-side JS
 const filterSEOMap: Record<string, { title: string; meta: string; faqs: Array<{ q: string; a: string }> }> = {};
 for (const nf of nicheFilters) {
@@ -218,16 +235,21 @@ for (const nf of nicheFilters) {
       { q: `Are there birth centers in ${city}?`, a: hasBirthCenters ? `Yes, ${city} has freestanding birth centers. See the birth center details above and use the "Birth center" filter to find doulas who work with birth centers in the area.` : `There are currently no freestanding birth centers in ${city}, but some hospitals offer midwifery care in a birth-center-like setting. Use the filter to find doulas experienced with birth center-style care.` },
       { q: `What is a birth center doula?`, a: `A birth center doula supports you during labor at a freestanding birth center. They work alongside the midwife to provide comfort, advocacy, and continuous support throughout your birth.` },
     ];
+  } else if (nf.param === 'service:lactation') {
+    faqs = [
+      { q: `How do I find a lactation consultant in ${city}?`, a: `Use the filter bar above and select "Lactation" to see providers in ${city}, ${state} who offer lactation support. You can also ask your OB, midwife, or pediatrician for an in-network IBCLC referral, or check with your hospital's lactation department.` },
+      { q: `Does insurance cover lactation consultants in ${city}?`, a: `Yes for most plans. The ACA requires coverage of lactation support and counseling on most private plans, and ${stateFullName} Medicaid covers lactation consulting. Call your plan to confirm in-network IBCLCs before your first visit.` },
+    ];
   }
   filterSEOMap[nf.param] = { title, meta, faqs };
 }
 const filterSEOJson = JSON.stringify(filterSEOMap);
 
-const pageTitle = `${city}, ${state} Doula Costs, Hospitals & Medicaid`;
+const pageTitle = (data as any).titleTag || `${city}, ${state} Doula, Midwife & Lactation: Costs, Hospitals & Medicaid`;
 const medicaidDesc = medicaidCovers ? 'Medicaid covers doulas' : 'no Medicaid doula coverage';
 // Always use "free birth plan template" (never the shorter "free plan template")
 // to keep meta descriptions in the 120-160 char sweet spot.
-let pageDesc = `Planning a birth in ${city}, ${state}? Compare doula costs ($${costLow}-$${costHigh}), ${medicaidDesc}, hospitals, birth centers, and a free birth plan template.`;
+let pageDesc = (data as any).metaDescription || `Planning a birth in ${city}, ${state}? Compare doula costs ($${costLow}-$${costHigh}), ${medicaidDesc}, hospitals, birth centers, lactation support, and a free birth plan template.`;
 // Hard cap at 155 chars (Google desktop SERP shows ~155-160)
 if (pageDesc.length > 155) {
   let trimmed = pageDesc.slice(0, 152);
@@ -273,6 +295,14 @@ const supportImageAlt = supportSceneAlt || `A doula walking alongside an expecta
 const doulaCostImage = costSectionImage || '/images/doula-holding-hands.webp';
 const medicaidImage = insuranceSectionImage || '/images/hands-on-belly.webp';
 const midwifeImage = midwifeSectionImage || '/images/midwife-heartbeat.webp';
+// Lactation section image — one reusable photo across cities (Jeff approved
+// consistent cross-city section illustrations); city override only when a
+// real practice supplies a photo. 4:3 to match the midwife container.
+const lactationImage = lactationSectionImage || '/images/lactation-consult.webp';
+// Lactation specialists appear in the existing localDoulas array with
+// isLactation: true (not a separate array). Filter them here so the lactation
+// section can render its own simpler card grid.
+const lactationProviders = localDoulas?.filter((d) => d.isLactation) || [];
 
 // Build structured-data
 const breadcrumbList = [
@@ -281,6 +311,22 @@ const breadcrumbList = [
   { name: stateFullName, url: `https://truejoybirthing.com/birth-support/${state.toUpperCase() === 'MT' ? 'bozeman-mt' : state.toLowerCase()}/` },
   { name: `${city}, ${state}`, url: pageUrl },
 ];
+
+// Default lactation FAQs — prepended to every city's faqs so the lactation
+// section's FAQ coverage is guaranteed on every new page without manual entry.
+// Uses medicaidCovers + stateFullName to stay accurate per-city.
+const defaultLactationFaqs = [
+  {
+    q: `How much does a lactation consultant cost in ${city}?`,
+    a: `An IBCLC consult in ${city} typically runs $150–$300 for an initial 90-minute visit and $75–$150 for follow-ups. The good news: under the ACA, most insurance plans cover lactation consulting with no cost-sharing — confirm your in-network IBCLCs and any out-of-pocket cost before booking.`,
+  },
+  {
+    q: `Does insurance or Medicaid cover lactation consultants in ${city}?`,
+    a: `Yes for most plans. The ACA requires coverage of lactation support and counseling on most private plans, and ${stateFullName} Medicaid covers lactation consulting. ${medicaidCovers ? 'Medicaid also covers doula services in your area.' : 'Doula coverage under Medicaid varies — see the Medicaid section above.'} Always call your plan to confirm in-network IBCLCs before your first visit.`,
+  },
+];
+// Use allFaqs (not faqs) in render + FAQ schema so lactation FAQs are included.
+const allFaqs = [...defaultLactationFaqs, ...faqs];
 
 const schema = {
   '@context': 'https://schema.org',
@@ -299,10 +345,10 @@ const schema = {
     {
       '@type': 'FAQPage',
       '@id': `${pageUrl}#faq`,
-      mainEntity: faqs.map((f) => ({
+      mainEntity: allFaqs.map((f) => ({
         '@type': 'Question',
         name: f.q,
-        url: `${pageUrl}#faq-${f.q.toLowerCase().includes('cost') ? 'cost' : f.q.toLowerCase().includes('medicaid') ? 'medicaid' : f.q.toLowerCase().includes('true joy') ? 'brand' : 'hospital'}`,
+        url: `${pageUrl}#faq-${f.q.toLowerCase().includes('cost') ? 'cost' : f.q.toLowerCase().includes('medicaid') ? 'medicaid' : f.q.toLowerCase().includes('true joy') ? 'brand' : f.q.toLowerCase().includes('lactation') ? 'lactation' : 'hospital'}`,
         acceptedAnswer: { '@type': 'Answer', text: f.a },
       })),
     },
@@ -328,6 +374,48 @@ const schema = {
       description: `Joyful Birth Plan tools, hospital info, and doula and midwife cost guides for families in ${city}, ${state}.`,
       ...(data.publishedDate ? { datePublished: data.publishedDate } : {}),
     },
+    // Lactation service — always emitted (even with no verified providers) so
+    // Google sees a lactation service offered in this city. Links to #lactation.
+    {
+      '@type': 'Service',
+      '@id': `${pageUrl}#lactation-service`,
+      name: `Lactation Support Resources for ${city} Families`,
+      url: `${pageUrl}#lactation`,
+      serviceType: 'Lactation Consulting',
+      description: `IBCLC and CLC lactation consultant directory, insurance coverage info, and feeding-preferences birth plan tools for families in ${city}, ${state}.`,
+      provider: { '@id': 'https://truejoybirthing.com/#organization' },
+      areaServed: {
+        '@type': 'City',
+        name: city,
+        ...(data.lat && data.lng ? {
+          geo: { '@type': 'GeoCoordinates', latitude: data.lat, longitude: data.lng },
+        } : {}),
+      },
+      ...(data.publishedDate ? { datePublished: data.publishedDate } : {}),
+    },
+    // Physician (MedicalBusiness/LocalBusiness) node per verified lactation
+    // provider. Only emit for isVerified providers to avoid unverified claims.
+    // Lactation specialists come from the localDoulas array (isLactation: true).
+    ...lactationProviders
+      .filter((p) => p.isVerified === true)
+      .map((p, i) => ({
+        '@type': 'Physician',
+        '@id': `${pageUrl}#lactation-${i}`,
+        name: p.name,
+        medicalSpecialty: 'LactationConsulting',
+        ...(p.credential ? { credential: p.credential } : {}),
+        ...(p.url ? { url: p.url } : {}),
+        ...(p.serviceArea ? {
+          areaServed: p.serviceArea.map((a) => ({ '@type': 'City', name: a })),
+        } : {}),
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: city,
+          addressRegion: state,
+          addressCountry: 'US',
+        },
+        ...(p.acceptingClients === true ? { acceptsNewPatients: true } : {}),
+      })),
     // MedicalOrganization for each hospital (schema helps Google understand
     // the medical facilities serving this city, whether or not they have a URL)
     ...hospitalDetails.map((h, i) => {
@@ -623,6 +711,9 @@ const schema = {
               {filterHasMidwife && (
                 <button class="filter-chip inline-flex items-center bg-white text-tjb-charcoal text-xs font-medium px-3 py-1.5 rounded-full border border-tjb-lavender-200 hover:border-tjb-rose-300 hover:bg-tjb-rose-50 transition" data-filter="midwife:yes">Midwife</button>
               )}
+              {filterHasLactation && (
+                <button class="filter-chip inline-flex items-center bg-white text-tjb-charcoal text-xs font-medium px-3 py-1.5 rounded-full border border-tjb-lavender-200 hover:border-tjb-rose-300 hover:bg-tjb-rose-50 transition" data-filter="lactation:yes">Lactation</button>
+              )}
               {filterCostTiers.has('under-1000') && (
                 <button class="filter-chip inline-flex items-center bg-white text-tjb-charcoal text-xs font-medium px-3 py-1.5 rounded-full border border-tjb-lavender-200 hover:border-tjb-rose-300 hover:bg-tjb-rose-50 transition" data-filter="cost:under-1000">Under $1,000</button>
               )}
@@ -663,6 +754,7 @@ const schema = {
               data-medicaid={doula.acceptsMedicaid ? 'yes' : ''}
               data-accepting={doula.acceptingClients ? 'yes' : ''}
               data-midwife={doula.isMidwife ? 'yes' : ''}
+              data-lactation={doula.isLactation ? 'yes' : ''}
               data-cost-tier={cardCostTier}
               data-languages={cardLanguages}
             >
@@ -715,6 +807,7 @@ const schema = {
               <div class="flex flex-wrap justify-center gap-2 mt-2">
                 {doula.isAmbassador && <span class="inline-flex items-center bg-tjb-lavender-100 text-tjb-lavender-700 text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-lavender-200">Ambassador</span>}
                 {doula.isMidwife && <span class="inline-flex items-center bg-tjb-lavender-100 text-tjb-lavender-700 text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-lavender-200">Midwife</span>}
+                {doula.isLactation && <span class="inline-flex items-center bg-tjb-sage-100 text-tjb-sage text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-sage">Lactation</span>}
                 <span class="inline-flex items-center bg-tjb-rose-50 text-tjb-rose-500 text-xs font-medium px-2.5 py-0.5 rounded-full border border-tjb-rose-200">{city}</span>
               </div>
               {doula.acceptingClients && (
@@ -947,7 +1040,7 @@ const schema = {
               const [type, value] = f.split(':');
               const attr = 'data-' + type.replace('service', 'services').replace('cost', 'cost-tier').replace('language', 'languages');
               const val = card.getAttribute(attr) || '';
-              if (type === 'medicaid' || type === 'accepting' || type === 'midwife') {
+              if (type === 'medicaid' || type === 'accepting' || type === 'midwife' || type === 'lactation') {
                 return val === value;
               }
               return val.split(',').includes(value);
@@ -1432,6 +1525,93 @@ const schema = {
   </section>
 
 
+  {/* ═══ Lactation Specialists Section (two-column with 4:3 image) ═══
+      Always rendered — even with zero verified providers — so the page ranks
+      for lactation queries and the education copy does its job. Mirrors the
+      midwife section pattern: 58% prose / 42% image. */}
+  <section class="py-12 bg-tjb-cream-50" id="lactation">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+        <div class="md:w-[58%] prose">
+          <h2 class="font-bold text-tjb-charcoal" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">Lactation Specialists in {city}</h2>
+
+          {/* City-specific intro if present, else generic fallback */}
+          {lactationInfo && lactationInfo.paragraph ? (
+            <>
+              <p>{lactationInfo.paragraph}</p>
+              {lactationInfo.credentialDetail && <p>{lactationInfo.credentialDetail}</p>}
+            </>
+          ) : (
+            <p>Whether you plan to breastfeed, pump, combo-feed, or you're still unsure, a lactation specialist in {city} can help you through the first weeks. Here's what to know before you book:</p>
+          )}
+
+          <ul>
+            <li><strong>IBCLC</strong> (International Board Certified Lactation Consultant) — the highest credential; found in hospitals and private practice; can handle complex issues like ties, low supply, and NICU feeding.</li>
+            <li><strong>CLC / CLS</strong> (Certified Lactation Counselor / Specialist) — common in community and WIC settings; great for routine early support and answering day-to-day questions.</li>
+            <li><strong>Insurance often covers it:</strong> The ACA requires lactation consulting coverage on most private plans — confirm your in-network IBCLCs and any out-of-pocket cost before booking.</li>
+            <li><strong>See it early:</strong> Book a prenatal lactation visit in your third trimester and a postpartum visit within the first week home — don't wait for a crisis.</li>
+          </ul>
+
+          {/* Provider list — some vs zero branches */}
+          {lactationProviders.length > 0 ? (
+            <div class="mt-6 not-prose">
+              <p class="font-semibold text-tjb-charcoal mb-3">Lactation specialists serving {city}:</p>
+              <div class="grid sm:grid-cols-2 gap-4">
+                {lactationProviders.map((p) => (
+                  <div class="border border-tjb-cream rounded-xl p-4 bg-tjb-cream/20">
+                    <div class="flex items-center gap-3 mb-2">
+                      {p.photo ? (
+                        <img src={p.photo} alt={p.name} class="w-12 h-12 rounded-full object-cover" width="48" height="48" loading="lazy" />
+                      ) : (
+                        <div class="w-12 h-12 rounded-full bg-tjb-rose-100 flex items-center justify-center font-semibold text-tjb-rose-600" aria-hidden="true">
+                          {p.name.split(' ').map((n: string) => n[0]).slice(0, 2).join('')}
+                        </div>
+                      )}
+                      <div>
+                        <p class="font-semibold text-tjb-charcoal">{p.name}</p>
+                        {p.credential && <span class="text-xs font-semibold text-tjb-lavender-600 bg-tjb-lavender-50 px-2 py-0.5 rounded">{p.credential}</span>}
+                      </div>
+                    </div>
+                    {p.practice && <p class="text-sm text-tjb-gray">{p.practice}</p>}
+                    {p.description && <p class="text-sm text-tjb-gray mt-1">{p.description}</p>}
+                    <div class="flex flex-wrap gap-2 mt-2 text-xs">
+                      {p.costRange && <span class="bg-tjb-cream px-2 py-0.5 rounded">{p.costRange}</span>}
+                      {p.homeBirthSupport && <span class="bg-tjb-rose-50 text-tjb-rose-600 px-2 py-0.5 rounded">Home visits</span>}
+                      {p.virtualConsultations && <span class="bg-tjb-cream px-2 py-0.5 rounded">Virtual</span>}
+                      {p.acceptingClients && <span class="bg-green-50 text-green-700 px-2 py-0.5 rounded">{typeof p.acceptingClients === 'string' ? p.acceptingClients : 'Accepting clients'}</span>}
+                    </div>
+                    {p.url && <a href={p.url} target="_blank" rel="noopener noreferrer" class="text-sm text-tjb-rose-600 hover:underline mt-2 inline-block">Visit site →</a>}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div class="mt-6 p-4 bg-tjb-cream/30 rounded-xl border border-tjb-cream not-prose">
+              <p class="text-tjb-gray">
+                We haven't verified an IBCLC or CLC in {city} yet — but lactation help is still close. Most {city} hospitals above offer inpatient IBCLC support, and your insurance plan (under ACA rules) typically covers outpatient lactation consults. <a href="/blog/find-lactation-consultant/" class="text-tjb-rose-600 hover:underline">How to find a lactation consultant near you</a> walks through the search, or ask your OB or midwife for an in-network referral.
+              </p>
+            </div>
+          )}
+
+          <p class="mt-4">Not sure where feeding fits in your plan? <a href="/birth-plan-template/" class="text-tjb-rose-600 hover:underline">The free birth plan template</a> includes a feeding-preferences section.</p>
+        </div>
+
+        <div class="md:w-[42%] flex-shrink-0">
+          <img
+            src={lactationImage}
+            alt="A lactation consultant helping a new mother with a feeding session, calm and focused, warm home-office light"
+            class="w-full aspect-[4/3] object-cover rounded-xl shadow-md"
+            width="1024"
+            height="768"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <!-- ═══ When to Start Looking for a Doula or Midwife ═══ -->
   <section class="py-16 bg-white">
     <div class="max-w-3xl mx-auto px-6">
@@ -1725,7 +1905,7 @@ const schema = {
       <h2 class="text-2xl font-bold mb-2" style="font-family: 'DM Sans', sans-serif;">Your Questions About Doulas & Midwives in {city}</h2>
       <p class="text-tjb-gray mb-8">The things {city} moms ask us most, answered honestly.</p>
       <div class="space-y-6">
-        {faqs.map((faq) => (
+        {allFaqs.map((faq) => (
           <details class="border border-tjb-lavender-200 rounded-xl p-5 bg-white group">
             <summary class="text-lg font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
               <span>{faq.q}</span>

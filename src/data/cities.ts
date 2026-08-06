@@ -58,6 +58,8 @@ export interface LocalDoula {
   photoIsLogo?: boolean;       // Official practice logo; render contained instead of cropped as a headshot
   isAmbassador?: boolean;
   isMidwife?: boolean;
+  /** Lactation specialist (IBCLC/CLC/CLS) — distinct from doula/midwife */
+  isLactation?: boolean;
   isVerified?: boolean;        // Only true after provider confirms info via outreach
   costRange?: string;          // e.g. "$800–$1,200"
   serviceArea?: string[];      // e.g. ["Denver" , "Aurora" , "Lakewood"],
@@ -127,6 +129,11 @@ export interface CityData {
     birthCenterBirthRate?: number;  // Percentage (e.g. 0.5) — NO % sign, template adds it
     dataYear?: number;             // Year the data was collected (e.g. 2023)
     dataSource?: string;           // Source attribution (e.g. "CDC NCHS, National Vital Statistics System")
+  };
+  lactationSectionImage?: string;  // City-specific lactation section image (fallback: /images/lactation-consult.webp)
+  lactationInfo?: {                // City-specific lactation section text (if absent, generic text is used)
+    paragraph: string;             // Local lactation landscape paragraph
+    credentialDetail: string;      // State-specific licensure/insurance notes
   };
   postpartumSection?: string;      // City-specific postpartum care provider section (H2 + paragraph, \n\n separated, HTML allowed)
   providerReviewSection?: string;  // City-specific provider review / comparison section (H2 + paragraph, \n\n separated, HTML allowed)
@@ -5763,6 +5770,8 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
     city: "Kansas City",
     state: "MO",
     slug: "kansas-city-mo",
+    titleTag: "Kansas City, MO Doula Costs, Hospitals & Medicaid",
+    metaDescription: "Kansas City, MO doula costs, top hospitals, birth centers, and Medicaid coverage. Free birth plan template for Kansas City families.",
     lat: 39.0997,
     lng: -94.5786,
     costLow: 800,

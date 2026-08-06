@@ -67,3 +67,9 @@ The reviewer returns JSON:
 - Score >= 80: PASS
 - Score 60-79: FAIL with specific issues to fix
 - Score < 60: FAIL, enrichment should be redone entirely
+
+### 7. Lactation Specialist Data Quality (when isLactation: true)
+- credential must be IBCLC, CLC, CLS, or "Lactation Consultant" — never "Birth Doula"
+- services[] must include "Lactation" or "Breastfeeding Support"
+- Zero lactation specialists is acceptable (sparse in many areas) — do not fabricate
+- A provider must NOT have both isLactation: true and isMidwife: true

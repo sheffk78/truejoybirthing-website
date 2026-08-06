@@ -1372,4 +1372,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     videoId: "ot_trC0MtxY",
     title: "Cincinnati Birth Guide: Hospitals, Doulas, Midwives & More",
   },
+  "kansas-city-mo": {
+    videoId: "sxGNQQ-YOwo",
+    title: "Kansas City Birth Guide: Hospitals, Doulas, Midwives & More",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT4M53S",
+    uploadDate: "2026-08-06T00:00:00-06:00",
+  },
 };

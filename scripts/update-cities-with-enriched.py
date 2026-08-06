@@ -146,7 +146,7 @@ def extract_phone(address: str, md: str) -> str | None:
 
 # ── entry builder ──
 
-def build_entry(p: dict, is_midwife: bool = False) -> str:
+def build_entry(p: dict, is_midwife: bool = False, is_lactation: bool = False) -> str:
     """Build one TypeScript LocalDoula entry line."""
     name = p["name"].replace('"', '\\"')
     website = p.get("website", "") or p.get("website_alt", "") or ""
@@ -162,7 +162,15 @@ def build_entry(p: dict, is_midwife: bool = False) -> str:
     parts = [f'name: "{name}"']
     
     # Determine credential
-    if is_midwife:
+    if is_lactation:
+        md_lower = md.lower()
+        if 'ibclc' in md_lower or 'international board' in md_lower:
+            parts.append(f'credential: "IBCLC"')
+        elif 'clc' in md_lower:
+            parts.append(f'credential: "CLC"')
+        else:
+            parts.append(f'credential: "Lactation Consultant"')
+    elif is_midwife:
         if 'cpn' in md.lower() or 'certified professional' in md.lower():
             parts.append(f'credential: "CPM"')
         elif 'cnm' in md.lower() or 'certified nurse' in md.lower():
@@ -201,6 +209,9 @@ def build_entry(p: dict, is_midwife: bool = False) -> str:
     if is_midwife:
         parts.append(f'isMidwife: true')
     
+    if is_lactation:
+        parts.append(f'isLactation: true')
+    
     return '      { ' + ', '.join(parts) + ' },\n'
 
 
@@ -213,6 +224,8 @@ def build_all_entries(json_path: str) -> str:
         lines.append(build_entry(p, is_midwife=False))
     for p in data.get("midwives", []):
         lines.append(build_entry(p, is_midwife=True))
+    for p in data.get("lactation_specialists", []):
+        lines.append(build_entry(p, is_midwife=False, is_lactation=True))
     
     return ''.join(lines)
 
