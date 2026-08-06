@@ -1352,6 +1352,7 @@ function run(): void {
         'albany-ny': 101000, 'frisco-tx': 219000, 'mesquite-tx': 150000,
         'st-paul-mn': 309000, 'tacoma-wa': 219000, 'temple-tx': 83000,
         'victoria-tx': 67000,
+        'palm-springs-fl': 27356,
       };
 
       const population = POPULATION_DATA[targetSlug] || 0;
