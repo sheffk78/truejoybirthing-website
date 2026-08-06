@@ -104,7 +104,7 @@ STAGE_CONTEXTS = {
     },
     "needs_outreach": {
         "skill": "tjb-provider-outreach",
-        "goal_template": "Draft and send provider outreach emails for {slug}. Find provider email addresses (curl+grep, JSON-LD, domain inference). Verify emails with email-validator. Draft personalized emails signed as Jeff. Send via AgentMail from shelbi@truejoybirthing.com with 15s delays. Include P.S. opt-out. Update tjb-city-status.json.",
+        "goal_template": "Draft and send provider outreach emails for {slug}. Find provider email addresses (curl+grep, JSON-LD, domain inference). Verify emails with email-validator. Draft personalized emails signed as Jeff. Send via AgentMail from shelbi@truejoybirthing.com with 15s delays. Include P.S. opt-out. For providers with NO email: run tjb-form-outreach.py to check for website contact forms, fill general forms via browser tools, escalate CAPTCHAs to Jeff via Discord. Update tjb-city-status.json.",
         "toolsets": ["terminal", "file", "web", "browser"],
     },
     "needs_video": {
