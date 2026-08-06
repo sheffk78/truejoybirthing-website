@@ -1405,7 +1405,7 @@ export const cities: Record<string, CityData> = {
     titleTag: "Fort Worth, TX Doula Costs, Hospitals & Medicaid" ,
     costLow: 800,
     costHigh: 3000,
-    heroImage: "/images/fort-worth-tx-birth-doula-hero-v6.webp",
+    heroImage: "/images/fort-worth-tx-birth-doula-hero-v7.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-fort-worth-tx-v6.webp",
     supportSceneImage: "/images/fort-worth-tx-birth-doula-support.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Fort Worth: Texas birth support and doula care in Tarrant County",
