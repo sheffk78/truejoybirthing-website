@@ -8274,7 +8274,7 @@ hospitalDetails: [
     heroImage: "/images/fate-tx-rva.webp",
     heroAlt: "Pregnant woman silhouette at golden hour against the Fate, Texas prairie landscape along the I-30 corridor",
     ogImage: "https://truejoybirthing.com/images/og-city-fate-tx.webp",
-    supportSceneImage: "/images/fate-tx-birth-doula-support-rva.webp",
+    supportSceneImage: "/images/fate-tx-doula-walking-park.webp",
     supportSceneAlt: "A doula providing hands-on support to a pregnant mom in Fate, Texas: Rockwall County birth support",
     metaDescription: "Fate, TX doula costs, hospitals near Rockwall County, and Medicaid coverage. Free birth plan template for Fate families." ,
     localDoulas: [
