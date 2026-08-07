@@ -2541,6 +2541,27 @@
     "url": "https://truejoybirthing.com/birth-support/palm-springs-fl/"
   },
   {
+    "slug": "tampa-fl",
+    "city": "Tampa",
+    "state": "FL",
+    "score": 85,
+    "hero": true,
+    "hero_issue": "",
+    "og": true,
+    "support": true,
+    "hospitals": true,
+    "hospital_count": 5,
+    "doulas": true,
+    "doula_count": 10,
+    "video": false,
+    "outreach": true,
+    "placeholder": false,
+    "in_progress": false,
+    "started_at": "",
+    "slot": "",
+    "url": "https://truejoybirthing.com/birth-support/tampa-fl/"
+  },
+  {
     "slug": "rosemount-mn",
     "city": "Rosemount",
     "state": "MN",
