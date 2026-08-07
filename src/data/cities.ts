@@ -8535,6 +8535,7 @@ hospitalDetails: [
   "houston-tx": {
     enableBlogResources: true,
     publishedDate: "2026-08-07",
+    titleTag: "Houston, TX Doula Costs, Hospitals & Medicaid",
     city: "Houston",
     state: "TX",
     slug: "houston-tx",
@@ -8581,6 +8582,8 @@ hospitalDetails: [
       { q: "Does True Joy Birthing work with Houston families?", a: "Yes, and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Houston birth setting, whether you're delivering at a hospital in the Medical Center, a birth center in Spring, or at home in The Woodlands. The app also helps you find and connect with local doulas and midwives. <a href='/birth-plan-template/'>Download the free birth plan template</a> and start preparing your way. No signup required." },
     ],
     nearbyCities: ["austin-tx"],
+    lat: 29.7604,
+    lng: -95.3698,
     birthStats: {
       cesareanRate: 34.5,
       maternalMortalityRate: 28.2,
