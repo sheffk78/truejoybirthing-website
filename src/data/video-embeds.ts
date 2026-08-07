@@ -413,6 +413,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M49S",
     uploadDate: "2026-07-03T00:00:00-06:00",
 },
+"jacksonville-fl": {
+    videoId: "bFR6DwKo7Mw",
+    title: "Jacksonville Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — 5 hospitals, 2 birth centers, 12 doulas and midwives, costs, and Florida Medicaid, all in about 8 minutes.",
+    duration: "PT8M8S",
+    uploadDate: "2026-08-07T00:00:00-04:00",
+},
 "orlando-fl": {
     videoId: "9KBRxlVHgFo",
     title: "Orlando Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
