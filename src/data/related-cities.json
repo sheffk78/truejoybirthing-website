@@ -37,7 +37,18 @@
   "abilene-tx": [],
   "beaumont-tx": [],
   "arlington-tx": [],
-  "austin-tx": [],
+  "austin-tx": [
+    {
+      "slug": "houston-tx",
+      "sharedProviders": 1
+    }
+  ],
+  "houston-tx": [
+    {
+      "slug": "austin-tx",
+      "sharedProviders": 1
+    }
+  ],
   "augusta-ga": [],
   "atlanta-ga": [
     {
@@ -272,5 +283,6 @@
     }
   ],
   "american-canyon-ca": [],
-  "arlington-heights-il": []
+  "arlington-heights-il": [],
+  "anchorage-ak": []
 }
