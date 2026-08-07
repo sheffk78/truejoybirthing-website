@@ -160,12 +160,9 @@
 # had their own city page entries, causing 404s.
 # ════════════════════════════════════════════════════════════
 
-/birth-support/jacksonville-fl /birth-support/fl/ 301
-/birth-support/jacksonville-fl/ /birth-support/fl/ 301
+
 /birth-support/dallas-tx /birth-support/tx/ 301
 /birth-support/dallas-tx/ /birth-support/tx/ 301
-/birth-support/houston-tx /birth-support/tx/ 301
-/birth-support/houston-tx/ /birth-support/tx/ 301
 /birth-support/colorado-springs-co /birth-support/co/ 301
 /birth-support/colorado-springs-co/ /birth-support/co/ 301
 /birth-support/greensboro-nc /birth-support/nc/ 301
