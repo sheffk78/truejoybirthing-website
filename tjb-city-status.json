@@ -1,189 +1,2418 @@
 {
-  "eugene-or": {
+  "version": 3,
+  "last_updated": "2026-08-08T12:56:37.975932+00:00",
+  "total_cities_in_codebase": 187,
+  "future_cities_planned": 1000,
+  "cities": {
+    "abilene-tx": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-07T15:30:00-05:00",
+      "video_id": "yZqjAc6hPp8",
+      "video_url": "https://youtu.be/yZqjAc6hPp8",
+      "video_uploaded_at": "2026-07-07T15:20:00-05:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "albany-ny": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-08T06:04:00Z",
+      "videoId": "E2NP4hAGK7c",
+      "video_status": "live",
+      "page_deployed": true,
+      "preflight_passed": true,
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "allen-tx": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-08T08:01:00Z",
+      "videoId": "99qnLrYJGMg",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "amarillo-tx": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-09T03:10:00Z",
+      "videoId": "IvyDHqxqkgk",
+      "video_url": "https://youtu.be/IvyDHqxqkgk",
+      "video_uploaded_at": "2026-07-09T03:05:00Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "arlington-tx": {
+      "has_video": true,
+      "has_outreach": true,
+      "outreach_count": 4,
+      "videoId": "9U9P3biXry8",
+      "video_id": "9U9P3biXry8",
+      "video_url": "https://youtu.be/9U9P3biXry8",
+      "video_uploaded_at": "2026-07-09T16:16:09.695622+00:00",
+      "completed_at": "2026-07-10T16:10:25.400303+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "atlanta-ga": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T02:27:56Z",
+      "note": "City page removed from cities.ts (404 on production). Removed from video-embeds.ts. Outreach queue cleared \u2014 12 providers were blocked by URL gate. Stale entry cleaned up 2026-07-09.",
+      "video_embed_removed": true,
+      "videoId": "",
+      "video_id": "",
+      "previous_outreach_blocked_reason": "City page returns HTTP 404. City was removed from cities.ts (only exists in cities.ts.bak). URL gate in send pipeline blocks all emails.",
+      "video_phase": "not_required",
+      "video_skip_reason": "video not in phases for this city",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "augusta-ga": {
+      "has_video": true,
+      "has_outreach": true,
+      "outreach_count": 3,
+      "completed_at": "2026-07-08T11:04:00Z",
+      "videoId": "vGQM1enHBeM",
+      "video_id": "vGQM1enHBeM",
+      "video_url": "https://youtu.be/vGQM1enHBeM",
+      "video_uploaded_at": "2026-07-09T16:16:09.695575+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "aurora-co": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-08T13:07:00Z",
+      "videoId": "CEbAcPaEOqE",
+      "video_id": "CEbAcPaEOqE",
+      "video_url": "https://youtu.be/CEbAcPaEOqE",
+      "video_uploaded_at": "2026-07-09T19:10:00Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "austin-tx": {
+      "has_video": true,
+      "has_outreach": true,
+      "outreach_count": 8,
+      "completed_at": "2026-07-08T14:12:00Z",
+      "videoId": "goIwPTplnic",
+      "video_id": "goIwPTplnic",
+      "video_url": "https://youtu.be/goIwPTplnic",
+      "video_uploaded_at": "2026-07-09T16:16:09.695584+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "bakersfield-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-16T05:50:06.742821+00:00",
+      "outreach_count": 5,
+      "outreach_providers": [
+        {
+          "name": "In the Waiting Doula Services (Nikki Avila)",
+          "email": "doulanikkiavila@gmail.com",
+          "sent": true
+        },
+        {
+          "name": "Nikki Avila",
+          "email": "doulanikkiavila@gmail.com",
+          "sent": false,
+          "note": "Same as In the Waiting Doula Services - one email covers both listings"
+        },
+        {
+          "name": "Bakersfield Birth Center",
+          "email": "midwife@bakersfieldbirthcenter.com",
+          "sent": true
+        },
+        {
+          "name": "Your Mama Doula (Lauri Branson)",
+          "email": "squirrelgirl1168@gmail.com",
+          "sent": true
+        },
+        {
+          "name": "Green Birth (Meliza Flores)",
+          "email": "greenbirthdoula@yahoo.com",
+          "sent": true
+        },
+        {
+          "name": "Kern Labor League (Mackenzie De La Cruz)",
+          "email": "Harmoniadoula@gmail.com",
+          "sent": true
+        }
+      ],
+      "video_id": "o58sshTe4_w",
+      "old_video_id": "f4-7jr-nXQw",
+      "video_pending": "thumbnail_upload + old_video_deletion after YT quota reset",
+      "enrichment": {
+        "hospitals": 4,
+        "doulas": 6,
+        "birth_center": true,
+        "midwives_named": 3
+      },
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "baltimore-md": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-06-25T02:30:00Z",
+      "videoId": "CVb6u01Okqs",
+      "video_id": "CVb6u01Okqs",
+      "video_url": "https://youtu.be/CVb6u01Okqs",
+      "video_uploaded_at": "2026-07-09T16:16:09.695551+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "beaumont-tx": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-17T18:24:37Z",
+      "videoId": "8Rqz37nFy6w",
+      "video_id": "8Rqz37nFy6w",
+      "video_url": "https://youtu.be/8Rqz37nFy6w",
+      "video_uploaded_at": "2026-07-09T16:16:09.695469+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "boston-ma": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-27T06:55:00Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "buffalo-ny": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-27T07:08:16Z",
+      "videoId": "F36uxUnU4W4",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "carrollton-tx": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T14:17:57Z",
+      "videoId": "oYtBdiECrgo",
+      "video_id": "oYtBdiECrgo",
+      "video_url": "https://youtu.be/oYtBdiECrgo",
+      "video_uploaded_at": "2026-07-09T16:16:09.695464+00:00",
+      "gate_fix_completed_at": "2026-07-10T12:02:22Z",
+      "deployed_at": "2026-07-10T08:01:46Z",
+      "outreach_deferred": true,
+      "outreach_deferred_reason": "Quiet hours (6 AM MT). Will send on next daytime run.",
+      "deploy_verified": true,
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "charleston-sc": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-29T23:41:18Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "videoId": "Qmld51LJhm8"
+    },
+    "charlotte-nc": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:39:13Z",
+      "videoId": "xPqaBX9OIsg",
+      "video_id": "xPqaBX9OIsg",
+      "video_url": "https://youtu.be/xPqaBX9OIsg",
+      "video_uploaded_at": "2026-07-09T16:16:09.695580+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "chesapeake-va": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:23:37Z",
+      "videoId": "RAvfrkNKmOQ",
+      "video_id": "RAvfrkNKmOQ",
+      "video_url": "https://youtu.be/RAvfrkNKmOQ",
+      "video_uploaded_at": "2026-07-09T16:16:09.695457+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "chicago-il": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:23:37Z",
+      "videoId": "armlysjMqo8",
+      "video_id": "armlysjMqo8",
+      "video_url": "https://youtu.be/armlysjMqo8",
+      "video_uploaded_at": "2026-07-09T16:16:09.695556+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "cleveland-oh": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-27T06:58:00Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "columbia-md": {
+      "has_video": true,
+      "has_outreach": true,
+      "outreach_providers": [
+        {
+          "name": "Darshal Smith",
+          "email": "info.deethedoula@gmail.com",
+          "sent": true,
+          "note": "Primary email dee@deethedoula.com invalid (mailbox_not_found). Sent via alt email. Follow-up re: CBD(NBDA) cert fix, photo upgrade, birth stats section."
+        },
+        {
+          "name": "Womb Room",
+          "email": "support@wombroom.mom",
+          "sent": false,
+          "note": "At max touch cap (4/4). Not re-sent. Would have mentioned CD(DONA), CLC credential listing, logo upgrade, 2 new providers added."
+        },
+        {
+          "name": "Jessica Faulkner",
+          "email": "Jessica@werebirf.com",
+          "sent": true,
+          "note": "First-touch. Welcome email with CD(DONA) cert, BIRF practice, 2024 LUXlife award."
+        },
+        {
+          "name": "Cammie Jenkins",
+          "email": null,
+          "sent": false,
+          "note": "No public email found. Bornbir profile only."
+        }
+      ],
+      "completed_at": "2026-07-14T16:11:41Z",
+      "video_blocked_reason": null,
+      "video_rendered": true,
+      "video_render_path": "out/columbia-md-city-guide.mp4",
+      "scene_data_updated": true,
+      "scene_data_changes": "Added 03a_birth_center scene (Community of Hope), added 04_providers_4 scene (Womb Room Maryland Doulas), updated hasBirthCenter to true, updated overview narration",
+      "last_updated": "2026-07-14T15:21:30Z",
+      "video_thumbnail_generated": true,
+      "video_upload_blocked": false,
+      "video_updated_at": "2026-07-11T20:12:30Z",
+      "video_blocked_at": "2026-07-14T15:21:30Z",
+      "video_rendered_at": "2026-07-12T03:04:40Z",
+      "video_mp4_path": "~/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/columbia-md-city-guide.mp4",
+      "video_thumbnail_path": "~/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/yt-thumb-columbia-md.png",
+      "video_render_at": "2026-07-12T06:02:22Z",
+      "gate_fix_completed_at": "2026-07-12T20:31:04Z",
+      "last_attempt": "2026-07-12T17:04:12Z",
+      "videoId": "Zqi27KevbWs",
+      "video_id": "Zqi27KevbWs",
+      "video_url": "https://youtu.be/Zqi27KevbWs",
+      "video_uploaded_at": "2026-07-14T16:11:41Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "columbus-oh": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-27T09:37:00Z",
+      "videoId": "W962IgDWsm8",
+      "video_url": "https://youtu.be/W962IgDWsm8",
+      "video_uploaded_at": "2026-07-26T23:08:11Z",
+      "score": 100,
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "conroe-tx": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:23:37Z",
+      "videoId": "R24nme59zGw",
+      "video_id": "R24nme59zGw",
+      "video_url": "https://youtu.be/R24nme59zGw",
+      "video_uploaded_at": "2026-07-09T16:16:09.695495+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "detroit-mi": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-09T20:10:20Z",
+      "videoId": "M_JhAauqo4Q",
+      "video_id": "M_JhAauqo4Q",
+      "video_url": "https://youtu.be/M_JhAauqo4Q",
+      "video_uploaded_at": "2026-07-09T16:16:09.695504+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "eugene-or": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-28T22:00:00Z",
+      "video_id": "6ihaaNemK-c",
+      "video_url": "https://youtu.be/6ihaaNemK-c",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "fontana-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:23:37Z",
+      "videoId": "TNXISNoK1xY",
+      "video_id": "TNXISNoK1xY",
+      "video_url": "https://youtu.be/TNXISNoK1xY",
+      "video_uploaded_at": "2026-07-09T16:16:09.695500+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "fremont-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-29T23:41:18Z",
+      "videoId": "SfZueZ_UDpo",
+      "video_id": "XTRsj8RpAw0",
+      "video_url": "https://www.youtube.com/watch?v=XTRsj8RpAw0",
+      "video_uploaded_at": "2026-07-27T18:57:57Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "fresno-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-17T02:22:37Z",
+      "videoId": "A-yB39S7RPc",
+      "video_id": "A-yB39S7RPc",
+      "video_url": "https://youtu.be/A-yB39S7RPc",
+      "video_uploaded_at": "2026-07-14T04:07:10Z",
+      "outreach_deferred_reason": null,
+      "video_embed_deployed_at": "2026-07-14T04:07:24Z",
+      "outreach_research": {
+        "providers": [
+          {
+            "name": "BLACK Doula Training",
+            "url": "https://www.blackwpc.org/black-doula-training",
+            "email": "info@black-enterprises.com",
+            "status": "ready_to_send"
+          },
+          {
+            "name": "Child Birth (Maya Bee)",
+            "url": "https://www.mayabeesbirthingservices.com/",
+            "email": "mayabees2014@gmail.com",
+            "status": "ready_to_send"
+          },
+          {
+            "name": "Lisa Marie Flores",
+            "url": "https://www.bornbir.com/lisa-marie-flores",
+            "email": null,
+            "status": "no_email_found"
+          }
+        ],
+        "emails_found": 2,
+        "emails_missing": 1,
+        "note": "Emails gathered during night run. Send during daytime hours (8AM-8PM MT)."
+      },
+      "outreach_deferred": false,
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "gainesville-fl": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-25T03:45:23Z",
+      "stage": "complete",
+      "videoId": "xKAMi0RZawU",
+      "video_id": "xKAMi0RZawU",
+      "video_url": "https://youtu.be/xKAMi0RZawU",
+      "video_uploaded_at": "2026-07-21T15:44:32Z",
+      "blocked_reason": null
+    },
+    "hartford-ct": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-13T22:40:23Z",
+      "videoId": "04qCKKTB9wA",
+      "video_id": "04qCKKTB9wA",
+      "video_url": "https://youtu.be/04qCKKTB9wA",
+      "video_uploaded_at": "2026-07-13T16:10:00Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "henderson-nv": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-11T15:49:19Z",
+      "outreach_deferred": false,
+      "outreach_deferred_reason": null,
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "hendersonville-tn": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-29T23:56:43.729183+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "indianapolis-in": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-29T23:41:18Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "lehi-ut": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-29T23:56:43.729183+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "mckinney-tx": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-27T07:29:28Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "memphis-tn": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-29T00:00:00Z",
+      "video_id": "evHoqfMRcFM",
+      "video_url": "https://youtu.be/evHoqfMRcFM",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "meridian-id": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:23:37Z",
+      "videoId": "D7Zlm67ALcM",
+      "video_id": "D7Zlm67ALcM",
+      "video_url": "https://youtu.be/D7Zlm67ALcM",
+      "video_uploaded_at": "2026-07-09T16:16:09.695521+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "minneapolis-mn": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:26:02Z",
+      "video_id": "vbf80zB_5aU",
+      "video_uploaded_at": "2026-07-09",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "nashville-tn": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-06-25T02:30:00Z",
+      "videoId": "a6dW2-BfIfU",
+      "video_id": "a6dW2-BfIfU",
+      "video_url": "https://youtu.be/a6dW2-BfIfU",
+      "video_uploaded_at": "2026-07-09T16:16:09.695570+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "newark-nj": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-29T23:56:43.729183+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "norfolk-va": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:39:13Z",
+      "videoId": "pcnqCCmxZlo",
+      "video_id": "pcnqCCmxZlo",
+      "video_url": "https://youtu.be/pcnqCCmxZlo",
+      "video_uploaded_at": "2026-07-09T16:16:09.695439+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "oakland-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-30T16:24:45Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "orlando-fl": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-27T18:25:49Z",
+      "videoId": "9KBRxlVHgFo",
+      "video_id": "9KBRxlVHgFo",
+      "video_url": "https://youtu.be/9KBRxlVHgFo",
+      "video_uploaded_at": "2026-07-09T16:16:09.695589+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "philadelphia-pa": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-06-25T02:30:00Z",
+      "videoId": "LyYRGCPhNi0",
+      "video_id": "LyYRGCPhNi0",
+      "video_url": "https://youtu.be/LyYRGCPhNi0",
+      "video_uploaded_at": "2026-07-09T16:16:09.695547+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "phoenix-az": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-06-25T02:30:00Z",
+      "videoId": "IOXkcp8JMP4",
+      "video_id": "IOXkcp8JMP4",
+      "video_url": "https://youtu.be/IOXkcp8JMP4",
+      "video_uploaded_at": "2026-07-09T16:16:09.695565+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "pittsburgh-pa": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:23:37Z",
+      "videoId": "LFJ6qqvzaGc",
+      "video_id": "LFJ6qqvzaGc",
+      "video_url": "https://youtu.be/LFJ6qqvzaGc",
+      "video_uploaded_at": "2026-07-09T16:16:09.695510+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "portland-or": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:23:37Z",
+      "videoId": "2jLTU5IPVW4",
+      "video_id": "2jLTU5IPVW4",
+      "video_url": "https://youtu.be/2jLTU5IPVW4",
+      "video_uploaded_at": "2026-07-09T16:16:09.695525+00:00",
+      "enrichment_fixed_at": "2026-07-20T21:11:47.482010+00:00",
+      "enrichment_fixes": "R18 R19 R20 verified passing - no changes needed",
+      "enrichment_pass": true,
+      "enrichment_r18": "pass",
+      "enrichment_r19": "pass",
+      "enrichment_r20": "pass",
+      "last_updated": "2026-07-20T21:11:47.482162+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "providence-ri": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:23:37Z",
+      "videoId": "sy9F-O8yHyI",
+      "video_id": "sy9F-O8yHyI",
+      "video_url": "https://youtu.be/sy9F-O8yHyI",
+      "video_uploaded_at": "2026-07-09T16:16:09.695530+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "raleigh-nc": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:23:37Z",
+      "videoId": "P1yRJueaaEU",
+      "video_id": "P1yRJueaaEU",
+      "video_url": "https://youtu.be/P1yRJueaaEU",
+      "video_uploaded_at": "2026-07-09T16:16:09.695535+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "reno-nv": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-07T16:33:31.837647+00:00",
+      "videoId": "8LH05xoCH-c",
+      "video_id": "8LH05xoCH-c",
+      "video_url": "https://www.youtube.com/watch?v=8LH05xoCH-c",
+      "video_uploaded_at": "2026-07-09T16:16:09.695613+00:00",
+      "slug": "reno-nv",
+      "city": "Reno, NV",
+      "page_url": "https://truejoybirthing.com/birth-support/reno-nv/",
+      "stages_completed": [
+        "enrichment",
+        "images",
+        "preflight",
+        "deploy",
+        "video",
+        "outreach",
+        "verify"
+      ],
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "richmond-va": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:23:37Z",
+      "videoId": "orQupd9pT7U",
+      "video_id": "orQupd9pT7U",
+      "video_url": "https://youtu.be/orQupd9pT7U",
+      "video_uploaded_at": "2026-07-09T16:16:09.695598+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "rochester-ny": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:23:37Z",
+      "videoId": "s5GyWNnSgBs",
+      "video_id": "s5GyWNnSgBs",
+      "video_url": "https://youtu.be/s5GyWNnSgBs",
+      "video_uploaded_at": "2026-07-09T16:16:09.695609+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "sacramento-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:23:37Z",
+      "videoId": "MDxP7DxoOf8",
+      "video_id": "MDxP7DxoOf8",
+      "video_url": "https://youtu.be/MDxP7DxoOf8",
+      "video_uploaded_at": "2026-07-09T16:16:09.695515+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "seattle-wa": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-06-25T02:30:00Z",
+      "videoId": "IFFABAqH7K0",
+      "video_id": "IFFABAqH7K0",
+      "video_url": "https://youtu.be/IFFABAqH7K0",
+      "video_uploaded_at": "2026-07-09T16:16:09.695541+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "spokane-wa": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-07T02:56:24Z",
+      "videoId": "KolH2-JdpBY",
+      "video_id": "KolH2-JdpBY",
+      "video_url": "https://youtu.be/KolH2-JdpBY",
+      "video_uploaded_at": "2026-07-09T16:16:09.695603+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "springfield-il": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-31T12:44:03Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "stockton-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-27T06:45:23.462205Z",
+      "videoId": "TP7HxNd6Tro",
+      "video_id": "TP7HxNd6Tro",
+      "video_url": "https://youtu.be/TP7HxNd6Tro",
+      "video_uploaded_at": "2026-07-14T11:41:41Z",
+      "last_updated": "2026-07-27T06:45:23.462419Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "tacoma-wa": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:39:13Z",
+      "videoId": "CV41jPys-S8",
+      "video_id": "CV41jPys-S8",
+      "video_url": "https://youtu.be/CV41jPys-S8",
+      "video_uploaded_at": "2026-07-09T16:16:09.695431+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "tucson-az": {
+      "has_video": true,
+      "video_id": "Kv24j1vmjtw",
+      "video_url": "https://youtu.be/Kv24j1vmjtw",
+      "has_outreach": true,
+      "completed_at": "2026-07-06T22:50:00Z",
+      "has_provider_photos": true,
+      "provider_count": 7,
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "tulsa-ok": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-29T23:56:43.729183+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "vancouver-wa": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:39:13Z",
+      "videoId": "z4YlQEkJzRo",
+      "video_id": "z4YlQEkJzRo",
+      "video_url": "https://youtu.be/z4YlQEkJzRo",
+      "video_uploaded_at": "2026-07-09T16:16:09.695451+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "waco-tx": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:23:37Z",
+      "videoId": "HokaLZ_mHxw",
+      "video_id": "HokaLZ_mHxw",
+      "video_url": "https://youtu.be/HokaLZ_mHxw",
+      "video_uploaded_at": "2026-07-09T16:16:09.695475+00:00",
+      "stage": "complete",
+      "score": 100,
+      "video_done": true,
+      "outreach_done": true,
+      "completed_date": "2026-07-27",
+      "blocked_reason": null
+    },
+    "worcester-ma": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-29T23:56:43.729183+00:00",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "moreno-valley-ca": {
+      "has_video": true,
+      "videoId": "uYxhNupSsME",
+      "video_id": "uYxhNupSsME",
+      "video_url": "https://youtu.be/uYxhNupSsME",
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:39:13Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "san-bernardino-ca": {
+      "has_video": true,
+      "videoId": "sTii3z6iJh4",
+      "video_id": "sTii3z6iJh4",
+      "video_url": "https://youtu.be/sTii3z6iJh4",
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:43:02Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "san-diego-ca": {
+      "has_video": true,
+      "videoId": "OKHWMCLZ8gw",
+      "video_id": "OKHWMCLZ8gw",
+      "video_url": "https://youtu.be/OKHWMCLZ8gw",
+      "has_outreach": true,
+      "completed_at": "2026-07-27T19:08:51Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "las-vegas-nv": {
+      "has_video": true,
+      "videoId": "r319yZgnxeE",
+      "video_id": "r319yZgnxeE",
+      "video_url": "https://youtu.be/r319yZgnxeE",
+      "has_outreach": true,
+      "completed_at": "2026-07-23T04:48:45.601149Z",
+      "score": 100,
+      "hero_image": "las-vegas-nv-birth-doula-skyline-v2.webp",
+      "og_image": "og-city-las-vegas-nv-v2.webp",
+      "support_scene": "las-vegas-nv-birth-doula-support-v2.webp",
+      "hospital_count": 3,
+      "doula_count": 4,
+      "birth_stats": true,
+      "yt_thumb_uploaded": true,
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "new-york-ny": {
+      "has_video": true,
+      "videoId": "d8wNiNe1VCc",
+      "video_id": "d8wNiNe1VCc",
+      "video_url": "https://youtu.be/d8wNiNe1VCc",
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:23:37Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "los-angeles-ca": {
+      "has_video": true,
+      "videoId": "zaX5gteUk6k",
+      "video_id": "zaX5gteUk6k",
+      "video_url": "https://youtu.be/zaX5gteUk6k",
+      "has_outreach": true,
+      "completed_at": "2026-07-10T16:23:37Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "gaithersburg-md": {
+      "created_at": "2026-07-12T22:33:58Z",
+      "has_outreach": true,
+      "outreach_providers": [
+        {
+          "name": "Doula Nathalie & Associates",
+          "email": "nathalie@doulanathalie.com",
+          "status": "sent"
+        },
+        {
+          "name": "Womb Room Maryland Doulas",
+          "email": "doulas@wombroom.mom",
+          "status": "sent"
+        },
+        {
+          "name": "Joni Wallace (Sun Moon & Herbs Wellness)",
+          "email": "hi@sunmoonherbswellness.com",
+          "status": "sent"
+        }
+      ],
+      "video_blocked": false,
+      "gate_fix_completed_at": "2026-07-13T12:43:09Z",
+      "video_rendered": true,
+      "video_duration": "5:48",
+      "video_resolution": "1920x1080",
+      "thumbnail_ready": true,
+      "last_attempted": "2026-07-13T12:43:09Z",
+      "video_audit_passed": true,
+      "thumbnail_template_verified": true,
+      "last_updated": "2026-07-13T13:12:04Z",
+      "video_rendered_at": "2026-07-13T05:35:13Z",
+      "video_mp4_path": "~/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/gaithersburg-md-city-guide.mp4",
+      "video_thumbnail_ready": true,
+      "video_thumbnail_path": "~/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/yt-thumb-gaithersburg-md.png",
+      "video_metadata_configured": true,
+      "last_attempt": "2026-07-13T11:31:47Z",
+      "completed_at": "2026-07-14T16:35:40Z",
+      "has_video": true,
+      "videoId": "U4hsVHrz3Nc",
+      "video_id": "U4hsVHrz3Nc",
+      "video_url": "https://youtu.be/U4hsVHrz3Nc",
+      "video_uploaded_at": "2026-07-14T16:35:40Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "rockville-md": {
+      "created_at": "2026-07-13T13:39:56Z",
+      "has_outreach": true,
+      "followup_sent_at": "2026-07-16T21:45:00Z",
+      "followup_provider_count": 3,
+      "video_blocked_reason": null,
+      "video_rendered": true,
+      "thumbnail_generated": true,
+      "completed_at": "2026-07-13T16:37:21Z",
+      "video_render_path": "out/rockville-md-city-guide.mp4",
+      "video_duration": 385.92,
+      "video_thumbnail_ready": true,
+      "video_thumbnail_path": "out/yt-thumb-rockville-md.png",
+      "city_meta_ready": true,
+      "quality_audit_passed": true,
+      "last_updated": "2026-07-13T16:11:09Z",
+      "videoId": "Z8ME-Kv_Gzg",
+      "video_id": "Z8ME-Kv_Gzg",
+      "has_video": true,
+      "video_url": "https://youtu.be/Z8ME-Kv_Gzg",
+      "video_uploaded_at": "2026-07-13T16:37:21Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "laurel-md": {
+      "created_at": "2026-07-13T17:7:51Z",
+      "videoId": "wvRNvfNtV1c",
+      "video_id": "wvRNvfNtV1c",
+      "has_video": true,
+      "video_url": "https://youtu.be/wvRNvfNtV1c",
+      "video_uploaded_at": "2026-07-13T18:25:48.479887+00:00Z",
+      "completed_at": "2026-07-17T00:30:00Z",
+      "has_outreach": true,
+      "outreach_providers": [
+        {
+          "name": "Merasha Bailey",
+          "practice": "La'Vida Doula",
+          "email": "info@lavidadoula.com",
+          "sent": true
+        },
+        {
+          "name": "Callie Hodge",
+          "practice": "Essence of Peace Doula, LLC",
+          "email": "essenceofpeacedoula@gmail.com",
+          "sent": true
+        },
+        {
+          "name": "Erin Hughes",
+          "practice": "Erin Hughes Postpartum Doula",
+          "email": null,
+          "sent": false,
+          "note": "No public email found - only contact forms on DoulaMatch, Balanced Birth Support, Doula Nathalie & Associates, Mama Bear Doula Care"
+        },
+        {
+          "name": "Iyonna Hester",
+          "practice": "IeVe Wellness",
+          "email": "ievewellness@gmail.com",
+          "sent": true
+        }
+      ],
+      "stage": "complete",
+      "blocked_reason": null,
+      "notes": "Support scene v3, all 4 provider photos sourced, midwifeInfo added, G51 fix"
+    },
+    "greenbelt-md": {
+      "created_at": "2026-07-13T18:37:56Z",
+      "videoId": "dePHsXbfYVc",
+      "video_id": "dePHsXbfYVc",
+      "has_video": true,
+      "video_url": "https://youtu.be/dePHsXbfYVc",
+      "video_uploaded_at": "2026-07-13T20:47:05.487811+00:00Z",
+      "has_outreach": true,
+      "outreach_notes": "Sent to 4 of 5 providers. Celina Sargusingh (Be Held Birth Services) - website down (Wix domain not connected), no email found on DoulaMatch or Bornbir. Blocked: info@thenehemiahbirthingproject.org initially blocked by ZeroBounce role-based filter, sent directly via AgentMail API as it is the only public contact for this nonprofit.",
+      "completed_at": "2026-07-13T21:06:24Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "stamford-ct": {
+      "created_at": "2026-07-13T23:05:54Z",
+      "has_outreach": true,
+      "outreach_notes": "3 already sent (Allison, Birth Partners, Bethany). 2 new sends: Theresa Davis (terianndavis@yahoo.com), MothersCare (info@motherscaredoula.com).",
+      "completed_at": "2026-07-14T01:13:44Z",
+      "has_video": true,
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "norwalk-ct": {
+      "created_at": "2026-07-14T01:41:22Z",
+      "state": "CT",
+      "has_video": true,
+      "videoId": "drkZEsmuVeo",
+      "video_id": "drkZEsmuVeo",
+      "video_url": "https://youtu.be/drkZEsmuVeo",
+      "video_uploaded_at": "2026-07-14T03:23:32.151398Z",
+      "gate_fix_complete": true,
+      "video_complete": true,
+      "outreach_deferred": true,
+      "outreach_deferred_reason": "Quiet hours: 8 PM to 8 AM MT. Will send on next daytime run.",
+      "has_outreach": true,
+      "completed_at": "2026-07-14T14:12:59Z",
+      "last_updated": "2026-07-20T18:24:25.173035+00:00",
+      "fixes_applied": [
+        "G59: Added hospital website URLs (Norwalk, Stamford, Greenwich)",
+        "G8+G58: Regenerated hero image (pregnant silhouette, no black bars)",
+        "G7: Fixed medicaidNote prefix to 'Yes \u2014'",
+        "R9: Re-rendered OG image and YouTube thumbnail from v3 hero for consistency"
+      ],
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "port-st-lucie-fl": {
+      "has_video": true,
+      "has_outreach": true,
+      "first_seen": "2026-07-14T03:22:43Z",
+      "outreach_note": "Sent to Michelle Jackson (soulbitsdoula@gmail.com) and Susan/My Baby Lady (simplysusan411@gmail.com). Third provider (Maternal and Child Health) is a FL health dept program, not an individual doula - no outreach applicable.",
+      "completed_at": "2026-07-14T14:34:48Z",
+      "score": 100,
+      "video_id": "4opKz8FJDbY",
+      "stage": "complete",
+      "re_outreach_sent_at": "2026-07-26T21:10:32.999932+00:00",
+      "re_outreach_count": 3,
+      "blocked_reason": null
+    },
+    "virginia-beach-va": {
+      "stage": "complete",
+      "has_video": true,
+      "has_outreach": true,
+      "first_seen": "2026-07-14T03:22:43Z",
+      "videoId": "F7OoHJKyXGs",
+      "video_id": "F7OoHJKyXGs",
+      "video_url": "https://youtu.be/F7OoHJKyXGs",
+      "video_uploaded_at": "2026-07-27T23:15:00Z",
+      "completed_at": "2026-07-27T23:17:00Z",
+      "blocked_reason": null
+    },
+    "long-beach-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "first_seen": "2026-07-14T03:22:43Z",
+      "videoId": "8_X79ELJs9M",
+      "video_id": "8_X79ELJs9M",
+      "video_url": "https://youtu.be/8_X79ELJs9M",
+      "video_uploaded_at": "2026-07-14T06:44:11Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "completed_at": "2026-07-30T16:24:45Z"
+    },
+    "oklahoma-city-ok": {
+      "stage": "complete",
+      "blocked_reason": null,
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-27T06:58:00Z"
+    },
+    "st-paul-mn": {
+      "has_video": true,
+      "has_outreach": true,
+      "first_seen": "2026-07-14T03:22:43Z",
+      "completed_at": "2026-07-27T06:58:00Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "san-jose-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "first_seen": "2026-07-14T03:22:43Z",
+      "videoId": "ScsUgI8_v94",
+      "video_id": "ScsUgI8_v94",
+      "video_url": "https://youtu.be/ScsUgI8_v94",
+      "video_embedded_at": "2026-07-14T09:04:21Z",
+      "outreach_emails": [
+        "doulasheryll@himaladoulaservices.com",
+        "elasticheartdoula@gmail.com",
+        "sbprograms@rootscommunityhealth.org",
+        "megan@doulameg.com"
+      ],
+      "outreach_note": "4 emails scheduled as drafts during quiet hours, will send at 6 AM PDT",
+      "completed_at": "2026-07-14T10:39:26Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "st-augustine-fl": {
+      "has_video": true,
+      "has_outreach": true,
+      "first_seen": "2026-07-14T03:22:43Z",
+      "outreach_notes": "Nicole Stewart emailed 2026-07-14. Alyssa Megeath, Haley Garza, St. Augustine Birth Collective, Endless Love Doula Care scheduled as drafts (quiet hours, will send 2026-07-25 06:00 EDT)",
+      "stage": "complete",
+      "videoId": "KXaLgwuuiwo",
+      "video_id": "KXaLgwuuiwo",
+      "video_url": "https://youtu.be/KXaLgwuuiwo",
+      "completed_at": "2026-07-25T04:53:10Z",
+      "blocked_reason": null
+    },
+    "grand-rapids-mi": {
+      "has_video": true,
+      "has_outreach": true,
+      "youtube_id": "19NzNTwphw8",
+      "first_seen": "2026-07-14T03:22:43Z",
+      "completed_at": "2026-07-28T21:15:00Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "new-haven-ct": {
+      "has_video": true,
+      "has_outreach": true,
+      "first_seen": "2026-07-14T03:22:43Z",
+      "outreach_note": "Sent to 6 providers: info@birthpartnersdoulas.com (prior), mischa@meandmydoula.com (prior), ashley@empoweredbeginningsct.com, emily@dovetaildoulact.com, info@newlifedoulas.com, lactationsupport@bethbrownstein.com",
+      "outreach_complete": true,
+      "providers_added": true,
+      "provider_count": 6,
+      "video_blocked_reason": "YouTube daily upload limit reached (7 uploads today). MP4 rendered and ready for upload.",
+      "video_rendered": true,
+      "video_mp4_path": "out/new-haven-ct-city-guide.mp4",
+      "video_duration": "3m51s",
+      "videoId": "QpbP7UBRGo4",
+      "video_id": "QpbP7UBRGo4",
+      "video_url": "https://youtu.be/QpbP7UBRGo4",
+      "video_uploaded_at": "2026-07-14T20:14:37Z",
+      "completed_at": "2026-07-23T04:48:45.600871Z",
+      "hero_image": "new-haven-ct-birth-doula-skyline-v2.webp",
+      "og_image": "og-city-new-haven-ct-v2.webp",
+      "support_scene": "new-haven-ct-birth-doula-support-v2.webp",
+      "hospital_count": 2,
+      "doula_count": 6,
+      "birth_stats": true,
+      "score": 100,
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "san-francisco-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "first_seen": "2026-07-14T03:22:43Z",
+      "videoId": "ucjWrh5iuMs",
+      "video_id": "ucjWrh5iuMs",
+      "video_url": "https://youtu.be/ucjWrh5iuMs",
+      "video_uploaded_at": "2026-07-14T08:31:31.942414Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "completed_at": "2026-07-30T16:24:45Z"
+    },
+    "fort-collins-co": {
+      "has_video": true,
+      "has_outreach": true,
+      "first_seen": "2026-07-14T03:22:43Z",
+      "completed_at": "2026-07-30T16:28:44Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "aurora-il": {
+      "has_outreach": true,
+      "youtube_id": "NP6aipn4S2s",
+      "has_video": true,
+      "has_embed": true,
+      "stage": "complete",
+      "completed_at": "2026-07-29T23:41:18Z",
+      "blocked_reason": null
+    },
+    "celina-tx": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-31T12:44:03Z",
+      "stage": "complete",
+      "blocked_reason": "3 providers, 0 with public email. Shannon Chung (Bornbir profile, no email), LaQuintta (preciousmomentsdoula.com, no email on site), Rachael Nelson (Instagram-only, no email)."
+    },
+    "fulshear-tx": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "leesburg-fl": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "princeton-tx": {
+      "has_video": false,
+      "has_outreach": true,
+      "outreach_sent_at": "2026-08-05",
+      "outreach_provider_count": 3,
+      "outreach_total_providers": 5,
+      "outreach_no_email_count": 2,
+      "outreach_no_email_providers": [
+        "LaDereka Carter",
+        "Rosina Maluche"
+      ],
+      "outreach_already_contacted": [
+        "Misty Gigler"
+      ],
+      "completed_at": "2026-08-05",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "melissa-tx": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "fate-tx": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "rosemount-mn": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "garner-nc": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "anna-tx": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "haines-city-fl": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "sugar-hill-ga": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "leland-nc": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "waukee-ia": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "erie-co": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "forney-tx": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "eagle-mountain-ut": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "johnstown-co": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "kuna-id": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "queen-creek-az": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "hutto-tx": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "foley-al": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "greenville-tx": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "saratoga-springs-ut": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "fort-mill-sc": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "goodyear-az": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "surprise-az": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "jacksonville-fl": {
+      "has_video": true,
+      "has_outreach": true,
+      "outreach_sent_at": "2026-08-08T12:56:37.975932+00:00",
+      "outreach_provider_count": 8,
+      "outreach_emails_sent": 6,
+      "outreach_no_email": 4,
+      "outreach_date": "2026-08-08",
+      "outreach_recipients": [
+        "doulasofjax@gmail.com (Doulas of Jacksonville: Christin Murillo, Summer, Olivia)",
+        "dallasarthurbirth@gmail.com (Dallas Arthur)",
+        "kianaasherah@gmail.com (Kiana Asherah, Asherah Birth)",
+        "dareallaluce@gmail.com (Katharine Deeb, Dare Alla Luce)",
+        "fvms88@gmail.com (Fruitful Vine Midwifery)",
+        "victoria@transitionsjax.com (Transitions Birth Center)"
+      ],
+      "outreach_no_email_providers": [
+        "Mary Ficek (Peaceful Birth)",
+        "Nayo McPherson (Our Joy Birth Services)",
+        "Paige Carignan (Fully Known Doula Services)",
+        "Erica Glover (Basic Instincts Wellness)"
+      ],
+      "video_id": "present-on-page",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "houston-tx": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "dallas-tx": {
+      "has_video": false,
+      "has_outreach": true,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "washington-dc": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "el-paso-tx": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-08-04T04:52:13.289505+00:00",
+      "video_id": "jFeA5eWK2Vc",
+      "stage": "complete",
+      "blocked_reason": null,
+      "outreach_sent_at": "2026-08-04T04:52:13.289505+00:00",
+      "outreach_provider_count": 2,
+      "outreach_no_email_count": 1
+    },
+    "louisville-ky": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "milwaukee-wi": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "albuquerque-nm": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-30T16:45:00Z",
+      "video_id": "d_siwut-Uds",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "kansas-city-mo": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "mesa-az": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "omaha-ne": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "anaheim-ca": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "santa-ana-ca": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "riverside-ca": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "corpus-christi-tx": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "lexington-ky": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "irvine-ca": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "cincinnati-oh": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "saint-paul-mn": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "greensboro-nc": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "durham-nc": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "jersey-city-nj": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "lincoln-ne": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "plano-tx": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "st-louis-mo": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "anchorage-ak": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "north-las-vegas-nv": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "gilbert-az": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "chandler-az": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "chula-vista-ca": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "madison-wi": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "fort-wayne-in": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "toledo-oh": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "lubbock-tx": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "laredo-tx": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "st-petersburg-fl": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "irving-tx": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "winston-salem-nc": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "scottsdale-az": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "garland-tx": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "boise-id": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "huntsville-al": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "frisco-tx": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "cape-coral-fl": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "glendale-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "video_id": "sycfj34OLWE",
+      "completed_at": "2026-07-30T17:30:00Z",
+      "outreach_count": 3,
+      "outreach_no_email_count": 1,
+      "outreach_sent_at": "2026-07-30T17:30:00Z",
+      "outreach_providers": [
+        {
+          "name": "Jill Magoffin",
+          "email": "jill@jillmagoffin.com",
+          "sent": true
+        },
+        {
+          "name": "Kiley Tkaczyk",
+          "email": "doulakiley@gmail.com",
+          "sent": true
+        },
+        {
+          "name": "Veronica Hinojosa-Stang",
+          "email": "veronicahinojosa@yahoo.com",
+          "sent": true
+        },
+        {
+          "name": "Iliana Ipes",
+          "email": null,
+          "sent": false,
+          "note": "No website or public email found"
+        }
+      ],
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "yonkers-ny": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-30T17:37:00Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "huntington-beach-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-30T17:06:00Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "newport-news-va": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-08-01T11:18:00-06:00",
+      "stage": "complete",
+      "blocked_reason": null,
+      "last_updated": "2026-07-31T23:07:16Z",
+      "outreach_provider_count": 1,
+      "outreach_no_email_count": 7,
+      "outreach_note": "Sabrina Cooper email researched and registry-recorded; remaining providers have no validated public email discovered during this pass.",
+      "outreach_sent_at": "2026-08-01T11:18:00-06:00"
+    },
+    "rancho-cucamonga-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-30T17:06:00Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "oceanside-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-30T17:45:00Z",
+      "stage": "complete",
+      "blocked_reason": null
+    },
+    "alexandria-va": {
+      "has_video": false,
+      "has_outreach": true,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null,
+      "outreach_sent_at": "2026-08-03T22:51:23.544354+00:00",
+      "outreach_provider_count": 5
+    },
+    "lakewood-co": {
+      "has_video": false,
+      "has_outreach": true,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null,
+      "outreach_sent_at": "2026-08-03T22:51:23.544354+00:00",
+      "outreach_provider_count": 3
+    },
+    "sunnyvale-ca": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "torrance-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-07-30T17:36:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "video_id": "zerWj9GuwHk",
+      "video_url": "https://youtu.be/zerWj9GuwHk",
+      "video_uploaded_at": "2026-07-30T10:32:24-07:00",
+      "outreach_sent_at": "2026-07-30T10:32:24-07:00",
+      "outreach_provider_count": 3,
+      "outreach_no_email_count": 4,
+      "outreach_notes": "3 providers emailed (Junko, Courtney, Stephanie). Raquel at max touches. 3 providers have no direct email (Denise and Andrea on doulamatch.net, Tina on bornbir.com - contact form only)."
+    },
+    "naperville-il": {
+      "has_video": false,
+      "has_outreach": true,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "pasadena-ca": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "bellevue-wa": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "fullerton-ca": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "orange-ca": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "thornton-co": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "west-valley-city-ut": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "roseville-ca": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "sterling-heights-mi": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "kent-wa": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "santa-clara-ca": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "arvada-co": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "carlsbad-ca": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "westminster-co": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "west-jordan-ut": {
+      "has_video": false,
+      "has_outreach": false,
+      "completed_at": null,
+      "stage": "build",
+      "blocked_reason": null
+    },
+    "acworth-ga": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-08-03T19:33:00Z",
+      "video_id": "M7Y7XaxOFuc",
+      "video_url": "https://youtu.be/M7Y7XaxOFuc",
+      "video_uploaded_at": "2026-08-03T00:00:00-04:00",
+      "stage": "complete",
+      "outreach_sent_at": "2026-08-04T06:00:00-04:00",
+      "outreach_provider_count": 4,
+      "outreach_no_email_count": 0,
+      "outreach_blocked_reason": null,
+      "blocked_reason": null
+    },
+    "bozeman-mt": {
+      "has_outreach": true
+    },
+    "denver-co": {
+      "has_outreach": true
+    },
+    "agoura-hills-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-08-04T00:47:03Z",
+      "video_id": "I6FZs6BRkkI",
+      "video_url": "https://youtu.be/I6FZs6BRkkI",
+      "video_uploaded_at": "2026-08-04T00:47:03Z",
+      "stage": "complete",
+      "outreach_sent_at": "2026-08-04T00:47:03Z",
+      "outreach_provider_count": 4,
+      "outreach_no_email_count": 1,
+      "blocked_reason": null
+    },
+    "fort-worth-tx": {
+      "stage": "complete",
+      "has_hero": true,
+      "has_og": true,
+      "has_support": true,
+      "has_hospitals": true,
+      "has_doulas": true,
+      "has_video": true,
+      "has_outreach": true,
+      "outreach_sent_at": "2026-08-06T20:30:00Z",
+      "outreach_provider_count": 6,
+      "video_id": "D0oVDzQwD8I"
+    },
+    "tampa-fl": {
+      "stage": "complete",
+      "has_video": true,
+      "video_id": "wBPFiDhE31s",
+      "video_url": "https://www.youtube.com/watch?v=wBPFiDhE31s",
+      "video_uploaded_at": "2026-08-07T16:11:11Z",
+      "has_outreach": true,
+      "blocked_reason": null,
+      "completed_at": "2026-08-07T16:11:11Z",
+      "outreach_sent_at": "2026-08-06T00:00:00Z"
+    }
+  },
+  "providence-ri": {
     "has_outreach": true,
-    "outreach_sent_at": "2026-07-27T17:06:45.271127",
+    "outreach_sent_at": "2026-07-15T18:10:15.534201+00:00",
+    "outreach_provider_count": 6,
+    "outreach_no_email_count": 0,
+    "status": "done",
+    "last_updated": "2026-07-15T18:10:15.534402+00:00"
+  },
+  "detroit-mi": {
+    "has_outreach": true,
+    "outreach_sent_at": "2026-07-16T17:15:19Z",
+    "outreach_provider_count": 6,
+    "outreach_no_email_count": 2,
+    "outreach_followup_sent_at": "2026-07-16T17:48:00Z",
+    "status": "complete",
+    "last_updated": "2026-07-16T17:48:00Z",
+    "notes": "Pipeline complete: preflight fixes (G19, G50, G7, medicaid regex bug), hospital descriptions expanded to 300+ chars, deployed with CF cache purge, 6 first-touch + 6 follow-up emails sent, video unchanged per Jeff."
+  },
+  "charleston-sc": {
+    "stage": "complete",
+    "video_status": "live",
+    "youtube_id": "Qmld51LJhm8",
+    "video_url": "https://youtu.be/Qmld51LJhm8",
+    "page_url": "https://truejoybirthing.com/birth-support/charleston-sc/",
+    "last_updated": "2026-07-17",
+    "providers": 5,
+    "hospitals": 3,
+    "birth_centers": 1,
+    "thumbnail_uploaded": true,
+    "outreach_sent": true,
+    "outreach_count": 5,
+    "dashboard_score": 100,
+    "fully_complete": true,
+    "has_outreach": true,
+    "outreach_sent_at": "2026-07-17T14:23:36Z",
+    "outreach_provider_count": 5
+  },
+  "los-angeles-ca": {
+    "has_outreach": true,
+    "outreach_sent_at": "2026-07-17T14:38:37.548456",
+    "outreach_provider_count": 7,
+    "outreach_no_email_count": 1,
+    "outreach_contact_form_count": 1,
+    "status": "done"
+  },
+  "boston-ma": {
+    "status": "done",
+    "score": 100,
+    "has_outreach": true,
+    "outreach_sent_at": "2026-07-26T22:35:43Z",
+    "outreach_provider_count": 6,
+    "outreach_no_email_count": 0,
+    "video_id": "J-S4IjKwADs",
+    "video_done": true,
+    "deployed": true,
+    "last_updated": "2026-07-26T22:35:43Z"
+  },
+  "oklahoma-city-ok": {
+    "has_outreach": true,
+    "outreach_sent_at": "2026-07-26T17:09:23.023821",
+    "outreach_provider_count": 7,
+    "outreach_no_email_count": 0
+  },
+  "raleigh-nc": {
+    "has_outreach": true,
+    "outreach_sent_at": "2026-07-27T07:30:00Z",
+    "outreach_provider_count": 4,
+    "outreach_no_email_count": 3,
+    "outreach_no_email_providers": [
+      "Kelly Collins",
+      "Bridgette McQueen",
+      "Netta Dingle"
+    ],
+    "status": "done"
+  },
+  "eugene-or": {
+    "stage": "done",
+    "stage_index": 4,
+    "version": 2,
+    "last_updated": "2026-07-27T17:15:12.855694",
+    "deploy_version": "9270fd1",
+    "preflight_passed": true,
+    "hero_image": "/images/eugene-or-birth-doula-skyline-v2.webp",
+    "og_image": "/images/og-city-eugene-or.webp",
+    "support_scene": "/images/eugene-or-birth-doula-support.webp",
+    "provider_count": 5,
+    "hospital_count": 2,
+    "birth_center_count": 1,
+    "has_outreach": true,
+    "outreach_sent_at": "2026-07-27T17:06:45",
     "outreach_provider_count": 4,
     "outreach_emails_sent": 4,
     "outreach_no_email": 0,
-    "outreach_date": "2026-07-27"
+    "video_id": "SCap6NsNVIM",
+    "video_url": "https://youtu.be/SCap6NsNVIM",
+    "video_duration": "PT5M42S",
+    "video_embedded": true
   },
-  "tulsa-ok": {
-    "slug": "tulsa-ok",
-    "city": "Tulsa",
-    "state": "OK",
-    "stage": "verify_deploy",
-    "hero_image": "tulsa-ok-v2.webp",
-    "og_image": "og-tulsa-ok-v2.webp",
-    "support_scene": "tulsa-ok-support-scene.webp",
-    "provider_count": 4,
-    "hospital_count": 3,
-    "birth_center_count": 3,
-    "has_birth_stats": true,
-    "has_video": false,
-    "has_outreach": false,
-    "preflight_passed": true,
-    "last_updated": "2026-07-27T18:30:00Z"
-  },
-  "grand-rapids-mi": {
-    "slug": "grand-rapids-mi",
-    "city": "Grand Rapids",
-    "state": "MI",
+  "memphis-tn": {
     "has_outreach": true,
-    "outreach_sent_at": "2026-07-28T20:55:23.507195+00:00",
+    "outreach_sent_at": "2026-07-28T06:05:33.112703+00:00",
     "outreach_provider_count": 3,
-    "outreach_emails_sent": 3,
-    "outreach_no_email": 0,
-    "outreach_date": "2026-07-28"
+    "outreach_no_email_count": 1
   },
-  "albuquerque-nm": {
+  "hendersonville-tn": {
+    "slug": "hendersonville-tn",
+    "city": "Hendersonville, TN",
     "stage": "complete",
     "score": 100,
     "has_video": true,
-    "video_id": "d_siwut-Uds",
-    "video_url": "https://youtu.be/d_siwut-Uds",
+    "youtube_id": "wJRk-6Bg_OE",
     "has_outreach": true,
-    "outreach_sent_at": "2026-07-29T12:20:00Z",
-    "outreach_provider_count": 1,
-    "outreach_blocked_reason": "4 of 5 providers have no public email \u2014 only New Life Birth Services (admin@newlifebirthservices.org) contacted. Katie Schmierer, Laura Dehne, Gabriella Sarate, and Tintawi Kaigziabiher are listed on Bornbir but have no public email addresses. Contact forms on Bornbir require account login.",
+    "outreach_sent_at": "2026-07-28T01:00:00-05:00",
+    "outreach_provider_count": 2,
+    "outreach_blocked": [
+      "Hallee Watson (no email - Bornbir only)",
+      "By Your Side Family Doula (no email - Facebook only)",
+      "Gaylea McDougal (no email - JS-rendered site)"
+    ],
+    "outreach_blocked_reason": "3 providers had no discoverable email address",
     "providers_total": 5,
-    "hospitals_total": 3,
-    "birth_centers_total": 1,
+    "hospitals_total": 2,
+    "birth_centers_total": 0,
     "deployed": true,
-    "published_date": "2026-07-29"
+    "last_updated": "2026-07-28T01:00:00Z"
   },
-  "chicago-il": {
-    "slug": "chicago-il",
+  "lehi-ut": {
+    "slug": "lehi-ut",
+    "city": "Lehi, UT",
     "stage": "complete",
+    "score": 100,
     "has_video": true,
-    "video_id": "4bxkdW7pQDM",
-    "video_url": "https://youtu.be/4bxkdW7pQDM",
+    "video_id": "9IBiWykxGtU",
     "has_outreach": true,
-    "last_updated": "2026-08-03T18:40:49.053277"
-  },
-  "torrance-ca": {
-    "slug": "torrance-ca",
-    "stage": "complete",
-    "has_video": true,
-    "video_id": "IR6s2L-0K7Y",
-    "video_url": "https://youtu.be/IR6s2L-0K7Y",
-    "has_outreach": true,
-    "last_updated": "2026-08-03T18:40:49.053277"
-  },
-  "alameda-ca": {
-    "slug": "alameda-ca",
-    "city": "Alameda",
-    "state": "CA",
-    "stage": "complete",
-    "has_video": true,
-    "has_outreach": true,
-    "last_updated": "2026-08-03T18:40:49.053277",
+    "outreach_sent_at": "2026-07-28T12:00:00Z",
+    "outreach_provider_count": 1,
     "providers_total": 4,
     "hospitals_total": 3,
-    "has_birth_stats": true,
-    "deployed": true,
-    "video_id": "vKDB5B8bDKY",
-    "outreach_sent_at": "2026-08-03T21:30:25.828478",
-    "outreach_provider_count": 4,
-    "outreach_emails_sent": 4
+    "deployed": true
   },
-  "allen-park-mi": {
+  "worcester-ma": {
     "has_outreach": true,
-    "outreach_sent_at": "2026-08-05T00:13:48.753007Z",
+    "outreach_sent_at": "2026-07-28T23:55:00Z",
     "outreach_provider_count": 4,
     "outreach_no_email_count": 1,
-    "outreach_no_email_providers": [
-      "Kayla Connors (Google Form only, no email)"
+    "has_video": true,
+    "youtube_id": "p7ersoQEa4Q",
+    "status": "done",
+    "score": 100
+  },
+  "mckinney-tx": {
+    "stage": "complete",
+    "score": 100,
+    "video_id": "eCk4ueYOJ6c",
+    "has_video": true,
+    "has_outreach": true,
+    "outreach_sent_at": "2026-07-27T07:29:28Z",
+    "outreach_provider_count": 3,
+    "last_updated": "2026-07-29",
+    "notes": "Re-rendered: removed Julie Spurgers, fixed Mya Daniel headshot, fixed cost range 1500-2500, added midwifeInfo, lat/lng, fixed medicaidNote format"
+  },
+  "fort-collins-co": {
+    "has_video": true,
+    "has_outreach": true,
+    "stage": "complete",
+    "completed_at": "2026-07-30T16:28:44Z",
+    "video_id": "l_sFXlps57E"
+  },
+  "albuquerque-nm": {
+    "has_outreach": true,
+    "stage": "complete",
+    "completed_at": "2026-07-30T16:42:43.114505+00:00",
+    "outreach_sent_at": "2026-07-30T16:42:43.114505+00:00",
+    "outreach_provider_count": 4,
+    "outreach_no_email_count": 1
+  },
+  "huntington-beach-ca": {
+    "stage": "complete",
+    "has_page": true,
+    "has_video": true,
+    "has_outreach": true,
+    "outreach_sent_at": "2026-07-30T17:04:57Z",
+    "outreach_provider_count": 4,
+    "outreach_no_email_count": 0,
+    "completed_at": "2026-07-30T17:04:57Z",
+    "providers_emailed": [
+      {
+        "name": "Madi Rose",
+        "email": "mrehrlic@gmail.com"
+      },
+      {
+        "name": "Dee Ornelas",
+        "email": "TresLunasBirth@gmail.com"
+      },
+      {
+        "name": "Kelsey and Aurora",
+        "email": "soulshinebirth@gmail.com"
+      },
+      {
+        "name": "Mathilde",
+        "email": "youfrenchdoula@gmail.com"
+      }
     ]
   },
-  "alhambra-ca": {
-    "stage": "complete",
-    "video": true,
+  "torrance-ca": {
     "has_video": true,
-    "outreach": true,
     "has_outreach": true,
-    "score": 100,
-    "video_id": "SPfd_sX3N10",
-    "provider_count": 5,
-    "hospital_count": 3,
-    "completed_at": "2026-08-04T16:00:00-07:00"
-  },
-  "american-canyon-ca": {
+    "completed_at": "2026-07-30T10:32:24-07:00",
+    "video_id": "zerWj9GuwHk",
+    "video_url": "https://youtu.be/zerWj9GuwHk",
+    "video_uploaded_at": "2026-07-30T10:32:24-07:00",
+    "outreach_sent_at": "2026-07-30T10:32:24-07:00",
+    "outreach_provider_count": 3,
+    "outreach_no_email_count": 4,
+    "outreach_notes": "3 providers emailed (Junko, Courtney, Stephanie). Raquel at max touches. 3 providers have no direct email (Denise and Andrea on doulamatch.net, Tina on bornbir.com - contact form only).",
     "stage": "complete",
-    "video": true,
+    "blocked_reason": null
+  },
+  "yonkers-ny": {
     "has_video": true,
-    "outreach": true,
     "has_outreach": true,
-    "score": 100,
-    "video_id": "94_CE_v_Ay0",
-    "provider_count": 1,
-    "hospital_count": 2,
-    "completed_at": "2026-08-05T09:00:00-07:00",
-    "in_progress": false,
-    "started_at": ""
-  },
-  "apple-valley-ca": {
-    "city": "Apple Valley",
-    "state": "CA",
     "stage": "complete",
-    "score": 100,
-    "url": "https://truejoybirthing.com/birth-support/apple-valley-ca/",
-    "providers": 4,
-    "hospitals": 1,
-    "birthCenters": 1,
-    "video": {
-      "youtubeId": "MJk2BIFwBlc",
-      "duration": "2m25s",
-      "status": "embedded"
-    },
-    "outreach": {
-      "sent": [
-        "midwifelareina@highdesertbirths.com",
-        "info@preciouspathwaysmidwifery.com"
-      ],
-      "pending": [
-        "Lakisha Calvin (no public email - Bornbir only)",
-        "Beautiful Blessings (no public email - Instagram only)"
-      ]
-    },
-    "lastUpdated": "2026-08-05"
+    "completed_at": "2026-07-30T17:35:37.924378+00:00",
+    "outreach_sent_at": "2026-07-30T17:35:37.927225+00:00",
+    "outreach_provider_count": 4,
+    "outreach_no_email_count": 0,
+    "video_id": "-5ZUu9qGVnQ",
+    "video_url": "https://youtu.be/-5ZUu9qGVnQ"
   },
-  "melissa-tx": {
-    "score": 100,
-    "status": "complete",
-    "video_id": "rRpsNAsqFrE",
-    "video_embedded": true,
-    "youtube_url": "https://youtu.be/rRpsNAsqFrE",
-    "has_outreach": true
-  },
-  "palm-springs-fl": {
+  "oceanside-ca": {
+    "stage": "complete",
+    "has_page": true,
+    "has_video": true,
     "has_outreach": true,
-    "outreach_sent_at": "2026-08-06T14:05:00Z",
+    "completed_at": "2026-07-30T17:44:26.221822+00:00",
+    "outreach_sent_at": "2026-07-30T17:44:26.221822+00:00",
+    "outreach_provider_count": 6,
+    "outreach_no_email_count": 0,
+    "video_id": "De1X1UgAFRQ",
+    "providers": [
+      {
+        "name": "Dara DeSoto",
+        "email": "dara.desoto@gmail.com",
+        "status": "sent"
+      },
+      {
+        "name": "Amanda Winn",
+        "email": "ajoywinn@gmail.com",
+        "status": "sent"
+      },
+      {
+        "name": "Kym Benner",
+        "email": "babiesrkym@hotmail.com",
+        "status": "sent"
+      },
+      {
+        "name": "Tiffany Whittaker",
+        "email": "doulatiffany@midnightmoonmommy.com",
+        "status": "sent"
+      },
+      {
+        "name": "Angela Lien",
+        "email": "doulabydesignsd@gmail.com",
+        "status": "sent"
+      },
+      {
+        "name": "Jenet Morrison",
+        "email": "jenet.morrison@hotmail.com",
+        "status": "sent"
+      }
+    ]
+  },
+  "el-paso-tx": {
+    "has_outreach": true,
+    "stage": "complete",
+    "completed_at": "2026-08-04T04:52:13.289505+00:00",
+    "outreach_sent_at": "2026-08-04T04:52:13.289505+00:00",
+    "outreach_provider_count": 2,
+    "outreach_no_email_count": 1,
+    "video_id": "jFeA5eWK2Vc"
+  },
+  "fulshear-tx": {
+    "has_outreach": true,
+    "outreach_sent_at": "2026-08-04T10:10:00Z",
     "outreach_provider_count": 2,
     "outreach_no_email_count": 3,
     "outreach_no_email_providers": [
-      "Dana Jacobs",
-      "Coastal Doulas of Palm Beach",
-      "Bonnie Kelly"
+      "Yvonne Estrada",
+      "Karrington Searles",
+      "Delaney Vasisko"
     ],
-    "has_video": true,
-    "video_id": "bpsjMiuuii0",
-    "video_url": "https://youtu.be/bpsjMiuuii0",
-    "stage": "complete",
+    "outreach_blocked_reason": "",
+    "status": "done",
     "score": 100
   },
-  "jacksonville-fl": {
-    "slug": "jacksonville-fl",
-    "city": "Jacksonville",
+  "leesburg-fl": {
+    "slug": "leesburg-fl",
+    "city": "Leesburg",
     "state": "FL",
     "stage": "complete",
     "score": 100,
     "has_video": true,
+    "youtube_id": "QyOVa0x5Af0",
     "has_outreach": true,
-    "outreach_sent_at": "2026-08-08T12:58:00.422048+00:00",
-    "outreach_provider_count": 8,
-    "outreach_emails_sent": 6,
-    "outreach_no_email": 4,
-    "outreach_date": "2026-08-08",
-    "deployed": true
+    "outreach_sent_at": "2026-08-04T11:55:52.466334",
+    "outreach_provider_count": 2,
+    "outreach_skipped": [
+      "Anna Heintzelman (no email)",
+      "Rebecca Luckey (no email)"
+    ],
+    "completed_at": "2026-08-04T11:55:52.466349"
+  },
+  "alhambra-ca": {
+    "city": "Alhambra",
+    "state": "CA",
+    "slug": "alhambra-ca",
+    "stage": "video_outreach",
+    "has_video": false,
+    "has_outreach": false,
+    "hero_image": true,
+    "og_image": true,
+    "support_scene": true,
+    "provider_count": 5,
+    "hospital_count": 3,
+    "birth_center_count": 1,
+    "deployed": true,
+    "deployed_at": "2026-08-04T22:00:00Z",
+    "live_url": "https://truejoybirthing.com/birth-support/alhambra-ca/"
+  },
+  "allen-park-mi": {
+    "slug": "allen-park-mi",
+    "city": "Allen Park",
+    "state": "MI",
+    "stage": "complete",
+    "score": 100,
+    "has_video": true,
+    "video_id": "VYWx2jPDMnM",
+    "has_outreach": true,
+    "outreach_sent_at": "2026-08-04T17:20:00Z",
+    "outreach_provider_count": 3,
+    "outreach_blocked": [
+      "Kayla Connors: no-email-found (Instagram @kaylaconnorsdoula)",
+      "Michelle Smith: no-email-found (Instagram @Btb_doula, multi-city)"
+    ],
+    "build_complete": true,
+    "enrich_complete": true,
+    "deploy_complete": true,
+    "deployed_at": "2026-08-04T17:05:00Z",
+    "youtube_uploaded_at": "2026-08-04T17:15:00Z"
+  },
+  "alvin-tx": {
+    "slug": "alvin-tx",
+    "city": "Alvin",
+    "state": "TX",
+    "stage": "complete",
+    "score": 100,
+    "has_video": true,
+    "youtube_id": "aDB_LUS5JBo",
+    "has_outreach": true,
+    "outreach_blocked_reason": "",
+    "completed_at": "2026-08-04T22:50:00Z",
+    "providers": 4,
+    "hospitals": 2,
+    "birth_centers": 1,
+    "outreach_sent_at": "2026-08-05T06:00:00Z",
+    "outreach_provider_count": 1,
+    "outreach_no_email_count": 3
+  },
+  "melissa-tx": {
+    "has_outreach": true,
+    "outreach_sent_at": "2026-08-05T15:05:00Z",
+    "outreach_provider_count": 1,
+    "outreach_no_email_count": 2,
+    "outreach_blocked_reason": "",
+    "outreach_notes": "Kourtney McGowan sent (multi-city followup). Sydney Osborne: Squarespace contact form only, no public email. Kate Tverytnykova: Bornbir platform messaging only, no public email.",
+    "score": 100,
+    "status": "complete",
+    "video_id": "rRpsNAsqFrE",
+    "video_embedded": true,
+    "youtube_url": "https://youtu.be/rRpsNAsqFrE"
+  },
+  "american-canyon-ca": {
+    "has_outreach": true,
+    "outreach_sent_at": "2026-08-05T16:01:00Z",
+    "outreach_provider_count": 5,
+    "outreach_no_email_count": 1,
+    "status": "done"
+  },
+  "anaheim-ca": {
+    "city": "Anaheim",
+    "state": "CA",
+    "slug": "anaheim-ca",
+    "score": 100,
+    "stage": "complete",
+    "has_video": true,
+    "video_id": "n_cx9tuJxvw",
+    "video_url": "https://youtu.be/n_cx9tuJxvw",
+    "has_outreach": true,
+    "outreach_sent_at": "2026-08-05",
+    "outreach_provider_count": 2,
+    "outreach_blocked": [
+      "Breana Espinoza (no email - contact form only)",
+      "Karina Trujillo (no verified email)"
+    ],
+    "url": "https://truejoybirthing.com/birth-support/anaheim-ca/"
+  },
+  "anna-tx": {
+    "has_outreach": true,
+    "outreach_sent_at": "2026-08-05T19:33:00Z",
+    "outreach_provider_count": 2,
+    "outreach_no_email_count": 2,
+    "has_video": true,
+    "video_id": "gregPu-5Mss",
+    "video_uploaded_at": "2026-08-05T19:26:00Z",
+    "stage": "complete",
+    "score": 100,
+    "last_updated": "2026-08-05T19:33:00Z"
+  },
+  "boise-id": {
+    "slug": "boise-id",
+    "city": "Boise",
+    "state": "ID",
+    "has_outreach": true,
+    "outreach_sent_at": "2026-08-05T20:45:00Z",
+    "outreach_provider_count": 2,
+    "outreach_no_email_count": 3,
+    "outreach_blocked_reason": "",
+    "has_video": true,
+    "video_youtube_id": "opchGImtrco",
+    "stage": "complete",
+    "score": 100
+  },
+  "kansas-city-mo": {
+    "slug": "kansas-city-mo",
+    "city": "Kansas City",
+    "state": "MO",
+    "has_outreach": true,
+    "outreach_sent_at": "2026-08-06T04:50:00Z (scheduled for 6 AM CDT)",
+    "outreach_provider_count": 6,
+    "outreach_no_email_count": 3,
+    "outreach_blocked_reason": null,
+    "stage": "video_outreach",
+    "has_video": false,
+    "has_page": true,
+    "page_url": "https://truejoybirthing.com/birth-support/kansas-city-mo/",
+    "provider_count": 12,
+    "hospital_count": 3,
+    "birth_center_count": 2,
+    "score": 90
+  },
+  "dallas-tx": {
+    "slug": "dallas-tx",
+    "status": "complete",
+    "stage": "complete",
+    "has_outreach": true,
+    "outreach_sent_at": "2026-08-08T15:27:32.505535+00:00",
+    "outreach_provider_count": 5,
+    "outreach_sent_count": 2,
+    "outreach_duplicate_count": 3,
+    "outreach_no_email_count": 0,
+    "has_video": true,
+    "video_id": "6luzm5OBWQk",
+    "notes": "5 verified providers (removed Aubrey Tambellini who is actually IL-based). Video re-rendered to match. Outreach: 2 new first-touch sent (cherishbirth, dallasbirth); 3 already contacted historically (Great Expectations, North Dallas, Doulas of Dallas) blocked as duplicates. Lactation image updated to v3.",
+    "live_url": "https://truejoybirthing.com/birth-support/dallas-tx/"
   }
 }

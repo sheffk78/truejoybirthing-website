@@ -18,6 +18,10 @@
     {
       "slug": "princeton-tx",
       "sharedProviders": 1
+    },
+    {
+      "slug": "dallas-tx",
+      "sharedProviders": 1
     }
   ],
   "princeton-tx": [
@@ -36,7 +40,22 @@
   ],
   "abilene-tx": [],
   "beaumont-tx": [],
-  "arlington-tx": [],
+  "dallas-tx": [
+    {
+      "slug": "carrollton-tx",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "arlington-tx",
+      "sharedProviders": 1
+    }
+  ],
+  "arlington-tx": [
+    {
+      "slug": "dallas-tx",
+      "sharedProviders": 1
+    }
+  ],
   "austin-tx": [
     {
       "slug": "houston-tx",
@@ -284,5 +303,6 @@
   ],
   "american-canyon-ca": [],
   "arlington-heights-il": [],
-  "anchorage-ak": []
+  "anchorage-ak": [],
+  "jacksonville-fl": []
 }
