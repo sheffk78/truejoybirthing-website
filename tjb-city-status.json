@@ -170,5 +170,20 @@
     "video_url": "https://youtu.be/bpsjMiuuii0",
     "stage": "complete",
     "score": 100
+  },
+  "jacksonville-fl": {
+    "slug": "jacksonville-fl",
+    "city": "Jacksonville",
+    "state": "FL",
+    "stage": "complete",
+    "score": 100,
+    "has_video": true,
+    "has_outreach": true,
+    "outreach_sent_at": "2026-08-08T12:58:00.422048+00:00",
+    "outreach_provider_count": 8,
+    "outreach_emails_sent": 6,
+    "outreach_no_email": 4,
+    "outreach_date": "2026-08-08",
+    "deployed": true
   }
 }
