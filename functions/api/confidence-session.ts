@@ -1,16 +1,14 @@
-export interface Env {
-  AGENTMAIL_API_KEY: string;
-  BREVO_API_KEY?: string;
-}
+// API route: /api/confidence-session
+// Receives birth plan confidence session requests
+// Forwards to MailerCloud via POST /contacts/upsert
 
-const ALLOWED_ORIGINS = ['https://truejoybirthing.com', 'https://www.truejoybirthing.com', 'http://localhost:4321'];
-
-export const onRequestPost = async (context: { request: Request; env: Env }) => {
+export const onRequestPost = async (context) => {
   const { request, env } = context;
   const origin = request.headers.get('origin') || '';
 
   // Validate origin
-  if (!ALLOWED_ORIGINS.some(o => origin === o || origin.endsWith('.truejoybirthing.com'))) {
+  if (!['https://truejoybirthing.com', 'https://www.truejoybirthing.com', 'http://localhost:4321']
+    .some(o => origin === o || origin.endsWith('.truejoybirthing.com'))) {
     return new Response(JSON.stringify({ error: 'Origin not allowed' }), {
       status: 403,
       headers: { 'Content-Type': 'application/json' },
@@ -30,17 +28,17 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
     let dueDate = '';
 
     if (contentType.includes('application/json')) {
-      const body = await request.json() as { name?: string; email?: string; phone?: string; dueDate?: string };
+      const body = await request.json();
       name = (body.name || '').trim();
       email = (body.email || '').trim();
       phone = (body.phone || '').trim();
       dueDate = (body.dueDate || '').trim();
     } else if (contentType.includes('application/x-www-form-urlencoded')) {
       const form = await request.formData();
-      name = (form.get('name') as string || '').trim();
-      email = (form.get('email') as string || '').trim();
-      phone = (form.get('phone') as string || '').trim();
-      dueDate = (form.get('dueDate') as string || '').trim();
+      name = (form.get('name') || '').trim();
+      email = (form.get('email') || '').trim();
+      phone = (form.get('phone') || '').trim();
+      dueDate = (form.get('dueDate') || '').trim();
     } else {
       return new Response(JSON.stringify({ error: 'Unsupported content type' }), {
         status: 400,
@@ -65,28 +63,25 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
 
     const firstName = name.split(' ')[0];
 
-    // ── Primary: Brevo contact sync (list 6 = Confidence Session leads) ──
-    if (env.BREVO_API_KEY) {
+    // ── Primary: MailerCloud contact upsert (list 6 = Confidence Session leads) ──
+    if (env.MC_API_KEY) {
       try {
-        await fetch('https://api.brevo.com/v3/contacts', {
+        await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
           method: 'POST',
           headers: {
-            'api-key': env.BREVO_API_KEY,
+            'Authorization': env.MC_API_KEY,
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
             email,
-            attributes: {
-              FIRSTNAME: firstName,
-              PHONE: phone || '',
-              DUE_DATE: dueDate || '',
-            },
-            listIds: [2, 6], // 2 = general, 6 = Confidence Session leads
-            updateEnabled: true,
+            first_name: firstName,
+            list_id: 6,
+            // Confidence Session custom fields mapped as tags
+            tags: ['confidence-session'],
           }),
         });
-      } catch (brevoErr) {
-        console.error('Brevo contact sync error (non-fatal):', brevoErr);
+      } catch (mcErr) {
+        console.error('MailerCloud contact sync error (non-fatal):', mcErr);
       }
     }
 
@@ -117,7 +112,6 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
 
     if (!agentmailResult.ok) {
       console.error('AgentMail send failed:', agentmailResult.status, await agentmailResult.text());
-      // Still return success to the user — we don't want to expose delivery failures
     }
 
     return new Response(JSON.stringify({ success: true }), {

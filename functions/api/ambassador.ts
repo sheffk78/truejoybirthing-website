@@ -1,15 +1,13 @@
-export interface Env {
-  AGENTMAIL_API_KEY: string;
-  BREVO_API_KEY?: string;
-}
+// API route: /api/ambassador
+// Receives TJB ambassador program applications
+// Forwards to MailerCloud via POST /contacts/upsert
 
-const ALLOWED_ORIGINS = ['https://truejoybirthing.com', 'https://www.truejoybirthing.com', 'http://localhost:4321'];
-
-export const onRequestPost = async (context: { request: Request; env: Env }) => {
+export const onRequestPost = async (context) => {
   const { request, env } = context;
   const origin = request.headers.get('origin') || '';
 
-  if (!ALLOWED_ORIGINS.some(o => origin === o || origin.endsWith('.truejoybirthing.com'))) {
+  if (!['https://truejoybirthing.com', 'https://www.truejoybirthing.com', 'http://localhost:4321']
+    .some(o => origin === o || origin.endsWith('.truejoybirthing.com'))) {
     return new Response(JSON.stringify({ error: 'Origin not allowed' }), {
       status: 403,
       headers: { 'Content-Type': 'application/json' },
@@ -22,15 +20,7 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
   };
 
   try {
-    const body = await request.json() as {
-      name?: string;
-      email?: string;
-      role?: string;
-      city?: string;
-      instagram?: string;
-      audience?: string;
-      why?: string;
-    };
+    const body = await request.json();
 
     const name = (body.name || '').trim();
     const email = (body.email || '').trim();
@@ -57,57 +47,25 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
     const firstName = name.split(' ')[0];
     const lastName = name.includes(' ') ? name.split(' ').slice(1).join(' ') : '';
 
-    // ── Brevo: Add to ambassador list (list 7) with full attributes ──
-    // Brevo list 7 = TJB Ambassador Program
-    // Brevo dashboard IS the admin — filter by list, see all attributes, manage status
-    if (env.BREVO_API_KEY) {
+    // ── MailerCloud: Add to ambassador list (list 3 = TJB Ambassadors) ──
+    if (env.MC_API_KEY) {
       try {
-        await fetch('https://api.brevo.com/v3/contacts', {
+        await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
           method: 'POST',
           headers: {
-            'api-key': env.BREVO_API_KEY,
+            'Authorization': env.MC_API_KEY,
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
             email,
-            attributes: {
-              FIRSTNAME: firstName,
-              LASTNAME: lastName,
-              AMB_ROLE: role,
-              AMB_CITY: city,
-              AMB_INSTAGRAM: instagram,
-              AMB_AUDIENCE: audience,
-              AMB_WHY: why,
-              AMB_STATUS: 'applied',
-              AMB_APPLIED_AT: new Date().toISOString(),
-            },
-            listIds: [6],
-            updateEnabled: true,
+            first_name: firstName,
+            last_name: lastName,
+            list_id: 3,
+            tags: ['ambassador', 'applied'],
           }),
         });
-      } catch (brevoErr) {
-        console.error('Brevo ambassador contact error (non-fatal):', brevoErr);
-      }
-    }
-
-    // ── Brevo: Send welcome email to applicant with Pro Mode code ──
-    // Template 38: Ambassador Welcome - Free Pro Mode Code
-    if (env.BREVO_API_KEY) {
-      try {
-        await fetch('https://api.brevo.com/v3/smtp/email', {
-          method: 'POST',
-          headers: {
-            'api-key': env.BREVO_API_KEY,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            templateId: 38,
-            to: [{ email, name }],
-            params: { FIRSTNAME: firstName },
-          }),
-        });
-      } catch (emailErr) {
-        console.error('Brevo ambassador welcome email failed (non-fatal):', emailErr);
+      } catch (mcErr) {
+        console.error('MailerCloud ambassador contact error (non-fatal):', mcErr);
       }
     }
 
@@ -125,7 +83,7 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
       `Audience size: ${audience || 'Not provided'}`,
       `Why TJB: ${why || 'Not provided'}`,
       ``,
-      `View all ambassador contacts in Brevo: https://app.brevo.com/contacts → List "TJB Ambassadors"`,
+      `View all ambassador contacts in MailerCloud → TJB Ambassadors list`,
     ].join('\n');
 
     fetch(`https://api.agentmail.to/v0/inboxes/${inboxId}/messages/send`, {

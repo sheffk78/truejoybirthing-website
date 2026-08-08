@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 
 const city = "Corpus Christi";
 const state = "TX";
-const pageTitle = `Birth Support in ${city}, ${state}`;
-const pageDesc = `Find birth support resources in Corpus Christi, TX — local hospital info, doula costs, Medicaid status, and a free birth plan built for local families.`;
+const pageTitle = `Birth Support in ${city}, TX`;
+const pageDesc = `Corpus Christi is a coastal city with a growing birth community. Compare doula costs ($$750-$2,100), find local hospitals like Corpus Christi Medical Center, and explore birth traditions in the Coastal Bend. Free birth plan included.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/corpus-christi-tx/`;
 
 const hospitals = ["Corpus Christi Medical Center", "HCA Texas Healthcare", "Driscoll Children's Hospital"];
@@ -19,48 +19,6 @@ const shelbiServesHere = false;
 const faqs = [{"q": "Does Medicaid cover doulas in Corpus Christi?", "a": "Texas is expanding Medicaid doula coverage statewide. Specific eligibility depends on your plan. Contact your Texas Medicaid managed care provider for current benefits."}, {"q": "How much does a doula cost in Corpus Christi?", "a": "$750 to $2,100 depending on experience and package."}, {"q": "Does True Joy Birthing work with Corpus Christi families?", "a": "The free app and birth plan work for any Corpus Christi birth setting. Virtual confidence sessions are available. Shelbi does not provide in-person doula services in Corpus Christi."}, {"q": "Which Corpus Christi hospitals accommodate birth plans?", "a": "Most major hospitals accommodate birth plans, but policies vary. Discuss your preferences during your hospital tour and bring your written birth plan."}];
 
 const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Birth Support", "url": "https://truejoybirthing.com/birth-support/"}, {"name": "Corpus Christi, TX", "url": pageUrl}];
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    ...faqs.map((f, i) => ({
-      "@type": "Question",
-      "@id": `https://truejoybirthing.com/birth-support/corpus-christi-tx/#question-${i+1}`,
-      "name": f.q,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": f.a
-      }
-    })),
-    {
-      "@type": "FAQPage",
-      "@id": `https://truejoybirthing.com/birth-support/corpus-christi-tx/#faq`,
-      "mainEntity": faqs.map((_, i) => ({ "@id": `https://truejoybirthing.com/birth-support/corpus-christi-tx/#question-${i+1}` }))
-    },
-    {
-      "@type": "LocalBusiness",
-      "@id": `https://truejoybirthing.com/birth-support/corpus-christi-tx/#local`,
-      "name": "True Joy Birthing",
-      "url": pageUrl,
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Corpus Christi",
-        "addressRegion": "TX",
-        "addressCountry": "US"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Corpus Christi"
-      },
-      "parentOrganization": { "@id": "https://truejoybirthing.com/#organization" }
-    }
-  ]
-};
-
-const schema = {
-  "@context": "https://schema.org",
-  "@graph": [...faqSchema["@graph"]]
-};
 ---
 
 <Layout
@@ -68,20 +26,40 @@ const schema = {
   description={pageDesc}
   canonical={pageUrl}
   breadcrumbList={breadcrumbList}
-  schema={schema}
+  schema={{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `${pageUrl}#article`,
+        headline: `${city} Doula & Birth Support: Costs, Hospitals & Medicaid`,
+        description: pageDesc,
+        author: { "@type": "Organization", "@id": "https://truejoybirthing.com/#organization" },
+        publisher: { "@type": "Organization", "@id": "https://truejoybirthing.com/#organization" },
+        mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `${pageUrl}#faq`,
+        mainEntity: faqs.map((f, i) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a }
+        }))
+      }
+    ]
+  }}
 >
 
   <section class="bg-tjb-cream pt-16 pb-12">
     <div class="max-w-4xl mx-auto px-6">
       <h1 class="text-3xl md:text-4xl font-bold mb-4">Birth Support in Corpus Christi, TX</h1>
       <p class="text-lg text-tjb-gray mb-6">
-        Local hospital options, doula costs, and Medicaid status — plus the free birth plan template families in Corpus Christi use to feel confident and prepared.
+        {culture} Explore local hospitals, doula costs, and Medicaid coverage for families in the Coastal Bend.
       </p>
       <div class="flex flex-col sm:flex-row gap-3">
-        <a href="#download-pdf" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">
-          Download Free Birth Plan</a>
-        <a href="https://apps.apple.com/app/true-joy-birthing" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-lg font-semibold hover:bg-tjb-cream transition">
-          Get the Free App</a>
+        <a href="#download-pdf" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">Download Free Birth Plan</a>
+        <a href="https://apps.apple.com/app/true-joy-birthing" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-lg font-semibold hover:bg-tjb-cream transition">Get the Free App</a>
       </div>
     </div>
   </section>
@@ -90,7 +68,7 @@ const schema = {
     <div class="max-w-3xl mx-auto px-6 prose">
 
       <h2>What Birth Support Looks Like in Corpus Christi</h2>
-      <p>Corpus Christi is a coastal city with a growing birth community. Families deliver at the major hospital systems, and the area's diversity means a wide range of birth traditions and preferences.</p>
+      <p>{culture}</p>
 
       <p>Families in Corpus Christi often deliver at hospitals including:</p>
       <ul>
@@ -117,7 +95,8 @@ const schema = {
       <h2>Build Your Birth Plan for Corpus Christi</h2>
       <p>No matter where you deliver in Corpus Christi, a clear, organized birth plan helps you communicate your preferences to the team in your birth room.</p>
       <a href="#download-pdf" class="inline-block bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition mb-6">
-        Download the Free Birth Plan</a>
+        Download the Free Birth Plan
+      </a>
 
       {shelbiServesHere ? (
         <div class="bg-tjb-cream p-4 rounded-lg mb-6">
@@ -144,7 +123,11 @@ const schema = {
       </div>
 
       <h2>Nearby Resources</h2>
-      <a href="/birth-support" class="text-tjb-lavender-500 font-semibold hover:underline">See all cities →</a>
+      <ul class="space-y-2 text-tjb-gray">
+        <li><a href="/doula-cost/" class="text-tjb-lavender-600 hover:underline">Doula Cost Guide</a> — Compare pricing across Texas cities</li>
+        <li><a href="/medicaid-doula-coverage/" class="text-tjb-lavender-600 hover:underline">Medicaid Doula Coverage</a> — Which states cover doulas and how to access benefits</li>
+        <li><a href="/birth-support/" class="text-tjb-lavender-600 hover:underline">See all cities →</a></li>
+      </ul>
 
     </div>
   </section>
@@ -196,5 +179,4 @@ const schema = {
       });
     }
   </script>
-
 </Layout>

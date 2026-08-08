@@ -1,11 +1,8 @@
-export interface Env {
-  AGENTMAIL_API_KEY: string;
-  BREVO_API_KEY?: string;
-}
+// API route: /api/contact
+// Receives email + optional name from truejoybirthing.com contact form
+// Forwards to MailerCloud via POST /contacts/upsert
 
-const ALLOWED_ORIGINS = ['https://truejoybirthing.com', 'https://www.truejoybirthing.com', 'http://localhost:4321'];
-
-export const onRequestPost = async (context: { request: Request; env: Env }) => {
+export const onRequestPost = async (context) => {
   const { request, env } = context;
   const origin = request.headers.get('origin') || '';
 
@@ -22,7 +19,8 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
   }
 
   // Validate origin
-  if (!ALLOWED_ORIGINS.some(o => origin === o || origin.endsWith('.truejoybirthing.com'))) {
+  if (!['https://truejoybirthing.com', 'https://www.truejoybirthing.com', 'http://localhost:4321']
+    .some(o => origin === o || origin.endsWith('.truejoybirthing.com'))) {
     return new Response(JSON.stringify({ error: 'Origin not allowed' }), {
       status: 403,
       headers: { 'Content-Type': 'application/json' },
@@ -42,16 +40,17 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
     let subject = '';
 
     if (contentType.includes('application/json')) {
-      const body = await request.json() as { name?: string; email?: string; message?: string; subject?: string };
+      const body = await request.json();
       name = (body.name || '').trim();
       email = (body.email || '').trim();
       message = (body.message || '').trim();
       subject = (body.subject || '').trim();
     } else if (contentType.includes('application/x-www-form-urlencoded')) {
       const form = await request.formData();
-      name = (form.get('name') as string || '').trim();
-      email = (form.get('email') as string || '').trim();
-      message = (form.get('message') as string || '').trim();
+      name = (form.get('name') || '').trim();
+      email = (form.get('email') || '').trim();
+      message = (form.get('message') || '').trim();
+      subject = (form.get('subject') || '').trim();
     } else {
       return new Response(JSON.stringify({ error: 'Unsupported content type' }), {
         status: 400,
@@ -67,7 +66,6 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
       });
     }
 
-    // Basic email validation
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return new Response(JSON.stringify({ error: 'Invalid email address' }), {
         status: 400,
@@ -75,7 +73,6 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
       });
     }
 
-    // Rate limit: max 5000 chars for message
     if (message.length > 5000) {
       return new Response(JSON.stringify({ error: 'Message too long' }), {
         status: 400,
@@ -83,36 +80,43 @@ export const onRequestPost = async (context: { request: Request; env: Env }) => 
       });
     }
 
-    const brevoContactName = name || email;
+    const contactName = name || email;
     const firstName = name ? name.split(' ')[0] : '';
 
-    // ── Primary: Brevo contact sync + welcome email ──
-    // Brevo is the critical path — list signup + welcome email with PDF link.
-    // AgentMail (inbox notification) is secondary — fire-and-forget.
-    if (env.BREVO_API_KEY) {
+    // ── Primary: MailerCloud contact upsert (list IDs from migration) ──
+    // List 2 = general, List 5 = Free Birth Plan
+    if (env.MC_API_KEY) {
       try {
-        // 1. Create/update contact in list 2 (general) + list 5 (Free Birth Plan)
-        await fetch('https://api.brevo.com/v3/contacts', {
+        await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
           method: 'POST',
           headers: {
-            'api-key': env.BREVO_API_KEY,
+            'Authorization': env.MC_API_KEY,
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
             email,
-            attributes: { FIRSTNAME: brevoContactName },
-            listIds: [2, 5], // 2 = general, 5 = Free Birth Plan
-            updateEnabled: true,
+            first_name: firstName,
+            last_name: name && name.split(' ').slice(1).join(' ') || '',
+            list_id: 2,
           }),
         });
-        // Contact created (or already exists) — that's sufficient. Proceed to send email.
-      } catch (brevoErr) {
-        console.error('Brevo contact sync error (non-fatal):', brevoErr);
-        // Don't block — continue to try sending welcome email anyway
+        // Also add to Free Birth Plan list (list 5) if not already there
+        await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
+          method: 'POST',
+          headers: {
+            'Authorization': env.MC_API_KEY,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email,
+            first_name: firstName,
+            last_name: name && name.split(' ').slice(1).join(' ') || '',
+            list_id: 5,
+          }),
+        });
+      } catch (mcErr) {
+        console.error('MailerCloud contact sync error (non-fatal):', mcErr);
       }
-
-      // 2. Welcome email is handled by Brevo automation (JBP sequence triggered by list add)
-      // No direct transactional send — avoids double-emailing
     }
 
     // ── Secondary: AgentMail inbox notification (fire-and-forget) ──
