@@ -132,8 +132,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M31S",
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
-  "dallas-tx": {
-    videoId: "gK3W4iY6lZ0",
+  "dallas-tx": { videoId: "6luzm5OBWQk",,
     title: "Dallas Birth Guide: Hospitals, Doulas, Midwives & More",
     description: "Dallas birth guide covering 5 hospitals, 5+ doulas, 2 birth centers, costs, and Texas Medicaid coverage under HB 1575.",
     duration: "PT4M16S",
