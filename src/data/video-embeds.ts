@@ -132,8 +132,29 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M31S",
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
+  "dallas-tx": {
+    videoId: "gK3W4iY6lZ0",
+    title: "Dallas Birth Guide: Hospitals, Doulas, Midwives & More",
+    description: "Dallas birth guide covering 5 hospitals, 5+ doulas, 2 birth centers, costs, and Texas Medicaid coverage under HB 1575.",
+    duration: "PT4M16S",
+    uploadDate: "2026-08-08T00:00:00-05:00",
+    chapters: [
+      [0, "Welcome to Dallas"],
+      [13, "What This Guide Covers"],
+      [31, "Texas Health Presbyterian Hospital"],
+      [58, "Baylor University Medical Center"],
+      [85, "Parkland Memorial Hospital"],
+      [110, "Medical City Dallas"],
+      [137, "Methodist Dallas Medical Center"],
+      [160, "Birth Centers in Dallas"],
+      [190, "Dallas Doulas and Midwives"],
+      [248, "The True Joy Birthing App"],
+      [278, "Doula and Midwife Costs"],
+      [296, "Texas Medicaid Covers Doulas"],
+      [322, "Your Next Step"],
+    ],
+  },
   // cary-nc video removed: _4RaZyOaYeY was set to private/deleted. Needs re-record.
-  // dallas-tx video removed: city page never built (404), stale embed causing false health sweep alarms.
   "chesapeake-va": {
     videoId: "RAvfrkNKmOQ",
     title: "Chesapeake Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
