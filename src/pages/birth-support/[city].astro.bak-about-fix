@@ -587,27 +587,27 @@ const schema = {
 
   {/* ═══ Local Culture Section (unique per city — defeats template similarity) ═══ */}
   {data.culture && (
-    <section class="py-12 bg-white">
-      <div class="max-w-3xl mx-auto px-6">
-        <h2 class="text-2xl font-bold text-tjb-charcoal mb-4" style="font-family: 'DM Serif Display', Georgia, serif;">About {city}, {state}</h2>
-        <p class="text-tjb-gray leading-relaxed">{data.culture}</p>
+    <section class=\"py-12 bg-white\">
+      <div class=\"max-w-3xl mx-auto px-6\">
+        <h2 class=\"text-2xl font-bold text-tjb-charcoal mb-4\" style=\"font-family: 'DM Serif Display', Georgia, serif;\">About {city}, {state}</h2>
+        <p class=\"text-tjb-gray leading-relaxed\">{data.culture}</p>
       </div>
     </section>
   )}
 
   {/* ═══ E-E-A-T: Reviewer Byline (Google compliance) ═══ */}
-  <div class="bg-tjb-cream py-4">
-    <div class="max-w-6xl mx-auto px-6 flex items-center gap-2 text-sm text-tjb-gray">
+  <div class=\"bg-tjb-cream py-4\">
+    <div class=\"max-w-6xl mx-auto px-6 flex items-center gap-2 text-sm text-tjb-gray\">
       <span>Content reviewed by</span>
-      <a href="/about/" class="text-tjb-rose-600 font-medium hover:underline">Shelbi Kohler, CD(DONA)</a>
+      <a href=\"/about/\" class=\"text-tjb-rose-600 font-medium hover:underline\">Shelbi Kohler, CD(DONA)</a>
       <span>· Certified Birth Doula · 500+ families supported</span>
     </div>
   </div>
 
 
   {/* ═══ AI Content Disclosure ═══ */}
-  <div class="bg-tjb-gray-50 py-3 border-t border-tjb-lavender-100">
-    <div class="max-w-6xl mx-auto px-6 text-xs text-tjb-gray-500 text-center">
+  <div class=\"bg-tjb-gray-50 py-3 border-t border-tjb-lavender-100\">
+    <div class=\"max-w-6xl mx-auto px-6 text-xs text-tjb-gray-500 text-center\">
       This page was created with AI assistance and reviewed by a certified birth doula. Content accuracy is verified against current medical guidelines and local provider data.
     </div>
   </div>
