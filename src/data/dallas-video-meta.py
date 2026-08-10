@@ -7,14 +7,14 @@ dallas_meta = {
     'description': """You just found out you're pregnant in Dallas — now what? This guide walks you through everything: doulas and midwives serving Dallas, hospital policies, real costs, and whether Texas Medicaid covers a doula.
 
 📱 Get the free app → https://truejoybirthing.com
-📝 Free birth plan → https://truejoybirthing.com/birth-plan-template/
+📝 Birth Plan → https://truejoybirthing.com/birth-plan-template/
 📍 Dallas doula directory → https://truejoybirthing.com/birth-support/dallas-tx/
 
 ▸ Find Dallas doulas & midwives (10+ providers)
 ▸ Compare hospital options (Texas Health Dallas, Baylor, Parkland, Medical City Dallas, Methodist Dallas)
 ▸ Know what doula care actually costs ($900-$2,800)
 ▸ Understand Texas Medicaid doula coverage under SB 750
-▸ Build your free birth plan step by step
+▸ Build your birth plan step by step
 
 CHAPTERS:
 0:00 — Welcome to Dallas
@@ -42,7 +42,7 @@ Created by Shelbi Kohler, certified birth doula.
         'Texas Health Dallas maternity', 'Baylor Dallas maternity', 'Parkland Hospital Dallas',
         'Dallas doula cost', 'Texas birth support',
         'doula near me', 'Dallas midwife', 'pregnancy Texas',
-        'free birth plan', 'doula services Dallas', 'birth preparation',
+        'birth plan', 'doula services Dallas', 'birth preparation',
         'Medical City Dallas', 'Methodist Dallas',
     ],
     'category_id': '27',  # Education

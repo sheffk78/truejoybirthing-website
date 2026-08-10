@@ -211,7 +211,7 @@ function rewriteMedicaidSpecial(origA, q, ctx) {
 
 function rewriteTrueJoy(origA, q, ctx) {
   const city = ctx.city;
-  return `Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any ${city} birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href="/birth-plan-template/">Download the free birth plan template</a> and start preparing your way — no signup required.`;
+  return `Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any ${city} birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href="/birth-plan-template/">Download Your Birth Plan template</a> and start preparing your way — no signup required.`;
 }
 
 function rewriteHospitals(origA, q, ctx) {
@@ -380,7 +380,7 @@ function rewriteAnswer(origA, question, ctx) {
         + ` Knowing your drive time before you're in labor takes one more worry off your plate.`;
     case 'rural':
       return origA.replace(/\bfamilies\b/g, 'you').replace(/\bpatients\b/g, 'moms')
-        + ` If you're outside the city, virtual doula support and the <a href="/birth-plan-template/">free birth plan app</a> can help you prepare no matter your distance.`;
+        + ` If you're outside the city, virtual doula support and the <a href="/birth-plan-template/">birth plan app</a> can help you prepare no matter your distance.`;
     case 'birthplan':
       return origA.replace(/\bfamilies\b/g, 'you').replace(/\bpatients\b/g, 'moms')
         + ` <a href="/birth-plan-template/">Grab the free birth plan template</a> — it walks you through every question to think about before the big day.`;

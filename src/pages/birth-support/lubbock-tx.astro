@@ -4,7 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 const city = "Lubbock";
 const state = "TX";
 const pageTitle = `Birth Support in ${city}, TX`;
-const pageDesc = `Lubbock is a West Texas hub with a tight-knit birth community. Compare doula costs ($$700-$2,000), find local hospitals like Covenant Medical Center, and see Medicaid coverage for Lubbock families. Free birth plan included.`;
+const pageDesc = `Lubbock is a West Texas hub with a tight-knit birth community. Compare doula costs ($$700-$2,000), find local hospitals like Covenant Medical Center, and see Medicaid coverage for Lubbock families. birth planning included.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/lubbock-tx/`;
 
 const hospitals = ["Covenant Medical Center", "University Medical Center Lubbock", "Methodist Hospital Lubbock"];
@@ -58,7 +58,7 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
         {culture} Explore local hospitals, doula costs, and Medicaid coverage for families in the Hub City.
       </p>
       <div class="flex flex-col sm:flex-row gap-3">
-        <a href="#download-pdf" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">Download Free Birth Plan</a>
+        <a href="#download-pdf" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition">Download your birth plan</a>
         <a href="https://apps.apple.com/app/true-joy-birthing" class="bg-tjb-cream-50 text-tjb-lavender-500 border-2 border-tjb-lavender-500 px-6 py-3 rounded-lg font-semibold hover:bg-tjb-cream transition">Get the Free App</a>
       </div>
     </div>
@@ -95,7 +95,7 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
       <h2>Build Your Birth Plan for Lubbock</h2>
       <p>No matter where you deliver in Lubbock, a clear, organized birth plan helps you communicate your preferences to the team in your birth room.</p>
       <a href="#download-pdf" class="inline-block bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition mb-6">
-        Download the Free Birth Plan
+        Download Your Birth Plan
       </a>
 
       {shelbiServesHere ? (
@@ -135,14 +135,14 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
 
   <section id="download-pdf" class="py-16 bg-tjb-cream">
     <div class="max-w-2xl mx-auto px-6 text-center">
-      <h2 class="text-2xl md:text-3xl font-bold mb-4">Download Your Free Birth Plan</h2>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Download Your Birth Plan</h2>
       <p class="text-tjb-gray mb-8">Built by a doula for hospital-planning moms everywhere.</p>
       <form id="lead-magnet-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
         <input id="lead-email" name="email" type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-lg border border-tjb-lavender-300 focus:outline-none focus:border-tjb-lavender-500" required />
         <button id="lead-submit" type="submit" class="bg-tjb-lavender-500 text-tjb-cream px-6 py-3 rounded-lg font-semibold hover:bg-tjb-rose-500 transition whitespace-nowrap">Get My Plan →</button>
       </form>
       <p id="lead-status" class="text-sm mt-2 hidden"></p>
-      <p class="text-xs text-tjb-gray/70 mt-4">No spam. Just a free birth plan and occasional tips you can actually use.</p>
+      <p class="text-xs text-tjb-gray/70 mt-4">No spam. Just birth planning and occasional tips you can actually use.</p>
     </div>
   </section>
 

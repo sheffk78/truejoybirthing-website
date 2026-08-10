@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Free Birth Plan Template", "url": "https://truejoybirthing.com/birth-plan-template/"}, {"name": "Free Birth Plan Walkthrough", "url": "https://truejoybirthing.com/walkthrough/"}];
+const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Free Birth Plan Template", "url": "https://truejoybirthing.com/birth-plan-template/"}, {"name": "Birth Plan Walkthrough", "url": "https://truejoybirthing.com/walkthrough/"}];
 
 const schema = {
   "@context": "https://schema.org",
@@ -10,14 +10,14 @@ const schema = {
       "@type": "WebPage",
       "@id": "https://truejoybirthing.com/walkthrough/#webpage",
       "url": "https://truejoybirthing.com/walkthrough/",
-      "name": "Free Birth Plan Walkthrough",
+      "name": "Birth Plan Walkthrough",
       "description": "5 free video modules walking through every section of the Joyful Birth Plan — from labor preferences to newborn care. Enter your email to watch.",
       "isPartOf": {"@id": "https://truejoybirthing.com/#website"}
     },
     {
       "@type": "ItemList",
       "@id": "https://truejoybirthing.com/walkthrough/#modules",
-      "name": "Free Birth Plan Video Walkthrough Modules",
+      "name": "Birth Plan Video Walkthrough Modules",
       "description": "5 video modules walking through every section of the Joyful Birth Plan.",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "About Me & Your Birth Plan", "description": "How to fill in the section that helps your care team see you as a person." },
@@ -40,7 +40,7 @@ const moduleData = [
 ---
 
 <Layout
-  title="Free Birth Plan Walkthrough Videos"
+  title="Birth Plan Walkthrough Videos"
   description="Watch 5 free video modules with a certified doula walking through your entire birth plan. Covers labor, delivery, newborn care, and advocacy."
   canonical="https://truejoybirthing.com/walkthrough/"
   ogImage="/images/og/og-walkthrough.webp?v=2"
@@ -65,7 +65,7 @@ const moduleData = [
         />
       </div>
 
-      <p class="eyebrow mb-4">Free birth plan walkthrough</p>
+      <p class="eyebrow mb-4">Birth Plan Walkthrough</p>
       <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
       <h1 class="mb-5 text-[2.25rem] md:text-[2.75rem] leading-[1.15] text-tjb-charcoal font-bold">
         Walk through every section with a certified doula — free
@@ -117,7 +117,7 @@ const moduleData = [
   <section id="video-section" class="hidden bg-tjb-cream py-20 md:py-28">
     <div class="max-w-3xl mx-auto px-6">
 
-      <p class="eyebrow mb-4">Free birth plan walkthrough</p>
+      <p class="eyebrow mb-4">Birth Plan Walkthrough</p>
       <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
       <h2 class="mb-5 text-[2.25rem] md:text-[2.75rem] leading-[1.15] text-tjb-charcoal font-bold">
         Your free walkthrough videos
@@ -126,7 +126,7 @@ const moduleData = [
         Download the PDF from your inbox and follow along. Each module maps to a section of the Joyful Birth Plan.
       </p>
       <p class="text-tjb-gray mb-8">
-        Don't have the PDF yet? <a href="/true-joy-birth-plan.pdf" download="true-joy-birth-plan.pdf" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Download the free birth plan PDF here</a>.
+        Don't have the PDF yet? <a href="/true-joy-birth-plan.pdf" download="true-joy-birth-plan.pdf" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all">Download Your Birth Plan PDF here</a>.
       </p>
 
       {
