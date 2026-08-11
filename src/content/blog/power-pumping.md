@@ -57,7 +57,7 @@ This is the question every parent asks, and I wish I could give you a guaranteed
 
 The variation depends on several factors: how established your supply is, how often you're nursing or pumping, your hydration and nutrition, stress levels, and whether there are underlying issues like a tongue tie or hormonal imbalance. If you're within the first two weeks postpartum, your supply is still regulating, and power pumping can help establish a stronger baseline. If you're three or four months in, it may take longer to see noticeable changes.
 
-In my experience, the parents who get the best results commit to at least a full week without obsessing over output during every session. Your body needs time to respond. Checking the bottle every five minutes creates stress, and stress works against milk production. Track your total daily output instead of individual session output. That's where you'll see the trend.
+In my experience, the parents who get the best results commit to at least a full week without obsessing over output during every session. Your body needs time to respond. Checking the bottle every five minutes creates stress, and stress works against milk production. Track your total daily output instead of individual session output.
 
 If you don't see improvement after two weeks of consistent power pumping, check in with a lactation consultant or your provider. There may be a latch issue, a tongue tie, thyroid concerns, or another factor that needs addressing. I often refer families to local <a href="/birth-support/tx/">Texas birth support resources</a> or <a href="/birth-support/co/">Colorado birth support resources</a> where they can find certified lactation professionals.
 
@@ -99,7 +99,7 @@ Yes, you can. The easiest way is to pump on one side while your baby nurses on t
 
 ### What time of day is best for power pumping?
 
-Morning tends to be best because prolactin levels peak between 1 AM and 5 AM. Many parents have the most milk in the early hours. That said, any time you can consistently commit to works. The consistency matters more than the clock.
+Morning tends to be best because prolactin levels peak between 1 AM and 5 AM, and many parents have the most milk in the early hours. That said, any time you can consistently commit to works. The consistency matters more than the clock.
 
 ### Will power pumping cause oversupply?
 
@@ -121,11 +121,10 @@ Track your total daily output, not individual session amounts. Look for a gradua
 
 ## Is Power Pumping Worth It?
 
-Power pumping is not glamorous. It takes time, patience, and can feel impossible when you're already sleep-deprived. But when supply is a genuine concern, it's one of the most effective tools available.
+Power pumping is not glamorous. It takes time and patience and can feel impossible when you're already sleep-deprived. But when supply is a concern, it's one of the most effective tools available.
+I don't recommend it to every client. If your baby is gaining weight and you're content with your supply, there's no need to add an hour of pumping to your day. But if you're stressed about output, worried about returning to work, or building a freezer stash, power pumping is worth trying.
 
-I don't recommend it to every client. If your baby is gaining weight and you're content with your supply, there's no need to add an hour of pumping to your day. But if you're stressed about output, worried about returning to work, or trying to build a freezer stash, power pumping is worth trying.
-
-The parents I've supported who had the best outcomes approached it practically. They set a timer, picked a show, and didn't obsess over every drop. They tracked weekly trends instead of session-by-session output. And they reached out for help when something didn't feel right.
+The parents I've supported who had the best outcomes approached it practically. They set a timer, picked a show, and didn't obsess over every drop. They tracked weekly trends instead of session-by-session output.
 
 If you're preparing for birth or early postpartum and want to feel more confident about feeding, download your <a href="/birth-plan-template/">free Joyful Birth Plan</a> and note your preferences for lactation support and feeding goals. Having a written plan means your partner and care team know what matters to you, even when you're too tired to explain it.
 
