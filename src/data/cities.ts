@@ -2008,7 +2008,11 @@ export const cities: Record<string, CityData> = {
       { q: "Can I have a water birth in San Antonio?", a: "Water birth is available at Birth Center Stone Oak with a licensed midwife. Several hospitals including Methodist and CHRISTUS allow labor tubs during labor, though water birth itself may not be routinely offered. Ask your provider about hydrotherapy options during your hospital tour." }
     ],
     nearbyCities: ["austin-tx", "laredo-tx", "new-braunfels-tx", "san-marcos-tx", "boerne-tx"],
-    birthStats: { cesareanRate: 32.1, maternalMortalityRate: 18.6, homeBirthRate: 0.8, birthCenterBirthRate: 0.4, dataYear: 2023, dataSource: "CDC NCHS National Vital Statistics System; Bexar County Fetal-Infant Mortality Review; Texas DSHS" },
+        midwifeInfo: {
+      paragraph: "Texas licenses Certified Nurse-Midwives (CNMs) through the Texas Board of Nursing and Certified Professional Midwives (CPMs) through the Texas Department of Licensing and Regulation. San Antonio families have hospital-based midwifery care at Methodist Hospital and University Hospital, both with CNM midwifery services on staff, while Birth Center Stone Oak, Community Birth Group, and Central Texas Birth Center offer CPM/LM-led out-of-hospital births across the metro. Several CPMs serve home-birth families throughout Bexar County. Texas Medicaid covers CNM services, and SB 750 (2024) extended Medicaid reimbursement to doulas working alongside midwives.",
+      midwifeTitle: "Midwives in San Antonio, TX"
+    },
+birthStats: { cesareanRate: 32.1, maternalMortalityRate: 18.6, homeBirthRate: 0.8, birthCenterBirthRate: 0.4, dataYear: 2023, dataSource: "CDC NCHS National Vital Statistics System; Bexar County Fetal-Infant Mortality Review; Texas DSHS" },
   },
   "chicago-il": {
     enableBlogResources: true,
