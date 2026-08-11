@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "last_updated": "2026-08-11T14:30:00-06:00",
+  "last_updated": "2026-08-11T14:50:00-06:00",
   "total_cities_in_codebase": 187,
   "future_cities_planned": 1000,
   "cities": {
@@ -1964,7 +1964,8 @@
       "preflight_passed": true,
       "stage": "complete",
       "blocked_reason": null,
-      "hero": "san-antonio-tx-birth-doula-skyline-v5.webp (photographic)"
+      "hero": "san-antonio-tx-birth-doula-skyline-v5.webp (photographic)",
+      "hospital_images_fixed": "bamc-san-antonio.webp (real exterior), community-birth-group-san-antonio.webp (real interior)"
     }
   },
   "providence-ri": {
