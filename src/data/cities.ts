@@ -333,6 +333,8 @@ export const cities: Record<string, CityData> = {
   "lubbock-tx": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
+    lat: 33.5779,
+    lng: -101.8552,
     city: "Lubbock",
     state: "TX",
     slug: "lubbock-tx",
@@ -367,6 +369,11 @@ export const cities: Record<string, CityData> = {
       birthCenterBirthRate: 0.8,
       dataYear: 2023,
       dataSource: "CDC NCHS National Vital Statistics System",
+    },
+    midwifeInfo: {
+      paragraph: "Lubbock has a small but growing midwifery presence serving the South Plains. Both Covenant Medical Center and University Medical Center staff Certified Nurse-Midwives (CNMs) for hospital births, and UMC's Family Birth Center is known for a midwife-friendly, low-intervention approach. CNMs in Texas are licensed through the Texas Board of Nursing; Certified Professional Midwives (CPMs) and Licensed Midwives (LMs) are regulated through the Texas Department of Licensing and Regulation and support the region's home-birth families. Texas Medicaid covers CNM services, and SB 750 (2024) extended Medicaid reimbursement to doulas working alongside midwives.",
+      credentialTypes: " and CPMs",
+      credentialDetail: "In Texas, Certified Nurse-Midwives (CNMs) are licensed by the Texas Board of Nursing and practice in hospital and birth center settings. Certified Professional Midwives (CPMs) are licensed by the Texas Department of Licensing and Regulation to attend out-of-hospital births, giving Lubbock families regulated midwife options for home birth alongside hospital-based CNM care at Covenant and UMC."
     },
     medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Lubbock County STAR managed care plans. UMC's Family Birth Center also offers an in-house doula program for Medicaid families. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring.",
     insuranceNote: "Whether doula services are partially covered varies by plan in the Lubbock area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
