@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "last_updated": "2026-08-08T12:56:37.975932+00:00",
+  "last_updated": "2026-08-11T13:52:00-06:00",
   "total_cities_in_codebase": 187,
   "future_cities_planned": 1000,
   "cities": {
@@ -1951,6 +1951,19 @@
       "blocked_reason": null,
       "completed_at": "2026-08-07T16:11:11Z",
       "outreach_sent_at": "2026-08-06T00:00:00Z"
+    },
+    "san-antonio-tx": {
+      "has_video": true,
+      "has_outreach": false,
+      "videoId": "gxNz7I7yZLw",
+      "video_id": "gxNz7I7yZLw",
+      "video_url": "https://youtu.be/gxNz7I7yZLw",
+      "video_uploaded_at": "2026-08-11T18:43:48Z",
+      "video_status": "live",
+      "page_deployed": true,
+      "preflight_passed": true,
+      "stage": "complete",
+      "blocked_reason": null
     }
   },
   "providence-ri": {
