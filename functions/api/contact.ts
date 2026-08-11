@@ -84,7 +84,8 @@ export const onRequestPost = async (context) => {
     const firstName = name ? name.split(' ')[0] : '';
 
     // ── Primary: MailerCloud contact upsert (list IDs from migration) ──
-    // List 2 = general, List 5 = Free Birth Plan
+    // Mailercloud uses alphanumeric string list IDs (NOT Brevo numeric IDs).
+    // uaEauf = True Joy Birthing Subscribers (general), wHHZHy = Free Birth Plan
     if (env.MC_API_KEY) {
       try {
         await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
@@ -97,10 +98,10 @@ export const onRequestPost = async (context) => {
             email,
             first_name: firstName,
             last_name: name && name.split(' ').slice(1).join(' ') || '',
-            list_id: 2,
+            list_id: 'uaEauf',
           }),
         });
-        // Also add to Free Birth Plan list (list 5) if not already there
+        // Also add to Free Birth Plan list (wHHZHy) if not already there
         await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
           method: 'POST',
           headers: {
@@ -111,7 +112,7 @@ export const onRequestPost = async (context) => {
             email,
             first_name: firstName,
             last_name: name && name.split(' ').slice(1).join(' ') || '',
-            list_id: 5,
+            list_id: 'wHHZHy',
           }),
         });
       } catch (mcErr) {
