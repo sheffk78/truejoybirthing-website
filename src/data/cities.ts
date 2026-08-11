@@ -265,7 +265,7 @@ export const cities: Record<string, CityData> = {
     shelbiServesHere: false,
     heroImage: "/images/corpus-christi-tx-birth-doula-skyline-v2.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-corpus-christi-tx-v2.webp",
-    supportSceneImage: "/images/corpus-christi-tx-birth-doula-support.webp",
+    supportSceneImage: "/images/corpus-christi-tx-birth-doula-support-v2.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Corpus Christi: Texas coastal bend birth support and doula care",
     culture: "Corpus Christi is a coastal city with a growing birth community. Families deliver at the major hospital systems, and the area\u2019s diversity means a wide range of birth traditions and preferences." ,
     heroLocalDetail: "Corpus Christi families deliver at the city\u2019s major hospital systems along the Coastal Bend. The medical district sits centrally near the bay, and the flat, walkable coastline offers easy third-trimester strolls. Give yourself extra time on game or beach-event weekends when traffic along SPID and the bayfront backs up." ,
