@@ -11,7 +11,7 @@ layout: "../../layouts/PostLayout.astro"
 
 If you've found yourself suddenly desperate for pickles dipped in peanut butter at midnight, or if you woke up wanting to chew through a bag of ice, you might be wondering what's happening inside your head. You are not losing it. Weird pregnancy cravings are one of the most universal experiences of expecting parents, and they are almost always harmless.
 
-As a certified doula and a mother of seven, I've heard about every craving combination you can imagine. I've also done the research and talked to providers about what these cravings actually mean. Let me walk you through the whole picture, including what to watch for and when it's time to call your care team. And if you haven't started your birth plan yet, this is a great time to check out our [birth plan template](/birth-plan-template/) so you can jot down these questions for your next prenatal visit.
+As a certified doula and a mother of seven, I've heard about every craving combination you can imagine. I've also done the research and talked to providers about what these cravings actually mean. Let me walk you through the whole picture, including what to watch for and when it's time to call your care team. And if you haven't started your birth plan yet, this is a great time to check out our <a href="/birth-plan-template/">birth plan template</a> so you can jot down these questions for your next prenatal visit.
 
 ## What Causes Weird Pregnancy Cravings?
 
@@ -65,9 +65,9 @@ I coach the families I support through this exact question, and my approach is s
 
 **Stay hydrated.** Dehydration can intensify cravings because your body sometimes misinterprets thirst as hunger. Drinking water consistently throughout the day can reduce the frequency and intensity of some cravings, especially the ones that seem to come out of nowhere.
 
-**Bring it up with your doula.** This is one of the most common things I discuss during prenatal visits. If you are working with a doula, we can review your diet together, check whether your cravings might point to a nutritional gap, and build a simple plan. If you do not have a doula yet, it is worth learning about the [benefits of a doula](/benefits-of-a-doula/) and how that support extends well beyond labor and delivery. You might also want to understand [how a doula compares to a midwife](/doula-vs-midwife/) since those roles overlap in some ways but are very different in others.
+**Bring it up with your doula.** This is one of the most common things I discuss during prenatal visits. If you are working with a doula, we can review your diet together, check whether your cravings might point to a nutritional gap, and build a simple plan. If you do not have a doula yet, it is worth learning about the <a href="/benefits-of-a-doula/">benefits of a doula</a> and how that support extends well beyond labor and delivery. You might also want to understand <a href="/doula-vs-midwife/">how a doula compares to a midwife</a> since those roles overlap in some ways but are very different in others.
 
-If you are an active person, you might also want to read about [labor pain management options](/labor-pain-management-options/) so you can start building a full picture of your preferences before the big day.
+If you are an active person, you might also want to read about <a href="/labor-pain-management-options/">labor pain management options</a> so you can start building a full picture of your preferences before the big day.
 
 ## Do Pregnancy Cravings Predict What Your Baby Will Like?
 
@@ -77,7 +77,7 @@ Some research suggests that flavors from your diet pass through the amniotic flu
 
 But this does not mean your weird pregnancy cravings are a window into your child's future personality or lifelong diet. The research is interesting, but it is not prescriptive. What matters far more is the overall quality of your nutrition right now, not whether your ice cream habit means your baby will love mint chocolate chip forever.
 
-If you have questions about building a nutrition plan that accounts for your cravings and your baby's needs, be sure to download our [birth plan template](/birth-plan-template/) and bring it to your next appointment. And if you are in the Austin, Texas area, I would love to support you in person. You can learn more about our [birth support services in Austin, TX](/birth-support/austin-tx/), or explore our statewide resources for [birth support in Texas](/birth-support/tx/). We also serve families in the Denver area through our [birth support in Denver, CO](/birth-support/denver-co/) and throughout [Colorado](/birth-support/co/).
+If you have questions about building a nutrition plan that accounts for your cravings and your baby's needs, be sure to download our <a href="/birth-plan-template/">birth plan template</a> and bring it to your next appointment. And if you are in the Austin, Texas area, I would love to support you in person. You can learn more about our <a href="/birth-support/austin-tx/">birth support services in Austin, TX</a>, or explore our statewide resources for <a href="/birth-support/tx/">birth support in Texas</a>. We also serve families in the Denver area through our <a href="/birth-support/denver-co/">birth support in Denver, CO</a> and throughout <a href="/birth-support/co/">Colorado</a>.
 
 ## Frequently Asked Questions About Weird Pregnancy Cravings
 

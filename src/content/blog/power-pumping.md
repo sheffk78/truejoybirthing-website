@@ -11,7 +11,7 @@ layout: "../../layouts/PostLayout.astro"
 
 # Power Pumping: How to Boost Your Milk Supply
 
-If your milk supply feels lower than you want it to be, you're not alone. I've sat with dozens of new parents who stare at the pump and wonder why the bottles aren't filling the way they expected. The good news is that power pumping exists, and it works. I've seen it shift supply in real time for the families I support.
+If your milk supply feels lower than you want it to be, you're not alone. I've sat with dozens of new parents who stare at the pump and wonder why the bottles aren't filling up. The good news is that power pumping exists, and it works. I've seen it shift supply in real time for the families I support.
 
 Power pumping is not a quick fix, and it's not something you need to do forever. It's a short-term strategy that mimics cluster feeding, the way a newborn ramps up milk production during growth spurts. The idea is simple: you pump in a specific pattern that signals your body to make more milk. The execution is where people get tripped up, which is why I'm going to walk you through exactly how to power pump, what the schedule looks like, and what to expect along the way.
 
@@ -23,7 +23,7 @@ Before we get into the details, I want to mention that supply concerns are one o
 
 Power pumping is a breast pumping technique that uses repeated short pumping sessions with brief rest periods to stimulate milk production. It works by mimicking the way a baby cluster feeds, which sends a strong signal to your body that more milk is needed.
 
-Here's the biology in plain terms. Breast milk production operates on a supply-and-demand system. The more milk is removed from your breasts, the more your body produces. When a baby goes through a growth spurt and nurses constantly for a few days, your body interprets that as increased demand and ramps up production. Power pumping creates that same demand signal using a breast pump instead of a baby.
+Here's the biology in plain terms. Breast milk production operates on supply-and-demand. The more milk is removed, the more your body produces. When a baby cluster feeds during a growth spurt, your body interprets that as increased demand and ramps up production. Power pumping creates that same demand signal using a pump instead of a baby.
 
 According to the World Health Organization, breast milk supply is heavily influenced by frequency of milk removal, which is why strategies that increase pumping or nursing frequency tend to be effective for boosting supply. In my own practice, I've worked with parents who were only pumping two or three ounces per session and, after consistent power pumping for about a week, were producing closer to four or five ounces. Results vary, but the principle holds.
 
@@ -69,11 +69,9 @@ You don't need to start power pumping the day your baby is born. In fact, I'd ar
 
 The most common time to start power pumping is when you notice a dip in supply or when you need to build a stash for returning to work. If your baby is gaining weight well and you're producing enough, there's no reason to power pump. It's a tool for specific situations, not a default practice.
 
-Here are the scenarios where I recommend it:
+Here are the scenarios where I recommend it: you're exclusively pumping and output has dropped, you want to build a freezer stash, your baby started sleeping longer and your supply dropped in response, you're returning to work, or you're trying to relactate after a break in nursing.
 
-You're exclusively pumping and your output has plateaued or dropped. You're nursing but want to increase supply for a freezer stash. Your baby has started sleeping longer stretches and your supply has dropped in response. You're returning to work and need to maintain or increase production. You're trying to relactate after a break in nursing.
-
-In each case, the goal is the same: send a stronger demand signal to your body. Power pumping is one of the most efficient ways to do that without literally nursing around the clock.
+In each case, the goal is the same: send a stronger demand signal to your body. Power pumping is one of the most efficient ways to do that without nursing around the clock.
 
 If you're feeling unsure about whether power pumping is right for your situation, it can help to talk through your specific feeding plan with someone who knows your history. Many of the families I work with as a <a href="/benefits-of-a-doula/">birth and postpartum doula</a> find that having a practical feeding strategy written into their overall care plan reduces anxiety significantly.
 
