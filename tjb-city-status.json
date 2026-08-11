@@ -1401,11 +1401,14 @@
       "outreach_no_email_count": 1
     },
     "louisville-ky": {
-      "has_video": false,
-      "has_outreach": false,
+      "has_video": true,
+      "has_outreach": true,
       "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "stage": "complete",
+      "blocked_reason": null,
+      "outreach_provider_count": 3,
+      "outreach_no_email_count": 2,
+      "outreach_sent_at": "2026-08-11T00:29:19Z"
     },
     "milwaukee-wi": {
       "has_video": false,

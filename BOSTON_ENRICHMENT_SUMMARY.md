@@ -3,7 +3,7 @@
 **Date:** 2026-07-25
 **Status:** ✅ COMPLETE
 **Stage:** ENRICH
-**Files Modified:** ~/Projects/truejoybirthing-website/src/data/cities.ts
+**Files Modified:** ~/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/src/data/cities.ts
 
 ---
 
@@ -174,7 +174,7 @@ Due to missing `preflight-stage-gate.py` script, gates verified manually:
 
 **Gate 2 Validation:** Run `preflight-stage-gate.py --stage enrich --city boston-ma` when script available
 
-**Known Script:** `~/Projects/truejoybirthing-website/scripts/preflight.ts` (TypeScript)
+**Known Script:** `~/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/scripts/preflight.ts` (TypeScript)
 This needs to be compiled to `preflight-stage-gate.py` or executed directly
 
 ---
