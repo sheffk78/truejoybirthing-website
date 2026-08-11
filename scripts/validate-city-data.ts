@@ -12,6 +12,7 @@
 import { cities, type CityData } from '../src/data/cities';
 import fs from 'fs';
 import path from 'path';
+import sharp from 'sharp';
 
 interface ValidationResult {
   city: string;
@@ -46,7 +47,7 @@ const CHECK_IMAGE_FIELDS: { field: keyof CityData; pattern: (slug: string) => st
 
 const HEROES_DIR = 'public/images/heroes';
 
-function validate(): { results: ValidationResult[]; totalErrors: number } {
+async function validate(): Promise<{ results: ValidationResult[]; totalErrors: number }> {
   const results: ValidationResult[] = [];
   let totalErrors = 0;
 
@@ -108,6 +109,35 @@ function validate(): { results: ValidationResult[]; totalErrors: number } {
       result.warnings.push(`OG image missing: ${ogPath}`);
     }
 
+    // 🔴 HARD RULE GATE (R12/R41/M48): Support scene must be 4:3 — never distorted.
+    // LIMITATION (be honest): this gate catches images whose final dimensions are NOT
+    // true 4:3 (e.g. 1024x900). It CANNOT detect the "stretched TO 4:3" case — if a
+    // square source was resized non-uniformly to exactly 1024x768, the pixels ARE 4:3
+    // and this gate passes even though content is squashed. The primary defense for
+    // that case is the WORKFLOW (generate at target ratio, then CROP, never stretch)
+    // + vision_analyze for anatomical distortion. See M48.
+    if (data.supportSceneImage) {
+      const supPath = `public${data.supportSceneImage}`;
+      if (fs.existsSync(supPath)) {
+        try {
+          const meta = await sharp(supPath).metadata();
+          const w = meta.width ?? 0;
+          const h = meta.height ?? 0;
+          if (w > 0 && h > 0) {
+            const ratio = w / h;
+            const expected = 4 / 3; // 1.3333...
+            if (Math.abs(ratio - expected) > 0.01) {
+              result.errors.push(`🔴 DISTORTION: support scene ${data.supportSceneImage} is ${w}x${h} (ratio ${ratio.toFixed(3)}), not 4:3 (1.333). This image was resized with independent width/height and is distorted. Re-generate or CROP to 4:3 — never stretch. (R12/R41/M48)`);
+            }
+          }
+        } catch (e) {
+          result.warnings.push(`Could not read support scene ${data.supportSceneImage}: ${e}`);
+        }
+      } else {
+        result.warnings.push(`Support scene image not found: ${data.supportSceneImage}`);
+      }
+    }
+
     totalErrors += result.errors.length;
     results.push(result);
   }
@@ -141,14 +171,17 @@ function printResults(results: ValidationResult[]) {
 }
 
 // Run
-const { results, totalErrors } = validate();
-printResults(results);
+async function main() {
+  const { results, totalErrors } = await validate();
+  printResults(results);
 
-const totalWarnings = results.reduce((s, r) => s + r.warnings.length, 0);
-const totalImageErrors = results.reduce((s, r) => s + r.imageErrors.length, 0);
+  const totalWarnings = results.reduce((s, r) => s + r.warnings.length, 0);
+  const totalImageErrors = results.reduce((s, r) => s + r.imageErrors.length, 0);
 
-console.log(`\n---\nSummary: ${totalErrors} errors, ${totalImageErrors} image issues, ${totalWarnings} warnings across ${results.length} cities`);
+  console.log(`\n---\nSummary: ${totalErrors} errors, ${totalImageErrors} image issues, ${totalWarnings} warnings across ${results.length} cities`);
 
-if (totalErrors > 0) {
-  process.exit(1);
+  if (totalErrors > 0) {
+    process.exit(1);
+  }
 }
+main();
