@@ -294,6 +294,91 @@ try {
   }
 }
 
+// ── G8: Hero must be a real photograph, not a gradient graphic ──
+// HARDENED (Aug 11, 2026 — san-antonio-tx). Jeff: "No illustrations for
+// either of these. Stick with what we've done in the past and harden that
+// rule." The gradient-detection helper existed but was never wired into
+// preflight, so gradient heroes (like san-antonio-tx skyline-v4, 220 colors)
+// shipped silently. This gate FAILS the build if the hero is a gradient.
+// Rule R10: hero must be a photographic silhouette, never a gradient graphic.
+console.log(`\n── G8: Hero Is a Real Photograph (no gradient/illustration) ──`);
+const checkHeroIsPhoto = (slug: string): boolean => {
+  let heroFile: string | null = null;
+  const data = (cities as Record<string, any>)[slug];
+  if (data && data.heroImage) {
+    const ref = data.heroImage.startsWith("http")
+      ? "/images/" + String(data.heroImage).split("/").pop()
+      : data.heroImage;
+    const cand = path.join(PROJECT_DIR, "public", (ref as string).replace(/^\//, ""));
+    if (fs.existsSync(cand)) heroFile = cand;
+  }
+  if (!heroFile) {
+    // Fallback: highest -vN {slug}-birth-doula-*.webp that isn't a variant
+    const re = new RegExp(`^${slug}-birth-doula(?:-[a-z]+)?(-v\\d+)?\\.webp$`);
+    const files = fs
+      .readdirSync(path.join(PROJECT_DIR, "public", "images"))
+      .filter((f) => re.test(f) && !f.includes("-600") && !f.includes("support"));
+    if (files.length === 0) {
+      fail(`G8: No hero image found for ${slug}`);
+      return false;
+    }
+    const vKey = (n: string) => parseInt(n.match(/-v(\d+)/)?.[1] || "0", 10);
+    files.sort((a, b) => vKey(b) - vKey(a));
+    heroFile = path.join(PROJECT_DIR, "public", "images", files[0]);
+  }
+  try {
+    // Need Pillow (python3) — write a temp script and run it (avoids shell
+    // mangling of embedded newlines via -c, which caused false low-detail
+    // warnings). Counts unique colors with the R10 dual threshold.
+    const py = `
+import sys
+from PIL import Image
+img = Image.open(r"${heroFile}").convert("RGB")
+w, h = img.size
+top = img.crop((0, 0, w, h // 4))
+top_unique = len(set(top.getdata()))
+full_unique = len(set(img.getdata()))
+# R10 hard rule: gradient graphics have low colors in BOTH regions.
+# Real photos with smooth skies may have low top but high full (25K+).
+# A gradient = top < 2000 AND full < 20000.
+if top_unique < 2000 and full_unique < 20000:
+    sys.exit(2)  # gradient
+elif full_unique < 12000:
+    sys.exit(1)  # borderline / low-detail illustration
+sys.exit(0)      # real photo
+`;
+    const tmpPy = path.join(PROJECT_DIR, ".tmp-hero-check.py");
+    fs.writeFileSync(tmpPy, py);
+    execSync(`python3 ${tmpPy}`, { cwd: PROJECT_DIR, stdio: "pipe", timeout: 30000 });
+    fs.unlinkSync(tmpPy);
+    pass(`G8: ${path.basename(heroFile)} is a real photograph (high color count)`);
+    return true;
+  } catch (e: any) {
+    if (e.status === 2) {
+      fail(
+        `G8: Hero ${path.basename(heroFile)} is a GRADIENT GRAPHIC, not a photo (top < 2000 AND full < 20000 colors). R10 violation — Jeff rejects illustrations. Regenerate with image_generate silhouette prompt (tjb-ai-photo-generation skill) and re-deploy.`
+      );
+      return false;
+    }
+    if (e.status === 1) {
+      warn(
+        `G8: Hero ${path.basename(heroFile)} is low-detail (possible illustration). Inspect visually before deploy.`
+      );
+      return true;
+    }
+    warn(`G8: Could not analyze hero for ${slug}: ${e.message?.slice(0, 100)}`);
+    return true;
+  }
+};
+
+if (targetSlug) {
+  checkHeroIsPhoto(targetSlug);
+} else {
+  for (const slug of slugs) {
+    checkHeroIsPhoto(slug);
+  }
+}
+
 // ── Summary ──────────────────────────────────────────────────
 console.log(`\n═══════════════════════════════════════════`);
 if (failures > 0) {
