@@ -263,6 +263,8 @@ export const cities: Record<string, CityData> = {
     costLow: 750,
     costHigh: 1800,
     shelbiServesHere: false,
+    lat: 27.8006,
+    lng: -97.3964,
     heroImage: "/images/corpus-christi-tx-birth-doula-skyline-v2.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-corpus-christi-tx-v2.webp",
     supportSceneImage: "/images/corpus-christi-tx-birth-doula-support-v2.webp",
