@@ -31,6 +31,8 @@ Providers measure fetal descent using something called "stations." It is a scale
 
 The station of baby tells us which cardinal movements have already happened and which are still ahead. A baby at negative two has likely engaged but has not fully descended. A baby at plus two has probably completed internal rotation and is getting ready for extension. When your provider calls out a station during a cervical check, you will know exactly where your baby is in the sequence.
 
+![Baby in the pelvis at full term, head-down and engaged, ready to descend through the birth canal](/images/pregnancy-series/pregnancy-week-40-approved.webp)
+
 ## How Does Fetal Rotation Help the Baby Fit?
 
 Fetal rotation is the turning your baby does as they navigate the pelvis. Most babies start labor in a position called occiput posterior (facing your belly) or occiput transverse (facing sideways). To fit through the pelvic outlet, the baby usually needs to rotate to occiput anterior (facing your spine). That rotation is internal rotation, and it is one of the most important of the 7 cardinal movements.

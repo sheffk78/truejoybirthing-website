@@ -1,5 +1,5 @@
 ---
-title: "Weird Pregnancy Cravings: What They Mean and When to Worry"
+title: "Weird Pregnancy Cravings: What They Mean"
 date: "2026-08-11"
 slug: "weird-pregnancy-cravings"
 author: "Shelbi Kohler"
@@ -20,6 +20,8 @@ Nobody has a single definitive answer, but the leading theories involve hormones
 During pregnancy, your estrogen and progesterone levels surge dramatically. Those hormones directly affect your sense of smell and taste, which is why a food you loved last week might suddenly make you gag, and something you never cared about now feels like the only thing that will save you. Some researchers believe that weird pregnancy cravings are your body's way of flagging a specific nutrient gap. Low iron might drive a craving for red meat. Low sodium might have you reaching for pickles or olives. The evidence is not airtight on every specific pairing, but the overall pattern is well-documented enough to take seriously.
 
 Research published in *Frontiers in Psychology* estimates that between 50 and 90 percent of pregnant women in the United States experience specific food cravings at some point during pregnancy. A separate study indexed by PMC found that 75.4 percent of women reported experiencing food cravings during their pregnancies. So if you are having them, you are far from alone.
+
+![Your baby at 12 weeks is about the size of a lime, and your cravings may be your body's way of flagging what it needs](/images/pregnancy-series/pregnancy-week-12-approved.webp)
 
 ## What Are the Most Common Weirdest Pregnancy Cravings?
 
