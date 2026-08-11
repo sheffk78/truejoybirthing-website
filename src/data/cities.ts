@@ -8869,7 +8869,7 @@ hospitalDetails: [
     ogImage: "https://truejoybirthing.com/images/og-city-washington-dc.webp",
     enableBlogResources: true,
     supportSceneAlt: "A doula providing support to an expectant mother in a warm home setting in Washington, DC, with the Capitol dome visible through the window" ,
-    supportSceneImage: "/images/washington-dc-support-scene-v2.webp" ,
+    supportSceneImage: "/images/washington-dc-support-scene-v3.webp" ,
     midwifeInfo: {
       paragraph: "Washington, D.C. licenses Certified Nurse-Midwives (CNMs) through the DC Board of Nursing. The District’s freestanding birth centers, including Community of Hope Family Health and Birth Center in Northeast DC and BirthCare & Women’s Health in nearby Alexandria, VA, feature teams of CNMs practicing full-scope midwifery. MedStar Washington Hospital Center employs fourteen certified nurse midwives who support natural and low-intervention births within the hospital setting, offering nitrous oxide and hydrotherapy for pain management. D.C. also has a robust community of Certified Professional Midwives (CPMs) who attend home births throughout the District and surrounding Maryland and Virginia areas. DC Medicaid covers doula services and home birth with a licensed provider." ,
       credentialTypes: " (CNMs, CPMs)" ,
