@@ -1973,7 +1973,7 @@ export const cities: Record<string, CityData> = {
     lat: 29.4241,
     lng: -98.4936,
     shelbiServesHere: false,
-    heroImage: "/images/san-antonio-tx-birth-doula-skyline-v4.webp",
+    heroImage: "/images/san-antonio-tx-birth-doula-skyline-v5.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-san-antonio-tx.webp",
     supportSceneImage: "/images/san-antonio-tx-birth-doula-support.webp",
     supportSceneAlt: "A doula supporting an expectant mom in San Antonio: Texas birth support and doula care",
