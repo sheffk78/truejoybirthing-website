@@ -51,7 +51,7 @@ GATE_SUBSETS = {
     "build": ["G3", "G5", "G13", "G4", "G37", "visual_hero_og"],
     "enrich": ["G14", "G15", "G15b", "G35", "S8", "G9", "G57", "hospital_desc_length", "cost_format", "G60"],
     "verify_deploy": ["full_preflight"],
-    "video_outreach": ["pre_render_gate", "video_file_exists", "youtube_upload", "youtube_thumbnail", "video_embedded", "videoobject_schema", "outreach_sent_or_blocked"],
+    "video_outreach": ["pre_render_gate", "video_file_exists", "youtube_upload", "youtube_thumbnail", "video_embedded", "videoobject_schema", "live_page_verified", "outreach_sent_or_blocked"],
 }
 
 # Population-tier provider/hospital minimums (R19 / G37)
@@ -359,8 +359,23 @@ def run_gate(name: str, slug: str, block: str | None) -> tuple[bool, str]:
         if not dist.exists():
             return False, f"video_embedded: dist/{slug}/index.html not found"
         html = dist.read_text(errors="ignore")
-        has = bool(re.search(r'youtube\.com/embed/', html))
-        return has, f"video_embedded: {'embed found' if has else 'NO youtube embed in dist'}"
+        # The city page uses a lazy-load facade that assembles the embed src
+        # client-side from a data-video-id attribute. Detect the facade marker
+        # and that the city's videoId is present in the HTML.
+        has_facade = "data-video-id=" in html or "city-video-facade" in html
+        # Cross-check against video-embeds.ts so a stale/missing embed is caught.
+        ve = PROJECT_DIR / "src" / "data" / "video-embeds.ts"
+        vid = None
+        if ve.exists():
+            vtext = ve.read_text(errors="ignore")
+            vm = re.search(r'"' + re.escape(slug) + r'"\s*:\s*\{[^}]*?videoId\s*:\s*"([A-Za-z0-9_-]+)"', vtext, re.S)
+            if vm:
+                vid = vm.group(1)
+        has = has_facade and bool(vid)
+        if has and vid:
+            # videoId must appear in the rendered dist HTML (the facade data attr)
+            has = bool(re.search(re.escape(vid), html))
+        return has, f"video_embedded: {'embed found (facade, vid ' + str(vid) + ')' if has else 'NO youtube embed in dist (facade=' + str(has_facade) + ', vid=' + str(vid) + ')'}"
 
     if name == "videoobject_schema":
         dist = PROJECT_DIR / "dist" / "birth-support" / slug / "index.html"
@@ -369,6 +384,28 @@ def run_gate(name: str, slug: str, block: str | None) -> tuple[bool, str]:
         html = dist.read_text(errors="ignore")
         has = "VideoObject" in html and "duration" in html
         return has, f"videoobject_schema: {'VideoObject+duration present' if has else 'MISSING VideoObject schema'}"
+
+    if name == "live_page_verified":
+        # P0-2: verify the LIVE page (not local dist) is reachable, serves 200,
+        # and contains the video facade + VideoObject schema. Prevents outreach
+        # pointing at a broken or stale deployment. If the site is unreachable
+        # (network), that is an INFRA issue → exit 2 via 'INFRA' in the message.
+        import urllib.request
+        url = f"https://truejoybirthing.com/birth-support/{slug}/"
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "tjb-gate/1.0"})
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                body = resp.read(200000).decode("utf-8", "ignore")
+            status = getattr(resp, "status", 200)
+        except Exception as e:
+            return False, f"live_page_verified: INFRA unreachable {url}: {e}"
+        if status != 200:
+            return False, f"live_page_verified: HTTP {status} for {url}"
+        has_facade = ("data-video-id=" in body) or ("city-video-facade" in body)
+        has_schema = "VideoObject" in body and "duration" in body
+        if not (has_facade and has_schema):
+            return False, f"live_page_verified: live page missing video (facade={has_facade}, schema={has_schema}) for {url}"
+        return True, f"live_page_verified: HTTP 200 + video facade + VideoObject schema at {url}"
 
     if name == "outreach_sent_or_blocked":
         # Check tjb-city-status.json for outreach or blocked reason

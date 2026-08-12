@@ -22,6 +22,7 @@ Usage:
 State file: ~/.hermes/skills/productivity/tjb-city-orchestrator/states/{slug}.json
 """
 
+import hashlib
 import json
 import os
 import re
@@ -157,9 +158,42 @@ def validate_slug(slug: str) -> bool:
 
 def load_state(slug: str) -> dict:
     state_file = STATES_DIR / f"{slug}.json"
-    if state_file.exists():
+    if not state_file.exists():
+        return {}
+    # P0-4: verify the SHA-256 sidecar before trusting the state file. A
+    # tampered/corrupted state (e.g. a subagent editing it directly, or a
+    # partial write) is rejected — the caller must re-init rather than trust it.
+    sig_file = STATES_DIR / f"{slug}.json.sha256"
+    if sig_file.exists():
+        try:
+            expected = sig_file.read_text().strip()
+            actual = hashlib.sha256(state_file.read_bytes()).hexdigest()
+            if expected != actual:
+                print(json.dumps({
+                    "action": "state_signature_mismatch",
+                    "slug": slug,
+                    "error": f"State file checksum mismatch — refusing to load. Re-init or restore {slug}.json.",
+                }, indent=2))
+                return {}
+        except Exception:
+            pass  # fall through to load if signature read fails; keep behavior resilient
+    try:
         return json.loads(state_file.read_text())
-    return {}
+    except Exception:
+        return {}
+
+
+def _write_state_signature(slug: str) -> None:
+    """Write the SHA-256 sidecar for a freshly saved state file."""
+    state_file = STATES_DIR / f"{slug}.json"
+    sig_file = STATES_DIR / f"{slug}.json.sha256"
+    try:
+        digest = hashlib.sha256(state_file.read_bytes()).hexdigest()
+        tmp = STATES_DIR / f"{slug}.json.sha256.tmp"
+        tmp.write_text(digest)
+        os.replace(str(tmp), str(sig_file))
+    except Exception:
+        pass
 
 
 def save_state(slug: str, state: dict):
@@ -168,6 +202,7 @@ def save_state(slug: str, state: dict):
     tmp_file = STATES_DIR / f"{slug}.json.tmp"
     tmp_file.write_text(json.dumps(state, indent=2))
     os.replace(str(tmp_file), str(state_file))
+    _write_state_signature(slug)
     # Keep the visual dashboard automatic. Any state transition exports the
     # consolidated city ledger to public/city-audit.json; failures are silent
     # here so pipeline commands remain usable if the dashboard export breaks.
@@ -401,24 +436,29 @@ STAGE GATES (must pass before advancing):
     print(json.dumps(output, indent=2))
 
 
-def cmd_done(slug: str, stage: str):
+def cmd_done(slug: str, stage: str, gate_checked: bool = False):
     """Mark a stage as complete and advance FORWARD to next stage.
-    
+
     No re-probing. Next stage is always STAGE_ORDER[current_index + 1].
+
+    Security hardening (P0-1): this command CANNOT be used to bypass the stage
+    gate. Unless called internally by cmd_advance (which already ran the gate),
+    cmd_done runs the gate itself before advancing. A direct `done` invocation
+    with a failing gate is rejected with exit 1.
     """
     state = load_state(slug)
     if not state:
         print(json.dumps({"error": f"No state file for {slug}. Run init first."}))
         return
-    
+
     # Map old stage name to new if needed
     actual_stage = stage
     if stage not in STAGE_ORDER:
         actual_stage = OLD_TO_NEW_STAGE.get(stage, stage)
-    
+
     current_idx = get_stage_index(state.get("current_stage", "build"))
     actual_idx = get_stage_index(actual_stage)
-    
+
     # Guard: reject unknown/unmappable stages to prevent backward bounce
     if actual_idx < 0:
         print(json.dumps({
@@ -427,7 +467,7 @@ def cmd_done(slug: str, stage: str):
             "error": f"Unknown stage '{stage}'. Valid stages: {STAGE_ORDER[:-1]} or old names: {list(OLD_TO_NEW_STAGE.keys())}"
         }, indent=2))
         return
-    
+
     # Guard: the completed stage should match the current stage
     if actual_idx != current_idx:
         print(json.dumps({
@@ -436,13 +476,29 @@ def cmd_done(slug: str, stage: str):
             "error": f"Stage '{actual_stage}' (idx {actual_idx}) does not match current stage '{state.get('current_stage')}' (idx {current_idx}). Use 'done' only for the current stage."
         }, indent=2))
         return
-    
+
+    # P0-1 hardening: unless the caller already ran the gate (cmd_advance path),
+    # run the per-stage gate NOW. A direct `done` cannot bypass verification.
+    if not gate_checked:
+        gate_result = run_stage_gate(slug, actual_stage)
+        gate_exit = gate_result[0] if isinstance(gate_result, tuple) else gate_result
+        if gate_exit != 0:
+            print(json.dumps({
+                "action": "gate_rejected",
+                "slug": slug,
+                "stage": actual_stage,
+                "gate_exit": gate_exit,
+                "error": "cmd_done rejected: stage gate did not pass. Use 'advance' and fix the gate failure before advancing."
+            }, indent=2))
+            sys.exit(gate_exit if gate_exit in (1, 2, 3) else 1)
+            return
+
     # Record completion
     completed = state.get("stages_completed", [])
     if actual_stage not in completed:
         completed.append(actual_stage)
     state["stages_completed"] = completed
-    
+
     # Record history
     history = state.get("history", [])
     history.append({
@@ -452,26 +508,26 @@ def cmd_done(slug: str, stage: str):
         "gate_results": state.get("gate_results", {}).get(actual_stage, {}),
     })
     state["history"] = history
-    
+
     # Forward-only advancement: next = index + 1
     next_idx = actual_idx + 1
     if next_idx >= len(STAGE_ORDER):
         next_stage = "complete"
     else:
         next_stage = STAGE_ORDER[next_idx]
-    
+
     state["current_stage"] = next_stage
     state["stage_index"] = next_idx
     state["max_stage_reached"] = max(state.get("max_stage_reached", 0), next_idx)
     state["updated_at"] = int(time.time())
     state["blocked"] = False
     state["blocked_reason"] = None
-    
+
     # Reset attempt counter for the new stage
     stage_attempts = state.get("stage_attempts", {})
     stage_attempts[next_stage] = 0
     state["stage_attempts"] = stage_attempts
-    
+
     save_state(slug, state)
     print(json.dumps({
         "action": "done",
@@ -621,14 +677,11 @@ def cmd_gates(slug: str, stage: str, gate_results_json: str):
     }, indent=2))
 
 
-def cmd_advance(slug: str, stage: str):
-    """Run the per-stage gate before advancing. Only calls cmd_done if gate exits 0.
+def run_stage_gate(slug: str, stage: str):
+    """Run the per-stage gate and return (exit_code, stdout, stderr).
 
-    Exit codes (per process-framework gate contract):
-        0 = pass → call cmd_done, advance to next stage
-        1 = RETRYABLE_SUBAGENT → output status for cron to re-spawn subagent
-        2 = RETRYABLE_INFRA → output status for cron to wait + retry
-        3 = FATAL → call cmd_fail with blocked_reason, block pipeline
+    exit_code 0 on pass, else 1/2/3 per the gate contract. Never raises for
+    gate failures (only for genuine unexpected errors, which map to 3).
     """
     gate_script = (
         "/Users/socializerender/Projects/truejoybirthing-website/"
@@ -642,102 +695,110 @@ def cmd_advance(slug: str, stage: str):
             capture_output=True, text=True, timeout=180,
             cwd="/Users/socializerender/Projects/truejoybirthing-website",
         )
-        exit_code = result.returncode
-        gate_output = result.stdout.strip()
-        gate_stderr = result.stderr.strip()
-
-        if exit_code == 0:
-            # Gate passed — advance
-            print(json.dumps({
-                "action": "gate_pass",
-                "slug": slug,
-                "stage": stage,
-                "gate_exit": 0,
-                "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
-                "message": f"Stage gate for {stage} passed. Advancing.",
-            }, indent=2))
-            cmd_done(slug, stage)
-
-        elif exit_code == 1:
-            # RETRYABLE_SUBAGENT — subagent should be re-spawned
-            print(json.dumps({
-                "action": "gate_retryable_subagent",
-                "slug": slug,
-                "stage": stage,
-                "gate_exit": 1,
-                "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
-                "message": (
-                    f"Stage gate for {stage} FAILED (retryable). "
-                    "Re-spawn the step subagent to fix structural issues."
-                ),
-            }, indent=2))
-            sys.exit(1)
-
-        elif exit_code == 2:
-            # RETRYABLE_INFRA — wait and retry, don't re-spawn
-            print(json.dumps({
-                "action": "gate_retryable_infra",
-                "slug": slug,
-                "stage": stage,
-                "gate_exit": 2,
-                "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
-                "message": (
-                    f"Stage gate for {stage} FAILED (infra issue). "
-                    "Wait and retry the gate; do NOT re-spawn the subagent."
-                ),
-            }, indent=2))
-            sys.exit(2)
-
-        elif exit_code == 3:
-            # FATAL — block and escalate
-            reason = f"GATE_FATAL (stage={stage}): {gate_output[:300]}"
-            print(json.dumps({
-                "action": "gate_fatal",
-                "slug": slug,
-                "stage": stage,
-                "gate_exit": 3,
-                "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
-                "message": f"Stage gate for {stage} FATAL. Blocking pipeline.",
-            }, indent=2))
-            cmd_fail(slug, stage, reason)
-
-        else:
-            # Unknown exit code — treat as failure
-            reason = (
-                f"GATE_UNKNOWN_EXIT (stage={stage}, exit={exit_code}): "
-                f"{gate_stderr[:200] or gate_output[:200]}"
-            )
-            print(json.dumps({
-                "action": "gate_unknown_exit",
-                "slug": slug,
-                "stage": stage,
-                "gate_exit": exit_code,
-                "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
-                "message": (
-                    f"Stage gate for {stage} exited with unexpected code {exit_code}. "
-                    "Failing the stage."
-                ),
-            }, indent=2))
-            cmd_fail(slug, stage, reason)
-
+        return result.returncode, result.stdout.strip(), result.stderr.strip()
     except subprocess.TimeoutExpired:
-        reason = f"GATE_TIMEOUT (stage={stage}): gate script timed out after 180s"
+        # Timeout is fatal-block: gate can never pass for oversized cities.
         print(json.dumps({
             "action": "gate_timeout",
             "slug": slug,
             "stage": stage,
             "error": "timeout",
-            "message": reason,
+            "message": f"GATE_TIMEOUT (stage={stage}): gate script timed out after 180s",
         }, indent=2))
-        cmd_fail(slug, stage, reason)
+        return 3, "", "timeout"
     except Exception as e:
-        reason = f"GATE_SCRIPT_ERROR (stage={stage}): {e}"
         print(json.dumps({
             "action": "gate_error",
             "slug": slug,
             "stage": stage,
             "error": str(e),
-            "message": reason,
+            "message": f"GATE_SCRIPT_ERROR (stage={stage}): {e}",
+        }, indent=2))
+        return 3, "", str(e)
+
+
+def cmd_advance(slug: str, stage: str):
+    """Run the per-stage gate before advancing. Only calls cmd_done if gate exits 0.
+
+    Exit codes (per process-framework gate contract):
+        0 = pass → call cmd_done, advance to next stage
+        1 = RETRYABLE_SUBAGENT → output status for cron to re-spawn subagent
+        2 = RETRYABLE_INFRA → output status for cron to wait + retry
+        3 = FATAL → call cmd_fail with blocked_reason, block pipeline
+    """
+    exit_code, gate_output, gate_stderr = run_stage_gate(slug, stage)
+
+    if exit_code == 0:
+        # Gate passed — advance (gate_checked=True: cmd_done must NOT re-run the gate)
+        print(json.dumps({
+            "action": "gate_pass",
+            "slug": slug,
+            "stage": stage,
+            "gate_exit": 0,
+            "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
+            "message": f"Stage gate for {stage} passed. Advancing.",
+        }, indent=2))
+        cmd_done(slug, stage, gate_checked=True)
+
+    elif exit_code == 1:
+        # RETRYABLE_SUBAGENT — subagent should be re-spawned
+        print(json.dumps({
+            "action": "gate_retryable_subagent",
+            "slug": slug,
+            "stage": stage,
+            "gate_exit": 1,
+            "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
+            "message": (
+                f"Stage gate for {stage} FAILED (retryable). "
+                "Re-spawn the step subagent to fix structural issues."
+            ),
+        }, indent=2))
+        sys.exit(1)
+
+    elif exit_code == 2:
+        # RETRYABLE_INFRA — wait and retry, don't re-spawn
+        print(json.dumps({
+            "action": "gate_retryable_infra",
+            "slug": slug,
+            "stage": stage,
+            "gate_exit": 2,
+            "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
+            "message": (
+                f"Stage gate for {stage} FAILED (infra issue). "
+                "Wait and retry the gate; do NOT re-spawn the subagent."
+            ),
+        }, indent=2))
+        sys.exit(2)
+
+    elif exit_code == 3:
+        # FATAL — block and escalate
+        reason = f"GATE_FATAL (stage={stage}): {gate_output[:300]}"
+        print(json.dumps({
+            "action": "gate_fatal",
+            "slug": slug,
+            "stage": stage,
+            "gate_exit": 3,
+            "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
+            "message": f"Stage gate for {stage} FATAL. Blocking pipeline.",
+        }, indent=2))
+        cmd_fail(slug, stage, reason)
+
+    else:
+        # Unknown exit code — treat as failure
+        reason = (
+            f"GATE_UNKNOWN_EXIT (stage={stage}, exit={exit_code}): "
+            f"{gate_stderr[:200] or gate_output[:200]}"
+        )
+        print(json.dumps({
+            "action": "gate_unknown_exit",
+            "slug": slug,
+            "stage": stage,
+            "gate_exit": exit_code,
+            "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
+            "message": (
+                f"Stage gate for {stage} exited with unexpected code {exit_code}. "
+                "Failing the stage."
+            ),
         }, indent=2))
         cmd_fail(slug, stage, reason)
 
