@@ -1560,7 +1560,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-08-11T00:00:00-05:00",
   },
   "corpus-christi-tx": {
-    videoId: "P9sh9n-F9wI",
+    videoId: "pw9RBX_60b8",
     title: "Corpus Christi Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full Corpus Christi birth guide — doulas, midwives, hospitals, birth centers, costs, and Texas Medicaid coverage, all in about 5 minutes.",
     duration: "PT5M26S",
