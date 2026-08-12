@@ -1,6 +1,7 @@
 ---
 // Base layout — True Joy Birthing feminine lavender + dusty rose design
 import '../styles/global.css';
+import AppDownloadTracker from '../components/AppDownloadTracker.astro';
 import { ClientRouter } from 'astro:transitions';
 
 interface Props {
@@ -272,6 +273,7 @@ const finalTitle = pageTitle.length > 70 ? pageTitle.replace(" | True Joy Birthi
         gtag('config', 'G-2RVZVN0F9T');
       });
     </script>
+    <AppDownloadTracker />
     <!-- Reddit Pixel — deferred to after onload for LCP -->
     <script>
       window.addEventListener('load', function() {

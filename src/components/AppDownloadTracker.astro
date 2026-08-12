@@ -1,0 +1,67 @@
+---
+// AppDownloadTracker.astro — GA4 app-download click tracking (delegation pattern)
+// Fires 'app_download_click' on every click of an App Store link.
+// Covers ALL pages that use this component (via Layout + PostLayout).
+// No per-link tagging needed. Safe with both deferred (Layout) and async (PostLayout) gtag loading.
+---
+<script is:inline>
+  (function () {
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+
+    function closest(el, fn) {
+      while (el && el !== document.body) {
+        if (fn(el)) return el;
+        el = el.parentElement;
+      }
+      return null;
+    }
+
+    function getCtaLocation(link) {
+      var path = document.location.pathname;
+
+      if (closest(link, function (e) { return e.id === 'download-pdf'; })) return 'lead_form_success';
+      if (closest(link, function (e) { return e.classList && e.classList.contains('phone-frame'); })) return 'app_showcase';
+      if (closest(link, function (e) { return e.tagName === 'FOOTER'; })) {
+        return (path === '/' || path === '') ? 'home_footer' : 'footer';
+      }
+      if (closest(link, function (e) { return e.tagName === 'HEADER'; })) return 'header_nav';
+
+      if (/^\/birth-support\//.test(path)) return 'city_cta';
+      if (/^\/birth-plan-template/.test(path)) return 'birth_plan_template';
+      if (/^\/birth-plan-scenarios/.test(path)) return 'scenario_page';
+      if (/^\/birth-plan-checklist/.test(path)) return 'checklist_page';
+      if (/^\/birth-plan-for-induction/.test(path)) return 'induction_page';
+      if (/^\/about/.test(path)) return 'about';
+      if (/^\/faq/.test(path)) return 'faq';
+      if (/^\/blog\//.test(path)) return 'blog_app_cta';
+
+      if (path === '/' || path === '') {
+        var rect = link.getBoundingClientRect();
+        if (rect.top < 1500) return 'home_hero';
+        return 'home_body';
+      }
+      return 'unknown';
+    }
+
+    function getCtaText(link) {
+      var img = link.querySelector('img');
+      if (img && img.alt) return img.alt;
+      var text = (link.textContent || '').replace(/\s+/g, ' ').trim();
+      if (text) return text.substring(0, 100);
+      return 'app_store_link';
+    }
+
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a[href*="apps.apple.com"]');
+      if (!link) return;
+      gtag('event', 'app_download_click', {
+        page_location: document.location.href,
+        page_title: document.title,
+        link_url: link.href,
+        cta_location: getCtaLocation(link),
+        cta_text: getCtaText(link)
+      });
+    });
+  })();
+</script>

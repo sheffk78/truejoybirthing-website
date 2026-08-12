@@ -1,6 +1,6 @@
 {
-  "run_id": "milwaukee-wi-build-1786564996",
-  "step": "gate:build",
+  "run_id": "milwaukee-wi-enrich-1786564906",
+  "step": "gate:enrich",
   "skill": "tjb-pipeline-dag",
   "skill_version": "4.0",
   "model_id": "deterministic-script",
@@ -11,5 +11,5 @@
   ],
   "passed": true,
   "failures": 0,
-  "timestamp": "2026-08-12T20:03:16Z"
+  "timestamp": "2026-08-12T20:01:46Z"
 }
