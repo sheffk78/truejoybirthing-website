@@ -35,6 +35,9 @@ const stageLabels = {
 };
 
 const stages = Object.keys(stageLabels);
+
+// CONTROL_KEY for Autonomous Worker write auth — injected at build time from PUBLIC env var
+const controlKey = import.meta.env.PUBLIC_TJB_CONTROL_KEY || '';
 ---
 
 <!DOCTYPE html>
@@ -495,6 +498,14 @@ const stages = Object.keys(stageLabels);
         <input type="checkbox" id="hideComplete" checked />
         Hide fully complete (100%)
       </label>
+      <span style="margin-left: auto; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0.75rem; border: 1px solid var(--sage-300); border-radius: 6px; background: var(--sage-50);">
+        <span style="font-weight:600; font-size:0.8rem; color: var(--gray-300);">Autonomous Worker</span>
+        <span id="autoStatusDot" style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#6b9e5e;"></span>
+        <button id="autoToggle" type="button" style="padding:0.15rem 0.6rem; border-radius:4px; border:1px solid var(--sage-300); background:var(--sage-100); cursor:pointer; font-size:0.75rem; font-weight:600;">…</button>
+      </span>
+    </div>
+    <div class="controls" style="margin-top:0.35rem;">
+      <span id="autoReason" style="font-size:0.75rem; color: var(--gray-300);"></span>
     </div>
 
     <div class="table-wrap">
@@ -636,7 +647,7 @@ const stages = Object.keys(stageLabels);
   .city-link:hover { color: var(--rose-500); text-decoration: underline; }
 </style>
 
-<script is:inline define:vars={{ cityData: cities, totalCount: total }}>
+<script is:inline define:vars={{ cityData: cities, totalCount: total, controlKey }}>
   const data = {cities: cityData, total: totalCount};
   const stageLabels = {hero: 'Hero Image', og: 'OG Image', support: 'Support Scene', hospitals: 'Hospitals', doulas: 'Doulas', video: 'Video', outreach: 'Outreach'};
   const stages = Object.keys(stageLabels);
@@ -755,24 +766,21 @@ const stages = Object.keys(stageLabels);
       const city = data.cities.find(c => c.slug === slug);
       if (!city) return;
 
-      const stageLabels = {
-        hero: 'hero image (R9-R11: pregnant silhouette, 3:2, reused across OG/YT/video)',
-        og: 'OG image (R9, R14: derived from hero, correct logo)',
-        support: 'support scene image (R12: one pregnant woman + professional, 4:3, vision-verified)',
-        hospitals: 'hospital enrichment (R18: 300+ char descriptions, R20: clean NICU labels, R19: population-scaled counts)',
-        doulas: 'doula/provider enrichment (R13: photo sourcing headshot-logo-initials, R17: best-guess pricing never Contact-for-pricing, R21: specific credentials)',
-        video: 'video embed (R31-R32: must reflect final page state, re-render if data changed)',
-        outreach: 'outreach (R4: always last after deploy, R5: re-outreach after page updates)',
+      const stage = city.stage || 'build';
+      const stageMap = {
+        build: 'BUILD — research providers/hospitals, write cities.ts, generate hero/OG/support images',
+        enrich: 'ENRICH — provider photos, cost ranges, service areas, deal-breakers, hospital descriptions, birthStats',
+        verify_deploy: 'VERIFY+DEPLOY — full preflight, build, deploy, CDN cache-bust, three-way visual verification',
+        video_outreach: 'VIDEO+OUTREACH — scene data, TTS, render, YouTube upload, embed, provider outreach',
+        complete: 'COMPLETE — all stages done',
       };
+      const stageLabel = stageMap[stage] || stage;
 
-      const failing = Object.keys(stageLabels).filter(s => !city[s]);
       let prompt;
-      if (failing.length === 0) {
+      if (stage === 'complete') {
         prompt = `Probe ${slug} — run preflight to verify all gates pass, then confirm the live page matches the repo. If any gates fail, fix the root cause. Load tjb-pipeline-rules for all standards.`;
-      } else if (failing.length >= 5) {
-        prompt = `Work on ${slug} — load tjb-pipeline-dag first, then tjb-pipeline-rules. Probe current state with tjb-city-orchestrator, then execute all 4 stages through outreach. Failing: ${failing.map(s => stageLabels[s]).join('; ')}.`;
       } else {
-        prompt = `Work on ${slug} — load tjb-pipeline-dag first, then tjb-pipeline-rules. Probe current state, then complete only the failing stages: ${failing.map(s => stageLabels[s]).join('; ')}. Do not re-run stages that are already passing.`;
+        prompt = `Work on ${slug} — load tjb-pipeline-dag → tjb-pipeline-rules → tjb-city-orchestrator. Run tjb-pipeline-state.py status ${slug} to confirm current stage (${stage}). Run preflight-stage-gate.py --city ${slug} --stage ${stage} — if exit 0, advance via done; if exit 1, re-run the step subagent; if exit 3, block + escalate. Complete stages forward-only through video_outreach. Current stage: ${stageLabel}.`;
       }
       navigator.clipboard.writeText(prompt).then(function() {
         e.target.classList.add('copied');
@@ -790,6 +798,65 @@ const stages = Object.keys(stageLabels);
       });
     }
   });
+
+  // ── Autonomous Worker Pause/Resume control ─────────────────────────
+  // Reads/writes the control flag via the Cloudflare Worker (KV-backed).
+  // If the Worker is unreachable (not yet deployed / token missing), the
+  // control degrades to read-only "unknown" state — the dashboard still
+  // renders, just without live control.
+  const CONTROL_URL = 'https://tjb-control.jeff-43f.workers.dev/api/control';
+  const CONTROL_KEY = controlKey;
+
+  const autoDot = document.getElementById('autoStatusDot');
+  const autoToggle = document.getElementById('autoToggle');
+  const autoReason = document.getElementById('autoReason');
+
+  function setAutoUI(paused, reason) {
+    if (paused) {
+      autoDot.style.background = '#c25b6a';
+      autoToggle.textContent = 'Resume';
+      autoToggle.style.borderColor = '#a8455a';
+      autoReason.textContent = reason ? 'Paused: ' + reason : 'Paused';
+    } else {
+      autoDot.style.background = '#6b9e5e';
+      autoToggle.textContent = 'Pause';
+      autoToggle.style.borderColor = 'var(--sage-300)';
+      autoReason.textContent = 'Running — 7 days/wk, 9am–5pm';
+    }
+  }
+
+  async function refreshAuto() {
+    try {
+      const r = await fetch(CONTROL_URL);
+      if (!r.ok) throw new Error('bad status ' + r.status);
+      const s = await r.json();
+      setAutoUI(!!s.paused, s.reason || null);
+    } catch (e) {
+      autoDot.style.background = '#999';
+      autoToggle.textContent = 'Unavailable';
+      autoToggle.disabled = true;
+      autoReason.textContent = 'Control API not reachable (Worker not deployed?)';
+    }
+  }
+
+  autoToggle.addEventListener('click', async function() {
+    const currentlyPaused = autoToggle.textContent === 'Resume';
+    const action = currentlyPaused ? 'resume' : 'pause';
+    try {
+      const r = await fetch(CONTROL_URL + '/' + action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-control-key': CONTROL_KEY },
+        body: JSON.stringify({ reason: 'dashboard toggle' }),
+      });
+      if (!r.ok) throw new Error('bad status ' + r.status);
+      const s = await r.json();
+      setAutoUI(!!s.paused, s.reason || null);
+    } catch (e) {
+      autoReason.textContent = 'Failed to ' + action + ' — ' + e.message;
+    }
+  });
+
+  refreshAuto();
 
   updateStats();
   render();

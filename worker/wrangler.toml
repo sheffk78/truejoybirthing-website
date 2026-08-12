@@ -1,0 +1,12 @@
+name = "tjb-control"
+main = "control-worker.js"
+compatibility_date = "2026-03-01"
+account_id = "43fc607227d4c23019811f7437ba7ee4"
+
+[[durable_objects.bindings]]
+name = "TJB_CONTROL"
+class_name = "TJBControl"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["TJBControl"]
