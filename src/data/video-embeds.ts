@@ -1560,10 +1560,17 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-08-11T00:00:00-05:00",
   },
   "corpus-christi-tx": {
-    videoId: "pw9RBX_60b8",
+    videoId: "P9sh9n-F9wI",
     title: "Corpus Christi Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full Corpus Christi birth guide — doulas, midwives, hospitals, birth centers, costs, and Texas Medicaid coverage, all in about 5 minutes.",
     duration: "PT5M26S",
+    uploadDate: "2026-08-12T00:00:00-05:00",
+  },
+  "lubbock-tx": {
+    videoId: "idK3HgMiepA",
+    title: "Lubbock Birth Guide: Hospitals, Doulas & Medicaid (First-Time Mom)",
+    description: "Watch the full Lubbock birth guide — doulas, midwives, hospitals, costs, and Texas Medicaid coverage under SB 750, all in about 4 minutes.",
+    duration: "PT3M48S",
     uploadDate: "2026-08-12T00:00:00-05:00",
   },
 };
