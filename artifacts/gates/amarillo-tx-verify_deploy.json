@@ -1,0 +1,12 @@
+{
+  "slug": "amarillo-tx",
+  "stage": "verify_deploy",
+  "passed": false,
+  "failures": 1,
+  "results": {
+    "full_preflight": {
+      "pass": false,
+      "message": "full_preflight: exit 1 \u2014 \u001b[31m  \u274c PREFLIGHT FAILED: 1 failure(s), 0 warning(s)\u001b[0m"
+    }
+  }
+}

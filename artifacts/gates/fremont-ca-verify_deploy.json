@@ -1,0 +1,12 @@
+{
+  "slug": "fremont-ca",
+  "stage": "verify_deploy",
+  "passed": true,
+  "failures": 0,
+  "results": {
+    "full_preflight": {
+      "pass": true,
+      "message": "full_preflight: exit 0 \u2014   Ship fremont-ca when ready."
+    }
+  }
+}

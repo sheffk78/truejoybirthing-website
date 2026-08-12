@@ -1,0 +1,32 @@
+{
+  "slug": "fremont-ca",
+  "stage": "build",
+  "passed": true,
+  "failures": 0,
+  "results": {
+    "G3": {
+      "pass": true,
+      "message": "G3: template meta tags present"
+    },
+    "G5": {
+      "pass": true,
+      "message": "G5: title includes Costs (R38)"
+    },
+    "G13": {
+      "pass": true,
+      "message": "G13: H1/hero detail present"
+    },
+    "G4": {
+      "pass": true,
+      "message": "G4: canonical present in template"
+    },
+    "G37": {
+      "pass": true,
+      "message": "G37: 18 doulas (min 1 for pop 0)"
+    },
+    "visual_hero_og": {
+      "pass": true,
+      "message": "visual_hero_og: hero=Y og=Y"
+    }
+  }
+}
