@@ -87,7 +87,7 @@ STAGE_CONTEXTS = {
             "Verify data accuracy. Run: npx tsx scripts/validate-city-data.ts {slug} and npm run build to verify."
         ),
         "toolsets": ["terminal", "file", "web", "browser", "image_gen", "vision"],
-        "gates": ["G3", "G5", "G13", "G4", "G37", "hospital_count", "visual_check"],
+        "gates": ["G3", "G5", "G13", "G4", "G37", "hospital_count", "visual_check", "visual_hero_og", "image_files_exist"],
     },
     "enrich": {
         "skill": "tjb-provider-enrichment",
