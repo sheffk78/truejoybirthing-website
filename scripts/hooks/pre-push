@@ -25,8 +25,8 @@ while read local_ref local_oid remote_ref remote_oid; do
     # Check if preflight result file exists
     if [[ ! -f "$RESULT_FILE" ]]; then
       echo "❌ BLOCKED: Preflight has not been run."
-      echo "   Run: bash scripts/deploy.sh"
-      echo "   Or: npx tsx scripts/preflight.ts {slug} && echo '{\"status\":\"pass\",\"timestamp\":'''$(date +%s)'''}' > .preflight-result.json"
+      echo "   Run: npx tsx scripts/preflight.ts {slug}"
+      echo "   (preflight.ts now writes .preflight-result.json automatically)"
       exit 1
     fi
 

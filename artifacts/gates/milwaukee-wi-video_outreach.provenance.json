@@ -1,6 +1,6 @@
 {
-  "run_id": "milwaukee-wi-build-1786577705",
-  "step": "gate:build",
+  "run_id": "milwaukee-wi-video_outreach-1786577833",
+  "step": "gate:video_outreach",
   "skill": "tjb-pipeline-dag",
   "skill_version": "4.0",
   "model_id": "deterministic-script",
@@ -11,5 +11,5 @@
   ],
   "passed": true,
   "failures": 0,
-  "timestamp": "2026-08-12T23:35:05Z"
+  "timestamp": "2026-08-12T23:37:13Z"
 }

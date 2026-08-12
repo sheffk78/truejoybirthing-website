@@ -390,5 +390,18 @@ if (failures > 0) {
 } else {
   console.log(`${GREEN}  ✅ PREFLIGHT PASSED: 0 failures, ${warnings} warning(s)${NC}`);
   console.log(`  ${targetSlug ? `Ship ${targetSlug} when ready.` : "All cities pass preflight."}`);
+
+  // Write .preflight-result.json so the pre-push hook sees a fresh, valid
+  // result without the operator having to hand-write the file. The hook
+  // requires status=pass and timestamp within 300s of the push.
+  const result = {
+    status: "pass",
+    timestamp: Math.floor(Date.now() / 1000).toString(),
+    slug: targetSlug || "",
+  };
+  const resultPath = path.join(PROJECT_DIR, ".preflight-result.json");
+  fs.writeFileSync(resultPath, JSON.stringify(result) + "\n");
+  console.log(`  📝 Wrote ${resultPath} (timestamp: ${result.timestamp})`);
+
   process.exit(0);
 }

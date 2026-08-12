@@ -726,6 +726,27 @@ def cmd_advance(slug: str, stage: str):
         2 = RETRYABLE_INFRA → output status for cron to wait + retry
         3 = FATAL → call cmd_fail with blocked_reason, block pipeline
     """
+    # If the pipeline is already complete, there is no gate to run and no
+    # stage to advance to. Emit a clean success instead of querying the
+    # gate script (which does not accept --stage complete).
+    state = load_state(slug)
+    if state and state.get("current_stage") == "complete" and stage == "complete":
+        blocked = state.get("blocked", False)
+        all_done = all(
+            s in state.get("stages_completed", [])
+            for s in ("build", "enrich", "verify_deploy", "video_outreach")
+        )
+        if not blocked and all_done:
+            print(json.dumps({
+                "action": "complete",
+                "slug": slug,
+                "message": f"Pipeline complete for {slug}. All stages done.",
+                "stages_completed": state.get("stages_completed", []),
+            }, indent=2))
+            return
+        # If the state is inconsistent (says complete but blocks/failures exist),
+        # fall through to the normal gate path so errors surface properly.
+
     exit_code, gate_output, gate_stderr = run_stage_gate(slug, stage)
 
     if exit_code == 0:

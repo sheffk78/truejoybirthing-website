@@ -419,18 +419,41 @@ def run_gate(name: str, slug: str, block: str | None) -> tuple[bool, str]:
         return True, f"live_page_verified: HTTP 200 + video facade + VideoObject schema at {url}"
 
     if name == "outreach_sent_or_blocked":
-        # Check tjb-city-status.json for outreach or blocked reason
+        # Primary source of truth: the send log at ~/.hermes/logs/tjb-outreach-send-log.jsonl
+        # A successful send = status == "sent" and send_result.success == true
+        send_log_path = Path.home() / ".hermes" / "logs" / "tjb-outreach-send-log.jsonl"
+        if send_log_path.exists():
+            try:
+                send_count = 0
+                last_msg_id = None
+                with open(send_log_path, "r") as f:
+                    for line in f:
+                        line = line.strip()
+                        if not line:
+                            continue
+                        rec = json.loads(line)
+                        if rec.get("slug") == slug and rec.get("status") == "sent":
+                            sr = rec.get("send_result")
+                            if isinstance(sr, dict) and sr.get("success"):
+                                send_count += 1
+                                last_msg_id = (sr.get("detail") or {}).get("message_id")
+                if send_count > 0:
+                    return True, f"outreach_sent_or_blocked: sent ({send_count} send record(s) in send log, last message_id={last_msg_id})"
+            except Exception:
+                pass
+
+        # Fallback: check tjb-city-status.json for blocked reason only
         status_path = Path.home() / ".hermes" / "state" / "tjb-city-status.json"
         if status_path.exists():
             try:
                 data = json.loads(status_path.read_text())
                 cities = data.get("cities", {})
                 rec = cities.get(slug, {})
-                if rec.get("has_outreach") or rec.get("outreach_blocked_reason"):
-                    return True, f"outreach_sent_or_blocked: {'sent' if rec.get('has_outreach') else 'blocked: ' + str(rec.get('outreach_blocked_reason'))}"
+                if rec.get("outreach_blocked_reason"):
+                    return True, f"outreach_sent_or_blocked: blocked: {rec.get('outreach_blocked_reason')}"
             except Exception:
                 pass
-        return False, "outreach_sent_or_blocked: no outreach sent and no blocked reason recorded"
+        return False, "outreach_sent_or_blocked: no successful send in send log and no blocked reason recorded"
 
     if name == "full_preflight":
         # Run the full preflight.ts for this slug.
