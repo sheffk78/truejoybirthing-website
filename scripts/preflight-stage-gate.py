@@ -48,7 +48,7 @@ REMOTION_DIR = Path.home() / ".openclaw" / "workspace" / "Kit" / "life" / "brand
 
 # ── Gate subset definitions (from tjb-pipeline-dag) ──────────────
 GATE_SUBSETS = {
-    "build": ["G3", "G5", "G13", "G4", "G37", "visual_hero_og"],
+    "build": ["G3", "G5", "G13", "G4", "G37", "visual_hero_og", "image_files_exist"],
     "enrich": ["G14", "G15", "G15b", "G35", "S8", "G9", "G57", "hospital_desc_length", "cost_format", "G60"],
     "verify_deploy": ["full_preflight"],
     "video_outreach": ["pre_render_gate", "video_file_exists", "youtube_upload", "youtube_thumbnail", "video_embedded", "videoobject_schema", "live_page_verified", "outreach_sent_or_blocked"],
@@ -288,6 +288,17 @@ def run_gate(name: str, slug: str, block: str | None) -> tuple[bool, str]:
         missing = [p for p in photos if p.strip() and not resolve_image(p).exists()]
         ok = len(missing) == 0
         return ok, f"G57: {len(photos) - len(missing)}/{len(photos)} provider photos on disk" + (f" MISSING: {missing[:3]}" if missing else "")
+
+    if name == "image_files_exist":
+        # Systemic gate: every referenced provider photo and facility thumbnail must
+        # EXIST on disk before a city can ship. Prevents broken-image pages (Jeff P1:
+        # "system must do what it can to find photos, not give up too soon").
+        photos = re.findall(r'photo\s*:\s*"([^"]+)"', block)
+        thumbs = re.findall(r'thumbnail\s*:\s*"([^"]+)"', block)
+        refs = [p for p in photos if p.strip()] + [t for t in thumbs if t.strip()]
+        missing = [r for r in refs if not resolve_image(r).exists()]
+        ok = len(missing) == 0
+        return ok, f"image_files_exist: {len(refs) - len(missing)}/{len(refs)} image files on disk" + (f" MISSING: {missing[:6]}" if missing else "")
 
     if name == "hospital_desc_length":
         # Hospital descriptions (paragraph field) >= 300 chars (R18)
