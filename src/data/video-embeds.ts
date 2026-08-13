@@ -1600,4 +1600,22 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [304, "Get the free birth plan"],
     ],
   },
+  "laredo-tx": {
+    videoId: "6OkPQiTEUhQ",
+    title: "Laredo Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full Laredo birth guide — 3 doulas, 2 hospitals, costs, and Texas Medicaid coverage under SB 750, all in about 4.5 minutes.",
+    duration: "PT4M37S",
+    uploadDate: "2026-08-13T00:00:00-05:00",
+    chapters: [
+      [0, "Welcome to Laredo"],
+      [12, "What This Guide Covers"],
+      [30, "Laredo Medical Center (Level III NICU)"],
+      [60, "Doctors Hospital of Laredo (Level II NICU)"],
+      [90, "Doulas & Midwives in Laredo"],
+      [170, "The True Joy Birthing App"],
+      [192, "Cost Reality ($700-$1,600)"],
+      [214, "Insurance & Texas Medicaid (SB 750)"],
+      [242, "Your Next Step"],
+    ],
+  },
 };
