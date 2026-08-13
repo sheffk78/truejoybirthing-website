@@ -48,7 +48,7 @@ REMOTION_DIR = Path.home() / ".openclaw" / "workspace" / "Kit" / "life" / "brand
 
 # ── Gate subset definitions (from tjb-pipeline-dag) ──────────────
 GATE_SUBSETS = {
-    "build": ["G3", "G5", "G13", "G4", "G37", "visual_hero_og", "image_files_exist"],
+    "build": ["G3", "G5", "G13", "G4", "G37", "visual_hero_og"],
     "enrich": ["G14", "G15", "G15b", "G35", "S8", "G9", "G57", "hospital_desc_length", "cost_format", "G60"],
     "verify_deploy": ["full_preflight"],
     "video_outreach": ["pre_render_gate", "video_file_exists", "youtube_upload", "youtube_thumbnail", "video_embedded", "videoobject_schema", "live_page_verified", "outreach_sent_or_blocked"],
@@ -531,3 +531,12 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
+# ── 2026-08-12 FIX (garden-grove-ca) ──────────────────────────────
+# Removed `image_files_exist` from the BUILD gate subset. That check
+# requires provider photos + hospital/birth-center thumbnails to exist on
+# disk — which are ENRICH-stage deliverables (G57/G35/G20). Including it
+# in BUILD deadlocked forward-only advancement (BUILD could never pass
+# until ENRICH work was done). BUILD now = G3,G5,G13,G4,G37,visual_hero_og.
+# image_files_exist still runs at verify_deploy (full preflight) and is
+# enforced by the ENRICH subset via G57/G35. See tjb-pipeline-rules R30.

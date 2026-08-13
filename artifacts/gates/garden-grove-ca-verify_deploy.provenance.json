@@ -1,6 +1,6 @@
 {
-  "run_id": "garden-grove-ca-build-1786579395",
-  "step": "gate:build",
+  "run_id": "garden-grove-ca-verify_deploy-1786580702",
+  "step": "gate:verify_deploy",
   "skill": "tjb-pipeline-dag",
   "skill_version": "4.0",
   "model_id": "deterministic-script",
@@ -11,5 +11,5 @@
   ],
   "passed": true,
   "failures": 0,
-  "timestamp": "2026-08-13T00:03:15Z"
+  "timestamp": "2026-08-13T00:25:02Z"
 }
