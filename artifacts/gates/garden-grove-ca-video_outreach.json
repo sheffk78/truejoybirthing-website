@@ -1,0 +1,40 @@
+{
+  "slug": "garden-grove-ca",
+  "stage": "video_outreach",
+  "passed": true,
+  "failures": 0,
+  "results": {
+    "pre_render_gate": {
+      "pass": true,
+      "message": "pre_render_gate: scene data exists"
+    },
+    "video_file_exists": {
+      "pass": true,
+      "message": "video_file_exists: 1 video(s) >10MB (garden-grove-ca-city-guide.mp4)"
+    },
+    "youtube_upload": {
+      "pass": true,
+      "message": "youtube_upload: videoId present in video-embeds.ts"
+    },
+    "youtube_thumbnail": {
+      "pass": true,
+      "message": "youtube_thumbnail: present"
+    },
+    "video_embedded": {
+      "pass": true,
+      "message": "video_embedded: embed found (facade, vid Ai_zYl9Nv0w)"
+    },
+    "videoobject_schema": {
+      "pass": true,
+      "message": "videoobject_schema: VideoObject+duration present"
+    },
+    "live_page_verified": {
+      "pass": true,
+      "message": "live_page_verified: HTTP 200 + video facade + VideoObject schema at https://truejoybirthing.com/birth-support/garden-grove-ca/"
+    },
+    "outreach_sent_or_blocked": {
+      "pass": true,
+      "message": "outreach_sent_or_blocked: blocked: Outreach HELD for Shelbi review per doula-outreach-list.md policy (never auto-sends) + post-June-2025 trust-rebuild autonomy bar. Drafts in web-strategy/outreach/garden-grove-ca-email-drafts.md. Only Dayana Ornelas has verified email (TresLunasBirth@gmail.com, multi-city follow-up R34); 5 others contact-form/IG only."
+    }
+  }
+}
