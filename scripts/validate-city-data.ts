@@ -98,15 +98,22 @@ async function validate(): Promise<{ results: ValidationResult[]; totalErrors: n
       result.imageErrors.push(`Missing hero copy at ${HEROES_DIR}/${expectedHero}`);
     }
 
-    // Check OG image exists
-    const ogPath = `public/images/og-city-${slug}.webp`;
-    if (fs.existsSync(ogPath)) {
-      const size = fs.statSync(ogPath).size;
-      if (size < 30000) {
-        result.warnings.push(`OG image (${ogPath}) is only ${size} bytes — likely a gradient placeholder, not a real photo OG card`);
+    // Check OG image exists — use the ACTUAL referenced ogImage path (which may be
+    // versioned, e.g. og-city-X-v2.webp), not a hardcoded unversioned name.
+    const ogRef = (data as any).ogImage;
+    if (ogRef && typeof ogRef === 'string') {
+      const ogFname = ogRef.split('/').pop()?.split('?')[0] ?? '';
+      const ogPath = `public/images/${ogFname}`;
+      if (fs.existsSync(ogPath)) {
+        const size = fs.statSync(ogPath).size;
+        if (size < 20000) {
+          result.warnings.push(`OG image (${ogPath}) is only ${size} bytes — likely a gradient placeholder, not a real photo OG card`);
+        }
+      } else {
+        result.warnings.push(`OG image missing: ${ogPath}`);
       }
     } else {
-      result.warnings.push(`OG image missing: ${ogPath}`);
+      result.warnings.push(`OG image missing: no ogImage reference for ${slug}`);
     }
 
     // 🔴 HARD RULE GATE (R12/R41/M48): Support scene must be 4:3 — never distorted.

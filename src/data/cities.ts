@@ -7346,7 +7346,7 @@ midwifeInfo: {
     heroImage: "/images/acworth-ga-birth-doula-hero-v2.webp",
     heroAlt: "Pregnant woman beside a wooded Georgia lake near Acworth",
     ogImage: "https://truejoybirthing.com/images/og-city-acworth-ga-v4.webp",
-    supportSceneImage: "/images/acworth-ga-support-scene-v6.webp?cachebust=1754242000",
+    supportSceneImage: "/images/acworth-ga-support-scene-v6.webp",
     publishedDate: "2026-08-02",
     enableBlogResources: true,
     costLow: 1000,
