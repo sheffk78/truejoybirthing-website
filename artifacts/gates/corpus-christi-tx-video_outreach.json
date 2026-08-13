@@ -1,5 +1,5 @@
 {
-  "slug": "garden-grove-ca",
+  "slug": "corpus-christi-tx",
   "stage": "video_outreach",
   "passed": true,
   "failures": 0,
@@ -10,7 +10,7 @@
     },
     "video_file_exists": {
       "pass": true,
-      "message": "video_file_exists: 1 video(s) >10MB (garden-grove-ca-city-guide.mp4)"
+      "message": "video_file_exists: 1 video(s) >10MB (corpus-christi-tx-city-guide.mp4)"
     },
     "youtube_upload": {
       "pass": true,
@@ -22,7 +22,7 @@
     },
     "video_embedded": {
       "pass": true,
-      "message": "video_embedded: embed found (facade, vid Ai_zYl9Nv0w)"
+      "message": "video_embedded: embed found (facade, vid P9sh9n-F9wI)"
     },
     "videoobject_schema": {
       "pass": true,
@@ -30,11 +30,11 @@
     },
     "live_page_verified": {
       "pass": true,
-      "message": "live_page_verified: HTTP 200 + video facade + VideoObject schema at https://truejoybirthing.com/birth-support/garden-grove-ca/"
+      "message": "live_page_verified: HTTP 200 + video facade + VideoObject schema at https://truejoybirthing.com/birth-support/corpus-christi-tx/"
     },
     "outreach_sent_or_blocked": {
       "pass": true,
-      "message": "outreach_sent_or_blocked: sent (1 send record(s) in send log, last message_id=vps-20260813013208523102)"
+      "message": "outreach_sent_or_blocked: sent (4 send record(s) in send log, last message_id=vps-20260813163009092836)"
     }
   }
 }

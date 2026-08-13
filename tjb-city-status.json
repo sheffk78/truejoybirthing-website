@@ -2432,5 +2432,18 @@
     "video_id": "6luzm5OBWQk",
     "notes": "5 verified providers (removed Aubrey Tambellini who is actually IL-based). Video re-rendered to match. Outreach: 2 new first-touch sent (cherishbirth, dallasbirth); 3 already contacted historically (Great Expectations, North Dallas, Doulas of Dallas) blocked as duplicates. Lactation image updated to v3.",
     "live_url": "https://truejoybirthing.com/birth-support/dallas-tx/"
+  },
+  "corpus-christi-tx": {
+    "slug": "corpus-christi-tx",
+    "city": "Corpus Christi",
+    "state": "TX",
+    "stage": "complete",
+    "score": 100,
+    "has_outreach": true,
+    "outreach_sent_at": "2026-08-13T16:28:00Z",
+    "outreach_provider_count": 4,
+    "has_video": true,
+    "video_id": "P9sh9n-F9wI",
+    "url": "https://truejoybirthing.com/birth-support/corpus-christi-tx/"
   }
 }

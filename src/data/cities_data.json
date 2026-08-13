@@ -1,0 +1,152 @@
+{
+  "amarillo-tx": {
+    "city": "Amarillo",
+    "state": "TX",
+    "supportSceneImage": "/images/amarillo-tx-birth-doula-support.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Amarillo: Texas Panhandle birth support and doula care"
+  },
+  "allen-tx": {
+    "city": "Allen",
+    "state": "TX",
+    "supportSceneImage": "/images/allen-tx-birth-doula-support.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Allen: Texas birth support and doula care in Collin County"
+  },
+  "laredo-tx": {
+    "city": "Laredo",
+    "state": "TX",
+    "supportSceneImage": "/images/laredo-tx-birth-doula-support.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Laredo: Texas border birth support and doula care"
+  },
+  "arlington-tx": {
+    "city": "Arlington",
+    "state": "TX",
+    "supportSceneImage": "/images/arlington-tx-birth-doula-support.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Arlington: Texas birth support and doula care in the Mid-Cities"
+  },
+  "augusta-ga": {
+    "city": "Augusta",
+    "state": "GA",
+    "supportSceneImage": "/images/augusta-ga-birth-doula-support-v2.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Augusta: Georgia birth support and doula care"
+  },
+  "atlanta-ga": {
+    "city": "Atlanta",
+    "state": "GA",
+    "supportSceneImage": "/images/atlanta-ga-birth-doula-support-v2.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Atlanta: Georgia birth support and doula care"
+  },
+  "spokane-wa": {
+    "city": "Spokane",
+    "state": "WA",
+    "supportSceneImage": "/images/spokane-wa-birth-doula-support-v2.webp",
+    "supportSceneAlt": "A pregnant woman in silhouette overlooking the Spokane River and Palouse hills at golden hour"
+  },
+  "tacoma-wa": {
+    "city": "Tacoma",
+    "state": "WA",
+    "supportSceneImage": "/images/tacoma-support-scene.webp",
+    "supportSceneAlt": "A doula walking alongside an expectant mom: Tacoma birth support"
+  },
+  "phoenix-az": {
+    "city": "Phoenix",
+    "state": "AZ",
+    "supportSceneImage": "/images/phoenix-az-birth-doula-support-v2.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Phoenix: Arizona birth support and doula care"
+  },
+  "chicago-il": {
+    "city": "Chicago",
+    "state": "IL",
+    "supportSceneImage": "/images/chicago-il-birth-doula-support-v2.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Chicago: Illinois birth support and doula care"
+  },
+  "nashville-tn": {
+    "city": "Nashville",
+    "state": "TN",
+    "supportSceneImage": "/images/nashville-tn-birth-doula-support.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Nashville: Tennessee birth support and doula care"
+  },
+  "philadelphia-pa": {
+    "city": "Philadelphia",
+    "state": "PA",
+    "supportSceneImage": "/images/philadelphia-pa-birth-doula-support-pa.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Philadelphia: Pennsylvania birth support and doula care"
+  },
+  "san-jose-ca": {
+    "city": "San Jose",
+    "state": "CA",
+    "supportSceneImage": "/images/san-jose-ca-birth-doula-support.webp",
+    "supportSceneAlt": "San Jose doula providing hands-on support during pregnancy"
+  },
+  "oakland-ca": {
+    "city": "Oakland",
+    "state": "CA",
+    "supportSceneImage": "/images/oakland-ca-birth-doula-support.webp",
+    "supportSceneAlt": "Oakland doula providing hands-on support during pregnancy"
+  },
+  "bakersfield-ca": {
+    "city": "Bakersfield",
+    "state": "CA",
+    "supportSceneImage": "/images/bakersfield-ca-birth-doula-support.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Stockton with Central Valley golden hills"
+  },
+  "cleveland-oh": {
+    "city": "Cleveland",
+    "state": "OH",
+    "supportSceneImage": "/images/cleveland-oh-birth-doula-support.webp",
+    "supportSceneAlt": "A doula providing gentle support to an expectant mother in Indianapolis, Indiana"
+  },
+  "charleston-sc": {
+    "city": "Charleston",
+    "state": "SC",
+    "supportSceneImage": "/images/charleston-sc-support-scene.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Grand Rapids: West Michigan birth support and doula care"
+  },
+  "norfolk-va": {
+    "city": "Norfolk",
+    "state": "VA",
+    "supportSceneImage": "/images/norfolk-support-scene.webp",
+    "supportSceneAlt": "A doula walking alongside an expectant mom on the Elizabeth River Trail in Norfolk, Virginia"
+  },
+  "vancouver-wa": {
+    "city": "Vancouver",
+    "state": "WA",
+    "supportSceneImage": "/images/vancouver-support-scene.webp",
+    "supportSceneAlt": "A doula walking alongside an expectant mom on the Vancouver Waterfront with Mount Hood in the distance"
+  },
+  "moreno-valley-ca": {
+    "city": "Moreno Valley",
+    "state": "CA",
+    "supportSceneImage": "/images/moreno-valley-ca-support-scene.webp",
+    "supportSceneAlt": "A doula walking alongside an expectant mom in Moreno Valley, California"
+  },
+  "fontana-ca": {
+    "city": "Fontana",
+    "state": "CA",
+    "supportSceneImage": "/images/fontana-support-scene.webp",
+    "supportSceneAlt": "A doula walking alongside an expectant mom on the Pacific Electric Trail in Fontana, with the San Gabriel Mountains in the distance"
+  },
+  "chesapeake-va": {
+    "city": "Chesapeake",
+    "state": "VA",
+    "supportSceneImage": "/images/chesapeake-va-birth-doula-support.webp",
+    "supportSceneAlt": "A doula walking alongside an expectant mom in Chesapeake, Virginia"
+  },
+  "torrance-ca": {
+    "city": "Torrance",
+    "state": "CA",
+    "supportSceneImage": "/images/torrance-ca-birth-doula-support-rva.webp",
+    "supportSceneAlt": "A doula providing support to a pregnant mom in Torrance, California with the South Bay coastline nearby"
+  },
+  "naperville-il": {
+    "city": "Naperville",
+    "state": "IL",
+    "supportSceneImage": "/images/naperville-il-doula-support-scene.webp",
+    "supportSceneAlt": "A doula supporting a pregnant mother during labor in a warm Naperville, Illinois home setting"
+  },
+  "oceanside-ca": {
+    "city": "Oceanside",
+    "state": "CA",
+    "supportSceneImage": "/images/oceanside-support-scene.webp",
+    "supportSceneAlt": "A doula walking alongside an expectant mom near the Oceanside Pier in Oceanside, California"
+  }
+}

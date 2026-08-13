@@ -48,7 +48,23 @@ REMOTION_DIR = Path.home() / ".openclaw" / "workspace" / "Kit" / "life" / "brand
 
 # ── Gate subset definitions (from tjb-pipeline-dag) ──────────────
 GATE_SUBSETS = {
-    "build": ["G3", "G5", "G13", "G4", "G37", "visual_hero_og"],
+    "build": [
+        "G1",   # Working directory is canonical project root
+        "G2",   # validate-city-data.ts exits 0
+        "G3",   # npm run build exits 0
+        "G4",   # OG image exists on disk, >=10KB, decodable
+        "G8",   # Hero is pregnant silhouette, not skyline
+        "G21",  # Hero, OG, YT thumbnail are distinct files
+        "G25",  # Hero image aspect ratio is 3:2
+        "G29",  # OG image is real photo, not gradient
+        "G36",  # Hospital entries have complete data
+        "G37",  # Provider count meets population tier minimums
+        "G38",  # Hero filename contains city slug
+        "G40",  # OG filename contains city slug
+        "G41",  # Hero file size <=80KB
+        "G42",  # Hero 600w srcset variant exists
+        "G58",  # Hero has no black bars / letterboxing
+    ],
     "enrich": ["G14", "G15", "G15b", "G35", "S8", "G9", "G57", "hospital_desc_length", "cost_format", "G60"],
     "verify_deploy": ["full_preflight"],
     "video_outreach": ["pre_render_gate", "video_file_exists", "youtube_upload", "youtube_thumbnail", "video_embedded", "videoobject_schema", "live_page_verified", "outreach_sent_or_blocked"],
