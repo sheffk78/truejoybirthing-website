@@ -125,6 +125,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M35S",
     uploadDate: "2026-07-17T00:00:00-06:00",
   },
+  "garden-grove-ca": {
+    videoId: "Ai_zYl9Nv0w",
+    title: "Garden Grove Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
+    description: "Watch the full city guide — 6 doulas & midwives, 3 hospitals, 1 birth center, costs, and California Medi-Cal SB-509 coverage, all in under 5 minutes.",
+    duration: "PT4M18S",
+    uploadDate: "2026-08-12T00:00:00-07:00",
+  },
   "vancouver-wa": {
     videoId: "z4YlQEkJzRo",
     title: "Vancouver WA Doula & Birth Plan Guide",
