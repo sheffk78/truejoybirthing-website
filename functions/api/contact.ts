@@ -120,28 +120,39 @@ export const onRequestPost = async (context) => {
       }
     }
 
-    // ── Secondary: AgentMail inbox notification (fire-and-forget) ──
-    const inboxId = 'support@truejoybirthing.com';
-    const emailSubject = subject || `New contact from ${name || email}`;
+    // ── Secondary: Postmark notification → support@truejoybirthing.com ──
+    // Routes to the VPS support inbox (support@ → kenneth mailbox) via MX.
+    // Replaces the removed AgentMail API call (2026-08-13).
+    const emailSubject = subject || `New contact form from ${name || email}`;
     const emailBody = [
       `New contact form submission from truejoybirthing.com`,
-      '',
+      ``,
       `Name: ${name || 'Not provided'}`,
       `Email: ${email}`,
       `Message:`,
       message,
     ].join('\n');
 
-    fetch(`https://api.agentmail.to/v0/inboxes/${inboxId}/messages/send`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${env.AGENTMAIL_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ to: [inboxId], subject: emailSubject, text: emailBody }),
-    }).catch((agentErr) => {
-      console.error('AgentMail send failed (non-blocking):', agentErr);
-    });
+    if (env.POSTMARK_SERVER_TOKEN) {
+      await fetch('https://api.postmarkapp.com/email', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'X-Postmark-Server-Token': env.POSTMARK_SERVER_TOKEN,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          From: 'support@truejoybirthing.com',
+          To: 'support@truejoybirthing.com',
+          Subject: emailSubject,
+          TextBody: emailBody,
+        }),
+      }).catch((pmErr) => {
+        console.error('Postmark notify failed (non-blocking):', pmErr);
+      });
+    } else {
+      console.error('POSTMARK_SERVER_TOKEN not set; skipping form notification');
+    }
 
     // Return success — lead is captured
     return new Response(JSON.stringify({ success: true }), {
