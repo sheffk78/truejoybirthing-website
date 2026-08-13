@@ -360,11 +360,18 @@ def run_gate(name: str, slug: str, block: str | None) -> tuple[bool, str]:
         return ok, f"pre_render_gate: scene data {'exists' if ok else f'MISSING {scene.name}'}"
 
     if name == "video_file_exists":
-        # Rendered video > 10MB
+        # Rendered video > 10MB, OR YouTube upload already completed (video ID in embeds)
         vids = list((REMOTION_DIR / "out").glob(f"{slug}*.mp4")) if (REMOTION_DIR / "out").exists() else []
         big = [v for v in vids if v.stat().st_size > 10_000_000]
-        ok = len(big) > 0
-        return ok, f"video_file_exists: {len(big)} video(s) >10MB" + (f" ({big[0].name})" if big else "")
+        if len(big) > 0:
+            return True, f"video_file_exists: {len(big)} video(s) >10MB ({big[0].name})"
+        # Fallback: if YouTube upload gate already passed (videoId in embeds), the video was rendered+uploaded and local file cleaned up
+        if VIDEO_EMBEDS.exists():
+            txt = VIDEO_EMBEDS.read_text(errors="ignore")
+            has_id = bool(re.search(rf'"{re.escape(slug)}"\s*:\s*\{{[^}}]*videoId\s*:\s*"[A-Za-z0-9_-]+"', txt, re.S))
+            if has_id:
+                return True, "video_file_exists: YouTube upload confirmed (videoId in embeds, local .mp4 cleaned up)"
+        return False, f"video_file_exists: {len(big)} video(s) >10MB"
 
     if name == "youtube_upload":
         # Video ID present in video-embeds.ts
