@@ -9191,7 +9191,7 @@ hospitalDetails: [
     costLow: 800,
     costHigh: 2500,
     shelbiServesHere: false,
-    heroImage: "/images/arvada-co-birth-doula-hero-v1.webp",
+    heroImage: "/images/arvada-co-birth-doula-hero-v2.webp",
     supportSceneImage: "/images/arvada-co-birth-doula-support-v1.webp",
     supportSceneAlt: "A doula supporting a pregnant woman during labor in Arvada, Colorado",
     ogImage: "https://truejoybirthing.com/images/og-city-arvada-co-v1.webp",

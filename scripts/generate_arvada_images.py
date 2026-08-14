@@ -17,19 +17,19 @@ with open(raw_path, 'wb') as f:
 img = Image.open(raw_path)
 print(f"Raw image size: {img.size}, mode: {img.mode}")
 
-# --- Hero image: 1200x800, pregnant silhouette + Arvada city landscape ---
+# --- Hero image: preserve the source aspect ratio; never stretch ---
+# The source is square. Keep it square for the page hero and use a contained
+# composition for 16:9 video thumbnails. Non-uniform resize is prohibited.
 hero = img.copy().convert('RGB')
-hero = hero.resize((1200, 800), Image.LANCZOS)
-hero_path = 'public/images/arvada-co-birth-doula-hero-v1.webp'
-hero.save(hero_path, 'webp', quality=90)
-print(f"Hero saved: {hero_path}")
+hero_path = 'public/images/arvada-co-birth-doula-hero-v2.webp'
+hero.save(hero_path, 'webp', quality=92, method=6)
+print(f"Hero saved without distortion: {hero_path} ({hero.size})")
 
-# Also save 600px version
-hero_600 = hero.copy()
-hero_600 = hero_600.resize((600, 400), Image.LANCZOS)
-hero_600_path = 'public/images/arvada-co-birth-doula-hero-v1-600.webp'
-hero_600.save(hero_600_path, 'webp', quality=85)
-print(f"Hero 600 saved: {hero_600_path}")
+# Also save a square responsive version.
+hero_600 = hero.resize((600, 600), Image.Resampling.LANCZOS)
+hero_600_path = 'public/images/arvada-co-birth-doula-hero-v2-600.webp'
+hero_600.save(hero_600_path, 'webp', quality=88, method=6)
+print(f"Hero 600 saved without distortion: {hero_600_path}")
 
 # Convert hero to AVIF using ffmpeg/cavif if available, otherwise skip
 for src, dst in [

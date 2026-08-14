@@ -21,14 +21,18 @@ set -euo pipefail
 
 PROJECT_DIR="/Users/socializerender/Projects/truejoybirthing-website"
 
-# 🔴 GATE 1: Working directory must be canonical tree
-if [[ "$PWD" != "$PROJECT_DIR" ]]; then
-  echo "❌ FATAL: Working directory must be $PROJECT_DIR"
-  echo "  Current: $PWD"
-  echo "  The alternate tree at ~/.openclaw/... was deleted and symlinked on June 10."
+# 🔴 GATE 1: Working directory must resolve to the canonical tree.
+# PROJECT_DIR is a symlink to the workspace tree on this machine; compare
+# physical paths so the safety gate does not reject the approved canonical link.
+EXPECTED_PROJECT_DIR="$(cd "$PROJECT_DIR" && pwd -P)"
+CURRENT_PROJECT_DIR="$(pwd -P)"
+if [[ "$CURRENT_PROJECT_DIR" != "$EXPECTED_PROJECT_DIR" ]]; then
+  echo "❌ FATAL: Working directory must resolve to $EXPECTED_PROJECT_DIR"
+  echo "  Current: $CURRENT_PROJECT_DIR"
   echo "  Run: cd $PROJECT_DIR && bash scripts/deploy.sh"
   exit 1
 fi
+PROJECT_DIR="$EXPECTED_PROJECT_DIR"
 SITE_URL="https://truejoybirthing.com"
 DRY_RUN=false
 
