@@ -1,0 +1,95 @@
+{
+  "slug": "tampa-fl",
+  "enriched_at": "2026-08-13T20:41:15Z",
+  "hospitals": [
+    {
+      "name": "Tampa General Hospital",
+      "thumbnail": "/images/tampa-general-hospital-tampa.webp",
+      "url": "https://www.tgh.org/institutes-and-services/womens-institute/obstetrics-center",
+      "address": "1 Tampa General Cir, Tampa, FL 33606",
+      "nicuLevel": "III",
+      "nicu_source": "stated directly on tgh.org (one of 11 Regional Perinatal Intensive Care Centers designated by State of Florida)",
+      "doulaPolicy": "Doulas welcome in L&D; certified doulas allowed in operating room for cesareans",
+      "medicaid": "Yes",
+      "paragraph_length": 898,
+      "description_source": "existing-cities-ts (verified via tgh.org - Baby-Friendly designated, Level IV Maternal Care Verified by Joint Commission, Jennifer Leigh Muma NICU, Newsweek America's Best Maternity Hospitals 2026)",
+      "verification_notes": "Confirmed Baby-Friendly designation (only hospital in Hillsborough County), Level IV Maternal Care verification, 2026 Newsweek award. og:image, NICU, and doula policy all confirmed via tgh.org obstetrics page."
+    },
+    {
+      "name": "St. Joseph's Women's Hospital",
+      "thumbnail": "/images/st-josephs-womens-tampa.webp",
+      "url": "https://baycare.org/locations/hospitals/st-josephs-womens-hospital/services/maternity",
+      "address": "3030 W Dr Martin Luther King Jr Blvd, Tampa, FL 33607",
+      "nicuLevel": "IV",
+      "nicu_source": "stated directly on baycare.org (76-bed Level IV NICU, highest level designated by State of Florida and AAP)",
+      "doulaPolicy": "Doulas welcome in L&D",
+      "medicaid": "Yes",
+      "paragraph_length": 856,
+      "description_source": "existing-cities-ts (verified via baycare.org - Level IV Maternal Care Verified Facility by Joint Commission, 76-bed Level IV NICU, 800+ infants admitted annually)",
+      "verification_notes": "Confirmed Level IV Maternal Care Verified Facility designation by The Joint Commission via baycare.org. NICU admits 800+ infants annually. Private spacious labor/delivery/recovery suites, GetWellNetwork educational videos, rooming-in, Serenity Garden."
+    },
+    {
+      "name": "AdventHealth Tampa",
+      "thumbnail": "/images/adventhealth-tampa.webp",
+      "url": "https://www.adventhealth.com/locations/hospitals/tampa/services/mother-and-baby-care",
+      "address": "5000 McKinley Dr, Tampa, FL 33614",
+      "nicuLevel": "III",
+      "nicu_source": "existing-cities-ts (Level III NICU staffed 24/7 with board-certified neonatologists)",
+      "doulaPolicy": "Doulas welcome in L&D",
+      "medicaid": "Yes",
+      "paragraph_length": 903,
+      "description_source": "existing-cities-ts",
+      "verification_notes": "The Birth Day Experience program, Women's Health Pavilion, Birth Designer service, Bronze-Level Safe Sleep Certified, OBED with obstetric hospitalists."
+    },
+    {
+      "name": "HCA Florida Brandon Hospital",
+      "thumbnail": "/images/brandon-regional-hospital-tampa.webp",
+      "url": "https://www.hcafloridahealthcare.com/locations/brandon-hospital/specialties/womens-care/labor-and-delivery",
+      "address": "119 Oakfield Dr, Brandon, FL 33511",
+      "nicuLevel": "III",
+      "nicu_source": "existing-cities-ts (Level III NICU on-site)",
+      "doulaPolicy": "Doulas welcome in L&D",
+      "medicaid": "Yes",
+      "paragraph_length": 902,
+      "description_source": "existing-cities-ts",
+      "verification_notes": "Women's Center, on-site Level III NICU, certified nurse-midwives on staff, antepartum unit for high-risk pregnancies, remote obstetrical monitoring technology."
+    },
+    {
+      "name": "South Florida Baptist Hospital",
+      "thumbnail": "/images/south-florida-baptist-hospital-tampa.webp",
+      "url": "https://baycare.org/locations/hospitals/south-florida-baptist-hospital/services/maternity",
+      "address": "3202 N Park Rd, Plant City, FL 33563",
+      "nicuLevel": "II",
+      "nicu_source": "existing-cities-ts (new $2.4 million Level II NICU with 8 private rooms)",
+      "doulaPolicy": "Doulas welcome in L&D",
+      "medicaid": "Yes",
+      "paragraph_length": 859,
+      "description_source": "existing-cities-ts",
+      "verification_notes": "BayCare system hospital in Plant City, ~25 miles east of downtown Tampa. New Level II NICU with dedicated twins room, GetWellNetwork, Maternity and Motherhood Wellness Program."
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Barefoot Birth",
+      "thumbnail": "/images/labor-of-love-birth-center-tampa.webp",
+      "url": "https://www.barefootbirth.com/",
+      "address": "2808 W Kennedy Blvd, Tampa, FL 33607",
+      "services": ["Home Birth", "Water Birth", "VBAC Support", "Midwifery Care", "Prenatal Care", "Postpartum Care", "Lactation Support"],
+      "credential": "LM, CPM",
+      "medicaid": false,
+      "paragraph_length": 914,
+      "description_source": "existing-cities-ts (verified via barefootbirth.com - Charlie Rae Young LM, CPM, CLC founded 2008)",
+      "verification_notes": "Home birth midwifery practice founded by Charlie Rae Young. Serves Hillsborough, Pinellas, parts of Pasco and Polk counties. Also operates The Community Roots Collective 501c3. Labor of Love Birth Center in Lutz closed June 8, 2026 — Barefoot Birth is primary out-of-hospital option."
+    },
+    {
+      "name": "Sweet Child of Mine Birth Center",
+      "thumbnail": "/images/sweet-child-of-mine-birth-center-tampa.webp",
+      "url": "https://sweetchildofmineultrasound.com/",
+      "address": "6535 Gunn Hwy, Tampa, FL 33625",
+      "services": ["Water Birth", "Natural Birth", "Midwifery Care", "Prenatal Care", "Postpartum Care", "Nitrous Oxide", "Wellness Care"],
+      "paragraph_length": 576,
+      "description_source": "existing-cities-ts",
+      "verification_notes": "Tampa Bay area out-of-hospital birth center. Midwives are graduates of the Florida School of Traditional Midwifery. Offers water birth, nitrous oxide pain relief."
+    }
+  ]
+}

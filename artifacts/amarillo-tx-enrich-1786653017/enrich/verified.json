@@ -1,0 +1,87 @@
+{
+  "slug": "amarillo-tx",
+  "verified_at": "2026-08-13T20:30:00Z",
+  "providers": [
+    {
+      "name": "Liz Hensley",
+      "practice": "Liz Hensley Birth Doula",
+      "url": "https://www.facebook.com/share/2EbXB7qox2P4zC4T/",
+      "status": "active",
+      "verification_sources": [
+        "beyondbirthmidwifery.com/resource/doula - listed with phone (575) 318-4576 and email lizhensley17@gmail.com",
+        "facebook.com - active page Mother Mothers (61556116794318)",
+        "Facebook group posts confirming doula services in Amarillo/Canyon TX"
+      ],
+      "email": "lizhensley17@gmail.com",
+      "phone": "(575) 318-4576",
+      "verified": true
+    },
+    {
+      "name": "Macy Smith",
+      "practice": "Macy Smith Doula Services",
+      "url": "https://www.facebook.com/p/Macy-Smith-Doula-Services-61557069352950/",
+      "status": "active",
+      "verification_sources": [
+        "beyondbirthmidwifery.com/resource/doula - listed with phone (806) 440-5483 and email macysmithdoulaservices@gmail.com",
+        "facebook.com - active page Macy Smith Doula Services",
+        "Instagram @macy__layne - active profile"
+      ],
+      "email": "macysmithdoulaservices@gmail.com",
+      "phone": "(806) 440-5483",
+      "verified": true
+    },
+    {
+      "name": "Abbie Whitfield",
+      "practice": "Abbie Whitfield",
+      "url": "https://www.bornbir.com/abbie-whitfield",
+      "status": "active",
+      "verification_sources": [
+        "bornbir.com/abbie-whitfield - active profile, Birth & Postpartum Doula, Amarillo TX",
+        "bornbir.com/amarillo/tx/doula - listed in Amarillo doula directory",
+        "bornbir.com/amarillo/tx/postpartum_doula - 3 years experience listed"
+      ],
+      "phone": "432.203.4226",
+      "verified": true,
+      "isVerified": true
+    },
+    {
+      "name": "Crystal Walker",
+      "practice": "Crystal Walker Doula",
+      "url": "https://www.beyondbirthmidwifery.com/resource/doula",
+      "status": "active",
+      "verification_sources": [
+        "beyondbirthmidwifery.com/resource/doula - listed with phone (806) 677-6519 and email crystal4walker@icloud.com",
+        "betterbirthamarillo.com/board - listed as board member and postpartum doula",
+        "facebook.com Welcome Baby Amarillo - post confirming active doula work"
+      ],
+      "email": "crystal4walker@icloud.com",
+      "phone": "(806) 677-6519",
+      "verified": true
+    },
+    {
+      "name": "Ashley Brottlund",
+      "practice": "Ashley Brottlund Doula",
+      "url": "https://www.hellomeela.com/listing/19882/",
+      "status": "active",
+      "verification_sources": [
+        "hellomeela.com listing 19882 - Full Spectrum Doula in Amarillo TX, 4+ years experience",
+        "linkedin.com/in/ashley-brottlund - Full Spectrum Doula Sep 2017-Jan 2023",
+        "panhandlebirth.com/referred-providers - listed as referred provider"
+      ],
+      "verified": true
+    },
+    {
+      "name": "Gabrielle Carrier",
+      "practice": "Nurtured Doula Services",
+      "url": "https://www.beyondbirthmidwifery.com/resource/doula",
+      "status": "active",
+      "verification_sources": [
+        "beyondbirthmidwifery.com/resource/doula - listed with phone (806) 236-3062 and email nurtureddoulas@gmail.com",
+        "Instagram post by Beyond Birth Midwifery - confirmed as birth & postpartum doula"
+      ],
+      "email": "nurtureddoulas@gmail.com",
+      "phone": "(806) 236-3062",
+      "verified": true
+    }
+  ]
+}

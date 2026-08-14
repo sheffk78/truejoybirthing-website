@@ -1,0 +1,121 @@
+tampa-fl ENRICH MERGE DIFF
+==========================
+Run ID: tampa-fl-enrich-1786653675
+Date: 2026-08-13T20:41:15Z
+
+SUMMARY
+-------
+Enriched the Tampa, FL city page: verified all 10 providers as real and active,
+confirmed all cost ranges and services, sourced 3 new/improved provider photos
+(Dee Pullen placeholder replacement, Melissa Humphries new photo, Johanna
+Lancaster re-sourced from banner crop), and verified 5 hospital + 2 birth center
+descriptions and thumbnails. Tampa is a major-metro city (metro 3.1M) requiring
+6+ doulas and 3+ hospitals per R19 — this page has 10 doulas and 5 hospitals.
+
+ENRICHMENT WORK COMPLETED
+-------------------------
+1. PROVIDER VERIFICATION (verified.json)
+   All 10 providers verified as REAL and ACTIVE:
+   - Candice Enriquez: doulamatch.net/profile/15484 (ACTIVE, 19 testimonials, updated 7/23/2026)
+     + facebook.com/Candicebirthdoula (506 likes)
+   - One Love Doula Services: onelovedoula.com (live, Yamel Belen RN, IBCLC, Founder)
+     + linkedin.com/company/one-love-doula-services-llc
+   - Buddha Belly Doulas: buddhabellybirth.com (live, Instagram confirms Best of Bay 2025)
+     + instagram.com/p/DEizBgsI5sm/, /reel/DN87d7_Drgn/, /p/DUG-CZ3gWfj/
+   - Lori Rose: doulamatch.net/profile/7036 (ACTIVE, Tampa FL, 30mi range)
+     + motherfigure.com/directory/doula/lori-rose
+   - Tanya Grazione: tanyagrazione.com (live, DTI certified, Hypnobirthing educator)
+     + fun4tampakids.com listing, Instagram @tanya_grazione, podcast appearance
+   - Dee Pullen: doulamatch.net/profile/1606 (ACTIVE, 29 years, 530 births, 19 testimonials)
+     + calendar last updated 05-19-2026, latest testimonial 9/14/2025
+     + betterbirthing.net (website live)
+   - Dee Larkin: firmfoundationdoulaco.com (live Squarespace, Christian doula Tampa Bay)
+     + /about page confirms Tampa FL, /bereavement page live, c3tb.org member
+   - Melissa Humphries: doulamatch.net/profile/40244 (ACTIVE, CBI Postpartum Doula)
+     + calendar last updated 07-16-2026, latest testimonial 4/20/2026
+     + bornbir.com/melissa-humphries (active, Temple Terrace FL, 5.0 rating)
+   - Charlie Rae Young: barefootbirth.com + midwifecharlieraeyoung.com (live)
+     + Florida Licensed Midwife MW276, CPM, CLC, Florida School of Traditional Midwifery
+     + avivaromm.com practitioner listing, LinkedIn confirms credentials
+   - Johanna Lancaster: tampabaymidwifery.com (live, og:image present)
+     + barefootbirth.com/blog/2021/5/24 CNM announcement post
+     + barefootbirth.com/blog/2021/6/14 confirms CNM + women's health nurse practitioner
+
+2. SERVICES + COST RANGES (services-costs.json)
+   All cost ranges confirmed against provider websites and DoulaMatch:
+   - Candice Enriquez: $2,875-$4,100 (DoulaMatch listing confirms $2875 to $4100)
+   - One Love Doula Services: $1,300-$2,395 (onelovedoula.com confirms packages)
+   - Buddha Belly Doulas: $1,500-$2,500 (Instagram + published TJB page)
+   - Lori Rose: $2,100-$2,600 (DoulaMatch profile)
+   - Tanya Grazione: $1,200-$2,000 (tanyagrazione.com)
+   - Dee Pullen: $800-$1,350 (DoulaMatch confirms $800 to $1350)
+   - Dee Larkin: $1,000-$2,200 (firmfoundationdoulaco.com)
+   - Melissa Humphries: $30-$45/hr (DoulaMatch confirms $30 to $45; Bornbir shows $25/hr)
+   - Charlie Rae Young: $3,500-$5,000 (barefootbirth.com home birth midwifery)
+   - Johanna Lancaster: $2,000-$4,000 (tampabaymidwifery.com CNM services)
+   No "Contact for pricing" placeholders found.
+
+3. PHOTOS (photos.json)
+   REPLACED 1 placeholder photo (icon, not a real headshot):
+   - Dee Pullen: was 193-color icon/placeholder (7KB, 300x300) -> replaced with
+     real headshot from betterbirthing.net (283x300 -> 377x400, 42378 colors, 14KB)
+   
+   ADDED 2 new photos (previously photo: ""):
+   - Melissa Humphries: was empty -> Bornbir Cloudinary full-res (3024x4032 ->
+     300x400, 27743 colors, 23KB). Source: res.cloudinary.com/bornbir/.../wscjvxwo6shea8h6b3k30ryvgjhm.jpeg
+   - Johanna Lancaster: was empty -> tjb-direct-enrich.py auto-sourced a 500x99
+     banner crop from tampabaymidwifery.com. Re-sourced from Barefoot Birth blog
+     Squarespace CDN at 750w format (750x635 -> 400x338, 4870 colors, 39KB)
+   
+   VERIFIED 7 existing photos as real headshots/logos:
+   - Candice Enriquez: 300x300, 12309 colors, 7KB
+   - One Love Doula Services: 355x400 (logo), 13800 colors, 22KB
+   - Buddha Belly Doulas: 400x276 (logo), 33755 colors, 22KB
+   - Lori Rose: 300x300, 22965 colors, 9KB
+   - Tanya Grazione: 300x300, 8951 colors, 18KB
+   - Dee Larkin: 300x300, 27410 colors, 19KB
+   - Charlie Rae Young (Barefoot Birth): 400x400 (logo), 14969 colors, 15KB
+   
+   RESULT: 10/10 providers now have real photos (>500 colors, >3KB)
+
+4. HOSPITAL DESCRIPTIONS + THUMBNAILS (hospitals.json)
+   All 5 hospital descriptions verified (all >=300 chars, 856-903 chars):
+   - Tampa General Hospital: 898 chars, thumbnail 43KB (800x600), Baby-Friendly +
+     Level IV Maternal Care Verified by Joint Commission + Newsweek 2026 Best
+     Maternity Hospital, confirmed via tgh.org
+   - St. Joseph's Women's Hospital: 856 chars, thumbnail 62KB (800x600), Level IV
+     NICU (76-bed) + Level IV Maternal Care Verified, confirmed via baycare.org
+   - AdventHealth Tampa: 903 chars, thumbnail 95KB (800x600), Level III NICU
+   - HCA Florida Brandon Hospital: 902 chars, thumbnail 25KB (400x300), Level III NICU
+   - South Florida Baptist Hospital: 859 chars, thumbnail 18KB (400x300), Level II NICU
+   
+   2 birth center descriptions verified (576-914 chars, all >=300):
+   - Barefoot Birth: 914 chars, thumbnail 38KB (400x300)
+   - Sweet Child of Mine Birth Center: 576 chars, thumbnail 34KB (400x300)
+   
+   All 7 thumbnails >=15KB (G35 PASS).
+
+5. MERGE INTO cities.ts
+   PATCHED cities.ts (via patch tool, NOT write_file):
+   - Melissa Humphries: photo: "" -> photo: "/images/doulas/melissa-humphries-tampa-fl.webp"
+   - Johanna Lancaster: photo: "" -> photo: "/images/provider-tampa-fl-johanna-lancaster.webp"
+   
+   IMAGE FILES ADDED/REPLACED on disk (3 files):
+   - public/images/doulas/dee-pullen-tampa-fl.webp (replaced placeholder with real headshot)
+   - public/images/doulas/melissa-humphries-tampa-fl.webp (new file)
+   - public/images/provider-tampa-fl-johanna-lancaster.webp (re-sourced from banner crop)
+   
+   No double-comma artifacts after merge (grep -c ',,' = 0).
+
+GATE RESULTS (G2-enrich)
+-----------------------
+G14: PASS - 10/10 providers have description
+G15: PASS - 10/10 providers have photo field
+G15b: PASS - 10/10 real photos (all >500 colors, >3KB, R13)
+G57: PASS - 10/10 provider photos on disk
+S8: PASS - no "Contact for pricing"
+G9: PASS - no scraped artifacts
+cost_format: PASS - 10/10 cost ranges are dollar amounts
+G60: PASS - birthStats complete (cesareanRate, maternalMortalityRate, homeBirthRate, birthCenterBirthRate, dataYear, dataSource)
+hospital_desc_length: PASS - 5/5 hospital descs >=300 chars (R18)
+G35: PASS - 7/7 thumbnails >=15KB

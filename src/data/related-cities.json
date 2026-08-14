@@ -60,11 +60,29 @@
     {
       "slug": "houston-tx",
       "sharedProviders": 1
+    },
+    {
+      "slug": "san-antonio-tx",
+      "sharedProviders": 1
     }
   ],
   "houston-tx": [
     {
       "slug": "austin-tx",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "san-antonio-tx",
+      "sharedProviders": 1
+    }
+  ],
+  "san-antonio-tx": [
+    {
+      "slug": "austin-tx",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "houston-tx",
       "sharedProviders": 1
     }
   ],
@@ -276,7 +294,18 @@
     }
   ],
   "san-diego-ca": [],
-  "huntington-beach-ca": [],
+  "huntington-beach-ca": [
+    {
+      "slug": "garden-grove-ca",
+      "sharedProviders": 1
+    }
+  ],
+  "garden-grove-ca": [
+    {
+      "slug": "huntington-beach-ca",
+      "sharedProviders": 1
+    }
+  ],
   "yonkers-ny": [],
   "oceanside-ca": [],
   "naperville-il": [],
@@ -315,5 +344,7 @@
   "arlington-heights-il": [],
   "anchorage-ak": [],
   "jacksonville-fl": [],
-  "louisville-ky": []
+  "louisville-ky": [],
+  "corpus-christi-tx": [],
+  "tampa-fl": []
 }

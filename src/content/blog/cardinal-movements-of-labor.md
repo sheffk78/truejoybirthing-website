@@ -5,7 +5,7 @@ slug: "cardinal-movements-of-labor"
 author: "Shelbi Kohler"
 description: "The 7 cardinal movements of labor explained simply. Learn how your baby descends through the pelvis and why it matters for your birth plan and positions."
 canonical: "https://truejoybirthing.com/blog/cardinal-movements-of-labor/"
-featuredImage: "/images/doula-counter-pressure.webp"
+featuredImage: "/images/cardinal-movements/cardinal-01-engagement-v2.webp"
 layout: "../../layouts/PostLayout.astro"
 ---
 
@@ -15,9 +15,53 @@ When you know what your baby is doing and why, you can choose birthing positions
 
 ## What Are the Cardinal Movements of Labor?
 
-The cardinal movements of labor are the seven specific maneuvers a baby performs as they move from the uterus, through the pelvis, and out into the world. They are not random. They are a coordinated sequence that has to happen in a particular order for a vaginal birth to proceed. The seven cardinal movements are engagement, descent, flexion, internal rotation, extension, external rotation, and expulsion.
+The cardinal movements of labor are the seven specific maneuvers a baby performs as they move from the uterus, through the pelvis, and out into the world. They are not random. They are a coordinated sequence that has to happen in a particular order for a vaginal birth to proceed.
 
 These movements are driven partly by the force of your contractions and partly by the shape of your pelvis. The pelvic inlet is wider side to side, while the pelvic outlet is wider front to back. Your baby has to turn and tuck to fit through those changing dimensions. When providers talk about fetal descent or the station of baby, this is exactly what they are tracking.
+
+## The 7 Cardinal Movements, Step by Step
+
+### 1. Engagement
+
+Engagement is the first movement. Your baby's head (the widest part, called the biparietal diameter) drops into the pelvic inlet. If this is your first pregnancy, engagement often happens weeks before labor. For experienced moms, it may not happen until labor begins.
+
+![Engagement: baby's head entering the pelvic inlet in a soft watercolor medical illustration](/images/cardinal-movements/cardinal-01-engagement-v2.webp)
+
+### 2. Descent
+
+Once engaged, the head moves deeper into the pelvis. Descent is driven by contractions and the pressure of amniotic fluid. The head travels from the pelvic inlet through the mid-pelvis, toward the ischial spines — the narrowest part of the pelvis.
+
+![Descent: baby's head moving through the mid-pelvis in a soft watercolor medical illustration](/images/cardinal-movements/cardinal-02-descent-v2.webp)
+
+### 3. Flexion
+
+As the head meets resistance from the pelvic floor and cervix, it flexes. The chin presses firmly against the chest, bringing the smallest possible diameter of the head to the birth canal. This is why a well-flexed head delivers more easily than a deflexed one.
+
+![Flexion: baby's head showing maximum chin-to-chest flexion in the lower pelvis](/images/cardinal-movements/cardinal-03-flexion-v2.webp)
+
+### 4. Internal Rotation
+
+Inside the pelvis, the baby's head rotates. The occiput (back of the head) turns from a sideways position toward the front, ending up under the pubic symphysis. This rotation lets the head align with the widest part of the pelvic outlet. When this rotation does not happen smoothly, you get the classic back labor of a posterior baby.
+
+![Internal rotation: baby's head rotating so the occiput points anteriorly under the pubic symphysis](/images/cardinal-movements/cardinal-04-internal-rotation-v2.webp)
+
+### 5. Extension (Crowning)
+
+With the occiput pivoting under the pubic symphysis, the head begins to extend — tilting backward as it passes through the pelvic outlet. The face sweeps over the perineum. This is the crowning moment, often accompanied by the burning "ring of fire" sensation.
+
+![Crowning: baby's head extending at the pelvic outlet, beginning to emerge](/images/cardinal-movements/cardinal-05-crowning-v2.webp)
+
+### 6. Restitution and External Rotation
+
+Once the head is delivered, it rotates back to align with the shoulders. The head turns about 45 degrees to face the mother's thigh. Meanwhile, the shoulders are rotating inside the pelvis to prepare for their delivery.
+
+![Restitution: baby's head delivered and rotating back to align with shoulders still inside the pelvis](/images/cardinal-movements/cardinal-06-extension-v2.webp)
+
+### 7. Expulsion
+
+The final movement. The anterior shoulder slips under the pubic symphysis, then the posterior shoulder sweeps over the perineum. The rest of the body follows in a smooth, curled motion. Your baby is here.
+
+![Expulsion: baby's body delivering after the head and shoulders, calm and peaceful](/images/cardinal-movements/cardinal-07-expulsion-v2.webp)
 
 ## Why Does Fetal Descent Matter for Your Birth?
 
@@ -31,7 +75,7 @@ Providers measure fetal descent using something called "stations." It is a scale
 
 The station of baby tells us which cardinal movements have already happened and which are still ahead. A baby at negative two has likely engaged but has not fully descended. A baby at plus two has probably completed internal rotation and is getting ready for extension. When your provider calls out a station during a cervical check, you will know exactly where your baby is in the sequence.
 
-![Baby in the pelvis at full term, head-down and engaged, ready to descend through the birth canal](/images/pregnancy-series/pregnancy-week-40-approved.webp)
+![Baby in the pelvis at full term, head-down and engaged, ready to descend through the birth canal](/images/cardinal-movements/cardinal-01-engagement-v2.webp)
 
 ## How Does Fetal Rotation Help the Baby Fit?
 

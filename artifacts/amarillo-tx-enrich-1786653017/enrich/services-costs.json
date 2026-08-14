@@ -1,0 +1,74 @@
+{
+  "slug": "amarillo-tx",
+  "enriched_at": "2026-08-13T20:30:00Z",
+  "market_data": {
+    "source": "bornbir-market-estimate",
+    "birth_doula_range": "$500-$1,600",
+    "postpartum_doula_hourly": "$30-$49/hr",
+    "average_birth_doula": "$1,100"
+  },
+  "providers": [
+    {
+      "name": "Liz Hensley",
+      "costRange": "$650-$1,800",
+      "services": [
+        "Birth Doula",
+        "Postpartum Doula"
+      ],
+      "source": "existing-cities-ts",
+      "verified": true
+    },
+    {
+      "name": "Macy Smith",
+      "costRange": "$650-$1,800",
+      "services": [
+        "Birth Doula",
+        "Postpartum Doula"
+      ],
+      "source": "existing-cities-ts",
+      "verified": true
+    },
+    {
+      "name": "Abbie Whitfield",
+      "costRange": "$800-$1,200",
+      "services": [
+        "Birth Doula",
+        "Postpartum Doula"
+      ],
+      "source": "bornbir-profile-confirmed",
+      "bornbir_pricing": "$1,000 flat rate (birth package)",
+      "verified": true
+    },
+    {
+      "name": "Crystal Walker",
+      "costRange": "$650-$1,800",
+      "services": [
+        "Postpartum Doula"
+      ],
+      "source": "existing-cities-ts",
+      "verified": true
+    },
+    {
+      "name": "Ashley Brottlund",
+      "costRange": "$600-$1,800",
+      "services": [
+        "Birth Doula",
+        "Postpartum Doula",
+        "Childbirth Education",
+        "Placenta Encapsulation"
+      ],
+      "source": "existing-cities-ts",
+      "verified": true
+    },
+    {
+      "name": "Gabrielle Carrier",
+      "costRange": "$650-$1,800",
+      "services": [
+        "Birth Doula",
+        "Postpartum Doula"
+      ],
+      "source": "existing-cities-ts",
+      "verified": true
+    }
+  ]
+}

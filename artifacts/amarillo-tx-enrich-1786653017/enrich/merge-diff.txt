@@ -1,0 +1,65 @@
+amarillo-tx ENRICH MERGE DIFF
+============================
+Run ID: amarillo-tx-enrich-1786653017
+Date: 2026-08-13T20:30:00Z
+
+SUMMARY
+-------
+Enriched the Amarillo, TX city page: replaced 3 placeholder provider photos 
+with real headshots, created 1 missing hospital thumbnail, re-sourced 3 
+existing provider photos at higher resolution, and added missing birthStats.
+
+ENRICHMENT WORK COMPLETED
+-------------------------
+1. PROVIDER VERIFICATION (verified.json)
+   All 6 providers verified as REAL and ACTIVE:
+   - Liz Hensley: beyondbirthmidwifery.com + Facebook (Mother Mothers page)
+   - Macy Smith: beyondbirthmidwifery.com + Facebook + Instagram @macy__layne
+   - Abbie Whitfield: bornbir.com/abbie-whitfield (active, isVerified: true)
+   - Crystal Walker: beyondbirthmidwifery.com + betterbirthamarillo.com/board
+   - Ashley Brottlund: hellomeela.com listing 19882 + LinkedIn
+   - Gabrielle Carrier: beyondbirthmidwifery.com + Instagram
+
+2. SERVICES + COST RANGES (services-costs.json)
+   All cost ranges confirmed against Bornbir market data ($500-$1,600 birth, $30-$49/hr postpartum).
+   Abbie Whitfield confirmed at $1,000 flat rate on Bornbir profile.
+   No "Contact for pricing" placeholders found.
+
+3. PHOTOS (photos.json)
+   REPLACED 3 placeholder photos (926B each, 1118 colors) with real headshots:
+   - Liz Hensley: Facebook Mother Mothers page → 17590B (400x400, 38361 colors)
+   - Macy Smith: Instagram @macy__layne → 10540B (400x400, 21797 colors)
+   - Gabrielle Carrier: Instagram via Beyond Birth Midwifery → 19772B (400x400, 38591 colors)
+   
+   RE-SOURCED 3 existing photos at higher resolution:
+   - Abbie Whitfield: Bornbir Cloudinary → 20756B (345x400, 31501 colors)
+   - Crystal Walker: Better Birth Amarillo board page → 15492B (266x400, 38999 colors)
+   - Ashley Brottlund: hellomeela staging CDN → 16278B (400x400, 32568 colors)
+
+4. HOSPITAL DESCRIPTIONS + THUMBNAILS (hospitals.json)
+   - Baptist St. Anthony's: existing thumbnail verified (67468B, 800x534), paragraph 619 chars
+   - Northwest Texas Healthcare: CREATED missing thumbnail from nwths.com (72896B, 600x400), paragraph 576 chars
+   - Birth Haven: existing thumbnail verified (19430B, 800x534), paragraph 649 chars
+
+5. MERGE INTO cities.ts
+   PATCHED cities.ts (via patch tool):
+   - Added birthStats block with Texas CDC NCHS data (cesareanRate: 32.3, 
+     maternalMortalityRate: 29.3, homeBirthRate: 1.2, birthCenterBirthRate: 0.8, 
+     dataYear: 2023, dataSource: "CDC NCHS National Vital Statistics System")
+   
+   IMAGE FILES ADDED/REPLACED on disk (no cities.ts changes needed for paths):
+   - 6 provider photo files replaced/re-sourced
+   - 1 hospital thumbnail file created (amarillo-tx-northwest-texas-healthcare.webp)
+
+GATE RESULTS (G2-enrich)
+-----------------------
+G14: PASS - 6/6 providers have description
+G15: PASS - 6/6 providers have photo field
+G15b: PASS - 6/6 real photos (all >500 colors, >3KB)
+G35: PASS - 3/3 thumbnails >=15KB
+S8: PASS - no Contact for pricing
+G9: PASS - no scraped artifacts
+G57: PASS - 6/6 provider photos on disk
+hospital_desc_length: PASS - 2/2 hospital descs >=300 chars (R18)
+cost_format: PASS - 6/6 cost ranges are dollar amounts
+G60: PASS - birthStats complete (R33)

@@ -1,0 +1,175 @@
+{
+  "slug": "tampa-fl",
+  "enriched_at": "2026-08-13T20:41:15Z",
+  "providers": [
+    {
+      "name": "Candice Enriquez",
+      "photo": "/images/doulas/candice-enriquez-tampa-fl.webp",
+      "source": "existing-local-file",
+      "tier": "Tier 0 (already on disk, verified real)",
+      "saved_size": "300x300",
+      "file_size": "7494B",
+      "colors": 12309,
+      "real_photo": true
+    },
+    {
+      "name": "One Love Doula Services",
+      "photo": "/images/doulas/one-love-doula-tampa-fl.webp",
+      "source": "existing-local-file (logo)",
+      "tier": "Tier 0 (already on disk, verified real - photoIsLogo: true)",
+      "saved_size": "355x400",
+      "file_size": "22192B",
+      "colors": 13800,
+      "real_photo": true
+    },
+    {
+      "name": "Buddha Belly Doulas",
+      "photo": "/images/doulas/buddha-belly-doulas-tampa-fl.webp",
+      "source": "existing-local-file (logo)",
+      "tier": "Tier 0 (already on disk, verified real - photoIsLogo: true)",
+      "saved_size": "400x276",
+      "file_size": "22392B",
+      "colors": 33755,
+      "real_photo": true
+    },
+    {
+      "name": "Lori Rose",
+      "photo": "/images/doulas/lori-rose-tampa-fl.webp",
+      "source": "existing-local-file",
+      "tier": "Tier 0 (already on disk, verified real)",
+      "saved_size": "300x300",
+      "file_size": "8744B",
+      "colors": 22965,
+      "real_photo": true
+    },
+    {
+      "name": "Tanya Grazione",
+      "photo": "/images/doulas/tanya-grazione-tampa-fl.webp",
+      "source": "existing-local-file",
+      "tier": "Tier 0 (already on disk, verified real)",
+      "saved_size": "300x300",
+      "file_size": "18232B",
+      "colors": 8951,
+      "real_photo": true
+    },
+    {
+      "name": "Dee Pullen",
+      "photo": "/images/doulas/dee-pullen-tampa-fl.webp",
+      "source": "betterbirthing.net/wp-content/uploads/2019/02/Dee-283x300.jpg",
+      "tier": "Tier 1 (provider website betterbirthing.net headshot)",
+      "original_size": "283x300",
+      "saved_size": "377x400",
+      "file_size": "14206B",
+      "colors": 42378,
+      "real_photo": true,
+      "replaced_placeholder": true,
+      "note": "Previous file was 193-color icon/placeholder (7KB). Replaced with real headshot from betterbirthing.net."
+    },
+    {
+      "name": "Dee Larkin",
+      "photo": "/images/doulas/dee-larkin-tampa-fl.webp",
+      "source": "existing-local-file",
+      "tier": "Tier 0 (already on disk, verified real)",
+      "saved_size": "300x300",
+      "file_size": "19106B",
+      "colors": 27410,
+      "real_photo": true
+    },
+    {
+      "name": "Melissa Humphries",
+      "photo": "/images/doulas/melissa-humphries-tampa-fl.webp",
+      "source": "bornbir-cloudinary (res.cloudinary.com/bornbir/image/upload/v1/production/wscjvxwo6shea8h6b3k30ryvgjhm.jpeg)",
+      "tier": "Tier 5 (Bornbir individual profile photo - Cloudinary full-res, transforms stripped)",
+      "original_size": "3024x4032",
+      "saved_size": "300x400",
+      "file_size": "23688B",
+      "colors": 27743,
+      "real_photo": true,
+      "new_photo": true,
+      "note": "Previously had photo: \"\" (empty). Sourced from Bornbir Cloudinary profile photo (og:image)."
+    },
+    {
+      "name": "Charlie Rae Young (Barefoot Birth)",
+      "photo": "/images/doulas/barefoot-birth-tampa-fl.webp",
+      "source": "existing-local-file (logo)",
+      "tier": "Tier 0 (already on disk, verified real)",
+      "saved_size": "400x400",
+      "file_size": "14580B",
+      "colors": 14969,
+      "real_photo": true
+    },
+    {
+      "name": "Johanna Lancaster",
+      "photo": "/images/provider-tampa-fl-johanna-lancaster.webp",
+      "source": "barefootbirth.com Squarespace CDN (images.squarespace-cdn.com/content/v1/4fff823c24ac03cb5e6ad69a/1621861022574-UYMMCSXSL6B7UPC6WETL/tampa+cnm+midwife+johanna+lancaster?format=750w)",
+      "tier": "Tier 1 (Barefoot Birth blog post 'Meet Tampa Bay's Newest Midwife Johanna Lancaster CNM')",
+      "original_size": "750x635",
+      "saved_size": "400x338",
+      "file_size": "39644B",
+      "colors": 4870,
+      "real_photo": true,
+      "replaced_bad_crop": true,
+      "note": "Previously had photo: \"\" (empty). tjb-direct-enrich.py auto-sourced a 500x99 banner crop from tampabaymidwifery.com. Re-sourced from Barefoot Birth blog Squarespace CDN at 750w format for proper headshot aspect ratio."
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Tampa General Hospital",
+      "thumbnail": "/images/tampa-general-hospital-tampa.webp",
+      "source": "existing-local-file",
+      "size": "800x600",
+      "file_size": "43738B",
+      "colors": 65374
+    },
+    {
+      "name": "St. Joseph's Women's Hospital",
+      "thumbnail": "/images/st-josephs-womens-tampa.webp",
+      "source": "existing-local-file",
+      "size": "800x600",
+      "file_size": "62732B",
+      "colors": 41027
+    },
+    {
+      "name": "AdventHealth Tampa",
+      "thumbnail": "/images/adventhealth-tampa.webp",
+      "source": "existing-local-file",
+      "size": "800x600",
+      "file_size": "95224B",
+      "colors": 62874
+    },
+    {
+      "name": "HCA Florida Brandon Hospital",
+      "thumbnail": "/images/brandon-regional-hospital-tampa.webp",
+      "source": "existing-local-file",
+      "size": "400x300",
+      "file_size": "25216B",
+      "colors": 51706
+    },
+    {
+      "name": "South Florida Baptist Hospital",
+      "thumbnail": "/images/south-florida-baptist-hospital-tampa.webp",
+      "source": "existing-local-file",
+      "size": "400x300",
+      "file_size": "18940B",
+      "colors": 35077
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Barefoot Birth",
+      "thumbnail": "/images/labor-of-love-birth-center-tampa.webp",
+      "source": "existing-local-file",
+      "size": "400x300",
+      "file_size": "38194B",
+      "colors": 64142
+    },
+    {
+      "name": "Sweet Child of Mine Birth Center",
+      "thumbnail": "/images/sweet-child-of-mine-birth-center-tampa.webp",
+      "source": "existing-local-file",
+      "size": "400x300",
+      "file_size": "34600B",
+      "colors": 59011
+    }
+  ]
+}

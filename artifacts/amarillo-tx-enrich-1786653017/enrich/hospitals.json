@@ -1,0 +1,58 @@
+{
+  "slug": "amarillo-tx",
+  "enriched_at": "2026-08-13T20:30:00Z",
+  "hospitals": [
+    {
+      "name": "Baptist St. Anthony's Hospital",
+      "thumbnail": "/images/baptist-medical-center-sa.webp",
+      "url": "https://bsahs.org/services/labor-and-delivery/",
+      "address": "1600 Wallace Blvd, Amarillo, TX 79106",
+      "nicuLevel": "III",
+      "nicu_source": "stated directly on bsahs.org",
+      "doulaPolicy": "Doulas welcome as support persons; confirm current visitor policy during your hospital tour",
+      "midwifeFriendly": true,
+      "waterBirth": "Water birth not routinely offered",
+      "medicaid": true,
+      "lactation": true,
+      "privateRooms": true,
+      "paragraph": "Baptist St. Anthony's Hospital, at 1600 Wallace Blvd in northwest Amarillo, is the largest hospital in the Panhandle and handles a high volume of births with a Level III NICU (stated directly on bsahs.org) and a strong maternal-fetal medicine program. Certified midwives are on staff alongside OB/GYNs, and the birthing center offers prenatal care, birthing classes, and postpartum support. Doulas are generally welcome, though visitor policies can shift, so confirm during your hospital tour. If you're delivering at BSA, having your birth plan in hand makes the whole check-in process smoother \u2014 they see a lot of families and move fast. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to get started.",
+      "paragraph_length": 619,
+      "description_source": "existing-cities-ts"
+    },
+    {
+      "name": "Northwest Texas Healthcare System",
+      "thumbnail": "/images/amarillo-tx-northwest-texas-healthcare.webp",
+      "url": "https://nwths.com/services/women/childbirth-center/",
+      "address": "1501 S Coulter St, Amarillo, TX 79106",
+      "nicuLevel": "III",
+      "nicu_source": "stated directly on nwths.com",
+      "doulaPolicy": "Doulas welcome as support persons",
+      "midwifeFriendly": true,
+      "waterBirth": "Water birth not routinely offered",
+      "medicaid": true,
+      "lactation": true,
+      "privateRooms": true,
+      "paragraph": "Northwest Texas Healthcare System, at 1501 S Coulter St in Amarillo, is a Level III trauma center with a Level III NICU (stated directly on nwths.com) and a broad obstetric program that serves many Medicaid-covered families. The Childbirth Center features maternal-fetal medicine specialists, neonatologists, and certified registered nurse anesthetists, with childbirth classes and lactation support available. Both hospitals here serve a huge geographic area \u2014 families drive hours from surrounding towns, so the L&D units are used to handling a lot. If we're being real, that means coming in with your preferences written down is even more important. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare.",
+      "paragraph_length": 576,
+      "description_source": "existing-cities-ts"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Birth Haven",
+      "thumbnail": "/images/central-texas-birth-center.webp",
+      "url": "https://www.beyondbirthmidwifery.com/",
+      "address": "27 Medical Dr Suite 200, Amarillo, TX 79106",
+      "services": [
+        "Midwife-Led Births",
+        "Prenatal Care",
+        "Postpartum Care",
+        "Water Birth"
+      ],
+      "medicaid": false,
+      "paragraph": "Birth Haven, at 27 Medical Drive Suite 200 in Amarillo, is a freestanding birth center run by the midwives at Beyond Birth Midwifery Associates. the only practice in Amarillo that Google Maps categorizes explicitly as a \"birth center.\" It's located just off Coulter near the medical district, which means you're minutes from both BSA and Northwest Texas hospitals if a transfer becomes necessary. For families seeking a lower-intervention, out-of-hospital birth in the Panhandle, this is the dedicated option \u2014 and having a doula who knows the Birth Haven team and transfer protocols makes that comfort level a lot higher. Call ahead to confirm availability and schedule a tour, since the birth community here is small and spots fill.",
+      "paragraph_length": 649,
+      "description_source": "existing-cities-ts"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "run_id": "amarillo-tx-video_outreach-1786655676",
+  "step": "gate:video_outreach",
+  "skill": "tjb-pipeline-dag",
+  "skill_version": "4.0",
+  "model_id": "deterministic-script",
+  "gate_script": "preflight-stage-gate.py",
+  "gate_version": "1.0",
+  "input_artifacts": [
+    "/Users/socializerender/Projects/truejoybirthing-website/src/data/cities.ts"
+  ],
+  "passed": false,
+  "failures": 2,
+  "timestamp": "2026-08-13T21:14:36Z"
+}

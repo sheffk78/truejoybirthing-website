@@ -1,0 +1,91 @@
+{
+  "slug": "amarillo-tx",
+  "enriched_at": "2026-08-13T20:30:00Z",
+  "providers": [
+    {
+      "name": "Liz Hensley",
+      "photo": "/images/provider-amarillo-tx-liz-hensley.webp",
+      "source": "facebook-mother-mothers-page",
+      "tier": "Tier 6 (Facebook page photo from Mother Mothers page)",
+      "original_size": "160x160",
+      "saved_size": "400x400",
+      "colors": 38361,
+      "real_photo": true
+    },
+    {
+      "name": "Macy Smith",
+      "photo": "/images/provider-amarillo-tx-macy-smith.webp",
+      "source": "instagram-macy__layne",
+      "tier": "Tier 6 (Instagram profile photo @macy__layne)",
+      "original_size": "150x150",
+      "saved_size": "400x400",
+      "colors": 21797,
+      "real_photo": true
+    },
+    {
+      "name": "Abbie Whitfield",
+      "photo": "/images/provider-amarillo-tx-abbie-whitfield.webp",
+      "source": "bornbir-cloudinary",
+      "tier": "Tier 5 (Bornbir individual profile photo)",
+      "original_size": "1206x1395",
+      "saved_size": "345x400",
+      "colors": 31501,
+      "real_photo": true
+    },
+    {
+      "name": "Crystal Walker",
+      "photo": "/images/provider-amarillo-tx-crystal-walker.webp",
+      "source": "betterbirthamarillo-board-squarespace",
+      "tier": "Tier 1 (Better Birth Amarillo board page - Squarespace CDN)",
+      "original_size": "2500x3750",
+      "saved_size": "266x400",
+      "colors": 38999,
+      "real_photo": true
+    },
+    {
+      "name": "Ashley Brottlund",
+      "photo": "/images/provider-amarillo-tx-ashley-brottlund.webp",
+      "source": "hellomeela-listing",
+      "tier": "Tier 1 (hellomeela.com listing 19882 - staging media CDN)",
+      "original_size": "666x666",
+      "saved_size": "400x400",
+      "colors": 32568,
+      "real_photo": true
+    },
+    {
+      "name": "Gabrielle Carrier",
+      "photo": "/images/provider-amarillo-tx-gabrielle-carrier.webp",
+      "source": "instagram-beyond-birth-post",
+      "tier": "Tier 6 (Instagram post via Beyond Birth Midwifery)",
+      "original_size": "640x640",
+      "saved_size": "400x400",
+      "colors": 38591,
+      "real_photo": true
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Baptist St. Anthony's Hospital",
+      "thumbnail": "/images/baptist-medical-center-sa.webp",
+      "source": "existing-local-file",
+      "size": "800x534",
+      "file_size": "67468B"
+    },
+    {
+      "name": "Northwest Texas Healthcare System",
+      "thumbnail": "/images/amarillo-tx-northwest-texas-healthcare.webp",
+      "source": "nwths.com-maternity-page",
+      "size": "600x400",
+      "file_size": "72896B"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Birth Haven",
+      "thumbnail": "/images/central-texas-birth-center.webp",
+      "source": "existing-local-file",
+      "size": "800x534",
+      "file_size": "19430B"
+    }
+  ]
+}
