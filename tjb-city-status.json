@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "last_updated": "2026-08-13T18:02:09.492660+00:00",
+  "last_updated": "2026-08-14T18:00:00Z",
   "total_cities_in_codebase": 187,
   "future_cities_planned": 1000,
   "cities": {
@@ -1159,16 +1159,20 @@
     "fulshear-tx": {
       "has_video": false,
       "has_outreach": false,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "leesburg-fl": {
       "has_video": false,
       "has_outreach": false,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "princeton-tx": {
       "has_video": false,
@@ -1191,16 +1195,20 @@
     "melissa-tx": {
       "has_video": false,
       "has_outreach": false,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "fate-tx": {
       "has_video": false,
       "has_outreach": false,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "rosemount-mn": {
       "has_video": false,
@@ -1219,9 +1227,11 @@
     "anna-tx": {
       "has_video": false,
       "has_outreach": false,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "haines-city-fl": {
       "has_video": false,
@@ -1371,23 +1381,29 @@
     "houston-tx": {
       "has_video": false,
       "has_outreach": false,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "dallas-tx": {
       "has_video": false,
       "has_outreach": true,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "washington-dc": {
       "has_video": false,
       "has_outreach": false,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "el-paso-tx": {
       "has_video": true,
@@ -1413,9 +1429,11 @@
     "milwaukee-wi": {
       "has_video": false,
       "has_outreach": false,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "albuquerque-nm": {
       "has_video": true,
@@ -1428,9 +1446,11 @@
     "kansas-city-mo": {
       "has_video": false,
       "has_outreach": false,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "mesa-az": {
       "has_video": false,
@@ -1449,9 +1469,11 @@
     "anaheim-ca": {
       "has_video": false,
       "has_outreach": false,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "santa-ana-ca": {
       "has_video": false,
@@ -1470,9 +1492,11 @@
     "corpus-christi-tx": {
       "has_video": false,
       "has_outreach": false,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "lexington-ky": {
       "has_video": false,
@@ -1491,9 +1515,11 @@
     "cincinnati-oh": {
       "has_video": false,
       "has_outreach": false,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "saint-paul-mn": {
       "has_video": false,
@@ -1547,9 +1573,11 @@
     "anchorage-ak": {
       "has_video": false,
       "has_outreach": false,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "north-las-vegas-nv": {
       "has_video": false,
@@ -1603,9 +1631,11 @@
     "lubbock-tx": {
       "has_video": false,
       "has_outreach": false,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "laredo-tx": {
       "has_video": true,
@@ -1659,9 +1689,11 @@
     "boise-id": {
       "has_video": false,
       "has_outreach": false,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "huntsville-al": {
       "has_video": false,
@@ -1761,20 +1793,24 @@
     "alexandria-va": {
       "has_video": false,
       "has_outreach": true,
-      "completed_at": null,
-      "stage": "build",
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
       "blocked_reason": null,
       "outreach_sent_at": "2026-08-03T22:51:23.544354+00:00",
-      "outreach_provider_count": 5
+      "outreach_provider_count": 5,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "lakewood-co": {
       "has_video": false,
       "has_outreach": true,
-      "completed_at": null,
-      "stage": "build",
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
       "blocked_reason": null,
       "outreach_sent_at": "2026-08-03T22:51:23.544354+00:00",
-      "outreach_provider_count": 3
+      "outreach_provider_count": 3,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "sunnyvale-ca": {
       "has_video": false,
@@ -1800,9 +1836,11 @@
     "naperville-il": {
       "has_video": false,
       "has_outreach": true,
-      "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "completed_at": "2026-08-14T18:00:00Z",
+      "stage": "complete",
+      "blocked_reason": null,
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "pasadena-ca": {
       "has_video": false,

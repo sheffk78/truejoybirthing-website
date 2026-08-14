@@ -1,0 +1,68 @@
+{
+  "slug": "arvada-co",
+  "stage": "build",
+  "passed": true,
+  "failures": 0,
+  "results": {
+    "G1": {
+      "pass": true,
+      "message": "G1: no automated check defined (manual/semantic gate)"
+    },
+    "G2": {
+      "pass": true,
+      "message": "G2: no automated check defined (manual/semantic gate)"
+    },
+    "G3": {
+      "pass": true,
+      "message": "G3: template meta tags present"
+    },
+    "G4": {
+      "pass": true,
+      "message": "G4: canonical present in template"
+    },
+    "G8": {
+      "pass": true,
+      "message": "G8: no automated check defined (manual/semantic gate)"
+    },
+    "G21": {
+      "pass": true,
+      "message": "G21: no automated check defined (manual/semantic gate)"
+    },
+    "G25": {
+      "pass": true,
+      "message": "G25: no automated check defined (manual/semantic gate)"
+    },
+    "G29": {
+      "pass": true,
+      "message": "G29: no automated check defined (manual/semantic gate)"
+    },
+    "G36": {
+      "pass": true,
+      "message": "G36: no automated check defined (manual/semantic gate)"
+    },
+    "G37": {
+      "pass": true,
+      "message": "G37: 5 doulas (min 1 for pop 0)"
+    },
+    "G38": {
+      "pass": true,
+      "message": "G38: no automated check defined (manual/semantic gate)"
+    },
+    "G40": {
+      "pass": true,
+      "message": "G40: no automated check defined (manual/semantic gate)"
+    },
+    "G41": {
+      "pass": true,
+      "message": "G41: no automated check defined (manual/semantic gate)"
+    },
+    "G42": {
+      "pass": true,
+      "message": "G42: no automated check defined (manual/semantic gate)"
+    },
+    "G58": {
+      "pass": true,
+      "message": "G58: no automated check defined (manual/semantic gate)"
+    }
+  }
+}
