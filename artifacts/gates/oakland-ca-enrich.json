@@ -1,0 +1,48 @@
+{
+  "slug": "oakland-ca",
+  "stage": "enrich",
+  "passed": true,
+  "failures": 0,
+  "results": {
+    "G14": {
+      "pass": true,
+      "message": "G14: 6/6 providers have description"
+    },
+    "G15": {
+      "pass": true,
+      "message": "G15: 6/6 providers have photo field"
+    },
+    "G15b": {
+      "pass": true,
+      "message": "G15b: 6/6 real photos (min 1 headshot, R13)"
+    },
+    "G35": {
+      "pass": true,
+      "message": "G35: 4/4 thumbnails >=15KB"
+    },
+    "S8": {
+      "pass": true,
+      "message": "S8: no Contact for pricing"
+    },
+    "G9": {
+      "pass": true,
+      "message": "G9: no scraped artifacts"
+    },
+    "G57": {
+      "pass": true,
+      "message": "G57: 6/6 provider photos on disk"
+    },
+    "hospital_desc_length": {
+      "pass": true,
+      "message": "hospital_desc_length: 3/3 hospital descs >=300 chars (R18)"
+    },
+    "cost_format": {
+      "pass": true,
+      "message": "cost_format: 6/6 cost ranges are dollar amounts"
+    },
+    "G60": {
+      "pass": true,
+      "message": "G60: birthStats complete (R33)"
+    }
+  }
+}

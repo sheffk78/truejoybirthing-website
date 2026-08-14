@@ -1,0 +1,12 @@
+{
+  "slug": "celina-tx",
+  "stage": "verify_deploy",
+  "passed": true,
+  "failures": 0,
+  "results": {
+    "full_preflight": {
+      "pass": true,
+      "message": "full_preflight: exit 0 \u2014   \ud83d\udcdd Wrote /Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/.preflight-result.json (timestamp: 1786727785)"
+    }
+  }
+}

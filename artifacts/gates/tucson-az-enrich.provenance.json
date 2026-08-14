@@ -1,6 +1,6 @@
 {
-  "run_id": "acworth-ga-verify_deploy-1786727349",
-  "step": "gate:verify_deploy",
+  "run_id": "tucson-az-enrich-1786727719",
+  "step": "gate:enrich",
   "skill": "tjb-pipeline-dag",
   "skill_version": "4.0",
   "model_id": "deterministic-script",
@@ -11,5 +11,5 @@
   ],
   "passed": true,
   "failures": 0,
-  "timestamp": "2026-08-14T17:09:09Z"
+  "timestamp": "2026-08-14T17:15:19Z"
 }

@@ -1,5 +1,5 @@
 {
-  "run_id": "amarillo-tx-verify_deploy-1786653423",
+  "run_id": "amarillo-tx-verify_deploy-1786727493",
   "step": "gate:verify_deploy",
   "skill": "tjb-pipeline-dag",
   "skill_version": "4.0",
@@ -11,5 +11,5 @@
   ],
   "passed": true,
   "failures": 0,
-  "timestamp": "2026-08-13T20:37:03Z"
+  "timestamp": "2026-08-14T17:11:33Z"
 }

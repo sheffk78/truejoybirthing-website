@@ -1,0 +1,48 @@
+{
+  "slug": "jacksonville-fl",
+  "stage": "enrich",
+  "passed": false,
+  "failures": 1,
+  "results": {
+    "G14": {
+      "pass": true,
+      "message": "G14: 12/12 providers have description"
+    },
+    "G15": {
+      "pass": true,
+      "message": "G15: 12/12 providers have photo field"
+    },
+    "G15b": {
+      "pass": true,
+      "message": "G15b: 10/12 real photos (min 1 headshot, R13)"
+    },
+    "G35": {
+      "pass": true,
+      "message": "G35: 7/7 thumbnails >=15KB"
+    },
+    "S8": {
+      "pass": true,
+      "message": "S8: no Contact for pricing"
+    },
+    "G9": {
+      "pass": true,
+      "message": "G9: no scraped artifacts"
+    },
+    "G57": {
+      "pass": true,
+      "message": "G57: 10/10 provider photos on disk"
+    },
+    "hospital_desc_length": {
+      "pass": false,
+      "message": "hospital_desc_length: 0/5 hospital descs >=300 chars (R18) SHORT: 5"
+    },
+    "cost_format": {
+      "pass": true,
+      "message": "cost_format: 14/14 cost ranges are dollar amounts"
+    },
+    "G60": {
+      "pass": true,
+      "message": "G60: birthStats complete (R33)"
+    }
+  }
+}
