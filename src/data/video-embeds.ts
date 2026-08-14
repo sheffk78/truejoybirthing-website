@@ -1618,4 +1618,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [242, "Your Next Step"],
     ],
   },
+  "arvada-co": {
+    videoId: "TjNRmmSPuQU",
+    title: "Arvada Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT3M00S",
+    uploadDate: "2026-08-14T00:00:00-06:00",
+  },
 };

@@ -1,6 +1,6 @@
 {
-  "run_id": "arvada-co-verify_deploy-1786738003",
-  "step": "gate:verify_deploy",
+  "run_id": "arvada-co-video_outreach-1786738008",
+  "step": "gate:video_outreach",
   "skill": "tjb-pipeline-dag",
   "skill_version": "4.0",
   "model_id": "deterministic-script",
@@ -9,7 +9,7 @@
   "input_artifacts": [
     "/Users/socializerender/Projects/truejoybirthing-website/src/data/cities.ts"
   ],
-  "passed": true,
-  "failures": 0,
-  "timestamp": "2026-08-14T20:06:43Z"
+  "passed": false,
+  "failures": 8,
+  "timestamp": "2026-08-14T20:06:48Z"
 }

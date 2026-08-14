@@ -142,7 +142,8 @@ def _build_hospital_scenes(data, city, slug):
         para_esc = h_para[:300].replace('"', "'") if h_para else ''
         addr_esc = h_addr.replace('"', "'")
         # Build image line only if hospital has a real thumbnail
-        image_line = f'      image_source: "images/{h_thumb}",' if h_thumb else ''
+        _clean_thumb = h_thumb.lstrip('/').removeprefix('images/') if h_thumb else ''
+        image_line = f'      image_source: "images/{_clean_thumb}",' if h_thumb else ''
         scenes.append(f'''    {{
       scene_id: "{scene_id}",
       scene_type: "tjb_hospital_card",
@@ -524,8 +525,8 @@ def update_scene_durations(data_file, timing):
     print(f'  ✅ Scene durations updated in {data_file.name}')
 
 
-def copy_assets(slug):
-    """Copy hero image to Remotion public/images directory."""
+def copy_assets(slug, data=None):
+    """Copy hero image and hospital thumbnails to Remotion public/images directory."""
     hero_src = PROJECT_ROOT / 'public' / 'images' / f'{slug}-birth-doula-hero.webp'
     dest_dir = REMOTION_DIR / 'public' / 'images'
     dest_dir.mkdir(parents=True, exist_ok=True)
@@ -551,6 +552,22 @@ def copy_assets(slug):
     if scroll_src.exists():
         shutil.copy2(str(scroll_src), str(dest_dir / f'{slug}-fullpage-scroll.png'))
         print(f'  ✅ Fullpage scroll screenshot copied')
+
+    # Copy hospital thumbnail images referenced in scene data
+    hospitals = (data or {}).get('hospitals', [])
+    thumb_count = 0
+    for hospital in hospitals:
+        h_thumb = hospital.get('thumbnail', '')
+        if not h_thumb:
+            continue
+        # Clean the thumbnail path: strip leading / and images/ prefix
+        _clean = h_thumb.lstrip('/').removeprefix('images/')
+        src = PROJECT_ROOT / 'public' / 'images' / _clean
+        if src.exists():
+            shutil.copy2(str(src), str(dest_dir / _clean))
+            thumb_count += 1
+    if thumb_count:
+        print(f'  ✅ {thumb_count} hospital thumbnail(s) copied')
 
     print(f'  ✅ Assets copied')
 
@@ -820,7 +837,7 @@ def main():
     
     # Step 3: Copy assets to Remotion
     print('\n[Step 4] Copying assets to Remotion...')
-    copy_assets(slug)
+    copy_assets(slug, data)
     
     # Step 4: Generate TTS
     print('\n[Step 5] Generating TTS narration...')
