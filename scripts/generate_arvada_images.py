@@ -21,7 +21,7 @@ print(f"Raw image size: {img.size}, mode: {img.mode}")
 # The source is square. Keep it square for the page hero and use a contained
 # composition for 16:9 video thumbnails. Non-uniform resize is prohibited.
 hero = img.copy().convert('RGB')
-hero_path = 'public/images/arvada-co-birth-doula-hero-v2.webp'
+hero_path = 'public/images/arvada-co-birth-doula-hero-v3.webp'
 hero.save(hero_path, 'webp', quality=92, method=6)
 print(f"Hero saved without distortion: {hero_path} ({hero.size})")
 
