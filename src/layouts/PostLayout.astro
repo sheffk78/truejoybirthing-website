@@ -11,9 +11,10 @@ interface Props {
   featuredImage?: string;
   featuredImageAlt?: string;
   pageType?: string;
+  faqSchema?: string | null;
 }
 
-const { title, description, canonical, date, author = "Shelbi Kohler", featuredImage, featuredImageAlt, pageType = "BlogPosting" } = Astro.props;
+const { title, description, canonical, date, author = "Shelbi Kohler", featuredImage, featuredImageAlt, pageType = "BlogPosting", faqSchema = null } = Astro.props;
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -123,6 +124,7 @@ const schemaJson = JSON.stringify(schema);
     <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="preconnect" href="https://www.redditstatic.com" />
     <script type="application/ld+json" set:html={schemaJson} />
+    {faqSchema && <script type="application/ld+json" set:html={faqSchema} />}
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RVZVN0F9T"></script>
     <script is:inline>

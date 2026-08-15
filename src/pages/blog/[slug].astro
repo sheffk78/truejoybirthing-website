@@ -67,9 +67,35 @@ const topic = slugToTopic[currentSlug] || 'general';
 const raw = fs.readFileSync(rawFile, 'utf-8');
 const { content } = matter(raw);
 const htmlContent = marked.parse(content);
+
+// Extract FAQ Q&A pairs from markdown for FAQPage schema
+// Looks for ### Question headings followed by answer paragraphs
+const faqMatches: { question: string; answer: string }[] = [];
+const faqSectionMatch = content.match(/## Frequently Asked Questions\s*([\s\S]*?)(?:\n## |$)/);
+if (faqSectionMatch) {
+  const faqBlock = faqSectionMatch[1];
+  const qaRegex = /### (.+?)\n\n([\s\S]*?)(?=\n### |\n## |$)/g;
+  let m;
+  while ((m = qaRegex.exec(faqBlock)) !== null) {
+    const question = m[1].trim();
+    // Strip markdown links and formatting from answer for schema text
+    const answerHtml = marked.parse(m[2].trim());
+    const answerText = answerHtml.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    faqMatches.push({ question, answer: answerText });
+  }
+}
+const faqSchema = faqMatches.length > 0 ? JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqMatches.map(qa => ({
+    "@type": "Question",
+    "name": qa.question,
+    "acceptedAnswer": { "@type": "Answer", "text": qa.answer }
+  }))
+}) : null;
 ---
 
-<PostLayout title={title} description={description} canonical={canonical} date={date} author={author} featuredImage={featuredImage}>
+<PostLayout title={title} description={description} canonical={canonical} date={date} author={author} featuredImage={featuredImage} faqSchema={faqSchema}>
   <article class="max-w-3xl mx-auto px-6 py-12">
     <header class="mb-10">
       <p class="text-sm text-tjb-lavender-500 font-semibold mb-2">{new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>

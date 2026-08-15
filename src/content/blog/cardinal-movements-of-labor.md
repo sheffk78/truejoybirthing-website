@@ -89,6 +89,14 @@ Not every position supports every cardinal movement. Engagement and early descen
 
 For the later stages, when extension and expulsion are happening, positions that open the pelvic outlet are key. Squatting, supported squatting, or side-lying with a peanut ball can create the space your baby needs to emerge. If you are not sure what positions belong in your plan, the <a href="/birth-plan-template/">Joyful Birth Plan</a> walks you through it step by step. And if you are local, <a href="/birth-support/portland-or/">birth support in Portland, OR</a> or <a href="/birth-support/denver-co/">labor support in Denver, CO</a> can help you practice these positions before the big day.
 
+<div class="not-prose my-10 rounded-2xl border border-tjb-lavender-200 bg-tjb-cream-50 p-6 text-center">
+  <p class="text-sm font-semibold tracking-widest uppercase text-tjb-lavender-500 mb-2">Free Download</p>
+  <h3 class="text-xl font-bold text-tjb-charcoal mb-2">Cardinal Movements Cheat Sheet</h3>
+  <p class="text-sm text-tjb-gray mb-4 max-w-md mx-auto">A one-page printable PDF of all 7 movements with positions to try at each stage. Take it into labor or share it with your birth team.</p>
+  <a href="/resources/cardinal-movements-cheat-sheet.pdf" class="btn-primary" download>Download the Cheat Sheet →</a>
+  <p class="text-xs text-tjb-gray mt-3">Free · No email required · Printable PDF</p>
+</div>
+
 ## Can You Tell If the Cardinal Movements Are Happening?
 
 You cannot see them, but you can often feel them. Engagement sometimes brings a sense of pressure or a visible drop in the belly. As fetal descent continues, pressure increases and the urge to push may build. During fetal rotation, some mothers feel a shift in where the contractions are most intense. When the baby extends under the pubic bone, there is often a strong burning or stretching sensation called the "ring of fire."
