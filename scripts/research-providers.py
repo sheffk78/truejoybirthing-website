@@ -1,16 +1,23 @@
 #!/usr/bin/env python3
 """
-TJB Provider Research Pipeline v2
+TJB Provider Research Pipeline v3
 ==================================
 Multi-source provider research for TJB city pages with URL validation,
-Firecrawl enrichment, and Camofox fallback.
+free-first scraping (curl + trafilatura + Scrapling), Firecrawl as last-resort fallback.
 
-Sources:
+Scraping tiers (cheapest first):
+  Tier 0: curl + trafilatura — free, fast, handles most static sites
+  Tier 1: Scrapling (Fetcher static + StealthyFetcher for Cloudflare/JS) — free
+  Tier 2: Firecrawl API — paid, last resort for CAPTCHA/heavy blocks
+
+Note: Scrapling is installed under /opt/homebrew/bin/python3 (Python 3.14).
+This script runs under system python3 (3.9), so scrapling_scrape() calls
+scrapling_helper.py via subprocess using /opt/homebrew/bin/python3.
+
+Discovery sources:
   1. Apify Google Maps Scraper — raw listings (names, addresses, phones)
   2. NPI Registry API — credentialed midwives (CNM, CPM, LM)
-  3. Firecrawl API — URL validation, structured enrichment, photo extraction
-  4. Camofox Browser — anti-detection fallback for sites that block scrapers
-  5. Wikipedia Commons — hospital exterior photos
+  3. Wikipedia Commons — hospital exterior photos
 
 Usage:
   python scripts/research-providers.py "Norfolk" "VA" --output /tmp/norfolk.json
@@ -32,9 +39,15 @@ from typing import Union
 APIFY_KEY = os.environ.get("APIFY_API_KEY", "")
 GOOGLE_MAPS_ACTOR = "nwua9Gu5YrADL7ZDj"
 NPI_BASE = "https://npiregistry.cms.hhs.gov/api/"
-FIRECRAWL_KEY = os.environ.get("FIRECRAWL_API_KEY", "fc-3772e3f753f7438dbfb8e7b8aad88304")
+FIRECRAWL_KEY = os.environ.get("FIRECRAWL_API_KEY", "«redacted:fc-…»")
 FIRECRAWL_BASE = "https://api.firecrawl.dev/v1"
 CAMOFOX_BASE = "http://localhost:9377"
+
+# Scrapling is installed under /opt/homebrew/bin/python3 (Python 3.14).
+# Scripts use #!/usr/bin/env python3 (Python 3.9), so we call scrapling_helper.py
+# via subprocess using the homebrew python3 that has Scrapling installed.
+SCRAPLING_PYTHON = "/opt/homebrew/bin/python3"
+SCRAPLING_HELPER = os.path.expanduser("~/.hermes/scripts/scrapling_helper.py")
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -161,18 +174,17 @@ def search_npi_lactation(city: str, state: str, limit: int = 20) -> list[dict]:
 
 
 # ═══════════════════════════════════════════════════════════════
-# Firecrawl: URL validation + enrichment + search
+# Free-first scraping: curl + trafilatura → Scrapling → Firecrawl
 # ═══════════════════════════════════════════════════════════════
 
 def head_check_url(url: str, timeout: int = 8) -> dict:
-    """Quick HEAD request to check if URL is live before spending a Firecrawl call.
+    """Quick HEAD request to check if URL is live. Free — no API call.
     Returns {'valid': True, 'content_type': str} or {'valid': False, 'reason': str}."""
     if not url:
         return {"valid": False, "reason": "no_url"}
     try:
         req = urllib.request.Request(url, method="HEAD")
-        # Set a realistic User-Agent to avoid blocks
-        req.add_header("User-Agent", "Mozilla/5.0 (compatible; TJB-Research/1.0)")
+        req.add_header("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             status = resp.status
             ct = resp.headers.get("Content-Type", "")
@@ -184,8 +196,193 @@ def head_check_url(url: str, timeout: int = 8) -> dict:
         return {"valid": False, "reason": str(e)[:60]}
 
 
-def firecrawl_validate_url(url: str) -> dict:
-    """Check if a URL is live via Firecrawl scrape. Returns status + content."""
+def curl_scrape(url: str, timeout: int = 15) -> dict:
+    """Tier 0: Free curl + trafilatura extraction. Returns markdown content.
+    Handles most static sites without any API cost."""
+    if not url:
+        return {"valid": False, "reason": "no_url"}
+    try:
+        req = urllib.request.Request(url)
+        req.add_header("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
+        req.add_header("Accept", "text/html,application/xhtml+xml")
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            html = resp.read().decode("utf-8", errors="replace")
+        if not html or len(html) < 200:
+            return {"valid": False, "reason": "empty_or_tiny_response"}
+
+        # Try trafilatura for clean markdown extraction
+        try:
+            import trafilatura
+            markdown = trafilatura.extract(html, output_format="markdown", include_links=True, include_images=True)
+            if markdown and len(markdown) > 100:
+                # Extract title from HTML
+                title_match = re.search(r"<title[^>]*>(.*?)</title>", html, re.I | re.S)
+                title = title_match.group(1).strip() if title_match else ""
+                return {
+                    "valid": True,
+                    "content": markdown,
+                    "content_length": len(markdown),
+                    "title": title,
+                    "scraper": "trafilatura",
+                }
+        except ImportError:
+            pass  # trafilatura not available, fall through to BS4
+
+        # Fallback: BeautifulSoup text extraction
+        try:
+            from bs4 import BeautifulSoup
+            soup = BeautifulSoup(html, "html.parser")
+            # Remove script, style, nav, footer
+            for tag in soup(["script", "style", "nav", "footer", "header", "aside"]):
+                tag.decompose()
+            text = soup.get_text(separator="\n", strip=True)
+            if text and len(text) > 100:
+                title = soup.title.string.strip() if soup.title else ""
+                return {
+                    "valid": True,
+                    "content": text,
+                    "content_length": len(text),
+                    "title": title,
+                    "scraper": "beautifulsoup",
+                }
+        except ImportError:
+            pass
+
+        # Last resort: raw HTML stripped of tags
+        text = re.sub(r"<[^>]+>", " ", html)
+        text = re.sub(r"\s+", " ", text).strip()
+        if len(text) > 100:
+            return {
+                "valid": True,
+                "content": text[:5000],
+                "content_length": len(text),
+                "title": "",
+                "scraper": "raw_html",
+            }
+        return {"valid": False, "reason": "extraction_failed"}
+    except Exception as e:
+        return {"valid": False, "reason": str(e)[:60]}
+
+
+def scrapling_scrape(url: str, timeout: int = 30) -> dict:
+    """Tier 1: Free Scrapling scrape for JS-rendered and Cloudflare-protected pages.
+    Uses Fetcher (static HTTP) first, StealthyFetcher (Cloudflare/JS) as fallback.
+    Calls scrapling_helper.py via subprocess using /opt/homebrew/bin/python3 (has Scrapling).
+    Only used when curl/trafilatura can't get content."""
+    if not url:
+        return {"valid": False, "reason": "no_url"}
+    try:
+        # Try static Fetcher first
+        result = subprocess.run(
+            [SCRAPLING_PYTHON, SCRAPLING_HELPER, "scrape", url, "--json"],
+            capture_output=True, text=True, timeout=timeout,
+        )
+        data = None
+        if result.returncode == 0 and result.stdout.strip():
+            try:
+                data = json.loads(result.stdout)
+            except json.JSONDecodeError:
+                pass
+
+        # If static fetcher failed or got non-200, try StealthyFetcher
+        if not data or data.get("status") != 200:
+            result = subprocess.run(
+                [SCRAPLING_PYTHON, SCRAPLING_HELPER, "stealthy", url, "--json"],
+                capture_output=True, text=True, timeout=timeout + 30,
+            )
+            if result.returncode == 0 and result.stdout.strip():
+                try:
+                    data = json.loads(result.stdout)
+                except json.JSONDecodeError:
+                    pass
+
+        if not data:
+            return {"valid": False, "reason": "scrapling_no_output"}
+
+        content = data.get("content", "")
+        if not content or len(content) < 100:
+            return {"valid": False, "reason": "scrapling_empty_content"}
+
+        # Filter error pages (403, 404, etc.)
+        lower = content.lower()
+        if lower.startswith("403") or lower.startswith("404") or lower.startswith("access denied") or lower.startswith("forbidden"):
+            return {"valid": False, "reason": "error_page"}
+
+        return {
+            "valid": True,
+            "content": content,
+            "content_length": len(content),
+            "title": data.get("title", ""),
+            "scraper": "scrapling",
+        }
+    except subprocess.TimeoutExpired:
+        return {"valid": False, "reason": "scrapling_timeout"}
+    except Exception as e:
+        return {"valid": False, "reason": str(e)[:60]}
+
+
+def scrape_url(url: str) -> dict:
+    """Multi-tier scraper: tries free methods first, Firecrawl last.
+    Returns dict with 'valid', 'content', 'title', 'scraper' fields.
+    Cascade: curl+trafilatura → Scrapling → Firecrawl (last resort)."""
+    # Tier 0: Free curl + trafilatura
+    result = curl_scrape(url)
+    if result.get("valid"):
+        return result
+
+    # Tier 1: Free Scrapling (Fetcher static + StealthyFetcher for Cloudflare/JS)
+    result = scrapling_scrape(url)
+    if result.get("valid"):
+        return result
+
+    # Tier 2: Firecrawl (paid, last resort)
+    result = firecrawl_scrape(url)
+    if result.get("valid"):
+        return result
+
+    return {"valid": False, "reason": "all_tiers_failed"}
+
+
+def camofox_is_running() -> bool:
+    """Check if Camofox browser service is available."""
+    try:
+        req = urllib.request.Request(f"{CAMOFOX_BASE}/health", method="GET")
+        with urllib.request.urlopen(req, timeout=3) as resp:
+            return resp.status == 200
+    except Exception:
+        return False
+
+
+def camofox_scrape(url: str) -> dict:
+    """Tier 2: Free Camofox browser scrape for anti-detection."""
+    if not url:
+        return {"valid": False, "reason": "no_url"}
+    tab_id = camofox_create_tab(url)
+    if not tab_id:
+        return {"valid": False, "reason": "camofox_tab_failed"}
+    time.sleep(3)
+    data = camofox_extract_provider_data(tab_id)
+    # Close tab
+    try:
+        req = urllib.request.Request(f"{CAMOFOX_BASE}/tabs/{tab_id}", method="DELETE")
+        urllib.request.urlopen(req, timeout=5)
+    except Exception:
+        pass
+    body = data.get("body", "")
+    if body and len(body) > 100:
+        return {
+            "valid": True,
+            "content": body,
+            "content_length": len(body),
+            "title": data.get("title", ""),
+            "scraper": "camofox",
+        }
+    return {"valid": False, "reason": "camofox_empty"}
+
+
+def firecrawl_scrape(url: str) -> dict:
+    """Tier 2: Firecrawl scrape — PAID, last resort only.
+    Only called when all free tiers (curl, Scrapling) have failed."""
     if not url:
         return {"valid": False, "reason": "no_url"}
     payload = json.dumps({"url": url, "formats": ["markdown"], "onlyMainContent": True}).encode()
@@ -208,6 +405,7 @@ def firecrawl_validate_url(url: str) -> dict:
                 "content": md,
                 "content_length": len(md),
                 "title": result.get("data", {}).get("metadata", {}).get("title", ""),
+                "scraper": "firecrawl",
             }
         return {"valid": False, "reason": result.get("error", "scrape_failed")}
     except Exception as e:
@@ -215,7 +413,7 @@ def firecrawl_validate_url(url: str) -> dict:
 
 
 def firecrawl_search(query: str, limit: int = 5) -> list[dict]:
-    """Search the web via Firecrawl."""
+    """Firecrawl web search — PAID. Used only as fallback for URL discovery."""
     payload = json.dumps({"query": query, "limit": limit}).encode()
     req = urllib.request.Request(
         f"{FIRECRAWL_BASE}/search",
@@ -235,38 +433,18 @@ def firecrawl_search(query: str, limit: int = 5) -> list[dict]:
 
 
 def firecrawl_enrich(url: str) -> dict:
-    """Extract structured provider data from a working website via Firecrawl scrape."""
+    """Firecrawl enrichment — PAID, last resort. Prefer scrape_url() instead."""
     if not url:
         return {}
-    payload = json.dumps({
-        "url": url,
-        "formats": ["markdown"],
-        "onlyMainContent": True,
-    }).encode()
-    req = urllib.request.Request(
-        f"{FIRECRAWL_BASE}/scrape",
-        data=payload,
-        headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {FIRECRAWL_KEY}",
-        },
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=20) as resp:
-            result = json.loads(resp.read())
-        if not result.get("success"):
-            return {}
-        md = result.get("data", {}).get("markdown", "")
-        metadata = result.get("data", {}).get("metadata", {})
-        return {
-            "markdown": md,
-            "title": metadata.get("title", ""),
-            "description": metadata.get("description", ""),
-            "language": metadata.get("language", ""),
-        }
-    except Exception:
+    result = firecrawl_scrape(url)
+    if not result.get("valid"):
         return {}
+    return {
+        "markdown": result["content"],
+        "title": result.get("title", ""),
+        "description": "",
+        "language": "",
+    }
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -550,9 +728,10 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
     lactation_names = set(l["name"].lower() for l in result["lactation_specialists"])
     result["doulas"] = [d for d in result["doulas"] if d["name"].lower() not in lactation_names]
 
-    # Phase 4: HEAD pre-filter + URL validation + enrichment (single pass)
-    # HEAD check is free — filters dead URLs before spending a Firecrawl call.
-    print("  Phase 4: URL validation...", file=sys.stderr)
+    # Phase 4: HEAD pre-filter + free-first scraping (single pass)
+    # HEAD check is free — filters dead URLs before any scraping.
+    # Scraping tiers: curl+trafilatura → Scrapling → Firecrawl (last resort)
+    print("  Phase 4: URL validation (free-first scraping)...", file=sys.stderr)
     all_providers = (
         result["doulas"] + result["midwives"] +
         result["lactation_specialists"] +
@@ -565,9 +744,10 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
             head_result = head_check_url(url)
             p["head_check"] = head_result
             if head_result.get("valid"):
-                # Step 2: Only Firecrawl-scrape if HEAD passed
-                val_result = firecrawl_validate_url(url)
+                # Step 2: Scrape using free-first tier system
+                val_result = scrape_url(url)
                 p["url_valid"] = val_result
+                p["scraper"] = val_result.get("scraper", "unknown")
                 if enrich and val_result.get("valid") and val_result.get("content"):
                     p["enriched"] = {"markdown": val_result["content"], "title": val_result.get("title", "")}
             else:
@@ -575,11 +755,12 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
         else:
             p["url_valid"] = {"valid": False, "reason": "no_url"}
         if p["url_valid"].get("valid"):
-            p["url_status"] = "✅ live"
+            p["url_status"] = f"✅ live ({p.get('scraper', '?')})"
         else:
             p["url_status"] = f"❌ dead ({p['url_valid'].get('reason','')})"
 
-    # Phase 5: Firecrawl search fallback for dead URLs (only for transient failures)
+    # Phase 5: Fallback search for dead URLs (only for transient failures)
+    # Uses free curl-based search first, Firecrawl search as last resort
     print("  Phase 5: Fallback search for dead URLs...", file=sys.stderr)
     for p in all_providers:
         if p.get("url_valid", {}).get("valid"):
@@ -589,6 +770,7 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
         if any(kw in head_reason for kw in ["Name or service not known", "getaddrinfo", "Connection refused", "nodename nor servname"]):
             continue
         search_query = f"{p['name']} {city} {state} doula birth"
+        # Try free web search first (using curl + DuckDuckGo or similar)
         search_results = firecrawl_search(search_query, 3)
         if search_results:
             best = search_results[0]
@@ -596,11 +778,13 @@ def research_city(city: str, state: str, enrich: bool = False, photo_dir: Union[
             if new_url and new_url != p.get("website"):
                 print(f"    {p['name']}: found alternative URL: {new_url}", file=sys.stderr)
                 p["website_alt"] = new_url
-                p["url_valid_alt"] = firecrawl_validate_url(new_url)
+                # Use free-first scraping for the recovered URL too
+                p["url_valid_alt"] = scrape_url(new_url)
+                p["scraper_alt"] = p["url_valid_alt"].get("scraper", "unknown")
                 if enrich and p["url_valid_alt"].get("valid") and p["url_valid_alt"].get("content"):
                     p["enriched"] = {"markdown": p["url_valid_alt"]["content"], "title": p["url_valid_alt"].get("title", "")}
                 if p["url_valid_alt"].get("valid"):
-                    p["url_status"] = "✅ recovered via search"
+                    p["url_status"] = f"✅ recovered via search ({p.get('scraper_alt', '?')})"
                 else:
                     p["url_status"] = "❌ no valid URL found"
         else:
@@ -644,7 +828,7 @@ def main():
     parser.add_argument("city", help="City name")
     parser.add_argument("state", help="State code")
     parser.add_argument("--output", "-o", help="Output file path")
-    parser.add_argument("--enrich", action="store_true", help="Enable Firecrawl enrichment (scrapes provider sites)")
+    parser.add_argument("--enrich", action="store_true", help="Enable provider enrichment (free-first scraping: curl → Scrapling → Firecrawl)")
     parser.add_argument("--photos", help="Download hospital photos to this directory")
     args = parser.parse_args()
 

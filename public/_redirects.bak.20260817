@@ -161,7 +161,8 @@
 # ════════════════════════════════════════════════════════════
 
 
-# colorado-springs-co now has a real city page — redirect removed 2026-08-17
+/birth-support/colorado-springs-co /birth-support/co/ 301
+/birth-support/colorado-springs-co/ /birth-support/co/ 301
 /birth-support/greensboro-nc /birth-support/nc/ 301
 /birth-support/greensboro-nc/ /birth-support/nc/ 301
 /birth-support/miami-fl /birth-support/fl/ 301

@@ -17,6 +17,12 @@ HOSP_CACHE_PATH = Path.home() / ".hermes" / "state" / "tjb-hospital-cache.json"
 OUTPUT_DIR = Path.home() / ".hermes" / "state" / "enrichment-batch"
 OUTPUT_PATH = OUTPUT_DIR / "fremont-ca.json"
 
+# Scrapling is installed under /opt/homebrew/bin/python3 (Python 3.14).
+# Scripts use #!/usr/bin/env python3 (Python 3.9), so we call scrapling_helper.py
+# via subprocess using the homebrew python3 that has Scrapling installed.
+SCRAPLING_PYTHON = "/opt/homebrew/bin/python3"
+SCRAPLING_HELPER = os.path.expanduser("~/.hermes/scripts/scrapling_helper.py")
+
 # Providers extracted from cities.ts fremont-ca localDoulas
 # Using the first set (with photos) as primary, second set has updated costRange
 PROVIDERS = [
@@ -131,8 +137,183 @@ def ollama_generate(prompt, model="qwen35-27b-fast:latest", timeout=30):
         print(f"  Ollama error: {e}")
         return ""
 
+def scrapling_scrape_subprocess(url, timeout=30):
+    """Tier 1: Free Scrapling scrape via subprocess (Fetcher static + StealthyFetcher).
+    Scrapling is installed under /opt/homebrew/bin/python3, not system python3.
+    Returns dict with 'content', 'title', 'images', 'emails' or None on failure."""
+    if not url:
+        return None
+    try:
+        # Try static Fetcher first
+        result = subprocess.run(
+            [SCRAPLING_PYTHON, SCRAPLING_HELPER, "scrape", url, "--json"],
+            capture_output=True, text=True, timeout=timeout,
+        )
+        data = None
+        if result.returncode == 0 and result.stdout.strip():
+            try:
+                data = json.loads(result.stdout)
+            except json.JSONDecodeError:
+                pass
+
+        # If static fetcher failed or got non-200, try StealthyFetcher
+        if not data or data.get("status") != 200:
+            result = subprocess.run(
+                [SCRAPLING_PYTHON, SCRAPLING_HELPER, "stealthy", url, "--json"],
+                capture_output=True, text=True, timeout=timeout + 30,
+            )
+            if result.returncode == 0 and result.stdout.strip():
+                try:
+                    data = json.loads(result.stdout)
+                except json.JSONDecodeError:
+                    pass
+
+        return data
+    except subprocess.TimeoutExpired:
+        print(f"  Scrapling timeout for {url}")
+        return None
+    except Exception as e:
+        print(f"  Scrapling error: {e}")
+        return None
+
+
+def free_scrape(url, timeout=15):
+    """Free-first scraper: curl+trafilatura → Scrapling → Firecrawl (last resort).
+    Returns markdown content string, or empty string if all fail."""
+    if not url:
+        return ""
+    url = url.split("?")[0]  # Clean query params
+
+    # Tier 0: curl + trafilatura (free)
+    try:
+        import urllib.request as ur, ssl
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        req = ur.Request(url, headers={
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        })
+        with ur.urlopen(req, timeout=timeout, context=ctx) as resp:
+            html = resp.read().decode("utf-8", errors="replace")
+        if html and len(html) > 200:
+            try:
+                import trafilatura
+                md = trafilatura.extract(html, output_format="markdown", include_links=True, include_images=True)
+                if md and len(md) > 100:
+                    return md
+            except ImportError:
+                pass
+            # BS4 fallback
+            from bs4 import BeautifulSoup
+            soup = BeautifulSoup(html, "html.parser")
+            for tag in soup(["script", "style", "nav", "footer", "header", "aside"]):
+                tag.decompose()
+            text = soup.get_text(separator="\n", strip=True)
+            if text and len(text) > 100:
+                return text
+    except Exception as e:
+        print(f"  curl scrape failed: {e}")
+
+    # Tier 1: Scrapling (Fetcher static + StealthyFetcher for Cloudflare/JS)
+    data = scrapling_scrape_subprocess(url, timeout=timeout)
+    if data:
+        content = data.get("content", "")
+        if content and len(content) > 100:
+            return content
+
+    # Tier 2: Firecrawl (paid, last resort)
+    return firecrawl_scrape(url, timeout=timeout)
+
+
+def free_scrape_with_images(url, timeout=20):
+    """Free-first scraper that also extracts image URLs.
+    Returns dict with 'markdown' and 'images' keys."""
+    if not url:
+        return {"markdown": "", "images": []}
+    url = url.split("?")[0]
+
+    # Tier 0: curl + BS4 (extract images from HTML)
+    try:
+        import urllib.request as ur, ssl
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        req = ur.Request(url, headers={
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        })
+        with ur.urlopen(req, timeout=timeout, context=ctx) as resp:
+            html = resp.read().decode("utf-8", errors="replace")
+        if html and len(html) > 200:
+            from bs4 import BeautifulSoup
+            soup = BeautifulSoup(html, "html.parser")
+            # Extract images
+            images = []
+            for img_tag in soup.find_all("img"):
+                src = img_tag.get("src", "")
+                if not src:
+                    continue
+                # Make absolute URL
+                if src.startswith("//"):
+                    src = "https:" + src
+                elif src.startswith("/"):
+                    from urllib.parse import urljoin
+                    src = urljoin(url, src)
+                if not src.startswith("http"):
+                    continue
+                lower = src.lower()
+                if any(x in lower for x in ['logo', 'icon', 'favicon', 'background', 'banner']):
+                    continue
+                if src.endswith(('.jpg', '.jpeg', '.png', '.webp')):
+                    images.append(src)
+            # Extract text
+            for tag in soup(["script", "style", "nav", "footer", "header", "aside"]):
+                tag.decompose()
+            text = soup.get_text(separator="\n", strip=True)
+            try:
+                import trafilatura
+                md = trafilatura.extract(html, output_format="markdown", include_links=True, include_images=True)
+                if md and len(md) > 100:
+                    return {"markdown": md, "images": images}
+            except ImportError:
+                pass
+            if text and len(text) > 100:
+                return {"markdown": text, "images": images}
+    except Exception as e:
+        print(f"  curl scrape failed: {e}")
+
+    # Tier 1: Scrapling (Fetcher static + StealthyFetcher for Cloudflare/JS)
+    data = scrapling_scrape_subprocess(url, timeout=timeout)
+    if data:
+        content = data.get("content", "")
+        scrapling_images = data.get("images", [])
+        # Scrapling extracts image src/alt dicts — convert to URL list
+        img_urls = []
+        for img in scrapling_images:
+            if isinstance(img, dict):
+                src = img.get("src", "")
+            elif isinstance(img, str):
+                src = img
+            else:
+                continue
+            if not src or not src.startswith("http"):
+                continue
+            lower = src.lower()
+            if any(x in lower for x in ['logo', 'icon', 'favicon', 'background', 'banner']):
+                continue
+            if src.endswith(('.jpg', '.jpeg', '.png', '.webp')):
+                img_urls.append(src)
+        if content and len(content) > 100:
+            return {"markdown": content, "images": img_urls}
+
+    # Tier 2: Firecrawl (paid, last resort)
+    scrape_out = firecrawl_scrape_with_images(url, timeout=timeout)
+    if scrape_out:
+        return {"markdown": scrape_out, "images": []}
+    return {"markdown": "", "images": []}
+
+
 def firecrawl_scrape(url, timeout=60):
-    """Scrape a URL using firecrawl CLI, return markdown content."""
+    """Firecrawl scrape — PAID, last resort only. Returns markdown content."""
     try:
         result = subprocess.run(
             ['firecrawl', 'scrape', url, '--format', 'markdown', '--only-main-content'],
@@ -147,7 +328,7 @@ def firecrawl_scrape(url, timeout=60):
         return ""
 
 def firecrawl_search_images(query, timeout=30):
-    """Search for images using firecrawl."""
+    """Firecrawl image search — PAID, last resort only."""
     try:
         result = subprocess.run(
             ['firecrawl', 'search', query, '--sources', 'images', '--limit', '3'],
@@ -162,7 +343,7 @@ def firecrawl_search_images(query, timeout=30):
         return ""
 
 def firecrawl_scrape_with_images(url, timeout=60):
-    """Scrape a URL and get images list."""
+    """Firecrawl scrape with images — PAID, last resort only."""
     try:
         result = subprocess.run(
             ['firecrawl', 'scrape', url, '--format', 'markdown,images', '--only-main-content'],
@@ -288,28 +469,37 @@ def main():
                     photo = local_photo_path
                     print(f"  Saved to: {photo}")
                 else:
-                    print(f"  Download failed, trying Firecrawl...")
-                    # Try firecrawl scrape for images
-                    scrape_url = url.split("?")[0]  # Remove query params
-                    scrape_out = firecrawl_scrape_with_images(scrape_url)
-                    if scrape_out:
-                        img_url = extract_image_from_scrape(scrape_out, name, url)
-                        if img_url and download_image(img_url, dest_path):
-                            photo = local_photo_path
-                            print(f"  Found image via Firecrawl: {photo}")
+                    print(f"  Download failed, trying free scrape...")
+                    # Try free-first scrape for images (curl → Scrapling → Firecrawl)
+                    scrape_result = free_scrape_with_images(url)
+                    if scrape_result.get("images"):
+                        for img_url in scrape_result["images"][:3]:
+                            if download_image(img_url, dest_path):
+                                photo = local_photo_path
+                                print(f"  Found image via free scrape: {photo}")
+                                break
             else:
-                # No photo URL - use Firecrawl to search and scrape
-                print(f"  No photo URL, searching via Firecrawl...")
-                search_query = f"{name} doula birth Bay Area headshot"
-                search_out = firecrawl_search_images(search_query)
-                if search_out:
-                    # Try to extract image URL from search results
-                    img_urls = re.findall(r'https?://[^\s"\'<>]+\.(?:jpg|jpeg|png|webp)', search_out, re.I)
-                    for img_url in img_urls[:3]:
+                # No photo URL - use free curl-based search first, Firecrawl last resort
+                print(f"  No photo URL, searching via free scrape...")
+                # Try scraping the provider website for images first (free)
+                scrape_result = free_scrape_with_images(url)
+                if scrape_result.get("images"):
+                    for img_url in scrape_result["images"][:3]:
                         if download_image(img_url, dest_path):
                             photo = local_photo_path
-                            print(f"  Found image via search: {photo}")
+                            print(f"  Found image via website scrape: {photo}")
                             break
+                # If still no photo, try Firecrawl image search (paid, last resort)
+                if not photo:
+                    search_query = f"{name} doula birth Bay Area headshot"
+                    search_out = firecrawl_search_images(search_query)
+                    if search_out:
+                        img_urls = re.findall(r'https?://[^\s"\'<>]+\.(?:jpg|jpeg|png|webp)', search_out, re.I)
+                        for img_url in img_urls[:3]:
+                            if download_image(img_url, dest_path):
+                                photo = local_photo_path
+                                print(f"  Found image via Firecrawl search: {photo}")
+                                break
             
             # Pass 2: Write Description
             # Use existing description if it looks real (not a snippet of website noise)
@@ -366,7 +556,7 @@ def main():
             "serviceArea": "",
             "acceptingClients": accepting,
             "sourced_at": iso_now,
-            "source": "firecrawl-scrape" if photo else "ai-generated",
+            "source": "free-scrape" if photo else "ai-generated",
             "ttl": iso_ttl
         }
         
