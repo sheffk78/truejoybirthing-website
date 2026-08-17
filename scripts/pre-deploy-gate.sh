@@ -35,7 +35,9 @@ gate_header() { echo ""; echo "─── $1 ───"; }
 
 # ── G1: Working directory ──────────────────────────────────────
 gate_header "G1: Working Directory"
-if [[ "$PWD" == "$PROJECT_DIR" ]]; then
+RESOLVED_PWD="$(cd "$PWD" && pwd -P)"
+RESOLVED_PROJECT="$(cd "$PROJECT_DIR" && pwd -P)"
+if [[ "$RESOLVED_PWD" == "$RESOLVED_PROJECT" ]]; then
   gate_pass "Working directory: $PWD"
 else
   gate_fail "Must be $PROJECT_DIR, got $PWD"
