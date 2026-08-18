@@ -55,13 +55,13 @@ With the occiput pivoting under the pubic symphysis, the head begins to extend â
 
 Once the head is delivered, it rotates back to align with the shoulders. The head turns about 45 degrees to face the mother's thigh. Meanwhile, the shoulders are rotating inside the pelvis to prepare for their delivery.
 
-![Restitution: baby's head delivered and rotating back to align with shoulders still inside the pelvis](/images/cardinal-movements/cardinal-06-extension-v2.webp)
+![Extension phase of cardinal movements of labor](/images/cardinal-movements/cardinal-06-extension-v6.webp)
 
 ### 7. Expulsion
 
 The final movement. The anterior shoulder slips under the pubic symphysis, then the posterior shoulder sweeps over the perineum. The rest of the body follows in a smooth, curled motion. Your baby is here.
 
-![Expulsion: baby's body delivering after the head and shoulders, calm and peaceful](/images/cardinal-movements/cardinal-07-expulsion-v2.webp)
+![Expulsion phase of cardinal movements of labor](/images/cardinal-movements/cardinal-07-expulsion-v6.webp)
 
 ## Why Does Fetal Descent Matter for Your Birth?
 
