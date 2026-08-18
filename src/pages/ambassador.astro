@@ -10,11 +10,11 @@ const faqs = [
   },
   {
     q: "Is there a minimum number of posts or referrals required?",
-    a: "No. None. You share when it's real and when it fits. I'll never count your posts or track your referrals. This is a relationship, not a performance contract."
+    a: "One post a month. That's it. Not a quota, not a tracking system. Just: did you share something this month? If life got crazy and you missed a month, I'll check in like a friend, not a manager."
   },
   {
     q: "How does free Pro Mode work?",
-    a: "I flip Pro Mode on in your account. That's it. No credit card, no expiration date, no weird strings. If you ever leave the program, your account just goes back to the free plan. Nothing weird happens."
+    a: "Pro Mode is free as long as you're actively in the program. Each month you post about TJB — even just one mention — your Pro Mode renews automatically. No credit card, no weird strings. If you go quiet for a while, I'll check in. If you need to step back, your account goes back to the free plan. No hard feelings ever."
   },
   {
     q: "Is there a commission or affiliate program?",
@@ -25,12 +25,24 @@ const faqs = [
     a: "Your name, photo, and a short bio appear on the TJB city page for your area. When an expecting family searches for birth support in your city, they find you. It's free professional visibility on a page that already ranks in search."
   },
   {
+    q: "Do I have to use specific words in my posts?",
+    a: "We'll give you ready-to-use captions that you can post as-is or adapt. The words help your posts show up when moms search for birth tools online. But it's not a script — your voice is what makes it real."
+  },
+  {
+    q: "What platforms should I post on?",
+    a: "Instagram Reels, YouTube Shorts, and TikTok all get picked up by Google, so those are the best for visibility. But post wherever you're already active. One post a month is all we ask."
+  },
+  {
+    q: "What if I don't know what to post?",
+    a: "We've got you. We'll send you caption templates, talking points, and content ideas. You bring your real experience and your voice."
+  },
+  {
     q: "How do I apply?",
-    a: "Fill out the form on this page or email me directly at <a href=\"mailto:shelbi@truejoybirthing.com\" class=\"text-tjb-rose-500 hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all font-semibold\">shelbi@truejoybirthing.com</a>. I read every application myself. If it feels like a fit, I'll reach out by email to set up a quick 15-minute call so we can get to know each other."
+    a: "Fill out the form on this page or email me directly at <a href=\"mailto:shelbi@truejoybirthing.com\" class=\"text-tjb-rose-500 hover:text-tjb-rose-600 border-b border-transparent hover:border-tjb-rose-500 transition-all font-semibold\">shelbi@truejoybirthing.com</a>. I review every application within 2-3 business days. If it's a fit, Pro Mode gets activated within 24 hours. A 15-minute welcome call is available if you'd like to connect, but it's completely optional."
   },
   {
     q: "How long does it take to hear back?",
-    a: "I review applications within 2-3 business days. If it's a fit, I'll email you to schedule a short call. Pro Mode gets activated within 24 hours after that."
+    a: "I review applications within 2-3 business days. If it's a fit, Pro Mode gets activated within 24 hours. Want to chat? You can schedule a short call anytime, but it's not required."
   },
   {
     q: "What if I want to leave the program?",
@@ -52,8 +64,8 @@ const faqSchema = {
 
 const articleSchema = {
   "@type": "Article",
-  "headline": "TJB Ambassador Program — Free Pro Mode for Doulas and Midwives",
-  "description": "Join the True Joy Birthing ambassador program. Free Pro Mode, featured placement on your city page, and a community of birth professionals making birth better.",
+  "headline": "Doula Ambassador Program — Free Pro Mode for Birth Professionals",
+  "description": "Become a True Joy Birthing ambassador. Get free Pro Mode, a featured listing on your city page, and ready-to-use content to post. One post a month keeps your free access active.",
   "author": {
     "@type": "Organization",
     "name": "True Joy Birthing",
@@ -68,7 +80,7 @@ const articleSchema = {
     }
   },
   "datePublished": "2026-05-30",
-  "dateModified": "2026-06-16",
+  "dateModified": "2026-08-18",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://truejoybirthing.com/ambassador/"
@@ -77,8 +89,8 @@ const articleSchema = {
 ---
 
 <Layout
-  title="Doula Ambassador Program: Free Pro Mode"
-  description="Join the True Joy Birthing ambassador program. Free Pro Mode, featured city listings, and a community of birth professionals. No quotas, contracts, or tracking."
+  title="Doula Ambassador Program — Free Pro Mode for Birth Professionals | True Joy Birthing"
+  description="Become a True Joy Birthing ambassador. Get free Pro Mode, a featured listing on your city page, and ready-to-use content to post. One post a month keeps your free access active. Apply in 2 minutes."
   canonical="https://truejoybirthing.com/ambassador/"
   ogImage="https://truejoybirthing.com/images/og/og-ambassador.png"
   breadcrumbList={breadcrumbList}
@@ -94,10 +106,10 @@ const articleSchema = {
         <div>
           <p class="eyebrow mb-4">For Doulas & Midwives</p>
           <h1 class="text-[2.2rem] md:text-[3rem] leading-[1.12] font-bold text-tjb-charcoal mb-6">
-            You Love the App. Other Birth Pros Should Know About It.
+            Free Pro Mode for Doulas and Midwives Who Want to Be Found
           </h1>
           <p class="text-lg text-tjb-gray leading-relaxed mb-8 max-w-xl">
-            You already use TJB with your clients. You've probably told other doulas about it already. This just makes it official. Free Pro Mode, a listing on your city page, and a community that amplifies your work. No quotas. No contracts. No tracking.
+            You build birth plans and support families through one of the most important days of their lives. True Joy Birthing gives you the tools to run your practice and the visibility to reach more families. Free Pro Mode, a listing on your city page, and a community that amplifies your work. One post a month keeps it all going.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <a href="#join" class="btn-primary text-center">
@@ -140,11 +152,11 @@ const articleSchema = {
           </div>
           <div class="p-4 border-x border-tjb-lavender-200/40">
             <p class="text-4xl font-bold text-tjb-rose-500 font-serif">Free</p>
-            <p class="text-sm text-tjb-gray mt-2">Pro Mode for every ambassador. No expiration.</p>
+            <p class="text-sm text-tjb-gray mt-2">Pro Mode every month you're active. One post keeps it going.</p>
           </div>
           <div class="p-4">
-            <p class="text-4xl font-bold text-tjb-rose-500 font-serif">0</p>
-            <p class="text-sm text-tjb-gray mt-2">Quotas, contracts, or tracking links. Ever.</p>
+            <p class="text-4xl font-bold text-tjb-rose-500 font-serif">1</p>
+            <p class="text-sm text-tjb-gray mt-2">Post a month. That's all we ask. No contracts, no tracking links.</p>
           </div>
         </div>
       </div>
@@ -217,15 +229,15 @@ const articleSchema = {
             <svg class="w-6 h-6 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
           </div>
           <h3 class="text-xl mb-3">No Tracking</h3>
-          <p class="text-tjb-gray">I don't count your posts or track who you refer. When you tell another doula about a tool that works, that's real. I won't turn your word-of-mouth into a number.</p>
+          <p class="text-tjb-gray">I don't count your posts or track who you refer. When you tell another doula about a tool that works, that's real. I won't turn your word-of-mouth into a number. The one-post-a-month ask is about staying active, not about me counting.</p>
         </div>
 
         <div class="bg-white rounded-xl p-8 border border-tjb-lavender-200/50 shadow-sm">
           <div class="w-12 h-12 rounded-full bg-tjb-lavender-100 flex items-center justify-center mb-6">
             <svg class="w-6 h-6 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
-          <h3 class="text-xl mb-3">No Renewal Clock</h3>
-          <p class="text-tjb-gray">Free Pro Mode for as long as you're in the program. No 3-month expirations. No "post once or lose access." If you go quiet for a while, I check in like a friend, not a manager.</p>
+          <h3 class="text-xl mb-3">Stay Active, Stay Free</h3>
+          <p class="text-tjb-gray">Free Pro Mode renews every month. One post about TJB each month keeps it going. Not a quota. Not a performance metric. Just: did you share something this month? If life got crazy and you missed a month, I check in like a friend, not a manager. If you need to step back, your account goes to the free plan. No hard feelings.</p>
         </div>
 
         <div class="bg-white rounded-xl p-8 border border-tjb-lavender-200/50 shadow-sm">
@@ -312,12 +324,40 @@ const articleSchema = {
             </div>
           </div>
         </div>
+
+        <!-- 06: Content kit -->
+        <div class="py-8 border-t border-tjb-lavender-300/40">
+          <div class="grid md:grid-cols-[3rem_1fr] gap-4 md:gap-8 items-start">
+            <span class="text-3xl font-bold text-tjb-lavender-600 font-serif">06</span>
+            <div>
+              <h3 class="text-2xl mb-1">Ready-to-Use Content Kit</h3>
+              <p class="text-sm text-tjb-lavender-600 font-semibold mb-3">Never stare at a blank screen again</p>
+              <p class="text-tjb-gray leading-relaxed">We give you caption templates, posting ideas, and talking points so you never have to figure out what to say. You bring your real experience and your voice. Post it as-is or make it yours. Either way, your content is working for you while you sleep.</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- Mid-page CTA -->
       <div class="mt-12 text-center">
         <a href="#join" class="btn-primary">Join the Ambassador Program</a>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       HOW YOUR POSTS HELP FAMILIES FIND YOU
+       ═══════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 bg-tjb-cream">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="eyebrow mb-4">Your Posts Work for You</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+      <h2 class="text-[2.25rem] md:text-[2.75rem] leading-[1.15] max-w-2xl mx-auto mb-8">
+        How Your Posts Help Families Find You
+      </h2>
+      <p class="text-lg text-tjb-gray leading-relaxed max-w-2xl mx-auto">
+        When you post about True Joy Birthing on Instagram, YouTube, or TikTok, those posts don't just reach your followers. Google picks them up. When an expecting mom searches for a birth plan app or doula tools online, your posts can show up in her results. That means more families find you, and more families find TJB. We give you ready-to-use captions so you don't have to think about what to write. You just post, tag us, and your content works for you while you sleep.
+      </p>
     </div>
   </section>
 
@@ -355,8 +395,8 @@ const articleSchema = {
           <div class="w-16 h-16 rounded-full bg-tjb-rose-100 flex items-center justify-center mx-auto mb-6">
             <svg class="w-8 h-8 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m0 0h4a1 1 0 110 2h-1v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6H3a1 1 0 110-2h4zm-2 2v12h10V6H5z"/></svg>
           </div>
-          <h3 class="text-xl mb-3">Mention TJB in Your Content</h3>
-          <p class="text-tjb-gray">A birth story, a client prep post, a "tools I use" reel. When it fits, not on a schedule. Authentic moments reach more people than scheduled posts ever will.</p>
+          <h3 class="text-xl mb-3">One Post a Month</h3>
+          <p class="text-tjb-gray">One post about TJB each month. A birth story, a client prep post, a "tools I use" reel. We give you the caption and talking points. You add your voice. That's it.</p>
         </div>
       </div>
     </div>
@@ -364,7 +404,9 @@ const articleSchema = {
 
   <!-- ═══════════════════════════════════════════
        TESTIMONIAL / SOCIAL PROOF
+       (Commented out until we have a verified real testimonial)
        ═══════════════════════════════════════════ -->
+  <!--
   <section class="py-20 md:py-28 bg-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <p class="eyebrow mb-4">From the Community</p>
@@ -378,6 +420,7 @@ const articleSchema = {
       </div>
     </div>
   </section>
+  -->
 
   <!-- ═══════════════════════════════════════════
        APPLY FORM
@@ -391,7 +434,7 @@ const articleSchema = {
           Ready?
         </h2>
         <p class="text-lg text-tjb-gray mt-4 max-w-xl mx-auto">
-          Tell me about yourself and your practice. I read every application myself. If it feels like a fit, I'll reach out by email to set up a quick 15-minute call so we can get to know each other.
+          Tell me about yourself and your practice. I review every application within 2-3 business days. If it's a fit, Pro Mode gets activated within 24 hours. A 15-minute welcome call is available if you'd like to connect, but it's completely optional.
         </p>
       </div>
 
@@ -426,8 +469,34 @@ const articleSchema = {
           </div>
 
           <div>
-            <label for="amb-instagram" class="block text-sm font-medium text-tjb-charcoal mb-1.5">Instagram or Website <span class="text-tjb-gray-400 font-normal">(optional)</span></label>
-            <input type="text" id="amb-instagram" name="instagram" placeholder="@handle or URL" class="w-full px-5 py-3.5 rounded-xl border border-tjb-lavender-200 focus:outline-none focus:border-tjb-rose-400 focus:ring-1 focus:ring-tjb-rose-400 bg-white transition-colors text-[0.9375rem]" />
+            <label for="amb-instagram" class="block text-sm font-medium text-tjb-charcoal mb-1.5">Instagram Handle <span class="text-tjb-gray-400 font-normal">(optional)</span></label>
+            <input type="text" id="amb-instagram" name="instagram" placeholder="@yourhandle" class="w-full px-5 py-3.5 rounded-xl border border-tjb-lavender-200 focus:outline-none focus:border-tjb-rose-400 focus:ring-1 focus:ring-tjb-rose-400 bg-white transition-colors text-[0.9375rem]" />
+          </div>
+
+          <div>
+            <label for="amb-tiktok" class="block text-sm font-medium text-tjb-charcoal mb-1.5">TikTok Handle <span class="text-tjb-gray-400 font-normal">(optional)</span></label>
+            <input type="text" id="amb-tiktok" name="tiktok" placeholder="@yourhandle" class="w-full px-5 py-3.5 rounded-xl border border-tjb-lavender-200 focus:outline-none focus:border-tjb-rose-400 focus:ring-1 focus:ring-tjb-rose-400 bg-white transition-colors text-[0.9375rem]" />
+          </div>
+
+          <div>
+            <label for="amb-youtube" class="block text-sm font-medium text-tjb-charcoal mb-1.5">YouTube Channel <span class="text-tjb-gray-400 font-normal">(optional)</span></label>
+            <input type="text" id="amb-youtube" name="youtube" placeholder="@channel or URL" class="w-full px-5 py-3.5 rounded-xl border border-tjb-lavender-200 focus:outline-none focus:border-tjb-rose-400 focus:ring-1 focus:ring-tjb-rose-400 bg-white transition-colors text-[0.9375rem]" />
+          </div>
+
+          <div>
+            <label for="amb-website" class="block text-sm font-medium text-tjb-charcoal mb-1.5">Website <span class="text-tjb-gray-400 font-normal">(optional)</span></label>
+            <input type="text" id="amb-website" name="website" placeholder="yourpractice.com" class="w-full px-5 py-3.5 rounded-xl border border-tjb-lavender-200 focus:outline-none focus:border-tjb-rose-400 focus:ring-1 focus:ring-tjb-rose-400 bg-white transition-colors text-[0.9375rem]" />
+          </div>
+
+          <div>
+            <label for="amb-platform" class="block text-sm font-medium text-tjb-charcoal mb-1.5">Where Are You Most Active? <span class="text-tjb-rose-500">*</span></label>
+            <select id="amb-platform" name="primary_platform" class="w-full px-5 py-3.5 rounded-xl border border-tjb-lavender-200 focus:outline-none focus:border-tjb-rose-400 focus:ring-1 focus:ring-tjb-rose-400 bg-white transition-colors text-[0.9375rem]" required>
+              <option value="">Select your main platform</option>
+              <option value="instagram">Instagram</option>
+              <option value="tiktok">TikTok</option>
+              <option value="youtube">YouTube</option>
+              <option value="other">Other</option>
+            </select>
           </div>
 
           <div>
@@ -456,21 +525,21 @@ const articleSchema = {
               <span class="text-tjb-lavender-600 font-bold text-lg">1</span>
             </div>
             <p class="font-semibold text-tjb-charcoal text-sm">You Apply</p>
-            <p class="text-sm text-tjb-gray mt-1">I review your application within 2-3 business days</p>
+            <p class="text-sm text-tjb-gray mt-1">We review your application within 2-3 business days</p>
           </div>
           <div class="text-center">
             <div class="w-12 h-12 rounded-full bg-tjb-lavender-100 flex items-center justify-center mx-auto mb-3">
               <span class="text-tjb-lavender-600 font-bold text-lg">2</span>
             </div>
-            <p class="font-semibold text-tjb-charcoal text-sm">We Connect</p>
-            <p class="text-sm text-tjb-gray mt-1">Quick 15-minute call to get to know each other</p>
+            <p class="font-semibold text-tjb-charcoal text-sm">You're In</p>
+            <p class="text-sm text-tjb-gray mt-1">Pro Mode activated within 24 hours. Welcome kit sent with captions and posting guide.</p>
           </div>
           <div class="text-center">
             <div class="w-12 h-12 rounded-full bg-tjb-lavender-100 flex items-center justify-center mx-auto mb-3">
               <span class="text-tjb-lavender-600 font-bold text-lg">3</span>
             </div>
-            <p class="font-semibold text-tjb-charcoal text-sm">You're In</p>
-            <p class="text-sm text-tjb-gray mt-1">Pro Mode activated within 24 hours. That's it.</p>
+            <p class="font-semibold text-tjb-charcoal text-sm">Optional Call</p>
+            <p class="text-sm text-tjb-gray mt-1">Want to chat? Schedule a 15-minute call anytime. No pressure.</p>
           </div>
         </div>
       </div>
