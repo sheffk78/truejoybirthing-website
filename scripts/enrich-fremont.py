@@ -3,14 +3,14 @@
 Enrich provider data for fremont-ca city page.
 - Downloads remote photos and converts to webp
 - Uses Firecrawl for providers with no photo URL
-- Uses Ollama (qwen35-27b-fast) for descriptions
+- Uses Ollama (atlas:latest) for descriptions
 - Writes enrichment results + updates provider cache
 """
 import json, os, re, subprocess, time, hashlib, urllib.request, urllib.error, ssl
 from pathlib import Path
 from datetime import datetime, timedelta
 
-BASE = Path("/Users/socializerender/Projects/truejoybirthing-website")
+BASE = Path("/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website")
 IMG_DIR = BASE / "public" / "images"
 CACHE_PATH = Path.home() / ".hermes" / "state" / "tjb-provider-cache.json"
 HOSP_CACHE_PATH = Path.home() / ".hermes" / "state" / "tjb-hospital-cache.json"
@@ -114,7 +114,7 @@ def download_image(url, dest_path, timeout=15):
         print(f"  Download failed for {url}: {e}")
         return False
 
-def ollama_generate(prompt, model="qwen35-27b-fast:latest", timeout=30):
+def ollama_generate(prompt, model="atlas:latest", timeout=30):
     """Generate text using local Ollama model."""
     try:
         payload = json.dumps({

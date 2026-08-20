@@ -261,7 +261,7 @@ def replace_section(content: str, slug: str, new_entries: str) -> str:
 
 # ── main ──
 
-CITIES_PATH = os.path.expanduser("~/Projects/truejoybirthing-website/src/data/cities.ts")
+CITIES_PATH = os.path.expanduser("/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/src/data/cities.ts")
 BACKUP = CITIES_PATH + ".bak"
 
 slugs = {

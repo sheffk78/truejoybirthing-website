@@ -17,7 +17,7 @@
 # =============================================================================
 set -euo pipefail
 
-PROJECT_DIR="/Users/socializerender/Projects/truejoybirthing-website"
+PROJECT_DIR="/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website"
 cd "$PROJECT_DIR"
 
 SLUG="${1:-}"

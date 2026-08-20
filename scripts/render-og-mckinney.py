@@ -52,20 +52,20 @@ html,body{{width:1200px;height:630px;background:#FAF8F5;overflow:hidden}}
 </div>
 </body></html>'''
 
-with open('/Users/socializerender/Projects/truejoybirthing-website/scripts/og-render-mckinney.html', 'w') as f:
+with open('/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/scripts/og-render-mckinney.html', 'w') as f:
     f.write(html)
 
 with sync_playwright() as p:
     browser = p.chromium.launch()
     page = browser.new_page(viewport={'width': W, 'height': H}, device_scale_factor=1)
-    page.goto('file:///Users/socializerender/Projects/truejoybirthing-website/scripts/og-render-mckinney.html', wait_until='networkidle')
+    page.goto('file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/scripts/og-render-mckinney.html', wait_until='networkidle')
     page.wait_for_timeout(5000)
     nw = page.evaluate('() => document.querySelector(".right-column img").naturalWidth')
     print(f'naturalWidth={nw}')
-    page.screenshot(path='/Users/socializerender/Projects/truejoybirthing-website/public/images/og-city-mckinney-tx-v2.png', clip={'x': 0, 'y': 0, 'width': W, 'height': H})
+    page.screenshot(path='/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/og-city-mckinney-tx-v2.png', clip={'x': 0, 'y': 0, 'width': W, 'height': H})
     browser.close()
 
-img = Image.open('/Users/socializerender/Projects/truejoybirthing-website/public/images/og-city-mckinney-tx-v2.png')
-img.save('/Users/socializerender/Projects/truejoybirthing-website/public/images/og-city-mckinney-tx-v2.webp', 'WEBP', quality=95)
-size = os.path.getsize('/Users/socializerender/Projects/truejoybirthing-website/public/images/og-city-mckinney-tx-v2.webp')
+img = Image.open('/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/og-city-mckinney-tx-v2.png')
+img.save('/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/og-city-mckinney-tx-v2.webp', 'WEBP', quality=95)
+size = os.path.getsize('/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/og-city-mckinney-tx-v2.webp')
 print(f'OG render complete. Size: {size} bytes')

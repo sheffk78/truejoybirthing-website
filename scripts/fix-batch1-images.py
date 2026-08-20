@@ -3,7 +3,7 @@
 
 import re
 
-CITIES_TS = '/Users/socializerender/Projects/truejoybirthing-website/src/data/cities.ts'
+CITIES_TS = '/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/src/data/cities.ts'
 
 with open(CITIES_TS) as f:
     content = f.read()

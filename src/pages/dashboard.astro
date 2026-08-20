@@ -49,17 +49,17 @@ const controlKey = import.meta.env.PUBLIC_TJB_CONTROL_KEY || '';
 <title>TJB City Pages Dashboard</title>
 <link rel="canonical" href="https://truejoybirthing.com/dashboard/">
 <meta property="og:title" content="TJB City Pages Dashboard">
-<meta property="og:description" content="Internal pipeline dashboard tracking TJB city pages across 7 production stages.">
+<meta property="og:description" content="Canonical TJB city pipeline ledger: one city list, one progress record, one next city.">
 <meta property="og:url" content="https://truejoybirthing.com/dashboard/">
 <meta property="og:image" content="https://truejoybirthing.com/images/og/og-homepage.webp">
 <meta property="og:type" content="website">
-<meta name="description" content="Internal pipeline dashboard tracking TJB city pages across 7 production stages.">
+<meta name="description" content="Canonical TJB city pipeline ledger: one city list, one progress record, one next city.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
   "name": "TJB City Pages Dashboard",
-  "description": "Internal pipeline dashboard tracking TJB city pages across 7 production stages.",
+  "description": "Canonical TJB city pipeline ledger: one city list, one progress record, one next city.",
   "url": "https://truejoybirthing.com/dashboard/",
   "isAccessibleForFree": true
 }
@@ -466,7 +466,7 @@ const controlKey = import.meta.env.PUBLIC_TJB_CONTROL_KEY || '';
     <div class="header">
       <div class="eyebrow">Internal Dashboard</div>
       <h1>City Pages Pipeline</h1>
-      <div class="subtitle" id="subtitle">— city pages tracked across 7 pipeline stages</div>
+      <div class="subtitle" id="subtitle">— canonical city ledger; 7 completion measures across 4 pipeline stages</div>
       <div class="updated">Audit data: {auditDate}</div>
     </div>
 
@@ -530,7 +530,7 @@ const controlKey = import.meta.env.PUBLIC_TJB_CONTROL_KEY || '';
     </div>
 
     <div class="footer">
-      Click a city name to copy a pipeline prompt you can paste back to Kit. The prompt references the new pipeline structure (tjb-pipeline-dag → tjb-pipeline-rules → tjb-city-orchestrator). Click "view" to open the live page. Dashboard regenerates on each deploy.
+      This page is the canonical city ledger: its city list and progress are the single reporting source for the TJB pipeline. Click a city name to copy a pipeline prompt; click "view" to open the live page. The ledger regenerates on each deploy.
     </div>
   </div>
 
@@ -652,7 +652,7 @@ const controlKey = import.meta.env.PUBLIC_TJB_CONTROL_KEY || '';
   const stageLabels = {hero: 'Hero Image', og: 'OG Image', support: 'Support Scene', hospitals: 'Hospitals', doulas: 'Doulas', video: 'Video', outreach: 'Outreach'};
   const stages = Object.keys(stageLabels);
 
-  document.getElementById('subtitle').textContent = data.total + ' city pages — tracked across 7 pipeline stages';
+  document.getElementById('subtitle').textContent = data.total + ' city pages — canonical ledger; 7 completion measures across 4 pipeline stages';
 
   function scoreClass(score) {
     if (score >= 100) return 'score-green';

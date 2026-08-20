@@ -16,7 +16,7 @@ Exit code: 0 = pass, 1 = fail
 import json, os, re, sys, hashlib
 from pathlib import Path
 
-PROJECT_DIR = os.path.expanduser('~/Projects/truejoybirthing-website')
+PROJECT_DIR = os.path.expanduser('/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website')
 PUBLIC_IMAGES = os.path.join(PROJECT_DIR, 'public/images')
 
 

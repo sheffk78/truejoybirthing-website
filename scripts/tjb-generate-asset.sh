@@ -20,7 +20,7 @@ ASSET_TYPE="${1:?Usage: bash scripts/tjb-generate-asset.sh <asset-type> <slug>}"
 SLUG="${2:?Usage: bash scripts/tjb-generate-asset.sh <asset-type> <slug>}"
 CITY_NAME="${3:-}"
 STATE_ABBR="${4:-}"
-PROJECT_DIR="/Users/socializerender/Projects/truejoybirthing-website"
+PROJECT_DIR="/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website"
 SCRIPT_DIR="$PROJECT_DIR/scripts"
 OUTPUT_DIR="$PROJECT_DIR/public/images"
 

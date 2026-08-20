@@ -129,7 +129,7 @@ function firecrawlScrape(url) {
   }
 }
 
-function ollamaGenerate(prompt, model = 'qwen35-27b-fast:latest') {
+function ollamaGenerate(prompt, model = 'atlas:latest') {
   try {
     const payload = JSON.stringify({
       model: model,

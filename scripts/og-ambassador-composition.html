@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+body { font-family: 'Source Sans 3', sans-serif; background: #E8E6F0; }
+.card { width: 1200px; height: 630px; display: flex; position: relative; overflow: hidden; }
+.left { width: 57%; height: 630px; position: relative; display: flex; flex-direction: column; justify-content: center; padding: 56px 58px 70px; background: linear-gradient(180deg, #FAF8F5 0%, #EDE5F5 100%); }
+.right { width: 43%; height: 630px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #E8E5F1 0%, #D9D0E8 48%, #C9D6C9 100%); }
+.accent { position: absolute; left: 0; right: 0; height: 6px; background: #D8A0C4; z-index: 5; }
+.accent.top { top: 0; } .accent.bottom { bottom: 0; }
+.eyebrow { color: #B87AA0; font-size: 15px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 14px; }
+.line { width: 42px; height: 3px; background: #D8A0C4; margin-bottom: 20px; }
+h1 { margin: 0 0 16px; color: #2D2B55; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 54px; line-height: 1.03; font-weight: 700; max-width: 570px; }
+.body { margin: 0 0 21px; color: #62627C; font-size: 20px; line-height: 1.32; max-width: 530px; }
+.detail { color: #B87AA0; font-size: 15px; font-weight: 600; letter-spacing: .3px; }
+.logo { position: absolute; bottom: 22px; left: 50px; height: 48px; width: auto; }
+.phone-wrap { width: 250px; height: 535px; padding: 9px; border-radius: 32px; background: #29273A; box-shadow: 0 20px 36px rgba(45,43,85,.28); transform: rotate(3deg); position: relative; z-index: 2; }
+.phone-wrap::before { content: ''; position: absolute; top: 15px; left: 50%; transform: translateX(-50%); width: 74px; height: 18px; border-radius: 12px; background: #29273A; z-index: 3; }
+.phone { width: 100%; height: 100%; display: block; object-fit: cover; object-position: top center; border-radius: 24px; }
+.kicker { position: absolute; right: 24px; bottom: 28px; color: #6E6C99; font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; writing-mode: vertical-rl; transform: rotate(180deg); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="left">
+    <div class="accent top"></div><div class="accent bottom"></div>
+    <div class="eyebrow">For Doulas &amp; Midwives</div>
+    <div class="line"></div>
+    <h1>Free Pro Mode for Birth Professionals</h1>
+    <p class="body">Use the app with your clients, share what works, and help more families find your practice.</p>
+    <div class="detail">One post a month · Featured city page · Ready-to-use captions</div>
+    <img class="logo" src="https://truejoybirthing.com/images/logo-mono.svg" alt="True Joy Birthing">
+  </div>
+  <div class="right">
+    <div class="phone-wrap"><img class="phone" src="https://truejoybirthing.com/images/tjb-app-dashboard.png" alt="True Joy Birthing mobile app dashboard"></div>
+    <div class="kicker">True Joy Birthing app</div>
+  </div>
+</div>
+</body>
+</html>

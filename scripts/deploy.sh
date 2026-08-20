@@ -19,7 +19,7 @@
 
 set -euo pipefail
 
-PROJECT_DIR="/Users/socializerender/Projects/truejoybirthing-website"
+PROJECT_DIR="/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website"
 
 # 🔴 GATE 1: Working directory must resolve to the canonical tree.
 # PROJECT_DIR is a symlink to the workspace tree on this machine; compare

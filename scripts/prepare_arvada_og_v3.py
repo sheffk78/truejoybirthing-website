@@ -2,7 +2,7 @@ from PIL import Image
 from pathlib import Path
 
 src = Image.open('/tmp/arvada-hero-v3-source.png').convert('RGB')
-root = Path('/Users/socializerender/Projects/truejoybirthing-website')
+root = Path('/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website')
 # Native 16:9 source -> exact 1200x630 OG crop, preserving geometry.
 w, h = src.size
 og_h = round(w * 630 / 1200)

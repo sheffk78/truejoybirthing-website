@@ -2,7 +2,7 @@ from PIL import Image, ImageFilter, ImageOps
 from pathlib import Path
 
 src = Path('/tmp/arvada_hero_raw.jpg')
-root = Path('/Users/socializerender/Projects/truejoybirthing-website')
+root = Path('/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website')
 img = Image.open(src).convert('RGB')
 
 # Preserve the original square composition for the website hero.

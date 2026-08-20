@@ -1,5 +1,5 @@
 import sys
-sys.path.insert(0, '/Users/socializerender/Projects/truejoybirthing-website')
+sys.path.insert(0, '/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website')
 
 # Read current cities.ts
 with open("src/data/cities.ts", "r") as f:

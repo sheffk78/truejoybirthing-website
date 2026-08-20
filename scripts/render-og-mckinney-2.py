@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 import os
 
 # Get mono logo SVG as base64
-with open('/Users/socializerender/Projects/truejoybirthing-website/public/images/logo-mono.svg', 'rb') as f:
+with open('/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/logo-mono.svg', 'rb') as f:
     svg_b64 = base64.b64encode(f.read()).decode()
 
 # Get hero as PNG base64
@@ -63,11 +63,11 @@ with sync_playwright() as p:
     page.wait_for_timeout(8000)
     nw = page.evaluate('() => document.querySelector(".right-column img").naturalWidth')
     print(f'Image naturalWidth: {nw}')
-    page.screenshot(path='/Users/socializerender/Projects/truejoybirthing-website/public/images/og-city-mckinney-tx-v2.png', clip={'x': 0, 'y': 0, 'width': W, 'height': H})
+    page.screenshot(path='/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/og-city-mckinney-tx-v2.png', clip={'x': 0, 'y': 0, 'width': W, 'height': H})
     browser.close()
 
-img = Image.open('/Users/socializerender/Projects/truejoybirthing-website/public/images/og-city-mckinney-tx-v2.png')
+img = Image.open('/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/og-city-mckinney-tx-v2.png')
 print(f'Screenshot size: {img.size}')
-img.save('/Users/socializerender/Projects/truejoybirthing-website/public/images/og-city-mckinney-tx-v2.webp', 'WEBP', quality=95)
-size = os.path.getsize('/Users/socializerender/Projects/truejoybirthing-website/public/images/og-city-mckinney-tx-v2.webp')
+img.save('/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/og-city-mckinney-tx-v2.webp', 'WEBP', quality=95)
+size = os.path.getsize('/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/og-city-mckinney-tx-v2.webp')
 print(f'OG WebP: {size} bytes')

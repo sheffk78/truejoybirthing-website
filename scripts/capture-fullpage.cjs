@@ -2,8 +2,8 @@ const { chromium } = require('playwright');
 const path = require('path');
 
 const slug = process.argv[2];
-const htmlPath = path.resolve(`/Users/socializerender/Projects/truejoybirthing-website/dist/birth-support/${slug}/index.html`);
-const outputPath = path.resolve(`/Users/socializerender/Projects/truejoybirthing-website/public/images/${slug}-fullpage-scroll.png`);
+const htmlPath = path.resolve(`/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/dist/birth-support/${slug}/index.html`);
+const outputPath = path.resolve(`/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/${slug}-fullpage-scroll.png`);
 
 (async () => {
   const browser = await chromium.launch();

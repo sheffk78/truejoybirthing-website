@@ -7,7 +7,7 @@ right panel (city hero photo), rose accent bars top/bottom.
 import os, subprocess, sys, json
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
-PROJECT = "/Users/socializerender/Projects/truejoybirthing-website"
+PROJECT = "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website"
 OUT_DIR = os.path.join(PROJECT, "public/images")
 LOGO_SVG = os.path.join(PROJECT, "public/images/logo-mono.svg")
 LOGO_PNG = "/tmp/tjb-logo-mono.png"

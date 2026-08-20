@@ -850,7 +850,7 @@ const schema = {
               {doula.acceptingClients && (
                 <div class="flex items-center justify-center gap-1.5 mt-2">
                   <span class="w-2 h-2 rounded-full bg-green-500"></span>
-                  <span class="text-xs text-green-700 font-medium">{typeof doula.acceptingClients === 'string' ? doula.acceptingClients : 'Accepting clients'}</span>
+                  <span class="text-xs text-green-700 font-medium">Accepting clients</span>
                 </div>
               )}
               {doula.url && <a href={doula.url} target="_blank" rel="noopener noreferrer" class="btn-primary mt-4 text-sm w-full">Visit website</a>}
@@ -1615,7 +1615,7 @@ const schema = {
                       {p.costRange && <span class="bg-tjb-cream px-2 py-0.5 rounded">{p.costRange}</span>}
                       {p.homeBirthSupport && <span class="bg-tjb-rose-50 text-tjb-rose-600 px-2 py-0.5 rounded">Home visits</span>}
                       {p.virtualConsultations && <span class="bg-tjb-cream px-2 py-0.5 rounded">Virtual</span>}
-                      {p.acceptingClients && <span class="bg-green-50 text-green-700 px-2 py-0.5 rounded">{typeof p.acceptingClients === 'string' ? p.acceptingClients : 'Accepting clients'}</span>}
+                      {p.acceptingClients && <span class="bg-green-50 text-green-700 px-2 py-0.5 rounded">Accepting clients</span>}
                     </div>
                     {p.url && <a href={p.url} target="_blank" rel="noopener noreferrer" class="text-sm text-tjb-rose-600 hover:underline mt-2 inline-block">Visit site →</a>}
                   </div>

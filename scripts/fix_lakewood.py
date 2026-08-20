@@ -7,7 +7,7 @@ Makes three specific changes to src/data/cities.ts:
 """
 import re
 
-CITIES_PATH = "/Users/socializerender/Projects/truejoybirthing-website/src/data/cities.ts"
+CITIES_PATH = "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/src/data/cities.ts"
 
 with open(CITIES_PATH, "r") as f:
     content = f.read()

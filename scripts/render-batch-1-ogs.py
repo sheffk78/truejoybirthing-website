@@ -3,7 +3,7 @@
 import os, sys, subprocess
 from pathlib import Path
 
-PROJECT_DIR = Path(os.path.expanduser('~/Projects/truejoybirthing-website'))
+PROJECT_DIR = Path(os.path.expanduser('/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website'))
 OUTPUT_DIR = PROJECT_DIR / 'public' / 'images'
 TEMPLATE = PROJECT_DIR / 'scripts' / 'render-city-og-template.html'
 

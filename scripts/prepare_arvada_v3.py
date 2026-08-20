@@ -2,7 +2,7 @@ from PIL import Image
 from pathlib import Path
 
 src = Image.open('/tmp/arvada-hero-v3-source.png').convert('RGB')
-root = Path('/Users/socializerender/Projects/truejoybirthing-website')
+root = Path('/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website')
 w, h = src.size
 crop_w = round(h * 3 / 2)
 left = (w - crop_w) // 2

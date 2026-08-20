@@ -2,8 +2,8 @@
 const url1200 = 'https://v3b.fal.media/files/b/0aa396bf/rSKk8TheJTmvuKhXKFbe8_3n8NUarb.png';
 const url600 = 'https://v3b.fal.media/files/b/0aa396bf/rSKk8TheJTmvuKhXKFbe8_3n8NUarb.png';
 // Image paths
-const path1200 = '/Users/socializerender/Projects/truejoybirthing-website/public/images/augusta-ga-birth-doula-skyline-1200.webp';
-const path600 = '/Users/socializerender/Projects/truejoybirthing-website/public/images/augusta-ga-birth-doula-skyline-1200-600.webp';
+const path1200 = '/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/augusta-ga-birth-doula-skyline-1200.webp';
+const path600 = '/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/augusta-ga-birth-doula-skyline-1200-600.webp';
 // Download and save images
 const https = require('https');
 

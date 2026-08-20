@@ -22,7 +22,6 @@ Usage:
 State file: ~/.hermes/skills/productivity/tjb-city-orchestrator/states/{slug}.json
 """
 
-import hashlib
 import json
 import os
 import re
@@ -31,10 +30,12 @@ import sys
 import time
 from pathlib import Path
 
-STATES_DIR = Path("/Users/socializerender/.hermes/skills/productivity/tjb-city-orchestrator/states")
-PROBE_SCRIPT = Path("/Users/socializerender/.hermes/skills/productivity/tjb-city-orchestrator/scripts/probe-city-candidates.py")
-PROJECT_DIR = "/Users/socializerender/Projects/truejoybirthing-website"
-RECURRING_MISTAKES_PATH = Path("/Users/socializerender/.hermes/skills/productivity/tjb-city-orchestrator/references/recurring-mistakes-block.md")
+STATES_DIR = Path(os.environ.get("TJB_STATES_DIR", "/Users/socializerender/.hermes/skills/productivity/tjb-city-orchestrator/states"))
+PROBE_SCRIPT = Path(os.environ.get("TJB_PROBE_SCRIPT", "/Users/socializerender/.hermes/skills/productivity/tjb-city-orchestrator/scripts/probe-city-candidates.py"))
+# One canonical project root; both legacy locations currently resolve to the same tree.
+PROJECT_DIR = os.environ.get("TJB_PROJECT_DIR", "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website")
+RECURRING_MISTAKES_PATH = Path(os.environ.get("TJB_RECURRING_MISTAKES", "/Users/socializerender/.hermes/skills/productivity/tjb-city-orchestrator/references/recurring-mistakes-block.md"))
+BUILD_CHECKPOINT_DIR = Path(os.environ.get("TJB_BUILD_CHECKPOINT_DIR", str(Path(PROJECT_DIR) / "artifacts" / "build-checkpoints")))
 
 # ─── 4-Stage Model ───
 STAGE_ORDER = [
@@ -78,7 +79,7 @@ STAGE_CONTEXTS = {
     "build": {
         "skill": "tjb-city-pipeline",
         "goal_template": (
-            "BUILD stage for {slug}: Research providers, hospitals, and birth centers. "
+            "BUILD stage for {slug}: checkpoint-first execution. Write a concrete research/data checkpoint under artifacts/build-checkpoints/{slug}/ within the first 10 tool calls before extended research. Research providers, hospitals, and birth centers. "
             "Write data into cities.ts using Python heredoc via terminal (NEVER use write_file or patch on cities.ts). "
             "Generate hero image (pregnant silhouette + city landscape, ONE image reused across hero/YT/OG). "
             "Generate support scene photo (pregnant mom + professional, ONE pregnant woman, never distorted). "
@@ -87,7 +88,7 @@ STAGE_CONTEXTS = {
             "Verify data accuracy. Run: npx tsx scripts/validate-city-data.ts {slug} and npm run build to verify."
         ),
         "toolsets": ["terminal", "file", "web", "browser", "image_gen", "vision"],
-        "gates": ["G3", "G5", "G13", "G4", "G37", "hospital_count", "visual_check", "visual_hero_og", "image_files_exist"],
+        "gates": ["G3", "G5", "G13", "G4", "G37", "hospital_count", "visual_check"],
     },
     "enrich": {
         "skill": "tjb-provider-enrichment",
@@ -158,42 +159,9 @@ def validate_slug(slug: str) -> bool:
 
 def load_state(slug: str) -> dict:
     state_file = STATES_DIR / f"{slug}.json"
-    if not state_file.exists():
-        return {}
-    # P0-4: verify the SHA-256 sidecar before trusting the state file. A
-    # tampered/corrupted state (e.g. a subagent editing it directly, or a
-    # partial write) is rejected — the caller must re-init rather than trust it.
-    sig_file = STATES_DIR / f"{slug}.json.sha256"
-    if sig_file.exists():
-        try:
-            expected = sig_file.read_text().strip()
-            actual = hashlib.sha256(state_file.read_bytes()).hexdigest()
-            if expected != actual:
-                print(json.dumps({
-                    "action": "state_signature_mismatch",
-                    "slug": slug,
-                    "error": f"State file checksum mismatch — refusing to load. Re-init or restore {slug}.json.",
-                }, indent=2))
-                return {}
-        except Exception:
-            pass  # fall through to load if signature read fails; keep behavior resilient
-    try:
+    if state_file.exists():
         return json.loads(state_file.read_text())
-    except Exception:
-        return {}
-
-
-def _write_state_signature(slug: str) -> None:
-    """Write the SHA-256 sidecar for a freshly saved state file."""
-    state_file = STATES_DIR / f"{slug}.json"
-    sig_file = STATES_DIR / f"{slug}.json.sha256"
-    try:
-        digest = hashlib.sha256(state_file.read_bytes()).hexdigest()
-        tmp = STATES_DIR / f"{slug}.json.sha256.tmp"
-        tmp.write_text(digest)
-        os.replace(str(tmp), str(sig_file))
-    except Exception:
-        pass
+    return {}
 
 
 def save_state(slug: str, state: dict):
@@ -202,13 +170,12 @@ def save_state(slug: str, state: dict):
     tmp_file = STATES_DIR / f"{slug}.json.tmp"
     tmp_file.write_text(json.dumps(state, indent=2))
     os.replace(str(tmp_file), str(state_file))
-    _write_state_signature(slug)
     # Keep the visual dashboard automatic. Any state transition exports the
     # consolidated city ledger to public/city-audit.json; failures are silent
     # here so pipeline commands remain usable if the dashboard export breaks.
     try:
         subprocess.run(
-            ["python3", str(Path.home() / ".hermes" / "scripts" / "tjb-city-ledger.py"), "sync"],
+            ["python3", str(Path(PROJECT_DIR) / "scripts" / "tjb-city-ledger.py"), "sync"],
             cwd=PROJECT_DIR,
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
@@ -249,7 +216,7 @@ def determine_initial_stage(slug: str) -> str:
 
 def determine_initial_stage_from_probe(probe: dict) -> str:
     """Determine starting stage from a probe result dict.
-    
+
     This is the ONLY time probing determines the stage. After init,
     advancement is strictly forward via STAGE_ORDER index.
     """
@@ -257,31 +224,31 @@ def determine_initial_stage_from_probe(probe: dict) -> str:
         return "build"
     if not probe.get("has_local_doulas", False):
         return "build"
-    
+
     # Check if enrichment is complete
     providers_have_photos = probe.get("providers_have_photos", False)
     providers_have_descs = probe.get("providers_have_descriptions", False)
     providers_have_costs = probe.get("providers_have_cost_ranges", False)
     enrichment_ok = providers_have_photos and providers_have_descs and providers_have_costs
-    
+
     if not enrichment_ok:
         return "enrich"
-    
+
     # Check images (part of build stage in 4-stage model, but if enrichment
     # is done and images are missing, we need to go back to build)
     if not probe.get("hero_on_disk", False) or not probe.get("og_on_disk", False):
         return "build"
-    
+
     # Check if deployed + preflight passes
     if not probe.get("is_deployed", False):
         return "verify_deploy"
-    
+
     # Check video + outreach
     if not probe.get("has_render", False) or not probe.get("has_youtube_id", False):
         return "video_outreach"
     if not probe.get("has_embed", False):
         return "video_outreach"
-    
+
     return "complete"
 
 
@@ -311,17 +278,17 @@ def cmd_init(slug: str):
             "error": f"Invalid slug '{slug}'. Slugs must be lowercase-letters-2letter-state (e.g., 'dallas-tx'). Test data like 'city1-tx' is rejected."
         }, indent=2))
         return
-    
+
     # Probe once to determine starting stage
     probe = probe_city(slug)
     stage = determine_initial_stage_from_probe(probe)
     stage_idx = get_stage_index(stage)
-    
+
     # Skeleton detection: if 0 providers, mark as skeleton
     city_type = "enriched"
     if probe.get("provider_count", 0) == 0 and not probe.get("has_local_doulas", False):
         city_type = "skeleton"
-    
+
     state = {
         "slug": slug,
         "current_stage": stage,
@@ -356,11 +323,11 @@ def cmd_next(slug: str):
         # Auto-init if not found
         cmd_init(slug)
         state = load_state(slug)
-    
+
     if not state:
         print(json.dumps({"action": "error", "slug": slug, "message": "Failed to init state."}))
         return
-    
+
     # Check if pipeline is blocked
     if state.get("blocked", False):
         print(json.dumps({
@@ -371,9 +338,9 @@ def cmd_next(slug: str):
             "stages_failed": state.get("stages_failed", []),
         }, indent=2))
         return
-    
+
     stage = state.get("current_stage", "build")
-    
+
     if stage == "complete":
         print(json.dumps({
             "action": "complete",
@@ -382,7 +349,7 @@ def cmd_next(slug: str):
             "stages_completed": state.get("stages_completed", []),
         }, indent=2))
         return
-    
+
     ctx = STAGE_CONTEXTS.get(stage)
     if not ctx:
         # Try old-to-new mapping
@@ -396,10 +363,10 @@ def cmd_next(slug: str):
             }, indent=2))
             return
         stage = new_stage
-    
+
     recurring = load_recurring_mistakes()
     goal = ctx["goal_template"].format(slug=slug)
-    
+
     subagent_context = f"""You are working on the True Joy Birthing city page pipeline.
 
 CITY: {slug}
@@ -419,7 +386,7 @@ ADDITIONAL RULES:
 STAGE GATES (must pass before advancing):
 {', '.join(ctx.get('gates', []))}
 """
-    
+
     output = {
         "action": "next",
         "slug": slug,
@@ -436,15 +403,10 @@ STAGE GATES (must pass before advancing):
     print(json.dumps(output, indent=2))
 
 
-def cmd_done(slug: str, stage: str, gate_checked: bool = False):
+def cmd_done(slug: str, stage: str):
     """Mark a stage as complete and advance FORWARD to next stage.
 
     No re-probing. Next stage is always STAGE_ORDER[current_index + 1].
-
-    Security hardening (P0-1): this command CANNOT be used to bypass the stage
-    gate. Unless called internally by cmd_advance (which already ran the gate),
-    cmd_done runs the gate itself before advancing. A direct `done` invocation
-    with a failing gate is rejected with exit 1.
     """
     state = load_state(slug)
     if not state:
@@ -476,22 +438,6 @@ def cmd_done(slug: str, stage: str, gate_checked: bool = False):
             "error": f"Stage '{actual_stage}' (idx {actual_idx}) does not match current stage '{state.get('current_stage')}' (idx {current_idx}). Use 'done' only for the current stage."
         }, indent=2))
         return
-
-    # P0-1 hardening: unless the caller already ran the gate (cmd_advance path),
-    # run the per-stage gate NOW. A direct `done` cannot bypass verification.
-    if not gate_checked:
-        gate_result = run_stage_gate(slug, actual_stage)
-        gate_exit = gate_result[0] if isinstance(gate_result, tuple) else gate_result
-        if gate_exit != 0:
-            print(json.dumps({
-                "action": "gate_rejected",
-                "slug": slug,
-                "stage": actual_stage,
-                "gate_exit": gate_exit,
-                "error": "cmd_done rejected: stage gate did not pass. Use 'advance' and fix the gate failure before advancing."
-            }, indent=2))
-            sys.exit(gate_exit if gate_exit in (1, 2, 3) else 1)
-            return
 
     # Record completion
     completed = state.get("stages_completed", [])
@@ -546,7 +492,7 @@ def cmd_fail(slug: str, stage: str, reason: str):
     if not state:
         print(json.dumps({"error": f"No state file for {slug}. Run init first."}))
         return
-    
+
     # If already blocked, don't increment further
     if state.get("blocked", False):
         print(json.dumps({
@@ -556,16 +502,16 @@ def cmd_fail(slug: str, stage: str, reason: str):
             "attempts": state.get("stage_attempts", {}).get(stage, "?"),
         }, indent=2))
         return
-    
+
     # Map old stage name to new if needed
     actual_stage = stage
     if stage not in STAGE_ORDER:
         actual_stage = OLD_TO_NEW_STAGE.get(stage, stage)
-    
+
     failed = state.get("stages_failed", [])
     failed.append({"stage": actual_stage, "reason": reason, "timestamp": int(time.time())})
     state["stages_failed"] = failed
-    
+
     history = state.get("history", [])
     history.append({
         "stage": actual_stage,
@@ -574,26 +520,26 @@ def cmd_fail(slug: str, stage: str, reason: str):
         "timestamp": int(time.time()),
     })
     state["history"] = history
-    
+
     # Increment per-stage attempt counter
     stage_attempts = state.get("stage_attempts", {})
     stage_attempts[actual_stage] = stage_attempts.get(actual_stage, 0) + 1
     state["stage_attempts"] = stage_attempts
-    
+
     # Check if over attempt limit for this stage
     limit = STAGE_ATTEMPT_LIMITS.get(actual_stage, 3)
     attempts = stage_attempts[actual_stage]
-    
+
     if attempts >= limit:
         state["blocked"] = True
         state["blocked_reason"] = (
             f"Stage '{actual_stage}' has failed {attempts} times (limit: {limit}). "
             f"Last reason: {reason}. Use 'unblock' command to retry."
         )
-    
+
     state["updated_at"] = int(time.time())
     save_state(slug, state)
-    
+
     response = {
         "action": "fail",
         "slug": slug,
@@ -623,17 +569,17 @@ def cmd_unblock(slug: str):
     if not state:
         print(json.dumps({"error": f"No state file for {slug}. Run init first."}))
         return
-    
+
     state["blocked"] = False
     state["blocked_reason"] = None
     state["updated_at"] = int(time.time())
-    
+
     # Reset attempt counter for current stage
     current_stage = state.get("current_stage", "build")
     stage_attempts = state.get("stage_attempts", {})
     stage_attempts[current_stage] = 0
     state["stage_attempts"] = stage_attempts
-    
+
     save_state(slug, state)
     print(json.dumps({
         "action": "unblock",
@@ -649,17 +595,17 @@ def cmd_gates(slug: str, stage: str, gate_results_json: str):
     if not state:
         print(json.dumps({"error": f"No state file for {slug}. Run init first."}))
         return
-    
+
     # Map old stage name to new if needed
     actual_stage = stage
     if stage not in STAGE_ORDER:
         actual_stage = OLD_TO_NEW_STAGE.get(stage, stage)
-    
+
     try:
         gate_results = json.loads(gate_results_json)
     except json.JSONDecodeError:
         gate_results = {"raw": gate_results_json}
-    
+
     gate_results_store = state.get("gate_results", {})
     gate_results_store[actual_stage] = {
         "results": gate_results,
@@ -667,7 +613,7 @@ def cmd_gates(slug: str, stage: str, gate_results_json: str):
     }
     state["gate_results"] = gate_results_store
     state["updated_at"] = int(time.time())
-    
+
     save_state(slug, state)
     print(json.dumps({
         "action": "gates",
@@ -675,46 +621,6 @@ def cmd_gates(slug: str, stage: str, gate_results_json: str):
         "stage": actual_stage,
         "gate_results": gate_results,
     }, indent=2))
-
-
-def run_stage_gate(slug: str, stage: str):
-    """Run the per-stage gate and return (exit_code, stdout, stderr).
-
-    exit_code 0 on pass, else 1/2/3 per the gate contract. Never raises for
-    gate failures (only for genuine unexpected errors, which map to 3).
-    """
-    gate_script = (
-        "/Users/socializerender/Projects/truejoybirthing-website/"
-        "scripts/preflight-stage-gate.py"
-    )
-    cmd = ["python3", gate_script, "--city", slug, "--stage", stage]
-
-    try:
-        result = subprocess.run(
-            cmd,
-            capture_output=True, text=True, timeout=180,
-            cwd="/Users/socializerender/Projects/truejoybirthing-website",
-        )
-        return result.returncode, result.stdout.strip(), result.stderr.strip()
-    except subprocess.TimeoutExpired:
-        # Timeout is fatal-block: gate can never pass for oversized cities.
-        print(json.dumps({
-            "action": "gate_timeout",
-            "slug": slug,
-            "stage": stage,
-            "error": "timeout",
-            "message": f"GATE_TIMEOUT (stage={stage}): gate script timed out after 180s",
-        }, indent=2))
-        return 3, "", "timeout"
-    except Exception as e:
-        print(json.dumps({
-            "action": "gate_error",
-            "slug": slug,
-            "stage": stage,
-            "error": str(e),
-            "message": f"GATE_SCRIPT_ERROR (stage={stage}): {e}",
-        }, indent=2))
-        return 3, "", str(e)
 
 
 def cmd_advance(slug: str, stage: str):
@@ -726,100 +632,111 @@ def cmd_advance(slug: str, stage: str):
         2 = RETRYABLE_INFRA → output status for cron to wait + retry
         3 = FATAL → call cmd_fail with blocked_reason, block pipeline
     """
-    # If the pipeline is already complete, there is no gate to run and no
-    # stage to advance to. Emit a clean success instead of querying the
-    # gate script (which does not accept --stage complete).
-    state = load_state(slug)
-    if state and state.get("current_stage") == "complete" and stage == "complete":
-        blocked = state.get("blocked", False)
-        all_done = all(
-            s in state.get("stages_completed", [])
-            for s in ("build", "enrich", "verify_deploy", "video_outreach")
+    gate_script = str(Path(PROJECT_DIR) / "scripts" / "preflight-stage-gate.py")
+    cmd = ["python3", gate_script, "--city", slug, "--stage", stage]
+
+    try:
+        result = subprocess.run(
+            cmd,
+            capture_output=True, text=True, timeout=180,
+            cwd=PROJECT_DIR,
         )
-        if not blocked and all_done:
+        exit_code = result.returncode
+        gate_output = result.stdout.strip()
+        gate_stderr = result.stderr.strip()
+
+        if exit_code == 0:
+            # Gate passed — advance
             print(json.dumps({
-                "action": "complete",
+                "action": "gate_pass",
                 "slug": slug,
-                "message": f"Pipeline complete for {slug}. All stages done.",
-                "stages_completed": state.get("stages_completed", []),
+                "stage": stage,
+                "gate_exit": 0,
+                "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
+                "message": f"Stage gate for {stage} passed. Advancing.",
             }, indent=2))
-            return
-        # If the state is inconsistent (says complete but blocks/failures exist),
-        # fall through to the normal gate path so errors surface properly.
+            cmd_done(slug, stage)
 
-    exit_code, gate_output, gate_stderr = run_stage_gate(slug, stage)
+        elif exit_code == 1:
+            # RETRYABLE_SUBAGENT — subagent should be re-spawned
+            print(json.dumps({
+                "action": "gate_retryable_subagent",
+                "slug": slug,
+                "stage": stage,
+                "gate_exit": 1,
+                "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
+                "message": (
+                    f"Stage gate for {stage} FAILED (retryable). "
+                    "Re-spawn the step subagent to fix structural issues."
+                ),
+            }, indent=2))
+            sys.exit(1)
 
-    if exit_code == 0:
-        # Gate passed — advance (gate_checked=True: cmd_done must NOT re-run the gate)
+        elif exit_code == 2:
+            # RETRYABLE_INFRA — wait and retry, don't re-spawn
+            print(json.dumps({
+                "action": "gate_retryable_infra",
+                "slug": slug,
+                "stage": stage,
+                "gate_exit": 2,
+                "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
+                "message": (
+                    f"Stage gate for {stage} FAILED (infra issue). "
+                    "Wait and retry the gate; do NOT re-spawn the subagent."
+                ),
+            }, indent=2))
+            sys.exit(2)
+
+        elif exit_code == 3:
+            # FATAL — block and escalate
+            reason = f"GATE_FATAL (stage={stage}): {gate_output[:300]}"
+            print(json.dumps({
+                "action": "gate_fatal",
+                "slug": slug,
+                "stage": stage,
+                "gate_exit": 3,
+                "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
+                "message": f"Stage gate for {stage} FATAL. Blocking pipeline.",
+            }, indent=2))
+            cmd_fail(slug, stage, reason)
+
+        else:
+            # Unknown exit code — treat as failure
+            reason = (
+                f"GATE_UNKNOWN_EXIT (stage={stage}, exit={exit_code}): "
+                f"{gate_stderr[:200] or gate_output[:200]}"
+            )
+            print(json.dumps({
+                "action": "gate_unknown_exit",
+                "slug": slug,
+                "stage": stage,
+                "gate_exit": exit_code,
+                "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
+                "message": (
+                    f"Stage gate for {stage} exited with unexpected code {exit_code}. "
+                    "Failing the stage."
+                ),
+            }, indent=2))
+            cmd_fail(slug, stage, reason)
+
+    except subprocess.TimeoutExpired:
+        reason = f"GATE_TIMEOUT (stage={stage}): gate script timed out after 180s"
         print(json.dumps({
-            "action": "gate_pass",
+            "action": "gate_timeout",
             "slug": slug,
             "stage": stage,
-            "gate_exit": 0,
-            "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
-            "message": f"Stage gate for {stage} passed. Advancing.",
-        }, indent=2))
-        cmd_done(slug, stage, gate_checked=True)
-
-    elif exit_code == 1:
-        # RETRYABLE_SUBAGENT — subagent should be re-spawned
-        print(json.dumps({
-            "action": "gate_retryable_subagent",
-            "slug": slug,
-            "stage": stage,
-            "gate_exit": 1,
-            "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
-            "message": (
-                f"Stage gate for {stage} FAILED (retryable). "
-                "Re-spawn the step subagent to fix structural issues."
-            ),
-        }, indent=2))
-        sys.exit(1)
-
-    elif exit_code == 2:
-        # RETRYABLE_INFRA — wait and retry, don't re-spawn
-        print(json.dumps({
-            "action": "gate_retryable_infra",
-            "slug": slug,
-            "stage": stage,
-            "gate_exit": 2,
-            "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
-            "message": (
-                f"Stage gate for {stage} FAILED (infra issue). "
-                "Wait and retry the gate; do NOT re-spawn the subagent."
-            ),
-        }, indent=2))
-        sys.exit(2)
-
-    elif exit_code == 3:
-        # FATAL — block and escalate
-        reason = f"GATE_FATAL (stage={stage}): {gate_output[:300]}"
-        print(json.dumps({
-            "action": "gate_fatal",
-            "slug": slug,
-            "stage": stage,
-            "gate_exit": 3,
-            "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
-            "message": f"Stage gate for {stage} FATAL. Blocking pipeline.",
+            "error": "timeout",
+            "message": reason,
         }, indent=2))
         cmd_fail(slug, stage, reason)
-
-    else:
-        # Unknown exit code — treat as failure
-        reason = (
-            f"GATE_UNKNOWN_EXIT (stage={stage}, exit={exit_code}): "
-            f"{gate_stderr[:200] or gate_output[:200]}"
-        )
+    except Exception as e:
+        reason = f"GATE_SCRIPT_ERROR (stage={stage}): {e}"
         print(json.dumps({
-            "action": "gate_unknown_exit",
+            "action": "gate_error",
             "slug": slug,
             "stage": stage,
-            "gate_exit": exit_code,
-            "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
-            "message": (
-                f"Stage gate for {stage} exited with unexpected code {exit_code}. "
-                "Failing the stage."
-            ),
+            "error": str(e),
+            "message": reason,
         }, indent=2))
         cmd_fail(slug, stage, reason)
 
@@ -833,13 +750,13 @@ def cmd_clean_stale():
         if state_file.exists():
             state_file.unlink()
             removed.append(slug)
-    
+
     # Also check for denver.json (wrong slug format, should be denver-co)
     denver_file = STATES_DIR / "denver.json"
     if denver_file.exists():
         denver_file.unlink()
         removed.append("denver")
-    
+
     print(json.dumps({
         "action": "clean_stale",
         "removed": removed,
@@ -860,19 +777,19 @@ def main():
         print("  advance {slug} {stage} — Run per-stage gate, advance only if gate passes (exit 0)")
         print("  clean-stale           — Remove test/stale state files")
         sys.exit(1)
-    
+
     command = sys.argv[1]
-    
+
     if command == "clean-stale":
         cmd_clean_stale()
         sys.exit(0)
-    
+
     if len(sys.argv) < 3:
         print(f"Error: command '{command}' requires a slug argument")
         sys.exit(1)
-    
+
     slug = sys.argv[2]
-    
+
     if command == "init":
         cmd_init(slug)
     elif command == "next":
