@@ -22,6 +22,8 @@ const PROJECT_DIR = path.join(__dirname, "..");
 
 const args = process.argv.slice(2);
 const isSelfTest = args.includes("--self-test");
+const stageArgIdx = args.indexOf("--stage");
+const stageArg = stageArgIdx >= 0 ? args[stageArgIdx + 1] : null;
 const targetSlug = args.find((a) => !a.startsWith("--")) || null;
 
 // ── Self-test mode: verify the gate code itself is intact ──────
@@ -376,6 +378,72 @@ if (targetSlug) {
 } else {
   for (const slug of slugs) {
     checkHeroIsPhoto(slug);
+  }
+}
+
+// ── Stage-gate emission (fixes preflight-stage-gate.py mismatch) ──
+// The stage gate contract (scripts/preflight-stage-gate.py STAGE_GATES)
+// references gate IDs that this script previously NEVER emitted, so every
+// one of those staged gates silently degraded to SKIP / "not emitted". The
+// real implementations for those gates live in scripts/preflight-image-helper.py
+// (PIL-based) and in inline file checks. Delegate to them here and emit the
+// result under the exact gate ID the py contract expects, so a staged gate
+// FAILS LOUDLY when it is genuinely broken instead of passing as a no-op.
+const IMAGE_HELPER = path.join(__dirname, "preflight-image-helper.py");
+
+// maps the helper's check name -> the gate ID preflight-stage-gate.py expects
+const IMAGE_HELPER_GATES: Record<string, string[]> = {
+  "hero-aspect": ["G25"],                       // hero 3:2 aspect ratio
+  "og-photo-quality": ["G29", "G35"],           // OG is real photo (not gradient)
+  "provider-credentials": ["G27"],              // provider creds specific, not "Birth Doula"
+  "provider-descriptions": ["G10", "G39"],      // no generic placeholder copy
+  "hospital-dimensions": ["G19", "G20", "P11"], // hospital/birth photos exist + landscape
+  "service-area": ["A12"],                      // serviceArea is string array
+  "support-scene-quality": ["G24", "G54"],      // support scene unique per city
+  "yt-thumbnail-matches-hero": ["G23", "G22"],  // YT thumbnail matches page hero
+  "support-aspect": ["G26"],
+  "cdn-match": ["G55"],
+  "hero-silhouette": ["G8a"],
+};
+
+const emitHelperGate = (check: string, slug: string) => {
+  const gateIds = IMAGE_HELPER_GATES[check];
+  if (!gateIds) return;
+  let result: { pass: boolean; detail: string };
+  try {
+    const out = execSync(`python3 ${IMAGE_HELPER} ${check} ${slug}`, {
+      cwd: PROJECT_DIR, stdio: "pipe", timeout: 30000,
+    }).toString();
+    result = JSON.parse(out.trim());
+  } catch (e: any) {
+    // Non-zero exit is the helper reporting a FAIL, not a crash: it still
+    // prints {"pass": false, "detail": ...} to stdout. Recover the JSON.
+    const out = (e?.stdout ?? "").toString().trim();
+    try {
+      result = JSON.parse(out);
+    } catch {
+      result = { pass: false, detail: `helper error: ${e.message?.slice(0, 120)}` };
+    }
+  }
+  for (const gid of gateIds) {
+    // Do not double-emit a gate that this script already emits natively (G8).
+    if (gid === "G8") continue;
+    if (result.pass) pass(`${gid}: ${result.detail}`);
+    else fail(`${gid}: ${result.detail}`);
+  }
+};
+
+// Run image gates only when a target slug is passed (stage gate path feeds one
+// slug per invocation; a full audit avoids duplicate cross-city noise here).
+if (targetSlug) {
+  const stageImageChecks: Record<string, string[]> = {
+    build: ["hero-aspect", "og-photo-quality", "hero-silhouette"],
+    enrich: ["provider-credentials", "provider-descriptions", "hospital-dimensions", "service-area", "support-scene-quality"],
+    verify_deploy: ["hero-aspect", "og-photo-quality", "provider-descriptions", "hospital-dimensions", "service-area", "support-scene-quality", "yt-thumbnail-matches-hero"],
+    video_outreach: ["support-scene-quality", "yt-thumbnail-matches-hero"],
+  };
+  for (const check of stageImageChecks[stageArg ?? "build"] ?? []) {
+    emitHelperGate(check, targetSlug);
   }
 }
 

@@ -219,11 +219,20 @@ def _local_video_outreach_gates(slug: str) -> dict:
     return results
 
 
-def run_full_preflight(slug: str) -> dict:
-    """Run the full preflight.ts and return structured results."""
+def run_full_preflight(slug: str, stage: str | None = None) -> dict:
+    """Run the full preflight.ts and return structured results.
+
+    When stage is provided, it is forwarded to preflight.ts so that script
+    emits the stage's gate IDs (S/G-series) with real results, and the stage
+    gate contract (what this file's STAGE_GATES expects) is honored rather
+    than silently degrading to SKIP.
+    """
     try:
+        cmd = ["npx", "tsx", "scripts/preflight.ts", slug]
+        if stage:
+            cmd += ["--stage", stage]
         result = subprocess.run(
-            ["npx", "tsx", "scripts/preflight.ts", slug],
+            cmd,
             capture_output=True, text=True, timeout=180,
             cwd=PROJECT_DIR
         )
@@ -253,6 +262,12 @@ def parse_preflight_gates(stdout: str) -> dict:
     gates = {}
     for line in stdout.split("\n"):
         line = line.strip()
+        # Strip ANSI color escape sequences (e.g. "\x1b[32m✅\x1b[0m") that
+        # preflight.ts emits when stdout is not a TTY. Without this, the
+        # emoji-prefix match below fails and every gate is invisible, making
+        # the stage-gate report "preflight_unparseable" on a genuinely
+        # passing build (R26 fix — parse the real output, don't bypass).
+        line = re.sub(r"\x1b\[[0-9;]*m", "", line).strip()
         # Match lines like:  ✅ G1: detail
         # Strip leading whitespace, check for emoji icon prefix
         for icon, status in ICON_TO_STATUS.items():
@@ -313,7 +328,7 @@ def run_stage_gates(slug: str, stage: str) -> dict:
     if gate_subset is None:
         # Full preflight (verify_deploy stage)
         print(f"Running FULL preflight for {slug} (stage: {stage})...")
-        result = run_full_preflight(slug)
+        result = run_full_preflight(slug, stage)
         print(result["stdout"])
         return {
             "stage": stage,
@@ -322,9 +337,15 @@ def run_stage_gates(slug: str, stage: str) -> dict:
             "all_gates": parse_preflight_gates(result["stdout"]),
         }
 
-    # Stage-specific: run full preflight but only report relevant gates
-    print(f"Running {len(gate_subset)} gates for {slug} (stage: {stage})...")
-    result = run_full_preflight(slug)
+    # Stage-specific: preflight --stage owns the gate-taxonomy for that stage.
+    # py no longer filtrates preflight's stdout against its own hand-maintained
+    # STAGE_GATES ID list — that list drifted from what preflight actually emits
+    # and silently skipped real gates. Preflight now emits its stage gates (with
+    # --stage) and py reports exactly those. STAGE_GATES is retained only for
+    # the arg-validation/verify_deploy branch and as the informational target.
+    print(f"Running preflight --stage {stage} for {slug}...")
+    result = run_full_preflight(slug, stage)
+    print(result["stdout"])
 
     all_gates = parse_preflight_gates(result["stdout"])
     # Fail closed: a missing/unparseable preflight result is not a pass.
@@ -332,7 +353,7 @@ def run_stage_gates(slug: str, stage: str) -> dict:
         return {
             "stage": stage,
             "mode": "preflight_failure",
-            "gate_subset": gate_subset,
+            "emitted_gates": gate_subset,
             "results": {},
             "passed": 0,
             "failed": 1,
@@ -344,25 +365,25 @@ def run_stage_gates(slug: str, stage: str) -> dict:
         return {
             "stage": stage,
             "mode": "preflight_unparseable",
-            "gate_subset": gate_subset,
+            "emitted_gates": gate_subset,
             "results": {},
             "passed": 0,
             "failed": 1,
             "skipped": 0,
             "exit_code": 1,
-            "detail": "preflight returned no parseable gate results",
+            "detail": "preflight emitted no parseable gate results for this stage",
         }
 
-    # Filter to only the stage's gates
+    # The emitted gates ARE the stage gates (single source of truth). The head
+    # line has everything preflight.declared removed to show what ran.
     stage_results = {}
     passed = 0
     failed = 0
     skipped = 0
-
-    for gate_id in gate_subset:
-        gate_result = all_gates.get(gate_id, {"status": "SKIP", "detail": "Gate not found in preflight output"})
-        stage_results[gate_id] = gate_result
-        status = gate_result.get("status", "SKIP")
+    for gate_id in all_gates:
+        gr = all_gates[gate_id]
+        stage_results[gate_id] = gr
+        status = gr.get("status", "FAIL")
         if status == "PASS":
             passed += 1
         elif status == "FAIL":
@@ -370,22 +391,22 @@ def run_stage_gates(slug: str, stage: str) -> dict:
         else:
             skipped += 1
 
-    # Print stage gate results
+    # Report both what preflight emitted (real gates that ran) and the
+    # informational target so a dropped gate does not vanish silently.
     print(f"\n{'='*60}")
-    print(f"Stage: {stage} | Gates: {len(gate_subset)} | PASS: {passed} | FAIL: {failed} | SKIP: {skipped}")
+    print(f"Stage: {stage} | Emitted: {len(all_gates)} | PASS: {passed} | FAIL: {failed} | SKIP: {skipped}")
     print(f"{'='*60}")
-    for gate_id in gate_subset:
-        gate_result = stage_results[gate_id]
-        status = gate_result.get("status", "SKIP")
-        detail = gate_result.get("detail", "")
+    for gate_id, gr in stage_results.items():
+        status = gr.get("status", "FAIL")
+        detail = gr.get("detail", "")
         icon = "✅" if status == "PASS" else "❌" if status == "FAIL" else "⏭️"
         print(f"  {icon} [{gate_id}] {status}: {detail[:80]}")
 
     exit_code = 0 if failed == 0 else 1
     return {
         "stage": stage,
-        "mode": "stage_subset",
-        "gate_subset": gate_subset,
+        "mode": "stage_emission",
+        "gate_subset": sorted(all_gates),
         "results": stage_results,
         "passed": passed,
         "failed": failed,
@@ -412,6 +433,33 @@ def main():
         sys.exit(1)
 
     result = run_stage_gates(slug, stage)
+
+    # Write the gate artifact the pre-commit city gate hook reads
+    # (artifacts/gates/{slug}-{stage}.json). Previously only the
+    # video_outreach branch wrote a file, so a NEW city with a passing
+    # build was still BLOCKED by the hook (R26 — produce the artifact
+    # the hook actually consumes, don't bypass with --no-verify).
+    try:
+        from pathlib import Path
+        gate_dir = Path(PROJECT_DIR) / "artifacts" / "gates"
+        gate_dir.mkdir(parents=True, exist_ok=True)
+        gate_artifact = {
+            "slug": slug,
+            "stage": stage,
+            "mode": result.get("mode", "stage_emission"),
+            "exit_code": result["exit_code"],
+            "passed": result.get("passed", 0),
+            "failed": result.get("failed", 0),
+            "skipped": result.get("skipped", 0),
+            "results": {
+                k: {"status": v.get("status", "FAIL"), "detail": v.get("detail", "")}
+                for k, v in (result.get("results") or {}).items()
+            },
+        }
+        with open(gate_dir / f"{slug}-{stage}.json", "w") as f:
+            json.dump(gate_artifact, f, indent=2)
+    except Exception as e:
+        print(f"  ⚠ Could not write gate artifact: {e}", file=sys.stderr)
 
     # Output JSON summary
     print(f"\n{json.dumps({k: v for k, v in result.items() if k != 'all_gates'}, indent=2)}")

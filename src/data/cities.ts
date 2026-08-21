@@ -9427,6 +9427,53 @@ hospitalDetails: [
       dataSource: "CDC NCHS, National Vital Statistics System",
     },
   },
+  "ontario-ca": {
+    enableBlogResources: true,
+    publishedDate: "2026-08-21",
+    city: "Ontario",
+    state: "CA",
+    slug: "ontario-ca",
+    costLow: 1200,
+    costHigh: 2500,
+    shelbiServesHere: false,
+    lat: 34.0635,
+    lng: -117.6509,
+    ogImage: "https://truejoybirthing.com/images/og-city-ontario-ca.webp",
+    heroImage: "/images/ontario-ca-birth-doula-skyline.webp",
+    supportSceneImage: "/images/ontario-ca-support-scene.webp",
+    supportSceneAlt: "A doula walking alongside an expectant mom through a sunny Ontario, California neighborhood with palm trees",
+    localDoulas: [
+      { name: "Pamela Uriarte", credential: "Birth & Postpartum Doula" , practice: "Pamela Uriarte Doula" , url: "https://www.bornbir.com/pamela-uriarte" , photo: "" , description: "Pam is a certified birth and postpartum doula based in Ontario, CA with a background in public health and women's health. She offers compassionate, bilingual (English/Spanish) support tailored to each family, including prenatal visits, continuous labor support, and in-home postpartum care. 5.0 stars on Bornbir.", costRange: "$1,300 (birth); $500 postpartum package", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Ontario, CA"] },
+      { name: "Kristin" , credential: "Certified Birth & Postpartum Doula" , practice: "Birth Services by Kristin" , url: "https://www.birthservicesbykristin.com/" , photo: "" , description: "Kristin has been a certified birth and postpartum doula since 2013, serving families across the Inland Empire. She also provides childbirth education, lactation support, and placenta encapsulation. Her gentle, non-judgmental care helps families feel safe, heard, and empowered throughout pregnancy, birth, and the postpartum season.", costRange: "$1,200-$2,500", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Childbirth Education", "Lactation Support"], serviceArea: ["Ontario, CA" , "Inland Empire, CA"] },
+      { name: "Laurie Dietrich" , credential: "Birth Doula" , practice: "Laurie Dietrich Birth Doula" , url: "https://www.discoverdoulas.com/doula/laurie-dietrich-birth-doula-ontario-ca/" , photo: "" , description: "Laurie is a highly-rated birth and postpartum doula serving Ontario and the surrounding Inland Empire. Families give her 5 stars across 14 Google reviews for her available-around-the-clock labor support and steady, reassuring presence.", costRange: "$1,200-$2,200", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Ontario, CA"] }
+    ],
+    culture: "Ontario's birth culture is shaped by its position in the heart of the Inland Empire and its fast-growing, family-oriented communities. As one of Southern California's largest suburban cities, Ontario blends a diverse population with a strong network of home- and hospital-birth options. The region's doula community serves a broad array of families, including a growing number of Spanish-speaking doulas, reflecting the city's large Latino population. With major hospitals nearby in Upland, Pomona, Fontana, and San Bernardino, Ontario families have real choices when it comes to where and how they give birth.",
+    heroLocalDetail: "Ontario families heading to the hospital for labor typically drive to San Antonio Regional Hospital in adjacent Upland (about 10 minutes from central Ontario) or Kaiser Permanente Ontario Medical Center. Pomona Valley Hospital Medical Center sits just to the west in Pomona, while St. Bernardine Medical Center is east in San Bernardino. The I-10 freeway runs the length of the city and can back up during commute hours, so Ontario families should map their delivery route well in advance — especially if heading to a higher-level NICU across town.",
+    midwifeInfo: {
+      paragraph: "Ontario and the wider Inland Empire have an active midwifery community serving families who want midwife-led care. San Antonio Regional Hospital and Pomona Valley Hospital Medical Center are both midwife-friendly and welcome Certified Nurse-Midwives (CNMs) attending hospital births, while licensed out-of-hospital midwives provide home-birth options across San Bernardino and western Riverside counties. California's Medical Board licenses Licensed Midwives (LMs), the North American Registry of Midwives certifies Certified Professional Midwives (CPMs), and the Board of Registered Nursing licenses CNMs — giving Ontario families regulated midwife choices for both hospital and home birth.",
+      credentialTypes: ", LMs, and CPMs",
+      credentialDetail: "In California, Certified Nurse-Midwives (CNMs) are licensed by the Board of Registered Nursing and typically practice in hospital and birth center settings, including the midwife-friendly maternity units at San Antonio Regional Hospital and Pomona Valley Hospital Medical Center. Licensed Midwives (LMs) are licensed by the Medical Board of California, and Certified Professional Midwives (CPMs) are credentialed through the North American Registry of Midwives — both primarily attend out-of-hospital home births throughout the Inland Empire.",
+    },
+    hospitalDetails: [
+      { name: "San Antonio Regional Hospital" , thumbnail: "" , address: "999 San Bernardino Rd, Upland, CA 91786" , url: "https://www.sarh.org/" , nicuLevel: "III" , vbacPolicy: "Allows TOLAC/VBAC, consult with provider" , doulaPolicy: "Doulas welcome as support persons" , midwifeFriendly: true, waterBirth: "Hydrotherapy available; water birth varies by provider" , medicaid: true, lactation: true, privateRooms: true, paragraph: "San Antonio Regional Hospital in neighboring Upland is the closest full-service maternity hospital for many central Ontario families. It features a Level III NICU, family-centered labor and delivery suites, and a strong reputation for obstetric care across the western Inland Empire. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." },
+      { name: "Kaiser Permanente Ontario Medical Center" , thumbnail: "" , address: "2295 S Vineyard Ave, Ontario, CA 91761" , url: "https://healthy.kaiserpermanente.org/" , nicuLevel: "II" , vbacPolicy: "Allows TOLAC/VBAC, consult with provider" , doulaPolicy: "Doulas welcome as support persons; not employed by Kaiser" , midwifeFriendly: false, waterBirth: "Hydrotherapy not routinely available" , medicaid: false, lactation: true, privateRooms: true, paragraph: "Kaiser Permanente Ontario Medical Center on the south side of the city delivers care primarily for Kaiser HMO members. It offers a Level II NICU and full OB services with private maternity suites. Independent doulas are welcome in labor and delivery." },
+      { name: "Pomona Valley Hospital Medical Center" , thumbnail: "" , address: "1798 N Garey Ave, Pomona, CA 91767" , url: "https://www.pvhmc.org/" , nicuLevel: "III" , vbacPolicy: "Allows TOLAC/VBAC, consult with provider" , doulaPolicy: "Doulas welcome as support persons" , midwifeFriendly: true, waterBirth: "Hydrotherapy available; water birth varies by provider" , medicaid: true, lactation: true, privateRooms: true, paragraph: "Pomona Valley Hospital Medical Center just west of Ontario offers a Level III NICU and comprehensive maternity services, including a supportive environment for doulas and midwives. Its location on the western edge of the Inland Empire makes it a convenient choice for families on the Ontario–Pomona border. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." }
+    ],
+    medicaidNote: "Yes — California's Medi-Cal covers doula services statewide as of January 2023 under SB-509. Reimbursement is approximately $1,587 per birth package, including prenatal visits, labor support, and postpartum visits. Doulas must enroll as Medi-Cal providers through the Department of Health Care Services (DHCS) and bill via the PAVE portal.",
+    insuranceNote: "California law (SB 332) requires most commercial plans to cover licensed midwife and birth center care. Covered California marketplace plans and large-group plans must include these benefits, though out-of-network doula reimbursement still varies widely by carrier and plan type.",
+    birthCenterDetails: [
+      { name: "No birth centers in Ontario" , paragraph: "There are currently no licensed freestanding birth centers operating within Ontario city limits. Families seeking out-of-hospital birth may choose home birth with a licensed midwife or travel to birth centers in communities closer to Los Angeles and the coast." }
+    ],
+    faqs: [
+      { q: "Does Medi-Cal cover doulas in Ontario?" , a: "Yes! Great news. Medi-Cal covers doula services across California under SB-509. Call your Medi-Cal managed care plan and ask \"Do you cover doula services?\" — they'll walk you through it. You deserve support, and now your insurance helps pay for it." },
+      { q: "Which Ontario-area hospital has the highest-level NICU?" , a: "Both San Antonio Regional Hospital in Upland and Pomona Valley Hospital Medical Center in Pomona offer Level III NICUs — the highest-level neonatal care available close to Ontario. Kaiser Permanente Ontario Medical Center has a Level II NICU for less complex newborn care. <a href='/birth-plan-template/'>Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "How much does a doula cost in Ontario?" , a: "Ontario and Inland Empire doula fees typically range from $1,200 to $2,500 for a birth package, with most experienced doulas in the $1,300–$2,200 range. Postpartum doula packages and hourly visits are usually billed separately. Medi-Cal covers doulas at no cost to eligible families." },
+      { q: "Are there birth centers in the Ontario area?" , a: "Most Ontario families giving birth out of the hospital choose home birth with a licensed midwife, as freestanding birth centers are concentrated closer to Los Angeles and the coast. Ask your midwife about home birth options and hospital transfer plans. <a href='/birth-plan-template/'>Grab the free birth plan template</a> to think through your options." },
+      { q: "Do Ontario hospitals allow doulas?" , a: "Yes. San Antonio Regional Hospital, Pomona Valley Hospital, and Kaiser Permanente Ontario all welcome doulas as part of your birth support team during labor and delivery. Kaiser notes that independent doulas are not employed by Kaiser but are welcome in the delivery room." }
+    ],
+    nearbyCities: ["rancho-cucamonga-ca", "fontana-ca", "san-bernardino-ca"]
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();
+
