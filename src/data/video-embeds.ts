@@ -1625,4 +1625,23 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M00S",
     uploadDate: "2026-08-14T00:00:00-06:00",
   },
+  "rosemount-mn": {
+    videoId: "6D6Q6WmYyWM",
+    title: "Rosemount MN Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Rosemount birth guide covering local doulas (Everyday Miracles, Blooma, Nicole Bengtson), hospitals (Fairview Ridges, Regions Hospital), costs, and Minnesota Medicaid doula coverage.",
+    duration: "PT2M56S",
+    uploadDate: "2026-08-20T00:00:00-05:00",
+    chapters: [
+      [0, "Welcome to Rosemount"],
+      [15, "What this guide covers"],
+      [34, "Fairview Ridges Hospital"],
+      [53, "Regions Hospital"],
+      [70, "Doulas & Midwives in Rosemount"],
+      [85, "The True Joy Birthing App"],
+      [110, "Cost Reality ($1,200-$3,200)"],
+      [136, "Insurance & Minnesota Medicaid"],
+      [158, "Your Next Step"],
+    ],
+  },
+
 };
