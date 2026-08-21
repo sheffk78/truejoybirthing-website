@@ -1651,4 +1651,12 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M00S",
     uploadDate: "2026-08-21T00:00:00-06:00",
   },
+
+  "elk-grove-ca": {
+    videoId: "p0suklojBk4",
+    title: "Elk Grove CA Doula & Birth Plan Guide",
+    description: "Watch the full Elk Grove CA Doula & Birth Plan Guide — all in about 3:00.",
+    duration: 180,
+  },
+
 };
