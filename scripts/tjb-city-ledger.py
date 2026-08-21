@@ -40,7 +40,7 @@ QUEUE_PATH = STATE_DIR / "tjb-pipeline-queue.json"
 STATE_AUDIT_PATH = STATE_DIR / "tjb-city-audit.json"
 REPO_STATUS_PATH = PROJECT_DIR / "tjb-city-status.json"
 BRAND_STATUS_PATH = BRAND_DIR / "tjb-city-status.json"
-PRIORITY_CSV_PATH = BRAND_DIR / "city-priority-list.csv"
+PRIORITY_CSV_PATH = BRAND_DIR / "work" / "city-priority-list.csv"
 CITIES_TS_PATH = PROJECT_DIR / "src" / "data" / "cities.ts"
 VIDEO_EMBEDS_PATH = PROJECT_DIR / "src" / "data" / "video-embeds.ts"
 STATE_MACHINE_DIR = HOME / ".hermes" / "skills" / "productivity" / "tjb-city-orchestrator" / "states"
@@ -353,15 +353,31 @@ def consolidate() -> dict[str, Any]:
                     row["in_progress"] = True
                     row["started_at"] = str(status.get("started_at") or row.get("started_at") or "")
 
-    # The website's cities.ts is the sole inventory authority. Sidecar files
-    # may contribute progress annotations, but they must never add planned,
-    # stale, or migrated cities to the dashboard count.
+    # IMPORTANT (canonical-ledger fix): Determine the full candidate pool.
+    # cities.ts is the authority for BUILT pages; the priority CSV's
+    # build_status=not-built rows are PLANNED candidates. Both must survive to
+    # the dashboard so it shows the complete pipeline (done / next / remaining),
+    # not just built pages. Per-city post-processing below then reconciles
+    # build_status against code truth so stale CSV marks can't strand a city.
+    code_cities = parse_cities_ts()
+    built_slugs = set(code_cities.keys())
+    planned_slugs = {
+        slug for slug, row in records.items()
+        if slug not in built_slugs and row.get("build_status") == "not-built"
+    }
     if code_cities:
-        records = {slug: records[slug] for slug in code_cities if slug in records}
+        records = {
+            slug: records[slug]
+            for slug in records
+            if slug in built_slugs or slug in planned_slugs
+        }
 
     # Normalize rows.
     for slug, row in records.items():
         row["slug"] = slug
+        row["built"] = slug in built_slugs
+        # Code truth overrides any stale CSV build_status mark.
+        row["build_status"] = "built" if slug in built_slugs else "not-built"
         row.setdefault("url", f"https://truejoybirthing.com/birth-support/{slug}/")
         # Dashboard pulse is operational, not historical. If a row carried
         # in_progress from an old export, clear it unless freshly claimed.
@@ -418,7 +434,8 @@ def dashboard_rows(ledger: dict[str, Any]) -> list[dict[str, Any]]:
     keep = [
         "slug", "city", "state", "score", "stage", "hero", "hero_issue", "og", "support",
         "hospitals", "hospital_count", "doulas", "doula_count", "video", "outreach",
-        "placeholder", "in_progress", "started_at", "slot", "batch_id", "blocked_reason", "url",
+        "placeholder", "in_progress", "started_at", "slot", "batch_id", "blocked_reason",
+        "url", "built", "build_status", "population",
     ]
     out = []
     for r in rows:
@@ -426,6 +443,13 @@ def dashboard_rows(ledger: dict[str, Any]) -> list[dict[str, Any]]:
         for k in BASE_FIELDS + ["placeholder", "in_progress"]:
             item[k] = bool(item.get(k))
         item["score"] = int(item.get("score") or 0)
+        item["built"] = bool(item.get("built", item.get("build_status") == "built"))
+        item.setdefault("build_status", "built" if item["built"] else "not-built")
+        item.setdefault("population", 0)
+        try:
+            item["population"] = int(item["population"])
+        except (TypeError, ValueError):
+            item["population"] = 0
         item.setdefault("hero_issue", "")
         item.setdefault("started_at", "")
         item.setdefault("slot", "")

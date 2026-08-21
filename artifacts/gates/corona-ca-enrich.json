@@ -1,0 +1,10 @@
+{
+  "slug": "corona-ca",
+  "stage": "enrich",
+  "mode": "preflight_failure",
+  "exit_code": 1,
+  "passed": 0,
+  "failed": 1,
+  "skipped": 0,
+  "results": {}
+}

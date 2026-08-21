@@ -383,6 +383,14 @@ ADDITIONAL RULES:
 - Forward-only advancement: this stage will not repeat unless it fails
 - Load skill '{ctx["skill"]}' for detailed stage instructions
 
+## HARD WORKER RULES (ALL STAGES — kit directive 2026-08-21, Corona clean-slate failure #1)
+These come from a real Atlas failure where a BUILD worker finalized as "completed" with zero files written. Every stage worker must obey:
+1. WRITE FIRST, READ ONLY WHAT YOU NEED. Do NOT read schema/cities.ts/example blocks before writing. The parent already handed you the exact data + insert path. Make your stage's primary write (checkpoint, cities.ts data, image files) an EARLY tool call, ideally the first or second. Reading is a liability for a bounded local model — stop exploring after at most 3 reads.
+2. NEVER finalize until your stage's deliverable is verifiably ON DISK. Before you report done, run `ls -la` (or the stage's equivalent check) on every file you were asked to produce and confirm it exists with non-zero size. An empty or missing artifact = FAILURE, not completion.
+3. If a command errors on quoting/syntax, RETRY IMMEDIATELY with a different approach (plain `terminal` with single-quoted heredoc, not nested execute_code). Do NOT say "falling back to X" and then stop. Recover and keep going.
+4. NEVER hit the tool-call cap mid-task and stop. If you are near the cap with work left, stop, save partial artifacts to disk, and report EXACTLY which files landed and which remain for the parent to finish. Do not claim a stage is done when it isn't.
+5. Verify-forward: after writing data, run the stage's validation gate (`npx tsx scripts/validate-city-data.ts {slug}` for data stages) and report the real exit code + any errors verbatim.
+
 STAGE GATES (must pass before advancing):
 {', '.join(ctx.get('gates', []))}
 """

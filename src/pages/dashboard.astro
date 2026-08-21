@@ -5,23 +5,48 @@ import path from 'path';
 const auditPath = path.join(process.cwd(), 'public', 'city-audit.json');
 const auditData = JSON.parse(fs.readFileSync(auditPath, 'utf-8'));
 
-// Population lookup for value-based tiebreaking (Census 2023 estimates)
-// Used to rank cities at the same score by market size — highest value first
-const cityPopulations = {
+// Population lookup for value-based tiebreaking (Census 2023 estimates).
+// Primary source is now the ledger row's `population` field (from the city
+// inventory). This map is a fallback for rows that lack a population value.
+const fallbackPopulations = {
   "houston-tx": 2394531, "dallas-tx": 1343573, "jacksonville-fl": 985843, "louisville-ky": 760026, "washington-dc": 671803, "milwaukee-wi": 577222, "mesa-az": 513088, "omaha-ne": 485054, "lexington-ky": 319955, "corpus-christi-tx": 318287, "riverside-ca": 317438, "santa-ana-ca": 308853, "irvine-ca": 307699, "saint-paul-mn": 302895, "greensboro-nc": 301094, "durham-nc": 291918, "lincoln-ne": 291082, "plano-tx": 288061, "jersey-city-nj": 286660, "st-louis-mo": 281754, "chandler-az": 275645, "chula-vista-ca": 275167, "north-las-vegas-nv": 274882, "madison-wi": 274882, "gilbert-az": 274768, "fort-wayne-in": 270871, "toledo-oh": 264803, "lubbock-tx": 264755, "st-petersburg-fl": 261256, "laredo-tx": 260813, "irving-tx": 256884, "scottsdale-az": 251477, "winston-salem-nc": 251350, "garland-tx": 247707, "huntsville-al": 225564, "frisco-tx": 225162, "cape-coral-fl": 216722, "oceanside-ca": 174069, "goodyear-az": 161751, "surprise-az": 161012, "sunnyvale-ca": 152258, "roseville-ca": 151937, "bellevue-wa": 150458, "fullerton-ca": 141280, "thornton-co": 141186, "orange-ca": 137160, "west-valley-city-ut": 136648, "sterling-heights-mi": 134770, "pasadena-ca": 134252, "kent-wa": 132319, "santa-clara-ca": 126752, "arvada-co": 124247, "westminster-co": 116749, "west-jordan-ut": 116641, "carlsbad-ca": 114953, "queen-creek-az": 66346, "eagle-mountain-ut": 55169, "saratoga-springs-ut": 39568, "hutto-tx": 36832, "garner-nc": 33947, "sugar-hill-ga": 32857, "forney-tx": 31768, "greenville-tx": 28792, "fort-mill-sc": 28597, "waukee-ia": 28112, "erie-co": 27972, "leland-nc": 27700, "kuna-id": 27163, "rosemount-mn": 25997, "haines-city-fl": 25250, "foley-al": 21161, "agoura-hills-ca": 20138, "johnstown-co": 18916,
   // Completed cities (for reference, sorted above zero-score cities by score anyway)
   "amarillo-tx": 201291, "abilene-tx": 125182, "allen-tx": 105461, "anna-tx": 21536, "beaumont-tx": 112153, "carrollton-tx": 135471, "celina-tx": 42334, "austin-tx": 974448, "columbia-sc": 138826, "elpaso-tx": 677459, "fresno-ca": 545573, "los-angeles-ca": 3898747, "san-diego-ca": 1381711, "fort-worth-tx": 976608, "chicago-il": 2664452, "nashville-tn": 694144, "virginia-beach-va": 459470, "phoenix-az": 1608139, "las-vegas-nv": 658674, "denver-co": 713252, "colorado-springs-co": 479412, "tampa-fl": 398173, "orlando-fl": 320876, "san-antonio-tx": 1469605, "oklahoma-city-ok": 687315, "birmingham-al": 196910, "sacramento-ca": 524942, "portland-or": 630357, "seattle-wa": 749256, "minneapolis-mn": 425115, "atlanta-ga": 498744, "raleigh-nc": 467665, "charlotte-nc": 874579, "miami-fl": 442241, "fort-lauderdale-fl": 183146, "pittsburgh-pa": 302971, "columbus-oh": 898553, "cincinnati-oh": 311029, "kansas-city-mo": 507778, "new-orleans-la": 364136, "tulsa-ok": 411040, "albuquerque-nm": 556718, "long-beach-ca": 451580, "oakland-ca": 440981, "bakersfield-ca": 410040, "stockton-ca": 322070, "santa-rosa-ca": 178581, "honolulu-hi": 343529, "boise-id": 274428, "spokane-wa": 229071, "des-moines-ia": 213591, "wichita-ks": 393415, "little-rock-ar": 201893, "memphis-tn": 633104, "richmond-va": 231910, "norfolk-va": 231838, "newark-nj": 311549, "buffalo-ny": 278649, "rochester-ny": 211677, "aurora-co": 398250, "grand-rapids-mi": 200736, "anchorage-ak": 287145,
 };
 
+// Population for ranking: prefer the ledger row's population field, else the
+// Census fallback map.
+function populationOf(slug, row) {
+  const p = row && row.population ? Number(row.population) : 0;
+  if (p) return p;
+  return fallbackPopulations[slug] || 0;
+}
+
 // Sort: in_progress first, then score descending, then population descending (highest-value cities first within same score)
-const cities = auditData.sort((a, b) => {
+const cities = auditData.map(c => ({ ...c, population: populationOf(c.slug, c) })).sort((a, b) => {
   if (a.in_progress !== b.in_progress) return a.in_progress ? -1 : 1;
   if (b.score !== a.score) return b.score - a.score;
-  const popA = cityPopulations[a.slug] || 0;
-  const popB = cityPopulations[b.slug] || 0;
-  return popB - popA;
+  return b.population - a.population;
 });
 const total = cities.length;
+const builtCount = cities.filter(c => c.built).length;
+const plannedCount = total - builtCount;
+const remainingCount = cities.filter(c => c.score < 100).length;
+
+// NEXT CITY: the single highest-priority city to work on next.
+// Priority ranking: in-progress (not complete) first, then closest to 100
+// (highest score among incomplete), then largest population. This mirrors the
+// worker's `claim --strategy closest-to-100` pick so the dashboard and the
+// pipeline agree on what's next.
+const nextCandidates = cities.filter(c => c.score < 100 && !c.in_progress);
+let nextCity = nextCandidates.sort(function(a, b) {
+  if (b.score !== a.score) return b.score - a.score;
+  return b.population - a.population;
+})[0] || null;
+// If a city is mid-flight (in-progress, not complete), it IS what's next.
+const workingCity = cities.find(c => c.in_progress && c.score < 100);
+if (workingCity) nextCity = workingCity;
+
 const auditDate = fs.statSync(auditPath).mtime.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
 
 const stageLabels = {
@@ -149,6 +174,83 @@ const controlKey = import.meta.env.PUBLIC_TJB_CONTROL_KEY || '';
     background: var(--rose-500);
     margin: 1rem 0 1.5rem;
     border-radius: 2px;
+  }
+
+  /* Next Up card */
+  .next-card {
+    background: white;
+    border: 2px solid var(--lavender-300);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+  .next-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem 1.25rem;
+    background: var(--lavender-50);
+    border-bottom: 1px solid var(--lavender-200);
+  }
+  .next-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--lavender-600);
+  }
+  .next-count {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--gray);
+  }
+  .next-card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    flex-wrap: wrap;
+  }
+  .next-city { display: flex; flex-direction: column; gap: 0.25rem; }
+  .next-city-name {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    line-height: 1.1;
+  }
+  .next-city-meta { font-size: 0.8125rem; color: var(--gray); }
+  .next-action {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .next-action button {
+    background: var(--lavender-600);
+    color: #fff;
+    border: 1px solid var(--lavender-700);
+    border-radius: 9999px;
+    padding: 0.5rem 1.25rem;
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .next-action button:hover { background: var(--lavender-700); }
+  .next-action button.secondary {
+    background: white;
+    color: var(--lavender-600);
+    border-color: var(--lavender-300);
+  }
+  .next-action button.secondary:hover { background: var(--lavender-50); }
+  .next-card-foot {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.75rem;
+    color: var(--gray-300);
+    border-top: 1px solid var(--lavender-100);
+    background: var(--cream);
   }
 
   /* Stats bar */
@@ -472,6 +574,24 @@ const controlKey = import.meta.env.PUBLIC_TJB_CONTROL_KEY || '';
 
     <div class="divider"></div>
 
+    <div class="next-card" id="nextCard">
+      <div class="next-card-head">
+        <span class="next-eyebrow">Next Up</span>
+        <span class="next-count" id="nextCount"></span>
+      </div>
+      <div class="next-card-body" id="nextCardBody">
+        <div class="next-city">
+          <span class="next-city-name" id="nextCityName"></span>
+          <span class="next-city-meta" id="nextCityMeta"></span>
+        </div>
+        <div class="next-action">
+          <button id="nextStart" type="button">Start this city</button>
+          <a id="nextView" href="#" target="_blank" class="city-link">view page</a>
+        </div>
+      </div>
+      <div class="next-card-foot" id="nextCardFoot"></div>
+    </div>
+
     <div class="stats-bar" id="statsBar"></div>
 
     <div class="legend">
@@ -647,12 +767,82 @@ const controlKey = import.meta.env.PUBLIC_TJB_CONTROL_KEY || '';
   .city-link:hover { color: var(--rose-500); text-decoration: underline; }
 </style>
 
-<script is:inline define:vars={{ cityData: cities, totalCount: total, controlKey }}>
+<script is:inline define:vars={{ cityData: cities, totalCount: total, builtCount, plannedCount, remainingCount, nextCity, controlKey }}>
   const data = {cities: cityData, total: totalCount};
   const stageLabels = {hero: 'Hero Image', og: 'OG Image', support: 'Support Scene', hospitals: 'Hospitals', doulas: 'Doulas', video: 'Video', outreach: 'Outreach'};
   const stages = Object.keys(stageLabels);
 
-  document.getElementById('subtitle').textContent = data.total + ' city pages — canonical ledger; 7 completion measures across 4 pipeline stages';
+  document.getElementById('subtitle').textContent = data.total + ' cities in pipeline — ' + builtCount + ' built, ' + plannedCount + ' planned, ' + remainingCount + ' remaining (canonical ledger; 7 completion measures across 4 pipeline stages)';
+
+  // ── Next Up card ─────────────────────────────────────────────
+  function renderNext(next) {
+    const nameEl = document.getElementById('nextCityName');
+    const metaEl = document.getElementById('nextCityMeta');
+    const viewEl = document.getElementById('nextView');
+    const countEl = document.getElementById('nextCount');
+    const footEl = document.getElementById('nextCardFoot');
+    const startBtn = document.getElementById('nextStart');
+
+    if (!next) {
+      nameEl.textContent = 'All caught up';
+      metaEl.textContent = 'Every city is complete.';
+      viewEl.style.display = 'none';
+      countEl.textContent = '0 remaining';
+      footEl.textContent = '';
+      startBtn.style.display = 'none';
+      return;
+    }
+
+    nameEl.textContent = next.city + ', ' + next.state;
+    const stageMap = {
+      build: 'not yet built',
+      enrich: 'enrichment',
+      verify_deploy: 'verify + deploy',
+      video_outreach: 'video + outreach',
+      complete: 'complete',
+      blocked: 'blocked',
+    };
+    const stageName = stageMap[next.stage] || next.stage;
+    const popTxt = next.population ? ' · pop. ' + Number(next.population).toLocaleString() : '';
+    metaEl.textContent = 'Score ' + next.score + ' · Stage: ' + stageName + popTxt;
+    viewEl.href = 'https://truejoybirthing.com/birth-support/' + encodeURIComponent(next.slug) + '/';
+    viewEl.style.display = next.built ? 'inline' : 'none';
+    countEl.textContent = remainingCount + ' remaining / ' + plannedCount + ' planned';
+    footEl.textContent = next.in_progress
+      ? 'This city is in progress (' + (next.slot ? 'slot ' + next.slot : 'working') + ').'
+      : 'Highest priority by score, then population. Click Start to copy the pipeline prompt.';
+    startBtn.style.display = '';
+  }
+  renderNext(nextCity);
+
+  // Start button copies a ready-to-run pipeline command for the next city.
+  document.getElementById('nextStart').addEventListener('click', function(e) {
+    if (!nextCity) return;
+    const slug = nextCity.slug;
+    const stageMap = {
+      build: 'BUILD — research providers/hospitals, write cities.ts, generate hero/OG/support images',
+      enrich: 'ENRICH — provider photos, cost ranges, service areas, deal-breakers, hospital descriptions, birthStats',
+      verify_deploy: 'VERIFY+DEPLOY — full preflight, build, deploy, CDN cache-bust, three-way visual verification',
+      video_outreach: 'VIDEO+OUTREACH — scene data, TTS, render, YouTube upload, embed, provider outreach',
+      complete: 'COMPLETE — all stages done',
+    };
+    const stageLabel = stageMap[nextCity.stage] || nextCity.stage;
+    const prompt = `Work on ${slug} — load tjb-pipeline-dag → tjb-pipeline-rules → tjb-city-orchestrator. Run tjb-pipeline-state.py status ${slug} to confirm current stage (${nextCity.stage}). Run preflight-stage-gate.py --city ${slug} --stage ${nextCity.stage} — if exit 0, advance via done; if exit 1, re-run the step subagent; if exit 3, block + escalate. Complete stages forward-only through video_outreach. Current stage: ${stageLabel}.`;
+    navigator.clipboard.writeText(prompt).then(function() {
+      e.target.textContent = 'Copied ✓';
+      e.target.classList.add('secondary');
+      setTimeout(function() { e.target.textContent = 'Start this city'; e.target.classList.remove('secondary'); }, 1500);
+    }).catch(function() {
+      const ta = document.createElement('textarea');
+      ta.value = prompt;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      e.target.textContent = 'Copied ✓';
+      setTimeout(function() { e.target.textContent = 'Start this city'; }, 1500);
+    });
+  });
 
   function scoreClass(score) {
     if (score >= 100) return 'score-green';
