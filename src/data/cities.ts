@@ -9384,7 +9384,7 @@ hospitalDetails: [
     supportSceneImage: "/images/mesa-az-birth-doula-support.webp",
     supportSceneAlt: "A professional doula supporting a pregnant woman during labor in Mesa, Arizona",
     titleTag: "Mesa, AZ Doula Costs, Hospitals & Medicaid",
-    metaDescription: "Compare Mesa doula costs ($850-$2,500), AHCCCS Medicaid coverage, Banner Desert & Mercy Gilbert hospitals, and Willow Birth Center. Free birth plan template.",
+    metaDescription: "Compare Mesa doula costs ($850-$2,500), AHCCCS Medicaid coverage, Banner Desert, Mercy Gilbert, and Willow Birth Center.",
     midwifeInfo: {
       available: true,
       credential: "CNM / CPM",
