@@ -26,6 +26,7 @@ import sys
 import json
 import re
 from pathlib import Path
+from typing import Optional
 
 PROJECT_DIR = os.environ.get("TJB_PROJECT_DIR", "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website")
 PREFLIGHT_SCRIPT = Path(PROJECT_DIR) / "scripts" / "preflight.ts"
@@ -219,7 +220,7 @@ def _local_video_outreach_gates(slug: str) -> dict:
     return results
 
 
-def run_full_preflight(slug: str, stage: str | None = None) -> dict:
+def run_full_preflight(slug: str, stage: Optional[str] = None) -> dict:
     """Run the full preflight.ts and return structured results.
 
     When stage is provided, it is forwarded to preflight.ts so that script
