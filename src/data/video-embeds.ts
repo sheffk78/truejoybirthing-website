@@ -1644,4 +1644,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
 
+  "ontario-ca": {
+    videoId: "PENDING",
+    title: "Ontario Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT3M00S",
+    uploadDate: "2026-06-21T00:00:00-06:00",
+  },
 };
