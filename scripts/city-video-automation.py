@@ -88,8 +88,25 @@ def get_city_data(slug):
             h['address'] = hospital_addresses[i]
         hospitals.append(h)
     
-    # Extract provider data
-    d_section = block.split('localDoulas:')[1].split(']')[0] if 'localDoulas:' in block else ''
+    # Extract provider data — depth-aware parse (regex split on ']' breaks on brackets inside strings)
+    if 'localDoulas:' in block:
+        d_start = block.index('localDoulas:')
+        # Find the opening bracket
+        br_start = block.index('[', d_start)
+        # Walk to matching closing bracket
+        depth = 0
+        i = br_start
+        while i < len(block):
+            if block[i] == '[':
+                depth += 1
+            elif block[i] == ']':
+                depth -= 1
+                if depth == 0:
+                    break
+            i += 1
+        d_section = block[br_start:i+1]
+    else:
+        d_section = ''
     provider_names = re.findall(r'name:\s*"([^"]*)"', d_section)
     provider_photos = re.findall(r'photo:\s*"([^"]*)"', d_section)
     providers = []
@@ -360,11 +377,7 @@ export const {slug.replace('-', '_')}Data: TJBCityVideoData = {{
 
 
 def generate_tts(data_file):
-    """Generate TTS for all scenes via Mistral Voxtral API."""
-    if not MISTRAL_API_KEY:
-        print('  ⚠️  No MISTRAL_API_KEY set, skipping TTS')
-        return None
-    
+    """Generate TTS for all scenes via Mistral Voxtral API, with edge-tts fallback."""
     # Read scene data to extract narrations
     with open(data_file) as f:
         content = f.read()
@@ -378,6 +391,13 @@ def generate_tts(data_file):
     total_duration = 0.0
     scene_durations = {}
     
+    use_edge_tts = False
+    if not MISTRAL_API_KEY:
+        print('  ⚠️  No MISTRAL_API_KEY set, falling back to edge-tts (en-US-AriaNeural)')
+        use_edge_tts = True
+    EDGE_TTS_BIN = os.path.expanduser('~/.hermes/hermes-agent/venv/bin/edge-tts')
+    EDGE_VOICE = 'en-US-AriaNeural'
+    
     for scene_id, narration in scenes:
         if not narration.strip():
             continue
@@ -389,38 +409,52 @@ def generate_tts(data_file):
         print(f'    TTS: {scene_id} ({len(narration)} chars)...')
         
         try:
-            import requests
-            resp = requests.post(
-                'https://api.mistral.ai/v1/audio/speech',
-                headers={
-                    'Authorization': f'Bearer {MISTRAL_API_KEY}',
-                    'Content-Type': 'application/json',
-                },
-                json={
-                    'model': 'voxtral-mini-tts-latest',
-                    'input': narration,
-                    'voice_id': SHELBI_VOICE,
-                    'response_format': 'wav',
-                },
-                timeout=120,
-            )
-            if resp.status_code != 200:
-                print(f'    ⚠️  TTS failed for {scene_id}: HTTP {resp.status_code} - {resp.text[:200]}')
-                continue
-            
-            # Voxtral returns base64 JSON, not raw WAV — must decode
-            import base64
-            try:
-                resp_data = resp.json()
-                if 'audio_data' in resp_data:
-                    wav_bytes = base64.b64decode(resp_data['audio_data'])
-                else:
-                    # Fallback: maybe it is raw WAV
+            if use_edge_tts:
+                # edge-tts: generate mp3, convert to wav
+                mp3_path = audio_dir / f'{scene_id}.mp3'
+                result = subprocess.run(
+                    [EDGE_TTS_BIN, '--voice', EDGE_VOICE, '--text', narration, '--write-media', str(mp3_path)],
+                    capture_output=True, text=True, timeout=60
+                )
+                if result.returncode != 0:
+                    print(f'    ⚠️  edge-tts failed for {scene_id}: {result.stderr[:200]}')
+                    continue
+                # Convert mp3 to wav
+                run(f'ffmpeg -y -i "{mp3_path}" -ar 44100 -ac 1 "{out_wav}" >/dev/null 2>&1', check=False)
+                mp3_path.unlink(missing_ok=True)
+            else:
+                # Mistral Voxtral API
+                import requests
+                resp = requests.post(
+                    'https://api.mistral.ai/v1/audio/speech',
+                    headers={
+                        'Authorization': f'Bearer {MISTRAL_API_KEY}',
+                        'Content-Type': 'application/json',
+                    },
+                    json={
+                        'model': 'voxtral-mini-tts-latest',
+                        'input': narration,
+                        'voice_id': SHELBI_VOICE,
+                        'response_format': 'wav',
+                    },
+                    timeout=120,
+                )
+                if resp.status_code != 200:
+                    print(f'    ⚠️  TTS failed for {scene_id}: HTTP {resp.status_code} - {resp.text[:200]}')
+                    continue
+                
+                # Voxtral returns base64 JSON, not raw WAV — must decode
+                import base64
+                try:
+                    resp_data = resp.json()
+                    if 'audio_data' in resp_data:
+                        wav_bytes = base64.b64decode(resp_data['audio_data'])
+                    else:
+                        wav_bytes = resp.content
+                except (json.JSONDecodeError, ValueError):
                     wav_bytes = resp.content
-            except (json.JSONDecodeError, ValueError):
-                wav_bytes = resp.content
-            with open(out_wav, 'wb') as f:
-                f.write(wav_bytes)
+                with open(out_wav, 'wb') as f:
+                    f.write(wav_bytes)
             
             # Get actual duration via ffprobe
             dur_result = run(f'ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "{out_wav}"', check=False)
@@ -527,13 +561,45 @@ def update_scene_durations(data_file, timing):
 
 def copy_assets(slug, data=None):
     """Copy hero image and hospital thumbnails to Remotion public/images directory."""
-    hero_src = PROJECT_ROOT / 'public' / 'images' / f'{slug}-birth-doula-hero.webp'
     dest_dir = REMOTION_DIR / 'public' / 'images'
     dest_dir.mkdir(parents=True, exist_ok=True)
     
-    if hero_src.exists():
-        shutil.copy2(str(hero_src), str(dest_dir / f'{slug}-birth-doula-hero.webp'))
-        print(f'  ✅ Hero image copied')
+    # Resolve actual heroImage from cities.ts instead of hardcoding filename
+    hero_copied = False
+    if data and 'heroImage' in data:
+        hero_field = data.get('heroImage', '')
+    else:
+        # Fallback: read from cities.ts
+        with open(PROJECT_ROOT / 'src' / 'data' / 'cities.ts') as f:
+            ts_content = f.read()
+        m = re.search(rf'"{slug}":\s*\{{.*?heroImage:\s*"([^"]*)"', ts_content, re.DOTALL)
+        hero_field = m.group(1) if m else ''
+    
+    if hero_field:
+        hero_filename = hero_field.split('/images/')[-1] if '/images/' in hero_field else hero_field.lstrip('/')
+        hero_src = PROJECT_ROOT / 'public' / 'images' / hero_filename
+        if hero_src.exists():
+            shutil.copy2(str(hero_src), str(dest_dir / f'{slug}-birth-doula-hero.webp'))
+            print(f'  ✅ Hero image copied ({hero_filename} → {slug}-birth-doula-hero.webp)')
+            hero_copied = True
+    
+    if not hero_copied:
+        # Last resort: try the default name
+        hero_src = PROJECT_ROOT / 'public' / 'images' / f'{slug}-birth-doula-hero.webp'
+        if hero_src.exists():
+            shutil.copy2(str(hero_src), str(dest_dir / f'{slug}-birth-doula-hero.webp'))
+            print(f'  ✅ Hero image copied (default name)')
+        else:
+            # Try skyline variants
+            for suffix in ['-birth-doula-skyline-v2', '-birth-doula-skyline', '-birth-doula-hero-v2']:
+                alt = PROJECT_ROOT / 'public' / 'images' / f'{slug}{suffix}.webp'
+                if alt.exists():
+                    shutil.copy2(str(alt), str(dest_dir / f'{slug}-birth-doula-hero.webp'))
+                    print(f'  ✅ Hero image copied ({alt.name} → {slug}-birth-doula-hero.webp)')
+                    hero_copied = True
+                    break
+            if not hero_copied:
+                print(f'  ⚠️  No hero image found for {slug}')
     
     # Copy logo SVGs
     for logo in ['logo.svg', 'logo-white.svg', 'icon-mark.svg']:
@@ -850,6 +916,20 @@ def main():
     # Step 5: Register composition in Root.tsx
     print('\n[Step 6] Registering composition...')
     register_composition(slug, data_file)
+    
+    # Step 6.5: Capture fullpage scroll screenshot (required by provider scene)
+    print('\n[Step 6.5] Capturing fullpage scroll screenshot...')
+    scroll_src = PROJECT_ROOT / 'public' / 'images' / f'{slug}-fullpage-scroll.png'
+    if not scroll_src.exists():
+        run(f'cd {PROJECT_ROOT} && node scripts/capture-fullpage.cjs {slug}', timeout=60, check=False)
+        if scroll_src.exists():
+            shutil.copy2(str(scroll_src), str(REMOTION_DIR / 'public' / 'images' / f'{slug}-fullpage-scroll.png'))
+            print(f'  ✅ Fullpage scroll captured and copied')
+        else:
+            print(f'  ⚠️  Fullpage scroll capture failed (render may fail on provider scene)')
+    else:
+        shutil.copy2(str(scroll_src), str(REMOTION_DIR / 'public' / 'images' / f'{slug}-fullpage-scroll.png'))
+        print(f'  ✅ Fullpage scroll already exists, copied to Remotion')
     
     # Step 7: Render video
     print('\n[Step 7] Rendering video (this takes a few minutes)...')
