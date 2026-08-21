@@ -1,0 +1,25 @@
+{
+  "city": "elk-grove-ca",
+  "state": "CA",
+  "population": 169743,
+  "populationTier": "100K-500K",
+  "researchStarted": "2026-08-21T13:00:00Z",
+  "status": "in-progress",
+  "checkpoints": {
+    "directoryCreated": true,
+    "initialCheckpointWritten": true,
+    "researchComplete": false,
+    "dataWritten": false,
+    "imagesGenerated": false,
+    "validationPassed": false,
+    "buildPassed": false,
+    "preflightPassed": false
+  },
+  "providersFound": {
+    "doulas": [],
+    "midwives": [],
+    "hospitals": [],
+    "birthCenters": []
+  },
+  "notes": "Elk Grove CA - population 169,743. Located in Sacramento County. Suburban city south of Sacramento."
+}

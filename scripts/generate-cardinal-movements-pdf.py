@@ -169,6 +169,9 @@ def build_html() -> str:
     color: #3a3326;
   }}
   body {{ font-size: 10.5px; line-height: 1.4; }}
+  /* Orphan/widow protection + headings never orphaned at a page bottom (pdf-best-practices) */
+  p {{ orphans: 3; widows: 3; }}
+  h1, h2, h3, h4 {{ page-break-after: avoid; break-after: avoid; }}
 
   /* ---------- Page 1 ---------- */
   .page-1 {{ page-break-after: always; }}
@@ -520,6 +523,10 @@ def main() -> int:
             path=str(OUT_PDF),
             format="letter",
             print_background=True,
+            # KILL browser chrome/junk footer URL from ever leaking in (pdf-generation skill rule #1).
+            # False is Playwright's default but we set it explicitly so no wrapper/library re-adds
+            # a source-URL/timestamp footer. Page numbers live in the baked-in .footer div only.
+            display_header_footer=False,
             margin={"top": "0.45in", "bottom": "0.4in", "left": "0.5in", "right": "0.5in"},
         )
         browser.close()
