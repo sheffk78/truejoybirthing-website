@@ -138,6 +138,20 @@ def get_city_data(slug):
     }
 
 
+def _truncate_sentence(text, limit):
+    """Truncate text at a sentence boundary within `limit` chars (never mid-word)."""
+    if len(text) <= limit:
+        return text.strip()
+    cut = text[:limit]
+    # Find last sentence-ending punctuation before the cut point
+    last_end = max(cut.rfind('. '), cut.rfind('! '), cut.rfind('? '))
+    if last_end != -1:
+        return cut[:last_end + 1]
+    # Fallback: last whitespace (whole word bound)
+    last_space = cut.rfind(' ')
+    return cut[:last_space] + '...' if last_space > 0 else cut
+
+
 def _build_hospital_scenes(data, city, slug):
     """Build individual hospital scenes, one per facility."""
     scenes = []
@@ -149,11 +163,11 @@ def _build_hospital_scenes(data, city, slug):
         h_thumb = hospital.get('thumbnail', '')
         h_para = hospital.get('paragraph', '')
         h_addr = hospital.get('address', '')
-        # Unique narration mentioning only this hospital
+        # Unique narration mentioning only this hospital (sentence-bounded truncation)
         if idx == 1:
-            narration = f"Let's start with {h_name}. {h_para[:200]}" if h_para else f"Let's start with {h_name}. It welcomes doulas and has NICU support for babies who need extra care."
+            narration = f"Let's start with {h_name}. {_truncate_sentence(h_para, 200)}" if h_para else f"Let's start with {h_name}. It welcomes doulas and has NICU support for babies who need extra care."
         else:
-            narration = f"{h_name} also welcomes doulas and provides NICU support. {h_para[:150]}" if h_para else f"{h_name} also welcomes doulas and provides NICU support. Each hospital in {city} has its own policies around birth plans and support people."
+            narration = f"{h_name} also welcomes doulas and provides NICU support. {_truncate_sentence(h_para, 150)}" if h_para else f"{h_name} also welcomes doulas and provides NICU support. Each hospital in {city} has its own policies around birth plans and support people."
         # Escape quotes for TS output
         narration_esc = narration.replace('"', "'")
         para_esc = h_para[:300].replace('"', "'") if h_para else ''

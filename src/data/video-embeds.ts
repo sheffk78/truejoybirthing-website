@@ -1660,10 +1660,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
   "corona-ca": {
-    videoId: "LztMCJ7UgS8",
+    videoId: "vrAeVq6wdkI",
     title: "Corona CA Doula & Birth Plan Guide",
-    description: "Watch the full Corona CA Doula & Birth Plan Guide — all in about 2:51.",
-    duration: "PT2M51S",
+    description: "Watch the full Corona CA Doula & Birth Plan Guide — all in about 3:18.",
+    duration: "PT3M18S",
   },
 
 };
