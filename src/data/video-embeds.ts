@@ -1645,18 +1645,19 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
   "ontario-ca": {
-    videoId: "ew1kg1tvss8",
-    title: "Ontario Doula & Birth Plan Guide",
-    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
-    duration: "PT3M00S",
-    uploadDate: "2026-08-21T00:00:00-06:00",
+    videoId: "FWTHxlIu5Qw",
+    title: "Ontario Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full Ontario city guide — 3 doulas, hospitals, costs, and California Medi-Cal coverage, all in under 4 minutes.",
+    duration: "PT3M52S",
+    uploadDate: "2026-08-22T00:00:00-07:00",
   },
 
   "elk-grove-ca": {
-    videoId: "p0suklojBk4",
-    title: "Elk Grove CA Doula & Birth Plan Guide",
-    description: "Watch the full Elk Grove CA Doula & Birth Plan Guide — all in about 3:00.",
-    duration: 180,
+    videoId: "I-8tPYyVU4w",
+    title: "Elk Grove CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
+    description: "Watch the full Elk Grove city guide — 3 doulas, Sacramento hospitals, costs, and California Medi-Cal coverage, all in about 4 minutes.",
+    duration: "PT3M59S",
+    uploadDate: "2026-08-22T00:00:00-07:00",
   },
 
   "corona-ca": {
