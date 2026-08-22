@@ -1667,4 +1667,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M18S",
   },
 
+  "hayward-ca": {
+    videoId: "PENDING",
+    title: "Hayward Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT3M00S",
+    uploadDate: "2026-06-22T00:00:00-06:00",
+  },
 };
