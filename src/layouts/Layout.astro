@@ -258,6 +258,23 @@ const finalTitle = pageTitle.length > 70 ? pageTitle.replace(" | True Joy Birthi
     <!-- Analytics are deferred to after onload, so no preconnect needed -->
     <script type="application/ld+json" set:html={schemaJson} />
     <meta name="google-site-verification" content="_M7E5q4vR4G_fwL43Mj8JqXKbevBWtoVk4vC2msJUvo" />
+    <!-- PostHog Analytics -->
+    <script>
+      (function(){
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://us.i.posthog.com/static/array.js';
+        s.onload = function(){
+          window.posthog.init('phc_uJazKyrRhDyHi9weQMYorrmqqq2m5AwHEZS37kJPPYgh', {
+            api_host: 'https://us.i.posthog.com',
+            session_recording: { record_canvas: true },
+            person_profiles: 'identified_only',
+            autocapture: true,
+          });
+        };
+        document.head.appendChild(s);
+      })();
+    </script>
   </head>
   <body class="min-h-dvh flex flex-col font-sans">
     <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-tjb-charcoal focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>

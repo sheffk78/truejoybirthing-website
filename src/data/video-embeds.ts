@@ -1674,4 +1674,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M00S",
     uploadDate: "2026-06-22T00:00:00-06:00",
   },
+  "palmdale-ca": {
+    videoId: "_mHvL1hHLWA",
+    title: "Palmdale CA Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT2M18S",
+    uploadDate: "2026-08-24T00:00:00-06:00",
+  },
 };
