@@ -447,6 +447,48 @@ def cmd_done(slug: str, stage: str):
         }, indent=2))
         return
 
+    # ARTIFACT GUARD (2026-08-24, Palmdale masked-failure fix):
+    # A worker reporting "completed" (even via max_iterations exit) must have left
+    # real evidence on disk. Missing artifact = hard fail, not silent advance.
+    def _check_artifacts(slug: str, stage: str) -> str | None:
+        import re as _re
+        try:
+            cities_ts = (Path(PROJECT_DIR) / "src" / "data" / "cities.ts").read_text()
+        except OSError:
+            return "cities.ts unreadable"
+        m = _re.search(rf'\"{slug}\":', cities_ts) or _re.search(rf'"{slug}":', cities_ts)
+        if stage == "build":
+            if f'"{slug}"' not in cities_ts:
+                return f"cities.ts has no '{slug}' data block — build artifacts missing"
+            hero = list((Path(PROJECT_DIR) / "public" / "images").glob(f"{slug}-*hero*.webp"))
+            if not hero:
+                return f"no hero image for {slug} — build artifacts missing"
+        if stage == "enrich":
+            block = ""
+            mi = cities_ts.find(f'"{slug}"')
+            if mi >= 0:
+                block = cities_ts[mi:cities_ts.find("\n  },", mi)]
+            if "Contact for pricing" in block:
+                return "enrich incomplete: 'Contact for pricing' present"
+            if "paragraph:" not in block:
+                return "enrich incomplete: no hospital/birth-center descriptions"
+        return None
+
+    _artifact_error = _check_artifacts(slug, actual_stage)
+    if _artifact_error:
+        failed = state.setdefault("stages_failed", {})
+        failed[actual_stage] = failed.get(actual_stage, 0) + 1
+        state["stages_failed"] = failed
+        save_state(state)
+        print(json.dumps({
+            "action": "artifact_fail",
+            "slug": slug,
+            "stage": actual_stage,
+            "error": _artifact_error,
+            "message": "Worker claimed completion but artifacts are missing. Stage NOT advanced. Re-run the stage worker.",
+        }, indent=2))
+        sys.exit(3)
+
     # Record completion
     completed = state.get("stages_completed", [])
     if actual_stage not in completed:
