@@ -9645,7 +9645,7 @@ hospitalDetails: [
     lng: -118.1165,
     heroImage: "/images/palmdale-ca-birth-doula-hero.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-palmdale-ca.webp",
-    supportSceneImage: "/images/palmdale-ca-birth-doula-support.webp",
+    supportSceneImage: "/images/palmdale-ca-birth-doula-support-v2.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Palmdale: Antelope Valley birth support beneath the high desert sky",
     localDoulas: [
       { name: "Merrisa Arnold Stern", credential: "Full-Spectrum Birth & Postpartum Doula", practice: "Luna Life Doula Services", url: "https://lunalifedoulaservices.com", photo: "/images/provider-palmdale-ca-merrisa-stern.webp", description: "Merrisa Arnold Stern leads Luna Life Doula Services, a full-spectrum practice serving Palmdale and the wider Antelope Valley. She supports families through birth, postpartum, childbirth education, lactation education, and even prenatal yoga, bringing a rare breadth of training to the high desert. Families working with Merrisa get one experienced guide from pregnancy through the fourth trimester — someone who teaches as she supports, so parents feel prepared rather than dependent. Her calm, whole-family approach has made Luna Life a trusted name for Palmdale parents who want continuous, personalized care close to home.", costRange: "$1,200-$2,000", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula", "Childbirth Education", "Lactation Education"], serviceArea: ["Palmdale, CA", "Lancaster, CA", "Antelope Valley, CA"] },
