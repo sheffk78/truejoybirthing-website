@@ -9631,6 +9631,63 @@ hospitalDetails: [
     nearbyCities: ["sacramento-ca", "stockton-ca", "fremont-ca"]
   },
 
+
+  "palmdale-ca": {
+    enableBlogResources: true,
+    publishedDate: "2026-08-24",
+    city: "Palmdale",
+    state: "CA",
+    slug: "palmdale-ca",
+    costLow: 800,
+    costHigh: 2000,
+    shelbiServesHere: false,
+    lat: 34.5794,
+    lng: -118.1165,
+    heroImage: "/images/palmdale-ca-birth-doula-hero.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-palmdale-ca.webp",
+    supportSceneImage: "/images/palmdale-ca-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Palmdale: Antelope Valley birth support beneath the high desert sky",
+    localDoulas: [
+      { name: "Merrisa Arnold Stern", credential: "Full-Spectrum Birth & Postpartum Doula", practice: "Luna Life Doula Services", url: "https://lunalifedoulaservices.com", photo: "/images/provider-palmdale-ca-merrisa-stern.webp", description: "Merrisa Arnold Stern leads Luna Life Doula Services, a full-spectrum practice serving Palmdale and the wider Antelope Valley. She supports families through birth, postpartum, childbirth education, lactation education, and even prenatal yoga, bringing a rare breadth of training to the high desert. Families working with Merrisa get one experienced guide from pregnancy through the fourth trimester — someone who teaches as she supports, so parents feel prepared rather than dependent. Her calm, whole-family approach has made Luna Life a trusted name for Palmdale parents who want continuous, personalized care close to home.", costRange: "$1,200-$2,000", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula", "Childbirth Education", "Lactation Education"], serviceArea: ["Palmdale, CA", "Lancaster, CA", "Antelope Valley, CA"] },
+      { name: "Heather Turner", credential: "CD(DONA), LCCE — Lamaze Certified Childbirth Educator", practice: "Your Birth (navydoula.com)", url: "https://navydoula.com", photo: "/images/provider-palmdale-ca-heather-turner.webp", description: "Heather Turner is a DONA-certified birth doula and Lamaze-certified childbirth educator who has served military and civilian families since 2002 — more than two decades of birth-room experience. A Navy veteran based in Palmdale, she brings steady, seasoned judgment to every labor and a teacher's clarity to prenatal preparation. Heather is currently focused on referrals while stepping back from new clients, but her childbirth education work continues to prepare Antelope Valley parents for confident, informed births. For families seeking deep experience, her referral network connects them with trusted local doulas.", costRange: "$1,500-$2,200", acceptingClients: false, services: ["Birth Doula", "Childbirth Education"], serviceArea: ["Palmdale, CA", "Antelope Valley, CA"] },
+      { name: "Ibibiase Reproductive Services", credential: "Postpartum Doula & Educator", practice: "Ibibiase", url: "https://ugofedu.com/ibibiase", photo: "/images/provider-palmdale-ca-ibibiase.webp", description: "Ibibiase Reproductive Services specializes in postpartum doula care and parenting classes for Palmdale, Lancaster, and surrounding communities. Their team focuses on the weeks after birth — newborn care, feeding support, recovery guidance, and practical classes that help new parents build confidence. For Palmdale families who already have birth support lined up or who want structured help after the baby arrives, Ibibiase offers patient, knowledgeable postpartum care rooted in reproductive-health education.", costRange: "$25-$50/hr", acceptingClients: true, services: ["Postpartum Doula", "Newborn Care", "Parenting Classes"], serviceArea: ["Palmdale, CA", "Lancaster, CA", "Pasadena, CA"] },
+    ],
+    culture: "Palmdale anchors the Antelope Valley at the western edge of the Mojave Desert, one of the fastest-growing cities in Los Angeles County with a young, family-oriented community drawn by affordable housing and open desert space. Its birth community reflects both its growth and its geography: with only one full-service maternity hospital in the entire valley, doulas and midwives play an outsized role in helping families plan and advocate for their births. California Medi-Cal doula coverage under SB-509 has expanded access to birth support for many Palmdale families, and local doulas increasingly serve Medi-Cal households across the high desert. Families here are used to planning ahead — distances matter, options are fewer than in the LA basin, and good preparation makes a real difference.",
+    heroLocalDetail: "Antelope Valley Medical Center in Lancaster is the only hospital in the entire Antelope Valley with an active labor and delivery unit, delivering most of the valley's roughly 4,000 babies each year through its Women & Infants Pavilion. Palmdale Regional Medical Center closed its maternity unit in February 2026, converting those beds to medical-surgical use — so every Palmdale family now plans to deliver at AVMC about 15 minutes away in Lancaster, unless they choose the Antelope Valley Birth Center or a planned home birth with a licensed midwife. Kaiser Permanente members in the valley also deliver at AVMC. Because there is literally no second hospital option, Palmdale families benefit most from early birth planning: choosing their provider, touring the Women & Infants Pavilion, and coordinating doula support well before the due date.",
+    hospitalDetails: [
+      { name: "Antelope Valley Medical Center — Women & Infants Pavilion", thumbnail: "/images/palmdale-ca-hospital-avmc.webp", address: "44155 15th St W, Lancaster, CA 93534", nicuLevel: "III", doulaPolicy: "Doulas welcome. AVMC welcomes doulas as part of each patient's birth support team in labor and delivery.", medicaid: true, lactation: true, privateRooms: true, waterBirth: "Hydrotherapy availability varies; ask when touring the Women & Infants Pavilion", url: "https://www.avmc.org/services/women-and-infants-pavilion/", paragraph: "Antelope Valley Medical Center's Women & Infants Pavilion in Lancaster is the sole full-service maternity hospital serving the entire Antelope Valley, welcoming around 4,000 babies every year. The pavilion offers private labor and delivery suites, a Level III NICU for newborns who need extra care, on-site lactation consultants, and an obstetric emergency program. It holds CMS Birthing Friendly designation, reflecting evidence-based maternity practices. Because it is the only L&D option between the San Fernando Valley and Bakersfield, nearly every Palmdale birth — including Kaiser Permanente members' — happens here, so familiarity with AVMC's policies and layout is genuinely valuable. Doulas are part of the birth team here, and families who arrive with a written birth plan and continuous labor support consistently report better experiences. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." },
+    ],
+    birthCenterDetails: [
+      { name: "Antelope Valley Birth Center (Kindred Space LA)", thumbnail: "/images/palmdale-ca-birth-center-avbc.webp", address: "1505 W Ave J Suite 203, Lancaster, CA 93534", url: "https://kindredspacela.com/ksav", services: ["Freestanding Birth Center", "Water Birth", "Midwife-Led Care"] },
+    ],
+    midwifeInfo: {
+      paragraph: "Antelope Valley families have growing midwifery options despite limited hospital-based care. Licensed Midwives (LMs) serve the high desert through home-birth practices and the midwife-led Antelope Valley Birth Center in Lancaster, which operates the region's only water-birth suite. Certified Nurse-Midwife involvement is centered at Antelope Valley Medical Center, where hospital-based midwifery presence supports low-intervention births.",
+      credentialTypes: "LMs, CNMs",
+      credentialDetail: "In California, Licensed Midwives (LMs) are licensed through the Medical Board of California under the Licensed Midwifery Practice Act and attend home and birth-center births — including at the Antelope Valley Birth Center. Certified Nurse-Midwives (CNMs) are licensed through the Board of Registered Nursing and practice in hospital settings such as Antelope Valley Medical Center. Palmdale families can choose community-based midwifery or hospital-adjacent CNM care depending on their preferences and risk profile.",
+      thumbnail: "/images/doulas/palmdale-ca-midwifery.webp"
+    },
+    medicaidNote: "Yes — California Medi-Cal covers doula services under SB-509, with a birth package reimbursement of approximately $1,587. Doulas must enroll through the PAVE portal to bill Medi-Cal directly. In Los Angeles County, Medi-Cal managed care plans administer doula benefits, and several Antelope Valley doulas accept Medi-Cal — ask specifically about doula coverage when you call your plan.",
+    insuranceNote: "Under California SB 332, commercial health plans are required to cover doula services and midwifery care. Check with your insurer for in-network doula providers and prior-authorization requirements. Many Antelope Valley doulas accept Health Net, L.A. Care, Molina, and other common Medi-Cal managed-care and commercial plans, and offer superbills for out-of-network reimbursement.",
+    faqs: [
+      { q: "Can I get a free doula through Medi-Cal in Palmdale?", a: "Yes. California Medi-Cal covers doula services under SB-509 at approximately $1,587 for the full birth package. Los Angeles County Medi-Cal managed care plans administer the benefit, and enrolled doulas bill through the PAVE portal. Call your Medi-Cal plan and ask specifically about doula coverage — several Antelope Valley doulas accept Medi-Cal." },
+      { q: "Which hospital serves Palmdale births?", a: "Antelope Valley Medical Center in Lancaster is the only hospital in the Antelope Valley with an active labor and delivery unit. Palmdale Regional Medical Center closed its maternity unit in February 2026, so virtually all Palmdale families deliver at AVMC's Women & Infants Pavilion, about 15 minutes away." },
+      { q: "Is there a birth center near Palmdale?", a: "Yes. The Antelope Valley Birth Center in Lancaster is a midwife-owned freestanding birth center offering the only water-birth suite in the high desert. Many Palmdale families also choose home birth with a licensed midwife — ask your midwife about transfer plans just in case." },
+      { q: "How much does a doula cost in Palmdale?", a: "Expect $800 to $2,000 for a birth doula in the Antelope Valley, with area packages typically ranging up to a median near $1,700. Postpartum doula rates run $25-$50 per hour. Roughly half of local doulas accept insurance, and Medi-Cal covers doula services at no cost to eligible families." },
+      { q: "Did Palmdale Regional lose its maternity ward?", a: "Yes. Palmdale Regional Medical Center converted its maternity unit to medical-surgical beds effective February 3, 2026. That makes Antelope Valley Medical Center the valley's only birthing hospital — a key reason Palmdale families should complete their birth plans and provider choices early." },
+      { q: "Are doulas welcome at Antelope Valley hospitals?", a: "Yes. Antelope Valley Medical Center welcomes doulas as part of your birth support team, and the midwife-led Antelope Valley Birth Center builds doula collaboration into its care model. California law supports your right to have a doula present during labor and delivery." },
+    ],
+    birthStats: {
+      cesareanRate: 30.2,
+      maternalMortalityRate: 31.0,
+      homeBirthRate: 1.5,
+      birthCenterBirthRate: 0.6,
+      dataYear: 2023,
+      dataSource: "CDC NCHS National Vital Statistics System",
+    },
+    nearbyCities: ["lancaster-ca", "santa-clarita-ca", "glendale-ca"]
+  }
+,
+
 };
 
 export const citySlugs = Object.keys(cities).sort();
