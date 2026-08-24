@@ -1,10 +1,10 @@
 {
-  "slug": "elk-grove-ca",
+  "slug": "hayward-ca",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
-  "exit_code": 1,
-  "passed": 6,
-  "failed": 1,
+  "exit_code": 0,
+  "passed": 7,
+  "failed": 0,
   "skipped": 0,
   "results": {
     "pre_render_gate": {

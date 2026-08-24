@@ -149,7 +149,10 @@ def _local_video_outreach_gates(slug: str) -> dict:
         else:
             results["video_file_exists"] = {"pass": False, "message": f"video file only {size_mb:.1f}MB (<10MB)"}
     else:
-        results["video_file_exists"] = {"pass": False, "message": f"video file missing at out/{slug}-city-guide.mp4"}
+        # Post-upload the local mp4 is routinely cleaned up (true for all completed
+        # cities). If upload (G3) + embed (G5) pass, the local file's absence is
+        # expected, not a failure. Reorder: compute G3 first if needed.
+        results["video_file_exists"] = {"pass": None, "message": f"local mp4 absent at out/{slug}-city-guide.mp4 — deferring to G3/G5"}
 
     # G3: youtube_upload — videoId present in video-embeds.ts
     embeds_file = Path(PROJECT_DIR) / 'src' / 'data' / 'video-embeds.ts'
@@ -203,6 +206,14 @@ def _local_video_outreach_gates(slug: str) -> dict:
 
     # G7: outreach_sent_or_blocked
     results["outreach_sent_or_blocked"] = {"pass": True, "message": "authorized — Jeff approved outreach resumption Aug 2026. Ready to send."}
+
+    # Resolve G2 deferral: local mp4 absence is expected once upload + embed pass.
+    g2 = results.get("video_file_exists", {})
+    if g2.get("pass") is None:
+        if results.get("youtube_upload", {}).get("pass") and results.get("video_embedded", {}).get("pass"):
+            results["video_file_exists"] = {"pass": True, "message": "local mp4 cleaned post-upload (expected; YouTube upload + live embed verified)"}
+        else:
+            results["video_file_exists"] = {"pass": False, "message": "local mp4 missing and video not yet uploaded/embedded"}
 
     # Write gate results JSON
     gate_json = {

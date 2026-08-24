@@ -1,10 +1,10 @@
 {
-  "slug": "elk-grove-ca",
+  "slug": "palmdale-ca",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
   "exit_code": 1,
-  "passed": 6,
-  "failed": 1,
+  "passed": 1,
+  "failed": 6,
   "skipped": 0,
   "results": {
     "pre_render_gate": {
