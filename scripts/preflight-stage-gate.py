@@ -273,7 +273,9 @@ def parse_preflight_gates(stdout: str) -> dict:
     ICON_TO_STATUS = {"✅": "PASS", "❌": "FAIL", "⏭": "SKIP"}
     gates = {}
     for line in stdout.split("\n"):
-        line = line.strip()
+        # Strip ANSI color codes — preflight.ts emits e.g. "\x1b[32m✅\x1b[0m S1: ..."
+        # when captured via subprocess, which breaks startswith() icon matching.
+        line = re.sub(r"\x1b\[[0-9;]*[A-Za-z]", "", line).strip()
         # Strip ANSI color escape sequences (e.g. "\x1b[32m✅\x1b[0m") that
         # preflight.ts emits when stdout is not a TTY. Without this, the
         # emoji-prefix match below fails and every gate is invisible, making
