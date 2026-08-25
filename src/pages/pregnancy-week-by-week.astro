@@ -136,6 +136,217 @@ const faqSchema = {
   </section>
 
   <!-- ═══════════════════════════════════════════
+       INTERACTIVE WEEK SLIDER — scrub through weeks 4-40
+       ═══════════════════════════════════════════ -->
+  <section id="slider" class="bg-tjb-lavender-100/50 py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <p class="eyebrow mb-4 text-center">Explore your pregnancy</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6 mx-auto"></div>
+      <h2 class="text-center font-semibold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
+        Slide through every week
+      </h2>
+      <p class="text-center text-tjb-gray text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+        Drag the slider to watch your baby grow from a poppy seed to a full newborn — 4 weeks to 40.
+      </p>
+
+      <!-- Slider preview card -->
+      <div class="bg-white rounded-3xl shadow-lg border border-tjb-lavender-200 overflow-hidden">
+        <div class="grid md:grid-cols-2 gap-0 items-center">
+          <!-- Left: illustration -->
+          <div class="bg-tjb-lavender-100 flex items-center justify-center p-8 md:p-12">
+            <img
+              id="slider-image"
+              src="/images/pregnancy-series/pregnancy-week-04-approved.webp"
+              alt="Week 4 pregnancy illustration"
+              class="w-full max-w-xs rounded-2xl shadow-sm transition-opacity duration-200"
+              width="400"
+              height="400"
+            />
+          </div>
+          <!-- Right: info -->
+          <div class="p-8 md:p-10 text-center md:text-left">
+            <span class="inline-block text-xs font-bold uppercase tracking-wide text-tjb-rose-500 mb-2" id="slider-trimester-label">First Trimester</span>
+            <h3 class="font-bold text-tjb-charcoal mb-2" style="font-size: clamp(2rem, 4vw, 3rem);">
+              <span id="slider-week">4</span> <span class="text-tjb-gray/40 font-normal">weeks</span>
+            </h3>
+            <p class="text-lg font-semibold text-tjb-charcoal mb-3" id="slider-baby-title">As small as a poppy seed</p>
+            <p class="text-tjb-gray leading-relaxed mb-4" id="slider-baby-desc">Your baby is still tiny — the embryo is now fully implanted in the uterus and the amniotic sac is beginning to form.</p>
+            <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tjb-lavender-100 text-sm font-medium text-tjb-lavender-700" id="slider-size-badge">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>
+                <span id="slider-size">~1mm</span>
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tjb-rose-100 text-sm font-medium text-tjb-rose-600" id="slider-food-badge" style="display:none;">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path d="M3 3a1 1 0 000 2h11.5a.5.5 0 01.5.5V11a1 1 0 102 0V5.5A2.5 2.5 0 0014.5 3H3z"/><path d="M3 7a1 1 0 011-1h8a1 1 0 010 2H4a1 1 0 01-1-1zM3 11a1 1 0 011-1h6a1 1 0 010 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h10a1 1 0 010 2H4a1 1 0 01-1-1z"/></svg>
+                <span id="slider-food">poppy seed</span>
+              </span>
+            </div>
+            <a id="slider-cta" href="/pregnancy/4-weeks-pregnant/" class="inline-block mt-5 btn-primary text-sm">
+              See full week 4 guide →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider control -->
+      <div class="mt-8 px-2 md:px-4">
+        <div class="flex items-center justify-between text-sm font-semibold text-tjb-gray/60 mb-2">
+          <span>Week 4</span>
+          <span id="slider-current-label" class="text-tjb-rose-500 font-bold">Week 4</span>
+          <span>Week 40</span>
+        </div>
+        <input
+          type="range"
+          id="week-slider"
+          min="4"
+          max="40"
+          value="4"
+          step="1"
+          class="w-full slider-tjb"
+          aria-label="Select pregnancy week"
+        />
+        <!-- Trimester markers under slider -->
+        <div class="relative mt-2 h-5">
+          <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-1 bg-tjb-lavender-200 rounded-full"></div>
+          <div id="slider-progress" class="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-tjb-rose-500 rounded-full" style="width:0%"></div>
+          <div class="absolute inset-x-0 flex justify-between text-[10px] font-semibold uppercase tracking-wide text-tjb-gray/40">
+            <span class="relative z-10 bg-tjb-lavender-100/50 px-1" style="margin-left:0%">T1</span>
+            <span class="relative z-10 bg-tjb-lavender-100/50 px-1" style="margin-left:24%">T2</span>
+            <span class="relative z-10 bg-tjb-lavender-100/50 px-1" style="margin-right:0%">T3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Week data for slider (injected as JSON) -->
+  <script id="pregnancy-slider-data" type="application/json" set:html={JSON.stringify(PREGNANCY_WEEKS.map(w => ({
+    week: w.week,
+    trimester: w.trimester,
+    slug: w.slug,
+    babyTitle: w.babyTitle,
+    babyDescription: w.babyDescription,
+    imageName: w.imageName,
+    food: w.food,
+    sizeNote: w.sizeNote,
+  })))} />
+
+  <style>
+    .slider-tjb {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 8px;
+      border-radius: 9999px;
+      background: linear-gradient(to right, #f3e8ff 0%, #fce7f3 100%);
+      outline: none;
+      cursor: pointer;
+    }
+    .slider-tjb::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #e11d63;
+      border: 4px solid #fff;
+      box-shadow: 0 2px 6px rgba(225, 29, 99, 0.4);
+      cursor: grab;
+      transition: transform 0.15s;
+    }
+    .slider-tjb::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+    }
+    .slider-tjb::-webkit-slider-thumb:active {
+      cursor: grabbing;
+      transform: scale(1.1);
+    }
+    .slider-tjb::-moz-range-thumb {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #e11d63;
+      border: 4px solid #fff;
+      box-shadow: 0 2px 6px rgba(225, 29, 99, 0.4);
+      cursor: grab;
+    }
+    .slider-tjb::-moz-range-track {
+      height: 8px;
+      border-radius: 9999px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .slider-tjb::-webkit-slider-thumb { transition: none; }
+    }
+  </style>
+
+  <script type="module">
+    // ═══════════════════════════════════════════
+    // INTERACTIVE WEEK SLIDER
+    // ═══════════════════════════════════════════
+    const dataEl = document.getElementById('pregnancy-slider-data');
+    const weeks = JSON.parse(dataEl?.textContent || '[]');
+
+    const slider = document.getElementById('week-slider');
+    const sliderImg = document.getElementById('slider-image');
+    const sliderWeek = document.getElementById('slider-week');
+    const sliderBabyTitle = document.getElementById('slider-baby-title');
+    const sliderBabyDesc = document.getElementById('slider-baby-desc');
+    const sliderSize = document.getElementById('slider-size');
+    const sliderFood = document.getElementById('slider-food');
+    const sliderFoodBadge = document.getElementById('slider-food-badge');
+    const sliderCta = document.getElementById('slider-cta');
+    const sliderLabel = document.getElementById('slider-current-label');
+    const sliderProgress = document.getElementById('slider-progress');
+    const sliderTrimester = document.getElementById('slider-trimester-label');
+
+    const trimesterLabels = { first: 'First Trimester', second: 'Second Trimester', third: 'Third Trimester' };
+
+    function updateSlider(weekNum) {
+      const w = weeks.find(x => x.week === weekNum);
+      if (!w) return;
+
+      // Fade image transition
+      sliderImg.style.opacity = '0.4';
+      const newImg = new Image();
+      newImg.onload = () => {
+        sliderImg.src = newImg.src;
+        sliderImg.alt = `Week ${w.week} pregnancy illustration — ${w.babyTitle}`;
+        sliderImg.style.opacity = '1';
+      };
+      newImg.src = `/images/pregnancy-series/${w.imageName}`;
+
+      // Update text
+      sliderWeek.textContent = w.week;
+      sliderBabyTitle.textContent = w.babyTitle;
+      sliderBabyDesc.textContent = w.babyDescription;
+      sliderSize.textContent = w.sizeNote || '';
+
+      if (w.food) {
+        sliderFood.textContent = w.food;
+        sliderFoodBadge.style.display = 'inline-flex';
+      } else {
+        sliderFoodBadge.style.display = 'none';
+      }
+
+      sliderCta.href = `/pregnancy/${w.slug}/`;
+      sliderCta.textContent = `See full week ${w.week} guide →`;
+      sliderLabel.textContent = `Week ${w.week}`;
+      sliderTrimester.textContent = trimesterLabels[w.trimester] || '';
+
+      // Progress bar (0% at week 4, 100% at week 40)
+      const pct = ((w.week - 4) / (40 - 4)) * 100;
+      sliderProgress.style.width = pct + '%';
+    }
+
+    if (slider) {
+      slider.addEventListener('input', (e) => {
+        updateSlider(parseInt(e.target.value));
+      });
+      // Initialize
+      updateSlider(4);
+    }
+  </script>
+
+  <!-- ═══════════════════════════════════════════
        WEEK-BY-WEEK TIMELINE BY TRIMESTER
        ═══════════════════════════════════════════ -->
   <section id="timeline" class="bg-tjb-cream py-16 md:py-20">
