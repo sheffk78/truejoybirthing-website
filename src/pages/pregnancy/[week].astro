@@ -25,7 +25,8 @@ const prevWeek = PREGNANCY_WEEK_BY_WEEK[week.week - 1] || null;
 const nextWeek = PREGNANCY_WEEK_BY_WEEK[week.week + 1] || null;
 
 const pageTitle = `${week.week} Weeks Pregnant: Baby Development & Your Body`;
-const description = `${week.babyTitle} at ${week.week} weeks pregnant. See how your baby is developing this week, what's happening in your body, and a word of encouragement from doula Shelbi Kohler.`;
+const description = week.metaDescription || `${week.babyTitle} at ${week.week} weeks pregnant. See how your baby is developing this week, what's happening in your body, and a word of encouragement from doula Shelbi Kohler.`;
+const relatedWeekNumbers = [4, 12, 20, 28, 36].filter((n) => n !== week.week && PREGNANCY_WEEK_BY_WEEK[n]);
 const canonical = `${SITE}/pregnancy/${week.slug}/`;
 const imageUrl = `${SITE}/images/pregnancy-series/${week.imageName}`;
 
@@ -53,6 +54,15 @@ const schema = {
         name: `Pregnancy, week ${week.week}`,
       },
       author: {
+        '@type': 'Person',
+        name: 'Shelbi Kohler',
+        jobTitle: 'Certified Birth Doula',
+        url: `${SITE}/about/`,
+      },
+      datePublished: '2026-08-25',
+      dateModified: '2026-08-25',
+      lastReviewed: '2026-08-25',
+      reviewedBy: {
         '@type': 'Person',
         name: 'Shelbi Kohler',
         jobTitle: 'Certified Birth Doula',
@@ -137,7 +147,7 @@ const schema = {
       <p class="eyebrow mt-12 mb-3">{trimesterName} · Week {week.week}</p>
       <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6 mx-auto"></div>
       <h1 class="font-bold text-tjb-charcoal leading-[1.15] mb-5 max-w-3xl mx-auto" style="font-size: clamp(2rem, 4.5vw, 3.25rem);">
-        {week.week} Weeks Pregnant{week.food ? `: ${week.babyTitle}` : ''}
+        {week.week} Weeks Pregnant: {week.babyTitle}
       </h1>
 
       <!-- Size reference chips -->
@@ -223,14 +233,14 @@ const schema = {
 
       <!-- Toggle -->
       <div class="flex items-center justify-center mb-10">
-        <div class="inline-flex bg-white rounded-full border border-tjb-lavender-200 p-1 shadow-sm">
-          <button id="view-mom" class="view-toggle-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-tjb-rose-500 text-white" aria-pressed="true">Mom's view</button>
-          <button id="view-partner" class="view-toggle-btn px-5 py-2 rounded-full text-sm font-semibold transition-all text-tjb-gray" aria-pressed="false">Partner's view</button>
+        <div class="inline-flex bg-white rounded-full border border-tjb-lavender-200 p-1 shadow-sm" role="tablist" aria-label="Week perspective">
+          <button id="view-mom" class="view-toggle-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-tjb-rose-500 text-white" role="tab" aria-selected="true" aria-controls="mom-view-content" tabindex="0">Mom's view</button>
+          <button id="view-partner" class="view-toggle-btn px-5 py-2 rounded-full text-sm font-semibold transition-all text-tjb-gray" role="tab" aria-selected="false" aria-controls="partner-view-content" tabindex="-1">Partner's view</button>
         </div>
       </div>
 
       <!-- Mom's view (default, already shown above in body section) -->
-      <div id="mom-view-content" class="view-content">
+      <div id="mom-view-content" class="view-content" role="tabpanel" aria-labelledby="view-mom" tabindex="0">
         <div class="text-center">
           <p class="eyebrow mb-3">For you</p>
           <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6 mx-auto"></div>
@@ -245,7 +255,7 @@ const schema = {
       </div>
 
       <!-- Partner's view (hidden by default) -->
-      <div id="partner-view-content" class="view-content hidden">
+      <div id="partner-view-content" class="view-content hidden" role="tabpanel" aria-labelledby="view-partner" tabindex="0">
         <div class="space-y-8">
           <div>
             <p class="eyebrow mb-3">What she's feeling</p>
@@ -286,12 +296,12 @@ const schema = {
 
       <!-- Preview + buttons -->
       <div class="flex flex-col items-center gap-6">
-        <img id="share-preview" alt="Shareable week card preview" class="w-full max-w-sm rounded-2xl shadow-lg border border-tjb-lavender-200" />
+        <img id="share-preview" alt="Shareable week card preview" width="400" height="400" class="w-full max-w-sm rounded-2xl shadow-lg border border-tjb-lavender-200" />
         <div class="flex flex-wrap items-center justify-center gap-3">
-          <button id="download-card" class="btn-primary">Download card</button>
-          <button id="share-card" class="btn-secondary">Share to social</button>
+          <button id="download-card" class="btn-primary" aria-label={`Download the week ${week.week} pregnancy card as a PNG image`}>Download card</button>
+          <button id="share-card" class="btn-secondary" aria-label={`Share the week ${week.week} pregnancy card via iMessage, Instagram, or Facebook`}>Share to social</button>
         </div>
-        <p class="text-xs text-tjb-gray/60">Card is 1080×1080 — perfect for Instagram, Facebook, or iMessage.</p>
+        <p class="text-xs text-tjb-gray/60">Card is 1080×1080 — save the image to share via iMessage, Instagram, or Facebook.</p>
       </div>
 
     </div>
@@ -325,6 +335,32 @@ const schema = {
               <span class="mt-2 inline-block text-xs text-tjb-lavender-600 font-medium">Read the benefits →</span>
             </a>
           </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ═══════════════════════════════════════════
+       RELATED WEEKS — internal linking
+       ═══════════════════════════════════════════ -->
+  {relatedWeekNumbers.length > 0 && (
+    <section class="bg-white py-16 md:py-20">
+      <div class="max-w-3xl mx-auto px-6">
+        <p class="eyebrow mb-4">Related weeks</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+        <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-8" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
+          Keep following your pregnancy
+        </h2>
+        <div class="grid sm:grid-cols-2 gap-4">
+          {relatedWeekNumbers.map((n) => {
+            const rw = PREGNANCY_WEEK_BY_WEEK[n];
+            return (
+              <a href={`/pregnancy/${rw.slug}/`} class="group no-underline bg-tjb-cream rounded-xl p-5 border border-tjb-lavender-200/50 hover:border-tjb-rose-400 transition-colors">
+                <span class="text-xs font-bold uppercase tracking-wide text-tjb-lavender-600">Week {n}</span>
+                <p class="mt-1 font-semibold text-tjb-charcoal group-hover:text-tjb-rose-600 transition-colors">{n} weeks pregnant: {rw.babyTitle}</p>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -383,7 +419,10 @@ const schema = {
           <p class="mt-1 font-semibold text-tjb-charcoal group-hover:text-tjb-rose-600 transition-colors">Week {prevWeek.week}: {prevWeek.babyTitle}</p>
         </a>
       ) : (
-        <div></div>
+        <a href="/pregnancy-week-by-week/" class="group no-underline bg-tjb-cream rounded-xl p-5 border border-tjb-lavender-200/50 hover:border-tjb-rose-400 transition-colors">
+          <span class="text-xs font-bold uppercase tracking-wide text-tjb-lavender-600">← Back to hub</span>
+          <p class="mt-1 font-semibold text-tjb-charcoal group-hover:text-tjb-rose-600 transition-colors">Pregnancy Week by Week hub</p>
+        </a>
       )}
       {nextWeek ? (
         <a href={`/pregnancy/${nextWeek.slug}/`} class="group no-underline bg-tjb-cream rounded-xl p-5 border border-tjb-lavender-200/50 hover:border-tjb-rose-400 transition-colors sm:text-right">
@@ -416,23 +455,28 @@ const schema = {
     const momContent = document.getElementById('mom-view-content');
     const partnerContent = document.getElementById('partner-view-content');
 
+    function styleActive(activeBtn, inactiveBtn) {
+      activeBtn.classList.add('bg-tjb-rose-500', 'text-white');
+      activeBtn.classList.remove('text-tjb-gray');
+      inactiveBtn.classList.remove('bg-tjb-rose-500', 'text-white');
+      inactiveBtn.classList.add('text-tjb-gray');
+    }
+
     function setView(view) {
       if (view === 'partner') {
-        btnMom.classList.remove('bg-tjb-rose-500', 'text-white');
-        btnMom.classList.add('text-tjb-gray');
-        btnPartner.classList.add('bg-tjb-rose-500', 'text-white');
-        btnPartner.classList.remove('text-tjb-gray');
-        btnMom.setAttribute('aria-pressed', 'false');
-        btnPartner.setAttribute('aria-pressed', 'true');
+        styleActive(btnPartner, btnMom);
+        btnMom.setAttribute('aria-selected', 'false');
+        btnMom.setAttribute('tabindex', '-1');
+        btnPartner.setAttribute('aria-selected', 'true');
+        btnPartner.setAttribute('tabindex', '0');
         momContent.classList.add('hidden');
         partnerContent.classList.remove('hidden');
       } else {
-        btnPartner.classList.remove('bg-tjb-rose-500', 'text-white');
-        btnPartner.classList.add('text-tjb-gray');
-        btnMom.classList.add('bg-tjb-rose-500', 'text-white');
-        btnMom.classList.remove('text-tjb-gray');
-        btnMom.setAttribute('aria-pressed', 'true');
-        btnPartner.setAttribute('aria-pressed', 'false');
+        styleActive(btnMom, btnPartner);
+        btnMom.setAttribute('aria-selected', 'true');
+        btnMom.setAttribute('tabindex', '0');
+        btnPartner.setAttribute('aria-selected', 'false');
+        btnPartner.setAttribute('tabindex', '-1');
         partnerContent.classList.add('hidden');
         momContent.classList.remove('hidden');
       }
@@ -440,6 +484,21 @@ const schema = {
 
     btnMom.addEventListener('click', () => setView('mom'));
     btnPartner.addEventListener('click', () => setView('partner'));
+
+    // Arrow-key navigation between tabs
+    const tablist = document.querySelector('[role="tablist"]');
+    tablist.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight' && e.key !== 'Home' && e.key !== 'End') return;
+      e.preventDefault();
+      const toPartner = (e.key === 'ArrowRight') ? !btnPartner.getAttribute('aria-selected') || btnPartner.getAttribute('aria-selected') === 'false' :
+        (e.key === 'ArrowLeft') ? btnPartner.getAttribute('aria-selected') === 'true' : null;
+      let target;
+      if (e.key === 'Home') target = btnMom;
+      else if (e.key === 'End') target = btnPartner;
+      else target = toPartner ? btnPartner : btnMom;
+      setView(target === btnPartner ? 'partner' : 'mom');
+      target.focus();
+    });
 
     // ── Shareable Week Card Generator ──
     const canvas = document.getElementById('share-canvas');

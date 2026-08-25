@@ -70,7 +70,7 @@ const faqSchema = {
 ---
 
 <Layout
-  title="Pregnancy Week by Week: Baby Growth & Development Guide"
+  title="Pregnancy Week by Week Guide (Weeks 4-40)"
   description="Follow your baby's growth from week 4 to week 40. See how big baby is each week, what's happening in your body, and encouragement from a certified doula and mother of seven."
   canonical={pageUrl}
   ogImage={`${SITE}/images/pregnancy-series/pregnancy-week-30-approved.webp`}
@@ -90,7 +90,7 @@ const faqSchema = {
           <p class="eyebrow mb-3">Pregnancy Week by Week</p>
           <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
           <h1 class="font-bold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(2.25rem, 5vw, 3.75rem);">
-            Pregnancy Week by Week: Baby Growth &amp; Development Guide
+            Pregnancy Week by Week Guide (Weeks 4-40)
           </h1>
           <!-- Author credibility strip -->
           <div class="flex items-center gap-2.5 mb-5">
@@ -190,6 +190,16 @@ const faqSchema = {
 
       <!-- Slider control -->
       <div class="mt-8 px-2 md:px-4">
+        <!-- Week bubble above the slider thumb (updates as you drag) -->
+        <div class="relative h-9 mb-1">
+          <div
+            id="slider-week-bubble"
+            class="absolute -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-tjb-rose-500 text-white text-xs font-bold shadow transition-[left] duration-100"
+            style="left:0%"
+          >
+            Week 4
+          </div>
+        </div>
         <div class="flex items-center justify-between text-sm font-semibold text-tjb-gray/60 mb-2">
           <span>Week 4</span>
           <span id="slider-current-label" class="text-tjb-rose-500 font-bold">Week 4</span>
@@ -207,12 +217,20 @@ const faqSchema = {
         />
         <!-- Trimester markers under slider -->
         <div class="relative mt-2 h-5">
-          <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-1 bg-tjb-lavender-200 rounded-full"></div>
-          <div id="slider-progress" class="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-tjb-rose-500 rounded-full" style="width:0%"></div>
+          <div
+            id="slider-progress-track"
+            class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-1 bg-tjb-lavender-200 rounded-full"
+            role="progressbar"
+            aria-label="Pregnancy progress from week 4 to week 40"
+            aria-valuemin="4"
+            aria-valuemax="40"
+            aria-valuenow="4"
+          ></div>
+          <div id="slider-progress" class="pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-tjb-rose-500 rounded-full" style="width:0%"></div>
           <div class="absolute inset-x-0 flex justify-between text-[10px] font-semibold uppercase tracking-wide text-tjb-gray/40">
-            <span class="relative z-10 bg-tjb-lavender-100/50 px-1" style="margin-left:0%">T1</span>
-            <span class="relative z-10 bg-tjb-lavender-100/50 px-1" style="margin-left:24%">T2</span>
-            <span class="relative z-10 bg-tjb-lavender-100/50 px-1" style="margin-right:0%">T3</span>
+            <span class="relative z-10 bg-tjb-lavender-100/50 px-1" style="margin-left:0%"><span class="md:hidden">T1</span><span class="hidden md:inline">Trimester 1</span></span>
+            <span class="relative z-10 bg-tjb-lavender-100/50 px-1" style="margin-left:24%"><span class="md:hidden">T2</span><span class="hidden md:inline">Trimester 2</span></span>
+            <span class="relative z-10 bg-tjb-lavender-100/50 px-1" style="margin-right:0%"><span class="md:hidden">T3</span><span class="hidden md:inline">Trimester 3</span></span>
           </div>
         </div>
       </div>
@@ -297,12 +315,35 @@ const faqSchema = {
     const sliderLabel = document.getElementById('slider-current-label');
     const sliderProgress = document.getElementById('slider-progress');
     const sliderTrimester = document.getElementById('slider-trimester-label');
+    const weekBubble = document.getElementById('slider-week-bubble');
+    const progressTrack = document.getElementById('slider-progress-track');
 
     const trimesterLabels = { first: 'First Trimester', second: 'Second Trimester', third: 'Third Trimester' };
 
     function updateSlider(weekNum) {
       const w = weeks.find(x => x.week === weekNum);
       if (!w) return;
+
+      const trimesterName = trimesterLabels[w.trimester] || '';
+      // Screen-reader friendly value: "Week N of 40, X trimester"
+      if (slider) {
+        slider.setAttribute('aria-valuetext', `Week ${w.week} of 40, ${trimesterName.toLowerCase()}`);
+      }
+      // Week bubble above thumb
+      if (weekBubble) {
+        weekBubble.textContent = `Week ${w.week}`;
+        weekBubble.style.left = `${((w.week - 4) / 36) * 100}%`;
+        // Clamp bubble so it doesn't overflow the container edges
+        requestAnimationFrame(() => {
+          const track = weekBubble.parentElement;
+          if (!track) return;
+          const half = weekBubble.offsetWidth / 2;
+          const leftPx = (parseFloat(weekBubble.style.left) / 100) * track.offsetWidth;
+          if (leftPx < half) weekBubble.style.transform = `translateX(${half - leftPx}px)`;
+          else if (leftPx > track.offsetWidth - half) weekBubble.style.transform = `translateX(${track.offsetWidth - half - leftPx}px)`;
+          else weekBubble.style.transform = 'translateX(-50%)';
+        });
+      }
 
       // Fade image transition
       sliderImg.style.opacity = '0.4';
@@ -335,6 +376,7 @@ const faqSchema = {
       // Progress bar (0% at week 4, 100% at week 40)
       const pct = ((w.week - 4) / (40 - 4)) * 100;
       sliderProgress.style.width = pct + '%';
+      if (progressTrack) progressTrack.setAttribute('aria-valuenow', String(w.week));
     }
 
     if (slider) {
