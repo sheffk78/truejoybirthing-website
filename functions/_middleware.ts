@@ -44,7 +44,7 @@ const redirects: Record<string, string> = {
   "/birth-support/fort-wayne-in": "/birth-support/",
   "/birth-support/gulfport-ms": "/birth-support/",
   "/birth-support/honolulu-hi": "/birth-support/",
-  "/birth-support/lexington-ky": "/birth-support/",
+  // lexington-ky now has a real city page — redirect removed 2026-08-25
   "/birth-support/omaha-ne": "/birth-support/",
   "/birth-support/sioux-falls-sd": "/birth-support/",
   "/birth-support/wilmington-nc": "/birth-support/",
