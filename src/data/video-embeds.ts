@@ -1689,4 +1689,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: 180,
   },
 
+  "frisco-tx": {
+    videoId: "A55Mfcyw4g0",
+    title: "Frisco TX Doula & Birth Plan Guide",
+    description: "Watch the full Frisco TX Doula & Birth Plan Guide — all in about 6:00.",
+    duration: "PT6M2S",
+  },
+
 };
