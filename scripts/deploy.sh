@@ -119,6 +119,22 @@ else
 fi
 
 # ---------------------------------------------------------------
+# 🔴 VISUAL PREFLIGHT: Image quality gate — blocks deploy if
+# provider photos are initials/placeholders (<5KB or <100 colors)
+# or hero images have letterbox bars. Added 2026-08-25 after
+# Frisco-TX shipped with 5 initials placeholders undetected.
+# ---------------------------------------------------------------
+echo ""
+echo "--- VISUAL PREFLIGHT (image quality gate) ---"
+if bash scripts/visual-preflight.sh ${UPGRADE_SLUG:+"$UPGRADE_SLUG"}; then
+  echo "  → Visual preflight PASSED"
+else
+  echo "  ❌ Visual preflight FAILED — provider photos are placeholders or images have quality issues"
+  echo "  → Fix: Source real headshot photos from provider websites before deploying"
+  exit 1
+fi
+
+# ---------------------------------------------------------------
 # 🔴 GATE 7: Upgrade completeness check (if slug provided)
 # ---------------------------------------------------------------
 if [ -n "$UPGRADE_SLUG" ]; then

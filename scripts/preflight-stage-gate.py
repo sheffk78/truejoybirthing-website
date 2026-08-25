@@ -207,6 +207,70 @@ def _local_video_outreach_gates(slug: str) -> dict:
     # G7: outreach_sent_or_blocked
     results["outreach_sent_or_blocked"] = {"pass": True, "message": "authorized — Jeff approved outreach resumption Aug 2026. Ready to send."}
 
+    # G8: provider_photo_quality — detect initials/placeholder photos
+    # Initials placeholders are tiny (<5KB) and have very few unique colors
+    # (solid pastel background + 2 letters). Real headshots are >5KB with
+    # thousands of unique colors. This catches the "enrichment didn't source
+    # real photos" failure mode that gates G19/G57 miss (they only check
+    # file existence and >=1KB).
+    try:
+        from PIL import Image
+        import io
+    except ImportError:
+        Image = None
+
+    if Image:
+        city_file = Path(PROJECT_DIR) / "src" / "data" / "cities.ts"
+        city_text = city_file.read_text(errors="replace") if city_file.exists() else ""
+        marker = f'"{slug}": {{'
+        start = city_text.find(marker)
+        if start >= 0:
+            tail = city_text[start + len(marker):]
+            nxt = re.search(r'\n\s*"[a-z][a-z-]+-[a-z]{2}":\s*\{', tail)
+            block = city_text[start:start + len(marker) + (nxt.start() if nxt else 5000)]
+            # Extract all provider photo paths
+            photo_refs = re.findall(r'photo\s*:\s*["\']([^"\']+)', block)
+            placeholder_count = 0
+            checked = 0
+            failures = []
+            for ref in photo_refs:
+                local_ref = ref.split("/images/", 1)[-1] if "/images/" in ref else ref.lstrip("/")
+                photo_path = Path(PROJECT_DIR) / "public" / "images" / local_ref
+                if not photo_path.exists():
+                    failures.append(f"{ref}: file missing")
+                    placeholder_count += 1
+                    continue
+                file_size = photo_path.stat().st_size
+                checked += 1
+                if file_size < 5000:
+                    failures.append(f"{ref}: {file_size}B < 5KB (likely initials placeholder)")
+                    placeholder_count += 1
+                    continue
+                # Check color variance — initials placeholders have <100 unique colors
+                try:
+                    img = Image.open(photo_path)
+                    colors = img.getcolors(maxcolors=10000)
+                    unique_colors = len(colors) if colors else 10000
+                    if unique_colors < 100:
+                        failures.append(f"{ref}: {unique_colors} unique colors < 100 (likely initials placeholder)")
+                        placeholder_count += 1
+                except Exception as e:
+                    failures.append(f"{ref}: color check failed: {e}")
+            if placeholder_count > 0:
+                results["provider_photo_quality"] = {
+                    "pass": False,
+                    "message": f"{placeholder_count}/{checked} provider photos are placeholders/initials: {'; '.join(failures[:3])}"
+                }
+            else:
+                results["provider_photo_quality"] = {
+                    "pass": True,
+                    "message": f"all {checked} provider photos are real images (>5KB, >100 colors)"
+                }
+        else:
+            results["provider_photo_quality"] = {"pass": True, "message": "city block not found — skipping"}
+    else:
+        results["provider_photo_quality"] = {"pass": True, "message": "PIL not available — skipping (install Pillow to enable)"}
+
     # Resolve G2 deferral: local mp4 absence is expected once upload + embed pass.
     g2 = results.get("video_file_exists", {})
     if g2.get("pass") is None:
