@@ -2540,6 +2540,13 @@ birthStats: { cesareanRate: 32.1, maternalMortalityRate: 18.6, homeBirthRate: 0.
     },
 },
   "philadelphia-pa": {
+    lat: 39.9526,
+    lng: -75.1652,
+    midwifeInfo: {
+      paragraph: "Philadelphia has one of the stronger midwifery landscapes in Pennsylvania. Penn Medicine and Jefferson Health both employ Certified Nurse-Midwives within their hospital practices, and the Philadelphia Birth Center offers midwife-led, out-of-hospital care with water birth options. Several home-birth practices serve the greater Philly area. Pennsylvania licenses Certified Nurse-Midwives (CNMs) and, since 2016, Licensed Midwives (LMs) — CPM certification is recognized through NARM. Most Pennsylvania Medicaid managed-care plans cover CNM-attended births.",
+      credentialTypes: "CNMs and LMs",
+      credentialDetail: "In Pennsylvania, Certified Nurse-Midwives (CNMs) are licensed by the State Board of Medicine or Board of Nursing and attend hospital and birth-center births throughout Philadelphia. Licensed Midwives (LMs), regulated since 2016, and Certified Professional Midwives (CPMs) primarily attend home and birth-center births."
+    },
     enableBlogResources: true,
     publishedDate: "2026-06-22",
     city: "Philadelphia" ,
