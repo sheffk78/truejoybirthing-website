@@ -63,7 +63,7 @@ The key is flexibility. Some mothers stay in slow breathing through most of acti
 
 ## What Should Your Birth Partner Know?
 
-Your birth partner, whether that is your spouse, a family member, or a <a href="/blog/benefits-of-a-doula/">doula</a>, needs to know your breathing plan almost as well as you do. In labor, you may not be able to communicate verbally. Your partner is the one who will remind you to breathe, count with you, and tell you when the hardest part is almost over.
+Your birth partner, whether that is your spouse, a family member, or a <a href="/benefits-of-a-doula/">doula</a>, needs to know your breathing plan almost as well as you do. In labor, you may not be able to communicate verbally. Your partner is the one who will remind you to breathe, count with you, and tell you when the hardest part is almost over.
 
 I tell partners to learn the three patterns themselves and to practice out loud with the pregnant person regularly, not just once. During labor, your voice will trigger a familiar response. Use a calm, low voice. Watch for tension in the jaw, shoulders, and hands, and offer a hand on the shoulder with a simple reminder to soften. If she requests medication, remind her once of her plan, then support whatever she chooses. Arguing in transition can undo hours of preparation.
 
@@ -103,4 +103,4 @@ Lamaze breathing is one of the most practical comfort measures you can learn bef
 
 Include your chosen techniques in your birth plan so your partner and care team know how to support you. Our <a href="/birth-plan-template/">Joyful Birth Plan template</a> has a dedicated section for comfort measures and breathing, so you can list exactly which patterns you plan to use and when.
 
-Want hands-on coaching during labor? <a href="/blog/benefits-of-a-doula/">Working with a doula</a> means having someone whose entire job is to remind you to breathe, adjust your position, and keep you focused when it gets hard. The families who prepare their breathing techniques are the families who feel the most in control, no matter how their birth unfolds.
+Want hands-on coaching during labor? <a href="/benefits-of-a-doula/">Working with a doula</a> means having someone whose entire job is to remind you to breathe, adjust your position, and keep you focused when it gets hard. The families who prepare their breathing techniques are the families who feel the most in control, no matter how their birth unfolds.

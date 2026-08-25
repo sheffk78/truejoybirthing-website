@@ -57,7 +57,7 @@ For hip pain, which is one of the most common complaints I hear from pregnant cl
 
 For round ligament pain, which often feels like a sharp ache on one or both sides of your lower belly, try placing a small wedge or rolled towel just under your bump. You want to cradle the weight, not push it upward.
 
-Pairing the right pillow with the positioning strategies I cover in my <a href="/labor-pain-management-options/">labor pain management guide</a> can set you up with habits that carry into labor and delivery as well. Learning to use your body efficiently with support tools now pays off later.
+Pairing the right pillow with the positioning strategies I cover in my <a href="/blog/labor-pain-management-options/">labor pain management guide</a> can set you up with habits that carry into labor and delivery as well. Learning to use your body efficiently with support tools now pays off later.
 
 ## Can a Pregnancy Pillow Actually Improve Your Sleep?
 

@@ -69,7 +69,7 @@ I coach the families I support through this exact question, and my approach is s
 
 **Bring it up with your doula.** This is one of the most common things I discuss during prenatal visits. If you are working with a doula, we can review your diet together, check whether your cravings might point to a nutritional gap, and build a simple plan. If you do not have a doula yet, it is worth learning about the <a href="/benefits-of-a-doula/">benefits of a doula</a> and how that support extends well beyond labor and delivery. You might also want to understand <a href="/doula-vs-midwife/">how a doula compares to a midwife</a> since those roles overlap in some ways but are very different in others.
 
-If you are an active person, you might also want to read about <a href="/labor-pain-management-options/">labor pain management options</a> so you can start building a full picture of your preferences before the big day.
+If you are an active person, you might also want to read about <a href="/blog/labor-pain-management-options/">labor pain management options</a> so you can start building a full picture of your preferences before the big day.
 
 ## Do Pregnancy Cravings Predict What Your Baby Will Like?
 

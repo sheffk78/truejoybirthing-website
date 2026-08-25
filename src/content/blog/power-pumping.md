@@ -9,7 +9,7 @@ featuredImage: "/images/doula-counter-pressure.webp"
 layout: "../../layouts/PostLayout.astro"
 ---
 
-# Power Pumping: How to Boost Your Milk Supply
+## Power Pumping: How to Boost Your Milk Supply
 
 If your milk supply feels lower than you want it to be, you're not alone. I've sat with dozens of new parents who stare at the pump and wonder why the bottles aren't filling up. The good news is that power pumping exists, and it works. I've seen it shift supply in real time for the families I support.
 
@@ -79,7 +79,7 @@ If you're feeling unsure about whether power pumping is right for your situation
 
 Let's talk about what power pumping actually feels like, because nobody seems to prepare parents for the reality of sitting attached to a machine for an hour.
 
-Your nipples may feel sensitive, especially if you're not used to extended pumping. Make sure your flange size is correct. A flange that's too small or too large can cause pain and reduce output. Most pump brands have sizing guides online, or a lactation consultant can measure you. If you're looking for ways to manage discomfort more broadly, my guide to <a href="/labor-pain-management-options/">labor pain management options</a> covers techniques that apply to more than just contractions.
+Your nipples may feel sensitive, especially if you're not used to extended pumping. Make sure your flange size is correct. A flange that's too small or too large can cause pain and reduce output. Most pump brands have sizing guides online, or a lactation consultant can measure you. If you're looking for ways to manage discomfort more broadly, my guide to <a href="/blog/labor-pain-management-options/">labor pain management options</a> covers techniques that apply to more than just contractions.
 
 You probably won't get much milk during the rest-pump intervals in the middle of the session. That's normal. The goal of those middle pumps isn't to empty your breasts completely. It's to keep the stimulation going so your body registers the demand. The milk that comes out during the final 10-minute pump is often where you'll see the increase.
 

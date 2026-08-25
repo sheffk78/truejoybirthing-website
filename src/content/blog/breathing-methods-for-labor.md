@@ -9,7 +9,7 @@ featuredImage: "/images/doula-counter-pressure.webp"
 layout: "../../layouts/PostLayout.astro"
 ---
 
-# Breathing Methods for Labor: What Works
+## Breathing Methods for Labor: What Works
 
 If you're pregnant and thinking about how you'll cope with contractions, you've probably heard that "just breathe" is the go-to advice. But here's the thing: nobody hands you a manual for *which* breathing methods for labor actually work when the intensity ramps up.
 
