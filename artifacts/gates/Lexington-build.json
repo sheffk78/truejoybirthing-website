@@ -1,0 +1,15 @@
+{
+  "slug": "Lexington",
+  "stage": "build",
+  "mode": "local_integrity",
+  "exit_code": 1,
+  "passed": 0,
+  "failed": 1,
+  "skipped": 0,
+  "results": {
+    "LOCAL_CITY_ENTRY": {
+      "status": "FAIL",
+      "detail": "city entry missing"
+    }
+  }
+}

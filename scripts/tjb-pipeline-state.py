@@ -507,9 +507,21 @@ def cmd_done(slug: str, stage: str):
                 return f"no hero image for {slug} — build artifacts missing"
         if stage == "enrich":
             block = ""
-            mi = cities_ts.find(f'"{slug}"')
-            if mi >= 0:
-                block = cities_ts[mi:cities_ts.find("\n  },", mi)]
+            # Find the actual city block: "slug": { (not a nearbyCities reference)
+            import re as _re2
+            block_match = _re2.search(rf'"{_re2.escape(slug)}"\s*:\s*\{{', cities_ts)
+            if block_match:
+                mi = block_match.start()
+                # Find end of block by tracking brace depth
+                depth = 1
+                i = block_match.end()
+                while depth > 0 and i < len(cities_ts):
+                    if cities_ts[i] == '{':
+                        depth += 1
+                    elif cities_ts[i] == '}':
+                        depth -= 1
+                    i += 1
+                block = cities_ts[mi:i]
             if "Contact for pricing" in block:
                 return "enrich incomplete: 'Contact for pricing' present"
             if "paragraph:" not in block:
