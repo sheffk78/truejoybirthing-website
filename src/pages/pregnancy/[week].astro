@@ -3,6 +3,7 @@
 // from src/data/pregnancy-weeks.ts at build time.
 import Layout from '../../layouts/Layout.astro';
 import { PREGNANCY_WEEKS, PREGNANCY_WEEK_BY_WEEK } from '../../data/pregnancy-weeks.ts';
+import { PARTNER_WEEK_BY_WEEK } from '../../data/pregnancy-weeks-partner.ts';
 
 const SITE = 'https://truejoybirthing.com';
 
@@ -14,6 +15,7 @@ export function getStaticPaths() {
 }
 
 const { week } = Astro.props;
+const partner = PARTNER_WEEK_BY_WEEK[week.week];
 
 const trimesterName =
   week.trimester === 'first' ? 'First Trimester' :
@@ -214,6 +216,88 @@ const schema = {
   </section>
 
   <!-- ═══════════════════════════════════════════
+       PARTNER VIEW TOGGLE
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-cream py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <!-- Toggle -->
+      <div class="flex items-center justify-center mb-10">
+        <div class="inline-flex bg-white rounded-full border border-tjb-lavender-200 p-1 shadow-sm">
+          <button id="view-mom" class="view-toggle-btn px-5 py-2 rounded-full text-sm font-semibold transition-all bg-tjb-rose-500 text-white" aria-pressed="true">Mom's view</button>
+          <button id="view-partner" class="view-toggle-btn px-5 py-2 rounded-full text-sm font-semibold transition-all text-tjb-gray" aria-pressed="false">Partner's view</button>
+        </div>
+      </div>
+
+      <!-- Mom's view (default, already shown above in body section) -->
+      <div id="mom-view-content" class="view-content">
+        <div class="text-center">
+          <p class="eyebrow mb-3">For you</p>
+          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6 mx-auto"></div>
+          <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-6" style="font-size: clamp(1.5rem, 3.5vw, 2.25rem);">
+            This week is about getting through it
+          </h2>
+          <p class="text-tjb-gray text-lg leading-[1.8] max-w-2xl mx-auto">
+            Scroll up to revisit your baby's development and Shelbi's encouragement for week {week.week}.
+            When you're ready, share this week with your partner.
+          </p>
+        </div>
+      </div>
+
+      <!-- Partner's view (hidden by default) -->
+      <div id="partner-view-content" class="view-content hidden">
+        <div class="space-y-8">
+          <div>
+            <p class="eyebrow mb-3">What she's feeling</p>
+            <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+            <p class="text-tjb-gray text-lg leading-[1.8]">{partner.partnerSummary}</p>
+          </div>
+          <div class="rounded-2xl bg-white border border-tjb-lavender-200 p-8">
+            <p class="eyebrow mb-3">What you can do</p>
+            <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+            <p class="text-tjb-charcoal text-lg leading-[1.8]">{partner.partnerAction}</p>
+          </div>
+          <p class="text-sm text-tjb-gray/70 text-center italic">
+            From Shelbi — mother of seven, certified birth doula. Written for the partner who wants to show up well.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SHAREABLE WEEK CARD
+       ═══════════════════════════════════════════ -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+
+      <p class="eyebrow mb-3">Share this week</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6 mx-auto"></div>
+      <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(1.5rem, 3.5vw, 2.25rem);">
+        Save and share your week {week.week} card
+      </h2>
+      <p class="text-tjb-gray text-lg leading-relaxed mb-8 max-w-xl mx-auto">
+        Download a beautifully designed card with this week's illustration to share with family, friends, or on social media.
+      </p>
+
+      <!-- Canvas (hidden, used for generation) -->
+      <canvas id="share-canvas" width="1080" height="1080" class="hidden"></canvas>
+
+      <!-- Preview + buttons -->
+      <div class="flex flex-col items-center gap-6">
+        <img id="share-preview" alt="Shareable week card preview" class="w-full max-w-sm rounded-2xl shadow-lg border border-tjb-lavender-200" />
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <button id="download-card" class="btn-primary">Download card</button>
+          <button id="share-card" class="btn-secondary">Share to social</button>
+        </div>
+        <p class="text-xs text-tjb-gray/60">Card is 1080×1080 — perfect for Instagram, Facebook, or iMessage.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
        THIRD TRIMESTER CROSS-LINKS (weeks 34–40)
        ═══════════════════════════════════════════ -->
   {week.week >= 34 && (
@@ -314,5 +398,180 @@ const schema = {
       )}
     </div>
   </section>
+
+  <!-- ═══════════════════════════════════════════
+       CLIENT-SIDE SCRIPTS: Partner toggle + Share card
+       ═══════════════════════════════════════════ -->
+  <script define:vars={{
+    weekNum: week.week,
+    babyTitle: week.babyTitle,
+    imageName: week.imageName,
+    food: week.food,
+    sizeNote: week.sizeNote,
+    trimesterName,
+  }}>
+    // ── Partner View Toggle ──
+    const btnMom = document.getElementById('view-mom');
+    const btnPartner = document.getElementById('view-partner');
+    const momContent = document.getElementById('mom-view-content');
+    const partnerContent = document.getElementById('partner-view-content');
+
+    function setView(view) {
+      if (view === 'partner') {
+        btnMom.classList.remove('bg-tjb-rose-500', 'text-white');
+        btnMom.classList.add('text-tjb-gray');
+        btnPartner.classList.add('bg-tjb-rose-500', 'text-white');
+        btnPartner.classList.remove('text-tjb-gray');
+        btnMom.setAttribute('aria-pressed', 'false');
+        btnPartner.setAttribute('aria-pressed', 'true');
+        momContent.classList.add('hidden');
+        partnerContent.classList.remove('hidden');
+      } else {
+        btnPartner.classList.remove('bg-tjb-rose-500', 'text-white');
+        btnPartner.classList.add('text-tjb-gray');
+        btnMom.classList.add('bg-tjb-rose-500', 'text-white');
+        btnMom.classList.remove('text-tjb-gray');
+        btnMom.setAttribute('aria-pressed', 'true');
+        btnPartner.setAttribute('aria-pressed', 'false');
+        partnerContent.classList.add('hidden');
+        momContent.classList.remove('hidden');
+      }
+    }
+
+    btnMom.addEventListener('click', () => setView('mom'));
+    btnPartner.addEventListener('click', () => setView('partner'));
+
+    // ── Shareable Week Card Generator ──
+    const canvas = document.getElementById('share-canvas');
+    const ctx = canvas.getContext('2d');
+    const preview = document.getElementById('share-preview');
+    const downloadBtn = document.getElementById('download-card');
+    const shareBtn = document.getElementById('share-card');
+
+    const W = 1080, H = 1080;
+    const bgColor = '#FBF7F0'; // cream
+    const roseColor = '#E11D48';
+    const charcoalColor = '#3B3A36';
+    const lavenderColor = '#C4B5E4';
+    const grayColor = '#6B6A66';
+
+    function roundRect(ctx, x, y, w, h, r) {
+      ctx.beginPath();
+      ctx.moveTo(x + r, y);
+      ctx.arcTo(x + w, y, x + w, y + h, r);
+      ctx.arcTo(x + w, y + h, x, y + h, r);
+      ctx.arcTo(x, y + h, x, y, r);
+      ctx.arcTo(x, y, x + w, y, r);
+      ctx.closePath();
+    }
+
+    async function generateCard() {
+      // Background
+      ctx.fillStyle = bgColor;
+      ctx.fillRect(0, 0, W, H);
+
+      // Decorative top bar
+      ctx.fillStyle = roseColor;
+      ctx.fillRect(0, 0, W, 8);
+
+      // Load illustration
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.src = `/images/pregnancy-series/${imageName}`;
+      await new Promise((resolve) => { img.onload = resolve; img.onerror = resolve; });
+
+      // Draw illustration centered (500x500 area)
+      const imgSize = 500;
+      const imgX = (W - imgSize) / 2;
+      const imgY = 60;
+      if (img.complete && img.naturalWidth > 0) {
+        ctx.save();
+        roundRect(ctx, imgX, imgY, imgSize, imgSize, 24);
+        ctx.clip();
+        ctx.drawImage(img, imgX, imgY, imgSize, imgSize);
+        ctx.restore();
+      }
+
+      // Week number
+      ctx.fillStyle = roseColor;
+      ctx.font = 'bold 48px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(`WEEK ${weekNum}`, W / 2, 620);
+
+      // Baby title
+      ctx.fillStyle = charcoalColor;
+      ctx.font = 'bold 40px Georgia, serif';
+      const title = food ? `As small as a ${food}` : babyTitle;
+      ctx.fillText(title, W / 2, 680);
+
+      // Size note
+      if (sizeNote) {
+        ctx.fillStyle = grayColor;
+        ctx.font = '28px sans-serif';
+        ctx.fillText(sizeNote, W / 2, 730);
+      }
+
+      // Trimester
+      ctx.fillStyle = lavenderColor;
+      ctx.font = '24px sans-serif';
+      ctx.fillText(trimesterName, W / 2, 780);
+
+      // Brand mark
+      ctx.fillStyle = roseColor;
+      ctx.font = 'bold 32px Georgia, serif';
+      ctx.fillText('True Joy Birthing', W / 2, 900);
+
+      // URL
+      ctx.fillStyle = grayColor;
+      ctx.font = '24px sans-serif';
+      ctx.fillText('truejoybirthing.com', W / 2, 940);
+
+      // Decorative bottom bar
+      ctx.fillStyle = roseColor;
+      ctx.fillRect(0, H - 8, W, 8);
+
+      // Set preview
+      preview.src = canvas.toDataURL('image/png');
+    }
+
+    // Generate on load
+    generateCard();
+
+    // Download
+    downloadBtn.addEventListener('click', () => {
+      canvas.toBlob((blob) => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `week-${weekNum}-pregnancy-card.png`;
+        a.click();
+        URL.revokeObjectURL(url);
+      }, 'image/png');
+    });
+
+    // Share (Web Share API if available, fallback to download)
+    shareBtn.addEventListener('click', async () => {
+      canvas.toBlob(async (blob) => {
+        const file = new File([blob], `week-${weekNum}-card.png`, { type: 'image/png' });
+        if (navigator.share && navigator.canShare({ files: [file] })) {
+          try {
+            await navigator.share({
+              files: [file],
+              title: `Week ${weekNum} — ${babyTitle}`,
+              text: `Following my pregnancy week by week at truejoybirthing.com`,
+            });
+          } catch (e) { /* user cancelled */ }
+        } else {
+          // Fallback: trigger download
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = `week-${weekNum}-pregnancy-card.png`;
+          a.click();
+          URL.revokeObjectURL(url);
+        }
+      }, 'image/png');
+    });
+  </script>
 
 </Layout>
