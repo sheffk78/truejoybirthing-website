@@ -161,7 +161,18 @@
       "sharedProviders": 1
     }
   ],
-  "minneapolis-mn": [],
+  "minneapolis-mn": [
+    {
+      "slug": "rosemount-mn",
+      "sharedProviders": 2
+    }
+  ],
+  "rosemount-mn": [
+    {
+      "slug": "minneapolis-mn",
+      "sharedProviders": 2
+    }
+  ],
   "phoenix-az": [],
   "chicago-il": [],
   "detroit-mi": [],
