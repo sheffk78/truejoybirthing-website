@@ -252,10 +252,48 @@ def determine_initial_stage_from_probe(probe: dict) -> str:
     return "complete"
 
 
-def load_recurring_mistakes() -> str:
-    if RECURRING_MISTAKES_PATH.exists():
-        return RECURRING_MISTAKES_PATH.read_text()
-    return "Recurring mistakes file not found. Read references/recurring-mistakes-block.md"
+# Stage-filtered recurring mistakes — only include items relevant to the stage
+# Full 33-item dump is noise; subagents need only what applies to their stage
+STAGE_MISTAKE_FILTER = {
+    "build": [1, 2, 3, 9, 10, 11, 12, 13, 14, 20, 21, 24],
+    "enrich": [4, 6, 7, 8, 9, 13, 15, 17, 21, 23, 25],
+    "verify_deploy": [5, 6, 11, 18, 31, 32],
+    "video_outreach": [2, 5, 16, 22, 31],
+}
+
+
+def load_recurring_mistakes(stage: str = None) -> str:
+    """Load recurring mistakes, optionally filtered to only items relevant to the given stage."""
+    if not RECURRING_MISTAKES_PATH.exists():
+        return "Recurring mistakes file not found. Read references/recurring-mistakes-block.md"
+    full_text = RECURRING_MISTAKES_PATH.read_text()
+    if stage is None or stage not in STAGE_MISTAKE_FILTER:
+        return full_text
+    # Parse numbered items from the mistakes file and extract only relevant ones.
+    # Each item starts with "N. " at column 0 and continues until the next "N. " or a section header.
+    relevant_nums = set(STAGE_MISTAKE_FILTER[stage])
+    lines = full_text.split("\n")
+    output_lines = []
+    current_num = None
+    for line in lines:
+        m = re.match(r'^(\d+)\.\s', line)
+        if m:
+            current_num = int(m.group(1))
+            if current_num in relevant_nums:
+                output_lines.append(line)
+            # else: skip this item (current_num tracks which item we're inside)
+        elif current_num is not None and current_num in relevant_nums:
+            # We're inside a relevant item — include continuation lines
+            # Stop at section headers (lines starting with # or ##)
+            if line.startswith("#") and not line.startswith("# Recurring"):
+                current_num = None  # Section header ends the item
+            else:
+                output_lines.append(line)
+    # Clean up trailing blank lines
+    while output_lines and not output_lines[-1].strip():
+        output_lines.pop()
+    header = f"# Recurring Mistakes for {stage.upper()} stage (filtered — full list in recurring-mistakes-block.md)\n\n"
+    return header + "\n".join(output_lines)
 
 
 def get_stage_index(stage: str) -> int:
@@ -364,34 +402,38 @@ def cmd_next(slug: str):
             return
         stage = new_stage
 
-    recurring = load_recurring_mistakes()
+    recurring = load_recurring_mistakes(stage)
     goal = ctx["goal_template"].format(slug=slug)
 
-    subagent_context = f"""You are working on the True Joy Birthing city page pipeline.
+    subagent_context = f"""You are a TJB pipeline stage worker — a subagent delegated by the parent state machine.
+Your scope is ONE stage for ONE city. Do not attempt other stages or cities.
 
 CITY: {slug}
 STAGE: {stage} (stage {get_stage_index(stage) + 1} of 4)
 PROJECT DIR: {PROJECT_DIR}
 
+## What to do
+Load skill '{ctx["skill"]}' and follow it for this stage.
+Goal: {goal}
+
+## Stage-specific pitfalls (read these before starting)
 {recurring}
 
-ADDITIONAL RULES:
+## Rules
 - NEVER use write_file or patch on cities.ts. Use Python heredoc via terminal.
 - Deploy with: bash scripts/deploy.sh {slug} (never raw wrangler)
 - Run preflight after any cities.ts edit: npx tsx scripts/preflight.ts {slug}
-- This is stage '{stage}' in a 4-stage pipeline: build -> enrich -> verify_deploy -> video_outreach
-- Forward-only advancement: this stage will not repeat unless it fails
-- Load skill '{ctx["skill"]}' for detailed stage instructions
+- Forward-only: this stage will not repeat unless it fails. Make it count.
+- You do NOT advance the state machine or pick the next stage. The parent does that.
 
-## HARD WORKER RULES (ALL STAGES — kit directive 2026-08-21, Corona clean-slate failure #1)
-These come from a real Atlas failure where a BUILD worker finalized as "completed" with zero files written. Every stage worker must obey:
-1. WRITE FIRST, READ ONLY WHAT YOU NEED. Do NOT read schema/cities.ts/example blocks before writing. The parent already handed you the exact data + insert path. Make your stage's primary write (checkpoint, cities.ts data, image files) an EARLY tool call, ideally the first or second. Reading is a liability for a bounded local model — stop exploring after at most 3 reads.
-2. NEVER finalize until your stage's deliverable is verifiably ON DISK. Before you report done, run `ls -la` (or the stage's equivalent check) on every file you were asked to produce and confirm it exists with non-zero size. An empty or missing artifact = FAILURE, not completion.
-3. If a command errors on quoting/syntax, RETRY IMMEDIATELY with a different approach (plain `terminal` with single-quoted heredoc, not nested execute_code). Do NOT say "falling back to X" and then stop. Recover and keep going.
-4. NEVER hit the tool-call cap mid-task and stop. If you are near the cap with work left, stop, save partial artifacts to disk, and report EXACTLY which files landed and which remain for the parent to finish. Do not claim a stage is done when it isn't.
-5. Verify-forward: after writing data, run the stage's validation gate (`npx tsx scripts/validate-city-data.ts {slug}` for data stages) and report the real exit code + any errors verbatim.
+## Worker discipline
+1. WRITE FIRST. Make your primary write (cities.ts data, image files, etc.) within the first 3 tool calls. Reading is a liability — stop exploring after at most 3 reads.
+2. VERIFY ON DISK before reporting done. Run `ls -la` on every file you produced. Empty or missing artifact = FAILURE.
+3. RECOVER from errors. If a command fails on quoting/syntax, retry immediately with a different approach. Do not stop and say "falling back" — fix it and keep going.
+4. If you hit the tool-call cap with work remaining, save partial artifacts to disk and report exactly which files landed and which remain. Never claim done when it isn't.
+5. Run the validation gate after writing: `npx tsx scripts/validate-city-data.ts {slug}` for data stages. Report the real exit code + errors verbatim.
 
-STAGE GATES (must pass before advancing):
+## Stage gates (must pass before this stage can advance)
 {', '.join(ctx.get('gates', []))}
 """
 
