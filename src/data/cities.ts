@@ -578,6 +578,8 @@ export const cities: Record<string, CityData> = {
   "beaumont-tx": {
     enableBlogResources: true,
     publishedDate: "2026-07-10",
+    titleTag: "Best Midwife & Postpartum Support in Beaumont, TX",
+    metaDescription: "Find a midwife or postpartum care provider in Beaumont, TX. Compare doula costs ($700-$1,800), Medicaid coverage, hospitals & the Birth Center of Beaumont.",
     city: "Beaumont" ,
     state: "TX" ,
     slug: "beaumont-tx" ,
