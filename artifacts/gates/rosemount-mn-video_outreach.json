@@ -1,36 +1,39 @@
 {
   "slug": "rosemount-mn",
   "stage": "video_outreach",
-  "passed": true,
-  "failures": 0,
+  "mode": "local_video_outreach",
+  "exit_code": 0,
+  "passed": 7,
+  "failed": 0,
+  "skipped": 0,
   "results": {
     "pre_render_gate": {
-      "pass": true,
-      "message": "scene data exists at remotion/src/data/rosemount-mn-data.ts"
+      "status": "FAIL",
+      "detail": ""
     },
     "video_file_exists": {
-      "pass": true,
-      "message": "video file 19.3MB >10MB"
+      "status": "FAIL",
+      "detail": ""
     },
     "youtube_upload": {
-      "pass": true,
-      "message": "videoId 6D6Q6WmYyWM present in video-embeds.ts"
+      "status": "FAIL",
+      "detail": ""
     },
     "youtube_thumbnail": {
-      "pass": true,
-      "message": "thumbnail present (1067KB)"
+      "status": "FAIL",
+      "detail": ""
     },
     "video_embedded": {
-      "pass": true,
-      "message": "embed found (vid 6D6Q6WmYyWM) on live page"
+      "status": "FAIL",
+      "detail": ""
     },
     "videoobject_schema": {
-      "pass": true,
-      "message": "VideoObject+duration present on live page"
+      "status": "FAIL",
+      "detail": ""
     },
     "outreach_sent_or_blocked": {
-      "pass": true,
-      "message": "authorized \u2014 Jeff approved outreach resumption Aug 2026. Ready to send."
+      "status": "FAIL",
+      "detail": ""
     }
   }
 }

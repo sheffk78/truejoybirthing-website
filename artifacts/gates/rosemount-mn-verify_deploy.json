@@ -1,0 +1,10 @@
+{
+  "slug": "rosemount-mn",
+  "stage": "verify_deploy",
+  "mode": "full_preflight",
+  "exit_code": 0,
+  "passed": 0,
+  "failed": 0,
+  "skipped": 0,
+  "results": {}
+}

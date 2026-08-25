@@ -1,0 +1,21 @@
+{
+  "source": "saved",
+  "recipe": {
+    "name": "Astro (truejoybirthing-website)",
+    "kind": "astro",
+    "bootstrap": [
+      "npm install"
+    ],
+    "build": [
+      "npm run build"
+    ],
+    "test": [],
+    "start": "npm run dev -- --host 127.0.0.1 --port 4321",
+    "port": 4321,
+    "readinessPath": "/",
+    "evidence": [
+      "astro dev binds localhost (IPv6 ::1) by default on macOS; probe uses 127.0.0.1 — pin host to 127.0.0.1 so the readiness probe connects",
+      "static Astro site deployed via Cloudflare Pages; build output is the real artifact, readiness is a smoke check only"
+    ]
+  }
+}
