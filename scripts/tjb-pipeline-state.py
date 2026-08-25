@@ -450,7 +450,7 @@ def cmd_done(slug: str, stage: str):
     # ARTIFACT GUARD (2026-08-24, Palmdale masked-failure fix):
     # A worker reporting "completed" (even via max_iterations exit) must have left
     # real evidence on disk. Missing artifact = hard fail, not silent advance.
-    def _check_artifacts(slug: str, stage: str) -> str | None:
+    def _check_artifacts(slug: str, stage: str):
         import re as _re
         try:
             cities_ts = (Path(PROJECT_DIR) / "src" / "data" / "cities.ts").read_text()
@@ -476,10 +476,14 @@ def cmd_done(slug: str, stage: str):
 
     _artifact_error = _check_artifacts(slug, actual_stage)
     if _artifact_error:
-        failed = state.setdefault("stages_failed", {})
-        failed[actual_stage] = failed.get(actual_stage, 0) + 1
+        failed = state.get("stages_failed", [])
+        if isinstance(failed, list):
+            if actual_stage not in failed:
+                failed.append(actual_stage)
+        elif isinstance(failed, dict):
+            failed[actual_stage] = failed.get(actual_stage, 0) + 1
         state["stages_failed"] = failed
-        save_state(state)
+        save_state(slug, state)
         print(json.dumps({
             "action": "artifact_fail",
             "slug": slug,
