@@ -1683,7 +1683,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
   "irvine-ca": {
-    videoId: "yOLlcOlpMdg",
+    videoId: "KO8fkR7hVAs",
     title: "Irvine CA Doula & Birth Plan Guide",
     description: "Watch the full Irvine CA Doula & Birth Plan Guide — all in about 3:00.",
     duration: 180,
