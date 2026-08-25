@@ -4,7 +4,7 @@ import LeadCaptureForm from '../components/LeadCaptureForm.astro';
 
 const breadcrumbList = [
   {"name": "Home", "url": "https://truejoybirthing.com/"},
-  {"name": "What Is a Postpartum Doula", "url": "https://truejoybirthing.com/what-is-a-postpartum-doula/"}
+  {"name": "Postpartum Doula", "url": "https://truejoybirthing.com/postpartum-doula/"}
 ];
 
 const schema = {
@@ -12,15 +12,15 @@ const schema = {
   "@graph": [
     {
       "@type": "Article",
-      "@id": "https://truejoybirthing.com/what-is-a-postpartum-doula/#article",
+      "@id": "https://truejoybirthing.com/postpartum-doula/#article",
       "headline": "What Is a Postpartum Doula and Do You Need One?",
-      "url": "https://truejoybirthing.com/what-is-a-postpartum-doula/",
+      "url": "https://truejoybirthing.com/postpartum-doula/",
       "publisher": { "@id": "https://truejoybirthing.com/#organization" },
       "author": { "@id": "https://truejoybirthing.com/about/#founder" }
     },
     {
       "@type": "FAQPage",
-      "@id": "https://truejoybirthing.com/what-is-a-postpartum-doula/#faq",
+      "@id": "https://truejoybirthing.com/postpartum-doula/#faq",
       "mainEntity": [
         { "@type": "Question", "name": "What does a postpartum doula do?", "acceptedAnswer": { "@type": "Answer", "text": "A postpartum doula provides feeding support, newborn care, emotional support, light meal prep, and sibling help. They offer non-medical support focused on your recovery and adjustment after birth." } },
         { "@type": "Question", "name": "How much does a postpartum doula cost?", "acceptedAnswer": { "@type": "Answer", "text": "Typically $25-80 per hour depending on location and experience. Overnight shifts range from $200-450. See our full cost guide at truejoybirthing.com/postpartum-doula-cost/ for your area." } },
@@ -37,11 +37,14 @@ const schema = {
 <Layout
   title="What Is a Postpartum Doula?"
   description="What does a postpartum doula do? Feeding help, newborn care, emotional support & recovery. Learn how to find and hire one, plus what it costs."
-  canonical="https://truejoybirthing.com/what-is-a-postpartum-doula/"
+  canonical="https://truejoybirthing.com/postpartum-doula/"
   ogImage="/images/og/og-what-is-a-postpartum-doula.png"
   breadcrumbList={breadcrumbList}
   schema={schema}
 >
+  <meta http-equiv="refresh" content="0; url=/postpartum-doula/" />
+  <link rel="canonical" href="https://truejoybirthing.com/postpartum-doula/" />
+
 
   <!-- Hero -->
   <section class="bg-tjb-cream pt-16 pb-12">

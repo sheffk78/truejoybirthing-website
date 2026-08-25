@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+import DoulaTypeQuiz from '../components/DoulaTypeQuiz.astro';
 import ContextualCityLinks from '../components/ContextualCityLinks.astro';
 import AppShowcase from '../components/AppShowcase.astro';
 
@@ -62,7 +63,7 @@ const schema = {
 
 <Layout
   title="What Is a Birth Doula? Doula Services & What's Included"
-  description="A birth doula provides emotional, physical, and informational support before, during, and after childbirth. Learn what doula services include and how to find one."
+  description="A birth doula provides emotional, physical, and informational support before, during, and after childbirth. Learn what doula services include and how to find one near you."
   canonical="https://truejoybirthing.com/what-is-a-doula/"
   breadcrumbList={breadcrumbList}
   ogImage="https://truejoybirthing.com/images/og/og-what-is-a-doula.png"
@@ -156,7 +157,7 @@ const schema = {
         <li><strong>Postpartum check-in (1&ndash;2 visits):</strong> A few days to a week after birth, your doula visits to see how you are healing, how feeding is going, and whether you need referrals for lactation support, mental health resources, or other care.</li>
       </ul>
 
-      <p>Some doulas also offer <strong>postpartum doula services</strong> as a separate package, with hourly support for newborn care, breastfeeding, meal prep, light household tasks, and emotional recovery in the first weeks at home. <a href="/what-is-a-postpartum-doula/" class="text-tjb-rose-500 hover:underline">Learn what a postpartum doula does</a>.</p>
+      <p>Some doulas also offer <strong>postpartum doula services</strong> as a separate package, with hourly support for newborn care, breastfeeding, meal prep, light household tasks, and emotional recovery in the first weeks at home. <a href="/postpartum-doula/" class="text-tjb-rose-500 hover:underline">Learn what a postpartum doula does</a>.</p>
 
       <p>What doula services <em>do not</em> include: clinical tasks. Your doula does not perform cervical checks, monitor fetal heart rate, deliver the baby, prescribe medication, or make medical decisions. That is your midwife or OB's role. For a first-hand account of what continuous labor support looks like hour by hour, read <a href="/blog/doula-support/" class="text-tjb-rose-500 hover:underline">how a birth doula helps during labor</a>.</p>
 
@@ -269,6 +270,8 @@ const schema = {
       </ol>
 
       <ContextualCityLinks topic="doula-basics" />
+
+      <DoulaTypeQuiz />
 
       <h2 id="faq">What Is a Doula? FAQ</h2>
       <div class="not-prose space-y-3 mb-8">

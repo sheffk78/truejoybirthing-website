@@ -1,0 +1,159 @@
+---
+// DueDateCalculator.astro — client-side due date calculator using Naegele's rule
+---
+
+<section
+  id="due-date-calculator"
+  class="my-12 rounded-3xl bg-tjb-lavender-100 p-6 sm:p-10"
+  aria-labelledby="ddc-heading"
+>
+  <h2 id="ddc-heading" class="font-serif text-2xl sm:text-3xl font-bold text-tjb-charcoal">
+    Due Date Calculator
+  </h2>
+  <p class="mt-2 text-tjb-charcoal/80">
+    Enter either the first day of your last menstrual period (LMP), or a due date your provider has given you.
+  </p>
+
+  <form id="ddc-form" class="mt-6 space-y-6" novalidate>
+    <fieldset class="rounded-xl bg-white p-4">
+      <legend class="px-1 text-sm font-semibold text-tjb-charcoal">I know my…</legend>
+      <div class="grid gap-3 sm:grid-cols-2">
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="radio" name="ddc-mode" value="lmp" checked class="accent-tjb-rose-500" />
+          <span>Last period started (LMP)</span>
+        </label>
+        <label class="flex items-center gap-2 cursor-pointer">
+          <input type="radio" name="ddc-mode" value="due" class="accent-tjb-rose-500" />
+          <span>Estimated due date</span>
+        </label>
+      </div>
+    </fieldset>
+
+    <div>
+      <label for="ddc-date" id="ddc-date-label" class="block text-sm font-semibold text-tjb-charcoal">
+        First day of last menstrual period
+      </label>
+      <input
+        type="date"
+        id="ddc-date"
+        name="ddc-date"
+        required
+        aria-describedby="ddc-error"
+        class="mt-2 w-full max-w-xs rounded-xl border-2 border-tjb-lavender-200 bg-white px-4 py-3 text-tjb-charcoal focus:border-tjb-rose-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-tjb-rose-300"
+      />
+      <p id="ddc-error" class="mt-2 hidden text-sm text-red-600" role="alert">
+        Please choose a valid date (not in the future).
+      </p>
+    </div>
+
+    <button
+      type="submit"
+      class="rounded-full bg-tjb-rose-500 px-8 py-3 text-lg font-semibold text-white hover:bg-tjb-rose-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-tjb-rose-300"
+    >
+      Calculate my due date
+    </button>
+  </form>
+
+  <div id="ddc-results" class="mt-8 hidden rounded-2xl bg-white p-6 shadow-md" role="status" aria-live="polite" tabindex="-1">
+    <dl class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <div class="sm:col-span-2">
+        <dt class="text-sm uppercase tracking-wide text-tjb-rose-500">Estimated due date</dt>
+        <dd id="ddc-due" class="text-2xl font-bold text-tjb-charcoal"></dd>
+      </div>
+      <div>
+        <dt class="text-sm font-semibold text-tjb-charcoal/70">Current week</dt>
+        <dd id="ddc-week" class="text-lg text-tjb-charcoal"></dd>
+      </div>
+      <div>
+        <dt class="text-sm font-semibold text-tjb-charcoal/70">Trimester</dt>
+        <dd id="ddc-trimester" class="text-lg text-tjb-charcoal"></dd>
+      </div>
+      <div>
+        <dt class="text-sm font-semibold text-tjb-charcoal/70">Days remaining</dt>
+        <dd id="ddc-days" class="text-lg text-tjb-charcoal"></dd>
+      </div>
+    </dl>
+
+    <div class="mt-6 rounded-xl bg-tjb-lavender-100 p-4 text-tjb-charcoal/90">
+      <p class="font-semibold">Planning your birth?</p>
+      <p class="mt-1 text-sm">
+        Once you have a date in mind, start thinking about your preferences. Read our guide to
+        <a href="/birth-plan/" class="font-semibold text-tjb-rose-500 underline hover:text-tjb-rose-600">creating a birth plan</a>
+        or learn
+        <a href="/what-is-a-doula/" class="font-semibold text-tjb-rose-500 underline hover:text-tjb-rose-600">what a doula does</a>.
+      </p>
+    </div>
+
+    <p class="mt-4 text-xs text-tjb-charcoal/60">
+      This calculator uses Naegele's rule (LMP + 280 days) and is an estimate only — always confirm dates with your healthcare provider.
+    </p>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('ddc-form');
+  const dateInput = document.getElementById('ddc-date');
+  const dateLabel = document.getElementById('ddc-date-label');
+  const errorEl = document.getElementById('ddc-error');
+  const resultsEl = document.getElementById('ddc-results');
+
+  const fmt = (d) => d.toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+
+  function updateMode() {
+    const mode = form.querySelector('input[name="ddc-mode"]:checked').value;
+    dateLabel.textContent =
+      mode === 'lmp' ? 'First day of last menstrual period' : 'Your estimated due date';
+    dateInput.setAttribute('aria-label', mode === 'lmp'
+      ? 'First day of last menstrual period'
+      : 'Estimated due date from your provider');
+  }
+  form.querySelectorAll('input[name="ddc-mode"]').forEach((r) => r.addEventListener('change', updateMode));
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const val = dateInput.value;
+    const parsed = val ? new Date(val + 'T00:00:00') : null;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    if (!parsed || isNaN(parsed) || parsed > today || parsed.getFullYear() < 2000) {
+      errorEl.classList.remove('hidden');
+      resultsEl.classList.add('hidden');
+      return;
+    }
+    errorEl.classList.add('hidden');
+
+    const mode = form.querySelector('input[name="ddc-mode"]:checked').value;
+    let dueDate, lmpDate;
+    if (mode === 'lmp') {
+      lmpDate = parsed;
+      dueDate = new Date(parsed);
+      dueDate.setDate(dueDate.getDate() + 280); // Naegele's rule
+    } else {
+      dueDate = parsed;
+      lmpDate = new Date(parsed);
+      lmpDate.setDate(lmpDate.getDate() - 280);
+    }
+
+    const msPerDay = 24 * 60 * 60 * 1000;
+    const daysSinceLmp = Math.floor((today - lmpDate) / msPerDay);
+    const gestWeeks = daysSinceLmp >= 0 ? Math.floor(daysSinceLmp / 7) + 1 : 0;
+    const daysRemaining = Math.ceil((dueDate - today) / msPerDay);
+
+    let trimester;
+    if (gestWeeks <= 13) trimester = 'First trimester';
+    else if (gestWeeks <= 27) trimester = 'Second trimester';
+    else trimester = 'Third trimester';
+
+    document.getElementById('ddc-due').textContent = fmt(dueDate);
+    document.getElementById('ddc-week').textContent =
+      gestWeeks >= 1 && gestWeeks <= 42 ? `Week ${gestWeeks}` : 'Before pregnancy or past 42 weeks';
+    document.getElementById('ddc-trimester').textContent = gestWeeks >= 1 && gestWeeks <= 42 ? trimester : '—';
+    document.getElementById('ddc-days').textContent =
+      daysRemaining > 0 ? `${daysRemaining} day${daysRemaining === 1 ? '' : 's'}`
+      : daysRemaining === 0 ? 'Today!' : `${Math.abs(daysRemaining)} days ago`;
+
+    resultsEl.classList.remove('hidden');
+    resultsEl.focus();
+  });
+</script>

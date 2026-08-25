@@ -11,11 +11,50 @@ const breadcrumbList = [
 
 <Layout
   title="Benefits of a Doula: Worth It? What the Research Shows"
-  description="Benefits of a doula include 28% fewer C-sections, shorter labors, and higher birth satisfaction. Are doulas worth it and are they licensed? See the Cochrane evidence."
+  description="Benefits of a doula include 28% fewer C-sections, shorter labors, and higher birth satisfaction. Are doulas worth it? See the Cochrane evidence."
   canonical="https://truejoybirthing.com/benefits-of-a-doula/"
   breadcrumbList={breadcrumbList}
   ogImage="/images/og/og-benefits-of-a-doula.png"
 >
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are doulas worth the money?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A standard birth doula package runs $650 to $3,000, with a national average of $1,200 to $1,500. That fee typically covers 30 to 50+ hours of combined prenatal, labor, and postpartum support. The 28% reduction in Cesarean risk from doula care can also help avoid the $15,000 to $30,000 additional cost of a C-section. Many state Medicaid programs now cover doula services in full."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are doulas licensed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, doulas are not licensed medical providers in the United States. A doula's role is non-clinical: emotional, physical, and informational support. Most practicing doulas hold voluntary certification from organizations like DONA International, CAPPA, or ICEA, which requires completing training, attending births, and submitting evaluations. Certification is a professional standard, not a legal requirement to practice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do doulas reduce C-section rates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The Cochrane review of continuous labor support found that women who received doula support were 28% less likely to have a Cesarean section compared to those without continuous support. Doulas also help reduce other medical interventions including Pitocin augmentation and epidural use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Medicaid cover doula services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As of 2026, a growing number of states including Oregon, Washington, California, Colorado, Minnesota, Nevada, and others have implemented Medicaid doula coverage. Coverage details vary by state — some cover the full cost while others pay a portion. Check your state's Medicaid program for specifics."
+      }
+    }
+  ]
+})} />
 
   <!-- Hero — Split Layout (55% text / 45% image) -->
   <section class="bg-tjb-cream pt-16 pb-12">

@@ -63,7 +63,10 @@ const doulaCostLinkHtml = doulaCostLinkVariants[doulaCostLinkIndex].replace(/{ci
 const hasBirthCenters = birthCenterDetails.some((bc) => !bc.name.toLowerCase().includes('no '));
 
 // Cross-city provider data: cities that share doulas/midwives with this city
-const sharedProviderCities = getRelatedCities(slug);
+// Filter out any city that already appears in nearbyCities to avoid duplicate links
+const sharedProviderCities = getRelatedCities(slug).filter(
+  (rc) => !nearbyCities.includes(rc.slug)
+);
 
 // ═══ Filter bar data — collect available filter values from localDoulas ═══
 // Only show filter chips for values that exist in this city's doulas
@@ -255,7 +258,7 @@ const cultureSnippet = data.culture
   ? data.culture.slice(0, 80).replace(/["]/g, "'").trim()
   : null;
 const uniqueDesc = cultureSnippet
-  ? `${city}, ${state}: ${cultureSnippet}… Compare doula costs ($${costLow}-$${costHigh}), ${medicaidDesc}, hospitals, and local birth support.`
+  ? `${city}, ${state}: ${cultureSnippet} Compare doula costs ($${costLow}-$${costHigh}), ${medicaidDesc}, hospitals, and local birth support.`
   : null;
 let pageDesc = (data as any).metaDescription
   || uniqueDesc

@@ -1,0 +1,267 @@
+---
+// DoulaTypeQuiz.astro — "Which type of doula do you need?" interactive quiz
+---
+
+<section
+  id="doula-type-quiz"
+  class="my-12 rounded-3xl bg-tjb-lavender-100 p-6 sm:p-10"
+  aria-labelledby="quiz-heading"
+  itemscope
+  itemtype="https://schema.org/Quiz"
+>
+  <meta itemprop="educationalLevel" content="Beginner" />
+  <h2 id="quiz-heading" class="font-serif text-2xl sm:text-3xl font-bold text-tjb-charcoal" itemprop="name">
+    Which type of doula do you need?
+  </h2>
+  <p class="mt-2 text-tjb-charcoal/80" itemprop="description">
+    Answer a few quick questions and we'll point you toward the right kind of support — birth, postpartum, overnight, or a combination.
+  </p>
+
+  <form id="tjb-quiz-form" class="mt-6" novalidate>
+    <!-- Q1 -->
+    <fieldset class="quiz-question mb-8" data-q="1">
+      <legend class="text-lg font-semibold text-tjb-charcoal">Where are you in your journey?</legend>
+      <div class="mt-3 grid gap-3">
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q1" value="pregnant" class="accent-tjb-rose-500" />
+          <span>I'm pregnant now</span>
+        </label>
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q1" value="postpartum" class="accent-tjb-rose-500" />
+          <span>Baby's already here (0–12 months)</span>
+        </label>
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q1" value="trying" class="accent-tjb-rose-500" />
+          <span>Trying to conceive or planning ahead</span>
+        </label>
+      </div>
+    </fieldset>
+
+    <!-- Q2 -->
+    <fieldset class="quiz-question mb-8" data-q="2">
+      <legend class="text-lg font-semibold text-tjb-charcoal">What kind of support sounds most helpful?</legend>
+      <div class="mt-3 grid gap-3">
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q2" value="birth" class="accent-tjb-rose-500" />
+          <span>Continuous support during labor &amp; birth</span>
+        </label>
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q2" value="postpartum" class="accent-tjb-rose-500" />
+          <span>Recovery help after baby arrives</span>
+        </label>
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q2" value="night" class="accent-tjb-rose-500" />
+          <span>Overnight care so I can sleep</span>
+        </label>
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q2" value="unsure" class="accent-tjb-rose-500" />
+          <span>I'm honestly not sure yet</span>
+        </label>
+      </div>
+    </fieldset>
+
+    <!-- Q3 -->
+    <fieldset class="quiz-question mb-8" data-q="3">
+      <legend class="text-lg font-semibold text-tjb-charcoal">How are you feeling about labor itself?</legend>
+      <div class="mt-3 grid gap-3">
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q3" value="anxious" class="accent-tjb-rose-500" />
+          <span>Anxious — I want an experienced advocate with me</span>
+        </label>
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q3" value="prepared" class="accent-tjb-rose-500" />
+          <span>Fairly prepared — just want extra hands</span>
+        </label>
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q3" value="na" class="accent-tjb-rose-500" />
+          <span>Doesn't apply / already gave birth</span>
+        </label>
+      </div>
+    </fieldset>
+
+    <!-- Q4 -->
+    <fieldset class="quiz-question mb-8" data-q="4">
+      <legend class="text-lg font-semibold text-tjb-charcoal">What does your support system at home look like?</legend>
+      <div class="mt-3 grid gap-3">
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q4" value="alone" class="accent-tjb-rose-500" />
+          <span>Largely on my own (partner works a lot, no family nearby)</span>
+        </label>
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q4" value="partner" class="accent-tjb-rose-500" />
+          <span>A partner who's present but new to this</span>
+        </label>
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q4" value="village" class="accent-tjb-rose-500" />
+          <span>A solid village of family or friends</span>
+        </label>
+      </div>
+    </fieldset>
+
+    <!-- Q5 -->
+    <fieldset class="quiz-question mb-8" data-q="5">
+      <legend class="text-lg font-semibold text-tjb-charcoal">What worries you most right now?</legend>
+      <div class="mt-3 grid gap-3">
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q5" value="birth" class="accent-tjb-rose-500" />
+          <span>The birth experience itself</span>
+        </label>
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q5" value="sleep" class="accent-tjb-rose-500" />
+          <span>Sleep deprivation and night feedings</span>
+        </label>
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q5" value="recovery" class="accent-tjb-rose-500" />
+          <span>Recovery, feeding, and newborn basics</span>
+        </label>
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q5" value="all" class="accent-tjb-rose-500" />
+          <span>All of the above</span>
+        </label>
+      </div>
+    </fieldset>
+
+    <!-- Q6 -->
+    <fieldset class="quiz-question mb-8" data-q="6">
+      <legend class="text-lg font-semibold text-tjb-charcoal">What's your budget situation?</legend>
+      <div class="mt-3 grid gap-3">
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q6" value="flexible" class="accent-tjb-rose-500" />
+          <span>Flexible — investing in full support</span>
+        </label>
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q6" value="limited" class="accent-tjb-rose-500" />
+          <span>Limited — need the highest-impact option</span>
+        </label>
+        <label class="quiz-option flex items-center gap-3 rounded-xl bg-white p-4 cursor-pointer hover:ring-2 hover:ring-tjb-rose-500 transition">
+          <input type="radio" name="q6" value="insurance" class="accent-tjb-rose-500" />
+          <span>Hoping insurance or HSA can help cover it</span>
+        </label>
+      </div>
+    </fieldset>
+
+    <button
+      type="submit"
+      id="tjb-quiz-submit"
+      class="w-full rounded-full bg-tjb-rose-500 px-8 py-4 text-lg font-semibold text-white hover:bg-tjb-rose-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-tjb-rose-300"
+    >
+      Show my result
+    </button>
+    <p id="tjb-quiz-error" class="mt-3 hidden text-sm text-red-600" role="alert">
+      Please answer all questions to see your result.
+    </p>
+  </form>
+
+  <div
+    id="tjb-quiz-result"
+    class="mt-8 hidden rounded-2xl bg-white p-6 shadow-md"
+    role="status"
+    aria-live="polite"
+    tabindex="-1"
+  >
+    <p class="text-sm uppercase tracking-wide text-tjb-rose-500">Your recommendation</p>
+    <h3 id="tjb-quiz-result-title" class="mt-1 text-xl font-bold text-tjb-charcoal"></h3>
+    <p id="tjb-quiz-result-text" class="mt-2 text-tjb-charcoal/80"></p>
+    <a
+      id="tjb-quiz-result-link"
+      href="/what-is-a-doula/"
+      class="mt-4 inline-block rounded-full border-2 border-tjb-rose-500 px-6 py-2 font-semibold text-tjb-rose-500 hover:bg-tjb-rose-500 hover:text-white transition"
+    >
+      Learn more
+    </a>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('tjb-quiz-form');
+  const errorEl = document.getElementById('tjb-quiz-error');
+  const resultEl = document.getElementById('tjb-quiz-result');
+  const titleEl = document.getElementById('tjb-quiz-result-title');
+  const textEl = document.getElementById('tjb-quiz-result-text');
+  const linkEl = document.getElementById('tjb-quiz-result-link');
+
+  const RESULTS = {
+    birth: {
+      title: 'A Birth Doula',
+      text: "You're focused on your birth experience — continuous labor support, comfort techniques, and advocacy. A birth doula walks with you through pregnancy, labor, and immediately postpartum.",
+      link: '/what-is-a-doula/',
+      cta: 'Learn what a birth doula does',
+    },
+    postpartum: {
+      title: 'A Postpartum Doula',
+      text: 'Your biggest needs are recovery, newborn care, and feeding support. A postpartum doula supports your household during the fourth trimester — daytime education, emotional support, and practical help.',
+      link: '/postpartum-doula/',
+      cta: 'Explore postpartum doula care',
+    },
+    night: {
+      title: 'A Night Doula',
+      text: 'Sleep is your top concern. A night doula (overnight postpartum care) handles feedings, soothing, and monitoring so you can rest and recover.',
+      link: '/postpartum-doula/#overnight-care',
+      cta: 'See how overnight care works',
+    },
+    combo: {
+      title: 'A Combination of Birth + Postpartum Support',
+      text: "You'd benefit from both: a birth doula for labor and a postpartum (possibly overnight) doula afterward. Many doulas offer bundled packages — worth asking about.",
+      link: '/what-is-a-doula/#types-of-doulas',
+      cta: 'Compare doula types',
+    },
+  };
+
+  function score(answers) {
+    // Q1 stage
+    if (answers.q1 === 'postpartum') return answers.q2 === 'birth' ? 'birth' : (answers.q5 === 'sleep' ? 'night' : 'postpartum');
+    if (answers.q1 === 'trying') return 'birth';
+
+    let s = { birth: 0, postpartum: 0, night: 0 };
+    if (answers.q2 === 'birth') s.birth += 3;
+    else if (answers.q2 === 'postpartum') s.postpartum += 3;
+    else if (answers.q2 === 'night') s.night += 3;
+    else { s.birth += 1; s.postpartum += 1; }
+
+    if (answers.q3 === 'anxious') s.birth += 2;
+    else if (answers.q3 === 'prepared') s.postpartum += 1;
+
+    if (answers.q4 === 'alone') { s.postpartum += 2; s.night += 1; }
+    else if (answers.q4 === 'partner') { s.postpartum += 1; s.birth += 1; }
+
+    if (answers.q5 === 'birth') s.birth += 2;
+    else if (answers.q5 === 'sleep') s.night += 3;
+    else if (answers.q5 === 'recovery') s.postpartum += 2;
+    else { s.birth += 1; s.postpartum += 1; s.night += 1; }
+
+    if (answers.q6 === 'limited') {
+      // favor the single highest category over combos naturally
+      s[Object.keys(s).reduce((a, b) => (s[a] >= s[b] ? a : b))] += 1;
+    } else if (answers.q6 === 'flexible' || answers.q6 === 'insurance') {
+      // close race between two categories → combination
+      const sorted = Object.values(s).sort((a, b) => b - a);
+      if (sorted[0] - sorted[1] <= 1 && sorted[1] > 0) s.postpartum += 1;
+    }
+    return Object.keys(s).reduce((a, b) => (s[a] >= s[b] ? a : b));
+  }
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const answers = {};
+    let missing = false;
+    ['q1', 'q2', 'q3', 'q4', 'q5', 'q6'].forEach((q) => {
+      const v = form.querySelector(`input[name="${q}"]:checked`);
+      if (v) answers[q] = v.value;
+      else missing = true;
+    });
+    if (missing) {
+      errorEl.classList.remove('hidden');
+      const firstUnanswered = ['q1','q2','q3','q4','q5','q6'].find((q) => !form.querySelector(`input[name="${q}"]:checked`));
+      if (firstUnanswered) form.querySelector(`input[name="${firstUnanswered}"]`)?.focus();
+      return;
+    }
+    errorEl.classList.add('hidden');
+    const r = RESULTS[score(answers)];
+    titleEl.textContent = r.title;
+    textEl.textContent = r.text;
+    linkEl.href = r.link;
+    linkEl.textContent = r.cta;
+    resultEl.classList.remove('hidden');
+    resultEl.focus();
+  });
+</script>
