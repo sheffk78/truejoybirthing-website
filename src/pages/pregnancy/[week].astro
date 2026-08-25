@@ -1,0 +1,318 @@
+---
+// Dynamic pregnancy week page template — renders one page per week (4–40)
+// from src/data/pregnancy-weeks.ts at build time.
+import Layout from '../../layouts/Layout.astro';
+import { PREGNANCY_WEEKS, PREGNANCY_WEEK_BY_WEEK } from '../../data/pregnancy-weeks.ts';
+
+const SITE = 'https://truejoybirthing.com';
+
+export function getStaticPaths() {
+  return PREGNANCY_WEEKS.map((week) => ({
+    params: { week: week.slug },
+    props: { week },
+  }));
+}
+
+const { week } = Astro.props;
+
+const trimesterName =
+  week.trimester === 'first' ? 'First Trimester' :
+  week.trimester === 'second' ? 'Second Trimester' : 'Third Trimester';
+
+const prevWeek = PREGNANCY_WEEK_BY_WEEK[week.week - 1] || null;
+const nextWeek = PREGNANCY_WEEK_BY_WEEK[week.week + 1] || null;
+
+const pageTitle = `${week.week} Weeks Pregnant: Baby Development & Your Body`;
+const description = `${week.babyTitle} at ${week.week} weeks pregnant. See how your baby is developing this week, what's happening in your body, and a word of encouragement from doula Shelbi Kohler.`;
+const canonical = `${SITE}/pregnancy/${week.slug}/`;
+const imageUrl = `${SITE}/images/pregnancy-series/${week.imageName}`;
+
+const breadcrumbList = [
+  { name: 'Home', url: `${SITE}/` },
+  { name: 'Pregnancy Week by Week', url: `${SITE}/pregnancy-week-by-week/` },
+  { name: trimesterName, url: `${SITE}/pregnancy-week-by-week/#${week.trimester}-trimester` },
+  { name: `${week.week} Weeks Pregnant`, url: canonical },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'MedicalWebPage',
+      '@id': `${canonical}#medicalwebpage`,
+      url: canonical,
+      name: pageTitle,
+      headline: `${week.week} Weeks Pregnant`,
+      description,
+      image: imageUrl,
+      inLanguage: 'en-US',
+      about: {
+        '@type': 'MedicalCondition',
+        name: `Pregnancy, week ${week.week}`,
+      },
+      author: {
+        '@type': 'Person',
+        name: 'Shelbi Kohler',
+        jobTitle: 'Certified Birth Doula',
+        url: `${SITE}/about/`,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'True Joy Birthing',
+        '@id': `${SITE}/#organization`,
+      },
+      mainEntityOfPage: canonical,
+      isPartOf: {
+        '@type': 'WebPage',
+        url: `${SITE}/pregnancy-week-by-week/`,
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${canonical}#faq`,
+      mainEntity: week.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.a,
+        },
+      })),
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: breadcrumbList.map((crumb, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: crumb.name,
+        item: crumb.url,
+      })),
+    },
+  ],
+};
+---
+
+<Layout
+  title={pageTitle}
+  description={description}
+  canonical={canonical}
+  ogImage={imageUrl}
+  ogImageAlt={`Week ${week.week} pregnancy illustration — ${week.babyTitle}`}
+  ogType="article"
+  breadcrumbList={breadcrumbList}
+  schema={schema}
+>
+
+  <!-- ═══════════════════════════════════════════
+       HERO ILLUSTRATION — full-width, generous whitespace
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-cream">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-10 md:pt-14 pb-16 md:pb-24 text-center">
+
+      <!-- Breadcrumb -->
+      <nav aria-label="Breadcrumb" class="mb-8">
+        <ol class="flex flex-wrap items-center justify-center gap-2 text-sm text-tjb-gray list-none p-0 m-0">
+          <li><a href="/" class="text-tjb-lavender-600 hover:text-tjb-rose-500 no-underline">Home</a></li>
+          <li aria-hidden="true" class="text-tjb-gray-300">/</li>
+          <li><a href="/pregnancy-week-by-week/" class="text-tjb-lavender-600 hover:text-tjb-rose-500 no-underline">Week by Week</a></li>
+          <li aria-hidden="true" class="text-tjb-gray-300">/</li>
+          <li class="font-medium text-tjb-charcoal">{trimesterName}</li>
+        </ol>
+      </nav>
+
+      <!-- Hero illustration -->
+      <img
+        src={`/images/pregnancy-series/${week.imageName}`}
+        alt={`Pregnancy illustration for week ${week.week} — baby ${week.babyTitle}`}
+        class="w-full max-w-2xl mx-auto rounded-xl"
+        width="800"
+        height="800"
+        loading="eager"
+        fetchpriority="high"
+      />
+
+      <!-- Week heading -->
+      <p class="eyebrow mt-12 mb-3">{trimesterName} · Week {week.week}</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6 mx-auto"></div>
+      <h1 class="font-bold text-tjb-charcoal leading-[1.15] mb-5 max-w-3xl mx-auto" style="font-size: clamp(2rem, 4.5vw, 3.25rem);">
+        {week.week} Weeks Pregnant{week.food ? `: ${week.babyTitle}` : ''}
+      </h1>
+
+      <!-- Size reference chips -->
+      {(week.food || week.sizeNote) && (
+        <div class="flex items-center justify-center gap-3 mb-8">
+          {week.food && (
+            <span class="inline-flex items-center bg-white border border-tjb-lavender-200 rounded-full px-4 py-1.5 text-sm text-tjb-charcoal shadow-sm">
+              🍎 About the size of a <strong class="ml-1 capitalize">{week.food}</strong>
+            </span>
+          )}
+          {week.sizeNote && (
+            <span class="inline-flex items-center bg-tjb-lavender-100 border border-tjb-lavender-200 rounded-full px-4 py-1.5 text-sm text-tjb-charcoal">
+              📏 {week.sizeNote}
+            </span>
+          )}
+        </div>
+      )}
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       BABY DEVELOPMENT THIS WEEK
+       ═══════════════════════════════════════════ -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <p class="eyebrow mb-4">Baby development</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-8" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
+        Your baby at {week.week} weeks
+      </h2>
+      <p class="text-tjb-gray text-lg leading-[1.8]">{week.babyDescription}</p>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       YOUR BODY THIS WEEK
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-cream py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <p class="eyebrow mb-4">Your body this week</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-8" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
+        What you might be feeling at {week.week} weeks
+      </h2>
+      <p class="text-tjb-gray text-lg leading-[1.8]">{week.maternalBody}</p>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FROM SHELBI — warm, personal callout
+       ═══════════════════════════════════════════ -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="relative rounded-2xl bg-tjb-lavender-100/70 border border-tjb-lavender-200 p-8 md:p-12 overflow-hidden">
+        <!-- Decorative quote mark -->
+        <span aria-hidden="true" class="absolute -top-4 left-6 font-serif text-[7rem] leading-none text-tjb-rose-400/30 select-none">&ldquo;</span>
+        <div class="relative">
+          <div class="flex items-center gap-3 mb-5">
+            <img src="/images/shelbi-thumb.webp" alt="Shelbi Kohler, certified birth doula" width="48" height="48" class="w-12 h-12 rounded-full object-cover ring-2 ring-white" />
+            <div>
+              <p class="font-semibold text-tjb-charcoal leading-tight">From Shelbi</p>
+              <p class="text-sm text-tjb-gray">Shelbi Kohler · mother of seven · certified birth doula</p>
+            </div>
+          </div>
+          <p class="text-tjb-charcoal/90 text-lg md:text-xl leading-[1.85] italic" style="font-family: 'DM Serif Display', Georgia, serif;">
+            {week.fromShelbi}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       THIRD TRIMESTER CROSS-LINKS (weeks 34–40)
+       ═══════════════════════════════════════════ -->
+  {week.week >= 34 && (
+    <section class="bg-tjb-cream py-14">
+      <div class="max-w-3xl mx-auto px-6">
+        <div class="rounded-2xl bg-white border border-tjb-rose-300/60 p-8 md:p-10">
+          <p class="eyebrow mb-3">You're getting close</p>
+          <h2 class="text-2xl md:text-3xl font-semibold text-tjb-charcoal mb-4">
+            The finish line is in sight — here are two things worth doing now
+          </h2>
+          <p class="text-tjb-gray leading-relaxed mb-6">
+            At {week.week} weeks, birth could be just around the corner. These two free guides will help you feel ready:
+          </p>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <a href="/birth-plan-template/" class="block no-underline group bg-tjb-cream rounded-xl p-5 border border-tjb-lavender-200/50 hover:border-tjb-rose-400 transition-colors">
+              <span class="text-xs font-bold uppercase tracking-wide text-tjb-rose-500">Free guide</span>
+              <h3 class="mt-1 font-semibold text-lg text-tjb-charcoal group-hover:text-tjb-rose-600 transition-colors">Free Birth Plan Template</h3>
+              <p class="mt-1 text-sm text-tjb-gray leading-relaxed">A nurse-readable plan covering labor, pain management, delivery, postpartum, and newborn care.</p>
+              <span class="mt-2 inline-block text-xs text-tjb-lavender-600 font-medium">Get the template →</span>
+            </a>
+            <a href="/benefits-of-a-doula/" class="block no-underline group bg-tjb-cream rounded-xl p-5 border border-tjb-lavender-200/50 hover:border-tjb-rose-400 transition-colors">
+              <span class="text-xs font-bold uppercase tracking-wide text-tjb-rose-500">Free guide</span>
+              <h3 class="mt-1 font-semibold text-lg text-tjb-charcoal group-hover:text-tjb-rose-600 transition-colors">The Benefits of a Doula</h3>
+              <p class="mt-1 text-sm text-tjb-gray leading-relaxed">What the research says about doula support — shorter labors, fewer interventions, more confidence.</p>
+              <span class="mt-2 inline-block text-xs text-tjb-lavender-600 font-medium">Read the benefits →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ═══════════════════════════════════════════
+       FAQ
+       ═══════════════════════════════════════════ -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <p class="eyebrow mb-4">Common questions</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+      <h2 class="font-semibold text-tjb-charcoal leading-[1.15] mb-10" style="font-size: clamp(1.75rem, 4vw, 2.75rem);">
+        {week.week} weeks pregnant: your questions answered
+      </h2>
+
+      <div class="space-y-4">
+        {week.faqs.map((faq) => (
+          <details class="group bg-tjb-cream rounded-xl border border-tjb-lavender-200/50 open:shadow-md transition-shadow">
+            <summary class="cursor-pointer list-none p-5 font-semibold text-tjb-charcoal flex items-center justify-between gap-4">
+              {faq.q}
+              <span class="text-tjb-rose-500 group-open:rotate-45 transition-transform text-xl leading-none shrink-0">+</span>
+            </summary>
+            <p class="px-5 pb-5 text-tjb-gray leading-relaxed">{faq.a}</p>
+          </details>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       APP DOWNLOAD CTA
+       ═══════════════════════════════════════════ -->
+  <section class="bg-tjb-charcoal py-16 md:py-20">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">
+        Follow every week in the free app
+      </h2>
+      <p class="text-white/80 text-lg leading-relaxed mb-8">
+        Weekly baby updates, your birth plan, and doula-backed guidance — all free, all in one place.
+      </p>
+      <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-primary">Download the True Joy Birthing app</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       PREV / NEXT WEEK NAVIGATION
+       ═══════════════════════════════════════════ -->
+  <section class="bg-white border-t border-tjb-lavender-200/50 py-10">
+    <div class="max-w-4xl mx-auto px-6 grid sm:grid-cols-2 gap-4">
+      {prevWeek ? (
+        <a href={`/pregnancy/${prevWeek.slug}/`} class="group no-underline bg-tjb-cream rounded-xl p-5 border border-tjb-lavender-200/50 hover:border-tjb-rose-400 transition-colors">
+          <span class="text-xs font-bold uppercase tracking-wide text-tjb-lavender-600">← Previous week</span>
+          <p class="mt-1 font-semibold text-tjb-charcoal group-hover:text-tjb-rose-600 transition-colors">Week {prevWeek.week}: {prevWeek.babyTitle}</p>
+        </a>
+      ) : (
+        <div></div>
+      )}
+      {nextWeek ? (
+        <a href={`/pregnancy/${nextWeek.slug}/`} class="group no-underline bg-tjb-cream rounded-xl p-5 border border-tjb-lavender-200/50 hover:border-tjb-rose-400 transition-colors sm:text-right">
+          <span class="text-xs font-bold uppercase tracking-wide text-tjb-lavender-600">Next week →</span>
+          <p class="mt-1 font-semibold text-tjb-charcoal group-hover:text-tjb-rose-600 transition-colors">Week {nextWeek.week}: {nextWeek.babyTitle}</p>
+        </a>
+      ) : (
+        <a href="/pregnancy-week-by-week/" class="group no-underline bg-tjb-cream rounded-xl p-5 border border-tjb-lavender-200/50 hover:border-tjb-rose-400 transition-colors sm:text-right">
+          <span class="text-xs font-bold uppercase tracking-wide text-tjb-lavender-600">Back to the guide</span>
+          <p class="mt-1 font-semibold text-tjb-charcoal group-hover:text-tjb-rose-600 transition-colors">Pregnancy Week by Week hub</p>
+        </a>
+      )}
+    </div>
+  </section>
+
+</Layout>

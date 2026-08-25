@@ -1,0 +1,611 @@
+/**
+ * Pregnancy Week-by-Week Data for True Joy Birthing Website
+ * 
+ * Combines baby development content (from mobile app),
+ * 'From Shelbi' personal blocks, maternal body content, and FAQ data.
+ * Weeks 4-40, organized by trimester.
+ */
+
+export type Trimester = 'first' | 'second' | 'third';
+export type DevPhase = 'size_reference' | 'cross_section';
+
+export interface PregnancyWeek {
+  week: number;
+  trimester: Trimester;
+  slug: string;
+  babyTitle: string;
+  babyDescription: string;
+  babyPhase: DevPhase;
+  food: string | null;
+  sizeNote: string | null;
+  imageName: string;
+  maternalBody: string;
+  fromShelbi: string;
+  faqs: { question: string; answer: string }[];
+}
+
+function getTrimester(week: number): Trimester {
+  if (week <= 12) return 'first';
+  if (week <= 26) return 'second';
+  return 'third';
+}
+
+function getSlug(week: number): string {
+  return `${week}-weeks-pregnant`;
+}
+
+function getImageName(week: number): string {
+  if (week === 20) return 'pregnancy-week-20-anchor-approved.webp';
+  return `pregnancy-week-${String(week).padStart(2, '0')}-approved.webp`;
+}
+
+export const PREGNANCY_WEEKS: PregnancyWeek[] = [
+  {
+    week: 4,
+    trimester: 'first',
+    slug: '4-weeks-pregnant',
+    babyTitle: 'As small as a poppy seed',
+    babyDescription: 'Your baby is still tiny — the embryo is now fully implanted in the uterus and the amniotic sac is beginning to form. One fascinating early step is that the placenta is already starting to develop, even before your baby looks anything like a baby yet.',
+    babyPhase: 'size_reference',
+    food: 'poppy seed',
+    sizeNote: '~1mm',
+    imageName: 'pregnancy-week-04-approved.webp',
+    maternalBody: 'You might not feel pregnant yet — or you might notice a missed period, mild cramping, breast tenderness, and fatigue. Some women feel absolutely nothing, which is completely normal. Your body is just beginning to produce hCG and progesterone, hormones that will shape the next eight months.',
+    fromShelbi: 'I remember staring at that positive test like the world had just shifted on its axis — because it had. Seven pregnancies, and every single time, that first positive test made my heart race the same way. The shock doesn\'t go away just because you\'ve done this before. What I wish someone had told me that first time: it\'s completely normal to feel more scared than excited. You don\'t have to be happy yet. You just have to breathe.',
+    faqs: [{"q": "Can I take a pregnancy test at 4 weeks?", "a": "Yes — by 4 weeks, hCG levels are typically high enough for a home pregnancy test to detect. Use your first morning urine for the most accurate result."}, {"q": "Is cramping normal at 4 weeks?", "a": "Mild cramping is very common and usually normal, caused by the expanding uterus and implantation. However, severe or one-sided cramping, especially with bleeding, should be reported to your doctor."}, {"q": "Should I start prenatal vitamins?", "a": "If you haven't already, start now. Folic acid (400-800 mcg) is especially important in early pregnancy for neural tube development."}],
+  },
+
+  {
+    week: 5,
+    trimester: 'first',
+    slug: '5-weeks-pregnant',
+    babyTitle: 'As small as an apple seed',
+    babyDescription: 'This week, the neural tube is forming, which will become your baby\'s brain and spinal cord. Another amazing detail is that the early heart tube starts developing now and will begin pulsing very soon.',
+    babyPhase: 'size_reference',
+    food: 'apple seed',
+    sizeNote: '~2mm',
+    imageName: 'pregnancy-week-05-approved.webp',
+    maternalBody: 'The wait for your first prenatal appointment can feel agonizing. Physically, you may notice heightened smell, mild nausea starting, breast tenderness, and frequent urination. Or you might feel completely normal — which can be its own source of anxiety.',
+    fromShelbi: 'This might be the hardest week emotionally, and nobody talks about it. You know you\'re pregnant, but you can\'t see a doctor yet, you can\'t feel the baby, and you can\'t tell anyone. With my first, I spent this week googling everything that could go wrong, checking the toilet paper every single time, and driving myself crazy. What I learned by pregnancy number seven: the wait for that first appointment is agonizing no matter what, but your body knows what it\'s doing even when your mind doesn\'t. You don\'t need to feel any particular thing yet. Just take your prenatal vitamins and be gentle with yourself.',
+    faqs: [{"q": "Why won't my doctor see me yet?", "a": "Most providers schedule the first prenatal appointment between 8-10 weeks. This is standard — the embryo is too small to see or measure meaningfully before then."}, {"q": "I don't feel pregnant — is that normal?", "a": "Yes. Many women have no symptoms at 5 weeks. Symptoms typically begin around weeks 6-8, but some women feel fine throughout early pregnancy."}],
+  },
+
+  {
+    week: 6,
+    trimester: 'first',
+    slug: '6-weeks-pregnant',
+    babyTitle: 'As small as a lentil',
+    babyDescription: 'Tiny arm and leg buds are beginning to appear, and early facial features are starting to take shape. This is also around the time early circulation begins, which feels wild considering how little your baby still is.',
+    babyPhase: 'size_reference',
+    food: 'lentil',
+    sizeNote: '~0.6cm',
+    imageName: 'pregnancy-week-06-approved.webp',
+    maternalBody: 'For many women, this is when symptoms really kick in. Nausea, exhaustion so heavy you can barely function, breast changes, bloating, and food aversions. You may find yourself checking for blood every time you use the bathroom — this is a common and understandable anxiety.',
+    fromShelbi: 'Week six is when it stopped being an idea and started being a reality for me — usually because the nausea showed up right on schedule. But with one of my pregnancies, I felt absolutely nothing at six weeks, and I was terrified. I kept thinking, "Shouldn\'t I feel something?" Here\'s what I know now that I didn\'t know then: symptoms come and go, and having a good day doesn\'t mean something is wrong. Your body is doing extraordinary work right now, even when you can\'t feel it. If you\'re checking for blood every time you go to the bathroom — I\'ve been there too. Try to trust that your body knows what it\'s doing.',
+    faqs: [{"q": "My symptoms disappeared — should I worry?", "a": "Symptoms can come and go, especially in early pregnancy. A day without nausea doesn't mean something is wrong. However, if all symptoms vanish suddenly, contact your provider for reassurance."}, {"q": "Is it normal to check for blood every time I use the bathroom?", "a": "This is an extremely common behavior, especially in early pregnancy. Light spotting can be normal, but if you see bright red blood or heavy flow, call your provider immediately."}],
+  },
+
+  {
+    week: 7,
+    trimester: 'first',
+    slug: '7-weeks-pregnant',
+    babyTitle: 'As small as a blueberry',
+    babyDescription: 'Your baby\'s head is still much bigger than the rest of the body, which is completely normal at this stage. The very first bone tissue is beginning to form from cartilage, and early structures for the genitals are starting to develop too.',
+    babyPhase: 'size_reference',
+    food: 'blueberry',
+    sizeNote: '~1.2cm',
+    imageName: 'pregnancy-week-07-approved.webp',
+    maternalBody: 'Often the hardest week of the first trimester. Peak nausea, extreme fatigue, and the effort of pretending you\'re fine at work while barely functioning. Constipation, acne, and a persistent bad taste in your mouth are common. You might feel like you have a bad hangover every day.',
+    fromShelbi: 'I\'m going to be honest with you — week seven was when I hit a wall with more than one of my pregnancies. The exhaustion was so heavy I could barely function, and the nausea made every meal a negotiation. With my fourth, I was slumped behind a counter at work, pretending I was fine, and all I wanted was to lie down on the floor and sleep. You don\'t have to be grateful for being miserable. Hating how you feel doesn\'t make you a bad mom — it makes you human. Ask for help, eat whatever stays down, and give yourself permission to do the bare minimum right now. This passes. I promise you it passes.',
+    faqs: [{"q": "I feel miserable — is that normal?", "a": "Yes. Week 7 is often the peak of first-trimester symptoms. Nausea, exhaustion, and food aversions are all normal. Being miserable doesn't mean something is wrong — it means your hormones are working."}, {"q": "Can I take anything for nausea?", "a": "Many providers recommend vitamin B6 and Unisom (doxylamine) for nausea. Ginger tea and acupressure bands may also help. Always check with your provider before taking any medication."}],
+  },
+
+  {
+    week: 8,
+    trimester: 'first',
+    slug: '8-weeks-pregnant',
+    babyTitle: 'As small as a raspberry',
+    babyDescription: 'All of the major organs and body systems are now developing, even though everything is still very small. Web-like hands and feet are visible now, and the umbilical cord is formed and carrying blood between your baby and the placenta.',
+    babyPhase: 'size_reference',
+    food: 'raspberry',
+    sizeNote: '~1.6cm',
+    imageName: 'pregnancy-week-08-approved.webp',
+    maternalBody: 'Your first prenatal appointment may happen this week. Physically, nausea and exhaustion continue. You might notice dizziness, vivid dreams, and your clothes starting to feel tight even though you\'re not showing yet. The relief of hearing the heartbeat at your appointment is unlike anything else.',
+    fromShelbi: 'The first appointment. I still get emotional thinking about it. With my first baby, I was so nervous walking into that exam room that my hands were shaking. And then hearing that little heartbeat for the first time — there is nothing in the world that prepares you for that sound. I burst into tears every single time, all seven pregnancies. If your provider only does bloodwork this visit and doesn\'t do an ultrasound, don\'t panic — that\'s completely normal. And if you\'ve been feeling terrible and suddenly feel a little better today, that\'s okay too. The relief you feel when things go well at this appointment is something you\'ll remember forever.',
+    faqs: [{"q": "What happens at the first prenatal appointment?", "a": "Expect bloodwork, a medical history review, possibly an ultrasound, and a discussion of your due date. Some providers do an ultrasound at this visit; others wait until later. Both approaches are normal."}, {"q": "Will I hear the heartbeat?", "a": "If your provider does an ultrasound at 8 weeks, you may see and hear the heartbeat. If not, don't worry — the heartbeat is often not checked externally until 10-12 weeks."}],
+  },
+
+  {
+    week: 9,
+    trimester: 'first',
+    slug: '9-weeks-pregnant',
+    babyTitle: 'As small as a grape',
+    babyDescription: 'This is the point when the embryo officially becomes a fetus. Your baby is looking more recognizably human now, even though the head still makes up a big part of the body.',
+    babyPhase: 'size_reference',
+    food: 'grape',
+    sizeNote: '~2.3cm',
+    imageName: 'pregnancy-week-09-approved.webp',
+    maternalBody: 'Symptoms may peak or begin to ease — both are normal. The placenta starts taking over hormone production around weeks 8-12, which can cause symptoms to fluctuate. If you wake up feeling better, that\'s your body adjusting, not a warning sign.',
+    fromShelbi: 'This is the week that catches a lot of moms off guard. You\'ve been feeling awful for weeks, and then one morning you wake up and the nausea is just... gone. And instead of being relieved, you\'re terrified. I did this with my third pregnancy — I woke up feeling fine and immediately started panicking. What I learned is that around weeks 8 to 12, the placenta starts taking over hormone production, and symptoms can ease up. A good day is not a warning sign. Your body is doing exactly what it\'s supposed to do. If you\'re feeling better, let yourself feel better. You\'ve earned it.',
+    faqs: [{"q": "My nausea is gone — is the baby okay?", "a": "Around weeks 8-12, the placenta begins taking over hormone production, which can cause symptoms to ease. This is a normal transition. A good day doesn't mean something is wrong."}, {"q": "When does the risk of miscarriage decrease?", "a": "After a confirmed heartbeat (usually visible by 8 weeks), the miscarriage rate drops significantly. By 9 weeks with a heartbeat, the risk is quite low."}],
+  },
+
+  {
+    week: 10,
+    trimester: 'first',
+    slug: '10-weeks-pregnant',
+    babyTitle: 'As small as a strawberry',
+    babyDescription: 'Your baby\'s tiny fingers and toes are more defined now, and the limbs keep lengthening. A fun thing to picture is that little joints are developing too, so your baby is becoming more bendy and coordinated even this early.',
+    babyPhase: 'size_reference',
+    food: 'strawberry',
+    sizeNote: '~3.1cm',
+    imageName: 'pregnancy-week-10-approved.webp',
+    maternalBody: 'You may be offered NIPT (non-invasive prenatal testing) around this time. Nausea might persist or start to ease. You might notice a tiny bump starting, round ligament pain, and slightly more energy. The wait for NIPT results can be anxiety-inducing.',
+    fromShelbi: 'If you\'re doing NIPT testing, this is often the week — and then begins what I call the longest week of your life, waiting for results. I\'ve sat with so many doula clients through this wait. The anxiety is real, and it\'s universal. Here\'s what I tell every mom: most results come back fine. The waiting is the worst part, and it\'s okay to admit that you\'re scared. Don\'t Google. Call a friend, watch a terrible show, do anything besides refresh your patient portal every hour. The results will come, and the odds are very much in your favor.',
+    faqs: [{"q": "What is NIPT and should I get it?", "a": "NIPT (non-invasive prenatal testing) is a blood test that screens for chromosomal conditions like Down syndrome. It can be done from 10 weeks. Most results are normal. The waiting period for results (7-10 days) can be anxiety-inducing."}, {"q": "Is it normal to still feel awful at 10 weeks?", "a": "Yes. Many women don't feel better until 12-14 weeks. Some have symptoms throughout pregnancy. Everyone's timeline is different."}],
+  },
+
+  {
+    week: 11,
+    trimester: 'first',
+    slug: '11-weeks-pregnant',
+    babyTitle: 'As small as a fig',
+    babyDescription: 'At this stage, your baby\'s organs, nerves, and muscles are starting to work together more. This is one of those weeks where development feels less like "pieces forming" and more like a tiny body beginning to function.',
+    babyPhase: 'size_reference',
+    food: 'fig',
+    sizeNote: '~4.1cm',
+    imageName: 'pregnancy-week-11-approved.webp',
+    maternalBody: 'The finish line of the first trimester is visible. Symptoms may be fading or still going strong — both are normal. You might notice your belly changing shape, your energy slowly returning, and emotions still running high. This is a good time to start thinking about announcing after 12 weeks.',
+    fromShelbi: 'You\'re almost there. I know it feels like this trimester has been going on forever — I remember counting days during my first pregnancy, watching the weeks crawl by. If you\'re still feeling awful, hang on. If you\'re starting to feel better, let that be a relief, not a worry. With my fifth baby, this was the week I finally stopped feeling sick and started feeling like a person again, and I was so suspicious of the improvement that I almost wished the nausea would come back just so I\'d know everything was okay. It was okay. It\'s okay. One more week.',
+    faqs: [{"q": "When should I start telling people?", "a": "Many women wait until 12 weeks when the miscarriage risk drops significantly. But there's no single right answer — tell whoever you want, whenever you're ready. Some women tell close family early for support."}, {"q": "My symptoms are fading — is that normal?", "a": "Yes. Around 11 weeks, many women start to feel better as the placenta takes over hormone production. Enjoy the improvement."}],
+  },
+
+  {
+    week: 12,
+    trimester: 'first',
+    slug: '12-weeks-pregnant',
+    babyTitle: 'As small as a lime',
+    babyDescription: 'All the major organs, limbs, bones, and muscles are present now and will keep maturing from here. Your baby is already swallowing amniotic fluid and peeing it back out, which surprises a lot of first-time moms.',
+    babyPhase: 'size_reference',
+    food: 'lime',
+    sizeNote: '~5.4cm',
+    imageName: 'pregnancy-week-12-approved.webp',
+    maternalBody: 'The milestone week. Nausea often eases or fades. Energy may start returning. You might have the dating scan this week — seeing your baby on that screen is a moment you\'ll never forget. A small bump may be visible. Some women still feel awful, and that\'s okay — everyone\'s timeline is different.',
+    fromShelbi: 'Twelve weeks. This is the milestone you\'ve been counting toward. The miscarriage risk drops significantly here, and for the first time, you might be able to let yourself feel something close to excitement. I remember my 12-week scan with my first — seeing that little person wriggling on the screen, watching the heartbeat flicker, and finally letting myself believe this was really happening. I cried. Some moms laugh. Some feel numb. Every reaction is normal. If you\'re deciding who to tell now, trust your gut — there\'s no single right way to share this news. You\'ve done the hardest part. The second trimester is coming, and most women feel dramatically better. You made it.',
+    faqs: [{"q": "What happens at the 12-week scan?", "a": "The dating scan (usually 11-14 weeks) measures your baby, confirms your due date, and may screen for chromosomal conditions. Seeing your baby move on the screen is often an emotional, unforgettable moment."}, {"q": "Is it safe to announce my pregnancy now?", "a": "The miscarriage risk drops significantly after 12 weeks, which is why many women choose this milestone to share their news. But the decision is entirely personal."}],
+  },
+
+  {
+    week: 13,
+    trimester: 'second',
+    slug: '13-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby is entering a stretch of steady growth now, with features becoming more proportionate over time. This is the season where the body starts catching up just a bit to that adorably oversized head.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-13-approved.webp',
+    maternalBody: 'Welcome to the second trimester. Nausea may be fading, energy returning, and food might actually sound good again. Your belly button might be changing shape, and your bras might feel tighter as your rib cage expands. Appetite may return with a vengeance.',
+    fromShelbi: 'Welcome to the second trimester. With my first, I remember waking up around 13 weeks and realizing the nausea had dulled to something manageable, and I actually felt like a person again. It doesn\'t happen overnight for everyone — some of my pregnancies, the sickness hung on well past this point — but when that fog starts lifting, it\'s like a gift. You might also notice something strange: feeling better can make you anxious. I\'ve watched so many doula clients panic at the absence of symptoms. If the nausea is fading, that\'s your body doing its job, not a warning sign.',
+    faqs: [{"q": "What should I expect at 13 weeks pregnant?", "a": "Welcome to the second trimester. Nausea may be fading, energy returning, and food might actually sound good again. Your belly button might be changing..."}, {"q": "Is my baby moving normally at 13 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 14,
+    trimester: 'second',
+    slug: '14-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby\'s facial muscles are developing, and subtle expressions may begin to happen. Even if you can\'t feel much yet, there is a lot of movement and practice happening inside.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-14-approved.webp',
+    maternalBody: 'Energy is often returning. Nausea may be gone or nearly gone. You might notice a small bump appearing, your skin clearing up, and feeling more like yourself. Some women still have nausea at this point — it\'s not unusual.',
+    fromShelbi: 'For a lot of women, this is the week where the energy switch flips. I remember with my third baby, I went from barely functioning to cleaning my entire house in one afternoon — the classic nesting instinct starts early for some of us. Your appetite is probably coming back, and food might actually sound good again. If you\'re still waiting for that switch, hang on. Everyone\'s timeline is different, and some of us didn\'t feel fully human again until 16 or 17 weeks. It\'s coming.',
+    faqs: [{"q": "What should I expect at 14 weeks pregnant?", "a": "Energy is often returning. Nausea may be gone or nearly gone. You might notice a small bump appearing, your skin clearing up, and feeling more like yo..."}, {"q": "Is my baby moving normally at 14 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 15,
+    trimester: 'second',
+    slug: '15-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Bones continue hardening, and your baby\'s body is stretching out more. This is also a week when the overall shape starts looking less curled and more like the baby shape most moms picture.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-15-approved.webp',
+    maternalBody: 'You\'re feeling more like yourself. Energy is up, nausea is mostly gone, and you might be starting to show. You may notice changes in your hair and skin — some women get that pregnancy glow, others get acne. Both are normal.',
+    fromShelbi: 'This is the week where pregnancy starts to feel less like surviving and more like living. You might have a little more energy, food might taste good, and if you\'ve been hiding your pregnancy, you might be starting to think about telling people. With my fifth, this was the week I finally felt comfortable sharing the news with my older kids — the relief on their faces when they saw I wasn\'t sick anymore was everything. Your belly might be making its first appearance too. Not a bump yet, just a little fullness, but it\'s real.',
+    faqs: [{"q": "What should I expect at 15 weeks pregnant?", "a": "You're feeling more like yourself. Energy is up, nausea is mostly gone, and you might be starting to show. You may notice changes in your hair and ski..."}, {"q": "Is my baby moving normally at 15 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 16,
+    trimester: 'second',
+    slug: '16-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby is getting stronger, and coordinated movements are becoming more common. Some moms start feeling tiny flutters soon around this point, especially if they\'ve been pregnant before.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-16-approved.webp',
+    maternalBody: 'The in-between week. You might not be showing much yet, and you might not feel movement. This can be an anxious time — the wait for the anatomy scan feels long. You might notice your breasts growing, a slight belly, and round ligament pain.',
+    fromShelbi: 'This is a strange in-between week for a lot of moms. You\'re past the worst of the first trimester, but you might not be showing much yet, and you might not feel movement. I call this the "waiting room" — you know everything is probably fine, but you can\'t feel it or see it yet. With my first, I rented a Doppler at 16 weeks because I was so anxious between appointments. Here\'s what I\'d tell you: the wait for that anatomy scan feels endless, but you\'re getting closer every day. Try not to borrow worry from a future that hasn\'t happened.',
+    faqs: [{"q": "What should I expect at 16 weeks pregnant?", "a": "The in-between week. You might not be showing much yet, and you might not feel movement. This can be an anxious time — the wait for the anatomy scan f..."}, {"q": "Is my baby moving normally at 16 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 17,
+    trimester: 'second',
+    slug: '17-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Fat stores are beginning to develop under your baby\'s skin, which will matter more and more later in pregnancy. This is one of the quiet foundation-building weeks that helps your baby prepare for life outside the womb.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-17-approved.webp',
+    maternalBody: 'You might start feeling flutters — tiny butterfly-like movements that are easy to miss, especially in a first pregnancy. Your belly is growing, and you might need maternity clothes soon. The wait for the anatomy scan can create anxiety, but you\'re getting closer every day.',
+    fromShelbi: 'If you haven\'t felt your baby yet, you might start feeling something this week. With my first, the movement felt like butterflies — tiny flutters that I almost dismissed as gas. By my fourth, I knew exactly what those little taps were. This is also the week where the anxiety can shift: instead of worrying about miscarriage, you might start worrying about the anatomy scan. I sat with a doula client last year who was terrified of her 20-week scan. She called me afterward, sobbing with relief. The odds are very much in your favor.',
+    faqs: [{"q": "What should I expect at 17 weeks pregnant?", "a": "You might start feeling flutters — tiny butterfly-like movements that are easy to miss, especially in a first pregnancy. Your belly is growing, and yo..."}, {"q": "Is my baby moving normally at 17 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 18,
+    trimester: 'second',
+    slug: '18-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby\'s ears are now in their final position on the head, and the inner ear structures that make hearing possible are developing rapidly. While your baby can\'t quite hear you yet, the foundation for hearing is being laid — and in a few weeks, the outside world will start reaching your baby in a new way.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-18-approved.webp',
+    maternalBody: 'Movement might become more noticeable. Your belly is definitely growing, and you might need maternity clothes. Back pain and round ligament pain can start. If you\'re having the anatomy scan soon, the anticipation can be nerve-wracking. The odds of everything being fine are very much in your favor.',
+    fromShelbi: 'You\'re getting close to the anatomy scan, and if you\'re planning to find out the sex, this might be the week. I\'ll never forget finding out with my first — I was so sure it was a boy, and when the technician said "girl," I laughed so hard I made the ultrasound table shake. If you\'re feeling anxious about the scan, that\'s completely normal. Every single one of my seven pregnancies, I held my breath during that appointment until they told me everything looked okay. The vast majority of the time, everything does look okay.',
+    faqs: [{"q": "What should I expect at 18 weeks pregnant?", "a": "Movement might become more noticeable. Your belly is definitely growing, and you might need maternity clothes. Back pain and round ligament pain can s..."}, {"q": "Is my baby moving normally at 18 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 19,
+    trimester: 'second',
+    slug: '19-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby\'s skin is protected by a waxy coating called vernix, which helps shield it from constant exposure to amniotic fluid. It\'s one of those details most moms never think about, but it plays a really important protective role.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-19-approved.webp',
+    maternalBody: 'You might be feeling regular movement now, and your belly is clearly visible. Heartburn, leg cramps, and stretch marks may appear. This is often when pregnancy starts to feel real and enjoyable — you can eat, move, and sleep (mostly) normally.',
+    fromShelbi: 'This is the week where pregnancy often shifts from abstract to concrete. You might be feeling regular movement now, and if you\'ve had the anatomy scan, you\'ve seen your baby\'s face on that screen. I always tell my doula clients: this is when the bond deepens. Not because it wasn\'t there before, but because now you have proof. A real little person is in there, yawning and stretching. If you haven\'t told certain people yet, this is often the week where the secret gets harder to keep — your belly is getting harder to hide.',
+    faqs: [{"q": "What should I expect at 19 weeks pregnant?", "a": "You might be feeling regular movement now, and your belly is clearly visible. Heartburn, leg cramps, and stretch marks may appear. This is often when ..."}, {"q": "Is my baby moving normally at 19 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 20,
+    trimester: 'second',
+    slug: '20-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'At this halfway point, your baby is very recognizable, with well-formed limbs and features. Many moms love this stage because baby is big enough to picture clearly but still has plenty of room to move around.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-20-anchor-approved.webp',
+    maternalBody: 'Halfway there. Your belly is making its presence known. You might notice linea nigra (a dark line down your belly), skin changes, and more defined movement. The anatomy scan is usually this week. You might also start thinking about your birth plan.',
+    fromShelbi: 'Halfway. You\'re halfway. This is the week where I always paused with each of my pregnancies and just took a breath. You\'ve made it through the hardest emotional part, and you have a real, visible bump now. The anatomy scan is usually this week or next, and I know the anxiety that comes with it. I\'ve seen hundreds of these scans as a doula, and I\'ve watched the relief wash over parents\' faces when the technician says everything looks perfect. That\'s the most common outcome. If you\'re finding out the sex, savor that moment — it\'s one of the best surprises of your life, no matter what you\'re hoping for.',
+    faqs: [{"q": "What should I expect at 20 weeks pregnant?", "a": "Halfway there. Your belly is making its presence known. You might notice linea nigra (a dark line down your belly), skin changes, and more defined mov..."}, {"q": "Is my baby moving normally at 20 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 21,
+    trimester: 'second',
+    slug: '21-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby is getting bigger fast and may begin having more noticeable patterns of movement. This is also a time of active brain growth, which is a big part of what makes the second half of pregnancy so dynamic.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-21-approved.webp',
+    maternalBody: 'The anatomy scan is behind you, and you can breathe. Movement is more regular, your bump is visible, and you might be feeling good. Heartburn, constipation, and swelling can start. This is a great time to start birth plan research.',
+    fromShelbi: 'The anatomy scan is behind you, and if you\'re like most moms, you feel like you can finally breathe. This is the week where pregnancy starts to feel almost normal — you\'re showing, you\'re feeling movement, and the scary part is mostly behind you. With my fourth, this was the week I started actually enjoying being pregnant. I could eat, I could move, I could sleep (mostly), and the baby was active enough that I never had to wonder if everything was okay. If movements are still inconsistent, that\'s normal — baby has plenty of room to move around in there, and you won\'t feel every kick.',
+    faqs: [{"q": "What should I expect at 21 weeks pregnant?", "a": "The anatomy scan is behind you, and you can breathe. Movement is more regular, your bump is visible, and you might be feeling good. Heartburn, constip..."}, {"q": "Is my baby moving normally at 21 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 22,
+    trimester: 'second',
+    slug: '22-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby\'s features are becoming more distinct, and movements can start feeling stronger. Tiny practice breaths may begin too, even though the lungs are not ready for life outside the womb yet.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-22-approved.webp',
+    maternalBody: 'Your belly is undeniably real now. Heartburn after meals, leg cramps at night, and the feeling that your body is being rearranged. You might need new bras and maternity clothes. A good time to start thinking about your birth plan.',
+    fromShelbi: 'Your belly is making its presence known now. With my sixth, this was the week a stranger asked me when I was due for the first time — and I was so excited that someone could finally tell I was pregnant and not just eating too much. You might be noticing new things: heartburn after meals, leg cramps at night, the feeling that your body is being slowly rearranged from the inside. All of that is normal. This is also a great time to start thinking about a birth plan — not because it\'s urgent, but because you finally have the mental space for it.',
+    faqs: [{"q": "What should I expect at 22 weeks pregnant?", "a": "Your belly is undeniably real now. Heartburn after meals, leg cramps at night, and the feeling that your body is being rearranged. You might need new ..."}, {"q": "Is my baby moving normally at 22 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 23,
+    trimester: 'second',
+    slug: '23-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby\'s body is getting better and better at the work that will matter after birth — little by little, the lungs are preparing for the day they\'ll take that first breath. This is often described as a milestone week because so many important systems are maturing.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-23-approved.webp',
+    maternalBody: 'Approaching viability is both reassuring and heavy. Your baby is getting stronger every day. You might notice Braxton Hicks contractions, swelling in your feet, and difficulty sleeping comfortably. A pregnancy pillow can be a lifesaver.',
+    fromShelbi: 'This is the week where a lot of moms start thinking about the endgame. You\'re approaching viability — the point where your baby could potentially survive outside the womb with medical support. That thought is both reassuring and terrifying. I remember with my first, someone told me about viability at this stage and I burst into tears in the middle of a grocery store. It\'s a heavy milestone. But it\'s also a beautiful one: your baby is getting stronger every single day, and the odds of a healthy, full-term delivery are overwhelmingly in your favor.',
+    faqs: [{"q": "What should I expect at 23 weeks pregnant?", "a": "Approaching viability is both reassuring and heavy. Your baby is getting stronger every day. You might notice Braxton Hicks contractions, swelling in ..."}, {"q": "Is my baby moving normally at 23 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 24,
+    trimester: 'second',
+    slug: '24-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby is growing steadily and becoming more responsive to sound and touch. Sleep and wake cycles are also starting to become more defined, which is why movement may begin to feel a little more patterned.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-24-approved.webp',
+    maternalBody: 'The viability milestone. You might start feeling Braxton Hicks more frequently. Your belly is getting bigger, sleep is getting harder, and you might notice stretch marks. Glucose test may be coming up soon. Every day your baby gets stronger.',
+    fromShelbi: 'Twenty-four weeks. This is the viability milestone that so many moms count down to, and it\'s a big one. If your baby were born now, there\'s a chance of survival with intensive medical care. I know that sounds scary, but here\'s what I want you to hold onto: the vast majority of pregnancies continue normally past this point, and every single day your baby is getting stronger. With my seventh, I celebrated this week by eating a giant piece of cake — not because the danger was past, but because my baby was one day closer to being ready. You might start feeling Braxton Hicks contractions around now. They\'re practice, not labor. If they feel strong or frequent, call your provider, but most of the time, they\'re just your body warming up.',
+    faqs: [{"q": "What should I expect at 24 weeks pregnant?", "a": "The viability milestone. You might start feeling Braxton Hicks more frequently. Your belly is getting bigger, sleep is getting harder, and you might n..."}, {"q": "Is my baby moving normally at 24 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 25,
+    trimester: 'second',
+    slug: '25-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby\'s skin is still thin, but the body is gradually filling out more. The nervous system is maturing too, which helps movements become stronger and more purposeful.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-25-approved.webp',
+    maternalBody: 'Your baby is active and you\'re feeling it. You might notice stronger kicks, back pain, and difficulty sleeping. This is a good time to start paying attention to movement patterns. If you haven\'t felt movement in a while, drink something cold and lie on your side.',
+    fromShelbi: 'Your baby is getting active, and you\'re probably feeling it. I had one baby who was so still I worried constantly, and another who moved so much I was convinced something was wrong. Both were perfectly fine. This is the week where a lot of moms start really paying attention to movement patterns. If you haven\'t felt movement in a while, drink something cold and lie on your side — that usually gets things going. But never hesitate to call your provider if something feels off. I tell all my doula clients: you are never wasting anyone\'s time by checking.',
+    faqs: [{"q": "What should I expect at 25 weeks pregnant?", "a": "Your baby is active and you're feeling it. You might notice stronger kicks, back pain, and difficulty sleeping. This is a good time to start paying at..."}, {"q": "Is my baby moving normally at 25 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 26,
+    trimester: 'second',
+    slug: '26-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby is practicing important skills like sucking and swallowing. These little rehearsal steps matter because they help prepare for feeding after birth.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-26-approved.webp',
+    maternalBody: 'The last week of the second trimester. Sleep is getting harder, your belly is heavy, and you might be thinking about the third trimester checklist: hospital tour, birth plan, packing a bag. A pregnancy pillow is worth its weight in gold at this point.',
+    fromShelbi: 'This is your last week before the third trimester, and it\'s a good time to take stock. With each of my seven, this was the week where I\'d sit down with my partner and say, "Okay, what do we still need to do?" Hospital tour, birth plan, packing a bag, childcare for the older kids — it all starts to feel real now. You might also be noticing that sleep is getting harder. The baby is bigger, your belly is heavier, and finding a comfortable position is becoming an Olympic sport. A pregnancy pillow was the best investment I made by my third pregnancy. Don\'t wait — get one now if you haven\'t already.',
+    faqs: [{"q": "What should I expect at 26 weeks pregnant?", "a": "The last week of the second trimester. Sleep is getting harder, your belly is heavy, and you might be thinking about the third trimester checklist: ho..."}, {"q": "Is my baby moving normally at 26 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 27,
+    trimester: 'third',
+    slug: '27-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby\'s brain and lungs are still maturing in a big way as the third trimester begins. This is a growth-and-prep stage where the body is getting more coordinated for the weeks ahead.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-27-approved.webp',
+    maternalBody: 'Welcome to the third trimester. Your belly is big, bending over is getting hard, and you might waddle. Back pain, sciatica, and leg cramps can intensify. Provider visits start getting more frequent. Slow down and let people help you.',
+    fromShelbi: 'Welcome to the third trimester. With my first, this was the week where pregnancy stopped feeling like a waiting game and started feeling like preparation. Your belly is undeniably real now, and you might be noticing that simple things — bending over, sleeping comfortably, walking without waddling — are getting harder. I remember with my fifth, I tried to pick up a dropped pen at 27 weeks and genuinely wondered if I\'d ever stand back up. That\'s normal. Your center of gravity is shifting, your body is carrying more weight, and everything is adjusting. This is the trimester to slow down and let people help you.',
+    faqs: [{"q": "What should I expect at 27 weeks pregnant?", "a": "Welcome to the third trimester. Your belly is big, bending over is getting hard, and you might waddle. Back pain, sciatica, and leg cramps can intensi..."}, {"q": "Is my baby moving normally at 27 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 28,
+    trimester: 'third',
+    slug: '28-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby is starting to put on weight more quickly now. You may also notice stronger kicks and stretches, partly because your baby is bigger and partly because movement patterns are getting more organized.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-28-approved.webp',
+    maternalBody: 'Glucose test time. The drink isn\'t great, but it\'s quick. You might also get an RhoGAM shot if you\'re Rh-negative. Your baby is putting on weight, and you might feel stronger, more frequent kicks. Provider visits become more frequent — the countdown is real.',
+    fromShelbi: 'Twenty-eight weeks brings a few milestones: the glucose test for gestational diabetes, possibly an RhoGAM shot if you\'re Rh-negative, and the realization that you\'re in the final stretch. I\'ve had the glucose test seven times, and I\'ll be honest — that drink is not great. But it\'s quick, and the odds are very much in your favor. I\'ve sat with doula clients who got a gestational diabetes diagnosis and were devastated, and I want you to know: most GD pregnancies are managed beautifully with diet and result in healthy babies. This is also the week where your provider visits start getting more frequent — the countdown is real now.',
+    faqs: [{"q": "What should I expect at 28 weeks pregnant?", "a": "Glucose test time. The drink isn't great, but it's quick. You might also get an RhoGAM shot if you're Rh-negative. Your baby is putting on weight, and..."}, {"q": "Is my baby moving normally at 28 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 29,
+    trimester: 'third',
+    slug: '29-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'In the last couple months of pregnancy, your baby gains weight fast, and a big chunk of birth weight is added during this season. Your body is working hard to support that growth.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-29-approved.webp',
+    maternalBody: 'Getting uncomfortable. Your baby is bigger, your organs are being squished, and sleep is a nightly negotiation. Heartburn, sciatica, and swollen feet are common. This is when birth starts feeling close enough to be scary. Fear about birth is universal.',
+    fromShelbi: 'If you weren\'t uncomfortable before, you might be now. Your baby is putting on weight, your organs are being squished, and sleep is becoming a nightly negotiation. With my fourth, I started sleeping in a recliner at 29 weeks because lying flat was impossible. Find what works — a pregnancy pillow, propped up on the couch, whatever gets you rest. This is also when a lot of moms start feeling the emotional weight of what\'s coming. The birth is getting close enough to feel real, and that can bring up fear. As a doula, I tell my clients: fear about birth is universal, and it doesn\'t mean you\'re not ready. It means you care.',
+    faqs: [{"q": "What should I expect at 29 weeks pregnant?", "a": "Getting uncomfortable. Your baby is bigger, your organs are being squished, and sleep is a nightly negotiation. Heartburn, sciatica, and swollen feet ..."}, {"q": "Is my baby moving normally at 29 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 30,
+    trimester: 'third',
+    slug: '30-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby is continuing to gain fat, which helps smooth the skin and support temperature regulation after birth. There is less room than before, so movements may feel bigger even if they are less acrobatic.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-30-approved.webp',
+    maternalBody: 'The ten-week countdown. Nesting instinct may kick in hard. You might be organizing everything and still feeling unprepared. Heartburn, back pain, and trouble sleeping are common. A good time to start your birth plan if you haven\'t already.',
+    fromShelbi: 'Thirty weeks. You\'re in the double digits now — roughly ten weeks to go, give or take. With my seventh, this was the week I started nesting hard. I organized every closet in the house, bought everything we needed, and still felt like I wasn\'t ready. You might be feeling the same way. This is a good time to start your birth plan if you haven\'t already — not because it\'s urgent, but because thinking through your preferences now means you won\'t be making decisions under pressure later. If you\'re working, this is also when maternity leave planning becomes real. The end is closer than it feels.',
+    faqs: [{"q": "What should I expect at 30 weeks pregnant?", "a": "The ten-week countdown. Nesting instinct may kick in hard. You might be organizing everything and still feeling unprepared. Heartburn, back pain, and ..."}, {"q": "Is my baby moving normally at 30 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 31,
+    trimester: 'third',
+    slug: '31-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby has most of their parts in place and is now focused on growing and maturing — less about building new pieces, more about getting stronger and more ready for the outside world.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-31-approved.webp',
+    maternalBody: 'Big movements and growing aches. You might see a foot poking out of your belly. Heartburn, sciatica, swollen feet, and round ligament pain. Every pregnancy has a different worst symptom. If something feels severe or new, always call your provider.',
+    fromShelbi: 'Your baby is getting big enough that movements are no longer subtle — you might see a foot poking out of your belly, and your partner can feel kicks from across the room. With my third, my husband would watch my belly move at night and just laugh. Those moments are magic. You\'re also probably dealing with new discomforts: heartburn, sciatica, swollen feet, round ligament pain. I went through seven pregnancies, and every single one had a different "worst" symptom. If something feels severe or new, always call your provider. But the general achiness of late pregnancy is your body doing hard work.',
+    faqs: [{"q": "What should I expect at 31 weeks pregnant?", "a": "Big movements and growing aches. You might see a foot poking out of your belly. Heartburn, sciatica, swollen feet, and round ligament pain. Every preg..."}, {"q": "Is my baby moving normally at 31 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 32,
+    trimester: 'third',
+    slug: '32-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby is practicing breathing movements and continuing to build body fat. Even though those breaths are just practice, they are part of preparing the lungs and chest for life after birth.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-32-approved.webp',
+    maternalBody: 'Birth prep mode. Your baby is getting big, and the reality of labor is setting in. Back pain, heartburn, and trouble sleeping intensify. Now is the time for childbirth classes, writing your birth plan, and touring your hospital.',
+    fromShelbi: 'This is the week where birth preparation should shift from "someday" to "now." If you haven\'t taken a childbirth class, now is the time. If you haven\'t written your birth plan, start it. If you haven\'t toured your hospital or birth center, schedule it. With my first, I thought I had plenty of time at 32 weeks and then suddenly it was 38 weeks and I hadn\'t done anything. As a doula, I see this all the time — parents who prepare early feel dramatically more confident walking into the birth room. You don\'t need to know everything, but you need to know what matters to you.',
+    faqs: [{"q": "What should I expect at 32 weeks pregnant?", "a": "Birth prep mode. Your baby is getting big, and the reality of labor is setting in. Back pain, heartburn, and trouble sleeping intensify. Now is the ti..."}, {"q": "Is my baby moving normally at 32 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 33,
+    trimester: 'third',
+    slug: '33-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby is still growing steadily and may gain around a quarter to half a pound per week as you get closer to your due date. That rapid growth is one reason everything can suddenly feel tighter in your belly around now.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-33-approved.webp',
+    maternalBody: 'Down to the details. Hospital bag, car seat, pediatrician, childcare for older kids, postpartum support. You might be feeling big, tired, and ready to be done. Don\'t forget to plan for postpartum — who\'s bringing meals? Who\'s helping?',
+    fromShelbi: 'You\'re getting down to the details now. Hospital bag, car seat, pediatrician, childcare plan for older kids, postpartum support. With my fifth, this was the week I realized I hadn\'t even thought about what happens AFTER the baby comes — I was so focused on the birth that I forgot about the recovery. If you haven\'t thought about postpartum yet, start. Who\'s bringing meals? Who\'s helping with the older kids? What does your first week at home look like? The moms who plan for postpartum recover faster and feel more supported. I learned that the hard way with my first.',
+    faqs: [{"q": "What should I expect at 33 weeks pregnant?", "a": "Down to the details. Hospital bag, car seat, pediatrician, childcare for older kids, postpartum support. You might be feeling big, tired, and ready to..."}, {"q": "Is my baby moving normally at 33 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 34,
+    trimester: 'third',
+    slug: '34-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby\'s skin is getting smoother as more fat is stored under the surface. Fingernails are also continuing to grow, which is one of those tiny details that makes babies feel more and more "finished."',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-34-approved.webp',
+    maternalBody: 'Your baby\'s lungs are maturing. You might be feeling Braxton Hicks more frequently, and your body might be starting to prep in subtle ways. This is when many providers start reviewing your birth plan in detail. If you have a doula, solidify your relationship now.',
+    fromShelbi: 'Thirty-four weeks. With my first, this was the week my doctor said, "If the baby came now, we\'d be okay." That sentence changed everything for me. Your baby\'s lungs are maturing, and the NICU stay, if needed, gets shorter every day. You might be feeling Braxton Hicks more frequently, and your body might be starting to prep in subtle ways — loose joints, cervical changes, the baby dropping lower. This is also when many providers start checking your birth plan and talking through your labor preferences in detail. If you have a doula, this is the time to solidify your relationship and talk through your hopes and fears.',
+    faqs: [{"q": "What should I expect at 34 weeks pregnant?", "a": "Your baby's lungs are maturing. You might be feeling Braxton Hicks more frequently, and your body might be starting to prep in subtle ways. This is wh..."}, {"q": "Is my baby moving normally at 34 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 35,
+    trimester: 'third',
+    slug: '35-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby is getting snug in the uterus now, and there is much less extra room for dramatic movement. Many babies settle more into a head-down position around this stage if they have not already.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-35-approved.webp',
+    maternalBody: 'The waiting game. Every twinge makes you wonder if this is it. Your baby is basically ready — just putting on weight. Finish your hospital bag, install the car seat, print your birth plan. Channel anxiety into preparation.',
+    fromShelbi: 'You\'re in the final five weeks, and the waiting can be agonizing. Every twinge makes you wonder, "Is this it?" With my fourth, I spent weeks 35 through 40 convinced labor was starting every time I felt a cramp. It rarely was. Your baby is basically ready now — just putting on weight and finishing lung development. This is a good time to finish your hospital bag, install the car seat, and make sure your birth plan is printed and packed. If you\'re feeling anxious about the birth, that\'s the most normal thing in the world. Channel that energy into preparation, not catastrophizing.',
+    faqs: [{"q": "What should I expect at 35 weeks pregnant?", "a": "The waiting game. Every twinge makes you wonder if this is it. Your baby is basically ready — just putting on weight. Finish your hospital bag, instal..."}, {"q": "Is my baby moving normally at 35 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 36,
+    trimester: 'third',
+    slug: '36-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby is looking rounder and fuller now, with more fat on the body and less wrinkling of the skin. This is also a week when the overall position in the uterus starts to matter more as birth gets closer.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-36-approved.webp',
+    maternalBody: 'Your baby is considered early-term from here. You might feel huge, exhausted, and ready to be done. Cervical checks may start. If you have feelings about induction timing, talk to your provider now. Wash the baby clothes, set up the bassinet, breathe.',
+    fromShelbi: 'Thirty-six weeks. Your baby is considered early-term from here. With my seventh, this was the week I washed all the baby clothes, set up the bassinet, and sat in the nursery just breathing. You might be feeling huge, exhausted, and ready to be done. I felt that way with every single one. This is also when your provider might start doing cervical checks, and the conversation about induction timing might come up. If you have strong feelings about avoiding induction, talk to your provider now — not when you\'re 41 weeks and panicking. Birth plans are flexible, but knowing your preferences ahead of time means you can advocate for yourself.',
+    faqs: [{"q": "What should I expect at 36 weeks pregnant?", "a": "Your baby is considered early-term from here. You might feel huge, exhausted, and ready to be done. Cervical checks may start. If you have feelings ab..."}, {"q": "Is my baby moving normally at 36 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 37,
+    trimester: 'third',
+    slug: '37-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby is considered early term now, and many important systems are very close to ready. Brain and lung development are still continuing, which is a helpful reminder that these last weeks still matter.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-37-approved.webp',
+    maternalBody: 'Early term. You\'re technically ready but still waiting. Every cramp feels like the start. You might not sleep well, eat well, or move well — but you\'re almost there. If you haven\'t packed your bag yet, do it today.',
+    fromShelbi: 'You\'re now considered early-term, which means if you went into labor naturally, most providers wouldn\'t stop it. This is a strange limbo — you\'re technically ready, but you\'re also still waiting. With my first, I was so anxious at 37 weeks that I couldn\'t sleep. I\'d lie in bed counting kicks and timing every Braxton Hicks, wondering if this was the night. It wasn\'t, for three more weeks. But the readiness is there now, and that\'s a relief even if the waiting is hard. If you haven\'t packed your bag yet, do it today. Not tomorrow. Today.',
+    faqs: [{"q": "What should I expect at 37 weeks pregnant?", "a": "Early term. You're technically ready but still waiting. Every cramp feels like the start. You might not sleep well, eat well, or move well — but you'r..."}, {"q": "Is my baby moving normally at 37 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 38,
+    trimester: 'third',
+    slug: '38-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby keeps fine-tuning important skills like swallowing, breathing motions, and body temperature regulation. Even when everything feels "done," your baby is still using this time to get stronger and more prepared.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-38-approved.webp',
+    maternalBody: 'Any day now. Your body might be showing early signs of preparation — increased discharge, more Braxton Hicks, pelvic pressure, the baby dropping lower. Focus on rest, hydration, and gentle movement. Walk, bounce on a birth ball, rest.',
+    fromShelbi: 'Thirty-eight weeks. You might be feeling the early signs that your body is getting ready — increased discharge, more frequent Braxton Hicks, pelvic pressure, the baby dropping lower into your pelvis. With my fifth, I waddled into my 38-week appointment and my doctor said, "The baby\'s head is right there." I didn\'t go into labor for another nine days. Every body is on its own timeline. This is when I tell my doula clients to really focus on rest, hydration, and gentle movement. Walk, bounce on a birth ball, rest. Your body knows what to do. Trust it.',
+    faqs: [{"q": "What should I expect at 38 weeks pregnant?", "a": "Any day now. Your body might be showing early signs of preparation — increased discharge, more Braxton Hicks, pelvic pressure, the baby dropping lower..."}, {"q": "Is my baby moving normally at 38 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 39,
+    trimester: 'third',
+    slug: '39-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'Your baby is considered full term this week, and the body is built for life on the outside. A sweet detail is that the brain is still doing a huge amount of development right up through the end, even when baby looks fully ready to meet you.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-39-approved.webp',
+    maternalBody: 'The longest week. You\'re full-term and just waiting. Every old wives\' tale about inducing labor will tempt you. Your baby will come when ready. Watch a movie, eat a good meal, sleep as much as you can. You\'re about to meet your baby.',
+    fromShelbi: 'This might be the longest week of your life. You\'re full-term, your baby is fully developed, and you\'re just waiting. With my first, I tried every old wives\' tale — pineapple, walking, spicy food, even pumping. None of it worked. Your baby will come when your baby is ready, and trying to force it just adds stress. I know that\'s easy to say and hard to live. What I can tell you from seven pregnancies is this: the waiting feels endless, but the moment labor actually starts, you\'ll wish you\'d enjoyed these last quiet days more. Watch a movie. Eat a good meal. Sleep as much as you can. You\'re about to meet your baby.',
+    faqs: [{"q": "What should I expect at 39 weeks pregnant?", "a": "The longest week. You're full-term and just waiting. Every old wives' tale about inducing labor will tempt you. Your baby will come when ready. Watch ..."}, {"q": "Is my baby moving normally at 39 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+
+  {
+    week: 40,
+    trimester: 'third',
+    slug: '40-weeks-pregnant',
+    babyTitle: 'Your baby this week',
+    babyDescription: 'You\'ve made it to your due date week. Your baby is fully developed and ready to meet you. The brain and lungs finish their final preparations now, and your baby is settled into position for birth. You\'re so close to holding your little one.',
+    babyPhase: 'cross_section',
+    food: null,
+    sizeNote: null,
+    imageName: 'pregnancy-week-40-approved.webp',
+    maternalBody: 'Your due date. Only about 5% of babies arrive on this date. It\'s an estimate, not a deadline. If your provider talks about induction, ask questions — what\'s the medical reason? What are the alternatives? You\'ve grown a whole human. Trust yourself and your body.',
+    fromShelbi: 'You made it to your due date. I want you to know something that most pregnancy resources don\'t say clearly enough: only about 5% of babies are born on their actual due date. It\'s an estimate, not a deadline. With three of my seven, I went past 40 weeks, and every time I felt like my body was failing me. It wasn\'t. Your baby and your body are coordinating something extraordinary, and that takes the time it takes. If your provider starts talking about induction, ask questions. What\'s the medical reason? What are the alternatives? What are the risks? You have the right to understand your options. You\'ve grown a whole human. Whatever happens in these final days — whether your baby comes tonight or in two weeks — you are ready. Trust yourself. Trust your body. You\'re about to do the most incredible thing you\'ll ever do.',
+    faqs: [{"q": "What should I expect at 40 weeks pregnant?", "a": "Your due date. Only about 5% of babies arrive on this date. It's an estimate, not a deadline. If your provider talks about induction, ask questions — ..."}, {"q": "Is my baby moving normally at 40 weeks?", "a": "Movement patterns vary. If you notice a significant decrease in movement, contact your provider. When in doubt, always call."}],
+  },
+];
+
+export const PREGNANCY_WEEK_BY_WEEK: Record<number, PregnancyWeek> = Object.fromEntries(
+  PREGNANCY_WEEKS.map(entry => [entry.week, entry])
+);
+
+export function getPregnancyWeek(week: number): PregnancyWeek | undefined {
+  return PREGNANCY_WEEK_BY_WEEK[week];
+}
+
+export const TRIMESTERS = [
+  { id: 'first' as const, name: 'First Trimester', weeks: 'Weeks 1-12', slug: 'first-trimester', description: 'The foundation — when your baby develops from a cluster of cells to a recognizable fetus with all major organs forming.' },
+  { id: 'second' as const, name: 'Second Trimester', weeks: 'Weeks 13-26', slug: 'second-trimester', description: 'The growth phase — when your baby develops from a tiny fetus to a baby that could potentially survive outside the womb.' },
+  { id: 'third' as const, name: 'Third Trimester', weeks: 'Weeks 27-40', slug: 'third-trimester', description: 'The finishing touches — when your baby gains weight, matures lungs and brain, and gets ready to meet you.' },
+];
