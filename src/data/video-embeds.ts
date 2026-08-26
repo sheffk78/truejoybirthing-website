@@ -1696,4 +1696,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT6M2S",
   },
 
+  "lexington-ky": {
+    videoId: "0fi4TbMveJ4",
+    title: "Lexington KY Doula and Birth Plan Guide",
+    description: "Watch the full Lexington KY Doula and Birth Plan Guide — all in about 3:00.",
+    duration: 180,
+  },
+
 };
