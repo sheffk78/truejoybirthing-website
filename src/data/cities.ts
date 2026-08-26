@@ -2147,6 +2147,7 @@ export const cities: Record<string, CityData> = {
     city: "San Antonio",
     state: "TX",
     slug: "san-antonio-tx",
+    titleTag: "San Antonio, TX Doula & Midwife: Costs & Medicaid",
     costLow: 700,
     costHigh: 2800,
     lat: 29.4241,

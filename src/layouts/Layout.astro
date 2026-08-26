@@ -215,7 +215,8 @@ if (breadcrumbList && breadcrumbList.length > 0) {
 const schemaJson = JSON.stringify(finalSchema);
 const pageTitle = title.includes("True Joy Birthing") ? title : `${title} | True Joy Birthing`;
 // Use TJB abbreviation if full title exceeds 70 chars (SEO best practice)
-const finalTitle = pageTitle.length > 70 ? pageTitle.replace(" | True Joy Birthing", " | TJB") : pageTitle;
+const tjbTitle = pageTitle.replace(" | True Joy Birthing", " | TJB");
+const finalTitle = pageTitle.length > 60 && tjbTitle.length >= 50 ? tjbTitle : pageTitle;
 ---
 
 <!DOCTYPE html>
