@@ -1703,4 +1703,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: 180,
   },
 
+  "omaha-ne": {
+    videoId: "VK4485EIYVY",
+    title: "Omaha NE Doula & Birth Plan Guide",
+    description: "Watch the full Omaha NE Doula & Birth Plan Guide — all in about 3:00.",
+    duration: 180,
+  },
+
 };
