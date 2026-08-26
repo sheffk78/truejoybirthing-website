@@ -31,10 +31,48 @@ const pngPath = path.resolve(__dirname, `${outputName}-2x.png`);
 
   await page.goto('file://' + htmlPath, { waitUntil: 'networkidle' });
 
-  // Wait for fonts and image to load
-  await page.waitForTimeout(4000);
+  // Wait for fonts and all images (including SVG logo) to fully load.
+  // The old fixed 4s timeout was a race condition: if the SVG logo hadn't
+  // finished decoding by the time the screenshot was taken, the logo-area
+  // rendered empty (Lexington KY bug, Aug 2026). Now we explicitly wait for
+  // every img element to fire its load/error event before screenshotting.
+  await page.evaluate(() => {
+    const imgs = Array.from(document.querySelectorAll('img'));
+    const promises = imgs.map(img => {
+      if (img.complete && img.naturalWidth > 0) return Promise.resolve();
+      return new Promise(resolve => {
+        img.addEventListener('load', resolve, { once: true });
+        img.addEventListener('error', resolve, { once: true });
+      });
+    });
+    return Promise.all(promises);
+  });
 
-  // Render at 2x DPR
+  // Extra safety margin for SVG decode + web font rendering
+  await page.waitForTimeout(2000);
+
+  // Pre-screenshot validation: verify the logo-area image actually rendered.
+  // If the logo img has naturalWidth 0, it failed to load — abort rather
+  // than shipping an OG without branding.
+  const logoStatus = await page.evaluate(() => {
+    const logoImg = document.querySelector('.logo-area img');
+    if (!logoImg) return { present: false };
+    return {
+      present: true,
+      naturalWidth: logoImg.naturalWidth,
+      naturalHeight: logoImg.naturalHeight,
+      src: logoImg.src,
+      complete: logoImg.complete,
+    };
+  });
+  if (logoStatus.present && logoStatus.naturalWidth === 0) {
+    console.error('❌ FATAL: Logo image in .logo-area failed to render (naturalWidth=0).');
+    console.error('   src:', logoStatus.src);
+    console.error('   This produces an OG image without the True Joy Birthing logo.');
+    console.error('   Check that the file path exists and the SVG is valid.');
+    process.exit(1);
+  }
+
   const screenshot = await page.screenshot({
     type: 'png',
     clip: { x: 0, y: 0, width: 1200, height: 630 }
