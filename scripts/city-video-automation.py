@@ -932,18 +932,29 @@ def main():
     register_composition(slug, data_file)
     
     # Step 6.5: Capture fullpage scroll screenshot (required by provider scene)
+    # HARDENED (Aug 27, 2026): The screenshot must exist AND be >50KB (not blank).
+    # The capture-fullpage.cjs script now force-loads lazy images before capturing.
+    # If the screenshot is missing or too small, the video will show blank provider
+    # profile images — so we BLOCK instead of silently skipping.
     print('\n[Step 6.5] Capturing fullpage scroll screenshot...')
     scroll_src = PROJECT_ROOT / 'public' / 'images' / f'{slug}-fullpage-scroll.png'
-    if not scroll_src.exists():
-        run(f'cd {PROJECT_ROOT} && node scripts/capture-fullpage.cjs {slug}', timeout=60, check=False)
-        if scroll_src.exists():
-            shutil.copy2(str(scroll_src), str(REMOTION_DIR / 'public' / 'images' / f'{slug}-fullpage-scroll.png'))
-            print(f'  ✅ Fullpage scroll captured and copied')
-        else:
-            print(f'  ⚠️  Fullpage scroll capture failed (render may fail on provider scene)')
+    scroll_dest = REMOTION_DIR / 'public' / 'images' / f'{slug}-fullpage-scroll.png'
+
+    # Always re-capture to ensure images are loaded (stale screenshots may have blank providers)
+    run(f'cd {PROJECT_ROOT} && node scripts/capture-fullpage.cjs {slug}', timeout=90, check=False)
+
+    if scroll_src.exists():
+        scroll_size = scroll_src.stat().st_size
+        if scroll_size < 50000:
+            print(f'  ❌ Fullpage scroll screenshot is only {scroll_size}b — likely blank. BLOCKING video render.')
+            print(f'     The capture script could not load provider images. Check the build and image paths.')
+            sys.exit(1)
+        shutil.copy2(str(scroll_src), str(scroll_dest))
+        print(f'  ✅ Fullpage scroll captured ({scroll_size}b) and copied to Remotion')
     else:
-        shutil.copy2(str(scroll_src), str(REMOTION_DIR / 'public' / 'images' / f'{slug}-fullpage-scroll.png'))
-        print(f'  ✅ Fullpage scroll already exists, copied to Remotion')
+        print(f'  ❌ Fullpage scroll capture failed — screenshot file not created. BLOCKING video render.')
+        print(f'     Run manually: cd {PROJECT_ROOT} && node scripts/capture-fullpage.cjs {slug}')
+        sys.exit(1)
     
     # Step 7: Render video
     print('\n[Step 7] Rendering video (this takes a few minutes)...')
