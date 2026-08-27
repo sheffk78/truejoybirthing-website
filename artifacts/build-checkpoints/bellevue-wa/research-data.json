@@ -1,0 +1,130 @@
+{
+  "city": "Bellevue",
+  "state": "WA",
+  "slug": "bellevue-wa",
+  "checkpoint_type": "build-stage-research",
+  "timestamp": "2026-08-26T13:00:00-06:00",
+  "population_tier": "mid-size (100K-500K) - Bellevue city pop ~150K, Seattle metro ~3.5M",
+  "minimum_requirements": {
+    "doulas": 2,
+    "hospitals": 1
+  },
+  "providers_found": {
+    "doulas_count": 12,
+    "hospitals_count": 2,
+    "birth_centers_count": 2
+  },
+  "doulas": [
+    {
+      "name": "Tatiana Ponomar",
+      "credential": "Certified Birth Doula",
+      "practice": "Service-area practice",
+      "url": "https://mydoula.net/",
+      "rating": "5★ (48 reviews)",
+      "services": ["Birth Doula", "Postpartum Doula", "VBAC Support", "Lactation Support"],
+      "notes": "DONA trained, very highly reviewed"
+    },
+    {
+      "name": "Mary Rudd",
+      "credential": "CD(DONA) - DONA & PALS Certified Birth Doula",
+      "practice": "Merry Doula",
+      "url": "http://www.merrydoula.com/",
+      "rating": "9 years experience",
+      "services": ["Birth Doula", "Postpartum Doula", "VBAC Support", "Water Birth", "Birth Photography"],
+      "notes": "Mother of four, BA Performing Arts"
+    },
+    {
+      "name": "Jennifer Moon",
+      "credential": "CBSDO - Certified Birth Doula",
+      "practice": "Moon Center Perinatal",
+      "url": "http://www.mooncenterperinatal.com/",
+      "rating": "5.0★ (3 reviews)",
+      "services": ["Birth Doula", "Lactation Support", "Childbirth Education"],
+      "notes": "Doctor of Osteopathic Medicine, accepts Medicaid/Carrot/Tricare, speaks Cantonese"
+    },
+    {
+      "name": "Laura Jawad",
+      "credential": "Certified Birth Doula & Personal Trainer",
+      "practice": "Laura Jawad Doula",
+      "url": "https://www.laurajawad.com/",
+      "rating": "PhD-trained research scientist",
+      "services": ["Birth Doula", "Personal Training"],
+      "notes": "Second career after academia, serves Seattle and surrounding cities"
+    },
+    {
+      "name": "Heng Ma",
+      "credential": "Birth & Postpartum Doula",
+      "practice": "Heng Ma Doula",
+      "url": "https://www.bornbir.com/heng-ma",
+      "rating": "5.0★ (1 review)",
+      "services": ["Birth Doula", "Postpartum Doula"],
+      "notes": "Based in Bellevue"
+    },
+    {
+      "name": "Amina Condel",
+      "credential": "Birth & Postpartum Doula",
+      "practice": "Amina Condel Doula",
+      "url": "https://www.bornbir.com/amina-condel",
+      "rating": "5.0★ (1 review)",
+      "services": ["Birth Doula", "Postpartum Doula"],
+      "notes": "Based in Bellevue"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Overlake Childbirth Center",
+      "address": "1035 116th Ave NE, Bellevue, WA 98004",
+      "url": "https://www.overlakehospital.org/services/childbirth-center",
+      "nicuLevel": "III",
+      "doulaPolicy": "Doulas welcome as part of care team",
+      "midwifeFriendly": true,
+      "waterBirth": "Labor tubs available; water birth not routinely offered",
+      "medicaid": true,
+      "lactation": true,
+      "privateRooms": true,
+      "notes": "CMS Birthing Friendly Designation, U.S. News High Performing in Maternity Care, TeamBirth philosophy, VBAC allowed"
+    },
+    {
+      "name": "EvergreenHealth Family Maternity Center",
+      "address": "12040 NE 128th Street, Kirkland, WA 98034",
+      "url": "https://www.evergreenhealth.com/family-maternity-center",
+      "nicuLevel": "III",
+      "doulaPolicy": "Doulas welcome as support persons",
+      "midwifeFriendly": true,
+      "waterBirth": "Not specified",
+      "medicaid": true,
+      "lactation": true,
+      "privateRooms": true,
+      "notes": "34 refurbished labor rooms, 27 remodeled after-delivery rooms, OB hospitalists 24/7, concierge-style meal service"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Eastside Birth Center",
+      "address": "14700 NE 8th St #115, Bellevue, WA 98007",
+      "url": "http://www.eastsidebirthcenter.com/",
+      "credential": "Freestanding Birth Center",
+      "services": ["Water Birth", "Midwifery Care"],
+      "notes": "Located in Bellevue, outdoor patio, natural birth setting"
+    },
+    {
+      "name": "Puget Sound Birth Center",
+      "address": "13128 Totem Lake Blvd NE, Kirkland, WA 98034",
+      "url": "https://www.birthcenter.com/",
+      "credential": "Freestanding Birth Center",
+      "services": ["Home Birth", "Birth Center Birth", "Water Birth"],
+      "notes": "Attends home and birth center births, about 15 min from Overlake"
+    }
+  ],
+  "data_verified": true,
+  "sources": [
+    "discoverdoulas.com/washington/bellevue/",
+    "bornbir.com/mary-rudd",
+    "bornbir.com/jennifer-moon",
+    "laurajawad.com/bellevue-doula-birth-resources/",
+    "overlakehospital.org/services/childbirth-center",
+    "evergreenhealth.com/family-maternity-center",
+    "birthcenter.com",
+    "fairiesandfrogs.com/9-freestanding-birth-centers-in-seattle/"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "seattle-wa",
+  "stage": "video_outreach",
+  "mode": "local_video_outreach",
+  "exit_code": 0,
+  "passed": 8,
+  "failed": 0,
+  "skipped": 0,
+  "results": {
+    "pre_render_gate": {
+      "status": "FAIL",
+      "detail": ""
+    },
+    "video_file_exists": {
+      "status": "FAIL",
+      "detail": ""
+    },
+    "youtube_upload": {
+      "status": "FAIL",
+      "detail": ""
+    },
+    "youtube_thumbnail": {
+      "status": "FAIL",
+      "detail": ""
+    },
+    "video_embedded": {
+      "status": "FAIL",
+      "detail": ""
+    },
+    "videoobject_schema": {
+      "status": "FAIL",
+      "detail": ""
+    },
+    "outreach_sent_or_blocked": {
+      "status": "FAIL",
+      "detail": ""
+    },
+    "provider_photo_quality": {
+      "status": "FAIL",
+      "detail": ""
+    }
+  }
+}

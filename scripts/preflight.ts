@@ -404,6 +404,10 @@ const IMAGE_HELPER_GATES: Record<string, string[]> = {
   "support-aspect": ["G26"],
   "cdn-match": ["G55"],
   "hero-silhouette": ["G8a"],
+  "provider-photo-exists": ["G60"],              // provider photos exist on disk (NEW — Aug 27, 2026)
+  "cross-city-contamination": ["G61"],          // no cross-city image contamination (NEW — Aug 27, 2026)
+  "hero-avif-staleness": ["G62"],               // hero AVIF not stale gradient (NEW — Aug 27, 2026)
+  "fullpage-scroll-screenshot": ["G63"],        // fullpage scroll screenshot exists (NEW — Aug 27, 2026)
 };
 
 const emitHelperGate = (check: string, slug: string) => {
@@ -437,10 +441,10 @@ const emitHelperGate = (check: string, slug: string) => {
 // slug per invocation; a full audit avoids duplicate cross-city noise here).
 if (targetSlug) {
   const stageImageChecks: Record<string, string[]> = {
-    build: ["hero-aspect", "og-photo-quality", "hero-silhouette"],
-    enrich: ["provider-credentials", "provider-descriptions", "hospital-dimensions", "service-area", "support-scene-quality"],
-    verify_deploy: ["hero-aspect", "og-photo-quality", "provider-descriptions", "hospital-dimensions", "service-area", "support-scene-quality", "yt-thumbnail-matches-hero"],
-    video_outreach: ["support-scene-quality", "yt-thumbnail-matches-hero"],
+    build: ["hero-aspect", "og-photo-quality", "hero-silhouette", "hero-avif-staleness"],
+    enrich: ["provider-credentials", "provider-descriptions", "hospital-dimensions", "service-area", "support-scene-quality", "provider-photo-exists", "cross-city-contamination"],
+    verify_deploy: ["hero-aspect", "og-photo-quality", "provider-descriptions", "hospital-dimensions", "service-area", "support-scene-quality", "yt-thumbnail-matches-hero", "provider-photo-exists", "cross-city-contamination", "hero-avif-staleness"],
+    video_outreach: ["support-scene-quality", "yt-thumbnail-matches-hero", "fullpage-scroll-screenshot", "provider-photo-exists", "cross-city-contamination"],
   };
   for (const check of stageImageChecks[stageArg ?? "build"] ?? []) {
     emitHelperGate(check, targetSlug);

@@ -49,16 +49,19 @@ STAGE_GATES = {
         "G41",  # Hero file size <=80KB
         "G42",  # Hero 600w srcset variant exists
         "G58",  # Hero has no black bars / letterboxing
+        "G62",  # Hero AVIF not stale gradient (NEW Aug 27)
     ],
     "enrich": [
         "G10",  # Provider descriptions are specific, not placeholders
-        "G19",  # Provider/hospital photos exist on disk, >=1KB
+        "G19",  # Provider/Hospital photos exist on disk, >=1KB
         "G20",  # Hospital/birth center thumbnails exist, >=1KB
         "G27",  # Provider credentials are specific
         "G35",  # Hospital thumbnails >=15KB, real photos
         "G39",  # No generic placeholder names
         "G57",  # No providers with empty photo field
         "G59",  # Hospital entries have website URLs
+        "G60",  # Provider photos exist on disk and are >2KB (NEW Aug 27)
+        "G61",  # No cross-city image contamination (NEW Aug 27)
         "P11",  # Hospital images are landscape, not square
         "A12",  # serviceArea is string array, not plain string
         "S6",   # Every provider has costRange field
@@ -78,6 +81,9 @@ STAGE_GATES = {
         "G54",  # Support scene not shared across cities
         "G55",  # No empty videoId in video-embeds.ts
         "G56",  # Hospital thumbnails not shared across cities
+        "G60",  # Provider photos exist on disk (NEW Aug 27)
+        "G61",  # No cross-city image contamination (NEW Aug 27)
+        "G63",  # Fullpage scroll screenshot exists (NEW Aug 27)
     ],
 }
 

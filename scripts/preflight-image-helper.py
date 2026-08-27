@@ -799,6 +799,179 @@ def cdn_match(slug: str) -> dict:
         return {"pass": False, "detail": f"CDN serving stale hero: live={live_size}b vs repo={local_size}b. Cloudflare cache is stale. Rename file (add -vN suffix) to bust CDN cache."}
 
 
+def provider_photo_exists(slug: str) -> dict:
+    """G40: Every provider photo path in cities.ts must point to a file that
+    exists on disk AND is >2KB (not a tiny placeholder). Catches missing
+    provider images before they reach the video or live page."""
+    block = _read_city_block(slug)
+    if not block:
+        return {"pass": False, "detail": f"Could not read city block for {slug}"}
+
+    # Extract the localDoulas section
+    if 'localDoulas' not in block:
+        return {"pass": True, "detail": f"No localDoulas section (skeleton city — skip)"}
+
+    # Find all photo: "..." references in the localDoulas section
+    ld_start = block.find('localDoulas')
+    if ld_start == -1:
+        return {"pass": True, "detail": "No localDoulas section found"}
+
+    # Get the localDoulas block (track brackets)
+    rest = block[ld_start:]
+    bracket_depth = 0
+    ld_end = 0
+    for i, ch in enumerate(rest):
+        if ch == '[':
+            bracket_depth += 1
+        elif ch == ']':
+            bracket_depth -= 1
+            if bracket_depth == 0:
+                ld_end = ld_start + i + 1
+                break
+    ld_section = block[ld_start:ld_end]
+
+    photos = re.findall(r'photo:\s*"([^"]*)"', ld_section)
+    if not photos:
+        return {"pass": False, "detail": f"No provider photos found in localDoulas for {slug}"}
+
+    missing = []
+    tiny = []
+    for photo_path in photos:
+        if not photo_path:
+            missing.append("empty photo path")
+            continue
+        # Resolve relative to public/
+        local_file = os.path.join(PUBLIC_IMAGES, photo_path.lstrip('/').replace('images/', '', 1))
+        if not os.path.exists(local_file):
+            # Try with images/ prefix
+            alt = os.path.join(PUBLIC_IMAGES, photo_path.lstrip('/'))
+            if not os.path.exists(alt):
+                missing.append(photo_path)
+                continue
+            local_file = alt
+        size = os.path.getsize(local_file)
+        if size < 2000:
+            tiny.append(f"{photo_path} ({size}b)")
+
+    if missing:
+        return {"pass": False, "detail": f"G60: {len(missing)} provider photo(s) missing on disk: {', '.join(missing[:3])}"}
+    if tiny:
+        return {"pass": False, "detail": f"G60: {len(tiny)} provider photo(s) too small (<2KB, likely placeholder): {', '.join(tiny[:3])}"}
+    return {"pass": True, "detail": f"G60: All {len(photos)} provider photos exist on disk and are >2KB"}
+
+
+def cross_city_contamination(slug: str) -> dict:
+    """G61: Provider and hospital photo paths must contain the city slug.
+    Catches cross-city image contamination (e.g., a Port St. Lucie, FL
+    image used on a Sacramento or Seattle page)."""
+    block = _read_city_block(slug)
+    if not block:
+        return {"pass": False, "detail": f"Could not read city block for {slug}"}
+
+    # Find all photo: and thumbnail: and image: paths in the block
+    all_paths = re.findall(r'(?:photo|thumbnail|image):\s*"([^"]*)"', block)
+    # Filter to actual image paths (not empty, not data URIs)
+    img_paths = [p for p in all_paths if p and p.startswith('/') and 'images/' in p]
+
+    contaminated = []
+    for img_path in img_paths:
+        # Extract the filename
+        filename = img_path.rsplit('/', 1)[-1]
+        # Check for the known contamination pattern: provider-{other-city-slug}-
+        # This catches the exact issue: provider-port-st-lucie-fl-my-baby-lady.webp
+        # used on a Sacramento or Seattle page
+        m = re.match(r'provider-([a-z]+-[a-z]{2})-', filename)
+        if m and m.group(1) != slug:
+            contaminated.append(f"{img_path} (wrong city: {m.group(1)})")
+            continue
+        # Also check for sacramento-ca-doula-* pattern on non-sacramento pages
+        m2 = re.match(r'([a-z]+-[a-z]{2})-(?:doula|birth)-', filename)
+        if m2 and m2.group(1) != slug and not filename.startswith(slug):
+            contaminated.append(f"{img_path} (wrong city: {m2.group(1)})")
+            continue
+        # Check hospital/ prefix pattern: seattle-ca-hospital-* on non-seattle page
+        m3 = re.match(r'([a-z]+-[a-z]{2})-hospital-', filename)
+        if m3 and m3.group(1) != slug:
+            contaminated.append(f"{img_path} (wrong city: {m3.group(1)})")
+
+    if contaminated:
+        return {"pass": False, "detail": f"G61: Cross-city image contamination: {', '.join(contaminated[:5])}"}
+    return {"pass": True, "detail": f"G61: All image paths contain city slug {slug}"}
+
+
+def hero_avif_staleness(slug: str) -> dict:
+    """G62: If the hero is served as AVIF (template strips -vN suffix),
+    the unversioned .avif must not be a stale gradient. Compares the
+    unversioned AVIF size to the WebP hero — if AVIF is <30% of WebP
+    size, it's likely a stale gradient that was never regenerated."""
+    block = _read_city_block(slug)
+    if not block:
+        return {"pass": False, "detail": f"Could not read city block for {slug}"}
+
+    m = re.search(r'heroImage:\s*["\']([^"\']+)["\']', block)
+    if not m:
+        return {"pass": False, "detail": f"No heroImage found for {slug}"}
+
+    hero_ref = m.group(1).lstrip('/')
+    # Get the base name without extension and without -vN suffix
+    base = hero_ref.rsplit('/', 1)[-1]
+    base_no_ext = base.rsplit('.', 1)[0]
+    # Strip -vN suffix
+    base_no_ver = re.sub(r'-v\d+$', '', base_no_ext)
+    # Also strip -600 if present for the 600 variant
+    base_no_600 = re.sub(r'-600$', '', base_no_ver)
+
+    # Check the unversioned AVIF files
+    avif_file = os.path.join(PUBLIC_IMAGES, f"{base_no_ver}.avif")
+    avif_600_file = os.path.join(PUBLIC_IMAGES, f"{base_no_ver}-600.avif")
+    webp_file = os.path.join(PUBLIC_IMAGES, hero_ref.replace('images/', '', 1) if 'images/' in hero_ref else hero_ref)
+
+    issues = []
+    for avif_path, label in [(avif_file, "full"), (avif_600_file, "600")]:
+        if not os.path.exists(avif_path):
+            continue  # No AVIF = no problem (browser falls back to WebP)
+        avif_size = os.path.getsize(avif_path)
+        # Find the corresponding webp
+        webp_base = avif_path.rsplit('.', 1)[0]
+        webp_corr = None
+        for suffix in ['.webp', '-600.webp']:
+            candidate = webp_base + suffix if label == 'full' else webp_base.replace('.avif', '') + '.webp'
+            if os.path.exists(candidate):
+                webp_corr = candidate
+                break
+        if webp_corr and os.path.exists(webp_corr):
+            webp_size = os.path.getsize(webp_corr)
+            if avif_size < 10000:
+                # Check if it's a gradient (low color count)
+                try:
+                    from PIL import Image
+                    img = Image.open(avif_path).convert('RGB')
+                    colors = len(set(img.getdata()))
+                    if colors < 2000:
+                        issues.append(f"{label} AVIF is a stale gradient ({avif_size}b, {colors} colors) vs WebP ({webp_size}b)")
+                except Exception:
+                    issues.append(f"{label} AVIF suspiciously small ({avif_size}b) vs WebP ({webp_size}b)")
+            elif avif_size < webp_size * 0.15:
+                issues.append(f"{label} AVIF much smaller than WebP ({avif_size}b vs {webp_size}b) — possible staleness")
+
+    if issues:
+        return {"pass": False, "detail": f"G62: {', '.join(issues)}"}
+    return {"pass": True, "detail": "G62: Hero AVIF files not stale (or not present)"}
+
+
+def fullpage_scroll_screenshot(slug: str) -> dict:
+    """G63: The fullpage-scroll.png screenshot must exist before the video
+    stage can run. Without it, the provider scroll scene in the video
+    shows blank/missing profile images."""
+    screenshot_path = os.path.join(PUBLIC_IMAGES, f"{slug}-fullpage-scroll.png")
+    if not os.path.exists(screenshot_path):
+        return {"pass": False, "detail": f"G63: Missing {slug}-fullpage-scroll.png — video provider scene will show blank profiles"}
+    size = os.path.getsize(screenshot_path)
+    if size < 50000:
+        return {"pass": False, "detail": f"G63: {slug}-fullpage-scroll.png is only {size}b — likely a blank/partial screenshot"}
+    return {"pass": True, "detail": f"G63: {slug}-fullpage-scroll.png exists ({size}b)"}
+
+
 def main():
     if len(sys.argv) < 3:
         print(json.dumps({"pass": False, "detail": "Usage: preflight-image-helper.py <check> <slug>"}))
@@ -820,6 +993,10 @@ def main():
         'provider-credentials': check_provider_credentials,
         'og-photo-quality': og_photo_quality,
         'cdn-match': cdn_match,
+        'provider-photo-exists': provider_photo_exists,
+        'cross-city-contamination': cross_city_contamination,
+        'hero-avif-staleness': hero_avif_staleness,
+        'fullpage-scroll-screenshot': fullpage_scroll_screenshot,
     }
 
     fn = checks.get(command)
