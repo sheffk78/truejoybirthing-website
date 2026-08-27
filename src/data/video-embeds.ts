@@ -293,10 +293,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-07-22T00:00:00-07:00",
   },
   "minneapolis-mn": {
-    videoId: "-iZ3Jeq34GU",
+    videoId: "ClrXNmLoSnQ",
     title: "Minneapolis Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and Minnesota Medicaid, all in under 4 minutes.",
-    duration: "PT3M54S",
+    duration: "PT2M59S",
     uploadDate: "2026-08-27T00:00:00-05:00",
   },
   "pittsburgh-pa": {
