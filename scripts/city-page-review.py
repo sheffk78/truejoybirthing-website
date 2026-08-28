@@ -67,14 +67,14 @@ OLLAMA_CLOUD_URL = "http://127.0.0.1:11500/v1/chat/completions"
 OLLAMA_CLOUD_KEY = "f31be38f651a4b14a68b4612ddd792c8.l4_WlHHgVPKeNXHd817VdaqP"
 
 
-def call_bedrock(prompt, timeout=180):
+def call_bedrock(prompt, timeout=300):
     """Call bedrock (Qwen 3.8 27B) via local Ollama API. Returns parsed JSON or None."""
     body = json.dumps({
         "model": "bedrock",
         "messages": [{"role": "user", "content": prompt}],
         "format": "json",
         "stream": False,
-        "options": {"temperature": 0.1, "num_ctx": 8192, "num_predict": 1024}
+        "options": {"temperature": 0.1, "num_ctx": 32768, "num_predict": 2048}
     }).encode()
     req = urllib.request.Request(OLLAMA_LOCAL_URL, data=body, method="POST")
     req.add_header("Content-Type", "application/json")
@@ -86,13 +86,13 @@ def call_bedrock(prompt, timeout=180):
     return json.loads(content), "bedrock", data.get("total_duration", 0) / 1e9
 
 
-def call_glm52(prompt, timeout=120):
+def call_glm52(prompt, timeout=300):
     """Call GLM-5.2 via ollama-cloud proxy. Returns parsed JSON or None."""
     body = json.dumps({
         "model": "glm-5.2",
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.1,
-        "max_tokens": 1024,
+        "max_tokens": 2048,
         "stream": False
     }).encode()
     req = urllib.request.Request(OLLAMA_CLOUD_URL, data=body, method="POST")
@@ -104,23 +104,69 @@ def call_glm52(prompt, timeout=120):
     return json.loads(content), "glm-5.2", data.get("usage", {}).get("total_tokens", 0)
 
 
+def extract_focused_city_data(slug):
+    """Extract only the review-relevant fields from cities.ts as JSON.
+    
+    Returns a compact JSON string (~3-4KB) with just the fields the LLM needs:
+    provider names, cost ranges, medicaidNote, culture, heroLocalDetail,
+    hospital preview, FAQ questions, and heroImage filename.
+    """
+    raw = extract_city_data(slug)
+    if not raw:
+        return None
+    
+    result = {"slug": slug}
+    
+    # String fields
+    for field in ['medicaidNote', 'culture', 'heroLocalDetail', 'heroImage']:
+        m = re.search(rf'{field}\s*:\s*"([^"]*)"', raw)
+        if m:
+            result[field] = m.group(1)[:400]
+    
+    # Provider names
+    providers = []
+    for pm in re.finditer(r'name:\s*"([^"]+)"', raw[:12000]):
+        providers.append(pm.group(1))
+    result['provider_names'] = providers[:15]
+    
+    # Cost ranges
+    costs = []
+    for cm in re.finditer(r'costRange:\s*"([^"]*)"', raw[:12000]):
+        costs.append(cm.group(1))
+    result['cost_ranges'] = costs[:15]
+    
+    # Hospital data
+    hospital_section = re.search(r'hospitalDetails\s*:\s*\[', raw)
+    result['has_hospital_data'] = bool(hospital_section)
+    if hospital_section:
+        hs = raw[hospital_section.start():hospital_section.start() + 3000]
+        result['hospital_preview'] = hs[:1500]
+    
+    # FAQs
+    faqs = re.findall(r'q:\s*"([^"]+)"', raw)
+    result['faq_count'] = len(faqs)
+    result['faq_questions'] = faqs[:5]
+    
+    return json.dumps(result, indent=2)
+
+
 def llm_review_city(slug, model="bedrock", verbose=False):
     """Run LLM judgment layer on city data quality."""
     # Read the review standard
     standard = STANDARD_PATH.read_text() if STANDARD_PATH.exists() else ""
     
-    # Extract city data block
-    city_data = extract_city_data(slug)
+    # Extract focused city data (only review-relevant fields, ~3-4KB)
+    city_data = extract_focused_city_data(slug)
     if not city_data:
         return {"error": f"Could not extract city data for {slug}", "model": model}
     
     prompt = f"""You are a quality reviewer for True Joy Birthing city pages. Review the city data below against the quality standard and return ONLY JSON (no other text).
 
 QUALITY STANDARD:
-{standard[:2000]}
+{standard[:1500]}
 
 CITY DATA ({slug}):
-{city_data[:3000]}
+{city_data}
 
 Review checklist:
 1. At least 3 providers with real business names (not "Doulas", "Resources", "Our Board")
@@ -216,21 +262,43 @@ def check_screenshot(slug):
 
 
 def extract_city_data(slug):
-    """Extract key city data from cities.ts — gets the full city block."""
+    """Extract key city data from cities.ts — gets the full city block.
+    
+    Uses a TS-aware brace matcher that skips braces inside strings and comments
+    so it doesn't stop prematurely on cities with braces in string values.
+    """
     try:
         text = CITIES_PATH.read_text()
         pattern = rf'"{re.escape(slug)}":\s*\{{'
         match = re.search(pattern, text)
         if not match:
             return None
-        # Find the matching closing brace by counting brace depth
+        # Find the matching closing brace using a string-aware brace counter
         start = match.end() - 1  # include opening brace
         depth = 0
+        in_string = False
+        string_char = None
+        escaped = False
         end = start
-        for i in range(start, min(start + 20000, len(text))):
-            if text[i] == '{':
+        for i in range(start, min(start + 100000, len(text))):
+            ch = text[i]
+            if escaped:
+                escaped = False
+                continue
+            if ch == '\\':
+                escaped = True
+                continue
+            if in_string:
+                if ch == string_char:
+                    in_string = False
+                continue
+            if ch == '"' or ch == "'":
+                in_string = True
+                string_char = ch
+                continue
+            if ch == '{':
                 depth += 1
-            elif text[i] == '}':
+            elif ch == '}':
                 depth -= 1
                 if depth == 0:
                     end = i + 1
