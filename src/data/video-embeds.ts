@@ -98,7 +98,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-15T00:00:00-06:00",
   },
   "norfolk-va": {
-    videoId: "pcnqCCmxZlo",
+    videoId: "zoR8sFFnX_E",
     title: "Norfolk Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and Virginia Medicaid, all in under 4 minutes.",
     duration: "PT3M17S",

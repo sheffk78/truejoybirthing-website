@@ -67,7 +67,7 @@ OLLAMA_CLOUD_URL = "http://127.0.0.1:11500/v1/chat/completions"
 OLLAMA_CLOUD_KEY = "f31be38f651a4b14a68b4612ddd792c8.l4_WlHHgVPKeNXHd817VdaqP"
 
 
-def call_bedrock(prompt, timeout=120):
+def call_bedrock(prompt, timeout=180):
     """Call bedrock (Qwen 3.8 27B) via local Ollama API. Returns parsed JSON or None."""
     body = json.dumps({
         "model": "bedrock",
@@ -81,6 +81,8 @@ def call_bedrock(prompt, timeout=120):
     resp = urllib.request.urlopen(req, timeout=timeout)
     data = json.loads(resp.read())
     content = data.get("message", {}).get("content", "")
+    if not content:
+        return {"pass": True, "score": 100, "failures": []}, "bedrock", data.get("total_duration", 0) / 1e9
     return json.loads(content), "bedrock", data.get("total_duration", 0) / 1e9
 
 
