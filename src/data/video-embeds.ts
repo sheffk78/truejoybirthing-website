@@ -1710,4 +1710,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: 180,
   },
 
+  "mesa-az": {
+    videoId: "PENDING",
+    title: "Mesa Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT3M00S",
+    uploadDate: "2026-06-24T00:00:00-06:00",
+  },
 };
