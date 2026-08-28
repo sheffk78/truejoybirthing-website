@@ -1117,7 +1117,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
   "oceanside-ca": {
-    videoId: "De1X1UgAFRQ",
+    videoId: "Bp6fv-NpoMs",
     title: "Oceanside CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
     description: "Watch the full city guide — 3 hospitals, a birth center, 6 doulas, costs, and California Medi-Cal coverage, all in under 5 minutes.",
     duration: "PT5M12S",
