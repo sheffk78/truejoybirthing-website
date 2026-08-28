@@ -114,13 +114,13 @@ def llm_review_city(slug, model="bedrock", verbose=False):
     if not city_data:
         return {"error": f"Could not extract city data for {slug}", "model": model}
     
-    prompt = f"""You are a quality reviewer for True Joy Birthing city pages. Review the city data below against the quality standard and return JSON only.
+    prompt = f"""You are a quality reviewer for True Joy Birthing city pages. Review the city data below against the quality standard and return ONLY JSON (no other text).
 
 QUALITY STANDARD:
-{standard[:3000]}
+{standard[:2000]}
 
 CITY DATA ({slug}):
-{city_data[:4000]}
+{city_data[:3000]}
 
 Review checklist:
 1. At least 3 providers with real business names (not "Doulas", "Resources", "Our Board")
@@ -132,7 +132,7 @@ Review checklist:
 7. heroLocalDetail mentions real landmarks/neighborhoods in the city
 8. No cross-city contamination (provider names from other cities)
 
-Return JSON: {{"pass": true/false, "score": 0-100, "failures": ["specific issue 1", "specific issue 2"]}}
+Return ONLY this JSON format: {{"pass": true, "score": 95, "failures": ["issue1", "issue2"]}}
 """
 
     try:
@@ -216,15 +216,26 @@ def check_screenshot(slug):
 
 
 def extract_city_data(slug):
-    """Extract key city data from cities.ts."""
+    """Extract key city data from cities.ts — gets the full city block."""
     try:
         text = CITIES_PATH.read_text()
         pattern = rf'"{re.escape(slug)}":\s*\{{'
         match = re.search(pattern, text)
         if not match:
             return None
-        block = text[match.start():match.start() + 5000]
-        return block
+        # Find the matching closing brace by counting brace depth
+        start = match.end() - 1  # include opening brace
+        depth = 0
+        end = start
+        for i in range(start, min(start + 20000, len(text))):
+            if text[i] == '{':
+                depth += 1
+            elif text[i] == '}':
+                depth -= 1
+                if depth == 0:
+                    end = i + 1
+                    break
+        return text[start:end]
     except:
         return None
 
