@@ -1,9 +1,9 @@
 {
   "slug": "mesa-az",
-  "stage": "build",
+  "stage": "enrich",
   "mode": "stage_emission",
   "exit_code": 0,
-  "passed": 14,
+  "passed": 20,
   "failed": 0,
   "skipped": 0,
   "results": {
@@ -43,25 +43,49 @@
       "status": "PASS",
       "detail": "mesa-az-birth-doula-hero-v2.webp is a real photograph (high color count)"
     },
-    "G25": {
+    "G27": {
       "status": "PASS",
-      "detail": "Hero image is 3:2 (1200x800, ratio=1.50)"
+      "detail": "All 4 providers have specific credentials"
     },
-    "G29": {
+    "G10": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=38846) and locked Pattern B composition"
+      "detail": "All 4 providers have specific descriptions"
     },
-    "G35": {
+    "G39": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=38846) and locked Pattern B composition"
+      "detail": "All 4 providers have specific descriptions"
     },
-    "G8a": {
+    "G19": {
       "status": "PASS",
-      "detail": "Silhouette confirmed (center=41.9 < top=197.4, top_colors=10400)"
+      "detail": "All facility images are landscape, >=400x300"
     },
-    "G62": {
+    "G20": {
       "status": "PASS",
-      "detail": "G62: Hero AVIF files not stale (or not present)"
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "P11": {
+      "status": "PASS",
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "A12": {
+      "status": "PASS",
+      "detail": "All serviceArea fields are string arrays"
+    },
+    "G24": {
+      "status": "PASS",
+      "detail": "Support scene is unique to this city"
+    },
+    "G54": {
+      "status": "PASS",
+      "detail": "Support scene is unique to this city"
+    },
+    "G60": {
+      "status": "PASS",
+      "detail": "G60: All 4 provider photos exist on disk and are >2KB"
+    },
+    "G61": {
+      "status": "PASS",
+      "detail": "G61: All image paths contain city slug mesa-az"
     }
   }
 }

@@ -1,0 +1,23 @@
+{
+  "slug": "oceanside-ca",
+  "stage": "build",
+  "mode": "local_integrity",
+  "exit_code": 1,
+  "passed": 0,
+  "failed": 1,
+  "skipped": 0,
+  "results": {
+    "LOCAL_heroImage": {
+      "status": "PASS",
+      "detail": "/images/oceanside-ca-birth-doula-skyline-rva.webp"
+    },
+    "LOCAL_ogImage": {
+      "status": "PASS",
+      "detail": "https://truejoybirthing.com/images/og-city-oceanside-ca.webp"
+    },
+    "LOCAL_supportSceneImage": {
+      "status": "FAIL",
+      "detail": "wrong-city reference: /images/oceanside-support-scene.webp"
+    }
+  }
+}

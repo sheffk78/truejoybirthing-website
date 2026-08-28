@@ -1,0 +1,23 @@
+{
+  "slug": "glendale-ca",
+  "stage": "build",
+  "mode": "local_integrity",
+  "exit_code": 1,
+  "passed": 0,
+  "failed": 1,
+  "skipped": 0,
+  "results": {
+    "LOCAL_heroImage": {
+      "status": "PASS",
+      "detail": "/images/glendale-ca-birth-doula-skyline.webp"
+    },
+    "LOCAL_ogImage": {
+      "status": "PASS",
+      "detail": "https://truejoybirthing.com/images/og-city-glendale-ca-v2.webp"
+    },
+    "LOCAL_supportSceneImage": {
+      "status": "FAIL",
+      "detail": "wrong-city reference: /images/glendale-support-scene.webp"
+    }
+  }
+}
