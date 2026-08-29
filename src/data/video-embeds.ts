@@ -384,11 +384,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-08-25T00:00:00-06:00",
   },
   "atlanta-ga": {
-    videoId: "Zu4JLkgYfEY",
+    videoId: "chK-m3JB3-4",
     title: "Atlanta Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and Georgia Medicaid, all in under 4 minutes.",
     duration: "PT4M01S",
-    uploadDate: "2026-06-26T00:00:00-06:00",
+    uploadDate: "2026-08-29T00:00:00-06:00",
   },
   "baltimore-md": {
     videoId: "CVb6u01Okqs",

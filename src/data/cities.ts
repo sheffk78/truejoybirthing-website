@@ -864,10 +864,17 @@ export const cities: Record<string, CityData> = {
     slug: "atlanta-ga" ,
     costLow: 1000,
     costHigh: 3000,
+    lat: 33.7490,
+    lng: -84.3880,
     heroImage: "/images/atlanta-ga-birth-doula-skyline-v2.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-atlanta-ga-v2.webp",
     supportSceneImage: "/images/atlanta-ga-birth-doula-support-v2.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Atlanta: Georgia birth support and doula care",
+    midwifeInfo: {
+      paragraph: "Atlanta has a robust midwifery community spanning hospitals, birth centers, and home birth. Certified Nurse-Midwives (CNMs) practice at Emory University Hospital Midtown, Northside Hospital Atlanta, and Piedmont Atlanta Hospital. Certified Professional Midwives (CPMs) attend home births and birth center births across the metro area, including at Intown Birth Center and Atlanta Birth Center. Georgia midwives serve families across all birth settings, from hospital CNM care to out-of-hospital CPM-led home births." ,
+      credentialTypes: " and CPMs" ,
+      credentialDetail: "In Georgia, Certified Nurse-Midwives (CNMs) are licensed as Advanced Practice Registered Nurses and practice in hospitals and birth centers across Atlanta. Certified Professional Midwives (CPMs) are certified through NARM and attend home births and out-of-hospital births throughout the metro area under Georgia's midwifery regulations." ,
+    },
     shelbiServesHere: false,
     localDoulas: [
       { name: "Atlanta Doula Services and Birth Classes" , credential: "Birth Doula" , practice: "Atlanta Doula Services and Birth Classes" , url: "https://theatlantadoula.com/" , photo: "/images/providers/atlanta-ga-doula-services.webp", description: "As your seasoned Atlanta Doula team, we have the knowledge and expertise to help you experience pregnancy, birth, and postpartum with confidence.", costRange: "$1,000–$3,000", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Atlanta, GA"] },
