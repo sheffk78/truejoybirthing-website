@@ -1,5 +1,5 @@
 {
-  "slug": "mesa-az",
+  "slug": "oceanside-ca",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
   "exit_code": 0,
@@ -9,23 +9,23 @@
   "results": {
     "pre_render_gate": {
       "status": "PASS",
-      "detail": "scene data exists at remotion/src/data/mesa-az-data.ts"
+      "detail": "scene data exists at remotion/src/data/oceanside-ca-data.ts"
     },
     "video_file_exists": {
       "status": "PASS",
-      "detail": "video file 23.5MB >10MB"
+      "detail": "video file 22.1MB >10MB"
     },
     "youtube_upload": {
       "status": "PASS",
-      "detail": "videoId Gu_75qk9Jdw present in video-embeds.ts"
+      "detail": "videoId Bp6fv-NpoMs present in video-embeds.ts"
     },
     "youtube_thumbnail": {
       "status": "PASS",
-      "detail": "thumbnail present locally (1097KB) and YouTube returns 170KB"
+      "detail": "thumbnail present locally (815KB) and YouTube returns 121KB"
     },
     "video_embedded": {
       "status": "PASS",
-      "detail": "embed found (vid Gu_75qk9Jdw) on live page"
+      "detail": "embed found (vid Bp6fv-NpoMs) on live page"
     },
     "videoobject_schema": {
       "status": "PASS",
@@ -37,7 +37,7 @@
     },
     "provider_photo_quality": {
       "status": "PASS",
-      "detail": "all 4 provider photos are real images (>5KB, >100 colors)"
+      "detail": "all 6 provider photos are real images (>5KB, >100 colors)"
     }
   }
 }

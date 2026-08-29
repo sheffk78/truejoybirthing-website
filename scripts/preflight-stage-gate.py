@@ -603,7 +603,17 @@ def main():
             "failed": result.get("failed", 0),
             "skipped": result.get("skipped", 0),
             "results": {
-                k: {"status": v.get("status", "FAIL"), "detail": v.get("detail", "")}
+                k: (
+                    # Local integrity gates emit {"pass": bool/None, "message": str};
+                    # stage-emitted gates emit {"status", "detail"}. Normalize both
+                    # so the artifact always has a truthful status field.
+                    {"status": v.get("status", "FAIL"), "detail": v.get("detail", "")}
+                    if "status" in v
+                    else {
+                        "status": "PASS" if v.get("pass") is True else ("SKIP" if v.get("pass") is None else "FAIL"),
+                        "detail": v.get("message", ""),
+                    }
+                )
                 for k, v in (result.get("results") or {}).items()
             },
         }
