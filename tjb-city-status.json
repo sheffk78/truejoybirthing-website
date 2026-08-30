@@ -748,13 +748,15 @@
     "vancouver-wa": {
       "has_video": true,
       "has_outreach": true,
-      "completed_at": "2026-07-10T16:39:13Z",
-      "videoId": "z4YlQEkJzRo",
-      "video_id": "z4YlQEkJzRo",
-      "video_url": "https://youtu.be/z4YlQEkJzRo",
-      "video_uploaded_at": "2026-07-09T16:16:09.695451+00:00",
+      "completed_at": "2026-08-30T20:23:27.308250+00:00",
+      "videoId": "iohcGUZMPWU",
+      "video_id": "iohcGUZMPWU",
+      "video_url": "https://youtu.be/iohcGUZMPWU",
+      "video_uploaded_at": "2026-08-30T20:23:27.308250+00:00",
       "stage": "complete",
-      "blocked_reason": null
+      "blocked_reason": null,
+      "outreach_sent_at": "2026-08-30T20:23:27.308250+00:00",
+      "outreach_provider_count": 15
     },
     "waco-tx": {
       "has_video": true,
