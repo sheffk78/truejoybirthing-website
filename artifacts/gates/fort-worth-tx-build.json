@@ -1,0 +1,67 @@
+{
+  "slug": "fort-worth-tx",
+  "stage": "build",
+  "mode": "stage_emission",
+  "exit_code": 0,
+  "passed": 14,
+  "failed": 0,
+  "skipped": 0,
+  "results": {
+    "S1": {
+      "status": "PASS",
+      "detail": "enableBlogResources = true"
+    },
+    "S2": {
+      "status": "PASS",
+      "detail": "OG image og-city-fort-worth-tx-v3.webp (48642 bytes \u2265 30KB)"
+    },
+    "S4": {
+      "status": "PASS",
+      "detail": "Required fields present"
+    },
+    "S6": {
+      "status": "PASS",
+      "detail": "publishedDate = \"2026-08-06\""
+    },
+    "S7": {
+      "status": "PASS",
+      "detail": "medicaidNote starts correctly"
+    },
+    "S8": {
+      "status": "PASS",
+      "detail": "No \"Contact for pricing\""
+    },
+    "S3": {
+      "status": "PASS",
+      "detail": "npm run build exited 0"
+    },
+    "S5": {
+      "status": "PASS",
+      "detail": "No standalone 'Free Birth Plan' in rendered HTML"
+    },
+    "G8": {
+      "status": "PASS",
+      "detail": "fort-worth-tx-birth-doula-hero-v7.webp is a real photograph (high color count)"
+    },
+    "G25": {
+      "status": "PASS",
+      "detail": "Hero image is 3:2 (864x576, ratio=1.50)"
+    },
+    "G29": {
+      "status": "PASS",
+      "detail": "OG has photo content (full_unique_colors=23855) and locked Pattern B composition"
+    },
+    "G35": {
+      "status": "PASS",
+      "detail": "OG has photo content (full_unique_colors=23855) and locked Pattern B composition"
+    },
+    "G8a": {
+      "status": "PASS",
+      "detail": "Silhouette confirmed (center=93.5 < top=200.3, top_colors=7580)"
+    },
+    "G62": {
+      "status": "PASS",
+      "detail": "G62: Hero AVIF files not stale (or not present)"
+    }
+  }
+}
