@@ -1,0 +1,91 @@
+{
+  "slug": "charleston-sc",
+  "stage": "enrich",
+  "mode": "stage_emission",
+  "exit_code": 0,
+  "passed": 20,
+  "failed": 0,
+  "skipped": 0,
+  "results": {
+    "S1": {
+      "status": "PASS",
+      "detail": "enableBlogResources = true"
+    },
+    "S2": {
+      "status": "PASS",
+      "detail": "OG image og-city-charleston-sc.webp (54756 bytes \u2265 30KB)"
+    },
+    "S4": {
+      "status": "PASS",
+      "detail": "Required fields present"
+    },
+    "S6": {
+      "status": "PASS",
+      "detail": "publishedDate = \"2026-06-22\""
+    },
+    "S7": {
+      "status": "PASS",
+      "detail": "medicaidNote starts correctly"
+    },
+    "S8": {
+      "status": "PASS",
+      "detail": "No \"Contact for pricing\""
+    },
+    "S3": {
+      "status": "PASS",
+      "detail": "npm run build exited 0"
+    },
+    "S5": {
+      "status": "PASS",
+      "detail": "No standalone 'Free Birth Plan' in rendered HTML"
+    },
+    "G8": {
+      "status": "PASS",
+      "detail": "charleston-sc-birth-doula-skyline-v4.webp is a real photograph (high color count)"
+    },
+    "G27": {
+      "status": "PASS",
+      "detail": "All 4 providers have specific credentials"
+    },
+    "G10": {
+      "status": "PASS",
+      "detail": "All 4 providers have specific descriptions"
+    },
+    "G39": {
+      "status": "PASS",
+      "detail": "All 4 providers have specific descriptions"
+    },
+    "G19": {
+      "status": "PASS",
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "G20": {
+      "status": "PASS",
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "P11": {
+      "status": "PASS",
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "A12": {
+      "status": "PASS",
+      "detail": "All serviceArea fields are string arrays"
+    },
+    "G24": {
+      "status": "PASS",
+      "detail": "Support scene is unique to this city"
+    },
+    "G54": {
+      "status": "PASS",
+      "detail": "Support scene is unique to this city"
+    },
+    "G60": {
+      "status": "PASS",
+      "detail": "G60: All 4 provider photos exist on disk and are >2KB"
+    },
+    "G61": {
+      "status": "PASS",
+      "detail": "G61: All image paths contain city slug charleston-sc"
+    }
+  }
+}
