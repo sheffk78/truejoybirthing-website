@@ -1,0 +1,43 @@
+{
+  "slug": "baltimore-md",
+  "stage": "video_outreach",
+  "mode": "local_video_outreach",
+  "exit_code": 0,
+  "passed": 8,
+  "failed": 0,
+  "skipped": 0,
+  "results": {
+    "pre_render_gate": {
+      "status": "PASS",
+      "detail": "scene data exists at remotion/src/data/baltimore-md-data.ts"
+    },
+    "video_file_exists": {
+      "status": "PASS",
+      "detail": "video file 17.9MB >10MB"
+    },
+    "youtube_upload": {
+      "status": "PASS",
+      "detail": "videoId SAwMknxkVF0 present in video-embeds.ts"
+    },
+    "youtube_thumbnail": {
+      "status": "PASS",
+      "detail": "thumbnail present locally (748KB) and YouTube returns 101KB"
+    },
+    "video_embedded": {
+      "status": "PASS",
+      "detail": "embed found (vid SAwMknxkVF0) on live page"
+    },
+    "videoobject_schema": {
+      "status": "PASS",
+      "detail": "VideoObject+duration present on live page"
+    },
+    "outreach_sent_or_blocked": {
+      "status": "PASS",
+      "detail": "authorized \u2014 Jeff approved outreach resumption Aug 2026. Ready to send."
+    },
+    "provider_photo_quality": {
+      "status": "PASS",
+      "detail": "all 4 provider photos are real images (>5KB, >100 colors)"
+    }
+  }
+}
