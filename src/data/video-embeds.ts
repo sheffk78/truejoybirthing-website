@@ -183,11 +183,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-19T00:00:00-06:00",
   },
   "san-bernardino-ca": {
-    videoId: "jnLMhBnbZ54",
+    videoId: "VeJoXWt_Sy4",
     title: "San Bernardino Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
     description: "Watch the full city guide — 4 hospitals, 13 doulas and midwives, 1 birth center, costs, and California Medi-Cal, all in under 5 minutes.",
     duration: "PT4M12S",
-    uploadDate: "2026-07-21T00:00:00-07:00",
+    uploadDate: "2026-08-30T00:00:00-07:00",
     chapters: [
       [0, "Welcome to San Bernardino"],
       [16, "What This Video Covers"],
