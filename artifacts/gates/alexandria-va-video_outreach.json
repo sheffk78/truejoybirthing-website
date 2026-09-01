@@ -21,7 +21,7 @@
     },
     "youtube_thumbnail": {
       "status": "PASS",
-      "detail": "thumbnail present locally (787KB) and YouTube returns 115KB"
+      "detail": "thumbnail present locally (768KB) and YouTube returns 115KB"
     },
     "video_embedded": {
       "status": "PASS",
@@ -37,7 +37,7 @@
     },
     "provider_photo_quality": {
       "status": "PASS",
-      "detail": "all 5 provider photos are real images (>5KB, >100 colors)"
+      "detail": "all 9 provider photos are real images (>5KB, >100 colors)"
     }
   }
 }
