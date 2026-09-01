@@ -1,0 +1,43 @@
+{
+  "slug": "arlington-tx",
+  "stage": "video_outreach",
+  "mode": "local_video_outreach",
+  "exit_code": 0,
+  "passed": 8,
+  "failed": 0,
+  "skipped": 0,
+  "results": {
+    "pre_render_gate": {
+      "status": "PASS",
+      "detail": "scene data exists at remotion/src/data/arlington-tx-data.ts"
+    },
+    "video_file_exists": {
+      "status": "PASS",
+      "detail": "local mp4 cleaned post-upload (expected; YouTube upload + live embed verified)"
+    },
+    "youtube_upload": {
+      "status": "PASS",
+      "detail": "videoId 9U9P3biXry8 present in video-embeds.ts"
+    },
+    "youtube_thumbnail": {
+      "status": "PASS",
+      "detail": "thumbnail present locally (732KB) and YouTube returns 98KB"
+    },
+    "video_embedded": {
+      "status": "PASS",
+      "detail": "embed found (vid 9U9P3biXry8) on live page"
+    },
+    "videoobject_schema": {
+      "status": "PASS",
+      "detail": "VideoObject+duration present on live page"
+    },
+    "outreach_sent_or_blocked": {
+      "status": "PASS",
+      "detail": "authorized \u2014 Jeff approved outreach resumption Aug 2026. Ready to send."
+    },
+    "provider_photo_quality": {
+      "status": "PASS",
+      "detail": "all 7 provider photos are real images (>5KB, >100 colors)"
+    }
+  }
+}

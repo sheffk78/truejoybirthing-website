@@ -203,11 +203,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
   "beaumont-tx": {
-    videoId: "hyIFsQbpmxQ",
+    videoId: "d1cMuPlEGeQ",
     title: "Beaumont TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — 6 doulas and midwives, 2 hospitals, 1 birth center, costs, and Texas Medicaid (SB 750 covers doula care), all in about 5 minutes.",
-    duration: "PT5M27S",
-    uploadDate: "2026-07-17T00:00:00-06:00",
+    duration: "PT5M20S",
+    uploadDate: "2026-09-01T00:00:00-06:00",
   },
   "waco-tx": {
     videoId: "EoYi9-wKUy4",
@@ -232,11 +232,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-22T00:00:00-07:00",
   },
   "alameda-ca": {
-    videoId: "vKDB5B8bDKY",
+    videoId: "5c6gcH2iZM0",
     title: "Alameda CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
     description: "Watch the full city guide — Alameda doulas and midwives, hospitals, costs, and California Medi-Cal (doula care covered since Jan 2023), all in under 5 minutes.",
     duration: "PT5M59S",
-    uploadDate: "2026-08-03T00:00:00-07:00",
+    uploadDate: "2026-09-01T00:00:00-07:00",
   },
   "alhambra-ca": {
     videoId: "SPfd_sX3N10",
