@@ -1,0 +1,43 @@
+{
+  "slug": "carrollton-tx",
+  "stage": "video_outreach",
+  "mode": "local_video_outreach",
+  "exit_code": 1,
+  "passed": 6,
+  "failed": 2,
+  "skipped": 0,
+  "results": {
+    "pre_render_gate": {
+      "status": "PASS",
+      "detail": "scene data exists at remotion/src/data/carrollton-tx-data.ts"
+    },
+    "video_file_exists": {
+      "status": "PASS",
+      "detail": "video file 21.6MB >10MB"
+    },
+    "youtube_upload": {
+      "status": "PASS",
+      "detail": "videoId DLfues9uQ54 present in video-embeds.ts"
+    },
+    "youtube_thumbnail": {
+      "status": "PASS",
+      "detail": "thumbnail present locally (774KB) and YouTube returns 118KB"
+    },
+    "video_embedded": {
+      "status": "FAIL",
+      "detail": "videoId DLfues9uQ54 not found on live page"
+    },
+    "videoobject_schema": {
+      "status": "PASS",
+      "detail": "VideoObject+duration present on live page"
+    },
+    "outreach_sent_or_blocked": {
+      "status": "PASS",
+      "detail": "authorized \u2014 Jeff approved outreach resumption Aug 2026. Ready to send."
+    },
+    "provider_photo_quality": {
+      "status": "FAIL",
+      "detail": "2/9 provider photos are placeholders/initials: /images/provider-carrollton-tx-great-expectations-doulas.webp: color check failed: cannot identify image file '/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/provider-carrollton-tx-great-expectations-doulas.webp'; /images/misty-gigler.webp: 4410B < 5KB (likely initials placeholder); /images/serenity-midwifery.webp: 2848B < 5KB (likely initials placeholder)"
+    }
+  }
+}
