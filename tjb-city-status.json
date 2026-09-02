@@ -194,18 +194,17 @@
     "carrollton-tx": {
       "has_video": true,
       "has_outreach": true,
-      "completed_at": "2026-07-10T14:17:57Z",
-      "videoId": "oYtBdiECrgo",
-      "video_id": "oYtBdiECrgo",
-      "video_url": "https://youtu.be/oYtBdiECrgo",
-      "video_uploaded_at": "2026-07-09T16:16:09.695464+00:00",
-      "gate_fix_completed_at": "2026-07-10T12:02:22Z",
+      "completed_at": "2026-09-02T20:12:10.005926Z",
+      "videoId": "DLfues9uQ54",
+      "video_id": "DLfues9uQ54",
+      "video_url": "https://youtu.be/DLfues9uQ54",
+      "video_uploaded_at": "2026-09-02T20:12:10.006109+00:00",
       "deployed_at": "2026-07-10T08:01:46Z",
-      "outreach_deferred": true,
-      "outreach_deferred_reason": "Quiet hours (6 AM MT). Will send on next daytime run.",
       "deploy_verified": true,
       "stage": "complete",
-      "blocked_reason": null
+      "blocked_reason": null,
+      "outreach_deferred": false,
+      "gate_fix_completed_at": "2026-09-02T20:12:10.006111Z"
     },
     "charleston-sc": {
       "has_video": true,

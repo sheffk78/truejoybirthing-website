@@ -216,7 +216,6 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT5M8S",
     uploadDate: "2026-07-27T00:00:00-06:00",
   },
-  // mckinney-tx video removed: gradient-only opening, missing hero image. Needs re-render.
   "conroe-tx": {
     videoId: "u2cdmsGfuAc",
     title: "Conroe TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -802,7 +801,26 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   "boston-ma": { videoId: "J-S4IjKwADs", uploadDate: "2026-07-26", duration: "PT3M34S" } as any,
   "san-diego-ca": { videoId: "CtAJ83EaKUQ", uploadDate: "2026-07-24", duration: "PT2M44S" } as any,
   "st-augustine-fl": { videoId: "KXaLgwuuiwo", uploadDate: "2026-07-24", duration: "PT5M35S" } as any,
-  "mckinney-tx": { videoId: "eCk4ueYOJ6c", uploadDate: "2026-07-29", duration: "PT4M43S" },
+  "mckinney-tx": {
+    videoId: "S7i4UCEqoec",
+    title: "McKinney TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and Texas Medicaid, all in under 5 minutes.",
+    duration: "PT4M43S",
+    uploadDate: "2026-09-02",
+    chapters: [
+      [0, "Welcome to McKinney"],
+      [12, "What This Guide Covers"],
+      [30, "Baylor Scott & White McKinney"],
+      [64, "Medical City McKinney"],
+      [95, "Allen Birthing Center"],
+      [120, "Christian Cade"],
+      [151, "Mya Daniel"],
+      [183, "The True Joy Birthing App"],
+      [205, "Cost Reality ($1,500-$2,500)"],
+      [234, "Insurance & Texas Medicaid"],
+      [268, "Your Next Step"],
+    ],
+  },
   "cleveland-oh": {
     videoId: "xF0hWu4AAuY",
     title: "Cleveland Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
