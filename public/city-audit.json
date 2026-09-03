@@ -3453,7 +3453,13 @@
     "url": "https://truejoybirthing.com/birth-support/san-francisco-ca/",
     "built": true,
     "build_status": "built",
-    "population": 0
+    "population": 0,
+    "has_video": true,
+    "video_id": "xggWhsQfrUc",
+    "video_url": "https://youtu.be/xggWhsQfrUc",
+    "has_outreach": true,
+    "video_embedded": true,
+    "outreach_sent": true
   },
   {
     "slug": "san-jose-ca",
