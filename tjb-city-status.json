@@ -973,11 +973,14 @@
     "stamford-ct": {
       "created_at": "2026-07-13T23:05:54Z",
       "has_outreach": true,
-      "outreach_notes": "3 already sent (Allison, Birth Partners, Bethany). 2 new sends: Theresa Davis (terianndavis@yahoo.com), MothersCare (info@motherscaredoula.com).",
+      "outreach_notes": "Re-outreach (video_outreach stage): 4 follow-up emails sent (Theresa Davis, Allison Petrides, Birth Partners Doulas, MothersCare). Bethany Colley BLOCKED (contact-form-only, registered in doula tracker). New video KPUMljW6Q9o uploaded and embedded, old video 97buu-Ygq3Q set to unlisted.",
       "completed_at": "2026-07-14T01:13:44Z",
       "has_video": true,
       "stage": "complete",
-      "blocked_reason": null
+      "blocked_reason": null,
+      "outreach_sent_count": 4,
+      "outreach_blocked_count": 1,
+      "outreach_blocked_reason": null
     },
     "norwalk-ct": {
       "created_at": "2026-07-14T01:41:22Z",
