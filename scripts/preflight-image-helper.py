@@ -754,6 +754,136 @@ def og_photo_quality(slug: str) -> dict:
         return {"pass": True, "detail": f"Could not analyze OG image: {e}"}
 
 
+def _og_file_for_slug(slug: str):
+    """Resolve the OG file for a slug: prefer the ogImage field from cities.ts,
+    fall back to the highest -vN variant on disk."""
+    block = _read_city_block(slug)
+    if block:
+        m = re.search(r'ogImage:\s*"([^"]+)"', block)
+        if m:
+            name = m.group(1).rstrip('/').split('/')[-1]
+            p = os.path.join(PUBLIC_IMAGES, name)
+            if os.path.exists(p):
+                return p
+    pattern = re.compile(rf'^og-city-{re.escape(slug)}(-v\d+)?\.webp$')
+    files = [f for f in os.listdir(PUBLIC_IMAGES) if pattern.match(f)]
+    if not files:
+        return None
+    files.sort(key=lambda f: int(re.search(r'-v(\d+)', f).group(1)) if re.search(r'-v(\d+)', f) else 0, reverse=True)
+    return os.path.join(PUBLIC_IMAGES, files[0])
+
+
+def og_template_compliance(slug: str) -> dict:
+    """G64: OG card must match the canonical Pattern B template composition.
+
+    Kenneth directive 2026-09-03 (McKinney v3 shipped off-template for 6 weeks).
+    Mechanical pixel checks on the rendered card:
+      1. Rose accent bars (#D8A0C4) across the full width at top AND bottom.
+      2. Left column is near-white/cream at mid-height (text panel, not a
+         colored gradient panel, not a photo).
+    An off-template design (purple panel, full-bleed photo, wrong split) fails
+    at least one of these. The composition-HTML checks in og_photo_quality
+    catch template drift at render time; this catches whatever ships anyway.
+    """
+    try:
+        from PIL import Image
+    except ImportError:
+        return {"pass": True, "detail": "PIL not available — skipping OG template check"}
+
+    og_path = _og_file_for_slug(slug)
+    if not og_path:
+        return {"pass": False, "detail": f"G64: No OG image found for {slug}"}
+
+    img = Image.open(og_path).convert('RGB')
+    w, h = img.size
+
+    def row_mean(y: int, x0: int, x1: int):
+        px = [img.getpixel((x, y)) for x in range(x0, x1, max(1, (x1 - x0) // 40))]
+        n = len(px)
+        return tuple(sum(c[i] for c in px) // n for i in range(3))
+
+    def near(c1, c2, tol=45):
+        return all(abs(c1[i] - c2[i]) <= tol for i in range(3))
+
+    rose = (216, 160, 196)  # #D8A0C4
+    problems = []
+
+    for label, y in [("top", 2), ("bottom", h - 3)]:
+        for side, x0, x1 in [("left", 60, w // 3), ("right", 2 * w // 3, w - 60)]:
+            m = row_mean(y, x0, x1)
+            if not near(m, rose):
+                problems.append(f"{label}-{side} accent bar is rgb{m}, expected ~#D8A0C4 rose")
+
+    # Left text panel: sample several mid-left points, all must be light cream/white
+    light_samples = 0
+    total_samples = 0
+    for frac in (0.30, 0.45, 0.60, 0.72):
+        y = int(h * frac)
+        for x in (60, w // 6, w // 4):
+            px = img.getpixel((x, y))
+            total_samples += 1
+            if px[0] > 195 and px[1] > 190 and px[2] > 190:
+                light_samples += 1
+    if total_samples and light_samples / total_samples < 0.75:
+        problems.append(f"left column is not a light text panel ({light_samples}/{total_samples} samples light) — off-template design")
+
+    if problems:
+        return {"pass": False, "detail": f"G64: OG {os.path.basename(og_path)} violates canonical Pattern B template: " + "; ".join(problems) + ". Re-render from the canonical composition (scripts/og-city-{slug}-composition.html) via render-og-max.cjs."}
+    return {"pass": True, "detail": f"G64: OG {os.path.basename(og_path)} matches canonical Pattern B composition"}
+
+
+def hero_letterbox(slug: str) -> dict:
+    """G65: Hero (and support scene) must have NO black letterbox/pillarbox bars.
+
+    Kenneth directive 2026-09-03 (Meridian shipped with 53px black bars top and
+    bottom baked into the hero file). Bars are usually padding from a 16:9
+    render placed into a 3:2 frame. Detection: the outer 4% rows/columns of
+    the image must not be near-black (mean brightness < 30).
+    """
+    try:
+        from PIL import Image
+    except ImportError:
+        return {"pass": True, "detail": "PIL not available — skipping letterbox check"}
+
+    block = _read_city_block(slug)
+    if block is None:
+        return {"pass": True, "detail": f"City {slug} not found — skipping"}
+
+    problems = []
+    for field, label in [(r'heroImage:\s*"([^"]+)"', "Hero"), (r'supportSceneImage:\s*"([^"]+)"', "Support scene")]:
+        m = re.search(field, block)
+        if not m:
+            continue
+        img_path = m.group(1)
+        if img_path.startswith('http'):
+            img_path = '/images/' + img_path.rstrip('/').split('/')[-1]
+        full_path = os.path.join(PROJECT_DIR, 'public', img_path.lstrip('/'))
+        if not os.path.exists(full_path):
+            continue
+        img = Image.open(full_path).convert('L')
+        w, h = img.size
+        band = max(2, int(h * 0.04))
+        vband = max(2, int(w * 0.04))
+
+        def region_mean(box):
+            r = img.crop(box)
+            px = list(r.getdata())
+            return sum(px) / len(px)
+
+        top = region_mean((0, 0, w, band))
+        bottom = region_mean((0, h - band, w, h))
+        left = region_mean((0, 0, vband, h))
+        right = region_mean((w - vband, 0, w, h))
+        edges = {"top": top, "bottom": bottom, "left": left, "right": right}
+        for edge, mean in edges.items():
+            if mean < 30:
+                problems.append(f"{label} {os.path.basename(img_path)} has a black bar on {edge} edge (mean brightness {mean:.0f}/255)")
+
+    if problems:
+        return {"pass": False, "detail": "G65: " + "; ".join(problems) + ". Black bars are banned (R45). Crop the bars off and re-render at the target aspect — never pad."}
+    return {"pass": True, "detail": "G65: No black letterbox/pillarbox bars on hero or support scene"}
+
+
 def cdn_match(slug: str) -> dict:
     """G34: Verify the live CDN is serving the same hero image as the repo.
     Catches Cloudflare cache staleness — the #1 cause of 'fixed but not live'."""
@@ -997,6 +1127,8 @@ def main():
         'cross-city-contamination': cross_city_contamination,
         'hero-avif-staleness': hero_avif_staleness,
         'fullpage-scroll-screenshot': fullpage_scroll_screenshot,
+        'og-template-compliance': og_template_compliance,
+        'hero-letterbox': hero_letterbox,
     }
 
     fn = checks.get(command)

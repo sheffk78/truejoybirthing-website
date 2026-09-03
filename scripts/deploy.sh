@@ -62,10 +62,20 @@ echo ""
 echo "--- Step 1/5: Git sync ---"
 
 STASHED=false
+STASH_REF=""
 if ! git diff --quiet --ignore-submodules HEAD 2>/dev/null; then
   echo "  → Stashing local changes..."
-  git stash -q
-  STASHED=true
+  STASH_REF=$(git stash create "deploy.sh auto-stash $(date '+%Y-%m-%d %H:%M:%S')" || true)
+  if [ -n "$STASH_REF" ]; then
+    git stash store -q -m "deploy.sh auto-stash $(date '+%Y-%m-%d %H:%M:%S')" "$STASH_REF"
+    git stash -q
+    STASHED=true
+    echo "  → Stash saved as $STASH_REF (recoverable even if pop fails)"
+  else
+    git stash -q
+    STASHED=true
+    echo "  → Stashed (no unique ref; recover with: git fsck --unreachable | grep commit)"
+  fi
 fi
 
 PRE_PULL_HEAD=$(git rev-parse HEAD)
@@ -88,9 +98,22 @@ if [ "$LOCAL_HEAD" != "$REMOTE_HEAD" ]; then
   echo "  → Pushing will deploy this state regardless."
 fi
 
-# Pop stash if we stashed
+# Pop stash if we stashed — NEVER silently lose changes. If pop fails (e.g.
+# conflict with pulled changes), the stash is preserved and we abort loudly
+# instead of continuing with a half-restored tree. (Kenneth directive
+# 2026-09-03: uncommitted work must never be silently wiped mid-deploy.)
 if [ "$STASHED" = true ]; then
-  git stash pop -q 2>/dev/null || true
+  if ! git stash pop -q 2>/tmp/deploy-stash-pop.err; then
+    echo "  ❌ FATAL: git stash pop failed — your uncommitted changes are SAFE in the stash."
+    echo "  → Inspect:  git stash list"
+    echo "  → Recover:  git stash apply stash@{0}"
+    echo "  → Details:  $(cat /tmp/deploy-stash-pop.err | head -3)"
+    echo ""
+    echo "  Aborting deploy so nothing is lost. Resolve the stash and re-run."
+    exit 1
+  fi
+  rm -f /tmp/deploy-stash-pop.err
+  echo "  → Stash restored."
 fi
 
 if [ "$DRY_RUN" = true ]; then

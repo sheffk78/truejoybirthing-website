@@ -408,6 +408,8 @@ const IMAGE_HELPER_GATES: Record<string, string[]> = {
   "cross-city-contamination": ["G61"],          // no cross-city image contamination (NEW — Aug 27, 2026)
   "hero-avif-staleness": ["G62"],               // hero AVIF not stale gradient (NEW — Aug 27, 2026)
   "fullpage-scroll-screenshot": ["G63"],        // fullpage scroll screenshot exists (NEW — Aug 27, 2026)
+  "og-template-compliance": ["G64"],            // OG matches canonical Pattern B (NEW — Sep 3, 2026)
+  "hero-letterbox": ["G65"],                    // no black letterbox bars (NEW — Sep 3, 2026)
 };
 
 const emitHelperGate = (check: string, slug: string) => {
@@ -441,10 +443,10 @@ const emitHelperGate = (check: string, slug: string) => {
 // slug per invocation; a full audit avoids duplicate cross-city noise here).
 if (targetSlug) {
   const stageImageChecks: Record<string, string[]> = {
-    build: ["hero-aspect", "og-photo-quality", "hero-silhouette", "hero-avif-staleness"],
-    enrich: ["provider-credentials", "provider-descriptions", "hospital-dimensions", "service-area", "support-scene-quality", "provider-photo-exists", "cross-city-contamination"],
-    verify_deploy: ["hero-aspect", "og-photo-quality", "provider-descriptions", "hospital-dimensions", "service-area", "support-scene-quality", "yt-thumbnail-matches-hero", "provider-photo-exists", "cross-city-contamination", "hero-avif-staleness"],
-    video_outreach: ["support-scene-quality", "yt-thumbnail-matches-hero", "fullpage-scroll-screenshot", "provider-photo-exists", "cross-city-contamination"],
+    build: ["hero-aspect", "og-photo-quality", "og-template-compliance", "hero-letterbox", "hero-silhouette", "hero-avif-staleness"],
+    enrich: ["provider-credentials", "provider-descriptions", "hospital-dimensions", "service-area", "support-scene-quality", "hero-letterbox", "provider-photo-exists", "cross-city-contamination"],
+    verify_deploy: ["hero-aspect", "og-photo-quality", "og-template-compliance", "hero-letterbox", "provider-descriptions", "hospital-dimensions", "service-area", "support-scene-quality", "yt-thumbnail-matches-hero", "provider-photo-exists", "cross-city-contamination", "hero-avif-staleness"],
+    video_outreach: ["support-scene-quality", "hero-letterbox", "yt-thumbnail-matches-hero", "fullpage-scroll-screenshot", "provider-photo-exists", "cross-city-contamination"],
   };
   for (const check of stageImageChecks[stageArg ?? "build"] ?? []) {
     emitHelperGate(check, targetSlug);

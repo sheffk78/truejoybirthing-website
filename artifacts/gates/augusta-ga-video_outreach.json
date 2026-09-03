@@ -1,5 +1,5 @@
 {
-  "slug": "carrollton-tx",
+  "slug": "augusta-ga",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
   "exit_code": 0,
@@ -9,7 +9,7 @@
   "results": {
     "pre_render_gate": {
       "status": "PASS",
-      "detail": "scene data exists at remotion/src/data/carrollton-tx-data.ts"
+      "detail": "scene data exists at remotion/src/data/augusta-ga-data.ts"
     },
     "video_file_exists": {
       "status": "PASS",
@@ -17,15 +17,15 @@
     },
     "youtube_upload": {
       "status": "PASS",
-      "detail": "videoId oYtBdiECrgo present in video-embeds.ts"
+      "detail": "videoId vGQM1enHBeM present in video-embeds.ts"
     },
     "youtube_thumbnail": {
       "status": "PASS",
-      "detail": "thumbnail present locally (774KB) and YouTube returns 90KB"
+      "detail": "thumbnail present locally (693KB) and YouTube returns 63KB"
     },
     "video_embedded": {
       "status": "PASS",
-      "detail": "embed found (vid oYtBdiECrgo) on live page"
+      "detail": "embed found (vid vGQM1enHBeM) on live page"
     },
     "videoobject_schema": {
       "status": "PASS",
@@ -37,7 +37,7 @@
     },
     "provider_photo_quality": {
       "status": "PASS",
-      "detail": "all 9 provider photos are real images (>5KB, >100 colors)"
+      "detail": "all 4 provider photos are real images (>5KB, >100 colors)"
     }
   }
 }
