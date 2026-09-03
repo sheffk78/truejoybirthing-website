@@ -290,11 +290,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-29T00:00:00-07:00",
   },
   "las-vegas-nv": {
-    videoId: "r319yZgnxeE",
-    title: "Las Vegas Doula & Birth Plan Guide: Costs, Hospitals & Insurance (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Nevada Medicaid, all in under 3 minutes.",
-    duration: "PT2M07S",
-    uploadDate: "2026-06-23T00:00:00-07:00",
+    videoId: "5E46E1s0HSE",
+    title: "Las Vegas NV Doula & Birth Guide: Hospitals, Costs & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — 3 hospitals, Serenity Birth Center, 4 doulas, costs, and Nevada Medicaid coverage, all in under 6 minutes.",
+    duration: "PT5M33S",
+    uploadDate: "2026-09-03T11:42:43-06:00",
   },
   "henderson-nv": {
     videoId: "5CZCNASCKWo",
