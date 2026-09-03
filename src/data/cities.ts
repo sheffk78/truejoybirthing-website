@@ -6147,6 +6147,8 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
       dataSource: "CDC NCHS, National Vital Statistics System",
     },
 
+    midwifeInfo: "Maryland licenses Certified Nurse-Midwives (CNMs) through the Maryland Board of Nursing and Certified Professional Midwives (CPMs) through the Maryland Board of Midwifery. CNMs practice in hospital settings like UM Capital Region Medical Center and MedStar Southern Maryland Hospital Center, while CPMs attend home births. Chesapeake Midwifery in nearby Greenbelt and College Park Homebirth provide out-of-hospital midwifery options for Prince George's County families.",
+
   },
   "glendale-ca": {
     city: "Glendale" ,
