@@ -87,6 +87,52 @@ const slugs = targetSlug
   ? [targetSlug]
   : Object.keys(cities).sort();
 
+// ── G66: Duplicate-key integrity check (raw source) ──────────
+// cities.ts is imported as a module, so JS object semantics (last key wins)
+// silently hide duplicate keys inside a city block. Duplicate localDoulas /
+// hospitalDetails / birthCenterDetails / faqs keys have shipped cross-city
+// clone data to live pages (corona-ca carried TX hospitals on a CA page).
+// This gate reads the RAW source and hard-fails any block containing a
+// duplicated object key. (NEW — Sep 3, 2026, Raleigh/Carrollton incident.)
+function checkG66() {
+  const srcPath = path.join(PROJECT_DIR, "src", "data", "cities.ts");
+  const src = fs.readFileSync(srcPath, "utf-8");
+  const keyRe = /^\s{2}"([a-z]+-[a-z]{2})":\s*\{/gm;
+  const cityMatches = [...src.matchAll(keyRe)];
+  const dupKeyRe = /^    ([A-Za-z][A-Za-z0-9_]*):/gm;
+  const offenders: string[] = [];
+  for (let i = 0; i < cityMatches.length; i++) {
+    const slug = cityMatches[i][1];
+    const start = cityMatches[i].index + cityMatches[i][0].length;
+    const end = i + 1 < cityMatches.length ? cityMatches[i + 1].index : src.length;
+    const block = src.slice(start, end);
+    const seen = new Map<string, number>();
+    for (const m of block.matchAll(dupKeyRe)) {
+      seen.set(m[1], (seen.get(m[1]) ?? 0) + 1);
+    }
+    const dups = [...seen.entries()].filter(([, n]) => n > 1);
+    if (dups.length > 0) {
+      offenders.push(`${slug}: ${dups.map(([k, n]) => `${k} x${n}`).join(", ")}`);
+    }
+  }
+  return offenders;
+}
+console.log(`── G66: Duplicate-key integrity (raw cities.ts) ──`);
+{
+  const offenders = checkG66();
+  if (offenders.length === 0) {
+    pass("G66: no duplicate object keys in any city block");
+  } else {
+    const scoped = targetSlug ? offenders.filter((o) => o.startsWith(`${targetSlug}:`)) : offenders;
+    if (targetSlug) {
+      pass(`G66: ${targetSlug} block has no duplicate keys (${offenders.length} other cities carry duplicate keys — cleanup queue)`);
+    }
+    for (const o of scoped) {
+      fail(`G66: duplicate keys in ${o} — last-key-wins hides stale clone data; dedupe the block`);
+    }
+  }
+}
+
 console.log(`\n═══════════════════════════════════════════`);
 console.log(`  TJB PREFLIGHT — ${targetSlug ? `slug: ${targetSlug}` : "FULL AUDIT"}`);
 console.log(`  Time: ${new Date().toISOString()}`);
