@@ -6505,7 +6505,7 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
     heroImage: "/images/mckinney-tx-birth-doula-hero-v3.webp",
     supportSceneImage: "/images/mckinney-tx-birth-doula-support-v3.webp",
     supportSceneAlt: "A doula supporting a pregnant woman during labor in McKinney, Texas",
-    ogImage: "https://truejoybirthing.com/images/og-city-mckinney-tx-v3.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-mckinney-tx-v4.webp",
     midwifeInfo: {
       paragraph: "Texas licenses Certified Nurse-Midwives (CNMs) through the Texas Board of Nursing, and Certified Professional Midwives (CPMs) can attend home and birth center births. Allen Birthing Center, about 10 minutes south of McKinney, offers midwife-led births with CPMs. Both Baylor Scott & White and Medical City McKinney have CNM-attended births in their labor and delivery units. For home birth, several CPMs serve the Collin County area.",
       credentialTypes: " and CPMs",

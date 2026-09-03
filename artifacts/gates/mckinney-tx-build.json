@@ -13,7 +13,7 @@
     },
     "S2": {
       "status": "PASS",
-      "detail": "OG image og-city-mckinney-tx-v2.webp (62112 bytes \u2265 30KB)"
+      "detail": "OG image og-city-mckinney-tx-v4.webp (130722 bytes \u2265 30KB)"
     },
     "S4": {
       "status": "PASS",
@@ -49,11 +49,11 @@
     },
     "G29": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=44362) and locked Pattern B composition"
+      "detail": "OG has photo content (full_unique_colors=35693) and locked Pattern B composition"
     },
     "G35": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=44362) and locked Pattern B composition"
+      "detail": "OG has photo content (full_unique_colors=35693) and locked Pattern B composition"
     },
     "G8a": {
       "status": "PASS",
