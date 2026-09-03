@@ -97,7 +97,7 @@ const slugs = targetSlug
 function checkG66() {
   const srcPath = path.join(PROJECT_DIR, "src", "data", "cities.ts");
   const src = fs.readFileSync(srcPath, "utf-8");
-  const keyRe = /^\s{2}"([a-z]+-[a-z]{2})":\s*\{/gm;
+  const keyRe = /^\s{2}"([a-z]+(?:-[a-z]+)*-[a-z]{2})":\s*\{/gm;
   const cityMatches = [...src.matchAll(keyRe)];
   const dupKeyRe = /^    ([A-Za-z][A-Za-z0-9_]*):/gm;
   const offenders: string[] = [];
