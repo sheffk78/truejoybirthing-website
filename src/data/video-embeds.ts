@@ -630,11 +630,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
         uploadDate: "2026-07-20T18:35:00Z",
     },
     "stamford-ct": {
-        videoId: "97buu-Ygq3Q",
+        videoId: "KPUMljW6Q9o",
         title: "Stamford CT Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
         description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 7 minutes.",
         duration: "PT6M07S",
-        uploadDate: "2026-07-20T00:00:00-06:00",
+        uploadDate: "2026-09-03T00:00:00-06:00",
     },
 
 "norwalk-ct": {
