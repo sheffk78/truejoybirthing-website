@@ -710,11 +710,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-07-14T14:10:00-06:00",
 },
 "charleston-sc": {
-    videoId: "Qmld51LJhm8",
+    videoId: "UL_MBGqCo7Q",
     title: "Charleston SC Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and SC Medicaid, all in under 5 minutes.",
-    duration: "PT4M38S",
-    uploadDate: "2026-07-16T19:50:00-06:00",
+    description: "Watch the full city guide — 3 hospitals, a birth center, 5 doulas, costs, and SC Medicaid, all in under 7 minutes.",
+    duration: "PT6M26S",
+    uploadDate: "2026-09-03T14:10:00-06:00",
 },
 "chicago-il": {
     videoId: "4bxkdW7pQDM",
