@@ -1245,7 +1245,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
   "newport-news-va": {
-    videoId: "_LckBVSVtog",
+    videoId: "l5hSIyiiqHo",
     title: "Newport News VA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
     duration: "PT5M14S",
