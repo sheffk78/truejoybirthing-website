@@ -468,10 +468,12 @@ def yt_thumbnail_matches_hero(slug: str) -> dict:
         )
         avg_diff = diff_sum / len(hero_pixels)
 
-        # Threshold: avg_diff > 80 means significantly different images
-        # Same image with text overlay typically has avg_diff < 60
-        # Different image (different background) typically has avg_diff > 100
-        if avg_diff > 80:
+        # Threshold calibrated Sep 3, 2026 against measured production data:
+        #   same photo, no overlay:      diff 0-13 (arlington 0.0, charlotte 10.7)
+        #   same photo, heavy overlay:   diff 20-95 (aurora-il 69.8, meridian 83.2, carrollton 92.5)
+        #   genuinely different photo:   diff 240+ (arvada 239.9, atlanta 283.2)
+        # Threshold sits mid-gap at 150.
+        if avg_diff > 150:
             return {"pass": False, "detail": f"YT thumbnail uses a DIFFERENT image than hero (avg pixel diff={avg_diff:.1f}). YT thumbnail must use the same hero silhouette."}
 
         return {"pass": True, "detail": f"YT thumbnail matches hero image (avg pixel diff={avg_diff:.1f})"}
@@ -865,19 +867,29 @@ def hero_letterbox(slug: str) -> dict:
         band = max(2, int(h * 0.04))
         vband = max(2, int(w * 0.04))
 
-        def region_mean(box):
+        def region_stats(box):
+            """Return (mean, stddev) of a region — stddev distinguishes a FLAT
+            black bar (stddev ≈ 0) from legitimately dark photo content like
+            dusk asphalt (stddev high)."""
             r = img.crop(box)
             px = list(r.getdata())
-            return sum(px) / len(px)
+            mean = sum(px) / len(px)
+            var = sum((p - mean) ** 2 for p in px) / len(px)
+            return mean, var ** 0.5
 
-        top = region_mean((0, 0, w, band))
-        bottom = region_mean((0, h - band, w, h))
-        left = region_mean((0, 0, vband, h))
-        right = region_mean((w - vband, 0, w, h))
-        edges = {"top": top, "bottom": bottom, "left": left, "right": right}
-        for edge, mean in edges.items():
-            if mean < 30:
-                problems.append(f"{label} {os.path.basename(img_path)} has a black bar on {edge} edge (mean brightness {mean:.0f}/255)")
+        top_m, top_s = region_stats((0, 0, w, band))
+        bottom_m, bottom_s = region_stats((0, h - band, w, h))
+        left_m, left_s = region_stats((0, 0, vband, h))
+        right_m, right_s = region_stats((w - vband, 0, w, h))
+        edges = {"top": (top_m, top_s), "bottom": (bottom_m, bottom_s),
+                 "left": (left_m, left_s), "right": (right_m, right_s)}
+        for edge, (mean, std) in edges.items():
+            # A letterbox bar is essentially PURE black (mean ≈ 0, stddev ≈ 0)
+            # — e.g. Meridian v3's 53px bars measured mean 0.0 / std 0.0.
+            # Dark but real photo content (dusk asphalt: mean ~22, std ~5 with
+            # gradual falloff into the scene) must NOT fail. Bar = mean < 8.
+            if mean < 8 and std < 6:
+                problems.append(f"{label} {os.path.basename(img_path)} has a black bar on {edge} edge (mean brightness {mean:.1f}/255, stddev {std:.1f})")
 
     if problems:
         return {"pass": False, "detail": "G65: " + "; ".join(problems) + ". Black bars are banned (R45). Crop the bars off and re-render at the target aspect — never pad."}
