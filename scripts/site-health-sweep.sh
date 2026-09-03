@@ -17,7 +17,7 @@
 # =============================================================================
 set -euo pipefail
 
-PROJECT_DIR="/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website"
+PROJECT_DIR="/Users/socializerender/Projects/truejoybirthing-website"
 cd "$PROJECT_DIR"
 
 SLUG="${1:-}"
@@ -46,7 +46,7 @@ if [ -n "$SLUG" ]; then
   health_pass "Checking specific city: $SLUG"
 else
   # Get all cities with video embeds from video-embeds.ts
-  CITIES=($(grep -oP '(?<=")[a-z]+-[a-z]{2}(?=":)' src/data/video-embeds.ts 2>/dev/null || echo ""))
+  CITIES=($(grep -oE '"[a-z]+-[a-z]{2}":' src/data/video-embeds.ts 2>/dev/null | tr -d '":' || echo ""))
   health_pass "Found ${#CITIES[@]} cities with video embeds to check"
 fi
 
@@ -89,9 +89,14 @@ for city_slug in "${CITIES[@]}"; do
   # Get OG image URL
   OG_URL=$(grep -A 10 "\"${city_slug}\":" src/data/cities.ts | grep 'ogImage:' | head -1 | sed 's/.*ogImage: *"\([^"]*\)".*/\1/' || echo "")
   if [ -n "$OG_URL" ]; then
-    OG_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$OG_URL" 2>/dev/null || echo "000")
+    # Prefix relative paths with the domain (absolute URLs pass through)
+    case "$OG_URL" in
+      http*) OG_FULL="$OG_URL" ;;
+      *) OG_FULL="https://truejoybirthing.com${OG_URL}" ;;
+    esac
+    OG_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$OG_FULL" 2>/dev/null || echo "000")
     if [ "$OG_CODE" = "200" ]; then
-      OG_SIZE=$(curl -sI "$OG_URL" 2>/dev/null | grep -i 'content-length' | awk '{print $2}' | tr -d '\r' || echo "0")
+      OG_SIZE=$(curl -sI "$OG_FULL" 2>/dev/null | grep -i 'content-length' | awk '{print $2}' | tr -d '\r' || echo "0")
       if [ "${OG_SIZE:-0}" -gt 10000 ]; then
         health_pass "$city_slug OG image — 200, ${OG_SIZE}B"
       else
@@ -134,7 +139,7 @@ for city_slug in "${CITIES[@]}"; do
   fi
   
   # Check for broken internal links
-  BROKEN_LINKS=$(echo "$LIVE_HTML" | grep -oP 'href="[^"]*"' | grep -v "^href=\"https\?://" | grep -v "^href=\"#" | grep -v "^href=\"mailto:" | grep -v "truejoybirthing" | grep -v "^href=\"\/$" | grep -v '^href=""' || echo "")
+  BROKEN_LINKS=$(echo "$LIVE_HTML" | grep -oE 'href="[^"]*"' | grep -v "^href=\"https\?://" | grep -v "^href=\"#" | grep -v "^href=\"mailto:" | grep -v "truejoybirthing" | grep -v "^href=\"/$" | grep -v '^href=""' || echo "")
   if [ -n "$BROKEN_LINKS" ]; then
     BROKEN_COUNT=$(echo "$BROKEN_LINKS" | wc -l | tr -d ' ')
     if [ "$BROKEN_COUNT" -gt 5 ]; then
@@ -152,7 +157,7 @@ for city_slug in "${CITIES[@]}"; do
   if [ -z "$CITY_BLOCK" ]; then continue; fi
   
   # Extract external photo URLs (non-local, non-empty)
-  PHOTO_URLS=$(echo "$CITY_BLOCK" | grep -oP 'photo:\s*"https?://[^"]+' | sed 's/photo: *"//' || echo "")
+  PHOTO_URLS=$(echo "$CITY_BLOCK" | grep -oE 'photo:[[:space:]]*"https?://[^"]+' | sed 's/photo:[[:space:]]*"//' || echo "")
   for url in $PHOTO_URLS; do
     TOTAL_EXTERNAL=$((TOTAL_EXTERNAL + 1))
     HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" --max-time 5 "$url" 2>/dev/null || echo "000")
