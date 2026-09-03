@@ -254,11 +254,21 @@ const medicaidDesc = medicaidCovers ? 'Medicaid covers doulas' : 'no Medicaid do
 // to keep meta descriptions in the 120-160 char sweet spot.
 // Generate distinctive meta description that pulls from local culture data
 // to avoid the "template with keyword swaps" pattern (Google §4.6.5).
+const culturePrefix = `${city}, ${state}: `;
+const cultureTail = ` Compare doula costs ($${costLow}-$${costHigh}), ${medicaidDesc}, hospitals, and local birth support.`;
 const cultureSnippet = data.culture
-  ? data.culture.slice(0, 80).replace(/["]/g, "'").trim()
+  ? (() => {
+      const cleaned = data.culture.replace(/["]/g, "'").trim();
+      const budget = Math.max(40, 155 - culturePrefix.length - cultureTail.length);
+      const head = cleaned.slice(0, budget + 2);
+      const sentEnd = Math.max(head.lastIndexOf('. '), head.lastIndexOf('! '), head.lastIndexOf('? '));
+      if (sentEnd >= 40) return cleaned.slice(0, sentEnd + 1).trim();
+      const lastSpace = head.lastIndexOf(' ');
+      return (lastSpace > 20 ? cleaned.slice(0, lastSpace) : cleaned.slice(0, budget)).trim();
+    })()
   : null;
 const uniqueDesc = cultureSnippet
-  ? `${city}, ${state}: ${cultureSnippet} Compare doula costs ($${costLow}-$${costHigh}), ${medicaidDesc}, hospitals, and local birth support.`
+  ? `${culturePrefix}${cultureSnippet}${cultureTail}`
   : null;
 let pageDesc = (data as any).metaDescription
   || uniqueDesc
