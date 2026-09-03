@@ -986,9 +986,9 @@
       "created_at": "2026-07-14T01:41:22Z",
       "state": "CT",
       "has_video": true,
-      "videoId": "drkZEsmuVeo",
-      "video_id": "drkZEsmuVeo",
-      "video_url": "https://youtu.be/drkZEsmuVeo",
+      "videoId": "XKkyBLnYpKM",
+      "video_id": "XKkyBLnYpKM",
+      "video_url": "https://youtu.be/XKkyBLnYpKM",
       "video_uploaded_at": "2026-07-14T03:23:32.151398Z",
       "gate_fix_complete": true,
       "video_complete": true,
@@ -996,7 +996,7 @@
       "outreach_deferred_reason": "Quiet hours: 8 PM to 8 AM MT. Will send on next daytime run.",
       "has_outreach": true,
       "completed_at": "2026-07-14T14:12:59Z",
-      "last_updated": "2026-07-20T18:24:25.173035+00:00",
+      "last_updated": "2026-09-03T20:00:00+00:00",
       "fixes_applied": [
         "G59: Added hospital website URLs (Norwalk, Stamford, Greenwich)",
         "G8+G58: Regenerated hero image (pregnant silhouette, no black bars)",
@@ -1004,7 +1004,10 @@
         "R9: Re-rendered OG image and YouTube thumbnail from v3 hero for consistency"
       ],
       "stage": "complete",
-      "blocked_reason": null
+      "blocked_reason": null,
+      "outreach_sent_at": "2026-09-03T19:50:12Z",
+      "outreach_provider_count": 5,
+      "outreach_blocked_reason": "2 providers no email (Colleen Myatt, Dana Oakes-Sand)"
     },
     "port-st-lucie-fl": {
       "has_video": true,
