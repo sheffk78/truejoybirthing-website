@@ -374,13 +374,13 @@
     "fresno-ca": {
       "has_video": true,
       "has_outreach": true,
-      "completed_at": "2026-07-17T02:22:37Z",
-      "videoId": "A-yB39S7RPc",
-      "video_id": "A-yB39S7RPc",
-      "video_url": "https://youtu.be/A-yB39S7RPc",
-      "video_uploaded_at": "2026-07-14T04:07:10Z",
+      "completed_at": "2026-09-03T17:28:38.510256+00:00",
+      "videoId": "O8NShNAp7vo",
+      "video_id": "O8NShNAp7vo",
+      "video_url": "https://youtu.be/O8NShNAp7vo",
+      "video_uploaded_at": "2026-09-03T17:28:38.510018+00:00",
       "outreach_deferred_reason": null,
-      "video_embed_deployed_at": "2026-07-14T04:07:24Z",
+      "video_embed_deployed_at": "2026-09-03T17:28:38.510254+00:00",
       "outreach_research": {
         "providers": [
           {
@@ -408,7 +408,8 @@
       },
       "outreach_deferred": false,
       "stage": "complete",
-      "blocked_reason": null
+      "blocked_reason": null,
+      "outreach_blocked_reason": null
     },
     "gainesville-fl": {
       "has_video": true,
