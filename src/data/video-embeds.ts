@@ -224,11 +224,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-07-26T00:00:00-06:00",
   },
   "fontana-ca": {
-    videoId: "TNXISNoK1xY",
+    videoId: "8uyBFnMRjCc",
     title: "Fontana CA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and California Medicaid (Medi-Cal covers doula care), all in under 5 minutes.",
-    duration: "PT4M23S",
-    uploadDate: "2026-06-22T00:00:00-07:00",
+    duration: "PT4M51S",
+    uploadDate: "2026-09-02T00:00:00-06:00",
   },
   "alameda-ca": {
     videoId: "5c6gcH2iZM0",
