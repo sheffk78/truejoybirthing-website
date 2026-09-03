@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "last_updated": "2026-08-14T18:00:00Z",
+  "last_updated": "2026-09-03T21:48:35.021415+00:00",
   "total_cities_in_codebase": 187,
   "future_cities_planned": 1000,
   "cities": {
@@ -1132,13 +1132,15 @@
       "has_video": true,
       "has_outreach": true,
       "first_seen": "2026-07-14T03:22:43Z",
-      "videoId": "ucjWrh5iuMs",
-      "video_id": "ucjWrh5iuMs",
-      "video_url": "https://youtu.be/ucjWrh5iuMs",
+      "videoId": "xggWhsQfrUc",
+      "video_id": "xggWhsQfrUc",
+      "video_url": "https://youtu.be/xggWhsQfrUc",
       "video_uploaded_at": "2026-07-14T08:31:31.942414Z",
       "stage": "complete",
       "blocked_reason": null,
-      "completed_at": "2026-07-30T16:24:45Z"
+      "completed_at": "2026-07-30T16:24:45Z",
+      "outreach_count": 8,
+      "outreach_sent_at": "2026-09-03T15:48:35.021218-06:00"
     },
     "fort-collins-co": {
       "has_video": true,
