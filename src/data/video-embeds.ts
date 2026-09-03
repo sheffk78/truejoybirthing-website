@@ -353,8 +353,8 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-07-07T00:00:00-04:00",
   },
   "raleigh-nc": {
-    videoId: "P1yRJueaaEU",
-    title: "Raleigh NC Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    videoId: "W5MeLR1KgSU",
+    title: "Raleigh Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and North Carolina Medicaid, all in under 4 minutes.",
     duration: "PT3M38S",
     uploadDate: "2026-07-01T00:00:00-07:00",

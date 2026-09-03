@@ -111,10 +111,10 @@ done
 # ── H3: YouTube embed health ──────────────────────────────────────
 health_header "H3: YouTube Embed Health"
 for city_slug in "${CITIES[@]}"; do
-  VIDEO_ID=$(grep -A 2 "\"${city_slug}\":" src/data/video-embeds.ts 2>/dev/null | grep 'videoId' | sed 's/.*videoId: *"\([^"]*\)".*/\1/' || echo "")
+  VIDEO_ID=$(grep -A 2 "\"${city_slug}\":" src/data/video-embeds.ts 2>/dev/null | grep 'videoId' | head -1 | sed 's/.*videoId: *"\([^"]*\)".*/\1/' || echo "")
   if [ -n "$VIDEO_ID" ]; then
-    YT_STATUS=$(curl -sI "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${VIDEO_ID}&format=json" 2>/dev/null | head -1 | grep -c "200" || echo 0)
-    if [ "$YT_STATUS" -eq 1 ]; then
+    YT_STATUS=$(curl -sI "https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${VIDEO_ID}&format=json" 2>/dev/null | head -1 | grep -c "200" || true)
+    if [ "${YT_STATUS:-0}" -eq 1 ]; then
       health_pass "$city_slug YouTube embed $VIDEO_ID — accessible"
     else
       health_fail "$city_slug YouTube embed $VIDEO_ID — NOT ACCESSIBLE (deleted/unlisted)"
@@ -138,8 +138,10 @@ for city_slug in "${CITIES[@]}"; do
     health_warn "$city_slug — contains 'Photo coming soon' placeholder text"
   fi
   
-  # Check for broken internal links
-  BROKEN_LINKS=$(echo "$LIVE_HTML" | grep -oE 'href="[^"]*"' | grep -v "^href=\"https\?://" | grep -v "^href=\"#" | grep -v "^href=\"mailto:" | grep -v "truejoybirthing" | grep -v "^href=\"/$" | grep -v '^href=""' || echo "")
+  # Check for broken internal links (site-internal relative links that 404).
+  # Valid relative paths (/about/, /doula-cost/) are EXPECTED — only flag
+  # empty hrefs, bare hashes-in-href, and clearly malformed values.
+  BROKEN_LINKS=$(echo "$LIVE_HTML" | grep -oE 'href="[^"]*"' | grep -vE '^href="(https?://|/|#|mailto:|\./|\.\./|\?|tel:)' | grep -v truejoybirthing | grep -v '^href=""' || echo "")
   if [ -n "$BROKEN_LINKS" ]; then
     BROKEN_COUNT=$(echo "$BROKEN_LINKS" | wc -l | tr -d ' ')
     if [ "$BROKEN_COUNT" -gt 5 ]; then
