@@ -262,9 +262,21 @@ const cultureSnippet = data.culture
       const budget = Math.max(40, 155 - culturePrefix.length - cultureTail.length);
       const head = cleaned.slice(0, budget + 2);
       const sentEnd = Math.max(head.lastIndexOf('. '), head.lastIndexOf('! '), head.lastIndexOf('? '));
-      if (sentEnd >= 40) return cleaned.slice(0, sentEnd + 1).trim();
-      const lastSpace = head.lastIndexOf(' ');
-      return (lastSpace > 20 ? cleaned.slice(0, lastSpace) : cleaned.slice(0, budget)).trim();
+      let snip: string;
+      if (sentEnd >= 40) {
+        snip = cleaned.slice(0, sentEnd + 1);
+      } else {
+        const lastSpace = head.lastIndexOf(' ');
+        snip = (lastSpace > 20 ? cleaned.slice(0, lastSpace) : cleaned.slice(0, budget)).trim();
+        // Drop a dangling trailing clause: if the cut point follows a comma,
+        // semicolon, or dash, the fragment reads broken ("...junction of Dallas,").
+        const clauseEnd = Math.max(snip.lastIndexOf(', '), snip.lastIndexOf('; '), snip.lastIndexOf(' \u2014 '));
+        if (clauseEnd >= 40) snip = snip.slice(0, clauseEnd);
+        // Strip any dangling connector punctuation, then end with a period.
+        snip = snip.replace(/[,;:\u2014-]+$/, '').trim();
+        if (!/[.!?]$/.test(snip)) snip = snip + '.';
+      }
+      return snip.trim();
     })()
   : null;
 const uniqueDesc = cultureSnippet
