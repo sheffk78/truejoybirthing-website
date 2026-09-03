@@ -3283,7 +3283,10 @@ birthStats: { cesareanRate: 32.1, maternalMortalityRate: 18.6, homeBirthRate: 0.
       birthCenterBirthRate: 0.4,
       dataYear: 2023,
       dataSource: "CDC NCHS, National Vital Statistics System",
-    }},
+    },
+    midwifeInfo: "In California, midwives are licensed through the Medical Board of California (LM) or as Certified Nurse-Midwives (CNM) through the Board of Registered Nursing. The state recognizes and licenses both certified professional midwives (CPM) and licensed midwives (LM) for out-of-hospital births. California's AB 1307 expanded access to midwifery care and birth center births." ,
+    lat: 37.7749,
+    lng: -122.4194,},
   "san-jose-ca": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",

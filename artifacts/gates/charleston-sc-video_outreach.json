@@ -1,36 +1,43 @@
 {
- "slug": "charleston-sc",
- "stage": "video_outreach",
- "completed_at": "2026-09-03T20:22:20Z",
- "gates": {
-  "pre_render_gate": "pass",
-  "video_file_exists": "pass",
-  "youtube_upload": "pass (UL_MBGqCo7Q, public, embeddable=true)",
-  "youtube_thumbnail": "pass (template thumbnail generated + uploaded, maxres 200)",
-  "video_embedded": "pass (video-embeds.ts + live page both point to UL_MBGqCo7Q)",
-  "videoobject_schema": "pass (VideoObject on live page, uploadDate 2026-09-03)",
-  "outreach_sent_or_blocked": "pass (5 sent with message_ids; re-outreach followups blocked by 24h duplicate window \u2014 queued)"
- },
- "old_video": "Qmld51LJhm8 set to unlisted",
- "outreach": {
-  "sent": [
-   "christina@latchontohealth.com",
-   "lowcountrychildbirth@gmail.com",
-   "beyondearthside@gmail.com",
-   "appointments@charlestonbirthplace.com",
-   "info@charlestondoulas.com"
-  ],
-  "sent_count": 5,
-  "re_engagement_followups_blocked": 4,
-  "re_engagement_reason": "24h duplicate-send window (first-touch sent same day)",
-  "notes": "Personalized first-touch emails naming page changes (re-shot video, new midwifery section, refreshed pricing). Sabine Baker (Doulacare Charleston) not on current page (only 4 doulas on page); earlier Aug 6 followup attempt already blocked by recipient-history gate."
- },
- "video": {
-  "duration": "6:26 (385.8s scene sum, 386.03s mp4)",
-  "scenes": 15,
-  "tts_voice": "Shelbi/Voxtral 331c27cd-1809-43c2-853d-4c167f184670 (all scenes)",
-  "render": "11579 frames @ 30fps, 31.2MB",
-  "master_wav": "385.62s, drift vs scene sum 0.18s"
- },
- "deploy": "pass (bash scripts/deploy.sh charleston-sc, live page 200 with new embed)"
+  "slug": "charleston-sc",
+  "stage": "video_outreach",
+  "mode": "local_video_outreach",
+  "exit_code": 0,
+  "passed": 8,
+  "failed": 0,
+  "skipped": 0,
+  "results": {
+    "pre_render_gate": {
+      "status": "PASS",
+      "detail": "scene data exists at remotion/src/data/charleston-sc-data.ts"
+    },
+    "video_file_exists": {
+      "status": "PASS",
+      "detail": "video file 29.8MB >10MB"
+    },
+    "youtube_upload": {
+      "status": "PASS",
+      "detail": "videoId UL_MBGqCo7Q present in video-embeds.ts"
+    },
+    "youtube_thumbnail": {
+      "status": "PASS",
+      "detail": "thumbnail present locally (959KB) and YouTube returns 144KB"
+    },
+    "video_embedded": {
+      "status": "PASS",
+      "detail": "embed found (vid UL_MBGqCo7Q) on live page"
+    },
+    "videoobject_schema": {
+      "status": "PASS",
+      "detail": "VideoObject+duration present on live page"
+    },
+    "outreach_sent_or_blocked": {
+      "status": "PASS",
+      "detail": "authorized \u2014 Jeff approved outreach resumption Aug 2026. Ready to send."
+    },
+    "provider_photo_quality": {
+      "status": "PASS",
+      "detail": "all 4 provider photos are real images (>5KB, >100 colors)"
+    }
+  }
 }
