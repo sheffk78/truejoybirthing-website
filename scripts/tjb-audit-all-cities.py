@@ -74,7 +74,15 @@ def extract_block(content, key):
 
 
 def check_hero(block, slug, project_dir):
-    """Check hero image: field exists, file present, not NY skyline."""
+    """Check hero image: field exists, file present, not NY skyline.
+
+    Sep 3, 2026 (Augusta incident): a wrong-CITY skyline with a correct
+    filename passed every gate. Skyline-named heroes now require a visual
+    verification artifact (artifacts/gates/g68/{slug}-hero-verified.json)
+    proving the pixels were vision-checked as this city. G68 (dHash clone
+    check) runs in preflight; this audit-level flag keeps the dashboard
+    honest about which skyline heroes are verified vs unverified.
+    """
     hero_match = re.search(r'heroImage:\s*"([^"]+)"', block)
     if not hero_match:
         return False, "Missing"
@@ -85,6 +93,11 @@ def check_hero(block, slug, project_dir):
     hero_path = project_dir / 'public' / hero_str.lstrip('/')
     if not hero_path.exists():
         return False, "File missing"
+    # Skyline-named heroes: require visual verification artifact
+    if 'skyline' in hero_str and slug != 'new-york-ny':
+        vref = project_dir / 'artifacts' / 'gates' / 'g68' / f'{slug}-hero-verified.json'
+        if not vref.exists():
+            return True, "Skyline hero unverified (needs G68 visual check)"
     return True, ""
 
 

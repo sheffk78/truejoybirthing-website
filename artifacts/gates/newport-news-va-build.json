@@ -1,9 +1,9 @@
 {
   "slug": "newport-news-va",
-  "stage": "enrich",
+  "stage": "build",
   "mode": "stage_emission",
   "exit_code": 0,
-  "passed": 22,
+  "passed": 18,
   "failed": 0,
   "skipped": 0,
   "results": {
@@ -47,53 +47,37 @@
       "status": "PASS",
       "detail": "newport-news-va-birth-doula-nnva-v3.webp is a real photograph (high color count)"
     },
-    "G27": {
+    "G25": {
       "status": "PASS",
-      "detail": "All 8 providers have specific credentials"
+      "detail": "Hero image is 3:2 (1200x800, ratio=1.50)"
     },
-    "G10": {
+    "G29": {
       "status": "PASS",
-      "detail": "All 8 providers have specific descriptions"
+      "detail": "OG has photo content (full_unique_colors=26724) and locked Pattern B composition"
     },
-    "G39": {
+    "G35": {
       "status": "PASS",
-      "detail": "All 8 providers have specific descriptions"
+      "detail": "OG has photo content (full_unique_colors=26724) and locked Pattern B composition"
     },
-    "G19": {
+    "G64": {
       "status": "PASS",
-      "detail": "All facility images are landscape, >=400x300"
-    },
-    "G20": {
-      "status": "PASS",
-      "detail": "All facility images are landscape, >=400x300"
-    },
-    "P11": {
-      "status": "PASS",
-      "detail": "All facility images are landscape, >=400x300"
-    },
-    "A12": {
-      "status": "PASS",
-      "detail": "All serviceArea fields are string arrays"
-    },
-    "G24": {
-      "status": "PASS",
-      "detail": "Support scene is unique to this city"
-    },
-    "G54": {
-      "status": "PASS",
-      "detail": "Support scene is unique to this city"
+      "detail": "G64: OG og-city-newport-news-va-v2.webp matches canonical Pattern B composition"
     },
     "G65": {
       "status": "PASS",
       "detail": "G65: No black letterbox/pillarbox bars on hero or support scene"
     },
-    "G60": {
+    "G8a": {
       "status": "PASS",
-      "detail": "G60: All 8 provider photos exist on disk and are >2KB"
+      "detail": "Silhouette confirmed (center=59.8 < top=205.7, top_colors=6066)"
     },
-    "G61": {
+    "G62": {
       "status": "PASS",
-      "detail": "G61: All image paths contain city slug newport-news-va"
+      "detail": "G62: Hero AVIF files not stale (or not present)"
+    },
+    "G68": {
+      "status": "PASS",
+      "detail": "G68: hero newport-news-va-birth-doula-nnva-v3.webp is compositionally unique (closest other-city hero: portland-or-birth-doula-skyline-v4.webp, d=11/64)"
     }
   }
 }

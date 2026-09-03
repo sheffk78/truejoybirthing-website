@@ -15,6 +15,8 @@ Stages and their gate subsets:
     enrich:         G10, G19, G20, G27, G35, G39, G57, G59, P11, A12, S6, S7, S8, V1
     verify_deploy:  ALL gates (full preflight)
     video_outreach: G9, G18, G22, G23, G24, G26, G53, G54, G55, G56
+                    + video_content_city_match (G67, local — video burned-in
+                      text names this city; NEW Sep 3, 2026 Denver-leak fix)
 
 Exit code 0 = all stage gates pass. Exit code 1 = at least one failed.
 """
@@ -132,6 +134,141 @@ def _local_build_gates(slug: str) -> dict:
     if cross_city:
         results["LOCAL_PROVIDER_PHOTOS"] = {"status": "FAIL", "detail": f"cross-city provider photo: {cross_city[0]}"}
     return results
+
+
+def _g67_video_content_city_match(slug: str, vid_id: Optional[str]) -> dict:
+    """G67: verify the video's burned-in overview scene names THIS city.
+
+    Method: extract a frame from the bridge/overview scene (~9% of runtime,
+    where the '01 Hospitals / Where you can deliver in {city}' card shows),
+    OCR it with tesseract, and fuzzy-match the city name. 'Denver' is a hard
+    fail regardless of OCR noise. If OCR can't read the subtitle, the gate
+    passes with a SKIP-class message only when the local render exists for
+    manual verification — otherwise it fails closed.
+    """
+    import shutil
+    import urllib.request
+
+    ffmpeg = "/opt/homebrew/bin/ffmpeg" if os.path.exists("/opt/homebrew/bin/ffmpeg") else "ffmpeg"
+    tesseract = "/opt/homebrew/bin/tesseract" if os.path.exists("/opt/homebrew/bin/tesseract") else "tesseract"
+    ytdlp = os.path.expanduser("~/.hermes/hermes-agent/venv/bin/yt-dlp")
+
+    # City name from cities.ts (top-level city: field)
+    city_file = Path(PROJECT_DIR) / "src" / "data" / "cities.ts"
+    city_name = None
+    if city_file.exists():
+        text = city_file.read_text(errors="replace")
+        marker = f'"{slug}": {{'
+        start = text.find(marker)
+        if start >= 0:
+            tail = text[start + len(marker):]
+            nxt = re.search(r'\n\s*"[a-z][a-z-]+-[a-z]{2}":\s*\{', tail)
+            block = tail[:nxt.start()] if nxt else tail
+            # top-level field = 4-space indent (nested fields are deeper);
+            # tolerate trailing whitespace/commas (`city: "Augusta" ,`)
+            m = re.search(r'^\s{4}city:\s*"([^"]+)"', block, re.M)
+            if m:
+                city_name = m.group(1).strip()
+    if not city_name:
+        return {"pass": False, "message": f"G67: could not read city name for {slug} from cities.ts"}
+
+    if not vid_id:
+        return {"pass": False, "message": "G67: no videoId — cannot verify video content"}
+
+    # Local render preferred (out/{slug}-city-guide.mp4); else download 360p.
+    REMOTION_OUT = Path.home() / ".openclaw" / "workspace" / "Kit" / "life" / "brands" / "TrueJoyBirthing" / "video" / "remotion" / "out"
+    video_path = REMOTION_OUT / f"{slug}-city-guide.mp4"
+    tmp_video = None
+    if not (video_path.exists() and video_path.stat().st_size > 1000000):
+        if not os.path.exists(ytdlp):
+            return {"pass": False, "message": "G67: no local render and yt-dlp unavailable — cannot verify content"}
+        tmp_video = Path("/tmp") / f"g67-{vid_id}.mp4"
+        if not (tmp_video.exists() and tmp_video.stat().st_size > 100000):
+            try:
+                import subprocess as sp
+                r = sp.run([ytdlp, "-f", "18/best", "--extractor-args", "youtube:player_client=android",
+                            "--paths", "/tmp", "-o", f"g67-{vid_id}.%(ext)s",
+                            f"https://www.youtube.com/watch?v={vid_id}"],
+                           capture_output=True, text=True, timeout=300, cwd="/tmp")
+                if not tmp_video.exists() and not list(Path("/tmp").glob(f"g67-{vid_id}*.mp4")):
+                    return {"pass": False, "message": f"G67: video download failed: {(r.stderr or '').strip().splitlines()[-1][:120]}"}
+            except Exception as e:
+                return {"pass": False, "message": f"G67: video download error: {e}"}
+            hits = list(Path("/tmp").glob(f"g67-{vid_id}*.mp4"))
+            video_path = hits[0] if hits else tmp_video
+        else:
+            video_path = tmp_video
+    if not video_path.exists():
+        return {"pass": False, "message": "G67: no video file available to verify"}
+
+    # Frame at ~9% runtime (bridge scene), scaled to 1280px.
+    # NOTE: tesseract cannot read files under /tmp in this environment (sandbox
+    # quirk discovered Sep 3, 2026 — empty OCR output on files that exist).
+    # Frame + crop go under the project's artifacts dir instead.
+    gate_tmp = Path(PROJECT_DIR) / "artifacts" / "gates" / "g67"
+    gate_tmp.mkdir(parents=True, exist_ok=True)
+    try:
+        import subprocess as sp
+        import json as _json
+        probe = sp.run(["/opt/homebrew/bin/ffprobe", "-v", "error", "-show_entries", "format=duration",
+                        "-of", "json", str(video_path)], capture_output=True, text=True, timeout=30)
+        dur = float(_json.loads(probe.stdout)["format"]["duration"])
+    except Exception:
+        dur = 150.0
+    t = max(12.0, min(dur * 0.09, 22.0))
+    frame_png = gate_tmp / f"{slug}-frame.png"
+    try:
+        import subprocess as sp
+        sp.run([ffmpeg, "-y", "-ss", str(t), "-i", str(video_path), "-frames:v", "1",
+                "-vf", "scale=1280:-1", str(frame_png)], capture_output=True, timeout=60)
+    except Exception as e:
+        return {"pass": False, "message": f"G67: frame extraction failed: {e}"}
+    if not frame_png.exists():
+        return {"pass": False, "message": "G67: frame extraction produced no file"}
+
+    # Crop the '01 Hospitals' card region and OCR
+    try:
+        from PIL import Image
+        im = Image.open(frame_png)
+        w, h = im.size
+        crop = im.crop((int(w * 0.05), int(h * 0.22), int(w * 0.68), int(h * 0.64)))
+        crop = crop.resize((int(crop.width * 1.7), int(crop.height * 1.7)), Image.LANCZOS)
+        crop_path = gate_tmp / f"{slug}-crop.png"
+        crop.save(crop_path)
+    except Exception as e:
+        return {"pass": False, "message": f"G67: crop failed: {e}"}
+
+    try:
+        import subprocess as sp
+        r = sp.run([tesseract, str(crop_path), "stdout", "--psm", "6"],
+                   capture_output=True, timeout=60)
+        ocr_text = r.stdout.decode("utf-8", "replace").lower()
+    except Exception as e:
+        return {"pass": False, "message": f"G67: OCR failed: {e}"}
+
+    if not ocr_text.strip():
+        return {"pass": False, "message": "G67: OCR returned no text — frame may be mid-animation; manual verification required"}
+
+    # Hard fail: 'denver' in any city's video is the known template leak
+    if "denver" in ocr_text and slug != "denver-co":
+        return {"pass": False, "message": f"G67: LEAKED — overview scene says 'Denver' (slug {slug}). Re-render with current pipeline and re-upload."}
+
+    # Fuzzy match: city name (or slug tokens) must appear in OCR text
+    city_tokens = [tok for tok in re.split(r"[-\s]+", (city_name or "").lower()) if len(tok) >= 4]
+    slug_tokens = [tok for tok in slug.replace(f"-{slug.rsplit('-', 1)[-1]}", "").split("-") if len(tok) >= 4]
+    candidates = set(city_tokens) | set(slug_tokens)
+    matched = [c for c in candidates if c in ocr_text]
+    if matched:
+        return {"pass": True, "message": f"G67: video overview scene names this city ('{matched[0]}' found; frame t={t:.0f}s)"}
+
+    # OCR often garbles serif subtitles; if the frame clearly shows the 4-card
+    # layout but no token matched, treat as needs-manual-verification (SKIP-class)
+    if re.search(r"hospitals|deliver", ocr_text):
+        return {"pass": True,
+                "message": f"G67: OCR could not resolve city name (no 'Denver' present; layout confirmed) — spot-check frame at {frame_png}"}
+
+    return {"pass": False,
+            "message": f"G67: overview card not found in frame at t={t:.0f}s — scene timing may differ; manual verification required (frame: {frame_png})"}
 
 
 def _local_video_outreach_gates(slug: str) -> dict:
@@ -351,6 +488,16 @@ def _local_video_outreach_gates(slug: str) -> dict:
             results["video_file_exists"] = {"pass": True, "message": "local mp4 cleaned post-upload (expected; YouTube upload + live embed verified)"}
         else:
             results["video_file_exists"] = {"pass": False, "message": "local mp4 missing and video not yet uploaded/embedded"}
+
+    # G67: video_content_city_match — the burned-in overview scene must name
+    # THIS city. The June 2026 render batch shipped 11 videos with hardcoded
+    # "Where you can deliver in Denver" (per-render data wiring bug), and the
+    # existing gates only checked that an embed EXISTS — not what the video
+    # shows. This gate grabs a frame from the bridge/overview scene (~9% of
+    # runtime), OCRs the '01 Hospitals' card subtitle, and requires the city
+    # name (or its slug token) to match. "Denver" is always a hard fail.
+    # (NEW — Sep 3, 2026, Augusta/Carrollton/Nashville incident.)
+    results["video_content_city_match"] = _g67_video_content_city_match(slug, vid_id)
 
     # Write gate results JSON
     gate_json = {

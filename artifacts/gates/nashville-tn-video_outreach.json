@@ -2,9 +2,9 @@
   "slug": "nashville-tn",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
-  "exit_code": 0,
+  "exit_code": 1,
   "passed": 8,
-  "failed": 0,
+  "failed": 1,
   "skipped": 0,
   "results": {
     "pre_render_gate": {
@@ -38,6 +38,10 @@
     "provider_photo_quality": {
       "status": "PASS",
       "detail": "all 4 provider photos are real images (>5KB, >100 colors)"
+    },
+    "video_content_city_match": {
+      "status": "FAIL",
+      "detail": "G67: LEAKED \u2014 overview scene says 'Denver' (slug nashville-tn). Re-render with current pipeline and re-upload."
     }
   }
 }

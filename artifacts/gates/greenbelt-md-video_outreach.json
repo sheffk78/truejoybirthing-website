@@ -1,15 +1,15 @@
 {
-  "slug": "portland-or",
+  "slug": "greenbelt-md",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
   "exit_code": 0,
-  "passed": 9,
+  "passed": 8,
   "failed": 0,
   "skipped": 0,
   "results": {
     "pre_render_gate": {
       "status": "PASS",
-      "detail": "scene data exists at remotion/src/data/portland-or-data.ts"
+      "detail": "scene data exists at remotion/src/data/greenbelt-md-data.ts"
     },
     "video_file_exists": {
       "status": "PASS",
@@ -17,15 +17,15 @@
     },
     "youtube_upload": {
       "status": "PASS",
-      "detail": "videoId 2jLTU5IPVW4 present in video-embeds.ts"
+      "detail": "videoId dePHsXbfYVc present in video-embeds.ts"
     },
     "youtube_thumbnail": {
       "status": "PASS",
-      "detail": "thumbnail present locally (848KB) and YouTube returns 127KB"
+      "detail": "thumbnail present locally (747KB) and YouTube returns 112KB"
     },
     "video_embedded": {
       "status": "PASS",
-      "detail": "embed found (vid 2jLTU5IPVW4) on live page"
+      "detail": "embed found (vid dePHsXbfYVc) on live page"
     },
     "videoobject_schema": {
       "status": "PASS",
@@ -37,11 +37,7 @@
     },
     "provider_photo_quality": {
       "status": "PASS",
-      "detail": "all 6 provider photos are real images (>5KB, >100 colors)"
-    },
-    "video_content_city_match": {
-      "status": "PASS",
-      "detail": "G67: video overview scene names this city ('portland' found; frame t=21s)"
+      "detail": "all 5 provider photos are real images (>5KB, >100 colors)"
     }
   }
 }

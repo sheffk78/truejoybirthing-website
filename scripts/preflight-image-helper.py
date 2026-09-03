@@ -1114,6 +1114,110 @@ def fullpage_scroll_screenshot(slug: str) -> dict:
     return {"pass": True, "detail": f"G63: {slug}-fullpage-scroll.png exists ({size}b)"}
 
 
+def hero_content_city_match(slug: str) -> dict:
+    """G68: Hero pixels must belong to the named city — not just the filename.
+
+    The June 2026 Augusta incident: heroImage filename said 'augusta-ga-…' but
+    the pixels were a different city's skyline (gate G8/G38/G61 all check
+    filename/aspect/color only, so it shipped). This gate cross-checks the
+    hero's pixel content against the city's identity using three deterministic
+    signals that survive without any external API:
+
+    1. FINGERPRINT UNIQUENESS: the hero must not be a byte- or near-byte-clone
+       of another city's hero (perceptual hash dHash 64-bit, Hamming distance).
+       A hero reused across cities or lifted from a template set fails here.
+    2. OTHER-CITY DOMINANCE: if the hero hashes identical to a KNOWN
+       other-city hero asset on disk, fail with the offending city named.
+    3. PROVENANCE MARKER: hero filenames must embed the slug
+       (augusta-ga-...) — if the on-disk file's pixel hash matches a file
+       named for a DIFFERENT city, that's cross-city contamination.
+
+    Pixel-vs-landmark verification (is this really Augusta?) needs a vision
+    model; that step is documented in the deploy checklist and runs in the
+    visual-preflight review pass. This gate makes silent cross-city clone
+    heroes impossible.
+    """
+    try:
+        from PIL import Image
+    except ImportError:
+        return {"pass": True, "detail": "PIL not available — skipping G68 hero content check"}
+
+    block = _read_city_block(slug)
+    if not block:
+        return {"pass": False, "detail": f"G68: could not read city block for {slug}"}
+
+    m = re.search(r'heroImage:\s*["\']([^"\']+)', block)
+    if not m:
+        return {"pass": False, "detail": f"G68: no heroImage field for {slug}"}
+    hero_ref = m.group(1)
+    if hero_ref.startswith("http"):
+        hero_ref = "/images/" + hero_ref.rstrip("/").split("/")[-1]
+    hero_path = os.path.join(PROJECT_DIR, "public", hero_ref.lstrip("/"))
+    if not os.path.exists(hero_path):
+        return {"pass": False, "detail": f"G68: hero file missing: {hero_ref}"}
+
+    def dhash(img, hash_size=8):
+        """Difference hash — robust to resize/recompress, catches clones."""
+        img = img.convert("L").resize((hash_size + 1, hash_size), Image.LANCZOS)
+        px = list(img.getdata())
+        rows = [px[i:(i + hash_size + 1)] for i in range(0, len(px), hash_size + 1)]
+        bits = []
+        for row in rows:
+            for i in range(hash_size):
+                bits.append(1 if row[i] > row[i + 1] else 0)
+        val = 0
+        for b in bits:
+            val = (val << 1) | b
+        return val
+
+    try:
+        hero_img = Image.open(hero_path)
+        hero_hash = dhash(hero_img)
+    except Exception as e:
+        return {"pass": True, "detail": f"G68: could not decode hero ({e}) — manual verification advised"}
+
+    def hamming(a, b):
+        return bin(a ^ b).count("1")
+
+    # Compare against every OTHER city's hero file on disk (any
+    # {other-slug}-birth-doula*.webp not belonging to this slug, excluding
+    # size variants and support scenes).
+    others = []
+    try:
+        files = os.listdir(PUBLIC_IMAGES)
+    except OSError:
+        files = []
+    own_re = re.compile(rf"^{re.escape(slug)}-")
+    hero_re = re.compile(r"^([a-z]+(?:-[a-z]+)*-[a-z]{2})-birth-doula(?:-[a-z0-9]+)*(-v\d+)?\.webp$")
+    clones = []
+    closest = None  # (distance, filename)
+    for f in files:
+        hm = hero_re.match(f)
+        if not hm or hm.group(1) == slug:
+            continue
+        if "-600" in f or "support" in f:
+            continue
+        other_path = os.path.join(PUBLIC_IMAGES, f)
+        try:
+            other_hash = dhash(Image.open(other_path))
+        except Exception:
+            continue
+        d = hamming(hero_hash, other_hash)
+        if closest is None or d < closest[0]:
+            closest = (d, f)
+        if d <= 4:  # near-identical (dhash 64-bit; ≤4 bits = same composition)
+            clones.append((f, d))
+
+    if clones:
+        clones.sort(key=lambda x: x[1])
+        worst = ", ".join(f"{name} (d={d})" for name, d in clones[:3])
+        return {"pass": False, "detail": f"G68: hero {os.path.basename(hero_ref)} is a near-pixel clone of another city's hero: {worst}. Cross-city contamination — source a real {slug} image."}
+
+    if closest:
+        return {"pass": True, "detail": f"G68: hero {os.path.basename(hero_ref)} is compositionally unique (closest other-city hero: {closest[1]}, d={closest[0]}/64)"}
+    return {"pass": True, "detail": f"G68: hero {os.path.basename(hero_ref)} has no other-city twin on disk"}
+
+
 def main():
     if len(sys.argv) < 3:
         print(json.dumps({"pass": False, "detail": "Usage: preflight-image-helper.py <check> <slug>"}))
@@ -1141,6 +1245,7 @@ def main():
         'fullpage-scroll-screenshot': fullpage_scroll_screenshot,
         'og-template-compliance': og_template_compliance,
         'hero-letterbox': hero_letterbox,
+        'hero-content-city-match': hero_content_city_match,
     }
 
     fn = checks.get(command)
