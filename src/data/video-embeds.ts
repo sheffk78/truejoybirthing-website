@@ -638,11 +638,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     },
 
 "norwalk-ct": {
-    videoId: "drkZEsmuVeo",
+    videoId: "XKkyBLnYpKM",
     title: "Norwalk CT Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
-    duration: "PT4M09S",
-    uploadDate: "2026-07-13T00:00:00-06:00",
+    duration: "PT4M26S",
+    uploadDate: "2026-09-03T13:40:00-06:00",
 },
 "long-beach-ca": {
     videoId: "8_X79ELJs9M",
