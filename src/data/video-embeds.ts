@@ -1207,7 +1207,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
   "naperville-il": {
-    videoId: "PnfwASVanTE",
+    videoId: "InHWSyWQHoY",
     title: "Naperville IL Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — 3 hospitals, a birth center, 4 doulas, costs, and Illinois Medicaid coverage.",
     duration: "PT6M2S",
