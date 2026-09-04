@@ -2,9 +2,9 @@
   "slug": "yonkers-ny",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
-  "exit_code": 1,
-  "passed": 8,
-  "failed": 1,
+  "exit_code": 0,
+  "passed": 9,
+  "failed": 0,
   "skipped": 0,
   "results": {
     "pre_render_gate": {
@@ -24,8 +24,8 @@
       "detail": "thumbnail present locally (934KB) and YouTube returns 140KB"
     },
     "video_embedded": {
-      "status": "FAIL",
-      "detail": "videoId xdNED1lnSJM not found on live page"
+      "status": "PASS",
+      "detail": "embed found (vid xdNED1lnSJM) on live page"
     },
     "videoobject_schema": {
       "status": "PASS",
