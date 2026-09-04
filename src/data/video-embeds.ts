@@ -1207,11 +1207,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
   "naperville-il": {
-    videoId: "InHWSyWQHoY",
+    videoId: "618LRLLjVsg",
     title: "Naperville IL Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — 3 hospitals, a birth center, 4 doulas, costs, and Illinois Medicaid coverage.",
-    duration: "PT6M2S",
-    uploadDate: "2026-07-31T00:00:00-06:00",
+    duration: "PT3M5S",
+    uploadDate: "2026-09-04T00:00:00-06:00",
     chapters: [
       [0, "Welcome to Naperville"],
       [12, "What This Video Covers"],
@@ -1693,7 +1693,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
   "ontario-ca": {
-    videoId: "FWTHxlIu5Qw",
+    videoId: "hJYcX-k9r50",
     title: "Ontario Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full Ontario city guide — 3 doulas, hospitals, costs, and California Medi-Cal coverage, all in under 4 minutes.",
     duration: "PT3M52S",
