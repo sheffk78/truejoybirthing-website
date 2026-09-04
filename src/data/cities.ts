@@ -7745,18 +7745,6 @@ midwifeInfo: {
     birthCenterDetails: [],
     localDoulas: [
       {
-        name: "Lenore Musambacine",
-        credential: "DONA-trained",
-        practice: "Luna Birth & Wellness",
-        url: "https://www.lunabirthandwellness.com",
-        description: "Alameda-based birth doula with nearly a decade of experience and over 400 births attended across Bay Area homes, birth centers, and hospitals. Offers birth doula services, private Birthing From Within childbirth classes, and lactation education. Supports births at Alta Bates, Pacifica Family Birth Center, and home births.",
-        services: ["Birth Doula", "Childbirth Education", "Lactation Support"],
-        costRange: "$1,800-$2,800",
-        serviceArea: ["Alameda", "Oakland", "Berkeley", "East Bay"],
-        photo: "/images/doulas/provider-alameda-ca-lenore-musambacine.webp",
-        acceptingClients: true,
-      },
-      {
         name: "Maureen Layag",
         credential: "DONA-trained",
         practice: "Maureen Layag Doula",
