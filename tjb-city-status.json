@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "last_updated": "2026-09-03T21:48:35.021415+00:00",
+  "last_updated": "2026-09-04T16:42:16Z",
   "total_cities_in_codebase": 187,
   "future_cities_planned": 1000,
   "cities": {
@@ -59,7 +59,7 @@
       "has_video": true,
       "has_outreach": true,
       "completed_at": "2026-07-10T02:27:56Z",
-      "note": "City page removed from cities.ts (404 on production). Removed from video-embeds.ts. Outreach queue cleared \u2014 12 providers were blocked by URL gate. Stale entry cleaned up 2026-07-09.",
+      "note": "City page removed from cities.ts (404 on production). Removed from video-embeds.ts. Outreach queue cleared — 12 providers were blocked by URL gate. Stale entry cleaned up 2026-07-09.",
       "video_embed_removed": true,
       "videoId": "",
       "video_id": "",
@@ -1000,7 +1000,7 @@
       "fixes_applied": [
         "G59: Added hospital website URLs (Norwalk, Stamford, Greenwich)",
         "G8+G58: Regenerated hero image (pregnant silhouette, no black bars)",
-        "G7: Fixed medicaidNote prefix to 'Yes \u2014'",
+        "G7: Fixed medicaidNote prefix to 'Yes —'",
         "R9: Re-rendered OG image and YouTube thumbnail from v3 hero for consistency"
       ],
       "stage": "complete",
@@ -1770,9 +1770,20 @@
     "huntington-beach-ca": {
       "has_video": true,
       "has_outreach": true,
-      "completed_at": "2026-07-30T17:06:00Z",
+      "completed_at": "2026-09-04T16:42:16Z",
       "stage": "complete",
-      "blocked_reason": null
+      "blocked_reason": null,
+      "outreach_sent_at": "2026-07-30",
+      "outreach_provider_count": 4,
+      "outreach_note": "4/4 providers contacted 2026-07-30 (3 sent, 1 replied); video re-done 2026-09-04, no new sends needed per R31 dedupe",
+      "video_id": "DegTiGs85Xc",
+      "videoId": "DegTiGs85Xc",
+      "video_url": "https://youtu.be/DegTiGs85Xc",
+      "video_uploaded_at": "2026-09-04T16:42:16Z",
+      "old_video_id": "2O_mCG6wOh4",
+      "old_video_status": "unlisted",
+      "page_deployed": true,
+      "preflight_passed": true
     },
     "newport-news-va": {
       "has_video": true,
