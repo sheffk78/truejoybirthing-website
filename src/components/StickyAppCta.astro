@@ -1,0 +1,86 @@
+---
+// StickyAppCta.astro — dismissible sticky bottom app CTA, mobile only (birth-plan-template).
+// Shows after scrolling past the hero (40%), hides over #download so it doesn't compete
+// with the PDF button, remembers dismissal for the session.
+import AppStoreButtons from './AppStoreButtons.astro';
+---
+
+<div
+  id="sticky-app-cta"
+  class="sticky-app-cta md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-tjb-lavender-200 px-4 py-3 shadow-[0_-4px_16px_rgba(0,0,0,0.08)]"
+  style="display:none;"
+  role="complementary"
+  aria-label="Get the free app"
+>
+  <div class="flex items-center gap-3">
+    <div class="flex-1 min-w-0">
+      <p class="text-sm font-semibold text-tjb-charcoal leading-snug">Build your plan in the free app</p>
+      <p class="text-xs text-tjb-gray leading-snug">Your plan, timing, and notes in one place.</p>
+    </div>
+    <AppStoreButtons variant="compact" align="left" />
+    <button
+      id="sticky-app-cta-dismiss"
+      type="button"
+      class="shrink-0 w-8 h-8 rounded-full border border-tjb-lavender-200 text-tjb-gray hover:bg-tjb-lavender-50 transition-colors"
+      aria-label="Dismiss"
+    >
+      <svg class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const bar = document.getElementById('sticky-app-cta');
+    if (!bar) return;
+    const KEY = 'tjb_sticky_dismissed';
+    if (sessionStorage.getItem(KEY) === 'true') return;
+
+    let viewFired = false;
+    function show() {
+      if (viewFired) return; // once per session
+      bar!.style.display = 'block';
+      bar!.style.transform = 'translateY(0)';
+      viewFired = true;
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'sticky_cta_view', page_location: window.location.href });
+      try {
+        (window as any).posthog?.capture?.('sticky_cta_view', { page_location: window.location.href });
+      } catch {}
+    }
+    function hide() {
+      bar!.style.display = 'none';
+    }
+
+    // Show after ~40% scroll; hide while #download is on screen.
+    const download = document.getElementById('download');
+    let downloadVisible = false;
+    if (download) {
+      new IntersectionObserver(
+        (entries) => {
+          downloadVisible = entries[0].isIntersecting;
+          if (downloadVisible) hide();
+          else maybeShow();
+        },
+        { threshold: 0.15 }
+      ).observe(download);
+    }
+
+    function maybeShow() {
+      if (downloadVisible) return;
+      const scrolled = window.scrollY / Math.max(1, document.body.scrollHeight - window.innerHeight);
+      if (scrolled >= 0.4) show();
+    }
+
+    window.addEventListener('scroll', maybeShow, { passive: true });
+
+    document.getElementById('sticky-app-cta-dismiss')?.addEventListener('click', () => {
+      hide();
+      sessionStorage.setItem(KEY, 'true');
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'sticky_cta_dismiss', page_location: window.location.href });
+    });
+  })();
+</script>

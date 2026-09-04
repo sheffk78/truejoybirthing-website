@@ -21,6 +21,9 @@
       var path = document.location.pathname;
 
       if (closest(link, function (e) { return e.id === 'download-pdf'; })) return 'lead_form_success';
+      if (closest(link, function (e) { return e.id === 'lead-success'; })) return 'lead_form_success';
+      if (closest(link, function (e) { return e.id === 'pdf-success-cta' || (e.dataset && e.dataset.pdfSuccessSource !== undefined); })) return 'pdf_success';
+      if (closest(link, function (e) { return e.id === 'sticky-app-cta'; })) return 'sticky_mobile';
       if (closest(link, function (e) { return e.classList && e.classList.contains('phone-frame'); })) return 'app_showcase';
       if (closest(link, function (e) { return e.tagName === 'FOOTER'; })) {
         return (path === '/' || path === '') ? 'home_footer' : 'footer';
@@ -28,6 +31,9 @@
       if (closest(link, function (e) { return e.tagName === 'HEADER'; })) return 'header_nav';
 
       if (/^\/birth-support\//.test(path)) return 'city_cta';
+      if (/^\/invite/.test(path)) return 'invite_page';
+      if (/^\/walkthrough/.test(path)) return 'walkthrough';
+      if (/^\/pregnancy/.test(path)) return 'pregnancy';
       if (/^\/birth-plan-template/.test(path)) return 'birth_plan_template';
       if (/^\/birth-plan-scenarios/.test(path)) return 'scenario_page';
       if (/^\/birth-plan-checklist/.test(path)) return 'checklist_page';
@@ -53,15 +59,27 @@
     }
 
     document.addEventListener('click', function (e) {
-      var link = e.target.closest('a[href*="apps.apple.com"]');
+      var target = e.target instanceof Element ? e.target : null;
+      var link = target && target.closest('a[href*="apps.apple.com"], a[href*="play.google.com"]');
       if (!link) return;
+      var store = link.href.indexOf('play.google.com') !== -1 ? 'android' : 'ios';
       gtag('event', 'app_download_click', {
         page_location: document.location.href,
         page_title: document.title,
         link_url: link.href,
+        store: store,
         cta_location: getCtaLocation(link),
         cta_text: getCtaText(link)
       });
+      if (window.posthog && typeof window.posthog.capture === 'function') {
+        window.posthog.capture('app_store_click', {
+          page_location: document.location.href,
+          link_url: link.href,
+          store: store,
+          cta_location: getCtaLocation(link),
+          cta_text: getCtaText(link)
+        });
+      }
     });
   })();
 </script>

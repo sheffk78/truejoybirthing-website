@@ -15,6 +15,7 @@ const {
   bannerImage,
   bannerAlt = '',
 } = Astro.props;
+import PdfSuccessCta from './PdfSuccessCta.astro';
 ---
 
 <section id="download" class="bg-white border-y border-tjb-lavender-200/60 py-20 md:py-28">
@@ -69,12 +70,7 @@ const {
     <div id="lead-success" class="hidden">
       <p class="text-green-700 font-semibold mb-4">✓ Check your inbox — your walkthrough access is on its way!</p>
       <p class="text-tjb-gray mb-6">Your free video walkthrough is ready below — start watching now.</p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-        <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="inline-flex items-center gap-2 text-tjb-lavender-600 font-semibold hover:text-tjb-lavender-700 transition-colors">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-          Get the free app: richer, updatable, shareable
-        </a>
-      </div>
+      <PdfSuccessCta source="lead_form" eventId="pdf-success-lead-form" />
     </div>
 
     <p class="text-xs text-tjb-gray-300 mt-2">No spam. Just your birth plan and occasional tips you can actually use.</p>
@@ -95,6 +91,8 @@ const {
 </section>
 
 <script>
+  import { trackFormStart, trackFormSubmit, trackLeadCaptured } from '../scripts/analytics-funnel';
+
   const leadForm = document.getElementById('lead-magnet-form') as HTMLFormElement;
   const leadStatus = document.getElementById('lead-status') as HTMLParagraphElement;
   const leadSuccess = document.getElementById('lead-success') as HTMLDivElement;
@@ -109,6 +107,7 @@ const {
 
     if (!email) return;
 
+    trackFormStart('lead-magnet-form');
     leadBtn.disabled = true;
     leadBtn.textContent = 'Sending...';
 
@@ -125,6 +124,9 @@ const {
         leadStatus.classList.add('hidden');
         leadSuccess.classList.remove('hidden');
         leadForm.reset();
+        // Funnel events — GA4 + PostHog
+        trackFormSubmit('lead-magnet-form', 'lead_form');
+        trackLeadCaptured('lead-magnet-form', 'lead_form');
         // Persist lead capture and reveal videos
         localStorage.setItem('tjb_lead_captured', 'true');
         window.dispatchEvent(new CustomEvent('lead-captured'));

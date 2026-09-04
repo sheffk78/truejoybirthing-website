@@ -1,0 +1,55 @@
+---
+// AppStoreButtons.astro — dual-store CTA, single source of truth (src/config/app-stores.ts).
+// Renders the App Store button always. Google Play only when APP_STORES.android.live
+// (flip that flag when Play approves — no component changes needed).
+// Clicks are instrumented by AppDownloadTracker (delegation); data-store enables
+// the tracker's store param.
+import { APP_STORES } from '../config/app-stores';
+
+interface Props {
+  /** primary = solid btn-primary · ghost = outlined · compact = small outlined */
+  variant?: 'primary' | 'ghost' | 'compact';
+  align?: 'center' | 'left';
+}
+
+const { variant = 'primary', align = 'center' } = Astro.props;
+
+const base =
+  'app-store-btn inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-colors';
+const variantClass =
+  variant === 'primary'
+    ? 'btn-primary'
+    : variant === 'compact'
+      ? 'bg-white text-tjb-rose-600 border border-tjb-rose-300 px-4 py-2 text-sm hover:bg-tjb-rose-50'
+      : 'bg-tjb-rose-600 text-white px-6 py-3 text-[0.9375rem] hover:bg-tjb-rose-700';
+const wrapperAlign = align === 'center' ? 'justify-center' : 'justify-start';
+---
+
+<div class={`app-store-buttons flex flex-col sm:flex-row items-center gap-3 ${wrapperAlign}`}>
+  <a
+    href={APP_STORES.ios.url}
+    data-store="ios"
+    rel="noopener"
+    class={`${base} ${variantClass}`}
+  >
+    <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.05 12.54c-.03-2.62 2.14-3.88 2.24-3.94-1.22-1.79-3.12-2.03-3.8-2.06-1.62-.16-3.15.95-3.97.95-.82 0-2.08-.93-3.42-.9-1.76.03-3.38 1.02-4.28 2.6-1.83 3.17-.47 7.86 1.31 10.43.87 1.26 1.9 2.67 3.26 2.62 1.31-.05 1.8-.84 3.38-.84 1.58 0 2.03.84 3.41.81 1.41-.02 2.3-1.27 3.16-2.54 1-1.46 1.41-2.88 1.43-2.95-.03-.01-2.74-1.05-2.72-4.18zM14.44 4.86c.72-.88 1.21-2.1 1.08-3.31-1.04.04-2.31.69-3.06 1.57-.67.78-1.26 2.03-1.1 3.22 1.16.09 2.35-.59 3.08-1.46z"/>
+    </svg>
+    Download on the App Store
+  </a>
+  {
+    APP_STORES.android.live && (
+      <a
+        href={APP_STORES.android.url}
+        data-store="android"
+        rel="noopener"
+        class={`${base} ${variantClass}`}
+      >
+        <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3.6 2.3 13.3 12 3.6 21.7c-.36-.18-.6-.56-.6-1.02V3.32c0-.46.24-.84.6-1.02zm11.1 8.3 2.3-2.3 2.9 1.66c.86.5.86 1.58 0 2.08l-2.9 1.66-2.3-2.3-1.4-1.4 1.4-1.4zM5.2 1.7l9.5 9.5-2.1 2.1L5.2 1.7zm0 20.6 7.4-11.6 2.1 2.1-9.5 9.5z"/>
+        </svg>
+        Get it on Google Play
+      </a>
+    )
+  }
+</div>

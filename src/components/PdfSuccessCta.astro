@@ -1,0 +1,63 @@
+---
+// PdfSuccessCta.astro — post-download app CTA block (Shelbi voice: warm, plain, sentence case).
+// Fires pdf_success_view when revealed; App Store click inside fires app_download_click
+// with cta_location = `pdf_success` via AppDownloadTracker (id="pdf-success-cta").
+import AppStoreButtons from './AppStoreButtons.astro';
+
+interface Props {
+  source?: string; // 'lead_form' | 'city_lead_form' | 'pdf_direct'
+  compact?: boolean; // smaller version for the ungated PDF path
+  eventId?: string; // wrapper id (must be unique per mount)
+}
+
+const { source = 'lead_form', compact = false, eventId } = Astro.props;
+const wrapperId = eventId ?? 'pdf-success-cta';
+---
+
+<div id={wrapperId} data-pdf-success-source={source} class:list={[compact ? 'mt-5' : 'mt-6']}>
+  <div class="rounded-xl border border-tjb-lavender-200 bg-tjb-lavender-50/60 px-6 py-6 text-center">
+    {
+      !compact && (
+        <h3 class="font-semibold text-tjb-charcoal text-xl mb-2">Take your plan to the hospital</h3>
+      )
+    }
+    <p class="text-tjb-gray text-sm leading-relaxed mb-4 max-w-md mx-auto">
+      The app has your plan, contraction timing, and provider messages in one place.
+    </p>
+    <div class={compact ? 'flex justify-center' : ''}>
+      <AppStoreButtons variant={compact ? 'compact' : 'primary'} align="center" />
+    </div>
+  </div>
+</div>
+
+<script>
+  // Fire pdf_success_view when the success wrapper is unhidden or scrolls into view.
+  (function () {
+    function fire(el: Element) {
+      if (el.dataset.pdfSuccessFired === 'true') return;
+      el.dataset.pdfSuccessFired = 'true';
+      const source = el.dataset.pdfSuccessSource || 'lead_form';
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'pdf_success_view', source, page_location: window.location.href });
+      try {
+        (window as any).posthog?.capture?.('pdf_success_view', { source, page_location: window.location.href });
+      } catch {}
+    }
+    // Immediate: any visible (not display:none) instance at load (e.g. ungated path)
+    document.querySelectorAll('[data-pdf-success-source]').forEach((el) => {
+      const style = window.getComputedStyle(el);
+      if (style.display !== 'none' && style.visibility !== 'hidden') fire(el);
+    });
+    // Deferred: success divs that get unhidden after form submit
+    const observer = new MutationObserver((muts) => {
+      muts.forEach((m) => {
+        const el = m.target as Element;
+        if (m.type === 'attributes' && (el as HTMLElement).classList?.contains('hidden')) return;
+        if (el instanceof HTMLElement && el.dataset.pdfSuccessSource && el.offsetParent !== null) fire(el);
+      });
+    });
+    document.querySelectorAll('[data-pdf-success-source]').forEach((el) => {
+      observer.observe(el, { attributes: true, attributeFilter: ['class'] });
+    });
+  })();
+</script>
