@@ -38,6 +38,7 @@ export const onRequestPost = async (context) => {
     let email = '';
     let message = '';
     let subject = '';
+    let source = '';
 
     if (contentType.includes('application/json')) {
       const body = await request.json();
@@ -45,6 +46,7 @@ export const onRequestPost = async (context) => {
       email = (body.email || '').trim();
       message = (body.message || '').trim();
       subject = (body.subject || '').trim();
+      source = (body.source || '').trim();
     } else if (contentType.includes('application/x-www-form-urlencoded')) {
       const form = await request.formData();
       name = (form.get('name') || '').trim();
@@ -86,6 +88,19 @@ export const onRequestPost = async (context) => {
     // ── Primary: MailerCloud contact upsert (list IDs from migration) ──
     // Mailercloud uses alphanumeric string list IDs (NOT Brevo numeric IDs).
     // uaEauf = True Joy Birthing Subscribers (general), wHHZHy = Free Birth Plan
+    // `source` (e.g. birth_plan_pdf, faq_lead, walkthrough) is forwarded as a
+    // custom_field so MailerCloud automations can segment the nurture sequence.
+    const contactFields: {
+      email: string;
+      first_name: string;
+      last_name: string;
+      custom_fields?: Record<string, string>;
+    } = {
+      email,
+      first_name: firstName,
+      last_name: name && name.split(' ').slice(1).join(' ') || '',
+    };
+    if (source) contactFields.custom_fields = { source };
     if (env.MC_API_KEY) {
       try {
         await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
@@ -94,12 +109,7 @@ export const onRequestPost = async (context) => {
             'Authorization': env.MC_API_KEY,
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({
-            email,
-            first_name: firstName,
-            last_name: name && name.split(' ').slice(1).join(' ') || '',
-            list_id: 'uaEauf',
-          }),
+          body: JSON.stringify({ ...contactFields, list_id: 'uaEauf' }),
         });
         // Also add to Free Birth Plan list (wHHZHy) if not already there
         await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
@@ -108,12 +118,7 @@ export const onRequestPost = async (context) => {
             'Authorization': env.MC_API_KEY,
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify({
-            email,
-            first_name: firstName,
-            last_name: name && name.split(' ').slice(1).join(' ') || '',
-            list_id: 'wHHZHy',
-          }),
+          body: JSON.stringify({ ...contactFields, list_id: 'wHHZHy' }),
         });
       } catch (mcErr) {
         console.error('MailerCloud contact sync error (non-fatal):', mcErr);
