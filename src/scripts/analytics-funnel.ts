@@ -11,7 +11,8 @@ declare global {
   }
 }
 
-function track(name: string, params: FunnelParams = {}): void {
+/** Generic funnel event: GA4 dataLayer push + PostHog capture, when loaded. */
+export function track(name: string, params: FunnelParams = {}): void {
   if (typeof window === 'undefined') return;
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({ event: name, ...params });

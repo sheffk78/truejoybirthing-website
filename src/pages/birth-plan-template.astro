@@ -6,6 +6,7 @@ import ContextualCityLinks from '../components/ContextualCityLinks.astro';
 import AppStoreButtons from '../components/AppStoreButtons.astro';
 import PdfSuccessCta from '../components/PdfSuccessCta.astro';
 import StickyAppCta from '../components/StickyAppCta.astro';
+import ExitIntentCta from '../components/ExitIntentCta.astro';
 
 const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"}, {"name": "Free Birth Plan Template", "url": "https://truejoybirthing.com/birth-plan-template/"}];
 
@@ -754,6 +755,10 @@ const schema = {
         <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
         Download Free PDF
       </a>
+      <script>
+        import { trackPdfDownload } from '../scripts/analytics-funnel';
+        document.getElementById('pdf-direct-download')?.addEventListener('click', () => trackPdfDownload('direct_btn'));
+      </script>
       <p class="text-sm text-tjb-gray mt-3">100% free · fillable &amp; printable · no email required</p>
       <PdfSuccessCta source="pdf_direct" compact eventId="pdf-success-cta-direct" />
 
@@ -771,6 +776,7 @@ const schema = {
   </div>
 
   <StickyAppCta />
+  <ExitIntentCta />
 
 </Layout>
 

@@ -18,6 +18,8 @@
     }
 
     function getCtaLocation(link) {
+      if (closest(link, function (e) { return e.id === 'exit-intent-cta'; })) return 'exit_intent';
+
       var path = document.location.pathname;
 
       if (closest(link, function (e) { return e.id === 'download-pdf'; })) return 'lead_form_success';

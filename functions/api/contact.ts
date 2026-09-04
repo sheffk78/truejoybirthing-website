@@ -125,6 +125,65 @@ export const onRequestPost = async (context) => {
       }
     }
 
+    // ── Visitor delivery: transactional birth plan email via Postmark ──
+    // Non-blocking: any failure is logged and the client still gets { success: true }.
+    // Skipped for obvious test addresses (no guard existed before; added 2026-09-04).
+    const looksLikeTestEmail = /\+test|\.test@|@test\.|@example\.(com|org)|@fake|@invalid|mailinator|guerrillamail|10minutemail|throwaway/i.test(email);
+
+    if (env.POSTMARK_SERVER_TOKEN && !looksLikeTestEmail) {
+      const pdfUrl = 'https://truejoybirthing.com/true-joy-birth-plan.pdf?src=email';
+      const appUrl = 'https://truejoybirthing.com/app';
+      const deliverySubject = 'Your free birth plan';
+      const deliveryText = [
+        `Hi ${firstName || 'there'},`,
+        ``,
+        `Your free birth plan is ready. Download it here:`,
+        pdfUrl,
+        ``,
+        `Congratulations on getting this done — it's a real step toward the birth you want. Print it or save it, and bring it to your next appointment. Every plan looks a little different, and yours should sound like you.`,
+        ``,
+        `If you'd like to keep editing it as things change, the free True Joy Birthing app saves your plan in one place: ${appUrl}`,
+        ``,
+        `Reply if anything is unclear — I read every reply.`,
+        ``,
+        `Warmly,`,
+        `Shelbi`,
+        `True Joy Birthing`,
+      ].join('\n');
+      const deliveryHtml = [
+        `<p>Hi ${firstName || 'there'},</p>`,
+        `<p>Your free birth plan is ready. <a href="${pdfUrl}">Download it here</a>.</p>`,
+        `<p>Congratulations on getting this done — it's a real step toward the birth you want. Print it or save it, and bring it to your next appointment. Every plan looks a little different, and yours should sound like you.</p>`,
+        `<p>If you'd like to keep editing it as things change, the free True Joy Birthing app saves your plan in one place: <a href="${appUrl}">truejoybirthing.com/app</a></p>`,
+        `<p>Reply if anything is unclear — I read every reply.</p>`,
+        `<p>Warmly,<br>Shelbi<br>True Joy Birthing</p>`,
+      ].join('\n');
+
+      try {
+        await fetch('https://api.postmarkapp.com/email', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'X-Postmark-Server-Token': env.POSTMARK_SERVER_TOKEN,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            From: 'support@truejoybirthing.com',
+            To: email,
+            Subject: deliverySubject,
+            TextBody: deliveryText,
+            HtmlBody: deliveryHtml,
+          }),
+        }).catch((pmErr) => {
+          console.error('Postmark delivery email failed (non-blocking):', pmErr);
+        });
+      } catch (deliveryErr) {
+        console.error('Postmark delivery email error (non-blocking):', deliveryErr);
+      }
+    } else if (!env.POSTMARK_SERVER_TOKEN) {
+      console.error('POSTMARK_SERVER_TOKEN not set; skipping visitor delivery email');
+    }
+
     // ── Secondary: Postmark notification → support@truejoybirthing.com ──
     // Routes to the VPS support inbox (support@ → kenneth mailbox) via MX.
     // Replaces the removed AgentMail API call (2026-08-13).

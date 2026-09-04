@@ -1,0 +1,97 @@
+---
+// ExitIntentCta.astro — small fixed bottom-right app CTA card (birth-plan-template only).
+// Desktop: fires on mouseout toward the top of the viewport (clientY < 10, cursor leaving
+// the document). Touch devices: fires on rapid scroll-up while in the bottom third of the
+// page. Shows ONCE per session (sessionStorage tjb_exit_intent_shown).
+// Fires 'exit_intent_viewed' via analytics-funnel track(); App Store clicks inside get
+// cta_location='exit_intent' via AppDownloadTracker (id="exit-intent-cta").
+// Lightweight dialog: role=dialog, closes on X or Escape, focus is not trapped.
+import AppStoreButtons from './AppStoreButtons.astro';
+---
+
+<div
+  id="exit-intent-cta"
+  class="fixed z-50 bottom-20 right-4 md:bottom-6 md:right-6 w-[19rem] max-w-[calc(100vw-2rem)] bg-white rounded-xl border border-tjb-lavender-200 shadow-[0_8px_24px_rgba(0,0,0,0.12)] p-5"
+  style="display:none;"
+  role="dialog"
+  aria-modal="false"
+  aria-label="Take your plan with you"
+>
+  <button
+    id="exit-intent-close"
+    type="button"
+    class="absolute top-2.5 right-2.5 w-7 h-7 rounded-full border border-tjb-lavender-200 text-tjb-gray hover:bg-tjb-lavender-50 transition-colors"
+    aria-label="Close"
+  >
+    <svg class="w-3.5 h-3.5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
+
+  <h3 class="font-semibold text-tjb-charcoal text-lg leading-snug mb-2 pr-6">Take your plan with you</h3>
+  <p class="text-tjb-gray text-sm leading-relaxed mb-4">
+    A plan built in the app stays saved and editable, so it can change as your preferences change. Paper is a one-time snapshot; the app keeps up.
+  </p>
+  <div class="flex justify-start">
+    <AppStoreButtons variant="compact" align="left" />
+  </div>
+</div>
+
+<script>
+  import { track } from '../scripts/analytics-funnel';
+
+  (function () {
+    const card = document.getElementById('exit-intent-cta');
+    if (!card) return;
+    const KEY = 'tjb_exit_intent_shown';
+    if (sessionStorage.getItem(KEY) === 'true') return;
+
+    let shown = false;
+
+    function show() {
+      if (shown) return;
+      shown = true;
+      try { sessionStorage.setItem(KEY, 'true'); } catch {}
+      card!.style.display = 'block';
+      track('exit_intent_viewed', { page_location: window.location.href });
+    }
+
+    function close() {
+      card!.style.display = 'none';
+    }
+
+    const isTouch = (navigator.maxTouchPoints || 0) > 0;
+
+    if (!isTouch) {
+      // Desktop: cursor exits toward the top of the viewport.
+      document.addEventListener('mouseout', (e) => {
+        if (shown) return;
+        if (e.clientY >= 10) return;
+        const to = e.relatedTarget as Node | null;
+        if (to && document.contains(to)) return; // still inside the page — not an exit
+        show();
+      });
+    } else {
+      // Touch: rapid scroll-up while in the bottom third of the page.
+      let lastY = window.scrollY;
+      let lastT = performance.now();
+      window.addEventListener('scroll', () => {
+        if (shown) return;
+        const y = window.scrollY;
+        const t = performance.now();
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        const inBottomThird = max > 0 && y / max > 2 / 3;
+        const dy = lastY - y; // positive = scrolling up
+        const dt = Math.max(1, t - lastT);
+        if (inBottomThird && dy > 120 && dy / dt > 0.8) show(); // fast upward flick
+        lastY = y;
+        lastT = t;
+      }, { passive: true });
+    }
+
+    document.getElementById('exit-intent-close')?.addEventListener('click', close);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') close();
+    });
+  })();
+</script>

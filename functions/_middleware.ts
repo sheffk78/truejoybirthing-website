@@ -72,7 +72,7 @@ const redirects: Record<string, string> = {
   "/book": "/#download",
   "/pro": "/new-doula-start-here/",
   "/doula": "/new-doula-start-here/",
-  "/app": "/",
+  // "/app" moved out of middleware 2026-09-04 — now handled UA-aware in functions/app.ts
   "/download": "/#download",
   "/free": "/#download",
   "/help": "/faq/",

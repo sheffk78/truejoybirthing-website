@@ -80,6 +80,11 @@ const { city = '', class: wrapClass = '' } = Astro.props;
 </section>
 
 <script>
+  import { trackPdfDownload } from '../../scripts/analytics-funnel';
+  // Bypass link (skip the email form) — fires pdf_download with source='bypass_link'.
+  document.querySelectorAll('section#download-pdf a[href="/true-joy-birth-plan.pdf"][download]').forEach((a) => {
+    a.addEventListener('click', () => trackPdfDownload('bypass_link'));
+  });
   const cityForm = document.getElementById('city-lead-form') as HTMLFormElement;
   const cityStatus = document.getElementById('city-lead-status') as HTMLParagraphElement;
   const citySuccess = document.getElementById('city-lead-success') as HTMLDivElement;
