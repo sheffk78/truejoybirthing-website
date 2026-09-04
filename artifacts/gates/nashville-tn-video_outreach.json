@@ -13,19 +13,19 @@
     },
     "video_file_exists": {
       "status": "PASS",
-      "detail": "local mp4 cleaned post-upload (expected; YouTube upload + live embed verified)"
+      "detail": "video file 18.6MB >10MB"
     },
     "youtube_upload": {
       "status": "PASS",
-      "detail": "videoId a6dW2-BfIfU present in video-embeds.ts"
+      "detail": "videoId HKP2I9c9rl8 present in video-embeds.ts"
     },
     "youtube_thumbnail": {
       "status": "PASS",
-      "detail": "thumbnail present locally (725KB) and YouTube returns 118KB"
+      "detail": "thumbnail present locally (844KB) and YouTube returns 118KB"
     },
     "video_embedded": {
-      "status": "PASS",
-      "detail": "embed found (vid a6dW2-BfIfU) on live page"
+      "status": "FAIL",
+      "detail": "videoId HKP2I9c9rl8 not found on live page"
     },
     "videoobject_schema": {
       "status": "PASS",
@@ -40,8 +40,8 @@
       "detail": "all 4 provider photos are real images (>5KB, >100 colors)"
     },
     "video_content_city_match": {
-      "status": "FAIL",
-      "detail": "G67: LEAKED \u2014 overview scene says 'Denver' (slug nashville-tn). Re-render with current pipeline and re-upload."
+      "status": "PASS",
+      "detail": "G67: video overview scene names this city ('nashville' found; frame t=15s)"
     }
   }
 }
