@@ -3,17 +3,21 @@
   "stage": "build",
   "mode": "stage_emission",
   "exit_code": 0,
-  "passed": 14,
+  "passed": 18,
   "failed": 0,
   "skipped": 0,
   "results": {
+    "G66": {
+      "status": "PASS",
+      "detail": "fate-tx block has no duplicate keys (22 other cities carry duplicate keys \u2014 cleanup queue)"
+    },
     "S1": {
       "status": "PASS",
       "detail": "enableBlogResources = true"
     },
     "S2": {
       "status": "PASS",
-      "detail": "OG image og-city-fate-tx.webp (60308 bytes \u2265 30KB)"
+      "detail": "OG image og-city-fate-tx-v2.webp (115756 bytes \u2265 30KB)"
     },
     "S4": {
       "status": "PASS",
@@ -49,11 +53,19 @@
     },
     "G29": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=32656) and locked Pattern B composition"
+      "detail": "OG has photo content (full_unique_colors=32265) and locked Pattern B composition"
     },
     "G35": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=32656) and locked Pattern B composition"
+      "detail": "OG has photo content (full_unique_colors=32265) and locked Pattern B composition"
+    },
+    "G64": {
+      "status": "PASS",
+      "detail": "G64: OG og-city-fate-tx-v2.webp matches canonical Pattern B composition"
+    },
+    "G65": {
+      "status": "PASS",
+      "detail": "G65: No black letterbox/pillarbox bars on hero or support scene"
     },
     "G8a": {
       "status": "PASS",
@@ -62,6 +74,10 @@
     "G62": {
       "status": "PASS",
       "detail": "G62: Hero AVIF files not stale (or not present)"
+    },
+    "G68": {
+      "status": "PASS",
+      "detail": "G68: hero fate-tx-rva.webp is compositionally unique (closest other-city hero: charleston-sc-birth-doula-skyline-v4.webp, d=9/64)"
     }
   }
 }

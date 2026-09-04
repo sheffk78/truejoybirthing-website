@@ -1218,6 +1218,72 @@ def hero_content_city_match(slug: str) -> dict:
     return {"pass": True, "detail": f"G68: hero {os.path.basename(hero_ref)} has no other-city twin on disk"}
 
 
+def og_letterbox(slug: str) -> dict:
+    """G69: The OG image itself must have no black letterbox/pillarbox bars.
+
+    Kenneth directive 2026-09-04 (Huntington Beach OG shipped with black bars
+    top and bottom of the photo column). Root cause: OG renders inherit bars
+    from letterboxed source photos; G65 only checks hero + supportScene, so
+    ogImage drifted silently. Detection: pixel-scan the ogImage file for
+    pure-black horizontal bands in the photo column (right 45%) adjacent to
+    the card edges (within 12px of the rose accent bars), and full-width
+    pure-black column bands. Also FAILS if the ogImage file is missing on
+    disk (pre-deploy catches the 404 before Cloudflare ever serves it).
+    """
+    try:
+        from PIL import Image
+    except ImportError:
+        return {"pass": True, "detail": "PIL not available — skipping OG letterbox check"}
+    import numpy as np
+
+    block = _read_city_block(slug)
+    if block is None:
+        return {"pass": True, "detail": f"City {slug} not found — skipping"}
+
+    m = re.search(r'ogImage:\s*"([^"]+)"', block)
+    if not m:
+        return {"pass": True, "detail": "No explicit ogImage — fallback pattern, skipping"}
+    og_url = m.group(1)
+    fname = og_url.rstrip('/').split('/')[-1].split('?')[0]
+    og_path = os.path.join(PROJECT_DIR, 'public', 'images', fname)
+    if not os.path.exists(og_path):
+        return {"pass": False, "detail": f"G69: ogImage file missing on disk: public/images/{fname} (would 404)"}
+
+    def find_runs(dark, minlen=3):
+        out, start = [], None
+        n = len(dark)
+        for i in range(n):
+            if dark[i] and start is None:
+                start = i
+            elif not dark[i] and start is not None:
+                if i - start >= minlen:
+                    out.append((start, i - 1))
+                start = None
+        if start is not None and n - start >= minlen:
+            out.append((start, n - 1))
+        return out
+
+    im = Image.open(og_path).convert('RGB')
+    a = np.asarray(im, dtype=np.int32)
+    lum = np.asarray(im.convert('L'), dtype=np.int32)
+    H, W = lum.shape
+    problems = []
+    # photo column (right 45%) horizontal bands adjacent to card edges
+    x0 = int(W * 0.55)
+    runs = find_runs((a[:, x0:].max(axis=(1, 2)) < 12) & (lum[:, x0:].std(axis=1) < 6))
+    edge_runs = [r for r in runs if r[0] <= 12 or r[1] >= H - 12]
+    if edge_runs:
+        problems.append(f"black letterbox bands in photo column at rows {edge_runs} (pad bars are banned, R45 — re-render from the current hero, never pad)")
+    # full-width pure-black vertical bands (pillarbox)
+    col_runs = find_runs((a.max(axis=(0, 2)) < 12) & (lum.std(axis=0) < 6))
+    if col_runs:
+        problems.append(f"pure-black vertical bands at cols {col_runs}")
+
+    if problems:
+        return {"pass": False, "detail": "G69: OG " + fname + " — " + "; ".join(problems)}
+    return {"pass": True, "detail": f"G69: OG {fname} has no letterbox/pillarbox bars"}
+
+
 def main():
     if len(sys.argv) < 3:
         print(json.dumps({"pass": False, "detail": "Usage: preflight-image-helper.py <check> <slug>"}))
@@ -1244,6 +1310,7 @@ def main():
         'hero-avif-staleness': hero_avif_staleness,
         'fullpage-scroll-screenshot': fullpage_scroll_screenshot,
         'og-template-compliance': og_template_compliance,
+        'og-letterbox': og_letterbox,
         'hero-letterbox': hero_letterbox,
         'hero-content-city-match': hero_content_city_match,
     }

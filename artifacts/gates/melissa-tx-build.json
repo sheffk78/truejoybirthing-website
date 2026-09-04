@@ -1,0 +1,83 @@
+{
+  "slug": "melissa-tx",
+  "stage": "build",
+  "mode": "stage_emission",
+  "exit_code": 0,
+  "passed": 18,
+  "failed": 0,
+  "skipped": 0,
+  "results": {
+    "G66": {
+      "status": "PASS",
+      "detail": "melissa-tx block has no duplicate keys (22 other cities carry duplicate keys \u2014 cleanup queue)"
+    },
+    "S1": {
+      "status": "PASS",
+      "detail": "enableBlogResources = true"
+    },
+    "S2": {
+      "status": "PASS",
+      "detail": "OG image og-city-melissa-tx-v2.webp (128966 bytes \u2265 30KB)"
+    },
+    "S4": {
+      "status": "PASS",
+      "detail": "Required fields present"
+    },
+    "S6": {
+      "status": "PASS",
+      "detail": "publishedDate = \"2026-08-05\""
+    },
+    "S7": {
+      "status": "PASS",
+      "detail": "medicaidNote starts correctly"
+    },
+    "S8": {
+      "status": "PASS",
+      "detail": "No \"Contact for pricing\""
+    },
+    "S3": {
+      "status": "PASS",
+      "detail": "npm run build exited 0"
+    },
+    "S5": {
+      "status": "PASS",
+      "detail": "No standalone 'Free Birth Plan' in rendered HTML"
+    },
+    "G8": {
+      "status": "PASS",
+      "detail": "melissa-tx-birth-doula-hero-v2.webp is a real photograph (high color count)"
+    },
+    "G25": {
+      "status": "PASS",
+      "detail": "Hero image is 3:2 (1200x800, ratio=1.50)"
+    },
+    "G29": {
+      "status": "PASS",
+      "detail": "OG has photo content (full_unique_colors=35741) and locked Pattern B composition"
+    },
+    "G35": {
+      "status": "PASS",
+      "detail": "OG has photo content (full_unique_colors=35741) and locked Pattern B composition"
+    },
+    "G64": {
+      "status": "PASS",
+      "detail": "G64: OG og-city-melissa-tx-v2.webp matches canonical Pattern B composition"
+    },
+    "G65": {
+      "status": "PASS",
+      "detail": "G65: No black letterbox/pillarbox bars on hero or support scene"
+    },
+    "G8a": {
+      "status": "PASS",
+      "detail": "Silhouette confirmed (center=76.7 < top=228.0, top_colors=3164)"
+    },
+    "G62": {
+      "status": "PASS",
+      "detail": "G62: Hero AVIF files not stale (or not present)"
+    },
+    "G68": {
+      "status": "PASS",
+      "detail": "G68: hero melissa-tx-birth-doula-hero-v2.webp is compositionally unique (closest other-city hero: tampa-fl-birth-doula-skyline-v2.webp, d=9/64)"
+    }
+  }
+}

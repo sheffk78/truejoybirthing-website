@@ -1,27 +1,83 @@
 {
   "slug": "chicago-il",
   "stage": "build",
-  "mode": "local_integrity",
-  "exit_code": 1,
-  "passed": 0,
-  "failed": 1,
+  "mode": "stage_emission",
+  "exit_code": 0,
+  "passed": 18,
+  "failed": 0,
   "skipped": 0,
   "results": {
-    "LOCAL_heroImage": {
+    "G66": {
       "status": "PASS",
-      "detail": "/images/chicago-il-birth-doula-hero-v6.webp"
+      "detail": "chicago-il block has no duplicate keys (22 other cities carry duplicate keys \u2014 cleanup queue)"
     },
-    "LOCAL_ogImage": {
+    "S1": {
       "status": "PASS",
-      "detail": "https://truejoybirthing.com/images/og-city-chicago-il-v5.webp"
+      "detail": "enableBlogResources = true"
     },
-    "LOCAL_supportSceneImage": {
+    "S2": {
       "status": "PASS",
-      "detail": "/images/chicago-il-birth-doula-support-v2.webp"
+      "detail": "OG image og-city-chicago-il-v2.webp (80908 bytes \u2265 30KB)"
     },
-    "LOCAL_PROVIDER_PHOTOS": {
-      "status": "FAIL",
-      "detail": "cross-city provider photo: /images/doulas/noshaba-bhatti-chicago.webp"
+    "S4": {
+      "status": "PASS",
+      "detail": "Required fields present"
+    },
+    "S6": {
+      "status": "PASS",
+      "detail": "publishedDate = \"2026-06-22\""
+    },
+    "S7": {
+      "status": "PASS",
+      "detail": "medicaidNote starts correctly"
+    },
+    "S8": {
+      "status": "PASS",
+      "detail": "No \"Contact for pricing\""
+    },
+    "S3": {
+      "status": "PASS",
+      "detail": "npm run build exited 0"
+    },
+    "S5": {
+      "status": "PASS",
+      "detail": "No standalone 'Free Birth Plan' in rendered HTML"
+    },
+    "G8": {
+      "status": "PASS",
+      "detail": "chicago-il-birth-doula-hero-v6.webp is a real photograph (high color count)"
+    },
+    "G25": {
+      "status": "PASS",
+      "detail": "Hero image is 3:2 (1200x800, ratio=1.50)"
+    },
+    "G29": {
+      "status": "PASS",
+      "detail": "OG has photo content (full_unique_colors=16546) and locked Pattern B composition"
+    },
+    "G35": {
+      "status": "PASS",
+      "detail": "OG has photo content (full_unique_colors=16546) and locked Pattern B composition"
+    },
+    "G64": {
+      "status": "PASS",
+      "detail": "G64: OG og-city-chicago-il-v6.webp matches canonical Pattern B composition"
+    },
+    "G65": {
+      "status": "PASS",
+      "detail": "G65: No black letterbox/pillarbox bars on hero or support scene"
+    },
+    "G8a": {
+      "status": "PASS",
+      "detail": "Silhouette confirmed (center=132.7 < top=201.6, top_colors=3040)"
+    },
+    "G62": {
+      "status": "PASS",
+      "detail": "G62: Hero AVIF files not stale (or not present)"
+    },
+    "G68": {
+      "status": "PASS",
+      "detail": "G68: hero chicago-il-birth-doula-hero-v6.webp is compositionally unique (closest other-city hero: san-antonio-tx-birth-doula-skyline.webp, d=6/64)"
     }
   }
 }
