@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "last_updated": "2026-09-04T16:42:16Z",
+  "last_updated": "2026-09-04T20:30:31Z",
   "total_cities_in_codebase": 187,
   "future_cities_planned": 1000,
   "cities": {
@@ -59,7 +59,7 @@
       "has_video": true,
       "has_outreach": true,
       "completed_at": "2026-07-10T02:27:56Z",
-      "note": "City page removed from cities.ts (404 on production). Removed from video-embeds.ts. Outreach queue cleared — 12 providers were blocked by URL gate. Stale entry cleaned up 2026-07-09.",
+      "note": "City page removed from cities.ts (404 on production). Removed from video-embeds.ts. Outreach queue cleared \u2014 12 providers were blocked by URL gate. Stale entry cleaned up 2026-07-09.",
       "video_embed_removed": true,
       "videoId": "",
       "video_id": "",
@@ -1000,7 +1000,7 @@
       "fixes_applied": [
         "G59: Added hospital website URLs (Norwalk, Stamford, Greenwich)",
         "G8+G58: Regenerated hero image (pregnant silhouette, no black bars)",
-        "G7: Fixed medicaidNote prefix to 'Yes —'",
+        "G7: Fixed medicaidNote prefix to 'Yes \u2014'",
         "R9: Re-rendered OG image and YouTube thumbnail from v3 hero for consistency"
       ],
       "stage": "complete",
@@ -1802,7 +1802,10 @@
       "has_outreach": true,
       "completed_at": "2026-07-30T17:06:00Z",
       "stage": "complete",
-      "blocked_reason": null
+      "blocked_reason": null,
+      "outreach_sent_at": "2026-09-04T20:30:31Z",
+      "outreach_provider_count": 1,
+      "outreach_note": "2026-09-04 outreach pass: 1 email sent (Annie Griffith / Nurture Women's Collective, nurturewc@gmail.com, msg vps-20260904202924818275). 3 no-email tracked via DoulaMatch monitor (Selina Pasillas, Nicole Jones, Lauren Pancucci). HB: 4/4 already contacted 2026-07-30 per registry dedupe (R31), no new sends."
     },
     "oceanside-ca": {
       "has_video": true,
