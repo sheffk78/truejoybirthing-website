@@ -1111,7 +1111,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
   "rancho-cucamonga-ca": {
-    videoId: "1vWAH2FSFrg",
+    videoId: "f1bFlnasUxg",
     title: "Rancho Cucamonga CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
     description: "Watch the full city guide, doulas, hospitals, costs, and more, all in under 6 minutes.",
     duration: "PT5M20S",
