@@ -387,13 +387,19 @@ const schema = {
   const groups = document.querySelectorAll('.city-state-group');
   if (searchInput) {
     const allLinks = document.querySelectorAll('.city-link');
-    searchInput.addEventListener('input', () => {
+    let lastMatches = [];
+
+    function filterCities() {
       const q = searchInput.value.toLowerCase().trim();
       let totalVisible = 0;
+      lastMatches = [];
       allLinks.forEach(link => {
         const match = !q || link.textContent.toLowerCase().includes(q);
         link.style.display = match ? '' : 'none';
-        if (match) totalVisible++;
+        if (match) {
+          totalVisible++;
+          lastMatches.push(link);
+        }
       });
       groups.forEach(g => {
         const visible = Array.from(g.querySelectorAll('.city-link')).some(l => l.style.display !== 'none');
@@ -403,14 +409,30 @@ const schema = {
       });
       if (statusEl) {
         if (q && totalVisible === 0) {
-          statusEl.textContent = "We don't have that city yet — check back, we add new cities every week.";
+          statusEl.innerHTML = "We don't have that city yet — check back, we add new cities every week.";
           statusEl.style.display = '';
         } else if (q) {
-          statusEl.textContent = totalVisible + ' cit' + (totalVisible === 1 ? 'y' : 'ies') + ' found';
+          if (totalVisible === 1) {
+            const href = lastMatches[0].getAttribute('href');
+            const name = lastMatches[0].textContent.trim();
+            statusEl.innerHTML = '<a href="' + href + '" class="text-tjb-rose-600 font-semibold hover:text-tjb-rose-500 underline">View the ' + name + ' page →</a>';
+          } else {
+            statusEl.textContent = totalVisible + ' cities found — pick one below.';
+          }
           statusEl.style.display = '';
         } else {
           statusEl.style.display = 'none';
         }
+      }
+    }
+
+    searchInput.addEventListener('input', filterCities);
+
+    // Navigate to the single matching city on Enter
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && lastMatches.length === 1) {
+        const href = lastMatches[0].getAttribute('href');
+        if (href) window.location.href = href;
       }
     });
   }
