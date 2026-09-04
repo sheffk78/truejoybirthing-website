@@ -79,6 +79,30 @@ async function validate(): Promise<{ results: ValidationResult[]; totalErrors: n
     if (data.hospitalDetails && data.hospitalDetails.length === 0) {
       result.warnings.push('hospitalDetails is empty — no hospitals listed');
     }
+
+    // FACILITY PARAGRAPH GATE (Sept 4, 2026): the [city].astro template renders
+    // h.paragraph / bc.paragraph. Data written to `description:` renders as EMPTY text
+    // on the live page (Huntsville failure). Every facility must have a real paragraph
+    // >= 200 chars. A wrong-field description or thin text is a hard error.
+    const MIN_PARAGRAPH_CHARS = 200;
+    const checkFacilityParas = (list: any, label: string) => {
+      if (!Array.isArray(list)) return;
+      for (const f of list) {
+        if (!f || !f.name) continue;
+        const name = String(f.name);
+        if (/^no freestanding birth centers/i.test(name)) continue; // "no birth centers" info-note entries are exempt
+        const p = f.paragraph;
+        if (typeof p !== 'string' || p.replace(/<[^>]+>/g, '').trim().length < MIN_PARAGRAPH_CHARS) {
+          const len = typeof p === 'string' ? p.replace(/<[^>]+>/g, '').trim().length : 0;
+          result.errors.push(
+            `${label} "${name}" missing/thin paragraph (rendered text ${len} chars, min ${MIN_PARAGRAPH_CHARS}). ` +
+            `Note: the template renders the 'paragraph' field, NOT 'description'.`
+          );
+        }
+      }
+    };
+    checkFacilityParas(data.hospitalDetails, 'Hospital');
+    checkFacilityParas(data.birthCenterDetails, 'Birth center');
     if (data.faqs && data.faqs.length < 3) {
       result.warnings.push(`Only ${data.faqs?.length} FAQs — recommend at least 4`);
     }

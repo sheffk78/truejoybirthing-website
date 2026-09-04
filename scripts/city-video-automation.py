@@ -16,6 +16,18 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 REMOTION_DIR = Path.home() / '.openclaw' / 'workspace' / 'Kit' / 'life' / 'brands' / 'TrueJoyBirthing' / 'video' / 'remotion'
 
+# Load ~/.hermes/.env so cron-spawned runs get MISTRAL_API_KEY (Sept 4, 2026:
+# cron worker env lacked the key -> silent edge-tts fallback produced wrong voice on 5 videos)
+try:
+    _env_path = os.path.expanduser('~/.hermes/.env')
+    if os.path.exists(_env_path):
+        with open(_env_path) as _f:
+            for _line in _f:
+                if '=' in _line and not _line.strip().startswith('#'):
+                    _k, _v = _line.strip().split('=', 1)
+                    os.environ.setdefault(_k, _v)
+except Exception:
+    pass
 MISTRAL_API_KEY = os.environ.get('MISTRAL_API_KEY', '')
 SHELBI_VOICE = '331c27cd-1809-43c2-853d-4c167f184670'
 
@@ -405,12 +417,12 @@ def generate_tts(data_file):
     total_duration = 0.0
     scene_durations = {}
     
-    use_edge_tts = False
+    # HARD GATE (Sept 4, 2026): no voice fallback. Wrong-voice videos are worse than
+    # no video. If MISTRAL_API_KEY is missing, ABORT - do not silently substitute a voice.
     if not MISTRAL_API_KEY:
-        print('  ⚠️  No MISTRAL_API_KEY set, falling back to edge-tts (en-US-AriaNeural)')
-        use_edge_tts = True
-    EDGE_TTS_BIN = os.path.expanduser('~/.hermes/hermes-agent/venv/bin/edge-tts')
-    EDGE_VOICE = 'en-US-AriaNeural'
+        raise SystemExit(
+            'FATAL: MISTRAL_API_KEY not set - refusing to render with a fallback voice. '
+            'Load ~/.hermes/.env or export the key, then re-run.')
     
     for scene_id, narration in scenes:
         if not narration.strip():
@@ -423,20 +435,7 @@ def generate_tts(data_file):
         print(f'    TTS: {scene_id} ({len(narration)} chars)...')
         
         try:
-            if use_edge_tts:
-                # edge-tts: generate mp3, convert to wav
-                mp3_path = audio_dir / f'{scene_id}.mp3'
-                result = subprocess.run(
-                    [EDGE_TTS_BIN, '--voice', EDGE_VOICE, '--text', narration, '--write-media', str(mp3_path)],
-                    capture_output=True, text=True, timeout=60
-                )
-                if result.returncode != 0:
-                    print(f'    ⚠️  edge-tts failed for {scene_id}: {result.stderr[:200]}')
-                    continue
-                # Convert mp3 to wav
-                run(f'ffmpeg -y -i "{mp3_path}" -ar 44100 -ac 1 "{out_wav}" >/dev/null 2>&1', check=False)
-                mp3_path.unlink(missing_ok=True)
-            else:
+            if True:
                 # Mistral Voxtral API
                 import requests
                 resp = requests.post(
@@ -469,6 +468,14 @@ def generate_tts(data_file):
                     wav_bytes = resp.content
                 with open(out_wav, 'wb') as f:
                     f.write(wav_bytes)
+
+                # VOICE FINGERPRINT GATE (Sept 4, 2026): Voxtral outputs 24kHz. edge-tts
+                # outputs 44.1kHz. Verify the sample rate so a wrong-voice render cannot ship.
+                _probe = run(f'ffprobe -v error -select_streams a:0 -show_entries stream=sample_rate -of csv=p=0 "{out_wav}"', check=False)
+                if _probe.returncode == 0 and _probe.stdout.strip() and _probe.stdout.strip() != '24000':
+                    raise SystemExit(
+                        f'FATAL: {scene_id} audio is {_probe.stdout.strip()}Hz, expected 24000Hz (Voxtral/Shelbi). '
+                        'Wrong-voice render detected - aborting before render/upload.')
             
             # Get actual duration via ffprobe
             dur_result = run(f'ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "{out_wav}"', check=False)
