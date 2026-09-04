@@ -272,6 +272,12 @@ const finalTitle = pageTitle.length > 60 && tjbTitle.length >= 50 ? tjbTitle : p
             person_profiles: 'identified_only',
             autocapture: true,
           });
+          // Capture pageviews on Astro ClientRouter soft navigations (astro:page-load
+          // fires on every page swap, including the initial load — dedupe is handled by
+          // PostHog's internal $pageview guard on the first init capture).
+          document.addEventListener('astro:page-load', function () {
+            if (window.posthog) window.posthog.capture('$pageview');
+          });
         };
         document.head.appendChild(s);
       })();

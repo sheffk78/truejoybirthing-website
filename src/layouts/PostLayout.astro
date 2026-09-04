@@ -133,6 +133,26 @@ const schemaJson = JSON.stringify(schema);
       gtag('js', new Date());
       gtag('config', 'G-2RVZVN0F9T');
     </script>
+    <!-- PostHog Analytics (mirrors Layout.astro incl. $pageview on astro:page-load) -->
+    <script>
+      (function(){
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://us.i.posthog.com/static/array.js';
+        s.onload = function(){
+          window.posthog.init('phc_uJazKyrRhDyHi9weQMYorrmqqq2m5AwHEZS37kJPPYgh', {
+            api_host: 'https://us.i.posthog.com',
+            session_recording: { record_canvas: true },
+            person_profiles: 'identified_only',
+            autocapture: true,
+          });
+          document.addEventListener('astro:page-load', function () {
+            if (window.posthog) window.posthog.capture('$pageview');
+          });
+        };
+        document.head.appendChild(s);
+      })();
+    </script>
     <AppDownloadTracker />
     <!-- Reddit Pixel -->
     <script is:inline>
@@ -266,7 +286,7 @@ const schemaJson = JSON.stringify(schema);
           </div>
         </div>
         <div class="text-center mt-10">
-          <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-primary">Download on the App Store →</a>
+          <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="btn-primary">Download on the App Store</a>
         </div>
       </div>
     </section>
