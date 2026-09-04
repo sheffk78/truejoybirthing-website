@@ -1118,11 +1118,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-07-30T00:00:00-07:00",
   },
   "huntington-beach-ca": {
-    videoId: "2O_mCG6wOh4",
+    videoId: "DegTiGs85Xc",
     title: "Huntington Beach CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
-    description: "Watch the full city guide, doulas, hospitals, costs, and more, all in under 5 minutes.",
-    duration: "PT4M23S",
-    uploadDate: "2026-07-30T00:00:00-07:00",
+    description: "Watch the full city guide — 2 hospitals, 1 birth center, 4 doulas, costs, and California Medi-Cal, all in under 3 minutes.",
+    duration: "PT2M34S",
+    uploadDate: "2026-09-04T00:00:00-07:00",
   },
   "torrance-ca": {
     videoId: "IR6s2L-0K7Y",
