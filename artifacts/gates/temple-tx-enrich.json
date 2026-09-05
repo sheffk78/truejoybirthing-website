@@ -1,9 +1,9 @@
 {
   "slug": "temple-tx",
-  "stage": "build",
+  "stage": "enrich",
   "mode": "stage_emission",
   "exit_code": 0,
-  "passed": 17,
+  "passed": 22,
   "failed": 0,
   "skipped": 0,
   "results": {
@@ -47,33 +47,53 @@
       "status": "PASS",
       "detail": "temple-tx-birth-doula-skyline-v2.webp is a real photograph (high color count)"
     },
-    "G25": {
+    "G27": {
       "status": "PASS",
-      "detail": "Hero image is 3:2 (1200x800, ratio=1.50)"
+      "detail": "All 3 providers have specific credentials"
     },
-    "G29": {
+    "G10": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=38710) and locked Pattern B composition"
+      "detail": "All 3 providers have specific descriptions"
     },
-    "G35": {
+    "G39": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=38710) and locked Pattern B composition"
+      "detail": "All 3 providers have specific descriptions"
     },
-    "G64": {
+    "G19": {
       "status": "PASS",
-      "detail": "G64: OG og-city-temple-tx-v2.webp matches canonical Pattern B composition"
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "G20": {
+      "status": "PASS",
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "P11": {
+      "status": "PASS",
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "A12": {
+      "status": "PASS",
+      "detail": "All serviceArea fields are string arrays"
+    },
+    "G24": {
+      "status": "PASS",
+      "detail": "Support scene is unique to this city"
+    },
+    "G54": {
+      "status": "PASS",
+      "detail": "Support scene is unique to this city"
     },
     "G65": {
       "status": "PASS",
       "detail": "G65: No black letterbox/pillarbox bars on hero or support scene"
     },
-    "G8a": {
+    "G60": {
       "status": "PASS",
-      "detail": "Silhouette confirmed (center=54.3 < top=157.9, top_colors=8215)"
+      "detail": "G60: All 3 provider photos exist on disk and are >2KB"
     },
-    "G62": {
+    "G61": {
       "status": "PASS",
-      "detail": "G62: Hero AVIF files not stale (or not present)"
+      "detail": "G61: All image paths contain city slug temple-tx"
     }
   }
 }
