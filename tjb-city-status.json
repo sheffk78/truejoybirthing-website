@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "last_updated": "2026-09-04T20:30:31Z",
+  "last_updated": "2026-09-05T19:13:00Z",
   "total_cities_in_codebase": 187,
   "future_cities_planned": 1000,
   "cities": {
@@ -2534,6 +2534,19 @@
     "outreach_blocked_reason": null,
     "outreach_sent_at": "2026-08-15T01:48:00Z",
     "outreach_provider_count": 4,
+    "stage": "complete"
+  },
+  "henderson-nv": {
+    "has_video": true,
+    "has_outreach": true,
+    "video_id": "kAi4ual6SpI",
+    "videoId": "kAi4ual6SpI",
+    "video_url": "https://youtu.be/kAi4ual6SpI",
+    "video_uploaded_at": "2026-09-05T19:07:00Z",
+    "in_progress": false,
+    "outreach_sent_at": "2026-09-05T19:12:08Z",
+    "outreach_provider_count": 1,
+    "outreach_blocked_reason": "3 of 4 providers have no resolvable public email (Ashamii Henderson, Alexandra Connelly via bornbir; Well Rounded Childbirth is a Henderson Hospital class with no individual doula address). 1 verified email sent to Elli Arlt White (elli@newbornfamily.net).",
     "stage": "complete"
   }
 }
