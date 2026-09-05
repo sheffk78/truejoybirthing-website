@@ -645,12 +645,12 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-09-03T13:40:00-06:00",
 },
 "long-beach-ca": {
-    videoId: "8_X79ELJs9M",
+    videoId: "ihOyDmTD3Oc",
     title: "Long Beach CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
-    description: "Watch the full city guide, doulas, hospitals, costs, and more, all in under 4 minutes.",
-    duration: "PT3M35S",
-    uploadDate: "2026-07-14T06:42:58-06:00",
-},
+    description: "Watch the full Long Beach city guide â 2 hospitals, 4 doulas & midwives, costs, and California Medi-Cal, all in under 3 minutes.",
+    duration: "PT2M36S",
+    uploadDate: "2026-09-05T00:00:00-06:00",
+  },
   "san-jose-ca": {
     videoId: "gYfH397LCvk",
     title: "San Jose CA Doula & Birth Plan Guide: Costs, Hospitals & Medi-Cal (First-Time Mom)",
