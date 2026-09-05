@@ -1772,4 +1772,26 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M00S",
     uploadDate: "2026-06-04T00:00:00-06:00",
   },
+
+  "temple-tx": {
+    videoId: "eRkwu8Bo4mw",
+    title: "Temple TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Temple birth guide covering local doulas, midwives, Baylor Scott & White Medical Center - Temple, The Starting Place Birth & Wellness Center, costs, and Texas Medicaid.",
+    duration: "PT4M41S",
+    uploadDate: "2026-09-05T00:00:00-06:00",
+    chapters: [
+      [0, "Welcome to Temple"],
+      [13, "What This Guide Covers"],
+      [34, "Baylor Scott & White Medical Center - Temple (Level IV NICU)"],
+      [77, "The Starting Place Birth & Wellness Center"],
+      [113, "Brianna Sohns"],
+      [138, "My Neighborhood Doula"],
+      [161, "Bonny Bump"],
+      [182, "The True Joy Birthing App"],
+      [204, "Doula Costs"],
+      [232, "Texas Medicaid & Insurance"],
+      [269, "Your Next Step"],
+    ],
+  },
+
 };
