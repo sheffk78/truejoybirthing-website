@@ -524,13 +524,16 @@ def run_full_preflight(slug: str, stage: Optional[str] = None) -> dict:
     than silently degrading to SKIP.
     """
     try:
+        env = os.environ.copy()
+        env["NODE_OPTIONS"] = env.get("NODE_OPTIONS", "--max-old-space-size=4096")
         cmd = ["npx", "tsx", "scripts/preflight.ts", slug]
         if stage:
             cmd += ["--stage", stage]
         result = subprocess.run(
             cmd,
             capture_output=True, text=True, timeout=180,
-            cwd=PROJECT_DIR
+            cwd=PROJECT_DIR,
+            env=env
         )
         return {
             "exit_code": result.returncode,

@@ -18,6 +18,7 @@
 # =============================================================================
 
 set -euo pipefail
+export NODE_OPTIONS="${NODE_OPTIONS:---max-old-space-size=4096}"
 
 PROJECT_DIR="/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website"
 

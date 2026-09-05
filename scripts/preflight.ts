@@ -99,16 +99,32 @@ function checkG66() {
   const src = fs.readFileSync(srcPath, "utf-8");
   const keyRe = /^\s{2}"([a-z]+(?:-[a-z]+)*-[a-z]{2})":\s*\{/gm;
   const cityMatches = [...src.matchAll(keyRe)];
-  const dupKeyRe = /^    ([A-Za-z][A-Za-z0-9_]*):/gm;
   const offenders: string[] = [];
   for (let i = 0; i < cityMatches.length; i++) {
     const slug = cityMatches[i][1];
     const start = cityMatches[i].index + cityMatches[i][0].length;
     const end = i + 1 < cityMatches.length ? cityMatches[i + 1].index : src.length;
     const block = src.slice(start, end);
+    // Track bracket depth: only count keys at depth 0 (direct children of the
+    // city object, NOT inside arrays like localDoulas/hospitalDetails/faqs).
+    // Keys inside arrays naturally repeat (name:, photo:, acceptingClients:)
+    // and are NOT real duplicate-key hazards.
     const seen = new Map<string, number>();
-    for (const m of block.matchAll(dupKeyRe)) {
-      seen.set(m[1], (seen.get(m[1]) ?? 0) + 1);
+    let bracketDepth = 0;
+    const lines = block.split("\n");
+    for (const line of lines) {
+      // Track [ and ] for array depth
+      for (const ch of line) {
+        if (ch === "[") bracketDepth++;
+        else if (ch === "]") bracketDepth--;
+      }
+      // Only match keys at 4-space indent when NOT inside an array
+      if (bracketDepth === 0) {
+        const m = line.match(/^    ([A-Za-z][A-Za-z0-9_]*):/);
+        if (m) {
+          seen.set(m[1], (seen.get(m[1]) ?? 0) + 1);
+        }
+      }
     }
     const dups = [...seen.entries()].filter(([, n]) => n > 1);
     if (dups.length > 0) {
