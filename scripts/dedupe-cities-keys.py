@@ -12,6 +12,17 @@ Usage: python3 scripts/dedupe-cities-keys.py [--check]
 """
 import os, re, sys
 
+# 🔴 DISABLED 2026-09-05 (Rockville postmortem session):
+# This script DELETED data instead of deduplicating. Running it on the
+# 2026-09-05 tree removed birthCenterDetails (acworth-ga), insuranceNote,
+# city, costLow, supportSceneImage/Alt, heroLocalDetail, publishedDate and
+# more across ~20 city blocks, crashing the build
+# (TypeError: Cannot read properties of undefined (reading 'some')).
+# Its "depth-aware, proven by diffing tsx runtime snapshots" claim is
+# FALSE for the current cities.ts shape. Do not re-enable without a
+# runtime-snapshot diff test passing on the CURRENT file.
+sys.exit("DISABLED 2026-09-05: destructive (deleted city data, broke build). See header note.")
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
 TS_PATH = os.path.join(ROOT, 'src/data/cities.ts')

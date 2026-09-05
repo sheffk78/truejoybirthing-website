@@ -1,0 +1,16 @@
+{
+  "slug": "rockville-md",
+  "checked_at": "2026-09-05T23:49:53.204682+00:00",
+  "images": [
+    {
+      "image": "public/images/rockville-md-birth-doula-skyline-v2.webp",
+      "label": "hero-v2",
+      "figures": 1,
+      "flags": []
+    }
+  ],
+  "crops": [
+    "/tmp/tjb-vision-crops/rockville-md-hero-v2-fig0.png"
+  ],
+  "triage_flags": []
+}

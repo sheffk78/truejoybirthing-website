@@ -159,6 +159,29 @@ else
 fi
 
 # ---------------------------------------------------------------
+# 🔴 VISION VERDICT GATE (2026-09-05, Rockville postmortem):
+# Structural gates can't see anatomy. The Rockville hero shipped with a
+# phantom arm + fused fingers because full-frame vision passes are agreeable
+# and nothing ENFORCED a zoomed figure-level vision check. This gate emits
+# 2x figure crops and requires artifacts/gates/vision/{slug}.json with a
+# pass verdict per crop — fail-closed if the vision pass never ran.
+# Fires when the pending diff touches this city's images. Full-repo deploys
+# skip it (the vision verdicts are produced per-city during stage work).
+# ---------------------------------------------------------------
+DIFF_IMGS=$(git diff HEAD~1 HEAD --name-only 2>/dev/null | grep -E 'public/images/|src/data/cities.ts' || true)
+if [ -n "$UPGRADE_SLUG" ] && [ -n "$DIFF_IMGS" ]; then
+  echo ""
+  echo "--- VISION VERDICT GATE (figure-level vision enforcement) ---"
+  if python3 scripts/visual-verify-gate.py "$UPGRADE_SLUG"; then
+    echo "  → Vision verdict gate PASSED"
+  else
+    echo "  ❌ Vision verdict gate FAILED — run the zoom-crop vision pass per"
+    echo "     /tmp/tjb-vision-crops/ and write artifacts/gates/vision/$UPGRADE_SLUG.json"
+    exit 1
+  fi
+fi
+
+# ---------------------------------------------------------------
 # 🔴 GATE 7: Upgrade completeness check (if slug provided)
 # ---------------------------------------------------------------
 if [ -n "$UPGRADE_SLUG" ]; then

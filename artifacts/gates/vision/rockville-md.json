@@ -1,0 +1,13 @@
+{
+  "slug": "rockville-md",
+  "checked_at": "2026-09-05T18:00:00-06:00",
+  "checked_by": "Kit (interactive session, vision_analyze at 2x figure-isolated zoom)",
+  "note": "Old hero (rockville-md-birth-doula-skyline.webp) FAILED: phantom/duplicated arm segment + fused fingers (found via 2x zoom crop; full-frame vision pass had passed it). Replacement v2 hero + regenerated OG + YT thumb verified 2026-09-05. Support scene and old-hero crop from the pre-replacement image set; support scene passed zoom inspection.",
+  "verdicts": [
+    {"crop": "rockville-md-hero-fig0.png", "verdict": "pass", "defects": [], "note": "pre-replacement old hero crop retained in audit record"},
+    {"crop": "rockville-md-hero-v2-fig0.png", "verdict": "pass", "defects": [], "note": "new v2 hero: 1 figure, no phantom limbs, fingers anatomically plausible, head/neck clean, bump reads"},
+    {"crop": "rockville-md-og-fig0.png", "verdict": "pass", "defects": [], "note": "OG right-column figure: 1 figure, 2 arms, no phantom limbs, belly faces direction of travel"},
+    {"crop": "rockville-md-thumb-fig0.png", "verdict": "pass", "defects": [], "note": "YT thumb background figure: 1 figure, arms natural, no melted joints"},
+    {"crop": "rockville-md-support-fig0.png", "verdict": "pass", "defects": [], "note": "support scene: real-photo style, two people, professional not readable as pregnant"}
+  ]
+}

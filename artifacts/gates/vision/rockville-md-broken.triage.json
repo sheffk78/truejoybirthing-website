@@ -1,0 +1,16 @@
+{
+  "slug": "rockville-md-broken",
+  "checked_at": "2026-09-05T23:49:52.844632+00:00",
+  "images": [
+    {
+      "image": "public/images/rockville-md-broken-birth-doula-skyline.webp",
+      "label": "hero",
+      "figures": 1,
+      "flags": []
+    }
+  ],
+  "crops": [
+    "/tmp/tjb-vision-crops/rockville-md-broken-hero-fig0.png"
+  ],
+  "triage_flags": []
+}
