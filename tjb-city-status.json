@@ -2522,5 +2522,15 @@
     "has_video": true,
     "video_id": "P9sh9n-F9wI",
     "url": "https://truejoybirthing.com/birth-support/corpus-christi-tx/"
+  },
+  "stockton-ca": {
+    "has_video": true,
+    "has_outreach": true,
+    "video_id": "TRn79ExndJ8",
+    "videoId": "TRn79ExndJ8",
+    "video_url": "https://youtu.be/TRn79ExndJ8",
+    "video_uploaded_at": "2026-09-05T11:11:00Z",
+    "in_progress": false,
+    "outreach_blocked_reason": null
   }
 }
