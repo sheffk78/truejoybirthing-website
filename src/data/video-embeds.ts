@@ -1003,7 +1003,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
   "lehi-ut": {
-    videoId: "r39lntZACiE",
+    videoId: "eUh2cXC_u8E",
     title: "Lehi UT Doula & Birth Plan Guide: Costs, Hospitals & Insurance (First-Time Mom)",
     description: "Full city guide — 3 hospitals, 4 doulas, costs, and Utah Medicaid info, all in under 5.5 minutes. #lehidoula #utahbirth #utahdoulas #birthplan #doula #siliconslopes #intermountainhealth #americanforkhospital #utahvalleyhospital #timpanogosregional #firsttimemom #freebirthplan #truejoybirthing",
     duration: "PT5M31S",

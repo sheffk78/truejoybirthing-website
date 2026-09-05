@@ -2177,13 +2177,14 @@
     "stage": "complete",
     "score": 100,
     "has_video": true,
-    "video_id": "9IBiWykxGtU",
+    "video_id": "eUh2cXC_u8E",
     "has_outreach": true,
     "outreach_sent_at": "2026-07-28T12:00:00Z",
     "outreach_provider_count": 1,
     "providers_total": 4,
     "hospitals_total": 3,
-    "deployed": true
+    "deployed": false,
+    "updated_at": "2026-09-05T19:53:03.286815Z"
   },
   "worcester-ma": {
     "has_outreach": true,
