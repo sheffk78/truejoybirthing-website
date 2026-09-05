@@ -4177,7 +4177,15 @@ birthStats: { cesareanRate: 32.1, maternalMortalityRate: 18.6, homeBirthRate: 0.
       { q: "Does True Joy Birthing work with St. Augustine families?" , a: "Yes \u2014 and it\u2019s free. True Joy Birthing\u2019s birth plan app, checklist, and guided walkthrough work for any St. Augustine birth setting. The app also helps you find and connect with local doulas and midwives. <a href='/birth-plan-template/'>Download Your Birth Plan template</a> and start preparing your way." },
       { q: "Are there doulas in St. Augustine?" , a: "St. Augustine has a small local doula community, and Jacksonville-based doulas regularly serve St. Augustine families. The True Joy Birthing app can help you find local doulas \u2014 start there and interview a few until one feels right." },
       { q: "Can my doula come to the hospital with me in St. Augustine?" , a: "Yes \u2014 UF Health Flagler Hospital allows doulas in labor and delivery. Since Flagler is the only L&D hospital in St. Johns County, confirming your birth plan and doula arrangements during your hospital tour is especially important. Your doula will be familiar with Flagler\u2019s layout and policies." } ],
-    nearbyCities: ["gainesville-fl", "orlando-fl"]},
+    nearbyCities: ["gainesville-fl", "orlando-fl"],
+    lat: 29.8947,
+    lng: -81.3145,
+    midwifeInfo: {
+      paragraph: "Florida licenses Certified Nurse-Midwives (CNMs) through the Board of Nursing and Certified Midwives (CMs) through the Board of Medicine. Lay or Certified Professional Midwives (CPMs) are not licensed in Florida, which means home birth midwifery in St. Augustine typically falls under CNMs practicing at birth centers like St. Augustine Birth Collective. UF Health Flagler Hospital offers hospital-based midwifery services through its obstetrics team. Florida Medicaid covers CNM services, making midwife-attended birth accessible for St. Augustine families across home, birth center, and hospital settings.",
+      available: true,
+      types: ["CNM", "CM"],
+      settings: ["hospital", "birth center", "home"]
+    } },
   "gainesville-fl": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
