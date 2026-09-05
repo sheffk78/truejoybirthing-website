@@ -2529,8 +2529,11 @@
     "video_id": "TRn79ExndJ8",
     "videoId": "TRn79ExndJ8",
     "video_url": "https://youtu.be/TRn79ExndJ8",
-    "video_uploaded_at": "2026-09-05T11:11:00Z",
+    "video_uploaded_at": "2026-09-05T17:11:00Z",
     "in_progress": false,
-    "outreach_blocked_reason": null
+    "outreach_blocked_reason": null,
+    "outreach_sent_at": "2026-08-15T01:48:00Z",
+    "outreach_provider_count": 4,
+    "stage": "complete"
   }
 }
