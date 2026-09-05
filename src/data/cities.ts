@@ -5971,7 +5971,7 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
     costHigh: 2500,
     shelbiServesHere: false,
     heroImage: "/images/rockville-md-birth-doula-skyline-v2.webp",
-    ogImage: "https://truejoybirthing.com/images/og-city-rockville-md.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-rockville-md-v2.webp",
     supportSceneImage: "/images/rockville-md-birth-doula-support.webp",
     supportSceneAlt: "A doula standing with an expectant mom on a tree-lined path in Rockville, Maryland: Montgomery County birth support",
     localDoulas: [
