@@ -12,7 +12,7 @@ def find(pattern):
         sys.exit("not found: " + pattern)
     return m[0]
 
-tp = find("~/.openclaw/workspace/Kit/life/brands/TrueJoyBirding/video/remotion/.youtube-oauth/token.json")
+tp = find("~/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/.youtube-oauth/token.json")
 t = json.load(open(tp))
 need = False
 try:
