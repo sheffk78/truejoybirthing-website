@@ -560,11 +560,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-07-08T00:00:00-04:00",
 },
 "allen-tx": {
-    videoId: "99qnLrYJGMg",
+    videoId: "mbVlmXlPx9U",
     title: "Allen TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
-    duration: "PT4M48S",
-    uploadDate: "2026-07-08T00:00:00-05:00",
+    duration: "PT4M46S",
+    uploadDate: "2026-09-04T00:00:00-05:00",
 },
 "amarillo-tx": {
     videoId: "IvyDHqxqkgk",

@@ -490,7 +490,7 @@ const emitHelperGate = (check: string, slug: string) => {
 // slug per invocation; a full audit avoids duplicate cross-city noise here).
 if (targetSlug) {
   const stageImageChecks: Record<string, string[]> = {
-    build: ["hero-aspect", "og-photo-quality", "og-template-compliance", "hero-letterbox", "hero-silhouette", "hero-avif-staleness", "hero-content-city-match"],
+    build: ["hero-aspect", "og-photo-quality", "og-template-compliance", "hero-letterbox", "hero-silhouette", "hero-avif-staleness"],
     enrich: ["provider-credentials", "provider-descriptions", "hospital-dimensions", "service-area", "support-scene-quality", "hero-letterbox", "provider-photo-exists", "cross-city-contamination"],
     verify_deploy: ["hero-aspect", "og-photo-quality", "og-template-compliance", "hero-letterbox", "provider-descriptions", "hospital-dimensions", "service-area", "support-scene-quality", "yt-thumbnail-matches-hero", "provider-photo-exists", "cross-city-contamination", "hero-avif-staleness", "hero-content-city-match"],
     video_outreach: ["support-scene-quality", "hero-letterbox", "yt-thumbnail-matches-hero", "fullpage-scroll-screenshot", "provider-photo-exists", "cross-city-contamination", "hero-content-city-match"],
