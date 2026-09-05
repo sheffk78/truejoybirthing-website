@@ -546,7 +546,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
 },
 "abilene-tx": {
-    videoId: "yZqjAc6hPp8",
+    videoId: "2EkoEh77ekw",
     title: "Abilene TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
     duration: "PT4M42S",
