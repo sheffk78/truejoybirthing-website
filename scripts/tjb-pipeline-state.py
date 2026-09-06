@@ -432,6 +432,9 @@ Goal: {goal}
 3. RECOVER from errors. If a command fails on quoting/syntax, retry immediately with a different approach. Do not stop and say "falling back" — fix it and keep going.
 4. If you hit the tool-call cap with work remaining, save partial artifacts to disk and report exactly which files landed and which remain. Never claim done when it isn't.
 5. Run the validation gate after writing: `npx tsx scripts/validate-city-data.ts {slug}` for data stages. Report the real exit code + errors verbatim.
+6. WRITE YOUR HANDOFF CONTRACT before reporting done (Phase 1 harness — the parent REFUSES to advance without it):
+   python3 scripts/contract-validate.py {slug} {stage} --compare
+   This auto-fills data fields from cities.ts. You then add: produced_at, worker_model, sources[] (>=1 evidence per provider: claim + url + supporting quote), and for build: images.hero_watermark_clean / og_watermark_clean = true only if the flux watermark pipeline ran. Re-run the validate command until it prints contract_valid: true, and report that real exit code. The contract is your definition of done — software checks it, not your say-so.
 
 ## Stage gates (must pass before this stage can advance)
 {', '.join(ctx.get('gates', []))}
@@ -740,6 +743,59 @@ def cmd_advance(slug: str, stage: str):
         2 = RETRYABLE_INFRA → output status for cron to wait + retry
         3 = FATAL → call cmd_fail with blocked_reason, block pipeline
     """
+    # ── Phase 1 harness (2026-09-06): schema contract check BEFORE the stage gate ──
+    # "The agent does not get to invent its own definition of done." The worker's
+    # handoff contract (artifacts/handoffs/{slug}/{stage}.json) must validate —
+    # required fields, format rules, on-disk evidence — or the advance is refused
+    # as RETRYABLE with the violations returned for the worker to fix.
+    contract_script = str(Path(PROJECT_DIR) / "scripts" / "contract-validate.py")
+    try:
+        c_result = subprocess.run(
+            ["python3", contract_script, slug, stage],
+            capture_output=True, text=True, timeout=60, cwd=PROJECT_DIR,
+        )
+        c_exit = c_result.returncode
+        c_out = (c_result.stdout or "").strip()
+        if c_exit != 0:
+            if c_exit == 3:
+                reason = f"CONTRACT_FATAL (stage={stage}): {c_out[:300]}"
+                print(json.dumps({
+                    "action": "contract_fatal",
+                    "slug": slug, "stage": stage, "contract_exit": 3,
+                    "contract_output": c_out[-500:],
+                    "message": f"{stage} contract FATAL. Blocking pipeline.",
+                }, indent=2))
+                cmd_fail(slug, stage, reason)
+                return
+            print(json.dumps({
+                "action": "contract_invalid",
+                "slug": slug, "stage": stage, "contract_exit": c_exit,
+                "contract_output": c_out[-1800:],
+                "message": (
+                    f"{stage} handoff contract missing/invalid. Re-spawn the stage worker with "
+                    "contract_output violations appended to its context. Worker fixes "
+                    f"artifacts/handoffs/{slug}/{stage}.json — scaffold with: "
+                    f"python3 scripts/contract-validate.py {slug} {stage} --compare "
+                    "(auto-fills data fields; worker adds produced_at, worker_model, sources[] evidence) — "
+                    "then re-run advance."
+                ),
+            }, indent=2))
+            sys.exit(1)
+    except subprocess.TimeoutExpired:
+        print(json.dumps({
+            "action": "contract_timeout",
+            "slug": slug, "stage": stage,
+            "message": "Contract validation timed out (60s). Treat as retryable infra; retry advance.",
+        }, indent=2))
+        sys.exit(2)
+    except Exception as e:
+        print(json.dumps({
+            "action": "contract_error",
+            "slug": slug, "stage": stage,
+            "message": f"Contract validator failed to run (retryable): {e}",
+        }, indent=2))
+        sys.exit(1)
+
     gate_script = str(Path(PROJECT_DIR) / "scripts" / "preflight-stage-gate.py")
     cmd = ["python3", gate_script, "--city", slug, "--stage", stage]
 

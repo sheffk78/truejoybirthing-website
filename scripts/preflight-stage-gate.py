@@ -133,6 +133,25 @@ def _local_build_gates(slug: str) -> dict:
     cross_city = [ref for ref in re.findall(r'photo:\s*["\']([^"\']+)', block) if ref and slug not in Path(ref).name and "placeholder" not in Path(ref).name]
     if cross_city:
         results["LOCAL_PROVIDER_PHOTOS"] = {"status": "FAIL", "detail": f"cross-city provider photo: {cross_city[0]}"}
+
+    # LOCAL_EVAL_SLOP (Phase 1 harness, 2026-09-06): deterministic AI-slop eval —
+    # blacklist+regex, zero AI. Hard-tier hit fails the gate; warn-tier reports only.
+    try:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("eval_slop_gate", str(Path(__file__).resolve().parent / "eval-slop-gate.py"))
+        slop_mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(slop_mod)
+        slop = slop_mod.scan_city(slug)
+        if "error" in slop:
+            results["LOCAL_EVAL_SLOP"] = {"status": "FAIL", "detail": f"slop scan error: {slop['error']}"}
+        elif slop.get("hard"):
+            rules = "; ".join(sorted({h["rule"] for h in slop["hard"]}))
+            results["LOCAL_EVAL_SLOP"] = {"status": "FAIL", "detail": f"AI-slop copy detected: {rules} — run scripts/eval-slop-gate.py {slug} for matches"}
+        else:
+            nw = len(slop.get("warn", []))
+            results["LOCAL_EVAL_SLOP"] = {"status": "PASS", "detail": f"no slop patterns ({nw} warn-tier)"}
+    except Exception as e:
+        results["LOCAL_EVAL_SLOP"] = {"status": "FAIL", "detail": f"slop gate crashed (fail-closed): {e}"}
     return results
 
 
