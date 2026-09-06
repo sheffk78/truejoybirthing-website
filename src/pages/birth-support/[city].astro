@@ -54,7 +54,7 @@ const effectiveStateHubSlug = state.toUpperCase() === 'MT' ? 'bozeman-mt' : stat
 const doulaCostLinkVariants = [
   'See our <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">full doula cost breakdown</a> for what\'s included and what to ask about.',
   'Want to know <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">how much a doula costs</a>? Our complete guide breaks down typical packages and what\'s included.',
-  'For a <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">complete doula cost breakdown</a> — including what\'s included and what to ask about — see our full guide.',
+  'For a <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">complete doula cost breakdown</a>, including what\'s included and what to ask about, see our full guide.',
   'Compare <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">doula pricing and what\'s included</a> in our detailed cost guide for {city} families.',
   'Curious <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">what doulas charge in your area</a>? Our cost guide covers typical ranges, what\'s included, and what to ask about.',
 ];
@@ -376,11 +376,11 @@ const breadcrumbList = [
 const defaultLactationFaqs = [
   {
     q: `How much does a lactation consultant cost in ${city}?`,
-    a: `An IBCLC consult in ${city} typically runs $150–$300 for an initial 90-minute visit and $75–$150 for follow-ups. The good news: under the ACA, most insurance plans cover lactation consulting with no cost-sharing — confirm your in-network IBCLCs and any out-of-pocket cost before booking.`,
+    a: `An IBCLC consult in ${city} typically runs $150–$300 for an initial 90-minute visit and $75–$150 for follow-ups. The good news: under the ACA, most insurance plans cover lactation consulting with no cost-sharing. Confirm your in-network IBCLCs and any out-of-pocket cost before booking.`,
   },
   {
     q: `Does insurance or Medicaid cover lactation consultants in ${city}?`,
-    a: `Yes for most plans. The ACA requires coverage of lactation support and counseling on most private plans, and ${stateFullName} Medicaid covers lactation consulting. ${medicaidCovers ? 'Medicaid also covers doula services in your area.' : 'Doula coverage under Medicaid varies — see the Medicaid section above.'} Always call your plan to confirm in-network IBCLCs before your first visit.`,
+    a: `Yes for most plans. The ACA requires coverage of lactation support and counseling on most private plans, and ${stateFullName} Medicaid covers lactation consulting. ${medicaidCovers ? 'Medicaid also covers doula services in your area.' : 'Doula coverage under Medicaid varies. See the Medicaid section above.'} Always call your plan to confirm in-network IBCLCs before your first visit.`,
   },
 ];
 // Use allFaqs (not faqs) in render + FAQ schema so lactation FAQs are included.
@@ -569,7 +569,7 @@ const schema = {
           <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">{city} Doula & Midwife Support</p>
           <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
           <h1 class="text-3xl md:text-4xl font-bold mb-4" style="font-family: 'DM Serif Display', Georgia, serif;">{city} Doula & Midwife: Costs, Hospitals & Medicaid</h1>
-          <p class="text-lg text-tjb-charcoal font-semibold mb-2">True Joy Birthing is a birth plan app and doula directory for first-time moms in {city}. Whether you're looking for a <strong>doula or midwife in {city}</strong>, building your birth plan, or figuring out what support even looks like — everything here is free.</p>
+          <p class="text-lg text-tjb-charcoal font-semibold mb-2">True Joy Birthing is a birth plan app and doula directory for first-time moms in {city}. Whether you're looking for a <strong>doula or midwife in {city}</strong>, building your birth plan, or figuring out what support even looks like, everything here is free.</p>
           <p class="text-tjb-gray mb-6">Doulas, midwives, hospital policies, and costs, broken down so you can walk in prepared. This guide covers <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">how much doulas cost</a>, <a href="/medicaid-doula-coverage/" class="text-tjb-rose-600 hover:underline">whether Medicaid covers a doula</a>, and which hospitals welcome birth partners. New here? <a href="/what-is-a-doula/" class="text-tjb-rose-600 hover:underline">Learn what a doula actually does</a>.</p>
           {costLow > 0 && (
             <p class="mb-6"><span class="inline-flex items-center bg-tjb-rose-50 text-tjb-rose-600 text-sm font-semibold px-3 py-1 rounded-full border border-tjb-rose-200">Birth doula support in {city} starts at ${costLow}</span></p>
@@ -704,7 +704,7 @@ const schema = {
       <div class="grid md:grid-cols-2 gap-6">
         <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
           <p class="font-semibold text-tjb-charcoal mb-2">9 guided sections</p>
-          <p class="text-sm text-tjb-gray">Hospital preferences, pain management options, who's in the room, feeding preferences, postpartum plans — each section walks you through what each choice means so nothing gets missed. Answer a few questions at a time, save your progress, and come back whenever you want. Your plan builds as you go, so it never feels overwhelming.</p>
+          <p class="text-sm text-tjb-gray">Hospital preferences, pain management options, who's in the room, feeding preferences, postpartum plans. Each section walks you through what each choice means so nothing gets missed. Answer a few questions at a time, save your progress, and come back whenever you want. Your plan builds as you go, so it never feels overwhelming.</p>
         </div>
         <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
           <p class="font-semibold text-tjb-charcoal mb-2">Find local doulas</p>
@@ -712,11 +712,11 @@ const schema = {
         </div>
         <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
           <p class="font-semibold text-tjb-charcoal mb-2">Printable PDF birth plan</p>
-          <p class="text-sm text-tjb-gray">Export your finished plan as a PDF to share with your provider, doula, or hospital. Easy to update anytime — not a static document you fill out once.</p>
+          <p class="text-sm text-tjb-gray">Export your finished plan as a PDF to share with your provider, doula, or hospital. Easy to update anytime, not a static document you fill out once.</p>
         </div>
         <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
           <p class="font-semibold text-tjb-charcoal mb-2">Completely free</p>
-          <p class="text-sm text-tjb-gray">No account needed, no credit card, no time limit. Works on iPhone. Download it, build your plan, share it — that's it.</p>
+          <p class="text-sm text-tjb-gray">No account needed, no credit card, no time limit. Works on iPhone. Download it, build your plan, share it. That's it.</p>
         </div>
       </div>
       <div class="text-center mt-8">
@@ -737,7 +737,7 @@ const schema = {
           <p class="text-tjb-gray max-w-2xl mx-auto">{cityVideoEmbeds[slug].description}</p>
         </div>
         <div class="aspect-video rounded-xl overflow-hidden shadow-lg bg-black relative cursor-pointer group" id="city-video-facade" data-video-id={cityVideoEmbeds[slug].videoId}>
-          <img src={`https://img.youtube.com/vi/${cityVideoEmbeds[slug].videoId}/maxresdefault.jpg`} alt={`${cityVideoEmbeds[slug].title} — press play to watch`} class="w-full h-full object-cover" width="1280" height="720" loading="lazy" />
+          <img src={`https://img.youtube.com/vi/${cityVideoEmbeds[slug].videoId}/maxresdefault.jpg`} alt={`${cityVideoEmbeds[slug].title} press play to watch`} class="w-full h-full object-cover" width="1280" height="720" loading="lazy" />
           <div class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-colors">
             <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
               <svg class="w-7 h-7 ml-1 text-tjb-charcoal" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
@@ -1453,7 +1453,7 @@ const schema = {
       <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
         <div class="md:w-[58%] prose">
           <h2 class="font-bold text-tjb-charcoal" style="font-size: clamp(1.5rem, 2.5vw, 1.875rem); font-family: 'Cormorant Garamond', Georgia, serif;">How Much Does a Doula or Midwife Cost in {city}?</h2>
-          <p>In {city}, a birth doula typically costs between <strong>${costLow.toLocaleString()} and ${costHigh.toLocaleString()}</strong>. This usually includes two prenatal visits, continuous labor support, and at least one postpartum check-in. Prices vary based on experience, the number of visits included, and whether add-ons like childbirth education or placenta encapsulation are bundled in. Midwife fees vary by type and setting — home birth midwives usually charge a global fee of $4,000–$8,000, while hospital-based CNM care is billed through insurance like a doctor's visit. <span set:html={doulaCostLinkHtml} /></p>
+          <p>In {city}, a birth doula typically costs between <strong>${costLow.toLocaleString()} and ${costHigh.toLocaleString()}</strong>. This usually includes two prenatal visits, continuous labor support, and at least one postpartum check-in. Prices vary based on experience, the number of visits included, and whether add-ons like childbirth education or placenta encapsulation are bundled in. Midwife fees vary by type and setting. Home birth midwives usually charge a global fee of $4,000–$8,000, while hospital-based CNM care is billed through insurance like a doctor's visit. <span set:html={doulaCostLinkHtml} /></p>
           <div class="grid sm:grid-cols-2 gap-4 my-6 not-prose">
             <div class="bg-tjb-cream-50 rounded-xl border border-tjb-lavender-200/50 p-5 shadow-sm">
               <p class="text-sm font-semibold text-tjb-rose-600 uppercase tracking-wide mb-1">Birth Doula</p>
@@ -1498,7 +1498,7 @@ const schema = {
         <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">By the Numbers</p>
         <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
         <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-4" style="font-family: 'DM Sans', sans-serif;">Birth in {city}: By the Numbers</h2>
-        <p class="text-tjb-gray leading-relaxed max-w-2xl mx-auto">Key birth statistics for {state} families — because knowing the landscape helps you make informed choices about your birth.</p>
+        <p class="text-tjb-gray leading-relaxed max-w-2xl mx-auto">Key birth statistics for {state} families, because knowing the landscape helps you make informed choices about your birth.</p>
       </div>
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 not-prose">
         {birthStats.cesareanRate != null && (
