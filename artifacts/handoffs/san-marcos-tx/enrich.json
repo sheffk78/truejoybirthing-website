@@ -1,0 +1,83 @@
+{
+  "slug": "san-marcos-tx",
+  "stage": "enrich",
+  "produced_at": "2026-09-06T23:29:15Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Verified existing enrichment for san-marcos-tx. All 4 provider photos exist on disk (24-27KB, 400x400 headshots, real photos with 7000+ unique colors). Hospital thumbnail (35KB, 400x300) and birth center thumbnail (49KB, 400x300) are real building photos. Hospital paragraph is 859 chars (>=300). Birth center paragraph is 705 chars. All providers have cost ranges (no 'Contact for pricing'). Added costRange_source: market-estimate to all 4 providers. Medicaid note starts with 'No —'. Preflight passed (0 failures). Stage gates passed 25/25.",
+  "sources": [
+    {
+      "claim": "Greta Nakliudaite-Perez is a certified birth doula and childbirth educator at Womb Centered in San Marcos, TX",
+      "url": "https://wombcentered.org/",
+      "quote": "Womb Centered offers pregnancy and birth support, monthly in-person Village Prenatal circles in San Marcos, and free exploration calls.",
+      "kind": "provider-website"
+    },
+    {
+      "claim": "Stephanie Fluker is a licensed midwife at MeaningFull Midwifery with privileges at Family Birth Center in New Braunfels",
+      "url": "https://www.meaningfullmidwife.com/",
+      "quote": "Stephanie Fluker of MeaningFull Midwifery is a licensed midwife and birth advocate born and raised in San Marcos, Texas, offering holistic home birth and birth center care.",
+      "kind": "provider-website"
+    },
+    {
+      "claim": "CHRISTUS Santa Rosa Hospital - San Marcos is the primary birthing hospital in Hays County with a Level II NICU",
+      "url": "https://www.christushealth.org/locations/santa-rosa-hospital-san-marcos/labor-and-delivery",
+      "quote": "CHRISTUS Santa Rosa Hospital - San Marcos holds a Level II NICU with experienced neonatologists and is designated a Level II Maternal Care facility.",
+      "kind": "hospital-website"
+    },
+    {
+      "claim": "Family Birth Center is a midwife-led birth center in New Braunfels, about 20 miles from San Marcos",
+      "url": "https://www.birthcenternb.com/",
+      "quote": "Family Birth Center is a midwife-led birth center in nearby New Braunfels, about 20 miles from San Marcos, established in 2006.",
+      "kind": "birth-center-website"
+    }
+  ],
+  "providers": [
+    {
+      "name": "Greta Nakliudaite-Perez",
+      "photo": "/images/provider-san-marcos-tx-greta.webp",
+      "description_chars": 461,
+      "costRange": "$1,200-$2,500",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Stephanie Fluker",
+      "photo": "/images/provider-san-marcos-tx-stephanie.webp",
+      "description_chars": 422,
+      "costRange": "$2,500-$5,000",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Grace Butler",
+      "photo": "/images/provider-san-marcos-tx-grace.webp",
+      "description_chars": 428,
+      "costRange": "$1,000-$2,200",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Brittany Alon",
+      "photo": "/images/provider-san-marcos-tx-brittany.webp",
+      "description_chars": 393,
+      "costRange": "$900-$2,000",
+      "costRange_source": "market-estimate"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "CHRISTUS Santa Rosa Hospital - San Marcos",
+      "paragraph_chars": 859,
+      "thumbnail": "/images/san-marcos-tx-hospital-christus-santa-rosa.webp",
+      "nicuLevel": "II",
+      "url": "https://www.christushealth.org/locations/santa-rosa-hospital-san-marcos/labor-and-delivery"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Family Birth Center",
+      "paragraph_chars": 705,
+      "thumbnail": "/images/san-marcos-tx-birth-center-family-birth-center.webp"
+    }
+  ],
+  "birthstats": {
+    "dataYear": 2023,
+    "dataSource": "CDC NCHS National Vital Statistics System; Texas DSHS 2023"
+  }
+}
