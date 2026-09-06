@@ -1,0 +1,25 @@
+{
+  "slug": "san-marcos-tx",
+  "verdicts": [
+    {
+      "crop": "san-marcos-tx-hero-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "Hero (san-marcos-tx-birth-doula-skyline-v2.webp) is a real pregnant silhouette photograph. One figure, two arms, normal fingers, belly consistent with facing direction, no anatomy defects at 2x zoom. Confirmed by vision_analyze."
+    },
+    {
+      "crop": "san-marcos-tx-support-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "Support scene (san-marcos-tx-birth-doula-support-v2.webp) is a real photographic doula+mom scene. One pregnant woman, two arms, no melted joints or anatomy defects at 2x zoom. Confirmed by vision_analyze."
+    },
+    {
+      "crop": "san-marcos-tx-og-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "OG image og-city-san-marcos-tx.webp is canonical Pattern B composition (real photo background). No human figure anatomy defects. Pattern B composition verified by preflight G64/G29/G35. Confirmed by vision_analyze."
+    }
+  ],
+  "checked_at": "2026-09-06T23:40:00-06:00",
+  "method": "vision_analyze (2x zoom figure crops) via hermes vision_tools on /tmp/tjb-vision-crops/san-marcos-tx-*.png"
+}
