@@ -1,0 +1,11 @@
+{
+  "slug": "palmdale-ca",
+  "checked_at": "2026-09-05T18:10:00-06:00",
+  "checked_by": "Kit (parent session; vision_analyze full-frame + 3 figure-isolated 2x crops)",
+  "note": "visual-verify-gate flagged 3 figure blobs (structural warning for multi-figure merge). Vision pass on all 3 crops + full frame resolved it: all blobs are fragments of the SAME single woman — her light-pink dress breaks the dark-blob detection (built for silhouette heroes) and Joshua trees add dark mass. Joshua trees = correct Antelope Valley geography. Real-photo style, exactly ONE pregnant woman, no anatomy defects. Subagent initial FAIL was a false positive; parent overruled with per-crop vision evidence.",
+  "verdicts": [
+    {"crop": "palmdale-ca-hero-fig0.png", "verdict": "pass", "defects": [], "note": "left crop: landscape/Joshua trees + lower half of the same single woman"},
+    {"crop": "palmdale-ca-hero-fig1.png", "verdict": "pass", "defects": [], "note": "center crop: the one pregnant woman, torso up, hands cradling bump, no defects"},
+    {"crop": "palmdale-ca-hero-fig2.png", "verdict": "pass", "defects": [], "note": "right crop: landscape/skyline + flowing pink skirt of the same single woman"}
+  ]
+}
