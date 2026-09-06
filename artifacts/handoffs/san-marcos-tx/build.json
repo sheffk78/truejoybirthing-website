@@ -1,0 +1,30 @@
+{
+  "slug": "san-marcos-tx",
+  "stage": "build",
+  "produced_at": null,
+  "worker_model": null,
+  "notes": "",
+  "sources": [],
+  "city_fields": {
+    "city": "San Marcos",
+    "state": "TX",
+    "lat": null,
+    "lng": null,
+    "costLow": 800,
+    "costHigh": 2500,
+    "heroImage": null,
+    "ogImage": null,
+    "supportSceneImage": null,
+    "supportSceneAlt": null,
+    "culture": "Skeleton entry for San Marcos, TX. Awaiting provider research, hospital details, and enrichment.",
+    "medicaidNote": "Medicaid doula coverage varies by state. Check with local doulas and your plan for current coverage."
+  },
+  "faqs_count": 0,
+  "midwife_paragraph_chars": 0,
+  "doulas": [],
+  "images": {
+    "hero_watermark_clean": null,
+    "og_watermark_clean": null
+  },
+  "_auto_image_refs": []
+}

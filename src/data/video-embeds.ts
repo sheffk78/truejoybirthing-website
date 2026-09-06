@@ -174,7 +174,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
   // cary-nc video removed: _4RaZyOaYeY was set to private/deleted. Needs re-record.
   "chesapeake-va": {
-    videoId: "RAvfrkNKmOQ",
+    videoId: "ErFbGnTrMGg",
     title: "Chesapeake Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and Virginia Medicaid, all in under 3 minutes.",
     duration: "PT2M55S",
