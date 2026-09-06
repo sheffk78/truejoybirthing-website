@@ -829,7 +829,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
   "boston-ma": { videoId: "J-S4IjKwADs", uploadDate: "2026-07-26", duration: "PT3M34S" } as any,
   "san-diego-ca": { videoId: "CtAJ83EaKUQ", uploadDate: "2026-07-24", duration: "PT2M44S" } as any,
-  "st-augustine-fl": { videoId: "DqSqRSWCmQ8", uploadDate: "2026-09-05", duration: "PT3M42S", title: "St. Augustine FL Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)", description: "Watch the full St. Augustine city guide â UF Health Flagler Hospital, birth centers, doulas and midwives, costs, and Florida Medicaid, all in about 3 minutes 42 seconds." } as any,
+  "st-augustine-fl": { videoId: "eXMlSpDqUT4", uploadDate: "2026-09-05", duration: "PT3M42S", title: "St. Augustine FL Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)", description: "Watch the full St. Augustine city guide â UF Health Flagler Hospital, birth centers, doulas and midwives, costs, and Florida Medicaid, all in about 3 minutes 42 seconds." } as any,
   "mckinney-tx": {
     videoId: "S7i4UCEqoec",
     title: "McKinney TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
@@ -1003,7 +1003,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
   "lehi-ut": {
-    videoId: "eUh2cXC_u8E",
+    videoId: "zHB5-5-54-g",
     title: "Lehi UT Doula & Birth Plan Guide: Costs, Hospitals & Insurance (First-Time Mom)",
     description: "Full city guide — 3 hospitals, 4 doulas, costs, and Utah Medicaid info, all in under 5.5 minutes. #lehidoula #utahbirth #utahdoulas #birthplan #doula #siliconslopes #intermountainhealth #americanforkhospital #utahvalleyhospital #timpanogosregional #firsttimemom #freebirthplan #truejoybirthing",
     duration: "PT5M31S",
