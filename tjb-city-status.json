@@ -461,7 +461,8 @@
       "has_outreach": true,
       "completed_at": "2026-07-29T23:56:43.729183+00:00",
       "stage": "complete",
-      "blocked_reason": null
+      "blocked_reason": null,
+      "video_id": "zHB5-5-54-g"
     },
     "mckinney-tx": {
       "has_video": true,
@@ -1095,7 +1096,7 @@
       "outreach_notes": "Re-outreach sent 2026-09-05 from shelbi@truejoybirthing.com (VPS/Postmark) to 4 providers with verified public emails: Nicole Stewart (Bare Necessities Doula Care), Alyssa Megeath (Fill Your Cup Birth and Wellness), Endless Love Doula Care (Hannah Greenwood), Tiffany Martin (St. Augustine Birth Collective). Named page changes: new 3:42 city guide video embedded, accurate verified listings, Florida Medicaid SB 264 doula coverage section. Emily Miller (bornbir directory, no public email) and Haley Garza (The Humbled Doula, no website/email) skipped as contact-form-only. 15s send delays applied.",
       "stage": "complete",
       "videoId": "DqSqRSWCmQ8",
-      "video_id": "DqSqRSWCmQ8",
+      "video_id": "eXMlSpDqUT4",
       "video_url": "https://youtu.be/DqSqRSWCmQ8",
       "completed_at": "2026-07-25T04:53:10Z",
       "blocked_reason": null

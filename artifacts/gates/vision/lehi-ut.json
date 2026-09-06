@@ -1,0 +1,11 @@
+{
+  "slug": "lehi-ut",
+  "verdicts": [
+    {"crop": "lehi-ut-hero-fig0.png", "verdict": "pass", "defects": []},
+    {"crop": "lehi-ut-hero-fig1.png", "verdict": "pass", "defects": []},
+    {"crop": "lehi-ut-og-fig0.png", "verdict": "pass", "defects": []},
+    {"crop": "lehi-ut-support-fig0.png", "verdict": "pass", "defects": []},
+    {"crop": "lehi-ut-thumb-fig0.png", "verdict": "pass", "defects": []}
+  ],
+  "checked_at": "2026-09-05T18:18:00-06:00"
+}
