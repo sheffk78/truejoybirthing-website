@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "last_updated": "2026-09-05T19:13:00Z",
+  "last_updated": "2026-09-06T17:30:00Z",
   "total_cities_in_codebase": 187,
   "future_cities_planned": 1000,
   "cities": {
@@ -1118,14 +1118,14 @@
       "outreach_complete": true,
       "providers_added": true,
       "provider_count": 6,
-      "video_blocked_reason": "YouTube daily upload limit reached (7 uploads today). MP4 rendered and ready for upload.",
+      "video_blocked_reason": null,
       "video_rendered": true,
       "video_mp4_path": "out/new-haven-ct-city-guide.mp4",
-      "video_duration": "3m51s",
-      "videoId": "QpbP7UBRGo4",
-      "video_id": "QpbP7UBRGo4",
-      "video_url": "https://youtu.be/QpbP7UBRGo4",
-      "video_uploaded_at": "2026-07-14T20:14:37Z",
+      "video_duration": "3m59s",
+      "videoId": "E27rhOTV0Lk",
+      "video_id": "E27rhOTV0Lk",
+      "video_url": "https://youtu.be/E27rhOTV0Lk",
+      "video_uploaded_at": "2026-09-06T17:20:00Z",
       "completed_at": "2026-07-23T04:48:45.600871Z",
       "hero_image": "new-haven-ct-birth-doula-skyline-v2.webp",
       "og_image": "og-city-new-haven-ct-v2.webp",
@@ -1135,7 +1135,10 @@
       "birth_stats": true,
       "score": 100,
       "stage": "complete",
-      "blocked_reason": null
+      "blocked_reason": null,
+      "outreach_sent_or_blocked": true,
+      "outreach_provider_count": 6,
+      "re_outreach_sent_at": "2026-09-06T17:18:17Z"
     },
     "san-francisco-ca": {
       "has_video": true,
