@@ -6071,7 +6071,6 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
       { q: "Does True Joy Birthing work with Laurel families?" , a: "True Joy Birthing provides free birth-prep tools for Laurel families. the Joyful Birth Plan, checklist, and guided walkthrough in the app work for any Laurel birth setting \u2014 whether you\u2019re delivering at UM Capital Region, Holy Cross, or at home with a midwife. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Laurel?" , a: "Laurel has postpartum doula support through local practitioners like Erin Hughes (overnight support and sleep education) and Iyonna Hester (fourth-trimester care). Hospital-based lactation support is available at UM Capital Region and Holy Cross. The postpartum doula community draws from both Baltimore and DC networks, so you\u2019ll find options ranging from affordable community doulas to specialized overnight support. Start your search during pregnancy if you want ongoing postpartum support. <a href='/blog/postpartum-doula/'>Learn more about postpartum doula support</a>." } ],
     nearbyCities: ["columbia-md", "baltimore-md", "gaithersburg-md"],
-    publishedDate: "2026-07-13" ,
     lat: 39.0988,
     lng: -76.8553
   },

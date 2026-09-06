@@ -609,11 +609,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-07-13T00:00:00-04:00",
 },
 "laurel-md": {
-    videoId: "wvRNvfNtV1c",
+    videoId: "gsA6wTyTBnM",
     title: "Laurel MD Birth Guide: Hospitals, Doulas, Costs & Medicaid",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Maryland Medicaid, all in under 7 minutes.",
-    duration: "PT6M5S",
-    uploadDate: "2026-07-13T00:00:00-04:00",
+    description: "Watch the full city guide â doulas, hospitals, costs, and Maryland Medicaid, all in under 6 minutes.",
+    duration: "PT5M43S",
+    uploadDate: "2026-09-06T00:00:00-04:00",
 },
 "greenbelt-md": {
     videoId: "dePHsXbfYVc",

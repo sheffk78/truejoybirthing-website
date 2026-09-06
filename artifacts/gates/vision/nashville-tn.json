@@ -1,0 +1,12 @@
+{
+  "slug": "nashville-tn",
+  "verdicts": [
+    {"crop": "nashville-tn-hero-fig0.png", "verdict": "pass", "defects": []},
+    {"crop": "nashville-tn-hero-fig1.png", "verdict": "pass", "defects": []},
+    {"crop": "nashville-tn-hero-fig2.png", "verdict": "pass", "defects": []},
+    {"crop": "nashville-tn-support-fig0.png", "verdict": "pass", "defects": []},
+    {"crop": "nashville-tn-thumb-fig0.png", "verdict": "pass", "defects": []},
+    {"crop": "nashville-tn-thumb-fig1.png", "verdict": "pass", "defects": []}
+  ],
+  "checked_at": "2026-09-05T19:56:00-06:00"
+}

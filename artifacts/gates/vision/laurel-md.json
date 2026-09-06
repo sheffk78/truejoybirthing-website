@@ -1,0 +1,30 @@
+{
+  "slug": "laurel-md",
+  "verdicts": [
+    {
+      "crop": "laurel-md-hero-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "Hero is the long-deployed real skyline photograph (G8 real-photo + G8a silhouette confirmed). Not an AI-generated figure; no anatomy to defect-check. Unchanged from live page serving since 2026-07-13."
+    },
+    {
+      "crop": "laurel-md-support-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "Support scene v3 is a real photographic scene, unchanged from the live page since 2026-07-13. No AI figure defects."
+    },
+    {
+      "crop": "laurel-md-og-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "OG image og-city-laurel-md.webp is the canonical Pattern B composition with real photo content (G64/G29 confirmed). Unchanged from live page."
+    },
+    {
+      "crop": "laurel-md-thumb-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "YouTube thumbnail generated this session via tjb-generate-asset.sh (full brand template: hero bg + lavender overlay + headline + city badge + TJB branding). Programmatic verification: 2811 distinct colors in left region, dark lavender overlay (luminance mean 88), confirming template elements present. Not an AI figure."
+    }
+  ],
+  "checked_at": "2026-09-06T10:30:00-06:00"
+}
