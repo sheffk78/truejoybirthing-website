@@ -1,0 +1,91 @@
+{
+  "slug": "washington-dc",
+  "stage": "build",
+  "mode": "stage_emission",
+  "exit_code": 0,
+  "passed": 20,
+  "failed": 0,
+  "skipped": 0,
+  "results": {
+    "G66": {
+      "status": "PASS",
+      "detail": "no duplicate object keys in any city block"
+    },
+    "S1": {
+      "status": "PASS",
+      "detail": "enableBlogResources = true"
+    },
+    "S2": {
+      "status": "PASS",
+      "detail": "OG image og-city-washington-dc.webp (44420 bytes \u2265 30KB)"
+    },
+    "S4": {
+      "status": "PASS",
+      "detail": "Required fields present"
+    },
+    "S6": {
+      "status": "PASS",
+      "detail": "publishedDate = \"2026-08-11\""
+    },
+    "S7": {
+      "status": "PASS",
+      "detail": "medicaidNote starts correctly"
+    },
+    "S8": {
+      "status": "PASS",
+      "detail": "No \"Contact for pricing\""
+    },
+    "S3": {
+      "status": "PASS",
+      "detail": "npm run build exited 0"
+    },
+    "S5": {
+      "status": "PASS",
+      "detail": "No standalone 'Free Birth Plan' in rendered HTML"
+    },
+    "G8": {
+      "status": "PASS",
+      "detail": "washington-dc-birth-doula-hero-v2.webp is a real photograph (high color count)"
+    },
+    "G70": {
+      "status": "PASS",
+      "detail": "no doubled Level/NICU badge text"
+    },
+    "G71": {
+      "status": "PASS",
+      "detail": "no skeleton placeholder text"
+    },
+    "G72": {
+      "status": "PASS",
+      "detail": "meta description 152 chars, complete"
+    },
+    "G25": {
+      "status": "PASS",
+      "detail": "Hero image is 3:2 (1200x800, ratio=1.50)"
+    },
+    "G29": {
+      "status": "PASS",
+      "detail": "OG has photo content (full_unique_colors=37621) and locked Pattern B composition"
+    },
+    "G35": {
+      "status": "PASS",
+      "detail": "OG has photo content (full_unique_colors=37621) and locked Pattern B composition"
+    },
+    "G64": {
+      "status": "PASS",
+      "detail": "G64: OG og-city-washington-dc.webp matches canonical Pattern B composition"
+    },
+    "G65": {
+      "status": "PASS",
+      "detail": "G65: No black letterbox/pillarbox bars on hero or support scene"
+    },
+    "G8a": {
+      "status": "PASS",
+      "detail": "Silhouette confirmed (center=95.7 < top=185.7, top_colors=17194)"
+    },
+    "G62": {
+      "status": "PASS",
+      "detail": "G62: Hero AVIF files not stale (or not present)"
+    }
+  }
+}

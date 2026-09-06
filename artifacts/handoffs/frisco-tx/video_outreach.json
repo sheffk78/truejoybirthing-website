@@ -1,0 +1,20 @@
+{
+  "slug": "frisco-tx",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-06T12:30:00Z",
+  "worker_model": "atlas:latest",
+  "notes": "",
+  "sources": [],
+  "video_file": "public/videos/frisco-tx.mp4",
+  "video_mb": 45.2,
+  "youtube_id": "WRONGID123",
+  "thumbnail_path": "public/images/frisco-tx-thumb.webp",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "provider": "Mya Daniel",
+      "status": "sent",
+      "message_id": "1546000000000000000"
+    }
+  ]
+}

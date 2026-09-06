@@ -100,25 +100,73 @@ function checkG66() {
   const keyRe = /^\s{2}"([a-z]+(?:-[a-z]+)*-[a-z]{2})":\s*\{/gm;
   const cityMatches = [...src.matchAll(keyRe)];
   const offenders: string[] = [];
-  for (let i = 0; i < cityMatches.length; i++) {
-    const slug = cityMatches[i][1];
-    const start = cityMatches[i].index + cityMatches[i][0].length;
-    const end = i + 1 < cityMatches.length ? cityMatches[i + 1].index : src.length;
-    const block = src.slice(start, end);
-    // Track bracket depth: only count keys at depth 0 (direct children of the
-    // city object, NOT inside arrays like localDoulas/hospitalDetails/faqs).
-    // Keys inside arrays naturally repeat (name:, photo:, acceptingClients:)
-    // and are NOT real duplicate-key hazards.
+  // String-aware brace counter: returns end index (exclusive) of the object
+  // opening at openIdx. Strings, template literals, escapes, // and /* */
+  // comments are skipped so their brackets never affect depth. The previous
+  // "slice to next regex match" boundary swallowed subsequent city blocks
+  // whenever a block contained bracket-like content, producing false
+  // duplicates for every key (worcester-ma, lakewood-co).
+  const blockEnd = (openIdx: number): number => {
+    let depth = 0;
+    let i = openIdx;
+    let instr = false;
+    let q = "";
+    while (i < src.length) {
+      const ch = src[i];
+      if (instr) {
+        if (ch === "\\") { i += 2; continue; }
+        if (ch === q) instr = false;
+        i++; continue;
+      }
+      if (ch === '"' || ch === "'" || ch === "`") { instr = true; q = ch; i++; continue; }
+      if (ch === "/" && src[i + 1] === "/") {
+        const nl = src.indexOf("\n", i);
+        if (nl === -1) break;
+        i = nl; continue;
+      }
+      if (ch === "/" && src[i + 1] === "*") {
+        const close = src.indexOf("*/", i + 2);
+        i = close === -1 ? src.length : close + 2; continue;
+      }
+      if (ch === "{") depth++;
+      else if (ch === "}") {
+        depth--;
+        if (depth === 0) return i + 1;
+      }
+      i++;
+    }
+    return src.length;
+  };
+  for (const cm of cityMatches) {
+    const slug = cm[1];
+    const openIdx = src.indexOf("{", cm.index + cm[0].length - 1);
+    const end = blockEnd(openIdx);
+    const block = src.slice(cm.index, end);
     const seen = new Map<string, number>();
-    let bracketDepth = 0;
     const lines = block.split("\n");
+    let bracketDepth = 0;
     for (const line of lines) {
-      // Track [ and ] for array depth
-      for (const ch of line) {
+      // strip // comments outside strings first
+      let clean = "";
+      let instr = false;
+      let q = "";
+      let k = 0;
+      while (k < line.length) {
+        const ch = line[k];
+        if (instr) {
+          clean += ch;
+          if (ch === "\\") { clean += line[k + 1] ?? ""; k += 2; continue; }
+          if (ch === q) instr = false;
+          k++; continue;
+        }
+        if (ch === '"' || ch === "'" || ch === "`") { instr = true; q = ch; clean += ch; k++; continue; }
+        if (ch === "/" && line[k + 1] === "/") break;
+        clean += ch; k++;
+      }
+      for (const ch of clean) {
         if (ch === "[") bracketDepth++;
         else if (ch === "]") bracketDepth--;
       }
-      // Only match keys at 4-space indent when NOT inside an array
       if (bracketDepth === 0) {
         const m = line.match(/^    ([A-Za-z][A-Za-z0-9_]*):/);
         if (m) {

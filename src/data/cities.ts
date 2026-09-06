@@ -1727,18 +1727,11 @@ export const cities: Record<string, CityData> = {
     midwifeInfo: {
       paragraph: "Fresno's midwifery community is small but dedicated, primarily centered on hospital-based Certified Nurse-Midwives (CNMs) at Community Regional and Clovis Community Medical Center. California licenses CNMs through the Board of Registered Nursing and Licensed Midwives (LMs) through the Medical Board of California. In the Central Valley, home birth midwives serve families in Fresno and surrounding rural communities, though the supply is limited compared to coastal California. Families seeking out-of-hospital birth typically work with LMs who attend home births, as there are no freestanding birth centers in Fresno.",
       credentialTypes: " and LMs",
-      credentialDetail: "In California, Certified Nurse-Midwives (CNMs) are licensed through the Board of Registered Nursing and practice in hospitals. Licensed Midwives (LMs) are licensed through the Medical Board of California under the Licensed Midwifery Practice Act and primarily attend out-of-hospital births. Both credentials require extensive clinical training.",
+      credentialDetail: "In California, Certified Nurse-Midwives (CNMs) are licensed through the Board of Registered Nursing and practice in hospitals. Licensed Midwives (LMs) are licensed through the Medical Board of California under the Licensed Midwifery Practice Act and primarily attend out-of-hospital births. Both credentials require extensive clinical training."
     },
     medicaidNote: "Yes — California Medi-Cal covers doula services under SB-509, with approximately $1,587 reimbursement for the birth package. Doulas must enroll through the PAVE portal. In Fresno, Medi-Cal managed care plans include CalViva Health and Health Net. Contact them for doula referral lists." ,
     insuranceNote: "Under California SB 332, commercial health plans must cover doula services. Given the limited supply of doulas in Fresno, ask your insurer about out-of-network coverage or telehealth doula options if in-network providers are unavailable." ,
-    birthStats: {
-      cesareanRate: 32.1,
-      maternalMortalityRate: 10.2,
-      homeBirthRate: 1.6,
-      birthCenterBirthRate: 1.2,
-      dataYear: 2023,
-      dataSource: "CDC NCHS National Vital Statistics System — California"
-    },
+
     faqs: [
       { q: "Can I get a free doula through Medi-Cal in Fresno?" , a: "Yes. Medi-Cal covers doula services under SB-509 at approximately $1,587 for the birth package. Contact CalViva Health or Health Net (Fresno's Medi-Cal managed care plans) for an enrolled doula referral list." },
       { q: "Does Fresno have any freestanding birth centers?" , a: "No. There are currently no freestanding birth centers in Fresno. Families interested in out-of-hospital birth typically work with home birth midwives, though options are limited in the Central Valley. <a href='/birth-plan-template/'>Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." },
@@ -1754,8 +1747,8 @@ export const cities: Record<string, CityData> = {
       homeBirthRate: 1.4,
       birthCenterBirthRate: 0.9,
       dataYear: 2023,
-      dataSource: "California Department of Public Health, Center for Health Statistics and Informatics, Vital Statistics Branch",
-    },
+      dataSource: "California Department of Public Health, Center for Health Statistics and Informatics, Vital Statistics Branch"
+    }
   },
   "los-angeles-ca": {
     enableBlogResources: true,
@@ -4906,12 +4899,10 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
     lat: 39.7990,
     lng: -89.6440},
   "columbia-md": {
-    enableBlogResources: true,
-    publishedDate: "2026-06-22",
     city: "Columbia" ,
     state: "MD" ,
     slug: "columbia-md" ,
-    publishedDate: "2026-06-22",
+
     enableBlogResources: true,
     costLow: 900,
     costHigh: 2500,
@@ -4951,7 +4942,7 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
       homeBirthRate: 1.2,
       birthCenterBirthRate: 0.3,
       dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System",
+      dataSource: "CDC NCHS, National Vital Statistics System"
     },
     midwifeInfo: {
       paragraph: "Maryland licenses Certified Nurse-Midwives (CNMs) through the Board of Nursing and Licensed Direct-Entry Midwives (LDEMs) under COMAR 10.64, making both hospital and home birth midwifery legally regulated. CNMs practice at Howard County General Hospital and Holy Cross Hospital, while LDEMs attend home births statewide. Community of Hope\u2019s birth center in DC offers midwife-led care about 30 minutes from Columbia." ,
@@ -5016,11 +5007,11 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
     lng: -77.2014},
 
   "norfolk-va": {
-    publishedDate: "2026-06-22",
+
     city: "Norfolk" ,
     state: "VA" ,
     slug: "norfolk-va" ,
-    publishedDate: "2026-06-22",
+
     heroImage: "/images/norfolk-va-birth-doula-skyline-v2.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-norfolk-va.webp" ,
     enableBlogResources: true,
@@ -5169,8 +5160,8 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
       homeBirthRate: 1.1,
       birthCenterBirthRate: 0.3,
       dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System",
-    },
+      dataSource: "CDC NCHS, National Vital Statistics System"
+    }
   },
   "newport-news-va": {
     publishedDate: "2026-07-29",
@@ -5367,7 +5358,7 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
     },
   },
   "fremont-ca": {
-    publishedDate: "2026-06-22",
+
     city: "Fremont" ,
     state: "CA" ,
     slug: "fremont-ca" ,
@@ -5382,10 +5373,7 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
     costLow: 1500,
     costHigh: 3000,
     shelbiServesHere: false,
-    localDoulas: [
-      { name: "Everyday Miracles" , credential: "Collective" , practice: "Everyday Miracles" , url: "https://www.everyday-miracles.org" , photo: "" , description: "Minneapolis-based nonprofit doula collective providing no-cost and sliding-scale birth support to families on Medical Assistance. Their diverse team of certified doulas serves the entire Twin Cities metro, including Rosemount and Dakota County, with bilingual (Spanish, Hmong, Somali) support available." , costRange: "Sliding scale, free for Medicaid" , acceptingClients: true, services: [ "Birth Doula" , "Postpartum Doula" , "Childbirth Education" ] , serviceArea: [ "Minneapolis, MN" , "St. Paul, MN" , "Rosemount, MN" ] } ,
-      { name: "Blooma Birth Support" , credential: "Agency" , practice: "Blooma" , url: "https://blooma.com/doulas/birth-support" , photo: "" , description: "Minneapolis doula agency based in South Minneapolis offering experienced birth and postpartum doulas, birth photography, and Spinning Babies classes. One of the largest doula networks in the Twin Cities with doulas matched to your specific birth preferences and hospital. Serves the full metro area including Rosemount." , costRange: "$1,900-$2,600" , acceptingClients: true, services: [ "Birth Doula" , "Postpartum Doula" , "Birth Photography" ] , serviceArea: [ "Minneapolis, MN" , "St. Paul, MN" , "Rosemount, MN" ] }
-    ],
+
     culture: "Fremont is a diverse, family-oriented city in the East Bay where the birth community reflects the area\u2019s tech-driven population and strong immigrant communities. Washington Hospital provides the only hospital-based maternity care in town, but many families also deliver at El Camino Health in Mountain View, Good Samaritan in San Jose, Stanford’s Lucile Packard for high-risk cases, or Kaiser San Jose or Santa Clara for Kaiser members. The doula community here pulls from both the South Bay and East Bay networks, giving Fremont families more options than the city size suggests." ,
     heroLocalDetail: "At 38 weeks in Fremont, you\u2019re probably planning the drive to Washington Hospital on Mowry Avenue near I-880 \u2014 that interchange can back up significantly during commute hours. If you\u2019re heading to Stanford or El Camino for a higher-level NICU, the drive down 237 or over the Dumbarton Bridge adds 30\u201345 minutes depending on traffic. Central Park and Lake Elizabeth offer flat walking paths for those final-weeks strolls." ,
     hospitalDetails: [
@@ -5554,14 +5542,14 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
       homeBirthRate: 1.2,
       birthCenterBirthRate: 0.4,
       dataYear: 2024,
-      dataSource: "CDC NCHS, National Vital Statistics System; America's Health Rankings 2019-2023",
+      dataSource: "CDC NCHS, National Vital Statistics System; America's Health Rankings 2019-2023"
     }, },
   "vancouver-wa": {
-    publishedDate: "2026-06-22",
+
     city: "Vancouver" ,
     state: "WA" ,
     slug: "vancouver-wa" ,
-    publishedDate: "2026-06-22",
+
     heroImage: "/images/vancouver-wa-birth-doula-skyline-v2.webp",
     enableBlogResources: true,
     ogImage: "https://truejoybirthing.com/images/og-city-vancouver-wa.webp" ,
@@ -5643,8 +5631,8 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
       homeBirthRate: 1.0,
       birthCenterBirthRate: 0.4,
       dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System",
-    },
+      dataSource: "CDC NCHS, National Vital Statistics System"
+    }
  },
       { q: "Does True Joy Birthing work with Vancouver families?" , a: "True Joy Birthing provides free birth-prep tools for Vancouver families. the Joyful Birth Plan, checklist, and guided walkthrough in the app work for any Vancouver birth setting. The app also helps you connect with local doulas and midwives in your area." },
       { q: "What about postpartum support in Vancouver?" , a: "Vancouver has hospital-based lactation support at both PeaceHealth and Legacy Salmon Creek. The postpartum doula community in the Portland-Vancouver metro is strong. Start your search during pregnancy if you want ongoing postpartum support. <a href='/blog/postpartum-doula/'>Learn more about postpartum doula support</a>." } ],
@@ -5658,8 +5646,8 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
       homeBirthRate: 2.3,
       birthCenterBirthRate: 0.9,
       dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System",
-    },
+      dataSource: "CDC NCHS, National Vital Statistics System"
+    }
   },
   "moreno-valley-ca": {
     publishedDate: "2026-06-22",
@@ -5777,7 +5765,7 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
     },
 },
   "san-bernardino-ca": {
-    publishedDate: "2026-06-22",
+
     city: "San Bernardino" ,
     state: "CA" ,
     slug: "san-bernardino-ca" ,
@@ -9038,7 +9026,7 @@ hospitalDetails: [
   },
 
   "louisville-ky": {
-    publishedDate: "2026-08-10",
+
     city: "Louisville" ,
     state: "KY" ,
     slug: "louisville-ky" ,
@@ -9055,10 +9043,7 @@ hospitalDetails: [
     costLow: 800,
     costHigh: 2500,
     shelbiServesHere: false,
-    localDoulas: [
-      { name: "Everyday Miracles" , credential: "Collective" , practice: "Everyday Miracles" , url: "https://www.everyday-miracles.org" , photo: "" , description: "Minneapolis-based nonprofit doula collective providing no-cost and sliding-scale birth support to families on Medical Assistance. Their diverse team of certified doulas serves the entire Twin Cities metro, including Rosemount and Dakota County, with bilingual (Spanish, Hmong, Somali) support available." , costRange: "Sliding scale, free for Medicaid" , acceptingClients: true, services: [ "Birth Doula" , "Postpartum Doula" , "Childbirth Education" ] , serviceArea: [ "Minneapolis, MN" , "St. Paul, MN" , "Rosemount, MN" ] } ,
-      { name: "Blooma Birth Support" , credential: "Agency" , practice: "Blooma" , url: "https://blooma.com/doulas/birth-support" , photo: "" , description: "Minneapolis doula agency based in South Minneapolis offering experienced birth and postpartum doulas, birth photography, and Spinning Babies classes. One of the largest doula networks in the Twin Cities with doulas matched to your specific birth preferences and hospital. Serves the full metro area including Rosemount." , costRange: "$1,900-$2,600" , acceptingClients: true, services: [ "Birth Doula" , "Postpartum Doula" , "Birth Photography" ] , serviceArea: [ "Minneapolis, MN" , "St. Paul, MN" , "Rosemount, MN" ] }
-    ],
+
     culture: "Louisville is Kentucky's largest city, sitting on the Ohio River across from southern Indiana, and the birth community here reflects the city's blend of Southern hospitality and Midwestern practicality. The metro area of about 620,000 residents is served by three major hospital systems — Norton Healthcare, Baptist Health, and UofL Health — each with active labor and delivery units. The Tree of Life Family Birth Center in Jeffersonville, just across the river, is the region's only freestanding birth center, offering CNM-led care for low-risk pregnancies. Kentucky Medicaid does not yet have a statewide doula benefit, though Humana and Anthem managed care plans have piloted doula coverage in the region. The doula community in Louisville is small but growing, with practitioners offering both birth and postpartum support." ,
     heroLocalDetail: "At 38 weeks in Louisville, you're probably mapping the drive to Norton Hospital downtown on Chestnut Street, or to Baptist Health Louisville on Kresge Way in the St. Matthews area. The Big Four Bridge over the Ohio River connects to Jeffersonville and the Tree of Life Birth Center if you're planning a birth center delivery. Cherokee Park and the Louisville Waterfront Park offer flat, shaded walking for those final-weeks strolls along the river." ,
     hospitalDetails: [
@@ -9105,11 +9090,11 @@ hospitalDetails: [
       homeBirthRate: 0.8,
       birthCenterBirthRate: 0.3,
       dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System; America's Health Rankings 2019-2023",
-    },
+      dataSource: "CDC NCHS, National Vital Statistics System; America's Health Rankings 2019-2023"
+    }
   },
   "washington-dc": {
-    publishedDate: "2026-08-11",
+
     city: "Washington" ,
     state: "DC" ,
     slug: "washington-dc" ,
@@ -9126,10 +9111,7 @@ hospitalDetails: [
     costLow: 1000,
     costHigh: 3000,
     shelbiServesHere: false,
-    localDoulas: [
-      { name: "Everyday Miracles" , credential: "Collective" , practice: "Everyday Miracles" , url: "https://www.everyday-miracles.org" , photo: "" , description: "Minneapolis-based nonprofit doula collective providing no-cost and sliding-scale birth support to families on Medical Assistance. Their diverse team of certified doulas serves the entire Twin Cities metro, including Rosemount and Dakota County, with bilingual (Spanish, Hmong, Somali) support available." , costRange: "Sliding scale, free for Medicaid" , acceptingClients: true, services: [ "Birth Doula" , "Postpartum Doula" , "Childbirth Education" ] , serviceArea: [ "Minneapolis, MN" , "St. Paul, MN" , "Rosemount, MN" ] } ,
-      { name: "Blooma Birth Support" , credential: "Agency" , practice: "Blooma" , url: "https://blooma.com/doulas/birth-support" , photo: "" , description: "Minneapolis doula agency based in South Minneapolis offering experienced birth and postpartum doulas, birth photography, and Spinning Babies classes. One of the largest doula networks in the Twin Cities with doulas matched to your specific birth preferences and hospital. Serves the full metro area including Rosemount." , costRange: "$1,900-$2,600" , acceptingClients: true, services: [ "Birth Doula" , "Postpartum Doula" , "Birth Photography" ] , serviceArea: [ "Minneapolis, MN" , "St. Paul, MN" , "Rosemount, MN" ] }
-    ],
+
     culture: "Washington, D.C. is the nation’s capital, and its birth community reflects the city’s diversity, activism, and commitment to health equity. With approximately 702,000 residents and nearly 8,000 births annually, the District is served by four active labor and delivery hospitals and two freestanding birth centers within the metro area. DC Medicaid was among the first in the nation to cover doula services, and the city has invested heavily in reducing maternal mortality disparities, particularly for Black mothers who face disproportionately higher rates. The doula community in DC is vibrant and multicultural, with practitioners specializing in everything from VBAC support to LGBTQIA+ family care, military family support, and full-spectrum services." ,
     heroLocalDetail: "At 38 weeks in DC, you’re probably mapping the drive to MedStar Washington Hospital Center on Irving Street NW in Columbia Heights, or to GW Hospital in Foggy Bottom near the State Department. Community of Hope Family Health and Birth Center on Bladensburg Road NE offers a home-like birth center experience just minutes from Capitol Hill. The National Mall and Rock Creek Park provide flat, shaded walking paths for those final-weeks strolls, and Eastern Market on Capitol Hill is a favorite spot for pregnant locals browsing fresh produce." ,
     hospitalDetails: [

@@ -77,10 +77,23 @@ if (allUrls.length === 0) {
 }
 
 const groups = { pages: [], blog: [], cities: [] };
+// Skeleton pages carry visible "Skeleton entry ... Awaiting provider research"
+// placeholder copy (cities.ts culture/heroLocalDetail). Submitting thin
+// placeholder pages invites Google quality suppression (Kenneth directive
+// Sep 6, 2026). They stay live but are excluded from the sitemap until real
+// content lands.
+const SKELETON_SLUGS = new Set(['bellevue-wa','burlingame-ca','cary-nc','cedar-park-tx','concord-nc','costa-mesa-ca','cumming-ga','greenville-sc','la-habra-ca','new-braunfels-tx','newport-beach-ca','palo-alto-ca','pearland-tx','redwood-city-ca','san-marcos-tx','san-mateo-ca','victoria-tx']);
+let skeletonExcluded = 0;
 for (const u of allUrls) {
   const cat = categorize(u.loc);
+  const slugMatch = cat === 'cities' ? u.loc.match(/\/birth-support\/([^/]+)\//) : null;
+  if (slugMatch && SKELETON_SLUGS.has(slugMatch[1])) {
+    skeletonExcluded++;
+    continue;
+  }
   groups[cat].push(u);
 }
+if (skeletonExcluded > 0) console.log(`  ⚑ excluded ${skeletonExcluded} skeleton pages from sitemap-cities.xml`);
 
 const now = new Date().toISOString();
 const base = 'https://truejoybirthing.com';

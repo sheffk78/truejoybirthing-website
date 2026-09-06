@@ -314,6 +314,7 @@ const nicuBadge = (raw?: string): string | null => {
 };
 const statsSourceLine = (ds: string, dy: string): string =>
   ds.trim().endsWith(dy) ? `Data from ${ds}.` : `Data from ${ds}, ${dy}.`;
+const isSkeleton = typeof data.culture === "string" && data.culture.startsWith("Skeleton entry");
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 const ogImage = ogImageSlug || `https://truejoybirthing.com/images/og-city-${slug}.webp`;
 const heroImage = heroImageSlug || '/images/doula-breastfeeding.webp';
@@ -535,6 +536,7 @@ const schema = {
   ogType="article"
   breadcrumbList={breadcrumbList}
   schema={schema}
+  noindex={isSkeleton}
 >
 
   

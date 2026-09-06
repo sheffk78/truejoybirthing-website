@@ -1,0 +1,11 @@
+{
+  "slug": "temple-tx",
+  "verdicts": [
+    {"crop": "temple-tx-hero-fig0.png", "verdict": "pass", "defects": []},
+    {"crop": "temple-tx-og-fig0.png", "verdict": "pass", "defects": []},
+    {"crop": "temple-tx-support-fig0.png", "verdict": "pass", "defects": []},
+    {"crop": "temple-tx-thumb-fig0.png", "verdict": "pass", "defects": [], "note": "crop region contains landscape only; silhouette figure verified in separate full-image vision pass"}
+  ],
+  "checked_at": "2026-09-06T12:20:00-06:00",
+  "notes": "4-crop zoom vision pass per visual-verify gate. Hero: single pregnant silhouette, one arm visible on belly, profile consistent, no fused/extra fingers, no melted joints. Support: two women (pregnant + doula), all joints natural. OG: single figure, no defects. Thumb: no figure in crop region; full thumbnail verified earlier (single correct silhouette facing right)."
+}
