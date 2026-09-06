@@ -2,8 +2,8 @@
   "slug": "san-marcos-tx",
   "stage": "verify_deploy",
   "produced_at": "2026-09-07T05:45:00Z",
-  "worker_model": "deepseek-v4-flash:0731",
-  "notes": "Full preflight passed (0 failures, 0 warnings). Build exit 0. Deployed via bash scripts/deploy.sh san-marcos-tx (exit 0). Live page HTTP 200. All 9 images (hero, support, OG, 4 providers, 2 hospital/birth-center thumbnails) verified: HTTP 200, content-length > 10KB, browser-side new Image() decode success, vision_analyze PASS (no placeholders). CDN MD5 matches repo for all images including AVIF variants.",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Full preflight passed (0 failures, 0 warnings). Build exit 0. Deployed via bash scripts/deploy.sh san-marcos-tx (exit 0). Live page HTTP 200. All 9 images verified: HTTP 200, content-length > 10KB, browser-side new Image() decode success, vision_analyze PASS (no placeholders). CDN MD5 matches repo for all images including AVIF variants.",
   "sources": [
     {
       "claim": "Full preflight for san-marcos-tx passed with 0 failures and 0 warnings (all G gates, V1, A3-A12, S5-S7, P8-P15).",
@@ -12,9 +12,9 @@
       "kind": "preflight"
     },
     {
-      "claim": "npm run build exited 0 (338 pages built) and deploy via bash scripts/deploy.sh san-marcos-tx completed with exit 0.",
+      "claim": "npm run build exited 0 and deploy via bash scripts/deploy.sh san-marcos-tx completed with exit 0.",
       "url": "https://truejoybirthing.com/birth-support/san-marcos-tx/",
-      "quote": "ALL GATES PASSED — ready to deploy. Deployment complete! Take a peek over at https://ee49faa7.truejoybirthing-website.pages.dev",
+      "quote": "Deployment complete! Take a peek over at https://ee49faa7.truejoybirthing-website.pages.dev",
       "kind": "deploy"
     },
     {
@@ -26,7 +26,7 @@
     {
       "claim": "Browser-side new Image() constructor confirms all 9 images decode successfully with correct natural dimensions.",
       "url": "https://truejoybirthing.com/birth-support/san-marcos-tx/",
-      "quote": "All 9 images decoded:true — hero 1200x800, support 1024x768, OG 1200x630, providers 400x400, hospital/birth-center 400x300",
+      "quote": "All 9 images decoded:true \u2014 hero 1200x800, support 1024x768, OG 1200x630, providers 400x400, hospital/birth-center 400x300",
       "kind": "browser-decode"
     },
     {
@@ -36,7 +36,7 @@
       "kind": "vision"
     },
     {
-      "claim": "CDN-served files match repo files (byte size + MD5) for hero, support, OG, and AVIF variants — no cache staleness.",
+      "claim": "CDN-served files match repo files (byte size + MD5) for hero, support, OG, and AVIF variants \u2014 no cache staleness.",
       "url": "https://truejoybirthing.com/images/san-marcos-tx-birth-doula-skyline.avif",
       "quote": "REPO MD5 5553a796069fd55522d49f97daf741cb == CDN MD5 for hero; all other images match; AVIF 8ef582637da3fc0ce7eba7adeaf11068 matches",
       "kind": "cdn-cache-bust"

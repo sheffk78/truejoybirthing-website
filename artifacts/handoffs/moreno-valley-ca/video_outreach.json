@@ -1,0 +1,51 @@
+{
+  "slug": "moreno-valley-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-07T04:30:00Z",
+  "worker_model": "deepseek-v4-flash:0731",
+  "notes": "Video re-rendered with full state names (California), 5 individual provider portrait scenes, fresh Shelbi/Voxtral TTS. Uploaded as NEW video No2dJ6mjutE (public, embeddable), old x9zMKqf4seo set unlisted. Thumbnail uploaded. Embed updated + deployed. Re-outreach sent to 2 non-responders.",
+  "sources": [
+    {
+      "claim": "Moreno Valley's primary hospital is Kaiser Permanente Moreno Valley Medical Center on Heacock Street with private labor rooms, full-service maternity unit, and NICU support.",
+      "url": "https://truejoybirthing.com/birth-support/moreno-valley-ca/",
+      "quote": "Kaiser Permanente Moreno Valley Medical Center is the primary hospital serving Moreno Valley families, with private labor rooms, family-centered postpartum rooms, and NICU support."
+    },
+    {
+      "claim": "California's Medi-Cal program covers doula services through the PAVE program, reimbursing around $1,587 per pregnancy.",
+      "url": "https://truejoybirthing.com/birth-support/moreno-valley-ca/",
+      "quote": "California's Medi-Cal program covers doula services as a state benefit, with reimbursement rates around $1,587 per pregnancy. Families on Medi-Cal can access doula support through the PAVE (Providing Access and doula Viability through Equity) program."
+    },
+    {
+      "claim": "Moreno Valley has 5 doula/midwife providers listed on the page, including Holistic Doula LLC, 4 The Moms, The Serene Mother, Gem of the Valley, and Raising Birth Doula Care.",
+      "url": "https://truejoybirthing.com/birth-support/moreno-valley-ca/",
+      "quote": "Holistic Doula LLC provides bilingual doula support for Latina women and families across the Inland Empire. Services include pregnancy, birth, and postpartum support with Home Visitation and coverage through IEHP and Kaiser."
+    },
+    {
+      "claim": "Doula care in Moreno Valley costs $1,200-$2,500.",
+      "url": "https://truejoybirthing.com/birth-support/moreno-valley-ca/",
+      "quote": "Know what doula care actually costs ($1,200-$2,500)"
+    }
+  ],
+  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/moreno-valley-ca-city-guide.mp4",
+  "video_mb": 15.4,
+  "youtube_id": "No2dJ6mjutE",
+  "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/yt-thumb-moreno-valley-ca.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "provider": "4 The Moms Southern California Postpartum Doula Support",
+      "status": "sent",
+      "message_id": "vps-20260906222929586982"
+    },
+    {
+      "provider": "Gem of the Valley Doula Services",
+      "status": "sent",
+      "message_id": "vps-20260906222952339460"
+    },
+    {
+      "provider": "Raising Birth Doula Care",
+      "status": "blocked",
+      "message_id": null
+    }
+  ]
+}
