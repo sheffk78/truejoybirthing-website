@@ -20,6 +20,11 @@
       "note": "OG image og-city-san-marcos-tx.webp is canonical Pattern B composition (real photo background). No human figure anatomy defects. Pattern B composition verified by preflight G64/G29/G35. Confirmed by vision_analyze."
     }
   ],
+  "crops": {
+    "san-marcos-tx-hero-fig0.png": {"pass": true, "defects": []},
+    "san-marcos-tx-support-fig0.png": {"pass": true, "defects": []},
+    "san-marcos-tx-og-fig0.png": {"pass": true, "defects": []}
+  },
   "checked_at": "2026-09-06T23:40:00-06:00",
   "method": "vision_analyze (2x zoom figure crops) via hermes vision_tools on /tmp/tjb-vision-crops/san-marcos-tx-*.png"
 }
