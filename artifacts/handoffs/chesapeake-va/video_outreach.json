@@ -1,20 +1,46 @@
 {
   "slug": "chesapeake-va",
   "stage": "video_outreach",
-  "produced_at": null,
-  "worker_model": null,
-  "notes": "",
-  "sources": [],
-  "video_file": null,
-  "video_mb": null,
-  "youtube_id": null,
-  "thumbnail_path": null,
-  "embed_verified": null,
+  "produced_at": "2026-09-06T22:20:00Z",
+  "worker_model": "deepseek-v4-flash:0731",
+  "notes": "Video re-rendered (providerCount fixed 8->6), uploaded as NEW video Zx0yaqaPsu8, old ErFbGnTrMGg unlisted, thumbnail regenerated+uploaded, embed updated, deployed. Re-outreach sent to Wholesome Hearts (non-responder) naming page changes.",
+  "sources": [
+    {
+      "claim": "Chesapeake has 6 doulas and midwives listed on the page",
+      "url": "https://truejoybirthing.com/birth-support/chesapeake-va/",
+      "quote": "localDoulas array in cities.ts contains 6 provider entries (Tina, Wholesome Hearts, Village Midwife, Seven Cities, Three Rivers, Sunflower Babies)"
+    },
+    {
+      "claim": "The BirthPlace at Chesapeake Regional Medical Center is the hospital on the page",
+      "url": "https://truejoybirthing.com/birth-support/chesapeake-va/",
+      "quote": "hospitalDetails contains The BirthPlace at Chesapeake Regional Medical Center, Level III NICU, 736 Battlefield Blvd N"
+    },
+    {
+      "claim": "Virginia Medicaid covers doula services since January 2024",
+      "url": "https://truejoybirthing.com/birth-support/chesapeake-va/",
+      "quote": "medicaidNote and video insurance scene state Virginia Medicaid has covered doula services since January 1, 2024"
+    },
+    {
+      "claim": "New video uploaded to YouTube as public embeddable",
+      "url": "https://youtu.be/Zx0yaqaPsu8",
+      "quote": "upload-youtube.py returned video ID Zx0yaqaPsu8, oembed confirms title 'Chesapeake VA Doula & Birth Plan Guide', maxres thumbnail returns HTTP 200"
+    },
+    {
+      "claim": "Re-outreach sent to Wholesome Hearts naming page changes",
+      "url": "https://truejoybirthing.com/birth-support/chesapeake-va/",
+      "quote": "tjb-outreach-send.py returned SENT message_id vps-20260906221758776679 to wholesomeheartsx3@gmail.com, subject 'Updates to your info on True Joy Birthing, Chesapeake'"
+    }
+  ],
+  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/chesapeake-va-city-guide.mp4",
+  "video_mb": 18.1,
+  "youtube_id": "Zx0yaqaPsu8",
+  "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/yt-thumb-chesapeake-va.png",
+  "embed_verified": true,
   "outreach": [
     {
-      "provider": null,
-      "status": null,
-      "message_id": null
+      "provider": "Wholesome Hearts Doula Services",
+      "status": "sent",
+      "message_id": "vps-20260906221758776679"
     }
   ]
 }
