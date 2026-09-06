@@ -174,18 +174,18 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
   // cary-nc video removed: _4RaZyOaYeY was set to private/deleted. Needs re-record.
   "chesapeake-va": {
-    videoId: "ErFbGnTrMGg",
+    videoId: "Zx0yaqaPsu8",
     title: "Chesapeake Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and Virginia Medicaid, all in under 3 minutes.",
     duration: "PT2M55S",
     uploadDate: "2026-06-16T00:00:00-06:00",
   },
   "moreno-valley-ca": {
-    videoId: "uYxhNupSsME",
+    videoId: "x9zMKqf4seo",
     title: "Moreno Valley Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 3 minutes.",
-    duration: "PT2M59S",
-    uploadDate: "2026-06-18T00:00:00-06:00",
+    description: "Watch the full city guide â doulas, hospitals, costs, and California Medi-Cal, all in under 4 minutes.",
+    duration: "PT3M46S",
+    uploadDate: "2026-09-06T00:00:00-06:00",
   },
   "carrollton-tx": {
     videoId: "oYtBdiECrgo",

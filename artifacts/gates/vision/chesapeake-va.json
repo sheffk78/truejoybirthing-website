@@ -1,0 +1,30 @@
+{
+  "slug": "chesapeake-va",
+  "verdicts": [
+    {
+      "crop": "chesapeake-va-hero-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "Hero is the long-deployed real skyline photograph (G8 real-photo + G8a silhouette confirmed). 93689 unique colors, real photographic content. Not an AI-generated figure; no anatomy to defect-check. Unchanged from live page."
+    },
+    {
+      "crop": "chesapeake-va-support-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "Support scene is a real photographic scene (280248 unique colors), unchanged from the live page. No AI figure defects."
+    },
+    {
+      "crop": "chesapeake-va-og-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "OG image og-city-chesapeake-va.webp is the canonical Pattern B composition with real photo content (83534 unique colors, G64/G29 confirmed). Unchanged from live page."
+    },
+    {
+      "crop": "chesapeake-va-thumb-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "YouTube thumbnail generated this session via tjb-generate-asset.sh (full brand template: hero bg + overlay + headline + city badge + TJB branding). 13831 unique colors in crop region, template elements present. Not an AI figure."
+    }
+  ],
+  "checked_at": "2026-09-06T16:15:00-06:00"
+}
