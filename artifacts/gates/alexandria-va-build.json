@@ -1,0 +1,31 @@
+{
+  "slug": "alexandria-va",
+  "stage": "build",
+  "mode": "local_integrity",
+  "exit_code": 1,
+  "passed": 0,
+  "failed": 1,
+  "skipped": 0,
+  "results": {
+    "LOCAL_heroImage": {
+      "status": "PASS",
+      "detail": "/images/alexandria-va-birth-doula-skyline-v2.webp"
+    },
+    "LOCAL_ogImage": {
+      "status": "PASS",
+      "detail": "https://truejoybirthing.com/images/og-city-alexandria-va.webp"
+    },
+    "LOCAL_supportSceneImage": {
+      "status": "PASS",
+      "detail": "/images/alexandria-va-support-scene.webp"
+    },
+    "LOCAL_PROVIDER_PHOTOS": {
+      "status": "FAIL",
+      "detail": "cross-city provider photo: /images/momease-logo.svg"
+    },
+    "LOCAL_EVAL_SLOP": {
+      "status": "PASS",
+      "detail": "no slop patterns (0 warn-tier)"
+    }
+  }
+}

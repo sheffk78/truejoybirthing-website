@@ -1,0 +1,19 @@
+{
+  "id": "vision-phantom-arm-rockville-md",
+  "date": "2026-09-05",
+  "stage": "verify_deploy",
+  "city": "rockville-md",
+  "failure": "Hero with phantom duplicated arm segment + fused fingers shipped through all 4 stages: full-frame vision pass scored it clean (postmortem 2026-09-05). Only figure-zoom crop vision catches anatomy.",
+  "detector": "visual-verify-gate",
+  "replay": {
+    "type": "contract",
+    "expect": "fail",
+    "fixture": {
+      "slug": "rockville-md",
+      "stage": "verify_deploy",
+      "note": "replays verify_deploy contract enforcement; vision verdict file must be present and passing"
+    }
+  },
+  "source_commit": "pre-harness",
+  "status": "active"
+}

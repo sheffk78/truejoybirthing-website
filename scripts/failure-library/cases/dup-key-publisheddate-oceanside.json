@@ -1,0 +1,20 @@
+{
+  "id": "dup-key-publisheddate-oceanside",
+  "date": "2026-09-06",
+  "stage": "build",
+  "city": "oceanside-ca",
+  "failure": "Duplicate object key 'publishedDate' in cities.ts city block (vite/esbuild warning 'Duplicate key in object literal'). Second value silently overwrites the first in TS \u2014 build passes, data wrong. Found by hermes verify runtime boot during Phase 1 finalization. Fix = new dup-key scanner in contract validation.",
+  "detector": "dup-key-scanner",
+  "replay": {
+    "type": "dup_keys",
+    "expect": "fail",
+    "fixture": {
+      "text": "city: \"Oceanside\",\n  publishedDate: \"2026-08-01\",\n  faqs: [],\n  publishedDate: \"2026-08-02\",\n  slug: \"oceanside-ca\"",
+      "expect_keys": [
+        "publishedDate"
+      ]
+    }
+  },
+  "source_commit": "540ae036",
+  "status": "active"
+}

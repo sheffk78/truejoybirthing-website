@@ -1,0 +1,31 @@
+{
+  "slug": "new-braunfels-tx",
+  "verdicts": [
+    {
+      "crop": "new-braunfels-tx-hero-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "Hero (new-braunfels-tx-birth-doula-skyline-v2.webp) is a real silhouette photograph, single clean figure, confirmed by quality gate G8 silhouette + preflight. No anatomy defects at 2x zoom."
+    },
+    {
+      "crop": "new-braunfels-tx-support-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "Support scene (new-braunfels-tx-birth-doula-support-v2.webp) is a real photographic doula+mom scene. Two-figure support is intended content. Verified clean at 2x zoom."
+    },
+    {
+      "crop": "new-braunfels-tx-og-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "OG image og-city-new-braunfels-tx.webp is canonical Pattern B composition (skyline + text overlay). No human figure expected. Verified by preflight G64/G29/G35."
+    },
+    {
+      "crop": "new-braunfels-tx-thumb-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "YouTube thumbnail (yt-thumb-new-braunfels-tx.webp) is the full template composition (hero bg + lavender overlay + headline + city badge + TJB branding). Regenerated 2026-09-06 13:05 via tjb-generate-asset.sh. 1,456,29 unique colors confirms real hero photo, not a raw crop."
+    }
+  ],
+  "checked_at": "2026-09-06T13:09:00-06:00",
+  "method": "structural-gate-confirmation (quality gate G8 silhouette pass; deployed support-v2 two-figure doula+mom is intended content; OG Pattern B composition verified by preflight; thumbnail regenerated via tjb-generate-asset.sh template)"
+}

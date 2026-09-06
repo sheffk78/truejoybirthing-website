@@ -1,0 +1,17 @@
+{
+  "id": "slop-game-changer-bakersfield-ca",
+  "date": "2026-09-06",
+  "stage": "build",
+  "city": "bakersfield-ca",
+  "failure": "Shipped page copy contains AI buzzword 'game-changer' (calibration scan; bakersfield was warn-context, worcester hard-tier).",
+  "detector": "eval-slop-gate",
+  "replay": {
+    "type": "slop",
+    "expect": "fail",
+    "fixture": {
+      "text": "This is a game-changer in Bakersfield, where Medi-Cal serves a huge portion of families.\""
+    }
+  },
+  "source_commit": "c051be77",
+  "status": "active"
+}

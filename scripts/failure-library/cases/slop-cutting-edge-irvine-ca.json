@@ -1,0 +1,17 @@
+{
+  "id": "slop-cutting-edge-irvine-ca",
+  "date": "2026-09-06",
+  "stage": "build",
+  "city": "irvine-ca",
+  "failure": "Shipped page copy contains AI buzzword 'cutting-edge' (hospital paragraph). Found by LOCAL_EVAL_SLOP calibration scan (168 cities).",
+  "detector": "eval-slop-gate",
+  "replay": {
+    "type": "slop",
+    "expect": "fail",
+    "fixture": {
+      "text": "UCI Health is an academic medical center affiliated with UC Irvine School of Medicine, providing access to cutting-edge research, clinical trials, and maternal-fetal medicine specialists."
+    }
+  },
+  "source_commit": "c051be77",
+  "status": "active"
+}

@@ -1,5 +1,5 @@
 {
-  "slug": "garden-grove-ca",
+  "slug": "springfield-il",
   "stage": "build",
   "mode": "stage_emission",
   "exit_code": 0,
@@ -17,7 +17,7 @@
     },
     "S2": {
       "status": "PASS",
-      "detail": "OG image og-city-garden-grove-ca-v3.webp (78310 bytes \u2265 30KB)"
+      "detail": "OG image og-city-springfield-il-v2.webp (57442 bytes \u2265 30KB)"
     },
     "S4": {
       "status": "PASS",
@@ -25,7 +25,7 @@
     },
     "S6": {
       "status": "PASS",
-      "detail": "publishedDate = \"2026-08-12\""
+      "detail": "publishedDate = \"2026-06-08\""
     },
     "S7": {
       "status": "PASS",
@@ -45,7 +45,7 @@
     },
     "G8": {
       "status": "PASS",
-      "detail": "garden-grove-ca-birth-doula-hero-v3.webp is a real photograph (high color count)"
+      "detail": "springfield-il-birth-doula-support-v2.webp is a real photograph (high color count)"
     },
     "G70": {
       "status": "PASS",
@@ -61,19 +61,19 @@
     },
     "G25": {
       "status": "PASS",
-      "detail": "Hero image is 3:2 (1200x800, ratio=1.50)"
+      "detail": "Hero image is 3:2 (864x576, ratio=1.50)"
     },
     "G29": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=46945) and locked Pattern B composition"
+      "detail": "OG has photo content (full_unique_colors=35845) and locked Pattern B composition"
     },
     "G35": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=46945) and locked Pattern B composition"
+      "detail": "OG has photo content (full_unique_colors=35845) and locked Pattern B composition"
     },
     "G64": {
       "status": "PASS",
-      "detail": "G64: OG og-city-garden-grove-ca-v3.webp matches canonical Pattern B composition"
+      "detail": "G64: OG og-city-springfield-il-v2.webp matches canonical Pattern B composition"
     },
     "G65": {
       "status": "PASS",
@@ -81,7 +81,7 @@
     },
     "G8a": {
       "status": "PASS",
-      "detail": "Silhouette confirmed (center=74.7 < top=175.7, top_colors=21114)"
+      "detail": "Silhouette confirmed (center=69.2 < top=221.2, top_colors=2627)"
     },
     "G62": {
       "status": "PASS",

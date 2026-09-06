@@ -1,0 +1,28 @@
+{
+  "slug": "new-braunfels-tx",
+  "stage": "verify_deploy",
+  "produced_at": "2026-09-06T18:53:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Preflight passed (0 failures), build exit 0, deploy pushed to CF Pages + git main. Live page /birth-support/new-braunfels-tx/ returns 200, hero image returns 200. AVIF files fresh (>15KB, not stale gradients). Vision verdict file written with all crops pass.",
+  "sources": [
+    {
+      "claim": "Live page returns HTTP 200 after deploy",
+      "url": "https://truejoybirthing.com/birth-support/new-braunfels-tx/",
+      "quote": "curl returned HTTP 200 on live page and preview page"
+    },
+    {
+      "claim": "Hero image returns HTTP 200 after deploy",
+      "url": "https://truejoybirthing.com/images/new-braunfels-tx-birth-doula-skyline-v2.webp",
+      "quote": "curl returned HTTP 200 on hero image URL"
+    },
+    {
+      "claim": "Deploy pushed to git main and CF Pages",
+      "url": "https://github.com/sheffk78/truejoybirthing-website",
+      "quote": "deploy.sh committed and pushed b8e217a2..2701529d main -> main, CF Pages upload complete"
+    }
+  ],
+  "preflight_exit": 0,
+  "deploy_status": "SUCCESS",
+  "live_http": 200,
+  "vision_verdict_file": "artifacts/gates/vision/new-braunfels-tx.json"
+}

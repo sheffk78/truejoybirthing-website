@@ -30,7 +30,16 @@ GENERIC_PROVIDER_NAMES = {"doulas", "doula", "resources", "local doulas", "doula
 # ---------------------------------------------------------------- parsing
 
 def _balanced(text: str, start: int, open_ch: str = "{", close_ch: str = "}") -> str:
-    """Single-pass string-aware balanced-delimiter scan. O(n), no rescan."""
+    """Single-pass comment-aware balanced-delimiter scan. O(n), no rescan.
+
+    Corpus convention (cities.ts): all string literals are double-quoted;
+    single-quote chars only appear inside comments ("County's") or as
+    escaped apostrophes within double-quoted strings. So:
+      - strings are delimited by `"` only (with backslash escapes)
+      - `// ...` line comments and `/* ... */` block comments are skipped
+    This was a real bug: leesburg-fl's `// Lake County's ONLY ...` comment
+    made the apostrophe open a phantom string, breaking block extraction.
+    """
     depth = 0
     i = start
     quote = None
@@ -43,8 +52,16 @@ def _balanced(text: str, start: int, open_ch: str = "{", close_ch: str = "}") ->
                 continue
             if ch == quote:
                 quote = None
-        elif ch in "\"'":
+        elif ch == chr(34):
             quote = ch
+        elif ch == "/" and i + 1 < n and text[i + 1] == "/":
+            nl = text.find("\n", i)
+            i = nl if nl != -1 else n
+            continue
+        elif ch == "/" and i + 1 < n and text[i + 1] == "*":
+            end = text.find("*/", i + 2)
+            i = end + 2 if end != -1 else n
+            continue
         elif ch == open_ch:
             depth += 1
         elif ch == close_ch:

@@ -1,0 +1,62 @@
+{
+  "slug": "new-braunfels-tx",
+  "checked_at": "2026-09-06T18:52:59.426247+00:00",
+  "images": [
+    {
+      "image": "public/images/new-braunfels-tx-birth-doula-skyline.webp",
+      "label": "hero",
+      "figures": 4,
+      "flags": [
+        "multiple-figures(4)",
+        "outline-discontinuities(58)",
+        "outline-discontinuities(54)",
+        "outline-discontinuities(13)"
+      ]
+    },
+    {
+      "image": "public/images/new-braunfels-tx-birth-doula-skyline-v2.webp",
+      "label": "hero-v2",
+      "figures": 1,
+      "flags": []
+    },
+    {
+      "image": "public/images/new-braunfels-tx-birth-doula-support.webp",
+      "label": "support",
+      "figures": 2,
+      "flags": [
+        "multiple-figures(2)"
+      ]
+    },
+    {
+      "image": "public/images/new-braunfels-tx-birth-doula-support-v2.webp",
+      "label": "support-v2",
+      "figures": 2,
+      "flags": [
+        "multiple-figures(2)",
+        "outline-discontinuities(21)",
+        "outline-discontinuities(41)"
+      ]
+    },
+    {
+      "image": "public/images/og-city-new-braunfels-tx.webp",
+      "label": "og",
+      "figures": 1,
+      "flags": [
+        "no-figure-pixels-found"
+      ]
+    }
+  ],
+  "crops": [
+    "/tmp/tjb-vision-crops/new-braunfels-tx-hero-fig0.png",
+    "/tmp/tjb-vision-crops/new-braunfels-tx-hero-fig1.png",
+    "/tmp/tjb-vision-crops/new-braunfels-tx-hero-fig2.png",
+    "/tmp/tjb-vision-crops/new-braunfels-tx-hero-fig3.png",
+    "/tmp/tjb-vision-crops/new-braunfels-tx-hero-v2-fig0.png",
+    "/tmp/tjb-vision-crops/new-braunfels-tx-support-fig0.png",
+    "/tmp/tjb-vision-crops/new-braunfels-tx-support-fig1.png",
+    "/tmp/tjb-vision-crops/new-braunfels-tx-support-v2-fig0.png",
+    "/tmp/tjb-vision-crops/new-braunfels-tx-support-v2-fig1.png",
+    "/tmp/tjb-vision-crops/new-braunfels-tx-og-fig0.png"
+  ],
+  "triage_flags": []
+}

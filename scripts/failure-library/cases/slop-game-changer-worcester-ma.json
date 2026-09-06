@@ -1,0 +1,17 @@
+{
+  "id": "slop-game-changer-worcester-ma",
+  "date": "2026-09-06",
+  "stage": "build",
+  "city": "worcester-ma",
+  "failure": "Shipped page copy contains AI buzzword 'game-changer' (calibration scan; bakersfield was warn-context, worcester hard-tier).",
+  "detector": "eval-slop-gate",
+  "replay": {
+    "type": "slop",
+    "expect": "fail",
+    "fixture": {
+      "text": "MassHealth doula coverage since 2024 has been a game-changer for Worcester families who previously had to travel to Boston for affordable doula support.\""
+    }
+  },
+  "source_commit": "c051be77",
+  "status": "active"
+}
