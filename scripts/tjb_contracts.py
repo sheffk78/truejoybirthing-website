@@ -29,33 +29,13 @@ GENERIC_PROVIDER_NAMES = {"doulas", "doula", "resources", "local doulas", "doula
 
 # ---------------------------------------------------------------- parsing
 
-def city_block(slug: str) -> str:
-    """Extract a city's object text from cities.ts (brace-matched)."""
-    text = CITIES_TS.read_text(errors="replace") if CITIES_TS.exists() else ""
-    marker = f'"{slug}": {{'
-    start = text.find(marker)
-    if start < 0:
-        return ""
-    brace = text.find("{", start)
+def _balanced(text: str, start: int, open_ch: str = "{", close_ch: str = "}") -> str:
+    """Single-pass string-aware balanced-delimiter scan. O(n), no rescan."""
     depth = 0
-    end = start
-    for i in range(brace, len(text)):
-        ch = text[i]
-        if ch == "{":
-            depth += 1
-        elif ch == "}" and not in_str(text, brace, i):
-            depth -= 1
-            if depth == 0:
-                end = i + 1
-                break
-    return text[brace:end]
-
-
-def in_str(text: str, start: int, pos: int) -> bool:
-    """True if pos sits inside a string literal (simple quote scanner)."""
-    quote = None
     i = start
-    while i < pos:
+    quote = None
+    n = len(text)
+    while i < n:
         ch = text[i]
         if quote:
             if ch == "\\":
@@ -65,8 +45,27 @@ def in_str(text: str, start: int, pos: int) -> bool:
                 quote = None
         elif ch in "\"'":
             quote = ch
+        elif ch == open_ch:
+            depth += 1
+        elif ch == close_ch:
+            depth -= 1
+            if depth == 0:
+                return text[start:i + 1]
         i += 1
-    return quote is not None
+    return ""
+
+
+def city_block(slug: str) -> str:
+    """Extract a city's object text from cities.ts (brace-matched, single pass)."""
+    text = CITIES_TS.read_text(errors="replace") if CITIES_TS.exists() else ""
+    marker = f'"{slug}": {{'
+    start = text.find(marker)
+    if start < 0:
+        return ""
+    brace = text.find("{", start)
+    if brace < 0:
+        return ""
+    return _balanced(text, brace)
 
 
 def field(block: str, name: str):
@@ -90,17 +89,9 @@ def array_blocks(block: str, name: str) -> list:
     m = re.search(rf"\b{name}:\s*\[", block)
     if not m:
         return []
-    arr = block[m.end():]
-    depth, end = 1, 0
-    for i, ch in enumerate(arr):
-        if ch == "[":
-            depth += 1
-        elif ch == "]":
-            depth -= 1
-            if depth == 0:
-                end = i
-                break
-    arrtxt = arr[:end]
+    arrtxt = _balanced(block, m.end() - 1, "[", "]")
+    if arrtxt:
+        arrtxt = arrtxt[1:-1]  # strip outer brackets
     objs, depth, obj_start = [], 0, None
     for i, ch in enumerate(arrtxt):
         if ch == "{":
