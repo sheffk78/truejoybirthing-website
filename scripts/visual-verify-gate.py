@@ -128,8 +128,12 @@ def image_candidates(slug, hero_only=False):
             cands = [("hero", f"{IMAGES}/{slug}-birth-doula-skyline.webp")]
     seen, uniq = set(), []
     for label, path in cands:
-        if path not in seen and load_rgb(path) is not None:
-            seen.add(path)
+        # dedupe by SLOT (label), not path: the referenced file wins its slot;
+        # fallbacks only fill slots the city block doesn't reference. Without
+        # this, unreferenced old files (pre-rename heroes/OGs) leak in as
+        # second candidates and overwrite the referenced crop on disk.
+        if label not in seen and load_rgb(path) is not None:
+            seen.add(label)
             uniq.append((label, path))
     return uniq
 
