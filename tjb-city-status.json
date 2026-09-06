@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "last_updated": "2026-09-06T17:30:00Z",
+  "last_updated": "2026-09-06T19:30:00Z",
   "total_cities_in_codebase": 187,
   "future_cities_planned": 1000,
   "cities": {
@@ -2047,6 +2047,16 @@
       "blocked_reason": null,
       "hero": "san-antonio-tx-birth-doula-skyline-v5.webp (photographic)",
       "hospital_images_fixed": "bamc-san-antonio.webp (real exterior), community-birth-group-san-antonio.webp (real interior)"
+    },
+    "new-braunfels-tx": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-09-06T19:30:00-06:00",
+      "video_id": "KCfpaxVaEjw",
+      "video_url": "https://youtu.be/KCfpaxVaEjw",
+      "video_uploaded_at": "2026-09-06T19:30:00-06:00",
+      "stage": "complete",
+      "blocked_reason": null
     }
   },
   "providence-ri": {
