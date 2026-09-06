@@ -17,7 +17,7 @@
     },
     "youtube_upload": {
       "status": "PASS",
-      "detail": "videoId ErFbGnTrMGg present in video-embeds.ts"
+      "detail": "videoId Zx0yaqaPsu8 present in video-embeds.ts"
     },
     "youtube_thumbnail": {
       "status": "PASS",
@@ -25,7 +25,7 @@
     },
     "video_embedded": {
       "status": "PASS",
-      "detail": "embed found (vid ErFbGnTrMGg) on live page"
+      "detail": "embed found (vid Zx0yaqaPsu8) on live page"
     },
     "videoobject_schema": {
       "status": "PASS",
