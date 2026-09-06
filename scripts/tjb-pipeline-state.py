@@ -505,9 +505,17 @@ def cmd_done(slug: str, stage: str):
         if stage == "build":
             if f'"{slug}"' not in cities_ts:
                 return f"cities.ts has no '{slug}' data block — build artifacts missing"
-            hero = list((Path(PROJECT_DIR) / "public" / "images").glob(f"{slug}-*hero*.webp"))
-            if not hero:
-                return f"no hero image for {slug} — build artifacts missing"
+            # Check heroImage field in cities.ts and verify the file exists on disk
+            hero_match = _re.search(r'heroImage:\s*"([^"]+)"', cities_ts)
+            if not hero_match:
+                return f"no heroImage field for {slug} — build artifacts missing"
+            hero_path = hero_match.group(1).lstrip("/")
+            hero_file = Path(PROJECT_DIR) / "public" / hero_path
+            if not hero_file.exists():
+                # Also try glob fallback for any slug-prefixed hero image
+                hero_glob = list((Path(PROJECT_DIR) / "public" / "images").glob(f"{slug}-*hero*.webp"))
+                if not hero_glob:
+                    return f"hero image file not found on disk: {hero_path} — build artifacts missing"
         if stage == "enrich":
             block = ""
             # Find the actual city block: "slug": { (not a nearbyCities reference)

@@ -1,0 +1,94 @@
+{
+  "slug": "new-braunfels-tx",
+  "stage": "enrich",
+  "produced_at": "2026-09-06T12:45:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Enrichment completed by delegated subagent. Provider photos sourced, hospital descriptions written (823 chars), birth center descriptions added, cost ranges set as market-estimates.",
+  "sources": [
+    {
+      "provider": "Ember & Madeline",
+      "url": "https://birthwithmoonwatermidwifery.com/",
+      "claim": "Birth doula and midwifery practice in New Braunfels",
+      "quote": "Website confirms practice name Moon Water Midwifery, services, and service area"
+    },
+    {
+      "provider": "Alejandra",
+      "url": "https://doulajandra.com/",
+      "claim": "Birth doula serving New Braunfels",
+      "quote": "Website confirms doula services, VBAC support, service area includes New Braunfels"
+    },
+    {
+      "provider": "Natalie",
+      "url": "http://www.paraviondoula.com/",
+      "claim": "Holistic birth doula serving New Braunfels",
+      "quote": "Website confirms holistic birth doula services in New Braunfels area"
+    },
+    {
+      "provider": "Haven Birth",
+      "url": "https://havenbirth.org/",
+      "claim": "Birth, postpartum and matrescence doula in New Braunfels",
+      "quote": "Website confirms doula care services, free consultations, New Braunfels TX"
+    },
+    {
+      "provider": "CHRISTUS Santa Rosa Hospital",
+      "url": "https://www.christushealth.org/locations/santa-rosa-hospital-new-braunfels",
+      "claim": "Primary birthing hospital in Comal County with Level II NICU",
+      "quote": "CHRISTUS Health website confirms location, services, NICU level"
+    }
+  ],
+  "providers": [
+    {
+      "name": "Ember & Madeline",
+      "photo": "/images/provider-new-braunfels-tx-ember.webp",
+      "description_chars": 356,
+      "costRange": "$1,200-$2,500",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Alejandra",
+      "photo": "/images/provider-new-braunfels-tx-alejandra.webp",
+      "description_chars": 344,
+      "costRange": "$1,000-$2,200",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Natalie",
+      "photo": "/images/provider-new-braunfels-tx-natalie.webp",
+      "description_chars": 322,
+      "costRange": "$900-$2,000",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Haven Birth",
+      "photo": "/images/provider-new-braunfels-tx-haven.webp",
+      "description_chars": 303,
+      "costRange": "$800-$1,800",
+      "costRange_source": "market-estimate"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "CHRISTUS Santa Rosa Hospital - New Braunfels",
+      "paragraph_chars": 823,
+      "thumbnail": "/images/new-braunfels-tx-hospital-christus-santa-rosa.webp",
+      "nicuLevel": "II",
+      "url": "https://www.christushealth.org/locations/santa-rosa-hospital-new-braunfels"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Joyful Beginnings Birth Center",
+      "paragraph_chars": 723,
+      "thumbnail": "/images/new-braunfels-tx-birth-center-joyful-beginnings.webp"
+    },
+    {
+      "name": "Family Birth Center",
+      "paragraph_chars": 585,
+      "thumbnail": "/images/new-braunfels-tx-birth-center-family-birth-center.webp"
+    }
+  ],
+  "birthstats": {
+    "dataYear": 2023,
+    "dataSource": "CDC NCHS National Vital Statistics System; Texas DSHS 2023"
+  }
+}

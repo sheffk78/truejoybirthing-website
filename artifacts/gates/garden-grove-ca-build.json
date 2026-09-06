@@ -1,32 +1,27 @@
 {
   "slug": "garden-grove-ca",
   "stage": "build",
-  "passed": true,
-  "failures": 0,
+  "mode": "local_integrity",
+  "exit_code": 1,
+  "passed": 0,
+  "failed": 1,
+  "skipped": 0,
   "results": {
-    "G3": {
-      "pass": true,
-      "message": "G3: template meta tags present"
+    "LOCAL_heroImage": {
+      "status": "PASS",
+      "detail": "/images/garden-grove-ca-birth-doula-hero-v3.webp"
     },
-    "G5": {
-      "pass": true,
-      "message": "G5: title includes Costs (R38)"
+    "LOCAL_ogImage": {
+      "status": "PASS",
+      "detail": "https://truejoybirthing.com/images/og-city-garden-grove-ca-v3.webp"
     },
-    "G13": {
-      "pass": true,
-      "message": "G13: H1/hero detail present"
+    "LOCAL_supportSceneImage": {
+      "status": "PASS",
+      "detail": "/images/garden-grove-ca-birth-doula-support-v2.webp"
     },
-    "G4": {
-      "pass": true,
-      "message": "G4: canonical present in template"
-    },
-    "G37": {
-      "pass": true,
-      "message": "G37: 6 doulas (min 1 for pop 0)"
-    },
-    "visual_hero_og": {
-      "pass": true,
-      "message": "visual_hero_og: hero=Y og=Y"
+    "LOCAL_EVAL_SLOP": {
+      "status": "FAIL",
+      "detail": "AI-slop copy detected: buzzword: cutting-edge \u2014 run scripts/eval-slop-gate.py garden-grove-ca for matches"
     }
   }
 }
