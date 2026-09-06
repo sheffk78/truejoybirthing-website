@@ -1,53 +1,60 @@
 {
   "slug": "new-braunfels-tx",
   "stage": "video_outreach",
-  "produced_at": "2026-09-06T19:46:08Z",
-  "worker_model": "glm-5.3-flash (delegated video_outreach stage worker)",
-  "notes": "Video + outreach stage fully completed earlier in this session (2026-09-06). Video KCfpaxVaEjw uploaded public+embeddable, registered in video-embeds.ts, thumbnail uploaded. Outreach: 3 first-touch emails sent (message_ids logged), 1 blocked (mailbox_not_found). Post-send audit + ledger sync run (R43). Contract validated against live cities.ts + video-embeds.ts.",
+  "produced_at": "2026-09-06T20:05:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Video rendered, uploaded as new public video (YCoQZwPp3b0), thumbnail uploaded, embedded, deployed. Outreach sent to 3 providers (Alejandra, Natalie, Haven Birth). Moon Water Midwifery has no valid email (hello@ and info@ both ZeroBounce mailbox_not_found) - completed no-email outcome per R42.",
   "sources": [
     {
-      "claim": "YouTube video KCfpaxVaEjw is registered in video-embeds.ts and public/embeddable",
-      "url": "https://truejoybirthing.com/birth-support/new-braunfels-tx/",
-      "quote": "videoId: \"KCfpaxVaEjw\" registered for new-braunfels-tx; oembed returns 200 (provider YouTube, author True Joy Birthing).",
-      "kind": "youtube_embed"
+      "claim": "Video uploaded to YouTube as public, embeddable video",
+      "url": "https://youtu.be/YCoQZwPp3b0",
+      "quote": "oembed returned public embeddable video; maxresdefault thumbnail 200 with 159KB"
     },
     {
-      "claim": "Thumbnail generated via tjb-generate-asset.sh template and uploaded (1003KB on disk)",
-      "url": "https://img.youtube.com/vi/KCfpaxVaEjw/maxresdefault.jpg",
-      "quote": "Thumbnail responds HTTP 200; local file out/yt-thumb-new-braunfels-tx.png present (1003680 bytes).",
-      "kind": "thumbnail"
+      "claim": "Video embedded on live page",
+      "url": "https://truejoybirthing.com/birth-support/new-braunfels-tx/",
+      "quote": "Live page serves youtube-nocookie.com/embed/YCoQZwPp3b0"
     },
     {
-      "claim": "Outreach send-log records 3 first-touch sends with message_ids (R41 proof of contact)",
-      "url": "https://truejoybirthing.com/birth-support/new-braunfels-tx/",
-      "quote": "send-log: vps-20260906191930569453 (doulajandra), vps-20260906191953397003 (paraviondoula), vps-20260906192118987778 (havenbirth) all status sent.",
-      "kind": "send_log"
+      "claim": "Outreach sent to Alejandra (Doulajandra)",
+      "url": "https://doulajandra.com/",
+      "quote": "send log vps-20260906191930569453 to contact@doulajandra.com status sent"
+    },
+    {
+      "claim": "Outreach sent to Natalie (Par Avion Doula)",
+      "url": "http://www.paraviondoula.com/",
+      "quote": "send log vps-20260906192135761349 to paraviondoula@gmail.com status sent"
+    },
+    {
+      "claim": "Outreach sent to Haven Birth",
+      "url": "https://havenbirth.org/",
+      "quote": "send log vps-20260906192118987778 to wendy@havenbirth.org status sent"
     }
   ],
-  "video_file": null,
-  "video_mb": null,
-  "youtube_id": "KCfpaxVaEjw",
-  "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/yt-thumb-new-braunfels-tx.png",
+  "video_file": "out/new-braunfels-tx-city-guide.mp4",
+  "video_mb": 21.6,
+  "youtube_id": "YCoQZwPp3b0",
+  "thumbnail_path": "public/images/yt-thumb-new-braunfels-tx.png",
   "embed_verified": true,
   "outreach": [
     {
-      "provider": "Doulajandra (Jandra)",
+      "provider": "Alejandra (Doulajandra)",
       "status": "sent",
       "message_id": "vps-20260906191930569453"
     },
     {
-      "provider": "Paravion Doula",
+      "provider": "Natalie (Par Avion Doula)",
       "status": "sent",
-      "message_id": "vps-20260906191953397003"
+      "message_id": "vps-20260906192135761349"
     },
     {
-      "provider": "Haven Birth (Wendy)",
+      "provider": "Haven Birth",
       "status": "sent",
       "message_id": "vps-20260906192118987778"
     },
     {
-      "provider": "Birth with Moonwater Midwifery",
-      "status": "blocked",
+      "provider": "Ember & Madeline (Moon Water Midwifery)",
+      "status": "blocked_no_email",
       "message_id": null
     }
   ]
