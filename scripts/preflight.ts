@@ -502,6 +502,80 @@ const emitHelperGate = (check: string, slug: string) => {
   }
 };
 
+
+// ── G70: Rendered-HTML content integrity (Sep 6, 2026) ──────────────
+// Catches the bug class that shipped on temple-tx/conroe-tx/reno-nv et al:
+// gates checked DATA while the RENDERED page carried the visible defect.
+// Checks the built dist HTML, not cities.ts. R26: enforced by gate, not doc.
+function checkG70(slug: string) {
+  const indexPath = path.join(PROJECT_DIR, "dist", "birth-support", slug, "index.html");
+  if (!fs.existsSync(indexPath)) return; // no build output — build check reports separately
+  const html = fs.readFileSync(indexPath, "utf-8");
+  const text = html
+    .replace(/<script[^>]*>[\s\S]*?<\/script>/g, " ")
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/g, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&[a-z]+;/g, " ");
+
+  // 70a: doubled NICU badge prefix/suffix ("Level Level III NICU NICU")
+    if (doubleLevelFound(text)) fail(`G70: doubled "Level Level ... NICU" badge rendered (nicuLevel data pollution) — normalize cities.ts value`);
+  else pass(`G70: no doubled Level/NICU badge text`);
+
+  // 70b: duplicated year in stats source line ("Texas DSHS 2023, 2023")
+  const dupYear = text.match(/Data from [^.]*\b((?:19|20)\d\d), \1\b\./);
+  if (dupYear) fail(`G70: duplicated year in stats source line ("${dupYear[0].slice(-30)}") — dataSource already ends with dataYear`);
+  else pass(`G70: stats source line has no duplicated year`);
+
+  // 70c: literal "..." in meta description (broken mid-sentence truncation)
+  const meta = html.match(/<meta name="description" content="([^"]*)"/);
+  if (meta && meta[1].includes("...")) fail(`G70: meta description contains literal "..." — truncated mid-sentence`);
+  else if (meta) pass(`G70: meta description is a complete sentence (no ellipsis)`);
+}
+// doubled badge can also be "Level Level" only when suffix differs; keep simple
+function doubleLevelFound(text: string): boolean {
+  return /Level Level/.test(text);
+}
+
+// ── G71: skeleton-page content guard (Sep 6, 2026) ──────────────────
+// 17 live pages carried visible "Skeleton entry ... Awaiting provider
+// research" text. Pages must not ship with placeholder body copy.
+function checkG71(slug: string) {
+  const indexPath = path.join(PROJECT_DIR, "dist", "birth-support", slug, "index.html");
+  if (!fs.existsSync(indexPath)) return;
+  const html = fs.readFileSync(indexPath, "utf-8");
+  const text = html
+    .replace(/<script[^>]*>[\s\S]*?<\/script>/g, " ")
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/g, " ")
+    .replace(/<[^>]+>/g, " ");
+  const m = text.match(/Skeleton entry[^.]*\./);
+  if (m) fail(`G71: visible skeleton placeholder text rendered ("${m[0].slice(0, 60)}") — complete or unpublish the page`);
+  else pass(`G71: no skeleton placeholder text`);
+}
+
+// ── G72: meta description integrity (Sep 6, 2026) ───────────────────
+// Meta must be present, within Google display bounds, end at a sentence or
+// word boundary, and never end mid-word.
+function checkG72(slug: string) {
+  const indexPath = path.join(PROJECT_DIR, "dist", "birth-support", slug, "index.html");
+  if (!fs.existsSync(indexPath)) return;
+  const html = fs.readFileSync(indexPath, "utf-8");
+  const m = html.match(/<meta name="description" content="([^"]*)"/);
+  if (!m) { fail(`G72: meta description missing`); return; }
+  const d = m[1];
+  if (d.length < 70) fail(`G72: meta description too short (${d.length} chars < 70)`);
+  else if (d.length > 165) fail(`G72: meta description too long (${d.length} chars > 165)`);
+  else if (d.endsWith("...")) fail(`G72: meta description ends with "..." (mid-sentence truncation)`);
+  else if (!/[a-zA-Z0-9.)]$/.test(d)) fail(`G72: meta description ends mid-word/punctuation: "${d.slice(-25)}"`);
+  else pass(`G72: meta description ${d.length} chars, complete`);
+}
+
+// Run content gates when target slug is set and dist output exists
+if (targetSlug && fs.existsSync(path.join(PROJECT_DIR, "dist", "birth-support", targetSlug, "index.html"))) {
+  checkG70(targetSlug);
+  checkG71(targetSlug);
+  checkG72(targetSlug);
+}
+
 // Run image gates only when a target slug is passed (stage gate path feeds one
 // slug per invocation; a full audit avoids duplicate cross-city noise here).
 if (targetSlug) {

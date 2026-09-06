@@ -95,10 +95,12 @@ const medicaidStateDesc = medicaidCovers ? 'Medicaid covers doulas' : 'no Medica
 let pageDesc = `Find doula support across ${totalCities} ${totalCities === 1 ? 'city' : 'cities'} in ${stateFullName}. Compare costs ($${costLow.toLocaleString()}-$${costHigh.toLocaleString()}), ${medicaidStateDesc}, hospital policies, and birth centers with a free birth plan template.`;
 // Hard cap at 130 chars (A4b: opengraph.xyz compliance, truncate at word boundary)
 if (pageDesc.length > 130) {
+  // Cut at word boundary, no literal ellipsis (ships broken to Google)
   let trimmed = pageDesc.slice(0, 127);
   const lastSpace = trimmed.lastIndexOf(' ');
   if (lastSpace > 100) trimmed = trimmed.slice(0, lastSpace);
-  pageDesc = trimmed + '...';
+  trimmed = trimmed.replace(/[,;:\u2014-]+$/, '').trim();
+  pageDesc = trimmed + '.';
 }
 const pageUrl = `https://truejoybirthing.com/birth-support/${stateCode.toLowerCase()}/`;
 

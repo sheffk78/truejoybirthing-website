@@ -285,13 +285,35 @@ const uniqueDesc = cultureSnippet
 let pageDesc = (data as any).metaDescription
   || uniqueDesc
   || `Planning a birth in ${city}, ${state}? Compare doula costs ($${costLow}-$${costHigh}), ${medicaidDesc}, hospitals, birth centers, lactation support, and a birth plan template (free).`;;
-// Hard cap at 155 chars (Google desktop SERP shows ~155-160)
+// Hard cap at 155 chars (Google desktop SERP shows ~155-160).
+// Cut at a sentence or word boundary — NEVER mid-word, NEVER with a literal
+// "..." (the ellipsis ships to Google and reads broken: "...local birth...").
+// If nothing clean fits, fall back to a short complete description.
+const shortDesc = `Planning a birth in ${city}, ${state}? Compare doula costs ($${costLow}-$${costHigh}), ${medicaidDesc}, hospitals, and a free birth plan template.`;
 if (pageDesc.length > 155) {
-  let trimmed = pageDesc.slice(0, 152);
-  const lastSpace = trimmed.lastIndexOf(' ');
-  if (lastSpace > 100) trimmed = trimmed.slice(0, lastSpace);
-  pageDesc = trimmed + '...';
+  const cut = pageDesc.slice(0, 153);
+  const sentEnd = Math.max(cut.lastIndexOf(". "), cut.lastIndexOf("! "), cut.lastIndexOf("? "));
+  const lastSpace = cut.lastIndexOf(" ");
+  if (sentEnd >= 100) pageDesc = pageDesc.slice(0, sentEnd + 1);
+  else if (lastSpace > 100) pageDesc = cut.slice(0, lastSpace).replace(/[,;:\u2014-]+$/, "") + ".";
+  else pageDesc = shortDesc;
 }
+// G69 render guard: normalize polluted nicuLevel values. Data contains
+// "Level III NICU", "Level II", "None (transfer to ...)", "N/A" etc. while the
+// template adds "Level ... NICU" around it — producing "Level Level III NICU
+// NICU" / "Level None (transfer...) NICU" on 14 cities before this guard.
+const nicuBadge = (raw?: string): string | null => {
+  if (!raw) return null;
+  const t = raw.trim();
+  if (/^(none|n\/a)/i.test(t)) return null; // no NICU on site — suppress badge
+  // "Special Care Nursery" / "Well-Baby Nursery" already read complete — render verbatim
+  if (/special care nursery|well-baby nursery/i.test(t)) return t;
+  const inner = t.replace(/^Level\s+/i, "").replace(/\s*NICU\s*$/i, "").trim();
+  if (!inner) return null;
+  return `Level ${inner} NICU`;
+};
+const statsSourceLine = (ds: string, dy: string): string =>
+  ds.trim().endsWith(dy) ? `Data from ${ds}.` : `Data from ${ds}, ${dy}.`;
 const pageUrl = `https://truejoybirthing.com/birth-support/${slug}/`;
 const ogImage = ogImageSlug || `https://truejoybirthing.com/images/og-city-${slug}.webp`;
 const heroImage = heroImageSlug || '/images/doula-breastfeeding.webp';
@@ -1238,7 +1260,7 @@ const schema = {
                     <span itemprop="streetAddress">{h.address}</span>
                   </p>}
                   <div class="flex flex-wrap gap-1.5 mb-2">
-                    {h.nicuLevel && <span class="inline-flex items-center bg-tjb-lavender-100 text-tjb-lavender-700 text-xs font-medium px-2 py-0.5 rounded-full border border-tjb-lavender-200">Level {h.nicuLevel} NICU</span>}
+                    {nicuBadge(h.nicuLevel) && <span class="inline-flex items-center bg-tjb-lavender-100 text-tjb-lavender-700 text-xs font-medium px-2 py-0.5 rounded-full border border-tjb-lavender-200">{nicuBadge(h.nicuLevel)}</span>}
                     {h.midwifeFriendly && <span class="inline-flex items-center bg-tjb-rose-50 text-tjb-rose-600 text-xs font-medium px-2 py-0.5 rounded-full border border-tjb-rose-200">Midwives</span>}
                     {h.medicaid && <span class="inline-flex items-center bg-green-50 text-green-700 text-xs font-medium px-2 py-0.5 rounded-full border border-green-200">
                       <svg class="w-3 h-3 mr-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -1277,7 +1299,7 @@ const schema = {
                     <span itemprop="streetAddress">{h.address}</span>
                   </p>}
                   <div class="flex flex-wrap gap-1.5 mb-2">
-                    {h.nicuLevel && <span class="inline-flex items-center bg-tjb-lavender-100 text-tjb-lavender-700 text-xs font-medium px-2 py-0.5 rounded-full border border-tjb-lavender-200">Level {h.nicuLevel} NICU</span>}
+                    {nicuBadge(h.nicuLevel) && <span class="inline-flex items-center bg-tjb-lavender-100 text-tjb-lavender-700 text-xs font-medium px-2 py-0.5 rounded-full border border-tjb-lavender-200">{nicuBadge(h.nicuLevel)}</span>}
                     {h.midwifeFriendly && <span class="inline-flex items-center bg-tjb-rose-50 text-tjb-rose-600 text-xs font-medium px-2 py-0.5 rounded-full border border-tjb-rose-200">Midwives</span>}
                     {h.medicaid && <span class="inline-flex items-center bg-green-50 text-green-700 text-xs font-medium px-2 py-0.5 rounded-full border border-green-200">
                       <svg class="w-3 h-3 mr-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" /></svg>
@@ -1519,7 +1541,7 @@ const schema = {
         )}
       </div>
       {birthStats.dataYear && birthStats.dataSource && (
-        <p class="text-center text-xs text-tjb-gray mt-6 italic">Data from {birthStats.dataSource}, {birthStats.dataYear}.</p>
+        <p class="text-center text-xs text-tjb-gray mt-6 italic">{statsSourceLine(birthStats.dataSource, birthStats.dataYear)}</p>
       )}
     </div>
   </section>
