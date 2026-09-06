@@ -7463,7 +7463,7 @@ midwifeInfo: {
     heroImage: "/images/oceanside-ca-birth-doula-skyline-rva.webp" ,
     enableBlogResources: true,
     supportSceneAlt: "A doula walking alongside an expectant mom near the Oceanside Pier in Oceanside, California" ,
-    supportSceneImage: "/images/oceanside-support-scene.webp" ,
+    supportSceneImage: "/images/oceanside-ca-birth-doula-support-v2.webp" ,
     midwifeInfo: {
       paragraph: "California licenses Licensed Midwives (LMs) and Certified Nurse-Midwives (CNMs), with LMs attending home births and birth center births while CNMs practice in hospitals. California\u2019s Medi-Cal program covers doula services through the PAVE program, reimbursing around $1,587 per pregnancy. Oceanside\u2019s North County location gives families access to hospital-based midwifery at Scripps Encinitas and Palomar Escondido, as well as freestanding birth center care at Birth Matters Inc. right in Oceanside." ,
       credentialTypes: " (LMs and CNMs)" ,

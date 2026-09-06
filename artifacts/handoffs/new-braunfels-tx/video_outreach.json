@@ -1,0 +1,24 @@
+{
+  "slug": "new-braunfels-tx",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-06T19:25:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Video rendered (18.2MB), uploaded to YouTube as --GCCT2ik8s (public, embeddable). Old video J9E0Er-Gu2w unlisted. Added to Texas Birth Guides and All City Birth Guides playlists. Video embed updated in video-embeds.ts with correct ID --GCCT2ik8s. Page rebuilt and deployed. Live page verified: embed/--GCCT2ik8s present. Outreach emails sent to 2 of 4 providers. 2 providers have contact-form-only (no public email).",
+  "sources": [
+    {"claim": "Video uploaded to YouTube", "url": "https://youtu.be/--GCCT2ik8s", "quote": "Video uploaded successfully, ID: --GCCT2ik8s, public and embeddable"},
+    {"claim": "Outreach email sent to Haven Birth", "url": "https://truejoybirthing.com/birth-support/new-braunfels-tx/", "quote": "Email sent to wendy@havenbirth.org, message_id: vps-20260906192118987778"},
+    {"claim": "Outreach email sent to Par Avion Doula", "url": "https://truejoybirthing.com/birth-support/new-braunfels-tx/", "quote": "Email sent to paraviondoula@gmail.com, message_id: vps-20260906192135761349"}
+  ],
+  "youtube_id": "--GCCT2ik8s",
+  "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/yt-thumb-new-braunfels-tx.png",
+  "embed_verified": true,
+  "outreach_sent": true,
+  "providers_emailed": 2,
+  "providers_no_email": 2,
+  "outreach": [
+    {"name": "Natalie (Par Avion Doula)", "email": "paraviondoula@gmail.com", "status": "sent", "message_id": "vps-20260906192135761349"},
+    {"name": "Haven Birth (Wendy)", "email": "wendy@havenbirth.org", "status": "sent", "message_id": "vps-20260906192118987778"},
+    {"name": "Ember & Madeline (Moon Water Midwifery)", "email": null, "status": "no-email", "note": "Contact form only, Cloudflare-protected email"},
+    {"name": "Alejandra (Doulajandra)", "email": null, "status": "no-email", "note": "Contact form only, Squarespace site"}
+  ]
+}
