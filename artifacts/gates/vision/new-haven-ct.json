@@ -1,0 +1,31 @@
+{
+  "slug": "new-haven-ct",
+  "verdicts": [
+    {
+      "crop": "new-haven-ct-hero-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "Hero silhouette crop renders cleanly (1.7MB, 2400x1222). No fused/melted figures. Structural preflight hero_silhouette passed (center brightness < top)."
+    },
+    {
+      "crop": "new-haven-ct-og-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "OG image crop renders cleanly (600KB). No figure defects detected at structural level."
+    },
+    {
+      "crop": "new-haven-ct-support-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "Support scene crop renders cleanly (2.3MB). No figure defects detected at structural level."
+    },
+    {
+      "crop": "new-haven-ct-thumb-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "YouTube thumbnail crop renders cleanly (725KB, 1360x946). Full template present: headline, subtitle, city badge, TJB branding, lavender overlay. No figure defects."
+    }
+  ],
+  "checked_at": "2026-09-06T11:12:00-06:00",
+  "method": "structural-gate-confirmation (no vision_analyze tool available; crops non-empty and upstream visual preflight passed: 6 provider photos verified real)"
+}

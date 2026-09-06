@@ -703,11 +703,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-07-17T13:15:00-06:00",
   },
 "new-haven-ct": {
-    videoId: "QpbP7UBRGo4",
+    videoId: "Uwg_Nl3PoeQ",
     title: "New Haven CT Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
     description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 4 minutes.",
-    duration: "PT3M51S",
-    uploadDate: "2026-07-14T14:10:00-06:00",
+    duration: "PT3M59S",
+    uploadDate: "2026-09-06T11:02:00-06:00",
 },
 "charleston-sc": {
     videoId: "UL_MBGqCo7Q",
