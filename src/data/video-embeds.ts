@@ -1795,7 +1795,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
   "new-braunfels-tx": {
-    videoId: "--GCCT2ik8s",
+    videoId: "KCfpaxVaEjw",
     title: "New Braunfels Birth Guide: Doulas, Hospitals & Birth Centers (First-Time Mom)",
     description: "Watch the full New Braunfels Birth Guide â doulas, hospitals, birth centers, costs, and Texas Medicaid, all in about 5 minutes.",
     duration: "PT4M51S",

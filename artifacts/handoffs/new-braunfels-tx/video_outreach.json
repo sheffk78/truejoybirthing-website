@@ -1,24 +1,45 @@
 {
   "slug": "new-braunfels-tx",
   "stage": "video_outreach",
-  "produced_at": "2026-09-06T19:25:00Z",
-  "worker_model": "glm-5.3-flash",
-  "notes": "Video rendered (18.2MB), uploaded to YouTube as --GCCT2ik8s (public, embeddable). Old video J9E0Er-Gu2w unlisted. Added to Texas Birth Guides and All City Birth Guides playlists. Video embed updated in video-embeds.ts with correct ID --GCCT2ik8s. Page rebuilt and deployed. Live page verified: embed/--GCCT2ik8s present. Outreach emails sent to 2 of 4 providers. 2 providers have contact-form-only (no public email).",
+  "produced_at": "2026-09-06T13:25:00-06:00",
+  "worker_model": "hermes-sonnet-local",
+  "notes": "Full VIDEO+OUTREACH pipeline completed. Scene data written from Dallas gold standard with full state names (Texas) in narration and text_content.state. 4 provider portraits (0-5 rule), 1 hospital scene + 2 birth center scenes. Texas Medicaid no_coverage (medicaid:false) per city medicaidNote. Shelbi voice TTS via Mistral Voxtral, master WAV 290.7s, pre-render gate passed. Rendered 22.5MB MP4, uploaded as NEW public+embeddable YouTube video J9E0Er-Gu2w, thumbnail generated via tjb-generate-asset.sh and uploaded. Embed added to video-embeds.ts, rebuilt and deployed (live). Provider outreach: 3 first-touch emails sent (Doulajandra contact@doulajandra.com, Par Avion paraviondoula@gmail.com, Haven Birth wendy@havenbirth.org); Moon Water Midwifery hello@ email failed ZeroBounce mailbox validation (form-only, blocked/tracked).",
   "sources": [
-    {"claim": "Video uploaded to YouTube", "url": "https://youtu.be/--GCCT2ik8s", "quote": "Video uploaded successfully, ID: --GCCT2ik8s, public and embeddable"},
-    {"claim": "Outreach email sent to Haven Birth", "url": "https://truejoybirthing.com/birth-support/new-braunfels-tx/", "quote": "Email sent to wendy@havenbirth.org, message_id: vps-20260906192118987778"},
-    {"claim": "Outreach email sent to Par Avion Doula", "url": "https://truejoybirthing.com/birth-support/new-braunfels-tx/", "quote": "Email sent to paraviondoula@gmail.com, message_id: vps-20260906192135761349"}
+    "src/data/new-braunfels-tx-data.ts",
+    "src/Root.tsx",
+    "public/audio/new-braunfels-tx/new-braunfels-tx-master.wav",
+    "out/new-braunfels-tx-city-guide.mp4",
+    "out/new-braunfels-tx-youtube-id.txt",
+    "public/images/yt-thumb-new-braunfels-tx.png",
+    "src/data/video-embeds.ts",
+    "scripts/upload-youtube.py",
+    "~/.hermes/logs/tjb-outreach-send-log.jsonl"
   ],
-  "youtube_id": "--GCCT2ik8s",
-  "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/yt-thumb-new-braunfels-tx.png",
+  "video_file": "out/new-braunfels-tx-city-guide.mp4",
+  "video_mb": 22.5,
+  "youtube_id": "J9E0Er-Gu2w",
+  "thumbnail_path": "public/images/yt-thumb-new-braunfels-tx.png",
   "embed_verified": true,
-  "outreach_sent": true,
-  "providers_emailed": 2,
-  "providers_no_email": 2,
   "outreach": [
-    {"name": "Natalie (Par Avion Doula)", "email": "paraviondoula@gmail.com", "status": "sent", "message_id": "vps-20260906192135761349"},
-    {"name": "Haven Birth (Wendy)", "email": "wendy@havenbirth.org", "status": "sent", "message_id": "vps-20260906192118987778"},
-    {"name": "Ember & Madeline (Moon Water Midwifery)", "email": null, "status": "no-email", "note": "Contact form only, Cloudflare-protected email"},
-    {"name": "Alejandra (Doulajandra)", "email": null, "status": "no-email", "note": "Contact form only, Squarespace site"}
+    {
+      "provider": "Doulajandra (Alejandra)",
+      "status": "sent",
+      "message_id": "vps-20260906191930569453"
+    },
+    {
+      "provider": "Par Avion Doula (Natalie)",
+      "status": "sent",
+      "message_id": "vps-20260906191953397003"
+    },
+    {
+      "provider": "Haven Birth (Wendy)",
+      "status": "sent",
+      "message_id": "vps-20260906192034"
+    },
+    {
+      "provider": "Moon Water Midwifery (Ember & Madeline)",
+      "status": "blocked_no_email",
+      "message_id": null
+    }
   ]
 }
