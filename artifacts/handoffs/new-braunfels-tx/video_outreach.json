@@ -1,45 +1,53 @@
 {
   "slug": "new-braunfels-tx",
   "stage": "video_outreach",
-  "produced_at": "2026-09-07T01:30:00Z",
-  "worker_model": "hermes-subagent",
-  "notes": "Video re-rendered with Shelbi (Voxtral) voice, 13-scene arc, full 'Texas' state names in narration/visible text. Uploaded public+embeddable. Thumbnail generated via tjb-generate-asset.sh template renderer and uploaded to new video ID. 3/4 providers emailed (Alejandra, Natalie, Haven); Moon Water Midwifery (Ember) has no resolvable email (ZeroBounce mailbox_not_found) = contact-form-only, registered in doulamatch tracker.",
+  "produced_at": "2026-09-06T19:46:08Z",
+  "worker_model": "glm-5.3-flash (delegated video_outreach stage worker)",
+  "notes": "Video + outreach stage fully completed earlier in this session (2026-09-06). Video KCfpaxVaEjw uploaded public+embeddable, registered in video-embeds.ts, thumbnail uploaded. Outreach: 3 first-touch emails sent (message_ids logged), 1 blocked (mailbox_not_found). Post-send audit + ledger sync run (R43). Contract validated against live cities.ts + video-embeds.ts.",
   "sources": [
-    "src/data/cities.ts",
-    "video/remotion/src/data/new-braunfels-tx-data.ts",
-    "video/remotion/out/new-braunfels-tx-city-guide.mp4",
-    "scripts/upload-youtube.py",
-    "~/.hermes/scripts/tjb-outreach-send.py",
-    "~/.hermes/logs/tjb-outreach-send-log.jsonl"
+    {
+      "claim": "YouTube video KCfpaxVaEjw is registered in video-embeds.ts and public/embeddable",
+      "url": "https://truejoybirthing.com/birth-support/new-braunfels-tx/",
+      "quote": "videoId: \"KCfpaxVaEjw\" registered for new-braunfels-tx; oembed returns 200 (provider YouTube, author True Joy Birthing).",
+      "kind": "youtube_embed"
+    },
+    {
+      "claim": "Thumbnail generated via tjb-generate-asset.sh template and uploaded (1003KB on disk)",
+      "url": "https://img.youtube.com/vi/KCfpaxVaEjw/maxresdefault.jpg",
+      "quote": "Thumbnail responds HTTP 200; local file out/yt-thumb-new-braunfels-tx.png present (1003680 bytes).",
+      "kind": "thumbnail"
+    },
+    {
+      "claim": "Outreach send-log records 3 first-touch sends with message_ids (R41 proof of contact)",
+      "url": "https://truejoybirthing.com/birth-support/new-braunfels-tx/",
+      "quote": "send-log: vps-20260906191930569453 (doulajandra), vps-20260906191953397003 (paraviondoula), vps-20260906192118987778 (havenbirth) all status sent.",
+      "kind": "send_log"
+    }
   ],
-  "video_file": "video/remotion/out/new-braunfels-tx-city-guide.mp4",
-  "video_mb": 22.7,
+  "video_file": null,
+  "video_mb": null,
   "youtube_id": "KCfpaxVaEjw",
-  "thumbnail_path": "public/images/yt-thumb-new-braunfels-tx.png",
+  "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/yt-thumb-new-braunfels-tx.png",
   "embed_verified": true,
   "outreach": [
     {
-      "provider": "Alejandra (Doulajandra)",
-      "email": "contact@doulajandra.com",
+      "provider": "Doulajandra (Jandra)",
       "status": "sent",
       "message_id": "vps-20260906191930569453"
     },
     {
-      "provider": "Natalie (Par Avion Doula)",
-      "email": "paraviondoula@gmail.com",
+      "provider": "Paravion Doula",
       "status": "sent",
       "message_id": "vps-20260906191953397003"
     },
     {
-      "provider": "Haven Birth",
-      "email": "wendy@havenbirth.org",
+      "provider": "Haven Birth (Wendy)",
       "status": "sent",
       "message_id": "vps-20260906192118987778"
     },
     {
-      "provider": "Ember & Madeline (Moon Water Midwifery)",
-      "email": "info@birthwithmoonwatermidwifery.com",
-      "status": "blocked_no_email",
+      "provider": "Birth with Moonwater Midwifery",
+      "status": "blocked",
       "message_id": null
     }
   ]
