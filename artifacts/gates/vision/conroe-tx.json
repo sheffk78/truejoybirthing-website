@@ -1,0 +1,42 @@
+{
+  "slug": "conroe-tx",
+  "verdicts": [
+    {
+      "crop": "conroe-tx-hero-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "conroe-tx-hero-fig1.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "conroe-tx-hero-fig2.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "conroe-tx-support-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "conroe-tx-og-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "conroe-tx-thumb-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "conroe-tx-thumb-fig1.png",
+      "verdict": "pass",
+      "defects": []
+    }
+  ],
+  "checked_at": "2026-09-07T15:26:16-06:00",
+  "notes": "hero-fig0/fig2 and thumb-fig1 are landscape slivers (blob-detector false positives, zero human figures \u2014 nothing to fail). Real figure crops all pass anatomy."
+}
