@@ -1,0 +1,17 @@
+{
+  "source": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/reports/weekly-seo-audit-2026-09-07.md",
+  "triaged_at": "2026-09-07T14:15:33-06:00",
+  "sections": {
+    "tier1_fixed": 9,
+    "p_flags": [
+      "P1: Indexation \u2014 93 pages with GSC issues (38 noindex + 55 GSC coverage)",
+      "P2: Canonical \u2014 1 issue",
+      "P3: Page Speed \u2014 7 slow pages"
+    ],
+    "opportunities": 0
+  },
+  "harness_relevant": [
+    "noindex pages indexed \u2014 by-design hub policy, NOT a harness case (flag to Kenneth)"
+  ],
+  "note": "Tier-1 fixes are the audit cron's job. Only NEW failure classes become library cases here."
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "frisco-tx",
+  "stage": "build",
+  "mode": "auto",
+  "attempts": 2,
+  "verdict": "UPHELD",
+  "tie": true,
+  "votes": [
+    {
+      "model": "atlas",
+      "vote": "OVERRULED",
+      "reason": "The eval's rejection lacks a concrete violation of the stage contract (missing only a truncated doula description and no accuracy/voice errors tied to the provided contract claims)."
+    },
+    {
+      "model": "bedrock",
+      "vote": "UPHELD",
+      "reason": "The handoff contract cites a source URL on the IANA-reserved example.com domain (frisco-general-testdomain.example.com), which is not a real, verifiable source, so the accuracy checker is correctly flagging an unverifiable citation rather than being pedantic."
+    }
+  ],
+  "unreachable": [
+    "glm-5.3-flash"
+  ],
+  "at": "2026-09-07T12:27:36-06:00"
+}

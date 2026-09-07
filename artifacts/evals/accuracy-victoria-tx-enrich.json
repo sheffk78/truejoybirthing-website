@@ -1,0 +1,86 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "victoria-tx",
+  "stage": "enrich",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 9,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a first-person doula bio matching the claim's details (full-spectrum doula, working toward CLC and PMH-C certifications), and the URL path (bornbir.com/victoria/tx/doula) plausibly places this bio on the Victoria, Texas doula page.",
+      "claim": "Bianca Harris is a full-spectrum doula based in Victoria, Texas, working toward CLC and PMH-C certifications",
+      "url": "https://www.bornbir.com/victoria/tx/doula",
+      "quote": "I am a Certified Therapeutic Recreation Specialist (CTRS), Full Spectrum Doula and am currently working toward my Certified Lactation Counselor (CLC) and Perinatal Mental Health Certification (PMH-C)."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible text for a Yelp business page for Victoria Doulas and directly supports the claim that it is a collective of antepartum, labor, postpartum, and bereavement doulas serving Victoria.",
+      "claim": "Victoria Doulas is a local collective of antepartum, labor, postpartum, and bereavement doulas serving Victoria, Texas",
+      "url": "https://www.yelp.com/biz/victoria-doulas-victoria",
+      "quote": "Victoria Doulas is comprised of Antepartum, Labor, Postpartum and Bereavement doulas, as well as birth photographers, placenta specialists, a trained chef specializing in postpartum needs, and CPST an"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible text for the Baby Brilliance South Texas service-area page and explicitly lists Victoria, Cuero, and Corpus Christi among the communities served, matching the claim's geographic assertions.",
+      "claim": "Baby Brilliance serves Victoria, Cuero, and Corpus Christi with newborn care and postpartum support",
+      "url": "https://babybrilliance.net/southtexas/",
+      "quote": "Baby Brilliance proudly serves families throughout South Texas including Cuero, Victoria, Corpus Christi, Rockport, Port Lavaca, Goliad, Gonzales, Yoakum, Edna, Beeville, and all surrounding communiti"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the Citizens Medical Center Victoria birth-center page and directly supports the claim that Citizens Birth Center is the only hospital in Victoria offering labor-and-delivery through intensive (NICU) care for mother and baby under one roof.",
+      "claim": "Citizens Birth Center is the only hospital in Victoria with labor and delivery through Level II NICU care under one roof",
+      "url": "https://www.cmcvictoria.com/birth-center",
+      "quote": "Citizens Birth Center is the only hospital in Victoria that has care from labor and delivery to intensive care for both mommy and baby under one roof."
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from DeTar's own maternity care page and directly states the 70,000+ babies since 1925 figure, matching the claim's core assertion.",
+      "claim": "DeTar Healthcare System has delivered more than 70,000 babies since 1925 and provides maternity care at DeTar Hospital North",
+      "url": "https://www.detar.com/maternity-care-services",
+      "quote": "Since our start in 1925, DeTar Healthcare System has delivered more than 70,000 babies."
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The Healthgrades hospital page quote directly states Detar Hospital Navarro's address as 506 E San Antonio St, Victoria TX 77901, matching the claim.",
+      "claim": "DeTar Hospital Navarro is located at 506 E San Antonio Street, Victoria, TX 77901",
+      "url": "https://www.healthgrades.com/hospital/detar-hospital-navarro-77b67f",
+      "quote": "Detar Hospital Navarro. 506 E San Antonio St, Victoria TX 77901."
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The URL is hosted on victoriaadvocate.com with a filename matching DeTar Hospital North, and the quote directly describes the exterior photo as sourced from Victoria Advocate news coverage, consistent with the Victoria, Texas hospital.",
+      "claim": "DeTar Hospital North building photo sourced from Victoria Advocate",
+      "url": "https://victoriaadvocate.com/wp-content/uploads/sites/20/2026/01/DeTar-Hospital-North.jpeg",
+      "quote": "DeTar Hospital North exterior photo from Victoria Advocate news coverage."
+    },
+    {
+      "index": 7,
+      "verdict": "SUPPORTED",
+      "reason": "The URL is hosted on the Victoria EDC domain (victoriaedc.com) with an image filename matching DeTar Hospital Navarro, and the quote directly states the photo is sourced from the Victoria Economic Development Corporation, consistent with the claim.",
+      "claim": "DeTar Hospital Navarro building photo sourced from Victoria EDC",
+      "url": "https://www.victoriaedc.com/media/userfiles/subsite_212/images/banners-sub-new/detar-hospital-navarro.jpg",
+      "quote": "DeTar Hospital Navarro exterior photo from Victoria Economic Development Corporation."
+    },
+    {
+      "index": 8,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible caption/alt-text stating the Victoria Doulas floral watercolor logo came from the Yelp business listing, which directly matches both the claim and the yelp.com business URL for Victoria Doulas.",
+      "claim": "Victoria Doulas logo sourced from Yelp business listing",
+      "url": "https://www.yelp.com/biz/victoria-doulas-victoria",
+      "quote": "Victoria Doulas floral watercolor logo from Yelp business listing."
+    }
+  ],
+  "checked_at": "2026-09-07T14:32:33-06:00"
+}

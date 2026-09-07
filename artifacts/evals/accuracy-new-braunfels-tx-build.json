@@ -1,0 +1,70 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "new-braunfels-tx",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 7,
+  "model_errors": 0,
+  "unsupported": 1,
+  "not_enough_info_pct": 0,
+  "verdict": "rejected",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the official CHRISTUS Health location page for Santa Rosa Hospital - New Braunfels and directly supports the claim's key specifics (Level II NICU and Baby-Friendly designation) along with birthing-related services consistent with it being a primary birthing hospital.",
+      "claim": "CHRISTUS Santa Rosa Hospital - New Braunfels is the primary birthing hospital in Comal County with Level II NICU and Baby-Friendly designation",
+      "url": "https://www.christushealth.org/locations/santa-rosa-hospital-new-braunfels",
+      "quote": "Level II NICU with on-call neonatologists, Baby-Friendly Hospital, board-certified lactation consultants"
+    },
+    {
+      "index": 1,
+      "verdict": "UNSUPPORTED",
+      "reason": "The quote confirms Joyful Beginnings is a midwife-led birth center but says nothing about its location across from CHRISTUS Santa Rosa Hospital, so it does not support the full claim.",
+      "claim": "Joyful Beginnings Birth Center is a midwife-led birth center across from CHRISTUS Santa Rosa Hospital",
+      "url": "https://www.joyful-beginnings.com/",
+      "quote": "Midwife-led birth center offering personalized, evidence-based prenatal care, water birth, and postpartum care"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The domain birthcenternb.com plausibly corresponds to a New Braunfels birth center, and the quote directly supports the claim that it is a midwife-led birth center offering birth center births.",
+      "claim": "Family Birth Center is a midwife-led birth center in downtown New Braunfels",
+      "url": "https://www.birthcenternb.com/",
+      "quote": "Midwife-led birth center offering home birth, birth center birth, water birth, VBAC support, and lactation support"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The domain (birthwithmoonwatermidwifery.com) matches Moon Water Midwifery, and the quote describing holistic birth support, childbirth education, and postpartum care is plausible homepage text for a birth doula/midwifery practice, consistent with the claim.",
+      "claim": "Moon Water Midwifery is a birth doula and midwifery practice in New Braunfels",
+      "url": "https://birthwithmoonwatermidwifery.com/",
+      "quote": "Holistic, natural birth support, childbirth education classes, and postpartum care"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote lists birth support, VBAC support, and postpartum care, matching the claim's services, and it is plausible homepage text for the doulajandra.com domain, though it does not explicitly name New Braunfels.",
+      "claim": "Doulajandra serves New Braunfels with birth doula, VBAC, and postpartum support",
+      "url": "https://doulajandra.com/",
+      "quote": "Birth support, VBAC support, postpartum care, and lactation guidance"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the matching Par Avion Doula domain and directly supports the holistic birth doula care aspect of the claim, with no fabrication signals, though it does not explicitly mention New Braunfels.",
+      "claim": "Par Avion Doula serves New Braunfels with holistic birth doula care",
+      "url": "http://www.paraviondoula.com/",
+      "quote": "Holistic birth doula supporting families through home, hospital, and birth center births"
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote describes birth support, postpartum care, and matrescence guidance, which aligns with whole-mother doula care and is plausible text for the Haven birth services domain, with no contradictory location signal.",
+      "claim": "Haven offers whole-mother doula care in New Braunfels",
+      "url": "https://havenbirth.org/",
+      "quote": "Combining birth support, postpartum care, and matrescence guidance rooted in calm and compassion"
+    }
+  ],
+  "checked_at": "2026-09-07T12:07:04-06:00"
+}

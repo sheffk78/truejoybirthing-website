@@ -1,0 +1,87 @@
+{
+  "slug": "victoria-tx",
+  "stage": "build",
+  "produced_at": "2026-09-07T13:40:00Z",
+  "worker_model": "deepseek-v4-flash-via-subagent",
+  "notes": "BUILD stage complete: 3 providers, 3 hospitals, 0 birth centers, hero/support/OG generated from one hero image, preflight passed, build passed.",
+  "sources": [
+    {
+      "claim": "Bianca Harris is a full-spectrum doula based in Victoria, Texas, working toward CLC and PMH-C certifications",
+      "url": "https://www.bornbir.com/victoria/tx/doula",
+      "quote": "I am a Certified Therapeutic Recreation Specialist (CTRS), Full Spectrum Doula and am currently working toward my Certified Lactation Counselor (CLC) and Perinatal Mental Health Certification (PMH-C)."
+    },
+    {
+      "claim": "Victoria Doulas is a local collective of antepartum, labor, postpartum, and bereavement doulas serving Victoria, Texas",
+      "url": "https://www.yelp.com/biz/victoria-doulas-victoria",
+      "quote": "Victoria Doulas is comprised of Antepartum, Labor, Postpartum and Bereavement doulas, as well as birth photographers, placenta specialists, a trained chef specializing in postpartum needs, and CPST and lactation consultant referrals."
+    },
+    {
+      "claim": "Baby Brilliance serves Victoria, Cuero, and Corpus Christi with newborn care and postpartum support",
+      "url": "https://babybrilliance.net/southtexas/",
+      "quote": "Baby Brilliance proudly serves families throughout South Texas including Cuero, Victoria, Corpus Christi, Rockport, Port Lavaca, Goliad, Gonzales, Yoakum, Edna, Beeville, and all surrounding communities."
+    },
+    {
+      "claim": "Citizens Birth Center is the only hospital in Victoria with labor and delivery through Level II NICU care under one roof",
+      "url": "https://www.cmcvictoria.com/birth-center",
+      "quote": "Citizens Birth Center is the only hospital in Victoria that has care from labor and delivery to intensive care for both mommy and baby under one roof."
+    },
+    {
+      "claim": "DeTar Healthcare System has delivered more than 70,000 babies since 1925 and provides maternity care at DeTar Hospital North",
+      "url": "https://www.detar.com/maternity-care-services",
+      "quote": "Since our start in 1925, DeTar Healthcare System has delivered more than 70,000 babies."
+    },
+    {
+      "claim": "DeTar Hospital Navarro is located at 506 E San Antonio Street, Victoria, TX 77901",
+      "url": "https://www.healthgrades.com/hospital/detar-hospital-navarro-77b67f",
+      "quote": "Detar Hospital Navarro. 506 E San Antonio St, Victoria TX 77901."
+    }
+  ],
+  "city_fields": {
+    "city": "Victoria",
+    "state": "TX",
+    "lat": 28.8053,
+    "lng": -97.0036,
+    "costLow": 800,
+    "costHigh": 2500,
+    "heroImage": "/images/victoria-tx-birth-doula-skyline-vtx.webp",
+    "ogImage": "https://truejoybirthing.com/images/og-city-victoria-tx-vtx.webp",
+    "supportSceneImage": "/images/victoria-tx-birth-doula-support-vtx.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Victoria: Texas Gulf Coast birth support and doula care",
+    "culture": "Victoria sits on the Guadalupe River in the Texas Coastal Bend, about 30 miles inland from the Gulf of Mexico. Known as the Crossroads of South Texas, it blends historic downtown charm with a growing family community and serves as the regional medical hub for Victoria County.",
+    "medicaidNote": "No \u2014 Texas does not yet have statewide Medicaid doula coverage as of 2026. Some managed-care pilots and health plans offer limited doula benefits, but most Victoria families pay out of pocket for doula support. Call your Medicaid managed-care plan and ask directly whether doula services are covered, or call Texas Medicaid at 1-877-543-7669 and visit YourTexasBenefits.com."
+  },
+  "faqs_count": 5,
+  "midwife_paragraph_chars": 552,
+  "doulas": [
+    {
+      "name": "Bianca Harris",
+      "url": "https://www.bornbir.com/bianca-harris",
+      "photo": "/images/provider-victoria-tx-bianca-harris.webp",
+      "description_chars": 330,
+      "costRange": "$800-$2,500"
+    },
+    {
+      "name": "Victoria Doulas",
+      "url": "https://www.yelp.com/biz/victoria-doulas-victoria",
+      "photo": "/images/provider-victoria-tx-victoria-doulas.webp",
+      "description_chars": 316,
+      "costRange": "$800-$2,500"
+    },
+    {
+      "name": "Katie Coleman Kopecki",
+      "url": "https://babybrilliance.net/southtexas/",
+      "photo": "/images/provider-victoria-tx-baby-brilliance.webp",
+      "description_chars": 358,
+      "costRange": "$800-$2,500"
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  },
+  "_auto_image_refs": [
+    "/images/victoria-tx-birth-doula-skyline-vtx.webp",
+    "https://truejoybirthing.com/images/og-city-victoria-tx-vtx.webp",
+    "/images/victoria-tx-birth-doula-support-vtx.webp"
+  ]
+}

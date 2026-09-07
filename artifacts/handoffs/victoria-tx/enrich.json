@@ -1,0 +1,105 @@
+{
+  "slug": "victoria-tx",
+  "stage": "enrich",
+  "produced_at": "2026-09-07T14:30:00Z",
+  "worker_model": "glm-5.3-flash-via-subagent",
+  "notes": "ENRICH stage complete: 3 providers with real photos (2 headshots, 1 logo), 3 hospitals with real building photos, 0 birth centers (verified none in Victoria proper), all costRanges are market-estimates, hospital descriptions 300+ chars.",
+  "sources": [
+    {
+      "claim": "Bianca Harris is a full-spectrum doula based in Victoria, Texas, working toward CLC and PMH-C certifications",
+      "url": "https://www.bornbir.com/victoria/tx/doula",
+      "quote": "I am a Certified Therapeutic Recreation Specialist (CTRS), Full Spectrum Doula and am currently working toward my Certified Lactation Counselor (CLC) and Perinatal Mental Health Certification (PMH-C)."
+    },
+    {
+      "claim": "Victoria Doulas is a local collective of antepartum, labor, postpartum, and bereavement doulas serving Victoria, Texas",
+      "url": "https://www.yelp.com/biz/victoria-doulas-victoria",
+      "quote": "Victoria Doulas is comprised of Antepartum, Labor, Postpartum and Bereavement doulas, as well as birth photographers, placenta specialists, a trained chef specializing in postpartum needs, and CPST and lactation consultant referrals."
+    },
+    {
+      "claim": "Baby Brilliance serves Victoria, Cuero, and Corpus Christi with newborn care and postpartum support",
+      "url": "https://babybrilliance.net/southtexas/",
+      "quote": "Baby Brilliance proudly serves families throughout South Texas including Cuero, Victoria, Corpus Christi, Rockport, Port Lavaca, Goliad, Gonzales, Yoakum, Edna, Beeville, and all surrounding communities."
+    },
+    {
+      "claim": "Citizens Birth Center is the only hospital in Victoria with labor and delivery through Level II NICU care under one roof",
+      "url": "https://www.cmcvictoria.com/birth-center",
+      "quote": "Citizens Birth Center is the only hospital in Victoria that has care from labor and delivery to intensive care for both mommy and baby under one roof."
+    },
+    {
+      "claim": "DeTar Healthcare System has delivered more than 70,000 babies since 1925 and provides maternity care at DeTar Hospital North",
+      "url": "https://www.detar.com/maternity-care-services",
+      "quote": "Since our start in 1925, DeTar Healthcare System has delivered more than 70,000 babies."
+    },
+    {
+      "claim": "DeTar Hospital Navarro is located at 506 E San Antonio Street, Victoria, TX 77901",
+      "url": "https://www.healthgrades.com/hospital/detar-hospital-navarro-77b67f",
+      "quote": "Detar Hospital Navarro. 506 E San Antonio St, Victoria TX 77901."
+    },
+    {
+      "claim": "DeTar Hospital North building photo sourced from Victoria Advocate",
+      "url": "https://victoriaadvocate.com/wp-content/uploads/sites/20/2026/01/DeTar-Hospital-North.jpeg",
+      "quote": "DeTar Hospital North exterior photo from Victoria Advocate news coverage."
+    },
+    {
+      "claim": "DeTar Hospital Navarro building photo sourced from Victoria EDC",
+      "url": "https://www.victoriaedc.com/media/userfiles/subsite_212/images/banners-sub-new/detar-hospital-navarro.jpg",
+      "quote": "DeTar Hospital Navarro exterior photo from Victoria Economic Development Corporation."
+    },
+    {
+      "claim": "Victoria Doulas logo sourced from Yelp business listing",
+      "url": "https://www.yelp.com/biz/victoria-doulas-victoria",
+      "quote": "Victoria Doulas floral watercolor logo from Yelp business listing."
+    }
+  ],
+  "providers": [
+    {
+      "name": "Bianca Harris",
+      "photo": "/images/provider-victoria-tx-bianca-harris.webp",
+      "description_chars": 330,
+      "costRange": "$800-$2,500",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Victoria Doulas",
+      "photo": "/images/provider-victoria-tx-victoria-doulas.webp",
+      "description_chars": 316,
+      "costRange": "$800-$2,500",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Katie Coleman Kopecki",
+      "photo": "/images/provider-victoria-tx-baby-brilliance.webp",
+      "description_chars": 358,
+      "costRange": "$800-$2,500",
+      "costRange_source": "market-estimate"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Citizens Medical Center - Citizens Birth Center",
+      "paragraph_chars": 663,
+      "thumbnail": "/images/victoria-tx-hospital-citizens-birth-center.webp",
+      "nicuLevel": "II",
+      "url": "https://www.cmcvictoria.com/birth-center"
+    },
+    {
+      "name": "DeTar Hospital North",
+      "paragraph_chars": 580,
+      "thumbnail": "/images/victoria-tx-hospital-detar-north.webp",
+      "nicuLevel": "II",
+      "url": "https://www.detar.com/maternity-care-services"
+    },
+    {
+      "name": "DeTar Hospital Navarro",
+      "paragraph_chars": 463,
+      "thumbnail": "/images/victoria-tx-hospital-detar-navarro.webp",
+      "nicuLevel": "II",
+      "url": "https://www.detar.com/maternity-care-services"
+    }
+  ],
+  "birth_centers": [],
+  "birthstats": {
+    "dataYear": 2023,
+    "dataSource": "CDC NCHS National Vital Statistics System; Texas DSHS 2023"
+  }
+}

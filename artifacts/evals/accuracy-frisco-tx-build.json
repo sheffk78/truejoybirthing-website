@@ -1,0 +1,21 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "frisco-tx",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 1,
+  "model_errors": 0,
+  "unsupported": 1,
+  "not_enough_info_pct": 0,
+  "verdict": "rejected",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "UNSUPPORTED",
+      "reason": "source URL domain does not resolve \u2014 fabricated or dead source (deterministic check)",
+      "claim": "Frisco General Hospital has a Level IV NICU and 9,000 annual births",
+      "url": "https://www.frisco-general-testdomain.example.com"
+    }
+  ],
+  "checked_at": "2026-09-07T12:23:24-06:00"
+}

@@ -1,0 +1,11 @@
+{
+  "eval": "eval-voice",
+  "slug": "new-braunfels-tx",
+  "model": "atlas:latest",
+  "fields_checked": 11,
+  "model_calls_ok": 2,
+  "model_calls_err": 0,
+  "verdict": "approved",
+  "findings": [],
+  "checked_at": "2026-09-07T12:07:43-06:00"
+}
