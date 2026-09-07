@@ -6536,7 +6536,12 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
 		"austin-tx",
 		"beaumont-tx",
 		"allen-tx"
-	]
+	],
+	lat: 30.3119,
+	lng: -95.4561,
+	midwifeInfo: {
+		paragraph: "Texas licenses Certified Nurse-Midwives (CNMs) through the Texas Board of Nursing, and they practice at hospitals and birth centers across the Houston–Conroe corridor, including nearby facilities in The Woodlands and Huntsville. Texas also licenses Certified Professional Midwives (CPMs) through the Texas Department of State Health Services, so families in Conroe can choose licensed out-of-hospital birth care at area birth centers or at home with a licensed CPM."
+	}
 },
   "mckinney-tx": {
     enableBlogResources: true,
