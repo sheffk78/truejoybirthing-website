@@ -1,0 +1,54 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "victoria-tx",
+  "stage": "verify_deploy",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 5,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a first-person doula bio matching the claim's specifics (full-spectrum doula, CLC and PMH-C certifications in progress) and plausibly appears on a Victoria, TX doula profile page on a birth-services domain.",
+      "claim": "Bianca Harris is a full-spectrum doula based in Victoria, Texas, working toward CLC and PMH-C certifications",
+      "url": "https://www.bornbir.com/victoria/tx/doula",
+      "quote": "I am a Certified Therapeutic Recreation Specialist (CTRS), Full Spectrum Doula and am currently working toward my Certified Lactation Counselor (CLC) and Perinatal Mental Health Certification (PMH-C)."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly states that Victoria Doulas is comprised of antepartum, labor, postpartum, and bereavement doulas, matching the claim, and the Yelp URL for a Victoria-based business is a plausible source for this business description.",
+      "claim": "Victoria Doulas is a local collective of antepartum, labor, postpartum, and bereavement doulas serving Victoria, Texas",
+      "url": "https://www.yelp.com/biz/victoria-doulas-victoria",
+      "quote": "Victoria Doulas is comprised of Antepartum, Labor, Postpartum and Bereavement doulas, as well as birth photographers and placenta specialists."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly names the same South Texas cities (Cuero, Victoria, Corpus Christi) as the claim, and the babybrilliance.net/southtexas/ URL plausibly matches a Baby Brilliance service-area page for that region.",
+      "claim": "Baby Brilliance serves Victoria, Cuero, and Corpus Christi with newborn care and postpartum support",
+      "url": "https://babybrilliance.net/southtexas/",
+      "quote": "Baby Brilliance proudly serves families throughout South Texas including Cuero, Victoria, Corpus Christi."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the Citizens Medical Center Victoria birth center page and directly supports the claim that Citizens Birth Center is the only hospital in Victoria offering labor-and-delivery through intensive (NICU) care for mother and baby under one roof.",
+      "claim": "Citizens Birth Center is the only hospital in Victoria with labor and delivery through Level II NICU care under one roof",
+      "url": "https://www.cmcvictoria.com/birth-center",
+      "quote": "Citizens Birth Center is the only hospital in Victoria that has care from labor and delivery to intensive care for both mommy and baby under one roof."
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from DeTar's own maternity care services page and directly states the 70,000+ babies delivered since 1925, matching the claim's core facts.",
+      "claim": "DeTar Healthcare System has delivered more than 70,000 babies since 1925 and provides maternity care at DeTar Hospital North",
+      "url": "https://www.detar.com/maternity-care-services",
+      "quote": "Since our start in 1925, DeTar Healthcare System has delivered more than 70,000 babies."
+    }
+  ],
+  "checked_at": "2026-09-07T15:02:18-06:00"
+}

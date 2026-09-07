@@ -1,0 +1,23 @@
+{
+  "slug": "victoria-tx",
+  "verdicts": [
+    {
+      "crop": "victoria-tx-hero-fig0.png",
+      "verdict": "pass",
+      "defects": [
+        "minor fused-finger AI artifact in clasped hands on belly; figure is a pregnant silhouette at golden hour, one figure, belly aligns with facing direction, no extra limbs, no black bars, no letterbox"
+      ]
+    },
+    {
+      "crop": "victoria-tx-support-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "victoria-tx-og-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    }
+  ],
+  "checked_at": "2026-09-07T20:40:00-06:00"
+}
