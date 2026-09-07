@@ -1,0 +1,19 @@
+{
+  "id": "accuracy-partial-quote-myadaniel",
+  "date": "2026-09-07",
+  "stage": "build",
+  "city": "frisco-tx",
+  "failure": "First eval-accuracy run on real handoff evidence caught the quote-supports-partial-claim class: handoff claims 'Mya Daniel operates Mama Lotus Services' but the quoted passage only supports that the business offers doula support in Frisco — the claim's key assertion (who operates it) is absent from the quote. Full-claim support is required; partial quotes are UNSUPPORTED.",
+  "detector": "eval-accuracy",
+  "replay": {
+    "type": "accuracy_eval",
+    "expect": "fail",
+    "fixture": {
+      "claim": "Jane Smith operates Serenity Birth Services in Frisco",
+      "url": "https://www.serenitybirthservices.com",
+      "quote": "Serenity Birth Services offers birth and postpartum doula support in Frisco, TX"
+    }
+  },
+  "source_commit": "phase3",
+  "status": "active"
+}

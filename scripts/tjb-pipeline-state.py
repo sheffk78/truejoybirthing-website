@@ -435,6 +435,10 @@ Goal: {goal}
 6. WRITE YOUR HANDOFF CONTRACT before reporting done (Phase 1 harness — the parent REFUSES to advance without it):
    python3 scripts/contract-validate.py {slug} {stage} --compare
    This auto-fills data fields from cities.ts. You then add: produced_at, worker_model, sources[] (>=1 evidence per provider: claim + url + supporting quote), and for build: images.hero_watermark_clean / og_watermark_clean = true only if the flux watermark pipeline ran. Re-run the validate command until it prints contract_valid: true, and report that real exit code. The contract is your definition of done — software checks it, not your say-so.
+7. EVIDENCE DISCIPLINE (Phase 3 harness — AI evals check your work after the contract): every sources[] quote must be text that actually appears at that URL and must support the FULL claim — a quote that only covers part of the claim is an UNSUPPORTED verdict and re-spawns you. Quote the exact sentence(s) from the page. Then run the eval pack yourself and fix findings BEFORE reporting done:
+   python3 scripts/eval-voice.py {slug}      (copy voice; provider bios are only checked for slop/boilerplate — their own words are never rewritten)
+   python3 scripts/eval-accuracy.py {slug} {stage}   (claim evidence)
+   The parent runs eval-loop.py on advance: a rejection re-spawns you with the exact findings; 3 rejections block the city.
 
 ## Stage gates (must pass before this stage can advance)
 {', '.join(ctx.get('gates', []))}
@@ -803,6 +807,39 @@ def cmd_advance(slug: str, stage: str):
             "message": f"Contract validator failed to run (retryable): {e}",
         }, indent=2))
         sys.exit(1)
+
+    # ── Phase 3 harness (2026-09-07): producer/checker eval loop AFTER contract,
+    # BEFORE the stage gate. Runs the stage's eval pack (eval-voice, eval-accuracy);
+    # on rejection the parent re-spawns the stage worker with rejection_context[]
+    # verbatim (the human never relays nitpicks), 3 strikes then block. Exit
+    # codes match the gate contract: 0 pass | 1 re-spawn | 2 infra wait | 3 fatal.
+    # Kill switch: TJB_DISABLE_EVAL_LOOP=1 skips (deterministic gates still run).
+    if os.environ.get("TJB_DISABLE_EVAL_LOOP", "") != "1":
+        eval_loop_script = str(Path(PROJECT_DIR) / "scripts" / "eval-loop.py")
+        try:
+            el_result = subprocess.run(
+                ["python3", eval_loop_script, slug, stage],
+                capture_output=True, text=True, timeout=900, cwd=PROJECT_DIR,
+            )
+            el_exit = el_result.returncode
+            el_out = (el_result.stdout or "").strip()
+            if el_exit != 0:
+                print(el_out)  # eval-loop already emitted the full JSON verdict
+                sys.exit(el_exit if el_exit in (1, 2, 3) else 1)
+        except subprocess.TimeoutExpired:
+            print(json.dumps({
+                "action": "eval_loop_timeout",
+                "slug": slug, "stage": stage,
+                "message": "Eval loop timed out (900s). Treat as retryable infra; retry advance.",
+            }, indent=2))
+            sys.exit(2)
+        except Exception as e:
+            print(json.dumps({
+                "action": "eval_loop_error",
+                "slug": slug, "stage": stage,
+                "message": f"Eval loop failed to run (retryable): {e}",
+            }, indent=2))
+            sys.exit(1)
 
     gate_script = str(Path(PROJECT_DIR) / "scripts" / "preflight-stage-gate.py")
     cmd = ["python3", gate_script, "--city", slug, "--stage", stage]

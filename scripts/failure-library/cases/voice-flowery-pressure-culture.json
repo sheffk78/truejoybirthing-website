@@ -1,0 +1,17 @@
+{
+  "id": "voice-fear-framing-culture",
+  "date": "2026-09-07",
+  "stage": "build",
+  "city": "frisco-tx",
+  "failure": "eval-voice calibration caught fear-based/judgment framing in TJB-authored culture paragraph copy (overly flowery and judgment-language class that slipped past the deterministic slop blacklist). Provider bios are deliberately out of scope — their own service words are never rewritten.",
+  "detector": "eval-voice",
+  "replay": {
+    "type": "voice_eval",
+    "expect": "fail",
+    "fixture": {
+      "text": "Nestled in the heart of this vibrant community, mothers discover a magical journey where every birth can be transformed — you have to trust the process, because it is not about the birth, it is about the goddess energy within."
+    }
+  },
+  "source_commit": "phase3",
+  "status": "active"
+}

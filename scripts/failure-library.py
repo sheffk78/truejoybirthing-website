@@ -14,7 +14,7 @@ Case file layout: scripts/failure-library/cases/*.json
     "failure": "<human description>",
     "detector": "eval-slop-gate",           # eval/gate that should catch it
     "replay": {                              # detector-specific instructions
-      "type": "slop",                        # slop | contract | detector-name
+      "type": "slop",                        # slop | contract | dup_keys | voice_eval | accuracy_eval
       "expect": "fail",
       "fixture": { ... payload to replay ... }
     },
@@ -189,10 +189,64 @@ def scan_dup_keys_text(ts_text: str) -> dict:
     return dups
 
 
+def _load_eval_module(name: str):
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(
+        name, str(Path(__file__).resolve().parent / (name + ".py")))
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def replay_voice_eval(case: dict) -> dict:
+    """Model replay for eval-voice: feed the saved TJB-authored copy through
+    the voice checker (atlas, local) and require a rejection verdict.
+    Model unreachable = not caught (you cannot declare a switch safe if the
+    eval cannot run)."""
+    mod = _load_eval_module("eval-voice")
+    fx = case["replay"]["fixture"]
+    standard = mod.VOICE_STANDARD.read_text()
+    if "## Email Drafting" in standard:
+        standard = standard.split("## Email Drafting")[0]
+    user_prompt = ("## Brand Voice Standard (excerpt)\n\n" + standard +
+                   "\n\n## Copy to Review — city: replay-fixture\n\n### culture\n\"" +
+                   fx["text"] + "\"\n\n## Instructions\nReview each field above against the standard. "
+                   "Quote exact violating text.\nReturn ONLY the JSON verdict object.")
+    result = mod.ollama_chat(mod.SYSTEM_PROMPT, user_prompt)
+    if result is None:
+        return {"caught": False, "detail": "voice checker model unreachable"}
+    caught = result.get("verdict") == "rejected"
+    quotes = [f.get("quote", "") for f in result.get("findings", [])][:3]
+    return {"caught": caught, "detail": "verdict=" + str(result.get("verdict")) + "; quotes: " + " | ".join(quotes)}
+
+
+def replay_accuracy_eval(case: dict) -> dict:
+    """Model replay for eval-accuracy: feed the saved {claim,url,quote} through
+    the cloud checker and require an UNSUPPORTED verdict."""
+    mod = _load_eval_module("eval-accuracy")
+    fx = case["replay"]["fixture"]
+    result = mod.check_source(fx["claim"], fx["url"], fx["quote"])
+    if result is None:
+        return {"caught": False, "detail": "accuracy checker model unreachable"}
+    verdict = result.get("verdict")
+    if verdict == "UNSUPPORTED":
+        caught = True
+    elif verdict == "NOT_ENOUGH_INFO":
+        # borderline evidence: strict side must win on the confirmation run
+        result2 = mod.check_source(fx["claim"], fx["url"], fx["quote"])
+        caught = (result2 or {}).get("verdict") in ("UNSUPPORTED", "NOT_ENOUGH_INFO")
+        verdict = verdict + "->" + str((result2 or {}).get("verdict"))
+    else:
+        caught = False
+    return {"caught": caught, "detail": "verdict=" + str(verdict) + "; " + str(result.get("reason", ""))[:200]}
+
+
 REPLAYERS = {
     "slop": replay_slop,
     "contract": replay_contract,
     "dup_keys": replay_dup_keys,
+    "voice_eval": replay_voice_eval,
+    "accuracy_eval": replay_accuracy_eval,
 }
 
 
