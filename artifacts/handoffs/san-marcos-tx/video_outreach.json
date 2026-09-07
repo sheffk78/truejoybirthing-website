@@ -1,0 +1,23 @@
+{
+  "slug": "san-marcos-tx",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-06T18:15:00Z",
+  "worker_model": "glm-5.3-flash (delegated subagent)",
+  "notes": "Video re-rendered for san-marcos-tx per R31 (page fixes this session). Scene data uses full state name 'Texas' (directive). TTS via Mistral Voxtral Shelbi voice, 24kHz verified. YouTube upload NEW, public, embeddable=True, thumbnail uploaded. Embed added to video-embeds.ts (videoId QbiVbK5pMdI, real duration PT2M18S). Old video: none previously live (first upload), so nothing to unlist. Outreach BLOCKED per R42: all 4 providers have no published email (Womb Centered = contact-form only, MeaningFull Midwifery = phone-only tel:512-815-6890, Grace Butler & Brittany Alon = Bornbir directory, no contact email). Providers registered in provider-registry as 'researched' (R43 refreshed).",
+  "sources": [
+    {"claim": "YouTube video QbiVbK5pMdI exists, public, embeddable", "url": "https://youtu.be/QbiVbK5pMdI", "quote": "privacyStatus: public, embeddable: True"},
+    {"claim": "video-embeds.ts registers san-marcos-tx -> QbiVbK5pMdI", "url": "https://truejoybirthing.com/birth-support/san-marcos-tx/", "quote": "videoId: \"QbiVbK5pMdI\""},
+    {"claim": "Local mp4 absent post-upload (upload evidence governs)", "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/san-marcos-tx-youtube-id.txt", "quote": "QbiVbK5pMdI"}
+  ],
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "QbiVbK5pMdI",
+  "thumbnail_path": "public/images/yt-thumb-san-marcos-tx.png",
+  "embed_verified": true,
+  "outreach": [
+    {"provider": "Greta Nakliudaite-Perez", "status": "blocked", "message_id": null, "reason": "R42: wombcentered.org contact-form only, no published email"},
+    {"provider": "Stephanie Fluker", "status": "blocked", "message_id": null, "reason": "R42: meaningfullmidwife.com phone-only (tel:512-815-6890), no email"},
+    {"provider": "Grace Butler", "status": "blocked", "message_id": null, "reason": "R42: bornbir.com directory listing, no contact email"},
+    {"provider": "Brittany Alon", "status": "blocked", "message_id": null, "reason": "R42: bornbir.com directory listing, no contact email"}
+  ]
+}

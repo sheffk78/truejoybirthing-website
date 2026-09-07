@@ -1803,10 +1803,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
   "san-marcos-tx": {
-    videoId: "QbiVbK5pMdI",
+    videoId: "cZAGgttJhGY",
     title: "San Marcos, Texas Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide â doulas, hospitals, costs, and more, all in under 5 minutes.",
-    duration: "PT2M18S",
-    uploadDate: "2026-09-06T00:00:00-06:00",
+    description: "Watch the full San Marcos, Texas city guide — doulas, hospitals, birth center, costs, and more, all in about 4 minutes.",
+    duration: "PT4M6S",
+    uploadDate: "2026-09-06T18:31:00-06:00",
   },
 };
