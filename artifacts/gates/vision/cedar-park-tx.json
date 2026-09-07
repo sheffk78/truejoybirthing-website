@@ -1,0 +1,24 @@
+{
+  "slug": "cedar-park-tx",
+  "verdicts": [
+    {
+      "crop": "cedar-park-tx-hero-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "reason": "A single right-facing pregnant figure shows two properly attached arms (near arm cradling under the belly, far hand resting on top with the wrist naturally occluded), normal unfused fingers, and a belly correctly protruding forward in the facing direction, with no phantom limbs, melted joints, or merged figures."
+    },
+    {
+      "crop": "cedar-park-tx-support-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "reason": "Both figures show anatomically attached arms with normal five-fingered hands, the pregnant belly protrudes correctly in the direction she is facing, no melted joints or floating limbs, and exactly two distinct human figures are present."
+    },
+    {
+      "crop": "cedar-park-tx-og-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "reason": "A single pregnant figure in right-facing profile with two anatomically attached arms whose hands cradle the forward-protruding belly, normal finger count, no fused joints, phantom limbs, or merged figures."
+    }
+  ],
+  "checked_at": "2026-09-07T22:52:48.636716+00:00"
+}

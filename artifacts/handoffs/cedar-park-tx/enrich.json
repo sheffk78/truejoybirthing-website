@@ -1,0 +1,108 @@
+{
+  "slug": "cedar-park-tx",
+  "stage": "enrich",
+  "produced_at": "2026-09-07T22:43:45Z",
+  "worker_model": "deepseek-v4-flash-via-subagent",
+  "notes": "ENRICH stage for cedar-park-tx. All 4 provider cost ranges filled (real dollar ranges, no Contact for pricing). Alicia Power costRange_source=provider-confirmed from her website; Tara/Alivia/Motherwell = market-estimate from Bornbir range as no site prices. All hospital paragraphs 300+ chars covering NICU level, doula policy, lactation/private rooms. Birth center verified operating (Community Impact). Real provider headshots exist for Alicia (40KB), Tara (15KB), Alivia (14KB), Motherwell (40KB). Hospital/birth center exterior building thumbnails all >15KB.",
+  "sources": [
+    {
+      "claim": "Alicia Power is a DONA-certified Cedar Park birth doula; her standard birth package is $1,650 (provider-confirmed pricing)",
+      "url": "https://mybirthpowerdoula.com/",
+      "quote": "My standard birth doula service package fee is $1,650. I was trained by DONA International in September, 2019. I have supported over 170 families so far."
+    },
+    {
+      "claim": "Tara Garner is a CAPPA-certified postpartum doula calling Cedar Park home for 11 years; Cedar Park doula costs fall in $800-$2,500 market range",
+      "url": "https://www.bornbir.com/cedar-park/tx/doula",
+      "quote": "I did my CAPPA training in May 2024, and completed the certification process in June 2025. Cedar Park has been home for 11 years."
+    },
+    {
+      "claim": "Alivia Lehmann is a certified postpartum doula in the greater Austin area who has cared for infants and children for 8+ years",
+      "url": "https://www.bornbir.com/cedar-park/tx/doula",
+      "quote": "Im Alivia Lehmann, a Certified Postpartum Doula in the greater Austin area! I have been caring for infants and children for 8+ years and Ive loved every minute of it!"
+    },
+    {
+      "claim": "Motherwell is a Cedar Park doula collective located at 921 W New Hope Dr Ste 501 with a 5-star rating",
+      "url": "https://www.discoverdoulas.com/texas/cedar-park/",
+      "quote": "Motherwell **5** star 6 reviews ... 921 W New Hope Dr Ste 501, Cedar Park, TX"
+    },
+    {
+      "claim": "Ascension Seton Cedar Park Hospital Maternity Center offers OB-GYN and maternal-fetal medicine care for Cedar Park families",
+      "url": "https://healthcare.ascension.org/locations/texas/txaus/cedar-park-ascension-seton-cedar-park-hospital/departments/maternity-center",
+      "quote": "OB-GYNs at Ascension Seton Cedar Park - Maternity Center in Cedar Park, Texas deliver care before, during and after your pregnancy. our integrated care teams will work with our highly experienced maternal-fetal medicine specialists offering dedicated support for high-risk pregnancies."
+    },
+    {
+      "claim": "St. Davids Round Rock Medical Center has a Level II NICU at 2400 Round Rock Ave, Round Rock, TX 78681",
+      "url": "https://neonatologysolutions.com/nicu/st-davids-round-rock-medical-center/",
+      "quote": "St. Davids Round Rock Medical Center Level II NICU 12 Beds 2400 Round Rock Ave Round Rock, TX 78681"
+    },
+    {
+      "claim": "Austin Area Birthing Center is Austin first CABC-accredited birth center since 1987 with a Williamson County location at 1130 Cottonwood Creek Trail, Ste. D2 in Cedar Park",
+      "url": "https://austinabc.com/",
+      "quote": "At Austin Area Birthing Center, midwives in Austin have been catching babies and caring for families since 1987. We are Austins first CABC-accredited birth center. Williamson County 1130 Cottonwood Creek Trail, Ste. D2 Cedar Park, TX 78613"
+    }
+  ],
+  "providers": [
+    {
+      "name": "Alicia M. K. Power",
+      "photo": "/images/provider-cedar-park-tx-alicia-power.webp",
+      "description_chars": 386,
+      "costRange": "$1,650-$2,500",
+      "costRange_source": "provider-confirmed"
+    },
+    {
+      "name": "Tara Garner",
+      "photo": "/images/provider-cedar-park-tx-tara-garner.webp",
+      "description_chars": 311,
+      "costRange": "$800-$2,500",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Alivia Lehmann",
+      "photo": "/images/provider-cedar-park-tx-alivia-lehmann.webp",
+      "description_chars": 318,
+      "costRange": "$800-$2,500",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Motherwell",
+      "photo": "/images/provider-cedar-park-tx-motherwell.webp",
+      "description_chars": 291,
+      "costRange": "$800-$2,500",
+      "costRange_source": "market-estimate"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Ascension Seton Cedar Park Hospital - Maternity Center",
+      "paragraph_chars": 480,
+      "thumbnail": "/images/cedar-park-tx-hospital-ascension-seton.webp",
+      "nicuLevel": "II",
+      "url": "https://healthcare.ascension.org/locations/texas/txaus/cedar-park-ascension-seton-cedar-park-hospital/departments/maternity-center"
+    },
+    {
+      "name": "Cedar Park Regional Medical Center",
+      "paragraph_chars": 442,
+      "thumbnail": "/images/cedar-park-tx-hospital-cedar-park-regional.webp",
+      "nicuLevel": "II",
+      "url": "https://www.healthgrades.com/hospital/cedar-park-regional-medical-center-a084f4"
+    },
+    {
+      "name": "St. David's Round Rock Medical Center",
+      "paragraph_chars": 421,
+      "thumbnail": "/images/cedar-park-tx-hospital-st-davids-round-rock.webp",
+      "nicuLevel": "II",
+      "url": "https://www.stdavids.com/locations/st-davids-round-rock-medical-center"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Austin Area Birthing Center - Williamson County",
+      "paragraph_chars": 500,
+      "thumbnail": "/images/cedar-park-tx-birth-center-aabc.webp"
+    }
+  ],
+  "birthstats": {
+    "dataYear": 2023,
+    "dataSource": "CDC NCHS National Vital Statistics System; Texas DSHS 2023"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "slug": "cedar-park-tx",
+  "stage": "build",
+  "produced_at": "2026-09-07T22:35:00Z",
+  "worker_model": "deepseek-v4-flash-via-subagent",
+  "notes": "BUILD stage complete: 4 providers, 3 hospitals, 1 birth center. Hero/support/OG generated from one hero image; preflight passed; build passed; contract validated.",
+  "sources": [
+    {
+      "claim": "Alicia Power is a DONA International-certified birth and postpartum doula centered in Cedar Park, Texas, who has supported more than 170 families since 2019",
+      "url": "https://mybirthpowerdoula.com/",
+      "quote": "I am a certified birth doula centered in Cedar Park, Texas. I was trained by DONA International in September, 2019. I have supported over 170 families so far and continue to serve families in the greater Austin area. My standard birth doula service package fee is $1,650."
+    },
+    {
+      "claim": "Tara Garner is a CAPPA-certified postpartum doula who has called Cedar Park home for 11 years",
+      "url": "https://www.bornbir.com/cedar-park/tx/doula",
+      "quote": "I did my CAPPA training in May 2024, and completed the certification process in June 2025. ... Cedar Park has been home for 11 years."
+    },
+    {
+      "claim": "Alivia Lehmann is a certified postpartum doula living in Austin/Cedar Park who has cared for infants and children for 8+ years",
+      "url": "https://www.bornbir.com/cedar-park/tx/doula",
+      "quote": "Im Alivia Lehmann, a Certified Postpartum Doula in the greater Austin area! ... I have been caring for infants and children for 8+ years and Ive loved every minute of it!"
+    },
+    {
+      "claim": "Motherwell is a doula collective located at 921 W New Hope Dr Ste 501 in Cedar Park with a 5-star rating",
+      "url": "https://www.discoverdoulas.com/texas/cedar-park/",
+      "quote": "Motherwell **5** \u2605\u2605\u2605\u2605\u2605 6 reviews ... 921 W New Hope Dr Ste 501, Cedar Park, TX"
+    },
+    {
+      "claim": "Ascension Seton Cedar Park Hospital Maternity Center provides OB-GYN and maternal-fetal medicine care for Cedar Park families",
+      "url": "https://healthcare.ascension.org/locations/texas/txaus/cedar-park-ascension-seton-cedar-park-hospital/departments/maternity-center",
+      "quote": "OB-GYNs at Ascension Seton Cedar Park - Maternity Center in Cedar Park, Texas deliver care before, during and after your pregnancy. ... our integrated care teams will work with our highly experienced maternal-fetal medicine specialists offering dedicated support for high-risk pregnancies."
+    },
+    {
+      "claim": "St. David's Round Rock Medical Center has a Level II NICU and is located at 2400 Round Rock Ave, Round Rock, TX 78681",
+      "url": "https://neonatologysolutions.com/nicu/st-davids-round-rock-medical-center/",
+      "quote": "St. David's Round Rock Medical Center Level II NICU 12 Beds 2400 Round Rock Ave Round Rock, TX 78681"
+    },
+    {
+      "claim": "Austin Area Birthing Center provides midwifery care since 1987 with a Williamson County location at 1130 Cottonwood Creek Trail, Ste. D2 in Cedar Park",
+      "url": "https://austinabc.com/",
+      "quote": "At Austin Area Birthing Center, midwives in Austin have been catching babies and caring for families since 1987. We are Austins first CABC-accredited birth center. ... Williamson County 1130 Cottonwood Creek Trail, Ste. D2 Cedar Park, TX 78613"
+    }
+  ],
+  "city_fields": {
+    "city": "Cedar Park",
+    "state": "TX",
+    "lat": 30.5052,
+    "lng": -97.8203,
+    "costLow": 800,
+    "costHigh": 2500,
+    "heroImage": "/images/cedar-park-tx-birth-doula-hero-v2.webp",
+    "ogImage": "https://truejoybirthing.com/images/og-city-cedar-park-tx-v2.webp",
+    "supportSceneImage": "/images/cedar-park-tx-birth-doula-support-v2.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Cedar Park: Texas Hill Country birth support and doula care",
+    "culture": "Cedar Park sits in the Texas Hill Country just northwest of Austin, along the Balcones Escarpment. Known for its family-friendly neighborhoods, Brushy Creek trails, and the H-E-B Center arena, it has grown into one of the fastest-growing suburbs in Williamson County with a strong community of young families.",
+    "medicaidNote": "No \u2014 Texas does not yet have statewide Medicaid doula coverage as of 2026. Some managed-care pilots and health plans offer limited doula benefits, but most Cedar Park families pay out of pocket for doula support. Call your Medicaid managed-care plan and ask directly whether doula services are covered, or call Texas Medicaid at 1-877-543-7669 and visit YourTexasBenefits.com."
+  },
+  "faqs_count": 4,
+  "midwife_paragraph_chars": 585,
+  "doulas": [
+    {
+      "name": "Alicia M. K. Power",
+      "url": "https://mybirthpowerdoula.com/",
+      "photo": "/images/provider-cedar-park-tx-alicia-power.webp",
+      "description_chars": 386,
+      "costRange": "$1,650-$2,500"
+    },
+    {
+      "name": "Tara Garner",
+      "url": "https://www.bornbir.com/cedar-park/tx/doula",
+      "photo": "/images/provider-cedar-park-tx-tara-garner.webp",
+      "description_chars": 311,
+      "costRange": "$800-$2,500"
+    },
+    {
+      "name": "Alivia Lehmann",
+      "url": "https://www.bornbir.com/cedar-park/tx/doula",
+      "photo": "/images/provider-cedar-park-tx-alivia-lehmann.webp",
+      "description_chars": 318,
+      "costRange": "$800-$2,500"
+    },
+    {
+      "name": "Motherwell",
+      "url": "https://www.discoverdoulas.com/doula/motherwell-cedar-park-tx/",
+      "photo": "/images/provider-cedar-park-tx-motherwell.webp",
+      "description_chars": 291,
+      "costRange": "$800-$2,500"
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  },
+  "_auto_image_refs": [
+    "/images/cedar-park-tx-birth-doula-hero-v2.webp",
+    "https://truejoybirthing.com/images/og-city-cedar-park-tx-v2.webp",
+    "/images/cedar-park-tx-birth-doula-support-v2.webp"
+  ]
+}

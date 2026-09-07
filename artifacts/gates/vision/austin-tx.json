@@ -1,0 +1,26 @@
+{
+ "slug": "austin-tx",
+ "verdicts": [
+  {
+   "crop": "austin-tx-hero-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "austin-tx-support-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "austin-tx-og-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "austin-tx-thumb-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  }
+ ],
+ "checked_at": "2026-09-07T16:07:27.895095"
+}

@@ -1,0 +1,70 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "cedar-park-tx",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 7,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the doula's own site (mybirthpowerdoula.com matching Alicia Power) and directly supports the key claim elements: DONA International training in 2019, Cedar Park, Texas location, and over 170 families supported.",
+      "claim": "Alicia Power is a DONA International-certified birth and postpartum doula centered in Cedar Park, Texas, who has supported more than 170 families since 2019",
+      "url": "https://mybirthpowerdoula.com/",
+      "quote": "I am a certified birth doula centered in Cedar Park, Texas. I was trained by DONA International in September, 2019. I have supported over 170 families so far and continue to serve families in the grea"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible first-person bio text for a Cedar Park, TX doula page and directly supports both parts of the claim: CAPPA certification (training May 2024, certified June 2025) and 11 years living in Cedar Park.",
+      "claim": "Tara Garner is a CAPPA-certified postpartum doula who has called Cedar Park home for 11 years",
+      "url": "https://www.bornbir.com/cedar-park/tx/doula",
+      "quote": "I did my CAPPA training in May 2024, and completed the certification process in June 2025. ... Cedar Park has been home for 11 years."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a first-person introduction from Alivia Lehmann identifying herself as a Certified Postpartum Doula in the greater Austin area with 8+ years of infant and child care experience, which plausibly appears on the bornbir.com Cedar Park, TX doula page and directly supports the claim.",
+      "claim": "Alivia Lehmann is a certified postpartum doula living in Austin/Cedar Park who has cared for infants and children for 8+ years",
+      "url": "https://www.bornbir.com/cedar-park/tx/doula",
+      "quote": "Im Alivia Lehmann, a Certified Postpartum Doula in the greater Austin area! ... I have been caring for infants and children for 8+ years and Ive loved every minute of it!"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from a Cedar Park doula directory page and directly shows Motherwell with a 5-star rating and the exact address 921 W New Hope Dr Ste 501, Cedar Park, TX, matching the claim.",
+      "claim": "Motherwell is a doula collective located at 921 W New Hope Dr Ste 501 in Cedar Park with a 5-star rating",
+      "url": "https://www.discoverdoulas.com/texas/cedar-park/",
+      "quote": "Motherwell **5** \u2605\u2605\u2605\u2605\u2605 6 reviews ... 921 W New Hope Dr Ste 501, Cedar Park, TX"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the Ascension Seton Cedar Park Maternity Center page and explicitly mentions OB-GYNs and maternal-fetal medicine specialists in Cedar Park, Texas, directly supporting the claim.",
+      "claim": "Ascension Seton Cedar Park Hospital Maternity Center provides OB-GYN and maternal-fetal medicine care for Cedar Park families",
+      "url": "https://healthcare.ascension.org/locations/texas/txaus/cedar-park-ascension-seton-cedar-park-hospital/departments/maternity-center",
+      "quote": "OB-GYNs at Ascension Seton Cedar Park - Maternity Center in Cedar Park, Texas deliver care before, during and after your pregnancy. ... our integrated care teams will work with our highly experienced "
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from a neonatology-focused domain and explicitly states the hospital's Level II NICU and the exact address 2400 Round Rock Ave, Round Rock, TX 78681, matching the claim.",
+      "claim": "St. David's Round Rock Medical Center has a Level II NICU and is located at 2400 Round Rock Ave, Round Rock, TX 78681",
+      "url": "https://neonatologysolutions.com/nicu/st-davids-round-rock-medical-center/",
+      "quote": "St. David's Round Rock Medical Center Level II NICU 12 Beds 2400 Round Rock Ave Round Rock, TX 78681"
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the matching domain (austinabc.com) and directly confirms both the midwifery care since 1987 and the Williamson County address at 1130 Cottonwood Creek Trail, Ste. D2 in Cedar Park.",
+      "claim": "Austin Area Birthing Center provides midwifery care since 1987 with a Williamson County location at 1130 Cottonwood Creek Trail, Ste. D2 in Cedar Park",
+      "url": "https://austinabc.com/",
+      "quote": "At Austin Area Birthing Center, midwives in Austin have been catching babies and caring for families since 1987. We are Austins first CABC-accredited birth center. ... Williamson County 1130 Cottonwoo"
+    }
+  ],
+  "checked_at": "2026-09-07T16:40:23-06:00"
+}
