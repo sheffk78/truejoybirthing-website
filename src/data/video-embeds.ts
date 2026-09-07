@@ -1809,4 +1809,12 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT4M6S",
     uploadDate: "2026-09-06T18:31:00-06:00",
   },
+
+  "pearland-tx": {
+    videoId: "8QMfh8NHyTU",
+    title: "Pearland TX Doula & Birth Plan Guide",
+    description: "Watch the full Pearland TX Doula & Birth Plan Guide — all in about 2:44.",
+    duration: 164,
+  },
+
 };

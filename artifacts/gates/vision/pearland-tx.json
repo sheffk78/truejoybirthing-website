@@ -15,8 +15,13 @@
       "crop": "pearland-tx-og-fig0.png",
       "verdict": "pass",
       "defects": []
+    },
+    {
+      "crop": "pearland-tx-thumb-fig0.png",
+      "verdict": "pass",
+      "defects": []
     }
   ],
-  "checked_at": "2026-09-07T11:12:17.320811-06:00",
-  "notes": "3-crop zoom vision pass per visual-verify gate; model glm-5.3-flash:cloud via local Ollama; defect-specific anatomy questions per crop."
+  "checked_at": "2026-09-07T11:25:00-06:00",
+  "notes": "4-crop zoom vision pass per visual-verify gate; model glm-5.3-flash:cloud via local Ollama; defect-specific anatomy questions per crop."
 }

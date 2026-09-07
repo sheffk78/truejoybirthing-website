@@ -195,8 +195,17 @@ def validate_verify_deploy(c, b, violations, live_http=None):
         if vpath.exists():
             try:
                 vdata = json.loads(vpath.read_text())
-                crops = vdata.get("crops") or vdata.get("verdicts") or {}
-                bad = [k for k, v in crops.items() if isinstance(v, dict) and v.get("pass") is False]
+                verdicts = vdata.get("crops") or vdata.get("verdicts") or {}
+                # Two on-disk formats exist:
+                #  - dict: {crop: {"pass": bool}} (legacy)
+                #  - list: [{"crop": ..., "verdict": "pass|fail"}] — the format
+                #    visual-verify-gate.py mandates and emits since 2026-09-05.
+                if isinstance(verdicts, dict):
+                    bad = [k for k, v in verdicts.items()
+                           if isinstance(v, dict) and v.get("pass") is False]
+                else:
+                    bad = [v.get("crop", "?") for v in verdicts
+                           if isinstance(v, dict) and v.get("verdict") != "pass"]
                 req(not bad, f"vision verdicts failing: {bad[:5]}", violations)
             except json.JSONDecodeError:
                 violations.append(f"vision_verdict_file: not valid JSON: {vf}")
