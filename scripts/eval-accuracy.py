@@ -114,6 +114,29 @@ def check_source(claim: str, url: str, quote: str) -> dict | None:
         return None
 
 
+def check_url_liveness(url: str) -> str | None:
+    """Deterministic fabrication signal: a source domain that does not resolve
+    (or refuses connections) cannot back a claim. Returns 'unreachable' |
+    'reachable' | None (check failed). Any HTTP status counts as reachable —
+    403/401 means the domain exists but blocks bots."""
+    import urllib.error
+    from urllib.parse import urlparse
+    try:
+        host = urlparse(url).netloc
+        if not host:
+            return None
+        import socket
+        socket.setdefaulttimeout(8)
+        socket.getaddrinfo(host.split(":")[0], None)
+        return "reachable"
+    except socket.gaierror:
+        return "unreachable"
+    except OSError:
+        return "unreachable"
+    except Exception:
+        return None
+
+
 def main() -> int:
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     if len(args) < 1:
@@ -148,6 +171,12 @@ def main() -> int:
         if not claim or not url or not quote:
             results.append({"index": i, "verdict": "UNSUPPORTED",
                             "reason": "missing claim/url/quote in evidence item",
+                            "claim": claim, "url": url})
+            continue
+        live = check_url_liveness(url)
+        if live == "unreachable":
+            results.append({"index": i, "verdict": "UNSUPPORTED",
+                            "reason": "source URL domain does not resolve — fabricated or dead source (deterministic check)",
                             "claim": claim, "url": url})
             continue
         verdict = check_source(claim, url, quote)

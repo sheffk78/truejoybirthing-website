@@ -225,6 +225,10 @@ def replay_accuracy_eval(case: dict) -> dict:
     the cloud checker and require an UNSUPPORTED verdict."""
     mod = _load_eval_module("eval-accuracy")
     fx = case["replay"]["fixture"]
+    # deterministic layer first: unreachable domain = caught, no model needed
+    live = mod.check_url_liveness(fx["url"])
+    if live == "unreachable":
+        return {"caught": True, "detail": "deterministic: URL does not resolve — fabricated source"}
     result = mod.check_source(fx["claim"], fx["url"], fx["quote"])
     if result is None:
         return {"caught": False, "detail": "accuracy checker model unreachable"}

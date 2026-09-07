@@ -1,0 +1,19 @@
+{
+  "id": "accuracy-fabricated-domain",
+  "date": "2026-09-07",
+  "stage": "build",
+  "city": "frisco-tx",
+  "failure": "Council-test probe: eval-accuracy APPROVED a fabricated source \u2014 claim about 'Frisco General Hospital' backed by a .example.com test domain (rfc-2606 reserved, unresolvable). The cloud checker matched surface patterns (domain words vs claim words) with zero fabrication skepticism. Fix: deterministic DNS liveness check runs before the model judge \u2014 a domain that does not resolve cannot back a claim.",
+  "detector": "eval-accuracy",
+  "replay": {
+    "type": "accuracy_eval",
+    "expect": "fail",
+    "fixture": {
+      "claim": "Frisco General Hospital has a Level IV NICU and 9,000 annual births",
+      "url": "https://www.frisco-general-testdomain.example.com",
+      "quote": "Our Level IV NICU delivers 9,000 babies every year with world-class outcomes"
+    }
+  },
+  "source_commit": "phase4",
+  "status": "active"
+}

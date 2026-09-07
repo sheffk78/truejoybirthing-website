@@ -191,6 +191,39 @@ def main() -> int:
     save_loop_state(state)
 
     if rejected:
+        # Phase 4: on the 2nd strike, producer/checker DISPUTE → model council
+        # (Layer 6). The council can OVERRULE (strike waived, stage proceeds)
+        # or UPHELD (counts as strike 3 → block). Infra at council time is
+        # non-fatal: normal rejection continues.
+        if attempt_no == 2 and os.environ.get("TJB_DISABLE_EVAL_LOOP", "") != "1":
+            try:
+                cn = subprocess.run(
+                    ["python3", str(PROJECT_DIR / "scripts" / "eval-council.py"), slug, stage, "--auto"],
+                    capture_output=True, text=True, timeout=900, cwd=str(PROJECT_DIR),
+                )
+                cn_out = (cn.stdout or "").strip()
+                if cn.returncode == 0 and cn_out:
+                    try:
+                        print(json.loads(cn_out).get("message", cn_out))
+                    except json.JSONDecodeError:
+                        print(cn_out)
+                    return 0  # council overruled the rejection — proceed
+                if cn.returncode == 1 and cn_out:
+                    # upheld → 3rd strike → block (record already written by council)
+                    state["attempts"] = MAX_ATTEMPTS
+                    save_loop_state(state)
+                    print(json.dumps({
+                        "action": "eval_loop_blocked",
+                        "slug": slug, "stage": stage,
+                        "attempts": MAX_ATTEMPTS,
+                        "message": ("Council UPHELD the 2nd rejection (2/3 majority) — city BLOCKED. "
+                                    "Verdict record: artifacts/evals/council-" + slug + "-" + stage + ".json"),
+                    }, indent=2))
+                    return 3
+                # council noop/infra/other → fall through to normal rejection
+            except Exception:
+                pass  # council unavailable → normal rejection continues
+
         # The re-spawn context: findings travel to the worker automatically.
         return fail(1, {
             "action": "eval_loop_rejected",

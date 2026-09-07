@@ -460,6 +460,47 @@ Goal: {goal}
     print(json.dumps(output, indent=2))
 
 
+def collect_stage_evidence(slug: str, stage: str) -> dict:
+    """Phase 4 harness: on-disk proof attached to the done-history entry.
+    "Done" claims are tied to artifacts: contract validity, block hash,
+    eval verdicts. Cheap, fail-open (records None on missing probe)."""
+    import hashlib
+    ev: dict = {"contract_valid": None, "block_sha": None,
+                "handoff_sha": None, "eval_voice": None, "eval_accuracy": None}
+    try:
+        r = subprocess.run(
+            ["python3", str(Path(PROJECT_DIR) / "scripts" / "contract-validate.py"), slug, stage],
+            capture_output=True, text=True, timeout=60, cwd=PROJECT_DIR)
+        ev["contract_valid"] = (r.returncode == 0)
+    except Exception:
+        pass
+    try:
+        r = subprocess.run(
+            ["python3", str(Path(PROJECT_DIR) / "scripts" / "extract-city-block.py"), slug],
+            capture_output=True, text=True, timeout=30, cwd=PROJECT_DIR)
+        if r.returncode == 0 and r.stdout.strip():
+            ev["block_sha"] = hashlib.sha256(r.stdout.strip().encode()).hexdigest()[:16]
+    except Exception:
+        pass
+    handoff = Path(PROJECT_DIR) / "artifacts" / "handoffs" / slug / (stage + ".json")
+    if handoff.exists():
+        ev["handoff_sha"] = hashlib.sha256(handoff.read_bytes()).hexdigest()[:16]
+    evals_dir = Path(PROJECT_DIR) / "artifacts" / "evals"
+    va = evals_dir / ("voice-" + slug + ".json")
+    if va.exists():
+        try:
+            ev["eval_voice"] = json.loads(va.read_text()).get("verdict")
+        except Exception:
+            pass
+    aa = evals_dir / ("accuracy-" + slug + "-" + stage + ".json")
+    if aa.exists():
+        try:
+            ev["eval_accuracy"] = json.loads(aa.read_text()).get("verdict")
+        except Exception:
+            pass
+    return ev
+
+
 def cmd_done(slug: str, stage: str):
     """Mark a stage as complete and advance FORWARD to next stage.
 
@@ -568,13 +609,15 @@ def cmd_done(slug: str, stage: str):
         completed.append(actual_stage)
     state["stages_completed"] = completed
 
-    # Record history
+    # Record history with Phase 4 evidence-in-state — "done" requires on-disk
+    # proof (contract validity, block hash, eval verdicts), not just a claim.
     history = state.get("history", [])
     history.append({
         "stage": actual_stage,
         "status": "done",
         "timestamp": int(time.time()),
         "gate_results": state.get("gate_results", {}).get(actual_stage, {}),
+        "evidence": collect_stage_evidence(slug, actual_stage),
     })
     state["history"] = history
 
