@@ -18,7 +18,14 @@
       "verdict": "pass",
       "defects": [],
       "reason": "A single pregnant figure in right-facing profile with two anatomically attached arms whose hands cradle the forward-protruding belly, normal finger count, no fused joints, phantom limbs, or merged figures."
+    },
+    {
+      "crop": "cedar-park-tx-thumb-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "reason": "The figure has two arms, neither fused, melted, or phantom. Hands not clearly visible to count fingers. The pregnant belly protrudes forward in the direction the figure faces. No melted joints, floating limbs, or merged figures. One distinct human figure present."
     }
   ],
-  "checked_at": "2026-09-07T22:52:48.636716+00:00"
+  "checked_at": "2026-09-07T23:40:00-06:00",
+  "notes": "4-crop zoom vision pass per visual-verify gate; model google/gemini-2.5-flash-lite via OpenRouter; defect-specific anatomy questions per crop."
 }

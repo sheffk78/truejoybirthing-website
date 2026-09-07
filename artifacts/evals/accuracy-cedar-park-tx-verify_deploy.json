@@ -1,0 +1,62 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "cedar-park-tx",
+  "stage": "verify_deploy",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 6,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is the preflight output for the exact cedar-park-tx page on the truejoybirthing.com domain and directly confirms 0 failures and 0 warnings as claimed.",
+      "claim": "Full preflight passed with 0 failures and 0 warnings for cedar-park-tx.",
+      "url": "https://truejoybirthing.com/birth-support/cedar-park-tx/",
+      "quote": "PREFLIGHT PASSED: 0 failures, 0 warning(s). Ship cedar-park-tx when ready."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible deployment success message for the truejoybirthing-website repo, and the Cloudflare Pages preview URL (pages.dev) directly corroborates the claim that the CF Pages deployment completed.",
+      "claim": "Deploy completed successfully: all deploy.sh gates passed, pushed to GitHub main and CF Pages deployment complete.",
+      "url": "https://github.com/sheffk78/truejoybirthing-website",
+      "quote": "Deployment complete! Take a peek over at https://0dad9a2c.truejoybirthing-website.pages.dev"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is an HTTP response header for the given truejoybirthing.com Cedar Park city page showing status 200 and content-length 153152 bytes, which directly supports the claim that the live page returns HTTP 200 with content-length 153152 bytes (>10KB).",
+      "claim": "Live city page returns HTTP 200 with content-length 153152 bytes (>10KB).",
+      "url": "https://truejoybirthing.com/birth-support/cedar-park-tx/",
+      "quote": "HTTP/2 200, content-type: text/html; charset=utf-8, content-length 153152"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a verification log directly confirming the claim (HTTP 200 with MD5 live==repo for the three -v2 hospital thumbnails), and the URL's filename (cedar-park-tx-hospital-ascension-seton-v2.webp) matches one of the exact assets listed, on the truejoybirthing.com domain with real Cedar Park-a",
+      "claim": "Hospital thumbnails serve on CDN byte-identical to repo (MD5 match) after -v2 cache bust.",
+      "url": "https://truejoybirthing.com/images/cedar-park-tx-hospital-ascension-seton-v2.webp",
+      "quote": "HTTP 200, MD5 live==repo for all 3 hospital thumbnails (ascension-seton-v2, cedar-park-regional-v2, st-davids-round-rock-v2)"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible vision-QA verdict output for this Cedar Park birth doula hero image, and it directly supports the claim of a PASS verdict with no anatomical defects in the pregnant figure.",
+      "claim": "Vision verdict gate: all 3 zoom-crop vision passes returned PASS with no anatomical defects.",
+      "url": "https://truejoybirthing.com/images/cedar-park-tx-birth-doula-hero-v2.webp",
+      "quote": "VERDICT: pass \u2014 A single right-facing pregnant figure shows two properly attached arms, normal unfused fingers, belly correctly protruding forward, no phantom limbs, melted joints, or merged figures."
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly reports the claimed browser verification, citing New Image() constructor confirmation that all 10 key images decode with specific natural dimensions, and references image filenames (cedar-park-tx-hospital-*.webp) consistent with the truejoybirthing.com Cedar Park, TX birth support",
+      "claim": "Browser verification: all 10 key images load via New Image() constructor with correct natural dimensions.",
+      "url": "https://truejoybirthing.com/birth-support/cedar-park-tx/",
+      "quote": "Live page references cedar-park-tx-hospital-ascension-seton-v2.webp, cedar-park-tx-hospital-cedar-park-regional-v2.webp, and cedar-park-tx-hospital-st-davids-round-rock-v2.webp; New Image() constructo"
+    }
+  ],
+  "checked_at": "2026-09-07T17:13:03-06:00"
+}

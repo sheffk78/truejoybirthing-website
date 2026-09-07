@@ -1824,4 +1824,24 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: 303,
   },
 
+  "cedar-park-tx": {
+    videoId: "JJUroIchFKY",
+    title: "Cedar Park Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full Cedar Park Doula & Birth Plan Guide â hospitals, doulas, midwives, costs, and Texas Medicaid, all in about 2:47.",
+    duration: "PT2M47S",
+    uploadDate: "2026-09-07T00:00:00-06:00",
+    chapters: [
+      [0, "Welcome to Cedar Park"],
+      [12, "Where Cedar Park Families Deliver"],
+      [30, "Ascension Seton Cedar Park Hospital"],
+      [44, "Cedar Park Regional Medical Center"],
+      [57, "St. David's Round Rock Medical Center"],
+      [70, "Doulas & Midwives in Cedar Park"],
+      [83, "The Free Birth Plan App"],
+      [105, "Cost Reality ($800â$2,500)"],
+      [126, "Insurance & Texas Medicaid"],
+      [143, "Your Next Step"],
+    ],
+  },
+
 };

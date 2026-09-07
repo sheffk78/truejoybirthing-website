@@ -1,0 +1,49 @@
+{
+  "slug": "cedar-park-tx",
+  "stage": "verify_deploy",
+  "produced_at": "2026-09-07T17:10:00Z",
+  "worker_model": "deepseek-v4-flash:0731",
+  "notes": "Full preflight passed (0 failures, 0 warnings, 0 image issues). Build exit 0. Deployed via bash scripts/deploy.sh cedar-park-tx (deploy.sh exit 0, all gates passed: pre-deploy, visual preflight, vision verdict, G7, xref; pushed to GitHub main; wrangler CF Pages upload success). Fixed G7 lat/lng gap (added lat 30.5052, lng -97.8203). Replaced 3 wrong/duplicate hospital thumbnails with distinct real photos (Ascension Seton from official Ascension page, Cedar Park Regional from Community Impact, St. David's Round Rock from Yelp) and version-suffixed (-v2) to bust stale CDN cache. Live page HTTP/2 200 (content-length 153152 > 10KB). CDN cache bust verified: all key images byte-identical (MD5) between CDN and repo (hero, support, og, providers, 3 hospitals). Vision verdict gate: 3 zoom-crop vision passes (hero, support, OG) via glm-5.3-flash:cloud, all PASS (limb count, finger state, belly orientation, joints, figure count checked per crop). Browser verification: New Image() constructor all 10 key images load with correct naturalWidth/Height (hero 1200x800, support 1024x768, og 1200x630, 4 providers 400x400, 3 hospitals 400x300). Dashboard city-audit.json updated to verify_deploy stage.",
+  "sources": [
+    {
+      "claim": "Full preflight passed with 0 failures and 0 warnings for cedar-park-tx.",
+      "url": "https://truejoybirthing.com/birth-support/cedar-park-tx/",
+      "quote": "PREFLIGHT PASSED: 0 failures, 0 warning(s). Ship cedar-park-tx when ready.",
+      "kind": "preflight"
+    },
+    {
+      "claim": "Deploy completed successfully: all deploy.sh gates passed, pushed to GitHub main and CF Pages deployment complete.",
+      "url": "https://github.com/sheffk78/truejoybirthing-website",
+      "quote": "Deployment complete! Take a peek over at https://0dad9a2c.truejoybirthing-website.pages.dev",
+      "kind": "deploy"
+    },
+    {
+      "claim": "Live city page returns HTTP 200 with content-length 153152 bytes (>10KB).",
+      "url": "https://truejoybirthing.com/birth-support/cedar-park-tx/",
+      "quote": "HTTP/2 200, content-type: text/html; charset=utf-8, content-length 153152",
+      "kind": "live-http"
+    },
+    {
+      "claim": "Hospital thumbnails serve on CDN byte-identical to repo (MD5 match) after -v2 cache bust.",
+      "url": "https://truejoybirthing.com/images/cedar-park-tx-hospital-ascension-seton-v2.webp",
+      "quote": "HTTP 200, MD5 live==repo for all 3 hospital thumbnails (ascension-seton-v2, cedar-park-regional-v2, st-davids-round-rock-v2)",
+      "kind": "cdn-cache-bust"
+    },
+    {
+      "claim": "Vision verdict gate: all 3 zoom-crop vision passes returned PASS with no anatomical defects.",
+      "url": "https://truejoybirthing.com/images/cedar-park-tx-birth-doula-hero-v2.webp",
+      "quote": "VERDICT: pass — A single right-facing pregnant figure shows two properly attached arms, normal unfused fingers, belly correctly protruding forward, no phantom limbs, melted joints, or merged figures.",
+      "kind": "vision-verdict"
+    },
+    {
+      "claim": "Browser verification: all 10 key images load via New Image() constructor with correct natural dimensions.",
+      "url": "https://truejoybirthing.com/birth-support/cedar-park-tx/",
+      "quote": "Live page references cedar-park-tx-hospital-ascension-seton-v2.webp, cedar-park-tx-hospital-cedar-park-regional-v2.webp, and cedar-park-tx-hospital-st-davids-round-rock-v2.webp; New Image() constructor confirmed all 10 key images decode (hero 1200x800, support 1024x768, og 1200x630, providers 400x400, hospitals 400x300).",
+      "kind": "browser-verify"
+    }
+  ],
+  "preflight_exit": 0,
+  "deploy_status": "SUCCESS",
+  "live_http": 200,
+  "vision_verdict_file": "artifacts/gates/vision/cedar-park-tx.json"
+}
