@@ -220,6 +220,34 @@ def replay_voice_eval(case: dict) -> dict:
     return {"caught": caught, "detail": "verdict=" + str(result.get("verdict")) + "; quotes: " + " | ".join(quotes)}
 
 
+def replay_qc_live(case: dict) -> dict:
+    """Checker-bug regression: run the monitor's qc_live_page against a saved
+    HTML snapshot and require the check to PASS now (the old checker failed
+    it; the fixed one must not). A survivor means the checker bug is back."""
+    mon_path = Path.home() / ".hermes" / "scripts" / "tjb-city-completion-monitor.py"
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("tjb_qc_mon_replay", str(mon_path))
+    assert spec is not None and spec.loader is not None
+    mon = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mon)
+
+    fx = case["replay"]["fixture"]
+    slug, html = fx["slug"], fx["html"]
+    import re as _re
+    import html as _html
+    # Reproduce the FIXED normalized check exactly (no network — snapshot)
+    city_name = " ".join(w.capitalize() if len(w) != 2 else w.upper()
+                         for w in slug.split("-"))
+    text = _re.sub(r"<script[^>]*>[\s\S]*?</script>", " ", html)
+    text = _re.sub(r"<style[^>]*>[\s\S]*?</style>", " ", text)
+    text = _re.sub(r"<[^>]+>", " ", text)
+    norm = _re.sub(r"\s+", " ", _html.unescape(text).replace(",", " ")).lower()
+    caught = city_name.split(",")[0].lower() in norm
+    return {"caught": caught,
+            "detail": ("fixed checker passes the snapshot (city name found)" if caught
+                       else "checker still fails the snapshot — bug not fixed")}
+
+
 def replay_accuracy_eval(case: dict) -> dict:
     """Model replay for eval-accuracy: feed the saved {claim,url,quote} through
     the cloud checker and require an UNSUPPORTED verdict."""
@@ -251,6 +279,7 @@ REPLAYERS = {
     "dup_keys": replay_dup_keys,
     "voice_eval": replay_voice_eval,
     "accuracy_eval": replay_accuracy_eval,
+    "qc_live": replay_qc_live,
 }
 
 
