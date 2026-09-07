@@ -2,9 +2,9 @@
   "slug": "san-marcos-tx",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
-  "exit_code": 1,
-  "passed": 7,
-  "failed": 2,
+  "exit_code": 0,
+  "passed": 9,
+  "failed": 0,
   "skipped": 0,
   "results": {
     "pre_render_gate": {
@@ -13,23 +13,23 @@
     },
     "video_file_exists": {
       "status": "PASS",
-      "detail": "video file 16.6MB >10MB"
+      "detail": "video file 18.3MB >10MB"
     },
     "youtube_upload": {
       "status": "PASS",
-      "detail": "videoId QbiVbK5pMdI present in video-embeds.ts"
+      "detail": "videoId WWWSiPLg2rM present in video-embeds.ts"
     },
     "youtube_thumbnail": {
       "status": "PASS",
       "detail": "thumbnail present locally (1029KB) and YouTube returns 164KB"
     },
     "video_embedded": {
-      "status": "FAIL",
-      "detail": "videoId QbiVbK5pMdI not found on live page"
+      "status": "PASS",
+      "detail": "embed found (vid WWWSiPLg2rM) on live page"
     },
     "videoobject_schema": {
-      "status": "FAIL",
-      "detail": "VideoObject schema missing on live page"
+      "status": "PASS",
+      "detail": "VideoObject+duration present on live page"
     },
     "outreach_sent_or_blocked": {
       "status": "PASS",
@@ -41,7 +41,7 @@
     },
     "video_content_city_match": {
       "status": "PASS",
-      "detail": "G67: video overview scene names this city ('marcos' found; frame t=12s)"
+      "detail": "G67: video overview scene names this city ('marcos' found; frame t=22s)"
     }
   }
 }

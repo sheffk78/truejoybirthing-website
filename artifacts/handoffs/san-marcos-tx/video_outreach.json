@@ -1,62 +1,14 @@
 {
   "slug": "san-marcos-tx",
   "stage": "video_outreach",
-  "produced_at": "2026-09-07T10:43:00Z",
-  "worker_model": "glm-5.3-flash (delegated subagent)",
-  "notes": "Video pipeline completed in prior run (scene data full state names, TTS Shelbi/Voxtral, render, thumbnail derived from hero, YouTube upload cZAGgttJhGY public+embeddable, embed in video-embeds.ts, deploy). Pre-render gate passed (G1-G8). This stage: registered status entry, verified live embed, ran 3 first-touch outreach sends (prior run) + 1 no-email provider blocked (Brittany Alon, Bornbir-only). Re-outreach follow-ups deferred (first-touch <12h ago).",
-  "sources": [
-    {
-      "claim": "YouTube video WWWSiPLg2rM uploaded public+embeddable for San Marcos, Texas (cZAGgttJhGY was deleted from the channel; concurrent pipeline session re-uploaded and set WWWSiPLg2rM live)",
-      "url": "https://youtu.be/WWWSiPLg2rM",
-      "quote": "San Marcos TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom) â oEmbed returns title/author True Joy Birthing, video live and embeddable."
-    },
-    {
-      "claim": "Live city page embeds the live video ID",
-      "url": "https://truejoybirthing.com/birth-support/san-marcos-tx/",
-      "quote": "Page returns HTTP 200 and references the live videoId in the embedded player source."
-    },
-    {
-      "claim": "Greta Nakliudaite-Perez (Womb Centered) first-touch sent",
-      "url": "https://wombcentered.org/",
-      "quote": "Outreach email sent from shelbi@truejoybirthing.com, message_id vps-20260907004049756697."
-    },
-    {
-      "claim": "Stephanie Fluker (MeaningFull Midwifery) first-touch sent",
-      "url": "https://www.meaningfullmidwife.com/",
-      "quote": "Outreach email sent from shelbi@truejoybirthing.com, message_id vps-20260907004113347676."
-    },
-    {
-      "claim": "Grace Butler (Grace Butler Doula) first-touch sent",
-      "url": "https://www.bornbir.com/grace-butler",
-      "quote": "Outreach email sent from shelbi@truejoybirthing.com, message_id vps-20260907004136580424."
-    }
-  ],
-  "video_file": null,
-  "video_mb": null,
+  "produced_at": "2026-09-07T16:50:35Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Video-only worker (no outreach per delegation): scene data, TTS, render, YouTube upload WWWSiPLg2rM, thumbnail, embed swap, CF deploy all verified 2026-09-07. Outreach handled by separate worker.",
+  "sources": [],
+  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/san-marcos-tx-city-guide.mp4",
+  "video_mb": 18.3,
   "youtube_id": "WWWSiPLg2rM",
-  "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/yt-thumb-san-marcos-tx.png",
+  "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/yt-thumb-san-marcos-tx.png",
   "embed_verified": true,
-  "outreach": [
-    {
-      "provider": "Greta Nakliudaite-Perez",
-      "status": "sent",
-      "message_id": "vps-20260907004049756697"
-    },
-    {
-      "provider": "Stephanie Fluker",
-      "status": "sent",
-      "message_id": "vps-20260907004113347676"
-    },
-    {
-      "provider": "Grace Butler",
-      "status": "sent",
-      "message_id": "vps-20260907004136580424"
-    },
-    {
-      "provider": "Brittany Alon",
-      "status": "blocked",
-      "message_id": null,
-      "note": "No resolvable email (Bornbir profile only) - registered per R42 fallback chain."
-    }
-  ]
+  "outreach": []
 }
