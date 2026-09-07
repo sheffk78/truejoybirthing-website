@@ -48,31 +48,18 @@ TIMEOUT_S = 180
 
 MAX_FIELDS_PER_CALL = 8  # keep prompts small; batched fields per call
 
-SYSTEM_PROMPT = """You are a copy-voice checker for True Joy Birthing city pages.
-You review web copy against the brand voice standard in FRESH context — you have
-no memory of who wrote it. Judge only what is in front of you.
+TJB_SYSTEM_PROMPT = """You are a copy-voice checker for True Joy Birthing city pages.
+You review TJB-AUTHORED copy (culture, medicaidNote, FAQ answers) against the
+brand voice standard in FRESH context — no memory of who wrote it.
 
-TWO scopes, different rules:
-
-1. TJB-authored fields (culture, medicaidNote, FAQ answers) — the full voice
-   standard applies. Flag: clinical coldness, judgment language ("natural vs.
-   real birth", "giving up"), fear-based framing, over-flowery mystical
-   language ("magical journey", "goddess energy"), prescriptive pressure
-   ("you have to"), gender-reference violations (must be mother/mom/mama/she/her
-   when referring to the person giving birth — never "birthing person").
-   Do NOT flag: warm supportive tone, honest statements that labor is hard,
-   "you might consider" framing, factual information.
-
-2. Provider bios (localDoulas[*].description) — these are REAL doulas'
-   own practice descriptions, shown as directory listings. They are NOT
-   rewritten to TJB voice (that would misrepresent their businesses).
-   Flag ONLY: AI-slop buzzwords that slipped past the blacklist ("nestled in
-   the heart of", "look no further", "vibrant community", "game-changer",
-   "cutting-edge"), obviously generic template copy with no real details,
-   or wrong-city content. Do NOT flag service facts: "unmedicated birth",
-   "natural birth", "birth on her own terms", "reducing birth fear" are
-   normal service descriptors in a doula's own bio — NEVER flag them.
-
+Flag: clinical coldness, judgment language ("natural vs. real birth",
+"giving up"), fear-based framing, over-flowery mystical language ("magical
+journey", "goddess energy"), prescriptive pressure ("you have to"),
+gender-reference violations (the person giving birth = mother/mom/mama/she/her;
+never "birthing person" or gender-neutral substitutes in that context).
+Do NOT flag: warm supportive tone, honest statements that labor is hard,
+"you might consider" framing, factual information, uses of mother/mom/mama
+(those words are REQUIRED by the standard — flagging them is a serious error).
 Only flag text that appears in the provided copy. Quote it exactly.
 If the copy is clean or only trivially imperfect, approve it — false
 rejections cost a worker re-spawn, so reserve "rejected" for real violations.
@@ -84,6 +71,30 @@ Response format:
                "quote": "exact text", "reason": "why it violates the standard"}]}
 verdict is "rejected" only when at least one critical or major finding exists.
 Return {"verdict":"approved","findings":[]} when copy is clean."""
+
+BIO_SYSTEM_PROMPT = """You check provider bios for a doula directory. Each bio is a REAL
+doula's own business description, shown verbatim in a directory listing.
+Their own words are NEVER rewritten — do not judge tone, style, or voice.
+
+Flag ONLY these three things:
+1. AI-slop buzzwords/templates that slipped past the blacklist: "nestled in
+   the heart of", "look no further", "vibrant community", "game-changer",
+   "cutting-edge", "seamless", "elevate your journey".
+2. Obviously generic template copy with zero real details (could describe
+   any business in any city).
+3. Wrong-city content: the bio describes a different city than the one named
+   in the field label.
+
+NEVER flag: "unmedicated birth", "natural birth", "birth on her own terms",
+"fear", "advocate for mothers", "whole-mother", faith language, or any
+service description — those are normal doula business words.
+If unsure, APPROVE. Return ONLY valid JSON:
+{"verdict": "approved"|"rejected",
+ "findings": [{"field": "...", "severity": "critical"|"major"|"minor",
+               "quote": "exact text", "reason": "..."}]}"""
+
+# Back-compat alias (failure-library replay fixtures use the TJB prompt)
+SYSTEM_PROMPT = TJB_SYSTEM_PROMPT
 
 
 def fail(code: int, payload: dict) -> int:
@@ -122,6 +133,13 @@ def ollama_chat(system: str, user: str) -> dict | None:
         return None
     except Exception:
         return None
+
+
+def is_tjb_field(field_name: str) -> bool:
+    """TJB-authored = culture / medicaidNote / faqs. Everything else
+    (localDoulas[*].description, any provider bio) = bio scope."""
+    fn = field_name.lower()
+    return fn.startswith(("culture", "medicaidnote", "faqs"))
 
 
 def parse_block_to_dict(block: str) -> dict | None:
@@ -195,27 +213,41 @@ def main() -> int:
     fields = collect_copy_fields(block)
     if not fields:
         return fail(3, {"error": f"no voice-bearing copy fields found in {slug} block (fatal: eval cannot run on empty input)"})
+    tjb_fields = [f for f in fields if is_tjb_field(f["field"])]
+    bio_fields = [f for f in fields if not is_tjb_field(f["field"])]
 
-    # Chunk fields to keep prompts small
     all_findings: list[dict] = []
     model_ok = 0
     model_err = 0
-    for i in range(0, len(fields), MAX_FIELDS_PER_CALL):
-        chunk = fields[i:i + MAX_FIELDS_PER_CALL]
+    # Track A: TJB-authored fields — full voice standard
+    for i in range(0, len(tjb_fields), MAX_FIELDS_PER_CALL):
+        chunk = tjb_fields[i:i + MAX_FIELDS_PER_CALL]
         copy_dump = "\n\n".join(
-            f"### {f['field']}\n\"{f['text']}\"" for f in chunk)
-        user_prompt = f"""## Brand Voice Standard (excerpt)
-
-{standard}
-
-## Copy to Review — city: {slug}
-
-{copy_dump}
-
-## Instructions
-Review each field above against the standard. Quote exact violating text.
-Return ONLY the JSON verdict object."""
-        result = ollama_chat(SYSTEM_PROMPT, user_prompt)
+            "### " + f["field"] + '\n"' + f["text"] + '"' for f in chunk)
+        user_prompt = ("## Brand Voice Standard (excerpt)\n\n" + standard +
+                       "\n\n## Copy to Review — city: " + slug + "\n\n" + copy_dump +
+                       "\n\n## Instructions\nReview each field above against the standard. "
+                       "Quote exact violating text.\nReturn ONLY the JSON verdict object.")
+        result = ollama_chat(TJB_SYSTEM_PROMPT, user_prompt)
+        if result is None:
+            model_err += 1
+            continue
+        model_ok += 1
+        for f in result.get("findings", []):
+            f["field"] = f.get("field", "unknown")
+            if f.get("severity") not in ("critical", "major", "minor"):
+                f["severity"] = "minor"
+            all_findings.append(f)
+    # Track B: provider bios — bios-only rubric (no voice rules)
+    for i in range(0, len(bio_fields), MAX_FIELDS_PER_CALL):
+        chunk = bio_fields[i:i + MAX_FIELDS_PER_CALL]
+        copy_dump = "\n\n".join(
+            "### " + f["field"] + '\n"' + f["text"] + '"' for f in chunk)
+        user_prompt = ("## Provider bios to check — city: " + slug + "\n\n" + copy_dump +
+                       "\n\n## Instructions\nCheck each bio ONLY for the three things in your "
+                       "instructions (slop buzzwords / generic template / wrong-city). "
+                       "Quote exact violating text.\nReturn ONLY the JSON verdict object.")
+        result = ollama_chat(BIO_SYSTEM_PROMPT, user_prompt)
         if result is None:
             model_err += 1
             continue
