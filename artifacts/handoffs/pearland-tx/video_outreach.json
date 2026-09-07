@@ -1,0 +1,51 @@
+{
+  "slug": "pearland-tx",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-07T17:26:00Z",
+  "worker_model": "glm-5.2",
+  "notes": "",
+  "sources": [
+    {
+      "claim": "Video uploaded to YouTube",
+      "url": "https://youtu.be/8QMfh8NHyTU",
+      "quote": "Video ID 8QMfh8NHyTU, public, embeddable"
+    },
+    {
+      "claim": "Samentha Alarcon email found",
+      "url": "https://www.truebloomdoula.com/contact",
+      "quote": "Email: truebloomdoula@gmail.com"
+    },
+    {
+      "claim": "Elissa Hinson email found",
+      "url": "https://birthwithfaith.com/",
+      "quote": "Email: birthwfaith@gmail.com"
+    },
+    {
+      "claim": "In Bloom Midwifery contact-form-only",
+      "url": "https://inbloommidwifery.com/contact",
+      "quote": "No public email, contact form only. R42 registered."
+    }
+  ],
+  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/pearland-tx-city-guide.mp4",
+  "video_mb": 21,
+  "youtube_id": "8QMfh8NHyTU",
+  "thumbnail_path": "public/images/yt-thumb-pearland-tx.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "provider": "Samentha Alarcon",
+      "status": "sent",
+      "message_id": "vps-20260907172509306663"
+    },
+    {
+      "provider": "Elissa Hinson",
+      "status": "sent",
+      "message_id": "vps-20260907172535191248"
+    },
+    {
+      "provider": "In Bloom Midwifery",
+      "status": "blocked",
+      "message_id": null
+    }
+  ]
+}
