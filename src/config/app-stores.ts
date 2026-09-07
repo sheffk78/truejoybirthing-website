@@ -1,16 +1,15 @@
 // app-stores.ts — App store links + Android staged-rollout flag.
 // Single source of truth for every app-store CTA on the site.
-// Android is in Google Play review (submitted 2026-09-04, decision ~Sep 9–11).
-// To go live: flip android.live to true — that's the whole rollout.
-// (Play listing/approval is Kenneth's lane; this flag is web-side, Kit flips it.)
+// Android APPROVED + live on Google Play 2026-09-07.
+// Package name: com.truejoybirthing.app (the bare com.truejoybirthing URL 404s).
 export const APP_STORES = {
   ios: {
     url: 'https://apps.apple.com/us/app/true-joy-birthing/id6760793180',
     live: true,
   },
   android: {
-    url: 'https://play.google.com/store/apps/details?id=com.truejoybirthing',
-    live: false, // flip to true on Play approval (~Sep 9–11)
+    url: 'https://play.google.com/store/apps/details?id=com.truejoybirthing.app',
+    live: true,
   },
 } as const;
 
