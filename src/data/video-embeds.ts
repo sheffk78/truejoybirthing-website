@@ -1817,4 +1817,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: 164,
   },
 
+  "victoria-tx": {
+    videoId: "b-CF5xjp1sI",
+    title: "Victoria TX Doula & Birth Plan Guide",
+    description: "Watch the full Victoria TX Doula & Birth Plan Guide — all in about 5:03.",
+    duration: 303,
+  },
+
 };
