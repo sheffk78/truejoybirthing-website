@@ -1,19 +1,55 @@
 {
   "slug": "victoria-tx",
   "stage": "video_outreach",
-  "produced_at": null,
-  "worker_model": null,
-  "notes": "",
-  "sources": [],
-  "video_file": null,
-  "video_mb": null,
-  "youtube_id": null,
-  "thumbnail_path": null,
-  "embed_verified": null,
+  "produced_at": "2026-09-07T21:30:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Video rendered (303.4s, Voxtral/Shelbi TTS, 12 scenes, 3 hospitals + 3 provider portraits). Uploaded to YouTube as NEW public embeddable video b-CF5xjp1sI (title 'Victoria TX Doula & Birth Plan Guide'), thumbnail uploaded + verified (HTTP 200, all 5 template elements present via vision check). Embed added to video-embeds.ts, deployed, live page verified (videoId present, VideoObject schema + duration). Outreach: 1 first-touch email sent to Baby Brilliance (info@babybrilliance.net, msg vps-20260907212941950843); 2 providers (Bianca Harris, Victoria Doulas) blocked â no public email (bornbir in-app / Yelp-only).",
+  "sources": [
+    {
+      "claim": "Video uploaded to YouTube as new public embeddable video",
+      "url": "https://youtu.be/b-CF5xjp1sI",
+      "quote": "YouTube API status: privacyStatus=public, embeddable=True; oembed title 'Victoria TX Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)', author True Joy Birthing; thumbnail maxresdefault.jpg HTTP 200"
+    },
+    {
+      "claim": "Video embedded on live Victoria page with VideoObject schema",
+      "url": "https://truejoybirthing.com/birth-support/victoria-tx/",
+      "quote": "Live page HTTP 200; contains videoId b-CF5xjp1sI, 'VideoObject' schema, and '\"duration\"' field"
+    },
+    {
+      "claim": "Victoria has 3 hospitals and 3 doulas on the page",
+      "url": "https://truejoybirthing.com/birth-support/victoria-tx/",
+      "quote": "cities.ts hospitalDetails: Citizens Birth Center, DeTar Hospital North, DeTar Hospital Navarro; localDoulas: Bianca Harris, Victoria Doulas, Baby Brilliance (Katie Coleman Kopecki)"
+    },
+    {
+      "claim": "Baby Brilliance public contact email confirmed",
+      "url": "https://babybrilliance.net/contact/",
+      "quote": "Baby Brilliance contact page lists: (830) 201-0250 and info@babybrilliance.net, Monday through Friday, 9:00am to 5:00pm. Email confirmed as a public contact address."
+    },
+    {
+      "claim": "Outreach sent to Baby Brilliance; 2 Victoria providers have no public email",
+      "url": "https://truejoybirthing.com/birth-support/victoria-tx/",
+      "quote": "First-touch email sent to info@babybrilliance.net (message_id vps-20260907212941950843). Bianca Harris: only reachable via bornbir.com in-app messaging (no public email). Victoria Doulas: Yelp/Manta listing with phone (361) 298-0575, no public email. Recorded as blocked in contract outreach[] and tjb-city-status.json."
+    }
+  ],
+  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/victoria-tx-city-guide.mp4",
+  "video_mb": 25.8,
+  "youtube_id": "b-CF5xjp1sI",
+  "thumbnail_path": "public/images/yt-thumb-victoria-tx.png",
+  "embed_verified": true,
   "outreach": [
     {
-      "provider": null,
-      "status": null,
+      "provider": "Baby Brilliance (Katie Coleman Kopecki)",
+      "status": "sent",
+      "message_id": "vps-20260907212941950843"
+    },
+    {
+      "provider": "Bianca Harris",
+      "status": "blocked",
+      "message_id": null
+    },
+    {
+      "provider": "Victoria Doulas",
+      "status": "blocked",
       "message_id": null
     }
   ]
