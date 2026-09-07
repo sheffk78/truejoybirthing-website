@@ -10787,7 +10787,7 @@ hospitalDetails: [
     hospitalDetails: [
       {
         name: "Ascension Seton Cedar Park Hospital - Maternity Center",
-        thumbnail: "/images/cedar-park-tx-hospital-ascension-seton.webp",
+        thumbnail: "/images/cedar-park-tx-hospital-ascension-seton-v2.webp",
         address: "1401 Medical Parkway, Cedar Park, TX 78613",
         url: "https://healthcare.ascension.org/locations/texas/txaus/cedar-park-ascension-seton-cedar-park-hospital/departments/maternity-center",
         nicuLevel: "II",
@@ -10801,7 +10801,7 @@ hospitalDetails: [
       },
       {
         name: "Cedar Park Regional Medical Center",
-        thumbnail: "/images/cedar-park-tx-hospital-cedar-park-regional.webp",
+        thumbnail: "/images/cedar-park-tx-hospital-cedar-park-regional-v2.webp",
         address: "1401 Medical Pkwy, Cedar Park, TX 78613",
         url: "https://www.healthgrades.com/hospital/cedar-park-regional-medical-center-a084f4",
         nicuLevel: "II",
@@ -10815,7 +10815,7 @@ hospitalDetails: [
       },
       {
         name: "St. David's Round Rock Medical Center",
-        thumbnail: "/images/cedar-park-tx-hospital-st-davids-round-rock.webp",
+        thumbnail: "/images/cedar-park-tx-hospital-st-davids-round-rock-v2.webp",
         address: "2400 Round Rock Ave, Round Rock, TX 78681",
         url: "https://www.stdavids.com/locations/st-davids-round-rock-medical-center",
         nicuLevel: "II",
