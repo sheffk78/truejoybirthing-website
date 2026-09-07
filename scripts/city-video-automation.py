@@ -134,9 +134,13 @@ def get_city_data(slug):
     # Filter out "no birth centers" entries
     has_birth_center = bool(bc_names) and not any('no birth' in n.lower() for n in bc_names)
     
+    # Pull full state name if present (directive: full names, not abbreviations)
+    state_full = get_field('stateFull') or state
+
     return {
         'city': city,
         'state': state,
+        'state_full': state_full,
         'slug': slug,
         'cost_low': cost_low,
         'cost_high': cost_high,
@@ -288,7 +292,7 @@ def create_scene_data(data):
       narration: "Just found out you're pregnant in {city}? Congratulations! Now you've got eighty tabs open on hospitals, doulas, midwives, insurance. Let's close every single one of them right now.",
       text_content: {{
         city: "{city}",
-        state: "{data['state']}",
+        state: "{data['state_full']}",
         slug: "{slug}",
         subtitle: "Your Birth Planning Guide",
       }},
@@ -301,7 +305,7 @@ def create_scene_data(data):
       narration: "{bridge_narration}",
       text_content: {{
         city: "{city}",
-        state: "{data['state']}",
+        state: "{data['state_full']}",
       }},
     }}'''
     ]
@@ -348,7 +352,7 @@ def create_scene_data(data):
       narration: "{medicaid_line}. Even if you have private insurance, some plans now include doula benefits, it's worth a call to check. The app has resources to help you navigate your options.",
       text_content: {{
         branch: "{'covers' if data['is_medicaid'] else 'no_coverage'}",
-        stateName: "{data['state']}",
+        stateName: "{data['state_full']}",
         headline: "{'Medicaid Covers Doulas' if data['is_medicaid'] else 'Medicaid Does Not Cover Doulas'}",
         detail: "{medicaid_line}",
         policyBadge: "{'Covered' if data['is_medicaid'] else 'Not Covered'}",
@@ -381,7 +385,7 @@ export const {slug.replace('-', '_')}Data: TJBCityVideoData = {{
   video_metadata: {{
     title: "{city} Birth Guide: Hospitals, Doulas, Midwives & More",
     city: "{city}",
-    state: "{st}",
+    state: "{data['state_full']}",
     slug: "{slug}",
     duration_seconds: 0,
     fps: 30,

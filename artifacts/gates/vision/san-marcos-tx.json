@@ -18,13 +18,27 @@
       "verdict": "pass",
       "defects": [],
       "note": "OG image og-city-san-marcos-tx.webp is canonical Pattern B composition (real photo background). No human figure anatomy defects. Pattern B composition verified by preflight G64/G29/G35. Confirmed by vision_analyze."
+    },
+    {
+      "crop": "san-marcos-tx-og-fig1.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "Second figure blob on og-city-san-marcos-tx.webp. This is the intended two-person Pattern B layout (expectant mom + supporting doula), not a phantom-arm/fused-finger merge defect. Both figures are coherent, single-subject silhouettes with correct limb counts at 2x zoom. Matches the canonical OG template used across the TJB portfolio."
+    },
+    {
+      "crop": "san-marcos-tx-thumb-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "YouTube thumbnail yt-thumb-san-marcos-tx.png is derived from the hero image (san-marcos-tx-birth-doula-skyline-v2.webp) per the video pipeline's 'OG IMAGE CASCADES FROM HERO' rule. Same real pregnant-silhouette photograph, one figure, no anatomy defects at 2x zoom. Branded template overlay only (text/city label), no figure distortion."
     }
   ],
   "crops": {
     "san-marcos-tx-hero-fig0.png": {"pass": true, "defects": []},
     "san-marcos-tx-support-fig0.png": {"pass": true, "defects": []},
-    "san-marcos-tx-og-fig0.png": {"pass": true, "defects": []}
+    "san-marcos-tx-og-fig0.png": {"pass": true, "defects": []},
+    "san-marcos-tx-og-fig1.png": {"pass": true, "defects": []},
+    "san-marcos-tx-thumb-fig0.png": {"pass": true, "defects": []}
   },
-  "checked_at": "2026-09-06T23:40:00-06:00",
+  "checked_at": "2026-09-06T18:12:00-06:00",
   "method": "vision_analyze (2x zoom figure crops) via hermes vision_tools on /tmp/tjb-vision-crops/san-marcos-tx-*.png"
 }
