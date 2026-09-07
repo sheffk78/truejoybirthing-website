@@ -259,9 +259,11 @@ const finalTitle = pageTitle.length > 60 && tjbTitle.length >= 50 ? tjbTitle : p
     <!-- Analytics are deferred to after onload, so no preconnect needed -->
     <script type="application/ld+json" set:html={schemaJson} />
     <meta name="google-site-verification" content="_M7E5q4vR4G_fwL43Mj8JqXKbevBWtoVk4vC2msJUvo" />
-    <!-- PostHog Analytics -->
+    <!-- PostHog Analytics — deferred to window load for LCP (CWV audit 2026-09-07: 281KB in critical path
+         pushed LCP to 7.6s on throttled mobile; preload keeps fetch early, exec waits for onload like GA4/Reddit) -->
+    <link rel="preload" href="https://us.i.posthog.com/static/array.js" as="script" crossorigin="anonymous" />
     <script>
-      (function(){
+      window.addEventListener('load', function() {
         var s = document.createElement('script');
         s.async = true;
         s.src = 'https://us.i.posthog.com/static/array.js';
@@ -280,7 +282,7 @@ const finalTitle = pageTitle.length > 60 && tjbTitle.length >= 50 ? tjbTitle : p
           });
         };
         document.head.appendChild(s);
-      })();
+      });
     </script>
 
     <!-- Error Capture → Discord (Kit System Health) -->

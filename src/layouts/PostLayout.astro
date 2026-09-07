@@ -133,9 +133,10 @@ const schemaJson = JSON.stringify(schema);
       gtag('js', new Date());
       gtag('config', 'G-2RVZVN0F9T');
     </script>
-    <!-- PostHog Analytics (mirrors Layout.astro incl. $pageview on astro:page-load) -->
+    <!-- PostHog Analytics (mirrors Layout.astro incl. $pageview on astro:page-load) — deferred to window load for LCP -->
+    <link rel="preload" href="https://us.i.posthog.com/static/array.js" as="script" crossorigin="anonymous" />
     <script>
-      (function(){
+      window.addEventListener('load', function() {
         var s = document.createElement('script');
         s.async = true;
         s.src = 'https://us.i.posthog.com/static/array.js';
@@ -151,7 +152,7 @@ const schemaJson = JSON.stringify(schema);
           });
         };
         document.head.appendChild(s);
-      })();
+      });
     </script>
     <AppDownloadTracker />
     <!-- Reddit Pixel -->
