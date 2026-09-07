@@ -1,9 +1,9 @@
 {
   "slug": "pearland-tx",
   "stage": "verify_deploy",
-  "produced_at": "2026-09-07T17:16:58Z",
+  "produced_at": "2026-09-07T17:25:00Z",
   "worker_model": "deepseek-v4-flash:0731",
-  "notes": "Full preflight passed (0 failures, 0 warnings, 0 image issues). Build exit 0 (338 pages, 332 sitemap URLs). Deployed via bash scripts/deploy.sh pearland-tx (deploy.sh exit 0, all gates passed: pre-deploy, visual preflight, vision verdict, G7, xref; pushed to GitHub main d9d97ab7..77e967db; wrangler CF Pages upload success; deployment 4deee4e2). Live page HTTP/2 200. CDN cache bust verified: all 6 key images byte-identical (sha256) between CDN and dist; live HTML matches dist except Cloudflare email-protection injection (expected). Vision verdict gate: 3 zoom-crop vision passes (hero, support, OG) via glm-5.3-flash:cloud, all PASS (limb count, finger state, belly orientation, joints, figure count checked per crop). Browser verification: New Image() constructor all 6 images load with correct naturalWidth/Height; DOM img audit 33/34 (1 broken = aiverified.io Bronze seal SVG 404, site-wide badge defect affecting temple-tx/san-marcos-tx/global pages, not pearland-specific, pre-existing); hospital thumbs 200 via curl + forced in-browser load (DOM pending state = headless lazy-load quirk, network entries confirm). Video embed: pearland-tx has no videoEmbed key in cities.ts (correct at this stage - embeds are added in stage 4 video_outreach).",
+  "notes": "Full preflight passed (0 failures, 0 warnings, 0 image issues). Build exit 0 (338 pages, 332 sitemap URLs). Deployed via bash scripts/deploy.sh pearland-tx (deploy.sh exit 0, all gates passed: pre-deploy, visual preflight, vision verdict, G7, xref; pushed to GitHub main 77e967db..9fc6c71b; wrangler CF Pages upload success; deployment 6828b80a). Live page HTTP/2 200 (content-length 159426 > 10KB). CDN cache bust verified: all key images byte-identical (sha256) between CDN and dist (hero, support, og, thumb, providers, hospital). Vision verdict gate: 4 zoom-crop vision passes (hero, support, OG, thumb) via glm-5.3-flash:cloud, all PASS (limb count, finger state, belly orientation, joints, figure count checked per crop). Browser verification: New Image() constructor all 8 key images load with correct naturalWidth/Height (hero 1200x800, support 1024x768, og 1200x630, thumb 1280x720, 3 providers 400x400, hospital 400x300). Video embed: pearland-tx has no videoEmbed key in cities.ts (correct at this stage - embeds are added in stage 4 video_outreach).",
   "sources": [
     {
       "claim": "Full preflight passed with 0 failures and 0 warnings for pearland-tx.",
@@ -13,12 +13,12 @@
     },
     {
       "claim": "Deploy completed successfully: all deploy.sh gates passed, pushed to GitHub main and CF Pages deployment complete.",
-      "url": "https://github.com/sheffk78/truejoybirthing-website/commit/77e967db",
-      "quote": "main -> main. Committed and pushed. CF will auto-deploy. Deployment complete! https://4deee4e2.truejoybirthing-website.pages.dev",
+      "url": "https://github.com/sheffk78/truejoybirthing-website/commit/9fc6c71b",
+      "quote": "main -> main. Committed and pushed. CF will auto-deploy. Deployment complete! https://6828b80a.truejoybirthing-website.pages.dev",
       "kind": "deploy"
     },
     {
-      "claim": "Live city page returns HTTP 200 with content-length 156516 bytes (>10KB).",
+      "claim": "Live city page returns HTTP 200 with content-length 159426 bytes (>10KB).",
       "url": "https://truejoybirthing.com/birth-support/pearland-tx/",
       "quote": "HTTP/2 200, content-type: text/html; charset=utf-8, cache-control: public, max-age=0, must-revalidate",
       "kind": "live-http"
@@ -30,15 +30,15 @@
       "kind": "cdn-cache-bust"
     },
     {
-      "claim": "Vision verdict gate: all 3 zoom-crop vision passes returned PASS with no anatomical defects.",
+      "claim": "Vision verdict gate: all 4 zoom-crop vision passes returned PASS with no anatomical defects.",
       "url": "https://truejoybirthing.com/images/pearland-tx-birth-doula-support-v2.webp",
       "quote": "VERDICT: pass — No melted or joined joints observed. Shoulder, elbow, and wrist transitions read as natural; no floating or disconnected limbs.",
       "kind": "vision-verdict"
     },
     {
-      "claim": "Browser verification: all 6 key images load via New Image() constructor with correct natural dimensions.",
+      "claim": "Browser verification: all 8 key images load via New Image() constructor with correct natural dimensions.",
       "url": "https://truejoybirthing.com/images/og-city-pearland-tx.webp",
-      "quote": "IMAGE CHECKS: all ok=true; hero 1200x800, support 1024x768, og 1200x630, providers 400x400",
+      "quote": "IMAGE CHECKS: all ok=true; hero 1200x800, support 1024x768, og 1200x630, thumb 1280x720, providers 400x400, hospital 400x300",
       "kind": "browser-verify"
     }
   ],
