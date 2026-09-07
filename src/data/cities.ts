@@ -762,58 +762,258 @@ export const cities: Record<string, CityData> = {
       { q: "Does True Joy Birthing work with Arlington families?" , a: "Yes. and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Arlington birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href='/birth-plan-template/'>Download Your Birth Plan template</a> and start preparing your way. no signup required." } ],
     nearbyCities: ["abilene-tx", "arlington-tx", "allen-tx"]},
   "austin-tx": {
-    enableBlogResources: true,
-    publishedDate: "2026-06-22",
-    city: "Austin" ,
-    state: "TX" ,
-    slug: "austin-tx" ,
-    costLow: 1000,
-    costHigh: 3000,
-    shelbiServesHere: false,
-    heroImage: "/images/austin-tx-birth-doula-hero-v2.webp",
-    ogImage: "https://truejoybirthing.com/images/og-city-austin-tx-v2.webp",
-    supportSceneImage: "/images/austin-tx-birth-doula-support.webp",
-    supportSceneAlt: "A doula walking alongside a pregnant woman in an Austin park at golden hour",
-    localDoulas: [
-      { name: "Circle Birth" , credential: "Birth Doula" , practice: "Circle Birth" , url: "https://www.circlebirth.com/" , photo: "/images/provider-austin-tx-circle-birth.webp", description: "Family-operated doula agency and statewide network serving four Texas metros: Dallas, Austin, Houston, and San Antonio, plus surrounding communities. Offers birth doula support, daytime and overnight postpartum care, childbirth education, lactation support, and placenta encapsulation.", costRange: "$1,000-$3,000", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Childbirth Education" , "Lactation Support" , "Placenta Encapsulation"], serviceArea: ["Austin, TX" , "Dallas, TX" , "Houston, TX" , "San Antonio, TX"], isVerified: true },
-      { name: "Doulas of Austin" , credential: "Birth Doula" , practice: "Doulas of Austin" , url: "https://www.doulasofaustin.com/" , photo: "/images/provider-austin-tx-doulas-of-austin.webp", description: "Comprehensive Doula Services In Austin, TX & Online Expert, personalized support for birth, postpartum, and newborn care. Based in Austin, Texas and available ...", costRange: "$1,200-$2,800", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Austin, TX"] },
-      { name: "ATX Doulas" , credential: "Birth Doula" , practice: "ATX Doulas" , url: "https://www.atxdoulas.com/" , photo: "/images/provider-austin-tx-atx-doulas.webp", description: "We are an experienced team of passionate birth and postpartum doulas supporting over 200 births per year and providing thousands of hours of postpartum care.", costRange: "$1,200-$3,000", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Austin, TX"] },
-      { name: "Austin Birth Company" , credential: "Birth Doula" , practice: "Austin Birth Company" , url: "https://austinbirthcompany.com/our-doulas/" , photo: "/images/provider-austin-tx-austin-birth-company.webp" , description: "Austin Birth Company is a collective of experienced birth and postpartum doulas serving Austin families. Located at 2111 Dickson Drive, Suite 20, Austin, TX 78704. Call (512) 900-5987.", costRange: "$1,000-$2,500", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Austin, TX"] },
-      { name: "Mama Sana Vibrant Woman" , credential: "Birth Doula" , practice: "Mama Sana Vibrant Woman" , url: "https://www.msvwatx.org/home" , photo: "/images/provider-austin-tx-mama-sana-vibrant-woman.webp", description: "Mama Sana Vibrant Woman is a grassroots 501(c)3 non-profit organization founded in Austin, TX providing free BIPOC doula support, childbirth education, and postpartum care to underserved communities.", costRange: "Free (non-profit)", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Austin, TX"] },
-      { name: "Austin Doula Care" , credential: "Birth Doula" , practice: "Austin Doula Care" , url: "https://www.austindoulacare.com/" , photo: "/images/provider-austin-tx-austin-doula-care.webp" , description: "Austin Doula Care has everything you need for pregnancy, birth, and postpartum. Their team offers childbirth preparation classes, baby feeding and newborn classes, labor support, and individual and group postpartum support. 4.9 stars on Google with 65 reviews.", costRange: "$1,200-$3,000", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Childbirth Education", "Lactation Consulting"], serviceArea: ["Austin, TX"] },
-      { name: "Dream Team Doulas" , credential: "Birth Doula" , practice: "Dream Team Doulas" , url: "https://dreamteamdoulas.com/" , photo: "/images/provider-austin-tx-dream-team-doulas.webp" , description: "Dream Team Doulas serves Austin families with birth and postpartum doula support. 5.0 stars on Google with 43 reviews. Located at 3571 Far W Blvd, Austin, TX. Call (512) 992-3438.", costRange: "$1,200-$2,800", acceptingClients: true, isVerified: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Austin, TX"] },
-      { name: "The Austin Doula" , credential: "Birth Doula" , practice: "The Austin Doula" , url: "https://theaustindoula.com/" , photo: "/images/provider-austin-tx-the-austin-doula.webp" , description: "Austin's Only Home Birthing Doula Collective. 5.0 stars on Google with 28 reviews. Located at 4514 Speedway Unit A, Austin, TX. Call (512) 981-6742.", costRange: "$2,500-$3,800", acceptingClients: true, services: ["Birth Doula"], serviceArea: ["Austin, TX"], isVerified: true } ],
-    culture: "Austin has a strong and vocal birth center community. Alongside major hospital systems, the city is known for its progressive approach to maternal wellness and integrative care. Austin families tend to be well-researched and engaged in their birth options." ,
-    heroLocalDetail: "Austin traffic is no joke when you're 38 weeks pregnant and trying to get to St. David's on South Lamar \u2014 I-35 and MoPac both turn into parking lots during rush, and South Congress backs up from downtown all the way past Ben White. Know your fastest route to the hospital before you need it. Lady Bird Lake's trail is the unofficial third-trimester walk spot in Austin \u2014 flat, shaded, and you'll see about 20 other pregnant people doing the exact same thing." ,
-    providerReviewSection: "What Families Say About Austin Birth Companies\n\nAustin has several well-regarded birth companies, and families tend to choose between them on three things: backup coverage, postpartum support, and price. Austin Birth Company is one of the most established doula collectives in the city, known for experienced postpartum support and a team-based approach; families consistently highlight their responsive communication, flexible scheduling, and depth of postpartum expertise, with built-in backup doula coverage. Doulas of Austin and ATX Doulas are frequently recommended for their high-volume experience (200+ births per year) and structured prenatal support. For value, Austin Doula Care (4.9 stars on Google across 65 reviews) bundles childbirth education and newborn classes with labor support, and Dream Team Doulas (5.0 stars, 43 reviews) is another well-reviewed option. Mama Sana Vibrant Woman stands apart as a free, non-profit BIPOC doula program. Across reviews, the same advice keeps coming up: when comparing Austin birth companies, ask about backup coverage, postpartum visit policies, and whether they accept your insurance or Medicaid." ,
-    insuranceNote: "Whether doula services are covered varies by plan in the Austin area. Some private insurers offer maternal wellness benefits that include doula support. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm." ,
-    medicaidNote: "Yes — Texas Medicaid covers doula services as of 2024, with expanded coverage for prenatal, labor, and postpartum support. Contact your Medicaid managed care plan to find an enrolled doula near you." ,
-    hospitalDetails: [
-      { name: "St. David's South Austin" , thumbnail: "/images/st-davids-south-austin.webp" , address: "901 W Ben White Blvd, Austin, TX 78704" , nicuLevel: "III" , doulaPolicy: "Doulas welcome as part of support team" , medicaid: true , url: "https://www.stdavids.com/locations/st-davids-south-austin-medical-center" , paragraph: "St. David's South Austin Medical Center, in South Austin off Ben White Boulevard, is one of the busiest L&D units in the city with a Level III NICU (stated directly on stdavids.com) and a strong maternal-fetal medicine program. Doulas are generally welcome as part of your support team. If you're delivering at St. David's, bring your birth plan. this is one of the highest-volume birth hospitals in the city and having your preferences written down makes the conversation easier. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to get started." },
-      { name: "Seton Medical Center Austin" , thumbnail: "/images/seton-medical-center-austin.webp" , address: "1201 W 38th St, Austin, TX 78705" , nicuLevel: "III" , doulaPolicy: "Doulas welcome, check current visitor policy" , medicaid: true , url: "https://www.seton.net/locations/seton-medical-center-austin" , paragraph: "Seton Medical Center Austin, in Central Austin near the UT campus, is part of the Ascension/Seton system and has a strong high-risk pregnancy program alongside its Level III NICU (contact the hospital directly for current level verification). Dell Children's Medical Center is right next door for any NICU needs. If we're being real, Austin's hospital systems are big and busy. having a doula who knows the rhythm of your specific hospital makes a real difference when you're already in labor." },
-      { name: "St. David's Women's Center of Texas" , thumbnail: "/images/stdavids-north-austin.webp" , address: "12221 N Mopac Expy, Austin, TX 78758" , nicuLevel: "III" , doulaPolicy: "Doulas welcome as part of support team" , medicaid: true , url: "https://www.stdavids.com/locations/st-davids-womens-center-of-texas" , paragraph: "St. David's Women's Center of Texas, located on the campus of St. David's North Austin Medical Center, is the first dedicated comprehensive women's center in Central Texas. With a Level III NICU, 24/7 neonatology coverage, midwifery program, and maternal-fetal medicine physicians, it handles both routine and high-risk pregnancies. The center is a member of the NIH Maternal-Fetal Medicine Units Network, which means they participate in national research to improve birth outcomes." },
-      { name: "Dell Children's Medical Center" , thumbnail: "/images/dell-childrens-austin.webp" , address: "4900 Mueller Blvd, Austin, TX 78723" , nicuLevel: "IV" , doulaPolicy: "Doulas welcome in NICU, check current visitor policy" , medicaid: true , url: "https://www.dellchildrens.net" , paragraph: "Dell Children's Medical Center, part of Ascension Texas, is a Level IV NICU facility in Central Austin's Mueller neighborhood. It serves as the regional referral center for the most complex neonatal cases and works closely with maternal-fetal medicine specialists. The hospital features a dedicated pediatric emergency department, comprehensive neonatal surgery capabilities, and family-centered care. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." }
-    ],
-    birthCenterDetails: [
-      { name: "Austin Area Birthing Center" , paragraph: "Austin Area Birthing Center is the only freestanding, CABC accredited birth center in Austin, TX. Located at 4100 Duval Rd, Building 2, Suite 101, Austin, TX 78759. They offer low-intervention birth services with two locations. Contact: (512) 346-3224." }
-    ],
-    faqs: [
-      { q: "What hospitals in Austin have the highest level NICU?" , a: "Dell Children's Medical Center has a Level IV NICU, the highest level available. St. David's Women's Center of Texas and Seton Medical Center Austin both have Level III NICUs." },
-      { q: "Does Texas Medicaid cover doula services?" , a: "Texas Medicaid has expanded doula coverage as of 2024. Contact your Medicaid managed care plan to find an enrolled doula near you." },
-      { q: "Can I bring my doula to hospitals in Austin?" , a: "Yes, Austin hospitals generally welcome doulas as part of your labor support team. Call your hospital's maternity unit before your due date to confirm their current policies." },
-      { q: "What should I budget for a doula in Austin?" , a: "Doula costs in Austin typically range from $1,200 to $2,500 depending on experience and services included. Some doulas offer sliding scale or payment plans." },
-      { q: "Which Austin birth company has the best reviews?" , a: "It depends on what you value. Among well-reviewed Austin birth companies, Austin Doula Care holds 4.9 stars on Google across 65 reviews, and Dream Team Doulas holds 5.0 stars across 43 reviews. Austin Birth Company is one of the most established collectives, and Doulas of Austin and ATX Doulas are popular for their high-volume experience. Read each company's reviews with an eye for backup coverage, postpartum visits, and whether they accept your insurance or Medicaid, since those matter more than a star rating alone." }
-    ],
-    nearbyCities: ["waco-tx"],
-    birthStats: {
-      cesareanRate: 34.5,
-      maternalMortalityRate: 28.2,
-      homeBirthRate: 1.4,
-      birthCenterBirthRate: 0.4,
-      dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System",
-    },
-  },
+	enableBlogResources: true,
+	publishedDate: "2026-06-22",
+	city: "Austin",
+	state: "TX",
+	slug: "austin-tx",
+	costLow: 1000,
+	costHigh: 3000,
+	shelbiServesHere: false,
+	heroImage: "/images/austin-tx-birth-doula-hero-v2.webp",
+	ogImage: "https://truejoybirthing.com/images/og-city-austin-tx-v2.webp",
+	supportSceneImage: "/images/austin-tx-birth-doula-support.webp",
+	supportSceneAlt: "A doula walking alongside a pregnant woman in an Austin park at golden hour",
+	localDoulas: [
+		{
+			name: "Circle Birth",
+			credential: "Birth Doula",
+			practice: "Circle Birth",
+			url: "https://www.circlebirth.com/",
+			photo: "/images/provider-austin-tx-circle-birth.webp",
+			description: "Family-operated doula agency and statewide network serving four Texas metros: Dallas, Austin, Houston, and San Antonio, plus surrounding communities. Offers birth doula support, daytime and overnight postpartum care, childbirth education, lactation support, and placenta encapsulation.",
+			costRange: "$1,000-$3,000",
+			acceptingClients: true,
+			services: [
+				"Birth Doula",
+				"Postpartum Doula",
+				"Childbirth Education",
+				"Lactation Support",
+				"Placenta Encapsulation"
+			],
+			serviceArea: [
+				"Austin, TX",
+				"Dallas, TX",
+				"Houston, TX",
+				"San Antonio, TX"
+			],
+			isVerified: true
+		},
+		{
+			name: "Doulas of Austin",
+			credential: "Birth Doula",
+			practice: "Doulas of Austin",
+			url: "https://www.doulasofaustin.com/",
+			photo: "/images/provider-austin-tx-doulas-of-austin.webp",
+			description: "Comprehensive Doula Services In Austin, TX & Online Expert, personalized support for birth, postpartum, and newborn care. Based in Austin, Texas and available ...",
+			costRange: "$1,200-$2,800",
+			acceptingClients: true,
+			services: [
+				"Birth Doula",
+				"Postpartum Doula"
+			],
+			serviceArea: [
+				"Austin, TX"
+			]
+		},
+		{
+			name: "ATX Doulas",
+			credential: "Birth Doula",
+			practice: "ATX Doulas",
+			url: "https://www.atxdoulas.com/",
+			photo: "/images/provider-austin-tx-atx-doulas.webp",
+			description: "We are an experienced team of passionate birth and postpartum doulas supporting over 200 births per year and providing thousands of hours of postpartum care.",
+			costRange: "$1,200-$3,000",
+			acceptingClients: true,
+			services: [
+				"Birth Doula",
+				"Postpartum Doula"
+			],
+			serviceArea: [
+				"Austin, TX"
+			]
+		},
+		{
+			name: "Austin Birth Company",
+			credential: "Birth Doula",
+			practice: "Austin Birth Company",
+			url: "https://austinbirthcompany.com/our-doulas/",
+			photo: "/images/provider-austin-tx-austin-birth-company.webp",
+			description: "Austin Birth Company is a collective of experienced birth and postpartum doulas serving Austin families. Located at 2111 Dickson Drive, Suite 20, Austin, TX 78704. Call (512) 900-5987.",
+			costRange: "$1,000-$2,500",
+			acceptingClients: true,
+			services: [
+				"Birth Doula",
+				"Postpartum Doula"
+			],
+			serviceArea: [
+				"Austin, TX"
+			]
+		},
+		{
+			name: "Mama Sana Vibrant Woman",
+			credential: "Birth Doula",
+			practice: "Mama Sana Vibrant Woman",
+			url: "https://www.msvwatx.org/home",
+			photo: "/images/provider-austin-tx-mama-sana-vibrant-woman.webp",
+			description: "Mama Sana Vibrant Woman is a grassroots 501(c)3 non-profit organization founded in Austin, TX providing free BIPOC doula support, childbirth education, and postpartum care to underserved communities.",
+			costRange: "Free (non-profit)",
+			acceptingClients: true,
+			services: [
+				"Birth Doula",
+				"Postpartum Doula"
+			],
+			serviceArea: [
+				"Austin, TX"
+			]
+		},
+		{
+			name: "Austin Doula Care",
+			credential: "Birth Doula",
+			practice: "Austin Doula Care",
+			url: "https://www.austindoulacare.com/",
+			photo: "/images/provider-austin-tx-austin-doula-care.webp",
+			description: "Austin Doula Care has everything you need for pregnancy, birth, and postpartum. Their team offers childbirth preparation classes, baby feeding and newborn classes, labor support, and individual and group postpartum support. 4.9 stars on Google with 65 reviews.",
+			costRange: "$1,200-$3,000",
+			acceptingClients: true,
+			services: [
+				"Birth Doula",
+				"Postpartum Doula",
+				"Childbirth Education",
+				"Lactation Consulting"
+			],
+			serviceArea: [
+				"Austin, TX"
+			]
+		},
+		{
+			name: "Dream Team Doulas",
+			credential: "Birth Doula",
+			practice: "Dream Team Doulas",
+			url: "https://dreamteamdoulas.com/",
+			photo: "/images/provider-austin-tx-dream-team-doulas.webp",
+			description: "Dream Team Doulas serves Austin families with birth and postpartum doula support. 5.0 stars on Google with 43 reviews. Located at 3571 Far W Blvd, Austin, TX. Call (512) 992-3438.",
+			costRange: "$1,200-$2,800",
+			acceptingClients: true,
+			isVerified: true,
+			services: [
+				"Birth Doula",
+				"Postpartum Doula"
+			],
+			serviceArea: [
+				"Austin, TX"
+			]
+		},
+		{
+			name: "The Austin Doula",
+			credential: "Birth Doula",
+			practice: "The Austin Doula",
+			url: "https://theaustindoula.com/",
+			photo: "/images/provider-austin-tx-the-austin-doula.webp",
+			description: "Austin's Only Home Birthing Doula Collective. 5.0 stars on Google with 28 reviews. Located at 4514 Speedway Unit A, Austin, TX. Call (512) 981-6742.",
+			costRange: "$2,500-$3,800",
+			acceptingClients: true,
+			services: [
+				"Birth Doula"
+			],
+			serviceArea: [
+				"Austin, TX"
+			],
+			isVerified: true
+		}
+	],
+	culture: "Austin has a strong and vocal birth center community. Alongside major hospital systems, the city is known for its progressive approach to maternal wellness and integrative care. Austin families tend to be well-researched and engaged in their birth options.",
+	heroLocalDetail: "Austin traffic is no joke when you're 38 weeks pregnant and trying to get to St. David's on South Lamar — I-35 and MoPac both turn into parking lots during rush, and South Congress backs up from downtown all the way past Ben White. Know your fastest route to the hospital before you need it. Lady Bird Lake's trail is the unofficial third-trimester walk spot in Austin — flat, shaded, and you'll see about 20 other pregnant people doing the exact same thing.",
+	providerReviewSection: "What Families Say About Austin Birth Companies\n\nAustin has several well-regarded birth companies, and families tend to choose between them on three things: backup coverage, postpartum support, and price. Austin Birth Company is one of the most established doula collectives in the city, known for experienced postpartum support and a team-based approach; families consistently highlight their responsive communication, flexible scheduling, and depth of postpartum expertise, with built-in backup doula coverage. Doulas of Austin and ATX Doulas are frequently recommended for their high-volume experience (200+ births per year) and structured prenatal support. For value, Austin Doula Care (4.9 stars on Google across 65 reviews) bundles childbirth education and newborn classes with labor support, and Dream Team Doulas (5.0 stars, 43 reviews) is another well-reviewed option. Mama Sana Vibrant Woman stands apart as a free, non-profit BIPOC doula program. Across reviews, the same advice keeps coming up: when comparing Austin birth companies, ask about backup coverage, postpartum visit policies, and whether they accept your insurance or Medicaid.",
+	insuranceNote: "Whether doula services are covered varies by plan in the Austin area. Some private insurers offer maternal wellness benefits that include doula support. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm.",
+	medicaidNote: "Yes — Texas Medicaid covers doula services as of 2024, with expanded coverage for prenatal, labor, and postpartum support. Contact your Medicaid managed care plan to find an enrolled doula near you.",
+	hospitalDetails: [
+		{
+			name: "St. David's South Austin",
+			thumbnail: "/images/st-davids-south-austin.webp",
+			address: "901 W Ben White Blvd, Austin, TX 78704",
+			nicuLevel: "III",
+			doulaPolicy: "Doulas welcome as part of support team",
+			medicaid: true,
+			url: "https://www.stdavids.com/locations/st-davids-south-austin-medical-center",
+			paragraph: "St. David's South Austin Medical Center, in South Austin off Ben White Boulevard, is one of the busiest L&D units in the city with a Level III NICU (stated directly on stdavids.com) and a strong maternal-fetal medicine program. Doulas are generally welcome as part of your support team. If you're delivering at St. David's, bring your birth plan. this is one of the highest-volume birth hospitals in the city and having your preferences written down makes the conversation easier. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to get started."
+		},
+		{
+			name: "Seton Medical Center Austin",
+			thumbnail: "/images/seton-medical-center-austin.webp",
+			address: "1201 W 38th St, Austin, TX 78705",
+			nicuLevel: "III",
+			doulaPolicy: "Doulas welcome, check current visitor policy",
+			medicaid: true,
+			url: "https://www.seton.net/locations/seton-medical-center-austin",
+			paragraph: "Seton Medical Center Austin, in Central Austin near the UT campus, is part of the Ascension/Seton system and has a strong high-risk pregnancy program alongside its Level III NICU (contact the hospital directly for current level verification). Dell Children's Medical Center is right next door for any NICU needs. If we're being real, Austin's hospital systems are big and busy. having a doula who knows the rhythm of your specific hospital makes a real difference when you're already in labor."
+		},
+		{
+			name: "St. David's Women's Center of Texas",
+			thumbnail: "/images/stdavids-north-austin.webp",
+			address: "12221 N Mopac Expy, Austin, TX 78758",
+			nicuLevel: "III",
+			doulaPolicy: "Doulas welcome as part of support team",
+			medicaid: true,
+			url: "https://www.stdavids.com/locations/st-davids-womens-center-of-texas",
+			paragraph: "St. David's Women's Center of Texas, located on the campus of St. David's North Austin Medical Center, is the first dedicated comprehensive women's center in Central Texas. With a Level III NICU, 24/7 neonatology coverage, midwifery program, and maternal-fetal medicine physicians, it handles both routine and high-risk pregnancies. The center is a member of the NIH Maternal-Fetal Medicine Units Network, which means they participate in national research to improve birth outcomes."
+		},
+		{
+			name: "Dell Children's Medical Center",
+			thumbnail: "/images/dell-childrens-austin.webp",
+			address: "4900 Mueller Blvd, Austin, TX 78723",
+			nicuLevel: "IV",
+			doulaPolicy: "Doulas welcome in NICU, check current visitor policy",
+			medicaid: true,
+			url: "https://www.dellchildrens.net",
+			paragraph: "Dell Children's Medical Center, part of Ascension Texas, is a Level IV NICU facility in Central Austin's Mueller neighborhood. It serves as the regional referral center for the most complex neonatal cases and works closely with maternal-fetal medicine specialists. The hospital features a dedicated pediatric emergency department, comprehensive neonatal surgery capabilities, and family-centered care. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here."
+		}
+	],
+	birthCenterDetails: [
+		{
+			name: "Austin Area Birthing Center",
+			paragraph: "Austin Area Birthing Center is the only freestanding, CABC accredited birth center in Austin, TX. Located at 4100 Duval Rd, Building 2, Suite 101, Austin, TX 78759. They offer low-intervention birth services with two locations. Contact: (512) 346-3224."
+		}
+	],
+	faqs: [
+		{
+			q: "What hospitals in Austin have the highest level NICU?",
+			a: "Dell Children's Medical Center has a Level IV NICU, the highest level available. St. David's Women's Center of Texas and Seton Medical Center Austin both have Level III NICUs."
+		},
+		{
+			q: "Does Texas Medicaid cover doula services?",
+			a: "Texas Medicaid has expanded doula coverage as of 2024. Contact your Medicaid managed care plan to find an enrolled doula near you."
+		},
+		{
+			q: "Can I bring my doula to hospitals in Austin?",
+			a: "Yes, Austin hospitals generally welcome doulas as part of your labor support team. Call your hospital's maternity unit before your due date to confirm their current policies."
+		},
+		{
+			q: "What should I budget for a doula in Austin?",
+			a: "Doula costs in Austin typically range from $1,200 to $2,500 depending on experience and services included. Some doulas offer sliding scale or payment plans."
+		},
+		{
+			q: "Which Austin birth company has the best reviews?",
+			a: "It depends on what you value. Among well-reviewed Austin birth companies, Austin Doula Care holds 4.9 stars on Google across 65 reviews, and Dream Team Doulas holds 5.0 stars across 43 reviews. Austin Birth Company is one of the most established collectives, and Doulas of Austin and ATX Doulas are popular for their high-volume experience. Read each company's reviews with an eye for backup coverage, postpartum visits, and whether they accept your insurance or Medicaid, since those matter more than a star rating alone."
+		}
+	],
+	nearbyCities: [
+		"waco-tx"
+	],
+	birthStats: {
+		cesareanRate: 34.5,
+		maternalMortalityRate: 28.2,
+		homeBirthRate: 1.4,
+		birthCenterBirthRate: 0.4,
+		dataYear: 2023,
+		dataSource: "CDC NCHS, National Vital Statistics System"
+	},
+	lat: 30.2672,
+	lng: -97.7431,
+	midwifeInfo: {
+		paragraph: "Texas licenses Certified Nurse-Midwives (CNMs) through the Texas Board of Nursing, and they practice at hospitals and birth centers throughout the Austin metro, including Round Rock, Cedar Park, and San Marcos. Texas also licenses Certified Professional Midwives (CPMs) through the Texas Department of State Health Services, so families in Austin can choose licensed out-of-hospital birth care at area birth centers or at home with a licensed CPM."
+	}
+},
   "augusta-ga": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
