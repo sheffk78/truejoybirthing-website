@@ -1,0 +1,82 @@
+{
+  "slug": "pearland-tx",
+  "stage": "build",
+  "produced_at": "2026-09-07T17:00:00Z",
+  "worker_model": "glm-5.2-via-subagent",
+  "notes": "BUILD stage complete: 3 providers, 2 hospitals, 1 birth center, hero/support/OG generated from one hero image, preflight passed.",
+  "sources": [
+    {
+      "claim": "Samentha Alarcon - doula serving Pearland TX",
+      "url": "https://www.bornbir.com/samentha-alarcon",
+      "quote": "Bornbir profile listing Pearland service area"
+    },
+    {
+      "claim": "Elissa Hinson CD(DONA) - doula serving Pearland TX",
+      "url": "https://doulamatch.net/profile/33863/elissa-hinson-cd-dona",
+      "quote": "DoulaMatch profile with Pearland in service area"
+    },
+    {
+      "claim": "In Bloom Midwifery - birth center in Pearland TX",
+      "url": "https://www.inbloommidwifery.com",
+      "quote": "Midwifery and home birth services serving Pearland area"
+    },
+    {
+      "claim": "HCA Houston Healthcare Pearland - hospital with L&D",
+      "url": "https://www.hcahealthcare.com/locations/pearland",
+      "quote": "HCA Pearland hospital with labor and delivery services"
+    },
+    {
+      "claim": "Memorial Hermann Pearland Hospital - hospital with L&D",
+      "url": "https://memorialhermann.org/locations/pearland",
+      "quote": "Memorial Hermann Pearland with maternity services"
+    }
+  ],
+  "city_fields": {
+    "city": "Pearland",
+    "state": "TX",
+    "lat": 29.5636,
+    "lng": -95.286,
+    "costLow": 800,
+    "costHigh": 2500,
+    "heroImage": "/images/pearland-tx-birth-doula-skyline-v2.webp",
+    "ogImage": "https://truejoybirthing.com/images/og-city-pearland-tx.webp",
+    "supportSceneImage": "/images/pearland-tx-birth-doula-support-v2.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Pearland: Brazoria County birth support and doula care",
+    "culture": "Pearland is a fast-growing suburb of Houston in Brazoria County, about 15 miles south of downtown Houston. One of the fastest-growing communities in the country, Pearland blends family-friendly neighborhoods with easy access to the Texas Medical Center and the Bay Area medical corridor. Most families deliver at HCA Houston Healthcare Pearland, Memorial Hermann Pearland, or nearby hospitals in Webster and Houston, with a growing birth community of doulas and midwives serving the area.",
+    "medicaidNote": "Yes \u2014 as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Brazoria County's STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring."
+  },
+  "faqs_count": 5,
+  "midwife_paragraph_chars": 553,
+  "doulas": [
+    {
+      "name": "Samentha Alarcon",
+      "url": "https://www.bornbir.com/samentha-alarcon",
+      "photo": "/images/provider-pearland-tx-samentha-alarcon.webp",
+      "description_chars": 649,
+      "costRange": "$800-$2,500"
+    },
+    {
+      "name": "Elissa Hinson",
+      "url": "https://doulamatch.net/profile/33863/elissa-hinson-cd-dona",
+      "photo": "/images/provider-pearland-tx-elissa-hinson.webp",
+      "description_chars": 611,
+      "costRange": "$800-$1,400"
+    },
+    {
+      "name": "In Bloom Midwifery",
+      "url": "https://inbloommidwifery.com/",
+      "photo": "/images/provider-pearland-tx-in-bloom-midwifery.webp",
+      "description_chars": 570,
+      "costRange": "$2,500-$5,000"
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  },
+  "_auto_image_refs": [
+    "/images/pearland-tx-birth-doula-skyline-v2.webp",
+    "https://truejoybirthing.com/images/og-city-pearland-tx.webp",
+    "/images/pearland-tx-birth-doula-support-v2.webp"
+  ]
+}

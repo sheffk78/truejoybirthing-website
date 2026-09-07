@@ -1,0 +1,79 @@
+{
+  "slug": "pearland-tx",
+  "stage": "enrich",
+  "produced_at": "2026-09-07T17:07:40Z",
+  "worker_model": "deepseek-v4-flash:0731",
+  "notes": "Build stage pre-wrote enriched fields. Verified: 3 provider photos are real headshots (color counts 44.6k-50.5k), costRanges market-estimate, 0 'Contact for pricing', hospital paragraphs 1036/1079 chars, birth center paragraph 850 chars. Birth center In Bloom Midwifery site live (HTTP 200) and confirms Pearland service. Hospital thumbnails real building photos (39k-46k colors).",
+  "sources": [
+    {
+      "claim": "In Bloom Midwifery serves Pearland families with home birth and midwife-led care",
+      "url": "https://inbloommidwifery.com/",
+      "quote": "Serving families in Pearland and the surrounding Houston area, our experienced team is dedicated to providing holistic, evidence-based care throughout pregnancy, birth, and postpartum."
+    },
+    {
+      "claim": "Samentha Alarcon owns True Bloom Doula Care LLC offering birth and postpartum doula support in the Houston/Pearland area",
+      "url": "https://www.bornbir.com/samentha-alarcon",
+      "quote": "I am the owner of True Bloom Doula Care LLC, an agency offering birth doula, postpartum doula and student doula support. We have many different packages and price points to honor your vision and budget."
+    },
+    {
+      "claim": "Elissa Hinson (Birth with Faith LLC) is a CD(DONA) doula in Alvin TX serving Pearland with 4 years and 45 births attended",
+      "url": "https://doulamatch.net/profile/33863/elissa-hinson-cd-dona",
+      "quote": "Birth with Faith LLC. Alvin, TX. Birth Fee $25 to $1400. Birth Doula Experience: 4 years and 45 births attended. Attends hospital, birth center, and home births."
+    },
+    {
+      "claim": "HCA Houston Healthcare Pearland is a 49-bed acute care hospital at 11100 Shadow Creek Pkwy with Level IV Trauma Center",
+      "url": "https://www.hcahoustonhealthcare.com/locations/pearland/",
+      "quote": "HCA Houston Pearland is a 49-bed acute care hospital equipped with a Level IV Trauma Center, an accredited Chest Pain Center with Primary PCI and a certified Primary Stroke Center."
+    }
+  ],
+  "providers": [
+    {
+      "name": "Samentha Alarcon",
+      "photo": "/images/provider-pearland-tx-samentha-alarcon.webp",
+      "description_chars": 649,
+      "costRange": "$800-$2,500",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Elissa Hinson",
+      "photo": "/images/provider-pearland-tx-elissa-hinson.webp",
+      "description_chars": 611,
+      "costRange": "$800-$1,400",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "In Bloom Midwifery",
+      "photo": "/images/provider-pearland-tx-in-bloom-midwifery.webp",
+      "description_chars": 570,
+      "costRange": "$2,500-$5,000",
+      "costRange_source": "market-estimate"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "HCA Houston Healthcare Pearland",
+      "paragraph_chars": 1036,
+      "thumbnail": "/images/pearland-tx-hca-pearland.webp",
+      "nicuLevel": "II",
+      "url": "https://www.hcahoustonhealthcare.com/locations/pearland/specialties/womens-care"
+    },
+    {
+      "name": "Memorial Hermann Pearland Hospital",
+      "paragraph_chars": 1079,
+      "thumbnail": "/images/pearland-tx-memorial-hermann-pearland.webp",
+      "nicuLevel": "II",
+      "url": "https://memorialhermann.org/locations/pearland"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "In Bloom Midwifery & Home Birth Services",
+      "paragraph_chars": 850,
+      "thumbnail": "/images/pearland-tx-in-bloom-birth-center.webp"
+    }
+  ],
+  "birthstats": {
+    "dataYear": 2023,
+    "dataSource": "CDC NCHS National Vital Statistics System; Texas DSHS 2023"
+  }
+}
