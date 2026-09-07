@@ -1,14 +1,14 @@
 {
   "slug": "frisco-tx",
   "stage": "build",
-  "produced_at": "2026-09-06T12:20:00Z",
-  "worker_model": "atlas:latest",
+  "produced_at": "2026-09-07T20:45:00Z",
+  "worker_model": "kit-hygiene-phase5",
   "notes": "",
   "sources": [
     {
-      "claim": "Mya Daniel operates Mama Lotus Services in Frisco",
-      "url": "https://www.mamalotusservices.com",
-      "quote": "Mama Lotus Services offers birth and postpartum doula support in Frisco, TX"
+      "claim": "Mya Daniel is a birth and postpartum doula with Mama Lotus Yoga & Doula Services, serving Frisco and McKinney-area families (Collin County)",
+      "url": "https://www.mamalotusservices.com/",
+      "quote": "Serving families in McKinney, Plano, Frisco, Little Elm, Princeton, Farmersville, Fairview, Carrollton, and the Dallas\u2013Fort Worth metroplex"
     },
     {
       "claim": "Frisco Midwifery & Birth Center serves the Rail District",

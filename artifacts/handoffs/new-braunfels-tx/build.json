@@ -1,8 +1,8 @@
 {
   "slug": "new-braunfels-tx",
   "stage": "build",
-  "produced_at": "2026-09-06T18:37:40Z",
-  "worker_model": "glm-5.3-flash",
+  "produced_at": "2026-09-07T20:45:00Z",
+  "worker_model": "kit-hygiene-phase5",
   "notes": "Build stage complete: city data validated, hero/support/OG images verified, title tag added, build passed.",
   "sources": [
     {
@@ -13,7 +13,7 @@
     {
       "claim": "Joyful Beginnings Birth Center is a midwife-led birth center across from CHRISTUS Santa Rosa Hospital",
       "url": "https://www.joyful-beginnings.com/",
-      "quote": "Midwife-led birth center offering personalized, evidence-based prenatal care, water birth, and postpartum care"
+      "quote": "Our office & birth center is conveniently located near the heart of downtown New Braunfels, across the street from Christus Santa Rosa Hospital"
     },
     {
       "claim": "Family Birth Center is a midwife-led birth center in downtown New Braunfels",
