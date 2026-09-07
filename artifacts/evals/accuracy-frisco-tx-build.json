@@ -3,19 +3,60 @@
   "slug": "frisco-tx",
   "stage": "build",
   "model": "glm-5.3-flash:cloud",
-  "sources_checked": 1,
+  "sources_checked": 6,
   "model_errors": 0,
-  "unsupported": 1,
+  "unsupported": 0,
   "not_enough_info_pct": 0,
-  "verdict": "rejected",
+  "verdict": "approved",
   "results": [
     {
       "index": 0,
-      "verdict": "UNSUPPORTED",
-      "reason": "source URL domain does not resolve \u2014 fabricated or dead source (deterministic check)",
-      "claim": "Frisco General Hospital has a Level IV NICU and 9,000 annual births",
-      "url": "https://www.frisco-general-testdomain.example.com"
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible homepage text for mamalotusservices.com and directly corroborates the claim's service area, listing McKinney, Frisco, and other Collin County/North Dallas cities served.",
+      "claim": "Mya Daniel is a birth and postpartum doula with Mama Lotus Yoga & Doula Services, serving Frisco and McKinney-area families (Collin County)",
+      "url": "https://www.mamalotusservices.com/",
+      "quote": "Serving families in McKinney, Plano, Frisco, Little Elm, Princeton, Farmersville, Fairview, Carrollton, and the Dallas\u2013Fort Worth metroplex"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the Frisco Midwifery & Birth Center's own domain and directly states the center is located in Frisco's Rail District, supporting the claim that it serves that area.",
+      "claim": "Frisco Midwifery & Birth Center serves the Rail District",
+      "url": "https://www.friscobirthcenter.com",
+      "quote": "Frisco Midwifery & Birth Center is located in the heart of Frisco's Rail District"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote references a Level III NICU on the Medical City Healthcare domain, which plausibly covers Medical City Frisco and directly supports the claim.",
+      "claim": "Medical City Frisco has a Level III NICU",
+      "url": "https://www.medicalcityhealthcare.com",
+      "quote": "6-bed Level III NICU"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The domain baylorfrisco.com matches Baylor Scott & White Frisco, and the quote directly states the hospital is a CMS Birthing-Friendly designated hospital, which supports the claim.",
+      "claim": "Baylor Scott & White Frisco is CMS Birthing-Friendly",
+      "url": "https://baylorfrisco.com",
+      "quote": "CMS Birthing-Friendly designated hospital"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly states DFW doula costs range from $1,200 to $2,500, matching the claim, and the birth-related domain bornbir.com plausibly hosts content about doula pricing.",
+      "claim": "DFW doulas charge $1200-2500",
+      "url": "https://bornbir.com",
+      "quote": "market estimates for doula costs in DFW range from $1,200 to $2,500"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the official DSHS Texas website and directly states that DSHS licenses Certified Professional Midwives, matching the claim.",
+      "claim": "Texas licenses CPMs through DSHS",
+      "url": "https://www.dshs.texas.gov",
+      "quote": "Texas Department of State Health Services licenses Certified Professional Midwives"
     }
   ],
-  "checked_at": "2026-09-07T12:23:24-06:00"
+  "checked_at": "2026-09-07T14:40:34-06:00"
 }

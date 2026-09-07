@@ -1,0 +1,23 @@
+{
+  "slug": "frisco-tx",
+  "verdicts": [
+    {
+      "crop": "frisco-tx-hero-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "frisco-tx-support-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "frisco-tx-og-fig0.png",
+      "verdict": "pass",
+      "defects": [
+        "crop bbox isolated head/shoulders only \u2014 full-figure OG check done directly on og-city-frisco-tx.webp right column: anatomy clean, no letterbox bars; centering accepted by og-template-compliance gate"
+      ]
+    }
+  ],
+  "checked_at": "2026-09-07T14:45:41-06:00"
+}
