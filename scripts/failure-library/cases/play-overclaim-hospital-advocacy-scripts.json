@@ -1,0 +1,18 @@
+{
+  "id": "play-overclaim-hospital-advocacy-scripts",
+  "date": "2026-09-08",
+  "stage": "release",
+  "brand": "tjb-mobile",
+  "failure": "2026-07-01 Google Play rejection: store short description claimed 'hospital advocacy scripts' — a feature that does not exist. Listing copy shipped with zero automated overclaim check. Now a permanent release-gate detector (scripts/release-gate.py, commit 4e8ef8ff).",
+  "detector": "release-gate",
+  "replay": {
+    "type": "release_gate_selftest",
+    "expect": "caught",
+    "fixture": {
+      "gate_script": "../../TrueJoyBirthing-Mobile/scripts/release-gate.py",
+      "expect_caught": ["store-listing/banned-phrase"]
+    }
+  },
+  "source_commit": "968f0da3",
+  "status": "active"
+}

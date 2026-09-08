@@ -1,0 +1,33 @@
+{
+  "last_run": {
+    "date": "2026-09-08",
+    "command": "python3 scripts/failure-library.py replay",
+    "ran": 11,
+    "all_caught": true,
+    "survivors": [],
+    "message": "replay suite: 11 cases, ALL CAUGHT \u2014 change is safe",
+    "exit_code": 0,
+    "recorded_by": "JOB-20260908-TJB-REPLAY-AND-MOBILE-SCORECARD"
+  },
+  "history": [
+    {
+      "date": "2026-09-08",
+      "ran": 10,
+      "all_caught": true,
+      "survivors": [],
+      "note": "pre-audit directive run (10 cases)",
+      "cases": [
+        {"id": "accuracy-fabricated-domain", "caught": true},
+        {"id": "accuracy-partial-quote-myadaniel", "caught": true},
+        {"id": "dup-key-publisheddate-oceanside", "caught": true},
+        {"id": "qclive-comma-cityname-falseflag", "caught": true},
+        {"id": "slop-cutting-edge-garden-grove-ca", "caught": true},
+        {"id": "slop-cutting-edge-irvine-ca", "caught": true},
+        {"id": "slop-game-changer-bakersfield-ca", "caught": true},
+        {"id": "slop-game-changer-worcester-ma", "caught": true},
+        {"id": "vision-phantom-arm-rockville-md", "caught": true},
+        {"id": "voice-fear-framing-culture", "caught": true}
+      ]
+    }
+  ]
+}

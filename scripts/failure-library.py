@@ -273,6 +273,28 @@ def replay_accuracy_eval(case: dict) -> dict:
     return {"caught": caught, "detail": "verdict=" + str(verdict) + "; " + str(result.get("reason", ""))[:200]}
 
 
+def replay_release_gate(case: dict) -> dict:
+    """Run the TJB mobile release-gate self-test and require the expected
+    detectors to fire. Proves store-submission rejection classes stay caught."""
+    fx = case["replay"]["fixture"]
+    gate = (Path(__file__).resolve().parent / fx["gate_script"]).resolve()
+    if not gate.exists():
+        return {"caught": False, "detail": f"release gate not found: {gate}"}
+    r = subprocess.run([sys.executable, str(gate), "--self-test"],
+                       capture_output=True, text=True, timeout=120)
+    try:
+        out = json.loads(r.stdout)
+    except json.JSONDecodeError:
+        return {"caught": False, "detail": f"self-test unparseable: {r.stdout[:200]}"}
+    caught_list = out.get("caught", [])
+    missing = [e for e in fx.get("expect_caught", []) if e not in caught_list]
+    ok = r.returncode == 0 and not missing and out.get("ok") is True
+    detail = f"gate self-test exit {r.returncode}, caught={caught_list}"
+    if missing:
+        detail += f"; MISSING {missing}"
+    return {"caught": ok, "detail": detail}
+
+
 REPLAYERS = {
     "slop": replay_slop,
     "contract": replay_contract,
@@ -280,6 +302,7 @@ REPLAYERS = {
     "voice_eval": replay_voice_eval,
     "accuracy_eval": replay_accuracy_eval,
     "qc_live": replay_qc_live,
+    "release_gate_selftest": replay_release_gate,
 }
 
 
