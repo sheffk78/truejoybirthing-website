@@ -2,9 +2,9 @@
   "slug": "bellevue-wa",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
-  "exit_code": 1,
-  "passed": 8,
-  "failed": 1,
+  "exit_code": 0,
+  "passed": 9,
+  "failed": 0,
   "skipped": 0,
   "results": {
     "pre_render_gate": {
@@ -37,11 +37,11 @@
     },
     "provider_photo_quality": {
       "status": "PASS",
-      "detail": "all 4 provider photos are real images (>5KB, >100 colors)"
+      "detail": "all 5 provider photos are real images (>5KB, >100 colors)"
     },
     "video_content_city_match": {
-      "status": "FAIL",
-      "detail": "G67: could not read city name for bellevue-wa from cities.ts"
+      "status": "PASS",
+      "detail": "G67: video overview scene names this city ('bellevue' found; frame t=22s)"
     }
   }
 }

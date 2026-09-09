@@ -3,52 +3,44 @@
   "slug": "bellevue-wa",
   "stage": "video_outreach",
   "model": "glm-5.3-flash:cloud",
-  "sources_checked": 5,
+  "sources_checked": 4,
   "model_errors": 0,
   "unsupported": 0,
-  "not_enough_info_pct": 0,
+  "not_enough_info_pct": 75,
   "verdict": "approved",
   "results": [
     {
       "index": 0,
       "verdict": "SUPPORTED",
-      "reason": "The quote is YouTube video metadata for the exact video ID in the URL, directly stating privacy is 'public' and 'embeddable: True', which fully supports the claim.",
-      "claim": "YouTube video public+embeddable",
-      "url": "https://youtu.be/ijphg2h3578",
-      "quote": "privacy: public, embeddable: True, madeForKids: False"
+      "reason": "The quote is an HTML attribute (data-video-id) that directly evidences an embedded video on the truejoybirthing.com Bellevue city page, matching the claim.",
+      "claim": "Video embedded on live page",
+      "url": "https://truejoybirthing.com/birth-support/bellevue-wa/",
+      "quote": "data-video-id=ijphg2h3578"
     },
     {
       "index": 1,
-      "verdict": "SUPPORTED",
-      "reason": "The URL is the maxresdefault thumbnail endpoint for video ijphg2h3578, and the quoted HTTP 200 response with a substantial 169KB payload confirms a real thumbnail image exists (was uploaded) for that video ID.",
-      "claim": "Thumbnail uploaded to video ID",
-      "url": "https://img.youtube.com/vi/ijphg2h3578/maxresdefault.jpg",
-      "quote": "HTTP 200, size 169093 bytes"
+      "verdict": "NOT_ENOUGH_INFO",
+      "reason": "The quote is only an internal message ID with no content, recipient, or subject matter, so it cannot confirm that outreach was sent to Expecting Joy.",
+      "claim": "Outreach sent to Expecting Joy",
+      "url": "hello@expectingjoy.com",
+      "quote": "message_id=vps-20260909185709022720"
     },
     {
       "index": 2,
-      "verdict": "SUPPORTED",
-      "reason": "The quote comes from a TJB outreach send log whose subject matches the claim, and it lists exactly three provider email addresses with 'status: sent, delivery_verified: true', directly supporting 'Outreach delivered (3 providers)'.",
-      "claim": "Outreach delivered (3 providers)",
-      "url": "file:///Users/socializerender/.hermes/logs/tjb-outreach-send-log.jsonl",
-      "quote": "status: sent, delivery_verified: true for hello@expectingjoy.com, klein.mariola@gmail.com, info@bodyenmotion.com"
+      "verdict": "NOT_ENOUGH_INFO",
+      "reason": "The quote is only a bare message identifier with no content indicating outreach was sent to Mariola Klein, so it cannot confirm or refute the claim.",
+      "claim": "Outreach sent to Mariola Klein",
+      "url": "klein.mariola@gmail.com",
+      "quote": "message_id=vps-20260909185800822556"
     },
     {
       "index": 3,
-      "verdict": "SUPPORTED",
-      "reason": "The quote 'ALL GATES PASSED - render safe to proceed' is plausible output for a pre-render-gate.sh script and directly supports the claim that the pre-render gate passed.",
-      "claim": "Pre-render gate passed",
-      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/scripts/pre-render-gate.sh",
-      "quote": "ALL GATES PASSED - render safe to proceed"
-    },
-    {
-      "index": 4,
-      "verdict": "SUPPORTED",
-      "reason": "The quoted city-audit.json entry for bellevue-wa explicitly shows score:100 and video:true (plus has_video:true), directly matching the claim's audit values and matching the TrueJoyBirthing city-audit file context.",
-      "claim": "City audit updated video:true score:100",
-      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/city-audit.json",
-      "quote": "bellevue-wa score:100 video:true outreach:true has_video:true in_progress:false"
+      "verdict": "NOT_ENOUGH_INFO",
+      "reason": "The quote is only a message ID with no reference to Heng Ma, the recipient, or the outreach content, so it cannot confirm the claim.",
+      "claim": "Outreach sent to Heng Ma",
+      "url": "info@bodyenmotion.com",
+      "quote": "message_id=vps-20260909185853899232"
     }
   ],
-  "checked_at": "2026-09-09T13:05:56-06:00"
+  "checked_at": "2026-09-09T13:11:48-06:00"
 }

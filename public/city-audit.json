@@ -3789,7 +3789,11 @@
     "blocked_reason": null,
     "started_at": "2026-09-08T23:30:31Z",
     "slot": "",
-    "url": "https://truejoybirthing.com/birth-support/bellevue-wa/"
+    "url": "https://truejoybirthing.com/birth-support/bellevue-wa/",
+    "outreach_sent_at": "2026-09-09T18:57:00Z",
+    "outreach_provider_count": 3,
+    "has_video": true,
+    "video_id": "ijphg2h3578"
   },
   {
     "slug": "arvada-co",

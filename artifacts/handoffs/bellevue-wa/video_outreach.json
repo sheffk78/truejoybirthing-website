@@ -1,24 +1,41 @@
 {
   "slug": "bellevue-wa",
   "stage": "video_outreach",
-  "produced_at": "2026-09-09T19:05:00Z",
-  "worker_model": "glm-5.3-flash (delegated subagent)",
-  "notes": "Full video_outreach pipeline executed: scene data (gold-standard manual), Voxtral/Shelbi TTS (24000Hz verified), pre-render gate ALL PASSED, render 34MB/261.6s, YouTube upload public+embeddable, thumbnail uploaded via API (169KB live), embed in video-embeds.ts, rebuild+deploy, outreach sent to 3 providers (verified delivered), dashboard (city-audit/status/registry) updated.",
+  "produced_at": "2026-09-09T13:11:23.042527",
+  "worker_model": "glm-5.2-parent+subagent",
+  "notes": "Video already existed (ijphg2h3578). Deployed with embed + VideoObject schema. 3 outreach emails sent (Expecting Joy, Mariola Klein, Heng Ma). 2 providers form-only (Northshore, Angela Lygren) registered in doulamatch tracker. Dashboard updated.",
   "sources": [
-    {"claim": "YouTube video public+embeddable", "url": "https://youtu.be/ijphg2h3578", "quote": "privacy: public, embeddable: True, madeForKids: False"},
-    {"claim": "Thumbnail uploaded to video ID", "url": "https://img.youtube.com/vi/ijphg2h3578/maxresdefault.jpg", "quote": "HTTP 200, size 169093 bytes"},
-    {"claim": "Outreach delivered (3 providers)", "url": "file:///Users/socializerender/.hermes/logs/tjb-outreach-send-log.jsonl", "quote": "status: sent, delivery_verified: true for hello@expectingjoy.com, klein.mariola@gmail.com, info@bodyenmotion.com"},
-    {"claim": "Pre-render gate passed", "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/scripts/pre-render-gate.sh", "quote": "ALL GATES PASSED - render safe to proceed"},
-    {"claim": "City audit updated video:true score:100", "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/city-audit.json", "quote": "bellevue-wa score:100 video:true outreach:true has_video:true in_progress:false"}
+    {
+      "claim": "Video embedded on live page",
+      "url": "https://truejoybirthing.com/birth-support/bellevue-wa/",
+      "quote": "data-video-id=ijphg2h3578"
+    },
+    {
+      "claim": "Outreach sent to Expecting Joy",
+      "url": "hello@expectingjoy.com",
+      "quote": "message_id=vps-20260909185709022720"
+    },
+    {
+      "claim": "Outreach sent to Mariola Klein",
+      "url": "klein.mariola@gmail.com",
+      "quote": "message_id=vps-20260909185800822556"
+    },
+    {
+      "claim": "Outreach sent to Heng Ma",
+      "url": "info@bodyenmotion.com",
+      "quote": "message_id=vps-20260909185853899232"
+    }
   ],
-  "video_file": "video/remotion/out/bellevue-wa-city-guide.mp4",
-  "video_mb": 34,
+  "video_file": "exists (33.9MB local render)",
+  "video_mb": null,
   "youtube_id": "ijphg2h3578",
-  "thumbnail_path": "public/images/yt-thumb-bellevue-wa.png",
+  "thumbnail_path": "public/images/yt-thumb-bellevue-wa.webp",
   "embed_verified": true,
   "outreach": [
-    {"provider": "Expecting Joy Doula Services", "status": "sent", "message_id": "vps-20260909185709022720"},
-    {"provider": "Mariola Klein (Bellevue Doula)", "status": "sent", "message_id": "vps-20260909185800822556"},
-    {"provider": "Heng Ma (Body Enmotion Massage and Doula Care)", "status": "sent", "message_id": "vps-20260909185853899232"}
+    {
+      "provider": null,
+      "status": null,
+      "message_id": null
+    }
   ]
 }

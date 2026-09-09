@@ -455,8 +455,18 @@ def _local_video_outreach_gates(slug: str) -> dict:
         start = city_text.find(marker)
         if start >= 0:
             tail = city_text[start + len(marker):]
-            nxt = re.search(r'\n\s*"[a-z][a-z-]+-[a-z]{2}":\s*\{', tail)
-            block = city_text[start:start + len(marker) + (nxt.start() if nxt else 5000)]
+            # Use brace-depth matching for accurate block boundaries
+            depth = 1
+            block_end = 5000
+            for i, ch in enumerate(tail):
+                if ch == '{':
+                    depth += 1
+                elif ch == '}':
+                    depth -= 1
+                    if depth == 0:
+                        block_end = i + 1
+                        break
+            block = city_text[start:start + len(marker) + block_end]
             # Extract all provider photo paths
             photo_refs = re.findall(r'photo\s*:\s*["\']([^"\']+)', block)
             placeholder_count = 0
