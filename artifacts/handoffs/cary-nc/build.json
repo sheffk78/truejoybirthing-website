@@ -1,0 +1,118 @@
+{
+  "slug": "cary-nc",
+  "stage": "build",
+  "produced_at": "2026-09-08T23:06:00Z",
+  "worker_model": "deepseek-v4-flash:0731",
+  "notes": "Skeleton-to-build conversion for cary-nc using prepared research JSON. All provider/hospital/birth-center claims trace to research/skeleton-sprint-2026-09-08/cary-nc.json sources.",
+  "sources": [
+    {
+      "claim": "Haven Women's Health and Birth Center is a CNM-led, CABC-accredited birth center in Cary at 226 Ashville Ave, Suite 20, with water birth and a 5% cesarean rate for clients who begin labor there.",
+      "url": "https://www.havenhealthandbirth.com/",
+      "quote": "Haven Women's Health and Birth Center is a midwifery-led birth center in Cary, NC founded in 2024 by Sara Fawson, who has worked in women's health and birth care in the Triangle since 2018. The center reports 200+ babies delivered since 2004 and a 5% cesarean rate for mothers who begin labor at the birth center.",
+      "kind": "birth_center"
+    },
+    {
+      "claim": "WakeMed Cary Hospital at 1900 Kildaire Farm Road offers a full maternity program with a Level III NICU and free guided tours of the birthing center.",
+      "url": "https://www.wakemed.org/find-a-location/cary-hospital/services-and-specialties/pregnancy-and-childbirth",
+      "quote": "WakeMed Cary Hospital is the inpatient hospital serving western Wake County and offers a full maternity program with labor and delivery, postpartum care, and lactation support. The hospital has a Level III NICU that provides care for babies needing short-term intensive care.",
+      "kind": "hospital"
+    },
+    {
+      "claim": "UNC Health Rex's Rex Women's Center in Raleigh delivers more babies than any other hospital in the region, holds a Level IV NICU, and counts a doula as one of three bedside visitors.",
+      "url": "https://www.rexhealth.com/rh/care-treatment/womens-health/maternity-services/labor-delivery/",
+      "quote": "UNC Health Rex's Rex Women's Center in Raleigh is a major maternity destination in the Triangle, reporting that it delivers more babies than any other hospital in the region. The Rex Women's Center visitation policy allows three visitors at the bedside, and a doula is considered one of the three visitors.",
+      "kind": "hospital"
+    },
+    {
+      "claim": "Triangle Doula by Nature is a birth doula practice serving Cary and the NC Triangle and Triad, supporting hospital, home, water, and birth center births.",
+      "url": "https://www.triangledoulabynature.com/",
+      "quote": "Triangle Doula by Nature is a birth doula practice serving families in Cary and across the NC Triangle and Triad, offering prenatal, labor, and postpartum support. The practice supports a wide range of birth goals including hospital, home, water, and birth center births, as well as VBAC and cesarean births.",
+      "kind": "provider"
+    },
+    {
+      "claim": "Mariam Lam is a DONA International certified birth doula serving the Durham and Triangle area, having supported 50 families over 6 years with a $900 birth fee.",
+      "url": "https://www.hellomeela.com/cary-nc/doulas/",
+      "quote": "Mariam Lam is a DONA International certified birth doula serving the Durham and Triangle area, listed among birth doulas available to Cary families on the Meela directory. She has supported 50 families over 6 years and lists a $900 birth fee on her profile.",
+      "kind": "provider"
+    },
+    {
+      "claim": "Amanda Petry is a Registered Nurse and International Board Certified Lactation Consultant based in Cary who provides in-home infant feeding support.",
+      "url": "https://www.bornbir.com/amanda-petry",
+      "quote": "Amanda Petry is a Registered Nurse and International Board Certified Lactation Consultant based in Cary, NC who provides personalized infant feeding support from pregnancy through the breastfeeding journey. She offers in-home visits for reassurance and troubleshooting.",
+      "kind": "provider"
+    },
+    {
+      "claim": "North Carolina licenses CNMs through the NC Board of Nursing; CPMs are not licensed, and a 2023 state law ended physician supervision for experienced CNMs.",
+      "url": "https://www.homebirthpartners.com/directory/north-carolina/",
+      "quote": "North Carolina licenses Certified Nurse-Midwives (CNMs) through the NC Board of Nursing; Certified Professional Midwives (CPMs) are not currently licensed in the state, so only CNMs may legally attend births, including planned home births where they choose to offer them. A 2023 state law (S.L. 2023-14) ended the decades-old physician supervision requirement for CNMs with at least 24 months and 4,000 hours of practice.",
+      "kind": "midwife_info"
+    },
+    {
+      "claim": "In 2023, 31% of all live births in North Carolina were cesarean deliveries, with a low-risk cesarean rate of 25%, per KFF data based on CDC NCHS.",
+      "url": "https://www.kff.org/interactive/womens-health-profiles/north-carolina/maternal-infant-health/",
+      "quote": "31% of all live births in North Carolina in 2023 (KFF, based on CDC NCHS National Vital Statistics System)",
+      "kind": "birth_stats"
+    },
+    {
+      "claim": "Cary has a highly educated population with 70.5% of residents 25+ holding a bachelor's degree or higher and a median household income of $134,905.",
+      "url": "https://www.census.gov/quickfacts/fact/table/carytownnorthcarolina/PST045225",
+      "quote": "The town has a highly educated population, with 70.5% of residents age 25 and older holding a bachelor's degree or higher and a median household income of $134,905 (2020-2024 ACS, U.S. Census Bureau QuickFacts).",
+      "kind": "culture"
+    }
+  ],
+  "city_fields": {
+    "city": "Cary",
+    "state": "NC",
+    "lat": 35.7915,
+    "lng": -78.7811,
+    "costLow": 800,
+    "costHigh": 2500,
+    "heroImage": "/images/cary-nc-birth-doula-skyline-v2.webp",
+    "ogImage": "https://truejoybirthing.com/images/og-city-cary-nc.webp",
+    "supportSceneImage": "/images/cary-nc-birth-doula-support-v2.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Cary: North Carolina Triangle birth support and doula care",
+    "culture": "Cary is a fast-growing town in the Research Triangle region of North Carolina, located between Raleigh and Research Triangle Park, and known for its family-oriented neighborhoods, highly rated schools, and extensive parks and greenways. The town has a highly educated population, with 70.5% of residents age 25 and older holding a bachelor's degree or higher and a median household income of $134,905. Expectant families in Cary benefit from proximity to multiple maternity options, including the local WakeMed Cary Hospital, the larger UNC Health Rex in nearby Raleigh, and a freestanding birth center within the town itself. The broader Triangle is home to a strong midwifery and doula community, with the UNC School of Nursing and UNC Midwifery program contributing to a deep CNM talent pool.",
+    "medicaidNote": "No - North Carolina does not yet have statewide Medicaid doula coverage as of 2026, though doula benefits have been studied and pilots are emerging in some managed-care plans. Most Cary families pay out of pocket for doula support. Call your Medicaid managed-care plan and ask directly whether doula services are covered. You can also check with local community organizations that may offer reduced-cost or sliding-scale doula support."
+  },
+  "faqs_count": 6,
+  "midwife_paragraph_chars": 458,
+  "doulas": [
+    {
+      "name": "Triangle Doula by Nature",
+      "url": "https://www.triangledoulabynature.com/",
+      "photo": "/images/provider-cary-nc-triangle-doula.webp",
+      "description_chars": 309,
+      "costRange": "$800-$2,500"
+    },
+    {
+      "name": "Mariam Lam",
+      "url": "https://www.hellomeela.com/cary-nc/doulas/",
+      "photo": "/images/provider-cary-nc-mariam-lam.webp",
+      "description_chars": 257,
+      "costRange": "$800-$900"
+    },
+    {
+      "name": "Amanda Petry",
+      "url": "https://www.bornbir.com/amanda-petry",
+      "photo": "/images/provider-cary-nc-amanda-petry.webp",
+      "description_chars": 364,
+      "costRange": "$800-$950"
+    },
+    {
+      "name": "Sacred Haven Midwifery",
+      "url": "https://www.sacredhavenmidwifery.com/",
+      "photo": "/images/provider-cary-nc-sacred-haven.webp",
+      "description_chars": 206,
+      "costRange": "$2,500-$4,500"
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  },
+  "_auto_image_refs": [
+    "/images/cary-nc-birth-doula-skyline-v2.webp",
+    "https://truejoybirthing.com/images/og-city-cary-nc.webp",
+    "/images/cary-nc-birth-doula-support-v2.webp"
+  ]
+}

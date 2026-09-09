@@ -1,0 +1,137 @@
+{
+  "slug": "bellevue-wa",
+  "stage": "enrich",
+  "produced_at": "2026-09-09T18:37:47Z",
+  "worker_model": "deepseek-v4-flash:0731",
+  "notes": "",
+  "sources": [
+    {
+      "kind": "provider",
+      "claim": "Expecting Joy Doula Services is a Seattle-area birth and parenting company; provider photo sourced from its team image.",
+      "url": "https://www.expectingjoy.com/",
+      "quote": "Expecting Joy is a birth & parenting services company that has been serving families in the Seattle area since 2011."
+    },
+    {
+      "kind": "provider",
+      "claim": "Mariola Klein (Bellevue Doula) publishes a $2,500 birth doula fee; headshot sourced from her DoulaMatch profile.",
+      "url": "http://www.bellevuedoula.com/birth-doula.html",
+      "quote": "The charge for my doula services is $2500. The initial consultation is free."
+    },
+    {
+      "kind": "provider",
+      "claim": "Angela Lygren is a Certified Professional Midwife (CPM) practicing in Bellevue, WA.",
+      "url": "https://homebirthpartners.com/midwife/angela-dawn-lygren-bellevue-wa/",
+      "quote": "Angela Dawn Lygren is listed as a Certified Professional Midwife (CPM) in Bellevue, Washington."
+    },
+    {
+      "kind": "provider",
+      "claim": "Northshore Midwives & Lactation Consulting is led by Andrea, an LM+IBCLC, accepting Medicaid; photo sourced from staff images.",
+      "url": "https://www.northshoremidwives.com/bellevue-lactation-consultant-midwife-doula-postpartum-doula/",
+      "quote": "Andrea being the first, and currently one of the only, licensed midwives who is also an International Board Certified Lactation Consultant (IBCLC) in Washington State. Since 2007, Andrea has assisted thousands of families"
+    },
+    {
+      "kind": "provider",
+      "claim": "Heng Ma (Body Enmotion) is an IBCLC, LMT, and birth/postpartum doula who has supported 5,000+ families since 2016; photo sourced from her site.",
+      "url": "https://www.bodyenmotion.com/hengma",
+      "quote": "My name is Heng, and I'm the founder of Body Enmotion Massage LLC, where we specialize in holistic care for new parents and their newborns. I am a licensed massage therapist, certified lactation consultant, and experienced postpartum doula. Since 2016, I've had the honor of supporting over 5,000 families"
+    },
+    {
+      "kind": "hospital",
+      "claim": "Overlake Childbirth Center offers private birthing suites, a Level III NICU, and the TeamBirth collaborative model that welcomes doulas.",
+      "url": "https://www.overlakehospital.org/services/childbirth-center",
+      "quote": "We use the TeamBirth philosophy, which puts you, your safety, preferences and goals, at the center of every decision. A ... Level III NICU for babies who need more complex care."
+    },
+    {
+      "kind": "birth_center",
+      "claim": "Puget Sound Midwives & Birth Center is a freestanding birth center in Kirkland that has welcomed 6,000+ babies.",
+      "url": "https://www.birthcenter.com/",
+      "quote": "With over 6,000 babies welcomed, you can rest assured that you'll receive personalized attention from our experienced, licensed midwives."
+    },
+    {
+      "kind": "birth_center",
+      "claim": "Eastside Birth Center PS is a real, operating freestanding birth center at 14700 NE 8th St, Suite 115, Bellevue, WA.",
+      "url": "https://birthingway.org/eastside-birth-center-ps/",
+      "quote": "Christine Thain, LM, CPM 14700 NE 8th Street Suite 115 Bellevue, WA 425-746-5566 eastsidebirthcenter.com"
+    },
+    {
+      "kind": "medicaid",
+      "claim": "Washington Apple Health (Medicaid) covers birth doula services via the HCA doula benefit.",
+      "url": "https://www.hca.wa.gov/billers-providers-partners/program-information-providers/doulas",
+      "quote": "Find information on the Apple Health (Medicaid) birth doula benefit including background, covered services, provider enrollment, how to stay updated, and more."
+    }
+  ],
+  "providers": [
+    {
+      "name": "Expecting Joy Doula Services",
+      "photo": "/images/provider-bellevue-wa-expecting-joy.webp",
+      "description_chars": 498,
+      "costRange": "$2,000-$2,500",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Mariola Klein (Bellevue Doula)",
+      "photo": "/images/provider-bellevue-wa-mariola-klein.webp",
+      "description_chars": 473,
+      "costRange": "$2,500-$2,500",
+      "costRange_source": "published"
+    },
+    {
+      "name": "Angela Lygren",
+      "photo": "/images/provider-bellevue-wa-angela-lygren.webp",
+      "description_chars": 423,
+      "costRange": "$2,000-$2,500",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Northshore Midwives & Lactation Consulting",
+      "photo": "/images/provider-bellevue-wa-northshore-midwives.webp",
+      "description_chars": 481,
+      "costRange": "$2,000-$2,500",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Heng Ma (Body Enmotion Massage and Doula Care)",
+      "photo": "/images/provider-bellevue-wa-heng-ma.webp",
+      "description_chars": 446,
+      "costRange": "$2,500-$2,500",
+      "costRange_source": "published"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Overlake Medical Center & Clinics (Overlake Childbirth Center)",
+      "paragraph_chars": 869,
+      "thumbnail": "/images/bellevue-wa-hospital-overlake.webp",
+      "nicuLevel": "III",
+      "url": "https://www.overlakehospital.org/services/childbirth-center"
+    },
+    {
+      "name": "EvergreenHealth Family Maternity Center",
+      "paragraph_chars": 926,
+      "thumbnail": "/images/bellevue-wa-hospital-evergreenhealth.webp",
+      "nicuLevel": "III",
+      "url": "https://www.evergreenhealth.com/health-services/pregnancy-birth/"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Eastside Birth Center PS",
+      "paragraph_chars": 408,
+      "thumbnail": "/images/bellevue-wa-birth-center-eastside.webp"
+    },
+    {
+      "name": "Puget Sound Midwives & Birth Center",
+      "paragraph_chars": 412,
+      "thumbnail": "/images/bellevue-wa-birth-center-puget-sound.webp"
+    },
+    {
+      "name": "The Birthing Inn",
+      "paragraph_chars": 413,
+      "thumbnail": "/images/bellevue-wa-birth-center-birthing-inn.webp"
+    }
+  ],
+  "birthstats": {
+    "dataYear": 2023,
+    "dataSource": "CDC NCHS National Vital Statistics System; March of Dimes PeriStats; WA DOH"
+  }
+}

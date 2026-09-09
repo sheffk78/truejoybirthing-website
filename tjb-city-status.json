@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "last_updated": "2026-09-06T19:30:00Z",
+  "last_updated": "2026-09-07T23:45:00Z",
   "total_cities_in_codebase": 187,
   "future_cities_planned": 1000,
   "cities": {
@@ -1889,8 +1889,11 @@
       "has_video": false,
       "has_outreach": false,
       "completed_at": null,
-      "stage": "build",
-      "blocked_reason": null
+      "stage": "enrich",
+      "blocked_reason": null,
+      "enriched_at": "2026-09-09T16:55:00Z",
+      "enrich_real_photos": true,
+      "enrich_preflight_passed": true
     },
     "fullerton-ca": {
       "has_video": false,
@@ -2086,6 +2089,36 @@
       "completed_at": "2026-09-07T21:30:52.684586+00:00",
       "last_updated": "2026-09-07T21:30:52.684586+00:00",
       "notes": "Video rendered (303s, Voxtral/Shelbi TTS), uploaded public+embeddable, thumbnail uploaded, embed live, deployed. Outreach: 1 of 3 providers emailed; 2 blocked (no public email)."
+    },
+    "cedar-park-tx": {
+      "slug": "cedar-park-tx",
+      "state": "TX",
+      "has_video": true,
+      "videoId": "JJUroIchFKY",
+      "video_id": "JJUroIchFKY",
+      "video_url": "https://youtu.be/JJUroIchFKY",
+      "video_uploaded_at": "2026-09-07T17:29:00-06:00",
+      "video_complete": true,
+      "gate_fix_complete": true,
+      "has_outreach": true,
+      "outreach_sent_at": "2026-09-07T17:38:06-06:00",
+      "outreach_provider_count": 4,
+      "outreach_sent_count": 2,
+      "outreach_no_email_count": 2,
+      "outreach_blocked_reason": "2 of 4 Cedar Park providers have no public email (Tara Garner: bornbir in-app messaging only; Motherwell: contact form/phone (512) 507-7976). Sent first-touch to Alicia Power and Alivia Lehmann.",
+      "outreach_sent": [
+        "Alicia Power (alicia.m.k.power@gmail.com)",
+        "Alivia Lehmann (livsangelbabies@gmail.com)"
+      ],
+      "outreach_blocked_providers": [
+        "Tara Garner",
+        "Motherwell"
+      ],
+      "status": "complete",
+      "score": 100,
+      "completed_at": "2026-09-07T17:45:00-06:00",
+      "last_updated": "2026-09-07T17:45:00-06:00",
+      "notes": "Video rendered (Voxtral/Shelbi TTS), uploaded public+embeddable (JJUroIchFKY), thumbnail uploaded+verified, embed live + VideoObject schema + deployed. Outreach: 2 of 4 providers emailed; 2 blocked (no public email)."
     }
   },
   "providence-ri": {

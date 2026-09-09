@@ -1,0 +1,21 @@
+{
+  "slug": "bellevue-wa",
+  "stage": "build",
+  "attempts": 0,
+  "history": [
+    {
+      "attempt": 1,
+      "at": "2026-09-08T17:33:12-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 0
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    }
+  ],
+  "last_verdict": "approved",
+  "last_input_fingerprint": "512464470ff97960"
+}

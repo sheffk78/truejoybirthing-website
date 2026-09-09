@@ -1,0 +1,177 @@
+{
+  "slug": "bellevue-wa",
+  "population_estimate": 154377,
+  "providers": [
+    {
+      "name": "Expecting Joy Doula Services",
+      "credential": "Birth doula team (DONA-aligned), postpartum doulas, IBCLC lactation consultants",
+      "practice": "Expecting Joy",
+      "url": "https://www.expectingjoy.com/",
+      "services": ["Birth doula support", "Postpartum doula support", "Lactation consulting", "Placenta encapsulation", "Childbirth classes", "Baby gear rentals"],
+      "serviceArea": "Bellevue, WA and surrounding Seattle-area communities",
+      "costRange": "Not published on website",
+      "acceptingClients": "Not verifiable",
+      "description": "Expecting Joy is a birth and parenting services company serving families in the Seattle area since 2011, offering birth doulas, postpartum doulas, lactation consulting, and placenta encapsulation. Their birth doula package includes two prenatal visits, unlimited email contact during pregnancy, 24/7 on-call support from 38 weeks, continuous labor and delivery support, and at least one postpartum visit. The practice is listed as serving Bellevue and surrounding areas with a 5-star rating across 99 Google reviews. Sources: https://www.expectingjoy.com/, https://www.discoverdoulas.com/doula/expecting-joy-doula-services-bellevue-wa/"
+    },
+    {
+      "name": "Mariola Klein (Bellevue Doula)",
+      "credential": "Birth Doula CD(DONA), Postpartum Doula CD(NAPS), Licensed Massage Practitioner, Certified Infant Massage Instructor, Certified Dancing For Birth Instructor",
+      "practice": "Bellevue Doula",
+      "url": "http://www.bellevuedoula.com/birth-doula.html",
+      "services": ["Birth doula support", "Postpartum doula support", "Dancing for Birth classes", "Maternity massage", "Infant massage instruction"],
+      "serviceArea": "Bellevue, WA",
+      "costRange": "$2,000 for birth doula services (initial consultation free)",
+      "acceptingClients": "Not verifiable",
+      "description": "Mariola Klein is a DONA-certified birth doula based in Bellevue who charges $2,000 for birth doula services with a free initial consultation. Her birth doula package includes two prenatal meetings, phone and email support during pregnancy and after birth, 24-hour availability, continuous emotional and physical support during labor, a backup doula, and two postpartum meetings. She works in compliance with DONA International Standards of Practice and speaks fluent German and Polish. Sources: http://www.bellevuedoula.com/birth-doula.html, http://www.bellevuedoula.com/about-me--contact.html"
+    },
+    {
+      "name": "Angela Lygren",
+      "credential": "Licensed Midwife (LM), Certified Professional Midwife (CPM)",
+      "practice": "Independent midwifery practice",
+      "url": "https://angelalygren.dr-leonardo.com/",
+      "services": ["Midwifery care", "Prenatal care", "Labor and delivery support", "Postpartum care"],
+      "serviceArea": "Bellevue, WA 98007",
+      "costRange": "Not published",
+      "acceptingClients": "Not verifiable",
+      "description": "Angela Lygren is a Licensed Midwife and Certified Professional Midwife practicing in Bellevue, WA 98007 (NPI 1104483148). Her practice is listed in the Healthgrades midwifery directory for Bellevue and she is one of the home-birth midwives serving the Bellevue area. Sources: https://angelalygren.dr-leonardo.com/, https://www.healthgrades.com/midwifery-directory/wa-washington/bellevue"
+    },
+    {
+      "name": "Northshore Midwives & Lactation Consulting",
+      "credential": "Licensed Midwife (LM) and International Board Certified Lactation Consultant (IBCLC)",
+      "practice": "Northshore Midwives & Lactation Consulting",
+      "url": "https://www.northshoremidwives.com/bellevue-lactation-consultant-midwife-doula-postpartum-doula/",
+      "services": ["Lactation consulting", "Midwifery care", "Postpartum doula support", "Newborn feeding support"],
+      "serviceArea": "Bellevue, Kirkland, Redmond, Woodinville, Sammamish, and surrounding King and Snohomish counties",
+      "costRange": "Not published",
+      "acceptingClients": "Not verifiable",
+      "description": "Northshore Midwives & Lactation Consulting serves the Bellevue area with lactation consulting, midwifery, and postpartum doula services. The practice's lead clinician, Andrea, is one of the first and only licensed midwives who is also an International Board Certified Lactation Consultant (IBCLC) in Washington State, and has assisted families since 2007. The practice states it accepts all insurance companies, including Medicaid coverage. Sources: https://www.northshoremidwives.com/bellevue-lactation-consultant-midwife-doula-postpartum-doula/"
+    },
+    {
+      "name": "Heng Ma (Body Enmotion Massage and Doula Care)",
+      "credential": "IBCLC, Licensed Massage Therapist, Birth and Postpartum Doula",
+      "practice": "Body Enmotion Massage and Doula Care",
+      "url": "https://www.bodyenmotion.com/hengma",
+      "services": ["Lactation consulting (IBCLC)", "Birth doula support", "Postpartum doula support", "Ayurvedic postpartum massage", "Infant massage and bodywork"],
+      "serviceArea": "Seattle and Bellevue, WA",
+      "costRange": "$2,500 birth doula fee (per Meela listing)",
+      "acceptingClients": "Not verifiable",
+      "description": "Heng Ma is an IBCLC-certified lactation consultant, licensed massage therapist, and experienced birth and postpartum doula who has supported over 5,000 families since 2016. Her practice, Body Enmotion Massage and Doula Care, specializes in Ayurvedic postpartum massage, belly binding, infant massage, and breastfeeding support for newborn families, and she serves the Bellevue area. Sources: https://www.bodyenmotion.com/hengma, https://www.hellomeela.com/bellevue-wa/doulas/"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Overlake Medical Center & Clinics (Overlake Childbirth Center)",
+      "address": "1035 116th Ave NE, Building 1, E2, Bellevue, WA 98004",
+      "url": "https://www.overlakehospital.org/services/childbirth-center",
+      "nicuLevel": "Level III NICU",
+      "doulaPolicy": "Doulas welcomed as part of the care team; TeamBirth collaborative birth model",
+      "medicaidStatus": "Accepts WA Apple Health (Medicaid), Medicare, and private insurance",
+      "description": "The Overlake Childbirth Center is the primary hospital maternity unit in Bellevue, located at 1035 116th Ave NE. It offers private labor, delivery, and recovery rooms plus private mother-baby suites, two surgical suites equipped for cesarean or high-risk births, and a Level III Neonatal Intensive Care Unit (NICU) for babies needing complex care. The center uses the TeamBirth philosophy, which places the patient, their safety, preferences, and goals at the center of every decision, and explicitly welcomes doulas as part of the care team. Overlake offers vaginal birth after cesarean (VBAC) for eligible candidates, an emergency department specifically for expecting families, and a donor milk depot. The center is one of only three hospitals in Washington state recognized as High Performing in Maternity Care (Uncomplicated Pregnancy) by U.S. News & World Report. Sources: https://www.overlakehospital.org/services/childbirth-center, https://pprs.doh.wa.gov/search/2e80ef0d-7d6e-54e6-9fce-deefc09c6ca5"
+    },
+    {
+      "name": "EvergreenHealth Family Maternity Center",
+      "address": "12040 NE 128th Street, Kirkland, WA 98034",
+      "url": "https://www.evergreenhealth.com/health-services/pregnancy-birth/",
+      "nicuLevel": "Level 3 NICU",
+      "doulaPolicy": "Not explicitly published; support persons and doulas generally welcomed (verify directly)",
+      "medicaidStatus": "Accepts insurance; Medicaid status not explicitly published on maternity page",
+      "description": "The EvergreenHealth Family Maternity Center in Kirkland, about 10 miles from Bellevue, is a newly renovated maternity unit with 34 refurbished labor rooms, 27 remodeled after-delivery rooms, and two modern family areas with kitchens and entertainment centers. Labor, birth, and recovery take place in private birthing suites with private bathrooms, and the center offers concierge-style meal service. The hospital's Level 3 Neonatal Intensive Care Unit provides one of the highest levels of care available for critically ill infants, with neonatologists on-site around the clock and single-room family-centered care that accommodates twins and triplets. EvergreenHealth has earned the CMS Birthing Friendly Designation, indicating it follows evidence-based maternity care practices and participates in national perinatal quality improvement programs. The hospital offers certified nurse-midwife (CNM) care through EvergreenHealth Midwifery Care, and its NICU partners with Seattle Children's and Swedish Medical Center for newborns requiring complicated care or surgery. Sources: https://www.evergreenhealth.com/health-services/pregnancy-birth/, https://www.evergreenhealth.com/health-services/pregnancy-birth/during-birth/labor-delivery/, https://www.evergreenhealth.com/health-services/pregnancy-birth/after-birth/nicu/, https://minimalistmama.co/birth-hospitals/evergreenhealth-medical-center"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Eastside Birth Center PS",
+      "address": "14700 NE 8th St, Suite 115, Bellevue, WA 98007",
+      "url": "https://www.mapquest.com/us/washington/eastside-birth-center-ps-12518670",
+      "type": "Freestanding birth center",
+      "distanceFromCity": "In Bellevue",
+      "description": "Eastside Birth Center PS is a freestanding birth center in Bellevue offering a gentle, natural, and supportive environment for expectant parents, with professionally qualified midwifery staff providing care from pregnancy through postpartum. The center is licensed by the Washington State Department of Health as a childbirth center. Sources: https://www.mapquest.com/us/washington/eastside-birth-center-ps-12518670, https://npiprofile.com/npi/1538236500"
+    },
+    {
+      "name": "Puget Sound Midwives & Birth Center",
+      "address": "13128 Totem Lake Blvd NE, Suite 101, Kirkland, WA 98034",
+      "url": "https://fairiesandfrogs.com/9-freestanding-birth-centers-in-seattle/",
+      "type": "Freestanding birth center",
+      "distanceFromCity": "~10 miles from Bellevue",
+      "description": "Puget Sound Midwives & Birth Center, founded in 2010 in Kirkland, is a freestanding birth center where births take place under the care of highly skilled midwives, with privileges extended to qualified midwives in the Seattle area. The center is in-network with most major insurance companies and accepts Washington State Medicaid. Sources: https://fairiesandfrogs.com/9-freestanding-birth-centers-in-seattle/"
+    },
+    {
+      "name": "The Birthing Inn",
+      "address": "6002 Westgate Blvd Suite 120, Tacoma, WA 98406",
+      "url": "https://thebirthinginn.com/",
+      "type": "Freestanding birth center",
+      "distanceFromCity": "~30 miles from Bellevue",
+      "description": "The Birthing Inn is Tacoma's only freestanding birth center, operating since 1999 and welcoming over 3,000 babies. It is accredited by the Commission for the Accreditation of Birth Centers (CABC) since 2016, and its water birth tubs are included in all packages. The center serves families from Gig Harbor, Lakewood, Federal Way, Puyallup, Auburn, and the broader Puget Sound region. Sources: https://thebirthinginn.com/"
+    }
+  ],
+  "midwife_info": {
+    "summary": "In Washington State, non-nurse midwives are licensed as Licensed Midwives (LMs) by the Washington State Department of Health under RCW 18.50, a licensing pathway for direct-entry midwives that dates to 1917 and was rebuilt for direct-entry practice in 1981. Certified Nurse-Midwives (CNMs) are licensed by the Washington Nursing Care Quality Assurance Commission, and both credentials can be verified through the Department of Health's provider credential search.",
+    "sources": ["https://doh.wa.gov/licenses-permits-and-certificates/professions-new-renew-or-update/midwife/licensing-information", "https://homebirthpartners.com/directory/washington/bellevue/"]
+  },
+  "birth_stats": {
+    "cesareanRate": "30.0% of live births in Washington were cesarean deliveries in 2023 (March of Dimes PeriStats, based on NCHS final natality data)",
+    "cesareanSource": "https://www.marchofdimes.org/peristats/state-summaries/washington?lev=1&obj=3&reg=99&slev=4&sreg=53&stop=55&top=3",
+    "maternalMortality": "Washington's pregnancy-related maternal mortality rate increased to 30.5 per 100,000 live births in 2021-2022, up from 19.0 per 100,000 in 2017-2020 (WA State Department of Health Maternal Mortality Review Panel report, December 2025)",
+    "maternalMortalitySource": "https://doh.wa.gov/sites/default/files/2025-10/141-253-MaternalMortalityReviewPanelReport-2025.pdf",
+    "homeBirthRate": "Home births in Washington ranged from 1% to 2.1% of births between 2010 and 2022, with a slight increasing trend particularly during the pandemic years (WA Office of Financial Management, Maternal Health in Washington State, 2010-2022)",
+    "homeBirthSource": "https://ofm.wa.gov/wp-content/uploads/sites/default/files/public/dataresearch/healthcare/utilization_quality/maternal_health_WA_state.pdf",
+    "birthCenterRate": "Birth center births in Washington ranged from 1.9% to 2.6% of births between 2010 and 2022 (WA Office of Financial Management)",
+    "birthCenterSource": "https://ofm.wa.gov/wp-content/uploads/sites/default/files/public/dataresearch/healthcare/utilization_quality/maternal_health_WA_state.pdf"
+  },
+  "culture": "Bellevue is a fast-growing Eastside suburb of Seattle with a population of roughly 154,000, known for its tech industry presence and diverse, well-educated population. Most births in Washington occur in hospitals, but the state has a strong and well-regulated midwifery infrastructure, with Licensed Midwives practicing under formal state licensure since 1981 and a rising number of home and birth-center births during the pandemic years. Bellevue families have access to two major hospital maternity units within a short drive (Overlake in Bellevue and EvergreenHealth in Kirkland), both offering Level III NICU care, plus freestanding birth centers in Bellevue, Kirkland, and Tacoma. Washington's Apple Health (Medicaid) program covers licensed midwifery care and planned home births attended by enrolled providers, making midwife-led and out-of-hospital birth options accessible to a broad range of families.",
+  "hero_local_detail": "Bellevue families can choose between the Overlake Childbirth Center, a U.S. News High Performing maternity hospital with a Level III NICU and TeamBirth care model, and EvergreenHealth's Family Maternity Center in nearby Kirkland. Freestanding birth center options include Eastside Birth Center in Bellevue and Puget Sound Midwives & Birth Center in Kirkland, while licensed midwives and doulas serve the area for home and hospital births.",
+  "faqs": [
+    {
+      "question": "What hospitals in Bellevue offer labor and delivery services?",
+      "answer": "Overlake Medical Center & Clinics operates the Overlake Childbirth Center at 1035 116th Ave NE in Bellevue, offering private labor/delivery/recovery rooms, a Level III NICU, and TeamBirth collaborative care. EvergreenHealth's Family Maternity Center in Kirkland (12040 NE 128th Street) is about 10 miles away and also offers a Level 3 NICU and CNM midwifery care."
+    },
+    {
+      "question": "Are there freestanding birth centers near Bellevue?",
+      "answer": "Yes. Eastside Birth Center PS is a freestanding birth center in Bellevue at 14700 NE 8th St. Puget Sound Midwives & Birth Center in Kirkland (13128 Totem Lake Blvd NE) is about 10 miles away and accepts Washington State Medicaid. The Birthing Inn in Tacoma, a CABC-accredited freestanding birth center, is about 30 miles away."
+    },
+    {
+      "question": "How are midwives licensed in Washington State?",
+      "answer": "Licensed Midwives (LMs) are licensed by the Washington State Department of Health under RCW 18.50, a direct-entry midwifery pathway dating to 1917 and rebuilt in 1981. Certified Nurse-Midwives (CNMs) are licensed by the Washington Nursing Care Quality Assurance Commission. Both credentials can be verified through the DOH provider credential search."
+    },
+    {
+      "question": "Does Medicaid (Apple Health) cover midwifery and birth center care in Washington?",
+      "answer": "Yes. Washington's Apple Health (Medicaid) program covers licensed midwifery care and planned home births attended by enrolled Licensed Midwives, CNMs, or physicians for low-risk pregnancies that pass risk screening. Overlake Medical Center's childbirth center also accepts WA Apple Health (Medicaid)."
+    },
+    {
+      "question": "What is the cesarean rate in Washington State?",
+      "answer": "In 2023, 30.0% of live births in Washington were cesarean deliveries, according to March of Dimes PeriStats based on NCHS final natality data. Washington's NTSV (first-birth, term, singleton, vertex) cesarean rate has been below the Healthy People 2020 target of 23.9 percent."
+    }
+  ],
+  "nearby_cities": ["seattle-wa", "kirkland-wa", "redmond-wa", "tacoma-wa"],
+  "sources": [
+    "https://www.expectingjoy.com/",
+    "https://www.discoverdoulas.com/doula/expecting-joy-doula-services-bellevue-wa/",
+    "http://www.bellevuedoula.com/birth-doula.html",
+    "http://www.bellevuedoula.com/about-me--contact.html",
+    "https://angelalygren.dr-leonardo.com/",
+    "https://www.healthgrades.com/midwifery-directory/wa-washington/bellevue",
+    "https://www.northshoremidwives.com/bellevue-lactation-consultant-midwife-doula-postpartum-doula/",
+    "https://www.bodyenmotion.com/hengma",
+    "https://www.hellomeela.com/bellevue-wa/doulas/",
+    "https://www.overlakehospital.org/services/childbirth-center",
+    "https://www.overlakehospital.org/locations/overlake-childbirth-center",
+    "https://pprs.doh.wa.gov/search/2e80ef0d-7d6e-54e6-9fce-deefc09c6ca5",
+    "https://www.evergreenhealth.com/health-services/pregnancy-birth/",
+    "https://www.evergreenhealth.com/health-services/pregnancy-birth/during-birth/labor-delivery/",
+    "https://www.evergreenhealth.com/health-services/pregnancy-birth/after-birth/nicu/",
+    "https://www.evergreenhealth.com/locations/locations-profile/?id=342",
+    "https://minimalistmama.co/birth-hospitals/evergreenhealth-medical-center",
+    "https://www.mapquest.com/us/washington/eastside-birth-center-ps-12518670",
+    "https://npiprofile.com/npi/1538236500",
+    "https://fairiesandfrogs.com/9-freestanding-birth-centers-in-seattle/",
+    "https://thebirthinginn.com/",
+    "https://doh.wa.gov/licenses-permits-and-certificates/professions-new-renew-or-update/midwife/licensing-information",
+    "https://homebirthpartners.com/directory/washington/bellevue/",
+    "https://www.marchofdimes.org/peristats/state-summaries/washington?lev=1&obj=3&reg=99&slev=4&sreg=53&stop=55&top=3",
+    "https://doh.wa.gov/sites/default/files/2025-10/141-253-MaternalMortalityReviewPanelReport-2025.pdf",
+    "https://ofm.wa.gov/wp-content/uploads/sites/default/files/public/dataresearch/healthcare/utilization_quality/maternal_health_WA_state.pdf",
+    "https://www.cdc.gov/nchs/state-stats/births/cesareans.html",
+    "https://www.cdc.gov/nchs/pressroom/releases/20221117.html",
+    "https://www.cesareanrates.org/washington"
+  ]
+}

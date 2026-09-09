@@ -372,9 +372,41 @@ def cmd_list():
     ]}, indent=2))
 
 
+def cmd_outcomes():
+    """L7 feed consumer: list unconverted production outcomes from the standing
+    feed (outcomes.jsonl, written by play-review-watchdog and future monitors).
+    Exit 0 always — reporting pending outcomes must never fail the caller."""
+    feed = Path(__file__).resolve().parent / "failure-library" / "outcomes.jsonl"
+    if not feed.exists():
+        print(json.dumps({"pending": 0, "outcomes": [], "message": "no outcome feed yet"}))
+        return
+    seen, pending = set(), []
+    for line in feed.read_text().splitlines():
+        if not line.strip():
+            continue
+        try:
+            rec = json.loads(line)
+        except Exception:
+            continue
+        if rec.get("source") == "l7-wiring-smoke-test":
+            continue  # wiring smoke record, not a production outcome
+        key = (rec.get("date"), rec.get("status"), rec.get("raw"))
+        if key in seen:
+            continue  # dedupe identical consecutive watchdog observations
+        seen.add(key)
+        if not rec.get("converted_to_case"):
+            pending.append(rec)
+    print(json.dumps({
+        "pending": len(pending),
+        "pending_outcomes": pending,
+        "message": (f"{len(pending)} production outcome(s) awaiting conversion to replayable cases"
+                    if pending else "all production outcomes converted"),
+    }, indent=2))
+
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=["add", "replay", "list"])
+    ap.add_argument("cmd", choices=["add", "replay", "list", "outcomes"])
     ap.add_argument("path", nargs="?")
     ap.add_argument("--eval", dest="only_eval")
     args = ap.parse_args()
@@ -382,6 +414,8 @@ def main():
         cmd_add(args.path)
     elif args.cmd == "replay":
         cmd_replay(args.only_eval)
+    elif args.cmd == "outcomes":
+        cmd_outcomes()
     else:
         cmd_list()
 

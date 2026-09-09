@@ -1,19 +1,50 @@
 {
   "slug": "cedar-park-tx",
   "stage": "video_outreach",
-  "produced_at": null,
-  "worker_model": null,
-  "notes": "",
-  "sources": [],
-  "video_file": null,
-  "video_mb": null,
-  "youtube_id": null,
-  "thumbnail_path": null,
-  "embed_verified": null,
+  "produced_at": "2026-09-07T23:45:15Z",
+  "worker_model": "deepseek-v4-flash",
+  "notes": "Video scene data full-state (Texas) confirmed. TTS via Voxtral/Shelbi voice ID 331c27cd. Pre-render gate passed (ALL GATES PASSED, minor notes: provider scene uses tjb_provider_scroll for 4 providers acceptable, hook image is hero v2). Video rendered (20.8MB, ~2:47). Uploaded to YouTube as NEW public embeddable video JJUroIchFKY (title 'Cedar Park Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)'). Thumbnail derived from hero, uploaded + verified (maxresdefault.jpg HTTP 200, vision pass on thumb crop). Embed added to video-embeds.ts (videoId JJUroIchFKY, VideoObject schema PT2M47S), deployed, live page verified (videoId + VideoObject + duration present). Outreach: 2 first-touch emails sent (Alicia Power -> alicia.m.k.power@gmail.com msg vps-20260907233741984803; Alivia Lehmann -> livsangelbabies@gmail.com msg vps-20260907233806648758); 2 providers blocked - no public email (Tara Garner: bornbir in-app only; Motherwell: contact form/phone only).",
+  "sources": [
+    {
+      "claim": "Video uploaded to YouTube as new public embeddable video",
+      "url": "https://youtu.be/JJUroIchFKY",
+      "quote": "oembed API title 'Cedar Park Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)' by True Joy Birthing; thumbnail maxresdefault.jpg HTTP 200 size 108907 bytes; embeddable via oembed."
+    },
+    {
+      "claim": "Video embedded on live Cedar Park page with VideoObject schema",
+      "url": "https://truejoybirthing.com/birth-support/cedar-park-tx/",
+      "quote": "Live page HTTP 200; contains videoId JJUroIchFKY, 'VideoObject' schema, and '\"duration\":\"PT2M47S\"'"
+    },
+    {
+      "claim": "Cedar Park has 3 hospitals and 4 doulas on the page",
+      "url": "https://truejoybirthing.com/birth-support/cedar-park-tx/",
+      "quote": "cities.ts hospitalDetails: Ascension Seton Cedar Park Hospital, Cedar Park Regional Medical Center, St. David's Round Rock Medical Center; localDoulas: Alicia Power, Tara Garner, Alivia Lehmann, Motherwell Doula Services"
+    }
+  ],
+  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/cedar-park-tx-city-guide.mp4",
+  "video_mb": 20.8,
+  "youtube_id": "JJUroIchFKY",
+  "thumbnail_path": "public/images/yt-thumb-cedar-park-tx.webp",
+  "embed_verified": true,
   "outreach": [
     {
-      "provider": null,
-      "status": null,
+      "provider": "Alicia Power",
+      "status": "sent",
+      "message_id": "vps-20260907233741984803"
+    },
+    {
+      "provider": "Alivia Lehmann",
+      "status": "sent",
+      "message_id": "vps-20260907233806648758"
+    },
+    {
+      "provider": "Tara Garner",
+      "status": "blocked",
+      "message_id": null
+    },
+    {
+      "provider": "Motherwell",
+      "status": "blocked",
       "message_id": null
     }
   ]

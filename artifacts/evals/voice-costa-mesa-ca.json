@@ -1,0 +1,11 @@
+{
+  "eval": "eval-voice",
+  "slug": "costa-mesa-ca",
+  "model": "atlas:latest",
+  "fields_checked": 13,
+  "model_calls_ok": 3,
+  "model_calls_err": 0,
+  "verdict": "approved",
+  "findings": [],
+  "checked_at": "2026-09-08T17:59:28-06:00"
+}

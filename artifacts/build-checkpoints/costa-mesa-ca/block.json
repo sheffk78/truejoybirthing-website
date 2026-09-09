@@ -1,0 +1,224 @@
+{
+  "enableBlogResources": true,
+  "publishedDate": "2026-09-08",
+  "city": "Costa Mesa",
+  "state": "CA",
+  "stateFull": "California",
+  "slug": "costa-mesa-ca",
+  "titleTag": "Costa Mesa, California Doula Costs, Hospitals and Medicaid",
+  "metaDescription": "Costa Mesa doula costs, Hoag and Orange Coast NICU levels, Medi-Cal doula coverage, and Orange County birth providers.",
+  "population": 110538,
+  "costLow": 1500,
+  "costHigh": 2500,
+  "heroImage": "/images/costa-mesa-ca-birth-doula-skyline-v2.webp",
+  "supportSceneImage": "/images/costa-mesa-ca-birth-doula-support-v2.webp",
+  "supportSceneAlt": "A doula supporting an expectant mom in Costa Mesa: Orange County birth support and doula care",
+  "ogImage": "https://truejoybirthing.com/images/og-city-costa-mesa-ca.webp",
+  "shelbiServesHere": false,
+  "localDoulas": [
+    {
+      "name": "Christine (Costa Mesa Doula)",
+      "credential": "Birth doula (CD) with birth photography training",
+      "practice": "Costa Mesa Doula",
+      "url": "https://www.costamesadoula.com/",
+      "photo": "/images/provider-costa-mesa-ca-christine.webp",
+      "description": "Christine is a birth doula based in Costa Mesa whose published birth package is $1,500 and includes two prenatal visits, 24/7 phone and text access from the point of hire, continuous labor support at your birth location, and one postpartum visit. She also offers birth photography during labor and arranges a trained backup doula when she cannot attend. She serves Costa Mesa and the broader Orange County area, and states that if the full fee is a barrier she will work with families to make support accessible.",
+      "costRange": "$1,500-$1,500",
+      "costRange_source": "published",
+      "services": [
+        "Birth Doula",
+        "Continuous Labor Support",
+        "Birth Photography",
+        "Prenatal Visits",
+        "Postpartum Visit"
+      ],
+      "serviceArea": [
+        "Costa Mesa, CA",
+        "Newport Beach, CA",
+        "Irvine, CA",
+        "Santa Ana, CA"
+      ]
+    },
+    {
+      "name": "Tiffany Blackham",
+      "credential": "IDI-Certified Birth Doula, HypnoBirthing International Educator, HypnoBabies Doula, IPPA Certified Placenta Specialist",
+      "practice": "Tiffany Blackham Birth & Postpartum Doula",
+      "url": "https://www.bornbir.com/tiffany-blackham",
+      "photo": "/images/provider-costa-mesa-ca-tiffany-blackham.webp",
+      "description": "Tiffany Blackham is a birth and postpartum doula in Costa Mesa who describes a holistic, agenda-free approach to birth support. She has been certified as a birth doula since 2017, a HypnoBirthing International educator since 2022, a HypnoBabies doula since 2020, and a placenta specialist since 2020. Her services include birth doula support, HypnoBirthing and HypnoBabies childbirth education, postpartum care, placenta services, and insurance super bills so families can seek doula reimbursement. She offers unlimited early-labor support by phone, text, or FaceTime and in-person support during active labor.",
+      "costRange": "$1,500-$2,500",
+      "costRange_source": "market-estimate",
+      "services": [
+        "Birth Doula",
+        "Postpartum Support",
+        "HypnoBirthing Education",
+        "Placenta Services",
+        "Insurance Super Bills"
+      ],
+      "serviceArea": [
+        "Costa Mesa, CA",
+        "Orange County, CA"
+      ]
+    },
+    {
+      "name": "Tessa Fisher (Abundant Blessings Midwifery)",
+      "credential": "Licensed Midwife (LM), Certified Professional Midwife (CPM)",
+      "practice": "Abundant Blessings Midwifery",
+      "url": "https://www.abundantblessingsmidwifery.com/",
+      "photo": "/images/provider-costa-mesa-ca-tessa-fisher.webp",
+      "description": "Tessa Fisher is a licensed midwife and certified professional midwife who runs Abundant Blessings Midwifery, a community-based home birth practice serving Orange County including Costa Mesa. The practice provides in-home prenatal visits, labor and birth attendance, water birth, newborn care, postpartum care, and well-woman care for low-risk pregnancies, and emphasizes informed choice and client autonomy. She serves Irvine, Costa Mesa, Anaheim, Fullerton, Newport Beach, Huntington Beach, and Santa Ana, plus select Los Angeles County areas.",
+      "costRange": "$4,000-$6,000",
+      "costRange_source": "market-estimate",
+      "services": [
+        "Home Birth",
+        "Water Birth",
+        "Prenatal Care",
+        "Postpartum Care",
+        "Well-Woman Care"
+      ],
+      "serviceArea": [
+        "Costa Mesa, CA",
+        "Irvine, CA",
+        "Anaheim, CA",
+        "Newport Beach, CA"
+      ]
+    },
+    {
+      "name": "Kellie Gwaltney, CNM",
+      "credential": "Certified Nurse-Midwife (CNM), Advanced Practice Midwife",
+      "practice": "Kellie Gwaltney CNM",
+      "url": "https://kelliegwaltney098.dr-leonardo.com/",
+      "photo": "/images/provider-costa-mesa-ca-kellie-gwaltney.webp",
+      "description": "Kellie Gwaltney is a certified nurse-midwife practicing in Costa Mesa, listed with NPI 1013315563 at 3400 Avenue of the Arts. Her practice provides midwifery care in a personalized environment, with clinical training in obstetrics and gynecology. As a CNM she can attend hospital births and provide gynecologic care, giving Costa Mesa families a midwifery option within the medical system.",
+      "costRange": "$1,500-$2,500",
+      "costRange_source": "market-estimate",
+      "services": [
+        "Midwifery Care",
+        "CNM-Led Care",
+        "Obstetrics and Gynecology",
+        "Prenatal Care"
+      ],
+      "serviceArea": [
+        "Costa Mesa, CA"
+      ]
+    }
+  ],
+  "culture": "Costa Mesa is a mid-sized Orange County city of roughly 110,000 residents, with a diverse population and a mix of beach-adjacent neighborhoods, the Segerstrom arts district, and family-oriented communities. Birth support in the area spans hospital-based care at Hoag Hospital Newport Beach and MemorialCare Orange Coast Medical Center in Fountain Valley, alongside a growing out-of-hospital community of licensed midwives, home birth practices, and birth centers such as South Coast Midwifery in nearby Irvine. California's Medi-Cal doula benefit, in effect since January 2023, has expanded access to doula support for low-income families across the county. Families in Costa Mesa typically deliver at Hoag Newport Beach or MemorialCare Orange Coast, with UCI Medical Center in Orange serving as the county's regional perinatal center for higher-acuity care.",
+  "heroLocalDetail": "Costa Mesa families can choose between two major delivery hospitals within a short drive: Hoag Hospital Newport Beach with its Level III NICU and Sue & Bill Gross Women's Pavilion, and MemorialCare Orange Coast Medical Center in Fountain Valley, the only community hospital in Orange County with certified nurse midwives on staff. For out-of-hospital birth, South Coast Midwifery in nearby Irvine is Orange County's accredited freestanding birth center, offering water birth and VBAC support.",
+  "hospitalDetails": [
+    {
+      "name": "Hoag Hospital Newport Beach (Sue & Bill Gross Women's Pavilion)",
+      "thumbnail": "/images/costa-mesa-ca-hospital-hoag.webp",
+      "address": "1 Hoag Drive, Newport Beach, CA 92658",
+      "url": "https://www.hoag.org/newport-beach-maternity-care/",
+      "nicuLevel": "III",
+      "doulaPolicy": "Certified doulas and nurse midwives welcomed at both campuses per TJB's Irvine page; confirm current policy with the care team",
+      "midwifeFriendly": true,
+      "waterBirth": "Hydrotherapy options vary by provider; confirm at your hospital tour",
+      "medicaid": false,
+      "lactation": true,
+      "privateRooms": true,
+      "paragraph": "Hoag Hospital Newport Beach's Sue & Bill Gross Women's Pavilion is one of Orange County's most comprehensive maternal and newborn care programs, about six miles from Costa Mesa. The facility includes 18 private labor, delivery, and recovery suites, 49 private postpartum rooms, a 14-bed antepartum unit, and an expanded 33-bed Level III NICU. Hoag's LDR unit has three C-section rooms staffed around the clock by anesthesiologists and OB/GYN hospitalists, and the hospital follows a non-separation policy where newborns room-in with their mothers. The pavilion offers advanced maternal-fetal medicine and a dedicated Obstetric Emergency Department, and the hospital is Magnet-designated for nursing excellence with a SOAP Center of Excellence designation for obstetric anesthesia. Hoag does not contract with Medi-Cal, listing Medi-Cal among plans not contracted with the hospital, so families on Medi-Cal typically deliver at other Orange County hospitals such as UCI Medical Center."
+    },
+    {
+      "name": "MemorialCare Orange Coast Medical Center",
+      "thumbnail": "/images/costa-mesa-ca-hospital-orange-coast.webp",
+      "address": "18111 Brookhurst Street, Fountain Valley, CA 92708",
+      "url": "https://www.memorialcare.org/services/maternity-care?location=12",
+      "nicuLevel": "II",
+      "doulaPolicy": "Doulas supported; MemorialCare states doulas are a vital member of the care team",
+      "midwifeFriendly": true,
+      "waterBirth": "Private labor and delivery suites with birthing beds; hydrotherapy options vary, confirm directly",
+      "medicaid": true,
+      "lactation": true,
+      "privateRooms": true,
+      "paragraph": "MemorialCare Orange Coast Medical Center's Childbirth Center in Fountain Valley, roughly ten minutes from Costa Mesa, is the only community hospital program in Orange County with certified nurse midwives on its medical staff, alongside obstetricians, pediatricians, and perinatologists. Deliveries take place in private labor and delivery suites with birthing beds, and the hospital practices couplet care so mother and infant remain together with a single nurse. The facility has a 24/7 Obstetrical Emergency Department staffed by board-certified obstetricians and an onsite OB laborist, plus a Level II NICU staffed by neonatologists and lactation consultants. The hospital has been recognized as high-performing in maternity care by U.S. News & World Report and is a Magnet-designated hospital. MemorialCare explicitly supports doulas as part of the birth care team and encourages a collaborative approach between the patient, doula, and medical team."
+    }
+  ],
+  "birthCenterDetails": [
+    {
+      "name": "South Coast Midwifery",
+      "thumbnail": "/images/costa-mesa-ca-birth-center-south-coast.webp",
+      "address": "Irvine, CA (Quail Hill area)",
+      "url": "https://southcoastmidwifery.com/",
+      "services": [
+        "Birth Center Births",
+        "Water Birth",
+        "Home Birth",
+        "VBAC",
+        "Childbirth Classes"
+      ],
+      "medicaid": false,
+      "distance": "About 10-15 miles from Costa Mesa",
+      "paragraph": "South Coast Midwifery is Orange County's boutique birth center in the Quail Hill area of Irvine and describes itself as the first accredited birth center in the county. The center offers private birthing suites with queen beds and birthing tubs, water birth, home birth, prenatal and postpartum classes, and women's health care, and it states it is the only standalone birth center in Southern California accredited to perform vaginal birth after cesarean (VBAC). Staffed by certified nurse-midwives, it serves families from Irvine, Costa Mesa, and surrounding Orange County communities, and it is roughly 10 to 15 miles from Costa Mesa."
+    },
+    {
+      "name": "Honey Midwifery (Orange County Midwife & Holistic Birth Center)",
+      "thumbnail": "/images/costa-mesa-ca-birth-center-honey.webp",
+      "address": "Orange County, CA",
+      "url": "https://www.orangecountymidwife.com/",
+      "services": [
+        "Birth Center Births",
+        "Home Birth",
+        "Water Birth",
+        "Doula Services",
+        "Childbirth Education",
+        "Infant CPR Classes"
+      ],
+      "medicaid": false,
+      "distance": "Within Orange County",
+      "paragraph": "Honey Midwifery is a birth center and home birth practice in Orange County founded on a holistic, trauma-informed model of midwifery care. The practice offers licensed midwife care for birth center, water birth, and home birth, along with certified doulas, childbirth education, and infant CPR and choking relief courses. Its holistic birth center was listed as opening in Orange County in 2025, giving Costa Mesa families a second freestanding birth center option in the county. Families can combine licensed midwife care with doula support and education under one practice."
+    }
+  ],
+  "midwifeInfo": {
+    "paragraph": "In California, certified nurse-midwives (CNMs) are licensed by the California Board of Registered Nursing as advanced practice nurses who have met the Board's educational and certification requirements. Licensed midwives (LMs) are licensed by the Medical Board of California to attend cases of normal pregnancy and childbirth and to provide prenatal, intrapartum, and postpartum care. Both credential paths serve Orange County families: CNMs practice in hospital settings such as MemorialCare Orange Coast Medical Center, while licensed midwives attend home births and birth center births across Costa Mesa and surrounding communities.",
+    "credentialTypes": "CNM, LM"
+  },
+  "birthStats": {
+    "cesareanRate": 32,
+    "maternalMortalityRate": 15.0,
+    "homeBirthRate": 0.97,
+    "birthCenterBirthRate": 0.8,
+    "dataYear": 2024,
+    "dataSource": "CDC NCHS National Vital Statistics System; KFF Women's Health Profiles (California); CDPH pregnancy-related mortality 2022"
+  },
+  "medicaidNote": "Yes - California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal through the Department of Health Care Services. Note that Hoag Hospital Newport Beach does not contract with Medi-Cal, so Medi-Cal families in the Costa Mesa area commonly deliver at hospitals such as UCI Medical Center in Orange. Confirm your doula is a Medi-Cal enrolled provider before your first visit.",
+  "insuranceNote": "MemorialCare Orange Coast Medical Center accepts most major HMO, PPO, and EPO health plans as well as Medicare. Hoag Hospital Newport Beach contracts with most major private plans but does not contract with Medi-Cal. Christine of Costa Mesa Doula states she will work with families for whom the full fee is a barrier, and Tiffany Blackham offers insurance super bills for doula reimbursement. Ask whether HSA or FSA funds can help with out-of-pocket doula costs, and whether lactation consultants are in-network with your plan.",
+  "faqs": [
+    {
+      "q": "How much does a birth doula cost in Costa Mesa?",
+      "a": "Costa Mesa doula Christine publishes a $1,500 birth package that includes two prenatal visits, 24/7 phone and text access, continuous labor support, and one postpartum visit, and she will work with families for whom the full fee is a barrier. Most Orange County birth doula packages land between $1,500 and $2,500. Ask about sliding-scale options or payment plans when you interview doulas."
+    },
+    {
+      "q": "What hospitals near Costa Mesa offer labor and delivery services?",
+      "a": "Hoag Hospital Newport Beach's Sue & Bill Gross Women's Pavilion (1 Hoag Drive) offers private LDR suites, a 33-bed Level III NICU, and an Obstetric Emergency Department. MemorialCare Orange Coast Medical Center in Fountain Valley (18111 Brookhurst Street) offers private LDR suites, a Level II NICU, and certified nurse-midwives on staff. UCI Medical Center in Orange, the county's regional perinatal center, serves families needing higher-acuity care."
+    },
+    {
+      "q": "Does Medi-Cal cover doula services in California?",
+      "a": "Yes. As of January 1, 2023, California's Department of Health Care Services added full-spectrum doula services as a covered preventive benefit under Medi-Cal, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal directly. Hoag Hospital Newport Beach itself does not contract with Medi-Cal, so Medi-Cal families in the area commonly deliver at UCI Medical Center in Orange."
+    },
+    {
+      "q": "Do Costa Mesa-area hospitals allow doulas during labor?",
+      "a": "Yes. MemorialCare Orange Coast Medical Center explicitly states that doulas are considered a vital member of the care team and encourages a collaborative approach between the patient, doula, and medical team. Hoag does not publish a specific doula policy on its public maternity pages, so doula access should be confirmed with the care team before your birth."
+    },
+    {
+      "q": "Are there birth centers near Costa Mesa?",
+      "a": "Yes. South Coast Midwifery in Irvine, about 10 to 15 miles away, is Orange County's first accredited freestanding birth center, offering private birthing suites, water birth, home birth, and VBAC support. Honey Midwifery also operates a birth center and home birth practice in Orange County, with its holistic birth center listed as opening in 2025."
+    },
+    {
+      "q": "How are midwives licensed in California?",
+      "a": "Certified Nurse-Midwives (CNMs) are licensed by the California Board of Registered Nursing as advanced practice nurses. Licensed Midwives (LMs) are licensed by the Medical Board of California to attend cases of normal pregnancy and childbirth and to provide prenatal, intrapartum, and postpartum care. Both credential types are represented in the Costa Mesa area."
+    },
+    {
+      "q": "What is the cesarean rate in California?",
+      "a": "In 2024, 32% of all live births in California were cesarean deliveries, according to NCHS data via KFF's Women's Health Profiles. California's pregnancy-related mortality ratio was 15.0 deaths per 100,000 live births in 2022, down from the COVID-19-era peak."
+    }
+  ],
+  "lat": 33.6412,
+  "lng": -117.9177,
+  "nearbyCities": [
+    "irvine-ca",
+    "anaheim-ca",
+    "huntington-beach-ca"
+  ]
+}

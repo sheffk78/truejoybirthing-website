@@ -336,7 +336,8 @@ def scrape_url(url: str) -> dict:
         return result
 
     # Tier 2: Firecrawl (paid, last resort)
-    result = firecrawl_scrape(url)
+    # FireCrawl → StealthyScrape (Free)
+    result = scrapling_scrape_stealthy(url) or get_hermes_enrichment(url)
     if result.get("valid"):
         return result
 
@@ -412,39 +413,29 @@ def firecrawl_scrape(url: str) -> dict:
         return {"valid": False, "reason": str(e)}
 
 
-def firecrawl_search(query: str, limit: int = 5) -> list[dict]:
-    """Firecrawl web search — PAID. Used only as fallback for URL discovery."""
-    payload = json.dumps({"query": query, "limit": limit}).encode()
-    req = urllib.request.Request(
-        f"{FIRECRAWL_BASE}/search",
-        data=payload,
-        headers={
-            "Content-Type": "application/json",
-            "Authorization": f"Bearer {FIRECRAWL_KEY}",
-        },
-        method="POST",
-    )
+def hermes_search_fixed(query: str, limit: int = 3) -> list[dict]:
+    """Free-tier Google search using Hermes's WebSearch.
+    Tier 0 preference: Hermes API; Tier 1: DuckDuckGo fallback.
+    Returns [{"title": str, "url": str, "snippet": str}]
+    """
     try:
-        with urllib.request.urlopen(req, timeout=20) as resp:
-            result = json.loads(resp.read())
-        return result.get("data", [])
-    except Exception as e:
-        return []
+        results = hermes_search(query=query, limit=limit)
+        return _hermes_result_to_dicts(results)
+    except Exception:
+        print(f'\n[hermes_search_fixed] Hermes search failed. DuckDuckGo fallback...')
+        return _duckduckgo_search(query, limit=limit)
 
 
-def firecrawl_enrich(url: str) -> dict:
-    """Firecrawl enrichment — PAID, last resort. Prefer scrape_url() instead."""
+def hermes_enrich(url: str) -> dict:
+    """Free-first enrichment through Hermes Scrapling and StealthyFetcher."""
     if not url:
         return {}
-    result = firecrawl_scrape(url)
-    if not result.get("valid"):
-        return {}
-    return {
-        "markdown": result["content"],
-        "title": result.get("title", ""),
-        "description": "",
-        "language": "",
-    }
+    # tier 1: stealthyFetcher.js (Cloudflare)
+    stealthy = scrapling_scrape_stealthy(url)
+    if stealthy: return {"markdown": stealthy, "title": "", "description": "", "language": ""}
+    # tier 2: fallback to Scrapling
+    raw_page = scrape_urllib(stealthy or url)
+    return _dictify_scraping_result(raw_page)
 
 
 # ═══════════════════════════════════════════════════════════════

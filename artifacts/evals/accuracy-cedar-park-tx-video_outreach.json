@@ -1,0 +1,38 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "cedar-park-tx",
+  "stage": "video_outreach",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 3,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The oEmbed metadata for the youtu.be URL confirms a real, public, embeddable YouTube video titled 'Cedar Park Doula & Birth Plan Guide' by True Joy Birthing, matching both the claim's topic and the True Joy Birthing city-page subject matter.",
+      "claim": "Video uploaded to YouTube as new public embeddable video",
+      "url": "https://youtu.be/JJUroIchFKY",
+      "quote": "oembed API title 'Cedar Park Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)' by True Joy Birthing; thumbnail maxresdefault.jpg HTTP 200 size 108907 bytes; embeddable via oembed"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a specific technical verification (HTTP 200, videoId, VideoObject schema, duration) that directly matches the claim about a video embed on the Cedar Park page, and the URL's domain/path aligns with the claim's topic.",
+      "claim": "Video embedded on live Cedar Park page with VideoObject schema",
+      "url": "https://truejoybirthing.com/birth-support/cedar-park-tx/",
+      "quote": "Live page HTTP 200; contains videoId JJUroIchFKY, 'VideoObject' schema, and '\"duration\":\"PT2M47S\"'"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote enumerates exactly 3 hospitals (Ascension Seton Cedar Park, Cedar Park Regional Medical Center, St. David's Round Rock) and 4 doulas (Alicia Power, Tara Garner, Alivia Lehmann, Motherwell Doula Services), matching the claim's counts and Cedar Park, TX location on a birthing-support domain.",
+      "claim": "Cedar Park has 3 hospitals and 4 doulas on the page",
+      "url": "https://truejoybirthing.com/birth-support/cedar-park-tx/",
+      "quote": "cities.ts hospitalDetails: Ascension Seton Cedar Park Hospital, Cedar Park Regional Medical Center, St. David's Round Rock Medical Center; localDoulas: Alicia Power, Tara Garner, Alivia Lehmann, Mothe"
+    }
+  ],
+  "checked_at": "2026-09-07T17:55:39-06:00"
+}

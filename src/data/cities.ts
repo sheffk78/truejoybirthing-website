@@ -10947,25 +10947,229 @@ hospitalDetails: [
     nearbyCities: [],
   },
   "costa-mesa-ca": {
-    enableBlogResources: true,
-    publishedDate: "2026-08-27",
-    city: "Costa Mesa",
-    state: "CA",
-    stateFull: "California",
-    slug: "costa-mesa-ca",
-    costLow: 800,
-    costHigh: 2500,
-    shelbiServesHere: false,
-    culture: "Skeleton entry for Costa Mesa, CA. Awaiting provider research, hospital details, and enrichment.",
-    heroLocalDetail: "Skeleton entry for Costa Mesa, CA.",
-    hospitalDetails: [],
-    birthCenterDetails: [],
-    localDoulas: [],
-    medicaidNote: "Medicaid doula coverage varies by state. Check with local doulas and your plan for current coverage.",
-    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage.",
-    faqs: [],
-    nearbyCities: [],
-  },
+	enableBlogResources: true,
+	publishedDate: "2026-09-08",
+	city: "Costa Mesa",
+	state: "CA",
+	stateFull: "California",
+	slug: "costa-mesa-ca",
+	titleTag: "Costa Mesa, California Doula Costs, Hospitals and Medicaid",
+	metaDescription: "Costa Mesa doula costs, Hoag and Orange Coast NICU levels, Medi-Cal doula coverage, and Orange County birth providers.",
+	population: 110538,
+	costLow: 1500,
+	costHigh: 2500,
+	heroImage: "/images/costa-mesa-ca-birth-doula-skyline-v2.webp",
+	supportSceneImage: "/images/costa-mesa-ca-birth-doula-support-v2.webp",
+	supportSceneAlt: "A doula supporting an expectant mom in Costa Mesa: Orange County birth support and doula care",
+	ogImage: "https://truejoybirthing.com/images/og-city-costa-mesa-ca.webp",
+	shelbiServesHere: false,
+	localDoulas: [
+		{
+			name: "Christine (Costa Mesa Doula)",
+			credential: "Birth doula (CD) with birth photography training",
+			practice: "Costa Mesa Doula",
+			url: "https://www.costamesadoula.com/",
+			photo: "/images/provider-costa-mesa-ca-christine.webp",
+			description: "Christine is a birth doula based in Costa Mesa whose published birth package is $1,500 and includes two prenatal visits, 24/7 phone and text access from the point of hire, continuous labor support at your birth location, and one postpartum visit. She also offers birth photography during labor and arranges a trained backup doula when she cannot attend. She serves Costa Mesa and the broader Orange County area, and states that if the full fee is a barrier she will work with families to make support accessible.",
+			costRange: "$1,500-$1,500",
+			costRange_source: "published",
+			services: [
+				"Birth Doula",
+				"Continuous Labor Support",
+				"Birth Photography",
+				"Prenatal Visits",
+				"Postpartum Visit"
+			],
+			serviceArea: [
+				"Costa Mesa, CA",
+				"Newport Beach, CA",
+				"Irvine, CA",
+				"Santa Ana, CA"
+			]
+		},
+		{
+			name: "Tiffany Blackham",
+			credential: "IDI-Certified Birth Doula, HypnoBirthing International Educator, HypnoBabies Doula, IPPA Certified Placenta Specialist",
+			practice: "Tiffany Blackham Birth & Postpartum Doula",
+			url: "https://www.bornbir.com/tiffany-blackham",
+			photo: "/images/provider-costa-mesa-ca-tiffany-blackham.webp",
+			description: "Tiffany Blackham is a birth and postpartum doula in Costa Mesa who describes a holistic, agenda-free approach to birth support. She has been certified as a birth doula since 2017, a HypnoBirthing International educator since 2022, a HypnoBabies doula since 2020, and a placenta specialist since 2020. Her services include birth doula support, HypnoBirthing and HypnoBabies childbirth education, postpartum care, placenta services, and insurance super bills so families can seek doula reimbursement. She offers unlimited early-labor support by phone, text, or FaceTime and in-person support during active labor.",
+			costRange: "$1,500-$2,500",
+			costRange_source: "market-estimate",
+			services: [
+				"Birth Doula",
+				"Postpartum Support",
+				"HypnoBirthing Education",
+				"Placenta Services",
+				"Insurance Super Bills"
+			],
+			serviceArea: [
+				"Costa Mesa, CA",
+				"Orange County, CA"
+			]
+		},
+		{
+			name: "Tessa Fisher (Abundant Blessings Midwifery)",
+			credential: "Licensed Midwife (LM), Certified Professional Midwife (CPM)",
+			practice: "Abundant Blessings Midwifery",
+			url: "https://www.abundantblessingsmidwifery.com/",
+			photo: "/images/provider-costa-mesa-ca-tessa-fisher.webp",
+			description: "Tessa Fisher is a licensed midwife and certified professional midwife who runs Abundant Blessings Midwifery, a community-based home birth practice serving Orange County including Costa Mesa. The practice provides in-home prenatal visits, labor and birth attendance, water birth, newborn care, postpartum care, and well-woman care for low-risk pregnancies, and emphasizes informed choice and client autonomy. She serves Irvine, Costa Mesa, Anaheim, Fullerton, Newport Beach, Huntington Beach, and Santa Ana, plus select Los Angeles County areas.",
+			costRange: "$4,000-$6,000",
+			costRange_source: "market-estimate",
+			services: [
+				"Home Birth",
+				"Water Birth",
+				"Prenatal Care",
+				"Postpartum Care",
+				"Well-Woman Care"
+			],
+			serviceArea: [
+				"Costa Mesa, CA",
+				"Irvine, CA",
+				"Anaheim, CA",
+				"Newport Beach, CA"
+			]
+		},
+		{
+			name: "Kellie Gwaltney, CNM",
+			credential: "Certified Nurse-Midwife (CNM), Advanced Practice Midwife",
+			practice: "Kellie Gwaltney CNM",
+			url: "https://kelliegwaltney098.dr-leonardo.com/",
+			photo: "/images/provider-costa-mesa-ca-kellie-gwaltney.webp",
+			description: "Kellie Gwaltney is a certified nurse-midwife practicing in Costa Mesa, listed with NPI 1013315563 at 3400 Avenue of the Arts. Her practice provides midwifery care in a personalized environment, with clinical training in obstetrics and gynecology. As a CNM she can attend hospital births and provide gynecologic care, giving Costa Mesa families a midwifery option within the medical system.",
+			costRange: "$1,500-$2,500",
+			costRange_source: "market-estimate",
+			services: [
+				"Midwifery Care",
+				"CNM-Led Care",
+				"Obstetrics and Gynecology",
+				"Prenatal Care"
+			],
+			serviceArea: [
+				"Costa Mesa, CA"
+			]
+		}
+	],
+	culture: "Costa Mesa is a mid-sized Orange County city of roughly 110,000 residents, with a diverse population and a mix of beach-adjacent neighborhoods, the Segerstrom arts district, and family-oriented communities. Birth support in the area spans hospital-based care at Hoag Hospital Newport Beach and MemorialCare Orange Coast Medical Center in Fountain Valley, alongside a growing out-of-hospital community of licensed midwives, home birth practices, and birth centers such as South Coast Midwifery in nearby Irvine. California's Medi-Cal doula benefit, in effect since January 2023, has expanded access to doula support for low-income families across the county. Families in Costa Mesa typically deliver at Hoag Newport Beach or MemorialCare Orange Coast, with UCI Medical Center in Orange serving as the county's regional perinatal center for higher-acuity care.",
+	heroLocalDetail: "Costa Mesa families can choose between two major delivery hospitals within a short drive: Hoag Hospital Newport Beach with its Level III NICU and Sue & Bill Gross Women's Pavilion, and MemorialCare Orange Coast Medical Center in Fountain Valley, the only community hospital in Orange County with certified nurse midwives on staff. For out-of-hospital birth, South Coast Midwifery in nearby Irvine is Orange County's accredited freestanding birth center, offering water birth and VBAC support.",
+	hospitalDetails: [
+		{
+			name: "Hoag Hospital Newport Beach (Sue & Bill Gross Women's Pavilion)",
+			thumbnail: "/images/costa-mesa-ca-hospital-hoag.webp",
+			address: "1 Hoag Drive, Newport Beach, CA 92658",
+			url: "https://www.hoag.org/newport-beach-maternity-care/",
+			nicuLevel: "III",
+			doulaPolicy: "Certified doulas and nurse midwives welcomed at both campuses per TJB's Irvine page; confirm current policy with the care team",
+			midwifeFriendly: true,
+			waterBirth: "Hydrotherapy options vary by provider; confirm at your hospital tour",
+			medicaid: false,
+			lactation: true,
+			privateRooms: true,
+			paragraph: "Hoag Hospital Newport Beach's Sue & Bill Gross Women's Pavilion is one of Orange County's most comprehensive maternal and newborn care programs, about six miles from Costa Mesa. The facility includes 18 private labor, delivery, and recovery suites, 49 private postpartum rooms, a 14-bed antepartum unit, and an expanded 33-bed Level III NICU. Hoag's LDR unit has three C-section rooms staffed around the clock by anesthesiologists and OB/GYN hospitalists, and the hospital follows a non-separation policy where newborns room-in with their mothers. The pavilion offers advanced maternal-fetal medicine and a dedicated Obstetric Emergency Department, and the hospital is Magnet-designated for nursing excellence with a SOAP Center of Excellence designation for obstetric anesthesia. Hoag does not contract with Medi-Cal, listing Medi-Cal among plans not contracted with the hospital, so families on Medi-Cal typically deliver at other Orange County hospitals such as UCI Medical Center."
+		},
+		{
+			name: "MemorialCare Orange Coast Medical Center",
+			thumbnail: "/images/costa-mesa-ca-hospital-orange-coast.webp",
+			address: "18111 Brookhurst Street, Fountain Valley, CA 92708",
+			url: "https://www.memorialcare.org/services/maternity-care?location=12",
+			nicuLevel: "II",
+			doulaPolicy: "Doulas supported; MemorialCare states doulas are a vital member of the care team",
+			midwifeFriendly: true,
+			waterBirth: "Private labor and delivery suites with birthing beds; hydrotherapy options vary, confirm directly",
+			medicaid: true,
+			lactation: true,
+			privateRooms: true,
+			paragraph: "MemorialCare Orange Coast Medical Center's Childbirth Center in Fountain Valley, roughly ten minutes from Costa Mesa, is the only community hospital program in Orange County with certified nurse midwives on its medical staff, alongside obstetricians, pediatricians, and perinatologists. Deliveries take place in private labor and delivery suites with birthing beds, and the hospital practices couplet care so mother and infant remain together with a single nurse. The facility has a 24/7 Obstetrical Emergency Department staffed by board-certified obstetricians and an onsite OB laborist, plus a Level II NICU staffed by neonatologists and lactation consultants. The hospital has been recognized as high-performing in maternity care by U.S. News & World Report and is a Magnet-designated hospital. MemorialCare explicitly supports doulas as part of the birth care team and encourages a collaborative approach between the patient, doula, and medical team."
+		}
+	],
+	birthCenterDetails: [
+		{
+			name: "South Coast Midwifery",
+			thumbnail: "/images/costa-mesa-ca-birth-center-south-coast.webp",
+			address: "Irvine, CA (Quail Hill area)",
+			url: "https://southcoastmidwifery.com/",
+			services: [
+				"Birth Center Births",
+				"Water Birth",
+				"Home Birth",
+				"VBAC",
+				"Childbirth Classes"
+			],
+			medicaid: false,
+			distance: "About 10-15 miles from Costa Mesa",
+			paragraph: "South Coast Midwifery is Orange County's boutique birth center in the Quail Hill area of Irvine and describes itself as the first accredited birth center in the county. The center offers private birthing suites with queen beds and birthing tubs, water birth, home birth, prenatal and postpartum classes, and women's health care, and it states it is the only standalone birth center in Southern California accredited to perform vaginal birth after cesarean (VBAC). Staffed by certified nurse-midwives, it serves families from Irvine, Costa Mesa, and surrounding Orange County communities, and it is roughly 10 to 15 miles from Costa Mesa."
+		},
+		{
+			name: "Honey Midwifery (Orange County Midwife & Holistic Birth Center)",
+			thumbnail: "/images/costa-mesa-ca-birth-center-honey.webp",
+			address: "Orange County, CA",
+			url: "https://www.orangecountymidwife.com/",
+			services: [
+				"Birth Center Births",
+				"Home Birth",
+				"Water Birth",
+				"Doula Services",
+				"Childbirth Education",
+				"Infant CPR Classes"
+			],
+			medicaid: false,
+			distance: "Within Orange County",
+			paragraph: "Honey Midwifery is a birth center and home birth practice in Orange County founded on a holistic, trauma-informed model of midwifery care. The practice offers licensed midwife care for birth center, water birth, and home birth, along with certified doulas, childbirth education, and infant CPR and choking relief courses. Its holistic birth center was listed as opening in Orange County in 2025, giving Costa Mesa families a second freestanding birth center option in the county. Families can combine licensed midwife care with doula support and education under one practice."
+		}
+	],
+	midwifeInfo: {
+		paragraph: "In California, certified nurse-midwives (CNMs) are licensed by the California Board of Registered Nursing as advanced practice nurses who have met the Board's educational and certification requirements. Licensed midwives (LMs) are licensed by the Medical Board of California to attend cases of normal pregnancy and childbirth and to provide prenatal, intrapartum, and postpartum care. Both credential paths serve Orange County families: CNMs practice in hospital settings such as MemorialCare Orange Coast Medical Center, while licensed midwives attend home births and birth center births across Costa Mesa and surrounding communities.",
+		credentialTypes: "CNM, LM"
+	},
+	birthStats: {
+		cesareanRate: 32,
+		maternalMortalityRate: 15,
+		homeBirthRate: 0.97,
+		birthCenterBirthRate: 0.8,
+		dataYear: 2024,
+		dataSource: "CDC NCHS National Vital Statistics System; KFF Women's Health Profiles (California); CDPH pregnancy-related mortality 2022"
+	},
+	medicaidNote: "Yes - California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal through the Department of Health Care Services. Note that Hoag Hospital Newport Beach does not contract with Medi-Cal, so Medi-Cal families in the Costa Mesa area commonly deliver at hospitals such as UCI Medical Center in Orange. Confirm your doula is a Medi-Cal enrolled provider before your first visit.",
+	insuranceNote: "MemorialCare Orange Coast Medical Center accepts most major HMO, PPO, and EPO health plans as well as Medicare. Hoag Hospital Newport Beach contracts with most major private plans but does not contract with Medi-Cal. Christine of Costa Mesa Doula states she will work with families for whom the full fee is a barrier, and Tiffany Blackham offers insurance super bills for doula reimbursement. Ask whether HSA or FSA funds can help with out-of-pocket doula costs, and whether lactation consultants are in-network with your plan.",
+	faqs: [
+		{
+			q: "How much does a birth doula cost in Costa Mesa?",
+			a: "Costa Mesa doula Christine publishes a $1,500 birth package that includes two prenatal visits, 24/7 phone and text access, continuous labor support, and one postpartum visit, and she will work with families for whom the full fee is a barrier. Most Orange County birth doula packages land between $1,500 and $2,500. Ask about sliding-scale options or payment plans when you interview doulas."
+		},
+		{
+			q: "What hospitals near Costa Mesa offer labor and delivery services?",
+			a: "Hoag Hospital Newport Beach's Sue & Bill Gross Women's Pavilion (1 Hoag Drive) offers private LDR suites, a 33-bed Level III NICU, and an Obstetric Emergency Department. MemorialCare Orange Coast Medical Center in Fountain Valley (18111 Brookhurst Street) offers private LDR suites, a Level II NICU, and certified nurse-midwives on staff. UCI Medical Center in Orange, the county's regional perinatal center, serves families needing higher-acuity care."
+		},
+		{
+			q: "Does Medi-Cal cover doula services in California?",
+			a: "Yes. As of January 1, 2023, California's Department of Health Care Services added full-spectrum doula services as a covered preventive benefit under Medi-Cal, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal directly. Hoag Hospital Newport Beach itself does not contract with Medi-Cal, so Medi-Cal families in the area commonly deliver at UCI Medical Center in Orange."
+		},
+		{
+			q: "Do Costa Mesa-area hospitals allow doulas during labor?",
+			a: "Yes. MemorialCare Orange Coast Medical Center explicitly states that doulas are considered a vital member of the care team and encourages a collaborative approach between the patient, doula, and medical team. Hoag does not publish a specific doula policy on its public maternity pages, so doula access should be confirmed with the care team before your birth."
+		},
+		{
+			q: "Are there birth centers near Costa Mesa?",
+			a: "Yes. South Coast Midwifery in Irvine, about 10 to 15 miles away, is Orange County's first accredited freestanding birth center, offering private birthing suites, water birth, home birth, and VBAC support. Honey Midwifery also operates a birth center and home birth practice in Orange County, with its holistic birth center listed as opening in 2025."
+		},
+		{
+			q: "How are midwives licensed in California?",
+			a: "Certified Nurse-Midwives (CNMs) are licensed by the California Board of Registered Nursing as advanced practice nurses. Licensed Midwives (LMs) are licensed by the Medical Board of California to attend cases of normal pregnancy and childbirth and to provide prenatal, intrapartum, and postpartum care. Both credential types are represented in the Costa Mesa area."
+		},
+		{
+			q: "What is the cesarean rate in California?",
+			a: "In 2024, 32% of all live births in California were cesarean deliveries, according to NCHS data via KFF's Women's Health Profiles. California's pregnancy-related mortality ratio was 15.0 deaths per 100,000 live births in 2022, down from the COVID-19-era peak."
+		}
+	],
+	lat: 33.6412,
+	lng: -117.9177,
+	nearbyCities: [
+		"irvine-ca",
+		"anaheim-ca",
+		"huntington-beach-ca"
+	]
+},
   "la-habra-ca": {
     enableBlogResources: true,
     publishedDate: "2026-08-27",
@@ -11066,46 +11270,358 @@ hospitalDetails: [
     faqs: [],
     nearbyCities: [],
   },
-  "cary-nc": {
+    "cary-nc": {
     enableBlogResources: true,
-    publishedDate: "2026-08-27",
+    publishedDate: "2026-09-08",
     city: "Cary",
     state: "NC",
     stateFull: "North Carolina",
     slug: "cary-nc",
+    titleTag: "Cary, North Carolina Doula Costs, Hospitals and Medicaid",
+    metaDescription: "Cary doula costs, hospital NICU levels, Medicaid coverage, and local birth providers for Triangle families.",
+    population: 183582,
     costLow: 800,
     costHigh: 2500,
+    heroImage: "/images/cary-nc-birth-doula-skyline-v2.webp",
+    supportSceneImage: "/images/cary-nc-birth-doula-support-v2.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Cary: North Carolina Triangle birth support and doula care",
+    ogImage: "https://truejoybirthing.com/images/og-city-cary-nc.webp",
     shelbiServesHere: false,
-    culture: "Skeleton entry for Cary, NC. Awaiting provider research, hospital details, and enrichment.",
-    heroLocalDetail: "Skeleton entry for Cary, NC.",
-    hospitalDetails: [],
-    birthCenterDetails: [],
-    localDoulas: [],
-    medicaidNote: "Medicaid doula coverage varies by state. Check with local doulas and your plan for current coverage.",
-    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage.",
-    faqs: [],
-    nearbyCities: [],
+    localDoulas: [
+      { name: "Triangle Doula by Nature" , credential: "Birth Doula" , practice: "Triangle Doula by Nature" , url: "https://www.triangledoulabynature.com/" , photo: "/images/provider-cary-nc-triangle-doula.webp" , description: "Triangle Doula by Nature is a birth doula practice serving families in Cary and across the NC Triangle and Triad. The practice offers prenatal, labor, and postpartum support and supports a wide range of birth goals including hospital, home, water, and birth center births, as well as VBAC and cesarean births." , costRange: "$800-$2,500" , acceptingClients: true , services: ["Birth Doula", "Childbirth Education", "Birth Plan Consultations", "Postpartum Support"] , serviceArea: ["Cary, NC", "Raleigh, NC", "Durham, NC", "Chapel Hill, NC", "Apex, NC"] , costRange_source: "market-estimate" },
+      { name: "Mariam Lam" , credential: "Birth Doula, DONA International certified" , practice: "Independent birth doula" , url: "https://www.hellomeela.com/cary-nc/doulas/" , photo: "/images/provider-cary-nc-mariam-lam.webp" , description: "Mariam Lam is a DONA International certified birth doula serving the Durham and Triangle area, listed among birth doulas available to Cary families on the Meela directory. She has supported 50 families over 6 years and lists a $900 birth fee on her profile." , costRange: "$800-$900" , acceptingClients: true , services: ["Birth Doula", "On-Call Labor Support", "Prenatal Visits", "Postpartum Visits"] , serviceArea: ["Cary, NC", "Durham, NC", "Chapel Hill, NC"] , costRange_source: "published" },
+      { name: "Amanda Petry" , credential: "IBCLC, RN" , practice: "Independent lactation consultant" , url: "https://www.bornbir.com/amanda-petry" , photo: "/images/provider-cary-nc-amanda-petry.webp" , description: "Amanda Petry is a Registered Nurse and International Board Certified Lactation Consultant based in Cary, NC who provides personalized infant feeding support from pregnancy through the breastfeeding journey. She offers in-home visits for reassurance and troubleshooting, and has experience supporting premature infants, multiples, and a range of feeding challenges." , costRange: "$800-$950" , acceptingClients: true , services: ["Lactation Support", "In-Home Visits", "Pumping Guidance", "Milk Supply Support"] , serviceArea: ["Cary, NC"] , costRange_source: "market-estimate" },
+      { name: "Sacred Haven Midwifery" , credential: "CNM-led homebirth team" , practice: "Sacred Haven Midwifery" , url: "https://www.sacredhavenmidwifery.com/" , photo: "/images/provider-cary-nc-sacred-haven.webp" , description: "Sacred Haven Midwifery is a Certified Nurse-Midwife led homebirth team serving women and families in North Carolina. The practice provides CNM-led home birth, prenatal, and postpartum care across the state." , costRange: "$2,500-$4,500" , acceptingClients: true , services: ["Home Birth", "Prenatal Care", "Postpartum Care", "CNM-Led Care"] , serviceArea: ["Cary, NC", "North Carolina"] , costRange_source: "market-estimate" },
+    ],
+    culture: "Cary is a fast-growing town in the Research Triangle region of North Carolina, located between Raleigh and Research Triangle Park, and known for its family-oriented neighborhoods, highly rated schools, and extensive parks and greenways. The town has a highly educated population, with 70.5% of residents age 25 and older holding a bachelor's degree or higher and a median household income of $134,905. Expectant families in Cary benefit from proximity to multiple maternity options, including the local WakeMed Cary Hospital, the larger UNC Health Rex in nearby Raleigh, and a freestanding birth center within the town itself. The broader Triangle is home to a strong midwifery and doula community, with the UNC School of Nursing and UNC Midwifery program contributing to a deep CNM talent pool.",
+    heroLocalDetail: "Cary families can choose between the local WakeMed Cary Hospital, which offers a Level III NICU and a full maternity program at 1900 Kildaire Farm Road, and the larger UNC Health Rex in Raleigh, about 20 minutes away, which has a Level IV NICU and allows a doula as one of three bedside visitors. For out-of-hospital birth, Haven Women's Health and Birth Center operates a CNM-led birth center in Cary with water birth suites and a 5% cesarean rate for clients who begin labor there, located close to WakeMed Cary for transfers.",
+    hospitalDetails: [
+      {
+        name: "WakeMed Cary Hospital",
+        thumbnail: "/images/cary-nc-hospital-wakemed-cary.webp",
+        address: "1900 Kildaire Farm Road, Cary, NC 27518",
+        url: "https://www.wakemed.org/find-a-location/cary-hospital/services-and-specialties/pregnancy-and-childbirth",
+        nicuLevel: "III",
+        doulaPolicy: "Doulas typically coordinated with the care team; confirm current policy at your hospital tour",
+        midwifeFriendly: true,
+        waterBirth: "Water birth available at nearby Haven birth center; hospital labor and delivery",
+        medicaid: true,
+        lactation: true,
+        privateRooms: true,
+        paragraph: "WakeMed Cary Hospital is the inpatient hospital serving western Wake County and offers a full maternity program with labor and delivery, postpartum care, and lactation support. The hospital has a Level III NICU that provides care for babies needing short-term intensive care, sharing a full-time staff of neonatologists and 24-hour neonatal nurse practitioners with the Raleigh Campus. Babies who need a higher level of care can be transferred to the Raleigh Campus via the Children's Transport Team, and the mother is moved to the Women's Pavilion and Birthplace in Raleigh when possible. The hospital offers free guided tours of the birthing center on weekday evenings and one Saturday per month, plus a virtual tour. Care teams include labor and delivery nurses, obstetrical hospitalists, anesthesiologists, and lactation consultants.",
+      },
+      {
+        name: "UNC Health Rex (Rex Women's Center)",
+        thumbnail: "/images/cary-nc-hospital-unc-rex.webp",
+        address: "4420 Lake Boone Trail, Raleigh, NC 27607",
+        url: "https://www.rexhealth.com/rh/care-treatment/womens-health/maternity-services/",
+        nicuLevel: "IV",
+        doulaPolicy: "A doula is considered one of the three visitors allowed at the bedside",
+        midwifeFriendly: true,
+        waterBirth: "Hydrotherapy and birth center options available; water birth varies by provider",
+        medicaid: true,
+        lactation: true,
+        privateRooms: true,
+        paragraph: "UNC Health Rex's Rex Women's Center in Raleigh is a major maternity destination in the Triangle, reporting that it delivers more babies than any other hospital in the region. The center provides a birth center with private labor and delivery rooms, and its care team includes obstetricians, OB hospitalists, certified nurse midwives, neonatologists, and lactation consultants. Its Neonatal Intensive Care Unit holds a Level IV designation, allowing care for the most premature and medically fragile babies. The Rex Women's Center visitation policy allows three visitors at the bedside, and a doula is considered one of the three visitors. The center also offers maternal-fetal medicine specialists for high-risk pregnancies and an OB emergency department staffed by OB hospitalists.",
+      },
+    ],
+    birthCenterDetails: [
+      {
+        name: "Haven Women's Health and Birth Center",
+        thumbnail: "/images/cary-nc-birth-center-haven.webp",
+        address: "226 Ashville Ave, Suite 20, Cary, NC 27518",
+        url: "https://www.havenhealthandbirth.com/",
+        services: ["CNM-Led Care", "Water Birth", "Prenatal Care", "Postpartum Care", "Lactation Support", "Birth Center Tours"],
+        medicaid: false,
+        distance: "In Cary, close to WakeMed Cary Hospital",
+        paragraph: "Haven Women's Health and Birth Center is a CNM-led, CABC-accredited birth center in Cary offering prenatal care, water birth, labor and birth suites, and postpartum care through six weeks. It is located in close proximity to WakeMed Cary Hospital for transfers. The center reports 200+ babies delivered since 2004 and a 5% cesarean rate for mothers who begin labor at the birth center. Pricing and insurance questions are addressed during free weekly birth center tours.",
+      },
+    ],
+    midwifeInfo: {
+      paragraph: "North Carolina licenses Certified Nurse-Midwives (CNMs) through the NC Board of Nursing. Certified Professional Midwives (CPMs) are not currently licensed in the state, so only CNMs may legally attend births, including planned home births where they choose to offer them. A 2023 state law ended the physician supervision requirement for CNMs with at least 24 months and 4,000 hours of practice, while newer CNMs work under a collaborative provider agreement.",
+      credentialTypes: "CNM" ,
+    },
+    birthStats: {
+      cesareanRate: 31.0,
+      maternalMortalityRate: 26.7,
+      homeBirthRate: 0.96,
+      birthCenterBirthRate: 0,
+      dataYear: 2023,
+      dataSource: "CDC NCHS National Vital Statistics System; KFF",
+    },
+    medicaidNote: "No - North Carolina does not yet have statewide Medicaid doula coverage as of 2026, though doula benefits have been studied and pilots are emerging in some managed-care plans. Most Cary families pay out of pocket for doula support. Call your Medicaid managed-care plan and ask directly whether doula services are covered. You can also check with local community organizations that may offer reduced-cost or sliding-scale doula support.",
+    insuranceNote: "WakeMed Cary Hospital and UNC Health Rex accept most major private insurance plans. Some insurers in North Carolina are beginning to offer maternal wellness benefits that partially cover doula or lactation support. Check with your provider directly. Ask whether HSA or FSA funds can help with out-of-pocket doula costs, and whether lactation consultants are in-network.",
+    faqs: [
+      { q: "How much does a doula cost in Cary?" , a: "Expect to pay around $800 to $2,500 depending on the doula and package. Can't swing the full price? Ask about sliding-scale options or payment plans. The investment typically covers prenatal visits, labor support, and postpartum check-ins." },
+      { q: "What hospitals offer labor and delivery near Cary, NC?" , a: "WakeMed Cary Hospital (1900 Kildaire Farm Road, Cary) provides labor and delivery, postpartum care, and a Level III NICU. UNC Health Rex in Raleigh (4420 Lake Boone Trail) offers a Level IV NICU and a birth center with private labor and delivery rooms. Both are within roughly 20-30 minutes of most of Cary." },
+      { q: "Is there a birth center in Cary, NC?" , a: "Yes. Haven Women's Health and Birth Center is a CNM-led, CABC-accredited birth center at 226 Ashville Ave, Suite 20, Cary, NC 27518, offering prenatal care, water birth, and postpartum care, with free weekly tours for pricing and insurance questions." },
+      { q: "Can a doula attend a birth at WakeMed Cary Hospital or UNC Health Rex?" , a: "UNC Health Rex's Rex Women's Center explicitly counts a doula as one of the three visitors allowed at the bedside. WakeMed Cary Hospital does not publish a specific doula policy on its public pages, so doula access should be confirmed with the care team." },
+      { q: "Are Certified Professional Midwives (CPMs) licensed in North Carolina?" , a: "No. North Carolina licenses Certified Nurse-Midwives (CNMs) through the NC Board of Nursing, but CPMs are not currently licensed in the state. Only CNMs may legally attend births in North Carolina, including planned home births where they choose to offer them." },
+      { q: "What is the cesarean rate in North Carolina?" , a: "In 2023, 31% of all live births in North Carolina were cesarean deliveries, with a low-risk cesarean rate of 25%, according to KFF data based on the CDC NCHS National Vital Statistics System." },
+    ],
+    lat: 35.7915,
+    lng: -78.7811,
+    nearbyCities: ["raleigh-nc", "charlotte-nc"],
   },
   "bellevue-wa": {
-    enableBlogResources: true,
-    publishedDate: "2026-08-27",
-    city: "Bellevue",
-    state: "WA",
-    stateFull: "Washington",
-    slug: "bellevue-wa",
-    costLow: 800,
-    costHigh: 2500,
-    shelbiServesHere: false,
-    culture: "Skeleton entry for Bellevue, WA. Awaiting provider research, hospital details, and enrichment.",
-    heroLocalDetail: "Skeleton entry for Bellevue, WA.",
-    hospitalDetails: [],
-    birthCenterDetails: [],
-    localDoulas: [],
-    medicaidNote: "Medicaid doula coverage varies by state. Check with local doulas and your plan for current coverage.",
-    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage.",
-    faqs: [],
-    nearbyCities: [],
+	enableBlogResources: true,
+	publishedDate: "2026-09-08",
+	city: "Bellevue",
+	state: "WA",
+	stateFull: "Washington",
+	slug: "bellevue-wa",
+	titleTag: "Bellevue, Washington Doula Costs, Hospitals and Medicaid",
+	metaDescription: "Bellevue doula costs, Overlake and EvergreenHealth NICU levels, Apple Health Medicaid coverage, and Eastside birth providers.",
+	population: 154377,
+	costLow: 2000,
+	costHigh: 2500,
+	heroImage: "/images/bellevue-wa-birth-doula-skyline-v2.webp",
+	supportSceneImage: "/images/bellevue-wa-birth-doula-support-v2.webp",
+	supportSceneAlt: "A doula supporting an expectant mom in Bellevue: Eastside Seattle birth support and doula care",
+	ogImage: "https://truejoybirthing.com/images/og-city-bellevue-wa.webp",
+	shelbiServesHere: false,
+	localDoulas: [
+		{
+			name: "Expecting Joy Doula Services",
+			credential: "Birth doula team (DONA-aligned), IBCLC lactation consultants",
+			practice: "Expecting Joy",
+			url: "https://www.expectingjoy.com/",
+			photo: "/images/provider-bellevue-wa-expecting-joy.webp",
+			description: "Expecting Joy is a birth and parenting services company based in the Seattle area since 2011, offering birth doulas, postpartum doulas, lactation consulting, and placenta encapsulation. Their birth doula package includes two prenatal visits, unlimited email contact during pregnancy, 24/7 on-call support from 38 weeks, continuous labor and delivery support, and at least one postpartum visit. The practice serves Bellevue and surrounding areas and carries a 5-star rating across 99 Google reviews.",
+			costRange: "$2,000-$2,500",
+			costRange_source: "market-estimate",
+			services: [
+				"Birth Doula",
+				"Postpartum Support",
+				"Lactation Support",
+				"Placenta Encapsulation",
+				"Childbirth Education"
+			],
+			serviceArea: [
+				"Bellevue, WA",
+				"Seattle, WA",
+				"Kirkland, WA",
+				"Redmond, WA"
+			]
+		,
+    acceptingClients: true
   },
+		{
+			name: "Mariola Klein (Bellevue Doula)",
+			credential: "Birth Doula CD(DONA), Postpartum Doula CD(NAPS), Licensed Massage Practitioner",
+			practice: "Bellevue Doula",
+			url: "http://www.bellevuedoula.com/birth-doula.html",
+			photo: "/images/provider-bellevue-wa-mariola-klein.webp",
+			description: "Mariola Klein is a DONA-certified birth doula based in Bellevue who charges $2,500 for birth doula services with a free initial consultation. Her package includes two prenatal meetings, phone and email support during pregnancy and after birth, 24-hour availability, continuous emotional and physical support during labor, a backup doula, and two postpartum meetings. She works in compliance with DONA International Standards of Practice and speaks fluent German and Polish.",
+			costRange: "$2,500-$2,500",
+			costRange_source: "published",
+			services: [
+				"Birth Doula",
+				"Postpartum Support",
+				"Maternity Massage",
+				"Infant Massage Instruction"
+			],
+			serviceArea: [
+				"Bellevue, WA"
+			]
+		,
+    acceptingClients: true
+  },
+		{
+			name: "Angela Lygren",
+			credential: "Licensed Midwife (LM), Certified Professional Midwife (CPM)",
+			practice: "Independent midwifery practice",
+			url: "https://angelalygren.dr-leonardo.com/",
+			photo: "/images/provider-bellevue-wa-angela-lygren.webp",
+			description: "Angela Lygren is a Licensed Midwife and Certified Professional Midwife practicing in Bellevue, WA (NPI 1104483148). Her practice is listed in the Healthgrades midwifery directory for Bellevue and she is one of the home-birth midwives serving the Bellevue area. Washington licenses direct-entry midwives through the Department of Health, and her listing covers prenatal care, labor and delivery support, and postpartum care.",
+			costRange: "$2,000-$2,500",
+			costRange_source: "market-estimate",
+			services: [
+				"Home Birth",
+				"Prenatal Care",
+				"Labor Support",
+				"Postpartum Care"
+			],
+			serviceArea: [
+				"Bellevue, WA"
+			]
+		,
+    acceptingClients: true
+  },
+		{
+			name: "Northshore Midwives & Lactation Consulting",
+			credential: "Licensed Midwife (LM), International Board Certified Lactation Consultant (IBCLC)",
+			practice: "Northshore Midwives & Lactation Consulting",
+			url: "https://www.northshoremidwives.com/bellevue-lactation-consultant-midwife-doula-postpartum-doula/",
+			photo: "/images/provider-bellevue-wa-northshore-midwives.webp",
+			description: "Northshore Midwives & Lactation Consulting serves the Bellevue area with lactation consulting, midwifery, and postpartum doula services. Lead clinician Andrea is one of the first and only licensed midwives who is also an International Board Certified Lactation Consultant (IBCLC) in Washington State, and has assisted families since 2007. The practice accepts all insurance companies, including Medicaid coverage, and serves Bellevue, Kirkland, Redmond, Woodinville, and Sammamish.",
+			costRange: "$2,000-$2,500",
+			costRange_source: "market-estimate",
+			services: [
+				"Lactation Support",
+				"Midwifery Care",
+				"Postpartum Support",
+				"Newborn Feeding Support"
+			],
+			serviceArea: [
+				"Bellevue, WA",
+				"Kirkland, WA",
+				"Redmond, WA",
+				"Woodinville, WA",
+				"Sammamish, WA"
+			]
+		,
+    acceptingClients: true
+  },
+		{
+			name: "Heng Ma (Body Enmotion Massage and Doula Care)",
+			credential: "IBCLC, Licensed Massage Therapist, Birth and Postpartum Doula",
+			practice: "Body Enmotion Massage and Doula Care",
+			url: "https://www.bodyenmotion.com/hengma",
+			photo: "/images/provider-bellevue-wa-heng-ma.webp",
+			description: "Heng Ma is an IBCLC-certified lactation consultant, licensed massage therapist, and experienced birth and postpartum doula who has supported over 5,000 families since 2016. Her practice, Body Enmotion Massage and Doula Care, specializes in Ayurvedic postpartum massage, belly binding, infant massage, and breastfeeding support for newborn families, and she serves the Bellevue area. Her birth doula fee is listed at $2,500 on the Meela directory.",
+			costRange: "$2,500-$2,500",
+			costRange_source: "published",
+			services: [
+				"Lactation Support",
+				"Birth Doula",
+				"Postpartum Support",
+				"Ayurvedic Postpartum Massage",
+				"Infant Massage"
+			],
+			serviceArea: [
+				"Bellevue, WA",
+				"Seattle, WA"
+			]
+		,
+    acceptingClients: true
+  }],
+	culture: "Bellevue is a fast-growing Eastside suburb of Seattle with a population of roughly 154,000, known for its tech industry presence and diverse, well-educated population. Most births in Washington occur in hospitals, but the state has a strong and well-regulated midwifery infrastructure, with Licensed Midwives practicing under formal state licensure since 1981 and a rising number of home and birth-center births during the pandemic years. Bellevue families have access to two major hospital maternity units within a short drive (Overlake in Bellevue and EvergreenHealth in Kirkland), both offering Level III NICU care, plus freestanding birth centers in Bellevue, Kirkland, and Tacoma. Washington's Apple Health (Medicaid) program covers licensed midwifery care and planned home births attended by enrolled providers, making midwife-led and out-of-hospital birth options accessible to a broad range of families.",
+	heroLocalDetail: "Bellevue families can choose between the Overlake Childbirth Center, a U.S. News High Performing maternity hospital with a Level III NICU and TeamBirth care model, and EvergreenHealth's Family Maternity Center in nearby Kirkland. Freestanding birth center options include Eastside Birth Center in Bellevue and Puget Sound Midwives & Birth Center in Kirkland, while licensed midwives and doulas serve the area for home and hospital births.",
+	hospitalDetails: [
+		{
+			name: "Overlake Medical Center & Clinics (Overlake Childbirth Center)",
+			thumbnail: "/images/bellevue-wa-hospital-overlake.webp",
+			address: "1035 116th Ave NE, Building 1, E2, Bellevue, WA 98004",
+			url: "https://www.overlakehospital.org/services/childbirth-center",
+			nicuLevel: "III",
+			doulaPolicy: "Doulas welcomed as part of the care team; TeamBirth collaborative birth model",
+			midwifeFriendly: true,
+			waterBirth: "Hydrotherapy options vary by provider; confirm at your hospital tour",
+			medicaid: true,
+			lactation: true,
+			privateRooms: true,
+			paragraph: "The Overlake Childbirth Center is the primary hospital maternity unit in Bellevue, located at 1035 116th Ave NE. It offers private labor, delivery, and recovery rooms plus private mother-baby suites, two surgical suites equipped for cesarean or high-risk births, and a Level III Neonatal Intensive Care Unit (NICU) for babies needing complex care. The center uses the TeamBirth philosophy, which places the patient, their safety, preferences, and goals at the center of every decision, and explicitly welcomes doulas as part of the care team. Overlake offers vaginal birth after cesarean (VBAC) for eligible candidates, an emergency department specifically for expecting families, and a donor milk depot. The center is one of only three hospitals in Washington state recognized as High Performing in Maternity Care (Uncomplicated Pregnancy) by U.S. News & World Report."
+		},
+		{
+			name: "EvergreenHealth Family Maternity Center",
+			thumbnail: "/images/bellevue-wa-hospital-evergreenhealth.webp",
+			address: "12040 NE 128th Street, Kirkland, WA 98034",
+			url: "https://www.evergreenhealth.com/health-services/pregnancy-birth/",
+			nicuLevel: "III",
+			doulaPolicy: "Not explicitly published; support persons and doulas generally welcomed (verify directly)",
+			midwifeFriendly: true,
+			waterBirth: "Hydrotherapy options vary; confirm with the maternity center directly",
+			medicaid: true,
+			lactation: true,
+			privateRooms: true,
+			paragraph: "The EvergreenHealth Family Maternity Center in Kirkland, about 10 miles from Bellevue, is a newly renovated maternity unit with 34 refurbished labor rooms, 27 remodeled after-delivery rooms, and two modern family areas with kitchens and entertainment centers. Labor, birth, and recovery take place in private birthing suites with private bathrooms, and the center offers concierge-style meal service. The hospital's Level 3 Neonatal Intensive Care Unit provides one of the highest levels of care available for critically ill infants, with neonatologists on-site around the clock and single-room family-centered care that accommodates twins and triplets. EvergreenHealth has earned the CMS Birthing Friendly Designation, offers certified nurse-midwife (CNM) care through EvergreenHealth Midwifery Care, and partners its NICU with Seattle Children's and Swedish Medical Center for newborns requiring complicated care or surgery."
+		}
+	],
+	birthCenterDetails: [
+		{
+			name: "Eastside Birth Center PS",
+			thumbnail: "/images/bellevue-wa-birth-center-eastside.webp",
+			address: "14700 NE 8th St, Suite 115, Bellevue, WA 98007",
+			url: "https://eastsidebirthcenter.com/",
+			services: [
+				"Midwifery-Led Care",
+				"Birth Center Births",
+				"Prenatal Care",
+				"Postpartum Care"
+			],
+			medicaid: false,
+			distance: "In Bellevue",
+			paragraph: "Eastside Birth Center PS is a freestanding birth center in Bellevue offering a gentle, natural, and supportive environment for expectant parents, with professionally qualified midwifery staff providing care from pregnancy through postpartum. The center is licensed by the Washington State Department of Health as a childbirth center and serves families who want an out-of-hospital birth option close to home."
+		},
+		{
+			name: "Puget Sound Midwives & Birth Center",
+			thumbnail: "/images/bellevue-wa-birth-center-puget-sound.webp",
+			address: "13128 Totem Lake Blvd NE, Suite 101, Kirkland, WA 98034",
+			url: "https://www.birthcenter.com/",
+			services: [
+				"Midwifery-Led Care",
+				"Birth Center Births",
+				"Prenatal Care",
+				"Postpartum Care"
+			],
+			medicaid: true,
+			distance: "~10 miles from Bellevue",
+			paragraph: "Puget Sound Midwives & Birth Center, founded in 2010 in Kirkland, is a freestanding birth center where births take place under the care of highly skilled midwives, with privileges extended to qualified midwives in the Seattle area. The center is in-network with most major insurance companies and accepts Washington State Medicaid. It sits about 10 miles from Bellevue in the Totem Lake neighborhood of Kirkland."
+		},
+		{
+			name: "The Birthing Inn",
+			thumbnail: "/images/bellevue-wa-birth-center-birthing-inn.webp",
+			address: "6002 Westgate Blvd Suite 120, Tacoma, WA 98406",
+			url: "https://thebirthinginn.com/",
+			services: [
+				"Midwifery-Led Care",
+				"Water Birth",
+				"Prenatal Care",
+				"Postpartum Care"
+			],
+			medicaid: false,
+			distance: "~30 miles from Bellevue",
+			paragraph: "The Birthing Inn is Tacoma's only freestanding birth center, operating since 1999 and welcoming over 3,000 babies. It is accredited by the Commission for the Accreditation of Birth Centers (CABC) since 2016, and its water birth tubs are included in all packages. The center serves families from Gig Harbor, Lakewood, Federal Way, Puyallup, Auburn, and the broader Puget Sound region, about 30 miles from Bellevue."
+		}
+	],
+	midwifeInfo: {
+		paragraph: "In Washington State, non-nurse midwives are licensed as Licensed Midwives (LMs) by the Washington State Department of Health under RCW 18.50, a licensing pathway for direct-entry midwives that dates to 1917 and was rebuilt for direct-entry practice in 1981. Certified Nurse-Midwives (CNMs) are licensed by the Washington Nursing Care Quality Assurance Commission. Both credentials can be verified through the Department of Health's provider credential search. Washington's Apple Health (Medicaid) program covers licensed midwifery care and planned home births attended by enrolled providers for low-risk pregnancies that pass risk screening, and Washington's home-birth rate has trended upward, ranging from 1% to 2.1% of births between 2010 and 2022.",
+		credentialTypes: "LM, CNM"
+	},
+	birthStats: {
+		cesareanRate: 30,
+		maternalMortalityRate: 30.5,
+		homeBirthRate: 2.1,
+		birthCenterBirthRate: 2.6,
+		dataYear: 2023,
+		dataSource: "CDC NCHS National Vital Statistics System; March of Dimes PeriStats; WA DOH"
+	},
+	medicaidNote: "Yes — Washington's Apple Health (Medicaid) program covers doula services statewide, and enrolled doulas bill through ProviderOne. Apple Health also covers licensed midwifery care and planned home births attended by enrolled Licensed Midwives, and Overlake Medical Center's childbirth center accepts WA Apple Health (Medicaid). Confirm your doula or midwife is a Washington State Medicaid-enrolled provider before your first visit.",
+	insuranceNote: "Overlake Medical Center and EvergreenHealth accept most major private insurance plans. Northshore Midwives & Lactation Consulting states it accepts all insurance companies, including Medicaid coverage. Ask whether HSA or FSA funds can help with out-of-pocket doula costs, and whether lactation consultants are in-network with your plan.",
+	faqs: [
+		{
+			q: "How much does a doula cost in Bellevue, WA?",
+			a: "Published Bellevue rates run about $2,000 to $2,500 for a birth doula package: Bellevue Doula lists $2,000 including two prenatal meetings, continuous labor support, and two postpartum meetings, and Heng Ma lists a $2,500 birth doula fee. Ask about sliding-scale options or payment plans when you interview doulas."
+		},
+		{
+			q: "What hospitals in Bellevue offer labor and delivery services?",
+			a: "Overlake Medical Center & Clinics operates the Overlake Childbirth Center at 1035 116th Ave NE in Bellevue, offering private labor/delivery/recovery rooms, a Level III NICU, and TeamBirth collaborative care. EvergreenHealth's Family Maternity Center in Kirkland (12040 NE 128th Street) is about 10 miles away and also offers a Level 3 NICU and CNM midwifery care."
+		},
+		{
+			q: "Are there freestanding birth centers near Bellevue?",
+			a: "Yes. Eastside Birth Center PS is a freestanding birth center in Bellevue at 14700 NE 8th St. Puget Sound Midwives & Birth Center in Kirkland (13128 Totem Lake Blvd NE) is about 10 miles away and accepts Washington State Medicaid. The Birthing Inn in Tacoma, a CABC-accredited freestanding birth center, is about 30 miles away."
+		},
+		{
+			q: "How are midwives licensed in Washington State?",
+			a: "Licensed Midwives (LMs) are licensed by the Washington State Department of Health under RCW 18.50, a direct-entry midwifery pathway dating to 1917 and rebuilt in 1981. Certified Nurse-Midwives (CNMs) are licensed by the Washington Nursing Care Quality Assurance Commission. Both credentials can be verified through the DOH provider credential search."
+		},
+		{
+			q: "Does Medicaid (Apple Health) cover midwifery and birth center care in Washington?",
+			a: "Yes. Washington's Apple Health (Medicaid) program covers licensed midwifery care and planned home births attended by enrolled Licensed Midwives, CNMs, or physicians for low-risk pregnancies that pass risk screening. Overlake Medical Center's childbirth center also accepts WA Apple Health (Medicaid)."
+		},
+		{
+			q: "What is the cesarean rate in Washington State?",
+			a: "In 2023, 30.0% of live births in Washington were cesarean deliveries, according to March of Dimes PeriStats based on NCHS final natality data. Washington's NTSV (first-birth, term, singleton, vertex) cesarean rate has been below the Healthy People 2020 target of 23.9 percent."
+		}
+	],
+	lat: 47.6101,
+	lng: -122.2015,
+	nearbyCities: [
+		"seattle-wa",
+		"tacoma-wa"
+	]
+},
 
 };
 
