@@ -12,7 +12,7 @@
     {
       "index": 0,
       "verdict": "SUPPORTED",
-      "reason": "The quote from the expectingjoy.com homepage directly states that Expecting Joy is a birth & parenting services company serving the Seattle area since 2011, matching the claim's description of the company and its location.",
+      "reason": "The quote plausibly appears on the expectingjoy.com homepage and directly confirms the claim that Expecting Joy is a Seattle-area birth and parenting services company.",
       "claim": "Expecting Joy Doula Services is a Seattle-area birth and parenting company; provider photo sourced from its team image.",
       "url": "https://www.expectingjoy.com/",
       "quote": "Expecting Joy is a birth & parenting services company that has been serving families in the Seattle area since 2011."
@@ -20,7 +20,7 @@
     {
       "index": 1,
       "verdict": "SUPPORTED",
-      "reason": "The quote explicitly states a $2500 doula service fee, which matches the claim, and the bellevuedoula.com/birth-doula.html URL is a plausible source for birth doula pricing text from Bellevue Doula.",
+      "reason": "The quote explicitly states a $2,500 doula service fee, which matches the claim, and it is plausible text for a birth-doula services page on the bellevuedoula.com domain associated with Bellevue Doula.",
       "claim": "Mariola Klein (Bellevue Doula) publishes a $2,500 birth doula fee; headshot sourced from her DoulaMatch profile.",
       "url": "http://www.bellevuedoula.com/birth-doula.html",
       "quote": "The charge for my doula services is $2500. The initial consultation is free."
@@ -28,7 +28,7 @@
     {
       "index": 2,
       "verdict": "SUPPORTED",
-      "reason": "The quote directly states that Angela Dawn Lygren is a Certified Professional Midwife (CPM) in Bellevue, Washington, which matches both the claim and the midwife-directory URL for her Bellevue, WA listing.",
+      "reason": "The quote directly states that Angela Dawn Lygren is a Certified Professional Midwife in Bellevue, Washington, which matches both the claim and the URL's subject (a midwife directory page for Angela Dawn Lygren in Bellevue, WA).",
       "claim": "Angela Lygren is a Certified Professional Midwife (CPM) practicing in Bellevue, WA.",
       "url": "https://homebirthpartners.com/midwife/angela-dawn-lygren-bellevue-wa/",
       "quote": "Angela Dawn Lygren is listed as a Certified Professional Midwife (CPM) in Bellevue, Washington."
@@ -36,7 +36,7 @@
     {
       "index": 3,
       "verdict": "SUPPORTED",
-      "reason": "The quote plausibly appears on the northshoremidwives.com Bellevue page and directly supports the core claim that Northshore Midwives is led by Andrea, a licensed midwife and IBCLC in Washington State, though the Medicaid and photo-sourcing details are not addressed by the quote.",
+      "reason": "The quote is plausible text for the northshoremidwives.com Bellevue lactation/midwife page and directly supports the core claim that Andrea is a licensed midwife (LM) and IBCLC leading the practice, with the Medicaid and photo details not contradicted by the quote.",
       "claim": "Northshore Midwives & Lactation Consulting is led by Andrea, an LM+IBCLC, accepting Medicaid; photo sourced from staff images.",
       "url": "https://www.northshoremidwives.com/bellevue-lactation-consultant-midwife-doula-postpartum-doula/",
       "quote": "Andrea being the first, and currently one of the only, licensed midwives who is also an International Board Certified Lactation Consultant (IBCLC) in Washington State. Since 2007, Andrea has assisted "
@@ -44,7 +44,7 @@
     {
       "index": 4,
       "verdict": "SUPPORTED",
-      "reason": "The quote is a first-person bio from Heng, founder of Body Enmotion, on the matching domain/page (bodyenmotion.com/hengma), and it directly supports the credentials (licensed massage therapist, certified lactation consultant, postpartum doula) and the 5,000+ families since 2016 figure.",
+      "reason": "The quote is a first-person bio from Heng on her own Body Enmotion site (/hengma), and it directly supports the claim that she is a licensed massage therapist, certified lactation consultant, postpartum doula who has supported over 5,000 families since 2016.",
       "claim": "Heng Ma (Body Enmotion) is an IBCLC, LMT, and birth/postpartum doula who has supported 5,000+ families since 2016; photo sourced from her site.",
       "url": "https://www.bodyenmotion.com/hengma",
       "quote": "My name is Heng, and I'm the founder of Body Enmotion Massage LLC, where we specialize in holistic care for new parents and their newborns. I am a licensed massage therapist, certified lactation consu"
@@ -52,7 +52,7 @@
     {
       "index": 5,
       "verdict": "SUPPORTED",
-      "reason": "The quote plausibly comes from the Overlake Childbirth Center page and directly corroborates the claim's key details (TeamBirth model and Level III NICU), with the remaining elements (private suites, doulas) consistent with the page's subject and not contradicted.",
+      "reason": "The quote plausibly comes from Overlake's childbirth center page and directly supports the TeamBirth model and Level III NICU portions of the claim, with the ellipsis suggesting omitted text that could cover the remaining details.",
       "claim": "Overlake Childbirth Center offers private birthing suites, a Level III NICU, and the TeamBirth collaborative model that welcomes doulas.",
       "url": "https://www.overlakehospital.org/services/childbirth-center",
       "quote": "We use the TeamBirth philosophy, which puts you, your safety, preferences and goals, at the center of every decision. A ... Level III NICU for babies who need more complex care."
@@ -60,7 +60,7 @@
     {
       "index": 6,
       "verdict": "SUPPORTED",
-      "reason": "The quote reads as plausible homepage copy for a birth center website (matching the birthcenter.com domain) and directly supports the claim's key assertion of 6,000+ babies welcomed by licensed midwives.",
+      "reason": "The domain birthcenter.com matches the birth-center subject matter, and the quote directly corroborates the claim's key statistic of 6,000+ babies welcomed by licensed midwives without contradicting the Kirkland location.",
       "claim": "Puget Sound Midwives & Birth Center is a freestanding birth center in Kirkland that has welcomed 6,000+ babies.",
       "url": "https://www.birthcenter.com/",
       "quote": "With over 6,000 babies welcomed, you can rest assured that you'll receive personalized attention from our experienced, licensed midwives."
@@ -68,7 +68,7 @@
     {
       "index": 7,
       "verdict": "SUPPORTED",
-      "reason": "The quote is a plausible directory listing on birthingway.org (a midwifery resource site) whose page slug matches Eastside Birth Center PS, and it directly corroborates the claimed address (14700 NE 8th Street, Suite 115, Bellevue, WA) along with a licensed midwife, phone number, and matching birth ",
+      "reason": "The quote is a plausible directory listing on birthingway.org for Eastside Birth Center, matching the exact address (14700 NE 8th Street Suite 115, Bellevue, WA), a licensed midwife's contact info, and the center's own domain, which supports the claim.",
       "claim": "Eastside Birth Center PS is a real, operating freestanding birth center at 14700 NE 8th St, Suite 115, Bellevue, WA.",
       "url": "https://birthingway.org/eastside-birth-center-ps/",
       "quote": "Christine Thain, LM, CPM 14700 NE 8th Street Suite 115 Bellevue, WA 425-746-5566 eastsidebirthcenter.com"
@@ -76,11 +76,11 @@
     {
       "index": 8,
       "verdict": "SUPPORTED",
-      "reason": "The quote is from the official Washington HCA (hca.wa.gov) doula page and explicitly references the Apple Health (Medicaid) birth doula benefit with covered services, directly supporting the claim.",
+      "reason": "The quote is plausible text for the HCA (Washington Health Care Authority) doulas page and directly confirms that Apple Health (Medicaid) has a birth doula benefit covering doula services.",
       "claim": "Washington Apple Health (Medicaid) covers birth doula services via the HCA doula benefit.",
       "url": "https://www.hca.wa.gov/billers-providers-partners/program-information-providers/doulas",
       "quote": "Find information on the Apple Health (Medicaid) birth doula benefit including background, covered services, provider enrollment, how to stay updated, and more."
     }
   ],
-  "checked_at": "2026-09-09T12:47:10-06:00"
+  "checked_at": "2026-09-09T12:49:42-06:00"
 }

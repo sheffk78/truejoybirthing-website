@@ -12,7 +12,7 @@
     {
       "index": 0,
       "verdict": "SUPPORTED",
-      "reason": "The HTTP/2 200 status response with a substantial content-length confirms the True Joy Birthing Bellevue page is live and deployed at the given URL.",
+      "reason": "The HTTP/2 200 status response for the truejoybirthing.com URL directly confirms the page is live and deployed.",
       "claim": "Page is live and deployed",
       "url": "https://truejoybirthing.com/birth-support/bellevue-wa/",
       "quote": "HTTP/2 200, content-length 172001"
@@ -20,7 +20,7 @@
     {
       "index": 1,
       "verdict": "SUPPORTED",
-      "reason": "The quote 'HTTP 200' is a success status response for the exact image URL on the truejoybirthing.com domain, directly confirming the hero image is deployed and accessible.",
+      "reason": "An HTTP 200 status response from the truejoybirthing.com image URL directly confirms the hero image is deployed and accessible, matching the claim's topic and domain.",
       "claim": "Hero image deployed and accessible",
       "url": "https://truejoybirthing.com/images/bellevue-wa-birth-doula-skyline-v2.webp",
       "quote": "HTTP 200"
@@ -28,11 +28,11 @@
     {
       "index": 2,
       "verdict": "SUPPORTED",
-      "reason": "The HTTP 200 response confirms the provider image (provider-bellevue-wa-expecting-joy.webp) is live on the truejoybirthing.com domain, directly supporting the claim that provider photos were deployed.",
+      "reason": "The URL is a provider image file on the truejoybirthing.com domain (provider-bellevue-wa-expecting-joy.webp), and the HTTP 200 response confirms the image is live and deployed, supporting the claim.",
       "claim": "Provider photos deployed",
       "url": "https://truejoybirthing.com/images/provider-bellevue-wa-expecting-joy.webp",
       "quote": "HTTP 200"
     }
   ],
-  "checked_at": "2026-09-09T12:46:11-06:00"
+  "checked_at": "2026-09-09T12:50:20-06:00"
 }
