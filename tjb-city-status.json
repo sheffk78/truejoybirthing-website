@@ -1886,10 +1886,14 @@
       "blocked_reason": null
     },
     "bellevue-wa": {
-      "has_video": false,
-      "has_outreach": false,
-      "completed_at": null,
-      "stage": "enrich",
+      "has_video": true,
+      "has_outreach": true,
+      "video_id": "ijphg2h3578",
+      "video_url": "https://youtu.be/ijphg2h3578",
+      "video_uploaded_at": "2026-09-09T19:00:00Z",
+      "outreach_sent_at": "2026-09-09T18:57:00Z",
+      "completed_at": "2026-09-09T19:00:00Z",
+      "stage": "complete",
       "blocked_reason": null,
       "enriched_at": "2026-09-09T16:55:00Z",
       "enrich_real_photos": true,

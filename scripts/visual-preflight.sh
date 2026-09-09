@@ -60,8 +60,18 @@ if SLUG:
         print(f'⚠️  City {SLUG} not found in cities.ts — visual preflight SKIPPED')
         sys.exit(0)
     tail = text[start + len(marker):]
-    nxt = re.search(r'\n\s*\"[a-z][a-z-]+-[a-z]{2}\":\s*\{', tail)
-    blocks = [text[start:start + len(marker) + (nxt.start() if nxt else 5000)]]
+    # Use brace-depth matching for accurate block boundaries
+    depth = 1
+    block_end = len(marker)
+    for i, ch in enumerate(tail):
+        if ch == '{':
+            depth += 1
+        elif ch == '}':
+            depth -= 1
+            if depth == 0:
+                block_end = i + 1
+                break
+    blocks = [text[start:start + len(marker) + block_end]]
     print(f'Visual prelight: checking {SLUG} provider photos...')
 else:
     # Extract all city blocks
