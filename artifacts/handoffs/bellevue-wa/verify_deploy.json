@@ -1,25 +1,20 @@
 {
   "slug": "bellevue-wa",
   "stage": "verify_deploy",
-  "produced_at": "2026-09-09T12:45:40.529505",
-  "worker_model": "glm-5.2-via-subagent+parent",
-  "notes": "Deployed to CF Pages. Full preflight passed (0 failures). Live page returns 200 (172KB). All provider/hospital/birth-center images return 200 on CDN. 5 providers, 2 hospitals, 3 birth centers all visible on live page.",
+  "produced_at": "2026-09-09T19:05:00Z",
+  "worker_model": "deepseek-v4-flash:0731",
+  "notes": "Full preflight 0 failures; G7 medicaidNote em-dash fixed; mariola-klein re-encoded as 400x400 v2 (12404B, sha-verified on CDN); built 338 pages; deployed via scripts/deploy.sh (all deploy gates pass incl. vision verdict gate); CF cache purged 16 URLs; CDN sha256 match on all 15 images; browser Image() decode 15/15; pixel scan 0 placeholders/letterbox; voice + accuracy evals approved; city page HTTP 200.",
   "sources": [
-    {
-      "claim": "Page is live and deployed",
-      "url": "https://truejoybirthing.com/birth-support/bellevue-wa/",
-      "quote": "HTTP/2 200, content-length 172001"
-    },
-    {
-      "claim": "Hero image deployed and accessible",
-      "url": "https://truejoybirthing.com/images/bellevue-wa-birth-doula-skyline-v2.webp",
-      "quote": "HTTP 200"
-    },
-    {
-      "claim": "Provider photos deployed",
-      "url": "https://truejoybirthing.com/images/provider-bellevue-wa-expecting-joy.webp",
-      "quote": "HTTP 200"
-    }
+    "npx tsx scripts/preflight.ts bellevue-wa (0 failures, exit 0)",
+    "npx tsx scripts/validate-city-data.ts bellevue-wa (passed via preflight S4)",
+    "npm run build (338 pages, exit 0)",
+    "bash scripts/deploy.sh bellevue-wa (exit 0, all deploy gates pass)",
+    "CF purge_cache zone 39d6803936f2bb7d01b5255be6117d1c (success: true, 16 URLs)",
+    "CDN vs repo sha256 match: 15/15 bellevue images",
+    "browser Image() decode: 15/15 on truejoybirthing.com",
+    "pixel-scan: 12 bellevue images, 0 placeholders, 0 letterbox",
+    "scripts/eval-voice.py bellevue-wa (approved, 13 fields)",
+    "scripts/eval-accuracy.py bellevue-wa verify_deploy (approved, 0 unsupported)"
   ],
   "preflight_exit": 0,
   "deploy_status": "SUCCESS",
