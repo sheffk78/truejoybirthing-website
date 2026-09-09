@@ -1844,4 +1844,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
 
+  "bellevue-wa": {
+    videoId: "ijphg2h3578",
+    title: "Bellevue WA Doula & Birth Plan Guide",
+    description: "Watch the full Bellevue WA Doula & Birth Plan Guide â all in about 4:21.",
+    duration: "PT4M21S",
+  },
+
 };
