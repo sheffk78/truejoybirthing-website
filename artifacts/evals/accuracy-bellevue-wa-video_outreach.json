@@ -1,0 +1,54 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "bellevue-wa",
+  "stage": "video_outreach",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 5,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is YouTube video metadata for the exact video ID in the URL, directly stating privacy is 'public' and 'embeddable: True', which fully supports the claim.",
+      "claim": "YouTube video public+embeddable",
+      "url": "https://youtu.be/ijphg2h3578",
+      "quote": "privacy: public, embeddable: True, madeForKids: False"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The URL is the maxresdefault thumbnail endpoint for video ijphg2h3578, and the quoted HTTP 200 response with a substantial 169KB payload confirms a real thumbnail image exists (was uploaded) for that video ID.",
+      "claim": "Thumbnail uploaded to video ID",
+      "url": "https://img.youtube.com/vi/ijphg2h3578/maxresdefault.jpg",
+      "quote": "HTTP 200, size 169093 bytes"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from a TJB outreach send log whose subject matches the claim, and it lists exactly three provider email addresses with 'status: sent, delivery_verified: true', directly supporting 'Outreach delivered (3 providers)'.",
+      "claim": "Outreach delivered (3 providers)",
+      "url": "file:///Users/socializerender/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "quote": "status: sent, delivery_verified: true for hello@expectingjoy.com, klein.mariola@gmail.com, info@bodyenmotion.com"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote 'ALL GATES PASSED - render safe to proceed' is plausible output for a pre-render-gate.sh script and directly supports the claim that the pre-render gate passed.",
+      "claim": "Pre-render gate passed",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/scripts/pre-render-gate.sh",
+      "quote": "ALL GATES PASSED - render safe to proceed"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quoted city-audit.json entry for bellevue-wa explicitly shows score:100 and video:true (plus has_video:true), directly matching the claim's audit values and matching the TrueJoyBirthing city-audit file context.",
+      "claim": "City audit updated video:true score:100",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/city-audit.json",
+      "quote": "bellevue-wa score:100 video:true outreach:true has_video:true in_progress:false"
+    }
+  ],
+  "checked_at": "2026-09-09T13:05:56-06:00"
+}
