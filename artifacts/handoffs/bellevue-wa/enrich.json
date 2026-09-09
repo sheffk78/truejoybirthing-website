@@ -1,7 +1,7 @@
 {
   "slug": "bellevue-wa",
   "stage": "enrich",
-  "produced_at": "2026-09-09T18:37:47Z",
+  "produced_at": "2026-09-09T18:45:07Z",
   "worker_model": "deepseek-v4-flash:0731",
   "notes": "",
   "sources": [
@@ -70,7 +70,7 @@
     },
     {
       "name": "Mariola Klein (Bellevue Doula)",
-      "photo": "/images/provider-bellevue-wa-mariola-klein.webp",
+      "photo": "/images/provider-bellevue-wa-mariola-klein-v2.webp",
       "description_chars": 473,
       "costRange": "$2,500-$2,500",
       "costRange_source": "published"

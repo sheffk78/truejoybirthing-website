@@ -1,0 +1,28 @@
+{
+  "slug": "bellevue-wa",
+  "stage": "verify_deploy",
+  "produced_at": "2026-09-09T12:45:40.529505",
+  "worker_model": "glm-5.2-via-subagent+parent",
+  "notes": "Deployed to CF Pages. Full preflight passed (0 failures). Live page returns 200 (172KB). All provider/hospital/birth-center images return 200 on CDN. 5 providers, 2 hospitals, 3 birth centers all visible on live page.",
+  "sources": [
+    {
+      "claim": "Page is live and deployed",
+      "url": "https://truejoybirthing.com/birth-support/bellevue-wa/",
+      "quote": "HTTP/2 200, content-length 172001"
+    },
+    {
+      "claim": "Hero image deployed and accessible",
+      "url": "https://truejoybirthing.com/images/bellevue-wa-birth-doula-skyline-v2.webp",
+      "quote": "HTTP 200"
+    },
+    {
+      "claim": "Provider photos deployed",
+      "url": "https://truejoybirthing.com/images/provider-bellevue-wa-expecting-joy.webp",
+      "quote": "HTTP 200"
+    }
+  ],
+  "preflight_exit": 0,
+  "deploy_status": "SUCCESS",
+  "live_http": 200,
+  "vision_verdict_file": "artifacts/gates/vision/bellevue-wa.json"
+}

@@ -1,0 +1,38 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "bellevue-wa",
+  "stage": "verify_deploy",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 3,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The HTTP/2 200 status response with a substantial content-length confirms the True Joy Birthing Bellevue page is live and deployed at the given URL.",
+      "claim": "Page is live and deployed",
+      "url": "https://truejoybirthing.com/birth-support/bellevue-wa/",
+      "quote": "HTTP/2 200, content-length 172001"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote 'HTTP 200' is a success status response for the exact image URL on the truejoybirthing.com domain, directly confirming the hero image is deployed and accessible.",
+      "claim": "Hero image deployed and accessible",
+      "url": "https://truejoybirthing.com/images/bellevue-wa-birth-doula-skyline-v2.webp",
+      "quote": "HTTP 200"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The HTTP 200 response confirms the provider image (provider-bellevue-wa-expecting-joy.webp) is live on the truejoybirthing.com domain, directly supporting the claim that provider photos were deployed.",
+      "claim": "Provider photos deployed",
+      "url": "https://truejoybirthing.com/images/provider-bellevue-wa-expecting-joy.webp",
+      "quote": "HTTP 200"
+    }
+  ],
+  "checked_at": "2026-09-09T12:46:11-06:00"
+}

@@ -11411,7 +11411,7 @@ hospitalDetails: [
 			credential: "Birth Doula CD(DONA), Postpartum Doula CD(NAPS), Licensed Massage Practitioner",
 			practice: "Bellevue Doula",
 			url: "http://www.bellevuedoula.com/birth-doula.html",
-			photo: "/images/provider-bellevue-wa-mariola-klein.webp",
+			photo: "/images/provider-bellevue-wa-mariola-klein-v2.webp",
 			description: "Mariola Klein is a DONA-certified birth doula based in Bellevue who charges $2,500 for birth doula services with a free initial consultation. Her package includes two prenatal meetings, phone and email support during pregnancy and after birth, 24-hour availability, continuous emotional and physical support during labor, a backup doula, and two postpartum meetings. She works in compliance with DONA International Standards of Practice and speaks fluent German and Polish.",
 			costRange: "$2,500-$2,500",
 			costRange_source: "published",
