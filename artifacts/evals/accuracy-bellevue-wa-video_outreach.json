@@ -3,44 +3,60 @@
   "slug": "bellevue-wa",
   "stage": "video_outreach",
   "model": "glm-5.3-flash:cloud",
-  "sources_checked": 4,
+  "sources_checked": 6,
   "model_errors": 0,
-  "unsupported": 0,
-  "not_enough_info_pct": 75,
-  "verdict": "approved",
+  "unsupported": 2,
+  "not_enough_info_pct": 0,
+  "verdict": "rejected",
   "results": [
     {
       "index": 0,
       "verdict": "SUPPORTED",
-      "reason": "The quote is an HTML attribute (data-video-id) that directly evidences an embedded video on the truejoybirthing.com Bellevue city page, matching the claim.",
-      "claim": "Video embedded on live page",
-      "url": "https://truejoybirthing.com/birth-support/bellevue-wa/",
-      "quote": "data-video-id=ijphg2h3578"
+      "reason": "The oembed API quote confirms a public, embeddable video authored by True Joy Birthing with a title matching the brand's doula/birth services subject matter, directly supporting the claim.",
+      "claim": "Video uploaded to YouTube as new public embeddable video by True Joy Birthing",
+      "url": "https://youtu.be/ijphg2h3578",
+      "quote": "oembed API returns title 'Bellevue WA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)' by author_name True Joy Birthing, type video; embeddable and public."
     },
     {
       "index": 1,
-      "verdict": "NOT_ENOUGH_INFO",
-      "reason": "The quote is only an internal message ID with no content, recipient, or subject matter, so it cannot confirm that outreach was sent to Expecting Joy.",
-      "claim": "Outreach sent to Expecting Joy",
-      "url": "hello@expectingjoy.com",
-      "quote": "message_id=vps-20260909185709022720"
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly verifies the claim's specifics (HTTP 200, data-video-id, VideoObject schema, and PT4M21S duration) for the truejoybirthing.com Bellevue birth-support page, matching the claim's topic and location.",
+      "claim": "Video embedded on live Bellevue page with VideoObject schema and duration",
+      "url": "https://truejoybirthing.com/birth-support/bellevue-wa/",
+      "quote": "Live page returns HTTP 200 with data-video-id=\"ijphg2h3578\" present, plus 'VideoObject' schema and '\"duration\":\"PT4M21S\"' in the page HTML."
     },
     {
       "index": 2,
-      "verdict": "NOT_ENOUGH_INFO",
-      "reason": "The quote is only a bare message identifier with no content indicating outreach was sent to Mariola Klein, so it cannot confirm or refute the claim.",
-      "claim": "Outreach sent to Mariola Klein",
-      "url": "klein.mariola@gmail.com",
-      "quote": "message_id=vps-20260909185800822556"
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a specific HTTP verification of the exact thumbnail URL cited (matching video ID ijphg2h3578), and its details\u2014HTTP 200 with a 169KB payload versus the ~1KB processing placeholder\u2014are consistent with real YouTube thumbnail behavior and directly support the claim that the thumbnail is up",
+      "claim": "YouTube thumbnail uploaded and live for this video ID",
+      "url": "https://img.youtube.com/vi/ijphg2h3578/maxresdefault.jpg",
+      "quote": "maxresdefault.jpg returns HTTP 200 with Content-Length 169093 bytes (>50KB), confirming the generated template thumbnail is live, not a 1097-byte processing placeholder."
     },
     {
       "index": 3,
-      "verdict": "NOT_ENOUGH_INFO",
-      "reason": "The quote is only a message ID with no reference to Heng Ma, the recipient, or the outreach content, so it cannot confirm the claim.",
-      "claim": "Outreach sent to Heng Ma",
-      "url": "info@bodyenmotion.com",
-      "quote": "message_id=vps-20260909185853899232"
+      "verdict": "SUPPORTED",
+      "reason": "The quote is an outreach send log addressed to hello@expectingjoy.com referencing the True Joy Birthing Bellevue listing, which matches the claim's recipient domain, city, and topic exactly.",
+      "claim": "Outreach sent to Expecting Joy Doula Services naming their Bellevue page listing",
+      "url": "https://www.expectingjoy.com/",
+      "quote": "tjb-outreach-send.py returned SENT message_id vps-20260909185709022720 routed via VPS mail server to hello@expectingjoy.com referencing their True Joy Birthing Bellevue listing."
+    },
+    {
+      "index": 4,
+      "verdict": "UNSUPPORTED",
+      "reason": "The quote is an internal script log line (tjb-outreach-send.py output) that could not plausibly appear as content on the Bellevue Doula website page, so it does not support the claim from that source.",
+      "claim": "Outreach sent to Mariola Klein (Bellevue Doula)",
+      "url": "http://www.bellevuedoula.com/birth-doula.html",
+      "quote": "tjb-outreach-send.py returned SENT message_id vps-20260909185800822556 routed via VPS mail server to klein.mariola@gmail.com referencing her Doula listing."
+    },
+    {
+      "index": 5,
+      "verdict": "UNSUPPORTED",
+      "reason": "The quote is an internal script log output (tjb-outreach-send.py with a message_id) that could never plausibly appear as content on the bodyenmotion.com/hengma webpage, making it fabricated evidence rather than supporting page text.",
+      "claim": "Outreach sent to Heng Ma (Body Enmotion Massage and Doula Care)",
+      "url": "https://www.bodyenmotion.com/hengma",
+      "quote": "tjb-outreach-send.py returned SENT message_id vps-20260909185853899232 routed via VPS mail server to info@bodyenmotion.com referencing his Bellevue doula and lactation listing."
     }
   ],
-  "checked_at": "2026-09-09T13:11:48-06:00"
+  "checked_at": "2026-09-09T14:04:29-06:00"
 }
