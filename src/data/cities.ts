@@ -273,7 +273,7 @@ export const cities: Record<string, CityData> = {
     shelbiServesHere: false,
     lat: 33.8753,
     lng: -117.5664,
-    ogImage: "https://truejoybirthing.com/images/og-city-corona-ca.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-corona-ca-v2.webp",
     heroImage: "/images/corona-ca-birth-doula-skyline.webp",
     supportSceneImage: "/images/corona-ca-support-scene.webp",
     supportSceneAlt: "A doula supporting an expectant mom on a sunny Corona, California street with the Cleveland National Forest hills and palm trees in the background",
@@ -1781,7 +1781,7 @@ export const cities: Record<string, CityData> = {
     costHigh: 4500,
     shelbiServesHere: false,
     heroImage: "/images/san-diego-ca-birth-doula-skyline-v3.webp",
-    ogImage: "https://truejoybirthing.com/images/og-city-san-diego-ca.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-san-diego-ca-1200.webp",
     supportSceneImage: "/images/san-diego-ca-support-scene.webp",
     supportSceneAlt: "A doula supporting an expectant mom in San Diego: California birth support and doula care",
     localDoulas: [
@@ -9767,7 +9767,7 @@ hospitalDetails: [
     lat: 37.6688,
     lng: -122.0808,
     heroImage: "/images/hayward-ca-birth-doula-skyline.webp",
-    ogImage: "https://truejoybirthing.com/images/og-city-hayward-ca.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-hayward-ca-v2.webp",
     supportSceneImage: "/images/hayward-ca-birth-doula-support.webp",
     supportSceneAlt: "A doula supporting an expectant mom strolling through Hayward: East Bay birth support over the San Francisco hills",
     localDoulas: [
@@ -9778,7 +9778,7 @@ hospitalDetails: [
       { name: "Sutter Eden Medical Center", thumbnail: "/images/hayward-ca-hospital-eden.webp", address: "20103 Lake Chabot Rd, Castro Valley, CA 94546", nicuLevel: "III", doulaPolicy: "Doulas welcome. Sutter Eden Medical Center welcomes doulas as part of the birth support team in its Birth Center.", medicaid: true, lactation: true, privateRooms: true, waterBirth: "Hydrotherapy options available in the birth center", url: "https://www.sutterhealth.org/find-location/facility/eden-medical-center-birth-center-1043246600", paragraph: "Sutter Eden Medical Center in Castro Valley is the closest full-service birthing hospital for Hayward families, offering a Birth Center with spacious, private labor and delivery suites designed for family-centered care. The hospital holds the CMS Birthing Friendly designation, indicating it follows evidence-based maternity practices and participates in national perinatal quality improvement. On-site lactation consultants, a doula-welcome policy, and a Level III NICU mean both routine and higher-acuity newborns can be cared for close to home. Families describe the Birth Center as calm and comfortable, with advocates for your birth plan and continuous labor support on the team that wants you to feel at home through your entire birth experience. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." },
       { name: "Kaiser Permanente San Leandro Medical Center", thumbnail: "/images/hayward-ca-hospital-kaiser-san-leandro.webp", address: "2500 Merrial Ave, San Leandro, CA 94577", nicuLevel: "II", doulaPolicy: "Doulas welcome as support persons; independent doulas are not employed by Kaiser but are welcome in labor and delivery.", midwifeFriendly: true, medicaid: true, lactation: true, privateRooms: true, url: "https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity", paragraph: "Kaiser Permanente San Leandro Medical Center delivers obstetric care primarily for Kaiser HMO members and sits just a few minutes west of Hayward, making it a convenient option for Hayward families who are Kaiser members. The hospital provides full maternity services, a neonatal unit, lactation support, and private maternity suites within Kaiser's integrated, team-based care model. Independent doulas are welcome in labor and delivery as support persons, though they are not Kaiser employees. Its Level II NICU is appropriate for most routine and moderate-acuity newborns, with higher-level neonatal care available at Sutter Eden for the sickest infants. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." },    ],
     birthCenterDetails: [
-      { name: "Sutter Eden Medical Center Birth Center", thumbnail: "/images/hayward-ca-birth-center-eden.webp", address: "20103 Lake Chabot Rd, Castro Valley, CA 94546", url: "https://www.sutterhealth.org/find-location/facility/eden-medical-center-birth-center-1043246600", services: ["Hospital-Based", "Private Suites", "Water Birth"] },
+      { name: "Sutter Eden Medical Center Birth Center", thumbnail: "/images/hayward-ca-birth-center-eden.webp", address: "20103 Lake Chabot Rd, Castro Valley, CA 94546", url: "https://www.sutterhealth.org/find-location/facility/eden-medical-center-birth-center-1043246600", services: ["Hospital-Based", "Private Suites", "Water Birth"], paragraph: "The Birth Center at Sutter Eden Medical Center offers spacious private labor and delivery suites designed for family-centered care, with hydrotherapy options and on-site lactation consultants. The hospital holds the CMS Birthing Friendly designation and maintains a Level III NICU, so higher-acuity newborns get care close to home. Families describe the suites as calm and comfortable, with a team that welcomes doulas as part of the birth support team." },
     ],
     midwifeInfo: {
       paragraph: "Hayward families have solid midwifery options across the East Bay. Certified Nurse-Midwives (CNMs) practice at Sutter Eden Medical Center and within Kaiser Permanente's San Leandro and Oakland medical centers, providing hospital-based midwifery care close to home. Licensed Midwives (LMs) and Certified Midwives (CMs) served many Hayward-area families through home-birth practices and community-based options, in part because Hayward's birth centers are clustered in neighboring Fremont and Oakland.",

@@ -1,0 +1,1274 @@
+{
+ "abilene-tx": {
+  "file": "og-city-abilene-tx-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "acworth-ga": {
+  "file": "og-city-acworth-ga-v4.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "agoura-hills-ca": {
+  "file": "og-city-agoura-hills-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "alameda-ca": {
+  "file": "og-city-alameda-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "albany-ny": {
+  "file": "og-city-albany-ny.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "albuquerque-nm": {
+  "file": "og-city-albuquerque-nm-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "alexandria-va": {
+  "file": "og-city-alexandria-va.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "alhambra-ca": {
+  "file": "og-city-alhambra-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "allen-park-mi": {
+  "file": "og-city-allen-park-mi.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "allen-tx": {
+  "file": "og-city-allen-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "alvin-tx": {
+  "file": "og-city-alvin-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "amarillo-tx": {
+  "file": "og-city-amarillo-tx-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "american-canyon-ca": {
+  "file": "og-city-american-canyon-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "anaheim-ca": {
+  "file": "og-city-anaheim-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "anchorage-ak": {
+  "file": "og-city-anchorage-ak.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "anna-tx": {
+  "file": "og-city-anna-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "apple-valley-ca": {
+  "file": "og-city-apple-valley-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "arlington-heights-il": {
+  "file": "og-city-arlington-heights-il.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "arlington-tx": {
+  "file": "og-city-arlington-tx-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "arvada-co": {
+  "file": "og-city-arvada-co-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.96,
+  "verdict": "PASS"
+ },
+ "atlanta-ga": {
+  "file": "og-city-atlanta-ga-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "augusta-ga": {
+  "file": "og-city-augusta-ga-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "aurora-co": {
+  "file": "og-city-aurora-co.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "aurora-il": {
+  "file": "og-city-aurora-il.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "austin-tx": {
+  "file": "og-city-austin-tx-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "bakersfield-ca": {
+  "file": "og-city-bakersfield-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "baltimore-md": {
+  "file": "og-city-baltimore-md-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "beaumont-tx": {
+  "file": "og-city-beaumont-tx-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "bellevue-wa": {
+  "file": "og-city-bellevue-wa.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "boise-id": {
+  "file": "og-city-boise-id.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "boston-ma": {
+  "file": "og-city-boston-ma-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "bozeman-mt": {
+  "file": "og-city-bozeman-mt.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "buffalo-ny": {
+  "file": "og-city-buffalo-ny.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "carrollton-tx": {
+  "file": "og-city-carrollton-tx-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "cary-nc": {
+  "file": "og-city-cary-nc.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "cedar-park-tx": {
+  "file": "og-city-cedar-park-tx-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "celina-tx": {
+  "file": "og-city-celina-tx-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "charleston-sc": {
+  "file": "og-city-charleston-sc.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "charlotte-nc": {
+  "file": "og-city-charlotte-nc-v5.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "chesapeake-va": {
+  "file": "og-city-chesapeake-va.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "chicago-il": {
+  "file": "og-city-chicago-il-v6.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "cincinnati-oh": {
+  "file": "og-city-cincinnati-oh-rva.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "cleveland-oh": {
+  "file": "og-city-cleveland-oh.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.97,
+  "verdict": "PASS"
+ },
+ "colorado-springs-co": {
+  "file": "og-city-colorado-springs-co.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "columbia-md": {
+  "file": "og-city-columbia-md.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "columbus-oh": {
+  "file": "og-city-columbus-oh.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "conroe-tx": {
+  "file": "og-city-conroe-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "corona-ca": {
+  "file": "og-city-corona-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "corpus-christi-tx": {
+  "file": "og-city-corpus-christi-tx-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "costa-mesa-ca": {
+  "file": "og-city-costa-mesa-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "dallas-tx": {
+  "file": "og-city-dallas-tx-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "denver-co": {
+  "file": "og-city-denver-co-v7.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "detroit-mi": {
+  "file": "og-city-detroit-mi-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "el-paso-tx": {
+  "file": "og-city-el-paso-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "elk-grove-ca": {
+  "file": "og-city-elk-grove-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "eugene-or": {
+  "file": "og-city-eugene-or-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "fate-tx": {
+  "file": "og-city-fate-tx-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "fontana-ca": {
+  "file": "og-city-fontana-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "fort-collins-co": {
+  "file": "og-city-fort-collins-co-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.94,
+  "verdict": "PASS"
+ },
+ "fort-worth-tx": {
+  "file": "og-city-fort-worth-tx-v6.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "fremont-ca": {
+  "file": "og-city-fremont-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "fresno-ca": {
+  "file": "og-city-fresno-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "frisco-tx": {
+  "file": "og-city-frisco-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "fulshear-tx": {
+  "file": "og-city-fulshear-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "gainesville-fl": {
+  "file": "og-city-gainesville-fl-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "gaithersburg-md": {
+  "file": "og-city-gaithersburg-md-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "garden-grove-ca": {
+  "file": "og-city-garden-grove-ca-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "glendale-ca": {
+  "file": "og-city-glendale-ca-v4.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "grand-rapids-mi": {
+  "file": "og-city-grand-rapids-mi-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "greenbelt-md": {
+  "file": "og-city-greenbelt-md.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "hartford-ct": {
+  "file": "og-city-hartford-ct.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "hayward-ca": {
+  "file": "og-city-hayward-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "henderson-nv": {
+  "file": "og-city-henderson-nv.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "hendersonville-tn": {
+  "file": "og-city-hendersonville-tn.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "houston-tx": {
+  "file": "og-city-houston-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "huntington-beach-ca": {
+  "file": "og-city-huntington-beach-ca-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "huntsville-al": {
+  "file": "og-city-huntsville-al-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "indianapolis-in": {
+  "file": "og-city-indianapolis-in.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "irvine-ca": {
+  "file": "og-city-irvine-ca-rva.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "jacksonville-fl": {
+  "file": "og-city-jacksonville-fl.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "kansas-city-mo": {
+  "file": "og-kansas-city-mo-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "lakewood-co": {
+  "file": "og-city-lakewood-co-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "laredo-tx": {
+  "file": "og-city-laredo-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "las-vegas-nv": {
+  "file": "og-city-las-vegas-nv-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "laurel-md": {
+  "file": "og-city-laurel-md.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "leesburg-fl": {
+  "file": "og-city-leesburg-fl.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "lehi-ut": {
+  "file": "og-city-lehi-ut.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "lexington-ky": {
+  "file": "og-city-lexington-ky.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "long-beach-ca": {
+  "file": "og-city-long-beach-ca-v5.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "los-angeles-ca": {
+  "file": "og-city-los-angeles-ca-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "louisville-ky": {
+  "file": "og-city-louisville-ky.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "lubbock-tx": {
+  "file": "og-city-lubbock-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "mckinney-tx": {
+  "file": "og-city-mckinney-tx-v4.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "melissa-tx": {
+  "file": "og-city-melissa-tx-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "memphis-tn": {
+  "file": "og-city-memphis-tn-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "meridian-id": {
+  "file": "og-city-meridian-id-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "mesa-az": {
+  "file": "og-city-mesa-az.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "milwaukee-wi": {
+  "file": "og-city-milwaukee-wi.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "minneapolis-mn": {
+  "file": "og-city-minneapolis-mn-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "moreno-valley-ca": {
+  "file": "og-city-moreno-valley-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "naperville-il": {
+  "file": "og-city-naperville-il-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "nashville-tn": {
+  "file": "og-city-nashville-tn.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.87,
+  "verdict": "PASS"
+ },
+ "new-braunfels-tx": {
+  "file": "og-city-new-braunfels-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "new-haven-ct": {
+  "file": "og-city-new-haven-ct-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "new-york-ny": {
+  "file": "og-city-new-york-ny-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "newark-nj": {
+  "file": "og-city-newark-nj-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "newport-news-va": {
+  "file": "og-city-newport-news-va.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "norfolk-va": {
+  "file": "og-city-norfolk-va.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "norwalk-ct": {
+  "file": "og-city-norwalk-ct.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "oakland-ca": {
+  "file": "og-city-oakland-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "oceanside-ca": {
+  "file": "og-city-oceanside-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.99,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "oklahoma-city-ok": {
+  "file": "og-city-oklahoma-city-ok.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "omaha-ne": {
+  "file": "og-city-omaha-ne.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "ontario-ca": {
+  "file": "og-city-ontario-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "orlando-fl": {
+  "file": "og-city-orlando-fl.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "palm-springs-fl": {
+  "file": "og-city-palm-springs-fl.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "palmdale-ca": {
+  "file": "og-city-palmdale-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "pearland-tx": {
+  "file": "og-city-pearland-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "philadelphia-pa": {
+  "file": "og-city-philadelphia-pa-v5.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "phoenix-az": {
+  "file": "og-city-phoenix-az-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "pittsburgh-pa": {
+  "file": "og-city-pittsburgh-pa.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "port-st-lucie-fl": {
+  "file": "og-city-port-st-lucie-fl.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "portland-or": {
+  "file": "og-city-portland-or-v5.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "princeton-tx": {
+  "file": "og-city-princeton-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "providence-ri": {
+  "file": "og-city-providence-ri-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "raleigh-nc": {
+  "file": "og-city-raleigh-nc-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "rancho-cucamonga-ca": {
+  "file": "og-city-rancho-cucamonga-ca-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "reno-nv": {
+  "file": "og-city-reno-nv-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "richmond-va": {
+  "file": "og-city-richmond-va.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "rochester-ny": {
+  "file": "og-city-rochester-ny.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "rockville-md": {
+  "file": "og-city-rockville-md-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "rosemount-mn": {
+  "file": "og-city-rosemount-mn.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "sacramento-ca": {
+  "file": "og-city-sacramento-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "san-antonio-tx": {
+  "file": "og-city-san-antonio-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "san-bernardino-ca": {
+  "file": "og-city-san-bernardino-ca-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.95,
+  "verdict": "PASS"
+ },
+ "san-diego-ca": {
+  "file": "og-city-san-diego-ca-1200.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.61,
+  "verdict": "PASS"
+ },
+ "san-francisco-ca": {
+  "file": "og-city-san-francisco-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "san-jose-ca": {
+  "file": "og-city-san-jose-ca-v4.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "san-marcos-tx": {
+  "file": "og-city-san-marcos-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "seattle-wa": {
+  "file": "og-city-seattle-wa-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "spokane-wa": {
+  "file": "og-city-spokane-wa-rva.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "springfield-il": {
+  "file": "og-city-springfield-il-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "st-augustine-fl": {
+  "file": "og-city-st-augustine-fl-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "st-paul-mn": {
+  "file": "og-city-st-paul-mn-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "stamford-ct": {
+  "file": "og-city-stamford-ct.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "stockton-ca": {
+  "file": "og-city-stockton-ca-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "tacoma-wa": {
+  "file": "og-city-tacoma-wa.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "tampa-fl": {
+  "file": "og-city-tampa-fl.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "temple-tx": {
+  "file": "og-city-temple-tx-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "torrance-ca": {
+  "file": "og-city-torrance-ca-rva.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "tucson-az": {
+  "file": "og-city-tucson-az.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "tulsa-ok": {
+  "file": "og-tulsa-ok-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "vancouver-wa": {
+  "file": "og-city-vancouver-wa.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "victoria-tx": {
+  "file": "og-city-victoria-tx-vtx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "virginia-beach-va": {
+  "file": "virginia-beach-va-og-v2.png",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "waco-tx": {
+  "file": "og-city-waco-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "washington-dc": {
+  "file": "og-city-washington-dc.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "worcester-ma": {
+  "file": "og-city-worcester-ma.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "yonkers-ny": {
+  "file": "og-city-yonkers-ny-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ }
+}
