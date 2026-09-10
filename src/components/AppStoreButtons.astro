@@ -4,15 +4,20 @@
 // (flip that flag when Play approves — no component changes needed).
 // Clicks are instrumented by AppDownloadTracker (delegation); data-store enables
 // the tracker's store param.
+// 2026-09-10: iOS links carry ?ct=web_<context> campaign token (App Store Connect
+// Sources/App Referrer attribution). Context injected at build time via CT prop.
 import { APP_STORES } from '../config/app-stores';
 
 interface Props {
   /** primary = solid btn-primary · ghost = outlined · compact = small outlined */
   variant?: 'primary' | 'ghost' | 'compact';
   align?: 'center' | 'left';
+  /** campaign token: unique stable cta_location for App Store attribution */
+  ct?: string;
 }
 
-const { variant = 'primary', align = 'center' } = Astro.props;
+const { variant = 'primary', align = 'center', ct } = Astro.props;
+const iosUrl = ct ? `${APP_STORES.ios.url}?ct=web_${ct}` : APP_STORES.ios.url;
 
 const base =
   'app-store-btn inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-colors';
@@ -27,7 +32,7 @@ const wrapperAlign = align === 'center' ? 'justify-center' : 'justify-start';
 
 <div class={`app-store-buttons flex flex-col sm:flex-row items-center gap-3 ${wrapperAlign}`}>
   <a
-    href={APP_STORES.ios.url}
+    href={iosUrl}
     data-store="ios"
     rel="noopener"
     class={`${base} ${variantClass}`}
