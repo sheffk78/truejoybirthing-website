@@ -117,7 +117,12 @@ for s in "${SLUGS[@]}"; do
     else
       # Verify decodable
       if python3 -c "from PIL import Image; Image.open('$best_full').verify()" 2>/dev/null; then
-        gate_pass "OG image OK: $best_file (${size}B)"
+        # S11: content must fill canvas (2026-09-10 hayward/corona quarter-content defect)
+        if python3 "$PROJECT_DIR/scripts/check-og-content.py" "$s" >/dev/null 2>&1; then
+          gate_pass "OG image OK: $best_file (${size}B, content fills canvas)"
+        else
+          gate_fail "OG content incomplete for $s — run: python3 scripts/check-og-content.py $s (re-render via scripts/render-og-1x.cjs)"
+        fi
       else
         gate_fail "OG image CORRUPTED (decode error): $best_file"
       fi
