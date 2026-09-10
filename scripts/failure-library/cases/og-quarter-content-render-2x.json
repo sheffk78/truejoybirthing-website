@@ -1,0 +1,17 @@
+{
+ "id": "og-quarter-content-render-2x",
+ "date": "2026-09-10",
+ "stage": "build",
+ "city": "hayward-ca",
+ "failure": "OG city images shipped with real content occupying only the top-left 50%x50% of the 1200x630 canvas (hayward-ca, corona-ca; hayward reported by Kenneth 2026-09-10). Root cause: scripts/render-og-2x.cjs screenshots a 2400x1260 viewport at deviceScaleFactor 2 then downsizes to 1200x630 \u2014 but compositions are 1200px CSS wide, so the rendered card occupies only the top-left quarter of the screenshot and the downsize keeps the quarter-geometry. S2 (file exists >=30KB) passed; nothing measured content coverage. Sibling defect same ship: san-diego-ca OG was 1344x768 (older design, wrong dims, never checked). Also in same ship: hayward birth-centerDetails entry lacked 'paragraph', rendering an empty text card (validate-city-data.ts checkFacilityParas added 2026-09-04, two weeks AFTER hayward shipped, so the gap predates the check).",
+ "detector": "check-og-content.py (S11): dims==1200x630, content bbox >=92% of width AND height vs corner-median background, density >=30%. Negative-tested: old hayward file FAILs (50%/50%/11%), fixed file passes. Birth-center paragraph gap caught by existing checkFacilityParas (validated by synthetic removal -> validator exit 1).",
+ "replay": {
+  "type": "og_content_coverage",
+  "expect": "fail",
+  "fixture": "public/images/og-city-hayward-ca.webp (old quarter-content file, preserved in git history at commit 73d0689c~deploy 2026-08-22)",
+  "command": "python3 scripts/check-og-content.py hayward-ca",
+  "expect_output": "FAIL hayward-ca: content covers 50% of width; content covers 50% of height; density 11% < 30%"
+ },
+ "source_commit": "6a80c350..HEAD",
+ "status": "active"
+}
