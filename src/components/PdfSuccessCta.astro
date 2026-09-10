@@ -25,7 +25,7 @@ const wrapperId = eventId ?? 'pdf-success-cta';
       The app has your plan, contraction timing, and provider messages in one place.
     </p>
     <div class={compact ? 'flex justify-center' : ''}>
-      <AppStoreButtons variant={compact ? 'compact' : 'primary'} align="center" />
+      <AppStoreButtons variant={compact ? 'compact' : 'primary'} align="center" ct={`pdf_${source}`} />
     </div>
   </div>
 </div>
