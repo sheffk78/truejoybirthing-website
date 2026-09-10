@@ -1,3 +1,5 @@
+// ⚠️ DEPRECATED 2026-09-10 — viewport mismatch produces quarter-content OG images on 1200px compositions.
+// Use render-og-1x.cjs (1200x630 viewport @2x DPR, downsized 1:1). See failure-library case og-quarter-content-render-2x.
 const { chromium } = require('playwright');
 const sharp = require('sharp');
 const path = require('path');
