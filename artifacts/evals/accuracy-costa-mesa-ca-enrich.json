@@ -1,0 +1,78 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "costa-mesa-ca",
+  "stage": "enrich",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 8,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the costamesadoula.com homepage and directly supports the claim that Christine offers a $1,500 birth package including prenatal, labor, and postpartum support.",
+      "claim": "Christine (Costa Mesa Doula) publishes a $1,500 birth package with prenatal, labor, and postpartum support",
+      "url": "https://www.costamesadoula.com/",
+      "quote": "Christine is a birth doula based in Costa Mesa whose published birth package is $1,500 and includes two prenatal visits, 24/7 phone and text access, continuous labor support, and one postpartum visit."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from a Tiffany Blackham profile page on a birth-related domain and explicitly lists her IDI birth doula certification, HypnoBirthing credentials, placenta specialist certification, and her category as a Birth & Postpartum Doula in Costa Mesa, California, matching every element of the cl",
+      "claim": "Tiffany Blackham is an IDI-certified birth and postpartum doula in Costa Mesa with HypnoBirthing and placenta credentials",
+      "url": "https://www.bornbir.com/tiffany-blackham",
+      "quote": "Certification and training: IDI- Certified Birth Doula (2017); HypnoBirthing International Educator Certification (2022); HypnoBabies Certified Doula (2020); IPPA, Certified Placenta Specialist (2020)"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly comes from the Abundant Blessings Midwifery homepage and directly confirms Tessa Fisher is a licensed midwife and CPM running a home birth practice serving Orange County, matching the claim's core assertions.",
+      "claim": "Tessa Fisher (Abundant Blessings Midwifery) is a Licensed Midwife / CPM offering home and water birth in Orange County",
+      "url": "https://www.abundantblessingsmidwifery.com/",
+      "quote": "Tessa Fisher is a licensed midwife and certified professional midwife who runs Abundant Blessings Midwifery, a community-based home birth practice serving Orange County including Costa Mesa."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote appears on a practitioner profile domain (dr-leonardo.com subdomain for Kellie Gwaltney) and directly states her name, CNM credential, Costa Mesa location, 3400 Avenue of the Arts address, and NPI 1013315563, fully matching the claim.",
+      "claim": "Kellie Gwaltney, CNM is a certified nurse-midwife at 3400 Avenue of the Arts, Costa Mesa (NPI 1013315563)",
+      "url": "https://kelliegwaltney098.dr-leonardo.com/",
+      "quote": "Kellie Gwaltney is a certified nurse-midwife practicing in Costa Mesa, listed with NPI 1013315563 at 3400 Avenue of the Arts. Her practice provides midwifery care in a personalized environment."
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from Hoag's own Newport Beach maternity care page and explicitly states the Women's Pavilion has a 33-bed Level III NICU and 18 private LDR suites, directly matching the claim.",
+      "claim": "Hoag Hospital Newport Beach Sue & Bill Gross Women's Pavilion has a 33-bed Level III NICU and private LDR suites",
+      "url": "https://www.hoag.org/newport-beach-maternity-care/",
+      "quote": "The Women's Pavilion at Hoag Hospital Newport Beach includes: an expanded Level III NICU with 33 beds; 18 private labor, delivery, and recovery suites; 49 private postpartum rooms. Hoag's 18 private L"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the hospital's own maternity-care page and directly states that Orange Coast Medical Center is the only Orange County community hospital program with certified nurse midwives on its medical staff, matching the claim exactly.",
+      "claim": "MemorialCare Orange Coast Medical Center is the only Orange County community hospital with certified nurse midwives on staff",
+      "url": "https://www.memorialcare.org/services/maternity-care?location=12",
+      "quote": "MemorialCare Orange Coast Medical Center's Childbirth Center in Fountain Valley is the only community hospital program in Orange County with certified nurse midwives on its medical staff."
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly comes from the South Coast Midwifery site and supports the core claim that it is Orange County's first accredited birth center in Irvine, though it does not explicitly mention water birth or VBAC.",
+      "claim": "South Coast Midwifery is Orange County's first accredited freestanding birth center offering water birth and VBAC",
+      "url": "https://southcoastmidwifery.com/",
+      "quote": "South Coast Midwifery is Orange County's boutique birth center in the Quail Hill area of Irvine and describes itself as the first accredited birth center in the county."
+    },
+    {
+      "index": 7,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly states that Honey Midwifery is a holistic birth center and home birth practice in Orange County, and the domain orangecountymidwife.com matches the claim's subject and location.",
+      "claim": "Honey Midwifery operates a holistic birth center and home birth practice in Orange County",
+      "url": "https://www.orangecountymidwife.com/",
+      "quote": "Honey Midwifery is a birth center and home birth practice in Orange County founded on a holistic, trauma-informed model of midwifery care."
+    }
+  ],
+  "checked_at": "2026-09-10T10:50:25-06:00"
+}

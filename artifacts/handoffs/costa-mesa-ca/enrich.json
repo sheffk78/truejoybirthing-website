@@ -1,0 +1,70 @@
+{
+  "slug": "costa-mesa-ca",
+  "stage": "enrich",
+  "produced_at": null,
+  "worker_model": null,
+  "notes": "",
+  "sources": [],
+  "providers": [
+    {
+      "name": "Christine (Costa Mesa Doula)",
+      "photo": "/images/provider-costa-mesa-ca-christine.webp",
+      "description_chars": 512,
+      "costRange": "$1,500-$1,500",
+      "costRange_source": "published"
+    },
+    {
+      "name": "Tiffany Blackham",
+      "photo": "/images/provider-costa-mesa-ca-tiffany-blackham.webp",
+      "description_chars": 610,
+      "costRange": "$1,500-$2,500",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Tessa Fisher (Abundant Blessings Midwifery)",
+      "photo": "/images/provider-costa-mesa-ca-tessa-fisher.webp",
+      "description_chars": 544,
+      "costRange": "$4,000-$6,000",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Kellie Gwaltney, CNM",
+      "photo": "/images/provider-costa-mesa-ca-kellie-gwaltney.webp",
+      "description_chars": 389,
+      "costRange": "$1,500-$2,500",
+      "costRange_source": "market-estimate"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Hoag Hospital Newport Beach (Sue & Bill Gross Women's Pavilion)",
+      "paragraph_chars": 984,
+      "thumbnail": "/images/costa-mesa-ca-hospital-hoag.webp",
+      "nicuLevel": "III",
+      "url": "https://www.hoag.org/newport-beach-maternity-care/"
+    },
+    {
+      "name": "MemorialCare Orange Coast Medical Center",
+      "paragraph_chars": 954,
+      "thumbnail": "/images/costa-mesa-ca-hospital-orange-coast.webp",
+      "nicuLevel": "II",
+      "url": "https://www.memorialcare.org/services/maternity-care?location=12"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "South Coast Midwifery",
+      "paragraph_chars": 637,
+      "thumbnail": "/images/costa-mesa-ca-birth-center-south-coast.webp"
+    },
+    {
+      "name": "Honey Midwifery (Orange County Midwife & Holistic Birth Center)",
+      "paragraph_chars": 575,
+      "thumbnail": "/images/costa-mesa-ca-birth-center-honey.webp"
+    }
+  ],
+  "birthstats": {
+    "dataYear": 2024,
+    "dataSource": "CDC NCHS National Vital Statistics System; KFF Women's Health Profiles (California); CDPH pregnancy-related mortality 2022"
+  }
+}

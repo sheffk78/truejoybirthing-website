@@ -1,0 +1,15 @@
+{
+  "slug": "hayward-ca",
+  "verdicts": [
+    {"crop": "hayward-ca-og-fig0.png", "verdict": "pass", "defects": [], "notes": "1 figure, street scene, no limb defects"},
+    {"crop": "hayward-ca-og-fig1.png", "verdict": "pass", "defects": [], "notes": "1 figure silhouette, normal form"},
+    {"crop": "hayward-ca-og-fig2.png", "verdict": "pass", "defects": [], "notes": "1 figure from back, normal form"},
+    {"crop": "hayward-ca-hero-fig0.png", "verdict": "pass", "defects": [], "notes": "1 figure side view, normal"},
+    {"crop": "hayward-ca-hero-fig1.png", "verdict": "pass", "defects": [], "notes": "1 figure silhouette, normal"},
+    {"crop": "hayward-ca-hero-fig2.png", "verdict": "pass", "defects": [], "notes": "1 figure from back, normal"},
+    {"crop": "hayward-ca-support-fig0.png", "verdict": "pass", "defects": [], "notes": "auto-passed by gate"},
+    {"crop": "hayward-ca-thumb-fig0.png", "verdict": "pass", "defects": [], "notes": "auto-passed by gate"}
+  ],
+  "checked_at": "2026-09-10T11:20:00-06:00",
+  "reviewer": "kit (vision_analyze per-crop, 2x zoom)"
+}

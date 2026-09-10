@@ -150,6 +150,29 @@ def check_doulas(block):
     return (count >= 3 and not has_placeholder), count, has_placeholder
 
 
+def _imap_sweep_worker(q, city_name_slugs):
+    """Child-process worker: derive outreach slugs from the live mailbox.
+
+    Runs in a forked process so the audit can hard-timeout (terminate) a stalled
+    IMAP read instead of hanging the whole pipeline (2026-09-09 Dovecot stall).
+    """
+    import sys
+    sys.path.insert(0, '/Users/socializerender/.hermes/scripts')
+    from mail_client import fetch_inbox
+    all_sent = fetch_inbox('shelbi@truejoybirthing.com', limit=500)
+    found = set()
+    for m in all_sent:
+        labels = m.get('labels') or []
+        if 'sent' not in labels or 'outreach' not in labels:
+            continue
+        subj = (m.get('subject') or '').lower()
+        for cn, slugs in city_name_slugs.items():
+            if cn in subj:
+                for s in slugs:
+                    found.add(s)
+    q.put(found)
+
+
 def load_outreach_slugs():
     """Load city slugs that have had outreach emails sent.
 
@@ -179,22 +202,23 @@ def load_outreach_slugs():
     # The status file and send log can drift (sends happen that aren't logged).
     # Query the inbox for sent+outreach messages and derive which cities had
     # outreach from their subject lines. This is the ground truth.
+    # Bounded sweep (2026-09-09): the mail server can accept TCP but stall on
+    # reads (Dovecot slow-burn), which hung this audit 5+ min. Run the IMAP
+    # sweep in a hard-timeout worker process — if it doesn't finish in 45s,
+    # fall through to local sources (send log + status file + outreach files).
     try:
-        import sys
-        sys.path.insert(0, '/Users/socializerender/.hermes/scripts')
-        from mail_client import fetch_inbox
-        all_sent = fetch_inbox('shelbi@truejoybirthing.com', limit=500)
-        # Build set of city names that have a sent+outreach message
-        for m in all_sent:
-            labels = m.get('labels') or []
-            if 'sent' not in labels or 'outreach' not in labels:
-                continue
-            subj = (m.get('subject') or '').lower()
-            # Find which city name appears in the subject (match against known cities)
-            for cn, slugs in CITY_NAME_SLUGS.items():
-                if cn in subj:
-                    for s in slugs:
-                        outreach_slugs.add(s)
+        import multiprocessing as _mp
+        _ctx = _mp.get_context('fork')
+        _q = _ctx.Queue()
+        _p = _ctx.Process(target=_imap_sweep_worker, args=(_q, CITY_NAME_SLUGS), daemon=True)
+        _p.start()
+        _p.join(45)
+        if _p.is_alive():
+            _p.terminate()
+            _p.join(5)
+            print('  note: IMAP outreach sweep timed out after 45s — used local send-log sources')
+        elif not _q.empty():
+            outreach_slugs |= _q.get()
     except Exception:
         pass  # Non-fatal — if inbox query fails, fall back to status file + log
 
@@ -303,7 +327,9 @@ def main():
 
     with open(VIDEO_FILE) as f:
         video_content = f.read()
-    video_slugs = set(re.findall(r'"([a-z]+(?:-[a-z]+)*-[a-z]{2})"', video_content))
+    video_slugs = set(re.findall(
+        r'"([a-z]+(?:-[a-z]+)*-[a-z]{2})"\s*:\s*\{[^}]*videoId\s*:\s*"[A-Za-z0-9_-]+"',
+        video_content, re.S))
 
     outreach_slugs = load_outreach_slugs()
     pipeline_status = load_pipeline_status()

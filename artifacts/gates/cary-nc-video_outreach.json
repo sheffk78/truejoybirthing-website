@@ -1,0 +1,47 @@
+{
+  "slug": "cary-nc",
+  "stage": "video_outreach",
+  "mode": "local_video_outreach",
+  "exit_code": 1,
+  "passed": 4,
+  "failed": 5,
+  "skipped": 0,
+  "results": {
+    "pre_render_gate": {
+      "status": "PASS",
+      "detail": "scene data exists at remotion/src/data/cary-nc-data.ts"
+    },
+    "video_file_exists": {
+      "status": "FAIL",
+      "detail": "local mp4 missing and video not yet uploaded/embedded"
+    },
+    "youtube_upload": {
+      "status": "FAIL",
+      "detail": "cary-nc not found in video-embeds.ts"
+    },
+    "youtube_thumbnail": {
+      "status": "PASS",
+      "detail": "thumbnail present locally (730KB) \u2014 no videoId to verify YouTube upload"
+    },
+    "video_embedded": {
+      "status": "FAIL",
+      "detail": "no videoId to verify"
+    },
+    "videoobject_schema": {
+      "status": "FAIL",
+      "detail": "no videoId to verify"
+    },
+    "outreach_sent_or_blocked": {
+      "status": "PASS",
+      "detail": "authorized \u2014 Jeff approved outreach resumption Aug 2026. Ready to send."
+    },
+    "provider_photo_quality": {
+      "status": "PASS",
+      "detail": "all 4 provider photos are real images (>5KB, >100 colors)"
+    },
+    "video_content_city_match": {
+      "status": "FAIL",
+      "detail": "G67: no videoId \u2014 cannot verify video content"
+    }
+  }
+}

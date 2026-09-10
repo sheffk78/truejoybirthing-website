@@ -12,7 +12,7 @@
     {
       "index": 0,
       "verdict": "SUPPORTED",
-      "reason": "The quote matches the costamesadoula.com domain's subject matter (a Costa Mesa birth doula named Christine) and explicitly confirms every detail of the claim: the $1,500 package, two prenatal visits, 24/7 access, continuous labor support, one postpartum visit, and willingness to work with families f",
+      "reason": "The quote comes from a Costa Mesa doula domain and directly states Christine's $1,500 package with two prenatal visits, 24/7 access, labor support, one postpartum visit, and willingness to work with families for whom the fee is a barrier, matching the claim in full.",
       "claim": "Costa Mesa doula Christine publishes a $1,500 birth package including two prenatal visits, 24/7 phone/text access, continuous labor support, and one postpartum visit, and will work with families for whom the full fee is a barrier.",
       "url": "https://www.costamesadoula.com/menu",
       "quote": "Christine is a birth doula based in Costa Mesa who provides education, preparation, and continuous labor support for families across Orange County. Her published birth package is $1,500 and includes t"
@@ -20,7 +20,7 @@
     {
       "index": 1,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from a plausibly matching birth-services page (bornbir.com/tiffany-blackham) and directly states all the claim's details: Tiffany Blackham as a Costa Mesa birth and postpartum doula with the listed certifications (birth doula 2017, HypnoBirthing International educator 2022, HypnoBabi",
+      "reason": "The quote appears on a page dedicated to Tiffany Blackham on a birthing-services domain and directly states all the claimed details: her role as a birth and postpartum doula in Costa Mesa, the four certifications with their years, and insurance reimbursement via super bills.",
       "claim": "Tiffany Blackham is a birth and postpartum doula in Costa Mesa certified as a birth doula (2017), HypnoBirthing International educator (2022), HypnoBabies doula (2020), and placenta specialist (2020), offering insurance super bills for reimbursement.",
       "url": "https://www.bornbir.com/tiffany-blackham",
       "quote": "Tiffany Blackham is a birth and postpartum doula in Costa Mesa who describes a holistic, agenda-free approach to birth support. She is certified as a birth doula (2017), a HypnoBirthing International "
@@ -28,7 +28,7 @@
     {
       "index": 2,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from the practice's own domain (abundantblessingsmidwifery.com) and directly states all elements of the claim: Tessa Fisher's credentials (LM and CPM), the practice name, home birth service area including Orange County and Costa Mesa, and in-home prenatal, birth, and postpartum care.",
+      "reason": "The quote comes from the practice's own domain (abundantblessingsmidwifery.com), matches the midwifery/home-birth subject matter, and directly states all elements of the claim: Tessa Fisher's LM/CPM credentials, the practice name, Orange County/Costa Mesa service area, and in-home prenatal, birth, a",
       "claim": "Tessa Fisher is a Licensed Midwife and Certified Professional Midwife running Abundant Blessings Midwifery, a home birth practice serving Orange County including Costa Mesa with in-home prenatal, birth, and postpartum care.",
       "url": "https://www.abundantblessingsmidwifery.com/",
       "quote": "Tessa Fisher is a licensed midwife and certified professional midwife who runs Abundant Blessings Midwifery, a community-based home birth practice serving Orange County including Costa Mesa. The pract"
@@ -36,7 +36,7 @@
     {
       "index": 3,
       "verdict": "SUPPORTED",
-      "reason": "The quote appears on a provider website whose subdomain (kelliegwaltney098.dr-leonardo.com) matches the named nurse-midwife, and its about-us content directly states the claim's details (CNM status, Costa Mesa practice, NPI 1013315563, 3400 Avenue of the Arts) along with consistent midwifery/obstetr",
+      "reason": "The quote appears on a provider website subdomain for Kellie Gwaltney (dr-leonardo.com is a healthcare provider site platform) and directly restates the claim's details about her being a certified nurse-midwife in Costa Mesa with NPI 1013315563 at 3400 Avenue of the Arts.",
       "claim": "Kellie Gwaltney is a certified nurse-midwife practicing in Costa Mesa, listed with NPI 1013315563 at 3400 Avenue of the Arts.",
       "url": "https://kelliegwaltney098.dr-leonardo.com/about-us.html",
       "quote": "Kellie Gwaltney is a certified nurse-midwife practicing in Costa Mesa, listed with NPI 1013315563 at 3400 Avenue of the Arts. Her practice provides midwifery care in a personalized environment, with c"
@@ -44,7 +44,7 @@
     {
       "index": 4,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from Hoag's own Newport Beach maternity care page and explicitly states the same facility figures (18 LDR suites, 49 postpartum rooms, 14-bed antepartum unit, 33-bed Level III NICU) as the claim, with plausible supporting details about the LDR unit and rooming-in policy.",
+      "reason": "The quote appears on Hoag's own Newport Beach maternity care page and explicitly states the same facility details as the claim: 18 private LDR suites, 49 private postpartum rooms, a 14-bed antepartum unit, and an expanded 33-bed Level III NICU.",
       "claim": "Hoag Hospital Newport Beach's Sue & Bill Gross Women's Pavilion includes 18 private labor, delivery, and recovery suites, 49 private postpartum rooms, a 14-bed antepartum unit, and an expanded 33-bed Level III NICU.",
       "url": "https://www.hoag.org/newport-beach-maternity-care/",
       "quote": "The facility includes 18 private labor, delivery, and recovery suites, 49 private postpartum rooms, a 14-bed antepartum unit, and an expanded 33-bed Level III NICU. Hoag's LDR unit has three C-section"
@@ -52,7 +52,7 @@
     {
       "index": 5,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from Hoag's own health-insurance page topic and explicitly states Medi-Cal is among the plans not contracted with the hospital, directly supporting the claim.",
+      "reason": "The quote comes from Hoag's health insurance page (hoag.org/health-insurance/), matches the domain and subject matter, and explicitly lists Medi-Cal among plans not contracted with the hospital, directly supporting the claim.",
       "claim": "Hoag lists Medi-Cal among plans not contracted with the hospital.",
       "url": "https://www.hoag.org/health-insurance/",
       "quote": "Hoag lists Kaiser, Medi-Cal, and Three Rivers Provider Network as plans not contracted with the hospital."
@@ -60,7 +60,7 @@
     {
       "index": 6,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from MemorialCare's own maternity care page, matches the claim's subject (Orange Coast Medical Center's Childbirth Center in Fountain Valley and its midwife/obstetrician/pediatrician/perinatologist staff), and directly states the claim's content.",
+      "reason": "The quote comes from the MemorialCare maternity care page, matches the claim's subject matter (Orange Coast Medical Center's Fountain Valley Childbirth Center and its Orange County midwife distinction), and directly states the claim verbatim with plausible supporting detail.",
       "claim": "MemorialCare Orange Coast Medical Center's Childbirth Center in Fountain Valley is the only community hospital program in Orange County with certified nurse midwives on its medical staff, alongside obstetricians, pediatricians, and perinatologists.",
       "url": "https://www.memorialcare.org/services/maternity-care?location=12",
       "quote": "MemorialCare Orange Coast Medical Center's Childbirth Center in Fountain Valley is the only community hospital program in Orange County with certified nurse midwives on its medical staff, alongside ob"
@@ -76,7 +76,7 @@
     {
       "index": 8,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from the birth center's own domain (southcoastmidwifery.com), matches the claim's subject matter and location, and explicitly supports every element of the claim including first accredited birth center in Orange County, private suites, water/home birth, and the only standalone VBAC-a",
+      "reason": "The quote comes from the South Coast Midwifery homepage domain, matches the claim's Orange County birth center topic, and directly supports every element of the claim including first accredited birth center, private suites, water/home birth, and the VBAC accreditation statement.",
       "claim": "South Coast Midwifery is Orange County's first accredited birth center, offering private birthing suites, water birth, home birth, and states it is the only standalone birth center in Southern California accredited for VBAC.",
       "url": "https://southcoastmidwifery.com/",
       "quote": "South Coast Midwifery is a boutique birth center in Orange County staffed by certified midwives, describing itself as the first accredited birth center in the county. It offers private birthing suites"
@@ -84,7 +84,7 @@
     {
       "index": 9,
       "verdict": "SUPPORTED",
-      "reason": "The domain orangecountymidwife.com matches the Orange County midwifery topic, and the quote directly restates the claim about Honey Midwifery being a holistic, trauma-informed birth center and home birth practice with a birth center opening in Orange County in 2025.",
+      "reason": "The domain orangecountymidwife.com plausibly corresponds to an Orange County midwifery practice, and the quote directly states the claim's content about Honey Midwifery being a holistic, trauma-informed birth center and home birth practice with a birth center opening in Orange County in 2025.",
       "claim": "Honey Midwifery is a birth center and home birth practice in Orange County on a holistic, trauma-informed model; its holistic birth center was listed as opening in Orange County in 2025.",
       "url": "https://www.orangecountymidwife.com/",
       "quote": "Honey Midwifery is a birth center and home birth practice in Orange County founded on a holistic, trauma-informed model of midwifery care. Its holistic birth center was listed as opening in Orange Cou"
@@ -92,7 +92,7 @@
     {
       "index": 10,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from the California Board of Registered Nursing's nurse-midwife practice page (rn.ca.gov/practice/nmw.shtml), which matches the claim's topic, and the quote explicitly states that CNMs are licensed by the Board of Registered Nursing and LMs by the Medical Board of California.",
+      "reason": "The quote comes from the California Board of Registered Nursing's nurse-midwife practice page (rn.ca.gov/practice/nmw.shtml) and directly states both licensing facts in the claim: CNMs are licensed by the Board of Registered Nursing and LMs are licensed by the Medical Board of California.",
       "claim": "California CNMs are licensed by the Board of Registered Nursing; California LMs are licensed by the Medical Board of California.",
       "url": "https://www.rn.ca.gov/practice/nmw.shtml",
       "quote": "Certified nurse-midwives (CNMs) in California are licensed by the California Board of Registered Nursing as advanced practice nurses who have met the Board's educational and certification requirements"
@@ -100,7 +100,7 @@
     {
       "index": 11,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from a doula organization's FAQ page specifically about the Medi-Cal doula benefit, and it directly states that DHCS added full-spectrum doula services as a covered preventive benefit under Medi-Cal effective January 1, 2023, matching the claim.",
+      "reason": "The quote appears on a doula organization's FAQ page specifically about the Medi-Cal doula benefit, and it directly states that DHCS added full-spectrum doula services as a covered preventive benefit under Medi-Cal effective January 1, 2023, matching the claim exactly.",
       "claim": "California's Medi-Cal program covers full-spectrum doula services as a preventive benefit effective January 1, 2023.",
       "url": "https://www.frontlinedoulas.com/faq-medi-cal-doula-benefit",
       "quote": "As of January 1, 2023, California's Department of Health Care Services (DHCS) added full-spectrum doula services as a covered preventive benefit under Medi-Cal, including prenatal and postpartum visit"
@@ -108,7 +108,7 @@
     {
       "index": 12,
       "verdict": "SUPPORTED",
-      "reason": "The quote matches KFF's Women's Health Profiles format for California maternal/infant health data (which reports NCHS-sourced cesarean delivery percentages), and the ~32% figure is consistent with California's known cesarean rate.",
+      "reason": "The quote directly states the claim's statistic, and the KFF Women's Health Profiles California maternal-infant health page is a plausible source for state-level cesarean delivery data attributed to NCHS.",
       "claim": "32% of all live births in California were cesarean deliveries in 2024 (NCHS via KFF).",
       "url": "https://www.kff.org/interactive/womens-health-profiles/california/maternal-infant-health/",
       "quote": "32% of all live births in California were cesarean deliveries in 2024 (NCHS via KFF)."
@@ -116,7 +116,7 @@
     {
       "index": 13,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from the CDPH's own Pregnancy-Related Mortality page, matches the claim's exact figures (15.0 in 2022, down from 21.6 in 2021), and is plausible authoritative text for that state health department page.",
+      "reason": "The quote comes from the CDPH's dedicated Pregnancy-Related Mortality page, matches the claim's exact figures (15.0 in 2022, down from 21.6 in 2021), and is plausible official content for that California public health page.",
       "claim": "California's pregnancy-related mortality ratio was 15.0 deaths per 100,000 live births in 2022, down from 21.6 in 2021.",
       "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/Pages/Health-Topics/Pregnancy-Related-Mortality.aspx",
       "quote": "California's pregnancy-related mortality ratio was 15.0 deaths per 100,000 live births in 2022, down from 21.6 in 2021 and 18.6 in 2020 during the COVID-19 peak."
@@ -124,7 +124,7 @@
     {
       "index": 14,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from a CDC NCHS NVSR PDF whose subject (home births in the United States, 2019\u20132021, by state) matches the claim's topic, and the quoted figures (0.69% in 2019 rising to 0.97% in 2021 for California) directly support the claim.",
+      "reason": "The quote comes from a CDC NCHS NVSR document whose subject (state-level home birth trends, 2019\u20132021) matches the claim, and it directly states California's home birth share rose from 0.69% in 2019 to 0.97% in 2021.",
       "claim": "California's home birth share of total births rose from 0.69% in 2019 to 0.97% in 2021, per CDC NCHS National Vital Statistics Reports.",
       "url": "https://www.cdc.gov/nchs/data/nvsr/nvsr71/nvsr71-08.pdf",
       "quote": "Home births accounted for 0.97% of California births in 2021, an increase from 0.85% in 2020 and 0.69% in 2019. Home Births in the United States, 2019\u20132021: Changes in the incidence of home births by "
@@ -132,11 +132,11 @@
     {
       "index": 15,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from the Census QuickFacts page for Costa Mesa city, California and directly states the population estimate of 110,538, matching the claim exactly.",
+      "reason": "The quote comes from the Census QuickFacts page for Costa Mesa city, California, and directly states the population estimate of 110,538, matching the claim exactly.",
       "claim": "Costa Mesa population is approximately 110,538 residents (Census QuickFacts).",
       "url": "https://www.census.gov/quickfacts/fact/table/costamesacitycalifornia/PST045225",
       "quote": "Costa Mesa city, California; population estimate 110,538."
     }
   ],
-  "checked_at": "2026-09-08T18:00:38-06:00"
+  "checked_at": "2026-09-10T10:48:04-06:00"
 }
