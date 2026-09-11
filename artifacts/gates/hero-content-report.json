@@ -1,0 +1,1274 @@
+{
+ "abilene-tx": {
+  "file": "abilene-tx-birth-doula-hero-v3.webp",
+  "dims": "1024x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "acworth-ga": {
+  "file": "acworth-ga-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "agoura-hills-ca": {
+  "file": "agoura-hills-ca-birth-doula-hero-rva5.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "alameda-ca": {
+  "file": "alameda-ca-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "albany-ny": {
+  "file": "albany-ny-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.94,
+  "verdict": "PASS"
+ },
+ "albuquerque-nm": {
+  "file": "albuquerque-nm-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.96,
+  "verdict": "PASS"
+ },
+ "alexandria-va": {
+  "file": "alexandria-va-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.9,
+  "verdict": "PASS"
+ },
+ "alhambra-ca": {
+  "file": "alhambra-ca-birth-doula-skyline-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.97,
+  "verdict": "PASS"
+ },
+ "allen-park-mi": {
+  "file": "allen-park-mi-birth-doula-hero-v2.webp",
+  "dims": "864x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.87,
+  "verdict": "PASS"
+ },
+ "allen-tx": {
+  "file": "allen-tx-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.94,
+  "verdict": "PASS"
+ },
+ "alvin-tx": {
+  "file": "alvin-tx-doula-hero-rva.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "amarillo-tx": {
+  "file": "amarillo-tx-birth-doula-skyline-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "american-canyon-ca": {
+  "file": "american-canyon-ca-birth-doula-skyline.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "anaheim-ca": {
+  "file": "anaheim-ca-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "anchorage-ak": {
+  "file": "anchorage-ak-birth-doula-skyline.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "anna-tx": {
+  "file": "anna-tx-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "apple-valley-ca": {
+  "file": "apple-valley-ca-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.94,
+  "verdict": "PASS"
+ },
+ "arlington-heights-il": {
+  "file": "arlington-heights-il-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "arlington-tx": {
+  "file": "arlington-tx-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "arvada-co": {
+  "file": "arvada-co-birth-doula-hero-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.92,
+  "verdict": "PASS"
+ },
+ "atlanta-ga": {
+  "file": "atlanta-ga-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.97,
+  "verdict": "PASS"
+ },
+ "augusta-ga": {
+  "file": "augusta-ga-birth-doula-skyline-1200-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.96,
+  "verdict": "PASS"
+ },
+ "aurora-co": {
+  "file": "aurora-co-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.95,
+  "verdict": "PASS"
+ },
+ "aurora-il": {
+  "file": "aurora-il-birth-doula-skyline.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "austin-tx": {
+  "file": "austin-tx-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "bakersfield-ca": {
+  "file": "bakersfield-ca-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "baltimore-md": {
+  "file": "baltimore-md-birth-doula-hero-v6.webp",
+  "dims": "903x602",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.8,
+  "verdict": "PASS"
+ },
+ "beaumont-tx": {
+  "file": "beaumont-tx-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.88,
+  "verdict": "PASS"
+ },
+ "bellevue-wa": {
+  "file": "bellevue-wa-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.96,
+  "verdict": "PASS"
+ },
+ "boise-id": {
+  "file": "boise-id-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "boston-ma": {
+  "file": "boston-ma-v3-1200.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "bozeman-mt": {
+  "file": "bozeman-mt-birth-doula-hero.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "buffalo-ny": {
+  "file": "buffalo-ny-birth-doula-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "carrollton-tx": {
+  "file": "carrollton-tx-birth-doula-skyline.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "cary-nc": {
+  "file": "cary-nc-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "cedar-park-tx": {
+  "file": "cedar-park-tx-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "celina-tx": {
+  "file": "celina-tx-birth-doula-skyline-v2.webp",
+  "dims": "864x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "charleston-sc": {
+  "file": "charleston-sc-birth-doula-skyline-v4.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "charlotte-nc": {
+  "file": "charlotte-nc-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "chesapeake-va": {
+  "file": "chesapeake-va-birth-doula-skyline.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "chicago-il": {
+  "file": "chicago-il-birth-doula-hero-v6.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.91,
+  "verdict": "PASS"
+ },
+ "cincinnati-oh": {
+  "file": "cincinnati-oh-birth-doula-skyline-rva.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "cleveland-oh": {
+  "file": "cleveland-oh-birth-doula-skyline-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.95,
+  "verdict": "PASS"
+ },
+ "colorado-springs-co": {
+  "file": "colorado-springs-co-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.97,
+  "verdict": "PASS"
+ },
+ "columbia-md": {
+  "file": "columbia-md-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.79,
+  "verdict": "PASS"
+ },
+ "columbus-oh": {
+  "file": "columbus-oh-hero-v2.webp",
+  "dims": "1920x1080",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "conroe-tx": {
+  "file": "conroe-tx-birth-doula-skyline-v2.webp",
+  "dims": "864x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.94,
+  "verdict": "PASS"
+ },
+ "corona-ca": {
+  "file": "corona-ca-birth-doula-skyline.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "corpus-christi-tx": {
+  "file": "corpus-christi-tx-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "costa-mesa-ca": {
+  "file": "costa-mesa-ca-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "dallas-tx": {
+  "file": "dallas-tx-birth-doula-hero-v3.webp",
+  "dims": "864x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "denver-co": {
+  "file": "denver-co-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.96,
+  "verdict": "PASS"
+ },
+ "detroit-mi": {
+  "file": "detroit-mi-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.96,
+  "verdict": "PASS"
+ },
+ "el-paso-tx": {
+  "file": "el-paso-tx-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.9,
+  "verdict": "PASS"
+ },
+ "elk-grove-ca": {
+  "file": "elk-grove-ca-birth-doula-hero.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "eugene-or": {
+  "file": "eugene-or-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.97,
+  "verdict": "PASS"
+ },
+ "fate-tx": {
+  "file": "fate-tx-rva.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "fontana-ca": {
+  "file": "fontana-ca-birth-doula-skyline-v4.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.94,
+  "verdict": "PASS"
+ },
+ "fort-collins-co": {
+  "file": "fort-collins-co-birth-doula-hero-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.95,
+  "verdict": "PASS"
+ },
+ "fort-worth-tx": {
+  "file": "fort-worth-tx-birth-doula-hero-v7.webp",
+  "dims": "864x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "fremont-ca": {
+  "file": "fremont-ca-birth-doula-skyline-v3.webp",
+  "dims": "864x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "fresno-ca": {
+  "file": "fresno-ca-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "frisco-tx": {
+  "file": "frisco-tx-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "fulshear-tx": {
+  "file": "fulshear-tx-doula-hero-rva.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "gainesville-fl": {
+  "file": "gainesville-fl-birth-doula-hero-v3.webp",
+  "dims": "1080x720",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.61,
+  "verdict": "PASS"
+ },
+ "gaithersburg-md": {
+  "file": "gaithersburg-md-birth-doula-hero.webp",
+  "dims": "1128x752",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "garden-grove-ca": {
+  "file": "garden-grove-ca-birth-doula-hero-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "glendale-ca": {
+  "file": "glendale-ca-birth-doula-skyline-v3.webp",
+  "dims": "1017x678",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.83,
+  "verdict": "PASS"
+ },
+ "grand-rapids-mi": {
+  "file": "grand-rapids-mi-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "greenbelt-md": {
+  "file": "greenbelt-md-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "hartford-ct": {
+  "file": "hartford-ct-birth-doula-hero-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.78,
+  "verdict": "PASS"
+ },
+ "hayward-ca": {
+  "file": "hayward-ca-birth-doula-skyline.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.91,
+  "verdict": "PASS"
+ },
+ "henderson-nv": {
+  "file": "henderson-nv-birth-doula-skyline-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.97,
+  "verdict": "PASS"
+ },
+ "hendersonville-tn": {
+  "file": "hendersonville-tn-birth-doula-hero.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "houston-tx": {
+  "file": "houston-tx-birth-doula-hero-rva.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "huntington-beach-ca": {
+  "file": "huntington-beach-ca-birth-doula-skyline-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.72,
+  "verdict": "PASS"
+ },
+ "huntsville-al": {
+  "file": "huntsville-al-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "indianapolis-in": {
+  "file": "indianapolis-in-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "irvine-ca": {
+  "file": "irvine-ca-birth-doula-hero-rva.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "jacksonville-fl": {
+  "file": "jacksonville-fl-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "kansas-city-mo": {
+  "file": "kansas-city-mo-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.82,
+  "verdict": "PASS"
+ },
+ "lakewood-co": {
+  "file": "lakewood-co-birth-doula-skyline.webp",
+  "dims": "1024x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.92,
+  "verdict": "PASS"
+ },
+ "laredo-tx": {
+  "file": "laredo-tx-birth-doula-skyline-v2.webp",
+  "dims": "1728x1152",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "las-vegas-nv": {
+  "file": "las-vegas-nv-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "laurel-md": {
+  "file": "laurel-md-birth-doula-skyline.webp",
+  "dims": "864x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.94,
+  "verdict": "PASS"
+ },
+ "leesburg-fl": {
+  "file": "leesburg-fl-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "lehi-ut": {
+  "file": "lehi-ut-birth-doula-silhouette-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "lexington-ky": {
+  "file": "lexington-ky-birth-doula-skyline.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "long-beach-ca": {
+  "file": "long-beach-ca-birth-doula-hero-v4.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.75,
+  "verdict": "PASS"
+ },
+ "los-angeles-ca": {
+  "file": "los-angeles-ca-birth-doula-skyline-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "louisville-ky": {
+  "file": "louisville-ky-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "lubbock-tx": {
+  "file": "lubbock-tx-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "mckinney-tx": {
+  "file": "mckinney-tx-birth-doula-hero-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.86,
+  "verdict": "PASS"
+ },
+ "melissa-tx": {
+  "file": "melissa-tx-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "memphis-tn": {
+  "file": "memphis-tn-birth-doula-skyline-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "meridian-id": {
+  "file": "meridian-id-birth-doula-skyline-v4.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "mesa-az": {
+  "file": "mesa-az-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "milwaukee-wi": {
+  "file": "milwaukee-wi-birth-doula-hero.webp",
+  "dims": "2048x1152",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.94,
+  "verdict": "PASS"
+ },
+ "minneapolis-mn": {
+  "file": "minneapolis-mn-birth-doula-skyline.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "moreno-valley-ca": {
+  "file": "moreno-valley-ca-birth-doula-skyline.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "naperville-il": {
+  "file": "naperville-il-hero-20260731.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.92,
+  "verdict": "PASS"
+ },
+ "nashville-tn": {
+  "file": "nashville-tn-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "new-braunfels-tx": {
+  "file": "new-braunfels-tx-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.94,
+  "verdict": "PASS"
+ },
+ "new-haven-ct": {
+  "file": "new-haven-ct-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "new-york-ny": {
+  "file": "new-york-ny-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "newark-nj": {
+  "file": "newark-nj-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "newport-news-va": {
+  "file": "newport-news-va-birth-doula-nnva-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "norfolk-va": {
+  "file": "norfolk-va-birth-doula-skyline-v2.webp",
+  "dims": "1728x1152",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "norwalk-ct": {
+  "file": "norwalk-ct-birth-doula-hero-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "oakland-ca": {
+  "file": "oakland-ca-birth-doula-hero-v2.webp",
+  "dims": "1024x538",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "oceanside-ca": {
+  "file": "oceanside-ca-birth-doula-skyline-rva.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "oklahoma-city-ok": {
+  "file": "oklahoma-city-ok-birth-doula-hero-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.83,
+  "verdict": "PASS"
+ },
+ "omaha-ne": {
+  "file": "omaha-ne-birth-doula-skyline.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "ontario-ca": {
+  "file": "ontario-ca-birth-doula-skyline.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.9,
+  "verdict": "PASS"
+ },
+ "orlando-fl": {
+  "file": "orlando-fl-birth-doula-hero-v4.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "palm-springs-fl": {
+  "file": "palm-springs-fl-birth-doula-skyline.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "palmdale-ca": {
+  "file": "palmdale-ca-birth-doula-hero.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "pearland-tx": {
+  "file": "pearland-tx-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "philadelphia-pa": {
+  "file": "philadelphia-pa-birth-doula-hero-pa.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "phoenix-az": {
+  "file": "phoenix-az-birth-doula-hero-v3.webp",
+  "dims": "1024x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "pittsburgh-pa": {
+  "file": "pittsburgh-pa-birth-doula-skyline-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "port-st-lucie-fl": {
+  "file": "port-st-lucie-fl-birth-doula-skyline-v5.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.94,
+  "verdict": "PASS"
+ },
+ "portland-or": {
+  "file": "portland-or-birth-doula-skyline-v4.webp",
+  "dims": "864x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.88,
+  "verdict": "PASS"
+ },
+ "princeton-tx": {
+  "file": "princeton-tx-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "providence-ri": {
+  "file": "providence-ri-birth-doula-hero-pvd-v2.webp",
+  "dims": "1024x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "raleigh-nc": {
+  "file": "raleigh-nc-birth-doula-skyline-v4.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.66,
+  "verdict": "PASS"
+ },
+ "rancho-cucamonga-ca": {
+  "file": "rancho-cucamonga-ca-birth-doula-skyline.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "reno-nv": {
+  "file": "reno-nv-birth-doula-hero-rva.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "richmond-va": {
+  "file": "richmond-va-birth-doula-hero-rva.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.97,
+  "verdict": "PASS"
+ },
+ "rochester-ny": {
+  "file": "rochester-ny-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.85,
+  "verdict": "PASS"
+ },
+ "rockville-md": {
+  "file": "rockville-md-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "rosemount-mn": {
+  "file": "rosemount-mn-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.73,
+  "verdict": "PASS"
+ },
+ "sacramento-ca": {
+  "file": "sacramento-ca-birth-doula-skyline-v2.webp",
+  "dims": "864x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "san-antonio-tx": {
+  "file": "san-antonio-tx-birth-doula-skyline-v5.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "san-bernardino-ca": {
+  "file": "san-bernardino-ca-hero-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "san-diego-ca": {
+  "file": "san-diego-ca-birth-doula-skyline-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.97,
+  "verdict": "PASS"
+ },
+ "san-francisco-ca": {
+  "file": "san-francisco-ca-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "san-jose-ca": {
+  "file": "san-jose-ca-birth-doula-hero-v4.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "san-marcos-tx": {
+  "file": "san-marcos-tx-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "seattle-wa": {
+  "file": "seattle-wa-birth-doula-hero-v3.webp",
+  "dims": "1000x667",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.61,
+  "verdict": "PASS"
+ },
+ "spokane-wa": {
+  "file": "spokane-wa-birth-doula-hero-spk.webp",
+  "dims": "1024x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "springfield-il": {
+  "file": "springfield-il-birth-doula-support-v2.webp",
+  "dims": "864x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "st-augustine-fl": {
+  "file": "st-augustine-fl-birth-doula-skyline-v2.webp",
+  "dims": "864x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "st-paul-mn": {
+  "file": "st-paul-mn-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.93,
+  "verdict": "PASS"
+ },
+ "stamford-ct": {
+  "file": "stamford-ct-birth-doula-skyline-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "stockton-ca": {
+  "file": "stockton-ca-birth-doula-hero-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "tacoma-wa": {
+  "file": "tacoma-wa-birth-doula-skyline.webp",
+  "dims": "1024x576",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "tampa-fl": {
+  "file": "tampa-fl-birth-doula-skyline-v4.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.93,
+  "verdict": "PASS"
+ },
+ "temple-tx": {
+  "file": "temple-tx-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "torrance-ca": {
+  "file": "torrance-ca-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "tucson-az": {
+  "file": "tucson-az-birth-doula-skyline-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "tulsa-ok": {
+  "file": "tulsa-ok-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.96,
+  "verdict": "PASS"
+ },
+ "vancouver-wa": {
+  "file": "vancouver-wa-birth-doula-skyline-v2.webp",
+  "dims": "1728x1152",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "victoria-tx": {
+  "file": "victoria-tx-birth-doula-skyline-vtx.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "virginia-beach-va": {
+  "file": "virginia-beach-va-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "waco-tx": {
+  "file": "waco-tx-hero-v3.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "washington-dc": {
+  "file": "washington-dc-birth-doula-hero-v2.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.95,
+  "verdict": "PASS"
+ },
+ "worcester-ma": {
+  "file": "worcester-ma-birth-doula-hero.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "yonkers-ny": {
+  "file": "yonkers-ny-birth-doula-skyline.webp",
+  "dims": "1200x800",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.98,
+  "verdict": "PASS"
+ }
+}

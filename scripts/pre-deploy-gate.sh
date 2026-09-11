@@ -119,7 +119,12 @@ for s in "${SLUGS[@]}"; do
       if python3 -c "from PIL import Image; Image.open('$best_full').verify()" 2>/dev/null; then
         # S11: content must fill canvas (2026-09-10 hayward/corona quarter-content defect)
         if python3 "$PROJECT_DIR/scripts/check-og-content.py" "$s" >/dev/null 2>&1; then
-          gate_pass "OG image OK: $best_file (${size}B, content fills canvas)"
+          # S12: hero content must fill its frame (2026-09-11, Hayward aftermath P3)
+          if python3 "$PROJECT_DIR/scripts/check-hero-content.py" "$s" >/dev/null 2>&1; then
+            gate_pass "OG + hero content OK: $best_file (${size}B, fills canvas)"
+          else
+            gate_fail "Hero content incomplete for $s — run: python3 scripts/check-hero-content.py $s (re-render hero via render-og-1x.cjs / hero render template)"
+          fi
         else
           gate_fail "OG content incomplete for $s — run: python3 scripts/check-og-content.py $s (re-render via scripts/render-og-1x.cjs)"
         fi

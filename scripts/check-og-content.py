@@ -14,6 +14,7 @@ Checks per ogImage referenced in src/data/cities.ts (live URL or local file):
 
 Usage:
   python3 scripts/check-og-content.py [slug ...]   # default: all cities
+  python3 scripts/check-og-content.py --file IMG [IMG ...]  # check arbitrary files (fixture replays)
 Exit 0 = all pass. Exit 1 = failures listed. --write-report dumps JSON.
 """
 import json, os, re, sys, glob
@@ -56,6 +57,34 @@ def measure(path):
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     targets = args if args else None
+    if '--file' in sys.argv:
+        # Fixture-replay mode: check arbitrary files (failure-library replays,
+        # negative tests). Uses basename as the label; same thresholds as slug mode.
+        idx = sys.argv.index('--file')
+        files = [a for a in sys.argv[idx + 1:] if not a.startswith('--')]
+        fails, report = [], {}
+        for f in files:
+            name = os.path.basename(f)
+            entry = {'file': name}
+            if not os.path.exists(f):
+                fails.append((name, 'missing-file', f)); entry['verdict'] = 'FAIL'
+                report[name] = entry; continue
+            w, h, cov_x, cov_y, density = measure(f)
+            entry.update(dims=f'{w}x{h}', cov_x=round(cov_x, 2), cov_y=round(cov_y, 2), density=round(density, 2))
+            reasons = []
+            if (w, h) != (1200, 630): reasons.append(f'dims {w}x{h} != 1200x630')
+            if cov_x < 0.92: reasons.append(f'content covers {cov_x:.0%} of width')
+            if cov_y < 0.92: reasons.append(f'content covers {cov_y:.0%} of height')
+            if density < 0.30: reasons.append(f'density {density:.0%} < 30%')
+            if reasons:
+                fails.append((name, 'content-fail', '; '.join(reasons))); entry['verdict'] = 'FAIL'
+            else:
+                entry['verdict'] = 'PASS'
+            report[name] = entry
+        for slug, kind, detail in fails:
+            print(f'FAIL (file) {slug}: {detail}')
+        print(f'---\nS11 og-content (file mode): {len(files) - len(fails)}/{len(files)} pass')
+        sys.exit(1 if fails else 0)
     cities = load_og_map()
     if targets:
         cities = {s: p for s, p in cities.items() if s in targets}

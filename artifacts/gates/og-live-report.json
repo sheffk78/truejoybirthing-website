@@ -1,0 +1,1250 @@
+{
+ "abilene-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-abilene-tx-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "acworth-ga": {
+  "url": "https://truejoybirthing.com/images/og-city-acworth-ga-v4.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "agoura-hills-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-agoura-hills-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "alameda-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-alameda-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "albany-ny": {
+  "url": "https://truejoybirthing.com/images/og-city-albany-ny.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "albuquerque-nm": {
+  "url": "https://truejoybirthing.com/images/og-city-albuquerque-nm-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "alexandria-va": {
+  "url": "https://truejoybirthing.com/images/og-city-alexandria-va.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "alhambra-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-alhambra-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "allen-park-mi": {
+  "url": "https://truejoybirthing.com/images/og-city-allen-park-mi.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "allen-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-allen-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "alvin-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-alvin-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "amarillo-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-amarillo-tx-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 1.0,
+  "verdict": "PASS"
+ },
+ "american-canyon-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-american-canyon-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "anaheim-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-anaheim-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "anchorage-ak": {
+  "url": "https://truejoybirthing.com/images/og-city-anchorage-ak.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "anna-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-anna-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "apple-valley-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-apple-valley-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "arlington-heights-il": {
+  "url": "https://truejoybirthing.com/images/og-city-arlington-heights-il.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "arlington-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-arlington-tx-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "arvada-co": {
+  "url": "https://truejoybirthing.com/images/og-city-arvada-co-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.96,
+  "verdict": "PASS"
+ },
+ "atlanta-ga": {
+  "url": "https://truejoybirthing.com/images/og-city-atlanta-ga-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "augusta-ga": {
+  "url": "https://truejoybirthing.com/images/og-city-augusta-ga-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "aurora-co": {
+  "url": "https://truejoybirthing.com/images/og-city-aurora-co.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "aurora-il": {
+  "url": "https://truejoybirthing.com/images/og-city-aurora-il.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "austin-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-austin-tx-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "bakersfield-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-bakersfield-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "baltimore-md": {
+  "url": "https://truejoybirthing.com/images/og-city-baltimore-md-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "beaumont-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-beaumont-tx-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "bellevue-wa": {
+  "url": "https://truejoybirthing.com/images/og-city-bellevue-wa.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "boise-id": {
+  "url": "https://truejoybirthing.com/images/og-city-boise-id.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "boston-ma": {
+  "url": "https://truejoybirthing.com/images/og-city-boston-ma-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "bozeman-mt": {
+  "url": "https://truejoybirthing.com/images/og-city-bozeman-mt.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "buffalo-ny": {
+  "url": "https://truejoybirthing.com/images/og-city-buffalo-ny.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "carrollton-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-carrollton-tx-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "cedar-park-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-cedar-park-tx-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "celina-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-celina-tx-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "charleston-sc": {
+  "url": "https://truejoybirthing.com/images/og-city-charleston-sc.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "charlotte-nc": {
+  "url": "https://truejoybirthing.com/images/og-city-charlotte-nc-v5.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "chesapeake-va": {
+  "url": "https://truejoybirthing.com/images/og-city-chesapeake-va.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "chicago-il": {
+  "url": "https://truejoybirthing.com/images/og-city-chicago-il-v6.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "cincinnati-oh": {
+  "url": "https://truejoybirthing.com/images/og-city-cincinnati-oh-rva.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "cleveland-oh": {
+  "url": "https://truejoybirthing.com/images/og-city-cleveland-oh.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.97,
+  "verdict": "PASS"
+ },
+ "columbia-md": {
+  "url": "https://truejoybirthing.com/images/og-city-columbia-md.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "columbus-oh": {
+  "url": "https://truejoybirthing.com/images/og-city-columbus-oh.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "conroe-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-conroe-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "corona-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-corona-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "corpus-christi-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-corpus-christi-tx-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "dallas-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-dallas-tx-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "denver-co": {
+  "url": "https://truejoybirthing.com/images/og-city-denver-co-v7.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "detroit-mi": {
+  "url": "https://truejoybirthing.com/images/og-city-detroit-mi-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "el-paso-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-el-paso-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "elk-grove-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-elk-grove-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "eugene-or": {
+  "url": "https://truejoybirthing.com/images/og-city-eugene-or-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "fate-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-fate-tx-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "fontana-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-fontana-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "fort-collins-co": {
+  "url": "https://truejoybirthing.com/images/og-city-fort-collins-co-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.94,
+  "verdict": "PASS"
+ },
+ "fort-worth-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-fort-worth-tx-v6.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "fremont-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-fremont-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "fresno-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-fresno-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "frisco-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-frisco-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "fulshear-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-fulshear-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "gainesville-fl": {
+  "url": "https://truejoybirthing.com/images/og-city-gainesville-fl-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "gaithersburg-md": {
+  "url": "https://truejoybirthing.com/images/og-city-gaithersburg-md-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "garden-grove-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-garden-grove-ca-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "glendale-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-glendale-ca-v4.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "grand-rapids-mi": {
+  "url": "https://truejoybirthing.com/images/og-city-grand-rapids-mi-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "greenbelt-md": {
+  "url": "https://truejoybirthing.com/images/og-city-greenbelt-md.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "hartford-ct": {
+  "url": "https://truejoybirthing.com/images/og-city-hartford-ct.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "hayward-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-hayward-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "henderson-nv": {
+  "url": "https://truejoybirthing.com/images/og-city-henderson-nv.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "hendersonville-tn": {
+  "url": "https://truejoybirthing.com/images/og-city-hendersonville-tn.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "houston-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-houston-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "huntington-beach-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-huntington-beach-ca-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "huntsville-al": {
+  "url": "https://truejoybirthing.com/images/og-city-huntsville-al-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "indianapolis-in": {
+  "url": "https://truejoybirthing.com/images/og-city-indianapolis-in.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "irvine-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-irvine-ca-rva.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "jacksonville-fl": {
+  "url": "https://truejoybirthing.com/images/og-city-jacksonville-fl.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "kansas-city-mo": {
+  "url": "https://truejoybirthing.com/images/og-kansas-city-mo-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "lakewood-co": {
+  "url": "https://truejoybirthing.com/images/og-city-lakewood-co-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "laredo-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-laredo-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "las-vegas-nv": {
+  "url": "https://truejoybirthing.com/images/og-city-las-vegas-nv-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "laurel-md": {
+  "url": "https://truejoybirthing.com/images/og-city-laurel-md.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "leesburg-fl": {
+  "url": "https://truejoybirthing.com/images/og-city-leesburg-fl.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "lehi-ut": {
+  "url": "https://truejoybirthing.com/images/og-city-lehi-ut.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "lexington-ky": {
+  "url": "https://truejoybirthing.com/images/og-city-lexington-ky.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "long-beach-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-long-beach-ca-v5.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "los-angeles-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-los-angeles-ca-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "louisville-ky": {
+  "url": "https://truejoybirthing.com/images/og-city-louisville-ky.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "lubbock-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-lubbock-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "mckinney-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-mckinney-tx-v4.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "melissa-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-melissa-tx-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "memphis-tn": {
+  "url": "https://truejoybirthing.com/images/og-city-memphis-tn-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "meridian-id": {
+  "url": "https://truejoybirthing.com/images/og-city-meridian-id-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "mesa-az": {
+  "url": "https://truejoybirthing.com/images/og-city-mesa-az.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "milwaukee-wi": {
+  "url": "https://truejoybirthing.com/images/og-city-milwaukee-wi.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "minneapolis-mn": {
+  "url": "https://truejoybirthing.com/images/og-city-minneapolis-mn-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "moreno-valley-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-moreno-valley-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "naperville-il": {
+  "url": "https://truejoybirthing.com/images/og-city-naperville-il-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "nashville-tn": {
+  "url": "https://truejoybirthing.com/images/og-city-nashville-tn.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.87,
+  "verdict": "PASS"
+ },
+ "new-braunfels-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-new-braunfels-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "new-haven-ct": {
+  "url": "https://truejoybirthing.com/images/og-city-new-haven-ct-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "new-york-ny": {
+  "url": "https://truejoybirthing.com/images/og-city-new-york-ny-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "newark-nj": {
+  "url": "https://truejoybirthing.com/images/og-city-newark-nj-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "newport-news-va": {
+  "url": "https://truejoybirthing.com/images/og-city-newport-news-va.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "norfolk-va": {
+  "url": "https://truejoybirthing.com/images/og-city-norfolk-va.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "norwalk-ct": {
+  "url": "https://truejoybirthing.com/images/og-city-norwalk-ct.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "oakland-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-oakland-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.99,
+  "verdict": "PASS"
+ },
+ "oceanside-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-oceanside-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.99,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "oklahoma-city-ok": {
+  "url": "https://truejoybirthing.com/images/og-city-oklahoma-city-ok.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "omaha-ne": {
+  "url": "https://truejoybirthing.com/images/og-city-omaha-ne.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "ontario-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-ontario-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "orlando-fl": {
+  "url": "https://truejoybirthing.com/images/og-city-orlando-fl.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "palm-springs-fl": {
+  "url": "https://truejoybirthing.com/images/og-city-palm-springs-fl.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "palmdale-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-palmdale-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "pearland-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-pearland-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "philadelphia-pa": {
+  "url": "https://truejoybirthing.com/images/og-city-philadelphia-pa-v5.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "phoenix-az": {
+  "url": "https://truejoybirthing.com/images/og-city-phoenix-az-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "pittsburgh-pa": {
+  "url": "https://truejoybirthing.com/images/og-city-pittsburgh-pa.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "port-st-lucie-fl": {
+  "url": "https://truejoybirthing.com/images/og-city-port-st-lucie-fl.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "portland-or": {
+  "url": "https://truejoybirthing.com/images/og-city-portland-or-v5.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "princeton-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-princeton-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "providence-ri": {
+  "url": "https://truejoybirthing.com/images/og-city-providence-ri-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "raleigh-nc": {
+  "url": "https://truejoybirthing.com/images/og-city-raleigh-nc-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "rancho-cucamonga-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-rancho-cucamonga-ca-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "reno-nv": {
+  "url": "https://truejoybirthing.com/images/og-city-reno-nv-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "richmond-va": {
+  "url": "https://truejoybirthing.com/images/og-city-richmond-va.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "rochester-ny": {
+  "url": "https://truejoybirthing.com/images/og-city-rochester-ny.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "rockville-md": {
+  "url": "https://truejoybirthing.com/images/og-city-rockville-md-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "rosemount-mn": {
+  "url": "https://truejoybirthing.com/images/og-city-rosemount-mn.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "sacramento-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-sacramento-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "san-antonio-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-san-antonio-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "san-bernardino-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-san-bernardino-ca-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.95,
+  "verdict": "PASS"
+ },
+ "san-diego-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-san-diego-ca-1200.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 1.0,
+  "density": 0.61,
+  "verdict": "PASS"
+ },
+ "san-francisco-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-san-francisco-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "san-jose-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-san-jose-ca-v4.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "san-marcos-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-san-marcos-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "seattle-wa": {
+  "url": "https://truejoybirthing.com/images/og-city-seattle-wa-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "spokane-wa": {
+  "url": "https://truejoybirthing.com/images/og-city-spokane-wa-rva.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "springfield-il": {
+  "url": "https://truejoybirthing.com/images/og-city-springfield-il-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "st-augustine-fl": {
+  "url": "https://truejoybirthing.com/images/og-city-st-augustine-fl-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "st-paul-mn": {
+  "url": "https://truejoybirthing.com/images/og-city-st-paul-mn-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "stamford-ct": {
+  "url": "https://truejoybirthing.com/images/og-city-stamford-ct.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "stockton-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-stockton-ca-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "tacoma-wa": {
+  "url": "https://truejoybirthing.com/images/og-city-tacoma-wa.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "tampa-fl": {
+  "url": "https://truejoybirthing.com/images/og-city-tampa-fl.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "temple-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-temple-tx-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "torrance-ca": {
+  "url": "https://truejoybirthing.com/images/og-city-torrance-ca-rva.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "tucson-az": {
+  "url": "https://truejoybirthing.com/images/og-city-tucson-az.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "tulsa-ok": {
+  "url": "https://truejoybirthing.com/images/og-tulsa-ok-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "vancouver-wa": {
+  "url": "https://truejoybirthing.com/images/og-city-vancouver-wa.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "victoria-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-victoria-tx-vtx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "virginia-beach-va": {
+  "url": "https://truejoybirthing.com/images/virginia-beach-va-og-v2.png",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "waco-tx": {
+  "url": "https://truejoybirthing.com/images/og-city-waco-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "washington-dc": {
+  "url": "https://truejoybirthing.com/images/og-city-washington-dc.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "worcester-ma": {
+  "url": "https://truejoybirthing.com/images/og-city-worcester-ma.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "yonkers-ny": {
+  "url": "https://truejoybirthing.com/images/og-city-yonkers-ny-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ }
+}
