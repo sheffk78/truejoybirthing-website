@@ -3,7 +3,7 @@
   "stage": "video_outreach",
   "mode": "local_video_outreach",
   "exit_code": 0,
-  "passed": 8,
+  "passed": 9,
   "failed": 0,
   "skipped": 0,
   "results": {
@@ -13,19 +13,19 @@
     },
     "video_file_exists": {
       "status": "PASS",
-      "detail": "local mp4 cleaned post-upload (expected; YouTube upload + live embed verified)"
+      "detail": "video file 21.0MB >10MB"
     },
     "youtube_upload": {
       "status": "PASS",
-      "detail": "videoId D7Zlm67ALcM present in video-embeds.ts"
+      "detail": "videoId DDEV5Zv8_TM present in video-embeds.ts"
     },
     "youtube_thumbnail": {
       "status": "PASS",
-      "detail": "thumbnail present locally (893KB) and YouTube returns 135KB"
+      "detail": "thumbnail present locally (813KB) and YouTube returns 117KB"
     },
     "video_embedded": {
       "status": "PASS",
-      "detail": "embed found (vid D7Zlm67ALcM) on live page"
+      "detail": "embed found (vid DDEV5Zv8_TM) on live page"
     },
     "videoobject_schema": {
       "status": "PASS",
@@ -38,6 +38,10 @@
     "provider_photo_quality": {
       "status": "PASS",
       "detail": "all 4 provider photos are real images (>5KB, >100 colors)"
+    },
+    "video_content_city_match": {
+      "status": "PASS",
+      "detail": "G67: video overview scene names this city ('meridian' found; frame t=22s)"
     }
   }
 }
