@@ -1,0 +1,30 @@
+{
+ "slug": "newport-news-va",
+ "verdicts": [
+  {
+   "crop": "newport-news-va-hero-fig0.png",
+   "verdict": "pass",
+   "defects": [],
+   "notes": "Single pregnant silhouette in profile against sunset waterscape (bridge = Monitor-Merrimac/Newport News area). Anatomically plausible form, one figure, natural pose, no melted/fused/missing parts, no AI artifacts."
+  },
+  {
+   "crop": "newport-news-va-og-fig0.png",
+   "verdict": "pass",
+   "defects": [],
+   "notes": "OG card fills canvas; silhouette anatomically correct facing left; edge accent bars are the template design element; card carries no headline text by design (standard card design); no artifacts."
+  },
+  {
+   "crop": "newport-news-va-support-fig0.png",
+   "verdict": "pass",
+   "defects": [],
+   "notes": "Two figures (pregnant woman + doula with ID lanyard) walking on tree-lined path. Faces natural, hands correct (belly-hold + shoulder rest), limbs proportionate, no duplicated/ghosted figures, no garbled text."
+  },
+  {
+   "crop": "newport-news-va-thumb-fig0.png",
+   "verdict": "pass",
+   "defects": [],
+   "notes": "Silhouette + sunset + bridge composition, anatomically plausible, no melted text/artifacts. 'Watch' element is the YouTube player UI in the live-region crop, not a design defect. Regenerated via the hero-based thumbnail template (be1c8f0a standard)."
+  }
+ ],
+ "checked_at": "2026-09-11T19:20:00+00:00"
+}

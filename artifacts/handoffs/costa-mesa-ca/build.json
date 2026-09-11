@@ -1,105 +1,39 @@
 {
   "slug": "costa-mesa-ca",
   "stage": "build",
-  "produced_at": "2026-09-08T23:48:59Z",
-  "worker_model": "glm-5.3-flash",
-  "notes": "Skeleton-to-build conversion for costa-mesa-ca using prepared research JSON research/skeleton-sprint-2026-09-08/costa-mesa-ca.json. All provider/hospital/birth-center/stat claims trace to that research JSON's sources. Hero (pregnant silhouette + OC coastal landscape), support scene (one pregnant mom + one doula), 4 provider portraits, 2 hospital exteriors, 2 birth-center exteriors generated via image_generate per tjb-ai-photo-generation; hero vision-verified as real photographic silhouette; support scene vision-verified (one pregnant woman, no distortion); OG rendered via tjb-generate-asset.sh Pattern B v2 composition.",
+  "produced_at": "2026-09-10T12:00:00Z",
+  "worker_model": "hermes-subagent:deepseek-v4-flash",
+  "notes": "",
   "sources": [
     {
-      "claim": "Costa Mesa doula Christine publishes a $1,500 birth package including two prenatal visits, 24/7 phone/text access, continuous labor support, and one postpartum visit, and will work with families for whom the full fee is a barrier.",
+      "claim": "Christine is a Costa Mesa-based birth doula serving Orange County with a published $1500 package (two prenatal visits, 24/7 text/phone access, labor support, one postpartum visit)",
       "url": "https://www.costamesadoula.com/menu",
-      "quote": "Christine is a birth doula based in Costa Mesa who provides education, preparation, and continuous labor support for families across Orange County. Her published birth package is $1,500 and includes two prenatal visits, 24/7 access, labor support, and one postpartum visit. She states that if the full fee is a barrier, she will work with families to make support accessible.",
-      "kind": "provider"
+      "quote": "My services include: Two prenatal visits 24/7 access to me via text or phone Being with you for labor support ... One postpartum visit Price: $1500"
     },
     {
-      "claim": "Tiffany Blackham is a birth and postpartum doula in Costa Mesa certified as a birth doula (2017), HypnoBirthing International educator (2022), HypnoBabies doula (2020), and placenta specialist (2020), offering insurance super bills for reimbursement.",
+      "claim": "Christine Moorefield operates Costa Mesa Doula from Costa Mesa, CA and serves families across Orange County",
+      "url": "https://www.costamesadoula.com/",
+      "quote": "Located in Costa Mesa, but I serve growing families all over the Orange County area."
+    },
+    {
+      "claim": "Tiffany Blackham is a birth & postpartum doula in Costa Mesa, California with 9 years experience, IDI-Certified Birth Doula (2017), offering $2,000 Mama Moon and $2,400 Peaceful Mama HypnoBirthing packages",
       "url": "https://www.bornbir.com/tiffany-blackham",
-      "quote": "Tiffany Blackham is a birth and postpartum doula in Costa Mesa who describes a holistic, agenda-free approach to birth support. She is certified as a birth doula (2017), a HypnoBirthing International educator (2022), a HypnoBabies doula (2020), and a placenta specialist (2020). She offers unlimited early-labor support by phone, text, or FaceTime and in-person support during active labor, and works with clients on insurance reimbursement through super bills.",
-      "kind": "provider"
+      "quote": "Birth & Postpartum Doula Costa Mesa, California 9 years of experience ... IDI- Certified Birth Doula (2017) ... Mama Moon Birth Package $2,000.00 USD Flat rate ... Peaceful Mama HypnoBirthing Package $2,400.00"
     },
     {
-      "claim": "Tessa Fisher is a Licensed Midwife and Certified Professional Midwife running Abundant Blessings Midwifery, a home birth practice serving Orange County including Costa Mesa with in-home prenatal, birth, and postpartum care.",
-      "url": "https://www.abundantblessingsmidwifery.com/",
-      "quote": "Tessa Fisher is a licensed midwife and certified professional midwife who runs Abundant Blessings Midwifery, a community-based home birth practice serving Orange County including Costa Mesa. The practice provides in-home prenatal care, labor and birth attendance, and postpartum care for low-risk pregnancies, emphasizing informed choice and client autonomy.",
-      "kind": "provider"
-    },
-    {
-      "claim": "Kellie Gwaltney is a certified nurse-midwife practicing in Costa Mesa, listed with NPI 1013315563 at 3400 Avenue of the Arts.",
-      "url": "https://kelliegwaltney098.dr-leonardo.com/about-us.html",
-      "quote": "Kellie Gwaltney is a certified nurse-midwife practicing in Costa Mesa, listed with NPI 1013315563 at 3400 Avenue of the Arts. Her practice provides midwifery care in a personalized environment, with clinical training in obstetrics and gynecology.",
-      "kind": "provider"
-    },
-    {
-      "claim": "Hoag Hospital Newport Beach's Sue & Bill Gross Women's Pavilion includes 18 private labor, delivery, and recovery suites, 49 private postpartum rooms, a 14-bed antepartum unit, and an expanded 33-bed Level III NICU.",
+      "claim": "Hoag Hospital Newport Beach (about 6 miles from Costa Mesa) has a Level III NICU with 33 beds and 18 private LDR suites",
       "url": "https://www.hoag.org/newport-beach-maternity-care/",
-      "quote": "The facility includes 18 private labor, delivery, and recovery suites, 49 private postpartum rooms, a 14-bed antepartum unit, and an expanded 33-bed Level III NICU. Hoag's LDR unit has three C-section rooms staffed round-the-clock by anesthesiologists and OB/GYN hospitalists, and the hospital has adopted a non-separation policy where newborns room-in with their mothers.",
-      "kind": "hospital"
+      "quote": "a dedicated Obstetric Emergency Department (OB ED), and a Level III NICU, Hoag Newport Beach provides comprehensive maternal and newborn care ... 18 private labor, delivery, and recovery suites ... An expanded Level III NICU with 33 beds"
     },
     {
-      "claim": "Hoag lists Medi-Cal among plans not contracted with the hospital.",
-      "url": "https://www.hoag.org/health-insurance/",
-      "quote": "Hoag lists Kaiser, Medi-Cal, and Three Rivers Provider Network as plans not contracted with the hospital.",
-      "kind": "hospital"
-    },
-    {
-      "claim": "MemorialCare Orange Coast Medical Center's Childbirth Center in Fountain Valley is the only community hospital program in Orange County with certified nurse midwives on its medical staff, alongside obstetricians, pediatricians, and perinatologists.",
+      "claim": "MemorialCare Orange Coast Medical Center (Fountain Valley) is the only OC community hospital with CNMs on staff, with a Level II NICU and 24/7 OB ED",
       "url": "https://www.memorialcare.org/services/maternity-care?location=12",
-      "quote": "MemorialCare Orange Coast Medical Center's Childbirth Center in Fountain Valley is the only community hospital program in Orange County with certified nurse midwives on its medical staff, alongside obstetricians, pediatricians, and perinatologists. Deliveries take place in private labor and delivery suites with birthing beds.",
-      "kind": "hospital"
+      "quote": "The Childbirth Center at Orange Coast Medical Center is the only community hospital program in Orange County to have Certified Nurse Midwives as part of the medical staff ... our level II Neonatal Intensive Care Unit (NICU) is staffed with specially trained nurses, board-certified neonatologists"
     },
     {
-      "claim": "MemorialCare describes doulas as a vital member of the care team at Orange Coast Medical Center.",
-      "url": "https://www.memorialcare.org/services/maternity-care?location=12",
-      "quote": "Doulas are considered a vital member of the care team. MemorialCare encourages a collaborative approach between the patient, doula, and medical team during labor and birth.",
-      "kind": "hospital"
-    },
-    {
-      "claim": "South Coast Midwifery is Orange County's first accredited birth center, offering private birthing suites, water birth, home birth, and states it is the only standalone birth center in Southern California accredited for VBAC.",
+      "claim": "South Coast Midwifery in Irvine is the first accredited birth center in OC and the only standalone birth center in Southern California accredited for VBAC, serving Costa Mesa families",
       "url": "https://southcoastmidwifery.com/",
-      "quote": "South Coast Midwifery is a boutique birth center in Orange County staffed by certified midwives, describing itself as the first accredited birth center in the county. It offers private birthing suites with queen beds and birthing tubs, home birth, and water birth, and states it is the only standalone birth center in Southern California accredited to perform vaginal birth after cesarean (VBAC).",
-      "kind": "birth_center"
-    },
-    {
-      "claim": "Honey Midwifery is a birth center and home birth practice in Orange County on a holistic, trauma-informed model; its holistic birth center was listed as opening in Orange County in 2025.",
-      "url": "https://www.orangecountymidwife.com/",
-      "quote": "Honey Midwifery is a birth center and home birth practice in Orange County founded on a holistic, trauma-informed model of midwifery care. Its holistic birth center was listed as opening in Orange County in 2025.",
-      "kind": "birth_center"
-    },
-    {
-      "claim": "California CNMs are licensed by the Board of Registered Nursing; California LMs are licensed by the Medical Board of California.",
-      "url": "https://www.rn.ca.gov/practice/nmw.shtml",
-      "quote": "Certified nurse-midwives (CNMs) in California are licensed by the California Board of Registered Nursing as advanced practice nurses who have met the Board's educational and certification requirements. Licensed midwives (LMs) in California are licensed by the Medical Board of California.",
-      "kind": "licensing"
-    },
-    {
-      "claim": "California's Medi-Cal program covers full-spectrum doula services as a preventive benefit effective January 1, 2023.",
-      "url": "https://www.frontlinedoulas.com/faq-medi-cal-doula-benefit",
-      "quote": "As of January 1, 2023, California's Department of Health Care Services (DHCS) added full-spectrum doula services as a covered preventive benefit under Medi-Cal, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion.",
-      "kind": "medicaid"
-    },
-    {
-      "claim": "32% of all live births in California were cesarean deliveries in 2024 (NCHS via KFF).",
-      "url": "https://www.kff.org/interactive/womens-health-profiles/california/maternal-infant-health/",
-      "quote": "32% of all live births in California were cesarean deliveries in 2024 (NCHS via KFF).",
-      "kind": "birth_stats"
-    },
-    {
-      "claim": "California's pregnancy-related mortality ratio was 15.0 deaths per 100,000 live births in 2022, down from 21.6 in 2021.",
-      "url": "https://www.cdph.ca.gov/Programs/CFH/DMCAH/Pages/Health-Topics/Pregnancy-Related-Mortality.aspx",
-      "quote": "California's pregnancy-related mortality ratio was 15.0 deaths per 100,000 live births in 2022, down from 21.6 in 2021 and 18.6 in 2020 during the COVID-19 peak.",
-      "kind": "birth_stats"
-    },
-    {
-      "claim": "California's home birth share of total births rose from 0.69% in 2019 to 0.97% in 2021, per CDC NCHS National Vital Statistics Reports.",
-      "url": "https://www.cdc.gov/nchs/data/nvsr/nvsr71/nvsr71-08.pdf",
-      "quote": "Home births accounted for 0.97% of California births in 2021, an increase from 0.85% in 2020 and 0.69% in 2019. Home Births in the United States, 2019\u20132021: Changes in the incidence of home births by state.",
-      "kind": "birth_stats"
-    },
-    {
-      "claim": "Costa Mesa population is approximately 110,538 residents (Census QuickFacts).",
-      "url": "https://www.census.gov/quickfacts/fact/table/costamesacitycalifornia/PST045225",
-      "quote": "Costa Mesa city, California; population estimate 110,538.",
-      "kind": "population"
+      "quote": "As the first accredited birth center in OC we specialize in low-risk birth ... South Coast Midwifery is the only stand alone birth center in Southern California accredited to perform vaginal birth after cesarean, or VBAC."
     }
   ],
   "city_fields": {

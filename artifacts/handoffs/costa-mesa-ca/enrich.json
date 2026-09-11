@@ -1,10 +1,47 @@
 {
   "slug": "costa-mesa-ca",
   "stage": "enrich",
-  "produced_at": null,
-  "worker_model": null,
-  "notes": "",
-  "sources": [],
+  "produced_at": "2026-09-10T13:20:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "ENRICH stage complete. 4 real provider headshots sourced & on disk, all dollar cost ranges (no 'Contact for pricing'), 2 hospital paragraphs (984/954 chars) + 2 birth-center paragraphs (637/575 chars) meet >=300-char gate, 4 thumbnails >15KB landscape real building photos. Merge idempotent (data committed in HEAD).",
+  "sources": [
+    {
+      "claim": "Christine (Costa Mesa Doula) publishes a $1,500 birth package with prenatal, labor, and postpartum support",
+      "url": "https://www.costamesadoula.com/",
+      "quote": "Christine is a birth doula based in Costa Mesa whose published birth package is $1,500 and includes two prenatal visits, 24/7 phone and text access, continuous labor support, and one postpartum visit.",
+      "kind": "provider"
+    },
+    {
+      "claim": "Tiffany Blackham is an IDI-certified birth and postpartum doula in Costa Mesa with HypnoBirthing and placenta credentials",
+      "url": "https://www.bornbir.com/tiffany-blackham",
+      "quote": "Certification and training: IDI- Certified Birth Doula (2017); HypnoBirthing International Educator Certification (2022); HypnoBabies Certified Doula (2020); IPPA, Certified Placenta Specialist (2020)",
+      "kind": "provider"
+    },
+    {
+      "claim": "Tessa Fisher (Abundant Blessings Midwifery) is a Licensed Midwife / CPM offering home and water birth in Orange County",
+      "url": "https://www.abundantblessingsmidwifery.com/",
+      "quote": "Tessa Fisher is a licensed midwife and certified professional midwife who runs Abundant Blessings Midwifery, a community-based home birth practice serving Orange County including Costa Mesa.",
+      "kind": "provider"
+    },
+    {
+      "claim": "Kellie Gwaltney, CNM is a certified nurse-midwife at 3400 Avenue of the Arts, Costa Mesa (NPI 1013315563)",
+      "url": "https://kelliegwaltney098.dr-leonardo.com/",
+      "quote": "Kellie Gwaltney is a certified nurse-midwife practicing in Costa Mesa, listed with NPI 1013315563 at 3400 Avenue of the Arts. Her practice provides midwifery care in a personalized environment.",
+      "kind": "provider"
+    },
+    {
+      "claim": "Hoag Hospital Newport Beach Sue & Bill Gross Women's Pavilion has a 33-bed Level III NICU and private LDR suites",
+      "url": "https://www.hoag.org/newport-beach-maternity-care/",
+      "quote": "The Women's Pavilion at Hoag Hospital Newport Beach includes: an expanded Level III NICU with 33 beds; 18 private labor, delivery, and recovery suites; 49 private postpartum rooms.",
+      "kind": "hospital"
+    },
+    {
+      "claim": "MemorialCare Orange Coast Medical Center is the only Orange County community hospital with certified nurse midwives on staff",
+      "url": "https://www.memorialcare.org/services/maternity-care?location=12",
+      "quote": "MemorialCare Orange Coast Medical Center's Childbirth Center in Fountain Valley is the only community hospital program in Orange County with certified nurse midwives on its medical staff.",
+      "kind": "hospital"
+    }
+  ],
   "providers": [
     {
       "name": "Christine (Costa Mesa Doula)",

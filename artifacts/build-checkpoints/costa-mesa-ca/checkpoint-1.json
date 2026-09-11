@@ -1,0 +1,166 @@
+{
+  "slug": "costa-mesa-ca",
+  "stage": "build",
+  "produced_at": "2026-09-10T21:39:36.672480+00:00",
+  "claims": [
+    {
+      "slug": "city",
+      "fact": "Costa Mesa CA has 2+ local doulas researched and listed: Christine (Costa Mesa Doula, published $1500 package) and Tiffany Blackham (BornBir-verified birth & postpartum doula, $2000-$2400 published packages, 9 years experience, IDI-Certified 2017).",
+      "url": "https://www.costamesadoula.com/menu",
+      "support": [
+        {
+          "page": "https://www.costamesadoula.com/menu",
+          "quote": "My services include: Two prenatal visits 24/7 access to me via text or phone ... One postpartum visit Price: $1500",
+          "supports": true
+        },
+        {
+          "page": "https://www.costamesadoula.com/",
+          "quote": "Located in Costa Mesa, but I serve growing families all over the Orange County area.",
+          "supports": true
+        },
+        {
+          "page": "https://www.bornbir.com/tiffany-blackham",
+          "quote": "Tiffany Blackham Birth & Postpartum Doula Costa Mesa, California 9 years of experience ... IDI- Certified Birth Doula (2017) ... Mama Moon Birth Package $2,000.00 USD Flat rate ... Peaceful Mama HypnoBirthing Package $2,400.00",
+          "supports": true
+        }
+      ]
+    },
+    {
+      "slug": "city",
+      "fact": "Local doula search found >3 results in the Costa Mesa area: Christine (Costa Mesa Doula), Tiffany Blackham (Costa Mesa), Diana Roth (Newport Beach, 32 reviews), Betsy Gough (Newport Beach, 12 reviews) on BornBir directory.",
+      "url": "https://www.bornbir.com/tiffany-blackham",
+      "support": [
+        {
+          "page": "https://www.bornbir.com/tiffany-blackham",
+          "quote": "Diana Roth Birth & Postpartum Doula · Newport Beach, California 5.0★ (32 reviews) ... Betsy Gough Birth & Postpartum Doula · Newport Beach, California 4.7★ (12 reviews)",
+          "supports": true
+        },
+        {
+          "page": "https://www.costamesadoula.com/about",
+          "quote": "Christine Moorefield ... Costa Mesa, CA costamesadoula@gmail.com 714.334.1431",
+          "supports": true
+        }
+      ]
+    },
+    {
+      "slug": "city",
+      "fact": "At least 1 credible provider found and verified live: Christine Moorefield, Costa Mesa Doula — real Squarespace site with about page, services menu, contact info (costamesadoula@gmail.com, 714.334.1431).",
+      "url": "https://www.costamesadoula.com/about",
+      "support": [
+        {
+          "page": "https://www.costamesadoula.com/about",
+          "quote": "Christine Moorefield ... That's when I started my education and certification process. I love learning and reading about child birth ... Costa Mesa, CA",
+          "supports": true
+        }
+      ]
+    },
+    {
+      "slug": "city",
+      "fact": "Costa Mesa-area hospital count meets 100K-500K tier: 2 primary delivery hospitals with L&D confirmed — Hoag Hospital Newport Beach (Level III NICU, 18 private LDR suites) and MemorialCare Orange Coast Medical Center, Fountain Valley (Level II NICU, CNMs on staff), plus South Coast Midwifery accredited birth center in Irvine.",
+      "url": "https://www.hoag.org/newport-beach-maternity-care/",
+      "support": [
+        {
+          "page": "https://www.hoag.org/newport-beach-maternity-care/",
+          "quote": "a dedicated Obstetric Emergency Department (OB ED), and a Level III NICU ... 18 private labor, delivery, and recovery suites ... An expanded Level III NICU with 33 beds",
+          "supports": true
+        },
+        {
+          "page": "https://www.memorialcare.org/services/maternity-care?location=12",
+          "quote": "The Childbirth Center at Orange Coast Medical Center is the only community hospital program in Orange County to have Certified Nurse Midwives as part of the medical staff ... our level II Neonatal Intensive Care Unit (NICU) is staffed with ... board-certified neonatologists",
+          "supports": true
+        },
+        {
+          "page": "https://southcoastmidwifery.com/",
+          "quote": "As the first accredited birth center in OC we specialize in low-risk birth ... private birthing suites, that include a comfortable queen size bed, birthing tubs",
+          "supports": true
+        }
+      ]
+    },
+    {
+      "slug": "city",
+      "fact": "At least 1 hospital with NICU info + L&D facility confirmed: Hoag Hospital Newport Beach Sue & Bill Gross Women's Pavilion — Level III NICU (33 beds), 18 private LDR suites, 3 C-section rooms, OB ED.",
+      "url": "https://www.hoag.org/newport-beach-maternity-care/",
+      "support": [
+        {
+          "page": "https://www.hoag.org/newport-beach-maternity-care/",
+          "quote": "The LDR unit has three C-section rooms and is staffed round-the-clock with anesthesiologists and OB/GYN Hospitalists ... An expanded Level III NICU with 33 beds, including 12 additional NICU beds",
+          "supports": true
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "type": "hero",
+      "path": "public/images/costa-mesa-ca-birth-doula-skyline-v2.webp",
+      "status": "reusable",
+      "dimensions": {
+        "w": 1200,
+        "h": 800
+      }
+    },
+    {
+      "type": "support",
+      "path": "public/images/costa-mesa-ca-birth-doula-support-v2.webp",
+      "status": "reusable",
+      "dimensions": {
+        "w": 1024,
+        "h": 768
+      }
+    },
+    {
+      "type": "thumbnail",
+      "path": "public/images/og-city-costa-mesa-ca.webp",
+      "status": "reusable",
+      "dimensions": {
+        "w": 1200,
+        "h": 630
+      }
+    },
+    {
+      "type": "thumbnail",
+      "path": "public/images/costa-mesa-ca-hospital-hoag.webp",
+      "status": "reusable",
+      "dimensions": {
+        "w": 400,
+        "h": 300
+      }
+    },
+    {
+      "type": "thumbnail",
+      "path": "public/images/costa-mesa-ca-hospital-orange-coast.webp",
+      "status": "reusable",
+      "dimensions": {
+        "w": 400,
+        "h": 300
+      }
+    },
+    {
+      "type": "thumbnail",
+      "path": "public/images/costa-mesa-ca-birth-center-south-coast.webp",
+      "status": "reusable",
+      "dimensions": {
+        "w": 400,
+        "h": 300
+      }
+    },
+    {
+      "type": "thumbnail",
+      "path": "public/images/costa-mesa-ca-birth-center-honey.webp",
+      "status": "reusable",
+      "dimensions": {
+        "w": 400,
+        "h": 300
+      }
+    },
+    {
+      "type": "thumbnail",
+      "path": "public/images/yt-thumb-costa-mesa-ca.webp",
+      "status": "reusable",
+      "dimensions": {
+        "w": 1280,
+        "h": 720
+      }
+    }
+  ]
+}

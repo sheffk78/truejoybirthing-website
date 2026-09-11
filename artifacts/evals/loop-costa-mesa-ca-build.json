@@ -26,8 +26,20 @@
           "exit": 0
         }
       }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-09-10T16:40:55-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 0
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
     }
   ],
   "last_verdict": "approved",
-  "last_input_fingerprint": "55a220533dcf5799"
+  "last_input_fingerprint": "3fccb7e196bee84b"
 }
