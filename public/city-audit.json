@@ -2200,7 +2200,7 @@
     "video": true,
     "outreach": true,
     "placeholder": false,
-    "in_progress": true,
+    "in_progress": false,
     "started_at": "1789151210",
     "slot": "",
     "batch_id": "",

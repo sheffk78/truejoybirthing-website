@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "last_updated": "2026-09-07T23:45:00Z",
+  "last_updated": "2026-09-11T20:50:44Z",
   "total_cities_in_codebase": 187,
   "future_cities_planned": 1000,
   "cities": {
@@ -483,11 +483,11 @@
     "meridian-id": {
       "has_video": true,
       "has_outreach": true,
-      "completed_at": "2026-07-10T16:23:37Z",
-      "videoId": "D7Zlm67ALcM",
-      "video_id": "D7Zlm67ALcM",
-      "video_url": "https://youtu.be/D7Zlm67ALcM",
-      "video_uploaded_at": "2026-07-09T16:16:09.695521+00:00",
+      "completed_at": "2026-09-11T20:50:44Z",
+      "videoId": "QgiAAYoHbKI",
+      "video_id": "QgiAAYoHbKI",
+      "video_url": "https://youtu.be/QgiAAYoHbKI",
+      "video_uploaded_at": "2026-09-11T20:50:44Z",
       "stage": "complete",
       "blocked_reason": null
     },

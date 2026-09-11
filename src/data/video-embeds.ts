@@ -325,11 +325,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-30T00:00:00-07:00",
   },
   "meridian-id": {
-    videoId: "D7Zlm67ALcM",
+    videoId: "QgiAAYoHbKI",
     title: "Meridian ID Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full city guide — doulas, hospitals, costs, and Idaho Medicaid, all in under 5 minutes.",
-    duration: "PT4M36S",
-    uploadDate: "2026-06-30T00:00:00-06:00",
+    description: "Watch the full city guide â doulas, hospitals, costs, and Idaho Medicaid, all in under 5 minutes.",
+    duration: "PT4M48S",
+    uploadDate: "2026-09-11T00:00:00-06:00",
   },
   "boise-id": {
     videoId: "opchGImtrco",
