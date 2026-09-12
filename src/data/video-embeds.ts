@@ -1851,4 +1851,12 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT4M21S",
   },
 
+  "costa-mesa-ca": {
+    videoId: "iYqwjATnA44",
+    title: "Costa Mesa CA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+    description: "Watch the full city guide — doulas, hospitals, costs, and California Medi-Cal, all in under 6 minutes.",
+    duration: "PT5M26S",
+    uploadDate: "2026-09-12T11:46:00-06:00",
+  },
+
 };
