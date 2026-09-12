@@ -184,8 +184,12 @@ def _g67_video_content_city_match(slug: str, vid_id: Optional[str]) -> dict:
             nxt = re.search(r'\n\s*"[a-z][a-z-]+-[a-z]{2}":\s*\{', tail)
             block = tail[:nxt.start()] if nxt else tail
             # top-level field = 4-space indent (nested fields are deeper);
-            # tolerate trailing whitespace/commas (`city: "Augusta" ,`)
-            m = re.search(r'^\s{4}city:\s*"([^"]+)"', block, re.M)
+            # tolerate trailing whitespace/commas (`city: "Augusta"` ,)
+            # NOTE: some city blocks (e.g. costa-mesa-ca) use TAB indentation,
+            # not 4 spaces, so match any leading whitespace. `city:` appears
+            # only once per block (the city name), so the first match is
+            # correct. (Sept 12, 2026 fix â was a false G67 fail on tab blocks)
+            m = re.search(r'^\s*city:\s*"([^"]+)"', block, re.M)
             if m:
                 city_name = m.group(1).strip()
     if not city_name:
