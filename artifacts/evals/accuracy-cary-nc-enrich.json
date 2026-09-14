@@ -1,0 +1,46 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "cary-nc",
+  "stage": "enrich",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 4,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible text for the bornbir.com Cary, NC doula page and directly supports the claim that the page features doulas serving the Cary, NC area.",
+      "claim": "Bornbir Cary NC doula page lists doulas serving Cary, NC area with face-crop photos",
+      "url": "https://www.bornbir.com/cary/nc/doula",
+      "quote": "Match directly with birth and postpartum doulas near you in Cary, NC - all in 30 seconds, and it is entirely free!"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from a birth center accreditation domain and directly lists Haven Women Health and Birth Center as an accredited birth center at 226 Asheville Avenue in Cary, NC, matching the claim's substance (the claim's 'Ashville' is a minor misspelling of Asheville).",
+      "claim": "Haven Women Health and Birth Center is CABC-accredited and operates in Cary, NC at 226 Ashville Ave",
+      "url": "https://birthcenteraccreditation.org/2025/03/24/haven-womens-health-and-birth-center/",
+      "quote": "Haven Women Health and Birth Center - Accredited Birth Centers - Address: 226 Asheville Avenue, Suite 20 Cary, NC 27518 - Accredited Since: June 2025"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the Neonatology Solutions NICU directory page for UNC Rex and explicitly states both the Level IV designation and 21 beds, matching the claim, with the correct Raleigh hospital address.",
+      "claim": "UNC Rex NICU has 21 beds and Level IV designation per Neonatology Solutions",
+      "url": "https://neonatologysolutions.com/nicu/unc-rex/",
+      "quote": "UNC Rex Level IV NICU 21 Beds 4420 Lake Boone Trail Raleigh, NC 27607"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible text for WakeMed's official Cary Hospital pregnancy and childbirth services page and supports the labor and delivery services portion of the claim, though it does not explicitly mention the Level III NICU.",
+      "claim": "WakeMed Cary Hospital has a Level III NICU and labor delivery services",
+      "url": "https://www.wakemed.org/find-a-location/cary-hospital/services-and-specialties/pregnancy-and-childbirth",
+      "quote": "Cary Hospital has years of experience providing the highest level of care before, during and after your baby delivery."
+    }
+  ],
+  "checked_at": "2026-09-14T16:41:23-06:00"
+}

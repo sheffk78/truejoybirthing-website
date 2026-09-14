@@ -1,9 +1,9 @@
 {
-  "slug": "huntsville-al",
-  "stage": "build",
+  "slug": "cary-nc",
+  "stage": "enrich",
   "mode": "stage_emission",
   "exit_code": 0,
-  "passed": 20,
+  "passed": 25,
   "failed": 0,
   "skipped": 0,
   "results": {
@@ -17,7 +17,7 @@
     },
     "S2": {
       "status": "PASS",
-      "detail": "OG image og-city-huntsville-al-v2.webp (91222 bytes \u2265 30KB)"
+      "detail": "OG image og-city-cary-nc.webp (96624 bytes \u2265 30KB)"
     },
     "S4": {
       "status": "PASS",
@@ -25,7 +25,7 @@
     },
     "S6": {
       "status": "PASS",
-      "detail": "publishedDate = \"2026-08-25\""
+      "detail": "publishedDate = \"2026-09-08\""
     },
     "S7": {
       "status": "PASS",
@@ -45,7 +45,7 @@
     },
     "G8": {
       "status": "PASS",
-      "detail": "huntsville-al-birth-doula-skyline-v2.webp is a real photograph (high color count)"
+      "detail": "cary-nc-birth-doula-skyline-v2.webp is a real photograph (high color count)"
     },
     "G70": {
       "status": "PASS",
@@ -57,35 +57,55 @@
     },
     "G72": {
       "status": "PASS",
-      "detail": "meta description 148 chars, complete"
+      "detail": "meta description 107 chars, complete"
     },
-    "G25": {
+    "G27": {
       "status": "PASS",
-      "detail": "Hero image is 3:2 (1200x800, ratio=1.50)"
+      "detail": "All 4 providers have specific credentials"
     },
-    "G29": {
+    "G10": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=25303) and locked Pattern B composition"
+      "detail": "All 4 providers have specific descriptions"
     },
-    "G35": {
+    "G39": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=25303) and locked Pattern B composition"
+      "detail": "All 4 providers have specific descriptions"
     },
-    "G64": {
+    "G19": {
       "status": "PASS",
-      "detail": "G64: OG og-city-huntsville-al-v2.webp matches canonical Pattern B composition"
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "G20": {
+      "status": "PASS",
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "P11": {
+      "status": "PASS",
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "A12": {
+      "status": "PASS",
+      "detail": "All serviceArea fields are string arrays"
+    },
+    "G24": {
+      "status": "PASS",
+      "detail": "Support scene is unique to this city"
+    },
+    "G54": {
+      "status": "PASS",
+      "detail": "Support scene is unique to this city"
     },
     "G65": {
       "status": "PASS",
       "detail": "G65: No black letterbox/pillarbox bars on hero or support scene"
     },
-    "G8a": {
+    "G60": {
       "status": "PASS",
-      "detail": "Silhouette confirmed (center=71.4 < top=226.1, top_colors=4010)"
+      "detail": "G60: All 4 provider photos exist on disk and are >2KB"
     },
-    "G62": {
+    "G61": {
       "status": "PASS",
-      "detail": "G62: Hero AVIF files not stale (or not present)"
+      "detail": "G61: All image paths contain city slug cary-nc"
     }
   }
 }

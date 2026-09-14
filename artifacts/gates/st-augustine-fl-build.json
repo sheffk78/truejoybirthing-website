@@ -3,13 +3,13 @@
   "stage": "build",
   "mode": "stage_emission",
   "exit_code": 0,
-  "passed": 17,
+  "passed": 20,
   "failed": 0,
   "skipped": 0,
   "results": {
     "G66": {
       "status": "PASS",
-      "detail": "st-augustine-fl block has no duplicate keys (13 other cities carry duplicate keys \u2014 cleanup queue)"
+      "detail": "no duplicate object keys in any city block"
     },
     "S1": {
       "status": "PASS",
@@ -46,6 +46,18 @@
     "G8": {
       "status": "PASS",
       "detail": "st-augustine-fl-birth-doula-skyline-v2.webp is a real photograph (high color count)"
+    },
+    "G70": {
+      "status": "PASS",
+      "detail": "no doubled Level/NICU badge text"
+    },
+    "G71": {
+      "status": "PASS",
+      "detail": "no skeleton placeholder text"
+    },
+    "G72": {
+      "status": "PASS",
+      "detail": "meta description 149 chars, complete"
     },
     "G25": {
       "status": "PASS",

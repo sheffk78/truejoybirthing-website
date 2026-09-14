@@ -9,7 +9,7 @@
   "results": {
     "G66": {
       "status": "PASS",
-      "detail": "bakersfield-ca block has no duplicate keys (12 other cities carry duplicate keys \u2014 cleanup queue)"
+      "detail": "no duplicate object keys in any city block"
     },
     "S1": {
       "status": "PASS",

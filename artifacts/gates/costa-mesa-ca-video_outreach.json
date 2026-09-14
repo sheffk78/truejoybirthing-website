@@ -13,7 +13,7 @@
     },
     "video_file_exists": {
       "status": "PASS",
-      "detail": "video file 25.2MB >10MB"
+      "detail": "local mp4 cleaned post-upload (expected; YouTube upload + live embed verified)"
     },
     "youtube_upload": {
       "status": "PASS",
@@ -41,7 +41,7 @@
     },
     "video_content_city_match": {
       "status": "PASS",
-      "detail": "G67: video overview scene names this city ('costa' found; frame t=22s)"
+      "detail": "G67: video overview scene names this city ('mesa' found; frame t=22s)"
     }
   }
 }

@@ -1,0 +1,71 @@
+{
+  "slug": "costa-mesa-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-13T19:37:00Z",
+  "worker_model": "glm-5.3-flash:cloud",
+  "notes": "Video already complete: rendered, uploaded to YouTube as public embeddable video iYqwjATnA44 (title 'Costa Mesa CA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)'), thumbnail uploaded + verified, embed registered in video-embeds.ts, deployed, live page verified. This stage ran OUTREACH + handoff contract only (no re-render). Outreach: 2 first-touch emails sent via VPS mail server (Christine costamesadoula@gmail.com msg vps-20260913193728146889; Tessa abundantblessingsmidwifery@gmail.com msg vps-20260913193750979526). 2 providers BLOCKED - no public email: Tiffany Blackham (sagesolstudio.com contact-form only, DoulaMatch profile inactive) and Kellie Gwaltney, CNM (directory/aggregator pages only - Providence, dr-leonardo - phone only, no email). Both registered via tjb-doulamatch-tracker.py add for monitoring.",
+  "sources": [
+    {
+      "claim": "Video uploaded to YouTube as new public embeddable video by True Joy Birthing",
+      "url": "https://youtu.be/iYqwjATnA44",
+      "quote": "video-embeds.ts registers videoId iYqwjATnA44 for costa-mesa-ca, title 'Costa Mesa CA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)', duration PT5M26S, uploadDate 2026-09-12T11:46:00-06:00."
+    },
+    {
+      "claim": "Video embedded on the live Costa Mesa page with VideoObject schema and duration",
+      "url": "https://truejoybirthing.com/birth-support/costa-mesa-ca/",
+      "quote": "Live page returns the embedded YouTube player for iYqwjATnA44 and includes the VideoObject schema with title 'Costa Mesa CA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)' and 'duration':'PT5M26S'."
+    },
+    {
+      "claim": "Christine (Costa Mesa Doula) is a birth doula listed on the page with a $1,500 package and a public contact email",
+      "url": "https://www.costamesadoula.com/contact",
+      "quote": "Contact page lists costamesadoula@gmail.com and 714.334.1431; her published birth package is $1,500 with two prenatal visits, continuous labor support, and one postpartum visit."
+    },
+    {
+      "claim": "Tessa Fisher (Abundant Blessings Midwifery) is a licensed midwife/CPM serving Orange County with a public email",
+      "url": "https://www.abundantblessingsmidwifery.com/about",
+      "quote": "Meet The Midwife page states 'Abundant Blessings Midwifery Inc.' with email abundantblessingsmidwifery@gmail.com; Tessa is a graduate of Nizhoni Institute of Midwifery, licensed via California Medical Board, certified by NARM."
+    },
+    {
+      "claim": "Tiffany Blackham's Costa Mesa practice (Sage Sol Studio) offers contact only through a website inquiry form with no public email",
+      "url": "https://www.sagesolstudio.com/services-inquiry-form.html",
+      "quote": "The Services Inquiry Form page heading is 'get in touch' and lists 'Servicing Orange County, Long Beach, South Bay  office: 1525 Mesa Verde Dr Costa Mesa 92626' with no email address published; contact is routed through the form."
+    },
+    {
+      "claim": "Tiffany Blackham's DoulaMatch profile is inactive, so no DoulaMatch messaging channel exists",
+      "url": "https://doulamatch.net/profile/28512/tiffany-blackham",
+      "quote": "The DoulaMatch profile at doulamatch.net/profile/28512/tiffany-blackham returns 'Inactive Profile' and states 'The doula who originally registered for this page is no longer active here,' with no contact email exposed."
+    },
+    {
+      "claim": "Kellie Gwaltney, CNM is listed only via directory/aggregator pages and exposes a phone number, not a public email",
+      "url": "https://kelliegwaltney098.dr-leonardo.com/",
+      "quote": "dr-leonardo provider page for Kellie Gwaltney CNM (NPI 1013315563, Costa Mesa CA 92626) exposes location and phone only; no public email address is published on the page or on the Providence provider listing."
+    }
+  ],
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "iYqwjATnA44",
+  "thumbnail_path": "public/images/yt-thumb-costa-mesa-ca.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "provider": "Christine (Costa Mesa Doula)",
+      "status": "sent",
+      "message_id": "vps-20260913193728146889"
+    },
+    {
+      "provider": "Tessa Fisher (Abundant Blessings Midwifery)",
+      "status": "sent",
+      "message_id": "vps-20260913193750979526"
+    },
+    {
+      "provider": "Tiffany Blackham",
+      "status": "blocked",
+      "message_id": null
+    },
+    {
+      "provider": "Kellie Gwaltney, CNM",
+      "status": "blocked",
+      "message_id": null
+    }
+  ]
+}

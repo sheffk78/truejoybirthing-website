@@ -1,0 +1,70 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "costa-mesa-ca",
+  "stage": "video_outreach",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 7,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote references the exact videoId iYqwjATnA44 from the youtu.be URL and describes a doula/birth-plan video registered for embedding on a True Joy Birthing city page (costa-mesa-ca), which plausibly supports the claim that True Joy Birthing uploaded this video as a new public embeddable video.",
+      "claim": "Video uploaded to YouTube as new public embeddable video by True Joy Birthing",
+      "url": "https://youtu.be/iYqwjATnA44",
+      "quote": "video-embeds.ts registers videoId iYqwjATnA44 for costa-mesa-ca, title 'Costa Mesa CA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)', duration PT5M26S, uploadDate 2026-09-12T1"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly describes the live Costa Mesa page embedding a YouTube video with VideoObject schema, a matching doula/birth-plan title for Costa Mesa CA, and an ISO 8601 duration, which aligns with both the claim and the truejoybirthing.com birth-support page topic.",
+      "claim": "Video embedded on the live Costa Mesa page with VideoObject schema and duration",
+      "url": "https://truejoybirthing.com/birth-support/costa-mesa-ca/",
+      "quote": "Live page returns the embedded YouTube player for iYqwjATnA44 and includes the VideoObject schema with title 'Costa Mesa CA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)' and "
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the contact page URL (costamesadoula.com/contact), and it directly supports the claim's specifics: a $1,500 birth doula package, a public contact email (costamesadoula@gmail.com), and doula services, with 'her' and the domain consistent with Christine of Costa Mesa Doula.",
+      "claim": "Christine (Costa Mesa Doula) is a birth doula listed on the page with a $1,500 package and a public contact email",
+      "url": "https://www.costamesadoula.com/contact",
+      "quote": "Contact page lists costamesadoula@gmail.com and 714.334.1431; her published birth package is $1,500 with two prenatal visits, continuous labor support, and one postpartum visit."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly comes from the 'Meet The Midwife'/about page of the Abundant Blessings Midwifery domain and supports the claim's core assertions: Tessa's midwifery training (Nizhoni Institute), California licensure, NARM/CPM certification, and a public email, with no contradiction of the Orange ",
+      "claim": "Tessa Fisher (Abundant Blessings Midwifery) is a licensed midwife/CPM serving Orange County with a public email",
+      "url": "https://www.abundantblessingsmidwifery.com/about",
+      "quote": "Meet The Midwife page states 'Abundant Blessings Midwifery Inc.' with email abundantblessingsmidwifery@gmail.com; Tessa is a graduate of Nizhoni Institute of Midwifery, licensed via California Medical"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly describes the sagesolstudio.com inquiry form page, matching the Costa Mesa location and confirming contact is routed through the form with no published email, which supports the claim.",
+      "claim": "Tiffany Blackham's Costa Mesa practice (Sage Sol Studio) offers contact only through a website inquiry form with no public email",
+      "url": "https://www.sagesolstudio.com/services-inquiry-form.html",
+      "quote": "The Services Inquiry Form page heading is 'get in touch' and lists 'Servicing Orange County, Long Beach, South Bay  office: 1525 Mesa Verde Dr Costa Mesa 92626' with no email address published; contac"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the exact DoulaMatch profile URL in the claim and directly states the profile is inactive with no contact channel, matching the claim's subject matter and supporting it.",
+      "claim": "Tiffany Blackham's DoulaMatch profile is inactive, so no DoulaMatch messaging channel exists",
+      "url": "https://doulamatch.net/profile/28512/tiffany-blackham",
+      "quote": "The DoulaMatch profile at doulamatch.net/profile/28512/tiffany-blackham returns 'Inactive Profile' and states 'The doula who originally registered for this page is no longer active here,' with no cont"
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote describes a dr-leonardo.com provider directory page for Kellie Gwaltney, CNM (matching the URL's domain and the claim's subject), and explicitly states the page exposes location and phone only with no public email, directly supporting the claim that she is listed via an aggregator with a p",
+      "claim": "Kellie Gwaltney, CNM is listed only via directory/aggregator pages and exposes a phone number, not a public email",
+      "url": "https://kelliegwaltney098.dr-leonardo.com/",
+      "quote": "dr-leonardo provider page for Kellie Gwaltney CNM (NPI 1013315563, Costa Mesa CA 92626) exposes location and phone only; no public email address is published on the page or on the Providence provider "
+    }
+  ],
+  "checked_at": "2026-09-13T14:06:12-06:00"
+}

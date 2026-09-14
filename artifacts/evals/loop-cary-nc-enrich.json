@@ -1,0 +1,45 @@
+{
+  "slug": "cary-nc",
+  "stage": "enrich",
+  "attempts": 0,
+  "history": [
+    {
+      "attempt": 1,
+      "at": "2026-09-14T16:37:04-06:00",
+      "evals": {
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-09-14T16:38:01-06:00",
+      "evals": {
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-09-14T16:39:46-06:00",
+      "evals": {
+        "eval-accuracy.py": {
+          "exit": 1
+        }
+      }
+    },
+    {
+      "attempt": 2,
+      "at": "2026-09-14T16:40:43-06:00",
+      "evals": {
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    }
+  ],
+  "last_verdict": "approved",
+  "last_input_fingerprint": "1fd781e7fc9ad3f8"
+}

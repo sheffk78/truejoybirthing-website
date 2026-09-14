@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "last_updated": "2026-09-11T22:03:00Z",
+  "last_updated": "2026-09-13T19:38:51.449817+00:00",
   "total_cities_in_codebase": 187,
   "future_cities_planned": 1000,
   "cities": {
@@ -59,7 +59,7 @@
       "has_video": true,
       "has_outreach": true,
       "completed_at": "2026-07-10T02:27:56Z",
-      "note": "City page removed from cities.ts (404 on production). Removed from video-embeds.ts. Outreach queue cleared — 12 providers were blocked by URL gate. Stale entry cleaned up 2026-07-09.",
+      "note": "City page removed from cities.ts (404 on production). Removed from video-embeds.ts. Outreach queue cleared \u2014 12 providers were blocked by URL gate. Stale entry cleaned up 2026-07-09.",
       "video_embed_removed": true,
       "videoId": "",
       "video_id": "",
@@ -1003,7 +1003,7 @@
       "fixes_applied": [
         "G59: Added hospital website URLs (Norwalk, Stamford, Greenwich)",
         "G8+G58: Regenerated hero image (pregnant silhouette, no black bars)",
-        "G7: Fixed medicaidNote prefix to 'Yes —'",
+        "G7: Fixed medicaidNote prefix to 'Yes \u2014'",
         "R9: Re-rendered OG image and YouTube thumbnail from v3 hero for consistency"
       ],
       "stage": "complete",
@@ -2125,6 +2125,26 @@
       "completed_at": "2026-09-07T17:45:00-06:00",
       "last_updated": "2026-09-07T17:45:00-06:00",
       "notes": "Video rendered (Voxtral/Shelbi TTS), uploaded public+embeddable (JJUroIchFKY), thumbnail uploaded+verified, embed live + VideoObject schema + deployed. Outreach: 2 of 4 providers emailed; 2 blocked (no public email)."
+    },
+    "costa-mesa-ca": {
+      "has_outreach": true,
+      "outreach_sent_at": "2026-09-13T19:37:00Z",
+      "outreach_provider_count": 2,
+      "outreach_blocked_reason": "Tiffany Blackham: contact-form-only (sagesolstudio.com), no email found. Kellie Gwaltney: phone-only (dr-leonardo template site), no email found.",
+      "outreach_providers_sent": [
+        "Christine (costamesadoula@gmail.com)",
+        "Tessa Fisher (abundantblessingsmidwifery@gmail.com)"
+      ],
+      "outreach_providers_blocked": [
+        "Tiffany Blackham (contact-form-only)",
+        "Kellie Gwaltney (no email - phone only)"
+      ],
+      "video_id": "iYqwjATnA44",
+      "video_embedded": true,
+      "page_live": true,
+      "page_url": "https://truejoybirthing.com/birth-support/costa-mesa-ca/",
+      "score": 100,
+      "completed_at": "2026-09-13"
     }
   },
   "providence-ri": {

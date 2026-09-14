@@ -155,7 +155,7 @@ export const cities: Record<string, CityData> = {
     supportSceneAlt: "A doula supporting an expectant mom in Amarillo: Texas Panhandle birth support and doula care",
     localDoulas: [
       { name: "Liz Hensley" , credential: "Birth & Postpartum Doula" , practice: "Liz Hensley Birth Doula" , url: "https://www.facebook.com/share/2EbXB7qox2P4zC4T/" , photo: "/images/provider-amarillo-tx-liz-hensley.webp" , description: "Holistic birth and postpartum doula serving Amarillo and Canyon, TX. Liz offers compassionate support through fertility, pregnancy, birth, and the postpartum period, including newborn care and placenta services for Panhandle families." , costRange: "$650-$1,800" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Amarillo, TX" , "Canyon, TX"] },
-      { name: "Macy Smith" , credential: "Birth Doula & Childbirth Educator" , practice: "Macy Smith Doula Services" , url: "https://www.facebook.com/p/Macy-Smith-Doula-Services-61557069352950/" , photo: "/images/provider-amarillo-tx-macy-smith.webp" , description: "Birth doula and childbirth educator based in Amarillo, Texas. Macy is passionate about creating empowering and nurturing birth experiences for families, offering personalized labor support and childbirth education. She also offers occasional postpartum support to her birth clients." , costRange: "$650-$1,800" , acceptingClients: true, isVerified: true, services: ["Birth Doula" , "Childbirth Education"], serviceArea: ["Amarillo, TX"] },
+      { name: "Macy Smith" , credential: "Birth Doula & Childbirth Educator" , practice: "Macy Smith Doula Services" , url: "https://www.facebook.com/p/Macy-Smith-Doula-Services-61557069352950/" , photo: "/images/provider-amarillo-tx-macy-smith.webp" , description: "Birth doula and childbirth educator based in Amarillo, Texas. Macy is passionate about creating empowering and nurturing birth experiences for families, offering personalized labor support and childbirth education. She also offers occasional postpartum support to her birth clients." , costRange: "$650-$1,800" , acceptingClients: true, services: ["Birth Doula" , "Childbirth Education"], serviceArea: ["Amarillo, TX"] },
       { name: "Abbie Whitfield" , credential: "Birth & Postpartum Doula" , practice: "Abbie Whitfield" , url: "https://www.bornbir.com/abbie-whitfield" , photo: "/images/provider-amarillo-tx-abbie-whitfield.webp" , description: "Birth and postpartum doula serving Amarillo families. Offers a complete birth package including a free consultation, two prenatal classes, monthly check-ins, 24/7 on-call support from 37 weeks, and postpartum visits." , costRange: "$800-$1,200" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Amarillo, TX"], isVerified: true },
       { name: "Crystal Walker" , credential: "Postpartum Doula" , practice: "Crystal Walker Doula" , url: "https://www.beyondbirthmidwifery.com/resource/doula" , photo: "/images/provider-amarillo-tx-crystal-walker.webp" , description: "Postpartum doula serving Amarillo families. Called to birth work after the birth of her own child, Crystal supports new mothers through the fourth trimester with newborn care, breastfeeding help, and emotional processing of the birth experience. Also serves as a board member with Better Birth Amarillo, the local collective working to expand access to doula care across the Panhandle." , costRange: "$650-$1,800" , acceptingClients: true, services: ["Postpartum Doula"], serviceArea: ["Amarillo, TX"] },
       { name: "Ashley Brottlund" , credential: "Full Spectrum Doula" , practice: "Ashley Brottlund Doula" , url: "https://www.hellomeela.com/listing/19882/" , photo: "/images/provider-amarillo-tx-ashley-brottlund.webp" , description: "Full spectrum doula with 4+ years of experience and 48 families supported. DONA and ProDoula certified, offering birth, postpartum, pregnancy and infant loss support, childbirth education, and placenta encapsulation. Also a Midwife Assistant in Amarillo." , costRange: "$600-$1,800" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Childbirth Education" , "Placenta Encapsulation"], serviceArea: ["Amarillo, TX" , "Texas Panhandle" , "Borger, TX"] },
@@ -273,7 +273,7 @@ export const cities: Record<string, CityData> = {
     shelbiServesHere: false,
     lat: 33.8753,
     lng: -117.5664,
-    ogImage: "https://truejoybirthing.com/images/og-city-corona-ca-v2.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-corona-ca.webp",
     heroImage: "/images/corona-ca-birth-doula-skyline.webp",
     supportSceneImage: "/images/corona-ca-support-scene.webp",
     supportSceneAlt: "A doula supporting an expectant mom on a sunny Corona, California street with the Cleveland National Forest hills and palm trees in the background",
@@ -331,12 +331,12 @@ export const cities: Record<string, CityData> = {
       { name: "Corpus Christi Medical Center" , thumbnail: "/images/corpus-christi-medical-center.webp" , url: "https://www.corpuschristimedcenter.com/" , address: "7101 S Padre Island Dr, Corpus Christi, TX 78412" , nicuLevel: "III" , doulaPolicy: "Doulas welcome as support persons; confirm current visitor policy during your hospital tour" , midwifeFriendly: true, waterBirth: "Water birth not routinely offered" , medicaid: true, lactation: true, privateRooms: true, paragraph: "Corpus Christi Medical Center is one of the region\u2019s primary delivery hospitals, with a Level III NICU and a dedicated obstetrics program serving Coastal Bend families. Certified midwives and OB/GYNs staff the birthing center, which offers childbirth education, lactation support, and postpartum care. Doulas are welcome, though policies can shift, so confirm during your tour. Coming in with your birth plan in hand makes check-in smoother. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare." } ,
       { name: "Driscoll Children\u2019s Hospital" , thumbnail: "/images/driscoll-childrens-hospital.webp" , url: "https://www.driscollchildrens.org/" , address: "3533 S Alameda St, Corpus Christi, TX 78411" , nicuLevel: "III" , doulaPolicy: "Doulas welcome as support persons" , midwifeFriendly: false, waterBirth: "Water birth not offered" , medicaid: true, lactation: true, privateRooms: true, paragraph: "Driscoll Children\u2019s Hospital provides pediatric and neonatal services in the Coastal Bend, including a Level III NICU for high-risk deliveries. Families with complex care needs often deliver here for access to its specialized newborn care team. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare." } ],
         birthCenterDetails: [
-      { name: "Corpus Christi Birth Center" , address: "939 Ayers St, Corpus Christi, TX 78404" , thumbnail: "/images/doulas/corpus-christi-birth-center-team-v2.webp" , phone: "(361) 883-2229" , url: "https://www.ccbirthcenter.com/" , credential: "Texas State Licensed Free-Standing Birth Center" , midwives: ["Kris Devens, LM, CPM, CLC"] , services: ["Water Birth" , "Home Birth" , "VBAC" , "Childbirth Classes"] , costRange: "$4,800-$6,700" , medicaid: false , paragraph: "The Corpus Christi Birth Center is the only independent free-standing licensed birth center in Corpus Christi, providing midwifery care in a homelike setting with professional birth tubs. The team of midwives and birth assistants works together for prenatal, birth, and postpartum care, and most insurance is accepted with a managed sliding scale for those paying privately. Home birth is also offered. Doulas and support persons are always welcome." } ],
+      { name: "Corpus Christi Birth Center" , address: "939 Ayers St, Corpus Christi, TX 78404" , thumbnail: "/images/doulas/corpus-christi-tx-birth-center-team-v2.webp" , phone: "(361) 883-2229" , url: "https://www.ccbirthcenter.com/" , credential: "Texas State Licensed Free-Standing Birth Center" , midwives: ["Kris Devens, LM, CPM, CLC"] , services: ["Water Birth" , "Home Birth" , "VBAC" , "Childbirth Classes"] , costRange: "$4,800-$6,700" , medicaid: false , paragraph: "The Corpus Christi Birth Center is the only independent free-standing licensed birth center in Corpus Christi, providing midwifery care in a homelike setting with professional birth tubs. The team of midwives and birth assistants works together for prenatal, birth, and postpartum care, and most insurance is accepted with a managed sliding scale for those paying privately. Home birth is also offered. Doulas and support persons are always welcome." } ],
     localDoulas: [
       { name: "Sarah B. (Milestone Doulas)" , credential: "CBI-Certified Postpartum Doula & Childbirth Educator" , practice: "Milestone Doulas" , url: "https://milestonedoulas.org/" , photo: "/images/doulas/sarah-bethel-corpus-christi-tx-v2.webp", description: "Sarah B. founded Milestone Doulas in 2018 and offers full-spectrum doula care across Corpus Christi and Greater South Texas: birth support, postpartum care, fertility and family-planning coaching, childbirth education, surrogacy support, and her proprietary Declutter Doula service. She is a CBI-certified postpartum doula and has been a gestational surrogate twice, bringing lived understanding to her work.", costRange: "$1,200-$1,800", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Childbirth Education" , "Fertility Coaching"], serviceArea: ["Corpus Christi, TX" , "Greater South Texas"], isVerified: false },
-      { name: "Elizabeth Simons (Loving Hands Birth)" , credential: "StillBirthDay-Certified Birth, Bereavement & Adoption Doula" , practice: "Loving Hands Birth" , url: "https://lovinghandsbirth.us/" , photo: "/images/doulas/elizabeth-simons-corpus-christi-tx-v2.webp", description: "Elizabeth Simons is a certified birth, bereavement, and adoption doula serving Corpus Christi and Nueces County. She specializes in supporting families through every outcome — including NICU diagnoses and stillbirth — with training in TENS for pain relief, Rebozo techniques, and adoption support.", costRange: "$1,800", acceptingClients: true, isVerified: true, services: ["Birth Doula" , "Bereavement Doula" , "Adoption Doula" , "Postpartum Doula"], serviceArea: ["Corpus Christi, TX" , "Nueces County"] },
+      { name: "Elizabeth Simons (Loving Hands Birth)" , credential: "StillBirthDay-Certified Birth, Bereavement & Adoption Doula" , practice: "Loving Hands Birth" , url: "https://lovinghandsbirth.us/" , photo: "/images/doulas/elizabeth-simons-corpus-christi-tx-v2.webp", description: "Elizabeth Simons is a certified birth, bereavement, and adoption doula serving Corpus Christi and Nueces County. She specializes in supporting families through every outcome — including NICU diagnoses and stillbirth — with training in TENS for pain relief, Rebozo techniques, and adoption support.", costRange: "$1,800", acceptingClients: true, services: ["Birth Doula" , "Bereavement Doula" , "Adoption Doula" , "Postpartum Doula"], serviceArea: ["Corpus Christi, TX" , "Nueces County"], isVerified: false },
       { name: "Melinda Pond (New Beginnings Birth Services)" , credential: "LM, CPM" , practice: "New Beginnings Birth Services PLLC" , url: "https://midwifemelinda.com/" , photo: "/images/doulas/melinda-pond-corpus-christi-tx-v2.webp", isMidwife: true, description: "Melinda Pond is a Texas Licensed Midwife and Certified Professional Midwife offering home-birth midwifery care across Corpus Christi, Portland, Rockport, Kingsville, Alice, George West, and Beeville. With more than 16 years in midwifery, she provides the full Midwives Model of Care for families choosing out-of-hospital birth.", costRange: "$4,800-$6,700", acceptingClients: true, services: ["Home Birth Midwifery" , "Prenatal Care" , "Postpartum Care"], serviceArea: ["Corpus Christi, TX" , "Portland, TX" , "Rockport, TX" , "Kingsville, TX"], isVerified: false },
-      { name: "Kris Devens (Corpus Christi Birth Center)" , credential: "LM, CPM, CLC" , practice: "Corpus Christi Birth Center" , url: "https://www.ccbirthcenter.com/" , photo: "/images/doulas/corpus-christi-birth-center-team-v2.webp", isMidwife: true, description: "Kris Devens is a Certified Professional Midwife, Texas Licensed Midwife, and Certified Lactation Consultant who is Clinical Director and owner of the Corpus Christi Birth Center. With over 400 births attended and training in Spinning Babies and VBAC support, she leads the team offering birth center and home birth care.", costRange: "$4,800-$6,700", acceptingClients: true, services: ["Birth Center Midwifery" , "Home Birth Midwifery" , "Water Birth" , "Childbirth Education"], serviceArea: ["Corpus Christi, TX" , "Coastal Bend"], isVerified: false },
+      { name: "Kris Devens (Corpus Christi Birth Center)" , credential: "LM, CPM, CLC" , practice: "Corpus Christi Birth Center" , url: "https://www.ccbirthcenter.com/" , photo: "/images/doulas/corpus-christi-tx-birth-center-team-v2.webp", isMidwife: true, description: "Kris Devens is a Certified Professional Midwife, Texas Licensed Midwife, and Certified Lactation Consultant who is Clinical Director and owner of the Corpus Christi Birth Center. With over 400 births attended and training in Spinning Babies and VBAC support, she leads the team offering birth center and home birth care.", costRange: "$4,800-$6,700", acceptingClients: true, services: ["Birth Center Midwifery" , "Home Birth Midwifery" , "Water Birth" , "Childbirth Education"], serviceArea: ["Corpus Christi, TX" , "Coastal Bend"], isVerified: false },
     ],
     birthStats: {
       cesareanRate: 32.3,
@@ -1461,7 +1461,7 @@ export const cities: Record<string, CityData> = {
     lat: 47.6062,
     lng: -122.3321,
     heroImage: "/images/seattle-wa-birth-doula-hero-v3.webp" ,
-    supportSceneImage: "/images/seattle-wa-support-scene.webp" ,
+    supportSceneImage: "/images/seattle-support-scene.webp" ,
     supportSceneAlt: "A doula walking alongside an expectant mom on a forested path with the Cascade Mountains in the distance: Seattle birth support" ,
     ogImage: "https://truejoybirthing.com/images/og-city-seattle-wa-v3.webp" ,
     midwifeInfo: {
@@ -1503,7 +1503,7 @@ export const cities: Record<string, CityData> = {
         name: "UW Medical Center – Northwest" ,
         address: "1550 N 115th Street, Seattle, WA 98133" ,
         thumbnail: "/images/seattle-uw-northwest.webp" ,
-        paragraph: "A community-oriented hospital in north Seattle, part of UW Medicine since 2010, offering a family birth center with midwifery support and a Level II NICU for babies who need extra care. It sits in the Northgate neighborhood just off I-5, so families coming from Shoreline, Lake Forest Park, or Mountlake Terrace reach it without crossing the ship canal, and the nearby Northgate light rail station keeps car-free visits realistic." ,
+        paragraph: "A community-oriented hospital in north Seattle, part of UW Medicine since 2010, offering a family birth center with midwifery support and a Level II NICU for babies who need extra care." ,
         nicuLevel: "II" ,
         vbacPolicy: "VBAC available with physician approval; discuss with your provider" ,
         doulaPolicy: "Doulas welcome as support persons" ,
@@ -1516,7 +1516,7 @@ export const cities: Record<string, CityData> = {
         name: "Overlake Medical Center & Clinics" ,
         address: "1035 116th Ave NE, Bellevue, WA 98004" ,
         thumbnail: "/images/seattle-overlake.webp" ,
-        paragraph: "Serving Bellevue and the Eastside, Overlake features a Level III NICU and a well-regarded midwifery practice integrated into its family birth center, with private labor and delivery rooms. The campus sits just off I-405 and NE 8th Street in downtown Bellevue, putting it within roughly twenty minutes of most Eastside neighborhoods, and the surrounding blocks hold plenty of parking plus food options for support partners during long labor shifts." ,
+        paragraph: "Serving Bellevue and the Eastside, Overlake features a Level III NICU and a well-regarded midwifery practice integrated into its family birth center, with private labor and delivery rooms." ,
         nicuLevel: "III" ,
         vbacPolicy: "Allows TOLAC/VBAC with physician approval" ,
         doulaPolicy: "Doulas welcome as support persons" ,
@@ -1528,7 +1528,7 @@ export const cities: Record<string, CityData> = {
       {
         name: "Swedish Medical Center – Issaquah" , thumbnail: "/images/swedish-issaquah-v2.webp" ,
         address: "751 NE Blakely Drive, Issaquah, WA 98029" ,
-        paragraph: "A growing suburban campus of Swedish offering a full birth center with labor and delivery services, midwifery care, and a Level II NICU, serving families on the Eastside and Sammamish Plateau. The campus sits off I-90 at Front Street, so families coming from Sammamish, Fall City, or Snoqualmie ride the highway straight to the door, and the lower parking structure connects to the main hospital without an outdoor walk, which matters during Puget Sound's long rainy stretches." ,
+        paragraph: "A growing suburban campus of Swedish offering a full birth center with labor and delivery services, midwifery care, and a Level II NICU, serving families on the Eastside and Sammamish Plateau." ,
         nicuLevel: "II" ,
         vbacPolicy: "VBAC available with physician approval; consult your provider" ,
         doulaPolicy: "Doulas welcome as support persons" ,
@@ -1562,7 +1562,7 @@ export const cities: Record<string, CityData> = {
         credential: "CD/BDT(DONA), LCCE, FACCE" ,
         practice: "Sharon Muza" ,
         url: "https://sharonmuza.com" ,
-        photo: "/images/doulas/sharon-muza-seattle-wa.webp",
+        photo: "/images/doulas/sharon-muza.webp",
         description: "Lamaze-certified childbirth educator and DONA-certified birth doula trainer with over 20 years of experience and more than 670 births attended. Sharon serves Seattle families and trains birth professionals worldwide through DONA-approved doula training and Lamaze-accredited educator workshops.",
         costRange: "$3,800-$4,500",
         serviceArea: ["Seattle" , "King County" , "Ballard" , "Wallingford" , "Shoreline" , "Edmonds" , "Queen Anne" , "West Seattle" , "Mercer Island" , "Lynnwood" , "Everett"],
@@ -1574,7 +1574,7 @@ export const cities: Record<string, CityData> = {
         credential: "Certified Birth & Postpartum Doula" ,
         practice: "Seattle Birth Doulas" ,
         url: "https://www.seattlebirthdoulas.com/jen-laird" ,
-        photo: "/images/doulas/jen-laird-seattle-wa.webp",
+        photo: "/images/doulas/jen-laird.webp",
         description: "Certified birth and postpartum doula with 18+ years of experience and over 500 families supported. Jen founded Seattle Birth Doulas and provides ongoing mentorship and oversight to the collective, offering individualized, trauma-informed care with training from Seattle Midwifery School and midwifery study in New Zealand.",
         costRange: "$3,400",
         serviceArea: ["Seattle" , "Greater Seattle area"],
@@ -1597,7 +1597,7 @@ export const cities: Record<string, CityData> = {
         credential: "DONA-Trained, WA State Certified" ,
         practice: "Seattle Doula Services" ,
         url: "https://www.seattledoulaservices.com" ,
-        photo: "/images/doulas/hannah-sds-seattle-wa.webp",
+        photo: "/images/doulas/hannah-sds.webp",
         description: "DONA-trained and Washington State Certified Doula based in Seattle's Capitol Hill neighborhood, serving families across the city from Ballard to Beacon Hill. Hannah brings over a decade of experience supporting Seattle-area children and families, and is trained in comfort measures including breathing techniques, positioning, and relaxation methods tailored to laboring at hospitals like Swedish First Hill and UW Medical Center. She offers sliding-scale and pro bono doula support to ensure finances are never an obstacle for Seattle families.",
         costRange: "$2,100-$2,500",
         serviceArea: ["Seattle" , "Greater Seattle area"],
@@ -1620,7 +1620,7 @@ export const cities: Record<string, CityData> = {
         credential: "CPM, LM" ,
         practice: "Sanctum by Brooke Prudhomme" ,
         url: "https://brookeprudhomme.com" ,
-        photo: "/images/doulas/brooke-prudhomme-seattle-wa.webp",
+        photo: "/images/doulas/brooke-prudhomme.webp",
         isMidwife: true,
         description: "Certified Professional Midwife and Licensed Midwife offering home birth, VBAC, and holistic women's health care in Seattle. Brooke provides comprehensive midwifery care including home birth, integrative prenatal and postpartum care, fertility support, and water birth. with pricing plans for both comprehensive home birth and collaborative care with OB/GYNs.",
         costRange: "$3,000-$4,500",
@@ -1781,7 +1781,7 @@ export const cities: Record<string, CityData> = {
     costHigh: 4500,
     shelbiServesHere: false,
     heroImage: "/images/san-diego-ca-birth-doula-skyline-v3.webp",
-    ogImage: "https://truejoybirthing.com/images/og-city-san-diego-ca-1200.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-san-diego-ca.webp",
     supportSceneImage: "/images/san-diego-ca-support-scene.webp",
     supportSceneAlt: "A doula supporting an expectant mom in San Diego: California birth support and doula care",
     localDoulas: [
@@ -3659,7 +3659,7 @@ birthStats: { cesareanRate: 32.1, maternalMortalityRate: 18.6, homeBirthRate: 0.
       { name: "In the Waiting Doula Services" , credential: "Birth Doula" , practice: "In the Waiting Doula Services" , url: "https://www.instagram.com/inthewaitingdoulaservices/" , photo: "/images/providers/bakersfield-ca-in-the-waiting-doula-services.webp" , description: "In the Waiting Doula Services provides culturally conscious birth support for Black, Indigenous, and Latino families in Bakersfield. Founded with a mission to ensure all communities have access to skilled doula care, their services include prenatal education, labor and birth support, and postpartum transitions.", costRange: "$900–$2,200", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Bakersfield, CA"] },
       { name: "Nikki Avila" , credential: "Birth Doula" , practice: "Nikki Avila" , url: "https://www.bornbir.com/nikki-avila" , photo: "/images/provider-bakersfield-ca-nikki-avila.webp", description: "Hi, I'm Nikki Avila-Certified Birth Doula, Childbirth Educator, and Cofounder of Three Moons Doula Collective. My work is rooted in the belief that birth is ...", costRange: "$900–$2,200", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Bakersfield, CA"] },
       { name: "Bakersfield Birth Center" , credential: "Birth Doula" , practice: "Bakersfield Birth Center" , url: "https://www.bakersfieldhomebirths.com/doula" , photo: "/images/providers/bakersfield-ca-bakersfield-birth-center-bk.webp", description: "Bakersfield Birth Center has been serving local families for over 12 years with doula services, home births, and prenatal care. Their doula support includes two prenatal visits, continuous labor and delivery support, and breastfeeding assistance after birth.", costRange: "$900–$2,200", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Bakersfield, CA"] },
-      { name: "Your Mama Doula" , credential: "Birth Doula" , practice: "Your Mama Doula" , url: "https://www.facebook.com/lbranson68/" , photo: "/images/providers/bakersfield-ca-your-mama-doula-bk.webp" , description: "I'm an experienced, established, certified birth and postpartum doula who has supported dozens of growing families from bump to birth.", costRange: "$900–$2,200", acceptingClients: true, isVerified: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Bakersfield, CA"] },
+      { name: "Your Mama Doula" , credential: "Birth Doula" , practice: "Your Mama Doula" , url: "https://www.facebook.com/lbranson68/" , photo: "/images/providers/bakersfield-ca-your-mama-doula-bk.webp" , description: "I'm an experienced, established, certified birth and postpartum doula who has supported dozens of growing families from bump to birth.", costRange: "$900–$2,200", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Bakersfield, CA"] },
       { name: "Green Birth" , credential: "Birth Doula" , practice: "Green Birth" , url: "https://greenbirth.org/" , photo: "/images/providers/bakersfield-ca-green-birth.webp" , description: "Green Birth provides holistic doula services, home birth support, and prenatal education from their office on Brimhall Road in northwest Bakersfield. Their approach integrates herbal wellness and culturally grounded care for Central Valley families.", costRange: "$900–$2,200", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Bakersfield, CA"] },
       { name: "Kern Labor League" , credential: "Birth Doula" , practice: "Kern Labor League" , url: "https://kernlaborleague.com/our-doulas" , photo: "/images/providers/bakersfield-ca-kern-labor-league.webp", description: "Mackenzie De La Cruz is a Birth Doula trained by the I.D.I, proudly serving Bakersfield and the surrounding Kern County areas. Kern Labor League connects local families with trained birth workers committed to accessible, community-centered care.", costRange: "$900–$2,200", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Bakersfield, CA"] } ],
     culture: "Bakersfield's birth community is small but mighty. you'll find doulas and midwives who serve this sprawling Central Valley city with heart, often bridging English and Spanish for Latino families who make up over half the population. The birth culture here is down-to-earth and community-first, where your doula becomes like family." ,
@@ -4796,7 +4796,7 @@ birthStats: { cesareanRate: 32.1, maternalMortalityRate: 18.6, homeBirthRate: 0.
     supportSceneAlt: "A pregnant woman meeting with her birth doula in a sunlit Boise living room",
     localDoulas: [
       { name: "Kate Finley" , credential: "CD(DONA)" , practice: "Bluebird Baby Company" , url: "https://doulamatch.net/profile/28991/kate-finley-cd-dona" , photo: "/images/doulas/kate-finley-boise-id.webp" , description: "Kate Finley is a DONA-certified birth doula serving Boise and the Treasure Valley through Bluebird Baby Company. With 6 years of experience and 24 client testimonials, she offers personalized birth support with a calm, evidence-based approach. Her birth package includes prenatal visits, continuous labor support, and postpartum follow-up." , costRange: "$650-$1,250" , costRange_source: "doulamatch" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Boise, ID", "Treasure Valley"] },
-      { name: "Heather Norris" , credential: "AdvCD(DONA), GBCE" , practice: "Mind Centered Birth Services, Education & Photos" , url: "https://doulamatch.net/profile/6774/heather-norris-cd-dona" , photo: "/images/doulas/heather-norris-boise-id.webp" , description: "Heather Norris is a DONA-certified birth doula with 13 years of experience and 63 client testimonials, serving Boise families through Mind Centered Birth Services. She offers comprehensive birth doula packages including childbirth education, birth photography, and postpartum support. Her tiered packages range from standard to premium with extensive prenatal preparation." , costRange: "$1,650-$2,150" , costRange_source: "doulamatch" , acceptingClients: true, isVerified: true, services: ["Birth Doula" , "Childbirth Education", "Birth Photography"], serviceArea: ["Boise, ID", "Treasure Valley"] },
+      { name: "Heather Norris" , credential: "CD(DONA), AdvCD(DONA)" , practice: "Mind Centered Birth Services, Education & Photos" , url: "https://doulamatch.net/profile/6774/heather-norris-cd-dona" , photo: "/images/doulas/heather-norris-boise-id.webp" , description: "Heather Norris is a DONA-certified birth doula with 13 years of experience and 63 client testimonials, serving Boise families through Mind Centered Birth Services. She offers comprehensive birth doula packages including childbirth education, birth photography, and postpartum support. Her tiered packages range from standard to premium with extensive prenatal preparation." , costRange: "$1,650-$2,150" , costRange_source: "doulamatch" , acceptingClients: true, services: ["Birth Doula" , "Childbirth Education", "Birth Photography"], serviceArea: ["Boise, ID", "Treasure Valley"] },
       { name: "Noelle Mower" , credential: "CD(DONA), AWWS" , practice: "Nurtured Birth" , url: "https://doulamatch.net/profile/37175/noelle-mower-cd-dona-awws" , photo: "/images/doulas/noelle-mower-boise-id.webp" , description: "Noelle Mower is a DONA and AWWS certified birth doula serving Boise families through Nurtured Birth Doula and Photography Services. With 2 years of experience and 10 client testimonials, she offers personalized labor support and birth photography for Treasure Valley families seeking a nurturing, empowering birth experience." , costRange: "$1,200" , costRange_source: "doulamatch" , acceptingClients: true, services: ["Birth Doula" , "Birth Photography"], serviceArea: ["Boise, ID", "Treasure Valley"] },
       { name: "Heather Lee" , credential: "CD(DONA)" , practice: "Bascha Birth Doula" , url: "https://doulamatch.net/profile/25497/heather-lee-cd-dona" , photo: "/images/doulas/heather-lee-boise-id.webp" , description: "Heather Lee (CD(DONA)) runs Bascha Birth Doula, a solo practice serving Boise and the greater Treasure Valley. With 6 years of experience and 16 verified DoulaMatch reviews, she specializes in unmedicated birth support and VBAC preparation. Her $1,000 flat-rate package includes two prenatal visits, continuous labor support, one postpartum visit, and a personalized birth plan. She is known for her calm, steady presence during long labors and her expertise supporting first-time parents navigating St. Luke\u2019s and Saint Alphonsus." , costRange: "$1,000" , costRange_source: "doulamatch" , acceptingClients: true, services: ["Birth Doula"], serviceArea: ["Boise, ID", "Treasure Valley"] },
       { name: "Sofia Richman" , credential: "MPH, CPD, CBD" , practice: "Sofia Doula Services" , url: "https://doulamatch.net/profile/30193/sofia-richman-mph-cpd-cbd" , photo: "/images/doulas/sofia-richman-boise-id.webp" , description: "Sofia Richman is a certified professional doula with an MPH and 5 years of experience supporting Boise families. She offers birth doula services, placenta encapsulation, and postpartum support. With 34 client testimonials, her practice emphasizes evidence-based care informed by her public health background." , costRange: "$1,200-$1,500 (birth), $35-$45/hr (postpartum)" , costRange_source: "doulamatch" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Placenta Encapsulation"], serviceArea: ["Boise, ID", "Treasure Valley"] }
@@ -5498,7 +5498,7 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
         credential: "BSN-RN, CD",
         practice: "HoneyWomb Doula Care",
         url: "https://www.honeywombdoula.com/",
-        description: "Wanda Goode is a Certified Doula and Registered Nurse with 25 years of experience in high-risk obstetrics, infertility, and women\\u2019s health. She holds a BSN in Nursing and became a certified doula in 2023. Wanda is a member of the Doula Association of Virginia. She is no longer affiliated with Mainline Maternity Care or Birth Mamas LLC. She specializes in advanced maternal age, high-risk pregnancy, and home birth support, and is passionate about combating maternal-fetal mortality rates among minority women. Her packages start at $700 and include childbirth education, birth support, and postpartum care.",
+        description: "Wanda Goode is a Certified Doula and Registered Nurse with 25 years of experience in high-risk obstetrics, infertility, and women\u2019s health. She holds a BSN in Nursing and became a certified doula in 2023. Wanda is a member of the Doula Association of Virginia. She specializes in advanced maternal age, high-risk pregnancy, and home birth support, and is passionate about combating maternal-fetal mortality rates among minority women. Her packages start at $700 and include childbirth education, birth support, and postpartum care.",
         photo: "/images/provider-newport-news-va-wanda-goode.webp",
         services: ["Birth Doula", "Childbirth Education", "High-Risk Pregnancy", "Home Birth", "Postpartum Care"],
         costRange: "$700\u2013$1,500 (market estimate)",
@@ -5753,7 +5753,7 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
     enableBlogResources: true,
     ogImage: "https://truejoybirthing.com/images/og-city-vancouver-wa.webp" ,
     supportSceneAlt: "A doula walking alongside an expectant mom on the Vancouver Waterfront with Mount Hood in the distance" ,
-    supportSceneImage: "/images/vancouver-wa-support-scene.webp" ,
+    supportSceneImage: "/images/vancouver-support-scene.webp" ,
     midwifeInfo: {
       paragraph: "Washington licenses both Licensed Midwives (LMs / LDM) and Certified Nurse-Midwives (CNMs), with a well-established regulatory framework for out-of-hospital birth. Washington\u2019s Apple Health (Medicaid) program was an early adopter of doula coverage and has one of the most mature reimbursement programs in the country. Vancouver families benefit from this infrastructure, with many local doulas enrolled as Apple Health providers." ,
       credentialTypes: " (LMs and CNMs)" ,
@@ -5771,7 +5771,7 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
     // Google Maps search "birth center Vancouver WA" found no verified freestanding birth centers in Vancouver.
     // Nearest freestanding birth centers are in the Portland metro (Oregon side). Verified 2026-06-08.
     birthCenterDetails: [
-      { name: "The Bridge Birth Center" , credential: "Freestanding Birth Center" , address: "3300 NE 54th St, Vancouver, WA 98663" , url: "http://www.bridgebirth.com" , thumbnail: "/images/bridge-birth-center.webp" , paragraph: "A freestanding birth center in Vancouver offering personalized midwifery care in a home-like setting. Serves families seeking out-of-hospital birth with licensed midwives. The center sits in central Vancouver just east of I-5, an easy drive from Salmon Creek, Camas, and Fisher's Landing, and its proximity to PeaceHealth Southwest Medical Center gives families a fast transfer route if a labor needs hospital care. Tour visits can be arranged directly with the midwifery practice." , services: ["Prenatal Care", "Labor & Delivery", "Postpartum Support", "Well-Person Care"] } ],
+      { name: "The Bridge Birth Center" , credential: "Freestanding Birth Center" , address: "3300 NE 54th St, Vancouver, WA 98663" , url: "http://www.bridgebirth.com" , thumbnail: "/images/bridge-birth-center.webp" , paragraph: "A freestanding birth center in Vancouver offering personalized midwifery care in a home-like setting. Serves families seeking out-of-hospital birth with licensed midwives." , services: ["Prenatal Care", "Labor & Delivery", "Postpartum Support", "Well-Person Care"] } ],
     localDoulas: [
       { name: "Suwannee Doula and Infant Care" , credential: "DONA-trained Postpartum Doula" , practice: "Suwannee Doula and Infant Care" , url: "http://suwanneedoulacare.com" , description: "Postpartum and overnight doula care serving Vancouver families. Specializing in breastfeeding support and overnight newborn care." , photo: "/images/provider-vancouver-wa-suwannee-doula-and-infant-care.webp" , services: ["Postpartum" , "Breastfeeding Support" , "Overnight Care"], costRange: "$40–$55/hr" ,
     costRange_source: "market-estimate",
@@ -7884,8 +7884,8 @@ midwifeInfo: {
       { name: "Sharon Jensen-Cody" , credential: "DONA Trained Birth Doula, Certified Pediatric Sleep Consultant" , practice: "DoulaDiligence Collective" , url: "https://www.douladiligence.com/" , description: "Sharon Jensen-Cody leads the DoulaDiligence Collective, a team of compassionate, highly trained doulas serving the Conejo Valley and nearby Agoura Hills communities. Her birth-work calling was sparked at age 17 when she witnessed her sister give birth, and she brings an evidence-based, intuitive approach to labor support. She is also a certified pediatric sleep consultant passionate about helping families achieve restorative sleep with their little ones, and offers placenta and lactation services." , photo: "/images/doulas/sharon-jensen-cody-agoura-hills-ca.webp" , services: ["Birth Doula" , "Postpartum Doula" , "Pediatric Sleep Consulting" , "Placenta Services" , "Lactation Guidance"] , costRange: "$2,500" , acceptingClients: true , serviceArea: ["Agoura Hills" , "Thousand Oaks" , "Woodland Hills" , "Westlake Village" , "Conejo Valley"] },
       { name: "Christine Cannon, CNM, WHNP-BC" , credential: "CNM-BC, WHNP-BC, RN" , practice: "The Midwife and More" , url: "https://www.themidwifeandmore.com/" , description: "Christine Cannon is a board-certified Certified Nurse Midwife and Women's Health Nurse Practitioner practicing in Agoura Hills at The Midwife and More. Her team provides personalized prenatal, labor, and postpartum care with hospital births at Los Robles Regional Medical Center in Thousand Oaks, blending relationship-centered midwifery support with immediate access to advanced medical resources. The practice serves families across the Ventura-LA County line and has experience supporting high-risk pregnancies in collaboration with OB physicians." , photo: "/images/doulas/christine-cannon-agoura-hills-ca.webp" , services: ["Prenatal Care" , "Hospital Labor and Delivery" , "Postpartum Care" , "Well-Woman Care" , "Telehealth"] , costRange: "Insurance accepted" , acceptingClients: true , serviceArea: ["Agoura Hills" , "Westlake Village" , "Thousand Oaks" , "Calabasas" , "Conejo Valley"] }
     ,
-      { name: "Cris Levin" , credential: "Postpartum Doula, Newborn Care Specialist" , practice: "Making Memories Agency" , url: "http://www.makingmemoriesagency.com/" , description: "Cris Levin is a postpartum doula and newborn care specialist based in Agoura Hills with 10 years of experience, specializing in sleep training and parent support. She helps families with feeding, diapering, bathing, and soothing techniques, and provides customized sleep plans and overnight care. She offers virtual consultations and speaks both English and Spanish." , photo: "/images/doulas/cris-levin-agoura-hills-ca.webp" , services: ["Postpartum Doula" , "Newborn Care" , "Sleep Training" , "Parent Education" , "Virtual Support"] , costRange: "$45-$50/hr" , acceptingClients: true , isVerified: true , serviceArea: ["Agoura Hills" , "Thousand Oaks" , "Westlake Village" , "Calabasas" , "Los Angeles County"] },
-      { name: "Monica Mayer" , credential: "Birth Doula Certification, Postpartum Doula Certification" , practice: "Breath 2 Birth" , url: "http://www.breath2birth.com/" , description: "Monica Mayer is a birth and postpartum doula serving the Conejo Valley and Agoura Hills area, offering birth support packages, postpartum care, and overnight newborn care. She provides complimentary consultations, prenatal and postpartum meetings, and unlimited labor support. Monica accepts insurance and offers services in English, Spanish, and Portuguese, with a focus on individualized, judgment-free family support." , photo: "/images/doulas/monica-mayer-agoura-hills-ca.webp" , services: ["Birth Doula" , "Postpartum Doula" , "Newborn Care" , "Sleep Training" , "Breastfeeding Support"] , costRange: "$2,000+ birth; $45/hr daytime postpartum, $55/hr overnight" , acceptingClients: true , isVerified: true , serviceArea: ["Thousand Oaks" , "Agoura Hills" , "Westlake Village" , "Conejo Valley"] }
+      { name: "Cris Levin" , credential: "Postpartum Doula, Newborn Care Specialist" , practice: "Making Memories Agency" , url: "http://www.makingmemoriesagency.com/" , description: "Cris Levin is a postpartum doula and newborn care specialist based in Agoura Hills with 10 years of experience, specializing in sleep training and parent support. She helps families with feeding, diapering, bathing, and soothing techniques, and provides customized sleep plans and overnight care. She offers virtual consultations and speaks both English and Spanish." , photo: "/images/doulas/cris-levin-agoura-hills-ca.webp" , services: ["Postpartum Doula" , "Newborn Care" , "Sleep Training" , "Parent Education" , "Virtual Support"] , costRange: "$45-$50/hr" , acceptingClients: true , serviceArea: ["Agoura Hills" , "Thousand Oaks" , "Westlake Village" , "Calabasas" , "Los Angeles County"] },
+      { name: "Monica Mayer" , credential: "Birth Doula Certification, Postpartum Doula Certification" , practice: "Breath 2 Birth" , url: "http://www.breath2birth.com/" , description: "Monica Mayer is a birth and postpartum doula serving the Conejo Valley and Agoura Hills area, offering birth support packages, postpartum care, and overnight newborn care. She provides complimentary consultations, prenatal and postpartum meetings, and unlimited labor support. Monica accepts insurance and Medi-Cal and offers services in English, Spanish, and Portuguese, with a focus on individualized, judgment-free family support." , photo: "/images/doulas/monica-mayer-agoura-hills-ca.webp" , services: ["Birth Doula" , "Postpartum Doula" , "Newborn Care" , "Sleep Training" , "Breastfeeding Support"] , costRange: "$2,000+ birth; $45/hr daytime postpartum, $55/hr overnight" , acceptingClients: true , serviceArea: ["Thousand Oaks" , "Agoura Hills" , "Westlake Village" , "Conejo Valley"] }
 ],
     birthStats: {
       cesareanRate: 32.0,
@@ -8555,12 +8555,11 @@ hospitalDetails: [
         credential: "Birth Doula Certification (Mama Glow, 2022), Lactation Counselor",
         practice: "Mama Nova",
         url: "https://mamanova.squarespace.com/",
-        description: "Full spectrum doula and lactation counselor based in Vallejo with 8 years of experience, serving American Canyon and Solano County families. Briahna is a mother of three who began her birth work journey after birthing her son in 2016. She is a Kaiser Permanente enrolled doula and accepts Contra Costa Health Plan along with Kaiser. She offers childbirth education, labor and delivery support, lactation counseling, and postpartum care, with a focus on holistic practices and tradition. Belly binding and breastfeeding support are among her specialties.",
+        description: "Full spectrum doula and lactation counselor based in Vallejo with 8 years of experience, serving American Canyon and Solano County families. Briahna is a mother of three who began her birth work journey after birthing her son in 2016. She is a Kaiser Permanente enrolled doula and offers childbirth education, labor and delivery support, lactation counseling, and postpartum care, with a focus on holistic practices and tradition. Belly binding and breastfeeding support are among her specialties.",
         photo: "/images/providers/american-canyon-ca-briahna-baskett.webp",
         services: ["Birth Doula", "Postpartum Doula", "Lactation Support", "Belly Binding"],
         costRange: "$1,200-$2,500",
         acceptingClients: true,
-        isVerified: true,
         serviceArea: ["American Canyon, CA", "Vallejo, CA", "Solano County, CA", "Napa County, CA"]
       }
     ],
@@ -9768,7 +9767,7 @@ hospitalDetails: [
     lat: 37.6688,
     lng: -122.0808,
     heroImage: "/images/hayward-ca-birth-doula-skyline.webp",
-    ogImage: "https://truejoybirthing.com/images/og-city-hayward-ca-v2.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-hayward-ca.webp",
     supportSceneImage: "/images/hayward-ca-birth-doula-support.webp",
     supportSceneAlt: "A doula supporting an expectant mom strolling through Hayward: East Bay birth support over the San Francisco hills",
     localDoulas: [
@@ -9779,7 +9778,7 @@ hospitalDetails: [
       { name: "Sutter Eden Medical Center", thumbnail: "/images/hayward-ca-hospital-eden.webp", address: "20103 Lake Chabot Rd, Castro Valley, CA 94546", nicuLevel: "III", doulaPolicy: "Doulas welcome. Sutter Eden Medical Center welcomes doulas as part of the birth support team in its Birth Center.", medicaid: true, lactation: true, privateRooms: true, waterBirth: "Hydrotherapy options available in the birth center", url: "https://www.sutterhealth.org/find-location/facility/eden-medical-center-birth-center-1043246600", paragraph: "Sutter Eden Medical Center in Castro Valley is the closest full-service birthing hospital for Hayward families, offering a Birth Center with spacious, private labor and delivery suites designed for family-centered care. The hospital holds the CMS Birthing Friendly designation, indicating it follows evidence-based maternity practices and participates in national perinatal quality improvement. On-site lactation consultants, a doula-welcome policy, and a Level III NICU mean both routine and higher-acuity newborns can be cared for close to home. Families describe the Birth Center as calm and comfortable, with advocates for your birth plan and continuous labor support on the team that wants you to feel at home through your entire birth experience. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." },
       { name: "Kaiser Permanente San Leandro Medical Center", thumbnail: "/images/hayward-ca-hospital-kaiser-san-leandro.webp", address: "2500 Merrial Ave, San Leandro, CA 94577", nicuLevel: "II", doulaPolicy: "Doulas welcome as support persons; independent doulas are not employed by Kaiser but are welcome in labor and delivery.", midwifeFriendly: true, medicaid: true, lactation: true, privateRooms: true, url: "https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity", paragraph: "Kaiser Permanente San Leandro Medical Center delivers obstetric care primarily for Kaiser HMO members and sits just a few minutes west of Hayward, making it a convenient option for Hayward families who are Kaiser members. The hospital provides full maternity services, a neonatal unit, lactation support, and private maternity suites within Kaiser's integrated, team-based care model. Independent doulas are welcome in labor and delivery as support persons, though they are not Kaiser employees. Its Level II NICU is appropriate for most routine and moderate-acuity newborns, with higher-level neonatal care available at Sutter Eden for the sickest infants. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." },    ],
     birthCenterDetails: [
-      { name: "Sutter Eden Medical Center Birth Center", thumbnail: "/images/hayward-ca-birth-center-eden.webp", address: "20103 Lake Chabot Rd, Castro Valley, CA 94546", url: "https://www.sutterhealth.org/find-location/facility/eden-medical-center-birth-center-1043246600", services: ["Hospital-Based", "Private Suites", "Water Birth"], paragraph: "The Birth Center at Sutter Eden Medical Center offers spacious private labor and delivery suites designed for family-centered care, with hydrotherapy options and on-site lactation consultants. The hospital holds the CMS Birthing Friendly designation and maintains a Level III NICU, so higher-acuity newborns get care close to home. Families describe the suites as calm and comfortable, with a team that welcomes doulas as part of the birth support team." },
+      { name: "Sutter Eden Medical Center Birth Center", thumbnail: "/images/hayward-ca-birth-center-eden.webp", address: "20103 Lake Chabot Rd, Castro Valley, CA 94546", url: "https://www.sutterhealth.org/find-location/facility/eden-medical-center-birth-center-1043246600", services: ["Hospital-Based", "Private Suites", "Water Birth"] },
     ],
     midwifeInfo: {
       paragraph: "Hayward families have solid midwifery options across the East Bay. Certified Nurse-Midwives (CNMs) practice at Sutter Eden Medical Center and within Kaiser Permanente's San Leandro and Oakland medical centers, providing hospital-based midwifery care close to home. Licensed Midwives (LMs) and Certified Midwives (CMs) served many Hayward-area families through home-birth practices and community-based options, in part because Hayward's birth centers are clustered in neighboring Fremont and Oakland.",
@@ -10422,7 +10421,7 @@ hospitalDetails: [
       { name: "Ember & Madeline" , credential: "Certified Birth Doula & Midwife Team" , practice: "Moon Water Midwifery" , url: "https://birthwithmoonwatermidwifery.com/" , photo: "/images/provider-new-braunfels-tx-ember.webp" , description: "Moon Water Midwifery is a highly rated birth doula and midwifery practice in New Braunfels led by Ember and her team, offering holistic, natural birth support, childbirth education classes, and postpartum care. Families praise their calm, knowledgeable presence and their ability to adapt quickly when labor changes course, including unplanned home births." , costRange: "$1,200-$2,500" , acceptingClients: true , services: ["Birth Doula", "Midwife", "Childbirth Education", "Postpartum Doula"] , serviceArea: ["New Braunfels, TX", "San Antonio, TX", "Comal County, TX"] , isVerified: true },
       { name: "Alejandra" , credential: "Certified Birth Doula (Doulajandra)" , practice: "Doulajandra" , url: "https://doulajandra.com/" , photo: "/images/provider-new-braunfels-tx-alejandra.webp" , description: "Alejandra of Doulajandra is a birth doula serving New Braunfels and surrounding areas, offering birth support, VBAC support, postpartum care, and lactation guidance. Families describe her as a master of her craft and a true advocate who validates your voice and helps you feel prepared and empowered through labor and the early weeks with baby." , costRange: "$1,000-$2,200" , acceptingClients: true , services: ["Birth Doula", "VBAC Support", "Postpartum Doula", "Lactation Support"] , serviceArea: ["New Braunfels, TX", "San Marcos, TX", "San Antonio, TX"] },
       { name: "Natalie" , credential: "Certified Birth Doula (Par Avion)" , practice: "Par Avion Doula" , url: "http://www.paraviondoula.com/" , photo: "/images/provider-new-braunfels-tx-natalie.webp" , description: "Natalie of Par Avion Doula is a holistic birth doula serving New Braunfels and surrounding areas, supporting families through home, hospital, and birth center births. Clients call her a holistic birth guru and a true advocate for mothers, praising her attentive, caring support from pregnancy through labor and postpartum." , costRange: "$900-$2,000" , acceptingClients: true , services: ["Birth Doula", "Holistic Doula", "Lactation Support", "Postpartum Doula"] , serviceArea: ["New Braunfels, TX", "Comal County, TX", "San Antonio, TX"] },
-      { name: "Haven Birth" , credential: "Birth, Postpartum & Matrescence Doula" , practice: "Haven" , url: "https://havenbirth.org/" , photo: "/images/provider-new-braunfels-tx-haven.webp" , description: "Haven offers whole-mother doula care in New Braunfels, Texas, combining birth support, postpartum care, and matrescence guidance rooted in calm and compassion. The practice focuses on steady, gentle support for the full journey of motherhood, with free consultations to help families find the right fit. Wendy also brings VBAC experience and a focus on supporting the birth partner throughout labor." , costRange: "$1,500-$1,800" , acceptingClients: true , isVerified: true, services: ["Birth Doula", "Postpartum Doula", "Matrescence Support", "VBAC Support"] , serviceArea: ["New Braunfels, TX", "Comal County, TX"] },
+      { name: "Haven Birth" , credential: "Birth, Postpartum & Matrescence Doula" , practice: "Haven" , url: "https://havenbirth.org/" , photo: "/images/provider-new-braunfels-tx-haven.webp" , description: "Haven offers whole-mother doula care in New Braunfels, Texas, combining birth support, postpartum care, and matrescence guidance rooted in calm and compassion. The practice focuses on steady, gentle support for the full journey of motherhood, with free consultations to help families find the right fit." , costRange: "$800-$1,800" , acceptingClients: true , services: ["Birth Doula", "Postpartum Doula", "Matrescence Support"] , serviceArea: ["New Braunfels, TX", "Comal County, TX"] },
     ],
     culture: "New Braunfels sits on the Comal and Guadalupe rivers in the Texas Hill Country, about 30 miles northeast of San Antonio. The city grew up around German settlers and today blends a strong heritage with a fast-growing family community. Birth care here runs the gamut — from CHRISTUS Santa Rosa Hospital's Level II NICU and Baby-Friendly designation to freestanding midwifery-led birth centers and a growing community of birth doulas serving Comal County.",
     heroLocalDetail: "CHRISTUS Santa Rosa Hospital - New Braunfels sits at 600 N Union Ave in the heart of the city, offering a Level II NICU, Baby-Friendly designation, and board-certified lactation consultants. Joyful Beginnings Birth Center is at 712 N Houston Ave, directly across the street from the hospital, and Family Birth Center is at 662 Comal Ave, both offering midwife-led, out-of-hospital birth options for low-risk families. Most New Braunfels doulas cover births at the hospital and the birth centers, so you can plan your birth your way regardless of setting.",
@@ -11131,7 +11130,7 @@ hospitalDetails: [
 		dataYear: 2024,
 		dataSource: "CDC NCHS National Vital Statistics System; KFF Women's Health Profiles (California); CDPH pregnancy-related mortality 2022"
 	},
-	medicaidNote: "Yes — California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal through the Department of Health Care Services. Note that Hoag Hospital Newport Beach does not contract with Medi-Cal, so Medi-Cal families in the Costa Mesa area commonly deliver at hospitals such as UCI Medical Center in Orange. Confirm your doula is a Medi-Cal enrolled provider before your first visit.",
+	medicaidNote: "Yes - California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal through the Department of Health Care Services. Note that Hoag Hospital Newport Beach does not contract with Medi-Cal, so Medi-Cal families in the Costa Mesa area commonly deliver at hospitals such as UCI Medical Center in Orange. Confirm your doula is a Medi-Cal enrolled provider before your first visit.",
 	insuranceNote: "MemorialCare Orange Coast Medical Center accepts most major HMO, PPO, and EPO health plans as well as Medicare. Hoag Hospital Newport Beach contracts with most major private plans but does not contract with Medi-Cal. Christine of Costa Mesa Doula states she will work with families for whom the full fee is a barrier, and Tiffany Blackham offers insurance super bills for doula reimbursement. Ask whether HSA or FSA funds can help with out-of-pocket doula costs, and whether lactation consultants are in-network with your plan.",
 	faqs: [
 		{
@@ -11289,10 +11288,10 @@ hospitalDetails: [
     ogImage: "https://truejoybirthing.com/images/og-city-cary-nc.webp",
     shelbiServesHere: false,
     localDoulas: [
-      { name: "Triangle Doula by Nature" , credential: "Birth Doula" , practice: "Triangle Doula by Nature" , url: "https://www.triangledoulabynature.com/" , photo: "/images/provider-cary-nc-triangle-doula.webp" , description: "Triangle Doula by Nature is a birth doula practice serving families in Cary and across the NC Triangle and Triad. The practice offers prenatal, labor, and postpartum support and supports a wide range of birth goals including hospital, home, water, and birth center births, as well as VBAC and cesarean births." , costRange: "$800-$2,500" , acceptingClients: true , services: ["Birth Doula", "Childbirth Education", "Birth Plan Consultations", "Postpartum Support"] , serviceArea: ["Cary, NC", "Raleigh, NC", "Durham, NC", "Chapel Hill, NC", "Apex, NC"] , costRange_source: "market-estimate" },
+      { name: "Triangle Doula by Nature" , credential: "Trained Birth Professional, Direct Entry Midwifery (Southwest Tech)" , practice: "Triangle Doula by Nature" , url: "https://www.triangledoulabynature.com/" , photo: "/images/provider-cary-nc-triangle-doula.webp" , description: "Triangle Doula by Nature is a birth doula practice serving families in Cary and across the NC Triangle and Triad. The practice offers prenatal, labor, and postpartum support and supports a wide range of birth goals including hospital, home, water, and birth center births, as well as VBAC and cesarean births." , costRange: "$800-$2,500" , acceptingClients: true , services: ["Birth Doula", "Childbirth Education", "Birth Plan Consultations", "Postpartum Support"] , serviceArea: ["Cary, NC", "Raleigh, NC", "Durham, NC", "Chapel Hill, NC", "Apex, NC"] , costRange_source: "market-estimate" },
       { name: "Mariam Lam" , credential: "Birth Doula, DONA International certified" , practice: "Independent birth doula" , url: "https://www.hellomeela.com/cary-nc/doulas/" , photo: "/images/provider-cary-nc-mariam-lam.webp" , description: "Mariam Lam is a DONA International certified birth doula serving the Durham and Triangle area, listed among birth doulas available to Cary families on the Meela directory. She has supported 50 families over 6 years and lists a $900 birth fee on her profile." , costRange: "$800-$900" , acceptingClients: true , services: ["Birth Doula", "On-Call Labor Support", "Prenatal Visits", "Postpartum Visits"] , serviceArea: ["Cary, NC", "Durham, NC", "Chapel Hill, NC"] , costRange_source: "published" },
       { name: "Amanda Petry" , credential: "IBCLC, RN" , practice: "Independent lactation consultant" , url: "https://www.bornbir.com/amanda-petry" , photo: "/images/provider-cary-nc-amanda-petry.webp" , description: "Amanda Petry is a Registered Nurse and International Board Certified Lactation Consultant based in Cary, NC who provides personalized infant feeding support from pregnancy through the breastfeeding journey. She offers in-home visits for reassurance and troubleshooting, and has experience supporting premature infants, multiples, and a range of feeding challenges." , costRange: "$800-$950" , acceptingClients: true , services: ["Lactation Support", "In-Home Visits", "Pumping Guidance", "Milk Supply Support"] , serviceArea: ["Cary, NC"] , costRange_source: "market-estimate" },
-      { name: "Sacred Haven Midwifery" , credential: "CNM-led homebirth team" , practice: "Sacred Haven Midwifery" , url: "https://www.sacredhavenmidwifery.com/" , photo: "/images/provider-cary-nc-sacred-haven.webp" , description: "Sacred Haven Midwifery is a Certified Nurse-Midwife led homebirth team serving women and families in North Carolina. The practice provides CNM-led home birth, prenatal, and postpartum care across the state." , costRange: "$2,500-$4,500" , acceptingClients: true , services: ["Home Birth", "Prenatal Care", "Postpartum Care", "CNM-Led Care"] , serviceArea: ["Cary, NC", "North Carolina"] , costRange_source: "market-estimate" },
+      { name: "Sacred Haven Midwifery" , credential: "CNM-led homebirth team" , practice: "Sacred Haven Midwifery" , url: "https://www.sacredhavenmidwifery.com/" , photo: "/images/provider-cary-nc-sacred-haven.webp" , description: "Sacred Haven Midwifery is a Certified Nurse-Midwife led homebirth team serving Cary and the greater Wake County area. The practice provides CNM-led home birth, prenatal, and postpartum care with personalized support for expectant parents in the Triangle region." , costRange: "$2,500-$4,500" , acceptingClients: true , services: ["Home Birth", "Prenatal Care", "Postpartum Care", "CNM-Led Care"] , serviceArea: ["Cary, NC", "North Carolina"] , costRange_source: "market-estimate" },
     ],
     culture: "Cary is a fast-growing town in the Research Triangle region of North Carolina, located between Raleigh and Research Triangle Park, and known for its family-oriented neighborhoods, highly rated schools, and extensive parks and greenways. The town has a highly educated population, with 70.5% of residents age 25 and older holding a bachelor's degree or higher and a median household income of $134,905. Expectant families in Cary benefit from proximity to multiple maternity options, including the local WakeMed Cary Hospital, the larger UNC Health Rex in nearby Raleigh, and a freestanding birth center within the town itself. The broader Triangle is home to a strong midwifery and doula community, with the UNC School of Nursing and UNC Midwifery program contributing to a deep CNM talent pool.",
     heroLocalDetail: "Cary families can choose between the local WakeMed Cary Hospital, which offers a Level III NICU and a full maternity program at 1900 Kildaire Farm Road, and the larger UNC Health Rex in Raleigh, about 20 minutes away, which has a Level IV NICU and allows a doula as one of three bedside visitors. For out-of-hospital birth, Haven Women's Health and Birth Center operates a CNM-led birth center in Cary with water birth suites and a 5% cesarean rate for clients who begin labor there, located close to WakeMed Cary for transfers.",
@@ -11301,7 +11300,7 @@ hospitalDetails: [
         name: "WakeMed Cary Hospital",
         thumbnail: "/images/cary-nc-hospital-wakemed-cary.webp",
         address: "1900 Kildaire Farm Road, Cary, NC 27518",
-        url: "https://www.wakemed.org/find-a-location/cary-hospital/services-and-specialties/pregnancy-and-childbirth",
+        url: "https://www.wakemed.org/care-and-services/womens/support-for-baby/neonatal-intensive-care",
         nicuLevel: "III",
         doulaPolicy: "Doulas typically coordinated with the care team; confirm current policy at your hospital tour",
         midwifeFriendly: true,
@@ -11309,7 +11308,7 @@ hospitalDetails: [
         medicaid: true,
         lactation: true,
         privateRooms: true,
-        paragraph: "WakeMed Cary Hospital is the inpatient hospital serving western Wake County and offers a full maternity program with labor and delivery, postpartum care, and lactation support. The hospital has a Level III NICU that provides care for babies needing short-term intensive care, sharing a full-time staff of neonatologists and 24-hour neonatal nurse practitioners with the Raleigh Campus. Babies who need a higher level of care can be transferred to the Raleigh Campus via the Children's Transport Team, and the mother is moved to the Women's Pavilion and Birthplace in Raleigh when possible. The hospital offers free guided tours of the birthing center on weekday evenings and one Saturday per month, plus a virtual tour. Care teams include labor and delivery nurses, obstetrical hospitalists, anesthesiologists, and lactation consultants.",
+        paragraph: "WakeMed Cary Hospital is the only inpatient hospital serving western Wake County, with a 7-day a week maternity program and a dedicated Level III NICU (verified on wakemed.org/care-and-services/womens/support-for-baby/neonatal-intensive-care). The NICU is staffed with pediatricians trained at Duke Children's and UNC Women's Hospital, offering round-the-clock care for preterm infants up to 8 months corrected age and infants born at 28 weeks or later. 25+ neonatal specialists work across western Wake County, with a dedicated Children's Transport Team coordinating transfers to UNC Children's Hospital if needed. Labor & Delivery features private birth suites with birthing balls, soaking tubs, and flat TVs. Doulas and one additional support person are welcome at the bedside. 24-hour certified lactation consultants are available. WakeMed Cary is a Baby-Friendly designated facility committed to evidence-based maternity care. Language interpretation services are available for families needing care in languages other than English. Medicaid is accepted. Free guided tours of the birthing center are offered on weekday evenings and one Saturday per month. For scheduling: (919) 446-MAMA (6262). WakeMed is the recommended NICU for out-of-hospital births within a 15-mile radius, including Cary and Apex.",
       },
       {
         name: "UNC Health Rex (Rex Women's Center)",
@@ -11323,7 +11322,7 @@ hospitalDetails: [
         medicaid: true,
         lactation: true,
         privateRooms: true,
-        paragraph: "UNC Health Rex's Rex Women's Center in Raleigh is a major maternity destination in the Triangle, reporting that it delivers more babies than any other hospital in the region. The center provides a birth center with private labor and delivery rooms, and its care team includes obstetricians, OB hospitalists, certified nurse midwives, neonatologists, and lactation consultants. Its Neonatal Intensive Care Unit holds a Level IV designation, allowing care for the most premature and medically fragile babies. The Rex Women's Center visitation policy allows three visitors at the bedside, and a doula is considered one of the three visitors. The center also offers maternal-fetal medicine specialists for high-risk pregnancies and an OB emergency department staffed by OB hospitalists.",
+        paragraph: "UNC Health Rex's Rex Women's Center in Raleigh is a major maternity destination in the Triangle, delivering more babies than any other hospital in the region. The center offers private labor and delivery rooms and birth suites with advanced monitoring equipment. Its care team includes obstetricians, OB hospitalists, certified nurse midwives, neonatologists, and lactation consultants. The Level IV NICU has 21 beds, providing intensive care for the most premature and medically fragile newborns, with parent participation encouraged at the bedside. Three visitors (ages 1 and older) are allowed, with a doula counting as one of the three. UNC Rex is recognized as a Birthing-Friendly and Baby-Friendly hospital by the NC Division of Public Health, demonstrating commitment to improving maternal outcomes through quality improvement collaboratives and evidence-based maternity care practices that support successful breastfeeding and mother-baby bonding. Lactation consultants are available on staff, and language interpretation services are offered to support diverse families. The hospital also provides childbirth education classes and maternity tours. Maternal-fetal medicine specialists are available for high-risk pregnancies, and an OB emergency department is staffed by OB hospitalists.",
       },
     ],
     birthCenterDetails: [
@@ -11350,7 +11349,7 @@ hospitalDetails: [
       dataYear: 2023,
       dataSource: "CDC NCHS National Vital Statistics System; KFF",
     },
-    medicaidNote: "No - North Carolina does not yet have statewide Medicaid doula coverage as of 2026, though doula benefits have been studied and pilots are emerging in some managed-care plans. Most Cary families pay out of pocket for doula support. Call your Medicaid managed-care plan and ask directly whether doula services are covered. You can also check with local community organizations that may offer reduced-cost or sliding-scale doula support.",
+    medicaidNote: "No — North Carolina does not yet have statewide Medicaid doula coverage as of 2026, though doula benefits have been studied and pilots are emerging in some managed-care plans. Most Cary families pay out of pocket for doula support. Call your Medicaid managed-care plan and ask directly whether doula services are covered. You can also check with local community organizations that may offer reduced-cost or sliding-scale doula support.",
     insuranceNote: "WakeMed Cary Hospital and UNC Health Rex accept most major private insurance plans. Some insurers in North Carolina are beginning to offer maternal wellness benefits that partially cover doula or lactation support. Check with your provider directly. Ask whether HSA or FSA funds can help with out-of-pocket doula costs, and whether lactation consultants are in-network.",
     faqs: [
       { q: "How much does a doula cost in Cary?" , a: "Expect to pay around $800 to $2,500 depending on the doula and package. Can't swing the full price? Ask about sliding-scale options or payment plans. The investment typically covers prenatal visits, labor support, and postpartum check-ins." },
@@ -11365,263 +11364,254 @@ hospitalDetails: [
     nearbyCities: ["raleigh-nc", "charlotte-nc"],
   },
   "bellevue-wa": {
-    enableBlogResources: true,
-    publishedDate: "2026-09-08",
-    city: "Bellevue",
-    state: "WA",
-    stateFull: "Washington",
-    slug: "bellevue-wa",
-    titleTag: "Bellevue, Washington Doula Costs, Hospitals and Medicaid",
-    metaDescription: "Bellevue doula costs, Overlake and EvergreenHealth NICU levels, Apple Health Medicaid coverage, and Eastside birth providers.",
-    population: 154377,
-    costLow: 2000,
-    costHigh: 2500,
-    heroImage: "/images/bellevue-wa-birth-doula-skyline-v2.webp",
-    supportSceneImage: "/images/bellevue-wa-birth-doula-support-v2.webp",
-    supportSceneAlt: "A doula supporting an expectant mom in Bellevue: Eastside Seattle birth support and doula care",
-    ogImage: "https://truejoybirthing.com/images/og-city-bellevue-wa.webp",
-    shelbiServesHere: false,
-    localDoulas: [
-        {
-            name: "Expecting Joy Doula Services",
-            credential: "Birth doula team (DONA-aligned), IBCLC lactation consultants",
-            practice: "Expecting Joy",
-            url: "https://www.expectingjoy.com/",
-            photo: "/images/provider-bellevue-wa-expecting-joy.webp",
-            description: "Expecting Joy is a birth and parenting services company based in the Seattle area since 2011, offering birth doulas, postpartum doulas, lactation consulting, and placenta encapsulation. Their birth doula package includes two prenatal visits, unlimited email contact during pregnancy, 24/7 on-call support from 38 weeks, continuous labor and delivery support, and at least one postpartum visit. The practice serves Bellevue and surrounding areas and carries a 5-star rating across 99 Google reviews.",
-            costRange: "$2,000-$2,500",
-            costRange_source: "market-estimate",
-            services: [
-                "Birth Doula",
-                "Postpartum Support",
-                "Lactation Support",
-                "Placenta Encapsulation",
-                "Childbirth Education"
-            ],
-            serviceArea: [
-                "Bellevue, WA",
-                "Seattle, WA",
-                "Kirkland, WA",
-                "Redmond, WA"
-            ]
-        ,
-    acceptingClients: true
-  },
-        {
-            name: "Mariola Klein (Bellevue Doula)",
-            credential: "Birth Doula CD(DONA), Postpartum Doula CD(NAPS), Licensed Massage Practitioner",
-            practice: "Bellevue Doula",
-            url: "http://www.bellevuedoula.com/birth-doula.html",
-            photo: "/images/provider-bellevue-wa-mariola-klein-v2.webp",
-            description: "Mariola Klein is a DONA-certified birth doula based in Bellevue who charges $2,500 for birth doula services with a free initial consultation. Her package includes two prenatal meetings, phone and email support during pregnancy and after birth, 24-hour availability, continuous emotional and physical support during labor, a backup doula, and two postpartum meetings. She works in compliance with DONA International Standards of Practice and speaks fluent German and Polish.",
-            costRange: "$2,500-$2,500",
-            costRange_source: "published",
-            services: [
-                "Birth Doula",
-                "Postpartum Support",
-                "Maternity Massage",
-                "Infant Massage Instruction"
-            ],
-            serviceArea: [
-                "Bellevue, WA"
-            ]
-        ,
-    acceptingClients: true
-  },
-        {
-            name: "Angela Lygren",
-            credential: "Licensed Midwife (LM), Certified Professional Midwife (CPM)",
-            practice: "Independent midwifery practice",
-            url: "https://angelalygren.dr-leonardo.com/",
-            photo: "/images/provider-bellevue-wa-angela-lygren.webp",
-            description: "Angela Lygren is a Licensed Midwife and Certified Professional Midwife practicing in Bellevue, WA (NPI 1104483148). Her practice is listed in the Healthgrades midwifery directory for Bellevue and she is one of the home-birth midwives serving the Bellevue area. Washington licenses direct-entry midwives through the Department of Health, and her listing covers prenatal care, labor and delivery support, and postpartum care.",
-            costRange: "$2,000-$2,500",
-            costRange_source: "market-estimate",
-            services: [
-                "Home Birth",
-                "Prenatal Care",
-                "Labor Support",
-                "Postpartum Care"
-            ],
-            serviceArea: [
-                "Bellevue, WA"
-            ]
-        ,
-    acceptingClients: true
-  },
-        {
-            name: "Northshore Midwives & Lactation Consulting",
-            credential: "Licensed Midwife (LM), International Board Certified Lactation Consultant (IBCLC)",
-            practice: "Northshore Midwives & Lactation Consulting",
-            url: "https://www.northshoremidwives.com/bellevue-lactation-consultant-midwife-doula-postpartum-doula/",
-            photo: "/images/provider-bellevue-wa-northshore-midwives.webp",
-            description: "Northshore Midwives & Lactation Consulting serves the Bellevue area with lactation consulting, midwifery, and postpartum doula services. Lead clinician Andrea is one of the first and only licensed midwives who is also an International Board Certified Lactation Consultant (IBCLC) in Washington State, and has assisted families since 2007. The practice accepts all insurance companies, including Medicaid coverage, and serves Bellevue, Kirkland, Redmond, Woodinville, and Sammamish.",
-            costRange: "$2,000-$2,500",
-            costRange_source: "market-estimate",
-            services: [
-                "Lactation Support",
-                "Midwifery Care",
-                "Postpartum Support",
-                "Newborn Feeding Support"
-            ],
-            serviceArea: [
-                "Bellevue, WA",
-                "Kirkland, WA",
-                "Redmond, WA",
-                "Woodinville, WA",
-                "Sammamish, WA"
-            ]
-        ,
-    acceptingClients: true
-  },
-        {
-            name: "Heng Ma (Body Enmotion Massage and Doula Care)",
-            credential: "IBCLC, Licensed Massage Therapist, Birth and Postpartum Doula",
-            practice: "Body Enmotion Massage and Doula Care",
-            url: "https://www.bodyenmotion.com/hengma",
-            photo: "/images/provider-bellevue-wa-heng-ma.webp",
-            description: "Heng Ma is an IBCLC-certified lactation consultant, licensed massage therapist, and experienced birth and postpartum doula who has supported over 5,000 families since 2016. Her practice, Body Enmotion Massage and Doula Care, specializes in Ayurvedic postpartum massage, belly binding, infant massage, and breastfeeding support for newborn families, and she serves the Bellevue area. Her birth doula fee is listed at $2,500 on the Meela directory.",
-            costRange: "$2,500-$2,500",
-            costRange_source: "published",
-            services: [
-                "Lactation Support",
-                "Birth Doula",
-                "Postpartum Support",
-                "Ayurvedic Postpartum Massage",
-                "Infant Massage"
-            ],
-            serviceArea: [
-                "Bellevue, WA",
-                "Seattle, WA"
-            ]
-        ,
-    acceptingClients: true
-  }],
-    culture: "Bellevue is a fast-growing Eastside suburb of Seattle with a population of roughly 154,000, known for its tech industry presence and diverse, well-educated population. Most births in Washington occur in hospitals, but the state has a strong and well-regulated midwifery infrastructure, with Licensed Midwives practicing under formal state licensure since 1981 and a rising number of home and birth-center births during the pandemic years. Bellevue families have access to two major hospital maternity units within a short drive (Overlake in Bellevue and EvergreenHealth in Kirkland), both offering Level III NICU care, plus freestanding birth centers in Bellevue, Kirkland, and Tacoma. Washington's Apple Health (Medicaid) program covers licensed midwifery care and planned home births attended by enrolled providers, making midwife-led and out-of-hospital birth options accessible to a broad range of families.",
-    heroLocalDetail: "Bellevue families can choose between the Overlake Childbirth Center, a U.S. News High Performing maternity hospital with a Level III NICU and TeamBirth care model, and EvergreenHealth's Family Maternity Center in nearby Kirkland. Freestanding birth center options include Eastside Birth Center in Bellevue and Puget Sound Midwives & Birth Center in Kirkland, while licensed midwives and doulas serve the area for home and hospital births.",
-    hospitalDetails: [
-        {
-            name: "Overlake Medical Center & Clinics (Overlake Childbirth Center)",
-            thumbnail: "/images/bellevue-wa-hospital-overlake.webp",
-            address: "1035 116th Ave NE, Building 1, E2, Bellevue, WA 98004",
-            url: "https://www.overlakehospital.org/services/childbirth-center",
-            nicuLevel: "III",
-            doulaPolicy: "Doulas welcomed as part of the care team; TeamBirth collaborative birth model",
-            midwifeFriendly: true,
-            waterBirth: "Hydrotherapy options vary by provider; confirm at your hospital tour",
-            medicaid: true,
-            lactation: true,
-            privateRooms: true,
-            paragraph: "The Overlake Childbirth Center is the primary hospital maternity unit in Bellevue, located at 1035 116th Ave NE. It offers private labor, delivery, and recovery rooms plus private mother-baby suites, two surgical suites equipped for cesarean or high-risk births, and a Level III Neonatal Intensive Care Unit (NICU) for babies needing complex care. The center uses the TeamBirth philosophy, which places the patient, their safety, preferences, and goals at the center of every decision, and explicitly welcomes doulas as part of the care team. Overlake offers vaginal birth after cesarean (VBAC) for eligible candidates, an emergency department specifically for expecting families, and a donor milk depot. The center is one of only three hospitals in Washington state recognized as High Performing in Maternity Care (Uncomplicated Pregnancy) by U.S. News & World Report."
-        },
-        {
-            name: "EvergreenHealth Family Maternity Center",
-            thumbnail: "/images/bellevue-wa-hospital-evergreenhealth.webp",
-            address: "12040 NE 128th Street, Kirkland, WA 98034",
-            url: "https://www.evergreenhealth.com/health-services/pregnancy-birth/",
-            nicuLevel: "III",
-            doulaPolicy: "Not explicitly published; support persons and doulas generally welcomed (verify directly)",
-            midwifeFriendly: true,
-            waterBirth: "Hydrotherapy options vary; confirm with the maternity center directly",
-            medicaid: true,
-            lactation: true,
-            privateRooms: true,
-            paragraph: "The EvergreenHealth Family Maternity Center in Kirkland, about 10 miles from Bellevue, is a newly renovated maternity unit with 34 refurbished labor rooms, 27 remodeled after-delivery rooms, and two modern family areas with kitchens and entertainment centers. Labor, birth, and recovery take place in private birthing suites with private bathrooms, and the center offers concierge-style meal service. The hospital's Level 3 Neonatal Intensive Care Unit provides one of the highest levels of care available for critically ill infants, with neonatologists on-site around the clock and single-room family-centered care that accommodates twins and triplets. EvergreenHealth has earned the CMS Birthing Friendly Designation, offers certified nurse-midwife (CNM) care through EvergreenHealth Midwifery Care, and partners its NICU with Seattle Children's and Swedish Medical Center for newborns requiring complicated care or surgery."
-        }
-    ],
-    birthCenterDetails: [
-        {
-            name: "Eastside Birth Center PS",
-            thumbnail: "/images/bellevue-wa-birth-center-eastside.webp",
-            address: "14700 NE 8th St, Suite 115, Bellevue, WA 98007",
-            url: "https://eastsidebirthcenter.com/",
-            services: [
-                "Midwifery-Led Care",
-                "Birth Center Births",
-                "Prenatal Care",
-                "Postpartum Care"
-            ],
-            medicaid: false,
-            distance: "In Bellevue",
-            paragraph: "Eastside Birth Center PS is a freestanding birth center in Bellevue offering a gentle, natural, and supportive environment for expectant parents, with professionally qualified midwifery staff providing care from pregnancy through postpartum. The center is licensed by the Washington State Department of Health as a childbirth center and serves families who want an out-of-hospital birth option close to home."
-        },
-        {
-            name: "Puget Sound Midwives & Birth Center",
-            thumbnail: "/images/bellevue-wa-birth-center-puget-sound.webp",
-            address: "13128 Totem Lake Blvd NE, Suite 101, Kirkland, WA 98034",
-            url: "https://www.birthcenter.com/",
-            services: [
-                "Midwifery-Led Care",
-                "Birth Center Births",
-                "Prenatal Care",
-                "Postpartum Care"
-            ],
-            medicaid: true,
-            distance: "~10 miles from Bellevue",
-            paragraph: "Puget Sound Midwives & Birth Center, founded in 2010 in Kirkland, is a freestanding birth center where births take place under the care of highly skilled midwives, with privileges extended to qualified midwives in the Seattle area. The center is in-network with most major insurance companies and accepts Washington State Medicaid. It sits about 10 miles from Bellevue in the Totem Lake neighborhood of Kirkland."
-        },
-        {
-            name: "The Birthing Inn",
-            thumbnail: "/images/bellevue-wa-birth-center-birthing-inn.webp",
-            address: "6002 Westgate Blvd Suite 120, Tacoma, WA 98406",
-            url: "https://thebirthinginn.com/",
-            services: [
-                "Midwifery-Led Care",
-                "Water Birth",
-                "Prenatal Care",
-                "Postpartum Care"
-            ],
-            medicaid: false,
-            distance: "~30 miles from Bellevue",
-            paragraph: "The Birthing Inn is Tacoma's only freestanding birth center, operating since 1999 and welcoming over 3,000 babies. It is accredited by the Commission for the Accreditation of Birth Centers (CABC) since 2016, and its water birth tubs are included in all packages. The center serves families from Gig Harbor, Lakewood, Federal Way, Puyallup, Auburn, and the broader Puget Sound region, about 30 miles from Bellevue."
-        }
-    ],
-    midwifeInfo: {
-        paragraph: "In Washington State, non-nurse midwives are licensed as Licensed Midwives (LMs) by the Washington State Department of Health under RCW 18.50, a licensing pathway for direct-entry midwives that dates to 1917 and was rebuilt for direct-entry practice in 1981. Certified Nurse-Midwives (CNMs) are licensed by the Washington Nursing Care Quality Assurance Commission. Both credentials can be verified through the Department of Health's provider credential search. Washington's Apple Health (Medicaid) program covers licensed midwifery care and planned home births attended by enrolled providers for low-risk pregnancies that pass risk screening, and Washington's home-birth rate has trended upward, ranging from 1% to 2.1% of births between 2010 and 2022.",
-        credentialTypes: "LM, CNM"
-    },
-    birthStats: {
-        cesareanRate: 30,
-        maternalMortalityRate: 30.5,
-        homeBirthRate: 2.1,
-        birthCenterBirthRate: 2.6,
-        dataYear: 2023,
-        dataSource: "CDC NCHS National Vital Statistics System; March of Dimes PeriStats; WA DOH"
-    },
-    medicaidNote: "Yes — Washington's Apple Health (Medicaid) program covers doula services statewide, and enrolled doulas bill through ProviderOne. Apple Health also covers licensed midwifery care and planned home births attended by enrolled Licensed Midwives, and Overlake Medical Center's childbirth center accepts WA Apple Health (Medicaid). Confirm your doula or midwife is a Washington State Medicaid-enrolled provider before your first visit.",
-    insuranceNote: "Overlake Medical Center and EvergreenHealth accept most major private insurance plans. Northshore Midwives & Lactation Consulting states it accepts all insurance companies, including Medicaid coverage. Ask whether HSA or FSA funds can help with out-of-pocket doula costs, and whether lactation consultants are in-network with your plan.",
-    faqs: [
-        {
-            q: "How much does a doula cost in Bellevue, WA?",
-            a: "Published Bellevue rates run about $2,000 to $2,500 for a birth doula package: Bellevue Doula lists $2,000 including two prenatal meetings, continuous labor support, and two postpartum meetings, and Heng Ma lists a $2,500 birth doula fee. Ask about sliding-scale options or payment plans when you interview doulas."
-        },
-        {
-            q: "What hospitals in Bellevue offer labor and delivery services?",
-            a: "Overlake Medical Center & Clinics operates the Overlake Childbirth Center at 1035 116th Ave NE in Bellevue, offering private labor/delivery/recovery rooms, a Level III NICU, and TeamBirth collaborative care. EvergreenHealth's Family Maternity Center in Kirkland (12040 NE 128th Street) is about 10 miles away and also offers a Level 3 NICU and CNM midwifery care."
-        },
-        {
-            q: "Are there freestanding birth centers near Bellevue?",
-            a: "Yes. Eastside Birth Center PS is a freestanding birth center in Bellevue at 14700 NE 8th St. Puget Sound Midwives & Birth Center in Kirkland (13128 Totem Lake Blvd NE) is about 10 miles away and accepts Washington State Medicaid. The Birthing Inn in Tacoma, a CABC-accredited freestanding birth center, is about 30 miles away."
-        },
-        {
-            q: "How are midwives licensed in Washington State?",
-            a: "Licensed Midwives (LMs) are licensed by the Washington State Department of Health under RCW 18.50, a direct-entry midwifery pathway dating to 1917 and rebuilt in 1981. Certified Nurse-Midwives (CNMs) are licensed by the Washington Nursing Care Quality Assurance Commission. Both credentials can be verified through the DOH provider credential search."
-        },
-        {
-            q: "Does Medicaid (Apple Health) cover midwifery and birth center care in Washington?",
-            a: "Yes. Washington's Apple Health (Medicaid) program covers licensed midwifery care and planned home births attended by enrolled Licensed Midwives, CNMs, or physicians for low-risk pregnancies that pass risk screening. Overlake Medical Center's childbirth center also accepts WA Apple Health (Medicaid)."
-        },
-        {
-            q: "What is the cesarean rate in Washington State?",
-            a: "In 2023, 30.0% of live births in Washington were cesarean deliveries, according to March of Dimes PeriStats based on NCHS final natality data. Washington's NTSV (first-birth, term, singleton, vertex) cesarean rate has been below the Healthy People 2020 target of 23.9 percent."
-        }
-    ],
-    lat: 47.6101,
-    lng: -122.2015,
-    nearbyCities: [
-        "seattle-wa",
-        "tacoma-wa"
-    ]
+	enableBlogResources: true,
+	publishedDate: "2026-09-08",
+	city: "Bellevue",
+	state: "WA",
+	stateFull: "Washington",
+	slug: "bellevue-wa",
+	titleTag: "Bellevue, Washington Doula Costs, Hospitals and Medicaid",
+	metaDescription: "Bellevue doula costs, Overlake and EvergreenHealth NICU levels, Apple Health Medicaid coverage, and Eastside birth providers.",
+	population: 154377,
+	costLow: 2000,
+	costHigh: 2500,
+	heroImage: "/images/bellevue-wa-birth-doula-skyline-v2.webp",
+	supportSceneImage: "/images/bellevue-wa-birth-doula-support-v2.webp",
+	supportSceneAlt: "A doula supporting an expectant mom in Bellevue: Eastside Seattle birth support and doula care",
+	ogImage: "https://truejoybirthing.com/images/og-city-bellevue-wa.webp",
+	shelbiServesHere: false,
+	localDoulas: [
+		{
+			name: "Expecting Joy Doula Services",
+			credential: "Birth doula team (DONA-aligned), IBCLC lactation consultants",
+			practice: "Expecting Joy",
+			url: "https://www.expectingjoy.com/",
+			photo: "/images/provider-bellevue-wa-expecting-joy.webp",
+			description: "Expecting Joy is a birth and parenting services company based in the Seattle area since 2011, offering birth doulas, postpartum doulas, lactation consulting, and placenta encapsulation. Their birth doula package includes two prenatal visits, unlimited email contact during pregnancy, 24/7 on-call support from 38 weeks, continuous labor and delivery support, and at least one postpartum visit. The practice serves Bellevue and surrounding areas and carries a 5-star rating across 99 Google reviews.",
+			costRange: "$2,000-$2,500",
+			costRange_source: "market-estimate",
+			services: [
+				"Birth Doula",
+				"Postpartum Support",
+				"Lactation Support",
+				"Placenta Encapsulation",
+				"Childbirth Education"
+			],
+			serviceArea: [
+				"Bellevue, WA",
+				"Seattle, WA",
+				"Kirkland, WA",
+				"Redmond, WA"
+			]
+		},
+		{
+			name: "Mariola Klein (Bellevue Doula)",
+			credential: "Birth Doula CD(DONA), Postpartum Doula CD(NAPS), Licensed Massage Practitioner",
+			practice: "Bellevue Doula",
+			url: "http://www.bellevuedoula.com/birth-doula.html",
+			photo: "/images/provider-bellevue-wa-mariola-klein.webp",
+			description: "Mariola Klein is a DONA-certified birth doula based in Bellevue who charges $2,000 for birth doula services with a free initial consultation. Her package includes two prenatal meetings, phone and email support during pregnancy and after birth, 24-hour availability, continuous emotional and physical support during labor, a backup doula, and two postpartum meetings. She works in compliance with DONA International Standards of Practice and speaks fluent German and Polish.",
+			costRange: "$2,000-$2,000",
+			costRange_source: "published",
+			services: [
+				"Birth Doula",
+				"Postpartum Support",
+				"Maternity Massage",
+				"Infant Massage Instruction"
+			],
+			serviceArea: [
+				"Bellevue, WA"
+			]
+		},
+		{
+			name: "Angela Lygren",
+			credential: "Licensed Midwife (LM), Certified Professional Midwife (CPM)",
+			practice: "Independent midwifery practice",
+			url: "https://angelalygren.dr-leonardo.com/",
+			photo: "/images/provider-bellevue-wa-angela-lygren.webp",
+			description: "Angela Lygren is a Licensed Midwife and Certified Professional Midwife practicing in Bellevue, WA (NPI 1104483148). Her practice is listed in the Healthgrades midwifery directory for Bellevue and she is one of the home-birth midwives serving the Bellevue area. Washington licenses direct-entry midwives through the Department of Health, and her listing covers prenatal care, labor and delivery support, and postpartum care.",
+			costRange: "$2,000-$2,500",
+			costRange_source: "market-estimate",
+			services: [
+				"Home Birth",
+				"Prenatal Care",
+				"Labor Support",
+				"Postpartum Care"
+			],
+			serviceArea: [
+				"Bellevue, WA"
+			]
+		},
+		{
+			name: "Northshore Midwives & Lactation Consulting",
+			credential: "Licensed Midwife (LM), International Board Certified Lactation Consultant (IBCLC)",
+			practice: "Northshore Midwives & Lactation Consulting",
+			url: "https://www.northshoremidwives.com/bellevue-lactation-consultant-midwife-doula-postpartum-doula/",
+			photo: "/images/provider-bellevue-wa-northshore-midwives.webp",
+			description: "Northshore Midwives & Lactation Consulting serves the Bellevue area with lactation consulting, midwifery, and postpartum doula services. Lead clinician Andrea is one of the first and only licensed midwives who is also an International Board Certified Lactation Consultant (IBCLC) in Washington State, and has assisted families since 2007. The practice accepts all insurance companies, including Medicaid coverage, and serves Bellevue, Kirkland, Redmond, Woodinville, and Sammamish.",
+			costRange: "$2,000-$2,500",
+			costRange_source: "market-estimate",
+			services: [
+				"Lactation Support",
+				"Midwifery Care",
+				"Postpartum Support",
+				"Newborn Feeding Support"
+			],
+			serviceArea: [
+				"Bellevue, WA",
+				"Kirkland, WA",
+				"Redmond, WA",
+				"Woodinville, WA",
+				"Sammamish, WA"
+			]
+		},
+		{
+			name: "Heng Ma (Body Enmotion Massage and Doula Care)",
+			credential: "IBCLC, Licensed Massage Therapist, Birth and Postpartum Doula",
+			practice: "Body Enmotion Massage and Doula Care",
+			url: "https://www.bodyenmotion.com/hengma",
+			photo: "/images/provider-bellevue-wa-heng-ma.webp",
+			description: "Heng Ma is an IBCLC-certified lactation consultant, licensed massage therapist, and experienced birth and postpartum doula who has supported over 5,000 families since 2016. Her practice, Body Enmotion Massage and Doula Care, specializes in Ayurvedic postpartum massage, belly binding, infant massage, and breastfeeding support for newborn families, and she serves the Bellevue area. Her birth doula fee is listed at $2,500 on the Meela directory.",
+			costRange: "$2,500-$2,500",
+			costRange_source: "published",
+			services: [
+				"Lactation Support",
+				"Birth Doula",
+				"Postpartum Support",
+				"Ayurvedic Postpartum Massage",
+				"Infant Massage"
+			],
+			serviceArea: [
+				"Bellevue, WA",
+				"Seattle, WA"
+			]
+		}
+	],
+	culture: "Bellevue is a fast-growing Eastside suburb of Seattle with a population of roughly 154,000, known for its tech industry presence and diverse, well-educated population. Most births in Washington occur in hospitals, but the state has a strong and well-regulated midwifery infrastructure, with Licensed Midwives practicing under formal state licensure since 1981 and a rising number of home and birth-center births during the pandemic years. Bellevue families have access to two major hospital maternity units within a short drive (Overlake in Bellevue and EvergreenHealth in Kirkland), both offering Level III NICU care, plus freestanding birth centers in Bellevue, Kirkland, and Tacoma. Washington's Apple Health (Medicaid) program covers licensed midwifery care and planned home births attended by enrolled providers, making midwife-led and out-of-hospital birth options accessible to a broad range of families.",
+	heroLocalDetail: "Bellevue families can choose between the Overlake Childbirth Center, a U.S. News High Performing maternity hospital with a Level III NICU and TeamBirth care model, and EvergreenHealth's Family Maternity Center in nearby Kirkland. Freestanding birth center options include Eastside Birth Center in Bellevue and Puget Sound Midwives & Birth Center in Kirkland, while licensed midwives and doulas serve the area for home and hospital births.",
+	hospitalDetails: [
+		{
+			name: "Overlake Medical Center & Clinics (Overlake Childbirth Center)",
+			thumbnail: "/images/bellevue-wa-hospital-overlake.webp",
+			address: "1035 116th Ave NE, Building 1, E2, Bellevue, WA 98004",
+			url: "https://www.overlakehospital.org/services/childbirth-center",
+			nicuLevel: "III",
+			doulaPolicy: "Doulas welcomed as part of the care team; TeamBirth collaborative birth model",
+			midwifeFriendly: true,
+			waterBirth: "Hydrotherapy options vary by provider; confirm at your hospital tour",
+			medicaid: true,
+			lactation: true,
+			privateRooms: true,
+			paragraph: "The Overlake Childbirth Center is the primary hospital maternity unit in Bellevue, located at 1035 116th Ave NE. It offers private labor, delivery, and recovery rooms plus private mother-baby suites, two surgical suites equipped for cesarean or high-risk births, and a Level III Neonatal Intensive Care Unit (NICU) for babies needing complex care. The center uses the TeamBirth philosophy, which places the patient, their safety, preferences, and goals at the center of every decision, and explicitly welcomes doulas as part of the care team. Overlake offers vaginal birth after cesarean (VBAC) for eligible candidates, an emergency department specifically for expecting families, and a donor milk depot. The center is one of only three hospitals in Washington state recognized as High Performing in Maternity Care (Uncomplicated Pregnancy) by U.S. News & World Report."
+		},
+		{
+			name: "EvergreenHealth Family Maternity Center",
+			thumbnail: "/images/bellevue-wa-hospital-evergreenhealth.webp",
+			address: "12040 NE 128th Street, Kirkland, WA 98034",
+			url: "https://www.evergreenhealth.com/health-services/pregnancy-birth/",
+			nicuLevel: "III",
+			doulaPolicy: "Not explicitly published; support persons and doulas generally welcomed (verify directly)",
+			midwifeFriendly: true,
+			waterBirth: "Hydrotherapy options vary; confirm with the maternity center directly",
+			medicaid: true,
+			lactation: true,
+			privateRooms: true,
+			paragraph: "The EvergreenHealth Family Maternity Center in Kirkland, about 10 miles from Bellevue, is a newly renovated maternity unit with 34 refurbished labor rooms, 27 remodeled after-delivery rooms, and two modern family areas with kitchens and entertainment centers. Labor, birth, and recovery take place in private birthing suites with private bathrooms, and the center offers concierge-style meal service. The hospital's Level 3 Neonatal Intensive Care Unit provides one of the highest levels of care available for critically ill infants, with neonatologists on-site around the clock and single-room family-centered care that accommodates twins and triplets. EvergreenHealth has earned the CMS Birthing Friendly Designation, offers certified nurse-midwife (CNM) care through EvergreenHealth Midwifery Care, and partners its NICU with Seattle Children's and Swedish Medical Center for newborns requiring complicated care or surgery."
+		}
+	],
+	birthCenterDetails: [
+		{
+			name: "Eastside Birth Center PS",
+			thumbnail: "/images/bellevue-wa-birth-center-eastside.webp",
+			address: "14700 NE 8th St, Suite 115, Bellevue, WA 98007",
+			url: "https://eastsidebirthcenter.com/",
+			services: [
+				"Midwifery-Led Care",
+				"Birth Center Births",
+				"Prenatal Care",
+				"Postpartum Care"
+			],
+			medicaid: false,
+			distance: "In Bellevue",
+			paragraph: "Eastside Birth Center PS is a freestanding birth center in Bellevue offering a gentle, natural, and supportive environment for expectant parents, with professionally qualified midwifery staff providing care from pregnancy through postpartum. The center is licensed by the Washington State Department of Health as a childbirth center and serves families who want an out-of-hospital birth option close to home."
+		},
+		{
+			name: "Puget Sound Midwives & Birth Center",
+			thumbnail: "/images/bellevue-wa-birth-center-puget-sound.webp",
+			address: "13128 Totem Lake Blvd NE, Suite 101, Kirkland, WA 98034",
+			url: "https://www.birthcenter.com/",
+			services: [
+				"Midwifery-Led Care",
+				"Birth Center Births",
+				"Prenatal Care",
+				"Postpartum Care"
+			],
+			medicaid: true,
+			distance: "~10 miles from Bellevue",
+			paragraph: "Puget Sound Midwives & Birth Center, founded in 2010 in Kirkland, is a freestanding birth center where births take place under the care of highly skilled midwives, with privileges extended to qualified midwives in the Seattle area. The center is in-network with most major insurance companies and accepts Washington State Medicaid. It sits about 10 miles from Bellevue in the Totem Lake neighborhood of Kirkland."
+		},
+		{
+			name: "The Birthing Inn",
+			thumbnail: "/images/bellevue-wa-birth-center-birthing-inn.webp",
+			address: "6002 Westgate Blvd Suite 120, Tacoma, WA 98406",
+			url: "https://thebirthinginn.com/",
+			services: [
+				"Midwifery-Led Care",
+				"Water Birth",
+				"Prenatal Care",
+				"Postpartum Care"
+			],
+			medicaid: false,
+			distance: "~30 miles from Bellevue",
+			paragraph: "The Birthing Inn is Tacoma's only freestanding birth center, operating since 1999 and welcoming over 3,000 babies. It is accredited by the Commission for the Accreditation of Birth Centers (CABC) since 2016, and its water birth tubs are included in all packages. The center serves families from Gig Harbor, Lakewood, Federal Way, Puyallup, Auburn, and the broader Puget Sound region, about 30 miles from Bellevue."
+		}
+	],
+	midwifeInfo: {
+		paragraph: "In Washington State, non-nurse midwives are licensed as Licensed Midwives (LMs) by the Washington State Department of Health under RCW 18.50, a licensing pathway for direct-entry midwives that dates to 1917 and was rebuilt for direct-entry practice in 1981. Certified Nurse-Midwives (CNMs) are licensed by the Washington Nursing Care Quality Assurance Commission. Both credentials can be verified through the Department of Health's provider credential search. Washington's Apple Health (Medicaid) program covers licensed midwifery care and planned home births attended by enrolled providers for low-risk pregnancies that pass risk screening, and Washington's home-birth rate has trended upward, ranging from 1% to 2.1% of births between 2010 and 2022.",
+		credentialTypes: "LM, CNM"
+	},
+	birthStats: {
+		cesareanRate: 30,
+		maternalMortalityRate: 30.5,
+		homeBirthRate: 2.1,
+		birthCenterBirthRate: 2.6,
+		dataYear: 2023,
+		dataSource: "CDC NCHS National Vital Statistics System; March of Dimes PeriStats; WA DOH"
+	},
+	medicaidNote: "Yes - Washington's Apple Health (Medicaid) program covers doula services statewide, and enrolled doulas bill through ProviderOne. Apple Health also covers licensed midwifery care and planned home births attended by enrolled Licensed Midwives, and Overlake Medical Center's childbirth center accepts WA Apple Health (Medicaid). Confirm your doula or midwife is a Washington State Medicaid-enrolled provider before your first visit.",
+	insuranceNote: "Overlake Medical Center and EvergreenHealth accept most major private insurance plans. Northshore Midwives & Lactation Consulting states it accepts all insurance companies, including Medicaid coverage. Ask whether HSA or FSA funds can help with out-of-pocket doula costs, and whether lactation consultants are in-network with your plan.",
+	faqs: [
+		{
+			q: "How much does a doula cost in Bellevue, WA?",
+			a: "Published Bellevue rates run about $2,000 to $2,500 for a birth doula package: Bellevue Doula lists $2,000 including two prenatal meetings, continuous labor support, and two postpartum meetings, and Heng Ma lists a $2,500 birth doula fee. Ask about sliding-scale options or payment plans when you interview doulas."
+		},
+		{
+			q: "What hospitals in Bellevue offer labor and delivery services?",
+			a: "Overlake Medical Center & Clinics operates the Overlake Childbirth Center at 1035 116th Ave NE in Bellevue, offering private labor/delivery/recovery rooms, a Level III NICU, and TeamBirth collaborative care. EvergreenHealth's Family Maternity Center in Kirkland (12040 NE 128th Street) is about 10 miles away and also offers a Level 3 NICU and CNM midwifery care."
+		},
+		{
+			q: "Are there freestanding birth centers near Bellevue?",
+			a: "Yes. Eastside Birth Center PS is a freestanding birth center in Bellevue at 14700 NE 8th St. Puget Sound Midwives & Birth Center in Kirkland (13128 Totem Lake Blvd NE) is about 10 miles away and accepts Washington State Medicaid. The Birthing Inn in Tacoma, a CABC-accredited freestanding birth center, is about 30 miles away."
+		},
+		{
+			q: "How are midwives licensed in Washington State?",
+			a: "Licensed Midwives (LMs) are licensed by the Washington State Department of Health under RCW 18.50, a direct-entry midwifery pathway dating to 1917 and rebuilt in 1981. Certified Nurse-Midwives (CNMs) are licensed by the Washington Nursing Care Quality Assurance Commission. Both credentials can be verified through the DOH provider credential search."
+		},
+		{
+			q: "Does Medicaid (Apple Health) cover midwifery and birth center care in Washington?",
+			a: "Yes. Washington's Apple Health (Medicaid) program covers licensed midwifery care and planned home births attended by enrolled Licensed Midwives, CNMs, or physicians for low-risk pregnancies that pass risk screening. Overlake Medical Center's childbirth center also accepts WA Apple Health (Medicaid)."
+		},
+		{
+			q: "What is the cesarean rate in Washington State?",
+			a: "In 2023, 30.0% of live births in Washington were cesarean deliveries, according to March of Dimes PeriStats based on NCHS final natality data. Washington's NTSV (first-birth, term, singleton, vertex) cesarean rate has been below the Healthy People 2020 target of 23.9 percent."
+		}
+	],
+	lat: 47.6101,
+	lng: -122.2015,
+	nearbyCities: [
+		"seattle-wa",
+		"tacoma-wa"
+	]
 },
 
 };

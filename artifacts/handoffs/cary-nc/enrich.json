@@ -1,0 +1,90 @@
+{
+  "slug": "cary-nc",
+  "stage": "enrich",
+  "produced_at": "2026-09-14T22:36:05Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "ENRICH stage for cary-nc: Pre-warmed provider photos from DoulaMatch and Bornbir; enhanced hospital descriptions with all mom-question fields; verified birth center; merged changes via merge-enriched-data.sh",
+  "sources": [
+    {
+      "claim": "Bornbir Cary NC doula page lists doulas serving Cary, NC area with face-crop photos",
+      "url": "https://www.bornbir.com/cary/nc/doula",
+      "quote": "Match directly with birth and postpartum doulas near you in Cary, NC - all in 30 seconds, and it is entirely free!"
+    },
+    {
+      "claim": "Haven Women Health and Birth Center is CABC-accredited and operates in Cary, NC at 226 Ashville Ave",
+      "url": "https://birthcenteraccreditation.org/2025/03/24/haven-womens-health-and-birth-center/",
+      "quote": "Haven Women Health and Birth Center - Accredited Birth Centers - Address: 226 Asheville Avenue, Suite 20 Cary, NC 27518 - Accredited Since: June 2025"
+    },
+    {
+      "claim": "UNC Rex NICU has 21 beds and Level IV designation per Neonatology Solutions",
+      "url": "https://neonatologysolutions.com/nicu/unc-rex/",
+      "quote": "UNC Rex Level IV NICU 21 Beds 4420 Lake Boone Trail Raleigh, NC 27607"
+    },
+    {
+      "claim": "WakeMed Cary Hospital has a Level III NICU and labor delivery services",
+      "url": "https://www.wakemed.org/find-a-location/cary-hospital/services-and-specialties/pregnancy-and-childbirth",
+      "quote": "Cary Hospital has years of experience providing the highest level of care before, during and after your baby delivery."
+    }
+  ],
+  "providers": [
+    {
+      "name": "Triangle Doula by Nature",
+      "photo": "/images/provider-cary-nc-triangle-doula.webp",
+      "description_chars": 309,
+      "costRange": "$800-$2,500",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Mariam Lam",
+      "photo": "/images/provider-cary-nc-mariam-lam.webp",
+      "description_chars": 257,
+      "costRange": "$800-$900",
+      "costRange_source": "published"
+    },
+    {
+      "name": "Amanda Petry",
+      "photo": "/images/provider-cary-nc-amanda-petry.webp",
+      "description_chars": 364,
+      "costRange": "$800-$950",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Sacred Haven Midwifery",
+      "photo": "/images/provider-cary-nc-sacred-haven.webp",
+      "description_chars": 206,
+      "costRange": "$2,500-$4,500",
+      "costRange_source": "market-estimate"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "WakeMed Cary Hospital",
+      "paragraph_chars": 1248,
+      "thumbnail": "/images/cary-nc-hospital-wakemed-cary.webp",
+      "nicuLevel": "III",
+      "url": "https://www.wakemed.org/find-a-location/cary-hospital/services-and-specialties/pregnancy-and-childbirth"
+    },
+    {
+      "name": "UNC Health Rex (Rex Women's Center)",
+      "paragraph_chars": 1295,
+      "thumbnail": "/images/cary-nc-hospital-unc-rex.webp",
+      "nicuLevel": "IV",
+      "url": "https://www.rexhealth.com/rh/care-treatment/womens-health/maternity-services/"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Haven Women's Health and Birth Center",
+      "paragraph_chars": 470,
+      "thumbnail": "/images/cary-nc-birth-center-haven.webp"
+    }
+  ],
+  "birthstats": {
+    "dataYear": 2023,
+    "dataSource": "CDC NCHS National Vital Statistics System; KFF"
+  },
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  }
+}
