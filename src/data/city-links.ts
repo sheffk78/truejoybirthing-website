@@ -271,6 +271,7 @@ export const topicCities: Record<string, CityLinkEntry[]> = {
   interview: [
     // Arizona
     { slug: "phoenix-az", state: "az", label: "Phoenix" },
+    { slug: "los-angeles-ca", state: "ca", label: "Los Angeles" },
     // California
     { slug: "san-diego-ca", state: "ca", label: "San Diego" },
     // Colorado
