@@ -1,0 +1,86 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "cary-nc",
+  "stage": "verify_deploy",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 9,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the Triangle Doula by Nature homepage and directly supports the claim by describing birth support services and explicitly listing service areas including Cary, Durham, Chapel Hill, Raleigh, Apex, and other NC Triangle cities.",
+      "claim": "Triangle Doula by Nature is a birth doula practice serving families in Cary and across the NC Triangle, offering prenatal, labor, and postpartum support across hospital, home, water, and birth center births",
+      "url": "https://www.triangledoulabynature.com/",
+      "quote": "My hope is to provide you with a positive birth, quality support, empowerment and preparation. Inform clients of all the options available to them for pregnancy and birth. While ensuring families the "
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the matching domain (triangledoulabynature.com) and explicitly lists Hospital Birth, Home Birth, Water Birth, and Birth Center Birth among the supported birth goals, directly supporting the claim.",
+      "claim": "Triangle Doula by Nature supports a wide range of birth goals including hospital, home, water, and birth center births",
+      "url": "https://www.triangledoulabynature.com/",
+      "quote": "Supporting families with any and all birth goals or parenting styles, and our doulas have a wide variety of skills and extensive experience supporting: Hospital Birth/Home Birth/ Water Birth/ Birth Ce"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the Triangle Doula by Nature domain and explicitly states Ka'Tiera is a trained birth professional who completed Southwest Tech's Direct Entry Midwifery Program, directly supporting the claim.",
+      "claim": "Ka'Tiera Truett of Triangle Doula by Nature is a trained birth professional who completed Southwest Tech's Direct Entry Midwifery Program",
+      "url": "https://www.triangledoulabynature.com/",
+      "quote": "My name is Ka'Tiera and I am a trained birth professional. to the Raleigh-Durham & the Triangle area. I also have completed school at Southwest Tech's Direct Entry Midwifery Program."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from Meela's Cary, NC doulas page and explicitly names Mariam Lam of Durham, NC with 50 families supported, 6 years experience, DONA International birth doula certification, and a $900 birth fee, matching every element of the claim.",
+      "claim": "Mariam Lam is a DONA-certified birth doula serving the Durham/Triangle area, listed among birth doulas available to Cary families on Meela, with 50 families supported over 6 years and a $900 birth fee",
+      "url": "https://www.hellomeela.com/cary-nc/doulas/",
+      "quote": "Mariam Lam Durham, NC 5 8 50 Families Supported 6 Years Experience ... While balancing parenthood, a full-time job as a Research Specialist at UNC, and volunteering as a doula, I worked to earn my Bir"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a first-person bio from Amanda on a page whose URL (/amanda-petry) and domain (bornbir.com, a birth/feeding-related site) match the claim, and it directly confirms she is a Registered Nurse, an International Board Certified Lactation Consultant, and focused on infant feeding support, wi",
+      "claim": "Amanda Petry is a Registered Nurse and International Board Certified Lactation Consultant based in Cary, NC providing personalized infant feeding support from pregnancy through the breastfeeding journey, with in-home visits",
+      "url": "https://www.bornbir.com/amanda-petry",
+      "quote": "Hello! My name is Amanda and I love helping new families find their groove. I am a Registered Nurse and International Board Certified Lactation Consultant. My focus is helping families navigate infant"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from a first-person bio on the Amanda Petry page of a breastfeeding-support domain and explicitly states she offers in-home visits and has experience supporting premature infants and a wide range of feeding challenges, directly matching the claim.",
+      "claim": "Amanda Petry offers in-home visits and has experience supporting premature infants and a wide range of feeding challenges",
+      "url": "https://www.bornbir.com/amanda-petry",
+      "quote": "I help families prepare for breastfeeding before baby arrives, offer in home visits for reassurance and troubleshooting, and provide guidance on pumping, milk supply, and returning to work. I have exp"
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from the bornbir.com Amanda Petry page explicitly states she accepts insurance and is located in Cary, North Carolina, directly supporting the claim.",
+      "claim": "Amanda Petry is located in Cary, North Carolina and accepts insurance",
+      "url": "https://www.bornbir.com/amanda-petry",
+      "quote": "Amanda Petry Accepts insurance Lactation Consultant Cary, North Carolina 10 years of experience 5.0"
+    },
+    {
+      "index": 7,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the practice's own domain and directly confirms it is a community-based birth and women's health practice established in 2023 offering homebirth services, with no contradiction to the North Carolina location.",
+      "claim": "Sacred Haven Midwifery is a community-based birth and women's health practice in North Carolina established 2023, offering homebirth services",
+      "url": "https://www.sacredhavenmidwifery.com/",
+      "quote": "Community-Based Birth & Women's Health Practice Est. 2023 ... Homebirth Service"
+    },
+    {
+      "index": 8,
+      "verdict": "SUPPORTED",
+      "reason": "The quote lists 'Homebirth Service', 'Birth Suite', and 'Lactation Services', which directly matches the claim's services and plausibly appears as menu items on the Sacred Haven Midwifery homepage.",
+      "claim": "Sacred Haven Midwifery provides prenatal, birth, and postpartum care including lactation services and birth suite options",
+      "url": "https://www.sacredhavenmidwifery.com/",
+      "quote": "Homebirth Service ... Birth Suite ... Lactation Services"
+    }
+  ],
+  "checked_at": "2026-09-14T17:07:12-06:00"
+}

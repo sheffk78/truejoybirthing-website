@@ -3,8 +3,8 @@
   "stage": "video_outreach",
   "mode": "local_video_outreach",
   "exit_code": 1,
-  "passed": 4,
-  "failed": 5,
+  "passed": 6,
+  "failed": 3,
   "skipped": 0,
   "results": {
     "pre_render_gate": {
@@ -12,24 +12,24 @@
       "detail": "scene data exists at remotion/src/data/cary-nc-data.ts"
     },
     "video_file_exists": {
-      "status": "FAIL",
-      "detail": "local mp4 missing and video not yet uploaded/embedded"
+      "status": "PASS",
+      "detail": "video file 19.9MB >10MB"
     },
     "youtube_upload": {
-      "status": "FAIL",
-      "detail": "cary-nc not found in video-embeds.ts"
+      "status": "PASS",
+      "detail": "videoId 4yfxZdnklpI present in video-embeds.ts"
     },
     "youtube_thumbnail": {
       "status": "PASS",
-      "detail": "thumbnail present locally (730KB) \u2014 no videoId to verify YouTube upload"
+      "detail": "thumbnail present locally (730KB) and YouTube returns 162KB"
     },
     "video_embedded": {
       "status": "FAIL",
-      "detail": "no videoId to verify"
+      "detail": "videoId 4yfxZdnklpI not found on live page"
     },
     "videoobject_schema": {
       "status": "FAIL",
-      "detail": "no videoId to verify"
+      "detail": "VideoObject schema missing on live page"
     },
     "outreach_sent_or_blocked": {
       "status": "PASS",
@@ -41,7 +41,7 @@
     },
     "video_content_city_match": {
       "status": "FAIL",
-      "detail": "G67: no videoId \u2014 cannot verify video content"
+      "detail": "G67: LEAKED \u2014 overview scene says 'Denver' (slug cary-nc). Re-render with current pipeline and re-upload."
     }
   }
 }

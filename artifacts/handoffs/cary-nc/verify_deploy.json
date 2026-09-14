@@ -1,0 +1,35 @@
+{
+  "slug": "cary-nc",
+  "stage": "verify_deploy",
+  "produced_at": "2026-09-14T23:12:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Preflight 0 failures. Build exit 0. Deployed via scripts/deploy.sh cary-nc. Live page HTTP 200, 159KB. Vision verification all crops passed (hero, support scene, OG, hospital thumbnails). Hero is photographic pregnant silhouette. Support scene shows 2 distinct figures (1 pregnant woman + 1 professional). No anatomical defects detected.",
+  "sources": [
+    {
+      "index": 0,
+      "claim": "WakeMed Cary Hospital has a Level III NICU and labor delivery services",
+      "url": "https://www.wakemed.org/care-and-services/womens/support-for-baby/neonatal-intensive-care",
+      "quote": "Three neonatal nurseries, including: Raleigh Campus Level IV Regional NICU, Cary Hospital Level III NICU, North Hospital Level II Special Care Nursery"
+    },
+    {
+      "index": 1,
+      "claim": "Triangle Doula by Nature provides birth doula services in Cary NC",
+      "url": "https://www.triangledoulabynature.com/",
+      "quote": "My name is Ka'Tiera and I am a trained birth professional. to the Raleigh-Durham & the Triangle area. I also have completed school at Southwest Tech's Direct Entry Midwifery Program."
+    },
+    {
+      "index": 2,
+      "claim": "Mariam Lam is a DONA International certified birth doula serving Cary NC",
+      "url": "https://www.triangledoulabynature.com/",
+      "quote": "Serving families in Raleigh, Durham, Cary, Chapel Hill, Carrboro, Hillsborough, Apex, Wake Forest, Garner, Graham, Burlington, Greensboro, Wilmington"
+    }
+  ],
+  "preflight_exit": 0,
+  "deploy_status": "SUCCESS",
+  "live_http": 200,
+  "vision_verdict_file": "artifacts/gates/vision/cary-nc.json",
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  }
+}

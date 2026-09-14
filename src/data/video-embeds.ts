@@ -1859,4 +1859,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-09-12T11:46:00-06:00",
   },
 
+  "cary-nc": {
+    videoId: "6biaWrtiwtg",
+    title: "Cary Doula & Birth Plan Guide",
+    description: "Watch the full Cary Doula & Birth Plan Guide — all in about 3:14.",
+    duration: 194,
+  },
+
 };

@@ -1,0 +1,14 @@
+{
+  "slug": "long-beach-ca",
+  "verdicts": [
+    {"crop": "long-beach-ca-hero-fig0.png", "verdict": "pass", "defects": []},
+    {"crop": "long-beach-ca-hero-fig1.png", "verdict": "pass", "defects": []},
+    {"crop": "long-beach-ca-hero-fig2.png", "verdict": "pass", "defects": []},
+    {"crop": "long-beach-ca-og-fig0.png", "verdict": "pass", "defects": []},
+    {"crop": "long-beach-ca-support-fig0.png", "verdict": "pass", "defects": []},
+    {"crop": "long-beach-ca-thumb-fig0.png", "verdict": "pass", "defects": []}
+  ],
+  "notes": "fig0/fig1/og-fig0: single pregnant figure, 1-2 arms correct, belly matches facing direction. fig2: blurred sunset, 0 figures. support-fig0: two walking figures, 4 arms total, correct anatomy. thumb-fig0: abstract play-button thumbnail, 0 figures. All pass — no fused fingers, melted joints, extra/missing limbs, or figure merges.",
+  "checked_at": "2026-09-14T23:15:00Z",
+  "method": "vision_analyze per crop at 2x zoom, defect-specific questions per visual-verify-gate procedure"
+}

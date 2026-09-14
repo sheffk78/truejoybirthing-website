@@ -1,0 +1,45 @@
+{
+  "slug": "cary-nc",
+  "verdicts": [
+    {
+      "crop": "cary-nc-hero-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "cary-nc-support-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "cary-nc-og-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "cary-nc-thumb-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "cary-nc-thumb-fig1.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "cary-nc-thumb-fig2.png",
+      "verdict": "pass",
+      "defects": []
+    }
+  ],
+  "details": {
+    "cary-nc-hero-fig0.png": "1 human figure, pregnant silhouette facing left with hands resting on abdomen; no fused/extra fingers, no phantom limbs, no extra arms, belly position consistent with facing direction.",
+    "cary-nc-support-fig0.png": "2 distinct human figures (seated + standing, holding hands); normal anatomical structures, no fused fingers/extra arms/melted joints/distorted hands. Triage merge-flag resolved: two separate figures, not merged.",
+    "cary-nc-og-fig0.png": "1 human figure; no anatomical defects; typical pregnant silhouette.",
+    "cary-nc-thumb-fig0.png": "1 human figure in profile; no defects; no figure merge (triage 'two pregnant women' flag resolved: single figure).",
+    "cary-nc-thumb-fig1.png": "Narrow sliver: tree/water landscape reflection only; no human figures, nothing to defect.",
+    "cary-nc-thumb-fig2.png": "Narrow sliver: tree/water landscape reflection only; no human figures, nothing to defect."
+  },
+  "checked_by": "atlas:latest (mistral3 multimodal via local ollama) — vision_analyze tool unavailable in this session; per-crop 2x-zoom defect prompts per visual-verify-gate procedure",
+  "checked_at": "2026-09-14T23:12:00Z"
+}
