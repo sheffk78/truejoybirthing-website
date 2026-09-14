@@ -1861,7 +1861,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
 
   "cary-nc": {
     videoId: "wCLcJW9BE4g",
-    title: "Cary, NC Doula & Birth Plan Guide",
+    title: "Cary, North Carolina Doula & Birth Plan Guide",
     description: "Watch the Cary, North Carolina Doula & Birth Plan Guide â WakeMed Cary, UNC Health Rex, Haven Birth Center, local doulas, costs, and NC Medicaid, all in about 2:47.",
     duration: "PT2M47S",
   },
