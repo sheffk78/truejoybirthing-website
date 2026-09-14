@@ -1860,10 +1860,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
   "cary-nc": {
-    videoId: "6biaWrtiwtg",
-    title: "Cary Doula & Birth Plan Guide",
-    description: "Watch the full Cary Doula & Birth Plan Guide — all in about 3:14.",
-    duration: 194,
+    videoId: "wCLcJW9BE4g",
+    title: "Cary, NC Doula & Birth Plan Guide",
+    description: "Watch the Cary, North Carolina Doula & Birth Plan Guide â WakeMed Cary, UNC Health Rex, Haven Birth Center, local doulas, costs, and NC Medicaid, all in about 2:47.",
+    duration: "PT2M47S",
   },
 
 };
