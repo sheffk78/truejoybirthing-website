@@ -581,8 +581,6 @@ def support_scene_quality(slug: str) -> dict:
     except Exception as e:
         return {"pass": True, "detail": f"G73 anatomy check could not run ({type(e).__name__}) — manual review advised"}
 
-    return {"pass": True, "detail": "Support scene is unique to this city"}
-
 
 def hero_aspect(slug: str):
     """G25: Check hero image is 3:2 aspect ratio (not 16:9)."""
