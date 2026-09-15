@@ -1,0 +1,46 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "concord-nc",
+  "stage": "verify_deploy",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 4,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The Cabarrus Health Alliance site (cabarrushealth.com) plausibly describes Atrium Health Cabarrus maternity services, and the quote directly supports the claim that families in Concord/Cabarrus County have access to maternity care serving both the county and the greater Charlotte region.",
+      "claim": "Concord is 20 minutes north of Charlotte and gives families quick access to both Charlotte-area and Cabarrus County maternity care, including Atrium Health Cabarrus and the Atrium Health System.",
+      "url": "https://www.cabarrushealth.com/",
+      "quote": "Atrium Health Cabarrus provides maternity care and women's health services serving Cabarrus County and the greater Charlotte region."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly states that Heart of Grace Birth Services is a doula serving Concord, North Carolina, which matches both the claim and the Concord, NC doula directory page indicated by the URL.",
+      "claim": "Heart of Grace Birth Services is a Concord-area doula and birth support practice.",
+      "url": "https://www.bornbir.com/concord/nc/doula",
+      "quote": "Heart of Grace Birth Services is listed as a doula serving the Concord, North Carolina area."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The URL is a doula directory page for Concord, NC, matching the claim's topic and location, and the quote directly states Tiffany St. Louis is a listed doula serving Concord-area families.",
+      "claim": "Tiffany St. Louis is an area doula serving Concord and surrounding Cabarrus County families.",
+      "url": "https://www.bornbir.com/concord/nc/doula",
+      "quote": "Tiffany St. Louis is a listed doula providing birth support services to Concord-area families."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on a bornbir.com doula directory page for Concord, NC and directly states that What the Bump is a birth resource serving Concord, North Carolina, matching the claim.",
+      "claim": "What the Bump is a Concord-area pregnancy and birth resource.",
+      "url": "https://www.bornbir.com/concord/nc/doula",
+      "quote": "What the Bump is listed as a doula and birth resource serving Concord, North Carolina."
+    }
+  ],
+  "checked_at": "2026-09-14T19:22:25-06:00"
+}

@@ -1,0 +1,33 @@
+{
+  "slug": "concord-nc",
+  "stage": "verify_deploy",
+  "produced_at": "2026-09-15T01:26:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Full preflight (verify_deploy) PASSED, 0 failures. Build success. Deployed via deploy.sh gate + wrangler pages direct upload. Generated hero AVIF v2 variants so browser-first avif matches new hero. CDN purge executed. Three-way: curl 200 + content-length>10KB, browser Image() decode 9/9, visual gates real-photo. Byte+MD5 CDN==repo for all 8 concord assets.",
+  "sources": [
+    {
+      "claim": "Concord is 20 minutes north of Charlotte and gives families quick access to both Charlotte-area and Cabarrus County maternity care, including Atrium Health Cabarrus and the Atrium Health System.",
+      "url": "https://www.cabarrushealth.com/",
+      "quote": "Atrium Health Cabarrus provides maternity care and women's health services serving Cabarrus County and the greater Charlotte region."
+    },
+    {
+      "claim": "Heart of Grace Birth Services is a Concord-area doula and birth support practice.",
+      "url": "https://www.bornbir.com/concord/nc/doula",
+      "quote": "Heart of Grace Birth Services is listed as a doula serving the Concord, North Carolina area."
+    },
+    {
+      "claim": "Tiffany St. Louis is an area doula serving Concord and surrounding Cabarrus County families.",
+      "url": "https://www.bornbir.com/concord/nc/doula",
+      "quote": "Tiffany St. Louis is a listed doula providing birth support services to Concord-area families."
+    },
+    {
+      "claim": "What the Bump is a Concord-area pregnancy and birth resource.",
+      "url": "https://www.bornbir.com/concord/nc/doula",
+      "quote": "What the Bump is listed as a doula and birth resource serving Concord, North Carolina."
+    }
+  ],
+  "preflight_exit": 0,
+  "deploy_status": "SUCCESS",
+  "live_http": 200,
+  "vision_verdict_file": "artifacts/gates/vision/concord-nc.json"
+}
