@@ -1,0 +1,62 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "concord-nc",
+  "stage": "enrich",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 6,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the official Atrium Health Cabarrus maternity services page and directly states the maternity center's name (Mariam Cannon Hayes Women's Center) and the on-site Level IV NICU with Levine Children's neonatologists and Jeff Gordon Children's Center, matching the claim exactly.",
+      "claim": "Atrium Health Cabarrus maternity center is called Mariam Cannon Hayes Women's Center and has a Level IV NICU with Atrium Health Levine Children's neonatologists and Jeff Gordon Children's Center on-site",
+      "url": "https://atriumhealth.org/locations/detail/atrium-health-cabarrus/medical-services/maternity-services",
+      "quote": "the maternity center at Atrium Health Cabarrus \u2013 called Mariam Cannon Hayes Women's Center \u2013 provides exceptional care for growing families like yours ... you're receiving top-notch care, with Atrium "
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quoted passage directly states Atrium Health Cabarrus is a 457-bed not-for-profit hospital in Concord, NC, and such employer-description text is plausible in a SimplyHired job listing, with the named facilities (Jeff Gordon Children's Center, Batte Cancer Center) matching the real hospital.",
+      "claim": "Atrium Health Cabarrus is a 457-bed not-for-profit hospital in Concord, NC",
+      "url": "https://www.simplyhired.com/job/CjMNRKvmJ3-ibmU83r3Zrh19A1sx6aoR1aXNlZSAVJM5WUsXwJgiIg",
+      "quote": "Atrium Health Cabarrus is a regional 457-bed, not-for-profit hospital in Concord, NC. More than 4,200 hospital employees provide services through an extensive inpatient and outpatient network, includi"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the Atrium Health Cabarrus visiting-hours page and directly matches the claim's specifics: the father of the baby or significant other is welcome at any time, and NICU visitors are welcome anytime except 6:30-7:30am/pm.",
+      "claim": "Atrium Health Cabarrus has an open visiting policy; the father of the baby or significant other is welcome any time at the Mariam Cannon Hayes Family Center, and NICU visitors are welcome anytime except 6:30-7:30am/pm",
+      "url": "https://atriumhealth.org/locations/detail/atrium-health-cabarrus/visiting-hours",
+      "quote": "The father of the baby or significant other is welcome at any time. Other visitors are allowed from 6 a.m. to 2 p.m and 4 p.m. to 10 p.m. In the NICU, visitors are welcome any time except 6:30-7:30 in"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from Atrium Health's own lactation services page and directly states both the international board-certified lactation consultant team and that every Atrium Health hospital has breastfeeding-trained providers with some holding Baby-Friendly designation, matching the claim exactly.",
+      "claim": "Atrium Health provides lactation support by international board-certified lactation consultants and every Atrium Health hospital has providers trained in breastfeeding, with some holding Baby-Friendly designation",
+      "url": "https://atriumhealth.org/medical-services/prevention-wellness/womens-health/maternity-services/lactation-services",
+      "quote": "Our team of international board-certified lactation consultants provides specialized care to help you overcome obstacles, achieve your feeding goals ... Every Atrium Health hospital has providers trai"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the matching domain (heartofgracebirth.com) and directly states the person is a birth doula and childbirth educator serving Concord, Kannapolis, Charlotte, Mooresville, Harrisburg, and surrounding North Carolina communities, matching the claim.",
+      "claim": "Heart of Grace Birth Services founder Lindsay Stowers is a birth doula and childbirth educator serving Concord, Kannapolis, Charlotte, Mooresville, Harrisburg and surrounding NC communities",
+      "url": "https://www.heartofgracebirth.com/",
+      "quote": "As a birth doula and childbirth educator, I feel honored to be able to contribute my expertise to women and families in Concord, Kannapolis, Charlotte, Mooresville, Harrisburg, and other surrounding c"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible homepage text for whatthebumpclt.com (a Charlotte doula service) and directly supports the claim that What The Bump is a team of certified birth and postpartum doulas serving Charlotte and surrounding communities with Registered Nurses and former Labor & Delivery nurses on sta",
+      "claim": "What The Bump is a team of certified birth and postpartum doulas serving Charlotte and surrounding communities including Concord, with Registered Nurses and former Labor & Delivery nurses on staff",
+      "url": "https://whatthebumpclt.com/",
+      "quote": "What The Bump is a team of certified birth and postpartum doulas serving Charlotte, NC and surrounding communities. Our experienced team includes Registered Nurses and former Labor & Delivery nurses w"
+    }
+  ],
+  "checked_at": "2026-09-14T18:49:54-06:00"
+}

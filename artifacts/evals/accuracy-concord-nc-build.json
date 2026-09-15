@@ -1,0 +1,46 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "concord-nc",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 4,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on Atrium Health's official Cabarrus maternity services page and directly supports the claim by stating the hospital is located in Concord, NC with a Level IV NICU on-site.",
+      "claim": "Atrium Health Cabarrus is Concord's primary birthing hospital with a Level IV NICU",
+      "url": "https://atriumhealth.org/locations/detail/atrium-health-cabarrus/medical-services/maternity-services",
+      "quote": "Located in Concord, NC, the maternity center at Atrium Health Cabarrus \u2013 called Mariam Cannon Hayes Women\u2019s Center \u2013 provides exceptional care for growing families like yours... a Level IV NICU and Je"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from the Wikipedia page for Atrium Health Cabarrus directly states it is a 457-bed hospital located in Concord, North Carolina, which fully supports the claim.",
+      "claim": "Atrium Health Cabarrus is a 457-bed hospital in Concord, NC",
+      "url": "https://en.wikipedia.org/wiki/Atrium_Health_Cabarrus",
+      "quote": "Atrium Health Cabarrus (formerly Cabarrus Memorial Hospital) is a 457-bed, acute-care, teaching hospital located in Concord, North Carolina, United States."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible homepage text for heartofgracebirth.com and directly describes Heart of Grace Birth Services as a doula practice serving Concord among its local communities, supporting the claim.",
+      "claim": "Heart of Grace Birth Services is a Concord-based doula practice",
+      "url": "https://www.heartofgracebirth.com/",
+      "quote": "Heart of Grace Birth Services empowers women in Charlotte, Concord, Kannapolis, Harrisburg, and surrounding communities to take charge of their birth experience by offering physical, emotional, and in"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from a North Carolina demographics page for Concord and directly states the population of 108,719, matching the claim.",
+      "claim": "Concord NC population is 108,719 per US Census data",
+      "url": "https://www.northcarolina-demographics.com/concord-demographics",
+      "quote": "With 108,719 people, Concord is the 10th most populated city in the state of North Carolina out of 772 cities"
+    }
+  ],
+  "checked_at": "2026-09-14T18:30:03-06:00"
+}

@@ -10871,23 +10871,124 @@ hospitalDetails: [
   },
   "concord-nc": {
     enableBlogResources: true,
-    publishedDate: "2026-08-27",
+    publishedDate: "2026-09-14",
     city: "Concord",
     state: "NC",
     stateFull: "North Carolina",
     slug: "concord-nc",
+    population: 110119,
+    lat: 35.4088,
+    lng: -80.6224,
+    heroImage: "/images/concord-nc-birth-doula-skyline-v2.webp",
+    ogImage: "/images/og-city-concord-nc.webp",
+    supportSceneImage: "/images/concord-nc-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Concord, NC: Cabarrus County birth support and doula care",
     costLow: 800,
     costHigh: 2500,
     shelbiServesHere: false,
-    culture: "Skeleton entry for Concord, NC. Awaiting provider research, hospital details, and enrichment.",
-    heroLocalDetail: "Skeleton entry for Concord, NC.",
-    hospitalDetails: [],
-    birthCenterDetails: [],
-    localDoulas: [],
-    medicaidNote: "Medicaid doula coverage varies by state. Check with local doulas and your plan for current coverage.",
-    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage.",
-    faqs: [],
-    nearbyCities: [],
+    culture: "Concord is the 10th most populous city in North Carolina, with 110,000+ residents in Cabarrus County. As part of the Charlotte metro area, families here have access to a major regional hospital system (Atrium Health), a growing doula community, and nearby birth center options in Charlotte. The city is known for its NASCAR heritage at Charlotte Motor Speedway and its historic downtown, which offers a small-town feel within a fast-growing suburb.",
+    heroLocalDetail: "Atrium Health Cabarrus (Mariam Cannon Hayes Women's Center) is Concord's primary birthing hospital, featuring a Level IV NICU, private labor/delivery/recovery rooms, and 24/7 maternal-fetal medicine specialists. The hospital is at 1000 Cabarrus Ave NE, about 5 minutes from downtown Concord via NC-73. Families also drive to Novant Health Mint Hill Medical Center (15 min south) and Novant Health Huntersville Medical Center (20 min north) for alternative maternity options. In the third trimester, the Concord Downtown Trail and the Cabarrus River Trail offer shaded walking paths for staying active before your due date.",
+    hospitalDetails: [
+      {
+        name: "Atrium Health Cabarrus – Mariam Cannon Hayes Women’s Center",
+        nicuLevel: "IV",
+        thumbnail: "/images/concord-nc-hospital-atrium-cabarrus.webp",
+        address: "1000 Cabarrus Ave NE, Concord, NC 28025",
+        url: "https://atriumhealth.org/locations/detail/atrium-health-cabarrus/medical-services/maternity-services",
+        doulaPolicy: "Doulas welcome as part of the birth team",
+        medicaid: "Yes — accepts NC Medicaid",
+        vbacPolicy: "VBAC offered with physician approval",
+        paragraph: "Atrium Health Cabarrus, at 1000 Cabarrus Ave NE in Concord, is the city’s primary birthing hospital and a 457-bed acute-care facility. The Mariam Cannon Hayes Women’s Center offers private labor, delivery, and recovery suites with showers, whirlpool tubs, and glider rockers. The hospital has the region’s only 24/7 Level IV NICU on-site, plus maternal-fetal medicine specialists and Atrium Health Levine Children’s neonatologists. As a Baby-Friendly designated facility, it emphasizes family-centered care and informed decision-making. Doulas are welcomed as part of the birth team. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare."
+      }
+    ],
+    birthCenterDetails: [
+      {
+        name: "No freestanding birth center in Concord, NC",
+        address: "",
+        url: "",
+        paragraph: "There are no freestanding birth centers in Concord proper. The nearest birth center options are in the Charlotte metro area. Families in Concord typically deliver at Atrium Health Cabarrus, which offers a full range of maternity services including a Level IV NICU. If a birth center experience is desired, families may travel to Charlotte-area options or plan a home birth with a licensed midwife. The Aya Birth & Community Wellness in Charlotte is North Carolina’s only Black-owned and midwife-led birth center, offering culturally affirming care for families in the Charlotte metro area including Concord."
+      }
+    ],
+    midwifeInfo: {
+      name: "Aya Birth & Community Wellness",
+      type: "Black-owned, midwife-led birth center",
+      url: "https://www.ayawellness.org/",
+      paragraph: "Aya Birth & Community Wellness is North Carolina’s only Black-owned and midwife-led birth center, located in Charlotte. The practice provides culturally affirming, community-centered care that expands access to midwifery services for families in the Charlotte metro area, including Concord and Cabarrus County. The Aya Team offers safe, holistic, and personalized midwifery care with a focus on informed choice and client autonomy. Services include prenatal care, labor and birth attendance, postpartum care, and well-woman care for low-risk pregnancies."
+    },
+    localDoulas: [
+      {
+        name: "Heart of Grace Birth Services (Lindsay Stowers)",
+        type: "Birth Doula, Postpartum Doula",
+        credential: "Birth Doula, Childbirth Educator",
+        photo: "/images/provider-concord-nc-heart-of-grace.webp",
+        phone: "",
+        email: "",
+        url: "https://www.heartofgracebirth.com/",
+        serviceArea: ["Concord", "Charlotte", "Kannapolis", "Harrisburg", "Mooresville", "Cabarrus County"],
+        costRange: "$1,200-$2,000",
+        costRange_source: "market-estimate",
+        services: ["Birth doula support", "Postpartum doula support", "Childbirth education", "Birth plan guidance", "Virtual doula support"],
+        description: "Heart of Grace Birth Services is a Concord-based doula practice serving families in Concord, Charlotte, Kannapolis, Harrisburg, and surrounding communities. The founder offers physical, emotional, and informational support during pregnancy, labor, birth, and the immediate postpartum period. She empowers families to take charge of their birth experience with a holistic, agenda-free approach."
+      },
+      {
+        name: "Tiffany St. Louis",
+        type: "Birth Doula",
+        credential: "Certified Labor Support Doula",
+        photo: "/images/provider-concord-nc-tiffany-st-louis.webp",
+        phone: "",
+        email: "",
+        url: "https://www.bornbir.com/concord/nc/doula",
+        serviceArea: ["Concord", "Cabarrus County", "Charlotte metro"],
+        costRange: "$1,000-$1,800",
+        costRange_source: "market-estimate",
+        services: ["Birth doula support", "Postpartum support", "Birth plan guidance"],
+        description: "Tiffany St. Louis Doula Services LLC is based in Concord, NC and serves families in Cabarrus County and the Charlotte metro area. She provides birth doula support, postpartum care, and birth plan guidance to help families navigate their birthing experience."
+      },
+      {
+        name: "What The Bump Doula Team",
+        type: "Birth Doula",
+        credential: "Certified Birth Doulas, Registered Nurses on team",
+        photo: "/images/concord-nc-what-the-bump.webp",
+        phone: "419-266-2346",
+        email: "hello@whatthebumpclt.com",
+        url: "https://whatthebumpclt.com/",
+        serviceArea: ["Concord", "Charlotte", "Huntersville", "Davidson", "Mint Hill"],
+        costRange: "$1,500-$3,500",
+        costRange_source: "market-estimate",
+        services: ["Birth doula support", "Postpartum care", "Overnight newborn support", "Childbirth education"],
+        description: "What The Bump is a team of certified birth and postpartum doulas serving Charlotte and surrounding communities including Concord. Their team includes Registered Nurses and former Labor & Delivery nurses who provide personalized, evidence-based support throughout pregnancy, birth, and the postpartum period. They offer overnight newborn support and childbirth education classes alongside their doula services.",
+      }
+    ],
+    
+    birthStats: {
+      cesareanRate: 30.0,
+      maternalMortalityRate: 26.4,
+      homeBirthRate: 0.7,
+      birthCenterBirthRate: 0.1,
+      dataYear: 2023,
+      dataSource: "CDC NCHS National Vital Statistics System; March of Dimes PeriStats; KFF",
+    },
+    medicaidNote: "Yes — North Carolina Medicaid covers doula services for eligible beneficiaries. Check with your Medicaid plan and local doulas for current coverage details.",
+    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage. Some doulas offer sliding-scale fees or payment plans.",
+    faqs: [
+      {
+        q: "Does Medicaid cover doulas in Concord, NC?",
+        a: "North Carolina Medicaid covers doula services for eligible beneficiaries. Check with your Medicaid plan and local doulas for current coverage details."
+      },
+      {
+        q: "How much does a doula cost in Concord, NC?",
+        a: "Doulas in Concord typically cost $800 to $2,500 depending on experience and package. Heart of Grace Birth Services and Tiffany St. Louis Doula Services both serve the Concord area."
+      },
+      {
+        q: "Which hospital delivers babies in Concord, NC?",
+        a: "Atrium Health Cabarrus (Mariam Cannon Hayes Women’s Center) at 1000 Cabarrus Ave NE is Concord’s primary birthing hospital with a Level IV NICU. Families also deliver at Novant Health Mint Hill Medical Center and Novant Health Huntersville Medical Center nearby."
+      },
+      {
+        q: "Are there birth centers in Concord, NC?",
+        a: "There are no freestanding birth centers in Concord proper. The nearest options are in the Charlotte metro area. Most families in Concord deliver at Atrium Health Cabarrus."
+      }
+    ],
+    nearbyCities: ["charlotte-nc"],
   },
   "greenville-sc": {
     enableBlogResources: true,
