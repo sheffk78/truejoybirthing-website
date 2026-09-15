@@ -10886,7 +10886,7 @@ hospitalDetails: [
     lng: -80.6224,
     heroImage: "/images/concord-nc-birth-doula-skyline-v2.webp",
     ogImage: "/images/og-city-concord-nc.webp",
-    supportSceneImage: "/images/concord-nc-birth-doula-support.webp",
+    supportSceneImage: "/images/concord-nc-birth-doula-support-v3.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Concord, NC: Cabarrus County birth support and doula care",
     costLow: 800,
     costHigh: 2500,
