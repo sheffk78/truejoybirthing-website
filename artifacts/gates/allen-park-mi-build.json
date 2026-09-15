@@ -1,5 +1,5 @@
 {
-  "slug": "lubbock-tx",
+  "slug": "allen-park-mi",
   "stage": "build",
   "mode": "stage_emission",
   "exit_code": 0,
@@ -17,7 +17,7 @@
     },
     "S2": {
       "status": "PASS",
-      "detail": "OG image og-city-lubbock-tx.webp (53862 bytes \u2265 30KB)"
+      "detail": "OG image og-city-allen-park-mi.webp (86212 bytes \u2265 30KB)"
     },
     "S4": {
       "status": "PASS",
@@ -25,7 +25,7 @@
     },
     "S6": {
       "status": "PASS",
-      "detail": "publishedDate = \"2026-06-22\""
+      "detail": "publishedDate = \"2026-08-04\""
     },
     "S7": {
       "status": "PASS",
@@ -45,7 +45,7 @@
     },
     "G8": {
       "status": "PASS",
-      "detail": "lubbock-tx-birth-doula-skyline-v2.webp is a real photograph (high color count)"
+      "detail": "allen-park-mi-birth-doula-hero-v2.webp is a real photograph (high color count)"
     },
     "G70": {
       "status": "PASS",
@@ -57,23 +57,23 @@
     },
     "G72": {
       "status": "PASS",
-      "detail": "meta description 133 chars, complete"
+      "detail": "meta description 148 chars, complete"
     },
     "G25": {
       "status": "PASS",
-      "detail": "Hero image is 3:2 (1200x800, ratio=1.50)"
+      "detail": "Hero image is 3:2 (864x576, ratio=1.50)"
     },
     "G29": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=29749) and locked Pattern B composition"
+      "detail": "OG has photo content (full_unique_colors=68478) and locked Pattern B composition"
     },
     "G35": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=29749) and locked Pattern B composition"
+      "detail": "OG has photo content (full_unique_colors=68478) and locked Pattern B composition"
     },
     "G64": {
       "status": "PASS",
-      "detail": "G64: OG og-city-lubbock-tx.webp matches canonical Pattern B composition"
+      "detail": "G64: OG og-city-allen-park-mi.webp matches canonical Pattern B composition"
     },
     "G65": {
       "status": "PASS",
@@ -81,7 +81,7 @@
     },
     "G8a": {
       "status": "PASS",
-      "detail": "Silhouette confirmed (center=70.2 < top=244.4, top_colors=231)"
+      "detail": "Silhouette confirmed (center=78.6 < top=207.4, top_colors=29067)"
     },
     "G62": {
       "status": "PASS",

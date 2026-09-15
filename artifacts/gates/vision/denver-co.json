@@ -1,0 +1,36 @@
+{
+  "slug": "denver-co",
+  "verdicts": [
+    {
+      "crop": "denver-co-hero-fig0.png",
+      "verdict": "pass",
+      "defects": [
+        "no human figure in crop \u2014 detector false blob (city skyline/buildings); not an anatomical defect"
+      ]
+    },
+    {
+      "crop": "denver-co-hero-fig1.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "denver-co-support-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "denver-co-og-fig0.png",
+      "verdict": "pass",
+      "defects": [
+        "fingers indistinct at crop resolution \u2014 pose/clothing limitation, not an anomaly"
+      ]
+    },
+    {
+      "crop": "denver-co-thumb-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    }
+  ],
+  "checked_at": "2026-09-14T21:06:58.414794",
+  "inspector": "Kit (vision_analyze zoom-crop pass, 2x)"
+}

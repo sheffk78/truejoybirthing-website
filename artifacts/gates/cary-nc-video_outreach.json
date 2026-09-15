@@ -2,9 +2,9 @@
   "slug": "cary-nc",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
-  "exit_code": 1,
-  "passed": 6,
-  "failed": 3,
+  "exit_code": 0,
+  "passed": 9,
+  "failed": 0,
   "skipped": 0,
   "results": {
     "pre_render_gate": {
@@ -13,23 +13,23 @@
     },
     "video_file_exists": {
       "status": "PASS",
-      "detail": "video file 19.9MB >10MB"
+      "detail": "video file 13.3MB >10MB"
     },
     "youtube_upload": {
       "status": "PASS",
-      "detail": "videoId 4yfxZdnklpI present in video-embeds.ts"
+      "detail": "videoId wCLcJW9BE4g present in video-embeds.ts"
     },
     "youtube_thumbnail": {
       "status": "PASS",
-      "detail": "thumbnail present locally (730KB) and YouTube returns 162KB"
+      "detail": "thumbnail present locally (806KB) and YouTube returns 98KB"
     },
     "video_embedded": {
-      "status": "FAIL",
-      "detail": "videoId 4yfxZdnklpI not found on live page"
+      "status": "PASS",
+      "detail": "embed found (vid wCLcJW9BE4g) on live page"
     },
     "videoobject_schema": {
-      "status": "FAIL",
-      "detail": "VideoObject schema missing on live page"
+      "status": "PASS",
+      "detail": "VideoObject+duration present on live page"
     },
     "outreach_sent_or_blocked": {
       "status": "PASS",
@@ -40,8 +40,8 @@
       "detail": "all 4 provider photos are real images (>5KB, >100 colors)"
     },
     "video_content_city_match": {
-      "status": "FAIL",
-      "detail": "G67: LEAKED \u2014 overview scene says 'Denver' (slug cary-nc). Re-render with current pipeline and re-upload."
+      "status": "PASS",
+      "detail": "G67: video overview scene names this city ('cary' found; frame t=15s)"
     }
   }
 }

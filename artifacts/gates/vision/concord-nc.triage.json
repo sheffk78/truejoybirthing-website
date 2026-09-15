@@ -1,0 +1,38 @@
+{
+  "slug": "concord-nc",
+  "checked_at": "2026-09-15T01:21:13.877650+00:00",
+  "images": [
+    {
+      "image": "public/images/concord-nc-birth-doula-skyline.webp",
+      "label": "hero",
+      "figures": 0,
+      "flags": []
+    },
+    {
+      "image": "public/images/concord-nc-birth-doula-skyline-v2.webp",
+      "label": "hero-v2",
+      "figures": 1,
+      "flags": []
+    },
+    {
+      "image": "public/images/concord-nc-birth-doula-support.webp",
+      "label": "support",
+      "figures": 1,
+      "flags": []
+    },
+    {
+      "image": "public/images/og-city-concord-nc.webp",
+      "label": "og",
+      "figures": 1,
+      "flags": [
+        "no-figure-pixels-found"
+      ]
+    }
+  ],
+  "crops": [
+    "/tmp/tjb-vision-crops/concord-nc-hero-v2-fig0.png",
+    "/tmp/tjb-vision-crops/concord-nc-support-fig0.png",
+    "/tmp/tjb-vision-crops/concord-nc-og-fig0.png"
+  ],
+  "triage_flags": []
+}

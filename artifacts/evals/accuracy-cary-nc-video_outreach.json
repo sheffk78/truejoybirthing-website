@@ -1,0 +1,70 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "cary-nc",
+  "stage": "video_outreach",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 7,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote explicitly names Haven Women's Health & Birth Center and states it is located in Cary, NC, matching both the claim and the domain havenhealthandbirth.com.",
+      "claim": "Haven Women's Health and Birth Center is a birth center located in Cary, NC",
+      "url": "https://www.havenhealthandbirth.com/",
+      "quote": "Haven Women\u2019s Health & Birth Center located in Cary NC, combines the latest in medical science with a holistic approach to provide comprehensive, evidence-based prenatal and women\u2019s healthcare in a lu"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly states a 5% cesarean rate for mothers who begin labor at the birth center, matching the claim, and the havenhealthandbirth.com domain plausibly belongs to the Haven birth center whose homepage would feature this statistic.",
+      "claim": "Haven's cesarean rate for mothers who begin labor at the birth center is 5%",
+      "url": "https://www.havenhealthandbirth.com/",
+      "quote": "5% Our cesarean rate for mothers who begin labor at the birth center"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the matching domain (triangledoulabynature.com) and explicitly lists Cary along with other NC Triangle cities (Durham, Chapel Hill, Carrboro, Hillsborough, Raleigh, Apex) as service areas, directly supporting the claim.",
+      "claim": "Triangle Doula by Nature serves families in Cary and the NC Triangle area",
+      "url": "https://www.triangledoulabynature.com/",
+      "quote": "Servicing families in Durham, Chapel Hill, Carrboro, Hillsborough, Raleigh, Apex, Cary and beyond."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the Meela domain's Cary, NC doulas page and explicitly states 'Found 25 Birth Doulas in Cary, NC, USA,' directly supporting the claim.",
+      "claim": "Meela lists 25 birth doulas serving Cary, NC, USA",
+      "url": "https://www.hellomeela.com/cary-nc/doulas/",
+      "quote": "Found 25 Birth Doulas in Cary, NC, USA | Birth doula support"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote appears on a profile page for Amanda Petry on a birthing-related domain and directly states her role as a lactation consultant, 10 years of experience, and Cary, North Carolina location, matching the claim exactly.",
+      "claim": "Amanda Petry is a Cary, North Carolina lactation consultant with 10 years of experience",
+      "url": "https://www.bornbir.com/amanda-petry",
+      "quote": "Amanda Petry Lactation Consultant 10 years of experience Cary, North Carolina"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible homepage tagline for the sacredhavenmidwifery.com domain and directly matches the claim's description of a community-based birth and women's health practice, with no contradiction of the North Carolina location.",
+      "claim": "Sacred Haven Midwifery is a North Carolina community-based birth and women's health practice",
+      "url": "https://www.sacredhavenmidwifery.com/",
+      "quote": "Community-Based Birth & Women's Health Practice Est. 2023"
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly comes from the True Joy Birthing Cary, NC page and explicitly lists WakeMed Cary Hospital and UNC Health Rex, directly supporting the claim about the hospitalDetails.",
+      "claim": "Cary page hospitalDetails include WakeMed Cary Hospital and UNC Health Rex (Rex Women's Center)",
+      "url": "https://truejoybirthing.com/birth-support/cary-nc/",
+      "quote": "WakeMed Cary Hospital, UNC Health Rex, Haven Birth Center, local doulas, costs, and NC Medicaid, all in about 2:47."
+    }
+  ],
+  "checked_at": "2026-09-14T18:10:07-06:00"
+}

@@ -1,19 +1,92 @@
 {
   "slug": "cary-nc",
   "stage": "video_outreach",
-  "produced_at": null,
-  "worker_model": null,
-  "notes": "",
-  "sources": [],
-  "video_file": null,
-  "video_mb": null,
-  "youtube_id": null,
-  "thumbnail_path": null,
-  "embed_verified": null,
+  "produced_at": "2026-09-15T00:05:27Z",
+  "worker_model": "glm-5.3-flash (Hermes subagent)",
+  "notes": "Rendered cary-nc-city-guide.mp4 (13.3MB, out/cary-nc-city-guide.mp4) from cary-nc-data.ts with full state names; uploaded as NEW public video wCLcJW9BE4g with yt-thumb-cary-nc.webp thumbnail derived from current hero; embed live on truejoybirthing.com/birth-support/cary-nc/ (VideoObject schema embedUrl youtube-nocookie wCLcJW9BE4g); old video 6biaWrtiwtg verified unlisted via YouTube Data API. Outreach: registry check-send found no discoverable professional emails for Cary-NC providers (institution/contact-form only) — recorded as outreach_blocked per R41 (no email => never send), 0 emails sent; has_outreach=true + outreach_blocked_reason recorded in tjb-city-status.json.",
+  "sources": [
+    {
+      "claim": "Haven Women's Health and Birth Center is a birth center located in Cary, NC",
+      "url": "https://www.havenhealthandbirth.com/",
+      "quote": "Haven Women’s Health & Birth Center located in Cary NC, combines the latest in medical science with a holistic approach to provide comprehensive, evidence-based prenatal and women’s healthcare in a luxurious, homelike environment.",
+      "kind": "provider_site"
+    },
+    {
+      "claim": "Haven's cesarean rate for mothers who begin labor at the birth center is 5%",
+      "url": "https://www.havenhealthandbirth.com/",
+      "quote": "5% Our cesarean rate for mothers who begin labor at the birth center",
+      "kind": "provider_site"
+    },
+    {
+      "claim": "Triangle Doula by Nature serves families in Cary and the NC Triangle area",
+      "url": "https://www.triangledoulabynature.com/",
+      "quote": "Servicing families in Durham, Chapel Hill, Carrboro, Hillsborough, Raleigh, Apex, Cary and beyond.",
+      "kind": "provider_site"
+    },
+    {
+      "claim": "Meela lists 25 birth doulas serving Cary, NC, USA",
+      "url": "https://www.hellomeela.com/cary-nc/doulas/",
+      "quote": "Found 25 Birth Doulas in Cary, NC, USA | Birth doula support",
+      "kind": "directory"
+    },
+    {
+      "claim": "Amanda Petry is a Cary, North Carolina lactation consultant with 10 years of experience",
+      "url": "https://www.bornbir.com/amanda-petry",
+      "quote": "Amanda Petry Lactation Consultant 10 years of experience Cary, North Carolina",
+      "kind": "directory"
+    },
+    {
+      "claim": "Sacred Haven Midwifery is a North Carolina community-based birth and women's health practice",
+      "url": "https://www.sacredhavenmidwifery.com/",
+      "quote": "Community-Based Birth & Women's Health Practice Est. 2023",
+      "kind": "provider_site"
+    },
+    {
+      "claim": "Cary page hospitalDetails include WakeMed Cary Hospital and UNC Health Rex (Rex Women's Center)",
+      "url": "https://truejoybirthing.com/birth-support/cary-nc/",
+      "quote": "WakeMed Cary Hospital, UNC Health Rex, Haven Birth Center, local doulas, costs, and NC Medicaid, all in about 2:47.",
+      "kind": "live_page"
+    }
+  ],
+  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/cary-nc-city-guide.mp4",
+  "video_mb": 13.3,
+  "youtube_id": "wCLcJW9BE4g",
+  "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/yt-thumb-cary-nc.webp",
+  "embed_verified": true,
   "outreach": [
     {
-      "provider": null,
-      "status": null,
+      "provider": "WakeMed Cary Hospital",
+      "status": "blocked",
+      "message_id": null
+    },
+    {
+      "provider": "UNC Health Rex (Rex Women's Center)",
+      "status": "blocked",
+      "message_id": null
+    },
+    {
+      "provider": "Haven Women's Health and Birth Center",
+      "status": "blocked",
+      "message_id": null
+    },
+    {
+      "provider": "Triangle Doula by Nature",
+      "status": "blocked",
+      "message_id": null
+    },
+    {
+      "provider": "Mariam Lam",
+      "status": "blocked",
+      "message_id": null
+    },
+    {
+      "provider": "Amanda Petry",
+      "status": "blocked",
+      "message_id": null
+    },
+    {
+      "provider": "Sacred Haven Midwifery",
+      "status": "blocked",
       "message_id": null
     }
   ]
