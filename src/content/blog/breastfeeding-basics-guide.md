@@ -17,6 +17,8 @@ A good latch means your baby takes a wide mouthful of breast tissue, not just th
 
 Start by getting comfortable. Support your back and arms so you're not reaching forward. Bring your baby to your breast rather than hunching down to them. Their nose should be level with your nipple, and when they open wide, pull them in close so their chin touches the breast first. You should see more of the areola above their mouth than below.
 
+![Mother holding her newborn in a cross-cradle position, baby's mouth wide open in a deep latch, soft watercolor illustration in cream and lavender](/images/blog-latch-1.webp)
+
 If the latch feels wrong, break the suction by sliding a clean finger into the corner of their mouth and try again. It can take several attempts in the early days, and that's normal. I always tell families. An imperfect latch that gets better is worth more than a perfect latch that only works once.
 
 ## How Often Should a Newborn Eat?
@@ -35,7 +37,24 @@ In the first week, look for at least one wet diaper on day one, two on day two, 
 
 Weight gain is another key sign. Most newborns lose up to 7 to 10 percent of their birth weight in the first few days, which the CDC considers normal. They should regain that birth weight by about two weeks and continue gaining steadily after that.
 
+| Day | Wet diapers | Dirty diapers | Stools |
+|-----|------------|---------------|--------|
+| 1 | 1 | 1 | Meconium (dark, tarry) |
+| 2 | 2 | 2 | Meconium |
+| 3 | 3 | 3 | Greenish, transitional |
+| 4 | 4 | 3-4 | Yellow-green, transitional |
+| 5 | 5 | 4+ | Mustard-yellow, seedy |
+| 6+ | 6+ | 4+ | Mustard-yellow, seedy |
+
+| Stomach size | Capacity |
+|--------------|----------|
+| Day 1 (cherry) | 5-7 ml |
+| Day 3 (walnut) | 22-27 ml |
+| One week (egg) | 60-80 ml |
+
 After a feeding, your baby should seem satisfied and relaxed. Your breasts should feel softer. None of these signs alone tells the whole story, but together they paint a clear picture.
+
+> **Quick reassurance:** If your baby is hitting the diaper counts above and regaining birth weight by two weeks, your supply is doing its job. When in doubt, count diapers first. It is the most reliable signal you have at home.
 
 ## What Is Cluster Feeding and Why Does It Happen?
 
@@ -47,11 +66,21 @@ Nurse often, make more. It really is that simple.
 
 Feeling frustrated during a cluster-feeding stretch is completely normal. This phase passes. Offer the breast, switch sides when one side feels done, and let your support person handle everything else, because those long evenings go easier when you are not also trying to cook dinner. For more on managing feeding patterns and supply, see my <a href="/blog/power-pumping/">power pumping guide</a>.
 
+> **Cluster feeding survival kit:** Water bottle within arm's reach, snacks you can eat one-handed, phone charger by the couch, a show queued up, and one person signed up for dinner duty. Set it up before the evening stretch starts, not during it.
+
 ## How Do I Know If I Have a Low Supply?
 
 True low supply is rare. Rarer than most parents think. Many people worry about supply for two reasons: their baby nurses constantly, or their breasts stop feeling full. Frequent nursing and soft breasts don't mean low supply.
 
 The real signs of low supply include poor weight gain, fewer than expected wet and dirty diapers, and a baby who seems unsatisfied after feedings. If you're seeing these signs, the first step is to increase feeding frequency and make sure the latch is effective.
+
+| What you notice | What it usually means | Next step |
+|-----------------|----------------------|-----------|
+| Baby nurses constantly | Normal cluster feeding or a growth spurt | Keep nursing on demand; it builds supply |
+| Breasts feel soft | Supply regulating around 6-12 weeks | No action needed if diapers and weight are on track |
+| Fewer than expected wet diapers | Possible low supply or latch trouble | Count diapers for 24 hours and call a lactation consultant |
+| Poor weight gain | The one sign that needs attention | Increase feeding frequency and see your pediatrician |
+| Baby unsatisfied after feedings | Often a shallow latch, not low supply | Have the latch assessed before supplementing |
 
 I've seen supply respond well to consistent, frequent removal of milk. If nursing alone isn't enough, <a href="/blog/power-pumping/">power pumping</a> can help bridge the gap. But before you jump to supplementation, talk to a lactation consultant who can assess what's actually going on.
 
@@ -65,6 +94,8 @@ If you're in Chicago, IL, I recommend looking for <a href="/birth-support/chicag
 
 If you're looking for broader state-level resources, check out <a href="/birth-support/il/">Illinois birth support</a> or <a href="/birth-support/tx/">Texas birth support</a> for directories of qualified professionals in your area.
 
+![A mother holding her swaddled newborn while talking with a lactation consultant at home, soft natural light](/images/lactation-consult-v3.webp)
+
 ## What About Pumping and Building a Stash?
 
 Pumping serves different purposes for different families. Some pump to build a freezer stash, some pump because they're returning to work, and some pump to supplement feedings when needed. There's no single right reason to pump, and your approach should match your goals.
@@ -72,6 +103,12 @@ Pumping serves different purposes for different families. Some pump to build a f
 For most parents, a double electric pump is the most efficient option. The WHO and AAP both support pumping as a valid way to provide breast milk when direct nursing isn't possible or practical.
 
 If you're building a stash, consistency matters more than volume. Pumping for fifteen to twenty minutes every few hours will build your supply over time. For a deeper dive into supply-building strategies, my <a href="/blog/power-pumping/">power pumping guide</a> walks through the method in detail.
+
+| Feeding goal | What to pump | When |
+|-------------|--------------|------|
+| Occasional bottle for a night out or an appointment | One session per day, about 1-2 oz extra | After the morning feed, when supply is highest |
+| Freezer stash before returning to work | One to two sessions daily | Start two to four weeks before your return date |
+| Working on supply alongside nursing | Power pumping: pump 20 min, rest 10, pump 10, rest 10, pump 10 | One hour per evening for several days |
 
 Remember that pumping output varies widely from person to person, and what matters most is that your baby is fed, whether that's at the breast, with expressed milk, or with a combination of approaches.
 
@@ -96,6 +133,14 @@ Colostrum is available from the start, and your baby gets that in the first days
 ### What If Breastfeeding Hurts?
 
 Some discomfort in the first few days is common, but persistent pain is not normal and usually has a fix. The most common cause is a shallow latch. Adjusting the latch, changing positions, and getting support from a lactation consultant can resolve most pain issues quickly. Pain is not a rite of passage. Don't tough it out in silence, and don't assume it's just part of breastfeeding.
+
+| Section | Pain is common | Pain needs attention |
+|---------|---------------|----------------------|
+| The first few days | Mild tenderness in the first 30-60 seconds of a latch | Pain that lasts the whole feed |
+| First two weeks | Slight soreness as your nipples adjust | Cracked, bleeding, or blistered nipples |
+| Any time | — | Pain that persists past the early latch-on, or toe-curling pain |
+
+> **Pain is information, not a rite of passage.** Persistent pain almost always has a fix, and the most common one is a shallow latch. A lactation consultant can often spot the cause in a single visit, so do not tough it out in silence.
 
 ## Final Thoughts
 

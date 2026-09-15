@@ -33,6 +33,8 @@ Here is what typically happens right after delivery:
 
 Not every provider follows the exact same timeline, and some steps can be adjusted based on your baby's condition. If you want to discuss any of these ahead of time, a birth plan is the right place to do it. You can start building yours with our free <a href="/birth-plan-template/">Joyful Birth Plan template</a>.
 
+![Newborn placed on mother's chest for immediate skin-to-skin contact after birth, warm hospital room with soft cream and lavender tones, watercolor illustration style](/images/blog-newborn-procedures-1.webp)
+
 ## Is the Vitamin K Shot Really Necessary?
 
 This is one of the most common questions I get from expectant parents. The short answer is yes. Vitamin K deficiency bleeding (VKDB) is uncommon, but when it happens, it can be life-threatening. The condition is entirely preventable with the vitamin K injection given at birth.
@@ -49,6 +51,8 @@ Some parents ask about declining it. I encourage them to start that conversation
 
 The ointment does sting the baby's eyes temporarily. It is not pleasant to watch, but the tradeoff is worth it for the protection it provides.
 
+> **State law check:** In most U.S. states, eye ointment is required by law regardless of the mother's infection status. Starting the conversation with your provider early gives you room to weigh state requirements against your preferences before delivery day.
+
 ## How Important Is Delayed Cord Clamping?
 
 Delayed cord clamping means waiting 30 to 60 seconds (or longer, depending on your provider) before clamping and cutting the umbilical cord. ACOG and the AAP both support this practice for healthy term and preterm infants.
@@ -56,6 +60,8 @@ Delayed cord clamping means waiting 30 to 60 seconds (or longer, depending on yo
 The benefit is straightforward: the baby receives additional blood from the placenta, which increases iron stores and blood volume. For preterm infants, the benefits are even more pronounced, including better circulatory stabilization and reduced need for transfusions.
 
 In most hospital settings, delayed cord clamping is now standard. But it is worth confirming with your provider that they will honor this if you want it. If your birth plan includes this preference, make sure it is clearly stated.
+
+![Cord blood collection after birth, healthcare provider drawing blood from umbilical cord into collection bag, soft watercolor illustration in cream and lavender tones](/images/blog-cord-blood-1.webp)
 
 ## What Newborn Screening Tests Are Done and Why?
 
@@ -67,6 +73,8 @@ The CDC states that newborn screening identifies about 12,000 babies with seriou
 
 If you are in Arizona and want to know more about local newborn screening protocols, our <a href="/birth-support/phoenix-az/">doula support in Phoenix, AZ</a> team can connect you with providers who explain the process in detail.
 
+![Pediatric clinician performing a gentle newborn examination with a stethoscope during newborn screening, soft watercolor illustration in cream and lavender tones](/images/blog-newborn-procedures-2.webp)
+
 ## Can I Decline Any of These Procedures?
 
 Yes, parents have the right to decline or delay any procedure. Informed consent means your provider should explain the risks and benefits, and you have the right to say no or to ask for more time to decide. This is a core principle of medical ethics and patient autonomy.
@@ -76,6 +84,15 @@ That said, declining a standard procedure can have consequences. If you are cons
 The goal is not to refuse everything or accept everything blindly. The goal is to make choices you feel confident about. A well-prepared birth plan helps you communicate those choices clearly to your care team.
 
 Your birth partner plays a specific role during these procedures. They can ask questions on your behalf, take notes, help you remember what was discussed, and advocate for your preferences when you are focused on holding your baby. The <a href="/blog/birth-partner-guide/">birth partner guide</a> covers this in detail, including scripts for what to say when a procedure is being recommended and how to request a pause if you need more time to decide. In the immediate postpartum period, your partner can also help by staying close, offering water, and making sure the care team knows about any preferences you have discussed. Families delivering in Illinois can see how <a href="/birth-support/chicago-il/">doula support in Chicago, IL</a> fits into a hospital birth team. If you are preparing your partner for what to expect, our <a href="/birth-support/denver-co/">doula support in Denver, CO</a> team offers workshops that walk partners through the hospital routine step by step.
+
+| Procedure | Standard? | Legally required? | Right to decline |
+|---|---|---|---|
+| Vitamin K injection | AAP standard | No | Yes — discuss risks first |
+| Eye ointment | Standard | Yes, in most states | Yes — check state law |
+| Newborn screening panel | CDC/AAP standard | Yes, by state law | Generally no — standard of care |
+| Hepatitis B birth dose | CDC recommended | No | Yes |
+| Delayed cord clamping | ACOG/AAP recommended | No | Yes — state your preference |
+| Immediate skin-to-skin | AAP recommended | No | Yes |
 
 ## What Should I Include in My Birth Plan for Newborn Procedures?
 
@@ -91,6 +108,8 @@ A birth plan for newborn procedures does not have to be long. A few clear statem
 Keep the language respectful and collaborative. The care team is more likely to read and honor a plan that acknowledges their expertise while clearly stating your preferences.
 
 For a ready-to-use template that covers all of this and more, see our birth plan template.
+
+> **Visual note:** A birth plan is a communication tool, not a contract. The care team appreciates clear, respectful preferences. Keep it concise, discuss it during a prenatal visit, and bring a copy to the hospital.
 
 ## Frequently Asked Questions
 

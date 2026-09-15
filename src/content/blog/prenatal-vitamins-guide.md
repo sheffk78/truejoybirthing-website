@@ -27,6 +27,17 @@ Not all prenatal vitamins are created equal, and the label can be overwhelming. 
 
 **Choline.** Often overlooked, choline supports neural tube closure and brain development. ACOG recommends 450 mg daily. It is not always in prenatal vitamins, so ask your provider about a separate supplement.
 
+![Watercolor still life of an unlabeled supplement bottle surrounded by spinach, orange, avocado, salmon, eggs, and lavender sprigs on a cream background](/images/blog-prenatal-1.webp)
+
+| Nutrient | Daily amount | Why it matters | Watch for |
+|----------|-------------|----------------|-----------|
+| Folic acid / methylfolate | 400-800 mcg | Prevents neural tube defects like spina bifida | MTHFR variant: methylfolate absorbs better |
+| Iron | Per your bloodwork | Supports the doubling of blood volume | Roughly 1 in 5 pregnancies become iron deficient; bisglycinate is gentler |
+| DHA | 200-300 mg | Fetal brain and eye development | Many prenatals include too little |
+| Iodine | 220 mcg | Thyroid function and brain development | Not always included; check the label |
+| Vitamin D | 600 IU | Low levels are linked to preeclampsia | Some providers recommend more based on bloodwork |
+| Choline | 450 mg | Neural tube closure and brain development | Often missing entirely from prenatals |
+
 If you are ready to start building your pregnancy plan, grab my free <a href="/birth-plan-template/">Joyful Birth Plan template</a> and fill in your preferences while you are still in the early stages. Having a plan on paper makes it easier to talk through options with your provider.
 
 ## When should I start taking prenatal vitamins?
@@ -34,6 +45,8 @@ If you are ready to start building your pregnancy plan, grab my free <a href="/b
 Ideally, begin at least one month before trying to conceive. The neural tube closes by week four of pregnancy, often before a person knows they are pregnant, so early folic acid intake is protective. If you are already pregnant and have not been taking a prenatal, start now. It is never too late to begin, and every week counts.
 
 If morning sickness makes pills hard to tolerate, try taking your vitamin with a small snack at bedtime, or ask your provider about a liquid or gummy option. I have found that the best prenatal is the one you actually keep taking consistently, and consistency matters more than perfection.
+
+> **The one habit that matters most:** Set a daily anchor, like taking your vitamin with the same bedtime snack every night. A prenatal you take at 80 percent consistency outperforms a perfect routine you abandon in week nine.
 
 ## How do I choose the right prenatal vitamin?
 
@@ -44,6 +57,15 @@ Start with your provider's recommendation, then compare the label against the ke
 - Avoid prenatals with excessive vitamin A (retinol), which can be harmful in high doses during pregnancy. Beta-carotene is the safer form.
 - If you are vegetarian or vegan, confirm the DHA source is algae-based and the B12 is methylcobalamin.
 - Gummies often lack iron, so pair them with a separate iron supplement if needed.
+
+| Label item | What to look for | What to skip |
+|------------|------------------|--------------|
+| Folate form | Methylfolate (L-5-MTHF), especially with MTHFR variants | Folic acid only, if you know you absorb it poorly |
+| Iron form | Ferrous bisglycinate or iron bisglycinate chelate | Ferrous sulfate if it upsets your stomach |
+| Vitamin A | Beta-carotene form | High-dose retinol |
+| DHA source | Algae-based if vegetarian or vegan | Fish oil if that does not fit your diet |
+| B12 | Methylcobalamin | Cyanocobalamin if you prefer the methylated form |
+| Gummies | Convenient, but usually iron-free | Counting on a gummy alone for iron |
 
 The cheapest option is not always the best, and the most expensive one is not either. What matters is the nutrient profile and your ability to tolerate it day after day.
 
@@ -56,6 +78,12 @@ Yes, and the most common complaints are nausea, constipation, and stomach upset.
 - Increase water and fiber intake to manage constipation.
 - Ask your provider about a slow-release or liquid iron supplement.
 
+| Side effect | First thing to try | If that does not help |
+|-------------|--------------------|-----------------------|
+| Nausea | Take with food or at bedtime | Switch to liquid or gummy, or split the dose with provider approval |
+| Constipation | More water and fiber | Ask about slow-release or liquid iron |
+| Stomach upset | Switch to ferrous bisglycinate | Lower-dose iron in the prenatal plus separate iron at another time of day |
+
 Do not just stop taking your prenatal without talking to your provider. There are alternatives that work for almost everyone. I have seen clients switch from a standard prenatal to a gummy or liquid form and finally find something they can tolerate day after day.
 
 ## What if I cannot afford prenatal vitamins?
@@ -67,9 +95,18 @@ This is a real concern, and I do not want anyone to skip supplementation because
 - Some providers have samples or discount programs, and it never hurts to ask.
 - If you cannot find a prenatal that works for you, a basic folic acid supplement is the single most important nutrient to take. I have seen families get by with just a folic acid and vitamin D combo when budgets are tight, and their providers were supportive of that approach.
 
+> **If cost is the barrier:** A basic folic acid supplement costs only a few dollars a month, and many community health centers and WIC offices provide prenatal vitamins at no cost. Do not skip supplementation over price. Ask first.
+
 ## How long should I keep taking prenatal vitamins?
 
 I recommend continuing throughout the entire pregnancy and while breastfeeding. The NIH notes that breastfeeding depletes nutrient stores, and a postnatal vitamin can support recovery and milk production. Your provider can help you decide when to transition off the prenatal and onto a regular multivitamin or postnatal formula. Even after you stop taking a dedicated prenatal, keeping a quality multivitamin in your routine is a smart habit, especially if you are still breastfeeding.
+
+| Stage | What to take | Why |
+|-------|-------------|-----|
+| Trying to conceive | Prenatal with 400 mcg folic acid, started 1+ month before | Neural tube closes by week four, often before you know you are pregnant |
+| Pregnancy (all trimesters) | Full prenatal, plus separate DHA if needed | Blood volume doubles; brain development continues all trimesters |
+| Breastfeeding | Continue prenatal or switch to a postnatal formula | Nursing depletes nutrient stores and supports milk production |
+| After breastfeeding | Quality multivitamin | Rebuild stores and keep the habit |
 
 ## Related resources for your pregnancy toolkit
 
@@ -78,6 +115,8 @@ Planning ahead for labor and delivery is just as important as what you put in yo
 For those in Texas, I work with <a href="/birth-support/houston-tx/">prenatal care providers in Houston, TX</a> and <a href="/birth-support/austin-tx/">doulas and midwives in Austin, TX</a> who share my philosophy of informed, compassionate care. In Colorado, I connect families with <a href="/birth-support/denver-co/">birth support resources in Denver, CO</a> and the broader <a href="/birth-support/co/">Colorado birth support network</a>. For Illinois families, I recommend reaching out to <a href="/birth-support/chicago-il/">prenatal care providers in Chicago, IL</a> and exploring the <a href="/birth-support/tx/">Texas birth support hub</a> for state-wide resources.
 
 If you are ready to put together a clear, personalized plan for your pregnancy and birth, I invite you to download my free <a href="/birth-plan-template/">Joyful Birth Plan template</a>. It walks you through your preferences for labor, delivery, and postpartum in a format that your care team can actually use.
+
+![A newborn moments after birth, held up in the delivery room, black-and-white photo](/images/hands-on-belly.webp)
 
 ## FAQ
 
