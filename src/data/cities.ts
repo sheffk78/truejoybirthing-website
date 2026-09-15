@@ -10904,6 +10904,24 @@ hospitalDetails: [
         medicaid: "Yes — accepts NC Medicaid",
         vbacPolicy: "VBAC offered with physician approval",
         paragraph: "Atrium Health Cabarrus, at 1000 Cabarrus Ave NE in Concord, is the city’s primary birthing hospital and a 457-bed acute-care facility. The Mariam Cannon Hayes Women’s Center offers private labor, delivery, and recovery suites with showers, whirlpool tubs, and glider rockers. The hospital has the region’s only 24/7 Level IV NICU on-site, plus maternal-fetal medicine specialists and Atrium Health Levine Children’s neonatologists. As a Baby-Friendly designated facility, it emphasizes family-centered care and informed decision-making. Doulas are welcomed as part of the birth team. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare."
+      },
+      {
+        name: "Novant Health Mint Hill Medical Center (15 min from Concord)",
+        thumbnail: "/images/concord-nc-hospital-novant-mint-hill.webp",
+        address: "8201 Healthcare Loop, Charlotte, NC 28215",
+        url: "https://www.novanthealth.org/locations/medical-centers/mint-hill-medical-center/services/maternity/",
+        doulaPolicy: "Doulas welcome as support persons",
+        medicaid: "Yes — accepts NC Medicaid",
+        paragraph: "Novant Health Mint Hill Medical Center opened in 2018 and serves families in Mint Hill, Harrisburg, and Midland — about 15 minutes south of downtown Concord. It offers full maternity services with private birthing suites, obstetricians, high-risk pregnancy specialists, and 24/7 labor and delivery coverage. Some Concord families choose Mint Hill for its Novant Health providers or for a second opinion alongside their Atrium-based OB practice. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare."
+      },
+      {
+        name: "Novant Health Huntersville Medical Center (20 min from Concord)",
+        thumbnail: "/images/concord-nc-hospital-novant-huntersville.webp",
+        address: "10030 Gilead Rd, Huntersville, NC 28078",
+        url: "https://www.novanthealth.org/locations/medical-centers/huntersville-medical-center",
+        doulaPolicy: "Doulas welcome as support persons",
+        medicaid: "Yes — accepts NC Medicaid",
+        paragraph: "Novant Health Huntersville Medical Center provides full maternity care to north Mecklenburg County, roughly 20 minutes north of Concord. Its birthing center handles Novant Health midwifery births alongside OB-led deliveries, with lactation consultants and private postpartum rooms. Families living in northern Concord often find Huntersville the closest alternative when their insurance or provider network is Novant-based. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare."
       }
     ],
     birthCenterDetails: [
@@ -10953,7 +10971,6 @@ hospitalDetails: [
         name: "What The Bump Doula Team",
         type: "Birth Doula",
         credential: "Certified Birth Doulas, Registered Nurses on team",
-        photo: "/images/concord-nc-what-the-bump.webp",
         phone: "419-266-2346",
         email: "hello@whatthebumpclt.com",
         url: "https://whatthebumpclt.com/",
