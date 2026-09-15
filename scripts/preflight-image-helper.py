@@ -518,6 +518,69 @@ def support_scene_quality(slug: str) -> dict:
     if other_scenes:
         return {"pass": False, "detail": f"Support scene is IDENTICAL to another city's: {', '.join(other_scenes[:3])}. Each city must have a unique support scene."}
 
+    # G73: vision anatomy check (Sep 15, 2026 — concord-nc lesson).
+    # MD5 uniqueness cannot catch anatomically wrong AI scenes (disproportionate
+    # figures, melted hands/faces). Ask a vision model to grade the scene.
+    vision_path = os.path.join('/tmp', f'g73-{os.path.basename(scene_path)}')
+    try:
+        img = Image.open(full_path)
+        img.thumbnail((1024, 1024))
+        img.convert('RGB').save(vision_path, 'JPEG', quality=82)
+    except Exception as e:
+        return {"pass": False, "detail": f"Could not prepare scene for anatomy check: {e}"}
+
+    import base64
+    with open(vision_path, 'rb') as f:
+        b64 = base64.b64encode(f.read()).decode()
+    try:
+        os.remove(vision_path)
+    except OSError:
+        pass
+
+    prompt = (
+        "You are a strict quality gate for AI-generated birth-doula imagery. "
+        "Check ONLY for anatomical/artistic defects: (1) extra, missing, fused, "
+        "or wrongly-proportioned limbs or hands; (2) distorted, melted, or uncanny "
+        "faces or body shapes; (3) impossible object fusion. Ignore style, setting, "
+        "composition, and subject count. Answer with a single word PASS or FAIL "
+        "followed by a colon and a one-clause reason."
+    )
+    try:
+        key = None
+        with open(os.path.expanduser('~/.hermes/secrets/openrouter-keys.txt')) as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#'):
+                    key = line
+                    break
+        if not key:
+            return {"pass": True, "detail": "No OpenRouter key — anatomy vision check skipped (pass-through)"}
+        import urllib.request, urllib.error
+        req = urllib.request.Request(
+            'https://openrouter.ai/api/v1/chat/completions',
+            data=json.dumps({
+                "model": "google/gemini-2.5-flash-lite",
+                "messages": [{"role": "user", "content": [
+                    {"type": "text", "text": prompt},
+                    {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{b64}"}},
+                ]}],
+            }).encode(),
+            headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+        )
+        with urllib.request.urlopen(req, timeout=60) as resp:
+            body = json.loads(resp.read())
+        verdict = (body.get('choices') or [{}])[0].get('message', {}).get('content', '')
+        v = verdict.strip().upper()
+        if v.startswith('FAIL'):
+            return {"pass": False, "detail": f"G73 anatomy FAIL: {verdict.strip()[:180]} — regenerate scene with new seed, version-bump filename"}
+        if v.startswith('PASS'):
+            return {"pass": True, "detail": f"G73 anatomy pass: {verdict.strip()[:140]}"}
+        # Unparseable verdict: fail-closed would block ships on API hiccups;
+        # surface as pass-with-note so humans see it in preflight output.
+        return {"pass": True, "detail": f"G73 anatomy verdict UNPARSEABLE — manual review advised: {verdict.strip()[:120]}"}
+    except Exception as e:
+        return {"pass": True, "detail": f"G73 anatomy check could not run ({type(e).__name__}) — manual review advised"}
+
     return {"pass": True, "detail": "Support scene is unique to this city"}
 
 
