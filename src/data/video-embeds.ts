@@ -1866,4 +1866,22 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M47S",
   },
 
+  "concord-nc": {
+    videoId: "nlWlkAEuRd4",
+    title: "Concord Birth Guide: Hospitals, Doulas, Midwives & More",
+    description: "Concord birth guide covering Atrium Health Cabarrus, 3 local doulas and midwives, costs, and NC Medicaid coverage.",
+    duration: "PT2M20S",
+    uploadDate: "2026-09-15T16:25:26Z",
+    chapters: [
+      [0, "Welcome to Concord"],
+      [11, "What This Guide Covers"],
+      [30, "Atrium Health Cabarrus"],
+      [48, "Doulas & Midwives in Concord"],
+      [64, "The True Joy Birthing App"],
+      [85, "Doula Costs"],
+      [106, "Insurance & NC Medicaid"],
+      [125, "Your Next Step"],
+    ],
+  },
+
 };
