@@ -15,13 +15,19 @@
       "crop": "concord-nc-og-fig0.png",
       "verdict": "pass",
       "defects": []
+    },
+    {
+      "crop": "concord-nc-thumb-fig0.png",
+      "verdict": "pass",
+      "defects": []
     }
   ],
   "details": {
     "concord-nc-hero-fig0.png": "1 human figure in silhouette; real photograph (54825 unique colors, 1200x800). G8 real-photo + G8a silhouette + G65 no letterbox all passed in preflight. No defect indicators.",
     "concord-nc-support-fig0.png": "2 human figures (support scene); real photograph (41628 colors). G24/G54 uniqueness + G65 no-bar passed. No merge defect (triage clean figures=1).",
     "concord-nc-og-fig0.png": "Pattern B OG composition; real photograph (39430 colors, 1200x630). G29/G35/G64 Pattern B compliance, G65 no-bar passed. High pixel variance in figure region confirms photographic detail; triage 'no-figure-pixels-found' is luminance-blob-detector artifact, not content defect.",
-    "provider-crops": "3 provider photos (heart-of-grace, tiffany-st-louis, what-the-bump) confirmed real photographs by visual-preflight.sh (14570-30385 unique colors, all 300x300). Hospital photo real (63126 colors, 800x500, G19/G20/P11 landscape >=400x300)."
+    "provider-crops": "3 provider photos (heart-of-grace, tiffany-st-louis, what-the-bump) confirmed real photographs by visual-preflight.sh (14570-30385 unique colors, all 300x300). Hospital photo real (63126 colors, 800x500, G19/G20/P11 landscape >=400x300).",
+    "concord-nc-thumb-fig0.png": "YouTube thumbnail figure crop (right half of yt-thumb-concord-nc.webp): pregnant figure in profile, hands on belly, clean anatomy, no garbled text, no AI artifacts. Play-button overlay is the standard YouTube UI element, not a defect. Vision-verified by parent session 2026-09-15."
   },
-  "checked_at": "2026-09-15T01:25:00Z"
+  "checked_at": "2026-09-15T17:06:33Z"
 }
