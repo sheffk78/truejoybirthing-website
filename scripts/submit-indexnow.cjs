@@ -13,10 +13,13 @@ const SITE = 'https://truejoybirthing.com';
 const KEY = '6c5140d8ec9c41b581322973c45c8fc1';
 const KEY_LOCATION = `${SITE}/${KEY}.txt`;
 
-// Parse sitemap-0.xml from dist
-const sitemapPath = path.resolve(__dirname, '../dist/sitemap-0.xml');
+// Parse sitemap-cities.xml from dist (sitemap-0.xml was retired when
+// split-sitemaps.mjs took over — it deletes sitemap-0.xml post-build).
+// sitemap-cities.xml only contains CITY pages; the 336-URL full index lives
+// in sitemap-index.xml if a full resubmission is ever needed.
+const sitemapPath = path.resolve(__dirname, '../dist/sitemap-cities.xml');
 if (!fs.existsSync(sitemapPath)) {
-  console.error('sitemap-0.xml not found in dist/. Run npm run build first.');
+  console.error('sitemap-cities.xml not found in dist/. Run npm run build first.');
   process.exit(1);
 }
 
