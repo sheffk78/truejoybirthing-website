@@ -3,10 +3,14 @@
   "stage": "build",
   "mode": "stage_emission",
   "exit_code": 0,
-  "passed": 14,
+  "passed": 20,
   "failed": 0,
   "skipped": 0,
   "results": {
+    "G66": {
+      "status": "PASS",
+      "detail": "no duplicate object keys in any city block"
+    },
     "S1": {
       "status": "PASS",
       "detail": "enableBlogResources = true"
@@ -43,6 +47,18 @@
       "status": "PASS",
       "detail": "mesa-az-birth-doula-hero-v2.webp is a real photograph (high color count)"
     },
+    "G70": {
+      "status": "PASS",
+      "detail": "no doubled Level/NICU badge text"
+    },
+    "G71": {
+      "status": "PASS",
+      "detail": "no skeleton placeholder text"
+    },
+    "G72": {
+      "status": "PASS",
+      "detail": "meta description 155 chars, complete"
+    },
     "G25": {
       "status": "PASS",
       "detail": "Hero image is 3:2 (1200x800, ratio=1.50)"
@@ -54,6 +70,14 @@
     "G35": {
       "status": "PASS",
       "detail": "OG has photo content (full_unique_colors=43098) and locked Pattern B composition"
+    },
+    "G64": {
+      "status": "PASS",
+      "detail": "G64: OG og-city-mesa-az.webp matches canonical Pattern B composition"
+    },
+    "G65": {
+      "status": "PASS",
+      "detail": "G65: No black letterbox/pillarbox bars on hero or support scene"
     },
     "G8a": {
       "status": "PASS",

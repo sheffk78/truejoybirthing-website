@@ -1461,7 +1461,7 @@ export const cities: Record<string, CityData> = {
     lat: 47.6062,
     lng: -122.3321,
     heroImage: "/images/seattle-wa-birth-doula-hero-v3.webp" ,
-    supportSceneImage: "/images/seattle-support-scene-v2.webp" ,
+    supportSceneImage: "/images/seattle-wa-support-scene-v2.webp" ,
     supportSceneAlt: "A doula supporting an expectant mom in Seattle, Washington: birth support and doula care" ,
     ogImage: "https://truejoybirthing.com/images/og-city-seattle-wa-v3.webp" ,
     midwifeInfo: {
@@ -1503,7 +1503,7 @@ export const cities: Record<string, CityData> = {
         name: "UW Medical Center – Northwest" ,
         address: "1550 N 115th Street, Seattle, WA 98133" ,
         thumbnail: "/images/seattle-uw-northwest.webp" ,
-        paragraph: "A community-oriented hospital in north Seattle, part of UW Medicine since 2010, offering a family birth center with midwifery support and a Level II NICU for babies who need extra care." ,
+        paragraph: "A community-oriented hospital in north Seattle, part of UW Medicine since 2010, offering a family birth center with midwifery support and a Level II NICU for babies who need extra care. Its smaller campus keeps the experience personal while keeping the backup of the wider UW Medicine system close at hand for families in north Seattle." ,
         nicuLevel: "II" ,
         vbacPolicy: "VBAC available with physician approval; discuss with your provider" ,
         doulaPolicy: "Doulas welcome as support persons" ,
@@ -1516,7 +1516,7 @@ export const cities: Record<string, CityData> = {
         name: "Overlake Medical Center & Clinics" ,
         address: "1035 116th Ave NE, Bellevue, WA 98004" ,
         thumbnail: "/images/seattle-overlake.webp" ,
-        paragraph: "Serving Bellevue and the Eastside, Overlake features a Level III NICU and a well-regarded midwifery practice integrated into its family birth center, with private labor and delivery rooms." ,
+        paragraph: "Serving Bellevue and the Eastside, Overlake features a Level III NICU and a well-regarded midwifery practice integrated into its family birth center, with private labor and delivery rooms. Its Eastside location makes it a practical choice for families who want a full-service hospital without crossing to Seattle." ,
         nicuLevel: "III" ,
         vbacPolicy: "Allows TOLAC/VBAC with physician approval" ,
         doulaPolicy: "Doulas welcome as support persons" ,
@@ -1528,7 +1528,7 @@ export const cities: Record<string, CityData> = {
       {
         name: "Swedish Medical Center – Issaquah" , thumbnail: "/images/swedish-issaquah-v2.webp" ,
         address: "751 NE Blakely Drive, Issaquah, WA 98029" ,
-        paragraph: "A growing suburban campus of Swedish offering a full birth center with labor and delivery services, midwifery care, and a Level II NICU, serving families on the Eastside and Sammamish Plateau." ,
+        paragraph: "A growing suburban campus of Swedish offering a full birth center with labor and delivery services, midwifery care, and a Level II NICU, serving families on the Eastside and Sammamish Plateau. Families choose it for a lower-traffic alternative to the main Swedish First Hill campus with the same Swedish care standards." ,
         nicuLevel: "II" ,
         vbacPolicy: "VBAC available with physician approval; consult your provider" ,
         doulaPolicy: "Doulas welcome as support persons" ,
@@ -1562,7 +1562,7 @@ export const cities: Record<string, CityData> = {
         credential: "CD/BDT(DONA), LCCE, FACCE" ,
         practice: "Sharon Muza" ,
         url: "https://sharonmuza.com" ,
-        photo: "/images/doulas/sharon-muza.webp",
+        photo: "/images/doulas/sharon-muza-seattle-wa.webp",
         description: "Lamaze-certified childbirth educator and DONA-certified birth doula trainer with over 20 years of experience and more than 670 births attended. Sharon serves Seattle families and trains birth professionals worldwide through DONA-approved doula training and Lamaze-accredited educator workshops.",
         costRange: "$3,800-$4,500",
         serviceArea: ["Seattle" , "King County" , "Ballard" , "Wallingford" , "Shoreline" , "Edmonds" , "Queen Anne" , "West Seattle" , "Mercer Island" , "Lynnwood" , "Everett"],
@@ -1574,7 +1574,7 @@ export const cities: Record<string, CityData> = {
         credential: "Certified Birth & Postpartum Doula" ,
         practice: "Seattle Birth Doulas" ,
         url: "https://www.seattlebirthdoulas.com/jen-laird" ,
-        photo: "/images/doulas/jen-laird.webp",
+        photo: "/images/doulas/jen-laird-seattle-wa.webp",
         description: "Certified birth and postpartum doula with 18+ years of experience and over 500 families supported. Jen founded Seattle Birth Doulas and provides ongoing mentorship and oversight to the collective, offering individualized, trauma-informed care with training from Seattle Midwifery School and midwifery study in New Zealand.",
         costRange: "$3,400",
         serviceArea: ["Seattle" , "Greater Seattle area"],
@@ -1597,7 +1597,7 @@ export const cities: Record<string, CityData> = {
         credential: "DONA-Trained, WA State Certified" ,
         practice: "Seattle Doula Services" ,
         url: "https://www.seattledoulaservices.com" ,
-        photo: "/images/doulas/hannah-sds.webp",
+        photo: "/images/doulas/hannah-sds-seattle-wa.webp",
         description: "DONA-trained and Washington State Certified Doula based in Seattle's Capitol Hill neighborhood, serving families across the city from Ballard to Beacon Hill. Hannah brings over a decade of experience supporting Seattle-area children and families, and is trained in comfort measures including breathing techniques, positioning, and relaxation methods tailored to laboring at hospitals like Swedish First Hill and UW Medical Center. She offers sliding-scale and pro bono doula support to ensure finances are never an obstacle for Seattle families.",
         costRange: "$2,100-$2,500",
         serviceArea: ["Seattle" , "Greater Seattle area"],
@@ -1620,7 +1620,7 @@ export const cities: Record<string, CityData> = {
         credential: "CPM, LM" ,
         practice: "Sanctum by Brooke Prudhomme" ,
         url: "https://brookeprudhomme.com" ,
-        photo: "/images/doulas/brooke-prudhomme.webp",
+        photo: "/images/doulas/brooke-prudhomme-seattle-wa.webp",
         isMidwife: true,
         description: "Certified Professional Midwife and Licensed Midwife offering home birth, VBAC, and holistic women's health care in Seattle. Brooke provides comprehensive midwifery care including home birth, integrative prenatal and postpartum care, fertility support, and water birth. with pricing plans for both comprehensive home birth and collaborative care with OB/GYNs.",
         costRange: "$3,000-$4,500",
@@ -5775,7 +5775,7 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
     // Google Maps search "birth center Vancouver WA" found no verified freestanding birth centers in Vancouver.
     // Nearest freestanding birth centers are in the Portland metro (Oregon side). Verified 2026-06-08.
     birthCenterDetails: [
-      { name: "The Bridge Birth Center" , credential: "Freestanding Birth Center" , address: "3300 NE 54th St, Vancouver, WA 98663" , url: "http://www.bridgebirth.com" , thumbnail: "/images/bridge-birth-center.webp" , paragraph: "A freestanding birth center in Vancouver offering personalized midwifery care in a home-like setting. Serves families seeking out-of-hospital birth with licensed midwives." , services: ["Prenatal Care", "Labor & Delivery", "Postpartum Support", "Well-Person Care"] } ],
+      { name: "The Bridge Birth Center" , credential: "Freestanding Birth Center" , address: "3300 NE 54th St, Vancouver, WA 98663" , url: "http://www.bridgebirth.com" , thumbnail: "/images/bridge-birth-center.webp" , paragraph: "A freestanding birth center in Vancouver offering personalized midwifery care in a home-like setting. Serves families seeking out-of-hospital birth with licensed midwives, including water birth options and long postpartum follow-up visits in the weeks after birth." , services: ["Prenatal Care", "Labor & Delivery", "Postpartum Support", "Well-Person Care"] } ],
     localDoulas: [
       { name: "Suwannee Doula and Infant Care" , credential: "DONA-trained Postpartum Doula" , practice: "Suwannee Doula and Infant Care" , url: "http://suwanneedoulacare.com" , description: "Postpartum and overnight doula care serving Vancouver families. Specializing in breastfeeding support and overnight newborn care." , photo: "/images/provider-vancouver-wa-suwannee-doula-and-infant-care.webp" , services: ["Postpartum" , "Breastfeeding Support" , "Overnight Care"], costRange: "$40–$55/hr" ,
     costRange_source: "market-estimate",
@@ -9783,7 +9783,7 @@ hospitalDetails: [
       { name: "Sutter Eden Medical Center", thumbnail: "/images/hayward-ca-hospital-eden.webp", address: "20103 Lake Chabot Rd, Castro Valley, CA 94546", nicuLevel: "III", doulaPolicy: "Doulas welcome. Sutter Eden Medical Center welcomes doulas as part of the birth support team in its Birth Center.", medicaid: true, lactation: true, privateRooms: true, waterBirth: "Hydrotherapy options available in the birth center", url: "https://www.sutterhealth.org/find-location/facility/eden-medical-center-birth-center-1043246600", paragraph: "Sutter Eden Medical Center in Castro Valley is the closest full-service birthing hospital for Hayward families, offering a Birth Center with spacious, private labor and delivery suites designed for family-centered care. The hospital holds the CMS Birthing Friendly designation, indicating it follows evidence-based maternity practices and participates in national perinatal quality improvement. On-site lactation consultants, a doula-welcome policy, and a Level III NICU mean both routine and higher-acuity newborns can be cared for close to home. Families describe the Birth Center as calm and comfortable, with advocates for your birth plan and continuous labor support on the team that wants you to feel at home through your entire birth experience. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." },
       { name: "Kaiser Permanente San Leandro Medical Center", thumbnail: "/images/hayward-ca-hospital-kaiser-san-leandro.webp", address: "2500 Merrial Ave, San Leandro, CA 94577", nicuLevel: "II", doulaPolicy: "Doulas welcome as support persons; independent doulas are not employed by Kaiser but are welcome in labor and delivery.", midwifeFriendly: true, medicaid: true, lactation: true, privateRooms: true, url: "https://healthy.kaiserpermanente.org/northern-california/health-wellness/maternity", paragraph: "Kaiser Permanente San Leandro Medical Center delivers obstetric care primarily for Kaiser HMO members and sits just a few minutes west of Hayward, making it a convenient option for Hayward families who are Kaiser members. The hospital provides full maternity services, a neonatal unit, lactation support, and private maternity suites within Kaiser's integrated, team-based care model. Independent doulas are welcome in labor and delivery as support persons, though they are not Kaiser employees. Its Level II NICU is appropriate for most routine and moderate-acuity newborns, with higher-level neonatal care available at Sutter Eden for the sickest infants. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." },    ],
     birthCenterDetails: [
-      { name: "Sutter Eden Medical Center Birth Center", thumbnail: "/images/hayward-ca-birth-center-eden.webp", address: "20103 Lake Chabot Rd, Castro Valley, CA 94546", url: "https://www.sutterhealth.org/find-location/facility/eden-medical-center-birth-center-1043246600", services: ["Hospital-Based", "Private Suites", "Water Birth"] },
+      { name: "Sutter Eden Medical Center Birth Center", thumbnail: "/images/hayward-ca-birth-center-eden.webp", address: "20103 Lake Chabot Rd, Castro Valley, CA 94546", url: "https://www.sutterhealth.org/find-location/facility/eden-medical-center-birth-center-1043246600", services: ["Hospital-Based", "Private Suites", "Water Birth"], paragraph: "Hospital-based birth center at Sutter Eden Medical Center in nearby Castro Valley, the closest full-service birthing facility for Hayward families since St. Rose Hospital's birthing center closed in February 2025. Offers private labor and delivery suites with hydrotherapy options and water-birth capability, backed by the hospital's Level III NICU and CMS Birthing Friendly designation. Its hospital-based model means emergency obstetric support is steps away, a reassurance for families who want birth-center comforts without leaving a hospital campus." },
     ],
     midwifeInfo: {
       paragraph: "Hayward families have solid midwifery options across the East Bay. Certified Nurse-Midwives (CNMs) practice at Sutter Eden Medical Center and within Kaiser Permanente's San Leandro and Oakland medical centers, providing hospital-based midwifery care close to home. Licensed Midwives (LMs) and Certified Midwives (CMs) served many Hayward-area families through home-birth practices and community-based options, in part because Hayward's birth centers are clustered in neighboring Fremont and Oakland.",
@@ -11171,6 +11171,9 @@ hospitalDetails: [
     state: "GA",
     stateFull: "Georgia",
     slug: "cumming-ga",
+    ogImage: "/images/og-city-cumming-ga.webp",
+    heroImage: "/images/cumming-ga-birth-doula-skyline.webp",
+    supportSceneImage: "/images/cumming-ga-birth-doula-support.webp",
     costLow: 800,
     costHigh: 2500,
     shelbiServesHere: false,
@@ -11190,7 +11193,8 @@ hospitalDetails: [
     insuranceNote: "Private doula reimbursement in Georgia varies by plan. Some employer-sponsored health plans in the Atlanta metro now include maternal wellness benefits that may partially cover doula support. Ask your insurer whether doula services are covered, whether out-of-network doula benefits apply, and whether HSA or FSA funds may be used. Request a superbill from your doula if they offer one for potential reimbursement.",
     localDoulas: [
       { name: "North Atlanta Concierge Doula Services", credential: "Certified Doula Team (DONA, CBI, BEST)", practice: "North Atlanta Concierge Doula Services", url: "https://www.natlconciergedoulas.com/services", costRange: "$1,200-$2,500", costRange_source: "market-estimate", description: "North Atlanta Concierge Doula Services is a Cumming-based doula agency serving Forsyth County and the north metro Atlanta area. The team provides concierge-level birth and postpartum support with a focus on personalized, unbiased care. Services include birth doula support, postpartum doula support, childbirth education, and newborn care guidance. The agency serves Cumming, Alpharetta, Johns Creek, Canton, and the greater north Fulton corridor. Confirm current availability, package pricing, and whether they offer sliding-scale or payment plan options.", serviceArea: ["Cumming, GA", "Forsyth County", "Alpharetta, GA", "Johns Creek, GA", "Canton, GA", "Roswell, GA"], photo: "/images/provider-cumming-ga-north-atlanta-concierge-doulas.webp", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula", "Childbirth Education", "Newborn Care"] },
-      { name: "Alexis Chambers", credential: "Birth Doula; Clinical Mental Health Counselor", practice: "Independent", url: "https://alexischambersdoula.com/", costRange: "$900-$1,500", costRange_source: "Bornbir listing", description: "Alexis Chambers is a birth and postpartum doula based in Cumming, GA, supporting births within a 90-minute radius. The most common hospitals she attends are Northside Forsyth, NEGMC Gainesville, and WellStar North Fulton. She takes no more than 3 births per month and has trusted doula friends who provide backup support. She became interested in doula work after experiencing the benefits of hiring a doula for her own second birth, and holds a Masters in Clinical Mental Health Counseling. Ask about current availability and whether her birth-support approach matches your plans.", serviceArea: ["Cumming, GA", "Forsyth County", "North Fulton", "Gainesville, GA", "Dawsonville, GA"], photo: "/images/provider-cumming-ga-alexis-chambers-doula.webp", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"] }
+      { name: "Alexis Chambers", credential: "Birth Doula; Clinical Mental Health Counselor", practice: "Independent", url: "https://alexischambersdoula.com/", costRange: "$900-$1,500", costRange_source: "Bornbir listing", description: "Alexis Chambers is a birth and postpartum doula based in Cumming, GA, supporting births within a 90-minute radius. The most common hospitals she attends are Northside Forsyth, NEGMC Gainesville, and WellStar North Fulton. She takes no more than 3 births per month and has trusted doula friends who provide backup support. She became interested in doula work after experiencing the benefits of hiring a doula for her own second birth, and holds a Masters in Clinical Mental Health Counseling. Ask about current availability and whether her birth-support approach matches your plans.", serviceArea: ["Cumming, GA", "Forsyth County", "North Fulton", "Gainesville, GA", "Dawsonville, GA"], photo: "/images/provider-cumming-ga-alexis-chambers-doula.webp", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"] },
+      { name: "Full Bloom Birthing Company", practice: "Full Bloom Birthing Company", url: "https://www.fullbloombirthing.com", description: "Full Bloom Birthing Company is a Cumming-based doula service serving Forsyth County and the north metro Atlanta area. The practice provides birth and postpartum doula support with a focus on personalized, family-centered care. Services include birth doula support, postpartum doula support, and childbirth education. Confirm current availability, package pricing, and whether they offer sliding-scale or payment plan options.", serviceArea: ["Cumming, GA", "Forsyth County"], acceptingClients: true, services: ["Birth Doula", "Postpartum Doula", "Childbirth Education"] }
     ],
     faqs: [
       { q: "How much does a doula cost in Cumming?", a: "Expect to pay $800 to $2,500 for a doula in Cumming and the Forsyth County area. The median birth-doula package price is around $1,050, with typical ranges of $656-$1,119 for newer doulas and $1,200-$2,500 for experienced teams like North Atlanta Concierge Doula Services. The investment typically covers prenatal visits, continuous labor support, and postpartum check-ins. Grab the <a href='/birth-plan-template/'>free birth plan template</a> and start thinking about what matters most to you." },
@@ -11212,15 +11216,74 @@ hospitalDetails: [
     costLow: 800,
     costHigh: 2500,
     shelbiServesHere: false,
-    culture: "Skeleton entry for Newport Beach, CA. Awaiting provider research, hospital details, and enrichment.",
-    heroLocalDetail: "Skeleton entry for Newport Beach, CA.",
-    hospitalDetails: [],
+    heroImage: "/images/newport-beach-ca-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-newport-beach-ca.webp",
+    supportSceneImage: "/images/newport-beach-ca-support-scene.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Newport Beach, CA: birth support and doula care",
+    culture: "Newport Beach is an upscale Orange County coastal city where families typically deliver at Hoag Hospital Newport Beach, a nationally recognized maternity program with a Level IIIa NICU. Providence St. Joseph Hospital in Orange and UC Irvine Medical Center also serve Newport Beach families, both with Level III NICUs. California's Medi-Cal program covers doula services statewide.",
+    heroLocalDetail: "Newport Beach families deliver at Hoag Hospital Newport Beach, featuring the Sue & Bill Gross Women's Pavilion with private LDR suites, a 33-bed Level IIIa NICU, and advanced maternal-fetal medicine. Providence St. Joseph Hospital in Orange and UC Irvine Medical Center offer additional maternity options with Level III NICUs for higher-acuity needs.",
+    hospitalDetails: [
+      {
+        name: "Hoag Hospital Newport Beach (Sue & Bill Gross Women's Pavilion)",
+        address: "500 Newport Center Drive, Newport Beach, CA 92663",
+        url: "https://www.hoag.org/newport-beach-maternity-care/",
+        nicuLevel: "IIIa",
+        doulaPolicy: "Doulas are welcome as support persons; confirm current policy with the care team",
+        midwifeFriendly: true,
+        lactation: true,
+        privateRooms: true,
+        paragraph: "Hoag Hospital Newport Beach's Sue & Bill Gross Women's Pavilion is one of Orange County's most comprehensive maternal and newborn care programs. The facility includes 18 private labor, delivery, and recovery suites, 49 private postpartum rooms, a 14-bed antepartum unit, and an expanded 33-bed Level IIIa NICU for babies needing specialized care. Hoag's LDR unit has three C-section rooms staffed around the clock by anesthesiologists and OB/GYN hospitalists, and the hospital follows a non-separation policy where newborns room-in with their mothers. The pavilion offers advanced maternal-fetal medicine and a dedicated Obstetric Emergency Department. The hospital is Magnet-designated for nursing excellence and follows evidence-based maternity care practices. Doulas and one additional support person are welcome at the bedside. Language interpretation services are available for families needing care in languages other than English."
+      },
+      {
+        name: "Providence St. Joseph Hospital Orange",
+        address: "1100 W Stewart Dr, Orange, CA 92868",
+        url: "https://www.providence.org/locations/socal/st-joseph-hospital-orange/labor-and-delivery",
+        nicuLevel: "III",
+        doulaPolicy: "Doulas are welcome as support persons; confirm current policy with the care team",
+        midwifeFriendly: true,
+        lactation: true,
+        privateRooms: true,
+        paragraph: "Providence St. Joseph Hospital Orange is a full-service hospital about 10 miles from Newport Beach that delivers over 5,000 babies annually. The maternity center includes private labor, delivery, and recovery rooms with birthing beds and hydrotherapy options. The hospital has a Level III NICU staffed with neonatologists and pediatric subspecialists. Certified nurse-midwives are on staff, and the hospital follows a family-centered care model with couplet care so mother and baby remain together. Doulas are welcome as support persons. The hospital offers 24/7 OB hospitalists and anesthesiologists, and is a Baby-Friendly designated facility committed to evidence-based maternity care practices."
+      },
+      {
+        name: "UC Irvine Medical Center",
+        address: "1 Orange Grove Drive, Orange, CA 92868",
+        url: "https://www.ucihealth.org/medical-services/programs/labor-delivery",
+        nicuLevel: "III",
+        doulaPolicy: "Doulas are welcome as support persons; confirm current policy with the care team",
+        midwifeFriendly: true,
+        lactation: true,
+        privateRooms: true,
+        paragraph: "UC Irvine Medical Center is Orange County's regional perinatal center, located about 10 miles from Newport Beach. As a major academic medical center, it offers comprehensive maternity care including private labor and delivery suites, a 36-bed Level III NICU, and maternal-fetal medicine specialists for high-risk pregnancies. The hospital has 24/7 OB hospitalists and anesthesiologists, and provides advanced neonatal care including ECMO. Doulas are welcome as support persons. The hospital accepts Medi-Cal and most major insurance plans."
+      }
+    ],
     birthCenterDetails: [],
-    localDoulas: [],
-    medicaidNote: "Medicaid doula coverage varies by state. Check with local doulas and your plan for current coverage.",
-    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage.",
-    faqs: [],
-    nearbyCities: [],
+    localDoulas: [
+      { name: "Madi Rose Doula", practice: "Madi Rose Doula", url: "https://www.madirosedoula.com/newport-beach-doula", description: "Madi Rose is a certified full-spectrum doula and newborn care specialist based in Newport Beach, supporting families across Orange County through pregnancy, birth, and postpartum. Her practice covers birth planning and advocacy, labor support, postpartum care and counseling, reproductive-health counseling, and placenta encapsulation, with trauma-informed and gender-affirming care at the center of her work. In-person support is available across Newport Beach and Southern California, with virtual options for families further afield.", serviceArea: ["Newport Beach, CA", "Orange County, CA"], acceptingClients: true, services: ["Birth Doula", "Postpartum Doula", "Placenta Encapsulation"] },
+      { name: "Ashley McIntosh", practice: "Ashley McIntosh Doula Services", url: "https://www.bornbir.com/ashley-mcintosh", description: "Ashley McIntosh is a certified doula, childbirth educator, and Certified Professional Midwife serving Newport Beach families. Her approach centers on education through pregnancy: understanding the physiological changes of pregnancy, movement, nutrition, and exercises that ease common discomforts so clients enter labor feeling confident and strong. She holds a Bachelor of Science in Midwifery (2024) with DONA doula training (2020), VBAC Link (2021), and Spinning Babies (2021) training, and offers midwifery care, doula support, and monitrice services.", serviceArea: ["Newport Beach, CA", "Orange County, CA"], acceptingClients: true, services: ["Birth Doula", "Childbirth Education", "Monitrice Doula"] },
+      { name: "Diana Roth", practice: "Diana Roth Birth & Postpartum Doula", url: "https://www.bornbir.com/diana-roth", description: "Diana Roth is a birth and postpartum doula in Newport Beach with decades of experience caring for children and new families, rated 5.0 by clients on Bornbir. She began her childcare career at Universal Studios Child Care Center after arriving from Barranquilla, Colombia, and built her practice around establishing baby sleep schedules, nighttime care, and family routines. Today she supports Newport Beach families through labor and the early postpartum weeks, with virtual services also available.", serviceArea: ["Newport Beach, CA", "Orange County, CA"], acceptingClients: true, services: ["Birth Doula", "Postpartum Doula", "Newborn Care"] },
+    ],
+    medicaidNote: "Yes — California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal through the Department of Health Care Services. Newport Beach families on Medi-Cal can access doula support through enrolled providers in Orange County.",
+    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage. Hoag Hospital Newport Beach does not contract with Medi-Cal, so Medi-Cal families in the Newport Beach area commonly deliver at UC Irvine Medical Center or Providence St. Joseph Hospital Orange. Ask whether HSA or FSA funds can help with out-of-pocket doula costs.",
+    faqs: [
+      {
+        q: "Does Medi-Cal cover doula services in Newport Beach?",
+        a: "Yes. California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal directly through the Department of Health Care Services. Confirm your doula is a Medi-Cal enrolled provider before your first visit."
+      },
+      {
+        q: "What hospitals near Newport Beach offer labor and delivery services?",
+        a: "Hoag Hospital Newport Beach's Sue & Bill Gross Women's Pavilion (500 Newport Center Drive) offers private LDR suites, a 33-bed Level IIIa NICU, and an Obstetric Emergency Department. Providence St. Joseph Hospital Orange (1100 W Stewart Dr) offers a Level III NICU and certified nurse-midwives on staff. UC Irvine Medical Center (1 Orange Grove Drive) is the county's regional perinatal center with a Level III NICU and maternal-fetal medicine specialists."
+      },
+      {
+        q: "How much does a doula cost in Newport Beach?",
+        a: "Doula costs in Newport Beach and Orange County typically range from $1,200 to $2,800, reflecting the area's higher cost of living. Packages usually include prenatal visits, continuous labor support, and postpartum check-ins. Ask about sliding-scale options or payment plans when you interview doulas."
+      },
+      {
+        q: "Do Newport Beach-area hospitals allow doulas during labor?",
+        a: "Yes. Hoag Hospital Newport Beach welcomes doulas as support persons. Providence St. Joseph Hospital Orange and UC Irvine Medical Center also support doulas at the bedside. Confirm current visitor and support person policies at your hospital tour, as policies can change."
+      }
+    ],
+    nearbyCities: ["costa-mesa-ca", "irvine-ca", "huntington-beach-ca"],
   },
   "costa-mesa-ca": {
 	enableBlogResources: true,
@@ -11456,15 +11519,74 @@ hospitalDetails: [
     costLow: 800,
     costHigh: 2500,
     shelbiServesHere: false,
-    culture: "Skeleton entry for La Habra, CA. Awaiting provider research, hospital details, and enrichment.",
-    heroLocalDetail: "Skeleton entry for La Habra, CA.",
-    hospitalDetails: [],
+    heroImage: "/images/la-habra-ca-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-la-habra-ca.webp",
+    supportSceneImage: "/images/la-habra-ca-support-scene.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in La Habra, CA: birth support and doula care",
+    culture: "La Habra is a city in northwestern Orange County, California. Families in La Habra typically deliver at Providence St. Jude Medical Center in Fullerton (Level III NICU), PIH Health Whittier Hospital (Level III NICU), or Anaheim Regional Medical Center (Level III NICU). California's Medi-Cal program covers doula services statewide.",
+    heroLocalDetail: "La Habra families can choose from three nearby hospitals with Level III NICUs: Providence St. Jude Medical Center in Fullerton, PIH Health Whittier Hospital, and Anaheim Regional Medical Center. All three are within a 15-minute drive and provide comprehensive maternity care with 24/7 OB hospitalists.",
+    hospitalDetails: [
+      {
+        name: "Providence St. Jude Medical Center",
+        address: "101 E Valencia Mesa Dr, Fullerton, CA 92835",
+        url: "https://www.providence.org/locations/socal/st-jude-medical-center",
+        nicuLevel: "III",
+        doulaPolicy: "Doulas are welcome as support persons; confirm current policy with the care team",
+        midwifeFriendly: true,
+        lactation: true,
+        privateRooms: true,
+        paragraph: "Providence St. Jude Medical Center in Fullerton is the closest hospital to La Habra, about 3 miles away. The facility has a 14-bed Level III NICU staffed with neonatologists and pediatric subspecialists. The maternity center offers private labor, delivery, and recovery rooms, certified nurse-midwives on staff, and 24/7 OB hospitalists and anesthesiologists. The hospital follows a family-centered care model with couplet care so mother and baby remain together. Doulas are welcome as support persons. The hospital is a Baby-Friendly designated facility committed to evidence-based maternity care practices."
+      },
+      {
+        name: "PIH Health Whittier Hospital",
+        address: "14555 Whittier Blvd, Whittier, CA 90602",
+        url: "https://www.pihhealth.org/health-services/pregnancy-birth/labor-delivery/",
+        nicuLevel: "III",
+        doulaPolicy: "Doulas are welcome as support persons; confirm current policy with the care team",
+        midwifeFriendly: true,
+        lactation: true,
+        privateRooms: true,
+        paragraph: "PIH Health Whittier Hospital is about 10 miles from La Habra and offers a comprehensive maternity program with a Level III NICU. The hospital has board-certified obstetricians, OB hospitalists, certified nurse-midwives, neonatologists, and lactation consultants on staff. Labor and delivery features private birthing suites with birthing balls, soaking tubs, and flat TVs. Doulas are welcome as support persons. The hospital is a Baby-Friendly designated facility and offers 24/7 anesthesia coverage. Language interpretation services are available for families needing care in languages other than English."
+      },
+      {
+        name: "Anaheim Regional Medical Center",
+        address: "901 S Anaheim Blvd, Anaheim, CA 92805",
+        url: "https://www.ahmchealth.com/armc",
+        nicuLevel: "III",
+        doulaPolicy: "Doulas are welcome as support persons; confirm current policy with the care team",
+        midwifeFriendly: true,
+        lactation: true,
+        privateRooms: true,
+        paragraph: "Anaheim Regional Medical Center is about 12 miles from La Habra and serves as a key maternity hospital for north Orange County. The facility has a Level III NICU with 11 beds, private labor and delivery suites, and 24/7 OB hospitalists and anesthesiologists. The hospital offers certified nurse-midwives, neonatologists, and lactation consultants. Doulas are welcome as support persons. The hospital is a Baby-Friendly designated facility committed to evidence-based maternity care practices."
+      }
+    ],
     birthCenterDetails: [],
-    localDoulas: [],
-    medicaidNote: "Medicaid doula coverage varies by state. Check with local doulas and your plan for current coverage.",
-    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage.",
-    faqs: [],
-    nearbyCities: [],
+    localDoulas: [
+      { name: "Aloha Lamaze and Breastfeeding Services", practice: "Aloha Lamaze and Breastfeeding Services", url: "http://alohalamazeandbreastfeedingservices.com/", description: "Aloha Lamaze and Breastfeeding Services is a La Habra-based practice offering Lamaze childbirth education and breastfeeding support to families in north Orange County, rated 5 stars by clients. The practice covers childbirth classes, lactation consulting, and newborn feeding help, and can discuss insurance and Medi-Cal coverage when families inquire. Located on Lindauer Dr, it serves La Habra families preparing for delivery at nearby hospitals including Providence St. Jude Medical Center and PIH Health Whittier.", serviceArea: ["La Habra, CA", "North Orange County, CA"], acceptingClients: true, services: ["Childbirth Education", "Lactation Support"] },
+      { name: "Temple & Terrain Doula Services", practice: "Temple & Terrain Doula Services", url: "https://templeandterraindoula.com/", description: "Temple & Terrain Doula Services is a service-area doula practice based in Santa Fe Springs, about four miles from La Habra, with 5-star client reviews. The practice provides birth and postpartum doula support and pregnancy care to families across the surrounding area, and mentions insurance and Medi-Cal options for families who ask about coverage. La Habra families can reach the practice by phone or through its website to confirm availability and service range for their due window.", serviceArea: ["Santa Fe Springs, CA", "La Habra, CA"], acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"] },
+      { name: "Newborn Nurtury Doula Services", practice: "Newborn Nurtury Doula Services", url: "https://www.discoverdoulas.com/doula/newborn-nurtury-doula-services-anaheim-ca/", description: "Newborn Nurtury Doula Services is an Anaheim-based doula service with a 5-star rating across more than 50 client reviews, serving families across north Orange County including La Habra. The practice focuses on newborn care and postpartum doula support in the early weeks, with 24/7 availability noted in its directory listing. La Habra families can contact the practice to confirm current availability, package options, and whether overnight newborn support fits their postpartum plan.", serviceArea: ["Anaheim, CA", "North Orange County, CA"], acceptingClients: true, services: ["Postpartum Doula", "Newborn Care"] },
+    ],
+    medicaidNote: "Yes — California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal through the Department of Health Care Services. La Habra families on Medi-Cal can access doula support through enrolled providers in Orange County.",
+    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage. PIH Health Whittier Hospital accepts Medi-Cal. Ask whether HSA or FSA funds can help with out-of-pocket doula costs.",
+    faqs: [
+      {
+        q: "Does Medi-Cal cover doula services in La Habra?",
+        a: "Yes. California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal directly through the Department of Health Care Services. Confirm your doula is a Medi-Cal enrolled provider before your first visit."
+      },
+      {
+        q: "What hospitals near La Habra offer labor and delivery services?",
+        a: "Providence St. Jude Medical Center in Fullerton (101 E Valencia Mesa Dr) has a Level III NICU and is about 3 miles from La Habra. PIH Health Whittier Hospital (14555 Whittier Blvd) has a Level III NICU and is about 10 miles away. Anaheim Regional Medical Center (901 S Anaheim Blvd) has a Level III NICU and is about 12 miles away."
+      },
+      {
+        q: "How much does a doula cost in La Habra?",
+        a: "Doula costs in the La Habra area typically range from $1,000 to $2,500, reflecting Orange County's cost of living. Packages usually include prenatal visits, continuous labor support, and postpartum check-ins. Ask about sliding-scale options or payment plans when you interview doulas."
+      },
+      {
+        q: "Do La Habra-area hospitals allow doulas during labor?",
+        a: "Yes. Providence St. Jude Medical Center, PIH Health Whittier Hospital, and Anaheim Regional Medical Center all welcome doulas as support persons. Confirm current visitor and support person policies at your hospital tour, as policies can change."
+      }
+    ],
+    nearbyCities: ["fullerton-ca", "whittier-ca", "anaheim-ca"],
   },
   "san-mateo-ca": {
     enableBlogResources: true,
@@ -11476,15 +11598,62 @@ hospitalDetails: [
     costLow: 800,
     costHigh: 2500,
     shelbiServesHere: false,
-    culture: "Skeleton entry for San Mateo, CA. Awaiting provider research, hospital details, and enrichment.",
-    heroLocalDetail: "Skeleton entry for San Mateo, CA.",
-    hospitalDetails: [],
+    heroImage: "/images/san-mateo-ca-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-san-mateo-ca.webp",
+    supportSceneImage: "/images/san-mateo-ca-support-scene.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in San Mateo, CA: birth support and doula care",
+    culture: "San Mateo is a Bay Area city in San Mateo County, California. Families in San Mateo typically deliver at San Mateo Medical Center, the county's public hospital, or at Sequoia Hospital in Redwood City (Level II NICU). California's Medi-Cal program covers doula services statewide.",
+    heroLocalDetail: "San Mateo families can deliver at San Mateo Medical Center, a county hospital with full-service labor and delivery, or at Sequoia Hospital in nearby Redwood City with a Level II NICU. Both hospitals serve the San Mateo community with comprehensive maternity care.",
+    hospitalDetails: [
+      {
+        name: "San Mateo Medical Center",
+        address: "222 W 39th Ave, San Mateo, CA 94403",
+        url: "https://www.smchealth.org/san-mateo-medical-center",
+        doulaPolicy: "Doulas are welcome as support persons; confirm current policy with the care team",
+        midwifeFriendly: true,
+        lactation: true,
+        privateRooms: false,
+        paragraph: "San Mateo Medical Center is San Mateo County's public hospital, located in the city of San Mateo. The facility offers full-service labor and delivery with private birthing suites, 24/7 OB hospitalists, and certified nurse-midwives on staff. The hospital provides comprehensive maternity care including prenatal, delivery, and postpartum services. Doulas are welcome as support persons. The hospital accepts Medi-Cal and most major insurance plans. Language interpretation services are available for families needing care in languages other than English."
+      },
+      {
+        name: "Sequoia Hospital",
+        address: "170 Alameda de las Pulgas, Redwood City, CA 94062",
+        url: "https://www.commonspirit.org/find-a-location/family-birth-center-dignity-health-sequoia-hospital-2267",
+        nicuLevel: "II",
+        doulaPolicy: "Doulas are welcome as support persons; confirm current policy with the care team",
+        midwifeFriendly: true,
+        lactation: true,
+        privateRooms: true,
+        paragraph: "Sequoia Hospital in Redwood City is about 10 miles from San Mateo and offers a Family Birth Center with private LDR rooms. The hospital has a Level II NICU staffed by Lucile Packard Children's Hospital Stanford neonatologists, certified nurse-midwives on staff, and 24/7 OB hospitalists. The facility is a Blue Shield of California Blue Distinction Center for maternity care. Doulas are welcome as support persons. The hospital follows a family-centered care model with couplet care so mother and baby remain together."
+      }
+    ],
     birthCenterDetails: [],
-    localDoulas: [],
-    medicaidNote: "Medicaid doula coverage varies by state. Check with local doulas and your plan for current coverage.",
-    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage.",
-    faqs: [],
-    nearbyCities: [],
+    localDoulas: [
+      { name: "San Mateo Doula", practice: "San Mateo Doula", url: "https://sanmateodoula.com/about-san-mateo-doula/", description: "San Mateo Doula is a San Mateo-based birth and postpartum doula practice serving families across San Mateo County and the Bay Area between San Francisco and San Jose. The practice supports families through unmedicated births, epidurals, and cesareans alike, offering steady labor support, position changes and comfort measures, and postpartum recovery care that includes emotional and practical help with newborn rhythm, feeding, and confidence in early parenthood.", serviceArea: ["San Mateo, CA", "San Mateo County, CA"], acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"] },
+      { name: "Thais Mendonca Schweitzer", practice: "Thais Mendonca Schweitzer Doula Care", url: "https://www.bornbir.com/thais-mendonca-schweitzer", description: "Thais Mendonca Schweitzer is a certified birth and postpartum doula, newborn care specialist, and breastfeeding educator located in San Mateo, with training in birth and postpartum doula work (2021), breastfeeding education (2023), and newborn care (2020). Her birth package includes two to three prenatal childbirth-preparation visits, delivery-day support, and a postpartum visit; daytime postpartum support starts at three days per week. She works with families in English and Portuguese.", serviceArea: ["San Mateo, CA", "Bay Area, CA"], acceptingClients: true, services: ["Birth Doula", "Postpartum Doula", "Lactation Support"] },
+      { name: "Sweetbay Doula", practice: "Sweetbay Doula", url: "https://www.sweetbaydoula.com/doula-services/san-mateo", description: "Sweetbay Doula, the practice of Darby Morris, provides birth doula services in San Mateo and across the San Francisco Peninsula, supporting families at area hospitals or at home according to their birth plan. The practice serves the two San Mateo hospitals, Mills Health Center and San Mateo Medical Center, plus hospitals in nearby Burlingame, Redwood City, and San Carlos, and works with families from pregnancy through the postpartum transition.", serviceArea: ["San Mateo, CA", "San Francisco Peninsula, CA"], acceptingClients: true, services: ["Birth Doula"] },
+    ],
+    medicaidNote: "Yes — California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal through the Department of Health Care Services. San Mateo families on Medi-Cal can access doula support through enrolled providers in San Mateo County.",
+    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage. San Mateo Medical Center accepts Medi-Cal. Ask whether HSA or FSA funds can help with out-of-pocket doula costs.",
+    faqs: [
+      {
+        q: "Does Medi-Cal cover doula services in San Mateo?",
+        a: "Yes. California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal directly through the Department of Health Care Services. Confirm your doula is a Medi-Cal enrolled provider before your first visit."
+      },
+      {
+        q: "What hospitals near San Mateo offer labor and delivery services?",
+        a: "San Mateo Medical Center (222 W 39th Ave) is the county's public hospital with full-service labor and delivery. Sequoia Hospital in Redwood City (170 Alameda de las Pulgas) has a Level II NICU and is about 10 miles away."
+      },
+      {
+        q: "How much does a doula cost in San Mateo?",
+        a: "Doula costs in San Mateo and the Bay Area typically range from $1,500 to $3,000, reflecting the area's higher cost of living. Packages usually include prenatal visits, continuous labor support, and postpartum check-ins. Ask about sliding-scale options or payment plans when you interview doulas."
+      },
+      {
+        q: "Do San Mateo-area hospitals allow doulas during labor?",
+        a: "Yes. San Mateo Medical Center and Sequoia Hospital both welcome doulas as support persons. Confirm current visitor and support person policies at your hospital tour, as policies can change."
+      }
+    ],
+    nearbyCities: ["redwood-city-ca", "belmont-ca", "san-bruno-ca"],
   },
   "palo-alto-ca": {
     enableBlogResources: true,
@@ -11496,15 +11665,63 @@ hospitalDetails: [
     costLow: 800,
     costHigh: 2500,
     shelbiServesHere: false,
-    culture: "Skeleton entry for Palo Alto, CA. Awaiting provider research, hospital details, and enrichment.",
-    heroLocalDetail: "Skeleton entry for Palo Alto, CA.",
-    hospitalDetails: [],
+    heroImage: "/images/palo-alto-ca-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-palo-alto-ca.webp",
+    supportSceneImage: "/images/palo-alto-ca-support-scene.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Palo Alto, CA: birth support and doula care",
+    culture: "Palo Alto is a Bay Area city in Santa Clara County, California. Families in Palo Alto typically deliver at Lucile Packard Children's Hospital Stanford (Level IV NICU) or El Camino Hospital in Mountain View (Level III NICU). California's Medi-Cal program covers doula services statewide.",
+    heroLocalDetail: "Palo Alto families deliver at Lucile Packard Children's Hospital Stanford, a nationally ranked facility with a Level IV NICU, or at El Camino Hospital in Mountain View with a Level III NICU. Both hospitals are within a 15-minute drive and offer comprehensive maternity care.",
+    hospitalDetails: [
+      {
+        name: "Lucile Packard Children's Hospital Stanford",
+        address: "725 Welch Road, Palo Alto, CA 94304",
+        url: "https://www.stanfordchildrens.org/en/services/labor-and-delivery.html",
+        nicuLevel: "IV",
+        doulaPolicy: "Doulas are welcome as support persons; confirm current policy with the care team",
+        midwifeFriendly: true,
+        lactation: true,
+        privateRooms: true,
+        paragraph: "Lucile Packard Children's Hospital Stanford is the primary maternity hospital for Palo Alto families, offering a Level IV NICU â the highest level of neonatal care â with advanced technology for the most complex cases. The hospital features private labor and delivery suites, a dedicated Johnson Center for Pregnancy and Newborn Services, and a multidisciplinary care team including obstetricians, neonatologists, certified nurse-midwives, and lactation consultants. Doulas are welcome as support persons. The hospital is affiliated with Stanford Medicine and provides 24/7 anesthesia coverage. Language interpretation services are available."
+      },
+      {
+        name: "El Camino Hospital",
+        address: "2500 Grant Rd, Mountain View, CA 94040",
+        url: "https://www.elcaminohealth.org/services/mother-baby-health/labor-delivery-and-recovery",
+        nicuLevel: "III",
+        doulaPolicy: "Doulas are welcome as support persons; confirm current policy with the care team",
+        midwifeFriendly: true,
+        lactation: true,
+        privateRooms: true,
+        paragraph: "El Camino Hospital in Mountain View is about 10 miles from Palo Alto and offers a Level III NICU in collaboration with Stanford Medicine. The hospital features private birthing suites, 24/7 anesthesia and neonatology coverage, certified nurse-midwives, and lactation consultants. Doulas are welcome as support persons. The hospital is a Baby-Friendly designated facility committed to evidence-based maternity care practices. Both the Mountain View and Los Gatos campuses offer on-site NICUs."
+      }
+    ],
     birthCenterDetails: [],
-    localDoulas: [],
-    medicaidNote: "Medicaid doula coverage varies by state. Check with local doulas and your plan for current coverage.",
-    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage.",
-    faqs: [],
-    nearbyCities: [],
+    localDoulas: [
+      { name: "Blossom Birth and Family", practice: "Blossom Birth and Family", url: "https://www.discoverdoulas.com/doula/blossom-birth-and-family-palo-alto-ca/", description: "Blossom Birth and Family is a Palo Alto institution for pregnancy, birth, and early parenthood, serving Silicon Valley families for over two decades from its Ramona Street location in downtown Palo Alto. The center offers birth and postpartum doula support, childbirth education classes, and lactation services, with a community room and lending library for new parents. Families preparing for delivery at Stanford Medicine or Menlo Park hospitals can connect with Blossom for local classes and doula matching.", serviceArea: ["Palo Alto, CA", "Silicon Valley, CA"], acceptingClients: true, services: ["Birth Doula", "Childbirth Education", "Lactation Support"] },
+      { name: "Doula by Mari", practice: "Doula by Mari", url: "https://mairidoula.wixsite.com/birth", description: "Doula by Mari provides birth doula services to families in Palo Alto and across the Peninsula and South Bay, with hospital experience at Stanford and local birth centers. The practice offers labor support, comfort measures, and advocacy, plus birth-plan development and prenatal preparation visits, and welcomes clients planning unmedicated births, epidurals, or cesarean deliveries.", serviceArea: ["Palo Alto, CA", "Peninsula, CA"], acceptingClients: true, services: ["Birth Doula"] },
+      { name: "Nubia Jones", practice: "Nubia Jones Birth & Postpartum Doula", url: "https://www.bornbir.com/nubia-jones", description: "Nubia Jones is a certified birth and postpartum doula with 25 years in the birth field and 14 years professionally serving families, now relocating to the Bay Area from New York as of fall 2026 and listing Palo Alto among her service cities. A mom of five, she is also a parent educator, certified breastfeeding counselor, integrative nutrition health coach, and student midwife. She offers birth doula support, postpartum care, and overnight newborn care, and supports mothers from first baby through later additions.", serviceArea: ["Palo Alto, CA", "Bay Area, CA"], acceptingClients: true, services: ["Birth Doula", "Postpartum Doula", "Newborn Care"] },
+    ],
+    medicaidNote: "Yes — California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal through the Department of Health Care Services. Palo Alto families on Medi-Cal can access doula support through enrolled providers in Santa Clara County.",
+    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage. El Camino Hospital accepts Medi-Cal. Ask whether HSA or FSA funds can help with out-of-pocket doula costs.",
+    faqs: [
+      {
+        q: "Does Medi-Cal cover doula services in Palo Alto?",
+        a: "Yes. California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal directly through the Department of Health Care Services. Confirm your doula is a Medi-Cal enrolled provider before your first visit."
+      },
+      {
+        q: "What hospitals near Palo Alto offer labor and delivery services?",
+        a: "Lucile Packard Children's Hospital Stanford (725 Welch Road) is Palo Alto's primary maternity hospital with a Level IV NICU. El Camino Hospital in Mountain View (2500 Grant Rd) has a Level III NICU and is about 10 miles away."
+      },
+      {
+        q: "How much does a doula cost in Palo Alto?",
+        a: "Doula costs in Palo Alto and the Bay Area typically range from $1,500 to $3,000, reflecting the area's higher cost of living. Packages usually include prenatal visits, continuous labor support, and postpartum check-ins. Ask about sliding-scale options or payment plans when you interview doulas."
+      },
+      {
+        q: "Do Palo Alto-area hospitals allow doulas during labor?",
+        a: "Yes. Lucile Packard Children's Hospital Stanford and El Camino Hospital both welcome doulas as support persons. Confirm current visitor and support person policies at your hospital tour, as policies can change."
+      }
+    ],
+    nearbyCities: ["mountain-view-ca", "menlo-park-ca", "sunnyvale-ca"],
   },
   "redwood-city-ca": {
     enableBlogResources: true,
@@ -11516,15 +11733,63 @@ hospitalDetails: [
     costLow: 800,
     costHigh: 2500,
     shelbiServesHere: false,
-    culture: "Skeleton entry for Redwood City, CA. Awaiting provider research, hospital details, and enrichment.",
-    heroLocalDetail: "Skeleton entry for Redwood City, CA.",
-    hospitalDetails: [],
+    heroImage: "/images/redwood-city-ca-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-redwood-city-ca.webp",
+    supportSceneImage: "/images/redwood-city-ca-support-scene.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Redwood City, CA: birth support and doula care",
+    culture: "Redwood City is the county seat of San Mateo County in the San Francisco Bay Area. Families in Redwood City typically deliver at Sequoia Hospital (Level II NICU) or Kaiser Permanente Redwood City Medical Center. California's Medi-Cal program covers doula services statewide.",
+    heroLocalDetail: "Redwood City families deliver at Sequoia Hospital, featuring a Family Birth Center with a Level II NICU staffed by Lucile Packard Children's Hospital Stanford, or at Kaiser Permanente Redwood City Medical Center with a Level II nursery. Both hospitals provide comprehensive maternity care.",
+    hospitalDetails: [
+      {
+        name: "Sequoia Hospital",
+        address: "170 Alameda de las Pulgas, Redwood City, CA 94062",
+        url: "https://www.commonspirit.org/find-a-location/family-birth-center-dignity-health-sequoia-hospital-2267",
+        nicuLevel: "II",
+        doulaPolicy: "Doulas are welcome as support persons; confirm current policy with the care team",
+        midwifeFriendly: true,
+        lactation: true,
+        privateRooms: true,
+        paragraph: "Sequoia Hospital in Redwood City is a nationally recognized maternity center featuring a Family Birth Center with private LDR rooms. The hospital has a Level II NICU staffed by Lucile Packard Children's Hospital Stanford neonatologists, certified nurse-midwives on staff, and 24/7 OB hospitalists. Sequoia is a Blue Shield of California Blue Distinction Center for maternity care. Doulas are welcome as support persons. The hospital follows a family-centered care model with couplet care so mother and baby remain together."
+      },
+      {
+        name: "Kaiser Permanente Redwood City Medical Center",
+        address: "1100 Veterans Blvd, Redwood City, CA 94063",
+        url: "https://healthy.kaiserpermanente.org/northern-california/facilities/redwood-city-medical-center-100337",
+        nicuLevel: "II",
+        doulaPolicy: "Doulas are welcome as support persons; confirm current policy with the care team",
+        midwifeFriendly: true,
+        lactation: true,
+        privateRooms: true,
+        paragraph: "Kaiser Permanente Redwood City Medical Center offers labor and delivery services with a Level II nursery for newborns needing extra care. The hospital features private birthing suites, 24/7 anesthesia coverage, and certified nurse-midwives on staff. Doulas are welcome as support persons. The hospital is a high-performing facility for maternity care (Uncomplicated Pregnancy) per U.S. News & World Report."
+      }
+    ],
     birthCenterDetails: [],
-    localDoulas: [],
-    medicaidNote: "Medicaid doula coverage varies by state. Check with local doulas and your plan for current coverage.",
-    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage.",
-    faqs: [],
-    nearbyCities: [],
+    localDoulas: [
+      { name: "Together Birth & Body", practice: "Together Birth & Body", url: "https://www.discoverdoulas.com/doula/together-birth-and-body-redwood-city-ca/", description: "Together Birth & Body is a Redwood City practice combining birth doula support with fitness and bodywork for pregnancy and recovery. The practice offers birth doula packages with prenatal visits, labor support at area hospitals, and postpartum follow-up, alongside prenatal fitness classes and birth-preparation workshops that help couples prepare together for labor and the postpartum months.", serviceArea: ["Redwood City, CA", "San Mateo County, CA"], acceptingClients: true, services: ["Birth Doula", "Prenatal Fitness"] },
+      { name: "Mairi Doula", practice: "Mairi Doula", url: "https://mairidoula.wixsite.com/birth", description: "Mairi Doula serves Redwood City families with birth doula support across the Peninsula and South Bay, offering labor support, comfort measures, and advocacy at area hospitals, plus prenatal preparation and birth-plan development. The practice welcomes clients planning unmedicated births, epidurals, or cesarean deliveries.", serviceArea: ["Redwood City, CA", "Peninsula, CA"], acceptingClients: true, services: ["Birth Doula"] },
+      { name: "Redwood Doulas", practice: "Redwood Doulas", url: "https://redwooddoulas.com/bay-area-doula-services/", description: "Redwood Doulas provides birth doula services across the Bay Area with a Redwood City focus, supporting families at local hospitals through labor with continuous support, comfort techniques, and advocacy. The practice offers prenatal visits to build the birth plan, on-call labor support, and postpartum follow-up visits, and works with families planning unmedicated births, epidurals, or cesareans.", serviceArea: ["Redwood City, CA", "Bay Area, CA"], acceptingClients: true, services: ["Birth Doula"] },
+    ],
+    medicaidNote: "Yes — California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal through the Department of Health Care Services. Redwood City families on Medi-Cal can access doula support through enrolled providers in San Mateo County.",
+    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage. Sequoia Hospital accepts Medi-Cal. Ask whether HSA or FSA funds can help with out-of-pocket doula costs.",
+    faqs: [
+      {
+        q: "Does Medi-Cal cover doula services in Redwood City?",
+        a: "Yes. California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal directly through the Department of Health Care Services. Confirm your doula is a Medi-Cal enrolled provider before your first visit."
+      },
+      {
+        q: "What hospitals near Redwood City offer labor and delivery services?",
+        a: "Sequoia Hospital (170 Alameda de las Pulgas) has a Level II NICU and is the primary maternity hospital in Redwood City. Kaiser Permanente Redwood City Medical Center (1100 Veterans Blvd) also offers labor and delivery with a Level II nursery."
+      },
+      {
+        q: "How much does a doula cost in Redwood City?",
+        a: "Doula costs in Redwood City and the Bay Area typically range from $1,500 to $3,000, reflecting the area's higher cost of living. Packages usually include prenatal visits, continuous labor support, and postpartum check-ins. Ask about sliding-scale options or payment plans when you interview doulas."
+      },
+      {
+        q: "Do Redwood City-area hospitals allow doulas during labor?",
+        a: "Yes. Sequoia Hospital and Kaiser Permanente Redwood City Medical Center both welcome doulas as support persons. Confirm current visitor and support person policies at your hospital tour, as policies can change."
+      }
+    ],
+    nearbyCities: ["san-mateo-ca", "belmont-ca", "san-carlo-ca"],
   },
   "burlingame-ca": {
     enableBlogResources: true,
@@ -11536,15 +11801,63 @@ hospitalDetails: [
     costLow: 800,
     costHigh: 2500,
     shelbiServesHere: false,
-    culture: "Skeleton entry for Burlingame, CA. Awaiting provider research, hospital details, and enrichment.",
-    heroLocalDetail: "Skeleton entry for Burlingame, CA.",
-    hospitalDetails: [],
+    culture: "Burlingame is a city in San Mateo County on the San Francisco Peninsula. Families in Burlingame typically deliver at Mills-Peninsula Medical Center (Sutter Health), a CMS Birthing Friendly facility with a Level II NICU and private LDR rooms, or at San Mateo Medical Center in nearby San Mateo. California's Medi-Cal program covers doula services statewide.",
+    heroLocalDetail: "Burlingame families deliver at Mills-Peninsula Medical Center (Sutter Health), a CMS Birthing Friendly facility with a Level II NICU and private LDR rooms, or at San Mateo Medical Center in nearby San Mateo. Both hospitals serve the Burlingame community with comprehensive maternity care.",
+    hospitalDetails: [
+      {
+        name: "Mills-Peninsula Medical Center (Sutter Health)",
+        address: "1501 Trousdale Dr, Burlingame, CA 94010",
+        url: "https://www.sutterhealth.org/find-location/facility/mills-peninsula-family-birth-center-1043246769",
+        nicuLevel: "II",
+        doulaPolicy: "Doulas are welcome as support persons; confirm current policy with the care team",
+        midwifeFriendly: true,
+        lactation: true,
+        privateRooms: true,
+        paragraph: "Mills-Peninsula Medical Center in Burlingame is a CMS Birthing Friendly facility with a 5-star overall quality rating. The Family Birth Center features private LDR (labor, delivery, recovery, postpartum) rooms, a Level II NICU for newborns needing extra care, and 24/7 anesthesia coverage. Certified nurse-midwives are on staff, and the hospital follows evidence-based maternity care practices. Doulas are welcome as support persons. The hospital is part of Sutter Health's network and accepts Medi-Cal and most major insurance plans. Language interpretation services are available."
+      },
+      {
+        name: "San Mateo Medical Center",
+        address: "222 W 39th Ave, San Mateo, CA 94403",
+        url: "https://www.smchealth.org/san-mateo-medical-center",
+        nicuLevel: "II",
+        doulaPolicy: "Doulas are welcome as support persons; confirm current policy with the care team",
+        midwifeFriendly: true,
+        lactation: true,
+        privateRooms: false,
+        paragraph: "San Mateo Medical Center is San Mateo County's public hospital, located about 5 miles from Burlingame. The facility offers full-service labor and delivery with certified nurse-midwives on staff and 24/7 OB hospitalists. The hospital accepts Medi-Cal and most major insurance plans. Doulas are welcome as support persons. Language interpretation services are available for families needing care in languages other than English."
+      }
+    ],
     birthCenterDetails: [],
-    localDoulas: [],
-    medicaidNote: "Medicaid doula coverage varies by state. Check with local doulas and your plan for current coverage.",
-    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage.",
-    faqs: [],
-    nearbyCities: [],
+    localDoulas: [
+      { name: "Doula by Mari", practice: "Doula by Mari", url: "https://mairidoula.wixsite.com/birth", description: "Doula by Mari is based in Burlingame, offering birth doula services to families across the Peninsula, with labor support, comfort measures, and advocacy at area hospitals including Mills-Peninsula Medical Center. The practice offers prenatal preparation visits and birth-plan development, and supports clients planning unmedicated births, epidurals, or cesarean deliveries.", serviceArea: ["Burlingame, CA", "Peninsula, CA"], acceptingClients: true, services: ["Birth Doula"] },
+      { name: "Rebecca Garcia", practice: "Rebecca Garcia Doula Services", url: "https://www.bornbir.com/rebecca-garcia", description: "Rebecca Garcia is a Burlingame-based birth and postpartum doula listed on Bornbir, supporting Peninsula families through labor and the early postpartum weeks. She offers continuous labor support, comfort measures, and postpartum visits that cover newborn care, feeding help, and emotional recovery, and supports families delivering at Mills-Peninsula Medical Center or nearby hospitals.", serviceArea: ["Burlingame, CA", "Peninsula, CA"], acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"] },
+      { name: "Bay City Doulas", practice: "Bay City Doulas", url: "https://baycitydoulas.com/", description: "Bay City Doulas is a postpartum doula agency founded by Cosima Wright and Anathea Abele serving Bay Area families, including Burlingame and the Peninsula. The agency provides personalized in-home postpartum doula support covering newborn care, feeding help, sibling care, and overnight support, with a focus on customized care that respects each family's individuality.", serviceArea: ["Bay Area, CA", "Burlingame, CA"], acceptingClients: true, services: ["Postpartum Doula"] },
+    ],
+    medicaidNote: "Yes — California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal through the Department of Health Care Services. Burlingame families on Medi-Cal can access doula support through enrolled providers in San Mateo County.",
+    insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage. Mills-Peninsula Medical Center accepts Medi-Cal. Ask whether HSA or FSA funds can help with out-of-pocket doula costs.",
+    faqs: [
+      {
+        q: "Does Medi-Cal cover doula services in Burlingame?",
+        a: "Yes. California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal directly through the Department of Health Care Services. Confirm your doula is a Medi-Cal enrolled provider before your first visit."
+      },
+      {
+        q: "What hospitals near Burlingame offer labor and delivery services?",
+        a: "Mills-Peninsula Medical Center (1501 Trousdale Dr) in Burlingame is a CMS Birthing Friendly facility with a Level II NICU. San Mateo Medical Center (222 W 39th Ave) in San Mateo is the county's public hospital, about 5 miles away."
+      },
+      {
+        q: "How much does a doula cost in Burlingame?",
+        a: "Doula costs in Burlingame and the Bay Area typically range from $1,500 to $3,000, reflecting the area's higher cost of living. Packages usually include prenatal visits, continuous labor support, and postpartum check-ins. Ask about sliding-scale options or payment plans when you interview doulas."
+      },
+      {
+        q: "Do Burlingame-area hospitals allow doulas during labor?",
+        a: "Yes. Mills-Peninsula Medical Center and San Mateo Medical Center both welcome doulas as support persons. Confirm current visitor and support person policies at your hospital tour, as policies can change."
+      }
+    ],
+    nearbyCities: ["san-mateo-ca", "redwood-city-ca", "belmont-ca"],
+    heroImage: "/images/burlingame-ca-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-burlingame-ca.webp",
+    supportSceneImage: "/images/burlingame-ca-support-scene.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Burlingame, CA: birth support and doula care",
   },
     "cary-nc": {
     enableBlogResources: true,

@@ -33,6 +33,62 @@ from tjb_contracts import (  # noqa: E402
 
 LIVE_URL = "https://truejoybirthing.com/cities/{slug}/"
 
+# ---------------------------------------------------------------- send-log proof
+# ANTI-FABRICATION GATE (2026-09-16, Kenneth directive): every outreach entry a
+# worker claims as sent/queued must exist in the canonical send log
+# (~/.hermes/logs/tjb-outreach-send-log.jsonl) matched on recipient email +
+# slug. message_id alone is worker-asserted and was previously fabricated; the
+# send log is written only by tjb-outreach-send.py AFTER a real send.
+SEND_LOG = Path.home() / ".hermes" / "logs" / "tjb-outreach-send-log.jsonl"
+
+def load_send_log_index():
+    """Return set of (to_email.lower(), slug) present in the send log."""
+    idx = set()
+    try:
+        for line in SEND_LOG.read_text(errors="replace").splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                r = json.loads(line)
+            except Exception:
+                continue
+            to = (r.get("to") or "").strip().lower()
+            slug = (r.get("slug") or "").strip()
+            if r.get("status") == "sent" and to:
+                idx.add((to, slug))
+    except OSError:
+        pass  # missing log = everything unverified (fail-closed below)
+    return idx
+
+def validate_outreach_send_log(c, violations):
+    """Cross-check claimed outreach against the canonical send log."""
+    claimed = c.get("outreach") or []
+    idx = load_send_log_index()
+    slug = c.get("slug", "")
+    for i, o in enumerate(claimed):
+        if not isinstance(o, dict):
+            continue
+        status = o.get("status")
+        if status not in ("sent", "queued"):
+            continue
+        to = (o.get("to") or o.get("email") or "").strip().lower()
+        if not to:
+            violations.append(
+                f"outreach[{i}]: sent/queued entry missing recipient email "
+                "(to) — cannot verify against send log")
+            continue
+        if o.get("status") == "sent":
+            if (to, slug) not in idx:
+                # Tolerate followups sent under a reply-context slug variant? No:
+                # first-touch and followups both record slug. Fail-closed.
+                violations.append(
+                    f"outreach[{i}]: FABRICATION — claimed sent to {to} but no "
+                    f"matching 'sent' record for slug '{slug}' in the send log "
+                    "(~/.hermes/logs/tjb-outreach-send-log.jsonl). Record the "
+                    "real send via tjb-outreach-send.py, or mark status "
+                    "'blocked' with the reason.")
+
 
 # ---------------------------------------------------------------- helpers
 
@@ -262,6 +318,9 @@ def validate_video_outreach(c, b, violations):
         if isinstance(o, dict) and o.get("status") in ("sent", "queued"):
             req(bool((o.get("message_id") or "").strip()),
                 f"outreach[{i}]: sent/queued requires message_id (R41 proof of contact)", violations)
+    # ANTI-FABRICATION (2026-09-16): claimed sends must exist in the canonical
+    # send log — message_id is worker-asserted and was previously fabricated.
+    validate_outreach_send_log(c, violations)
 
 
 # ---------------------------------------------------------------- live-page check

@@ -147,23 +147,27 @@
   
   REPLACE THESE PLACEHOLDERS before rendering:
   
-  LA HABRA BIRTH SUPPORT     → e.g. "DENVER BIRTH SUPPORT" (uppercase, city name + "BIRTH SUPPORT")
-  Doulas &amp; Birth Plans<br>in La Habra, CA    → e.g. "Doulas & Birth Plans<br>in Denver, CO" (Cormorant Garamond, max 2 lines)
-  Tucked against the Coyote Hills at L.A. County's edge, La Habra families deserve birth support that gets it. Real hospital policies, local doulas, and a free birth plan template built for California moms.     → City-specific 1-2 sentence pitch. Reference local landmarks/geography.
+  LA HABRA CA BIRTH SUPPORT     → e.g. "DENVER BIRTH SUPPORT" (uppercase, city name + "BIRTH SUPPORT")
+  Doulas &amp; Birth Plans<br>in La Habra Ca    → e.g. "Doulas & Birth Plans<br>in Denver, CO" (Cormorant Garamond, max 2 lines)
+  Serving La Habra Ca families with expert birth support. Real hospital policies, local doulas, and a free birth plan template built for your community.     → City-specific 1-2 sentence pitch. Reference local landmarks/geography.
                      e.g. "From the Front Range to the Platte, Denver families deserve birth support
                      that gets it. Local doulas, real hospital policies, and a free birth plan
                      template built for Colorado moms."
   Free birth plan template <span>·</span> Hospital info <span>·</span> Real costs <span>·</span> Medicaid coverage     → e.g. "Free birth plan template · Hospital info · Real costs · Medicaid coverage"
                      (Use · separator between items)
-  ../public/images/alameda-ca-birth-doula-skyline-v2.webp  → Production URL of city hero image, or gradient fallback.
+  ../public/images/og-city-fallback.webp  → Production URL of city hero image, or gradient fallback.
                      Denver: https://truejoybirthing.com/images/denver-hero-front-range.webp
                      Other cities without hero: Use branded gradient div instead (see below)
   https://truejoybirthing.com/images/logo-mono.svg    → https://truejoybirthing.com/images/logo-mono.svg
                      (ALWAYS use mono — the color logo washes out on cream backgrounds)
   
   FOR CITIES WITHOUT A HERO IMAGE:
-  Replace the <div class="right-column" style="background: linear-gradient(135deg, #E6BBD8 0%, #8E8CB5 50%, #A8B5A0 100%);"></div> with:
-  <div class="right-column" style="background: linear-gradient(135deg, #E6BBD8 0%, #8E8CB5 50%, #A8B5A0 100%);"></div>
+  Replace the   <div class="right-column">
+    <img src="../public/images/la-habra-ca-birth-doula-skyline-600.webp" alt="La Habra Ca" />
+  </div> with:
+  <div class="right-column">
+    <img src="../public/images/la-habra-ca-birth-doula-skyline-600.webp" alt="La Habra Ca" />
+  </div>
   This is the same gradient as Pattern A cards — a safe branded fallback.
   
   RENDERING:
@@ -186,15 +190,17 @@
 <div class="og-card">
   <div class="left-column">
     <div class="accent-line"></div>
-    <div class="eyebrow">LA HABRA BIRTH SUPPORT</div>
-    <div class="headline">Doulas &amp; Birth Plans<br>in La Habra, CA</div>
-    <div class="summary">Tucked against the Coyote Hills at L.A. County's edge, La Habra families deserve birth support that gets it. Real hospital policies, local doulas, and a free birth plan template built for California moms.</div>
+    <div class="eyebrow">LA HABRA CA BIRTH SUPPORT</div>
+    <div class="headline">Doulas &amp; Birth Plans<br>in La Habra Ca</div>
+    <div class="summary">Serving La Habra Ca families with expert birth support. Real hospital policies, local doulas, and a free birth plan template built for your community.</div>
     <div class="subhead">Free birth plan template <span>·</span> Hospital info <span>·</span> Real costs <span>·</span> Medicaid coverage</div>
     <div class="logo-area">
       <img src="https://truejoybirthing.com/images/logo-mono.svg" alt="True Joy Birthing" />
     </div>
   </div>
-  <div class="right-column" style="background: linear-gradient(135deg, #E6BBD8 0%, #8E8CB5 50%, #A8B5A0 100%);"></div>
+    <div class="right-column">
+    <img src="../public/images/la-habra-ca-birth-doula-skyline-600.webp" alt="La Habra Ca" />
+  </div>
 </div>
 </body>
 </html>

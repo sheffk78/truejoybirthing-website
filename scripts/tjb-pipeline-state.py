@@ -131,10 +131,15 @@ STAGE_CONTEXTS = {
             "Generate and upload YouTube thumbnail (derived from hero image). "
             "Update video-embeds.ts with new video ID. Rebuild and redeploy with embed. "
             "Set old video to unlisted if replacing. "
-            "Draft and send provider outreach emails (personalized, from shelbi@truejoybirthing.com, 15s delays). "
-            "Re-outreach: re-engage non-responders, name what changed on the page."
+            "OUTREACH (2026-09-16, deterministic — NOT hand-written): run "
+            "python3 ~/.hermes/scripts/tjb-batch-outreach.py build --slug {slug}. "
+            "That script loads providers from cities.ts, renders the approved template, "
+            "sends with delays, appends the canonical send log, and mirrors status. "
+            "Do NOT write outreach emails yourself and do NOT use delegate_task for sends. "
+            "If the script reports BLOCKED, record the reason — do not fabricate sends. "
+            "Re-outreach is the only manual path: re-engage non-responders, name what changed."
         ),
-        "toolsets": ["terminal", "file", "vision", "browser", "web"],
+        "toolsets": ["terminal", "file", "vision"],
         "gates": ["pre_render_gate", "video_file_exists", "youtube_upload", "youtube_thumbnail", "video_embedded", "videoobject_schema", "outreach_sent_or_blocked"],
     },
 }
