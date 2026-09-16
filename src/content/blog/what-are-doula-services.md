@@ -11,7 +11,7 @@ layout: "../../layouts/PostLayout.astro"
 
 If you're reading this, you've probably heard the word "doula" and you're trying to figure out what they actually do. Maybe someone told you to hire one. Maybe your OB mentioned it. Maybe you're three months pregnant and realizing you don't want to do this alone.
 
-I get it. I'm Shelbi Kohler — certified birth doula and mother of seven. I've been on both sides of this. I know what it's like to walk into a delivery room not knowing what to expect, and I know what a difference it makes when someone in that room is focused entirely on you.
+I get it. I'm Shelbi Kohler — birth doula and mother of seven. I've been on both sides of this. I know what it's like to walk into a delivery room not knowing what to expect, and I know what a difference it makes when someone in that room is focused entirely on you.
 
 Let me break down exactly what doula services include, what they don't, and whether it makes sense for you.
 

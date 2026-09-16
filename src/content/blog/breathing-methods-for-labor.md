@@ -3,7 +3,7 @@ title: "Breathing Methods for Labor: What Works"
 date: "2026-08-11"
 slug: "breathing-methods-for-labor"
 author: "Shelbi Kohler"
-description: "Breathing methods for labor explained by a certified doula. Learn slow breathing, patterned breathing, and Lamaze techniques to help through contractions."
+description: "Breathing methods for labor explained by a doula. Learn slow breathing, patterned breathing, and Lamaze techniques to help through contractions."
 canonical: "https://truejoybirthing.com/blog/breathing-methods-for-labor/"
 featuredImage: "/images/doula-counter-pressure.webp"
 layout: "../../layouts/PostLayout.astro"
@@ -13,7 +13,7 @@ layout: "../../layouts/PostLayout.astro"
 
 If you're pregnant and thinking about how you'll cope with contractions, you've probably heard that "just breathe" is the go-to advice. But here's the thing: nobody hands you a manual for *which* breathing methods for labor actually work when the intensity ramps up.
 
-I'm Shelbi, a certified doula and mom of seven. I've sat beside dozens of laboring people, and I can tell you that breathwork is one of the most practical tools in your toolbox. It won't erase the intensity, and it's not a cure-all. But the right breathing techniques for labor can genuinely help you stay grounded, manage discomfort, and feel more in control when your body is doing something extraordinary.
+I'm Shelbi, a birth doula and mom of seven. I've sat beside dozens of laboring people, and I can tell you that breathwork is one of the most practical tools in your toolbox. It won't erase the intensity, and it's not a cure-all. But the right breathing techniques for labor can genuinely help you stay grounded, manage discomfort, and feel more in control when your body is doing something extraordinary.
 
 Before we dive in, I want to be clear: there is no single "right" way to breathe through labor. What works for one person may feel awkward for another. That's why I encourage every client to explore a few different approaches during pregnancy so they can find what clicks. A great starting point is downloading your <a href="/birth-plan-template/">free Joyful Birth Plan</a>, where you can note your preferences for comfort measures including breathing.
 

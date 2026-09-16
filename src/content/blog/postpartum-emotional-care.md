@@ -11,7 +11,7 @@ layout: "../../layouts/PostLayout.astro"
 
 Nobody hands you a manual on the way out of the hospital. They check your baby's weight, confirm you have a car seat, and send you on your way. What they don't always tell you is that the emotional aftermath of birth can hit harder than anything you experienced during labor.
 
-I'm Shelbi Kohler, a certified birth doula and a mother of seven. I've lived through the fog, the tears that come out of nowhere, and the moments where you wonder if you're the only one who feels this way. You're not. And what you're feeling deserves just as much attention as any physical recovery.
+I'm Shelbi Kohler, a birth doula and a mother of seven. I've lived through the fog, the tears that come out of nowhere, and the moments where you wonder if you're the only one who feels this way. You're not. And what you're feeling deserves just as much attention as any physical recovery.
 
 This guide covers what I wish every parent knew about postpartum emotional health — from telling the difference between normal adjustment and something that needs clinical support, to building a network that actually catches you when things get hard.
 

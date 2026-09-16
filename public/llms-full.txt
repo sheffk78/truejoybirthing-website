@@ -1,13 +1,13 @@
 # True Joy Birthing — Full Site Reference
 
-> Free birth plan tools, doula cost guides, hospital info, and Medicaid coverage details for expecting families. Founded by Shelbi Kohler, certified birth doula (CD(DONA)). Covers 36 states, 134+ cities.
+> Free birth plan tools, doula cost guides, hospital info, and Medicaid coverage details for expecting families. Founded by Shelbi Kohler, birth doula. Covers 36 states, 134+ cities.
 
 ## Brand
 
 - **Name:** True Joy Birthing
 - **Tagline:** Your birth plan gives you the words when your doctor recommends something you didn't expect
 - **Founded:** 2025
-- **Founder:** Shelbi Kohler, CD(DONA) — certified birth doula
+- **Founder:** Shelbi Kohler — birth doula
 - **Headquarters:** United States
 - **Price Range:** Free–$250
 - **Products:** Free Joyful Birth Plan (PDF + app), $47 Guided Birth Plan Walkthrough (video course), $250 Birth Plan Confidence Session (live Zoom)
@@ -26,7 +26,7 @@
 ### About
 - **URL:** https://truejoybirthing.com/about/
 - **Description:** True Joy Birthing gives you a doula-crafted birth plan, a guided walkthrough in the free app that explains every tradeoff, and a doula directory — so you're never guessing.
-- **Founder story:** Shelbi Kohler — certified birth doula, childbirth educator, mom of seven. Built TJB after seeing moms who wanted to feel prepared but didn't know their options.
+- **Founder story:** Shelbi Kohler — birth doula, childbirth educator, mom of seven. Built TJB after seeing moms who wanted to feel prepared but didn't know their options.
 
 ### Free Birth Plan Template
 - **URL:** https://truejoybirthing.com/birth-plan-template/
@@ -137,7 +137,7 @@
 
 ### Blog
 - **URL:** https://truejoybirthing.com/blog/
-- **Description:** Real stories and evidence-based guidance from Shelbi Kohler, certified birth doula. Topics: birth plans, doula services, insurance coverage, Medicaid, VBAC, natural birth, and hospital birth planning.
+- **Description:** Real stories and evidence-based guidance from Shelbi Kohler, birth doula. Topics: birth plans, doula services, insurance coverage, Medicaid, VBAC, natural birth, and hospital birth planning.
 
 ### Ambassador Program
 - **URL:** https://truejoybirthing.com/ambassador/
@@ -171,7 +171,7 @@ Example: https://truejoybirthing.com/birth-support/tx/ — doula resources for T
 
 ## Key Facts
 
-- Founded by Shelbi Kohler, CD(DONA) — certified birth doula
+- Founded by Shelbi Kohler — birth doula
 - Free Joyful Birth Plan template (no email required, no signup wall)
 - $47 Guided Birth Plan Walkthrough (5 video modules, free with email)
 - $250 Birth Plan Confidence Session (live Zoom with Shelbi)

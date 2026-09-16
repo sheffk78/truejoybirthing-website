@@ -11,7 +11,7 @@ layout: "../../layouts/PostLayout.astro"
 
 So you're looking into doula support — or maybe you just heard the word "doula" for the first time and want to know what it actually means. Either way, I'm glad you're here.
 
-I'm Shelbi Kohler. I'm a certified birth doula and a mother of seven. That means I've been on both sides of this — seven times over. I know what it's like to labor for hours wondering if you can keep going. I know what it's like to look at your partner and think, "I need more help here." And I know what a difference it makes when someone in that room is focused entirely on you.
+I'm Shelbi Kohler. I'm a birth doula and a mother of seven. That means I've been on both sides of this — seven times over. I know what it's like to labor for hours wondering if you can keep going. I know what it's like to look at your partner and think, "I need more help here." And I know what a difference it makes when someone in that room is focused entirely on you.
 
 Let me walk you through what a birth doula actually does, because there's a lot of confusion out there. For the full overview of doula services and types of doulas, see our complete <a href="/what-is-a-doula/">guide to what a doula is</a>.
 
@@ -39,7 +39,7 @@ Postpartum doulas charge differently — typically **$25 to $50 per hour** for d
 What drives the price up or down:
 
 - **Location** — In major metros like New York and Los Angeles, packages run $1,500 to $3,000. In smaller towns and rural areas, you'll see $650 to $1,500.
-- **Experience** — A newly certified doula charges less than someone with 20+ years and hundreds of births. In the same city, a $1,500 spread between the two is common.
+- **Experience** — A newly doula charges less than someone with 20+ years and hundreds of births. In the same city, a $1,500 spread between the two is common.
 - **What's included** — Some packages add birth plan help, unlimited texting, lactation guidance, or a backup doula. More inclusions mean a higher fee.
 
 Some families bring the cost down with HSA or FSA funds (a [Letter of Medical Necessity](/hsa-fsa-doula-services/) from your provider can make doula services eligible), state [Medicaid doula coverage](/medicaid-doula-coverage/) in states that offer it, or sliding-scale fees from doulas who offer them. It's always worth asking a doula you love whether they have a sliding scale, even if they don't advertise one.

@@ -19,7 +19,7 @@ Most birth doula packages run between $800 and $2,500. That's a wide range, and 
 
 **What drives the price:**
 
-- **Experience level** — A newly certified doula building her practice may charge $600–$900. A doula with years of experience and advanced training typically charges $1,500–$2,500.
+- **Experience level** — A newly doula building her practice may charge $600–$900. A doula with years of experience and advanced training typically charges $1,500–$2,500.
 - **Where you live** — Major metro areas (Northeast, West Coast) run higher. Rural areas and smaller cities run lower. More on this below.
 - **What's included** — Some packages are bare-bones; others include extra prenatal visits, postpartum support, lactation help, and more.
 
@@ -116,4 +116,4 @@ Most families I work with find a way to make doula support happen. Here's what w
 
 When you reach out to me, I'll send you a clear breakdown of my packages and pricing before we ever meet. No pressure, no hidden fees. Our initial consultation is free because I want you to feel good about the decision, not rushed.
 
-I'm Shelbi Kohler — certified birth and postpartum doula, and mom to seven kids. I've been in your shoes, and I built my practice so that money doesn't stand between you and the birth support you deserve. If you're ready to talk through your options, [reach out for a free consultation](/contact/). We'll figure it out together.
+I'm Shelbi Kohler — birth and postpartum doula, and mom to seven kids. I've been in your shoes, and I built my practice so that money doesn't stand between you and the birth support you deserve. If you're ready to talk through your options, [reach out for a free consultation](/contact/). We'll figure it out together.

@@ -108,7 +108,7 @@ For a deeper dive into non-medical pain management options, our <a href="/blog/n
 Finding a doula isn't like finding a doctor — you don't need the most credentialed person in the room. You need someone you feel comfortable with, who listens well, and who respects your choices. Here's how to find that person.
 
 **Start with certification directories**
-- DONA International, CAPPA, and ProDouga all maintain searchable directories of certified doulas by location
+- DONA International, CAPPA, and ProDouga all maintain searchable directories of doulas by location
 - Certification means they've completed training, attended births, and met professional standards — but it's a starting point, not the whole picture
 
 **Interview at least two or three doulas**
@@ -130,7 +130,7 @@ For local doula directories, hospital policies, and cost ranges in your area, ch
 
 ## What to Expect Working With Me
 
-I'm Shelbi Kohler — certified birth doula, mother of seven, and the person behind True Joy Birthing. I've been on both sides of this: the mom in the bed who needed support, and the doula at the bedside giving it. That experience shapes everything about how I work.
+I'm Shelbi Kohler — birth doula, mother of seven, and the person behind True Joy Birthing. I've been on both sides of this: the mom in the bed who needed support, and the doula at the bedside giving it. That experience shapes everything about how I work.
 
 When you hire me, you get:
 - Two prenatal visits to build your birth plan and practice comfort techniques

@@ -5,7 +5,7 @@
 
 - / — Homepage: Free Joyful Birth Plan, birth plan tool, doula support
 - /birth-plan-template/ — Free fillable birth plan PDF
-- /walkthrough/ — Guided birth plan walkthrough with a certified doula
+- /walkthrough/ — Guided birth plan walkthrough with a birth doula
 - /birth-plan-confidence-session/ — One-on-one birth plan review via Zoom
 - /what-is-a-doula/ — What a doula does and how doula support changes outcomes
 - /benefits-of-a-doula/ — Evidence-based benefits of doula support
@@ -25,10 +25,10 @@
 
 ## Key Facts
 
-- Founded by Shelbi Kohler, certified birth doula
+- Founded by Shelbi Kohler, birth doula
 - Free Joyful Birth Plan PDF — fillable, nurse-friendly, covers all birth stages
 - Free mobile app (iOS) with step-by-step birth plan builder
 - Pro Mode for doulas: client dashboard, visit tracking, birth plan visibility
 - 180+ city pages covering doula support across the US
-- Birth Plan Confidence Session: one-on-one Zoom review with a certified doula
+- Birth Plan Confidence Session: one-on-one Zoom review with a birth doula
 - Guided walkthrough: ~60 min of short videos walking through every birth plan section
