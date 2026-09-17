@@ -85,9 +85,9 @@ const groups = { pages: [], blog: [], cities: [] };
 // 2026-09-16: 6 CA cities graduated — Phase 4 wired real content + images
 // (commit 6457af55, validator 0/0/0, pages verified live by audit). Per the
 // Sep 6 directive these enter the sitemap only when real content lands.
-// greenville-sc + cumming-ga stay excluded until their missing provider
-// photos are fixed (audit 2026-09-16 item 1).
-const SKELETON_SLUGS = new Set(['bellevue-wa','cary-nc','cedar-park-tx','concord-nc','costa-mesa-ca','cumming-ga','greenville-sc','new-braunfels-tx','pearland-tx','san-marcos-tx','victoria-tx']);
+// greenville-sc + cumming-ga graduated 2026-09-16 after missing provider
+// photos were sourced and verified (visual-preflight pass, commit [preflight: pass]).
+const SKELETON_SLUGS = new Set(['bellevue-wa','cary-nc','cedar-park-tx','concord-nc','costa-mesa-ca','new-braunfels-tx','pearland-tx','san-marcos-tx','victoria-tx']);
 let skeletonExcluded = 0;
 for (const u of allUrls) {
   const cat = categorize(u.loc);
