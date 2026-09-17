@@ -67,6 +67,12 @@ fi
 health_header "H1: Live Page Health"
 for city_slug in "${CITIES[@]}"; do
   HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "https://truejoybirthing.com/birth-support/${city_slug}/" 2>/dev/null || echo "000")
+  # 2026-09-17: single retry on transient CDN 404s (elk-grove-ca flagged 404 at
+  # 10:31, verified 200 minutes later — one 3s retry kills that false alert).
+  if [ "$HTTP_CODE" != "200" ]; then
+    sleep 3
+    HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "https://truejoybirthing.com/birth-support/${city_slug}/" 2>/dev/null || echo "000")
+  fi
   if [ "$HTTP_CODE" = "200" ]; then
     health_pass "$city_slug — 200 OK"
   else
@@ -154,8 +160,12 @@ for city_slug in "${CITIES[@]}"; do
     continue
   fi
   
-  # Check for "Photo coming soon" placeholder text (broken images show this)
-  if echo "$LIVE_HTML" | grep -qi "photo coming soon\|coming soon\|placeholder\|no photo"; then
+  # Check for "Photo coming soon" placeholder text (broken images show this).
+  # 2026-09-17: dropped bare 'placeholder' and 'coming soon' — bare terms match
+  # the lead form's placeholder="Your first name" attribute on EVERY city page,
+  # which flooded daily cron output with ~157 false ⚠ and (via the watchdog's
+  # head -25) hid real ❌ failures from the 2026-09-15/16 reports.
+  if echo "$LIVE_HTML" | grep -qi "photo coming soon\|coming soon photo\|no photo available\|photo-placeholder"; then
     health_warn "$city_slug — contains 'Photo coming soon' placeholder text"
   fi
   
