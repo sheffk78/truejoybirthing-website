@@ -1885,7 +1885,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
   "newport-beach-ca": {
-    videoId: "dp9BY81tKVI",
+    videoId: "OEOhoU3Jw0E",
     title: "Newport Beach Doula & Birth Plan Guide",
     description: "Watch the full Newport Beach Doula & Birth Plan Guide — all in about 2:45.",
     duration: 165,
