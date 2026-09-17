@@ -11227,13 +11227,14 @@ hospitalDetails: [
     shelbiServesHere: false,
     heroImage: "/images/newport-beach-ca-birth-doula-skyline.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-newport-beach-ca.webp",
-    supportSceneImage: "/images/newport-beach-ca-support-scene.webp",
+    supportSceneImage: "/images/newport-beach-ca-support-scene-v2.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Newport Beach, CA: birth support and doula care",
     culture: "Newport Beach is an upscale Orange County coastal city where families typically deliver at Hoag Hospital Newport Beach, a nationally recognized maternity program with a Level IIIa NICU. Providence St. Joseph Hospital in Orange and UC Irvine Medical Center also serve Newport Beach families, both with Level III NICUs. California's Medi-Cal program covers doula services statewide.",
     heroLocalDetail: "Newport Beach families deliver at Hoag Hospital Newport Beach, featuring the Sue & Bill Gross Women's Pavilion with private LDR suites, a 33-bed Level IIIa NICU, and advanced maternal-fetal medicine. Providence St. Joseph Hospital in Orange and UC Irvine Medical Center offer additional maternity options with Level III NICUs for higher-acuity needs.",
     hospitalDetails: [
       {
         name: "Hoag Hospital Newport Beach (Sue & Bill Gross Women's Pavilion)",
+        thumbnail: "/images/newport-beach-ca-hospital-hoag-womens-pavilion.webp",
         address: "500 Newport Center Drive, Newport Beach, CA 92663",
         url: "https://www.hoag.org/newport-beach-maternity-care/",
         nicuLevel: "IIIa",
@@ -11245,6 +11246,7 @@ hospitalDetails: [
       },
       {
         name: "Providence St. Joseph Hospital Orange",
+        thumbnail: "/images/newport-beach-ca-hospital-providence-st-joseph.webp",
         address: "1100 W Stewart Dr, Orange, CA 92868",
         url: "https://www.providence.org/locations/socal/st-joseph-hospital-orange/labor-and-delivery",
         nicuLevel: "III",
@@ -11256,6 +11258,7 @@ hospitalDetails: [
       },
       {
         name: "UC Irvine Medical Center",
+        thumbnail: "/images/newport-beach-ca-hospital-uci-medical-center.webp",
         address: "1 Orange Grove Drive, Orange, CA 92868",
         url: "https://www.ucihealth.org/medical-services/programs/labor-delivery",
         nicuLevel: "III",
@@ -11268,9 +11271,9 @@ hospitalDetails: [
     ],
     birthCenterDetails: [],
     localDoulas: [
-      { name: "Madi Rose Doula", practice: "Madi Rose Doula", url: "https://www.madirosedoula.com/newport-beach-doula", description: "Madi Rose is a certified full-spectrum doula and newborn care specialist based in Newport Beach, supporting families across Orange County through pregnancy, birth, and postpartum. Her practice covers birth planning and advocacy, labor support, postpartum care and counseling, reproductive-health counseling, and placenta encapsulation, with trauma-informed and gender-affirming care at the center of her work. In-person support is available across Newport Beach and Southern California, with virtual options for families further afield.", serviceArea: ["Newport Beach, CA", "Orange County, CA"], acceptingClients: true, services: ["Birth Doula", "Postpartum Doula", "Placenta Encapsulation"] },
-      { name: "Ashley McIntosh", practice: "Ashley McIntosh Doula Services", url: "https://www.bornbir.com/ashley-mcintosh", description: "Ashley McIntosh is a certified doula, childbirth educator, and Certified Professional Midwife serving Newport Beach families. Her approach centers on education through pregnancy: understanding the physiological changes of pregnancy, movement, nutrition, and exercises that ease common discomforts so clients enter labor feeling confident and strong. She holds a Bachelor of Science in Midwifery (2024) with DONA doula training (2020), VBAC Link (2021), and Spinning Babies (2021) training, and offers midwifery care, doula support, and monitrice services.", serviceArea: ["Newport Beach, CA", "Orange County, CA"], acceptingClients: true, services: ["Birth Doula", "Childbirth Education", "Monitrice Doula"] },
-      { name: "Diana Roth", practice: "Diana Roth Birth & Postpartum Doula", url: "https://www.bornbir.com/diana-roth", description: "Diana Roth is a birth and postpartum doula in Newport Beach with decades of experience caring for children and new families, rated 5.0 by clients on Bornbir. She began her childcare career at Universal Studios Child Care Center after arriving from Barranquilla, Colombia, and built her practice around establishing baby sleep schedules, nighttime care, and family routines. Today she supports Newport Beach families through labor and the early postpartum weeks, with virtual services also available.", serviceArea: ["Newport Beach, CA", "Orange County, CA"], acceptingClients: true, services: ["Birth Doula", "Postpartum Doula", "Newborn Care"] },
+      { name: "Madi Rose Doula", practice: "Madi Rose Doula", url: "https://www.madirosedoula.com/newport-beach-doula", credential: "Certified Full Spectrum Doula (DONA), Newborn Care Specialist (NCS)", photo: "/images/provider-newport-beach-ca-madi-rose.webp", costRange: "$1,200-$2,500", costRange_source: "market-estimate", description: "Madi Rose is a certified full-spectrum doula and newborn care specialist based in Newport Beach, supporting families across Orange County through pregnancy, birth, and postpartum. Her practice covers birth planning and advocacy, labor support, postpartum care and counseling, reproductive-health counseling, and placenta encapsulation, with trauma-informed and gender-affirming care at the center of her work. In-person support is available across Newport Beach and Southern California, with virtual options for families further afield.", serviceArea: ["Newport Beach, CA", "Orange County, CA"], acceptingClients: true, services: ["Birth Doula", "Postpartum Doula", "Placenta Encapsulation"] },
+      { name: "Ashley McIntosh", practice: "Ashley McIntosh Doula Services", url: "https://www.bornbir.com/ashley-mcintosh", credential: "Certified Professional Midwife (CPM), Certified Doula, Childbirth Educator", photo: "/images/provider-newport-beach-ca-ashley-mcintosh.webp", costRange: "$1,500-$3,000", costRange_source: "market-estimate", description: "Ashley McIntosh is a certified doula, childbirth educator, and Certified Professional Midwife serving Newport Beach families. Her approach centers on education through pregnancy: understanding the physiological changes of pregnancy, movement, nutrition, and exercises that ease common discomforts so clients enter labor feeling confident and strong. She holds a Bachelor of Science in Midwifery (2024) with DONA doula training (2020), VBAC Link (2021), and Spinning Babies (2021) training, and offers midwifery care, doula support, and monitrice services.", serviceArea: ["Newport Beach, CA", "Orange County, CA"], acceptingClients: true, services: ["Birth Doula", "Childbirth Education", "Monitrice Doula"] },
+      { name: "Diana Roth", practice: "Diana Roth Birth & Postpartum Doula", url: "https://www.bornbir.com/diana-roth", credential: "Birth & Postpartum Doula (CD DONA), Lactation Support", photo: "/images/provider-newport-beach-ca-diana-roth.webp", costRange: "$4,000-$4,000", costRange_source: "published", description: "Diana Roth is a birth and postpartum doula in Newport Beach with decades of experience caring for children and new families, rated 5.0 by clients on Bornbir. She began her childcare career at Universal Studios Child Care Center after arriving from Barranquilla, Colombia, and built her practice around establishing baby sleep schedules, nighttime care, and family routines. Today she supports Newport Beach families through labor and the early postpartum weeks, with virtual services also available.", serviceArea: ["Newport Beach, CA", "Orange County, CA"], acceptingClients: true, services: ["Birth Doula", "Postpartum Doula", "Newborn Care"] },
     ],
     medicaidNote: "Yes — California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal through the Department of Health Care Services. Newport Beach families on Medi-Cal can access doula support through enrolled providers in Orange County.",
     insuranceNote: "Most families pay out of pocket for doula support. Check with your insurance plan for coverage. Hoag Hospital Newport Beach does not contract with Medi-Cal, so Medi-Cal families in the Newport Beach area commonly deliver at UC Irvine Medical Center or Providence St. Joseph Hospital Orange. Ask whether HSA or FSA funds can help with out-of-pocket doula costs.",
@@ -11292,6 +11295,12 @@ hospitalDetails: [
         a: "Yes. Hoag Hospital Newport Beach welcomes doulas as support persons. Providence St. Joseph Hospital Orange and UC Irvine Medical Center also support doulas at the bedside. Confirm current visitor and support person policies at your hospital tour, as policies can change."
       }
     ],
+    midwifeInfo: {
+      paragraph: "In California, certified nurse-midwives (CNMs) are licensed by the California Board of Registered Nursing as advanced practice nurses who have met the Board's educational and certification requirements. Licensed midwives (LMs) are licensed by the Medical Board of California to attend cases of normal pregnancy and childbirth and to provide prenatal, intrapartum, and postpartum care. Both credential paths serve Newport Beach families: CNMs practice in hospital settings such as Providence St. Joseph Hospital Orange, while licensed midwives attend home births and birth center births across Newport Beach and surrounding Orange County communities, including South Coast Midwifery in nearby Irvine.",
+      credentialTypes: "CNM, LM"
+    },
+    lat: 33.6189,
+    lng: -117.9298,
     nearbyCities: ["costa-mesa-ca", "irvine-ca", "huntington-beach-ca"],
   },
   "costa-mesa-ca": {

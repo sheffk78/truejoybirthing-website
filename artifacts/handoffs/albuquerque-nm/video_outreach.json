@@ -1,0 +1,32 @@
+{
+  "slug": "albuquerque-nm",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-16T23:17:00Z",
+  "worker_model": "tjb-batch-outreach.py catchup (script) + Phase-4 graduation sync",
+  "notes": "Backfilled 2026-09-17 by Kit during cron review. video_outreach completed via Phase-4 graduation (state machine: all 4 stages done 2026-08-29); catch-up sweep 2026-09-16 sent first-touch emails but left this contract an empty scaffold, which failed DAG advance. Video d_siwut-Uds verified embedded in src/data/video-embeds.ts.",
+  "sources": [
+    "~/.hermes/logs/tjb-outreach-send-log.jsonl (status=sent rows 2026-09-16T23:16, message_ids vps-20260916231634399443 / vps-20260916231658607402)",
+    "src/data/video-embeds.ts (albuquerque-nm -> d_siwut-Uds)",
+    "video/remotion/out/albuquerque-nm-youtube-id.txt (d_siwut-Uds)",
+    "~/.hermes/skills/productivity/tjb-city-orchestrator/states/albuquerque-nm.json (stages_completed: build,enrich,verify_deploy,video_outreach)"
+  ],
+  "video_file": "video/remotion/out/albuquerque-nm.mp4",
+  "video_mb": null,
+  "youtube_id": "d_siwut-Uds",
+  "thumbnail_path": "dist/images/yt-thumbnail-albuquerque-nm.jpg",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "provider": "support@bornbir.com",
+      "status": "sent",
+      "message_id": "vps-20260916231634399443",
+      "to": "support@bornbir.com"
+    },
+    {
+      "provider": "admin@newlifebirthservices.org",
+      "status": "sent",
+      "message_id": "vps-20260916231658607402",
+      "to": "admin@newlifebirthservices.org"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "slug": "newport-beach-ca",
+  "stage": "enrich",
+  "attempts": 0,
+  "history": [
+    {
+      "attempt": 1,
+      "at": "2026-09-17T12:09:45-06:00",
+      "evals": {
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-09-17T12:10:53-06:00",
+      "evals": {
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-09-17T12:28:19-06:00",
+      "evals": {
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    }
+  ],
+  "last_verdict": "approved",
+  "last_input_fingerprint": "990504944a9092ca"
+}

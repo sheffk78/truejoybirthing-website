@@ -1,0 +1,80 @@
+{
+  "slug": "newport-beach-ca",
+  "stage": "enrich",
+  "produced_at": "2026-09-17T17:42:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "ENRICH stage complete. 3 real provider headshots on disk (Madi Rose 548KB, Ashley 13.6KB, Diana 28.6KB) \u2014 all >5KB with thousands of colors. All 3 cost ranges are dollar ranges (no Contact for pricing); Diana Roth is published (confirmed $4,000 flat rate on Bornbir), other two are market-estimate. 3 hospital paragraphs all >=300 chars (937/698/539). 3 hospital thumbnails are real building exterior photos, landscape, >15KB each. birthCenterDetails is an empty array (no verified freestanding birth center operates in Newport Beach proper). Merge self-verified via git diff (6 insertions/3 deletions). Stage gates: 25/25 PASS. Support scene regenerated v2 due to G73 anatomy failure on original.",
+  "sources": [
+    {
+      "claim": "Madi Rose is a certified full-spectrum doula and newborn care specialist based in Newport Beach \u2014 the credential and location behind her provider entry photo and description.",
+      "url": "https://www.madirosedoula.com/newport-beach-doula",
+      "quote": "I am a Full Spectrum Doula and Newborn Care Specialist (NCS) working with families in Newport Beach, California."
+    },
+    {
+      "claim": "Ashley McIntosh is a certified doula and Certified Professional Midwife serving Newport Beach families \u2014 the credential behind her provider entry photo.",
+      "url": "https://www.bornbir.com/ashley-mcintosh",
+      "quote": "I am Ashley and I am a certified doula and Certified Professional Midwife."
+    },
+    {
+      "claim": "Diana Roth birth support package costs $4,000 \u2014 the published dollar figure driving her costRange '$4,000-$4,000' tagged published.",
+      "url": "https://www.bornbir.com/diana-roth",
+      "quote": "throughout pregnancy and early labor $4,000.00 USD Flat rate"
+    },
+    {
+      "claim": "Hoag Hospital Newport Beach Sue & Bill Gross Women's Pavilion is a real operating maternity hospital at Hoag Drive with 18 private LDR suites \u2014 the building photographed in its Newport Beach thumbnail.",
+      "url": "https://www.hoag.org/newport-beach-maternity-care/",
+      "quote": "An advanced fetal diagnostic testing unit. A 14-bed antepartum unit. 18 fully equipped labor, delivery, and recovery suites. Hoag's 18 private LDR (labor, deliver, recovery) suites are found on the fifth floor of Hoag Hospital Newport Beach."
+    }
+  ],
+  "providers": [
+    {
+      "name": "Madi Rose Doula",
+      "photo": "/images/provider-newport-beach-ca-madi-rose.webp",
+      "description_chars": 536,
+      "costRange": "$1,200-$2,500",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Ashley McIntosh",
+      "photo": "/images/provider-newport-beach-ca-ashley-mcintosh.webp",
+      "description_chars": 555,
+      "costRange": "$1,500-$3,000",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Diana Roth",
+      "photo": "/images/provider-newport-beach-ca-diana-roth.webp",
+      "description_chars": 499,
+      "costRange": "$4,000-$4,000",
+      "costRange_source": "published"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Hoag Hospital Newport Beach (Sue & Bill Gross Women's Pavilion)",
+      "paragraph_chars": 937,
+      "thumbnail": "/images/newport-beach-ca-hospital-hoag-womens-pavilion.webp",
+      "nicuLevel": "IIIa",
+      "url": "https://www.hoag.org/newport-beach-maternity-care/"
+    },
+    {
+      "name": "Providence St. Joseph Hospital Orange",
+      "paragraph_chars": 698,
+      "thumbnail": "/images/newport-beach-ca-hospital-providence-st-joseph.webp",
+      "nicuLevel": "III",
+      "url": "https://www.providence.org/locations/socal/st-joseph-hospital-orange/labor-and-delivery"
+    },
+    {
+      "name": "UC Irvine Medical Center",
+      "paragraph_chars": 539,
+      "thumbnail": "/images/newport-beach-ca-hospital-uci-medical-center.webp",
+      "nicuLevel": "III",
+      "url": "https://www.ucihealth.org/medical-services/programs/labor-delivery"
+    }
+  ],
+  "birth_centers": [],
+  "birthstats": {
+    "dataYear": 2024,
+    "dataSource": "CDC NCHS National Vital Statistics System; KFF Women's Health Profiles (California)"
+  }
+}

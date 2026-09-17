@@ -1,0 +1,46 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "newport-beach-ca",
+  "stage": "enrich",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 4,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the madirosedoula.com Newport Beach doula page and directly states her role as a Full Spectrum Doula and Newborn Care Specialist serving Newport Beach, matching the claim's credential and location.",
+      "claim": "Madi Rose is a certified full-spectrum doula and newborn care specialist based in Newport Beach \u2014 the credential and location behind her provider entry photo and description.",
+      "url": "https://www.madirosedoula.com/newport-beach-doula",
+      "quote": "I am a Full Spectrum Doula and Newborn Care Specialist (NCS) working with families in Newport Beach, California."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible first-person bio line on Ashley McIntosh's profile page at a birth-services domain and directly supports the claim that she is a certified doula and Certified Professional Midwife.",
+      "claim": "Ashley McIntosh is a certified doula and Certified Professional Midwife serving Newport Beach families \u2014 the credential behind her provider entry photo.",
+      "url": "https://www.bornbir.com/ashley-mcintosh",
+      "quote": "I am Ashley and I am a certified doula and Certified Professional Midwife."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from a Diana Roth profile on the birth-services domain bornbir.com explicitly lists a '$4,000.00 USD Flat rate' for support 'throughout pregnancy and early labor,' directly supporting the claim of a published $4,000 birth support package.",
+      "claim": "Diana Roth birth support package costs $4,000 \u2014 the published dollar figure driving her costRange '$4,000-$4,000' tagged published.",
+      "url": "https://www.bornbir.com/diana-roth",
+      "quote": "throughout pregnancy and early labor $4,000.00 USD Flat rate"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible content for hoag.org's Newport Beach maternity care page and directly confirms the claim's core fact that Hoag Hospital Newport Beach has 18 private LDR suites within its maternity facilities.",
+      "claim": "Hoag Hospital Newport Beach Sue & Bill Gross Women's Pavilion is a real operating maternity hospital at Hoag Drive with 18 private LDR suites \u2014 the building photographed in its Newport Beach thumbnail.",
+      "url": "https://www.hoag.org/newport-beach-maternity-care/",
+      "quote": "An advanced fetal diagnostic testing unit. A 14-bed antepartum unit. 18 fully equipped labor, delivery, and recovery suites. Hoag's 18 private LDR (labor, deliver, recovery) suites are found on the fi"
+    }
+  ],
+  "checked_at": "2026-09-17T12:28:40-06:00"
+}
