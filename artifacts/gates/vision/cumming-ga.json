@@ -1,0 +1,10 @@
+{
+  "slug": "cumming-ga",
+  "verdicts": [
+    {"crop": "cumming-ga-hero-fig0.png", "verdict": "pass", "defects": []},
+    {"crop": "cumming-ga-support-fig0.png", "verdict": "pass", "defects": []},
+    {"crop": "cumming-ga-og-fig0.png", "verdict": "pass", "defects": []}
+  ],
+  "checked_at": "2026-09-16T18:32:00Z",
+  "notes": "hero-fig0 and og-fig0 crops are clean skyline landscapes (no figure present, no anatomy defects); support-fig0 shows two foreground women with correct anatomy and normal fingers, minor occlusion of one hand on lap (not a defect)."
+}

@@ -11033,6 +11033,11 @@ hospitalDetails: [
     supportSceneAlt: "A doula supporting an expectant mom in Greenville, SC: Upstate birth support and doula care",
     costLow: 800,
     costHigh: 2500,
+    midwifeInfo: {
+      paragraph: "South Carolina licenses Certified Nurse-Midwives (CNMs) and Certified Professional Midwives (CPMs), with CNMs practicing in hospitals and birth centers across the Upstate and CPMs attending home births. Bon Secours St. Francis and Prisma Health Greenville Memorial provide hospital-based CNM care, while Upstate families also access freestanding birth center and home birth options through CPM-led practices. South Carolina Medicaid covers doula services, making Greenville a growing market for doula-supported births.",
+      credentialTypes: " (CNMs and CPMs)",
+      credentialDetail: "In South Carolina, Certified Nurse-Midwives (CNMs) are licensed Advanced Practice Registered Nurses practicing in the Upstate's hospitals and birth centers, while Certified Professional Midwives (CPMs) are credentialed through NARM and attend home births and out-of-hospital births across the region.",
+    },
     shelbiServesHere: false,
     culture: "Greenville is the largest city in the Upstate South Carolina region, with 72,000 residents in the city proper and over 400,000 in the Greenville-Spartanburg-Anderson metro area. Families here have access to two major health systems — Bon Secours and Prisma Health — with three Birthing-Friendly designated hospitals. The Upstate has a growing doula community and at least one freestanding birth center serving the region.",
     heroLocalDetail: "Prisma Health Greenville Memorial Hospital is Greenville’s primary birthing hospital, featuring a Level III NICU and comprehensive maternity services at 701 Grove Rd. Bon Secours St. Francis Hospital offers a second major option downtown with a Level II NICU. Families also deliver at Prisma Health Patewood Hospital on the south side. The Swamp Rabbit Trail and Falls Park on the Reedy provide scenic walking paths for staying active in the third trimester.",
