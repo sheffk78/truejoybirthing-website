@@ -11605,6 +11605,14 @@ hospitalDetails: [
       }
     ],
     nearbyCities: ["fullerton-ca", "whittier-ca", "anaheim-ca"],
+
+    midwifeInfo: {
+      paragraph: "California licenses both Licensed Midwives (LMs) and Certified Nurse-Midwives (CNMs), with LMs attending home and birth center births and CNMs practicing in hospitals. California Medi-Cal covers doula services through the PAVE program, reimbursing approximately $1,587 per pregnancy. La Habra families have access to Providence St. Jude Medical Center in Fullerton, PIH Health Whittier Hospital in Whittier, and Anaheim Regional Medical Center in Anaheim, all roughly 15–20 minutes away. Temple & Terrain Doula Services in La Habra operates a freestanding birth center offering midwife-led birth and postpartum care.",
+      credentialTypes: " (LMs and CNMs)",
+      credentialDetail: "California's Licensed Midwife (LM) credential is one of the most established in the country, with clear regulations for out-of-hospital birth, meaning California families have more midwifery options than states that only license CNMs."
+    },
+    lat: 33.9320,
+    lng: -117.9462,
   },
   "san-mateo-ca": {
     enableBlogResources: true,
