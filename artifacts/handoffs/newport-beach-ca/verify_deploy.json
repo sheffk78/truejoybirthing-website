@@ -1,0 +1,21 @@
+{
+  "slug": "newport-beach-ca",
+  "stage": "verify_deploy",
+  "produced_at": "2026-09-17T18:40:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Preflight exit 0 (0 failures) after adding midwifeInfo + lat/lng to cities.ts via Python (G7 gate). Build exit 0. Deployed via scripts/deploy.sh (git push, exit 0, status PUSHED). Live page 200 cache-busted with new content; hero/OG/support/3 hospital/3 provider images all 200. Browser visual check via browser_exec: all 8 city images loaded with real naturalWidth. AVIF: no newport-beach-ca avif files on disk and no avif refs in built HTML; G62 passes. Contract: artifacts/handoffs/newport-beach-ca/verify_deploy.json; vision verdicts: artifacts/gates/vision/newport-beach-ca.json.",
+  "sources": [
+    "scripts/preflight.ts (exit 0)",
+    "npm run build (exit 0)",
+    "scripts/deploy.sh newport-beach-ca (exit 0, PUSHED)",
+    "https://truejoybirthing.com/birth-support/newport-beach-ca/ (200)",
+    "https://truejoybirthing.com/images/newport-beach-ca-birth-doula-skyline.webp (200)",
+    "https://truejoybirthing.com/images/og-city-newport-beach-ca.webp (200)",
+    "browser_exec visual verification (all 8 images loaded)",
+    "scripts/contract-validate.py"
+  ],
+  "preflight_exit": 0,
+  "deploy_status": "SUCCESS",
+  "live_http": 200,
+  "vision_verdict_file": "artifacts/gates/vision/newport-beach-ca.json"
+}
