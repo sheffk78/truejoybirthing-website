@@ -31,7 +31,7 @@ while ((match = locRegex.exec(xml)) !== null) {
   urls.push(match[1].trim());
 }
 
-console.log(`Found ${urls.length} URLs in sitemap-0.xml`);
+console.log(`Found ${urls.length} URLs in sitemap-cities.xml`);
 
 // IndexNow API accepts up to 10,000 URLs per request
 const payload = JSON.stringify({
