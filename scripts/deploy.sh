@@ -277,18 +277,33 @@ npx "$WXP" pages deploy dist --project-name=truejoybirthing-website --branch=mai
 echo ""
 echo "--- Step 5/5: Verification ---"
 
-sleep 3
+# 🔴 2026-09-17 hardening: plain curl here was served by STALE CDN CACHE after the
+# repo-root-bundle incident (broken deploy "passed" verification for 7 hours).
+# Cache-buster query forces a fresh origin fetch; the city check catches a
+# wrong-root bundle because its city paths only exist under /dist/ in that case.
+CACHEBUST=$(date +%s)
 
-HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL/" --max-time 10)
-BIRTH_SUPPORT_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL/birth-support/" --max-time 10)
-TEMPLATE_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL/birth-plan-template/" --max-time 10)
+# Pick a real city page from THIS build to verify live (most recently built)
+CITY_PROBE=$(ls -t dist/birth-support/*/index.html 2>/dev/null | head -1 | sed 's|dist/||; s|/index.html|/|')
+[ -z "$CITY_PROBE" ] && CITY_PROBE="birth-support/arvada-co/"
 
-echo "  → Homepage:             $HTTP_CODE"
-echo "  → /birth-support/:      $BIRTH_SUPPORT_CODE"
+HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL/?v=$CACHEBUST" --max-time 10)
+BIRTH_SUPPORT_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL/birth-support/?v=$CACHEBUST" --max-time 10)
+TEMPLATE_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL/birth-plan-template/?v=$CACHEBUST" --max-time 10)
+CITY_CODE=$(curl -s -o /dev/null -w "%{http_code}" "$SITE_URL/$CITY_PROBE?v=$CACHEBUST" --max-time 10)
+
+echo "  → Homepage:             $HTTP_CODE (cache-busted)"
+echo "  → /birth-support/:      $BIRTH_SUPPORT_CODE (cache-busted)"
 echo "  → /birth-plan-template/: $TEMPLATE_CODE"
+echo "  → City probe:           $CITY_CODE ($CITY_PROBE)"
 
 if [ "$HTTP_CODE" != "200" ]; then
   echo "  ❌ Homepage returned $HTTP_CODE — auto-deploy may still be running."
+  exit 3
+fi
+if [ "$CITY_CODE" != "200" ]; then
+  echo "  ❌ City probe $CITY_PROBE returned $CITY_CODE — bundle root is wrong or city pages missing."
+  echo "  → Do NOT report success. Investigate before any follow-up deploy."
   exit 3
 fi
 
