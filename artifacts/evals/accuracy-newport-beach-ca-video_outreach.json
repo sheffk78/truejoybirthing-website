@@ -1,0 +1,46 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "newport-beach-ca",
+  "stage": "video_outreach",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 4,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote references the exact YouTube video ID (OEOhoU3Jw0E) from the URL and describes a rendered city guide video file uploaded as public and embeddable, directly supporting the claim.",
+      "claim": "Rendered 1080p city guide video uploaded to YouTube",
+      "url": "https://youtu.be/OEOhoU3Jw0E",
+      "quote": "remotion/out/newport-beach-ca-city-guide.mp4 (21.3MB, 166s) uploaded as public+embeddable YouTube id OEOhoU3Jw0E with API thumbnail."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly describes the Newport Beach birth support guide page at the given URL embedding a YouTube video player with VideoObject schema, which matches both the domain subject matter and the claim about the city page embedding the birth guide video.",
+      "claim": "City page embeds the Newport Beach birth guide video",
+      "url": "https://truejoybirthing.com/birth-support/newport-beach-ca/",
+      "quote": "The Newport Beach birth support guide page embeds a YouTube player for the city walkthrough and exposes a VideoObject schema with the video duration."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly references the newport-beach-ca entry mapping to a YouTube video and the page rendering an embedded player, which matches both the URL's city page (truejoybirthing.com/birth-support/newport-beach-ca/) and the claim that video-embeds.ts was updated with newport-beach-ca.",
+      "claim": "video-embeds.ts updated with newport-beach-ca",
+      "url": "https://truejoybirthing.com/birth-support/newport-beach-ca/",
+      "quote": "The newport-beach-ca entry maps to YouTube OEOhoU3Jw0E and the page renders an embedded player for the city walkthrough."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the Newport Beach birth support page's subject (doulas and midwives for local families) and directly supports the claim that the guide features local doulas and midwives.",
+      "claim": "Newport Beach guide features local doulas and midwives",
+      "url": "https://truejoybirthing.com/birth-support/newport-beach-ca/",
+      "quote": "The Newport Beach birth support guide highlights vetted local doulas and midwives across California for families planning birth."
+    }
+  ],
+  "checked_at": "2026-09-17T13:57:17-06:00"
+}

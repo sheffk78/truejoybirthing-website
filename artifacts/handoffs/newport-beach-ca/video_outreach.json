@@ -1,0 +1,55 @@
+{
+  "slug": "newport-beach-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-17T21:35:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Rendered 1080p video with Shelbi/Voxtral TTS (all 10 scenes, 24kHz, hook starts 'Congratulations!', full state name 'California'); public+embeddable YouTube upload (thumbnail uploaded via API); outreach via VPS mail server (shelbi@truejoybirthing.com) to 3 providers, all with send-log message_ids. Diana Roth dead domain birthingpeacefully.com replaced by DoulaMatch fallback dianaroth@gmail.com.",
+  "sources": [
+    {
+      "claim": "Rendered 1080p city guide video uploaded to YouTube",
+      "url": "https://youtu.be/OEOhoU3Jw0E",
+      "quote": "remotion/out/newport-beach-ca-city-guide.mp4 (21.3MB, 166s) uploaded as public+embeddable YouTube id OEOhoU3Jw0E with API thumbnail."
+    },
+    {
+      "claim": "City page embeds the Newport Beach birth guide video",
+      "url": "https://truejoybirthing.com/birth-support/newport-beach-ca/",
+      "quote": "The Newport Beach birth support guide page embeds a YouTube player for the city walkthrough and exposes a VideoObject schema with the video duration."
+    },
+    {
+      "claim": "video-embeds.ts updated with newport-beach-ca",
+      "url": "https://truejoybirthing.com/birth-support/newport-beach-ca/",
+      "quote": "The newport-beach-ca entry maps to YouTube OEOhoU3Jw0E and the page renders an embedded player for the city walkthrough."
+    },
+    {
+      "claim": "Newport Beach guide features local doulas and midwives",
+      "url": "https://truejoybirthing.com/birth-support/newport-beach-ca/",
+      "quote": "The Newport Beach birth support guide highlights vetted local doulas and midwives across California for families planning birth."
+    }
+  ],
+  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/newport-beach-ca-city-guide.mp4",
+  "video_mb": 21.33,
+  "youtube_id": "OEOhoU3Jw0E",
+  "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/yt-thumb-newport-beach-ca.png",
+  "embed_verified": true,
+  "watermark_applied": false,
+  "outreach": [
+    {
+      "provider": "Madi Rose (Madi Rose Doula)",
+      "to": "mrehrlic@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260917192155922637"
+    },
+    {
+      "provider": "Ashley McIntosh",
+      "to": "ashley@motherbearthdoula.com",
+      "status": "sent",
+      "message_id": "vps-20260917194841371751"
+    },
+    {
+      "provider": "Diana Roth",
+      "to": "dianaroth@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260917194902807088"
+    }
+  ]
+}
