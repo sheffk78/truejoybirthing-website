@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "last_updated": "2026-09-17T19:42:52.027946+00:00",
+  "last_updated": "2026-09-17T23:56:57.414348+00:00",
   "total_cities_in_codebase": 187,
   "future_cities_planned": 1000,
   "cities": {
@@ -2155,6 +2155,16 @@
       "video_uploaded_at": "2026-09-17T19:42:52.027946+00:00",
       "stage": "complete",
       "blocked_reason": null
+    },
+    "la-habra-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-09-17T23:56:57.414348+00:00",
+      "video_id": "Hzw9_-_Z0V8",
+      "video_url": "https://youtu.be/Hzw9_-_Z0V8",
+      "video_uploaded_at": "2026-09-17T23:56:57.414348+00:00",
+      "stage": "complete",
+      "blocked_reason": null
     }
   },
   "providence-ri": {
@@ -2669,5 +2679,13 @@
     "outreach_no_email_count": 0,
     "status": "done",
     "last_updated": "2026-09-17T19:42:52.027946+00:00"
+  },
+  "la-habra-ca": {
+    "has_outreach": true,
+    "outreach_sent_at": "2026-09-17T23:56:57.414348+00:00",
+    "outreach_provider_count": 3,
+    "outreach_no_email_count": 0,
+    "status": "done",
+    "last_updated": "2026-09-17T23:56:57.414348+00:00"
   }
 }
