@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "last_updated": "2026-09-13T19:38:51.449817+00:00",
+  "last_updated": "2026-09-17T19:42:52.027946+00:00",
   "total_cities_in_codebase": 187,
   "future_cities_planned": 1000,
   "cities": {
@@ -2145,6 +2145,16 @@
       "page_url": "https://truejoybirthing.com/birth-support/costa-mesa-ca/",
       "score": 100,
       "completed_at": "2026-09-13"
+    },
+    "newport-beach-ca": {
+      "has_video": true,
+      "has_outreach": true,
+      "completed_at": "2026-09-17T19:42:52.027946+00:00",
+      "video_id": "OEOhoU3Jw0E",
+      "video_url": "https://youtu.be/OEOhoU3Jw0E",
+      "video_uploaded_at": "2026-09-17T19:42:52.027946+00:00",
+      "stage": "complete",
+      "blocked_reason": null
     }
   },
   "providence-ri": {
@@ -2651,5 +2661,13 @@
     "outreach_provider_count": 1,
     "outreach_blocked_reason": "3 of 4 providers have no resolvable public email (Ashamii Henderson, Alexandra Connelly via bornbir; Well Rounded Childbirth is a Henderson Hospital class with no individual doula address). 1 verified email sent to Elli Arlt White (elli@newbornfamily.net).",
     "stage": "complete"
+  },
+  "newport-beach-ca": {
+    "has_outreach": true,
+    "outreach_sent_at": "2026-09-17T19:42:52.027946+00:00",
+    "outreach_provider_count": 3,
+    "outreach_no_email_count": 0,
+    "status": "done",
+    "last_updated": "2026-09-17T19:42:52.027946+00:00"
   }
 }

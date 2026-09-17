@@ -347,7 +347,14 @@ def consolidate() -> dict[str, Any]:
                 # State files are durable history, not proof of an active worker.
                 # Only show the dashboard pulse for fresh work; stale states still
                 # contribute stage truth but do not look "running" forever.
-                updated = int(status.get("updated_at") or status.get("started_at") or 0)
+                _raw = status.get("updated_at") or status.get("started_at") or 0
+                if isinstance(_raw, (int, float)):
+                    updated = int(_raw)
+                else:
+                    try:
+                        updated = int(datetime.fromisoformat(str(_raw).replace("Z", "+00:00")).timestamp())
+                    except Exception:
+                        updated = 0
                 fresh = updated and (time.time() - updated) < 6 * 60 * 60
                 if fresh:
                     row["in_progress"] = True
