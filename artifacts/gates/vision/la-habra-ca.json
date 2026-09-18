@@ -1,14 +1,27 @@
 {
-  "slug": "la-habra-ca",
-  "verdicts": [
-    {
-      "crop": "la-habra-ca-support-fig0.png",
-      "verdict": "pass",
-      "defects": [],
-      "note": "Support scene is a real-photo composite; emitted 2x crop analyzed programmatically: 1972x1600 px, 283,842 unique colors = genuine photograph, not AI flat art. No single AI-generated figure with arms/fingers present in real-photo composite, so the phantom-limb / fused-finger / melted-joint defect class is N/A. Hero/OG/thumb emitted no figure and are confirmed real photographs by preflight G8/G29/G35/G64."
-    }
-  ],
-  "notes": "Vision verdict gate for la-habra-ca. Only support-fig0 crop emitted (hero/og/thumb detected no figure). Support scene is a real-photo composite of 3 verified provider headshots (visual-preflight passed: 3 real photos >5KB, >100 colors). No vision_analyze tool available in subagent context; verified via PIL color analysis + passing visual-preflight real-photo gate (precedent: newport-beach-ca 2026-09-17).",
-  "checked_at": "2026-09-17T21:08:25Z",
-  "method": "Programmatic image verification (PIL color/dimension analysis) + visual-preflight real-photo confirmation. Subagent context lacks vision_analyze; support scene is a real-photo composite of 3 verified provider headshots, so AI-figure anatomy defect class does not apply."
+ "slug": "la-habra-ca",
+ "verdicts": [
+  {
+   "crop": "la-habra-ca-hero-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "la-habra-ca-og-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "la-habra-ca-support-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "la-habra-ca-thumb-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  }
+ ],
+ "method": "2x figure-crop grid vision review (Rockville gate), 2026-09-18",
+ "checked_at": "2026-09-18T22:11:49.451073+00:00"
 }

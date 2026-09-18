@@ -1,43 +1,45 @@
 {
-  "slug": "redwood-city-ca",
-  "verdicts": [
-    {
-      "crop": "redwood-city-ca-hero-fig0.png",
-      "verdict": "pass",
-      "defects": []
-    },
-    {
-      "crop": "redwood-city-ca-hero-fig1.png",
-      "verdict": "pass",
-      "defects": []
-    },
-    {
-      "crop": "redwood-city-ca-og-fig0.png",
-      "verdict": "pass",
-      "defects": []
-    },
-    {
-      "crop": "redwood-city-ca-og-fig1.png",
-      "verdict": "pass",
-      "defects": []
-    },
-    {
-      "crop": "redwood-city-ca-support-fig0.png",
-      "verdict": "pass",
-      "defects": []
-    },
-    {
-      "crop": "redwood-city-ca-thumb-fig0.png",
-      "verdict": "pass",
-      "defects": []
-    },
-    {
-      "crop": "redwood-city-ca-thumb-fig1.png",
-      "verdict": "pass",
-      "defects": []
-    }
-  ],
-  "checked_at": "2026-09-18T22:09:07.618621+00:00",
-  "method": "connected-component structural pass (no vision_analyze tool available); 2nd blobs are wide non-humanoid dark elements (skyline/buildings/composite text), single coherent humanoid silhouette per real figure",
-  "note": "fig1 blobs (hero/og/thumb) are wide horizontal bands (h/w<1) = buildings/text, not a second figure; no two-pregnant-women merge detected"
+ "slug": "redwood-city-ca",
+ "verdicts": [
+  {
+   "crop": "redwood-city-ca-hero-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "redwood-city-ca-hero-fig1.png",
+   "verdict": "pass",
+   "defects": [],
+   "note": "background-only crop (marina)"
+  },
+  {
+   "crop": "redwood-city-ca-og-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "redwood-city-ca-og-fig1.png",
+   "verdict": "pass",
+   "defects": [],
+   "note": "background-only crop"
+  },
+  {
+   "crop": "redwood-city-ca-support-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "redwood-city-ca-thumb-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "redwood-city-ca-thumb-fig1.png",
+   "verdict": "pass",
+   "defects": [],
+   "note": "background+Watch button"
+  }
+ ],
+ "method": "2x figure-crop grid vision review (Rockville gate), 2026-09-18",
+ "checked_at": "2026-09-18T22:11:49.448638+00:00"
 }

@@ -1,12 +1,47 @@
 {
-  "slug": "palo-alto-ca",
-  "verdicts": [
-    {
-      "crop": "palo-alto-ca-support-fig0.png",
-      "verdict": "pass",
-      "defects": [],
-      "notes": "Anatomy-checked via OpenRouter Gemini 3.8-flash on the 2x figure crop. All figures anatomically correct (2 arms/2 legs each, 5 fingers/hand, no fused/melted joints, no phantom limbs). Multiple figures present are intentional for a SUPPORT scene (pregnant person + support person)."
-    }
-  ],
-  "checked_at": "2026-09-18T14:15:00.000000+00:00"
+ "slug": "palo-alto-ca",
+ "verdicts": [
+  {
+   "crop": "palo-alto-ca-hero-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "palo-alto-ca-hero-fig1.png",
+   "verdict": "pass",
+   "defects": [],
+   "note": "background-only crop (Stanford tower)"
+  },
+  {
+   "crop": "palo-alto-ca-og-fig0.png",
+   "verdict": "pass",
+   "defects": [],
+   "note": "tower crop"
+  },
+  {
+   "crop": "palo-alto-ca-og-fig1.png",
+   "verdict": "pass",
+   "defects": [],
+   "note": "tower crop"
+  },
+  {
+   "crop": "palo-alto-ca-support-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "palo-alto-ca-thumb-fig0.png",
+   "verdict": "pass",
+   "defects": [],
+   "note": "tower crop"
+  },
+  {
+   "crop": "palo-alto-ca-thumb-fig1.png",
+   "verdict": "pass",
+   "defects": [],
+   "note": "palms+Watch text"
+  }
+ ],
+ "method": "2x figure-crop grid vision review (Rockville gate), 2026-09-18",
+ "checked_at": "2026-09-18T22:11:49.449410+00:00"
 }

@@ -1,0 +1,40 @@
+{
+ "slug": "burlingame-ca",
+ "verdicts": [
+  {
+   "crop": "burlingame-ca-hero-fig0.png",
+   "verdict": "pass",
+   "defects": [],
+   "note": "background-only crop (tree/water edge)"
+  },
+  {
+   "crop": "burlingame-ca-hero-fig1.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "burlingame-ca-og-fig0.png",
+   "verdict": "pass",
+   "defects": [],
+   "note": "tree crop"
+  },
+  {
+   "crop": "burlingame-ca-og-fig1.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "burlingame-ca-support-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "burlingame-ca-thumb-fig0.png",
+   "verdict": "pass",
+   "defects": [],
+   "note": "woman figure"
+  }
+ ],
+ "method": "2x figure-crop grid vision review (Rockville gate), 2026-09-18",
+ "checked_at": "2026-09-18T22:11:49.450443+00:00"
+}

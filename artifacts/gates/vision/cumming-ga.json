@@ -1,10 +1,51 @@
 {
-  "slug": "cumming-ga",
-  "verdicts": [
-    {"crop": "cumming-ga-hero-fig0.png", "verdict": "pass", "defects": []},
-    {"crop": "cumming-ga-support-fig0.png", "verdict": "pass", "defects": []},
-    {"crop": "cumming-ga-og-fig0.png", "verdict": "pass", "defects": []}
-  ],
-  "checked_at": "2026-09-16T18:32:00Z",
-  "notes": "hero-fig0 and og-fig0 crops are clean skyline landscapes (no figure present, no anatomy defects); support-fig0 shows two foreground women with correct anatomy and normal fingers, minor occlusion of one hand on lap (not a defect)."
+ "slug": "cumming-ga",
+ "verdicts": [
+  {
+   "crop": "cumming-ga-hero-fig0.png",
+   "verdict": "pass",
+   "defects": [],
+   "note": "background-only (white/lake edge)"
+  },
+  {
+   "crop": "cumming-ga-hero-fig1.png",
+   "verdict": "pass",
+   "defects": [],
+   "note": "background-only (water)"
+  },
+  {
+   "crop": "cumming-ga-hero-fig2.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "cumming-ga-hero-fig3.png",
+   "verdict": "pass",
+   "defects": [],
+   "note": "background-only (trees/water)"
+  },
+  {
+   "crop": "cumming-ga-og-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "cumming-ga-support-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "cumming-ga-thumb-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "cumming-ga-thumb-fig1.png",
+   "verdict": "pass",
+   "defects": [],
+   "note": "background+Watch"
+  }
+ ],
+ "method": "2x figure-crop grid vision review (Rockville gate), 2026-09-18",
+ "checked_at": "2026-09-18T22:11:49.452719+00:00"
 }

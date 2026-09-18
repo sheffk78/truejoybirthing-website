@@ -1,11 +1,27 @@
 {
-  "slug": "san-mateo-ca",
-  "verdicts": [
-    {
-      "crop": "san-mateo-ca-support-fig0.png",
-      "verdict": "pass",
-      "defects": []
-    }
-  ],
-  "checked_at": "2026-09-18T00:48:14.548678+00:00"
+ "slug": "san-mateo-ca",
+ "verdicts": [
+  {
+   "crop": "san-mateo-ca-hero-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "san-mateo-ca-og-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "san-mateo-ca-support-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "san-mateo-ca-thumb-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  }
+ ],
+ "method": "2x figure-crop grid vision review (Rockville gate), 2026-09-18",
+ "checked_at": "2026-09-18T22:11:49.449882+00:00"
 }
