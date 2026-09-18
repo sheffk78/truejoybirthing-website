@@ -2,9 +2,9 @@
   "slug": "san-mateo-ca",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
-  "exit_code": 1,
-  "passed": 7,
-  "failed": 2,
+  "exit_code": 0,
+  "passed": 9,
+  "failed": 0,
   "skipped": 0,
   "results": {
     "pre_render_gate": {
@@ -24,12 +24,12 @@
       "detail": "thumbnail present locally (1176KB) and YouTube returns 215KB"
     },
     "video_embedded": {
-      "status": "FAIL",
-      "detail": "videoId gHmkBdcFaW8 not found on live page"
+      "status": "PASS",
+      "detail": "embed found (vid gHmkBdcFaW8) on live page"
     },
     "videoobject_schema": {
-      "status": "FAIL",
-      "detail": "VideoObject schema missing on live page"
+      "status": "PASS",
+      "detail": "VideoObject+duration present on live page"
     },
     "outreach_sent_or_blocked": {
       "status": "PASS",
