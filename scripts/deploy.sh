@@ -299,6 +299,12 @@ echo ""
 echo "--- Step 4b: CF Pages upload ---"
 cd "$PROJECT_DIR"
 WXP="wr""angler"
+# 🔴 2026-09-18: wrangler needs an API token in non-interactive shells.
+# Load from the canonical secrets file if the caller did not export one.
+if [ -z "${CLOUDFLARE_API_TOKEN:-}" ] && [ -r "$HOME/.hermes/secrets/cloudflare_api_token" ]; then
+  export CLOUDFLARE_API_TOKEN="$(cat "$HOME/.hermes/secrets/cloudflare_api_token")"
+  echo "  → CLOUDFLARE_API_TOKEN loaded from ~/.hermes/secrets/cloudflare_api_token"
+fi
 npx "$WXP" pages deploy dist --project-name=truejoybirthing-website --branch=main 2>&1 | sed 's/^/  /'
 
 # ---------------------------------------------------------------
