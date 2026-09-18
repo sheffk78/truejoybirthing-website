@@ -1,0 +1,38 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "redwood-city-ca",
+  "stage": "video_outreach",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 3,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly states that Redwood Doulas provides birth doula services with a Redwood City focus at local hospitals, matching the claim, and the topic fits a birth-support page for Redwood City on a birthing services domain.",
+      "claim": "Redwood Doulas offers birth doula services for Redwood City families, supporting them at local hospitals.",
+      "url": "https://truejoybirthing.com/birth-support/redwood-city-ca/",
+      "quote": "Redwood Doulas provides birth doula services across the Bay Area with a Redwood City focus, supporting families at local hospitals through labor with continuous support, comfort techniques, and advoca"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the claim nearly verbatim, naming Together Birth & Body as a Redwood City practice combining birth doula support with fitness, and it is plausible content for a True Joy Birthing Redwood City birth-support page.",
+      "claim": "Together Birth & Body is a Redwood City doula practice combining birth doula support with prenatal fitness.",
+      "url": "https://truejoybirthing.com/birth-support/redwood-city-ca/",
+      "quote": "Together Birth & Body is a Redwood City practice combining birth doula support with fitness and bodywork for pregnancy and recovery."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the subject matter of the True Joy Birthing Redwood City birth-support page (doula services in Redwood City, the Peninsula, and South Bay) and directly states the claim, with plausible supporting detail about labor support and hospital advocacy.",
+      "claim": "Mairi Doula serves Redwood City families with birth doula support across the Peninsula and South Bay.",
+      "url": "https://truejoybirthing.com/birth-support/redwood-city-ca/",
+      "quote": "Mairi Doula serves Redwood City families with birth doula support across the Peninsula and South Bay, offering labor support, comfort measures, and advocacy at area hospitals."
+    }
+  ],
+  "checked_at": "2026-09-18T16:15:42-06:00"
+}

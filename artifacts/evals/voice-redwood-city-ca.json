@@ -1,0 +1,11 @@
+{
+  "eval": "eval-voice",
+  "slug": "redwood-city-ca",
+  "model": "atlas:latest",
+  "fields_checked": 9,
+  "model_calls_ok": 2,
+  "model_calls_err": 0,
+  "verdict": "approved",
+  "findings": [],
+  "checked_at": "2026-09-18T16:18:02-06:00"
+}
