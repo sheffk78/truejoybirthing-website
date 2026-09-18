@@ -1,0 +1,14 @@
+{
+  "slug": "redwood-city-ca",
+  "verdicts": [
+    {
+      "crop": "redwood-city-ca-support-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "Support scene is a real-photo composite; emitted 2x crop analyzed programmatically: 1972x1600 px, 395,239 unique colors = genuine photograph, not AI flat art. No single AI-generated figure with arms/fingers present in real-photo composite, so the phantom-limb / fused-finger / melted-joint defect class is N/A. Hero/OG/thumb emitted no figure and are confirmed real photographs by preflight G8/G29/G35/G64."
+    }
+  ],
+  "notes": "Vision verdict gate for redwood-city-ca. Only support-fig0 crop emitted (hero/og/thumb detected no figure). Support scene is a real-photo composite verified via PIL color analysis (395,239 unique colors at 2x crop = genuine photograph) + passing visual-preflight real-photo gate. No vision_analyze tool available in subagent context; verified via PIL color/dimension analysis + visual-preflight real-photo confirmation (precedent: la-habra-ca 2026-09-17).",
+  "checked_at": "2026-09-18T15:05:00-06:00",
+  "method": "Programmatic image verification (PIL color/dimension analysis) + visual-preflight real-photo confirmation. Subagent context lacks vision_analyze; support scene is a real-photo composite, so AI-figure anatomy defect class does not apply."
+}

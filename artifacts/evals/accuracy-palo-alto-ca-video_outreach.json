@@ -1,0 +1,38 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "palo-alto-ca",
+  "stage": "video_outreach",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 3,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 33,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible testimonial for a discoverdoulas.com listing page whose URL identifies Blossom Birth & Family in Palo Alto, CA, and its mention of Blossombirth's high-quality prenatal and postnatal services is consistent with and supportive of the claim that it is a birth and postpartum dou",
+      "claim": "Blossom Birth & Family is a Palo Alto birth and postpartum doula practice offering childbirth education, lactation support, and newborn care.",
+      "url": "https://www.discoverdoulas.com/doula/blossom-birth-and-family-palo-alto-ca/",
+      "quote": "I'm so grateful to have found Blossombirth! All their services are high quality and they really help you to live a better prenatal and postnatal experience."
+    },
+    {
+      "index": 1,
+      "verdict": "NOT_ENOUGH_INFO",
+      "reason": "The quote plausibly comes from Mairi's doula site and confirms she is a Certified Birth and Postpartum Doula, but it contains no mention of the San Francisco Peninsula, San Mateo, or Santa Clara Counties, so the service-area portion of the claim cannot be verified.",
+      "claim": "Mairi is a Certified Birth and Postpartum Doula serving the San Francisco Peninsula (San Mateo and Santa Clara Counties).",
+      "url": "https://mairidoula.wixsite.com/birth",
+      "quote": "Hi! I'm Mairi (she/her), a Certified Birth and Postpartum Doula! I am passionate about supporting you during your pregnancy, labor and beyond."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible first-person bio from a doula profile page on a birth-services domain, and it directly supports the core claim that Nubia is a certified birth and postpartum doula with 25 years of experience in birth, postpartum, and newborn care, with no contradiction to the stated Palo Al",
+      "claim": "Nubia Jones is a Birth & Postpartum Doula based in Palo Alto, California with 25 years of birth and newborn care experience.",
+      "url": "https://www.bornbir.com/nubia-jones",
+      "quote": "I'm Nubia, a mom of five (teens & young adults). I have 25years of experience in the birth, postpartum & newborn care field. For 14yrs, I've been professionally serving families as a certified birth d"
+    }
+  ],
+  "checked_at": "2026-09-18T14:30:57-06:00"
+}
