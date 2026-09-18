@@ -1,0 +1,12 @@
+{
+  "slug": "palo-alto-ca",
+  "verdicts": [
+    {
+      "crop": "palo-alto-ca-support-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "notes": "Anatomy-checked via OpenRouter Gemini 3.8-flash on the 2x figure crop. All figures anatomically correct (2 arms/2 legs each, 5 fingers/hand, no fused/melted joints, no phantom limbs). Multiple figures present are intentional for a SUPPORT scene (pregnant person + support person)."
+    }
+  ],
+  "checked_at": "2026-09-18T14:15:00.000000+00:00"
+}
