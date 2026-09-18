@@ -63,7 +63,9 @@ export const onRequestPost = async (context) => {
 
     const firstName = name.split(' ')[0];
 
-    // ── Primary: MailerCloud contact upsert (list 6 = Confidence Session leads) ──
+    // ── Primary: MailerCloud contact upsert (HSEHyE = TJB Confidence Sessions) ──
+    // 2026-09-18 fix: was list_id: 6 (Brevo-era numeric id) — MailerCloud 401'd
+    // every submission and consult requests were silently dropped.
     if (env.MC_API_KEY) {
       try {
         await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
@@ -75,7 +77,7 @@ export const onRequestPost = async (context) => {
           body: JSON.stringify({
             email,
             first_name: firstName,
-            list_id: 6,
+            list_id: 'HSEHyE',
             // Confidence Session custom fields mapped as tags
             tags: ['confidence-session'],
           }),
@@ -85,7 +87,9 @@ export const onRequestPost = async (context) => {
       }
     }
 
-    // ── Send email notification to Shelbi via AgentMail ──
+    // ── Send notification to Shelbi via Postmark ──
+    // 2026-09-18: AgentMail retired Aug 2026; now uses the Postmark path
+    // contact.ts already uses in production.
     const emailSubject = `Birth Plan Confidence Session Request — ${name}`;
     const emailBody = [
       `New Birth Plan Confidence Session request from truejoybirthing.com`,
@@ -101,17 +105,26 @@ export const onRequestPost = async (context) => {
       `Submitted via /birth-plan-confidence-session/ form`,
     ].join('\n');
 
-    const agentmailResult = await fetch(`https://api.agentmail.to/v0/inboxes/shelbi@truejoybirthing.com/messages/send`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${env.AGENTMAIL_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ to: ['shelbi@truejoybirthing.com'], subject: emailSubject, text: emailBody }),
-    });
-
-    if (!agentmailResult.ok) {
-      console.error('AgentMail send failed:', agentmailResult.status, await agentmailResult.text());
+    if (env.POSTMARK_SERVER_TOKEN) {
+      const pmRes = await fetch('https://api.postmarkapp.com/email', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'X-Postmark-Server-Token': env.POSTMARK_SERVER_TOKEN,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          From: 'support@truejoybirthing.com',
+          To: 'shelbi@truejoybirthing.com',
+          Subject: emailSubject,
+          TextBody: emailBody,
+        }),
+      });
+      if (!pmRes.ok) {
+        console.error('Postmark send failed:', pmRes.status, await pmRes.text());
+      }
+    } else {
+      console.error('POSTMARK_SERVER_TOKEN not set; skipping session notification email');
     }
 
     return new Response(JSON.stringify({ success: true }), {

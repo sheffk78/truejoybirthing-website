@@ -47,7 +47,9 @@ export const onRequestPost = async (context) => {
     const firstName = name.split(' ')[0];
     const lastName = name.includes(' ') ? name.split(' ').slice(1).join(' ') : '';
 
-    // ── MailerCloud: Add to ambassador list (list 3 = TJB Ambassadors) ──
+    // ── MailerCloud: Add to ambassador list (wHHZHH = TJB Ambassadors) ──
+    // 2026-09-18 fix: was list_id: 3 (Brevo-era numeric id) — MailerCloud 401'd
+    // every submission and ambassador applications were silently dropped.
     if (env.MC_API_KEY) {
       try {
         await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
@@ -60,7 +62,7 @@ export const onRequestPost = async (context) => {
             email,
             first_name: firstName,
             last_name: lastName,
-            list_id: 3,
+            list_id: 'wHHZHH',
             tags: ['ambassador', 'applied'],
           }),
         });
@@ -69,8 +71,9 @@ export const onRequestPost = async (context) => {
       }
     }
 
-    // ── AgentMail: Notify team of new application ──
-    const inboxId = 'support@truejoybirthing.com';
+    // ── Postmark: Notify support of new application ──
+    // 2026-09-18: AgentMail retired Aug 2026; now uses the Postmark path
+    // contact.ts already uses in production.
     const emailSubject = `[Ambassador] New Application: ${name} (${role})`;
     const emailBody = [
       `New ambassador application from truejoybirthing.com/ambassador`,
@@ -86,16 +89,31 @@ export const onRequestPost = async (context) => {
       `View all ambassador contacts in MailerCloud → TJB Ambassadors list`,
     ].join('\n');
 
-    fetch(`https://api.agentmail.to/v0/inboxes/${inboxId}/messages/send`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${env.AGENTMAIL_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ to: [inboxId], subject: emailSubject, text: emailBody }),
-    }).catch((agentErr) => {
-      console.error('AgentMail ambassador notification failed (non-blocking):', agentErr);
-    });
+    if (env.POSTMARK_SERVER_TOKEN) {
+      try {
+        const pmRes = await fetch('https://api.postmarkapp.com/email', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'X-Postmark-Server-Token': env.POSTMARK_SERVER_TOKEN,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            From: 'support@truejoybirthing.com',
+            To: 'support@truejoybirthing.com',
+            Subject: emailSubject,
+            TextBody: emailBody,
+          }),
+        });
+        if (!pmRes.ok) {
+          console.error('Postmark ambassador notify failed:', pmRes.status, await pmRes.text());
+        }
+      } catch (pmErr) {
+        console.error('Postmark ambassador notification failed (non-blocking):', pmErr);
+      }
+    } else {
+      console.error('POSTMARK_SERVER_TOKEN not set; skipping ambassador notification email');
+    }
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
