@@ -177,6 +177,69 @@ def hero_silhouette(slug: str) -> dict:
         if top_unique < 2000 and full_unique < 20000:
             return {"pass": False, "detail": f"Hero appears to be a CSS/HTML gradient graphic, not a photo (top_unique_colors={top_unique}, full_unique_colors={full_unique}, thresholds=2000/20000). Use image_generate with silhouette prompt from tjb-ai-photo-generation skill. Gradient hero composition files have been DELETED — they must never be used."}
 
+        # G8b (Sep 18, 2026 — 6 CA watercolor-hero incident): vision STYLE check.
+        # The brightness heuristic below passed pale watercolor illustrations
+        # (street-level center slightly darker than hazy sky reads as
+        # "silhouette"). Watercolor/storybook heroes are banned — city heroes
+        # must be photographic. Ask a vision model for the style verdict.
+        vision_path = os.path.join('/tmp', f'g8b-{os.path.basename(str(full_path))}')
+        try:
+            vimg = Image.open(full_path)
+            vimg.thumbnail((1024, 1024))
+            vimg.convert('RGB').save(vision_path, 'JPEG', quality=82)
+        except Exception as e:
+            return {"pass": False, "detail": f"Could not prepare hero for style check: {e}"}
+        import base64 as _b64
+        with open(vision_path, 'rb') as f:
+            vb64 = _b64.b64encode(f.read()).decode()
+        try:
+            os.remove(vision_path)
+        except OSError:
+            pass
+        style_prompt = (
+            "You are a strict style gate for city-page hero images. The hero "
+            "MUST be a photograph or photorealistic image. Hand-drawn styles "
+            "are BANNED: watercolor, storybook, cartoon, painterly illustration, "
+            "flat vector art. Look at brushstroke-like texture, outlines, and "
+            "color washes — not subject. Answer with a single word PASS (photo) "
+            "or FAIL (illustration/painterly) followed by a colon and a "
+            "one-clause reason."
+        )
+        try:
+            key = None
+            with open(os.path.expanduser('~/.hermes/secrets/openrouter-keys.txt')) as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith('#'):
+                        key = line
+                        break
+            if not key:
+                return {"pass": True, "detail": "No OpenRouter key — G8b style check skipped (pass-through)"}
+            import urllib.request, urllib.error
+            req = urllib.request.Request(
+                'https://openrouter.ai/api/v1/chat/completions',
+                data=json.dumps({
+                    "model": "google/gemini-2.5-flash-lite",
+                    "messages": [{"role": "user", "content": [
+                        {"type": "text", "text": style_prompt},
+                        {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{vb64}"}},
+                    ]}],
+                }).encode(),
+                headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
+            )
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                body = json.loads(resp.read())
+            verdict = (body.get('choices') or [{}])[0].get('message', {}).get('content', '')
+            v = verdict.strip().upper()
+            if v.startswith('FAIL'):
+                return {"pass": False, "detail": f"G8b style FAIL: {verdict.strip()[:180]} — hero must be photographic (silhouette + city landscape); regenerate with new seed, version-bump filename"}
+            if v.startswith('PASS'):
+                pass  # style OK — fall through to silhouette geometry check
+            else:
+                return {"pass": True, "detail": f"G8b style verdict UNPARSEABLE — manual review advised: {verdict.strip()[:120]}"}
+        except Exception as e:
+            return {"pass": True, "detail": f"G8b style check could not run ({type(e).__name__}) — manual review advised"}
+
         if center < top and (top - center) > 0.5:
             return {"pass": True, "detail": f"Silhouette confirmed (center={center:.1f} < top={top:.1f}, top_colors={top_unique})"}
         else:
