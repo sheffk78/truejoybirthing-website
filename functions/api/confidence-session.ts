@@ -68,7 +68,7 @@ export const onRequestPost = async (context) => {
     // every submission and consult requests were silently dropped.
     if (env.MC_API_KEY) {
       try {
-        await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
+        const mcRes = await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
           method: 'POST',
           headers: {
             'Authorization': env.MC_API_KEY,
@@ -82,6 +82,11 @@ export const onRequestPost = async (context) => {
             tags: ['confidence-session'],
           }),
         });
+        if (!mcRes.ok) {
+          console.error('MailerCloud confidence upsert failed:', mcRes.status, await mcRes.text());
+        } else {
+          console.log('MailerCloud confidence upsert OK:', await mcRes.text());
+        }
       } catch (mcErr) {
         console.error('MailerCloud contact sync error (non-fatal):', mcErr);
       }

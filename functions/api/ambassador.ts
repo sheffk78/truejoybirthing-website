@@ -52,7 +52,7 @@ export const onRequestPost = async (context) => {
     // every submission and ambassador applications were silently dropped.
     if (env.MC_API_KEY) {
       try {
-        await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
+        const mcRes = await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
           method: 'POST',
           headers: {
             'Authorization': env.MC_API_KEY,
@@ -66,6 +66,11 @@ export const onRequestPost = async (context) => {
             tags: ['ambassador', 'applied'],
           }),
         });
+        if (!mcRes.ok) {
+          console.error('MailerCloud ambassador upsert failed:', mcRes.status, await mcRes.text());
+        } else {
+          console.log('MailerCloud ambassador upsert OK:', await mcRes.text());
+        }
       } catch (mcErr) {
         console.error('MailerCloud ambassador contact error (non-fatal):', mcErr);
       }

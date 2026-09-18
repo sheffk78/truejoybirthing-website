@@ -103,7 +103,7 @@ export const onRequestPost = async (context) => {
     if (source) contactFields.custom_fields = { source };
     if (env.MC_API_KEY) {
       try {
-        await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
+        const mcRes1 = await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
           method: 'POST',
           headers: {
             'Authorization': env.MC_API_KEY,
@@ -111,8 +111,13 @@ export const onRequestPost = async (context) => {
           },
           body: JSON.stringify({ ...contactFields, list_id: 'uaEauf' }),
         });
+        if (!mcRes1.ok) {
+          console.error('MailerCloud subscribers upsert failed:', mcRes1.status, await mcRes1.text());
+        } else {
+          console.log('MailerCloud subscribers upsert OK:', await mcRes1.text());
+        }
         // Also add to Free Birth Plan list (wHHZHy) if not already there
-        await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
+        const mcRes2 = await fetch('https://cloudapi.mailercloud.com/v1/contacts/upsert', {
           method: 'POST',
           headers: {
             'Authorization': env.MC_API_KEY,
@@ -120,6 +125,11 @@ export const onRequestPost = async (context) => {
           },
           body: JSON.stringify({ ...contactFields, list_id: 'wHHZHy' }),
         });
+        if (!mcRes2.ok) {
+          console.error('MailerCloud free-birth-plan upsert failed:', mcRes2.status, await mcRes2.text());
+        } else {
+          console.log('MailerCloud free-birth-plan upsert OK:', await mcRes2.text());
+        }
       } catch (mcErr) {
         console.error('MailerCloud contact sync error (non-fatal):', mcErr);
       }
