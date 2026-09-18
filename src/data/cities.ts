@@ -11654,6 +11654,12 @@ hospitalDetails: [
       }
     ],
     birthCenterDetails: [],
+    midwifeInfo: {
+      paragraph: "California licenses both Licensed Midwives (LMs) and Certified Nurse-Midwives (CNMs), with LMs attending home and birth center births and CNMs practicing in hospitals. California Medi-Cal covers doula services through the PAVE program, reimbursing approximately $1,587 per pregnancy. San Mateo families can access midwifery care at Mills Health Center and San Mateo Medical Center, and the Bay Area is home to many licensed midwives serving home-birth families across the Peninsula.",
+      practices: [
+        { name: "Bay Area Midwifery", type: "CNM Practice", description: "Certified nurse-midwife care serving San Mateo and the wider Peninsula, offering hospital-based CNM support." }
+      ]
+    },
     localDoulas: [
       { name: "San Mateo Doula", photo: "/images/provider-san-mateo-ca-san-mateo-doula.webp", practice: "San Mateo Doula", url: "https://sanmateodoula.com/about-san-mateo-doula/", description: "San Mateo Doula is a San Mateo-based birth and postpartum doula practice serving families across San Mateo County and the Bay Area between San Francisco and San Jose. The practice supports families through unmedicated births, epidurals, and cesareans alike, offering steady labor support, position changes and comfort measures, and postpartum recovery care that includes emotional and practical help with newborn rhythm, feeding, and confidence in early parenthood.", serviceArea: ["San Mateo, CA", "San Mateo County, CA"], acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"] },
       { name: "Thais Mendonca Schweitzer", photo: "/images/provider-san-mateo-ca-thais-mendonca-schweitzer.webp", practice: "Thais Mendonca Schweitzer Doula Care", url: "https://www.bornbir.com/thais-mendonca-schweitzer", description: "Thais Mendonca Schweitzer is a certified birth and postpartum doula, newborn care specialist, and breastfeeding educator located in San Mateo, with training in birth and postpartum doula work (2021), breastfeeding education (2023), and newborn care (2020). Her birth package includes two to three prenatal childbirth-preparation visits, delivery-day support, and a postpartum visit; daytime postpartum support starts at three days per week. She works with families in English and Portuguese.", serviceArea: ["San Mateo, CA", "Bay Area, CA"], acceptingClients: true, services: ["Birth Doula", "Postpartum Doula", "Lactation Support"] },
@@ -11679,12 +11685,6 @@ hospitalDetails: [
         a: "Yes. San Mateo Medical Center and Sequoia Hospital both welcome doulas as support persons. Confirm current visitor and support person policies at your hospital tour, as policies can change."
       }
     ],
-    midwifeInfo: {
-      paragraph: "California licenses both Licensed Midwives (LMs) and Certified Nurse-Midwives (CNMs), with LMs attending home and birth center births and CNMs practicing in hospitals. California Medi-Cal covers doula services through the PAVE program, reimbursing approximately $1,587 per pregnancy. San Mateo families can access midwifery care at Mills Health Center and San Mateo Medical Center, and the Bay Area is home to many licensed midwives serving home-birth families across the Peninsula.",
-      practices: [
-        { name: "Bay Area Midwifery", type: "CNM Practice", description: "Certified nurse-midwife care serving San Mateo and the wider Peninsula, offering hospital-based CNM support." }
-      ]
-    },
     lat: 37.5630,
     lng: -122.3255,
     nearbyCities: ["redwood-city-ca", "belmont-ca", "san-bruno-ca"],

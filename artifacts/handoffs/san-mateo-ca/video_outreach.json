@@ -1,0 +1,32 @@
+{
+  "slug": "san-mateo-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-18T00:46:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Video rendered, uploaded as gHmkBdcFaW8 (public+embeddable), thumbnail generated via tjb-generate-asset.sh and uploaded via API, video-embeds.ts updated, page rebuilt and deployed. Outreach to arrieanna@sanmateodoula.com previously sent (2026-09-04, message_id vps-20260904144345460583). Subagent hit 502 on return \u2014 contract filled by parent from disk verification.",
+  "sources": [
+    {
+      "claim": "YouTube video gHmkBdcFaW8 uploaded and embeddable",
+      "url": "https://www.youtube.com/embed/gHmkBdcFaW8",
+      "quote": "videoId: gHmkBdcFaW8 in video-embeds.ts"
+    },
+    {
+      "claim": "Provider outreach sent via VPS mail server",
+      "url": "internal:tjb-outreach-send-log.jsonl",
+      "quote": "to=arrieanna@sanmateodoula.com status=sent message_id=vps-20260904144345460583"
+    }
+  ],
+  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/san-mateo-ca-city-guide.mp4",
+  "video_mb": 22.1,
+  "youtube_id": "gHmkBdcFaW8",
+  "thumbnail_path": "dist/images/yt-thumb-san-mateo-ca.webp",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "provider": "Arrieanna (San Mateo Doula)",
+      "status": "sent",
+      "message_id": "vps-20260904144345460583",
+      "to": "arrieanna@sanmateodoula.com"
+    }
+  ]
+}
