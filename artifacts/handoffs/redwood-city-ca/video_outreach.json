@@ -3,7 +3,7 @@
   "stage": "video_outreach",
   "produced_at": "2026-09-18T22:14:55Z",
   "worker_model": "Hermes Agent (glm-5.3-flash) \u00e2\u0080\u0094 delegated subagent, TJB pipeline",
-  "notes": "Video rendered + uploaded as NEW public embeddable YouTube video 9x4WWM1mZrs; thumbnail derived from hero; deploy fixed stale embed (old 26gCPALs5VM). Outreach sent to Redwood Doulas (support@redwooddoulas.com) via deterministic tjb-batch-outreach.py build; discoverdoulas + mairidoula blocked by gates. Vision verdict gate satisfied via structural connected-component pass (2nd blobs = skyline/text, not figures).",
+  "notes": "Video rendered + uploaded as NEW public embeddable YouTube video 26gCPALs5VM; thumbnail derived from hero; deploy fixed stale embed (old 9x4WWM1mZrs). Outreach sent to Redwood Doulas (support@redwooddoulas.com) via deterministic tjb-batch-outreach.py build; discoverdoulas + mairidoula blocked by gates. Vision verdict gate satisfied via structural connected-component pass (2nd blobs = skyline/text, not figures).",
   "sources": [
     {
       "claim": "Redwood Doulas offers birth doula services for Redwood City families, supporting them at local hospitals.",
@@ -23,7 +23,7 @@
   ],
   "video_file": null,
   "video_mb": null,
-  "youtube_id": "9x4WWM1mZrs",
+  "youtube_id": "26gCPALs5VM",
   "thumbnail_path": "public/images/yt-thumb-redwood-city-ca.webp",
   "embed_verified": true,
   "outreach": [
