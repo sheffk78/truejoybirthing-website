@@ -1,0 +1,11 @@
+{
+  "eval": "eval-voice",
+  "slug": "la-habra-ca",
+  "model": "atlas:latest",
+  "fields_checked": 9,
+  "model_calls_ok": 2,
+  "model_calls_err": 0,
+  "verdict": "approved",
+  "findings": [],
+  "checked_at": "2026-09-17T17:48:22-06:00"
+}

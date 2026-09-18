@@ -1,0 +1,44 @@
+{
+  "slug": "la-habra-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-17T23:56:57Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Video rendered (22.9MB), uploaded as Hzw9_-_Z0V8 (public+embeddable), thumbnail uploaded via API, 3 outreach emails sent via VPS mail server. Subagent hit 502 on return but all work completed and verified via send log.",
+  "sources": [
+    {
+      "claim": "YouTube video Hzw9_-_Z0V8 uploaded and embeddable",
+      "url": "https://www.youtube.com/embed/Hzw9_-_Z0V8",
+      "quote": "videoId: Hzw9_-_Z0V8 in video-embeds.ts"
+    },
+    {
+      "claim": "3 provider outreach emails sent via VPS mail server",
+      "url": "internal:tjb-outreach-send-log.jsonl",
+      "quote": "status: sent, message_ids: vps-20260917235418044373, vps-20260917235442832964, vps-20260917235510506161"
+    }
+  ],
+  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/la-habra-ca-city-guide.mp4",
+  "video_mb": 21.8,
+  "youtube_id": "Hzw9_-_Z0V8",
+  "thumbnail_path": "dist/images/yt-thumb-la-habra-ca.webp",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "provider": "Aloha Lamaze (Janis)",
+      "status": "sent",
+      "message_id": "vps-20260917235418044373",
+      "to": "alohalamaze@aol.com"
+    },
+    {
+      "provider": "Temple & Terrain (TJ)",
+      "status": "sent",
+      "message_id": "vps-20260917235442832964",
+      "to": "teejaycc@outlook.com"
+    },
+    {
+      "provider": "Newborn Nurtury (Donna)",
+      "status": "sent",
+      "message_id": "vps-20260917235510506161",
+      "to": "donna@newbornnurtury.com"
+    }
+  ]
+}
