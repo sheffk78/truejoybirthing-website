@@ -218,8 +218,38 @@ fi
 echo ""
 echo "--- Step 3/5: Build ---"
 
+# 🔴 2026-09-18: PUBLIC_TJB_CONTROL_KEY must be present at build time
+# (Astro only reads .env FILES for PUBLIC_* vars, not process env).
+# Without it the deployed dashboard ships an empty controlKey and the
+# Autonomous-Worker Pause/Resume toggle 401s. Inject from the vault
+# file via a temporary gitignored .env, and ALWAYS clean up after.
+TJB_TEMP_ENV="$PROJECT_DIR/.env"
+TJB_ENV_WRITTEN=false
+cleanup_temp_env() {
+  if [ "$TJB_ENV_WRITTEN" = true ] && [ -f "$TJB_TEMP_ENV" ]; then
+    rm -f "$TJB_TEMP_ENV"
+    echo "  → Temp .env removed."
+  fi
+}
+trap cleanup_temp_env EXIT
+
+if [ -f "$PROJECT_DIR/.env" ]; then
+  echo "  → .env already present; not overwriting."
+else
+  if [ ! -r "$HOME/.hermes/secrets/tjb_control_key" ]; then
+    echo "  ❌ FATAL: ~/.hermes/secrets/tjb_control_key missing/unreadable."
+    echo "  → Dashboard Pause/Resume would deploy with an empty key."
+    exit 1
+  fi
+  printf 'PUBLIC_TJB_CONTROL_KEY=%s\n' "$(cat "$HOME/.hermes/secrets/tjb_control_key")" > "$TJB_TEMP_ENV"
+  chmod 600 "$TJB_TEMP_ENV"
+  TJB_ENV_WRITTEN=true
+  echo "  → Injected PUBLIC_TJB_CONTROL_KEY into build env (temp .env, cleaned up on exit)."
+fi
+
 npm run build 2>&1 | tail -3 | sed 's/^/  /'
 echo "  → Build complete."
+cleanup_temp_env
 
 # ---------------------------------------------------------------
 # STEP 3: Commit and push (triggers CF auto-deploy)
