@@ -1919,4 +1919,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: 148,
   },
 
+  "burlingame-ca": {
+    videoId: "9j8hzNYvzS0",
+    title: "Burlingame, California Doula & Birth Plan Guide",
+    description: "Watch the full Burlingame, California Doula & Birth Plan Guide — all in about 3:08.",
+    duration: 188,
+  },
+
 };
