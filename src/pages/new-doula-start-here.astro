@@ -244,8 +244,8 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
         A curated package of birth plan templates, client onboarding scripts, and a 30-day launch checklist — free when you join the list.
       </p>
 
-      <!-- Brevo form placeholder — wire up when key arrives -->
-      <form id="starter-kit-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4" action="#" method="POST">
+      <!-- Starter kit signup — handled by /api/contact (MailerCloud dual-list + Postmark) -->
+      <form id="starter-kit-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto mb-4">
         <input 
           name="email" 
           type="email" 
@@ -257,9 +257,58 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
           Get the Kit →
         </button>
       </form>
+      <p id="starter-kit-status" class="hidden text-sm mt-2" aria-live="polite"></p>
       <p class="text-xs text-tjb-gray-300">No spam. Just tools, tips, and occasional doula community updates.</p>
     </div>
   </section>
+
+  <script>
+    // Starter kit form → /api/contact (same verified pipeline as homepage lead form).
+    // Replaces the dead Brevo-placeholder form (action="#" posted nowhere).
+    const kitForm = document.getElementById('starter-kit-form') as HTMLFormElement;
+    const kitStatus = document.getElementById('starter-kit-status') as HTMLParagraphElement;
+    const kitBtn = kitForm?.querySelector('button') as HTMLButtonElement;
+
+    kitForm?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = (kitForm.querySelector('input[name="email"]') as HTMLInputElement).value.trim();
+      if (!email) return;
+
+      kitBtn.disabled = true;
+      const originalLabel = kitBtn.textContent;
+      kitBtn.textContent = 'Sending...';
+      kitStatus.classList.add('hidden');
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email,
+            name: 'New Doula Starter Kit',
+            message: `New doula starter kit request from truejoybirthing.com/new-doula-start-here/ (${email})`,
+            source: 'new_doula_starter_kit',
+          }),
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          kitForm.reset();
+          kitStatus.textContent = "You're in — check your inbox for the starter kit.";
+          kitStatus.className = 'text-sm mt-2 text-green-700';
+        } else {
+          kitStatus.textContent = 'Something went wrong. Please try again.';
+          kitStatus.className = 'text-sm mt-2 text-red-600';
+        }
+      } catch {
+        kitStatus.textContent = 'Network error. Please try again.';
+        kitStatus.className = 'text-sm mt-2 text-red-600';
+      } finally {
+        kitBtn.disabled = false;
+        kitBtn.textContent = originalLabel;
+      }
+      kitStatus.classList.remove('hidden');
+    });
+  </script>
 
   <!-- ═══════════════════════════════════════════
        FAQ — Specific to new doulas
