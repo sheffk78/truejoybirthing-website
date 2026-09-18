@@ -11830,6 +11830,13 @@ hospitalDetails: [
       }
     ],
     nearbyCities: ["san-mateo-ca", "belmont-ca", "san-carlo-ca"],
+    midwifeInfo: {
+      paragraph: "California licenses Licensed Midwives (LMs) and Certified Nurse-Midwives (CNMs), with LMs attending home births and CNMs practicing in hospitals. Redwood City families have access to hospital-based midwifery at Sequoia Hospital and Kaiser Permanente Redwood City Medical Center, plus home-birth midwives serving the wider San Mateo County area. California's Medi-Cal program covers doula services statewide, and the state's Licensed Midwife (LM) credential is among the most established in the country for out-of-hospital birth.",
+      credentialTypes: " (LMs and CNMs)",
+      credentialDetail: "California recognizes both CNMs (hospital practice) and LMs (out-of-hospital birth), giving Redwood City families more provider options than states that only license CNMs,",
+    },
+    lat: 37.4852,
+    lng: -122.2364,
   },
   "burlingame-ca": {
     enableBlogResources: true,
