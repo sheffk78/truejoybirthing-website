@@ -1905,4 +1905,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: 194,
   },
 
+  "palo-alto-ca": {
+    videoId: "yZXkAKRb1yE",
+    title: "Palo Alto, California Doula & Birth Plan Guide",
+    description: "Watch the full Palo Alto, California Doula & Birth Plan Guide — all in about 4:51.",
+    duration: 291,
+  },
+
 };
