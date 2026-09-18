@@ -382,16 +382,37 @@ const contactSchema = {
       return;
     }
 
+    // Map form fields to the backend ShelbiLeadSubmit contract
+    // (truejoybirthing-app backend/routes/shelbi_leads.py): lead_type,
+    // name, email, phone, provider_type, topic, source.
+    const apiBody: Record<string, string> = {
+      lead_type: body.path === 'provider' ? 'provider' : 'mom',
+      name: body.name,
+      email: body.email,
+      topic: body.message,
+      source: body.source || 'website',
+    };
+    if (body.phone) apiBody.phone = body.phone;
+    if (body.path === 'provider' && body.role) {
+      // Backend accepts 'doula' | 'midwife'; map the wider form options.
+      const roleMap: Record<string, string> = {
+        'doula': 'doula',
+        'postpartum-doula': 'doula',
+        'midwife': 'midwife',
+      };
+      if (roleMap[body.role]) apiBody.provider_type = roleMap[body.role];
+    }
+
     btn.disabled = true;
     btn.textContent = 'Sending...';
     status.className = 'hidden text-sm mt-2';
     status.textContent = '';
 
     try {
-      const res = await fetch('https://truejoybirthing-app.up.railway.app/api/shelbi-leads', {
+      const res = await fetch('https://truejoybirthing-app-production.up.railway.app/api/shelbi-leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body),
+        body: JSON.stringify(apiBody),
       });
 
       if (res.ok) {
