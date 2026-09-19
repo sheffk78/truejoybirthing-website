@@ -1,0 +1,52 @@
+{
+  "slug": "alexandria-va",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-03T22:49:03Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube RPIfpmygL2g registered in video-embeds.ts; thumbnail on disk; 3 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "RPIfpmygL2g",
+  "thumbnail_path": "public/images/yt-thumb-alexandria-va.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "info@sunflowerswellness.com",
+      "status": "sent",
+      "message_id": "<0100019fc9d102ce-64685685-9361-4975-bbf4-51bb6100e476-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-03"
+    },
+    {
+      "to": "jenniferlwisse@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fc9d16e9c-facf51e0-47c7-478f-ae5b-0ad0ea842ceb-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-03"
+    },
+    {
+      "to": "hello@momease.com",
+      "status": "sent",
+      "message_id": "<0100019fc9d28538-048c1a13-d988-4792-9ead-2e764830451b-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-03"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=RPIfpmygL2g",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-alexandria-va.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "3 sent non-followup row(s) with slug=alexandria-va"
+    }
+  ]
+}

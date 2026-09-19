@@ -1,0 +1,45 @@
+{
+  "slug": "boise-id",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-06T02:45:06Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube opchGImtrco registered in video-embeds.ts; thumbnail on disk; 2 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "opchGImtrco",
+  "thumbnail_path": "public/images/yt-thumb-boise-id.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "info@bluebirdbabycompany.com",
+      "status": "sent",
+      "message_id": "<0100019fd4f5d38c-6b332587-0319-49e2-867b-8847fd233a1d-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-06"
+    },
+    {
+      "to": "heather@mindcenteredbirth.com",
+      "status": "sent",
+      "message_id": "<0100019fd4f6899d-25410dd1-241d-45f7-b5da-b1584288a4ed-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-06"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=opchGImtrco",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-boise-id.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "2 sent non-followup row(s) with slug=boise-id"
+    }
+  ]
+}

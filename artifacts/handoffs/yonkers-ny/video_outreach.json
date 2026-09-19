@@ -1,0 +1,59 @@
+{
+  "slug": "yonkers-ny",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-04T00:08:24Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube xdNED1lnSJM registered in video-embeds.ts; thumbnail on disk; 4 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "xdNED1lnSJM",
+  "thumbnail_path": "public/images/yt-thumb-yonkers-ny.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "audellethedoula@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260904000833180270",
+      "type": "first-touch",
+      "date": "2026-09-04"
+    },
+    {
+      "to": "Rebecca@BlissfulBirthingWestchesterNY.com",
+      "status": "sent",
+      "message_id": "vps-20260904000858132087",
+      "type": "first-touch",
+      "date": "2026-09-04"
+    },
+    {
+      "to": "info@westchesterbirth.com",
+      "status": "sent",
+      "message_id": "vps-20260904000921905915",
+      "type": "first-touch",
+      "date": "2026-09-04"
+    },
+    {
+      "to": "elledoulaservices@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260904000943615953",
+      "type": "first-touch",
+      "date": "2026-09-04"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=xdNED1lnSJM",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-yonkers-ny.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "4 sent non-followup row(s) with slug=yonkers-ny"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "fort-worth-tx",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-06T19:23:09Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube D0oVDzQwD8I registered in video-embeds.ts; thumbnail on disk; 6 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "D0oVDzQwD8I",
+  "thumbnail_path": "public/images/yt-thumb-fort-worth-tx.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "ayurvedicdoula@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fd8878f39-7abb844e-f82c-40dc-a213-0fce13426aba-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-06"
+    },
+    {
+      "to": "intercessorybirth@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fd887e088-f17cedfd-131c-4c6b-a29e-2765e8ff4ece-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-06"
+    },
+    {
+      "to": "adoulaaudie@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fd88823b6-c11049ed-58da-4e17-9480-473c5f73ca8c-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-06"
+    },
+    {
+      "to": "jacquelynn.nelson@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fd8c25d4e-e0fd5cb3-bb4b-4d20-9de7-660d3d680989-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-06"
+    },
+    {
+      "to": "doulaunderthesun@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fd8c2ab7d-ea5253f5-e2ab-4f40-8066-6ab8fe3d4668-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-06"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=D0oVDzQwD8I",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-fort-worth-tx.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "6 sent non-followup row(s) with slug=fort-worth-tx"
+    }
+  ]
+}

@@ -1920,7 +1920,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
   "redwood-city-ca": {
-    videoId: "26gCPALs5VM",
+    videoId: "CDwJzl--KjU",
     title: "Redwood City, California Doula & Birth Plan Guide",
     description: "Watch the full Redwood City, California Doula & Birth Plan Guide — all in about 2:28.",
     duration: 148,

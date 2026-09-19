@@ -1,0 +1,59 @@
+{
+  "slug": "allen-park-mi",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-04T23:22:33Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube zlhdgZPaHSs registered in video-embeds.ts; thumbnail on disk; 4 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "zlhdgZPaHSs",
+  "thumbnail_path": "public/images/yt-thumb-allen-park-mi.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "wombandheritage@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fcf160805-35be6913-e9ff-473f-be94-4a83646b09e1-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-04"
+    },
+    {
+      "to": "emma@downriverdoula.com",
+      "status": "sent",
+      "message_id": "<0100019fcf166603-9f651491-9579-4570-98e6-d43ac2fc4138-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-04"
+    },
+    {
+      "to": "info@lovingcaredoula.com",
+      "status": "sent",
+      "message_id": "<0100019fcf177386-45cc849f-4aaa-43ed-acaf-a7977e4995ae-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-04"
+    },
+    {
+      "to": "cmfhenrickson@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fcf438e7b-a4cc8202-b6f2-4459-ad6f-4f50678feaf4-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-05"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=zlhdgZPaHSs",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-allen-park-mi.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "4 sent non-followup row(s) with slug=allen-park-mi"
+    }
+  ]
+}

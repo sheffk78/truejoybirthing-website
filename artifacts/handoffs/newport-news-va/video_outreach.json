@@ -1,0 +1,66 @@
+{
+  "slug": "newport-news-va",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-01T17:10:13Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube aV0XYZVabb8 registered in video-embeds.ts; thumbnail on disk; 7 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "aV0XYZVabb8",
+  "thumbnail_path": "public/images/yt-thumb-newport-news-va.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "sabrina@fromwombtomom.com",
+      "status": "sent",
+      "message_id": "<0100019fbe4e1439-b9572828-99a8-4fa8-90fb-7102f949f4b1-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-01"
+    },
+    {
+      "to": "kathleen@birthandmilk.com",
+      "status": "sent",
+      "message_id": "vps-20260903232813517526",
+      "type": "first-touch",
+      "date": "2026-09-03"
+    },
+    {
+      "to": "contact.tayboseman@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260903232836112982",
+      "type": "first-touch",
+      "date": "2026-09-03"
+    },
+    {
+      "to": "m.poweringbirth@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260903232858913387",
+      "type": "first-touch",
+      "date": "2026-09-03"
+    },
+    {
+      "to": "doula@honeywombdoulacare.com",
+      "status": "sent",
+      "message_id": "vps-20260903232921827082",
+      "type": "first-touch",
+      "date": "2026-09-03"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=aV0XYZVabb8",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-newport-news-va.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "7 sent non-followup row(s) with slug=newport-news-va"
+    }
+  ]
+}

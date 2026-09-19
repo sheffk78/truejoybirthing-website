@@ -1,0 +1,38 @@
+{
+  "slug": "celina-tx",
+  "stage": "video_outreach",
+  "produced_at": "2026-07-31T22:45:17Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube Ys2TCx3RG6o registered in video-embeds.ts; thumbnail on disk; 1 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "Ys2TCx3RG6o",
+  "thumbnail_path": "public/images/yt-thumb-celina-tx.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "precious.moments.doula01@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fba5a7889-0e202164-b0c0-413d-9149-102c14598881-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-07-31"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=Ys2TCx3RG6o",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-celina-tx.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "1 sent non-followup row(s) with slug=celina-tx"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "slug": "huntsville-al",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-04T23:05:08Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube SGXMzXoWzhA registered in video-embeds.ts; thumbnail on disk; 2 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "SGXMzXoWzhA",
+  "thumbnail_path": "public/images/yt-thumb-huntsville-al.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "breathelovebirth@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260904230517429287",
+      "type": "first-touch",
+      "date": "2026-09-04"
+    },
+    {
+      "to": "hello@imaginebirthdoula.com",
+      "status": "sent",
+      "message_id": "vps-20260904230544352526",
+      "type": "first-touch",
+      "date": "2026-09-04"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=SGXMzXoWzhA",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-huntsville-al.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "2 sent non-followup row(s) with slug=huntsville-al"
+    }
+  ]
+}

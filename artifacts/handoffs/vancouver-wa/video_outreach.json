@@ -1,0 +1,66 @@
+{
+  "slug": "vancouver-wa",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-01T00:00:00Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube iohcGUZMPWU registered in video-embeds.ts; thumbnail on disk; 8 first-touch send(s) in canonical send log. Not fabricated.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "iohcGUZMPWU",
+  "thumbnail_path": "public/images/yt-thumb-vancouver-wa.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "suwanni.lol@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260830201811735365",
+      "type": "first-touch",
+      "date": "2026-08-30"
+    },
+    {
+      "to": "jennifer@encouragedoulacare.com",
+      "status": "sent",
+      "message_id": "vps-20260830201834429741",
+      "type": "first-touch",
+      "date": "2026-08-30"
+    },
+    {
+      "to": "Heather@BirthLore.com",
+      "status": "sent",
+      "message_id": "vps-20260830201857112297",
+      "type": "first-touch",
+      "date": "2026-08-30"
+    },
+    {
+      "to": "info@birthfirstdoulas.com",
+      "status": "sent",
+      "message_id": "vps-20260830201919625885",
+      "type": "first-touch",
+      "date": "2026-08-30"
+    },
+    {
+      "to": "info@portlanddoulalove.com",
+      "status": "sent",
+      "message_id": "vps-20260830201941990609",
+      "type": "first-touch",
+      "date": "2026-08-30"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=iohcGUZMPWU",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-vancouver-wa.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "8 sent non-followup row(s) with slug=vancouver-wa"
+    }
+  ]
+}

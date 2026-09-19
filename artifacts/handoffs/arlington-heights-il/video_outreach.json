@@ -1,0 +1,59 @@
+{
+  "slug": "arlington-heights-il",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-01T00:00:00Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube -q-NelTEdKo registered in video-embeds.ts; thumbnail on disk; 5 first-touch send(s) in canonical send log (4 with message IDs). Not fabricated.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "-q-NelTEdKo",
+  "thumbnail_path": "public/images/yt-thumb-arlington-heights-il.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "deanna@familytreeholistichealth.com",
+      "status": "sent",
+      "message_id": "<0100019fd3b64ad4-8e2a809c-9447-48db-9b8a-57d3c1cbe3d5-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-05"
+    },
+    {
+      "to": "TOLNorthShoreDoula@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fd3b68b4c-a98fc464-5f52-44b2-8abf-aae669ea25df-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-05"
+    },
+    {
+      "to": "SuppSerenity@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fd3b6cbc7-0e63b97e-34be-4cc2-a4d8-e11965242f51-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-05"
+    },
+    {
+      "to": "windycitydoulas@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fd3b70d07-8f1edfa1-a6fa-476e-b3d8-b745113ead15-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-05"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=-q-NelTEdKo",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-arlington-heights-il.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "5 sent non-followup row(s) with slug=arlington-heights-il"
+    }
+  ]
+}

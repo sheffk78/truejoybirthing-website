@@ -1,0 +1,52 @@
+{
+  "slug": "anchorage-ak",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-06T01:40:17Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube FCcYImjGnvM registered in video-embeds.ts; thumbnail on disk; 3 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "FCcYImjGnvM",
+  "thumbnail_path": "public/images/yt-thumb-anchorage-ak.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "drawneardoula@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fd4ba7c94-f6205152-4dc4-41c4-a2ef-ca7d17050d01-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-06"
+    },
+    {
+      "to": "hello@duenorthsupportservices.com",
+      "status": "sent",
+      "message_id": "<0100019fd4badfd6-2345353c-bf71-4bd8-b51c-c7b4e5e8ce14-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-06"
+    },
+    {
+      "to": "delissa.owen@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fd4bb3496-c7001fac-511b-49fd-a091-c52305b586d6-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-06"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=FCcYImjGnvM",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-anchorage-ak.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "3 sent non-followup row(s) with slug=anchorage-ak"
+    }
+  ]
+}

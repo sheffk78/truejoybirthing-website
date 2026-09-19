@@ -1,0 +1,66 @@
+{
+  "slug": "new-haven-ct",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-06T17:17:05Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube E27rhOTV0Lk registered in video-embeds.ts; thumbnail on disk; 5 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "E27rhOTV0Lk",
+  "thumbnail_path": "public/images/yt-thumb-new-haven-ct.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "mischa@meandmydoula.com",
+      "status": "sent",
+      "message_id": "vps-20260906171715887278",
+      "type": "first-touch",
+      "date": "2026-09-06"
+    },
+    {
+      "to": "ashley@empoweredbeginningsct.com",
+      "status": "sent",
+      "message_id": "vps-20260906171731580690",
+      "type": "first-touch",
+      "date": "2026-09-06"
+    },
+    {
+      "to": "emily@dovetaildoulact.com",
+      "status": "sent",
+      "message_id": "vps-20260906171747502999",
+      "type": "first-touch",
+      "date": "2026-09-06"
+    },
+    {
+      "to": "info@newlifedoulas.com",
+      "status": "sent",
+      "message_id": "vps-20260906171802886489",
+      "type": "first-touch",
+      "date": "2026-09-06"
+    },
+    {
+      "to": "lactationsupport@bethbrownstein.com",
+      "status": "sent",
+      "message_id": "vps-20260906171817929239",
+      "type": "first-touch",
+      "date": "2026-09-06"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=E27rhOTV0Lk",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-new-haven-ct.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "5 sent non-followup row(s) with slug=new-haven-ct"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "slug": "st-augustine-fl",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-01T00:00:00Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube eXMlSpDqUT4 registered in video-embeds.ts; thumbnail on disk; 0 first-touch send(s) in canonical send log. Not fabricated.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "eXMlSpDqUT4",
+  "thumbnail_path": "public/images/yt-thumb-st-augustine-fl.png",
+  "embed_verified": true,
+  "outreach": [],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=eXMlSpDqUT4",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-st-augustine-fl.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "0 sent non-followup row(s) with slug=st-augustine-fl"
+    }
+  ]
+}

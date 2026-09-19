@@ -1,0 +1,59 @@
+{
+  "slug": "corpus-christi-tx",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-13T16:27:50Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube P9sh9n-F9wI registered in video-embeds.ts; thumbnail on disk; 4 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "P9sh9n-F9wI",
+  "thumbnail_path": "public/images/yt-thumb-corpus-christi-tx.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "sbethel@milestonedoulas.org",
+      "status": "sent",
+      "message_id": "vps-20260813162805961620",
+      "type": "first-touch",
+      "date": "2026-08-13"
+    },
+    {
+      "to": "lovinghandsbirth@hotmail.com",
+      "status": "sent",
+      "message_id": "vps-20260813162844206020",
+      "type": "first-touch",
+      "date": "2026-08-13"
+    },
+    {
+      "to": "midwifemelinda8@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260813162927438419",
+      "type": "first-touch",
+      "date": "2026-08-13"
+    },
+    {
+      "to": "ccbirthcenter@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260813163009092836",
+      "type": "first-touch",
+      "date": "2026-08-13"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=P9sh9n-F9wI",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-corpus-christi-tx.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "4 sent non-followup row(s) with slug=corpus-christi-tx"
+    }
+  ]
+}

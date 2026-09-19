@@ -1,0 +1,66 @@
+{
+  "slug": "lubbock-tx",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-13T17:08:56Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube idK3HgMiepA registered in video-embeds.ts; thumbnail on disk; 5 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "idK3HgMiepA",
+  "thumbnail_path": "public/images/yt-thumb-lubbock-tx.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "hello@magnoliabirths.com",
+      "status": "sent",
+      "message_id": "vps-20260813170904104664",
+      "type": "first-touch",
+      "date": "2026-08-13"
+    },
+    {
+      "to": "guildedbeebirth@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260813170929988007",
+      "type": "first-touch",
+      "date": "2026-08-13"
+    },
+    {
+      "to": "dylanward13@yahoo.com",
+      "status": "sent",
+      "message_id": "vps-20260813170955790164",
+      "type": "first-touch",
+      "date": "2026-08-13"
+    },
+    {
+      "to": "bloomingbearsdoula@outlook.com",
+      "status": "sent",
+      "message_id": "vps-20260813171022167614",
+      "type": "first-touch",
+      "date": "2026-08-13"
+    },
+    {
+      "to": "CherishedandBirth@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260813171203526901",
+      "type": "first-touch",
+      "date": "2026-08-13"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=idK3HgMiepA",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-lubbock-tx.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "5 sent non-followup row(s) with slug=lubbock-tx"
+    }
+  ]
+}

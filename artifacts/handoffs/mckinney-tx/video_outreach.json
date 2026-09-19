@@ -1,0 +1,45 @@
+{
+  "slug": "mckinney-tx",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-02T21:53:02Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube S7i4UCEqoec registered in video-embeds.ts; thumbnail on disk; 2 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "S7i4UCEqoec",
+  "thumbnail_path": "public/images/yt-thumb-mckinney-tx.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "hello@beyondbirths.org",
+      "status": "sent",
+      "message_id": "vps-20260902215310994149",
+      "type": "first-touch",
+      "date": "2026-09-02"
+    },
+    {
+      "to": "MamaLotusServices@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260902215341818225",
+      "type": "first-touch",
+      "date": "2026-09-02"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=S7i4UCEqoec",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-mckinney-tx.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "2 sent non-followup row(s) with slug=mckinney-tx"
+    }
+  ]
+}

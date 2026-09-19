@@ -1,0 +1,59 @@
+{
+  "slug": "agoura-hills-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-01T00:00:00Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube I6FZs6BRkkI registered in video-embeds.ts; thumbnail on disk; 5 first-touch send(s) in canonical send log (4 with message IDs). Not fabricated.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "I6FZs6BRkkI",
+  "thumbnail_path": "public/images/yt-thumb-agoura-hills-ca.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "sharonjcody@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fca3aab7e-89230c89-1121-4f5e-bf13-8358f77bcba4-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-04"
+    },
+    {
+      "to": "Christy@themidwifeandmore.com",
+      "status": "sent",
+      "message_id": "<0100019fca3b10ec-5225a24d-06e0-42a1-8bb4-e7703b68f24c-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-04"
+    },
+    {
+      "to": "info@makingmemoriesagency.com",
+      "status": "sent",
+      "message_id": "<0100019fca3b7b12-4a57dc1f-b542-42df-85dd-769e4b3e36a7-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-04"
+    },
+    {
+      "to": "monica@breath2birth.com",
+      "status": "sent",
+      "message_id": "<0100019fca3bda23-199959d2-24a0-4495-906f-49ffc43b7a38-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-04"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=I6FZs6BRkkI",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-agoura-hills-ca.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "5 sent non-followup row(s) with slug=agoura-hills-ca"
+    }
+  ]
+}

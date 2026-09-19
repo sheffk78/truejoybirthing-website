@@ -1,0 +1,45 @@
+{
+  "slug": "princeton-tx",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-05T14:23:03Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube E1BG-fxwFFQ registered in video-embeds.ts; thumbnail on disk; 2 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "E1BG-fxwFFQ",
+  "thumbnail_path": "public/images/yt-thumb-princeton-tx.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "thepinkhaireddoula@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fd24e77c3-db0b1927-ff74-4e24-8342-c547be2c2cd8-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-05"
+    },
+    {
+      "to": "Doulathingsyourway@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fd24eb906-79c3e024-8b12-46f4-94bf-0a19db9ef901-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-05"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=E1BG-fxwFFQ",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-princeton-tx.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "2 sent non-followup row(s) with slug=princeton-tx"
+    }
+  ]
+}

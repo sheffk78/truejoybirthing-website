@@ -1,0 +1,45 @@
+{
+  "slug": "apple-valley-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-05T20:34:17Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube WvTKqmozBbs registered in video-embeds.ts; thumbnail on disk; 2 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "WvTKqmozBbs",
+  "thumbnail_path": "public/images/yt-thumb-apple-valley-ca.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "midwifelareina@highdesertbirths.com",
+      "status": "sent",
+      "message_id": "<0100019fd3a260eb-5185cc1c-8438-42b3-939b-4b38adcfe433-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-05"
+    },
+    {
+      "to": "info@preciouspathwaysmidwifery.com",
+      "status": "sent",
+      "message_id": "<0100019fd3a2d133-bf3e3a40-8ff6-4562-a7ea-f9ba3bf99f71-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-05"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=WvTKqmozBbs",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-apple-valley-ca.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "2 sent non-followup row(s) with slug=apple-valley-ca"
+    }
+  ]
+}

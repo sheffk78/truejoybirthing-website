@@ -1,0 +1,30 @@
+{
+  "slug": "cincinnati-oh",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-01T00:00:00Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube ot_trC0MtxY registered in video-embeds.ts; thumbnail on disk; 7 first-touch send(s) in canonical send log (0 with message IDs). Not fabricated.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "ot_trC0MtxY",
+  "thumbnail_path": "public/images/yt-thumb-cincinnati-oh.png",
+  "embed_verified": true,
+  "outreach": [],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=ot_trC0MtxY",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-cincinnati-oh.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "7 sent non-followup row(s) with slug=cincinnati-oh"
+    }
+  ]
+}

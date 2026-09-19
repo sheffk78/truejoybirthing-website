@@ -3,7 +3,7 @@
   "stage": "video_outreach",
   "produced_at": "2026-09-18T23:40:00Z",
   "worker_model": "hermes-subagent (glm-5.3-flash delegation)",
-  "notes": "Video rendered with FULL state names (California, not CA). Uploaded NEW to YouTube public+embeddable (id 9j8hzNYvzS0), added to California Birth Guides + All City Birth Guides playlists. Thumbnail generated from hero, uploaded to YouTube, local copy saved (png+webp). Page rebuilt + redeployed; live page shows video embed + VideoObject schema. First-touch outreach BLOCKED: all 3 provider sends failed at the email provider (send infrastructure error), no emails dispatched. outreach_blocked_reason recorded in tjb-city-status.json; has_outreach left false per 2026-09-16 bugfix.",
+  "notes": "Video rendered with FULL state names (California, not CA). Uploaded NEW to YouTube public+embeddable (id 9j8hzNYvzS0), added to California Birth Guides + All City Birth Guides playlists. Thumbnail generated from hero, uploaded to YouTube, local copy saved (png+webp). Page rebuilt + redeployed; live page shows video embed + VideoObject schema. First-touch outreach for burlingame-ca was ATTEMPTED on 2026-09-18T23:19Z and 23:33Z but BLOCKED by Gate 0c recipient_history_gate (30-day duplicate / ever-contacted guard) for all 3 providers â NOT an email-provider infrastructure error (send_result was null; no message was ever dispatched). All 3 recipients were already legitimately first-touched from other city slugs within the last 30 days: Doula by Mari from palo-alto-ca (2026-09-18); Rebecca Garcia/BornBir from albuquerque-nm (2026-09-16); Bay City Doulas from fremont-ca (2026-09-17). Decision: skip-with-record (ever-contacted via other city; no burlingame-ca first-touch needed until each recipient's 5-touch cadence advances them). has_outreach left false per 2026-09-16 bugfix; outreach_blocked_reason recorded in DAG state + send log (slug=burlingame-ca, status=blocked_recipient_history_gate).",
   "sources": [
     {
       "claim": "YouTube video uploaded as new public, embeddable video for Burlingame, California",
@@ -31,19 +31,34 @@
       "provider": "Doula by Mari",
       "email": "mairidoula@gmail.com",
       "status": "blocked",
-      "note": "send failed â email provider returned send error (no message dispatched)"
+      "block_reason": "recipient_history_gate (30-day duplicate / ever-contacted)",
+      "ever_contacted_via": "palo-alto-ca",
+      "ever_contacted_at": "2026-09-18T20:18:46Z",
+      "attempted_for_burlingame_at": ["2026-09-18T23:19:09Z", "2026-09-18T23:33:34Z"],
+      "decision": "skip-with-record: already first-touched from palo-alto-ca within 30d; no burlingame-ca first-touch until 5-touch cadence advances",
+      "note": "Outreach attempted for burlingame-ca at 23:19Z and 23:33Z but blocked by recipient_history_gate before any send (send_result=null). Not an infra error. Already legitimately contacted from palo-alto-ca on 2026-09-18."
     },
     {
-      "provider": "Rebecca Garcia (Rebecca Garcia Doula Services)",
+      "provider": "Rebecca Garcia (Rebecca Garcia Doula Services / BornBir)",
       "email": "support@bornbir.com",
       "status": "blocked",
-      "note": "send failed â email provider returned send error (no message dispatched)"
+      "block_reason": "recipient_history_gate (30-day duplicate / ever-contacted)",
+      "ever_contacted_via": "albuquerque-nm",
+      "ever_contacted_at": "2026-09-16T23:16:25Z",
+      "attempted_for_burlingame_at": ["2026-09-18T23:19:12Z", "2026-09-18T23:33:38Z"],
+      "decision": "skip-with-record: already first-touched from albuquerque-nm within 30d; no burlingame-ca first-touch until 5-touch cadence advances",
+      "note": "Outreach attempted for burlingame-ca at 23:19Z and 23:33Z but blocked by recipient_history_gate before any send (send_result=null). Not an infra error. Also attempted (and blocked) from palo-alto-ca 2026-09-18 and norfolk-va 2026-09-17. Already legitimately first-touched from albuquerque-nm on 2026-09-16."
     },
     {
       "provider": "Bay City Doulas",
       "email": "yourteam@baycitydoulas.com",
       "status": "blocked",
-      "note": "send failed â email provider returned send error (no message dispatched)"
+      "block_reason": "recipient_history_gate (30-day duplicate / ever-contacted)",
+      "ever_contacted_via": "fremont-ca",
+      "ever_contacted_at": "2026-09-17T23:21:41Z",
+      "attempted_for_burlingame_at": ["2026-09-18T23:19:16Z", "2026-09-18T23:33:42Z"],
+      "decision": "skip-with-record: already first-touched from fremont-ca within 30d; no burlingame-ca first-touch until 5-touch cadence advances",
+      "note": "Outreach attempted for burlingame-ca at 23:19Z and 23:33Z but blocked by recipient_history_gate before any send (send_result=null). Not an infra error. Already legitimately contacted from fremont-ca on 2026-09-17."
     }
   ]
 }

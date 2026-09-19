@@ -1,31 +1,29 @@
-# BUILD Stage Checkpoint â greenville-sc
+# Build Checkpoint — greenville-sc
 
-- **Stage:** build (stage 1 of 4)
-- **Status:** PARTIAL (data written, images pending)
-- **Started:** 2026-09-15
-- **Skill loaded:** tjb-city-pipeline (v10.0)
+**Stage:** build (1 of 4)
+**Created:** 2026-09-18
+**Status:** checkpoint-first execution; research in progress
 
-## Research Sources
-- Minimalist Mama: "Best Hospitals to Give Birth in Greenville, SC (2026)" â 3 Birthing-Friendly hospitals identified (Prisma Health Greenville Memorial, Bon Secours St. Francis, Prisma Health Patewood)
-- Bornbir: 58 doulas near Greenville SC; median package $1,050; 4 named providers (Annelise Little, Diamond Harris/Dime The Doula, Greenville Doulas, SunFlower Births)
-- Kidding Around Greenville: Birth centers list â Labors of Love Birth Center (Spartanburg/Greenville area), Carolina Water Birth
-- Wikipedia: Greenville SC â two main health systems (Bon Secours, Prisma Health)
-- Care.com: 3 doulas listed in Greenville SC
-- Meela: 9 birth doulas in Greenville SC, cost range $656-$1,119
-- Discover Doulas: 68 birth doulas in South Carolina
+## Population tier
+Greenville, SC city proper ~70,720 (2020 census); metro ~928,000. Treating as mid-size city (tier requiring minimum 5 providers) — pending confirmation against the tier table used by validate-city-data.ts.
 
-## Data Written
-- cities.ts updated via Python heredoc (terminal) â replaced skeleton greenville-sc entry with full data
-- 3 hospitals (Prisma Health Greenville Memorial, Bon Secours St. Francis, Prisma Health Patewood)
-- 1 birth center (Labors of Love Birth Center)
-- 4 doulas (Greenville Doulas, SunFlower Births, Care for Mom, Entering Motherhood)
-- 4 FAQs, birthStats, medicaidNote, insuranceNote, nearbyCities
-- Population: 72,000 (city proper), metro ~400,000+
-- All required fields present: heroImage, ogImage, supportSceneImage, population, lat, lng, etc.
+## Research plan
+1. Hospitals with L&D: Prisma Health Greenville Memorial Hospital, St. Francis Eastside/Prisma Health St. Francis — verify NICU levels, addresses, doula policies.
+2. Birth centers: search NPI registry taxonomy 261QB0400X for Greenville SC + Google Maps results.
+3. Local doulas: target ≥ minimum for tier (aim 4-6 verified listings from Bornbir, birth networks, practitioner sites).
+4. Medicaid: SC Healthy Connections doula benefit status.
 
-## Images
-- Existing stale images from Jul 20 (gradient hero, wrong support scene aspect ratio)
-- Hero, support scene, and OG all need regeneration
+## Data written so far
+- NONE yet. First attempt at cities.ts write failed on shell quoting (no partial write landed — verified `grep '"greenville-sc"'` found nothing; cities.ts lives at src/data/cities.ts, 12,265 lines, 2.5MB).
+- Will write via python3 heredoc (per rule) after research is gathered, inserting entry before the closing `};` of the cities record.
 
-## Validation
-- (pending â run after images generated)
+## Image plan
+- hero: pregnant silhouette + Greenville skyline (Reedy River/Falls Park landmarks) — ONE image reused hero/YT/OG
+- support scene: pregnant mom + doula professional, ONE pregnant woman
+- OG: derived from same hero image
+
+## Verification log
+- 2026-09-18: cities.ts entry verified complete on disk (11018-11550): 5 hospitals, 5 local doulas (min 5 for metro ~928k tier), 3 birth centers, 9 services, 7 midweek, 5 FAQs, full copy.
+- Images on disk: hero greenville-sc-birth-doula-skyline.webp (80KB, 3:2), -600 .webp/.avif, support greenville-sc-birth-doula-support.webp (34KB), OG og-city-greenville-sc.webp (34KB ≥30KB), provider photos x5 (annas-peace, care-for-mom, doulas, sunflower, entering-motherhood), hospital thumbnails x2. G8x gates passed (hero is real photo, silhouette confirmed, no letterbox, OG Pattern B, 8081 unique colors).
+- KNOWN GAPS: patewood thumbnail + labors-of-love provider photo referenced in cities.ts but MISSING on disk (enrich-stage gates only; not in build gate set). Plan: generate or drop refs.
+- Handoff contract artifacts/handoffs/greenville-sc/build.json was never written by prior attempt — writing + validating now via contract-validate.py --compare.

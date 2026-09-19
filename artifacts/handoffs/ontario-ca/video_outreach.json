@@ -1,0 +1,45 @@
+{
+  "slug": "ontario-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-24T19:46:09Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube z_Qh0RAwKcU registered in video-embeds.ts; thumbnail on disk; 2 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "z_Qh0RAwKcU",
+  "thumbnail_path": "public/images/yt-thumb-ontario-ca.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "birthservicesbykristin@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260824194617326909",
+      "type": "first-touch",
+      "date": "2026-08-24"
+    },
+    {
+      "to": "laurie@ancientwisdombirth.ca",
+      "status": "sent",
+      "message_id": "vps-20260904224715080361",
+      "type": "first-touch",
+      "date": "2026-09-04"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=z_Qh0RAwKcU",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-ontario-ca.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "2 sent non-followup row(s) with slug=ontario-ca"
+    }
+  ]
+}

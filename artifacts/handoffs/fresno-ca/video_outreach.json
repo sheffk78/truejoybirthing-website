@@ -1,0 +1,59 @@
+{
+  "slug": "fresno-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-03T17:26:19Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube O8NShNAp7vo registered in video-embeds.ts; thumbnail on disk; 4 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "O8NShNAp7vo",
+  "thumbnail_path": "public/images/yt-thumb-fresno-ca.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "bdn@black-enterprises.com",
+      "status": "sent",
+      "message_id": "vps-20260903172628171537",
+      "type": "first-touch",
+      "date": "2026-09-03"
+    },
+    {
+      "to": "mayabees2014@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260903172654177812",
+      "type": "first-touch",
+      "date": "2026-09-03"
+    },
+    {
+      "to": "info@peacefulpassagesbirthingsupportcenter.com",
+      "status": "sent",
+      "message_id": "vps-20260903172743792679",
+      "type": "first-touch",
+      "date": "2026-09-03"
+    },
+    {
+      "to": "info@fresnobirthandbaby.com",
+      "status": "sent",
+      "message_id": "vps-20260903172811729001",
+      "type": "first-touch",
+      "date": "2026-09-03"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=O8NShNAp7vo",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-fresno-ca.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "4 sent non-followup row(s) with slug=fresno-ca"
+    }
+  ]
+}

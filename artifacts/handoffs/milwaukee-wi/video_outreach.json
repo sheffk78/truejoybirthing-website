@@ -1,0 +1,52 @@
+{
+  "slug": "milwaukee-wi",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-12T23:26:29Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube 7vtFm7qJIho registered in video-embeds.ts; thumbnail on disk; 3 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "7vtFm7qJIho",
+  "thumbnail_path": "public/images/yt-thumb-milwaukee-wi.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "lavidbirthing@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260812232640206486",
+      "type": "first-touch",
+      "date": "2026-08-12"
+    },
+    {
+      "to": "bornstrongdoulaservices@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260812232656348425",
+      "type": "first-touch",
+      "date": "2026-08-12"
+    },
+    {
+      "to": "info@doulasofcolor.org",
+      "status": "sent",
+      "message_id": "vps-20260812232713614476",
+      "type": "first-touch",
+      "date": "2026-08-12"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=7vtFm7qJIho",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-milwaukee-wi.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "3 sent non-followup row(s) with slug=milwaukee-wi"
+    }
+  ]
+}

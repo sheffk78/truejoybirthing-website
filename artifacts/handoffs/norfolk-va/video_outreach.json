@@ -1,0 +1,66 @@
+{
+  "slug": "norfolk-va",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-17T23:15:32Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube zoR8sFFnX_E registered in video-embeds.ts; thumbnail on disk; 16 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "zoR8sFFnX_E",
+  "thumbnail_path": "public/images/yt-thumb-norfolk-va.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "yourdoulainlove@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260917231542620630",
+      "type": "first-touch",
+      "date": "2026-09-17"
+    },
+    {
+      "to": "amaradoula@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260917231611655907",
+      "type": "first-touch",
+      "date": "2026-09-17"
+    },
+    {
+      "to": "amandakarisphoto@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260917231642402861",
+      "type": "first-touch",
+      "date": "2026-09-17"
+    },
+    {
+      "to": "lafdoula@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260917231708766371",
+      "type": "first-touch",
+      "date": "2026-09-17"
+    },
+    {
+      "to": "akilahwhitedoula@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260917231739205322",
+      "type": "first-touch",
+      "date": "2026-09-17"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=zoR8sFFnX_E",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-norfolk-va.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "16 sent non-followup row(s) with slug=norfolk-va"
+    }
+  ]
+}

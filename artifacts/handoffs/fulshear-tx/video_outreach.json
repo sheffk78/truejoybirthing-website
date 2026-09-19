@@ -1,0 +1,45 @@
+{
+  "slug": "fulshear-tx",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-04T16:11:44Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube bLqCtzkNO4s registered in video-embeds.ts; thumbnail on disk; 2 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "bLqCtzkNO4s",
+  "thumbnail_path": "public/images/yt-thumb-fulshear-tx.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "alysa@bravebirth.co",
+      "status": "sent",
+      "message_id": "<0100019fcd8b9a58-3327c1a4-f5e5-46ea-9652-2890f67e2e25-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-04"
+    },
+    {
+      "to": "truebloomdoula@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fcd8bf39b-b45c4473-c3c7-4c64-957d-c22d16022309-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-04"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=bLqCtzkNO4s",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-fulshear-tx.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "2 sent non-followup row(s) with slug=fulshear-tx"
+    }
+  ]
+}

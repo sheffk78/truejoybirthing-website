@@ -1,0 +1,66 @@
+{
+  "slug": "jacksonville-fl",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-08T12:49:38Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube bFR6DwKo7Mw registered in video-embeds.ts; thumbnail on disk; 7 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "bFR6DwKo7Mw",
+  "thumbnail_path": "public/images/yt-thumb-jacksonville-fl.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "victoria@transitionsjax.com",
+      "status": "sent",
+      "message_id": "<0100019fe16c092b-abb7377e-54dc-421a-be23-c7fbdb5edb82-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-08"
+    },
+    {
+      "to": "doulasofjax@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fe16f944d-3eab05a4-cb4c-4ca8-8950-8eeab8698af1-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-08"
+    },
+    {
+      "to": "dallasarthurbirth@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fe16fd936-69f4e4b1-9353-454f-931d-b94de7dc1a89-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-08"
+    },
+    {
+      "to": "kianaasherah@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fe1701df8-20b47afa-1926-4e08-be5b-e2dea3d8bfa6-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-08"
+    },
+    {
+      "to": "dareallaluce@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fe1708746-adbb048f-d9b0-4edc-9817-959d64cbd1aa-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-08"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=bFR6DwKo7Mw",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-jacksonville-fl.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "7 sent non-followup row(s) with slug=jacksonville-fl"
+    }
+  ]
+}

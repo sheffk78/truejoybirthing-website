@@ -1,0 +1,45 @@
+{
+  "slug": "anna-tx",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-05T19:34:20Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube gregPu-5Mss registered in video-embeds.ts; thumbnail on disk; 2 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "gregPu-5Mss",
+  "thumbnail_path": "public/images/yt-thumb-anna-tx.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "carol.heritagedoula@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fd36b70c7-d07c238e-76ba-4cde-b5f8-463c694f3856-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-05"
+    },
+    {
+      "to": "thepurposefulbirth@yahoo.com",
+      "status": "sent",
+      "message_id": "<0100019fd36bcf03-045ff939-3e2d-487b-80fa-03b145bc69d0-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-05"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=gregPu-5Mss",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-anna-tx.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "2 sent non-followup row(s) with slug=anna-tx"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "palmdale-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-24T23:21:21Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube _mHvL1hHLWA registered in video-embeds.ts; thumbnail on disk; 4 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "_mHvL1hHLWA",
+  "thumbnail_path": "public/images/yt-thumb-palmdale-ca.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "user@domain.com",
+      "status": "sent",
+      "message_id": "vps-20260824232131070091",
+      "type": "first-touch",
+      "date": "2026-08-24"
+    },
+    {
+      "to": "heather@navydoula.com",
+      "status": "sent",
+      "message_id": "vps-20260824232159675409",
+      "type": "first-touch",
+      "date": "2026-08-24"
+    },
+    {
+      "to": "lunalifedoula.intake.info@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260824232714017638",
+      "type": "first-touch",
+      "date": "2026-08-24"
+    },
+    {
+      "to": "ibibiase@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260824232744342673",
+      "type": "first-touch",
+      "date": "2026-08-24"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=_mHvL1hHLWA",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-palmdale-ca.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "4 sent non-followup row(s) with slug=palmdale-ca"
+    }
+  ]
+}

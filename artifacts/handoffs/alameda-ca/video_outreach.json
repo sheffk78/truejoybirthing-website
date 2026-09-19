@@ -1,0 +1,59 @@
+{
+  "slug": "alameda-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-01T00:00:00Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube 5c6gcH2iZM0 registered in video-embeds.ts; thumbnail on disk; 5 first-touch send(s) in canonical send log (4 with message IDs). Not fabricated.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "5c6gcH2iZM0",
+  "thumbnail_path": "public/images/yt-thumb-alameda-ca.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "lenore@lunabirthandwellness.com",
+      "status": "sent",
+      "message_id": "<0100019fcad18ab2-079f2add-6405-4985-9043-8ccb611ad4aa-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-04"
+    },
+    {
+      "to": "maureen@layag.com",
+      "status": "sent",
+      "message_id": "<0100019fcad1b6ad-a6535b8a-28cc-404c-b41c-6b837d9a76cf-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-04"
+    },
+    {
+      "to": "evaly@islandmidwife.com",
+      "status": "sent",
+      "message_id": "<0100019fcad200db-d5b48c27-0df5-4aa0-b5a0-57cc9a4113f0-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-04"
+    },
+    {
+      "to": "shelearoosevelt@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fcad242cb-cb81aa04-cd9d-41e6-836c-3dd2af4a6c5f-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-04"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=5c6gcH2iZM0",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-alameda-ca.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "5 sent non-followup row(s) with slug=alameda-ca"
+    }
+  ]
+}

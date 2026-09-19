@@ -1,0 +1,52 @@
+{
+  "slug": "louisville-ky",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-01T00:00:00Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube 6N9L_RiCJ6U registered in video-embeds.ts; thumbnail on disk; 4 first-touch send(s) in canonical send log (3 with message IDs). Not fabricated.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "6N9L_RiCJ6U",
+  "thumbnail_path": "public/images/yt-thumb-louisville-ky.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "jrunner1978@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260811002817683760",
+      "type": "first-touch",
+      "date": "2026-08-11"
+    },
+    {
+      "to": "itkbirth@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260811002829734694",
+      "type": "first-touch",
+      "date": "2026-08-11"
+    },
+    {
+      "to": "hello@kystrongwellness.com",
+      "status": "sent",
+      "message_id": "vps-20260811002843125501",
+      "type": "first-touch",
+      "date": "2026-08-11"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=6N9L_RiCJ6U",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-louisville-ky.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "4 sent non-followup row(s) with slug=louisville-ky"
+    }
+  ]
+}

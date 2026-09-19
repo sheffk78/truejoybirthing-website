@@ -1,0 +1,52 @@
+{
+  "slug": "long-beach-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-05T16:43:04Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube ihOyDmTD3Oc registered in video-embeds.ts; thumbnail on disk; 3 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "ihOyDmTD3Oc",
+  "thumbnail_path": "public/images/yt-thumb-long-beach-ca.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "pocdoulatraining@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260905164313446725",
+      "type": "first-touch",
+      "date": "2026-09-05"
+    },
+    {
+      "to": "togetherinbirth@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260905164337086295",
+      "type": "first-touch",
+      "date": "2026-09-05"
+    },
+    {
+      "to": "hi@doulasoflb.com",
+      "status": "sent",
+      "message_id": "vps-20260905164400146756",
+      "type": "first-touch",
+      "date": "2026-09-05"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=ihOyDmTD3Oc",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-long-beach-ca.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "3 sent non-followup row(s) with slug=long-beach-ca"
+    }
+  ]
+}

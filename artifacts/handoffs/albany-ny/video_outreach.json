@@ -1,0 +1,45 @@
+{
+  "slug": "albany-ny",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-16T23:15:11Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube E2NP4hAGK7c registered in video-embeds.ts; thumbnail on disk; 2 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "E2NP4hAGK7c",
+  "thumbnail_path": "public/images/yt-thumb-albany-ny.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "thedoulanetwork@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260916231523099265",
+      "type": "first-touch",
+      "date": "2026-09-16"
+    },
+    {
+      "to": "info@albanyfamilylifecenter.org",
+      "status": "sent",
+      "message_id": "vps-20260916231605226263",
+      "type": "first-touch",
+      "date": "2026-09-16"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=E2NP4hAGK7c",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-albany-ny.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "2 sent non-followup row(s) with slug=albany-ny"
+    }
+  ]
+}

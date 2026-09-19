@@ -1,0 +1,45 @@
+{
+  "slug": "temple-tx",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-05T23:21:17Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube eRkwu8Bo4mw registered in video-embeds.ts; thumbnail on disk; 2 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "eRkwu8Bo4mw",
+  "thumbnail_path": "public/images/yt-thumb-temple-tx.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "wonderfullymadectx@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260905232126230915",
+      "type": "first-touch",
+      "date": "2026-09-05"
+    },
+    {
+      "to": "melissa@myneighborhooddoula.com",
+      "status": "sent",
+      "message_id": "vps-20260905232205005757",
+      "type": "first-touch",
+      "date": "2026-09-05"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=eRkwu8Bo4mw",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-temple-tx.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "2 sent non-followup row(s) with slug=temple-tx"
+    }
+  ]
+}

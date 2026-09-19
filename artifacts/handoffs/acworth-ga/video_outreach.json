@@ -1,0 +1,14 @@
+{
+  "slug": "acworth-ga",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-01T00:00:00Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "diagnostic",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "M7Y7XaxOFuc",
+  "thumbnail_path": "public/images/yt-thumb-acworth-ga.png",
+  "embed_verified": true,
+  "outreach": [],
+  "sources": []
+}

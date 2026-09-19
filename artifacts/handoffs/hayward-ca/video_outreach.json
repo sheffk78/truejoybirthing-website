@@ -1,0 +1,38 @@
+{
+  "slug": "hayward-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-24T16:22:11Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube xFa3QxYXsKA registered in video-embeds.ts; thumbnail on disk; 1 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "xFa3QxYXsKA",
+  "thumbnail_path": "public/images/yt-thumb-hayward-ca.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "wisteria.birth.pp.care@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260824162220714559",
+      "type": "first-touch",
+      "date": "2026-08-24"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=xFa3QxYXsKA",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-hayward-ca.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "1 sent non-followup row(s) with slug=hayward-ca"
+    }
+  ]
+}

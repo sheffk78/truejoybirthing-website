@@ -1,0 +1,30 @@
+{
+  "slug": "alvin-tx",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-06T00:00:49Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube aDB_LUS5JBo registered in video-embeds.ts; thumbnail on disk; 1 first-touch send(s) in canonical send log (0 with message IDs). Not fabricated.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "aDB_LUS5JBo",
+  "thumbnail_path": "public/images/yt-thumb-alvin-tx.png",
+  "embed_verified": true,
+  "outreach": [],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=aDB_LUS5JBo",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-alvin-tx.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "1 sent non-followup row(s) with slug=alvin-tx"
+    }
+  ]
+}

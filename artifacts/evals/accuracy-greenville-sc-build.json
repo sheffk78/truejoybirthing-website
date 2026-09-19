@@ -1,0 +1,54 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "greenville-sc",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 5,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the Greenville Doulas homepage and directly states they provide birth and postpartum doula support across the Upstate, including Greenville, Spartanburg, Greer, and Simpsonville, matching the claim.",
+      "claim": "Greenville Doulas (GSP Birth) provides birth and postpartum doula support across the Greenville-Spartanburg Upstate.",
+      "url": "https://www.greenvilledoulas.com/",
+      "quote": "Your Greenville Doulas \u00e2\u0080\u0094 Providing expert birth and postpartum doula support across the Upstate. We proudly serve families throughout Greenville, SC, including Spartanburg, Greer, Simpsonville, and "
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the SunFlower Births, LLC homepage (domain matches the practice name) and directly supports the claim that it is a doula practice serving both home and hospital births.",
+      "claim": "SunFlower Births, LLC is a doula practice based at 8595 Pelham Road, Greenville, SC serving home and hospital births.",
+      "url": "https://www.sunflowerbirthsllc.com/",
+      "quote": "Whether you are planning a cozy home birth or opting for the support of a hospital setting... our team of doulas is here to walk alongside you, offering guidance and support every step of the way."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the Care for Mom Doulas homepage and directly supports the claim that it is a team of birth and postpartum doulas located in Greenville, SC 29607 serving the Upstate.",
+      "claim": "Care for Mom Doulas is a team of birth and postpartum doulas in Greenville, SC (29607) serving the Upstate.",
+      "url": "https://careformomdoula.com/",
+      "quote": "Care for Mom is a team of trained birth and postpartum doulas... We serve expectant and new mothers throughout the Upstate. Office Location: Greenville, SC 29607"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the business's own birth services page and directly confirms birth doula packages starting at $1000, matching the claim's core pricing assertion.",
+      "claim": "Entering Motherhood offers birth doula packages starting at $1000 in Greenville, South Carolina.",
+      "url": "https://www.enteringmotherhood.com/birth",
+      "quote": "Full support during your labor and birthing process... Packages starting at $1000. Schedule your FREE virtual call today!"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is the bill's title text from the official scstatehouse.gov page for H. 3108 in the 126th session, and it directly states the bill would require coverage of doula services through private insurance and Medicaid, consistent with the claim that such coverage is proposed/pending legislation.",
+      "claim": "SC H. 3108 (126th session, introduced 2025-01-14) would require private insurance and Medicaid to cover doula services \u00e2\u0080\u0094 state coverage is pending, not yet in effect.",
+      "url": "https://www.scstatehouse.gov/sess126_2025-2026/bills/3108.htm",
+      "quote": "TO AMEND THE SOUTH CAROLINA CODE OF LAWS BY ADDING CHAPTER 145 TO TITLE 44 SO AS TO ALLOW REIMBURSEMENT FOR DOULA SERVICES UNDER CERTAIN CIRCUMSTANCES AND TO REQUIRE COVERAGE OF SUCH SERVICES THROUGH "
+    }
+  ],
+  "checked_at": "2026-09-18T20:07:18-06:00"
+}

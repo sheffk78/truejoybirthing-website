@@ -1,0 +1,52 @@
+{
+  "slug": "laredo-tx",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-13T17:42:26Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube 6OkPQiTEUhQ registered in video-embeds.ts; thumbnail on disk; 3 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "6OkPQiTEUhQ",
+  "thumbnail_path": "public/images/yt-thumb-laredo-tx.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "support@wisebirthingexperience.com",
+      "status": "sent",
+      "message_id": "vps-20260813174235007598",
+      "type": "first-touch",
+      "date": "2026-08-13"
+    },
+    {
+      "to": "laredosdiligentdoula@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260813174306210436",
+      "type": "first-touch",
+      "date": "2026-08-13"
+    },
+    {
+      "to": "rgvbirthservices@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20260813174332672502",
+      "type": "first-touch",
+      "date": "2026-08-13"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=6OkPQiTEUhQ",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-laredo-tx.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "3 sent non-followup row(s) with slug=laredo-tx"
+    }
+  ]
+}

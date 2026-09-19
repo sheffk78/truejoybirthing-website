@@ -1,0 +1,45 @@
+{
+  "slug": "philadelphia-pa",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-25T22:19:33Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube SAiowom0uqQ registered in video-embeds.ts; thumbnail on disk; 2 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "SAiowom0uqQ",
+  "thumbnail_path": "public/images/yt-thumb-philadelphia-pa.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "info@connecteddoulas.com",
+      "status": "sent",
+      "message_id": "vps-20260825221943405157",
+      "type": "first-touch",
+      "date": "2026-08-25"
+    },
+    {
+      "to": "DoulaSupportProgram@phila.gov",
+      "status": "sent",
+      "message_id": "vps-20260825222008130069",
+      "type": "first-touch",
+      "date": "2026-08-25"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=SAiowom0uqQ",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-philadelphia-pa.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "2 sent non-followup row(s) with slug=philadelphia-pa"
+    }
+  ]
+}

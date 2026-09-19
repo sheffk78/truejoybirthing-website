@@ -91,8 +91,8 @@
   "file": "og-city-amarillo-tx-v3.webp",
   "dims": "1200x630",
   "cov_x": 1.0,
-  "cov_y": 1.0,
-  "density": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
   "verdict": "PASS"
  },
  "american-canyon-ca": {
@@ -263,6 +263,14 @@
   "density": 0.98,
   "verdict": "PASS"
  },
+ "burlingame-ca": {
+  "file": "og-city-burlingame-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
  "carrollton-tx": {
   "file": "og-city-carrollton-tx-v3.webp",
   "dims": "1200x630",
@@ -367,6 +375,14 @@
   "density": 0.98,
   "verdict": "PASS"
  },
+ "concord-nc": {
+  "file": "og-city-concord-nc.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
  "conroe-tx": {
   "file": "og-city-conroe-tx.webp",
   "dims": "1200x630",
@@ -376,7 +392,7 @@
   "verdict": "PASS"
  },
  "corona-ca": {
-  "file": "og-city-corona-ca-v2.webp",
+  "file": "og-city-corona-ca.webp",
   "dims": "1200x630",
   "cov_x": 1.0,
   "cov_y": 0.98,
@@ -393,6 +409,14 @@
  },
  "costa-mesa-ca": {
   "file": "og-city-costa-mesa-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "cumming-ga": {
+  "file": "og-city-cumming-ga-v2.webp",
   "dims": "1200x630",
   "cov_x": 1.0,
   "cov_y": 0.98,
@@ -559,6 +583,14 @@
   "density": 0.98,
   "verdict": "PASS"
  },
+ "greenville-sc": {
+  "file": "og-city-greenville-sc.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.86,
+  "verdict": "PASS"
+ },
  "hartford-ct": {
   "file": "og-city-hartford-ct.webp",
   "dims": "1200x630",
@@ -568,7 +600,7 @@
   "verdict": "PASS"
  },
  "hayward-ca": {
-  "file": "og-city-hayward-ca-v2.webp",
+  "file": "og-city-hayward-ca.webp",
   "dims": "1200x630",
   "cov_x": 1.0,
   "cov_y": 0.98,
@@ -641,6 +673,14 @@
  },
  "kansas-city-mo": {
   "file": "og-kansas-city-mo-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "la-habra-ca": {
+  "file": "og-city-la-habra-ca-v2.webp",
   "dims": "1200x630",
   "cov_x": 1.0,
   "cov_y": 0.98,
@@ -847,6 +887,14 @@
   "density": 0.98,
   "verdict": "PASS"
  },
+ "newport-beach-ca": {
+  "file": "og-city-newport-beach-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
  "newport-news-va": {
   "file": "og-city-newport-news-va.webp",
   "dims": "1200x630",
@@ -935,6 +983,14 @@
   "density": 0.98,
   "verdict": "PASS"
  },
+ "palo-alto-ca": {
+  "file": "og-city-palo-alto-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
  "pearland-tx": {
   "file": "og-city-pearland-tx.webp",
   "dims": "1200x630",
@@ -1015,6 +1071,14 @@
   "density": 0.98,
   "verdict": "PASS"
  },
+ "redwood-city-ca": {
+  "file": "og-city-redwood-city-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
  "reno-nv": {
   "file": "og-city-reno-nv-v2.webp",
   "dims": "1200x630",
@@ -1080,7 +1144,7 @@
   "verdict": "PASS"
  },
  "san-diego-ca": {
-  "file": "og-city-san-diego-ca-1200.webp",
+  "file": "og-city-san-diego-ca.webp",
   "dims": "1200x630",
   "cov_x": 1.0,
   "cov_y": 1.0,
@@ -1105,6 +1169,14 @@
  },
  "san-marcos-tx": {
   "file": "og-city-san-marcos-tx.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "san-mateo-ca": {
+  "file": "og-city-san-mateo-ca-v2.webp",
   "dims": "1200x630",
   "cov_x": 1.0,
   "cov_y": 0.98,

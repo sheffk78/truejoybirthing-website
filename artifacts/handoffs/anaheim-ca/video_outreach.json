@@ -1,0 +1,59 @@
+{
+  "slug": "anaheim-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-05T17:42:15Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube n_cx9tuJxvw registered in video-embeds.ts; thumbnail on disk; 4 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "n_cx9tuJxvw",
+  "thumbnail_path": "public/images/yt-thumb-anaheim-ca.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "hello@jeeinbirth.com",
+      "status": "sent",
+      "message_id": "<0100019fd304dfb0-659e3883-8c1b-46a0-820c-1e7eed43934a-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-05"
+    },
+    {
+      "to": "contact@jeeinbirth.com",
+      "status": "sent",
+      "message_id": "<0100019fd304f151-4ff4df47-78af-45ca-83e0-e9b429819716-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-05"
+    },
+    {
+      "to": "info@jeeinbirth.com",
+      "status": "sent",
+      "message_id": "<0100019fd3050a6d-8670b5bc-70db-42fc-87f0-9008e13b6341-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-05"
+    },
+    {
+      "to": "maternalroot@gmail.com",
+      "status": "sent",
+      "message_id": "<0100019fd3054727-694b16ef-a0c4-4e09-9b19-b4e298ff9f4d-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-05"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=n_cx9tuJxvw",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-anaheim-ca.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "4 sent non-followup row(s) with slug=anaheim-ca"
+    }
+  ]
+}

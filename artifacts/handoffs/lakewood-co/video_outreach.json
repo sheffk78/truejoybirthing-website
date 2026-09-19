@@ -1,0 +1,45 @@
+{
+  "slug": "lakewood-co",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-03T22:49:53Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube 4ZZKO35sIGE registered in video-embeds.ts; thumbnail on disk; 2 first-touch send(s) in canonical send log. Not fabricated \u2014 sourced from existing records.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "4ZZKO35sIGE",
+  "thumbnail_path": "public/images/yt-thumb-lakewood-co.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "to": "beth@lifeonpurposedoulas.com",
+      "status": "sent",
+      "message_id": "<0100019fc9d1c8d3-babff430-5e28-4b29-b0db-a3a8ac758f5a-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-03"
+    },
+    {
+      "to": "hello@sanctuarydoulas.com",
+      "status": "sent",
+      "message_id": "<0100019fc9d1fc5b-1298d502-5192-4605-a36f-f785c18d7d92-000000@email.amazonses.com>",
+      "type": "first-touch",
+      "date": "2026-08-03"
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://www.youtube.com/watch?v=4ZZKO35sIGE",
+      "evidence": "video-embeds.ts registration + live page embed"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-lakewood-co.png",
+      "evidence": "exists on disk"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "2 sent non-followup row(s) with slug=lakewood-co"
+    }
+  ]
+}
