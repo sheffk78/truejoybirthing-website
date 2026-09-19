@@ -1906,7 +1906,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
   "san-mateo-ca": {
-    videoId: "gHmkBdcFaW8",
+    videoId: "0HOsKfygteA",
     title: "San Mateo, California Doula & Birth Plan Guide",
     description: "Watch the full San Mateo, California Doula & Birth Plan Guide — all in about 3:14.",
     duration: 194,
