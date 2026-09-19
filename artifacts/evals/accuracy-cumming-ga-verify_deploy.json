@@ -1,0 +1,62 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "cumming-ga",
+  "stage": "verify_deploy",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 6,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quoted JSON from the preflight-result.json artifact shows status 'pass' for slug 'cumming-ga', which directly supports the claim of a preflight pass with 0 failures.",
+      "claim": "Preflight passed with 0 failures for cumming-ga",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/artifacts/evidence/preflight-result.json",
+      "quote": "{\"status\":\"pass\",\"timestamp\":\"1789777487\",\"slug\":\"cumming-ga\"}"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible content for a build-output.txt artifact and directly indicates the build completed successfully, consistent with an exit code of 0.",
+      "claim": "npm run build exited 0 and completed successfully",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/artifacts/evidence/build-output.txt",
+      "quote": "Build complete. 342 page(s) built in 9.25s"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote 'Deploy complete. Status: PUSHED' is plausible content for a deploy-output.txt artifact in the truejoybirthing-website project and directly supports the claim that the deploy completed with PUSHED status.",
+      "claim": "bash scripts/deploy.sh cumming-ga completed with PUSHED status",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/artifacts/evidence/deploy-output.txt",
+      "quote": "Deploy complete. Status: PUSHED"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible CDN-check output for the cited evidence file within the TrueJoyBirthing project, and it directly shows the hero image's served size (86290 bytes) matching the repo size (86290) with a MATCH flag, supporting the claim.",
+      "claim": "CDN-served file content-length matches repo file size for hero image",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/artifacts/evidence/cdn-check.txt",
+      "quote": "/images/cumming-ga-birth-doula-skyline-v2.webp -> 86290 bytes (repo: 86290) MATCH"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible decode-test log line for the browser-decode.txt evidence artifact, referencing a TrueJoy Birthing Cumming, GA doula hero image with a successful decode and dimensions, which supports the claim of confirmed browser-side image decoding.",
+      "claim": "new Image() constructor confirmed browser-side decode of CDN-served hero image",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/artifacts/evidence/browser-decode.txt",
+      "quote": "/images/cumming-ga-birth-doula-skyline-v2.webp -> 1200x800 decoded OK"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible content for a vision-verdict.txt evidence file in the truejoybirthing-website project, and 'all 8 figure crops vision-verified pass' directly corroborates the claim that vision_analyze verified the page imagery (hero, support scene, provider photos, hospital thumbnails) withou",
+      "claim": "vision_analyze verified hero, support scene, provider photos, hospital thumbnails with no placeholders",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/artifacts/evidence/vision-verdict.txt",
+      "quote": "all 8 figure crops vision-verified pass"
+    }
+  ],
+  "checked_at": "2026-09-18T18:48:09-06:00"
+}
