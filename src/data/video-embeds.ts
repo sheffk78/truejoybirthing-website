@@ -1899,7 +1899,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
   "la-habra-ca": {
-    videoId: "Hzw9_-_Z0V8",
+    videoId: "roqDbFaP_p8",
     title: "La Habra, California Doula and Birth Plan Guide",
     description: "Watch the full La Habra, California Doula and Birth Plan Guide — all in about 2:44.",
     duration: 164,
