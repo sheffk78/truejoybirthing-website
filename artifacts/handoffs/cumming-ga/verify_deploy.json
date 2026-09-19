@@ -1,12 +1,43 @@
 {
   "slug": "cumming-ga",
   "stage": "verify_deploy",
-  "produced_at": null,
-  "worker_model": null,
-  "notes": "",
-  "sources": [],
-  "preflight_exit": null,
-  "deploy_status": null,
-  "live_http": null,
-  "vision_verdict_file": null
+  "produced_at": "2026-09-19T00:36:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Full preflight passed, build succeeded, deploy succeeded, CDN cache bust verified, three-way visual verification passed",
+  "sources": [
+    {
+      "claim": "Preflight passed with 0 failures for cumming-ga",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/artifacts/evidence/preflight-result.json",
+      "quote": "{\"status\":\"pass\",\"timestamp\":\"1789777487\",\"slug\":\"cumming-ga\"}"
+    },
+    {
+      "claim": "npm run build exited 0 and completed successfully",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/artifacts/evidence/build-output.txt",
+      "quote": "Build complete. 342 page(s) built in 9.25s"
+    },
+    {
+      "claim": "bash scripts/deploy.sh cumming-ga completed with PUSHED status",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/artifacts/evidence/deploy-output.txt",
+      "quote": "Deploy complete. Status: PUSHED"
+    },
+    {
+      "claim": "CDN-served file content-length matches repo file size for hero image",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/artifacts/evidence/cdn-check.txt",
+      "quote": "/images/cumming-ga-birth-doula-skyline-v2.webp -> 86290 bytes (repo: 86290) MATCH"
+    },
+    {
+      "claim": "new Image() constructor confirmed browser-side decode of CDN-served hero image",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/artifacts/evidence/browser-decode.txt",
+      "quote": "/images/cumming-ga-birth-doula-skyline-v2.webp -> 1200x800 decoded OK"
+    },
+    {
+      "claim": "vision_analyze verified hero, support scene, provider photos, hospital thumbnails with no placeholders",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/artifacts/evidence/vision-verdict.txt",
+      "quote": "all 8 figure crops vision-verified pass"
+    }
+  ],
+  "preflight_exit": 0,
+  "deploy_status": "SUCCESS",
+  "live_http": 200,
+  "vision_verdict_file": "artifacts/gates/vision/cumming-ga.json"
 }
