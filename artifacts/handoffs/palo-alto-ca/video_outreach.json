@@ -1,51 +1,51 @@
 {
-  "slug": "palo-alto-ca",
-  "stage": "video_outreach",
-  "produced_at": "2026-09-18T20:27:58Z",
-  "worker_model": "hermes-glm-5.3-flash",
-  "notes": "YouTube upload OK (yZXkAKRb1yE, public+embeddable). Outreach: 1/3 sent (Doula by Mari); Blossom blocked by email gate (malformed mailto scraped with ?subject= suffix), Nubia blocked by recipient-history gate. Hero unchanged so flux watermark pipeline not run (hero_watermark_clean/og_watermark_clean=false).",
-  "sources": [
-    {
-      "claim": "Blossom Birth & Family is a Palo Alto birth and postpartum doula practice offering childbirth education, lactation support, and newborn care.",
-      "url": "https://www.discoverdoulas.com/doula/blossom-birth-and-family-palo-alto-ca/",
-      "quote": "I'm so grateful to have found Blossombirth! All their services are high quality and they really help you to live a better prenatal and postnatal experience."
-    },
-    {
-      "claim": "Mairi is a Certified Birth and Postpartum Doula serving the San Francisco Peninsula (San Mateo and Santa Clara Counties).",
-      "url": "https://mairidoula.wixsite.com/birth",
-      "quote": "Hi! I'm Mairi (she/her), a Certified Birth and Postpartum Doula! I am passionate about supporting you during your pregnancy, labor and beyond."
-    },
-    {
-      "claim": "Nubia Jones is a Birth & Postpartum Doula based in Palo Alto, California with 25 years of birth and newborn care experience.",
-      "url": "https://www.bornbir.com/nubia-jones",
-      "quote": "I'm Nubia, a mom of five (teens & young adults). I have 25years of experience in the birth, postpartum & newborn care field. For 14yrs, I've been professionally serving families as a certified birth doula, postpartum doula, parent educator, certified breastfeeding counselor (CLC)."
-    }
-  ],
-  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/palo-alto-ca-city-guide.mp4",
-  "video_mb": 24.5,
-  "youtube_id": "yZXkAKRb1yE",
-  "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/yt-thumb-palo-alto-ca.png",
-  "embed_verified": true,
-  "outreach": [
-    {
-      "provider": "Blossom Birth & Family",
-      "status": "blocked",
-      "message_id": null,
-      "to": "hello@discoverdoulas.com?subject=Correction:",
-      "reason": "blocked_email_gate: malformed mailto address scraped from provider site (?subject= suffix)"
-    },
-    {
-      "provider": "Doula by Mari (Mairi)",
-      "status": "sent",
-      "message_id": "vps-20260918201856695868",
-      "to": "mairidoula@gmail.com"
-    },
-    {
-      "provider": "Nubia Jones",
-      "status": "blocked",
-      "message_id": null,
-      "to": "support@bornbir.com",
-      "reason": "blocked_recipient_history_gate"
-    }
-  ]
+ "slug": "palo-alto-ca",
+ "stage": "video_outreach",
+ "produced_at": "2026-09-18T20:27:58Z",
+ "worker_model": "hermes-glm-5.3-flash",
+ "notes": "YouTube upload OK (rnwPlXEaJe8 [re-rendered from -v2 hero], public+embeddable). Outreach: 1/3 sent (Doula by Mari); Blossom blocked by email gate (malformed mailto scraped with ?subject= suffix), Nubia blocked by recipient-history gate. Hero unchanged so flux watermark pipeline not run (hero_watermark_clean/og_watermark_clean=false).",
+ "sources": [
+  {
+   "claim": "Blossom Birth & Family is a Palo Alto birth and postpartum doula practice offering childbirth education, lactation support, and newborn care.",
+   "url": "https://www.discoverdoulas.com/doula/blossom-birth-and-family-palo-alto-ca/",
+   "quote": "I'm so grateful to have found Blossombirth! All their services are high quality and they really help you to live a better prenatal and postnatal experience."
+  },
+  {
+   "claim": "Mairi is a Certified Birth and Postpartum Doula serving the San Francisco Peninsula (San Mateo and Santa Clara Counties).",
+   "url": "https://mairidoula.wixsite.com/birth",
+   "quote": "Hi! I'm Mairi (she/her), a Certified Birth and Postpartum Doula! I am passionate about supporting you during your pregnancy, labor and beyond."
+  },
+  {
+   "claim": "Nubia Jones is a Birth & Postpartum Doula based in Palo Alto, California with 25 years of birth and newborn care experience.",
+   "url": "https://www.bornbir.com/nubia-jones",
+   "quote": "I'm Nubia, a mom of five (teens & young adults). I have 25years of experience in the birth, postpartum & newborn care field. For 14yrs, I've been professionally serving families as a certified birth doula, postpartum doula, parent educator, certified breastfeeding counselor (CLC)."
+  }
+ ],
+ "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/palo-alto-ca-city-guide.mp4",
+ "video_mb": 24.5,
+ "youtube_id": "rnwPlXEaJe8",
+ "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/yt-thumb-palo-alto-ca.png",
+ "embed_verified": true,
+ "outreach": [
+  {
+   "provider": "Blossom Birth & Family",
+   "status": "blocked",
+   "message_id": null,
+   "to": "hello@discoverdoulas.com?subject=Correction:",
+   "reason": "blocked_email_gate: malformed mailto address scraped from provider site (?subject= suffix)"
+  },
+  {
+   "provider": "Doula by Mari (Mairi)",
+   "status": "sent",
+   "message_id": "vps-20260918201856695868",
+   "to": "mairidoula@gmail.com"
+  },
+  {
+   "provider": "Nubia Jones",
+   "status": "blocked",
+   "message_id": null,
+   "to": "support@bornbir.com",
+   "reason": "blocked_recipient_history_gate"
+  }
+ ]
 }
