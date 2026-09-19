@@ -1926,4 +1926,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: 188,
   },
 
+  "cumming-ga": {
+    videoId: "xMkUbRRtHkM",
+    title: "Cumming, Georgia Doula & Birth Plan Guide",
+    description: "Watch the full Cumming, Georgia Doula & Birth Plan Guide — all in about 2:56.",
+    duration: 176,
+  },
+
 };
