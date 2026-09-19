@@ -58,6 +58,13 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
       [229, "Build your birth plan"],
     ],
   },
+  "colorado-springs-co": {
+    videoId: "bxieuKIKeb8",
+    title: "Colorado Springs Doula & Birth Plan Guide: Costs, Hospitals & Medicaid",
+    description: "Watch the full Colorado Springs city guide — doulas, hospitals, costs, and Medicaid coverage — in under 5 minutes.",
+    duration: "PT4M30S",
+    uploadDate: "2026-06-24T00:00:00-06:00",
+  },
   "denver-co": {
     videoId: "lInVRtpi5Fw",
     title: "Denver Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",

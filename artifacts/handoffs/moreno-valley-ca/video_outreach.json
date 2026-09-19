@@ -33,14 +33,18 @@
   "embed_verified": true,
   "outreach": [
     {
-      "provider": "4 The Moms Southern California Postpartum Doula Support",
-      "status": "sent",
-      "message_id": "vps-20260906222929586982"
+      "status": "blocked",
+      "message_id": "vps-20260906222929586982",
+      "to": "4 The Moms Southern California Postpartum Doula Support",
+      "block_reason": "no matching 'sent' record in canonical send log (may predate log)",
+      "verified_against": "none"
     },
     {
-      "provider": "Gem of the Valley Doula Services",
-      "status": "sent",
-      "message_id": "vps-20260906222952339460"
+      "status": "blocked",
+      "message_id": "vps-20260906222952339460",
+      "to": "Gem of the Valley Doula Services",
+      "block_reason": "no matching 'sent' record in canonical send log (may predate log)",
+      "verified_against": "none"
     },
     {
       "provider": "Raising Birth Doula Care",

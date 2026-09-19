@@ -48,14 +48,18 @@
   "embed_verified": true,
   "outreach": [
     {
-      "provider": "Christine (Costa Mesa Doula)",
-      "status": "sent",
-      "message_id": "vps-20260913193728146889"
+      "status": "blocked",
+      "message_id": "vps-20260913193728146889",
+      "to": "Christine (Costa Mesa Doula)",
+      "block_reason": "no matching 'sent' record in canonical send log (may predate log)",
+      "verified_against": "none"
     },
     {
-      "provider": "Tessa Fisher (Abundant Blessings Midwifery)",
-      "status": "sent",
-      "message_id": "vps-20260913193750979526"
+      "status": "blocked",
+      "message_id": "vps-20260913193750979526",
+      "to": "Tessa Fisher (Abundant Blessings Midwifery)",
+      "block_reason": "no matching 'sent' record in canonical send log (may predate log)",
+      "verified_against": "none"
     },
     {
       "provider": "Tiffany Blackham",

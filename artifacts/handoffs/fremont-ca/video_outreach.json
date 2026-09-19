@@ -1,0 +1,52 @@
+{
+  "slug": "fremont-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-07-31T00:00:00Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit: contract scaffold was empty after DAG advance from catch-up sweep. All evidence pre-existing and verified: video fremont-ca-city-guide-v5.mp4 (24.5MB) at video/remotion/out/; YouTube alF3MZ2oL5Y registered in video-embeds.ts (uploadDate 2026-07-31); live page https://truejoybirthing.com/birth-support/fremont-ca/ embeds videoId + VideoObject schema (curl-verified 2026-09-18); thumbnail public/images/yt-thumb-fremont-ca.png on disk; 5 first-touch sends in canonical send log (2026-08-06 and 2026-09-17 batches), 3 with message IDs recorded here.",
+  "sources": [
+    {
+      "claim": "Video uploaded to YouTube and embedded on live city page",
+      "url": "https://truejoybirthing.com/birth-support/fremont-ca/",
+      "evidence": "videoId alF3MZ2oL5Y present in video-embeds.ts and in live HTML with VideoObject schema (curl 2026-09-18)"
+    },
+    {
+      "claim": "Thumbnail exists on disk",
+      "url": "file://public/images/yt-thumb-fremont-ca.png",
+      "evidence": "public/images/yt-thumb-fremont-ca.png + .webp variants present"
+    },
+    {
+      "claim": "First-touch outreach sent to 3 providers with recorded message IDs",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "status=sent, is_followup=false, fremont-ca rows 2026-09-17 (vps-2026...152409193 etc.)"
+    }
+  ],
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "alF3MZ2oL5Y",
+  "thumbnail_path": "public/images/yt-thumb-fremont-ca.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "status": "sent",
+      "message_id": "vps-20260917232152409193",
+      "type": "first-touch",
+      "date": "2026-09-17",
+      "to": "yourteam@baycitydoulas.com"
+    },
+    {
+      "status": "sent",
+      "message_id": "vps-20260917232227017357",
+      "type": "first-touch",
+      "date": "2026-09-17",
+      "to": "hello.thedreamdoula@gmail.com"
+    },
+    {
+      "status": "sent",
+      "message_id": "vps-20260917232255660664",
+      "type": "first-touch",
+      "date": "2026-09-17",
+      "to": "andrea@threephasesdoula.com"
+    }
+  ]
+}

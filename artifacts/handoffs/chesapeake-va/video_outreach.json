@@ -38,9 +38,11 @@
   "embed_verified": true,
   "outreach": [
     {
-      "provider": "Wholesome Hearts Doula Services",
-      "status": "sent",
-      "message_id": "vps-20260906221758776679"
+      "status": "blocked",
+      "message_id": "vps-20260906221758776679",
+      "to": "Wholesome Hearts Doula Services",
+      "block_reason": "no matching 'sent' record in canonical send log (may predate log)",
+      "verified_against": "none"
     }
   ]
 }

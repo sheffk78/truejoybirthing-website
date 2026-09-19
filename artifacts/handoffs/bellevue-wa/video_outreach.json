@@ -43,19 +43,25 @@
   "embed_verified": true,
   "outreach": [
     {
-      "provider": "Expecting Joy Doula Services",
-      "status": "sent",
-      "message_id": "vps-20260909185709022720"
+      "status": "blocked",
+      "message_id": "vps-20260909185709022720",
+      "to": "Expecting Joy Doula Services",
+      "block_reason": "no matching 'sent' record in canonical send log (may predate log)",
+      "verified_against": "none"
     },
     {
-      "provider": "Mariola Klein (Bellevue Doula)",
-      "status": "sent",
-      "message_id": "vps-20260909185800822556"
+      "status": "blocked",
+      "message_id": "vps-20260909185800822556",
+      "to": "Mariola Klein (Bellevue Doula)",
+      "block_reason": "no matching 'sent' record in canonical send log (may predate log)",
+      "verified_against": "none"
     },
     {
-      "provider": "Heng Ma (Body Enmotion Massage and Doula Care)",
-      "status": "sent",
-      "message_id": "vps-20260909185853899232"
+      "status": "blocked",
+      "message_id": "vps-20260909185853899232",
+      "to": "Heng Ma (Body Enmotion Massage and Doula Care)",
+      "block_reason": "no matching 'sent' record in canonical send log (may predate log)",
+      "verified_against": "none"
     }
   ]
 }

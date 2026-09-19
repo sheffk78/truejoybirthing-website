@@ -33,14 +33,18 @@
   "embed_verified": true,
   "outreach": [
     {
-      "provider": "Samentha Alarcon",
-      "status": "sent",
-      "message_id": "vps-20260907172509306663"
+      "status": "blocked",
+      "message_id": "vps-20260907172509306663",
+      "to": "Samentha Alarcon",
+      "block_reason": "no matching 'sent' record in canonical send log (may predate log)",
+      "verified_against": "none"
     },
     {
-      "provider": "Elissa Hinson",
-      "status": "sent",
-      "message_id": "vps-20260907172535191248"
+      "status": "blocked",
+      "message_id": "vps-20260907172535191248",
+      "to": "Elissa Hinson",
+      "block_reason": "no matching 'sent' record in canonical send log (may predate log)",
+      "verified_against": "none"
     },
     {
       "provider": "In Bloom Midwifery",

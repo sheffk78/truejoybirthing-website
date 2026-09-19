@@ -3,7 +3,7 @@
   "stage": "video_outreach",
   "produced_at": "2026-09-07T21:30:00Z",
   "worker_model": "glm-5.3-flash",
-  "notes": "Video rendered (303.4s, Voxtral/Shelbi TTS, 12 scenes, 3 hospitals + 3 provider portraits). Uploaded to YouTube as NEW public embeddable video b-CF5xjp1sI (title 'Victoria TX Doula & Birth Plan Guide'), thumbnail uploaded + verified (HTTP 200, all 5 template elements present via vision check). Embed added to video-embeds.ts, deployed, live page verified (videoId present, VideoObject schema + duration). Outreach: 1 first-touch email sent to Baby Brilliance (info@babybrilliance.net, msg vps-20260907212941950843); 2 providers (Bianca Harris, Victoria Doulas) blocked â no public email (bornbir in-app / Yelp-only).",
+  "notes": "Video rendered (303.4s, Voxtral/Shelbi TTS, 12 scenes, 3 hospitals + 3 provider portraits). Uploaded to YouTube as NEW public embeddable video b-CF5xjp1sI (title 'Victoria TX Doula & Birth Plan Guide'), thumbnail uploaded + verified (HTTP 200, all 5 template elements present via vision check). Embed added to video-embeds.ts, deployed, live page verified (videoId present, VideoObject schema + duration). Outreach: 1 first-touch email sent to Baby Brilliance (info@babybrilliance.net, msg vps-20260907212941950843); 2 providers (Bianca Harris, Victoria Doulas) blocked \u00e2\u0080\u0094 no public email (bornbir in-app / Yelp-only).",
   "sources": [
     {
       "claim": "Video uploaded to YouTube as new public embeddable video",
@@ -38,9 +38,11 @@
   "embed_verified": true,
   "outreach": [
     {
-      "provider": "Baby Brilliance (Katie Coleman Kopecki)",
-      "status": "sent",
-      "message_id": "vps-20260907212941950843"
+      "status": "blocked",
+      "message_id": "vps-20260907212941950843",
+      "to": "Baby Brilliance (Katie Coleman Kopecki)",
+      "block_reason": "no matching 'sent' record in canonical send log (may predate log)",
+      "verified_against": "none"
     },
     {
       "provider": "Bianca Harris",

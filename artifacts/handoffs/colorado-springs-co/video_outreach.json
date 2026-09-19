@@ -1,0 +1,25 @@
+{
+  "slug": "colorado-springs-co",
+  "stage": "video_outreach",
+  "produced_at": "2026-08-01T00:00:00Z",
+  "worker_model": "deterministic-backfill",
+  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). YouTube bxieuKIKeb8 from remotion/out/colorado-springs-co-youtube-id.txt; thumbnail on disk; no first-touch sends in canonical send log yet \u2014 outreach pending.",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "bxieuKIKeb8",
+  "thumbnail_path": "public/images/yt-thumb-colorado-springs-co.png",
+  "embed_verified": true,
+  "outreach": [],
+  "sources": [
+    {
+      "claim": "Video uploaded",
+      "url": "https://www.youtube.com/watch?v=bxieuKIKeb8",
+      "evidence": "ID from video/remotion/out/colorado-springs-co-youtube-id.txt"
+    },
+    {
+      "claim": "Thumbnail on disk",
+      "url": "file://public/images/yt-thumb-colorado-springs-co.png",
+      "evidence": "exists"
+    }
+  ]
+}
