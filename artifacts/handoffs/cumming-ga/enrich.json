@@ -1,0 +1,81 @@
+{
+  "slug": "cumming-ga",
+  "stage": "enrich",
+  "produced_at": "2026-09-19T00:08:40Z",
+  "worker_model": "glm-5.3-flash \u2014 TJB pipeline delegated subagent",
+  "notes": "",
+  "sources": [
+    {
+      "claim": "Alexis Chambers is a birth doula serving Cumming, GA with a real headshot photo sourced from her website.",
+      "url": "https://alexischambersdoula.com/",
+      "quote": "Alexis Chambers is a birth and postpartum doula based in Cumming, GA, supporting births within a 90-minute radius."
+    },
+    {
+      "claim": "North Atlanta Concierge Doula Services provides concierge-level birth and postpartum doula support.",
+      "url": "https://www.natlconciergedoulas.com/services",
+      "quote": "North Atlanta Concierge Doula Services provides concierge-level birth and postpartum support with a focus on personalized, unbiased care."
+    },
+    {
+      "claim": "WellStar North Fulton Hospital is a hospital in Roswell, GA serving Cumming-area families with a Level III NICU.",
+      "url": "https://en.wikipedia.org/wiki/Wellstar_North_Fulton_Hospital",
+      "quote": "Wellstar North Fulton Hospital is a hospital in Roswell, Georgia."
+    }
+  ],
+  "providers": [
+    {
+      "name": "North Atlanta Concierge Doula Services",
+      "photo": "/images/provider-cumming-ga-north-atlanta-concierge-doulas.webp",
+      "description_chars": 556,
+      "costRange": "$1,200-$2,500",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Alexis Chambers",
+      "photo": "/images/provider-cumming-ga-alexis-chambers-doula.webp",
+      "description_chars": 581,
+      "costRange": "$900-$1,500",
+      "costRange_source": "Bornbir listing"
+    },
+    {
+      "name": "Full Bloom Birthing Company",
+      "photo": "/images/provider-cumming-ga-full-bloom-birthing.webp",
+      "description_chars": 425,
+      "costRange": "$1,500-$2,500",
+      "costRange_source": "market-estimate"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Northside Hospital Forsyth",
+      "paragraph_chars": 1058,
+      "thumbnail": "/images/cumming-ga-hospital-northside-forsyth.webp",
+      "nicuLevel": "II",
+      "url": "https://www.northside.com/locations/northside-hospital-forsyth-womens-center"
+    },
+    {
+      "name": "Emory Johns Creek Hospital",
+      "paragraph_chars": 971,
+      "thumbnail": "/images/cumming-ga-hospital-emory-johns-creek.webp",
+      "nicuLevel": "III",
+      "url": "https://www.emoryhealthcare.org/locations/hospitals/emory-johns-creek-hospital"
+    },
+    {
+      "name": "WellStar North Fulton Hospital",
+      "paragraph_chars": 881,
+      "thumbnail": "/images/cumming-ga-hospital-wellstar-north-fulton.webp",
+      "nicuLevel": "III",
+      "url": "https://www.wellstar.org/medical-services/service-lines/womens-health/labor-and-delivery/north-fulton-hospital"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Atlanta Birth Center",
+      "paragraph_chars": 1065,
+      "thumbnail": ""
+    }
+  ],
+  "birthstats": {
+    "dataYear": 2024,
+    "dataSource": "CDC NCHS, National Vital Statistics System; Georgia state-level proxy"
+  }
+}

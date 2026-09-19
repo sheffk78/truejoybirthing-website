@@ -1,9 +1,9 @@
 {
   "slug": "cumming-ga",
-  "stage": "build",
+  "stage": "enrich",
   "mode": "stage_emission",
   "exit_code": 0,
-  "passed": 20,
+  "passed": 25,
   "failed": 0,
   "skipped": 0,
   "results": {
@@ -59,33 +59,53 @@
       "status": "PASS",
       "detail": "meta description 148 chars, complete"
     },
-    "G25": {
+    "G27": {
       "status": "PASS",
-      "detail": "Hero image is 3:2 (1200x800, ratio=1.50)"
+      "detail": "All 3 providers have specific credentials"
     },
-    "G29": {
+    "G10": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=43045) and locked Pattern B composition"
+      "detail": "All 3 providers have specific descriptions"
     },
-    "G35": {
+    "G39": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=43045) and locked Pattern B composition"
+      "detail": "All 3 providers have specific descriptions"
     },
-    "G64": {
+    "G19": {
       "status": "PASS",
-      "detail": "G64: OG og-city-cumming-ga-v2.webp matches canonical Pattern B composition"
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "G20": {
+      "status": "PASS",
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "P11": {
+      "status": "PASS",
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "A12": {
+      "status": "PASS",
+      "detail": "All serviceArea fields are string arrays"
+    },
+    "G24": {
+      "status": "PASS",
+      "detail": "G73 anatomy pass: PASS: The image displays no discernible anatomical or artistic defects."
+    },
+    "G54": {
+      "status": "PASS",
+      "detail": "G73 anatomy pass: PASS: The image displays no discernible anatomical or artistic defects."
     },
     "G65": {
       "status": "PASS",
       "detail": "G65: No black letterbox/pillarbox bars on hero or support scene"
     },
-    "G8a": {
+    "G60": {
       "status": "PASS",
-      "detail": "Silhouette confirmed (center=100.8 < top=204.0, top_colors=23456)"
+      "detail": "G60: All 3 provider photos exist on disk and are >2KB"
     },
-    "G62": {
+    "G61": {
       "status": "PASS",
-      "detail": "G62: Hero AVIF files not stale (or not present)"
+      "detail": "G61: All image paths contain city slug cumming-ga"
     }
   }
 }

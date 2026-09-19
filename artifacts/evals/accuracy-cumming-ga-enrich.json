@@ -1,0 +1,38 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "cumming-ga",
+  "stage": "enrich",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 3,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on Alexis Chambers' own doula website and directly confirms she is a birth and postpartum doula based in Cumming, GA, consistent with the claim's sourcing from her site.",
+      "claim": "Alexis Chambers is a birth doula serving Cumming, GA with a real headshot photo sourced from her website.",
+      "url": "https://alexischambersdoula.com/",
+      "quote": "Alexis Chambers is a birth and postpartum doula based in Cumming, GA, supporting births within a 90-minute radius."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly states that North Atlanta Concierge Doula Services provides concierge-level birth and postpartum support, which matches the claim, and the /services page on the company's doula domain is a plausible location for this text.",
+      "claim": "North Atlanta Concierge Doula Services provides concierge-level birth and postpartum doula support.",
+      "url": "https://www.natlconciergedoulas.com/services",
+      "quote": "North Atlanta Concierge Doula Services provides concierge-level birth and postpartum support with a focus on personalized, unbiased care."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible text for the Wikipedia page on Wellstar North Fulton Hospital and directly confirms the claim's core assertion that it is a hospital in Roswell, Georgia, though it does not address the NICU detail.",
+      "claim": "WellStar North Fulton Hospital is a hospital in Roswell, GA serving Cumming-area families with a Level III NICU.",
+      "url": "https://en.wikipedia.org/wiki/Wellstar_North_Fulton_Hospital",
+      "quote": "Wellstar North Fulton Hospital is a hospital in Roswell, Georgia."
+    }
+  ],
+  "checked_at": "2026-09-18T18:23:52-06:00"
+}

@@ -2165,6 +2165,10 @@
       "video_uploaded_at": "2026-09-17T23:56:57.414348+00:00",
       "stage": "complete",
       "blocked_reason": null
+    },
+    "burlingame-ca": {
+      "has_outreach": false,
+      "outreach_blocked_reason": "All 3 providers blocked by recipient history gate (duplicate sends to mairidoula@gmail.com, support@bornbir.com, yourteam@baycitydoulas.com \u2014 already contacted for other cities)"
     }
   },
   "providence-ri": {

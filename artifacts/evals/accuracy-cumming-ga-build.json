@@ -1,0 +1,38 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "cumming-ga",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 3,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the services page of a doula agency whose domain matches the business name, and it directly states the company provides birth doula support in Cumming and Forsyth County, exactly matching the claim.",
+      "claim": "North Atlanta Concierge Doula Services offers birth doula services in the Cumming/Forsyth County area.",
+      "url": "https://www.natlconciergedoulas.com/services",
+      "quote": "North Atlanta Concierge Doula Services provides personalized birth doula support to families in the north Atlanta metro area including Cumming and Forsyth County."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from a domain matching Alexis Chambers' doula business and directly states she is a birth doula serving Cumming, GA families, fully supporting the claim.",
+      "claim": "Alexis Chambers is a birth doula serving Cumming, GA families.",
+      "url": "https://alexischambersdoula.com/",
+      "quote": "Alexis Chambers is a birth doula serving families in Cumming, GA and the surrounding north Georgia area."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the company's own domain (fullbloombirthing.com) and directly states that Full Bloom Birthing Company offers birth doula services in Forsyth County, matching the claim's topic and location.",
+      "claim": "Full Bloom Birthing Company provides birth doula services in the Forsyth County area.",
+      "url": "https://www.fullbloombirthing.com",
+      "quote": "Full Bloom Birthing Company offers birth doula services to families in Forsyth County and the surrounding north Atlanta area."
+    }
+  ],
+  "checked_at": "2026-09-18T17:58:20-06:00"
+}

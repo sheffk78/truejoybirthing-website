@@ -1,0 +1,49 @@
+{
+  "slug": "burlingame-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-18T23:40:00Z",
+  "worker_model": "hermes-subagent (glm-5.3-flash delegation)",
+  "notes": "Video rendered with FULL state names (California, not CA). Uploaded NEW to YouTube public+embeddable (id 9j8hzNYvzS0), added to California Birth Guides + All City Birth Guides playlists. Thumbnail generated from hero, uploaded to YouTube, local copy saved (png+webp). Page rebuilt + redeployed; live page shows video embed + VideoObject schema. First-touch outreach BLOCKED: all 3 provider sends failed at the email provider (send infrastructure error), no emails dispatched. outreach_blocked_reason recorded in tjb-city-status.json; has_outreach left false per 2026-09-16 bugfix.",
+  "sources": [
+    {
+      "claim": "YouTube video uploaded as new public, embeddable video for Burlingame, California",
+      "url": "https://www.youtube.com/watch?v=9j8hzNYvzS0",
+      "quote": "Burlingame, California Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)"
+    },
+    {
+      "claim": "Live city page embeds the video with a VideoObject schema node",
+      "url": "https://truejoybirthing.com/birth-support/burlingame-ca/",
+      "quote": "Burlingame, California Doula & Birth Plan Guide"
+    },
+    {
+      "claim": "Local thumbnail copy present on disk (png + webp) for the stage gate",
+      "url": "https://truejoybirthing.com/birth-support/burlingame-ca/",
+      "quote": "yt-thumb-burlingame-ca.png"
+    }
+  ],
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "9j8hzNYvzS0",
+  "thumbnail_path": "public/images/yt-thumb-burlingame-ca.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "provider": "Doula by Mari",
+      "email": "mairidoula@gmail.com",
+      "status": "blocked",
+      "note": "send failed â email provider returned send error (no message dispatched)"
+    },
+    {
+      "provider": "Rebecca Garcia (Rebecca Garcia Doula Services)",
+      "email": "support@bornbir.com",
+      "status": "blocked",
+      "note": "send failed â email provider returned send error (no message dispatched)"
+    },
+    {
+      "provider": "Bay City Doulas",
+      "email": "yourteam@baycitydoulas.com",
+      "status": "blocked",
+      "note": "send failed â email provider returned send error (no message dispatched)"
+    }
+  ]
+}
