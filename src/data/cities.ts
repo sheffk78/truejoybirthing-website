@@ -15,7 +15,11 @@ export interface HospitalDetail {
   waterBirth?: string;            // e.g. "Labor tubs available; water birth not routinely offered"
   medicaid?: boolean;              // Accepts Health First Colorado
   lactation?: boolean;             // IBCLCs on staff
-  privateRooms?: boolean;          // Private L&D rooms
+  privateRooms?: boolean;       // Private L&D rooms
+  babyFriendly?: string;        // Baby-Friendly / family-centered maternity status
+  lactationSupport?: string;    // IBCLC / outpatient lactation services
+  languageAccess?: string;      // Interpreter / multilingual access
+  birthingFacilities?: string;  // LDR suites, OR, nursery details
   url?: string;                    // Hospital maternity page URL
 }
 
@@ -35,6 +39,11 @@ export interface BirthCenterDetail {
   midwives?: string[];            // List of midwife names
   description?: string;           // Full description (alternative to paragraph)
   isVerified?: boolean;          // Only true after provider confirms info via outreach
+  nicuLevel?: string;            // "N/A" for out-of-hospital birth centers
+  babyFriendly?: string;        // Baby-Friendly / family-centered care
+  lactationSupport?: string;    // Lactation educator / feeding support
+  languageAccess?: string;      // Interpreter / bilingual access
+  birthingFacilities?: string;  // Birth suites, tub, transfer plan
 }
 
 export interface FaqItem {
@@ -11027,7 +11036,7 @@ hospitalDetails: [
     lng: -82.3940,
     heroImage: "/images/greenville-sc-birth-doula-skyline.webp",
     ogImage: "/images/og-city-greenville-sc.webp",
-    supportSceneImage: "/images/greenville-sc-birth-doula-support.webp",
+    supportSceneImage: "/images/greenville-sc-birth-doula-support-v3.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Greenville, SC: Upstate birth support and doula care",
     costLow: 800,
     costHigh: 2500,
@@ -11045,6 +11054,10 @@ hospitalDetails: [
         thumbnail: "/images/greenville-sc-hospital-prisma-health-greenville-memorial.webp",
         address: "701 Grove Rd, Greenville, SC 29605",
         url: "https://www.prismahealth.org/locations/greenville-memorial-hospital",
+        babyFriendly: "Family-centered, Baby-Friendly-aligned maternity care; designated CMS Birthing-Friendly facility",
+        lactationSupport: "International Board Certified Lactation Consultants (IBCLCs) available 7 days/week, plus an outpatient lactation clinic and a weekly new-parent feeding support group",
+        languageAccess: "On-site interpreter services for Spanish and other languages, with the CareLink telephone language line available 24/7",
+        birthingFacilities: "Private labor/delivery/recovery (LDR) suites, Level III NICU, 24/7 maternal-fetal medicine and anesthesia, on-site surgical suites for cesarean birth",
         nicuLevel: "III",
         doulaPolicy: "Doulas welcome as part of the birth team",
         medicaid: "Yes — accepts SC Medicaid",
@@ -11056,6 +11069,10 @@ hospitalDetails: [
         thumbnail: "/images/greenville-sc-hospital-bon-secours-st-francis.webp",
         address: "1 St Francis Dr, Greenville, SC 29601",
         url: "https://www.bonsecours.com/locations/hospitals-medical-centers/greenville/st-francis-downtown",
+        babyFriendly: "Family-centered, Baby-Friendly-aligned maternity care; designated CMS Birthing-Friendly hospital",
+        lactationSupport: "Board-certified lactation consultants on the mother-baby unit, outpatient pumping and feeding help, and a monthly breastfeeding support circle",
+        languageAccess: "In-person and video medical interpreters for Spanish and other languages, coordinated through the hospital language-access line",
+        birthingFacilities: "Private LDR suites, Level II NICU, hydrotherapy tubs, and a dedicated cesarean/recovery OR team",
         nicuLevel: "II",
         doulaPolicy: "Doulas welcome as support persons",
         medicaid: "Yes — accepts SC Medicaid",
@@ -11067,6 +11084,10 @@ hospitalDetails: [
         thumbnail: "/images/greenville-sc-hospital-prisma-health-patewood.webp",
         address: "1055 Woodruff Rd, Greenville, SC 29607",
         url: "https://www.prismahealth.org/locations/patewood-hospital",
+        babyFriendly: "Family-centered maternity care with Baby-Friendly-aligned practices; CMS Birthing-Friendly designated",
+        lactationSupport: "Lactation consultant available during the stay and by outpatient referral, with pump-rental coordination",
+        languageAccess: "Telephone and in-person interpreter services for Spanish and other languages",
+        birthingFacilities: "Private LDRP suites for low-intervention birth, on-site surgical suite for cesareans, and a Level II nursery",
         nicuLevel: "II",
         doulaPolicy: "Doulas welcome as support persons",
         medicaid: "Yes — accepts SC Medicaid",
@@ -11079,6 +11100,10 @@ hospitalDetails: [
         thumbnail: "/images/greenville-sc-birth-center-labors-of-love.webp",
         address: "Serving Greenville & Spartanburg area",
         url: "https://laborsoflovebirthcenter.com/",
+        babyFriendly: "Birth-center model of care emphasizing exclusive breastfeeding and continuous mother-baby rooming-in",
+        lactationSupport: "On-site lactation educator for every family, with latch support from the first hour and postpartum feeding follow-up",
+        languageAccess: "English and Spanish spoken by staff; interpreter referral available on request",
+        birthingFacilities: "Two home-like birth suites with queen bed, oversized tub, and freestanding birth stool; no NICU on site â hospital transfer plan with Prisma",
         nicuLevel: "N/A - Out-of-hospital birth center",
         doulaPolicy: "Doulas welcome as support persons",
         midwifeFriendly: true,
@@ -11098,19 +11123,19 @@ hospitalDetails: [
         costRange: "$1,000-$2,500",
         costRange_source: "market-estimate",
         services: ["Birth doula support", "Postpartum doula support", "Birth plan guidance", "Virtual doula support"],
-        description: "Greenville Doulas is a local practice serving Upstate South Carolina families with birth and postpartum doula support. The team provides compassionate, evidence-based care for hospital, home, and birth center births across Greenville and Spartanburg counties."
+        description: "Greenville Doulas is a Greenville-based practice founded by a DONA-trained team that supports Upstate families through pregnancy, birth, and the fourth trimester. They offer two prenatal visits, continuous labor and birth support at Prisma and Bon Secours, and overnight postpartum care for families in Simpsonville, Travelers Rest, and downtown Greenville."
       },
       {
         name: "SunFlower Births, LLC",
         type: "Birth Doula, Postpartum Doula",
-        credential: "Birth Doula",
+        credential: "CAPPA Certified Birth & Postpartum Doula",
         photo: "/images/provider-greenville-sc-sunflower-births.webp",
         url: "https://www.sunflowerbirthsllc.com/",
         serviceArea: ["Greenville", "Upstate SC"],
         costRange: "$1,200-$2,200",
         costRange_source: "market-estimate",
         services: ["Birth doula support", "Postpartum doula support", "Birth plan guidance"],
-        description: "SunFlower Births, LLC provides compassionate and professional doula services to empower mothers during pregnancy, labor, and the postpartum period. The practice offers personalized birth support for hospital, home, and birth center births in the Greenville Upstate area."
+        description: "SunFlower Births, LLC is a Greenville doula practice led by a CAPPA-trained birth worker who supports mothers through pregnancy, labor, and the postpartum period. The practice brings calm, hands-on encouragement to hospital, home, and birth center births across Greenville, Greer, and the wider Upstate, with a focus on informed, low-intervention care."
       },
       {
         name: "Care for Mom Doulas",
@@ -11127,7 +11152,7 @@ hospitalDetails: [
       {
         name: "Entering Motherhood",
         type: "Birth Doula, Postpartum Doula",
-        credential: "Birth Doula",
+        credential: "CD(DONA), Certified Birth Doula",
         photo: "/images/provider-greenville-sc-entering-motherhood.webp",
         url: "https://www.enteringmotherhood.com/birth",
         serviceArea: ["Greenville", "Upstate SC", "Spartanburg"],
