@@ -11036,7 +11036,7 @@ hospitalDetails: [
     lng: -82.3940,
     heroImage: "/images/greenville-sc-birth-doula-skyline.webp",
     ogImage: "/images/og-city-greenville-sc.webp",
-    supportSceneImage: "/images/greenville-sc-birth-doula-support-v3.webp",
+    supportSceneImage: "/images/greenville-sc-birth-doula-support-v4.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Greenville, SC: Upstate birth support and doula care",
     costLow: 800,
     costHigh: 2500,
