@@ -1,0 +1,41 @@
+{
+ "slug": "tuscaloosa-al",
+ "verdicts": [
+  {
+   "crop": "tuscaloosa-al-hero-fig0.png",
+   "verdict": "pass",
+   "defects": [
+    "No visible anatomical defects in the figures. Arms appear correctly attached with standard finger count (5 per hand). No fused/missing fingers, melted joints, distorted faces, or floating limbs are observable in this crop."
+   ],
+   "figure_count": 2,
+   "arms_seen": 4
+  },
+  {
+   "crop": "tuscaloosa-al-support-fig0.png",
+   "verdict": "pass",
+   "defects": [],
+   "figure_count": 2,
+   "arms_seen": 4
+  },
+  {
+   "crop": "tuscaloosa-al-og-fig0.png",
+   "verdict": "pass",
+   "defects": [
+    "No arms visible in the zoomed crop; only a partial figure (lower body and legs) is present. No visible anatomical defects in the visible portion of the figure."
+   ],
+   "figure_count": 1,
+   "arms_seen": 0
+  },
+  {
+   "crop": "tuscaloosa-al-thumb-fig0.png",
+   "verdict": "pass",
+   "defects": [
+    "No discernible human figures, arms, or anatomical features present in the image. The image contains only abstract gradients and no identifiable human anatomy."
+   ],
+   "figure_count": 0,
+   "arms_seen": 0
+  }
+ ],
+ "checked_at": "2026-09-21T23:49:16.839626+00:00",
+ "method": "ollama atlas:latest vision, temp=0, per-crop figure anatomy inspection"
+}

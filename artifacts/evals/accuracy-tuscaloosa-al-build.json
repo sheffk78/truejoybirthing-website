@@ -1,0 +1,46 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "tuscaloosa-al",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 4,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a first-person introduction from Crystina Hughes stating she lives in Tuscaloosa, Alabama and is a Licensed Practical Nurse and DONA-trained doula and lactation educator, which directly matches the claim and plausibly appears on a directory listing for Birthing By Your Design in Tuscalo",
+      "claim": "Birthing By Your Design is a Tuscaloosa doula practice led by Crystina Hughes, a Licensed Practical Nurse and DONA-trained doula and lactation educator.",
+      "url": "https://usdirectory.com/Birthing-By-Your-Design-Tuscaloosa",
+      "quote": "Hi my name is Crystina Hughes and I live In Tuscaloosa, Alabama. I am a Licensed Practical Nurse and also a DONA trained doula and lactation educator."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible directory text for the Discover Doulas Tuscaloosa page and directly confirms the claim that three doulas are listed for Tuscaloosa, AL, though it does not explicitly name the two practices.",
+      "claim": "Discover Doulas lists three doula practices serving Tuscaloosa, AL, including Birthing By Your Design and Suga Sweet Birth Services.",
+      "url": "https://www.discoverdoulas.com/alabama/tuscaloosa/",
+      "quote": "Tuscaloosa has 3 doulas in this directory. Listings are ranked by local reputation \u2014 rating weighted by review count \u2014 and refreshed from public map data."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the DCH Health System's own page for DCH Regional Medical Center and explicitly confirms both the Women's Center and the neonatal intensive care unit, matching the claim's topic and location.",
+      "claim": "DCH Regional Medical Center in Tuscaloosa has a Women's Center for birthing families and a neonatal intensive care unit, making DCH Health System the region's maternity hub.",
+      "url": "https://www.dchsystem.com/locations/dch-regional-medical-center/",
+      "quote": "The Women's Center at DCH Regional Medical Center offers rooms decorated in a home-like atmosphere, and two-room suites and private accommodations are available. The hospital features a neonatal inten"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from the gentlechildbirth.org page about Natalie Hewett directly confirms all claim elements: DONA International certification, serving Tuscaloosa/Northport clients, and a $1500 fee, matching the domain and URL path.",
+      "claim": "Gentle Childbirth Services provides a DONA-certified birth doula serving Tuscaloosa/Northport clients, with a listed fee of $1500.",
+      "url": "http://www.gentlechildbirth.org/natalie-hewett-tuscaloosa",
+      "quote": "Natalie serves Tuscaloosa/Northport clients birthing in Tuscaloosa or Birmingham ... I became a Certified Birth Doula through DONA International in 2013 ... Fee: $1500"
+    }
+  ],
+  "checked_at": "2026-09-21T17:28:26-06:00"
+}

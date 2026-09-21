@@ -1,0 +1,11 @@
+{
+  "eval": "eval-voice",
+  "slug": "tuscaloosa-al",
+  "model": "atlas:latest",
+  "fields_checked": 10,
+  "model_calls_ok": 2,
+  "model_calls_err": 0,
+  "verdict": "approved",
+  "findings": [],
+  "checked_at": "2026-09-21T17:40:12-06:00"
+}

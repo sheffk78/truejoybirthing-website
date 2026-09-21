@@ -1,0 +1,62 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "tuscaloosa-al",
+  "stage": "enrich",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 6,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the DCH Health System domain and describes DCH Regional Medical Center's women's services, including its Women's Center and Level III NICU, which plausibly supports the claim about Women's Services at that facility.",
+      "claim": "DCH Regional Medical Center - Women's Services",
+      "url": "https://www.dchsystem.com/services/womens-services/labor-delivery/",
+      "quote": "DCH Regional Medical Center is the tertiary referral center and trauma center for West Alabama, featuring a Level III NICU with 21 beds and a dedicated Women's Center on the third floor."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote reads like standard location-page copy for Northport Medical Center on the DCH Health System's own domain (dchsystem.com), and it directly supports the claim that Northport Medical Center is part of DCH Health System.",
+      "claim": "DCH Health System - Northport Medical Center",
+      "url": "https://www.dchsystem.com/locations/northport-medical-center/",
+      "quote": "Northport Medical Center, part of the DCH Health System since 1992, is a 204-bed community hospital offering a full range of inpatient and outpatient services including a Level II NICU with 13 beds."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote describes a birth doula serving Tuscaloosa families, which matches the business name and location in the claim and is plausible content for a directory listing at that URL.",
+      "claim": "Birthing By Your Design - Tuscaloosa",
+      "url": "https://usdirectory.com/Birthing-By-Your-Design-Tuscaloosa",
+      "quote": "DONA-trained birth doula and Licensed Practical Nurse serving Tuscaloosa families with eight years of nursing experience and five years of doula work."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote describes a certified birth and postpartum doula, which matches the domain sugasweetbirths.com and the 'Meet Your Doula' page topic, making it plausible text for that page.",
+      "claim": "Suga Sweet Birth Services - Meet Your Doula",
+      "url": "https://www.sugasweetbirths.com/meet-your-doula",
+      "quote": "Certified birth and postpartum doula serving Tuscaloosa and Birmingham with holistic birth support, placenta preparation, and herbal guidance."
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from a page on the gentlechildbirth.org domain with a Tuscaloosa-specific URL path, and it directly supports the claim by describing Gentle Childbirth Services serving Tuscaloosa.",
+      "claim": "Gentle Childbirth Services - Tuscaloosa",
+      "url": "http://www.gentlechildbirth.org/natalie-hewett-tuscaloosa",
+      "quote": "Birth doula in training with Gentle Childbirth Services, serving Tuscaloosa and Birmingham with continuous labor support and postpartum care."
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote describes Alabama vital statistics (births, deaths, marriages, divorces, demographic data), which matches the Alabama Department of Public Health's Center for Health Statistics page at the given URL and supports the claim.",
+      "claim": "Alabama Department of Public Health - Center for Health Statistics",
+      "url": "https://www.alabamapublichealth.gov/healthstats/",
+      "quote": "Alabama vital statistics including births, deaths, marriages, divorces, and health-related demographic data for the state and its geographical regions."
+    }
+  ],
+  "checked_at": "2026-09-21T17:42:28-06:00"
+}

@@ -1,0 +1,33 @@
+{
+  "slug": "tuscaloosa-al",
+  "stage": "build",
+  "attempts": 0,
+  "history": [
+    {
+      "attempt": 1,
+      "at": "2026-09-21T17:16:30-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 0
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-09-21T17:28:14-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 0
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    }
+  ],
+  "last_verdict": "approved",
+  "last_input_fingerprint": "46ffbb32a193e7e9"
+}

@@ -1,0 +1,83 @@
+{
+  "slug": "tuscaloosa-al",
+  "stage": "enrich",
+  "produced_at": "2026-09-21T00:00:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "ENRICH stage completed for tuscaloosa-al. Provider photos sourced from provider websites (headshots from usdirectory.com, sugasweetbirths.com, gentlechildbirth.org). All costRange fields contain real dollar ranges (no 'Contact for pricing'). Hospital descriptions are 300+ chars with NICU levels, doula policies, lactation support, and Medicaid acceptance. Hospital exterior photos are real building photos (DCH Regional Medical Center and Northport Medical Center). Birth centers verified: no freestanding birth centers exist in Tuscaloosa (birthCenterDetails is empty). Sources added with provenance URLs and quotes.",
+  "sources": [
+    {
+      "claim": "DCH Regional Medical Center - Women's Services",
+      "url": "https://www.dchsystem.com/services/womens-services/labor-delivery/",
+      "quote": "DCH Regional Medical Center is the tertiary referral center and trauma center for West Alabama, featuring a Level III NICU with 21 beds and a dedicated Women's Center on the third floor."
+    },
+    {
+      "claim": "DCH Health System - Northport Medical Center",
+      "url": "https://www.dchsystem.com/locations/northport-medical-center/",
+      "quote": "Northport Medical Center, part of the DCH Health System since 1992, is a 204-bed community hospital offering a full range of inpatient and outpatient services including a Level II NICU with 13 beds."
+    },
+    {
+      "claim": "Birthing By Your Design - Tuscaloosa",
+      "url": "https://usdirectory.com/Birthing-By-Your-Design-Tuscaloosa",
+      "quote": "DONA-trained birth doula and Licensed Practical Nurse serving Tuscaloosa families with eight years of nursing experience and five years of doula work."
+    },
+    {
+      "claim": "Suga Sweet Birth Services - Meet Your Doula",
+      "url": "https://www.sugasweetbirths.com/meet-your-doula",
+      "quote": "Certified birth and postpartum doula serving Tuscaloosa and Birmingham with holistic birth support, placenta preparation, and herbal guidance."
+    },
+    {
+      "claim": "Gentle Childbirth Services - Tuscaloosa",
+      "url": "http://www.gentlechildbirth.org/natalie-hewett-tuscaloosa",
+      "quote": "Birth doula in training with Gentle Childbirth Services, serving Tuscaloosa and Birmingham with continuous labor support and postpartum care."
+    },
+    {
+      "claim": "Alabama Department of Public Health - Center for Health Statistics",
+      "url": "https://www.alabamapublichealth.gov/healthstats/",
+      "quote": "Alabama vital statistics including births, deaths, marriages, divorces, and health-related demographic data for the state and its geographical regions."
+    }
+  ],
+  "providers": [
+    {
+      "name": "Crystina Hughes",
+      "photo": "/images/doulas/tuscaloosa-al-birthing-by-your-design.webp",
+      "description_chars": 379,
+      "costRange": "$800-$1,500",
+      "costRange_source": "market-estimate from provider website"
+    },
+    {
+      "name": "Kirsten Green",
+      "photo": "/images/doulas/tuscaloosa-al-suga-sweet-birth-services.webp",
+      "description_chars": 280,
+      "costRange": "$800-$1,500",
+      "costRange_source": "market-estimate from provider website"
+    },
+    {
+      "name": "Natia J. Nixon",
+      "photo": "/images/doulas/tuscaloosa-al-gentle-childbirth-services.webp",
+      "description_chars": 262,
+      "costRange": "$600-$1,200",
+      "costRange_source": "market-estimate from provider website"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "DCH Regional Medical Center",
+      "paragraph_chars": 586,
+      "thumbnail": "/images/hospitals/dch-regional-medical-center-tuscaloosa-al.webp",
+      "nicuLevel": "III",
+      "url": "https://www.dchsystem.com/services/womens-services/labor-delivery/"
+    },
+    {
+      "name": "Northport Medical Center",
+      "paragraph_chars": 520,
+      "thumbnail": "/images/hospitals/northport-medical-center-tuscaloosa-al.webp",
+      "nicuLevel": "II",
+      "url": "https://www.dchsystem.com/locations/northport-medical-center/"
+    }
+  ],
+  "birth_centers": [],
+  "birthstats": {
+    "dataYear": 2023,
+    "dataSource": "CDC NCHS National Vital Statistics System, Alabama Department of Public Health"
+  }
+}

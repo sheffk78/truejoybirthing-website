@@ -1,0 +1,77 @@
+{
+  "slug": "tuscaloosa-al",
+  "stage": "build",
+  "produced_at": "2026-09-21T23:30:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "",
+  "sources": [
+    {
+      "claim": "Birthing By Your Design is a Tuscaloosa doula practice led by Crystina Hughes, a Licensed Practical Nurse and DONA-trained doula and lactation educator.",
+      "url": "https://usdirectory.com/Birthing-By-Your-Design-Tuscaloosa",
+      "quote": "Hi my name is Crystina Hughes and I live In Tuscaloosa, Alabama. I am a Licensed Practical Nurse and also a DONA trained doula and lactation educator."
+    },
+    {
+      "claim": "Discover Doulas lists three doula practices serving Tuscaloosa, AL, including Birthing By Your Design and Suga Sweet Birth Services.",
+      "url": "https://www.discoverdoulas.com/alabama/tuscaloosa/",
+      "quote": "Tuscaloosa has 3 doulas in this directory. Listings are ranked by local reputation — rating weighted by review count — and refreshed from public map data."
+    },
+    {
+      "claim": "DCH Regional Medical Center in Tuscaloosa has a Women's Center for birthing families and a neonatal intensive care unit, making DCH Health System the region's maternity hub.",
+      "url": "https://www.dchsystem.com/locations/dch-regional-medical-center/",
+      "quote": "The Women's Center at DCH Regional Medical Center offers rooms decorated in a home-like atmosphere, and two-room suites and private accommodations are available. The hospital features a neonatal intensive care unit directed by physician specialists and staffed by experienced nurses."
+    },
+    {
+      "claim": "Gentle Childbirth Services provides a DONA-certified birth doula serving Tuscaloosa/Northport clients, with a listed fee of $1500.",
+      "url": "http://www.gentlechildbirth.org/natalie-hewett-tuscaloosa",
+      "quote": "Natalie serves Tuscaloosa/Northport clients birthing in Tuscaloosa or Birmingham ... I became a Certified Birth Doula through DONA International in 2013 ... Fee: $1500"
+    }
+  ],
+  "city_fields": {
+    "city": "Tuscaloosa",
+    "state": "AL",
+    "lat": 33.2098,
+    "lng": -87.5692,
+    "costLow": 800,
+    "costHigh": 1800,
+    "heroImage": "/images/tuscaloosa-al-birth-doula-skyline-v2.webp",
+    "ogImage": "https://truejoybirthing.com/images/og-city-tuscaloosa-al.webp",
+    "supportSceneImage": "/images/tuscaloosa-al-support-scene-v2.webp",
+    "supportSceneAlt": "A pregnant woman consulting with a doula in Tuscaloosa, AL",
+    "culture": "Tuscaloosa is a mid-size college town anchored by the University of Alabama, where families often balance academic life with the demands of pregnancy and new parenthood. The birth community is growing but still small, with doulas who know each other well and often collaborate across practices. The DCH Health System serves as the region's primary maternity hub, with a Level III NICU for vulnerable newborns.",
+    "medicaidNote": "Yes \u2014 Alabama Medicaid covers doula services for eligible enrollees. DCH Health System accepts Medicaid, and several Tuscaloosa doulas work with Medicaid-covered families. Call Alabama Medicaid at 1-800-362-1504 or visit alabamamedicaid.com to confirm your plan's doula coverage."
+  },
+  "faqs_count": 5,
+  "midwife_paragraph_chars": 528,
+  "doulas": [
+    {
+      "name": "Crystina Hughes",
+      "url": "https://usdirectory.com/Birthing-By-Your-Design-Tuscaloosa",
+      "photo": "/images/doulas/tuscaloosa-al-birthing-by-your-design.webp",
+      "description_chars": 379,
+      "costRange": "$800-$1,500"
+    },
+    {
+      "name": "Kirsten Green",
+      "url": "https://www.sugasweetbirths.com/meet-your-doula",
+      "photo": "/images/doulas/tuscaloosa-al-suga-sweet-birth-services.webp",
+      "description_chars": 280,
+      "costRange": "$800-$1,500"
+    },
+    {
+      "name": "Natia J. Nixon",
+      "url": "http://www.gentlechildbirth.org/natalie-hewett-tuscaloosa",
+      "photo": "/images/doulas/tuscaloosa-al-gentle-childbirth-services.webp",
+      "description_chars": 262,
+      "costRange": "$600-$1,200"
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  },
+  "_auto_image_refs": [
+    "/images/tuscaloosa-al-birth-doula-skyline-v2.webp",
+    "https://truejoybirthing.com/images/og-city-tuscaloosa-al.webp",
+    "/images/tuscaloosa-al-support-scene-v2.webp"
+  ]
+}
