@@ -2,34 +2,34 @@
   "slug": "greenville-sc",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
-  "exit_code": 1,
-  "passed": 2,
-  "failed": 7,
+  "exit_code": 0,
+  "passed": 9,
+  "failed": 0,
   "skipped": 0,
   "results": {
     "pre_render_gate": {
-      "status": "FAIL",
-      "detail": "scene data missing at remotion/src/data/greenville-sc-data.ts"
+      "status": "PASS",
+      "detail": "scene data exists at remotion/src/data/greenville-sc-data.ts"
     },
     "video_file_exists": {
-      "status": "FAIL",
-      "detail": "local mp4 missing and video not yet uploaded/embedded"
+      "status": "PASS",
+      "detail": "video file 20.8MB >10MB"
     },
     "youtube_upload": {
-      "status": "FAIL",
-      "detail": "greenville-sc not found in video-embeds.ts"
+      "status": "PASS",
+      "detail": "videoId deogMmBxMEI present in video-embeds.ts"
     },
     "youtube_thumbnail": {
-      "status": "FAIL",
-      "detail": "yt-thumb-greenville-sc.png missing"
+      "status": "PASS",
+      "detail": "thumbnail present locally (823KB) and YouTube returns 126KB"
     },
     "video_embedded": {
-      "status": "FAIL",
-      "detail": "no videoId to verify"
+      "status": "PASS",
+      "detail": "embed found (vid deogMmBxMEI) on live page"
     },
     "videoobject_schema": {
-      "status": "FAIL",
-      "detail": "no videoId to verify"
+      "status": "PASS",
+      "detail": "VideoObject+duration present on live page"
     },
     "outreach_sent_or_blocked": {
       "status": "PASS",
@@ -40,8 +40,8 @@
       "detail": "all 4 provider photos are real images (>5KB, >100 colors)"
     },
     "video_content_city_match": {
-      "status": "FAIL",
-      "detail": "G67: no videoId \u2014 cannot verify video content"
+      "status": "PASS",
+      "detail": "G67: video overview scene names this city ('greenville' found; frame t=22s)"
     }
   }
 }

@@ -1,0 +1,23 @@
+{
+  "slug": "greenville-sc",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-21T20:10:00Z",
+  "worker_model": "hermes-subagent-glm-5.3-flash (delegated video_outreach stage)",
+  "notes": "Rendered 14-scene city video (Shelbi/Voxtral TTS, 4 provider portraits, 3 hospitals + 1 birth center), uploaded to YouTube (public, embeddable), deployed to CF, ran batch outreach via tjb-batch-outreach.py. 1 sent, 2 blocked (data-quality emails), 1 no-email.",
+  "sources": [
+    {"claim": "Greenville, SC video rendered and uploaded", "url": "https://www.youtube.com/watch?v=deogMmBxMEI", "quote": "YouTube video deogMmBxMEI set privacyStatus=public, embeddable=True, custom thumbnail uploaded."},
+    {"claim": "Greenville embed deployed to live site", "url": "https://truejoybirthing.com/birth-support/greenville-sc/", "quote": "dist contains youtube-nocookie.com/embed/deogMmBxMEI and a VideoObject JSON-LD schema."},
+    {"claim": "Outreach send log proof", "url": "https://truejoybirthing.com/birth-support/greenville-sc/", "quote": "Entering Motherhood sent (message_id vps-20260921200144825221) verified in ~/.hermes/logs/tjb-outreach-send-log.jsonl."}
+  ],
+  "video_file": "public/birth-support-video/greenville-sc/greenville-sc.mp4",
+  "video_mb": 20.8,
+  "youtube_id": "deogMmBxMEI",
+  "thumbnail_path": "public/images/yt-thumb-greenville-sc.png",
+  "embed_verified": true,
+  "outreach": [
+    {"provider": "Greenville Doulas", "to": "info@greatexpectationsbirth.com", "status": "blocked", "reason": "recipient_history_gate: AgentMail inbox already has a sent outreach to this address (ever-contacted via allen-tx) â duplicate blocked."},
+    {"provider": "SunFlower Births, LLC", "to": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com", "status": "blocked", "reason": "zerobounce_gate: invalid/does_not_accept_mail â bogus wixpress Sentry internal email in cities.ts."},
+    {"provider": "Care for Mom Doulas", "to": null, "status": "no_email", "reason": "no email address present in cities.ts localDoulas entry."},
+    {"provider": "Entering Motherhood", "to": "sarahmarie@enteringmotherhood.com", "status": "sent", "message_id": "vps-20260921200144825221"}
+  ]
+}
