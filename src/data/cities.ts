@@ -4610,7 +4610,7 @@ birthStats: { cesareanRate: 32.1, maternalMortalityRate: 18.6, homeBirthRate: 0.
     shelbiServesHere: true,
     heroImage: "/images/aurora-co-birth-doula-skyline-v2.webp",
     ogImage: "/images/og-city-aurora-co.webp",
-    supportSceneImage: "/images/aurora-co-support-scene-v3.webp",
+    supportSceneImage: "/images/aurora-co-support-scene-v4.webp",
     supportSceneAlt: "A doula and an expectant mom at a plains overlook with the Rocky Mountain front range behind them",
     localDoulas: [
       { name: "Mama Bird" , credential: "Birth Doula" , practice: "Mama Bird" , url: "https://mamabirdinc.com/" , photo: "/images/provider-aurora-co-mama-bird.webp", description: "FREE birth and postpartum doula services to any BIPOC birther, regardless of insurance coverage. ... Sign up Now! 15200 E Girard Ave Suite 3100. Aurora, CO 80014.", costRange: "Free for BIPOC families", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Aurora, CO"] },
