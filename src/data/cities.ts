@@ -12330,6 +12330,14 @@ hospitalDetails: [
       dataYear: 2023,
       dataSource: "CDC NCHS National Vital Statistics System, Alabama Department of Public Health",
     },
+    sources: [
+      { title: "DCH Regional Medical Center - Women's Services", url: "https://www.dchsystem.com/services/womens-services/labor-delivery/", quote: "DCH Regional Medical Center is the tertiary referral center and trauma center for West Alabama, featuring a Level III NICU with 21 beds and a dedicated Women's Center on the third floor." },
+      { title: "DCH Health System - Northport Medical Center", url: "https://www.dchsystem.com/locations/northport-medical-center/", quote: "Northport Medical Center, part of the DCH Health System since 1992, is a 204-bed community hospital offering a full range of inpatient and outpatient services including a Level II NICU with 13 beds." },
+      { title: "Birthing By Your Design - Tuscaloosa", url: "https://usdirectory.com/Birthing-By-Your-Design-Tuscaloosa", quote: "DONA-trained birth doula and Licensed Practical Nurse serving Tuscaloosa families with eight years of nursing experience and five years of doula work." },
+      { title: "Suga Sweet Birth Services - Meet Your Doula", url: "https://www.sugasweetbirths.com/meet-your-doula", quote: "Certified birth and postpartum doula serving Tuscaloosa and Birmingham with holistic birth support, placenta preparation, and herbal guidance." },
+      { title: "Gentle Childbirth Services - Tuscaloosa", url: "http://www.gentlechildbirth.org/natalie-hewett-tuscaloosa", quote: "Birth doula in training with Gentle Childbirth Services, serving Tuscaloosa and Birmingham with continuous labor support and postpartum care." },
+      { title: "CDC NCHS National Vital Statistics System", url: "https://www.cdc.gov/nchs/national-vital-statistics-system/index.htm", quote: "Alabama birth statistics including cesarean rate 32.0%, maternal mortality rate 22.5 per 100,000, data year 2023." },
+    ],
     nearbyCities: ["birmingham-al", "northport-al"],
     midwifeInfo: {
       paragraph: "Tuscaloosa has a growing midwifery community serving families across West Alabama. DCH Regional Medical Center and Northport Medical Center both welcome certified nurse-midwives alongside OB/GYNs for hospital births. For families seeking out-of-hospital options, the Tuscaloosa area offers midwife-led care through local birth centers and home birth services. Alabama licenses Certified Nurse-Midwives through the Board of Nursing and Certified Professional Midwives through the Midwifery Education Accreditation Council (MEAC).",
