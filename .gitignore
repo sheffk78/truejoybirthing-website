@@ -17,6 +17,7 @@ node_modules/
 npm-debug.log*
 pnpm-debug.log*
 public/audio/
+public/birth-support-video/
 public/images/.optimize-originals/
 yarn-debug.log*
 yarn-error.log*

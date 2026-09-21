@@ -1940,4 +1940,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: 176,
   },
 
+  "greenville-sc": {
+    videoId: "deogMmBxMEI",
+    title: "Greenville, South Carolina Doula & Birth Plan Guide",
+    description: "Watch the full Greenville, South Carolina Doula & Birth Plan Guide — all in about 4:18.",
+    duration: 258,
+  },
+
 };

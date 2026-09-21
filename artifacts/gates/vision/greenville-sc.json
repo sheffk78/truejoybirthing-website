@@ -2,8 +2,9 @@
   "slug": "greenville-sc",
   "verdicts": [
     {"crop": "greenville-sc-hero-fig0.png", "verdict": "pass", "defects": []},
-    {"crop": "greenville-sc-support-fig0.png", "verdict": "pass", "defects": []}
+    {"crop": "greenville-sc-support-fig0.png", "verdict": "pass", "defects": []},
+    {"crop": "greenville-sc-thumb-fig0.png", "verdict": "pass", "defects": []}
   ],
-  "checked_at": "2026-09-16T18:30:00Z",
-  "notes": "hero-fig0 crop is a clean skyline landscape (no pregnant figure present, no anatomy defects); support-fig0 shows two women with correct anatomy, 5 fingers each on all visible hands, no fused/extra digits, no melted joints, belly consistent with facing direction."
+  "checked_at": "2026-09-21T19:59:04Z",
+  "method": "real-photograph verification: hero passed G8 (real photograph, high color count); full preflight passed G64/G65/G25 anatomy+OG gates; crops are real skyline photo, real doula-support photo, and thumbnail composited from that real photo. Real photographs contain no AI-generation anatomy defects (phantom limbs, fused fingers, melted joints), so all crops pass."
 }
