@@ -63,6 +63,30 @@ if [ ${#CITIES[@]} -eq 0 ]; then
   exit 1
 fi
 
+# ── H4 pattern + regression self-test (2026-09-21, replaces 9b00e76a) ──
+# 9b00e76a dropped bare 'placeholder'/'coming soon' (lead-form false positives)
+# but its replacement missed the LIVE pattern: the facility-card placeholder
+# renders as 'Photo<br data-astro-cid-…>coming soon' — a tag between the words.
+# H4_PATTERN matches tags between 'Photo' and 'coming soon', plus the plain-text
+# variants. The self-test pins the pattern to BOTH the live defect snippet and
+# the old false-positive snippet on every sweep, so future pattern edits fail
+# loudly here instead of silently regressing the daily report again.
+H4_PATTERN='photo[[:space:]]*(<[^>]+>)*[[:space:]]*coming soon|coming soon photo|no photo available|photo-placeholder'
+H4_SELFTEST_FAILED=0
+if echo '<span class="text-tjb-gray/40">Photo<br data-astro-cid-7ogtji5e>coming soon</span>' | grep -qiE "$H4_PATTERN"; then
+  :
+else
+  health_fail "H4 self-test FAILED: live defect pattern 'Photo<br…>coming soon' NOT detected — fix H4_PATTERN before trusting this sweep"
+  H4_SELFTEST_FAILED=1
+fi
+if echo '<input name="firstName" placeholder="Your first name">' | grep -qiE "$H4_PATTERN"; then
+  health_fail "H4 self-test FAILED: lead-form placeholder='Your first name' false-positives again — fix H4_PATTERN"
+  H4_SELFTEST_FAILED=1
+fi
+if [ "$H4_SELFTEST_FAILED" -eq 0 ]; then
+  health_pass "H4 pattern self-test (live defect detected; lead-form placeholder ignored)"
+fi
+
 # ── H1: Live page returns 200 ──────────────────────────────────────
 health_header "H1: Live Page Health"
 for city_slug in "${CITIES[@]}"; do
@@ -161,11 +185,10 @@ for city_slug in "${CITIES[@]}"; do
   fi
   
   # Check for "Photo coming soon" placeholder text (broken images show this).
-  # 2026-09-17: dropped bare 'placeholder' and 'coming soon' — bare terms match
-  # the lead form's placeholder="Your first name" attribute on EVERY city page,
-  # which flooded daily cron output with ~157 false ⚠ and (via the watchdog's
-  # head -25) hid real ❌ failures from the 2026-09-15/16 reports.
-  if echo "$LIVE_HTML" | grep -qi "photo coming soon\|coming soon photo\|no photo available\|photo-placeholder"; then
+  # 2026-09-21: H4_PATTERN handles the live '<br>'-separated span plus the
+  # plain-text variants; pattern + false-positive snippets are regression-pinned
+  # in the self-test above (runs every sweep, even single-city runs).
+  if echo "$LIVE_HTML" | grep -qiE "$H4_PATTERN"; then
     health_warn "$city_slug — contains 'Photo coming soon' placeholder text"
   fi
   
