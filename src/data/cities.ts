@@ -12336,7 +12336,7 @@ hospitalDetails: [
       { title: "Birthing By Your Design - Tuscaloosa", url: "https://usdirectory.com/Birthing-By-Your-Design-Tuscaloosa", quote: "DONA-trained birth doula and Licensed Practical Nurse serving Tuscaloosa families with eight years of nursing experience and five years of doula work." },
       { title: "Suga Sweet Birth Services - Meet Your Doula", url: "https://www.sugasweetbirths.com/meet-your-doula", quote: "Certified birth and postpartum doula serving Tuscaloosa and Birmingham with holistic birth support, placenta preparation, and herbal guidance." },
       { title: "Gentle Childbirth Services - Tuscaloosa", url: "http://www.gentlechildbirth.org/natalie-hewett-tuscaloosa", quote: "Birth doula in training with Gentle Childbirth Services, serving Tuscaloosa and Birmingham with continuous labor support and postpartum care." },
-      { title: "CDC NCHS National Vital Statistics System", url: "https://www.cdc.gov/nchs/national-vital-statistics-system/index.htm", quote: "Alabama birth statistics including cesarean rate 32.0%, maternal mortality rate 22.5 per 100,000, data year 2023." },
+      { title: "Alabama Department of Public Health - Center for Health Statistics", url: "https://www.alabamapublichealth.gov/healthstats/", quote: "Alabama vital statistics including births, deaths, marriages, divorces, and health-related demographic data for the state and its geographical regions." },
     ],
     nearbyCities: ["birmingham-al", "northport-al"],
     midwifeInfo: {
