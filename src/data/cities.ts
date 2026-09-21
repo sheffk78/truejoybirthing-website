@@ -11569,7 +11569,7 @@ hospitalDetails: [
     culture: "La Habra is a city in northwestern Orange County, California. Families in La Habra typically deliver at Providence St. Jude Medical Center in Fullerton (Level III NICU), PIH Health Whittier Hospital (Level III NICU), or Anaheim Regional Medical Center (Level III NICU). California's Medi-Cal program covers doula services statewide.",
     heroLocalDetail: "La Habra families can choose from three nearby hospitals with Level III NICUs: Providence St. Jude Medical Center in Fullerton, PIH Health Whittier Hospital, and Anaheim Regional Medical Center. All three are within a 15-minute drive and provide comprehensive maternity care with 24/7 OB hospitalists.",
     hospitalDetails: [
-      {
+      { thumbnail: "/images/la-habra-ca-hospital-providence-st-jude.webp",
         name: "Providence St. Jude Medical Center",
         address: "101 E Valencia Mesa Dr, Fullerton, CA 92835",
         url: "https://www.providence.org/locations/socal/st-jude-medical-center",
@@ -11580,7 +11580,7 @@ hospitalDetails: [
         privateRooms: true,
         paragraph: "Providence St. Jude Medical Center in Fullerton is the closest hospital to La Habra, about 3 miles away. The facility has a 14-bed Level III NICU staffed with neonatologists and pediatric subspecialists. The maternity center offers private labor, delivery, and recovery rooms, certified nurse-midwives on staff, and 24/7 OB hospitalists and anesthesiologists. The hospital follows a family-centered care model with couplet care so mother and baby remain together. Doulas are welcome as support persons. The hospital is a Baby-Friendly designated facility committed to evidence-based maternity care practices."
       },
-      {
+      { thumbnail: "/images/la-habra-ca-hospital-pih-whittier.webp",
         name: "PIH Health Whittier Hospital",
         address: "14555 Whittier Blvd, Whittier, CA 90602",
         url: "https://www.pihhealth.org/health-services/pregnancy-birth/labor-delivery/",
@@ -11591,7 +11591,7 @@ hospitalDetails: [
         privateRooms: true,
         paragraph: "PIH Health Whittier Hospital is about 10 miles from La Habra and offers a comprehensive maternity program with a Level III NICU. The hospital has board-certified obstetricians, OB hospitalists, certified nurse-midwives, neonatologists, and lactation consultants on staff. Labor and delivery features private birthing suites with birthing balls, soaking tubs, and flat TVs. Doulas are welcome as support persons. The hospital is a Baby-Friendly designated facility and offers 24/7 anesthesia coverage. Language interpretation services are available for families needing care in languages other than English."
       },
-      {
+      { thumbnail: "/images/la-habra-ca-hospital-anaheim-regional.webp",
         name: "Anaheim Regional Medical Center",
         address: "901 S Anaheim Blvd, Anaheim, CA 92805",
         url: "https://www.ahmchealth.com/armc",
@@ -11656,7 +11656,7 @@ hospitalDetails: [
     culture: "San Mateo is a Bay Area city in San Mateo County, California. Families in San Mateo typically deliver at San Mateo Medical Center, the county's public hospital, or at Sequoia Hospital in Redwood City (Level II NICU). California's Medi-Cal program covers doula services statewide.",
     heroLocalDetail: "San Mateo families can deliver at San Mateo Medical Center, a county hospital with full-service labor and delivery, or at Sequoia Hospital in nearby Redwood City with a Level II NICU. Both hospitals serve the San Mateo community with comprehensive maternity care.",
     hospitalDetails: [
-      {
+      { thumbnail: "/images/san-mateo-ca-hospital-san-mateo-medical.webp",
         name: "San Mateo Medical Center",
         address: "222 W 39th Ave, San Mateo, CA 94403",
         url: "https://www.smchealth.org/san-mateo-medical-center",
@@ -11666,7 +11666,7 @@ hospitalDetails: [
         privateRooms: false,
         paragraph: "San Mateo Medical Center is San Mateo County's public hospital, located in the city of San Mateo. The facility offers full-service labor and delivery with private birthing suites, 24/7 OB hospitalists, and certified nurse-midwives on staff. The hospital provides comprehensive maternity care including prenatal, delivery, and postpartum services. Doulas are welcome as support persons. The hospital accepts Medi-Cal and most major insurance plans. Language interpretation services are available for families needing care in languages other than English."
       },
-      {
+      { thumbnail: "/images/san-mateo-ca-hospital-sequoia.webp",
         name: "Sequoia Hospital",
         address: "170 Alameda de las Pulgas, Redwood City, CA 94062",
         url: "https://www.commonspirit.org/find-a-location/family-birth-center-dignity-health-sequoia-hospital-2267",
@@ -11731,7 +11731,7 @@ hospitalDetails: [
     culture: "Palo Alto is a Bay Area city in Santa Clara County, California. Families in Palo Alto typically deliver at Lucile Packard Children's Hospital Stanford (Level IV NICU) or El Camino Hospital in Mountain View (Level III NICU). California's Medi-Cal program covers doula services statewide.",
     heroLocalDetail: "Palo Alto families deliver at Lucile Packard Children's Hospital Stanford, a nationally ranked facility with a Level IV NICU, or at El Camino Hospital in Mountain View with a Level III NICU. Both hospitals are within a 15-minute drive and offer comprehensive maternity care.",
     hospitalDetails: [
-      {
+      { thumbnail: "/images/palo-alto-ca-hospital-lucile-packard.webp",
         name: "Lucile Packard Children's Hospital Stanford",
         address: "725 Welch Road, Palo Alto, CA 94304",
         url: "https://www.stanfordchildrens.org/en/services/labor-and-delivery.html",
@@ -11742,7 +11742,7 @@ hospitalDetails: [
         privateRooms: true,
         paragraph: "Lucile Packard Children's Hospital Stanford is the primary maternity hospital for Palo Alto families, offering a Level IV NICU â the highest level of neonatal care â with advanced technology for the most complex cases. The hospital features private labor and delivery suites, a dedicated Johnson Center for Pregnancy and Newborn Services, and a multidisciplinary care team including obstetricians, neonatologists, certified nurse-midwives, and lactation consultants. Doulas are welcome as support persons. The hospital is affiliated with Stanford Medicine and provides 24/7 anesthesia coverage. Language interpretation services are available."
       },
-      {
+      { thumbnail: "/images/palo-alto-ca-hospital-el-camino.webp",
         name: "El Camino Hospital",
         address: "2500 Grant Rd, Mountain View, CA 94040",
         url: "https://www.elcaminohealth.org/services/mother-baby-health/labor-delivery-and-recovery",
@@ -11806,7 +11806,7 @@ hospitalDetails: [
     culture: "Redwood City is the county seat of San Mateo County in the San Francisco Bay Area. Families in Redwood City typically deliver at Sequoia Hospital (Level II NICU) or Kaiser Permanente Redwood City Medical Center. California's Medi-Cal program covers doula services statewide.",
     heroLocalDetail: "Redwood City families deliver at Sequoia Hospital, featuring a Family Birth Center with a Level II NICU staffed by Lucile Packard Children's Hospital Stanford, or at Kaiser Permanente Redwood City Medical Center with a Level II nursery. Both hospitals provide comprehensive maternity care.",
     hospitalDetails: [
-      {
+      { thumbnail: "/images/redwood-city-ca-hospital-sequoia.webp",
         name: "Sequoia Hospital",
         address: "170 Alameda de las Pulgas, Redwood City, CA 94062",
         url: "https://www.commonspirit.org/find-a-location/family-birth-center-dignity-health-sequoia-hospital-2267",
@@ -11817,7 +11817,7 @@ hospitalDetails: [
         privateRooms: true,
         paragraph: "Sequoia Hospital in Redwood City is a nationally recognized maternity center featuring a Family Birth Center with private LDR rooms. The hospital has a Level II NICU staffed by Lucile Packard Children's Hospital Stanford neonatologists, certified nurse-midwives on staff, and 24/7 OB hospitalists. Sequoia is a Blue Shield of California Blue Distinction Center for maternity care. Doulas are welcome as support persons. The hospital follows a family-centered care model with couplet care so mother and baby remain together."
       },
-      {
+      { thumbnail: "/images/redwood-city-ca-hospital-kaiser-redwood-city.webp",
         name: "Kaiser Permanente Redwood City Medical Center",
         address: "1100 Veterans Blvd, Redwood City, CA 94063",
         url: "https://healthy.kaiserpermanente.org/northern-california/facilities/redwood-city-medical-center-100337",
@@ -11877,7 +11877,7 @@ hospitalDetails: [
     culture: "Burlingame is a city in San Mateo County on the San Francisco Peninsula. Families in Burlingame typically deliver at Mills-Peninsula Medical Center (Sutter Health), a CMS Birthing Friendly facility with a Level II NICU and private LDR rooms, or at San Mateo Medical Center in nearby San Mateo. California's Medi-Cal program covers doula services statewide.",
     heroLocalDetail: "Burlingame families deliver at Mills-Peninsula Medical Center (Sutter Health), a CMS Birthing Friendly facility with a Level II NICU and private LDR rooms, or at San Mateo Medical Center in nearby San Mateo. Both hospitals serve the Burlingame community with comprehensive maternity care.",
     hospitalDetails: [
-      {
+      { thumbnail: "/images/burlingame-ca-hospital-mills-peninsula.webp",
         name: "Mills-Peninsula Medical Center (Sutter Health)",
         address: "1501 Trousdale Dr, Burlingame, CA 94010",
         url: "https://www.sutterhealth.org/find-location/facility/mills-peninsula-family-birth-center-1043246769",
@@ -11888,7 +11888,7 @@ hospitalDetails: [
         privateRooms: true,
         paragraph: "Mills-Peninsula Medical Center in Burlingame is a CMS Birthing Friendly facility with a 5-star overall quality rating. The Family Birth Center features private LDR (labor, delivery, recovery, postpartum) rooms, a Level II NICU for newborns needing extra care, and 24/7 anesthesia coverage. Certified nurse-midwives are on staff, and the hospital follows evidence-based maternity care practices. Doulas are welcome as support persons. The hospital is part of Sutter Health's network and accepts Medi-Cal and most major insurance plans. Language interpretation services are available."
       },
-      {
+      { thumbnail: "/images/burlingame-ca-hospital-san-mateo-medical.webp",
         name: "San Mateo Medical Center",
         address: "222 W 39th Ave, San Mateo, CA 94403",
         url: "https://www.smchealth.org/san-mateo-medical-center",
