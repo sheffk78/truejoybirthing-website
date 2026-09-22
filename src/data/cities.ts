@@ -10520,7 +10520,7 @@ hospitalDetails: [
     stateFull: "Texas",
     slug: "san-marcos-tx",
     titleTag: "San Marcos, Texas Doula Costs, Hospitals & Medicaid",
-    metaDescription: "San Marcos doula costs, hospital NICU levels, Medicaid coverage, and local birth providers for Hays County families.",
+    metaDescription: "San Marcos doula costs, hospital NICU levels, Medicaid coverage, and local birth providers for Hays County families planning their delivery.",
     population: 70000,
     costLow: 800,
     costHigh: 2500,
@@ -10599,7 +10599,7 @@ hospitalDetails: [
     stateFull: "Texas",
     slug: "pearland-tx",
     titleTag: "Pearland, Texas Doula Costs, Hospitals & Medicaid",
-    metaDescription: "Pearland doula costs, hospital NICU levels, Medicaid coverage, and local birth providers for Brazoria County families.",
+    metaDescription: "Pearland doula costs, hospital NICU levels, Medicaid coverage, and local birth providers for Brazoria County families planning their delivery.",
     population: 131000,
     costLow: 800,
     costHigh: 2500,
@@ -10693,7 +10693,7 @@ hospitalDetails: [
     stateFull: "Texas",
     slug: "victoria-tx",
     titleTag: "Victoria, Texas Doula Costs, Hospitals & Medicaid",
-    metaDescription: "Victoria doula costs, hospital NICU levels, Medicaid coverage, and local birth providers for Victoria County families.",
+    metaDescription: "Victoria doula costs, hospital NICU levels, Medicaid coverage, and local birth providers for Victoria County families planning their delivery.",
     population: 67000,
     costLow: 800,
     costHigh: 2500,
@@ -11064,7 +11064,7 @@ hospitalDetails: [
         doulaPolicy: "Doulas welcome as part of the birth team",
         medicaid: "Yes — accepts SC Medicaid",
         vbacPolicy: "VBAC offered with physician approval",
-        paragraph: "Prisma Health Greenville Memorial Hospital at 701 Grove Rd is the Upstate’s largest birthing facility and the region’s primary referral center for high-risk pregnancies. The hospital features a Level III NICU, private labor/delivery/recovery suites, and 24/7 maternal-fetal medicine specialists. As a CMS Birthing-Friendly designated facility, it emphasizes evidence-based maternity care with lower C-section rates for low-risk births. Doulas are welcomed as part of the birth team. <a href=‘/birth-plan-template/’>Use our free hospital birth plan template</a> to prepare."
+        paragraph: "Prisma Health Greenville Memorial Hospital at 701 Grove Rd is the Upstate’s largest birthing facility and the region’s primary referral center for high-risk pregnancies. The hospital features a Level III NICU, private labor/delivery/recovery suites, and 24/7 maternal-fetal medicine specialists. As a CMS Birthing-Friendly designated facility, it emphasizes evidence-based maternity care with lower C-section rates for low-risk births. Doulas are welcomed as part of the birth team. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare."
       },
       {
         name: "Bon Secours St. Francis Hospital",
@@ -11079,7 +11079,7 @@ hospitalDetails: [
         doulaPolicy: "Doulas welcome as support persons",
         medicaid: "Yes — accepts SC Medicaid",
         vbacPolicy: "VBAC offered with physician approval",
-        paragraph: "Bon Secours St. Francis Hospital, located downtown at 1 St Francis Dr, has served Greenville families since 1932. This nationally recognized hospital offers a Level II NICU, private birthing suites, and comprehensive maternity services including obstetricians, high-risk pregnancy specialists, and 24/7 labor and delivery coverage. The hospital has earned the CMS Birthing Friendly designation and America’s 250 Best Hospitals recognition. Doulas are welcomed as part of the birth team. <a href=‘/birth-plan-template/’>Use our free hospital birth plan template</a> to prepare."
+        paragraph: "Bon Secours St. Francis Hospital, located downtown at 1 St Francis Dr, has served Greenville families since 1932. This nationally recognized hospital offers a Level II NICU, private birthing suites, and comprehensive maternity services including obstetricians, high-risk pregnancy specialists, and 24/7 labor and delivery coverage. The hospital has earned the CMS Birthing Friendly designation and America’s 250 Best Hospitals recognition. Doulas are welcomed as part of the birth team. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare."
       },
       {
         name: "Prisma Health Patewood Hospital",
@@ -11093,7 +11093,7 @@ hospitalDetails: [
         nicuLevel: "II",
         doulaPolicy: "Doulas welcome as support persons",
         medicaid: "Yes — accepts SC Medicaid",
-        paragraph: "Prisma Health Patewood Hospital serves families on Greenville’s south side, offering full maternity services with private birthing suites, obstetricians, and 24/7 labor and delivery coverage. The hospital has earned the CMS Birthing Friendly designation and provides a Level II NICU for newborns needing extra care. Families choosing Patewood benefit from Prisma Health’s integrated system of care, including access to maternal-fetal medicine specialists when needed. <a href=‘/birth-plan-template/’>Use our free hospital birth plan template</a> to prepare."
+        paragraph: "Prisma Health Patewood Hospital serves families on Greenville’s south side, offering full maternity services with private birthing suites, obstetricians, and 24/7 labor and delivery coverage. The hospital has earned the CMS Birthing Friendly designation and provides a Level II NICU for newborns needing extra care. Families choosing Patewood benefit from Prisma Health’s integrated system of care, including access to maternal-fetal medicine specialists when needed. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare."
       }
     ],
     birthCenterDetails: [
@@ -11337,7 +11337,7 @@ hospitalDetails: [
 	stateFull: "California",
 	slug: "costa-mesa-ca",
 	titleTag: "Costa Mesa, California Doula Costs, Hospitals and Medicaid",
-	metaDescription: "Costa Mesa doula costs, Hoag and Orange Coast NICU levels, Medi-Cal doula coverage, and Orange County birth providers.",
+	metaDescription: "Costa Mesa doula costs, Hoag and Orange Coast NICU levels, Medi-Cal doula coverage, and Orange County birth providers for local families.",
 	population: 110538,
 	costLow: 1500,
 	costHigh: 2500,
@@ -11951,7 +11951,7 @@ hospitalDetails: [
     stateFull: "North Carolina",
     slug: "cary-nc",
     titleTag: "Cary, North Carolina Doula Costs, Hospitals and Medicaid",
-    metaDescription: "Cary doula costs, hospital NICU levels, Medicaid coverage, and local birth providers for Triangle families.",
+    metaDescription: "Cary doula costs, hospital NICU levels, Medicaid coverage, and local birth providers for Triangle families planning their delivery.",
     population: 183582,
     costLow: 800,
     costHigh: 2500,
