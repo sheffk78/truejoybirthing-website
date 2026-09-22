@@ -12299,7 +12299,7 @@ hospitalDetails: [
     shelbiServesHere: false,
     heroImage: "/images/tuscaloosa-al-birth-doula-skyline-v2.webp",
     ogImage: "https://truejoybirthing.com/images/og-city-tuscaloosa-al.webp",
-    supportSceneImage: "/images/tuscaloosa-al-support-scene-v2.webp",
+    supportSceneImage: "/images/tuscaloosa-al-support-scene-v3.webp",
     supportSceneAlt: "A pregnant woman consulting with a doula in Tuscaloosa, AL",
     localDoulas: [
       { name: "Crystina Hughes" , credential: "DONA Trained Doula, LPN, Lactation Educator" , practice: "Birthing By Your Design" , url: "https://usdirectory.com/Birthing-By-Your-Design-Tuscaloosa" , photo: "/images/doulas/tuscaloosa-al-birthing-by-your-design.webp" , description: "DONA-trained birth doula and Licensed Practical Nurse serving Tuscaloosa families. Crystina brings eight years of nursing experience and five years of doula work to provide compassionate, personalized birth support. She specializes in helping families create birthing experiences on their terms, with a focus on making doula and lactation services accessible across West Alabama." , costRange: "$800-$1,500" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula" , "Lactation Education"], serviceArea: ["Tuscaloosa, AL" , "Northport, AL" , "Tuscaloosa County"], isVerified: true, enrichedAt: "2026-09-21" },

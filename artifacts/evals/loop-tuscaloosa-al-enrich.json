@@ -1,0 +1,18 @@
+{
+  "slug": "tuscaloosa-al",
+  "stage": "enrich",
+  "attempts": 0,
+  "history": [
+    {
+      "attempt": 1,
+      "at": "2026-09-21T17:53:13-06:00",
+      "evals": {
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    }
+  ],
+  "last_verdict": "approved",
+  "last_input_fingerprint": "639a1bc9afb6bd82"
+}

@@ -1,0 +1,38 @@
+{
+  "city": "tuscaloosa-al",
+  "stage": "build",
+  "checkpoint_type": "research-data",
+  "timestamp": "2026-09-21T17:11:00-06:00",
+  "provider_count": 3,
+  "hospital_count": 2,
+  "birth_center_count": 1,
+  "population_tier": "small (<100K)",
+  "minimum_provider_check": "PASS - 3 doulas >= 1 minimum for small city",
+  "hero_image": {
+    "file": "public/images/tuscaloosa-al-birth-doula-skyline-v2.webp",
+    "heroes_dir": "public/images/heroes/tuscaloosa-al-birth-doula-skyline-v2.webp",
+    "og_image": "public/images/og-city-tuscaloosa-al.webp",
+    "yt_thumb": "public/images/yt-thumb-tuscaloosa-al.webp",
+    "dimensions": "1200x800 (3:2)",
+    "style": "photographic real photo - pregnant silhouette + Tuscaloosa landscape at golden hour",
+    "vision_check": "PASS (photo confirmed by OpenRouter vision gate)"
+  },
+  "support_scene": {
+    "file": "public/images/tuscaloosa-al-support-scene-v2.webp",
+    "dimensions": "1024x768 (4:3)",
+    "description": "One pregnant woman + one professional doula in Tuscaloosa birth studio",
+    "vision_check": "PASS (anatomy pass - no defects, one pregnant woman confirmed)"
+  },
+  "provider_photos": [
+    {"file": "public/images/doulas/tuscaloosa-al-birthing-by-your-design.webp", "provider": "Birthing by Your Design"},
+    {"file": "public/images/doulas/tuscaloosa-al-suga-sweet-birth-services.webp", "provider": "Suga Sweet Birth Services"},
+    {"file": "public/images/doulas/tuscaloosa-al-gentle-childbirth-services.webp", "provider": "Gentle Childbirth Services"}
+  ],
+  "hospital_images": [
+    {"file": "public/images/hospitals/dch-regional-medical-center-tuscaloosa-al.webp", "dimensions": "400x300"},
+    {"file": "public/images/hospitals/northport-medical-center-tuscaloosa-al.webp", "dimensions": "400x300"}
+  ],
+  "cities_ts_edit": "Updated heroImage and supportSceneImage to -v2 files via Python heredoc",
+  "validation": "npx tsx scripts/validate-city-data.ts tuscaloosa-al - 0 errors, 0 image issues",
+  "build": "npm run build - exit 0, 343 pages built, tuscaloosa-al page emitted at dist/birth-support/tuscaloosa-al/index.html"
+}
