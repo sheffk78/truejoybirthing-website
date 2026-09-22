@@ -1,0 +1,46 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "tuscaloosa-al",
+  "stage": "video_outreach",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 4,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 25,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the True Joy Birthing Tuscaloosa city page and explicitly names both hospitals in the claim (DCH Regional Medical Center and Northport Medical Center), matching the claim's content.",
+      "claim": "Tuscaloosa delivery hospitals named in the video match the live city page (DCH Regional Medical Center and Northport Medical Center).",
+      "url": "https://truejoybirthing.com/birth-support/tuscaloosa-al/",
+      "quote": "Most Tuscaloosa families deliver at DCH Regional Medical Center or Northport Medical Center, both part"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly states that Alabama Medicaid covers doula services, matching the claim, and it is plausible FAQ-style text for a True Joy Birthing birth-support page for Tuscaloosa, AL.",
+      "claim": "Alabama Medicaid covers doula services \u00e2\u0080\u0094 matches the video insurance scene.",
+      "url": "https://truejoybirthing.com/birth-support/tuscaloosa-al/",
+      "quote": "Yes. Alabama Medicaid covers doula services for eligible"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote names both provider businesses (Birthing By Your Design and Suga Sweet Birth Services) and fits plausibly on a True Joy Birthing Tuscaloosa birth-support page, supporting the claim that these providers are listed there.",
+      "claim": "Providers Crystina Hughes (Birthing By Your Design) and Kirsten Green (Suga Sweet Birth Services) are listed on the live page, matching the video provider scenes.",
+      "url": "https://truejoybirthing.com/birth-support/tuscaloosa-al/",
+      "quote": "Birthing By Your Design and Suga Sweet Birth Services offer full birth packages"
+    },
+    {
+      "index": 3,
+      "verdict": "NOT_ENOUGH_INFO",
+      "reason": "The quote appears to be the video's title and fits the Tuscaloosa doula subject matter, but nothing in the quote verifies that this title matches the one used in video-embeds.ts or the VideoObject schema, so the claimed match cannot be confirmed.",
+      "claim": "The uploaded YouTube video carries the matching title used in video-embeds.ts and the VideoObject schema.",
+      "url": "https://www.youtube.com/watch?v=GRcgrDh8hAI",
+      "quote": "Tuscaloosa AL Doula and Birth Plan Guide: Costs, Hospitals and Medicaid"
+    }
+  ],
+  "checked_at": "2026-09-21T18:57:41-06:00"
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "tuscaloosa-al",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-21T18:54:40Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Video rendered (277s, Remotion, Shelbi/Voxtral TTS), uploaded as NEW public embeddable YouTube video, thumbnail derived from hero, embedded on live page (verified), provider outreach sent via tjb-batch-outreach.py (1 sent, 2 providers had no email on file).",
+  "sources": [
+    {
+      "claim": "Tuscaloosa delivery hospitals named in the video match the live city page (DCH Regional Medical Center and Northport Medical Center).",
+      "url": "https://truejoybirthing.com/birth-support/tuscaloosa-al/",
+      "quote": "Most Tuscaloosa families deliver at DCH Regional Medical Center or Northport Medical Center, both part"
+    },
+    {
+      "claim": "Alabama Medicaid covers doula services â matches the video insurance scene.",
+      "url": "https://truejoybirthing.com/birth-support/tuscaloosa-al/",
+      "quote": "Yes. Alabama Medicaid covers doula services for eligible"
+    },
+    {
+      "claim": "Providers Crystina Hughes (Birthing By Your Design) and Kirsten Green (Suga Sweet Birth Services) are listed on the live page, matching the video provider scenes.",
+      "url": "https://truejoybirthing.com/birth-support/tuscaloosa-al/",
+      "quote": "Birthing By Your Design and Suga Sweet Birth Services offer full birth packages"
+    },
+    {
+      "claim": "The uploaded YouTube video carries the matching title used in video-embeds.ts and the VideoObject schema.",
+      "url": "https://www.youtube.com/watch?v=GRcgrDh8hAI",
+      "quote": "Tuscaloosa AL Doula and Birth Plan Guide: Costs, Hospitals and Medicaid"
+    }
+  ],
+  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/tuscaloosa-al-city-guide.mp4",
+  "video_mb": 19.9,
+  "youtube_id": "GRcgrDh8hAI",
+  "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/yt-thumb-tuscaloosa-al.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "provider": "Crystina Hughes (Birthing By Your Design)",
+      "status": "no_email",
+      "to": null,
+      "message_id": null
+    },
+    {
+      "provider": "Kirsten Green (Suga Sweet Birth Services)",
+      "status": "no_email",
+      "to": null,
+      "message_id": null
+    },
+    {
+      "provider": "Natia J. Nixon (Gentle Childbirth Services)",
+      "status": "sent",
+      "to": "bobbie@gentlechildbirth.org",
+      "message_id": "vps-20260922004841905283"
+    }
+  ]
+}
