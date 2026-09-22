@@ -3,9 +3,9 @@
   "slug": "tuscaloosa-al",
   "model": "atlas:latest",
   "fields_checked": 10,
-  "model_calls_ok": 1,
-  "model_calls_err": 1,
+  "model_calls_ok": 2,
+  "model_calls_err": 0,
   "verdict": "approved",
   "findings": [],
-  "checked_at": "2026-09-21T18:20:13-06:00"
+  "checked_at": "2026-09-21T18:26:34-06:00"
 }

@@ -4560,15 +4560,7 @@
     "url": "https://truejoybirthing.com/birth-support/tuscaloosa-al/",
     "built": true,
     "build_status": "built",
-    "population": 0,
-    "last_pipeline_run": "2026-09-21T23:49:16Z",
-    "preflight_gate": "full_preflight",
-    "preflight_result": "PASS",
-    "deploy_status": "SUCCESS",
-    "support_scene_version": "v3",
-    "yt_thumbnail_regenerated": true,
-    "cf_cache_purged": true,
-    "vision_verdict": "all_pass"
+    "population": 0
   },
   {
     "slug": "addison-il",

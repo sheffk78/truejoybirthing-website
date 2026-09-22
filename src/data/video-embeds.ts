@@ -1947,4 +1947,25 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: 258,
   },
 
+  "tuscaloosa-al": {
+    videoId: "GRcgrDh8hAI",
+    title: "Tuscaloosa AL Doula and Birth Plan Guide",
+    description: "Watch the full Tuscaloosa AL Doula and Birth Plan Guide â all in about 4:37.",
+    duration: 277,
+    uploadDate: "2026-09-21T00:00:00-06:00",
+    chapters: [
+      [0, "Start here"],
+      [12, "What this guide covers"],
+      [29, "DCH Regional Medical Center"],
+      [65, "Northport Medical Center"],
+      [101, "Crystina Hughes"],
+      [128, "Kirsten Green"],
+      [153, "Natia J. Nixon"],
+      [178, "Free Birth Plan App"],
+      [202, "Doula costs"],
+      [225, "Medicaid and insurance"],
+      [260, "Build your birth plan"],
+    ],
+  },
+
 };
