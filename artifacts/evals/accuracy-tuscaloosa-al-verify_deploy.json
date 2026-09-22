@@ -1,0 +1,62 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "tuscaloosa-al",
+  "stage": "verify_deploy",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 6,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 83,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the project's preflight result file and directly states the preflight passed with 0 failures, matching the claim.",
+      "claim": "Preflight passed with 0 failures for tuscaloosa-al",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/.preflight-result.json",
+      "quote": "PREFLIGHT PASSED: 0 failures, 0 warning(s)"
+    },
+    {
+      "index": 1,
+      "verdict": "NOT_ENOUGH_INFO",
+      "reason": "The quote is just the opening doctype tag of an HTML file, which is too generic to confirm the build succeeded or that the output pertains to the tuscaloosa-al page.",
+      "claim": "Build succeeded for tuscaloosa-al",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/dist/index.html",
+      "quote": "<!doctype html><html"
+    },
+    {
+      "index": 2,
+      "verdict": "NOT_ENOUGH_INFO",
+      "reason": "The quote is only the bare domain name, which is too short and generic to provide any evidence that the deploy succeeded or that the Tuscaloosa city page returns a 200 status.",
+      "claim": "Deploy succeeded via deploy.sh - city page returns 200",
+      "url": "https://truejoybirthing.com/birth-support/tuscaloosa-al/",
+      "quote": "truejoybirthing.com"
+    },
+    {
+      "index": 3,
+      "verdict": "NOT_ENOUGH_INFO",
+      "reason": "The quote is merely the MIME type string 'image/webp', which is too short and generic to verify that the image serves correctly from the CDN.",
+      "claim": "Support scene v3 serves correctly from CDN",
+      "url": "https://truejoybirthing.com/images/tuscaloosa-al-support-scene-v3.webp",
+      "quote": "image/webp"
+    },
+    {
+      "index": 4,
+      "verdict": "NOT_ENOUGH_INFO",
+      "reason": "The quote 'image/webp' is merely a MIME type string with no content that could confirm whether the YouTube thumbnail was regenerated from the hero image or matches its silhouette.",
+      "claim": "YT thumbnail regenerated from hero and matches hero silhouette",
+      "url": "https://truejoybirthing.com/images/yt-thumb-tuscaloosa-al.webp",
+      "quote": "image/webp"
+    },
+    {
+      "index": 5,
+      "verdict": "NOT_ENOUGH_INFO",
+      "reason": "The quote 'success' is merely the Cloudflare API response field name, which appears in every API response regardless of whether the purge actually succeeded, making it too short and generic to confirm the claim.",
+      "claim": "CF edge cache purged successfully",
+      "url": "https://api.cloudflare.com/client/v4/zones/39d6803936f2bb7d01b5255be6117d1c/purge_cache",
+      "quote": "success"
+    }
+  ],
+  "checked_at": "2026-09-21T18:07:49-06:00"
+}

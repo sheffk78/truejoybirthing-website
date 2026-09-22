@@ -1,0 +1,47 @@
+{
+  "slug": "tuscaloosa-al",
+  "stage": "verify_deploy",
+  "produced_at": "2026-09-22T00:03:33Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Full preflight passed 0 failures. Fixed G24/G54 (G73 anatomy FAIL on support scene) by regenerating with new seed, version-bumped to v3. Fixed G22/G23 (YT thumbnail mismatch) by regenerating from hero via render-yt-thumbnail.cjs. Build succeeded, deploy succeeded, CF cache purged.",
+  "sources": [
+    {
+      "claim": "Preflight passed with 0 failures for tuscaloosa-al",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/.preflight-result.json",
+      "quote": "PREFLIGHT PASSED: 0 failures, 0 warning(s)"
+    },
+    {
+      "claim": "Build succeeded for tuscaloosa-al",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/dist/index.html",
+      "quote": "<!doctype html><html"
+    },
+    {
+      "claim": "Deploy succeeded via deploy.sh - city page returns 200",
+      "url": "https://truejoybirthing.com/birth-support/tuscaloosa-al/",
+      "quote": "truejoybirthing.com"
+    },
+    {
+      "claim": "Support scene v3 serves correctly from CDN",
+      "url": "https://truejoybirthing.com/images/tuscaloosa-al-support-scene-v3.webp",
+      "quote": "image/webp"
+    },
+    {
+      "claim": "YT thumbnail regenerated from hero and matches hero silhouette",
+      "url": "https://truejoybirthing.com/images/yt-thumb-tuscaloosa-al.webp",
+      "quote": "image/webp"
+    },
+    {
+      "claim": "CF edge cache purged successfully",
+      "url": "https://api.cloudflare.com/client/v4/zones/39d6803936f2bb7d01b5255be6117d1c/purge_cache",
+      "quote": "success"
+    }
+  ],
+  "preflight_exit": 0,
+  "deploy_status": "SUCCESS",
+  "live_http": 200,
+  "vision_verdict_file": "artifacts/gates/vision/tuscaloosa-al.json",
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  }
+}
