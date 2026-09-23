@@ -15,6 +15,7 @@ from collections import defaultdict
 PROSE_DIR = "/tmp/tjb-prose"
 
 def tokens(text):
+    if not text: return []
     return re.sub(r"[^a-z0-9 ]", " ", text.lower()).split()
 
 def trigrams(toks):
@@ -39,8 +40,8 @@ for fn in os.listdir(PROSE_DIR):
 # Precompute: combined prose trigrams + shape vector
 grams, shapes, words = {}, {}, {}
 for slug, d in cities.items():
-    text = " ".join([d.get("culture",""), d.get("heroLocalDetail",""), d.get("midwifeInfo",""),
-                     " ".join(d.get("hospitalParagraphs",[])), " ".join(d.get("faqAnswers",[]))])
+    text = " ".join([d.get("culture",""), d.get("heroLocalDetail",""), str(d.get("midwifeInfo") or ""),
+                     " ".join(str(x) for x in d.get("hospitalParagraphs",[])), " ".join(str(x) for x in d.get("faqAnswers",[]))])
     tk = tokens(text)
     words[slug] = len(tk)
     grams[slug] = trigrams(tk)
