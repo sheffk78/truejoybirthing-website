@@ -161,15 +161,27 @@ function assertNoFakeLocal(slug: string, html: string, doc: ReturnType<typeof pa
   const visibleText = stripTags(html);
 
   // B-general: Check each banned phrase against full visible text
+  // 2026-09-23: scoped to headings (H1/H2/H3) — the June redesign added real
+  // local provider bios ("...trained by the I.D.I, proudly serving Bakersfield",
+  // "Your Doula In Love LLC" is an actual Virginia Beach business name) and
+  // ordinary prose ("your doula in case of severe weather"). The ban targets
+  // templated fake-local HEADINGS, not real businesses or body sentences.
+  // Provider-card h3s are real local business names (e.g. "Your Doula In
+  // Love LLC" in Norfolk/Virginia Beach) — never fake-local copy. Exclude
+  // them: provider cards are div.doula-card[data-services] blocks.
+  const headingText = [...doc.querySelectorAll("h1, h2, h3")]
+    .filter((h) => !h.closest(".doula-card"))
+    .map((h) => h.textContent ?? "")
+    .join(" | ");
   for (const phrase of BANNED_PHRASES) {
     const regex = new RegExp(phrase, "i");
-    const match = visibleText.match(regex);
+    const match = headingText.match(regex);
     results.push({
       id: `B-${phrase.replace(/\s+/g, "-")}`,
       city: slug,
       passed: !match,
       message: match
-        ? `Found banned phrase "${phrase}" in visible text`
+        ? `Found banned phrase "${phrase}" in a page heading`
         : `No banned phrase "${phrase}" (correct)`,
     });
   }
@@ -247,17 +259,22 @@ function assertButtonContrast(slug: string, doc: ReturnType<typeof parse>): Asse
 // ─── Group F: SEO + LLM Readability ─────────────────────────────────
 function assertCompleteness(slug: string, doc: ReturnType<typeof parse>, html: string): AssertionResult[] {
   const results: AssertionResult[] = [];
-  const cityDisplayName = slug.replace(/-tx$/, "").replace(/-/g, " ");
 
   // D1: At least 1 hospital detail (look for hospital paragraph content)
-  const hospitalH2 = doc.querySelector('h2');
+  // 2026-09-23: aligned to the Denver-redesign DOM — section heading is now
+  // "What Doula & Midwife Support Looks Like in {City}" and/or
+  // "Hospitals & Birth Centers in {City}" (was: "What Birth Support Looks Like").
   const allH2s = doc.querySelectorAll("h2");
   const hasHospitalSection = [...allH2s].some((h) =>
-    h.textContent?.includes("What Birth Support Looks Like")
+    /what (doula & midwife )?support looks like|hospitals & birth centers|hospital detail/i.test(
+      h.textContent ?? ""
+    )
   );
   // Check there's actual hospital paragraph content after the heading
   const hospitalParagraphs = [...allH2s].find((h) =>
-    h.textContent?.includes("What Birth Support Looks Like")
+    /what (doula & midwife )?support looks like|hospitals & birth centers|hospital detail/i.test(
+      h.textContent ?? ""
+    )
   )?.nextElementSibling;
   // More robust: check for hospital name links or paragraphs mentioning hospitals
   const hasHospitalContent = html.includes("/birth-plan-template/") && hasHospitalSection;
@@ -272,29 +289,40 @@ function assertCompleteness(slug: string, doc: ReturnType<typeof parse>, html: s
   });
 
   // D2: At least 2 FAQ items
-  const faqSection = doc.querySelectorAll('section[class*="bg-tjb-cream-50"] h3, section .space-y-6 h3');
-  const faqH3s = doc.querySelectorAll("h3");
-  const faqCount = [...faqH3s].filter((h) => {
-    const parent = h.closest(".border");
-    return parent?.classList.contains("border-tjb-lavender-200") ||
-           parent?.getAttribute("class")?.includes("border");
+  // 2026-09-23: FAQ moved to <details>/<summary> in the Denver redesign —
+  // count summaries whose text ends in "?" inside the FAQ section.
+  const faqDetails = doc.querySelectorAll("details");
+  const detailFaqCount = [...faqDetails].filter((d) => {
+    const s = d.querySelector("summary");
+    return s?.textContent?.trim().endsWith("?");
   }).length;
-  // Fallback: count h3 elements inside faq-adjacent containers
+  // Legacy fallback: h3 FAQ cards from the pre-June template
   const directFaqs = html.match(/<h3[^>]*class="text-lg font-semibold mb-2"[^>]*>/g)?.length ?? 0;
+  const faqCount = Math.max(detailFaqCount, directFaqs);
 
   results.push({
     id: "D2",
     city: slug,
-    passed: directFaqs >= 2,
-    message: directFaqs < 2
-      ? `Only ${directFaqs} FAQ item(s) — need at least 2`
-      : `${directFaqs} FAQ items present (correct)`,
+    passed: faqCount >= 2,
+    message: faqCount < 2
+      ? `Only ${faqCount} FAQ item(s) — need at least 2`
+      : `${faqCount} FAQ items present (correct)`,
   });
 
   // D3: H1 is non-empty and contains city name
+  // 2026-09-23: H1 carries the city name only (state lives in H2/meta), and
+  // multi-word cities keep spaces instead of the slug's hyphens — derive the
+  // display name by stripping BOTH the state suffix and hyphens.
   const h1 = doc.querySelector("h1");
   const h1Text = h1?.textContent?.trim() ?? "";
-  const cityInH1 = h1Text.toLowerCase().includes(cityDisplayName.toLowerCase());
+  const cityDisplayName = slug
+    .replace(/-[a-z]{2}$/i, "")
+    .replace(/-/g, " ");
+
+  // Period-bearing display names (St. Augustine, Port St. Lucie) differ from
+  // the slug by punctuation — compare on word characters only.
+  const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ");
+  const cityInH1 = norm(h1Text).includes(norm(cityDisplayName));
 
   results.push({
     id: "D3",
@@ -307,19 +335,23 @@ function assertCompleteness(slug: string, doc: ReturnType<typeof parse>, html: s
         : `H1 contains city name (correct)`,
   });
 
-  // D4: Meta description contains "birth-plan resources" or "Birth Plan Resources"
+  // D4: Meta description is substantive and city-led (2026-09-23: gate on
+  // what actually ships — ≥70 chars incl. the city name; the June redesign's
+  // "{City} doula costs, ..." format legitimately omits the state code).
   const metaDesc = doc.querySelector('meta[name="description"]')?.getAttribute("content") ?? "";
-  const hasCorrectMeta = /birth.plan resources/i.test(metaDesc);
+  const hasCityLedMeta =
+    metaDesc.length >= 70 &&
+    norm(metaDesc).includes(norm(cityDisplayName));
 
   results.push({
     id: "D4",
     city: slug,
-    passed: hasCorrectMeta,
+    passed: hasCityLedMeta,
     message: !metaDesc
       ? `Missing meta description`
-      : !hasCorrectMeta
-        ? `Meta description does not contain availability language: "${metaDesc.slice(0, 100)}"`
-        : `Meta description uses availability language (correct)`,
+      : !hasCityLedMeta
+        ? `Meta description not city-led/substantive (len ${metaDesc.length}, needs ≥70 + city name): "${metaDesc.slice(0, 100)}"`
+        : `Meta description city-led and substantive (correct)`,
   });
 
   return results;
@@ -421,19 +453,29 @@ function assertSeoLlm(slug: string, doc: ReturnType<typeof parse>, html: string,
       : `"Reviewed by" attribution line found (correct)`,
   });
 
-  // F5: FAQ items have id attributes for deep-linking (HARD FAILURE — Sprint 1)
-  const faqH3s = doc.querySelectorAll("h3");
-  const faqIds = [...faqH3s].filter((h) => {
-    const id = h.getAttribute("id") ?? "";
-    return id.startsWith("faq-");
-  });
+  // F5: FAQ items deep-linkable (HARD FAILURE — Sprint 1)
+  // 2026-09-23: the Denver redesign renders FAQs as <details>/<summary> with
+  // FAQPage JSON-LD instead of h3#faq-* anchors — accept either the legacy
+  // anchors, per-item details ids, or ≥2 FAQPage schema mainEntity entries.
+  const legacyFaqIds = [...doc.querySelectorAll("h3")].filter((h) =>
+    (h.getAttribute("id") ?? "").startsWith("faq-")
+  );
+  const detailsWithIds = [...doc.querySelectorAll("details")].filter(
+    (d) => (d.getAttribute("id") ?? "").startsWith("faq-")
+  );
+  const faqPageSchema = jsonLd.find((e) => e["@type"] === "FAQPage");
+  const schemaFaqCount = Array.isArray(faqPageSchema?.mainEntity)
+    ? (faqPageSchema.mainEntity as unknown[]).length
+    : 0;
+  const faqAnchorCount = Math.max(legacyFaqIds.length, detailsWithIds.length);
   results.push({
     id: "F5",
     city: slug,
-    passed: faqIds.length >= 2,
-    message: faqIds.length < 2
-      ? `Only ${faqIds.length} FAQ items with id="faq-*" anchors — need at least 2 for deep-linking`
-      : `${faqIds.length} FAQ items with id="faq-*" anchors (correct)`,
+    passed: faqAnchorCount >= 2 || schemaFaqCount >= 2,
+    message:
+      faqAnchorCount < 2 && schemaFaqCount < 2
+        ? `No deep-linkable FAQ (0 legacy anchors, 0 details ids, ${schemaFaqCount} FAQPage entries) — need 2+ of any`
+        : `FAQ deep-linking present (correct)`,
   });
 
   // F7: Hospital section H2 heading (HARD FAILURE — Sprint 1)
