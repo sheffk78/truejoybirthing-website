@@ -1,5 +1,5 @@
 {
-  "slug": "gaithersburg-md",
+  "slug": "stamford-ct",
   "stage": "build",
   "mode": "stage_emission",
   "exit_code": 0,
@@ -17,7 +17,7 @@
     },
     "S2": {
       "status": "PASS",
-      "detail": "OG image og-city-gaithersburg-md-v2.webp (89664 bytes \u2265 30KB)"
+      "detail": "OG image og-city-stamford-ct.webp (57238 bytes \u2265 30KB)"
     },
     "S4": {
       "status": "PASS",
@@ -25,7 +25,7 @@
     },
     "S6": {
       "status": "PASS",
-      "detail": "publishedDate = \"2026-07-12\""
+      "detail": "publishedDate = \"2026-07-13\""
     },
     "S7": {
       "status": "PASS",
@@ -45,7 +45,7 @@
     },
     "G8": {
       "status": "PASS",
-      "detail": "gaithersburg-md-birth-doula-hero.webp is a real photograph (high color count)"
+      "detail": "stamford-ct-birth-doula-skyline-v3.webp is a real photograph (high color count)"
     },
     "G70": {
       "status": "PASS",
@@ -57,23 +57,23 @@
     },
     "G72": {
       "status": "PASS",
-      "detail": "meta description 152 chars, complete"
+      "detail": "meta description 151 chars, complete"
     },
     "G25": {
       "status": "PASS",
-      "detail": "Hero image is 3:2 (1128x752, ratio=1.50)"
+      "detail": "Hero image is 3:2 (1200x800, ratio=1.50)"
     },
     "G29": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=25286) and locked Pattern B composition"
+      "detail": "OG has photo content (full_unique_colors=34278) and locked Pattern B composition"
     },
     "G35": {
       "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=25286) and locked Pattern B composition"
+      "detail": "OG has photo content (full_unique_colors=34278) and locked Pattern B composition"
     },
     "G64": {
       "status": "PASS",
-      "detail": "G64: OG og-city-gaithersburg-md-v2.webp matches canonical Pattern B composition"
+      "detail": "G64: OG og-city-stamford-ct.webp matches canonical Pattern B composition"
     },
     "G65": {
       "status": "PASS",
@@ -81,7 +81,7 @@
     },
     "G8a": {
       "status": "PASS",
-      "detail": "Silhouette confirmed (center=13.3 < top=189.2, top_colors=10878)"
+      "detail": "Silhouette confirmed (center=100.8 < top=203.7, top_colors=7033)"
     },
     "G62": {
       "status": "PASS",

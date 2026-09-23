@@ -3,13 +3,13 @@
   "stage": "build",
   "mode": "stage_emission",
   "exit_code": 0,
-  "passed": 18,
+  "passed": 20,
   "failed": 0,
   "skipped": 0,
   "results": {
     "G66": {
       "status": "PASS",
-      "detail": "norwalk-ct block has no duplicate keys (28 other cities carry duplicate keys \u2014 cleanup queue)"
+      "detail": "no duplicate object keys in any city block"
     },
     "S1": {
       "status": "PASS",
@@ -47,6 +47,18 @@
       "status": "PASS",
       "detail": "norwalk-ct-birth-doula-hero-v3.webp is a real photograph (high color count)"
     },
+    "G70": {
+      "status": "PASS",
+      "detail": "no doubled Level/NICU badge text"
+    },
+    "G71": {
+      "status": "PASS",
+      "detail": "no skeleton placeholder text"
+    },
+    "G72": {
+      "status": "PASS",
+      "detail": "meta description 154 chars, complete"
+    },
     "G25": {
       "status": "PASS",
       "detail": "Hero image is 3:2 (1200x800, ratio=1.50)"
@@ -74,10 +86,6 @@
     "G62": {
       "status": "PASS",
       "detail": "G62: Hero AVIF files not stale (or not present)"
-    },
-    "G68": {
-      "status": "PASS",
-      "detail": "G68: hero norwalk-ct-birth-doula-hero-v3.webp is compositionally unique (closest other-city hero: arlington-heights-il-birth-doula-hero-v2.webp, d=9/64)"
     }
   }
 }
