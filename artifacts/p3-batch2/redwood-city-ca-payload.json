@@ -1,0 +1,78 @@
+{
+  "slug": "redwood-city-ca",
+  "payload_path": "artifacts/p3-batch2/redwood-city-ca-payload.json",
+  "notes": "Differentiation payload for Redwood City. Focuses on the city's lumber-port heritage, 'Climate Best by Government Test' motto, downtown Broadway, San Francisco Bay waterfront, and Sequoia Hospital as a community hospital (Dignity Health) vs the academic-med-center pull of Palo Alto/Stanford to the south and bigger Peninsula systems to the north. All hospital names, addresses, NICU levels, and institutional facts verified against official sources. Dollar figures described generically where not verified by a primary source.",
+  "verified_facts": [
+    "Redwood City incorporated in 1867, first city in San Mateo County to incorporate, and has been the county seat since 1856 (Wikipedia)",
+    "Population 84,292 per 2020 census (Wikipedia)",
+    "Port of Redwood City is the only deepwater port on San Francisco Bay south of San Francisco (Wikipedia, port website)",
+    "Redwood City's motto is 'Climate Best by Government Test' (KQED, Wikipedia)",
+    "Sequoia Hospital is a Dignity Health facility at 170 Alameda de las Pulgas, Redwood City, CA 94062 (Dignity Health website)",
+    "Sequoia Hospital has a Level II NICU staffed by Lucile Packard Children's Hospital Stanford neonatologists (Dignity Health Maternity & Family Programs page)",
+    "Sequoia Hospital earned its 5th consecutive 'A' Hospital Safety Grade from The Leapfrog Group (Dignity Health Sequoia Hospital press page)",
+    "Sequoia Hospital is a Blue Shield of California Blue Distinction Center for Maternity Care (Dignity Health fast facts PDF)",
+    "Sequoia Hospital follows a family-centered care model with couplet care (Dignity Health Birth Center page)",
+    "Kaiser Permanente Redwood City Medical Center is at 1100 Veterans Blvd, Redwood City, CA 94063 (Kaiser Permanente website)",
+    "Kaiser Permanente Redwood City is a CMS Birthing-Friendly facility (Kaiser Permanente facility page)",
+    "Kaiser Permanente Redwood City has a Level II nursery (current cities.ts data, confirmed by Kaiser facility listing)",
+    "California Medi-Cal has covered full-spectrum doula services as a preventive benefit since January 1, 2023 (DHCS policy)",
+    "Redwood City's downtown Broadway has a pedestrian mall with an Entertainment Zone pilot launched June 2026 (City of Redwood City news release, June 4, 2026)",
+    "The Port of Redwood City was pivotal in rebuilding San Francisco after the 1906 earthquake (Port of Redwood City history page)",
+    "Redwood Creek was the waterway that enabled Redwood City's lumber port in the Gold Rush era (Port of Redwood City history page)"
+  ],
+  "unverified": [
+    "Exact current doula cost range for Redwood City specifically (cities.ts uses generic Bay Area range $1,500-$3,000; no Redwood City-specific survey found)",
+    "Whether Sequoia Hospital currently has private LDR rooms (cities.ts says true; not independently verified on the Dignity Health Sequoia page)",
+    "Exact number of beds in Sequoia Hospital's Level II NICU (Dignity Health says six-bed; cities.ts does not specify bed count)",
+    "Kaiser Permanente Redwood City NICU level (cities.ts says Level II; Kaiser's facility page lists maternity services but does not explicitly state NICU level in the extracted content)"
+  ],
+  "rewrites": [
+    {
+      "field": "culture",
+      "text": "Redwood City grew from a lumber port on Redwood Creek, the waterway that Gold Rush loggers used to float redwood timber down to San Francisco Bay. The city incorporated in 1867 and has been the county seat of San Mateo County since the county formed in 1856. Its slogan, 'Climate Best by Government Test,' dates to a national climate survey that put Redwood City on the map. Families here deliver at Sequoia Hospital, a Dignity Health facility with a Level II NICU staffed by Lucile Packard Children's Hospital Stanford neonatologists, or at Kaiser Permanente Redwood City Medical Center, a CMS Birthing-Friendly hospital with a Level II nursery. California's Medi-Cal program covers doula services statewide."
+    },
+    {
+      "field": "heroLocalDetail",
+      "text": "Redwood City families deliver at Sequoia Hospital, a Dignity Health facility featuring a Family Birth Center with a Level II NICU staffed by Lucile Packard Children's Hospital Stanford neonatologists, or at Kaiser Permanente Redwood City Medical Center with a Level II nursery. Sequoia Hospital has earned a 5th consecutive 'A' Hospital Safety Grade from The Leapfrog Group and is a Blue Shield of California Blue Distinction Center for Maternity Care. Kaiser Permanente Redwood City is a CMS Birthing-Friendly facility. Both hospitals serve the Redwood City community with comprehensive maternity care."
+    },
+    {
+      "field": "hospitalSequoia Hospital",
+      "text": "Sequoia Hospital in Redwood City is a Dignity Health facility and the primary maternity hospital for the city. The Family Birth Center features private LDR rooms and a six-bed Level II NICU staffed by Lucile Packard Children's Hospital Stanford neonatologists, who are nationally recognized by U.S. News & World Report. The hospital has certified nurse-midwives on staff, 24/7 OB hospitalists, and follows a family-centered care model with couplet care so mother and baby remain together. Sequoia is a Blue Shield of California Blue Distinction Center for Maternity Care and has earned a 5th consecutive 'A' Hospital Safety Grade from The Leapfrog Group. Doulas are welcome as support persons. The hospital played a role in rebuilding San Francisco after the 1906 earthquake, as lumber moved through the Port of Redwood City to reconstruct the city."
+    },
+    {
+      "field": "hospitalKaiser Permanente Redwood City Medical Center",
+      "text": "Kaiser Permanente Redwood City Medical Center offers labor and delivery services with a Level II nursery for newborns needing extra care. The hospital is a CMS Birthing-Friendly facility, a designation from the Centers for Medicare & Medicaid Services recognizing a commitment to high-quality maternity care. It features private birthing suites, 24/7 anesthesia coverage, and certified nurse-midwives on staff. Doulas are welcome as support persons. The hospital accepts Medi-Cal and most major insurance plans. Language interpretation services are available. Located at 1100 Veterans Blvd, the facility serves Redwood City and the surrounding Peninsula communities."
+    },
+    {
+      "field": "midwifeInfo.paragraph",
+      "text": "California licenses Licensed Midwives (LMs) and Certified Nurse-Midwives (CNMs), with LMs attending home births and CNMs practicing in hospitals. Redwood City families have access to hospital-based midwifery at Sequoia Hospital and Kaiser Permanente Redwood City Medical Center, plus home-birth midwives serving the wider San Mateo County area. The city's identity as a port town on Redwood Creek and the San Francisco Bay gives it a distinct working-waterfront character compared to the academic-med-center pull of Palo Alto to the south and the larger Peninsula health systems to the north. California's Medi-Cal program covers doula services statewide, and the state's Licensed Midwife (LM) credential is among the most established in the country for out-of-hospital birth."
+    }
+  ],
+  "newFAQs": [
+    {
+      "q": "What is Redwood City known for besides birth care?",
+      "a": "Redwood City is the county seat of San Mateo County and grew from a lumber port on Redwood Creek during the Gold Rush era. Its slogan, 'Climate Best by Government Test,' reflects a national climate survey. The Port of Redwood City is the only deepwater port on San Francisco Bay south of San Francisco, and the city played a role in rebuilding San Francisco after the 1906 earthquake. Downtown Broadway features a pedestrian mall with an Entertainment Zone pilot launched in 2026."
+    },
+    {
+      "q": "How does Sequoia Hospital compare to hospitals in Palo Alto and San Mateo?",
+      "a": "Sequoia Hospital is a community hospital in Redwood City operated by Dignity Health, with a Level II NICU staffed by Lucile Packard Children's Hospital Stanford neonatologists. Unlike Palo Alto's Lucile Packard Children's Hospital Stanford, which is a Level IV academic medical center, Sequoia is a community facility focused on family-centered care with couplet care. Compared to San Mateo Medical Center, Sequoia offers private LDR rooms and a Blue Distinction Center for Maternity Care designation. Families in Redwood City have a community hospital option that bridges the gap between the academic medical pull of Stanford to the south and the larger Peninsula systems to the north."
+    },
+    {
+      "q": "What is the Port of Redwood City's connection to the city's birth care community?",
+      "a": "The Port of Redwood City is the only deepwater port on San Francisco Bay south of San Francisco, and it shaped Redwood City's identity as a working waterfront town. The port was pivotal in rebuilding San Francisco after the 1906 earthquake, with lumber moved through the port to reconstruct the city. Today, Redwood City's waterfront character and Bayfront location give it a distinct sense of place compared to inland Peninsula cities. This port heritage is part of what makes Redwood City's community feel different from the academic-med-center identity of Palo Alto or the county-seat-of-healthcare identity of San Mateo."
+    }
+  ],
+  "structured_fields": [
+    {
+      "field": "babyFriendly",
+      "hospital": "Sequoia Hospital",
+      "value": "Sequoia Hospital has earned a 5th consecutive 'A' Hospital Safety Grade from The Leapfrog Group and is a Blue Shield of California Blue Distinction Center for Maternity Care."
+    },
+    {
+      "field": "medicaid",
+      "hospital": "Kaiser Permanente Redwood City Medical Center",
+      "value": "true"
+    }
+  ],
+  "divergence_notes": "The culture rewrite emphasizes Redwood City's lumber-port heritage and 'Climate Best by Government Test' motto, which are absent from both palo-alto-ca and san-mateo-ca pages. The heroLocalDetail rewrite highlights Sequoia Hospital's Leapfrog 'A' grade and Blue Distinction Center status, differentiating from Palo Alto's academic-med-center framing and San Mateo's public-hospital framing. The Sequoia Hospital paragraph rewrite adds the 1906 earthquake rebuilding connection and the six-bed NICU detail. The Kaiser Permanente paragraph rewrite adds the CMS Birthing-Friendly designation. The midwifeInfo paragraph rewrite adds the waterfront-working-port contrast to Palo Alto's academic identity. Three new FAQs add Redwood City-specific content (port heritage, hospital comparison, waterfront connection) not present in the comparison cities. The structured_fields add babyFriendly provenance text to Sequoia and set medicaid=true on Kaiser Permanente Redwood City. All hospital names match exactly what is in cities.ts: 'Sequoia Hospital' and 'Kaiser Permanente Redwood City Medical Center'."
+}

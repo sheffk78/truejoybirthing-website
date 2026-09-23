@@ -1,0 +1,33 @@
+{
+  "slug": "temple-tx",
+  "rewrites": [
+    {
+      "field": "culture",
+      "text": "Temple grew up around the railroad and the medical campus that Scott and White founded in 1904. Today the city is defined by its healthcare corridor. Baylor Scott and White Medical Center Temple anchors the west side of town, and the Fort Cavazos military community adds a steady stream of families into Bell County. Birth care here runs the gamut from a Level IV regional NICU and teaching hospital to freestanding midwifery led birth centers and a growing community of birth doulas. This is a medical city, not a river town, and families settle here as much for the hospital economy as for the historic downtown and the pace of Central Texas life."
+    },
+    {
+      "field": "heroLocalDetail",
+      "text": "Baylor Scott and White Medical Center Temple sits on the west side of the city off of IH 35 and Loop 363, with a dedicated women's services pavilion and the region's most advanced NICU. The Starting Place Birth and Wellness Center is downtown at 720 N 3rd Street, near the railroad district, offering an out of hospital option for low risk families. Most Temple doulas cover births at both the hospital and the birth center, so you can plan your birth your way regardless of setting. The temple downtown historic district offers brick main street walking, local shops, and a slower pace that appeals to families who want to be close to the medical campus without living in a college or river town."
+    },
+    {
+      "field": "hospitalBaylor Scott & White Medical Center - Temple",
+      "text": "Baylor Scott and White Medical Center Temple is the flagship teaching hospital of the Baylor Scott and White system and the regional referral center for Central Texas obstetrics. It holds the State of Texas highest Level IV designation for both maternal care and neonatal intensive care, the most advanced birthing hospital within about 60 miles. The dedicated women services pavilion offers private labor suites, round the clock OB hospitalists and neonatology coverage, lactation support, and a Level IV NICU for even the most premature or high risk infants. Expect a large, busy, high volume maternity service where the medical team sees thousands of births a year and your doula or midwife can join you as a support person. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to prepare."
+    }
+  ],
+  "newFAQs": [
+    {
+      "q": "Why do families choose Temple for birth care?",
+      "a": "Families choose Temple because it is the regional hub for high risk and premature births in Central Texas. Baylor Scott and White Medical Center Temple holds Level IV designation for both maternal care and neonatal intensive care, which means even the most complex pregnancies can be managed close to home. For low risk families, The Starting Place offers a midwife led out of hospital option downtown. Temple also sits at the crossroads of I 35 and US 190, halfway between Austin and Waco, which makes it accessible for families across Bell County."
+    },
+    {
+      "q": "What other reasons do families live in Temple besides the hospital?",
+      "a": "Many Temple families are drawn by the medical economy. Baylor Scott and White and the affiliated medical community are among the largest employers in Bell County. The Fort Cavazos military presence also brings a steady flow of families who value the proximity to advanced care. Beyond healthcare, Temple has a historic downtown with brick main street shopping, local parks, and a slower Central Texas pace that appeals to families who want community roots without the pace of a larger city."
+    },
+    {
+      "q": "How is Temple different from New Braunfels for birth care?",
+      "a": "New Braunfels is a river and heritage town in the Texas Hill Country, where birth care is shaped by the Comal and Guadalupe rivers and a strong German settler history. Temple is a medical city built around its hospital campus, with Baylor Scott and White as the flagship provider and a Level IV NICU that serves as the regional referral center. The two cities offer very different birth landscapes. New Braunfels leans toward river life and tourism, while Temple leans toward medical infrastructure, the Fort Cavazos military community, and families who plan their lives around access to high level hospital care."
+    }
+  ],
+  "structured_fields": [],
+  "divergence_notes": "Temple is differentiated from New Braunfels by its medical city identity. New Braunfels leans on river heritage, German settler history, and a Level II hospital with Baby Friendly designation. Temple anchors on Baylor Scott and White as the flagship teaching hospital with a Level IV NICU, the Fort Cavazos military economy, and a historic downtown that attracts families who prioritize access to high level obstetric and neonatal care over river recreation. The culture rewrite emphasizes the medical corridor and hospital economy, the hero local detail names both the hospital and the downtown birth center and frames the city around its medical identity, and the three new FAQs explicitly contrast Temple against New Braunfels so the page gives families a clear reason to choose Temple."
+}

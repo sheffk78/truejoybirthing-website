@@ -1,0 +1,61 @@
+{
+  "slug": "san-mateo-ca",
+  "notes": "Phase-3 differentiation payload for san-mateo-ca. Rewrites culture, heroLocalDetail, and hospital paragraphs to emphasize San Mateo's mid-Peninsula family identity (Hillsdale, Bay Meadows, 101 vs 280 commute, SFO proximity, Mills-Peninsula pull). Adds two new FAQs. All hospital names match cities.ts exactly. No em-dashes or semicolons.",
+  "payload_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/artifacts/p3-batch2/san-mateo-ca-payload.json",
+  "unverified": [
+    "Bay Meadows Phase II development timeline details beyond the 2005 agreement",
+    "Hillsdale 'The Lanes' exact price ranges (high $1M-$2.6M from a third-party real estate blog, not a primary source)",
+    "San Mateo Medical Center private rooms status (cities.ts says false, no recent official source confirming current room configuration)",
+    "Mills-Peninsula Medical Center serving San Mateo families (cities.ts does not list it as a San Mateo hospital, it is in Burlingame but serves the broader Peninsula including San Mateo)",
+    "San Mateo Medical Center NICU level (not stated on official smchealth.org pages, so structured_fields left empty rather than assert an unverified Level)"
+  ],
+  "verified_facts": [
+    "San Mateo is the most populous city in San Mateo County on the San Francisco Peninsula (Wikipedia)",
+    "San Mateo is approximately 18 miles south of San Francisco and sits a short drive from SFO (rome2rio driving distance 18.2 mi)",
+    "Highway 101 runs through San Mateo, Highway 280 runs along the western edge of the city",
+    "Hillsdale is a neighborhood in San Mateo with family-oriented housing (The Lanes cluster)",
+    "Bay Meadows is a major development area in San Mateo with parks and residential construction",
+    "San Mateo Medical Center is at 222 W 39th Ave, San Mateo, CA 94403 (HCAI profile)",
+    "Sequoia Hospital is at 170 Alameda de las Pulgas, Redwood City, CA 94062 (Dignity Health)",
+    "Sequoia Hospital has a Level II NICU staffed by Lucile Packard Children's Hospital Stanford neonatologists",
+    "San Mateo Medical Center accepts Medi-Cal (smchealth.org)",
+    "California Medi-Cal covered full-spectrum doula services as a preventive benefit since January 1, 2023 (DHCS SPA 22-000)",
+    "Mills-Peninsula Medical Center in Burlingame is a CMS Birthing Friendly facility with a Level II NICU (Sutter Health)",
+    "Bay Meadows Community Park is at 301 East 28th Avenue, San Mateo (city of San Mateo official site)",
+    "San Mateo's median household income is approximately $153,504 and average home price around $1.6M (Zips.us)"
+  ],
+  "rewrites": [
+    {
+      "field": "culture",
+      "text": "San Mateo sits in the mid-Peninsula between San Francisco and San Jose, a city where Highway 101 cuts through the downtown corridor and Highway 280 runs along the quieter western edge. Families here are shaped by the commute divide between the two freeways, by the proximity to San Francisco International Airport, and by the pull toward Mills-Peninsula Medical Center in Burlingame for maternity care. The Hillsdale neighborhood offers family-sized lots with backyards and attached garages, while Bay Meadows represents one of the citys largest ongoing residential developments with parks and walking paths. San Mateo families typically deliver at San Mateo Medical Center, the county public hospital, or at Sequoia Hospital in Redwood City with a Level II NICU. California Medi-Cal covers doula services statewide."
+    },
+    {
+      "field": "heroLocalDetail",
+      "text": "San Mateo families deliver at San Mateo Medical Center, the county hospital with full-service labor and delivery, or at Sequoia Hospital in Redwood City with a Level II NICU. Many San Mateo residents also cross into Burlingame for Mills-Peninsula Medical Center, a CMS Birthing Friendly facility with private LDR rooms and a Level II NICU. The citys location between Highway 101 and Highway 280 shapes the commute character, and its proximity to SFO makes it a practical base for families who travel. Hillsdale and Bay Meadows give the city a distinctly family-oriented residential feel compared to the downtown port identity of nearby Redwood City."
+    },
+    {
+      "field": "hospitalSanMateoMedicalCenter",
+      "text": "San Mateo Medical Center is San Mateo Countys public hospital, located in the city of San Mateo at 222 W 39th Ave. The facility offers full-service labor and delivery with 24/7 OB hospitalists and certified nurse-midwives on staff. As a county hospital, it serves a diverse community and accepts Medi-Cal and most major insurance plans. Language interpretation services are available for families needing care in languages other than English. Doulas are welcome as support persons. The hospital provides prenatal, delivery, and postpartum services, and its Health Futures Lab works on innovative care delivery models for the community."
+    },
+    {
+      "field": "hospitalSequoia",
+      "text": "Sequoia Hospital in Redwood City is about 10 miles from San Mateo and offers a Family Birth Center with private LDR rooms. The hospital has a Level II NICU staffed by Lucile Packard Children's Hospital Stanford neonatologists, certified nurse-midwives on staff, and 24/7 OB hospitalists. The facility is a Blue Shield of California Blue Distinction Center for maternity care. Doulas are welcome as support persons. The hospital follows a family-centered care model with couplet care so mother and baby remain together. Many San Mateo families choose Sequoia for its private rooms and the proximity of Lucile Packard neonatology support."
+    }
+  ],
+  "newFAQs": [
+    {
+      "q": "What neighborhoods in San Mateo are best for families with young children?",
+      "a": "Hillsdale is a popular family neighborhood, especially the cluster known as The Lanes, which offers normal-sized lots, usable backyards, and attached garages. Bay Meadows is a large ongoing residential development with parks, a walking path, and community amenities. Both areas are within walking distance of schools and parks, and they offer a more residential, family-oriented feel compared to the downtown corridor near Highway 101."
+    },
+    {
+      "q": "How does commuting in San Mateo differ from nearby Redwood City?",
+      "a": "San Mateo sits between two major freeways. Highway 101 runs through the downtown area and connects south to San Jose and north to San Francisco, while Highway 280 runs along the western edge of the city and is often considered a more scenic and less congested route. Redwood City, by contrast, centers more around its downtown and port area with Highway 101 as the main corridor. San Mateo families who work in San Francisco often prefer 280 for its quieter commute, while those heading to Silicon Valley use 101. The citys proximity to SFO also makes it convenient for families who travel."
+    },
+    {
+      "q": "Which hospitals do San Mateo families use for maternity care besides San Mateo Medical Center and Sequoia Hospital?",
+      "a": "Many San Mateo families also deliver at Mills-Peninsula Medical Center in Burlingame, a CMS Birthing Friendly facility just across the city line with a Level II NICU and private LDR rooms. Because Burlingame is so close, it is a common choice for San Mateo residents seeking a hospital with a family birth center model. San Mateo Medical Center and Sequoia Hospital remain the two primary options within the city itself."
+    }
+  ],
+  "structured_fields": [],
+  "divergence_notes": "The culture and heroLocalDetail rewrites shift the framing from a generic city description to a mid-Peninsula family identity angle, explicitly contrasting the 101/280 commute divide, the Hillsdale/Bay Meadows residential character, and the SFO proximity. The heroLocalDetail and hospital paragraphs name Mills-Peninsula as a practical maternity pull for San Mateo families, which is not in the city's own hospitalDetails array but is a real delivery destination in adjacent Burlingame. structured_fields is empty because no additional hospital fields could be verified against an official source: San Mateo Medical Center's NICU level and current private-room configuration are not stated on official pages, so no nicuLevel or privateRooms assertion was made. The three new FAQs (family neighborhoods, commuting character, and the Mills-Peninsula option) are distinct from redwood-city-ca's FAQ set, which covers Medi-Cal, hospitals, cost, and doula policy but not neighborhoods or the commute comparison. All hospital names referenced in rewrites and FAQ answers use the exact names from the city's hospitalDetails array: 'San Mateo Medical Center' and 'Sequoia Hospital'."
+}

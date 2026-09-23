@@ -1,0 +1,61 @@
+{
+  "slug": "chesapeake-va",
+  "payload_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/artifacts/p3-batch2/chesapeake-va-payload.json",
+  "notes": "Differentiation payload for chesapeake-va page. Angle: Chesapeake as the Southside's suburban-conservation city \u00e2\u0080\u0094 Great Bridge lock heritage on the Atlantic Intracoastal Waterway, the Chesapeake Arboretum and Dismal Swamp Canal trails, farm-stand corridors, and its own community hospital (The BirthPlace at Chesapeake Regional Medical Center) vs Norfolk's dense urban naval-base medical scene. All named institutions, addresses, and NICU levels verified against official sources. Unverifiable dollar figures described generically.",
+  "rewrites": [
+    {
+      "field": "culture",
+      "text": "Chesapeake is the Southside's suburban-conservation city, where neighborhoods sit among farmland and canal waterways rather than dense urban corridors. Great Bridge anchors the western side of the city with its lock heritage tied to the Atlantic Intracoastal Waterway, and the Dismal Swamp Canal Trail runs through the eastern marshland. The birth community here is family-oriented and spread out \u00e2\u0080\u0094 families tend to know their neighbors, and the pace of life is slower than Norfolk's naval-base bustle. Chesapeake Regional Medical Center's BirthPlace serves as the primary hospital, and the Hampton Roads midwifery community reaches into Chesapeake from both sides of the waterway."
+    },
+    {
+      "field": "heroLocalDetail",
+      "text": "At 38 weeks in Chesapeake, you are probably thinking about the drive to The BirthPlace on Battlefield Boulevard near I-64. That stretch of Battlefield can back up during commute hours, especially around the Greenbrier shopping area. If you are delivering during rush hour, give yourself an extra 20 minutes. The Great Bridge Lock on the Atlantic Intracoastal Waterway and the Dismal Swamp Canal Trail offer flat walking paths for those final-weeks strolls. The Chesapeake Arboretum has 3.5 miles of color-blazed trails through 45 acres of wood-chip paths, and the Friday Farmers Market at 70 Knells Ridge Blvd brings fresh local produce every Friday from April through November."
+    },
+    {
+      "field": "midwifeInfo.paragraph",
+      "text": "Virginia licenses Certified Nurse-Midwives (CNMs) and Certified Professional Midwives (CPMs), with CNMs practicing in hospitals and CPMs attending out-of-hospital births. Virginia was among the first states to cover doula services through Medicaid (effective January 2024), making Chesapeake a strong market for doula-supported births. Chesapeake Regional Medical Center's BirthPlace provides hospital-based maternity care, and the Hampton Roads midwifery community includes both hospital and home-birth practitioners serving Chesapeake families. Unlike Norfolk's concentration around naval-base medicine, Chesapeake's maternity care sits in a community hospital setting with a suburban, family-centered feel."
+    }
+  ],
+  "newFAQs": [
+    {
+      "q": "What makes Chesapeake different from Norfolk for birth support?",
+      "a": "Chesapeake is a suburban-conservation city on the Southside, built around farmland, canal waterways, and neighborhood communities rather than a dense urban core. Norfolk is a Navy town with a strong military-medical presence and two major hospitals right next to each other in Ghent. Chesapeake has one dedicated maternity hospital \u00e2\u0080\u0094 The BirthPlace at Chesapeake Regional Medical Center \u00e2\u0080\u0094 and a slower, more spread-out feel. Families here tend to drive a bit farther to get to their hospital, but they trade that for a quieter, more residential birth experience."
+    },
+    {
+      "q": "Can I walk near the water in Chesapeake during my third trimester?",
+      "a": "Yes. The Dismal Swamp Canal Trail runs 8.5 miles along the canal and borders the Great Dismal Swamp National Wildlife Refuge, with flat, accessible terrain. The Great Bridge Lock on the Atlantic Intracoastal Waterway is a historic site right in the city, and the Chesapeake Arboretum offers 3.5 miles of color-blazed trails through 45 acres. These are all low-stress walking options for those final weeks."
+    },
+    {
+      "q": "Are there farm stands or farmers markets in Chesapeake?",
+      "a": "Yes. The Chesapeake Health Department Friday Farmers Market runs every Friday from 10 a.m. to 2 p.m. at 70 Knells Ridge Blvd, from April through November, with more than 20 vendors and food trucks. It started in 2017 and originally served WIC participants. Some vendors accept SNAP/EBT and Virginia Fresh Match. The farm-stand corridor along Route 17 and the Battlefield Boulevard area gives Chesapeake families access to local produce year-round."
+    }
+  ],
+  "structured_fields": [
+    {
+      "hospital": "The BirthPlace at Chesapeake Regional Medical Center",
+      "field": "doulaPolicy",
+      "value": "Doulas are generally welcome. Confirm current visitor policies during your hospital tour."
+    },
+    {
+      "hospital": "The BirthPlace at Chesapeake Regional Medical Center",
+      "field": "visitingPolicy",
+      "value": "Confirm current visitor policies during your hospital tour, as they may shift seasonally."
+    }
+  ],
+  "unverified": [
+    "Chesapeake's cesarean rate of 31.6% and maternal mortality rate of 20.9 are from CDC NCHS 2023 data but may not reflect the most recent local hospital-level figures.",
+    "The Friday Farmers Market vendor count of 'more than 20' comes from a 2025 VDH news release and may have changed for the 2026 season.",
+    "The Dismal Swamp Canal Trail length of 8.5 miles is from the Virginia Department of Wildlife Resources site and may differ from the trail map on the city website.",
+    "Virginia Medicaid doula coverage effective January 2024 is cited from the Virginia DMAS program, specific reimbursement rates and managed-care plan enrollment details were not independently verified against a primary DMAS source."
+  ],
+  "verified_facts": [
+    "The BirthPlace at Chesapeake Regional Medical Center is at 736 Battlefield Blvd N, Chesapeake, VA 23320, with a Level III NICU \u00e2\u0080\u0094 verified on chesapeakeregional.com.",
+    "The Great Bridge Canal Lock was built in 1931-1932 and is a contributing structure in the Albemarle and Chesapeake Canal Historic District, part of the Atlantic Intracoastal Waterway \u00e2\u0080\u0094 verified on the City of Chesapeake document center.",
+    "The Chesapeake Arboretum trail system encompasses approximately 45 acres and is 3.5 miles in total length, maintained largely by volunteers \u00e2\u0080\u0094 verified on cityofchesapeake.net.",
+    "The Dismal Swamp Canal Trail has 8.5 miles of converted road bed and borders the Great Dismal Swamp National Wildlife Refuge \u00e2\u0080\u0094 verified on dwr.virginia.gov.",
+    "The Chesapeake Health Department Friday Farmers Market is at 70 Knells Ridge Blvd, open Fridays 10 a.m. to 2 p.m. from April through November \u00e2\u0080\u0094 verified on vdh.virginia.gov.",
+    "Virginia Medicaid covers doula services effective January 1, 2024 \u00e2\u0080\u0094 verified from Virginia DMAS and VDH sources.",
+    "Chesapeake Regional Healthcare employs approximately 1,377 people and was founded in 1976 \u00e2\u0080\u0094 verified from Tracxn and hospital website.",
+    "The Albemarle and Chesapeake Canal Virginia Cut was constructed in 1859, is 9.1 miles long and 90 feet wide \u00e2\u0080\u0094 verified on the City of Chesapeake document center."
+  ]
+}

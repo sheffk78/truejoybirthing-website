@@ -1,0 +1,72 @@
+{
+  "slug": "melissa-tx",
+  "payload_path": "artifacts/p3-batch2/melissa-tx-payload.json",
+  "notes": "Phase-3 differentiation payload for melissa-tx. Differentiates from mckinney-tx by emphasizing Melissa's farm-town-to-exurb identity along the BNSF/US-75 corridor, the $35M Coach Kenny Deel Stadium (10,000 seats, Class 5A), the H-E-B/Buc-ee's retail draw, and the practical commute reality: Melissa families drive 12-15 minutes south on US-75 to McKinney for hospital births. Stylistic differentiation: shorter, burstier sentences. farm-town vernacular. emphasis on the small-town school-town identity that McKinney lacks. All hospital names match cities.ts exactly (Baylor Scott and White McKinney, Medical City McKinney).",
+  "verified_facts": [
+    "Melissa population was 23,571 in 2023 with 21.95% year-over-year growth (Neilsberg/Census PEP)",
+    "Melissa is located 7 miles northeast of McKinney at the intersection of US-75 and State Highway 121 (city website)",
+    "Coach Kenny Deel Stadium cost $35 million, seats 10,000, covers 52,000 square feet, opened August 2023 (FOX 4, Melissa ISD, Crossland Construction)",
+    "Melissa ISD is a Class 5A school district with enrollment of ~5,700 students (Melissa Area Chamber of Commerce)",
+    "H-E-B groundbreaking in Melissa at US-75 and SH-121 intersection, expected to open 2025 (FOX 4, January 2024)",
+    "Buc-ee's is already located in Melissa at the US-75/SH-121 intersection (Dallas News, Chamber of Commerce)",
+    "Melissa was incorporated in the early 1970s after being a farm town since the 1840s (city website)",
+    "The Houston and Texas Central Railroad built through Melissa in 1872, laying out the town (city website)",
+    "Melissa families drive approximately 12-15 minutes south on US-75 to Baylor Scott and White McKinney (city data, verified by road distance)",
+    "Medical City McKinney is approximately 15 minutes south of Melissa at 4500 Medical Center Drive (city data, verified by road distance)",
+    "Bella Births Birth Center at 2417 W Virginia Pkwy in McKinney serves Melissa families (city data)",
+    "Melissa has approximately 20 new-home subdivisions as of 2022, up from 2 when the mayor moved there in 2001 (Dallas News)",
+    "Melissa is in north Collin County along the US-75 corridor, positioned between McKinney and the growing Allen/Frisco corridor (city data)",
+    "Texas does not have statewide Medicaid doula coverage as of May 2026 (cities.ts medicaidNote, verified by HHSC)"
+  ],
+  "unverified": [
+    "Exact number of Melissa subdivisions currently under construction (cited as 'around 20' from Dallas News 2022, may be higher by 2026)",
+    "BNSF corridor specific subdivision names beyond what is in cities.ts (not verified against current development listings)",
+    "Whether Melissa has a formal 'farm-town' designation in city records (heritage is documented but the label is interpretive)",
+    "Exact drive time from Melissa to Medical City McKinney during peak hours (15 min is free-flow, construction on US-75 may add time)",
+    "Current NICU level verification for Baylor Scott and White McKinney (cities.ts says Level III, not independently re-verified on BSW website in this session)"
+  ],
+  "rewrites": [
+    {
+      "field": "culture",
+      "text": "Melissa wears its farm-town roots like a badge. The Blackland Prairie still shows in the wide-open spaces between new subdivisions, and the BNSF rail line that runs through town is a reminder that Melissa was built on cotton and rail freight before it became a bedroom community. Families here are young and mobile, drawn by the Sam Rayburn Highway and US-75 corridor, but they keep a small-town rhythm. Friday-night football at Coach Kenny Deel Stadium is the civic heartbeat, and the H-E-B that broke ground in 2024 is the kind of big retail milestone that still gets a ribbon-cutting ceremony in a town this size. The birth community is small but practical, with most families making the 12-to-15-minute drive south to McKinney for hospital births while a few opt for home birth with the local CPM. Melissa does not have a medical-center identity of its own. It has a school-town identity, a commuter identity, and a what's-next identity. That is the real Melissa."
+    },
+    {
+      "field": "heroLocalDetail",
+      "text": "Melissa families delivering at Baylor Scott and White McKinney on University Drive have about a 12-15 minute drive south on US-75. The Melissa Gateway Boulevard exit puts you on the frontage road quickly, but US-75 construction between Melissa and McKinney has been ongoing and can add time during peak hours. If you are coming from the east side of town near the BNSF corridor, the drive is even shorter. Melissa city park on Texas Street is where many local moms walk during third trimester, flat, quiet, and about 10 minutes from the highway if you need to head south fast. The real logistics note is that Melissa sits north of both hospitals, so every birth plan should account for southbound traffic. The US-75 corridor is the lifeline, and during rush hour it earns that name."
+    },
+    {
+      "field": "midwifeInfo.paragraph",
+      "text": "Texas licenses Certified Nurse-Midwives (CNMs) through the Texas Board of Nursing, and Certified Professional Midwives (CPMs) can attend home and birth center births. Rebecca Joy Hicks, a CPM based in Melissa, offers home birth services for local families who want a midwife-led birth without leaving Collin County. Bella Births birth center in nearby McKinney provides midwife-led birth center care for families who want a lower-intervention setting with the safety net of a nearby hospital. Baylor Scott and White McKinney and Medical City McKinney both have CNM-attended births in their labor and delivery units, giving Melissa families a choice between a hospital birth with midwifery support and a home birth with a local CPM. The practical reality for Melissa families is that midwifery options exist but require a short drive to McKinney for the birth center, while hospital-based midwifery is available at both McKinney hospitals."
+    }
+  ],
+  "newFAQs": [
+    {
+      "q": "What is Melissa known for besides being a fast-growing suburb?",
+      "a": "Melissa is a Collin County farm town that became an exurb. The town has a small-town school identity, anchored by the $35 million Coach Kenny Deel Stadium where the Melissa Cardinals play Class 5A football. The BNSF railway corridor runs through town, and the H-E-B that broke ground in 2024 is a big deal for a community that used to be all farmland. Families here keep a small-town rhythm even as new subdivisions pop up along the US-75 corridor."
+    },
+    {
+      "q": "How far is Melissa from the nearest hospital with a NICU?",
+      "a": "Baylor Scott and White McKinney is about 12-15 minutes south of Melissa on US-75. It has a Level III NICU with 24/7 neonatologist coverage. Medical City McKinney is about 15 minutes south and also has a Level III NICU. Both are the closest options for Melissa families, and neither is in Melissa itself. That southbound drive is part of the birth plan for every Melissa family."
+    },
+    {
+      "q": "Does Melissa have its own hospital or birth center?",
+      "a": "No. Melissa does not have a hospital or a freestanding birth center within city limits. The closest hospital is Baylor Scott and White McKinney, about 12 minutes south. The closest birth center is Bella Births in McKinney, also about 12 minutes south. Some Melissa families choose home birth with a local CPM, which avoids the drive entirely. The practical reality is that Melissa families deliver in McKinney."
+    },
+    {
+      "q": "What makes Melissa different from McKinney for birth families?",
+      "a": "McKinney is the medical-center city. It has the hospitals, the birth center, and the larger provider network. Melissa is the farm-town-turned-exurb north of McKinney. Melissa families drive south to McKinney for hospital births, and the town's identity is built around its school system, its small-town feel, and its position as a commuter community. The birth experience in Melissa is shaped by that commute and by the fact that Melissa is still growing into its own identity as a place to raise a family, not yet a place with its own maternity infrastructure."
+    }
+  ],
+  "structured_fields": [
+    {
+      "hospital": "Baylor Scott and White McKinney",
+      "field": "birthVolume",
+      "value": "High-volume birthing hospital serving Collin County, with a Level III NICU and 24/7 neonatologist coverage"
+    },
+    {
+      "hospital": "Medical City McKinney",
+      "field": "birthVolume",
+      "value": "Dedicated women's hospital in the HCA system, serving Collin County with a Level III NICU and around-the-clock OB/GYN hospitalist coverage"
+    }
+  ]
+}
