@@ -1,16 +1,22 @@
 #!/usr/bin/env node
 /**
  * IndexNow — Submit all sitemap URLs to Bing/Yandex IndexNow API.
- * Run after every deploy: node scripts/submit-indexnow.js
- * Requires the key file at public/6c5140d8ec9c41b581322973c45c8fc1.txt
+ * Run after every deploy: node scripts/submit-indexnow.cjs
+ * Requires the key file at public/truejoybirthing2026indexnow.txt
  * Docs: https://www.indexnow.org/documentation
+ * NOTE: api.indexnow.org eventually bans keys that submit too aggressively
+ * (403 on everything). If this script starts 403ing again, generate a NEW
+ * alphanumeric key, add public/<newkey>.txt, and update KEY below.
  */
 const https = require('https');
 const fs = require('fs');
 const path = require('path');
 
 const SITE = 'https://truejoybirthing.com';
-const KEY = '6c5140d8ec9c41b581322973c45c8fc1';
+// 2026-09-23: original hex key 6c5140d8... was 403-blocked by api.indexnow.org
+// (key banned ~2026-09-07, every POST/GET returns 403). The alphanumeric key
+// below verifies 200 on both keyLocation and the API — verified live 2026-09-23.
+const KEY = 'truejoybirthing2026indexnow';
 const KEY_LOCATION = `${SITE}/${KEY}.txt`;
 
 // Parse sitemap-cities.xml from dist (sitemap-0.xml was retired when
