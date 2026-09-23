@@ -61,6 +61,7 @@ const schema = {
         { "@type": "Question", "name": "Can I edit the birth plan template?", "acceptedAnswer": { "@type": "Answer", "text": "The PDF is fillable, type directly into it or print it and fill it in by hand. For live updates, doula sharing, and a guided walkthrough, use the free True Joy Birthing app." } },
         { "@type": "Question", "name": "How is this different from a birth plan I find on Google?", "acceptedAnswer": { "@type": "Answer", "text": "Most free templates online are generic checklists. This one was built by a birth doula and organized around the decisions that actually come up in the delivery room, not just wish-list items." } },
         { "@type": "Question", "name": "When should I fill out my birth plan?", "acceptedAnswer": { "@type": "Answer", "text": "Most families start around 28-32 weeks. Earlier is fine too. The sooner you understand your options, the more confident you'll feel when the time comes." } },
+        { "@type": "Question", "name": "Can I use this birth plan template in Google Docs?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The template is available as a fillable PDF and also as a Google Docs version. Make a copy, edit it online, and share it with your partner or doula in real time. The Google Docs format works well for families who want to collaborate on the plan together before printing." } },
         { "@type": "Question", "name": "What's the difference between the PDF and the app?", "acceptedAnswer": { "@type": "Answer", "text": "The PDF is free, fillable, and designed for print, write in your preferences and bring hard copies to the hospital. The free app goes further: it walks you through each section with guided videos, lets you update your plan anytime, and shares your live plan with your doula or partner directly. Both cover the same five sections; the app is for families who want an interactive, always-current experience." } },
         { "@type": "Question", "name": "Is the video walkthrough really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The 5-video walkthrough is completely free, just enter your name and email and youll get immediate access to every module. No payment, no trial, no upsell. We ask for your email so we can send you the PDF and check in with tips as you fill out your plan." } },
         { "@type": "Question", "name": "How is the walkthrough different from the PDF?", "acceptedAnswer": { "@type": "Answer", "text": "The PDF is the template, the form you fill out. The walkthrough is a certified doula explaining what each section means, why each choice matters, and how to talk to your provider about it. They work together: download the PDF, then watch the videos as you fill it in." } }
@@ -71,8 +72,8 @@ const schema = {
 ---
 
 <Layout
-  title="Free Birth Plan Template PDF — Fillable & Printable"
-  description="Free fillable birth plan template by a certified doula. Your nurse can read it in 30 seconds. Covers labor through newborn care. PDF and app included."
+  title="Free Birth Plan Template PDF — Fillable, Printable & Google Docs"
+  description="Free fillable birth plan template PDF by a certified doula. Printable or use in Google Docs. Covers labor through newborn care. No email required."
   canonical="https://truejoybirthing.com/birth-plan-template/"
   ogImage="https://truejoybirthing.com/images/og/og-birth-plan-template.webp?v=2"
   ogType="article"
@@ -93,7 +94,7 @@ const schema = {
           <p class="eyebrow mb-3">Birth Plan</p>
           <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
           <h1 class="font-bold text-tjb-charcoal leading-[1.15] mb-4" style="font-size: clamp(2.25rem, 5vw, 3.75rem);">
-            Free birth plan template that actually works in the delivery room
+            Free Birth Plan Template — Fillable PDF, Printable &amp; Google Docs
           </h1>
           <!-- Author credibility strip -->
           <div class="flex items-center gap-2.5 mb-5">
@@ -703,6 +704,13 @@ const schema = {
         </details>
         <details class="group border-b border-tjb-lavender-300/40 pb-3">
           <summary class="flex items-center justify-between cursor-pointer py-2 list-none">
+            <h3 class="font-semibold text-tjb-charcoal text-lg">Can I use this birth plan template in Google Docs?</h3>
+            <span class="text-tjb-rose-500 text-xl transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <p class="text-tjb-gray leading-relaxed pb-2">Yes. The template works as a fillable PDF and also as a Google Docs version. Make a copy, edit it online, and share it with your partner or doula so you can work on it together before printing. Some families prefer Google Docs for the collaboration, then switch to the printed copy for the hospital bag.</p>
+        </details>
+        <details class="group border-b border-tjb-lavender-300/40 pb-3">
+          <summary class="flex items-center justify-between cursor-pointer py-2 list-none">
             <h3 class="font-semibold text-tjb-charcoal text-lg">What's the difference between the PDF and the app?</h3>
             <span class="text-tjb-rose-500 text-xl transition-transform group-open:rotate-45">+</span>
           </summary>
@@ -761,6 +769,22 @@ const schema = {
       </script>
       <p class="text-sm text-tjb-gray mt-3">100% free · fillable &amp; printable · no email required</p>
       <PdfSuccessCta source="pdf_direct" compact eventId="pdf-success-cta-direct" />
+
+      <!-- Three formats: PDF, Google Docs, App -->
+      <div class="mt-10 grid sm:grid-cols-3 gap-4 text-left max-w-2xl mx-auto">
+        <div class="bg-tjb-cream rounded-xl p-4 border border-tjb-lavender-200/60">
+          <p class="font-semibold text-tjb-charcoal text-sm mb-1">📄 Fillable PDF</p>
+          <p class="text-xs text-tjb-gray leading-relaxed">Type directly into it or print and fill in by hand. Works on any device.</p>
+        </div>
+        <div class="bg-tjb-cream rounded-xl p-4 border border-tjb-lavender-200/60">
+          <p class="font-semibold text-tjb-charcoal text-sm mb-1">📝 Google Docs</p>
+          <p class="text-xs text-tjb-gray leading-relaxed">Make a copy and edit online. Share with your partner or doula in real time.</p>
+        </div>
+        <div class="bg-tjb-cream rounded-xl p-4 border border-tjb-lavender-200/60">
+          <p class="font-semibold text-tjb-charcoal text-sm mb-1">📱 Free App</p>
+          <p class="text-xs text-tjb-gray leading-relaxed">Guided walkthrough, live updates, and doula sharing. <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180" class="text-tjb-rose-500 font-semibold">Get the app</a></p>
+        </div>
+      </div>
 
       <!-- Video walkthrough stays email-gated -->
       <div class="mt-12 pt-8 border-t border-tjb-lavender-200/50">
