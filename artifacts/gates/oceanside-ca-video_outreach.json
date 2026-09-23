@@ -2,9 +2,9 @@
   "slug": "oceanside-ca",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
-  "exit_code": 0,
+  "exit_code": 1,
   "passed": 8,
-  "failed": 0,
+  "failed": 1,
   "skipped": 0,
   "results": {
     "pre_render_gate": {
@@ -13,7 +13,7 @@
     },
     "video_file_exists": {
       "status": "PASS",
-      "detail": "video file 22.1MB >10MB"
+      "detail": "local mp4 cleaned post-upload (expected; YouTube upload + live embed verified)"
     },
     "youtube_upload": {
       "status": "PASS",
@@ -38,6 +38,10 @@
     "provider_photo_quality": {
       "status": "PASS",
       "detail": "all 6 provider photos are real images (>5KB, >100 colors)"
+    },
+    "video_content_city_match": {
+      "status": "FAIL",
+      "detail": "G67: video download failed: ERROR: [youtube] Bp6fv-NpoMs: Sign in to confirm you\u2019re not a bot. Use --cookies-from-browser or --cookies for the authe"
     }
   }
 }

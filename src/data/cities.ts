@@ -1470,7 +1470,7 @@ export const cities: Record<string, CityData> = {
     lat: 47.6062,
     lng: -122.3321,
     heroImage: "/images/seattle-wa-birth-doula-hero-v3.webp" ,
-    supportSceneImage: "/images/seattle-wa-support-scene-v3.webp" ,
+    supportSceneImage: "/images/seattle-wa-support-scene-v4.webp" ,
     supportSceneAlt: "A doula and an expectant mom walking a Seattle sidewalk with the Space Needle rising behind them" ,
     ogImage: "https://truejoybirthing.com/images/og-city-seattle-wa-v3.webp" ,
     midwifeInfo: {

@@ -1,0 +1,55 @@
+{
+ "slug": "seattle-wa",
+ "verdicts": [
+  {
+   "crop": "seattle-wa-hero-fig0.png",
+   "verdict": "pass",
+   "defects": [
+    "No AI-generated human figure is visible in the image; only a silhouette of a person is partially shown, making it impossible to inspect arms, fingers, joints, or facial features."
+   ],
+   "figure_count": 0,
+   "arms_seen": 0
+  },
+  {
+   "crop": "seattle-wa-hero-fig1.png",
+   "verdict": "pass",
+   "defects": [],
+   "figure_count": 1,
+   "arms_seen": 2
+  },
+  {
+   "crop": "seattle-wa-support-fig0.png",
+   "verdict": "pass",
+   "defects": [],
+   "figure_count": 2,
+   "arms_seen": 4
+  },
+  {
+   "crop": "seattle-wa-og-fig0.png",
+   "verdict": "pass",
+   "defects": [
+    "No visible arms or limbs on the figure in this crop; only the back of a hooded garment is visible. No anatomical defects can be assessed due to lack of visible anatomy."
+   ],
+   "figure_count": 1,
+   "arms_seen": 2
+  },
+  {
+   "crop": "seattle-wa-og-fig1.png",
+   "verdict": "pass",
+   "defects": [],
+   "figure_count": 1,
+   "arms_seen": 2
+  },
+  {
+   "crop": "seattle-wa-thumb-fig0.png",
+   "verdict": "pass",
+   "defects": [
+    "No visible anatomical defects in the figure. The silhouette is consistent with a human form, and no extra/missing limbs, fused fingers, melted joints, or distorted facial features are discernible in this crop. The figure appears to be a silhouette, so finer details cannot be confirmed."
+   ],
+   "figure_count": 1,
+   "arms_seen": 2
+  }
+ ],
+ "checked_at": "2026-09-23T01:16:16.401776+00:00",
+ "method": "ollama atlas:latest vision, temp=0, per-crop figure anatomy inspection"
+}

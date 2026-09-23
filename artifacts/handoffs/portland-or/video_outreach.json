@@ -2,19 +2,62 @@
   "slug": "portland-or",
   "stage": "video_outreach",
   "produced_at": "2026-08-01T00:00:00Z",
-  "worker_model": "deterministic-backfill",
-  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube 2jLTU5IPVW4 registered in video-embeds.ts; thumbnail on disk; 0 first-touch send(s) in canonical send log. Not fabricated.",
+  "completed_at": "2026-09-22T23:22:18Z",
+  "worker_model": "subagent-stage-completion",
+  "notes": "Video backfilled 2026-09-18 (YouTube 2jLTU5IPVW4, embedded in video-embeds.ts, pre-render gate 9/9 passed). First-touch provider outreach completed 2026-09-22 via VPS mail (shelbi@truejoybirthing.com) using portland-or-outreach-send.py: 4 personalized, M-checks-passing emails to Wildwood Birth Collective, Brave Birth Doula Care, Bridgetown Baby, and a Birth First Doulas re-outreach. Entries re-persisted to tjb-outreach-send-log.jsonl after the concurrent global orchestrator dropped the initial appends.",
   "video_file": null,
   "video_mb": null,
   "youtube_id": "2jLTU5IPVW4",
+  "youtube_url": "https://www.youtube.com/watch?v=2jLTU5IPVW4",
   "thumbnail_path": "public/images/yt-thumb-portland-or.png",
   "embed_verified": true,
-  "outreach": [],
+  "outreach": [
+    {
+      "to": "hello@wildwoodbirthpdx.com",
+      "provider": "Wildwood Birth Collective",
+      "type": "first-touch",
+      "template": "review-your-info",
+      "subject": "Can you review your info on True Joy Birthing, Portland?",
+      "message_id": "vps-20260922232120265457",
+      "status": "sent",
+      "ts": "2026-09-22T23:21:20Z"
+    },
+    {
+      "to": "hello@bravebirth.com",
+      "provider": "Brave Birth Doula Care",
+      "type": "first-touch",
+      "template": "review-your-info",
+      "subject": "Can you review your info on True Joy Birthing, Portland?",
+      "message_id": "vps-20260922232142512346",
+      "status": "sent",
+      "ts": "2026-09-22T23:21:42Z"
+    },
+    {
+      "to": "care@bridgetownbaby.com",
+      "provider": "Bridgetown Baby",
+      "type": "first-touch",
+      "template": "review-your-info",
+      "subject": "Can you review your info on True Joy Birthing, Portland?",
+      "message_id": "vps-20260922232200418054",
+      "status": "sent",
+      "ts": "2026-09-22T23:22:00Z"
+    },
+    {
+      "to": "info@birthfirstdoulas.com",
+      "provider": "Birth First Doulas",
+      "type": "re-outreach",
+      "template": "birthfirst-reoutreach",
+      "subject": "Following up on your Birth First Doulas listing (the Portland page has a video now)",
+      "message_id": "vps-20260922232218708859",
+      "status": "sent",
+      "ts": "2026-09-22T23:22:18Z"
+    }
+  ],
   "sources": [
     {
       "claim": "Video uploaded and embedded",
       "url": "https://www.youtube.com/watch?v=2jLTU5IPVW4",
-      "evidence": "video-embeds.ts registration + live page embed"
+      "evidence": "video-embeds.ts registration + live page embed (truejoybirthing.com/birth-support/portland-or/)"
     },
     {
       "claim": "Thumbnail on disk",
@@ -24,7 +67,7 @@
     {
       "claim": "First-touch sends on record",
       "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
-      "evidence": "0 sent non-followup row(s) with slug=portland-or"
+      "evidence": "4 sent first-touch row(s) with slug=portland-or (2026-09-22)"
     }
   ]
 }
