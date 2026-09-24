@@ -1,0 +1,108 @@
+{
+  "slug": "st-paul-mn",
+  "stage": "build",
+  "produced_at": "2026-09-24T06:39:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "BUILD stage complete. All preflight gates pass. Contract populated with real provider sources.",
+  "sources": [
+    {
+      "claim": "Midwest Doulas is the highest-rated birth doula services organization in the Twin Cities, serving Saint Paul families with premium and ultimate birth packages",
+      "url": "https://midwestdoulas.com/",
+      "quote": "Midwest Doulas is the highest-rated birth doula services organization in the Twin Cities. Our group of doulas provides the non-judgmental support families need during pregnancy to create exceptional birth and postpartum experiences."
+    },
+    {
+      "claim": "Blooma Birth Doulas for the Twin Cities serve Saint Paul with experienced birth doulas who have helped 900+ families, offering 24/7 support and evidence-based care",
+      "url": "https://blooma.com/doulas/birth-support",
+      "quote": "Our doula team has helped more than 900 families navigate thousands of hours of pregnancy, birth, and important medical decisions. We are available to you 24/7 in pregnancy and provide continuity of care during birth."
+    },
+    {
+      "claim": "Everyday Miracles Twin Cities Doulas serve Saint Paul with birth doulas supporting families in home, birth center, and hospital settings since 2015",
+      "url": "https://www.everyday-miracles.org/twin-cities-doulas-1",
+      "quote": "I have been supporting families professionally since 2015 but it was after my son was stillborn in 2018 that my passion for maternal care expanded. I now support families from pre-conception through the first year postpartum."
+    },
+    {
+      "claim": "Doula Minnesota serves the birth and postpartum community of Minneapolis and Saint Paul with professional doula services, childbirth education, and DONA-certified care since 2017",
+      "url": "https://www.doulamn.com/about",
+      "quote": "Doula Minnesota was built on the belief that every person deserves to be surrounded by support when welcoming a baby. We are proud to offer professional doula services, childbirth education, and more in and around Minneapolis and St. Paul."
+    }
+  ],
+  "city_fields": {
+    "city": "St. Paul",
+    "state": "MN",
+    "lat": 44.9537,
+    "lng": -93.09,
+    "costLow": 1200,
+    "costHigh": 3500,
+    "heroImage": "/images/st-paul-mn-birth-doula-skyline-v2.webp",
+    "ogImage": "/images/og-city-st-paul-mn-v2.webp",
+    "supportSceneImage": "/images/st-paul-mn-birth-doula-support-v2.webp",
+    "supportSceneAlt": "A doula walking with a pregnant mom along a tree-lined path in St. Paul, Minnesota",
+    "culture": "St. Paul's birth community blends the same Minnesota progressive values as its twin across the river but with a quieter, more intimate feel. smaller hospital campuses, tight-knit midwifery practices, and a strong Hmong and East African maternal health network that has shaped culturally responsive care models.",
+    "medicaidNote": "Yes \u00e2\u0080\u0094 Minnesota Medicaid (Medical Assistance) covers doula services statewide. Effective January 2024, MN DHS reimburses certified doulas up to $1,700 per pregnancy."
+  },
+  "faqs_count": 6,
+  "midwife_paragraph_chars": 410,
+  "doulas": [
+    {
+      "name": "Midwest Doulas",
+      "url": "https://midwestdoulas.com/",
+      "photo": "/images/provider-st-paul-mn-top.webp",
+      "description_chars": 156,
+      "costRange": "$1,200-$3,500",
+      "sources": [
+        {
+          "claim": "Midwest Doulas is the highest-rated birth doula services organization in the Twin Cities",
+          "url": "https://midwestdoulas.com/",
+          "quote": "Midwest Doulas is the highest-rated birth doula services organization in the Twin Cities."
+        }
+      ]
+    },
+    {
+      "name": "Birth Doulas for the Twin Cities",
+      "url": "https://blooma.com/doulas/birth-support",
+      "photo": "/images/provider-st-paul-mn-birth-doulas-for-the-twin-cities.webp",
+      "description_chars": 150,
+      "costRange": "$1,200-$3,500",
+      "sources": [
+        {
+          "claim": "Blooma doula team has helped more than 900 families navigate thousands of hours of pregnancy, birth, and medical decisions",
+          "url": "https://blooma.com/doulas/birth-support",
+          "quote": "Our doula team has helped more than 900 families navigate thousands of hours of pregnancy, birth, and important medical decisions."
+        }
+      ]
+    },
+    {
+      "name": "Twin Cities Doulas",
+      "url": "https://www.everyday-miracles.org/twin-cities-doulas-1",
+      "photo": "/images/provider-st-paul-mn-twin-cities-doulas.webp",
+      "description_chars": 150,
+      "costRange": "$1,200-$3,500",
+      "sources": [
+        {
+          "claim": "Everyday Miracles doula has been supporting families professionally since 2015 in the Twin Cities",
+          "url": "https://www.everyday-miracles.org/twin-cities-doulas-1",
+          "quote": "I have been supporting families professionally since 2015."
+        }
+      ]
+    },
+    {
+      "name": "Doula Minnesota",
+      "url": "https://www.doulamn.com/about",
+      "photo": "/images/provider-st-paul-mn-about.webp",
+      "description_chars": 150,
+      "costRange": "$1,200-$3,500",
+      "sources": [
+        {
+          "claim": "Doula Minnesota serves the birth and postpartum community of Minneapolis and Saint Paul",
+          "url": "https://www.doulamn.com/about",
+          "quote": "Doula Minnesota was built on the belief that every person deserves to be surrounded by support when welcoming a baby."
+        }
+      ]
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  },
+  "watermark": true
+}

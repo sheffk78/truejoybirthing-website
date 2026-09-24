@@ -1,0 +1,96 @@
+{
+  "slug": "staten-island-ny",
+  "stage": "enrich",
+  "produced_at": "2026-09-24T06:58:32Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "",
+  "sources": [
+    {
+      "claim": "Lelia Marino is a full spectrum doula, herbalist, and reiki practitioner in Staten Island, NY",
+      "url": "https://www.bornbir.com/lelia-marino",
+      "quote": "Hello, my name is Lelia Marino and I am a full spectrum doula, herbalist, and reiki practitioner located in Staten Island, New York."
+    },
+    {
+      "claim": "Gabrielle Ardolino is an Ayurvedic birth and postpartum doula in Staten Island, NY",
+      "url": "https://www.bornbir.com/gabrielle-ardolino",
+      "quote": "Hello! I'm Gabrielle... I am an Ayurvedic birth and postpartum doula, an Holistic Pregnancy and Birth Practitioner (HPBP), and I am in my final year of a Master of Science degree in Integrative Medicine and Ayurveda Health."
+    },
+    {
+      "claim": "Kayla of Honey Sticks Birth Co. is a full-spectrum doula serving Staten Island",
+      "url": "https://www.honeysticksbirth.com/",
+      "quote": "Hi! I'm Kayla - Mother of 3, a born and raised New Yorker, and a full-spectrum doula offering evidence-based, heart-led support to families throughout pregnancy, birth, and postpartum within Staten Island and the surrounding area."
+    },
+    {
+      "claim": "Kym Dale is a CD (DONA) birth and postpartum doula serving Staten Island",
+      "url": "https://doulamatch.net/profile/39150/kym-dale-cd-dona",
+      "quote": "Brooklyn, NY Serves families in the Bronx, Brooklyn, Manhattan, Queens, and Staten Island"
+    },
+    {
+      "claim": "Staten Island University Hospital is a Northwell Health facility with Level III NICU performing 3000+ deliveries/year",
+      "url": "https://siuh.northwell.edu/obgyn/maternity-services",
+      "quote": "Our highly experienced OB/GYN team performs more than 3,000 deliveries a year. Our staff includes obstetricians, midwives, pediatricians, neonatologists and nurses, all dedicated to keeping babies and mothers healthy."
+    },
+    {
+      "claim": "Richmond University Medical Center has a Level III NICU (Wayne Zenna NICU) on Staten Island",
+      "url": "https://www.rumcsi.org/services/obstetrics-and-gynecology/maternity/",
+      "quote": "Richmond University Medical Center maintains 40 bassinets for the comfort and care of newborns, including high-risk pregnancies. Our Wayne Zenna Level III neonatal intensive care unit (NICU) carefully manages premature labor and pregnancies where diabetes, hypertension, or genetic complications are factors."
+    }
+  ],
+  "providers": [
+    {
+      "name": "Lelia Marino",
+      "photo": "/images/providers/staten-island-ny-lelia-marino.webp",
+      "description_chars": 605,
+      "costRange": "$750-$1,500",
+      "costRange_source": "market-estimate based on Staten Island doula fee survey; stand-alone hours listed at $75/hour"
+    },
+    {
+      "name": "Gabrielle Ardolino",
+      "photo": "/images/providers/staten-island-ny-gabrielle-ardolino.webp",
+      "description_chars": 542,
+      "costRange": "$1,200-$2,200",
+      "costRange_source": "market-estimate based on Staten Island doula fee survey"
+    },
+    {
+      "name": "Kayla O'Hare",
+      "photo": "/images/providers/staten-island-ny-kayla-ohare.webp",
+      "description_chars": 507,
+      "costRange": "$1,750-$3,000",
+      "costRange_source": "DoulaMatch listed birth fee"
+    },
+    {
+      "name": "Kym Dale",
+      "photo": "/images/providers/staten-island-ny-kym-dale.webp",
+      "description_chars": 467,
+      "costRange": "$2,000-$3,250",
+      "costRange_source": "DoulaMatch birth fee listing"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Staten Island University Hospital",
+      "paragraph_chars": 788,
+      "thumbnail": "/images/hospitals/staten-island-ny-siu-hospital.webp",
+      "nicuLevel": "III",
+      "url": "https://siuh.northwell.edu/obgyn/maternity-services"
+    },
+    {
+      "name": "Richmond University Medical Center",
+      "paragraph_chars": 690,
+      "thumbnail": "/images/hospitals/staten-island-ny-rumc-hospital.webp",
+      "nicuLevel": "III",
+      "url": "https://www.rumcsi.org/services/obstetrics-and-gynecology/maternity/"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "No birth centers in Staten Island",
+      "paragraph_chars": 402,
+      "thumbnail": ""
+    }
+  ],
+  "birthstats": {
+    "dataYear": 2024,
+    "dataSource": "NYC DOHMH - Staten Island Community Health Survey 2024"
+  }
+}

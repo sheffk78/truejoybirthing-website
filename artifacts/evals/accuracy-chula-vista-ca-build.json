@@ -12,7 +12,7 @@
     {
       "index": 0,
       "verdict": "SUPPORTED",
-      "reason": "The quote appears on the sharp.com location page for Sharp Mary Birch Chula Vista and directly states the exact claim that it is the South Bay's largest provider of health care for women and infants.",
+      "reason": "The quote is from the sharp.com location page for Sharp Mary Birch Chula Vista and directly states the exact claim that it is the South Bay's largest provider of health care for women and infants.",
       "claim": "Sharp Mary Birch Chula Vista is the South Bay's largest provider of health care for women and infants",
       "url": "https://www.sharp.com/locations/sharp-mary-birch-chula-vista",
       "quote": "Take a virtual tour of Sharp Mary Birch Chula Vista, the South Bay's largest provider of health care for women and infants."
@@ -20,7 +20,7 @@
     {
       "index": 1,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from the official Sharp Chula Vista hospital page and explicitly states that all labor and delivery rooms are private with a dedicated bathroom and shower, directly supporting the claim.",
+      "reason": "The quote plausibly appears on the Sharp Chula Vista hospital page and directly states that all labor and delivery rooms are private with a dedicated bathroom and shower, matching the claim.",
       "claim": "Sharp Chula Vista L&D rooms are private with bathroom and shower",
       "url": "https://www.sharp.com/hospitals/chula-vista/",
       "quote": "After triage, you will labor and deliver your baby in one of our spacious suites that were made with your comfort in mind. All labor and delivery rooms are private with a dedicated bathroom and shower"
@@ -28,7 +28,7 @@
     {
       "index": 2,
       "verdict": "SUPPORTED",
-      "reason": "The quote from the August 2024 San Diego Union-Tribune article explicitly states that maternity services at Scripps Mercy Hospital Chula Vista were shut down, directly supporting the claim about the 2024 closure.",
+      "reason": "The quote from the San Diego Union-Tribune article explicitly states that maternity services at Scripps Mercy Hospital Chula Vista were shut down, matching both the claim and the URL's subject matter and 2024 date.",
       "claim": "Scripps Mercy Chula Vista closed its maternity ward in 2024",
       "url": "https://www.sandiegouniontribune.com/2024/08/04/scripps-chula-vista-closed-its-maternity-ward-why-are-pregnant-women-still-showing-up",
       "quote": "Shutting down maternity services at Scripps Mercy Hospital Chula Vista has not stopped pregnant women from showing up in its emergency department in need of obstetric services."
@@ -36,7 +36,7 @@
     {
       "index": 3,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from a doulamatch.net profile page for Lauren Williams and directly states 'Postpartum Doula Experience: 3 years and 20 families served,' which matches the claim's experience details and domain subject matter.",
+      "reason": "The quote is plausible text for a doulamatch.net profile page for Lauren Williams and directly supports the claim's key facts of 3 years of postpartum doula experience and 20 families served.",
       "claim": "Lauren Williams is a Certified Professional Postpartum Doula with 3 years and 20 families served",
       "url": "https://doulamatch.net/profile/42157/lauren-williams",
       "quote": "Postpartum Doula Experience: 3 years and 20 families served."
@@ -44,7 +44,7 @@
     {
       "index": 4,
       "verdict": "SUPPORTED",
-      "reason": "The quote is a typical DoulaMatch profile service-package listing for Laurel Krapivkin that explicitly includes both labor/delivery support and postpartum support, matching the claim of full-spectrum birth and postpartum support.",
+      "reason": "The quote is from Laurel Krapivkin's doula profile and details a labor support package covering prenatal, birth, and postpartum services, which plausibly supports the claim that she offers birth and postpartum support.",
       "claim": "Laurel Krapivkin offers full-spectrum birth and postpartum support",
       "url": "https://doulamatch.net/profile/29676/laurel-krapivkin",
       "quote": "Labor Support Package: Continuous email/text/phone support; Up to 2 prenatal visits; 24/7 on-call status starting at 38 weeks - 42 weeks; Support during labor and delivery; Immediate postpartum suppor"
@@ -52,7 +52,7 @@
     {
       "index": 5,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from a doulamatch.net profile page for Alma Fisher and explicitly states her fees include travel up to 25 miles each way along with mom and baby care, meal prep, and household tasks consistent with postpartum doula services, directly supporting the claim.",
+      "reason": "The quote is from a doulamatch.net profile for Alma Fisher and explicitly states fees include travel up to 25 miles each way along with mom and baby care, which directly supports the claim about postpartum care with 25-mile travel.",
       "claim": "Alma Fisher offers postpartum care with travel up to 25 miles",
       "url": "https://doulamatch.net/profile/41071/alma-fisher",
       "quote": "My fees include travel up to 25 miles each way, mom and baby care, meal prep, light housework (loading dishwasher, bottle washing, pump parts washing), baby laundry."
@@ -60,11 +60,11 @@
     {
       "index": 6,
       "verdict": "SUPPORTED",
-      "reason": "The quote is from a DoulaMatch profile for Taylor Maude Love and explicitly states she attends all hospitals, all birth centers, and any home birth, directly supporting the claim.",
+      "reason": "The quote is plausible profile text for a DoulaMatch profile page for Taylor Maude Love and directly states she attends all hospitals, all birth centers, and any home birth, matching the claim.",
       "claim": "Taylor Maude Love attends all hospital, birth center, and home births",
       "url": "https://doulamatch.net/profile/36718/taylor-maude-love",
       "quote": "Attends hospital births? All Hospitals. Attends birth center births? All Birth Centers. Attends home births? Any Home Birth."
     }
   ],
-  "checked_at": "2026-09-24T00:44:04-06:00"
+  "checked_at": "2026-09-24T00:47:27-06:00"
 }

@@ -1,0 +1,81 @@
+{
+  "slug": "chula-vista-ca",
+  "stage": "enrich",
+  "produced_at": "2026-09-24T06:56:16Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "",
+  "sources": [
+    {
+      "claim": "Sharp Chula Vista Medical Center is the South Bay's largest provider of women's and infants' health care",
+      "url": "https://www.sharp.com/locations/sharp-mary-birch-chula-vista",
+      "quote": "Take a virtual tour of Sharp Mary Birch Chula Vista, the South Bay's largest provider of health care for women and infants."
+    },
+    {
+      "claim": "Sharp Chula Vista L&D rooms are private with bathroom and shower",
+      "url": "https://www.sharp.com/hospitals/chula-vista/",
+      "quote": "After triage, you will labor and deliver your baby in one of our spacious suites that were made with your comfort in mind. All labor and delivery rooms are private with a dedicated bathroom and shower"
+    },
+    {
+      "claim": "Scripps Mercy Chula Vista closed its maternity ward in 2024",
+      "url": "https://www.sandiegouniontribune.com/2024/08/04/scripps-chula-vista-closed-its-maternity-ward-why-are-pregnant-women-still-showing-up",
+      "quote": "Shutting down maternity services at Scripps Mercy Hospital Chula Vista has not stopped pregnant women from showing up in its emergency department in need of obstetric services."
+    }
+  ],
+  "providers": [
+    {
+      "name": "Lauren Williams",
+      "photo": "/images/providers/chula-vista-ca-lauren-williams.webp",
+      "description_chars": 381,
+      "costRange": "$50-$65",
+      "costRange_source": "market-estimate from DoulaMatch listed fees"
+    },
+    {
+      "name": "Laurel Krapivkin",
+      "photo": "/images/providers/chula-vista-ca-laurel-krapivkin.webp",
+      "description_chars": 404,
+      "costRange": "$1,900-$2,500",
+      "costRange_source": "market-estimate from DoulaMatch listed fees"
+    },
+    {
+      "name": "Alma Fisher",
+      "photo": "/images/providers/chula-vista-ca-alma-fisher.webp",
+      "description_chars": 373,
+      "costRange": "$50-$65",
+      "costRange_source": "market-estimate from DoulaMatch listed fees"
+    },
+    {
+      "name": "Taylor Maude Love",
+      "photo": "/images/providers/chula-vista-ca-taylor-maude-love.webp",
+      "description_chars": 412,
+      "costRange": "$1,500-$4,000",
+      "costRange_source": "market-estimate from DoulaMatch listed fees"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Sharp Chula Vista Medical Center",
+      "paragraph_chars": 733,
+      "thumbnail": "/images/hospitals/chula-vista-ca-sharp-mary-birch-exterior.jpg",
+      "nicuLevel": "III",
+      "url": "https://www.sharp.com/locations/sharp-mary-birch-chula-vista"
+    },
+    {
+      "name": "Scripps Mercy Hospital Chula Vista",
+      "paragraph_chars": 507,
+      "thumbnail": "/images/hospitals/chula-vista-ca-scripps-mercy-building.jpg",
+      "nicuLevel": "Emergency OB transfer to Sharp; no L&D unit",
+      "url": "https://www.scripps.org/locations/hospitals/scripps-mercy-hospital-chula-vista"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "No birth centers",
+      "paragraph_chars": 488,
+      "thumbnail": ""
+    }
+  ],
+  "birthstats": {
+    "dataYear": 2024,
+    "dataSource": "San Diego County Birth Statistics, CA Dept of Public Health"
+  }
+}

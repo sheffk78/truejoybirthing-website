@@ -1,0 +1,38 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "chula-vista-ca",
+  "stage": "enrich",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 3,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the matching sharp.com location page for the Chula Vista facility and directly states it is the South Bay's largest provider of health care for women and infants, supporting the claim's substance.",
+      "claim": "Sharp Chula Vista Medical Center is the South Bay's largest provider of women's and infants' health care",
+      "url": "https://www.sharp.com/locations/sharp-mary-birch-chula-vista",
+      "quote": "Take a virtual tour of Sharp Mary Birch Chula Vista, the South Bay's largest provider of health care for women and infants."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the Sharp Chula Vista hospital page and directly states that all labor and delivery rooms are private with a dedicated bathroom and shower, matching the claim.",
+      "claim": "Sharp Chula Vista L&D rooms are private with bathroom and shower",
+      "url": "https://www.sharp.com/hospitals/chula-vista/",
+      "quote": "After triage, you will labor and deliver your baby in one of our spacious suites that were made with your comfort in mind. All labor and delivery rooms are private with a dedicated bathroom and shower"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from the 2024 San Diego Union-Tribune article explicitly states that maternity services at Scripps Mercy Hospital Chula Vista were shut down, directly supporting the claim, and the URL slug and date align with the claim's topic and year.",
+      "claim": "Scripps Mercy Chula Vista closed its maternity ward in 2024",
+      "url": "https://www.sandiegouniontribune.com/2024/08/04/scripps-chula-vista-closed-its-maternity-ward-why-are-pregnant-women-still-showing-up",
+      "quote": "Shutting down maternity services at Scripps Mercy Hospital Chula Vista has not stopped pregnant women from showing up in its emergency department in need of obstetric services."
+    }
+  ],
+  "checked_at": "2026-09-24T01:05:23-06:00"
+}
