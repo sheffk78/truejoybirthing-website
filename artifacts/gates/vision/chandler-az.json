@@ -1,0 +1,6 @@
+{"slug": "chandler-az", "verdicts": [
+  {"crop": "chandler-az-hero-fig0.png", "verdict": "pass", "defects": [], "notes": "real photograph, pregnant woman silhouette in desert at sunset, 2 arms normal, no fused fingers, no melted joints"},
+  {"crop": "chandler-az-support-fig0.png", "verdict": "pass", "defects": [], "notes": "real photograph, two women on couch, 4 arms normal, no fused fingers, no melted joints"},
+  {"crop": "chandler-az-og-fig0.png", "verdict": "pass", "defects": [], "notes": "real photograph, pregnant woman silhouette in desert at sunset, 1 visible arm normal, no fused fingers, no melted joints"},
+  {"crop": "chandler-az-thumb-fig0.png", "verdict": "pass", "defects": [], "notes": "stylized gradient illustration (expected for yt thumbnail), no figures, no anatomy issues"}
+], "checked_at": "2026-09-23T23:28:00Z"}
