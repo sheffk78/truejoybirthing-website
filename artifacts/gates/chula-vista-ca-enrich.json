@@ -89,11 +89,11 @@
     },
     "G24": {
       "status": "PASS",
-      "detail": "G73 anatomy pass: PASS: The image contains no discernible anatomical or artistic defects."
+      "detail": "G73 anatomy pass: PASS: No anatomical or artistic defects were detected."
     },
     "G54": {
       "status": "PASS",
-      "detail": "G73 anatomy pass: PASS: The image contains no discernible anatomical or artistic defects."
+      "detail": "G73 anatomy pass: PASS: No anatomical or artistic defects were detected."
     },
     "G65": {
       "status": "PASS",
