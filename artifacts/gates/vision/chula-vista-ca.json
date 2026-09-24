@@ -1,0 +1,26 @@
+{
+  "slug": "chula-vista-ca",
+  "checked_at": "2026-09-24T01:11:33Z",
+  "verdicts": [
+    {
+      "crop": "chula-vista-ca-hero-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "chula-vista-ca-support-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "chula-vista-ca-og-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "chula-vista-ca-og-fig1.png",
+      "verdict": "pass",
+      "defects": []
+    }
+  ]
+}

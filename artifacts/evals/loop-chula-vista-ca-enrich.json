@@ -1,0 +1,27 @@
+{
+  "slug": "chula-vista-ca",
+  "stage": "enrich",
+  "attempts": 0,
+  "history": [
+    {
+      "attempt": 1,
+      "at": "2026-09-24T01:09:03-06:00",
+      "evals": {
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-09-24T01:10:19-06:00",
+      "evals": {
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    }
+  ],
+  "last_verdict": "approved",
+  "last_input_fingerprint": "7636e5980ad9d5a1"
+}
