@@ -1968,4 +1968,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
 
+  "chandler-az": {
+    videoId: "voyzuK2J-qM",
+    title: "Chandler, Arizona Doula & Birth Plan Guide",
+    description: "Watch the full Chandler, Arizona Doula & Birth Plan Guide — all in about 4:43.",
+    duration: 283,
+  },
+
 };
