@@ -1,7 +1,7 @@
 {
   "slug": "concord-nc",
   "stage": "enrich",
-  "produced_at": "2026-09-15T00:43:20Z",
+  "produced_at": "2026-09-24T05:19:12Z",
   "worker_model": "glm-5.3-flash",
   "notes": "ENRICH stage for concord-nc: sourced 3 real provider headshots (Lindsay Stowers from Heart of Grace, Tiffany St. Louis, What The Bump team) plus a real hospital building exterior photo of Atrium Health Cabarrus; hospital paragraph covers NICU level IV, bed count, doula policy, Baby-Friendly, lactation and language services; costRange_source tagged market-estimate on all providers; No-freestanding birth center entry carries no thumbnail field.",
   "sources": [

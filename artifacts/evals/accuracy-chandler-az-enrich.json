@@ -1,0 +1,54 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "chandler-az",
+  "stage": "enrich",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 5,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is first-person profile text plausibly appearing on a Loretta Moore page of a birth-services domain, and it directly states she is a Birth Doula serving the Chandler, Arizona area within a 75-mile radius, matching the claim.",
+      "claim": "Loretta Moore is a Birth Doula serving Chandler and the East Valley with a 75-mile radius",
+      "url": "https://www.bornbir.com/loretta-moore",
+      "quote": "I am a Birth Doula serving families throughout the Chandler, Arizona area and within a 75-mile radius. I believe every birthing person deserves to feel safe, heard, respected, and supported throughout"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a first-person statement on a page dedicated to Brionna Giles on a birth-services domain, and it directly states she is a community birth doula serving the Phoenix Valley providing evidence-based, individualized care, matching the claim exactly.",
+      "claim": "Brionna Giles is a Community Birth Doula serving the Phoenix Valley with evidence-based, individualized care",
+      "url": "https://www.bornbir.com/brionna-giles",
+      "quote": "I'm a community birth doula serving the Phoenix Valley. My goal is to help families walk into their birth experience feeling informed and empowered, and ensure that they are receiving evidence-based a"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the Chandler Regional NICU page on Dignity Health's domain and explicitly states the NICU is a Level II E equipped for high-risk, premature, and sick babies, directly supporting the claim.",
+      "claim": "Chandler Regional Medical Center has a Level II E NICU for high-risk, premature, and sick babies",
+      "url": "https://www.dignityhealth.org/arizona/locations/chandlerregional/services/family-birth-center/neonatal-intensive-care-unit",
+      "quote": "Chandler Regional's neonatal intensive care unit (NICU) is a level II E, meaning we are fully equipped to care for high-risk, premature and sick babies."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the official Banner Health location page for Banner Baywood Medical Center and directly confirms both the 1984 opening and the 342-bed capacity stated in the claim.",
+      "claim": "Banner Baywood Medical Center is a 342-bed hospital serving the East Valley since 1984",
+      "url": "https://www.bannerhealth.com/locations/mesa/banner-baywood-medical-center",
+      "quote": "Banner Baywood Medical Center opened in 1984 and provides complete acute care services in a 342-bed hospital."
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The URL is the maternity department page for Chandler Regional Medical Center on CommonSpirit (Dignity Health's parent), and the quoted services list explicitly includes 'Doula services' among maternity amenities, supporting the claim.",
+      "claim": "Chandler Regional Medical Center welcomes doulas as support persons and offers doula services as a maternity amenity",
+      "url": "https://www.commonspirit.org/find-a-location/maternity-department-dignity-health-chandler-regional-medical-center-chandler-2709",
+      "quote": "Our services include lactation consultants and breastfeeding support, prenatal diagnosis, genetic testing and newborn screening... Doula services... Alternative birth options... Baby-friendly practice"
+    }
+  ],
+  "checked_at": "2026-09-23T23:26:00-06:00"
+}

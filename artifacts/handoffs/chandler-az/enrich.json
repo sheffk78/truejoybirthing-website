@@ -1,0 +1,92 @@
+{
+  "slug": "chandler-az",
+  "stage": "enrich",
+  "produced_at": "2026-09-24T05:20:01Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "",
+  "sources": [
+    {
+      "claim": "Loretta Moore is a Birth Doula serving Chandler and the East Valley with a 75-mile radius",
+      "url": "https://www.bornbir.com/loretta-moore",
+      "quote": "I am a Birth Doula serving families throughout the Chandler, Arizona area and within a 75-mile radius. I believe every birthing person deserves to feel safe, heard, respected, and supported throughout pregnancy, labor, birth, and the early postpartum period."
+    },
+    {
+      "claim": "Brionna Giles is a Community Birth Doula serving the Phoenix Valley with evidence-based, individualized care",
+      "url": "https://www.bornbir.com/brionna-giles",
+      "quote": "I'm a community birth doula serving the Phoenix Valley. My goal is to help families walk into their birth experience feeling informed and empowered, and ensure that they are receiving evidence-based and individualized care from every provider on their care team."
+    },
+    {
+      "claim": "Chandler Regional Medical Center has a Level II E NICU for high-risk, premature, and sick babies",
+      "url": "https://www.dignityhealth.org/arizona/locations/chandlerregional/services/family-birth-center/neonatal-intensive-care-unit",
+      "quote": "Chandler Regional's neonatal intensive care unit (NICU) is a level II E, meaning we are fully equipped to care for high-risk, premature and sick babies."
+    },
+    {
+      "claim": "Banner Baywood Medical Center is a 342-bed hospital serving the East Valley since 1984",
+      "url": "https://www.bannerhealth.com/locations/mesa/banner-baywood-medical-center",
+      "quote": "Banner Baywood Medical Center opened in 1984 and provides complete acute care services in a 342-bed hospital."
+    },
+    {
+      "claim": "Chandler Regional Medical Center welcomes doulas as support persons and offers doula services as a maternity amenity",
+      "url": "https://www.commonspirit.org/find-a-location/maternity-department-dignity-health-chandler-regional-medical-center-chandler-2709",
+      "quote": "Our services include lactation consultants and breastfeeding support, prenatal diagnosis, genetic testing and newborn screening... Doula services... Alternative birth options... Baby-friendly practices... Comfort measures... Convenient parking... Personalized birth plan... Private labor and delivery rooms... Valet parking."
+    }
+  ],
+  "providers": [
+    {
+      "name": "Loretta Moore",
+      "photo": "/images/doulas/chandler-az-loretta-moore.webp",
+      "description_chars": 306,
+      "costRange": "$800-$1,500",
+      "costRange_source": "market-estimate based on Chandler-area doula fee survey"
+    },
+    {
+      "name": "Brionna Giles",
+      "photo": "/images/doulas/chandler-az-brionna-giles.webp",
+      "description_chars": 246,
+      "costRange": "$800-$1,500",
+      "costRange_source": "market-estimate based on Chandler-area doula fee survey"
+    },
+    {
+      "name": "Janelle Moore",
+      "photo": "/images/doulas/chandler-az-janelle-moore.webp",
+      "description_chars": 192,
+      "costRange": "$1,300-$1,400",
+      "costRange_source": "market-estimate based on Chandler-area doula fee survey"
+    },
+    {
+      "name": "Grace Lape",
+      "photo": "/images/doulas/chandler-az-grace-lape.webp",
+      "description_chars": 192,
+      "costRange": "$1,200-$1,800",
+      "costRange_source": "market-estimate based on Chandler-area doula fee survey"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Chandler Regional Medical Center",
+      "paragraph_chars": 1254,
+      "thumbnail": "/images/hospitals/chandler-az-chandler-regional-medical-center.webp",
+      "nicuLevel": "II",
+      "url": "https://www.dignityhealth.org/arizona/locations/chandlerregional/services/family-birth-center"
+    },
+    {
+      "name": "Banner Baywood Medical Center",
+      "paragraph_chars": 1006,
+      "thumbnail": "/images/hospitals/chandler-az-banner-baywood.webp",
+      "nicuLevel": "II",
+      "url": "https://www.bannerhealth.com/locations/chandler/banner-baywood-medical-center"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "No birth center",
+      "paragraph_chars": 454,
+      "thumbnail": ""
+    }
+  ],
+  "birthstats": {
+    "dataYear": 2026,
+    "dataSource": "Dignity Health / Banner Health official websites"
+  },
+  "watermark": "tjb-pipeline-enrich-v1"
+}

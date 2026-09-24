@@ -12,7 +12,7 @@
     {
       "index": 0,
       "verdict": "SUPPORTED",
-      "reason": "The quote is first-person profile text on a page whose URL path (/loretta-moore) matches the claim's subject, and it directly states she is a birth doula serving Chandler, Arizona within a 75-mile radius, exactly matching the claim.",
+      "reason": "The quote is a first-person doula profile statement matching the claim's specifics (birth doula, Chandler Arizona, 75-mile radius) and plausibly appears on the Loretta Moore profile page of the bornbir.com birth-professional directory.",
       "claim": "Loretta Moore is a birth doula serving Chandler, Arizona and within a 75-mile radius",
       "url": "https://www.bornbir.com/loretta-moore",
       "quote": "I am a Birth Doula serving families throughout the Chandler, Arizona area and within a 75-mile radius."
@@ -20,7 +20,7 @@
     {
       "index": 1,
       "verdict": "SUPPORTED",
-      "reason": "The quote is a first-person bio statement on a page whose URL path matches Brionna Giles on a birth-related domain, and it directly states she is a community birth doula serving the Phoenix Valley, matching the claim.",
+      "reason": "The URL path (/brionna-giles) on a birth-services domain matches the claim's subject, and the first-person quote directly states she is a community birth doula serving the Phoenix Valley, exactly supporting the claim.",
       "claim": "Brionna Giles is a community birth doula serving the Phoenix Valley",
       "url": "https://www.bornbir.com/brionna-giles",
       "quote": "I'm a community birth doula serving the Phoenix Valley."
@@ -28,7 +28,7 @@
     {
       "index": 2,
       "verdict": "SUPPORTED",
-      "reason": "The URL is Dignity Health's Chandler Regional Family Birth Center page, and the quote directly references Chandler Regional's Family Birth Center, supporting the claim.",
+      "reason": "The quote explicitly references Chandler Regional's Family Birth Center, and the URL is the Dignity Health Arizona page for Chandler Regional's family birth center services, matching the claim's subject and location.",
       "claim": "Chandler Regional Medical Center operates a Family Birth Center in Chandler, AZ",
       "url": "https://www.dignityhealth.org/arizona/locations/chandlerregional/services/family-birth-center",
       "quote": "Chandler Regional's Family Birth Center offers a safe, family-centered environment."
@@ -36,11 +36,11 @@
     {
       "index": 3,
       "verdict": "SUPPORTED",
-      "reason": "The URL is a CommonSpirit find-a-location page specifically for the Maternity Department at Dignity Health Chandler Regional Medical Center, and the quote about welcoming a new baby at Chandler Regional Medical Center is plausible text for that maternity page and supports the claim.",
+      "reason": "The URL is a CommonSpirit find-a-location page whose slug explicitly names a Maternity Department at Dignity Health Chandler Regional Medical Center, and the quote about welcoming a new baby at Chandler Regional Medical Center is plausible text for that maternity page and supports the claim.",
       "claim": "Dignity Health Chandler Regional Medical Center has a Maternity Department listed by CommonSpirit",
       "url": "https://www.commonspirit.org/find-a-location/maternity-department-dignity-health-chandler-regional-medical-center-chandler-2709",
       "quote": "At Chandler Regional Medical Center, we understand that welcoming a new baby is one of life's most meaningful moments."
     }
   ],
-  "checked_at": "2026-09-23T23:08:48-06:00"
+  "checked_at": "2026-09-23T23:09:51-06:00"
 }
