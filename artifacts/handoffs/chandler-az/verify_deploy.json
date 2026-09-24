@@ -1,0 +1,28 @@
+{
+  "slug": "chandler-az",
+  "stage": "verify_deploy",
+  "produced_at": "2026-09-24T05:48:00Z",
+  "worker_model": "glm-5.3-flash:cloud",
+  "notes": "verify_deploy complete: full preflight 0 failures; build exit 0; deploy.sh exit 0 (CF Pages, 5 files); live URL https://truejoybirthing.com/birth-support/chandler-az/ HTTP 200, 138KB, all 9 images decode, vision checks pass; 2 CDN cache-bust fixes (hero v2, Grace Lape headshot v2)",
+  "sources": [
+    {
+      "claim": "Live page serves full chandler-az content including hospital and provider data",
+      "url": "https://truejoybirthing.com/birth-support/chandler-az/",
+      "quote": "Chandler Regional Medical Center"
+    },
+    {
+      "claim": "Live page lists all four doulas with details",
+      "url": "https://truejoybirthing.com/birth-support/chandler-az/",
+      "quote": "Loretta Moore"
+    },
+    {
+      "claim": "Live page includes Grace Lape doula entry",
+      "url": "https://truejoybirthing.com/birth-support/chandler-az/",
+      "quote": "Grace Lape"
+    }
+  ],
+  "preflight_exit": 0,
+  "deploy_status": "SUCCESS",
+  "live_http": 200,
+  "vision_verdict_file": "artifacts/gates/vision/chandler-az.json"
+}
