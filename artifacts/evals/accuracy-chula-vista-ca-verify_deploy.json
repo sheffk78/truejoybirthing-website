@@ -3,7 +3,7 @@
   "slug": "chula-vista-ca",
   "stage": "verify_deploy",
   "model": "glm-5.3-flash:cloud",
-  "sources_checked": 6,
+  "sources_checked": 9,
   "model_errors": 0,
   "unsupported": 0,
   "not_enough_info_pct": 0,
@@ -12,51 +12,75 @@
     {
       "index": 0,
       "verdict": "SUPPORTED",
-      "reason": "The quoted output from scripts/preflight-stage-gate.py directly states the preflight passed with 0 failures and 0 warnings, matching the claim exactly.",
-      "claim": "Preflight passed with 0 failures and 0 warnings",
-      "url": "scripts/preflight-stage-gate.py output",
-      "quote": "PREFLIGHT PASSED: 0 failures, 0 warning(s)"
+      "reason": "The quote is plausible output from the preflight-stage-gate script for chula-vista-ca and directly confirms the claim of 0 failures and 0 warnings.",
+      "claim": "Preflight stage gate passed with 0 failures and 0 warnings",
+      "url": "scripts/preflight-stage-gate.py chula-vista-ca verify_deploy",
+      "quote": "PREFLIGHT PASSED: 0 failures, 0 warning(s) Ship chula-vista-ca when ready."
     },
     {
       "index": 1,
       "verdict": "SUPPORTED",
-      "reason": "The quote 'exit 0' is the standard success exit code for the 'npm run build' command, directly supporting the claim that the build completed successfully.",
-      "claim": "Build completed successfully",
+      "reason": "The quoted build log output directly confirms the claim, showing 346 pages built with exit code 0 indicating a successful build.",
+      "claim": "npm run build completed successfully producing 346 pages",
       "url": "npm run build",
-      "quote": "exit 0"
+      "quote": "346 page(s) built in 4.93s [build] Complete! build exit: 0"
     },
     {
       "index": 2,
       "verdict": "SUPPORTED",
-      "reason": "The quote 'Status: PUSHED' is plausible output from the deploy script command for the chula-vista-ca page and directly indicates the push to CF Pages completed.",
-      "claim": "Deploy pushed to CF Pages successfully",
+      "reason": "The quote is plausible output from running the deploy script, explicitly stating 'Commit 98fdf651 pushed to main' and a successful CF Pages upload to the truejoybirthing-website.pages.dev domain, which directly supports the claim.",
+      "claim": "Deploy script committed, pushed to git main, and uploaded to CF Pages successfully",
       "url": "bash scripts/deploy.sh chula-vista-ca",
-      "quote": "Status: PUSHED"
+      "quote": "Deployment complete! Take a peek over at https://63bcb0d4.truejoybirthing-website.pages.dev (Step 4b CF Pages upload). Commit 98fdf651 pushed to main."
     },
     {
       "index": 3,
       "verdict": "SUPPORTED",
-      "reason": "The quoted HTTP response header (HTTP/2 200, content-length: 144283) is plausible output from fetching the given truejoybirthing.com URL and directly confirms the page returns status 200 with a content-length well above 10KB.",
+      "reason": "The quote reports an HTTP/2 200 status with a size of 144283 bytes (>10KB) for the given truejoybirthing.com URL, directly supporting the claim.",
       "claim": "Live page returns HTTP 200 with content-length > 10KB",
       "url": "https://truejoybirthing.com/birth-support/chula-vista-ca/",
-      "quote": "HTTP/2 200, content-length: 144283"
+      "quote": "HTTP/2 200 status=200 size=144283"
     },
     {
       "index": 4,
       "verdict": "SUPPORTED",
-      "reason": "The quote is the direct output of the stated verification method (curl -sI on all page image URLs) and confirms the claim: all 26 images returned HTTP/2 200 with a minimum content-length of 27562 bytes, which exceeds the 10KB threshold.",
-      "claim": "All page images return HTTP 200 with content-length > 10KB (no placeholders)",
-      "url": "curl -sI on all page image URLs",
-      "quote": "All 26 images returned HTTP/2 200 with content-length ranging from 27562 to 149987"
+      "reason": "The quote is a plausible browser Image() decode log for that page, with all entries marked OK and filenames matching the Chula Vista birth-support page's provider and hospital images (lauren-williams, sharp-mary-birch, scripps-mercy), directly supporting the claim that all images decode successfully",
+      "claim": "All page images decode successfully in the browser (no broken images), including provider photos and hospital jpgs",
+      "url": "https://truejoybirthing.com/birth-support/chula-vista-ca/ (browser new Image() decode)",
+      "quote": "OK: 320x320 chula-vista-ca-lauren-williams.webp; OK: 900x600 chula-vista-ca-sharp-mary-birch-exterior.jpg; OK: 1300x800 chula-vista-ca-scripps-mercy-building.jpg; OK: 1024x768 chula-vista-ca-support-s"
     },
     {
       "index": 5,
       "verdict": "SUPPORTED",
-      "reason": "The quote is plausible content for a vision gate artifact file for chula-vista-ca and directly states all 4 figure crops passed vision verification, matching the claim.",
-      "claim": "Vision check passed for all 4 figure crops - no anatomical defects",
-      "url": "artifacts/gates/vision/chula-vista-ca.json",
-      "quote": "All 4 figure crops vision-verified pass (checked_at: 2026-09-24T01:11:33Z)"
+      "reason": "The quote is a plausible vision-analysis output for the provider headshot image at that truejoybirthing.com URL and directly confirms the claim that it is a real photograph with no placeholders or anatomy defects.",
+      "claim": "Vision check confirms real photographs, no placeholders or anatomy defects",
+      "url": "https://truejoybirthing.com/images/providers/chula-vista-ca-lauren-williams.webp (vision_analyze)",
+      "quote": "This image is a real headshot photograph of a woman. It does not appear to be a placeholder, illustration, or contain any watermarks or anatomy defects."
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible vision-analysis output for the truejoybirthing.com hospital image URL and directly confirms the image is a genuine photograph of the hospital exterior with no placeholders or defects.",
+      "claim": "Vision check confirms the Sharp Mary Birch hospital exterior image is a real photograph with no placeholders or defects",
+      "url": "https://truejoybirthing.com/images/hospitals/chula-vista-ca-sharp-mary-birch-exterior.jpg (vision_analyze)",
+      "quote": "This is a real exterior photograph of a hospital. The detailed architecture, realistic lighting, reflections, and the presence of flags and landscaping all indicate it is a genuine photograph of a phy"
+    },
+    {
+      "index": 7,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a vision-analysis result for the exact image URL (chula-vista-ca-scripps-mercy-building.jpg) and directly confirms a real exterior photograph with a legible 'Scripps Mercy Hospital Chula Vista' sign, matching the claim's topic and location.",
+      "claim": "Vision check confirms Scripps Mercy hospital exterior is a real photograph",
+      "url": "https://truejoybirthing.com/images/hospitals/chula-vista-ca-scripps-mercy-building.jpg (vision_analyze)",
+      "quote": "Yes, this appears to be a real exterior photograph of a hospital building. A sign above the entrance clearly reads Scripps Mercy Hospital Chula Vista."
+    },
+    {
+      "index": 8,
+      "verdict": "SUPPORTED",
+      "reason": "The quote reads as authentic vision-analysis output for the truejoybirthing.com support-scene image (doula/lactation support matches the birthing domain and Chula Vista city page context) and directly confirms the claim that the scene is a real photograph with anatomically correct hands and no place",
+      "claim": "Vision check confirms hero and support scene are real photographs with no anatomy defects",
+      "url": "https://truejoybirthing.com/images/chula-vista-ca-support-scene.webp (vision_analyze)",
+      "quote": "Yes, this appears to be a real photograph of doula/lactation support. The hands of both women appear anatomically correct... No Obvious Placeholder Elements."
     }
   ],
-  "checked_at": "2026-09-24T01:19:09-06:00"
+  "checked_at": "2026-09-24T01:29:33-06:00"
 }
