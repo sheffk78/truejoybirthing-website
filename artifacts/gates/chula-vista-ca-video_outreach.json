@@ -1,5 +1,5 @@
 {
-  "slug": "staten-island-ny",
+  "slug": "chula-vista-ca",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
   "exit_code": 0,
@@ -9,23 +9,23 @@
   "results": {
     "pre_render_gate": {
       "status": "PASS",
-      "detail": "scene data exists at remotion/src/data/staten-island-ny-data.ts"
+      "detail": "scene data exists at remotion/src/data/chula-vista-ca-data.ts"
     },
     "video_file_exists": {
       "status": "PASS",
-      "detail": "video file 20.2MB >10MB"
+      "detail": "video file 19.4MB >10MB"
     },
     "youtube_upload": {
       "status": "PASS",
-      "detail": "videoId 8P5spO9OCQ8 present in video-embeds.ts"
+      "detail": "videoId fGFkE-N1BWc present in video-embeds.ts"
     },
     "youtube_thumbnail": {
       "status": "PASS",
-      "detail": "thumbnail present locally (300KB) and YouTube returns 48KB"
+      "detail": "thumbnail present locally (700KB) and YouTube returns 95KB"
     },
     "video_embedded": {
       "status": "PASS",
-      "detail": "embed found (vid 8P5spO9OCQ8) on live page"
+      "detail": "embed found (vid fGFkE-N1BWc) on live page"
     },
     "videoobject_schema": {
       "status": "PASS",
@@ -41,7 +41,7 @@
     },
     "video_content_city_match": {
       "status": "PASS",
-      "detail": "G67: video overview scene names this city ('staten' found; frame t=14s)"
+      "detail": "G67: video overview scene names this city ('vista' found; frame t=14s)"
     }
   }
 }
