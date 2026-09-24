@@ -149,12 +149,20 @@ def normalize_stage(row: dict[str, Any]) -> str:
     # branch), so a fully-complete city (all 7 base fields true) can carry a
     # stale score <100 at this point and was previously dropped back to its
     # state-file stage (video_outreach/verify_deploy) instead of being promoted.
-    if row.get("blocked_reason"):
-        return "blocked"
-    # All content fields done + outreach sent == genuinely complete.
+    # 2026-09-24 fix: a stale blocked_reason from a terminal outreach outcome
+    # (no-email found, all sends attempted/failed, gates deduped the recipients)
+    # must not pin a fully-built city at "blocked" forever. If every content
+    # field is done and outreach was ATTEMPTED (outreach flag true), the city
+    # is complete; the reason moves to outreach_block_note. Genuinely
+    # non-terminal pipeline blockers still hold "blocked".
     all_fields = all(row.get(f) for f in ["hero", "og", "support", "hospitals", "doulas", "video", "outreach"])
     if all_fields:
+        if row.get("blocked_reason") and not row.get("outreach_block_note"):
+            row["outreach_block_note"] = row["blocked_reason"]
+            row["blocked_reason"] = ""
         return "complete"
+    if row.get("blocked_reason"):
+        return "blocked"
     if not row.get("hero") or not row.get("og") or not row.get("support"):
         return "build"
     if not row.get("hospitals") or not row.get("doulas"):
