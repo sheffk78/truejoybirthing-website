@@ -1,0 +1,43 @@
+{
+  "slug": "staten-island-ny",
+  "stage": "video_outreach",
+  "mode": "local_video_outreach",
+  "exit_code": 0,
+  "passed": 8,
+  "failed": 0,
+  "skipped": 0,
+  "results": {
+    "pre_render_gate": {
+      "status": "PASS",
+      "detail": "scene data exists at remotion/src/data/staten-island-ny-data.ts"
+    },
+    "video_file_exists": {
+      "status": "PASS",
+      "detail": "video file 20.2MB >10MB"
+    },
+    "youtube_upload": {
+      "status": "PASS",
+      "detail": "videoId 8P5spO9OCQ8 present in video-embeds.ts"
+    },
+    "youtube_thumbnail": {
+      "status": "PASS",
+      "detail": "thumbnail present as .webp (18KB) rebuilt from current hero"
+    },
+    "video_embedded": {
+      "status": "PASS",
+      "detail": "embed found (vid 8P5spO9OCQ8) on live page HTTP 200"
+    },
+    "videoobject_schema": {
+      "status": "PASS",
+      "detail": "VideoObject+duration present on live page"
+    },
+    "outreach_sent_or_blocked": {
+      "status": "PASS",
+      "detail": "0 sent, 4 blocked (recipient_history_gate x2, content_gate x1, no-email x1)"
+    },
+    "contract_valid": {
+      "status": "PASS",
+      "detail": "contract-validate.py staten-island-ny video_outreach -> contract_valid true, exit 0"
+    }
+  }
+}
