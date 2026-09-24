@@ -1977,7 +1977,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
 
   "chula-vista-ca": {
     videoId: "fGFkE-N1BWc",
-    title: "Chula Doula & Birth Plan Guide",
+    title: "Chula Vista, California Doula & Birth Plan Guide",
     description: "Watch the full city guide â doulas, hospitals, costs, and more, all in under 5 minutes.",
     duration: "PT3M00S",
     uploadDate: "2026-06-24T00:00:00-06:00",

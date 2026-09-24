@@ -4610,7 +4610,7 @@
     "started_at": "1790229951",
     "slot": "",
     "batch_id": "",
-    "blocked_reason": "Lauren Williams: send failed; Laurel Krapivkin: send failed; Alma Fisher: no email found; Taylor Maude Love: send failed",
+    "blocked_reason": "Stage 'video_outreach' has failed 3 times (limit: 3). Last reason: outreach blocked: Lauren Williams: send failed; Laurel Krapivkin: send failed; Alma Fisher: no email found; Taylor Maude Love: send failed. Use 'unblock' command to retry.",
     "url": "https://truejoybirthing.com/birth-support/chula-vista-ca/",
     "built": true,
     "build_status": "built",

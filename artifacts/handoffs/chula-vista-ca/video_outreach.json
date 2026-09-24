@@ -1,0 +1,60 @@
+{
+  "slug": "chula-vista-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-24T07:47:26.070692Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "YouTube upload succeeded (fGFkE-N1BWc, 19.4MB). All 4 providers blocked: 3 by recipient_history_gate (help@doulamatch.net already contacted via aurora-il), 1 by missing email (Alma Fisher).",
+  "sources": [
+    {
+      "claim": "YouTube upload completed fGFkE-N1BWc",
+      "url": "https://youtu.be/fGFkE-N1BWc",
+      "quote": "Video uploaded! ID: fGFkE-N1BWc"
+    },
+    {
+      "claim": "video-embeds.ts updated with videoId fGFkE-N1BWc",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/src/data/video-embeds.ts",
+      "quote": "\"chula-vista-ca\": { videoId: \"fGFkE-N1BWc\""
+    },
+    {
+      "claim": "Deploy pushed and live",
+      "url": "https://truejoybirthing.com/birth-support/chula-vista-ca/",
+      "quote": "Status: PUSHED"
+    },
+    {
+      "claim": "Outreach: 0 sent, 4 blocked",
+      "url": "file:///Users/socializerender/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "quote": "BLOCKED: no emails could be sent"
+    }
+  ],
+  "video_file": "out/chula-vista-ca/chula-vista-ca-city-guide.mp4",
+  "video_mb": 19.4,
+  "youtube_id": "fGFkE-N1BWc",
+  "thumbnail_path": "public/images/yt-thumb-chula-vista-ca.webp",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "provider": "Lauren Williams",
+      "email": "help@doulamatch.net",
+      "status": "blocked",
+      "reason": "recipient_history_gate: already contacted via aurora-il"
+    },
+    {
+      "provider": "Laurel Krapivkin",
+      "email": "help@doulamatch.net",
+      "status": "blocked",
+      "reason": "recipient_history_gate: already contacted via aurora-il"
+    },
+    {
+      "provider": "Alma Fisher",
+      "email": null,
+      "status": "blocked",
+      "reason": "no email found on DoulaMatch profile"
+    },
+    {
+      "provider": "Taylor Maude Love",
+      "email": "help@doulamatch.net",
+      "status": "blocked",
+      "reason": "recipient_history_gate: already contacted via aurora-il"
+    }
+  ]
+}
