@@ -1,25 +1,32 @@
 {
-  "slug": "colorado-springs-co",
-  "stage": "video_outreach",
-  "produced_at": "2026-08-01T00:00:00Z",
-  "worker_model": "deterministic-backfill",
-  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). YouTube bxieuKIKeb8 from remotion/out/colorado-springs-co-youtube-id.txt; thumbnail on disk; no first-touch sends in canonical send log yet \u2014 outreach pending.",
-  "video_file": null,
-  "video_mb": null,
-  "youtube_id": "bxieuKIKeb8",
-  "thumbnail_path": "public/images/yt-thumb-colorado-springs-co.png",
-  "embed_verified": true,
-  "outreach": [],
-  "sources": [
-    {
-      "claim": "Video uploaded",
-      "url": "https://www.youtube.com/watch?v=bxieuKIKeb8",
-      "evidence": "ID from video/remotion/out/colorado-springs-co-youtube-id.txt"
-    },
-    {
-      "claim": "Thumbnail on disk",
-      "url": "file://public/images/yt-thumb-colorado-springs-co.png",
-      "evidence": "exists"
-    }
-  ]
+ "slug": "colorado-springs-co",
+ "stage": "video_outreach",
+ "produced_at": "2026-09-24T01:10:00Z",
+ "worker_model": "deterministic-backfill",
+ "notes": "Video bxieuKIKeb8 live+embedded (verified). Local render re-made 2026-09-24 for G67 verification (7.9MB, 3913 frames) then archived to /tmp \u2014 post-upload cleanup is the expected state per G2 defer rule. Outreach completed 2026-09-24: 1 email sent via tjb-batch-outreach.py.",
+ "video_file": null,
+ "video_mb": null,
+ "youtube_id": "bxieuKIKeb8",
+ "thumbnail_path": "public/images/yt-thumb-colorado-springs-co.png",
+ "embed_verified": true,
+ "outreach": [
+  {
+   "sent_to": "1 recipient",
+   "sent_at": "2026-09-24",
+   "via": "tjb-batch-outreach.py",
+   "note": "1 email sent, 0 blocked"
+  }
+ ],
+ "sources": [
+  {
+   "claim": "Video uploaded",
+   "url": "https://www.youtube.com/watch?v=bxieuKIKeb8",
+   "evidence": "ID from video/remotion/out/colorado-springs-co-youtube-id.txt"
+  },
+  {
+   "claim": "Thumbnail on disk",
+   "url": "file://public/images/yt-thumb-colorado-springs-co.png",
+   "evidence": "exists"
+  }
+ ]
 }
