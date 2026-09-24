@@ -1,0 +1,8 @@
+{
+  "slug": "test-retry-tx",
+  "stage": "enrich",
+  "produced_at": "2026-09-24T15:00:00Z",
+  "worker_model": "test",
+  "sources": [{"claim": "test", "url": "https://example.com", "quote": "test evidence"}],
+  "contract_valid": true
+}

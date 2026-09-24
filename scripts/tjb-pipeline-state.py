@@ -312,8 +312,12 @@ def get_stage_index(stage: str) -> int:
     return -1
 
 
-def cmd_init(slug: str):
-    """Initialize state file for a city. Probes once to determine starting stage."""
+def cmd_init(slug: str, force: bool = False):
+    """Initialize state file for a city. Probes once to determine starting stage.
+
+    If a state file already exists and has progress (stages_completed or gate_results),
+    init will refuse to overwrite unless --force is passed.
+    """
     if not validate_slug(slug):
         print(json.dumps({
             "action": "error",
@@ -321,6 +325,23 @@ def cmd_init(slug: str):
             "error": f"Invalid slug '{slug}'. Slugs must be lowercase-letters-2letter-state (e.g., 'dallas-tx'). Test data like 'city1-tx' is rejected."
         }, indent=2))
         return
+
+    # Guard against overwriting existing state with progress
+    existing_state_file = STATES_DIR / f"{slug}.json"
+    if existing_state_file.exists() and not force:
+        try:
+            existing = json.loads(existing_state_file.read_text())
+            if existing.get("stages_completed") or existing.get("gate_results") or existing.get("current_stage") == "complete":
+                print(json.dumps({
+                    "action": "error",
+                    "slug": slug,
+                    "error": f"State file for '{slug}' already exists with progress. Use --force to overwrite.",
+                    "existing_stage": existing.get("current_stage"),
+                    "stages_completed": existing.get("stages_completed", []),
+                }, indent=2))
+                return
+        except (json.JSONDecodeError, OSError):
+            pass  # If we can't read it, let init proceed
 
     # Probe once to determine starting stage
     probe = probe_city(slug)
@@ -930,7 +951,9 @@ def cmd_advance(slug: str, stage: str):
             sys.exit(1)
 
         elif exit_code == 2:
-            # RETRYABLE_INFRA — wait and retry, don't re-spawn
+            # RETRYABLE_INFRA — wait and retry once automatically (30s apart),
+            # then fail if still failing. This handles transient contention
+            # (e.g., cities.ts lock) that resolves on retry.
             print(json.dumps({
                 "action": "gate_retryable_infra",
                 "slug": slug,
@@ -939,8 +962,36 @@ def cmd_advance(slug: str, stage: str):
                 "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
                 "message": (
                     f"Stage gate for {stage} FAILED (infra issue). "
-                    "Wait and retry the gate; do NOT re-spawn the subagent."
+                    "Retrying once after 30s..."
                 ),
+            }, indent=2))
+            time.sleep(30)
+            retry_result = subprocess.run(
+                cmd,
+                capture_output=True, text=True, timeout=180,
+                cwd=PROJECT_DIR,
+            )
+            retry_exit = retry_result.returncode
+            retry_output = retry_result.stdout.strip()
+            if retry_exit == 0:
+                print(json.dumps({
+                    "action": "gate_pass_retry",
+                    "slug": slug,
+                    "stage": stage,
+                    "gate_exit": 0,
+                    "gate_output": retry_output[-500:] if len(retry_output) > 500 else retry_output,
+                    "message": f"Stage gate for {stage} passed on retry. Advancing.",
+                }, indent=2))
+                cmd_done(slug, stage)
+                return
+            # Retry also failed — treat as infra failure
+            print(json.dumps({
+                "action": "gate_retry_failed",
+                "slug": slug,
+                "stage": stage,
+                "gate_exit": retry_exit,
+                "gate_output": retry_output[-500:] if len(retry_output) > 500 else retry_output,
+                "message": f"Stage gate for {stage} FAILED on retry too. Treating as infra failure.",
             }, indent=2))
             sys.exit(2)
 
@@ -1048,7 +1099,8 @@ def main():
     slug = sys.argv[2]
 
     if command == "init":
-        cmd_init(slug)
+        force = "--force" in sys.argv
+        cmd_init(slug, force=force)
     elif command == "next":
         cmd_next(slug)
     elif command == "done":

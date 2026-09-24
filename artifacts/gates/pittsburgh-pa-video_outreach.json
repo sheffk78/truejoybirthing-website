@@ -1,5 +1,5 @@
 {
-  "slug": "fremont-ca",
+  "slug": "pittsburgh-pa",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
   "exit_code": 1,
@@ -9,7 +9,7 @@
   "results": {
     "pre_render_gate": {
       "status": "PASS",
-      "detail": "scene data exists at remotion/src/data/fremont-ca-data.ts"
+      "detail": "scene data exists at remotion/src/data/pittsburgh-pa-data.ts"
     },
     "video_file_exists": {
       "status": "PASS",
@@ -17,15 +17,15 @@
     },
     "youtube_upload": {
       "status": "PASS",
-      "detail": "videoId alF3MZ2oL5Y present in video-embeds.ts"
+      "detail": "videoId 4Q8_n4mg9Zo present in video-embeds.ts"
     },
     "youtube_thumbnail": {
       "status": "PASS",
-      "detail": "thumbnail present locally (803KB) and YouTube returns 115KB"
+      "detail": "thumbnail present locally (750KB) and YouTube returns 106KB"
     },
     "video_embedded": {
       "status": "PASS",
-      "detail": "embed found (vid alF3MZ2oL5Y) on live page"
+      "detail": "embed found (vid 4Q8_n4mg9Zo) on live page"
     },
     "videoobject_schema": {
       "status": "PASS",
@@ -37,7 +37,7 @@
     },
     "provider_photo_quality": {
       "status": "PASS",
-      "detail": "all 18 provider photos are real images (>5KB, >100 colors)"
+      "detail": "all 11 provider photos are real images (>5KB, >100 colors)"
     },
     "video_content_city_match": {
       "status": "FAIL",
