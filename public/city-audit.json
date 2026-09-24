@@ -4637,7 +4637,7 @@
     "started_at": "1790234752",
     "slot": "",
     "batch_id": "",
-    "blocked_reason": "Lelia Marino: send failed; Gabrielle Ardolino: send failed; Kayla O'Hare: send failed; Kym Dale: no email found",
+    "blocked_reason": "Stage 'video_outreach' has failed 3 times (limit: 3). Last reason: outreach blocked: Lelia Marino: send failed; Gabrielle Ardolino: send failed; Kayla O'Hare: send failed; Kym Dale: no email found. Use 'unblock' command to retry.",
     "url": "https://truejoybirthing.com/birth-support/staten-island-ny/",
     "built": true,
     "build_status": "built",
