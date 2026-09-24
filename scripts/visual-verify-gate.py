@@ -184,10 +184,11 @@ def emit_crops(slug, hero_only=False):
             continue
         figures = find_figures(np.array(im))
         if label in ("og", "thumb"):
-            # composite layouts: figure lives in the right half
-            half = im.crop((im.width // 2, 0, im.width, im.height))
-            figures = [(x0 + im.width // 2, y0, x1 + im.width // 2, y1)
-                       for x0, y0, x1, y1 in find_figures(np.array(half))]
+            # composite layouts: figure lives in the right half. Blob detection
+            # here slices figures mid-limb (crop-edge arms read as "missing"),
+            # so use one fixed full-half crop like the support label does —
+            # the vision pass must see the complete figure to judge anatomy.
+            figures = [(im.width // 2, 0, im.width, im.height)]
         if label.startswith("support"):
             # photographic scenes: blob detection is unreliable — one fixed
             # wide crop of the central subject area for the vision pass

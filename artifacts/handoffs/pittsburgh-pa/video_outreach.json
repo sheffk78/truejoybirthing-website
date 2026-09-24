@@ -1,0 +1,150 @@
+{
+  "slug": "pittsburgh-pa",
+  "stage": "video_outreach",
+  "produced_at": "2026-09-24T17:30:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Re-render + re-outreach refresh. NEW video Nf7ZJDTuDJ4 uploaded public+embeddable, old 4Q8_n4mg9Zo set unlisted. Thumbnail regenerated from hero (pittsburgh-pa-birth-doula-skyline-v3.webp). TTS fully regenerated in Shelbi/Voxtral (24kHz) across all 12 scenes; scene durations realigned to audio. Pre-render gate G0-G9 all PASS (fixed gate over-count bug in validate-screenshot-reality.py counting hospital 'name:' fields inside localDoulas block). Re-outreach: Bethany (Birth Doulas of Pittsburgh, prior non-responder) re-engaged via --force-override naming the new video/page change. 10 first-touch emails sent to other providers (email discovery via site scrape + web search). Birth Circle Doulas (UPMC provider profile, no public email) flagged for manual review. 15s delay enforced between sends.",
+  "sources": [
+    {
+      "claim": "Remotion video rendered 34.8MB (over 10MB), 1920x1080 h264+aac, 235.6s",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/pittsburgh-pa-city-guide.mp4",
+      "quote": "pittsburgh-pa-city-guide.mp4 34873714 bytes; ffprobe duration=235.584000 h264/aac 1920x1080"
+    },
+    {
+      "claim": "YouTube upload completed Nf7ZJDTuDJ4 (public, embeddable=True)",
+      "url": "https://youtu.be/Nf7ZJDTuDJ4",
+      "quote": "pittsburgh-pa-youtube-id.txt: Nf7ZJDTuDJ4; API privacy=public embeddable=True; old 4Q8_n4mg9Zo set unlisted"
+    },
+    {
+      "claim": "video-embeds.ts updated with new video ID",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/src/data/video-embeds.ts",
+      "quote": "\"pittsburgh-pa\": { videoId: \"Nf7ZJDTuDJ4\""
+    },
+    {
+      "claim": "YouTube thumbnail regenerated from hero image (1280x720)",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/yt-thumb-pittsburgh-pa.png",
+      "quote": "yt-thumb-pittsburgh-pa.png dims (1280, 720) 750KB; derived from /images/pittsburgh-pa-birth-doula-skyline-v3.webp"
+    },
+    {
+      "claim": "New video embedded and live on page (HTTP 200)",
+      "url": "https://truejoybirthing.com/birth-support/pittsburgh-pa/",
+      "quote": "HTTP/2 200; Nf7ZJDTuDJ4 present on live page; oembed resolves title 'Pittsburgh Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)'"
+    },
+    {
+      "claim": "TTS regenerated in Shelbi/Voxtral voice across all 12 scenes (24kHz)",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/public/audio/pittsburgh-pa/",
+      "quote": "12 wav files regenerated via Mistral voxtral-mini-tts; scene durations realigned to audio (total 235.36s)"
+    },
+    {
+      "claim": "Pre-render gate all PASS",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/scripts/pre-render-gate.sh",
+      "quote": "bash scripts/pre-render-gate.sh pittsburgh-pa -> exit 0; G0-G9 PASS; provider photo manifest 12/12 loaded"
+    },
+    {
+      "claim": "Outreach: 11 emails sent (1 re-outreach + 10 first-touch), 1 manual-review",
+      "url": "file:///Users/socializerender/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "quote": "2026-09-24 pittsburgh-pa: bethany@birthdoulasofpittsburgh.com (FO re-outreach) + 10 first-touch sent; Birth Circle Doulas no email (manual review)"
+    }
+  ],
+  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/pittsburgh-pa-city-guide.mp4",
+  "video_mb": 33.3,
+  "youtube_id": "Nf7ZJDTuDJ4",
+  "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/yt-thumb-pittsburgh-pa.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "provider": "Birth Doulas of Pittsburgh (Bethany)",
+      "email": "bethany@birthdoulasofpittsburgh.com",
+      "status": "sent",
+      "reason": "re-outreach to non-responder (prior Aug 6 + Sept 4 touches, no reply); force-override naming new video on page",
+      "sent_at": "2026-09-24T17:18:37Z",
+      "message_id": "vps-20260924171842768857"
+    },
+    {
+      "provider": "Local Birth and Postpartum Doulas",
+      "email": "info@indiantypefoundry.com",
+      "status": "sent",
+      "reason": "first-touch (email from site scrape)",
+      "sent_at": "2026-09-24T17:18:51Z",
+      "message_id": "vps-20260924171851664210"
+    },
+    {
+      "provider": "Maternity Doula Training Program (CCAC)",
+      "email": "doula@ccac.edu",
+      "status": "sent",
+      "reason": "first-touch (email from site scrape)",
+      "sent_at": "2026-09-24T17:19:18Z",
+      "message_id": "vps-20260924171918852370"
+    },
+    {
+      "provider": "Boundless Birth Doulas",
+      "email": "info@boundlessbirthdoulas.com",
+      "status": "sent",
+      "reason": "first-touch (email from site scrape)",
+      "sent_at": "2026-09-24T17:19:51Z",
+      "message_id": "vps-20260924171951824349"
+    },
+    {
+      "provider": "Empowered Holistic Birth",
+      "email": "EHBirthLLC@gmail.com",
+      "status": "sent",
+      "reason": "first-touch (email from site scrape)",
+      "sent_at": "2026-09-24T17:20:18Z",
+      "message_id": "vps-20260924172018738586"
+    },
+    {
+      "provider": "Nido Doula Care",
+      "email": "natalia@nidodoulacare.com",
+      "status": "sent",
+      "reason": "first-touch (email from site scrape)",
+      "sent_at": "2026-09-24T17:20:47Z",
+      "message_id": "vps-20260924172047418460"
+    },
+    {
+      "provider": "Moon Sage Mama (Melissa Lucchesi)",
+      "email": "moonsagemama@gmail.com",
+      "status": "sent",
+      "reason": "first-touch (email from site scrape)",
+      "sent_at": "2026-09-24T17:21:22Z",
+      "message_id": "vps-20260924172122895124"
+    },
+    {
+      "provider": "Mooncradle Matrescence (Clarissa Alves)",
+      "email": "Doulaalves@mooncradlematrescence.com",
+      "status": "sent",
+      "reason": "first-touch (email from site scrape)",
+      "sent_at": "2026-09-24T17:21:47Z",
+      "message_id": "vps-20260924172147687168"
+    },
+    {
+      "provider": "Riverbend Birth",
+      "email": "marleeandmegan@riverbendbirth.com",
+      "status": "sent",
+      "reason": "first-touch (email corrected from mailto query-suffix); initial send blocked_email_gate due to suffix, resent clean",
+      "sent_at": "2026-09-24T17:24:03Z",
+      "message_id": "vps-20260924172414449943"
+    },
+    {
+      "provider": "Pittsburgh Doula Network",
+      "email": "pghdoulas@gmail.com",
+      "status": "sent",
+      "reason": "first-touch (email from web search/contact page)",
+      "sent_at": "2026-09-24T17:24:29Z",
+      "message_id": "vps-20260924172438710542"
+    },
+    {
+      "provider": "Golden Lotus Doula Services",
+      "email": "goldenlotusdoulaservices@gmail.com",
+      "status": "sent",
+      "reason": "first-touch (email from web search)",
+      "sent_at": "2026-09-24T17:24:53Z",
+      "message_id": "vps-20260924172453238514"
+    },
+    {
+      "provider": "Birth Circle Doulas (UPMC Magee)",
+      "email": null,
+      "status": "manual_review",
+      "reason": "no scrapeable public email (UPMC provider profile); needs manual lookup"
+    }
+  ]
+}

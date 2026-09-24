@@ -1,0 +1,91 @@
+{
+  "slug": "pittsburgh-pa",
+  "verdicts": [
+    {
+      "crop": "pittsburgh-pa-hero-fig0.png",
+      "verdict": "pass",
+      "defects": [
+        "No AI-generated people figures are present in the image. The scene contains only natural elements (trees, water, landscape)."
+      ]
+    },
+    {
+      "crop": "pittsburgh-pa-hero-fig1.png",
+      "verdict": "pass",
+      "defects": [
+        "No visible anatomical defects in the figure. The arms appear intact and correctly positioned, with no fused/missing fingers or distorted joints. The face is not visible in detail due to backlighting, but no deformities are apparent within the silhouette. The crop does not truncate any limbs in a way that suggests missing anatomy."
+      ]
+    },
+    {
+      "crop": "pittsburgh-pa-hero-fig2.png",
+      "verdict": "pass",
+      "defects": [
+        "No human figures or anatomical defects visible in the provided image. The image depicts a bridge and natural scenery only."
+      ]
+    },
+    {
+      "crop": "pittsburgh-pa-support-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "pittsburgh-pa-thumb-fig0.png",
+      "verdict": "pass",
+      "defects": [
+        "The figure is a silhouette with no visible arms or fingers. The head and body are indistinct due to the silhouette effect, making it impossible to assess facial features or finer anatomical details. No visible defects such as fused/missing limbs, melted joints, or distorted faces are discernible within the crop."
+      ]
+    },
+    {
+      "crop": "pittsburgh-pa-og-fig0.png",
+      "verdict": "pass",
+      "defects": [
+        "No visible anatomical defects in the figure. The arms appear intact and correctly positioned, with no fused/missing fingers or distorted joints. The face is not visible due to the silhouette, so no facial deformities can be assessed. The limbs are fully within the crop boundaries, with no truncation issues."
+      ]
+    }
+  ],
+  "checked_at": "2026-09-24T17:49:23.011609+00:00",
+  "model": "atlas:latest",
+  "raw": [
+    {
+      "figure_count": 0,
+      "arms": 0,
+      "anomaly_notes": "No AI-generated people figures are present in the image. The scene contains only natural elements (trees, water, landscape).",
+      "verdict": "pass",
+      "crop": "pittsburgh-pa-hero-fig0.png"
+    },
+    {
+      "figure_count": 1,
+      "arms": 2,
+      "anomaly_notes": "No visible anatomical defects in the figure. The arms appear intact and correctly positioned, with no fused/missing fingers or distorted joints. The face is not visible in detail due to backlighting, but no deformities are apparent within the silhouette. The crop does not truncate any limbs in a way that suggests missing anatomy.",
+      "verdict": "pass",
+      "crop": "pittsburgh-pa-hero-fig1.png"
+    },
+    {
+      "figure_count": 0,
+      "arms": 0,
+      "anomaly_notes": "No human figures or anatomical defects visible in the provided image. The image depicts a bridge and natural scenery only.",
+      "verdict": "pass",
+      "crop": "pittsburgh-pa-hero-fig2.png"
+    },
+    {
+      "figure_count": 2,
+      "arms": 4,
+      "anomaly_notes": "",
+      "verdict": "pass",
+      "crop": "pittsburgh-pa-support-fig0.png"
+    },
+    {
+      "figure_count": 1,
+      "arms": 0,
+      "anomaly_notes": "The figure is a silhouette with no visible arms or fingers. The head and body are indistinct due to the silhouette effect, making it impossible to assess facial features or finer anatomical details. No visible defects such as fused/missing limbs, melted joints, or distorted faces are discernible within the crop.",
+      "verdict": "pass",
+      "crop": "pittsburgh-pa-thumb-fig0.png"
+    },
+    {
+      "figure_count": 1,
+      "arms": 2,
+      "anomaly_notes": "No visible anatomical defects in the figure. The arms appear intact and correctly positioned, with no fused/missing fingers or distorted joints. The face is not visible due to the silhouette, so no facial deformities can be assessed. The limbs are fully within the crop boundaries, with no truncation issues.",
+      "verdict": "pass",
+      "crop": "pittsburgh-pa-og-fig0.png"
+    }
+  ]
+}
