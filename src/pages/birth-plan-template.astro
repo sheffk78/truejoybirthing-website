@@ -117,6 +117,36 @@ const schema = {
               <a href="#download" class="text-tjb-rose-500 font-semibold hover:text-tjb-rose-600 underline underline-offset-2 transition-all">Get it free</a> — no email required.
             </p>
           </div>
+
+          <!-- Above-fold platform-aware app CTA (council request) -->
+          <div class="mt-4" data-platform-cta>
+            <p class="text-sm text-tjb-gray mb-2">Or open the app on your phone</p>
+            <AppStoreButtons variant="ghost" align="left" ct="bpt_above_fold" />
+          </div>
+
+          <script is:inline>
+            // Platform-aware above-fold CTA: show only the relevant store button
+            // based on user-agent, matching TJB brand voice (sentence case, warm).
+            (function () {
+              var ctas = document.querySelectorAll('[data-platform-cta]');
+              if (!ctas.length) return;
+              var ua = navigator.userAgent || '';
+              var isAndroid = /Android/.test(ua);
+              var isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+              ctas.forEach(function (cta) {
+                var buttons = cta.querySelectorAll('.app-store-buttons');
+                buttons.forEach(function (btn) {
+                  var iosBtn = btn.querySelector('[data-store="ios"]');
+                  var androidBtn = btn.querySelector('[data-store="android"]');
+                  if (isAndroid && androidBtn) {
+                    iosBtn && (iosBtn.style.display = 'none');
+                  } else if (isIOS && iosBtn) {
+                    androidBtn && (androidBtn.style.display = 'none');
+                  }
+                });
+              });
+            })();
+          </script>
         </div>
 
         <!-- Right: Product mockup, 45% -->
