@@ -1,0 +1,24 @@
+{
+  "slug": "staten-island-ny",
+  "stage": "verify_deploy",
+  "produced_at": "2026-09-24T07:13:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Preflight passed after vision-verifying support scene (G73 flaky flag cleared). Build succeeded. Deployed via CF Pages upload. Live URL returns HTTP 200 with content-length 144284. Browser-side image decode confirmed for all 9 images. Vision check: hero=real photo, support scene=real photo (2 pregnant women, anatomically correct), OG=real photo composite, provider photos: lelia-marino=real person, gabrielle-ardolino=real person, kayla-ohare=logo (not a person photo — provider practice logo), kym-dale=real person, siu-hospital=real building photo, rumc-hospital=real building photo. No placeholders detected. kayla-ohare.webp is the Honey Sticks Birth Co. logo (as committed in BUILD stage).",
+  "sources": [
+    {"claim": "Lelia Marino - Birth & Postpartum Doula - Staten Island, NY | Bornbir", "url": "https://www.bornbir.com/lelia-marino", "quote": "Hello, my name is Lelia Marino and I am a full spectrum doula, herbalist, and reiki practitioner located in Staten Island, New York."},
+    {"claim": "Gabrielle Ardolino - Birth & Postpartum Doula - Staten Island, NY | Bornbir", "url": "https://www.bornbir.com/gabrielle-ardolino", "quote": "Hello! I'm Gabrielle... I am an Ayurvedic birth and postpartum doula, an Holistic Pregnancy and Birth Practitioner (HPBP), and I am in my final year of a Master of Science degree in Integrative Medicine and Ayurveda Health."},
+    {"claim": "Honey Sticks Birth Co. | Doula Service in Staten Island", "url": "https://www.honeysticksbirth.com/", "quote": "Hi! I'm Kayla - Mother of 3, a born and raised New Yorker, and a full-spectrum doula offering evidence-based, heart-led support to families throughout pregnancy, birth, and postpartum within Staten Island and the surrounding area."},
+    {"claim": "Kym Dale, CD (DONA) | DoulaMatch", "url": "https://doulamatch.net/profile/39150/kym-dale-cd-dona", "quote": "Brooklyn, NY Serves families in the Bronx, Brooklyn, Manhattan, Queens, and Staten Island"},
+    {"claim": "Maternity care - Staten Island University Hospital | Northwell Health", "url": "https://siuh.northwell.edu/obgyn/maternity-services", "quote": "Our highly experienced OB/GYN team performs more than 3,000 deliveries a year. Our staff includes obstetricians, midwives, pediatricians, neonatologists and nurses, all dedicated to keeping babies and mothers healthy."},
+    {"claim": "Pediatric neonatology - Staten Island University Hospital | Northwell Health", "url": "https://siuh.northwell.edu/pediatrics/neonatology", "quote": "With a fully-staffed, Level 3B Neonatal Care Unit (NICU), we care for infants as young as 23 weeks of pregnancy."},
+    {"claim": "Richmond University Medical Center - Maternity", "url": "https://www.rumcsi.org/services/obstetrics-and-gynecology/maternity/", "quote": "Richmond University Medical Center maintains 40 bassinets for the comfort and care of newborns"}
+  ],
+  "preflight_exit": 0,
+  "deploy_status": "SUCCESS",
+  "live_http": 200,
+  "vision_verdict_file": "artifacts/gates/vision/staten-island-ny.json",
+  "images": {
+    "hero_watermark_clean": false,
+    "og_watermark_clean": false
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "chula-vista-ca",
+  "stage": "verify_deploy",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 6,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quoted output from scripts/preflight-stage-gate.py directly states the preflight passed with 0 failures and 0 warnings, matching the claim exactly.",
+      "claim": "Preflight passed with 0 failures and 0 warnings",
+      "url": "scripts/preflight-stage-gate.py output",
+      "quote": "PREFLIGHT PASSED: 0 failures, 0 warning(s)"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote 'exit 0' is the standard success exit code for the 'npm run build' command, directly supporting the claim that the build completed successfully.",
+      "claim": "Build completed successfully",
+      "url": "npm run build",
+      "quote": "exit 0"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote 'Status: PUSHED' is plausible output from the deploy script command for the chula-vista-ca page and directly indicates the push to CF Pages completed.",
+      "claim": "Deploy pushed to CF Pages successfully",
+      "url": "bash scripts/deploy.sh chula-vista-ca",
+      "quote": "Status: PUSHED"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quoted HTTP response header (HTTP/2 200, content-length: 144283) is plausible output from fetching the given truejoybirthing.com URL and directly confirms the page returns status 200 with a content-length well above 10KB.",
+      "claim": "Live page returns HTTP 200 with content-length > 10KB",
+      "url": "https://truejoybirthing.com/birth-support/chula-vista-ca/",
+      "quote": "HTTP/2 200, content-length: 144283"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is the direct output of the stated verification method (curl -sI on all page image URLs) and confirms the claim: all 26 images returned HTTP/2 200 with a minimum content-length of 27562 bytes, which exceeds the 10KB threshold.",
+      "claim": "All page images return HTTP 200 with content-length > 10KB (no placeholders)",
+      "url": "curl -sI on all page image URLs",
+      "quote": "All 26 images returned HTTP/2 200 with content-length ranging from 27562 to 149987"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible content for a vision gate artifact file for chula-vista-ca and directly states all 4 figure crops passed vision verification, matching the claim.",
+      "claim": "Vision check passed for all 4 figure crops - no anatomical defects",
+      "url": "artifacts/gates/vision/chula-vista-ca.json",
+      "quote": "All 4 figure crops vision-verified pass (checked_at: 2026-09-24T01:11:33Z)"
+    }
+  ],
+  "checked_at": "2026-09-24T01:19:09-06:00"
+}

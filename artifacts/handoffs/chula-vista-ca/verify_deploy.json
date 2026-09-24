@@ -1,0 +1,43 @@
+{
+  "slug": "chula-vista-ca",
+  "stage": "verify_deploy",
+  "produced_at": "2026-09-24T01:15:07Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "",
+  "sources": [
+    {
+      "claim": "Preflight passed with 0 failures and 0 warnings",
+      "url": "scripts/preflight-stage-gate.py output",
+      "quote": "PREFLIGHT PASSED: 0 failures, 0 warning(s)"
+    },
+    {
+      "claim": "Build completed successfully",
+      "url": "npm run build",
+      "quote": "exit 0"
+    },
+    {
+      "claim": "Deploy pushed to CF Pages successfully",
+      "url": "bash scripts/deploy.sh chula-vista-ca",
+      "quote": "Status: PUSHED"
+    },
+    {
+      "claim": "Live page returns HTTP 200 with content-length > 10KB",
+      "url": "https://truejoybirthing.com/birth-support/chula-vista-ca/",
+      "quote": "HTTP/2 200, content-length: 144283"
+    },
+    {
+      "claim": "All page images return HTTP 200 with content-length > 10KB (no placeholders)",
+      "url": "curl -sI on all page image URLs",
+      "quote": "All 26 images returned HTTP/2 200 with content-length ranging from 27562 to 149987"
+    },
+    {
+      "claim": "Vision check passed for all 4 figure crops - no anatomical defects",
+      "url": "artifacts/gates/vision/chula-vista-ca.json",
+      "quote": "All 4 figure crops vision-verified pass (checked_at: 2026-09-24T01:11:33Z)"
+    }
+  ],
+  "preflight_exit": 0,
+  "deploy_status": "SUCCESS",
+  "live_http": 200,
+  "vision_verdict_file": "artifacts/gates/vision/chula-vista-ca.json"
+}
