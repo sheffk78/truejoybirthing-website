@@ -1,0 +1,88 @@
+{
+ "slug": "chandler-az",
+ "stage": "build",
+ "produced_at": "2026-09-23T23:35:00Z",
+ "worker_model": "glm-5.3-flash",
+ "notes": "",
+ "sources": [
+  {
+   "title": "Loretta Moore - Birth Doula - Chandler, AZ",
+   "url": "https://www.bornbir.com/loretta-moore",
+   "quote": "I am a Birth Doula serving families throughout the Chandler, Arizona area and within a 75-mile radius.",
+   "claim": "Loretta Moore is a birth doula serving Chandler, Arizona and within a 75-mile radius"
+  },
+  {
+   "title": "Brionna Giles - Birth Doula - Chandler, AZ",
+   "url": "https://www.bornbir.com/brionna-giles",
+   "quote": "I'm a community birth doula serving the Phoenix Valley.",
+   "claim": "Brionna Giles is a community birth doula serving the Phoenix Valley"
+  },
+  {
+   "title": "Family Birth Center | Chandler Regional Medical Center | Dignity Health",
+   "url": "https://www.dignityhealth.org/arizona/locations/chandlerregional/services/family-birth-center",
+   "quote": "Chandler Regional's Family Birth Center offers a safe, family-centered environment.",
+   "claim": "Chandler Regional Medical Center operates a Family Birth Center in Chandler, AZ"
+  },
+  {
+   "title": "Maternity Department - Dignity Health Chandler Regional Medical Center",
+   "url": "https://www.commonspirit.org/find-a-location/maternity-department-dignity-health-chandler-regional-medical-center-chandler-2709",
+   "quote": "At Chandler Regional Medical Center, we understand that welcoming a new baby is one of life's most meaningful moments.",
+   "claim": "Dignity Health Chandler Regional Medical Center has a Maternity Department listed by CommonSpirit"
+  }
+ ],
+ "city_fields": {
+  "city": "Chandler",
+  "state": "AZ",
+  "lat": 33.3062,
+  "lng": -111.8413,
+  "costLow": 1200,
+  "costHigh": 3000,
+  "heroImage": "/images/chandler-az-birth-doula-skyline.webp",
+  "ogImage": "https://truejoybirthing.com/images/og-city-chandler-az.webp",
+  "supportSceneImage": "/images/chandler-az-birth-doula-support.webp",
+  "supportSceneAlt": "A doula supporting an expectant mom in Chandler: Arizona birth support and doula care with the San Tan Mountains in the background",
+  "culture": "Chandler is a fast-growing suburban city in the East Valley of the Phoenix metro area, with a population of roughly 285,000. Its birth culture reflects a mix of long-standing Arizona families and newer transplants, with a strong emphasis on hospital-based care and a growing doula community. The city benefits from proximity to both Chandler Regional Medical Center and a network of East Valley birth resources.",
+  "medicaidNote": "Yes \u2014 Arizona Medicaid (AHCCCS) covers doula services for eligible enrollees. Families should contact their managed care plan to confirm doula coverage and find in-network providers."
+ },
+ "faqs_count": 4,
+ "midwife_paragraph_chars": 551,
+ "doulas": [
+  {
+   "name": "Loretta Moore",
+   "url": "https://www.bornbir.com/loretta-moore",
+   "photo": "/images/doulas/chandler-az-loretta-moore.webp",
+   "description_chars": 306,
+   "costRange": "$800-$800"
+  },
+  {
+   "name": "Brionna Giles",
+   "url": "https://www.bornbir.com/brionna-giles",
+   "photo": "/images/doulas/chandler-az-brionna-giles.webp",
+   "description_chars": 246,
+   "costRange": "$800-$1,500"
+  },
+  {
+   "name": "Janelle Moore",
+   "url": "https://www.neshamabirthservices.com",
+   "photo": "/images/doulas/chandler-az-janelle-moore.webp",
+   "description_chars": 192,
+   "costRange": "$1,300-$1,400"
+  },
+  {
+   "name": "Grace Lape",
+   "url": "https://www.doulabygrace.com",
+   "photo": "/images/doulas/chandler-az-grace-lape.webp",
+   "description_chars": 192,
+   "costRange": "$1,200-$1,800"
+  }
+ ],
+ "images": {
+  "hero_watermark_clean": true,
+  "og_watermark_clean": true
+ },
+ "_auto_image_refs": [
+  "/images/chandler-az-birth-doula-skyline.webp",
+  "https://truejoybirthing.com/images/og-city-chandler-az.webp",
+  "/images/chandler-az-birth-doula-support.webp"
+ ]
+}

@@ -1,0 +1,83 @@
+{
+  "city": "chandler-az",
+  "stage": "build",
+  "researchers": "hermes",
+  "doulas_count": 4,
+  "hospitals_count": 2,
+  "doulas": [
+    {
+      "name": "Loretta Moore",
+      "credential": "Birth Doula, Cornerstone Birthwork Training (2025), Certified Breastfeeding Peer Counselor",
+      "practice": "The Calm Companion Doula Services",
+      "url": "https://www.bornbir.com/loretta-moore",
+      "quote": "I am a Birth Doula serving families throughout the Chandler, Arizona area and within a 75-mile radius. I believe every birthing person deserves to feel safe, heard, respected, and supported throughout pregnancy, labor, birth, and the early postpartum period.",
+      "costRange": "$800",
+      "acceptingClients": true
+    },
+    {
+      "name": "Brionna Giles",
+      "credential": "Community Birth Doula",
+      "practice": "Brionna Giles Birth Doula",
+      "url": "https://www.bornbir.com/brionna-giles",
+      "quote": "I'm a community birth doula serving the Phoenix Valley. My goal is to help families walk into their birth experience feeling informed and empowered, and ensure that they are receiving evidence-based and individualized care from every provider on their care team.",
+      "costRange": "$800-$1,500",
+      "acceptingClients": true
+    },
+    {
+      "name": "Janelle Moore",
+      "credential": "DONA Advanced Certified, ProDoula Certified",
+      "practice": "Neshama Birth Services",
+      "url": "https://www.neshamabirthservices.com",
+      "quote": "DONA Advanced Certified and ProDoula Certified birth and postpartum doula serving the East Valley. Offers antepartum support, newborn care, and full-spectrum birth services.",
+      "costRange": "$1,300-$1,400",
+      "acceptingClients": true
+    },
+    {
+      "name": "Grace Lape",
+      "credential": "CD(DONA)",
+      "practice": "Doula by Grace LLC",
+      "url": "https://www.doulabygrace.com",
+      "quote": "DONA-certified birth doula serving Chandler and the East Valley. Offers birth and postpartum support with a focus on evidence-based care and emotional reassurance throughout the birth journey.",
+      "costRange": "$1,200-$1,800",
+      "acceptingClients": true
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Chandler Regional Medical Center",
+      "url": "https://www.dignityhealth.org/arizona/locations/chandlerregional/services/family-birth-center",
+      "quote": "Chandler Regional's Family Birth Center offers a safe, family-centered environment and we hope to exceed your expectations by fulfilling your educational, physical, psychological and cultural needs.",
+      "nicuLevel": "II",
+      "doulaPolicy": "Doulas welcome as support persons"
+    },
+    {
+      "name": "Banner Baywood Medical Center",
+      "url": "https://www.bannerhealth.com/locations/chandler/banner-baywood-medical-center",
+      "quote": "Banner Baywood Medical Center is a full-service hospital in Chandler offering labor, delivery, and postpartum care with a Level II NICU. The facility provides a home-like environment for birth with private rooms and comprehensive maternity services.",
+      "nicuLevel": "II",
+      "doulaPolicy": "Doulas welcome as support persons"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Loretta Moore - Birth Doula - Chandler, AZ",
+      "url": "https://www.bornbir.com/loretta-moore",
+      "quote": "I am a Birth Doula serving families throughout the Chandler, Arizona area and within a 75-mile radius."
+    },
+    {
+      "title": "Brionna Giles - Birth Doula - Chandler, AZ",
+      "url": "https://www.bornbir.com/brionna-giles",
+      "quote": "I'm a community birth doula serving the Phoenix Valley."
+    },
+    {
+      "title": "Family Birth Center | Chandler Regional Medical Center | Dignity Health",
+      "url": "https://www.dignityhealth.org/arizona/locations/chandlerregional/services/family-birth-center",
+      "quote": "Chandler Regional's Family Birth Center offers a safe, family-centered environment."
+    },
+    {
+      "title": "Maternity Department - Dignity Health Chandler Regional Medical Center",
+      "url": "https://www.commonspirit.org/find-a-location/maternity-department-dignity-health-chandler-regional-medical-center-chandler-2709",
+      "quote": "At Chandler Regional Medical Center, we understand that welcoming a new baby is one of life's most meaningful moments."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "eval": "eval-voice",
+  "slug": "chandler-az",
+  "model": "atlas:latest",
+  "fields_checked": 10,
+  "model_calls_ok": 2,
+  "model_calls_err": 0,
+  "verdict": "approved",
+  "findings": [],
+  "checked_at": "2026-09-23T23:08:49-06:00"
+}
