@@ -1,0 +1,89 @@
+{
+  "slug": "staten-island-ny",
+  "stage": "build",
+  "produced_at": "2026-09-24T06:37:30Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "staten-island-ny build stage complete: 4 doulas, 2 hospitals, data validated, images created",
+  "sources": [
+    {
+      "claim": "Lelia Marino is a full spectrum doula, herbalist, and reiki practitioner in Staten Island, NY",
+      "url": "https://www.bornbir.com/lelia-marino",
+      "quote": "Hello, my name is Lelia Marino and I am a full spectrum doula, herbalist, and reiki practitioner located in Staten Island, New York."
+    },
+    {
+      "claim": "Gabrielle Ardolino is an Ayurvedic birth and postpartum doula in Staten Island, NY",
+      "url": "https://www.bornbir.com/gabrielle-ardolino",
+      "quote": "Hello! I'm Gabrielle... I am an Ayurvedic birth and postpartum doula, an Holistic Pregnancy and Birth Practitioner (HPBP), and I am in my final year of a Master of Science degree in Integrative Medicine and Ayurveda Health."
+    },
+    {
+      "claim": "Kayla of Honey Sticks Birth Co. is a full-spectrum doula serving Staten Island",
+      "url": "https://www.honeysticksbirth.com/",
+      "quote": "Hi! I'm Kayla - Mother of 3, a born and raised New Yorker, and a full-spectrum doula offering evidence-based, heart-led support to families throughout pregnancy, birth, and postpartum within Staten Island and the surrounding area."
+    },
+    {
+      "claim": "Kym Dale is a CD (DONA) birth and postpartum doula serving Staten Island",
+      "url": "https://doulamatch.net/profile/39150/kym-dale-cd-dona",
+      "quote": "Brooklyn, NY Serves families in the Bronx, Brooklyn, Manhattan, Queens, and Staten Island"
+    },
+    {
+      "claim": "Staten Island University Hospital is a Northwell Health facility with Level III NICU performing 3000+ deliveries/year",
+      "url": "https://siuh.northwell.edu/obgyn/maternity-services",
+      "quote": "Our highly experienced OB/GYN team performs more than 3,000 deliveries a year. Our staff includes obstetricians, midwives, pediatricians, neonatologists and nurses, all dedicated to keeping babies and mothers healthy."
+    },
+    {
+      "claim": "Richmond University Medical Center has a Level III NICU (Wayne Zenna NICU) on Staten Island",
+      "url": "https://www.rumcsi.org/services/obstetrics-and-gynecology/maternity/",
+      "quote": "Richmond University Medical Center maintains 40 bassinets for the comfort and care of newborns, including high-risk pregnancies. Our Wayne Zenna Level III neonatal intensive care unit (NICU) carefully manages premature labor and pregnancies where diabetes, hypertension, or genetic complications are factors."
+    }
+  ],
+  "city_fields": {
+    "city": "Staten Island",
+    "state": "NY",
+    "lat": 40.5795,
+    "lng": -74.1502,
+    "costLow": 1000,
+    "costHigh": 3500,
+    "heroImage": "/images/staten-island-ny-birth-doula-skyline-v2.webp",
+    "ogImage": "https://truejoybirthing.com/images/og-city-staten-island-ny.webp",
+    "supportSceneImage": "/images/staten-island-ny-birth-doula-support-v2.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom on Staten Island: New York birth support and doula care with the Verrazzano Bridge skyline in the background",
+    "culture": "Staten Island is New York City's southernmost and most suburban borough, home to roughly 476,000 residents across neighborhoods like Tompkinsville, Great Kills, and Tottenville. Its birth culture reflects a close-knit, family-centered community that is more suburban than most of the city, with many families delivering at Staten Island University Hospital or Richmond University Medical Center. The borough has a growing, dedicated doula community, and New York State Medicaid has expanded doula coverage, helping make doula support more accessible to Staten Island families.",
+    "medicaidNote": "Yes \u00e2\u0080\u0094 New York State Medicaid covers doula services through the state's Medicaid program and NYS Doula Pilot Program, helping make doula care more accessible for eligible Staten Island families. Families should contact their managed care plan to confirm doula coverage and find in-network providers."
+  },
+  "faqs_count": 5,
+  "midwife_paragraph_chars": 487,
+  "doulas": [
+    {
+      "name": "Lelia Marino",
+      "url": "https://www.bornbir.com/lelia-marino",
+      "photo": "/images/providers/staten-island-ny-lelia-marino.webp",
+      "description_chars": 432,
+      "costRange": "$750-$1,500"
+    },
+    {
+      "name": "Gabrielle Ardolino",
+      "url": "https://www.bornbir.com/gabrielle-ardolino",
+      "photo": "/images/providers/staten-island-ny-gabrielle-ardolino.webp",
+      "description_chars": 374,
+      "costRange": "$1,200-$2,200"
+    },
+    {
+      "name": "Kayla O'Hare",
+      "url": "https://www.honeysticksbirth.com/",
+      "photo": "/images/providers/staten-island-ny-kayla-ohare.webp",
+      "description_chars": 312,
+      "costRange": "$1,750-$3,000"
+    },
+    {
+      "name": "Kym Dale",
+      "url": "https://doulamatch.net/profile/39150/kym-dale-cd-dona",
+      "photo": "/images/providers/staten-island-ny-kym-dale.webp",
+      "description_chars": 328,
+      "costRange": "$2,000-$3,250"
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  }
+}

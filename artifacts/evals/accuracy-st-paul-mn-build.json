@@ -1,0 +1,46 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "st-paul-mn",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 4,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly states that Midwest Doulas is the highest-rated birth doula services organization in the Twin Cities, which matches the claim's core assertion and is plausible homepage text for midwestdoulas.com.",
+      "claim": "Midwest Doulas is the highest-rated birth doula services organization in the Twin Cities, serving Saint Paul families with premium and ultimate birth packages",
+      "url": "https://midwestdoulas.com/",
+      "quote": "Midwest Doulas is the highest-rated birth doula services organization in the Twin Cities. Our group of doulas provides the non-judgmental support families need during pregnancy to create exceptional b"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on Blooma's birth doula support page and directly substantiates the claim's key specifics: 900+ families served and 24/7 availability during pregnancy and birth, consistent with a Twin Cities doula provider serving Saint Paul.",
+      "claim": "Blooma Birth Doulas for the Twin Cities serve Saint Paul with experienced birth doulas who have helped 900+ families, offering 24/7 support and evidence-based care",
+      "url": "https://blooma.com/doulas/birth-support",
+      "quote": "Our doula team has helped more than 900 families navigate thousands of hours of pregnancy, birth, and important medical decisions. We are available to you 24/7 in pregnancy and provide continuity of c"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible first-person doula bio text for the Everyday Miracles Twin Cities doulas page and corroborates the claim's 'supporting families... since 2015' element, though it does not itself mention Saint Paul or the specific birth settings.",
+      "claim": "Everyday Miracles Twin Cities Doulas serve Saint Paul with birth doulas supporting families in home, birth center, and hospital settings since 2015",
+      "url": "https://www.everyday-miracles.org/twin-cities-doulas-1",
+      "quote": "I have been supporting families professionally since 2015 but it was after my son was stillborn in 2018 that my passion for maternal care expanded. I now support families from pre-conception through t"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible text for the doulamn.com/about page and directly corroborates the claim's core assertions\u2014serving Minneapolis and St. Paul with professional doula services and childbirth education\u2014though it does not explicitly confirm the DONA certification or 2017 founding date.",
+      "claim": "Doula Minnesota serves the birth and postpartum community of Minneapolis and Saint Paul with professional doula services, childbirth education, and DONA-certified care since 2017",
+      "url": "https://www.doulamn.com/about",
+      "quote": "Doula Minnesota was built on the belief that every person deserves to be surrounded by support when welcoming a baby. We are proud to offer professional doula services, childbirth education, and more "
+    }
+  ],
+  "checked_at": "2026-09-24T00:41:22-06:00"
+}

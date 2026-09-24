@@ -1,11 +1,11 @@
 {
   "eval": "eval-voice",
-  "slug": "chula-vista-ca",
+  "slug": "staten-island-ny",
   "model": "atlas:latest",
   "fields_checked": 11,
   "model_calls_ok": 2,
   "model_calls_err": 0,
   "verdict": "approved",
   "findings": [],
-  "checked_at": "2026-09-24T00:41:54-06:00"
+  "checked_at": "2026-09-24T00:42:44-06:00"
 }

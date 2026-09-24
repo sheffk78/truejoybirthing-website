@@ -1,0 +1,18 @@
+{
+  "eval": "eval-voice",
+  "slug": "st-paul-mn",
+  "model": "atlas:latest",
+  "fields_checked": 12,
+  "model_calls_ok": 2,
+  "model_calls_err": 0,
+  "verdict": "approved",
+  "findings": [
+    {
+      "field": "localDoulas[Doula Minnesota].description",
+      "severity": "minor",
+      "quote": "in and around Minneapolis and St. Paul",
+      "reason": "Wrong-city content: the bio describes a broader region (Minneapolis and St. Paul) but the field label specifies only **St. Paul, MN** (not Minneapolis)."
+    }
+  ],
+  "checked_at": "2026-09-24T00:44:34-06:00"
+}
