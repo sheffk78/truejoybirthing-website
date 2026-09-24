@@ -2,9 +2,9 @@
   "slug": "pittsburgh-pa",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
-  "exit_code": 1,
-  "passed": 8,
-  "failed": 1,
+  "exit_code": 0,
+  "passed": 9,
+  "failed": 0,
   "skipped": 0,
   "results": {
     "pre_render_gate": {
@@ -13,19 +13,19 @@
     },
     "video_file_exists": {
       "status": "PASS",
-      "detail": "local mp4 cleaned post-upload (expected; YouTube upload + live embed verified)"
+      "detail": "video file 33.3MB >10MB"
     },
     "youtube_upload": {
       "status": "PASS",
-      "detail": "videoId 4Q8_n4mg9Zo present in video-embeds.ts"
+      "detail": "videoId Nf7ZJDTuDJ4 present in video-embeds.ts"
     },
     "youtube_thumbnail": {
       "status": "PASS",
-      "detail": "thumbnail present locally (750KB) and YouTube returns 106KB"
+      "detail": "thumbnail present locally (750KB) and YouTube returns 107KB"
     },
     "video_embedded": {
       "status": "PASS",
-      "detail": "embed found (vid 4Q8_n4mg9Zo) on live page"
+      "detail": "embed found (vid Nf7ZJDTuDJ4) on live page"
     },
     "videoobject_schema": {
       "status": "PASS",
@@ -40,8 +40,8 @@
       "detail": "all 11 provider photos are real images (>5KB, >100 colors)"
     },
     "video_content_city_match": {
-      "status": "FAIL",
-      "detail": "G67: no local render and yt-dlp unavailable \u2014 cannot verify content"
+      "status": "PASS",
+      "detail": "G67: video overview scene names this city ('pittsburgh' found; frame t=21s)"
     }
   }
 }
