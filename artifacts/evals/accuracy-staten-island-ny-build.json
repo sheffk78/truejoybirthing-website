@@ -12,7 +12,7 @@
     {
       "index": 0,
       "verdict": "SUPPORTED",
-      "reason": "The quote is a first-person introduction on a birth-related domain (bornbir.com) at a page path matching her name, and it directly states she is a full spectrum doula, herbalist, and reiki practitioner in Staten Island, New York, exactly matching the claim.",
+      "reason": "The quote is a first-person introduction from a page dedicated to Lelia Marino on a birthing-related domain, and it directly states she is a full spectrum doula, herbalist, and reiki practitioner in Staten Island, New York, exactly matching the claim.",
       "claim": "Lelia Marino is a full spectrum doula, herbalist, and reiki practitioner in Staten Island, NY",
       "url": "https://www.bornbir.com/lelia-marino",
       "quote": "Hello, my name is Lelia Marino and I am a full spectrum doula, herbalist, and reiki practitioner located in Staten Island, New York."
@@ -20,7 +20,7 @@
     {
       "index": 1,
       "verdict": "SUPPORTED",
-      "reason": "The quote is a plausible first-person bio from Gabrielle Ardolino's profile page on a birth-services domain and directly states she is an Ayurvedic birth and postpartum doula, matching the claim's core assertion.",
+      "reason": "The quote is a first-person bio from Gabrielle Ardolino on a birth-services domain (bornbir.com) and directly states she is an Ayurvedic birth and postpartum doula, matching the claim's core assertion.",
       "claim": "Gabrielle Ardolino is an Ayurvedic birth and postpartum doula in Staten Island, NY",
       "url": "https://www.bornbir.com/gabrielle-ardolino",
       "quote": "Hello! I'm Gabrielle... I am an Ayurvedic birth and postpartum doula, an Holistic Pregnancy and Birth Practitioner (HPBP), and I am in my final year of a Master of Science degree in Integrative Medici"
@@ -28,7 +28,7 @@
     {
       "index": 2,
       "verdict": "SUPPORTED",
-      "reason": "The quote is from the Honey Sticks Birth domain and explicitly states Kayla is a full-spectrum doula serving Staten Island, directly supporting the claim.",
+      "reason": "The quote is from the Honey Sticks Birth Co. homepage and explicitly states Kayla is a full-spectrum doula serving Staten Island, directly supporting the claim.",
       "claim": "Kayla of Honey Sticks Birth Co. is a full-spectrum doula serving Staten Island",
       "url": "https://www.honeysticksbirth.com/",
       "quote": "Hi! I'm Kayla - Mother of 3, a born and raised New Yorker, and a full-spectrum doula offering evidence-based, heart-led support to families throughout pregnancy, birth, and postpartum within Staten Is"
@@ -36,7 +36,7 @@
     {
       "index": 3,
       "verdict": "SUPPORTED",
-      "reason": "The quote is from a DoulaMatch profile whose URL identifies Kym Dale as a CD (DONA), and it explicitly lists Staten Island among the areas served, matching the claim.",
+      "reason": "The quote is a plausible service-area listing from a DoulaMatch profile whose URL slug confirms Kym Dale's CD (DONA) credential, and it explicitly lists Staten Island among the areas served.",
       "claim": "Kym Dale is a CD (DONA) birth and postpartum doula serving Staten Island",
       "url": "https://doulamatch.net/profile/39150/kym-dale-cd-dona",
       "quote": "Brooklyn, NY Serves families in the Bronx, Brooklyn, Manhattan, Queens, and Staten Island"
@@ -44,7 +44,7 @@
     {
       "index": 4,
       "verdict": "SUPPORTED",
-      "reason": "The quote is plausible for the SIUH maternity services page (siuh.northwell.edu confirms the Northwell affiliation) and directly supports the 3,000+ deliveries/year statistic, with neonatologists on staff consistent with NICU services.",
+      "reason": "The URL domain (siuh.northwell.edu) confirms Staten Island University Hospital is a Northwell Health facility with a maternity services page, and the quote directly supports the 3000+ deliveries/year figure while mentioning neonatologists, consistent with NICU services.",
       "claim": "Staten Island University Hospital is a Northwell Health facility with Level III NICU performing 3000+ deliveries/year",
       "url": "https://siuh.northwell.edu/obgyn/maternity-services",
       "quote": "Our highly experienced OB/GYN team performs more than 3,000 deliveries a year. Our staff includes obstetricians, midwives, pediatricians, neonatologists and nurses, all dedicated to keeping babies and"
@@ -52,11 +52,11 @@
     {
       "index": 5,
       "verdict": "SUPPORTED",
-      "reason": "The quote is from the hospital's own maternity page (rumcsi.org) and explicitly names the Wayne Zenna Level III NICU at Richmond University Medical Center, directly supporting the claim.",
+      "reason": "The quote is from the official RUMCSI maternity page and explicitly names the Wayne Zenna Level III NICU at Richmond University Medical Center, directly supporting the claim.",
       "claim": "Richmond University Medical Center has a Level III NICU (Wayne Zenna NICU) on Staten Island",
       "url": "https://www.rumcsi.org/services/obstetrics-and-gynecology/maternity/",
       "quote": "Richmond University Medical Center maintains 40 bassinets for the comfort and care of newborns, including high-risk pregnancies. Our Wayne Zenna Level III neonatal intensive care unit (NICU) carefully"
     }
   ],
-  "checked_at": "2026-09-24T00:45:44-06:00"
+  "checked_at": "2026-09-24T01:26:39-06:00"
 }
