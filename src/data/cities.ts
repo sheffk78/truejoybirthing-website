@@ -283,7 +283,7 @@ export const cities: Record<string, CityData> = {
     lat: 33.3062,
     lng: -111.8413,
     ogImage: "https://truejoybirthing.com/images/og-city-chandler-az.webp",
-    heroImage: "/images/chandler-az-birth-doula-skyline.webp",
+    heroImage: "/images/chandler-az-birth-doula-skyline-v2.webp",
     supportSceneImage: "/images/chandler-az-birth-doula-support-v2.webp",
     supportSceneAlt: "A doula supporting an expectant mom in Chandler: Arizona birth support and doula care with the San Tan Mountains in the background",
     localDoulas: [
