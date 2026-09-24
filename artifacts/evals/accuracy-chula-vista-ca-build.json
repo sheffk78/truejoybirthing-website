@@ -1,0 +1,70 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "chula-vista-ca",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 7,
+  "model_errors": 0,
+  "unsupported": 1,
+  "not_enough_info_pct": 0,
+  "verdict": "rejected",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the sharp.com location page for Sharp Mary Birch Chula Vista and directly states the exact claim that it is the South Bay's largest provider of health care for women and infants.",
+      "claim": "Sharp Mary Birch Chula Vista is the South Bay's largest provider of health care for women and infants",
+      "url": "https://www.sharp.com/locations/sharp-mary-birch-chula-vista",
+      "quote": "Take a virtual tour of Sharp Mary Birch Chula Vista, the South Bay's largest provider of health care for women and infants."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the official Sharp Chula Vista hospital page and directly states that all labor and delivery rooms are private with a dedicated bathroom and shower, matching the claim.",
+      "claim": "Sharp Chula Vista L&D rooms are private with bathroom and shower",
+      "url": "https://www.sharp.com/hospitals/chula-vista/",
+      "quote": "After triage, you will labor and deliver your baby in one of our spacious suites that were made with your comfort in mind. All labor and delivery rooms are private with a dedicated bathroom and shower"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly states that maternity services at Scripps Mercy Hospital Chula Vista were shut down, and the 2024 Union-Tribune article URL matches the claim's topic and timeframe.",
+      "claim": "Scripps Mercy Chula Vista closed its maternity ward in 2024",
+      "url": "https://www.sandiegouniontribune.com/2024/08/04/scripps-chula-vista-closed-its-maternity-ward-why-are-pregnant-women-still-showing-up",
+      "quote": "Shutting down maternity services at Scripps Mercy Hospital Chula Vista has not stopped pregnant women from showing up in its emergency department in need of obstetric services."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from a doula profile page on doulamatch.net for Lauren Williams and directly states 'Postpartum Doula Experience: 3 years and 20 families served,' which matches the claim's experience details and is plausible text for that page.",
+      "claim": "Lauren Williams is a Certified Professional Postpartum Doula with 3 years and 20 families served",
+      "url": "https://doulamatch.net/profile/42157/lauren-williams",
+      "quote": "Postpartum Doula Experience: 3 years and 20 families served."
+    },
+    {
+      "index": 4,
+      "verdict": "UNSUPPORTED",
+      "reason": "The quote describes only a labor/birth support package and makes no mention of postpartum support, so it does not substantiate the claim of full-spectrum birth AND postpartum support.",
+      "claim": "Laurel Krapivkin offers full-spectrum birth and postpartum support",
+      "url": "https://doulamatch.net/profile/29676/laurel-krapivkin",
+      "quote": "Labor Support Package: Continuous email/text/phone support; Up to 2 prenatal visits; 24/7 on-call status starting at 38 weeks - 42 weeks; Support during labor and delivery."
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible text for Alma Fisher's doula profile page and directly supports the claim, mentioning travel up to 25 miles along with postpartum services like mom and baby care, meal prep, and baby laundry.",
+      "claim": "Alma Fisher offers postpartum care with travel up to 25 miles",
+      "url": "https://doulamatch.net/profile/41071/alma-fisher",
+      "quote": "My fees include travel up to 25 miles each way, mom and baby care, meal prep, light housework (loading dishwasher, bottle washing, pump parts washing), baby laundry."
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from a doulamatch.net profile URL matching Taylor Maude Love and directly states she attends all hospitals, all birth centers, and any home birth, which fully supports the claim.",
+      "claim": "Taylor Maude Love attends all hospital, birth center, and home births",
+      "url": "https://doulamatch.net/profile/36718/taylor-maude-love",
+      "quote": "Attends hospital births? All Hospitals. Attends birth center births? All Birth Centers. Attends home births? Any Home Birth."
+    }
+  ],
+  "checked_at": "2026-09-24T00:38:57-06:00"
+}

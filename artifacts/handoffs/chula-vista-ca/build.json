@@ -1,0 +1,99 @@
+{
+  "slug": "chula-vista-ca",
+  "stage": "build",
+  "produced_at": "2026-09-24T06:32:23Z",
+  "worker_model": "atlas:latest",
+  "notes": "Chula Vista CA build: 4 doulas from DoulaMatch, 2 hospitals (Sharp + Scripps Mercy closed maternity), OG Pattern B, hero/support/og images generated",
+  "sources": [
+    {
+      "claim": "Sharp Mary Birch Chula Vista is the South Bay's largest provider of health care for women and infants",
+      "url": "https://www.sharp.com/locations/sharp-mary-birch-chula-vista",
+      "quote": "Take a virtual tour of Sharp Mary Birch Chula Vista, the South Bay's largest provider of health care for women and infants."
+    },
+    {
+      "claim": "Sharp Chula Vista L&D rooms are private with bathroom and shower",
+      "url": "https://www.sharp.com/hospitals/chula-vista/",
+      "quote": "After triage, you will labor and deliver your baby in one of our spacious suites that were made with your comfort in mind. All labor and delivery rooms are private with a dedicated bathroom and shower."
+    },
+    {
+      "claim": "Scripps Mercy Chula Vista closed its maternity ward in 2024",
+      "url": "https://www.sandiegouniontribune.com/2024/08/04/scripps-chula-vista-closed-its-maternity-ward-why-are-pregnant-women-still-showing-up",
+      "quote": "Shutting down maternity services at Scripps Mercy Hospital Chula Vista has not stopped pregnant women from showing up in its emergency department in need of obstetric services."
+    },
+    {
+      "claim": "Lauren Williams is a Certified Professional Postpartum Doula with 3 years and 20 families served",
+      "url": "https://doulamatch.net/profile/42157/lauren-williams",
+      "quote": "Postpartum Doula Experience: 3 years and 20 families served."
+    },
+    {
+      "claim": "Laurel Krapivkin offers full-spectrum birth and postpartum support",
+      "url": "https://doulamatch.net/profile/29676/laurel-krapivkin",
+      "quote": "Labor Support Package: Continuous email/text/phone support; Up to 2 prenatal visits; 24/7 on-call status starting at 38 weeks - 42 weeks; Support during labor and delivery."
+    },
+    {
+      "claim": "Alma Fisher offers postpartum care with travel up to 25 miles",
+      "url": "https://doulamatch.net/profile/41071/alma-fisher",
+      "quote": "My fees include travel up to 25 miles each way, mom and baby care, meal prep, light housework (loading dishwasher, bottle washing, pump parts washing), baby laundry."
+    },
+    {
+      "claim": "Taylor Maude Love attends all hospital, birth center, and home births",
+      "url": "https://doulamatch.net/profile/36718/taylor-maude-love",
+      "quote": "Attends hospital births? All Hospitals. Attends birth center births? All Birth Centers. Attends home births? Any Home Birth."
+    }
+  ],
+  "city_fields": {
+    "city": "Chula Vista",
+    "state": "CA",
+    "lat": 32.6401,
+    "lng": -117.0842,
+    "costLow": 1200,
+    "costHigh": 2600,
+    "heroImage": "/images/chula-vista-ca-birth-doula-skyline.webp",
+    "ogImage": "https://truejoybirthing.com/images/og-city-chula-vista-ca.webp",
+    "supportSceneImage": "/images/chula-vista-ca-support-scene.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom at home in Chula Vista: South Bay birth support and doula care",
+    "culture": "Chula Vista is the second-largest city in San Diego County and the anchor of the South Bay \u2014 a fast-growing, majority-Latino community where Spanish is spoken in a huge share of homes, and where new parents often juggle hospital births, family-centered care, and the realities of a long freeway commute to jobs and clinics in the metro. Its birth culture blends hospital birth at Sharp Chula Vista with a warm, bilingual doula community that has expanded quickly as California's Medi-Cal doula benefit and SB-332 coverage made doula care more reachable for more families.",
+    "medicaidNote": "Yes \u2014 California's Medi-Cal covers doula services statewide as of January 2023 under SB-509, with reimbursement around $1,841 per birth package through the PAVE portal. Chula Vista families on Medi-Cal can ask their managed-care plan about in-network doulas, and the South Bay's bilingual doula community has grown quickly since the benefit launched."
+  },
+  "faqs_count": 5,
+  "midwife_paragraph_chars": 545,
+  "doulas": [
+    {
+      "name": "Lauren Williams",
+      "url": "https://doulamatch.net/profile/42157/lauren-williams",
+      "photo": "/images/providers/chula-vista-ca-lauren-williams.webp",
+      "description_chars": 381,
+      "costRange": "$50-$65"
+    },
+    {
+      "name": "Laurel Krapivkin",
+      "url": "https://doulamatch.net/profile/29676/laurel-krapivkin",
+      "photo": "/images/providers/chula-vista-ca-laurel-krapivkin.webp",
+      "description_chars": 404,
+      "costRange": "$1,900-$2,500"
+    },
+    {
+      "name": "Alma Fisher",
+      "url": "https://doulamatch.net/profile/41071/alma-fisher",
+      "photo": "/images/providers/chula-vista-ca-alma-fisher.webp",
+      "description_chars": 373,
+      "costRange": "$50-$65"
+    },
+    {
+      "name": "Taylor Maude Love",
+      "url": "https://doulamatch.net/profile/36718/taylor-maude-love",
+      "photo": "/images/providers/chula-vista-ca-taylor-maude-love.webp",
+      "description_chars": 412,
+      "costRange": "$1,500-$4,000"
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  },
+  "_auto_image_refs": [
+    "/images/chula-vista-ca-birth-doula-skyline.webp",
+    "https://truejoybirthing.com/images/og-city-chula-vista-ca.webp",
+    "/images/chula-vista-ca-support-scene.webp"
+  ]
+}
