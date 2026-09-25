@@ -1,0 +1,214 @@
+{
+ "enableBlogResources": true,
+ "publishedDate": "2026-09-24",
+ "city": "Fullerton",
+ "state": "CA",
+ "stateFull": "California",
+ "slug": "fullerton-ca",
+ "costLow": 800,
+ "costHigh": 2500,
+ "shelbiServesHere": false,
+ "heroImage": "/images/fullerton-ca-birth-doula-skyline-v2.webp",
+ "ogImage": "https://truejoybirthing.com/images/og-city-fullerton-ca-v2.webp",
+ "supportSceneImage": "/images/fullerton-ca-support-scene-v2.webp",
+ "supportSceneAlt": "A doula supporting an expectant mom in Fullerton, CA: birth support and doula care",
+ "culture": "Fullerton is a north Orange County city of roughly 139,000 residents at the county's northern edge, known for its historic water tower, the Fullerton College and CSUF campus districts, and a downtown built around the 100-year-old train station. Birth support here spans hospital-based care at Providence St. Jude Medical Center and the nearby Level III NICU hospitals in Whittier and Anaheim, alongside the county's out-of-hospital community: Birth Your Way Doulas, a DONA-certified practice that publishes its package prices and takes Medi-Cal and Kaiser in-network, and Maternal Root, a Fullerton-based birth doula practice. California's Medi-Cal doula benefit, in effect since January 2023, has expanded access for Fullerton families on Medi-Cal, and Francesca Herrera of Maternal Root reports attending 90 births over 7 years.",
+ "heroLocalDetail": "Fullerton families deliver primarily at Providence St. Jude Medical Center on Valencia Mesa Drive, the only hospital inside the city limits, with a Level III NICU. Within a 15-minute drive are PIH Health Whittier Hospital and Anaheim Regional Medical Center, both with Level III NICUs. For out-of-hospital birth, South Coast Midwifery in Irvine is Orange County's accredited freestanding birth center, and licensed midwives serving north Orange County attend home births in Fullerton.",
+ "hospitalDetails": [
+  {
+   "thumbnail": "/images/fullerton-ca-hospital-providence-st-jude.webp",
+   "name": "Providence St. Jude Medical Center",
+   "address": "101 E Valencia Mesa Dr, Fullerton, CA 92835",
+   "url": "https://www.providence.org/locations/socal/st-jude-medical-center",
+   "nicuLevel": "III",
+   "doulaPolicy": "Doulas are welcome as support persons; confirm current policy with the care team",
+   "midwifeFriendly": true,
+   "lactation": true,
+   "privateRooms": true,
+   "paragraph": "Providence St. Jude Medical Center is Fullerton's hospital, located on Valencia Mesa Drive in the city's west side. The facility has a Level III NICU staffed around the clock with neonatologists and pediatric subspecialists, which Providence notes gives high-risk infants a significantly higher chance of survival than delivering at a hospital without one. The maternity program includes concierge service for expectant mothers, private labor and delivery rooms, pelvic floor health classes, maternal mental health resources, and appointments and class scheduling through a dedicated line. Doulas are welcome as support persons. Providence St. Jude is the closest full-service maternity hospital for families in Fullerton, La Habra, and Brea, and is a Baby-Friendly designated facility."
+  },
+  {
+   "thumbnail": "/images/fullerton-ca-hospital-pih-whittier.webp",
+   "name": "PIH Health Whittier Hospital",
+   "address": "14555 Whittier Blvd, Whittier, CA 90602",
+   "url": "https://www.pihhealth.org/health-services/pregnancy-birth/labor-delivery/",
+   "nicuLevel": "III",
+   "doulaPolicy": "Doulas are welcome as support persons; confirm current policy with the care team",
+   "midwifeFriendly": true,
+   "lactation": true,
+   "privateRooms": true,
+   "paragraph": "PIH Health Whittier Hospital is about 10 miles northwest of Fullerton and offers a comprehensive maternity program with a Level III NICU. The hospital has board-certified obstetricians, OB hospitalists, certified nurse-midwives, neonatologists, and lactation consultants on staff. Labor and delivery features private birthing suites with birthing balls, soaking tubs, and flat TVs. Doulas are welcome as support persons. The hospital is a Baby-Friendly designated facility and offers 24/7 anesthesia coverage. Language interpretation services are available for families needing care in languages other than English."
+  },
+  {
+   "thumbnail": "/images/fullerton-ca-hospital-anaheim-regional.webp",
+   "name": "Anaheim Regional Medical Center",
+   "address": "901 S Anaheim Blvd, Anaheim, CA 92805",
+   "url": "https://www.ahmchealth.com/armc",
+   "nicuLevel": "III",
+   "doulaPolicy": "Doulas are welcome as support persons; confirm current policy with the care team",
+   "midwifeFriendly": true,
+   "lactation": true,
+   "privateRooms": true,
+   "paragraph": "Anaheim Regional Medical Center is about 12 miles south of Fullerton and serves as a key maternity hospital for north Orange County. The facility has a Level III NICU with 11 beds, private labor and delivery suites, and 24/7 OB hospitalists and anesthesiologists. The hospital offers certified nurse-midwives, neonatologists, and lactation consultants. Doulas are welcome as support persons. The hospital is a Baby-Friendly designated facility committed to evidence-based maternity care practices."
+  }
+ ],
+ "birthCenterDetails": [
+  {
+   "name": "South Coast Midwifery",
+   "thumbnail": "/images/fullerton-ca-birth-center-south-coast.webp",
+   "address": "Irvine, CA (Quail Hill area)",
+   "url": "https://southcoastmidwifery.com/",
+   "services": [
+    "Birth Center Births",
+    "Water Birth",
+    "Home Birth",
+    "VBAC",
+    "Childbirth Classes"
+   ],
+   "medicaid": false,
+   "distance": "About 15-20 miles from Fullerton",
+   "paragraph": "South Coast Midwifery is Orange County's boutique birth center in the Quail Hill area of Irvine and describes itself as the first accredited birth center in the county. The center offers private birthing suites with queen beds and birthing tubs, water birth, home birth, prenatal and postpartum classes, and women's health care, and it states it is the only standalone birth center in Southern California accredited to perform vaginal birth after cesarean (VBAC). Staffed by certified nurse-midwives, it serves families from across Orange County including Fullerton, and is roughly 15 to 20 miles from Fullerton."
+  }
+ ],
+ "localDoulas": [
+  {
+   "name": "Francesca Herrera (Maternal Root)",
+   "credential": "Birth & Postpartum Doula",
+   "practice": "Maternal Root",
+   "url": "https://www.maternalroot.com/birth-doula",
+   "photo": "/images/provider-fullerton-ca-francesca-herrera.webp",
+   "description": "Francesca Herrera runs Maternal Root from Fullerton, serving families within a 40-mile service range that covers north Orange County and beyond. Her DoulaMatch profile shows 7 years and 90 births attended as a birth doula and 11 years and 27 families served as a postpartum doula, with a birth fee of $500 to $4,000 and postpartum rates of $20 to $85 per hour. She attends births in all hospitals, all birth centers, and any home birth, runs a solo practice serving 1 to 3 births per month, and had birth and postpartum availability posted as of September 2026.",
+   "costRange": "$500-$4,000",
+   "costRange_source": "published",
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula",
+    "Continuous Labor Support",
+    "Hospital Birth",
+    "Home Birth"
+   ],
+   "serviceArea": [
+    "Fullerton, CA",
+    "North Orange County, CA",
+    "Los Angeles County, CA"
+   ],
+   "acceptingClients": true
+  },
+  {
+   "name": "Birth Your Way Doulas",
+   "credential": "DONA Certified Birth Doulas",
+   "practice": "Birth Your Way Doulas",
+   "url": "https://www.birthyourwaydoulas.com/services.html",
+   "photo": "/images/provider-fullerton-ca-birth-your-way.webp",
+   "description": "Birth Your Way Doulas is a DONA-certified Orange County practice whose published packages run from $2,000 for experienced parents to $2,150 for first babies and $2,300 with TENS rental, each including unlimited interview time, prenatal visits, text and phone access, hands-on labor support, and a postpartum visit. Techniques include acupressure, aromatherapy, Spinning Babies, and guided meditation, and the doulas capture first-moment photos on the family's phone or camera. The practice is in-network for Medi-Cal, Kaiser (all plans), CalOptima, Optum, Family Choice, RegalMed, and Carrot, and reports a cesarean rate less than half the national average.",
+   "costRange": "$2,000-$2,300",
+   "costRange_source": "published",
+   "services": [
+    "Birth Doula",
+    "Prenatal Visits",
+    "TENS Rental",
+    "Postpartum Visit",
+    "Medi-Cal In-Network"
+   ],
+   "serviceArea": [
+    "Orange County, CA",
+    "Fullerton, CA"
+   ],
+   "acceptingClients": true
+  },
+  {
+   "name": "Katie Hallum (Your Birth Team)",
+   "credential": "Childbirth Educator, Birth & Postpartum Doula",
+   "practice": "Your Birth Team",
+   "url": "https://www.yourbirthteam.com/birthdoula",
+   "photo": "/images/provider-fullerton-ca-katie-hallum.webp",
+   "description": "Katie Hallum of Your Birth Team has served growing families in Southern California since 2011 as a childbirth educator and birth and postpartum doula. She supports clients planning unmedicated births, families choosing nitrous oxide or an epidural, induced labors, and planned cesarean births, focusing on coping skills and trust within the birth team rather than one specific birth outcome. Client testimonials describe birth-plan building with evidence-based answers, labor positioning and breathing support, and postpartum home visits covering recovery, feeding, and newborn care.",
+   "costRange": "$1,200-$2,500",
+   "costRange_source": "market-estimate",
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula",
+    "Childbirth Education"
+   ],
+   "serviceArea": [
+    "Orange County, CA",
+    "Fullerton, CA"
+   ],
+   "acceptingClients": true
+  },
+  {
+   "name": "Becky Chavez (Birth to Latch)",
+   "credential": "BEST Doula Certified Birth Doula (2023), CAPPA Certified Postpartum Doula (2024), Lactation Educator (2019)",
+   "practice": "Birth to Latch",
+   "url": "https://www.bornbir.com/becky-chavez",
+   "photo": "/images/provider-fullerton-ca-becky-chavez.webp",
+   "description": "Becky Chavez has worked with new families since 2016 as a doula and parent educator across Los Angeles and surrounding communities including Fullerton, and grew up primarily in nearby Whittier. She is a BEST Doula certified birth doula (2023), CAPPA certified postpartum doula (2024), and lactation educator (2019), and also holds CPR (2026), car seat tech (2020), and infant massage (2020) certifications. She works in English and Spanish and offers birth doula support, postpartum doula support, and in-person or virtual childbirth education and breastfeeding classes, with Carrot insurance accepted, PPO reimbursement via superbill, and zero out-of-pocket cost for HMO in-network Kaiser, Health Net, private, and Medi-Cal clients.",
+   "costRange": "$1,000-$2,000",
+   "costRange_source": "market-estimate",
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula",
+    "Childbirth Education",
+    "Lactation Support"
+   ],
+   "serviceArea": [
+    "Whittier, CA",
+    "Fullerton, CA",
+    "Los Angeles County, CA"
+   ],
+   "acceptingClients": true
+  }
+ ],
+ "medicaidNote": "Yes \u2014 California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal through the Department of Health Care Services. Birth Your Way Doulas is in-network for Medi-Cal, and Becky Chavez offers zero out-of-pocket coverage for HMO in-network Kaiser, Health Net, private, and Medi-Cal clients.",
+ "insuranceNote": "Providence St. Jude Medical Center accepts most major health plans; check your specific plan with the hospital. PIH Health Whittier Hospital accepts Medi-Cal. Birth Your Way Doulas is an in-network doula for Medi-Cal, Kaiser (all plans), CalOptima, Optum, Family Choice, RegalMed, and Carrot, and can generate superbills for other payers. Ask whether HSA or FSA funds can help with out-of-pocket doula costs.",
+ "faqs": [
+  {
+   "q": "How much does a birth doula cost in Fullerton?",
+   "a": "Fullerton doula Francesca Herrera of Maternal Root publishes a birth fee range of $500 to $4,000 with postpartum rates of $20 to $85 per hour, and Birth Your Way Doulas publishes packages from $2,000 to $2,300 depending on the package tier and TENS rental. BornBir's September 2026 market data puts the median Fullerton-area birth doula package at $1,800, with a typical range of $538 to $2,700. Ask about sliding-scale options or payment plans when you interview doulas."
+  },
+  {
+   "q": "What hospitals in Fullerton offer labor and delivery services?",
+   "a": "Providence St. Jude Medical Center (101 E Valencia Mesa Dr) is Fullerton's hospital, with a Level III NICU and maternity services including concierge service and private rooms. PIH Health Whittier Hospital (14555 Whittier Blvd) is about 10 miles away with a Level III NICU, and Anaheim Regional Medical Center (901 S Anaheim Blvd) is about 12 miles away with a Level III NICU."
+  },
+  {
+   "q": "Does Medi-Cal cover doula services in Fullerton?",
+   "a": "Yes. California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal directly through the Department of Health Care Services. Birth Your Way Doulas is in-network for Medi-Cal, and Becky Chavez offers zero out-of-pocket cost for HMO in-network Kaiser, Health Net, private, and Medi-Cal clients."
+  },
+  {
+   "q": "Do Fullerton-area hospitals allow doulas during labor?",
+   "a": "Yes. Providence St. Jude Medical Center, PIH Health Whittier Hospital, and Anaheim Regional Medical Center all welcome doulas as support persons. Confirm current visitor and support person policies at your hospital tour, as policies can change."
+  },
+  {
+   "q": "Are there birth centers near Fullerton?",
+   "a": "Yes. South Coast Midwifery in Irvine, about 15 to 20 miles away, is Orange County's first accredited freestanding birth center, offering private birthing suites, water birth, home birth, and VBAC support. Licensed midwives serving north Orange County also attend home births in Fullerton."
+  },
+  {
+   "q": "How are midwives licensed in California?",
+   "a": "Certified Nurse-Midwives (CNMs) are licensed by the California Board of Registered Nursing as advanced practice nurses. Licensed Midwives (LMs) are licensed by the Medical Board of California to attend cases of normal pregnancy and childbirth and to provide prenatal, intrapartum, and postpartum care. Both credential types serve Orange County families."
+  },
+  {
+   "q": "What is the cesarean rate in California?",
+   "a": "In 2024, 32% of all live births in California were cesarean deliveries, according to NCHS data via KFF's Women's Health Profiles. California's pregnancy-related mortality ratio was 15.0 deaths per 100,000 live births in 2022, down from the COVID-19-era peak."
+  }
+ ],
+ "nearbyCities": [
+  "la-habra-ca",
+  "anaheim-ca",
+  "corona-ca"
+ ],
+ "midwifeInfo": {
+  "paragraph": "In California, certified nurse-midwives (CNMs) are licensed by the California Board of Registered Nursing as advanced practice nurses who have met the Board's educational and certification requirements. Licensed midwives (LMs) are licensed by the Medical Board of California to attend cases of normal pregnancy and childbirth and to provide prenatal, intrapartum, and postpartum care. Fullerton families deliver with both credential paths: CNMs practice in hospital settings at Providence St. Jude Medical Center and PIH Health Whittier, while licensed midwives attend home births and birth center births across north Orange County, including at South Coast Midwifery's accredited birth center in Irvine.",
+  "credentialTypes": " (LMs and CNMs)",
+  "credentialDetail": "California's Licensed Midwife (LM) credential is one of the most established in the country, with clear regulations for out-of-hospital birth, meaning California families have more midwifery options than states that only license CNMs."
+ },
+ "birthStats": {
+  "cesareanRate": 32,
+  "maternalMortalityRate": 15.0,
+  "homeBirthRate": 0.97,
+  "birthCenterBirthRate": 0.8,
+  "dataYear": 2024,
+  "dataSource": "CDC NCHS National Vital Statistics System; KFF Women's Health Profiles (California); CDPH pregnancy-related mortality 2022"
+ },
+ "lat": 33.8682,
+ "lng": -117.9294
+}

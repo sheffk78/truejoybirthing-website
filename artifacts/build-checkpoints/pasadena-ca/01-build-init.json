@@ -1,0 +1,30 @@
+{
+  "stage": "build",
+  "slug": "pasadena-ca",
+  "checkpoint": "01-build-init",
+  "written_at": "2026-09-24",
+  "city": "Pasadena, California",
+  "population_tier": "mid-size (~135K residents, city proper) — minimums: 2+ doulas, 1+ hospital; target 4+ doulas, 2+ hospitals for safety margin",
+  "plan": [
+    "1. Research real Pasadena doulas (DONA directory, Google Maps, local collectives) with verifiable URLs",
+    "2. Research Pasadena hospitals (Huntington Hospital, USC Arcadia nearby, etc.)",
+    "3. Write cities.ts entry via Python heredoc (NEVER write_file/patch on cities.ts)",
+    "4. Generate hero (pregnant silhouette + city landscape), support scene, OG image, hospital thumbnails 400x300",
+    "5. Validate: npx tsx scripts/validate-city-data.ts pasadena-ca; npm run build",
+    "6. Contract handoff: python3 scripts/contract-validate.py pasadena-ca build --compare -> contract_valid:true",
+    "7. Evals: eval-voice.py + eval-accuracy.py pasadena-ca build"
+  ],
+  "images_required": {
+    "hero": "public/images/pasadena-ca-birth-doula-skyline.webp (real photo, pregnant silhouette, photographic — NO gradient/watercolor)",
+    "support_scene": "public/images/pasadena-ca-support-scene.webp",
+    "og": "public/images/og-city-pasadena-ca.webp (>=30KB, derived from hero)",
+    "hospital_thumbs": "400x300 landscape (never 400x400 — P11 logo flag)"
+  },
+  "rules_acknowledged": [
+    "no write_file/patch on cities.ts — python heredoc only",
+    "no global replace — extract city block first",
+    "one hero image reused across hero/YT/OG",
+    "run npm run build immediately after every cities.ts heredoc edit",
+    "do not advance state machine — report contract exit code"
+  ]
+}

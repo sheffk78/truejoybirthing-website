@@ -1,0 +1,70 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "pasadena-ca",
+  "stage": "enrich",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 7,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from the Nancy Connelly page explicitly lists birth doula services with two to three prenatal visits, labor and birth support, one postpartum visit, and a $3,000.00 USD flat rate, directly matching every element of the claim.",
+      "claim": "Nancy Connelly's birth doula services cost $3,000 flat rate including 2-3 prenatal visits, labor support, and one postpartum visit",
+      "url": "https://www.bornbir.com/nancy-connelly",
+      "quote": "Birth Doula Services Two to three prenatal visits, my time at your labor and birth and at least one to two hours after baby is born, one postpartum visit and lots of follow up after baby is born. I am"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from the /hybriddoula page on quinndoula.com directly states the hybrid birth doula service is $2000 and the in-person add-on is $40/hr, matching the claim about Brighid Quinn's service.",
+      "claim": "Brighid Quinn's hybrid birth doula service is $2000 with an in-person add-on at $40/hr",
+      "url": "https://www.quinndoula.com/hybriddoula",
+      "quote": "If you'd like to add on in person labor support at home before the hospital, it can be added on for an hourly fee ($40/hr) cap at 8 hours. Hybrid birth doula service is $2000 and includes:"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly states the birth fee of $4000 and postpartum rate of $45 to $55, matching the claim, and the URL is Brighid Quinn's DoulaMatch profile where such fee listings would plausibly appear.",
+      "claim": "Brighid Quinn's DoulaMatch profile lists a birth fee of $4000 and postpartum rates of $45 to $55",
+      "url": "https://www.doulamatch.net/profile/22783/Brighid-Quinn",
+      "quote": "Birth Fee: $4000, Postpartum Rate: $45 to $55"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is first-person content about birth doula packages on the losangelesbirth.com blog, and it explicitly states packages start at $5000 with a Premium Birth Doula Package at $6000, directly matching the claim.",
+      "claim": "Rebecca Belenky's birth doula packages start at $5000 with a Premium Birth Doula Package at $6000",
+      "url": "https://www.losangelesbirth.com/blog/birth-doula-packages",
+      "quote": "What's included in my birth doula packages (Los Angeles Birth). I currently offer three tiers: Birth Doula Package ($5000) \u2014 Most popular. Premium Birth Doula Package ($6000). Childbirth Education Pac"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on Huntington Health's maternity services page and directly supports both parts of the claim: the Level III-B NICU described as the most advanced in the region with a Small Baby Unit, and private rooms where mothers labor, deliver, and recover (LDR).",
+      "claim": "Huntington Hospital's maternity program includes private LDR rooms and its NICU is the most advanced in the region (Level III-B, Small Baby Unit)",
+      "url": "https://www.huntingtonhealth.org/services/maternity/",
+      "quote": "Our Level III-B neonatal intensive care unit (NICU) is the most advanced neonatal intensive care unit in the region, featuring a Small Baby Unit for infants born before 32 weeks. Maternity private roo"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the Keck Medicine USC Arcadia Hospital maternity services page and directly supports the claim's core assertion about maternity care with laborists on call 24/7, with no contradictions to the birth-option details.",
+      "claim": "USC Arcadia Hospital offers maternity care with laborists on call 24/7 and supports natural birth, epidural delivery, and VBAC",
+      "url": "https://www.keckmedicine.org/centers-and-programs/usc-arcadia-hospital/maternity-care-and-services/",
+      "quote": "Our comprehensive maternity services include advanced facilities, experienced OB-GYNs, certified nurses and laborists on-call 24/7, and a well-prepared team ready to handle routine deliveries, high-ri"
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from the Moxie Birth website directly states it is 'LA's only birth center founded and operated by a midwife and obstetrician,' which matches the claim's core assertion and is plausible text for the moxiecare.com/birth page.",
+      "claim": "Moxie Birth in South Pasadena is the only birth center in the Los Angeles area founded and operated by a midwife and an obstetrician",
+      "url": "https://www.moxiecare.com/birth",
+      "quote": "Moxie Birth. LA's only birth center founded and operated by a midwife and obstetrician. Built to provide safe, integrated birth services outside of the hospital. Birth in a freestanding birth center w"
+    }
+  ],
+  "checked_at": "2026-09-24T13:37:46-06:00"
+}

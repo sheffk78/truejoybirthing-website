@@ -1,0 +1,36 @@
+{
+  "slug": "fullerton-ca",
+  "stage": "build",
+  "produced_at": "2026-09-24T12:00:00Z",
+  "worker_model": "glm-5.3-flash",
+  "phase": "initial-research-checkpoint",
+  "population_estimate": 139802,
+  "population_source": "2020 US Census, City of Fullerton (~139,802)",
+  "tier": "mid-size (100K-500K)",
+  "tier_minimums": {
+    "doulas": 2,
+    "hospitals": 1
+  },
+  "plan": [
+    "Research doulas serving Fullerton CA (web search: DONA, doulamatch, local collectives, OC directories)",
+    "Research Providence St. Jude Medical Center (address, NICU level, Medicaid, maternity) \u2014 primary Fullerton hospital",
+    "Check for birth centers near Fullerton",
+    "Generate hero image (pregnant silhouette + Fullerton landscape, golden hour, photographic NOT watercolor)",
+    "Generate support scene (pregnant mom + professional, ONE pregnant woman)",
+    "Derive OG image from hero (og-city-fullerton-ca.webp >=30KB, no suffix)",
+    "Hospital thumbnail 400x300 from Wikimedia Commons or flag 'no Commons photo available'",
+    "Source >=1 real provider headshot photo",
+    "Write city block into src/data/cities.ts via python3 heredoc ONLY",
+    "Validate: npx tsx scripts/validate-city-data.ts fullerton-ca; npm run build; preflight",
+    "Contract: scripts/contract-validate.py fullerton-ca build --compare until contract_valid:true",
+    "Self-run eval-voice.py + eval-accuracy.py fullerton-ca build; fix findings"
+  ],
+  "known_hospitals": [
+    {
+      "name": "Providence St. Jude Medical Center",
+      "city": "Fullerton, CA",
+      "status": "to_verify"
+    }
+  ],
+  "status": "checkpointed"
+}

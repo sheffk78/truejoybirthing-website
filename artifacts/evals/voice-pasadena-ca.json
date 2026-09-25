@@ -1,0 +1,11 @@
+{
+  "eval": "eval-voice",
+  "slug": "pasadena-ca",
+  "model": "atlas:latest",
+  "fields_checked": 11,
+  "model_calls_ok": 2,
+  "model_calls_err": 0,
+  "verdict": "approved",
+  "findings": [],
+  "checked_at": "2026-09-24T13:10:51-06:00"
+}

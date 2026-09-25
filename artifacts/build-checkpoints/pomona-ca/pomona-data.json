@@ -1,0 +1,93 @@
+{
+  "city": "Pomona",
+  "state": "CA",
+  "slug": "pomona-ca",
+  "tier": "mid-size (100K-500K): 2+ doulas, 1+ hospitals",
+  "hospitals": [
+    {
+      "name": "Pomona Valley Hospital Medical Center",
+      "address": "1798 N Garey Ave, Pomona, CA 91767",
+      "url": "https://www.pvhmc.org/",
+      "nicu": "IIIb (53-bed)",
+      "births": "5,000+ deliveries in 2024",
+      "doulaPolicy": "Certified doulas and midwives permitted as part of the labor support team",
+      "vbac": "VBAC supported \u2014 patients closely monitored by experienced staff",
+      "awards": "U.S. News High Performing maternity, Baby-Friendly USA redesignation 2024, CMQCC NTSV cesarean award 3 consecutive years, Blue Distinction+ Maternity Care",
+      "lactation": true,
+      "privateRooms": true,
+      "waterBirth": "Hydrotherapy available",
+      "medicaid": true,
+      "source": "pvhmc.org"
+    }
+  ],
+  "nearby_hospitals": [
+    {
+      "name": "San Antonio Regional Hospital (Upland, ~10 min)",
+      "address": "999 San Bernardino Rd, Upland, CA 91786",
+      "nicu": "III (20-bed)",
+      "births": "2,030 annual (FREIDA); 1,773 live births Leapfrog",
+      "doulaPolicy": "Allows patients to bring their own doulas",
+      "babyFriendly": true,
+      "lactation": "IBCLC services",
+      "midwives": "No CNM/CM on staff",
+      "source": "sarh.org + Leapfrog"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "AA Midwifery Center",
+      "address": "5535 Walnut Ave, Chino, CA 91710",
+      "url": "https://www.aamidwiferycenter.com/",
+      "owner": "Denise Munguia, LM CPM (CA LM532)",
+      "distance": "~7 mi from Pomona",
+      "npi": "1164179230"
+    }
+  ],
+  "doulas": [
+    {
+      "name": "Stephanie Knol",
+      "npi": "1023716461",
+      "address": "2870 N Towne Ave Apt 127, Pomona, CA 91767",
+      "phone": "909-377-3918",
+      "detail": "Birth & postpartum doula, childbirth educator, birth story listener; 9 yrs experience; DONA background; accepts Medi-Cal, IEHP, Kaiser, L.A. Care insurance; Spinning Babies trained",
+      "source": "npino.com + bornbir.com/stephanie-knol"
+    },
+    {
+      "name": "Courageous Labors Doula Services LLC (Marchael Hagood)",
+      "npi": "1508745910",
+      "address": "580 W Monterey Ave Unit 567, Pomona, CA 91769",
+      "phone": "909-524-6437",
+      "detail": "Doula agency, solo practice, 35-mile range, home births, prenatal visits, birth planning, rebozo techniques, childbirth education, miscarriage + abortion support, LGBTQIA+",
+      "source": "doulamatch.net/profile/40134 + npino.com"
+    }
+  ],
+  "extras": [
+    {
+      "name": "Unique Birth Experience Doulas / Kyiesha Gooden",
+      "npi": "1164283784",
+      "address": "101 W Mission Blvd #110-268, Pomona, CA 91766",
+      "phone": "213-370-2595 / 760-577-9337",
+      "detail": "Doula agency, Director Kyiesha Gooden"
+    },
+    {
+      "name": "Nicole Gomez",
+      "npi": "1821961848",
+      "address": "959 Groff St, Pomona, CA 91768",
+      "phone": "626-602-5976",
+      "detail": "Individual doula, enumerated Sep 2025"
+    },
+    {
+      "name": "New Harmony Enterprises Inc / Dr. Nicole Davis-Davis-Johnson",
+      "npi": "1487519666 / 1215892856",
+      "address": "1340 W Orange Grove Ave, Pomona, CA 91768",
+      "phone": "954-702-5703",
+      "detail": "Doula + lactation consultant"
+    }
+  ],
+  "pvhmc_evidence_quotes": [
+    "\u201cWith more than 5,000 deliveries in 2024\u2026\u201d \u2014 Richard E. Yochum, FACHE, President/CEO (pvhmc.org blog June 2025)",
+    "PVHMC Labor Support page: \u201cCertified doulas and midwives are permitted as part of the labor support team.\u201d (pvhmc.org/labor-support)",
+    "\u201cWhat to Expect at the Hospital\u201d: \u201cPatients planning a VBAC are closely monitored by our experienced staff, ensuring safety and support throughout labor.\u201d",
+    "2019 blog: \u201cPVHMC, the largest birthing hospital in Los Angeles and San Bernardino Counties, has a state-of-the-art 53-bed level III NICU.\u201d"
+  ]
+}

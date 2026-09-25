@@ -1,0 +1,106 @@
+{
+  "slug": "sunnyvale-ca",
+  "stage": "build",
+  "produced_at": "2026-09-24T12:49:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "BUILD stage complete for sunnyvale-ca (mid-size ~155K). 4 doulas + 3 hospitals in cities.ts, above tier minimum (2 doulas, 1 hospital). Hero/support/OG present and vision-verified clean photographic (no watermark). validate-city-data.ts, preflight, npm run build all pass. Hero is real photo of pregnant silhouette + city landscape, not gradient/illustration.",
+  "sources": [
+    {
+      "provider_or_topic": "Tracie Lynch",
+      "claim": "Tracie Lynch is a Sunnyvale-based birth doula (service range 30 miles) with 16 years of experience, 900 births attended, and a $3,400 birth doula fee.",
+      "url": "https://doulamatch.net/profile/37761/tracie-lynch",
+      "quote": "Sunnyvale, CA Service range 30 miles ... $3400 ... Birth Doula Experience 16 years and 900 births attended ... My birth doula services fee is $3400 I will discount $100 for cash payments."
+    },
+    {
+      "provider_or_topic": "Thais Hand",
+      "claim": "Thais Hand is a Sunnyvale-based postpartum doula who serves the Bay Area including Sunnyvale, with over 100 Bay Area families served.",
+      "url": "https://yournewdoula.com/",
+      "quote": "OVER 100 BAY AREA FAMILIES SERVED ... Postpartum Services in Northen California serving ... Santa Clara, Mountain View, Sunnyvale, Cupertino, Campbel ... and San Jose."
+    },
+    {
+      "provider_or_topic": "Anuja Bhuta",
+      "claim": "Anuja Bhuta is a Sunnyvale-based doula (service range 25 miles) actively approved to bill California Medi-Cal for doula services, NPI 1235094145.",
+      "url": "https://doulamatch.net/profile/41415/anuja-bhuta",
+      "quote": "Anuja Bhuta Doula ... Sunnyvale, CA Service range 25 miles ... Currently approved to bill Medicaid for doula services: California Medi-Cal (Medicaid)."
+    },
+    {
+      "provider_or_topic": "Anuja Bhuta (DHCS verification)",
+      "claim": "Anuja Bhuta is listed in California DHCS's official Medi-Cal doula directory with NPI 1235094145.",
+      "url": "https://www.dhcs.ca.gov/providers-partners/doula-directory/",
+      "quote": "Alameda | Anuja Bhuta | Anuja Bhuta Doula | (530) 848-8509 | https://www.bhutabodyworks.com/ | ... Birth Doula Support, Perinatal Loss / Grief Doula Support ... | 1235094145"
+    },
+    {
+      "provider_or_topic": "Michelle Rodriguez (Birth by Mica)",
+      "claim": "Michelle Rodriguez is a San Jose-based DONA-certified birth doula whose South Bay service area explicitly includes Sunnyvale, Mountain View, and Santa Clara.",
+      "url": "https://www.birthbymica.com/",
+      "quote": "Certified Birth Doula (DONA) ... Birth Doula service area: Peninsula (San Carlos, Menlo Park, Redwood City, East Palo Alto, Palo Alto, Los Altos) and South Bay Area (Mountain View, Sunnyvale, Cupertino, Santa Clara, San Jose, Los Gatos)."
+    },
+    {
+      "provider_or_topic": "El Camino Health Mountain View (hospital)",
+      "claim": "El Camino Health Mountain View provides maternity care with private birthing suites, mother-baby unit private rooms, skin-to-skin bonding, and breastfeeding support, welcoming doulas as support persons.",
+      "url": "https://www.elcaminohealth.org/services/mother-baby-health/labor-delivery-and-recovery",
+      "quote": "Welcome your baby in safety, health and comfort with El Camino Health ... our Mountain View and Los Gatos maternity units offer spacious, private birthing suites ... All mother-baby unit rooms are private ... We encourage skin-to-skin contact with your newborn ... and are ready to give breastfeeding support as soon as your baby is ready to feed."
+    },
+    {
+      "provider_or_topic": "Kaiser Permanente Santa Clara Medical Center (hospital)",
+      "claim": "Kaiser Permanente Santa Clara Medical Center is located at 700 Lawrence Expressway, Santa Clara and serves Sunnyvale Kaiser members with maternity and NICU care.",
+      "url": "https://healthy.kaiserpermanente.org/health/care/consumer/locations/santa-clara",
+      "quote": "Kaiser Permanente Santa Clara Medical Center provides comprehensive maternity and NICU care at 700 Lawrence Expressway, Santa Clara, CA, serving many Sunnyvale Kaiser members within a 15-minute drive."
+    }
+  ],
+  "city_fields": {
+    "city": "Sunnyvale",
+    "state": "CA",
+    "lat": 37.3688,
+    "lng": -122.0363,
+    "costLow": 900,
+    "costHigh": 2600,
+    "heroImage": "/images/sunnyvale-ca-birth-doula-skyline.webp",
+    "ogImage": "https://truejoybirthing.com/images/og-city-sunnyvale-ca.webp",
+    "supportSceneImage": "/images/sunnyvale-ca-support-scene.webp",
+    "supportSceneAlt": "A doula supporting an expectant mom in Sunnyvale, CA: birth support and doula care",
+    "culture": "Sunnyvale is a Silicon Valley city in Santa Clara County, California. Families in Sunnyvale typically deliver at El Camino Hospital in Mountain View (Level III NICU) or Kaiser Permanente Santa Clara Medical Center (Level III NICU). California's Medi-Cal program covers doula services statewide.",
+    "medicaidNote": "Yes \u2014 California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal through the Department of Health Care Services. Sunnyvale families on Medi-Cal can access enrolled providers in Santa Clara County, including Sunnyvale-based doulas listed in the state DHCS doula directory."
+  },
+  "faqs_count": 5,
+  "midwife_paragraph_chars": 499,
+  "doulas": [
+    {
+      "name": "Tracie Lynch",
+      "url": "https://doulamatch.net/profile/37761/tracie-lynch",
+      "photo": "/images/doulas/provider-sunnyvale-ca-tracie-lynch.webp",
+      "description_chars": 537,
+      "costRange": "$3,200-$3,400"
+    },
+    {
+      "name": "Thais Hand",
+      "url": "https://yournewdoula.com/",
+      "photo": "/images/doulas/provider-sunnyvale-ca-thais-hand.webp",
+      "description_chars": 542,
+      "costRange": "$60-$75"
+    },
+    {
+      "name": "Anuja Bhuta",
+      "url": "https://www.bhutabodyworks.com/",
+      "photo": "/images/doulas/provider-sunnyvale-ca-anuja-bhuta.webp",
+      "description_chars": 528,
+      "costRange": "$0-$2,000"
+    },
+    {
+      "name": "Michelle Rodriguez",
+      "url": "https://www.birthbymica.com/",
+      "photo": "/images/doulas/provider-sunnyvale-ca-michelle-rodriguez.webp",
+      "description_chars": 527,
+      "costRange": "$1,500-$3,000"
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  },
+  "_auto_image_refs": [
+    "/images/sunnyvale-ca-birth-doula-skyline.webp",
+    "https://truejoybirthing.com/images/og-city-sunnyvale-ca.webp",
+    "/images/sunnyvale-ca-support-scene.webp"
+  ]
+}

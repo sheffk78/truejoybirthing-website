@@ -1,0 +1,78 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "fullerton-ca",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 8,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly comes from Francesca Herrera's DoulaMatch profile and directly confirms the birth fee of $500 to $4000 and the experience of 7 years and 90 births attended, matching the claim's key details.",
+      "claim": "Francesca Herrera (Maternal Root): birth fee $500 to $4000; experience 7 years and 90 births attended; postpartum rate $20 to $85",
+      "url": "https://doulamatch.net/profile/18394/francesca-herrera",
+      "quote": "Fullerton, CA - Service range 40 miles - Birth Fee $500 to $4000 - 7 years and 90 births attended"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the services page of the Birth Your Way Doulas domain and directly confirms the package names, prices ($2,000 and $2,150), the shared inclusions (prenatal time, text/phone access, hands-on labor support), and the full in-network insurance list, with the TENs package plausibly co",
+      "claim": "Birth Your Way Doulas publishes its birth doula service packages ('Not my first baby' $2,000, First Baby $2,150, TENs $2,300) \u2014 all including prenatal meetings, text/phone access, and hands-on labor support \u2014 and states it is an in-network doula for Medi-Cal, Kaiser (all plans), CalOptima, Optum, Family Choice, RegalMed, and Carrot.",
+      "url": "https://www.birthyourwaydoulas.com/services.html",
+      "quote": "All packages include ... prenatal time together ... text or phone access ... hands on support during labor and birth ... \"Not my first baby\" Birth Doula Services - $2000 ... First Baby Birth Doula Ser"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the Your Birth Team doula page and directly supports the claim that Katie Hallum is associated with Your Birth Team, describing Katie's doula services for pregnant clients.",
+      "claim": "Katie Hallum (Your Birth Team): ",
+      "url": "https://www.yourbirthteam.com/birthdoula",
+      "quote": "Serving growing families in Southern CA since 2011 ... Katie happily supports pregnant clients seeking unmedicated births, those excited about medical pain relief options such as nitrous oxide or an e"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a first-person doula introduction from Becky working in Los Angeles, which is plausible text for a BornBir profile page at bornbir.com/becky-chavez and is consistent with the claim's attribution of Becky Chavez as a birth professional ('Birth to Latch') sourced from a BornBir profile.",
+      "claim": "Becky Chavez (Birth to Latch (BornBir profile)): ",
+      "url": "https://www.bornbir.com/becky-chavez",
+      "quote": "Hi there, I'm Becky and have been working with new families since 2016 as a doula and parent educator in the Los Angeles, Ca and surrounding communities. ... Zero out of pocket cost for HMO in Network"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly comes from the Providence St. Jude Medical Center maternity services page, matching the exact address and Level III NICU designation stated in the claim.",
+      "claim": "Providence St. Jude Medical Center at 101 E Valencia Mesa Dr, Fullerton, CA 92835 serves Fullerton-area deliveries, Level III NICU.",
+      "url": "https://www.providence.org/locations/socal/st-jude-medical-center/maternity-services",
+      "quote": "Maternity Providence St. Jude Medical Center 101 E Valencia Mesa Dr, Fullerton, CA 92835 ... Level III NICU ... round-the-clock, state-of-the-art care to critically ill newborns"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the official PIH Health Labor & Delivery page and directly supports the claim's key elements: 24/7 access to a PIH Health doctor or midwife, advanced ultrasound, central fetal monitoring with remote access, and private home-like birthing suites with private bathroom/shower, sofa",
+      "claim": "PIH Health Whittier Hospital's Labor & Delivery program offers private, home-like birthing suites with private bathroom/shower, sofa bed or recliner for a support person, flat-screen TV, free Wi-Fi, advanced ultrasound and central fetal monitoring with remote access, and 24/7 access to a PIH Health doctor or midwife.",
+      "url": "https://www.pihhealth.org/health-services/pregnancy-birth/labor-delivery/",
+      "quote": "Access to a PIH Health doctor or midwife is a phone call away. You'll have immediate access anytime day or night, seven days a week ... Advanced ultrasound imaging is available. Central fetal monitori"
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly comes from the AHMC Healthcare site's Anaheim Regional Medical Center page and directly supports the claim's address (1111 W. La Palma Ave., Anaheim, CA 92801), its commitment to health services and community care, and its affiliation with the AHMC Healthcare network.",
+      "claim": "Anaheim Regional Medical Center (AHMC) is located at 1111 W. La Palma Ave., Anaheim, CA 92801 and presents itself as a community hospital committed to health services, clinical excellence, and quality care for its patients and community, part of the AHMC Healthcare network serving greater Los Angeles.",
+      "url": "https://www.ahmchealth.com/armc",
+      "quote": "AHMC Anaheim Regional Medical Center is committed to providing excellent health services and medical care to our patients and our community. Physicians and staff work together to ensure no aspect of a"
+    },
+    {
+      "index": 7,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the official dhcs.ca.gov Doula Directory page and directly confirms the claim that the directory lists Medi-Cal-enrolled doulas by county with business name, specializations, languages, and NPI number.",
+      "claim": "The California Department of Health Care Services (DHCS) maintains an official Doula Directory of doulas who have enrolled as Medi-Cal providers, listed by county with business name, specialties, languages, and NPI.",
+      "url": "https://www.dhcs.ca.gov/providers-partners/doula-directory/",
+      "quote": "The Doula Directory lists doulas by counties who have enrolled as Medi-Cal providers who agreed to be included in the directory. The directory lists doulas by name for each county they serve and also "
+    }
+  ],
+  "checked_at": "2026-09-24T12:53:42-06:00"
+}

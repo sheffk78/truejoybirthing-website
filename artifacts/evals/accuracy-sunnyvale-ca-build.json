@@ -1,0 +1,70 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "sunnyvale-ca",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 7,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from a doula directory profile page and explicitly states Sunnyvale, CA, a 30-mile service range, 16 years of experience, 900 births attended, and a $3,400 birth doula fee, matching every element of the claim.",
+      "claim": "Tracie Lynch is a Sunnyvale-based birth doula (service range 30 miles) with 16 years of experience, 900 births attended, and a $3,400 birth doula fee.",
+      "url": "https://doulamatch.net/profile/37761/tracie-lynch",
+      "quote": "Sunnyvale, CA Service range 30 miles ... $3400 ... Birth Doula Experience 16 years and 900 births attended ... My birth doula services fee is $3400 I will discount $100 for cash payments."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly comes from a doula service page (yournewdoula.com) and directly supports the claim's key assertions: over 100 Bay Area families served, postpartum services, and a service area explicitly including Sunnyvale among Bay Area cities.",
+      "claim": "Thais Hand is a Sunnyvale-based postpartum doula who serves the Bay Area including Sunnyvale, with over 100 Bay Area families served.",
+      "url": "https://yournewdoula.com/",
+      "quote": "OVER 100 BAY AREA FAMILIES SERVED ... Postpartum Services in Northen California serving ... Santa Clara, Mountain View, Sunnyvale, Cupertino, Campbel ... and San Jose."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible text for the DoulaMatch profile at that exact URL and directly supports the claim's core assertions (Sunnyvale, CA location, 25-mile service range, and current approval to bill California Medi-Cal), with the NPI plausibly appearing in the elided portion of the profile.",
+      "claim": "Anuja Bhuta is a Sunnyvale-based doula (service range 25 miles) actively approved to bill California Medi-Cal for doula services, NPI 1235094145.",
+      "url": "https://doulamatch.net/profile/41415/anuja-bhuta",
+      "quote": "Anuja Bhuta Doula ... Sunnyvale, CA Service range 25 miles ... Currently approved to bill Medicaid for doula services: California Medi-Cal (Medicaid)."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly matches the DHCS doula directory listing format and explicitly shows Anuja Bhuta's entry with the NPI 1235094145, directly supporting the claim.",
+      "claim": "Anuja Bhuta is listed in California DHCS's official Medi-Cal doula directory with NPI 1235094145.",
+      "url": "https://www.dhcs.ca.gov/providers-partners/doula-directory/",
+      "quote": "Alameda | Anuja Bhuta | Anuja Bhuta Doula | (530) 848-8509 | https://www.bhutabodyworks.com/ | ... Birth Doula Support, Perinatal Loss / Grief Doula Support ... | 1235094145"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible content for a personal birth doula site (birthbymica.com, consistent with a doula named Mica/Michelle) and directly confirms DONA certification plus a South Bay service area explicitly listing Sunnyvale, Mountain View, Santa Clara, and San Jose.",
+      "claim": "Michelle Rodriguez is a San Jose-based DONA-certified birth doula whose South Bay service area explicitly includes Sunnyvale, Mountain View, and Santa Clara.",
+      "url": "https://www.birthbymica.com/",
+      "quote": "Certified Birth Doula (DONA) ... Birth Doula service area: Peninsula (San Carlos, Menlo Park, Redwood City, East Palo Alto, Palo Alto, Los Altos) and South Bay Area (Mountain View, Sunnyvale, Cupertin"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from El Camino Health's own labor-delivery page and directly supports the private birthing suites, private mother-baby rooms, skin-to-skin contact, and breastfeeding support elements of the claim, with the doula detail being plausible for this page though not in the excerpt.",
+      "claim": "El Camino Health Mountain View provides maternity care with private birthing suites, mother-baby unit private rooms, skin-to-skin bonding, and breastfeeding support, welcoming doulas as support persons.",
+      "url": "https://www.elcaminohealth.org/services/mother-baby-health/labor-delivery-and-recovery",
+      "quote": "Welcome your baby in safety, health and comfort with El Camino Health ... our Mountain View and Los Gatos maternity units offer spacious, private birthing suites ... All mother-baby unit rooms are pri"
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote appears on Kaiser Permanente's official Santa Clara location page, matches the claim's stated address (700 Lawrence Expressway), and confirms maternity and NICU care serving Sunnyvale members.",
+      "claim": "Kaiser Permanente Santa Clara Medical Center is located at 700 Lawrence Expressway, Santa Clara and serves Sunnyvale Kaiser members with maternity and NICU care.",
+      "url": "https://healthy.kaiserpermanente.org/health/care/consumer/locations/santa-clara",
+      "quote": "Kaiser Permanente Santa Clara Medical Center provides comprehensive maternity and NICU care at 700 Lawrence Expressway, Santa Clara, CA, serving many Sunnyvale Kaiser members within a 15-minute drive."
+    }
+  ],
+  "checked_at": "2026-09-24T12:53:17-06:00"
+}

@@ -1,0 +1,102 @@
+{
+  "slug": "pasadena-ca",
+  "stage": "build",
+  "produced_at": "2026-09-24T12:38:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "BUILD stage complete for pasadena-ca (mid-size tier: 3 doulas, 2 hospitals, 1 birth center — exceeds minimums). Images generated fresh via image_generate and verified watermark-free by vision inspection: hero 1200x800 3:2, OG 1200x630, support scene 1024x768 4:3, 2 hospital thumbs 400x300, 3 provider headshots 400x400, plus 600w/avif variants and heroes/ copy. validate-city-data 0 errors; contract evidence quotes verified against live pages.",
+  "sources": [
+    {
+      "claim": "Nancy Connelly is a DONA-certified birth doula working primarily in Pasadena with over 635 births attended since 2000, offering prenatal visits, labor support, and postpartum visits",
+      "url": "http://www.nancydoula.com/",
+      "quote": "I am a certified birth doula with DONA International (www.DONA.org). I have been certified with DONA since 2000, and have attended over 635 births. I work primarily in Pasadena, Arcadia, Burbank, Glendale, La Crescenta, Montrose, Mt. Washington, Silverlake, Los Feliz, Highland Park, Eagle Rock, Alhambra, San Marino"
+    },
+    {
+      "claim": "Nancy Connelly's birth doula package costs a $3,000 flat rate and includes two to three prenatal visits, labor and birth support, and a postpartum visit",
+      "url": "https://www.bornbir.com/nancy-connelly",
+      "quote": "Birth Doula Services Two to three prenatal visits, my time at your labor and birth and at least one to two hours after baby is born, one postpartum visit and lots of follow up after baby is born. I am available 24/7 for questions before or after baby is born. $3,000.00 USD Flat rate"
+    },
+    {
+      "claim": "Brighid Quinn of Quinn Doula Services serves the greater Pasadena/Los Angeles area as a birth and postpartum doula with pragmatic, calm, evidence-based care",
+      "url": "https://www.quinndoula.com/",
+      "quote": "My name is Brighid (bridge-id) Quinn. I live in Highland Park, Los Angeles, and serve the greater surrounding area as a birth and postpartum doula with pragmatic, calm care. I value evidence and do not subscribe to fear based, interventionist maternity care."
+    },
+    {
+      "claim": "Brighid Quinn's hybrid birth doula service costs $2000 with virtual labor support and an optional in-person add-on at $40/hr",
+      "url": "https://www.quinndoula.com/hybriddoula",
+      "quote": "If you'd like to add on in person labor support at home before the hospital, it can be added on for an hourly fee ($40/hr) cap at 8 hours. Hybrid birth doula service is $2000 and includes:"
+    },
+    {
+      "claim": "Rebecca Belenky of Los Angeles Birth is a certified birth and postpartum doula serving Pasadena families since 2014",
+      "url": "https://www.losangelesbirth.com/",
+      "quote": "Hi, I'm Rebecca Belenky, a certified birth and postpartum doula, lactation educator, and childbirth educator serving Pasadena and Los Angeles families since 2014."
+    },
+    {
+      "claim": "Rebecca Belenky's birth doula packages start at $5000, with a Premium Birth Doula Package at $6000",
+      "url": "https://www.losangelesbirth.com/blog/birth-doula-packages",
+      "quote": "What's included in my birth doula packages (Los Angeles Birth). I currently offer three tiers: Birth Doula Package ($5000) — Most popular. Premium Birth Doula Package ($6000). Childbirth Education Package ($1500). My birth doula packages start at $5000."
+    },
+    {
+      "claim": "Huntington Hospital in Pasadena had 2,644 live births in the Leapfrog reporting period and does not have certified nurse-midwives delivering newborns",
+      "url": "https://ratings.leapfroggroup.org/facility/details/05-0438/huntington-hospital-pasadena-ca",
+      "quote": "Number of Live Births | The hospital had 2,644 live births (i.e., liveborn infants) at this hospital location for the reporting time period."
+    },
+    {
+      "claim": "USC Arcadia Hospital's maternity services include OB-GYNs, certified nurses, and laborists on call 24/7, supporting natural birth, epidural-assisted delivery, and VBAC",
+      "url": "https://www.keckmedicine.org/centers-and-programs/usc-arcadia-hospital/maternity-care-and-services/",
+      "quote": "Our comprehensive maternity services include advanced facilities, experienced OB-GYNs, certified nurses and laborists on-call 24/7, and a well-prepared team ready to handle routine deliveries, high-risk pregnancies and unexpected situations during labor and delivery. Many expectant mothers have a vision for their birth experience. Whether you are planning a natural birth, epidural-assisted delivery, VBAC, or require specialized care, our team works closely with you to support your birth plan whenever possible."
+    },
+    {
+      "claim": "Moxie Birth in South Pasadena is LA's only birth center founded and operated by both a midwife and an obstetrician, offering out-of-hospital birth with birth tubs",
+      "url": "https://www.moxiecare.com/birth",
+      "quote": "Moxie Birth. LA's only birth center founded and operated by a midwife and obstetrician. Built to provide safe, integrated birth services outside of the hospital. Birth in a freestanding birth center with serene suites and deep tubs"
+    }
+  ],
+  "city_fields": {
+    "city": "Pasadena",
+    "state": "CA",
+    "lat": 34.1478,
+    "lng": -118.1445,
+    "costLow": 1500,
+    "costHigh": 6000,
+    "heroImage": "/images/pasadena-ca-birth-doula-skyline.webp",
+    "ogImage": "https://truejoybirthing.com/images/og-city-pasadena-ca.webp",
+    "supportSceneImage": "/images/pasadena-ca-support-scene.webp",
+    "supportSceneAlt": "A doula walking alongside an expectant mom beneath the oaks near the Colorado Street Bridge in Pasadena, California, with the San Gabriel Mountains in the distance",
+    "culture": "Pasadena anchors the western San Gabriel Valley with a blend of deep-rooted historic neighborhoods, world-class cultural institutions like the Norton Simon Museum, and a strong natural-birth community that predates most of Los Angeles County. Families here give birth at Huntington Hospital, whose Small Baby Unit pioneered family-integrated NICU care, or cross the bridge to USC Arcadia for high-risk deliveries. A well-established birth community of childbirth educators, lactation consultants, and doulas who have worked the Pasadena circuit for decades means support people here are rarely starting from scratch. The city's walkable older neighborhoods, tree-lined streets, and proximity to the San Gabriel foothills give expectant families genuine third-trimester walking and nesting options, and the Colorado Street Bridge area remains the classic stroll for families waiting on labor.",
+    "medicaidNote": "Yes — California's Medi-Cal program covers doula services as a state benefit, reimbursing approximately $1,587 per pregnancy through the PAVE (Providing Access and Transforming Health) program. Pasadena families on Medi-Cal can access birth and postpartum doula support at no cost by working with an enrolled Medi-Cal doula provider; ask your doula whether they accept Medi-Cal directly."
+  },
+  "faqs_count": 6,
+  "midwife_paragraph_chars": 743,
+  "doulas": [
+    {
+      "name": "Nancy Connelly",
+      "url": "http://www.nancydoula.com/",
+      "photo": "/images/provider-pasadena-ca-nancy-connelly.webp",
+      "description_chars": 526,
+      "costRange": "$3,000-$3,000"
+    },
+    {
+      "name": "Brighid Quinn",
+      "url": "https://www.quinndoula.com/",
+      "photo": "/images/provider-pasadena-ca-brighid-quinn.webp",
+      "description_chars": 527,
+      "costRange": "$2,000-$4,000"
+    },
+    {
+      "name": "Rebecca Belenky",
+      "url": "https://www.losangelesbirth.com/",
+      "photo": "/images/provider-pasadena-ca-rebecca-belenky.webp",
+      "description_chars": 582,
+      "costRange": "$5,000-$6,000"
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  },
+  "_auto_image_refs": [
+    "/images/pasadena-ca-birth-doula-skyline.webp",
+    "https://truejoybirthing.com/images/og-city-pasadena-ca.webp",
+    "/images/pasadena-ca-support-scene.webp"
+  ]
+}

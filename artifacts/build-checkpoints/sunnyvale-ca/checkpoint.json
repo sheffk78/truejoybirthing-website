@@ -1,0 +1,17 @@
+{
+  "slug": "sunnyvale-ca",
+  "stage": "build",
+  "checkpoint_time": "2026-09-24T12:49:18.540793",
+  "status": "in_progress",
+  "goal": "BUILD sunnyvale-ca: providers+hospitals in cities.ts, hero/support/OG images, validation gates",
+  "tier": "mid-size (~155K): 2+ doulas, 1+ hospitals minimum",
+  "plan": [
+    "1. checkpoint written (immediate)",
+    "2. inspect existing sunnyvale-ca block in cities.ts",
+    "3. research providers/hospitals (web)",
+    "4. write data via python heredoc",
+    "5. generate hero image (pregnant silhouette+city landscape), support photo, OG",
+    "6. run validate-city-data + npm build + preflight",
+    "7. contract handoff --compare + eval-voice + eval-accuracy"
+  ]
+}

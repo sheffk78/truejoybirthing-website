@@ -1,0 +1,48 @@
+{
+  "slug": "pasadena-ca",
+  "stage": "build",
+  "tier": "mid-size",
+  "doulas": [
+    {
+      "name": "Nancy Connelly",
+      "url": "http://www.nancydoula.com/",
+      "practice": "Nancy's Doula Services",
+      "costRange": "$3,000-$3,000"
+    },
+    {
+      "name": "Brighid Quinn",
+      "url": "https://www.quinndoula.com/",
+      "practice": "Quinn Doula Services",
+      "costRange": "$2,000-$4,000"
+    },
+    {
+      "name": "Rebecca Belenky",
+      "url": "https://www.losangelesbirth.com/",
+      "practice": "Los Angeles Birth",
+      "costRange": "$5,000-$6,000"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Huntington Hospital",
+      "nicu": "III",
+      "births": 2644
+    },
+    {
+      "name": "USC Arcadia Hospital",
+      "nicu": "II",
+      "beds": 17
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Moxie Birth",
+      "address": "1416 El Centro St, Ste 100, South Pasadena, CA 91030"
+    }
+  ],
+  "images_plan": [
+    "pasadena-ca-birth-doula-skyline.webp",
+    "og-city-pasadena-ca.webp",
+    "pasadena-ca-support-scene.webp"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+ "slug": "fullerton-ca",
+ "stage": "build",
+ "checkpoint": 2,
+ "ts": "2026-09-24T18:31:12.650697+00:00",
+ "done": [
+  "state machine instruction read (pitfalls loaded)",
+  "skill tjb-city-pipeline loaded (SKILL.md)",
+  "contract skeleton scaffolded artifacts/handoffs/fullerton-ca/build.json",
+  "checkpoint-1 written",
+  "research: 4 doulas verified w/ live sources (Herrera/DoulaMatch+MaternalRoot, Birth Your Way Doulas published $2000-$2300 in-network Medi-Cal/Kaiser, Katie Hallum/Your Birth Team, Becky Chavez/BornBir)",
+  "hospital verified: Providence St. Jude Medical Center Fullerton - Level III NICU (providence.org)",
+  "PIH Whittier + Anaheim Regional facts from la-habra-ca verified block (same hospitals)",
+  "hero image generated + vision-verified: photographic, pregnant silhouette + Fullerton water tower skyline, no watermark",
+  "support scene generated + vision-verified: photographic, one pregnant woman + doula, no garbling, 'BIRTH' wall sign only text",
+  "block template extracted from la-habra-ca + costa-mesa-ca block.json (all keys known)",
+  "cities.ts structure confirmed: insert before closing '};' of cities map, nearbyCities targets all exist",
+  "OG pattern B composition template located (og-city-alameda-ca-composition.html), playwright available"
+ ],
+ "next": [
+  "generate 8 images (3 hospital, 1 birth center, 4 provider)",
+  "vision-verify each",
+  "process webp",
+  "OG render",
+  "block.json",
+  "cities.ts edit via python heredoc",
+  "validate-city-data + build",
+  "contract fill + --compare",
+  "eval-voice + eval-accuracy"
+ ]
+}

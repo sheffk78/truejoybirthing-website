@@ -1,0 +1,86 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "pasadena-ca",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 9,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 11,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly comes from nancydoula.com and directly confirms the DONA certification, certification year 2000, over 635 births attended, and primary service area of Pasadena, with the remaining service details being standard doula offerings consistent with such a page.",
+      "claim": "Nancy Connelly is a DONA-certified birth doula working primarily in Pasadena with over 635 births attended since 2000, offering prenatal visits, labor support, and postpartum visits",
+      "url": "http://www.nancydoula.com/",
+      "quote": "I am a certified birth doula with DONA International (www.DONA.org). I have been certified with DONA since 2000, and have attended over 635 births. I work primarily in Pasadena, Arcadia, Burbank, Glen"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from the Nancy Connelly page explicitly lists the birth doula package details\u2014two to three prenatal visits, labor and birth attendance, one postpartum visit, and a $3,000.00 USD flat rate\u2014matching every element of the claim.",
+      "claim": "Nancy Connelly's birth doula package costs a $3,000 flat rate and includes two to three prenatal visits, labor and birth support, and a postpartum visit",
+      "url": "https://www.bornbir.com/nancy-connelly",
+      "quote": "Birth Doula Services Two to three prenatal visits, my time at your labor and birth and at least one to two hours after baby is born, one postpartum visit and lots of follow up after baby is born. I am"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the quinndoula.com homepage and directly states Brighid Quinn serves the greater Los Angeles area as a birth and postpartum doula with pragmatic, calm, evidence-based care, matching the claim.",
+      "claim": "Brighid Quinn of Quinn Doula Services serves the greater Pasadena/Los Angeles area as a birth and postpartum doula with pragmatic, calm, evidence-based care",
+      "url": "https://www.quinndoula.com/",
+      "quote": "My name is Brighid (bridge-id) Quinn. I live in Highland Park, Los Angeles, and serve the greater surrounding area as a birth and postpartum doula with pragmatic, calm care. I value evidence and do no"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from the quinndoula.com/hybriddoula page directly states the hybrid birth doula service costs $2000 and offers an optional in-person labor support add-on at $40/hr, matching the claim's pricing details and the doula's name/domain.",
+      "claim": "Brighid Quinn's hybrid birth doula service costs $2000 with virtual labor support and an optional in-person add-on at $40/hr",
+      "url": "https://www.quinndoula.com/hybriddoula",
+      "quote": "If you'd like to add on in person labor support at home before the hospital, it can be added on for an hourly fee ($40/hr) cap at 8 hours. Hybrid birth doula service is $2000 and includes:"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the losangelesbirth.com homepage and directly supports the claim, matching the name, certification, service area (Pasadena), and the since-2014 timeframe.",
+      "claim": "Rebecca Belenky of Los Angeles Birth is a certified birth and postpartum doula serving Pasadena families since 2014",
+      "url": "https://www.losangelesbirth.com/",
+      "quote": "Hi, I'm Rebecca Belenky, a certified birth and postpartum doula, lactation educator, and childbirth educator serving Pasadena and Los Angeles families since 2014."
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from a birth doula packages page on a Los Angeles birth services domain and explicitly states packages start at $5000 with a Premium Birth Doula Package at $6000, matching the claim's specifics.",
+      "claim": "Rebecca Belenky's birth doula packages start at $5000, with a Premium Birth Doula Package at $6000",
+      "url": "https://www.losangelesbirth.com/blog/birth-doula-packages",
+      "quote": "What's included in my birth doula packages (Los Angeles Birth). I currently offer three tiers: Birth Doula Package ($5000) \u2014 Most popular. Premium Birth Doula Package ($6000). Childbirth Education Pac"
+    },
+    {
+      "index": 6,
+      "verdict": "NOT_ENOUGH_INFO",
+      "reason": "The quote plausibly appears on the correct Leapfrog facility page and confirms the 2,644 live births figure, but it contains no information about certified nurse-midwives delivering newborns, so the second half of the compound claim cannot be verified from the provided evidence.",
+      "claim": "Huntington Hospital in Pasadena had 2,644 live births in the Leapfrog reporting period and does not have certified nurse-midwives delivering newborns",
+      "url": "https://ratings.leapfroggroup.org/facility/details/05-0438/huntington-hospital-pasadena-ca",
+      "quote": "Number of Live Births | The hospital had 2,644 live births (i.e., liveborn infants) at this hospital location for the reporting time period."
+    },
+    {
+      "index": 7,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the USC Arcadia Hospital maternity care page on keckmedicine.org and explicitly states the hospital's maternity services include OB-GYNs, certified nurses, laborists on-call 24/7, and support for natural birth, epidural-assisted delivery, and VBAC, directly matching the claim.",
+      "claim": "USC Arcadia Hospital's maternity services include OB-GYNs, certified nurses, and laborists on call 24/7, supporting natural birth, epidural-assisted delivery, and VBAC",
+      "url": "https://www.keckmedicine.org/centers-and-programs/usc-arcadia-hospital/maternity-care-and-services/",
+      "quote": "Our comprehensive maternity services include advanced facilities, experienced OB-GYNs, certified nurses and laborists on-call 24/7, and a well-prepared team ready to handle routine deliveries, high-ri"
+    },
+    {
+      "index": 8,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from the Moxie Birth page directly states it is LA's only birth center founded and operated by a midwife and obstetrician, providing out-of-hospital birth services with deep tubs, matching the claim's key assertions.",
+      "claim": "Moxie Birth in South Pasadena is LA's only birth center founded and operated by both a midwife and an obstetrician, offering out-of-hospital birth with birth tubs",
+      "url": "https://www.moxiecare.com/birth",
+      "quote": "Moxie Birth. LA's only birth center founded and operated by a midwife and obstetrician. Built to provide safe, integrated birth services outside of the hospital. Birth in a freestanding birth center w"
+    }
+  ],
+  "checked_at": "2026-09-24T12:55:45-06:00"
+}

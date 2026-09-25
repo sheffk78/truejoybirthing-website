@@ -1,0 +1,95 @@
+{
+ "providers": [
+  {
+   "name": "Francesca Herrera",
+   "practice": "Maternal Root",
+   "city": "Fullerton, CA",
+   "url": "https://doulamatch.net/profile/18394/francesca-herrera",
+   "site": "https://www.maternalroot.com/birth-doula",
+   "birth_fee": "$500 to $4000",
+   "postpartum_rate": "$20 to $85",
+   "experience": "7 years and 90 births attended",
+   "postpartum": "11 years and 27 families served",
+   "range_miles": 40,
+   "attends": "All Hospitals / All Birth Centers / Any Home Birth",
+   "quote": "Fullerton, CA - Service range 40 miles - Birth Fee $500 to $4000 - 7 years and 90 births attended",
+   "source": "https://doulamatch.net/profile/18394/francesca-herrera"
+  },
+  {
+   "name": "Birth Your Way Doulas",
+   "practice": "Birth Your Way Doulas (DONA certified)",
+   "url": "https://www.birthyourwaydoulas.com/services.html",
+   "packages": {
+    "not_first": "$2000",
+    "first_baby": "$2150",
+    "tens": "$2300"
+   },
+   "insurance": "in network for Medi-Cal, Kaiser (all plans), CalOptima, Optum, Family Choice, RegalMed, Carrot",
+   "quote": "All packages include ... prenatal time together ... text or phone access ... hands on support during labor and birth ... \"Not my first baby\" Birth Doula Services - $2000 ... First Baby Birth Doula Services - $2150 ... She is also an in network doula for Medi-Cal, Kaiser (all plans), CalOptima, Optum, Family Choice, RegalMed and Carrot.",
+   "source": "https://www.birthyourwaydoulas.com/services.html"
+  },
+  {
+   "name": "Katie Hallum",
+   "practice": "Your Birth Team",
+   "url": "https://www.yourbirthteam.com/birthdoula",
+   "credential": "Childbirth Educator, Birth & Postpartum Doula",
+   "since": "Serving growing families in Southern CA since 2011",
+   "quote": "Serving growing families in Southern CA since 2011 ... Katie happily supports pregnant clients seeking unmedicated births, those excited about medical pain relief options such as nitrous oxide or an epidural, families needing to induce labor, and those planning for cesarean births.",
+   "source": "https://www.yourbirthteam.com/birthdoula"
+  },
+  {
+   "name": "Becky Chavez",
+   "practice": "Birth to Latch (BornBir profile)",
+   "url": "https://www.bornbir.com/becky-chavez",
+   "city": "Whittier, CA (serves LA + OC incl. Fullerton area)",
+   "credentials": "CAPPA Certified Postpartum Doula (2024), BEST Doula Certified Birth Doula (2023), CPR (2026), Car Seat Tech (2020), Infant Massage (2020), Lactation Educator (2019)",
+   "languages": "English, Spanish",
+   "insurance": "Carrot accepted; PPO superbill; zero out of pocket for HMO in-network Kaiser and Health Net, private and Medi-cal",
+   "quote": "Hi there, I'm Becky and have been working with new families since 2016 as a doula and parent educator in the Los Angeles, Ca and surrounding communities. ... Zero out of pocket cost for HMO in Network Kaiser and Health Net, private and Medi-cal.",
+   "source": "https://www.bornbir.com/becky-chavez"
+  }
+ ],
+ "hospitals": [
+  {
+   "name": "Providence St. Jude Medical Center",
+   "address": "101 E Valencia Mesa Dr, Fullerton, CA 92835",
+   "url": "https://www.providence.org/locations/socal/st-jude-medical-center",
+   "nicu": "III",
+   "quote": "Maternity Providence St. Jude Medical Center 101 E Valencia Mesa Dr, Fullerton, CA 92835 ... Level III NICU ... round-the-clock, state-of-the-art care to critically ill newborns",
+   "source": "https://www.providence.org/locations/socal/st-jude-medical-center/maternity-services"
+  },
+  {
+   "name": "PIH Health Whittier Hospital",
+   "address": "14555 Whittier Blvd, Whittier, CA 90602",
+   "url": "https://www.pihhealth.org/health-services/pregnancy-birth/labor-delivery/",
+   "nicu": "III",
+   "note": "facts from la-habra-ca verified block (same hospital)",
+   "source": "https://www.pihhealth.org/health-services/pregnancy-birth/labor-delivery/"
+  },
+  {
+   "name": "Anaheim Regional Medical Center",
+   "address": "901 S Anaheim Blvd, Anaheim, CA 92805",
+   "url": "https://www.ahmchealth.com/armc",
+   "nicu": "III",
+   "note": "facts from la-habra-ca verified block (same hospital)",
+   "source": "https://www.ahmchealth.com/armc"
+  }
+ ],
+ "birth_centers": [
+  {
+   "name": "South Coast Midwifery",
+   "address": "Irvine, CA (Quail Hill area)",
+   "url": "https://southcoastmidwifery.com/",
+   "note": "from costa-mesa-ca verified block: OC's accredited freestanding birth center, VBAC, water birth",
+   "source": "https://southcoastmidwifery.com/"
+  }
+ ],
+ "cost_market": {
+  "bornbir_median_package": 1800,
+  "bornbir_typical_range": "$538-$2,700",
+  "bornbir_median_hourly": "$50/hr",
+  "sample_n": "912 packages from 383 providers within 150 miles of Fullerton, updated Sept 2026",
+  "source": "https://www.bornbir.com/fullerton/ca/doula/cost"
+ },
+ "medicaid": "California Medi-Cal doula benefit in effect since January 2023 (DHCS); BYWD in-network Medi-Cal; Becky Chavez zero out-of-pocket HMO in-network Kaiser/Health Net/private/Medi-cal"
+}

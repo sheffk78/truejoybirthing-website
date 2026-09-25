@@ -1,0 +1,20 @@
+{
+ "stage": "build",
+ "status": "completed",
+ "completed_at": "2026-09-24T18:43:27Z",
+ "worker_model": "glm-5.3-flash",
+ "final_state": {
+  "contract_valid": true,
+  "contract_exit_code": 0,
+  "eval_voice": "approved (13 fields, 0 blocking)",
+  "eval_accuracy": "approved (7 sources, 0 unsupported)",
+  "validate_city_data": "0 errors, 0 image issues",
+  "tsx_load": "LOADED OK (175 cities total)",
+  "images_generated": 11,
+  "providers": 4,
+  "hospitals": 3,
+  "birth_centers": 1,
+  "faqs": 7
+ },
+ "notes": "Build complete. All artifacts in artifacts/build-checkpoints/fullerton-ca/ (raw/ has PNG sources). cities.ts block inserted before citySlugs export; double-comma bug fixed. Backup: cities.ts.pre-fullerton.bak."
+}
