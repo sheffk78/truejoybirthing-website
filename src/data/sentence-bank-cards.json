@@ -1,0 +1,271 @@
+{
+ "disclaimer": "True Joy Birthing provides birth education, not medical advice. These sentences are communication tools to help you talk with your care team — they are not a substitute for your provider's guidance. Your care team knows your unique situation best; always follow their recommendations for medical decisions.",
+ "categories": [
+  {
+   "num": 1,
+   "name": "Induction Pressure",
+   "illo_desc": "clock with soft lavender hands.",
+   "illo_file": "illo-01-clock-anchor",
+   "cards": [
+    {
+     "id": "1.1",
+     "sentence": "Can you walk me through why you're recommending induction today, and what my alternatives are?",
+     "when": "your provider suggests starting labor before it starts on its own — at a checkup, over the phone, or at the hospital.",
+     "why": "it asks for the *reason* and the *options* in one calm breath. It tells your team you're paying attention without challenging their judgment, and it buys you a real conversation instead of a yes.",
+     "next": "you'll get the medical picture (your baby's status, your body, your timeline) and usually a range of choices — wait and monitor, schedule it, or go home and come back. You and your provider decide together."
+    },
+    {
+     "id": "1.2",
+     "sentence": "Thank you — let's talk through the timing. What happens if we wait two more hours? Two more days?",
+     "when": "the recommendation feels urgent, but nobody has explained what \"urgent\" means for you specifically.",
+     "why": "urgency is real sometimes, and vague sometimes. Asking for the timeline in concrete terms turns \"we need to do this now\" into information you can actually weigh. It keeps you collaborative while slowing the moment down.",
+     "next": "you'll hear what monitoring looks like while you wait, and what signs would change the plan. Most of the time you'll leave with a decision you helped make."
+    },
+    {
+     "id": "1.3",
+     "sentence": "This sounds like the standard protocol. Can we talk about what makes sense for my situation specifically?",
+     "when": "the recommendation arrives with urgency but without context, and you want it applied to *you*, not the average patient.",
+     "why": "it names the protocol without attacking it, then asks for personalization. Providers get this question constantly and good ones love it — it invites them to think with you instead of at you.",
+     "next": "your provider walks through your specifics. Sometimes the answer is still the protocol — and now you'll know why it's right for you, which is a completely different feeling."
+    },
+    {
+     "id": "1.4",
+     "sentence": "If we choose to start induction, what will the first steps look like, and how long is each one?",
+     "when": "you've decided to move forward and you want the picture before anything starts.",
+     "why": "agreeing and asking for the roadmap keeps you in the driver's seat even when you've said yes. You'll know what to expect hour by hour, which lowers the fear of the unknown — the loudest thing in most labor rooms.",
+     "next": "your nurse or provider maps the sequence (medication, monitoring, checks). You know what each step is for before it happens."
+    },
+    {
+     "id": "1.5",
+     "sentence": "We'd like a few minutes alone to talk about it before we decide. Is now a good time to have that space?",
+     "when": "the room fills up with people and opinions and you haven't had a second to hear yourself think.",
+     "why": "it's polite, clear, and completely reasonable — and it's your right. Asking directly for space (\"is now a good time\") invites the team to support you instead of feeling dismissed.",
+     "next": "the team steps out, you and your partner (or you and your doula) talk, and you come back to the conversation ready. That pause is often where the real decision lives."
+    }
+   ]
+  },
+  {
+   "num": 2,
+   "name": "Epidural & Pain Relief Discussion",
+   "illo_desc": "soft heart, lavender outline.",
+   "illo_file": "illo-09-heart-outline",
+   "cards": [
+    {
+     "id": "2.1",
+     "sentence": "I'd like to understand my pain options — including doing nothing medically for now. Can we go over them all?",
+     "when": "early in labor, or when pain relief comes up before you've thought it through.",
+     "why": "it puts *all* the options on the table — including waiting — without signaling a decision either way. It makes pain management a conversation, not a checkbox.",
+     "next": "you'll hear the full menu (epidural, other medications, breathing and movement tools, or a mix). Nothing is decided until you decide."
+    },
+    {
+     "id": "2.2",
+     "sentence": "What does getting an epidural involve right now — and what would happen if I waited a bit longer?",
+     "when": "the conversation is moving toward an epidural and you want the moment to slow down before you commit.",
+     "why": "it treats the epidural as a real choice with timing, not an automatic next step. Asking \"what would happen if I wait\" is a completely reasonable question that keeps your options open.",
+     "next": "you'll learn how the epidural works, how long setup takes, and what waiting does or doesn't change. Then you choose — with the facts, either way."
+    },
+    {
+     "id": "2.3",
+     "sentence": "I'd like to try a while longer without it, and I want you to know that could change. Can we agree that's okay?",
+     "when": "you want to keep going unmedicated for now but you don't want anyone keeping score.",
+     "why": "it states your current choice AND pre-permits yourself to change your mind. Nobody has to guess where you stand, and both options stay open without judgment.",
+     "next": "your team knows the plan and knows it's flexible. You labor on your terms, and the door stays open both ways."
+    },
+    {
+     "id": "2.4",
+     "sentence": "The epidural is on the table and we're considering it. Before we decide, can you tell us what it will and won't change?",
+     "when": "you're genuinely torn and want the honest trade-offs, not a sales pitch in either direction.",
+     "why": "it asks for truth, not persuasion. A good care team will tell you exactly what changes (pain relief, mobility) and what doesn't (the labor itself). You get to decide from reality.",
+     "next": "you hear the real picture and make the call that fits *your* labor. Both answers are fine; only one is yours."
+    }
+   ]
+  },
+  {
+   "num": 3,
+   "name": "Unexpected Intervention Recommendation",
+   "illo_desc": "two paths merging into one gentle line (plan-changing moment).",
+   "illo_file": "illo-06-stethoscope-loop",
+   "cards": [
+    {
+     "id": "3.1",
+     "sentence": "That's new information for us. Can you explain what's changed and what the options are now?",
+     "when": "something shifts in labor (monitoring changes, your contraction pattern changes, or new information comes in) and the plan you prepared for suddenly isn't the plan anymore.",
+     "why": "it acknowledges the moment (\"new information\"), asks for the reason, and asks for options — without panic and without refusal. It's the sentence that keeps you a participant when everything speeds up.",
+     "next": "your team explains the change. You get the updated picture and the updated choices. The plan changes; your role in deciding doesn't."
+    },
+    {
+     "id": "3.2",
+     "sentence": "What are the risks if we do this, and what are the risks if we wait and monitor?",
+     "when": "a recommendation arrives mid-labor and you need to weigh it quickly.",
+     "why": "it frames *both sides* of the decision — doing something and doing nothing both have trade-offs. Asking about both makes you an informed decision-maker in under thirty seconds.",
+     "next": "you'll hear both pictures. Sometimes waiting is clearly right; sometimes acting is. Either way, the decision is now yours, made from both sides."
+    },
+    {
+     "id": "3.3",
+     "sentence": "I hear you, and I trust this is serious. Can we have a moment to absorb this and then decide together?",
+     "when": "the moment is heavy — a recommendation you didn't expect, delivered quickly.",
+     "why": "it does two things at once: accepts the seriousness (your team needs to know you're not ignoring them) and claims the space to think. Serious moments still deserve a breath.",
+     "next": "the team gives you the moment (they almost always do when asked directly), then returns for your decision. You'll make it present, not panicked."
+    },
+    {
+     "id": "3.4",
+     "sentence": "Is there a version of this we can try first that's less of a change from our current plan?",
+     "when": "you want to meet the concern the team raised without jumping to the biggest step.",
+     "why": "it asks for intermediate options — the step between \"nothing\" and \"everything.\" There very often is one, and it keeps your preferences in the decision instead of replacing them.",
+     "next": "your team either offers a middle path (great — take it and stay watched) or explains why there isn't one. Both answers are useful information."
+    }
+   ]
+  },
+  {
+   "num": 4,
+   "name": "Consent & Paperwork",
+   "illo_desc": "pen resting on a paper form.",
+   "illo_file": "illo-02-pen-form",
+   "cards": [
+    {
+     "id": "4.1",
+     "sentence": "Before I sign, can you explain what I'm agreeing to in plain language?",
+     "when": "a clipboard appears with a form and a quick \"just sign here.\"",
+     "why": "\"plain language\" is the magic phrase — it tells them you want to understand, not recite. Consent you actually understood is consent that means something.",
+     "next": "they walk you through it in real words. If something doesn't make sense, ask again — you haven't held anyone up; you've done your job."
+    },
+    {
+     "id": "4.2",
+     "sentence": "What happens if I don't sign this right now?",
+     "when": "the pace feels fast and the signature feels automatic.",
+     "why": "it's a completely fair question asked without accusation. The answer tells you whether this is truly urgent or just routine — and those are very different situations.",
+     "next": "you'll hear which it is. Most of the time there's more room than the pen-in-hand moment suggests, and you sign when you know what you're signing."
+    },
+    {
+     "id": "4.3",
+     "sentence": "Can I have a copy of this to keep, and a few minutes to read it?",
+     "when": "any consent form, honestly — but especially ones that arrived mid-labor.",
+     "why": "reading your own paperwork is not an inconvenience; it's your right. Asking for a copy also signals you take it seriously — which makes the whole exchange more respectful.",
+     "next": "you get the form and the time. You read, you ask, you sign when you're ready."
+    },
+    {
+     "id": "4.4",
+     "sentence": "Can someone go through the specific risks listed here with me?",
+     "when": "the form has a wall of fine print and nobody's explained it line by line.",
+     "why": "it turns fine print into a conversation and puts a real person in charge of explaining it. Nobody should consent to a list of words they can't explain.",
+     "next": "a nurse or provider sits with you and translates the list. You sign knowing what each item means for you."
+    }
+   ]
+  },
+  {
+   "num": 5,
+   "name": "Communication Breakdowns",
+   "illo_desc": "speech bubble with a small question mark.",
+   "illo_file": "illo-08-speech-bubble",
+   "cards": [
+    {
+     "id": "5.1",
+     "sentence": "I think we're talking past each other. Can we back up — here's what I understand, and here's what I'm asking.",
+     "when": "you've asked something twice and gotten an answer to a different question.",
+     "why": "it names the breakdown without blame and then *rebuilds* — stating your understanding first makes it easy for them to correct exactly the part that's off.",
+     "next": "the misunderstanding gets located and fixed, usually in one exchange. The conversation moves forward with both of you in it."
+    },
+    {
+     "id": "5.2",
+     "sentence": "I'm hearing conflicting information. Can you help me understand how this fits together?",
+     "when": "your nurse says one thing, the doctor says another, and you're caught in the middle trying to make sense of it.",
+     "why": "it puts the *team* back in \"care team\" — you're not choosing sides or reporting anyone, you're asking them to reconcile their own picture. It's respectful and it works.",
+     "next": "someone takes ownership of the full picture and explains how the pieces fit. Sometimes this genuinely improves your care, not just your understanding."
+    },
+    {
+     "id": "5.3",
+     "sentence": "This matters a lot to me and I want to make sure it doesn't get missed. Can we come back to it?",
+     "when": "you've said something that matters and it's sliding off the conversation.",
+     "why": "it's direct without being adversarial — \"I don't feel heard yet\" is an honest report, and \"can we try once more\" is an invitation, not an accusation. It's hard to ignore and impossible to be offended by.",
+     "next": "most providers reset and truly engage. You get your point back into the conversation, where it belongs."
+    },
+    {
+     "id": "5.4",
+     "sentence": "Could you write down the key points, or can my support person take notes while we talk?",
+     "when": "the information is coming fast and you know you won't remember it accurately.",
+     "why": "it normalizes documentation in the room. Notes protect *you* (memory, decisions) and *them* (clear understanding), so both sides usually welcome it.",
+     "next": "the details land on paper. Afterward you can reread, and your support person can help you process what was said."
+    }
+   ]
+  },
+  {
+   "num": 6,
+   "name": "Scheduling & Pace Pressure",
+   "illo_desc": "wall calendar with one date circled.",
+   "illo_file": "illo-07-calendar-circled",
+   "cards": [
+    {
+     "id": "6.1",
+     "sentence": "I understand there's a schedule to keep. What's the medical reason for that timing in my case?",
+     "when": "things are moving on the ward's rhythm — and you want to know how much of it is medicine and how much is logistics.",
+     "why": "it separates medicine from logistics politely. Hospitals have real schedules; asking which reasons are medical puts the focus back where it belongs.",
+     "next": "you'll get the medical picture — and the honest parts about logistics. Then you decide with clear eyes about what's driving what."
+    },
+    {
+     "id": "6.2",
+     "sentence": "We're not ready yet, and we're comfortable with where things are. Can we have more time?",
+     "when": "you're being asked to move to a next step and your gut says not yet.",
+     "why": "it's simple, warm, and complete — states where you are, states the request, asks for nothing dramatic. \"Not ready yet\" is a legitimate answer in almost every birth conversation.",
+     "next": "usually, you get time. Sometimes you'll hear a reason why waiting matters — and that's information worth having, offered in the same calm register."
+    },
+    {
+     "id": "6.3",
+     "sentence": "If we wait another hour, what would we be watching for that would change our minds?",
+     "when": "you want to buy time *and* stay safe — the smart combination.",
+     "why": "it turns waiting from passive into active. You're telling the team: we'll wait, and we want to know the specific signs that would make waiting the wrong call. That's what collaboration looks like.",
+     "next": "the team defines the watch-points with you. Time passes with everyone watching the same things — which is exactly how waiting should work."
+    },
+    {
+     "id": "6.4",
+     "sentence": "Can we plan for the rest of today together, so we're not deciding each step under pressure?",
+     "when": "the day has become a chain of small decisions, each one arriving faster than the last.",
+     "why": "it lifts the conversation from step-by-step pressure to a shared map. Providers generally prefer this too — a patient who wants to plan the day is a patient they can actually work with.",
+     "next": "you walk the day's likely path together, including the decision points. When each step arrives, it's familiar instead of sudden."
+    }
+   ]
+  },
+  {
+   "num": 7,
+   "name": "Being Alone or Unsupported in the Room",
+   "illo_desc": "closed door with warm lavender light glowing under it.",
+   "illo_file": "illo-03-door-light",
+   "cards": [
+    {
+     "id": "7.1",
+     "sentence": "I'd like my support person (my doula/partner) in the room for this conversation. When can they come back in?",
+     "when": "a shift change, a procedure, or a hallway conversation is happening and your person got left outside.",
+     "why": "it frames your support person as part of the team — because they are. Asking \"when can they come back\" treats their absence as temporary logistics, not a policy.",
+     "next": "your person rejoins you, usually quickly. Support in the room changes every conversation that follows."
+    },
+    {
+     "id": "7.2",
+     "sentence": "I'm feeling alone in this and I need some support right now. Can someone stay with me?",
+     "when": "the room is quiet, everyone's at the desk, and you're doing the hardest work of your life by yourself.",
+     "why": "asking directly for support is strength, not weakness — and it gives the team something specific and doable. Nurses want to know this. Most will stay, or send someone who can.",
+     "next": "someone stays with you, checks in, or explains when they'll be back. You're not doing this alone anymore."
+    },
+    {
+     "id": "7.3",
+     "sentence": "Before any procedure starts, can you make sure my support person is here with me?",
+     "when": "something is about to happen and you want your people beside you for it.",
+     "why": "it makes your support person's presence a standing part of the plan rather than something you renegotiate each time. One sentence, stated once, respected all day.",
+     "next": "the team builds the wait-for-my-person into the routine. You go into every procedure with your people."
+    },
+    {
+     "id": "7.4",
+     "sentence": "Who will be in the room for the birth itself, and can we talk about who I want there?",
+     "when": "the room's population is growing and you haven't been asked.",
+     "why": "it asks for the guest list in advance — a completely normal request that's easy to forget you're allowed to make. Your birth, your room.",
+     "next": "you find out who's planning to be there and you get a real say. Most teams honor this fully once it's voiced."
+    },
+    {
+     "id": "7.5",
+     "sentence": "Can you stay while we talk this through? I do better when I can ask questions in the moment.",
+     "when": "someone important is about to leave the room right when you need them.",
+     "why": "it gives the provider a reason to stay that costs nothing. \"Questions in the moment\" is how good medical conversations work — you're just asking for the good version.",
+     "next": "they stay, you talk, and the decision happens in one complete conversation instead of fragments."
+    }
+   ]
+  }
+ ]
+}

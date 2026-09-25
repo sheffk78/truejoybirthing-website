@@ -1,0 +1,204 @@
+---
+// Hospital Sentence Bank — free PDF download page (M2)
+// Funnel: Sentence Bank (free) → Joyful Birth Plan → Mini-Course → Confidence Session
+import Layout from '../layouts/Layout.astro';
+import LeadCaptureForm from '../components/LeadCaptureForm.astro';
+import PdfSuccessCta from '../components/PdfSuccessCta.astro';
+import { CARD_CSS, DISCLAIMER } from '../data/sentence-bank-styles.js';
+import cards from '../data/sentence-bank-cards.json';
+
+const canonical = 'https://truejoybirthing.com/sentence-bank/';
+const breadcrumbList = [{name: 'Home', url: 'https://truejoybirthing.com/'}, {name: 'Hospital Sentence Bank', url: canonical}];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': canonical + '#webpage',
+      url: canonical,
+      name: 'The Hospital Sentence Bank — Exact Words for Hard Moments',
+      description: '30 screenshot-ready sentences to say in the hospital when your care team recommends something you didn\u2019t plan for. Free from True Joy Birthing.',
+      isPartOf: { '@id': 'https://truejoybirthing.com/#website' },
+    },
+    {
+      '@type': 'HowTo',
+      '@id': canonical + '#howto',
+      name: 'How to Use the Hospital Sentence Bank',
+      description: 'Save the cards, find your moment, read the sentence out loud.',
+      totalTime: 'PT5M',
+      step: [
+        { '@type': 'HowToStep', position: 1, name: 'Save the cards', text: 'Download the free PDF and save it to your phone\u2019s camera roll, or print it and tuck it in your hospital bag.' },
+        { '@type': 'HowToStep', position: 2, name: 'Find your moment', text: 'When something unexpected comes up, flip to the category that matches what\u2019s happening — induction, pain relief, paperwork, a sudden change of plan.' },
+        { '@type': 'HowToStep', position: 3, name: 'Say the sentence', text: 'Read it out loud, exactly as written, or hand your support person the card. Every sentence is built to open the conversation, not win an argument.' },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': canonical + '#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Is the Hospital Sentence Bank really free?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Yes. All 30 sentence cards are free — no credit card, just your email so we can send the PDF.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Are these sentences medical advice?',
+          acceptedAnswer: { '@type': 'Answer', text: 'No. They are communication tools to help you talk with your care team. They never tell you to accept or refuse a specific medical action — your provider knows your situation best.' },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can I share the cards with my partner or doula?',
+          acceptedAnswer: { '@type': 'Answer', text: 'Please do. The cards are built for sharing — screenshot one, print the PDF, or hand the phone to your support person.' },
+        },
+      ],
+    },
+  ],
+};
+
+const catCount = cards.categories.length;
+const totalCards = cards.categories.reduce((n, c) => n + c.cards.length, 0);
+---
+
+<Layout title="The Hospital Sentence Bank — Exact Words for Hard Moments | True Joy Birthing"
+        description={`30 screenshot-ready sentences to say in the hospital when your care team recommends something you didn't plan for. Free from a certified doula.`}
+        canonical={canonical} breadcrumbList={breadcrumbList} schema={schema}>
+  <style is:inline set:html={CARD_CSS} />
+
+  <!-- Hero -->
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-xs font-semibold tracking-[0.18em] uppercase text-tjb-lavender-600 mb-5">Free · 30 cards · from a certified doula</p>
+      <h1 class="font-bold text-tjb-charcoal leading-[1.15] mb-5" style="font-size: clamp(2rem, 4.6vw, 3.4rem);">
+        Exact sentences to say in the hospital when they recommend something you didn't plan for.
+      </h1>
+      <p class="text-lg text-tjb-charcoal/80 leading-relaxed mb-8">
+        The Hospital Sentence Bank is {totalCards} screenshot-ready cards — one sentence each, organized by the seven moments moms tell us they freeze: induction pressure, pain relief, paperwork, a sudden change of plan, and more. No jargon. No confrontation. Just the words.
+      </p>
+      <div class="max-w-md mx-auto" id="capture">
+        <LeadCaptureForm
+          eyebrow="Free Download — 30 Cards"
+          heading="Get the Free Hospital Sentence Bank"
+          body="Enter your name and email and we'll send all 30 sentence cards as a print-ready PDF — one sentence per card, organized by the seven hospital moments. Screenshot them, print them, tuck them in your hospital bag. No spam, just the words you need."
+        />
+      </div>
+      <p class="text-xs text-tjb-charcoal/60 mt-4">Get the free Sentence Bank — sent straight to your inbox.</p>
+    </div>
+  </section>
+
+  <!-- Cover art + what it is -->
+  <section class="py-14 bg-white">
+    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+      <div class="order-2 md:order-1">
+        <h2 class="text-3xl font-bold text-tjb-charcoal mb-4">Built for the moments nobody preps you for</h2>
+        <p class="text-tjb-charcoal/80 leading-relaxed mb-4">
+          Most birth education tells you what a procedure is. Almost none of it tells you what to <em>say</em> when it's happening to you — with a doctor waiting, a pen in your hand, and your heart pounding.
+        </p>
+        <p class="text-tjb-charcoal/80 leading-relaxed mb-6">
+          Every card gives you one sentence, when it comes up, why it works, and what happens next — so you walk in informed, strong, and collaborative.
+        </p>
+        <ul class="space-y-2 text-tjb-charcoal/80">
+          <li class="flex gap-3"><span class="text-tjb-rose-500 font-bold">✓</span>{totalCards} sentences across {catCount} hospital moments</li>
+          <li class="flex gap-3"><span class="text-tjb-rose-500 font-bold">✓</span>Screenshot one card, send it to your person</li>
+          <li class="flex gap-3"><span class="text-tjb-rose-500 font-bold">✓</span>Print-friendly PDF — tucks into any hospital bag</li>
+        </ul>
+      </div>
+      <div class="order-1 md:order-2 flex justify-center">
+        <img src="/images/sentence-bank/illo-04-newborn-arms.jpg" alt="Watercolor illustration of a newborn cradled in gentle arms — the cover of the Hospital Sentence Bank" width="420" height="234" class="rounded-3xl shadow-lg" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Category preview with 3 sample cards -->
+  <section class="py-14 bg-tjb-cream">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-tjb-charcoal text-center mb-3">The seven moments, one glance</h2>
+      <p class="text-center text-tjb-charcoal/70 mb-10">Every card belongs to a moment. Here's a taste of each — the full bank has all {totalCards}.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+        {cards.categories.map((c) => (
+          <div class="flex items-center gap-4 bg-white rounded-2xl p-4 shadow-sm border border-tjb-lavender-600/10">
+            <img src={`/images/sentence-bank/${c.illo_file}.jpg`} alt="" width="56" height="56" class="rounded-xl" loading="lazy" />
+            <div>
+              <p class="font-semibold text-tjb-charcoal leading-tight">{c.name}</p>
+              <p class="text-xs text-tjb-charcoal/60">{c.cards.length} sentences</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <h3 class="text-2xl font-bold text-tjb-charcoal text-center mb-8">Sample cards</h3>
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+        {[cards.categories[0].cards[0], cards.categories[3].cards[0], cards.categories[6].cards[0]].map((card) => (
+          <div class="sb-card">
+            <p class="sb-card__cat">Sample card</p>
+            <p class="sb-card__sentence">“{card.sentence}”</p>
+            <div class="sb-card__fields">
+              <p class="sb-card__field"><b>When it comes up:</b> {card.when}</p>
+              <p class="sb-card__field"><b>What happens next:</b> {card.next}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="text-center">
+        <a href="#capture" class="inline-block bg-tjb-rose-500 hover:bg-tjb-rose-600 text-white font-bold px-9 py-4 rounded-full text-lg transition shadow-md">Get all {totalCards} free</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shelbi trust block -->
+  <section class="py-14 bg-white">
+    <div class="max-w-3xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8">
+      <img src="/images/shelbi-real.webp" alt="Shelbi Kohler, certified birth doula and founder of True Joy Birthing" width="180" height="180" class="rounded-full shadow-md" loading="lazy" />
+      <div>
+        <h2 class="text-2xl font-bold text-tjb-charcoal mb-3">Made by a doula who's been in the room</h2>
+        <p class="text-tjb-charcoal/80 leading-relaxed">
+          I'm <a href="/about/" class="text-tjb-lavender-600 hover:text-tjb-lavender-700 font-medium underline">Shelbi Kohler</a>, certified birth doula. I've watched brilliant, prepared moms go quiet the second a hospital hallway gets serious. I made this bank because nobody hands you the words — and you deserve to have them before you need them.
+        </p>
+        <p class="text-tjb-charcoal/80 leading-relaxed mt-3">You've got this. — Shelbi</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-sell: the handoff -->
+  <section class="py-14 bg-tjb-lavender-600/10">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-tjb-charcoal mb-4">Love these? Build the whole plan around them.</h2>
+      <p class="text-tjb-charcoal/80 leading-relaxed mb-7">
+        The Sentence Bank works best inside a real plan. The <strong>Joyful Birth Plan</strong> is our free, fillable birth plan — it shows you where each of these sentences fits, before you ever walk through the doors.
+      </p>
+      <a href="/birth-plan-template/" class="inline-block bg-tjb-rose-500 hover:bg-tjb-rose-600 text-white font-bold px-9 py-4 rounded-full text-lg transition shadow-md">Download free birth plan</a>
+      <p class="text-sm text-tjb-charcoal/60 mt-8">
+        Want to go deeper? <a href="/birth-plan-confidence-session/" class="underline hover:text-tjb-lavender-700">Book a Birth Plan Confidence Session</a> and practice these 1:1 with Shelbi — or explore the <a href="/birth-plan-checklist/" class="underline hover:text-tjb-lavender-700">birth plan checklist</a> to keep building.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-14 bg-white">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-tjb-charcoal text-center mb-10">Questions, answered</h2>
+      {[
+        ['Is it really free?', 'Yes — all 30 cards, no credit card. Just your email so we can send the PDF.'],
+        ['Is this medical advice?', 'No. These are communication tools, not clinical recommendations. They never tell you to accept or refuse care — your provider knows your situation best.'],
+        ['Can my partner or doula use them?', 'Absolutely. They\u2019re built for sharing — screenshot, print, or hand the phone across the bed.'],
+        ['What if I\u2019m having a planned C-section or a scheduled induction?', 'The bank covers conversations, not birth outcomes — consent, communication, and pace moments happen in every kind of birth.'],
+      ].map(([q, a]) => (
+        <details class="group border-b border-tjb-lavender-600/15 py-4">
+          <summary class="font-semibold text-tjb-charcoal cursor-pointer list-none flex justify-between items-center">
+            {q}<span class="text-tjb-rose-500 group-open:rotate-45 transition text-xl leading-none">+</span>
+          </summary>
+          <p class="text-tjb-charcoal/75 leading-relaxed pt-3">{a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <!-- Disclaimer footer -->
+  <section class="py-10 bg-tjb-cream">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="text-xs text-tjb-charcoal/60 italic leading-relaxed text-center">{DISCLAIMER}</p>
+    </div>
+  </section>
+
+  <PdfSuccessCta />
+</Layout>
