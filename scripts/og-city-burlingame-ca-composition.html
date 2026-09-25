@@ -19,9 +19,6 @@
     width: 1200px;
     height: 630px;
   }
-    .right-column { position: relative; overflow: hidden; }
-  .right-column img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
-  
   /* LEFT: Text content on cream gradient */
   .left-column {
     width: 660px;
@@ -165,10 +162,9 @@
                      (ALWAYS use mono — the color logo washes out on cream backgrounds)
   
   FOR CITIES WITHOUT A HERO IMAGE:
-  Replace the <div class="right-column">
-    <img src="../public/images/burlingame-ca-birth-doula-skyline-600-v2.webp" alt="Burlingame" />
-  </div> with:
-    This is the same gradient as Pattern A cards — a safe branded fallback.
+  Replace the <div class="right-column" style="background: linear-gradient(135deg, #E6BBD8 0%, #8E8CB5 50%, #A8B5A0 100%);"></div> with:
+  <div class="right-column" style="background: linear-gradient(135deg, #E6BBD8 0%, #8E8CB5 50%, #A8B5A0 100%);"></div>
+  This is the same gradient as Pattern A cards — a safe branded fallback.
   
   RENDERING:
   Use Playwright with viewport 1200×630, deviceScaleFactor=1. See og-creation-workflow.md.
@@ -198,9 +194,7 @@
       <img src="https://truejoybirthing.com/images/logo-mono.svg" alt="True Joy Birthing" />
     </div>
   </div>
-  <div class="right-column">
-    <img src="../public/images/burlingame-ca-birth-doula-skyline-600-v2.webp" alt="Burlingame" />
-  </div>
-  </div>
+  <div class="right-column" style="background: linear-gradient(135deg, #E6BBD8 0%, #8E8CB5 50%, #A8B5A0 100%);"></div>
+</div>
 </body>
 </html>
