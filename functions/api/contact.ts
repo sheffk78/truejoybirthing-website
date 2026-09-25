@@ -141,10 +141,28 @@ export const onRequestPost = async (context) => {
     const looksLikeTestEmail = /\+test|\.test@|@test\.|@example\.(com|org)|@fake|@invalid|mailinator|guerrillamail|10minutemail|throwaway/i.test(email);
 
     if (env.POSTMARK_SERVER_TOKEN && !looksLikeTestEmail) {
-      const pdfUrl = 'https://truejoybirthing.com/true-joy-birth-plan.pdf?src=email';
+      const isSentenceBank = source === 'sentence_bank';
+      const pdfUrl = isSentenceBank
+        ? 'https://truejoybirthing.com/downloads/hospital-sentence-bank.pdf?src=email'
+        : 'https://truejoybirthing.com/true-joy-birth-plan.pdf?src=email';
       const appUrl = 'https://truejoybirthing.com/app';
-      const deliverySubject = 'Your free birth plan';
-      const deliveryText = [
+      const deliverySubject = isSentenceBank ? 'Your Hospital Sentence Bank is here' : 'Your free birth plan';
+      const deliveryText = isSentenceBank ? [
+        `Hi ${firstName || 'there'},`,
+        ``,
+        `Your Hospital Sentence Bank is here. Download all 30 cards here:`,
+        pdfUrl,
+        ``,
+        `Save the cards to your phone's camera roll now — don't wait for the moment you need them. When something unexpected comes up in the hospital, flip to the category that matches and read the sentence out loud, or hand your support person the card.`,
+        ``,
+        `These sentences work best inside a real plan. You can build one free here: ${appUrl.replace('/app', '/birth-plan-template/')}`,
+        ``,
+        `Reply if anything is unclear — I read every reply.`,
+        ``,
+        `You've got this,`,
+        `Shelbi`,
+        `True Joy Birthing`,
+      ].join('\n') : [
         `Hi ${firstName || 'there'},`,
         ``,
         `Your free birth plan is ready. Download it here:`,
@@ -160,7 +178,14 @@ export const onRequestPost = async (context) => {
         `Shelbi`,
         `True Joy Birthing`,
       ].join('\n');
-      const deliveryHtml = [
+      const deliveryHtml = isSentenceBank ? [
+        `<p>Hi ${firstName || 'there'},</p>`,
+        `<p>Your Hospital Sentence Bank is here. <a href="${pdfUrl}">Download all 30 cards here</a>.</p>`,
+        `<p>Save the cards to your phone's camera roll now — don't wait for the moment you need them. When something unexpected comes up in the hospital, flip to the category that matches and read the sentence out loud, or hand your support person the card.</p>`,
+        `<p>These sentences work best inside a real plan. <a href="https://truejoybirthing.com/birth-plan-template/">Download free birth plan</a> and see where each sentence fits.</p>`,
+        `<p>Reply if anything is unclear — I read every reply.</p>`,
+        `<p>You've got this,<br>Shelbi<br>True Joy Birthing</p>`,
+      ].join('\n') : [
         `<p>Hi ${firstName || 'there'},</p>`,
         `<p>Your free birth plan is ready. <a href="${pdfUrl}">Download it here</a>.</p>`,
         `<p>Congratulations on getting this done — it's a real step toward the birth you want. Print it or save it, and bring it to your next appointment. Every plan looks a little different, and yours should sound like you.</p>`,

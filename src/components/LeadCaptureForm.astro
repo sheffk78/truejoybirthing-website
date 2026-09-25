@@ -7,6 +7,7 @@ interface Props {
   eyebrow?: string;
   bannerImage?: string;
   bannerAlt?: string;
+  magnet?: 'birth_plan' | 'sentence_bank';
 }
 const {
   heading = 'Get the Free Video Walkthrough',
@@ -14,11 +15,15 @@ const {
   eyebrow = 'Free Download',
   bannerImage,
   bannerAlt = '',
+  magnet = 'birth_plan',
 } = Astro.props;
 import PdfSuccessCta from './PdfSuccessCta.astro';
+const isSentenceBank = magnet === 'sentence_bank';
+const sourceId = isSentenceBank ? 'sentence_bank' : 'lead_form';
+const submitLabel = isSentenceBank ? 'Get the free Sentence Bank' : 'Get the free video walkthrough';
 ---
 
-<section id="download" class="bg-white border-y border-tjb-lavender-200/60 py-20 md:py-28">
+<section id="download" data-magnet={magnet} class="bg-white border-y border-tjb-lavender-200/60 py-20 md:py-28">
   <div class="max-w-2xl mx-auto px-6 text-center">
     {bannerImage && (
       <div class="flex justify-center mb-8">
@@ -61,25 +66,41 @@ import PdfSuccessCta from './PdfSuccessCta.astro';
         />
       </div>
       <button type="submit" id="lead-submit" class="btn-primary whitespace-nowrap">
-        Get the free video walkthrough
+        {submitLabel}
       </button>
     </form>
     <p id="lead-status" class="text-xs hidden text-tjb-gray-300"></p>
 
     <!-- Success state -->
     <div id="lead-success" class="hidden">
-      <p class="text-green-700 font-semibold mb-4">✓ Check your inbox — your walkthrough access is on its way!</p>
-      <p class="text-tjb-gray mb-6">Your free video walkthrough is ready below — start watching now.</p>
-      <PdfSuccessCta source="lead_form" eventId="pdf-success-lead-form" />
+      {isSentenceBank ? (
+        <>
+          <p class="text-green-700 font-semibold mb-4">✓ Check your inbox — all 30 cards are on their way!</p>
+          <p class="text-tjb-gray mb-6">While you wait: these sentences work best inside a real plan.</p>
+          <a href="/birth-plan-template/" class="inline-block bg-tjb-rose-500 hover:bg-tjb-rose-600 text-white font-bold px-8 py-3.5 rounded-full transition shadow-md">Download free birth plan</a>
+        </>
+      ) : (
+        <>
+          <p class="text-green-700 font-semibold mb-4">✓ Check your inbox — your walkthrough access is on its way!</p>
+          <p class="text-tjb-gray mb-6">Your free video walkthrough is ready below — start watching now.</p>
+          <PdfSuccessCta source="lead_form" eventId="pdf-success-lead-form" />
+        </>
+      )}
     </div>
 
-    <p class="text-xs text-tjb-gray-300 mt-2">No spam. Just your birth plan and occasional tips you can actually use.</p>
+    <p class="text-xs text-tjb-gray-300 mt-2">{isSentenceBank ? 'No spam. Just your 30 sentence cards and occasional tips you can actually use.' : 'No spam. Just your birth plan and occasional tips you can actually use.'}</p>
 
     <div class="mt-8 pt-6 border-t border-tjb-lavender-200/40">
       <p class="text-sm text-tjb-gray-400 mb-2">Prefer to skip the email?</p>
-      <a href="/true-joy-birth-plan.pdf" download="true-joy-birth-plan.pdf" class="text-tjb-gray-400 hover:text-tjb-gray-300 text-sm border-b border-transparent hover:border-tjb-gray-300 transition-all inline-block pb-0.5">
-        Download PDF directly
-      </a>
+      {isSentenceBank ? (
+        <a href="/downloads/hospital-sentence-bank.pdf" download="hospital-sentence-bank.pdf" class="text-tjb-gray-400 hover:text-tjb-gray-300 text-sm border-b border-transparent hover:border-tjb-gray-300 transition-all inline-block pb-0.5">
+          Download the PDF directly
+        </a>
+      ) : (
+        <a href="/true-joy-birth-plan.pdf" download="true-joy-birth-plan.pdf" class="text-tjb-gray-400 hover:text-tjb-gray-300 text-sm border-b border-transparent hover:border-tjb-gray-300 transition-all inline-block pb-0.5">
+          Download PDF directly
+        </a>
+      )}
     </div>
 
     <!-- Secondary CTAs — inside the white section so they don't float between backgrounds -->
@@ -99,6 +120,7 @@ import PdfSuccessCta from './PdfSuccessCta.astro';
   const leadBtn = document.getElementById('lead-submit') as HTMLButtonElement;
   const leadName = document.getElementById('lead-name') as HTMLInputElement;
   const leadEmail = document.getElementById('lead-email') as HTMLInputElement;
+  const isSentenceBank = leadForm?.closest('section')?.getAttribute('data-magnet') === 'sentence_bank';
 
   leadForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -115,7 +137,14 @@ import PdfSuccessCta from './PdfSuccessCta.astro';
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: name || 'Lead Magnet', email, message: `Birth plan PDF request from: ${name || email}` }),
+        body: JSON.stringify({
+          name: name || (isSentenceBank ? 'Sentence Bank' : 'Lead Magnet'),
+          email,
+          message: isSentenceBank
+            ? `Hospital Sentence Bank request from: ${name || email}`
+            : `Birth plan PDF request from: ${name || email}`,
+          source: isSentenceBank ? 'sentence_bank' : 'lead_form',
+        }),
       });
 
       const data = await res.json();
