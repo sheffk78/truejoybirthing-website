@@ -2044,9 +2044,9 @@
     },
     "san-antonio-tx": {
       "has_video": true,
-      "has_outreach": false,
-      "videoId": "1ccyFIUhNl0",
-      "video_id": "1ccyFIUhNl0",
+      "has_outreach": true,
+      "videoId": "pLKUlnVq7OE",
+      "video_id": "pLKUlnVq7OE",
       "video_url": "https://youtu.be/1ccyFIUhNl0",
       "video_uploaded_at": "2026-08-11T20:21:00Z",
       "video_status": "live",

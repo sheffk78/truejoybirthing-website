@@ -3,37 +3,45 @@
   "stage": "video_outreach",
   "mode": "local_video_outreach",
   "exit_code": 0,
-  "passed": 7,
+  "passed": 9,
   "failed": 0,
   "skipped": 0,
   "results": {
     "pre_render_gate": {
-      "status": "FAIL",
-      "detail": ""
+      "status": "PASS",
+      "detail": "scene data exists at remotion/src/data/san-antonio-tx-data.ts"
     },
     "video_file_exists": {
-      "status": "FAIL",
-      "detail": ""
+      "status": "PASS",
+      "detail": "video file 103.9MB >10MB"
     },
     "youtube_upload": {
-      "status": "FAIL",
-      "detail": ""
+      "status": "PASS",
+      "detail": "videoId pLKUlnVq7OE present in video-embeds.ts"
     },
     "youtube_thumbnail": {
-      "status": "FAIL",
-      "detail": ""
+      "status": "PASS",
+      "detail": "thumbnail present locally (718KB) and YouTube returns 98KB"
     },
     "video_embedded": {
-      "status": "FAIL",
-      "detail": ""
+      "status": "PASS",
+      "detail": "embed found (vid pLKUlnVq7OE) on live page"
     },
     "videoobject_schema": {
-      "status": "FAIL",
-      "detail": ""
+      "status": "PASS",
+      "detail": "VideoObject+duration present on live page"
     },
     "outreach_sent_or_blocked": {
-      "status": "FAIL",
-      "detail": ""
+      "status": "PASS",
+      "detail": "authorized \u2014 Jeff approved outreach resumption Aug 2026. Ready to send."
+    },
+    "provider_photo_quality": {
+      "status": "PASS",
+      "detail": "all 5 provider photos are real images (>5KB, >100 colors)"
+    },
+    "video_content_city_match": {
+      "status": "PASS",
+      "detail": "G67: video overview scene names this city ('antonio' found; frame t=22s)"
     }
   }
 }
