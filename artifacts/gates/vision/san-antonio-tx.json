@@ -1,0 +1,42 @@
+{
+  "slug": "san-antonio-tx",
+  "verdicts": [
+    {
+      "crop": "san-antonio-tx-hero-fig0.png",
+      "verdict": "pass",
+      "analysis": "The partial silhouette does not display any concrete anatomical defects as per the specified rules."
+    },
+    {
+      "crop": "san-antonio-tx-hero-fig1.png",
+      "verdict": "pass",
+      "analysis": "The pregnant figure in silhouette shows no anatomical defects; one arm is hidden, which is normal for a side profile, and the visible hand's fingers appear anatomically correct."
+    },
+    {
+      "crop": "san-antonio-tx-hero-fig2.png",
+      "verdict": "pass",
+      "analysis": "No human figures are discernible in the image to inspect for anatomical defects."
+    },
+    {
+      "crop": "san-antonio-tx-hero-fig3.png",
+      "verdict": "pass",
+      "analysis": "No human figure is present in the image to inspect for anatomical defects."
+    },
+    {
+      "crop": "san-antonio-tx-support-fig0.png",
+      "verdict": "pass",
+      "analysis": "Both figures exhibit normal human anatomy with no discernible defects such as extra limbs, fused fingers, or misplaced body parts."
+    },
+    {
+      "crop": "san-antonio-tx-og-fig0.png",
+      "verdict": "pass",
+      "analysis": "The silhouette depicts a pregnant woman with normal anatomy; one arm is visible holding her belly, and the other is obscured behind her body, which is not an anatomical defect."
+    },
+    {
+      "crop": "san-antonio-tx-thumb-fig0.png",
+      "verdict": "pass",
+      "analysis": "The silhouette shows a pregnant woman with one arm visible and the other hidden behind the body, which is anatomically normal."
+    }
+  ],
+  "overall": "pass",
+  "checked_at": "2026-09-26"
+}

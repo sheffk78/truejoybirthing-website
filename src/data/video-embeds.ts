@@ -1615,11 +1615,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     ],
   },
   "san-antonio-tx": {
-    videoId: "1ccyFIUhNl0",
+    videoId: "pLKUlnVq7OE",
     title: "San Antonio Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-    description: "Watch the full San Antonio birth guide — doulas, hospitals, birth centers, costs, and Texas Medicaid coverage, all in about 4 minutes.",
-    duration: "PT4M19S",
-    uploadDate: "2026-08-11T00:00:00-05:00",
+    description: "Watch the full San Antonio birth guide â doulas, hospitals, birth centers, costs, and Texas Medicaid coverage, all in about 4 minutes.",
+    duration: "PT4M22S",
+    uploadDate: "2026-09-26T00:00:00-05:00",
   },
   "corpus-christi-tx": {
     videoId: "P9sh9n-F9wI",
