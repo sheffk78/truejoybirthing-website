@@ -42,8 +42,12 @@ const schema = {
   breadcrumbList={breadcrumbList}
   schema={schema}
 >
+  {/* 2026-09-29 canonical fix (SiteGuru sweep): this URL is an intentional
+      redirect shim — an http-equiv refresh sends visitors to /postpartum-doula/.
+      Layout.astro already emits the canonical for us via the `canonical` prop,
+      so the second in-body tag created a DUPLICATE canonical link. Removed the
+      manual tag; the single canonical + refresh + sitemap exclusion stay. */}
   <meta http-equiv="refresh" content="0; url=/postpartum-doula/" />
-  <link rel="canonical" href="https://truejoybirthing.com/postpartum-doula/" />
 
 
   <!-- Hero -->
