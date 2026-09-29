@@ -1,0 +1,29 @@
+{
+  "slug": "tempe-az",
+  "stage": "verify_deploy",
+  "produced_at": "2026-09-29T20:03:31Z",
+  "worker_model": "glm-5.3-flash (Hermes subagent)",
+  "notes": "G60 provider photos wired (breanne-moriarty, gervonne-jefferson, jennifer-saucier); G73 support scene regenerated as v3 via gemini-3.1-flash-image, 3/3 anatomy PASS + 1-pregnant audit; S9 humanize PASSABLE 0 HIGH; sibling gates regenerated (gilbert-az, new-york-ny OG compositions); deploy commit 86f7c6fe pushed origin/seo-fixes-20260929, CF upload 217 files; live HTTP 200.",
+  "sources": [
+    {
+      "claim": "preflight_exit=0",
+      "evidence": "artifacts/gates/tempe-az-verify_deploy.json (0 failures 0 warnings)"
+    },
+    {
+      "claim": "deploy_status=SUCCESS",
+      "evidence": "/tmp/deploy-tempe2.log Step 4b CF upload 217 files + Step 5 probes 200; commit 86f7c6fe"
+    },
+    {
+      "claim": "live_http=200",
+      "evidence": "curl https://truejoybirthing.com/birth-support/tempe-az/ -> 200 (title + v3 scene referenced)"
+    },
+    {
+      "claim": "vision verdicts all pass",
+      "evidence": "artifacts/gates/vision/tempe-az.json 4 crops pass (atlas defect-specific passes)"
+    }
+  ],
+  "preflight_exit": 0,
+  "deploy_status": "SUCCESS",
+  "live_http": 200,
+  "vision_verdict_file": "artifacts/gates/vision/tempe-az.json"
+}
