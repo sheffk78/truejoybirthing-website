@@ -146,6 +146,7 @@ export interface CityData {
   };
   postpartumSection?: string;      // City-specific postpartum care provider section (H2 + paragraph, \n\n separated, HTML allowed)
   providerReviewSection?: string;  // City-specific provider review / comparison section (H2 + paragraph, \n\n separated, HTML allowed)
+  heroIntentAnswer?: string;       // Optional rich-HTML hero lead for a city's discovery keyword (GSC CTR work, 2026-09-29). Absent = default lead.
 }
 
 export const cities: Record<string, CityData> = {
@@ -695,8 +696,18 @@ export const cities: Record<string, CityData> = {
   "beaumont-tx": {
     enableBlogResources: true,
     publishedDate: "2026-07-10",
-    titleTag: "Postpartum Care & Doula in Beaumont, TX | Costs & Medicaid",
-    metaDescription: "Compare doula costs in Beaumont, TX ($700-$1,800). Find postpartum care providers, midwives, Medicaid coverage, and local hospitals.",
+    titleTag: "Postpartum Care in Beaumont TX: 6 Providers & Medicaid",
+    metaDescription: "Compare 6 postpartum doulas and midwives in Beaumont TX. Costs from $700, Medicaid-covered doula care, and the region's only CNM-led birth center.",
+    // GSC CTR fix 2026-09-29: /birth-support/beaumont-tx ranked 4.4 with 536
+    // impressions and 0 clicks in 30 days for "postpartum care provider in
+    // beaumont tx" / "best midwife in beaumont tx". The default hero lead never
+    // said whether postpartum care EXISTS here. This lead answers all three
+    // intents (exists/who/cost) in the first screen; the anchor link jumps to
+    // the provider section. Facts: 6 local providers (4 doulas with postpartum
+    // care + Taylor Lee, LM, CPM + Bridget Kourtney, CPM, LM), Birth Center
+    // of Beaumont led by Jackie Griggs, CNM, TX Medicaid SB 750 covers doulas.
+    heroIntentAnswer:
+      "Yes — Beaumont has real postpartum care: <strong>4 certified birth &amp; postpartum doulas</strong>, home-birth midwife Taylor Lee (LM, CPM), and the <strong>CNM-led Birth Center of Beaumont</strong>, all listed below. Costs start at $700, and Texas Medicaid covers doula services. <a href='#doulas' class='text-tjb-rose-600 hover:underline'>Meet the Beaumont providers →</a>",
     city: "Beaumont" ,
     state: "TX" ,
     slug: "beaumont-tx" ,
