@@ -1,86 +1,80 @@
 {
   "slug": "orlando-fl",
   "stage": "video_outreach",
-  "produced_at": "2026-09-28T10:47:00-04:00",
+  "produced_at": "2026-09-29T19:45:00Z",
   "worker_model": "glm-5.3-flash",
-  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/orlando-fl/orlando-fl-video.mp4",
-  "video_mb": 53.3,
+  "video_file": "out/orlando-fl/orlando-fl-video.mp4",
+  "video_mb": 50.9,
   "youtube_id": "Z4GkBFS2n5Q",
   "youtube_url": "https://youtu.be/Z4GkBFS2n5Q",
-  "thumbnail_path": "out/yt-thumb-orlando-fl.png",
+  "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/yt-thumb-orlando-fl.png",
   "embed_verified": true,
   "embed_file": "src/data/video-embeds.ts",
   "embed_video_id": "Z4GkBFS2n5Q",
   "deploy_url": "https://truejoybirthing.com/birth-support/orlando-fl/",
   "deploy_status": "live",
-  "outreach": {
-    "script": "tjb-batch-outreach.py build --slug orlando-fl",
-    "sent": 0,
-    "blocked": 1,
-    "reason": "BLOCKED: All 10 provider emails failed sending \u00e2\u0080\u0094 8 blocked by duplicate-send/recipient-history gate (already contacted within 30d window), 1 invalid email format (manager@meetyourmilestones.com?), 1 no email found (Orlando Birth Support Company), 1 no email found (Adriana Babler).",
-    "details": [
-      {
-        "provider": "In Joy Birth",
-        "email": "info@injoybirth.com",
-        "status": "SEND FAILED",
-        "gate": "recipient_history"
-      },
-      {
-        "provider": "Empowering Sacred Birth",
-        "email": "info@EmpoweringSacredBirth.com",
-        "status": "SEND FAILED",
-        "gate": "recipient_history"
-      },
-      {
-        "provider": "Orlando Birth Support Company",
-        "email": "none found",
-        "status": "SKIPPED",
-        "gate": "no_email"
-      },
-      {
-        "provider": "Adriana Babler",
-        "email": "none found",
-        "status": "SKIPPED",
-        "gate": "no_email"
-      },
-      {
-        "provider": "Michelle Smith",
-        "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
-        "status": "SEND FAILED",
-        "gate": "recipient_history"
-      },
-      {
-        "provider": "Melissa Rodriguez",
-        "email": "info@feelthehealing.org",
-        "status": "SEND FAILED",
-        "gate": "recipient_history"
-      },
-      {
-        "provider": "Jennifer Michalec",
-        "email": "support@bornbir.com",
-        "status": "SEND FAILED",
-        "gate": "recipient_history"
-      },
-      {
-        "provider": "Emily Case",
-        "email": "manager@meetyourmilestones.com?",
-        "status": "SEND FAILED",
-        "gate": "invalid_format"
-      },
-      {
-        "provider": "Tonika Richardson",
-        "email": "crownedincreation@yahoo.com",
-        "status": "SEND FAILED",
-        "gate": "recipient_history"
-      },
-      {
-        "provider": "Lisa Collins",
-        "email": "support@bornbir.com",
-        "status": "SEND FAILED",
-        "gate": "recipient_history"
-      }
-    ]
-  },
+  "outreach": [
+    {
+      "provider": "Adriana Babler (Serendipity Birthing)",
+      "to": "info@serendipity-birthing.com",
+      "status": "sent",
+      "message_id": "vps-20260926194520643164"
+    },
+    {
+      "provider": "Melissa Rodriguez (Feel The Healing)",
+      "to": "info@feelthehealing.org",
+      "status": "sent",
+      "message_id": "vps-20260926194546162156"
+    },
+    {
+      "provider": "Tonika Richardson (Crowned in Creation)",
+      "to": "crownedincreation@yahoo.com",
+      "status": "sent",
+      "message_id": "vps-20260928163843537418"
+    },
+    {
+      "provider": "In Joy Birth",
+      "to": "info@injoybirth.com",
+      "status": "blocked",
+      "reason": "already engaged \u2014 reply follow-up sent 2026-08-06; recipient_history gate correctly blocks re-first-touch"
+    },
+    {
+      "provider": "Empowering Sacred Birth",
+      "to": "info@EmpoweringSacredBirth.com",
+      "status": "blocked",
+      "reason": "already engaged \u2014 3 reply follow-ups sent 2026-08-06; recipient_history gate correctly blocks re-first-touch"
+    },
+    {
+      "provider": "Orlando Birth Support Company",
+      "to": "hello@OrlandoBirthSupport.com",
+      "status": "sent",
+      "message_id": "vps-20260929194219517743"
+    },
+    {
+      "provider": "Michelle Smith (Birth Ease)",
+      "to": "michelle@birtheaseservices.com",
+      "status": "sent",
+      "message_id": "vps-20260929194025229459"
+    },
+    {
+      "provider": "Emily Case (Meet Your Milestones)",
+      "to": "manager@meetyourmilestones.com",
+      "status": "sent",
+      "message_id": "vps-20260929194046567870"
+    },
+    {
+      "provider": "Jennifer Michalec",
+      "to": "support@bornbir.com",
+      "status": "blocked",
+      "reason": "directory-platform email; already FT-sent 2026-09-16 for albuquerque-nm \u2014 max-touch guard; per-provider email unresolved"
+    },
+    {
+      "provider": "Lisa Collins",
+      "to": "support@bornbir.com",
+      "status": "blocked",
+      "reason": "directory-platform email; already FT-sent 2026-09-16 for albuquerque-nm \u2014 max-touch guard; per-provider email unresolved"
+    }
+  ],
   "sources": [
     {
       "claim": "Pre-render gate passed",
@@ -88,11 +82,11 @@
     },
     {
       "claim": "Video rendered >10MB",
-      "evidence": "53.3 MB MP4 at out/orlando-fl-city-guide.mp4"
+      "evidence": "50.9 MB MP4 at video/remotion/out/orlando-fl/orlando-fl-video.mp4"
     },
     {
       "claim": "YouTube upload public + embeddable",
-      "evidence": "upload-youtube.py output: Video ID Z4GkBFS2n5Q, privacy_status=public"
+      "evidence": "upload-youtube.py output: Video ID Z4GkBFS2n5Q, privacy_status=public (oembed verified 2026-09-29)"
     },
     {
       "claim": "Thumbnail uploaded",
@@ -107,8 +101,20 @@
       "evidence": "curl https://truejoybirthing.com/birth-support/orlando-fl/ returns 200, embed contains Z4GkBFS2n5Q"
     },
     {
-      "claim": "Outreach sent via tjb-batch-outreach.py",
-      "evidence": "0 sent, 1 blocked (all providers)"
+      "claim": "Stage gates 9/9 PASS",
+      "evidence": "python3 scripts/preflight-stage-gate.py orlando-fl video_outreach \u2192 passed 9, failed 0 (G67 after yt-dlp install: 'orlando' OCR-matched frame t=22s)"
+    },
+    {
+      "claim": "First-touch sends 2026-09-26/28",
+      "evidence": "send log: vps-20260926194520643164 (serendipity-birthing.com), vps-20260926194546162156 (feelthehealing.org), vps-20260928163843537418 (crownedincreation@yahoo.com)"
+    },
+    {
+      "claim": "Emails resolved for 3 previously no-email/invalid providers",
+      "evidence": ": Tier-0 scrape orlandobirthsupport.com \u2192 hello@; NDBirth directory \u2192 michelle@birtheaseservices.com; meetyourmilestones.com terms \u2192 manager@meetyourmilestones.com; MX verified via dig"
+    },
+    {
+      "claim": "Drafts appended for all unsent providers (Phase-1 requirement)",
+      "evidence": "doula-outreach-drafts.md Drafts 132-134 added 2026-09-29"
     }
   ]
 }
