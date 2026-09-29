@@ -570,7 +570,13 @@ const schema = {
           <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">{city} Doula & Midwife Support</p>
           <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
           <h1 class="text-3xl md:text-4xl font-bold mb-4" style="font-family: 'DM Serif Display', Georgia, serif;">{city} Doula & Midwife: Costs, Hospitals & Medicaid</h1>
-          <p class="text-lg text-tjb-charcoal font-semibold mb-2">True Joy Birthing is a birth plan app and doula directory for first-time moms in {city}. Whether you're looking for a <strong>doula or midwife in {city}</strong>, building your birth plan, or figuring out what support even looks like, everything here is free.</p>
+          {/* 2026-09-29 GSC CTR fix: per-city heroIntentAnswer (cities.ts) answers
+              the city's discovery keyword in the first screen; absent = default lead. */}
+          {data.heroIntentAnswer ? (
+            <p class="text-lg text-tjb-charcoal font-semibold mb-2" set:html={data.heroIntentAnswer} />
+          ) : (
+            <p class="text-lg text-tjb-charcoal font-semibold mb-2">True Joy Birthing is a birth plan app and doula directory for first-time moms in {city}. Whether you're looking for a <strong>doula or midwife in {city}</strong>, building your birth plan, or figuring out what support even looks like, everything here is free.</p>
+          )}
           <p class="text-tjb-gray mb-6">Doulas, midwives, hospital policies, and costs, broken down so you can walk in prepared. This guide covers <a href="/doula-cost/" class="text-tjb-rose-600 hover:underline">how much doulas cost</a>, <a href="/medicaid-doula-coverage/" class="text-tjb-rose-600 hover:underline">whether Medicaid covers a doula</a>, and which hospitals welcome birth partners. New here? <a href="/what-is-a-doula/" class="text-tjb-rose-600 hover:underline">Learn what a doula actually does</a>.</p>
           {costLow > 0 && (
             <p class="mb-6"><span class="inline-flex items-center bg-tjb-rose-50 text-tjb-rose-600 text-sm font-semibold px-3 py-1 rounded-full border border-tjb-rose-200">Birth doula support in {city} starts at ${costLow}</span></p>
@@ -772,8 +778,9 @@ const schema = {
 
 
   <!-- ═══ Doulas & Midwives Serving {city} ═══ -->
+  {/* id="doulas" — anchor target for heroIntentAnswer in-page links (cities.ts) */}
   {localDoulas && localDoulas.length > 0 ? (
-    <section class="py-20 bg-tjb-cream">
+    <section id="doulas" class="py-20 bg-tjb-cream">
       <div class="max-w-5xl mx-auto px-6">
         <div class="text-center mb-10">
           <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Local support</p>
