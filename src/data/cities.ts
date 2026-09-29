@@ -707,7 +707,7 @@ export const cities: Record<string, CityData> = {
     // doulas + Taylor Lee, LM, CPM + Bridget Kourtney, CPM, LM), Birth Center
     // of Beaumont led by Jackie Griggs, CNM, TX Medicaid SB 750 covers doulas.
     heroIntentAnswer:
-      "Yes — Beaumont has real postpartum care: <strong>4 certified birth &amp; postpartum doulas</strong>, home-birth midwife Taylor Lee (LM, CPM), and the <strong>CNM-led Birth Center of Beaumont</strong>, all listed below. Costs start at $700, and Texas Medicaid covers doula services. <a href='#doulas' class='text-tjb-rose-600 hover:underline'>Meet the Beaumont providers →</a>",
+      "Yes, Beaumont has real postpartum care: <strong>4 certified birth &amp; postpartum doulas</strong>, home-birth midwife Taylor Lee (LM, CPM), and the <strong>CNM-led Birth Center of Beaumont</strong>, all listed below. Costs start at $700, and Texas Medicaid covers doula services. <a href='#doulas' class='text-tjb-rose-600 hover:underline'>Meet the Beaumont providers →</a>",
     city: "Beaumont" ,
     state: "TX" ,
     slug: "beaumont-tx" ,
