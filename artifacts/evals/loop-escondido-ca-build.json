@@ -1,0 +1,21 @@
+{
+  "slug": "escondido-ca",
+  "stage": "build",
+  "attempts": 0,
+  "history": [
+    {
+      "attempt": 1,
+      "at": "2026-09-28T12:09:35-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 0
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    }
+  ],
+  "last_verdict": "approved",
+  "last_input_fingerprint": "0578318bd714c08f"
+}

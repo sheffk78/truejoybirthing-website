@@ -1,48 +1,111 @@
 {
   "slug": "houston-tx",
   "stage": "enrich",
-  "passed": true,
-  "failures": 0,
+  "mode": "stage_emission",
+  "exit_code": 0,
+  "passed": 25,
+  "failed": 0,
+  "skipped": 0,
   "results": {
-    "G14": {
-      "pass": true,
-      "message": "G14: 9/9 providers have description"
+    "G66": {
+      "status": "PASS",
+      "detail": "no duplicate object keys in any city block"
     },
-    "G15": {
-      "pass": true,
-      "message": "G15: 9/9 providers have photo field"
+    "S1": {
+      "status": "PASS",
+      "detail": "enableBlogResources = true"
     },
-    "G15b": {
-      "pass": true,
-      "message": "G15b: 7/9 real photos (min 1 headshot, R13)"
+    "S2": {
+      "status": "PASS",
+      "detail": "OG image og-city-houston-tx.webp (39050 bytes \u2265 30KB)"
     },
-    "G35": {
-      "pass": true,
-      "message": "G35: 7/7 thumbnails >=15KB"
+    "S4": {
+      "status": "PASS",
+      "detail": "Required fields present"
+    },
+    "S6": {
+      "status": "PASS",
+      "detail": "publishedDate = \"2026-08-07\""
+    },
+    "S7": {
+      "status": "PASS",
+      "detail": "medicaidNote starts correctly"
     },
     "S8": {
-      "pass": true,
-      "message": "S8: no Contact for pricing"
+      "status": "PASS",
+      "detail": "No \"Contact for pricing\""
     },
-    "G9": {
-      "pass": true,
-      "message": "G9: no scraped artifacts"
+    "S3": {
+      "status": "PASS",
+      "detail": "npm run build exited 0"
     },
-    "G57": {
-      "pass": true,
-      "message": "G57: 7/7 provider photos on disk"
+    "S5": {
+      "status": "PASS",
+      "detail": "No standalone 'Free Birth Plan' in rendered HTML"
     },
-    "hospital_desc_length": {
-      "pass": true,
-      "message": "hospital_desc_length: 5/5 hospital descs >=300 chars (R18)"
+    "G8": {
+      "status": "PASS",
+      "detail": "houston-tx-birth-doula-hero-rva.webp is a real photograph (high color count)"
     },
-    "cost_format": {
-      "pass": true,
-      "message": "cost_format: 9/9 cost ranges are dollar amounts"
+    "G70": {
+      "status": "PASS",
+      "detail": "no doubled Level/NICU badge text"
+    },
+    "G71": {
+      "status": "PASS",
+      "detail": "no skeleton placeholder text"
+    },
+    "G72": {
+      "status": "PASS",
+      "detail": "meta description 148 chars, complete"
+    },
+    "G27": {
+      "status": "PASS",
+      "detail": "All 9 providers have specific credentials"
+    },
+    "G10": {
+      "status": "PASS",
+      "detail": "All 9 providers have specific descriptions"
+    },
+    "G39": {
+      "status": "PASS",
+      "detail": "All 9 providers have specific descriptions"
+    },
+    "G19": {
+      "status": "PASS",
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "G20": {
+      "status": "PASS",
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "P11": {
+      "status": "PASS",
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "A12": {
+      "status": "PASS",
+      "detail": "All serviceArea fields are string arrays"
+    },
+    "G24": {
+      "status": "PASS",
+      "detail": "G73 anatomy pass: PASS: No anatomical or artistic defects observed."
+    },
+    "G54": {
+      "status": "PASS",
+      "detail": "G73 anatomy pass: PASS: No anatomical or artistic defects observed."
+    },
+    "G65": {
+      "status": "PASS",
+      "detail": "G65: No black letterbox/pillarbox bars on hero or support scene"
     },
     "G60": {
-      "pass": true,
-      "message": "G60: birthStats complete (R33)"
+      "status": "PASS",
+      "detail": "G60: All 9 provider photos exist on disk and are >2KB"
+    },
+    "G61": {
+      "status": "PASS",
+      "detail": "G61: All image paths contain city slug houston-tx"
     }
   }
 }

@@ -11,7 +11,7 @@ interface Props {
 }
 const {
   heading = 'Get the Free Video Walkthrough',
-  body = 'Enter your name and email and we\'ll send you immediate access to all 5 walkthrough videos — a certified doula guiding you through every section of your birth plan. Already have the PDF? The videos work alongside it. No spam, just the guidance you need.',
+  body = 'Enter your name and email and we\'ll send you immediate access to all 5 walkthrough videos, a certified doula guiding you through every section of your birth plan. Already have the PDF? The videos work alongside it. No spam, just the guidance you need.',
   eyebrow = 'Free Download',
   bannerImage,
   bannerAlt = '',
@@ -81,8 +81,8 @@ const submitLabel = isSentenceBank ? 'Get the free Sentence Bank' : 'Get the fre
         </>
       ) : (
         <>
-          <p class="text-green-700 font-semibold mb-4">✓ Check your inbox — your walkthrough access is on its way!</p>
-          <p class="text-tjb-gray mb-6">Your free video walkthrough is ready below — start watching now.</p>
+          <p class="text-green-700 font-semibold mb-4">✓ Check your inbox. Your walkthrough access is on its way!</p>
+          <p class="text-tjb-gray mb-6">Your free video walkthrough is ready below. Start watching now.</p>
           <PdfSuccessCta source="lead_form" eventId="pdf-success-lead-form" />
         </>
       )}

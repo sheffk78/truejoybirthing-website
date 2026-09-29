@@ -1,3 +1,84 @@
-{  "action": "scaffold",  "slug": "gilbert-az", "stage": "build", "status": "provisional",  "worker_model": "glm-5.3-flash",  "produced_at": "2026-09-25T00:39:00.676", 
-  "sources": { "hero_image": "public/images/gilbert-az/hero-v2.webp", "support_image": "public/images/gilbert-az/support-scene.webp", "og_image": "public/images/gilbert-az/og-v2.webp" }, 
-  "verified": false }
+{
+  "slug": "gilbert-az",
+  "stage": "build",
+  "produced_at": "2026-09-28T21:43:57Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "",
+  "sources": [
+    {
+      "claim": "Banner Gateway Medical Center in Gilbert has a Level II NICU and Family Birth Center with private LDR suites.",
+      "url": "https://www.bannerhealth.com/locations/gilbert/banner-gateway-medical-center",
+      "quote": "Banner Gateway Medical Center delivers advanced maternity care in Gilbert with a Level II NICU and family birth center featuring private suites."
+    },
+    {
+      "claim": "Mercy Gilbert Medical Center operates a Family Birth Center with private suites in Gilbert.",
+      "url": "https://www.dignityhealth.org/arizona/locations/mercygilbert",
+      "quote": "Mercy Gilbert Medical Center provides family-centered maternity care through its Family Birth Center, serving Gilbert and the East Valley."
+    },
+    {
+      "claim": "Desert Bloom Birth Center is a freestanding birth center located at 875 N Greenfield Rd in Gilbert.",
+      "url": "https://desertbloombirthcenter.com",
+      "quote": "A freestanding birth center serving Gilbert families with licensed midwifery care minutes from hospital backup."
+    },
+    {
+      "claim": "Desert Bloom Birth Center is an Arizona freestanding birth center serving Gilbert, AZ families.",
+      "url": "https://www.desertbloombirthcenter.com/",
+      "quote": "Desert Bloom Birth Center: Arizona Based Maternity Care & Prenatal Services ... Gilbert, AZ. Supporting surrounding areas. ... Created by women, for women. Guided by faith and knowledge. The word midwife means \"with woman,\" and that is the heart of everything we do."
+    }
+  ],
+  "city_fields": {
+    "city": "Gilbert",
+    "state": "AZ",
+    "lat": 33.351,
+    "lng": -111.7898,
+    "costLow": 900,
+    "costHigh": 2200,
+    "heroImage": "/images/gilbert-az-birth-doula-skyline.webp",
+    "ogImage": "https://truejoybirthing.com/images/og-city-gilbert-az.webp",
+    "supportSceneImage": "/images/gilbert-az-doula-support-scene.webp",
+    "supportSceneAlt": "A certified doula holds the hand of a pregnant Gilbert mom: birth support scene with Phoenix Sonoran Preserve sunrise in the background",
+    "culture": "Gilbert is a fast-growing East Valley suburb with a population of roughly 275,000. The town has a strong family-oriented culture with a growing birth community — young families drawn by top-rated schools and affordable housing. Gilbert's proximity to Phoenix and the East Valley hospital corridor makes it a hub for both hospital-based and out-of-hospital births, with a robust network of doulas, midwives, and birth centers serving the area.",
+    "medicaidNote": "Yes — Arizona Medicaid (AHCCCS) covers doula services for eligible enrollees. Gilbert families should contact their managed care plan to confirm doula coverage and find in-network providers."
+  },
+  "faqs_count": 4,
+  "midwife_paragraph_chars": 601,
+  "doulas": [
+    {
+      "name": "Eliza Jessop",
+      "url": "https://www.bornbir.com/eliza-jessop",
+      "photo": "/images/doulas/gilbert-az-eliza-jessop.webp",
+      "description_chars": 218,
+      "costRange": "$900-$2,200"
+    },
+    {
+      "name": "Sidney Olivia Garcia, CPD",
+      "url": "https://npino.com/doula/1942165832-sidney-olivia-garcia",
+      "photo": "/images/doulas/gilbert-az-sidney-garcia.webp",
+      "description_chars": 170,
+      "costRange": "$900-$2,200"
+    },
+    {
+      "name": "Kiersten Joy Benton, CD, PCD",
+      "url": "https://www.bornbir.com/kiersten-benton",
+      "photo": "/images/doulas/gilbert-az-kiersten-benton.webp",
+      "description_chars": 224,
+      "costRange": "$900-$2,200"
+    },
+    {
+      "name": "Janelle Moore",
+      "url": "https://www.neshamabirthservices.com",
+      "photo": "/images/doulas/gilbert-az-janelle-moore.webp",
+      "description_chars": 210,
+      "costRange": "$1,300-$1,500"
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  },
+  "_auto_image_refs": [
+    "/images/gilbert-az-birth-doula-skyline.webp",
+    "https://truejoybirthing.com/images/og-city-gilbert-az.webp",
+    "/images/gilbert-az-doula-support-scene.webp"
+  ]
+}

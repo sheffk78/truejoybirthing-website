@@ -47,6 +47,8 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
 </Layout>
 
 <script>
+  import { trackFormStart, trackFormSubmit, trackLeadCaptured } from '../scripts/analytics-funnel';
+
   const form = document.getElementById('contact-form') as HTMLFormElement;
   const status = document.getElementById('form-status') as HTMLDivElement;
   const btn = document.getElementById('submit-btn') as HTMLButtonElement;
@@ -68,6 +70,7 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
     btn.textContent = 'Sending...';
     status.className = 'hidden text-sm mt-2';
     status.textContent = '';
+    trackFormStart('contact-form');
 
     try {
       const res = await fetch('/api/contact', {
@@ -82,6 +85,9 @@ const breadcrumbList = [{"name": "Home", "url": "https://truejoybirthing.com/"},
         status.textContent = 'Message sent! We\'ll get back to you soon.';
         status.className = 'text-sm mt-2 text-green-700';
         form.reset();
+        // Conversion wiring — GA4 (dataLayer) + PostHog via analytics-funnel helpers
+        trackFormSubmit('contact-form', 'contact_page');
+        trackLeadCaptured('contact-form', 'contact_page');
       } else {
         status.textContent = data.error || 'Something went wrong. Please try again or email us directly.';
         status.className = 'text-sm mt-2 text-red-600';

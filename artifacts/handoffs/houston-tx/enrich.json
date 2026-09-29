@@ -1,0 +1,147 @@
+{
+  "slug": "houston-tx",
+  "stage": "enrich",
+  "produced_at": "2026-09-29T19:51:16Z",
+  "worker_model": "glm-5.3-flash \u2014 TJB pipeline delegated subagent",
+  "notes": "ENRICH stage for houston-tx: fixed 2 empty provider photos (Debbie Hull \u2014 confirmed headshot from CAPPA Convening speaker page alt='Debbie Hull'; Jami Hain \u2014 Nativiti Family Birth Center brand logo, solo headshot not published anywhere per 8-source search; per skill Tier 2 agency rule) and repaired 1 cross-city photo ref (Circle Birth san-antonio-tx asset replaced with Circle Birth's own brand logo). All 9 provider photos on disk as local WebP/JPG <=400px, >5KB, >100 colors (G8-safe). Hospital thumbnails already present (7 unique). Outreach drafts are produced at build-complete by tjb-batch-outreach.py (DAG: outreach happens at build-complete; enrich has no outreach deliverable).",
+  "sources": [
+    {
+      "claim": "CAPPA Convening speaker page lists Debbie Hull BS, CLD, CCCE as CAPPA Senior Program Advisor with her headshot photo",
+      "url": "https://www.cappa.net/convening-26",
+      "quote": "Debbie Hull BS, CLD, CCCE \u00b7 CAPPA Senior Program Advisor Fierce Advocacy: Simple Techniques"
+    },
+    {
+      "claim": "Debbie Hull's own doula website confirms Houston location, classes, and doula services",
+      "url": "https://www.debbiehulldoula.com/",
+      "quote": "Debbie Hull \u2014 Houston doula, childbirth educator and CAPPA faculty offering in-person and live-online classes"
+    },
+    {
+      "claim": "Nativiti Family Birth Center about page: owner Jami Hain started 2003, became CNM in 2012, took over the birth center in 2014",
+      "url": "https://nativiti.com/about-us/",
+      "quote": "Our owner Jami Hain started at Nativiti in 2003 as a birth assistant and advanced from an RN to a Certified Nurse-Midwife (CNM) in 2012."
+    },
+    {
+      "claim": "Circle Birth's website publishes an all-inclusive self-pay investment of $1,970 for birth doula care",
+      "url": "https://www.circlebirth.com/",
+      "quote": "Birth Doula HSA/FSA eligible \u2022 Insurance reimbursement and employer-sponsored benefit programs may be available \u2022 Self-pay All-inclusive investment - 1970 Care provided by nationally certified birth doulas"
+    }
+  ],
+  "providers": [
+    {
+      "name": "Patti Heimlich",
+      "photo": "/images/provider-houston-tx-patti-heimlich.webp",
+      "description_chars": 486,
+      "costRange": "$2,000-$2,500",
+      "costRange_source": "market-estimate from Houston-area provider websites"
+    },
+    {
+      "name": "Dia The Doula",
+      "photo": "/images/provider-houston-tx-dia-the-doula-v2.webp",
+      "description_chars": 330,
+      "costRange": "$1,600-$2,400",
+      "costRange_source": "market-estimate from Houston-area provider websites"
+    },
+    {
+      "name": "Taylor White",
+      "photo": "/images/provider-houston-tx-taylor-white-v2.webp",
+      "description_chars": 358,
+      "costRange": "$1,600-$2,600",
+      "costRange_source": "market-estimate from Houston-area provider websites"
+    },
+    {
+      "name": "Jennifer Anderson",
+      "photo": "/images/provider-houston-tx-jennifer-anderson-v3.jpg",
+      "description_chars": 353,
+      "costRange": "$1,400-$2,800",
+      "costRange_source": "market-estimate from Houston-area provider websites"
+    },
+    {
+      "name": "Samentha Alarcon",
+      "photo": "/images/provider-houston-tx-samentha-alarcon.webp",
+      "description_chars": 338,
+      "costRange": "$600-$1,950",
+      "costRange_source": "market-estimate from Houston-area provider websites"
+    },
+    {
+      "name": "Debbie Hull",
+      "photo": "/images/provider-houston-tx-debbie-hull.webp",
+      "description_chars": 404,
+      "costRange": "$1,200-$2,200",
+      "costRange_source": "market-estimate from Houston-area provider websites"
+    },
+    {
+      "name": "Priscilla Kirk",
+      "photo": "/images/provider-houston-tx-priscilla-kirk.webp",
+      "description_chars": 394,
+      "costRange": "$2,000-$3,500",
+      "costRange_source": "market-estimate from Houston-area provider websites"
+    },
+    {
+      "name": "Jami Hain",
+      "photo": "/images/provider-houston-tx-jami-hain.webp",
+      "description_chars": 421,
+      "costRange": "$3,500-$5,000",
+      "costRange_source": "market-estimate from Houston-area provider websites"
+    },
+    {
+      "name": "Circle Birth",
+      "photo": "/images/provider-houston-tx-circle-birth.webp",
+      "description_chars": 362,
+      "costRange": "$1,970-$1,970",
+      "costRange_source": "published flat fee on circlebirth.com"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "The Woman's Hospital of Texas",
+      "paragraph_chars": 860,
+      "thumbnail": "/images/houston-tx-hospital-womans-hospital.webp",
+      "nicuLevel": "IV",
+      "url": "https://www.womanshospital.com/specialties/womens-care/labor-and-delivery"
+    },
+    {
+      "name": "Texas Children's Pavilion for Women",
+      "paragraph_chars": 893,
+      "thumbnail": "/images/houston-tx-hospital-texas-childrens-pavilion.webp",
+      "nicuLevel": "IV",
+      "url": "https://www.texaschildrens.org/pavilion-for-women"
+    },
+    {
+      "name": "Memorial Hermann Memorial City Medical Center",
+      "paragraph_chars": 914,
+      "thumbnail": "/images/houston-tx-hospital-memorial-hermann.webp",
+      "nicuLevel": "III",
+      "url": "https://memorialhermann.org/services/specialties/womens/memorial-city/labor-delivery"
+    },
+    {
+      "name": "Houston Methodist Hospital (Texas Medical Center)",
+      "paragraph_chars": 853,
+      "thumbnail": "/images/houston-tx-hospital-houston-methodist-tmc.webp",
+      "nicuLevel": "III",
+      "url": "https://www.houstonmethodist.org/locations/childbirth-center/texas-medical-center/"
+    },
+    {
+      "name": "HCA Houston Healthcare Clear Lake",
+      "paragraph_chars": 844,
+      "thumbnail": "/images/houston-tx-hospital-hca-clear-lake.webp",
+      "nicuLevel": "III",
+      "url": "https://www.hcahoustonhealthcare.com/locations/clear-lake/specialties/womens-care/labor-and-delivery"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Heart of Houston Birth & Wellness Center",
+      "paragraph_chars": 638,
+      "thumbnail": "/images/houston-tx-birth-center-heart-of-houston.webp"
+    },
+    {
+      "name": "Nativiti Family Birth Center",
+      "paragraph_chars": 628,
+      "thumbnail": "/images/houston-tx-birth-center-nativity.webp"
+    }
+  ],
+  "birthstats": {
+    "dataYear": 2023,
+    "dataSource": "CDC NCHS, National Vital Statistics System"
+  }
+}

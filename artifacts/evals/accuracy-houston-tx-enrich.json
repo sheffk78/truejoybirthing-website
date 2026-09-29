@@ -1,0 +1,46 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "houston-tx",
+  "stage": "enrich",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 4,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible speaker-listing text from the CAPPA Convening page (cappa.net) and directly shows Debbie Hull BS, CLD, CCCE listed with the title CAPPA Senior Program Advisor alongside a session title, consistent with a speaker page that would include her headshot.",
+      "claim": "CAPPA Convening speaker page lists Debbie Hull BS, CLD, CCCE as CAPPA Senior Program Advisor with her headshot photo",
+      "url": "https://www.cappa.net/convening-26",
+      "quote": "Debbie Hull BS, CLD, CCCE \u00b7 CAPPA Senior Program Advisor Fierce Advocacy: Simple Techniques"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on Debbie Hull's own doula website (debbiehulldoula.com) and directly confirms her Houston location, doula services, and class offerings.",
+      "claim": "Debbie Hull's own doula website confirms Houston location, classes, and doula services",
+      "url": "https://www.debbiehulldoula.com/",
+      "quote": "Debbie Hull \u2014 Houston doula, childbirth educator and CAPPA faculty offering in-person and live-online classes"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible text for the Nativiti about-us page and directly corroborates the claim's key facts (Jami Hain as owner, starting in 2003, becoming a CNM in 2012), though it does not itself mention the 2014 takeover.",
+      "claim": "Nativiti Family Birth Center about page: owner Jami Hain started 2003, became CNM in 2012, took over the birth center in 2014",
+      "url": "https://nativiti.com/about-us/",
+      "quote": "Our owner Jami Hain started at Nativiti in 2003 as a birth assistant and advanced from an RN to a Certified Nurse-Midwife (CNM) in 2012."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from circlebirth.com explicitly states 'Self-pay All-inclusive investment - 1970' for birth doula care, directly matching the claim about Circle Birth's $1,970 self-pay birth doula investment.",
+      "claim": "Circle Birth's website publishes an all-inclusive self-pay investment of $1,970 for birth doula care",
+      "url": "https://www.circlebirth.com/",
+      "quote": "Birth Doula HSA/FSA eligible \u2022 Insurance reimbursement and employer-sponsored benefit programs may be available \u2022 Self-pay All-inclusive investment - 1970 Care provided by nationally certified birth d"
+    }
+  ],
+  "checked_at": "2026-09-29T13:55:02-06:00"
+}

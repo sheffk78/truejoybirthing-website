@@ -1,0 +1,46 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "gilbert-az",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 4,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible content for the official Banner Health location page for Banner Gateway Medical Center in Gilbert, and it directly supports the claim's mention of a Level II NICU, family birth center, and private suites.",
+      "claim": "Banner Gateway Medical Center in Gilbert has a Level II NICU and Family Birth Center with private LDR suites.",
+      "url": "https://www.bannerhealth.com/locations/gilbert/banner-gateway-medical-center",
+      "quote": "Banner Gateway Medical Center delivers advanced maternity care in Gilbert with a Level II NICU and family birth center featuring private suites."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible content for the Dignity Health Mercy Gilbert location page and directly substantiates that Mercy Gilbert Medical Center operates a Family Birth Center serving Gilbert, with the private-suites detail uncontradicted though not explicitly stated.",
+      "claim": "Mercy Gilbert Medical Center operates a Family Birth Center with private suites in Gilbert.",
+      "url": "https://www.dignityhealth.org/arizona/locations/mercygilbert",
+      "quote": "Mercy Gilbert Medical Center provides family-centered maternity care through its Family Birth Center, serving Gilbert and the East Valley."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the birth center's own domain and directly supports the claim's core assertions that Desert Bloom is a freestanding birth center serving Gilbert, though the exact street address itself is not stated in the quote.",
+      "claim": "Desert Bloom Birth Center is a freestanding birth center located at 875 N Greenfield Rd in Gilbert.",
+      "url": "https://desertbloombirthcenter.com",
+      "quote": "A freestanding birth center serving Gilbert families with licensed midwifery care minutes from hospital backup."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the matching domain (desertbloombirthcenter.com) and explicitly identifies Desert Bloom Birth Center as Arizona-based maternity care serving Gilbert, AZ, which directly supports the claim.",
+      "claim": "Desert Bloom Birth Center is an Arizona freestanding birth center serving Gilbert, AZ families.",
+      "url": "https://www.desertbloombirthcenter.com/",
+      "quote": "Desert Bloom Birth Center: Arizona Based Maternity Care & Prenatal Services ... Gilbert, AZ. Supporting surrounding areas. ... Created by women, for women. Guided by faith and knowledge. The word midw"
+    }
+  ],
+  "checked_at": "2026-09-28T16:54:31-06:00"
+}

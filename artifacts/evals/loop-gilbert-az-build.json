@@ -1,0 +1,81 @@
+{
+  "slug": "gilbert-az",
+  "stage": "build",
+  "attempts": 0,
+  "history": [
+    {
+      "attempt": 1,
+      "at": "2026-09-28T16:14:27-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 2
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-09-28T16:22:09-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 2
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-09-28T16:30:10-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 2
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-09-28T16:37:04-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 0
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-09-28T16:43:25-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 0
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-09-28T16:49:34-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 0
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    }
+  ],
+  "last_verdict": "approved",
+  "last_input_fingerprint": "c75b356740ce8ee4"
+}

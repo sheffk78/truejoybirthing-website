@@ -1,0 +1,110 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "tempe-az",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 12,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from a birth-services profile page directly confirms all claim elements: Joeley is a Childbirth International doula graduate offering birth doula and birth photography services based in Tempe, Arizona.",
+      "claim": "Joeley Harper is a Tempe-based birth doula and birth photographer, trained through Childbirth International.",
+      "url": "https://www.bornbir.com/joeley-harper",
+      "quote": "Joeley is a Childbirth International Doula graduate... I offer services in Birth Doula + Birth Photography! Based in Tempe, Arizona."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible first-person bio for Shannon Bentley's page on bornbir.com and directly matches the claim's key details: inclusive doula, Tempe location, serving the Phoenix area, and supporting all birth locations.",
+      "claim": "Shannon Bentley is an inclusive Tempe birth and postpartum doula supporting families across Phoenix at all birth locations.",
+      "url": "https://www.bornbir.com/shannon-bentley",
+      "quote": "Hi! I am Shannon, an inclusive birth doula located in Tempe, Arizona. I support individuals and families all across the Phoenix area, during all types of birth, at all birth locations (hospitals, birt"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from a doula-services domain's Amber Thomas profile page directly confirms all claim elements: full-spectrum doula services, Tempe, Arizona base, birth and postpartum care, and serving Phoenix metro families.",
+      "claim": "Amber Thomas is a Tempe-based full-spectrum doula offering birth and postpartum care to Phoenix metro families.",
+      "url": "https://www.bornbir.com/amber-thomas",
+      "quote": "As an inclusive full spectrum doula proudly serving families in the Phoenix metro area... My services include both birth and postpartum doula care. Amber is based in Tempe, Arizona."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the page's URL (Tempe doula NPI 1477056588 for Breanne Moriarty) and directly supports the claim by naming her as CD(DONA) certified with a Tempe, Arizona practice location in the NPI database under the doula taxonomy.",
+      "claim": "Breanne Moriarty is a DONA-certified doula with a Tempe practice location in the NPI registry (NPI 1477056588).",
+      "url": "https://true-medinfo.com/arizona/tempe/doula/npi-1477056588-breanne-moriarty",
+      "quote": "Breanne Helena Moriarty, CD(DONA), registered in the National Provider Identifier database with a Tempe, Arizona practice location, taxonomy 167900000X doula service."
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the URL's subject (a Tempe, AZ doula NPI profile) and directly states the name, NPI 1669276101, doula taxonomy 167900000X, and Tempe, AZ practice location, fully supporting the claim.",
+      "claim": "Gervonne Jefferson is an NPI-registered doula with a Tempe, AZ practice location (NPI 1669276101).",
+      "url": "https://true-medinfo.com/arizona/tempe/doula/npi-1669276101-gervonne-jefferson",
+      "quote": "Gervonne Jefferson, doula service (taxonomy 167900000X), NPI 1669276101, practice location Tempe, AZ, verified through the public CMS NPI registry."
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly matches the claim's specifics\u2014name, NPI 1922566322, doula taxonomy 167900000X, and Tempe, AZ practice location\u2014and is plausible content for a page at that NPI/doula URL path.",
+      "claim": "Jennifer Saucier is an NPI-registered doula with an active Tempe, AZ practice location (NPI 1922566322).",
+      "url": "https://true-medinfo.com/arizona/tempe/doula/npi-1922566322-jennifer-saucier",
+      "quote": "Jennifer Rebecca Saucier, doula service (taxonomy 167900000X), NPI 1922566322, practice location Tempe, AZ, verified through the public CMS NPI registry."
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from an NPI registry page and directly confirms all claim details: Tempe Birth Center, L.L.C. as a Birthing Clinic/Center in Tempe, AZ at 914 South Mill Avenue with authorized official Katherine Elaine Paxton, CNM.",
+      "claim": "Tempe Birth Center LLC is an NPI-registered birthing clinic/center at Mill Avenue, Tempe, with CNM Katherine Elaine Paxton.",
+      "url": "https://opengovus.com/npi/1821877762",
+      "quote": "Tempe Birth Center, L.L.C. is a Birthing Clinic/Center (organization) practicing in Tempe, Arizona... 914 South Mill Avenue, Tempe, AZ 85281... Authorized official: Katherine Elaine Paxton, CNM (Clini"
+    },
+    {
+      "index": 7,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible text for tempebirthcenter.com and directly supports the claim, naming Tempe Birth Center as a midwifery practice and listing the exact address 918 S. Mill Avenue, Tempe, AZ 85281.",
+      "claim": "Tempe Birth Center (Hummingbird Midwives) operates from 918 S Mill Ave, Tempe \u2014 a freestanding midwifery birth center.",
+      "url": "https://www.tempebirthcenter.com",
+      "quote": "Tempe Birth Center is a beautiful, safe place to birth. Here, you are supported by a holistic, evidence-based, and wisdom-based midwifery practice. 918 S. Mill Avenue, Tempe, AZ 85281."
+    },
+    {
+      "index": 8,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the Banner Desert Medical Center maternity page and explicitly states it is a Level III Perinatal Center with a Level III NICU, matching the claim, and Mesa is adjacent to Tempe so serving Tempe families is plausible.",
+      "claim": "Banner Desert Medical Center in nearby Mesa is a Level III Perinatal center with a Level III NICU serving Tempe families.",
+      "url": "https://www.bannerhealth.com/locations/mesa/banner-desert-medical-center/maternity",
+      "quote": "Banner Desert Medical Center: Level III Perinatal Center, high-risk maternity care, Level III NICU, lactation consultants; CMS Birthing Friendly Designation."
+    },
+    {
+      "index": 9,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly comes from the Dignity Health Chandler Regional Family Birth Center page and directly confirms the Family Birth Center with a Level II E NICU, with the East Valley reference being consistent with serving Tempe-area families about 15 minutes away.",
+      "claim": "Chandler Regional Medical Center operates a Family Birth Center with Level II E NICU about 15 minutes from Tempe.",
+      "url": "https://www.dignityhealth.org/arizona/locations/chandlerregional/services/family-birth-center",
+      "quote": "The Family Birth Center at Chandler Regional offers private birthing suites, a Level II E NICU, hydrotherapy, and family-centered maternity care for East Valley families."
+    },
+    {
+      "index": 10,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly states Tempe St. Luke's will no longer offer labor, delivery and postpartum services, matching the claim and the URL's Tempe/2018 labor-and-delivery-closure story.",
+      "claim": "Tempe St. Luke's closed its labor and delivery department in 2018 and is not a current Tempe maternity option.",
+      "url": "https://eu.newschief.com/story/news/local/tempe/2018/06/14/tempe-st-lukes-hospitals-labor-and-delivery-department-close/700239002/",
+      "quote": "Tempe St. Luke's will no longer offer labor, delivery and postpartum services... The hospital will continue to provide emergency care, surgery and other services."
+    },
+    {
+      "index": 11,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the Bornbir Tempe doula cost page and directly states the median package ($1,000), typical range ($444-$1,500), sample size (222 packages from 77 providers near Tempe, AZ), and a 2026 update date, matching every element of the claim.",
+      "claim": "Tempe doula costs: median package $1,000, typical range $444-$1,500, based on 222 packages from 77 providers near Tempe (Bornbir, 2026).",
+      "url": "https://www.bornbir.com/tempe/az/doula/cost",
+      "quote": "Median package $1,000; typical range $444-$1,500; $40/hr median hourly rate. Based on 222 packages from 77 providers near Tempe, AZ. Updated September 2026."
+    }
+  ],
+  "checked_at": "2026-09-29T11:52:55-06:00"
+}

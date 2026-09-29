@@ -1,0 +1,65 @@
+{
+  "slug": "gilbert-az",
+  "stage": "enrich",
+  "produced_at": null,
+  "worker_model": null,
+  "notes": "",
+  "sources": [],
+  "providers": [
+    {
+      "name": "Eliza Jessop",
+      "photo": "/images/doulas/gilbert-az-eliza-jessop.webp",
+      "description_chars": 218,
+      "costRange": "$900-$2,200",
+      "costRange_source": ""
+    },
+    {
+      "name": "Sidney Olivia Garcia, CPD",
+      "photo": "/images/doulas/gilbert-az-sidney-garcia.webp",
+      "description_chars": 170,
+      "costRange": "$900-$2,200",
+      "costRange_source": ""
+    },
+    {
+      "name": "Kiersten Joy Benton, CD, PCD",
+      "photo": "/images/doulas/gilbert-az-kiersten-benton.webp",
+      "description_chars": 224,
+      "costRange": "$900-$2,200",
+      "costRange_source": ""
+    },
+    {
+      "name": "Janelle Moore",
+      "photo": "/images/doulas/gilbert-az-janelle-moore.webp",
+      "description_chars": 210,
+      "costRange": "$1,300-$1,500",
+      "costRange_source": ""
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Banner Gateway Medical Center",
+      "paragraph_chars": 895,
+      "thumbnail": "/images/hospitals/gilbert-az-banner-gateway.webp",
+      "nicuLevel": "II",
+      "url": "https://www.bannerhealth.com/locations/gilbert/banner-gateway-medical-center/maternity"
+    },
+    {
+      "name": "Mercy Gilbert Medical Center",
+      "paragraph_chars": 778,
+      "thumbnail": "/images/hospitals/gilbert-az-mercy-gilbert.webp",
+      "nicuLevel": "II",
+      "url": "https://www.dignityhealth.org/arizona/locations/mercygilbert/services/family-birth-center"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Desert Bloom Birth Center",
+      "paragraph_chars": 836,
+      "thumbnail": "/images/birth-centers/gilbert-az-desert-bloom.webp"
+    }
+  ],
+  "birthstats": {
+    "dataYear": null,
+    "dataSource": null
+  }
+}

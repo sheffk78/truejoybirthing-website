@@ -1,0 +1,11 @@
+{
+  "eval": "eval-voice",
+  "slug": "tempe-az",
+  "model": "atlas:latest",
+  "fields_checked": 12,
+  "model_calls_ok": 2,
+  "model_calls_err": 0,
+  "verdict": "approved",
+  "findings": [],
+  "checked_at": "2026-09-29T11:52:28-06:00"
+}

@@ -431,6 +431,31 @@ def cmd_next(slug: str):
     recurring = load_recurring_mistakes(stage)
     goal = ctx["goal_template"].format(slug=slug)
 
+    # 2026-09-29 machine fix (dead-letter root cause): skeleton cities entering
+    # build carry ZERO provider research. The generic BUILD goal reads as
+    # "data exists" — workers then hit G36/G37 + evidence contracts with nothing
+    # real to show and dead-letter. Skeleton builds get an explicit
+    # research-first contract: find real providers before writing any data,
+    # and FAIL cleanly (with findings on disk) when the city can't support a page.
+    skeleton_build = (stage == "build" and state.get("city_type") == "skeleton")
+    if skeleton_build:
+        goal = (
+            "BUILD stage for {slug}: UNRESEARCHED SKELETON CITY — research comes FIRST.\n"
+            "PHASE A — RESEARCH (before writing any data): find REAL providers, hospitals and birth "
+            "centers for this city using the free discovery path only: DuckDuckGo/website fetches "
+            "(python3 ~/.hermes/scripts/tjb-thin-city-research.py is the reference pattern), the provider "
+            "cache ~/.hermes/state/tjb-provider-cache.json, and direct checks of provider websites. "
+            "Every provider must have a real name + source URL; discard anything you cannot evidence. "
+            "Target the city's population-tier minimum provider count (the validator enforces it). "
+            "If you cannot evidence at least the minimum real providers within ~25 tool calls, STOP: "
+            "do NOT invent providers and do NOT write a cities.ts entry from generic content. Save verified "
+            "findings to artifacts/build-checkpoints/{slug}/research-findings.json and report "
+            "FAIL('insufficient real providers: N found < minimum M'). A clean fail with evidence is a "
+            "correct outcome — the city needs humans, not fabricated data.\n"
+            "PHASE B — BUILD DATA: only from Phase A findings, write the cities.ts entry via Python "
+            "heredoc, generate hero/OG/support images, then validate + build."
+        ).format(slug=slug)
+
     subagent_context = f"""You are a TJB pipeline stage worker — a subagent delegated by the parent state machine.
 Your scope is ONE stage for ONE city. Do not attempt other stages or cities.
 

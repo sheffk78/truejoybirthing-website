@@ -15,7 +15,19 @@ declare global {
 export function track(name: string, params: FunnelParams = {}): void {
   if (typeof window === 'undefined') return;
   window.dataLayer = window.dataLayer || [];
+  // GTM-format push (kept for a future GTM container + any tag-manager reads).
+  // NOTE (2026-09-29 audit): bare gtag.js (no GTM) IGNORES {event:...} object
+  // pushes — every analytics-funnel event was invisible to GA4. The direct
+  // gtag('event') call below is what actually reaches the G-2RVZVN0F9T tag.
   window.dataLayer.push({ event: name, ...params });
+  const gtagFn = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+  if (typeof gtagFn === 'function') {
+    try {
+      gtagFn('event', name, params);
+    } catch {
+      /* gtag rejected the call — dataLayer push still recorded */
+    }
+  }
   try {
     window.posthog?.capture?.(name, params);
   } catch {

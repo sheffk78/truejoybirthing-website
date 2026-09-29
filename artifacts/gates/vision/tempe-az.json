@@ -1,0 +1,28 @@
+{
+  "slug": "tempe-az",
+  "verdicts": [
+    {
+      "crop": "tempe-az-hero-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "tempe-az-support-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "tempe-az-og-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "tempe-az-thumb-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    }
+  ],
+  "checked_at": "2026-09-29T19:49:48.772080+00:00",
+  "model": "atlas",
+  "method": "2x figure crops, defect-specific questions per visual-verify-gate.py contract"
+}

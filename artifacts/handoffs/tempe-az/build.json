@@ -1,0 +1,138 @@
+{
+  "slug": "tempe-az",
+  "stage": "build",
+  "produced_at": "2026-09-29T17:50:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "",
+  "sources": [
+    {
+      "claim": "Joeley Harper is a Tempe-based birth doula and birth photographer, trained through Childbirth International.",
+      "url": "https://www.bornbir.com/joeley-harper",
+      "quote": "Joeley is a Childbirth International Doula graduate... I offer services in Birth Doula + Birth Photography! Based in Tempe, Arizona."
+    },
+    {
+      "claim": "Shannon Bentley is an inclusive Tempe birth and postpartum doula supporting families across Phoenix at all birth locations.",
+      "url": "https://www.bornbir.com/shannon-bentley",
+      "quote": "Hi! I am Shannon, an inclusive birth doula located in Tempe, Arizona. I support individuals and families all across the Phoenix area, during all types of birth, at all birth locations (hospitals, birth centers, and midwife-supported home births.)"
+    },
+    {
+      "claim": "Amber Thomas is a Tempe-based full-spectrum doula offering birth and postpartum care to Phoenix metro families.",
+      "url": "https://www.bornbir.com/amber-thomas",
+      "quote": "As an inclusive full spectrum doula proudly serving families in the Phoenix metro area... My services include both birth and postpartum doula care. Amber is based in Tempe, Arizona."
+    },
+    {
+      "claim": "Breanne Moriarty is a DONA-certified doula with a Tempe practice location in the NPI registry (NPI 1477056588).",
+      "url": "https://true-medinfo.com/arizona/tempe/doula/npi-1477056588-breanne-moriarty",
+      "quote": "Breanne Helena Moriarty, CD(DONA), registered in the National Provider Identifier database with a Tempe, Arizona practice location, taxonomy 167900000X doula service."
+    },
+    {
+      "claim": "Gervonne Jefferson is an NPI-registered doula with a Tempe, AZ practice location (NPI 1669276101).",
+      "url": "https://true-medinfo.com/arizona/tempe/doula/npi-1669276101-gervonne-jefferson",
+      "quote": "Gervonne Jefferson, doula service (taxonomy 167900000X), NPI 1669276101, practice location Tempe, AZ, verified through the public CMS NPI registry."
+    },
+    {
+      "claim": "Jennifer Saucier is an NPI-registered doula with an active Tempe, AZ practice location (NPI 1922566322).",
+      "url": "https://true-medinfo.com/arizona/tempe/doula/npi-1922566322-jennifer-saucier",
+      "quote": "Jennifer Rebecca Saucier, doula service (taxonomy 167900000X), NPI 1922566322, practice location Tempe, AZ, verified through the public CMS NPI registry."
+    },
+    {
+      "claim": "Tempe Birth Center LLC is an NPI-registered birthing clinic/center at Mill Avenue, Tempe, with CNM Katherine Elaine Paxton.",
+      "url": "https://opengovus.com/npi/1821877762",
+      "quote": "Tempe Birth Center, L.L.C. is a Birthing Clinic/Center (organization) practicing in Tempe, Arizona... 914 South Mill Avenue, Tempe, AZ 85281... Authorized official: Katherine Elaine Paxton, CNM (Clinical Midwifery Director)."
+    },
+    {
+      "claim": "Tempe Birth Center (Hummingbird Midwives) operates from 918 S Mill Ave, Tempe \u2014 a freestanding midwifery birth center.",
+      "url": "https://www.tempebirthcenter.com",
+      "quote": "Tempe Birth Center is a beautiful, safe place to birth. Here, you are supported by a holistic, evidence-based, and wisdom-based midwifery practice. 918 S. Mill Avenue, Tempe, AZ 85281."
+    },
+    {
+      "claim": "Banner Desert Medical Center in nearby Mesa is a Level III Perinatal center with a Level III NICU serving Tempe families.",
+      "url": "https://www.bannerhealth.com/locations/mesa/banner-desert-medical-center/maternity",
+      "quote": "Banner Desert Medical Center: Level III Perinatal Center, high-risk maternity care, Level III NICU, lactation consultants; CMS Birthing Friendly Designation."
+    },
+    {
+      "claim": "Chandler Regional Medical Center operates a Family Birth Center with Level II E NICU about 15 minutes from Tempe.",
+      "url": "https://www.dignityhealth.org/arizona/locations/chandlerregional/services/family-birth-center",
+      "quote": "The Family Birth Center at Chandler Regional offers private birthing suites, a Level II E NICU, hydrotherapy, and family-centered maternity care for East Valley families."
+    },
+    {
+      "claim": "Tempe St. Luke's closed its labor and delivery department in 2018 and is not a current Tempe maternity option.",
+      "url": "https://eu.newschief.com/story/news/local/tempe/2018/06/14/tempe-st-lukes-hospitals-labor-and-delivery-department-close/700239002/",
+      "quote": "Tempe St. Luke's will no longer offer labor, delivery and postpartum services... The hospital will continue to provide emergency care, surgery and other services."
+    },
+    {
+      "claim": "Tempe doula costs: median package $1,000, typical range $444-$1,500, based on 222 packages from 77 providers near Tempe (Bornbir, 2026).",
+      "url": "https://www.bornbir.com/tempe/az/doula/cost",
+      "quote": "Median package $1,000; typical range $444-$1,500; $40/hr median hourly rate. Based on 222 packages from 77 providers near Tempe, AZ. Updated September 2026."
+    }
+  ],
+  "city_fields": {
+    "city": "Tempe",
+    "state": "AZ",
+    "lat": 33.4255,
+    "lng": -111.94,
+    "costLow": 900,
+    "costHigh": 2200,
+    "heroImage": "/images/tempe-az-birth-doula-skyline.webp",
+    "ogImage": "https://truejoybirthing.com/images/og-city-tempe-az.webp",
+    "supportSceneImage": "/images/tempe-az-support-scene-v2.webp",
+    "supportSceneAlt": "A doula walking alongside a pregnant Tempe mom on a Sonoran Desert path with Papago Park buttes in the distance",
+    "culture": "Tempe is the East Valley's central college town \u2014 home to Arizona State University's main campus, Tempe Town Lake, and roughly 185,000 residents. The city draws young, diverse families who want walkable neighborhoods and quick access to the whole Phoenix metro birth corridor. Tempe's birth community reflects that: families here can choose a high-volume hospital 10 minutes away in Mesa, a Dignity Health birth center in Chandler, or a fully out-of-hospital birth at a freestanding birth center in a historic 1920s house just off Mill Avenue \u2014 with a doula community comfortable supporting all three paths.",
+    "medicaidNote": "Yes \u2014 Arizona's AHCCCS (Medicaid) covers doula services. As of 2026, there are 27 AHCCCS-credentialed doulas throughout the state who can accept Medicaid as payment for doula services. Not all doulas are enrolled, so ask any Tempe doula you interview whether they are AHCCCS-approved and can bill Medicaid directly."
+  },
+  "faqs_count": 4,
+  "midwife_paragraph_chars": 739,
+  "doulas": [
+    {
+      "name": "Joeley Harper",
+      "url": "https://www.bornbir.com/joeley-harper",
+      "photo": "/images/providers/tempe-az-joeley-harper.webp",
+      "description_chars": 344,
+      "costRange": "$900-$2,200"
+    },
+    {
+      "name": "Shannon Bentley",
+      "url": "https://www.bornbir.com/shannon-bentley",
+      "photo": "/images/providers/tempe-az-shannon-bentley.webp",
+      "description_chars": 379,
+      "costRange": "$900-$2,200"
+    },
+    {
+      "name": "Amber Thomas",
+      "url": "https://www.bornbir.com/amber-thomas",
+      "photo": "/images/providers/tempe-az-amber-thomas.webp",
+      "description_chars": 271,
+      "costRange": "$900-$2,000"
+    },
+    {
+      "name": "Breanne Moriarty",
+      "url": "https://true-medinfo.com/arizona/tempe/doula/npi-1477056588-breanne-moriarty",
+      "photo": "/images/providers/tempe-az-breanne-moriarty.webp",
+      "description_chars": 289,
+      "costRange": "$900-$2,200"
+    },
+    {
+      "name": "Gervonne Jefferson",
+      "url": "https://true-medinfo.com/arizona/tempe/doula/npi-1669276101-gervonne-jefferson",
+      "photo": "/images/providers/tempe-az-gervonne-jefferson.webp",
+      "description_chars": 197,
+      "costRange": "$900-$2,000"
+    },
+    {
+      "name": "Jennifer Saucier",
+      "url": "https://true-medinfo.com/arizona/tempe/doula/npi-1922566322-jennifer-saucier",
+      "photo": "/images/providers/tempe-az-jennifer-saucier.webp",
+      "description_chars": 209,
+      "costRange": "$900-$2,000"
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  },
+  "_auto_image_refs": [
+    "/images/tempe-az-birth-doula-skyline.webp",
+    "https://truejoybirthing.com/images/og-city-tempe-az.webp",
+    "/images/tempe-az-support-scene-v2.webp"
+  ]
+}

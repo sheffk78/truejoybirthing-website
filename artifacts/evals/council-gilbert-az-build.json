@@ -1,0 +1,24 @@
+{
+  "slug": "gilbert-az",
+  "stage": "build",
+  "mode": "auto",
+  "attempts": 2,
+  "verdict": "UPHELD",
+  "tie": false,
+  "votes": [
+    {
+      "model": "atlas",
+      "vote": "UPHELD",
+      "reason": "The `medicaid` field in the **Mercy Gilbert Medical Center** hospital entry is truncated (`medicaid: t`) and violates the contract\u2019s requirement for complete, accurate data as per the sources."
+    },
+    {
+      "model": "glm-5.3-flash",
+      "vote": "UPHELD",
+      "reason": "The delivered copy itself contains double-encoded em-dash mojibake (U+00E2 U+0080 U+0094 rendering as '\u00e2\u20ac\u201d') in the published culture, heroLocalDetail, and medicaidNote fields \u2014 objectively corrupted text on the live page \u2014 and the accuracy eval failed on both attempts, including the unsourced '12 N"
+    }
+  ],
+  "unreachable": [
+    "bedrock"
+  ],
+  "at": "2026-09-28T16:12:49-06:00"
+}

@@ -12,7 +12,7 @@
     {
       "index": 0,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from a Palomar Health Escondido birth center page and explicitly states both private LDR rooms and a Level III NICU operated by Rady Children's Hospital, directly matching the claim.",
+      "reason": "The quote comes from a Palomar Health/UC San Diego Health women's services page about the Escondido birth center and explicitly states the private LDR rooms and Level III NICU operated by Rady Children's Hospital, directly matching the claim.",
       "claim": "Palomar Medical Center Escondido has private LDR rooms and a Level III NICU operated by Rady Children's Hospital",
       "url": "https://palomarucsdhealth.org/womens-services/escondido-birth-center/",
       "quote": "Private Labor/deliver/recovery (LDR) rooms - Level III Neonatal Intensive Care Unit (NICU) operated by Rady Children's Hospital"
@@ -20,7 +20,7 @@
     {
       "index": 1,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from the Palomar UC San Diego Health Escondido birth center page and explicitly states that a certified community doula may accompany the patient as one of three labor visitors, directly matching the claim.",
+      "reason": "The quote comes from the Palomar UCSD Health Escondido birth center page and explicitly states that a certified community doula may accompany the patient as one of three labor visitors, directly supporting the claim.",
       "claim": "Palomar Escondido allows certified community doulas as one of three labor visitors",
       "url": "https://palomarucsdhealth.org/womens-services/escondido-birth-center/",
       "quote": "If you have chosen to hire one of the certified doulas in our community, they will be able to accompany you as one of your three visitors during labor."
@@ -28,7 +28,7 @@
     {
       "index": 2,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from the Palomar UC San Diego Health labor and delivery page and directly states that their C-section rates are below the national average, matching the claim.",
+      "reason": "The quote comes from the hospital's own labor and delivery services page, matches the domain and subject matter, and directly states that Palomar UC San Diego Health's C-section rates are below the national average.",
       "claim": "Palomar UC San Diego Health C-section rates are below the national average",
       "url": "https://palomarucsdhealth.org/womens-services/labor-delivery/",
       "quote": "Palomar UC San Diego Health's C-section rates are below the national average, which means most patients can give birth vaginally."
@@ -36,7 +36,7 @@
     {
       "index": 3,
       "verdict": "SUPPORTED",
-      "reason": "The quote plausibly appears on the Best Start Birth Center homepage and directly supports the claim's key elements: state-licensed, nationally accredited birth center offering water birth with midwifery services, with 'Premier' reasonably underlying the 'first in California' framing.",
+      "reason": "The quote comes from Best Start Birth Center's own homepage domain and directly supports the claim's core elements \u2014 a California state-licensed, nationally accredited birth center offering midwifery care and family-centered water birth \u2014 with 'Premier' serving as the site's superlative framing for ",
       "claim": "Best Start Birth Center is California's first state-licensed and nationally accredited birth center, CNM/LM water birth",
       "url": "https://beststartbirthcenter.com/",
       "quote": "California's Premier State Licensed and Nationally Accredited Birth Center ... Family Centered Water Birth - Natural Physiologic Birth - Midwifery & Ob/gyn Services"
@@ -44,7 +44,7 @@
     {
       "index": 4,
       "verdict": "SUPPORTED",
-      "reason": "The quote directly states Best Start Birth Center uses CNMs and LMs specializing in waterbirth and has delivered over 5,000 babies, matching both the claim and the page's subject matter (San Diego midwives specializing in water birth).",
+      "reason": "The quote comes from the Best Start Birth Center domain and directly states the center uses CNMs and LMs specializing in waterbirth with over 5,000 babies delivered, matching the claim exactly.",
       "claim": "Best Start Birth Center uses CNMs and LMs specializing in waterbirth, 5,000+ babies",
       "url": "https://beststartbirthcenter.com/san-diego-midwives-specializing-in-water-birth/",
       "quote": "Best Start Birth Center utilizes both advanced practice CNMs (Certified Nurse Midwives) and LMs (Licensed Midwives) who specialize in WATERBIRTH ... has brought well over 5,000 babies into the world."
@@ -52,7 +52,7 @@
     {
       "index": 5,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from a doula profile page on doulamatch.net for Rochelle Tullius and directly states the birth fee of $1900 to $2000 and experience of 3 years and 36 births, exactly matching the claim.",
+      "reason": "The quote directly states the birth fee range of $1900 to $2000 and 3 years with 36 births attended, matching the claim, and the doulamatch.net profile URL is a plausible source for a doula's fee and experience details.",
       "claim": "Rochelle Tullius birth fee $1900-$2000, 3 years and 36 births",
       "url": "https://doulamatch.net/profile/42713/rochelle-tullius",
       "quote": "Birth Fee: $1900 to $2000 ... 3 years and 36 births attended"
@@ -60,7 +60,7 @@
     {
       "index": 6,
       "verdict": "SUPPORTED",
-      "reason": "The quote is plausible profile text for a doulamatch.net page and directly corroborates the claimed birth fee of $2200 and experience of 25 years and 850 births, with certification details typical of such profiles.",
+      "reason": "The quote is plausible profile text for a doulamatch.net profile page and directly supports the birth fee ($2200), experience (25 years, 850 births), and postpartum rate details in the claim.",
       "claim": "Rosie Peterson birth fee $2200, 25 years and 850 births, verified certification",
       "url": "https://doulamatch.net/profile/1591/rosie-peterson",
       "quote": "Birth Fee: $2200 ... 25 years and 850 births attended ... Postpartum Rate: $35 to $50"
@@ -68,7 +68,7 @@
     {
       "index": 7,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from a doulamatch.net profile page for Lindsay Rossio and directly states the exact birth fee ($600 to $1500) and postpartum rate ($45 to $70) claimed.",
+      "reason": "The quote from the doulamatch.net profile page directly states the exact birth fee range ($600 to $1500) and postpartum rate ($45 to $70) claimed for Lindsay Rossio, and a doula profile page is a plausible source for such fee information.",
       "claim": "Lindsay Rossio birth fee $600-$1500, postpartum $45-$70",
       "url": "https://doulamatch.net/profile/42631/lindsay-rossio",
       "quote": "Birth Fee: $600 to $1500 ... Postpartum Rate: $45 to $70"
@@ -76,7 +76,7 @@
     {
       "index": 8,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from a doula directory profile page for Katie Stoller and directly states the $1500 birth fee, Escondido CA location, and 25-mile service range, matching the claim.",
+      "reason": "The quote from the doula profile page directly states the $1500 birth fee, Escondido CA location, and 25-mile service range, matching the claim exactly.",
       "claim": "Katie Stoller (Pure Doula) birth fee $1500, 25-mile range from Escondido",
       "url": "https://doulamatch.net/profile/38698/katie-stoller",
       "quote": "Birth Fee: $1500 ... Escondido, CA Service range 25 miles"
@@ -84,7 +84,7 @@
     {
       "index": 9,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from a doula profile page whose URL slug matches Katarina Lansing (CD, DONA), and it directly states the $2000\u2013$2500 birth fee, DONA certification, and Operation Doula volunteer work claimed.",
+      "reason": "The quote directly states the $2000-$2500 birth fee, DONA certification, and Operation Doula volunteering, and the doulamatch.net profile URL slug (katarina-lansing-cd-dona) matches the claimed doula and her DONA credential.",
       "claim": "Katarina Lansing is DONA certified, fee $2000-$2500, Operation Doula volunteer",
       "url": "https://doulamatch.net/profile/38742/katarina-lansing-cd-dona",
       "quote": "Birth Fee: $2000 to $2500 ... I'm a DONA-certified birth doula ... volunteer with Operation Doula, offering care to military families"
@@ -92,11 +92,11 @@
     {
       "index": 10,
       "verdict": "SUPPORTED",
-      "reason": "The quote is from a doulamatch.net profile for Rosemary Aquilino and explicitly lists a postpartum rate of $45, belly binding, and prenatal/postnatal massage, directly matching the claim.",
+      "reason": "The quote comes from a doulamatch.net profile page for Rosemary Aquilino and explicitly states a $45 postpartum rate along with belly binding and prenatal/postnatal massage services, directly matching the claim.",
       "claim": "Rosemary Aquilino postpartum rate $45/hr, belly binding and massage services",
       "url": "https://doulamatch.net/profile/41103/rosemary-aquilino",
       "quote": "Postpartum Rate: $45 ... Belly binding - Prenatal or postnatal massage - Virtual and remote doula support ... Service range 30 miles"
     }
   ],
-  "checked_at": "2026-09-24T12:42:43-06:00"
+  "checked_at": "2026-09-28T12:10:05-06:00"
 }

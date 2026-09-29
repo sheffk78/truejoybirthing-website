@@ -90,11 +90,24 @@ const medicaidNarrative = stateInfo?.medicaidNarrative || representativeMedicaid
 const allHospitals = stateCities.flatMap((c) => c.hospitalDetails.map((h) => h.name));
 const uniqueHospitals = [...new Set(allHospitals)];
 
-const pageTitle = `${stateFullName} Doula Guide | Costs & Medicaid`;
+// Discovery-layer overrides: per-state title tag + meta description, used when
+// a state hub has a distinct GSC keyword target. States not listed fall back to
+// the generated default below (behavior unchanged for all other states).
+const stateTitleOverrides: Record<string, string> = {
+  SC: 'South Carolina Birth Guide: Doulas, Hospitals & Costs',
+};
+const stateMetaOverrides: Record<string, string> = {
+  SC: 'South Carolina birth support: six Greenville and Charleston hospital guides, doula costs from $800, birth centers, and free birth plan tools.',
+};
+
+const pageTitle = stateTitleOverrides[stateCode] || `${stateFullName} Doula Guide | Costs & Medicaid`;
 const medicaidStateDesc = medicaidCovers ? 'Medicaid covers doulas' : 'no Medicaid doula coverage';
-let pageDesc = `Find doula support across ${totalCities} ${totalCities === 1 ? 'city' : 'cities'} in ${stateFullName}. Compare costs ($${costLow.toLocaleString()}-$${costHigh.toLocaleString()}), ${medicaidStateDesc}, hospital policies, and birth centers with a free birth plan template.`;
-// Hard cap at 130 chars (A4b: opengraph.xyz compliance, truncate at word boundary)
-if (pageDesc.length > 130) {
+let pageDesc = stateMetaOverrides[stateCode]
+  || `Find doula support across ${totalCities} ${totalCities === 1 ? 'city' : 'cities'} in ${stateFullName}. Compare costs ($${costLow.toLocaleString()}-$${costHigh.toLocaleString()}), ${medicaidStateDesc}, hospital policies, and birth centers with a free birth plan template.`;
+// Hard cap at 130 chars (A4b: opengraph.xyz compliance, truncate at word boundary).
+// Overriding metas above are hand-written discovery copy, pre-sized to 140-155 for
+// GSC CTR work — they skip this cap so they ship intact.
+if (pageDesc.length > 130 && !stateMetaOverrides[stateCode]) {
   // Cut at word boundary, no literal ellipsis (ships broken to Google)
   let trimmed = pageDesc.slice(0, 127);
   const lastSpace = trimmed.lastIndexOf(' ');
