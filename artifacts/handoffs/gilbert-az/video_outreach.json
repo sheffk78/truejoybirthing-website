@@ -1,0 +1,40 @@
+{
+  "slug": "gilbert-az",
+  "stage": "video_outreach",
+  "produced_at": "2026-10-01T20:35:12Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "14-scene render (27.6MB, 4:53), Voxtral Shelbi voice across all scenes, new upload VX0Bpwt0bQQ (public+embeddable), template thumbnail uploaded (vision-verified), embed upgraded with ISO8601 duration + chapters. Outreach via tjb-batch-outreach build --slug (deterministic).",
+  "sources": [
+    {
+      "claim": "Remotion render produced out/gilbert-az-city-guide.mp4 (27.6MB, 293s)",
+      "url": "https://youtu.be/VX0Bpwt0bQQ",
+      "quote": "Video uploaded! ID: VX0Bpwt0bQQ"
+    },
+    {
+      "claim": "video-embeds.ts registers VX0Bpwt0bQQ for gilbert-az with PT4M53S duration and 14 chapters",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/src/data/video-embeds.ts",
+      "quote": "\"gilbert-az\": { videoId: \"VX0Bpwt0bQQ\""
+    },
+    {
+      "claim": "Thumbnail yt-thumb-gilbert-az.png (1280x720, hero-silhouette template) uploaded to YouTube",
+      "url": "https://i.ytimg.com/vi/VX0Bpwt0bQQ/maxresdefault.jpg",
+      "quote": "200 135486"
+    },
+    {
+      "claim": "Pre-render gate passed: all gates for gilbert-az (audio sync 292.68s vs 292.90s data)",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/scripts/.g7b-gilbert-az.log",
+      "quote": "screenshot manifest matches live page (fresh, cropped right, photos loaded, providers current)"
+    },
+    {
+      "claim": "Gilbert page is live and deployed before video work",
+      "url": "https://truejoybirthing.com/birth-support/gilbert-az/",
+      "quote": "Gilbert, AZ Doula, Midwife & Lactation: Costs & Medicaid | TJB"
+    }
+  ],
+  "video_file": "out/gilbert-az-city-guide.mp4",
+  "video_mb": 27.6,
+  "youtube_id": "VX0Bpwt0bQQ",
+  "thumbnail_path": "public/images/yt-thumb-gilbert-az.png",
+  "embed_verified": true,
+  "outreach": []
+}

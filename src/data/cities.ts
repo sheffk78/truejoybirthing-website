@@ -4855,7 +4855,7 @@ birthStats: { cesareanRate: 32.1, maternalMortalityRate: 18.6, homeBirthRate: 0.
     state: "CO" ,
     slug: "aurora-co" ,
     titleTag: "Aurora CO Doulas: Hospital Guides & Birth Plan Help",
-    metaDescription: "Aurora birth support: doula costs from $900, UCHealth and Sky Ridge hospital guides, Colorado Medicaid doula coverage, and free birth plan help.",
+    metaDescription: "Aurora birth support: doula costs from $900, UCHealth and Sky Ridge hospital guides, Colorado Medicaid doula coverage, and free birth-plan help.",
     costLow: 900,
     costHigh: 2000,
     shelbiServesHere: true,
