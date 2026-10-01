@@ -1,0 +1,87 @@
+{
+  "slug": "escondido-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-10-01T14:50:00Z",
+  "worker_model": "glm-5.3-flash",
+  "notes": "Pre-render gate 8/8 PASSED (log: video/remotion/out/escondido-prerender-gate-final-pass.log). Fresh capture 14:34 MDT (6/6 provider photos, manifest written). Re-render 43.7MB after G7b P1 recapture + full-state-name fixes (video_metadata.state, stateName, hospital address, 8 serviceArea strings). Upload NEW video AbUZnFOSC3c (public, embeddable=True), thumbnail regenerated with full state name (ESCONDIDO, CALIFORNIA badge) + re-uploaded, old video 3qvedIIeNTs unlisted, embed swapped + ISO-8601 duration/chapters fixed, deployed via deploy.sh (city probe 200, live embed verified). Outreach handled by tjb-batch-outreach.py (deterministic; appended to canonical send log after run). | Deterministic outreach run 2026-10-01T20:56Z: 0/6 sent, 6/6 blocked (no email found \u2014 all provider URLs are DoulaMatch directory pages; directory scraping yields no provider email per DAG-audit blocklist). No sends fabricated. Re-outreach path: resolve per-provider emails, then re-engage.",
+  "sources": [
+    {
+      "claim": "Pre-render gate full pass (8/8) for escondido-ca",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/escondido-prerender-gate-final-pass.log",
+      "quote": "ALL GATES PASSED \u2014 render safe to proceed"
+    },
+    {
+      "claim": "Fresh provider-scroll capture passed G7b screenshot-reality",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/public/images/escondido-ca-capture-manifest.json",
+      "quote": "Provider photos loaded: 6/6; manifest written at 2026-10-01T17:07+ \u2014 recapture 2026-10-01T20:34Z"
+    },
+    {
+      "claim": "YouTube upload AbUZnFOSC3c (public, embeddable)",
+      "url": "https://youtu.be/AbUZnFOSC3c",
+      "quote": "privacyStatus: public, embeddable: True, uploadStatus: uploaded (YouTube Data API)"
+    },
+    {
+      "claim": "Old video 3qvedIIeNTs set to unlisted",
+      "url": "file:///Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/escondido-ca-upload.log",
+      "quote": "\ud83d\udd12 Unlisted old video 3qvedIIeNTs (was public) \u2014 rc=200"
+    },
+    {
+      "claim": "Embed live on production with new videoId",
+      "url": "https://truejoybirthing.com/birth-support/escondido-ca/",
+      "quote": "grep on live page returns AbUZnFOSC3c (embed + VideoObject schema)"
+    },
+    {
+      "claim": "Deterministic outreach ran and was blocked (0 sent, 6 no-email)",
+      "url": "file:///Users/socializerender/.hermes/state/tjb-city-status.json",
+      "quote": "escondido-ca outreach_blocked_reason: all six providers no email found; outreach_blocked_at 2026-10-01T20:56:16Z"
+    }
+  ],
+  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/escondido-ca-city-guide.mp4",
+  "video_mb": 41.7,
+  "youtube_id": "AbUZnFOSC3c",
+  "youtube_url": "https://youtu.be/AbUZnFOSC3c",
+  "thumbnail_path": "public/images/yt-thumb-escondido-ca.png",
+  "embed_verified": true,
+  "embed_file": "src/data/video-embeds.ts",
+  "embed_video_id": "AbUZnFOSC3c",
+  "deploy_url": "https://truejoybirthing.com/birth-support/escondido-ca/",
+  "deploy_status": "live",
+  "outreach": [
+    {
+      "provider": "Rochelle Tullius (Crowning Achievement Birth Doula)",
+      "email": null,
+      "status": "blocked",
+      "reason": "no email found \u2014 cities.ts URL is doulamatch.net (directory; domain-blocked by 2026-10-01 DAG-audit fix, no provider email exposed)"
+    },
+    {
+      "provider": "Rosie Peterson (Serenity Blessings Doula Care)",
+      "email": null,
+      "status": "blocked",
+      "reason": "no email found \u2014 doulamatch.net directory URL; no email exposed (per-provider email unresolved)"
+    },
+    {
+      "provider": "Katie Stoller (Pure Doula)",
+      "email": null,
+      "status": "blocked",
+      "reason": "no email found \u2014 doulamatch.net directory URL; no email exposed"
+    },
+    {
+      "provider": "Lindsay Rossio Doula (partnership of two)",
+      "email": null,
+      "status": "blocked",
+      "reason": "no email found \u2014 doulamatch.net directory URL; no email exposed"
+    },
+    {
+      "provider": "Katarina Lansing (holistic care)",
+      "email": null,
+      "status": "blocked",
+      "reason": "no email found \u2014 doulamatch.net directory URL; no email exposed"
+    },
+    {
+      "provider": "Rosemary Aquilino (Rosie Heart Wellness)",
+      "email": null,
+      "status": "blocked",
+      "reason": "no email found \u2014 doulamatch.net directory URL; no email exposed"
+    }
+  ]
+}
