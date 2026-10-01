@@ -3,7 +3,7 @@
   "stage": "video_outreach",
   "produced_at": "2026-10-01T20:35:12Z",
   "worker_model": "glm-5.3-flash",
-  "notes": "14-scene render (27.6MB, 4:53), Voxtral Shelbi voice across all scenes, new upload VX0Bpwt0bQQ (public+embeddable), template thumbnail uploaded (vision-verified), embed upgraded with ISO8601 duration + chapters. Outreach via tjb-batch-outreach build --slug (deterministic).",
+  "notes": "14-scene render (27.6MB, 4:53), Voxtral Shelbi voice, new upload VX0Bpwt0bQQ (public+embeddable), template thumbnail uploaded (vision-verified), embed live with ISO8601 duration + chapters, deployed 2026-10-01. Outreach via tjb-batch-outreach.py --slug gilbert-az: 0 sent / 4 blocked with reasons (3 directories with no mailto, 1 already-contacted guard). BLOCKED recorded per 2026-09-16 directive \u2014 no fabricated sends.",
   "sources": [
     {
       "claim": "Remotion render produced out/gilbert-az-city-guide.mp4 (27.6MB, 293s)",
@@ -36,5 +36,30 @@
   "youtube_id": "VX0Bpwt0bQQ",
   "thumbnail_path": "public/images/yt-thumb-gilbert-az.png",
   "embed_verified": true,
-  "outreach": []
+  "outreach": [
+    {
+      "provider": "Eliza Jessop (Eliza Jessop Doula)",
+      "email": null,
+      "status": "blocked",
+      "reason": "no email found (bornbir.com directory profile; directory scrape blocked by policy)"
+    },
+    {
+      "provider": "Sidney Olivia Garcia, CPD (Sidney Olivia Garcia Doula)",
+      "email": null,
+      "status": "blocked",
+      "reason": "no email found (npino.com NPI directory)"
+    },
+    {
+      "provider": "Kiersten Joy Benton, CD, PCD (Kiersten Benton Doula)",
+      "email": null,
+      "status": "blocked",
+      "reason": "no email found (bornbir.com directory profile; directory scrape blocked by policy)"
+    },
+    {
+      "provider": "Janelle Moore (Neshama Birth Services)",
+      "email": "neshamabirth@gmail.com",
+      "status": "blocked",
+      "reason": "recipient_history_gate: already contacted via phoenix-az (INBOX DUPLICATE BLOCKED)"
+    }
+  ]
 }
