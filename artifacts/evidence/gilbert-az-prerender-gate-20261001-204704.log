@@ -1,0 +1,54 @@
+═══════════════════════════════════════════
+  TJB PRE-RENDER GATE
+  Target: gilbert-az
+  Time:   2026-10-01 14:47:04 MDT
+═══════════════════════════════════════════
+
+─── G1: Working Directory ───
+  [0;32m✅[0m Working directory: /Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion
+
+─── G2: Scene Data Validation ───
+  ═══════════════════════════════════════════════════════
+    TJB Pre-Render Data Validator
+    Scope: gilbert-az
+  ═══════════════════════════════════════════════════════
+  
+  
+  📋 gilbert-az-data.ts
+  ────────────────────────────────────────────────────────────
+  
+  ════════════════════════════════════════════════════════════
+  
+  ⚠️  1 WARNING(S) — review before rendering:
+    ⚠️ [gilbert-az-data.ts] 05_app: No screenshotPath in text_content — app slide will use default image
+  
+  ✅ Validation PASSED with warnings — review above before rendering.
+  [0;32m✅[0m validate-data.ts exit 0 (scoped to gilbert-az)
+
+─── G3: Audio Sync Validation ───
+  ⏳ Running inline audio check...
+  Master audio: 292.680000s  Scene sum: 292.90s
+  [0;32m✅[0m Audio sync: master WAV 292.680000s ≈ data 292.90s
+
+─── G4: No Math.round() in Frame Calculations ───
+  [0;32m✅[0m All compositions use Math.ceil() for frame calculation
+
+─── G5: Audio Path Consistency ───
+  [0;32m✅[0m Audio path for gilbert-az looks correct
+
+─── G6: Composition Registration ───
+  [0;32m✅[0m All data files have matching imports in Root.tsx
+
+─── G7: Content Accuracy (Scene Data vs Page Data) ───
+  [0;32m✅[0m Content accuracy: no issues for gilbert-az
+
+─── G7b: Screenshot Reality (video screenshot vs live page) ───
+  [0;31m❌[0m Screenshot does NOT match live page — recapture before rendering (capture-provider-scroll.py gilbert-az)
+  →   ❌ P1: site content changed 0h AFTER the capture — recapture (capture-provider-scroll.py gilbert-az)
+
+─── G8: Chapter Timestamp Sanity ───
+  [0;32m✅[0m Total duration: 4:52 (292.9s) — use this for YouTube description chapters
+
+═══════════════════════════════════════════
+  [0;31mSOME GATES FAILED — fix before rendering[0m
+═══════════════════════════════════════════
