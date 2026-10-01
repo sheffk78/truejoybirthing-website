@@ -13,7 +13,7 @@
   "carrollton-tx": [
     {
       "slug": "dallas-tx",
-      "sharedProviders": 2
+      "sharedProviders": 3
     },
     {
       "slug": "allen-tx",
@@ -21,6 +21,10 @@
     },
     {
       "slug": "princeton-tx",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "frisco-tx",
       "sharedProviders": 1
     }
   ],
@@ -43,10 +47,24 @@
   "dallas-tx": [
     {
       "slug": "carrollton-tx",
-      "sharedProviders": 2
+      "sharedProviders": 3
     },
     {
       "slug": "arlington-tx",
+      "sharedProviders": 1
+    }
+  ],
+  "frisco-tx": [
+    {
+      "slug": "carrollton-tx",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "mckinney-tx",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "anna-tx",
       "sharedProviders": 1
     }
   ],
@@ -73,6 +91,14 @@
     },
     {
       "slug": "san-antonio-tx",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "fulshear-tx",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "pearland-tx",
       "sharedProviders": 1
     }
   ],
@@ -110,7 +136,51 @@
   ],
   "fremont-ca": [
     {
+      "slug": "minneapolis-mn",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "rosemount-mn",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "chesapeake-va",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "yonkers-ny",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "lakewood-co",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "alhambra-ca",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "louisville-ky",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "washington-dc",
+      "sharedProviders": 2
+    },
+    {
       "slug": "sacramento-ca",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "redwood-city-ca",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "burlingame-ca",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "san-mateo-ca",
       "sharedProviders": 1
     }
   ],
@@ -165,15 +235,316 @@
     {
       "slug": "rosemount-mn",
       "sharedProviders": 2
+    },
+    {
+      "slug": "fremont-ca",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "chesapeake-va",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "yonkers-ny",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "lakewood-co",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "alhambra-ca",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "louisville-ky",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "washington-dc",
+      "sharedProviders": 2
     }
   ],
   "rosemount-mn": [
     {
       "slug": "minneapolis-mn",
       "sharedProviders": 2
+    },
+    {
+      "slug": "fremont-ca",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "chesapeake-va",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "yonkers-ny",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "lakewood-co",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "alhambra-ca",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "louisville-ky",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "washington-dc",
+      "sharedProviders": 2
     }
   ],
-  "phoenix-az": [],
+  "chesapeake-va": [
+    {
+      "slug": "norfolk-va",
+      "sharedProviders": 5
+    },
+    {
+      "slug": "minneapolis-mn",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "rosemount-mn",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "fremont-ca",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "yonkers-ny",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "lakewood-co",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "alhambra-ca",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "louisville-ky",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "washington-dc",
+      "sharedProviders": 2
+    }
+  ],
+  "yonkers-ny": [
+    {
+      "slug": "minneapolis-mn",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "rosemount-mn",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "fremont-ca",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "chesapeake-va",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "lakewood-co",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "alhambra-ca",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "louisville-ky",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "washington-dc",
+      "sharedProviders": 2
+    }
+  ],
+  "lakewood-co": [
+    {
+      "slug": "minneapolis-mn",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "rosemount-mn",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "fremont-ca",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "chesapeake-va",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "yonkers-ny",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "alhambra-ca",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "louisville-ky",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "washington-dc",
+      "sharedProviders": 2
+    }
+  ],
+  "alhambra-ca": [
+    {
+      "slug": "minneapolis-mn",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "rosemount-mn",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "fremont-ca",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "chesapeake-va",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "yonkers-ny",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "lakewood-co",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "louisville-ky",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "washington-dc",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "los-angeles-ca",
+      "sharedProviders": 1
+    }
+  ],
+  "louisville-ky": [
+    {
+      "slug": "minneapolis-mn",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "rosemount-mn",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "fremont-ca",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "chesapeake-va",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "yonkers-ny",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "lakewood-co",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "alhambra-ca",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "washington-dc",
+      "sharedProviders": 2
+    }
+  ],
+  "washington-dc": [
+    {
+      "slug": "minneapolis-mn",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "rosemount-mn",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "fremont-ca",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "chesapeake-va",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "yonkers-ny",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "lakewood-co",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "alhambra-ca",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "louisville-ky",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "rockville-md",
+      "sharedProviders": 1
+    }
+  ],
+  "phoenix-az": [
+    {
+      "slug": "chandler-az",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "gilbert-az",
+      "sharedProviders": 1
+    }
+  ],
+  "chandler-az": [
+    {
+      "slug": "phoenix-az",
+      "sharedProviders": 2
+    },
+    {
+      "slug": "gilbert-az",
+      "sharedProviders": 1
+    }
+  ],
+  "gilbert-az": [
+    {
+      "slug": "phoenix-az",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "chandler-az",
+      "sharedProviders": 1
+    }
+  ],
   "chicago-il": [],
   "detroit-mi": [],
   "newark-nj": [],
@@ -188,11 +559,21 @@
   "baltimore-md": [],
   "hartford-ct": [
     {
+      "slug": "new-haven-ct",
+      "sharedProviders": 1
+    },
+    {
       "slug": "stamford-ct",
       "sharedProviders": 1
     },
     {
       "slug": "norwalk-ct",
+      "sharedProviders": 1
+    }
+  ],
+  "new-haven-ct": [
+    {
+      "slug": "hartford-ct",
       "sharedProviders": 1
     }
   ],
@@ -232,7 +613,18 @@
   "gainesville-fl": [],
   "charleston-sc": [],
   "richmond-va": [],
-  "aurora-co": [],
+  "aurora-co": [
+    {
+      "slug": "colorado-springs-co",
+      "sharedProviders": 1
+    }
+  ],
+  "colorado-springs-co": [
+    {
+      "slug": "aurora-co",
+      "sharedProviders": 1
+    }
+  ],
   "henderson-nv": [],
   "meridian-id": [],
   "lehi-ut": [],
@@ -269,20 +661,59 @@
       "sharedProviders": 5
     }
   ],
-  "chesapeake-va": [
+  "redwood-city-ca": [
     {
-      "slug": "norfolk-va",
-      "sharedProviders": 5
-    }
-  ],
-  "fontana-ca": [],
-  "charlotte-nc": [],
-  "washington-dc": [
-    {
-      "slug": "rockville-md",
+      "slug": "fremont-ca",
       "sharedProviders": 1
     }
   ],
+  "burlingame-ca": [
+    {
+      "slug": "fremont-ca",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "palo-alto-ca",
+      "sharedProviders": 1
+    }
+  ],
+  "san-mateo-ca": [
+    {
+      "slug": "fremont-ca",
+      "sharedProviders": 1
+    }
+  ],
+  "fontana-ca": [
+    {
+      "slug": "san-bernardino-ca",
+      "sharedProviders": 4
+    },
+    {
+      "slug": "moreno-valley-ca",
+      "sharedProviders": 3
+    }
+  ],
+  "san-bernardino-ca": [
+    {
+      "slug": "fontana-ca",
+      "sharedProviders": 4
+    },
+    {
+      "slug": "moreno-valley-ca",
+      "sharedProviders": 3
+    }
+  ],
+  "moreno-valley-ca": [
+    {
+      "slug": "fontana-ca",
+      "sharedProviders": 3
+    },
+    {
+      "slug": "san-bernardino-ca",
+      "sharedProviders": 3
+    }
+  ],
+  "charlotte-nc": [],
   "laurel-md": [],
   "greenbelt-md": [],
   "orlando-fl": [
@@ -315,26 +746,67 @@
     {
       "slug": "huntington-beach-ca",
       "sharedProviders": 1
+    },
+    {
+      "slug": "irvine-ca",
+      "sharedProviders": 1
     }
   ],
-  "yonkers-ny": [],
   "oceanside-ca": [],
   "naperville-il": [],
   "celina-tx": [],
   "worcester-ma": [],
   "glendale-ca": [],
   "conroe-tx": [],
-  "mckinney-tx": [],
+  "mckinney-tx": [
+    {
+      "slug": "frisco-tx",
+      "sharedProviders": 1
+    }
+  ],
   "waco-tx": [],
   "bozeman-mt": [],
   "albuquerque-nm": [],
-  "torrance-ca": [],
+  "torrance-ca": [
+    {
+      "slug": "los-angeles-ca",
+      "sharedProviders": 1
+    }
+  ],
+  "los-angeles-ca": [
+    {
+      "slug": "torrance-ca",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "alhambra-ca",
+      "sharedProviders": 1
+    }
+  ],
   "alexandria-va": [],
-  "lakewood-co": [],
   "newport-news-va": [],
   "agoura-hills-ca": [],
   "alameda-ca": [],
-  "alvin-tx": [],
+  "alvin-tx": [
+    {
+      "slug": "pearland-tx",
+      "sharedProviders": 1
+    }
+  ],
+  "pearland-tx": [
+    {
+      "slug": "alvin-tx",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "houston-tx",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "fulshear-tx",
+      "sharedProviders": 1
+    }
+  ],
   "melissa-tx": [
     {
       "slug": "princeton-tx",
@@ -349,17 +821,103 @@
     {
       "slug": "melissa-tx",
       "sharedProviders": 1
+    },
+    {
+      "slug": "frisco-tx",
+      "sharedProviders": 1
     }
   ],
   "american-canyon-ca": [],
   "arlington-heights-il": [],
   "anchorage-ak": [],
+  "fulshear-tx": [
+    {
+      "slug": "houston-tx",
+      "sharedProviders": 1
+    },
+    {
+      "slug": "pearland-tx",
+      "sharedProviders": 1
+    }
+  ],
   "jacksonville-fl": [],
-  "louisville-ky": [],
   "corpus-christi-tx": [],
   "tampa-fl": [],
   "elk-grove-ca": [],
   "hayward-ca": [],
   "palmdale-ca": [],
-  "corona-ca": []
+  "corona-ca": [
+    {
+      "slug": "rancho-cucamonga-ca",
+      "sharedProviders": 1
+    }
+  ],
+  "rancho-cucamonga-ca": [
+    {
+      "slug": "corona-ca",
+      "sharedProviders": 1
+    }
+  ],
+  "mesa-az": [],
+  "laredo-tx": [],
+  "lubbock-tx": [],
+  "boise-id": [],
+  "leesburg-fl": [],
+  "anaheim-ca": [],
+  "cincinnati-oh": [],
+  "fate-tx": [],
+  "milwaukee-wi": [],
+  "arvada-co": [],
+  "ontario-ca": [],
+  "huntsville-al": [],
+  "irvine-ca": [
+    {
+      "slug": "garden-grove-ca",
+      "sharedProviders": 1
+    }
+  ],
+  "lexington-ky": [],
+  "omaha-ne": [],
+  "las-vegas-nv": [],
+  "new-braunfels-tx": [],
+  "san-marcos-tx": [],
+  "cedar-park-tx": [],
+  "bellevue-wa": [],
+  "costa-mesa-ca": [],
+  "pasadena-ca": [],
+  "escondido-ca": [],
+  "temple-tx": [],
+  "victoria-tx": [],
+  "concord-nc": [],
+  "greenville-sc": [],
+  "cumming-ga": [],
+  "sunnyvale-ca": [],
+  "palo-alto-ca": [
+    {
+      "slug": "burlingame-ca",
+      "sharedProviders": 1
+    }
+  ],
+  "cary-nc": [],
+  "tuscaloosa-al": [],
+  "fullerton-ca": [],
+  "pomona-ca": [],
+  "tempe-az": [],
+  "chula-vista-ca": [],
+  "el-paso-tx": [],
+  "fort-collins-co": [],
+  "fort-worth-tx": [],
+  "st-paul-mn": [],
+  "new-york-ny": [],
+  "virginia-beach-va": [],
+  "san-francisco-ca": [],
+  "san-jose-ca": [],
+  "st-augustine-fl": [],
+  "grand-rapids-mi": [],
+  "kansas-city-mo": [],
+  "apple-valley-ca": [],
+  "palm-springs-fl": [],
+  "newport-beach-ca": [],
+  "la-habra-ca": [],
+  "staten-island-ny": []
 }

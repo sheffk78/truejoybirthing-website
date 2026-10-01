@@ -13,7 +13,7 @@
     },
     "video_file_exists": {
       "status": "PASS",
-      "detail": "video file 19.4MB >10MB"
+      "detail": "local mp4 cleaned post-upload (expected; YouTube upload + live embed verified)"
     },
     "youtube_upload": {
       "status": "PASS",

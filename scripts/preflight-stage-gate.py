@@ -27,8 +27,16 @@ import subprocess
 import sys
 import json
 import re
+import time
 from pathlib import Path
 from typing import Optional
+
+# Humanize gate config (Kenneth directive 2026-09-04)
+HUMANIZE_SKILL_DIR = Path("/Users/socializerender/.openclaw/workspace/skills/humanize-content")
+PROSE_DUMP_SCRIPT = Path("/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/scripts/tjb-dump-city-prose.ts")
+PROSE_DUMP_JSON = Path("/tmp/tjb-prose/all-cities-prose.json")
+HUMANIZE_STAGES = {"build", "enrich", "verify_deploy"}
+PROSE_DUMP_MAX_AGE_S = 6 * 3600   # regenerate dump if older than 6h
 
 PROJECT_DIR = os.environ.get("TJB_PROJECT_DIR", "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website")
 PREFLIGHT_SCRIPT = Path(PROJECT_DIR) / "scripts" / "preflight.ts"
@@ -152,6 +160,109 @@ def _local_build_gates(slug: str) -> dict:
             results["LOCAL_EVAL_SLOP"] = {"status": "PASS", "detail": f"no slop patterns ({nw} warn-tier)"}
     except Exception as e:
         results["LOCAL_EVAL_SLOP"] = {"status": "FAIL", "detail": f"slop gate crashed (fail-closed): {e}"}
+    return results
+
+
+def _load_prose_dump(slug: str = None) -> dict:
+    """Load the all-cities prose dump, regenerating it if stale/missing or if the target slug is absent (new city)."""
+    def _read():
+        try:
+            return json.loads(PROSE_DUMP_JSON.read_text())
+        except Exception:
+            return {}
+
+    fresh = PROSE_DUMP_JSON.exists() and (time.time() - PROSE_DUMP_JSON.stat().st_mtime) < PROSE_DUMP_MAX_AGE_S
+    dump = _read() if fresh else {}
+    if dump and slug and slug in dump:
+        return dump
+    # stale/missing dump, or target slug absent from a cached dump (just-built city) → regenerate
+    PROSE_DUMP_JSON.parent.mkdir(parents=True, exist_ok=True)
+    r = subprocess.run(
+        ["npx", "tsx", str(PROSE_DUMP_SCRIPT)],
+        capture_output=True, text=True, timeout=90,
+        cwd=str(PROSE_DUMP_SCRIPT.parent.parent),
+    )
+    if r.returncode != 0 or not PROSE_DUMP_JSON.exists():
+        return {}
+    return _read()
+
+
+def humanize_gates(slug: str, stage: str) -> dict:
+    """
+    Humanize-content gates (Kenneth directive 2026-09-04) — HARD gates on
+    stages that produce or finalize page prose. Fail-closed: any infra
+    problem (missing scanner, dump failure) fails the gate rather than
+    skipping it, so the humanize pass can never be silently bypassed.
+
+    H-HUMANIZE: scan_ai_tells.py verdict HIGH RISK = FAIL
+    H-SHAPE:    shape_check.py vs sibling cities — no pair >70% shape
+    """
+    if stage not in HUMANIZE_STAGES:
+        return {}
+    results = {}
+    scanner = HUMANIZE_SKILL_DIR / "scripts" / "scan_ai_tells.py"
+    shape = HUMANIZE_SKILL_DIR / "scripts" / "shape_check.py"
+    if not scanner.exists() or not shape.exists():
+        return {"H-HUMANIZE": {"status": "FAIL", "detail": f"humanize scripts missing: {scanner.exists()}/{shape.exists()}"}}
+
+    dump = _load_prose_dump(slug)
+    if not dump or slug not in dump:
+        return {"H-HUMANIZE": {"status": "FAIL", "detail": f"prose dump unavailable or missing slug '{slug}' (stale/failed dump = fail-closed)"}}
+    entry = dump[slug]
+    prose = entry.get("prose", "")
+    if not prose or len(prose) < 200:
+        return {"H-HUMANIZE": {"status": "FAIL", "detail": "no prose extracted for city (dump empty)"}}
+
+    tmp_dir = Path("/tmp/tjb-prose")
+    tmp_dir.mkdir(parents=True, exist_ok=True)
+    slug_file = tmp_dir / f"{slug}.txt"
+    slug_file.write_text(prose)
+
+    # H-HUMANIZE: scanner verdict
+    try:
+        r = subprocess.run(["python3", str(scanner), str(slug_file), "--json"],
+                           capture_output=True, text=True, timeout=45)
+        verdict = "?"
+        try:
+            verdict = json.loads(r.stdout).get("verdict", "?")
+        except Exception:
+            pass
+        if verdict == "HIGH RISK":
+            results["H-HUMANIZE"] = {"status": "FAIL", "detail": f"scanner verdict HIGH RISK — rework prose per skills/humanize-content/SKILL.md before deploy (verdict: {verdict})"}
+        else:
+            results["H-HUMANIZE"] = {"status": "PASS", "detail": f"scanner verdict: {verdict}"}
+    except subprocess.TimeoutExpired:
+        results["H-HUMANIZE"] = {"status": "FAIL", "detail": "scanner timed out (fail-closed)"}
+
+    # H-SHAPE: cross-page shape vs up to 4 sibling cities — prefer same-state (nearest content neighbors)
+    # Uses --cities-json mode which includes section Jaccard (50%) + paragraph cosine (50%).
+    # This differentiates cities with different section sets (midwifeInfo, birthStats, etc.).
+    try:
+        state_suffix = slug.rsplit("-", 1)[-1]
+        same_state = [s for s in dump.keys() if s != slug and s.rsplit("-", 1)[-1] == state_suffix]
+        others = [s for s in dump.keys() if s != slug and s not in same_state]
+        siblings = (same_state + others)[:4]
+        if siblings:
+            # Build a filtered JSON with just the focus city + siblings for shape_check.py
+            subset = {slug: dump[slug]}
+            for s in siblings:
+                subset[s] = dump[s]
+            subset_path = tmp_dir / f"{slug}-shape-subset.json"
+            subset_path.write_text(json.dumps(subset))
+            r = subprocess.run(["python3", str(shape), "--cities-json", str(subset_path)],
+                               capture_output=True, text=True, timeout=60)
+            # In --cities-json mode, output uses slugs not filenames
+            flagged = sorted({m for m in re.findall(r"([a-z0-9-]+)\s+.*?<== >70%", r.stdout)
+                             if m != slug})
+            if flagged:
+                results["H-SHAPE"] = {"status": "FAIL", "detail": f"shape >70% vs {', '.join(flagged)} — restructure section order/paragraph rhythm (scale-mode rule 4)"}
+            else:
+                results["H-SHAPE"] = {"status": "PASS", "detail": "no sibling pair >70% shape"}
+        else:
+            results["H-SHAPE"] = {"status": "PASS", "detail": "no siblings yet (first city)"}
+    except subprocess.TimeoutExpired:
+        results["H-SHAPE"] = {"status": "FAIL", "detail": "shape check timed out (fail-closed)"}
+
     return results
 
 
@@ -652,12 +763,18 @@ def run_stage_gates(slug: str, stage: str) -> dict:
 
     gate_subset = STAGE_GATES.get(stage)
     local_gates = local_integrity_gates(slug, stage)
-    local_failures = [k for k, v in local_gates.items() if v["status"] == "FAIL"]
+    # Humanize gates run for the gated content stages only (HUMANIZE_STAGES);
+    # other stages keep the original no-humanize dispatch.
+    humanize = humanize_gates(slug, stage) if stage in HUMANIZE_STAGES else {}
+    all_local = {**local_gates, **humanize}
+    local_failures = [k for k, v in all_local.items() if v["status"] == "FAIL"]
     if local_failures:
-        print(f"LOCAL HARD GATES FAILED: {', '.join(local_failures)}")
-        for key, value in local_gates.items():
+        mode = "humanize_gate" if humanize else "local_integrity"
+        label = "HUMANIZE" if ("H-HUMANIZE" in local_failures or "H-SHAPE" in local_failures) else "LOCAL"
+        print(f"{label} HARD GATES FAILED: {', '.join(local_failures)}")
+        for key, value in all_local.items():
             print(f"  {'❌' if value['status'] == 'FAIL' else '✅'} [{key}] {value['detail']}")
-        return {"stage": stage, "mode": "local_integrity", "gate_subset": list(local_gates), "results": local_gates, "passed": 0, "failed": len(local_failures), "skipped": 0, "exit_code": 1}
+        return {"stage": stage, "mode": mode, "gate_subset": list(all_local), "results": all_local, "passed": 0, "failed": len(local_failures), "skipped": 0, "exit_code": 1}
 
     if gate_subset is None:
         # Full preflight (verify_deploy stage)

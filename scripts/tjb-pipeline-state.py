@@ -88,7 +88,7 @@ STAGE_CONTEXTS = {
             "Verify data accuracy. Run: npx tsx scripts/validate-city-data.ts {slug} and npm run build to verify."
         ),
         "toolsets": ["terminal", "file", "web", "browser", "image_gen", "vision"],
-        "gates": ["G3", "G5", "G13", "G4", "G37", "hospital_count", "visual_check"],
+        "gates": ["G3", "G5", "G13", "G4", "G37", "hospital_count", "visual_check", "H-HUMANIZE", "H-SHAPE"],
     },
     "enrich": {
         "skill": "tjb-provider-enrichment",
@@ -104,7 +104,7 @@ STAGE_CONTEXTS = {
             "At least 1 real provider headshot required (all initials = didn't try)."
         ),
         "toolsets": ["terminal", "file", "web", "browser", "vision"],
-        "gates": ["G14", "G15", "G15b", "G35", "S8", "G9", "G57", "hospital_desc_length", "cost_format", "birth_center_fields", "S7", "min_1_headshot"],
+        "gates": ["G14", "G15", "G15b", "G35", "S8", "G9", "G57", "hospital_desc_length", "cost_format", "birth_center_fields", "S7", "min_1_headshot", "H-HUMANIZE", "H-SHAPE"],
     },
     "verify_deploy": {
         "skill": "tjb-city-pipeline",
@@ -118,14 +118,15 @@ STAGE_CONTEXTS = {
             "(3) vision_analyze for hero, support scene, provider photos, hospital thumbnails, no placeholders."
         ),
         "toolsets": ["terminal", "file", "browser", "vision"],
-        "gates": ["full_preflight"],
+        "gates": ["full_preflight", "H-HUMANIZE", "H-SHAPE"],
     },
     "video_outreach": {
         "skill": "tjb-city-video-pipeline",
         "goal_template": (
             "VIDEO + OUTREACH stage for {slug}: Create video scene data (full state names, not abbreviations). "
             "Generate TTS audio (Shelbi/Voxtral voice, consistent across scenes). "
-            "Pre-render gate: bash scripts/pre-render-gate.sh {slug}. "
+            "Pre-render gate: bash video/remotion/scripts/pre-render-gate.sh {slug} "
+            "(correct path; repo-root scripts/ has no such file). "
             "Capture stills for visual verification. Render video. "
             "Upload to YouTube as NEW video (public, embeddable=True). "
             "Generate and upload YouTube thumbnail (derived from hero image). "
@@ -654,6 +655,68 @@ def cmd_done(slug: str, stage: str):
         }, indent=2))
         sys.exit(3)
 
+    # VIDEO OUTREACH SEND-EVIDENCE GUARD (hardening, 2026-10-01):
+    # "done" for video_outreach requires VERIFIED first-touch sends in the
+    # canonical send log. Zero first-touch 'sent' rows for this slug = the
+    # deterministic outreach did not actually happen -> fail closed: refuse
+    # without advancing, record the refusal in history, keep blocked flags.
+    if actual_stage == "video_outreach":
+        send_log = Path.home() / ".hermes" / "logs" / "tjb-outreach-send-log.jsonl"
+
+        def _is_first_touch(v) -> bool:
+            """False-like is_followup values (missing/None/False/'false'/0) = first-touch."""
+            if v is None:
+                return True
+            if isinstance(v, bool):
+                return v is False
+            if isinstance(v, (int, float)):
+                return v == 0
+            if isinstance(v, str):
+                return v.strip().lower() in ("", "false", "no", "0")
+            return False
+
+        sent_first_touch = 0
+        if send_log.exists():
+            for _line in send_log.read_text(errors="replace").splitlines():
+                _line = _line.strip()
+                if not _line:
+                    continue
+                try:
+                    _row = json.loads(_line)
+                except json.JSONDecodeError:
+                    continue
+                if (isinstance(_row, dict)
+                        and _row.get("slug") == slug
+                        and _row.get("status") == "sent"
+                        and _is_first_touch(_row.get("is_followup"))):
+                    sent_first_touch += 1
+
+        if sent_first_touch == 0:
+            history = state.get("history", [])
+            history.append({
+                "stage": "video_outreach",
+                "status": "done_refused",
+                "reason": "zero verified first-touch sends in canonical send log",
+                "timestamp": int(time.time()),
+            })
+            state["history"] = history
+            state["updated_at"] = int(time.time())
+            # Blocked flags are deliberately NOT cleared in this branch.
+            save_state(slug, state)
+            print(json.dumps({
+                "action": "done_refused",
+                "slug": slug,
+                "stage": actual_stage,
+                "sent_first_touch": sent_first_touch,
+                "error": (
+                    "zero verified first-touch sends in canonical send log "
+                    f"({send_log}): no rows with slug={slug}, is_followup false-like, "
+                    "status='sent'. Stage NOT advanced. Run the deterministic outreach "
+                    "script (tjb-batch-outreach.py) and verify sends first."
+                ),
+            }, indent=2))
+            sys.exit(3)
+
     # Record completion
     completed = state.get("stages_completed", [])
     if actual_stage not in completed:
@@ -674,10 +737,17 @@ def cmd_done(slug: str, stage: str):
 
     # Forward-only advancement: next = index + 1
     next_idx = actual_idx + 1
+    clamped = False
     if next_idx >= len(STAGE_ORDER):
         next_stage = "complete"
     else:
         next_stage = STAGE_ORDER[next_idx]
+
+    # Terminal-index clamp: stage_index must never exceed len(STAGE_ORDER)-1
+    # (terminal cities report index 4 / "complete", never an overflow index).
+    if next_idx > len(STAGE_ORDER) - 1:
+        next_idx = len(STAGE_ORDER) - 1
+        clamped = True
 
     state["current_stage"] = next_stage
     state["stage_index"] = next_idx
@@ -692,7 +762,7 @@ def cmd_done(slug: str, stage: str):
     state["stage_attempts"] = stage_attempts
 
     save_state(slug, state)
-    print(json.dumps({
+    done_output = {
         "action": "done",
         "slug": slug,
         "completed_stage": actual_stage,
@@ -700,7 +770,13 @@ def cmd_done(slug: str, stage: str):
         "stage_index": next_idx,
         "stages_completed": completed,
         "max_stage_reached": state["max_stage_reached"],
-    }, indent=2))
+    }
+    if clamped:
+        done_output["clamped"] = True
+        done_output["clamped_note"] = (
+            f"stage_index clamped to {len(STAGE_ORDER) - 1} - terminal city reports index 4 / complete"
+        )
+    print(json.dumps(done_output, indent=2))
 
 
 def cmd_fail(slug: str, stage: str, reason: str):

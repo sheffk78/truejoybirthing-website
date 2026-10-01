@@ -1,0 +1,44 @@
+{
+  "slug": "tempe-az",
+  "stage": "video_outreach",
+  "passed": false,
+  "failures": 6,
+  "results": {
+    "pre_render_gate": {
+      "pass": false,
+      "message": "scene data missing at remotion/src/data/tempe-az-data.ts"
+    },
+    "video_file_exists": {
+      "pass": false,
+      "message": "local mp4 missing and video not yet uploaded/embedded"
+    },
+    "youtube_upload": {
+      "pass": false,
+      "message": "tempe-az not found in video-embeds.ts"
+    },
+    "youtube_thumbnail": {
+      "pass": true,
+      "message": "thumbnail present as .webp (24KB)"
+    },
+    "video_embedded": {
+      "pass": false,
+      "message": "no videoId to verify"
+    },
+    "videoobject_schema": {
+      "pass": false,
+      "message": "no videoId to verify"
+    },
+    "outreach_sent_or_blocked": {
+      "pass": true,
+      "message": "authorized \u2014 Jeff approved outreach resumption Aug 2026. Ready to send."
+    },
+    "provider_photo_quality": {
+      "pass": true,
+      "message": "all 6 provider photos are real images (>5KB, >100 colors)"
+    },
+    "video_content_city_match": {
+      "pass": false,
+      "message": "G67: no videoId \u2014 cannot verify video content"
+    }
+  }
+}
