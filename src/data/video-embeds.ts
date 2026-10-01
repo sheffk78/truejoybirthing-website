@@ -1991,7 +1991,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
   "escondido-ca": {
-    videoId: "3qvedIIeNTs",
+    videoId: "AbUZnFOSC3c",
     title: "Escondido, California Doula & Birth Plan Guide",
     description: "Watch the full Escondido, California Doula & Birth Plan Guide — all in about 5:44.",
     duration: "PT5M44S",
