@@ -1,0 +1,84 @@
+{
+  "slug": "gilbert-az",
+  "stage": "video_outreach",
+  "recorded_at": "2026-10-01T20:47:04.646041+00:00",
+  "video_gates": {
+    "pre_render_gate": "PASS (all gates, exit 0 \u2014 output saved /tmp/gilbert-prerender.log)",
+    "video_file_exists": "PASS out/gilbert-az-city-guide.mp4 27.6MB",
+    "youtube_upload": "PASS VX0Bpwt0bQQ public+embeddable=True",
+    "youtube_thumbnail": "PASS template thumbnail 1280x720 uploaded, i.ytimg.com/maxresdefault 200",
+    "video_embedded": "PASS embed/VX0Bpwt0bQQ on live page",
+    "videoobject_schema": "PASS VideoObject duration PT4M53S"
+  },
+  "outreach": {
+    "method": "python3 ~/.hermes/scripts/tjb-batch-outreach.py --slug gilbert-az (deterministic, per 2026-09-16 directive)",
+    "sent": 0,
+    "blocked": [
+      {
+        "provider": "Eliza Jessop",
+        "reason": "no email found (bornbir.com directory profile; no mailto on page)"
+      },
+      {
+        "provider": "Sidney Olivia Garcia",
+        "reason": "no email found (npino.com NPI record; phone-only 480-589-5222)"
+      },
+      {
+        "provider": "Kiersten Joy Benton",
+        "reason": "no email found (bornbir.com directory profile; no mailto on page)"
+      },
+      {
+        "provider": "Janelle Moore (Neshama Birth Services)",
+        "email": "neshamabirth@gmail.com",
+        "reason": "recipient_history_gate INBOX DUPLICATE BLOCKED \u2014 already contacted via phoenix-az"
+      }
+    ],
+    "fabricated_sends": 0
+  },
+  "dag_advance_result": {
+    "action": "done_refused",
+    "exit": 3,
+    "reason": "zero verified first-touch sends in canonical send log \u2014 state machine hardening 2026-10-01 requires >=1 sent row; BLOCKED-with-reason cannot complete the stage"
+  },
+  "send_log_rows_gilbert_az": [
+    {
+      "timestamp": "2026-10-01T20:46:11.856693+00:00",
+      "to": "neshamabirth@gmail.com",
+      "subject": "Can you review your info on True Joy Birthing, Gilbert?",
+      "slug": "gilbert-az",
+      "is_followup": false,
+      "labels": [
+        "outreach",
+        "first-touch"
+      ],
+      "email_gate": {
+        "passed": true,
+        "message": "EMAIL GATE: WARNING \u2014 email-validator not installed, skipping MX check. Run: pip3 install email-validator",
+        "status": "VALID"
+      },
+      "zerobounce_gate": {
+        "passed": true,
+        "message": "ZeroBounce: VALID \u2014 verified mailbox ()",
+        "status": "valid"
+      },
+      "recipient_history_gate": {
+        "passed": false,
+        "reasons": [
+          "INBOX DUPLICATE BLOCKED: AgentMail inbox already has a sent outreach message to neshamabirth@gmail.com (ever-contacted via: phoenix-az). The AgentMail inbox is the authoritative record (the local send log may be incomplete). Do NOT re-send to this recipient. If this is a Jeff-approved correction/apology send, use --force-override."
+        ],
+        "warnings": [],
+        "ever_contacted_via": [
+          "phoenix-az"
+        ]
+      },
+      "url_gate": null,
+      "content_gate": null,
+      "send_result": null,
+      "status": "blocked_recipient_history_gate",
+      "force_override": false,
+      "override_reason": "",
+      "ever_contacted_via": [
+        "phoenix-az"
+      ]
+    }
+  ]
+}
