@@ -248,6 +248,31 @@ def replay_qc_live(case: dict) -> dict:
                        else "checker still fails the snapshot — bug not fixed")}
 
 
+def replay_og_content_coverage(case: dict) -> dict:
+    """OG quarter-content regression: run the saved checker command against the
+    saved defective fixture and require the checker to FAIL it (detector catches
+    the defect). A survivor means the S11 OG-content check stopped working."""
+    import shlex
+    rp = case.get("replay", {})
+    expect_fail = rp.get("expect", "fail") == "fail"
+    expect_output = rp.get("expect_output", "")
+    cmd = rp.get("command", "")
+    if not cmd:
+        return {"caught": False, "detail": "no replay.command in case"}
+    script_dir = Path(__file__).resolve().parent
+    website_root = script_dir.parent
+    r = subprocess.run(shlex.split(cmd), capture_output=True, text=True,
+                       cwd=str(website_root), timeout=300)
+    combined = (r.stdout or "") + (r.stderr or "")
+    expected_fail = expect_fail and ("FAIL" in combined)
+    expected_text = (expect_output.split("->")[-1].strip()[:60] in combined) if expect_output else True
+    caught = expected_fail and expected_text
+    return {"caught": caught,
+            "detail": (f"checker exit={r.returncode}; output: " + combined[combined.find('FAIL'):combined.find('FAIL')+160]
+                       if caught else
+                       f"checker exit={r.returncode}, output={combined[:200]}")}
+
+
 def replay_accuracy_eval(case: dict) -> dict:
     """Model replay for eval-accuracy: feed the saved {claim,url,quote} through
     the cloud checker and require an UNSUPPORTED verdict."""
@@ -303,6 +328,7 @@ REPLAYERS = {
     "accuracy_eval": replay_accuracy_eval,
     "qc_live": replay_qc_live,
     "release_gate_selftest": replay_release_gate,
+    "og_content_coverage": replay_og_content_coverage,
 }
 
 
