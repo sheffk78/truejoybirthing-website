@@ -1989,4 +1989,19 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M00S",
     uploadDate: "2026-06-24T00:00:00-06:00",
   },
+
+  "escondido-ca": {
+    videoId: "3qvedIIeNTs",
+    title: "Escondido, California Doula & Birth Plan Guide",
+    description: "Watch the full Escondido, California Doula & Birth Plan Guide — all in about 5:44.",
+    duration: 344,
+  },
+
+  "fullerton-ca": {
+    videoId: "C5A0V62NGdQ",
+    title: "Fullerton, California Doula & Birth Plan Guide",
+    description: "Watch the full Fullerton, California Doula & Birth Plan Guide — all in about 6:28.",
+    duration: 388,
+  },
+
 };
