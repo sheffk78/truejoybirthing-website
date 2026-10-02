@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1200px;height:630px;overflow:hidden}
+.og-card{display:flex;flex-direction:row;width:1200px;height:630px;background:#FAF8F5}
+.left-column{width:660px;display:flex;flex-direction:column;justify-content:center;padding:48px 60px;background:linear-gradient(180deg,#FAF8F5 0%,#EDE5F5 100%);position:relative}
+.left-column::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:#B87AA0}
+.left-column::after{content:"";position:absolute;bottom:0;left:0;right:0;height:6px;background:#B87AA0}
+.right-column{width:540px;position:relative;overflow:hidden;background:#EDE5F5;padding:30px 40px;display:flex;align-items:center;justify-content:center}
+.right-column::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:#B87AA0;z-index:2}
+.right-column::after{content:"";position:absolute;bottom:0;left:0;right:0;height:6px;background:#B87AA0;z-index:2}
+.accent-line{width:40px;height:3px;background:#B87AA0;border-radius:2px;margin-bottom:20px}
+.eyebrow{font-family:"Source Sans 3",system-ui,sans-serif;font-weight:600;font-size:15px;color:#B87AA0;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px}
+.headline{font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-size:46px;color:#2A2A2A;letter-spacing:-.01em;line-height:1.12;margin-bottom:14px}
+.summary{font-family:"Source Sans 3",system-ui,sans-serif;font-weight:400;font-size:17px;color:#555;letter-spacing:.005em;line-height:1.5;margin-bottom:16px;max-width:520px}
+.features{font-family:"Source Sans 3",system-ui,sans-serif;font-weight:600;font-size:15px;color:#2A2A2A;letter-spacing:.02em;line-height:1.6}
+.features span{margin:0 7px;color:#B87AA0}
+.logo-area{margin-top:22px;padding-top:16px;display:flex;align-items:center}
+.logo-area img{height:52px;width:auto}
+.phone-frame{position:relative;background:#111;border-radius:2.4rem;padding:5px;box-shadow:0 25px 50px -12px rgba(0,0,0,.28),0 0 0 1px rgba(255,255,255,.08) inset,inset 0 1px 0 rgba(255,255,255,.12)}
+.phone-frame::before{content:"";position:absolute;top:7px;left:50%;transform:translateX(-50%);width:34%;height:12px;background:#111;border-radius:1rem;z-index:30}
+.phone-frame::after{content:"";position:absolute;bottom:5px;left:50%;transform:translateX(-50%);width:35%;height:3.5px;background:rgba(255,255,255,.35);border-radius:2px;z-index:30}
+.phone-screen{position:relative;border-radius:2.15rem;overflow:hidden;background:#fff}
+.phone-screen img{display:block;width:100%;height:auto;border-radius:2.15rem}
+.phone-front{width:252px;flex-shrink:0;z-index:20}
+.phone-back{width:232px;flex-shrink:0;margin-left:-64px;margin-top:64px;z-index:10}
+</style></head>
+<body>
+<div class="og-card">
+<div class="left-column">
+<div class="accent-line"></div>
+<div class="eyebrow">One app for your birth team</div>
+<div class="headline">Your birth plan, your team — all in one place</div>
+<div class="summary">Build your birth plan, keep appointments on track, and message your doula or midwife — free for expecting moms.</div>
+<div class="features">Birth plan <span>&middot;</span> Appointments <span>&middot;</span> Wellness <span>&middot;</span> Care team chat</div>
+<div class="logo-area"><img src="/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/logo.svg" alt="True Joy Birthing"></div>
+</div>
+<div class="right-column">
+<div class="phone-back">
+<div class="phone-frame"><div class="phone-screen">
+<img src="/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/app-mom-dashboard.webp" alt="True Joy Birthing app home screen">
+</div></div>
+</div>
+<div class="phone-front" style="margin-left:-100px;z-index:20;position:relative">
+<div class="phone-frame"><div class="phone-screen">
+<img src="/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/tjb-app-birth-plan-builder.png" alt="True Joy Birthing app birth plan builder screen">
+</div></div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,223 @@
+---
+// ═══════════════════════════════════════════════════════════════
+// /app/ — App share-landing page (2026-10-02)
+// Landing for the in-app "Share App" button (mom profile + provider
+// profile link https://truejoybirthing.com/app) and PDF QR stamp.
+// Previously a UA-aware 302 redirect (functions/app.ts) — this page
+// now serves the brand moment; /app (no slash) still 302s UA-aware
+// for QR / known-redirect traffic.
+// og:image composed from existing approved brand assets only:
+// scripts/og-app-composition.html → public/images/og/og-app.webp
+// ═══════════════════════════════════════════════════════════════
+import Layout from '../layouts/Layout.astro';
+import AppStoreButtons from '../components/AppStoreButtons.astro';
+
+const pageTitle = "One App for Your Birth Team";
+const pageDesc = "Free app for your birth team: build your birth plan, keep appointments, and message your doula or midwife in one place.";
+
+const breadcrumbList = [
+  { name: 'Home', url: 'https://truejoybirthing.com/' },
+  { name: 'App', url: 'https://truejoybirthing.com/app/' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': 'https://truejoybirthing.com/app/#webpage',
+      name: pageTitle,
+      url: 'https://truejoybirthing.com/app/',
+      description: pageDesc,
+      publisher: { '@id': 'https://truejoybirthing.com/#organization' },
+      isPartOf: { '@id': 'https://truejoybirthing.com/#website' },
+      breadcrumb: { '@id': 'https://truejoybirthing.com/app/#breadcrumb' },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://truejoybirthing.com/app/#breadcrumb',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://truejoybirthing.com/' },
+        { '@type': 'ListItem', position: 2, name: 'App', item: 'https://truejoybirthing.com/app/' },
+      ],
+    },
+    {
+      '@type': 'MobileApplication',
+      '@id': 'https://truejoybirthing.com/app/#mobileapp',
+      name: 'True Joy Birthing',
+      applicationCategory: 'HealthApplication',
+      operatingSystem: 'iOS, Android',
+      description: pageDesc,
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      downloadUrl: 'https://apps.apple.com/us/app/true-joy-birthing/id6760793180',
+    },
+  ],
+};
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDesc}
+  canonical="https://truejoybirthing.com/app/"
+  breadcrumbList={breadcrumbList}
+  schema={schema}
+  ogImage="https://truejoybirthing.com/images/og/og-app.webp?v=1"
+  ogImageAlt="True Joy Birthing app — birth plan, appointments, wellness, and care-team messages in one place"
+>
+
+  <!-- ═══ Hero — split, mirrors /invite/ ═══ -->
+  <section class="bg-tjb-cream pt-16 pb-12">
+    <nav class="max-w-6xl mx-auto px-6 pt-4" aria-label="Breadcrumb">
+      <ol class="flex items-center gap-2 text-sm text-tjb-gray">
+        <li><a href="/" class="hover:underline">Home</a></li>
+        <li aria-hidden="true">/</li>
+        <li class="text-tjb-charcoal font-medium" aria-current="page">App</li>
+      </ol>
+    </nav>
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div>
+          <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">One app for your birth team</p>
+          <div class="w-10 h-0.5 bg-tjb-rose-500 mb-6"></div>
+          <h1 class="text-3xl md:text-4xl font-bold mb-4" style="font-family: 'DM Serif Display', Georgia, serif;">
+            A birth plan your whole team can actually see
+          </h1>
+          <p class="text-lg text-tjb-charcoal font-semibold mb-2">
+            Someone shared True Joy Birthing with you. This is it, all in one place.
+          </p>
+          <p class="text-tjb-gray mb-6">
+            Build your <a href="/birth-plan-template/" class="text-tjb-lavender-600 hover:underline">birth plan</a>,
+            keep appointments and wellness notes on track, and message your doula or midwife without another group chat. Free, always, for expecting moms.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 items-start">
+            <a href="https://apps.apple.com/us/app/true-joy-birthing/id6760793180?ct=web_app-landing" class="inline-block focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 transition-opacity hover:opacity-90" style="line-height:0" id="hero-cta-appstore" rel="noopener">
+              <img src="/images/app-store-badge.svg" alt="Download on the App Store" class="h-12 w-auto" width="120" height="40" loading="eager" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.truejoybirthing.app" class="inline-block focus-visible:outline focus-visible:outline-3 focus-visible:outline-tjb-lavender-400 focus-visible:outline-offset-2 transition-opacity hover:opacity-90" style="line-height:0" id="hero-cta-googleplay" rel="noopener">
+              <img src="/images/google-play-badge.png" alt="Get it on Google Play" class="h-12 w-auto" width="159" height="48" loading="eager" />
+            </a>
+          </div>
+          <p class="text-xs text-tjb-gray mt-3">Free. No account needed to start.</p>
+          <p class="text-xs text-tjb-gray mt-2">Your birth plan is private. Only your care team can see it.</p>
+        </div>
+        <div class="relative">
+          <picture>
+            <source type="image/webp" srcset="/images/tjb-app-birth-plan-builder.webp" />
+            <img
+              src="/images/tjb-app-birth-plan-builder.png"
+              alt="True Joy Birthing app, birth plan builder screen"
+              class="w-full rounded-2xl shadow-lg"
+              loading="eager"
+              fetchpriority="high"
+              width="390"
+              height="844"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ What's inside — 4 cards (mirrors /invite/ value props) ═══ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">What's inside</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-3" style="font-family: 'DM Sans', sans-serif;">
+          Everything for your birth, kept in one place
+        </h2>
+        <p class="text-tjb-gray max-w-2xl mx-auto">
+          No more plans lost in text threads or folders of screenshots.
+        </p>
+      </div>
+      <div class="grid gap-5 sm:grid-cols-2">
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+          <div class="w-10 h-10 rounded-lg bg-tjb-lavender-100 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-tjb-lavender-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+          </div>
+          <p class="font-semibold text-tjb-charcoal mb-2">Your birth plan</p>
+          <p class="text-sm text-tjb-gray">Walk through guided questions about labor, delivery, and newborn care. You end up with a clean, structured plan your care team can actually read.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+          <div class="w-10 h-10 rounded-lg bg-tjb-rose-50 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+            </svg>
+          </div>
+          <p class="font-semibold text-tjb-charcoal mb-2">Appointments and messages</p>
+          <p class="text-sm text-tjb-gray">Keep your schedule with your care team, and message your doula or midwife right in the app. One thread, every update.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+          <div class="w-10 h-10 rounded-lg bg-tjb-rose-50 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 2.687c-.78.78-.78 2.046 0 2.827l4.657 4.657a2.83 2.83 0 000 4L4.318 19.27c-.78.78-.78 2.046 0 2.827.39.39 1.026.39 1.414 0l4.657-4.657a4 4 0 105.656 0l4.658 4.657c.39.39 1.024.39 1.414 0 .78-.78.78-2.046 0-2.827l-4.657-4.657a2.83 2.83 0 000-4l4.657-4.657c.78-.78.78-2.046 0-2.827-.39-.39-1.024-.39-1.414 0L15.97 7.171a4 4 0 10-5.656 0L5.732 2.687a2 2 0 00-1.414 0z"/>
+            </svg>
+          </div>
+          <p class="font-semibold text-tjb-charcoal mb-2">Wellness, week by week</p>
+          <p class="text-sm text-tjb-gray">Check in on how you've been feeling, weekly tips, and what's coming next in pregnancy. Small check-ins that keep you steady.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm border border-tjb-lavender-200/50">
+          <div class="w-10 h-10 rounded-lg bg-tjb-rose-50 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5 text-tjb-rose-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <p class="font-semibold text-tjb-charcoal mb-2">Guidance you can trust</p>
+          <p class="text-sm text-tjb-gray">Video walkthroughs, recorded by our founder Shelbi (a birth doula), explain every birth decision. What the options are, and what to ask your provider.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ How it works — 3 steps ═══ -->
+  <section class="py-16 bg-tjb-cream">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Getting started</p>
+        <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+        <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-3" style="font-family: 'DM Serif Display', Georgia, serif;">
+          From link to app in three steps
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-tjb-lavender-600 text-white flex items-center justify-center mx-auto mb-4 font-bold text-lg">1</div>
+          <h3 class="font-semibold text-tjb-charcoal mb-2">Download the app</h3>
+          <p class="text-sm text-tjb-gray">Free on the App Store and Google Play. Create an account in under a minute.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-tjb-lavender-600 text-white flex items-center justify-center mx-auto mb-4 font-bold text-lg">2</div>
+          <h3 class="font-semibold text-tjb-charcoal mb-2">Build your birth plan</h3>
+          <p class="text-sm text-tjb-gray">Answer guided questions about labor, delivery, and newborn care at your own pace.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 rounded-full bg-tjb-lavender-600 text-white flex items-center justify-center mx-auto mb-4 font-bold text-lg">3</div>
+          <h3 class="font-semibold text-tjb-charcoal mb-2">Share with your team</h3>
+          <p class="text-sm text-tjb-gray">Send your plan to your doula, midwife, or OB in the app. Message, schedule, stay aligned.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Download CTA ═══ -->
+  <section class="py-20 bg-tjb-cream">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="eyebrow text-tjb-rose-500 uppercase text-xs font-semibold tracking-widest mb-4">Get started</p>
+      <div class="w-10 h-0.5 bg-tjb-rose-500 mx-auto mb-6"></div>
+      <h2 class="text-2xl md:text-3xl font-bold text-tjb-charcoal mb-4" style="font-family: 'DM Serif Display', Georgia, serif;">
+        Download True Joy Birthing
+      </h2>
+      <p class="text-tjb-gray mb-8">
+        Free for moms. 14-day free trial for birth professionals.
+      </p>
+      <AppStoreButtons variant="primary" ct="app-landing" />
+      <p class="mt-6">
+        <a href="/" class="text-sm text-tjb-lavender-600 hover:underline font-medium">I already have the app</a>
+      </p>
+    </div>
+  </section>
+
+</Layout>

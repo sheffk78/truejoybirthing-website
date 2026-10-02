@@ -1,5 +1,5 @@
 {
-  "slug": "houston-tx",
+  "slug": "gilbert-az",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
   "exit_code": 0,
@@ -9,23 +9,23 @@
   "results": {
     "pre_render_gate": {
       "status": "PASS",
-      "detail": "scene data exists at remotion/src/data/houston-tx-data.ts"
+      "detail": "scene data exists at remotion/src/data/gilbert-az-data.ts"
     },
     "video_file_exists": {
       "status": "PASS",
-      "detail": "local mp4 cleaned post-upload (expected; YouTube upload + live embed verified)"
+      "detail": "video file 27.6MB >10MB"
     },
     "youtube_upload": {
       "status": "PASS",
-      "detail": "videoId VfdvxeHxHyY present in video-embeds.ts"
+      "detail": "videoId VX0Bpwt0bQQ present in video-embeds.ts"
     },
     "youtube_thumbnail": {
       "status": "PASS",
-      "detail": "thumbnail present locally (709KB) and YouTube returns 90KB"
+      "detail": "thumbnail present locally (867KB) and YouTube returns 132KB"
     },
     "video_embedded": {
       "status": "PASS",
-      "detail": "embed found (vid VfdvxeHxHyY) on live page"
+      "detail": "embed found (vid VX0Bpwt0bQQ) on live page"
     },
     "videoobject_schema": {
       "status": "PASS",
@@ -37,11 +37,11 @@
     },
     "provider_photo_quality": {
       "status": "PASS",
-      "detail": "all 9 provider photos are real images (>5KB, >100 colors)"
+      "detail": "all 4 provider photos are real images (>5KB, >100 colors)"
     },
     "video_content_city_match": {
       "status": "PASS",
-      "detail": "G67: video overview scene names this city ('houston' found; frame t=22s)"
+      "detail": "G67: video overview scene names this city ('gilbert' found; frame t=22s)"
     }
   }
 }
