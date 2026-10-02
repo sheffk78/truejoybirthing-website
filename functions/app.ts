@@ -1,5 +1,6 @@
 /**
- * CF Pages Function: GET /app — UA-aware app-store redirect (302)
+ * CF Pages Function: GET /app — smart routing between the landing page and
+ * UA-aware app-store redirects (302)
  *
  * ┌─────────────────────────────────────────────────────────────────────────┐
  * │ ANDROID FLIP POINT — there is exactly ONE place to flip Android live:   │
@@ -10,13 +11,21 @@
  * │ dead Google Play listing.                                               │
  * └─────────────────────────────────────────────────────────────────────────┘
  *
- * Routing:
- *   iOS UA (iPhone/iPad/iPod, or Mac + touch points = iPad-as-desktop Safari)
- *     → App Store listing
- *   Android UA (only when APP_STORES.android.live)
- *     → Google Play listing
- *   Android UA while not live, desktop/unknown UA
- *     → /birth-plan-template/
+ * 2026-10-02 — /app/ is now a real branded landing page (src/pages/app.astro):
+ * the in-app Share button links https://truejoybirthing.com/app and social
+ * crawlers (iMessage, Facebook) must see its OG tags. So the UA-aware store
+ * redirect only fires when it is actually wanted:
+ *
+ *   /app?src=… or ?utm_…  → UA-aware 302 (QR stamps / campaign links keep
+ *                           their one-tap store behavior + attribution)
+ *   crawler UAs (facebookexternalhit, iMessage, Slack, Twitterbot, Applebot,
+ *   WhatsApp, LinkedIn, Discord, Telegram, Pinterest) → fall through to the
+ *   static landing page so OG tags render
+ *   /app, /app/ with no query from a normal browser → static landing page
+ *
+ * iOS users who want the store directly: the landing page's own buttons link
+ * both stores (with ?ct=web_app-landing attribution), so dropping the plain
+ * 302 loses nothing and gains the brand moment for every share.
  *
  * Query string (e.g. ?src=pdf-qr) is forwarded as utm params so clicks
  * stay measurable: src → utm_source, utm_* pass through untouched.
@@ -26,12 +35,25 @@ import { APP_STORES } from '../src/config/app-stores';
 
 interface EventContext {
   request: Request;
+  next: () => Promise<Response>;
 }
+
+// Social/messaging crawlers that fetch a URL to render its link preview.
+// They must see the landing page's OG tags, never a 302 to a store.
+const CRAWLER_UA_RE =
+  /facebookexternalhit|Twitterbot|Slack(?:-ImgProxy)?|iMessage|Applebot|WhatsApp|LinkedInBot|Discordbot|TelegramBot|Pinterestbot|embedly|quora link preview|outbrain|vkshare|W3C_Validator/i;
 
 export const onRequestGet = async (context: EventContext) => {
   const req: Request = context.request;
   const url = new URL(req.url);
   const ua = req.headers.get('user-agent') || '';
+
+  const hasCampaignQuery = url.searchParams.has('src') || [...url.searchParams.keys()].some((k) => k.startsWith('utm_'));
+
+  // No campaign query, or a link-preview crawler asking → static landing page.
+  if (!hasCampaignQuery || CRAWLER_UA_RE.test(ua)) {
+    return context.next();
+  }
 
   const isAppleDevice = /iPhone|iPad|iPod/.test(ua);
   // iPadOS 13+ reports as desktop Safari (Macintosh); touch points give it away.
