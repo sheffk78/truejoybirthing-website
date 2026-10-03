@@ -303,6 +303,14 @@
   "density": 0.98,
   "verdict": "PASS"
  },
+ "chandler-az": {
+  "file": "og-city-chandler-az.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
  "charleston-sc": {
   "file": "og-city-charleston-sc.webp",
   "dims": "1200x630",
@@ -329,6 +337,14 @@
  },
  "chicago-il": {
   "file": "og-city-chicago-il-v6.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "chula-vista-ca": {
+  "file": "og-city-chula-vista-ca.webp",
   "dims": "1200x630",
   "cov_x": 1.0,
   "cov_y": 0.98,
@@ -463,6 +479,14 @@
   "density": 0.98,
   "verdict": "PASS"
  },
+ "escondido-ca": {
+  "file": "og-city-escondido-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
  "eugene-or": {
   "file": "og-city-eugene-or-v2.webp",
   "dims": "1200x630",
@@ -527,6 +551,14 @@
   "density": 0.98,
   "verdict": "PASS"
  },
+ "fullerton-ca": {
+  "file": "og-city-fullerton-ca-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
  "fulshear-tx": {
   "file": "og-city-fulshear-tx.webp",
   "dims": "1200x630",
@@ -553,6 +585,14 @@
  },
  "garden-grove-ca": {
   "file": "og-city-garden-grove-ca-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "gilbert-az": {
+  "file": "og-city-gilbert-az.webp",
   "dims": "1200x630",
   "cov_x": 1.0,
   "cov_y": 0.98,
@@ -991,6 +1031,14 @@
   "density": 0.98,
   "verdict": "PASS"
  },
+ "pasadena-ca": {
+  "file": "og-city-pasadena-ca.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
  "pearland-tx": {
   "file": "og-city-pearland-tx.webp",
   "dims": "1200x630",
@@ -1017,6 +1065,14 @@
  },
  "pittsburgh-pa": {
   "file": "og-city-pittsburgh-pa.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "pomona-ca": {
+  "file": "og-city-pomona-ca.webp",
   "dims": "1200x630",
   "cov_x": 1.0,
   "cov_y": 0.98,
@@ -1231,8 +1287,24 @@
   "density": 0.98,
   "verdict": "PASS"
  },
+ "staten-island-ny": {
+  "file": "og-city-staten-island-ny.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
  "stockton-ca": {
   "file": "og-city-stockton-ca-v3.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "sunnyvale-ca": {
+  "file": "og-city-sunnyvale-ca.webp",
   "dims": "1200x630",
   "cov_x": 1.0,
   "cov_y": 0.98,
@@ -1249,6 +1321,14 @@
  },
  "tampa-fl": {
   "file": "og-city-tampa-fl.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "tempe-az": {
+  "file": "og-city-tempe-az.webp",
   "dims": "1200x630",
   "cov_x": 1.0,
   "cov_y": 0.98,
@@ -1281,6 +1361,14 @@
  },
  "tulsa-ok": {
   "file": "og-tulsa-ok-v2.webp",
+  "dims": "1200x630",
+  "cov_x": 1.0,
+  "cov_y": 0.98,
+  "density": 0.98,
+  "verdict": "PASS"
+ },
+ "tuscaloosa-al": {
+  "file": "og-city-tuscaloosa-al.webp",
   "dims": "1200x630",
   "cov_x": 1.0,
   "cov_y": 0.98,

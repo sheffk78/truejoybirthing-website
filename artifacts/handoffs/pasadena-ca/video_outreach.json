@@ -1,20 +1,24 @@
 {
-  "slug": "pasadena-ca",
-  "stage": "video_outreach",
-  "worker_model": "hermes-cli/claude-opus-4-6",
-  "produced_at": "2026-10-02T17:00:00Z",
-  "status": "failed",
-  "summary": "Resume stage from top. No video artifacts exist (no scene data file, no video, no upload). Outreach deterministically BLOCKED: 0/3 sent.",
-  "evidence": {
-    "outreach_log": [
-      {"run": "2026-10-02T16:56Z", "script": "~/.hermes/scripts/tjb-batch-outreach.py build --slug pasadena-ca", "sent": 0, "blocked_reason": "Nancy Connelly: no email found; Brighid Quinn: send failed (pytz import in tjb-outreach-send.py); Rebecca Belenky: send failed (same). Both emails valid (gmail.com, losangelesbirth.com) with live HTTP 200 sites."}
-    ],
-    "video": "not started — pasadena-ca-data.ts does not exist"
-  },
-  "next_worker_todo": [
-    "Fix pytz env in tjb-outreach-send.py run path (install into the python3 the batch script uses), re-run tjb-batch-outreach.py build --slug pasadena-ca",
-    "Add Nancy Connelly to outreach exception: no email published on nancydoula.com (phone-only practice) — verify site, if still no email record as exception in send log",
-    "Then full video lane: pasadena-ca-data.ts (full state names: California/California), TTS (Shelbi voice), pre-render gate, stills, render, YouTube upload public+embed, thumbnail, video-embeds.ts, rebuild+deploy, unlist old video if any, city-audit.json flags, this contract",
-    "Pasadena facts from cities.ts: 3 doulas (Nancy Connelly, Brighid Quinn, Rebecca Belenky/LA Birth); 5 hospitals incl Huntington + USC Arcadia; doula cost $1,000-$2,500; hero pasadena-ca-birth-doula-skyline; provider photos exist; pre-existing yt thumbnail pasadena-ca-yt-thumbnail.webp in website repo"
-  ]
+ "slug": "pasadena-ca",
+ "stage": "video_outreach",
+ "worker_model": "hermes-cli/claude-opus-4-6",
+ "produced_at": "2026-10-02T17:00:00Z",
+ "status": "failed",
+ "summary": "Resume stage from top. No video artifacts exist (no scene data file, no video, no upload). Outreach deterministically BLOCKED: 0/3 sent.",
+ "evidence": {
+  "outreach_log": [
+   {
+    "run": "2026-10-02T16:56Z",
+    "script": "~/.hermes/scripts/tjb-batch-outreach.py build --slug pasadena-ca",
+    "sent": 0,
+    "blocked_reason": "Nancy Connelly: no email found; Brighid Quinn: send failed (pytz import in tjb-outreach-send.py); Rebecca Belenky: send failed (same). Both emails valid (gmail.com, losangelesbirth.com) with live HTTP 200 sites."
+   }
+  ],
+  "video": "not started \u2014 pasadena-ca-data.ts does not exist"
+ },
+ "next_worker_todo": [
+  "pytz FIXED upstream 10/02 (tjb-outreach-send.py now zoneinfo-first; 2 sends verified quinndoula@gmail.com + rebecca@losangelesbirth.com in send log) \u2014 no send re-work needed except Nancy Connelly (no email published: record as exception)",
+  "Video lane from scene data: 7 video-pre images DONE 10/02 14:13 (provider portraits x3, hospitals, skyline, support scene in video/remotion/public/images/) \u2014 write pasadena-ca-data.ts (full state names), TTS (Shelbi), pre-render gate, render, YouTube upload public, thumbnail, video-embeds.ts, rebuild+deploy",
+  "Update this contract after EACH milestone (crash-resume record), then state advance"
+ ]
 }

@@ -1,20 +1,40 @@
 {
-  "slug": "pomona-ca",
-  "stage": "video_outreach",
-  "produced_at": null,
-  "worker_model": null,
-  "notes": "",
-  "sources": [],
-  "video_file": null,
-  "video_mb": null,
-  "youtube_id": null,
-  "thumbnail_path": null,
-  "embed_verified": null,
-  "outreach": [
-    {
-      "provider": null,
-      "status": null,
-      "message_id": null
-    }
-  ]
+ "slug": "pomona-ca",
+ "stage": "video_outreach",
+ "produced_at": "2026-10-03T22:40:00Z",
+ "worker_model": "bedrock:latest (pomona video_outreach lane, resume #1)",
+ "notes": "Video milestones DONE & live-verified: embedded data-video-id=03e4Fxto42Q, thumbnail uploaded (YouTube returns 112KB), VideoObject schema present, G67 city-match passed. mp4 cleaned post-upload on disk (gate accepts, expected). OUTREACH: deterministic tjb-batch-outreach.py --slug pomona-ca ran 10/3 22:36 UTC -> BLOCKED: no email found for any of 3 providers (2x bornbir.com and npino.com are directory domains on the blocklist; no inline email fields in cities.ts). Gates never reached ZeroBounce. Not fabricated: send log has 0 pomona rows. Manual re-outreach path = find real provider emails (provider-owned sites/contact forms) then re-run build --slug pomona-ca.",
+ "sources": [],
+ "video_file": "video/remotion/out/pomona-ca-city-guide.mp4",
+ "video_mb": 21.7,
+ "youtube_id": "03e4Fxto42Q",
+ "thumbnail_path": "video/remotion/out/yt-thumb-pomona-ca.png",
+ "embed_verified": true,
+ "outreach": [
+  {
+   "provider": "Stephanie Knol",
+   "status": "blocked",
+   "message_id": null,
+   "reason": "no email found (bornbir.com directory domain blocked by design)"
+  },
+  {
+   "provider": "Lori Kuettle",
+   "status": "blocked",
+   "message_id": null,
+   "reason": "no email found (bornbir.com directory domain blocked by design)"
+  },
+  {
+   "provider": "Courageous Labors Doula Services",
+   "status": "blocked",
+   "message_id": null,
+   "reason": "no email found (npino.com directory domain blocked by design)"
+  }
+ ],
+ "next_worker_todo": [
+  "Find real provider emails (provider-owned sites or contact pages; skip directories) - add email fields to pomona-ca localDoulas in cities.ts (python heredoc, never write_file/patch) OR use tjb-form-outreach.py for form-based contacts",
+  "Re-run: python3 ~/.hermes/scripts/tjb-batch-outreach.py manual --slug pomona-ca",
+  "Update handoff + public/city-audit.json outreach=true if any send lands",
+  "tjb-pipeline-state.py advance pomona-ca video_outreach (gate passes on sent OR blocked-with-reason)"
+ ],
+ "outreach_blocked_reason": "Stephanie Knol: no email found; Lori Kuettle: no email found; Courageous Labors Doula Services: no email found"
 }

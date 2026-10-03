@@ -1,0 +1,27 @@
+{
+ "slug": "pomona-ca",
+ "verdicts": [
+  {
+   "crop": "pomona-ca-hero-fig0.png",
+   "verdict": "pass",
+   "reason": "The pregnant woman's silhouette shows no anatomical defects; one arm is visible holding the belly while the other is naturally obscured in the side profile."
+  },
+  {
+   "crop": "pomona-ca-og-fig0.png",
+   "verdict": "pass",
+   "reason": "The pregnant woman's silhouette displays correct anatomy with both arms and hands naturally positioned on her belly."
+  },
+  {
+   "crop": "pomona-ca-support-fig0.png",
+   "verdict": "pass",
+   "reason": "The human figures have no concrete anatomical defects such as missing limbs, extra limbs, fused digits, or misplaced features."
+  },
+  {
+   "crop": "pomona-ca-thumb-fig0.png",
+   "verdict": "pass",
+   "reason": "The figure is a side-profile silhouette of a pregnant woman holding her belly, showing no anatomical defects."
+  }
+ ],
+ "method": "2x figure-crop grid vision review (Gemini 2.5 Flash, fail-closed on API error)",
+ "checked_at": "2026-10-03T22:45:11.633086+00:00"
+}
