@@ -1,7 +1,7 @@
 {
  "slug": "pomona-ca",
  "stage": "video_outreach",
- "produced_at": "2026-10-03T23:05:00Z",
+ "produced_at": "2026-10-03T23:35:00Z",
  "worker_model": "bedrock:latest (pomona video_outreach lane, resume of budget-killed 10/02 worker)",
  "notes": "Video chain completed 10/02 17:05-17:13 MDT by prior worker (render, upload as NEW public+embeddable video, thumbnail derived from hero, embed deployed, old video superseded). All video milestones re-verified live THIS lane 10/03: data-video-id=03e4Fxto42Q on page, VideoObject schema, thumbnail served by YouTube (112KB), G67 city-match, 9/9 stage gates green, deploy re-run after city-audit flag update. mp4 absent from disk = post-upload cleanup (gate accepts; upload proven via pomona-ca-youtube-id.txt in remotion/out + live embed). OUTREACH (deterministic tjb-batch-outreach.py manual --slug pomona-ca, ran 2026-10-03T22:36Z): BLOCKED with recorded reason - all 3 providers unreachable by email: Knol + Kuettle point at bornbir.com directory pages (blocked-domain list by design 2026-10-01 DAG-audit fix), Courageous Labors at npino.com NPI directory; no inline email fields in cities.ts. Send log: 0 pomona rows (nothing fabricated). Reason mirrored to ~/.hermes/state/tjb-city-status.json outreach_blocked_reason. Manual re-outreach path: find provider-owner emails (scraper already blocks directories - need the actual practice sites) or form-based outreach, add email fields to cities.ts, re-run batch script.",
  "sources": [
@@ -55,16 +55,16 @@
  ],
  "outreach_blocked_reason": "Stephanie Knol: no email found; Lori Kuettle: no email found; Courageous Labors Doula Services: no email found",
  "next_worker_todo": [
-  "Re-outreach: locate provider-owned sites/emails (bornbir.com pages may list mailto in provider profile; npino NPI may link practice site) - directories are blocked by design",
-  "Add working email fields to pomona-ca localDoulas entries in cities.ts (python heredoc only), run npx tsx scripts/preflight.ts pomona-ca",
-  "Re-run: python3 ~/.hermes/scripts/tjb-batch-outreach.py manual --slug pomona-ca",
-  "If any send lands: flip public/city-audit.json outreach=true + redeploy",
-  "Then: python3 ~/.hermes/skills/productivity/tjb-city-orchestrator/scripts/tjb-pipeline-state.py advance pomona-ca video_outreach"
+  "Jeff/doula lookup: find provider-OWNED sites or direct emails for Stephanie Knol, Lori Kuettle, Courageous Labors (Marchael Hagood) - directories blocked by design",
+  "Add working email fields to pomona-ca localDoulas in cities.ts (python heredoc) + preflight.ts pomona-ca",
+  "Re-run: python3 ~/.hermes/scripts/tjb-batch-outreach.py manual --slug pomona-ca (sends with delays, appends send log)",
+  "On >=1 sent: tjb-pipeline-state.py unblock pomona-ca && advance pomona-ca video_outreach; flip city-audit outreach=true + redeploy"
  ],
  "city_audit": {
   "video": true,
   "outreach": false,
   "score": 90,
   "deployed": "2026-10-03"
- }
+ },
+ "state_terminal": "fail_recorded (3/3 attempts, blocked=true). Stage gates 9/9 PASS. DAG done-gate requires >=1 verified first-touch send in canonical log; outreach is genuinely BLOCKED: all 3 providers unreachable by email (bornbir.com x2 + npino.com directories, no real emails in cities.ts). Manual unblock: find provider-owned emails -> add to cities.ts -> re-run tjb-batch-outreach.py manual --slug pomona-ca -> tjb-pipeline-state.py unblock + advance."
 }

@@ -2070,4 +2070,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: 164,
   },
 
+  "sunnyvale-ca": {
+    videoId: "CMyl3hZRzJ0",
+    title: "Sunnyvale, California Doula & Birth Plan Guide",
+    description: "Watch the full Sunnyvale, California Doula & Birth Plan Guide — all in about 2:33.",
+    duration: 153,
+  },
+
 };
