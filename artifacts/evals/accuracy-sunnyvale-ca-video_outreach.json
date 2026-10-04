@@ -1,0 +1,54 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "sunnyvale-ca",
+  "stage": "video_outreach",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 5,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible content for a True Joy Birthing Sunnyvale birth-support page and directly supports the provider-bio portion of the claim, with no fabrication signals.",
+      "claim": "Provider bio, cost range, and services listed on live page",
+      "url": "https://truejoybirthing.com/birth-support/sunnyvale-ca/",
+      "quote": "Tracie Lynch is a Sunnyvale-based birth doula, midwife, childbirth educator, and lactation counselor with 16 years of experience and more than 900 births attended."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote describes a provider bio (Thais Hand, postpartum doula, IBCLC credentials) and practice details (service area, Carrot benefit acceptance) that plausibly appear on a True Joy Birthing Sunnyvale, CA birth-support page, matching both the domain's subject matter and the claim's topic.",
+      "claim": "Provider bio and practice listing on live page",
+      "url": "https://truejoybirthing.com/birth-support/sunnyvale-ca/",
+      "quote": "Thais Hand is a Sunnyvale postpartum doula and Certified Lactation Consultant (IBCLC internship completed at Stanford Children's) who works across the entire Bay Area and accepts Carrot and other empl"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is specific provider-bio content (named doula, NPI number, DHCS directory listing, Medi-Cal enrollment) that matches both the claim's topic and the page's subject matter \u2014 a birth support/doula service page for Sunnyvale, CA on a birthing services domain.",
+      "claim": "Provider bio (Medi-Cal enrolled, NPI 1235094145, DHCS directory) on live page",
+      "url": "https://truejoybirthing.com/birth-support/sunnyvale-ca/",
+      "quote": "Anuja Bhuta is a Medi-Cal enrolled birth doula in Sunnyvale (NPI 1235094145) listed in California DHCS's official doula directory, meaning Medi-Cal members can access her birth doula support at no cos"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly matches the claim's specifics \u2014 a San Jose-based doula serving Sunnyvale within a 25-mile range \u2014 and is plausible content for the True Joy Birthing Sunnyvale, CA birth support page.",
+      "claim": "Provider bio (serves Sunnyvale from San Jose, 25-mile range) on live page",
+      "url": "https://truejoybirthing.com/birth-support/sunnyvale-ca/",
+      "quote": "Michelle Rodriguez, known as Mica, is a San Jose-based birth doula serving Sunnyvale, Santa Clara, and the Peninsula within a 25-mile range through Birth by Mica."
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a JSON-LD fragment with a VideoObject @id anchored to the exact page URL and a name matching the claim's video title, consistent with the truejoybirthing.com Sunnyvale doula page.",
+      "claim": "VideoObject schema present on live page referencing videoId c_C2Gz01-X8 (name: \"Sunnyvale, California Doula & Birth Plan Guide\")",
+      "url": "https://truejoybirthing.com/birth-support/sunnyvale-ca/",
+      "quote": "\"@type\":\"VideoObject\",\"@id\":\"https://truejoybirthing.com/birth-support/sunnyvale-ca/#video\",\"name\":\"Sunnyvale, California Doula & Birth Plan Guide\""
+    }
+  ],
+  "checked_at": "2026-10-04T14:03:48-06:00"
+}

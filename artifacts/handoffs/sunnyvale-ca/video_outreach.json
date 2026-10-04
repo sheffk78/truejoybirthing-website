@@ -1,19 +1,74 @@
 {
-  "slug": "sunnyvale-ca",
-  "stage": "video_outreach",
-  "produced_at": "2026-10-04T17:15:00Z",
-  "worker_model": "bedrock:latest (sunnyvale video_outreach lane)",
-  "milestones": {
-    "scene_data": {"done": true, "evidence": "src/data/sunnyvale-ca-data.ts exists (7280 bytes) in remotion repo; pre-render gate G9 passed"},
-    "tts": {"done": true, "evidence": "public/audio/sunnyvale-ca/ 9 scene wavs + master"},
-    "prerender_gate": {"done": true, "evidence": ".g7b-sunnyvale-ca.log; G9 pass"},
-    "rendered": {"done": true, "evidence": "out/sunnyvale-ca-city-guide.mp4 20.3MB"},
-    "uploaded": {"done": true, "youtube_id": "c_C2Gz01-X8", "evidence": "out/sunnyvale-ca-youtube-id.txt"},
-    "thumbnail": {"done": true, "evidence": "out/yt-thumb-sunnyvale-ca.png 784KB; YouTube serves 109KB per stage gate"},
-    "embed_code": {"done": true, "evidence": "video-embeds.ts videoId c_C2Gz01-X8 (staged in git index by prior worker)"},
-    "deploy": {"done": false, "note": "dist built 11:07 contains c_C2Gz01-X8 but live CF still serves old CMyl3hZRzJ0 — need deploy + propagation + re-verify"},
-    "outreach": {"done": false, "note": "tjb-batch-outreach.py not yet run this lane"}
+ "slug": "sunnyvale-ca",
+ "stage": "video_outreach",
+ "produced_at": "2026-10-04T19:55:00Z",
+ "worker_model": "bedrock:latest (sunnyvale video_outreach lane, 2026-10-04)",
+ "notes": "All video milestones verified: scene data, TTS (Shelbi-Voxtral), pre-render gate, render, YouTube upload, thumbnail, embed. Deploy propagated embed to CF edge \u2014 live data-video-id=c_C2Gz01-X8, old CMyl3hZRzJ0 gone. Outreach via deterministic tjb-batch-outreach.py: 2 of 4 sent (send log rows with real message_ids below); Tracie Lynch blocked (doulamatch.net directory profile on blocked-domain list, no clean email in cities.ts); Anuja Bhuta blocked (only contact = bhutabodyworks.com mailto with pre-filled massage-booking body \u2014 email gate INVALID_FORMAT, correctly not sent). Manual re-outreach path: add direct email fields for those two in cities.ts sunnyvale-ca localDoulas, re-run tjb-batch-outreach.py manual --slug sunnyvale-ca.",
+ "sources": [
+  {
+   "provider": "Tracie Lynch",
+   "claim": "Provider bio, cost range, and services listed on live page",
+   "url": "https://truejoybirthing.com/birth-support/sunnyvale-ca/",
+   "quote": "Tracie Lynch is a Sunnyvale-based birth doula, midwife, childbirth educator, and lactation counselor with 16 years of experience and more than 900 births attended."
   },
-  "next_worker_todo": ["bash scripts/deploy.sh sunnyvale-ca", "verify live data-video-id=c_C2Gz01-X8", "run tjb-batch-outreach.py build --slug sunnyvale-ca", "contract-validate --compare", "advance or fail state script"],
-  "notes": "Resuming: all video work verified live except deploy propagation. 8/9 stage gates pass; video_embedded fails only because live page not yet updated."
+  {
+   "provider": "Thais Hand",
+   "claim": "Provider bio and practice listing on live page",
+   "url": "https://truejoybirthing.com/birth-support/sunnyvale-ca/",
+   "quote": "Thais Hand is a Sunnyvale postpartum doula and Certified Lactation Consultant (IBCLC internship completed at Stanford Children's) who works across the entire Bay Area and accepts Carrot and other employer benefit program"
+  },
+  {
+   "provider": "Anuja Bhuta",
+   "claim": "Provider bio (Medi-Cal enrolled, NPI 1235094145, DHCS directory) on live page",
+   "url": "https://truejoybirthing.com/birth-support/sunnyvale-ca/",
+   "quote": "Anuja Bhuta is a Medi-Cal enrolled birth doula in Sunnyvale (NPI 1235094145) listed in California DHCS's official doula directory, meaning Medi-Cal members can access her birth doula support at no cost."
+  },
+  {
+   "provider": "Michelle Rodriguez",
+   "claim": "Provider bio (serves Sunnyvale from San Jose, 25-mile range) on live page",
+   "url": "https://truejoybirthing.com/birth-support/sunnyvale-ca/",
+   "quote": "Michelle Rodriguez, known as Mica, is a San Jose-based birth doula serving Sunnyvale, Santa Clara, and the Peninsula within a 25-mile range through Birth by Mica."
+  },
+  {
+   "provider": "page-video",
+   "claim": "VideoObject schema present on live page referencing videoId c_C2Gz01-X8 (name: \"Sunnyvale, California Doula & Birth Plan Guide\")",
+   "url": "https://truejoybirthing.com/birth-support/sunnyvale-ca/",
+   "quote": "\"@type\":\"VideoObject\",\"@id\":\"https://truejoybirthing.com/birth-support/sunnyvale-ca/#video\",\"name\":\"Sunnyvale, California Doula & Birth Plan Guide\""
+  }
+ ],
+ "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/sunnyvale-ca-city-guide.mp4",
+ "video_mb": 19.4,
+ "youtube_id": "c_C2Gz01-X8",
+ "thumbnail_path": "dist/images/yt-thumb-sunnyvale-ca.png",
+ "embed_verified": true,
+ "outreach": [
+  {
+   "provider": "Tracie Lynch",
+   "status": "blocked",
+   "message_id": null,
+   "reason": "no email: doulamatch.net profile is a directory on the tjb-batch-outreach blocked-domain list; no inline email field in cities.ts. Re-outreach: add direct email, re-run manual mode"
+  },
+  {
+   "provider": "Thais Hand",
+   "status": "sent",
+   "message_id": "vps-20261004193932723462",
+   "to": "thais@yournewdoula.com"
+  },
+  {
+   "provider": "Anuja Bhuta",
+   "status": "blocked",
+   "message_id": null,
+   "reason": "email gate INVALID_FORMAT: bhutabodyworks.com mailto URL carries pre-filled massage-booking subject/body query params \u2014 not a plain address. Re-outreach: add anujabodyworks-style direct email in cities.ts, re-run manual mode"
+  },
+  {
+   "provider": "Michelle Rodriguez",
+   "status": "sent",
+   "message_id": "vps-20261004193959635256",
+   "to": "birthbymica@gmail.com"
+  }
+ ],
+ "images": {
+  "hero_watermark_clean": true,
+  "og_watermark_clean": true
+ }
 }

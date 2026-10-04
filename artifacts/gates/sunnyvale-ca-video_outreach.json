@@ -2,9 +2,9 @@
   "slug": "sunnyvale-ca",
   "stage": "video_outreach",
   "mode": "local_video_outreach",
-  "exit_code": 1,
-  "passed": 8,
-  "failed": 1,
+  "exit_code": 0,
+  "passed": 9,
+  "failed": 0,
   "skipped": 0,
   "results": {
     "pre_render_gate": {
@@ -24,8 +24,8 @@
       "detail": "thumbnail present locally (765KB) and YouTube returns 109KB"
     },
     "video_embedded": {
-      "status": "FAIL",
-      "detail": "videoId c_C2Gz01-X8 not found on live page"
+      "status": "PASS",
+      "detail": "embed found (vid c_C2Gz01-X8) on live page"
     },
     "videoobject_schema": {
       "status": "PASS",
