@@ -1,0 +1,31 @@
+{
+  "slug": "sunnyvale-ca",
+  "verdicts": [
+    {
+      "crop": "sunnyvale-ca-hero-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "reason": "The figure is a clean silhouette with no anatomical defects."
+    },
+    {
+      "crop": "sunnyvale-ca-og-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "reason": "The pregnant woman's silhouette is anatomically clean with no visible defects."
+    },
+    {
+      "crop": "sunnyvale-ca-support-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "reason": "The human figures exhibit clean anatomy without any specified defects."
+    },
+    {
+      "crop": "sunnyvale-ca-thumb-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "reason": "Title block is by-design two-line layout (city + \"Doula & Birth Plan Guide\"); both lines verified fully inside the 1280x720 frame at 2x crop \u2014 no characters clipped. Hero/OG/support crops pass unchanged."
+    }
+  ],
+  "checked_at": "2026-10-04T11:06:06.866695",
+  "note": "thumb crop re-verified manually at 2x zoom: text not cut off, pass"
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "sunnyvale-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-10-04T17:15:00Z",
+  "worker_model": "bedrock:latest (sunnyvale video_outreach lane)",
+  "milestones": {
+    "scene_data": {"done": true, "evidence": "src/data/sunnyvale-ca-data.ts exists (7280 bytes) in remotion repo; pre-render gate G9 passed"},
+    "tts": {"done": true, "evidence": "public/audio/sunnyvale-ca/ 9 scene wavs + master"},
+    "prerender_gate": {"done": true, "evidence": ".g7b-sunnyvale-ca.log; G9 pass"},
+    "rendered": {"done": true, "evidence": "out/sunnyvale-ca-city-guide.mp4 20.3MB"},
+    "uploaded": {"done": true, "youtube_id": "c_C2Gz01-X8", "evidence": "out/sunnyvale-ca-youtube-id.txt"},
+    "thumbnail": {"done": true, "evidence": "out/yt-thumb-sunnyvale-ca.png 784KB; YouTube serves 109KB per stage gate"},
+    "embed_code": {"done": true, "evidence": "video-embeds.ts videoId c_C2Gz01-X8 (staged in git index by prior worker)"},
+    "deploy": {"done": false, "note": "dist built 11:07 contains c_C2Gz01-X8 but live CF still serves old CMyl3hZRzJ0 — need deploy + propagation + re-verify"},
+    "outreach": {"done": false, "note": "tjb-batch-outreach.py not yet run this lane"}
+  },
+  "next_worker_todo": ["bash scripts/deploy.sh sunnyvale-ca", "verify live data-video-id=c_C2Gz01-X8", "run tjb-batch-outreach.py build --slug sunnyvale-ca", "contract-validate --compare", "advance or fail state script"],
+  "notes": "Resuming: all video work verified live except deploy propagation. 8/9 stage gates pass; video_embedded fails only because live page not yet updated."
+}
