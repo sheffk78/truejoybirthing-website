@@ -35,8 +35,11 @@ CITIES_TS = os.path.join(REPO, "src/data/cities.ts")
 PRIORITY_CSV = os.path.expanduser(
     "~/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/work/city-priority-list.csv"
 )
-STATES_DIR = os.path.expanduser(
-    "~/.hermes/skills/productivity/tjb-city-orchestrator/states"
+STATES_DIR = os.environ.get(
+    "TJB_STATES_DIR",
+    os.path.expanduser(
+        "~/.hermes/skills/productivity/tjb-city-orchestrator/states"
+    ),
 )
 STATE_SCRIPT = os.path.join(REPO, "scripts/tjb-pipeline-state.py")
 SEED_LOG = os.path.expanduser(
