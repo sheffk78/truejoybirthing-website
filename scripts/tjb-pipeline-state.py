@@ -717,6 +717,52 @@ def cmd_done(slug: str, stage: str):
             }, indent=2))
             sys.exit(3)
 
+    # VIDEO OUTREACH CONTRACT GUARD (hardening, 2026-10-05):
+    # Direct `done` calls bypass `advance`'s contract check — fullerton-ca got a
+    # done on 2026-10-02 with contract_valid:false merely RECORDED, not enforced
+    # (empty scaffold: youtube_id null, embed_verified null). At done time the
+    # handoff contract MUST validate. Fail closed as RETRYABLE (exit 1) so the
+    # dispatcher re-spawns a worker that fixes the contract file, then re-dones.
+    # This mirrors advance's contract_invalid behavior — no bypass path remains.
+    if actual_stage == "video_outreach":
+        try:
+            cv = subprocess.run(
+                ["python3", str(Path(PROJECT_DIR) / "scripts" / "contract-validate.py"), slug, actual_stage],
+                capture_output=True, text=True, timeout=60, cwd=PROJECT_DIR)
+            if cv.returncode != 0:
+                try:
+                    violations = ", ".join(json.loads(cv.stdout).get("violations", []))[:400]
+                except Exception:
+                    violations = (cv.stdout or cv.stderr)[-400:]
+                history = state.get("history", [])
+                history.append({
+                    "stage": "video_outreach",
+                    "status": "done_refused",
+                    "reason": f"handoff contract invalid: {violations}",
+                    "timestamp": int(time.time()),
+                })
+                state["history"] = history
+                state["updated_at"] = int(time.time())
+                save_state(slug, state)
+                print(json.dumps({
+                    "action": "done_refused",
+                    "slug": slug,
+                    "stage": actual_stage,
+                    "contract_exit": cv.returncode,
+                    "violations": violations,
+                    "error": (
+                        "video_outreach handoff contract failed validation at done time "
+                        f"(direct done attempted to bypass advance's contract gate). Fix "
+                        f"artifacts/handoffs/{slug}/video_outreach.json per violations, "
+                        "then re-run done."
+                    ),
+                }, indent=2))
+                sys.exit(1)
+        except subprocess.TimeoutExpired:
+            print(json.dumps({"action": "contract_timeout", "slug": slug, "stage": actual_stage,
+                "message": "Contract validation timed out at done time. Treat as retryable; re-run done."}, indent=2))
+            sys.exit(2)
+
     # Record completion
     completed = state.get("stages_completed", [])
     if actual_stage not in completed:

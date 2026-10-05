@@ -1,20 +1,74 @@
 {
   "slug": "fullerton-ca",
   "stage": "video_outreach",
-  "produced_at": null,
-  "worker_model": null,
-  "notes": "",
-  "sources": [],
+  "produced_at": "2026-10-05T10:20:00Z",
+  "worker_model": "glm-5.3-flash (Kit backfill repair, 2026-10-05 \u2014 evidence from source artifacts)",
+  "notes": "STAGE REPAIRED 2026-10-05 (Kit). Original worker logged the done but left the contract scaffold unfilled; video and first-touch send were real. Evidence trail: youtube_id C5A0V62NGdQ from out/fullerton-ca-youtube-id.txt; thumbnail yt-thumb-fullerton-ca.png in dist/images + public/images; embed live-verified via curl (data-video-id=C5A0V62NGdQ + VideoObject schema on production page, 2026-10-05); first-touch send to Birth Your Way Doulas verified in canonical send log (vps-20261001173755637287, 2026-10-01, from shelbi@truejoybirthing.com). 3 of 4 providers unroutable: Francesca Herrera (Maternal Root) recipient_history_gate previously contacted; Katie Hallum (Your Birth Team) no email in cities.ts; Becky Chavez (Birth to Latch) no email in cities.ts. Manual re-outreach path documented in state history.",
+  "sources": [
+    {
+      "provider": "Francesca Herrera (Maternal Root)",
+      "claim": "Provider bio, birth counts, and cost ranges published on live Fullerton page",
+      "url": "https://truejoybirthing.com/birth-support/fullerton-ca/",
+      "quote": "Francesca Herrera of Maternal Root reports attending 90 births over 7 years."
+    },
+    {
+      "provider": "Birth Your Way Doulas",
+      "claim": "DONA-certified practice, package prices, Medi-Cal and Kaiser in-network on live page",
+      "url": "https://truejoybirthing.com/birth-support/fullerton-ca/",
+      "quote": "Birth Your Way Doulas, a DONA-certified practice that publishes its package prices and takes Medi-Cal and Kaiser in-network, and Maternal Root, a Fullerton-based birth doula practice."
+    },
+    {
+      "provider": "Katie Hallum (Your Birth Team)",
+      "claim": "Provider bio and services listed on live page",
+      "url": "https://truejoybirthing.com/birth-support/fullerton-ca/",
+      "quote": "Katie Hallum of Your Birth Team has served growing families in Southern California since 2011 as a chil"
+    },
+    {
+      "provider": "Becky Chavez (Birth to Latch)",
+      "claim": "Provider certifications and services listed on live page",
+      "url": "https://truejoybirthing.com/birth-support/fullerton-ca/",
+      "quote": "Becky Chavez has worked with new families since 2016 as a doula and parent educator across Los Angeles and surrounding communities including Fullerton, and grew up primarily in nearby Whittier."
+    },
+    {
+      "provider": "page-video",
+      "claim": "VideoObject schema present on live page referencing videoId C5A0V62NGdQ (name: \"Fullerton, California Doula & Birth Plan Guide\")",
+      "url": "https://truejoybirthing.com/birth-support/fullerton-ca/",
+      "quote": "\"@type\":\"VideoObject\",\"@id\":\"https://truejoybirthing.com/birth-support/fullerton-ca/#video\",\"name\":\"Fullerton, California Doula & Birth Plan Guide\""
+    }
+  ],
   "video_file": null,
   "video_mb": null,
-  "youtube_id": null,
-  "thumbnail_path": null,
-  "embed_verified": null,
+  "youtube_id": "C5A0V62NGdQ",
+  "thumbnail_path": "dist/images/yt-thumb-fullerton-ca.png",
+  "embed_verified": true,
   "outreach": [
     {
-      "provider": null,
-      "status": null,
-      "message_id": null
+      "provider": "Birth Your Way Doulas",
+      "status": "sent",
+      "message_id": "vps-20261001173755637287",
+      "to": "info@birthyourwaydoulas.com"
+    },
+    {
+      "provider": "Francesca Herrera (Maternal Root)",
+      "status": "blocked",
+      "message_id": null,
+      "reason": "recipient_history_gate: previously contacted via older campaigns (send log blocked rows 2026-09/10); retry not forced. Re-outreach path: manual mode after cooldown."
+    },
+    {
+      "provider": "Katie Hallum (Your Birth Team)",
+      "status": "blocked",
+      "message_id": null,
+      "reason": "no email found in cities.ts localDoulas entry (state history 11:40Z attempt). Manual path: add direct email in cities.ts fullerton-ca localDoulas, re-run tjb-batch-outreach.py manual --slug fullerton-ca."
+    },
+    {
+      "provider": "Becky Chavez (Birth to Latch)",
+      "status": "blocked",
+      "message_id": null,
+      "reason": "no email found in cities.ts localDoulas entry (state history 11:40Z attempt). Manual path: add direct email in cities.ts fullerton-ca localDoulas, re-run tjb-batch-outreach.py manual --slug fullerton-ca."
     }
-  ]
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  }
 }

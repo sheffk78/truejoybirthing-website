@@ -1,9 +1,9 @@
 {
  "slug": "sunnyvale-ca",
  "stage": "video_outreach",
- "produced_at": "2026-10-04T19:55:00Z",
+ "produced_at": "2026-10-04T20:02:00Z",
  "worker_model": "bedrock:latest (sunnyvale video_outreach lane, 2026-10-04)",
- "notes": "All video milestones verified: scene data, TTS (Shelbi-Voxtral), pre-render gate, render, YouTube upload, thumbnail, embed. Deploy propagated embed to CF edge \u2014 live data-video-id=c_C2Gz01-X8, old CMyl3hZRzJ0 gone. Outreach via deterministic tjb-batch-outreach.py: 2 of 4 sent (send log rows with real message_ids below); Tracie Lynch blocked (doulamatch.net directory profile on blocked-domain list, no clean email in cities.ts); Anuja Bhuta blocked (only contact = bhutabodyworks.com mailto with pre-filled massage-booking body \u2014 email gate INVALID_FORMAT, correctly not sent). Manual re-outreach path: add direct email fields for those two in cities.ts sunnyvale-ca localDoulas, re-run tjb-batch-outreach.py manual --slug sunnyvale-ca.",
+ "notes": "STAGE COMPLETE. Video: c_C2Gz01-X8 live on page, VideoObject schema passes. Outreach: 2/4 sent via tjb-batch-outreach.py (Thais Hand, Birth by Mica) with real send-log rows; Tracie Lynch blocked (doulamatch.net blocked-domain, no email in cities.ts); Anuja Bhuta blocked (only a massage-booking mailto, email gate INVALID_FORMAT). Manual re-outreach path: add direct email fields for those two in cities.ts sunnyvale-ca localDoulas, re-run tjb-batch-outreach.py manual --slug sunnyvale-ca. Dashboard row updated (score 100, stage complete) and redeployed.",
  "sources": [
   {
    "provider": "Tracie Lynch",
@@ -70,5 +70,61 @@
  "images": {
   "hero_watermark_clean": true,
   "og_watermark_clean": true
- }
+ },
+ "milestones": {
+  "scene_data": {
+   "done": true,
+   "evidence": "src/data/sunnyvale-ca-data.ts in remotion repo (full state names); G9 pass"
+  },
+  "tts": {
+   "done": true,
+   "evidence": "public/audio/sunnyvale-ca/ 9 scene wavs, Shelbi/Voxtral consistent"
+  },
+  "prerender_gate": {
+   "done": true,
+   "evidence": ".g7b-sunnyvale-ca.log all gates pass"
+  },
+  "stills": {
+   "done": true,
+   "evidence": "public/stills/sunnyvale-ca/ captured"
+  },
+  "rendered": {
+   "done": true,
+   "evidence": "out/sunnyvale-ca-city-guide.mp4 ~19.4MB (G67 city-match pass)"
+  },
+  "uploaded": {
+   "done": true,
+   "youtube_id": "c_C2Gz01-X8",
+   "evidence": "out/sunnyvale-ca-youtube-id.txt; public embeddable"
+  },
+  "thumbnail": {
+   "done": true,
+   "evidence": "yt-thumb-sunnyvale-ca.png 784KB, hero-derived, in dist/images + uploaded"
+  },
+  "embed": {
+   "done": true,
+   "evidence": "video-embeds.ts videoId c_C2Gz01-X8 for sunnyvale-ca"
+  },
+  "deploy": {
+   "done": true,
+   "evidence": "deploy.sh exit 0; live data-video-id=c_C2Gz01-X8, VideoObject on page, old CMyl3hZRzJ0 gone"
+  },
+  "outreach": {
+   "done": true,
+   "evidence": "2 sent (send log: vps-20261004193932723462, vps-20261004193959635256); 2 blocked with reasons (no clean email in cities.ts)"
+  },
+  "city_audit": {
+   "done": true,
+   "evidence": "sunnyvale-ca row video:true outreach:true score:100 stage:complete; redeployed for dashboard"
+  },
+  "evals": {
+   "done": true,
+   "evidence": "eval-voice approved (11 fields, 0 findings); eval-accuracy approved (5 sources, 0 unsupported)"
+  },
+  "state_advance": {
+   "done": true,
+   "evidence": "tjb-pipeline-state.py advance exit 0 -> next_stage complete, all 4 stages completed"
+  }
+ },
+ "next_worker_todo": []
 }
