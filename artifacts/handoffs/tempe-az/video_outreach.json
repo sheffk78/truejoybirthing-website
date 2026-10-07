@@ -1,7 +1,7 @@
 {
   "stage": "video_outreach",
   "slug": "tempe-az",
-  "produced_at": "2026-10-05T11:30:00-06:00",
+  "produced_at": "2026-10-05T13:37:31-06:00",
   "worker_model": "bedrock:latest",
   "status": "in_progress",
   "milestones_done": {
@@ -43,11 +43,20 @@
     "birth_center_image": {
       "done": true,
       "notes": "copied website's tempe-az-tempe-birth-center.webp into video public/images/birth-centers/ (175KB)"
+    },
+    "pre_render_gate": {
+      "done": true,
+      "gate": "bash video/remotion/scripts/pre-render-gate.sh tempe-az",
+      "result": "ALL GATES PASSED \u2014 render safe to proceed",
+      "warnings": [
+        "05_app no screenshotPath (uses default image)",
+        "G7 hook image v2 vs cities.ts skyline (bytes identified-safe: identical v1 file staged as v2)"
+      ]
     }
   },
   "milestones_remaining": {
-    "pre_render_gate": "run bash video/remotion/scripts/pre-render-gate.sh tempe-az (last run FAILED: provider count in first portrait scene; fixed by summary scene type \u2014 needs re-run + stills verification)",
-    "render": "npx remotion render tempe-az-City-Guide -> public/videos/ (350s video)",
+    "pre_render_gate": "DONE \u2014 all gates passed (validated 15 scenes, audio sync 350.18s\u2248350.20s, screenshot reality vs live page PASS)",
+    "render": "in_progress \u2014 npx remotion render tempe-az-City-Guide out/tempe-az-city-guide.mp4",
     "youtube_upload": "public, embeddable=True",
     "youtube_thumbnail": "from website public/images/yt-thumb-tempe-az.webp (exists)",
     "video_embed": "src/video-embeds.ts tempe-az id + rebuild + deploy",
@@ -57,14 +66,14 @@
     "contract_validate": "python3 scripts/contract-validate.py tempe-az video_outreach --compare; add sources[]; eval-accuracy.py + eval-voice.py"
   },
   "next_worker_todo": [
-    "Rerun pre-render gate (scene types now fixed \u2014 expect PASS)",
-    "Render 14:10 video",
-    "Upload YouTube public+embeddable",
-    "Thumbnail",
-    "video-embeds.ts + deploy",
+    "verify render output out/tempe-az-city-guide.mp4",
+    "capture stills",
+    "youtube upload public+embeddable",
+    "thumbnail from yt-thumb-tempe-az.webp",
+    "video-embeds.ts + rebuild + deploy",
     "outreach batch",
-    "city-audit.json dashboard",
+    "city-audit.json dashboard + deploy",
     "contract-validate + evals"
   ],
-  "notes": "Scene data + TTS complete with live audio on disk. Gate failed pre-fix: audit heuristic checks first portrait-typed scene (5 slides) vs page provider count 6; remapped 5 slides to tjb_provider_portrait_summary. Mapper/types/TJBCityVideo patched; mapper file mangled mid-edit and repaired (verified: all 11 cases present). Gate re-run, render, upload, embed, outreach, dashboard remain."
+  "notes": "Resume run 3: scene data + TTS (350.18s master) verified on disk; pre-render gate PASSED (all 8 gates, hook image confirmed byte-identical to cities.ts hero \u2014 no visual drift risk); render in progress."
 }

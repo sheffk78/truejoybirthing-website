@@ -1,0 +1,12 @@
+{
+  "slug": "north-las-vegas-nv",
+  "stage": "build",
+  "status": "failed",
+  "worker_model": "hermes-cli",
+  "produced_at": null,
+  "youtube_id": null,
+  "video_file": null,
+  "embed_verified": false,
+  "next_worker_todo": ["Run provider discovery (DuckDuckGo/web) for North Las Vegas: 4+ doulas, 2+ hospitals", "Write cities.ts entry from evidenced findings only", "Generate hero/OG/support images", "Run gates: G3, G5, G13, G4, G37, hospital_count, visual_check, H-HUMANIZE, H-SHAPE"],
+  "notes": "Budget exhausted before discovery. Confirmed: no north-las-vegas-nv entry in src/data/cities.ts (city absent, 180 entries), provider cache has zero las-vegas keys, no prior checkpoints. Zero providers evidenced — failing clean, no fabricated data. Findings: artifacts/build-checkpoints/north-las-vegas-nv/research-findings.json"
+}

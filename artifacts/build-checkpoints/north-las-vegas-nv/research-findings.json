@@ -1,0 +1,16 @@
+{
+  "city": "North Las Vegas",
+  "slug": "north-las-vegas-nv",
+  "researched_at": "2026-10-07",
+  "method": "budget terminated before discovery began",
+  "cache_hits": 0,
+  "providers_found": [],
+  "hospitals_found": [],
+  "birth_centers_found": [],
+  "population_tier": "large_metro_500K-2M",
+  "tier_minimums": { "doulas": 4, "hospitals": 2 },
+  "summary": { "doulas": 0, "hospitals": 0 },
+  "verdict": "insufficient real providers: 0 found < minimum 4 doulas / 2 hospitals",
+  "cities_ts_entry_written": false,
+  "note": "Provider discovery (DuckDuckGo + provider websites for the north-las-vegas-nv area) was not executed — run discovery before any build attempt; do not fabricate providers."
+}

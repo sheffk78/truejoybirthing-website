@@ -1,0 +1,59 @@
+{
+  "city": "hialeah-fl",
+  "stage": "build",
+  "phase": "A-research",
+  "verified_at": "2026-10-06T~17:00-06:00",
+  "population": {
+    "estimate": 24500,
+    "source": "U.S. Census \u2014 Hialeah, FL ~20K-25K; Miami-Dade County (metro 2M+)"
+  },
+  "tier_minimums": {
+    "mid_small_city": ">=2 doulas / providers, >=1 hospital",
+    "county_context": "Miami-Dade is a 2M+ major metro \u2014 enrichment stage should scale toward 6+ doulas / 3+ hospitals county-wide"
+  },
+  "search_paths_tried": [
+    {
+      "path": "html.duckduckgo.com & lite.duckduckgo.com (4 queries)",
+      "result": "HTTP 202 bot-detection interstitial, 14KB, zero result links under Chrome UA \u2014 unusable"
+    },
+    {
+      "path": "bing.com HTML search (Chrome UA)",
+      "result": "works mechanically (200, real <cite> results) but with site:-less queries surfaces only national sites (wikipedia/dona.org/whattoexpect); no Hialeah-local provider URLs recovered"
+    },
+    {
+      "path": "provider cache ~/.hermes/state/tjb-provider-cache.json (355 entries)",
+      "result": "FL-matching candidates: Urban Flora Doula Care (urbanfloradoula.com), BIRTHday Doulas of South Florida (birthdaydoulasofsouthflorida.com), North Florida Doulas (Jacksonville \u2014 out of area), magnoliabirthhouse.com/doula-support (Miami pricing page) \u2014 none verified as serving Hialeah this run"
+    }
+  ],
+  "verified_providers": [],
+  "verified_hospitals": [],
+  "verified_birth_centers": [],
+  "candidates_unverified": [
+    {
+      "name": "Urban Flora Doula Care",
+      "url": "https://www.urbanfloradoula.com",
+      "status": "from provider cache; website not fetched this run \u2014 verify service area before use"
+    },
+    {
+      "name": "BIRTHday Doulas of South Florida",
+      "url": "https://birthdaydoulasofsouthflorida.com",
+      "status": "from provider cache; not fetched \u2014 verify"
+    },
+    {
+      "name": "Magnolia Birth House (doula support page)",
+      "url": "https://www.magnoliabirthhouse.com/doula-support",
+      "status": "Miami pricing page from cache; not fetched \u2014 verify Hialeah coverage"
+    },
+    {
+      "name": "Bayfront Medical Center (Miami)",
+      "url": "https://www.bayfront.org",
+      "status": "~15min from Hialeah; known nearby hospital \u2014 NOT evidenced this run"
+    }
+  ],
+  "counts": {
+    "providers": 0,
+    "hospitals": 0,
+    "birth_centers": 0
+  },
+  "conclusion": "INSUFFICIENT \u2014 0 verified real providers < minimum 2. No search path returned parseable Hialeah-local results and cache candidates were not directly verified before the run-time budget ended. Per clean-fail contract: no cities.ts entry written, no images generated."
+}

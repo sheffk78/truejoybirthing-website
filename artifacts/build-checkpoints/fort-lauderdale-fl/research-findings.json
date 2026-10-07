@@ -1,0 +1,27 @@
+{
+  "city": "Fort Lauderdale",
+  "state": "FL",
+  "slug": "fort-lauderdale-fl",
+  "population_estimate": 335000,
+  "population_tier": "mid-size (100K-500K)",
+  "tier_minimums": {
+    "doulas": 2,
+    "hospitals": 1
+  },
+  "doulas_found": 0,
+  "hospitals_found": 0,
+  "birth_centers_found": 0,
+  "verified_providers": [],
+  "provider_cache_check": {
+    "cache_file": "~/.hermes/state/tjb-provider-cache.json",
+    "total_cached": 355,
+    "fort_lauderdale_matches": "0 - no Fort Lauderdale providers in cache",
+    "checked_fields": "full JSON blob scan for 'lauderdale' (case-insensitive)"
+  },
+  "research_session": {
+    "started": "2026-10-06T22:37:57.725981Z",
+    "tool_calls_before_budget_exhausted": 7,
+    "budget_exhausted": true,
+    "completion": "INCOMPLETE - runtime budget exhausted before free-discovery web fetches (DuckDuckGo/DDG + provider site checks) could run"
+  }
+}

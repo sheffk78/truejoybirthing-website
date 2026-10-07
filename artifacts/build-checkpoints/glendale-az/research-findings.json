@@ -1,0 +1,36 @@
+{
+  "city": "glendale-az",
+  "population_tier": "mid-size (100K-500K, pop ~210K)",
+  "tier_minimums": {
+    "doulas": 2,
+    "hospitals": 1
+  },
+  "preflight_floor": "S4 hard minimum: 3 doulas + 1 hospital",
+  "run": 2,
+  "search_channels_attempted": [
+    {
+      "channel": "DuckDuckGo HTML (html.duckduckgo.com)",
+      "result": "BLOCKED \u2014 anomaly challenge page returned for all 5 queries (cc=botnet); 0 parseable results"
+    },
+    {
+      "channel": "DuckDuckGo Lite (lite.duckduckgo.com)",
+      "result": "BLOCKED \u2014 same anomaly challenge; 0 parseable results"
+    },
+    {
+      "channel": "Bing (www.bing.com/search)",
+      "result": "empty parse \u2014 0 b_algo results across all 5 queries (host egress likely rate-limited to botnet class)"
+    }
+  ],
+  "provider_cache_check": "~/.hermes/state/tjb-provider-cache.json \u2014 355 entries, ZERO mentioning 'glendale' (case-insensitive). No AZ-Glendale providers cached.",
+  "cities_ts_check": "No glendale-az entry in cities.ts (only glendale-ca at line 6595; one Glendale-mentioning doula under phoenix-az at line 2530). City remains a skeleton with no localDoulas field.",
+  "providers_found": [],
+  "providers_evidenced": 0,
+  "providers_required": 3,
+  "unverified_leads_not_counted": [
+    {
+      "item": "Akili Dees \u2014 'Fruit of the Womb' doula practice (fruitofthewombaz.com)",
+      "why_excluded": "Clue from run 1; never fetch-verified this run \u2014 cannot appear in sources[] without a supporting quote"
+    }
+  ],
+  "verdict": "FAIL \u2014 insufficient real providers: 0 evidenced < minimum 3. All free search channels (DDG html, DDG lite, Bing) returned anomaly-challenge or empty results from this host; provider cache has zero Glendale entries. No cities.ts write, no images, no build \u2014 correct per Phase A contract. City needs search access that is not anomaly-blocked, or human-sourced providers."
+}

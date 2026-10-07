@@ -1,9 +1,9 @@
 {
  "slug": "pasadena-ca",
  "stage": "video_outreach",
- "worker_model": "hermes-cli/claude-opus-4-6",
- "produced_at": "2026-10-02T17:00:00Z",
- "status": "failed",
+ "worker_model": "hermes-cli/bedrock-latest",
+ "produced_at": "2026-10-07T23:14:36.956815+00:00",
+ "status": "in_progress",
  "summary": "Resume stage from top. No video artifacts exist (no scene data file, no video, no upload). Outreach deterministically BLOCKED: 0/3 sent.",
  "evidence": {
   "outreach_log": [
@@ -17,8 +17,24 @@
   "video": "not started \u2014 pasadena-ca-data.ts does not exist"
  },
  "next_worker_todo": [
-  "pytz FIXED upstream 10/02 (tjb-outreach-send.py now zoneinfo-first; 2 sends verified quinndoula@gmail.com + rebecca@losangelesbirth.com in send log) \u2014 no send re-work needed except Nancy Connelly (no email published: record as exception)",
-  "Video lane from scene data: 7 video-pre images DONE 10/02 14:13 (provider portraits x3, hospitals, skyline, support scene in video/remotion/public/images/) \u2014 write pasadena-ca-data.ts (full state names), TTS (Shelbi), pre-render gate, render, YouTube upload public, thumbnail, video-embeds.ts, rebuild+deploy",
-  "Update this contract after EACH milestone (crash-resume record), then state advance"
- ]
+  "Register pasadena_caData in src/index.ts + src/Root.tsx (copy fontana-ca/fullerton-ca pattern, registerAllTJBCityCompositions)",
+  "Create scripts/generate-pasadena-ca-tts.py (clone generate-fullerton-ca-tts.py: Voxtral voice 331c27cd-1809-43c2-853d-4c167f184670, output to public/audio/pasadena-ca/) and run it",
+  "Capture provider scroll screenshot + fullpage: browser-session-gate.sh acquire <task> https://truejoybirthing.com/city/pasadena-ca/ -> public/images/pasadena-ca-fullpage-scroll.png (provider section visible, no provider cards)",
+  "Confirm image files exist: pasadena-ca-birth-doula-skyline.webp, pasadena-ca-hospital-huntington.webp, pasadena-ca-hospital-usc-arcadia.webp, moxie-birth-south-pasadena-alhambra.webp, provider-pasadena-ca-*.webp (3 portraits), tjb-app-birth-plan-builder.png \u2014 any missing = flux fallback",
+  "bash video/remotion/scripts/pre-render-gate.sh pasadena-ca",
+  "bash video/remotion/scripts/render-city-videos.sh pasadena-ca + stills",
+  "YT upload: scripts/upload-youtube.py (public, embeddable) -> grab video ID",
+  "Thumbnail from hero -> upload; update src/data/video-embeds.ts (Python heredoc, never write_file) with new videoId; bash scripts/deploy.sh pasadena-ca; verify live page has data-video-id",
+  "city-audit.json: set video:true, outreach flags, score 100, redeploy",
+  "Outreach: python3 ~/.hermes/scripts/tjb-batch-outreach.py build --slug pasadena-ca (deterministic; if BLOCKED record reason, no manual emails)"
+ ],
+ "plan": {
+  "scene_file": "video/remotion/src/data/pasadena-ca-data.ts (10 scenes: hook, bridge, hospital_1 Huntington, hospital_2 USC Arcadia, birth_center Moxie, provider_scroll, provider portraits x3, app, cost, insurance, cta)",
+  "tts": "scripts/generate-pasadena-ca-tts.py (Voxtral voice 331c27cd-1809-43c2-853d-4c167f184670)"
+ },
+ "scene_data": {
+  "file": "video/remotion/src/data/pasadena-ca-data.ts",
+  "scenes": 11,
+  "validate_exit": 0
+ }
 }

@@ -1,0 +1,22 @@
+{
+  "stage": "build",
+  "slug": "glendale-az",
+  "status": "failed",
+  "produced_at": "2026-10-06T11:35:00-06:00",
+  "worker_model": "bedrock:latest",
+  "youtube_id": null,
+  "video_file": null,
+  "embed_verified": false,
+  "outreach": [],
+  "milestones_done": [
+    "resume-protocol-1: read handoff (missing) + state (status=build, city_type=skeleton); confirmed no glendale-az entry in cities.ts; empty provider cache for glendale",
+    "run-2: fresh search channel sweep (DDG html, DDG lite, Bing \u2014 all anomaly-challenged/empty from host egress); provider cache re-checked (355 entries, 0 glendale); research-findings.json updated; NO cities.ts write",
+    "run-3: read handoff (run 2 failed: DDG html+lite anomaly-blocked, Bing 0 results); searched tier/validator code \u2014 G37 implementation not found in preflight.ts (grep G37 \u2192 0 hits in tsx), minimum = 3 doulas per S4 floor in research-findings.json; provider cache re-check: zero Glendale AZ entries; cities.ts: no glendale-az entry (skeleton confirmed). No provider names fabricated: 0 evidenced."
+  ],
+  "notes": "Run 3 FAIL: insufficient real providers: 0 evidenced < minimum 3 (S4 floor: 3 doulas + 1 hospital for mid-size ~210K city). All 3 prior discovery runs exhausted every free search channel (DDG html, DDG lite, Bing) \u2014 anomaly-blocked or empty from this host egress IP. Provider cache holds zero Glendale entries. Per Phase A contract: no cities.ts write, no images, no build \u2014 city needs a working search egress or human-sourced providers. Findings: artifacts/build-checkpoints/glendale-az/research-findings.json (run 2 detail; run 3 adds gate-code audit: G37 has no tsx implementation, py stage-gate list references it but preflight.ts never emits it).",
+  "next_worker_todo": [
+    "BLOCKER: search egress IP anomaly-blocked for DDG+ Bing. Use paid search API (serper/brave/firecrawl key) from a clean egress, or run discovery from a machine without botnet-class egress.",
+    "Then: evidence 3 named doulas + 1 hospital each with source URL + supporting quote (S4 floor; G37 minimum per population tier mid-size=2 doulas but S4 enforces 3 at build).",
+    "Gate audit for parent: G37 appears in STATE gate list + preflight-stage-gate.py build list, but grep G37 in scripts/preflight.ts returns nothing \u2014 staged G37 may silently skip. Same for hospital_count/visual_check/H-HUMANIZE/H-SHAPE \u2014 confirm emitters exist before treating their absence as pass."
+  ]
+}

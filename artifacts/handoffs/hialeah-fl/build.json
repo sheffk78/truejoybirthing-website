@@ -1,0 +1,38 @@
+{
+  "slug": "hialeah-fl",
+  "stage": "build",
+  "status": "failed",
+  "produced_at": "2026-10-06T19:49:23.350066+00:00",
+  "worker_model": "bedrock:latest",
+  "reason": "insufficient real providers: 0 verified < minimum 2. Free discovery paths: DuckDuckGo (html+lite) = HTTP 202 bot interstitials, zero results (4 queries); Bing HTML works mechanically but returned only national sites, no Hialeah-local provider URLs; provider cache had 3 FL candidates (Urban Flora, BIRTHday Doulas SF, Magnolia Birth House) that were NOT verified on their own websites before the run-time budget ended. Per clean-fail contract: no cities.ts entry written, no images generated, live page remains a consistent 404 (nothing built).",
+  "evidence": "artifacts/build-checkpoints/hialeah-fl/research-findings.json",
+  "sources": [
+    {
+      "claim": "DuckDuckGo HTML+lite endpoints serve bot-detection interstitial (HTTP 202, ~14KB) to this host \u2014 zero parseable result links across 4 queries",
+      "url": "https://lite.duckduckgo.com/lite/?q=hospitals+in+Hialeah+Florida",
+      "quote": "code=202 size=14226; grep for result links = 0"
+    },
+    {
+      "claim": "Bing HTML search returns generic national doula sites, not Hialeah-local providers",
+      "url": "https://www.bing.com/search?q=doula+Hialeah+Florida",
+      "quote": "CITE: en.wikipedia.org \u203a wiki \u203a Doula; CITE: donna.org \u203a what-is-a-doula; CITE: whattoexpect.com \u203a pregnancy \u203a hiring-doula"
+    },
+    {
+      "claim": "Live city page is 404 both before this run and after (nothing was built \u2014 consistent with clean fail)",
+      "url": "https://truejoybirthing.com/birth-support/hialeah-fl/",
+      "quote": "HTTP 404, data-video-id count 0"
+    }
+  ],
+  "notes": "Phase A only. Phase B not started \u2014 no cities.ts write, per contract. Research findings incl. unverified candidate list saved for the next worker.",
+  "next_worker_todo": [
+    "Verify the 3 cache candidates directly on their OWN websites (urbanfloradoula.com, birthdaydoulasofsouthflorida.com, magnoliabirthhouse.com/doula-support) \u2014 fetch each, confirm Hialeah/Miami-Dade service area, capture exact quotes for sources[]",
+    "Bing HTML IS a working free search path \u2014 retry with geo-anchored queries: 'hospital Hialeah FL address', 'perinatal center Hialeah', 'home birth midwife Miami-Dade Hialeah'; parse <cite> tags (they hold the real URL) \u2014 previous failure was query phrasing, not the endpoint",
+    "Nearby-hospital evidence targets: Bayfront Medical Center (Miami), Mount Sinai Medical Center (Miami), Palmetto General (Hollywood), Baptist Health Kendall \u2014 closest to Hialeah are Bayfront + Mount Sinai; evidence each on its own site",
+    "If verification yields >=2 providers + >=1 hospital: Phase B = cities.ts entry via Python heredoc, then hero/OG/support images, validate + build, contract-validate --compare",
+    "Else FAIL again with the verified count and the per-path evidence in research-findings.json"
+  ],
+  "images": {
+    "hero_watermark_clean": false,
+    "og_watermark_clean": false
+  }
+}

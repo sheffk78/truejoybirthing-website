@@ -1,0 +1,39 @@
+{
+  "city": "fort-lauderdale-fl",
+  "stage": "build",
+  "result": "fail",
+  "fail_reason": "insufficient real providers: 0 evidenced < minimum 2 (mid-size tier) \u2014 provider cache scan complete (0/355 matches), free-discovery web fetches blocked by runtime budget exhaustion",
+  "milestones": {
+    "research": "done - provider cache scanned, 0 Fort Lauderdale matches; web discovery (DDG/site fetches) not started",
+    "cities_ts_entry": "not_written",
+    "images": "not_started",
+    "validation": "not_started (no entry to validate)",
+    "build": "not_started"
+  },
+  "sources": [],
+  "images": {
+    "hero_watermark_clean": null,
+    "og_watermark_clean": null
+  },
+  "gate_results": {
+    "G3": "SKIP (no entry)",
+    "G5": "SKIP (no entry)",
+    "G13": "SKIP (no entry)",
+    "G4": "SKIP (no entry)",
+    "G37": "FAIL (0 providers < 2 minimum)",
+    "hospital_count": "FAIL (0 hospitals < 1 minimum)",
+    "visual_check": "SKIP (no images)",
+    "H-HUMANIZE": "SKIP (no prose)",
+    "H-SHAPE": "SKIP (no prose)"
+  },
+  "notes": "Fort Lauderdale (pop ~335K, tier: mid-size 100K-500K \u2192 min 2 doulas + 1 hospital). Provider cache (355 providers) scanned fully: zero Fort Lauderdale matches. Phase A free-discovery web searches (DuckDuckGo / DDG fetches, provider site direct-checks) not executed \u2014 runtime budget exhausted at ~7 of ~25 tool-call allowance. No cities.ts entry written (correct: no evidence-backed providers to write). City is NOT skeleton-convertible without human research or extended web access. Existing FL cities with data: orlando-fl (6 providers), tampa-fl (6 providers), jacksonville-fl (5 providers).",
+  "next_worker_todo": [
+    "Re-run Phase A: DDG search 'doula fort lauderdale fl', 'birth center fort lauderdale fl', 'hospital fort lauderdale fl' \u2014 fetch each result, verify provider name+URL from source page",
+    "Direct site-check: doulanet.com/fort-lauderdale-fl, doulamatch.net fort lauderdale listings, babybrite.com, local birth center websites",
+    "Minimum targets: 2+ doulas, 1+ hospital (Baptist Healthcare of Fort Lauderdale / Atrium Medical Center / St. Mary's Medical Center are known candidates \u2014 verify on their sites)",
+    "Save verified providers to artifacts/build-checkpoints/fort-lauderdale-fl/research-findings.json",
+    "If all verified: write cities.ts entry via Python heredoc, generate images (hero/OG/support scene), run preflight + validate + build, write contract, advance state"
+  ],
+  "worker": "kit-oneshot-build",
+  "completed_at": "2026-10-06T22:37:57.725981Z"
+}
