@@ -1,0 +1,96 @@
+{
+  "city": "saint-paul-mn",
+  "stage": "build",
+  "worker_model": "bedrock:latest",
+  "produced_at": "2026-10-08T14:00:00Z",
+  "status": "failed",
+  "data": {
+    "written": false
+  },
+  "images": {
+    "hero": null,
+    "og": null,
+    "hero_watermark_clean": null,
+    "og_watermark_clean": null
+  },
+  "sources": [
+    {
+      "provider": "Terra Peterson Jonker (Doula Minnesota)",
+      "claim": "Birth doula serving Minneapolis and St. Paul",
+      "url": "https://www.doulamn.com/about",
+      "quote": "We are proud to offer professional doula services, childbirth education, and more in and around Minneapolis and St. Paul"
+    },
+    {
+      "provider": "Meghan Lovell (Enchanted Childbirth)",
+      "claim": "CLD birth doula based in Saint Paul",
+      "url": "https://doulamatch.net/list/city/us/mn/saint%20paul",
+      "quote": "21 doulas in Saint Paul, Minnesota ... Meghan Lovell, CLD ... Birth Fee: $1000 to $2000"
+    },
+    {
+      "provider": "Elsa Carlson (Moss and Moon Doula Care)",
+      "claim": "Birth doula based in Saint Paul, 15 years on DoulaMatch",
+      "url": "https://doulamatch.net/list/city/us/mn/saint%20paul",
+      "quote": "Moss and Moon Doula Care ... Birth Fee: $1600 to $2000"
+    },
+    {
+      "provider": "Cyrese Ingebrigtsen (Heaven Sent Doula Services)",
+      "claim": "CD(DONA) listed in Saint Paul city directory",
+      "url": "https://doulamatch.net/list/city/us/mn/saint%20paul",
+      "quote": "Heaven Sent Doula Services ... Birth Fee: $1875 to $3250"
+    },
+    {
+      "provider": "Alexandra Falco (La Doula)",
+      "claim": "Doula listed in Saint Paul city directory, 8 years practice",
+      "url": "https://doulamatch.net/list/city/us/mn/saint%20paul",
+      "quote": "Alexandra Falco ... La Doula ... Birth Fee: $0 to $2000"
+    },
+    {
+      "provider": "Tory Kielas-Jensen (Welcome Baby Care)",
+      "claim": "Certified postpartum doula, Twin Cities agency",
+      "url": "https://welcomebabycare.com/",
+      "quote": "Welcome Baby Care is proud to be the Twin Cities' leading agency providing in-home postpartum care"
+    },
+    {
+      "provider": "Precious Pearl Doula",
+      "claim": "DONA-certified postpartum doula, Minneapolis-St. Paul",
+      "url": "https://preciouspearldoula.com/about",
+      "quote": "Caring postpartum doula for newborns and their parents ... certified as a Postpartum Doula through DONA international"
+    },
+    {
+      "provider": "The Mother Baby Center at United",
+      "claim": "St. Paul birth center, Allina Health + Children's Minnesota",
+      "url": "https://www.themotherbabycenter.org/locations/st-paul",
+      "quote": "Experience personalized labor & postpartum care at The Mother Baby Center in St. Paul. 345 Smith Ave N. St. Paul, MN 55102"
+    },
+    {
+      "provider": "Minnesota Birth Center",
+      "claim": "CNM birth center serving Minneapolis and St. Paul",
+      "url": "http://theminnesotabirthcenter.com/",
+      "quote": "Certified Nurse Midwives – Minneapolis St. Paul ... prenatal and postpartum care, lactation support"
+    }
+  ],
+  "gates": {
+    "G3": "pass (research complete, 15 searches + 5 site fetches)",
+    "G5": "pass (DoulaMatch directory: 21 doulas listed for Saint Paul; 8 selected)",
+    "G13": "pass (3 out-of-hospital options: Minnesota Birth Center, Twin Cities Birth Center, Trillium Midwives)",
+    "G4": "FAIL-PARTIAL — doulas 8/6 PASS; hospitals 2/3 (Mother Baby Center evidenced; Regions Hospital maternity page not fetched; no 3rd St. Paul delivery hospital evidenced)",
+    "G37": "FAIL — large-metro minimum 3 hospitals not met (2 found)",
+    "hospital_count": "fail (2 < 3)",
+    "visual_check": "not reached (no images generated)",
+    "H-HUMANIZE": "not reached (no copy written)",
+    "H-SHAPE": "not reached (no page build)",
+    "cities.ts_written": false
+  },
+  "notes": "Doula side is solid: DoulaMatch shows 21 doulas IN the city — the real work is hospital enrichment. Mother Baby Center at United (345 Smith Ave N) is the anchor St. Paul birth facility. Regions Hospital (MHealth) and a possible third (Children's-McKee Eastside Women, or M Health's St Paul campus) need direct page fetches for NICU level, L&D details, and quote-level evidence.",
+  "next_worker_todo": [
+    "1. Fetch MHealth Regions Hospital maternity page (providers.mhealthfairview.org Region search or allinmhealth regions birth center page) — capture nicuLevel, L&D suite details, midwife/doula policy, exact quote for paragraph_source",
+    "2. Identify + evidence a 3rd St. Paul delivery hospital or re-frame: if only 2 exist in-city, document that explicitly (Chula Vista pattern: closed/adjacent unit) and list the nearest out-of-in-city option (e.g., M Health Minneapolis or United's own unit) as 3rd entry with honest 'nearest for overflow' framing",
+    "3. Confirm Minnesota/Allina midwifery details already captured in research-findings.json",
+    "4. Then Phase B: cities.ts block via Python heredoc (copy minneapolis-mn structure), cost tiers for St Paul, culture/heroLocalDetail/insurance/FAQ copy, source URLs with exact quotes",
+    "5. Images: hero (pregnant silhouette + St. Paul skyline at golden hour, OpenRouter fallback if FAL exhausted), OG, support scene — all with saint-paul-mn in filename, 1 hero reused for thumbnail/OG/video",
+    "6. Validate: npx tsx scripts/validate-city-data.ts saint-paul-mn; run eval-voice + eval-accuracy; contract-validate --compare; preflight gates",
+    "7. Deploy via bash scripts/deploy.sh saint-paul-mn; verify live page",
+    "8. Final: state script advance saint-paul-mn build (or fail with this evidence if a 3rd hospital still cannot be evidenced)"
+  ],
+  "resume_state": "Phase A complete (research-findings.json written). Phase B not started — no cities.ts block, no images. Safe to resume from hospital step 1; everything else is sequential behind it."
+}

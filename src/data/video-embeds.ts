@@ -2077,4 +2077,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: 153,
   },
 
+  "tempe-az": {
+    videoId: "Lhw-_ZQmKlg",
+    title: "Tempe, Arizona Doula & Birth Plan Guide",
+    description: "Watch the full Tempe, Arizona Doula & Birth Plan Guide — all in about 5:50.",
+    duration: 350,
+  },
+
 };

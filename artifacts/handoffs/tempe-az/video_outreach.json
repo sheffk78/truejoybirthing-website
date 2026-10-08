@@ -46,24 +46,57 @@
     },
     "pre_render_gate": {
       "done": true,
-      "gate": "bash video/remotion/scripts/pre-render-gate.sh tempe-az",
-      "result": "ALL GATES PASSED \u2014 render safe to proceed",
-      "warnings": [
-        "05_app no screenshotPath (uses default image)",
-        "G7 hook image v2 vs cities.ts skyline (bytes identified-safe: identical v1 file staged as v2)"
+      "result": "PASS (audio sync 350.18s==350.20s); only G7 medium = filename-only false-positive, hook image byte-identical to live hero",
+      "note": "video already rendered Oct 5; gate re-confirmed before upload"
+    },
+    "render": {
+      "done": true,
+      "file": "video/remotion/out/tempe-az-city-guide.mp4",
+      "size_bytes": 36091185,
+      "ffprobe": "1920x1080 h264+aac duration=350.59s",
+      "rendered_at_oct5": true,
+      "note": "valid mp4 already on disk from prior run; no re-render needed \u2014 hook image byte-identical to live hero (md5 1391543), G7 is filename false-positive"
+    },
+    "stills": {
+      "done": true,
+      "count": 15,
+      "dir": "video/remotion/out/stills/"
+    },
+    "youtube_upload": {
+      "done": true,
+      "video_id": "Lhw-_ZQmKlg",
+      "privacy": "public",
+      "embeddable": true,
+      "madeForKids": false,
+      "duration": "PT5M51S",
+      "title": "Tempe, Arizona Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+      "oembed": 200
+    },
+    "youtube_thumbnail": {
+      "done": true,
+      "source": "public/images/yt-thumb-tempe-az.webp",
+      "uploaded": "out/yt-thumb-tempe-az.png (1280x720)"
+    },
+    "video_embed": {
+      "done": true,
+      "file": "src/data/video-embeds.ts:2080",
+      "video_id": "Lhw-_ZQmKlg",
+      "note": "appended by upload-youtube.py; NOT yet deployed"
+    },
+    "playlist": {
+      "done": true,
+      "playlists": [
+        "Arizona Birth Guides",
+        "All City Birth Guides"
       ]
     }
   },
   "milestones_remaining": {
-    "pre_render_gate": "DONE \u2014 all gates passed (validated 15 scenes, audio sync 350.18s\u2248350.20s, screenshot reality vs live page PASS)",
-    "render": "in_progress \u2014 npx remotion render tempe-az-City-Guide out/tempe-az-city-guide.mp4",
-    "youtube_upload": "public, embeddable=True",
-    "youtube_thumbnail": "from website public/images/yt-thumb-tempe-az.webp (exists)",
-    "video_embed": "src/video-embeds.ts tempe-az id + rebuild + deploy",
     "old_video_unlisted": "prior tempe videos if any",
-    "dashboard": "city-audit.json tempe-az {video:true, outreach:true, score:100} + deploy",
+    "dashboard": "city-audit.json tempe-az {video:true,outreach:true,score:100} + deploy",
     "outreach": "python3 ~/.hermes/scripts/tjb-batch-outreach.py build --slug tempe-az",
-    "contract_validate": "python3 scripts/contract-validate.py tempe-az video_outreach --compare; add sources[]; eval-accuracy.py + eval-voice.py"
+    "contract_validate": "python3 scripts/contract-validate.py tempe-az video_outreach --compare; add sources[]; eval-accuracy.py + eval-voice.py",
+    "video_embed_deploy": "video-embeds.ts edited; needs rebuild+deploy (scripts/deploy.sh tempe-az)"
   },
   "next_worker_todo": [
     "verify render output out/tempe-az-city-guide.mp4",
@@ -75,5 +108,8 @@
     "city-audit.json dashboard + deploy",
     "contract-validate + evals"
   ],
-  "notes": "Resume run 3: scene data + TTS (350.18s master) verified on disk; pre-render gate PASSED (all 8 gates, hook image confirmed byte-identical to cities.ts hero \u2014 no visual drift risk); render in progress."
+  "notes": "Resume run 4: verified prior run died pre-upload. Video Lhw-_ZQmKlg live public+embeddable, thumb up, in 2 playlists, embed appended to video-embeds.ts. Hook image byte-identical to live hero (no visual drift) \u2014 no re-render. Remaining: deploy embed, dashboard, outreach.",
+  "youtube_id": "Lhw-_ZQmKlg",
+  "video_file": "video/remotion/out/tempe-az-city-guide.mp4",
+  "video_url": "https://youtu.be/Lhw-_ZQmKlg"
 }

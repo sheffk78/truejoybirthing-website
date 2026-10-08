@@ -1,0 +1,228 @@
+{
+  "slug": "saint-paul-mn",
+  "city": "Saint Paul",
+  "state": "MN",
+  "population_tier": "large-metro-annex (2M+ metro, ~280K city)",
+  "target_minimums": {
+    "doulas": 6,
+    "hospitals": 3
+  },
+  "doulas_found": [
+    {
+      "name": "Terra Peterson Jonker",
+      "credential": "CD(DONA)",
+      "practice": "Doula Minnesota",
+      "url": "https://www.doulamn.com",
+      "source": "https://www.doulamn.com/about",
+      "quote": "We are proud to offer professional doula services, childbirth education, and more in and around Minneapolis and St. Paul",
+      "notes": "Founding partner; listed for St. Paul on DoulaMatch"
+    },
+    {
+      "name": "Erin Tripolino",
+      "credential": "Doula",
+      "practice": "Doula Minnesota",
+      "url": "https://www.doulamn.com",
+      "source": "https://www.doulamn.com/about",
+      "quote": "Photo of Doula Minnesota team Erin Tripolino and Terra Peterson Jonker",
+      "notes": "Second named team member of Twin-Cities agency"
+    },
+    {
+      "name": "Meghan Lovell",
+      "credential": "CLD",
+      "practice": "Enchanted Childbirth",
+      "url": "https://doulamatch.net/profile/39523/meghan-lovell-cld",
+      "source": "https://doulamatch.net/list/city/us/mn/saint%20paul",
+      "quote": "Meghan Lovell, CLD ... Birth Fee: $1000 to $2000 ... Postpartum Rate: $20 to $45"
+    },
+    {
+      "name": "Elsa Carlson",
+      "credential": "CD(DONA)",
+      "practice": "Moss and Moon Doula Care",
+      "url": "https://doulamatch.net/profile/14004/elsa-carlson",
+      "source": "https://doulamatch.net/list/city/us/mn/saint%20paul",
+      "quote": "Moss and Moon Doula Care ... Birth Fee: $1600 to $2000 ... 15 Years on DoulaMatch"
+    },
+    {
+      "name": "Cyrese Ingebrigtsen",
+      "credential": "CD(DONA), BRM pro",
+      "practice": "Heaven Sent Doula Services",
+      "url": "https://doulamatch.net/profile/36894/cyrese-ingebrigtsen-cd-dona-certified-brmrpro",
+      "source": "https://doulamatch.net/list/city/us/mn/saint%20paul",
+      "quote": "Birth Fee: $1875 to $3250, Postpartum Rate: $40 to $80"
+    },
+    {
+      "name": "Alexandra Falco",
+      "credential": "Doula",
+      "practice": "La Doula",
+      "url": "https://doulamatch.net/profile/22216/alexandra-falco",
+      "source": "https://doulamatch.net/list/city/us/mn/saint%20paul",
+      "quote": "Alexandra Falco ... La Doula ... Birth Fee: $0 to $2000 ... 8 years in practice"
+    },
+    {
+      "name": "Tory Kielas-Jensen",
+      "credential": "Certified Postpartum Doula",
+      "practice": "Welcome Baby Care",
+      "url": "https://welcomebabycare.com",
+      "source": "https://welcomebabycare.com/",
+      "quote": "Welcome Baby Care is proud to be the Twin Cities' leading agency providing in-home postpartum care ... 7900 International Drive #300 Bloomington, MN",
+      "notes": "Agency; named lead specialist Tory Kielas-Jensen; services Twin Cities incl. St. Paul"
+    },
+    {
+      "name": "Precious Pearl Doula",
+      "credential": "DONA International certified postpartum doula",
+      "practice": "Precious Pearl Doula",
+      "url": "https://preciouspearldoula.com",
+      "source": "https://preciouspearldoula.com/about",
+      "quote": "Caring postpartum doula for newborns and their parents ... I am certified as a Postpartum Doula through DONA international"
+    }
+  ],
+  "hospitals_found": [
+    {
+      "name": "The Mother Baby Center at United and Children's–St. Paul (Allina Health)",
+      "address": "345 Smith Ave N, St. Paul, MN 55102",
+      "url": "https://www.themotherbabycenter.org/locations/st-paul",
+      "source": "https://www.themotherbabycenter.org/locations/st-paul",
+      "quote": "Experience personalized labor & postpartum care at The Mother Baby Center in St. Paul. 345 Smith Ave N. St. Paul, MN 55102",
+      "notes": "Allina Health + Children's Minnesota partnership; United Hospital campus, downtown St. Paul"
+    },
+    {
+      "name": "Regions Hospital — Birth Center at Regions (MHealth Fairview)",
+      "address": "640 Washington St, St. Paul, MN 55102",
+      "url": "https://providers.mhealthfairview.org/specialty/Midwifery/near/Saint%20Paul,%20MN",
+      "source": "https://providers.mhealthfairview.org/specialty/Midwifery/near/Saint%20Paul,%20MN",
+      "quote": "Book Online Specialty ... 34 providers found for Midwifery near Saint Paul, MN",
+      "notes": "Primary St. Paul hospital; maternity details need a direct MHealth page fetch (not completed in budget)"
+    }
+  ],
+  "birth_centers_found": [
+    {
+      "name": "Minnesota Birth Center",
+      "address": "2606 Chicago Ave N, Minneapolis, MN 55407",
+      "url": "https://theminnesotabirthcenter.com/",
+      "source": "http://theminnesotabirthcenter.com/",
+      "quote": "Certified Nurse-Midwives – Minneapolis St. Paul ... full spectrum of care ranging from gynecological services ... prenatal and postpartum care, lactation support",
+      "notes": "CNM practice, ~8mi from St. Paul; serves both cities"
+    },
+    {
+      "name": "Twin Cities Birth Center",
+      "address": "Minneapolis",
+      "url": "https://providers.allinahealth.org/search?display_location=Saint%20Paul%2C%20MN&distance=10&specialties=Midwifery",
+      "source": "https://providers.allinahealth.org/search?display_location=Saint%20Paul%2C%20MN&distance=10&specialties=Midwifery",
+      "quote": "Jessica L Kesterson, CNM. Midwifery. Twin Cities Birth Center"
+    },
+    {
+      "name": "Trillium Midwives",
+      "address": "Twin Cities",
+      "url": "https://www.trilliummidwives.com/",
+      "source": "https://www.trilliummidwives.com/",
+      "quote": "home birth with the Trillium Midwives may be the perfect choice for you and your family"
+    }
+  ],
+  "midwifery_practices_in_st_paul": [
+    {
+      "name": "Allina Health United Women's Health Clinic",
+      "address": "347 Smith Ave N, Garden View Medical Center, St. Paul MN 55102",
+      "url": "https://account.allinahealth.org/locations/82",
+      "source": "https://account.allinahealth.org/servicelines/867/locations",
+      "quote": "Allina Health United Women's Health Clinic, 347 Smith Ave N ... 651-241-7733"
+    },
+    {
+      "name": "Allina Midwifery (Saint Paul)",
+      "address": "345 Smith Avenue North, Saint Paul, MN 55102",
+      "url": "https://providers.allinahealth.org/search?display_location=Saint%20Paul%2C%20MN&specialties=Midwifery",
+      "source": "https://providers.allinahealth.org/search?display_location=Saint%20Paul%2C%20MN&specialties=Midwifery",
+      "quote": "345 Smith Avenue North Saint Paul, MN 55102 ... Kathrine L Simon, CNM ... Ann E Groonwald, CNM"
+    }
+  ],
+  "counts_vs_minimum": {
+    "doulas": 8,
+    "doulas_target": 6,
+    "hospitals": 2,
+    "hospitals_target": 3
+  },
+  "verdict": "DOULAS PASS (8 evidence-backed, incl. 2 Twin-Cities agencies serving St. Paul). HOSPITALS SHORT: 2 of 3 minimum — Regions Hospital's maternity details not yet fetched; a 3rd St. Paul delivery hospital (e.g., Children's-McKee / Eastside Women) was not evidenced within budget.",
+  "search_log": [
+    {
+      "query": "doula services Saint Paul Minnesota",
+      "channel": "web_search"
+    },
+    {
+      "query": "Saint Paul Minnesota birthing center home birth midwife",
+      "channel": "web_search"
+    },
+    {
+      "query": "\"Saint Paul\" MN doula postpartum birth support website",
+      "channel": "web_search"
+    },
+    {
+      "query": "Regions Hospital Saint Paul birthing center obstetrics",
+      "channel": "web_search"
+    },
+    {
+      "query": "Independent Birth Center Saint Paul MN",
+      "channel": "web_search"
+    },
+    {
+      "query": "United Hospital Allina Saint Paul obstetrics labor delivery",
+      "channel": "web_search"
+    },
+    {
+      "query": "Minnesota Birth Center St. Paul birth center midwife",
+      "channel": "web_search"
+    },
+    {
+      "query": "\"Saint Paul\" Minnesota doula -jobs -careers",
+      "channel": "web_search"
+    },
+    {
+      "query": "DONA certified doula \"Saint Paul\" Minnesota birth postpartum",
+      "channel": "web_search"
+    },
+    {
+      "query": "doula \"Minneapolis\" \"St. Paul\" postpartum home birth",
+      "channel": "web_search"
+    },
+    {
+      "query": "DoulaMatch doulas \"Saint Paul\" MN birth doula profile",
+      "channel": "web_search"
+    },
+    {
+      "query": "doula \"Minneapolis\" \"St. Paul\" (DoulaMatch city list)",
+      "channel": "web_search"
+    },
+    {
+      "query": "\"Katherine Sweeney\" doula \"St. Paul\" Minnesota",
+      "channel": "web_search"
+    },
+    {
+      "query": "Allina Saint Paul hospital birth center \"Center for Birth\" maternity labor",
+      "channel": "web_search"
+    },
+    {
+      "query": "Saint Paul MN \"midwifery clinic\" birth home birth midwife practice",
+      "channel": "web_search"
+    }
+  ],
+  "fetch_log": [
+    {
+      "url": "https://doulamatch.net/list/city/us/mn/saint%20paul",
+      "note": "21 doulas listed for the city; page 1 captured in full"
+    },
+    {
+      "url": "https://welcomebabycare.com/",
+      "note": "Twin Cities postpartum agency, Bloomington address"
+    },
+    {
+      "url": "https://preciouspearldoula.com/about",
+      "note": "DONA postpartum doula, Twin Cities"
+    },
+    {
+      "url": "https://www.themotherbabycenter.org/locations/st-paul",
+      "note": "St. Paul birth center location page"
+    },
+    {
+      "url": "https://account.allinahealth.org/servicelines/867/locations",
+      "note": "Allina midwifery clinic addresses incl. United Women's Health Clinic, St. Paul"
+    }
+  ]
+}
