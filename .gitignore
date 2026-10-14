@@ -30,3 +30,6 @@ doula-provider-emails.json
 # python cache
 scripts/__pycache__/
 .wrangler/
+
+# 10/14: human-review quarantine never enters the repo
+artifacts/pending-human-review/
