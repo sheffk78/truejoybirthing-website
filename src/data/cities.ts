@@ -13522,7 +13522,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
     heroImage: "/images/saint-petersburg-fl-birth-doula-hero.webp",
     supportSceneImage: "/images/saint-petersburg-fl-birth-doula-support.webp",
     supportSceneAlt: "A doula walking beside a pregnant mom through a palm-lined Saint Petersburg neighborhood at golden hour",
-    nearbyCities: ["tampa-fl", "clearwater-fl", "largo-fl", "pinellas-park-fl", "bradenton-fl", "gulfport-fl"],
+    nearbyCities: ["tampa-fl", "orlando-fl"],
     medicaidNote: "Yes — Florida Medicaid covers maternity care through Managed Medical Assistance (MMA) plans, and the Healthy Start Coalition of Pinellas runs a free doula program for eligible residents, so ask your plan and the coalition both.",
     insuranceNote: "Many Florida doulas work out-of-network and provide superbills for HSA/FSA reimbursement. Check if your plan offers out-of-network maternity or wellness benefits.",
     faqs: [
@@ -13561,6 +13561,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
     localDoulas: [
       {
         name: "Jennifer Vazquez",
+        credential: "Certified Birth & Postpartum Doula (ProDoula-trained), Childbirth Educator",
         business: "Pinellas Doula Services",
         url: "https://pinellasdoulaservices.com/",
         phone: "",
@@ -13585,6 +13586,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
       },
       {
         name: "Tiffany Holmes",
+        credential: "Traditional Birth & Postpartum Doula, Hypnobirthing Childbirth Educator (KGH), Reiki Master",
         business: "Quantum Motherhood",
         url: "https://saintpetersburgdoula.com/",
         phone: "",
@@ -13610,6 +13612,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
       },
       {
         name: "Madeline Ishmael",
+        credential: "DONA-trained Birth Doula, CLC via Healthy Children Project, Bornbir-verified",
         business: "",
         url: "https://www.bornbir.com/madeline-ishmael",
         phone: "",
@@ -13632,6 +13635,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
       },
       {
         name: "Healthy Start Coalition of Pinellas",
+        credential: "Community maternal-health program (Coalition-operated); doulas trained per Coalition doula-program standards",
         business: "Pinellas Doula Program",
         url: "https://healthystartpinellas.org/doula-program/",
         phone: "727-507-4260",
@@ -13654,7 +13658,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
         name: "Breath of Life Women's Health & Birth Center",
         address: "1900 E Bay Dr, Largo, FL 33771",
         paragraph: "Breath of Life Women's Health and Birth Center sits at 1900 East Bay Drive in Largo, roughly ten minutes from downtown Saint Petersburg, and it holds CABC accreditation, which makes it Florida's only accredited birth center. That distinction carries weight in a state where freestanding birth centers stay rare, because accreditation here means voluntary inspection of everything from sterile technique charts to emergency transfer drills, not just a license on the wall. Care is CNM-led, with Certified Nurse-Midwives handling prenatal visits, labor, and delivery, and the birth suites are furnished more like a very good guest room than a hospital floor, including deep tubs for labor and water birth. The center runs the full midwifery model, meaning continuous presence through labor, intermittent monitoring that respects movement, and discharge home within hours after an uncomplicated birth, with a home visit to follow. Transfer protocols are explicit and rehearsed, and families should still ask about them at their first tour, because the honest answer separates a great birth center from a merely pretty one. Insurance coverage varies by plan, Florida Medicaid programs have covered licensed birth center birth, and the center's staff will run a benefits check before the first appointment so nobody gets a surprise in month eight.",
-        thumbnail: "/images/birth-centers/breath-of-life-womens-health-birth-center.webp",
+        thumbnail: "/images/hospitals/saint-petersburg-fl-breath-of-life.webp",
         url: "https://www.breathoflife.cc",
         phone: "727.216.1420",
         credential: "CABC Accredited",
@@ -13678,7 +13682,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
         name: "Orlando Health Bayfront Hospital \u2014 Center for Women and Babies",
         address: "550 6th Street South, St. Petersburg, FL 33704",
         paragraph: "Located on the third floor of Johns Hopkins All Children's Hospital, Orlando Health Bayfront's Center for Women and Babies runs modern labor and delivery suites with comprehensive maternity care, and its Level IV NICU sits right on the same campus. That adjacency is the whole story here. A scheduled induction and a pediatric consult can happen in the same parking garage, and if a baby arrives early or needs specialty care, the transfer is an elevator ride rather than an ambulance run across town. Rooms are private, the nursing staff runs on certified specialists, and the physician group is used to high-risk referrals from up and down the Gulf Coast, so families with complicated pregnancies often end up here by choice rather than by emergency. Doulas work the unit regularly, which matters more than it sounds, because a labor team that already knows how doulas practice is smoother to work with from the first contraction to discharge. Ask the unit about birth-plan processing at preregistration, since this floor honors them and wants the paperwork before you arrive in labor. Bring a signed copy, a photo ID, and the doula's certification, and check-in goes faster by an hour. For families weighing Bayfront versus HCA, the practical split is simple: this campus buys the neonatal safety net, HCA buys a classic full-service experience, and both are close to downtown.",
-        thumbnail: "/images/hospitals/orlando-health-bayfront-hospital-center-for-women-and-babies.webp",
+        thumbnail: "/images/hospitals/saint-petersburg-fl-bayfront.webp",
         url: "https://www.hopkinsmedicine.org/patient-care/locations/johns-hopkins-all-childrens-bayfront-baby-place",
         phone: "(727) 290-1310",
         doulaPolicy: "Doulas welcome as support persons",
@@ -13694,7 +13698,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
         name: "HCA Florida St. Petersburg Hospital \u2014 Women's Center",
         address: "6500 38th Ave. North, St. Petersburg, FL 33710",
         paragraph: "HCA Florida St. Petersburg Hospital's Women's Center provides a secure labor and delivery unit with private rooms, certified nurses, and skilled physicians in one full-service setting. It is the classic full-hospital experience: triage, delivery, recovery, and postpartum care on one floor, supported by a 215-bed hospital's full diagnostic and surgical resources. The unit handles a broad range of births, from straightforward first deliveries to planned repeat cesareans and medically complex pregnancies, and the NICU here is a community-level special-care nursery rather than the regional draw that Bayfront's campus holds. Families who choose HCA tend to value the calm, the private rooms, and the shorter check-in lines compared with busier downtown units, and several practices in the area round exclusively at this hospital, which keeps prenatal and delivery teams consistent. Doulas attend births here regularly and report the nursing staff as collaborative, particularly when birth plans are shared during preregistration rather than at the door. Parking is easier than at Bayfront, the campus sits close to I-275 for families coming from north Pinellas, and visiting hours are generous for partners.",
-        thumbnail: "/images/hospitals/hca-florida-st-petersburg-hospital-womens-center.webp",
+        thumbnail: "/images/hospitals/saint-petersburg-fl-hca-st-pete.webp",
         url: "https://www.hcafloridahealthcare.com/locations/st-petersburg-hospital/specialties/womens-care",
         phone: "(727) 341-4808",
         doulaPolicy: "Patients may bring their own doulas",

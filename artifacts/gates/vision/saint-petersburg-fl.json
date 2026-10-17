@@ -1,0 +1,24 @@
+{
+  "slug": "saint-petersburg-fl",
+  "verdicts": [
+    {
+      "crop": "saint-petersburg-fl-hero-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "notes": "crop is narrow left-edge sliver (palms only); verified full hero instead: pregnant woman from behind, waterfront+skyline, anatomy clean, no extra limbs"
+    },
+    {
+      "crop": "saint-petersburg-fl-support-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "notes": "both visible hands 5 fingers, faces clean, natural light, no text"
+    },
+    {
+      "crop": "saint-petersburg-fl-og-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "notes": "letters flagged in pass 1 are card LAYOUT outside the photo; photo-only recheck PASS \u2014 waterfront figure intact, skyline unwrapped, no text in scene"
+    }
+  ],
+  "checked_at": "2026-10-17T20:01:37Z"
+}

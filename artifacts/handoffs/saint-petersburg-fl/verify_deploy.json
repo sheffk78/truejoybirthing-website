@@ -1,0 +1,12 @@
+{
+  "slug": "saint-petersburg-fl",
+  "stage": "verify_deploy",
+  "produced_at": null,
+  "worker_model": null,
+  "notes": "",
+  "sources": [],
+  "preflight_exit": null,
+  "deploy_status": null,
+  "live_http": null,
+  "vision_verdict_file": null
+}

@@ -1,0 +1,70 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "saint-petersburg-fl",
+  "stage": "enrich",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 7,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the matching domain (pinellasdoulaservices.com), names Jennifer, and directly states she is a certified birth and postpartum doula and childbirth educator serving St. Petersburg and Pinellas County, exactly matching the claim.",
+      "claim": "Pinellas Doula Services (Jennifer Vazquez) is a certified birth and postpartum doula and childbirth educator serving St. Petersburg and Pinellas County.",
+      "url": "https://pinellasdoulaservices.com/",
+      "quote": "Hi! I'm Jennifer \u2014 a certified birth and postpartum doula and childbirth educator serving St. Petersburg and throughout Pinellas County"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote lists exactly the services claimed (traditional birth & postpartum doula, Hypnobirthing education, Reiki) in St. Petersburg, FL, and is plausible text for the saintpetersburgdoula.com homepage.",
+      "claim": "Quantum Motherhood (Tiffany Holmes) offers traditional birth & postpartum doula care, Hypnobirthing childbirth education, Reiki and related services in St. Petersburg, FL.",
+      "url": "https://saintpetersburgdoula.com/",
+      "quote": "Traditional Birth & Postpartum Doula, Hypnobirthing Childbirth Educator, Quantum Birthing Coach, Reiki Master, Pelvic Steaming Facilitator, and Intuitive Guide in St. Petersburg, FL"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible first-person bio for a Bornbir doula profile page and directly confirms the claim's core assertions \u2014 her name, DONA birth doula certification since 2019 \u2014 with no fabrication signals, though it does not explicitly restate the St. Petersburg service area.",
+      "claim": "Madeline 'Maddy' Ishmael is a certified birth doula serving the St. Petersburg area (Bornbir-verified profile).",
+      "url": "https://www.bornbir.com/madeline-ishmael",
+      "quote": "My name is Madeline 'Maddy' Ishmael and I am a certified birth doula through DONA since 2019, certified lactation consultant through Healthy Children Project and a prenatal yoga teacher."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the Healthy Start Pinellas doula program page and directly supports the claim that doulas provide labor-and-delivery support to clients who are Pinellas County residents.",
+      "claim": "The Healthy Start Coalition of Pinellas doula program provides continuous labor-and-delivery support to enrolled clients in Pinellas County.",
+      "url": "https://healthystartpinellas.org/doula-program/",
+      "quote": "Doula will be with the client during the labor and delivery... Must be a resident of Pinellas County"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible text for the Johns Hopkins Medicine location page (whose URL slug references the All Children's Bayfront Baby Place) and directly supports the claim's assertions that Orlando Health Bayfront Hospital's Center for Women and Babies offers labor and delivery suites and maternity ",
+      "claim": "Orlando Health Bayfront Hospital's Center for Women and Babies, per its official Johns Hopkins Medicine listing, offers labor-and-delivery suites and maternity care from its third-floor location within the Johns Hopkins All Children's Hospital campus at 550 6th Street South, St. Petersburg.",
+      "url": "https://www.hopkinsmedicine.org/patient-care/locations/johns-hopkins-all-childrens-bayfront-baby-place",
+      "quote": "Located on the third floor of Johns Hopkins All Children's Hospital, Orlando Health Bayfront Hospital Center for Women and Babies offers labor and delivery suites and maternity care."
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the HCA Florida St. Petersburg Hospital women's care page and directly states the hospital offers a secure labor and delivery unit with private rooms, matching the claim.",
+      "claim": "HCA Florida St. Petersburg Hospital's women's center offers a secure labor and delivery unit with private rooms.",
+      "url": "https://www.hcafloridahealthcare.com/locations/st-petersburg-hospital/specialties/womens-care",
+      "quote": "In our secure labor and delivery unit, we offer private rooms where new families can bond together under the care of certified nurses and skilled physicians."
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the organization's own domain (breathoflife.cc) and explicitly names Breath of Life Women's Health and Birth Center with a Largo, FL address, directly supporting the claim that it operates as a birth center in Largo serving the Tampa Bay/St. Petersburg area.",
+      "claim": "Breath of Life Women's Health & Birth Center operates in Largo, FL (serving the St. Petersburg area) as a freestanding birth center.",
+      "url": "https://www.breathoflife.cc",
+      "quote": "Breath of Life Women's Health and Birth Center, located at 1900 East Bay Drive in Largo ... received its CABC accreditation status becoming Florida's only accredited birth center."
+    }
+  ],
+  "checked_at": "2026-10-17T13:58:51-06:00"
+}

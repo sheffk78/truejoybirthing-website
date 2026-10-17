@@ -1,0 +1,45 @@
+{
+  "slug": "saint-petersburg-fl",
+  "stage": "enrich",
+  "attempts": 0,
+  "history": [
+    {
+      "attempt": 1,
+      "at": "2026-10-17T13:51:12-06:00",
+      "evals": {
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-10-17T13:53:24-06:00",
+      "evals": {
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-10-17T13:58:13-06:00",
+      "evals": {
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-10-17T13:58:32-06:00",
+      "evals": {
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    }
+  ],
+  "last_verdict": "approved",
+  "last_input_fingerprint": "65bd7e860e888f70"
+}
