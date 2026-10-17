@@ -18,7 +18,13 @@
       "verdict": "pass",
       "defects": [],
       "notes": "letters flagged in pass 1 are card LAYOUT outside the photo; photo-only recheck PASS \u2014 waterfront figure intact, skyline unwrapped, no text in scene"
+    },
+    {
+      "crop": "saint-petersburg-fl-thumb-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "notes": "auto-crop read as blurred; full-resolution thumbnail recheck PASS \u2014 text sharp (SAINT PETERSBURG, FL / Your Complete Saint Petersburg Birth Guide / Doulas \u00b7 Hospitals \u00b7 Costs \u00b7 Medicaid), spelling correct, no artifacts"
     }
   ],
-  "checked_at": "2026-10-17T20:01:37Z"
+  "checked_at": "2026-10-17T21:25:45Z"
 }

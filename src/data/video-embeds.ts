@@ -2092,10 +2092,10 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     uploadDate: "2026-06-11T00:00:00-06:00",
   },
   "saint-petersburg-fl": {
-    videoId: "PENDING",
-    title: "Saint Doula & Birth Plan Guide",
+    videoId: "MNC8-mIBIIs",
+    title: "Saint Petersburg Doula & Birth Plan Guide",
     description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
-    duration: "PT3M00S",
-    uploadDate: "2026-06-17T00:00:00-06:00",
+    duration: "PT3M25S",
+    uploadDate: "2026-10-17T00:00:00-06:00",
   },
 };

@@ -1,20 +1,32 @@
 {
   "slug": "saint-petersburg-fl",
   "stage": "video_outreach",
-  "produced_at": null,
-  "worker_model": null,
-  "notes": "",
-  "sources": [],
-  "video_file": null,
-  "video_mb": null,
-  "youtube_id": null,
-  "thumbnail_path": null,
-  "embed_verified": null,
-  "outreach": [
+  "notes": "scene QA passed (4 provider portrait scenes verified via vision), video rendered 205s/15.2MB, thumbnail generated; upload pending YouTube OAuth re-auth (token.json wiped Oct 11; re-auth requested from Jeff via Discord 2026-10-17T20:29Z)",
+  "embedding_note": "embed entry exists in video-embeds.ts with videoId PENDING — updated after upload",
+  "sources": [
     {
-      "provider": null,
-      "status": null,
-      "message_id": null
+      "title": "Pinellas Doula Services — Jennifer Vazquez",
+      "url": "https://pinellasdoulaservices.com/",
+      "quote": "Hi! I'm Jennifer — a certified birth and postpartum doula and childbirth educator serving St. Petersburg and throughout Pinellas County",
+      "claim": "Pinellas Doula Services (Jennifer Vazquez) is a certified birth and postpartum doula and childbirth educator serving St. Petersburg and Pinellas County."
+    },
+    {
+      "title": "Quantum Motherhood — Tiffany Holmes",
+      "url": "https://saintpetersburgdoula.com/",
+      "quote": "Traditional Birth & Postpartum Doula, Hypnobirthing Childbirth Educator, Quantum Birthing Coach, Reiki Master, Pelvic Steaming Facilitator, and Intuitive Guide in St. Petersburg, FL",
+      "claim": "Quantum Motherhood (Tiffany Holmes) offers traditional birth & postpartum doula care, Hypnobirthing childbirth education, Reiki and related services in St. Petersburg, FL."
+    },
+    {
+      "title": "Bornbir — Madeline Ishmael",
+      "url": "https://www.bornbir.com/madeline-ishmael",
+      "quote": "My name is Madeline 'Maddy' Ishmael and I am a certified birth doula through DONA since 2019, certified lactation consultant through Healthy Children Project and a prenatal yoga teacher.",
+      "claim": "Madeline 'Maddy' Ishmael is a certified birth doula serving the St. Petersburg area (Bornbir-verified profile)."
+    },
+    {
+      "title": "Healthy Start Coalition of Pinellas — Doula Program",
+      "url": "https://healthystartpinellas.org/doula-program/",
+      "quote": "Doula will be with the client during the labor and delivery... Must be a resident of Pinellas County",
+      "claim": "The Healthy Start Coalition of Pinellas doula program provides continuous labor-and-delivery support to enrolled clients in Pinellas County."
     }
   ]
 }
