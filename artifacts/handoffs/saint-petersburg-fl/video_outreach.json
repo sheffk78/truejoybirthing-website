@@ -1,7 +1,7 @@
 {
   "slug": "saint-petersburg-fl",
   "stage": "video_outreach",
-  "notes": "scene QA passed (4 provider portrait scenes verified via vision), video rendered 205s/15.2MB, thumbnail generated; upload pending YouTube OAuth re-auth (token.json wiped Oct 11; re-auth requested from Jeff via Discord 2026-10-17T20:29Z)",
+  "notes": "render 205s; 4 provider portrait scenes vision-passed; thumb text QA pass; uploaded public+embeddable, added to Florida + Master playlists; embed live on page (probe 200, MNC8-mIBIIs + PT3M25S present); outreach: 1/4 providers has public email — 3 contact-form-only, emails remain Jeff-approval per pipeline rules",
   "embedding_note": "embed entry exists in video-embeds.ts with videoId PENDING — updated after upload",
   "sources": [
     {
@@ -27,6 +27,43 @@
       "url": "https://healthystartpinellas.org/doula-program/",
       "quote": "Doula will be with the client during the labor and delivery... Must be a resident of Pinellas County",
       "claim": "The Healthy Start Coalition of Pinellas doula program provides continuous labor-and-delivery support to enrolled clients in Pinellas County."
+    }
+  ],
+  "produced_at": "2026-10-17T21:27:16Z",
+  "worker_model": "kimi-k2.6:cloud (lane) + Kit direct",
+  "video_file": "youtube:MNC8-mIBIIs",
+  "video_mb": 15.2,
+  "youtube_id": "MNC8-mIBIIs",
+  "thumbnail_path": "public/images/yt-thumb-saint-petersburg-fl.webp",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "provider": "Healthy Start Coalition of Pinellas",
+      "to": "Connect@HealthyStartPinellas.org",
+      "status": "drafted_not_sent",
+      "message_id": null,
+      "reason": "outreach requires Jeff approval per pipeline rules R4/audience gate — queued for review"
+    },
+    {
+      "provider": "Jennifer Vazquez (Pinellas Doula Services)",
+      "to": null,
+      "status": "blocked",
+      "message_id": null,
+      "reason": "no public email — contact-form-only (pinellasdoulaservices.com)"
+    },
+    {
+      "provider": "Tiffany Holmes",
+      "to": null,
+      "status": "blocked",
+      "message_id": null,
+      "reason": "no public email found via curl+grep/JSON-LD"
+    },
+    {
+      "provider": "Madeline Ishmael (Bornbir)",
+      "to": null,
+      "status": "blocked",
+      "message_id": null,
+      "reason": "no public email found via curl+grep/JSON-LD"
     }
   ]
 }
