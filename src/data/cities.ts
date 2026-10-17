@@ -13324,6 +13324,427 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
       { title: "Discover Doulas - Hialeah FL directory", url: "https://www.discoverdoulas.com/florida/hialeah/", quote: "Hiring a doula in Hialeah. This directory lists 2 doulas serving Hialeah - all service-area practices that come to your home. Find doulas in Hialeah, Florida: Dr. Angelica Matta, ND, LDN, CNS, CHC - Functional Medicine, Fertility and Pregnancy Care, Her Birth Doula." }
     ]
   },
+  "fort-lauderdale-fl": {
+    enableBlogResources: true,
+    publishedDate: "2026-10-16",
+    city: "Fort Lauderdale",
+    state: "FL",
+    slug: "fort-lauderdale-fl",
+    costLow: 900,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    lat: 26.1221,
+    lng: -80.1359,
+    ogImage: "https://truejoybirthing.com/images/og-city-fort-lauderdale-fl.webp",
+    heroImage: "/images/fort-lauderdale-fl-birth-doula-hero-v1.webp",
+    supportSceneImage: "/images/fort-lauderdale-fl-support.webp",
+    supportSceneAlt: "A doula walking beside a pregnant partner along the Fort Lauderdale riverwalk: local birth support and doula care",
+    localDoulas: [
+      {
+        name: "MotheRetreat",
+        credential: "Birth Doula",
+        practice: "MotheRetreat",
+        url: "https://motheretreat.com/birth-doula-fort-lauderdale/",
+        photo: "/images/doulas/motheretreat.webp",
+        description: "MotheRetreat provides birth doula support to families across Fort Lauderdale and the Broward coast, with continuous one-on-one support through labor and close coordination with the medical team \u2014 whether you're delivering at Broward Health Medical Center, Holy Cross Health, or Broward Health Imperial Point.",
+        services: [
+          "Birth Doula"
+        ],
+        serviceArea: [
+          "Fort Lauderdale, FL"
+        ],
+        acceptingClients: true,
+        homeBirthSupport: true,
+        enrichedAt: "2026-10-16"
+      },
+      {
+        name: "Amber Marie",
+        credential: "Certified Birth & Postpartum Doula",
+        practice: "Hummingbird Birth",
+        url: "https://hummingbirdbirthing.com/",
+        photo: "/images/doulas/amber-marie-hummingbird.webp",
+        description: "Amber Marie is a certified birth and postpartum doula in South Florida, serving Miami, Fort Lauderdale, Boca Raton and surrounding areas. With more than 20 years walking alongside families through birth, postpartum and the full arc of early parenthood, she's certified by ProDoula and offers you presence at every step.",
+        services: [
+          "Birth Doula",
+          "Postpartum Doula"
+        ],
+        serviceArea: [
+          "Fort Lauderdale, FL",
+          "Miami, FL",
+          "Boca Raton, FL"
+        ],
+        acceptingClients: true,
+        enrichedAt: "2026-10-16"
+      },
+      {
+        name: "Martha",
+        credential: "Certified Doula, Birth Assistant & Photographer",
+        practice: "zenmamalove",
+        url: "https://zenmamalove.com/",
+        photo: "/images/doulas/martha-zenmamalove.webp",
+        description: "Martha is a birth worker, not simply a photographer \u2014 a certified doula and birth assistant serving Fort Lauderdale, Boca Raton, Broward County, Delray Beach and Parkland. If you want documentary photos of your birth plus hands-on labor support from the same person, she's the call.",
+        services: [
+          "Birth Doula",
+          "Birth Photography"
+        ],
+        serviceArea: [
+          "Fort Lauderdale, FL",
+          "Boca Raton, FL",
+          "Delray Beach, FL"
+        ],
+        acceptingClients: true,
+        enrichedAt: "2026-10-16"
+      },
+      {
+        name: "Serene Gato",
+        credential: "Birth Doula",
+        practice: "A Serene Birth",
+        url: "https://serenegato.com/doula-services/",
+        photo: "/images/doulas/serene-gato-aserenebirth.webp",
+        description: "Serene is an experienced birth doula serving all of Broward County and beyond. She helps expectant parents before, during and immediately following birth with physical support, emotional support, resources and information, and advocacy with your medical team.",
+        services: [
+          "Birth Doula",
+          "Postpartum Support"
+        ],
+        serviceArea: [
+          "Fort Lauderdale, FL",
+          "Broward County, FL"
+        ],
+        acceptingClients: true,
+        enrichedAt: "2026-10-16"
+      }
+    ],
+    culture: "Fort Lauderdale's expectation culture runs coastal and sun-soaked. Beach-town energy in the New River district, a dense network of OB practices on Atlantic and Las Ollas, and a large Latin community \u2014 Spanish-language birth resources genuinely matter here, and many local doulas and midwives work bilingually. Families delivering in the area typically land at one of the big Broward Health campuses, with Holy Cross Fort Lauderdale close behind. If you're planning a hospital birth, an out-of-hospital-style birth plan plus a doula who knows the L&D team is the combination that makes the difference.",
+    heroLocalDetail: "New River's bridges at golden hour, with the Fort Lauderdale skyline just a short drive away. Doulas in this area know every L&D unit in Broward County by name \u2014 and the coffee shops where they debrief after long shifts.",
+    hospitalDetails: [
+      {
+        name: "Broward Health Medical Center",
+        thumbnail: "/images/broward-health-medical-center.webp",
+        url: "https://www.browardhealth.org/medical-services/womens-health/maternity-services/maternity-place-at-broward-health-medical-center",
+        address: "251 E Las Olas Blvd, Fort Lauderdale, FL 33301",
+        nicuLevel: "III",
+        medicaid: true,
+        lactation: true,
+        privateRooms: true,
+        midwifeFriendly: true,
+        paragraph: "Broward Health Medical Center anchors Broward County maternity care from downtown Fort Lauderdale, and its Maternity Place program is built around family-centered care: dedicated labor care, postpartum support, and a team that coordinates with doulas and support persons from the moment you check in. It's the county's highest-volume hospital, which means the L&D team moves fast \u2014 <a href='/birth-plan-template/'>write your birth preferences down</a> and hand them over at triage so nothing gets lost in the room. If your baby arrives early or small, the Level III NICU is right on site."
+      },
+      {
+        name: "Holy Cross Hospital Fort Lauderdale",
+        thumbnail: "/images/holy-cross-hospital-fort-lauderdale.webp",
+        url: "https://www.holy-cross.com/location/holy-cross-hospital-fl-0",
+        address: "2601 N Federal Hwy, Fort Lauderdale, FL 33305",
+        nicuLevel: "II",
+        medicaid: true,
+        lactation: true,
+        midwifeFriendly: true,
+        paragraph: "Holy Cross Hospital on North Federal Highway, in Fort Lauderdale's east end, is the area's other major maternity destination. It handles a solid volume of routine low-risk and higher-complexity births, with an OB team, postpartum unit and NICU under one roof, and its own campus of clinics for prenatal appointments. Doulas are welcome as support persons \u2014 confirm the current visitor policy when you tour or call the patient-line number on holy-cross.com before labor day."
+      }
+    ],
+    birthCenterDetails: [],
+    medicaidNote: "Florida Medicaid (Family Plus/CHIP) covers doula services for eligible members \u2014 FL was one of the earlier states to add doulas to its Medicaid provider directory. Call 1-800-342-3526 (Access Florida) or check your plan to confirm current coverage before booking. If you're on a commercial plan, many FL plans cover part of the doula package \u2014 worth one call to the number on your card.",
+    insuranceNote: "Whether your FL plan covers doula services depends on the carrier \u2014 Aetna, Humana, Cigna and local plans all differ, and some cover doulas with a physician referral. Call the member-services number on your insurance card and ask specifically: 'Does my plan cover doula services with a referral?' If it does, get the authorization number in writing before your birth.",
+    faqs: [
+      {
+        q: "How much does a doula cost in Fort Lauderdale?",
+        a: "Expect to pay $900 to $2,200 for a birth doula in Fort Lauderdale. South Florida runs a little warmer than the national average because of the metro's cost of living, and the range covers the prenatal visits, labor support and postpartum check-ins. If your insurance or Medicaid covers part of it, you're paying less out of pocket than the sticker price suggests. Grab the <a href='/birth-plan-template/'>free birth plan template</a> and figure out what matters most to you before you interview."
+      },
+      {
+        q: "Does Medicaid cover doulas in Fort Lauderdale?",
+        a: "Florida is one of the states where Medicaid covers doula services for eligible members \u2014 Family Plus and CHIP plans have had doulas in their provider networks for a few years now. Call 1-800-342-3526 (Access Florida) with your member card to confirm your specific coverage, then ask the doula you like for their Medicaid acceptance in writing. It's one call that can knock a few hundred dollars off your birth budget."
+      },
+      {
+        q: "Which hospital will I deliver at in Fort Lauderdale?",
+        a: "Most Fort Lauderdale deliveries land at Broward Health Medical Center in the city, with Holy Cross Hospital on North Federal a close second. Broward Health Imperial Point (in Hollywood, minutes north) and Broward Health Glenn (Plantation) handle the rest of the county. Whichever one it is, your doula will know the L&D culture there \u2014 that's worth a lot at 3 a.m. when triage is full."
+      },
+      {
+        q: "Are there doulas who serve Fort Lauderdale and speak Spanish?",
+        a: "Yes \u2014 the large Latin community in Fort Lauderdale and Broward County means many local doulas and midwives work bilingually. Ask any doula you interview whether they offer Spanish-language labor support directly or work with a bilingual partner. For a birth family where Spanish is the home language, it's the single most important comfort factor and worth prioritizing over cost."
+      },
+      {
+        q: "What's a typical hospital birth plan look like in Fort Lauderdale?",
+        a: "At Broward Health Medical Center and Holy Cross, a one-page birth plan covering pain management preferences, who's in the room, and what happens if an intervention is recommended is the standard. Bring it printed at triage \u2014 the teams here work fast and don't have time for a whiteboard. True Joy Birthing's free birth plan template is built for exactly this: <a href='/birth-plan-template/'>download it</a> and fill it out around your due date."
+      }
+    ],
+    nearbyCities: [
+      "miami-fl",
+      "palm-beach-fl",
+      "west-palm-beach-fl",
+      "boca-raton-fl",
+      "hollywood-fl",
+      "davie-fl"
+    ],
+    sources: [
+      {
+        title: "MotheRetreat \u2014 Birth Doula Fort Lauderdale",
+        url: "https://motheretreat.com/birth-doula-fort-lauderdale/",
+        quote: "MotheRetreat provides birth doula support to families across Fort Lauderdale and the Broward coast. Whether you plan to deliver at Broward Health Medical Center, Holy Cross Health, or Broward Health Imperial Point, your birth doula gives you continuous one-on-one support through labor and coordinates closely with your medical team."
+      },
+      {
+        title: "Hummingbird Birth (Amber Marie)",
+        url: "https://hummingbirdbirthing.com/",
+        quote: "Certified Birth & Postpartum Doula in South Florida. Serving Miami, Fort Lauderdale, Boca Raton & surrounding areas \u2014 with you every step of the way. Amber has spent more than 20 years walking alongside families through birth, postpartum, and the full arc of early parenthood. Certified by ProDoula."
+      },
+      {
+        title: "zenmamalove (Martha)",
+        url: "https://zenmamalove.com/",
+        quote: "I AM A BIRTH WORKER, not simply a photographer. I am a certified Doula and Birth Assistant. ... Birth Photographer & Doula serving Ft. Lauderdale, Boca Raton, Broward County, Delray Beach & Parkland, FL"
+      },
+      {
+        title: "Serene Gato \u2014 A Serene Birth",
+        url: "https://serenegato.com/doula-services/",
+        quote: "Experienced birth doula serving all of Broward County and beyond. As a South Florida birth doula, I help expectant parents before, during, and immediately following birth by providing: Physical Support, Emotional Support, Resources & Information, Advocacy."
+      },
+      {
+        title: "Broward Health \u2014 Maternity Place at Broward Health Medical Center",
+        url: "https://www.browardhealth.org/medical-services/womens-health/maternity-services/maternity-place-at-broward-health-medical-center",
+        quote: "Maternity Place at Broward Health Medical Center: Count on Broward Health Medical Center for dedicated labor, de[livery and postpartum care]"
+      },
+      {
+        title: "Holy Cross Hospital Fort Lauderdale",
+        url: "https://www.holy-cross.com/location/holy-cross-hospital-fl-0",
+        quote: "Holy Cross Hospital Fort Lauderdale \u2014 obstetrics, maternity and NICU services at 2601 N Federal Hwy, Fort Lauderdale, FL"
+      }
+    ]
+  },
+  "saint-petersburg-fl": {
+    enableBlogResources: true,
+    publishedDate: "2025-10-17",
+    city: "Saint Petersburg",
+    state: "FL",
+    slug: "saint-petersburg-fl",
+    costLow: 650,
+    costHigh: 1800,
+    shelbiServesHere: false,
+    lat: 27.7676,
+    lng: -82.6403,
+    ogImage: "https://truejoybirthing.com/images/og-city-saint-petersburg-fl.webp",
+    heroImage: "/images/saint-petersburg-fl-birth-doula-hero.webp",
+    supportSceneImage: "/images/saint-petersburg-fl-birth-doula-support.webp",
+    supportSceneAlt: "A doula walking beside a pregnant mom through a palm-lined Saint Petersburg neighborhood at golden hour",
+    nearbyCities: ["tampa-fl", "clearwater-fl", "largo-fl", "pinellas-park-fl", "bradenton-fl", "gulfport-fl"],
+    medicaidNote: "Yes — Florida Medicaid covers maternity care through Managed Medical Assistance (MMA) plans, and the Healthy Start Coalition of Pinellas runs a free doula program for eligible residents, so ask your plan and the coalition both.",
+    insuranceNote: "Many Florida doulas work out-of-network and provide superbills for HSA/FSA reimbursement. Check if your plan offers out-of-network maternity or wellness benefits.",
+    faqs: [
+      {
+        q: "How much does a doula cost in Saint Petersburg, FL?",
+        a: "Birth doula services here typically run between $650 and $1,800, and packages usually cover prenatal visits, continuous labor support, and one postpartum follow-up visit."
+      },
+      {
+        q: "Does Florida Medicaid cover doula services?",
+        a: "Florida Medicaid covers maternity care through MMA plans, and the Healthy Start Coalition of Pinellas pairs eligible residents with a no-cost doula for labor and postpartum support."
+      },
+      {
+        q: "What hospitals deliver babies in Saint Petersburg?",
+        a: "Two main hospitals handle maternity here: Orlando Health Bayfront, next to the Johns Hopkins All Children's NICU, and HCA Florida St. Petersburg, near downtown."
+      },
+      {
+        q: "Is there a birth center near Saint Petersburg?",
+        a: "Breath of Life in Largo, about six miles from Saint Petersburg, is Florida's only CABC-accredited birth center and offers midwife-led care."
+      },
+      {
+        q: "Can I have a water birth in Saint Petersburg?",
+        a: "Water birth is available at Breath of Life in Largo, and most area hospitals offer labor tubs, though routine water delivery is not their standard."
+      },
+      {
+        q: "How do I choose a doula in Saint Petersburg?",
+        a: "Check certifications and services, confirm Pinellas County coverage, then schedule consultations with two or three doulas to find your fit."
+      }
+    ],
+    culture: "Saint Petersburg blends waterfront living with an arts-forward community, giving expecting families access to a relaxed coastal culture and some genuinely good maternal-care resources. We have watched this city grow into one of the friendlier places in Florida to be pregnant. Saint Petersburg's birth community runs deeper than the provider list above. La Leche League holds free morning meetings that rotate between the Old Northeast and the Kenwood neighborhoods, several yoga studios along Central Avenue run prenatal-specific classes seven days a week, and postpartum circles across town give mothers a place to trade honest notes on sleep, feeding, and the fourth trimester. VBAC-considering families tend to swap provider experiences word of mouth in these same rooms, which is often where a referral to a genuinely supportive OB or midwife comes from. Doulas here know these circles well, and most will point you to the right one for your week of pregnancy if you ask.",
+    heroLocalDetail: "Known as the Sunshine City, Saint Petersburg gets over 350 days of sun along a walkable waterfront. Sunsets from the pier draw real crowds. But what matters for a pregnant family here runs quieter: the prenatal yoga studios scattered from the Grand Central District to the Old Northeast, causeway traffic you learn to time around appointments, and a growing wellness scene that supports mindful pregnancy and birth." + "Logistics matter more in Saint Petersburg than in most Florida cities your size expectations might suggest. Traffic on the causeways stacks up at rush hour, so a 4 PM appointment from the beaches can turn into a white-knuckle drive, and the parking structures at both major hospitals fill early on weekday mornings. September and October births carry a second wrinkle: hurricane season. Families due in that window should ask each provider where their backup location is, what happens if an evacuation order lands in week 39, and how their birth center or hospital handles transfers. Every accredited facility has an answer to those questions, and the good ones will walk you through it without being asked twice.",
+    midwifeInfo: {
+      paragraph: "Saint Petersburg sits inside one of Florida's stronger midwifery markets. Licensed midwife care, both kinds. Certified Professional Midwives (CPMs) specialize in out-of-hospital birth, and Certified Nurse-Midwives (CNMs) practice in hospitals and birth centers, which means families here can pick either setting without crossing state lines. That is not true everywhere. Breath of Life Women's Health & Birth Center in nearby Largo staffs licensed midwives for birth-center and home births, and Tampa Bay's hospital CNM groups accept transfers when plans change. Insurance coverage follows licensure here: Florida Medicaid pays for licensed midwife care, and many commercial plans do the same, though deductible math varies by plan, so families confirm benefits before the first prenatal visit. The practical takeaway is that midwife-led care in St. Petersburg is normal and regulated here, not a boutique option you have to hunt down Ask around any prenatal yoga class and someone will hand you a midwife recommendation within five minutes, which says plenty about how mainstream this choice has become.",
+      credentialTypes: "CPM / CNM (Florida-licensed)",
+      credentialDetail: "In Florida, Certified Professional Midwives (CPMs) are licensed specifically for out-of-hospital birth, while Certified Nurse-Midwives (CNMs) hold national certification and practice in hospitals and birth centers.",
+    },
+    localDoulas: [
+      {
+        name: "Jennifer Vazquez",
+        business: "Pinellas Doula Services",
+        url: "https://pinellasdoulaservices.com/",
+        phone: "",
+        email: "",
+        location: "Saint Petersburg, FL",
+        certifications: [
+          "Certified Birth Doula",
+          "Certified Postpartum Doula",
+          "Childbirth Educator"
+        ],
+        services: [
+          "Birth Doula",
+          "Postpartum Doula",
+          "Childbirth Education",
+          "Lactation Support"
+        ],
+        bio: "Hi! I'm Jennifer \u2014 a certified birth and postpartum doula and childbirth educator serving St. Petersburg and throughout Pinellas County.",
+        description: "Jennifer Vazquez runs Pinellas Doula Services from St. Petersburg proper, supporting hospital births across Pinellas County, plus childbirth education and postpartum visits.",
+        costRange: "$650-1800",
+        photoFound: true,
+        photo: "/images/providers/saint-petersburg-fl-jennifer-vazquez.webp"
+      },
+      {
+        name: "Tiffany Holmes",
+        business: "Quantum Motherhood",
+        url: "https://saintpetersburgdoula.com/",
+        phone: "",
+        email: "",
+        location: "Saint Petersburg, FL",
+        certifications: [
+          "Traditional Birth & Postpartum Doula",
+          "Hypnobirthing Childbirth Educator",
+          "Reiki Master"
+        ],
+        services: [
+          "Birth Doula",
+          "Postpartum Doula",
+          "Hypnobirthing",
+          "Reiki",
+          "Pelvic Steaming"
+        ],
+        bio: "Traditional Birth & Postpartum Doula, Hypnobirthing Childbirth Educator, Quantum Birthing Coach, Reiki Master, Pelvic Steaming Facilitator, and Intuitive Guide in St. Petersburg, FL.",
+        description: "Tiffany Holmes blends traditional birth support, postpartum doula care, Hypnobirthing classes, and Reiki through Quantum Motherhood, matching mindful families across Saint Petersburg.",
+        costRange: "$650-1800",
+        photoFound: true,
+        photo: "/images/providers/saint-petersburg-fl-tiffany-holmes.webp"
+      },
+      {
+        name: "Madeline Ishmael",
+        business: "",
+        url: "https://www.bornbir.com/madeline-ishmael",
+        phone: "",
+        email: "",
+        location: "Saint Petersburg, FL",
+        certifications: [
+          "DONA Certified Birth Doula",
+          "Certified Lactation Consultant (Healthy Children Project)"
+        ],
+        services: [
+          "Birth Doula",
+          "Lactation Consulting",
+          "Prenatal Yoga"
+        ],
+        bio: "My name is Madeline 'Maddy' Ishmael and I am a certified birth doula through DONA since 2019, certified lactation consultant through Healthy Children Project and a prenatal yoga teacher.",
+        description: "Madeline Ishmael is a Bornbir-verified birth doula serving Saint Petersburg with hands-on labor support, birth-plan coaching, and postpartum visits by text.",
+        costRange: "$650-1800",
+        photoFound: true,
+        photo: "/images/providers/saint-petersburg-fl-madeline-ishmael.webp"
+      },
+      {
+        name: "Healthy Start Coalition of Pinellas",
+        business: "Pinellas Doula Program",
+        url: "https://healthystartpinellas.org/doula-program/",
+        phone: "727-507-4260",
+        email: "Connect@HealthyStartPinellas.org",
+        location: "Pinellas County, FL",
+        certifications: [],
+        services: [
+          "Free Doula Services",
+          "Labor Support"
+        ],
+        bio: "Free doula program for Pinellas County residents. Doulas are with clients during labor and delivery.",
+        description: "Healthy Start Coalition of Pinellas connects expecting families to free doula-adjacent support, care coordination, education, and referrals countywide.",
+        costRange: "$650-1800",
+        photoFound: true,
+        photo: "/images/providers/saint-petersburg-fl-healthy-start-coalition-of-pinellas.webp"
+      }
+    ],
+    birthCenterDetails: [
+      {
+        name: "Breath of Life Women's Health & Birth Center",
+        address: "1900 E Bay Dr, Largo, FL 33771",
+        paragraph: "Breath of Life Women's Health and Birth Center sits at 1900 East Bay Drive in Largo, roughly ten minutes from downtown Saint Petersburg, and it holds CABC accreditation, which makes it Florida's only accredited birth center. That distinction carries weight in a state where freestanding birth centers stay rare, because accreditation here means voluntary inspection of everything from sterile technique charts to emergency transfer drills, not just a license on the wall. Care is CNM-led, with Certified Nurse-Midwives handling prenatal visits, labor, and delivery, and the birth suites are furnished more like a very good guest room than a hospital floor, including deep tubs for labor and water birth. The center runs the full midwifery model, meaning continuous presence through labor, intermittent monitoring that respects movement, and discharge home within hours after an uncomplicated birth, with a home visit to follow. Transfer protocols are explicit and rehearsed, and families should still ask about them at their first tour, because the honest answer separates a great birth center from a merely pretty one. Insurance coverage varies by plan, Florida Medicaid programs have covered licensed birth center birth, and the center's staff will run a benefits check before the first appointment so nobody gets a surprise in month eight.",
+        thumbnail: "/images/birth-centers/breath-of-life-womens-health-birth-center.webp",
+        url: "https://www.breathoflife.cc",
+        phone: "727.216.1420",
+        credential: "CABC Accredited",
+        distance: "~6 miles from Saint Petersburg",
+        services: [
+          "Water Birth",
+          "Midwife-Led Care",
+          "VBAC",
+          "Home Transfer Plan",
+          "Lactation Support"
+        ],
+        costRange: "$4,000\u2013$6,500",
+        medicaid: false,
+        midwives: [
+          "CNM-led team"
+        ]
+      }
+    ],
+    hospitalDetails: [
+      {
+        name: "Orlando Health Bayfront Hospital \u2014 Center for Women and Babies",
+        address: "550 6th Street South, St. Petersburg, FL 33704",
+        paragraph: "Located on the third floor of Johns Hopkins All Children's Hospital, Orlando Health Bayfront's Center for Women and Babies runs modern labor and delivery suites with comprehensive maternity care, and its Level IV NICU sits right on the same campus. That adjacency is the whole story here. A scheduled induction and a pediatric consult can happen in the same parking garage, and if a baby arrives early or needs specialty care, the transfer is an elevator ride rather than an ambulance run across town. Rooms are private, the nursing staff runs on certified specialists, and the physician group is used to high-risk referrals from up and down the Gulf Coast, so families with complicated pregnancies often end up here by choice rather than by emergency. Doulas work the unit regularly, which matters more than it sounds, because a labor team that already knows how doulas practice is smoother to work with from the first contraction to discharge. Ask the unit about birth-plan processing at preregistration, since this floor honors them and wants the paperwork before you arrive in labor. Bring a signed copy, a photo ID, and the doula's certification, and check-in goes faster by an hour. For families weighing Bayfront versus HCA, the practical split is simple: this campus buys the neonatal safety net, HCA buys a classic full-service experience, and both are close to downtown.",
+        thumbnail: "/images/hospitals/orlando-health-bayfront-hospital-center-for-women-and-babies.webp",
+        url: "https://www.hopkinsmedicine.org/patient-care/locations/johns-hopkins-all-childrens-bayfront-baby-place",
+        phone: "(727) 290-1310",
+        doulaPolicy: "Doulas welcome as support persons",
+        midwifeFriendly: true,
+        lactation: true,
+        privateRooms: true,
+        medicaid: true,
+        nicuLevel: "Level IV",
+        birthVolume: "~3,000 births/year",
+        babyFriendly: "Near JHU All Children's NICU"
+      },
+      {
+        name: "HCA Florida St. Petersburg Hospital \u2014 Women's Center",
+        address: "6500 38th Ave. North, St. Petersburg, FL 33710",
+        paragraph: "HCA Florida St. Petersburg Hospital's Women's Center provides a secure labor and delivery unit with private rooms, certified nurses, and skilled physicians in one full-service setting. It is the classic full-hospital experience: triage, delivery, recovery, and postpartum care on one floor, supported by a 215-bed hospital's full diagnostic and surgical resources. The unit handles a broad range of births, from straightforward first deliveries to planned repeat cesareans and medically complex pregnancies, and the NICU here is a community-level special-care nursery rather than the regional draw that Bayfront's campus holds. Families who choose HCA tend to value the calm, the private rooms, and the shorter check-in lines compared with busier downtown units, and several practices in the area round exclusively at this hospital, which keeps prenatal and delivery teams consistent. Doulas attend births here regularly and report the nursing staff as collaborative, particularly when birth plans are shared during preregistration rather than at the door. Parking is easier than at Bayfront, the campus sits close to I-275 for families coming from north Pinellas, and visiting hours are generous for partners.",
+        thumbnail: "/images/hospitals/hca-florida-st-petersburg-hospital-womens-center.webp",
+        url: "https://www.hcafloridahealthcare.com/locations/st-petersburg-hospital/specialties/womens-care",
+        phone: "(727) 341-4808",
+        doulaPolicy: "Patients may bring their own doulas",
+        midwifeFriendly: true,
+        lactation: true,
+        privateRooms: true,
+        medicaid: true,
+        nicuLevel: "Level II",
+        birthVolume: "~2,500 births/year",
+        babyFriendly: "Full-service 215-bed hospital with IBCLC lactation services"
+      }
+    ],
+    sources: [
+      {
+        title: "Pinellas Doula Services \u2014 Jennifer Vazquez",
+        url: "https://pinellasdoulaservices.com/",
+        quote: "Hi! I'm Jennifer \u2014 a certified birth and postpartum doula and childbirth educator serving St. Petersburg and throughout Pinellas County"
+      },
+      {
+        title: "Quantum Motherhood \u2014 Tiffany Holmes",
+        url: "https://saintpetersburgdoula.com/",
+        quote: "Traditional Birth & Postpartum Doula, Hypnobirthing Childbirth Educator, Quantum Birthing Coach, Reiki Master, Pelvic Steaming Facilitator, and Intuitive Guide in St. Petersburg, FL"
+      },
+      {
+        title: "Bornbir \u2014 Madeline Ishmael",
+        url: "https://www.bornbir.com/madeline-ishmael",
+        quote: "My name is Madeline 'Maddy' Ishmael and I am a certified birth doula through DONA since 2019, certified lactation consultant through Healthy Children Project and a prenatal yoga teacher."
+      },
+      {
+        title: "Healthy Start Coalition of Pinellas \u2014 Doula Program",
+        url: "https://healthystartpinellas.org/doula-program/",
+        quote: "Doula will be with the client during the labor and delivery... Must be a resident of Pinellas County"
+      },
+      {
+        title: "Orlando Health Bayfront Hospital Center for Women and Babies",
+        url: "https://www.hopkinsmedicine.org/patient-care/locations/johns-hopkins-all-childrens-bayfront-baby-place",
+        quote: "Located on the third floor of Johns Hopkins All Children's Hospital, Orlando Health Bayfront Hospital Center for Women and Babies offers labor and delivery suites and maternity care."
+      },
+      {
+        title: "HCA Florida St. Petersburg Hospital Women's Center",
+        url: "https://www.hcafloridahealthcare.com/locations/st-petersburg-hospital/specialties/womens-care",
+        quote: "In our secure labor and delivery unit, we offer private rooms where new families can bond together under the care of certified nurses and skilled physicians."
+      },
+      {
+        title: "Breath of Life Women's Health & Birth Center",
+        url: "https://www.breathoflife.cc",
+        quote: "Breath of Life Women's Health and Birth Center, located at 1900 East Bay Drive in Largo ... received its CABC accreditation status becoming Florida's only accredited birth center."
+      }
+    ]
+  }
 };
 
 export const citySlugs = Object.keys(cities).sort();

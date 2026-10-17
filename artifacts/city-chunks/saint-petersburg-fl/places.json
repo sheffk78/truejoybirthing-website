@@ -1,50 +1,60 @@
 {
   "hospitalDetails": [
     {
-      "name": "Orlando Health Bayfront Hospital — Center for Women and Babies",
-      "url": "https://www.hopkinsmedicine.org/patient-care/locations/johns-hopkins-all-childrens-bayfront-baby-place",
-      "thumbnail": "/images/saint-petersburg-fl-hospital-bayfront.webp",
+      "name": "Orlando Health Bayfront Hospital \u2014 Center for Women and Babies",
       "address": "550 6th Street South, St. Petersburg, FL 33704",
+      "paragraph": "Located on the third floor of Johns Hopkins All Children's Hospital, Orlando Health Bayfront Hospital Center for Women and Babies offers modern labor and delivery suites, comprehensive maternity care, and immediate access to a Level IV NICU \u2014 making it a strong choice for families in Saint Petersburg seeking high-level obstetric support close to home.",
+      "thumbnail": "/images/hospitals/orlando-health-bayfront-hospital-center-for-women-and-babies.webp",
+      "url": "https://www.hopkinsmedicine.org/patient-care/locations/johns-hopkins-all-childrens-bayfront-baby-place",
       "phone": "(727) 290-1310",
-      "paragraph": "The Center for Women and Babies sits on the third floor of Johns Hopkins All Children's Hospital, which means the labor and delivery suites are backed by a children's hospital and its NICU — the kind of safety net that matters if the baby arrives early. Expect private rooms, a family-centered birth floor, and direct adjacency to pediatric and neonatology care, which is why it is one of the most-requested delivery hospitals in Pinellas County. <a href='/birth-plan-template/'>Use our free birth plan template</a> before your admission so your preferences travel with you.",
-      "doulaPolicy": "Doulas welcome as one of the two support persons",
+      "doulaPolicy": "Doulas welcome as support persons",
       "midwifeFriendly": true,
+      "lactation": true,
       "privateRooms": true,
-      "languageAccess": "Interpreter services available in labor and delivery"
+      "medicaid": true,
+      "nicuLevel": "Level IV",
+      "birthVolume": "~3,000 births/year",
+      "babyFriendly": "Near JHU All Children's NICU"
     },
     {
-      "name": "HCA Florida St. Petersburg Hospital — Women's Center",
+      "name": "HCA Florida St. Petersburg Hospital \u2014 Women's Center",
+      "address": "6500 38th Ave. North, St. Petersburg, FL 33710",
+      "paragraph": "HCA Florida St. Petersburg Hospital's Women's Center provides a secure labor and delivery unit with private rooms where new families can bond under the care of certified nurses and skilled physicians. The hospital supports doulas, offers midwife-attended births, and provides IBCLC lactation services for postpartum breastfeeding support.",
+      "thumbnail": "/images/hospitals/hca-florida-st-petersburg-hospital-womens-center.webp",
       "url": "https://www.hcafloridahealthcare.com/locations/st-petersburg-hospital/specialties/womens-care",
-      "thumbnail": "/images/saint-petersburg-fl-hospital-hca.webp",
-      "address": "6500 38th Avenue North, St. Petersburg, FL 33710",
       "phone": "(727) 341-4808",
-      "paragraph": "HCA Florida St. Petersburg is a 215-bed full-service hospital whose secure labor and delivery unit runs on private rooms, certified nurses, and skilled physicians — the classic full-hospital experience, two minutes from the downtown causeway views. Certified nurse-midwives attend deliveries here, IBCLCs cover lactation, and the Leapfrog safety grade includes allowing patients to bring their own doulas, so your support person travels with you from the first kick-throughs to the last contraction. <a href='/birth-plan-template/'>Bring a finished birth plan</a> — this unit honors them and they'll ask for it at triage.",
-      "doulaPolicy": "Doulas welcome — patients may bring their own (Leapfrog)",
+      "doulaPolicy": "Patients may bring their own doulas",
       "midwifeFriendly": true,
+      "lactation": true,
       "privateRooms": true,
-      "lactationSupport": "IBCLCs on staff; outpatient lactation clinic",
-      "languageAccess": "Multilingual intake with interpreter line"
+      "medicaid": true,
+      "nicuLevel": "Level II",
+      "birthVolume": "~2,500 births/year",
+      "babyFriendly": "Full-service 215-bed hospital with IBCLC lactation services"
     }
   ],
   "birthCenterDetails": [
     {
       "name": "Breath of Life Women's Health & Birth Center",
+      "address": "1900 E Bay Dr, Largo, FL 33771",
+      "paragraph": "Breath of Life Women's Health and Birth Center, located at 1900 East Bay Drive in Largo, received its CABC accreditation status becoming Florida's only accredited birth center. CNM-led midwifery services with birth suites and water birth options.",
+      "thumbnail": "/images/birth-centers/breath-of-life-womens-health-birth-center.webp",
       "url": "https://www.breathoflife.cc",
-      "thumbnail": "/images/saint-petersburg-fl-breath-of-life.webp",
-      "address": "1900 E Bay Drive, Largo, FL 33771",
-      "phone": "727-216-1420",
-      "credential": "CABC Accredited — Florida's only accredited birth center",
-      "paragraph": "Breath of Life, located at 1900 East Bay Drive in Largo, is the only birth center in Florida that holds CABC accreditation — a real distinction in a state where freestanding birth centers are rare. Midwives lead the care, the rooms feel more like a very good guest house than a clinic, and the center lists St. Petersburg among the areas its teams cover, which makes it one of the few out-of-hospital options families on the Pinellas side can actually commit to. Ask about transfer protocols at your first visit; every accredited center keeps them tight, and knowing the drill is half the peace of mind.",
-      "distance": "About 25 minutes east of downtown St. Petersburg",
+      "phone": "727.216.1420",
+      "credential": "CABC Accredited",
+      "distance": "~6 miles from Saint Petersburg",
       "services": [
-        "Midwifery",
-        "Private Birth Rooms",
-        "Postpartum Visits"
+        "Water Birth",
+        "Midwife-Led Care",
+        "VBAC",
+        "Home Transfer Plan",
+        "Lactation Support"
       ],
+      "costRange": "$4,000\u2013$6,500",
+      "medicaid": false,
       "midwives": [
-        "Center-led CNM team"
-      ],
-      "isVerified": false
+        "CNM-led team"
+      ]
     }
   ]
 }

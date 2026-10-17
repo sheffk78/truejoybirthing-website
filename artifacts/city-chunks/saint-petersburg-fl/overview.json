@@ -2,18 +2,19 @@
   "city": "Saint Petersburg",
   "state": "FL",
   "slug": "saint-petersburg-fl",
-  "costLow": 1000,
-  "costHigh": 3200,
-  "shelbiServesHere": false,
+  "costLow": 650,
+  "costHigh": 1800,
   "lat": 27.7676,
-  "lng": -82.6402,
-  "publishedDate": "2026-10-11",
-  "enableBlogResources": true,
+  "lng": -82.6403,
+  "publishedDate": "2025-10-17",
   "nearbyCities": [
-    "clearwater-fl",
     "tampa-fl",
-    "st-petersburg-fl"
+    "clearwater-fl",
+    "largo-fl",
+    "pinellas-park-fl",
+    "bradenton-fl",
+    "gulfport-fl"
   ],
-  "titleTag": "St. Petersburg Birth Doula & Support Guide | True Joy Birthing",
-  "metaDescription": "Planning a birth in St. Petersburg, FL? Compare local doulas, hospital NICUs, and the area's only CABC-accredited birth center. Free birth-plan template inside."
+  "metaDescription": "Compare birth doulas, hospitals, and birth centers in Saint Petersburg, FL \u2014 including provider details, costs, insurance guidance, and local community tips.",
+  "titleTag": "Birth Support in Saint Petersburg, FL | Find Doulas, Hospitals & Birth Centers"
 }

@@ -2,81 +2,84 @@
   "localDoulas": [
     {
       "name": "Jennifer Vazquez",
-      "credential": "Certified Birth and Postpartum Doula, Childbirth Educator",
-      "practice": "Pinellas Doula Services",
+      "business": "Pinellas Doula Services",
       "url": "https://pinellasdoulaservices.com/",
-      "photo": "/images/doulas/jennifer-vazquez.webp",
-      "description": "Jennifer is a certified birth and postpartum doula and childbirth educator who serves St. Petersburg and the whole Pinellas County area. She covers the full arc — prenatal education, labor support, and the fourth-trimestum weeks after the baby arrives — and keeps her calendar structured around family-run plans, so you know exactly what's included before you book.",
-      "costRange": "$1,200-$2,800",
-      "acceptingClients": true,
+      "phone": "",
+      "email": "",
+      "location": "Saint Petersburg, FL",
+      "certifications": [
+        "Certified Birth Doula",
+        "Certified Postpartum Doula",
+        "Childbirth Educator"
+      ],
       "services": [
         "Birth Doula",
         "Postpartum Doula",
-        "Childbirth Education"
+        "Childbirth Education",
+        "Lactation Support"
       ],
-      "serviceArea": [
-        "St. Petersburg, FL",
-        "Clearwater",
-        "Tampa"
-      ]
+      "bio": "Hi! I'm Jennifer \u2014 a certified birth and postpartum doula and childbirth educator serving St. Petersburg and throughout Pinellas County.",
+      "photo": "/images/doulas/jennifer-vazquez.webp",
+      "photoFound": false
     },
     {
       "name": "Tiffany Holmes",
-      "credential": "Traditional Birth & Postpartum Doula, Hypnobirthing Educator, Reiki Master",
-      "practice": "Quantum Motherhood",
+      "business": "Quantum Motherhood",
       "url": "https://saintpetersburgdoula.com/",
-      "photo": "/images/doulas/tiffany-holmes.webp",
-      "description": "Tiffany runs a full-service practice out of St. Petersburg itself: traditional birth and postpartum doula care, Hypnobirthing childbirth education, ‘Quantum Birthing’ coaching, Reiki, and pelvic steaming. If you want someone who will meet you in the middle of a long labor and also stay through the postpartum fog, her range is unusually deep for one person.",
-      "costRange": "$1,500-$3,200",
-      "acceptingClients": true,
+      "phone": "",
+      "email": "",
+      "location": "Saint Petersburg, FL",
+      "certifications": [
+        "Traditional Birth & Postpartum Doula",
+        "Hypnobirthing Childbirth Educator",
+        "Reiki Master"
+      ],
       "services": [
         "Birth Doula",
         "Postpartum Doula",
-        "Hypnobirthing Classes",
+        "Hypnobirthing",
         "Reiki",
         "Pelvic Steaming"
       ],
-      "serviceArea": [
-        "St. Petersburg, FL",
-        "Pinellas Park",
-        "Clearwater"
-      ]
+      "bio": "Traditional Birth & Postpartum Doula, Hypnobirthing Childbirth Educator, Quantum Birthing Coach, Reiki Master, Pelvic Steaming Facilitator, and Intuitive Guide in St. Petersburg, FL.",
+      "photo": "/images/doulas/tiffany-holmes.webp",
+      "photoFound": false
     },
     {
       "name": "Madeline Ishmael",
-      "credential": "DONA-Certified Birth Doula, Certified Lactation Consultant, Prenatal Yoga Teacher",
-      "practice": "Bornbir Directory Member",
+      "business": "",
       "url": "https://www.bornbir.com/madeline-ishmael",
-      "photo": "/images/doulas/madeline-ishmael.webp",
-      "description": "Maddy has been a DONA-certified birth doula since 2019 and is also a certified lactation consultant and prenatal yoga teacher. Listing through the Bornbir directory, she serves St. Petersburg families looking for one person who can hold the pregnancy, the birth, and the first feeds without passing them between specialists.",
-      "costRange": "$1,200-$3,000",
-      "acceptingClients": true,
+      "phone": "",
+      "email": "",
+      "location": "Saint Petersburg, FL",
+      "certifications": [
+        "DONA Certified Birth Doula",
+        "Certified Lactation Consultant (Healthy Children Project)"
+      ],
       "services": [
         "Birth Doula",
-        "Lactation Consult",
+        "Lactation Consulting",
         "Prenatal Yoga"
       ],
-      "serviceArea": [
-        "St. Petersburg, FL",
-        "Tampa"
-      ]
+      "bio": "My name is Madeline 'Maddy' Ishmael and I am a certified birth doula through DONA since 2019, certified lactation consultant through Healthy Children Project and a prenatal yoga teacher.",
+      "photo": "/images/doulas/madeline-ishmael.webp",
+      "photoFound": false
     },
     {
-      "name": "Healthy Start Coalition of Pinellas — Doula Program",
-      "credential": "Nonprofit Free Doula Program",
-      "practice": "Healthy Start Coalition of Pinellas",
+      "name": "Healthy Start Coalition of Pinellas",
+      "business": "Pinellas Doula Program",
       "url": "https://healthystartpinellas.org/doula-program/",
-      "photo": "/images/doulas/healthy-start-pinellas.webp",
-      "description": "A nonprofit program that pairs eligible Pinellas County residents with a doula at no cost — the doula is with the client during labor and delivery and through the early postpartum period. If insurance is thin or the word ‘doula’ feels like a luxury you can't place on the budget, this is the front door: call (727) 507-4260 or email Connect@HealthyStartPinellas.org.",
-      "costRange": "$0 (free program)",
-      "acceptingClients": true,
+      "phone": "727-507-4260",
+      "email": "Connect@HealthyStartPinellas.org",
+      "location": "Pinellas County, FL",
+      "certifications": [],
       "services": [
-        "Free Labor Doula",
-        "Postpartum Support"
+        "Free Doula Services",
+        "Labor Support"
       ],
-      "serviceArea": [
-        "Pinellas County, FL"
-      ]
+      "bio": "Free doula program for Pinellas County residents. Doulas are with clients during labor and delivery.",
+      "photo": "/images/doulas/healthy-start-coalition-of-pinellas.webp",
+      "photoFound": false
     }
   ]
 }

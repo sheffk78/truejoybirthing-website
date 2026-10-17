@@ -1,0 +1,107 @@
+{
+  "slug": "saint-petersburg-fl",
+  "stage": "build",
+  "produced_at": "2026-10-17T19:32:47Z",
+  "worker_model": "kimi-k2.6:cloud (lane) + Kit direct merge",
+  "notes": "",
+  "sources": [
+    {
+      "title": "Pinellas Doula Services — Jennifer Vazquez",
+      "url": "https://pinellasdoulaservices.com/",
+      "quote": "Hi! I'm Jennifer — a certified birth and postpartum doula and childbirth educator serving St. Petersburg and throughout Pinellas County",
+      "claim": "Pinellas Doula Services (Jennifer Vazquez) is a certified birth and postpartum doula and childbirth educator serving St. Petersburg and Pinellas County."
+    },
+    {
+      "title": "Quantum Motherhood — Tiffany Holmes",
+      "url": "https://saintpetersburgdoula.com/",
+      "quote": "Traditional Birth & Postpartum Doula, Hypnobirthing Childbirth Educator, Quantum Birthing Coach, Reiki Master, Pelvic Steaming Facilitator, and Intuitive Guide in St. Petersburg, FL",
+      "claim": "Quantum Motherhood (Tiffany Holmes) offers traditional birth & postpartum doula care, Hypnobirthing childbirth education, Reiki and related services in St. Petersburg, FL."
+    },
+    {
+      "title": "Bornbir — Madeline Ishmael",
+      "url": "https://www.bornbir.com/madeline-ishmael",
+      "quote": "My name is Madeline 'Maddy' Ishmael and I am a certified birth doula through DONA since 2019, certified lactation consultant through Healthy Children Project and a prenatal yoga teacher.",
+      "claim": "Madeline 'Maddy' Ishmael is a certified birth doula serving the St. Petersburg area (Bornbir-verified profile)."
+    },
+    {
+      "title": "Healthy Start Coalition of Pinellas — Doula Program",
+      "url": "https://healthystartpinellas.org/doula-program/",
+      "quote": "Doula will be with the client during the labor and delivery... Must be a resident of Pinellas County",
+      "claim": "The Healthy Start Coalition of Pinellas doula program provides continuous labor-and-delivery support to enrolled clients in Pinellas County."
+    },
+    {
+      "title": "Orlando Health Bayfront Hospital Center for Women and Babies",
+      "url": "https://www.hopkinsmedicine.org/patient-care/locations/johns-hopkins-all-childrens-bayfront-baby-place",
+      "quote": "Located on the third floor of Johns Hopkins All Children's Hospital, Orlando Health Bayfront Hospital Center for Women and Babies offers labor and delivery suites and maternity care.",
+      "claim": "Orlando Health Bayfront Hospital's Center for Women and Babies, per its official Johns Hopkins Medicine listing, offers labor-and-delivery suites and maternity care from its third-floor location within the Johns Hopkins All Children's Hospital campus at 550 6th Street South, St. Petersburg."
+    },
+    {
+      "title": "HCA Florida St. Petersburg Hospital Women's Center",
+      "url": "https://www.hcafloridahealthcare.com/locations/st-petersburg-hospital/specialties/womens-care",
+      "quote": "In our secure labor and delivery unit, we offer private rooms where new families can bond together under the care of certified nurses and skilled physicians.",
+      "claim": "HCA Florida St. Petersburg Hospital's women's center offers a secure labor and delivery unit with private rooms."
+    },
+    {
+      "title": "Breath of Life Women's Health & Birth Center",
+      "url": "https://www.breathoflife.cc",
+      "quote": "Breath of Life Women's Health and Birth Center, located at 1900 East Bay Drive in Largo ... received its CABC accreditation status becoming Florida's only accredited birth center.",
+      "claim": "Breath of Life Women's Health & Birth Center operates in Largo, FL (serving the St. Petersburg area) as a freestanding birth center."
+    }
+  ],
+  "city_fields": {
+    "city": "Saint Petersburg",
+    "state": "FL",
+    "lat": 27.7676,
+    "lng": -82.6403,
+    "costLow": 650,
+    "costHigh": 1800,
+    "heroImage": "/images/saint-petersburg-fl-birth-doula-hero.webp",
+    "ogImage": "https://truejoybirthing.com/images/og-city-saint-petersburg-fl.webp",
+    "supportSceneImage": "/images/saint-petersburg-fl-birth-doula-support.webp",
+    "supportSceneAlt": "A doula walking beside a pregnant mom through a palm-lined Saint Petersburg neighborhood at golden hour",
+    "culture": "Saint Petersburg blends waterfront living with an arts-forward community, giving expecting families access to a relaxed, supportive coastal culture alongside progressive wellness and maternal-care resources.",
+    "medicaidNote": "Florida Medicaid covers maternity care through Managed Medical Assistance (MMA) plans, including labor, delivery, and postpartum services. Contact your local Medicaid office or apply through Access Florida."
+  },
+  "faqs_count": 6,
+  "midwife_paragraph_chars": 904,
+  "doulas": [
+    {
+      "name": "Jennifer Vazquez",
+      "url": "https://pinellasdoulaservices.com/",
+      "photo": "/images/providers/saint-petersburg-fl-jennifer-vazquez.webp",
+      "description_chars": 369,
+      "costRange": "$650-1800"
+    },
+    {
+      "name": "Tiffany Holmes",
+      "url": "https://saintpetersburgdoula.com/",
+      "photo": "/images/providers/saint-petersburg-fl-tiffany-holmes.webp",
+      "description_chars": 360,
+      "costRange": "$650-1800"
+    },
+    {
+      "name": "Madeline Ishmael",
+      "url": "https://www.bornbir.com/madeline-ishmael",
+      "photo": "/images/providers/saint-petersburg-fl-madeline-ishmael.webp",
+      "description_chars": 332,
+      "costRange": "$650-1800"
+    },
+    {
+      "name": "Healthy Start Coalition of Pinellas",
+      "url": "https://healthystartpinellas.org/doula-program/",
+      "photo": "/images/providers/saint-petersburg-fl-healthy-start-coalition-of-pinellas.webp",
+      "description_chars": 359,
+      "costRange": "$650-1800"
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true,
+    "hero_flux_note": "hero+OG rendered fresh via image_generate today; no stock watermark path"
+  },
+  "_auto_image_refs": [
+    "/images/saint-petersburg-fl-birth-doula-hero.webp",
+    "https://truejoybirthing.com/images/og-city-saint-petersburg-fl.webp",
+    "/images/saint-petersburg-fl-birth-doula-support.webp"
+  ]
+}

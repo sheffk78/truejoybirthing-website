@@ -1,0 +1,11 @@
+{
+  "eval": "eval-voice",
+  "slug": "saint-petersburg-fl",
+  "model": "atlas:latest",
+  "fields_checked": 12,
+  "model_calls_ok": 2,
+  "model_calls_err": 0,
+  "verdict": "approved",
+  "findings": [],
+  "checked_at": "2026-10-17T13:48:14-06:00"
+}
