@@ -251,9 +251,20 @@ def humanize_gates(slug: str, stage: str) -> dict:
             subset_path.write_text(json.dumps(subset))
             r = subprocess.run(["python3", str(shape), "--cities-json", str(subset_path)],
                                capture_output=True, text=True, timeout=60)
-            # In --cities-json mode, output uses slugs not filenames
-            flagged = sorted({m for m in re.findall(r"([a-z0-9-]+)\s+.*?<== >70%", r.stdout)
-                             if m != slug})
+            # In --cities-json mode, output uses slugs not filenames.
+            # Fix (2026-10-14): the old loose regex matched across line breaks and
+            # captured phantom tokens ('os', '33', digits from em-dash paraCos
+            # values) and misattributed SIBLING-vs-sibling flags to the focus
+            # city. Parse the table line-wise: a flagged pair involves the focus
+            # city only when slug appears in the first two columns.
+            flagged = set()
+            for line in r.stdout.splitlines():
+                if "<== >70%" not in line:
+                    continue
+                cols = line.split()
+                if len(cols) >= 2 and slug in cols[:2]:
+                    flagged.update(c for c in cols[:2] if c != slug and re.match(r"^[a-z0-9-]+$", c))
+            flagged = sorted(flagged)
             if flagged:
                 results["H-SHAPE"] = {"status": "FAIL", "detail": f"shape >70% vs {', '.join(flagged)} — restructure section order/paragraph rhythm (scale-mode rule 4)"}
             else:

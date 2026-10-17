@@ -1,0 +1,70 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "pembroke-pines-fl",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 7,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the claim verbatim and is plausible content for a doula directory page on discoverdoulas.com about a doula service in Pembroke Pines, FL, with the URL slug directly confirming the business name and location.",
+      "claim": "Nurture Thy Nature LLC \u2014 Doula in Pembroke Pines, FL ... 5 \u2605\u2605\u2605\u2605\u2605 36 Google reviews \u00b7 Holistic medicine practitioner",
+      "url": "https://www.discoverdoulas.com/doula/nurture-thy-nature-llc-pembroke-pines-fl/",
+      "quote": "Nurture Thy Nature LLC \u2014 Doula in Pembroke Pines, FL ... 5 \u2605\u2605\u2605\u2605\u2605 36 Google reviews \u00b7 Holistic medicine practitioner"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the claim verbatim, and the bornbir.com URL with a 'natalie-grillo' profile path is a plausible birth-services directory page for a Pembroke Pines, FL doula offering birth, postpartum, and lactation services.",
+      "claim": "Natalie Grillo - Birth & Postpartum Doula - Pembroke Pines, FL ... I offer personalized birth and postpartum doula services, as well as professional lactation consultations",
+      "url": "https://www.bornbir.com/natalie-grillo-380",
+      "quote": "Natalie Grillo - Birth & Postpartum Doula - Pembroke Pines, FL ... I offer personalized birth and postpartum doula services, as well as professional lactation consultations"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the claim verbatim, and the bornbir.com/genesis-mundo URL plausibly corresponds to a doula profile page for G\u00e9nesis Mundo, with the South Florida hospitals mentioned being geographically consistent with Pembroke Pines, FL.",
+      "claim": "G\u00e9nesis Mundo - Birth Doula - Pembroke Pines, FL ... I've supported 20+ births at Memorial Hospital Miramar, Memorial Hospital West, and Jackson Memorial",
+      "url": "https://www.bornbir.com/genesis-mundo",
+      "quote": "G\u00e9nesis Mundo - Birth Doula - Pembroke Pines, FL ... I've supported 20+ births at Memorial Hospital Miramar, Memorial Hospital West, and Jackson Memorial"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the claim nearly verbatim, and the URL (a MotheRetreat birth doula page for Pembroke Pines) plausibly contains text about serving Pembroke Pines and delivering at Memorial Hospital West or Memorial Hospital Miramar, which are real hospitals in that area.",
+      "claim": "MotheRetreat ... We serve Pembroke Pines and nearby communities ... Whether you plan to deliver at Memorial Hospital West or Memorial Hospital Miramar, your birth doula gives continuous one-on-one labor support",
+      "url": "https://motheretreat.com/birth-doula-pembroke-pines/",
+      "quote": "MotheRetreat ... We serve Pembroke Pines and nearby communities ... Whether you plan to deliver at Memorial Hospital West or Memorial Hospital Miramar, your birth doula gives continuous one-on-one lab"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the claim verbatim, and the mhs.net maternity-care/west URL plausibly corresponds to Memorial Healthcare System's Family Birthplace page for Memorial Hospital West in Pembroke Pines, Florida, whose address matches the well-known real location.",
+      "claim": "Memorial Hospital West 703 North Flamingo Road Pembroke Pines, Florida 33028 ... The Family Birthplace at Memorial Hospital West is committed to providing our families with skilled, compassionate care",
+      "url": "https://www.mhs.net/services/maternity-care/west",
+      "quote": "Memorial Hospital West 703 North Flamingo Road Pembroke Pines, Florida 33028 ... The Family Birthplace at Memorial Hospital West is committed to providing our families with skilled, compassionate care"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the claim's text nearly verbatim, and the mhs.net maternity-care/regional URL is the correct domain and page subject for Memorial Regional Hospital's Dr. Henry D. Perry Family Birthplace, supporting the claims about the comfortable labor/delivery experience and private LDR suites.",
+      "claim": "The Dr. Henry D. Perry Family Birthplace at Memorial Regional Hospital is pleased to provide our families with a comfortable labor and delivery experience ... Our hospital has: Private labor/delivery/recovery (LDR) suites ... Level IV NICU rooms",
+      "url": "https://www.mhs.net/services/maternity-care/regional",
+      "quote": "The Dr. Henry D. Perry Family Birthplace at Memorial Regional Hospital is pleased to provide our families with a comfortable labor and delivery experience ... Our hospital has: Private labor/delivery/"
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is nearly verbatim to the claim, and the domain naturalbirthworks.com plausibly belongs to a midwifery/birth services practice whose homepage would contain this text about midwifery care, birth center births, and homebirths.",
+      "claim": "We offer excellent Midwifery Care for clients seeking a birth center birth, homebirth, or those just needing prenatal care for their hospital birth. Our Midwives have been in the field for over a decade",
+      "url": "https://www.naturalbirthworks.com/",
+      "quote": "We offer excellent Midwifery Care for clients seeking a birth center birth, homebirth, or those just needing prenatal care for their hospital birth. Our Midwives have been in the field for over a deca"
+    }
+  ],
+  "checked_at": "2026-10-14T17:06:03-06:00"
+}

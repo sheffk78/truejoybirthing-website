@@ -1,0 +1,77 @@
+{
+  "localDoulas": [
+    {
+      "name": "MotheRetreat",
+      "credential": "Birth Doula",
+      "practice": "MotheRetreat",
+      "url": "https://motheretreat.com/birth-doula-fort-lauderdale/",
+      "photo": "/images/doulas/motheretreat.webp",
+      "description": "MotheRetreat provides birth doula support to families across Fort Lauderdale and the Broward coast, with continuous one-on-one support through labor and close coordination with the medical team — whether you're delivering at Broward Health Medical Center, Holy Cross Health, or Broward Health Imperial Point.",
+      "services": [
+        "Birth Doula"
+      ],
+      "serviceArea": [
+        "Fort Lauderdale, FL"
+      ],
+      "acceptingClients": true,
+      "homeBirthSupport": true,
+      "enrichedAt": "2026-10-16"
+    },
+    {
+      "name": "Amber Marie",
+      "credential": "Certified Birth & Postpartum Doula",
+      "practice": "Hummingbird Birth",
+      "url": "https://hummingbirdbirthing.com/",
+      "photo": "/images/doulas/amber-marie-hummingbird.webp",
+      "description": "Amber Marie is a certified birth and postpartum doula in South Florida, serving Miami, Fort Lauderdale, Boca Raton and surrounding areas. With more than 20 years walking alongside families through birth, postpartum and the full arc of early parenthood, she's certified by ProDoula and offers you presence at every step.",
+      "services": [
+        "Birth Doula",
+        "Postpartum Doula"
+      ],
+      "serviceArea": [
+        "Fort Lauderdale, FL",
+        "Miami, FL",
+        "Boca Raton, FL"
+      ],
+      "acceptingClients": true,
+      "enrichedAt": "2026-10-16"
+    },
+    {
+      "name": "Martha",
+      "credential": "Certified Doula, Birth Assistant & Photographer",
+      "practice": "zenmamalove",
+      "url": "https://zenmamalove.com/",
+      "photo": "/images/doulas/martha-zenmamalove.webp",
+      "description": "Martha is a birth worker, not simply a photographer — a certified doula and birth assistant serving Fort Lauderdale, Boca Raton, Broward County, Delray Beach and Parkland. If you want documentary photos of your birth plus hands-on labor support from the same person, she's the call.",
+      "services": [
+        "Birth Doula",
+        "Birth Photography"
+      ],
+      "serviceArea": [
+        "Fort Lauderdale, FL",
+        "Boca Raton, FL",
+        "Delray Beach, FL"
+      ],
+      "acceptingClients": true,
+      "enrichedAt": "2026-10-16"
+    },
+    {
+      "name": "Serene Gato",
+      "credential": "Birth Doula",
+      "practice": "A Serene Birth",
+      "url": "https://serenegato.com/doula-services/",
+      "photo": "/images/doulas/serene-gato-aserenebirth.webp",
+      "description": "Serene is an experienced birth doula serving all of Broward County and beyond. She helps expectant parents before, during and immediately following birth with physical support, emotional support, resources and information, and advocacy with your medical team.",
+      "services": [
+        "Birth Doula",
+        "Postpartum Support"
+      ],
+      "serviceArea": [
+        "Fort Lauderdale, FL",
+        "Broward County, FL"
+      ],
+      "acceptingClients": true,
+      "enrichedAt": "2026-10-16"
+    }
+  ]
+}

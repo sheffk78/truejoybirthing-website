@@ -1,0 +1,67 @@
+{
+  "city": "Saint Petersburg",
+  "state": "FL",
+  "slug": "saint-petersburg-fl",
+  "minDoulas": 2,
+  "minHospitals": 1,
+  "tier": "mid-size (pop ~390K, 100K-500K)",
+  "doulas": [
+    {
+      "name": "Jennifer Vazquez \u2014 Pinellas Doula Services",
+      "url": "https://pinellasdoulaservices.com/",
+      "quote": "Hi! I'm Jennifer \u2014 a certified birth and postpartum doula and childbirth educator serving St. Petersburg and throughout Pinellas County",
+      "verified": true
+    },
+    {
+      "name": "Tiffany Holmes \u2014 Quantum Motherhood",
+      "url": "https://saintpetersburgdoula.com/",
+      "quote": "Traditional Birth & Postpartum Doula, Hypnobirthing Childbirth Educator, Quantum Birthing Coach, Reiki Master, Pelvic Steaming Facilitator, and Intuitive Guide in St. Petersburg, FL",
+      "verified": true
+    },
+    {
+      "name": "Madeline Ishmael",
+      "url": "https://www.bornbir.com/madeline-ishmael",
+      "quote": "My name is Madeline \"Maddy\" Ishmael and I am a certified birth doula through DONA since 2019, certified lactation consultant through Healthy Children Project and a prenatal yoga teacher.",
+      "verified": true,
+      "note": "Bornbir directory listing, based in St. Petersburg per page"
+    },
+    {
+      "name": "Healthy Start Coalition of Pinellas \u2014 Doula Program",
+      "url": "https://healthystartpinellas.org/doula-program/",
+      "quote": "Doula will be with the client during the labor and delivery... Must be a resident of Pinellas County",
+      "verified": true,
+      "note": "free program, 727-507-4260, Connect@HealthyStartPinellas.org"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Orlando Health Bayfront Hospital \u2014 Center for Women and Babies",
+      "url": "https://www.hopkinsmedicine.org/patient-care/locations/johns-hopkins-all-childrens-bayfront-baby-place",
+      "quote": "Located on the third floor of Johns Hopkins All Children's Hospital, Orlando Health Bayfront Hospital Center for Women and Babies offers labor and delivery suites and maternity care.",
+      "address": "550 6th Street South, St. Petersburg, FL 33704",
+      "phone": "(727) 290-1310",
+      "verified": true,
+      "note": "maternity wing beside JHU All Children's NICU"
+    },
+    {
+      "name": "HCA Florida St. Petersburg Hospital \u2014 Women's Center",
+      "url": "https://www.hcafloridahealthcare.com/locations/st-petersburg-hospital/specialties/womens-care",
+      "quote": "In our secure labor and delivery unit, we offer private rooms where new families can bond together under the care of certified nurses and skilled physicians.",
+      "address": "6500 38th Ave. North, St. Petersburg, FL 33710",
+      "phone": "(727) 341-4808",
+      "verified": true,
+      "note": "215-bed full-service; Leapfrog: patients may bring their own doulas; CNM deliveries; IBCLC lactation services"
+    }
+  ],
+  "birthCenters": [
+    {
+      "name": "Breath of Life Women's Health & Birth Center",
+      "url": "https://www.breathoflife.cc",
+      "quote": "Breath of Life Women's Health and Birth Center, located at 1900 East Bay Drive in Largo ... received its CABC accreditation status becoming Florida's only accredited birth center.",
+      "address": "1900 E Bay Dr, Largo, FL 33771",
+      "phone": "727.216.1420",
+      "verified": true,
+      "note": "CABC-accredited; website lists St. Pete among served areas; CNM-led midwifery"
+    }
+  ]
+}

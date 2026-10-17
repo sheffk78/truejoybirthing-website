@@ -1,30 +1,60 @@
 {
   "slug": "memphis-tn",
   "stage": "video_outreach",
-  "produced_at": "2026-08-01T00:00:00Z",
-  "worker_model": "deterministic-backfill",
-  "notes": "Backfilled 2026-09-18 by Kit (pre-contract-era city, DAG already complete). Evidence verified: YouTube iQkeuopLniY registered in video-embeds.ts; thumbnail on disk; 0 first-touch send(s) in canonical send log. Not fabricated.",
-  "video_file": null,
+  "produced_at": "2026-10-13T23:18:04Z",
+  "worker_model": "kit",
+  "notes": "2026-10-13 verification: all 9 video gates pass incl. G67 (yt-dlp path root-caused + symlinked; video OCR = Memphis, t=22s). Video iQkeuopLniY embedded live w/ VideoObject. Outreach batch run: 0 sent / 5 blocked \u2014 template fails content gate; zero fabrication, all rows in canonical send log. Resume: fix template, re-run batch.",
+  "sources": [
+    {
+      "claim": "Video iQkeuopLniY embedded on live page with VideoObject schema; burned-in content names Memphis",
+      "url": "https://truejoybirthing.com/birth-support/memphis-tn/",
+      "quote": "data-video-id=\"iQkeuopLniY\" on live page; VideoObject+duration present; gate artifacts/gates/memphis-tn-video_outreach.json: G67 'memphis' found frame t=22s"
+    },
+    {
+      "claim": "Outreach 0 sent \u2014 content gate failed on approved template (em dash, banned phrase 'i came across'); zero fabrication",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "quote": "2026-10-13T22:48:39 ... to naturallynurturedbirth@gmail.com, first-touch, content_gate FAIL: EM DASH + BANNED PHRASE 'i came across'; send_result null"
+    }
+  ],
+  "video_file": "youtube:iQkeuopLniY",
   "video_mb": null,
   "youtube_id": "iQkeuopLniY",
   "thumbnail_path": "public/images/yt-thumb-memphis-tn.png",
   "embed_verified": true,
-  "outreach": [],
-  "sources": [
+  "outreach": [
     {
-      "claim": "Video uploaded and embedded",
-      "url": "https://www.youtube.com/watch?v=iQkeuopLniY",
-      "evidence": "video-embeds.ts registration + live page embed"
+      "to": "naturallynurturedbirth@gmail.com",
+      "provider": "Naturally Nurtured Birth",
+      "status": "blocked",
+      "message_id": null,
+      "reason": "content gate FAILED: EM DASH + banned phrase 'i came across' in approved template; no send (log 2026-10-13T22:48:39Z)"
     },
     {
-      "claim": "Thumbnail on disk",
-      "url": "file://public/images/yt-thumb-memphis-tn.png",
-      "evidence": "exists on disk"
+      "to": "the9warrens@bellsouth.net",
+      "provider": "River City Doulas",
+      "status": "blocked",
+      "message_id": null,
+      "reason": "content gate FAILED: EM DASH + banned phrase 'i came across'; no send (log 2026-10-13T22:48:53Z)"
     },
     {
-      "claim": "First-touch sends on record",
-      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
-      "evidence": "0 sent non-followup row(s) with slug=memphis-tn"
+      "to": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+      "provider": "Memphis Birth Collective",
+      "status": "blocked",
+      "message_id": null,
+      "reason": "ZeroBounce invalid/does_not_accept_mail (wixpress relay); send failed (log 22:48:47Z/22:49:00Z)"
+    },
+    {
+      "provider": "Amy Coontz (Memphis Doula 1)",
+      "status": "blocked",
+      "message_id": null,
+      "reason": "no email found"
+    },
+    {
+      "provider": "Cammie Warren (Affordable Memphis Doula)",
+      "status": "blocked",
+      "message_id": null,
+      "reason": "no email found"
     }
-  ]
+  ],
+  "next_worker_todo": "Fix template content-gate fails (em dash, 'i came across'), re-run tjb-batch-outreach.py build --slug memphis-tn, expect >=1 sent w/ message_id, update contract sent rows, advance."
 }

@@ -1,0 +1,57 @@
+{
+  "slug": "pembroke-pines-fl",
+  "stage": "build",
+  "attempts": 0,
+  "history": [
+    {
+      "attempt": 1,
+      "at": "2026-10-14T16:53:44-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 1
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 2,
+      "at": "2026-10-14T16:54:49-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 0
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-10-14T16:55:25-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 0
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-10-14T17:05:36-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 0
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    }
+  ],
+  "last_verdict": "approved",
+  "last_input_fingerprint": "26ebd99be9e00a6a"
+}

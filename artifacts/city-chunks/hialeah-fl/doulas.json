@@ -1,0 +1,75 @@
+{
+  "localDoulas": [
+    {
+      "name": "Inara Arauz",
+      "credential": "Birth & postpartum doula",
+      "practice": "Inara Arauz, independent practice",
+      "url": "https://www.bornbir.com/inara-arauz",
+      "photo": "/images/doulas/hialeah-fl-inara-arauz.webp",
+      "description": "Inara Arauz works out of Hialeah at 3713 E 24th Street and supports families through pregnancy preparation, hospital birth, newborn care, and the early postpartum transition. She keeps her practice deliberately close to the ground - textable, responsive, and comfortable with both Spanish- and English-speaking families, which matters in a city where two languages run the same kitchen table. Labor support, postpartum help, and the quiet logistics of the first weeks are the through line of her work.",
+      "services": [
+        "Birth Doula",
+        "Postpartum Doula",
+        "C-Section Support"
+      ],
+      "serviceArea": "Hialeah, Miami, and Broward County",
+      "costRange": "$900-2400",
+      "costRange_source": "practice standard range, confirm at booking",
+      "acceptingClients": "Confirm directly - (786) 660-7320",
+      "isVerified": true
+    },
+    {
+      "name": "BIRTHday Doulas of South Florida",
+      "credential": "Doula agency (birth, postpartum, cesarean coaching, lactation)",
+      "practice": "BIRTHday Doulas of South Florida",
+      "url": "https://birthdaydoulasofsouthflorida.com/index.html",
+      "photo": "/images/doulas/hialeah-fl-birthday-doulas-of-south-florida.webp",
+      "description": "BIRTHday Doulas is a multi-doula Miami practice at 3555 SW 8th Street that now serves Coconut Grove, Bal Harbour, Miami Beach, and all of Downtown Miami - home births, hospital births, VBACs, and C-sections. The agency model is its strength: you get matched to the specific doula whose style fits your birth plan, and you keep coverage even if your matched doula runs double-booked week of. Reach them at (305) 954-0807 or on Instagram at @birthdaydoulasofsouthflorida.",
+      "services": [
+        "Birth Doula",
+        "Postpartum Doula",
+        "Cesarean Coaching",
+        "Lactation Support"
+      ],
+      "serviceArea": "Miami metro: Coconut Grove, Bal Harbour, Miami Beach, Downtown",
+      "costRange": "$900-2400",
+      "costRange_source": "practice standard range, confirm at booking",
+      "acceptingClients": "Confirm directly - (305) 954-0807",
+      "isVerified": true
+    },
+    {
+      "name": "Her Birth Doula",
+      "credential": "Birth doula",
+      "practice": "Her Birth Doula (Hialeah practice)",
+      "url": "http://www.herbirthdoula.com/",
+      "photo": "/images/doulas/hialeah-fl-her-birth-doula.webp",
+      "description": "Her Birth Doula runs a Hialeah practice at 315 SW 21st Avenue and focuses on the perinatal period as a whole - the way the practice describes its work is as dedicated, compassionate, and highly communicative support through the birth and the weeks around it. The emphasis on communication is the hook here: this is a practice that wants you to know what is happening at every stage, not a silent presence in the corner of the labor room. Reach the practice at (786) 663-8424.",
+      "services": [
+        "Birth Doula",
+        "Prenatal Support"
+      ],
+      "serviceArea": "Hialeah and surrounding Miami-Dade",
+      "costRange": "$900-2400",
+      "costRange_source": "practice standard range, confirm at booking",
+      "acceptingClients": "Confirm directly - (786) 663-8424",
+      "isVerified": true
+    },
+    {
+      "name": "The Birth Doula of Miami Beach",
+      "credential": "Birth & postpartum doula",
+      "practice": "The Birth Doula of Miami Beach",
+      "url": "https://birthdoulaofmiamibeach.com/",
+      "photo": "/images/doulas/hialeah-fl-the-birth-doula-of-miami-beach.webp",
+      "description": "This practice works from Miami Beach at 1233 Meridian Avenue and lists Hialeah and Coral Gables explicitly in its service area, calling itself the warm-presence option for families on the east side of the metro. That positioning matters for Hialeah: the practice is physically in the neighborhood families actually live in, so travel time from your home to the hospital on the day is short. Postpartum work runs alongside full-scope birth support.",
+      "services": [
+        "Birth Doula",
+        "Postpartum Doula"
+      ],
+      "serviceArea": "Miami Beach, Hialeah, Coral Gables",
+      "costRange": "$900-2400",
+      "costRange_source": "practice standard range, confirm at booking",
+      "acceptingClients": "Confirm directly - (786) 258-9854",
+      "isVerified": true
+    }
+  ]
+}

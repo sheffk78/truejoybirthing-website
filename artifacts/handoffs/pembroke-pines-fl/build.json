@@ -1,0 +1,107 @@
+{
+  "slug": "pembroke-pines-fl",
+  "stage": "build",
+  "produced_at": "2026-10-14T22:41:00Z",
+  "worker_model": "hermes:lane/bedrock+deleg",
+  "notes": "Data entry by deterministic merger from banked Phase-A research: Nurture Thy Nature LLC, Natalie Grillo, Génesis Mundo, MotheRetreat; hospitals Memorial Hospital West (in-city) + Memorial Regional; birth center Natural BirthWorks. Sources verbatim from research-findings.json.",
+  "sources": [
+    {
+      "title": "Nurture Thy Nature LLC",
+      "url": "https://www.discoverdoulas.com/doula/nurture-thy-nature-llc-pembroke-pines-fl/",
+      "quote": "Nurture Thy Nature LLC — Doula in Pembroke Pines, FL ... 5 ★★★★★ 36 Google reviews · Holistic medicine practitioner",
+      "claim": "Nurture Thy Nature LLC — Doula in Pembroke Pines, FL ... 5 ★★★★★ 36 Google reviews · Holistic medicine practitioner"
+    },
+    {
+      "title": "Natalie Grillo",
+      "url": "https://www.bornbir.com/natalie-grillo-380",
+      "quote": "Natalie Grillo - Birth & Postpartum Doula - Pembroke Pines, FL ... I offer personalized birth and postpartum doula services, as well as professional lactation consultations",
+      "claim": "Natalie Grillo - Birth & Postpartum Doula - Pembroke Pines, FL ... I offer personalized birth and postpartum doula services, as well as professional lactation consultations"
+    },
+    {
+      "title": "Génesis Mundo",
+      "url": "https://www.bornbir.com/genesis-mundo",
+      "quote": "Génesis Mundo - Birth Doula - Pembroke Pines, FL ... I've supported 20+ births at Memorial Hospital Miramar, Memorial Hospital West, and Jackson Memorial",
+      "claim": "Génesis Mundo - Birth Doula - Pembroke Pines, FL ... I've supported 20+ births at Memorial Hospital Miramar, Memorial Hospital West, and Jackson Memorial"
+    },
+    {
+      "title": "MotheRetreat",
+      "url": "https://motheretreat.com/birth-doula-pembroke-pines/",
+      "quote": "MotheRetreat ... We serve Pembroke Pines and nearby communities ... Whether you plan to deliver at Memorial Hospital West or Memorial Hospital Miramar, your birth doula gives continuous one-on-one lab",
+      "claim": "MotheRetreat ... We serve Pembroke Pines and nearby communities ... Whether you plan to deliver at Memorial Hospital West or Memorial Hospital Miramar, your birth doula gives continuous one-on-one labor support"
+    },
+    {
+      "title": "Memorial Hospital West Family Birthplace",
+      "url": "https://www.mhs.net/services/maternity-care/west",
+      "quote": "Memorial Hospital West 703 North Flamingo Road Pembroke Pines, Florida 33028 ... The Family Birthplace at Memorial Hospital West is committed to providing our families with skilled, compassionate care",
+      "claim": "Memorial Hospital West 703 North Flamingo Road Pembroke Pines, Florida 33028 ... The Family Birthplace at Memorial Hospital West is committed to providing our families with skilled, compassionate care"
+    },
+    {
+      "title": "Memorial Regional Hospital Family Birthplace",
+      "url": "https://www.mhs.net/services/maternity-care/regional",
+      "quote": "The Dr. Henry D. Perry Family Birthplace at Memorial Regional Hospital is pleased to provide our families with a comfortable labor and delivery experience ... Our hospital has: Private labor/delivery/",
+      "claim": "The Dr. Henry D. Perry Family Birthplace at Memorial Regional Hospital is pleased to provide our families with a comfortable labor and delivery experience ... Our hospital has: Private labor/delivery/recovery (LDR) suites ... Level IV NICU rooms"
+    },
+    {
+      "title": "Natural BirthWorks",
+      "url": "https://www.naturalbirthworks.com/",
+      "quote": "We offer excellent Midwifery Care for clients seeking a birth center birth, homebirth, or those just needing prenatal care for their hospital birth. Our Midwives have been in the field for over a deca",
+      "claim": "We offer excellent Midwifery Care for clients seeking a birth center birth, homebirth, or those just needing prenatal care for their hospital birth. Our Midwives have been in the field for over a decade"
+    }
+  ],
+  "city_fields": {
+    "city": "Pembroke Pines",
+    "state": "FL",
+    "lat": 26.0057,
+    "lng": -80.2923,
+    "costLow": 900,
+    "costHigh": 2400,
+    "heroImage": "/images/pembroke-pines-fl-birth-doula-hero-v2.webp",
+    "ogImage": "https://truejoybirthing.com/images/og-city-pembroke-pines-fl.webp",
+    "supportSceneImage": "/images/pembroke-pines-fl-support.webp",
+    "supportSceneAlt": "A doula walking beside a pregnant mom on a palm-lined Pembroke Pines sidewalk: South Florida birth support and doula care",
+    "culture": "Pembroke Pines is family country. The city grew up in the 1970s and 80s along the Flamingo Road corridor, and around 165,000 people call it home now, which makes it one of the largest communities in Broward County. Walk through on a Saturday morning and you pass parents pushing strollers on every block, youth-league fields at the parks, and the long strip of shopping centers that follows Pines Boulevard east to west. Birth services follow all those families. Memorial Hospital West sits right inside the city on North Flamingo Road, and its Family Birthplace is one of the busiest maternity programs in South Florida. By the health system's own accounting, Memorial hospitals deliver more than half of Broward County's babies, and West is a big part of that. The doula market here is smaller than Miami's but it is real. Four birth-support practices list Pembroke Pines as home turf or a named service area, from a solo holistic-style practice with dozens of five-star Google reviews to regional teams that run overnight postpartum shifts. Spanish and English both come up in appointment conversations, since this is a city as diverse as South Florida gets. Most Pembroke Pines births happen at Memorial Hospital West or at Memorial Regional in Hollywood, and the local support network has grown up around those two doors.",
+    "medicaidNote": "Yes - Florida Medicaid covers doula services as of July 1, 2024 under SB 264, and the benefit includes prenatal visits, labor support, and postpartum visits. Eligible families in Pembroke Pines are enrolled through a Broward County managed care plan, so the fastest route is to call your plan and ask which enrolled doulas serve your ZIP code. Doulas who bill Medicaid must be certified by approved organizations and enrolled as Florida Medicaid providers. You can also ask an enrolled doula directly, since several South Florida practices already work with Medicaid families and take new inquiries by phone or email.",
+    "midwifeParagraph": ""
+  },
+  "faqs_count": 7,
+  "midwife_paragraph_chars": 970,
+  "doulas": [
+    {
+      "name": "Nurture Thy Nature LLC",
+      "url": "https://www.discoverdoulas.com/doula/nurture-thy-nature-llc-pembroke-pines-fl/",
+      "photo": "/images/providers/pembroke-pines-fl-nurture-thy-nature.webp",
+      "description_chars": 575,
+      "costRange": "$1,800-$2,500"
+    },
+    {
+      "name": "Natalie Grillo",
+      "url": "https://www.bornbir.com/natalie-grillo-380",
+      "photo": "/images/providers/pembroke-pines-fl-natalie-grillo.webp",
+      "description_chars": 521,
+      "costRange": "$1,800-$2,500"
+    },
+    {
+      "name": "G\\u00e9nesis Mundo",
+      "url": "https://www.bornbir.com/genesis-mundo",
+      "photo": "/images/providers/pembroke-pines-fl-genesis-mundo.webp",
+      "description_chars": 524,
+      "costRange": "$1,800-$2,500"
+    },
+    {
+      "name": "MotheRetreat",
+      "url": "https://motheretreat.com/birth-doula-pembroke-pines/",
+      "photo": "/images/providers/pembroke-pines-fl-motheretreat.webp",
+      "description_chars": 549,
+      "costRange": "$1,800-$2,500"
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  },
+  "_auto_image_refs": [
+    "/images/pembroke-pines-fl-birth-doula-hero-v2.webp",
+    "https://truejoybirthing.com/images/og-city-pembroke-pines-fl.webp",
+    "/images/pembroke-pines-fl-support.webp"
+  ]
+}

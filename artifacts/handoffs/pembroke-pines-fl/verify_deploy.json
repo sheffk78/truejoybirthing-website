@@ -1,0 +1,23 @@
+{
+  "slug": "pembroke-pines-fl",
+  "stage": "verify_deploy",
+  "produced_at": "2026-10-17T15:48:51Z",
+  "worker_model": "kit:jeff-request-2026-10-17",
+  "preflight_exit": 0,
+  "deploy_status": "SUCCESS",
+  "live_http": 200,
+  "notes": "Full preflight 25/25 green; deploy.sh gates passed after medicaidNote em-dash fix + real provider photo for Nurture Thy Nature (founder portrait from Alignable public profile). Live URL 200 with content updated (Memorial Regional Hospital content verified in HTML).",
+  "vision_verdict_file": "artifacts/gates/vision/pembroke-pines-fl.json",
+  "sources": [
+    {
+      "claim": "Deployed page returns HTTP 200 and contains Memorial Regional Hospital content",
+      "url": "https://truejoybirthing.com/birth-support/pembroke-pines-fl/",
+      "quote": "HTTP/2 200; 4 matches for 'Memorial Regional Hospital' in served HTML (curl 2026-10-17 15:48 UTC)"
+    },
+    {
+      "claim": "Provider photo Nurture Thy Nature is the practice founder Chandelle Vidal",
+      "url": "https://www.alignable.com/miami-fl/chandelle-vidal",
+      "quote": "Chandelle Vidal - Miami, FL ... At Nurture Thy Nature LLC, I guide business owners and entrepreneurs... (public Alignable business profile portrait)"
+    }
+  ]
+}

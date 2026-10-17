@@ -1,40 +1,57 @@
 {
- "slug": "pasadena-ca",
- "stage": "video_outreach",
- "worker_model": "hermes-cli/bedrock-latest",
- "produced_at": "2026-10-07T23:14:36.956815+00:00",
- "status": "in_progress",
- "summary": "Resume stage from top. No video artifacts exist (no scene data file, no video, no upload). Outreach deterministically BLOCKED: 0/3 sent.",
- "evidence": {
-  "outreach_log": [
-   {
-    "run": "2026-10-02T16:56Z",
-    "script": "~/.hermes/scripts/tjb-batch-outreach.py build --slug pasadena-ca",
-    "sent": 0,
-    "blocked_reason": "Nancy Connelly: no email found; Brighid Quinn: send failed (pytz import in tjb-outreach-send.py); Rebecca Belenky: send failed (same). Both emails valid (gmail.com, losangelesbirth.com) with live HTTP 200 sites."
-   }
+  "slug": "pasadena-ca",
+  "stage": "video_outreach",
+  "produced_at": "2026-10-10T19:05:00Z",
+  "worker_model": "hermes-cli/glm-5.3-flash (ollama-cloud)",
+  "notes": "Video pipeline completed through render + stills. YouTube upload hard-blocked: remotion/.youtube-oauth/token.json was truncated to 0 bytes on 2026-10-09 21:10 and the backup refresh token in ~/.hermes/secrets/google_ai_youtube.env is revoked (invalid_grant on both Google clients); ~/.hermes/google_token.json refreshes but carries Workspace scopes only (no youtube.upload). Re-auth requires a one-time browser OAuth consent (scripts/youtube-auth-setup.py) that only the human can complete. Remaining after upload: set videoId in video-embeds.ts + VideoObject metadata, deploy, verify live embed, thumbnail upload (out/yt-thumb-pasadena-ca.png ready), contract re-validate to contract_valid:true. Outreach truthfully 2/3 first-touches SENT 2026-10-02 (the historical 'send failed' record was wrong — the pytz fix landed and messages went out; duplicate re-attempts on 10-03/10-10 were correctly blocked by recipient_history_gate).",
+  "sources": [
+    {
+      "claim": "Nancy Connelly is a DONA-certified birth doula based in Pasadena, attending births since 2000 with 635+ births attended; her site exposes no email address (contact form only), so she was never emailable per the census gate.",
+      "url": "http://www.nancydoula.com/",
+      "quote": "Hello, my name is Nancy Connelly. I am a certified birth doula with DONA International. I have been certified with DONA since 2000, and have attended over 635 births."
+    },
+    {
+      "claim": "Brighid Quinn runs Quinn Doula Services from Highland Park, serving the greater surrounding Pasadena-area as a birth and postpartum doula.",
+      "url": "https://www.quinndoula.com/",
+      "quote": "My name is Brighid (bridge-id) Quinn. I live in Highland Park, Los Angeles, and serve the greater surrounding area as a birth and postpartum doula with pragmatic, calm care."
+    },
+    {
+      "claim": "The quinndoula.com contact section publishes quinndoula@gmail.com as its contact email — the same address first-touched for slug pasadena-ca on 2026-10-02 per the TJB send log.",
+      "url": "https://www.quinndoula.com/",
+      "quote": "## CONTACT quinndoula@gmail.com"
+    },
+    {
+      "claim": "Rebecca Belenky of Los Angeles Birth is a certified birth and postpartum doula serving Pasadena since 2014; rebecca@losangelesbirth.com is the owned-domain census email that was first-touched 2026-10-02.",
+      "url": "https://www.losangelesbirth.com/",
+      "quote": "Hi, I'm Rebecca Belenky, a certified birth and postpartum doula, lactation educator, and childbirth educator serving Pasadena and Los Angeles families since 2014."
+    }
   ],
-  "video": "not started \u2014 pasadena-ca-data.ts does not exist"
- },
- "next_worker_todo": [
-  "Register pasadena_caData in src/index.ts + src/Root.tsx (copy fontana-ca/fullerton-ca pattern, registerAllTJBCityCompositions)",
-  "Create scripts/generate-pasadena-ca-tts.py (clone generate-fullerton-ca-tts.py: Voxtral voice 331c27cd-1809-43c2-853d-4c167f184670, output to public/audio/pasadena-ca/) and run it",
-  "Capture provider scroll screenshot + fullpage: browser-session-gate.sh acquire <task> https://truejoybirthing.com/city/pasadena-ca/ -> public/images/pasadena-ca-fullpage-scroll.png (provider section visible, no provider cards)",
-  "Confirm image files exist: pasadena-ca-birth-doula-skyline.webp, pasadena-ca-hospital-huntington.webp, pasadena-ca-hospital-usc-arcadia.webp, moxie-birth-south-pasadena-alhambra.webp, provider-pasadena-ca-*.webp (3 portraits), tjb-app-birth-plan-builder.png \u2014 any missing = flux fallback",
-  "bash video/remotion/scripts/pre-render-gate.sh pasadena-ca",
-  "bash video/remotion/scripts/render-city-videos.sh pasadena-ca + stills",
-  "YT upload: scripts/upload-youtube.py (public, embeddable) -> grab video ID",
-  "Thumbnail from hero -> upload; update src/data/video-embeds.ts (Python heredoc, never write_file) with new videoId; bash scripts/deploy.sh pasadena-ca; verify live page has data-video-id",
-  "city-audit.json: set video:true, outreach flags, score 100, redeploy",
-  "Outreach: python3 ~/.hermes/scripts/tjb-batch-outreach.py build --slug pasadena-ca (deterministic; if BLOCKED record reason, no manual emails)"
- ],
- "plan": {
-  "scene_file": "video/remotion/src/data/pasadena-ca-data.ts (10 scenes: hook, bridge, hospital_1 Huntington, hospital_2 USC Arcadia, birth_center Moxie, provider_scroll, provider portraits x3, app, cost, insurance, cta)",
-  "tts": "scripts/generate-pasadena-ca-tts.py (Voxtral voice 331c27cd-1809-43c2-853d-4c167f184670)"
- },
- "scene_data": {
-  "file": "video/remotion/src/data/pasadena-ca-data.ts",
-  "scenes": 11,
-  "validate_exit": 0
- }
+  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/pasadena-ca-city-guide.mp4",
+  "video_mb": 32.8,
+  "youtube_id": null,
+  "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/yt-thumb-pasadena-ca.png",
+  "embed_verified": false,
+  "outreach": [
+    {
+      "provider": "Nancy Connelly",
+      "email": null,
+      "status": "no_email",
+      "message_id": null,
+      "detail": "nancydoula.com is contact-form only; no email resolvable. Never sent, per no-email census rule."
+    },
+    {
+      "provider": "Brighid Quinn",
+      "email": "quinndoula@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20261002172834300716",
+      "detail": "First-touch sent 2026-10-02T17:28:24Z from shelbi@truejoybirthing.com, subject 'Can you review your info on True Joy Birthing, Pasadena?'. Send-log row at tjb-outreach-send-log.jsonl line 1441. Re-send attempts 2026-10-03 and 2026-10-10 correctly blocked by recipient_history_gate (30d window)."
+    },
+    {
+      "provider": "Rebecca Belenky",
+      "email": "rebecca@losangelesbirth.com",
+      "status": "sent",
+      "message_id": "vps-20261002172901784472",
+      "detail": "First-touch sent 2026-10-02T17:28:50Z, ZeroBounce-verified mailbox. Send-log row at line 1442. Re-send attempts 2026-10-03 and 2026-10-10 correctly blocked by recipient_history_gate."
+    }
+  ]
 }

@@ -1,0 +1,46 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "pasadena-ca",
+  "stage": "video_outreach",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 4,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible first-person bio for nancydoula.com and directly verifies the core claims (Nancy Connelly, DONA certification, certified since 2000, 635+ births attended), while the Pasadena location and contact-form-only detail are consistent with and not contradicted by the quote.",
+      "claim": "Nancy Connelly is a DONA-certified birth doula based in Pasadena, attending births since 2000 with 635+ births attended; her site exposes no email address (contact form only), so she was never emailable per the census gate.",
+      "url": "http://www.nancydoula.com/",
+      "quote": "Hello, my name is Nancy Connelly. I am a certified birth doula with DONA International. I have been certified with DONA since 2000, and have attended over 635 births."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from the quinndoula.com homepage directly supports the claim: Brighid Quinn lives in Highland Park (near Pasadena) and serves the greater surrounding area as a birth and postpartum doula, matching the domain's subject matter.",
+      "claim": "Brighid Quinn runs Quinn Doula Services from Highland Park, serving the greater surrounding Pasadena-area as a birth and postpartum doula.",
+      "url": "https://www.quinndoula.com/",
+      "quote": "My name is Brighid (bridge-id) Quinn. I live in Highland Park, Los Angeles, and serve the greater surrounding area as a birth and postpartum doula with pragmatic, calm care."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote shows a contact section on quinndoula.com listing quinndoula@gmail.com, which directly matches the claim that this email is published in the site's contact section.",
+      "claim": "The quinndoula.com contact section publishes quinndoula@gmail.com as its contact email \u2014 the same address first-touched for slug pasadena-ca on 2026-10-02 per the TJB send log.",
+      "url": "https://www.quinndoula.com/",
+      "quote": "## CONTACT quinndoula@gmail.com"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible homepage bio for losangelesbirth.com and directly supports the claim's core facts: Rebecca Belenky as a certified birth and postpartum doula serving Pasadena since 2014, with the owned-domain email consistent with the site's domain.",
+      "claim": "Rebecca Belenky of Los Angeles Birth is a certified birth and postpartum doula serving Pasadena since 2014; rebecca@losangelesbirth.com is the owned-domain census email that was first-touched 2026-10-02.",
+      "url": "https://www.losangelesbirth.com/",
+      "quote": "Hi, I'm Rebecca Belenky, a certified birth and postpartum doula, lactation educator, and childbirth educator serving Pasadena and Los Angeles families since 2014."
+    }
+  ],
+  "checked_at": "2026-10-10T13:04:25-06:00"
+}

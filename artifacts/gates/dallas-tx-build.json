@@ -1,91 +1,35 @@
 {
   "slug": "dallas-tx",
   "stage": "build",
-  "mode": "stage_emission",
-  "exit_code": 0,
-  "passed": 20,
-  "failed": 0,
+  "mode": "humanize_gate",
+  "exit_code": 1,
+  "passed": 0,
+  "failed": 2,
   "skipped": 0,
   "results": {
-    "G66": {
+    "LOCAL_heroImage": {
       "status": "PASS",
-      "detail": "no duplicate object keys in any city block"
+      "detail": "/images/dallas-tx-birth-doula-hero-v3.webp"
     },
-    "S1": {
+    "LOCAL_ogImage": {
       "status": "PASS",
-      "detail": "enableBlogResources = true"
+      "detail": "https://truejoybirthing.com/images/og-city-dallas-tx-v3.webp"
     },
-    "S2": {
+    "LOCAL_supportSceneImage": {
       "status": "PASS",
-      "detail": "OG image og-city-dallas-tx.webp (72766 bytes \u2265 30KB)"
+      "detail": "/images/dallas-tx-birth-doula-support-v2.webp"
     },
-    "S4": {
+    "LOCAL_EVAL_SLOP": {
       "status": "PASS",
-      "detail": "Required fields present"
+      "detail": "no slop patterns (1 warn-tier)"
     },
-    "S6": {
-      "status": "PASS",
-      "detail": "publishedDate = \"2026-08-08\""
+    "H-HUMANIZE": {
+      "status": "FAIL",
+      "detail": "scanner verdict HIGH RISK \u2014 rework prose per skills/humanize-content/SKILL.md before deploy (verdict: HIGH RISK)"
     },
-    "S7": {
-      "status": "PASS",
-      "detail": "medicaidNote starts correctly"
-    },
-    "S8": {
-      "status": "PASS",
-      "detail": "No \"Contact for pricing\""
-    },
-    "S3": {
-      "status": "PASS",
-      "detail": "npm run build exited 0"
-    },
-    "S5": {
-      "status": "PASS",
-      "detail": "No standalone 'Free Birth Plan' in rendered HTML"
-    },
-    "G8": {
-      "status": "PASS",
-      "detail": "dallas-tx-birth-doula-hero-v3.webp is a real photograph (high color count)"
-    },
-    "G70": {
-      "status": "PASS",
-      "detail": "no doubled Level/NICU badge text"
-    },
-    "G71": {
-      "status": "PASS",
-      "detail": "no skeleton placeholder text"
-    },
-    "G72": {
-      "status": "PASS",
-      "detail": "meta description 144 chars, complete"
-    },
-    "G25": {
-      "status": "PASS",
-      "detail": "Hero image is 3:2 (864x576, ratio=1.50)"
-    },
-    "G29": {
-      "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=24203) and locked Pattern B composition"
-    },
-    "G35": {
-      "status": "PASS",
-      "detail": "OG has photo content (full_unique_colors=24203) and locked Pattern B composition"
-    },
-    "G64": {
-      "status": "PASS",
-      "detail": "G64: OG og-city-dallas-tx-v3.webp matches canonical Pattern B composition"
-    },
-    "G65": {
-      "status": "PASS",
-      "detail": "G65: No black letterbox/pillarbox bars on hero or support scene"
-    },
-    "G8a": {
-      "status": "PASS",
-      "detail": "Silhouette confirmed (center=51.8 < top=237.5, top_colors=1797)"
-    },
-    "G62": {
-      "status": "PASS",
-      "detail": "G62: Hero AVIF files not stale (or not present)"
+    "H-SHAPE": {
+      "status": "FAIL",
+      "detail": "shape >70% vs 56, 58, abilene-tx, allen-tx, amarillo-tx, os \u2014 restructure section order/paragraph rhythm (scale-mode rule 4)"
     }
   }
 }

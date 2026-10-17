@@ -1,39 +1,100 @@
 {
-  "city": "fort-lauderdale-fl",
+  "slug": "fort-lauderdale-fl",
   "stage": "build",
-  "result": "fail",
-  "fail_reason": "insufficient real providers: 0 evidenced < minimum 2 (mid-size tier) \u2014 provider cache scan complete (0/355 matches), free-discovery web fetches blocked by runtime budget exhaustion",
-  "milestones": {
-    "research": "done - provider cache scanned, 0 Fort Lauderdale matches; web discovery (DDG/site fetches) not started",
-    "cities_ts_entry": "not_written",
-    "images": "not_started",
-    "validation": "not_started (no entry to validate)",
-    "build": "not_started"
-  },
-  "sources": [],
-  "images": {
-    "hero_watermark_clean": null,
-    "og_watermark_clean": null
-  },
-  "gate_results": {
-    "G3": "SKIP (no entry)",
-    "G5": "SKIP (no entry)",
-    "G13": "SKIP (no entry)",
-    "G4": "SKIP (no entry)",
-    "G37": "FAIL (0 providers < 2 minimum)",
-    "hospital_count": "FAIL (0 hospitals < 1 minimum)",
-    "visual_check": "SKIP (no images)",
-    "H-HUMANIZE": "SKIP (no prose)",
-    "H-SHAPE": "SKIP (no prose)"
-  },
-  "notes": "Fort Lauderdale (pop ~335K, tier: mid-size 100K-500K \u2192 min 2 doulas + 1 hospital). Provider cache (355 providers) scanned fully: zero Fort Lauderdale matches. Phase A free-discovery web searches (DuckDuckGo / DDG fetches, provider site direct-checks) not executed \u2014 runtime budget exhausted at ~7 of ~25 tool-call allowance. No cities.ts entry written (correct: no evidence-backed providers to write). City is NOT skeleton-convertible without human research or extended web access. Existing FL cities with data: orlando-fl (6 providers), tampa-fl (6 providers), jacksonville-fl (5 providers).",
-  "next_worker_todo": [
-    "Re-run Phase A: DDG search 'doula fort lauderdale fl', 'birth center fort lauderdale fl', 'hospital fort lauderdale fl' \u2014 fetch each result, verify provider name+URL from source page",
-    "Direct site-check: doulanet.com/fort-lauderdale-fl, doulamatch.net fort lauderdale listings, babybrite.com, local birth center websites",
-    "Minimum targets: 2+ doulas, 1+ hospital (Baptist Healthcare of Fort Lauderdale / Atrium Medical Center / St. Mary's Medical Center are known candidates \u2014 verify on their sites)",
-    "Save verified providers to artifacts/build-checkpoints/fort-lauderdale-fl/research-findings.json",
-    "If all verified: write cities.ts entry via Python heredoc, generate images (hero/OG/support scene), run preflight + validate + build, write contract, advance state"
+  "produced_at": "2026-10-17T04:08:00Z",
+  "worker_model": "tjb-contract-scaffold",
+  "notes": "Scaffolded by ~/.hermes/scripts/tjb-contract-scaffold.py from merged city-chunks + cities.ts + research-findings.json. Photo naming follows tjb-seed-images.py output (~/.hermes/scripts/tjb-seed-images.py fort-lauderdale-fl). REMAINING: add midwifeInfo.paragraph (>=400 chars) to the cities.ts entry",
+  "sources": [
+    {
+      "title": "MotheRetreat",
+      "url": "https://motheretreat.com/birth-doula-fort-lauderdale/",
+      "quote": "MotheRetreat provides birth doula support to families across Fort Lauderdale and the Broward coast. Whether you plan to deliver at Broward Health Medical Center, Holy Cross Health, or Broward Health Imperial Point, your birth doula gives you continuous one-on-one support through labor and coordinates closely with your medical team.",
+      "claim": "MotheRetreat (doula) verified on source page"
+    },
+    {
+      "title": "Amber Marie - Hummingbird Birth + Life Doula",
+      "url": "https://hummingbirdbirthing.com/",
+      "quote": "Certified Birth & Postpartum Doula in South Florida. Serving Miami, Fort Lauderdale, Boca Raton & surrounding areas \u2014 with you every step of the way. Amber has spent more than 20 years walking alongside families through birth, postpartum, and the full arc of early parenthood. Certified by ProDoula.",
+      "claim": "Amber Marie - Hummingbird Birth + Life Doula (doula) verified on source page"
+    },
+    {
+      "title": "Martha - zenmamalove (Birth Photographer & Doula)",
+      "url": "https://zenmamalove.com/",
+      "quote": "I AM A BIRTH WORKER, not simply a photographer. I am a certified Doula and Birth Assistant. ... \u00a9 zenmamalove | All Rights Reserved. Birth Photographer & Doula serving Ft. Lauderdale, Boca Raton, Broward County, Delray Beach & Parkland, FL",
+      "claim": "Martha - zenmamalove (Birth Photographer & Doula) (doula) verified on source page"
+    },
+    {
+      "title": "Serene Gato - A Serene Birth",
+      "url": "https://serenegato.com/doula-services/",
+      "quote": "Experienced birth doula serving all of Broward County and beyond. As a South Florida birth doula, I help expectant parents before, during, and immediately following birth by providing: Physical Support, Emotional Support, Resources & Information, Advocacy.",
+      "claim": "Serene Gato - A Serene Birth (doula) verified on source page"
+    },
+    {
+      "title": "Broward Health Medical Center - Maternity Place",
+      "url": "https://www.browardhealth.org/medical-services/womens-health/maternity-services/maternity-place-at-broward-health-medical-center",
+      "quote": "Maternity Place at Broward Health Medical Center: Count on Broward Health Medical Center for dedicated labor, delivery and newborn care. Every detail is designed to make your birth experience comfortable, memorable and centered around you and your family. Level III Regional Perinatal Intensive Care Center (RPICC) and Neonatal Intensive Care Units on-site to provide advanced care for newborns who need extra support. 24/7 Breast Pump Rental Services on-site.",
+      "claim": "Broward Health Medical Center - Maternity Place (hospital) verified on source page"
+    },
+    {
+      "title": "Holy Cross Hospital (Holy Cross Health Fort Lauderdale)",
+      "url": "https://www.holy-cross.com/location/holy-cross-hospital-fl-0",
+      "quote": "Holy Cross Hospital (FL). 4725 N Federal Hwy, Fort Lauderdale, FL 33308. 954-492-5768. Holy Cross Health Fort Lauderdale, Florida (FL) Hospitals. Dedicated to excellence in clinical care for every patient.",
+      "claim": "Holy Cross Hospital (Holy Cross Health Fort Lauderdale) (hospital) verified on source page"
+    }
   ],
-  "worker": "kit-oneshot-build",
-  "completed_at": "2026-10-06T22:37:57.725981Z"
+  "city_fields": {
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "heroImage": "/images/fort-lauderdale-fl-birth-doula-hero-v1.webp",
+    "ogImage": "https://truejoybirthing.com/images/og-city-fort-lauderdale-fl.webp",
+    "supportSceneImage": "/images/fort-lauderdale-fl-support.webp",
+    "supportSceneAlt": "A doula walking beside a pregnant partner along the Fort Lauderdale riverwalk: local birth support and doula care",
+    "lat": 26.1221,
+    "lng": -80.1359,
+    "costLow": 900,
+    "costHigh": 2200,
+    "culture": "Fort Lauderdale's expectation culture runs coastal and sun-soaked. Beach-town energy in the New River district, a dense network of OB practices on Atlantic and Las Ollas, and a large Latin community \\u2014 Spanish-language birth resources genuinely matter here, and many local doulas and midwives work bilingually. Families delivering in the area typically land at one of the big Broward Health campuses, with Holy Cross Fort Lauderdale close behind. If you're planning a hospital birth, an out-of-hospital-style birth plan plus a doula who knows the L&D team is the combination that makes the difference.",
+    "medicaidNote": "Florida Medicaid (Family Plus/CHIP) covers doula services for eligible members \\u2014 FL was one of the earlier states to add doulas to its Medicaid provider directory. Call 1-800-342-3526 (Access Florida) or check your plan to confirm current coverage before booking. If you're on a commercial plan, many FL plans cover part of the doula package \\u2014 worth one call to the number on your card."
+  },
+  "faqs_count": 5,
+  "midwife_paragraph_chars": null,
+  "doulas": [
+    {
+      "name": "MotheRetreat",
+      "url": "https://motheretreat.com/birth-doula-fort-lauderdale/",
+      "photo": "/images/providers/fort-lauderdale-fl-motheretreat.webp",
+      "description_chars": 313,
+      "costRange": "$900-$2,200"
+    },
+    {
+      "name": "Amber Marie",
+      "url": "https://hummingbirdbirthing.com/",
+      "photo": "/images/providers/fort-lauderdale-fl-amber-marie.webp",
+      "description_chars": 319,
+      "costRange": "$900-$2,200"
+    },
+    {
+      "name": "Martha",
+      "url": "https://zenmamalove.com/",
+      "photo": "/images/providers/fort-lauderdale-fl-martha.webp",
+      "description_chars": 287,
+      "costRange": "$900-$2,200"
+    },
+    {
+      "name": "Serene Gato",
+      "url": "https://serenegato.com/doula-services/",
+      "photo": "/images/providers/fort-lauderdale-fl-serene-gato.webp",
+      "description_chars": 259,
+      "costRange": "$900-$2,200"
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  },
+  "_auto_image_refs": [
+    "/images/fort-lauderdale-fl-birth-doula-hero-v1.webp",
+    "https://truejoybirthing.com/images/og-city-fort-lauderdale-fl.webp",
+    "/images/fort-lauderdale-fl-support.webp"
+  ]
 }

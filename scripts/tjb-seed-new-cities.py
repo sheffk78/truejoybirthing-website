@@ -106,6 +106,15 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
+    # 2026-10-10 (pipeline machine fix): test/fixture runs must never seed real
+    # cities into canonical state. The lane parser above reads states from
+    # TJB_STATES_DIR but the init below runs against the REAL repo — so a
+    # scratch-dir caller (fix batteries, simulations) would seed real cities.
+    # Gate mirrors tjb-pipeline-state.py hard guards.
+    if os.environ.get("TJB_TEST_MODE") == "1":
+        print(json.dumps({"would_seed": [], "note": "TJB_TEST_MODE=1 — seeding suppressed"}))
+        return
+
     picked = pick_candidates(args.count)
     stamp = datetime.now(timezone.utc).isoformat()
 

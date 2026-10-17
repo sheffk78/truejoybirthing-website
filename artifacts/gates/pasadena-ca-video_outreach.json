@@ -1,0 +1,47 @@
+{
+  "slug": "pasadena-ca",
+  "stage": "video_outreach",
+  "mode": "local_video_outreach",
+  "exit_code": 1,
+  "passed": 5,
+  "failed": 4,
+  "skipped": 0,
+  "results": {
+    "pre_render_gate": {
+      "status": "PASS",
+      "detail": "scene data exists at remotion/src/data/pasadena-ca-data.ts"
+    },
+    "video_file_exists": {
+      "status": "PASS",
+      "detail": "video file 32.8MB >10MB"
+    },
+    "youtube_upload": {
+      "status": "FAIL",
+      "detail": "pasadena-ca not found in video-embeds.ts"
+    },
+    "youtube_thumbnail": {
+      "status": "PASS",
+      "detail": "thumbnail present locally (806KB) \u2014 no videoId to verify YouTube upload"
+    },
+    "video_embedded": {
+      "status": "FAIL",
+      "detail": "no videoId to verify"
+    },
+    "videoobject_schema": {
+      "status": "FAIL",
+      "detail": "no videoId to verify"
+    },
+    "outreach_sent_or_blocked": {
+      "status": "PASS",
+      "detail": "authorized \u2014 Jeff approved outreach resumption Aug 2026. Ready to send."
+    },
+    "provider_photo_quality": {
+      "status": "PASS",
+      "detail": "all 3 provider photos are real images (>5KB, >100 colors)"
+    },
+    "video_content_city_match": {
+      "status": "FAIL",
+      "detail": "G67: no videoId \u2014 cannot verify video content"
+    }
+  }
+}

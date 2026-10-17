@@ -1,70 +1,37 @@
 {
- "slug": "pomona-ca",
- "stage": "video_outreach",
- "produced_at": "2026-10-03T23:35:00Z",
- "worker_model": "bedrock:latest (pomona video_outreach lane, resume of budget-killed 10/02 worker)",
- "notes": "Video chain completed 10/02 17:05-17:13 MDT by prior worker (render, upload as NEW public+embeddable video, thumbnail derived from hero, embed deployed, old video superseded). All video milestones re-verified live THIS lane 10/03: data-video-id=03e4Fxto42Q on page, VideoObject schema, thumbnail served by YouTube (112KB), G67 city-match, 9/9 stage gates green, deploy re-run after city-audit flag update. mp4 absent from disk = post-upload cleanup (gate accepts; upload proven via pomona-ca-youtube-id.txt in remotion/out + live embed). OUTREACH (deterministic tjb-batch-outreach.py manual --slug pomona-ca, ran 2026-10-03T22:36Z): BLOCKED with recorded reason - all 3 providers unreachable by email: Knol + Kuettle point at bornbir.com directory pages (blocked-domain list by design 2026-10-01 DAG-audit fix), Courageous Labors at npino.com NPI directory; no inline email fields in cities.ts. Send log: 0 pomona rows (nothing fabricated). Reason mirrored to ~/.hermes/state/tjb-city-status.json outreach_blocked_reason. Manual re-outreach path: find provider-owner emails (scraper already blocks directories - need the actual practice sites) or form-based outreach, add email fields to cities.ts, re-run batch script.",
- "sources": [
-  {
-   "provider": "stephanie-knol",
-   "claim": "Provider listed with real photo on live page (3/3 provider photos verified real images, gate provider_photo_quality pass)",
-   "url": "https://truejoybirthing.com/birth-support/pomona-ca/",
-   "quote": "Doulas & Midwives Serving Pomona"
+  "produced_at": "2026-10-14T16:59:00Z",
+  "worker_model": "claude-opus-4-6",
+  "milestones": {
+    "scene_data": "done (pomona-ca-data.ts, full state names, 14 scenes)",
+    "tts": "done (14 wavs, Shelley voice)",
+    "pre_render_gate": "PASS 2026-10-14 (G28 fix: capture-provider-scroll re-crop 3->2 matches page; gate re-ran clean)",
+    "stills": "done (out/pomona-verify-hook.png f30, pomona-verify-f900.png, pomona-verify-providers.png f3600)",
+    "render": "done pomona-ca-city-guide.mp4 20.5MB 4939 frames",
+    "youtube_upload": "PENDING - token expired 2026-10-08; re-auth then scripts/upload-youtube.py pomona-ca",
+    "youtube_thumbnail": "PENDING - generate yt-thumb-pomona-ca.png from website public/images/pomona-ca-birth-doula-hero.webp",
+    "embed_update": "PENDING - video-embeds.ts still has OLD 03e4Fxto42Q; swap after new upload + deploy",
+    "old_video_unlisted": "PENDING - set 03e4Fxto42Q unlisted after new embed live",
+    "outreach": "BLOCKED - build --slug pomona-ca: 2/2 emails blocked by tjb-outreach-pre-send-gate (blocked_content_gate: em dashes x2 + banned phrase); log rows written; city-audit.json outreach:false"
   },
-  {
-   "provider": "lori-kuettle",
-   "claim": "Provider listed with real photo on live page (3/3 provider photos verified real images, gate provider_photo_quality pass)",
-   "url": "https://truejoybirthing.com/birth-support/pomona-ca/",
-   "quote": "Doulas & Midwives Serving Pomona"
+  "youtube_id": null,
+  "old_youtube_id": "03e4Fxto42Q",
+  "old_video_unlisted": false,
+  "video_file": "pomona-ca-city-guide.mp4",
+  "embed_verified": false,
+  "outreach": {
+    "build_ran": true,
+    "sent": 0,
+    "blocked": 2,
+    "reason": "blocked_content_gate - em dashes + banned phrase in draft; body logs ~/.hermes/logs/tjb-outreach-bodies/2026-10-07/"
   },
-  {
-   "provider": "courageous-labors",
-   "claim": "Provider listed with real photo on live page (3/3 provider photos verified real images, gate provider_photo_quality pass)",
-   "url": "https://truejoybirthing.com/birth-support/pomona-ca/",
-   "quote": "Doulas & Midwives Serving Pomona"
-  }
- ],
- "images": {
-  "hero_watermark_clean": true,
-  "og_watermark_clean": true
- },
- "video_file": "video/remotion/out/pomona-ca-city-guide.mp4",
- "video_mb": 21.7,
- "youtube_id": "03e4Fxto42Q",
- "thumbnail_path": "video/remotion/out/yt-thumb-pomona-ca.png",
- "embed_verified": true,
- "outreach": [
-  {
-   "provider": "Stephanie Knol",
-   "status": "blocked",
-   "message_id": null,
-   "reason": "no email found: bornbir.com is a directory on the tjb-batch-outreach blocked-domain list (2026-10-01 DAG-audit fix); no inline email in cities.ts"
-  },
-  {
-   "provider": "Lori Kuettle",
-   "status": "blocked",
-   "message_id": null,
-   "reason": "no email found: bornbir.com directory domain blocked by design; no inline email in cities.ts"
-  },
-  {
-   "provider": "Courageous Labors Doula Services",
-   "status": "blocked",
-   "message_id": null,
-   "reason": "no email found: npino.com NPI directory URL; no provider-owned site in cities.ts"
-  }
- ],
- "outreach_blocked_reason": "Stephanie Knol: no email found; Lori Kuettle: no email found; Courageous Labors Doula Services: no email found",
- "next_worker_todo": [
-  "Jeff/doula lookup: find provider-OWNED sites or direct emails for Stephanie Knol, Lori Kuettle, Courageous Labors (Marchael Hagood) - directories blocked by design",
-  "Add working email fields to pomona-ca localDoulas in cities.ts (python heredoc) + preflight.ts pomona-ca",
-  "Re-run: python3 ~/.hermes/scripts/tjb-batch-outreach.py manual --slug pomona-ca (sends with delays, appends send log)",
-  "On >=1 sent: tjb-pipeline-state.py unblock pomona-ca && advance pomona-ca video_outreach; flip city-audit outreach=true + redeploy"
- ],
- "city_audit": {
-  "video": true,
-  "outreach": false,
-  "score": 90,
-  "deployed": "2026-10-03"
- },
- "state_terminal": "fail_recorded (3/3 attempts, blocked=true). Stage gates 9/9 PASS. DAG done-gate requires >=1 verified first-touch send in canonical log; outreach is genuinely BLOCKED: all 3 providers unreachable by email (bornbir.com x2 + npino.com directories, no real emails in cities.ts). Manual unblock: find provider-owned emails -> add to cities.ts -> re-run tjb-batch-outreach.py manual --slug pomona-ca -> tjb-pipeline-state.py unblock + advance."
+  "next_worker_todo": [
+    "1. Re-auth YouTube (token expired 10-08): new-youtube-token-refresh.sh, catch /oauth2/authcode/callback",
+    "2. python3 video/remotion/scripts/upload-youtube.py pomona-ca (public, embeddable, playlist 'All City Birth Guides')",
+    "3. Thumbnail: yt-thumb-pomona-ca.png 1280x720 from pomona-ca-birth-doula-hero.webp (pasadena style: cream bg, lavender accent band, serif title), then scripts/upload-youtube-thumbnail.py",
+    "4. video-embeds.ts: swap pomona-ca to new videoId; bash scripts/deploy.sh pomona-ca; verify live curl grep data-video-id",
+    "5. Set 03e4Fxto42Q unlisted (videos.update status.snippet.privacy)",
+    "6. Outreach: fix tjb-outreach-template.md (em dashes -> commas/periods, drop banned phrase), rerun build --slug pomona-ca; update city-audit.json pomona-ca outreach:true + score + redeploy",
+    "7. contract-validate.py pomona-ca video_outreach --compare; eval pack if anything changed"
+  ],
+  "notes": "Pre-render gate passed after G28 capture fix. Video + stills banked in video/remotion/out/. No YouTube upload this run (token expired) - zero quota burned. Live page /birth-support/pomona-ca/ currently embeds OLD 03e4Fxto42Q."
 }

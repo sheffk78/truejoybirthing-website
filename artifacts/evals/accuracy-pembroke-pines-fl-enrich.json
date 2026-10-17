@@ -1,0 +1,62 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "pembroke-pines-fl",
+  "stage": "enrich",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 6,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from the discoverdoulas.com directory page directly confirms all claim elements: Nurture Thy Nature LLC is a doula in Pembroke Pines, FL with 36 Google reviews and a holistic medicine practitioner background.",
+      "claim": "Nurture Thy Nature LLC is a Pembroke Pines doula practice with 36 Google reviews and holistic medicine background",
+      "url": "https://www.discoverdoulas.com/doula/nurture-thy-nature-llc-pembroke-pines-fl/",
+      "quote": "Nurture Thy Nature LLC \u2014 Doula in Pembroke Pines, FL ... 5 \u2605\u2605\u2605\u2605\u2605 36 Google reviews \u00b7 Holistic medicine practitioner"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the claim's name, services (birth & postpartum doula plus lactation consultations), and location (Pembroke Pines, FL), and the bornbir.com domain is plausibly a birth services directory page for this provider.",
+      "claim": "Natalie Grillo offers birth & postpartum doula services plus lactation consulting in Pembroke Pines",
+      "url": "https://www.bornbir.com/natalie-grillo-380",
+      "quote": "Natalie Grillo - Birth & Postpartum Doula - Pembroke Pines, FL ... I offer personalized birth and postpartum doula services, as well as professional lactation consultations"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible profile snippet for a birth doula page on bornbir.com, matches the claim verbatim, and the listed South Florida hospitals are geographically consistent with Pembroke Pines, FL.",
+      "claim": "G\u00e9nesis Mundo has supported 20+ births at Memorial Hospital Miramar, Memorial Hospital West, and Jackson Memorial",
+      "url": "https://www.bornbir.com/genesis-mundo",
+      "quote": "G\u00e9nesis Mundo - Birth Doula - Pembroke Pines, FL ... I've supported 20+ births at Memorial Hospital Miramar, Memorial Hospital West, and Jackson Memorial"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the motheretreat.com birth-doula Pembroke Pines page and explicitly states MotheRetreat serves Pembroke Pines with birth doula support at local hospitals (Memorial Hospital West and Miramar), matching both the domain subject and the claim.",
+      "claim": "MotheRetreat maintains a dedicated Pembroke Pines birth-doula service page",
+      "url": "https://motheretreat.com/birth-doula-pembroke-pines/",
+      "quote": "MotheRetreat ... We serve Pembroke Pines and nearby communities ... Whether you plan to deliver at Memorial Hospital West or Memorial Hospital Miramar, your birth doula gives continuous one-on-one lab"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the Memorial Healthcare System maternity-care page for the regional hospital and explicitly names the Dr. Henry D. Perry Family Birthplace at Memorial Regional Hospital while stating it has private LDR suites and a Level IV NICU, directly supporting the claim.",
+      "claim": "Memorial Regional Hospital Dr. Henry D. Perry Family Birthplace has private LDR suites and Level IV NICU",
+      "url": "https://www.mhs.net/services/maternity-care/regional",
+      "quote": "The Dr. Henry D. Perry Family Birthplace at Memorial Regional Hospital is pleased to provide our families with a comfortable labor and delivery experience ... Private labor/delivery/recovery (LDR) sui"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The URL domain (mhs.production.merge-digital.com) matches Memorial Healthcare System's official web infrastructure with a /locations/memorial-regional path, and the quote's hospital name and address (3501 Johnson Street, Hollywood, FL 33021) correctly match the real Memorial Regional Hospital, plaus",
+      "claim": "Memorial Regional Hospital exterior photo (official MHS location page)",
+      "url": "https://cd2.mhs.production.merge-digital.com/locations/memorial-regional",
+      "quote": "Memorial Regional Hospital 3501 Johnson Street Hollywood, FL 33021 \u2014 official exterior photo with on-building 'Memorial Regional Hospital' signage (verified visually)"
+    }
+  ],
+  "checked_at": "2026-10-17T09:37:05-06:00"
+}

@@ -1,0 +1,28 @@
+{
+  "hospitalDetails": [
+    {
+      "name": "Broward Health Medical Center",
+      "thumbnail": "/images/broward-health-medical-center.webp",
+      "url": "https://www.browardhealth.org/medical-services/womens-health/maternity-services/maternity-place-at-broward-health-medical-center",
+      "address": "251 E Las Olas Blvd, Fort Lauderdale, FL 33301",
+      "nicuLevel": "III",
+      "medicaid": true,
+      "lactation": true,
+      "privateRooms": true,
+      "midwifeFriendly": true,
+      "paragraph": "Broward Health Medical Center anchors Broward County maternity care from downtown Fort Lauderdale, and its Maternity Place program is built around family-centered care: dedicated labor care, postpartum support, and a team that coordinates with doulas and support persons from the moment you check in. It's the county's highest-volume hospital, which means the L&D team moves fast — <a href='/birth-plan-template/'>write your birth preferences down</a> and hand them over at triage so nothing gets lost in the room. If your baby arrives early or small, the Level III NICU is right on site."
+    },
+    {
+      "name": "Holy Cross Hospital Fort Lauderdale",
+      "thumbnail": "/images/holy-cross-hospital-fort-lauderdale.webp",
+      "url": "https://www.holy-cross.com/location/holy-cross-hospital-fl-0",
+      "address": "2601 N Federal Hwy, Fort Lauderdale, FL 33305",
+      "nicuLevel": "II",
+      "medicaid": true,
+      "lactation": true,
+      "midwifeFriendly": true,
+      "paragraph": "Holy Cross Hospital on North Federal Highway, in Fort Lauderdale's east end, is the area's other major maternity destination. It handles a solid volume of routine low-risk and higher-complexity births, with an OB team, postpartum unit and NICU under one roof, and its own campus of clinics for prenatal appointments. Doulas are welcome as support persons — confirm the current visitor policy when you tour or call the patient-line number on holy-cross.com before labor day."
+    }
+  ],
+  "birthCenterDetails": []
+}

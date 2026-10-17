@@ -1,0 +1,19 @@
+{
+  "slug": "fort-lauderdale-fl",
+  "stage": "enrich",
+  "mode": "humanize_gate",
+  "exit_code": 1,
+  "passed": 0,
+  "failed": 2,
+  "skipped": 0,
+  "results": {
+    "H-HUMANIZE": {
+      "status": "FAIL",
+      "detail": "scanner verdict HIGH RISK \u2014 rework prose per skills/humanize-content/SKILL.md before deploy (verdict: HIGH RISK)"
+    },
+    "H-SHAPE": {
+      "status": "FAIL",
+      "detail": "shape >70% vs port-st-lucie-fl \u2014 restructure section order/paragraph rhythm (scale-mode rule 4)"
+    }
+  }
+}

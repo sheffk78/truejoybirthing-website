@@ -1,0 +1,102 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "glendale-az",
+  "stage": "enrich",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 11,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is plausible profile-summary text for a doulamatch.net doula profile page (domain subject matches the claim's topic) and it directly states the claimed certification status, years in practice, testimonial count, and birth fee range.",
+      "claim": "Evidence: Rebecca Turrigiano \u2014 Birth Doula \u2014 VERIFIED CERTIFICATION \u2014 13 YEARS IN PRACTICE \u2014 210 CLIENT TESTIMONIALS \u2014 Birth Fee $2,200 to $3,900.",
+      "url": "https://doulamatch.net/profile/6062/rebecca-turrigiano",
+      "quote": "Rebecca Turrigiano \u2014 Birth Doula \u2014 VERIFIED CERTIFICATION \u2014 13 YEARS IN PRACTICE \u2014 210 CLIENT TESTIMONIALS \u2014 Birth Fee $2,200 to $3,900."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a structured doula profile listing (name, business, birth fee range, postpartum rate, years in practice) that matches the typical format of a doulamatch.net profile page and directly supports the claim verbatim.",
+      "claim": "Evidence: Kay Clinton \u2014 Spiritual Garden Healing Doula Services \u2014 Birth Fee: $1500 to $3500 \u2014 Postpartum Rate: $50 to $100 \u2014 6 YEARS IN PRACTICE.",
+      "url": "https://doulamatch.net/profile/37885/kay-clinton",
+      "quote": "Kay Clinton \u2014 Spiritual Garden Healing Doula Services \u2014 Birth Fee: $1500 to $3500 \u2014 Postpartum Rate: $50 to $100 \u2014 6 YEARS IN PRACTICE."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the claim verbatim and is plausible content for a doula directory listing page for Mother and Earth Doula Services in Glendale, AZ, with a local 623 area code phone number and a review consistent with the service.",
+      "claim": "Evidence: Mother and Earth Doula Services \u2014 5 \u2605\u2605\u2605\u2605\u2605 4 Google reviews \u2014 Available 24/7 \u2014 (623) 451-8034. Review: 'Deidra was informative, listened to what I wanted, was ea",
+      "url": "https://www.discoverdoulas.com/doula/mother-and-earth-doula-services-glendale-az/",
+      "quote": "Mother and Earth Doula Services \u2014 5 \u2605\u2605\u2605\u2605\u2605 4 Google reviews \u2014 Available 24/7 \u2014 (623) 451-8034. Review: 'Deidra was informative, listened to what I wanted, was easy to get a hold of, and brought a stron"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the claim verbatim and is plausible content for a doula directory listing page (discoverdoulas.com) for The Golden Doula Services in Glendale, AZ, with a 623 area code consistent with that location.",
+      "claim": "Evidence: The Golden Doula Services \u2014 4.5 \u2605\u2605\u2605\u2605\u2605 2 Google reviews \u2014 Available 24/7 \u2014 (623) 231-1196. Review: 'Monique was our birth doula and helped us bring our baby girl",
+      "url": "https://www.discoverdoulas.com/doula/the-golden-doula-services-glendale-az/",
+      "quote": "The Golden Doula Services \u2014 4.5 \u2605\u2605\u2605\u2605\u2605 2 Google reviews \u2014 Available 24/7 \u2014 (623) 231-1196. Review: 'Monique was our birth doula and helped us bring our baby girl earth side... I was able to have the bi"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the Rah Midwifery homepage domain, matches the claim's text about Jada being an Arizona LM and CPM, and lists Arizona service areas consistent with the practice.",
+      "claim": "Evidence: My name is Jada, the Owner & Founder of Rah Midwifery. I am a licensed midwife in the State of Arizona (LM), and also nationally credentialed as a Certified Pro",
+      "url": "https://rahmidwifery.com/",
+      "quote": "My name is Jada, the Owner & Founder of Rah Midwifery. I am a licensed midwife in the State of Arizona (LM), and also nationally credentialed as a Certified Professional Midwife (CPM). \u2014 Glendale \u2022 Av"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly contains the claimed text about a Glendale birth center at 5622 W. Palmaire Avenue, and the urbanmidwives.com domain plausibly hosts such content, with the Banner University Medical Center reference being consistent with a Glendale, Arizona location.",
+      "claim": "Evidence: For more than a decade, our Glendale birth center has been providing quality care... Our spacious birth center is located in historic downtown Glendale at 5622 ",
+      "url": "https://urbanmidwives.com/",
+      "quote": "For more than a decade, our Glendale birth center has been providing quality care... Our spacious birth center is located in historic downtown Glendale at 5622 W. Palmaire Avenue. Featuring two birth "
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the claim verbatim and is plausible content for the Banner Thunderbird Medical Center maternity page, which is located in Glendale and known for its Level III NICU in the West Valley.",
+      "claim": "Evidence: Complete maternity services include pregnancy care, labor and delivery care, mother and baby care, and Level III Neonatal Intensive Care Unit for premature and ",
+      "url": "https://www.bannerhealth.com/locations/glendale/banner-thunderbird-medical-center/maternity",
+      "quote": "Complete maternity services include pregnancy care, labor and delivery care, mother and baby care, and Level III Neonatal Intensive Care Unit for premature and sick babies \u2014 the only one in the West V"
+    },
+    {
+      "index": 7,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the official Banner Health location page for Banner Thunderbird Medical Center, and its description of the facility's size and location at 55th Avenue and Thunderbird Road in Glendale, Arizona directly supports the claim.",
+      "claim": "Evidence: The 890,000-square-foot acute-care facility is on 33 acres on the southwest corner of 55th Avenue and Thunderbird Road in Glendale, Arizona.",
+      "url": "https://www.bannerhealth.com/locations/glendale/banner-thunderbird-medical-center",
+      "quote": "The 890,000-square-foot acute-care facility is on 33 acres on the southwest corner of 55th Avenue and Thunderbird Road in Glendale, Arizona."
+    },
+    {
+      "index": 8,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the official AdventHealth Glendale hospital page and directly states the Level 3 Trauma Center designation and the 100 W. Thunderbird Rd. address, matching the claim.",
+      "claim": "Evidence: Welcome to AdventHealth Glendale \u2014 AdventHealth Glendale is a Level 3 Trauma Center... Located at 100 W. Thunderbird Rd. in Glendale.",
+      "url": "https://www.adventhealth.com/hospitals/glendale",
+      "quote": "Welcome to AdventHealth Glendale \u2014 AdventHealth Glendale is a Level 3 Trauma Center... Located at 100 W. Thunderbird Rd. in Glendale."
+    },
+    {
+      "index": 9,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the claim's statistics verbatim and plausibly appears on the Bornbir Glendale, AZ doula cost page, with matching domain subject matter and location.",
+      "claim": "Evidence: Median package price $1,000. Typical range $419\u2013$1,500. Median hourly rate $40/hr. Based on 284 package prices from 91 providers listed on Bornbir within 150 mi",
+      "url": "https://www.bornbir.com/glendale/az/doula/cost",
+      "quote": "Median package price $1,000. Typical range $419\u2013$1,500. Median hourly rate $40/hr. Based on 284 package prices from 91 providers listed on Bornbir within 150 miles of Glendale, AZ. Updated September 2"
+    },
+    {
+      "index": 10,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the claim verbatim and plausibly appears on an Arizona home birth directory page, whose subject matter aligns with midwife pricing in Arizona and the Phoenix metro.",
+      "claim": "Evidence: An Arizona home birth midwife package runs $4,500 to $8,500... In the Phoenix metro, fees typically run $5,500 to $8,500 for CPMs and CNMs with established prac",
+      "url": "https://homebirthpartners.com/directory/arizona/",
+      "quote": "An Arizona home birth midwife package runs $4,500 to $8,500... In the Phoenix metro, fees typically run $5,500 to $8,500 for CPMs and CNMs with established practices."
+    }
+  ],
+  "checked_at": "2026-10-17T12:14:17-06:00"
+}

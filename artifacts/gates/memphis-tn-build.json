@@ -1,0 +1,35 @@
+{
+  "slug": "memphis-tn",
+  "stage": "build",
+  "mode": "humanize_gate",
+  "exit_code": 1,
+  "passed": 0,
+  "failed": 1,
+  "skipped": 0,
+  "results": {
+    "LOCAL_heroImage": {
+      "status": "PASS",
+      "detail": "/images/memphis-tn-birth-doula-skyline-v3.webp"
+    },
+    "LOCAL_ogImage": {
+      "status": "PASS",
+      "detail": "/images/og-city-memphis-tn-v2.webp"
+    },
+    "LOCAL_supportSceneImage": {
+      "status": "PASS",
+      "detail": "/images/memphis-tn-birth-doula-support-v2.webp"
+    },
+    "LOCAL_EVAL_SLOP": {
+      "status": "PASS",
+      "detail": "no slop patterns (0 warn-tier)"
+    },
+    "H-HUMANIZE": {
+      "status": "PASS",
+      "detail": "scanner verdict: RISKY"
+    },
+    "H-SHAPE": {
+      "status": "FAIL",
+      "detail": "shape >70% vs 70, allen-tx, amarillo-tx, hendersonville-tn, os \u2014 restructure section order/paragraph rhythm (scale-mode rule 4)"
+    }
+  }
+}

@@ -1,193 +1,50 @@
 {
-  "stage": "video_outreach",
   "slug": "tempe-az",
-  "produced_at": "2026-10-08T23:12:40.663Z",
+  "stage": "video_outreach",
+  "produced_at": "2026-10-12T23:12:00Z",
   "worker_model": "bedrock:latest",
-  "status": "complete",
-  "milestones_done": {
-    "scene_data": {
-      "done": true,
-      "file": "video/remotion/src/data/tempe-az-data.ts",
-      "notes": "15 scenes, full state names; portrait slides -> tjb_provider_portrait_summary (gate fix); types.ts + mapper + TJBCityVideo.tsx updated for new scene type; mapper file repaired after botched insertion."
+  "notes": "All video milestones done+verified: video public (Lhw-_ZQmKlg, 350.6s, 36MB), thumbnail public/images/yt-thumb-tempe-az.webp, embed deployed and live-verified (https://truejoybirthing.com/birth-support/tempe-az/ shows embed + VideoObject). Outreach: deterministic batch run 2026-10-12 \u2014 all 6 providers 'no email found', 0 sent, BLOCKED recorded in ~/.hermes/state/tjb-city-status.json (has_outreach=false, outreach_blocked_reason set). Gate outreach_sent_or_blocked passes on block state. Re-outreach is the only manual path: source real emails (bornbir.com contact pages, doulamatch profiles) and re-run tjb-batch-outreach.py build --slug tempe-az.",
+  "sources": [
+    {
+      "claim": "YouTube video Lhw-_ZQmKlg 'Tempe, Arizona Doula & Birth Plan Guide: Costs, Hospitals & Medicaid' exists public and embeddable",
+      "url": "https://www.youtube.com/watch?v=Lhw-_ZQmKlg",
+      "quote": "Tempe, Arizona Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)"
     },
-    "assets_staged": {
-      "done": true,
-      "notes": "Provider photos (6 webp) + hero staged into video/remotion/public/images/; hospital webps (mesa-az-banner-desert, chandler-az-chandler-regional-medical-center) confirmed present. Provider scroll screenshot recaptured: public/images/tempe-az-fullpage-scroll.png (1920x2508, crop 3176-5684, 6/6 provider photos loaded, maxScroll 1428) + tempe-az-capture-manifest.json."
+    {
+      "claim": "Live page /birth-support/tempe-az/ serves the video embed (data-video-id Lhw-_ZQmKlg) and VideoObject schema",
+      "url": "https://truejoybirthing.com/birth-support/tempe-az/",
+      "quote": "data-video-id=\"Lhw-_ZQmKlg\" \u2014 youtube-nocookie embed + VideoObject JSON-LD with duration confirmed via curl"
     },
-    "tts_audio": {
-      "done": true,
-      "master": "video/remotion/public/audio/tempe-az/tempe-az-master.wav",
-      "master_duration_s": 350.18,
-      "per_scene_padded": {
-        "01_hook": 12.93,
-        "02_overview": 25.35,
-        "03_hospital_1": 27.5,
-        "03_hospital_2": 35.88,
-        "03a_birth_center": 38.73,
-        "04_providers_1": 17.17,
-        "04_providers_2": 17.1,
-        "04_providers_3": 18.85,
-        "04_providers_4": 16.53,
-        "04_providers_5": 15.65,
-        "05_app": 26.93,
-        "06_cost": 25.62,
-        "07_insurance": 51.88,
-        "08_cta": 28.16
-      },
-      "notes": "Shelbi voice 331c27cd, voxtral-mini-tts-latest, 24kHz mono, 0.3s pad each; durations synced in data file + metadata 350.167s."
+    {
+      "claim": "Joeley Harper is a birth doula serving Tempe-area families (outreach provider, no public email found)",
+      "url": "https://www.bornbir.com/joeley-harper",
+      "quote": "Birth Doula serving the Tempe and Phoenix, Arizona area"
     },
-    "composition_registration": {
-      "done": true,
-      "notes": "Root.tsx: import tempe_azData + <Composition id=\"tempe-az-City-Guide\" audioPath audio/tempe-az/tempe-az-master.wav>"
+    {
+      "claim": "Shannon Bentley is a birth doula listed for Tempe families (outreach provider, no public email found)",
+      "url": "https://www.bornbir.com/shannon-bentley",
+      "quote": "Birth Doula serving the Tempe and Phoenix, Arizona area"
     },
-    "birth_center_image": {
-      "done": true,
-      "notes": "copied website's tempe-az-tempe-birth-center.webp into video public/images/birth-centers/ (175KB)"
-    },
-    "pre_render_gate": {
-      "done": true,
-      "result": "PASS (audio sync 350.18s==350.20s); only G7 medium = filename-only false-positive, hook image byte-identical to live hero",
-      "note": "video already rendered Oct 5; gate re-confirmed before upload"
-    },
-    "render": {
-      "done": true,
-      "file": "video/remotion/out/tempe-az-city-guide.mp4",
-      "size_bytes": 36091185,
-      "ffprobe": "1920x1080 h264+aac duration=350.59s",
-      "rendered_at_oct5": true,
-      "note": "valid mp4 already on disk from prior run; no re-render needed \u2014 hook image byte-identical to live hero (md5 1391543), G7 is filename false-positive"
-    },
-    "stills": {
-      "done": true,
-      "count": 15,
-      "dir": "video/remotion/out/stills/"
-    },
-    "youtube_upload": {
-      "done": true,
-      "video_id": "Lhw-_ZQmKlg",
-      "privacy": "public",
-      "embeddable": true,
-      "madeForKids": false,
-      "duration": "PT5M51S",
-      "title": "Tempe, Arizona Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
-      "oembed": 200
-    },
-    "youtube_thumbnail": {
-      "done": true,
-      "source": "public/images/yt-thumb-tempe-az.webp",
-      "uploaded": "out/yt-thumb-tempe-az.png (1280x720)"
-    },
-    "video_embed": {
-      "done": true,
-      "file": "src/data/video-embeds.ts:2080",
-      "video_id": "Lhw-_ZQmKlg",
-      "note": "appended by upload-youtube.py; NOT yet deployed"
-    },
-    "playlist": {
-      "done": true,
-      "playlists": [
-        "Arizona Birth Guides",
-        "All City Birth Guides"
-      ]
-    },
-    "video_embed_deploy": {
-      "done": true,
-      "at": "2026-10-08T17:08:50.815609-06:00",
-      "method": "scripts/deploy.sh tempe-az (CF Pages direct upload 7080 files + git push)",
-      "commit": "995c7b45",
-      "live_verify": "https://truejoybirthing.com/birth-support/tempe-az/ \u2192 data-video-id=Lhw-_ZQmKlg + youtube-nocookie embed confirmed via curl (cache-busted, http 200)",
-      "branch": "seo-fixes-20260929"
-    },
-    "outreach": {
-      "done": true,
-      "attempted_at": "2026-10-08T17:08:50.815851-06:00",
-      "result": "BLOCKED (recorded, not fabricated)",
-      "command": "python3 ~/.hermes/scripts/tjb-batch-outreach.py build --slug tempe-az",
-      "summary": {
-        "sent": 0,
-        "blocked": 1
-      },
-      "providers": 6,
-      "reason": "all 6 providers returned 'no email found' \u2014 Joeley Harper, Shannon Bentley, Amber Thomas (bornbir.com), Breanne Moriarty, Gervonne Jefferson, Jennifer Saucier (true-medinfo.com NPI listing pages)",
-      "state_written": {
-        "has_outreach": false,
-        "outreach_blocked_reason": "Joeley Harper: no email found; Shannon Bentley: no email found; Amber Thomas: no email found; Breanne Moriarty: no email found; Gervonne Jefferson: no email found; Jennifer Saucier: no email found",
-        "outreach_blocked_at": "2026-10-08T23:00:21Z"
-      },
-      "note": "deterministic script path (NOT hand-written); gate outreach_sent_or_blocked passes on recorded block reason per AGENTS.md. Re-outreach = only manual path: get provider email addresses first."
-    },
-    "dashboard": {
-      "done": true,
-      "at": "2026-10-08T17:08:50.815856-06:00",
-      "file": "public/city-audit.json",
-      "video": true,
-      "score": 100,
-      "outreach": false,
-      "note": "outreach left false (0 sent \u2014 all 6 have no email); video:true + score 100 deployed"
+    {
+      "claim": "Amber Thomas is a birth doula serving Tempe-area families (outreach provider, no public email found)",
+      "url": "https://www.bornbir.com/amber-thomas",
+      "quote": "Birth Doula serving the Tempe and Phoenix, Arizona area"
     }
-  },
-  "next_worker_todo": "Optional/manual: resolve provider email addresses for tempe-az to unblock outreach (6 providers, currently no emails). Re-outreach is the only manual path \u2014 name what changed. No other remaining work for this stage.",
-  "notes": "Video Lhw-_ZQmKlg live public+embeddable, embedded+deployed (CF Pages 995c7b45), all 9 stage gates pass. Outreach BLOCKED: 0 of 6 providers sent \u2014 none have an email address (bornbir.com trio + true-medinfo.com NPI pages). Block reason recorded in ~/.hermes/state/tjb-city-status.json (outreach_blocked_reason, has_outreach=false). No old video to unlist (first video for this city). Dashboard: video:true, score:100 (outreach stays false until real sends happen).",
-  "youtube_id": "Lhw-_ZQmKlg",
+  ],
   "video_file": "video/remotion/out/tempe-az-city-guide.mp4",
-  "video_url": "https://youtu.be/Lhw-_ZQmKlg",
-  "stage_gates_result": {
-    "command": "python3 scripts/preflight-stage-gate.py tempe-az --stage video_outreach",
-    "exit_code": 0,
-    "passed": 9,
-    "failed": 0,
-    "skipped": 0,
-    "gates": {
-      "pre_render_gate": "PASS (scene data exists)",
-      "video_file_exists": "PASS (34.4MB >10MB)",
-      "youtube_upload": "PASS (Lhw-_ZQmKlg in video-embeds.ts)",
-      "youtube_thumbnail": "PASS (webp 24KB)",
-      "video_embedded": "PASS (embed on live page)",
-      "videoobject_schema": "PASS (VideoObject+duration on live page)",
-      "outreach_sent_or_blocked": "PASS (authorized \u2014 block reason recorded)",
-      "provider_photo_quality": "PASS (all 6 real images)",
-      "video_content_city_match": "PASS (G67: 'tempe' found in video)"
-    }
-  },
-  "thumbnail_path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/public/images/yt-thumb-tempe-az.webp",
+  "video_mb": 34.4,
+  "youtube_id": "Lhw-_ZQmKlg",
+  "thumbnail_path": "public/images/yt-thumb-tempe-az.webp",
   "embed_verified": true,
   "outreach": [
     {
+      "provider": "tempe-az (6 providers: Joeley Harper, Shannon Bentley, Amber Thomas, Breanne Moriarty, Gervonne Jefferson, Jennifer Saucier)",
       "status": "blocked",
-      "provider": "Joeley Harper",
-      "url": "https://www.bornbir.com/joeley-harper",
-      "reason": "no email found"
-    },
-    {
-      "status": "blocked",
-      "provider": "Shannon Bentley",
-      "url": "https://www.bornbir.com/shannon-bentley",
-      "reason": "no email found"
-    },
-    {
-      "status": "blocked",
-      "provider": "Amber Thomas",
-      "url": "https://www.bornbir.com/amber-thomas",
-      "reason": "no email found"
-    },
-    {
-      "status": "blocked",
-      "provider": "Breanne Moriarty",
-      "url": "https://www.true-medinfo.com/arizona/tempe/doula/npi-1477056588-breanne-moriarty",
-      "reason": "no email found"
-    },
-    {
-      "status": "blocked",
-      "provider": "Gervonne Jefferson",
-      "url": "https://www.true-medinfo.com/arizona/tempe/doula/npi-1669276101-gervonne-jefferson",
-      "reason": "no email found"
-    },
-    {
-      "status": "blocked",
-      "provider": "Jennifer Saucier",
-      "url": "https://www.true-medinfo.com/arizona/tempe/doula/npi-1922566322-jennifer-saucier",
-      "reason": "no email found"
+      "message_id": null,
+      "reason": "no email found \u2014 deterministic tjb-batch-outreach.py build, 0 sent"
     }
   ],
-  "outreach_blocked_reason": "all 6 providers returned 'no email found' \u2014 0 sent; block recorded in ~/.hermes/state/tjb-city-status.json (has_outreach=false)"
+  "dashboard_reflected": true,
+  "dashboard_note": "public/city-audit.json tempe-az row: score 90, stage blocked, video=true, outreach=false, blocked_reason set \u2014 matches the 5 live cities' shape. Deploy blocked: 2026-09-19 site-wide gate (uncommitted cities hialeah-fl/memphis-tn fail build gate) requires --no-verify; left to Jeff \u2014 same gate blocked every earlier deploy this session. Live dashboard still shows predates this row edit.",
+  "next_worker_todo": ""
 }

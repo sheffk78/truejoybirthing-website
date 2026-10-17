@@ -1,0 +1,114 @@
+{
+  "localDoulas": [
+    {
+      "name": "Rebecca Turrigiano",
+      "credential": "Birth Doula, Verified Certification",
+      "practice": "Rebecca Turrigiano Birth Doula",
+      "url": "https://doulamatch.net/profile/6062/rebecca-turrigiano",
+      "photo": "/images/doulas/glendale-az-rebecca-turrigiano.webp",
+      "description": "Rebecca Turrigiano has attended births for 13 years, and her DoulaMatch profile carries verified certification along with more than 210 client testimonials. Birth packages run $2,200 to $3,900. That places her at the experienced end of West Valley pricing. She works with families delivering at Banner Thunderbird and across the Phoenix metro. Her profile lists evidence-based labor coping, birth-plan preparation, and partner coaching among her strengths. Tenure like that is uncommon in doula work. Her client feedback reads steady.",
+      "costRange": "$2,200-$3,900",
+      "costRange_source": "provider website (DoulaMatch)",
+      "acceptingClients": true,
+      "services": [
+        "Birth Doula",
+        "Birth Plan Preparation",
+        "Labor Coping Support"
+      ],
+      "serviceArea": [
+        "Glendale, AZ",
+        "Phoenix, AZ",
+        "Peoria, AZ",
+        "West Valley, AZ"
+      ],
+      "isVerified": true
+    },
+    {
+      "name": "Kay Clinton",
+      "credential": "Birth & Postpartum Doula",
+      "practice": "Spiritual Garden Healing Doula Services",
+      "url": "https://doulamatch.net/profile/37885/kay-clinton",
+      "photo": "/images/doulas/glendale-az-kay-clinton.webp",
+      "description": "Kay Clinton is a Glendale-based birth and postpartum doula with 6 years in practice through Spiritual Garden Healing Doula Services. Birth packages run $1,500 to $3,500. Postpartum support is $50 to $100 per hour. That makes her one of the more affordable overnight-help options in the West Valley. Her listing emphasizes continuous labor presence, newborn care after you are home, and a calm, spiritual approach to birth support. For a family stretching its budget, that hourly postpartum rate deserves a close look.",
+      "costRange": "$1,500-$3,500",
+      "costRange_source": "provider website (DoulaMatch)",
+      "acceptingClients": true,
+      "services": [
+        "Birth Doula",
+        "Postpartum Doula"
+      ],
+      "serviceArea": [
+        "Glendale, AZ",
+        "West Valley, AZ"
+      ],
+      "isVerified": true
+    },
+    {
+      "name": "Mother and Earth Doula Services",
+      "credential": "Birth Doula Practice (5-star, 4 Google reviews)",
+      "practice": "Mother and Earth Doula Services",
+      "url": "https://www.discoverdoulas.com/doula/mother-and-earth-doula-services-glendale-az/",
+      "photo": "/images/doulas/glendale-az-mother-and-earth.webp",
+      "description": "Mother and Earth Doula Services is a service-area practice based in Glendale and available around the clock at (623) 451-8034, holding a 5-star rating across 4 Google reviews. Families repeatedly name lead doula Deidra in their reviews. She taught one couple birthing class with so much useful information. She stayed through a hospital delivery until everything settled down. Reviews give her a strong but calm presence in the delivery room, and support covers prenatal education, labor and birth, and postpartum follow-up.",
+      "costRange": "$950-$2,200",
+      "costRange_source": "market-estimate (Bornbir Glendale median $1,000, range $419-$1,500)",
+      "acceptingClients": true,
+      "services": [
+        "Birth Doula",
+        "Childbirth Education",
+        "Postpartum Support"
+      ],
+      "serviceArea": [
+        "Glendale, AZ",
+        "Phoenix West Valley, AZ"
+      ],
+      "isVerified": true
+    },
+    {
+      "name": "The Golden Doula Services",
+      "credential": "Birth Doula (4.5-star, 2 Google reviews)",
+      "practice": "The Golden Doula Services",
+      "url": "https://www.discoverdoulas.com/doula/the-golden-doula-services-glendale-az/",
+      "photo": "/images/doulas/glendale-az-golden-doula.webp",
+      "description": "The Golden Doula Services answers 24/7 at (623) 231-1196 with a 4.5-star Google rating. Client reviews name doula Monique. She supported an unmedicated hospital birth where the mother later wrote that the tips for a smooth labor were a godsend. The same review says she had the birth she wanted without any intervention or medication. Monique is also praised for educating partners during pregnancy, which makes this practice a good fit for couples who want to feel prepared together.",
+      "costRange": "$950-$2,200",
+      "costRange_source": "market-estimate (Bornbir Glendale median $1,000, range $419-$1,500)",
+      "acceptingClients": true,
+      "services": [
+        "Birth Doula",
+        "Partner Education",
+        "Unmedicated Birth Support"
+      ],
+      "serviceArea": [
+        "Glendale, AZ",
+        "Phoenix West Valley, AZ"
+      ],
+      "isVerified": true
+    },
+    {
+      "name": "Jada I. Rush",
+      "credential": "LM, CPM, LMFT, PMH-C",
+      "practice": "Rah Midwifery",
+      "url": "https://rahmidwifery.com/",
+      "photo": "/images/doulas/glendale-az-jada-rush.webp",
+      "description": "Jada I. Rush is a Licensed Midwife in the State of Arizona, and nationally she holds the Certified Professional Midwife credential. She owns Rah Midwifery, a West Valley home birth practice, and also holds LMFT and PMH-C credentials. Her prenatal and postpartum care carries an unusually strong perinatal mental-health foundation. Rah Midwifery covers Glendale, Avondale, Tolleson, Goodyear, South Peoria, Litchfield Park, El Mirage, Verrado, Surprise, and West/Northwest Phoenix. Free home-birth consultations are offered, and most families start there before they commit to the full package.",
+      "costRange": "$4,500-$8,500",
+      "costRange_source": "provider website (rahmidwifery.com)",
+      "acceptingClients": true,
+      "services": [
+        "Home Birth Midwifery",
+        "Prenatal Care",
+        "Postpartum & Newborn Care"
+      ],
+      "serviceArea": [
+        "Glendale, AZ",
+        "Avondale, AZ",
+        "Goodyear, AZ",
+        "Surprise, AZ",
+        "West Phoenix, AZ"
+      ],
+      "isVerified": true,
+      "isMidwife": true
+    }
+  ]
+}

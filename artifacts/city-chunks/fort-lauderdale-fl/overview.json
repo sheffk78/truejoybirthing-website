@@ -1,0 +1,18 @@
+{
+  "city": "Fort Lauderdale",
+  "state": "FL",
+  "slug": "fort-lauderdale-fl",
+  "costLow": 900,
+  "costHigh": 2200,
+  "lat": 26.1221,
+  "lng": -80.1359,
+  "publishedDate": "2026-10-16",
+  "nearbyCities": [
+    "miami-fl",
+    "palm-beach-fl",
+    "west-palm-beach-fl",
+    "boca-raton-fl",
+    "hollywood-fl",
+    "davie-fl"
+  ]
+}

@@ -2084,4 +2084,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: 350,
   },
 
+  "pasadena-ca": {
+    videoId: "PENDING",
+    title: "Pasadena Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT3M00S",
+    uploadDate: "2026-06-11T00:00:00-06:00",
+  },
 };

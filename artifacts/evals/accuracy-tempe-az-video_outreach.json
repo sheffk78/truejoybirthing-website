@@ -1,0 +1,54 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "tempe-az",
+  "stage": "video_outreach",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 5,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible video title for the YouTube watch page with the exact matching video ID (Lhw-_ZQmKlg), and it directly matches the claimed title about Tempe, Arizona doula services with no fabrication signals.",
+      "claim": "YouTube video Lhw-_ZQmKlg 'Tempe, Arizona Doula & Birth Plan Guide: Costs, Hospitals & Medicaid' exists public and embeddable",
+      "url": "https://www.youtube.com/watch?v=Lhw-_ZQmKlg",
+      "quote": "Tempe, Arizona Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly confirms the exact data-video-id (Lhw-_ZQmKlg), the youtube-nocookie embed, and VideoObject JSON-LD on the specified truejoybirthing.com Tempe page, matching the claim's topic and URL.",
+      "claim": "Live page /birth-support/tempe-az/ serves the video embed (data-video-id Lhw-_ZQmKlg) and VideoObject schema",
+      "url": "https://truejoybirthing.com/birth-support/tempe-az/",
+      "quote": "data-video-id=\"Lhw-_ZQmKlg\" \u2014 youtube-nocookie embed + VideoObject JSON-LD with duration confirmed via curl"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote on a page dedicated to Joeley Harper on a birth-related domain explicitly states she is a birth doula serving the Tempe and Phoenix, Arizona area, which directly supports the claim.",
+      "claim": "Joeley Harper is a birth doula serving Tempe-area families (outreach provider, no public email found)",
+      "url": "https://www.bornbir.com/joeley-harper",
+      "quote": "Birth Doula serving the Tempe and Phoenix, Arizona area"
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote describes a birth doula serving Tempe, Arizona, which matches the claim's subject and the plausible doula-profile page at bornbir.com/shannon-bentley.",
+      "claim": "Shannon Bentley is a birth doula listed for Tempe families (outreach provider, no public email found)",
+      "url": "https://www.bornbir.com/shannon-bentley",
+      "quote": "Birth Doula serving the Tempe and Phoenix, Arizona area"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote on a birth-services domain's Amber Thomas profile page directly states she is a birth doula serving the Tempe and Phoenix, Arizona area, matching the claim.",
+      "claim": "Amber Thomas is a birth doula serving Tempe-area families (outreach provider, no public email found)",
+      "url": "https://www.bornbir.com/amber-thomas",
+      "quote": "Birth Doula serving the Tempe and Phoenix, Arizona area"
+    }
+  ],
+  "checked_at": "2026-10-12T16:45:03-06:00"
+}

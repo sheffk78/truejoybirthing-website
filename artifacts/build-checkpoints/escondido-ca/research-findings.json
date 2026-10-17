@@ -1,0 +1,42 @@
+{
+  "slug": "escondido-ca",
+  "email_census_backfill_shell": true,
+  "email_census": [
+    {
+      "name": "Rochelle Tullius",
+      "email_or_null": null,
+      "email_source": "none-found"
+    },
+    {
+      "name": "Rosie Peterson",
+      "email_or_null": null,
+      "email_source": "none-found"
+    },
+    {
+      "name": "Katie Stoller",
+      "email_or_null": null,
+      "email_source": "none-found"
+    },
+    {
+      "name": "Lindsay Rossio",
+      "email_or_null": null,
+      "email_source": "none-found"
+    },
+    {
+      "name": "Katarina Lansing",
+      "email_or_null": null,
+      "email_source": "none-found"
+    },
+    {
+      "name": "Rosemary Aquilino",
+      "email_or_null": null,
+      "email_source": "none-found"
+    }
+  ],
+  "email_census_backfilled": {
+    "date": "2026-10-09",
+    "method": "live-fetch via tjb-batch-outreach.find_email_from_url",
+    "providers_checked": 6,
+    "owned_domain_emails": 0
+  }
+}

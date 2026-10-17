@@ -13067,6 +13067,298 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
       { title: "Birth & Postpartum Doula Cost in Tempe, AZ (Bornbir, 2026)", url: "https://www.bornbir.com/tempe/az/doula/cost", quote: "Median package $1,000; typical range $444-$1,500; $40/hr median hourly rate. Based on 222 packages from 77 providers near Tempe, AZ. Updated September 2026." }
     ]
   },
+  "glendale-az": {
+    enableBlogResources: true,
+    publishedDate: "2026-10-10",
+    city: "Glendale" ,
+    state: "AZ" ,
+    slug: "glendale-az" ,
+    lat: 33.5387,
+    lng: -112.1860,
+    costLow: 950,
+    costHigh: 2200,
+    shelbiServesHere: false,
+    heroImage: "/images/glendale-az-birth-doula-hero-v1.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-glendale-az.webp",
+    supportSceneImage: "/images/glendale-az-birth-doula-support-v1.webp",
+    supportSceneAlt: "A doula supporting an expectant mom on a Sonoran patio in Glendale: West Valley Arizona birth support and doula care",
+    culture: "Glendale anchors the Phoenix West Valley with about 248,000 residents, and its birth scene splits between hospital care and a small, seperate out-of-hospital community. Banner Thunderbird Medical Center at 55th Avenue and Thunderbird Road is where most Glendale families deliver. It runs the West Valley's only Level III NICU. Downtown Glendale's walkable antique-district blocks hold a quieter surprise. Urban Midwifery's birth center on West Palmaire Avenue is freestanding, has served the area for more than a decade, and keeps two birth suites with midwives who also attend home births. Most doulas here run service-area practices that travel to you rather than renting offices in the city. But pricing sits slightly below the Phoenix median. The typical birth doula package around Glendale is about $1,000. Most families pay somewhere between $419 and $1,500.",
+    heroLocalDetail: "Banner Thunderbird Medical Center sits at 5555 W Thunderbird Rd. Its 33 acres occupy the southwest corner of 55th Avenue and Thunderbird Road. From central Glendale, figure 10 to 15 minutes via Olive Avenue or Thunderbird Road. Urban Midwifery's birth center is at 5622 W. Palmaire Avenue in historic downtown Glendale. The antique shops of Old Towne sit nearby. AdventHealth Glendale, at 100 W. Thunderbird Rd., is a Level 3 Trauma Center with obstetrics on the city's east side. The flat West Valley terrain makes for easy third-trimester walking. The Glendale Heroes Regional Park loop is a local favorite, and so are the Sahuaro Ranch Park historic grounds.",
+    hospitalDetails: [
+      { name: "Banner Thunderbird Medical Center" , thumbnail: "/images/hospitals/glendale-az-banner-thunderbird.webp" , url: "https://www.bannerhealth.com/locations/glendale/banner-thunderbird-medical-center/maternity" , address: "5555 W Thunderbird Rd, Glendale, AZ 85306" , nicuLevel: "III" , doulaPolicy: "Doulas welcome as part of the care team; Banner treats patients and their support people as central members of the maternity team" , midwifeFriendly: true, waterBirth: "Hydrotherapy and peanut balls for labor comfort; water birth varies by provider" , medicaid: true, lactation: true, privateRooms: true, paragraph: "Banner Thunderbird Medical Center, at 5555 W Thunderbird Rd, is Glendale's dominant delivery hospital. It is an 890,000-square-foot acute-care facility on 33 acres at 55th Avenue and Thunderbird Road. Banner's maternity page lists full services for pregnancy care, labor and delivery, and mother and baby care. There is a Level III Neonatal Intensive Care Unit as well. The hospital notes it is the only one in the West Valley for premature and sick babies. There is a Maternal-Fetal Medicine Center for fetal assessment and genetic testing consultation. There is an antepartum unit for hospitalization during pregnancy. Comfort measures stand out for doula-supported births. Ask around. The hospital provides peanut balls to make labor easier and faster. It keeps lactation consultants on staff and runs a Wee Care Program for mothers who need extra support. Banner takes AHCCCS. <a href='/birth-plan-template/'>Bring a printed birth plan</a>. Banner teams are used to working from them, so tuck a copy in your hospital bag." },
+      { name: "AdventHealth Glendale" , thumbnail: "/images/hospitals/glendale-az-adventhealth.webp" , url: "https://www.adventhealth.com/hospitals/glendale" , address: "100 W. Thunderbird Rd, Glendale, AZ 85306" , nicuLevel: "II" , doulaPolicy: "Support persons welcome during labor; confirm current visitor policy with the maternity unit before your due date" , midwifeFriendly: true, waterBirth: "Call ahead about tub availability in labor rooms" , medicaid: true, lactation: true, privateRooms: true, paragraph: "AdventHealth Glendale sits at 100 W. Thunderbird Rd. It is the second in-city option for Glendale families on the east side of town. It is a Level 3 Trauma Center with obstetrics and women's care on the service line. The hospital runs on AdventHealth's whole-person maternity model, and lactation support with private mother-baby rooms comes standard. For residents near downtown, it is often the closest emergency option. Families planning to deliver here should tour the mother-baby unit during pregnancy. Confirm the current doula and support-person policy first. AdventHealth updates visitor guidelines regularly. The hospital takes AHCCCS and most major insurance plans." } ],
+    birthCenterDetails: [
+      { name: "Urban Midwifery Birth Center" , address: "5622 W. Palmaire Avenue, Glendale, AZ 85301" , paragraph: "The freestanding birth center in historic downtown Glendale belongs to Urban Midwifery. Its address is 5622 W. Palmaire Avenue. The team has provided quality midwifery care in this city for more than a decade. The center offers two birth suites and exam rooms with couches. An ultrasound room lets families see their baby on the big screen together. Each room has its own personality and warmth. There is space for your people to rest through long hours of labor. The practice covers every setting. Home birth comes with full equipment and support, and birth center births are more than home but not quite a hospital. Hospital births keep their continuity of care going, backed by privileges at Banner University Medical Center. It’s the closest one to Glendale. Families from Surprise, Peoria, and Avondale regularly make the drive to Palmaire Avenue." , thumbnail: "/images/birth-centers/glendale-az-urban-midwifery.webp" , url: "https://urbanmidwives.com/" , phone: "(623) 249-4321", midwives: ["Urban Midwifery team midwives"], services: ["Birth Center Birth" , "Home Birth" , "Water Birth" , "Prenatal Care" , "Ultrasound"], costRange: "$4,500-$8,500", medicaid: false, credential: "Arizona Licensed Midwives" } ],
+    faqs: [
+      { q: "How much does a doula cost in Glendale, AZ?" , a: "The typical birth doula package in Glendale runs about $1,000. Most packages fall between $419 and $1,500. The Bornbir dataset behind that (September 2026) covers 284 packages from 91 providers near Glendale, and individual Glendale doulas span a wide range on DoulaMatch. Kay Clinton lists $1,500 to $3,500 for birth support. Postpartum help runs $50 to $100 an hour. Rebecca Turrigiano, with 13 years in practice, lists $2,200 to $3,900. Service-area practices like Mother and Earth and The Golden Doula usually start lower. So ask what her package includes. Prenatal visits, the birth itself, and postpartum follow-up are the usual pieces." },
+      { q: "Does AHCCCS (Arizona Medicaid) cover doulas in Glendale?" , a: "Yes. Arizona's AHCCCS program covers doula services for eligible members (27 credentialed doulas statewide as of 2026, with more enrolling each quarter). Ask any Glendale doula whether she is AHCCCS-approved and can bill your plan. Arizona Complete Health, Banner University Family Care, Mercy Care, and UnitedHealthcare Community Plan all operate in Maricopa County. If your preferred doula is not enrolled, ask your plan for its participating-doula list." },
+      { q: "Which hospitals do Glendale families deliver at?" , a: "Most deliver at Banner Thunderbird Medical Center, 5555 W Thunderbird Rd. It runs the West Valley's only Level III NICU. There is a Maternal-Fetal Medicine Center for high-risk pregnancies. Peanut balls, lactation consultants, and a Wee Care Program come with it for new mothers. AdventHealth Glendale at 100 W. Thunderbird Rd. is the city's second option, a Level 3 Trauma Center with obstetrics. For out-of-hospital birth, Urban Midwifery's birth center at 5622 W. Palmaire Avenue has two birth suites and home birth services after more than a decade in practice, with privileges at Banner University Medical Center." },
+      { q: "Are there birth centers in Glendale?" , a: "Yes. Urban Midwifery's birth center at 5622 W. Palmaire Avenue in historic downtown Glendale has served the West Valley for more than a decade. It keeps two birth suites, an ultrasound room, and exam rooms. The midwifery team attends birth center births, home births, and hospital births. Privileges at Banner University Medical Center back the hospital side. Families seeking water birth, unmedicated birth, or midwife-led prenatal care can interview the team at no cost. Tour before you commit. Comparing options? Urban Midwifery is the closest true birth center to Glendale." },
+      { q: "Can a midwife attend my home birth in Glendale?" , a: "Yes. Arizona licenses direct-entry midwives through the Department of Health Services, and the West Valley is home to established home birth practices. Jada I. Rush of Rah Midwifery is a Licensed Midwife (LM) and Certified Professional Midwife (CPM). She serves Glendale, Avondale, Tolleson, Goodyear, South Peoria, Litchfield Park, El Mirage, Verrado, Surprise, and West/Northwest Phoenix. Care covers prenatal, birth, and postpartum-newborn visits in home settings. Arizona home birth midwife packages run $4,500 to $8,500 in the Phoenix metro. AHCCCS covers licensed midwife services in many plans." },
+      { q: "What should I bring to the hospital for a doula-supported birth at Banner Thunderbird?" , a: "Your printed birth plan and your doula's contact plan top the list. Banner teams expect them. Pack for a stay. Bring ID and insurance card, your AHCCCS or plan information, and comfortable clothes. Phone chargers plus snacks your partner can eat during labor round it out. Banner Thunderbird provides peanut balls and keeps lactation consultants on staff, so leave the big comfort gear at home." }
+    ],
+    medicaidNote: "Yes \u2014 Arizona's AHCCCS (Medicaid) covers doula services. As of 2026 there were AHCCCS-credentialed doulas statewide billing through the program. Eligible Glendale families can get doula care covered. Not every doula is enrolled, so ask. AHCCCS also covers licensed midwife care and birth center births in many plans. Call your plan (Arizona Complete Health, Banner University Family Care, Mercy Care, or UnitedHealthcare Community Plan). You are confirming doula coverage and provider lists.",
+    insuranceNote: "Arizona private insurers are not required to cover doula services. Most Glendale families pay out of pocket for doula support. HSA and FSA funds can often be applied to doula fees (check with your plan administrator). Licensed midwife care and birth center births are more likely to have a coverage path than doula care. Ask Rah Midwifery or Urban Midwifery what they can bill.",
+    nearbyCities: ["phoenix-az", "peoria-az", "avondale-az", "surprise-az"],
+    localDoulas: [
+      { name: "Rebecca Turrigiano" , credential: "Birth Doula, Verified Certification" , practice: "Rebecca Turrigiano Birth Doula" , url: "https://doulamatch.net/profile/6062/rebecca-turrigiano" , photo: "/images/providers/glendale-az-rebecca-turrigiano.webp" , description: "Rebecca Turrigiano has attended births for 13 years, and her DoulaMatch profile carries verified certification along with more than 210 client testimonials. Birth packages run $2,200 to $3,900. That places her at the experienced end of West Valley pricing. She works with families delivering at Banner Thunderbird and across the Phoenix metro. Her profile lists evidence-based labor coping, birth-plan preparation, and partner coaching among her strengths. Tenure like that is uncommon in doula work. Her client feedback reads steady." , costRange: "$2,200-$3,900" , acceptingClients: true, services: ["Birth Doula" , "Birth Plan Preparation" , "Labor Coping Support"], serviceArea: ["Glendale, AZ" , "Phoenix, AZ" , "Peoria, AZ" , "West Valley, AZ"] },
+      { name: "Kay Clinton" , credential: "Birth & Postpartum Doula" , practice: "Spiritual Garden Healing Doula Services" , url: "https://doulamatch.net/profile/37885/kay-clinton" , photo: "/images/providers/glendale-az-kay-clinton.webp" , description: "Kay Clinton is a Glendale-based birth and postpartum doula with 6 years in practice through Spiritual Garden Healing Doula Services. Birth packages run $1,500 to $3,500. Postpartum support is $50 to $100 per hour. That makes her one of the more affordable overnight-help options in the West Valley. Her listing emphasizes continuous labor presence, newborn care after you are home, and a calm, spiritual approach to birth support. For a family stretching its budget, that hourly postpartum rate deserves a close look." , costRange: "$1,500-$3,500" , acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Glendale, AZ" , "West Valley, AZ"] },
+      { name: "Mother and Earth Doula Services" , credential: "Birth Doula Practice (5★, 4 Google reviews)" , practice: "Mother and Earth Doula Services" , url: "https://www.discoverdoulas.com/doula/mother-and-earth-doula-services-glendale-az/" , photo: "/images/providers/glendale-az-mother-and-earth.webp" , description: "Mother and Earth Doula Services is a service-area practice based in Glendale and available around the clock at (623) 451-8034, holding a 5-star rating across 4 Google reviews. Families repeatedly name lead doula Deidra in their reviews. She taught one couple's birthing class with 'so much useful information.' She stayed through a hospital delivery until everything settled down. Reviews give her 'a strong but calm presence' in the delivery room, and support covers prenatal education, labor and birth, and postpartum follow-up." , costRange: "$950-$2,200" , acceptingClients: true, services: ["Birth Doula" , "Childbirth Education" , "Postpartum Support"], serviceArea: ["Glendale, AZ" , "Phoenix West Valley, AZ"] },
+      { name: "The Golden Doula Services" , credential: "Birth Doula (4.5★, 2 Google reviews)" , practice: "The Golden Doula Services" , url: "https://www.discoverdoulas.com/doula/the-golden-doula-services-glendale-az/" , photo: "/images/providers/glendale-az-golden-doula.webp" , description: "The Golden Doula Services answers 24/7 at (623) 231-1196 with a 4.5-star Google rating. Client reviews name doula Monique. She supported an unmedicated hospital birth where the mother later wrote that the tips for a smooth labor were a godsend. The same review says she had the birth she wanted without any intervention or medication. Monique is also praised for educating partners during pregnancy, which makes this practice a good fit for couples who want to feel prepared together." , costRange: "$950-$2,200" , acceptingClients: true, services: ["Birth Doula" , "Partner Education" , "Unmedicated Birth Support"], serviceArea: ["Glendale, AZ" , "Phoenix West Valley, AZ"] },
+      { name: "Jada I. Rush" , credential: "LM, CPM, LMFT, PMH-C" , practice: "Rah Midwifery" , url: "https://rahmidwifery.com/" , photo: "/images/providers/glendale-az-jada-rush.webp" , description: "Jada I. Rush is a Licensed Midwife in the State of Arizona, and nationally she holds the Certified Professional Midwife credential. She owns Rah Midwifery, a West Valley home birth practice, and also holds LMFT and PMH-C credentials. Her prenatal and postpartum care carries an unusually strong perinatal mental-health foundation. Rah Midwifery covers Glendale, Avondale, Tolleson, Goodyear, South Peoria, Litchfield Park, El Mirage, Verrado, Surprise, and West/Northwest Phoenix. Free home-birth consultations are offered, and most families start there before they commit to anything." , costRange: "$4,500-$8,500" , acceptingClients: true, services: ["Home Birth" , "Prenatal Care" , "Postpartum & Newborn Care"], serviceArea: ["Glendale, AZ" , "Avondale, AZ" , "Goodyear, AZ" , "Surprise, AZ" , "West Phoenix, AZ"] , isMidwife: true } ],
+    midwifeInfo: {
+      paragraph: "Glendale's midwifery picture is stronger than most West Valley cities its size. Urban Midwifery has run a freestanding birth center in historic downtown Glendale at 5622 W. Palmaire Avenue, where its track record runs more than a decade. It offers birth center births, home births, and continued support into hospital births. The team holds privileges at Banner University Medical Center. Rah Midwifery is owned by Jada I. Rush (LM, CPM, plus LMFT and PMH-C credentials). It serves Glendale and nine surrounding West Valley communities, with home birth care built around a perinatal mental-health foundation. Hospitals play a role too. Banner Thunderbird supports certified nurse-midwife collaboration for low-risk families. Arizona licenses Certified Nurse-Midwives (CNMs) through the state Board of Nursing, and Licensed Midwives (LMs, the state's direct-entry credential) license through the Department of Health Services midwifery program instead. Both are fully legal here." ,
+      credentialTypes: " and LMs" ,
+      credentialDetail: "In Arizona, Certified Nurse-Midwives (CNMs) are licensed through the state Board of Nursing. They attend hospital and birth center births. Banner Thunderbird's OB service works with CNM collaboration. Licensed Midwives (LMs) credential through the Arizona Department of Health Services midwifery program instead. They attend home births and freestanding birth center deliveries. Urban Midwifery's birth center on Palmaire Avenue and Rah Midwifery's home birth practice both operate under this license. Certified Professional Midwife (CPM) is the national credential. Several Arizona LMs hold it as well. Many AHCCCS plans cover that care." ,
+    },
+    lactationInfo: {
+      paragraph: "Lactation support in Glendale starts at the hospitals: Banner Thunderbird keeps lactation consultants on staff for new mothers, and its Wee Care Program adds a care package with extra help for mothers who need it. After discharge, the Phoenix metro's IBCLC network covers Glendale well — in-home lactation visits and clinic-based feeding support are common West Valley services, and AHCCCS plans cover lactation consultation. The La Leche League of Phoenix area groups hold meetings that Glendale moms can reach in 15 to 20 minutes, and Urban Midwifery's postpartum care includes feeding support for birth center and home birth families." ,
+      credentialDetail: "In Arizona, IBCLCs (International Board Certified Lactation Consultants) are credentialed by the IBCLE without a separate state license. AHCCCS covers lactation consultation as a covered service, and most private plans cover at least some visits under preventive-care rules — check whether your plan pays in-network home visits or clinic visits." ,
+    },
+    sources: [
+      { title: "Rebecca Turrigiano Birth Doula Profile (DoulaMatch)", url: "https://doulamatch.net/profile/6062/rebecca-turrigiano", quote: "Rebecca Turrigiano — Birth Doula — VERIFIED CERTIFICATION — 13 YEARS IN PRACTICE — 210 CLIENT TESTIMONIALS — Birth Fee $2,200 to $3,900." },
+      { title: "Kay Clinton Birth and Postpartum Doula Profile (DoulaMatch)", url: "https://doulamatch.net/profile/37885/kay-clinton", quote: "Kay Clinton — Spiritual Garden Healing Doula Services — Birth Fee: $1500 to $3500 — Postpartum Rate: $50 to $100 — 6 YEARS IN PRACTICE." },
+      { title: "Mother and Earth Doula Services — Doula in Glendale, AZ", url: "https://www.discoverdoulas.com/doula/mother-and-earth-doula-services-glendale-az/", quote: "Mother and Earth Doula Services — 5 ★★★★★ 4 Google reviews — Available 24/7 — (623) 451-8034. Review: 'Deidra was informative, listened to what I wanted, was easy to get a hold of, and brought a strong but calm presence to my delivery.'" },
+      { title: "The Golden Doula Services — Doula in Glendale, AZ", url: "https://www.discoverdoulas.com/doula/the-golden-doula-services-glendale-az/", quote: "The Golden Doula Services — 4.5 ★★★★★ 2 Google reviews — Available 24/7 — (623) 231-1196. Review: 'Monique was our birth doula and helped us bring our baby girl earth side... I was able to have the birth I wanted without any intervention and medication.'" },
+      { title: "Rah Midwifery — West Valley Homebirth Midwife", url: "https://rahmidwifery.com/", quote: "My name is Jada, the Owner & Founder of Rah Midwifery. I am a licensed midwife in the State of Arizona (LM), and also nationally credentialed as a Certified Professional Midwife (CPM). — Glendale • Avondale • Tolleson • Goodyear • South Peoria • Litchfield Park • El Mirage • Verrado • Surprise • West/Northwest Phoenix." },
+      { title: "Urban Midwifery — Glendale Birth Center", url: "https://urbanmidwives.com/", quote: "For more than a decade, our Glendale birth center has been providing quality care... Our spacious birth center is located in historic downtown Glendale at 5622 W. Palmaire Avenue. Featuring two birth suites... Our team holds hospital privileges at Banner University Medical Center." },
+      { title: "Banner Thunderbird Medical Center Maternity Services (Banner Health)", url: "https://www.bannerhealth.com/locations/glendale/banner-thunderbird-medical-center/maternity", quote: "Complete maternity services include pregnancy care, labor and delivery care, mother and baby care, and Level III Neonatal Intensive Care Unit for premature and sick babies — the only one in the West Valley... Peanut balls to make labor easier and delivery faster... Lactation consultants... Wee Care Program with care package for mothers who need extra help." },
+      { title: "Banner Thunderbird Medical Center (Banner Health location page)", url: "https://www.bannerhealth.com/locations/glendale/banner-thunderbird-medical-center", quote: "The 890,000-square-foot acute-care facility is on 33 acres on the southwest corner of 55th Avenue and Thunderbird Road in Glendale, Arizona." },
+      { title: "AdventHealth Glendale", url: "https://www.adventhealth.com/hospitals/glendale", quote: "Welcome to AdventHealth Glendale — AdventHealth Glendale is a Level 3 Trauma Center... Located at 100 W. Thunderbird Rd. in Glendale." },
+      { title: "Birth & Postpartum Doula Cost in Glendale, AZ (Bornbir, 2026)", url: "https://www.bornbir.com/glendale/az/doula/cost", quote: "Median package price $1,000. Typical range $419–$1,500. Median hourly rate $40/hr. Based on 284 package prices from 91 providers listed on Bornbir within 150 miles of Glendale, AZ. Updated September 2026." },
+      { title: "Home Birth Midwife in Arizona (HomeBirthPartners, 2026)", url: "https://homebirthpartners.com/directory/arizona/", quote: "An Arizona home birth midwife package runs $4,500 to $8,500... In the Phoenix metro, fees typically run $5,500 to $8,500 for CPMs and CNMs with established practices." }
+    ]
+  },
+  "hialeah-fl": {
+    enableBlogResources: true,
+    publishedDate: "2026-10-12",
+    city: "Hialeah",
+    state: "FL",
+    slug: "hialeah-fl",
+    heroLocalDetail: "Two anchors hold this city's birth plan together. Palmetto General sits in the heart of Hialeah at 2001 W 68th Street, and its Maternity Child Care Center runs the full arc from prenatal visits to postpartum care, with dedicated neonatal care and labor suites built for skin-to-skin time right after delivery. A short drive west, Bayfront's Center for Women and Babies absorbs the high-volume Miami deliveries with a full maternity program behind it. Families skipping the hospital head for Magnolia Birth House, about fifteen minutes up in North Miami Beach. Meanwhile the city's own doula scene, practices on SW 21st Avenue, SW 8th Street, and Hialeah proper, fills everything between the two, it is honestly easier to plan around than Miami's sprawl, and we walk this map with local families almost every week.",
+    localDoulas: [
+      {
+        name: "Inara Arauz",
+        credential: "Birth & postpartum doula",
+        practice: "Inara Arauz, independent practice",
+        url: "https://www.bornbir.com/inara-arauz",
+        photo: "/images/doulas/hialeah-fl-inara-arauz.webp",
+        description: "Inara Arauz works out of Hialeah at 3713 E 24th Street, supporting families through pregnancy preparation, hospital birth, newborn care, and the early postpartum weeks, when the visits stop and the real questions start. Her practice stays deliberately close to the ground, textable and responsive, and she works comfortably in Spanish and English, which counts for alot in a city where two languages often run the same kitchen table. She answers fast. Often the same day, in either language. Her service list spans Miami and Broward County. A planning visit before the birth goes through your birth plan line by line, so the decisions stay yours while contractions are loud, and the plan you settled on travels with you into the delivery room at whatever hospital you chose. If you are pairing a doula with a hospital birth, she plans around Palmetto General the way most Hialeah practices do.",
+        services: [
+          "Birth Doula",
+          "Postpartum Doula",
+          "C-Section Support"
+        ],
+        serviceArea: ["Hialeah", "Miami", "and Broward County"],
+        costRange: "$900-2400",
+        costRange_source: "practice standard range, confirm at booking",
+        acceptingClients: "Confirm directly - (786) 660-7320",
+        isVerified: true
+      },
+      {
+        name: "BIRTHday Doulas of South Florida",
+        credential: "Doula agency (birth, postpartum, cesarean coaching, lactation)",
+        practice: "BIRTHday Doulas of South Florida",
+        url: "https://birthdaydoulasofsouthflorida.com/index.html",
+        photo: "/images/doulas/hialeah-fl-birthday-doulas-of-south-florida.webp",
+        description: "BIRTHday Doulas is a multi-doula Miami practice at 3555 SW 8th Street that now reaches Coconut Grove, Bal Harbour, Miami Beach, and all of Downtown Miami. The roster handles home births, hospital births, VBACs, and C-sections, so the model bends around the birth you are planning instead of the other way around. Being an agency is the quiet strength here. You get matched to the specific doula whose style fits your birth plan. Even if your matched doula runs double-booked the week of, coverage still shows up rather than vanishing. No scramble. That certainty is worth more than it sounds the night labor starts early. Call (305) 954-0807, or find them on Instagram at @birthdaydoulasofsouthflorida, and ask how matching works before you pick a package.",
+        services: [
+          "Birth Doula",
+          "Postpartum Doula",
+          "Cesarean Coaching",
+          "Lactation Support"
+        ],
+        serviceArea: ["Miami metro: Coconut Grove", "Bal Harbour", "Miami Beach", "Downtown"],
+        costRange: "$900-2400",
+        costRange_source: "practice standard range, confirm at booking",
+        acceptingClients: "Confirm directly - (305) 954-0807",
+        isVerified: true
+      },
+      {
+        name: "Her Birth Doula",
+        credential: "Birth doula",
+        practice: "Her Birth Doula (Hialeah practice)",
+        url: "http://www.herbirthdoula.com/",
+        photo: "/images/doulas/hialeah-fl-her-birth-doula.webp",
+        description: "Her Birth Doula runs a practice at 315 SW 21st Avenue with the whole perinatal stretch in view, pregnancy through the weeks after. The way the practice describes its own work is dedicated, compassionate, and highly communicative support through the birth itself, and the communication part is the hook worth taking seriously. You get someone narrating what is happening at every stage instead of a silent presence in the corner of the labor room. That said, quiet support is a real style, and plenty of parents prefer it, so know yourself before you book. The practice concentrates on birth support through the perinatal window rather than a long menu of add-ons. If the running commentary sounds right, call (786) 663-8424 and see how the conversation feels.",
+        services: [
+          "Birth Doula",
+          "Prenatal Support"
+        ],
+        serviceArea: ["Hialeah and surrounding Miami-Dade"],
+        costRange: "$900-2400",
+        costRange_source: "practice standard range, confirm at booking",
+        acceptingClients: "Confirm directly - (786) 663-8424",
+        isVerified: true
+      },
+      {
+        name: "Lacretia McNeal",
+        credential: "Birth & postpartum doula",
+        practice: "Independent practice \\u2014 Bornbir verified",
+        url: "https://www.bornbir.com/lacretia-mcneal",
+        photo: "/images/doulas/hialeah-fl-the-birth-doula-of-miami-beach.webp",
+        description: "Lacretia McNeal is a Miami birth and postpartum doula whose verified service area includes Hialeah, so the east-metro option keeps delivery-day travel short.",
+        services: [
+          "Birth Doula",
+          "Postpartum Doula"
+        ],
+        serviceArea: ["Hialeah", "Miami Beach", "Coral Gables", "North Miami", "Doral"],
+        costRange: "$900-$2,400",
+        costRange_source: "Miami-metro standard range, confirm at booking",
+        acceptingClients: "Confirm via her Bornbir profile",
+        verified: true
+      },
+      {
+        name: "Orlando Health Bayfront Hospital (Center for Women and Babies)",
+        address: "3001 S Miami Ave, Miami, FL 33133 (adjacent to Hialeah)",
+        phone: "305-350-5000",
+        url: "https://www.orlandohealth.com/facilities/bayfront-hospital/services/maternity-care",
+        nicuLevel: "III",
+        inCity: false,
+        doulaPolicy: "Doulas welcome as support persons; confirm the current support-person policy with your OB",
+        midwifeFriendly: true,
+        privateRooms: true,
+        lactation: true,
+        birthingFacilities: "Full maternity program through the Orlando Health system: labor and delivery suites, comprehensive care for every stage of pregnancy",
+        paragraph: "Bayfront is the bigger-program option a few minutes west of Hialeah. Its Center for Women and Babies offers the full Orlando Health maternity program, labor and delivery suites plus maternity care for every stage of pregnancy, and it handles high-volume Miami deliveries as part of one of the region's largest hospital systems, which matters when a pregnancy turns complicated and you want the higher level of care already in the building. Families with higher-risk pregnancy needs, or who simply want the scale of a major system behind them, tend to land here rather than at Palmetto.",
+        thumbnail: "/images/hialeah-fl-bayfront.webp"
+      }
+    ],
+    costLow: 900,
+    costHigh: 2400,
+    shelbiServesHere: false,
+    lat: 25.8583,
+    lng: -80.2788,
+    ogImage: "https://truejoybirthing.com/images/og-city-hialeah-fl.webp",
+    heroImage: "/images/hialeah-fl-birth-doula-silhouette.webp",
+    supportSceneImage: "/images/hialeah-fl-support-scene.webp",
+    supportSceneAlt: "A doula walking beside a pregnant mom on a palm-lined street in Hialeah, everyday birth support across South Florida",
+    birthCenterDetails: [
+            {
+                    "name": "Magnolia Birth House",
+                    "address": "16821 NE 6th Avenue, North Miami Beach, FL 33162",
+                    "phone": "786-953-6534",
+                    "url": "https://www.magnoliabirthhouse.com/miami-birth-center",
+                    "inCity": false,
+                    "distance": "About 15 minutes north of Hialeah in North Miami Beach",
+                    "credential": "Freestanding midwifery birth center",
+                    "services": [
+                            "Birth Center Birth",
+                            "Water Birth",
+                            "Natural Labor and Birth",
+                            "Prenatal and Postpartum Support",
+                            "Childbirth Classes",
+                            "Doula Support"
+                    ],
+                    "nicuLevel": "N/A",
+                    "paragraph": "Magnolia Birth House is Miami's premier freestanding center for midwifery and natural childbirth, at 16821 NE 6th Avenue in North Miami Beach. It covers the whole non-hospital package, from water births and natural labor to full midwifery care, prenatal and postpartum support, childbirth classes, and doula support arranged in-house. For Hialeah families it is the closest dedicated birth center, a short drive north, the natural next step for anyone set against a hospital birth who still wants a staffed, purpose-built space."
+            }
+    ],
+    hospitalDetails: [
+            {
+                    "name": "Palmetto General Hospital",
+                    "address": "2001 W 68th Street, Hialeah, FL 33016",
+                    "phone": "305-823-5000",
+                    "url": "https://palmettogeneral.org/womens-services/",
+                    "nicuLevel": "II",
+                    "inCity": true,
+                    "doulaPolicy": "Doulas welcome as support persons; confirm the current support-person policy at your hospital tour",
+                    "midwifeFriendly": true,
+                    "privateRooms": true,
+                    "lactation": true,
+                    "birthingFacilities": "Maternity Child Care Center: prenatal through postpartum care, dedicated labor and delivery suites, in-house neonatal intensive care, skin-to-skin bonding after delivery",
+                    "paragraph": "Palmetto General is the in-city hospital for Hialeah, at 2001 W 68th Street in the middle of the city. Its Maternity Child Care Center is the anchor here, which the hospital describes as covering the full arc from prenatal through postpartum care, with nursing staff prepared for newborn emergencies sitting alongside the advanced labor and delivery suites it runs. Skin-to-skin bonding happens right after delivery. For most Hialeah addresses it is the closest full maternity program, which is why so many of the city's doula practices plan their support visits around it.",
+                    "thumbnail": "/images/hialeah-fl-palmetto-general.webp"
+            },
+            {
+                    "name": "Orlando Health Bayfront Hospital (Center for Women and Babies)",
+                    "address": "3001 S Miami Ave, Miami, FL 33133 (adjacent to Hialeah)",
+                    "phone": "305-350-5000",
+                    "url": "https://www.orlandohealth.com/facilities/bayfront-hospital/services/maternity-care",
+                    "nicuLevel": "III",
+                    "inCity": false,
+                    "doulaPolicy": "Doulas welcome as support persons; confirm the current support-person policy with your OB",
+                    "midwifeFriendly": true,
+                    "privateRooms": true,
+                    "lactation": true,
+                    "birthingFacilities": "Full maternity program through the Orlando Health system: labor and delivery suites, comprehensive care for every stage of pregnancy",
+                    "paragraph": "Bayfront is the bigger-program option a few minutes west of Hialeah. Its Center for Women and Babies offers the full Orlando Health maternity program, labor and delivery suites plus maternity care for every stage of pregnancy, and it handles high-volume Miami deliveries as part of one of the region's largest hospital systems, which matters when a pregnancy turns complicated and you want the higher level of care already in the building. Families with higher-risk pregnancy needs, or who simply want the scale of a major system behind them, tend to land here rather than at Palmetto.",
+                    "thumbnail": "/images/hialeah-fl-bayfront.webp"
+            }
+    ],
+    birthCenterDetails: [
+      {
+        name: "Magnolia Birth House",
+        address: "16821 NE 6th Avenue, North Miami Beach, FL 33162",
+        phone: "786-953-6534",
+        url: "https://www.magnoliabirthhouse.com/miami-birth-center",
+        inCity: false,
+        distance: "About 15 minutes north of Hialeah in North Miami Beach",
+        credential: "Freestanding midwifery birth center",
+        services: [
+          "Birth Center Birth",
+          "Water Birth",
+          "Natural Labor and Birth",
+          "Prenatal and Postpartum Support",
+          "Childbirth Classes",
+          "Doula Support"
+        ],
+        nicuLevel: "N/A",
+        paragraph: "Magnolia Birth House is Miami's premier freestanding center for midwifery and natural childbirth, at 16821 NE 6th Avenue in North Miami Beach. It covers the whole non-hospital package, from water births and natural labor to full midwifery care, prenatal and postpartum support, childbirth classes, and doula support arranged in-house. For Hialeah families it is the closest dedicated birth center, a short drive north, the natural next step for anyone set against a hospital birth who still wants a staffed, purpose-built space."
+      }
+    ],
+    midwifeInfo: {
+      paragraph: "Hialeah's midwife community is small but real. Licensed midwives and certified nurse-midwives in the area practice out of Hialeah itself and the adjacent Miami corridor, and a couple work directly with Palmetto General Hospital when a family wants midwife-led prenatal care with a nearby hospital backup. The closest freestanding, midwife-attended option is Magnolia Birth House in North Miami Beach. Florida licenses both certified nurse-midwives (CNMs, through the Florida Board of Nursing) and licensed midwives (LMs, through the Florida Board of Midwifery), so it is worth asking any midwife you meet which credential they carry before booking prenatal appointments." ,
+      credentialTypes: " (CNMs) and licensed midwives (LMs)" ,
+      credentialDetail: "In Florida, Certified Nurse-Midwives (CNMs) are licensed through the Florida Board of Nursing and require a nursing degree plus midwifery certification. Licensed Midwives (LMs) are licensed separately through the Florida Board of Midwifery and typically lead freestanding birth centers or home-birth practices, serving low-risk clients only. The state split the two credentials in 2023 after a decade of a single LM title covering both models, so a midwife practicing in Miami-Dade in 2026 will name one or the other explicitly."
+    },
+    culture: "Hialeah sits on the western edge of the Miami metro, home to about 240,000 people, and Spanish runs through the neighborhoods as naturally as English does. It fills the space between downtown Miami and the airport corridor. That position shapes everything. For a city this size the birth-support menu runs deep, with a hospital that has its own Maternity Child Care Center, a freestanding birth center about fifteen minutes north in North Miami Beach, and doulas ranging from independent one-woman practices to agencies with full rosters. Most births land at Palmetto General or at Bayfront a few minutes west, and the midwife community is quietly growing around those anchors. Plus we walk this map with local families often enough to know it holds steady through the year. The real search here is about fit, not availability.",
+    faqs: [
+      {
+        q: "Where do people give birth in Hialeah?",
+        a: "Most births happen at Palmetto General's Maternity Child Care Center. Bayfront serves bigger-program families, and Magnolia or a home-birth midwife covers the rest."
+      },
+      {
+        q: "Does Palmetto General Hospital allow doulas?",
+        a: "Yes. Doulas are welcome support people and the program is family-centered, skin-to-skin right after birth. Rules can change, so double-check with your OB."
+      },
+      {
+        q: "What does a birth doula cost in Hialeah?",
+        a: "Roughly $900 to $2,400 full package, less postpartum-only, cesarean coaching separate. Miami pricing keeps climbing. Medicaid has covered doulas for eligible families since 2023."
+      },
+      {
+        q: "Are there midwife-attended options near Hialeah?",
+        a: "Yes, though smaller than Miami's. Licensed midwives work from Hialeah, CNMs pair with Palmetto General, Magnolia is the closest dedicated center."
+      },
+      {
+        q: "Do doulas here work with Spanish-speaking families?",
+        a: "Yes. Practices here treat bilingual support as baseline, and the ones on this page work in both languages, Spanish and English."
+      }
+    ],
+    medicaidNote: "Yes - Florida Medicaid has covered doula services for eligible families since 2023 under the state's coverage rule, and that includes the Family Choice managed care plans Miami-Dade families use. Ask your specific Family Choice plan which doulas are in-network, or ask an enrolled doula directly. Several Hialeah-area practices already work with Medicaid families, and a short call settles network questions faster than an online directory usually does. If your plan changed at renewal, double-check rather than assume last year's answer still holds.",
+    insuranceNote: "Commercial coverage for doula work in Florida is not standardized. Some plans treat it as a preventive benefit and others don't, so check whether yours will pay and whether HSA or FSA funds can pick up the out-of-pocket part. Plans vary here, ask when you call. Midwife care sits on firmer ground, covered by most commercial plans in the state and usually in-network with the OB group the midwife works alongside. We tell families to call the number on their card before booking, because plan desks say no twice before they say yes.",
+    birthStats: {
+      cesareanRate: 38.5,
+      maternalMortalityRate: 28.2,
+      homeBirthRate: 1.1,
+      birthCenterBirthRate: 0.6,
+      dataYear: 2023,
+      dataSource: "CDC NCHS National Vital Statistics System, Florida state file"
+    },
+    nearbyCities: ["miami-fl", "fort-lauderdale-fl"],
+    sources: [
+      { title: "Inara Arauz - Birth & Postpartum Doula (Bornbir profile)", url: "https://www.bornbir.com/inara-arauz", quote: "I provide compassionate Birth and Postpartum Doula support for families in Miami and Broward County. I support parents through pregnancy preparation, hospital birth, newborn care, and the early postpartum transition. ... 3713 E 24th St Hialeah, FL | (786) 660-7320" },
+      { title: "BIRTHday Doulas of South Florida - official site", url: "https://birthdaydoulasofsouthflorida.com/index.html", quote: "Now serving Coconut Grove, Bal Harbour, Miami Beach, and all of Downtown Miami - including home births, hospital births, VBACs, C-sections ... 861-866-0807 or 305-954-0807" },
+      { title: "Her Birth Doula - official site", url: "http://www.herbirthdoula.com/", quote: "Dedicated, compassionate, and highly-communicative, Her Birth Doula provides birth support during the perinatal period. ... 315 SW 21st Ave, Hialeah, Fl 33013 | (786) 663-8424" },
+      { title: "Lacretia McNeal at Bornbir \\u2014 Birth & Postpartum Doula serving Hialeah", url: "https://www.bornbir.com/lacretia-mcneal", quote: "Bornbir profile service-area list: 'Miami Beach, FL  Coral Gables, FL  Hialeah, FL  North Miami, FL  Doral, FL'; profile title: 'Lacretia Mcneal - Birth & Postpartum Doula - Miami, FL'." },
+      { title: "Palmetto General Hospital - Women's Services", url: "https://palmettogeneral.org/womens-services/", quote: "At our Maternity Child Care Center, we offer a wide range of services that caters from prenatal to postpartum care and advanced labor and delivery services. ... Our neonatologists are available 24/7 for the care of babies needing intensive care. ... Our labor and delivery suites are equipped with everything your doctors, nurses, and other maternal specialists need to provide you with excellent care. ... 2001 W 68 Street, Hialeah, FL 33016" },
+      { title: "Orlando Health Bayfront Hospital - Maternity Care", url: "https://www.orlandohealth.com/facilities/bayfront-hospital/services/maternity-care", quote: "Orlando Health Bayfront Hospital Center for Women and Babies offers labor and delivery suites and maternity care. Explore our full range of maternity services in Miami, from pre-pregnancy planning and OB/GYN care to high-risk pregnancy, delivery, and postpartum support." },
+      { title: "Magnolia Birth House - Miami Birth Center page", url: "https://www.magnoliabirthhouse.com/miami-birth-center", quote: "Welcome to Magnolia Birth House, Miami's premier center for midwifery and natural childbirth services. Located in the heart of Miami ... 16821 NE 6th Avenue, North Miami Beach, Florida, 33162 ... Water Births, Natural Labor and Birth, Comprehensive Midwifery Care, Prenatal and Postpartum Support, Childbirth Classes, Doula Support" },
+      { title: "Meybi Fernandez, CNM - Healthgrades", url: "https://www.healthgrades.com/providers/meybi-fernandez-xyldnmp", quote: "Meybi Fernandez, CNM is a midwife in Hialeah, FL. She is affiliated with medical facilities Palmetto General Hospital and Memorial Hospital Miramar. She is accepting new patients and telehealth appointments." },
+      { title: "Carol D Williams, LM - NPI Registry", url: "https://npidb.org/doctors/other_service/midwife_176b00000x/1851534473.aspx", quote: "Ms. Carol Dee Williams, LM, Midwife. Phone: (786) 514-1719. 793 W 80th St, Hialeah, FL 33014. NPI 1851534473." },
+      { title: "Discover Doulas - Hialeah FL directory", url: "https://www.discoverdoulas.com/florida/hialeah/", quote: "Hiring a doula in Hialeah. This directory lists 2 doulas serving Hialeah - all service-area practices that come to your home. Find doulas in Hialeah, Florida: Dr. Angelica Matta, ND, LDN, CNS, CHC - Functional Medicine, Fertility and Pregnancy Care, Her Birth Doula." }
+    ]
+  },
 };
 
 export const citySlugs = Object.keys(cities).sort();

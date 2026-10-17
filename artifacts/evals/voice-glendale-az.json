@@ -1,0 +1,24 @@
+{
+  "eval": "eval-voice",
+  "slug": "glendale-az",
+  "model": "atlas:latest",
+  "fields_checked": 13,
+  "model_calls_ok": 2,
+  "model_calls_err": 0,
+  "verdict": "approved",
+  "findings": [
+    {
+      "field": "faqs[5].answer",
+      "severity": "minor",
+      "quote": "your doula's contact plan",
+      "reason": "Gender-reference violation: 'your doula' should not be gender-neutral when referring to the person providing doula support in the context of birth. The standard requires female-gendered terms ('her contact info') when referring to the doula."
+    },
+    {
+      "field": "faqs[5].answer",
+      "severity": "minor",
+      "quote": "your doula-supported bi",
+      "reason": "Typo/autocorrect error ('bi' instead of 'birth'), not a voice violation, but should be corrected for clarity."
+    }
+  ],
+  "checked_at": "2026-10-17T12:17:00-06:00"
+}

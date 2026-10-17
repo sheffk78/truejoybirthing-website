@@ -1,0 +1,14 @@
+{
+  "city": "Pembroke Pines",
+  "state": "FL",
+  "slug": "pembroke-pines-fl",
+  "costLow": 900,
+  "costHigh": 2400,
+  "lat": 26.0057,
+  "lng": -80.2923,
+  "publishedDate": "2026-10-14",
+  "enableBlogResources": true,
+  "nearbyCities": ["fort-lauderdale-fl", "hollywood-fl", "miramar-fl"],
+  "titleTag": "Pembroke Pines FL Doula Costs, Hospitals & Medicaid Guide",
+  "metaDescription": "Pembroke Pines birth doula costs run $900 to $2,400, Memorial Hospital West delivers in the city, and Florida Medicaid can cover doula care."
+}

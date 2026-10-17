@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Nurture Thy Nature LLC",
+    "credential": "Birth doula, holistic medicine practitioner",
+    "practice": "Nurture Thy Nature LLC",
+    "url": "https://www.discoverdoulas.com/doula/nurture-thy-nature-llc-pembroke-pines-fl/",
+    "photo": "/images/doulas/pembroke-pines-fl-nurture-thy-nature.webp",
+    "description": "Nurture Thy Nature LLC is a Pembroke Pines practice listed in local directories as both a birth doula service and a holistic medicine practitioner, and families have kept it at a full five stars across more than thirty Google reviews. That kind of record matters when you are choosing who sits beside you through the most personal days of a pregnancy. The care here looks at your whole experience rather than the delivery day alone, with hands-on labor comfort at the bedside, plus the preparation conversations that help you walk into Memorial Hospital West feeling steady instead of rushed. Prenatal visits come before the birth, support carries into recovery, and the practice is used to working alongside Memorial care teams. Reach out through the practice's contact email to ask about availability, packages, and how the prenatal visits are structured.",
+    "services": [
+      "Birth Doula",
+      "Holistic Support",
+      "Prenatal Visits"
+    ],
+    "serviceArea": [
+      "Pembroke Pines, FL",
+      "Broward County, FL"
+    ],
+    "costRange": "$900–$2,400",
+    "costRange_source": "market-estimate",
+    "acceptingClients": true,
+    "isVerified": false,
+    "id": "pembroke-pines-fl-nurture-thy-nature-001",
+    "enrichedAt": "2026-10-16"
+  },
+  {
+    "name": "Natalie Grillo",
+    "credential": "Birth & postpartum doula, lactation consultant",
+    "practice": "Natalie Grillo Doula Services",
+    "url": "https://www.bornbir.com/natalie-grillo-380",
+    "photo": "/images/doulas/pembroke-pines-fl-natalie-grillo.webp",
+    "description": "Natalie Grillo works out of Pembroke Pines and covers the whole arc, from personalized birth support through postpartum visits and professional lactation consultations, which makes her a one-call option for families who want the same person beside them before and after the baby arrives. She works bilingually in English and Spanish, so Spanish-speaking families in west Broward can plan their entire birth experience in either language, from the first prenatal conversation through the last postpartum check. Her profile is listed on the BornBir doula directory with direct inquiry messaging, so you can reach her without hunting down a separate practice website. Ask about availability, how she shapes visits, and what each stage includes. Many families start with the lactation question, and it is a fair one, because having the same informed person for birth support and feeding help takes real weight off the weeks after the baby arrives.",
+    "services": [
+      "Birth Doula",
+      "Postpartum Doula",
+      "Lactation Consultation"
+    ],
+    "serviceArea": [
+      "Pembroke Pines, FL",
+      "Broward County, FL"
+    ],
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "isLactation": true,
+    "costRange": "$900–$2,400",
+    "costRange_source": "market-estimate",
+    "acceptingClients": true,
+    "isVerified": false,
+    "id": "pembroke-pines-fl-natalie-grillo-001",
+    "enrichedAt": "2026-10-16"
+  },
+  {
+    "name": "Génesis Mundo",
+    "credential": "Birth doula",
+    "practice": "Génesis Mundo Birth Doula",
+    "url": "https://www.bornbir.com/genesis-mundo",
+    "photo": "/images/doulas/pembroke-pines-fl-genesis-mundo.webp",
+    "description": "Génesis Mundo is an experienced birth doula serving families right here in Pembroke Pines and nearby Broward communities, with a documented history of more than twenty supported births at Memorial Hospital Miramar and Memorial Hospital West. That kind of hospital familiarity shows up in small ways that matter: at check-in, in triage, and inside the rooms, because she already knows how each labor and delivery floor runs and where families tend to need a calm voice. If you expect to deliver at either of those Memorial campuses, ask how she works with the hospital's own routines rather than around them. Inquire about her birth packages and current availability through her BornBir profile, and use the inquiry messaging to ask whatever is on your mind well before your third trimester.",
+    "services": [
+      "Birth Doula",
+      "Hospital Birth Support"
+    ],
+    "serviceArea": [
+      "Pembroke Pines, FL",
+      "Miami-Dade County, FL",
+      "Broward County, FL"
+    ],
+    "costRange": "$900–$2,400",
+    "costRange_source": "market-estimate",
+    "acceptingClients": true,
+    "isVerified": false,
+    "id": "pembroke-pines-fl-genesis-mundo-001",
+    "enrichedAt": "2026-10-16"
+  },
+  {
+    "name": "MotheRetreat",
+    "credential": "Birth doula practice (birth, postpartum, overnight care)",
+    "practice": "MotheRetreat",
+    "url": "https://motheretreat.com/birth-doula-pembroke-pines/",
+    "initials": "MR",
+    "description": "MotheRetreat is a regional doula practice that maintains a dedicated Pembroke Pines service page, which tells you how seriously it treats this city. Whether you plan to deliver at Memorial Hospital West or Memorial Hospital Miramar, your birth doula provides continuous one-on-one labor support from active labor through delivery and the first hours of recovery, so the person you got to know in prenatal visits is the person beside you when it counts. The practice also covers postpartum doula work, including overnight newborn care for families who need real sleep in the first weeks, which anyone who has worked a night with a newborn knows is not a small thing. Inquire through the practice website's contact form and ask how they match a family with a specific doula.",
+    "services": [
+      "Birth Doula",
+      "Postpartum Doula",
+      "Overnight Newborn Care"
+    ],
+    "serviceArea": [
+      "Pembroke Pines, FL",
+      "Miramar, FL",
+      "Broward County, FL"
+    ],
+    "costRange": "$900–$2,400",
+    "costRange_source": "market-estimate",
+    "acceptingClients": true,
+    "isVerified": false,
+    "id": "pembroke-pines-fl-motheretreat-001",
+    "enrichedAt": "2026-10-16"
+  }
+]

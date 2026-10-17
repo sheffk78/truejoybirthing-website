@@ -1,0 +1,51 @@
+{
+ "hospitalDetails": [
+  {
+   "name": "Memorial Hospital West Family Birthplace",
+   "address": "703 North Flamingo Road, Pembroke Pines, FL 33028",
+   "phone": "954-844-7110",
+   "url": "https://www.mhs.net/services/maternity-care/west",
+   "nicuLevel": "III",
+   "inCity": true,
+   "doulaPolicy": "Doulas welcome as support persons; confirm the current support-person policy with your OB or at your hospital tour",
+   "midwifeFriendly": true,
+   "privateRooms": true,
+   "lactation": true,
+   "birthingFacilities": "LDR suites, dedicated c-section rooms, antepartum suites, Level III NICU on site",
+   "paragraph": "Memorial Hospital West is the in-city hospital for Pembroke Pines, at 703 North Flamingo Road just off the Pines Boulevard corridor. Its Family Birthplace unit is one of the busiest maternity programs in South Florida and the anchor of the Memorial healthcare system's maternity network, which the system says delivers over half of Broward County's babies. The unit runs the complete pregnancy-to-newborn floor: labor and delivery recovery suites, dedicated c-section rooms, antepartum suites for pregnancies that need extra monitoring, and a Level III neonatal intensive care unit on site, which is the level that keeps most fragile newborns in the same building as their parents instead of a transfer. The hospital describes its team as committed to skilled, compassionate family care, and it maintains lactation support after delivery. For most Pembroke Pines families this is both the closest and the most comprehensively equipped delivery door, which is an unusual combination in South Florida.",
+   "thumbnail": "/images/hospitals/pembroke-pines-fl-memorial-west.webp"
+  },
+  {
+   "name": "Memorial Regional Hospital Family Birthplace",
+   "address": "3501 Johnson Street, Hollywood, FL 33021",
+   "phone": "954-265-4484",
+   "url": "https://www.mhs.net/services/maternity-care/regional",
+   "nicuLevel": "IV",
+   "inCity": false,
+   "midwifeFriendly": true,
+   "privateRooms": true,
+   "lactation": true,
+   "birthingFacilities": "Private LDR suites, Level IV NICU through Joe DiMaggio Children's Hospital",
+   "paragraph": "Memorial Regional Hospital is the regional step-up hospital in the Memorial system, about ten minutes northeast of Pembroke Pines in Hollywood at 3501 Johnson Street. The Dr. Henry D. Perry Family Birthplace there provides private labor and delivery recovery suites and draws high-risk maternity referrals from across south Broward. Its defining feature for birth planning is the Level IV neonatal intensive care unit operated with Joe DiMaggio Children's Hospital next door, the highest NICU designation available in Florida. Families with known complications, twins, or a diagnosis that anticipates newborn intensive care are usually routed here by their OB, and the birth floor is built for that population. If your pregnancy is low-risk, this is likely more hospital than you need, but it is the safety net standing behind the whole south Broward maternity network."
+  }
+ ],
+ "birthCenterDetails": [
+  {
+   "name": "Natural BirthWorks",
+   "address": "513 Melaleuca Drive, Margate, FL 33063",
+   "phone": "954-925-4499",
+   "url": "https://www.naturalbirthworks.com/",
+   "inCity": false,
+   "distance": "About 30 minutes north of Pembroke Pines in Margate",
+   "credential": "Freestanding midwifery birth center; midwifery team with over a decade in the field",
+   "services": [
+    "Birth Center Birth",
+    "Home Birth",
+    "Prenatal Care"
+   ],
+   "nicuLevel": "N/A",
+   "paragraph": "Natural BirthWorks is the freestanding midwifery birth center option for the Broward side of the metro, located at 513 Melaleuca Drive in Margate, roughly half an hour north of Pembroke Pines. The practice offers midwifery care for families planning a birth center birth, a home birth, or those who simply want midwife-led prenatal care while still delivering in a hospital, which makes it a flexible entry point whichever way you land. The center's midwives have been in the field for over a decade and run a full prenatal schedule out of the Margate suite. Birth center births happen in a home-like suite, and the practice maintains clear hospital transfer relationships for the small share of births that need to move. Pembroke Pines families choosing this route are choosing a longer drive for a fundamentally different care model: midwife-led, low-intervention, and appointment-paced.",
+   "thumbnail": "/images/hospitals/pembroke-pines-fl-natural-birthworks.webp"
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+  "city": "Pembroke Pines, FL",
+  "slug": "pembroke-pines-fl",
+  "status": "research_complete",
+  "population_tier": "mid-size (~165K, Broward County)",
+  "doulas": [
+    {
+      "name": "Nurture Thy Nature LLC",
+      "url": "https://www.discoverdoulas.com/doula/nurture-thy-nature-llc-pembroke-pines-fl/",
+      "quote": "Nurture Thy Nature LLC — Doula in Pembroke Pines, FL ... 5 ★★★★★ 36 Google reviews · Holistic medicine practitioner",
+      "cred": "Birth doula",
+      "note": "Holistic birth doula serving Pembroke Pines; 30+ Google reviews."
+    },
+    {
+      "name": "Natalie Grillo",
+      "url": "https://www.bornbir.com/natalie-grillo-380",
+      "quote": "Natalie Grillo - Birth & Postpartum Doula - Pembroke Pines, FL ... I offer personalized birth and postpartum doula services, as well as professional lactation consultations",
+      "cred": "Birth & postpartum doula, lactation consultant",
+      "note": "Bilingual (EN/ES) birth + postpartum doula in Pembroke Pines."
+    },
+    {
+      "name": "Génesis Mundo",
+      "url": "https://www.bornbir.com/genesis-mundo",
+      "quote": "Génesis Mundo - Birth Doula - Pembroke Pines, FL ... I've supported 20+ births at Memorial Hospital Miramar, Memorial Hospital West, and Jackson Memorial",
+      "cred": "Birth doula",
+      "note": "Experienced birth doula serving Miami-Dade and Broward; 20+ births at local MHS hospitals."
+    },
+    {
+      "name": "MotheRetreat",
+      "url": "https://motheretreat.com/birth-doula-pembroke-pines/",
+      "quote": "MotheRetreat ... We serve Pembroke Pines and nearby communities ... Whether you plan to deliver at Memorial Hospital West or Memorial Hospital Miramar, your birth doula gives continuous one-on-one labor support",
+      "cred": "Birth doula (birth, postpartum, overnight care)",
+      "note": "Regional doula practice with a dedicated Pembroke Pines service page."
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Memorial Hospital West Family Birthplace",
+      "url": "https://www.mhs.net/services/maternity-care/west",
+      "address": "703 North Flamingo Road, Pembroke Pines, FL 33028",
+      "quote": "Memorial Hospital West 703 North Flamingo Road Pembroke Pines, Florida 33028 ... The Family Birthplace at Memorial Hospital West is committed to providing our families with skilled, compassionate care",
+      "inCity": true,
+      "phone": "954-844-7110",
+      "note": "IN-CITY hospital. LDR suites, c-section rooms, antepartum suites, Level III NICU. Delivers 50%+ of Broward County births (MHS)."
+    },
+    {
+      "name": "Memorial Regional Hospital Family Birthplace",
+      "url": "https://www.mhs.net/services/maternity-care/regional",
+      "address": "3501 Johnson Street, Hollywood, FL 33021",
+      "quote": "The Dr. Henry D. Perry Family Birthplace at Memorial Regional Hospital is pleased to provide our families with a comfortable labor and delivery experience ... Our hospital has: Private labor/delivery/recovery (LDR) suites ... Level IV NICU rooms",
+      "inCity": false,
+      "phone": "954-265-4484",
+      "note": "Nearest full-service regional hospital (~10 min). Level IV NICU at Joe DiMaggio Children's — highest in state."
+    }
+  ],
+  "birthCenters": [
+    {
+      "name": "Natural BirthWorks",
+      "url": "https://www.naturalbirthworks.com/",
+      "address": "513 Melaleuca Drive, Margate, FL 33063",
+      "quote": "We offer excellent Midwifery Care for clients seeking a birth center birth, homebirth, or those just needing prenatal care for their hospital birth. Our Midwives have been in the field for over a decade",
+      "inCity": false,
+      "phone": "954-925-4499",
+      "note": "Free-standing midwifery birth center (Margate, Broward). Birth center births, homebirths, prenatal care."
+    }
+  ],
+  "notes": "PASS: 4 doulas (>=3 S4, >=2 mid-size G37) + 2 hospitals (1 in-city, >=1) + 1 birth center. All with real names + source URLs + page quotes.",
+  "email_census": [
+    {
+      "name": "Nurture Thy Nature LLC",
+      "email_or_null": "hello@discoverdoulas.com?subject=Correction:",
+      "email_source": "owned-domain"
+    },
+    {
+      "name": "Natalie Grillo",
+      "email_or_null": null,
+      "email_source": "none-found"
+    },
+    {
+      "name": "Génesis Mundo",
+      "email_or_null": null,
+      "email_source": "none-found"
+    },
+    {
+      "name": "MotheRetreat",
+      "email_or_null": null,
+      "email_source": "none-found"
+    }
+  ],
+  "email_census_backfilled": {
+    "date": "2026-10-09",
+    "method": "live-fetch via tjb-batch-outreach.find_email_from_url",
+    "providers_checked": 4,
+    "owned_domain_emails": 1
+  }
+}

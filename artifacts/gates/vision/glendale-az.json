@@ -1,0 +1,26 @@
+{
+ "slug": "glendale-az",
+ "verdicts": [
+  {
+   "crop": "glendale-az-hero-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "glendale-az-hero-fig1.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "glendale-az-og-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  },
+  {
+   "crop": "glendale-az-support-fig0.png",
+   "verdict": "pass",
+   "defects": []
+  }
+ ],
+ "checked_at": "2026-10-17T12:23:55.734612"
+}

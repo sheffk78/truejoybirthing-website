@@ -1,0 +1,47 @@
+{
+  "hospitalDetails": [
+    {
+      "name": "Banner Thunderbird Medical Center",
+      "thumbnail": "/images/hospitals/glendale-az-banner-thunderbird.webp",
+      "url": "https://www.bannerhealth.com/locations/glendale/banner-thunderbird-medical-center/maternity",
+      "address": "5555 W Thunderbird Rd, Glendale, AZ 85306",
+      "nicuLevel": "III",
+      "doulaPolicy": "Doulas welcome as part of the care team; Banner treats patients and their support people as central members of the maternity team",
+      "midwifeFriendly": true,
+      "waterBirth": "Hydrotherapy and peanut balls for labor comfort; water birth varies by provider",
+      "medicaid": true,
+      "lactation": true,
+      "privateRooms": true,
+      "paragraph": "Banner Thunderbird Medical Center, at 5555 W Thunderbird Rd, is Glendale's dominant delivery hospital. It is an 890,000-square-foot acute-care facility on 33 acres at 55th Avenue and Thunderbird Road. Banner's maternity page lists full services for pregnancy care, labor and delivery, and mother and baby care. There is a Level III Neonatal Intensive Care Unit as well. The hospital notes it is the only one in the West Valley for premature and sick babies. There is a Maternal-Fetal Medicine Center for fetal assessment and genetic testing consultation. There is an antepartum unit for hospitalization during pregnancy. Comfort measures stand out for doula-supported births. Ask around. The hospital provides peanut balls to make labor easier and faster. It keeps lactation consultants on staff and runs a Wee Care Program for mothers who need extra support. Banner takes AHCCCS. <a href='/birth-plan-template/'>Bring a printed birth plan</a>. Banner teams are used to working from them, so tuck a copy in your hospital bag."
+    },
+    {
+      "name": "AdventHealth Glendale",
+      "thumbnail": "/images/hospitals/glendale-az-adventhealth.webp",
+      "url": "https://www.adventhealth.com/hospitals/glendale",
+      "address": "100 W. Thunderbird Rd, Glendale, AZ 85306",
+      "nicuLevel": "II",
+      "doulaPolicy": "Support persons welcome during labor; confirm current visitor policy with the maternity unit before your due date",
+      "midwifeFriendly": true,
+      "waterBirth": "Call ahead about tub availability in labor rooms",
+      "medicaid": true,
+      "lactation": true,
+      "privateRooms": true,
+      "paragraph": "AdventHealth Glendale sits at 100 W. Thunderbird Rd. It is the second in-city option for Glendale families on the east side of town. It is a Level 3 Trauma Center with obstetrics and women's care on the service line. The hospital runs on AdventHealth's whole-person maternity model, and lactation support with private mother-baby rooms comes standard. For residents near downtown, it is often the closest emergency option. Families planning to deliver here should tour the mother-baby unit during pregnancy. Confirm the current doula and support-person policy first. AdventHealth updates visitor guidelines regularly. The hospital takes AHCCCS and most major insurance plans."
+    }
+  ],
+  "birthCenterDetails": [
+    {
+      "name": "Urban Midwifery Birth Center",
+      "address": "5622 W. Palmaire Avenue, Glendale, AZ 85301",
+      "paragraph": "The freestanding birth center in historic downtown Glendale belongs to Urban Midwifery. Its address is 5622 W. Palmaire Avenue. The team has provided quality midwifery care in this city for more than a decade. The center offers two birth suites and exam rooms with couches. An ultrasound room lets families see their baby on the big screen together. Each room has its own personality and warmth. There is space for your people to rest through long hours of labor. The practice covers every setting. Home birth comes with full equipment and support, and birth center births are more than home but not quite a hospital. Hospital births keep their continuity of care going, backed by privileges at Banner University Medical Center. It is the closest one to Glendale. Families from Surprise, Peoria, and Avondale regularly make the drive to Palmaire Avenue.",
+      "thumbnail": "/images/birth-centers/glendale-az-urban-midwifery.webp",
+      "url": "https://urbanmidwives.com/",
+      "phone": "(623) 249-4321",
+      "midwives": ["Urban Midwifery team midwives"],
+      "services": ["Birth Center Birth", "Home Birth", "Water Birth", "Prenatal Care", "Ultrasound"],
+      "costRange": "$4,500-$8,500",
+      "medicaid": false,
+      "credential": "Arizona Licensed Midwives"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "eval": "eval-voice",
+  "slug": "pembroke-pines-fl",
+  "model": "atlas:latest",
+  "fields_checked": 13,
+  "model_calls_ok": 3,
+  "model_calls_err": 0,
+  "verdict": "approved",
+  "findings": [],
+  "checked_at": "2026-10-14T17:05:47-06:00"
+}

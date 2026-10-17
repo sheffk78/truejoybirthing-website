@@ -1,0 +1,82 @@
+{
+  "localDoulas": [
+    {
+      "name": "Jennifer Vazquez",
+      "credential": "Certified Birth and Postpartum Doula, Childbirth Educator",
+      "practice": "Pinellas Doula Services",
+      "url": "https://pinellasdoulaservices.com/",
+      "photo": "/images/doulas/jennifer-vazquez.webp",
+      "description": "Jennifer is a certified birth and postpartum doula and childbirth educator who serves St. Petersburg and the whole Pinellas County area. She covers the full arc — prenatal education, labor support, and the fourth-trimestum weeks after the baby arrives — and keeps her calendar structured around family-run plans, so you know exactly what's included before you book.",
+      "costRange": "$1,200-$2,800",
+      "acceptingClients": true,
+      "services": [
+        "Birth Doula",
+        "Postpartum Doula",
+        "Childbirth Education"
+      ],
+      "serviceArea": [
+        "St. Petersburg, FL",
+        "Clearwater",
+        "Tampa"
+      ]
+    },
+    {
+      "name": "Tiffany Holmes",
+      "credential": "Traditional Birth & Postpartum Doula, Hypnobirthing Educator, Reiki Master",
+      "practice": "Quantum Motherhood",
+      "url": "https://saintpetersburgdoula.com/",
+      "photo": "/images/doulas/tiffany-holmes.webp",
+      "description": "Tiffany runs a full-service practice out of St. Petersburg itself: traditional birth and postpartum doula care, Hypnobirthing childbirth education, ‘Quantum Birthing’ coaching, Reiki, and pelvic steaming. If you want someone who will meet you in the middle of a long labor and also stay through the postpartum fog, her range is unusually deep for one person.",
+      "costRange": "$1,500-$3,200",
+      "acceptingClients": true,
+      "services": [
+        "Birth Doula",
+        "Postpartum Doula",
+        "Hypnobirthing Classes",
+        "Reiki",
+        "Pelvic Steaming"
+      ],
+      "serviceArea": [
+        "St. Petersburg, FL",
+        "Pinellas Park",
+        "Clearwater"
+      ]
+    },
+    {
+      "name": "Madeline Ishmael",
+      "credential": "DONA-Certified Birth Doula, Certified Lactation Consultant, Prenatal Yoga Teacher",
+      "practice": "Bornbir Directory Member",
+      "url": "https://www.bornbir.com/madeline-ishmael",
+      "photo": "/images/doulas/madeline-ishmael.webp",
+      "description": "Maddy has been a DONA-certified birth doula since 2019 and is also a certified lactation consultant and prenatal yoga teacher. Listing through the Bornbir directory, she serves St. Petersburg families looking for one person who can hold the pregnancy, the birth, and the first feeds without passing them between specialists.",
+      "costRange": "$1,200-$3,000",
+      "acceptingClients": true,
+      "services": [
+        "Birth Doula",
+        "Lactation Consult",
+        "Prenatal Yoga"
+      ],
+      "serviceArea": [
+        "St. Petersburg, FL",
+        "Tampa"
+      ]
+    },
+    {
+      "name": "Healthy Start Coalition of Pinellas — Doula Program",
+      "credential": "Nonprofit Free Doula Program",
+      "practice": "Healthy Start Coalition of Pinellas",
+      "url": "https://healthystartpinellas.org/doula-program/",
+      "photo": "/images/doulas/healthy-start-pinellas.webp",
+      "description": "A nonprofit program that pairs eligible Pinellas County residents with a doula at no cost — the doula is with the client during labor and delivery and through the early postpartum period. If insurance is thin or the word ‘doula’ feels like a luxury you can't place on the budget, this is the front door: call (727) 507-4260 or email Connect@HealthyStartPinellas.org.",
+      "costRange": "$0 (free program)",
+      "acceptingClients": true,
+      "services": [
+        "Free Labor Doula",
+        "Postpartum Support"
+      ],
+      "serviceArea": [
+        "Pinellas County, FL"
+      ]
+    }
+  ]
+}

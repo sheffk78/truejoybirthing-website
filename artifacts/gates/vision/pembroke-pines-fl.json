@@ -1,0 +1,10 @@
+{
+  "slug": "pembroke-pines-fl",
+  "checked_at": "2026-10-17T15:48:51Z",
+  "verdicts": {
+    "hero": "pass",
+    "provider_photos": "pass",
+    "hospital_thumbnails": "pass"
+  },
+  "note": "visual-preflight.sh + deploy gates passed; four real provider photos verified >=400x400"
+}

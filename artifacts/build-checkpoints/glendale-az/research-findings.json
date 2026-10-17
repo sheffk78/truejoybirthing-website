@@ -1,85 +1,116 @@
 {
   "city": "glendale-az",
-  "population_tier": "mid-size (100K-500K, pop ~210K)",
-  "tier_minimums": {
-    "doulas": 2,
-    "hospitals": 1
-  },
-  "preflight_floor": "S4 hard minimum: 3 doulas + 1 hospital",
-  "run": 4,
-  "search_channels_attempted": [
+  "collected_at": "2026-10-10T17:00:47.572349+00:00",
+  "provider_minimum": 4,
+  "hospital_minimum": 1,
+  "providers": [
     {
-      "channel": "Hermes web_search (primary)",
-      "result": "WORKING — served by 'parallel' backend, rescued_from ddgs. 5 queries: doula Glendale AZ; hospital Glendale AZ labor and delivery; birth center Phoenix metro; Desert Oasis hospital Glendale; doula Care AZ Glendale. All returned parseable results."
+      "name": "Rebecca Turrigiano",
+      "role": "Birth Doula",
+      "service_area": "Glendale (based), serves Phoenix metro",
+      "source_url": "https://doulamatch.net/profile/6062/rebecca-turrigiano",
+      "evidence_url": "https://doulamatch.net/list/city/us/az/glendale",
+      "evidence_quote": "Rebecca Turrigiano — LOVING TOUCH DOULAS — Birth Fee: $2200 to $3900 — VERIFIED CERTIFICATION — 13 YEARS IN PRACTICE — 210 CLIENT TESTIMONIALS",
+      "note": "14 years on DoulaMatch; lovingtouchdoula.com"
     },
     {
-      "channel": "DuckDuckGo Lite (curl direct)",
-      "result": "BLOCKED again this run — anomaly challenge (47 anomaly matches in /tmp/ddg1.html), consistent with runs 2-3"
+      "name": "Kay Clinton",
+      "role": "Birth Doula",
+      "service_area": "Glendale (based)",
+      "source_url": "https://doulamatch.net/profile/37885/kay-clinton",
+      "evidence_url": "https://doulamatch.net/list/city/us/az/glendale",
+      "evidence_quote": "Kay Clinton — Spiritual Garden Healing Doula Services — Birth Fee: $1500 to $3500 — Postpartum Rate: $50 to $100 — 6 YEARS IN PRACTICE",
+      "note": "6 years in practice"
     },
     {
-      "channel": "Provider cache re-check",
-      "result": "~/.hermes/state/tjb-provider-cache.json — zero Glendale entries (unchanged)"
+      "name": "Mother & Earth Doula Services",
+      "role": "Birth Doula",
+      "service_area": "Glendale, AZ",
+      "source_url": "https://www.discoverdoulas.com/doula/mother-and-earth-doula-services-glendale-az/",
+      "evidence_url": "https://www.discoverdoulas.com/doula/mother-and-earth-doula-services-glendale-az/",
+      "evidence_quote": "Mother and Earth Doula Services — Doula in Glendale, AZ — 5 ★★★★★ 4 Google reviews — Available 24/7 — Birth Doulas — ☎ (623) 451-8034 — Serves Glendale and surrounding areas. Reviews name lead doula Deidra: 'Deidra was informative, listened to what I wanted, was easy to get a hold of, and brought a strong but calm presence to my delivery.' (Samantha, 2023-07); 'We also took her birthing class and it had so much useful information.' (Amanda, 2023-07)",
+      "note": "Service-area practice listing",
+      "profile_verified": "2026-10-10"
+    },
+    {
+      "name": "The Golden Doula Services",
+      "role": "Birth Doula",
+      "service_area": "Glendale, AZ — available 24/7",
+      "source_url": "https://www.discoverdoulas.com/doula/the-golden-doula-services-glendale-az/",
+      "evidence_url": "https://www.discoverdoulas.com/doula/the-golden-doula-services-glendale-az/",
+      "evidence_quote": "The Golden Doula Services — Doula in Glendale, AZ — 4.5 ★★★★★ 2 Google reviews — Available 24/7 — Birth Doulas — ☎ (623) 231-1196 — Reviews name doula Monique: 'Monique was our birth doula and helped us bring our baby girl earth side. The emotional support she gave was much needed and the tips she gave me to help have a smooth labor were a godsend. I was able to have the birth I wanted without any intervention and medication.' (Shanice, 2024-03)",
+      "note": "Directory-listed Glendale service-area doula",
+      "phone": "(623) 231-1196",
+      "website_link": true,
+      "profile_verified": "2026-10-10"
+    },
+    {
+      "name": "AdventHealth Glendale",
+      "role": "Hospital",
+      "service_area": "Glendale, AZ",
+      "source_url": "https://www.adventhealth.com/hospitals/glendale",
+      "evidence_url": "https://www.adventhealth.com/hospitals/glendale",
+      "evidence_quote": "Welcome to AdventHealth Glendale — AdventHealth Glendale is a Level 3 Trauma Center... Located at 100 W. Thunderbird Rd. in Glendale.",
+      "note": "In-city full-tertiary hospital with obstetrics"
+    },
+    {
+      "name": "Banner Thunderbird Medical Center",
+      "role": "Hospital",
+      "service_area": "Glendale, AZ",
+      "source_url": "https://www.bannerhealth.com/locations/glendale/banner-thunderbird-medical-center/maternity",
+      "evidence_url": "https://www.bannerhealth.com/locations/glendale/banner-thunderbird-medical-center/maternity",
+      "evidence_quote": "Maternity Services at Banner Thunderbird Medical Center — pregnancy care, labor and delivery care, mother and baby care, and Level III Neonatal Intensive Care Unit for premature and sick babies — the only one in the West Valley",
+      "note": "In-city; CMS Birthing Friendly Designation (per ourhealthnetwork.com)"
+    },
+    {
+      "name": "Urban Midwifery",
+      "role": "Birth Center / Midwifery Practice",
+      "service_area": "Glendale (5622 W. Palmaire Avenue, historic downtown); hospital privileges at Banner University Medical Center",
+      "source_url": "https://urbanmidwives.com/",
+      "evidence_url": "https://urbanmidwives.com/",
+      "evidence_quote": "For more than a decade, our Glendale birth center has been providing quality care, offering more than home, but not quite a hospital... Our spacious birth center is located in historic downtown Glendale at 5622 W. Palmaire Avenue. Featuring two birth suites, exam rooms with couches, and an ultrasound room. Our team holds hospital privileges at Banner University Medical Center.",
+      "is_birth_center": true
+    },
+    {
+      "name": "Jada I. Rush (Rah Midwifery)",
+      "role": "Licensed Midwife (LM, CPM, LMFT, PMH-C) — home birth",
+      "service_area": "Glendale, Avondale, Tolleson, Goodyear, South Peoria, Litchfield Park, El Mirage, Verrado, Surprise, West/Northwest Phoenix",
+      "source_url": "https://rahmidwifery.com/",
+      "evidence_url": "https://rahmidwifery.com/",
+      "evidence_quote": "My name is Jada, the Owner & Founder of Rah Midwifery. I am a licensed midwife in the State of Arizona (LM), and also nationally credentialed as a Certified Professional Midwife (CPM). — Rah Midwifery, LLC: Glendale • Avondale • Tolleson • Goodyear • South Peoria • Litchfield Park • El Mirage • Verrado • Surprise • West/Northwest Phoenix. Email: rahmidwifery@gmail.com",
+      "is_midwife": true
     }
   ],
-  "providers_found": {
-    "doulas_and_support": [
-      {
-        "name": "Urban Midwifery",
-        "role": "midwife team / birth center / homebirth / hospital birth",
-        "practice": "Urban Midwifery — Glendale, AZ",
-        "source_url": "https://urbanmidwives.com/",
-        "quote": "For more than a decade, we've cared for families through pregnancy, birth, and everything after in Glendale and the surrounding Phoenix metro area.",
-        "verified": "web_extract of homepage, fetched 2026-10-08"
-      },
-      {
-        "name": "Vanessa — Doula Care Arizona",
-        "role": "postpartum doula, newborn care specialist, placenta encapsulation",
-        "practice": "Doula Care Arizona (DoulaCareAZ)",
-        "source_url": "https://doulacareaz.com/",
-        "quote": "At Doula Care Arizona, we blend the heart of postpartum doula care with the precision of newborn care specialization.",
-        "verified": "web_extract of homepage, fetched 2026-10-08",
-        "note": "Phoenix metro / Northwest Valley serving area; Glendale coverage from search placement — flag for human confirm"
-      },
-      {
-        "name": "Glendale Obstetrics and Gynecology PC (OB support / prenatal team)",
-        "role": "OB practice — antenatal/delivery/postpartum care",
-        "practice": "Glendale Obstetrics and Gynecology",
-        "source_url": "https://www.glendaleobgyn.com/obstetric-services",
-        "quote": "Prenatal Care, Antepartum, Delivery, and Postpartum care provided by Glendale Obstetrics and Gynecology PC",
-        "verified": "web_search description, snippet fetched 2026-10-08"
-      }
-    ],
-    "hospitals": [
-      {
-        "name": "Arizona General Hospital",
-        "address": "5171 W Olive Ave, Glendale, AZ 85302",
-        "source_url": "https://www.healthgrades.com/hospital-directory/az-arizona/glendale",
-        "quote": "PROVIDENCE DIRECTORY: 'Arizona General Hospital - Glendale, 5171 W Olive Ave, Glendale, AZ 85302. Phone 602-900-4780.'",
-        "verified": "Providence directory listing (primary source URL in search result + healthgrades directory in same result set)"
-      },
-      {
-        "name": "Desert Oasis Medical Center",
-        "address": "1635 W Happy Valley Rd area, Glendale, AZ 85308 (verify address before deploy)",
-        "source_url": "https://www.healthgrades.com/hospital-directory/az-arizona/glendale",
-        "quote": "FSN Hospitals Glendale list: 'Arrowhead Community Hospital 18701 N 67th Ave, Glendale...'; Desert Oasis referenced in AZ Glendale facility searches",
-        "verified": "unconfirmed — address/delivery suite NOT independently verified this run; EXCLUDED from build until fetch-verified"
-      }
-    ],
-    "birth_centers": [
-      {
-        "name": "Urban Midwifery Birth Center (Glendale)",
-        "source_url": "https://urbanmidwives.com/",
-        "quote": "For more than a decade, our Glendale birth center has been providing quality care, offering more than home, but not quite a hospital.",
-        "verified": "web_extract of homepage"
-      }
-    ]
+  "candidates_not_used": [
+    {
+      "name": "Paty (Madre Moon Doula Services)",
+      "note": "Glendale per discoverdoulas, but phone 928 (Yuma area code) inconsistent — needs manual check"
+    }
+  ],
+  "profile_quotes_completed": "2026-10-10 — Mother & Earth + Golden Doula individual profile pages fetched; lead-doula names (Deidra, Monique), ratings, phones, and client-review quotes banked. 4-doula minimum now individually evidenced.",
+  "provider_photos": {
+    "glendale-az-rebecca-turrigiano.webp": "https://doulamatch.net/doulafiles/6062/6062_thumb.jpg (DoulaMatch profile headshot, vision-verified 2026-10-10)",
+    "glendale-az-kay-clinton.webp": "https://doulamatch.net/doulafiles/37885/37885_thumb.jpg (DoulaMatch profile photo — doula with client, vision-verified 2026-10-10)",
+    "glendale-az-mother-and-earth.webp": "Google Maps place photo for Mother and Earth Doula Services Glendale (gps-cs ANWiy9QU...Z= prefix), headshot of practice doula, vision-verified 2026-10-10",
+    "glendale-az-golden-doula.webp": "Google Maps place photo for The Golden Doula Services Glendale (gps-cs ANWiy9QSB...Kr= prefix), headshot of practice doula, vision-verified 2026-10-10",
+    "glendale-az-jada-rush.webp": "https://img1.wsimg.com/isteam/ip/04109649-9748-4647-8620-3f6d94e5fc4a/IMG_5329.jpeg (rahmidwifery.com own site image: Jada Rush in Rah Midwifery shirt holding a newborn, vision-verified 2026-10-10)"
   },
-  "providers_evidenced": 4,
-  "providers_required": "3 doulas-tier (S4 includes midwives/support) + 1 hospital",
-  "counts": {
-    "doulas_tier": 3,
-    "hospitals": 1,
-    "birth_centers": 1
+  "hospital_photos": {
+    "glendale-az-banner-thunderbird.webp": "https://www.bannerhealth.com/-/media/images/project/bh/location-images/glendale/banner-thunderbird-medical-center.jpg (Banner Health official location photo, real photo, vision-verified)",
+    "glendale-az-adventhealth.webp": "Google Maps place photo AdventHealth Glendale (gps-cs ANWiy9Rh...sB= prefix, 'AdventHealth Glendale' lit signage readable, vision-verified 2026-10-10)"
   },
-  "verdict": "PASS — evidence floor met: 3 named doula/midwife/support providers + 1 verified hospital (Arizona General, via Providence directory listing) + 1 named birth center (Urban Midwifery). No providers invented. All entries carry source URL + verbatim quote."
+  "birth_center_photos": {
+    "glendale-az-urban-midwifery.webp": "https://urbanmidwives.com/wp-content/uploads/2026/08/IMG_5710.jpg (Urban Midwifery's own site photo of their Glendale birth center room, vision-verified 2026-10-10)"
+  },
+  "pricing_baselines": {
+    "doula": {
+      "source": "https://www.bornbir.com/glendale/az/doula/cost",
+      "quote": "Median package price $1,000. Typical range $419–$1,500. Median hourly rate $40/hr. Based on 284 package prices from 91 providers listed on Bornbir within 150 miles of Glendale, AZ. Updated September 2026."
+    },
+    "doulamatch_quotes": "Rebecca Turrigiano Birth Fee $2200-$3900 (13 yrs); Kay Clinton Birth Fee $1500-$3500, Postpartum $50-$100/hr (6 yrs)",
+    "midwife_az": {
+      "source": "https://homebirthpartners.com/directory/arizona/",
+      "quote": "An Arizona home birth midwife package runs $4,500 to $8,500... In the Phoenix metro, fees typically run $5,500 to $8,500 for CPMs and CNMs with established practices."
+    }
+  }
 }

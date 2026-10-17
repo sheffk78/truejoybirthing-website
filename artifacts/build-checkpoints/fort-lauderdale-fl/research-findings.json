@@ -2,26 +2,54 @@
   "city": "Fort Lauderdale",
   "state": "FL",
   "slug": "fort-lauderdale-fl",
-  "population_estimate": 335000,
+  "population_estimate": 336000,
   "population_tier": "mid-size (100K-500K)",
   "tier_minimums": {
     "doulas": 2,
     "hospitals": 1
   },
-  "doulas_found": 0,
-  "hospitals_found": 0,
+  "doulas_found": 4,
+  "hospitals_found": 2,
   "birth_centers_found": 0,
-  "verified_providers": [],
-  "provider_cache_check": {
-    "cache_file": "~/.hermes/state/tjb-provider-cache.json",
-    "total_cached": 355,
-    "fort_lauderdale_matches": "0 - no Fort Lauderdale providers in cache",
-    "checked_fields": "full JSON blob scan for 'lauderdale' (case-insensitive)"
-  },
-  "research_session": {
-    "started": "2026-10-06T22:37:57.725981Z",
-    "tool_calls_before_budget_exhausted": 7,
-    "budget_exhausted": true,
-    "completion": "INCOMPLETE - runtime budget exhausted before free-discovery web fetches (DuckDuckGo/DDG + provider site checks) could run"
-  }
+  "verified_providers": [
+    {
+      "name": "MotheRetreat",
+      "type": "doula",
+      "url": "https://motheretreat.com/birth-doula-fort-lauderdale/",
+      "evidence_quote": "MotheRetreat provides birth doula support to families across Fort Lauderdale and the Broward coast. Whether you plan to deliver at Broward Health Medical Center, Holy Cross Health, or Broward Health Imperial Point, your birth doula gives you continuous one-on-one support through labor and coordinates closely with your medical team."
+    },
+    {
+      "name": "Amber Marie - Hummingbird Birth + Life Doula",
+      "type": "doula",
+      "url": "https://hummingbirdbirthing.com/",
+      "evidence_quote": "Certified Birth & Postpartum Doula in South Florida. Serving Miami, Fort Lauderdale, Boca Raton & surrounding areas — with you every step of the way. Amber has spent more than 20 years walking alongside families through birth, postpartum, and the full arc of early parenthood. Certified by ProDoula."
+    },
+    {
+      "name": "Martha - zenmamalove (Birth Photographer & Doula)",
+      "type": "doula",
+      "url": "https://zenmamalove.com/",
+      "evidence_quote": "I AM A BIRTH WORKER, not simply a photographer. I am a certified Doula and Birth Assistant. ... © zenmamalove | All Rights Reserved. Birth Photographer & Doula serving Ft. Lauderdale, Boca Raton, Broward County, Delray Beach & Parkland, FL"
+    },
+    {
+      "name": "Serene Gato - A Serene Birth",
+      "type": "doula",
+      "url": "https://serenegato.com/doula-services/",
+      "evidence_quote": "Experienced birth doula serving all of Broward County and beyond. As a South Florida birth doula, I help expectant parents before, during, and immediately following birth by providing: Physical Support, Emotional Support, Resources & Information, Advocacy."
+    },
+    {
+      "name": "Broward Health Medical Center - Maternity Place",
+      "type": "hospital",
+      "url": "https://www.browardhealth.org/medical-services/womens-health/maternity-services/maternity-place-at-broward-health-medical-center",
+      "evidence_quote": "Maternity Place at Broward Health Medical Center: Count on Broward Health Medical Center for dedicated labor, delivery and newborn care. Every detail is designed to make your birth experience comfortable, memorable and centered around you and your family. Level III Regional Perinatal Intensive Care Center (RPICC) and Neonatal Intensive Care Units on-site to provide advanced care for newborns who need extra support. 24/7 Breast Pump Rental Services on-site."
+    },
+    {
+      "name": "Holy Cross Hospital (Holy Cross Health Fort Lauderdale)",
+      "type": "hospital",
+      "url": "https://www.holy-cross.com/location/holy-cross-hospital-fl-0",
+      "evidence_quote": "Holy Cross Hospital (FL). 4725 N Federal Hwy, Fort Lauderdale, FL 33308. 954-492-5768. Holy Cross Health Fort Lauderdale, Florida (FL) Hospitals. Dedicated to excellence in clinical care for every patient."
+    }
+  ],
+  "notes": "4 doulas + 2 hospitals, all re-verified on source pages this pass (direct web fetches of the doula sites + holy-cross; Broward Health Maternity Place via official-page search snippet since direct fetch failed). Meela directory (31 doulas in city) backs demand context. Exceeds mid-size tier minimums (2 doulas + 1 hospital).",
+  "researched_at": "2026-10-15",
+  "researched_by": "kit-oneshot-build-lane"
 }

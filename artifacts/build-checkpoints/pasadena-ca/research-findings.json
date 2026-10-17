@@ -1,0 +1,27 @@
+{
+  "slug": "pasadena-ca",
+  "email_census_backfill_shell": true,
+  "email_census": [
+    {
+      "name": "Nancy Connelly",
+      "email_or_null": null,
+      "email_source": "none-found"
+    },
+    {
+      "name": "Brighid Quinn",
+      "email_or_null": "quinndoula@gmail.com",
+      "email_source": "owned-domain"
+    },
+    {
+      "name": "Rebecca Belenky",
+      "email_or_null": "rebecca@losangelesbirth.com",
+      "email_source": "owned-domain"
+    }
+  ],
+  "email_census_backfilled": {
+    "date": "2026-10-09",
+    "method": "live-fetch via tjb-batch-outreach.find_email_from_url",
+    "providers_checked": 3,
+    "owned_domain_emails": 2
+  }
+}

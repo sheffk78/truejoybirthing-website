@@ -1,0 +1,15 @@
+{
+  "city": "Hialeah",
+  "state": "FL",
+  "slug": "hialeah-fl",
+  "costLow": 900,
+  "costHigh": 2400,
+  "lat": 25.8583,
+  "lng": -80.2788,
+  "publishedDate": "2026-10-12",
+  "enableBlogResources": true,
+  "nearbyCities": [
+    "miami-fl",
+    "fort-lauderdale-fl"
+  ]
+}

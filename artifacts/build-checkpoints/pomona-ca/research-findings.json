@@ -1,0 +1,27 @@
+{
+  "slug": "pomona-ca",
+  "email_census_backfill_shell": true,
+  "email_census": [
+    {
+      "name": "Stephanie Knol",
+      "email_or_null": "farmerdoula@gmail.com",
+      "email_source": "owned-domain"
+    },
+    {
+      "name": "Lori Kuettle",
+      "email_or_null": null,
+      "email_source": "none-found"
+    },
+    {
+      "name": "Courageous Labors Doula Services",
+      "email_or_null": "doulamarchael@courageouslabors.com?subject=I&#x27;d%20like%20to%20check%20my%20insurance%20coverage...",
+      "email_source": "owned-domain"
+    }
+  ],
+  "email_census_backfilled": {
+    "date": "2026-10-09",
+    "method": "live-fetch via tjb-batch-outreach.find_email_from_url",
+    "providers_checked": 3,
+    "owned_domain_emails": 2
+  }
+}
