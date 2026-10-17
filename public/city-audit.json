@@ -4855,8 +4855,8 @@
     "batch_id": "",
     "blocked_reason": null,
     "url": "https://truejoybirthing.com/birth-support/fort-lauderdale-fl/",
-    "built": true,
-    "build_status": "built",
+    "built": false,
+    "build_status": "not-built",
     "population": 178752
   },
   {
@@ -4936,8 +4936,8 @@
     "batch_id": "",
     "blocked_reason": null,
     "url": "https://truejoybirthing.com/birth-support/pembroke-pines-fl/",
-    "built": true,
-    "build_status": "built",
+    "built": false,
+    "build_status": "not-built",
     "population": 168587
   },
   {
@@ -4963,8 +4963,8 @@
     "batch_id": "",
     "blocked_reason": "Stage 'build' has failed 3 times (limit: 3). Last reason: dispatcher wander-guard: no chunk files written by 900s (3 tool calls, all read-only); lane killed early. Use 'unblock' command to retry.",
     "url": "https://truejoybirthing.com/birth-support/saint-petersburg-fl/",
-    "built": true,
-    "build_status": "built",
+    "built": false,
+    "build_status": "not-built",
     "population": 260999
   },
   {

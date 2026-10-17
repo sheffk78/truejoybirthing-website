@@ -1,12 +1,12 @@
 {
-  "slug": "glendale-az",
-  "stage": "verify_deploy",
-  "produced_at": null,
-  "worker_model": null,
-  "notes": "",
-  "sources": [],
-  "preflight_exit": null,
-  "deploy_status": null,
-  "live_http": null,
-  "vision_verdict_file": null
+ "slug": "glendale-az",
+ "stage": "verify_deploy",
+ "produced_at": "2026-10-17T18:39:57Z",
+ "worker_model": "kimi-k2.6-cloud (lane enrich+verify coordination by Kit)",
+ "notes": "Deployed via scripts/deploy.sh glendale-az: git main push + CF Pages upload; live HTTP 200 verified on truejoybirthing.com/birth-support/glendale-az/. Vision pass: 4/4 zoom crops PASS (hand/joint/anatomy checks), verdict file artifacts/gates/vision/glendale-az.json. G7 completeness 17/17 PASS.",
+ "sources": [],
+ "preflight_exit": 0,
+ "deploy_status": "SUCCESS",
+ "live_http": 200,
+ "vision_verdict_file": "artifacts/gates/vision/glendale-az.json"
 }
