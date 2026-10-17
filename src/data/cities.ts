@@ -13136,7 +13136,39 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
     state: "FL",
     slug: "hialeah-fl",
     heroLocalDetail: "Two anchors hold this city's birth plan together. Palmetto General sits in the heart of Hialeah at 2001 W 68th Street, and its Maternity Child Care Center runs the full arc from prenatal visits to postpartum care, with dedicated neonatal care and labor suites built for skin-to-skin time right after delivery. A short drive west, Bayfront's Center for Women and Babies absorbs the high-volume Miami deliveries with a full maternity program behind it. Families skipping the hospital head for Magnolia Birth House, about fifteen minutes up in North Miami Beach. Meanwhile the city's own doula scene, practices on SW 21st Avenue, SW 8th Street, and Hialeah proper, fills everything between the two, it is honestly easier to plan around than Miami's sprawl, and we walk this map with local families almost every week.",
-    localDoulas: [
+    hospitalDetails: [
+            {
+                    name: "Palmetto General Hospital",
+                    address: "2001 W 68th Street, Hialeah, FL 33016",
+                    phone: "305-823-5000",
+                    url: "https://palmettogeneral.org/womens-services/",
+                    nicuLevel: "II",
+                    inCity: true,
+                    doulaPolicy: "Doulas welcome as support persons; confirm the current support-person policy at your hospital tour",
+                    midwifeFriendly: true,
+                    privateRooms: true,
+                    lactation: true,
+                    birthingFacilities: "Maternity Child Care Center: prenatal through postpartum care, dedicated labor and delivery suites, in-house neonatal intensive care, skin-to-skin bonding after delivery",
+                    paragraph: "Palmetto General is the in-city hospital for Hialeah, at 2001 W 68th Street in the middle of the city. Its Maternity Child Care Center is the anchor: the hospital describes it as covering the full arc from prenatal to postpartum, with advanced labor and delivery services, nursing staff prepared for newborn emergencies, and skin-to-skin bonding held right after delivery. For the majority of Hialeah addresses it is the closest full maternity program, which is why most of the city's doula practices plan their support visits around it.",
+                    thumbnail: "/images/hialeah-fl-palmetto-general.webp"
+            },
+            {
+                    name: "Orlando Health Bayfront Hospital (Center for Women and Babies)",
+                    address: "3001 S Miami Ave, Miami, FL 33133 (adjacent to Hialeah)",
+                    phone: "305-350-5000",
+                    url: "https://www.orlandohealth.com/facilities/bayfront-hospital/services/maternity-care",
+                    nicuLevel: "III",
+                    inCity: false,
+                    doulaPolicy: "Doulas welcome as support persons; confirm the current support-person policy with your OB",
+                    midwifeFriendly: true,
+                    privateRooms: true,
+                    lactation: true,
+                    birthingFacilities: "Full maternity program through the Orlando Health system: labor and delivery suites, comprehensive care for every stage of pregnancy",
+                    paragraph: "Bayfront is the bigger-program option a few minutes west of Hialeah. Its Center for Women and Babies offers the full Orlando Health maternity program - labor and delivery suites and comprehensive care across every stage of pregnancy - and handles high-volume Miami deliveries as part of one of the region's largest hospital systems. Families with higher-risk pregnancy needs, or who simply want the scale of a major system behind them, tend to land here rather than at Palmetto.",
+                    thumbnail: "/images/hialeah-fl-bayfront.webp"
+            }
+    ],
+        localDoulas: [
       {
         name: "Inara Arauz",
         credential: "Birth & postpartum doula",
@@ -13208,21 +13240,6 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
         acceptingClients: "Confirm via her Bornbir profile",
         verified: true
       },
-      {
-        name: "Orlando Health Bayfront Hospital (Center for Women and Babies)",
-        address: "3001 S Miami Ave, Miami, FL 33133 (adjacent to Hialeah)",
-        phone: "305-350-5000",
-        url: "https://www.orlandohealth.com/facilities/bayfront-hospital/services/maternity-care",
-        nicuLevel: "III",
-        inCity: false,
-        doulaPolicy: "Doulas welcome as support persons; confirm the current support-person policy with your OB",
-        midwifeFriendly: true,
-        privateRooms: true,
-        lactation: true,
-        birthingFacilities: "Full maternity program through the Orlando Health system: labor and delivery suites, comprehensive care for every stage of pregnancy",
-        paragraph: "Bayfront is the bigger-program option a few minutes west of Hialeah. Its Center for Women and Babies offers the full Orlando Health maternity program, labor and delivery suites plus maternity care for every stage of pregnancy, and it handles high-volume Miami deliveries as part of one of the region's largest hospital systems, which matters when a pregnancy turns complicated and you want the higher level of care already in the building. Families with higher-risk pregnancy needs, or who simply want the scale of a major system behind them, tend to land here rather than at Palmetto.",
-        thumbnail: "/images/hialeah-fl-bayfront.webp"
-      }
     ],
     costLow: 900,
     costHigh: 2400,
@@ -13231,64 +13248,12 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
     lng: -80.2788,
     ogImage: "https://truejoybirthing.com/images/og-city-hialeah-fl.webp",
     heroImage: "/images/hialeah-fl-birth-doula-silhouette.webp",
-    supportSceneImage: "/images/hialeah-fl-support-scene.webp",
+    supportSceneImage: "/images/hialeah-fl-support-scene-v2.webp",
     supportSceneAlt: "A doula walking beside a pregnant mom on a palm-lined street in Hialeah, everyday birth support across South Florida",
-    birthCenterDetails: [
-            {
-                    "name": "Magnolia Birth House",
-                    "address": "16821 NE 6th Avenue, North Miami Beach, FL 33162",
-                    "phone": "786-953-6534",
-                    "url": "https://www.magnoliabirthhouse.com/miami-birth-center",
-                    "inCity": false,
-                    "distance": "About 15 minutes north of Hialeah in North Miami Beach",
-                    "credential": "Freestanding midwifery birth center",
-                    "services": [
-                            "Birth Center Birth",
-                            "Water Birth",
-                            "Natural Labor and Birth",
-                            "Prenatal and Postpartum Support",
-                            "Childbirth Classes",
-                            "Doula Support"
-                    ],
-                    "nicuLevel": "N/A",
-                    "paragraph": "Magnolia Birth House is Miami's premier freestanding center for midwifery and natural childbirth, at 16821 NE 6th Avenue in North Miami Beach. It covers the whole non-hospital package, from water births and natural labor to full midwifery care, prenatal and postpartum support, childbirth classes, and doula support arranged in-house. For Hialeah families it is the closest dedicated birth center, a short drive north, the natural next step for anyone set against a hospital birth who still wants a staffed, purpose-built space."
-            }
-    ],
-    hospitalDetails: [
-            {
-                    "name": "Palmetto General Hospital",
-                    "address": "2001 W 68th Street, Hialeah, FL 33016",
-                    "phone": "305-823-5000",
-                    "url": "https://palmettogeneral.org/womens-services/",
-                    "nicuLevel": "II",
-                    "inCity": true,
-                    "doulaPolicy": "Doulas welcome as support persons; confirm the current support-person policy at your hospital tour",
-                    "midwifeFriendly": true,
-                    "privateRooms": true,
-                    "lactation": true,
-                    "birthingFacilities": "Maternity Child Care Center: prenatal through postpartum care, dedicated labor and delivery suites, in-house neonatal intensive care, skin-to-skin bonding after delivery",
-                    "paragraph": "Palmetto General is the in-city hospital for Hialeah, at 2001 W 68th Street in the middle of the city. Its Maternity Child Care Center is the anchor here, which the hospital describes as covering the full arc from prenatal through postpartum care, with nursing staff prepared for newborn emergencies sitting alongside the advanced labor and delivery suites it runs. Skin-to-skin bonding happens right after delivery. For most Hialeah addresses it is the closest full maternity program, which is why so many of the city's doula practices plan their support visits around it.",
-                    "thumbnail": "/images/hialeah-fl-palmetto-general.webp"
-            },
-            {
-                    "name": "Orlando Health Bayfront Hospital (Center for Women and Babies)",
-                    "address": "3001 S Miami Ave, Miami, FL 33133 (adjacent to Hialeah)",
-                    "phone": "305-350-5000",
-                    "url": "https://www.orlandohealth.com/facilities/bayfront-hospital/services/maternity-care",
-                    "nicuLevel": "III",
-                    "inCity": false,
-                    "doulaPolicy": "Doulas welcome as support persons; confirm the current support-person policy with your OB",
-                    "midwifeFriendly": true,
-                    "privateRooms": true,
-                    "lactation": true,
-                    "birthingFacilities": "Full maternity program through the Orlando Health system: labor and delivery suites, comprehensive care for every stage of pregnancy",
-                    "paragraph": "Bayfront is the bigger-program option a few minutes west of Hialeah. Its Center for Women and Babies offers the full Orlando Health maternity program, labor and delivery suites plus maternity care for every stage of pregnancy, and it handles high-volume Miami deliveries as part of one of the region's largest hospital systems, which matters when a pregnancy turns complicated and you want the higher level of care already in the building. Families with higher-risk pregnancy needs, or who simply want the scale of a major system behind them, tend to land here rather than at Palmetto.",
-                    "thumbnail": "/images/hialeah-fl-bayfront.webp"
-            }
-    ],
     birthCenterDetails: [
       {
         name: "Magnolia Birth House",
+        thumbnail: "/images/hospitals/hialeah-fl-magnolia-birth-house.webp",
         address: "16821 NE 6th Avenue, North Miami Beach, FL 33162",
         phone: "786-953-6534",
         url: "https://www.magnoliabirthhouse.com/miami-birth-center",
@@ -13335,7 +13300,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
         a: "Yes. Practices here treat bilingual support as baseline, and the ones on this page work in both languages, Spanish and English."
       }
     ],
-    medicaidNote: "Yes - Florida Medicaid has covered doula services for eligible families since 2023 under the state's coverage rule, and that includes the Family Choice managed care plans Miami-Dade families use. Ask your specific Family Choice plan which doulas are in-network, or ask an enrolled doula directly. Several Hialeah-area practices already work with Medicaid families, and a short call settles network questions faster than an online directory usually does. If your plan changed at renewal, double-check rather than assume last year's answer still holds.",
+    medicaidNote: "Yes — Florida Medicaid has covered doula services for eligible families since 2023 under the state's coverage rule, and that includes the Family Choice managed care plans Miami-Dade families use. Ask your specific Family Choice plan which doulas are in-network, or ask an enrolled doula directly. Several Hialeah-area practices already work with Medicaid families, and a short call settles network questions faster than an online directory usually does. If your plan changed at renewal, double-check rather than assume last year's answer still holds.",
     insuranceNote: "Commercial coverage for doula work in Florida is not standardized. Some plans treat it as a preventive benefit and others don't, so check whether yours will pay and whether HSA or FSA funds can pick up the out-of-pocket part. Plans vary here, ask when you call. Midwife care sits on firmer ground, covered by most commercial plans in the state and usually in-network with the OB group the midwife works alongside. We tell families to call the number on their card before booking, because plan desks say no twice before they say yes.",
     birthStats: {
       cesareanRate: 38.5,

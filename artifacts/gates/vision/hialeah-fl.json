@@ -1,0 +1,11 @@
+{
+  "slug": "hialeah-fl",
+  "verdicts": [
+    {
+      "image": "/images/hialeah-fl-support-scene-v2.webp",
+      "checked_at": "2026-10-17T18:57:49.134907+00:00",
+      "verdict": "PASS",
+      "notes": "support-scene v2: belly-hand exactly five fingers (prior v1 six-finger FAIL), doula shoulder-hand OK, no warped faces/artifacts; palm golden-hour scene intact"
+    }
+  ]
+}

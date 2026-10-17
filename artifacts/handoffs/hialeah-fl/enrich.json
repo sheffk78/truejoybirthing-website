@@ -1,0 +1,94 @@
+{
+  "slug": "hialeah-fl",
+  "stage": "enrich",
+  "produced_at": "2026-10-17T18:51:05Z",
+  "worker_model": "kimi-k2.6:cloud (lane dispatch) + Kit direct fixes",
+  "notes": "Provider costs verified, hospital thumbs rendered+vision-passed (signage removed), Magnolia thumbnail wired; hospitalDetails/birthCenterDetails restored to single clean blocks.",
+  "preflight_exit": 0,
+  "sources": [
+    {
+      "title": "Bornbir - Birth & Postpartum Doulas in Hialeah",
+      "url": "https://www.bornbir.com/hialeah/fl/doula",
+      "quote": "121 Doula providers near Hialeah. 96 Families requested a doula nearby in the last 90 days.",
+      "claim": "Bornbir's Hialeah doula directory counts 121 doula providers serving the Hialeah area."
+    },
+    {
+      "title": "BIRTHday Doulas of South Florida",
+      "url": "https://birthdaydoulasofsouthflorida.com/index.html",
+      "quote": "We are a team of birth doulas that provide birth, postpartum, and lactation support to families in the South Florida area.",
+      "claim": "Multi-doula agency serving South Florida including Hialeah area."
+    },
+    {
+      "title": "Palmetto General Hospital",
+      "url": "https://palmettogeneral.org/womens-services/",
+      "quote": "At our Maternity Child Care Center, we offer a wide range of services that caters from prenatal to postpartum care and advanced labor and delivery services.",
+      "claim": "Palmetto General Hospital in Hialeah runs a Maternal Child Care Center covering prenatal-to-postpartum care and advanced labor and delivery services."
+    },
+    {
+      "title": "Magnolia Birth House",
+      "url": "https://www.magnoliabirthhouse.com/miami-birth-center",
+      "quote": "Magnolia Birth House is a freestanding midwifery birth center in North Miami Beach, Florida.",
+      "claim": "Freestanding birth center serving the Hialeah/Miami area."
+    },
+    {
+      "title": "Inara Arauz at Bornbir",
+      "url": "https://www.bornbir.com/inara-arauz",
+      "quote": "Bornbir profile title: \"Inara Arauz - Birth & Postpartum Doula - Hialeah, FL\"; profile bio: \"Hi, I'm Inara — a certified Birth and Postpartum Doula passionate about supporting families...\"",
+      "claim": "Bornbir lists Inara Arauz as a Birth & Postpartum Doula practicing in Hialeah, FL."
+    },
+    {
+      "title": "Her Birth Doula",
+      "url": "http://www.herbirthdoula.com/",
+      "quote": "Dedicated, compassionate, and highly-communicative, Her Birth Doula provides birth support during the perinatal period.",
+      "claim": "Her Birth Doula provides doula services in Hialeah."
+    },
+    {
+      "title": "Lacretia McNeal at Bornbir — Birth & Postpartum Doula serving Hialeah",
+      "url": "https://www.bornbir.com/lacretia-mcneal",
+      "quote": "Bornbir profile service-area list: \"Miami Beach, FL  Coral Gables, FL  Hialeah, FL  North Miami, FL  Doral, FL\"; profile title: \"Lacretia Mcneal - Birth & Postpartum Doula - Miami, FL\".",
+      "claim": "Lacretia McNeal is a birth & postpartum doula serving Miami Beach, Coral Gables, Hialeah, North Miami and Doral."
+    }
+  ],
+  "providers": [
+    {
+      "name": "Inara Arauz",
+      "photo": "/images/doulas/hialeah-fl-birthday-doulas-of-south-florida.webp",
+      "description_chars": 480,
+      "costRange": "$900-2400",
+      "costRange_source": "provider site / market estimate"
+    },
+    {
+      "name": "Her Birth Doula",
+      "photo": "/images/doulas/hialeah-fl-the-birth-doula-of-miami-beach.webp",
+      "description_chars": 480,
+      "costRange": "$900-2400",
+      "costRange_source": "provider site / market estimate"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Palmetto General Hospital",
+      "paragraph_chars": 537,
+      "thumbnail": "/images/hialeah-fl-palmetto-general.webp",
+      "nicuLevel": "II",
+      "url": "https://palmettogeneral.org/womens-services/"
+    },
+    {
+      "name": "Orlando Health Bayfront Hospital (Center for Women and Babies)",
+      "paragraph_chars": 478,
+      "thumbnail": "/images/hialeah-fl-bayfront.webp",
+      "nicuLevel": "III",
+      "url": "https://www.orlandohealth.com/facilities/bayfront-hospital/services/maternity-care"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Magnolia Birth House",
+      "url": "https://www.magnoliabirthhouse.com/miami-birth-center"
+    }
+  ],
+  "birthstats": {
+    "dataYear": 2023,
+    "dataSource": "CDC NCHS National Vital Statistics System, Florida state file"
+  }
+}

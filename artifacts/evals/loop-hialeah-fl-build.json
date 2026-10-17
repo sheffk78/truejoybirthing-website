@@ -26,8 +26,44 @@
           "exit": 0
         }
       }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-10-17T12:40:32-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 0
+        },
+        "eval-accuracy.py": {
+          "exit": 1
+        }
+      }
+    },
+    {
+      "attempt": 2,
+      "at": "2026-10-17T12:41:48-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 0
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-10-17T12:42:11-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 0
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
     }
   ],
   "last_verdict": "approved",
-  "last_input_fingerprint": "179e2acae0ec0337"
+  "last_input_fingerprint": "52e174440f3d51a3"
 }

@@ -1,0 +1,70 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "hialeah-fl",
+  "stage": "enrich",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 7,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote explicitly states '121 Doula providers near Hialeah,' which directly supports the claim, and the URL (bornbir.com/hialeah/fl/doula) matches the Bornbir Hialeah doula directory page the quote would plausibly appear on.",
+      "claim": "Bornbir's Hialeah doula directory counts 121 doula providers serving the Hialeah area.",
+      "url": "https://www.bornbir.com/hialeah/fl/doula",
+      "quote": "121 Doula providers near Hialeah. 96 Families requested a doula nearby in the last 90 days."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from a South Florida doula agency's homepage describes a team of birth doulas serving the South Florida area, which matches the claim of a multi-doula agency serving South Florida (Hialeah being within that region).",
+      "claim": "Multi-doula agency serving South Florida including Hialeah area.",
+      "url": "https://birthdaydoulasofsouthflorida.com/index.html",
+      "quote": "We are a team of birth doulas that provide birth, postpartum, and lactation support to families in the South Florida area."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote appears on the Palmetto General Hospital women's services page and directly describes a maternity center offering prenatal-to-postpartum care and advanced labor and delivery services, matching the claim.",
+      "claim": "Palmetto General Hospital in Hialeah runs a Maternal Child Care Center covering prenatal-to-postpartum care and advanced labor and delivery services.",
+      "url": "https://palmettogeneral.org/womens-services/",
+      "quote": "At our Maternity Child Care Center, we offer a wide range of services that caters from prenatal to postpartum care and advanced labor and delivery services."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from the Magnolia Birth House Miami birth center page directly states it is a freestanding midwifery birth center in North Miami Beach, Florida, which matches the claim of a freestanding birth center serving the Hialeah/Miami area.",
+      "claim": "Freestanding birth center serving the Hialeah/Miami area.",
+      "url": "https://www.magnoliabirthhouse.com/miami-birth-center",
+      "quote": "Magnolia Birth House is a freestanding midwifery birth center in North Miami Beach, Florida."
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is a plausible profile title and bio for the bornbir.com/inara-arauz page, and it directly states Inara Arauz is a Birth & Postpartum Doula in Hialeah, FL, matching the claim.",
+      "claim": "Bornbir lists Inara Arauz as a Birth & Postpartum Doula practicing in Hialeah, FL.",
+      "url": "https://www.bornbir.com/inara-arauz",
+      "quote": "Bornbir profile title: \"Inara Arauz - Birth & Postpartum Doula - Hialeah, FL\"; profile bio: \"Hi, I'm Inara \u2014 a certified Birth and Postpartum Doula passionate about supporting families...\""
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the Her Birth Doula homepage and confirms the business provides birth/doula support services, consistent with the claim.",
+      "claim": "Her Birth Doula provides doula services in Hialeah.",
+      "url": "http://www.herbirthdoula.com/",
+      "quote": "Dedicated, compassionate, and highly-communicative, Her Birth Doula provides birth support during the perinatal period."
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from a Bornbir doula profile page whose title identifies Lacretia McNeal as a birth & postpartum doula in Miami, FL, and whose service-area list exactly matches the cities named in the claim.",
+      "claim": "Lacretia McNeal is a birth & postpartum doula serving Miami Beach, Coral Gables, Hialeah, North Miami and Doral.",
+      "url": "https://www.bornbir.com/lacretia-mcneal",
+      "quote": "Bornbir profile service-area list: \"Miami Beach, FL  Coral Gables, FL  Hialeah, FL  North Miami, FL  Doral, FL\"; profile title: \"Lacretia Mcneal - Birth & Postpartum Doula - Miami, FL\"."
+    }
+  ],
+  "checked_at": "2026-10-17T12:58:34-06:00"
+}
