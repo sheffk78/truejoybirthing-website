@@ -1,4 +1,18 @@
 #!/usr/bin/env python3
+# ── Env hygiene (2026-10-20, G67 false-negative root cause) ─────────────────
+# If PYTHONPATH imports site-packages built for a DIFFERENT python version into
+# this interpreter (e.g. py3.14 venv leaking into /usr/bin/python3 3.9), PIL's
+# versioned _imaging extension fails to import and gates silently skip or
+# false-fail. Shed any PYTHONPATH entry that is another python's site-packages.
+import os, sys as _sys
+
+_MAJOR_MINOR = f"{_sys.version_info[0]}.{_sys.version_info[1]}"
+_pp = [p for p in os.environ.get("PYTHONPATH", "").split(os.pathsep) if p]
+_bad = [p for p in _pp if p.endswith(("site-packages", "dist-packages")) and f"python{_MAJOR_MINOR}" not in p and "/venv/lib" in p]
+if _bad:
+    os.environ["PYTHONPATH"] = os.pathsep.join(p for p in _pp if p not in _bad)
+    _sys.path[:] = [p for p in _sys.path if p not in _bad]
+# ────────────────────────────────────────────────────────────────────────────
 """
 TJB Stage Gate Checker — Runs stage-specific preflight gate subsets.
 
