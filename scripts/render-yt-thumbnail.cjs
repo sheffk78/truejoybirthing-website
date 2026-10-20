@@ -93,8 +93,12 @@ function encodeSvgForUrl(filePath) {
   }
   const heroDataUri = fileToDataUri(heroLocalPath);
 
-  // Brand logo — use the heart icon-mark (not the full wordmark)
-  const logoSvgPath = path.resolve(outputDir, 'icon-mark.svg');
+  // Brand logo — official white lockup (icon + script wordmark), verbatim
+  // Illustrator export. 2026-10-20: the icon-only + HTML-text combo rendered a
+  // generic sans 'True Joy Birthing' lookalike; the sanctioned lockup carries
+  // the real script lettering. Falls back to icon-mark if lockup is missing.
+  let logoSvgPath = path.resolve(outputDir, 'brand-lockup-white.svg');
+  if (!fs.existsSync(logoSvgPath)) logoSvgPath = path.resolve(outputDir, 'icon-mark.svg');
   const logoSvgEncoded = encodeSvgForUrl(logoSvgPath);
   const hasLogo = !!logoSvgEncoded;
 
