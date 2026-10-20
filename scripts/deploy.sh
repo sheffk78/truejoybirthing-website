@@ -304,7 +304,11 @@ else
   echo "  → Injected PUBLIC_TJB_CONTROL_KEY into build env (temp .env, cleaned up on exit)."
 fi
 
-DIRTY_NONBLOG=$(git status --porcelain 2>/dev/null | grep -v 'src/content/blog' | wc -l | tr -d ' ')
+# 2026-10-20 fix: grep exits 1 when the tree is CLEAN (no non-blog lines to
+# match), and with `set -o pipefail` that killed the whole deploy mid-build
+# (deploys #8/#9 died silently between the env injection and npm). Guard the
+# grep so an empty match set is a normal result, not a pipeline failure.
+DIRTY_NONBLOG=$(git status --porcelain 2>/dev/null | { grep -v 'src/content/blog' || true; } | wc -l | tr -d ' ')
 if [ "$DIRTY_NONBLOG" != "0" ]; then
   echo "  ⚠ WARNING: $DIRTY_NONBLOG non-blog files are dirty; build compiles the WORKING TREE so their output ships too."
   echo "  → Intended only for in-flight city work whose pages are already expected live. Commit via a gated slug deploy to make git match production."
