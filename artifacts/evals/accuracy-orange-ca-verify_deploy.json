@@ -1,0 +1,46 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "orange-ca",
+  "stage": "verify_deploy",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 4,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly states Jacquelyn Mota is a certified birth and postpartum doula with over 10 years in the Orange County birth community, which matches both the claim and the doula-focused domain ocdoulaandplacenta.com.",
+      "claim": "Jacquelyn Mota is a certified birth and postpartum doula with 10+ years of experience in Orange County.",
+      "url": "https://ocdoulaandplacenta.com/",
+      "quote": "Jacquelyn Mota has worked in the Orange County birth community for over 10 years as a certified birth and postpartum doula."
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from a DoulaMatch profile URL matching Elysabeth Ratto's name and directly states she serves Orange County with a birth fee of $2,500-$3,000, which supports the claim.",
+      "claim": "Elysabeth Ratto serves Orange County and charges $2,500-$3,000 for birth support.",
+      "url": "https://doulamatch.net/profile/37404/elysabeth-jee-in-ratto-cd",
+      "quote": "Elysabeth Ratto serves Orange County within a 30-mile range. Birth fee $2,500-$3,000."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on UCI Health's maternity services page and directly supports the claim that UCI Health provides comprehensive maternity services, consistent with its Orange County location.",
+      "claim": "UCI Health Douglas Hospital provides comprehensive maternity services in Orange County.",
+      "url": "https://www.ucihealth.org/medical-services/specialties/maternity",
+      "quote": "UCI Health offers comprehensive maternity services including labor and delivery, newborn care, and maternal-fetal medicine."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the hospital's own mother-baby unit page on providence.org and explicitly states that Providence St. Joseph Hospital Orange offers labor and delivery services and NICU care, directly supporting the claim.",
+      "claim": "Providence St. Joseph Hospital Orange provides labor and delivery services with NICU care.",
+      "url": "https://www.providence.org/locations/socal/st-joseph-hospital-orange/mother-baby-unit",
+      "quote": "Providence St. Joseph Hospital Orange offers labor and delivery services, NICU care, and postpartum support."
+    }
+  ],
+  "checked_at": "2026-10-20T07:15:17-06:00"
+}

@@ -46,7 +46,7 @@ OVERVIEW_SCALARS = {
     "titleTag", "metaDescription", "heroIntentAnswer",
 }
 OVERVIEW_ALLOW = OVERVIEW_SCALARS | {"birthStats", "nearbyCities"}
-PROSE_FIELDS = {"culture", "heroLocalDetail", "medicaidNote", "insuranceNote"}
+PROSE_FIELDS = {"culture", "heroLocalDetail", "medicaidNote", "insuranceNote", "midwifeInfo"}
 IMAGE_FIELDS = {"heroImage", "supportSceneImage", "supportSceneAlt", "ogImage"}
 
 ARRAY_LABELS = {  # chunk key -> cities.ts field label (file uses unquoted labels)
@@ -190,6 +190,7 @@ def scaffold_entry(chunks: dict) -> str:
         ("birthCenterDetails", places.get("birthCenterDetails", [])),
         ("medicaidNote", prose["medicaidNote"]),
         ("insuranceNote", prose["insuranceNote"]),
+        ("midwifeInfo", prose.get("midwifeInfo")) if prose.get("midwifeInfo") else None,
         ("faqs", faqs),
     ]
     if ov.get("birthStats"):
@@ -213,7 +214,13 @@ def apply_to_entry(entry: str, chunk_key: str, label: str, value) -> str:
     if not ab:
         raise SystemExit(f"entry lacks a `{label}:` block; scaffold first")
     s, e = ab
-    return entry[:s] + f"{label}: " + ts_pretty(value, 2) + entry[e:]
+    # 2026-10-18 LABEL-DOUBLE FIX: find_block returns the span STARTING AT THE
+    # OPENING BRACKET ("localDoulas: [...]" → s points at '['), so entry[:s]
+    # already ends with `localDoulas: `. Re-emitting the label produced
+    # `localDoulas: localDoulas: [` and broke TS compilation for every
+    # update-existing-entry merge (fort-lauderdale-fl 10/18, validator err at
+    # cities.ts:13342). Replace the VALUE ONLY — the prefix keeps the label.
+    return entry[:s] + ts_pretty(value, 2) + entry[e:]
 
 
 def main():
@@ -268,6 +275,14 @@ def main():
             if m:
                 entry = entry[:m.start()] + m.group(1) + ts_pretty(val) + entry[m.end():]
                 ch.append(field)
+            elif field in PROSE_FIELDS and isinstance(val, str) and val:
+                # field absent from entry (older scaffold): insert after the
+                # insuranceNote block if present, else after heroLocalDetail.
+                anchor = find_block(entry, "insuranceNote:") or find_block(entry, "heroLocalDetail:")
+                if anchor:
+                    _, a_end = anchor
+                    entry = entry[:a_end] + ',\n    ' + field + ': ' + ts_pretty(val) + entry[a_end:]
+                    ch.append(field)
         new_entry = entry
         mode = "updated existing entry"
     else:
@@ -287,8 +302,38 @@ def main():
         close = src.rfind("};", 0, i)
         if close == -1:
             raise SystemExit("could not locate cities object close brace")
-        ins = new_entry.rstrip() + "\n" if src[close - 1] == "\n" else "\n" + new_entry.rstrip() + "\n"
-        out = src[:close] + ins.rstrip() + "\n" + src[close:]
+        # BUGFIX (2026-10-19): when inserting a NEW entry before `};`, the
+        # preceding entry ends with `}` but NO comma (TS object literal commas
+        # are only required between entries). Without a comma, esbuild fails
+        # with "Expected } but found <slug>" (orange-ca 10/19). Strip trailing
+        # whitespace from the prefix, append a comma if the last non-whitespace
+        # character is `}`, then emit the new entry + newline.
+        prefix = src[:close].rstrip()
+        if prefix.endswith("}"):
+            prefix += ","
+        ins = "\n" + new_entry.rstrip() + "\n"
+        out = prefix + ins + src[close:]
+
+    # Syntax regression gate: run esbuild on the merged output before writing.
+    # A broken insert must NEVER report exit 0 (orange-ca 10/19: merge exited
+    # 0, validation crashed downstream). esbuild --loader=ts parses only;
+    # no bundling = fast and safe.
+    import tempfile, subprocess
+    with tempfile.NamedTemporaryFile(mode="w+", suffix=".ts", delete=False) as tf:
+        tf.write(out)
+        tf.flush()
+        tmp = tf.name
+    try:
+        esb = subprocess.run(
+            ["npx", "esbuild", tmp],
+            cwd=REPO, capture_output=True, text=True, timeout=60
+        )
+        if esb.returncode != 0:
+            err = (esb.stderr or esb.stdout or "esbuild parse error").strip()[:400]
+            raise SystemExit(f"SYNTAX_CHECK_FAIL: cities.ts merge broke TS syntax — {err}")
+    finally:
+        import os
+        os.unlink(tmp)
 
     # Sanity: braces/brackets stay internally balanced (a scaffold legitimately
     # ADDs pairs for the new entry, so compare open vs close inside each file,

@@ -1,24 +1,36 @@
 {
   "slug": "orange-ca",
-  "checked_at": "2026-10-20T13:07:06Z",
+  "checked_at": "2026-10-20T13:11:47Z",
   "verdicts": [
     {
-      "crop": "orange-ca-birth-doula-hero-v1.webp",
+      "crop": "orange-ca-hero-fig0.png",
       "verdict": "pass",
       "defects": [],
-      "note": "real photographic style, pregnant woman on Old Towne Orange Plaza, brick storefronts+The Filling Station awning legible, golden hour; no anatomy/object defects"
+      "note": "no people in crop - brick facade + red awning (detector blob false positive); no anatomy defects"
     },
     {
-      "crop": "orange-ca-birth-doula-support-v2.webp",
+      "crop": "orange-ca-hero-fig1.png",
       "verdict": "pass",
       "defects": [],
-      "note": "real photographic style, pregnant mom + doula on bench in orange grove, mom hands on belly, no fused objects/anatomy defects"
+      "note": "no people in crop - storefront + FILLING STATION awning (false blob); no anatomy defects"
     },
     {
-      "crop": "og-city-orange-ca.webp",
+      "crop": "orange-ca-hero-fig2.png",
       "verdict": "pass",
       "defects": [],
-      "note": "Pattern B card: branded left panel + illustrative right panel, no watermark, logo-mono reused (not generated)"
+      "note": "distant pedestrians in deep bokeh; limb counts normal, no extra/fused/warped anatomy apparent; primary subject is the crisp pregnant woman in foreground"
+    },
+    {
+      "crop": "orange-ca-support-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "exactly 2 adults (pregnant mom + doula in lavender cardigan) on bench in orange grove; all visible hands 5 digits, no fusing, faces well-formed"
+    },
+    {
+      "crop": "orange-ca-og-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "right panel = photographic crop of hero; no defects; left text panel cropped out, not garbled"
     }
   ],
   "prior_breach": "10/19 watercolor images archived to /Volumes/RENDER DISK/archive/2026-10-20-orange-ca-image-regen/"

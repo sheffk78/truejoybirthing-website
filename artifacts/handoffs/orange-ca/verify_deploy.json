@@ -1,8 +1,8 @@
 {
   "slug": "orange-ca",
   "stage": "verify_deploy",
-  "produced_at": null,
-  "worker_model": null,
+  "produced_at": "2026-10-20T13:15:22Z",
+  "worker_model": "glm-5.3-flash:cloud (Kit direct verify_deploy execution)",
   "notes": "",
   "sources": [
     {
@@ -30,10 +30,10 @@
       "claim": "Providence St. Joseph Hospital Orange provides labor and delivery services with NICU care."
     }
   ],
-  "preflight_exit": null,
-  "deploy_status": null,
-  "live_http": null,
-  "vision_verdict_file": null,
+  "preflight_exit": 0,
+  "deploy_status": "SUCCESS",
+  "live_http": 200,
+  "vision_verdict_file": "artifacts/gates/vision/orange-ca.json",
   "image_remediation": {
     "hero": "regenerated real photo Old Towne Orange Plaza 116744B<=120KB IPTC",
     "support": "regenerated real photo mom+doula orange grove IPTC",
