@@ -13362,7 +13362,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
         credential: "Certified Birth & Postpartum Doula",
         practice: "Hummingbird Birth",
         url: "https://hummingbirdbirthing.com/",
-        photo: "/images/doulas/amber-marie-hummingbird.webp",
+        photo: "",
         description: "Amber Marie is a certified birth and postpartum doula in South Florida, serving Miami, Fort Lauderdale, Boca Raton and surrounding areas. With more than 20 years walking alongside families through birth, postpartum and the full arc of early parenthood, she's certified by ProDoula and offers you presence at every step.",
         services: [
           "Birth Doula",
@@ -13381,7 +13381,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
         credential: "Certified Doula, Birth Assistant & Photographer",
         practice: "zenmamalove",
         url: "https://zenmamalove.com/",
-        photo: "/images/doulas/martha-zenmamalove.webp",
+        photo: "",
         description: "Martha is a birth worker, not simply a photographer \u2014 a certified doula and birth assistant serving Fort Lauderdale, Boca Raton, Broward County, Delray Beach and Parkland. If you want documentary photos of your birth plus hands-on labor support from the same person, she's the call.",
         services: [
           "Birth Doula",
@@ -13400,7 +13400,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
         credential: "Birth Doula",
         practice: "A Serene Birth",
         url: "https://serenegato.com/doula-services/",
-        photo: "/images/doulas/serene-gato-aserenebirth.webp",
+        photo: "",
         description: "Serene is an experienced birth doula serving all of Broward County and beyond. She helps expectant parents before, during and immediately following birth with physical support, emotional support, resources and information, and advocacy with your medical team.",
         services: [
           "Birth Doula",
