@@ -120,9 +120,11 @@
   }
   /* Official white lockup (icon + script wordmark) — verbatim brand asset.
      2026-10-20: replaced HTML-rendered generic 'True Joy Birthing' text with
-     the sanctioned Illustrator lockup; the sans-serif label was a lookalike. */
+     the sanctioned Illustrator lockup; the sans-serif label was a lookalike.
+     2026-10-20 (Jeff review): scaled up — 26px was too small to read at
+     thumbnail size; 40px keeps the lockup legible without crowding. */
   .brand svg {
-    height: 26px;
+    height: 40px;
     width: auto;
   }
 
@@ -219,7 +221,7 @@
       // Force all SVG fills to white
       const svgEl = container.querySelector('svg');
       if (svgEl) {
-        svgEl.style.height = '26px';
+        svgEl.style.height = '40px';
         svgEl.style.width = 'auto';
         svgEl.style.aspectRatio = '579.12 / 256.08';
         svgEl.querySelectorAll('*').forEach(el => {

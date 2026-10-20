@@ -13,19 +13,19 @@
     },
     "video_file_exists": {
       "status": "PASS",
-      "detail": "local mp4 cleaned post-upload (expected; YouTube upload + live embed verified)"
+      "detail": "video file 19.5MB >10MB"
     },
     "youtube_upload": {
       "status": "PASS",
-      "detail": "videoId 03e4Fxto42Q present in video-embeds.ts"
+      "detail": "videoId pif78LKwIIA present in video-embeds.ts"
     },
     "youtube_thumbnail": {
       "status": "PASS",
-      "detail": "thumbnail present locally (794KB) and YouTube returns 112KB"
+      "detail": "thumbnail present locally (782KB) and YouTube returns 110KB"
     },
     "video_embedded": {
       "status": "PASS",
-      "detail": "embed found (vid 03e4Fxto42Q) on live page"
+      "detail": "embed found (vid pif78LKwIIA) on live page"
     },
     "videoobject_schema": {
       "status": "PASS",

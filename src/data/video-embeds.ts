@@ -2064,7 +2064,7 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
   },
 
   "pomona-ca": {
-    videoId: "pif78LKwIIA",
+    videoId: "y82ozJu5CZ0",
     title: "Pomona, California Doula & Birth Plan Guide",
     description: "Watch the full Pomona, California Doula & Birth Plan Guide — all in about 2:44.",
     duration: 164,
