@@ -3,7 +3,7 @@
   "stage": "video_outreach",
   "produced_at": "2026-10-10T19:05:00Z",
   "worker_model": "hermes-cli/glm-5.3-flash (ollama-cloud)",
-  "notes": "Video pipeline completed through render + stills. YouTube upload hard-blocked: remotion/.youtube-oauth/token.json was truncated to 0 bytes on 2026-10-09 21:10 and the backup refresh token in ~/.hermes/secrets/google_ai_youtube.env is revoked (invalid_grant on both Google clients); ~/.hermes/google_token.json refreshes but carries Workspace scopes only (no youtube.upload). Re-auth requires a one-time browser OAuth consent (scripts/youtube-auth-setup.py) that only the human can complete. Remaining after upload: set videoId in video-embeds.ts + VideoObject metadata, deploy, verify live embed, thumbnail upload (out/yt-thumb-pasadena-ca.png ready), contract re-validate to contract_valid:true. Outreach truthfully 2/3 first-touches SENT 2026-10-02 (the historical 'send failed' record was wrong — the pytz fix landed and messages went out; duplicate re-attempts on 10-03/10-10 were correctly blocked by recipient_history_gate).",
+  "notes": "Milestone progress 2026-10-20T16:33:09Z: OAuth FIXED (token.json regenerated Oct 17, refresh OK against channel UCfXgNjzycfboUKVAC-eqabw). Scene data rebuilt: 11 scenes (hook->skyline hero matching cities.ts, 3x tjb_provider_portrait w/ per-provider photos from cities.ts localDoulas, full-state-name narration 'California Medicaid', spoken state 'California' in hook/overview). TTS: Voxtral voice 331c27cd (Shelbi) regenerated 02_overview, 07_insurance, 04_providers_1/2/3; master rebuilt 188.27s EXACT scene-sum match. Pre-render gate: ALL GATES PASSED exit 0 (G7 G7b green after fresh capture-provider-scroll.py recapture w/ manifest, 3 providers verified). Stills + render + upload + thumbnail + embed + deploy + outreach verify remain. | STILLS: 11 fresh mid-scene stills captured (out/pasadena-0*-fNNNN.png), all non-zero, new scene structure incl. 3 provider portraits.",
   "sources": [
     {
       "claim": "Nancy Connelly is a DONA-certified birth doula based in Pasadena, attending births since 2000 with 635+ births attended; her site exposes no email address (contact form only), so she was never emailable per the census gate.",
@@ -16,7 +16,7 @@
       "quote": "My name is Brighid (bridge-id) Quinn. I live in Highland Park, Los Angeles, and serve the greater surrounding area as a birth and postpartum doula with pragmatic, calm care."
     },
     {
-      "claim": "The quinndoula.com contact section publishes quinndoula@gmail.com as its contact email — the same address first-touched for slug pasadena-ca on 2026-10-02 per the TJB send log.",
+      "claim": "The quinndoula.com contact section publishes quinndoula@gmail.com as its contact email \u2014 the same address first-touched for slug pasadena-ca on 2026-10-02 per the TJB send log.",
       "url": "https://www.quinndoula.com/",
       "quote": "## CONTACT quinndoula@gmail.com"
     },
@@ -53,5 +53,8 @@
       "message_id": "vps-20261002172901784472",
       "detail": "First-touch sent 2026-10-02T17:28:50Z, ZeroBounce-verified mailbox. Send-log row at line 1442. Re-send attempts 2026-10-03 and 2026-10-10 correctly blocked by recipient_history_gate."
     }
+  ],
+  "next_worker_todo": [
+    "render + verify + upload + thumbnail + embed + deploy + outreach + contract"
   ]
 }

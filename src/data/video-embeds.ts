@@ -2098,4 +2098,11 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT3M25S",
     uploadDate: "2026-10-17T00:00:00-06:00",
   },
+  "orange-ca": {
+    videoId: "PENDING",
+    title: "Orange Doula & Birth Plan Guide",
+    description: "Watch the full city guide — doulas, hospitals, costs, and more, all in under 5 minutes.",
+    duration: "PT3M00S",
+    uploadDate: "2026-06-20T00:00:00-06:00",
+  },
 };
