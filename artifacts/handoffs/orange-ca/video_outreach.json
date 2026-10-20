@@ -1,20 +1,77 @@
 {
   "slug": "orange-ca",
   "stage": "video_outreach",
-  "produced_at": null,
-  "worker_model": null,
-  "notes": "",
-  "sources": [],
-  "video_file": null,
-  "video_mb": null,
-  "youtube_id": null,
-  "thumbnail_path": null,
-  "embed_verified": null,
+  "produced_at": "2026-10-20T18:42:59Z",
+  "worker_model": "glm-5.3-flash:cloud (Kit direct video_outreach execution)",
+  "notes": "Fresh render per R31 (no status check): scene data from cities.ts orange-ca facts (8 providers -> tjb_provider_scroll, Medi-Cal wording fixed, full state name), Mistral Voxtral TTS Shelbi voice (master 143.0s, drift 0.14s), pre-render gate PASS, render 19.9MB 143.3s, YT upload public+embeddable, thumbnail uploaded, playlists: California Birth Guides + All City Birth Guides. Embed hnLkiJBBeoo in video-embeds.ts (true duration PT2M23S), build+deploy PUSHED, live page serves VideoObject + videoId (curl-verified). Outreach via tjb-batch-outreach.py: 1 sent (jaymie@resolutebirth.com), 7 no-email (5 no published email, 1 wixpress junk filtered, 1 directory-only) - status outreach_sent_or_blocked OK.",
+  "video_file": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/video/remotion/out/orange-ca-city-guide.mp4",
+  "video_mb": 19.9,
+  "youtube_id": "hnLkiJBBeoo",
+  "thumbnail_path": "public/images/yt-thumb-orange-ca.webp",
+  "embed_verified": true,
   "outreach": [
     {
-      "provider": null,
-      "status": null,
+      "provider": "Resolute Birth (Jaymie)",
+      "status": "sent",
+      "message_id": "jaymie@resolutebirth.com first-touch 2026-10-20 (send log row)",
+      "to": "jaymie@resolutebirth.com"
+    },
+    {
+      "provider": "Jacquelyn Mota",
+      "status": "no_email_found",
       "message_id": null
+    },
+    {
+      "provider": "Elysabeth Jee-in Ratto",
+      "status": "no_email_found",
+      "message_id": null
+    },
+    {
+      "provider": "Lauren Proano",
+      "status": "no_email_found",
+      "message_id": null
+    },
+    {
+      "provider": "Pam Serna",
+      "status": "no_email_found",
+      "message_id": null
+    },
+    {
+      "provider": "Tami Jervis",
+      "status": "no_email_found",
+      "message_id": null
+    },
+    {
+      "provider": "Labor of Love Birth Services",
+      "status": "no_valid_email",
+      "message_id": "only address = wixpress error relay (filtered 10/20)"
+    },
+    {
+      "provider": "Birth Your Way Doulas",
+      "status": "no_email_found",
+      "message_id": null
+    }
+  ],
+  "sources": [
+    {
+      "claim": "Video uploaded and embedded",
+      "url": "https://youtu.be/hnLkiJBBeoo",
+      "evidence": "upload log 100% complete; video-embeds.ts videoId updated; live page curl shows hnLkiJBBeoo + VideoObject"
+    },
+    {
+      "claim": "Thumbnail uploaded",
+      "url": "file://public/images/yt-thumb-orange-ca.webp",
+      "evidence": "upload log: thumbnail uploaded; deploy gate vision crop pass"
+    },
+    {
+      "claim": "First-touch sends on record",
+      "url": "file://~/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "evidence": "1 sent first-touch row slug=orange-ca (jaymie@resolutebirth.com) after content gate pass"
+    },
+    {
+      "claim": "Pre-render gate passed",
+      "url": "file://video/remotion/scripts/pre-render-gate.sh",
+      "evidence": "gate PASS before render (G1-G8 incl. screenshot reality manifest)"
     }
   ]
 }
