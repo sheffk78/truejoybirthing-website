@@ -15,6 +15,24 @@
 # =============================================================================
 set -euo pipefail
 
+# ── Env hygiene (2026-10-20): hermes kernel exports PYTHONPATH pointing at a py3.14 venv.
+# Under /usr/bin/python3 (3.9) that venv's PIL/_imaging is binary-incompatible → check-og/hero
+# gates crash → false deploy failures. Shed foreign site-packages from PYTHONPATH for children.
+_PYV=$(/usr/bin/python3 -c 'import sys; print(f"{sys.version_info[0]}.{sys.version_info[1]}")' 2>/dev/null || echo "3.9")
+if [ -n "${PYTHONPATH:-}" ]; then
+  _clean=""
+  IFS=':' read -ra _pp <<< "$PYTHONPATH"
+  for _p in "${_pp[@]}"; do
+    [ -z "$_p" ] && continue
+    case "$_p" in
+      */python"$_PYV"/site-packages|*/python"$_PYV") _clean="${_clean:+$_clean:}$_p" ;;
+      *site-packages*) ;;  # drop other-python-version site-packages
+      *) _clean="${_clean:+$_clean:}$_p" ;;
+    esac
+  done
+  export PYTHONPATH="$_clean"
+fi
+
 PROJECT_DIR="/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website"
 SLUG="${1:-}"
 FAILED=0

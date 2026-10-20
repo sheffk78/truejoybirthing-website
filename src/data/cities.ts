@@ -13442,7 +13442,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
       }
     ],
     birthCenterDetails: [],
-    medicaidNote: "Florida Medicaid (Family Plus/CHIP) covers doula services for eligible members \u2014 FL was one of the earlier states to add doulas to its Medicaid provider directory. Call 1-800-342-3526 (Access Florida) or check your plan to confirm current coverage before booking. If you're on a commercial plan, many FL plans cover part of the doula package \u2014 worth one call to the number on your card.",
+    medicaidNote: "Yes — Florida Medicaid (Family Plus/CHIP) covers doula services for eligible members \u2014 FL was one of the earlier states to add doulas to its Medicaid provider directory. Call 1-800-342-3526 (Access Florida) or check your plan to confirm current coverage before booking. If you're on a commercial plan, many FL plans cover part of the doula package \u2014 worth one call to the number on your card.",
     insuranceNote: "Whether your FL plan covers doula services depends on the carrier \u2014 Aetna, Humana, Cigna and local plans all differ, and some cover doulas with a physician referral. Call the member-services number on your insurance card and ask specifically: 'Does my plan cover doula services with a referral?' If it does, get the authorization number in writing before your birth.",
     faqs: [
       {
