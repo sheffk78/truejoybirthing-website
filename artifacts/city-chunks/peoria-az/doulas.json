@@ -1,0 +1,28 @@
+{
+ "localDoulas": [
+  {
+   "name": "Emily Arena",
+   "credential": "Certified birth doula, CD(DONA)",
+   "practice": "Sweet Pea Doula Services",
+   "url": "https://sweetpeabirthdoula.com/",
+   "photo": "/images/doulas/peoria-az-emily-arena.webp",
+   "description": "Emily Arena runs Sweet Pea Doula Services from her home base in Peoria as a DONA-certified birth doula. Her work covers the whole arc: prenatal education and labor preparation, hands-on support during labor, and postpartum guidance and emotional care once the baby is home. She is a one-woman practice that keeps its calendar small and its response time fast - the kind of doula you text and get a real answer from. She has been building out local classes and community workshops for expectant families, so new clients can plug into a room of other Peoria parents while they prepare."
+  },
+  {
+   "name": "Samantha Zillweger",
+   "credential": "Birth doula, certified through the International Doula Institute",
+   "practice": "Samantha Zillweger, independent practice",
+   "url": "https://www.bornbir.com/samantha-zillweger",
+   "photo": "/images/doulas/peoria-az-samantha-zillweger.webp",
+   "description": "Samantha Zillweger is a Peoria-based birth doula who came to the work after her own home birth in 2020 and certified with the International Doula Institute in 2024. Her package is straightforward: two prenatal visits covering birth preferences, comfort measures and the 3 Rs of labor, continuous support on delivery day, and a postpartum visit for breastfeeding basics and newborn care. She publishes flat-rate pricing instead of making families negotiate, and she is explicit about her style - calm, faith-centered support that treats birth as a family event rather than a medical procedure."
+  },
+  {
+   "name": "Modern Mama Doula",
+   "credential": "Certified birth & postpartum doula team, Lamaze-certified childbirth educators",
+   "practice": "Modern Mama Doula and Placenta Encapsulation Services",
+   "url": "http://www.modernmamadoula.com/",
+   "photo": "/images/doulas/peoria-az-modern-mama.webp",
+   "description": "Modern Mama is a valley doula team whose service list names Peoria directly alongside Glendale and Surprise, making them one of the few multi-doula practices that formally covers the northwest valley. The team brings certified birth and postpartum doulas, Spinning Babies-trained labor support, Lamaze-certified childbirth classes, placenta encapsulation and birth photography under one roof. Phoenix Magazine has named them Best Doula multiple years running. For Peoria families who want team backup - a guaranteed doula at every birth even when the primary is at another delivery - they are the practice built for it."
+  }
+ ]
+}

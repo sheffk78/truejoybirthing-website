@@ -1,0 +1,62 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "peoria-az",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 6,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from the matching domain (sweetpeabirthdoula.com) names Emily Arena with the DONA certification credential (CD(DONA)) operating Sweet Pea Doula Services in Peoria, AZ, which directly supports the claim.",
+      "claim": "Emily Arena operates Sweet Pea Doula Services as a certified birth doula based in Peoria",
+      "url": "https://sweetpeabirthdoula.com/",
+      "quote": "Sweet Pea Doula Services, Emily Arena CD(DONA) Peoria, AZ, USA sweetpeabirthdoulaservices@gmail.com 530-210-4939"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly matches the claim's specifics (name, Peoria AZ location, International Doula Institute certification in 2024, $1200 package) and is plausible content for a doula profile page at bornbir.com/samantha-zillweger.",
+      "claim": "Samantha Zillweger is a birth doula based in Peoria, certified with the International Doula Institute in 2024, package priced $1,200",
+      "url": "https://www.bornbir.com/samantha-zillweger",
+      "quote": "Samantha Zillweger Birth Doula in Peoria, AZ ... I completed my doula certification with the International Doula Institute in 2024 ... I offer two prenatal appointments, continuous labor support, and "
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from modernmamadoula.com explicitly lists Peoria among the service areas for their birth, placenta encapsulation, and postpartum doula services, directly supporting the claim.",
+      "claim": "Modern Mama Doula is a doula team whose services explicitly include Peoria",
+      "url": "http://www.modernmamadoula.com/",
+      "quote": "Birth Doula, Placenta Encapsulation and Postpartum Doula services available in Phoenix, Mesa, Gilbert, Surprise, Glendale, Scottsdale, Chandler, Peoria and surrounding areas."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote from a birth center accreditation site lists Canyon Midwifery at 13470 N 83rd Ave, Suite 300, Peoria, AZ with 'Accredited Since: March 2024', directly matching the claim's address, city, and accreditation date.",
+      "claim": "Canyon Midwifery operates an accredited freestanding birth center in Peoria at 13470 N 83rd Ave Suite 300, accredited since March 2024",
+      "url": "https://birthcenteraccreditation.org/2024/01/17/canyon-midwifery/",
+      "quote": "Canyon Midwifery Address: 13470 N 83rd Ave, Suite 300 Peoria, AZ 85381 Phone: 623-824-3660 ... Accredited Since: March 2024"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the Banner Health maternity page for Banner Del E. Webb Medical Center in Sun City West, including the correct address, and explicitly states that hydrotherapy tubs and nitrous oxide are available in all Labor and Delivery rooms, directly supporting the claim.",
+      "claim": "Banner Del E. Webb Medical Center (14502 W Meeker Blvd, Sun City West) runs a complete maternity program with hydrotherapy tubs and nitrous oxide in all L&D rooms",
+      "url": "https://www.bannerhealth.com/locations/sun-city-west/banner-del-e-webb-medical-center/maternity",
+      "quote": "Banner Del E Webb Medical Center 14502 W Meeker Blvd Sun City West, AZ 85375 (623) 524-4000 ... Hydrotherapy tubs and nitrous oxide are available in all of our Labor and Delivery rooms ... Private lab"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote matches the exact address and phone for Abrazo Arrowhead Campus on its official Abrazo Health location page and explicitly states the hospital offers women's services, making it plausible for that URL and supportive of the claim (Glendale is adjacent to Peoria).",
+      "claim": "Abrazo Arrowhead Campus (18701 N. 67th Ave., Glendale) provides women's services and delivers for Peoria-area families",
+      "url": "https://www.abrazohealth.com/locations/detail/abrazo-arrowhead-campus",
+      "quote": "Abrazo Arrowhead Campus (623) 561-1000 18701 N. 67th Ave., Glendale, AZ 85308 ... Our hospital is a leader in surgical robotics, cardiovascular care and women's services."
+    }
+  ],
+  "checked_at": "2026-10-20T16:35:31-06:00"
+}

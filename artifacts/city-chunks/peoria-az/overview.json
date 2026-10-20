@@ -1,0 +1,16 @@
+{
+ "city": "Peoria",
+ "state": "AZ",
+ "slug": "peoria-az",
+ "costLow": 900,
+ "costHigh": 2000,
+ "lat": 33.5806,
+ "lng": -112.2374,
+ "publishedDate": "2026-10-20",
+ "nearbyCities": [
+  "glendale-az",
+  "phoenix-az",
+  "surprise-az",
+  "avondale-az"
+ ]
+}
