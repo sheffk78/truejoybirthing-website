@@ -13345,7 +13345,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
         credential: "Birth Doula",
         practice: "MotheRetreat",
         url: "https://motheretreat.com/birth-doula-fort-lauderdale/",
-        photo: "/images/doulas/motheretreat.webp",
+        photo: "",
         description: "MotheRetreat provides birth doula support to families across Fort Lauderdale and the Broward coast, with continuous one-on-one support through labor and close coordination with the medical team \u2014 whether you're delivering at Broward Health Medical Center, Holy Cross Health, or Broward Health Imperial Point.",
         services: [
           "Birth Doula"
