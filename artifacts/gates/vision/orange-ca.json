@@ -31,6 +31,12 @@
       "verdict": "pass",
       "defects": [],
       "note": "right panel = photographic crop of hero; no defects; left text panel cropped out, not garbled"
+    },
+    {
+      "crop": "orange-ca-thumb-fig0.png",
+      "verdict": "pass",
+      "defects": [],
+      "note": "yt-thumb right half: photographic golden-hour Plaza scene, pregnant woman hands-on-bump left third, autumn trees + fountain, no anatomy defects, no garbled text, professional thumbnail quality"
     }
   ],
   "prior_breach": "10/19 watercolor images archived to /Volumes/RENDER DISK/archive/2026-10-20-orange-ca-image-regen/"
