@@ -1,5 +1,5 @@
 ---
-title: "How Prenatal Stress Affects Your Breastfeeding Goals"
+title: "Prenatal Stress and Breastfeeding: What Helps"
 date: "2026-10-14"
 slug: "prenatal-stress-breastfeeding-self-efficacy"
 author: "Shelbi Kohler"

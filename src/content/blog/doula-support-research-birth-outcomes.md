@@ -1,5 +1,5 @@
 ---
-title: "What Research Says About Doula Support and Birth Outcomes"
+title: "Doula Support: What the Research Says About Birth Outcomes"
 date: "2026-10-08"
 slug: "doula-support-research-birth-outcomes"
 author: "Shelbi Kohler"

@@ -13508,6 +13508,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
     ]
   },
   "saint-petersburg-fl": {
+    titleTag: "Saint Petersburg FL Doulas: Costs & Medicaid",
     enableBlogResources: true,
     publishedDate: "2025-10-17",
     city: "Saint Petersburg",

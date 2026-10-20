@@ -1,5 +1,5 @@
 ---
-title: "Planning a Home Birth: What the Research Says About Support"
+title: "Planning a Home Birth: What Research Tells Us"
 date: "2026-10-08"
 slug: "planning-home-birth-research-support"
 author: "Shelbi Kohler"

@@ -81,6 +81,13 @@ export default defineConfig({
         if (page.includes('/404') || page.includes('/admin/') || page.includes('/dashboard')) {
           return false;
         }
+        // 2026-10-20 (SiteGuru round): /app/, /invite/, /search/ are app-UX or
+        // auth pages — /search/ + /dashboard carry noindex meta yet were being
+        // sitemapped (indexation conflict). Keep utility URLs out of the sitemap.
+        const utilityPaths = ['/search/', '/app/', '/invite/'];
+        for (const p of utilityPaths) {
+          if (page.endsWith(p)) return false;
+        }
         const excludedPaths = [
           '/birth-support/el-paso-tx/',
           '/birth-support/mt/',

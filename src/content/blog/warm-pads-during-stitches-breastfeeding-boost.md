@@ -1,5 +1,5 @@
 ---
-title: "Warm Pads During Stitches: A Simple Breastfeeding Boost"
+title: "Warm Pads After Birth: Easier Stitches, Better Nursing"
 date: "2026-10-08"
 slug: "warm-pads-during-stitches-breastfeeding-boost"
 author: "Shelbi Kohler"

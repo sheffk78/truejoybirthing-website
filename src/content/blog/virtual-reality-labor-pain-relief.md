@@ -1,5 +1,5 @@
 ---
-title: "How Virtual Reality Can Help Manage Your Labor Pain"
+title: "Virtual Reality for Labor Pain: How It Helps"
 date: "2026-10-08"
 slug: "virtual-reality-labor-pain-relief"
 author: "Shelbi Kohler"

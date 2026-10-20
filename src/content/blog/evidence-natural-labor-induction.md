@@ -1,5 +1,5 @@
 ---
-title: "Evidence on Natural Labor Induction Methods for Birth"
+title: "Natural Labor Induction: What the Evidence Says"
 date: "2026-10-16"
 slug: "evidence-natural-labor-induction"
 author: "Shelbi Kohler"
