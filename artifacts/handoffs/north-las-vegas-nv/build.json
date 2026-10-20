@@ -1,12 +1,100 @@
 {
   "slug": "north-las-vegas-nv",
   "stage": "build",
-  "status": "failed",
-  "worker_model": "hermes-cli",
-  "produced_at": null,
-  "youtube_id": null,
-  "video_file": null,
-  "embed_verified": false,
-  "next_worker_todo": ["Run provider discovery (DuckDuckGo/web) for North Las Vegas: 4+ doulas, 2+ hospitals", "Write cities.ts entry from evidenced findings only", "Generate hero/OG/support images", "Run gates: G3, G5, G13, G4, G37, hospital_count, visual_check, H-HUMANIZE, H-SHAPE"],
-  "notes": "Budget exhausted before discovery. Confirmed: no north-las-vegas-nv entry in src/data/cities.ts (city absent, 180 entries), provider cache has zero las-vegas keys, no prior checkpoints. Zero providers evidenced — failing clean, no fabricated data. Findings: artifacts/build-checkpoints/north-las-vegas-nv/research-findings.json"
+  "produced_at": "2026-10-17T16:28:04",
+  "worker_model": "kimi-k2.6:cloud",
+  "notes": "",
+  "sources": [
+    {
+      "title": "Discover Doulas \u2014 North Las Vegas, NV",
+      "url": "https://www.discoverdoulas.com/nevada/north-las-vegas/",
+      "quote": "Melissa Sandoval: I'm a DONA certified birth doula (CD) and postpartum doula. I provide services in the Las Vegas valley including North and West Las Vegas!"
+    },
+    {
+      "title": "Discover Doulas \u2014 North Las Vegas, NV",
+      "url": "https://www.discoverdoulas.com/nevada/north-las-vegas/",
+      "quote": "Melissa Smith: I've been in the birth work field for 12 years and have spent the last 5 years focused specifically on postpartum care."
+    },
+    {
+      "title": "Discover Doulas \u2014 North Las Vegas, NV",
+      "url": "https://www.discoverdoulas.com/nevada/north-las-vegas/",
+      "quote": "Alicia R.: We are a family-owned business in North Las Vegas that provides doula and lactation services to the community."
+    },
+    {
+      "title": "BornBir \u2014 Carla Parker",
+      "url": "https://www.bornbir.com/carla-parker",
+      "quote": "Bilingual (English and Spanish) DONA-certified birth and postpartum doula with 6 years experience; serviceArea includes North Las Vegas, NV."
+    },
+    {
+      "title": "North Vista Hospital \u2014 Contact",
+      "url": "https://northvistahospital.com/contact-us/",
+      "quote": "1409 E. Lake Mead Blvd. North Las Vegas, NV 89030 \u2014 Prime Healthcare community hospital."
+    },
+    {
+      "title": "MountainView Hospital \u2014 Women's Center",
+      "url": "https://www.mountainviewhospital.org/services/womens-center/",
+      "quote": "In addition to our highly trained team, we also have a state-of-the-art neonatal intensive care unit (NICU)."
+    },
+    {
+      "title": "Dignity Health St. Rose Dominican \u2014 North Las Vegas Campus",
+      "url": "https://www.bizarchive.com/business/dignity-health-st-rose-dominican_2a-702-777-3615",
+      "quote": "Dignity Health - St. Rose Dominican Hospital, North Las Vegas campus, (702) 777-3615; general acute care hospital per NPI 1578007514."
+    },
+    {
+      "title": "Serenity Birth Center \u2014 About Midwifery",
+      "url": "https://www.serenitybirthcenter.com/pages/about-midwifery/",
+      "quote": "At Serenity Birth Center We Offer Free Consultations For Prospective Clients In Las Vegas, NV."
+    }
+  ],
+  "city_fields": {
+    "city": "North Las Vegas",
+    "state": "NV",
+    "lat": 36.1989,
+    "lng": -115.1175,
+    "costLow": 700,
+    "costHigh": 2200,
+    "heroImage": null,
+    "ogImage": null,
+    "supportSceneImage": null,
+    "supportSceneAlt": null,
+    "culture": "North Las Vegas is a growing family-friendly community in the Las Vegas Valley, known for its quieter neighborhoods, proximity to nature, and a strong sense of community among expecting families seeking personal, supportive birth experiences outside the Strip.",
+    "medicaidNote": "Nevada Medicaid covers maternity care, including labor and delivery services. Pregnant residents can apply through Access Nevada or contact Nevada Medicaid directly for enrollment and provider lists."
+  },
+  "faqs_count": 5,
+  "midwife_paragraph_chars": 0,
+  "doulas": [
+    {
+      "name": "Melissa Sandoval",
+      "url": "https://www.discoverdoulas.com/nevada/north-las-vegas/",
+      "photo": "/images/doulas/melissa-sandoval.webp",
+      "description_chars": 0,
+      "costRange": ""
+    },
+    {
+      "name": "Melissa Smith",
+      "url": "https://www.discoverdoulas.com/nevada/north-las-vegas/",
+      "photo": "/images/doulas/melissa-smith.webp",
+      "description_chars": 0,
+      "costRange": ""
+    },
+    {
+      "name": "Alicia R.",
+      "url": "https://www.discoverdoulas.com/nevada/north-las-vegas/",
+      "photo": "/images/doulas/alicia-r.webp",
+      "description_chars": 0,
+      "costRange": ""
+    },
+    {
+      "name": "Carla Parker",
+      "url": "https://www.bornbir.com/carla-parker",
+      "photo": "/images/doulas/carla-parker.webp",
+      "description_chars": 0,
+      "costRange": ""
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": false,
+    "og_watermark_clean": false
+  },
+  "_auto_image_refs": []
 }

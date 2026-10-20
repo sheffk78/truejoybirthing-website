@@ -1,0 +1,78 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "fort-lauderdale-fl",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 8,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the matching MotheRetreat Fort Lauderdale birth doula page and directly supports the claim, naming real Fort Lauderdale hospitals (Broward Health Medical Center, Holy Cross Health, Broward Health Imperial Point) consistent with the service area described.",
+      "claim": "MotheRetreat provides birth doula support to families across Fort Lauderdale and the Broward coast. Whether you plan to deliver at Broward H",
+      "url": "https://motheretreat.com/birth-doula-fort-lauderdale/",
+      "quote": "MotheRetreat provides birth doula support to families across Fort Lauderdale and the Broward coast. Whether you plan to deliver at Broward Health Medical Center, Holy Cross Health, or Broward Health I"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the hummingbirdbirthing.com homepage and directly supports the claim's pricing details: birth support starting at $2,500 with two prenatal visits, four weeks of postpartum phone support, birth plan, and partner coaching, plus overnight newborn care starting at $6,000 f",
+      "claim": "Hummingbird Birth (Amber Marie) publishes birth support starting at $2,500 including two prenatal visits, labor support, four weeks of postpartum phone support, birth plan and partner coaching; overnight postpartum care starts at $6,000 for 8 nights.",
+      "url": "https://hummingbirdbirthing.com/",
+      "quote": "Certified Birth & Postpartum Doula in South Florida. Serving Miami, Fort Lauderdale, Boca Raton & surrounding areas \u2014 with you every step of the way. Birth support: Starting at $2,500 \u2014 2 in-depth pre"
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly matches the claim's text about being a certified Doula and Birth Photographer serving Ft. Lauderdale and surrounding Florida areas, and the zenmamalove.com domain plausibly hosts such birth services content.",
+      "claim": "I AM A BIRTH WORKER, not simply a photographer. I am a certified Doula and Birth Assistant. ... Birth Photographer & Doula serving Ft. Laude",
+      "url": "https://zenmamalove.com/",
+      "quote": "I AM A BIRTH WORKER, not simply a photographer. I am a certified Doula and Birth Assistant. ... Birth Photographer & Doula serving Ft. Lauderdale, Boca Raton, Broward County, Delray Beach & Parkland, "
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from a /doula-services/ page and directly states the claim's exact text about a South Florida birth doula serving Broward County, so the domain subject matter and content both match.",
+      "claim": "Experienced birth doula serving all of Broward County and beyond. As a South Florida birth doula, I help expectant parents before, during, a",
+      "url": "https://serenegato.com/doula-services/",
+      "quote": "Experienced birth doula serving all of Broward County and beyond. As a South Florida birth doula, I help expectant parents before, during, and immediately following birth by providing: Physical Suppor"
+    },
+    {
+      "index": 4,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the Broward Health Medical Center maternity services page and explicitly confirms dedicated labor, delivery and newborn care, 36 private postpartum suites, a 70-bed Level III NICU, and 24-hour in-house specialists including 'certified' staff (cut off, plausibly certified nurse-midw",
+      "claim": "Maternity Place at Broward Health Medical Center provides dedicated labor, delivery and newborn care with 36 private postpartum suites, a 70-bed Level III NICU, and 24-hour in-house specialists including certified nurse-midwives.",
+      "url": "https://www.browardhealth.org/medical-services/womens-health/maternity-services/maternity-place-at-broward-health-medical-center",
+      "quote": "Count on Broward Health Medical Center for dedicated labor, delivery and newborn care for a maternity experience as special as your new little one. 36 Private Postpartum Suites - Each suite features a"
+    },
+    {
+      "index": 5,
+      "verdict": "SUPPORTED",
+      "reason": "The quote appears on the holy-cross.com location page and explicitly states the exact address (4725 N Federal Hwy, Fort Lauderdale, FL 33308) and phone number (954-492-5768) matching the claim.",
+      "claim": "Holy Cross Hospital Fort Lauderdale is located at 4725 N Federal Hwy, Fort Lauderdale, FL 33308, main phone 954-492-5768.",
+      "url": "https://www.holy-cross.com/location/holy-cross-hospital-fl-0",
+      "quote": "Holy Cross Hospital (FL) \u2014 Phone & Address: 4725 N Federal Hwy, Fort Lauderdale, FL 33308. 954-492-5768. Dedicated to excellence in clinical care for every patient."
+    },
+    {
+      "index": 6,
+      "verdict": "SUPPORTED",
+      "reason": "The quote plausibly appears on the Bornbir Fort Lauderdale doula page and directly confirms the 150 doula count and the $300\u2013$1,800 flat / $37\u2013$50 hourly rate ranges cited in the claim.",
+      "claim": "Bornbir's October 2026 directory shows 150 doulas serving Fort Lauderdale with package rates typically $300-$1,800 flat and $37-$50 hourly.",
+      "url": "https://www.bornbir.com/fort-lauderdale/fl/doula",
+      "quote": "150 doula providers near Fort Lauderdale. Packages: flat rate, typical $300\u2013$1,800. Hourly rate: per hour, typical $37\u2013$50. Based on 299 package prices from 104 doulas listed on Bornbir within 150 mil"
+    },
+    {
+      "index": 7,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the hospital's official locations page and directly states the exact address, phone number, and 24/7 availability claimed.",
+      "claim": "Broward Health Medical Center is located at 1600 S. Andrews Ave, Fort Lauderdale, FL 33316, main line 954-355-4400, open 24/7.",
+      "url": "https://www.browardhealth.org/locations/broward-health-medical-center",
+      "quote": "Broward Health Medical Center, 1600 S. Andrews Ave, Fort Lauderdale, FL 33316. Open 24/7. Call: 954-355-4400."
+    }
+  ],
+  "checked_at": "2026-10-18T08:56:55-06:00"
+}

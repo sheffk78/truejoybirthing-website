@@ -1,0 +1,91 @@
+{
+  "slug": "orange-ca",
+  "stage": "build",
+  "mode": "stage_emission",
+  "exit_code": 0,
+  "passed": 12,
+  "failed": 0,
+  "skipped": 8,
+  "results": {
+    "G66": {
+      "status": "PASS",
+      "detail": "no duplicate object keys in any city block"
+    },
+    "S1": {
+      "status": "PASS",
+      "detail": "enableBlogResources = true"
+    },
+    "S2": {
+      "status": "SKIP",
+      "detail": "No local OG image found and cannot verify URL for orange-ca"
+    },
+    "S4": {
+      "status": "PASS",
+      "detail": "Required fields present"
+    },
+    "S6": {
+      "status": "PASS",
+      "detail": "publishedDate = \"2026-10-19\""
+    },
+    "S7": {
+      "status": "PASS",
+      "detail": "medicaidNote starts correctly"
+    },
+    "S8": {
+      "status": "PASS",
+      "detail": "No \"Contact for pricing\""
+    },
+    "S3": {
+      "status": "PASS",
+      "detail": "npm run build exited 0"
+    },
+    "S5": {
+      "status": "PASS",
+      "detail": "No standalone 'Free Birth Plan' in rendered HTML"
+    },
+    "G8": {
+      "status": "SKIP",
+      "detail": "No hero image found for orange-ca"
+    },
+    "G70": {
+      "status": "PASS",
+      "detail": "no doubled Level/NICU badge text"
+    },
+    "G71": {
+      "status": "PASS",
+      "detail": "no skeleton placeholder text"
+    },
+    "G72": {
+      "status": "PASS",
+      "detail": "meta description 151 chars, complete"
+    },
+    "G25": {
+      "status": "SKIP",
+      "detail": "No heroImage field found"
+    },
+    "G29": {
+      "status": "SKIP",
+      "detail": "No OG image found for orange-ca"
+    },
+    "G35": {
+      "status": "SKIP",
+      "detail": "No OG image found for orange-ca"
+    },
+    "G64": {
+      "status": "SKIP",
+      "detail": "G64: No OG image found for orange-ca"
+    },
+    "G65": {
+      "status": "PASS",
+      "detail": "G65: No black letterbox/pillarbox bars on hero or support scene"
+    },
+    "G8a": {
+      "status": "SKIP",
+      "detail": "No hero image found for orange-ca"
+    },
+    "G62": {
+      "status": "SKIP",
+      "detail": "No heroImage found for orange-ca"
+    }
+  }
+}

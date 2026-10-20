@@ -1,0 +1,112 @@
+{
+  "slug": "orange-ca",
+  "stage": "build",
+  "produced_at": "2026-10-19T17:00:00Z",
+  "worker_model": "glm-5.3-flash:cloud (lane scaffold + manual contract fill)",
+  "notes": "",
+  "sources": [
+    {
+      "title": "OC Doula & Placenta Co \u2014 Jacquelyn Mota",
+      "url": "https://ocdoulaandplacenta.com/",
+      "quote": "Jacquelyn Mota has worked in the Orange County birth community for over 10 years as a certified birth and postpartum doula, birth educator, placenta encapsulation specialist, and lactation support counselor.",
+      "claim": "Jacquelyn Mota is a certified birth and postpartum doula with 10+ years of experience in Orange County."
+    },
+    {
+      "title": "Jee-in Birth Services \u2014 Elysabeth Ratto",
+      "url": "https://doulamatch.net/profile/37404/elysabeth-jee-in-ratto-cd",
+      "quote": "Elysabeth Ratto serves Orange County within a 30-mile range. Birth fee $2,500-$3,000; postpartum $50-$65/hr. Accepts Medi-Cal through Health Net and Carrot Insurance.",
+      "claim": "Elysabeth Ratto serves Orange County, charges $2,500-$3,000 for birth support, and accepts Medi-Cal and Carrot Insurance."
+    },
+    {
+      "title": "Labor of Love Birth Services \u2014 Orange County Doula Agency",
+      "url": "https://www.laboroflovebirthservices.com/",
+      "quote": "Labor of Love Birth Services is Orange County's longest-running doula agency - 14 years in practice and more than 1,000 families supported.",
+      "claim": "Labor of Love Birth Services is a 14-year-old Orange County doula agency that has supported over 1,000 families."
+    },
+    {
+      "title": "Orange, CA \u2014 US Census QuickFacts",
+      "url": "https://www.census.gov/quickfacts/fact/table/orangecitycalifornia/POP010220",
+      "quote": "Orange city, California. Population, Census, April 1, 2020 | 139,911 | People",
+      "claim": "Orange, CA had a population of 139,911 according to the 2020 US Census."
+    }
+  ],
+  "city_fields": {
+    "city": "Orange",
+    "state": "CA",
+    "lat": 33.7879,
+    "lng": -117.8531,
+    "costLow": 1800,
+    "costHigh": 3000,
+    "heroImage": null,
+    "ogImage": null,
+    "supportSceneImage": null,
+    "supportSceneAlt": null,
+    "culture": "Orange, CA feels like small-town California folded inside a big county. Old Towne Orange - one of California's largest National Register historic districts - wraps Chapman University around the Plaza traffic circle, and that walkable, family-forward core shapes how expectant parents here plan for birth: close to home, well-fed, well-supported. Uptown coffee shops double as prenatal-appointment waiting rooms, and everything pregnancy-related from Orange County's birth community is a 15-minute drive.",
+    "medicaidNote": "Medi-Cal covers childbirth care in California, and doula coverage depends on your managed-care plan. At least one doula serving Orange, Jee-in Birth Services, accepts Medi-Cal directly through Health Net and is Carrot-approved - start there if you're on Medi-Cal. Others may bill through Carrot Fertility or provide superbills; ask before you book."
+  },
+  "faqs_count": 5,
+  "midwife_paragraph_chars": 0,
+  "doulas": [
+    {
+      "name": "Jacquelyn Mota",
+      "url": "https://ocdoulaandplacenta.com/",
+      "photo": "/images/doulas/orange-ca-jacquelyn-mota.webp",
+      "description_chars": 508,
+      "costRange": "$1,800-$3,000"
+    },
+    {
+      "name": "Elysabeth Jee-in Ratto",
+      "url": "https://doulamatch.net/profile/37404/elysabeth-jee-in-ratto-cd",
+      "photo": "/images/doulas/orange-ca-elysabeth-jee-in-ratto.webp",
+      "description_chars": 494,
+      "costRange": "$2,500-$3,000"
+    },
+    {
+      "name": "Lauren Proano",
+      "url": "https://doulamatch.net/profile/38795/lauren-proano",
+      "photo": "/images/doulas/orange-ca-lauren-proano.webp",
+      "description_chars": 445,
+      "costRange": "$1,850-$3,000"
+    },
+    {
+      "name": "Pam Serna",
+      "url": "https://doulamatch.net/profile/21044/pam-serna",
+      "photo": "/images/doulas/orange-ca-pam-serna.webp",
+      "description_chars": 408,
+      "costRange": "$1,800-$3,000"
+    },
+    {
+      "name": "Tami Jervis",
+      "url": "https://doulamatch.net/profile/30172/tami-jervis",
+      "photo": "/images/doulas/orange-ca-tami-jervis.webp",
+      "description_chars": 370,
+      "costRange": "$2,300-$2,800"
+    },
+    {
+      "name": "Labor of Love Birth Services",
+      "url": "https://www.laboroflovebirthservices.com/",
+      "photo": "/images/doulas/orange-ca-labor-of-love.webp",
+      "description_chars": 454,
+      "costRange": "$1,800-$3,000"
+    },
+    {
+      "name": "Birth Your Way Doulas",
+      "url": "https://www.birthyourwaydoulas.com/",
+      "photo": "/images/doulas/orange-ca-birth-your-way.webp",
+      "description_chars": 404,
+      "costRange": "$1,800-$3,000"
+    },
+    {
+      "name": "Resolute Birth",
+      "url": "https://resolutebirth.com/services",
+      "photo": "/images/doulas/orange-ca-resolute-birth.webp",
+      "description_chars": 468,
+      "costRange": "$1,800-$3,000"
+    }
+  ],
+  "images": {
+    "hero_watermark_clean": true,
+    "og_watermark_clean": true
+  },
+  "_auto_image_refs": []
+}

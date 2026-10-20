@@ -1,0 +1,45 @@
+{
+  "hospitalDetails": [
+    {
+      "name": "North Vista Hospital",
+      "address": "1409 E. Lake Mead Blvd, North Las Vegas, NV 89030",
+      "url": "https://northvistahospital.com/contact-us/",
+      "phone": "",
+      "in_city": true,
+      "paragraph": "North Vista Hospital is a Prime Healthcare community hospital located on Lake Mead Boulevard in North Las Vegas. It provides general acute care and maternity services for families in the northern Las Vegas valley, offering labor and delivery support close to home."
+    },
+    {
+      "name": "MountainView Hospital",
+      "address": "2813 Tenaya Way, Las Vegas, NV 89134",
+      "url": "https://www.mountainviewhospital.org/services/womens-center/",
+      "phone": "",
+      "in_city": true,
+      "paragraph": "MountainView Hospital offers comprehensive women's health services including a state-of-the-art neonatal intensive care unit (NICU) for newborns needing special attention after birth. Its women's center serves families from North Las Vegas and throughout the valley."
+    },
+    {
+      "name": "Dignity Health St. Rose Dominican, North Las Vegas Campus",
+      "address": "1550 W Craig Road, North Las Vegas, NV 89031",
+      "url": "https://www.bizarchive.com/business/dignity-health-st-rose-dominican_2a-702-777-3615",
+      "phone": "(702) 777-3615",
+      "in_city": true,
+      "paragraph": "Dignity Health St. Rose Dominican's North Las Vegas campus is a general acute care hospital on West Craig Road. It provides maternity and pediatric services for North Las Vegas families, backed by the Dignity Health network."
+    },
+    {
+      "name": "Sunrise Hospital \u0026 Medical Center",
+      "address": "3186 S Maryland Pkwy, Las Vegas, NV 89109",
+      "url": "https://www.sunrisehealthinfo.com/locations/sunrise-hospital/specialties/womens-care/labor-and-delivery",
+      "phone": "",
+      "in_city": false,
+      "paragraph": "Sunrise Hospital \u0026 Medical Center in nearby Las Vegas offers comprehensive, personalized maternity services with a Level III NICU. The hospital welcomes doulas and accepts Medicaid, making it a trusted option for North Las Vegas families seeking advanced neonatal care."
+    }
+  ],
+  "birthCenterDetails": [
+    {
+      "name": "Serenity Birth Center",
+      "url": "https://www.serenitybirthcenter.com/pages/about-midwifery/",
+      "address": "",
+      "phone": "",
+      "paragraph": "Serenity Birth Center is a midwife-led birth center serving the Las Vegas valley. It offers free consultations for prospective clients seeking an intimate, low-intervention birth experience with personalized midwifery care."
+    }
+  ]
+}

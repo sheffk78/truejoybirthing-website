@@ -1,0 +1,43 @@
+{
+  "slug": "orange-ca",
+  "stage": "verify_deploy",
+  "produced_at": null,
+  "worker_model": null,
+  "notes": "",
+  "sources": [
+    {
+      "title": "OC Doula & Placenta Co \u2014 Jacquelyn Mota",
+      "url": "https://ocdoulaandplacenta.com/",
+      "quote": "Jacquelyn Mota has worked in the Orange County birth community for over 10 years as a certified birth and postpartum doula.",
+      "claim": "Jacquelyn Mota is a certified birth and postpartum doula with 10+ years of experience in Orange County."
+    },
+    {
+      "title": "Jee-in Birth Services \u2014 Elysabeth Ratto",
+      "url": "https://doulamatch.net/profile/37404/elysabeth-jee-in-ratto-cd",
+      "quote": "Elysabeth Ratto serves Orange County within a 30-mile range. Birth fee $2,500-$3,000.",
+      "claim": "Elysabeth Ratto serves Orange County and charges $2,500-$3,000 for birth support."
+    },
+    {
+      "title": "UCI Health \u2014 Maternity Services",
+      "url": "https://www.ucihealth.org/medical-services/specialties/maternity",
+      "quote": "UCI Health offers comprehensive maternity services including labor and delivery, newborn care, and maternal-fetal medicine.",
+      "claim": "UCI Health Douglas Hospital provides comprehensive maternity services in Orange County."
+    },
+    {
+      "title": "Providence St. Joseph Hospital Orange \u2014 Mother & Baby Unit",
+      "url": "https://www.providence.org/locations/socal/st-joseph-hospital-orange/mother-baby-unit",
+      "quote": "Providence St. Joseph Hospital Orange offers labor and delivery services, NICU care, and postpartum support.",
+      "claim": "Providence St. Joseph Hospital Orange provides labor and delivery services with NICU care."
+    }
+  ],
+  "preflight_exit": null,
+  "deploy_status": null,
+  "live_http": null,
+  "vision_verdict_file": null,
+  "image_remediation": {
+    "hero": "regenerated real photo Old Towne Orange Plaza 116744B<=120KB IPTC",
+    "support": "regenerated real photo mom+doula orange grove IPTC",
+    "og": "re-rendered 78396B<=80KB",
+    "g73": "resolved by fresh photographic generation"
+  }
+}

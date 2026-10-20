@@ -112,5 +112,38 @@
       "source": "https://homebirthpartners.com/directory/arizona/",
       "quote": "An Arizona home birth midwife package runs $4,500 to $8,500... In the Phoenix metro, fees typically run $5,500 to $8,500 for CPMs and CNMs with established practices."
     }
+  },
+  "email_census": [
+    {
+      "name": "Rebecca Turrigiano",
+      "email_or_null": null,
+      "email_source": "none-found"
+    },
+    {
+      "name": "Kay Clinton",
+      "email_or_null": null,
+      "email_source": "none-found"
+    },
+    {
+      "name": "Mother and Earth Doula Services",
+      "email_or_null": "hello@discoverdoulas.com",
+      "email_source": "owned-domain"
+    },
+    {
+      "name": "The Golden Doula Services",
+      "email_or_null": "hello@discoverdoulas.com",
+      "email_source": "owned-domain"
+    },
+    {
+      "name": "Jada I. Rush",
+      "email_or_null": "rahmidwifery@gmail.com",
+      "email_source": "owned-domain"
+    }
+  ],
+  "email_census_backfilled": {
+    "date": "2026-10-09",
+    "method": "live-fetch via tjb-batch-outreach.find_email_from_url",
+    "providers_checked": 5,
+    "owned_domain_emails": 3
   }
 }

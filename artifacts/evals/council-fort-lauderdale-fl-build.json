@@ -1,0 +1,27 @@
+{
+  "slug": "fort-lauderdale-fl",
+  "stage": "build",
+  "mode": "auto",
+  "attempts": 2,
+  "verdict": "UPHELD",
+  "tie": false,
+  "votes": [
+    {
+      "model": "atlas",
+      "vote": "OVERRULED",
+      "reason": "The checker's rejection lacks a specific cited violation of the stage contract or voice standard, and the produced copy accurately reflects the sources and claims provided."
+    },
+    {
+      "model": "glm-5.3-flash",
+      "vote": "UPHELD",
+      "reason": "The copy asserts concrete facts that appear nowhere in the cited sources or claims \u2014 Amber Marie's 'more than 20 years' of experience and 'certified by ProDoula' are absent from the Hummingbird Birth quote and claim, and the culture section misspells Fort Lauderdale's Las Olas as 'Las Ollas' \u2014 so th"
+    },
+    {
+      "model": "bedrock",
+      "vote": "UPHELD",
+      "reason": "The culture field is literally truncated mid-sentence (\"Most families deliver at one \"), which is a concrete, unambiguous incompleteness violation of the build-stage contract requiring a finished, publishable field\u2014not a pedantic nitpick."
+    }
+  ],
+  "unreachable": [],
+  "at": "2026-10-18T08:53:22-06:00"
+}

@@ -1,0 +1,82 @@
+{
+  "localDoulas": [
+    {
+      "name": "Melissa Sandoval",
+      "business": "Doulasophy Birth Doulas",
+      "url": "https://www.discoverdoulas.com/nevada/north-las-vegas/",
+      "phone": "",
+      "email": "",
+      "location": "North Las Vegas, NV",
+      "certifications": [
+        "CD(DONA)",
+        "Postpartum Doula"
+      ],
+      "services": [
+        "Birth Doula",
+        "Postpartum Doula",
+        "Third Trimester Support"
+      ],
+      "bio": "I'm a DONA certified birth doula (CD) and postpartum doula based in North Las Vegas with over 10 years of experience. I provide full doula service from the third trimester through 6 weeks postpartum throughout the Las Vegas valley.",
+      "photo": "/images/doulas/melissa-sandoval.webp",
+      "photoFound": false
+    },
+    {
+      "name": "Melissa Smith",
+      "business": "Placenta Benefits Las Vegas",
+      "url": "https://www.discoverdoulas.com/nevada/north-las-vegas/",
+      "phone": "",
+      "email": "",
+      "location": "North Las Vegas, NV",
+      "certifications": [
+        "CPMA (Placenta Certification)"
+      ],
+      "services": [
+        "Placenta Encapsulation",
+        "Postpartum Care",
+        "Newborn Care"
+      ],
+      "bio": "I've been in the birth work field for 12 years and have spent the last 5 years focused specifically on postpartum care. I'm known as the Placenta Lady, offering placenta encapsulation and postpartum support in North Las Vegas.",
+      "photo": "/images/doulas/melissa-smith.webp",
+      "photoFound": false
+    },
+    {
+      "name": "Alicia R.",
+      "business": "An Intimate Beginning LLC",
+      "url": "https://www.discoverdoulas.com/nevada/north-las-vegas/",
+      "phone": "",
+      "email": "",
+      "location": "North Las Vegas, NV",
+      "certifications": [
+        "CPMA (Placenta Certification)"
+      ],
+      "services": [
+        "Birth Doula",
+        "Postpartum Doula",
+        "Placenta Encapsulation",
+        "Lactation Support"
+      ],
+      "bio": "We are a family-owned business in North Las Vegas that provides doula and lactation services to the community, supporting families through birth, postpartum, and early feeding journeys.",
+      "photo": "/images/doulas/alicia-r.webp",
+      "photoFound": false
+    },
+    {
+      "name": "Carla Parker",
+      "business": "Carla La Doula",
+      "url": "https://www.bornbir.com/carla-parker",
+      "phone": "",
+      "email": "",
+      "location": "North Las Vegas, NV",
+      "certifications": [
+        "CD(DONA)"
+      ],
+      "services": [
+        "Birth Doula",
+        "Postpartum Doula",
+        "Bilingual (English/Spanish)"
+      ],
+      "bio": "Bilingual (English and Spanish) DONA-certified birth and postpartum doula with 6 years of experience serving families in North Las Vegas and the greater Las Vegas valley.",
+      "photo": "/images/doulas/carla-parker.webp",
+      "photoFound": false
+    }
+  ]
+}

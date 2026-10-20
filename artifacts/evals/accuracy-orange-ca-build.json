@@ -1,0 +1,46 @@
+{
+  "eval": "eval-accuracy",
+  "slug": "orange-ca",
+  "stage": "build",
+  "model": "glm-5.3-flash:cloud",
+  "sources_checked": 4,
+  "model_errors": 0,
+  "unsupported": 0,
+  "not_enough_info_pct": 0,
+  "verdict": "approved",
+  "results": [
+    {
+      "index": 0,
+      "verdict": "SUPPORTED",
+      "reason": "The quote directly states Jacquelyn Mota has over 10 years of experience as a certified birth and postpartum doula in Orange County, and the domain ocdoulaandplacenta.com matches both the doula/placenta services and Orange County location mentioned.",
+      "claim": "Jacquelyn Mota is a certified birth and postpartum doula with 10+ years of experience in Orange County.",
+      "url": "https://ocdoulaandplacenta.com/",
+      "quote": "Jacquelyn Mota has worked in the Orange County birth community for over 10 years as a certified birth and postpartum doula, birth educator, placenta encapsulation specialist, and lactation support cou"
+    },
+    {
+      "index": 1,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from a doula directory profile for Elysabeth Ratto and directly states she serves Orange County, charges $2,500-$3,000 for birth support, and accepts Medi-Cal and Carrot Insurance, matching the claim exactly.",
+      "claim": "Elysabeth Ratto serves Orange County, charges $2,500-$3,000 for birth support, and accepts Medi-Cal and Carrot Insurance.",
+      "url": "https://doulamatch.net/profile/37404/elysabeth-jee-in-ratto-cd",
+      "quote": "Elysabeth Ratto serves Orange County within a 30-mile range. Birth fee $2,500-$3,000; postpartum $50-$65/hr. Accepts Medi-Cal through Health Net and Carrot Insurance."
+    },
+    {
+      "index": 2,
+      "verdict": "SUPPORTED",
+      "reason": "The quote comes from the agency's own homepage domain and directly states the 14 years in practice, Orange County location, and 1,000+ families supported claimed.",
+      "claim": "Labor of Love Birth Services is a 14-year-old Orange County doula agency that has supported over 1,000 families.",
+      "url": "https://www.laboroflovebirthservices.com/",
+      "quote": "Labor of Love Birth Services is Orange County's longest-running doula agency - 14 years in practice and more than 1,000 families supported."
+    },
+    {
+      "index": 3,
+      "verdict": "SUPPORTED",
+      "reason": "The quote is from the official Census QuickFacts page for Orange city, California and directly states the April 1, 2020 Census population as 139,911, matching the claim exactly.",
+      "claim": "Orange, CA had a population of 139,911 according to the 2020 US Census.",
+      "url": "https://www.census.gov/quickfacts/fact/table/orangecitycalifornia/POP010220",
+      "quote": "Orange city, California. Population, Census, April 1, 2020 | 139,911 | People"
+    }
+  ],
+  "checked_at": "2026-10-19T17:32:48-06:00"
+}

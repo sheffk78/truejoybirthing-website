@@ -1,0 +1,18 @@
+{
+ "city": "Orange",
+ "state": "CA",
+ "slug": "orange-ca",
+ "costLow": 1800,
+ "costHigh": 3000,
+ "lat": 33.7879,
+ "lng": -117.8531,
+ "publishedDate": "2026-10-19",
+ "nearbyCities": [
+  "anaheim-ca",
+  "garden-grove-ca",
+  "fullerton-ca",
+  "irvine-ca"
+ ],
+ "titleTag": "Birth Support in Orange, CA | Find Doulas, Hospitals & Birth Centers",
+ "metaDescription": "Compare birth doulas, hospitals, and birth centers in Orange, CA - including provider details, costs, insurance guidance, and local community tips."
+}

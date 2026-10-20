@@ -1,27 +1,30 @@
 {
   "hospitalDetails": [
     {
-      "name": "Broward Health Medical Center",
-      "thumbnail": "/images/broward-health-medical-center.webp",
+      "name": "Maternity Place at Broward Health Medical Center",
+      "thumbnail": "/images/hospitals/fort-lauderdale-fl-broward-health.webp",
       "url": "https://www.browardhealth.org/medical-services/womens-health/maternity-services/maternity-place-at-broward-health-medical-center",
-      "address": "251 E Las Olas Blvd, Fort Lauderdale, FL 33301",
+      "address": "1600 S Andrews Ave, Fort Lauderdale, FL 33316",
       "nicuLevel": "III",
       "medicaid": true,
       "lactation": true,
       "privateRooms": true,
       "midwifeFriendly": true,
-      "paragraph": "Broward Health Medical Center anchors Broward County maternity care from downtown Fort Lauderdale, and its Maternity Place program is built around family-centered care: dedicated labor care, postpartum support, and a team that coordinates with doulas and support persons from the moment you check in. It's the county's highest-volume hospital, which means the L&D team moves fast — <a href='/birth-plan-template/'>write your birth preferences down</a> and hand them over at triage so nothing gets lost in the room. If your baby arrives early or small, the Level III NICU is right on site."
+      "paragraph": "Broward Health Medical Center anchors county maternity care from downtown Fort Lauderdale at 1600 S Andrews Ave. Its Maternity Place program is built around family-centered care: 36 private postpartum suites with full-size beds for support partners, three deluxe Empress Suites, and a 70-bed Level III NICU with all private rooms, one of the largest and most advanced in Florida. The in-house team includes obstetricians, neonatologists, anesthesiologists, perinatologists and certified nurse-midwives around the clock, and certified lactation consultants are on staff with a dedicated lactation line. A free breastfeeding support group meets twice monthly in the Lillian Wells Women's Center, and prenatal classes run through Maternity Place. Volume is high here, so the L&D team moves fast: bring a printed one-page birth plan to triage and hand it over early. The <a href='/birth-plan-template/'>free template</a> covers what their triage teams want to see.",
+      "phone": "954-355-4400",
+      "shortDescription": "Broward Health Medical Center anchors Fort Lauderdale maternity care with private suites, 24/7 OB anesthesia and a Level III NICU."
     },
     {
       "name": "Holy Cross Hospital Fort Lauderdale",
-      "thumbnail": "/images/holy-cross-hospital-fort-lauderdale.webp",
+      "thumbnail": "/images/hospitals/fort-lauderdale-fl-holy-cross.webp",
       "url": "https://www.holy-cross.com/location/holy-cross-hospital-fl-0",
-      "address": "2601 N Federal Hwy, Fort Lauderdale, FL 33305",
+      "address": "4725 N Federal Hwy, Fort Lauderdale, FL 33308",
       "nicuLevel": "II",
       "medicaid": true,
       "lactation": true,
       "midwifeFriendly": true,
-      "paragraph": "Holy Cross Hospital on North Federal Highway, in Fort Lauderdale's east end, is the area's other major maternity destination. It handles a solid volume of routine low-risk and higher-complexity births, with an OB team, postpartum unit and NICU under one roof, and its own campus of clinics for prenatal appointments. Doulas are welcome as support persons — confirm the current visitor policy when you tour or call the patient-line number on holy-cross.com before labor day."
+      "paragraph": "Holy Cross Hospital sits at 4725 N Federal Highway in Fort Lauderdale's east end, the area's other major maternity destination. It handles routine low-risk births alongside higher-complexity deliveries, with obstetrics, maternity and NICU services under one roof, and Holy Cross Medical Group clinics across the region for prenatal appointments. The hospital is part of Trinity Health, a national Catholic health system, and its maternity program follows the system's family-centered care emphasis, which in practice means support persons are welcomed at check-in and encouraged to stay engaged through labor. The main hospital line is 954-492-5768. Visitor and support-person policies are updated regularly, so confirm the current doula policy when you tour or by phone before labor day, and ask how they handle overnight support persons in postpartum if your partner plans to stay. If your baby needs special care after delivery, the on-site NICU covers most needs without a transfer across town, which is one less logistics problem on delivery day.",
+      "shortDescription": "Holy Cross Hospital on Federal Highway provides family-centered maternity and Level II NICU care in Fort Lauderdale's east end."
     }
   ],
   "birthCenterDetails": []

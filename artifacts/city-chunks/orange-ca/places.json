@@ -1,0 +1,41 @@
+{
+  "hospitalDetails": [
+    {
+      "name": "Providence St. Joseph Hospital Orange",
+      "address": "1100 W Stewart Dr, Orange, CA 92868",
+      "paragraph": "The maternity hospital in the heart of Orange. St. Joseph's Mother-Baby Unit is built around family-centered care, with nurses and support staff focused on keeping newborns and parents together in those first days. The campus at 1100 W Stewart Dr sits minutes from Old Towne and has its own Labor and Delivery department on site. If you're planning a hospital birth with a doula, this is the closest main maternity campus to the Plaza.",
+      "url": "https://www.providence.org/locations/socal/st-joseph-hospital-orange/mother-baby-unit",
+      "medicaid": true,
+      "thumbnail": "/images/newport-beach-ca-hospital-providence-st-joseph.webp"
+    },
+    {
+      "name": "UCI Health Douglas Hospital",
+      "address": "1310 S Manchester Ave, Orange, CA 92868",
+      "paragraph": "Douglas Hospital anchors UCI Health's maternity services in Orange. The labor and delivery unit keeps OB physicians on staff around the clock, with nursing and anesthesia coverage backing them, so coverage doesn't thin out on nights or weekends. Newborns get their screenings before discharge, everything from the congenital heart check to hearing and jaundice, and the maternity orientation includes a live tour of the unit. If something feels off, the guidance here is to come straight in to labor and delivery rather than call ahead.",
+      "url": "https://www.ucihealth.org/medical-services/specialties/maternity",
+      "medicaid": true,
+      "thumbnail": "/images/newport-beach-ca-hospital-uci-medical-center.webp"
+    }
+  ],
+  "birthCenterDetails": [
+    {
+      "name": "South Coast Midwifery - Birthing Boutique",
+      "paragraph": "The most established birth center in Orange County and its first accredited one, founded by Lorri Walker, RNC, NP, CNM, one of the nation's best-known midwives. Birth suites look more like hotel rooms than hospital L&D wings. Every suite is private, with music and a tub big enough to labor in. The center has been quietly serving families for almost 18 years, takes most insurance, offers payment plans, and the first consultation is free. Call (949) 654-2727.",
+      "url": "https://southcoastmidwifery.com/orange-county-birth-center/",
+      "phone": "(949) 654-2727",
+      "credential": "First accredited birth center in Orange County",
+      "services": [
+        "Midwife-Led Care",
+        "Water Labor",
+        "Home Birth",
+        "Lactation Support"
+      ],
+      "midwives": [
+        "Lorri Walker, RNC, NP, CNM"
+      ],
+      "medicaid": false,
+      "address": "24251 Avenida De La Carlota, Suite B, Laguna Hills, CA 92653",
+      "thumbnail": "/images/costa-mesa-ca-birth-center-south-coast.webp"
+    }
+  ]
+}

@@ -114,5 +114,33 @@
     "hospitals": 2,
     "birth_centers": 1
   },
-  "conclusion": "SUFFICIENT — 4 real doulas + 2 hospitals + 1 birth center ≥ mid-size minimums (2 doulas, 1 hospital). Phase B authorized."
+  "conclusion": "SUFFICIENT — 4 real doulas + 2 hospitals + 1 birth center ≥ mid-size minimums (2 doulas, 1 hospital). Phase B authorized.",
+  "email_census": [
+    {
+      "name": "Inara Arauz",
+      "email_or_null": null,
+      "email_source": "none-found"
+    },
+    {
+      "name": "BIRTHday Doulas of South Florida",
+      "email_or_null": "info@birthdaydoulasofsouthflorida.com",
+      "email_source": "owned-domain"
+    },
+    {
+      "name": "Her Birth Doula",
+      "email_or_null": null,
+      "email_source": "none-found"
+    },
+    {
+      "name": "Lacretia McNeal",
+      "email_or_null": null,
+      "email_source": "none-found"
+    }
+  ],
+  "email_census_backfilled": {
+    "date": "2026-10-09",
+    "method": "live-fetch via tjb-batch-outreach.find_email_from_url",
+    "providers_checked": 4,
+    "owned_domain_emails": 1
+  }
 }

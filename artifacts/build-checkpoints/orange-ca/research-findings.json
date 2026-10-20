@@ -1,0 +1,209 @@
+{
+ "city": "Orange, CA",
+ "slug": "orange-ca",
+ "research_date": "2026-10-19",
+ "population_2020": 139911,
+ "tier": "mid-size (100K-500K) minimum: 2+ doulas, 1+ hospital",
+ "doulas": [
+  {
+   "name": "Jacquelyn Mota",
+   "credential": "Certified Birth & Postpartum Doula, Birth Educator, Placenta Encapsulation Specialist",
+   "practice": "OC Doula & Placenta Co",
+   "url": "https://ocdoulaandplacenta.com/",
+   "photo": "/images/doulas/orange-ca-jacquelyn-mota.webp",
+   "description": "Jacquelyn Mota has worked in the Orange County birth community for over 10 years as a certified birth and postpartum doula, birth educator, placenta encapsulation specialist, and lactation support counselor. One hire covers pregnancy, birth, and recovery: birth classes, feeding courses, pregnancy meditations, and placenta capsules. She does not publish rates; book her consultation first. A natural fit for families who want hands-on postpartum recovery support from the same person who attended the birth.",
+   "costRange": "Contact for pricing",
+   "costRange_source": "provider website (no published rates)",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula",
+    "Placenta Encapsulation",
+    "Lactation Support",
+    "Childbirth Education"
+   ],
+   "serviceArea": [
+    "Orange, CA",
+    "Orange County, CA"
+   ],
+   "isVerified": true
+  },
+  {
+   "name": "Elysabeth Jee-in Ratto",
+   "credential": "CD - Certified Birth & Postpartum Doula",
+   "practice": "Jee-in Birth Services",
+   "url": "https://doulamatch.net/profile/37404/elysabeth-jee-in-ratto-cd",
+   "photo": "/images/doulas/orange-ca-elysabeth-jee-in-ratto.webp",
+   "description": "Elysabeth Ratto is based in Anaheim, one city over from Orange, and serves all of Orange County within a 30-mile range, with virtual support for LA and San Diego families. She has 6 years of birth-doula experience plus 6 years postpartum. Her birth fee runs $2,500 to $3,000 and postpartum support $50 to $65 an hour. She is one of the few Orange-area doulas who takes insurance directly - Medi-Cal through Health Net and commercial plans via Carrot - so covered families should call her first.",
+   "costRange": "$2,500-$3,000",
+   "costRange_source": "DoulaMatch profile",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula",
+    "Insurance Billing (Carrot)",
+    "Medi-Cal Accepted",
+    "Virtual Support"
+   ],
+   "serviceArea": [
+    "Anaheim, CA",
+    "Orange, CA",
+    "Orange County, CA"
+   ],
+   "isVerified": true
+  },
+  {
+   "name": "Lauren Proano",
+   "credential": "Birth & Postpartum Doula",
+   "practice": "Lauren The Doula",
+   "url": "https://doulamatch.net/profile/38795/lauren-proano",
+   "photo": "/images/doulas/orange-ca-lauren-proano.webp",
+   "description": "Lauren Proano offers birth and postpartum doula care from Yorba Linda, which borders Orange to the north, with a 40-mile service range. Birth packages run $1,850 to $3,000 and postpartum hours cost $55 to $85. Her specialty is night-time newborn support so parents can sleep and recover, and she pulls in a small doula team when a family needs more hands. A good pick for an Orange hospital birth paired with a night-nurse-style postpartum plan.",
+   "costRange": "$1,850-$3,000",
+   "costRange_source": "DoulaMatch profile",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Overnight Support",
+    "Team Doula Back-up"
+   ],
+   "serviceArea": [
+    "Yorba Linda, CA",
+    "Orange, CA",
+    "Anaheim Hills, CA",
+    "Placentia, CA"
+   ],
+   "isVerified": true
+  },
+  {
+   "name": "Pam Serna",
+   "credential": "Birth & Postpartum Doula",
+   "practice": "Sacred Journey Childbirth",
+   "url": "https://doulamatch.net/profile/21044/pam-serna",
+   "photo": "/images/doulas/orange-ca-pam-serna.webp",
+   "description": "Pam Serna runs Sacred Journey Childbirth out of Long Beach, about 20 miles from Orange - inside her 25-mile no-travel-fee radius, so Orange families pay her standard $1,800 to $3,000 birth fee. Postpartum support runs $50 to $90 an hour. She works with Carrot Insurance, so families with that benefit can bill part of the package. She keeps an availability calendar on DoulaMatch for due-date overlap checks.",
+   "costRange": "$1,800-$3,000",
+   "costRange_source": "DoulaMatch profile",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula",
+    "Insurance Billing (Carrot)"
+   ],
+   "serviceArea": [
+    "Long Beach, CA",
+    "Orange, CA",
+    "Garden Grove, CA",
+    "Westminster, CA"
+   ],
+   "isVerified": true
+  },
+  {
+   "name": "Tami Jervis",
+   "credential": "Birth Doula",
+   "practice": "Doula Tami",
+   "url": "https://doulamatch.net/profile/30172/tami-jervis",
+   "photo": "/images/doulas/orange-ca-tami-jervis.webp",
+   "description": "Tami Jervis, aka Doula Tami, works out of Newport Beach with an 11-mile service range - Orange sits at its edge, so confirm availability before booking. Her birth fee is $2,300 to $2,800. She runs doulatami.com and keeps a live availability calendar on DoulaMatch, which makes due-date checks quick. Best for families who click with her style and live west of the plaza.",
+   "costRange": "$2,300-$2,800",
+   "costRange_source": "DoulaMatch profile",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula"
+   ],
+   "serviceArea": [
+    "Newport Beach, CA",
+    "Orange, CA",
+    "Tustin, CA",
+    "Costa Mesa, CA"
+   ],
+   "isVerified": true
+  },
+  {
+   "name": "Labor of Love Birth Services",
+   "credential": "Birth & Postpartum Doula Agency",
+   "practice": "Labor of Love Birth Services",
+   "url": "https://www.laboroflovebirthservices.com/",
+   "photo": "/images/doulas/orange-ca-labor-of-love.webp",
+   "description": "Labor of Love Birth Services is Orange County's longest-running doula agency - 14 years in practice and more than 1,000 families supported. It matches clients with experienced birth and postpartum doulas rather than booking a single solo provider, which means guaranteed backup coverage and help choosing a good fit. As an agency it sends doulas to hospitals across the county, including both Orange delivery hospitals. Rates depend on the matched doula.",
+   "costRange": "Varies by matched doula",
+   "costRange_source": "provider website (agency matching, no flat rates)",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula Matching",
+    "Postpartum Doula",
+    "Hospital Birth Support"
+   ],
+   "serviceArea": [
+    "Orange County, CA",
+    "Orange, CA"
+   ],
+   "isVerified": true
+  },
+  {
+   "name": "Birth Your Way Doulas",
+   "credential": "DONA-Trained and Certified Birth Doulas",
+   "practice": "Birth Your Way Doulas",
+   "url": "https://www.birthyourwaydoulas.com/",
+   "photo": "/images/doulas/orange-ca-birth-your-way.webp",
+   "description": "Birth Your Way Doulas is a team of DONA-trained and certified birth doulas based in south Orange County. The group lists Orange among the cities it serves and has supported more than 145 families in hospitals, birth centers, and at home. That range covers families still deciding between the Orange hospitals and a midwife-led birth at South Coast's center in Irvine. No published rates; request a quote.",
+   "costRange": "Contact for pricing",
+   "costRange_source": "provider website (no published rates)",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Hospital Birth",
+    "Birth Center Support",
+    "Home Birth Support"
+   ],
+   "serviceArea": [
+    "Orange County, CA",
+    "Orange, CA",
+    "North San Diego County"
+   ],
+   "isVerified": true
+  },
+  {
+   "name": "Resolute Birth",
+   "credential": "Birth Doula (Independent Practice)",
+   "practice": "Resolute Birth",
+   "url": "https://resolutebirth.com/services",
+   "photo": "/images/doulas/orange-ca-resolute-birth.webp",
+   "description": "Resolute Birth is an independent Orange County practice led by Jaymie. Birth doula packages start with a free phone consult and include birth-preparation guidance, nutrition counseling, breastfeeding tips, and evidence-based resource handouts. Postpartum options carry a traditional flavor - organic-oil womb rubs and Bengkung belly binding with a full cotton wrap. A faith-friendly practice; the site is openly Christian and serves Orange County families county-wide.",
+   "costRange": "Contact for pricing",
+   "costRange_source": "provider website (no published rates)",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Womb Rub",
+    "Bengkung Belly Binding",
+    "Birth Preparation"
+   ],
+   "serviceArea": [
+    "Orange County, CA",
+    "Orange, CA"
+   ],
+   "isVerified": true
+  }
+ ],
+ "hospitals": [
+  {
+   "name": "Providence St. Joseph Hospital Orange",
+   "url": "https://www.providence.org/locations/socal/st-joseph-hospital-orange/mother-baby-unit",
+   "address": "1100 W Stewart Dr, Orange, CA 92868"
+  },
+  {
+   "name": "UCI Health Douglas Hospital",
+   "url": "https://www.ucihealth.org/medical-services/specialties/maternity",
+   "address": "1310 S Manchester Ave, Orange, CA 92868"
+  }
+ ],
+ "birthCenters": [
+  {
+   "name": "South Coast Midwifery - Birthing Boutique",
+   "url": "https://southcoastmidwifery.com/orange-county-birth-center/"
+  }
+ ],
+ "sources_count": 16,
+ "notes": "All providers evidenced with direct page captures or search-snippet page text; no fabricated entries."
+}

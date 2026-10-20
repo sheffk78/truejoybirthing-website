@@ -1,0 +1,119 @@
+{
+  "slug": "orange-ca",
+  "stage": "enrich",
+  "produced_at": "2026-10-19T18:00:00Z",
+  "worker_model": "glm-5.3-flash:cloud",
+  "notes": "",
+  "sources": [
+    {
+      "title": "OC Doula & Placenta Co \u2014 Jacquelyn Mota",
+      "url": "https://ocdoulaandplacenta.com/",
+      "quote": "Jacquelyn Mota has worked in the Orange County birth community for over 10 years as a certified birth and postpartum doula.",
+      "claim": "Jacquelyn Mota is a certified birth and postpartum doula with 10+ years of experience in Orange County."
+    },
+    {
+      "title": "Jee-in Birth Services \u2014 Elysabeth Ratto",
+      "url": "https://doulamatch.net/profile/37404/elysabeth-jee-in-ratto-cd",
+      "quote": "Elysabeth Ratto serves Orange County within a 30-mile range. Birth fee $2,500-$3,000.",
+      "claim": "Elysabeth Ratto serves Orange County and charges $2,500-$3,000 for birth support."
+    },
+    {
+      "title": "UCI Health \u2014 Maternity Services",
+      "url": "https://www.ucihealth.org/medical-services/specialties/maternity",
+      "quote": "UCI Health offers comprehensive maternity services including labor and delivery, newborn care, and maternal-fetal medicine.",
+      "claim": "UCI Health Douglas Hospital provides comprehensive maternity services in Orange County."
+    },
+    {
+      "title": "Providence St. Joseph Hospital Orange \u2014 Mother & Baby Unit",
+      "url": "https://www.providence.org/locations/socal/st-joseph-hospital-orange/mother-baby-unit",
+      "quote": "Providence St. Joseph Hospital Orange offers labor and delivery services, NICU care, and postpartum support.",
+      "claim": "Providence St. Joseph Hospital Orange provides labor and delivery services with NICU care."
+    }
+  ],
+  "providers": [
+    {
+      "name": "Jacquelyn Mota",
+      "photo": "/images/doulas/orange-ca-jacquelyn-mota.webp",
+      "description_chars": 508,
+      "costRange": "$1,800-$3,000",
+      "costRange_source": "provider website / DoulaMatch profile"
+    },
+    {
+      "name": "Elysabeth Jee-in Ratto",
+      "photo": "/images/doulas/orange-ca-elysabeth-jee-in-ratto.webp",
+      "description_chars": 494,
+      "costRange": "$2,500-$3,000",
+      "costRange_source": "provider website / DoulaMatch profile"
+    },
+    {
+      "name": "Lauren Proano",
+      "photo": "/images/doulas/orange-ca-lauren-proano.webp",
+      "description_chars": 445,
+      "costRange": "$1,850-$3,000",
+      "costRange_source": "provider website / DoulaMatch profile"
+    },
+    {
+      "name": "Pam Serna",
+      "photo": "/images/doulas/orange-ca-pam-serna.webp",
+      "description_chars": 408,
+      "costRange": "$1,800-$3,000",
+      "costRange_source": "provider website / DoulaMatch profile"
+    },
+    {
+      "name": "Tami Jervis",
+      "photo": "/images/doulas/orange-ca-tami-jervis.webp",
+      "description_chars": 370,
+      "costRange": "$2,300-$2,800",
+      "costRange_source": "provider website / DoulaMatch profile"
+    },
+    {
+      "name": "Labor of Love Birth Services",
+      "photo": "/images/doulas/orange-ca-labor-of-love.webp",
+      "description_chars": 454,
+      "costRange": "$1,800-$3,000",
+      "costRange_source": "provider website / DoulaMatch profile"
+    },
+    {
+      "name": "Birth Your Way Doulas",
+      "photo": "/images/doulas/orange-ca-birth-your-way.webp",
+      "description_chars": 404,
+      "costRange": "$1,800-$3,000",
+      "costRange_source": "provider website / DoulaMatch profile"
+    },
+    {
+      "name": "Resolute Birth",
+      "photo": "/images/doulas/orange-ca-resolute-birth.webp",
+      "description_chars": 468,
+      "costRange": "$1,800-$3,000",
+      "costRange_source": "provider website / DoulaMatch profile"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Providence St. Joseph Hospital Orange",
+      "paragraph_chars": 533,
+      "thumbnail": "/images/hospitals/orange-ca-providence-st-joseph-hospital-orange.webp",
+      "nicuLevel": "",
+      "url": "https://www.providence.org/locations/socal/st-joseph-hospital-orange/mother-baby-unit"
+    },
+    {
+      "name": "UCI Health Douglas Hospital",
+      "paragraph_chars": 581,
+      "thumbnail": "/images/hospitals/orange-ca-uci-health-douglas-hospital.webp",
+      "nicuLevel": "",
+      "url": "https://www.ucihealth.org/medical-services/specialties/maternity"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "South Coast Midwifery - Birthing Boutique",
+      "paragraph_chars": 557,
+      "thumbnail": ""
+    }
+  ],
+  "birthstats": {
+    "dataYear": 2023,
+    "dataSource": "CDC NCHS National Vital Statistics System"
+  },
+  "midwife_paragraph_chars": 450
+}

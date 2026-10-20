@@ -1,0 +1,18 @@
+{
+  "city": "North Las Vegas",
+  "state": "NV",
+  "slug": "north-las-vegas-nv",
+  "costLow": 700,
+  "costHigh": 2200,
+  "lat": 36.1989,
+  "lng": -115.1175,
+  "publishedDate": "2025-10-17",
+  "nearbyCities": [
+    "las-vegas-nv",
+    "henderson-nv",
+    "summerlin-south-nv",
+    "boulder-city-nv"
+  ],
+  "metaDescription": "Compare birth doulas, hospitals, and birth centers in North Las Vegas, NV — including provider details, costs, insurance guidance, and local community tips.",
+  "titleTag": "Birth Support in North Las Vegas, NV | Find Doulas, Hospitals & Birth Centers"
+}
