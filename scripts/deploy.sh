@@ -336,7 +336,10 @@ if [ "$BLOG_JUST_COMMITTED" = true ]; then
 elif git diff --quiet --ignore-submodules HEAD 2>/dev/null &&
      git diff --cached --quiet --ignore-submodules 2>/dev/null; then
   echo "  → No uncommitted changes. Pushing current HEAD only."
-  git push origin main 2>&1 | sed 's/^/  /'
+  # 10/14 reviewer fix (extended 10/20 orange-ca): this tree runs on a work
+  # branch; `git push origin main` pushes the stale local main ref and gets
+  # rejected non-fast-forward. Push the ACTUAL branch tip instead.
+  git push origin HEAD 2>&1 | sed 's/^/  /'
 elif [ -n "$UPGRADE_SLUG" ]; then
   echo "  → City-upgrade deploy: committing gated work for $UPGRADE_SLUG"
   git add -A
