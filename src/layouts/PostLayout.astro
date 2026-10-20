@@ -55,7 +55,11 @@ const relatedPosts = [
 const pubDate = date ? new Date(date) : null;
 const formattedDate = pubDate ? pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
 
-const pageTitle = `${title} | True Joy Birthing`;
+// 2026-10-20 (SiteGuru round): same TJB-abbreviation swap as Layout.astro —
+// full name suffix pushes many titles past the 70-char SERP cutoff.
+const cleanTitle = title.replace(/ \| TJB$/, "");
+const pageTitleFull = cleanTitle.includes("True Joy Birthing") ? cleanTitle : `${cleanTitle} | True Joy Birthing`;
+const pageTitle = pageTitleFull.length > 60 ? pageTitleFull.replace(" | True Joy Birthing", " | TJB") : pageTitleFull;
 
 const ogImageRaw = featuredImage || "/images/og/og-homepage.webp";
 const ogImage = ogImageRaw.startsWith("http") ? ogImageRaw : `https://truejoybirthing.com${ogImageRaw}`;
