@@ -3,7 +3,7 @@
 Enrich provider data for fremont-ca city page.
 - Downloads remote photos and converts to webp
 - Uses Firecrawl for providers with no photo URL
-- Uses Ollama (atlas:latest) for descriptions
+- Uses Ollama (qwen3.8-flash-next "Flash"; re-pointed from retired atlas:latest 2026-10-20) for descriptions
 - Writes enrichment results + updates provider cache
 """
 import json, os, re, subprocess, time, hashlib, urllib.request, urllib.error, ssl
@@ -114,13 +114,14 @@ def download_image(url, dest_path, timeout=15):
         print(f"  Download failed for {url}: {e}")
         return False
 
-def ollama_generate(prompt, model="atlas:latest", timeout=30):
-    """Generate text using local Ollama model."""
+def ollama_generate(prompt, model="qwen3.8-flash-next:125b-a6b-q4_K_M", timeout=240):
+    """Generate text using local Ollama model (Flash)."""
     try:
         payload = json.dumps({
             "model": model,
             "prompt": prompt,
             "stream": False,
+            "think": False,
             "options": {"temperature": 0.7, "num_predict": 100}
         }).encode()
         

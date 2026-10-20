@@ -113,8 +113,31 @@ def local_integrity_gates(slug: str, stage: str) -> dict:
     return {}
 
 
+def _local_handoff_image_contract(slug: str) -> dict:
+    """HARD GATE (added 2026-10-20, Peoria incident): a city build marked
+    complete must declare its image assets in the handoff AND every required
+    asset must exist and decode. Prose said 'images are another lane' — the
+    lane never ran and the build passed. Software controls the sequence."""
+    import subprocess as _sp
+    hj = Path(PROJECT_DIR) / "artifacts" / "handoffs" / slug / "build.json"
+    if not hj.exists():
+        return {"HANDOFF_IMAGE_CONTRACT": {
+            "status": "SKIP",
+            "detail": "no build.json handoff (pre-contract build flow)"}}
+    vr = _sp.run(["python3", str(Path(PROJECT_DIR) / "scripts" / "validate-handoff-images.py"), slug],
+                 capture_output=True, text=True, timeout=120)
+    if vr.returncode == 0:
+        return {"HANDOFF_IMAGE_CONTRACT": {"status": "PASS", "detail": vr.stdout.strip()}}
+    return {"HANDOFF_IMAGE_CONTRACT": {
+        "status": "FAIL",
+        "detail": (vr.stdout or vr.stderr).strip() or f"validator exited {vr.returncode}"}}
+
+
 def _local_build_gates(slug: str) -> dict:
     """Local integrity gates for build stage — DATA ONLY (images handled at enrich/verify)."""
+    handoff_gates = _local_handoff_image_contract(slug)
+    if handoff_gates.get("HANDOFF_IMAGE_CONTRACT", {}).get("status") == "FAIL":
+        return handoff_gates  # block build-stage completion on unmet contract
     city_file = Path(PROJECT_DIR) / "src" / "data" / "cities.ts"
     text = city_file.read_text(errors="replace") if city_file.exists() else ""
     marker = f'"{slug}": {{'
@@ -149,6 +172,8 @@ def _local_build_gates(slug: str) -> dict:
             results["LOCAL_EVAL_SLOP"] = {"status": "PASS", "detail": f"no slop patterns ({nw} warn-tier)"}
     except Exception as e:
         results["LOCAL_EVAL_SLOP"] = {"status": "FAIL", "detail": f"slop gate crashed (fail-closed): {e}"}
+    if "handoff_gates" in locals():
+        results.update(handoff_gates)  # contract gate always reported, any status
     return results
 
 

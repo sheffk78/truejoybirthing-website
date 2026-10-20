@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """TJB Phase 3 harness — eval-voice.py: producer/checker copy-voice eval.
 
-Producer/checker split: the stage worker (producer, atlas) writes copy; this
-script runs a FRESH-CONTEXT checker (atlas via local Ollama) that judges the
+Producer/checker split: the stage worker (producer, flash) writes copy; this
+script runs a FRESH-CONTEXT checker (Flash via local Ollama) that judges the
 copy against the TJB voice standard. The producer never judges its own work —
 the checker has no memory of the producer's session, only the standard + data.
 
@@ -39,10 +39,11 @@ VOICE_STANDARD = Path("/Users/socializerender/.openclaw/workspace/Kit/life/brand
 EXTRACT_SCRIPT = PROJECT_DIR / "scripts" / "extract-city-block.py"
 ARTIFACTS_DIR = PROJECT_DIR / "artifacts" / "evals"
 
-# Producer (atlas, local $0) doubles as checker — fresh context per the
+# Producer (flash, local $0) doubles as checker — fresh context per the
 # enrichment-review.py precedent: "the fresh-context review is what catches
 # quality issues". Config-driven so a model switch is a one-line change.
-CHECKER_MODEL = os.environ.get("TJB_VOICE_CHECKER_MODEL", "atlas:latest")
+# 2026-10-20 consolidation: default re-pointed atlas:latest → Flash.
+CHECKER_MODEL = os.environ.get("TJB_VOICE_CHECKER_MODEL", "qwen3.8-flash-next:125b-a6b-q4_K_M")
 OLLAMA_LOCAL_URL = os.environ.get("TJB_OLLAMA_LOCAL_URL", "http://127.0.0.1:11434/api/chat")
 TIMEOUT_S = 180
 
@@ -118,6 +119,7 @@ def ollama_chat(system: str, user: str) -> dict | None:
         "messages": [{"role": "system", "content": system},
                      {"role": "user", "content": user}],
         "stream": False,
+        "think": False,
         "format": "json",
         "options": {"temperature": 0},
     }).encode()

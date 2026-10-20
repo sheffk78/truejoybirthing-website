@@ -8,12 +8,13 @@
   {
    "claim": "Emily Arena operates Sweet Pea Doula Services as a certified birth doula based in Peoria",
    "url": "https://sweetpeabirthdoula.com/",
-   "quote": "Sweet Pea Doula Services, Emily Arena CD(DONA) Peoria, AZ, USA sweetpeabirthdoulaservices@gmail.com 530-210-4939"
+   "quote": "Emily Arena, Certified birth doula",
+   "quote_source_note": "on-page meta description; phone/contact verified on same page \u2014 original quote assembled from Google Business listing, not this page"
   },
   {
-   "claim": "Samantha Zillweger is a birth doula based in Peoria, certified with the International Doula Institute in 2024, package priced $1,200",
+   "claim": "Samantha Zillweger is a birth doula based in Peoria (BornBir listing, International Doula Institute 2024)",
    "url": "https://www.bornbir.com/samantha-zillweger",
-   "quote": "Samantha Zillweger Birth Doula in Peoria, AZ ... I completed my doula certification with the International Doula Institute in 2024 ... I offer two prenatal appointments, continuous labor support, and a postpartum visit. Total of $1200 ... Samantha is based in Peoria, Arizona."
+   "quote": "Samantha Zillweger - Birth Doula - Peoria, AZ"
   },
   {
    "claim": "Modern Mama Doula is a doula team whose services explicitly include Peoria",
@@ -21,14 +22,19 @@
    "quote": "Birth Doula, Placenta Encapsulation and Postpartum Doula services available in Phoenix, Mesa, Gilbert, Surprise, Glendale, Scottsdale, Chandler, Peoria and surrounding areas."
   },
   {
-   "claim": "Canyon Midwifery operates an accredited freestanding birth center in Peoria at 13470 N 83rd Ave Suite 300, accredited since March 2024",
+   "claim": "Canyon Midwifery is CABC-accredited (Peoria, 13470 N 83rd Ave)",
    "url": "https://birthcenteraccreditation.org/2024/01/17/canyon-midwifery/",
-   "quote": "Canyon Midwifery Address: 13470 N 83rd Ave, Suite 300 Peoria, AZ 85381 Phone: 623-824-3660 ... Accredited Since: March 2024"
+   "quote": ", AZ 85381 Phone : 623-824-3660 Website Accredited Since : March 2024 Tagged Arizona Post navigation"
   },
   {
-   "claim": "Banner Del E. Webb Medical Center (14502 W Meeker Blvd, Sun City West) runs a complete maternity program with hydrotherapy tubs and nitrous oxide in all L&D rooms",
+   "claim": "Banner Del E. Webb Medical Center runs a complete maternity care program",
    "url": "https://www.bannerhealth.com/locations/sun-city-west/banner-del-e-webb-medical-center/maternity",
-   "quote": "Banner Del E Webb Medical Center 14502 W Meeker Blvd Sun City West, AZ 85375 (623) 524-4000 ... Hydrotherapy tubs and nitrous oxide are available in all of our Labor and Delivery rooms ... Private labor/delivery/recovery rooms set up to support a variety of birthing plans and needs"
+   "quote": "At Banner Del E. Webb Medical Center, you\u2019ll find complete maternity care."
+  },
+  {
+   "claim": "Banner Del E. Webb Medical Center is at 14502 W Meeker Blvd, Sun City West, AZ 85375",
+   "url": "https://www.bannerhealth.com/locations/sun-city-west/banner-del-e-webb-medical-center",
+   "quote": "Banner Del E Webb Medical Center 14502 W Meeker Blvd Sun City West, AZ 85375"
   },
   {
    "claim": "Abrazo Arrowhead Campus (18701 N. 67th Ave., Glendale) provides women's services and delivers for Peoria-area families",
@@ -79,5 +85,35 @@
   "hero_watermark_clean": null,
   "og_watermark_clean": null
  },
- "_auto_image_refs": []
+ "_auto_image_refs": [],
+ "image_manifest": [
+  {
+   "path": "public/images/og-city-peoria-az.webp",
+   "kind": "og"
+  },
+  {
+   "path": "public/images/peoria-az-birth-doula-skyline.webp",
+   "kind": "hero"
+  },
+  {
+   "path": "public/images/peoria-az-birth-doula-skyline-600.webp",
+   "kind": "hero"
+  },
+  {
+   "path": "public/images/heroes/peoria-az-birth-doula-skyline.webp",
+   "kind": "hero"
+  },
+  {
+   "path": "public/images/hospitals/peoria-az-banner-del-e-webb.webp",
+   "kind": "thumb"
+  },
+  {
+   "path": "public/images/birth-centers/peoria-az-canyon-midwifery.webp",
+   "kind": "thumb"
+  },
+  {
+   "path": "public/images/doulas/peoria-az-samantha-zillweger.webp",
+   "kind": "thumb"
+  }
+ ]
 }

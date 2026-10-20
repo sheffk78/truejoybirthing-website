@@ -6,8 +6,9 @@ checker-of-the-checker: when the producer and checker disagree — an eval
 rejection the producer contests by resubmitting, or flip-flopping verdicts on
 identical inputs — the council judges.
 
-Models: atlas (local, producer-side perspective) + glm-5.3-flash:cloud
-(checker-side) + bedrock (local tiebreak). 2/3 majority proceeds or rejects;
+Models: flash (local, producer-side perspective) + glm-5.3-flash:cloud
+(checker-side) + flash-2 (local tiebreak; bedrock retired from active lanes
+2026-10-20 — last-resort fallback only). 2/3 majority proceeds or rejects;
 verdict + reasoning are logged to artifacts/evals/council-{slug}-{stage}.json
 (council disagreements are themselves failure-replay fodder per the plan).
 
@@ -75,12 +76,12 @@ def fail(code: int, payload: dict) -> int:
     return code
 
 
-def call_atlas(system: str, user: str) -> dict | None:
+def call_flash(system: str, user: str) -> dict | None:
     body = json.dumps({
-        "model": "atlas:latest",
+        "model": "qwen3.8-flash-next:125b-a6b-q4_K_M",
         "messages": [{"role": "system", "content": system},
                      {"role": "user", "content": user}],
-        "stream": False, "format": "json", "options": {"temperature": 0},
+        "stream": False, "think": False, "format": "json", "options": {"temperature": 0},
     }).encode()
     try:
         req = urllib.request.Request(OLLAMA_LOCAL_URL, data=body,
@@ -149,9 +150,13 @@ def run_council(slug: str, stage: str, question: str) -> dict:
     user_prompt = ("## Dispute\n" + question + "\n\n" + context +
                    "\n\nVote UPHELD or OVERRULED with a one-sentence reason.")
     votes = []
-    votes.append(("atlas", call_atlas(COUNCIL_SYSTEM, user_prompt)))
+    # 2026-10-20 consolidation: both local slots re-pointed to Flash (sole warm local
+    # model); bedrock:latest retired from active lanes (last-resort fallback only).
+    # NOTE: two of three slots now share the same local model — council independence
+    # reduced; redesign pending (flagged to parent/Jeff).
+    votes.append(("flash", call_flash(COUNCIL_SYSTEM, user_prompt)))
     votes.append(("glm-5.3-flash", call_cloud("glm-5.3-flash:cloud", COUNCIL_SYSTEM, user_prompt)))
-    votes.append(("bedrock", call_cloud("bedrock:latest", COUNCIL_SYSTEM, user_prompt)))
+    votes.append(("flash-2", call_flash(COUNCIL_SYSTEM, user_prompt)))
 
     valid = [(m, v) for m, v in votes if v and v.get("vote") in ("UPHELD", "OVERRULED")]
     if not valid:

@@ -1,0 +1,20 @@
+{
+  "id": "evidence-quote-not-literal",
+  "date": "2026-10-20",
+  "stage": "build",
+  "city": "peoria-az (portfolio-wide pattern: bellevue-wa and other pre-contract handoffs)",
+  "failure": "City build handoffs stored sources[].quote as paraphrases, summaries, or '...' assembled text instead of exact on-page snippets (examples: peoria-az Banner/Canyon quotes; bellevue-wa Expecting Joy + Bellevue Doula paraphrases; NPI registry JSON pasted as a 'quote'). Consequence: sourced claims were NOT re-verifiable — the fact-drift checker could only flag ~100% QUOTE-GONE, proving no handoff evidence could survive a live re-check. Fix at build: fact-drift-refresh.py (denoised literal match, both sides same lens) + peoria-az handoff quotes rewritten as literal page text same day. Older handoffs remain open debt: each needs evidence re-capture (quote from the CURRENT page or a dated note of what changed).",
+  "detector": "fact-drift-refresh.py QUOTE-GONE (denoised literal match)",
+  "replay": {
+    "type": "fact_drift",
+    "expect": "fail",
+    "fixture": {
+      "slug": "peoria-az",
+      "url": "https://www.bannerhealth.com/locations/sun-city-west/banner-del-e-webb-medical-center",
+      "quote": "Banner Del E Webb Medical Center at 14502 W Meeker Blvd (assembled '...' paraphrase form)",
+      "expect_detail": "QUOTE-GONE finding emitted"
+    }
+  },
+  "source_commit": "hardening-20261020",
+  "status": "active"
+}

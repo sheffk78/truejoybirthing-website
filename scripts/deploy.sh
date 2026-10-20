@@ -55,6 +55,17 @@ echo "Time:    $(date '+%Y-%m-%d %H:%M:%S %Z')"
 export TJB_DEPLOY_AUTHORIZED=1
 
 cd "$PROJECT_DIR"
+# ---------------------------------------------------------------
+# STEP 0: Toolchain health check (G0) — added 2026-10-20
+# The 10/20 incident: gate dependencies (numpy/PIL full decode)
+# broke silently and distorted outputs passed for hours. A checker
+# that cannot run must BLOCK the deploy before any work is judged.
+# ---------------------------------------------------------------
+if ! bash scripts/pre-deploy-health-check.sh; then
+  echo "  ❌ Pre-deploy health check FAILED — deploy aborted (see G0 output above)."
+  exit 2
+fi
+
 
 # ---------------------------------------------------------------
 # STEP 1: Git sync — pull latest from origin/main
@@ -404,6 +415,14 @@ fi
 if [ "$CITY_CODE" != "200" ]; then
   echo "  ❌ City probe $CITY_PROBE returned $CITY_CODE — bundle root is wrong or city pages missing."
   echo "  → Do NOT report success. Investigate before any follow-up deploy."
+  exit 3
+fi
+# 🔴 2026-10-20: live CONTENT probe — the 10/20 Pomona incident shipped a dead
+# video embed ("Video unavailable") that passed every URL check. This probes
+# changed city pages like a visitor: images resolve, videos playable.
+echo "  → Live content probe running..."
+if ! python3 scripts/post-deploy-live-probe.py; then
+  echo "  ❌ Live content probe FAILED — see defects above. Do NOT report success."
   exit 3
 fi
 

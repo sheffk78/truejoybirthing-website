@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Real vision analysis of pittsburgh-pa figure crops via ollama (atlas vision).
+"""Real vision analysis of pittsburgh-pa figure crops via ollama (flash vision).
 Writes verdict file ONLY from actual model output. No fabricated verdicts."""
+# 2026-10-20 consolidation: model re-pointed atlas:latest → Flash (qwen3.8-flash-next:
+# 125b-a6b-q4_K_M) — sole warm local model, vision-capable (CLIP projector verified).
 import base64, json, sys, urllib.request
 from datetime import datetime, timezone
 
 OLLAMA = "http://localhost:11434/api/chat"
-MODEL = "atlas:latest"
+MODEL = "qwen3.8-flash-next:125b-a6b-q4_K_M"
 CROP_DIR = "/tmp/tjb-vision-crops"
 OUT = "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website/artifacts/gates/vision/pittsburgh-pa.json"
 
@@ -40,6 +42,7 @@ def analyze(crop: str) -> dict:
         "model": MODEL,
         "messages": [{"role": "user", "content": PROMPT, "images": [b64]}],
         "stream": False,
+        "think": False,
         "options": {"temperature": 0},
     }).encode()
     req = urllib.request.Request(OLLAMA, data=body, headers={"Content-Type": "application/json"})
