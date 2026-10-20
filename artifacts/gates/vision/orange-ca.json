@@ -37,6 +37,18 @@
       "verdict": "pass",
       "defects": [],
       "note": "yt-thumb right half: photographic golden-hour Plaza scene, pregnant woman hands-on-bump left third, autumn trees + fountain, no anatomy defects, no garbled text, professional thumbnail quality"
+    },
+    {
+      "crop": "orange-ca-still-provider2.png (frame 1610, new render)",
+      "verdict": "pass",
+      "defects": [],
+      "note": "provider-scroll scene verified: doula directory cards (Pam Serna, Tami Jervis, Labor of Love, Resolute Birth) with circular photos, prices, accepting-clients status; top portion of directory scroll, moving into next row"
+    },
+    {
+      "crop": "orange-ca-final-check.png (frame 1750, new render)",
+      "verdict": "pass",
+      "defects": [],
+      "note": "provider-scroll scene end: directory bottom edge (app CTA below) \u2014 scroll lands exactly at section end, no blank overshoot"
     }
   ],
   "prior_breach": "10/19 watercolor images archived to /Volumes/RENDER DISK/archive/2026-10-20-orange-ca-image-regen/"

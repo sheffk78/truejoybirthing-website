@@ -942,30 +942,27 @@ def main():
     print('\n[Step 6] Registering composition...')
     register_composition(slug, data_file)
     
-    # Step 6.5: Capture fullpage scroll screenshot (required by provider scene)
-    # HARDENED (Aug 27, 2026): The screenshot must exist AND be >50KB (not blank).
-    # The capture-fullpage.cjs script now force-loads lazy images before capturing.
-    # If the screenshot is missing or too small, the video will show blank provider
-    # profile images — so we BLOCK instead of silently skipping.
-    print('\n[Step 6.5] Capturing fullpage scroll screenshot...')
-    scroll_src = PROJECT_ROOT / 'public' / 'images' / f'{slug}-fullpage-scroll.png'
+    # Step 6.5: Capture the PROVIDER-SECTION scroll screenshot (required by provider scene)
+    # ROOT-CAUSE FIX (2026-10-20, orange-ca): this step used to run capture-fullpage.cjs,
+    # which captures the ENTIRE page top-down with no crop and no ground-truth manifest.
+    # The provider scene then scrolled the WRONG part of the page in the rendered video
+    # (the 10/20 Jeff-reported defect). The dedicated capture-provider-scroll.py crops to
+    # the "Doulas & Midwives Serving ..." section, force-loads lazy images, verifies the
+    # provider photos actually painted (8/8 loaded), and writes a capture manifest that
+    # the pre-render gate (G7b) can later verify. Use ONLY that script here.
+    print('\n[Step 6.5] Capturing provider-section scroll screenshot...')
+    r = run(
+        f'python3 scripts/capture-provider-scroll.py {slug}',
+        timeout=240, check=False, cwd=str(REMOTION_DIR),
+    )
     scroll_dest = REMOTION_DIR / 'public' / 'images' / f'{slug}-fullpage-scroll.png'
-
-    # Always re-capture to ensure images are loaded (stale screenshots may have blank providers)
-    run(f'cd {PROJECT_ROOT} && node scripts/capture-fullpage.cjs {slug}', timeout=90, check=False)
-
-    if scroll_src.exists():
-        scroll_size = scroll_src.stat().st_size
-        if scroll_size < 50000:
-            print(f'  ❌ Fullpage scroll screenshot is only {scroll_size}b — likely blank. BLOCKING video render.')
-            print(f'     The capture script could not load provider images. Check the build and image paths.')
-            sys.exit(1)
-        shutil.copy2(str(scroll_src), str(scroll_dest))
-        print(f'  ✅ Fullpage scroll captured ({scroll_size}b) and copied to Remotion')
-    else:
-        print(f'  ❌ Fullpage scroll capture failed — screenshot file not created. BLOCKING video render.')
-        print(f'     Run manually: cd {PROJECT_ROOT} && node scripts/capture-fullpage.cjs {slug}')
+    manifest = REMOTION_DIR / 'public' / 'images' / f'{slug}-capture-manifest.json'
+    scroll_size = scroll_dest.stat().st_size if scroll_dest.exists() else 0
+    if scroll_size < 50000 or not manifest.exists():
+        print(f'  ❌ Provider-scroll capture failed (file {scroll_size}b, manifest={manifest.exists()}).')
+        print(f'     Run manually: cd {REMOTION_DIR} && python3 scripts/capture-provider-scroll.py {slug}')
         sys.exit(1)
+    print(f'  ✅ Provider-section scroll captured ({scroll_size}b) with manifest — provider scene verified')
     
     # Step 7: Render video
     print('\n[Step 7] Rendering video (this takes a few minutes)...')
