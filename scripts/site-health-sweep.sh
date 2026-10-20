@@ -300,6 +300,18 @@ if [ "$FULL_MODE" = true ]; then
   fi
 fi
 
+# ── H8 (added 2026-10-20): fact-drift refresh --full mode only (sampled verify)
+if [ "$FULL_MODE" = true ]; then
+  health_header "H8: Fact-drift refresh (sampled sourced claims re-verified)"
+  if python3 scripts/fact-drift-refresh.py > /tmp/fact-drift-sweep.log 2>&1; then
+    health_pass "Fact-drift: no drift in sampled claims"
+  else
+    FINDN=$(grep -c '^- \[' /tmp/fact-drift-sweep.log 2>/dev/null || echo "?")
+    health_fail "Fact-drift FINDINGS: $FINDN item(s) need review — artifacts/live-probe/fact-drift-*.md"
+    grep '^- \[' /tmp/fact-drift-sweep.log | head -6
+  fi
+fi
+
 # ── Summary ─────────────────────────────────────────────────────────
 echo ""
 echo "═══════════════════════════════════════════"
