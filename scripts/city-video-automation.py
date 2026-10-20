@@ -734,7 +734,9 @@ def render_video(slug):
 def generate_thumbnail(slug, city, state_code):
     """Generate YouTube thumbnail."""
     result = run(
-        f'cd {PROJECT_ROOT} && node scripts/render-yt-thumbnail.cjs {slug} "{city}" "{state_code}"',
+        # G-BRAND: generate via the gated entry point (byte-verifies the official
+  # lockup + forbids text-label lookalikes) — 2026-10-20 hardening, Jeff directive.
+  f'cd {PROJECT_ROOT} && bash scripts/tjb-generate-asset.sh thumbnail {slug} "{city}" "{state_code}"',
         timeout=120,
         check=False
     )

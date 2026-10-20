@@ -66,6 +66,23 @@ case "$ASSET_TYPE" in
     echo "❌ Support scenes require image_generate; HTML rendering is forbidden."; exit 1 ;;
   thumbnail)
     [ -n "$CITY_NAME" ] && [ -n "$STATE_ABBR" ] || { echo "❌ Thumbnail requires city and state"; exit 1; }
+
+    # G-BRAND (hard, 2026-10-20): the renderer must source the official lockup.
+    # 1) The exact SVG file it embeds must byte-match the protected Illustrator export.
+    # 2) The HTML template must NOT render any "True Joy Birthing" text label
+    #    (that was the lookalike failure mode — generic sans instead of script wordmark).
+    LOCKUP="$OUTPUT_DIR/brand-lockup-white.svg"
+    [ -f "$LOCKUP" ] || { echo "❌ Missing official thumbnail lockup: $LOCKUP (copy assets/branding/'True Joy Birthing Logo - White.svg' verbatim)"; exit 1; }
+    OFFICIAL="/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/assets/branding/True Joy Birthing Logo - White.svg"
+    L_MD5=$(md5 -q "$LOCKUP"); O_MD5=$(md5 -q "$OFFICIAL")
+    if [ "$L_MD5" != "$O_MD5" ]; then
+      echo "❌ brand-lockup-white.svg is NOT byte-identical to the official Illustrator export"; exit 1
+    fi
+    if grep -qE 'brand-text|True Joy Birthing</span>' "$SCRIPT_DIR/yt-thumbnail-composition.html"; then
+      echo "❌ Template renders a text-label wordmark (lookalike) — it must embed the official lockup SVG only"; exit 1
+    fi
+    echo "✅ [G-BRAND] thumbnail lockup = official Illustrator export (byte-verified $L_MD5); no text-label lookalike"
+
     node "$SCRIPT_DIR/render-yt-thumbnail.cjs" "$SLUG" "$CITY_NAME" "$STATE_ABBR"
     if [ -f "$OUTPUT_DIR/yt-thumb-$SLUG.png" ]; then verify_image "$OUTPUT_DIR/yt-thumb-$SLUG.png" 1280 720 'YT Thumb'; else verify_image "$OUTPUT_DIR/yt-thumb-$SLUG.webp" 1280 720 'YT Thumb'; fi
     ;;
