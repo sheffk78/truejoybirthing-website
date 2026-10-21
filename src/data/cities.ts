@@ -1428,55 +1428,137 @@ export const cities: Record<string, CityData> = {
       { q: "What's the average cost of a doula in Fort Collins?" , a: "Doulas in Fort Collins typically charge $1,400–$4,000, with most around $2,200. Medicaid-covered doulas are available at no out-of-pocket cost to qualifying you and your family." }
     ],
     nearbyCities: ["aurora-co", "denver-co"]},
-  "pasadena-ca": {
-    city: "Pasadena" ,
-    state: "CA" ,
-    slug: "pasadena-ca" ,
-    publishedDate: "2026-09-24",
-    heroImage: "/images/pasadena-ca-birth-doula-skyline.webp" ,
-    ogImage: "https://truejoybirthing.com/images/og-city-pasadena-ca.webp" ,
+  "miami-fl": {
+    city: "Miami",
+    state: "FL",
+    slug: "miami-fl",
     enableBlogResources: true,
-    supportSceneAlt: "A doula walking alongside an expectant mom beneath the oaks near the Colorado Street Bridge in Pasadena, California, with the San Gabriel Mountains in the distance" ,
-    supportSceneImage: "/images/pasadena-ca-support-scene-v2.webp" ,
-    midwifeInfo: {
-      paragraph: "California licenses both Licensed Midwives (LMs) and Certified Nurse-Midwives (CNMs), with LMs attending home and birth center births and CNMs practicing in hospitals. California Medi-Cal covers doula services through the PAVE program, reimbursing approximately $1,587 per pregnancy. Pasadena families deliver primarily at Huntington Hospital, home to the San Gabriel Valley's only Level III-B NICU and its specialized Small Baby Unit, while USC Arcadia Hospital offers a 17-bed Level III NICU about four miles east. For out-of-hospital birth, Moxie Birth in nearby South Pasadena, the only freestanding birth center in the Los Angeles area founded and operated by both a midwife and an obstetrician, is about two miles from downtown Pasadena." ,
-      credentialTypes: " (LMs and CNMs)" ,
-      credentialDetail: "California licenses Licensed Midwives (LMs) who attend home and birth center births and Certified Nurse-Midwives (CNMs) who practice in hospitals and birth centers, giving Pasadena families more out-of-hospital midwifery options than states that only license CNMs." },
-    costLow: 1500,
-    costHigh: 6000,
+    publishedDate: "2026-06-22",
+    costLow: 1200,
+    costHigh: 3500,
+    heroImage: "/images/miami-fl-birth-doula-hero-v3.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-miami-fl-v2.webp",
+    supportSceneImage: "/images/miami-fl-birth-doula-support-v4.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Miami: Florida birth support and doula care",
     shelbiServesHere: false,
-    culture: "Pasadena anchors the western San Gabriel Valley with a blend of deep-rooted historic neighborhoods, world-class cultural institutions like the Norton Simon Museum, and a long-established birth support community that predates most of Los Angeles County. Families here give birth at Huntington Hospital, whose Small Baby Unit pioneered family-integrated NICU care, or cross the bridge to USC Arcadia for high-risk deliveries. A well-established birth community of childbirth educators, lactation consultants, and doulas who have worked the Pasadena circuit for decades means support people here are rarely starting from scratch. The city's walkable older neighborhoods, tree-lined streets, and proximity to the San Gabriel foothills give expectant families practical walking options close to home, and the Colorado Street Bridge area is a familiar stroll for families in the final weeks." ,
-    heroLocalDetail: "At 38 weeks in Pasadena, you're likely mapping the drive to Huntington Hospital on West California Boulevard or USC Arcadia on East Huntington Drive. The 134 and 210 both serve the city, but surface streets like Lake Avenue and Colorado Boulevard often beat the freeway during rush hour. Old Pasadena and the Colorado Street Bridge area offer flat, shady walking for those final weeks, and Huntington's maternity entrance sits just off the 134 Fair Oaks exit, so plan your route at two different times of day before labor starts." ,
-    hospitalDetails: [
-      { name: "Huntington Hospital" , thumbnail: "/images/pasadena-ca-hospital-huntington.webp" , paragraph: "Huntington Hospital, part of Huntington Health and affiliated with Cedars-Sinai, is Pasadena's flagship maternity hospital with approximately 2,600 to 3,400 deliveries a year, the largest volume in the San Gabriel Valley. Its Level III-B NICU is the most advanced in the San Gabriel Valley, anchored by the Small Baby Unit, a nationally recognized program for infants born before 32 weeks that pioneered family-integrated care, allowing parents to room in and participate in rounds. The maternity program offers private LDR suites, 24/7 in-house obstetricians and anesthesiology, VBAC support, and certified lactation consultants, and doulas are welcomed as support people throughout labor. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery." , nicuLevel: "III" , doulaPolicy: "Doulas welcome as support persons" , midwifeFriendly: true, waterBirth: "Labor tubs available in some suites" , medicaid: true, lactation: true, privateRooms: true, address: "100 W California Blvd, Pasadena, CA 91105" , url: "https://www.huntingtonhealth.org/services/maternity/" },
-      { name: "USC Arcadia Hospital" , thumbnail: "/images/pasadena-ca-hospital-usc-arcadia.webp" , paragraph: "USC Arcadia Hospital, part of Keck Medicine of USC and about four miles from Pasadena, provides full-service maternity care with OB-GYNs, certified nurses, and laborists on call 24/7, plus 24-hour anesthesia coverage for pain management. The hospital supports natural birth, epidural-assisted delivery, and VBAC, with a 17-bed Level III NICU and a visitor policy that welcomes doulas as part of each patient's support plan when coordinated with staff. It's the closest high-acuity option east of Pasadena, handling routine and high-risk pregnancies alike, with a couplet care model that keeps mother and baby together after delivery. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to get started." , nicuLevel: "III" , doulaPolicy: "Doulas welcome; check with staff for second-support rules" , midwifeFriendly: true, waterBirth: "Not available" , medicaid: true, lactation: true, privateRooms: true, address: "445 E Huntington Dr, Arcadia, CA 91006" , url: "https://www.keckmedicine.org/centers-and-programs/usc-arcadia-hospital/maternity-care-and-services/" } ],
-    birthCenterDetails: [
-      { name: "Moxie Birth" , address: "1416 El Centro St, Ste 100, South Pasadena, CA 91030" , url: "https://www.moxiecare.com/birth" , paragraph: "Moxie Birth, about two miles from downtown Pasadena, is the only birth center in the Los Angeles area founded and operated by both a licensed midwife and an obstetrician, pairing midwifery-led out-of-hospital birth with integrated OB consultation. The nationally recognized center offers private birth suites with deep soaking tubs for water birth, personalized 30-minute prenatal visits, lactation support, and continuous midwifery care through birth and the postpartum weeks, with a warm home-like setting and direct hospital transfer relationships if needed. Phone: (626) 399-0649." , thumbnail: "/images/moxie-birth-south-pasadena-v2.webp" , services: ["Water Birth" , "Midwife-Led Care" , "Prenatal Care" , "Postpartum Support"], medicaid: false, distance: "2 miles from Pasadena" } ],
     localDoulas: [
-      { name: "Nancy Connelly" , credential: "CD(DONA), Certified Lactation Educator" , practice: "Nancy's Doula Services" , url: "http://www.nancydoula.com/" , photo: "/images/provider-pasadena-ca-nancy-connelly.webp" , description: "DONA-certified birth doula based in Pasadena since 2000 with more than 635 births attended across Pasadena, Arcadia, Altadena, South Pasadena, and the surrounding San Gabriel Valley. A Certified Lactation Educator, Nancy offers two to three prenatal visits, continuous hands-on labor support at your birth, immediate postpartum breastfeeding help, and a follow-up visit, with 24/7 availability for questions from hire through the fourth trimester. Works with families birthing at Huntington Hospital and throughout the region." , services: ["Birth Doula" , "Lactation Support" , "Prenatal Visits" , "Postpartum Visit"], costRange: "$3,000-$3,000" , acceptingClients: true },
-      { name: "Brighid Quinn" , credential: "CD-L Birth & Postpartum Doula" , practice: "Quinn Doula Services" , url: "https://www.quinndoula.com/" , photo: "/images/provider-pasadena-ca-brighid-quinn.webp" , description: "Highland Park-based birth and postpartum doula serving Pasadena and the greater Los Angeles area with pragmatic, evidence-based care. Offers a hybrid birth doula option with several prenatal meetings, birth-preference planning, and virtual labor support, or full in-person birth attendance, plus postpartum contracts with several visits a week. Experienced with Hypnobirthing, unmedicated and low-intervention births, VBAC, twins, home and birth center births, and solo parents. Payment plans and a sliding scale are available." , services: ["Birth Doula" , "Postpartum" , "Virtual Labor Support" , "VBAC Support"], costRange: "$2,000-$4,000" , acceptingClients: true },
-      { name: "Rebecca Belenky" , credential: "CD, CPD, CBE, CLEC" , practice: "Los Angeles Birth" , url: "https://www.losangelesbirth.com/" , photo: "/images/provider-pasadena-ca-rebecca-belenky.webp" , description: "Certified birth and postpartum doula, childbirth educator, and lactation educator serving Pasadena families since 2014 from her South Pasadena base. Rebecca offers trauma-informed, LGBTQ+-affirming support across hospital, birth center, and home births, with birth doula packages that include three prenatal sessions, hands-on body balancing, on-call labor attendance, and 24-48 hour postpartum lactation visits. She attends births regularly at Huntington Hospital, Moxie Birth Center, UCLA, and Cedars-Sinai, and provides private childbirth education classes in your Pasadena home." , services: ["Birth Doula" , "Postpartum" , "Childbirth Education" , "Lactation Support"], costRange: "$5,000-$6,000" , acceptingClients: true } ],
-    medicaidNote: "Yes — California's Medi-Cal program covers doula services as a state benefit, reimbursing approximately $1,587 per pregnancy through the PAVE (Providing Access and Transforming Health) program. Pasadena families on Medi-Cal can access birth and postpartum doula support at no cost by working with an enrolled Medi-Cal doula provider; ask your doula whether they accept Medi-Cal directly." ,
-    insuranceNote: "In Pasadena, many families carry private coverage through Anthem Blue Cross, Blue Shield, Kaiser Permanente, or Health Net. Kaiser members can access contracted doula services at no extra cost, and some independent Pasadena doulas, including several who serve Huntington Hospital families, bill Kaiser and Health Net directly. Doula coverage by other private insurers is expanding under California law, and HSA or FSA funds can typically be applied to doula services. Check your plan's maternity benefits and ask doulas for a superbill if you plan to seek reimbursement." ,
+     { name: "Magnolia Birth House", credential: "Birth & Postpartum Doula", practice: "Magnolia Birth House", url: "https://www.magnoliabirthhouse.com/doula-support", photo: "/images/provider-miami-fl-magnolia-birth-house.webp", description: "Average Miami prices for a birthing doulas range from $500 (brand new doula) to $3000 (seasoned doula + concierge services) and postpartum doulas $20 (brand new) ..", costRange: "Varies by provider ($1,200-$3,500)", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"], serviceArea: ["Miami, FL"] },
+     { name: "BIRTHday Doulas of South Florida", credential: "Birth & Postpartum Doula", practice: "BIRTHday Doulas of South Florida", url: "https://birthdaydoulasofsouthflorida.com/index.html", photo: "/images/provider-miami-fl-birthday-doulas.webp", description: "Professional, trustworthy and committed to our families, we are BIRTHday Doulas of South Florida. Now serving Coconut Grove, Bal Harbour, Miami Beach and ..", costRange: "Varies by provider ($1,200-$3,500)", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"], serviceArea: ["Miami, FL"] },
+     { name: "Presently Blooming", credential: "Birth & Postpartum Doula", practice: "Presently Blooming", url: "https://www.presentlyblooming.com/", photo: "/images/provider-miami-fl-presently-blooming.webp", description: "We serve to educate expecting families in an effort to maximize the outcome of safer and more joyful birth experiences.", costRange: "Varies by provider ($1,200-$3,500)", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"], serviceArea: ["Miami, FL"] },
+     { name: "Amazing Births and Beyond", credential: "Postpartum Doula", practice: "Amazing Births and Beyond", url: "https://amazingbirthsandbeyond.com/doula/postpartum-doulas/", photo: "/images/provider-miami-fl-amazing-births.webp", description: "Hire a professional postpartum doula to support you in the early days of becoming a parent. Call 786-955-6560 to schedule an interview!", costRange: "Varies by provider ($1,200-$3,500)", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"], serviceArea: ["Miami, FL"] },
+     { name: "Motheretreat", credential: "Birth & Postpartum Doula", practice: "Motheretreat", url: "https://www.instagram.com/motheretreat/", photo: "/images/provider-miami-fl-motheretreat.webp", description: "+1 (786) 646-9461. Google 5 star rating Carrot and Maven approved High VBAC rate Overnight and day time support after birth. We are looking for future doulas ..", costRange: "Varies by provider ($1,200-$3,500)", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"], serviceArea: ["Miami, FL"] } ],
+    culture: "Hurricane season runs June through November, a planning layer most cities never think about.",
+    heroLocalDetail: "Hurricane season runs June through November too, so pack a go-bag early and pick a backup hospital.",
+    hospitalDetails: [
+     { name: "Jackson Memorial Hospital", thumbnail: "/images/jackson-memorial-v2.webp", address: "1611 NW 12th Ave, Miami, FL 33136", url: "https://www.jacksonhealth.org/departments/womens/", nicuLevel: "IV", vbacPolicy: "Allows TOLAC/VBAC with physician approval", doulaPolicy: "Doulas welcome as support persons", midwifeFriendly: true, waterBirth: "Not routinely available", medicaid: true, lactation: true, privateRooms: false, paragraph: "Jackson Memorial Hospital is Miami-Dade's public safety-net hospital and home to the Ryder Trauma Center and a Level IV NICU, the highest level available, providing care for the most critically ill newborns. As a teaching hospital affiliated with UM, Jackson handles high-risk pregnancies from across South Florida. If you're delivering here, a birth plan is essential, the volume is high and staff rotates, so your preferences need to be clear and easy to read. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+     { name: "Mercy Hospital", thumbnail: "/images/mercy-miami-v2.webp", address: "3663 S Miami Ave, Miami, FL 33133", url: "https://hcafloridahealthcare.com/locations/mercy-hospital", nicuLevel: "III", vbacPolicy: "Allows TOLAC/VBAC, consult with provider", doulaPolicy: "Doulas welcome", midwifeFriendly: true, waterBirth: "Not routinely available", medicaid: true, lactation: true, privateRooms: true, paragraph: "Mercy Hospital, part of HCA Florida Healthcare in Coconut Grove, offers a Level III NICU and a more intimate birth experience than Jackson. Located in Coconut Grove, it's popular with families on the south side of Miami. Doulas are generally welcome, and the smaller unit means staff may have more time for your preferences." },
+     { name: "Mount Sinai Medical Center", thumbnail: "/images/mount-sinai-miami-v2.webp", address: "4300 Alton Rd, Miami Beach, FL 33140", url: "https://www.mtsinai.com/", nicuLevel: "III", vbacPolicy: "Allows TOLAC/VBAC, consult with provider", doulaPolicy: "Doulas welcome", midwifeFriendly: true, waterBirth: "Not routinely available", medicaid: true, lactation: true, privateRooms: true, paragraph: "Mount Sinai Medical Center on Miami Beach provides a Level III NICU and serves families from Miami Beach, Surfside, and the northeastern corridor. The location means beachside traffic can affect your drive time, plan your route during rush hour before you need it." },
+     { name: "Baptist Health South Florida", thumbnail: "/images/baptist-health-sf-v2.webp", address: "8900 N Kendall Dr, Miami, FL 33176", url: "https://www.baptisthealth.net/services/womens/", nicuLevel: "III", vbacPolicy: "Allows TOLAC/VBAC, consult with provider", doulaPolicy: "Doulas welcome", midwifeFriendly: true, waterBirth: "Not routinely available", medicaid: true, lactation: true, privateRooms: true, paragraph: "Baptist Health South Florida (South Miami campus) offers a Level III NICU and one of the busiest maternity programs in the state. Their multiple campuses across South Florida mean you likely have a Baptist facility within 20 minutes, but confirm which campus handles deliveries before your third trimester." }
+    ],
+    birthCenterDetails: [
+     { name: "No birth centers in Miami", paragraph: "No freestanding birth centers currently operate within Miami proper. The closest option is Delray Birth Center, about an hour north in Delray Beach. If you're planning an out-of-hospital birth, consider exploring home birth with a licensed Florida midwife, or ask your OB-GYN about midwifery programs within the hospital systems above, several of which offer CNM-attended births in a hospital setting." }
+    ],
+    medicaidNote: "No \u2014 Florida Medicaid does not currently cover doula services. Doulas are not recognized as Medicaid providers yet, so the honest answer is not right now. That still leaves payment plans, and quite a few doulas keep reduced-fee spots for families who need them. Just ask. Whatever else ends up in your birth room, knowing what you want is half the battle.",
+    insuranceNote: "Most commercial insurance in FL does not cover doula fees. Some Florida Blue plans may partially reimburse under wellness benefits if the doula is a certified health educator.",
     faqs: [
-      { q: "How much does a doula cost in Pasadena?" , a: "Pasadena birth doulas typically charge between $1,500 and $6,000. Experienced Pasadena-based doulas like Nancy Connelly charge around $3,000 flat, while premium packages from practices like Los Angeles Birth run $5,000-$6,000 with extensive prenatal and postpartum support. Hybrid and virtual models in the area start near $2,000. The investment typically covers prenatal visits, continuous labor support, and postpartum check-ins. <a href='/birth-plan-template/'>Download your free birth plan template</a> and start planning what matters most to you." },
-      { q: "Does Medi-Cal cover doulas in Pasadena?" , a: "Yes. California's Medi-Cal program covers doula services, reimbursing approximately $1,587 per pregnancy through the PAVE program. Enrolled Medi-Cal doulas provide prenatal, labor, and postpartum support at no out-of-pocket cost to qualifying families in Pasadena. <a href='/birth-plan-template/'>Grab the free birth plan template</a> so your doula team knows your preferences." },
-      { q: "Which hospitals in Pasadena accommodate birth plans?" , a: "Huntington Hospital, with the San Gabriel Valley's only Level III-B NICU and its specialized Small Baby Unit, welcomes doulas as support people and supports birth plans including VBAC. USC Arcadia Hospital, about four miles east, offers laborists on call 24/7 and also welcomes doulas when coordinated with staff. Both hospitals provide private maternity rooms and lactation support. <a href='/birth-plan-template/'>Grab the free birth plan template</a> so you walk in prepared." },
-      { q: "Are there birth centers near Pasadena?" , a: "Yes — Moxie Birth in South Pasadena, about two miles from downtown Pasadena, is the only freestanding birth center in the Los Angeles area founded and operated by both a licensed midwife and an obstetrician, with private suites and deep soaking tubs for water birth. Pasadena families also use Del Mar Birth Center in South Pasadena and home birth with Licensed Midwives. <a href='/birth-plan-template/'>Grab the free birth plan template</a> to think through your options." },
-      { q: "Does True Joy Birthing work with Pasadena families?" , a: "True Joy Birthing provides free birth-prep tools for Pasadena families. The Joyful Birth Plan, checklist, and guided walkthrough in the app work for any Pasadena birth setting, whether you're delivering at Huntington Hospital, USC Arcadia, or Moxie Birth. The app also helps you connect with local doulas and midwives in your area." },
-      { q: "What about postpartum support in Pasadena?" , a: "Pasadena has strong postpartum resources: hospital-based lactation support at Huntington Hospital, DONA-certified postpartum doulas like Nancy Connelly who hold Certified Lactation Educator credentials, and postpartum doula rates in the area starting around $45 an hour. Start your search during the second trimester if you want ongoing postpartum support. <a href='/blog/postpartum-doula/'>Learn more about postpartum doula support</a>." } ],
-    nearbyCities: ["glendale-ca", "los-angeles-ca", "long-beach-ca", "torrance-ca"],
-    lat: 34.1478,
-    lng: -118.1445,
-    birthStats: {
-      cesareanRate: 31.0,
-      maternalMortalityRate: 12.0,
-      homeBirthRate: 2.0,
-      birthCenterBirthRate: 1.0,
-      dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System",
-    },
-},
+     { q: "How much does a doula cost in Miami?", a: "Miami doulas range widely, roughly $1200 to $3500 depending on experience and what's included. If bilingual support matters to you, reach out early, those doulas tend to book first. The fee usually bundles prenatal visits, labor support, plus postpartum check-ins. The <a href=\"/birth-plan-template/\">free birth plan template</a> is a good first move while you compare options." },
+     { q: "Does Florida Medicaid cover doula services?", a: "Florida Medicaid has no doula benefit at the moment. Payment plans are common though, and several Miami doulas hold reduced-fee spots for families who ask. Whatever support ends up in your birth room, the birth plan work still pays off." },
+     { q: "What hospitals in Miami have Level III or IV NICUs?", a: "Jackson Memorial (Level IV) and Baptist Health South Florida, Mount Sinai, and Mercy Hospital (all Level III) have the highest-level NICUs in Miami-Dade County. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+     { q: "Are there birth centers in Miami?", a: "No freestanding birth centers operate within Miami proper. The closest is Delray Birth Center, approximately 55 minutes north. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." },
+     { q: "What should Miami families know about hurricane season and birth planning?", a: "Hurricane season runs June through November. Have a backup hospital identified, pack a go-bag early (by week 34), and include an emergency plan in your birth plan. Pack your hospital bag by 35 weeks and have a backup route to the hospital, storm season is not the time to wing it." },
+     { q: "Do I need a birth plan if I'm delivering at Jackson Memorial?", a: "Jackson Memorial is a large teaching hospital with a Level IV NICU, a birth plan helps communicate your preferences clearly to rotating staff. The Joyful Birth Plan is designed to be read by nurses in under two minutes. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a>, it walks you through every question to think about before the big day." }
+    ],
+    nearbyCities: ["tampa-fl", "jacksonville-fl"],
+  },
+  "plano-tx": {
+    enableBlogResources: true,
+    publishedDate: "2026-06-22",
+    heroImage: "/images/plano-tx-birth-doula-hero-v5.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-plano-tx.webp",
+    city: "Plano",
+    state: "TX",
+    slug: "plano-tx",
+    costLow: 1000,
+    costHigh: 2800,
+    shelbiServesHere: true,  localDoulas: [
+     { name: "Great Expectations", credential: "Birth Doula", practice: "Great Expectations", url: "https://www.bestdallasdoulas.com/", photo: "/images/provider-plano-tx-great-expectations.webp", description: "We support all types of birth with doulas specializing in VBAC, natural birth, pregnancy after infertility, multiples, surrogacy, Cesarean birth and 1st time ..", costRange: "Varies by provider ($1,000-$2,800)", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"], serviceArea: ["Plano, TX"] },
+     { name: "Melissa Shahin", credential: "Birth Doula", practice: "Melissa Shahin", url: "https://www.bornbir.com/melissa-shahin", photo: "/images/provider-plano-tx-melissa-shahin.webp", description: "I am a doula, childbirth educator, and student midwife. I speak spanish and little bit of arabic. I also have a backgroud in photography and over my photography ..", costRange: "Varies by provider ($1,000-$2,800)", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"], serviceArea: ["Plano, TX"] },
+     { name: "Jasmine LaCour", credential: "Birth Doula", practice: "Jasmine LaCour", url: "https://www.partumhealth.com/provider/jasmine-lacour", photo: "/images/provider-plano-tx-jasmine-lacour.webp", description: "Jasmine LaCour is a Birth & postpartum doula specialist based in Dallas, Texas. Learn about Jasmine LaCour's approach to pregnancy and postpartum care.", costRange: "Varies by provider ($1,000-$2,800)", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"], serviceArea: ["Plano, TX"] },
+     { name: "Lily Birth Services", credential: "Birth Doula", practice: "Lily Birth Services", url: "https://www.lilybirth.com/", photo: "/images/provider-plano-tx-lily-birth-services.webp", description: "Supporting, encouraging, and empowering families, one birth at a time. Hayley Martinez is based out of Plano, TX and Ryley Chestnut is based out of ..", costRange: "Varies by provider ($1,000-$2,800)", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"], serviceArea: ["Plano, TX"] } ],
+    culture: "Plano is a well-established, family-oriented city in Collin County with excellent healthcare access. The birth community is mature and diverse, you'll find everything from hospital-based midwifery to home birth support. Many Plano families invest in preparation and education for their births.",
+    heroLocalDetail: "Medical City Plano, in Central Plano, has a high-volume L&D with a Level IV NICU (stated directly on medicalcityhealthcare.com) and a strong obstetric program. Texas Health Plano holds a Level IV NICU too (stated on texashealth.org), and US-75, the Dallas North Tollway, and SH-121 all converge here, so afternoon rush around Legacy Drive can add 15 minutes you don't need in labor. Pick your route before contractions start.",
+    hospitalDetails: [
+     { name: "Texas Health Plano", paragraph: "Texas Health Plano, in West Plano on Legacy Drive, is one of the busiest L&amp. D units in Collin County with a Level IV NICU (stated directly on texashealth.org) and a strong maternal-fetal medicine program. It sees a huge volume of births, they're well-equipped and experienced, but that pace means having your preferences written down is the best way to make sure they don't get lost in the shuffle. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started.",
+    thumbnail: "/images/plano-tx-hospital-texas-health-plano.webp"
+   },
+     { name: "Medical City Plano", paragraph: "Medical City Plano, in Central Plano, has a high-volume L&D with a Level IV NICU (stated directly on medicalcityhealthcare.com) and a strong obstetric program. Texas Health Plano holds a Level IV NICU too (stated on texashealth.org), and US-75, the Dallas North Tollway, and SH-121 all converge here, so afternoon rush around Legacy Drive can add 15 minutes you don't need in labor. Pick your route before contractions start.",
+    thumbnail: "/images/plano-tx-hospital-medical-city-plano.webp"
+   },
+     { name: "Baylor Scott & White Plano", paragraph: "Baylor Scott &amp. White Plano serves the eastern side of the city as well. Plano families have access to three strong hospitals, which is more than most suburbs, but all three are busy. Your OB probably delivers at one of them, so ask which one and write your plan for that hospital.",
+    thumbnail: "/images/plano-tx-hospital-baylor-scott-and-white-plano.webp"
+   } ],
+    birthCenterDetails: [
+     { name: "The Birth Place", paragraph: "The Birth Place is a freestanding birth center in the Plano area offering a midwife-led, lower-intervention setting for low-risk pregnancies. It's a good option if you want a birth center experience without leaving the city, and having a doula who knows the space makes the whole thing feel more supported.",
+    thumbnail: "/images/plano-tx-birth-center-the-birth-place.webp"
+   } ],
+    medicaidNote: "Yes \u2014 SB 750 brought doula coverage to Texas Medicaid in September 2024, Collin County's STAR managed care plans included. One call confirms it (1-877-543-7669), or browse YourTexasBenefits.com when you get a quiet minute.",
+    insuranceNote: "Private coverage around Plano depends on your particular plan. Some pay for out-of-network doulas, some do not. HSA and FSA balances can pick up whatever insurance skips, and HR can usually tell you in one email.",
+    faqs: [
+     { q: "Does Medicaid cover doulas in Plano?", a: "Yes, your Medicaid can pay for a doula now. SB 750 did that. Collin County's STAR managed care plans take part. The fastest path is calling your plan and asking \"Do you cover doula services?\" If you'd rather talk to the state directly, 1-877-543-7669 works, and YourTexasBenefits.com has plan details. Insurance helping to pay for part of your support is a genuinely big deal." },
+     { q: "Which hospitals in Plano accommodate birth plans?", a: "Texas Health Plano (Level IV NICU, stated directly on texashealth.org) and Medical City Plano (Level IV NICU, stated directly on medicalcityhealthcare.com) both accommodate birth plans. Always confirm your hospital's policy during your hospital tour." },
+     { q: "How much does a doula cost in Plano?", a: "Plano sits at the pricier end, mostly $1,000 to $2,800. That buys prenatal visits, the birth itself, plus postpartum check-ins. Spend ten minutes with the <a href=\"/birth-plan-template/\">free birth plan template</a> first, because knowing what you want is worth more than any line item." },
+     { q: "Does True Joy Birthing work with Plano families?", a: "Free, actually. The True Joy Birthing birth plan app, checklist, and guided walkthrough all adapt to wherever you're delivering in Plano, hospital or birth center or home. There's a directory side too, for finding doulas and midwives nearby. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way, no signup required." } ],
+    nearbyCities: ["dallas-tx", "frisco-tx", "mckinney-tx", "carrollton-tx"],
+  },
+    "pasadena-ca": {
+      city: "Pasadena" ,
+      state: "CA" ,
+      slug: "pasadena-ca" ,
+      publishedDate: "2026-09-24",
+      heroImage: "/images/pasadena-ca-birth-doula-skyline.webp" ,
+      ogImage: "https://truejoybirthing.com/images/og-city-pasadena-ca.webp" ,
+      enableBlogResources: true,
+      supportSceneAlt: "A doula walking alongside an expectant mom beneath the oaks near the Colorado Street Bridge in Pasadena, California, with the San Gabriel Mountains in the distance" ,
+      supportSceneImage: "/images/pasadena-ca-support-scene-v2.webp" ,
+      midwifeInfo: {
+        paragraph: "California licenses both Licensed Midwives (LMs) and Certified Nurse-Midwives (CNMs), with LMs attending home and birth center births and CNMs practicing in hospitals. California Medi-Cal covers doula services through the PAVE program, reimbursing approximately $1,587 per pregnancy. Pasadena families deliver primarily at Huntington Hospital, home to the San Gabriel Valley's only Level III-B NICU and its specialized Small Baby Unit, while USC Arcadia Hospital offers a 17-bed Level III NICU about four miles east. For out-of-hospital birth, Moxie Birth in nearby South Pasadena, the only freestanding birth center in the Los Angeles area founded and operated by both a midwife and an obstetrician, is about two miles from downtown Pasadena." ,
+        credentialTypes: " (LMs and CNMs)" ,
+        credentialDetail: "California licenses Licensed Midwives (LMs) who attend home and birth center births and Certified Nurse-Midwives (CNMs) who practice in hospitals and birth centers, giving Pasadena families more out-of-hospital midwifery options than states that only license CNMs." },
+      costLow: 1500,
+      costHigh: 6000,
+      shelbiServesHere: false,
+      culture: "Pasadena anchors the western San Gabriel Valley with a blend of deep-rooted historic neighborhoods, world-class cultural institutions like the Norton Simon Museum, and a long-established birth support community that predates most of Los Angeles County. Families here give birth at Huntington Hospital, whose Small Baby Unit pioneered family-integrated NICU care, or cross the bridge to USC Arcadia for high-risk deliveries. A well-established birth community of childbirth educators, lactation consultants, and doulas who have worked the Pasadena circuit for decades means support people here are rarely starting from scratch. The city's walkable older neighborhoods, tree-lined streets, and proximity to the San Gabriel foothills give expectant families practical walking options close to home, and the Colorado Street Bridge area is a familiar stroll for families in the final weeks." ,
+      heroLocalDetail: "At 38 weeks in Pasadena, you're likely mapping the drive to Huntington Hospital on West California Boulevard or USC Arcadia on East Huntington Drive. The 134 and 210 both serve the city, but surface streets like Lake Avenue and Colorado Boulevard often beat the freeway during rush hour. Old Pasadena and the Colorado Street Bridge area offer flat, shady walking for those final weeks, and Huntington's maternity entrance sits just off the 134 Fair Oaks exit, so plan your route at two different times of day before labor starts." ,
+      hospitalDetails: [
+        { name: "Huntington Hospital" , thumbnail: "/images/pasadena-ca-hospital-huntington.webp" , paragraph: "Huntington Hospital, part of Huntington Health and affiliated with Cedars-Sinai, is Pasadena's flagship maternity hospital with approximately 2,600 to 3,400 deliveries a year, the largest volume in the San Gabriel Valley. Its Level III-B NICU is the most advanced in the San Gabriel Valley, anchored by the Small Baby Unit, a nationally recognized program for infants born before 32 weeks that pioneered family-integrated care, allowing parents to room in and participate in rounds. The maternity program offers private LDR suites, 24/7 in-house obstetricians and anesthesiology, VBAC support, and certified lactation consultants, and doulas are welcomed as support people throughout labor. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery." , nicuLevel: "III" , doulaPolicy: "Doulas welcome as support persons" , midwifeFriendly: true, waterBirth: "Labor tubs available in some suites" , medicaid: true, lactation: true, privateRooms: true, address: "100 W California Blvd, Pasadena, CA 91105" , url: "https://www.huntingtonhealth.org/services/maternity/" },
+        { name: "USC Arcadia Hospital" , thumbnail: "/images/pasadena-ca-hospital-usc-arcadia.webp" , paragraph: "USC Arcadia Hospital, part of Keck Medicine of USC and about four miles from Pasadena, provides full-service maternity care with OB-GYNs, certified nurses, and laborists on call 24/7, plus 24-hour anesthesia coverage for pain management. The hospital supports natural birth, epidural-assisted delivery, and VBAC, with a 17-bed Level III NICU and a visitor policy that welcomes doulas as part of each patient's support plan when coordinated with staff. It's the closest high-acuity option east of Pasadena, handling routine and high-risk pregnancies alike, with a couplet care model that keeps mother and baby together after delivery. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to get started." , nicuLevel: "III" , doulaPolicy: "Doulas welcome; check with staff for second-support rules" , midwifeFriendly: true, waterBirth: "Not available" , medicaid: true, lactation: true, privateRooms: true, address: "445 E Huntington Dr, Arcadia, CA 91006" , url: "https://www.keckmedicine.org/centers-and-programs/usc-arcadia-hospital/maternity-care-and-services/" } ],
+      birthCenterDetails: [
+        { name: "Moxie Birth" , address: "1416 El Centro St, Ste 100, South Pasadena, CA 91030" , url: "https://www.moxiecare.com/birth" , paragraph: "Moxie Birth, about two miles from downtown Pasadena, is the only birth center in the Los Angeles area founded and operated by both a licensed midwife and an obstetrician, pairing midwifery-led out-of-hospital birth with integrated OB consultation. The nationally recognized center offers private birth suites with deep soaking tubs for water birth, personalized 30-minute prenatal visits, lactation support, and continuous midwifery care through birth and the postpartum weeks, with a warm home-like setting and direct hospital transfer relationships if needed. Phone: (626) 399-0649." , thumbnail: "/images/moxie-birth-south-pasadena-v2.webp" , services: ["Water Birth" , "Midwife-Led Care" , "Prenatal Care" , "Postpartum Support"], medicaid: false, distance: "2 miles from Pasadena" } ],
+      localDoulas: [
+        { name: "Nancy Connelly" , credential: "CD(DONA), Certified Lactation Educator" , practice: "Nancy's Doula Services" , url: "http://www.nancydoula.com/" , photo: "/images/provider-pasadena-ca-nancy-connelly.webp" , description: "DONA-certified birth doula based in Pasadena since 2000 with more than 635 births attended across Pasadena, Arcadia, Altadena, South Pasadena, and the surrounding San Gabriel Valley. A Certified Lactation Educator, Nancy offers two to three prenatal visits, continuous hands-on labor support at your birth, immediate postpartum breastfeeding help, and a follow-up visit, with 24/7 availability for questions from hire through the fourth trimester. Works with families birthing at Huntington Hospital and throughout the region." , services: ["Birth Doula" , "Lactation Support" , "Prenatal Visits" , "Postpartum Visit"], costRange: "$3,000-$3,000" , acceptingClients: true },
+        { name: "Brighid Quinn" , credential: "CD-L Birth & Postpartum Doula" , practice: "Quinn Doula Services" , url: "https://www.quinndoula.com/" , photo: "/images/provider-pasadena-ca-brighid-quinn.webp" , description: "Highland Park-based birth and postpartum doula serving Pasadena and the greater Los Angeles area with pragmatic, evidence-based care. Offers a hybrid birth doula option with several prenatal meetings, birth-preference planning, and virtual labor support, or full in-person birth attendance, plus postpartum contracts with several visits a week. Experienced with Hypnobirthing, unmedicated and low-intervention births, VBAC, twins, home and birth center births, and solo parents. Payment plans and a sliding scale are available." , services: ["Birth Doula" , "Postpartum" , "Virtual Labor Support" , "VBAC Support"], costRange: "$2,000-$4,000" , acceptingClients: true },
+        { name: "Rebecca Belenky" , credential: "CD, CPD, CBE, CLEC" , practice: "Los Angeles Birth" , url: "https://www.losangelesbirth.com/" , photo: "/images/provider-pasadena-ca-rebecca-belenky.webp" , description: "Certified birth and postpartum doula, childbirth educator, and lactation educator serving Pasadena families since 2014 from her South Pasadena base. Rebecca offers trauma-informed, LGBTQ+-affirming support across hospital, birth center, and home births, with birth doula packages that include three prenatal sessions, hands-on body balancing, on-call labor attendance, and 24-48 hour postpartum lactation visits. She attends births regularly at Huntington Hospital, Moxie Birth Center, UCLA, and Cedars-Sinai, and provides private childbirth education classes in your Pasadena home." , services: ["Birth Doula" , "Postpartum" , "Childbirth Education" , "Lactation Support"], costRange: "$5,000-$6,000" , acceptingClients: true } ],
+      medicaidNote: "Yes — California's Medi-Cal program covers doula services as a state benefit, reimbursing approximately $1,587 per pregnancy through the PAVE (Providing Access and Transforming Health) program. Pasadena families on Medi-Cal can access birth and postpartum doula support at no cost by working with an enrolled Medi-Cal doula provider; ask your doula whether they accept Medi-Cal directly." ,
+      insuranceNote: "In Pasadena, many families carry private coverage through Anthem Blue Cross, Blue Shield, Kaiser Permanente, or Health Net. Kaiser members can access contracted doula services at no extra cost, and some independent Pasadena doulas, including several who serve Huntington Hospital families, bill Kaiser and Health Net directly. Doula coverage by other private insurers is expanding under California law, and HSA or FSA funds can typically be applied to doula services. Check your plan's maternity benefits and ask doulas for a superbill if you plan to seek reimbursement." ,
+      faqs: [
+        { q: "How much does a doula cost in Pasadena?" , a: "Pasadena birth doulas typically charge between $1,500 and $6,000. Experienced Pasadena-based doulas like Nancy Connelly charge around $3,000 flat, while premium packages from practices like Los Angeles Birth run $5,000-$6,000 with extensive prenatal and postpartum support. Hybrid and virtual models in the area start near $2,000. The investment typically covers prenatal visits, continuous labor support, and postpartum check-ins. <a href='/birth-plan-template/'>Download your free birth plan template</a> and start planning what matters most to you." },
+        { q: "Does Medi-Cal cover doulas in Pasadena?" , a: "Yes. California's Medi-Cal program covers doula services, reimbursing approximately $1,587 per pregnancy through the PAVE program. Enrolled Medi-Cal doulas provide prenatal, labor, and postpartum support at no out-of-pocket cost to qualifying families in Pasadena. <a href='/birth-plan-template/'>Grab the free birth plan template</a> so your doula team knows your preferences." },
+        { q: "Which hospitals in Pasadena accommodate birth plans?" , a: "Huntington Hospital, with the San Gabriel Valley's only Level III-B NICU and its specialized Small Baby Unit, welcomes doulas as support people and supports birth plans including VBAC. USC Arcadia Hospital, about four miles east, offers laborists on call 24/7 and also welcomes doulas when coordinated with staff. Both hospitals provide private maternity rooms and lactation support. <a href='/birth-plan-template/'>Grab the free birth plan template</a> so you walk in prepared." },
+        { q: "Are there birth centers near Pasadena?" , a: "Yes — Moxie Birth in South Pasadena, about two miles from downtown Pasadena, is the only freestanding birth center in the Los Angeles area founded and operated by both a licensed midwife and an obstetrician, with private suites and deep soaking tubs for water birth. Pasadena families also use Del Mar Birth Center in South Pasadena and home birth with Licensed Midwives. <a href='/birth-plan-template/'>Grab the free birth plan template</a> to think through your options." },
+        { q: "Does True Joy Birthing work with Pasadena families?" , a: "True Joy Birthing provides free birth-prep tools for Pasadena families. The Joyful Birth Plan, checklist, and guided walkthrough in the app work for any Pasadena birth setting, whether you're delivering at Huntington Hospital, USC Arcadia, or Moxie Birth. The app also helps you connect with local doulas and midwives in your area." },
+        { q: "What about postpartum support in Pasadena?" , a: "Pasadena has strong postpartum resources: hospital-based lactation support at Huntington Hospital, DONA-certified postpartum doulas like Nancy Connelly who hold Certified Lactation Educator credentials, and postpartum doula rates in the area starting around $45 an hour. Start your search during the second trimester if you want ongoing postpartum support. <a href='/blog/postpartum-doula/'>Learn more about postpartum doula support</a>." } ],
+      nearbyCities: ["glendale-ca", "los-angeles-ca", "long-beach-ca", "torrance-ca"],
+      lat: 34.1478,
+      lng: -118.1445,
+      birthStats: {
+        cesareanRate: 31.0,
+        maternalMortalityRate: 12.0,
+        homeBirthRate: 2.0,
+        birthCenterBirthRate: 1.0,
+        dataYear: 2023,
+        dataSource: "CDC NCHS, National Vital Statistics System",
+      },
+  },
   "spokane-wa": {
     enableBlogResources: true,
     publishedDate: "2026-06-22",
@@ -3069,96 +3151,153 @@ birthStats: { cesareanRate: 32.1, maternalMortalityRate: 18.6, homeBirthRate: 0.
       dataSource: "CDC NCHS, National Vital Statistics System",
     },
 },
-  "pittsburgh-pa": {
-    enableBlogResources: true,
-    publishedDate: "2026-06-22",
-    city: "Pittsburgh" ,
-    state: "PA" ,
-    slug: "pittsburgh-pa" ,
+  "killeen-tx": {
+    city: "Killeen",
+    state: "TX",
+    slug: "killeen-tx",
     costLow: 700,
-    costHigh: 2000,
+    costHigh: 1800,
     shelbiServesHere: false,
-    lat: 40.4406,
-    lng: -79.9959,
-    heroImage: "/images/pittsburgh-pa-birth-doula-skyline-v3.webp",
-    ogImage: "/images/og-city-pittsburgh-pa.webp",
-    supportSceneImage: "/images/pittsburgh-pa-birth-doula-support-v2.webp",
-    supportSceneAlt: "A doula walking with an expectant mom through Schenley Park in Pittsburgh, Pennsylvania",
-    localDoulas: [{ name: "Birth Doulas of Pittsburgh" , credential: "LCCE, Evidence Based Birth Instructor, Birth Doula" , practice: "Birth Doulas of Pittsburgh" , url: "https://www.birthdoulasofpittsburgh.com/", description: "Birth Doulas of Pittsburgh has been providing DONA certified, supportive birth doulas to women and their partners in hospitals, birth centers and at home since 2009. Founded by Bethany Brown, LCCE and Evidence Based Birth Instructor. Pittsburgh is home to The Midwife Center, the largest freestanding birth center in the country. Also offers birth stool and TENS unit rentals.", costRange: "$1,800-$2,200 for birth doula packages; $40-$50/hr for postpartum", acceptingClients: true, isVerified: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pittsburgh, PA"],
-    photo: "/images/doulas/birth-doulas-of-pittsburgh-pittsburgh-pa.webp",
-    costRange_source: "market-estimate"
-  },{ name: "Golden Lotus Doula Services" , credential: "Birth Doula" , practice: "Golden Lotus Doula Services" , url: "https://www.goldenlotusdoulaservices.com/", description: "Serving Pittsburgh Families. Trained and Certified. Full-time. We are allies in your birth and postpartum experience. We support families of all kinds, LGBTQ, ...", costRange: "$1,200-$2,200 for birth doula packages; $30-$45/hr for postpartum", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pittsburgh, PA"],
-    photo: "/images/doulas/golden-lotus-doula-pittsburgh-pa.webp",
-    costRange_source: "market-estimate"
-  },{ name: "Birth Circle Doulas" , credential: "Birth Doula" , practice: "Birth Circle Doulas" , url: "https://providers.upmc.com/provider/birth-circle-doulas-upmc-magee-womens-virtual-care-center/4223699", description: "The Birth Circle Doulas clinic offers consultative video visits with a specially trained labor and support person. Hours 8:30 AM - 8:00 PM 300 Halket Street, ...", costRange: "$700-$1,500 for birth doula packages; covered by PA Medicaid up to $1,250", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pittsburgh, PA"],
-    photo: "/images/doulas/birth-circle-doulas-pittsburgh-pa.webp",
-    costRange_source: "market-estimate"
-  },{ name: "Local Birth and Postpartum Doulas" , credential: "Birth Doula" , practice: "Local Birth and Postpartum Doulas" , url: "https://donnathemidwife.com/musings-%26-more/f/local-birth-and-postpartum-doulas", description: "Birth & Bereavement Doula, Licensed Massage surrounding areas 203-725-6464. Accepting clients in the Greater Pittsburgh area. provide full- ...", costRange: "$1,000-$2,000 for birth doula packages; $25-$40/hr for postpartum", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pittsburgh, PA"],
-    photo: "/images/doulas/local-birth-postpartum-pittsburgh-pa.webp",
-    costRange_source: "market-estimate"
-  },{ name: "Maternity Doula Training Program" , credential: "Birth Doula" , practice: "Maternity Doula Training Program" , url: "https://www.ccac.edu/workforce-and-community/workforce-development/maternity-doula-training-program.php" , description: "The Maternity Doula program is open to anyone age 18 or older who has a heart for helping others during the life-changing processes of pregnancy and childbirth.", costRange: "Training program $650; doula services $800-$1,500 sliding scale", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pittsburgh, PA"],
-    costRange_source: "market-estimate"
-  },{ name: "Pittsburgh Doula Network" , credential: "Birth Doula" , practice: "Pittsburgh Doula Network" , url: "https://www.pittsburghdoulanetwork.com/" , description: "Pittsburgh's oldest and most-respected doula service, established in 2000. A collective of DONA-certified doulas offering birth support, postpartum care, and lactation consulting. Tiered pricing based on doula experience level, making quality doula care accessible across budget ranges.", costRange: "$800-$2,500 tiered by experience (Tier I/II/III)", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Lactation Consultant"], serviceArea: ["Pittsburgh, PA", "Allegheny County", "Western PA"],
-    photo: "/images/provider-pittsburgh-pa-pittsburgh-doula-network.webp",
-    costRange_source: "market-estimate"
-  },{ name: "Riverbend Birth" , credential: "Birth Doula" , practice: "Riverbend Birth" , url: "https://www.pittsburghbirthservices.com/" , description: "Inclusive, experienced birth support founded by Megan and Marlee Malone-Franklin. Serves families birthing at UPMC Magee, AHN hospitals, and The Midwife Center. Known for compassionate, judgment-free care for all family structures.", costRange: "$150-$2,500 depending on services", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Childbirth Education"], serviceArea: ["Pittsburgh, PA", "Allegheny County"],
-    photo: "/images/provider-pittsburgh-pa-riverbend-birth.webp",
-    costRange_source: "market-estimate"
-  },{ name: "Boundless Birth Doulas" , credential: "Birth Doula" , practice: "Boundless Birth Doulas" , url: "https://www.boundlessbirthdoulas.com/" , description: "Founded by Emily, a Pittsburgh-based birth and postpartum doula supporting families through UPMC Magee and surrounding hospitals. Focuses on evidence-based support, informed consent, and helping families feel confident in their birth choices.", costRange: "$900-$1,800 for birth doula packages", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pittsburgh, PA"],
-    photo: "/images/provider-pittsburgh-pa-boundless-birth-doulas.webp",
-    costRange_source: "market-estimate"
-  },{ name: "Empowered Holistic Birth" , credential: "Birth Doula" , practice: "Empowered Holistic Birth" , url: "https://www.ehbirth.com/" , description: "Full-spectrum doula services including pregnancy, birth, postpartum, breastfeeding support, and placenta encapsulation. Takes a holistic approach to maternal wellness, addressing physical, emotional, and informational support needs throughout the perinatal journey.", costRange: "$1,000-$2,200 for birth doula packages; $35-$50/hr postpartum", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Placenta Encapsulation", "Breastfeeding Support"], serviceArea: ["Pittsburgh, PA", "Western PA"],
-    photo: "/images/provider-pittsburgh-pa-empowered-holistic-birth.webp",
-    costRange_source: "market-estimate"
-  },{ name: "Nido Doula Care" , credential: "Birth Doula" , practice: "Nido Doula Care" , url: "https://www.nidodoulacare.com/" , description: "Professional birth and postpartum doula services run by Natalia Wozniak, serving Pittsburgh-area families. Offers bilingual support (English/Spanish) and specializes in creating a calm, nurturing environment for new and growing families.", costRange: "$1,000-$1,800 for birth doula packages; $30-$45/hr postpartum", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Childbirth Education"], serviceArea: ["Pittsburgh, PA", "Allegheny County"],
-    photo: "/images/provider-pittsburgh-pa-nido-doula-care.webp",
-    costRange_source: "market-estimate"
-  },{ name: "Moon Sage Mama (Melissa Lucchesi)" , credential: "Birth Doula" , practice: "Moon Sage Mama LLC" , url: "https://www.moonsagemama.com/" , description: "Experienced birth and postpartum doula serving Pittsburgh families. Offers comprehensive birth support packages, postpartum care, and childbirth education. Known for a calm, grounded presence and extensive knowledge of Pittsburgh hospital policies.", costRange: "$1,850-$2,400 for birth doula packages; $50-$55/hr postpartum", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Childbirth Education"], serviceArea: ["Pittsburgh, PA", "Western PA"],
-    photo: "/images/doulas/moon-sage-mama-pittsburgh-pa.webp",
-    costRange_source: "market-estimate"
-  },{ name: "Mooncradle Matrescence (Clarissa Alves)" , credential: "Birth Doula" , practice: "Mooncradle Matrescence" , url: "https://www.mooncradlematrescence.com/" , description: "Full-spectrum doula care with a focus on the matrescence transition, the period of becoming a mother. Offers birth doula support, postpartum care, and maternal wellness coaching. Serves families across Pittsburgh and surrounding communities.", costRange: "$1,300-$3,000 for birth doula packages; $30-$35/hr postpartum", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Maternal Wellness Coaching"], serviceArea: ["Pittsburgh, PA", "Western PA"],
-    photo: "/images/doulas/mooncradle-matrescence-pittsburgh-pa.webp",
-    costRange_source: "market-estimate"
-  }
-    ],
-    culture: "Pittsburgh's doula community is growing strong, with a tight-knit network of birthworkers who bring that signature Steel City loyalty to your birth experience. Organizations like Birth Sisters Pittsburgh and local BIPOC birth collectives are expanding access and pushing for more equitable maternal care across the city's neighborhoods. You'll find doulas here who treat you like family and who deeply understand the unique experience of birthing in Western Pennsylvania's hospital landscape." ,
-    heroLocalDetail: "At 38 weeks, you're probably mentally calculating drive times from your Squirrel Hill apartment or Lawrenceville rowhouse to your delivery hospital, wondering whether the Fort Pitt Tunnel will cooperate or if Route 28 is the safer bet. Frick Park's wooded trails give you shaded walking paths when you need to coax baby along, and the Strip District on a quiet Saturday morning is a surprisingly peaceful place for those final waddle-walks past the vendor stands on Smallman Street." ,
+    heroImage: "/images/killeen-tx-birth-doula-hero.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-killeen-tx-v2.webp",
+    supportSceneImage: "/images/killeen-tx-support-scene-v5.webp",
+    supportSceneAlt: "Two women walking side by side in a Killeen neighborhood near Fort Cavazos",
+    enableBlogResources: true,
+    publishedDate: "2026-06-17",
+    lat: 31.1171,
+    lng: -97.7278,
+    localDoulas: [
+     { name: "Tiesha Beasley", credential: "DONA Certified Birth Doula", practice: "Charmed Ones Doula Services", url: "https://www.hellomeela.com/listing/20576/", description: "DONA-certified birth doula serving Killeen and Fort Cavazos families with birth doula support, postpartum care, and lactation support. Tiesha is passionate about reducing racial disparities in maternal mortality and empowering families to advocate for themselves during birth.", services: ["Birth Doula", "Postpartum", "Lactation Support"], costRange: "$500", serviceArea: ["Killeen", "Fort Cavazos", "Harker Heights"], acceptingClients: "true", photo: "/images/provider-killeen-tx-tiesha-beasley.webp" },
+     { name: "Desiree Oliveri", credential: "DONA Certified Birth & Postpartum Doula", practice: "Soul Good Doulas", url: "https://www.soulgooddoulas.com/", description: "DONA-certified birth and postpartum doula with 15 years of experience serving Fort Cavazos, Killeen, and Central Texas families. Offers birth doula support, postpartum care, childbirth education, and virtual doula services through Soul Good Doulas.", services: ["Birth Doula", "Postpartum", "Childbirth Education", "Virtual Support"], costRange: "$900-$2,500", serviceArea: ["Killeen", "Fort Cavazos", "Temple", "Belton", "Central Texas"], acceptingClients: "true", photo: "/images/doulas/killeen-tx-desiree-oliveri.webp" },
+     { name: "Ashley Todd", credential: "Birth & Postpartum Doula", practice: "Heart of Texas Placental Services", url: "https://www.bornbir.com/ashley-todd", description: "Experienced birth and postpartum doula with 22 years of experience serving Killeen and Bell County families. Specializes in birth doula support, placenta encapsulation, breastfeeding support, and bereavement support. Also hosts the annual Big Latch On for Killeen.", services: ["Birth Doula", "Postpartum", "Placenta Encapsulation", "Breastfeeding Support", "Bereavement Support"], costRange: "$800-$2,000", serviceArea: ["Killeen", "Bell County", "Central Texas"], acceptingClients: "true", photo: "/images/doulas/killeen-tx-ashley-todd.webp" },
+     { name: "My Neighborhood Doula", credential: "Certified Birth Doula", practice: "My Neighborhood Doula", url: "https://myneighborhooddoula.com/", description: "Certified birth doula team serving Temple, Belton, Waco, Killeen, and surrounding Central Texas communities. Offers birth doula support, childbirth education classes, and postpartum care. Their $1,400 package includes prenatal visits, 24/7 on-call support, continuous labor support, and postpartum follow-up.", services: ["Birth Doula", "Childbirth Education", "Postpartum"], costRange: "$1,400", serviceArea: ["Temple", "Belton", "Waco", "Killeen", "Central Texas"], acceptingClients: "true", photo: "/images/doulas/killeen-tx-my-neighborhood-doula.webp" } ],
+    culture: "Killeen is a military town anchored by Fort Cavazos (formerly Fort Hood) in Bell County, part of the Killeen-Temple-Fort Hood metro. The military population means a high proportion of young families and Tricare-covered births, and the community cycles with deployments and PCS moves. Birth support here runs practical and tight-knit, doulas who understand military life, Tricare maternity benefits, and the reality of giving birth while a partner is deployed fill a real gap.",
+    heroLocalDetail: "AdventHealth Central Texas sits off Clear Creek Road on Killeen’s south side, and Baylor Scott & White in Temple is about a 20-minute drive up US-190 / I-35. If you’re heading to BSW Temple from Killeen during morning rush, expect I-35 between Belton and Temple to slow down, build in an extra 10 to 15 minutes. The Killeen-Fort Cavazos area is flat and spread out, so most hospital drives are straightforward unless you’re coming from the far west side near Copperas Cove.",
     hospitalDetails: [
-      { name: "Magee-Womens Hospital of UPMC" , url: "https://www.upmc.com/locations/hospitals/magee-womens", address: "300 Halket Street, Pittsburgh, PA 15213", nicuLevel: "III", doulaPolicy: "Doulas welcome as support persons", medicaid: "Yes - accepts PA Medicaid", thumbnail: "/images/pittsburgh-pa-hospital-magee-womens.webp", paragraph: "Magee-Womens Hospital of UPMC is one of the nation's premier centers for women's health, delivering over 10,000 babies annually in Pittsburgh's Oakland neighborhood. The hospital features a verified Level III NICU for babies needing specialized care and is nationally recognized for its maternal-fetal medicine program, handling high-risk pregnancies that other facilities cannot. Magee has a comprehensive midwifery program alongside its OB-GYN services, giving families the choice between midwife-led and physician-led care. Doulas are welcomed and supported as part of the birth team, with policies allowing support people during labor and delivery. The hospital accepts PA Medicaid and most major insurance plans. Magee also offers water birth options in select rooms and has a dedicated high-risk pregnancy unit, making it the most full-service maternity hospital in western Pennsylvania. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "UPMC Children's Hospital of Pittsburgh" , url: "https://www.upmc.com/locations/hospitals/childrens-pittsburgh", address: "4401 Penn Avenue, Pittsburgh, PA 15224", nicuLevel: "IV", doulaPolicy: "Doulas welcome as support persons", medicaid: "Yes - accepts PA Medicaid", thumbnail: "/images/pittsburgh-pa-hospital-upmc-childrens.webp", paragraph: "UPMC Children's Hospital of Pittsburgh operates a verified Level IV NICU, the highest level of neonatal intensive care available, for newborns who need the most specialized medical attention after birth. While not a primary delivery hospital, UPMC Children's receives transfers from hospitals across western Pennsylvania and the tri-state area when babies require advanced surgical, cardiac, or neurological care. The hospital is consistently ranked among the best children's hospitals in the nation by U.S. News & World Report. Their neonatal team includes board-certified neonatologists, pediatric specialists, and specialized nursing staff available 24/7. For families delivering at Magee-Womens or other UPMC hospitals, the proximity to a Level IV NICU provides peace of mind knowing the highest level of neonatal care is minutes away if needed." },
-      { name: "Allegheny General Hospital" , url: "https://www.ahn.org/locations/allegheny-general-hospital", address: "320 East North Avenue, Pittsburgh, PA 15212", nicuLevel: "III", doulaPolicy: "Doulas welcome as support persons", medicaid: "Yes - accepts PA Medicaid", thumbnail: "/images/pittsburgh-pa-hospital-allegheny-general.webp", paragraph: "Allegheny General Hospital, part of the Allegheny Health Network (AHN), is a major teaching hospital on Pittsburgh's North Side with a well-established obstetric program and a verified Level III NICU. The hospital delivers thousands of babies each year with private labor and delivery rooms, 24/7 anesthesia coverage, and a full complement of maternal-fetal medicine specialists for high-risk pregnancies. Doulas are welcome as part of the support team, and the hospital's nursing staff is experienced in working collaboratively with birth workers. Allegheny General accepts PA Medicaid and most private insurance plans. The hospital also offers childbirth education classes, lactation consulting, and a maternal mental health program, making it a comprehensive option for families on the North Side and North Hills. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "West Penn Hospital" , url: "https://www.ahn.org/locations/west-penn-hospital", address: "4815 Liberty Avenue, Pittsburgh, PA 15224", nicuLevel: "II", doulaPolicy: "Doulas welcome as support persons", medicaid: "Yes - accepts PA Medicaid", thumbnail: "/images/pittsburgh-pa-hospital-west-penn.webp", paragraph: "West Penn Hospital, part of AHN in the Bloomfield neighborhood, is known for its highly regarded midwifery practice and intimate, community-hospital feel that many Pittsburgh families prefer over larger medical centers. The hospital features a verified Level II NICU, providing intermediate neonatal care for babies who need extra support but not the most intensive level. West Penn has one of the strongest midwifery programs in Pittsburgh, offering water birth, low-intervention labor options, and VBAC support for families seeking a more natural birth experience in a hospital setting. Doulas are warmly welcomed, and the hospital's smaller size means more personalized attention from nursing staff. West Penn accepts PA Medicaid and most private insurance. The hospital also offers prenatal yoga classes, comprehensive lactation support, and a parent education series that draws families from across the city. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "Jefferson Hospital (AHN)" , url: "https://www.ahn.org/locations/jefferson-hospital", address: "5300 Grove Road, Jefferson Hills, PA 15025", nicuLevel: "II", doulaPolicy: "Doulas welcome as support persons", medicaid: "Yes - accepts PA Medicaid", thumbnail: "/images/pittsburgh-pa-hospital-jefferson.webp", paragraph: "Jefferson Hospital, part of the Allegheny Health Network, serves families in Pittsburgh's South Hills and Jefferson Hills area with a modern maternity unit and Level II NICU. The hospital offers private labor and delivery suites, 24/7 obstetric anesthesia, and a family-centered approach to maternity care. Jefferson's nursing staff is known for being particularly supportive of doula-assisted births, and the hospital welcomes doulas as essential members of the birth team. The hospital accepts PA Medicaid and most private insurance plans. Jefferson also offers childbirth education, breastfeeding support, and a verified Level II NICU for babies who need intermediate specialized care. For families in the South Hills, Jefferson provides a closer-to-home option without sacrificing quality or safety. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." },
-      { name: "St. Clair Hospital" , url: "https://www.stclair.org", address: "1000 Bower Hill Road, Pittsburgh, PA 15243", nicuLevel: "III", doulaPolicy: "Doulas welcome as support persons", medicaid: "Yes - accepts PA Medicaid", thumbnail: "/images/pittsburgh-pa-hospital-st-clair.webp", paragraph: "St. Clair Hospital in Mt. Lebanon is a community hospital with a verified Level III NICU, making it one of the few community hospitals in the Pittsburgh area with this level of neonatal care capability. The hospital delivers over 2,000 babies annually with private labor rooms, a dedicated cesarean section operating room, and 24/7 obstetric and anesthesia coverage. St. Clair is known for its patient-centered approach and consistently high patient satisfaction scores in maternity care. Doulas are welcome, and the hospital's smaller size allows for more personalized, relationship-based care from the nursing team. The hospital accepts PA Medicaid and most private insurance. St. Clair also offers midwifery services, lactation consulting, and a comprehensive childbirth education program, making it a strong choice for families in the South Hills and western suburbs. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." }
-    ],
+     { name: "AdventHealth Central Texas", address: "2201 S Clear Creek Rd, Killeen, TX 76549", url: "https://www.adventhealth.com/hospital/adventhealth-central-texas", thumbnail: "/images/adventhealth-central-texas.webp", nicuLevel: "Level II NICU (stated on adventhealth.com)", doulaPolicy: "Doulas welcome as support persons during labor and delivery", medicaid: true, paragraph: "AdventHealth Central Texas, on South Clear Creek Road in Killeen, is the city’s only hospital with a labor and delivery unit, the J. Barry Siebenlist L&amp. D Unit, staffed by board-certified OB/GYNs and neonatologists. This is the hospital for Killeen proper: most Fort Cavazos families, Harker Heights residents, and south-Killeen neighborhoods deliver here by default because it’s the closest option. AdventHealth keeps a smaller, quieter L&amp. D unit than the big Dallas or Temple hospitals, that can mean more attentive nursing, but also fewer on-site specialists for complications, so know your transfer route to BSW Temple just in case. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+     { name: "Baylor Scott & White Medical Center, Temple", address: "2401 S 31st St, Temple, TX 76508", url: "https://www.bswhealth.com/locations/medical-center-temple", thumbnail: "/images/baylor-scott-white-temple.webp", nicuLevel: "Level III NICU (regional referral center, stated on bswhealth.com)", doulaPolicy: "Doulas welcome as support persons during labor and delivery", medicaid: true, paragraph: "Baylor Scott & White in Temple, about 20 minutes north on I-35, is a large teaching hospital that serves the broader Killeen-Temple metro. If we’re being real, many Killeen families deliver here by choice or referral, it’s the biggest hospital in the region and handles more complicated pregnancies. Contact the hospital directly for current NICU and maternity service details." },
+     { name: "Carl R. Darnall Army Medical Center", address: "36000 Santa Fe Ave, Fort Cavazos, TX 76544", url: "https://darnall.tricare.mil/", thumbnail: "/images/carl-darnall-army-medical-center.webp", nicuLevel: "Level III NICU (military medical center)", doulaPolicy: "Doulas welcome as support persons per TRICARE policy", medicaid: false, paragraph: "Carl R. Darnall Army Medical Center on Fort Cavazos is the military hospital serving active-duty service members, retirees, and their families. If you’re Tricare-eligible, Darnall is your primary option for prenatal care and delivery on post. Contact the hospital directly for current maternity services, NICU availability, and Tricare coverage details." } ],
+    // Birth center search: NPI taxonomy 261QB0400X returned 5 results for Killeen, TX.
+    // Avanlee Birth and Maternity Center (NPI 1861617540, active since 2007),
+    //  811 S W S Young Dr, Killeen, TX 76543. Google Maps lists as PERMANENTLY CLOSED.
+    // Dulce Birthing Center (NPI 1811513047, active since 2020, DBA "Dulce Birth &
+    //  Wellness Center"), 4400-3 E Central Texas Expy Ste D, Killeen, TX 76543, //  Google Maps lists as PERMANENTLY CLOSED (4.9★/38 reviews, phone 254-300-1337).
+    // Community Birth Group (NPI 1003513342), National Birth Centers, Inc.
+    //  (NPI 1093412330), and Private Healthcare Facilities (NPI 1639876972) all share
+    //  the address 5201 Clear Creek Rd Ste C, Killeen (same as AdventHealth Central
+    //  Texas). These appear to be corporate/administrative entities rather than
+    //  operating birth centers, no Google Maps listings found for any of them.
+    // Google Maps search "birth center Killeen TX" returned no open birth centers
+    //  in Killeen proper. Nearby results are in adjacent Bell County cities:
+    //  The Starting Place Birth and Wellness Center (720 N 3rd St, Temple, TX 76501,
+    //  "Birth center" category, 4.8★/28 reviews, phone 254-654-9295,
+    //  website thestartingplace.com, ~20 min north), Revolution Birth Services
+    //  (404 N Main St, Belton, TX 76513, "Midwife" category, 4.8★/18 reviews,
+    //  phone 512-843-1715, website revolutionbirthservices.org, ~15 min south),
+    //  Lunaria Birth & Wellness (815 N Main St, Belton, TX 76513, NPI 1821506932,
+    //  "Midwife" category, 3.9★/16 reviews, phone 512-585-4389, ~15 min south).
+    // No currently open freestanding birth centers in Killeen. Verified 2026-05-26.
     birthCenterDetails: [
-      { name: "The Midwife Center for Birth & Women's Health" , address: "2831 Penn Avenue, Pittsburgh, PA 15222", thumbnail: "/images/pittsburgh-pa-birth-center-midwife-center.webp", paragraph: "The Midwife Center for Birth & Women's Health is western Pennsylvania's only freestanding birth center, located on Penn Avenue in the Strip District. The center offers prenatal care, water birth, natural birth in a homelike setting, and comprehensive women's health services. They accept most insurance plans including PA Medicaid. The midwives at The Midwife Center provide personalized, low-intervention care and have been serving Pittsburgh families since 1982. <a href='/birth-plan-template/'>Use our free birth plan template</a> to prepare for your birth center delivery." },
-      { name: "No other freestanding birth centers in Pittsburgh" , thumbnail: "", paragraph: "The Midwife Center is western Pennsylvania\u2019s only freestanding birth center. If you\u2019re looking for additional out-of-hospital options, talk to your provider about home birth with a licensed midwife, or ask about midwifery-led care at West Penn Hospital or UPMC Magee-Womens, both of which offer low-intervention birth paths in a hospital setting." }
     ],
-    midwifeInfo: {
-      available: true,
-      paragraph: "Certified Nurse-Midwives (CNMs) practice at UPMC Magee-Womens Hospital and West Penn Hospital, offering low-intervention birth options alongside full medical backup. The Midwife Center, western Pennsylvania\u2019s only freestanding birth center, provides midwifery-led care in a homelike setting. Pennsylvania requires licensure through the State Board of Medicine. For home birth options, licensed midwives serve the Greater Pittsburgh area."
-    },
-    medicaidNote: "Yes \u2014 Pennsylvania Medicaid covers doula services as of 2024, with reimbursement of up to $1,250 per pregnancy through the PA Doula Program, covering prenatal visits, labor support, and postpartum visits combined." ,
-    insuranceNote: "Pennsylvania private insurers vary widely on doula coverage. Aetna and UHC may partially reimburse with a superbill, while Cigna and Blue Cross of Pennsylvania often require pre-authorization. Always request a superbill from your doula and submit it with CPT code S9443 for the best chance of reimbursement." ,
+    medicaidNote: "Yes \u2014 Texas Medicaid pays for doula care as of September 2024 thanks to SB 750, Bell County's STAR managed care plans included. Confirm your plan before hiring (1-877-543-7669 or YourTexasBenefits.com). TRICARE is a separate story and does not cover doulas right now, though plenty of military families here put HSA or FSA funds toward it instead.",
+    insuranceNote: "Killeen’s large military population means many families have Tricare, which covers hospital birth but does not directly reimburse doulas. For private insurance, whether doula services are partially covered varies by plan, contact your provider directly, and check whether HSA or FSA funds can cover out-of-pocket costs.",
     faqs: [
-      { q: "How much does a doula cost in Pittsburgh?" , a: "In Pittsburgh, doula packages generally range from $700–$2,000, with most covering prenatal visits, labor support, and postpartum follow-up. If cost is a concern, ask about sliding scale options . And remember, PA Medicaid now covers doula services up to $1,250." },
-      { q: "Does Pennsylvania Medicaid cover doula services?" , a: "Yes! As of 2024, Pennsylvania Medicaid covers doula services up to $1,250 per pregnancy through the PA Doula Program. You'll need to work with a Medicaid-enrolled doula. contact your managed care plan for options in Pittsburgh." },
-      { q: "What hospitals in Pittsburgh have the highest level NICU?" , a: "UPMC Children's Hospital of Pittsburgh has a verified Level IV NICU, the highest level possible. for newborns needing the most advanced care. Magee-Womens Hospital and Allegheny General both have verified Level III NICUs for in-house delivery support." },
-      { q: "Are there birth centers in Pittsburgh?" , a: "Yes! The Midwife Center for Birth & Women's Health, located at 2831 Penn Avenue in the Strip District, is western Pennsylvania's only freestanding birth center. They offer water birth, natural birth in a homelike setting, midwifery care, and accept most insurance plans including PA Medicaid. Pittsburgh families can also access midwifery-led, low-intervention care at Magee-Womens Hospital or West Penn Hospital, or explore home birth options with licensed midwives in the greater Pittsburgh area." },
-      { q: "Can I bring my doula to hospitals in Pittsburgh?" , a: "Yes, most Pittsburgh hospitals welcome doulas as part of your support team during labor and delivery. Magee-Womens and West Penn are especially doula-friendly. but it's always smart to call your hospital's labor and delivery unit a few weeks before your due date to confirm their current visitor and support person policies." },
-      { q: "What postpartum resources are available in Pittsburgh?" , a: "Pittsburgh offers several great postpartum resources: Healthy Start Pittsburgh supports moms through pregnancy and postpartum with wraparound services, the Allegheny County Health Department has a free home visiting program, Western Psychiatric Institute provides perinatal mood support, and La Leche League Pittsburgh runs free breastfeeding support groups across the city." }
-    ],
-    nearbyCities: ["philadelphia-pa"],
-    birthStats: {
-      cesareanRate: 32.3,
-      maternalMortalityRate: 22.8,
-      homeBirthRate: 1.0,
-      birthCenterBirthRate: 0.3,
-      dataYear: 2023,
-      dataSource: "CDC NCHS, National Vital Statistics System",
-    },
-},
+     { q: "How much does a doula cost in Killeen?", a: "Killeen pricing is friendlier than the big metros, usually $700 to $1,800. Military? Ask about the discount, several local doulas give one without being prompted. Budget tight? Sliding scale is common here too. The fee generally covers prenatal visits, labor support, plus a postpartum check-in. Start with the <a href=\"/birth-plan-template/\">free birth plan template</a> so you know what support you're actually buying." },
+     { q: "Does Medicaid cover doulas in Killeen?", a: "Medicaid doulas are a real thing in Killeen now. SB 750 did it, September 2024, and Bell County's STAR managed care plans participate. Make one call and ask \"Do you cover doula services?\" The 1-877-543-7669 state line backs you up if your plan's answer is fuzzy, and YourTexasBenefits.com works too. Support you can actually afford is a different kind of relief." },
+     { q: "Which hospitals in Killeen accommodate birth plans?", a: "AdventHealth Central Texas is Killeen’s only hospital with L&D. Baylor Scott & White Medical Center in Temple, about 20 minutes north, also serves Killeen-area families. Carl R. Darnall Army Medical Center on Fort Cavazos serves active-duty military families. Contact the hospital directly to ask about their current maternity services and NICU availability." },
+     { q: "Does True Joy Birthing work with Killeen families?", a: "Free, and no catches. The True Joy Birthing birth plan app, checklist, and guided walkthrough fit any Killeen birth setting, from hospital halls to a quiet birth center to home. It doubles as a way to find doulas and midwives nearby. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way, no signup required." } ],
+    nearbyCities: ["temple-tx", "waco-tx", "austin-tx"],
+  },
+    "pittsburgh-pa": {
+      enableBlogResources: true,
+      publishedDate: "2026-06-22",
+      city: "Pittsburgh" ,
+      state: "PA" ,
+      slug: "pittsburgh-pa" ,
+      costLow: 700,
+      costHigh: 2000,
+      shelbiServesHere: false,
+      lat: 40.4406,
+      lng: -79.9959,
+      heroImage: "/images/pittsburgh-pa-birth-doula-skyline-v3.webp",
+      ogImage: "/images/og-city-pittsburgh-pa.webp",
+      supportSceneImage: "/images/pittsburgh-pa-birth-doula-support-v2.webp",
+      supportSceneAlt: "A doula walking with an expectant mom through Schenley Park in Pittsburgh, Pennsylvania",
+      localDoulas: [{ name: "Birth Doulas of Pittsburgh" , credential: "LCCE, Evidence Based Birth Instructor, Birth Doula" , practice: "Birth Doulas of Pittsburgh" , url: "https://www.birthdoulasofpittsburgh.com/", description: "Birth Doulas of Pittsburgh has been providing DONA certified, supportive birth doulas to women and their partners in hospitals, birth centers and at home since 2009. Founded by Bethany Brown, LCCE and Evidence Based Birth Instructor. Pittsburgh is home to The Midwife Center, the largest freestanding birth center in the country. Also offers birth stool and TENS unit rentals.", costRange: "$1,800-$2,200 for birth doula packages; $40-$50/hr for postpartum", acceptingClients: true, isVerified: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pittsburgh, PA"],
+      photo: "/images/doulas/birth-doulas-of-pittsburgh-pittsburgh-pa.webp",
+      costRange_source: "market-estimate"
+    },{ name: "Golden Lotus Doula Services" , credential: "Birth Doula" , practice: "Golden Lotus Doula Services" , url: "https://www.goldenlotusdoulaservices.com/", description: "Serving Pittsburgh Families. Trained and Certified. Full-time. We are allies in your birth and postpartum experience. We support families of all kinds, LGBTQ, ...", costRange: "$1,200-$2,200 for birth doula packages; $30-$45/hr for postpartum", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pittsburgh, PA"],
+      photo: "/images/doulas/golden-lotus-doula-pittsburgh-pa.webp",
+      costRange_source: "market-estimate"
+    },{ name: "Birth Circle Doulas" , credential: "Birth Doula" , practice: "Birth Circle Doulas" , url: "https://providers.upmc.com/provider/birth-circle-doulas-upmc-magee-womens-virtual-care-center/4223699", description: "The Birth Circle Doulas clinic offers consultative video visits with a specially trained labor and support person. Hours 8:30 AM - 8:00 PM 300 Halket Street, ...", costRange: "$700-$1,500 for birth doula packages; covered by PA Medicaid up to $1,250", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pittsburgh, PA"],
+      photo: "/images/doulas/birth-circle-doulas-pittsburgh-pa.webp",
+      costRange_source: "market-estimate"
+    },{ name: "Local Birth and Postpartum Doulas" , credential: "Birth Doula" , practice: "Local Birth and Postpartum Doulas" , url: "https://donnathemidwife.com/musings-%26-more/f/local-birth-and-postpartum-doulas", description: "Birth & Bereavement Doula, Licensed Massage surrounding areas 203-725-6464. Accepting clients in the Greater Pittsburgh area. provide full- ...", costRange: "$1,000-$2,000 for birth doula packages; $25-$40/hr for postpartum", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pittsburgh, PA"],
+      photo: "/images/doulas/local-birth-postpartum-pittsburgh-pa.webp",
+      costRange_source: "market-estimate"
+    },{ name: "Maternity Doula Training Program" , credential: "Birth Doula" , practice: "Maternity Doula Training Program" , url: "https://www.ccac.edu/workforce-and-community/workforce-development/maternity-doula-training-program.php" , description: "The Maternity Doula program is open to anyone age 18 or older who has a heart for helping others during the life-changing processes of pregnancy and childbirth.", costRange: "Training program $650; doula services $800-$1,500 sliding scale", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pittsburgh, PA"],
+      costRange_source: "market-estimate"
+    },{ name: "Pittsburgh Doula Network" , credential: "Birth Doula" , practice: "Pittsburgh Doula Network" , url: "https://www.pittsburghdoulanetwork.com/" , description: "Pittsburgh's oldest and most-respected doula service, established in 2000. A collective of DONA-certified doulas offering birth support, postpartum care, and lactation consulting. Tiered pricing based on doula experience level, making quality doula care accessible across budget ranges.", costRange: "$800-$2,500 tiered by experience (Tier I/II/III)", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Lactation Consultant"], serviceArea: ["Pittsburgh, PA", "Allegheny County", "Western PA"],
+      photo: "/images/provider-pittsburgh-pa-pittsburgh-doula-network.webp",
+      costRange_source: "market-estimate"
+    },{ name: "Riverbend Birth" , credential: "Birth Doula" , practice: "Riverbend Birth" , url: "https://www.pittsburghbirthservices.com/" , description: "Inclusive, experienced birth support founded by Megan and Marlee Malone-Franklin. Serves families birthing at UPMC Magee, AHN hospitals, and The Midwife Center. Known for compassionate, judgment-free care for all family structures.", costRange: "$150-$2,500 depending on services", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Childbirth Education"], serviceArea: ["Pittsburgh, PA", "Allegheny County"],
+      photo: "/images/provider-pittsburgh-pa-riverbend-birth.webp",
+      costRange_source: "market-estimate"
+    },{ name: "Boundless Birth Doulas" , credential: "Birth Doula" , practice: "Boundless Birth Doulas" , url: "https://www.boundlessbirthdoulas.com/" , description: "Founded by Emily, a Pittsburgh-based birth and postpartum doula supporting families through UPMC Magee and surrounding hospitals. Focuses on evidence-based support, informed consent, and helping families feel confident in their birth choices.", costRange: "$900-$1,800 for birth doula packages", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Pittsburgh, PA"],
+      photo: "/images/provider-pittsburgh-pa-boundless-birth-doulas.webp",
+      costRange_source: "market-estimate"
+    },{ name: "Empowered Holistic Birth" , credential: "Birth Doula" , practice: "Empowered Holistic Birth" , url: "https://www.ehbirth.com/" , description: "Full-spectrum doula services including pregnancy, birth, postpartum, breastfeeding support, and placenta encapsulation. Takes a holistic approach to maternal wellness, addressing physical, emotional, and informational support needs throughout the perinatal journey.", costRange: "$1,000-$2,200 for birth doula packages; $35-$50/hr postpartum", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Placenta Encapsulation", "Breastfeeding Support"], serviceArea: ["Pittsburgh, PA", "Western PA"],
+      photo: "/images/provider-pittsburgh-pa-empowered-holistic-birth.webp",
+      costRange_source: "market-estimate"
+    },{ name: "Nido Doula Care" , credential: "Birth Doula" , practice: "Nido Doula Care" , url: "https://www.nidodoulacare.com/" , description: "Professional birth and postpartum doula services run by Natalia Wozniak, serving Pittsburgh-area families. Offers bilingual support (English/Spanish) and specializes in creating a calm, nurturing environment for new and growing families.", costRange: "$1,000-$1,800 for birth doula packages; $30-$45/hr postpartum", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Childbirth Education"], serviceArea: ["Pittsburgh, PA", "Allegheny County"],
+      photo: "/images/provider-pittsburgh-pa-nido-doula-care.webp",
+      costRange_source: "market-estimate"
+    },{ name: "Moon Sage Mama (Melissa Lucchesi)" , credential: "Birth Doula" , practice: "Moon Sage Mama LLC" , url: "https://www.moonsagemama.com/" , description: "Experienced birth and postpartum doula serving Pittsburgh families. Offers comprehensive birth support packages, postpartum care, and childbirth education. Known for a calm, grounded presence and extensive knowledge of Pittsburgh hospital policies.", costRange: "$1,850-$2,400 for birth doula packages; $50-$55/hr postpartum", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Childbirth Education"], serviceArea: ["Pittsburgh, PA", "Western PA"],
+      photo: "/images/doulas/moon-sage-mama-pittsburgh-pa.webp",
+      costRange_source: "market-estimate"
+    },{ name: "Mooncradle Matrescence (Clarissa Alves)" , credential: "Birth Doula" , practice: "Mooncradle Matrescence" , url: "https://www.mooncradlematrescence.com/" , description: "Full-spectrum doula care with a focus on the matrescence transition, the period of becoming a mother. Offers birth doula support, postpartum care, and maternal wellness coaching. Serves families across Pittsburgh and surrounding communities.", costRange: "$1,300-$3,000 for birth doula packages; $30-$35/hr postpartum", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula", "Maternal Wellness Coaching"], serviceArea: ["Pittsburgh, PA", "Western PA"],
+      photo: "/images/doulas/mooncradle-matrescence-pittsburgh-pa.webp",
+      costRange_source: "market-estimate"
+    }
+      ],
+      culture: "Pittsburgh's doula community is growing strong, with a tight-knit network of birthworkers who bring that signature Steel City loyalty to your birth experience. Organizations like Birth Sisters Pittsburgh and local BIPOC birth collectives are expanding access and pushing for more equitable maternal care across the city's neighborhoods. You'll find doulas here who treat you like family and who deeply understand the unique experience of birthing in Western Pennsylvania's hospital landscape." ,
+      heroLocalDetail: "At 38 weeks, you're probably mentally calculating drive times from your Squirrel Hill apartment or Lawrenceville rowhouse to your delivery hospital, wondering whether the Fort Pitt Tunnel will cooperate or if Route 28 is the safer bet. Frick Park's wooded trails give you shaded walking paths when you need to coax baby along, and the Strip District on a quiet Saturday morning is a surprisingly peaceful place for those final waddle-walks past the vendor stands on Smallman Street." ,
+      hospitalDetails: [
+        { name: "Magee-Womens Hospital of UPMC" , url: "https://www.upmc.com/locations/hospitals/magee-womens", address: "300 Halket Street, Pittsburgh, PA 15213", nicuLevel: "III", doulaPolicy: "Doulas welcome as support persons", medicaid: "Yes - accepts PA Medicaid", thumbnail: "/images/pittsburgh-pa-hospital-magee-womens.webp", paragraph: "Magee-Womens Hospital of UPMC is one of the nation's premier centers for women's health, delivering over 10,000 babies annually in Pittsburgh's Oakland neighborhood. The hospital features a verified Level III NICU for babies needing specialized care and is nationally recognized for its maternal-fetal medicine program, handling high-risk pregnancies that other facilities cannot. Magee has a comprehensive midwifery program alongside its OB-GYN services, giving families the choice between midwife-led and physician-led care. Doulas are welcomed and supported as part of the birth team, with policies allowing support people during labor and delivery. The hospital accepts PA Medicaid and most major insurance plans. Magee also offers water birth options in select rooms and has a dedicated high-risk pregnancy unit, making it the most full-service maternity hospital in western Pennsylvania. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." },
+        { name: "UPMC Children's Hospital of Pittsburgh" , url: "https://www.upmc.com/locations/hospitals/childrens-pittsburgh", address: "4401 Penn Avenue, Pittsburgh, PA 15224", nicuLevel: "IV", doulaPolicy: "Doulas welcome as support persons", medicaid: "Yes - accepts PA Medicaid", thumbnail: "/images/pittsburgh-pa-hospital-upmc-childrens.webp", paragraph: "UPMC Children's Hospital of Pittsburgh operates a verified Level IV NICU, the highest level of neonatal intensive care available, for newborns who need the most specialized medical attention after birth. While not a primary delivery hospital, UPMC Children's receives transfers from hospitals across western Pennsylvania and the tri-state area when babies require advanced surgical, cardiac, or neurological care. The hospital is consistently ranked among the best children's hospitals in the nation by U.S. News & World Report. Their neonatal team includes board-certified neonatologists, pediatric specialists, and specialized nursing staff available 24/7. For families delivering at Magee-Womens or other UPMC hospitals, the proximity to a Level IV NICU provides peace of mind knowing the highest level of neonatal care is minutes away if needed." },
+        { name: "Allegheny General Hospital" , url: "https://www.ahn.org/locations/allegheny-general-hospital", address: "320 East North Avenue, Pittsburgh, PA 15212", nicuLevel: "III", doulaPolicy: "Doulas welcome as support persons", medicaid: "Yes - accepts PA Medicaid", thumbnail: "/images/pittsburgh-pa-hospital-allegheny-general.webp", paragraph: "Allegheny General Hospital, part of the Allegheny Health Network (AHN), is a major teaching hospital on Pittsburgh's North Side with a well-established obstetric program and a verified Level III NICU. The hospital delivers thousands of babies each year with private labor and delivery rooms, 24/7 anesthesia coverage, and a full complement of maternal-fetal medicine specialists for high-risk pregnancies. Doulas are welcome as part of the support team, and the hospital's nursing staff is experienced in working collaboratively with birth workers. Allegheny General accepts PA Medicaid and most private insurance plans. The hospital also offers childbirth education classes, lactation consulting, and a maternal mental health program, making it a comprehensive option for families on the North Side and North Hills. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." },
+        { name: "West Penn Hospital" , url: "https://www.ahn.org/locations/west-penn-hospital", address: "4815 Liberty Avenue, Pittsburgh, PA 15224", nicuLevel: "II", doulaPolicy: "Doulas welcome as support persons", medicaid: "Yes - accepts PA Medicaid", thumbnail: "/images/pittsburgh-pa-hospital-west-penn.webp", paragraph: "West Penn Hospital, part of AHN in the Bloomfield neighborhood, is known for its highly regarded midwifery practice and intimate, community-hospital feel that many Pittsburgh families prefer over larger medical centers. The hospital features a verified Level II NICU, providing intermediate neonatal care for babies who need extra support but not the most intensive level. West Penn has one of the strongest midwifery programs in Pittsburgh, offering water birth, low-intervention labor options, and VBAC support for families seeking a more natural birth experience in a hospital setting. Doulas are warmly welcomed, and the hospital's smaller size means more personalized attention from nursing staff. West Penn accepts PA Medicaid and most private insurance. The hospital also offers prenatal yoga classes, comprehensive lactation support, and a parent education series that draws families from across the city. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." },
+        { name: "Jefferson Hospital (AHN)" , url: "https://www.ahn.org/locations/jefferson-hospital", address: "5300 Grove Road, Jefferson Hills, PA 15025", nicuLevel: "II", doulaPolicy: "Doulas welcome as support persons", medicaid: "Yes - accepts PA Medicaid", thumbnail: "/images/pittsburgh-pa-hospital-jefferson.webp", paragraph: "Jefferson Hospital, part of the Allegheny Health Network, serves families in Pittsburgh's South Hills and Jefferson Hills area with a modern maternity unit and Level II NICU. The hospital offers private labor and delivery suites, 24/7 obstetric anesthesia, and a family-centered approach to maternity care. Jefferson's nursing staff is known for being particularly supportive of doula-assisted births, and the hospital welcomes doulas as essential members of the birth team. The hospital accepts PA Medicaid and most private insurance plans. Jefferson also offers childbirth education, breastfeeding support, and a verified Level II NICU for babies who need intermediate specialized care. For families in the South Hills, Jefferson provides a closer-to-home option without sacrificing quality or safety. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." },
+        { name: "St. Clair Hospital" , url: "https://www.stclair.org", address: "1000 Bower Hill Road, Pittsburgh, PA 15243", nicuLevel: "III", doulaPolicy: "Doulas welcome as support persons", medicaid: "Yes - accepts PA Medicaid", thumbnail: "/images/pittsburgh-pa-hospital-st-clair.webp", paragraph: "St. Clair Hospital in Mt. Lebanon is a community hospital with a verified Level III NICU, making it one of the few community hospitals in the Pittsburgh area with this level of neonatal care capability. The hospital delivers over 2,000 babies annually with private labor rooms, a dedicated cesarean section operating room, and 24/7 obstetric and anesthesia coverage. St. Clair is known for its patient-centered approach and consistently high patient satisfaction scores in maternity care. Doulas are welcome, and the hospital's smaller size allows for more personalized, relationship-based care from the nursing team. The hospital accepts PA Medicaid and most private insurance. St. Clair also offers midwifery services, lactation consulting, and a comprehensive childbirth education program, making it a strong choice for families in the South Hills and western suburbs. <a href='/birth-plan-template/'>Use our free hospital birth plan template</a> to prepare for your delivery here." }
+      ],
+      birthCenterDetails: [
+        { name: "The Midwife Center for Birth & Women's Health" , address: "2831 Penn Avenue, Pittsburgh, PA 15222", thumbnail: "/images/pittsburgh-pa-birth-center-midwife-center.webp", paragraph: "The Midwife Center for Birth & Women's Health is western Pennsylvania's only freestanding birth center, located on Penn Avenue in the Strip District. The center offers prenatal care, water birth, natural birth in a homelike setting, and comprehensive women's health services. They accept most insurance plans including PA Medicaid. The midwives at The Midwife Center provide personalized, low-intervention care and have been serving Pittsburgh families since 1982. <a href='/birth-plan-template/'>Use our free birth plan template</a> to prepare for your birth center delivery." },
+        { name: "No other freestanding birth centers in Pittsburgh" , thumbnail: "", paragraph: "The Midwife Center is western Pennsylvania\u2019s only freestanding birth center. If you\u2019re looking for additional out-of-hospital options, talk to your provider about home birth with a licensed midwife, or ask about midwifery-led care at West Penn Hospital or UPMC Magee-Womens, both of which offer low-intervention birth paths in a hospital setting." }
+      ],
+      midwifeInfo: {
+        available: true,
+        paragraph: "Certified Nurse-Midwives (CNMs) practice at UPMC Magee-Womens Hospital and West Penn Hospital, offering low-intervention birth options alongside full medical backup. The Midwife Center, western Pennsylvania\u2019s only freestanding birth center, provides midwifery-led care in a homelike setting. Pennsylvania requires licensure through the State Board of Medicine. For home birth options, licensed midwives serve the Greater Pittsburgh area."
+      },
+      medicaidNote: "Yes \u2014 Pennsylvania Medicaid covers doula services as of 2024, with reimbursement of up to $1,250 per pregnancy through the PA Doula Program, covering prenatal visits, labor support, and postpartum visits combined." ,
+      insuranceNote: "Pennsylvania private insurers vary widely on doula coverage. Aetna and UHC may partially reimburse with a superbill, while Cigna and Blue Cross of Pennsylvania often require pre-authorization. Always request a superbill from your doula and submit it with CPT code S9443 for the best chance of reimbursement." ,
+      faqs: [
+        { q: "How much does a doula cost in Pittsburgh?" , a: "In Pittsburgh, doula packages generally range from $700–$2,000, with most covering prenatal visits, labor support, and postpartum follow-up. If cost is a concern, ask about sliding scale options . And remember, PA Medicaid now covers doula services up to $1,250." },
+        { q: "Does Pennsylvania Medicaid cover doula services?" , a: "Yes! As of 2024, Pennsylvania Medicaid covers doula services up to $1,250 per pregnancy through the PA Doula Program. You'll need to work with a Medicaid-enrolled doula. contact your managed care plan for options in Pittsburgh." },
+        { q: "What hospitals in Pittsburgh have the highest level NICU?" , a: "UPMC Children's Hospital of Pittsburgh has a verified Level IV NICU, the highest level possible. for newborns needing the most advanced care. Magee-Womens Hospital and Allegheny General both have verified Level III NICUs for in-house delivery support." },
+        { q: "Are there birth centers in Pittsburgh?" , a: "Yes! The Midwife Center for Birth & Women's Health, located at 2831 Penn Avenue in the Strip District, is western Pennsylvania's only freestanding birth center. They offer water birth, natural birth in a homelike setting, midwifery care, and accept most insurance plans including PA Medicaid. Pittsburgh families can also access midwifery-led, low-intervention care at Magee-Womens Hospital or West Penn Hospital, or explore home birth options with licensed midwives in the greater Pittsburgh area." },
+        { q: "Can I bring my doula to hospitals in Pittsburgh?" , a: "Yes, most Pittsburgh hospitals welcome doulas as part of your support team during labor and delivery. Magee-Womens and West Penn are especially doula-friendly. but it's always smart to call your hospital's labor and delivery unit a few weeks before your due date to confirm their current visitor and support person policies." },
+        { q: "What postpartum resources are available in Pittsburgh?" , a: "Pittsburgh offers several great postpartum resources: Healthy Start Pittsburgh supports moms through pregnancy and postpartum with wraparound services, the Allegheny County Health Department has a free home visiting program, Western Psychiatric Institute provides perinatal mood support, and La Leche League Pittsburgh runs free breastfeeding support groups across the city." }
+      ],
+      nearbyCities: ["philadelphia-pa"],
+      birthStats: {
+        cesareanRate: 32.3,
+        maternalMortalityRate: 22.8,
+        homeBirthRate: 1.0,
+        birthCenterBirthRate: 0.3,
+        dataYear: 2023,
+        dataSource: "CDC NCHS, National Vital Statistics System",
+      },
+  },
   "baltimore-md": {
     city: "Baltimore" ,
     state: "MD" ,
@@ -13507,768 +13646,843 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
       }
     ]
   },
-  "saint-petersburg-fl": {
-    titleTag: "Saint Petersburg FL Doulas: Costs & Medicaid",
+  "spring-tx": {
     enableBlogResources: true,
-    publishedDate: "2025-10-17",
-    city: "Saint Petersburg",
-    state: "FL",
-    slug: "saint-petersburg-fl",
-    costLow: 650,
-    costHigh: 1800,
+    publishedDate: "2026-06-22",
+    city: "Spring",
+    state: "TX",
+    slug: "spring-tx",
+    costLow: 1000,
+    costHigh: 2800,
     shelbiServesHere: false,
-    lat: 27.7676,
-    lng: -82.6403,
-    ogImage: "https://truejoybirthing.com/images/og-city-saint-petersburg-fl.webp",
-    heroImage: "/images/saint-petersburg-fl-birth-doula-hero.webp",
-    supportSceneImage: "/images/saint-petersburg-fl-birth-doula-support.webp",
-    supportSceneAlt: "A doula walking beside a pregnant mom through a palm-lined Saint Petersburg neighborhood at golden hour",
-    nearbyCities: ["tampa-fl", "orlando-fl"],
-    medicaidNote: "Yes — Florida Medicaid covers maternity care through Managed Medical Assistance (MMA) plans, and the Healthy Start Coalition of Pinellas runs a free doula program for eligible residents, so ask your plan and the coalition both.",
-    insuranceNote: "Many Florida doulas work out-of-network and provide superbills for HSA/FSA reimbursement. Check if your plan offers out-of-network maternity or wellness benefits.",
+    heroImage: "/images/spring-tx-birth-doula-hero-v5.webp",
+    supportSceneImage: "/images/spring-tx-support-scene-v3.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-spring-tx.webp",
+    localDoulas: [
+     { name: "TLC Doula Group", credential: "Birth Doula", practice: "TLC Doula Group", url: "https://www.facebook.com/tlcdoulagroup/", photo: "/images/provider-spring-tx-tlc-doula-group.webp", description: "Total Labor Care (TLC) is a group of like minded doulas working together to provide education, guidance and support throughout fertility, pregnancy and ..", costRange: "Varies by provider ($1,000-$2,800)", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"], serviceArea: ["Spring, TX"] },
+     { name: "THE PAINTED DOULA", credential: "Birth Doula", practice: "THE PAINTED DOULA", url: "https://www.yelp.com/biz/the-painted-doula-spring", photo: "/images/provider-spring-tx-the-painted-doula.webp", description: "More info about The Painted Doula · Map · 26600 Keith St. Spring, TX 77373. Directions · (281) 686-2877. Call Now · Hours. What time does The Painted Doula open?", costRange: "Varies by provider ($1,000-$2,800)", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"], serviceArea: ["Spring, TX"] },
+     { name: "Faith", credential: "Birth Doula", practice: "Faith", url: "https://www.guidinghandsbirth.com/", photo: "/images/provider-spring-tx-faith.webp", description: "Debbie Thomas is an award-winning faith-based doula at Guiding Hands Birth Services. Doula services, birth, postpartum, & lactation support in Spring..", costRange: "Varies by provider ($1,000-$2,800)", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"], serviceArea: ["Spring, TX"] },
+     { name: "Texas Doula Agency", credential: "Birth Doula", practice: "Texas Doula Agency", url: "https://www.circlebirth.com/", photo: "/images/provider-spring-tx-texas-doula-agency.webp", description: "Circle Birth is a professional doula agency serving Austin, Houston, Dallas, and San Antonio. Birth doulas, postpartum doulas, and childbirth classes.", costRange: "Varies by provider ($1,000-$2,800)", acceptingClients: true, services: ["Birth Doula", "Postpartum Doula"], serviceArea: ["Spring, TX"] } ],
+    culture: "Spring and The Woodlands form a fast-growing suburban corridor north of Houston along I-45. The Woodlands is a master-planned community with world-class amenities. Spring is a more affordable unincorporated area that feeds into the same hospital system. 3 birth centers serve the area.",
+    heroLocalDetail: "I-45 South from The Woodlands to Houston can be brutal during rush hour, build 15-20 extra minutes if you’re heading to the Texas Medical Center. Houston Methodist The Woodlands sits at 17183 I-45 South in Shenandoah, right off the interstate. The Woodlands Waterway and George Mitchell Nature Preserve trails are popular third-trimester walking spots.",
+    hospitalDetails: [
+     { name: "Houston Methodist The Woodlands Hospital", paragraph: "Houston Methodist The Woodlands Hospital, at 17183 I-45 South in Shenandoah, TX 77385, is a 295+ bed facility with a dedicated Childbirth Center. Per Houston Methodist system standards and Texas DSHS records, it operates as a Level III NICU facility, though the specific NICU level is not explicitly stated on the hospital’s current website, contact the hospital directly for current NICU level verification. Private birthing suites and 24/7 obstetric hospitalists serve the growing Spring/The Woodlands corridor. If you’re delivering here, having your birth plan ready makes the intake process smoother. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started.",
+    thumbnail: "/images/spring-tx-hospital-houston-methodist-the-woodlands-hospital.webp"
+   },
+     { name: "CHI St. Luke’s Health. The Woodlands (now CommonSpirit Health)", paragraph: "CHI St. Luke’s Health. The Woodlands (now CommonSpirit Health) at 17200 St. Luke’s Way, The Woodlands, TX 77384, has historically offered OB/GYN and labor & delivery services. Current L&D status should be verified directly with the hospital. Contact CommonSpirit Health at (936) 266-2000 for current maternity services.",
+    thumbnail: "/images/spring-tx-hospital-chi-st-lukes-the-woodlands.webp"
+   } ],
+    birthCenterDetails: [
+     { name: "Nativiti Family Birth Center", paragraph: "Nativiti Family Birth Center, at 26614 Oak Ridge Dr, The Woodlands, TX 77380 (NPI 1245638287), is a CNM-staffed freestanding birth center offering prenatal, natural birth, postpartum, and well-woman services. If you’re planning an out-of-hospital birth in The Woodlands area, Nativiti is the closest option, call ahead to confirm availability and schedule a tour.", thumbnail: "/images/spring-tx-birth-center-nativiti-family-birth-center.webp" },
+     { name: "Journey Birth Center", paragraph: "Journey Birth Center, at 903 E Main St, Humble, TX 77338, offers VBAC, waterbirth, and natural birth options. About 15 minutes from The Woodlands, it’s an additional freestanding birth center option for Spring and The Woodlands families seeking midwife-led out-of-hospital birth.", thumbnail: "/images/spring-tx-birth-center-journey-birth-center.webp" } ],
+    medicaidNote: "Yes \u2014 since September 2024, Texas Medicaid has covered doulas under SB 750, and Montgomery County's STAR managed care plans are part of it. One wrinkle: not every plan has finished its doula network setup yet, so confirm before you sign anything (1-877-543-7669 or YourTexasBenefits.com).",
+    insuranceNote: "Houston Methodist accepts most major private insurance plans. The Woodlands area’s employer market (ExxonMobil, CHI St. Luke’s, HCA) often includes maternity wellness benefits that may cover doula support, check with your HR department. HSA and FSA funds can also help cover out-of-pocket doula costs.",
     faqs: [
-      {
-        q: "How much does a doula cost in Saint Petersburg, FL?",
-        a: "Birth doula services here typically run between $650 and $1,800, and packages usually cover prenatal visits, continuous labor support, and one postpartum follow-up visit."
+     { q: "How much does a doula cost in Spring/The Woodlands?", a: "Spring doulas mostly charge $1,000 to $2,800 for the whole arc, prenatal visits through postpartum check-ins. Before you compare prices, fill out the <a href=\"/birth-plan-template/\">free birth plan template</a>. It changes the questions you ask, in a good way." },
+     { q: "Does Medicaid cover doulas in Spring/The Woodlands?", a: "Medicaid coverage for doulas is real in Spring now. SB 750, September 2024, Montgomery County's STAR plans included. Call your plan and ask \"Do you cover doula services?\" If they fumble it, try 1-877-543-7669. YourTexasBenefits.com covers the online route. Wanting support is normal, and insurance finally helps pay for some of it." },
+     { q: "Which hospitals in Spring/The Woodlands have labor and delivery?", a: "Houston Methodist The Woodlands Hospital at 17183 I-45 South has a Childbirth Center with 24/7 obstetric hospitalists (NICU level should be verified directly with the hospital). CHI St. Luke’s Health. The Woodlands at 17200 St. Luke’s Way has historically offered maternity services, verify current L&D status directly. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+     { q: "Are there birth centers near Spring/The Woodlands?", a: "Nativiti Family Birth Center at 26614 Oak Ridge Dr in The Woodlands (NPI 1245638287) is a CNM-staffed freestanding birth center. Journey Birth Center at 903 E Main St in Humble, about 15 minutes away, offers VBAC and waterbirth options. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you." },
+     { q: "Does True Joy Birthing work with Spring/The Woodlands families?", a: "Costs zero. True Joy Birthing's birth plan app walks you through every question worth asking before a Spring delivery, whether you end up delivering in a Tomball hospital, out at a Woodlands birth center, or at home. It doubles as a directory for doulas and midwives who work this side of Houston. There's no signup wall either. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way." } ],
+    nearbyCities: ["houston-tx", "conroe-tx", "college-station-tx"],
+  },
+    "saint-petersburg-fl": {
+      titleTag: "Saint Petersburg FL Doulas: Costs & Medicaid",
+      enableBlogResources: true,
+      publishedDate: "2025-10-17",
+      city: "Saint Petersburg",
+      state: "FL",
+      slug: "saint-petersburg-fl",
+      costLow: 650,
+      costHigh: 1800,
+      shelbiServesHere: false,
+      lat: 27.7676,
+      lng: -82.6403,
+      ogImage: "https://truejoybirthing.com/images/og-city-saint-petersburg-fl.webp",
+      heroImage: "/images/saint-petersburg-fl-birth-doula-hero.webp",
+      supportSceneImage: "/images/saint-petersburg-fl-birth-doula-support.webp",
+      supportSceneAlt: "A doula walking beside a pregnant mom through a palm-lined Saint Petersburg neighborhood at golden hour",
+      nearbyCities: ["tampa-fl", "orlando-fl"],
+      medicaidNote: "Yes — Florida Medicaid covers maternity care through Managed Medical Assistance (MMA) plans, and the Healthy Start Coalition of Pinellas runs a free doula program for eligible residents, so ask your plan and the coalition both.",
+      insuranceNote: "Many Florida doulas work out-of-network and provide superbills for HSA/FSA reimbursement. Check if your plan offers out-of-network maternity or wellness benefits.",
+      faqs: [
+        {
+          q: "How much does a doula cost in Saint Petersburg, FL?",
+          a: "Birth doula services here typically run between $650 and $1,800, and packages usually cover prenatal visits, continuous labor support, and one postpartum follow-up visit."
+        },
+        {
+          q: "Does Florida Medicaid cover doula services?",
+          a: "Florida Medicaid covers maternity care through MMA plans, and the Healthy Start Coalition of Pinellas pairs eligible residents with a no-cost doula for labor and postpartum support."
+        },
+        {
+          q: "What hospitals deliver babies in Saint Petersburg?",
+          a: "Two main hospitals handle maternity here: Orlando Health Bayfront, next to the Johns Hopkins All Children's NICU, and HCA Florida St. Petersburg, near downtown."
+        },
+        {
+          q: "Is there a birth center near Saint Petersburg?",
+          a: "Breath of Life in Largo, about six miles from Saint Petersburg, is Florida's only CABC-accredited birth center and offers midwife-led care."
+        },
+        {
+          q: "Can I have a water birth in Saint Petersburg?",
+          a: "Water birth is available at Breath of Life in Largo, and most area hospitals offer labor tubs, though routine water delivery is not their standard."
+        },
+        {
+          q: "How do I choose a doula in Saint Petersburg?",
+          a: "Check certifications and services, confirm Pinellas County coverage, then schedule consultations with two or three doulas to find your fit."
+        }
+      ],
+      culture: "Saint Petersburg blends waterfront living with an arts-forward community, giving expecting families access to a relaxed coastal culture and some genuinely good maternal-care resources. We have watched this city grow into one of the friendlier places in Florida to be pregnant. Saint Petersburg's birth community runs deeper than the provider list above. La Leche League holds free morning meetings that rotate between the Old Northeast and the Kenwood neighborhoods, several yoga studios along Central Avenue run prenatal-specific classes seven days a week, and postpartum circles across town give mothers a place to trade honest notes on sleep, feeding, and the fourth trimester. VBAC-considering families tend to swap provider experiences word of mouth in these same rooms, which is often where a referral to a genuinely supportive OB or midwife comes from. Doulas here know these circles well, and most will point you to the right one for your week of pregnancy if you ask.",
+      heroLocalDetail: "Known as the Sunshine City, Saint Petersburg gets over 350 days of sun along a walkable waterfront. Sunsets from the pier draw real crowds. But what matters for a pregnant family here runs quieter: the prenatal yoga studios scattered from the Grand Central District to the Old Northeast, causeway traffic you learn to time around appointments, and a growing wellness scene that supports mindful pregnancy and birth." + "Logistics matter more in Saint Petersburg than in most Florida cities your size expectations might suggest. Traffic on the causeways stacks up at rush hour, so a 4 PM appointment from the beaches can turn into a white-knuckle drive, and the parking structures at both major hospitals fill early on weekday mornings. September and October births carry a second wrinkle: hurricane season. Families due in that window should ask each provider where their backup location is, what happens if an evacuation order lands in week 39, and how their birth center or hospital handles transfers. Every accredited facility has an answer to those questions, and the good ones will walk you through it without being asked twice.",
+      midwifeInfo: {
+        paragraph: "Saint Petersburg sits inside one of Florida's stronger midwifery markets. Licensed midwife care, both kinds. Certified Professional Midwives (CPMs) specialize in out-of-hospital birth, and Certified Nurse-Midwives (CNMs) practice in hospitals and birth centers, which means families here can pick either setting without crossing state lines. That is not true everywhere. Breath of Life Women's Health & Birth Center in nearby Largo staffs licensed midwives for birth-center and home births, and Tampa Bay's hospital CNM groups accept transfers when plans change. Insurance coverage follows licensure here: Florida Medicaid pays for licensed midwife care, and many commercial plans do the same, though deductible math varies by plan, so families confirm benefits before the first prenatal visit. The practical takeaway is that midwife-led care in St. Petersburg is normal and regulated here, not a boutique option you have to hunt down Ask around any prenatal yoga class and someone will hand you a midwife recommendation within five minutes, which says plenty about how mainstream this choice has become.",
+        credentialTypes: "CPM / CNM (Florida-licensed)",
+        credentialDetail: "In Florida, Certified Professional Midwives (CPMs) are licensed specifically for out-of-hospital birth, while Certified Nurse-Midwives (CNMs) hold national certification and practice in hospitals and birth centers.",
       },
-      {
-        q: "Does Florida Medicaid cover doula services?",
-        a: "Florida Medicaid covers maternity care through MMA plans, and the Healthy Start Coalition of Pinellas pairs eligible residents with a no-cost doula for labor and postpartum support."
-      },
-      {
-        q: "What hospitals deliver babies in Saint Petersburg?",
-        a: "Two main hospitals handle maternity here: Orlando Health Bayfront, next to the Johns Hopkins All Children's NICU, and HCA Florida St. Petersburg, near downtown."
-      },
-      {
-        q: "Is there a birth center near Saint Petersburg?",
-        a: "Breath of Life in Largo, about six miles from Saint Petersburg, is Florida's only CABC-accredited birth center and offers midwife-led care."
-      },
-      {
-        q: "Can I have a water birth in Saint Petersburg?",
-        a: "Water birth is available at Breath of Life in Largo, and most area hospitals offer labor tubs, though routine water delivery is not their standard."
-      },
-      {
-        q: "How do I choose a doula in Saint Petersburg?",
-        a: "Check certifications and services, confirm Pinellas County coverage, then schedule consultations with two or three doulas to find your fit."
-      }
-    ],
-    culture: "Saint Petersburg blends waterfront living with an arts-forward community, giving expecting families access to a relaxed coastal culture and some genuinely good maternal-care resources. We have watched this city grow into one of the friendlier places in Florida to be pregnant. Saint Petersburg's birth community runs deeper than the provider list above. La Leche League holds free morning meetings that rotate between the Old Northeast and the Kenwood neighborhoods, several yoga studios along Central Avenue run prenatal-specific classes seven days a week, and postpartum circles across town give mothers a place to trade honest notes on sleep, feeding, and the fourth trimester. VBAC-considering families tend to swap provider experiences word of mouth in these same rooms, which is often where a referral to a genuinely supportive OB or midwife comes from. Doulas here know these circles well, and most will point you to the right one for your week of pregnancy if you ask.",
-    heroLocalDetail: "Known as the Sunshine City, Saint Petersburg gets over 350 days of sun along a walkable waterfront. Sunsets from the pier draw real crowds. But what matters for a pregnant family here runs quieter: the prenatal yoga studios scattered from the Grand Central District to the Old Northeast, causeway traffic you learn to time around appointments, and a growing wellness scene that supports mindful pregnancy and birth." + "Logistics matter more in Saint Petersburg than in most Florida cities your size expectations might suggest. Traffic on the causeways stacks up at rush hour, so a 4 PM appointment from the beaches can turn into a white-knuckle drive, and the parking structures at both major hospitals fill early on weekday mornings. September and October births carry a second wrinkle: hurricane season. Families due in that window should ask each provider where their backup location is, what happens if an evacuation order lands in week 39, and how their birth center or hospital handles transfers. Every accredited facility has an answer to those questions, and the good ones will walk you through it without being asked twice.",
-    midwifeInfo: {
-      paragraph: "Saint Petersburg sits inside one of Florida's stronger midwifery markets. Licensed midwife care, both kinds. Certified Professional Midwives (CPMs) specialize in out-of-hospital birth, and Certified Nurse-Midwives (CNMs) practice in hospitals and birth centers, which means families here can pick either setting without crossing state lines. That is not true everywhere. Breath of Life Women's Health & Birth Center in nearby Largo staffs licensed midwives for birth-center and home births, and Tampa Bay's hospital CNM groups accept transfers when plans change. Insurance coverage follows licensure here: Florida Medicaid pays for licensed midwife care, and many commercial plans do the same, though deductible math varies by plan, so families confirm benefits before the first prenatal visit. The practical takeaway is that midwife-led care in St. Petersburg is normal and regulated here, not a boutique option you have to hunt down Ask around any prenatal yoga class and someone will hand you a midwife recommendation within five minutes, which says plenty about how mainstream this choice has become.",
-      credentialTypes: "CPM / CNM (Florida-licensed)",
-      credentialDetail: "In Florida, Certified Professional Midwives (CPMs) are licensed specifically for out-of-hospital birth, while Certified Nurse-Midwives (CNMs) hold national certification and practice in hospitals and birth centers.",
+      localDoulas: [
+        {
+          name: "Jennifer Vazquez",
+          credential: "Certified Birth & Postpartum Doula (ProDoula-trained), Childbirth Educator",
+          business: "Pinellas Doula Services",
+          url: "https://pinellasdoulaservices.com/",
+          phone: "",
+          email: "",
+          location: "Saint Petersburg, FL",
+          certifications: [
+            "Certified Birth Doula",
+            "Certified Postpartum Doula",
+            "Childbirth Educator"
+          ],
+          services: [
+            "Birth Doula",
+            "Postpartum Doula",
+            "Childbirth Education",
+            "Lactation Support"
+          ],
+          bio: "Hi! I'm Jennifer \u2014 a certified birth and postpartum doula and childbirth educator serving St. Petersburg and throughout Pinellas County.",
+          description: "Jennifer Vazquez runs Pinellas Doula Services from St. Petersburg proper, supporting hospital births across Pinellas County, plus childbirth education and postpartum visits.",
+          costRange: "$650-1800",
+          photoFound: true,
+          photo: "/images/providers/saint-petersburg-fl-jennifer-vazquez.webp"
+        },
+        {
+          name: "Tiffany Holmes",
+          credential: "Traditional Birth & Postpartum Doula, Hypnobirthing Childbirth Educator (KGH), Reiki Master",
+          business: "Quantum Motherhood",
+          url: "https://saintpetersburgdoula.com/",
+          phone: "",
+          email: "",
+          location: "Saint Petersburg, FL",
+          certifications: [
+            "Traditional Birth & Postpartum Doula",
+            "Hypnobirthing Childbirth Educator",
+            "Reiki Master"
+          ],
+          services: [
+            "Birth Doula",
+            "Postpartum Doula",
+            "Hypnobirthing",
+            "Reiki",
+            "Pelvic Steaming"
+          ],
+          bio: "Traditional Birth & Postpartum Doula, Hypnobirthing Childbirth Educator, Quantum Birthing Coach, Reiki Master, Pelvic Steaming Facilitator, and Intuitive Guide in St. Petersburg, FL.",
+          description: "Tiffany Holmes blends traditional birth support, postpartum doula care, Hypnobirthing classes, and Reiki through Quantum Motherhood, matching mindful families across Saint Petersburg.",
+          costRange: "$650-1800",
+          photoFound: true,
+          photo: "/images/providers/saint-petersburg-fl-tiffany-holmes.webp"
+        },
+        {
+          name: "Madeline Ishmael",
+          credential: "DONA-trained Birth Doula, CLC via Healthy Children Project, Bornbir-verified",
+          business: "",
+          url: "https://www.bornbir.com/madeline-ishmael",
+          phone: "",
+          email: "",
+          location: "Saint Petersburg, FL",
+          certifications: [
+            "DONA Certified Birth Doula",
+            "Certified Lactation Consultant (Healthy Children Project)"
+          ],
+          services: [
+            "Birth Doula",
+            "Lactation Consulting",
+            "Prenatal Yoga"
+          ],
+          bio: "My name is Madeline 'Maddy' Ishmael and I am a certified birth doula through DONA since 2019, certified lactation consultant through Healthy Children Project and a prenatal yoga teacher.",
+          description: "Madeline Ishmael is a Bornbir-verified birth doula serving Saint Petersburg with hands-on labor support, birth-plan coaching, and postpartum visits by text.",
+          costRange: "$650-1800",
+          photoFound: true,
+          photo: "/images/providers/saint-petersburg-fl-madeline-ishmael.webp"
+        },
+        {
+          name: "Healthy Start Coalition of Pinellas",
+          credential: "Community maternal-health program (Coalition-operated); doulas trained per Coalition doula-program standards",
+          business: "Pinellas Doula Program",
+          url: "https://healthystartpinellas.org/doula-program/",
+          phone: "727-507-4260",
+          email: "Connect@HealthyStartPinellas.org",
+          location: "Pinellas County, FL",
+          certifications: [],
+          services: [
+            "Free Doula Services",
+            "Labor Support"
+          ],
+          bio: "Free doula program for Pinellas County residents. Doulas are with clients during labor and delivery.",
+          description: "Healthy Start Coalition of Pinellas connects expecting families to free doula-adjacent support, care coordination, education, and referrals countywide.",
+          costRange: "$650-1800",
+          photoFound: true,
+          photo: "/images/providers/saint-petersburg-fl-healthy-start-coalition-of-pinellas.webp"
+        }
+      ],
+      birthCenterDetails: [
+        {
+          name: "Breath of Life Women's Health & Birth Center",
+          address: "1900 E Bay Dr, Largo, FL 33771",
+          paragraph: "Breath of Life Women's Health and Birth Center sits at 1900 East Bay Drive in Largo, roughly ten minutes from downtown Saint Petersburg, and it holds CABC accreditation, which makes it Florida's only accredited birth center. That distinction carries weight in a state where freestanding birth centers stay rare, because accreditation here means voluntary inspection of everything from sterile technique charts to emergency transfer drills, not just a license on the wall. Care is CNM-led, with Certified Nurse-Midwives handling prenatal visits, labor, and delivery, and the birth suites are furnished more like a very good guest room than a hospital floor, including deep tubs for labor and water birth. The center runs the full midwifery model, meaning continuous presence through labor, intermittent monitoring that respects movement, and discharge home within hours after an uncomplicated birth, with a home visit to follow. Transfer protocols are explicit and rehearsed, and families should still ask about them at their first tour, because the honest answer separates a great birth center from a merely pretty one. Insurance coverage varies by plan, Florida Medicaid programs have covered licensed birth center birth, and the center's staff will run a benefits check before the first appointment so nobody gets a surprise in month eight.",
+          thumbnail: "/images/hospitals/saint-petersburg-fl-breath-of-life.webp",
+          url: "https://www.breathoflife.cc",
+          phone: "727.216.1420",
+          credential: "CABC Accredited",
+          distance: "~6 miles from Saint Petersburg",
+          services: [
+            "Water Birth",
+            "Midwife-Led Care",
+            "VBAC",
+            "Home Transfer Plan",
+            "Lactation Support"
+          ],
+          costRange: "$4,000\u2013$6,500",
+          medicaid: false,
+          midwives: [
+            "CNM-led team"
+          ]
+        }
+      ],
+      hospitalDetails: [
+        {
+          name: "Orlando Health Bayfront Hospital \u2014 Center for Women and Babies",
+          address: "550 6th Street South, St. Petersburg, FL 33704",
+          paragraph: "Located on the third floor of Johns Hopkins All Children's Hospital, Orlando Health Bayfront's Center for Women and Babies runs modern labor and delivery suites with comprehensive maternity care, and its Level IV NICU sits right on the same campus. That adjacency is the whole story here. A scheduled induction and a pediatric consult can happen in the same parking garage, and if a baby arrives early or needs specialty care, the transfer is an elevator ride rather than an ambulance run across town. Rooms are private, the nursing staff runs on certified specialists, and the physician group is used to high-risk referrals from up and down the Gulf Coast, so families with complicated pregnancies often end up here by choice rather than by emergency. Doulas work the unit regularly, which matters more than it sounds, because a labor team that already knows how doulas practice is smoother to work with from the first contraction to discharge. Ask the unit about birth-plan processing at preregistration, since this floor honors them and wants the paperwork before you arrive in labor. Bring a signed copy, a photo ID, and the doula's certification, and check-in goes faster by an hour. For families weighing Bayfront versus HCA, the practical split is simple: this campus buys the neonatal safety net, HCA buys a classic full-service experience, and both are close to downtown.",
+          thumbnail: "/images/hospitals/saint-petersburg-fl-bayfront.webp",
+          url: "https://www.hopkinsmedicine.org/patient-care/locations/johns-hopkins-all-childrens-bayfront-baby-place",
+          phone: "(727) 290-1310",
+          doulaPolicy: "Doulas welcome as support persons",
+          midwifeFriendly: true,
+          lactation: true,
+          privateRooms: true,
+          medicaid: true,
+          nicuLevel: "Level IV",
+          birthVolume: "~3,000 births/year",
+          babyFriendly: "Near JHU All Children's NICU"
+        },
+        {
+          name: "HCA Florida St. Petersburg Hospital \u2014 Women's Center",
+          address: "6500 38th Ave. North, St. Petersburg, FL 33710",
+          paragraph: "HCA Florida St. Petersburg Hospital's Women's Center provides a secure labor and delivery unit with private rooms, certified nurses, and skilled physicians in one full-service setting. It is the classic full-hospital experience: triage, delivery, recovery, and postpartum care on one floor, supported by a 215-bed hospital's full diagnostic and surgical resources. The unit handles a broad range of births, from straightforward first deliveries to planned repeat cesareans and medically complex pregnancies, and the NICU here is a community-level special-care nursery rather than the regional draw that Bayfront's campus holds. Families who choose HCA tend to value the calm, the private rooms, and the shorter check-in lines compared with busier downtown units, and several practices in the area round exclusively at this hospital, which keeps prenatal and delivery teams consistent. Doulas attend births here regularly and report the nursing staff as collaborative, particularly when birth plans are shared during preregistration rather than at the door. Parking is easier than at Bayfront, the campus sits close to I-275 for families coming from north Pinellas, and visiting hours are generous for partners.",
+          thumbnail: "/images/hospitals/saint-petersburg-fl-hca-st-pete.webp",
+          url: "https://www.hcafloridahealthcare.com/locations/st-petersburg-hospital/specialties/womens-care",
+          phone: "(727) 341-4808",
+          doulaPolicy: "Patients may bring their own doulas",
+          midwifeFriendly: true,
+          lactation: true,
+          privateRooms: true,
+          medicaid: true,
+          nicuLevel: "Level II",
+          birthVolume: "~2,500 births/year",
+          babyFriendly: "Full-service 215-bed hospital with IBCLC lactation services"
+        }
+      ],
+      sources: [
+        {
+          title: "Pinellas Doula Services \u2014 Jennifer Vazquez",
+          url: "https://pinellasdoulaservices.com/",
+          quote: "Hi! I'm Jennifer \u2014 a certified birth and postpartum doula and childbirth educator serving St. Petersburg and throughout Pinellas County"
+        },
+        {
+          title: "Quantum Motherhood \u2014 Tiffany Holmes",
+          url: "https://saintpetersburgdoula.com/",
+          quote: "Traditional Birth & Postpartum Doula, Hypnobirthing Childbirth Educator, Quantum Birthing Coach, Reiki Master, Pelvic Steaming Facilitator, and Intuitive Guide in St. Petersburg, FL"
+        },
+        {
+          title: "Bornbir \u2014 Madeline Ishmael",
+          url: "https://www.bornbir.com/madeline-ishmael",
+          quote: "My name is Madeline 'Maddy' Ishmael and I am a certified birth doula through DONA since 2019, certified lactation consultant through Healthy Children Project and a prenatal yoga teacher."
+        },
+        {
+          title: "Healthy Start Coalition of Pinellas \u2014 Doula Program",
+          url: "https://healthystartpinellas.org/doula-program/",
+          quote: "Doula will be with the client during the labor and delivery... Must be a resident of Pinellas County"
+        },
+        {
+          title: "Orlando Health Bayfront Hospital Center for Women and Babies",
+          url: "https://www.hopkinsmedicine.org/patient-care/locations/johns-hopkins-all-childrens-bayfront-baby-place",
+          quote: "Located on the third floor of Johns Hopkins All Children's Hospital, Orlando Health Bayfront Hospital Center for Women and Babies offers labor and delivery suites and maternity care."
+        },
+        {
+          title: "HCA Florida St. Petersburg Hospital Women's Center",
+          url: "https://www.hcafloridahealthcare.com/locations/st-petersburg-hospital/specialties/womens-care",
+          quote: "In our secure labor and delivery unit, we offer private rooms where new families can bond together under the care of certified nurses and skilled physicians."
+        },
+        {
+          title: "Breath of Life Women's Health & Birth Center",
+          url: "https://www.breathoflife.cc",
+          quote: "Breath of Life Women's Health and Birth Center, located at 1900 East Bay Drive in Largo ... received its CABC accreditation status becoming Florida's only accredited birth center."
+        }
+      ]
     },
-    localDoulas: [
-      {
-        name: "Jennifer Vazquez",
-        credential: "Certified Birth & Postpartum Doula (ProDoula-trained), Childbirth Educator",
-        business: "Pinellas Doula Services",
-        url: "https://pinellasdoulaservices.com/",
-        phone: "",
-        email: "",
-        location: "Saint Petersburg, FL",
-        certifications: [
-          "Certified Birth Doula",
-          "Certified Postpartum Doula",
-          "Childbirth Educator"
-        ],
-        services: [
-          "Birth Doula",
-          "Postpartum Doula",
-          "Childbirth Education",
-          "Lactation Support"
-        ],
-        bio: "Hi! I'm Jennifer \u2014 a certified birth and postpartum doula and childbirth educator serving St. Petersburg and throughout Pinellas County.",
-        description: "Jennifer Vazquez runs Pinellas Doula Services from St. Petersburg proper, supporting hospital births across Pinellas County, plus childbirth education and postpartum visits.",
-        costRange: "$650-1800",
-        photoFound: true,
-        photo: "/images/providers/saint-petersburg-fl-jennifer-vazquez.webp"
-      },
-      {
-        name: "Tiffany Holmes",
-        credential: "Traditional Birth & Postpartum Doula, Hypnobirthing Childbirth Educator (KGH), Reiki Master",
-        business: "Quantum Motherhood",
-        url: "https://saintpetersburgdoula.com/",
-        phone: "",
-        email: "",
-        location: "Saint Petersburg, FL",
-        certifications: [
-          "Traditional Birth & Postpartum Doula",
-          "Hypnobirthing Childbirth Educator",
-          "Reiki Master"
-        ],
-        services: [
-          "Birth Doula",
-          "Postpartum Doula",
-          "Hypnobirthing",
-          "Reiki",
-          "Pelvic Steaming"
-        ],
-        bio: "Traditional Birth & Postpartum Doula, Hypnobirthing Childbirth Educator, Quantum Birthing Coach, Reiki Master, Pelvic Steaming Facilitator, and Intuitive Guide in St. Petersburg, FL.",
-        description: "Tiffany Holmes blends traditional birth support, postpartum doula care, Hypnobirthing classes, and Reiki through Quantum Motherhood, matching mindful families across Saint Petersburg.",
-        costRange: "$650-1800",
-        photoFound: true,
-        photo: "/images/providers/saint-petersburg-fl-tiffany-holmes.webp"
-      },
-      {
-        name: "Madeline Ishmael",
-        credential: "DONA-trained Birth Doula, CLC via Healthy Children Project, Bornbir-verified",
-        business: "",
-        url: "https://www.bornbir.com/madeline-ishmael",
-        phone: "",
-        email: "",
-        location: "Saint Petersburg, FL",
-        certifications: [
-          "DONA Certified Birth Doula",
-          "Certified Lactation Consultant (Healthy Children Project)"
-        ],
-        services: [
-          "Birth Doula",
-          "Lactation Consulting",
-          "Prenatal Yoga"
-        ],
-        bio: "My name is Madeline 'Maddy' Ishmael and I am a certified birth doula through DONA since 2019, certified lactation consultant through Healthy Children Project and a prenatal yoga teacher.",
-        description: "Madeline Ishmael is a Bornbir-verified birth doula serving Saint Petersburg with hands-on labor support, birth-plan coaching, and postpartum visits by text.",
-        costRange: "$650-1800",
-        photoFound: true,
-        photo: "/images/providers/saint-petersburg-fl-madeline-ishmael.webp"
-      },
-      {
-        name: "Healthy Start Coalition of Pinellas",
-        credential: "Community maternal-health program (Coalition-operated); doulas trained per Coalition doula-program standards",
-        business: "Pinellas Doula Program",
-        url: "https://healthystartpinellas.org/doula-program/",
-        phone: "727-507-4260",
-        email: "Connect@HealthyStartPinellas.org",
-        location: "Pinellas County, FL",
-        certifications: [],
-        services: [
-          "Free Doula Services",
-          "Labor Support"
-        ],
-        bio: "Free doula program for Pinellas County residents. Doulas are with clients during labor and delivery.",
-        description: "Healthy Start Coalition of Pinellas connects expecting families to free doula-adjacent support, care coordination, education, and referrals countywide.",
-        costRange: "$650-1800",
-        photoFound: true,
-        photo: "/images/providers/saint-petersburg-fl-healthy-start-coalition-of-pinellas.webp"
-      }
-    ],
-    birthCenterDetails: [
-      {
-        name: "Breath of Life Women's Health & Birth Center",
-        address: "1900 E Bay Dr, Largo, FL 33771",
-        paragraph: "Breath of Life Women's Health and Birth Center sits at 1900 East Bay Drive in Largo, roughly ten minutes from downtown Saint Petersburg, and it holds CABC accreditation, which makes it Florida's only accredited birth center. That distinction carries weight in a state where freestanding birth centers stay rare, because accreditation here means voluntary inspection of everything from sterile technique charts to emergency transfer drills, not just a license on the wall. Care is CNM-led, with Certified Nurse-Midwives handling prenatal visits, labor, and delivery, and the birth suites are furnished more like a very good guest room than a hospital floor, including deep tubs for labor and water birth. The center runs the full midwifery model, meaning continuous presence through labor, intermittent monitoring that respects movement, and discharge home within hours after an uncomplicated birth, with a home visit to follow. Transfer protocols are explicit and rehearsed, and families should still ask about them at their first tour, because the honest answer separates a great birth center from a merely pretty one. Insurance coverage varies by plan, Florida Medicaid programs have covered licensed birth center birth, and the center's staff will run a benefits check before the first appointment so nobody gets a surprise in month eight.",
-        thumbnail: "/images/hospitals/saint-petersburg-fl-breath-of-life.webp",
-        url: "https://www.breathoflife.cc",
-        phone: "727.216.1420",
-        credential: "CABC Accredited",
-        distance: "~6 miles from Saint Petersburg",
-        services: [
-          "Water Birth",
-          "Midwife-Led Care",
-          "VBAC",
-          "Home Transfer Plan",
-          "Lactation Support"
-        ],
-        costRange: "$4,000\u2013$6,500",
-        medicaid: false,
-        midwives: [
-          "CNM-led team"
-        ]
-      }
-    ],
-    hospitalDetails: [
-      {
-        name: "Orlando Health Bayfront Hospital \u2014 Center for Women and Babies",
-        address: "550 6th Street South, St. Petersburg, FL 33704",
-        paragraph: "Located on the third floor of Johns Hopkins All Children's Hospital, Orlando Health Bayfront's Center for Women and Babies runs modern labor and delivery suites with comprehensive maternity care, and its Level IV NICU sits right on the same campus. That adjacency is the whole story here. A scheduled induction and a pediatric consult can happen in the same parking garage, and if a baby arrives early or needs specialty care, the transfer is an elevator ride rather than an ambulance run across town. Rooms are private, the nursing staff runs on certified specialists, and the physician group is used to high-risk referrals from up and down the Gulf Coast, so families with complicated pregnancies often end up here by choice rather than by emergency. Doulas work the unit regularly, which matters more than it sounds, because a labor team that already knows how doulas practice is smoother to work with from the first contraction to discharge. Ask the unit about birth-plan processing at preregistration, since this floor honors them and wants the paperwork before you arrive in labor. Bring a signed copy, a photo ID, and the doula's certification, and check-in goes faster by an hour. For families weighing Bayfront versus HCA, the practical split is simple: this campus buys the neonatal safety net, HCA buys a classic full-service experience, and both are close to downtown.",
-        thumbnail: "/images/hospitals/saint-petersburg-fl-bayfront.webp",
-        url: "https://www.hopkinsmedicine.org/patient-care/locations/johns-hopkins-all-childrens-bayfront-baby-place",
-        phone: "(727) 290-1310",
-        doulaPolicy: "Doulas welcome as support persons",
-        midwifeFriendly: true,
-        lactation: true,
-        privateRooms: true,
-        medicaid: true,
-        nicuLevel: "Level IV",
-        birthVolume: "~3,000 births/year",
-        babyFriendly: "Near JHU All Children's NICU"
-      },
-      {
-        name: "HCA Florida St. Petersburg Hospital \u2014 Women's Center",
-        address: "6500 38th Ave. North, St. Petersburg, FL 33710",
-        paragraph: "HCA Florida St. Petersburg Hospital's Women's Center provides a secure labor and delivery unit with private rooms, certified nurses, and skilled physicians in one full-service setting. It is the classic full-hospital experience: triage, delivery, recovery, and postpartum care on one floor, supported by a 215-bed hospital's full diagnostic and surgical resources. The unit handles a broad range of births, from straightforward first deliveries to planned repeat cesareans and medically complex pregnancies, and the NICU here is a community-level special-care nursery rather than the regional draw that Bayfront's campus holds. Families who choose HCA tend to value the calm, the private rooms, and the shorter check-in lines compared with busier downtown units, and several practices in the area round exclusively at this hospital, which keeps prenatal and delivery teams consistent. Doulas attend births here regularly and report the nursing staff as collaborative, particularly when birth plans are shared during preregistration rather than at the door. Parking is easier than at Bayfront, the campus sits close to I-275 for families coming from north Pinellas, and visiting hours are generous for partners.",
-        thumbnail: "/images/hospitals/saint-petersburg-fl-hca-st-pete.webp",
-        url: "https://www.hcafloridahealthcare.com/locations/st-petersburg-hospital/specialties/womens-care",
-        phone: "(727) 341-4808",
-        doulaPolicy: "Patients may bring their own doulas",
-        midwifeFriendly: true,
-        lactation: true,
-        privateRooms: true,
-        medicaid: true,
-        nicuLevel: "Level II",
-        birthVolume: "~2,500 births/year",
-        babyFriendly: "Full-service 215-bed hospital with IBCLC lactation services"
-      }
-    ],
-    sources: [
-      {
-        title: "Pinellas Doula Services \u2014 Jennifer Vazquez",
-        url: "https://pinellasdoulaservices.com/",
-        quote: "Hi! I'm Jennifer \u2014 a certified birth and postpartum doula and childbirth educator serving St. Petersburg and throughout Pinellas County"
-      },
-      {
-        title: "Quantum Motherhood \u2014 Tiffany Holmes",
-        url: "https://saintpetersburgdoula.com/",
-        quote: "Traditional Birth & Postpartum Doula, Hypnobirthing Childbirth Educator, Quantum Birthing Coach, Reiki Master, Pelvic Steaming Facilitator, and Intuitive Guide in St. Petersburg, FL"
-      },
-      {
-        title: "Bornbir \u2014 Madeline Ishmael",
-        url: "https://www.bornbir.com/madeline-ishmael",
-        quote: "My name is Madeline 'Maddy' Ishmael and I am a certified birth doula through DONA since 2019, certified lactation consultant through Healthy Children Project and a prenatal yoga teacher."
-      },
-      {
-        title: "Healthy Start Coalition of Pinellas \u2014 Doula Program",
-        url: "https://healthystartpinellas.org/doula-program/",
-        quote: "Doula will be with the client during the labor and delivery... Must be a resident of Pinellas County"
-      },
-      {
-        title: "Orlando Health Bayfront Hospital Center for Women and Babies",
-        url: "https://www.hopkinsmedicine.org/patient-care/locations/johns-hopkins-all-childrens-bayfront-baby-place",
-        quote: "Located on the third floor of Johns Hopkins All Children's Hospital, Orlando Health Bayfront Hospital Center for Women and Babies offers labor and delivery suites and maternity care."
-      },
-      {
-        title: "HCA Florida St. Petersburg Hospital Women's Center",
-        url: "https://www.hcafloridahealthcare.com/locations/st-petersburg-hospital/specialties/womens-care",
-        quote: "In our secure labor and delivery unit, we offer private rooms where new families can bond together under the care of certified nurses and skilled physicians."
-      },
-      {
-        title: "Breath of Life Women's Health & Birth Center",
-        url: "https://www.breathoflife.cc",
-        quote: "Breath of Life Women's Health and Birth Center, located at 1900 East Bay Drive in Largo ... received its CABC accreditation status becoming Florida's only accredited birth center."
-      }
-    ]
-  },
-  "orange-ca": {
-    heroImage: "/images/orange-ca-birth-doula-hero-v1.webp",
-    supportSceneImage: "/images/orange-ca-birth-doula-support-v2.webp",
-    ogImage: "https://truejoybirthing.com/images/og-city-orange-ca.webp",
-    enableBlogResources: true,
-    publishedDate: "2026-10-19",
-    city: "Orange",
-    state: "CA",
-    slug: "orange-ca",
-    costLow: 1800,
-    costHigh: 3000,
-    shelbiServesHere: false,
-    lat: 33.7879,
-    lng: -117.8531,
-    localDoulas: [
-      {
-        name: "Jacquelyn Mota",
-        credential: "Certified Birth & Postpartum Doula, Birth Educator, Placenta Encapsulation Specialist",
-        practice: "OC Doula & Placenta Co",
-        url: "https://ocdoulaandplacenta.com/",
-        description: "Jacquelyn Mota has spent more than 10 years in the Orange County birth community as a certified birth and postpartum doula, with childbirth-education teaching, placenta encapsulation, and lactation counseling folded into her practice. One hire covers the whole span, from pregnancy classes through recovery support. She does not publish rates, so book her consultation first. A natural fit for families who want hands-on postpartum recovery from the same person who attended the birth.",
-        photo: "/images/doulas/orange-ca-jacquelyn-mota.webp",
-        costRange: "$1,800-$3,000",
-        serviceArea: [
-          "Orange, CA",
-          "Orange County, CA"
-        ],
-        services: [
-          "Birth Doula",
-          "Postpartum Doula",
-          "Placenta Encapsulation",
-          "Lactation Support",
-          "Childbirth Education"
-        ],
-        acceptingClients: true,
-        enrichedAt: "2026-10-19"
-      },
-      {
-        name: "Elysabeth Jee-in Ratto",
-        credential: "CD - Certified Birth & Postpartum Doula",
-        practice: "Jee-in Birth Services",
-        url: "https://doulamatch.net/profile/37404/elysabeth-jee-in-ratto-cd",
-        description: "Elysabeth Ratto serves all of Orange County within a 30-mile range, with virtual support reaching LA and San Diego families. Six years of birth-doula work plus six in postpartum. Her birth fee runs $2,500 to $3,000, with postpartum support at $50 to $65 an hour. She's among the few Orange-area doulas who take insurance directly, Medi-Cal through Health Net plus commercial plans via Carrot, so covered families should call her first.",
-        photo: "/images/doulas/orange-ca-elysabeth-jee-in-ratto.webp",
-        costRange: "$2,500-$3,000",
-        serviceArea: [
-          "Anaheim, CA",
-          "Orange, CA",
-          "Orange County, CA"
-        ],
-        services: [
-          "Birth Doula",
-          "Postpartum Doula",
-          "Insurance Billing (Carrot)",
-          "Medi-Cal Accepted",
-          "Virtual Support"
-        ],
-        acceptingClients: true,
-        enrichedAt: "2026-10-19"
-      },
-      {
-        name: "Lauren Proano",
-        credential: "Birth & Postpartum Doula",
-        practice: "Lauren The Doula",
-        url: "https://doulamatch.net/profile/38795/lauren-proano",
-        description: "Lauren Proano offers birth and postpartum doula care across Orange and its neighboring communities with a 40-mile service range. Birth packages run $1,850 to $3,000 and postpartum hours cost $55 to $85. Her specialty is night-time newborn support so parents can sleep and recover, and she pulls in a small doula team when a family needs more hands. A good pick for an Orange hospital birth paired with a night-nurse-style postpartum plan.",
-        photo: "/images/doulas/orange-ca-lauren-proano.webp",
-        costRange: "$1,850-$3,000",
-        serviceArea: [
-          "Yorba Linda, CA",
-          "Orange, CA",
-          "Anaheim Hills, CA",
-          "Placentia, CA"
-        ],
-        services: [
-          "Birth Doula",
-          "Postpartum Overnight Support",
-          "Team Doula Back-up"
-        ],
-        acceptingClients: true,
-        enrichedAt: "2026-10-19"
-      },
-      {
-        name: "Pam Serna",
-        credential: "Birth & Postpartum Doula",
-        practice: "Sacred Journey Childbirth",
-        url: "https://doulamatch.net/profile/21044/pam-serna",
-        description: "Pam Serna runs Sacred Journey Childbirth with a 25-mile no-travel-fee radius covering Orange, so families there pay her standard $1,800 to $3,000 birth fee. Postpartum support runs $50 to $90 an hour. She works with Carrot Insurance, so families with that benefit can bill part of the package. She keeps an availability calendar on DoulaMatch for due-date overlap checks.",
-        photo: "/images/doulas/orange-ca-pam-serna.webp",
-        costRange: "$1,800-$3,000",
-        serviceArea: [
-          "Long Beach, CA",
-          "Orange, CA",
-          "Garden Grove, CA",
-          "Westminster, CA"
-        ],
-        services: [
-          "Birth Doula",
-          "Postpartum Doula",
-          "Insurance Billing (Carrot)"
-        ],
-        acceptingClients: true,
-        enrichedAt: "2026-10-19"
-      },
-      {
-        name: "Tami Jervis",
-        credential: "Birth Doula",
-        practice: "Doula Tami",
-        url: "https://doulamatch.net/profile/30172/tami-jervis",
-        description: "Tami Jervis, aka Doula Tami, keeps an 11-mile service range, so confirm availability for your due date before booking. Her birth fee is $2,300 to $2,800. She runs doulatami.com and keeps a live availability calendar on DoulaMatch, which makes due-date checks quick. Best for families who click with her style and live west of the plaza.",
-        photo: "/images/doulas/orange-ca-tami-jervis.webp",
-        costRange: "$2,300-$2,800",
-        serviceArea: [
-          "Newport Beach, CA",
-          "Orange, CA",
-          "Tustin, CA",
-          "Costa Mesa, CA"
-        ],
-        services: [
-          "Birth Doula"
-        ],
-        acceptingClients: true,
-        enrichedAt: "2026-10-19"
-      },
-      {
-        name: "Labor of Love Birth Services",
-        credential: "Birth & Postpartum Doula Agency",
-        practice: "Labor of Love Birth Services",
-        url: "https://www.laboroflovebirthservices.com/",
-        description: "Labor of Love Birth Services is Orange County's longest-running doula agency - 14 years in practice and more than 1,000 families supported. It matches clients with experienced birth and postpartum doulas rather than booking a single solo provider, which means guaranteed backup coverage and help choosing a good fit. As an agency it sends doulas to hospitals across the county, including both Orange delivery hospitals. Rates depend on the matched doula.",
-        photo: "/images/doulas/orange-ca-labor-of-love.webp",
-        costRange: "$1,800-$3,000",
-        serviceArea: [
-          "Orange County, CA",
-          "Orange, CA"
-        ],
-        services: [
-          "Birth Doula Matching",
-          "Postpartum Doula",
-          "Hospital Birth Support"
-        ],
-        acceptingClients: true,
-        enrichedAt: "2026-10-19"
-      },
-      {
-        name: "Birth Your Way Doulas",
-        credential: "DONA-Trained and Certified Birth Doulas",
-        practice: "Birth Your Way Doulas",
-        url: "https://www.birthyourwaydoulas.com/",
-        description: "A team of DONA-trained and certified birth doulas based in south Orange County. The group lists Orange among the cities it serves and has supported more than 145 families, in hospitals, at birth centers, even at home. That range covers families still deciding between the Orange hospitals and a midwife-led birth at South Coast's Laguna Hills center. No published rates; request a quote.",
-        photo: "/images/doulas/orange-ca-birth-your-way.webp",
-        costRange: "$1,800-$3,000",
-        serviceArea: [
-          "Orange County, CA",
-          "Orange, CA",
-          "North San Diego County"
-        ],
-        services: [
-          "Birth Doula",
-          "Hospital Birth",
-          "Birth Center Support",
-          "Home Birth Support"
-        ],
-        acceptingClients: true,
-        enrichedAt: "2026-10-19"
-      },
-      {
-        name: "Resolute Birth",
-        credential: "Birth Doula (Independent Practice)",
-        practice: "Resolute Birth",
-        url: "https://resolutebirth.com/services",
-        description: "Resolute Birth is an independent Orange County practice led by Jaymie. Birth doula packages start with a free phone consult. Along the way you get birth-preparation guidance plus nutrition and breastfeeding counseling, with take-home resource handouts. Postpartum options carry a traditional flavor, with organic-oil womb rubs and Bengkung belly binding in a full cotton wrap. A faith-friendly practice that serves families county-wide.",
-        photo: "/images/doulas/orange-ca-resolute-birth.webp",
-        costRange: "$1,800-$3,000",
-        serviceArea: [
-          "Orange County, CA",
-          "Orange, CA"
-        ],
-        services: [
-          "Birth Doula",
-          "Postpartum Womb Rub",
-          "Bengkung Belly Binding",
-          "Birth Preparation"
-        ],
-        acceptingClients: true,
-        enrichedAt: "2026-10-19"
-      }
-    ],
-    culture: "Orange, CA feels like small-town California folded inside a big county. Old Towne Orange, one of California's largest National Register historic districts, wraps Chapman University around the Plaza traffic circle. That walkable, family-forward core shapes how expectant parents here plan for birth. Close to home, well-fed, well-supported. We see it in the birth plans that cross our desk from this city: families wants to deliver minutes from the Plaza, with a doula they met over coffee uptown, not a two-hour drive down the 5.",
-    heroLocalDetail: "Golden-hour light along the Plaza in Old Towne Orange. Brick storefronts and mature shade trees circle the roundabout where Chapman students cross all day, and that's the small-town heart of the city.",
-    hospitalDetails: [
-      {
-        name: "Providence St. Joseph Hospital Orange",
-        address: "1100 W Stewart Dr, Orange, CA 92868",
-        paragraph: "The maternity hospital in the heart of Orange. St. Joseph's Mother-Baby Unit is built around family-centered care, with nurses and support staff focused on keeping newborns and parents together in those first days. The campus at 1100 W Stewart Dr sits minutes from Old Towne and has its own Labor and Delivery department on site. If you're planning a hospital birth with a doula, this is the closest main maternity campus to the Plaza.",
-        url: "https://www.providence.org/locations/socal/st-joseph-hospital-orange/mother-baby-unit",
-        medicaid: true,
-        thumbnail: "/images/newport-beach-ca-hospital-providence-st-joseph.webp"
-      },
-      {
-        name: "UCI Health Douglas Hospital",
-        address: "1310 S Manchester Ave, Orange, CA 92868",
-        paragraph: "Douglas Hospital anchors UCI Health's maternity services in Orange. The labor and delivery unit keeps OB physicians on staff around the clock, with nursing and anesthesia coverage backing them, so coverage doesn't thin out on nights or weekends. Newborns get their screenings before discharge, everything from the congenital heart check to hearing and jaundice, and the maternity orientation includes a live tour of the unit. If something feels off, the guidance here is to come straight in to labor and delivery rather than call ahead.",
-        url: "https://www.ucihealth.org/medical-services/specialties/maternity",
-        medicaid: true,
-        thumbnail: "/images/newport-beach-ca-hospital-uci-medical-center.webp"
-      }
-    ],
-    birthCenterDetails: [
-      {
-        name: "South Coast Midwifery - Birthing Boutique",
-        paragraph: "The most established birth center in Orange County and its first accredited one, founded by Lorri Walker, RNC, NP, CNM, one of the nation's best-known midwives. Birth suites look more like hotel rooms than hospital L&D wings. Every suite is private, with music and a tub big enough to labor in. The center has been quietly serving families for almost 18 years, takes most insurance, offers payment plans, and the first consultation is free. Call (949) 654-2727.",
-        url: "https://southcoastmidwifery.com/orange-county-birth-center/",
-        phone: "(949) 654-2727",
-        credential: "First accredited birth center in Orange County",
-        services: [
-          "Midwife-Led Care",
-          "Water Labor",
-          "Home Birth",
-          "Lactation Support"
-        ],
-        midwives: [
-          "Lorri Walker, RNC, NP, CNM"
-        ],
-        medicaid: false,
-        address: "24251 Avenida De La Carlota, Suite B, Laguna Hills, CA 92653",
-        thumbnail: "/images/costa-mesa-ca-birth-center-south-coast.webp"
-      }
-    ],
-    medicaidNote: "Yes — California covers doula services through Medi-Cal. Since January 2023 you can receive up to about $1,587 in doula coverage across your prenatal visits, the birth itself, and postpartum follow-ups. Jee-in Birth Services serves Orange and bills Medi-Cal directly through Health Net. The practice is also approved through Carrot. Start there if you're on Medi-Cal. Others may bill Carrot Fertility or write you a superbill.",
-    insuranceNote: "Jee-in Birth Services works with insurance directly: Medi-Cal through Health Net, plus Carrot. One other area practice takes Carrot Insurance, and a few more will bill a superbill for you. Most Orange doulas are private pay, so ask about HSA and FSA receipts or an out-of-network maternity benefit, whichever your plan accomodates, before you book. Get whatever they promise in writing at your first consultation.",
-    faqs: [
-      {
-        q: "How much does a doula cost in Orange, CA?",
-        a: "Most birth doula packages in Orange run between $1,800 and $3,000. Sacred Journey Childbirth charges $1,800-$3,000, Lauren The Doula $1,850-$3,000, and Doula Tami $2,300-$2,800. Postpartum support is usually hourly at $50-$90. Several others, including OC Doula & Placenta Co and Resolute Birth, skip published rates and quote by consultation."
-      },
-      {
-        q: "Does insurance or Medi-Cal cover a doula in Orange, CA?",
-        a: "Some do. Jee-in Birth Services takes Medi-Cal through Health Net and also works with Carrot. If your doula is private pay, ask for a superbill. You can submit that to an HSA, an FSA, or an out-of-network maternity benefit on many plans."
-      },
-      {
-        q: "What hospitals deliver babies in Orange, CA?",
-        a: "Two, both in the city itself. Providence St. Joseph Hospital Orange sits at 1100 W Stewart Dr with a family-centered Mother-Baby Unit. UCI Health Douglas Hospital is at 1310 S Manchester Ave, and its labor and delivery floor keeps full OB, nursing, and anesthesia coverage around the clock."
-      },
-      {
-        q: "Is there a birth center near Orange, CA?",
-        a: "Yes. South Coast Midwifery's Birthing Boutique in Santa Ana was Orange County's first accredited birth center. Midwife-led, private suite-style birth rooms, bathtubs for labor. Nearly 18 years in operation, most insurance accepted, free first consultation at (949) 654-2727."
-      },
-      {
-        q: "Who offers overnight postpartum doula support near Orange?",
-        a: "Lauren The Doula, serving Orange and nearby communities, focuses on night-time support so parents can actually sleep, at $55-$85/hour, and brings extra hands from her small team when a family needs them. Jee-in Birth Services also covers postpartum hours at $50-$65 for Orange County families."
-      }
-    ],
-    midwifeInfo: "Midwifery-led care near Orange centers on South Coast Midwifery in Laguna Hills, about 20 minutes south. Its Birthing Boutique was the first accredited free-standing birth center in Orange County, founded by Lorri Walker, RNC, NP, CNM, one of the country's best-known midwives, and it has been quietly serving families for nearly 18 years. The birth suites read more like hotel rooms than hospital wards. Private rooms, music, tubs you can actually labor in. Most insurance is accepted, payment plans exist, and the first consultation is free, just call (949) 654-2727. If a hospital birth is your plan instead, both Providence St. Joseph and UCI Health Douglas welcome doulas at the bedside, and several Orange doulas maintain working relationships with midwives for the prenatal visits in between.",
-    nearbyCities: [
-      "Santa Ana",
-      "Anaheim",
-      "Garden Grove",
-      "Tustin",
-      "Villa Park"
-    ],
-    sources: [
-      {
-        title: "OC Doula & Placenta Co - Jacquelyn Mota",
-        url: "https://ocdoulaandplacenta.com/",
-        quote: "Hi, I'm Jacquelyn - a Doula, Birth Educator, Placenta Encapsulation Specialist, and Online Sleep Support Consultant serving families in Orange County and beyond. I've been serving the birth community for over 10 years, supporting mothers through pregnancy, birth, and postpartum with calm, steady guidance so you feel informed, confident, and supported every step of the way."
-      },
-      {
-        title: "DoulaMatch - Elysabeth Jee-in Ratto, CD (Jee-in Birth Services)",
-        url: "https://doulamatch.net/profile/37404/elysabeth-jee-in-ratto-cd",
-        quote: "Elysabeth Jee-in Ratto, CD Jee-in Birth Services Anaheim, CA Service range 30 miles I serve all of Orange County and provide virtual support only for families in LA/SD. Birth Fee $2500 to $3000 Postpartum Rate $50 to $65 ***I accept insurance (Medi-Cal and commercial) and I am CARROT-approved.*** Birth Doula Experience 6 years Postpartum Doula Experience 6 years"
-      },
-      {
-        title: "DoulaMatch - Lauren Proano (Lauren The Doula)",
-        url: "https://doulamatch.net/profile/38795/lauren-proano",
-        quote: "Lauren Proano Lauren The Doula Yorba Linda, CA Service range 40 miles Birth Fee $1850 to $3000 Postpartum Rate $55 to $85 Availability Remarks: I primarily focus on night time support so parents can rest and recover. I also offer limited day time availability. In addition, I work with a team of doulas if extra support is needed"
-      },
-      {
-        title: "DoulaMatch - Pam Serna (Sacred Journey Childbirth)",
-        url: "https://doulamatch.net/profile/21044/pam-serna",
-        quote: "Pam Serna Sacred Journey Childbirth Long Beach, CA $50 travel fee for births 25 miles away Birth Fee $1800 to $3000 Postpartum Rate $50 to $90 Availability Remarks: I work with CARROT Insurance"
-      },
-      {
-        title: "DoulaMatch - Tami Jervis (Doula Tami)",
-        url: "https://doulamatch.net/profile/30172/tami-jervis",
-        quote: "Tami Jervis Doula Tami Newport Beach, CA Service range 11 miles Birth Fee $2300 to $2800"
-      },
-      {
-        title: "Labor of Love Birth Services - Orange County Doulas",
-        url: "https://www.laboroflovebirthservices.com/",
-        quote: "Supporting over a 1000+ Orange County families through pregnancy, birth, and postpartum with compassionate, evidence-based doula care for more than 14 years."
-      },
-      {
-        title: "Birth Your Way Doulas - DONA Certified Birth Doulas",
-        url: "https://www.birthyourwaydoulas.com/",
-        quote: "We are DONA trained and/or certified, experienced birth doulas living in South Orange County, California. We serve Orange County and North San Diego County... We have supported more than 145 clients who birthed in hospitals, birth centers or at home and would love to come and care for you and your partner during your birth."
-      },
-      {
-        title: "Resolute Birth - Birth Doula Services, Orange County",
-        url: "https://resolutebirth.com/services",
-        quote: "As your birth doula, our services are tailored to you as an individual. We will honor and advocate for your decisions and provide you and your partner non-judgmental support as we guide you through this process. Package includes: free consultation meeting over the phone to see if we're a good match. extensive pregnancy and breastfeeding tips, birth preparation guidance, nutrition counseling, and access to informational handouts and evidence-based resources."
-      },
-      {
-        title: "Doulas of Orange County - Birth Doula Matching",
-        url: "https://www.doulasoforangecounty.com/birth-doula",
-        quote: "In-home or virtual prenatal visits. Birth Plan dialogue & assistance creating a written plan. Demonstration of comfort measures & positions for labor/birth. 24/7 on-call availability throughout early labor. The birth doulas on our team are all fully vetted prior to being matched with clients."
-      },
-      {
-        title: "Doulas of Orange County - Birth Doula Service (serving Orange Co.)",
-        url: "https://www.doulasoforangecounty.com/",
-        quote: "Give Birth Confidently with Birth Doula Support in Orange County, San Diego, and the Inland Empire. The doulas on our team, respectfully and happily support all birthing options without bias or agenda, including cesarean births, medicated or unmedicated births, home births, VBACs, adoptions and surrogacies."
-      },
-      {
-        title: "Providence St. Joseph Hospital Orange - Mother-Baby Unit",
-        url: "https://www.providence.org/locations/socal/st-joseph-hospital-orange/mother-baby-unit",
-        quote: "Mother-Baby Unit Providence St. Joseph Hospital Orange 714-771-8086 1100 W Stewart Dr, 4th Floor, Building 1, Orange, CA 92868. At St. Joseph Hospital's Mother-Baby Unit, our nurses and support staff offer family-centered care for new and experienced mothers."
-      },
-      {
-        title: "US News - Maternity Ratings, Providence St. Joseph Hospital Orange",
-        url: "https://health.usnews.com/best-hospitals/area/ca/st-joseph-hospital-6932300/maternity",
-        quote: "Maternity Hospital Ratings for Providence St. Joseph Hospital-Orange"
-      },
-      {
-        title: "UCI Health - Maternity Services (Orange County)",
-        url: "https://www.ucihealth.org/medical-services/specialties/maternity",
-        quote: "English Maternity Orientation & Tour. This two-hour orientation program provides an overview of the hospital and the options and services available to you. It includes a live tour of the labor and delivery unit and the chance to meet our staff"
-      },
-      {
-        title: "South Coast Midwifery - Orange County's Most Established Birth Center",
-        url: "https://southcoastmidwifery.com/orange-county-birth-center/",
-        quote: "Our exclusive birth center was the first accredited center in the County. The founder and director, Lorri Walker, RNC, NP, CNM, is one of the Nation's best known midwives... a private, cushy room that looks more like a luxurious hotel suite than a labor and delivery room... We accept most insurance, as well as offer a wide variety of payment plans and discount options."
-      },
-      {
-        title: "US Census QuickFacts - Orange city, California",
-        url: "https://www.census.gov/quickfacts/fact/table/orangecitycalifornia/POP010220",
-        quote: "Orange city, California. Population, Census, April 1, 2020 | 139,911 | People"
-      },
-      {
-        title: "Wikipedia - Orange, California",
-        url: "https://en.wikipedia.org/wiki/Orange,_California",
-        quote: "Population (2020) Total 139,911 - 7th in Orange County. Old Towne Orange historic district; The Bill Holmes Tower at CHOC Main Campus; Plaza Park."
-      }
-    ]
-  },
-  "peoria-az": {
-    enableBlogResources: true,
-    publishedDate: "2026-10-20",
-    medicaidNote: "Yes — Arizona Medicaid (AHCCCS) covers doula services as of October 1, 2024 for all pregnant and postpartum members, but only through doulas certified by ADHS and registered with AHCCCS. Ask any doula you interview whether they are state-certified and AHCCCS-enrolled; private-pay doulas can still set up payment plans. Call 602-417-4000 (AHCCCS) or check your health plan's provider list to find enrolled doulas.",
-    city: "Peoria",
-    state: "AZ",
-    slug: "peoria-az",
-    costLow: 900,
+    "orange-ca": {
+      heroImage: "/images/orange-ca-birth-doula-hero-v1.webp",
+      supportSceneImage: "/images/orange-ca-birth-doula-support-v2.webp",
+      ogImage: "https://truejoybirthing.com/images/og-city-orange-ca.webp",
+      enableBlogResources: true,
+      publishedDate: "2026-10-19",
+      city: "Orange",
+      state: "CA",
+      slug: "orange-ca",
+      costLow: 1800,
+      costHigh: 3000,
+      shelbiServesHere: false,
+      lat: 33.7879,
+      lng: -117.8531,
+      localDoulas: [
+        {
+          name: "Jacquelyn Mota",
+          credential: "Certified Birth & Postpartum Doula, Birth Educator, Placenta Encapsulation Specialist",
+          practice: "OC Doula & Placenta Co",
+          url: "https://ocdoulaandplacenta.com/",
+          description: "Jacquelyn Mota has spent more than 10 years in the Orange County birth community as a certified birth and postpartum doula, with childbirth-education teaching, placenta encapsulation, and lactation counseling folded into her practice. One hire covers the whole span, from pregnancy classes through recovery support. She does not publish rates, so book her consultation first. A natural fit for families who want hands-on postpartum recovery from the same person who attended the birth.",
+          photo: "/images/doulas/orange-ca-jacquelyn-mota.webp",
+          costRange: "$1,800-$3,000",
+          serviceArea: [
+            "Orange, CA",
+            "Orange County, CA"
+          ],
+          services: [
+            "Birth Doula",
+            "Postpartum Doula",
+            "Placenta Encapsulation",
+            "Lactation Support",
+            "Childbirth Education"
+          ],
+          acceptingClients: true,
+          enrichedAt: "2026-10-19"
+        },
+        {
+          name: "Elysabeth Jee-in Ratto",
+          credential: "CD - Certified Birth & Postpartum Doula",
+          practice: "Jee-in Birth Services",
+          url: "https://doulamatch.net/profile/37404/elysabeth-jee-in-ratto-cd",
+          description: "Elysabeth Ratto serves all of Orange County within a 30-mile range, with virtual support reaching LA and San Diego families. Six years of birth-doula work plus six in postpartum. Her birth fee runs $2,500 to $3,000, with postpartum support at $50 to $65 an hour. She's among the few Orange-area doulas who take insurance directly, Medi-Cal through Health Net plus commercial plans via Carrot, so covered families should call her first.",
+          photo: "/images/doulas/orange-ca-elysabeth-jee-in-ratto.webp",
+          costRange: "$2,500-$3,000",
+          serviceArea: [
+            "Anaheim, CA",
+            "Orange, CA",
+            "Orange County, CA"
+          ],
+          services: [
+            "Birth Doula",
+            "Postpartum Doula",
+            "Insurance Billing (Carrot)",
+            "Medi-Cal Accepted",
+            "Virtual Support"
+          ],
+          acceptingClients: true,
+          enrichedAt: "2026-10-19"
+        },
+        {
+          name: "Lauren Proano",
+          credential: "Birth & Postpartum Doula",
+          practice: "Lauren The Doula",
+          url: "https://doulamatch.net/profile/38795/lauren-proano",
+          description: "Lauren Proano offers birth and postpartum doula care across Orange and its neighboring communities with a 40-mile service range. Birth packages run $1,850 to $3,000 and postpartum hours cost $55 to $85. Her specialty is night-time newborn support so parents can sleep and recover, and she pulls in a small doula team when a family needs more hands. A good pick for an Orange hospital birth paired with a night-nurse-style postpartum plan.",
+          photo: "/images/doulas/orange-ca-lauren-proano.webp",
+          costRange: "$1,850-$3,000",
+          serviceArea: [
+            "Yorba Linda, CA",
+            "Orange, CA",
+            "Anaheim Hills, CA",
+            "Placentia, CA"
+          ],
+          services: [
+            "Birth Doula",
+            "Postpartum Overnight Support",
+            "Team Doula Back-up"
+          ],
+          acceptingClients: true,
+          enrichedAt: "2026-10-19"
+        },
+        {
+          name: "Pam Serna",
+          credential: "Birth & Postpartum Doula",
+          practice: "Sacred Journey Childbirth",
+          url: "https://doulamatch.net/profile/21044/pam-serna",
+          description: "Pam Serna runs Sacred Journey Childbirth with a 25-mile no-travel-fee radius covering Orange, so families there pay her standard $1,800 to $3,000 birth fee. Postpartum support runs $50 to $90 an hour. She works with Carrot Insurance, so families with that benefit can bill part of the package. She keeps an availability calendar on DoulaMatch for due-date overlap checks.",
+          photo: "/images/doulas/orange-ca-pam-serna.webp",
+          costRange: "$1,800-$3,000",
+          serviceArea: [
+            "Long Beach, CA",
+            "Orange, CA",
+            "Garden Grove, CA",
+            "Westminster, CA"
+          ],
+          services: [
+            "Birth Doula",
+            "Postpartum Doula",
+            "Insurance Billing (Carrot)"
+          ],
+          acceptingClients: true,
+          enrichedAt: "2026-10-19"
+        },
+        {
+          name: "Tami Jervis",
+          credential: "Birth Doula",
+          practice: "Doula Tami",
+          url: "https://doulamatch.net/profile/30172/tami-jervis",
+          description: "Tami Jervis, aka Doula Tami, keeps an 11-mile service range, so confirm availability for your due date before booking. Her birth fee is $2,300 to $2,800. She runs doulatami.com and keeps a live availability calendar on DoulaMatch, which makes due-date checks quick. Best for families who click with her style and live west of the plaza.",
+          photo: "/images/doulas/orange-ca-tami-jervis.webp",
+          costRange: "$2,300-$2,800",
+          serviceArea: [
+            "Newport Beach, CA",
+            "Orange, CA",
+            "Tustin, CA",
+            "Costa Mesa, CA"
+          ],
+          services: [
+            "Birth Doula"
+          ],
+          acceptingClients: true,
+          enrichedAt: "2026-10-19"
+        },
+        {
+          name: "Labor of Love Birth Services",
+          credential: "Birth & Postpartum Doula Agency",
+          practice: "Labor of Love Birth Services",
+          url: "https://www.laboroflovebirthservices.com/",
+          description: "Labor of Love Birth Services is Orange County's longest-running doula agency - 14 years in practice and more than 1,000 families supported. It matches clients with experienced birth and postpartum doulas rather than booking a single solo provider, which means guaranteed backup coverage and help choosing a good fit. As an agency it sends doulas to hospitals across the county, including both Orange delivery hospitals. Rates depend on the matched doula.",
+          photo: "/images/doulas/orange-ca-labor-of-love.webp",
+          costRange: "$1,800-$3,000",
+          serviceArea: [
+            "Orange County, CA",
+            "Orange, CA"
+          ],
+          services: [
+            "Birth Doula Matching",
+            "Postpartum Doula",
+            "Hospital Birth Support"
+          ],
+          acceptingClients: true,
+          enrichedAt: "2026-10-19"
+        },
+        {
+          name: "Birth Your Way Doulas",
+          credential: "DONA-Trained and Certified Birth Doulas",
+          practice: "Birth Your Way Doulas",
+          url: "https://www.birthyourwaydoulas.com/",
+          description: "A team of DONA-trained and certified birth doulas based in south Orange County. The group lists Orange among the cities it serves and has supported more than 145 families, in hospitals, at birth centers, even at home. That range covers families still deciding between the Orange hospitals and a midwife-led birth at South Coast's Laguna Hills center. No published rates; request a quote.",
+          photo: "/images/doulas/orange-ca-birth-your-way.webp",
+          costRange: "$1,800-$3,000",
+          serviceArea: [
+            "Orange County, CA",
+            "Orange, CA",
+            "North San Diego County"
+          ],
+          services: [
+            "Birth Doula",
+            "Hospital Birth",
+            "Birth Center Support",
+            "Home Birth Support"
+          ],
+          acceptingClients: true,
+          enrichedAt: "2026-10-19"
+        },
+        {
+          name: "Resolute Birth",
+          credential: "Birth Doula (Independent Practice)",
+          practice: "Resolute Birth",
+          url: "https://resolutebirth.com/services",
+          description: "Resolute Birth is an independent Orange County practice led by Jaymie. Birth doula packages start with a free phone consult. Along the way you get birth-preparation guidance plus nutrition and breastfeeding counseling, with take-home resource handouts. Postpartum options carry a traditional flavor, with organic-oil womb rubs and Bengkung belly binding in a full cotton wrap. A faith-friendly practice that serves families county-wide.",
+          photo: "/images/doulas/orange-ca-resolute-birth.webp",
+          costRange: "$1,800-$3,000",
+          serviceArea: [
+            "Orange County, CA",
+            "Orange, CA"
+          ],
+          services: [
+            "Birth Doula",
+            "Postpartum Womb Rub",
+            "Bengkung Belly Binding",
+            "Birth Preparation"
+          ],
+          acceptingClients: true,
+          enrichedAt: "2026-10-19"
+        }
+      ],
+      culture: "Orange, CA feels like small-town California folded inside a big county. Old Towne Orange, one of California's largest National Register historic districts, wraps Chapman University around the Plaza traffic circle. That walkable, family-forward core shapes how expectant parents here plan for birth. Close to home, well-fed, well-supported. We see it in the birth plans that cross our desk from this city: families wants to deliver minutes from the Plaza, with a doula they met over coffee uptown, not a two-hour drive down the 5.",
+      heroLocalDetail: "Golden-hour light along the Plaza in Old Towne Orange. Brick storefronts and mature shade trees circle the roundabout where Chapman students cross all day, and that's the small-town heart of the city.",
+      hospitalDetails: [
+        {
+          name: "Providence St. Joseph Hospital Orange",
+          address: "1100 W Stewart Dr, Orange, CA 92868",
+          paragraph: "The maternity hospital in the heart of Orange. St. Joseph's Mother-Baby Unit is built around family-centered care, with nurses and support staff focused on keeping newborns and parents together in those first days. The campus at 1100 W Stewart Dr sits minutes from Old Towne and has its own Labor and Delivery department on site. If you're planning a hospital birth with a doula, this is the closest main maternity campus to the Plaza.",
+          url: "https://www.providence.org/locations/socal/st-joseph-hospital-orange/mother-baby-unit",
+          medicaid: true,
+          thumbnail: "/images/newport-beach-ca-hospital-providence-st-joseph.webp"
+        },
+        {
+          name: "UCI Health Douglas Hospital",
+          address: "1310 S Manchester Ave, Orange, CA 92868",
+          paragraph: "Douglas Hospital anchors UCI Health's maternity services in Orange. The labor and delivery unit keeps OB physicians on staff around the clock, with nursing and anesthesia coverage backing them, so coverage doesn't thin out on nights or weekends. Newborns get their screenings before discharge, everything from the congenital heart check to hearing and jaundice, and the maternity orientation includes a live tour of the unit. If something feels off, the guidance here is to come straight in to labor and delivery rather than call ahead.",
+          url: "https://www.ucihealth.org/medical-services/specialties/maternity",
+          medicaid: true,
+          thumbnail: "/images/newport-beach-ca-hospital-uci-medical-center.webp"
+        }
+      ],
+      birthCenterDetails: [
+        {
+          name: "South Coast Midwifery - Birthing Boutique",
+          paragraph: "The most established birth center in Orange County and its first accredited one, founded by Lorri Walker, RNC, NP, CNM, one of the nation's best-known midwives. Birth suites look more like hotel rooms than hospital L&D wings. Every suite is private, with music and a tub big enough to labor in. The center has been quietly serving families for almost 18 years, takes most insurance, offers payment plans, and the first consultation is free. Call (949) 654-2727.",
+          url: "https://southcoastmidwifery.com/orange-county-birth-center/",
+          phone: "(949) 654-2727",
+          credential: "First accredited birth center in Orange County",
+          services: [
+            "Midwife-Led Care",
+            "Water Labor",
+            "Home Birth",
+            "Lactation Support"
+          ],
+          midwives: [
+            "Lorri Walker, RNC, NP, CNM"
+          ],
+          medicaid: false,
+          address: "24251 Avenida De La Carlota, Suite B, Laguna Hills, CA 92653",
+          thumbnail: "/images/costa-mesa-ca-birth-center-south-coast.webp"
+        }
+      ],
+      medicaidNote: "Yes — California covers doula services through Medi-Cal. Since January 2023 you can receive up to about $1,587 in doula coverage across your prenatal visits, the birth itself, and postpartum follow-ups. Jee-in Birth Services serves Orange and bills Medi-Cal directly through Health Net. The practice is also approved through Carrot. Start there if you're on Medi-Cal. Others may bill Carrot Fertility or write you a superbill.",
+      insuranceNote: "Jee-in Birth Services works with insurance directly: Medi-Cal through Health Net, plus Carrot. One other area practice takes Carrot Insurance, and a few more will bill a superbill for you. Most Orange doulas are private pay, so ask about HSA and FSA receipts or an out-of-network maternity benefit, whichever your plan accomodates, before you book. Get whatever they promise in writing at your first consultation.",
+      faqs: [
+        {
+          q: "How much does a doula cost in Orange, CA?",
+          a: "Most birth doula packages in Orange run between $1,800 and $3,000. Sacred Journey Childbirth charges $1,800-$3,000, Lauren The Doula $1,850-$3,000, and Doula Tami $2,300-$2,800. Postpartum support is usually hourly at $50-$90. Several others, including OC Doula & Placenta Co and Resolute Birth, skip published rates and quote by consultation."
+        },
+        {
+          q: "Does insurance or Medi-Cal cover a doula in Orange, CA?",
+          a: "Some do. Jee-in Birth Services takes Medi-Cal through Health Net and also works with Carrot. If your doula is private pay, ask for a superbill. You can submit that to an HSA, an FSA, or an out-of-network maternity benefit on many plans."
+        },
+        {
+          q: "What hospitals deliver babies in Orange, CA?",
+          a: "Two, both in the city itself. Providence St. Joseph Hospital Orange sits at 1100 W Stewart Dr with a family-centered Mother-Baby Unit. UCI Health Douglas Hospital is at 1310 S Manchester Ave, and its labor and delivery floor keeps full OB, nursing, and anesthesia coverage around the clock."
+        },
+        {
+          q: "Is there a birth center near Orange, CA?",
+          a: "Yes. South Coast Midwifery's Birthing Boutique in Santa Ana was Orange County's first accredited birth center. Midwife-led, private suite-style birth rooms, bathtubs for labor. Nearly 18 years in operation, most insurance accepted, free first consultation at (949) 654-2727."
+        },
+        {
+          q: "Who offers overnight postpartum doula support near Orange?",
+          a: "Lauren The Doula, serving Orange and nearby communities, focuses on night-time support so parents can actually sleep, at $55-$85/hour, and brings extra hands from her small team when a family needs them. Jee-in Birth Services also covers postpartum hours at $50-$65 for Orange County families."
+        }
+      ],
+      midwifeInfo: "Midwifery-led care near Orange centers on South Coast Midwifery in Laguna Hills, about 20 minutes south. Its Birthing Boutique was the first accredited free-standing birth center in Orange County, founded by Lorri Walker, RNC, NP, CNM, one of the country's best-known midwives, and it has been quietly serving families for nearly 18 years. The birth suites read more like hotel rooms than hospital wards. Private rooms, music, tubs you can actually labor in. Most insurance is accepted, payment plans exist, and the first consultation is free, just call (949) 654-2727. If a hospital birth is your plan instead, both Providence St. Joseph and UCI Health Douglas welcome doulas at the bedside, and several Orange doulas maintain working relationships with midwives for the prenatal visits in between.",
+      nearbyCities: [
+        "Santa Ana",
+        "Anaheim",
+        "Garden Grove",
+        "Tustin",
+        "Villa Park"
+      ],
+      sources: [
+        {
+          title: "OC Doula & Placenta Co - Jacquelyn Mota",
+          url: "https://ocdoulaandplacenta.com/",
+          quote: "Hi, I'm Jacquelyn - a Doula, Birth Educator, Placenta Encapsulation Specialist, and Online Sleep Support Consultant serving families in Orange County and beyond. I've been serving the birth community for over 10 years, supporting mothers through pregnancy, birth, and postpartum with calm, steady guidance so you feel informed, confident, and supported every step of the way."
+        },
+        {
+          title: "DoulaMatch - Elysabeth Jee-in Ratto, CD (Jee-in Birth Services)",
+          url: "https://doulamatch.net/profile/37404/elysabeth-jee-in-ratto-cd",
+          quote: "Elysabeth Jee-in Ratto, CD Jee-in Birth Services Anaheim, CA Service range 30 miles I serve all of Orange County and provide virtual support only for families in LA/SD. Birth Fee $2500 to $3000 Postpartum Rate $50 to $65 ***I accept insurance (Medi-Cal and commercial) and I am CARROT-approved.*** Birth Doula Experience 6 years Postpartum Doula Experience 6 years"
+        },
+        {
+          title: "DoulaMatch - Lauren Proano (Lauren The Doula)",
+          url: "https://doulamatch.net/profile/38795/lauren-proano",
+          quote: "Lauren Proano Lauren The Doula Yorba Linda, CA Service range 40 miles Birth Fee $1850 to $3000 Postpartum Rate $55 to $85 Availability Remarks: I primarily focus on night time support so parents can rest and recover. I also offer limited day time availability. In addition, I work with a team of doulas if extra support is needed"
+        },
+        {
+          title: "DoulaMatch - Pam Serna (Sacred Journey Childbirth)",
+          url: "https://doulamatch.net/profile/21044/pam-serna",
+          quote: "Pam Serna Sacred Journey Childbirth Long Beach, CA $50 travel fee for births 25 miles away Birth Fee $1800 to $3000 Postpartum Rate $50 to $90 Availability Remarks: I work with CARROT Insurance"
+        },
+        {
+          title: "DoulaMatch - Tami Jervis (Doula Tami)",
+          url: "https://doulamatch.net/profile/30172/tami-jervis",
+          quote: "Tami Jervis Doula Tami Newport Beach, CA Service range 11 miles Birth Fee $2300 to $2800"
+        },
+        {
+          title: "Labor of Love Birth Services - Orange County Doulas",
+          url: "https://www.laboroflovebirthservices.com/",
+          quote: "Supporting over a 1000+ Orange County families through pregnancy, birth, and postpartum with compassionate, evidence-based doula care for more than 14 years."
+        },
+        {
+          title: "Birth Your Way Doulas - DONA Certified Birth Doulas",
+          url: "https://www.birthyourwaydoulas.com/",
+          quote: "We are DONA trained and/or certified, experienced birth doulas living in South Orange County, California. We serve Orange County and North San Diego County... We have supported more than 145 clients who birthed in hospitals, birth centers or at home and would love to come and care for you and your partner during your birth."
+        },
+        {
+          title: "Resolute Birth - Birth Doula Services, Orange County",
+          url: "https://resolutebirth.com/services",
+          quote: "As your birth doula, our services are tailored to you as an individual. We will honor and advocate for your decisions and provide you and your partner non-judgmental support as we guide you through this process. Package includes: free consultation meeting over the phone to see if we're a good match. extensive pregnancy and breastfeeding tips, birth preparation guidance, nutrition counseling, and access to informational handouts and evidence-based resources."
+        },
+        {
+          title: "Doulas of Orange County - Birth Doula Matching",
+          url: "https://www.doulasoforangecounty.com/birth-doula",
+          quote: "In-home or virtual prenatal visits. Birth Plan dialogue & assistance creating a written plan. Demonstration of comfort measures & positions for labor/birth. 24/7 on-call availability throughout early labor. The birth doulas on our team are all fully vetted prior to being matched with clients."
+        },
+        {
+          title: "Doulas of Orange County - Birth Doula Service (serving Orange Co.)",
+          url: "https://www.doulasoforangecounty.com/",
+          quote: "Give Birth Confidently with Birth Doula Support in Orange County, San Diego, and the Inland Empire. The doulas on our team, respectfully and happily support all birthing options without bias or agenda, including cesarean births, medicated or unmedicated births, home births, VBACs, adoptions and surrogacies."
+        },
+        {
+          title: "Providence St. Joseph Hospital Orange - Mother-Baby Unit",
+          url: "https://www.providence.org/locations/socal/st-joseph-hospital-orange/mother-baby-unit",
+          quote: "Mother-Baby Unit Providence St. Joseph Hospital Orange 714-771-8086 1100 W Stewart Dr, 4th Floor, Building 1, Orange, CA 92868. At St. Joseph Hospital's Mother-Baby Unit, our nurses and support staff offer family-centered care for new and experienced mothers."
+        },
+        {
+          title: "US News - Maternity Ratings, Providence St. Joseph Hospital Orange",
+          url: "https://health.usnews.com/best-hospitals/area/ca/st-joseph-hospital-6932300/maternity",
+          quote: "Maternity Hospital Ratings for Providence St. Joseph Hospital-Orange"
+        },
+        {
+          title: "UCI Health - Maternity Services (Orange County)",
+          url: "https://www.ucihealth.org/medical-services/specialties/maternity",
+          quote: "English Maternity Orientation & Tour. This two-hour orientation program provides an overview of the hospital and the options and services available to you. It includes a live tour of the labor and delivery unit and the chance to meet our staff"
+        },
+        {
+          title: "South Coast Midwifery - Orange County's Most Established Birth Center",
+          url: "https://southcoastmidwifery.com/orange-county-birth-center/",
+          quote: "Our exclusive birth center was the first accredited center in the County. The founder and director, Lorri Walker, RNC, NP, CNM, is one of the Nation's best known midwives... a private, cushy room that looks more like a luxurious hotel suite than a labor and delivery room... We accept most insurance, as well as offer a wide variety of payment plans and discount options."
+        },
+        {
+          title: "US Census QuickFacts - Orange city, California",
+          url: "https://www.census.gov/quickfacts/fact/table/orangecitycalifornia/POP010220",
+          quote: "Orange city, California. Population, Census, April 1, 2020 | 139,911 | People"
+        },
+        {
+          title: "Wikipedia - Orange, California",
+          url: "https://en.wikipedia.org/wiki/Orange,_California",
+          quote: "Population (2020) Total 139,911 - 7th in Orange County. Old Towne Orange historic district; The Bill Holmes Tower at CHOC Main Campus; Plaza Park."
+        }
+      ]
+    },
+    "peoria-az": {
+      enableBlogResources: true,
+      publishedDate: "2026-10-20",
+      medicaidNote: "Yes — Arizona Medicaid (AHCCCS) covers doula services as of October 1, 2024 for all pregnant and postpartum members, but only through doulas certified by ADHS and registered with AHCCCS. Ask any doula you interview whether they are state-certified and AHCCCS-enrolled; private-pay doulas can still set up payment plans. Call 602-417-4000 (AHCCCS) or check your health plan's provider list to find enrolled doulas.",
+      city: "Peoria",
+      state: "AZ",
+      slug: "peoria-az",
+      costLow: 900,
+      costHigh: 2000,
+      shelbiServesHere: false,
+      ogImage: "/images/og-city-peoria-az.webp",
+      heroImage: "/images/peoria-az-birth-doula-skyline.webp",
+      supportSceneImage: "/images/peoria-az-birth-doula-skyline-600.webp",
+      supportSceneAlt: "Calming birth center suite at Canyon Midwifery, Peoria's CABC-accredited freestanding birth center",
+      lat: 33.5806,
+      lng: -112.2374,
+      localDoulas: [
+        {
+          name: "Emily Arena",
+          credential: "Certified birth doula, CD(DONA)",
+          practice: "Sweet Pea Doula Services",
+          url: "https://sweetpeabirthdoula.com/",
+          photo: "/images/provider-spring-tx-emily-arena.webp",
+          description: "Emily Arena runs Sweet Pea Doula Services from her home base in Peoria as a DONA-certified birth doula. Her work covers the whole arc: prenatal education and labor preparation, hands-on support during labor, and postpartum guidance and emotional care once the baby is home. She is a one-woman practice that keeps its calendar small and its response time fast - the kind of doula you text and get a real answer from. She has been building out local classes and community workshops for expectant families, so new clients can plug into a room of other Peoria parents while they prepare."
+        },
+        {
+          name: "Samantha Zillweger",
+          credential: "Birth doula, certified through the International Doula Institute",
+          practice: "Samantha Zillweger, independent practice",
+          url: "https://www.bornbir.com/samantha-zillweger",
+          photo: "/images/doulas/peoria-az-samantha-zillweger.webp",
+          description: "Samantha Zillweger is a Peoria-based birth doula who came to the work after her own home birth in 2020 and certified with the International Doula Institute in 2024. Her package is straightforward: two prenatal visits covering birth preferences, comfort measures and the 3 Rs of labor, continuous support on delivery day, and a postpartum visit for breastfeeding basics and newborn care. She publishes flat-rate pricing instead of making families negotiate, and she is explicit about her style - calm, faith-centered support that treats birth as a family event rather than a medical procedure."
+        },
+        {
+          name: "Modern Mama Doula",
+          credential: "Certified birth & postpartum doula team, Lamaze-certified childbirth educators",
+          practice: "Modern Mama Doula and Placenta Encapsulation Services",
+          url: "http://www.modernmamadoula.com/",
+          photo: "/images/provider-spring-tx-modern-mama-doula.webp",
+          description: "Modern Mama is a valley doula team whose service list names Peoria directly alongside Glendale and Surprise, making them one of the few multi-doula practices that formally covers the northwest valley. The team brings certified birth and postpartum doulas, Spinning Babies-trained labor support, Lamaze-certified childbirth classes, placenta encapsulation and birth photography under one roof. Phoenix Magazine has named them Best Doula multiple years running. For Peoria families who want team backup - a guaranteed doula at every birth even when the primary is at another delivery - they are the practice built for it."
+        }
+      ],
+      culture: "Peoria is a northwest-valley city of roughly 200,000 people strung along Loop 101 between Glendale and the West Wing mountains, and it has grown from an old farming town into one of metro Phoenix's biggest family suburbs. Vistancia and Terrace Park fill up with young households, so the city supports a full local set of birth services: it has its own freestanding birth center, a hospital maternity program minutes away in Sun City West, and independent Peoria doulas serving families across the city alongside the valley's larger practices. Most Peoria births happen at Banner Del E. Webb Medical Center or Abrazo Arrowhead Campus across the Loop 101, and both hospitals draw a steady share of their maternity volume from Peoria addresses.",
+      heroLocalDetail: "Peoria's birth map is unusually compact for a city this size. Canyon Midwifery runs the city's own freestanding birth center out of Suite 300 at 13470 N 83rd Ave, accredited by CABC in March 2024 - one of the few Arizona suburbs where an out-of-hospital birth option sits inside the city limits. For hospital births, Banner Del E. Webb Medical Center at 14502 W Meeker Blvd in Sun City West is the closest full maternity program, about ten minutes from central Peoria, with hydrotherapy tubs and nitrous oxide in its labor rooms. Abrazo Arrowhead Campus on N 67th Ave delivers for the east side of the city, just across the Loop 101 interchange.",
+      hospitalDetails: [
+        {
+          name: "Banner Del E. Webb Medical Center",
+          address: "14502 W Meeker Blvd, Sun City West, AZ 85375",
+          phone: "(623) 524-4000",
+          url: "https://www.bannerhealth.com/locations/sun-city-west/banner-del-e-webb-medical-center/maternity",
+          nicuLevel: "II",
+          inCity: false,
+          distance: "About 10 minutes west of central Peoria in Sun City West",
+          doulaPolicy: "Doulas are welcome as members of the support team; private labor/delivery/recovery rooms are set up to support a variety of birthing plans. Confirm current support-person rules at your maternity tour.",
+          midwifeFriendly: true,
+          privateRooms: true,
+          lactation: true,
+          birthingFacilities: "Complete maternity program with private LDR rooms, hydrotherapy tubs and nitrous oxide in every labor room, Level II Special Care Nursery with onsite neonatologists 24/7, certified nurse-midwife care, couplet care, skin-to-skin kangaroo care and a dedicated cesarean recovery area.",
+          paragraph: "Banner Del E. Webb is the workhorse maternity hospital for Peoria and the west valley, sitting at 14502 W Meeker Blvd about ten minutes from central Peoria. It carries the details that matter to laboring families: hydrotherapy tubs and nitrous oxide in all labor and delivery rooms, certified nurse-midwives on staff, a Level II Special Care Nursery with neonatologists onsite around the clock, and couplet care that keeps well babies in the room with their mothers. CMS lists it as a birthing-friendly hospital, and the walking-tour program runs out of the maternity front desk.",
+          thumbnail: "/images/hospitals/peoria-az-banner-del-e-webb.webp"
+        },
+        {
+          name: "Abrazo Arrowhead Campus",
+          address: "18701 N. 67th Ave., Glendale, AZ 85308",
+          phone: "(623) 561-1000",
+          url: "https://www.abrazohealth.com/locations/detail/abrazo-arrowhead-campus",
+          nicuLevel: "III",
+          inCity: false,
+          distance: "Just across the Loop 101 from northeast Peoria",
+          doulaPolicy: "Doulas welcome as support persons in labor; women's services staff coordinate visitor roles at check-in. Confirm the count of allowed support persons on your unit tour.",
+          midwifeFriendly: true,
+          privateRooms: true,
+          lactation: true,
+          birthingFacilities: "Full women's services program with labor and delivery suites, a mother-baby unit and breastfeeding support; the hospital anchors Abrazo's northwest-valley women's care.",
+          paragraph: "Abrazo Arrowhead Campus sits at 18701 N. 67th Ave, an exit-adjacent drive for anyone in east or north Peoria who takes the Loop 101. It has been a northwest-valley institution since 1988 and its women's services program delivers a large share of the area's babies - local coverage in the Peoria Times describes the labor-and-delivery floor's routine of celebrating new mothers. Families choosing between it and Banner Del E. Webb usually split on geography: Arrowhead wins for the east side of the city, Webb for the west.",
+          thumbnail: ""
+        }
+      ],
+      birthCenterDetails: [
+        {
+          name: "Canyon Midwifery birth center",
+          address: "13470 N 83rd Ave, Suite 300, Peoria, AZ 85381",
+          phone: "(623) 824-3660",
+          url: "https://www.canyonmidwiferyaz.com/services/birth-center",
+          inCity: true,
+          distance: "Inside Peoria city limits, off N 83rd Ave",
+          credential: "Freestanding birth center, accredited by the Commission for the Accreditation of Birth Centers (CABC) since March 2024",
+          services: [
+            "Birth center birth",
+            "Water birth",
+            "Midwifery prenatal and postpartum care",
+            "Childbirth education",
+            "Well-woman care"
+          ],
+          paragraph: "Canyon Midwifery is Peoria's own freestanding birth center, in Suite 300 at 13470 N 83rd Ave, and it earned CABC accreditation in March 2024 - the national gold standard for out-of-hospital birth safety and operations. Midwifery-led care here covers the full prenatal arc through birth and postpartum, with water birth available in the birth suites. For Peoria families wanting a low-intervention birth without a hospital commute, this is the in-city option, and the nearest hospital-transfer route runs the same short corridor as the local EMS network.",
+          thumbnail: "/images/birth-centers/peoria-az-canyon-midwifery.webp"
+        }
+      ],
+          insuranceNote: "Insurance reimbursement for doula care is uncommon but not unheard of in the northwest valley. On Bornbir's Peoria page, about 15 percent of listed doulas accept insurance, and a few valley practices bill under lactation or childbirth-education codes. Every practice on this page publishes or confirms its own rates, so ask for a full written package price before signing.",
+      midwifeInfo: "Midwifery-led care is available inside Peoria's city limits. Canyon Midwifery's birth center at 13470 N 83rd Ave is staffed by licensed midwives and has held CABC accreditation since March 2024 - the national accreditation standard for freestanding birth centers. Families who prefer a midwife but want a hospital birth can find certified nurse-midwives on staff at Banner Del E. Webb Medical Center, whose maternity program explicitly includes certified nurse-midwife care for pregnancy, labor and delivery. Ask any practice you interview about licensure: Arizona licenses both certified nurse-midwives (CNMs) and licensed midwives (LMs/CMPs), and birth-center births are attended by licensed midwives.",
+      faqs: [
+        {
+          q: "Where do people give birth in Peoria?",
+          a: "Most Peoria births happen at Banner Del E. Webb Medical Center in Sun City West, the closest full maternity program to the city, or at Abrazo Arrowhead Campus just across the Loop 101 in Glendale. Families planning an out-of-hospital birth have a genuine in-city option: Canyon Midwifery, a CABC-accredited freestanding birth center off N 83rd Ave inside Peoria city limits."
+        },
+        {
+          q: "Is there a birth center in Peoria?",
+          a: "Yes - Canyon Midwifery runs a freestanding birth center at 13470 N 83rd Ave, Suite 300, and it has been accredited by the Commission for the Accreditation of Birth Centers since March 2024. That accreditation is the national standard for freestanding birth center safety, and it makes Peoria one of the few Arizona suburbs with an accredited birth center inside the city limits."
+        },
+        {
+          q: "Does Banner Del E. Webb Medical Center allow doulas?",
+          a: "Yes. Banner Del E. Webb describes its private labor and delivery rooms as being set up to support a variety of birthing plans, which includes continuous doula support, and the hospital offers midwife-led care through certified nurse-midwives. Because support-person counts and visitor rules shift with staffing, confirm the current policy at your maternity tour - Banner runs in-person walking tours of the maternity units."
+        },
+        {
+          q: "What does a birth doula cost in Peoria?",
+          a: "A full birth package from a Peoria-area doula generally runs about $900 to $2,000, with some valley solo doulas publishing flat rates in the $1,200 range and team practices charging more for guaranteed backup coverage. Postpartum-only support and childbirth classes are priced separately and lower. Every practice on this page publishes or confirms its own rates before you commit."
+        },
+        {
+          q: "Can I use AHCCCS (Arizona Medicaid) for birth and doula care in Peoria?",
+          a: "AHCCCS covers standard maternity care - prenatal visits, labor and delivery, and postpartum treatment - for eligible families. Doula coverage works practice by practice, so ask each Peoria doula directly about payment plans, sliding-scale rates, and whether they can bill or coordinate with your plan. Independent practices in Peoria are often the most flexible on budget."
+        },
+        {
+          q: "How far is the hospital from any part of Peoria?",
+          a: "No Peoria address is more than about 20 minutes from a maternity program. Banner Del E. Webb at 14502 W Meeker Blvd serves the west side in roughly ten minutes from central Peoria, Abrazo Arrowhead on N 67th Ave serves the east side across the Loop 101, and both sit within the valley's standard EMS transfer network that the birth center also uses."
+        }
+      ],
+      nearbyCities: [
+        "glendale-az",
+        "phoenix-az",
+        "surprise-az",
+        "avondale-az"
+      ],
+      sources: [
+        {
+          title: "Sweet Pea Doula Services - Emily Arena (official site)",
+          url: "https://sweetpeabirthdoula.com/",
+          quote: "Sweet Pea Doula Services, Emily Arena CD(DONA) Peoria, AZ, USA sweetpeabirthdoulaservices@gmail.com 530-210-4939"
+        },
+        {
+          title: "Samantha Zillweger - Birth Doula - Peoria, AZ (Bornbir profile)",
+          url: "https://www.bornbir.com/samantha-zillweger",
+          quote: "Samantha Zillweger Birth Doula in Peoria, AZ ... I completed my doula certification with the International Doula Institute in 2024. ... Samantha is based in Peoria, Arizona."
+        },
+        {
+          title: "Modern Mama Doula and Placenta Encapsulation Services (official site)",
+          url: "http://www.modernmamadoula.com/",
+          quote: "Birth Doula, Placenta Encapsulation and Postpartum Doula services available in Phoenix, Mesa, Gilbert, Surprise, Glendale, Scottsdale, Chandler, Peoria and surrounding areas."
+        },
+        {
+          title: "Canyon Midwifery - Commission for the Accreditation of Birth Centers",
+          url: "https://birthcenteraccreditation.org/2024/01/17/canyon-midwifery/",
+          quote: "Canyon Midwifery Address: 13470 N 83rd Ave, Suite 300 Peoria, AZ 85381 Phone: 623-824-3660 ... Accredited Since: March 2024"
+        },
+        {
+          title: "Banner Del E Webb Medical Center Maternity Services (Banner Health)",
+          url: "https://www.bannerhealth.com/locations/sun-city-west/banner-del-e-webb-medical-center/maternity",
+          quote: "Banner Del E Webb Medical Center 14502 W Meeker Blvd Sun City West, AZ 85375 (623) 524-4000 ... Hydrotherapy tubs and nitrous oxide are available in all of our Labor and Delivery rooms ... Private labor/delivery/recovery rooms set up to support a variety of birthing plans and needs"
+        },
+        {
+          title: "Abrazo Arrowhead Campus (Abrazo Health location page)",
+          url: "https://www.abrazohealth.com/locations/detail/abrazo-arrowhead-campus",
+          quote: "Abrazo Arrowhead Campus (623) 561-1000 18701 N. 67th Ave., Glendale, AZ 85308 ... Our hospital is a leader in surgical robotics, cardiovascular care and women's services."
+        },
+        {
+          title: "Every day is Mother's Day at Abrazo Arrowhead - Peoria Times",
+          url: "https://www.peoriatimes.com/features/every-day-is-mother-s-day-at-abrazo-arrowhead/article",
+          quote: "Every day is Mother's Day at Abrazo Arrowhead - By Keith Jones, Peoria Times Contributing Writer - May 10, 2024"
+        },
+        {
+          title: "Birth & Postpartum Doulas Near Me in Peoria, AZ (Bornbir directory)",
+          url: "https://www.bornbir.com/peoria/az/doula",
+          quote: "15% Accept insurance ... Based on 285 package prices from 92 doulas listed on Bornbir within 150 miles of Peoria, AZ."
+        }
+      ]
+    },
+  "tyler-tx": {
+    city: "Tyler",
+    state: "TX",
+    slug: "tyler-tx",
+    heroImage: "/images/tyler-tx-birth-doula-hero.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-tyler-tx-v2.webp",
+    supportSceneImage: "/images/tyler-tx-support-scene-v4.webp",
+    supportSceneAlt: "Two women walking side by side in a Tyler neighborhood with East Texas pine trees in the distance",
+    publishedDate: "2026-06-10",
+    lat: 32.3513,
+    lng: -95.3011,
+    costLow: 800,
     costHigh: 2000,
     shelbiServesHere: false,
-    ogImage: "/images/og-city-peoria-az.webp",
-    heroImage: "/images/peoria-az-birth-doula-skyline.webp",
-    supportSceneImage: "/images/peoria-az-birth-doula-skyline-600.webp",
-    supportSceneAlt: "Calming birth center suite at Canyon Midwifery, Peoria's CABC-accredited freestanding birth center",
-    lat: 33.5806,
-    lng: -112.2374,
+    enableBlogResources: true,
     localDoulas: [
-      {
-        name: "Emily Arena",
-        credential: "Certified birth doula, CD(DONA)",
-        practice: "Sweet Pea Doula Services",
-        url: "https://sweetpeabirthdoula.com/",
-        photo: "",
-        description: "Emily Arena runs Sweet Pea Doula Services from her home base in Peoria as a DONA-certified birth doula. Her work covers the whole arc: prenatal education and labor preparation, hands-on support during labor, and postpartum guidance and emotional care once the baby is home. She is a one-woman practice that keeps its calendar small and its response time fast - the kind of doula you text and get a real answer from. She has been building out local classes and community workshops for expectant families, so new clients can plug into a room of other Peoria parents while they prepare."
-      },
-      {
-        name: "Samantha Zillweger",
-        credential: "Birth doula, certified through the International Doula Institute",
-        practice: "Samantha Zillweger, independent practice",
-        url: "https://www.bornbir.com/samantha-zillweger",
-        photo: "/images/doulas/peoria-az-samantha-zillweger.webp",
-        description: "Samantha Zillweger is a Peoria-based birth doula who came to the work after her own home birth in 2020 and certified with the International Doula Institute in 2024. Her package is straightforward: two prenatal visits covering birth preferences, comfort measures and the 3 Rs of labor, continuous support on delivery day, and a postpartum visit for breastfeeding basics and newborn care. She publishes flat-rate pricing instead of making families negotiate, and she is explicit about her style - calm, faith-centered support that treats birth as a family event rather than a medical procedure."
-      },
-      {
-        name: "Modern Mama Doula",
-        credential: "Certified birth & postpartum doula team, Lamaze-certified childbirth educators",
-        practice: "Modern Mama Doula and Placenta Encapsulation Services",
-        url: "http://www.modernmamadoula.com/",
-        photo: "",
-        description: "Modern Mama is a valley doula team whose service list names Peoria directly alongside Glendale and Surprise, making them one of the few multi-doula practices that formally covers the northwest valley. The team brings certified birth and postpartum doulas, Spinning Babies-trained labor support, Lamaze-certified childbirth classes, placenta encapsulation and birth photography under one roof. Phoenix Magazine has named them Best Doula multiple years running. For Peoria families who want team backup - a guaranteed doula at every birth even when the primary is at another delivery - they are the practice built for it."
-      }
-    ],
-    culture: "Peoria is a northwest-valley city of roughly 200,000 people strung along Loop 101 between Glendale and the West Wing mountains, and it has grown from an old farming town into one of metro Phoenix's biggest family suburbs. Vistancia and Terrace Park fill up with young households, so the city supports a full local set of birth services: it has its own freestanding birth center, a hospital maternity program minutes away in Sun City West, and independent Peoria doulas serving families across the city alongside the valley's larger practices. Most Peoria births happen at Banner Del E. Webb Medical Center or Abrazo Arrowhead Campus across the Loop 101, and both hospitals draw a steady share of their maternity volume from Peoria addresses.",
-    heroLocalDetail: "Peoria's birth map is unusually compact for a city this size. Canyon Midwifery runs the city's own freestanding birth center out of Suite 300 at 13470 N 83rd Ave, accredited by CABC in March 2024 - one of the few Arizona suburbs where an out-of-hospital birth option sits inside the city limits. For hospital births, Banner Del E. Webb Medical Center at 14502 W Meeker Blvd in Sun City West is the closest full maternity program, about ten minutes from central Peoria, with hydrotherapy tubs and nitrous oxide in its labor rooms. Abrazo Arrowhead Campus on N 67th Ave delivers for the east side of the city, just across the Loop 101 interchange.",
+     { name: "Mallory Villafuerte", credential: "Birth Doula", practice: "The Crunchy-ish Doula", url: "https://www.crunchydoula.com", photo: "/images/provider-tyler-tx-mallory-villafuerte.webp", services: ["Birth Doula", "Postpartum", "Childbirth Education"], serviceArea: ["Tyler", "Longview", "East Texas"], costRange: "$800\, $2,000", acceptingClients: "true", description: "Evidence-based, faith-centered birth doula and childbirth educator serving Tyler and East Texas."},
+     { name: "Kayley Hamilton", credential: "Birth Doula", practice: "Kayley Hamilton Doula", photo: "/images/provider-tyler-tx-kayley-hamilton.webp", services: ["Birth Doula", "Postpartum", "Prenatal Support"], serviceArea: ["Tyler", "East Texas"], costRange: "$800\, $2,000", acceptingClients: "true", description: "Birth and postpartum doula in Tyler who nurtures the mother as a whole, spiritually, physically, and emotionally."},
+     { name: "Camilla Morgan", credential: "Birth Doula", practice: "Camilla Morgan Doula", photo: "/images/provider-tyler-tx-camilla-morgan.webp", services: ["Birth Doula", "Postpartum", "Breastfeeding Support"], serviceArea: ["Tyler", "East Texas"], costRange: "$800\, $2,200", acceptingClients: "true", description: "Birth and postpartum doula with 5 years of experience providing unwavering support through childbirth."},
+     { name: "Tabitha Oogjen", credential: "Birth Doula", practice: "Mama Bare Doula LLC", photo: "/images/provider-tyler-tx-tabitha-oogjen.webp", services: ["Birth Doula", "Postpartum"], serviceArea: ["Tyler", "East Texas"], costRange: "$800\, $2,000", acceptingClients: "true", description: "Certified birth doula serving East Texas families in hospital, birth center, and home settings."} ],
+    culture: "Tyler is the largest city in Northeast Texas and the seat of Smith County, known as the Rose Capital of America for its annual Texas Rose Festival, and serves as the regional healthcare hub for East Texas. The birth community here, while smaller than in big metros, is deeply connected, doulas like the Crunchy-ish Doula, Mama Bare, and others are known across the area, and families come from as far as Longview, Jacksonville, and Palestine to deliver at Tyler’s two Level III hospitals or at Azalea Birth Center.",
+    heroLocalDetail: "CHRISTUS Mother Frances sits off South Broadway in central Tyler, and UT Health Tyler is on the south side near Beckham Avenue. South Broadway between the hospitals can back up during afternoon rush and on Texas Rose Festival weekends in October, if you’re due in the fall, know your fastest route before contractions start. Faulkner Park and the Rose Garden are where a lot of Tyler moms walk in the third trimester, flat, shaded, and close to the hospitals.",
     hospitalDetails: [
-      {
-        name: "Banner Del E. Webb Medical Center",
-        address: "14502 W Meeker Blvd, Sun City West, AZ 85375",
-        phone: "(623) 524-4000",
-        url: "https://www.bannerhealth.com/locations/sun-city-west/banner-del-e-webb-medical-center/maternity",
-        nicuLevel: "II",
-        inCity: false,
-        distance: "About 10 minutes west of central Peoria in Sun City West",
-        doulaPolicy: "Doulas are welcome as members of the support team; private labor/delivery/recovery rooms are set up to support a variety of birthing plans. Confirm current support-person rules at your maternity tour.",
-        midwifeFriendly: true,
-        privateRooms: true,
-        lactation: true,
-        birthingFacilities: "Complete maternity program with private LDR rooms, hydrotherapy tubs and nitrous oxide in every labor room, Level II Special Care Nursery with onsite neonatologists 24/7, certified nurse-midwife care, couplet care, skin-to-skin kangaroo care and a dedicated cesarean recovery area.",
-        paragraph: "Banner Del E. Webb is the workhorse maternity hospital for Peoria and the west valley, sitting at 14502 W Meeker Blvd about ten minutes from central Peoria. It carries the details that matter to laboring families: hydrotherapy tubs and nitrous oxide in all labor and delivery rooms, certified nurse-midwives on staff, a Level II Special Care Nursery with neonatologists onsite around the clock, and couplet care that keeps well babies in the room with their mothers. CMS lists it as a birthing-friendly hospital, and the walking-tour program runs out of the maternity front desk.",
-        thumbnail: "/images/hospitals/peoria-az-banner-del-e-webb.webp"
-      },
-      {
-        name: "Abrazo Arrowhead Campus",
-        address: "18701 N. 67th Ave., Glendale, AZ 85308",
-        phone: "(623) 561-1000",
-        url: "https://www.abrazohealth.com/locations/detail/abrazo-arrowhead-campus",
-        nicuLevel: "III",
-        inCity: false,
-        distance: "Just across the Loop 101 from northeast Peoria",
-        doulaPolicy: "Doulas welcome as support persons in labor; women's services staff coordinate visitor roles at check-in. Confirm the count of allowed support persons on your unit tour.",
-        midwifeFriendly: true,
-        privateRooms: true,
-        lactation: true,
-        birthingFacilities: "Full women's services program with labor and delivery suites, a mother-baby unit and breastfeeding support; the hospital anchors Abrazo's northwest-valley women's care.",
-        paragraph: "Abrazo Arrowhead Campus sits at 18701 N. 67th Ave, an exit-adjacent drive for anyone in east or north Peoria who takes the Loop 101. It has been a northwest-valley institution since 1988 and its women's services program delivers a large share of the area's babies - local coverage in the Peoria Times describes the labor-and-delivery floor's routine of celebrating new mothers. Families choosing between it and Banner Del E. Webb usually split on geography: Arrowhead wins for the east side of the city, Webb for the west.",
-        thumbnail: ""
-      }
-    ],
+     { name: "CHRISTUS Mother Frances Hospital, Tyler", thumbnail: "/images/christus-mother-frances-tyler.webp", paragraph: "CHRISTUS Mother Frances Hospital in Tyler, on South Broadway in central Tyler, is the region's most established maternity hospital with a verified Level III NICU (the Lucy & John Carr NICU) and Level III Maternal designation. If you're delivering here, having a birth plan ready makes the intake conversation smoother, especially when you're already in labor and don't want to be explaining everything from scratch. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something simple and specific to work from." },
+        { name: "UT Health Tyler", thumbnail: "/images/ut-health-tyler.webp", paragraph: "UT Health Tyler, on the south side of town, is the flagship hospital of the UT Health East Texas system with a Level III NICU designation (earned 2024. Contact the hospital directly for current level verification) and labor and delivery services. Tyler families have two solid hospital options with Level III NICUs, which is more than most East Texas towns can say." } ],
     birthCenterDetails: [
-      {
-        name: "Canyon Midwifery birth center",
-        address: "13470 N 83rd Ave, Suite 300, Peoria, AZ 85381",
-        phone: "(623) 824-3660",
-        url: "https://www.canyonmidwiferyaz.com/services/birth-center",
-        inCity: true,
-        distance: "Inside Peoria city limits, off N 83rd Ave",
-        credential: "Freestanding birth center, accredited by the Commission for the Accreditation of Birth Centers (CABC) since March 2024",
-        services: [
-          "Birth center birth",
-          "Water birth",
-          "Midwifery prenatal and postpartum care",
-          "Childbirth education",
-          "Well-woman care"
-        ],
-        paragraph: "Canyon Midwifery is Peoria's own freestanding birth center, in Suite 300 at 13470 N 83rd Ave, and it earned CABC accreditation in March 2024 - the national gold standard for out-of-hospital birth safety and operations. Midwifery-led care here covers the full prenatal arc through birth and postpartum, with water birth available in the birth suites. For Peoria families wanting a low-intervention birth without a hospital commute, this is the in-city option, and the nearest hospital-transfer route runs the same short corridor as the local EMS network.",
-        thumbnail: "/images/birth-centers/peoria-az-canyon-midwifery.webp"
-      }
-    ],
-        insuranceNote: "Insurance reimbursement for doula care is uncommon but not unheard of in the northwest valley. On Bornbir's Peoria page, about 15 percent of listed doulas accept insurance, and a few valley practices bill under lactation or childbirth-education codes. Every practice on this page publishes or confirms its own rates, so ask for a full written package price before signing.",
-    midwifeInfo: "Midwifery-led care is available inside Peoria's city limits. Canyon Midwifery's birth center at 13470 N 83rd Ave is staffed by licensed midwives and has held CABC accreditation since March 2024 - the national accreditation standard for freestanding birth centers. Families who prefer a midwife but want a hospital birth can find certified nurse-midwives on staff at Banner Del E. Webb Medical Center, whose maternity program explicitly includes certified nurse-midwife care for pregnancy, labor and delivery. Ask any practice you interview about licensure: Arizona licenses both certified nurse-midwives (CNMs) and licensed midwives (LMs/CMPs), and birth-center births are attended by licensed midwives.",
+     { name: "Azalea Birth Center", thumbnail: "/images/azalea-birth-center-tyler.webp", paragraph: "Azalea Birth Center, on South Broadway in central Tyler, is a freestanding birth center run by midwife Vicky Wells, offering water birth and midwife-attended out-of-hospital birth in a home-like setting." } ],
+    medicaidNote: "Yes \u2014 Texas Medicaid picked up doula coverage in September 2024 under SB 750, and Smith County's STAR managed care plans are included. Before you hire anyone, confirm your plan covers it (1-877-543-7669 or YourTexasBenefits.com). The phone line gets you a person, the website works at midnight.",
+    insuranceNote: "Private coverage around Tyler is its own puzzle. A few carriers fold doula support into maternal wellness benefits, most do not, and the answer can change at your plan's annual refresh. HSA or FSA funds usually cover whatever the insurer declines. One email to HR settles it.",
     faqs: [
-      {
-        q: "Where do people give birth in Peoria?",
-        a: "Most Peoria births happen at Banner Del E. Webb Medical Center in Sun City West, the closest full maternity program to the city, or at Abrazo Arrowhead Campus just across the Loop 101 in Glendale. Families planning an out-of-hospital birth have a genuine in-city option: Canyon Midwifery, a CABC-accredited freestanding birth center off N 83rd Ave inside Peoria city limits."
-      },
-      {
-        q: "Is there a birth center in Peoria?",
-        a: "Yes - Canyon Midwifery runs a freestanding birth center at 13470 N 83rd Ave, Suite 300, and it has been accredited by the Commission for the Accreditation of Birth Centers since March 2024. That accreditation is the national standard for freestanding birth center safety, and it makes Peoria one of the few Arizona suburbs with an accredited birth center inside the city limits."
-      },
-      {
-        q: "Does Banner Del E. Webb Medical Center allow doulas?",
-        a: "Yes. Banner Del E. Webb describes its private labor and delivery rooms as being set up to support a variety of birthing plans, which includes continuous doula support, and the hospital offers midwife-led care through certified nurse-midwives. Because support-person counts and visitor rules shift with staffing, confirm the current policy at your maternity tour - Banner runs in-person walking tours of the maternity units."
-      },
-      {
-        q: "What does a birth doula cost in Peoria?",
-        a: "A full birth package from a Peoria-area doula generally runs about $900 to $2,000, with some valley solo doulas publishing flat rates in the $1,200 range and team practices charging more for guaranteed backup coverage. Postpartum-only support and childbirth classes are priced separately and lower. Every practice on this page publishes or confirms its own rates before you commit."
-      },
-      {
-        q: "Can I use AHCCCS (Arizona Medicaid) for birth and doula care in Peoria?",
-        a: "AHCCCS covers standard maternity care - prenatal visits, labor and delivery, and postpartum treatment - for eligible families. Doula coverage works practice by practice, so ask each Peoria doula directly about payment plans, sliding-scale rates, and whether they can bill or coordinate with your plan. Independent practices in Peoria are often the most flexible on budget."
-      },
-      {
-        q: "How far is the hospital from any part of Peoria?",
-        a: "No Peoria address is more than about 20 minutes from a maternity program. Banner Del E. Webb at 14502 W Meeker Blvd serves the west side in roughly ten minutes from central Peoria, Abrazo Arrowhead on N 67th Ave serves the east side across the Loop 101, and both sit within the valley's standard EMS transfer network that the birth center also uses."
-      }
-    ],
-    nearbyCities: [
-      "glendale-az",
-      "phoenix-az",
-      "surprise-az",
-      "avondale-az"
-    ],
-    sources: [
-      {
-        title: "Sweet Pea Doula Services - Emily Arena (official site)",
-        url: "https://sweetpeabirthdoula.com/",
-        quote: "Sweet Pea Doula Services, Emily Arena CD(DONA) Peoria, AZ, USA sweetpeabirthdoulaservices@gmail.com 530-210-4939"
-      },
-      {
-        title: "Samantha Zillweger - Birth Doula - Peoria, AZ (Bornbir profile)",
-        url: "https://www.bornbir.com/samantha-zillweger",
-        quote: "Samantha Zillweger Birth Doula in Peoria, AZ ... I completed my doula certification with the International Doula Institute in 2024. ... Samantha is based in Peoria, Arizona."
-      },
-      {
-        title: "Modern Mama Doula and Placenta Encapsulation Services (official site)",
-        url: "http://www.modernmamadoula.com/",
-        quote: "Birth Doula, Placenta Encapsulation and Postpartum Doula services available in Phoenix, Mesa, Gilbert, Surprise, Glendale, Scottsdale, Chandler, Peoria and surrounding areas."
-      },
-      {
-        title: "Canyon Midwifery - Commission for the Accreditation of Birth Centers",
-        url: "https://birthcenteraccreditation.org/2024/01/17/canyon-midwifery/",
-        quote: "Canyon Midwifery Address: 13470 N 83rd Ave, Suite 300 Peoria, AZ 85381 Phone: 623-824-3660 ... Accredited Since: March 2024"
-      },
-      {
-        title: "Banner Del E Webb Medical Center Maternity Services (Banner Health)",
-        url: "https://www.bannerhealth.com/locations/sun-city-west/banner-del-e-webb-medical-center/maternity",
-        quote: "Banner Del E Webb Medical Center 14502 W Meeker Blvd Sun City West, AZ 85375 (623) 524-4000 ... Hydrotherapy tubs and nitrous oxide are available in all of our Labor and Delivery rooms ... Private labor/delivery/recovery rooms set up to support a variety of birthing plans and needs"
-      },
-      {
-        title: "Abrazo Arrowhead Campus (Abrazo Health location page)",
-        url: "https://www.abrazohealth.com/locations/detail/abrazo-arrowhead-campus",
-        quote: "Abrazo Arrowhead Campus (623) 561-1000 18701 N. 67th Ave., Glendale, AZ 85308 ... Our hospital is a leader in surgical robotics, cardiovascular care and women's services."
-      },
-      {
-        title: "Every day is Mother's Day at Abrazo Arrowhead - Peoria Times",
-        url: "https://www.peoriatimes.com/features/every-day-is-mother-s-day-at-abrazo-arrowhead/article",
-        quote: "Every day is Mother's Day at Abrazo Arrowhead - By Keith Jones, Peoria Times Contributing Writer - May 10, 2024"
-      },
-      {
-        title: "Birth & Postpartum Doulas Near Me in Peoria, AZ (Bornbir directory)",
-        url: "https://www.bornbir.com/peoria/az/doula",
-        quote: "15% Accept insurance ... Based on 285 package prices from 92 doulas listed on Bornbir within 150 miles of Peoria, AZ."
-      }
-    ]
-  }
-};
+     { q: "How much does a doula cost in Tyler?", a: "Most Tyler doulas charge between $800 and $2,000. That usually buys prenatal visits, your birth itself, plus a postpartum check-in or two. While you budget, work through the <a href=\"/birth-plan-template/\">free birth plan template</a> so you know what you actually want from your support team." },
+     { q: "Does Medicaid cover doulas in Tyler?", a: "Medicaid doulas are a real thing in Tyler now. SB 750 did it, September 2024, and Smith County's STAR managed care plans participate. Make one call and ask \"Do you cover doula services?\" The 1-877-543-7669 state line backs you up if your plan's answer is fuzzy, and YourTexasBenefits.com works too. Support you can actually afford is a different kind of relief." },
+     { q: "Which hospitals in Tyler accommodate birth plans?", a: "CHRISTUS Mother Frances Hospital in Tyler has a verified Level III NICU" },
+     { q: "Does True Joy Birthing work with Tyler families?", a: "Yes, and it’s free. True Joy Birthing’s birth plan app, checklist, and guided walkthrough work for any Tyler birth setting. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing." } ],
+    nearbyCities: ["dallas-tx", "longview-tx", "waco-tx"],
+  },
+  };
 
 export const citySlugs = Object.keys(cities).sort();

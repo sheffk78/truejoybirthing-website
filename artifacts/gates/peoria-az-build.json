@@ -81,7 +81,7 @@
     },
     "G8a": {
       "status": "PASS",
-      "detail": "Silhouette confirmed (center=206.1 < top=229.2, top_colors=2659)"
+      "detail": "G8b style check could not run (HTTPError) \u2014 manual review advised"
     },
     "G62": {
       "status": "PASS",

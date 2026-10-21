@@ -78,7 +78,7 @@ case "$ASSET_TYPE" in
     if [ "$L_MD5" != "$O_MD5" ]; then
       echo "❌ brand-lockup-white.svg is NOT byte-identical to the official Illustrator export"; exit 1
     fi
-    if grep -qE 'brand-text|True Joy Birthing</span>' "$SCRIPT_DIR/yt-thumbnail-composition.html"; then
+    if grep -qE 'brand-text|True Joy Birthing</span>|>\s*True Joy Birthing\s*<' "$SCRIPT_DIR/yt-thumbnail-composition.html"; then
       echo "❌ Template renders a text-label wordmark (lookalike) — it must embed the official lockup SVG only"; exit 1
     fi
     echo "✅ [G-BRAND] thumbnail lockup = official Illustrator export (byte-verified $L_MD5); no text-label lookalike"

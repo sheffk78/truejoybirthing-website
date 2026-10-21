@@ -53,7 +53,7 @@ def _read_city_block(slug: str):
                 # Found the closing } of this city's block
                 # Now look for the next top-level entry after this
                 after_close = remainder[i+1:]
-                next_match = re.search(r'\n  "[a-z][^"]*":\s*\{', after_close)
+                next_match = re.search(r'\n {2,4}"[a-z][^"]*":\s*\{', after_close)
                 if next_match:
                     block_end = match.end() + i + 1 + next_match.start()
                 else:

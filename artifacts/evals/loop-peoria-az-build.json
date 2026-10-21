@@ -14,8 +14,20 @@
           "exit": 0
         }
       }
+    },
+    {
+      "attempt": 1,
+      "at": "2026-10-21T10:34:15-06:00",
+      "evals": {
+        "eval-voice.py": {
+          "exit": 0
+        },
+        "eval-accuracy.py": {
+          "exit": 0
+        }
+      }
     }
   ],
   "last_verdict": "approved",
-  "last_input_fingerprint": "e380733bc3b9ac29"
+  "last_input_fingerprint": "a34ff5b092a201bf"
 }

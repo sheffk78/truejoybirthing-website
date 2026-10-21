@@ -98,7 +98,10 @@ function encodeSvgForUrl(filePath) {
   // generic sans 'True Joy Birthing' lookalike; the sanctioned lockup carries
   // the real script lettering. Falls back to icon-mark if lockup is missing.
   let logoSvgPath = path.resolve(outputDir, 'brand-lockup-white.svg');
-  if (!fs.existsSync(logoSvgPath)) logoSvgPath = path.resolve(outputDir, 'icon-mark.svg');
+  if (!fs.existsSync(logoSvgPath)) {
+    console.error('❌ Official lockup missing: ' + logoSvgPath + ' — refusing to render a lookalike fallback');
+    process.exit(1);
+  }
   const logoSvgEncoded = encodeSvgForUrl(logoSvgPath);
   const hasLogo = !!logoSvgEncoded;
 

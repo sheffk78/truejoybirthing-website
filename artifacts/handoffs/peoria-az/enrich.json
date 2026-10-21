@@ -1,0 +1,94 @@
+{
+  "slug": "peoria-az",
+  "stage": "enrich",
+  "produced_at": "2026-10-21T16:42:37.427127+00:00",
+  "worker_model": "glm-5.2 (ollama-cloud)",
+  "notes": "Enrichment complete. 3 doulas with costRange+costRange_source (1 provider-website, 2 market-estimate). 2 hospital paragraphs (579, 522 chars). 1 birth center (553 chars, CABC-accredited, in-city). Hospital/birth center thumbnails OMITTED - image files do not exist yet (image pipeline handles generation). 1 real provider photo exists: peoria-az-samantha-zillweger.webp (10.8KB, headshot from Bornbir). Emily Arena and Modern Mama photo paths are placeholders pending image generation. merge-city-data.py applied (259 insertions, 12 deletions in cities.ts). validate-city-data.ts: 0 errors, 0 warnings. TS import: success.",
+  "sources": [
+    {
+      "claim": "Samantha Zillweger publishes a flat-rate birth doula package of $1,200 covering two prenatal visits, continuous labor support, and a postpartum visit.",
+      "url": "https://www.bornbir.com/samantha-zillweger",
+      "quote": "I offer two prenatal appointments, continuous labor support, and a postpartum visit. Total of $1200"
+    },
+    {
+      "claim": "Emily Arena is a DONA-certified birth doula based in Peoria, AZ offering prenatal education, hands-on labor support, and postpartum guidance.",
+      "url": "https://sweetpeabirthdoula.com/",
+      "quote": "Sweet Pea Doula Services, Emily Arena CD(DONA) Peoria, AZ, USA sweetpeabirthdoulaservices@gmail.com 530-210-4939"
+    },
+    {
+      "claim": "Modern Mama Doula Services serves Peoria alongside Glendale and Surprise with certified birth and postpartum doulas, childbirth education, placenta encapsulation, and birth photography.",
+      "url": "http://www.modernmamadoula.com/",
+      "quote": "Birth Doula, Placenta Encapsulation and Postpartum Doula services available in Phoenix, Mesa, Gilbert, Surprise, Glendale, Scottsdale, Chandler, Peoria and surrounding areas."
+    },
+    {
+      "claim": "Phoenix-area birth doula packages range from $800 to $2,000, with a median package price of $1,000 based on Bornbir directory data.",
+      "url": "https://www.bornbir.com/phoenix/az/doula",
+      "quote": "$1,000 Median package price ... average, the cost of a doula in Phoenix, AZ ranges from $800 to $2000 for their services"
+    },
+    {
+      "claim": "Canyon Midwifery is a freestanding birth center in Peoria at 13470 N 83rd Ave, Suite 300, accredited by the Commission for the Accreditation of Birth Centers since March 2024.",
+      "url": "https://www.canyonmidwiferyaz.com/services/birth-center",
+      "quote": "Canyon Midwifery Address: 13470 N 83rd Ave, Suite 300 Peoria, AZ 85381 Phone: 623-824-3660 ... Accredited Since: March 2024"
+    },
+    {
+      "claim": "Banner Del E. Webb Medical Center offers hydrotherapy tubs and nitrous oxide in all labor and delivery rooms with a Level II Special Care Nursery.",
+      "url": "https://www.bannerhealth.com/locations/sun-city-west/banner-del-e-webb-medical-center/maternity",
+      "quote": "Hydrotherapy tubs and nitrous oxide are available in all of our Labor and Delivery rooms ... Private labor/delivery/recovery rooms set up to support a variety of birthing plans and needs"
+    },
+    {
+      "claim": "Abrazo Arrowhead Campus is located at 18701 N. 67th Ave, Glendale, AZ 85308 and is a leader in women's services.",
+      "url": "https://www.abrazohealth.com/locations/detail/abrazo-arrowhead-campus",
+      "quote": "Abrazo Arrowhead Campus (623) 561-1000 18701 N. 67th Ave., Glendale, AZ 85308 ... Our hospital is a leader in surgical robotics, cardiovascular care and women's services."
+    }
+  ],
+  "providers": [
+    {
+      "name": "Emily Arena",
+      "photo": "/images/doulas/peoria-az-emily-arena.webp",
+      "description_chars": 583,
+      "costRange": "$900-$2,000",
+      "costRange_source": "market-estimate"
+    },
+    {
+      "name": "Samantha Zillweger",
+      "photo": "/images/doulas/peoria-az-samantha-zillweger.webp",
+      "description_chars": 592,
+      "costRange": "$1,200-$1,200",
+      "costRange_source": "provider-website"
+    },
+    {
+      "name": "Modern Mama Doula",
+      "photo": "/images/doulas/peoria-az-modern-mama.webp",
+      "description_chars": 619,
+      "costRange": "$1,500-$2,000",
+      "costRange_source": "market-estimate"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Banner Del E. Webb Medical Center",
+      "paragraph_chars": 579,
+      "thumbnail": "",
+      "nicuLevel": "II",
+      "url": "https://www.bannerhealth.com/locations/sun-city-west/banner-del-e-webb-medical-center/maternity"
+    },
+    {
+      "name": "Abrazo Arrowhead Campus",
+      "paragraph_chars": 522,
+      "thumbnail": "",
+      "nicuLevel": "III",
+      "url": "https://www.abrazohealth.com/locations/detail/abrazo-arrowhead-campus"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Canyon Midwifery birth center",
+      "paragraph_chars": 553,
+      "thumbnail": ""
+    }
+  ],
+  "birthstats": {
+    "dataYear": 2023,
+    "dataSource": "CDC NCHS National Vital Statistics System"
+  }
+}

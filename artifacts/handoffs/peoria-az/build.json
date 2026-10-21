@@ -1,45 +1,49 @@
 {
  "slug": "peoria-az",
  "stage": "build",
- "produced_at": "2026-10-20T16:30:27.543258",
- "worker_model": "glm-5.3-flash:cloud (Kit lane worker)",
- "notes": "BUILD data stage complete: 3 verified doulas (Sweet Pea/Emily Arena CD(DONA) Peoria; Samantha Zillweger IDI-certified 2024, Bornbir-verified Peoria base, publishes $1,200 package; Modern Mama team explicitly cites Peoria), 2 hospitals (Banner Del E. Webb maternity CMS birthing-friendly; Abrazo Arrowhead), 1 in-city CABC-accredited birth center (Canyon Midwifery, Mar 2024). No invented providers. Hero/OG/support images + watermark pipeline run OUTSIDE this lane per brief (validator image warnings non-fatal).",
+ "produced_at": "2026-10-21T10:36:51.015635-06:00",
+ "worker_model": "qwen3.8-flash-next:125b-a6b-q4_K_M (Kit lane worker)",
+ "notes": "RESUME lane: prior worker banked research-findings (3 verified doulas, 2 hospitals, 1 CABC-accredited in-city birth center) + sources with quotes. This worker fixed the sole chunk violation (removed disallowed medicaidNote_old from prose.json), ran merge-city-data (exit 0), validator exit 0 (0 errors), state advance gate-passed (19 passed/0 failed, next=enrich). Images/watermark pipeline run outside this lane per brief.",
  "sources": [
   {
-   "claim": "Emily Arena operates Sweet Pea Doula Services as a certified birth doula based in Peoria",
+   "claim": "Sweet Pea Doula Services - Emily Arena (official site)",
    "url": "https://sweetpeabirthdoula.com/",
-   "quote": "Emily Arena, Certified birth doula",
-   "quote_source_note": "on-page meta description; phone/contact verified on same page \u2014 original quote assembled from Google Business listing, not this page"
+   "quote": "Sweet Pea Doula Services, Emily Arena CD(DONA) Peoria, AZ, USA sweetpeabirthdoulaservices@gmail.com 530-210-4939"
   },
   {
-   "claim": "Samantha Zillweger is a birth doula based in Peoria (BornBir listing, International Doula Institute 2024)",
+   "claim": "Samantha Zillweger - Birth Doula - Peoria, AZ (Bornbir profile)",
    "url": "https://www.bornbir.com/samantha-zillweger",
-   "quote": "Samantha Zillweger - Birth Doula - Peoria, AZ"
+   "quote": "Samantha Zillweger Birth Doula in Peoria, AZ ... I completed my doula certification with the International Doula Institute in 2024. ... Samantha is based in Peoria, Arizona."
   },
   {
-   "claim": "Modern Mama Doula is a doula team whose services explicitly include Peoria",
+   "claim": "Modern Mama Doula and Placenta Encapsulation Services (official site)",
    "url": "http://www.modernmamadoula.com/",
    "quote": "Birth Doula, Placenta Encapsulation and Postpartum Doula services available in Phoenix, Mesa, Gilbert, Surprise, Glendale, Scottsdale, Chandler, Peoria and surrounding areas."
   },
   {
-   "claim": "Canyon Midwifery is CABC-accredited (Peoria, 13470 N 83rd Ave)",
+   "claim": "Canyon Midwifery - Commission for the Accreditation of Birth Centers",
    "url": "https://birthcenteraccreditation.org/2024/01/17/canyon-midwifery/",
-   "quote": ", AZ 85381 Phone : 623-824-3660 Website Accredited Since : March 2024 Tagged Arizona Post navigation"
+   "quote": "Canyon Midwifery Address: 13470 N 83rd Ave, Suite 300 Peoria, AZ 85381 Phone: 623-824-3660 ... Accredited Since: March 2024"
   },
   {
-   "claim": "Banner Del E. Webb Medical Center runs a complete maternity care program",
+   "claim": "Banner Del E Webb Medical Center Maternity Services (Banner Health)",
    "url": "https://www.bannerhealth.com/locations/sun-city-west/banner-del-e-webb-medical-center/maternity",
-   "quote": "At Banner Del E. Webb Medical Center, you\u2019ll find complete maternity care."
+   "quote": "Banner Del E Webb Medical Center 14502 W Meeker Blvd Sun City West, AZ 85375 (623) 524-4000 ... Hydrotherapy tubs and nitrous oxide are available in all of our Labor and Delivery rooms ... Private labor/delivery/recovery rooms set up to support a variety of birthing plans and needs"
   },
   {
-   "claim": "Banner Del E. Webb Medical Center is at 14502 W Meeker Blvd, Sun City West, AZ 85375",
-   "url": "https://www.bannerhealth.com/locations/sun-city-west/banner-del-e-webb-medical-center",
-   "quote": "Banner Del E Webb Medical Center 14502 W Meeker Blvd Sun City West, AZ 85375"
-  },
-  {
-   "claim": "Abrazo Arrowhead Campus (18701 N. 67th Ave., Glendale) provides women's services and delivers for Peoria-area families",
+   "claim": "Abrazo Arrowhead Campus (Abrazo Health location page)",
    "url": "https://www.abrazohealth.com/locations/detail/abrazo-arrowhead-campus",
    "quote": "Abrazo Arrowhead Campus (623) 561-1000 18701 N. 67th Ave., Glendale, AZ 85308 ... Our hospital is a leader in surgical robotics, cardiovascular care and women's services."
+  },
+  {
+   "claim": "Every day is Mother's Day at Abrazo Arrowhead - Peoria Times",
+   "url": "https://www.peoriatimes.com/features/every-day-is-mother-s-day-at-abrazo-arrowhead/article",
+   "quote": "Every day is Mother's Day at Abrazo Arrowhead - By Keith Jones, Peoria Times Contributing Writer - May 10, 2024"
+  },
+  {
+   "claim": "Birth & Postpartum Doulas Near Me in Peoria, AZ (Bornbir directory)",
+   "url": "https://www.bornbir.com/peoria/az/doula",
+   "quote": "15% Accept insurance ... Based on 285 package prices from 92 doulas listed on Bornbir within 150 miles of Peoria, AZ."
   }
  ],
  "city_fields": {
@@ -49,12 +53,12 @@
   "lng": -112.2374,
   "costLow": 900,
   "costHigh": 2000,
-  "heroImage": null,
-  "ogImage": null,
-  "supportSceneImage": null,
-  "supportSceneAlt": null,
-  "culture": "Peoria is a northwest-valley city of roughly 200,000 people strung along Loop 101 between Glendale and the West Wing mountains, and it has grown from an old farming town into one of metro Phoenix's biggest family suburbs. Vistancia and Terrace Park fill up with young households, which is why the birth economy here is real rather than borrowed: the city has its own freestanding birth center, a hospital maternity program minutes away in Sun City West, and independent Peoria doulas who work the neighborhood circuit rather than running valley-wide agencies. Most Peoria births happen at Banner Del E. Webb Medical Center or Abrazo Arrowhead Campus across the Loop 101, and both hospitals draw a steady share of their maternity volume from Peoria addresses.",
-  "medicaidNote": "Arizona's Medicaid program, AHCCCS, covers standard maternity care for eligible families, including prenatal visits and hospital birth. Doula coverage runs practice by practice rather than through a single program, so ask each doula directly about payment plans and whether they can work with your AHCCCS plan - the independent Peoria practices on this page can usually structure support around a tight budget."
+  "heroImage": "/images/peoria-az-birth-doula-skyline.webp",
+  "ogImage": "/images/og-city-peoria-az.webp",
+  "supportSceneImage": "/images/peoria-az-birth-doula-skyline-600.webp",
+  "supportSceneAlt": "Calming birth center suite at Canyon Midwifery, Peoria's CABC-accredited freestanding birth center",
+  "culture": "Peoria is a northwest-valley city of roughly 200,000 people strung along Loop 101 between Glendale and the West Wing mountains, and it has grown from an old farming town into one of metro Phoenix's biggest family suburbs. Vistancia and Terrace Park fill up with young households, so the city supports a full local set of birth services: it has its own freestanding birth center, a hospital maternity program minutes away in Sun City West, and independent Peoria doulas serving families across the city alongside the valley's larger practices. Most Peoria births happen at Banner Del E. Webb Medical Center or Abrazo Arrowhead Campus across the Loop 101, and both hospitals draw a steady share of their maternity volume from Peoria addresses.",
+  "medicaidNote": "Yes \\u2014 Arizona Medicaid (AHCCCS) covers doula services as of October 1, 2024 for all pregnant and postpartum members, but only through doulas certified by ADHS and registered with AHCCCS. Ask any doula you interview whether they are state-certified and AHCCCS-enrolled; private-pay doulas can still set up payment plans. Call 602-417-4000 (AHCCCS) or check your health plan's provider list to find enrolled doulas."
  },
  "faqs_count": 6,
  "midwife_paragraph_chars": 0,
@@ -64,56 +68,30 @@
    "url": "https://sweetpeabirthdoula.com/",
    "photo": "/images/doulas/peoria-az-emily-arena.webp",
    "description_chars": 583,
-   "costRange": "$900-$1,500"
+   "costRange": ""
   },
   {
    "name": "Samantha Zillweger",
    "url": "https://www.bornbir.com/samantha-zillweger",
    "photo": "/images/doulas/peoria-az-samantha-zillweger.webp",
    "description_chars": 592,
-   "costRange": "$1,200-$1,200"
+   "costRange": ""
   },
   {
    "name": "Modern Mama Doula",
    "url": "http://www.modernmamadoula.com/",
    "photo": "/images/doulas/peoria-az-modern-mama.webp",
    "description_chars": 619,
-   "costRange": "$900-$2,000"
+   "costRange": ""
   }
  ],
  "images": {
-  "hero_watermark_clean": null,
-  "og_watermark_clean": null
+  "hero_watermark_clean": true,
+  "og_watermark_clean": true
  },
- "_auto_image_refs": [],
- "image_manifest": [
-  {
-   "path": "public/images/og-city-peoria-az.webp",
-   "kind": "og"
-  },
-  {
-   "path": "public/images/peoria-az-birth-doula-skyline.webp",
-   "kind": "hero"
-  },
-  {
-   "path": "public/images/peoria-az-birth-doula-skyline-600.webp",
-   "kind": "hero"
-  },
-  {
-   "path": "public/images/heroes/peoria-az-birth-doula-skyline.webp",
-   "kind": "hero"
-  },
-  {
-   "path": "public/images/hospitals/peoria-az-banner-del-e-webb.webp",
-   "kind": "thumb"
-  },
-  {
-   "path": "public/images/birth-centers/peoria-az-canyon-midwifery.webp",
-   "kind": "thumb"
-  },
-  {
-   "path": "public/images/doulas/peoria-az-samantha-zillweger.webp",
-   "kind": "thumb"
-  }
+ "_auto_image_refs": [
+  "/images/peoria-az-birth-doula-skyline.webp",
+  "/images/og-city-peoria-az.webp",
+  "/images/peoria-az-birth-doula-skyline-600.webp"
  ]
 }
