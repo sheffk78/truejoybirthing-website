@@ -29,3 +29,9 @@ credentials from provider's own pages), then build fresh — July data here is r
 too junk to copy. Priority by Texas market value if Jeff wants them rebuilt: mcallen/mission/
 edinburg/harlingen/pharr (Rio Grande Valley cluster), grand-prairie/richardson/mesquite
 (DMetro fringe), greensboro/st-petersburg/wichita-falls last.
+**UPDATE 2026-10-22 (Jeff directive):** all 11 enqueued into the city pipeline DAG
+(`tjb-city-ledger.json`, stage=queued), priority-scored per Jeff's instruction:
+RGV cluster first (mcallen 99 / mission 97 / edinburg 96 / harlingen 95 / pharr 94),
+then DMetro fringe (grand-prairie 89 / richardson 88 / mesquite 87),
+then the rest (greensboro 79 / st-petersburg-fl 78 / wichita-falls 77).
+Kit claims them via `tjb-autonomous-runner.py run-next` — pop-only scores overridden.
