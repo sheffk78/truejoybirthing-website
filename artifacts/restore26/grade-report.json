@@ -1,0 +1,51 @@
+{
+ "task": "26 lost city pages \u2014 July snapshot extraction review (Jeff-approved restore-then-review)",
+ "date": "2026-10-21",
+ "extraction": "26/26 extracted from /tmp/tjb-restore26 (lost-slugs.json), parsed TS\u2192JSON, prose scrubbed (em-dash/semicolon/colon/AI-vocab pass)",
+ "grades": {
+  "GOOD (fields complete, real prose, need asset/gate fixes only)": [
+   "galveston-tx",
+   "garland-tx",
+   "georgetown-tx",
+   "irving-tx",
+   "lewisville-tx",
+   "midland-tx",
+   "round-rock-tx",
+   "sugar-land-tx",
+   "brownsville-tx",
+   "mcallen-tx"
+  ],
+  "THIN (short roster or junk provider entries; need provider re-research)": [
+   "edinburg-tx (2 junk)",
+   "harlingen-tx (2 junk)",
+   "mission-tx (2 junk)",
+   "pharr-tx (2 junk)",
+   "st-petersburg-fl (1 junk + 2 doulas only)",
+   "wichita-falls-tx (0 doulas!)",
+   "mesquite-tx (1 junk)",
+   "springfield-il (1 junk)",
+   "savannah-ga (1 junk)",
+   "greensboro-nc (2 junk)"
+  ],
+  "note": "college-station has a duplicate provider (Miranda Slaydon x2); grand-prairie has 1 junk entry"
+ },
+ "shared_problems": {
+  "heroImage field": "absent on all 26; 19/26 hero assets are non-photo graphics (R10 violations) \u2014 5 real photos to reuse (georgetown/irving/midland/round-rock/edinburg), pasadena skyline photo = wrong subject, st-petersburg has no asset",
+  "supportScene 4:3": "25 scenes exist at 1.5-1.6 ratio \u2192 center-crop to 1024x768; wake-forest-nc missing entirely",
+  "OG images": "20/26 at >=30KB but G64 requires Pattern B compositions (26 missing under scripts/og-city-{slug}-composition.html); 6 under 30KB (edinburg 18k, georgetown 19k, pasadena 21k, round-rock 21k, st-petersburg 22k + savannah 29k)",
+  "S7 medicaidNote": "all 26 need \"Yes \u2014\"/\"No \u2014\" prefix format",
+  "S8 Contact for pricing": "present in 25/26 costRange fields",
+  "G27 credentials": "85 providers across 25 cities carry exact-generic \"Birth Doula\"",
+  "G57/G60 provider photos": "19 empty photo fields across 13 cities",
+  "provider junk names": "15+ entries with nav-scrape names (Home, All, Services, About Me...)",
+  "humanize scan on July prose": "24/26 HIGH RISK or RISKY before scrub; after punct/vocab scrub: 14 passable, 12 still flagged \u2192 per-city rewording pass needed"
+ },
+ "plan": {
+  "1": "insert 26 blocks with normalized fields (heroImage/support/og wired to new assets, S7/S8/G27 fixed) \u2192 build gates pass",
+  "2": "fix images: crop support scenes 4:3, generate/replace heroes (19), wake-forest support scene, OG compositions+renders for all 26",
+  "3": "provider re-research pass on THIN rosters (real names/urls/credentials) + photo sourcing",
+  "4": "humanize reword pass on 12 flagged cities, then H-HUMANIZE gate verify",
+  "5": "batch through stage gates (build\u2192enrich\u2192video_outreach per slug), full verify_deploy, deploy"
+ },
+ "status": "census complete \u2014 proceeding with track 1 (insert + normalize)"
+}
