@@ -505,7 +505,8 @@ const IMAGE_HELPER = path.join(__dirname, "preflight-image-helper.py");
 const IMAGE_HELPER_GATES: Record<string, string[]> = {
   "hero-aspect": ["G25"],                       // hero 3:2 aspect ratio
   "og-photo-quality": ["G29", "G35"],           // OG is real photo (not gradient)
-  "provider-credentials": ["G27"],              // provider creds specific, not "Birth Doula"
+  "provider-credentials": ["G27"],
+  "hero-srcset": ["G69"],                  // derived srcset candidates exist on disk (NEW — Oct 22, 2026 restore26 postmortem)              // provider creds specific, not "Birth Doula"
   "provider-descriptions": ["G10", "G39"],      // no generic placeholder copy
   "hospital-dimensions": ["G19", "G20", "P11"], // hospital/birth photos exist + landscape
   "service-area": ["A12"],                      // serviceArea is string array
@@ -628,9 +629,9 @@ if (targetSlug && fs.existsSync(path.join(PROJECT_DIR, "dist", "birth-support", 
 // slug per invocation; a full audit avoids duplicate cross-city noise here).
 if (targetSlug) {
   const stageImageChecks: Record<string, string[]> = {
-    build: ["hero-aspect", "og-photo-quality", "og-template-compliance", "hero-letterbox", "hero-silhouette", "hero-avif-staleness"],
+    build: ["hero-aspect", "og-photo-quality", "og-template-compliance", "hero-letterbox", "hero-silhouette", "hero-avif-staleness", "hero-srcset"],
     enrich: ["provider-credentials", "provider-descriptions", "hospital-dimensions", "service-area", "support-scene-quality", "hero-letterbox", "provider-photo-exists", "cross-city-contamination"],
-    verify_deploy: ["hero-aspect", "og-photo-quality", "og-template-compliance", "hero-letterbox", "provider-descriptions", "hospital-dimensions", "service-area", "support-scene-quality", "yt-thumbnail-matches-hero", "provider-photo-exists", "cross-city-contamination", "hero-avif-staleness", "hero-content-city-match"],
+    verify_deploy: ["hero-aspect", "og-photo-quality", "og-template-compliance", "hero-letterbox", "provider-descriptions", "hospital-dimensions", "service-area", "support-scene-quality", "yt-thumbnail-matches-hero", "provider-photo-exists", "cross-city-contamination", "hero-avif-staleness", "hero-content-city-match", "hero-srcset"],
     video_outreach: ["support-scene-quality", "hero-letterbox", "yt-thumbnail-matches-hero", "fullpage-scroll-screenshot", "provider-photo-exists", "cross-city-contamination", "hero-content-city-match"],
   };
   for (const check of stageImageChecks[stageArg ?? "build"] ?? []) {

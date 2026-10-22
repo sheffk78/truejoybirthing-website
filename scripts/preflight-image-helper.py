@@ -1342,6 +1342,55 @@ def hero_content_city_match(slug: str) -> dict:
     return {"pass": True, "detail": f"G68: hero {os.path.basename(hero_ref)} has no other-city twin on disk"}
 
 
+
+def hero_srcset(slug: str) -> dict:
+    """G69: Every srcset variant the hero <picture> will reference must exist on disk.
+
+    The template derives the 600w/1200w AVIF and WebP candidate names from
+    heroImage (strip -vN, append -600 etc.). If a candidate file is missing,
+    the page still ships — and mobile browsers that pick the 600w candidate
+    get a 404 (restore26 postmortem: 14 cities shipped without -v2-600.webp,
+    then CF pinned the 404s with a year TTL).
+    """
+    block = _read_city_block(slug)
+    if block is None:
+        return {"pass": False, "detail": f"Could not read city block for {slug}"}
+    m = re.search(r'heroImage:\s*["\']([^"\']+)["\']', block)
+    if not m:
+        return {"pass": True, "detail": "No heroImage field (non-custom hero) — nothing to derive"}
+    hero = m.group(1)
+    rel = hero.lstrip("/")
+    if hero.startswith("http"):
+        return {"pass": True, "detail": f"heroImage is absolute URL — derived-variant check not applicable"}
+
+    rel2 = rel.lstrip("/") if rel.startswith("/images/") else rel
+    rel2 = rel2[len("images/"):] if rel2.startswith("images/") else rel2
+    base, ext = os.path.splitext(rel2)
+    # candidates exactly as [city].astro derives them
+    cand = []
+    base_no_v = re.sub(r'-v\d+$', '', base)
+    cand.append(base_no_v + ".avif")                # avif base (stripped)
+    cand.append(base_no_v + "-600.avif")            # avif 600 (stripped)
+    cand.append(base + ".webp")                     # webp 1200 (exact)
+    cand.append(base + "-600.webp")                 # webp 600 (exact)
+    def exists(c):
+        return os.path.exists(os.path.join(PUBLIC_IMAGES, c))
+
+    # WebP pair: the webp <source> is ALWAYS rendered — both required.
+    webp_missing = [c for c in [base + ".webp", base + "-600.webp"] if not exists(c)]
+    if webp_missing:
+        return {"pass": False, "detail": f"G69: required hero WebP srcset candidates missing on disk: {', '.join('/' + c for c in webp_missing)} — mobile <picture> 404s (restore26 postmortem). Generate the -600 variant (600px wide, q80, <60KB) from the hero."}
+
+    # AVIF pair: the avif <source> renders ONLY if the base avif exists.
+    # If either avif exists, BOTH must (partial avif source = 404 class).
+    avif_base_e, avif_600_e = exists(base_no_v + ".avif"), exists(base_no_v + "-600.avif")
+    if avif_base_e != avif_600_e:
+        return {"pass": False, "detail": f"G69: partial AVIF pair for hero — base={'yes' if avif_base_e else 'no'}, 600={'yes' if avif_600_e else 'no'} at {base_no_v}[.avif|-600.avif]. The template renders the avif <source> when the base exists, so a missing -600.avif 404s on mobile. Regenerate both or remove the base avif."}
+
+    if avif_base_e:
+        return {"pass": True, "detail": f"G69: all 4 hero srcset candidates exist (avif+webp, 1200w+600w)"}
+    return {"pass": True, "detail": f"G69: hero is webp-only (both webp candidates exist; no avif — template skips avif source)"}
+
 def og_letterbox(slug: str) -> dict:
     """G69: The OG image itself must have no black letterbox/pillarbox bars.
 
@@ -1435,6 +1484,7 @@ def main():
         'fullpage-scroll-screenshot': fullpage_scroll_screenshot,
         'og-template-compliance': og_template_compliance,
         'og-letterbox': og_letterbox,
+        'hero-srcset': hero_srcset,
         'hero-letterbox': hero_letterbox,
         'hero-content-city-match': hero_content_city_match,
     }
