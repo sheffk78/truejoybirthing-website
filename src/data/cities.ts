@@ -6931,7 +6931,7 @@ nearbyCities: ["st-augustine-fl", "orlando-fl"]},
     costLow: 800,
     costHigh: 2000,
     shelbiServesHere: false,
-    heroImage: "/images/springfield-il-birth-doula-support-v2.webp",
+    heroImage: "/images/springfield-il-birth-doula-support-v3.webp",
     supportSceneImage: "/images/springfield-il-doula-support-scene.webp",
     ogImage: "/images/og-city-springfield-il-v2.webp",
     birthStats: {
