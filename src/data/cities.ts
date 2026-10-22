@@ -15026,7 +15026,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
     hospitalDetails: [
       {
         name: "Broward Health Medical Center",
-        thumbnail: "/images/broward-health-medical-center.webp",
+        thumbnail: "/images/hospitals/fort-lauderdale-fl-broward-health.webp",
         url: "https://www.browardhealth.org/medical-services/womens-health/maternity-services/maternity-place-at-broward-health-medical-center",
         address: "251 E Las Olas Blvd, Fort Lauderdale, FL 33301",
         nicuLevel: "III",
@@ -15038,7 +15038,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
       },
       {
         name: "Holy Cross Hospital Fort Lauderdale",
-        thumbnail: "/images/holy-cross-hospital-fort-lauderdale.webp",
+        thumbnail: "/images/hospitals/fort-lauderdale-fl-holy-cross.webp",
         url: "https://www.holy-cross.com/location/holy-cross-hospital-fl-0",
         address: "2601 N Federal Hwy, Fort Lauderdale, FL 33305",
         nicuLevel: "II",
