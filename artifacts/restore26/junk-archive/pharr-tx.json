@@ -1,0 +1,118 @@
+{
+ "enableBlogResources": true,
+ "publishedDate": "2026-06-22",
+ "city": "Pharr",
+ "state": "TX",
+ "slug": "pharr-tx",
+ "costLow": 600,
+ "costHigh": 1400,
+ "shelbiServesHere": true,
+ "localDoulas": [
+  {
+   "name": "Rooted Birth",
+   "credential": "Birth Doula",
+   "practice": "Rooted Birth",
+   "url": "https://www.rooteddoula.com/",
+   "photo": "/images/provider-pharr-tx-rooted-birth.webp",
+   "description": "Tranquil Seasons is now Rooted Birth San Antonio Doula Collective! We would love to serve your family through pregnancy, birth, and postpartum.",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Pharr, TX"
+   ]
+  },
+  {
+   "name": "Meet The Team",
+   "credential": "Birth Doula",
+   "practice": "Meet The Team",
+   "url": "https://empoweredbeginningsatx.com/meet-the-team-1",
+   "photo": "/images/provider-pharr-tx-meet-the-team.webp",
+   "description": "I am a birth and postpartum doula, childbirth educator specializing in HypnoBirthing, pediatric sleep consultant, and parent coach. I also have a podcast called ...",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Pharr, TX"
+   ]
+  },
+  {
+   "name": "Maylily Birth Support",
+   "credential": "Birth Doula",
+   "practice": "Maylily Birth Support",
+   "url": "https://maylilybirth.com/",
+   "photo": "",
+   "description": "As birth Doula, I am a non-medical assistant to women during pregnancy, labor and after birth. I will stay by your side during active labor until you are ...",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Pharr, TX"
+   ]
+  },
+  {
+   "name": "Doulas Directory",
+   "credential": "Birth Doula",
+   "practice": "Doulas Directory",
+   "url": "https://handsgifted.org/directory",
+   "photo": "/images/provider-pharr-tx-doulas-directory.webp",
+   "description": "This doula directory includes fertility, birth, postpartum doulas and more. Stay connected for support, events, news, and birth stories. Find out more. Announce ...",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Pharr, TX"
+   ]
+  }
+ ],
+ "culture": "Pharr sits in the heart of the Rio Grande Valley, adjacent to McAllen on Expressway 83. The Pharr International Bridge connects the city to Reynosa, and cross-border family networks shape birth traditions here. Pharr families are predominantly bilingual and bicultural, with deep cuarentena traditions and promotoras filling community health gaps. While there is no hospital with labor and delivery within city limits, Pharr is a 5-minute drive from STHS McAllen and 10 minutes from DHR Health in Edinburg, giving families fast access to the RGV’s major birth centers.",
+ "heroLocalDetail": "Pharr doesn’t have its own hospital with labor and delivery, but STHS McAllen is about 5 minutes west on Expressway 83, and DHR Health Women’s Hospital in Edinburg is about 10 minutes east via Expressway 83 and McColl Road. If you’re in Pharr during afternoon rush, the Expressway frontage roads between Pharr and McAllen can slow down — but the drive to either hospital is rarely more than 15 minutes even at peak times.",
+ "hospitalDetails": [
+  {
+   "name": "South Texas Health System McAllen",
+   "paragraph": "Pharr doesn’t have a hospital with labor and delivery within city limits — the nearest is STHS McAllen, about 5 minutes west on Expressway 83, with a verified Level III NICU stated directly on sths.com. STHS McAllen’s dedicated Maternity Center handles a high volume of RGV births and offers private birthing suites, 24/7 obstetric coverage, and lactation support. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something clear to work from."
+  },
+  {
+   "name": "DHR Health Women’s Hospital",
+   "paragraph": "Pharr families also use DHR Health Women’s Hospital in Edinburg, about 10 minutes east, which holds a Level IV Maternal Facility designation from the state of Texas — the only one in the Rio Grande Valley. NICU level: contact the hospital directly for current designation. DHR handles the most complex pregnancies in the region, and their perinatal referral network extends across South Texas."
+  }
+ ],
+ "birthCenterDetails": [],
+ "medicaidNote": "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Hidalgo County’s STAR managed care plans. Hidalgo County has one of the highest uninsured rates in the United States — many families here depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan’s doula coverage before hiring.",
+ "insuranceNote": "Most Pharr-area families with private insurance use plans through employer groups or the ACA marketplace. STHS McAllen and DHR Health accept most major plans — verify your coverage and ask about prior authorization requirements early in your pregnancy.",
+ "faqs": [
+  {
+   "q": "How much does a doula cost in Pharr?",
+   "a": "Expect to pay $600 to $1,400 for a doula in Pharr. Can't swing the full price? Ask about sliding-scale options — most doulas would rather work with your budget than see you go without. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you."
+  },
+  {
+   "q": "Does Medicaid cover doulas in Pharr?",
+   "a": "Yes! Great news — Medicaid covers doula services in Pharr. This is thanks to SB 750. That includes Hidalgo County’s STAR managed care plans. Here's your next step: call your Medicaid plan and ask \"Do you cover doula services?\" — they'll walk you through it, or call 1-877-543-7669 directly. You can also check online at YourTexasBenefits.com. You deserve support, and now your insurance helps pay for it."
+  },
+  {
+   "q": "Which hospitals near Pharr have labor and delivery?",
+   "a": "Pharr doesn’t have a hospital with labor and delivery within city limits. The nearest options are STHS McAllen (5 minutes west on Expressway 83, verified Level III NICU) and DHR Health Women’s Hospital in Edinburg (10 minutes east, Level IV Maternal Facility). Both are a short drive from anywhere in Pharr. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want."
+  },
+  {
+   "q": "Does True Joy Birthing work for Pharr families?",
+   "a": "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Pharr birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required."
+  }
+ ],
+ "nearbyCities": [
+  "mcallen-tx",
+  "edinburg-tx",
+  "harlingen-tx"
+ ]
+}

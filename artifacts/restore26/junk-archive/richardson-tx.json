@@ -1,0 +1,133 @@
+{
+ "enableBlogResources": true,
+ "publishedDate": "2026-06-22",
+ "city": "Richardson",
+ "state": "TX",
+ "slug": "richardson-tx",
+ "costLow": 900,
+ "costHigh": 2400,
+ "shelbiServesHere": false,
+ "heroImage": "/images/new-york-ny-birth-doula-skyline.webp",
+ "localDoulas": [
+  {
+   "name": "Dallas Birth Doula",
+   "credential": "Birth Doula",
+   "practice": "Dallas Birth Doula",
+   "url": "https://www.birthingb.com/",
+   "photo": "/images/provider-richardson-tx-dallas-birth-doula.webp",
+   "description": "I provide education around birth, postpartum and breastfeeding to both parents. My Childbirth Education classes are offered in-home or in group settings.",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Richardson, TX"
+   ]
+  },
+  {
+   "name": "Great Expectations",
+   "credential": "Birth Doula",
+   "practice": "Great Expectations",
+   "url": "https://www.bestdallasdoulas.com/",
+   "photo": "/images/provider-richardson-tx-great-expectations.webp",
+   "description": "We support all types of birth with doulas specializing in VBAC, natural birth, pregnancy after infertility, multiples, surrogacy, Cesarean birth and 1st time ...",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Richardson, TX"
+   ]
+  },
+  {
+   "name": "Welcome to Delighted to Doula",
+   "credential": "Birth Doula",
+   "practice": "Welcome to Delighted to Doula",
+   "url": "https://www.delightedtodoula.org/",
+   "photo": "/images/provider-richardson-tx-welcome-to-delighted-to-doula.webp",
+   "description": "Our mission is to provide free/low-cost postpartum support to women in Dallas County and surrounding areas. Visit us today to learn more.",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Richardson, TX"
+   ]
+  },
+  {
+   "name": "Birthing B",
+   "credential": "Birth Doula",
+   "practice": "Birthing B",
+   "url": "https://www.facebook.com/birthingbdoula/",
+   "photo": "",
+   "description": "I am a BEST certified and trained Doula providing support to the North Dallas area. My services include different packages for prenatal, labor and postpartum.",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Richardson, TX"
+   ]
+  },
+  {
+   "name": "Home",
+   "credential": "Birth Doula",
+   "practice": "Home",
+   "url": "https://www.northdallasdoulas.com/",
+   "photo": "/images/provider-richardson-tx-home.webp",
+   "description": "North Dallas Doula Associates · \" Guiding families through childbirth since 1999\" · Birth Doula Services · Postpartum Doula Services · Prenatal Education Services.",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Richardson, TX"
+   ]
+  }
+ ],
+ "culture": "Richardson is an established inner-ring suburb sandwiched between Dallas and Plano along US-75 — a Telecom Corridor city whose identity is shifting toward young families and diverse communities. The birth landscape here is anchored by Methodist Richardson Medical Center, and Richardson families also have easy access to the major hospital systems in Dallas, Garland, and Plano. Richardson’s South Asian, Vietnamese, and East African communities shape a unique birth culture where family involvement in the postpartum period is the norm, not the exception.",
+ "heroLocalDetail": "Methodist Richardson Medical Center sits at 2831 E. President George Bush Turnpike (at Renner Road), on the east side of Richardson. From US-75, take the Renner Road exit heading east for about 2 miles, or from I-635, take the President George Bush Turnpike exit and head north — the hospital entrance is right off the Turnpike frontage road. Breckinridge Park’s flat loop trail is about 5 minutes away and a popular spot for Richardson families getting third-trimester walks in close to the hospital.",
+ "hospitalDetails": [
+  {
+   "name": "Methodist Richardson Medical Center",
+   "paragraph": "Methodist Richardson Medical Center, at 2831 E. President George Bush Turnpike, is Richardson’s primary hospital for labor and delivery with a verified Level III NICU and a dedicated Women’s Pavilion, both stated directly on methodisthealthsystem.org. The hospital provides 24/7 obstetric hospitalists, private labor and delivery suites, and lactation support. If you’re delivering at Methodist Richardson, having your birth plan ready makes the check-in process faster when you arrive in labor — they see a steady volume from Richardson, Garland, Murphy, and Sachse families. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something clear to work from."
+  }
+ ],
+ "birthCenterDetails": [],
+ "medicaidNote": "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Dallas County’s STAR managed care plans. Richardson straddles both Dallas and Collin counties, so check which county your Medicaid enrollment falls under. Contact your Medicaid managed care plan to confirm doula coverage before hiring. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
+ "insuranceNote": "Whether doula services are partially covered varies by plan in the Richardson area. The Telecom Corridor’s major employers — including AT&T, Cisco, and regional health systems — increasingly offer maternity wellness benefits that may cover doula support. Check with your HR department and ask whether HSA or FSA funds can help with out-of-pocket doula costs.",
+ "faqs": [
+  {
+   "q": "How much does a doula cost in Richardson?",
+   "a": "Expect to pay $900 to $2,400 for a doula in Richardson. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you."
+  },
+  {
+   "q": "Does Medicaid cover doulas in Richardson?",
+   "a": "Yes! Great news — Medicaid covers doula services in Richardson. This is thanks to SB 750. That includes Dallas County’s STAR managed care plans. Here's your next step: call your Medicaid plan and ask \"Do you cover doula services?\" — they'll walk you through it, or call 1-877-543-7669 directly. You can also check online at YourTexasBenefits.com. You deserve support, and now your insurance helps pay for it."
+  },
+  {
+   "q": "Which hospitals in Richardson have labor and delivery?",
+   "a": "Methodist Richardson Medical Center at 2831 E. President George Bush Turnpike is Richardson’s primary hospital for labor and delivery, with a verified Level III NICU and dedicated Women’s Pavilion. Some Richardson moms and families also deliver at Medical City Dallas or Baylor Scott & White in Plano for additional options. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want."
+  },
+  {
+   "q": "Does True Joy Birthing work with Richardson families?",
+   "a": "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Richardson birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required."
+  }
+ ],
+ "nearbyCities": [
+  "dallas-tx",
+  "plano-tx",
+  "garland-tx",
+  "carrollton-tx"
+ ]
+}

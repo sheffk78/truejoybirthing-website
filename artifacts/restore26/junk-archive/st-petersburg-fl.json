@@ -1,0 +1,101 @@
+{
+ "enableBlogResources": true,
+ "publishedDate": "2026-06-22",
+ "city": "St. Petersburg",
+ "state": "FL",
+ "slug": "st-petersburg-fl",
+ "costLow": 900,
+ "costHigh": 2800,
+ "shelbiServesHere": false,
+ "heroImage": "/images/new-york-ny-birth-doula-skyline.webp",
+ "localDoulas": [
+  {
+   "name": "About Me",
+   "credential": "Birth Doula",
+   "practice": "About Me",
+   "url": "https://stpetersburgdoula.com/about-me/",
+   "photo": "/images/provider-st-petersburg-fl-about-me.webp",
+   "description": "I'm Jessica Olarte-Thompson and I help families achieve better birth and postpartum outcomes so you and your baby can get the best start in life.",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "St. Petersburg, FL"
+   ]
+  },
+  {
+   "name": "Barefoot Birth",
+   "credential": "Birth Doula",
+   "practice": "Barefoot Birth",
+   "url": "https://www.barefootbirth.com/doula",
+   "photo": "/images/provider-st-petersburg-fl-barefoot-birth.webp",
+   "description": "Our team of holistic doulas offers unwavering support during pregnancy, birthing, and postpartum for families in Tampa, St. Pete, and surrounding areas.",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "St. Petersburg, FL"
+   ]
+  }
+ ],
+ "culture": "St. Petersburg has a growing birth community that benefits from proximity to Tampa's larger network while offering a more walkable, neighborhood-oriented maternity landscape. Many Tampa Bay doulas serve both sides of the bridge, so families have access to a broader provider network than the city's size would suggest.",
+ "heroLocalDetail": "Along Central Avenue from downtown to the beaches, St. Petersburg families find a walkable maternity landscape. Bayfront Health (Orlando Health) anchors downtown birth services, while Johns Hopkins All Children's provides the region's only Level IV NICU. The Howard Frankland Bridge connects you to Tampa's full hospital network in 20 minutes.",
+ "hospitalDetails": [
+  {
+   "name": "Johns Hopkins All Children's Hospital",
+   "paragraph": "Johns Hopkins All Children's Hospital is the regional neonatal referral center for Tampa Bay, with a Level IV NICU and specialized maternal-fetal medicine. While primarily pediatric, the NICU accepts transfers from across the region for the most complex cases. If your pregnancy is high-risk, this is where your baby may be transferred."
+  },
+  {
+   "name": "Bayfront Health St. Petersburg (Orlando Health)",
+   "paragraph": "Bayfront Health St. Petersburg, now part of Orlando Health, is the busiest birth hospital in Pinellas County with a Level III NICU. Located downtown near the waterfront, it's the go-to for St. Pete families. As with any high-volume hospital, a written birth plan helps ensure your preferences are communicated clearly."
+  },
+  {
+   "name": "HCA Florida Palms of Pasadena Hospital",
+   "paragraph": "HCA Florida Palms of Pasadena Hospital in South Pasadena offers a Level II NICU and community-oriented birth services. It's a good option for low-risk pregnancies on the south side of St. Pete, with shorter wait times and a more personal feel than the larger downtown hospitals."
+  }
+ ],
+ "birthCenterDetails": [
+  {
+   "name": "No birth centers in St. Petersburg",
+   "paragraph": "NPI taxonomy 261QB0400X returned 0 results for St. Petersburg FL. No freestanding birth centers in Pinellas County. The closest is Tampa Bay Birth Center (~30 min across the Howard Frankland Bridge). Families wanting an out-of-hospital birth should factor in bridge traffic during rush hour."
+  }
+ ],
+ "medicaidNote": "Florida Medicaid does not cover doula services. Pinellas County has several community doula programs that offer sliding-scale fees for Medicaid-eligible families.",
+ "insuranceNote": "Commercial insurance in FL generally does not cover doula fees. Some employers offer doula benefits through Carrot, Maven, or similar platforms.",
+ "faqs": [
+  {
+   "q": "How much does a doula cost in St. Petersburg?",
+   "a": "Expect to pay $900 to $2800 for a doula in St. Petersburg. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you."
+  },
+  {
+   "q": "What's the closest birth center to St. Petersburg?",
+   "a": "Tampa Bay Birth Center is approximately 30 minutes away across the Howard Frankland Bridge. No birth centers operate in Pinellas County. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you."
+  },
+  {
+   "q": "Does Florida Medicaid cover doula services in St. Petersburg?",
+   "a": "Not yet — your state's Medicaid doesn't cover doulas right now. But that doesn't mean you're alone. Ask any doula you interview about payment plans and reduced-fee spots. And grab the <a href=\"/birth-plan-template/\">free birth plan template</a> — no matter who's in the room with you, knowing what you want is your superpower."
+  },
+  {
+   "q": "Which St. Petersburg hospitals have the highest-level NICUs?",
+   "a": "Johns Hopkins All Children's Hospital provides Level IV NICU care, and Bayfront Health St. Petersburg (Orlando Health) has a Level III NICU. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want."
+  },
+  {
+   "q": "Do St. Petersburg doulas also cover Tampa?",
+   "a": "Yes, many Tampa Bay doulas serve both sides of the bridge. Expect moderate travel fees ($50–$100) if your doula is based on the opposite side of the bay. You can also use the True Joy Birthing app to find local doulas — start there and interview a few until one clicks."
+  },
+  {
+   "q": "Is St. Petersburg a good place to give birth?",
+   "a": "St. Petersburg offers strong hospital options within city limits, plus close access to Tampa's broader birth network via the Howard Frankland Bridge. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> and start thinking about what kind of birth experience you want — wherever you deliver."
+  }
+ ],
+ "nearbyCities": [
+  "tampa-fl",
+  "orlando-fl"
+ ]
+}

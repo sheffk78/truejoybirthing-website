@@ -1,0 +1,43 @@
+  "grand-prairie-tx": {
+    enableBlogResources: true,
+    publishedDate: "2026-06-22",
+    city: "Grand Prairie" ,
+    state: "TX" ,
+    slug: "grand-prairie-tx" ,
+    costLow: 850,
+    costHigh: 2500,
+    heroImage: "/images/philadelphia-pa-birth-doula-skyline.webp",
+    ogImage: "https://truejoybirthing.com/images/og-city-philadelphia-pa.webp",
+    supportSceneImage: "/images/philadelphia-pa-birth-doula-support.webp",
+    supportSceneAlt: "A doula supporting an expectant mom in Philadelphia: Pennsylvania birth support and doula care",
+    shelbiServesHere: true,    localDoulas: [
+      { name: "Meet Jennifer Swiney" , credential: "Birth Doula" , practice: "Meet Jennifer Swiney" , url: "https://birthbootcamp.com/meet-jennifer-swiney-doula-in-grand-prairie-tx/" , photo: "/images/provider-grand-prairie-tx-meet-jennifer-swiney.jpg", description: "My name is Jennifer, and I'm a birth doula in the DFW area of north Texas. Find me at www.grandprairiedoula.com,", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Grand Prairie, TX"] },
+      { name: "Taylor Williams" , credential: "Birth Doula" , practice: "Taylor Williams" , url: "https://www.bornbir.com/taylor-williams" , photo: "/images/provider-grand-prairie-tx-taylor-williams.webp", description: "I'm Taylor, your dedicated birth and postpartum doula. As a native of Dallas, my life's journey has been a blend of enriching experiences and fulfilling ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Grand Prairie, TX"] },
+      { name: "All" , credential: "Birth Doula" , practice: "All" , url: "https://www.littleflowerbirthservices.com/all-inclusive-plan" , photo: "/images/provider-grand-prairie-tx-all.webp", description: "All-Inclusive Birth Support in Grand Prairie, Includes childbirth classes, prenatal care, messaging $1,500 Postpartum Doula Care Daytime: Average 6 weeks, 12 ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Grand Prairie, TX"] },
+      { name: "Your Doula Katie" , credential: "Birth Doula" , practice: "Your Doula Katie" , url: "https://www.yourdoulakatie.com/" , photo: "/images/provider-grand-prairie-tx-your-doula-katie.webp", description: "Your Doula Katie supports families in Grande Prairie, AB through pregnancy, birth and parenthood.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Grand Prairie, TX"] } ],
+    culture: "Grand Prairie sits between Dallas and Arlington along the I-30 corridor, serving a diverse, working-class population. The city has solid hospital access and a growing young family demographic. Many Grand Prairie families are first-time parents looking for affordable, practical birth preparation support." ,
+    heroLocalDetail: "Grand Prairie sits right between Dallas and Fort Worth along the I-30 and I-20 corridors, and most families deliver at Methodist Charlton locally or drive 15 minutes to hospitals in Arlington and Mansfield. SH-161 and Great Southwest Parkway are your north–south alternates when I-30 or I-20 back up — and they will during afternoon rush. Joe Pool Lake on the south side has the Lynn Creek Park trail system with paved and primitive trails along the water, and it's the quiet option for third-trimester walks when the highway noise gets to be too much. EpicCentral Park and the nearby Epic Waters area are where young families cluster on the north side, and the Grand Prairie Farmers Market District around Main Street has that small-in-the-city feel." ,
+    hospitalDetails: [
+      { name: "Methodist Charlton Medical Center" , paragraph: "Methodist Charlton Medical Center, in the southern Grand Prairie area, is part of the Methodist system with a Level III NICU (contact the hospital directly for current level verification) and serves a diverse community including many Medicaid families. It handles a high volume of births and is well-equipped, but busy \u2014 come with your plan in hand. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started." },
+      { name: "Baylor Scott & White Grand Prairie" , paragraph: "Baylor Scott &amp; White Grand Prairie also serves the area alongside Methodist Charlton. Grand Prairie families also deliver at Methodist Dallas or Texas Health Fort Worth, both accessible from different parts of the city. If we're being real, your hospital choice might come down to which is closest to your house \u2014 so write your birth plan before you need it." } ],
+    // Birth center search: NPI taxonomy 261QB0400X returned 1 result for Grand Prairie, TX —
+    // Family Birth Services (NPI 1841340411, DBA of Helen J Jolly Nelson, CPM, license 7200),
+    // 814 Dalworth St, Grand Prairie, TX 75050, phone (972) 263-0299, website familybirthservices.com,
+    // enumerated 2007-01-12. HOWEVER, Google Maps lists Family Birth Services as
+    // "Permanently closed" (4.8★/33 reviews, 2455 Robinson Rd #200, Grand Prairie, TX 75051).
+    // No other birth centers with taxonomy 261QB0400X found in Grand Prairie ZIPs 75050–75052.
+    // Google Maps search "birth center Grand Prairie TX" returns no active in-city results;
+    // nearest active birth centers are in Arlington (Birth & Wellness Center of Arlington,
+    // ~8 mi), Mansfield (The Nest Birth Center), and Fort Worth (Fort Worth Birthing &
+    // Wellness Center). Grand Prairie has zero operational freestanding birth centers.
+    // Verified 2026-05-26.
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Yes — as of September 2024, Texas Medicaid covers doula services under SB 750 for eligible enrollees, including Dallas/Tarrant Counties' STAR managed care plans. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan's doula coverage before hiring." ,
+    insuranceNote: "Whether doula services are partially covered varies by plan in the Grand Prairie area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Contact your provider directly to confirm." ,
+    faqs: [
+      { q: "Does Medicaid cover doulas in Grand Prairie?" , a: "Yes! Great news — Medicaid covers doula services in Grand Prairie. This is thanks to SB 750. That includes Dallas/Tarrant Counties' STAR managed care plans. Here's your next step: call your Medicaid plan and ask \"Do you cover doula services?\" — they'll walk you through it, or call 1-877-543-7669 directly. You can also check online at YourTexasBenefits.com. You deserve support, and now your insurance helps pay for it." },
+      { q: "Which hospitals in Grand Prairie accommodate birth plans?" , a: "Baylor Scott & White Grand Prairie and other area facilities generally accommodate birth plans, but policies vary. Always confirm your hospital's policy during your hospital tour." },
+      { q: "How much does a doula cost in Grand Prairie?" , a: "Expect to pay $850 to $2,500 for a doula in Grand Prairie. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does True Joy Birthing work with Grand Prairie families?" , a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Grand Prairie birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." } ],
+    nearbyCities: ["arlington-tx" , "dallas-tx" , "irving-tx"]}

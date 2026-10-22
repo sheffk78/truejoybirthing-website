@@ -1,0 +1,36 @@
+  "mission-tx": {
+    enableBlogResources: true,
+    publishedDate: "2026-06-22",
+    city: "Mission" ,
+    state: "TX" ,
+    slug: "mission-tx" ,
+    costLow: 600,
+    costHigh: 1400,
+    shelbiServesHere: true,    localDoulas: [
+      { name: "Kristin Miller" , credential: "Birth Doula" , practice: "Kristin Miller" , url: "https://www.partumhealth.com/provider/kristin-miller" , photo: "/images/provider-mission-tx-kristin-miller.webp", description: "Kristin is a Certified Birth Doula with DONA International with Postpartum Doula Training also through DONA, and Childbirth Educator Training through Lamaze ...", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Mission, TX"] },
+      { name: "About Circle Birth" , credential: "Birth Doula" , practice: "About Circle Birth" , url: "https://www.circlebirth.com/about" , photo: "/images/provider-mission-tx-about-circle-birth.webp", description: "At Circle Birth, our mission is to empower and support families through every pregnancy, birth, and postpartum stage with compassionate, personalized care.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Mission, TX"] },
+      { name: "Birth Doula" , credential: "Birth Doula" , practice: "Birth Doula" , url: "https://www.dandelionbirthandbeyond.com/" , photo: "/images/provider-mission-tx-birth-doula.webp", description: "A birth doula provider of calm and caring prenatal, birth, and postpartum services through evidence-based action.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Mission, TX"] },
+      { name: "Community" , credential: "Birth Doula" , practice: "Community" , url: "https://mrhelab.uta.edu/community-led-projects/" , photo: "" , description: "Founder, Nikia Lawson, MA, BSW, BDT/CD (DONA) is a Certified Birth Doula and Birth Doula Trainer with DONA International with over 25 years of experience.", costRange: "Contact for pricing", acceptingClients: true, services: ["Birth Doula" , "Postpartum Doula"], serviceArea: ["Mission, TX"] } ],
+    culture: "Mission is known as the \u201CHome of the Grapefruit\u201D and sits just west of McAllen on Expressway 83. Like Pharr, Mission doesn\u2019t have a hospital with labor and delivery within city limits, but it\u2019s a 10-minute drive to STHS McAllen and about 8 minutes to DHR Health in Edinburg. The community is predominantly bilingual and bicultural, with strong cuarentena traditions and a tight network of promotoras and community health workers. The citrus-industry heritage means many families have multi-generational roots here." ,
+    heroLocalDetail: "Mission doesn\u2019t have its own hospital with labor and delivery. STHS McAllen is about 10 minutes west on Expressway 83, and DHR Health Women\u2019s Hospital in Edinburg is about 8 minutes northeast via Business 83 and McColl Road. From downtown Mission, either hospital is accessible in under 15 minutes even during moderate traffic." ,
+    hospitalDetails: [
+      {
+        name: "South Texas Health System McAllen" ,
+        paragraph: "Mission doesn\u2019t have a hospital with labor and delivery within city limits \u2014 the nearest is STHS McAllen, about 10 minutes west on Expressway 83, with a verified Level III NICU stated directly on sths.com. STHS McAllen\u2019s dedicated Maternity Center handles a high volume of RGV births and offers private birthing suites, 24/7 obstetric coverage, and lactation support. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> so your team has something clear to work from." },
+      {
+        name: "DHR Health Women\u2019s Hospital" ,
+        paragraph: "Mission families also use DHR Health Women\u2019s Hospital in Edinburg, about 8 minutes northeast, which holds a Level IV Maternal Facility designation from the state of Texas \u2014 the only one in the Rio Grande Valley. NICU level: contact the hospital directly for current designation. DHR handles the most complex pregnancies in the region." } ],
+    // No freestanding birth centers in Mission. NPI taxonomy 261QB0400X returned
+    // zero results for Mission, TX. Google Maps and social media confirmed no
+    // birth center. RGV-wide search already documented on McAllen city page
+    // (verified 2026-05-17).
+    birthCenterDetails: [
+    ],
+    medicaidNote: "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Hidalgo County\u2019s STAR managed care plans. Hidalgo County has one of the highest uninsured rates in the United States \u2014 many families here depend on Medicaid, CHIP, and the Healthy Texas Women program for prenatal and birth care. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan\u2019s doula coverage before hiring." ,
+    insuranceNote: "Most Mission-area families with private insurance use plans through employer groups or the ACA marketplace. STHS McAllen and DHR Health accept most major plans \u2014 verify your coverage and ask about prior authorization requirements early in your pregnancy." ,
+    faqs: [
+      { q: "How much does a doula cost in Mission?" , a: "Expect to pay $600 to $1,400 for a doula in Mission. Can't swing the full price? Ask about sliding-scale options — most doulas would rather work with your budget than see you go without. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you." },
+      { q: "Does Medicaid cover doulas in Mission?" , a: "Yes! Great news — Medicaid covers doula services in Mission. This is thanks to SB 750. That includes Hidalgo County\u2019s STAR managed care plans. Here's your next step: call your Medicaid plan and ask \"Do you cover doula services?\" — they'll walk you through it, or call 1-877-543-7669 directly. You can also check online at YourTexasBenefits.com. You deserve support, and now your insurance helps pay for it." },
+      { q: "Which hospitals near Mission have labor and delivery?" , a: "Mission doesn\u2019t have a hospital with labor and delivery within city limits. The nearest options are STHS McAllen (10 minutes west on Expressway 83, verified Level III NICU) and DHR Health Women\u2019s Hospital in Edinburg (8 minutes northeast, Level IV Maternal Facility). Both are a short drive from anywhere in Mission. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want." },
+      { q: "Does True Joy Birthing work for Mission families?" , a: "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Mission birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required." } ],
+    nearbyCities: ["mcallen-tx" , "edinburg-tx" , "harlingen-tx"]}

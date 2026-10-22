@@ -1,0 +1,154 @@
+{
+ "enableBlogResources": true,
+ "publishedDate": "2026-06-22",
+ "city": "Greensboro",
+ "state": "NC",
+ "slug": "greensboro-nc",
+ "costLow": 850,
+ "costHigh": 2200,
+ "shelbiServesHere": false,
+ "heroImage": "/images/new-york-ny-birth-doula-skyline.webp",
+ "localDoulas": [
+  {
+   "name": "Natural Baby Doulas",
+   "credential": "Birth Doula",
+   "practice": "Natural Baby Doulas",
+   "url": "https://www.naturalbabydoulas.com/",
+   "photo": "/images/provider-greensboro-nc-natural-baby-doulas.webp",
+   "description": "Natural Baby Doulas is a group of six doulas provide families with support during their pregnancy, labor, birth, and postpartum period.",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Greensboro, NC"
+   ]
+  },
+  {
+   "name": "Greensboro Doula",
+   "credential": "Birth Doula",
+   "practice": "Greensboro Doula",
+   "url": "https://piedmontdoulas.com/",
+   "photo": "/images/provider-greensboro-nc-greensboro-doula.jpg",
+   "description": "Piedmont Doulas is happy to provide birth and postpartum doula services to all types of families throughout the Greensboro, a free consultation.",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Greensboro, NC"
+   ]
+  },
+  {
+   "name": "Doula Training",
+   "credential": "Birth Doula",
+   "practice": "Doula Training",
+   "url": "https://ywcagsonc.org/doula/",
+   "photo": "/images/provider-greensboro-nc-doula-training.jpg",
+   "description": "We offer a subsidized training for 25 new doulas through Doulas of North America (DONA). An experienced DONA trainer provides a comprehensive 16-hour training.",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Greensboro, NC"
+   ]
+  },
+  {
+   "name": "Doulas Greensboro NC",
+   "credential": "Birth Doula",
+   "practice": "Doulas Greensboro NC",
+   "url": "https://emilyrichardsonphoto.com/doulas-greensboro-nc/",
+   "photo": "/images/provider-greensboro-nc-doulas-greensboro-nc.webp",
+   "description": "e Dodson M.Ed is a certified birth doula, AMS Montessori certified (birth-3 level), and more. Birth services- $1,200 Postpartum Services- $60/Hour Virtual ...",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Greensboro, NC"
+   ]
+  },
+  {
+   "name": "Birth Doula",
+   "credential": "Birth Doula",
+   "practice": "Birth Doula",
+   "url": "https://sacred-rhythms.com/doula",
+   "photo": "/images/provider-greensboro-nc-birth-doula.webp",
+   "description": "Dawn Leonard is a birth and postpartum doula supporting women wanting natural or unmedicated birth in Greensboro, High Point and the Piedmont region.",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Greensboro, NC"
+   ]
+  },
+  {
+   "name": "The Balanced Birth Doula",
+   "credential": "Birth Doula",
+   "practice": "The Balanced Birth Doula",
+   "url": "https://www.facebook.com/p/The-Balanced-Birth-Doula-100088197657674/",
+   "photo": "",
+   "description": "I am a birth doula in Greensboro, North Carolina. I believe that mothers deserve loving and respectful support during pregnancy and birth, no matter where they ...",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Greensboro, NC"
+   ]
+  }
+ ],
+ "culture": "Greensboro is the largest city in the Piedmont Triad and a major healthcare hub anchored by Cone Health, which operates one of the few standalone women’s hospitals in North Carolina. The birth community benefits from the city’s academic and healthcare infrastructure — the UNC Greensboro nursing program, Cone Health’s residency programs, and a growing network of doulas and lactation consultants serve Guilford County and the broader Triad region. Families here have access to dedicated women’s hospital care that most North Carolina cities don’t offer, and North Carolina’s Medicaid doula coverage (effective October 2024) gives more families a pathway to birth support.",
+ "heroLocalDetail": "Cone Health Women’s Hospital sits at 801 Green Valley Road in northwest Greensboro, about 12 minutes from downtown via Friendly Avenue — and Friendly Avenue between Elm Street and Green Valley Road backs up steady during afternoon rush, so add 10 minutes if you’re coming from the center city. Moses Cone Hospital is at 1200 North Elm Street just south of downtown, about 8 minutes from Women’s Hospital via Wendover Avenue. I-40 runs east–west through Greensboro, I-85 runs northeast–southwest, and the I-73/I-840 southern bypass moves traffic around the perimeter. Battleground Avenue on the northwest side and Wendover Avenue east–west are the surface-street routes that slow down when the interstates jam. The Bog Garden at Benjamin Park and the Greensboro Arboretum’s walking trails are where Greensboro moms walk in the third trimester — flat, shaded, and minutes from both hospitals. Fisher Park and Lindley Park are where you’ll find most young families.",
+ "hospitalDetails": [
+  {
+   "name": "Cone Health Women’s Hospital",
+   "thumbnail": "/images/greensboro-nc-hospital-cone-health-womens.webp",
+   "paragraph": "Cone Health Women’s Hospital, at 801 Green Valley Road in Greensboro, is one of the few standalone women’s hospitals in North Carolina — dedicated entirely to women’s and infants’ care with a Level III NICU (stated directly on conehealth.com) and 24/7 neonatologist coverage. Having a hospital built specifically for birth means the entire staff, from L&D nurses to lactation consultants, focuses on maternity care every day. If you’re delivering at Women’s Hospital, having your birth plan ready means your preferences are documented in a hospital that was designed around exactly this kind of care. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started."
+  },
+  {
+   "name": "Moses Cone Hospital",
+   "thumbnail": "/images/greensboro-nc-hospital-moses-cone.webp",
+   "paragraph": "Moses Cone Hospital, at 1200 North Elm Street in Greensboro, is the flagship of the Cone Health system and the region’s Level I trauma center. While maternity and neonatal care is primarily delivered at nearby Women’s Hospital, Moses Cone handles complex medical cases that overlap with pregnancy and provides the maternal-fetal medicine referral base for the system. Contact the hospital directly for current NICU level verification. If we’re being real, most Greensboro families deliver at Women’s Hospital — but knowing Moses Cone is the backup for medical complexity gives you confidence that the system can handle whatever comes your way."
+  }
+ ],
+ "birthCenterDetails": [],
+ "medicaidNote": "Yes — as of October 1, 2024, North Carolina Medicaid covers doula services for eligible enrollees, including Guilford County’s managed care plans (WellCare, UnitedHealthcare, Carolina Complete Health, Healthy Blue). Contact NC Medicaid at 1-800-662-7030 or visit ncdhhs.gov to confirm your plan’s doula coverage before hiring.",
+ "insuranceNote": "Whether doula services are partially covered varies by plan in the Greensboro area. The Triad’s employer market (Volvo Trucks, Honda Aircraft, Syngenta, VF Corporation, Lincoln Financial) increasingly includes maternal wellness benefits — check with your provider about doula coverage, and whether HSA or FSA funds can help cover out-of-pocket costs.",
+ "faqs": [
+  {
+   "q": "How much does a doula cost in Greensboro?",
+   "a": "Expect to pay $850 to $2,200 for a doula in Greensboro. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you."
+  },
+  {
+   "q": "Does Medicaid cover doulas in Greensboro?",
+   "a": "Yes! Great news — Medicaid covers doula services in Greensboro. That includes Guilford County’s managed care plans. Here's your next step: call your Medicaid plan and ask \"Do you cover doula services?\" — they'll walk you through it, or call 1-800-662-7030 directly. You can also check online at ncdhhs.gov. You deserve support, and now your insurance helps pay for it."
+  },
+  {
+   "q": "Which Greensboro hospitals accommodate birth plans?",
+   "a": "Cone Health Women’s Hospital (Level III NICU, stated directly on conehealth.com) is Greensboro’s primary maternity hospital and generally accommodates birth plans. Moses Cone Hospital provides the system’s medical backup for complex cases. Always confirm your hospital’s current visitor and support-person policies during your tour. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want."
+  },
+  {
+   "q": "Does True Joy Birthing work with Greensboro families?",
+   "a": "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Greensboro birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required."
+  }
+ ],
+ "nearbyCities": [
+  "charlotte-nc",
+  "raleigh-nc"
+ ]
+}

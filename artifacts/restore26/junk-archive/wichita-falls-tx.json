@@ -1,0 +1,55 @@
+{
+ "enableBlogResources": true,
+ "publishedDate": "2026-06-22",
+ "city": "Wichita Falls",
+ "state": "TX",
+ "slug": "wichita-falls-tx",
+ "costLow": 700,
+ "costHigh": 1500,
+ "shelbiServesHere": false,
+ "culture": "Wichita Falls is the largest city between Dallas and Oklahoma City, serving as the regional medical hub for all of North Texas and southern Oklahoma. Sheppard Air Force Base brings a rotating military family population, while multi-generational Wichita Falls families have been delivering at United Regional for decades. The city has a growing birth center option in Wichita Falls Birth & Wellness Center — rare for a city this size in West Texas.",
+ "heroLocalDetail": "United Regional Hospital's main campus sits at 1600 11th St in central Wichita Falls, about 5 minutes from the US-277/US-287 (Kemp Blvd) interchange. Kemp Blvd is the main north-south commercial corridor — if you're coming from Sheppard AFB, take Wichita Falls Blvd south to 11th St. Sikes Lake trails on the southwest side of town are popular for third-trimester walks, with flat paths and shade.",
+ "hospitalDetails": [
+  {
+   "name": "United Regional Hospital",
+   "paragraph": "United Regional Hospital, at 1600 11th St in Wichita Falls, TX 76301, has labor and delivery on the 4th floor of Bridwell Tower with L&D rooms, antepartum rooms, postpartum rooms, and C-section rooms. Currently operates a Level II NICU (Special Care Nursery, cares for infants ≥30 weeks, ≥1,250g), with a Level III upgrade in progress — contact the hospital directly for current NICU level as this may change. Offers an OB Emergency Department, IBCLC lactation support daily, and outpatient lactation services. If you're delivering here, bring your birth plan — they handle the entire region's births, from Wichita Falls to southern Oklahoma. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> to get started."
+  }
+ ],
+ "birthCenterDetails": [
+  {
+   "name": "Wichita Falls Birth & Wellness Center",
+   "paragraph": "Wichita Falls Birth & Wellness Center, at 2001 Brook Ave in Wichita Falls, TX 76301 (NPI 1730628918), is an NPI-verified freestanding birth center. Verify with the center directly for current services and insurance coverage."
+  }
+ ],
+ "medicaidNote": "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Wichita County’s STAR managed care plans. Contact your plan directly to confirm doula coverage before hiring, as not all plans have completed their doula network setup. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com.",
+ "insuranceNote": "United Regional accepts most major private insurance and Medicaid. The Wichita Falls area’s employer market (Sheppard AFB, manufacturing, healthcare) may include maternity wellness benefits — check with your provider. TRICARE covers doula services for military families at Sheppard AFB; verify current coverage with your TRICARE plan.",
+ "faqs": [
+  {
+   "q": "How much does a doula cost in Wichita Falls?",
+   "a": "Expect to pay $700 to $1,500 for a doula in Wichita Falls. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you."
+  },
+  {
+   "q": "Does Medicaid cover doulas in Wichita Falls?",
+   "a": "Yes! Great news — Medicaid covers doula services in Wichita Falls. This is thanks to SB 750. That includes Wichita County’s STAR managed care plans. Here's your next step: call your Medicaid plan and ask \"Do you cover doula services?\" — they'll walk you through it, or call 1-877-543-7669 directly. You can also check online at YourTexasBenefits.com. You deserve support, and now your insurance helps pay for it."
+  },
+  {
+   "q": "Which hospitals in Wichita Falls have labor and delivery?",
+   "a": "United Regional Hospital at 1600 11th St is the regional hub for labor and delivery, currently operating a Level II NICU (Special Care Nursery) with a Level III upgrade in progress — contact the hospital directly for current NICU level as this may change. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want."
+  },
+  {
+   "q": "Are there birth centers in Wichita Falls?",
+   "a": "Wichita Falls Birth & Wellness Center at 2001 Brook Ave (NPI 1730628918) is an NPI-verified freestanding birth center. Verify with the center directly for current services and insurance coverage. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> to think through whether a birth center or hospital is right for you."
+  },
+  {
+   "q": "Does True Joy Birthing work with Wichita Falls families?",
+   "a": "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Wichita Falls birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required."
+  },
+  {
+   "q": "Does TRICARE cover doula services for Sheppard AFB families?",
+   "a": "TRICARE covers doula services for military military families at Sheppard AFB. Verify current coverage details with your TRICARE plan, as policies can change. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> — military families deal with enough uncertainty; your birth preferences shouldn't be one of them."
+  }
+ ],
+ "nearbyCities": [
+  "dallas-tx"
+ ]
+}

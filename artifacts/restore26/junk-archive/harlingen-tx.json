@@ -1,0 +1,98 @@
+{
+ "enableBlogResources": true,
+ "publishedDate": "2026-06-22",
+ "city": "Harlingen",
+ "state": "TX",
+ "slug": "harlingen-tx",
+ "costLow": 600,
+ "costHigh": 1400,
+ "shelbiServesHere": false,
+ "heroImage": "/images/new-york-ny-birth-doula-skyline.webp",
+ "localDoulas": [
+  {
+   "name": "The Crunchy",
+   "credential": "Birth Doula",
+   "practice": "The Crunchy",
+   "url": "https://www.crunchydoula.com/",
+   "photo": "/images/provider-harlingen-tx-the-crunchy.webp",
+   "description": "Led by certified birth doula and childbirth educator Mallory Villafuerte, The Crunchy-ish Doula serves families across Tyler and the greater East Texas region, ...",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Harlingen, TX"
+   ]
+  },
+  {
+   "name": "Home",
+   "credential": "Birth Doula",
+   "practice": "Home",
+   "url": "https://adorebirthservices.com/",
+   "photo": "/images/provider-harlingen-tx-home.jpg",
+   "description": "Adore Birth Services supports Texas families through pregnancy, birth, and beyond. We offer doula services, childbirth classes, and childbirth educator ...",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Harlingen, TX"
+   ]
+  },
+  {
+   "name": "Doula Care",
+   "credential": "Birth Doula",
+   "practice": "Doula Care",
+   "url": "https://www.rgvmidwives.com/doula-care",
+   "photo": "/images/provider-harlingen-tx-doula-care.webp",
+   "description": "We can still help you with doula care. This basically involves physical and emotional support in the run-up to and during labor and birth.",
+   "costRange": "Contact for pricing",
+   "acceptingClients": true,
+   "services": [
+    "Birth Doula",
+    "Postpartum Doula"
+   ],
+   "serviceArea": [
+    "Harlingen, TX"
+   ]
+  }
+ ],
+ "culture": "Harlingen is where US-77 and US-83 meet — quite literally the crossroads of the Rio Grande Valley. Known locally as “The Capital of the Valley,” it pulls families from Brownsville, San Benito, and the surrounding colonias who come here for hospital births at the region’s biggest medical center. Bilingual care isn’t a nice-to-have in Harlingen; it’s just how things are done. Expect your providers to switch between English and Spanish mid-sentence, and expect your extended family to show up at the hospital because that’s how Valley families do birth — together.",
+ "heroLocalDetail": "Harlingen sits where the Valley’s two main highways converge — US-77 (I-69E) heading north toward Corpus Christi and US-83 (I-2) stretching west to McAllen and Laredo — making it the natural healthcare destination for families across Cameron County.",
+ "hospitalDetails": [
+  {
+   "name": "Valley Baptist Medical Center – Harlingen",
+   "thumbnail": "/images/harlingen-tx-hospital-valley-baptist-medical-center.webp",
+   "paragraph": "Valley Baptist is the big one in Harlingen — 586 beds, the only Level II Trauma Center in the entire Rio Grande Valley, and the hospital where most Cameron County families end up when it’s time to deliver. They’ve got private labor/delivery/recovery suites, a family-centered maternity unit, and the only NICU in Harlingen — contact the hospital directly for current NICU level and maternity service details. If you’re a high-risk patient or your OB is concerned about complications, Valley Baptist is where you’ll likely be sent. <a href=\"/birth-plan-template/\">Use our free hospital birth plan template</a> before your tour so you know what to ask."
+  }
+ ],
+ "birthCenterDetails": [],
+ "medicaidNote": "Texas Medicaid covers doula services as of September 2024 under SB 750 for eligible enrollees, including Cameron County’s STAR managed care plans. Cameron County has one of the highest uninsured rates in the state — many families here depend on Medicaid, CHIP, and the Healthy Texas Women program. Call Texas Medicaid at 1-877-543-7669 or visit YourTexasBenefits.com to confirm your plan’s doula coverage before hiring.",
+ "insuranceNote": "Whether doula services are partially covered varies by plan in the Harlingen area. Check whether your plan covers out-of-network doula services, and whether HSA or FSA funds can help cover out-of-pocket costs. Some RGV community health workers (promotoras) may offer free or low-cost pregnancy support through local nonprofits or county health programs.",
+ "faqs": [
+  {
+   "q": "How much does a doula cost in Harlingen?",
+   "a": "Expect to pay $600 to $1,400 for a doula in Harlingen. Can't swing the full price? Ask about sliding-scale options — most doulas would rather work with your budget than see you go without. The investment typically covers prenatal visits, labor support, and postpartum check-ins. Grab the <a href=\"/birth-plan-template/\">free birth plan template</a> and start thinking about what matters most to you."
+  },
+  {
+   "q": "Does Medicaid cover doulas in Harlingen?",
+   "a": "Yes! Great news — Medicaid covers doula services in Harlingen. This is thanks to SB 750. That includes Cameron County’s STAR managed care plans. Here's your next step: call your Medicaid plan and ask \"Do you cover doula services?\" — they'll walk you through it, or call 1-877-543-7669 directly. You can also check online at YourTexasBenefits.com. You deserve support, and now your insurance helps pay for it."
+  },
+  {
+   "q": "Which hospitals in Harlingen have labor and delivery?",
+   "a": "Valley Baptist Medical Center – Harlingen is the city’s primary hospital for labor and delivery, with a NICU, private LDR suites, and the only Level II Trauma Center in the Rio Grande Valley. Harlingen Medical Center discontinued its labor and delivery services in January 2025. Some Harlingen moms and families also travel to McAllen or Brownsville for additional hospital options. <a href=\"/birth-plan-template/\">Grab the free birth plan template</a> so you walk in knowing exactly what you want."
+  },
+  {
+   "q": "Does True Joy Birthing work for Harlingen families?",
+   "a": "Yes — and it's free. True Joy Birthing's birth plan app, checklist, and guided walkthrough work for any Harlingen birth setting, whether you're delivering at a hospital, a birth center, or at home. The app also helps you find and connect with local doulas and midwives. <a href=\"/birth-plan-template/\">Download the free birth plan template</a> and start preparing your way — no signup required."
+  }
+ ],
+ "nearbyCities": [
+  "mcallen-tx",
+  "corpus-christi-tx"
+ ]
+}

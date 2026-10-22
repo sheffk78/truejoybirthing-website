@@ -1,0 +1,40 @@
+{
+ "archived": [
+  "edinburg-tx",
+  "mission-tx",
+  "harlingen-tx",
+  "mcallen-tx",
+  "grand-prairie-tx",
+  "greensboro-nc",
+  "pharr-tx",
+  "st-petersburg-fl",
+  "mesquite-tx",
+  "richardson-tx",
+  "wichita-falls-tx"
+ ],
+ "reason": "restore26 junk-grade or empty (see REBUILD-QUEUE.md)",
+ "files": [
+  "edinburg-tx.json",
+  "edinburg-tx.txt",
+  "mission-tx.json",
+  "mission-tx.txt",
+  "harlingen-tx.json",
+  "harlingen-tx.txt",
+  "mcallen-tx.json",
+  "mcallen-tx.txt",
+  "grand-prairie-tx.json",
+  "grand-prairie-tx.txt",
+  "greensboro-nc.json",
+  "greensboro-nc.txt",
+  "pharr-tx.json",
+  "pharr-tx.txt",
+  "st-petersburg-fl.json",
+  "st-petersburg-fl.txt",
+  "mesquite-tx.json",
+  "mesquite-tx.txt",
+  "richardson-tx.json",
+  "richardson-tx.txt",
+  "wichita-falls-tx.json",
+  "wichita-falls-tx.txt"
+ ]
+}
