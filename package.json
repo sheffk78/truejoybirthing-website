@@ -7,7 +7,8 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/split-sitemaps.mjs",
+    "sync:pipeline": "python3 scripts/sync-city-pipeline.py",
+    "build": "npm run sync:pipeline && astro build && node scripts/split-sitemaps.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "deploy": "bash scripts/deploy.sh",
@@ -18,7 +19,7 @@
     "test:city-pages": "tsx scripts/city-pages.test.ts",
     "validate": "tsx scripts/validate-cities.ts && tsx scripts/validate-xrefs.ts",
     "validate:xrefs": "tsx scripts/validate-xrefs.ts",
-    "build:safe": "tsx scripts/validate-cities.ts && tsx scripts/validate-xrefs.ts && astro build && node scripts/split-sitemaps.mjs",
+    "build:safe": "npm run sync:pipeline && tsx scripts/validate-cities.ts && tsx scripts/validate-xrefs.ts && astro build && node scripts/split-sitemaps.mjs",
     "indexnow": "node scripts/submit-indexnow.cjs",
     "postdeploy": "node scripts/submit-indexnow.cjs"
   },
