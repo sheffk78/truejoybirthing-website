@@ -1803,7 +1803,7 @@ const schema = {
           <div class="grid md:grid-cols-2 gap-4">
             <div class="bg-tjb-cream/40 rounded-lg p-4">
               <p class="font-semibold text-tjb-charcoal text-sm">How much does a doula or midwife cost in {city}?</p>
-              <p class="text-sm text-tjb-gray mt-1">Expect ${costLow.toLocaleString()} to ${costHigh.toLocaleString()} for a birth doula. {medicaidCovers ? `${stateFullName} Medicaid covers doula services.` : 'Check with local doulas for sliding-scale options.'}</p>
+              <p class="text-sm text-tjb-gray mt-1">Expect ${costLow.toLocaleString()} to ${costHigh.toLocaleString()} for a birth doula. {medicaidCovers ? `${stateFullName} Medicaid covers doula services — confirm your plan is enrolled before you sign.` : 'Check with local doulas for sliding-scale options.'}</p>
             </div>
             <div class="bg-tjb-cream/40 rounded-lg p-4">
               <p class="font-semibold text-tjb-charcoal text-sm">Can my doula come to the hospital with me?</p>
@@ -1812,7 +1812,7 @@ const schema = {
             {medicaidCovers && (
               <div class="bg-tjb-cream/40 rounded-lg p-4">
                 <p class="font-semibold text-tjb-charcoal text-sm">Does Medicaid cover a doula in {city}?</p>
-                <p class="text-sm text-tjb-gray mt-1">Yes. {stateFullName} Medicaid covers doula services. See the details above.</p>
+                <p class="text-sm text-tjb-gray mt-1">Yes. {stateFullName} Medicaid covers doula services — see the details above to confirm your plan is enrolled.</p>
               </div>
             )}
             <div class="bg-tjb-cream/40 rounded-lg p-4">

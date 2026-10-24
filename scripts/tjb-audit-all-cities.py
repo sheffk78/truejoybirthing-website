@@ -147,7 +147,18 @@ def check_doulas(block):
         name in PLACEHOLDER_NAMES or len(name) < 3
         for name in doula_names
     )
-    return (count >= 3 and not has_placeholder), count, has_placeholder
+    # QC gate (2026-10-23): reject scrape-junk descriptions so they can never ship again.
+    # Patterns: directory scrap ('More info about X · Map ·'), truncated '..' endings,
+    # 'What time does X open?' junk, raw phone numbers, +1 dumps, ALL-CAPS shout lines, exclamation spam.
+    desc_list = re.findall(r'description:\s*"([^"]*)"', doula_content)
+    has_junk_desc = any(
+        ('More info about' in d or re.search(r'\.\.\s*$', d) or
+         'What time does' in d or re.search(r'\b\d{3}[-.)]\s?\d{3}[-.]\d{4}\b', d) or
+         d.strip().startswith('+1 ') or d.isupper() or d.count('!') > 2)
+        for d in desc_list
+    )
+    ok = (count >= 3 and not has_placeholder and not has_junk_desc)
+    return ok, count, has_placeholder
 
 
 def _imap_sweep_worker(q, city_name_slugs):
