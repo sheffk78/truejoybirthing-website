@@ -1,0 +1,44 @@
+{
+  "slug": "spring-tx",
+  "stage": "video_outreach",
+  "produced_at": "2026-10-23T23:30:00Z",
+  "worker_model": "bedrock:latest",
+  "video_file": null,
+  "video_mb": null,
+  "youtube_id": "U2VNtuM3Vok",
+  "thumbnail_path": "public/images/yt-thumb-spring-tx.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "provider": "Faith \u2014 Guiding Hands Birth Center",
+      "to": "guidinghandsbirth@gmail.com",
+      "status": "sent",
+      "message_id": "vps-20261023231516649771",
+      "send_result": "sent",
+      "wave": "first-touch"
+    },
+    {
+      "provider": "Circle Birth Center (Parris)",
+      "to": "parris@circlebirth.com",
+      "status": "blocked",
+      "message_id": null,
+      "blocked_reason": "recipient_history_gate: AgentMail inbox already has a sent outreach message to parris@circlebirth.com (ever-contacted)",
+      "send_result": "null"
+    },
+    {
+      "provider": "Spring TX (provider with no email in cities.ts)",
+      "to": null,
+      "status": "no_email",
+      "message_id": null,
+      "blocked_reason": "no email address + no website to look one up in cities.ts localDoulas"
+    },
+    {
+      "provider": "Spring TX (provider with no email in cities.ts)",
+      "to": null,
+      "status": "no_email",
+      "message_id": null,
+      "blocked_reason": "no email address + no website to look one up in cities.ts localDoulas"
+    }
+  ],
+  "notes": "All 9 stage gates pass (artifacts/gates/spring-tx-video_outreach.json: passed=9 failed=0). Local mp4 cleaned post-upload by design; YouTube upload U2VNtuM3Vok + thumbnail + live-page embed + VideoObject schema verified; outreach sent 23:15Z (1 sent, 1 recipient-history-blocked, 2 no_email)."
+}
