@@ -1,19 +1,111 @@
 {
   "slug": "fort-lauderdale-fl",
   "stage": "enrich",
-  "mode": "humanize_gate",
-  "exit_code": 1,
-  "passed": 0,
-  "failed": 2,
+  "mode": "stage_emission",
+  "exit_code": 0,
+  "passed": 25,
+  "failed": 0,
   "skipped": 0,
   "results": {
-    "H-HUMANIZE": {
-      "status": "FAIL",
-      "detail": "scanner verdict HIGH RISK \u2014 rework prose per skills/humanize-content/SKILL.md before deploy (verdict: HIGH RISK)"
+    "G66": {
+      "status": "PASS",
+      "detail": "no duplicate object keys in any city block"
     },
-    "H-SHAPE": {
-      "status": "FAIL",
-      "detail": "shape >70% vs port-st-lucie-fl \u2014 restructure section order/paragraph rhythm (scale-mode rule 4)"
+    "S1": {
+      "status": "PASS",
+      "detail": "enableBlogResources = true"
+    },
+    "S2": {
+      "status": "PASS",
+      "detail": "OG image og-city-fort-lauderdale-fl.webp (60212 bytes \u2265 30KB)"
+    },
+    "S4": {
+      "status": "PASS",
+      "detail": "Required fields present"
+    },
+    "S6": {
+      "status": "PASS",
+      "detail": "publishedDate = \"2026-10-16\""
+    },
+    "S7": {
+      "status": "PASS",
+      "detail": "medicaidNote starts correctly"
+    },
+    "S8": {
+      "status": "PASS",
+      "detail": "No \"Contact for pricing\""
+    },
+    "S3": {
+      "status": "PASS",
+      "detail": "npm run build exited 0"
+    },
+    "S5": {
+      "status": "PASS",
+      "detail": "No standalone 'Free Birth Plan' in rendered HTML"
+    },
+    "G8": {
+      "status": "PASS",
+      "detail": "fort-lauderdale-fl-birth-doula-hero-v1.webp is a real photograph (high color count)"
+    },
+    "G70": {
+      "status": "PASS",
+      "detail": "no doubled Level/NICU badge text"
+    },
+    "G71": {
+      "status": "PASS",
+      "detail": "no skeleton placeholder text"
+    },
+    "G72": {
+      "status": "PASS",
+      "detail": "meta description 153 chars, complete"
+    },
+    "G27": {
+      "status": "PASS",
+      "detail": "All 4 providers have specific credentials"
+    },
+    "G10": {
+      "status": "PASS",
+      "detail": "All 4 providers have specific descriptions"
+    },
+    "G39": {
+      "status": "PASS",
+      "detail": "All 4 providers have specific descriptions"
+    },
+    "G19": {
+      "status": "PASS",
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "G20": {
+      "status": "PASS",
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "P11": {
+      "status": "PASS",
+      "detail": "All facility images are landscape, >=400x300"
+    },
+    "A12": {
+      "status": "PASS",
+      "detail": "All serviceArea fields are string arrays"
+    },
+    "G24": {
+      "status": "PASS",
+      "detail": "G73 anatomy check could not run (HTTPError) \u2014 manual review advised"
+    },
+    "G54": {
+      "status": "PASS",
+      "detail": "G73 anatomy check could not run (HTTPError) \u2014 manual review advised"
+    },
+    "G65": {
+      "status": "PASS",
+      "detail": "G65: No black letterbox/pillarbox bars on hero or support scene"
+    },
+    "G60": {
+      "status": "PASS",
+      "detail": "G60: All 4 provider photos exist on disk and are >2KB"
+    },
+    "G61": {
+      "status": "PASS",
+      "detail": "G61: All image paths contain city slug fort-lauderdale-fl"
     }
   }
 }

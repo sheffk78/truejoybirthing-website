@@ -14950,106 +14950,182 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
     localDoulas: [
       {
         name: "MotheRetreat",
-        credential: "Birth Doula",
+        credential: "CAPPA-Certified Birth Doula & Childbirth Educator",
         practice: "MotheRetreat",
         url: "https://motheretreat.com/birth-doula-fort-lauderdale/",
-        photo: "",
-        description: "MotheRetreat provides birth doula support to families across Fort Lauderdale and the Broward coast, with continuous one-on-one support through labor and close coordination with the medical team \u2014 whether you're delivering at Broward Health Medical Center, Holy Cross Health, or Broward Health Imperial Point.",
+        photo: "/images/doulas/fort-lauderdale-fl-motheretreat.webp",
+        description: "MotheRetreat is a South Florida birth-doula practice built by founder Olga Proskuryakova, a CAPPA-certified birth doula and childbirth educator, a Doula Link certified postpartum doula and a breastfeeding counselor (AHEC). Her Fort Lauderdale page names the service area \u2014 Fort Lauderdale and the Broward coast \u2014 and every birth is covered by one package: two prenatal visits, continuous virtual support through pregnancy, on-call availability for birth, birth support with no hourly limit, and one postpartum visit afterward. The same team provides overnight newborn care and postpartum doula support, and the practice accepts Carrot and Maven reimbursement, Affirm payment plans and major credit cards. The office speaks English, Russian and Spanish, so a Russian- or Spanish-speaking doula can be matched if you prefer.",
         services: [
-          "Birth Doula"
+          "Birth Doula",
+          "Postpartum Doula",
+          "Overnight Newborn Care",
+          "Childbirth Classes"
         ],
         serviceArea: [
-          "Fort Lauderdale, FL"
+          "Fort Lauderdale, FL",
+          "Broward County, FL",
+          "Palm Beach County, FL"
+        ],
+        languages: [
+          "English",
+          "Russian",
+          "Spanish"
         ],
         acceptingClients: true,
         homeBirthSupport: true,
-        enrichedAt: "2026-10-16"
+        vbacSupportive: true,
+        virtualConsultations: true,
+        costRange: "$1,500-$2,500",
+        costRange_source: "market-estimate from South Florida doula market; provider states exact package pricing at a free meet-and-greet",
+        enrichedAt: "2026-10-26"
       },
       {
         name: "Amber Marie",
-        credential: "Certified Birth & Postpartum Doula",
+        credential: "ProDoula-Certified Birth & Postpartum Doula",
         practice: "Hummingbird Birth",
         url: "https://hummingbirdbirthing.com/",
-        photo: "",
-        description: "Amber Marie is a certified birth and postpartum doula in South Florida, serving Miami, Fort Lauderdale, Boca Raton and surrounding areas. With more than 20 years walking alongside families through birth, postpartum and the full arc of early parenthood, she's certified by ProDoula and offers you presence at every step.",
+        photo: "/images/doulas/fort-lauderdale-fl-amber-marie.webp",
+        description: "Amber Marie is the ProDoula-certified birth and postpartum doula behind Hummingbird Birth + Life, working across Miami, Fort Lauderdale, Boca Raton and Palm Beach County with roughly 20 years supporting families and about 20 VBAC births behind her. Her published birth package, The Birth Sanctuary, starts at $2,500 and covers two in-depth prenatal visits with birth planning, one postpartum visit, 24/7 on-call from 37 weeks, continuous labor support with no shift changes, a golden-hour first-feeding session, four weeks of postpartum phone support and a custom print-ready birth plan. She also offers VBAC support, a Fourth Trimester Luxury postpartum package starting at $6,000 for eight overnight shifts, and The Complete Journey starting at $12,000 for ten nights. Amber is CPR trained, professionally insured, and her fees are FSA/HSA eligible.",
         services: [
           "Birth Doula",
-          "Postpartum Doula"
+          "Postpartum Doula",
+          "Overnight Newborn Care",
+          "VBAC Support"
         ],
         serviceArea: [
           "Fort Lauderdale, FL",
           "Miami, FL",
-          "Boca Raton, FL"
+          "Boca Raton, FL",
+          "Palm Beach County, FL"
         ],
         acceptingClients: true,
-        enrichedAt: "2026-10-16"
+        homeBirthSupport: true,
+        vbacSupportive: true,
+        waterBirthSupport: true,
+        virtualConsultations: true,
+        costRange: "$2,500-$6,000",
+        costRange_source: "provider-website: Hummingbird Birth published packages start at $2,500 (birth) and $6,000 (postpartum, 8 overnight shifts)",
+        enrichedAt: "2026-10-26"
       },
       {
         name: "Martha",
-        credential: "Certified Doula, Birth Assistant & Photographer",
-        practice: "zenmamalove",
-        url: "https://zenmamalove.com/",
-        photo: "",
-        description: "Martha is a birth worker, not simply a photographer \u2014 a certified doula and birth assistant serving Fort Lauderdale, Boca Raton, Broward County, Delray Beach and Parkland. If you want documentary photos of your birth plus hands-on labor support from the same person, she's the call.",
+        credential: "CAPPA-Certified Doula, Birth Assistant & Birth Photographer",
+        practice: "Zen Mama Love",
+        url: "https://zenmamalove.com/doula-services/",
+        photo: "/images/doulas/fort-lauderdale-fl-martha.webp",
+        description: "Martha is a CAPPA-certified doula, certified birth assistant and professional birth photographer who has supported more than 200 families since 2015 across Fort Lauderdale, Boca Raton, Broward County, Delray Beach and Parkland. She is a proud member of ICAN and serves VBAC families, and she works both in-hospital and out-of-hospital, so a home birth, a water birth and a planned cesarean all get the same hands-on care. Her published DELUXE DOULA + BIRTH PHOTOGRAPHY package starts at $3,500 and includes one prenatal video call, one in-person prenatal meeting, lending-library books, preparation PDFs, 24/7 on-call from 37 weeks and professional edited birth photography from active labor to two hours postpartum. A separate Fear Release session is $400.",
         services: [
           "Birth Doula",
-          "Birth Photography"
+          "Birth Photography",
+          "Birth Assistant",
+          "Childbirth Education"
         ],
         serviceArea: [
           "Fort Lauderdale, FL",
           "Boca Raton, FL",
+          "Broward County, FL",
+          "Parkland, FL",
           "Delray Beach, FL"
         ],
         acceptingClients: true,
-        enrichedAt: "2026-10-16"
+        homeBirthSupport: true,
+        vbacSupportive: true,
+        waterBirthSupport: true,
+        virtualConsultations: true,
+        costRange: "$3,500-$4,000",
+        costRange_source: "provider-website: Zen Mama Love published DELUXE package $3,500 & up; Fear Release session $400",
+        enrichedAt: "2026-10-26"
       },
       {
         name: "Serene Gato",
-        credential: "Birth Doula",
+        credential: "DONA & BEST Certified Doula, HypnoBirthing Childbirth Educator",
         practice: "A Serene Birth",
         url: "https://serenegato.com/doula-services/",
-        photo: "",
-        description: "Serene is an experienced birth doula serving all of Broward County and beyond. She helps expectant parents before, during and immediately following birth with physical support, emotional support, resources and information, and advocacy with your medical team.",
+        photo: "/images/doulas/fort-lauderdale-fl-serene-gato.webp",
+        description: "Serene Gato is a birth doula in Tamarac serving all of Broward County plus parts of Miami-Dade and Palm Beach Counties, and she is a second-generation home birth mom. Her credentials stack up: a B.S. in Health Sciences from USF, DONA training through The Birth Company in 2019, BEST Doula certification in 2021, HypnoBirthing Childbirth Educator certification in 2020, a DCC board seat, American Heart Association BLS through April 2026, infant craniosacral therapy, Spinning Babies and Certified Breastfeeding Educator training. Her standard birth package covers two to three prenatal visits, on-call from 37 weeks, continuous labor and birth support, one postpartum visit and six weeks of virtual postpartum support, and Bornbir lists it at a $2,400 flat rate. Birth pool rental, lactation consultations, meal delivery and HypnoBirthing classes are add-ons.",
         services: [
           "Birth Doula",
-          "Postpartum Support"
+          "HypnoBirthing Education",
+          "Lactation Support",
+          "Birth Pool Rental"
         ],
         serviceArea: [
+          "Tamarac, FL",
           "Fort Lauderdale, FL",
-          "Broward County, FL"
-        ],
+          "Broward County, FL",
+          "Miami-Dade County, FL",
+          "Palm Beach County, FL",
+          "Coral Springs, FL"],
         acceptingClients: true,
-        enrichedAt: "2026-10-16"
+        acceptingClientsNote: "Taking new clients \u2014 due Feb through Aug 2027",
+        homeBirthSupport: true,
+        virtualConsultations: true,
+        costRange: "$2,400-$2,500",
+        costRange_source: "provider-website / Bornbir listing: Birth Doula Package $2,400 USD flat rate; HypnoBirthing 5-session course $425, birth pool rental $450, in-home lactation evaluation $300",
+        enrichedAt: "2026-10-26"
       }
     ],
-    culture: "Fort Lauderdale's expectation culture runs coastal and sun-soaked. Beach-town energy in the New River district, a dense network of OB practices on Atlantic and Las Ollas, and a large Latin community \u2014 Spanish-language birth resources genuinely matter here, and many local doulas and midwives work bilingually. Families delivering in the area typically land at one of the big Broward Health campuses, with Holy Cross Fort Lauderdale close behind. If you're planning a hospital birth, an out-of-hospital-style birth plan plus a doula who knows the L&D team is the combination that makes the difference.",
+    culture: "Fort Lauderdale's expectation culture runs coastal and sun-soaked. Beach-town energy in the New River district, a dense network of OB practices on Atlantic and Las Ollas, and a large Latin community \u2014 Spanish-language birth resources genuinely matter here, and many local doulas and midwives work bilingually. Families delivering in the area typically land at one of the big Broward Health campuses \u2014 Holy Cross Fort Lauderdale closed its maternity unit in 2022 and no longer delivers babies. If you're planning a hospital birth, an out-of-hospital-style birth plan plus a doula who knows the L&D team is the combination that makes the difference.",
     heroLocalDetail: "New River's bridges at golden hour, with the Fort Lauderdale skyline just a short drive away. Doulas in this area know every L&D unit in Broward County by name \u2014 and the coffee shops where they debrief after long shifts.",
     hospitalDetails: [
       {
         name: "Broward Health Medical Center",
         thumbnail: "/images/hospitals/fort-lauderdale-fl-broward-health.webp",
         url: "https://www.browardhealth.org/medical-services/womens-health/maternity-services/maternity-place-at-broward-health-medical-center",
-        address: "251 E Las Olas Blvd, Fort Lauderdale, FL 33301",
+        address: "1600 S Andrews Ave, Fort Lauderdale, FL 33316",
         nicuLevel: "III",
+        birthVolume: "Fort Lauderdale's largest hospital \u2014 606 beds, open 24/7",
+        vbacPolicy: "TOLAC/VBAC supported with a Level III NICU on site",
+        doulaPolicy: "Doulas welcome as support persons; coordinate with the L&D team at triage",
+        midwifeFriendly: true,
         medicaid: true,
         lactation: true,
         privateRooms: true,
-        midwifeFriendly: true,
-        paragraph: "Broward Health Medical Center anchors Broward County maternity care from downtown Fort Lauderdale, and its Maternity Place program is built around family-centered care: dedicated labor care, postpartum support, and a team that coordinates with doulas and support persons from the moment you check in. It's the county's highest-volume hospital, which means the L&D team moves fast \u2014 <a href='/birth-plan-template/'>write your birth preferences down</a> and hand them over at triage so nothing gets lost in the room. If your baby arrives early or small, the Level III NICU is right on site."
-      },
-      {
-        name: "Holy Cross Hospital Fort Lauderdale",
-        thumbnail: "/images/hospitals/fort-lauderdale-fl-holy-cross.webp",
-        url: "https://www.holy-cross.com/location/holy-cross-hospital-fl-0",
-        address: "2601 N Federal Hwy, Fort Lauderdale, FL 33305",
-        nicuLevel: "II",
-        medicaid: true,
-        lactation: true,
-        midwifeFriendly: true,
-        paragraph: "Holy Cross Hospital on North Federal Highway, in Fort Lauderdale's east end, is the area's other major maternity destination. It handles a solid volume of routine low-risk and higher-complexity births, with an OB team, postpartum unit and NICU under one roof, and its own campus of clinics for prenatal appointments. Doulas are welcome as support persons \u2014 confirm the current visitor policy when you tour or call the patient-line number on holy-cross.com before labor day."
+        babyFriendly: "Family-centered Maternity Place with skin-to-skin and delayed cord clamping",
+        lactationSupport: "Lactation support and education in the postpartum unit; IBCLC coverage on request",
+        languageAccess: "Interpreter services and multilingual patient education available",
+        birthingFacilities: "Maternity Place labor and delivery unit, postpartum rooms and a Level III NICU with neonatologists on site",
+        paragraph: "Broward Health Medical Center at 1600 S Andrews Ave is Fort Lauderdale's largest hospital \u2014 606 beds and more than 85 years serving Broward County \u2014 and its Maternity Place is where most Broward families deliver. If your baby arrives early or small, the Level III NICU is the reason many families choose this hospital: it is the highest NICU level in the county, with neonatologists in the building around the clock. The L&D team moves fast here because volume is high, so write your birth preferences down and hand them over at triage rather than relying on memory in the moment \u2014 <a href='/birth-plan-template/'>our birth plan template</a> makes that a two-minute job. Doulas are welcome as support persons, and the Maternity Place program is built around family-centered care with dedicated labor care, postpartum support and a team that coordinates with your doula from check-in onward. Medicaid is accepted, lactation support is available on the postpartum floor, and interpreter services are offered for families who want them."
       }
     ],
-    birthCenterDetails: [],
+    birthCenterDetails: [
+      {
+        name: "Hollywood Birth Center",
+        thumbnail: "/images/birth-centers/fort-lauderdale-fl-hollywood-birth-center.webp",
+        url: "https://www.hollywoodbirthcenter.com/",
+        address: "513 Melaleuca Drive, Margate, FL 33063",
+        distance: "About 12 miles north of downtown Fort Lauderdale",
+        credential: "State-licensed birth center; certified nurse-midwives on staff",
+        services: [
+          "Birth Center Birth",
+          "Home Birth",
+          "Water Birth",
+          "Prenatal Care",
+          "Postpartum Care",
+          "Placenta Encapsulation",
+          "Classes & Workshops"
+        ],
+        costRange: "$3,500-$6,000",
+        costRange_source: "market-estimate from Florida birth center fee schedules and South Florida birth center pricing; Florida Medicaid reimburses licensed birth centers for low-risk pregnancies",
+        medicaid: true,
+        bilingual: false,
+        phone: "954-925-4499",
+        nicuLevel: "N/A \u2014 out-of-hospital birth center; hospital transfer agreement in place",
+        babyFriendly: "Immediate skin-to-skin, delayed cord clamping and continuous mother-baby contact",
+        lactationSupport: "Breastfeeding support in the birth center plus a dedicated breastfeeding class series",
+        languageAccess: "English-language intake; call the center to discuss interpreter needs for prenatal visits",
+        birthingFacilities: "Luxurious birth suites with a full-size bed and roomy soak-in tubs, filtered water, aromatherapy, birth balls, birthing chairs and stools",
+        paragraph: "Hollywood Birth Center has been at 513 Melaleuca Drive in Margate since 1993, roughly 12 miles north of downtown Fort Lauderdale, and it is the nearest free-standing birth center to Fort Lauderdale families who want a midwife-led birth without a hospital \u2014 its birthing suites have a full-size bed and a roomy soak-in tub to labor in, and the water is filtered before it reaches the tub. You get aromatherapy, massage tools, birth balls of several sizes, birthing chairs and stools, and bluetooth speakers during your stay, and the center offers both birth center births and home births. The staff page names midwife-owner Gelena with midwives Dellareece and Olivia, plus birth assistants and doulas Kari and Taylor, and 24/7 access to your midwife. Florida Medicaid reimburses licensed birth centers and midwives for low-medical-risk pregnancies, so ask the center what your plan covers before you commit. Call 954-925-4499 for a tour \u2014 appointments are Monday to Friday at the Margate location."
+      }
+    ],
+    birthStats: {
+      cesareanRate: 30.1,
+      maternalMortalityRate: 24.5,
+      homeBirthRate: 1.2,
+      birthCenterBirthRate: 0.7,
+      dataYear: 2023,
+      dataSource: "CDC NCHS National Vital Statistics System, Florida state file; March of Dimes 2025 Report Card (Florida low-risk cesarean 30.1%, maternal mortality 24.5 per 100,000)",
+    },
     medicaidNote: "Yes — Florida Medicaid (Family Plus/CHIP) covers doula services for eligible members \u2014 FL was one of the earlier states to add doulas to its Medicaid provider directory. Call 1-800-342-3526 (Access Florida) or check your plan to confirm current coverage before booking. If you're on a commercial plan, many FL plans cover part of the doula package \u2014 worth one call to the number on your card.",
     insuranceNote: "Whether your FL plan covers doula services depends on the carrier \u2014 Aetna, Humana, Cigna and local plans all differ, and some cover doulas with a physician referral. Call the member-services number on your insurance card and ask specifically: 'Does my plan cover doula services with a referral?' If it does, get the authorization number in writing before your birth.",
     faqs: [
@@ -15063,7 +15139,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
       },
       {
         q: "Which hospital will I deliver at in Fort Lauderdale?",
-        a: "Most Fort Lauderdale deliveries land at Broward Health Medical Center in the city, with Holy Cross Hospital on North Federal a close second. Broward Health Imperial Point (in Hollywood, minutes north) and Broward Health Glenn (Plantation) handle the rest of the county. Whichever one it is, your doula will know the L&D culture there \u2014 that's worth a lot at 3 a.m. when triage is full."
+        a: "Broward Health Medical Center on South Andrews Avenue is the in-city delivery hospital, with a Level III NICU and neonatologists in the building around the clock \u2014 that's why most Fort Lauderdale families deliver there. If you want a different campus, the nearest out-of-city delivery hospitals are Broward Health Coral Springs and Memorial Regional in Hollywood. Either way, your doula will know the L&D culture there \u2014 that's worth a lot at 3 a.m. when triage is full."
       },
       {
         q: "Are there doulas who serve Fort Lauderdale and speak Spanish?",
@@ -15071,7 +15147,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
       },
       {
         q: "What's a typical hospital birth plan look like in Fort Lauderdale?",
-        a: "At Broward Health Medical Center and Holy Cross, a one-page birth plan covering pain management preferences, who's in the room, and what happens if an intervention is recommended is the standard. Bring it printed at triage \u2014 the teams here work fast and don't have time for a whiteboard. True Joy Birthing's free birth plan template is built for exactly this: <a href='/birth-plan-template/'>download it</a> and fill it out around your due date."
+        a: "At Broward Health Medical Center, a one-page birth plan covering pain management preferences, who's in the room, and what happens if an intervention is recommended is the standard. Bring it printed at triage \u2014 the teams here work fast and don't have time for a whiteboard. True Joy Birthing's free birth plan template is built for exactly this: <a href='/birth-plan-template/'>download it</a> and fill it out around your due date."
       }
     ],
     nearbyCities: [
@@ -15086,7 +15162,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
       {
         title: "MotheRetreat \u2014 Birth Doula Fort Lauderdale",
         url: "https://motheretreat.com/birth-doula-fort-lauderdale/",
-        quote: "MotheRetreat provides birth doula support to families across Fort Lauderdale and the Broward coast. Whether you plan to deliver at Broward Health Medical Center, Holy Cross Health, or Broward Health Imperial Point, your birth doula gives you continuous one-on-one support through labor and coordinates closely with your medical team."
+        quote: "MotheRetreat provides birth doula support to families across Fort Lauderdale and the Broward coast. Your birth doula gives you continuous one-on-one support through labor and coordinates closely with your medical team."
       },
       {
         title: "Hummingbird Birth (Amber Marie)",
@@ -15109,10 +15185,45 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
         quote: "Maternity Place at Broward Health Medical Center: Count on Broward Health Medical Center for dedicated labor, de[livery and postpartum care]"
       },
       {
-        title: "Holy Cross Hospital Fort Lauderdale",
+        title: "Holy Cross Hospital Fort Lauderdale \u2014 Location & Contact",
         url: "https://www.holy-cross.com/location/holy-cross-hospital-fl-0",
-        quote: "Holy Cross Hospital Fort Lauderdale \u2014 obstetrics, maternity and NICU services at 2601 N Federal Hwy, Fort Lauderdale, FL"
-      }
+        quote: "Holy Cross Hospital (FL) \u2014 Phone & Address: 4725 N Federal Hwy, Fort Lauderdale, FL 33308. Phone 954-492-5768."
+      },
+      {
+        title: "Broward Health Medical Center \u2014 Location",
+        url: "https://www.browardhealth.org/locations/broward-health-medical-center",
+        quote: "1600 S. Andrews Ave, Fort Lauderdale, FL 33316 \u2014 Broward Health Medical Center is Fort Lauderdale's largest hospital, with 606 beds and more than 85 years serving this community."
+      },
+      {
+        title: "Hollywood Birth Center \u2014 The Facility",
+        url: "https://www.hollywoodbirthcenter.com/the-facility",
+        quote: "Here since 1993, HBC includes luxurious birth suites equipped with full-size bed and roomy soak-in tubs to labor and/or birth in. The water used at our facility is filtered to ensure it is as pure as possible. We offer Home Births as well as Birth center Births. 513 Melaleuca Drive, Margate, FL 33063 | 954-925-4499"
+      },
+      {
+        title: "A Serene Birth (Serene Gato) \u2014 Doula Services",
+        url: "https://www.bornbir.com/serene-gato",
+        quote: "Birth Doula Package: 2-3 prenatal visits, on call from 37 weeks until the birth, continuous support during labor & birth, 1 postpartum visit, virtual support for 6 weeks postpartum \u2014 $2,400 USD, flat rate."
+      },
+      {
+        title: "Florida Medicaid \u2014 Birth Center and Midwife Services (AHCA)",
+        url: "https://ahca.myflorida.com/medicaid/medicaid-policy-quality-and-operations/medicaid-policy-and-quality/medicaid-policy/medical-and-behavioral-health-coverage-policy/primary-and-preventive-care-policy/birth-center-and-midwife-services.html",
+        quote: "Medicaid reimburses licensed birth centers and midwives that provide obstetrical services for pregnant women with low-medical risk pregnancies."
+      },
+      {
+        title: "Broward Health \u2014 Maternity Place at Broward Health Coral Springs",
+        url: "https://www.browardhealth.org/medical-services/womens-health/maternity-services/maternity-place-at-broward-health-coral-springs",
+        quote: "Maternity Place at Broward Health Coral Springs ... Level III Neonatal Unit \u2014 Private suites featuring comfortable sleeper sofas and dedicated space for a parent to stay overnight. The unit is staffed 24/7 by neonatologists and specialized nurses to care for babies who need extra attention or face complications."
+      },
+      {
+        title: "Memorial Regional Hospital \u2014 Dr. Henry D. Perry Family Birthplace (Hollywood)",
+        url: "https://www.mhs.net/services/maternity-care/regional",
+        quote: "Memorial Regional Hospital 3501 Johnson Street Hollywood, Florida 33021 ... Our hospital has: - Private labor/delivery/recovery (LDR) suites - OB operating rooms - Postpartum recovery suites - Cesarean section rooms - Antepartum suites - Level IV NICU rooms"
+      },
+      {
+        title: "Holy Cross Health \u2014 New Direction for Women\u2019s Health (maternity unit closure)",
+        url: "https://www.holy-cross.com/newsroom/press-releases/new-direction-womens-health",
+        quote: "effective March 14, 2022, Holy Cross Health will close its inpatient Maternity Unit permanently."
+      },
     ]
   },
   "spring-tx": {
@@ -15762,24 +15873,30 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
           name: "Emily Arena",
           credential: "Certified birth doula, CD(DONA)",
           practice: "Sweet Pea Doula Services",
+          costRange_source: "market-estimate",
           url: "https://sweetpeabirthdoula.com/",
-          photo: "/images/provider-spring-tx-emily-arena.webp",
+          photo: "/images/doulas/peoria-az-emily-arena.webp",
+          costRange: "$900-$2,000",
           description: "Emily Arena runs Sweet Pea Doula Services from her home base in Peoria as a DONA-certified birth doula. Her work covers the whole arc: prenatal education and labor preparation, hands-on support during labor, and postpartum guidance and emotional care once the baby is home. She is a one-woman practice that keeps its calendar small and its response time fast - the kind of doula you text and get a real answer from. She has been building out local classes and community workshops for expectant families, so new clients can plug into a room of other Peoria parents while they prepare."
         },
         {
           name: "Samantha Zillweger",
           credential: "Birth doula, certified through the International Doula Institute",
           practice: "Samantha Zillweger, independent practice",
+          costRange_source: "provider-website",
           url: "https://www.bornbir.com/samantha-zillweger",
           photo: "/images/doulas/peoria-az-samantha-zillweger.webp",
+          costRange: "$1,200",
           description: "Samantha Zillweger is a Peoria-based birth doula who came to the work after her own home birth in 2020 and certified with the International Doula Institute in 2024. Her package is straightforward: two prenatal visits covering birth preferences, comfort measures and the 3 Rs of labor, continuous support on delivery day, and a postpartum visit for breastfeeding basics and newborn care. She publishes flat-rate pricing instead of making families negotiate, and she is explicit about her style - calm, faith-centered support that treats birth as a family event rather than a medical procedure."
         },
         {
           name: "Modern Mama Doula",
           credential: "Certified birth & postpartum doula team, Lamaze-certified childbirth educators",
           practice: "Modern Mama Doula and Placenta Encapsulation Services",
+          costRange_source: "market-estimate",
           url: "http://www.modernmamadoula.com/",
-          photo: "/images/provider-spring-tx-modern-mama-doula.webp",
+          photo: "/images/doulas/peoria-az-modern-mama.webp",
+          costRange: "$1,500-$2,000",
           description: "Modern Mama is a valley doula team whose service list names Peoria directly alongside Glendale and Surprise, making them one of the few multi-doula practices that formally covers the northwest valley. The team brings certified birth and postpartum doulas, Spinning Babies-trained labor support, Lamaze-certified childbirth classes, placenta encapsulation and birth photography under one roof. Phoenix Magazine has named them Best Doula multiple years running. For Peoria families who want team backup - a guaranteed doula at every birth even when the primary is at another delivery - they are the practice built for it."
         }
       ],

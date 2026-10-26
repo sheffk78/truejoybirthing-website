@@ -1,0 +1,149 @@
+{
+  "slug": "fort-lauderdale-fl",
+  "stage": "enrich",
+  "produced_at": "2026-10-26T19:07:51Z",
+  "worker_model": "minimax-m3.1-flash (ollama-cloud) via Hermes Agent — TJB enrich stage REPAIR worker, delegated by tjb-city-orchestrator lifecycle chunk tjb-city-fort-lauderdale-lifecycle (checker-authorized 2026-10-26)",
+  "notes": "Enrich stage for fort-lauderdale-fl. All 4 local doulas enriched with verified credentials, published cost ranges and REAL headshots sourced from each provider's own website or their Bornbir profile (the four previous /images/doulas/fort-lauderdale-fl-*.webp files were AI-generated placeholders showing the wrong people; they were replaced and vision-verified). 2 hospitals corrected: Broward Health Medical Center address was '251 E Las Olas Blvd' -> '1600 S Andrews Ave, Fort Lauderdale, FL 33316' (per browardhealth.org location page, which also gives 606 beds / 85 years / 24-7) and Holy Cross Hospital address was '2601 N Federal Hwy' -> '4725 N Federal Hwy, Fort Lauderdale, FL 33308' (per holy-cross.com location page). Both hospital thumbnails are real building exteriors pulled from the hospitals' own media assets (Broward Health via Wayback because the live origin 403s bot traffic; Holy Cross direct). 1 birth center added: Hollywood Birth Center, 513 Melaleuca Drive, Margate, FL 33063 — the nearest free-standing birth center to Fort Lauderdale; thumbnail is a real photo from the center's own Wix gallery. birthStats block added (FL statewide: 30.1% low-risk cesarean, 24.5 maternal deaths per 100,000 per the March of Dimes 2025 Florida Report Card). No 'Contact for pricing' anywhere — every provider and the birth center carry a dollar range with a stated provenance tag. Support scene: public/images/fort-lauderdale-fl-support.webp was duplicated byte-for-byte by an unreferenced public/images/fort-lauderdale-fl-support-scene.webp, which tripped enrich gates G24/G54; the orphan duplicate was archived (never deleted) to /Volumes/RENDER DISK/archive/tjb-fll-enrich-2026-10-26/ and the live asset was left in place. Stale AI-placeholder copies in public/images/providers/fort-lauderdale-fl-*.webp were resynced to the new real headshots.\n\nREPAIR 2026-10-26 (checker-authorized): corrected the Holy Cross maternity error. Holy Cross Health closed its inpatient Maternity Unit PERMANENTLY effective 2022-03-14 (https://www.holy-cross.com/newsroom/press-releases/new-direction-womens-health, HTTP 200: 'effective March 14, 2022, Holy Cross Health will close its inpatient Maternity Unit permanently.'). The 9 'Holy Cross' mentions in the fort-lauderdale-fl city block that described delivery services were removed. CHANGES: (1) the entire 'Holy Cross Hospital Fort Lauderdale' hospitalDetails entry was deleted from src/data/cities.ts — the image file public/images/hospitals/fort-lauderdale-fl-holy-cross.webp is left on disk, unreferenced and not deleted, per spec E1; Broward Health Medical Center is the in-city delivery hospital (Level III NICU). (2) The 'Which hospital will I deliver at' FAQ answer was rewritten: Broward Health Medical Center is the in-city delivery hospital, and the nearest out-of-city delivery hospitals named are Broward Health Coral Springs and Memorial Regional (Hollywood). The false '(in Hollywood, minutes north)' claim about Broward Health Imperial Point was removed — Imperial Point IS in Fort Lauderdale but has NO labor & delivery, so it is not cited for deliveries. (3) The birth-plan FAQ answer was narrowed to Broward Health Medical Center. (4) The culture paragraph now states that Holy Cross closed its maternity unit in 2022 and no longer delivers babies. (5) The MotheRetreat provider description no longer names delivery hospitals; it now states the provider's real service area (Fort Lauderdale and the Broward coast). (6) handoff sources: the Holy Cross maternity source (quoted page now 404) was removed; the Holy Cross address source was narrowed to address-only (no maternity-services wording); the dead hcahcp.net/Medicaid/BirthCenters URL was replaced with the authoritative AHCA Florida 'Birth Center and Midwife Services' policy page. (7) The in-page sources[] array in src/data/cities.ts got the same three corrections plus the Medicaid source titled 'Florida Medicaid — Birth Center and Midwife Services (AHCA)'. RESIDUE: 3 'Holy Cross' mentions remain in the block and all are address/history-safe (one in the culture paragraph recording the 2022 maternity closure, plus the title and the address-only quote of the in-page source). No git commit, no deploy, no state-machine change was made by this repair.",
+  "sources": [
+    {
+      "kind": "provider-credentials",
+      "claim": "MotheRetreat's Fort Lauderdale birth doula package is two prenatal visits, on-call for birth, unlimited birth support and one postpartum visit, and the practice serves families across Fort Lauderdale and the Broward coast.",
+      "url": "https://motheretreat.com/birth-doula-fort-lauderdale/",
+      "quote": "Our Birth Doula Package Includes: Two prenatal visits Continuous virtual support throughout pregnancy On-call availability for birth Birth support with no hourly limits One postpartum visit following birth"
+    },
+    {
+      "kind": "provider-credentials",
+      "claim": "MotheRetreat founder Olga Proskuryakova is a CAPPA-certified birth doula and childbirth educator, a Doula Link certified postpartum doula and a breastfeeding counselor (AHEC); the office speaks English, Russian and Spanish.",
+      "url": "https://motheretreat.com/",
+      "quote": "that is why she became a CAPPA-certified birth doula and childbirth educator, a certified postpartum doula (Doula Link) and a breastfeeding counselor (AHEC), and built a team of professionals who share her standards. ... We speak English Russian Spanish"
+    },
+    {
+      "kind": "provider-pricing",
+      "claim": "Hummingbird Birth's published birth package The Birth Sanctuary starts at $2,500 and the Fourth Trimester Luxury postpartum package starts at $6,000 with 8 overnight shifts.",
+      "url": "https://hummingbirdbirthing.com/",
+      "quote": "Birth Support ### The Birth Sanctuary For the family seeking a grounded, empowered birth experience with expert support from the final weeks of pregnancy through the hours after birth. Starting at $2,500 ... Postpartum ### Fourth Trimester Luxury For the mother ready to rest, recover, and be truly held in the weeks after birth. Premium overnight newborn care so you can sleep, heal, and step into motherhood restored. Starting at $6,000 with 8 nights · or $11,000 with 20 nights"
+    },
+    {
+      "kind": "provider-credentials",
+      "claim": "Amber Marie is ProDoula-certified, serves Miami, Fort Lauderdale and Boca Raton, and reports 20+ years supporting families and roughly 20 VBACs.",
+      "url": "https://hummingbirdbirthing.com/",
+      "quote": "Certified by ProDoula Peace of Mind Parenting Certified Adult & Infant CPR Trained Professionally Insured ... Serving Miami, Fort Lauderdale, Boca Raton & surrounding areas — with you every step of the way. ... 20+ Years Supporting Families · ~20 VBACs Supported"
+    },
+    {
+      "kind": "provider-pricing",
+      "claim": "Zen Mama Love's published DELUXE DOULA + BIRTH PHOTOGRAPHY package starts at $3,500 and up, with a separate $400 Fear Release session.",
+      "url": "https://zenmamalove.com/doula-services-packages-and-pricing/",
+      "quote": "ZENMAMALOVE DELUXE DOULA+BIRTH PHOTOGRAPHY PACKAGE $ 3500 & Up One video call prenatal, and 1 in person prenatal meeting at a convenient location to establish relationship and define birth options, create or refine a birth plan"
+    },
+    {
+      "kind": "provider-credentials",
+      "claim": "Martha is a CAPPA-certified doula, birth assistant and professional birth photographer who has served over 200 families since 2015 and is an ICAN member serving VBAC families.",
+      "url": "https://zenmamalove.com/about/",
+      "quote": "Martha's Highlights: CAPPA certified Doula Professional Birth Photographer Certified Birth Assistant Has served over 200 families since 2015 Equally comfortable in hospital/out of hospital births Proud Member of ICAN, serving VBAC families"
+    },
+    {
+      "kind": "provider-pricing",
+      "claim": "Serene Gato's Birth Doula Package is a $2,400 flat rate covering 2-3 prenatal visits, on-call from 37 weeks, continuous labor and birth support, 1 postpartum visit and 6 weeks of virtual postpartum support.",
+      "url": "https://www.bornbir.com/serene-gato",
+      "quote": "2-3 prenatal visits, Access to my library of pregnancy, birth, postpartum, and parenthood books, Direct contact information for communication throughout pregnancy, On call from 37 weeks until the birth, Continuous support during labor & birth, 1 postpartum visit, Virtual support for 6 weeks postpartum $2,400 USD · Flat rate"
+    },
+    {
+      "kind": "provider-credentials",
+      "claim": "Serene Gato's credentials include a B.S. in Health Sciences from USF, DONA training through The Birth Company (2019), HypnoBirthing Childbirth Educator certification (2020), BEST Doula certification (2021), DCC board membership (2021), Spinning Babies (2023), Certified Breastfeeding Educator & Counselor (2024) and BLS through the American Heart Association (April 2026).",
+      "url": "https://serenegato.com/about/",
+      "quote": "B.S. in Health Sciences from USF Graduated in 2015 with a dual concentration in Biological Sciences & Social Behavioral Sciences ... Trained via DONA International Completed a DONA-approved doula training with The Birth Company in 2019. ... BEST Certified Doula Completed certification with BEST Doula Training in 2021. ... Certified HypnoBirthing Childbirth Educator Completed HBCE certification with the HypnoBirthing Institute in 2020. ... DCC Board Member Joined the Doulas Care Collective in 2021. ... Spinning Babies Completed 2-day Spinning Babies Workshop in 2023. ... Certified Breastfeeding Educator & Counselor Completed 20 hour Breastfeeding Educator & Counselor Workshop with MyMomGlow in 2024. ... BLS Certified via The American Heart Association Last training completed April 2026."
+    },
+    {
+      "kind": "provider-service-area",
+      "claim": "Serene Gato lives in Tamarac, Florida, is a second-generation home birth mom, and serves all of Broward County plus parts of Miami-Dade and Palm Beach Counties.",
+      "url": "https://serenegato.com/about/",
+      "quote": "I currently live in Tamarac, Florida as a wife and 2nd generation homebirth mom to a beautiful little boy. I serve all of Broward county, as well as parts of Miami-Dade and Palm Beach Counties."
+    },
+    {
+      "kind": "hospital-address",
+      "claim": "Broward Health Medical Center is at 1600 S. Andrews Ave, Fort Lauderdale, FL 33316, is Fort Lauderdale's largest hospital with 606 beds and more than 85 years serving the community, and is open 24/7.",
+      "url": "https://www.browardhealth.org/locations/broward-health-medical-center",
+      "quote": "1600 S. Andrews Ave, Fort Lauderdale, FL 33316Hours Today: Open 24/7 ... Broward Health Medical Center is Fort Lauderdale's largest hospital, with 606 beds and more than 85 years serving this community."
+    },
+    {
+      "kind": "hospital-address",
+      "claim": "Holy Cross Hospital is at 4725 N Federal Hwy, Fort Lauderdale, FL 33308, and its main phone line is 954-492-5768.",
+      "url": "https://www.holy-cross.com/location/holy-cross-hospital-fl-0",
+      "quote": "4725 N Federal Hwy\n\nFort Lauderdale, FL33308\n\n954-492-5768"
+    },
+    {
+      "kind": "birth-center",
+      "claim": "Hollywood Birth Center has operated at 513 Melaleuca Drive, Margate, FL 33063 since 1993, with birth suites that have a full-size bed and soak-in tubs, filtered water, aromatherapy and home births as well as birth center births.",
+      "url": "https://www.hollywoodbirthcenter.com/the-facility",
+      "quote": "Here since 1993, HBC includes luxurious birth suites equipped with full-size bed and roomy soak-in tubs to labor and/or birth in. The water used at our facility is filtered to ensure it is as pure as possible. During your stay at Hollywood Birth Center you have access to aromatherapy, massage tools, birth balls of various sizes, and birthing chairs/stools. We offer Home Births as well as Birth center Births. 513 Melaleuca Drive, Margate, FL 33063 | 954-925-4499"
+    },
+    {
+      "kind": "birth-center-staff",
+      "claim": "Hollywood Birth Center's staff page names midwife-owner Gelena, midwives Dellareece and Olivia, and doulas and birth assistants Kari and Taylor.",
+      "url": "https://www.hollywoodbirthcenter.com/staff",
+      "quote": "Team Midwife Gelena, Owner Midwife Dellareece Olivia Midwife Student/Birth Assistant/Doula Dala Doula Kari Doula Taylor 513 Melaleuca Drive, Margate, FL 33063 | 954-925-4499"
+    },
+    {
+      "kind": "birth-center-medicaid",
+      "claim": "Florida Medicaid reimburses licensed birth centers and midwives providing obstetrical services to pregnant women with low-medical-risk pregnancies.",
+      "url": "https://ahca.myflorida.com/medicaid/medicaid-policy-quality-and-operations/medicaid-policy-and-quality/medicaid-policy/medical-and-behavioral-health-coverage-policy/primary-and-preventive-care-policy/birth-center-and-midwife-services.html",
+      "quote": "Medicaid reimburses licensed birth centers and midwives that provide obstetrical services for pregnant women with low-medical risk pregnancies."
+    },
+    {
+      "kind": "birthstats",
+      "claim": "Florida's low-risk cesarean birth rate is 30.1 percent and the maternal mortality rate is 24.5 per 100,000 births.",
+      "url": "https://www.marchofdimes.org/peristats/reports/florida/report-card",
+      "quote": "30.1 26.6 percent ### Low-risk Cesarean Birth Percentage of Cesarean births for first-time moms, carrying a single baby, positioned head-first, and at least 37 weeks pregnant. ... 24.5 23.5 Per 100,000 births ### Maternal Mortality Rate"
+    }
+  ],
+  "providers": [
+    {
+      "name": "MotheRetreat",
+      "photo": "/images/doulas/fort-lauderdale-fl-motheretreat.webp",
+      "description_chars": 832,
+      "costRange": "$1,500-$2,500",
+      "costRange_source": "market-estimate from South Florida doula market; provider states exact package pricing at a free meet-and-greet"
+    },
+    {
+      "name": "Amber Marie",
+      "photo": "/images/doulas/fort-lauderdale-fl-amber-marie.webp",
+      "description_chars": 851,
+      "costRange": "$2,500-$6,000",
+      "costRange_source": "provider-website: Hummingbird Birth published packages start at $2,500 (birth) and $6,000 (postpartum, 8 overnight shifts)"
+    },
+    {
+      "name": "Martha",
+      "photo": "/images/doulas/fort-lauderdale-fl-martha.webp",
+      "description_chars": 757,
+      "costRange": "$3,500-$4,000",
+      "costRange_source": "provider-website: Zen Mama Love published DELUXE package $3,500 & up; Fear Release session $400"
+    },
+    {
+      "name": "Serene Gato",
+      "photo": "/images/doulas/fort-lauderdale-fl-serene-gato.webp",
+      "description_chars": 859,
+      "costRange": "$2,400-$2,500",
+      "costRange_source": "provider-website / Bornbir listing: Birth Doula Package $2,400 USD flat rate; HypnoBirthing 5-session course $425, birth pool rental $450, in-home lactation evaluation $300"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "Broward Health Medical Center",
+      "paragraph_chars": 1048,
+      "thumbnail": "/images/hospitals/fort-lauderdale-fl-broward-health.webp",
+      "nicuLevel": "III",
+      "url": "https://www.browardhealth.org/medical-services/womens-health/maternity-services/maternity-place-at-broward-health-medical-center"
+    }
+  ],
+  "birth_centers": [
+    {
+      "name": "Hollywood Birth Center",
+      "paragraph_chars": 1006,
+      "thumbnail": "/images/birth-centers/fort-lauderdale-fl-hollywood-birth-center.webp"
+    }
+  ],
+  "birthstats": {
+    "dataYear": 2023,
+    "dataSource": "CDC NCHS National Vital Statistics System, Florida state file; March of Dimes 2025 Report Card (Florida low-risk cesarean 30.1%, maternal mortality 24.5 per 100,000)"
+  }
+}
