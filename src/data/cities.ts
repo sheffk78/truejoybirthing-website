@@ -14947,6 +14947,12 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
     heroImage: "/images/fort-lauderdale-fl-birth-doula-hero-v1.webp",
     supportSceneImage: "/images/fort-lauderdale-fl-support.webp",
     supportSceneAlt: "A doula walking beside a pregnant partner along the Fort Lauderdale riverwalk: local birth support and doula care",
+midwifeInfo: {
+      paragraph: "Florida gives you two regulated paths to midwife-led care, and both are reachable from Fort Lauderdale. Certified Nurse-Midwives (CNMs) are licensed advanced practice registered nurses through the Florida Board of Nursing and attend hospital births; Certified Professional Midwives (CPMs) are licensed under Florida Statute 467 and attend home births and freestanding birth centers. There are no freestanding birth centers in Fort Lauderdale city limits, but the nearest midwife-led option, Hollywood Birth Center in Margate, is about 12 miles north \u2014 CNM- and CPM-staffed, state-licensed, and in-network for Florida Medicaid on low-risk pregnancies.",
+      credentialTypes: "CNMs and CPMs",
+      credentialDetail: "In Florida, CNMs are licensed through the Florida Board of Nursing and mostly practice inside hospitals and health systems \u2014 in Broward County, that means hospital-based midwifery rather than a dedicated in-city unit. CPMs are licensed under Florida Statute 467 (the licensure law for direct-entry midwives), carry required transfer agreements with nearby hospitals, and attend out-of-hospital births at birth centers and homes. Families comparing options in Fort Lauderdale should confirm the midwife's license type at the first visit \u2014 it sets where you can deliver and how a hospital transfer would work."
+    },
+
     localDoulas: [
       {
         name: "MotheRetreat",
@@ -15088,7 +15094,7 @@ paragraph: "Tempe's midwifery options span hospital and out-of-hospital care. Yo
         paragraph: "Broward Health Medical Center at 1600 S Andrews Ave is Fort Lauderdale's largest hospital \u2014 606 beds and more than 85 years serving Broward County \u2014 and its Maternity Place is where most Broward families deliver. If your baby arrives early or small, the Level III NICU is the reason many families choose this hospital: it is the highest NICU level in the county, with neonatologists in the building around the clock. The L&D team moves fast here because volume is high, so write your birth preferences down and hand them over at triage rather than relying on memory in the moment \u2014 <a href='/birth-plan-template/'>our birth plan template</a> makes that a two-minute job. Doulas are welcome as support persons, and the Maternity Place program is built around family-centered care with dedicated labor care, postpartum support and a team that coordinates with your doula from check-in onward. Medicaid is accepted, lactation support is available on the postpartum floor, and interpreter services are offered for families who want them."
       }
     ],
-    birthCenterDetails: [
+        birthCenterDetails: [
       {
         name: "Hollywood Birth Center",
         thumbnail: "/images/birth-centers/fort-lauderdale-fl-hollywood-birth-center.webp",

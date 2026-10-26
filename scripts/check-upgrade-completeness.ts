@@ -124,7 +124,11 @@ check(`Birth center paragraph depth: ${realBirthCenters.length - shortBirthCente
 const doulaCount = countInBlock(/^\s+name:\s*"/m); // from localDoulas section
 // We need to count only doulas, not hospitals. Estimate by checking unique count
 // of entries inside the localDoulas array
-const doulasSection = cityBlock.match(/localDoulas:\s*\[([\s\S]*?)\],\s*faqs:/m);
+// Checker repair 2026-10-26: the old regex required faqs: directly after the localDoulas
+// array close — the current canonical city layout interposes culture/medicaidNote/etc, so the
+// check silently reported 0 doulas for every recent upgrade. Anchor on the next canonical
+// field instead — the localDoulas array is the FIRST '],\n <field>:' after its '['.
+const doulasSection = cityBlock.match(/localDoulas:\s*\[([\s\S]*?)\],\s*(?:culture|medicaidNote|birthCenterDetails|hospitalDetails|faqs):/m);
 const actualDoulaCount = doulasSection ? (doulasSection[1].match(/\bname:\s*"/g) || []).length : 0;
 
 check(`Doula listings: ${actualDoulaCount}`, actualDoulaCount >= 3,

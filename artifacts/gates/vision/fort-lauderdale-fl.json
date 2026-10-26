@@ -1,0 +1,21 @@
+{
+  "slug": "fort-lauderdale-fl",
+  "verdicts": [
+    {
+      "crop": "fort-lauderdale-fl-hero-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "fort-lauderdale-fl-support-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    },
+    {
+      "crop": "fort-lauderdale-fl-og-fig0.png",
+      "verdict": "pass",
+      "defects": []
+    }
+  ],
+  "checked_at": "2026-10-26T15:19:51.222962"
+}
