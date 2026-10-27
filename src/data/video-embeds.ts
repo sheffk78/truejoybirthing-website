@@ -2140,4 +2140,12 @@ export const cityVideoEmbeds: Record<string, CityVideoEmbed> = {
     duration: "PT2M23S",
     uploadDate: "2026-10-20T00:00:00-06:00",
   },
+
+  "fort-lauderdale-fl": {
+    videoId: "qIP2Z0PvC_4",
+    title: "Fort Lauderdale, Florida Doula & Birth Plan Guide",
+    description: "Watch the full Fort Lauderdale, Florida Doula & Birth Plan Guide — all in about 6:07.",
+    duration: 367,
+  },
+
 };
