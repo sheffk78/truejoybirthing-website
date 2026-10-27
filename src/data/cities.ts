@@ -15132,7 +15132,7 @@ midwifeInfo: {
       dataYear: 2023,
       dataSource: "CDC NCHS National Vital Statistics System, Florida state file; March of Dimes 2025 Report Card (Florida low-risk cesarean 30.1%, maternal mortality 24.5 per 100,000)",
     },
-    medicaidNote: "Yes. Florida Medicaid (Family Plus/CHIP) covers doula services for eligible members, and FL was one of the earlier states to add doulas to its Medicaid provider directory. Call 1-800-342-3526 (Access Florida) or check your plan to confirm current coverage before booking. On a commercial plan? Many FL plans cover part of the doula package. One call to the number on your card tells you.",
+    medicaidNote: "Yes — Florida Medicaid (Family Plus/CHIP) covers doula services for eligible members, and FL was one of the earlier states to add doulas to its Medicaid provider directory. Call 1-800-342-3526 (Access Florida) or check your plan to confirm current coverage before booking. On a commercial plan? Many FL plans cover part of the doula package. One call to the number on your card tells you.",
     insuranceNote: "Whether your FL plan covers doula services depends on the carrier. Aetna, Humana, Cigna and local plans all read differently, and some cover doulas with a physician referral. Call the member-services number on your insurance card and ask, 'Does my plan cover doula services with a referral?' If it does, get the authorization number in writing before your birth.",
     faqs: [
       {
