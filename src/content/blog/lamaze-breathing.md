@@ -1,5 +1,5 @@
 ---
-title: "Lamaze Breathing: Techniques That Help"
+title: "Lamaze Breathing Techniques: Patterns That Work in Labor"
 date: "2026-08-11"
 slug: "lamaze-breathing"
 author: "Shelbi Kohler"

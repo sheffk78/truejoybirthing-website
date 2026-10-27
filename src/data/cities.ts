@@ -155,7 +155,7 @@ export interface CityData {
 export const cities: Record<string, CityData> = {
   "irving-tx": {
     stateFull: "Texas",
-    titleTag: "Birth Doula & Birth Plan Support in Irving, TX | Costs, Medicaid & Local Doulas | True Joy Birthing",
+    titleTag: "Birth Doulas in Irving, TX: Costs & Medicaid | TJB",
     metaDescription: "Birth doula support in Irving, TX: $900-$2600 typical costs, hospital delivery policies, local doulas, and Medicaid coverage notes. Free birth plan template for Irving families.",
     heroImage: "/images/heroes/irving-tx-birth-doula-skyline-v3.webp",
     heroImageAlt: "Silhouette of an expecting mother overlooking Irving, Texas at golden hour",
@@ -280,7 +280,7 @@ export const cities: Record<string, CityData> = {
   },
   "longview-tx": {
     stateFull: "Texas",
-    titleTag: "Birth Doula & Birth Plan Support in Longview, TX | Costs, Medicaid & Local Doulas | True Joy Birthing",
+    titleTag: "Birth Doulas in Longview, TX: Costs & Medicaid | TJB",
     metaDescription: "Birth doula support in Longview, TX: $700-$1600 typical costs, hospital delivery policies, local doulas, and Medicaid coverage notes. Free birth plan template for Longview families.",
     heroImage: "/images/heroes/longview-tx-birth-doula-skyline-v3.webp",
     heroImageAlt: "Silhouette of an expecting mother overlooking Longview, Texas at golden hour",
@@ -393,7 +393,7 @@ export const cities: Record<string, CityData> = {
   },
   "lewisville-tx": {
     stateFull: "Texas",
-    titleTag: "Birth Doula & Birth Plan Support in Lewisville, TX | Costs, Medicaid & Local Doulas | True Joy Birthing",
+    titleTag: "Birth Doulas in Lewisville, TX: Costs & Medicaid | TJB",
     metaDescription: "Birth doula support in Lewisville, TX: $900-$2200 typical costs, hospital delivery policies, local doulas, and Medicaid coverage notes. Free birth plan template for Lewisville families.",
     heroImage: "/images/heroes/lewisville-tx-birth-doula-skyline-v3.webp",
     heroImageAlt: "Silhouette of an expecting mother overlooking Lewisville, Texas at golden hour",
@@ -533,7 +533,7 @@ export const cities: Record<string, CityData> = {
   },
   "wake-forest-nc": {
     stateFull: "North Carolina",
-    titleTag: "Birth Doula & Birth Plan Support in Wake Forest, NC | Costs, Medicaid & Local Doulas | True Joy Birthing",
+    titleTag: "Birth Doulas in Wake Forest, NC: Costs & Medicaid | TJB",
     metaDescription: "Birth doula support in Wake Forest, NC: $1000-$2000 typical costs, hospital delivery policies, local doulas, and Medicaid coverage notes. Free birth plan template for Wake Forest families.",
     heroImage: "/images/heroes/wake-forest-nc-birth-doula-skyline-v3.webp",
     heroImageAlt: "Silhouette of an expecting mother overlooking Wake Forest, North Carolina at golden hour",
@@ -639,7 +639,7 @@ export const cities: Record<string, CityData> = {
   },
   "sugar-land-tx": {
     stateFull: "Texas",
-    titleTag: "Birth Doula & Birth Plan Support in Sugar Land, TX | Costs, Medicaid & Local Doulas | True Joy Birthing",
+    titleTag: "Birth Doulas in Sugar Land, TX: Costs & Medicaid | TJB",
     metaDescription: "Birth doula support in Sugar Land, TX: $900-$2500 typical costs, hospital delivery policies, local doulas, and Medicaid coverage notes. Free birth plan template for Sugar Land families.",
     heroImage: "/images/heroes/sugar-land-tx-birth-doula-skyline-v3.webp",
     heroImageAlt: "Silhouette of an expecting mother overlooking Sugar Land, Texas at golden hour",
@@ -745,7 +745,7 @@ export const cities: Record<string, CityData> = {
   },
   "savannah-ga": {
     stateFull: "Georgia",
-    titleTag: "Birth Doula & Birth Plan Support in Savannah, GA | Costs, Medicaid & Local Doulas | True Joy Birthing",
+    titleTag: "Birth Doulas in Savannah, GA: Costs & Medicaid | TJB",
     metaDescription: "Birth doula support in Savannah, GA: $800-$2000 typical costs, hospital delivery policies, local doulas, and Medicaid coverage notes. Free birth plan template for Savannah families.",
     heroImage: "/images/heroes/savannah-ga-birth-doula-skyline-v3.webp",
     heroImageAlt: "Silhouette of an expecting mother overlooking Savannah, Georgia at golden hour",
@@ -838,7 +838,7 @@ export const cities: Record<string, CityData> = {
   },
   "round-rock-tx": {
     stateFull: "Texas",
-    titleTag: "Birth Doula & Birth Plan Support in Round Rock, TX | Costs, Medicaid & Local Doulas | True Joy Birthing",
+    titleTag: "Birth Doulas in Round Rock, TX: Costs & Medicaid | TJB",
     metaDescription: "Birth doula support in Round Rock, TX: $900-$2200 typical costs, hospital delivery policies, local doulas, and Medicaid coverage notes. Free birth plan template for Round Rock families.",
     heroImage: "/images/heroes/round-rock-tx-birth-doula-skyline-v3.webp",
     heroImageAlt: "Silhouette of an expecting mother overlooking Round Rock, Texas at golden hour",
@@ -939,7 +939,7 @@ export const cities: Record<string, CityData> = {
   },
   "pasadena-tx": {
     stateFull: "Texas",
-    titleTag: "Birth Doula & Birth Plan Support in Pasadena, TX | Costs, Medicaid & Local Doulas | True Joy Birthing",
+    titleTag: "Birth Doulas in Pasadena, TX: Costs & Medicaid | TJB",
     metaDescription: "Birth doula support in Pasadena, TX: $750-$1800 typical costs, hospital delivery policies, local doulas, and Medicaid coverage notes. Free birth plan template for Pasadena families.",
     heroImage: "/images/heroes/pasadena-tx-birth-doula-skyline-v3.webp",
     heroImageAlt: "Silhouette of an expecting mother overlooking Pasadena, Texas at golden hour",
@@ -1035,7 +1035,7 @@ export const cities: Record<string, CityData> = {
   },
   "midland-tx": {
     stateFull: "Texas",
-    titleTag: "Birth Doula & Birth Plan Support in Midland, TX | Costs, Medicaid & Local Doulas | True Joy Birthing",
+    titleTag: "Birth Doulas in Midland, TX: Costs & Medicaid | TJB",
     metaDescription: "Birth doula support in Midland, TX: $800-$2000 typical costs, hospital delivery policies, local doulas, and Medicaid coverage notes. Free birth plan template for Midland families.",
     heroImage: "/images/heroes/midland-tx-birth-doula-skyline-v3.webp",
     heroImageAlt: "Silhouette of an expecting mother overlooking Midland, Texas at golden hour",
@@ -1134,7 +1134,7 @@ export const cities: Record<string, CityData> = {
   },
   "georgetown-tx": {
     stateFull: "Texas",
-    titleTag: "Birth Doula & Birth Plan Support in Georgetown, TX | Costs, Medicaid & Local Doulas | True Joy Birthing",
+    titleTag: "Birth Doulas in Georgetown, TX: Costs & Medicaid | TJB",
     metaDescription: "Birth doula support in Georgetown, TX: $900-$2500 typical costs, hospital delivery policies, local doulas, and Medicaid coverage notes. Free birth plan template for Georgetown families.",
     heroImage: "/images/heroes/georgetown-tx-birth-doula-skyline-v3.webp",
     heroImageAlt: "Silhouette of an expecting mother overlooking Georgetown, Texas at golden hour",
@@ -1231,7 +1231,7 @@ export const cities: Record<string, CityData> = {
   },
   "college-station-tx": {
     stateFull: "Texas",
-    titleTag: "Birth Doula & Birth Plan Support in College Station, TX | Costs, Medicaid & Local Doulas | True Joy Birthing",
+    titleTag: "Birth Doulas in College Station, TX: Costs & Medicaid | TJB",
     metaDescription: "Birth doula support in College Station, TX: $800-$1500 typical costs, hospital delivery policies, local doulas, and Medicaid coverage notes. Free birth plan template for College Station families.",
     heroImage: "/images/heroes/college-station-tx-birth-doula-skyline-v3.webp",
     heroImageAlt: "Silhouette of an expecting mother overlooking College Station, Texas at golden hour",
@@ -1335,7 +1335,7 @@ export const cities: Record<string, CityData> = {
   },
   "brownsville-tx": {
     stateFull: "Texas",
-    titleTag: "Birth Doula & Birth Plan Support in Brownsville, TX | Costs, Medicaid & Local Doulas | True Joy Birthing",
+    titleTag: "Birth Doulas in Brownsville, TX: Costs & Medicaid | TJB",
     metaDescription: "Birth doula support in Brownsville, TX: $600-$1400 typical costs, hospital delivery policies, local doulas, and Medicaid coverage notes. Free birth plan template for Brownsville families.",
     heroImage: "/images/heroes/brownsville-tx-birth-doula-skyline-v3.webp",
     heroImageAlt: "Silhouette of an expecting mother overlooking Brownsville, Texas at golden hour",
@@ -1430,7 +1430,7 @@ export const cities: Record<string, CityData> = {
   },
   "galveston-tx": {
     stateFull: "Texas",
-    titleTag: "Birth Doula & Birth Plan Support in Galveston, TX | Costs, Medicaid & Local Doulas | True Joy Birthing",
+    titleTag: "Birth Doulas in Galveston, TX: Costs & Medicaid | TJB",
     metaDescription: "Birth doula support in Galveston, TX: $700-$1800 typical costs, hospital delivery policies, local doulas, and Medicaid coverage notes. Free birth plan template for Galveston families.",
     heroImage: "/images/heroes/galveston-tx-birth-doula-skyline-v4.webp",
     heroImageAlt: "Silhouette of an expecting mother overlooking Galveston, Texas at golden hour",
@@ -1529,7 +1529,7 @@ export const cities: Record<string, CityData> = {
   },
   "garland-tx": {
     stateFull: "Texas",
-    titleTag: "Birth Doula & Birth Plan Support in Garland, TX | Costs, Medicaid & Local Doulas | True Joy Birthing",
+    titleTag: "Birth Doulas in Garland, TX: Costs & Medicaid | TJB",
     metaDescription: "Birth doula support in Garland, TX: $800-$2400 typical costs, hospital delivery policies, local doulas, and Medicaid coverage notes. Free birth plan template for Garland families.",
     heroImage: "/images/heroes/garland-tx-birth-doula-skyline-v3.webp",
     heroImageAlt: "Silhouette of an expecting mother overlooking Garland, Texas at golden hour",

@@ -88,7 +88,12 @@ const groups = { pages: [], blog: [], cities: [] };
 // greenville-sc + cumming-ga graduated 2026-09-16 after missing provider
 // photos were sourced and verified (visual-preflight pass, commit [preflight: pass]).
 const SKELETON_SLUGS = new Set(['bellevue-wa','cary-nc','cedar-park-tx','concord-nc','costa-mesa-ca','new-braunfels-tx','pearland-tx','san-marcos-tx','victoria-tx']);
+// 2026-10-27 SiteGuru loop: slugs that 301 to another page (see public/_redirects)
+// must not appear in sitemaps — Google dedupes redirected URLs and they waste
+// crawl budget; SiteGuru's sitemap audit flagged miami-fl (redirects to fl/).
+const REDIRECTED_SLUGS = new Set(['miami-fl']);
 let skeletonExcluded = 0;
+let redirectedExcluded = 0;
 for (const u of allUrls) {
   const cat = categorize(u.loc);
   const slugMatch = cat === 'cities' ? u.loc.match(/\/birth-support\/([^/]+)\//) : null;
@@ -96,9 +101,14 @@ for (const u of allUrls) {
     skeletonExcluded++;
     continue;
   }
+  if (slugMatch && REDIRECTED_SLUGS.has(slugMatch[1])) {
+    redirectedExcluded++;
+    continue;
+  }
   groups[cat].push(u);
 }
 if (skeletonExcluded > 0) console.log(`  ⚑ excluded ${skeletonExcluded} skeleton pages from sitemap-cities.xml`);
+if (redirectedExcluded > 0) console.log(`  ⚑ excluded ${redirectedExcluded} redirected city URLs from sitemap-cities.xml`);
 
 const now = new Date().toISOString();
 const base = 'https://truejoybirthing.com';
