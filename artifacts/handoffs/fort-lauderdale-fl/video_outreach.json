@@ -1,0 +1,59 @@
+{
+  "slug": "fort-lauderdale-fl",
+  "stage": "video_outreach",
+  "produced_at": "2026-10-27T05:56:00Z",
+  "worker_model": "Kit (session agent, glm-5.3-flash) \u2014 Jeff-directed finish of fort-lauderdale-fl page; video_outreach executed directly per tjb-city-video-pipeline skill (video scope is never delegated)",
+  "notes": "Full video_outreach cycle: scene data authored from live cities.ts block (4 verified doulas, Broward Health MC + maternity-closure note, Hollywood Birth Center Margate, FL Medicaid covers branch); 13-scene Voxtral/Shelbi TTS master 367.52s; pre-render gate ALL PASSED (2 medium warnings = shipped pasadena pattern: scroll intro + portraits; skyline hook art intentional); render 6:07 40MB mp4; 13 stills vision-verified (real photos/prices, no blanks); thumbnail via tjb-generate-asset.sh + vision gate (all 5 template elements present); YouTube upload qIP2Z0PvC_4 auto-appended to video-embeds.ts, thumbnail uploaded (maxres 144KB), playlists Florida+All-City added; deploy.sh live probe PASS; outreach via tjb-batch-outreach.py build: 3 emails entered the sanctioned tjb-outreach-send.py pipeline in quiet-hours mode \u2014 status 'scheduled': drafts created in the sender's Gmail, flushed for real-send by the 8AM scheduled-draft-flush cron (05:44Z build ran during quiet hours). NOT yet 'sent' at contract time; flush cron completion converts them. 1 blocked (MotheRetreat no email on file).",
+  "sources": [
+    {
+      "title": "cities.ts fort-lauderdale-fl block (enrich verified 2026-10-26)",
+      "url": "src/data/cities.ts",
+      "quote": "4 localDoulas with published pricing, midwifeInfo CNM/CPM FL Statute 467, hospitals Broward Health MC + Holy Cross (maternity closed 2022), birth center Hollywood Birth Center Margate"
+    },
+    {
+      "title": "YouTube upload log",
+      "url": "https://youtu.be/qIP2Z0PvC_4",
+      "quote": "video 38.2MB uploaded 100%, thumbnail uploaded, embed appended to video-embeds.ts line 2144, playlists 'Florida Birth Guides' + 'All City Birth Guides'"
+    },
+    {
+      "title": "tjb-outreach-send-log.jsonl",
+      "url": "/Users/socializerender/.hermes/logs/tjb-outreach-send-log.jsonl",
+      "quote": "2026-10-27T05:44:06Z amber@hummingbirdbirthing.com VALID; 05:44:31Z info@zenmamalove.com role-based-with-caution; 05:44:53Z sereneagato@gmail.com catch-all; MotheRetreat blocked no-email"
+    },
+    {
+      "title": "deploy.sh live probe",
+      "url": "https://truejoybirthing.com/birth-support/fort-lauderdale-fl/",
+      "quote": "HTTP 200, 24 images, 1 video embed (qIP2Z0PvC_4) playable \u2014 LIVE CONTENT VERIFIED"
+    }
+  ],
+  "video_file": "out/fort-lauderdale-fl-city-guide.mp4",
+  "video_mb": 38.2,
+  "youtube_id": "qIP2Z0PvC_4",
+  "thumbnail_path": "public/images/yt-thumb-fort-lauderdale-fl.png",
+  "embed_verified": true,
+  "outreach": [
+    {
+      "provider": "Amber Marie (Hummingbird Birth)",
+      "status": "queued",
+      "to": "amber@hummingbirdbirthing.com",
+      "message_id": "tjb-outreach-send-log 2026-10-27T05:44:06Z status=scheduled (quiet-hours draft, 8AM flush cron delivers)"
+    },
+    {
+      "provider": "Martha (Zen Mama Love)",
+      "status": "queued",
+      "to": "info@zenmamalove.com",
+      "message_id": "tjb-outreach-send-log 2026-10-27T05:44:31Z status=scheduled (quiet-hours draft) role-based sent-with-caution on validation"
+    },
+    {
+      "provider": "Serene Gato (A Serene Birth)",
+      "status": "queued",
+      "to": "sereneagato@gmail.com",
+      "message_id": "tjb-outreach-send-log 2026-10-27T05:44:53Z status=scheduled (quiet-hours draft) catch-all moderate-risk"
+    },
+    {
+      "provider": "MotheRetreat",
+      "status": "blocked",
+      "message_id": "no email on file in cities.ts for provider"
+    }
+  ]
+}

@@ -12,7 +12,7 @@
     {
       "index": 0,
       "verdict": "SUPPORTED",
-      "reason": "The quote is plausible content for the MotheRetreat Fort Lauderdale birth doula page and explicitly lists the claimed package components: two prenatal visits, on-call availability for birth, birth support with no hourly limits, and one postpartum visit.",
+      "reason": "The quote directly lists the package components matching the claim (two prenatal visits, on-call for birth, birth support with no hourly limits, one postpartum visit), and the URL domain/path (motheretreat.com/birth-doula-fort-lauderdale) matches the MotheRetreat Fort Lauderdale doula page topic.",
       "claim": "MotheRetreat's Fort Lauderdale birth doula package is two prenatal visits, on-call for birth, unlimited birth support and one postpartum visit, and the practice serves families across Fort Lauderdale and the Broward coast.",
       "url": "https://motheretreat.com/birth-doula-fort-lauderdale/",
       "quote": "Our Birth Doula Package Includes: Two prenatal visits Continuous virtual support throughout pregnancy On-call availability for birth Birth support with no hourly limits One postpartum visit following "
@@ -20,7 +20,7 @@
     {
       "index": 1,
       "verdict": "SUPPORTED",
-      "reason": "The quote from motheretreat.com directly states the founder became a CAPPA-certified birth doula and childbirth educator, a Doula Link certified postpartum doula, and an AHEC breastfeeding counselor, and that the team speaks English, Russian, and Spanish, matching the claim's subject matter and doma",
+      "reason": "The quote is from the motheretreat.com domain, matches the claim's subject matter about doula certifications (CAPPA, Doula Link, AHEC) and the languages spoken (English, Russian, Spanish), and directly supports the claim.",
       "claim": "MotheRetreat founder Olga Proskuryakova is a CAPPA-certified birth doula and childbirth educator, a Doula Link certified postpartum doula and a breastfeeding counselor (AHEC); the office speaks English, Russian and Spanish.",
       "url": "https://motheretreat.com/",
       "quote": "that is why she became a CAPPA-certified birth doula and childbirth educator, a certified postpartum doula (Doula Link) and a breastfeeding counselor (AHEC), and built a team of professionals who shar"
@@ -28,7 +28,7 @@
     {
       "index": 2,
       "verdict": "SUPPORTED",
-      "reason": "The quote from hummingbirdbirthing.com explicitly lists The Birth Sanctuary starting at $2,500 and Fourth Trimester Luxury starting at $6,000 with 8 nights of overnight newborn care, matching the claim's details and domain.",
+      "reason": "The quote comes from the hummingbirdbirthing.com domain matching Hummingbird Birth, and it directly confirms The Birth Sanctuary starting at $2,500 and the Fourth Trimester Luxury postpartum package starting at $6,000 with 8 nights of overnight newborn care.",
       "claim": "Hummingbird Birth's published birth package The Birth Sanctuary starts at $2,500 and the Fourth Trimester Luxury postpartum package starts at $6,000 with 8 overnight shifts.",
       "url": "https://hummingbirdbirthing.com/",
       "quote": "Birth Support ### The Birth Sanctuary For the family seeking a grounded, empowered birth experience with expert support from the final weeks of pregnancy through the hours after birth. Starting at $2,"
@@ -36,7 +36,7 @@
     {
       "index": 3,
       "verdict": "SUPPORTED",
-      "reason": "The quote is plausible homepage text for a doula service site and directly confirms ProDoula certification, the Miami/Fort Lauderdale/Boca Raton service area, 20+ years of family support, and roughly 20 VBACs supported.",
+      "reason": "The quote from the hummingbirdbirthing.com homepage directly matches every element of the claim \u2014 ProDoula certification, service areas of Miami, Fort Lauderdale and Boca Raton, 20+ years supporting families, and ~20 VBACs supported \u2014 and the birthing-services domain is consistent with a doula named",
       "claim": "Amber Marie is ProDoula-certified, serves Miami, Fort Lauderdale and Boca Raton, and reports 20+ years supporting families and roughly 20 VBACs.",
       "url": "https://hummingbirdbirthing.com/",
       "quote": "Certified by ProDoula Peace of Mind Parenting Certified Adult & Infant CPR Trained Professionally Insured ... Serving Miami, Fort Lauderdale, Boca Raton & surrounding areas \u2014 with you every step of th"
@@ -44,7 +44,7 @@
     {
       "index": 4,
       "verdict": "SUPPORTED",
-      "reason": "The quote is plausible text for the Zen Mama Love pricing page and directly confirms the DELUXE DOULA+BIRTH PHOTOGRAPHY PACKAGE at $3500 & Up, matching the claim's core pricing assertion.",
+      "reason": "The quote is plausible text for the Zen Mama Love doula pricing page and explicitly lists the DELUXE DOULA+BIRTH PHOTOGRAPHY PACKAGE at $3500 & Up, matching the claim's package price, though it does not address the separate $400 Fear Release session.",
       "claim": "Zen Mama Love's published DELUXE DOULA + BIRTH PHOTOGRAPHY package starts at $3,500 and up, with a separate $400 Fear Release session.",
       "url": "https://zenmamalove.com/doula-services-packages-and-pricing/",
       "quote": "ZENMAMALOVE DELUXE DOULA+BIRTH PHOTOGRAPHY PACKAGE $ 3500 & Up One video call prenatal, and 1 in person prenatal meeting at a convenient location to establish relationship and define birth options, cr"
@@ -52,7 +52,7 @@
     {
       "index": 5,
       "verdict": "SUPPORTED",
-      "reason": "The quote from the zenmamalove.com about page directly lists all the claimed credentials \u2014 CAPPA-certified doula, professional birth photographer, certified birth assistant, 200+ families served since 2015, and ICAN membership serving VBAC families \u2014 matching the claim exactly on a plausibly matchin",
+      "reason": "The quote from the zenmamalove.com about page directly lists every element of the claim\u2014CAPPA certification, birth assistant, professional birth photographer, 200+ families since 2015, and ICAN membership serving VBAC families\u2014on a domain plausibly belonging to Martha's doula business.",
       "claim": "Martha is a CAPPA-certified doula, birth assistant and professional birth photographer who has served over 200 families since 2015 and is an ICAN member serving VBAC families.",
       "url": "https://zenmamalove.com/about/",
       "quote": "Martha's Highlights: CAPPA certified Doula Professional Birth Photographer Certified Birth Assistant Has served over 200 families since 2015 Equally comfortable in hospital/out of hospital births Prou"
@@ -60,7 +60,7 @@
     {
       "index": 6,
       "verdict": "SUPPORTED",
-      "reason": "The quote from the bornbir.com/serene-gato page lists every package detail matching the claim: 2-3 prenatal visits, on-call from 37 weeks, continuous labor & birth support, 1 postpartum visit, 6 weeks virtual postpartum support, and a $2,400 USD flat rate.",
+      "reason": "The quote, plausibly from the /serene-gato page on a birth-services domain, lists exactly the package details in the claim: 2-3 prenatal visits, on-call from 37 weeks, continuous labor and birth support, 1 postpartum visit, 6 weeks of virtual postpartum support, and a $2,400 USD flat rate.",
       "claim": "Serene Gato's Birth Doula Package is a $2,400 flat rate covering 2-3 prenatal visits, on-call from 37 weeks, continuous labor and birth support, 1 postpartum visit and 6 weeks of virtual postpartum support.",
       "url": "https://www.bornbir.com/serene-gato",
       "quote": "2-3 prenatal visits, Access to my library of pregnancy, birth, postpartum, and parenthood books, Direct contact information for communication throughout pregnancy, On call from 37 weeks until the birt"
@@ -68,7 +68,7 @@
     {
       "index": 7,
       "verdict": "SUPPORTED",
-      "reason": "The quote is from Serene Gato's own about page and directly corroborates the listed credentials with matching institutions and dates (USF 2015, DONA/The Birth Company 2019, HBCE 2020, BEST 2021, DCC 2021, Spinning Babies 2023), with the text truncated mid-list at the breastfeeding credential, consis",
+      "reason": "The quote is a detailed credentials list that plausibly appears on Serene Gato's own about page and directly corroborates the specific credentials and years in the claim (USF B.S., DONA/The Birth Company 2019, HypnoBirthing 2020, BEST 2021, DCC 2021, Spinning Babies 2023), with the breastfeeding cre",
       "claim": "Serene Gato's credentials include a B.S. in Health Sciences from USF, DONA training through The Birth Company (2019), HypnoBirthing Childbirth Educator certification (2020), BEST Doula certification (2021), DCC board membership (2021), Spinning Babies (2023), Certified Breastfeeding Educator & Counselor (2024) and BLS through the American Heart Association (April 2026).",
       "url": "https://serenegato.com/about/",
       "quote": "B.S. in Health Sciences from USF Graduated in 2015 with a dual concentration in Biological Sciences & Social Behavioral Sciences ... Trained via DONA International Completed a DONA-approved doula trai"
@@ -76,7 +76,7 @@
     {
       "index": 8,
       "verdict": "SUPPORTED",
-      "reason": "The quote is from the person's own about page (serenegato.com/about/) and explicitly states she lives in Tamarac, Florida, is a 2nd generation homebirth mom, and serves all of Broward County plus parts of Miami-Dade and Palm Beach Counties, matching every element of the claim.",
+      "reason": "The quote from the about page on serenegato.com directly states she lives in Tamarac, Florida, is a 2nd generation homebirth mom, and serves Broward County plus parts of Miami-Dade and Palm Beach Counties, matching the claim exactly.",
       "claim": "Serene Gato lives in Tamarac, Florida, is a second-generation home birth mom, and serves all of Broward County plus parts of Miami-Dade and Palm Beach Counties.",
       "url": "https://serenegato.com/about/",
       "quote": "I currently live in Tamarac, Florida as a wife and 2nd generation homebirth mom to a beautiful little boy. I serve all of Broward county, as well as parts of Miami-Dade and Palm Beach Counties."
@@ -84,7 +84,7 @@
     {
       "index": 9,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from the hospital's own official location page and directly states the exact address, 24/7 hours, largest-hospital status, 606 beds, and 85+ years of service, matching every element of the claim.",
+      "reason": "The quote comes from the hospital's official location page and directly states the exact address, 24/7 hours, 606 beds, largest-hospital status, and 85+ years of service, fully matching the claim.",
       "claim": "Broward Health Medical Center is at 1600 S. Andrews Ave, Fort Lauderdale, FL 33316, is Fort Lauderdale's largest hospital with 606 beds and more than 85 years serving the community, and is open 24/7.",
       "url": "https://www.browardhealth.org/locations/broward-health-medical-center",
       "quote": "1600 S. Andrews Ave, Fort Lauderdale, FL 33316Hours Today: Open 24/7 ... Broward Health Medical Center is Fort Lauderdale's largest hospital, with 606 beds and more than 85 years serving this communit"
@@ -92,7 +92,7 @@
     {
       "index": 10,
       "verdict": "SUPPORTED",
-      "reason": "The quote is from the hospital's own location page (holy-cross.com) and directly states the exact address and phone number cited in the claim.",
+      "reason": "The quote is from the Holy Cross Hospital location page on the holy-cross.com domain and directly states the exact address (4725 N Federal Hwy, Fort Lauderdale, FL 33308) and phone number (954-492-5768) claimed.",
       "claim": "Holy Cross Hospital is at 4725 N Federal Hwy, Fort Lauderdale, FL 33308, and its main phone line is 954-492-5768.",
       "url": "https://www.holy-cross.com/location/holy-cross-hospital-fl-0",
       "quote": "4725 N Federal Hwy\n\nFort Lauderdale, FL33308\n\n954-492-5768"
@@ -100,7 +100,7 @@
     {
       "index": 11,
       "verdict": "SUPPORTED",
-      "reason": "The quote plausibly appears on Hollywood Birth Center's facility page and directly supports every element of the claim: operating since 1993, the 513 Melaleuca Drive Margate FL address, full-size beds and soak-in tubs in birth suites, filtered water, aromatherapy, and offering both home and birth ce",
+      "reason": "The quote is from the Hollywood Birth Center facility page and directly confirms every element of the claim: operation since 1993, the 513 Melaleuca Drive Margate FL address, birth suites with full-size beds and soak-in tubs, filtered water, aromatherapy, and offering both home births and birth cent",
       "claim": "Hollywood Birth Center has operated at 513 Melaleuca Drive, Margate, FL 33063 since 1993, with birth suites that have a full-size bed and soak-in tubs, filtered water, aromatherapy and home births as well as birth center births.",
       "url": "https://www.hollywoodbirthcenter.com/the-facility",
       "quote": "Here since 1993, HBC includes luxurious birth suites equipped with full-size bed and roomy soak-in tubs to labor and/or birth in. The water used at our facility is filtered to ensure it is as pure as "
@@ -108,7 +108,7 @@
     {
       "index": 12,
       "verdict": "SUPPORTED",
-      "reason": "The quote plausibly comes from the Hollywood Birth Center staff page and lists owner-midwife Gelena, midwives Dellareece and Olivia, and doulas Kari and Taylor, matching the claim's named staff.",
+      "reason": "The quote is a plausible staff listing from hollywoodbirthcenter.com/staff that names owner-midwife Gelena, midwife Dellareece, Olivia, and doulas/birth assistants Kari and Taylor, matching the claim.",
       "claim": "Hollywood Birth Center's staff page names midwife-owner Gelena, midwives Dellareece and Olivia, and doulas and birth assistants Kari and Taylor.",
       "url": "https://www.hollywoodbirthcenter.com/staff",
       "quote": "Team Midwife Gelena, Owner Midwife Dellareece Olivia Midwife Student/Birth Assistant/Doula Dala Doula Kari Doula Taylor 513 Melaleuca Drive, Margate, FL 33063 | 954-925-4499"
@@ -116,7 +116,7 @@
     {
       "index": 13,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from the Florida AHCA Medicaid policy page specifically about birth center and midwife services, and it directly states that Medicaid reimburses licensed birth centers and midwives for obstetrical services for low-medical-risk pregnant women, matching the claim.",
+      "reason": "The quote directly matches the claim's wording, and the AHCA myflorida.com URL for the birth center and midwife services policy page is exactly where such text would plausibly appear.",
       "claim": "Florida Medicaid reimburses licensed birth centers and midwives providing obstetrical services to pregnant women with low-medical-risk pregnancies.",
       "url": "https://ahca.myflorida.com/medicaid/medicaid-policy-quality-and-operations/medicaid-policy-and-quality/medicaid-policy/medical-and-behavioral-health-coverage-policy/primary-and-preventive-care-policy/birth-center-and-midwife-services.html",
       "quote": "Medicaid reimburses licensed birth centers and midwives that provide obstetrical services for pregnant women with low-medical risk pregnancies."
@@ -124,11 +124,11 @@
     {
       "index": 14,
       "verdict": "SUPPORTED",
-      "reason": "The quote comes from the March of Dimes PeriStats Florida report card URL and explicitly shows the values 30.1 percent for Low-risk Cesarean Birth and 24.5 per 100,000 births for Maternal Mortality Rate, directly matching both figures in the claim.",
+      "reason": "The quote is from the March of Dimes PeriStats Florida report card and lists 30.1 percent for Low-risk Cesarean Birth and 24.5 per 100,000 births for Maternal Mortality Rate, matching the claim's figures for Florida.",
       "claim": "Florida's low-risk cesarean birth rate is 30.1 percent and the maternal mortality rate is 24.5 per 100,000 births.",
       "url": "https://www.marchofdimes.org/peristats/reports/florida/report-card",
       "quote": "30.1 26.6 percent ### Low-risk Cesarean Birth Percentage of Cesarean births for first-time moms, carrying a single baby, positioned head-first, and at least 37 weeks pregnant. ... 24.5 23.5 Per 100,00"
     }
   ],
-  "checked_at": "2026-10-26T14:42:59-06:00"
+  "checked_at": "2026-10-26T23:56:10-06:00"
 }

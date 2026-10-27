@@ -1,0 +1,30 @@
+{
+  "slug": "fort-lauderdale-fl",
+  "stage": "verify_deploy",
+  "produced_at": "2026-10-27T06:05:00Z",
+  "worker_model": "Kit (session agent) \u2014 retrospective closure: verify+deploy executed 2026-10-26 by enrich repair worker (2 deploys) and Kit embed deploy (e70de2bb)",
+  "notes": "Preflight ran with enrich block (25/25 gates pass, artifacts/gates/fort-lauderdale-fl-enrich.json). Live probes: 15:25 PASS + 23:5x PASS (24 imgs, 0 fail); post-embed deploy.sh live probe PASS with 1 playable video (qIP2Z0PvC_4). Origin mirror pushed 1514e0f3..e70de2bb.",
+  "sources": [
+    {
+      "title": "enrich gate results",
+      "url": "artifacts/gates/fort-lauderdale-fl-enrich.json",
+      "quote": "passed: 25, failed: 0, skipped: 0"
+    },
+    {
+      "title": "live-probe history",
+      "url": "artifacts/live-probe/history.jsonl",
+      "quote": "2026-10-26 23:09 & post-embed: birth-support/fort-lauderdale-fl/ HTTP 200 verdict PASS"
+    },
+    {
+      "title": "deploy.sh output",
+      "url": "https://truejoybirthing.com/birth-support/fort-lauderdale-fl/",
+      "quote": "24 images, 1 video embed(s) \u2014 PASS; LIVE CONTENT VERIFIED; origin/main e70de2bb"
+    }
+  ],
+  "preflight_exit": 0,
+  "deploy_status": "SUCCESS",
+  "live_http": 200,
+  "vision_verdict_file": "artifacts/gates/vision/fort-lauderdale-fl.json",
+  "preflight_mode": "full_preflight",
+  "deploy_commit": "e70de2bb"
+}

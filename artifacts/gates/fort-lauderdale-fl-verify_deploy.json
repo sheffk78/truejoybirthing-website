@@ -1,0 +1,19 @@
+{
+  "slug": "fort-lauderdale-fl",
+  "stage": "verify_deploy",
+  "mode": "humanize_gate",
+  "exit_code": 1,
+  "passed": 0,
+  "failed": 1,
+  "skipped": 0,
+  "results": {
+    "H-HUMANIZE": {
+      "status": "FAIL",
+      "detail": "scanner verdict HIGH RISK \u2014 rework prose per skills/humanize-content/SKILL.md before deploy (verdict: HIGH RISK)"
+    },
+    "H-SHAPE": {
+      "status": "PASS",
+      "detail": "no sibling pair >70% shape"
+    }
+  }
+}
