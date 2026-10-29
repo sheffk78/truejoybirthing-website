@@ -33,7 +33,7 @@ CHAPTERS:
 
 True Joy Birthing helps first-time moms build their birth plans, find local support, and walk into the hospital prepared — all for free.
 
-Created by Shelbi Kohler, certified birth doula.
+Created by Shelbi Kohler, birth doula.
 
 #dallasdoula #dallastxbirth #texasmedicaid #birthplan #doula #pregnancydallas""",
     'tags': [

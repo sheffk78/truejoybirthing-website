@@ -9,7 +9,7 @@ featuredImage: "/images/cardinal-movements/cardinal-01-engagement-v2.webp"
 layout: "../../layouts/PostLayout.astro"
 ---
 
-If you have ever wondered what is actually happening inside your pelvis during labor, you are not alone. Most people hear terms like "station" and "fetal descent" from their provider and have no idea what it means. As a certified doula and mom of seven, I have walked alongside hundreds of mothers as their babies made the slow, purposeful trek through the birth canal. Understanding the cardinal movements of labor takes the mystery out of that process and, more importantly, gives you practical ways to help your baby along.
+If you have ever wondered what is actually happening inside your pelvis during labor, you are not alone. Most people hear terms like "station" and "fetal descent" from their provider and have no idea what it means. As a birth doula and mom of seven, I have walked alongside hundreds of mothers as their babies made the slow, purposeful trek through the birth canal. Understanding the cardinal movements of labor takes the mystery out of that process and, more importantly, gives you practical ways to help your baby along.
 
 When you know what your baby is doing and why, you can choose birthing positions that actually work with those movements instead of against them. That is where the real value is. If you are working through your preferences, the <a href="/birth-plan-template/">Joyful Birth Plan</a> tool can help you organize positions and support options that match each stage of labor. Let me walk you through what your baby is up to.
 

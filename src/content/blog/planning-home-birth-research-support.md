@@ -11,7 +11,7 @@ layout: "../../layouts/PostLayout.astro"
 
 Have you ever thought about having your baby at home? With my third baby, I remember sitting on my couch, huge and uncomfortable, wondering if I should just stay right there when the time came instead of driving to the hospital. The idea of laboring in my own space, surrounded by my own things, felt so right. But I also had a million questions and a lot of anxiety about stepping outside the norm.
 
-As a certified birth doula and a mom of seven, I've seen a lot of different birth scenarios. I've supported mamas in bright hospitals, quiet birth centers, and busy living rooms. Every space has its own rhythm and its own challenges. But one thing remains true no matter where you are: you need to feel safe, respected, and in control of what happens to your body.
+As a birth doula and a mom of seven, I've seen a lot of different birth scenarios. I've supported mamas in bright hospitals, quiet birth centers, and busy living rooms. Every space has its own rhythm and its own challenges. But one thing remains true no matter where you are: you need to feel safe, respected, and in control of what happens to your body.
 
 Recently, I was reading a fascinating study out of Sweden about women who planned home births. The researchers looked at online stories from moms to understand what their experiences were really like. The findings really resonated with me, and I think they will for you, too, whether you're planning a home birth or just trying to figure out how to have a more empowered hospital birth.
 

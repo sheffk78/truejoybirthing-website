@@ -2,7 +2,7 @@
 
 You've had a C-section before. Now you're exploring a vaginal birth after cesarean — a VBAC — and you need a birth plan that reflects *that* specific reality. Not a generic template. Not wishful thinking. A plan that acknowledges what the hospital actually requires, what your provider will push back on, and how to hold your ground where it matters.
 
-I'm Shelbi, a certified birth doula and mom of seven. I've walked alongside VBAC moms in hospitals across Texas, and I want to help you build a plan that's clear, realistic, and truly yours.
+I'm Shelbi, a birth doula and mom of seven. I've walked alongside VBAC moms in hospitals across Texas, and I want to help you build a plan that's clear, realistic, and truly yours.
 
 Let's walk through it together.
 
@@ -205,7 +205,7 @@ Not all hospitals do. ACOG recommends that hospitals offering VBAC have the abil
 `VBAC Birth Plan: What to Include, What to Skip & Questions to Ask | True Joy Birthing`
 
 ### Meta Description
-`Writing a VBAC birth plan? Here's what to include, what to skip, questions to ask your provider, and how a doula supports your vaginal birth after cesarean — from a certified Texas birth doula.`
+`Writing a VBAC birth plan? Here's what to include, what to skip, questions to ask your provider, and how a doula supports your vaginal birth after cesarean — from a Texas birth doula.`
 
 ### Breadcrumb Path
 Home > Birth Plans > VBAC Birth Plan

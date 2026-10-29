@@ -11,7 +11,7 @@ layout: "../../layouts/PostLayout.astro"
 
 I hear this question every single week: "Can I get my doula paid for through insurance?" And honestly, the answer is more encouraging than most people expect — but you have to know how to work the system.
 
-As a mom of seven and a certified doula, I've helped hundreds of families chase down reimbursement, navigate HSA/FSA accounts, and figure out what their plans actually cover. It takes some paperwork and a few phone calls, but it's absolutely worth doing. Let me walk you through exactly how to find out what's covered and how to get money back in your pocket.
+As a mom of seven and a birth doula, I've helped hundreds of families chase down reimbursement, navigate HSA/FSA accounts, and figure out what their plans actually cover. It takes some paperwork and a few phone calls, but it's absolutely worth doing. Let me walk you through exactly how to find out what's covered and how to get money back in your pocket.
 
 ## Can Insurance Actually Cover Doula Care?
 
