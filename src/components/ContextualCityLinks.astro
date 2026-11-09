@@ -41,12 +41,19 @@ if (currentSlug) {
   const stateLower = currentState || (currentData?.state || '').toLowerCase();
 
   // 1. Same-state cities (excluding current)
+  // miami-fl 301s to the FL state hub (public/_redirects). Internal links must
+  // go straight to the hub so equity lands on the destination page. Keep its
+  // listing visible but point other-city pages' chips at the FL hub instead.
   const sameStateCities: { slug: string; state: string; label: string }[] = [];
   for (const s of citySlugs) {
     if (s === currentSlug) continue;
     const cd = cities[s];
     if (cd && cd.state.toLowerCase() === stateLower) {
-      sameStateCities.push({ slug: s, state: stateLower, label: cd.city });
+      const linkSlug = s === 'miami-fl' ? 'fl' : s;
+      if (linkSlug === 'fl' && sameStateCities.some((c) => c.slug === 'fl')) continue;
+      // miami-fl surfaces on other FL city pages as a Florida-hub chip — the
+      // hub's real anchor pattern (same as stateHubs: label 'Florida'), not 'Miami'.
+      sameStateCities.push({ slug: linkSlug, state: stateLower, label: linkSlug === 'fl' ? (stateNames[stateLower] || 'Florida') : cd.city });
     }
   }
 
@@ -57,6 +64,8 @@ if (currentSlug) {
       if (nSlug === currentSlug) continue;
       const nd = cities[nSlug];
       if (nd && nd.state.toLowerCase() !== stateLower) {
+        // miami-fl redirects to the FL hub — link there directly (F1).
+        if (nSlug === 'miami-fl') continue;
         nearbyFromData.push({
           slug: nSlug,
           state: nd.state.toLowerCase(),

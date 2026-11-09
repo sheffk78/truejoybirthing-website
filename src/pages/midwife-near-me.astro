@@ -237,7 +237,7 @@ const schema = {
         <h3 class="text-lg font-semibold text-tjb-charcoal mb-4" style="font-family: 'Cormorant Garamond', Georgia, serif;">More Cities — Doula & Hospital Info Available</h3>
         <p class="text-sm text-tjb-gray mb-4">We're building midwife directories for these cities. Each city page already has doula listings, hospital policies, Medicaid info, and birth planning tools. <a href="/home-birth-midwife/" class="text-tjb-lavender-600 hover:underline">Read our home birth midwife guide</a> while we add more midwife listings.</p>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
-          {citiesWithoutMidwives.map((c) => (
+          {citiesWithoutMidwives.filter((c) => c.slug !== 'miami-fl').map((c) => (
             <a href={`/birth-support/${c.slug}/`} class="text-center border border-tjb-lavender-200/50 rounded-lg px-3 py-2 text-sm text-tjb-charcoal hover:border-tjb-lavender-400 hover:bg-tjb-lavender-50 transition">
               {c.city}
             </a>

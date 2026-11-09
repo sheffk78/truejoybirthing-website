@@ -155,7 +155,7 @@ const schema = {
           '@type': 'ListItem',
           position: i + 1,
           name: `Birth Support in ${city.city}, ${city.state}`,
-          url: `https://truejoybirthing.com/birth-support/${city.slug}/`,
+          url: `https://truejoybirthing.com/birth-support/${city.slug === 'miami-fl' ? 'fl' : city.slug}/`,
         })),
       },
     },
@@ -414,7 +414,7 @@ const sortedCities = [...stateCities].sort((a, b) => a.city.localeCompare(b.city
       <p class="text-tjb-gray mb-8">Select your city to see local doula costs, Medicaid details, hospital info, and birth center options.</p>
 
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {sortedCities.map((city) => (
+        {sortedCities.filter((c) => c.slug !== 'miami-fl').map((city) => (
           <a
             href={`/birth-support/${city.slug}/`}
             class="block border border-tjb-lavender-200 rounded-xl p-5 hover:border-tjb-rose-400 hover:bg-tjb-rose-50/20 transition group"
