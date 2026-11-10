@@ -17,6 +17,7 @@ Usage:
     python3 tjb-pipeline-state.py fail {slug} {stage} {reason}  # Mark stage failed
     python3 tjb-pipeline-state.py status {slug}        # Show current state
     python3 tjb-pipeline-state.py unblock {slug}       # Clear blocked status, allow retry
+    python3 tjb-pipeline-state.py review {slug} approved|changes [note]  # Record Jeff's human review (only release path)
     python3 tjb-pipeline-state.py gates {slug} {stage} {gate_results_json}  # Record gate results for a stage
 
 State file: ~/.hermes/skills/productivity/tjb-city-orchestrator/states/{slug}.json
@@ -31,18 +32,29 @@ import time
 from pathlib import Path
 
 STATES_DIR = Path(os.environ.get("TJB_STATES_DIR", "/Users/socializerender/.hermes/skills/productivity/tjb-city-orchestrator/states"))
-PROBE_SCRIPT = Path(os.environ.get("TJB_PROBE_SCRIPT", "/Users/socializerender/.hermes/skills/productivity/tjb-city-orchestrator/scripts/probe-city-candidates.py"))
+# 2026-11-10 city-fix (JOB-20261110-CITYFIX): the 2026-11-05 skill consolidation
+# retired ~/.hermes/skills/productivity/tjb-city-orchestrator/ (now under
+# skills/.archive/). Legacy defaults below resolve there first, then fall back
+# to the archived copies so probe/recurring-mistakes never silently 404 again.
+_CANON_ORCH = Path(os.environ.get(
+    "TJB_ORCH_DIR",
+    "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website"))
+_ARCH_ORCH = Path("/Users/socializerender/.hermes/skills/.archive/tjb-city-orchestrator")
+def _orch_path(env, product):
+    return Path(os.environ.get(env, str(_CANON_ORCH / product)))
 # One canonical project root; both legacy locations currently resolve to the same tree.
-PROJECT_DIR = os.environ.get("TJB_PROJECT_DIR", "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website")
-RECURRING_MISTAKES_PATH = Path(os.environ.get("TJB_RECURRING_MISTAKES", "/Users/socializerender/.hermes/skills/productivity/tjb-city-orchestrator/references/recurring-mistakes-block.md"))
+PROJECT_DIR = os.environ.get("TJB_PROJECT_DIR", str(_CANON_ORCH))
+PROBE_SCRIPT = _orch_path("TJB_PROBE_SCRIPT", "scripts/probe-city-candidates.py") if (_CANON_ORCH / "scripts/probe-city-candidates.py").exists() else Path(os.environ.get("TJB_PROBE_SCRIPT", str(_ARCH_ORCH / "scripts/probe-city-candidates.py")))
+RECURRING_MISTAKES_PATH = _orch_path("TJB_RECURRING_MISTAKES", "references/recurring-mistakes-block.md") if (_CANON_ORCH / "references/recurring-mistakes-block.md").exists() else Path(os.environ.get("TJB_RECURRING_MISTAKES", str(_ARCH_ORCH / "references/recurring-mistakes-block.md")))
 BUILD_CHECKPOINT_DIR = Path(os.environ.get("TJB_BUILD_CHECKPOINT_DIR", str(Path(PROJECT_DIR) / "artifacts" / "build-checkpoints")))
 
-# ─── 4-Stage Model ───
+# ─── Stage Model (2026-11-10: human review hold inserted before complete) ───
 STAGE_ORDER = [
     "build",
     "enrich",
     "verify_deploy",
     "video_outreach",
+    "human_review_required",   # Jeff's desk-review hold: outreach release waits for his check-off
     "complete"
 ]
 
@@ -72,7 +84,117 @@ STAGE_ATTEMPT_LIMITS = {
     "enrich": 5,      # enrichment is complex, allow more attempts
     "verify_deploy": 3,
     "video_outreach": 3,
+    "human_review_required": 999999,  # human gate — never machine-blocked; releases on review approval only
 }
+
+# ─── 2026-11-10 city-fix (JOB-20261110-CITYFIX): BUDGET-DEATH SPLIT grafted ───
+# Grafted from the archived v2.2 (skills/.archive/tjb-city-orchestrator) — the
+# canonical v2.1 lost it in the Oct-1 merge, so dispatcher hard-cap kills
+# ("BUDGET_DEATH:" reasons) burned the BLOCKING attempt counter and drove
+# healthy-but-slow cities to auto-block (BUDGET_DEATH-BANKED rows all failed
+# to bank: 5/6 in the dispatch log). Contract identical to v2.2:
+#
+#   BUDGET DEATH — lane killed at its time/turn cap AND banked fresh durable
+#   artifacts this attempt → counts against a separate near-non-blocking
+#   budget counter; the blocking attempt counter is rolled back. Resumable.
+#   EARLY DEATH — crash / no tools / nothing banked → blocking attempt per
+#   STAGE_ATTEMPT_LIMITS; 3-of-those = block. Honesty kept: history +
+#   stages_failed ALWAYS record the fail either way.
+BUDGET_ATTEMPT_LIMITS = {
+    "build": 10,
+    "enrich": 10,
+    "verify_deploy": 10,
+    "video_outreach": 10,
+}
+
+BUDGET_ARTIFACT_MARKERS = [
+    "artifacts/handoffs/",            # handoff contract (build/enrich/verify)
+    "artifacts/build-checkpoints/",   # research-findings.json, scene plans
+    "artifacts/eval/",
+    "public/cities/",                 # built page bundle (pre-deploy)
+    "public/videos/",                 # rendered video chain
+]
+
+BUDGET_DEATH_PREFIX = "BUDGET_DEATH:"
+
+BUDGET_EVIDENCE_ROOTS = [
+    "artifacts",
+    "public",
+]
+
+EVID_TOKEN = "EVID:"
+
+BUDGET_DEATH_SUFFIX = (
+    " (budget death — lane hit its run cap with progress banked on disk; NOT "
+    "counted as a blocking stage attempt; resumed lane continues from the "
+    "banked artifacts)"
+)
+
+
+def _budget_death_with_artifacts(slug, stage, reason, state):
+    """Return (is_budget_death_with_fresh_artifacts, evidence_list).
+
+    Classification contract (grafted verbatim from archived v2.2):
+      * BUDGET_DEATH: prefix (emitted by the dispatcher/lane planner for a
+        lane killed at its run budget) → candidate budget death.
+      * Reason carries "budget" AND ("time cap" OR "exit 124"/"-NOATTEMPT") —
+        the dispatcher's own hard-cap phrasing for the same condition →
+        candidate too.
+      * Anything else (clean evidence-backed fail, OUTREACH-PERMANENT, plain
+        reason) is an EARLY/REAL death and counts as a blocking attempt.
+      * A candidate only BECOMES a budget death when fresh durable evidence
+        from THIS lane session exists on disk (mtime >= attempt_started_at,
+        when the state records it). No fresh artifacts = the lane 'banked'
+        nothing → counts as a real failure. This keeps the honest-failure
+        record in both cases; only the blocking behavior differs.
+      * Legacy states without attempt_started_at fall back to the state file
+        mtime minus 1h tolerance (v2.1 has no stamp-attempt writer unless the
+        dispatcher's stamp-attempt call succeeds; cutoff 0 = everything fresh,
+        which is the honest default for a first attempt).
+    """
+    r = str(reason or "")
+    low = r.lower()
+    cap_phrases = ("time cap", "run cap", "budget cap", "budget exhausted", "124")
+    candidate = r.startswith(BUDGET_DEATH_PREFIX) or (
+        "budget" in low and any(p in low or p in r for p in cap_phrases)
+    )
+    if not candidate:
+        return False, []
+
+    project = Path(os.environ.get("TJB_PROJECT_DIR", PROJECT_DIR))
+    if not project.exists():
+        return False, []
+    cutoff = state.get("attempt_started_at", 0)
+    try:
+        cutoff = int(cutoff)
+    except (TypeError, ValueError):
+        cutoff = 0
+    if cutoff <= 0:
+        try:
+            cutoff = int((STATES_DIR / f"{slug}.json").stat().st_mtime) - 3600
+        except OSError:
+            cutoff = 0
+
+    fresh = []
+    markers = tuple(m.lower() for m in BUDGET_ARTIFACT_MARKERS)
+    for root in BUDGET_EVIDENCE_ROOTS:
+        base = project / root
+        if not base.is_dir():
+            continue
+        for p in base.rglob("*"):
+            if p.is_dir() or p.name.startswith(".") or p.name.endswith(".tmp"):
+                continue
+            rel = p.relative_to(project).as_posix().lower()
+            seg = rel.split("/")
+            if f"{seg[0]}/{seg[1]}/" not in markers:
+                continue
+            try:
+                mt = p.stat().st_mtime
+            except OSError:
+                continue
+            if mt >= cutoff - 60:  # 60s clock-skew tolerance
+                fresh.append(p.relative_to(project).as_posix())
+    return bool(fresh), fresh[:10]
 
 # Stage-specific subagent context
 STAGE_CONTEXTS = {
@@ -142,6 +264,14 @@ STAGE_CONTEXTS = {
         ),
         "toolsets": ["terminal", "file", "vision"],
         "gates": ["pre_render_gate", "video_file_exists", "youtube_upload", "youtube_thumbnail", "video_embedded", "videoobject_schema", "outreach_sent_or_blocked"],
+    },
+    # 2026-11-10: human review hold (Jeff's desk check-off). No worker context —
+    # this stage is released only by `review <slug> approved|changes`, never machine-advanced.
+    "human_review_required": {
+        "skill": "tjb-city-pipeline",
+        "goal_template": "HUMAN REVIEW HOLD for {slug}: Jeff reviews the live page and checks off the desk task. Machine advancement is prohibited.",
+        "toolsets": [],
+        "gates": [],
     },
 }
 
@@ -415,6 +545,23 @@ def cmd_next(slug: str):
         }, indent=2))
         return
 
+    # 2026-11-10: human review hold — never emit worker context for the review
+    # stage. The city waits for Jeff's desk check-off (`review <slug> approved`).
+    if stage == "human_review_required":
+        changes = state.get("review_changes") or {}
+        print(json.dumps({
+            "action": "human_review_required",
+            "slug": slug,
+            "message": (
+                f"Human review hold for {slug}. Jeff reviews the live page and checks off "
+                "the desk task; release path is: tjb-pipeline-state.py review "
+                f"{slug} approved|changes <note>. No worker should run this stage."
+            ),
+            "jeff_note_recorded": (changes.get("note") or "")[:500] or None,
+            "stages_completed": state.get("stages_completed", []),
+        }, indent=2))
+        return
+
     ctx = STAGE_CONTEXTS.get(stage)
     if not ctx:
         # Try old-to-new mapping
@@ -461,7 +608,7 @@ def cmd_next(slug: str):
 Your scope is ONE stage for ONE city. Do not attempt other stages or cities.
 
 CITY: {slug}
-STAGE: {stage} (stage {get_stage_index(stage) + 1} of 4)
+STAGE: {stage} (stage {get_stage_index(stage) + 1} of {len(STAGE_ORDER) - 1})
 PROJECT DIR: {PROJECT_DIR}
 
 ## What to do
@@ -789,8 +936,15 @@ def cmd_done(slug: str, stage: str):
     else:
         next_stage = STAGE_ORDER[next_idx]
 
+    # 2026-11-10 review-loop fix: video_outreach no longer lands the city at
+    # 'complete'. The machine HOLDS the city at human_review_required — Jeff's
+    # desk check-off (`review <slug> approved` via the completion monitor) is
+    # the only release path to complete.
+    if actual_stage == "video_outreach" and next_stage == "complete":
+        next_stage = "human_review_required"
+
     # Terminal-index clamp: stage_index must never exceed len(STAGE_ORDER)-1
-    # (terminal cities report index 4 / "complete", never an overflow index).
+    # (terminal cities report the last index / "complete", never an overflow).
     if next_idx > len(STAGE_ORDER) - 1:
         next_idx = len(STAGE_ORDER) - 1
         clamped = True
@@ -820,7 +974,7 @@ def cmd_done(slug: str, stage: str):
     if clamped:
         done_output["clamped"] = True
         done_output["clamped_note"] = (
-            f"stage_index clamped to {len(STAGE_ORDER) - 1} - terminal city reports index 4 / complete"
+            f"stage_index clamped to {len(STAGE_ORDER) - 1} - terminal city reports index {len(STAGE_ORDER) - 1} / complete"
         )
     print(json.dumps(done_output, indent=2))
 
@@ -847,6 +1001,14 @@ def cmd_fail(slug: str, stage: str, reason: str):
     if stage not in STAGE_ORDER:
         actual_stage = OLD_TO_NEW_STAGE.get(stage, stage)
 
+    # Same-stage guard FIRST (2026-10-10 v2.2 ordering fix — grafted 2026-11-10
+    # city-fix): a stale/wrong stage name would increment an old counter and
+    # pre-block an advancing city. Refuse instead of recording.
+    current = state.get("current_stage", "build")
+    if actual_stage != current:
+        print(json.dumps({"error": f"fail stage '{actual_stage}' != current_stage '{current}' — refused (same-stage guard)"}))
+        return
+
     failed = state.get("stages_failed", [])
     failed.append({"stage": actual_stage, "reason": reason, "timestamp": int(time.time())})
     state["stages_failed"] = failed
@@ -865,16 +1027,54 @@ def cmd_fail(slug: str, stage: str, reason: str):
     stage_attempts[actual_stage] = stage_attempts.get(actual_stage, 0) + 1
     state["stage_attempts"] = stage_attempts
 
-    # Check if over attempt limit for this stage
+    # ── 2026-11-10 city-fix: BUDGET-DEATH SPLIT (grafted from archived v2.2) ──
+    # A lane killed at its time/turn cap WITH fresh banked artifacts this
+    # attempt counts against a separate near-non-blocking budget counter;
+    # the blocking attempt counter is rolled back to the pre-increment value.
+    # Honesty kept: history + stages_failed above ALWAYS record this fail.
+    is_budget, evidence = _budget_death_with_artifacts(slug, actual_stage, reason, state)
+    budget_attempts = state.get("budget_attempts", {})
+    if is_budget:
+        budget_attempts[actual_stage] = budget_attempts.get(actual_stage, 0) + 1
+        state["budget_attempts"] = budget_attempts
+        stage_attempts[actual_stage] = max(0, stage_attempts[actual_stage] - 1)
+        state["stage_attempts"] = stage_attempts
+
+    # Check if over attempt limit for this stage (only REAL deaths count)
     limit = STAGE_ATTEMPT_LIMITS.get(actual_stage, 3)
     attempts = stage_attempts[actual_stage]
+    blocked_flag = attempts >= limit
 
-    if attempts >= limit:
+    # 2026-10-07 v2.2 OUTREACH-PERMANENT rule (grafted): verified dead-ends
+    # (EVID: token REQUIRED) block on first fail instead of burning 3 lanes.
+    permanent = reason.startswith("OUTREACH-PERMANENT:") and EVID_TOKEN in reason
+
+    if permanent:
+        state["blocked"] = True
+        state["blocked_reason"] = (
+            f"Stage '{actual_stage}' PERMANENTLY blocked (verified dead-end). "
+            f"Last reason: {reason}. "
+            "Unblock ONLY if new provider emails are found."
+        )
+    elif blocked_flag:
         state["blocked"] = True
         state["blocked_reason"] = (
             f"Stage '{actual_stage}' has failed {attempts} times (limit: {limit}). "
             f"Last reason: {reason}. Use 'unblock' command to retry."
         )
+    elif is_budget:
+        budget_total = budget_attempts[actual_stage]
+        budget_limit = BUDGET_ATTEMPT_LIMITS.get(actual_stage, 10)
+        state["budget_death_streak"] = budget_total
+        state["budget_evidence"] = evidence
+        if budget_total >= budget_limit:
+            state["budget_escalate"] = True  # recap surfaces this; lane planner keeps scheduling
+        reason = reason + BUDGET_DEATH_SUFFIX
+        # Annotate BOTH honest records identically (forensics grep these).
+        if state.get("stages_failed"):
+            state["stages_failed"][-1]["reason"] = reason
+        if state.get("history"):
+            state["history"][-1]["reason"] = reason
 
     state["updated_at"] = int(time.time())
     save_state(slug, state)
@@ -887,7 +1087,12 @@ def cmd_fail(slug: str, stage: str, reason: str):
         "attempts": attempts,
         "limit": limit,
     }
-    if attempts >= limit:
+    if is_budget:
+        response["budget_death"] = True
+        response["budget_attempts"] = budget_attempts.get(actual_stage, 0)
+        response["budget_limit"] = BUDGET_ATTEMPT_LIMITS.get(actual_stage, 10)
+        response["budget_evidence"] = evidence
+    if state.get("blocked", False):
         response["blocked"] = True
         response["blocked_reason"] = state["blocked_reason"]
     print(json.dumps(response, indent=2))
@@ -908,7 +1113,6 @@ def cmd_unblock(slug: str):
     if not state:
         print(json.dumps({"error": f"No state file for {slug}. Run init first."}))
         return
-
     state["blocked"] = False
     state["blocked_reason"] = None
     state["updated_at"] = int(time.time())
@@ -926,6 +1130,236 @@ def cmd_unblock(slug: str):
         "stage": current_stage,
         "message": f"Unblocked. Stage '{current_stage}' attempt counter reset to 0."
     }, indent=2))
+
+
+def _review_ledger_path() -> Path:
+    """Path of the review-verdict ledger (env-overridable for sandbox runs)."""
+    return Path(os.path.expanduser(os.environ.get(
+        "TJB_REVIEW_LEDGER",
+        str(Path.home() / ".hermes" / "state" / "tjb-review-verdicts.json"),
+    )))
+
+
+def _review_ledger_append(slug: str, verdict: str, note: str) -> None:
+    """Append an EXPLICIT review verdict to the ledger file (atomic write).
+
+    2026-11-10 ledger-basis bridge: the 179-cohort desk tasks were minted in
+    the dashboard-ledger era (public/city-audit.json) — those cities have NO
+    DAG state file, so the DAG review path cannot record their reviews.
+    This ledger (~/.hermes/state/tjb-review-verdicts.json) is the record.
+    Bridge contract: NO auto-approval surface — every row here traces to a
+    verdict passed explicitly on the command line by a caller acting on
+    Jeff's own check-off. `released`-recording stays with the callers
+    (tjb-review-task-feed / tjb-city-completion-monitor write
+    tjb-review-loop-state.json) — the ledger never releases anything itself.
+    """
+    ledger_path = _review_ledger_path()
+    ledger = {"version": 1, "verdicts": []}
+    if ledger_path.exists():
+        try:
+            loaded = json.loads(ledger_path.read_text())
+            if isinstance(loaded, dict):
+                ledger = loaded
+        except (json.JSONDecodeError, OSError):
+            print(f"review FAILED: review-verdict ledger unreadable (not clobbering) "
+                  f"{ledger_path} — resolve it manually", file=sys.stderr)
+            sys.exit(1)
+    if not isinstance(ledger.get("verdicts"), list):
+        ledger["verdicts"] = []
+    ledger["verdicts"].append({
+        "slug": slug,
+        "verdict": verdict,
+        "note": (note or "")[:500],
+        "at": int(time.time()),
+        "source": "cmd_review/ledger-basis",
+    })
+    ledger["updated_at"] = int(time.time())
+    ledger.setdefault("version", 1)
+    try:
+        ledger_path.parent.mkdir(parents=True, exist_ok=True)
+        tmp = ledger_path.with_suffix(".json.tmp")
+        tmp.write_text(json.dumps(ledger, indent=2))
+        os.replace(str(tmp), str(ledger_path))
+    except OSError as e:
+        print(f"review FAILED: could not write review-verdict ledger {ledger_path}: {e}",
+              file=sys.stderr)
+        sys.exit(1)
+
+
+def _cmd_review_ledger(slug: str, verdict: str, note: str) -> None:
+    """Ledger-basis review path: city has NO DAG state file.
+
+    Used for the 179-cohort desk-review cities minted before the DAG state
+    model existed. Accepts the review ONLY if the slug exists in
+    public/city-audit.json with stage == "complete" AND outreach == true
+    (its content + outreach work is genuinely done — same bar the DAG hold
+    enforces). Records Jeff's explicit verdict to the review-verdict ledger
+    and exits 0 with the exact `review_recorded` action the callers grep.
+    `approved` means released; `changes`/`sent-back` rework verdicts are
+    recorded but release nothing. Unknown/non-cohort cities fail loudly with
+    zero writes. This is NOT a backfill: no state file is ever created.
+    """
+    if verdict not in ("approved", "changes", "sent-back"):
+        print(f"review FAILED (ledger path): unknown verdict '{verdict}'. Usage: "
+              "tjb-pipeline-state.py review <slug> approved|changes|sent-back [note]",
+              file=sys.stderr)
+        sys.exit(1)
+    audit_path = Path(PROJECT_DIR) / "public" / "city-audit.json"
+    if not audit_path.exists():
+        print(f"review FAILED (ledger path): cohort truth file missing: {audit_path}",
+              file=sys.stderr)
+        sys.exit(1)
+    try:
+        audit = json.loads(audit_path.read_text())
+    except (json.JSONDecodeError, OSError) as e:
+        print(f"review FAILED (ledger path): unreadable {audit_path}: {e}", file=sys.stderr)
+        sys.exit(1)
+    entries = audit if isinstance(audit, list) else (
+        audit.get("cities") if isinstance(audit, dict) else None)
+    if not isinstance(entries, list):
+        print(f"review FAILED (ledger path): {audit_path} has unexpected shape "
+              f"(list expected, got {type(audit).__name__})", file=sys.stderr)
+        sys.exit(1)
+    city = next((e for e in entries if isinstance(e, dict) and e.get("slug") == slug), None)
+    if city is None:
+        print(f"review FAILED: '{slug}' is not a cohort city — no public/city-audit.json "
+              "entry. Review is only recorded for cities on the 179-cohort review list.",
+              file=sys.stderr)
+        sys.exit(1)
+    stage = city.get("stage")
+    outreach = city.get("outreach")
+    if not (stage == "complete" and outreach is True):
+        print(f"review FAILED: {slug} is not reviewable yet (city-audit.json: "
+              f"stage={stage}, outreach={outreach}) — review requires stage=complete "
+              "AND outreach=true.", file=sys.stderr)
+        sys.exit(1)
+    released = verdict == "approved"
+    _review_ledger_append(slug, verdict, note)
+    print(json.dumps({
+        "action": "review_recorded",
+        "slug": slug,
+        "verdict": verdict,
+        "basis": "ledger",
+        "ledger_file": str(_review_ledger_path()),
+        "released": released,
+        "note": (note or "")[:500],
+    }, indent=2))
+    sys.exit(0)
+
+
+def cmd_review(slug: str, verdict: str, note: str = "") -> None:
+    """Record Jeff's human review of a completed city page.
+
+    2026-11-10 review-loop fix: video_outreach done no longer lands at
+    'complete' — the machine now holds the city at human_review_required and
+    this command is the ONLY release path:
+      - `review <slug> approved` -> advance to complete (outreach freed)
+      - `review <slug> changes <note>` -> stay held; Jeff's note is recorded
+        for Kit under state["review_changes"] + history
+
+    Two bases, one command (2026-11-10 ledger-basis bridge): a slug WITH a
+    state file takes the DAG path unchanged; a slug with NO state file (the
+    179-cohort desk cities) takes the ledger path _cmd_review_ledger — gated
+    on public/city-audit.json stage=complete AND outreach=true, verdict
+    recorded to ~/.hermes/state/tjb-review-verdicts.json (TJB_REVIEW_LEDGER
+    override), never creating a state file (NOT a backfill). Fails loudly
+    (nonzero exit + stderr) when the slug is unknown/non-cohort — silent
+    failure is the enemy here.
+    Output contract: success prints JSON with "action": "review_recorded";
+    exit 0 = recorded, exit 1 = usage/state error (message on stderr).
+    """
+    if not validate_slug(slug):
+        print(f"review FAILED: invalid slug '{slug}'", file=sys.stderr)
+        sys.exit(1)
+    state_file = STATES_DIR / f"{slug}.json"
+    if not state_file.exists():
+        # 2026-11-10 ledger-basis bridge: no DAG state file -> cohort ledger
+        # path (city-audit.json gate; always exits).
+        _cmd_review_ledger(slug, verdict, note)
+        return
+    # DAG basis from here: state file exists — original DAG path unchanged.
+    if not STATES_DIR.is_dir():
+        print(f"review FAILED: states dir does not exist: {STATES_DIR}", file=sys.stderr)
+        sys.exit(1)
+    state = load_state(slug)
+    if not state:
+        print(f"review FAILED: unreadable state file for '{slug}': {state_file}", file=sys.stderr)
+        sys.exit(1)
+
+    current_stage = state.get("current_stage", "")
+    reviewable = ("human_review_required", "video_outreach", "complete")
+
+    if verdict == "approved":
+        if current_stage not in reviewable:
+            print(f"review FAILED: {slug} is at stage '{current_stage}' "
+                  f"(expected one of {', '.join(reviewable)}). Not recording approval.", file=sys.stderr)
+            sys.exit(1)
+        # Idempotent: re-check-off of an already-complete city just re-records.
+        state["current_stage"] = "complete"
+        state["stage_index"] = get_stage_index("complete")
+        state["max_stage_reached"] = max(state.get("max_stage_reached", 0), state["stage_index"])
+        state["review_status"] = "approved"
+        completed = state.get("stages_completed", [])
+        if "human_review_required" not in completed:
+            completed.append("human_review_required")
+        state["stages_completed"] = completed
+        history = state.get("history", [])
+        history.append({
+            "stage": "human_review_required",
+            "status": "approved",
+            "reviewer": "jeff",
+            "note": (note or "")[:500],
+            "timestamp": int(time.time()),
+        })
+        state["history"] = history
+        state["updated_at"] = int(time.time())
+        save_state(slug, state)
+        print(json.dumps({
+            "action": "review_recorded",
+            "slug": slug,
+            "verdict": "approved",
+            "from_stage": current_stage,
+            "to_stage": "complete",
+            "note": (note or "")[:500],
+        }, indent=2))
+        sys.exit(0)
+
+    if verdict == "changes":
+        if current_stage not in ("human_review_required", "video_outreach"):
+            print(f"review FAILED: {slug} is at stage '{current_stage}' — 'changes' applies to a "
+                  "city holding at human_review_required/video_outreach, not a complete city.", file=sys.stderr)
+            sys.exit(1)
+        state["current_stage"] = "human_review_required"
+        state["stage_index"] = get_stage_index("human_review_required")
+        state["max_stage_reached"] = max(state.get("max_stage_reached", 0), state["stage_index"])
+        state["review_status"] = "changes_requested"
+        state["review_changes"] = {
+            "note": (note or "")[:2000],
+            "at": int(time.time()),
+        }
+        history = state.get("history", [])
+        history.append({
+            "stage": "human_review_required",
+            "status": "changes_requested",
+            "reviewer": "jeff",
+            "note": (note or "")[:500],
+            "timestamp": int(time.time()),
+        })
+        state["history"] = history
+        state["updated_at"] = int(time.time())
+        save_state(slug, state)
+        print(json.dumps({
+            "action": "review_recorded",
+            "slug": slug,
+            "verdict": "changes",
+            "stage": "human_review_required",
+            "note": (note or "")[:500],
+        }, indent=2))
+        sys.exit(0)
+
+    print(f"review FAILED: unknown verdict '{verdict}'. Usage: "
+          "tjb-pipeline-state.py review <slug> approved|changes [note]", file=sys.stderr)
+    sys.exit(1)
 
 
 def cmd_gates(slug: str, stage: str, gate_results_json: str):
@@ -1196,6 +1630,28 @@ def cmd_advance(slug: str, stage: str):
         cmd_fail(slug, stage, reason)
 
 
+def cmd_stamp_attempt(slug: str):
+    """Stamp attempt_started_at=now inside the state (dispatcher calls at lane
+    spawn). Grafted from archived v2.2 by the 2026-11-10 city-fix: v2.1 lacked
+    it, so the budget-death classifier's artifact-freshness cutoff fell back to
+    the state mtime (≈ everything fresh) every time. No-op for blocked,
+    complete, human_review_required, or missing states."""
+    state = load_state(slug)
+    if not state:
+        print(json.dumps({"action": "stamp_attempt", "slug": slug, "stamped": False,
+                          "reason": "no state file"}))
+        return
+    if state.get("blocked", False) or state.get("current_stage") in ("complete", "human_review_required"):
+        print(json.dumps({"action": "stamp_attempt", "slug": slug, "stamped": False,
+                          "reason": "state not active"}))
+        return
+    state["attempt_started_at"] = int(time.time())
+    state["updated_at"] = int(time.time())
+    save_state(slug, state)
+    print(json.dumps({"action": "stamp_attempt", "slug": slug, "stamped": True,
+                      "attempt_started_at": state["attempt_started_at"]}))
+
+
 def cmd_clean_stale():
     """Remove stale/test state files."""
     test_slugs = ["city1-tx", "city2-co", "city3-ny", "city4-fl"]
@@ -1221,13 +1677,14 @@ def cmd_clean_stale():
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: tjb-pipeline-state.py {init|next|done|fail|status|unblock|gates|advance|clean-stale} {slug} [args]")
+        print("Usage: tjb-pipeline-state.py {init|next|done|fail|status|unblock|review|gates|advance|clean-stale} {slug} [args]")
         print("  init {slug}          — Create/reset state, probe for initial stage")
         print("  next {slug}          — Output next stage + subagent context")
         print("  done {slug} {stage}  — Mark stage complete, advance forward")
         print("  fail {slug} {stage} {reason} — Mark stage failed")
         print("  status {slug}        — Show current state")
         print("  unblock {slug}       — Clear blocked status, reset attempt counter")
+        print("  review {slug} approved|changes|sent-back {note} — Record Jeff's human review (only release path; state-file basis = DAG, no state file = 179-cohort ledger basis)")
         print("  gates {slug} {stage} {json} — Record gate results for a stage")
         print("  advance {slug} {stage} — Run per-stage gate, advance only if gate passes (exit 0)")
         print("  clean-stale           — Remove test/stale state files")
@@ -1261,6 +1718,21 @@ def main():
         cmd_status(slug)
     elif command == "unblock":
         cmd_unblock(slug)
+    elif command == "stamp-attempt":
+        cmd_stamp_attempt(slug)
+    elif command == "review":
+        verdict = sys.argv[3] if len(sys.argv) > 3 else ""
+        note = sys.argv[4] if len(sys.argv) > 4 else ""
+        if verdict in ("--help", "-h", "help"):
+            print("Usage: tjb-pipeline-state.py review <slug> approved|changes|sent-back [note]")
+            print("  approved — Jeff approved the page; releases the hold to complete (outreach freed)")
+            print("  changes  — Jeff wants changes; holds at human_review_required, note recorded for Kit")
+            print("  sent-back — ledger-basis rework verdict (no-state cohort cities); recorded, not released")
+            sys.exit(0)
+        if not verdict:
+            print("Error: review requires a verdict argument: approved|changes [note]", file=sys.stderr)
+            sys.exit(1)
+        cmd_review(slug, verdict, note)
     elif command == "gates":
         stage = sys.argv[3] if len(sys.argv) > 3 else ""
         gate_json = sys.argv[4] if len(sys.argv) > 4 else "{}"
