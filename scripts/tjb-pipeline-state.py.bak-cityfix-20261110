@@ -1,0 +1,1436 @@
+#!/usr/bin/env python3
+"""
+TJB Pipeline State Machine v2 — Forward-only 4-stage advancement.
+
+4-Stage Model:
+  Stage 1: BUILD → Gate 1 → Stage 2: ENRICH → Gate 2 → Stage 3: VERIFY+DEPLOY → Gate 3 → Stage 4: VIDEO+OUTREACH → Gate 4
+
+Key change from v1: determine_stage() runs ONLY at init time. After that,
+advancement is strictly forward: next_stage = STAGE_ORDER[current_index + 1].
+No re-probing, no bounce-back.
+
+Usage:
+    python3 tjb-pipeline-state.py init {slug}          # Create/reset state, probe city for initial stage
+    python3 tjb-pipeline-state.py next {slug}          # Output next stage + subagent context
+    python3 tjb-pipeline-state.py done {slug} {stage}  # Mark stage complete, advance forward (no gate check)
+    python3 tjb-pipeline-state.py advance {slug} {stage}  # Run per-stage gate, advance only if passes (preferred)
+    python3 tjb-pipeline-state.py fail {slug} {stage} {reason}  # Mark stage failed
+    python3 tjb-pipeline-state.py status {slug}        # Show current state
+    python3 tjb-pipeline-state.py unblock {slug}       # Clear blocked status, allow retry
+    python3 tjb-pipeline-state.py review {slug} approved|changes [note]  # Record Jeff's human review (only release path)
+    python3 tjb-pipeline-state.py gates {slug} {stage} {gate_results_json}  # Record gate results for a stage
+
+State file: ~/.hermes/skills/productivity/tjb-city-orchestrator/states/{slug}.json
+"""
+
+import json
+import os
+import re
+import subprocess
+import sys
+import time
+from pathlib import Path
+
+STATES_DIR = Path(os.environ.get("TJB_STATES_DIR", "/Users/socializerender/.hermes/skills/productivity/tjb-city-orchestrator/states"))
+PROBE_SCRIPT = Path(os.environ.get("TJB_PROBE_SCRIPT", "/Users/socializerender/.hermes/skills/productivity/tjb-city-orchestrator/scripts/probe-city-candidates.py"))
+# One canonical project root; both legacy locations currently resolve to the same tree.
+PROJECT_DIR = os.environ.get("TJB_PROJECT_DIR", "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrueJoyBirthing/projects/truejoybirthing-website")
+RECURRING_MISTAKES_PATH = Path(os.environ.get("TJB_RECURRING_MISTAKES", "/Users/socializerender/.hermes/skills/productivity/tjb-city-orchestrator/references/recurring-mistakes-block.md"))
+BUILD_CHECKPOINT_DIR = Path(os.environ.get("TJB_BUILD_CHECKPOINT_DIR", str(Path(PROJECT_DIR) / "artifacts" / "build-checkpoints")))
+
+# ─── Stage Model (2026-11-10: human review hold inserted before complete) ───
+STAGE_ORDER = [
+    "build",
+    "enrich",
+    "verify_deploy",
+    "video_outreach",
+    "human_review_required",   # Jeff's desk-review hold: outreach release waits for his check-off
+    "complete"
+]
+
+# Map old 9-stage names to new 4-stage names for backward compat
+# Includes all granular probe sub-stages from probe-city-candidates.py
+OLD_TO_NEW_STAGE = {
+    "needs_research": "build",
+    "needs_enrichment": "enrich",
+    "needs_images": "build",        # images are part of build stage now
+    "needs_preflight": "verify_deploy",
+    "needs_deploy": "verify_deploy",
+    "needs_outreach": "video_outreach",
+    "needs_video": "video_outreach",
+    "needs_embed": "video_outreach",
+    # Granular probe sub-stages (all map to enrich)
+    "needs_verification": "enrich",
+    "needs_services": "enrich",
+    "needs_cost_data": "enrich",
+    "needs_photos": "enrich",
+    "needs_service_areas": "enrich",
+    "needs_deal_breakers": "enrich",
+}
+
+# Per-stage attempt limits (before blocking)
+STAGE_ATTEMPT_LIMITS = {
+    "build": 3,
+    "enrich": 5,      # enrichment is complex, allow more attempts
+    "verify_deploy": 3,
+    "video_outreach": 3,
+    "human_review_required": 999999,  # human gate — never machine-blocked; releases on review approval only
+}
+
+# Stage-specific subagent context
+STAGE_CONTEXTS = {
+    "build": {
+        "skill": "tjb-city-pipeline",
+        "goal_template": (
+            "BUILD stage for {slug}: checkpoint-first execution. Write a concrete research/data checkpoint under artifacts/build-checkpoints/{slug}/ within the first 10 tool calls before extended research. Research providers, hospitals, and birth centers. "
+            "Write data into cities.ts using Python heredoc via terminal (NEVER use write_file or patch on cities.ts). "
+            "Generate hero image (pregnant silhouette + city landscape, ONE image reused across hero/YT/OG). "
+            "Generate support scene photo (pregnant mom + professional, ONE pregnant woman, never distorted). "
+            "Generate OG image (derived from same hero image). "
+            "Find at least the minimum provider count for the city's population tier. "
+            "Verify data accuracy. Run: npx tsx scripts/validate-city-data.ts {slug} and npm run build to verify."
+        ),
+        "toolsets": ["terminal", "file", "web", "browser", "image_gen", "vision"],
+        "gates": ["G3", "G5", "G13", "G4", "G37", "hospital_count", "visual_check", "H-HUMANIZE", "H-SHAPE"],
+    },
+    "enrich": {
+        "skill": "tjb-provider-enrichment",
+        "goal_template": (
+            "ENRICH stage for {slug}: Bulk pre-warm provider photos from DoulaMatch and Bornbir city-level pages. "
+            "Per-provider photo sourcing: headshot from website, then logo, then initials. "
+            "Replace all 'Contact for pricing' with real dollar ranges from costLow/costHigh. "
+            "Mark as market-estimate if not from provider's website. "
+            "Generate 300+ char hospital descriptions answering mom's questions (NICU level, bed count, doula/visitor policy, baby-friendly, lactation, language services, birthing rooms). "
+            "Source hospital/birth center exterior photos (real buildings, not logos, not silhouettes, not AI). "
+            "Verify birth centers exist and operate in target city. "
+            "Run merge script with self-verification (confirm changes applied via git diff). "
+            "At least 1 real provider headshot required (all initials = didn't try)."
+        ),
+        "toolsets": ["terminal", "file", "web", "browser", "vision"],
+        "gates": ["G14", "G15", "G15b", "G35", "S8", "G9", "G57", "hospital_desc_length", "cost_format", "birth_center_fields", "S7", "min_1_headshot", "H-HUMANIZE", "H-SHAPE"],
+    },
+    "verify_deploy": {
+        "skill": "tjb-city-pipeline",
+        "goal_template": (
+            "VERIFY + DEPLOY stage for {slug}: Run FULL preflight (all G gates, V1, A3-A12, S5-S7, P8-P15). "
+            "Fix any remaining gate failures. Build via npm run build. "
+            "Deploy via bash scripts/deploy.sh {slug} (never raw wrangler). "
+            "CDN cache bust: verify CDN-served files match repo files. "
+            "Three-way visual verification: (1) curl -sI for HTTP 200 + content-length > 10KB, "
+            "(2) browser_console new Image() constructor confirms browser-side decode, "
+            "(3) vision_analyze for hero, support scene, provider photos, hospital thumbnails, no placeholders."
+        ),
+        "toolsets": ["terminal", "file", "browser", "vision"],
+        "gates": ["full_preflight", "H-HUMANIZE", "H-SHAPE"],
+    },
+    "video_outreach": {
+        "skill": "tjb-city-video-pipeline",
+        "goal_template": (
+            "VIDEO + OUTREACH stage for {slug}: Create video scene data (full state names, not abbreviations). "
+            "Generate TTS audio (Shelbi/Voxtral voice, consistent across scenes). "
+            "Pre-render gate: bash video/remotion/scripts/pre-render-gate.sh {slug} "
+            "(correct path; repo-root scripts/ has no such file). "
+            "Capture stills for visual verification. Render video. "
+            "Upload to YouTube as NEW video (public, embeddable=True). "
+            "Generate and upload YouTube thumbnail (derived from hero image). "
+            "Update video-embeds.ts with new video ID. Rebuild and redeploy with embed. "
+            "Set old video to unlisted if replacing. "
+            "OUTREACH (2026-09-16, deterministic — NOT hand-written): run "
+            "python3 ~/.hermes/scripts/tjb-batch-outreach.py build --slug {slug}. "
+            "That script loads providers from cities.ts, renders the approved template, "
+            "sends with delays, appends the canonical send log, and mirrors status. "
+            "Do NOT write outreach emails yourself and do NOT use delegate_task for sends. "
+            "If the script reports BLOCKED, record the reason — do not fabricate sends. "
+            "Re-outreach is the only manual path: re-engage non-responders, name what changed."
+        ),
+        "toolsets": ["terminal", "file", "vision"],
+        "gates": ["pre_render_gate", "video_file_exists", "youtube_upload", "youtube_thumbnail", "video_embedded", "videoobject_schema", "outreach_sent_or_blocked"],
+    },
+    # 2026-11-10: human review hold (Jeff's desk check-off). No worker context —
+    # this stage is released only by `review <slug> approved|changes`, never machine-advanced.
+    "human_review_required": {
+        "skill": "tjb-city-pipeline",
+        "goal_template": "HUMAN REVIEW HOLD for {slug}: Jeff reviews the live page and checks off the desk task. Machine advancement is prohibited.",
+        "toolsets": [],
+        "gates": [],
+    },
+}
+
+
+def ensure_states_dir():
+    STATES_DIR.mkdir(parents=True, exist_ok=True)
+
+
+def validate_slug(slug: str) -> bool:
+    """Reject non-standard slugs like 'city1-tx', 'city2-co' etc."""
+    # Standard slug: lowercase words separated by hyphens, ending with 2-letter state code
+    # e.g., dallas-tx, san-jose-ca, salt-lake-city-ut
+    # Reject: city1-tx, city2-co (test data with numeric prefix)
+    if re.match(r'^city\d+-', slug):
+        return False
+    # Must be lowercase letters with hyphens, ending in 2-letter state
+    if not re.match(r'^[a-z]+(?:-[a-z]+)*-[a-z]{2}$', slug):
+        return False
+    return True
+
+
+def load_state(slug: str) -> dict:
+    state_file = STATES_DIR / f"{slug}.json"
+    if state_file.exists():
+        return json.loads(state_file.read_text())
+    return {}
+
+
+def save_state(slug: str, state: dict):
+    ensure_states_dir()
+    state_file = STATES_DIR / f"{slug}.json"
+    tmp_file = STATES_DIR / f"{slug}.json.tmp"
+    tmp_file.write_text(json.dumps(state, indent=2))
+    os.replace(str(tmp_file), str(state_file))
+    # Keep the visual dashboard automatic. Any state transition exports the
+    # consolidated city ledger to public/city-audit.json; failures are silent
+    # here so pipeline commands remain usable if the dashboard export breaks.
+    try:
+        subprocess.run(
+            ["python3", str(Path(PROJECT_DIR) / "scripts" / "tjb-city-ledger.py"), "sync"],
+            cwd=PROJECT_DIR,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            timeout=30,
+        )
+    except Exception:
+        pass
+
+
+def probe_city(slug: str) -> dict:
+    """Run the probe script and parse JSON output."""
+    try:
+        result = subprocess.run(
+            ["python3", str(PROBE_SCRIPT), "--slug", slug],
+            capture_output=True, text=True, timeout=30
+        )
+        if result.returncode == 0:
+            try:
+                return json.loads(result.stdout.strip())
+            except json.JSONDecodeError:
+                for line in result.stdout.strip().split("\n"):
+                    line = line.strip()
+                    if line.startswith("{"):
+                        try:
+                            return json.loads(line)
+                        except json.JSONDecodeError:
+                            continue
+        return {"exists": False, "error": result.stderr[:200]}
+    except Exception as e:
+        return {"exists": False, "error": str(e)}
+
+
+def determine_initial_stage(slug: str) -> str:
+    """Probe city and determine starting stage. Used for init only."""
+    probe = probe_city(slug)
+    return determine_initial_stage_from_probe(probe)
+
+
+def determine_initial_stage_from_probe(probe: dict) -> str:
+    """Determine starting stage from a probe result dict.
+
+    This is the ONLY time probing determines the stage. After init,
+    advancement is strictly forward via STAGE_ORDER index.
+    """
+    if not probe.get("exists", False):
+        return "build"
+    if not probe.get("has_local_doulas", False):
+        return "build"
+
+    # Check if enrichment is complete
+    providers_have_photos = probe.get("providers_have_photos", False)
+    providers_have_descs = probe.get("providers_have_descriptions", False)
+    providers_have_costs = probe.get("providers_have_cost_ranges", False)
+    enrichment_ok = providers_have_photos and providers_have_descs and providers_have_costs
+
+    if not enrichment_ok:
+        return "enrich"
+
+    # Check images (part of build stage in 4-stage model, but if enrichment
+    # is done and images are missing, we need to go back to build)
+    if not probe.get("hero_on_disk", False) or not probe.get("og_on_disk", False):
+        return "build"
+
+    # Check if deployed + preflight passes
+    if not probe.get("is_deployed", False):
+        return "verify_deploy"
+
+    # Check video + outreach
+    if not probe.get("has_render", False) or not probe.get("has_youtube_id", False):
+        return "video_outreach"
+    if not probe.get("has_embed", False):
+        return "video_outreach"
+
+    return "complete"
+
+
+# Stage-filtered recurring mistakes — only include items relevant to the stage
+# Full 33-item dump is noise; subagents need only what applies to their stage
+STAGE_MISTAKE_FILTER = {
+    "build": [1, 2, 3, 9, 10, 11, 12, 13, 14, 20, 21, 24],
+    "enrich": [4, 6, 7, 8, 9, 13, 15, 17, 21, 23, 25],
+    "verify_deploy": [5, 6, 11, 18, 31, 32],
+    "video_outreach": [2, 5, 16, 22, 31],
+}
+
+
+def load_recurring_mistakes(stage: str = None) -> str:
+    """Load recurring mistakes, optionally filtered to only items relevant to the given stage."""
+    if not RECURRING_MISTAKES_PATH.exists():
+        return "Recurring mistakes file not found. Read references/recurring-mistakes-block.md"
+    full_text = RECURRING_MISTAKES_PATH.read_text()
+    if stage is None or stage not in STAGE_MISTAKE_FILTER:
+        return full_text
+    # Parse numbered items from the mistakes file and extract only relevant ones.
+    # Each item starts with "N. " at column 0 and continues until the next "N. " or a section header.
+    relevant_nums = set(STAGE_MISTAKE_FILTER[stage])
+    lines = full_text.split("\n")
+    output_lines = []
+    current_num = None
+    for line in lines:
+        m = re.match(r'^(\d+)\.\s', line)
+        if m:
+            current_num = int(m.group(1))
+            if current_num in relevant_nums:
+                output_lines.append(line)
+            # else: skip this item (current_num tracks which item we're inside)
+        elif current_num is not None and current_num in relevant_nums:
+            # We're inside a relevant item — include continuation lines
+            # Stop at section headers (lines starting with # or ##)
+            if line.startswith("#") and not line.startswith("# Recurring"):
+                current_num = None  # Section header ends the item
+            else:
+                output_lines.append(line)
+    # Clean up trailing blank lines
+    while output_lines and not output_lines[-1].strip():
+        output_lines.pop()
+    header = f"# Recurring Mistakes for {stage.upper()} stage (filtered — full list in recurring-mistakes-block.md)\n\n"
+    return header + "\n".join(output_lines)
+
+
+def get_stage_index(stage: str) -> int:
+    """Get the index of a stage in STAGE_ORDER. Maps old names for backward compat."""
+    if stage in STAGE_ORDER:
+        return STAGE_ORDER.index(stage)
+    # Try old-to-new mapping
+    new_stage = OLD_TO_NEW_STAGE.get(stage)
+    if new_stage and new_stage in STAGE_ORDER:
+        return STAGE_ORDER.index(new_stage)
+    return -1
+
+
+def cmd_init(slug: str, force: bool = False):
+    """Initialize state file for a city. Probes once to determine starting stage.
+
+    If a state file already exists and has progress (stages_completed or gate_results),
+    init will refuse to overwrite unless --force is passed.
+    """
+    if not validate_slug(slug):
+        print(json.dumps({
+            "action": "error",
+            "slug": slug,
+            "error": f"Invalid slug '{slug}'. Slugs must be lowercase-letters-2letter-state (e.g., 'dallas-tx'). Test data like 'city1-tx' is rejected."
+        }, indent=2))
+        return
+
+    # Guard against overwriting existing state with progress
+    existing_state_file = STATES_DIR / f"{slug}.json"
+    if existing_state_file.exists() and not force:
+        try:
+            existing = json.loads(existing_state_file.read_text())
+            if existing.get("stages_completed") or existing.get("gate_results") or existing.get("current_stage") == "complete":
+                print(json.dumps({
+                    "action": "error",
+                    "slug": slug,
+                    "error": f"State file for '{slug}' already exists with progress. Use --force to overwrite.",
+                    "existing_stage": existing.get("current_stage"),
+                    "stages_completed": existing.get("stages_completed", []),
+                }, indent=2))
+                return
+        except (json.JSONDecodeError, OSError):
+            pass  # If we can't read it, let init proceed
+
+    # Probe once to determine starting stage
+    probe = probe_city(slug)
+    stage = determine_initial_stage_from_probe(probe)
+    stage_idx = get_stage_index(stage)
+
+    # Skeleton detection: if 0 providers, mark as skeleton
+    city_type = "enriched"
+    if probe.get("provider_count", 0) == 0 and not probe.get("has_local_doulas", False):
+        city_type = "skeleton"
+
+    state = {
+        "slug": slug,
+        "current_stage": stage,
+        "stage_index": stage_idx,
+        "max_stage_reached": stage_idx,
+        "started_at": int(time.time()),
+        "updated_at": int(time.time()),
+        "stages_completed": [],
+        "stages_failed": [],
+        "stage_attempts": {},      # per-stage attempt count
+        "gate_results": {},          # per-stage gate results
+        "history": [],
+        "blocked": False,
+        "blocked_reason": None,
+        "version": 2,                # state machine v2
+        "city_type": city_type,       # "skeleton" vs "enriched"
+    }
+    save_state(slug, state)
+    print(json.dumps({
+        "action": "init",
+        "slug": slug,
+        "stage": stage,
+        "stage_index": stage_idx,
+        "version": 2,
+    }, indent=2))
+
+
+def cmd_next(slug: str):
+    """Output next stage to execute + subagent context."""
+    state = load_state(slug)
+    if not state:
+        # Auto-init if not found
+        cmd_init(slug)
+        state = load_state(slug)
+
+    if not state:
+        print(json.dumps({"action": "error", "slug": slug, "message": "Failed to init state."}))
+        return
+
+    # Check if pipeline is blocked
+    if state.get("blocked", False):
+        print(json.dumps({
+            "action": "blocked",
+            "slug": slug,
+            "message": state.get("blocked_reason", "Pipeline is blocked."),
+            "stages_completed": state.get("stages_completed", []),
+            "stages_failed": state.get("stages_failed", []),
+        }, indent=2))
+        return
+
+    stage = state.get("current_stage", "build")
+
+    if stage == "complete":
+        print(json.dumps({
+            "action": "complete",
+            "slug": slug,
+            "message": f"Pipeline complete for {slug}. All stages done.",
+            "stages_completed": state.get("stages_completed", []),
+        }, indent=2))
+        return
+
+    # 2026-11-10: human review hold — never emit worker context for the review
+    # stage. The city waits for Jeff's desk check-off (`review <slug> approved`).
+    if stage == "human_review_required":
+        changes = state.get("review_changes") or {}
+        print(json.dumps({
+            "action": "human_review_required",
+            "slug": slug,
+            "message": (
+                f"Human review hold for {slug}. Jeff reviews the live page and checks off "
+                "the desk task; release path is: tjb-pipeline-state.py review "
+                f"{slug} approved|changes <note>. No worker should run this stage."
+            ),
+            "jeff_note_recorded": (changes.get("note") or "")[:500] or None,
+            "stages_completed": state.get("stages_completed", []),
+        }, indent=2))
+        return
+
+    ctx = STAGE_CONTEXTS.get(stage)
+    if not ctx:
+        # Try old-to-new mapping
+        new_stage = OLD_TO_NEW_STAGE.get(stage, stage)
+        ctx = STAGE_CONTEXTS.get(new_stage)
+        if not ctx:
+            print(json.dumps({
+                "action": "error",
+                "slug": slug,
+                "message": f"Unknown stage: {stage}. Run init to reset.",
+            }, indent=2))
+            return
+        stage = new_stage
+
+    recurring = load_recurring_mistakes(stage)
+    goal = ctx["goal_template"].format(slug=slug)
+
+    # 2026-09-29 machine fix (dead-letter root cause): skeleton cities entering
+    # build carry ZERO provider research. The generic BUILD goal reads as
+    # "data exists" — workers then hit G36/G37 + evidence contracts with nothing
+    # real to show and dead-letter. Skeleton builds get an explicit
+    # research-first contract: find real providers before writing any data,
+    # and FAIL cleanly (with findings on disk) when the city can't support a page.
+    skeleton_build = (stage == "build" and state.get("city_type") == "skeleton")
+    if skeleton_build:
+        goal = (
+            "BUILD stage for {slug}: UNRESEARCHED SKELETON CITY — research comes FIRST.\n"
+            "PHASE A — RESEARCH (before writing any data): find REAL providers, hospitals and birth "
+            "centers for this city using the free discovery path only: DuckDuckGo/website fetches "
+            "(python3 ~/.hermes/scripts/tjb-thin-city-research.py is the reference pattern), the provider "
+            "cache ~/.hermes/state/tjb-provider-cache.json, and direct checks of provider websites. "
+            "Every provider must have a real name + source URL; discard anything you cannot evidence. "
+            "Target the city's population-tier minimum provider count (the validator enforces it). "
+            "If you cannot evidence at least the minimum real providers within ~25 tool calls, STOP: "
+            "do NOT invent providers and do NOT write a cities.ts entry from generic content. Save verified "
+            "findings to artifacts/build-checkpoints/{slug}/research-findings.json and report "
+            "FAIL('insufficient real providers: N found < minimum M'). A clean fail with evidence is a "
+            "correct outcome — the city needs humans, not fabricated data.\n"
+            "PHASE B — BUILD DATA: only from Phase A findings, write the cities.ts entry via Python "
+            "heredoc, generate hero/OG/support images, then validate + build."
+        ).format(slug=slug)
+
+    subagent_context = f"""You are a TJB pipeline stage worker — a subagent delegated by the parent state machine.
+Your scope is ONE stage for ONE city. Do not attempt other stages or cities.
+
+CITY: {slug}
+STAGE: {stage} (stage {get_stage_index(stage) + 1} of {len(STAGE_ORDER) - 1})
+PROJECT DIR: {PROJECT_DIR}
+
+## What to do
+Load skill '{ctx["skill"]}' and follow it for this stage.
+Goal: {goal}
+
+## Stage-specific pitfalls (read these before starting)
+{recurring}
+
+## Rules
+- NEVER use write_file or patch on cities.ts. Use Python heredoc via terminal.
+- Deploy with: bash scripts/deploy.sh {slug} (never raw wrangler)
+- Run preflight after any cities.ts edit: npx tsx scripts/preflight.ts {slug}
+- Forward-only: this stage will not repeat unless it fails. Make it count.
+- You do NOT advance the state machine or pick the next stage. The parent does that.
+
+## Worker discipline
+1. WRITE FIRST. Make your primary write (cities.ts data, image files, etc.) within the first 3 tool calls. Reading is a liability — stop exploring after at most 3 reads.
+2. VERIFY ON DISK before reporting done. Run `ls -la` on every file you produced. Empty or missing artifact = FAILURE.
+3. RECOVER from errors. If a command fails on quoting/syntax, retry immediately with a different approach. Do not stop and say "falling back" — fix it and keep going.
+4. If you hit the tool-call cap with work remaining, save partial artifacts to disk and report exactly which files landed and which remain. Never claim done when it isn't.
+5. Run the validation gate after writing: `npx tsx scripts/validate-city-data.ts {slug}` for data stages. Report the real exit code + errors verbatim.
+6. WRITE YOUR HANDOFF CONTRACT before reporting done (Phase 1 harness — the parent REFUSES to advance without it):
+   python3 scripts/contract-validate.py {slug} {stage} --compare
+   This auto-fills data fields from cities.ts. You then add: produced_at, worker_model, sources[] (>=1 evidence per provider: claim + url + supporting quote), and for build: images.hero_watermark_clean / og_watermark_clean = true only if the flux watermark pipeline ran. Re-run the validate command until it prints contract_valid: true, and report that real exit code. The contract is your definition of done — software checks it, not your say-so.
+7. EVIDENCE DISCIPLINE (Phase 3 harness — AI evals check your work after the contract): every sources[] quote must be text that actually appears at that URL and must support the FULL claim — a quote that only covers part of the claim is an UNSUPPORTED verdict and re-spawns you. Quote the exact sentence(s) from the page. Then run the eval pack yourself and fix findings BEFORE reporting done:
+   python3 scripts/eval-voice.py {slug}      (copy voice; provider bios are only checked for slop/boilerplate — their own words are never rewritten)
+   python3 scripts/eval-accuracy.py {slug} {stage}   (claim evidence)
+   The parent runs eval-loop.py on advance: a rejection re-spawns you with the exact findings; 3 rejections block the city.
+
+## Stage gates (must pass before this stage can advance)
+{', '.join(ctx.get('gates', []))}
+"""
+
+    output = {
+        "action": "next",
+        "slug": slug,
+        "stage": stage,
+        "stage_index": get_stage_index(stage),
+        "subagent_goal": goal,
+        "subagent_toolsets": ctx["toolsets"],
+        "subagent_context": subagent_context,
+        "stage_gates": ctx.get("gates", []),
+        "stages_completed": state.get("stages_completed", []),
+        "stages_failed": state.get("stages_failed", []),
+        "attempts": state.get("stage_attempts", {}).get(stage, 0),
+    }
+    print(json.dumps(output, indent=2))
+
+
+def collect_stage_evidence(slug: str, stage: str) -> dict:
+    """Phase 4 harness: on-disk proof attached to the done-history entry.
+    "Done" claims are tied to artifacts: contract validity, block hash,
+    eval verdicts. Cheap, fail-open (records None on missing probe)."""
+    import hashlib
+    ev: dict = {"contract_valid": None, "block_sha": None,
+                "handoff_sha": None, "eval_voice": None, "eval_accuracy": None}
+    try:
+        r = subprocess.run(
+            ["python3", str(Path(PROJECT_DIR) / "scripts" / "contract-validate.py"), slug, stage],
+            capture_output=True, text=True, timeout=60, cwd=PROJECT_DIR)
+        ev["contract_valid"] = (r.returncode == 0)
+    except Exception:
+        pass
+    try:
+        r = subprocess.run(
+            ["python3", str(Path(PROJECT_DIR) / "scripts" / "extract-city-block.py"), slug],
+            capture_output=True, text=True, timeout=30, cwd=PROJECT_DIR)
+        if r.returncode == 0 and r.stdout.strip():
+            ev["block_sha"] = hashlib.sha256(r.stdout.strip().encode()).hexdigest()[:16]
+    except Exception:
+        pass
+    handoff = Path(PROJECT_DIR) / "artifacts" / "handoffs" / slug / (stage + ".json")
+    if handoff.exists():
+        ev["handoff_sha"] = hashlib.sha256(handoff.read_bytes()).hexdigest()[:16]
+    evals_dir = Path(PROJECT_DIR) / "artifacts" / "evals"
+    va = evals_dir / ("voice-" + slug + ".json")
+    if va.exists():
+        try:
+            ev["eval_voice"] = json.loads(va.read_text()).get("verdict")
+        except Exception:
+            pass
+    aa = evals_dir / ("accuracy-" + slug + "-" + stage + ".json")
+    if aa.exists():
+        try:
+            ev["eval_accuracy"] = json.loads(aa.read_text()).get("verdict")
+        except Exception:
+            pass
+    return ev
+
+
+def cmd_done(slug: str, stage: str):
+    """Mark a stage as complete and advance FORWARD to next stage.
+
+    No re-probing. Next stage is always STAGE_ORDER[current_index + 1].
+    """
+    state = load_state(slug)
+    if not state:
+        print(json.dumps({"error": f"No state file for {slug}. Run init first."}))
+        return
+
+    # Map old stage name to new if needed
+    actual_stage = stage
+    if stage not in STAGE_ORDER:
+        actual_stage = OLD_TO_NEW_STAGE.get(stage, stage)
+
+    current_idx = get_stage_index(state.get("current_stage", "build"))
+    actual_idx = get_stage_index(actual_stage)
+
+    # Guard: reject unknown/unmappable stages to prevent backward bounce
+    if actual_idx < 0:
+        print(json.dumps({
+            "action": "error",
+            "slug": slug,
+            "error": f"Unknown stage '{stage}'. Valid stages: {STAGE_ORDER[:-1]} or old names: {list(OLD_TO_NEW_STAGE.keys())}"
+        }, indent=2))
+        return
+
+    # Guard: the completed stage should match the current stage
+    if actual_idx != current_idx:
+        print(json.dumps({
+            "action": "error",
+            "slug": slug,
+            "error": f"Stage '{actual_stage}' (idx {actual_idx}) does not match current stage '{state.get('current_stage')}' (idx {current_idx}). Use 'done' only for the current stage."
+        }, indent=2))
+        return
+
+    # ARTIFACT GUARD (2026-08-24, Palmdale masked-failure fix):
+    # A worker reporting "completed" (even via max_iterations exit) must have left
+    # real evidence on disk. Missing artifact = hard fail, not silent advance.
+    def _check_artifacts(slug: str, stage: str):
+        import re as _re
+        try:
+            cities_ts = (Path(PROJECT_DIR) / "src" / "data" / "cities.ts").read_text()
+        except OSError:
+            return "cities.ts unreadable"
+        m = _re.search(rf'\"{slug}\":', cities_ts) or _re.search(rf'"{slug}":', cities_ts)
+        if stage == "build":
+            if f'"{slug}"' not in cities_ts:
+                return f"cities.ts has no '{slug}' data block — build artifacts missing"
+            # Check heroImage field in cities.ts and verify the file exists on disk
+            hero_match = _re.search(r'heroImage:\s*"([^"]+)"', cities_ts)
+            if not hero_match:
+                return f"no heroImage field for {slug} — build artifacts missing"
+            hero_path = hero_match.group(1).lstrip("/")
+            hero_file = Path(PROJECT_DIR) / "public" / hero_path
+            if not hero_file.exists():
+                # Also try glob fallback for any slug-prefixed hero image
+                hero_glob = list((Path(PROJECT_DIR) / "public" / "images").glob(f"{slug}-*hero*.webp"))
+                if not hero_glob:
+                    return f"hero image file not found on disk: {hero_path} — build artifacts missing"
+        if stage == "enrich":
+            block = ""
+            # Find the actual city block: "slug": { (not a nearbyCities reference)
+            import re as _re2
+            block_match = _re2.search(rf'"{_re2.escape(slug)}"\s*:\s*\{{', cities_ts)
+            if block_match:
+                mi = block_match.start()
+                # Find end of block by tracking brace depth
+                depth = 1
+                i = block_match.end()
+                while depth > 0 and i < len(cities_ts):
+                    if cities_ts[i] == '{':
+                        depth += 1
+                    elif cities_ts[i] == '}':
+                        depth -= 1
+                    i += 1
+                block = cities_ts[mi:i]
+            if "Contact for pricing" in block:
+                return "enrich incomplete: 'Contact for pricing' present"
+            if "paragraph:" not in block:
+                return "enrich incomplete: no hospital/birth-center descriptions"
+        return None
+
+    _artifact_error = _check_artifacts(slug, actual_stage)
+    if _artifact_error:
+        failed = state.get("stages_failed", [])
+        if isinstance(failed, list):
+            if actual_stage not in failed:
+                failed.append(actual_stage)
+        elif isinstance(failed, dict):
+            failed[actual_stage] = failed.get(actual_stage, 0) + 1
+        state["stages_failed"] = failed
+        save_state(slug, state)
+        print(json.dumps({
+            "action": "artifact_fail",
+            "slug": slug,
+            "stage": actual_stage,
+            "error": _artifact_error,
+            "message": "Worker claimed completion but artifacts are missing. Stage NOT advanced. Re-run the stage worker.",
+        }, indent=2))
+        sys.exit(3)
+
+    # VIDEO OUTREACH SEND-EVIDENCE GUARD (hardening, 2026-10-01):
+    # "done" for video_outreach requires VERIFIED first-touch sends in the
+    # canonical send log. Zero first-touch 'sent' rows for this slug = the
+    # deterministic outreach did not actually happen -> fail closed: refuse
+    # without advancing, record the refusal in history, keep blocked flags.
+    if actual_stage == "video_outreach":
+        send_log = Path.home() / ".hermes" / "logs" / "tjb-outreach-send-log.jsonl"
+
+        def _is_first_touch(v) -> bool:
+            """False-like is_followup values (missing/None/False/'false'/0) = first-touch."""
+            if v is None:
+                return True
+            if isinstance(v, bool):
+                return v is False
+            if isinstance(v, (int, float)):
+                return v == 0
+            if isinstance(v, str):
+                return v.strip().lower() in ("", "false", "no", "0")
+            return False
+
+        sent_first_touch = 0
+        if send_log.exists():
+            for _line in send_log.read_text(errors="replace").splitlines():
+                _line = _line.strip()
+                if not _line:
+                    continue
+                try:
+                    _row = json.loads(_line)
+                except json.JSONDecodeError:
+                    continue
+                if (isinstance(_row, dict)
+                        and _row.get("slug") == slug
+                        and _row.get("status") == "sent"
+                        and _is_first_touch(_row.get("is_followup"))):
+                    sent_first_touch += 1
+
+        if sent_first_touch == 0:
+            history = state.get("history", [])
+            history.append({
+                "stage": "video_outreach",
+                "status": "done_refused",
+                "reason": "zero verified first-touch sends in canonical send log",
+                "timestamp": int(time.time()),
+            })
+            state["history"] = history
+            state["updated_at"] = int(time.time())
+            # Blocked flags are deliberately NOT cleared in this branch.
+            save_state(slug, state)
+            print(json.dumps({
+                "action": "done_refused",
+                "slug": slug,
+                "stage": actual_stage,
+                "sent_first_touch": sent_first_touch,
+                "error": (
+                    "zero verified first-touch sends in canonical send log "
+                    f"({send_log}): no rows with slug={slug}, is_followup false-like, "
+                    "status='sent'. Stage NOT advanced. Run the deterministic outreach "
+                    "script (tjb-batch-outreach.py) and verify sends first."
+                ),
+            }, indent=2))
+            sys.exit(3)
+
+    # VIDEO OUTREACH CONTRACT GUARD (hardening, 2026-10-05):
+    # Direct `done` calls bypass `advance`'s contract check — fullerton-ca got a
+    # done on 2026-10-02 with contract_valid:false merely RECORDED, not enforced
+    # (empty scaffold: youtube_id null, embed_verified null). At done time the
+    # handoff contract MUST validate. Fail closed as RETRYABLE (exit 1) so the
+    # dispatcher re-spawns a worker that fixes the contract file, then re-dones.
+    # This mirrors advance's contract_invalid behavior — no bypass path remains.
+    if actual_stage == "video_outreach":
+        try:
+            cv = subprocess.run(
+                ["python3", str(Path(PROJECT_DIR) / "scripts" / "contract-validate.py"), slug, actual_stage],
+                capture_output=True, text=True, timeout=60, cwd=PROJECT_DIR)
+            if cv.returncode != 0:
+                try:
+                    violations = ", ".join(json.loads(cv.stdout).get("violations", []))[:400]
+                except Exception:
+                    violations = (cv.stdout or cv.stderr)[-400:]
+                history = state.get("history", [])
+                history.append({
+                    "stage": "video_outreach",
+                    "status": "done_refused",
+                    "reason": f"handoff contract invalid: {violations}",
+                    "timestamp": int(time.time()),
+                })
+                state["history"] = history
+                state["updated_at"] = int(time.time())
+                save_state(slug, state)
+                print(json.dumps({
+                    "action": "done_refused",
+                    "slug": slug,
+                    "stage": actual_stage,
+                    "contract_exit": cv.returncode,
+                    "violations": violations,
+                    "error": (
+                        "video_outreach handoff contract failed validation at done time "
+                        f"(direct done attempted to bypass advance's contract gate). Fix "
+                        f"artifacts/handoffs/{slug}/video_outreach.json per violations, "
+                        "then re-run done."
+                    ),
+                }, indent=2))
+                sys.exit(1)
+        except subprocess.TimeoutExpired:
+            print(json.dumps({"action": "contract_timeout", "slug": slug, "stage": actual_stage,
+                "message": "Contract validation timed out at done time. Treat as retryable; re-run done."}, indent=2))
+            sys.exit(2)
+
+    # Record completion
+    completed = state.get("stages_completed", [])
+    if actual_stage not in completed:
+        completed.append(actual_stage)
+    state["stages_completed"] = completed
+
+    # Record history with Phase 4 evidence-in-state — "done" requires on-disk
+    # proof (contract validity, block hash, eval verdicts), not just a claim.
+    history = state.get("history", [])
+    history.append({
+        "stage": actual_stage,
+        "status": "done",
+        "timestamp": int(time.time()),
+        "gate_results": state.get("gate_results", {}).get(actual_stage, {}),
+        "evidence": collect_stage_evidence(slug, actual_stage),
+    })
+    state["history"] = history
+
+    # Forward-only advancement: next = index + 1
+    next_idx = actual_idx + 1
+    clamped = False
+    if next_idx >= len(STAGE_ORDER):
+        next_stage = "complete"
+    else:
+        next_stage = STAGE_ORDER[next_idx]
+
+    # 2026-11-10 review-loop fix: video_outreach no longer lands the city at
+    # 'complete'. The machine HOLDS the city at human_review_required — Jeff's
+    # desk check-off (`review <slug> approved` via the completion monitor) is
+    # the only release path to complete.
+    if actual_stage == "video_outreach" and next_stage == "complete":
+        next_stage = "human_review_required"
+
+    # Terminal-index clamp: stage_index must never exceed len(STAGE_ORDER)-1
+    # (terminal cities report the last index / "complete", never an overflow).
+    if next_idx > len(STAGE_ORDER) - 1:
+        next_idx = len(STAGE_ORDER) - 1
+        clamped = True
+
+    state["current_stage"] = next_stage
+    state["stage_index"] = next_idx
+    state["max_stage_reached"] = max(state.get("max_stage_reached", 0), next_idx)
+    state["updated_at"] = int(time.time())
+    state["blocked"] = False
+    state["blocked_reason"] = None
+
+    # Reset attempt counter for the new stage
+    stage_attempts = state.get("stage_attempts", {})
+    stage_attempts[next_stage] = 0
+    state["stage_attempts"] = stage_attempts
+
+    save_state(slug, state)
+    done_output = {
+        "action": "done",
+        "slug": slug,
+        "completed_stage": actual_stage,
+        "next_stage": next_stage,
+        "stage_index": next_idx,
+        "stages_completed": completed,
+        "max_stage_reached": state["max_stage_reached"],
+    }
+    if clamped:
+        done_output["clamped"] = True
+        done_output["clamped_note"] = (
+            f"stage_index clamped to {len(STAGE_ORDER) - 1} - terminal city reports index {len(STAGE_ORDER) - 1} / complete"
+        )
+    print(json.dumps(done_output, indent=2))
+
+
+def cmd_fail(slug: str, stage: str, reason: str):
+    """Mark a stage as failed. Increment attempt counter. Block if over limit."""
+    state = load_state(slug)
+    if not state:
+        print(json.dumps({"error": f"No state file for {slug}. Run init first."}))
+        return
+
+    # If already blocked, don't increment further
+    if state.get("blocked", False):
+        print(json.dumps({
+            "action": "already_blocked",
+            "slug": slug,
+            "message": state.get("blocked_reason", "Pipeline is blocked. Use 'unblock' command to retry."),
+            "attempts": state.get("stage_attempts", {}).get(stage, "?"),
+        }, indent=2))
+        return
+
+    # Map old stage name to new if needed
+    actual_stage = stage
+    if stage not in STAGE_ORDER:
+        actual_stage = OLD_TO_NEW_STAGE.get(stage, stage)
+
+    failed = state.get("stages_failed", [])
+    failed.append({"stage": actual_stage, "reason": reason, "timestamp": int(time.time())})
+    state["stages_failed"] = failed
+
+    history = state.get("history", [])
+    history.append({
+        "stage": actual_stage,
+        "status": "failed",
+        "reason": reason,
+        "timestamp": int(time.time()),
+    })
+    state["history"] = history
+
+    # Increment per-stage attempt counter
+    stage_attempts = state.get("stage_attempts", {})
+    stage_attempts[actual_stage] = stage_attempts.get(actual_stage, 0) + 1
+    state["stage_attempts"] = stage_attempts
+
+    # Check if over attempt limit for this stage
+    limit = STAGE_ATTEMPT_LIMITS.get(actual_stage, 3)
+    attempts = stage_attempts[actual_stage]
+
+    if attempts >= limit:
+        state["blocked"] = True
+        state["blocked_reason"] = (
+            f"Stage '{actual_stage}' has failed {attempts} times (limit: {limit}). "
+            f"Last reason: {reason}. Use 'unblock' command to retry."
+        )
+
+    state["updated_at"] = int(time.time())
+    save_state(slug, state)
+
+    response = {
+        "action": "fail",
+        "slug": slug,
+        "failed_stage": actual_stage,
+        "reason": reason,
+        "attempts": attempts,
+        "limit": limit,
+    }
+    if attempts >= limit:
+        response["blocked"] = True
+        response["blocked_reason"] = state["blocked_reason"]
+    print(json.dumps(response, indent=2))
+
+
+def cmd_status(slug: str):
+    """Show current state."""
+    state = load_state(slug)
+    if not state:
+        print(json.dumps({"error": f"No state file for {slug}. Run init first."}))
+        return
+    print(json.dumps(state, indent=2))
+
+
+def cmd_unblock(slug: str):
+    """Clear blocked status and allow retry."""
+    state = load_state(slug)
+    if not state:
+        print(json.dumps({"error": f"No state file for {slug}. Run init first."}))
+        return
+    state["blocked"] = False
+    state["blocked_reason"] = None
+    state["updated_at"] = int(time.time())
+
+    # Reset attempt counter for current stage
+    current_stage = state.get("current_stage", "build")
+    stage_attempts = state.get("stage_attempts", {})
+    stage_attempts[current_stage] = 0
+    state["stage_attempts"] = stage_attempts
+
+    save_state(slug, state)
+    print(json.dumps({
+        "action": "unblock",
+        "slug": slug,
+        "stage": current_stage,
+        "message": f"Unblocked. Stage '{current_stage}' attempt counter reset to 0."
+    }, indent=2))
+
+
+def cmd_review(slug: str, verdict: str, note: str = "") -> None:
+    """Record Jeff's human review of a completed city page.
+
+    2026-11-10 review-loop fix: video_outreach done no longer lands at
+    'complete' — the machine now holds the city at human_review_required and
+    this command is the ONLY release path:
+      - `review <slug> approved` -> advance to complete (outreach freed)
+      - `review <slug> changes <note>` -> stay held; Jeff's note is recorded
+        for Kit under state["review_changes"] + history
+
+    Review is only meaningful for a city whose content work is done, so we
+    accept states at human_review_required, video_outreach, or complete
+    (idempotent re-check-off). Fails loudly (nonzero exit + stderr) when the
+    states dir or slug file is missing — silent failure is the enemy here.
+    Output contract: success prints JSON with "action": "review_recorded";
+    exit 0 = recorded, exit 1 = usage/state error (message on stderr).
+    """
+    if not STATES_DIR.is_dir():
+        print(f"review FAILED: states dir does not exist: {STATES_DIR}", file=sys.stderr)
+        sys.exit(1)
+    if not validate_slug(slug):
+        print(f"review FAILED: invalid slug '{slug}'", file=sys.stderr)
+        sys.exit(1)
+    state_file = STATES_DIR / f"{slug}.json"
+    if not state_file.exists():
+        print(f"review FAILED: no state file for slug '{slug}' at {state_file}. "
+              "A city must complete video_outreach before it can be reviewed.", file=sys.stderr)
+        sys.exit(1)
+    state = load_state(slug)
+    if not state:
+        print(f"review FAILED: unreadable state file for '{slug}': {state_file}", file=sys.stderr)
+        sys.exit(1)
+
+    current_stage = state.get("current_stage", "")
+    reviewable = ("human_review_required", "video_outreach", "complete")
+
+    if verdict == "approved":
+        if current_stage not in reviewable:
+            print(f"review FAILED: {slug} is at stage '{current_stage}' "
+                  f"(expected one of {', '.join(reviewable)}). Not recording approval.", file=sys.stderr)
+            sys.exit(1)
+        # Idempotent: re-check-off of an already-complete city just re-records.
+        state["current_stage"] = "complete"
+        state["stage_index"] = get_stage_index("complete")
+        state["max_stage_reached"] = max(state.get("max_stage_reached", 0), state["stage_index"])
+        state["review_status"] = "approved"
+        completed = state.get("stages_completed", [])
+        if "human_review_required" not in completed:
+            completed.append("human_review_required")
+        state["stages_completed"] = completed
+        history = state.get("history", [])
+        history.append({
+            "stage": "human_review_required",
+            "status": "approved",
+            "reviewer": "jeff",
+            "note": (note or "")[:500],
+            "timestamp": int(time.time()),
+        })
+        state["history"] = history
+        state["updated_at"] = int(time.time())
+        save_state(slug, state)
+        print(json.dumps({
+            "action": "review_recorded",
+            "slug": slug,
+            "verdict": "approved",
+            "from_stage": current_stage,
+            "to_stage": "complete",
+            "note": (note or "")[:500],
+        }, indent=2))
+        sys.exit(0)
+
+    if verdict == "changes":
+        if current_stage not in ("human_review_required", "video_outreach"):
+            print(f"review FAILED: {slug} is at stage '{current_stage}' — 'changes' applies to a "
+                  "city holding at human_review_required/video_outreach, not a complete city.", file=sys.stderr)
+            sys.exit(1)
+        state["current_stage"] = "human_review_required"
+        state["stage_index"] = get_stage_index("human_review_required")
+        state["max_stage_reached"] = max(state.get("max_stage_reached", 0), state["stage_index"])
+        state["review_status"] = "changes_requested"
+        state["review_changes"] = {
+            "note": (note or "")[:2000],
+            "at": int(time.time()),
+        }
+        history = state.get("history", [])
+        history.append({
+            "stage": "human_review_required",
+            "status": "changes_requested",
+            "reviewer": "jeff",
+            "note": (note or "")[:500],
+            "timestamp": int(time.time()),
+        })
+        state["history"] = history
+        state["updated_at"] = int(time.time())
+        save_state(slug, state)
+        print(json.dumps({
+            "action": "review_recorded",
+            "slug": slug,
+            "verdict": "changes",
+            "stage": "human_review_required",
+            "note": (note or "")[:500],
+        }, indent=2))
+        sys.exit(0)
+
+    print(f"review FAILED: unknown verdict '{verdict}'. Usage: "
+          "tjb-pipeline-state.py review <slug> approved|changes [note]", file=sys.stderr)
+    sys.exit(1)
+
+
+def cmd_gates(slug: str, stage: str, gate_results_json: str):
+    """Record gate results for a stage. Stores what gates ran, passed, and failed."""
+    state = load_state(slug)
+    if not state:
+        print(json.dumps({"error": f"No state file for {slug}. Run init first."}))
+        return
+
+    # Map old stage name to new if needed
+    actual_stage = stage
+    if stage not in STAGE_ORDER:
+        actual_stage = OLD_TO_NEW_STAGE.get(stage, stage)
+
+    try:
+        gate_results = json.loads(gate_results_json)
+    except json.JSONDecodeError:
+        gate_results = {"raw": gate_results_json}
+
+    gate_results_store = state.get("gate_results", {})
+    gate_results_store[actual_stage] = {
+        "results": gate_results,
+        "timestamp": int(time.time()),
+    }
+    state["gate_results"] = gate_results_store
+    state["updated_at"] = int(time.time())
+
+    save_state(slug, state)
+    print(json.dumps({
+        "action": "gates",
+        "slug": slug,
+        "stage": actual_stage,
+        "gate_results": gate_results,
+    }, indent=2))
+
+
+def cmd_advance(slug: str, stage: str):
+    """Run the per-stage gate before advancing. Only calls cmd_done if gate exits 0.
+
+    Exit codes (per process-framework gate contract):
+        0 = pass → call cmd_done, advance to next stage
+        1 = RETRYABLE_SUBAGENT → output status for cron to re-spawn subagent
+        2 = RETRYABLE_INFRA → output status for cron to wait + retry
+        3 = FATAL → call cmd_fail with blocked_reason, block pipeline
+    """
+    # ── Phase 1 harness (2026-09-06): schema contract check BEFORE the stage gate ──
+    # "The agent does not get to invent its own definition of done." The worker's
+    # handoff contract (artifacts/handoffs/{slug}/{stage}.json) must validate —
+    # required fields, format rules, on-disk evidence — or the advance is refused
+    # as RETRYABLE with the violations returned for the worker to fix.
+    contract_script = str(Path(PROJECT_DIR) / "scripts" / "contract-validate.py")
+    try:
+        c_result = subprocess.run(
+            ["python3", contract_script, slug, stage],
+            capture_output=True, text=True, timeout=60, cwd=PROJECT_DIR,
+        )
+        c_exit = c_result.returncode
+        c_out = (c_result.stdout or "").strip()
+        if c_exit != 0:
+            if c_exit == 3:
+                reason = f"CONTRACT_FATAL (stage={stage}): {c_out[:300]}"
+                print(json.dumps({
+                    "action": "contract_fatal",
+                    "slug": slug, "stage": stage, "contract_exit": 3,
+                    "contract_output": c_out[-500:],
+                    "message": f"{stage} contract FATAL. Blocking pipeline.",
+                }, indent=2))
+                cmd_fail(slug, stage, reason)
+                return
+            print(json.dumps({
+                "action": "contract_invalid",
+                "slug": slug, "stage": stage, "contract_exit": c_exit,
+                "contract_output": c_out[-1800:],
+                "message": (
+                    f"{stage} handoff contract missing/invalid. Re-spawn the stage worker with "
+                    "contract_output violations appended to its context. Worker fixes "
+                    f"artifacts/handoffs/{slug}/{stage}.json — scaffold with: "
+                    f"python3 scripts/contract-validate.py {slug} {stage} --compare "
+                    "(auto-fills data fields; worker adds produced_at, worker_model, sources[] evidence) — "
+                    "then re-run advance."
+                ),
+            }, indent=2))
+            sys.exit(1)
+    except subprocess.TimeoutExpired:
+        print(json.dumps({
+            "action": "contract_timeout",
+            "slug": slug, "stage": stage,
+            "message": "Contract validation timed out (60s). Treat as retryable infra; retry advance.",
+        }, indent=2))
+        sys.exit(2)
+    except Exception as e:
+        print(json.dumps({
+            "action": "contract_error",
+            "slug": slug, "stage": stage,
+            "message": f"Contract validator failed to run (retryable): {e}",
+        }, indent=2))
+        sys.exit(1)
+
+    # ── Phase 3 harness (2026-09-07): producer/checker eval loop AFTER contract,
+    # BEFORE the stage gate. Runs the stage's eval pack (eval-voice, eval-accuracy);
+    # on rejection the parent re-spawns the stage worker with rejection_context[]
+    # verbatim (the human never relays nitpicks), 3 strikes then block. Exit
+    # codes match the gate contract: 0 pass | 1 re-spawn | 2 infra wait | 3 fatal.
+    # Kill switch: TJB_DISABLE_EVAL_LOOP=1 skips (deterministic gates still run).
+    if os.environ.get("TJB_DISABLE_EVAL_LOOP", "") != "1":
+        eval_loop_script = str(Path(PROJECT_DIR) / "scripts" / "eval-loop.py")
+        try:
+            el_result = subprocess.run(
+                ["python3", eval_loop_script, slug, stage],
+                capture_output=True, text=True, timeout=900, cwd=PROJECT_DIR,
+            )
+            el_exit = el_result.returncode
+            el_out = (el_result.stdout or "").strip()
+            if el_exit != 0:
+                print(el_out)  # eval-loop already emitted the full JSON verdict
+                sys.exit(el_exit if el_exit in (1, 2, 3) else 1)
+        except subprocess.TimeoutExpired:
+            print(json.dumps({
+                "action": "eval_loop_timeout",
+                "slug": slug, "stage": stage,
+                "message": "Eval loop timed out (900s). Treat as retryable infra; retry advance.",
+            }, indent=2))
+            sys.exit(2)
+        except Exception as e:
+            print(json.dumps({
+                "action": "eval_loop_error",
+                "slug": slug, "stage": stage,
+                "message": f"Eval loop failed to run (retryable): {e}",
+            }, indent=2))
+            sys.exit(1)
+
+    gate_script = str(Path(PROJECT_DIR) / "scripts" / "preflight-stage-gate.py")
+    cmd = ["python3", gate_script, "--city", slug, "--stage", stage]
+
+    try:
+        result = subprocess.run(
+            cmd,
+            capture_output=True, text=True, timeout=180,
+            cwd=PROJECT_DIR,
+        )
+        exit_code = result.returncode
+        gate_output = result.stdout.strip()
+        gate_stderr = result.stderr.strip()
+
+        if exit_code == 0:
+            # Gate passed — advance
+            print(json.dumps({
+                "action": "gate_pass",
+                "slug": slug,
+                "stage": stage,
+                "gate_exit": 0,
+                "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
+                "message": f"Stage gate for {stage} passed. Advancing.",
+            }, indent=2))
+            cmd_done(slug, stage)
+
+        elif exit_code == 1:
+            # RETRYABLE_SUBAGENT — subagent should be re-spawned
+            print(json.dumps({
+                "action": "gate_retryable_subagent",
+                "slug": slug,
+                "stage": stage,
+                "gate_exit": 1,
+                "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
+                "message": (
+                    f"Stage gate for {stage} FAILED (retryable). "
+                    "Re-spawn the step subagent to fix structural issues."
+                ),
+            }, indent=2))
+            sys.exit(1)
+
+        elif exit_code == 2:
+            # RETRYABLE_INFRA — wait and retry once automatically (30s apart),
+            # then fail if still failing. This handles transient contention
+            # (e.g., cities.ts lock) that resolves on retry.
+            print(json.dumps({
+                "action": "gate_retryable_infra",
+                "slug": slug,
+                "stage": stage,
+                "gate_exit": 2,
+                "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
+                "message": (
+                    f"Stage gate for {stage} FAILED (infra issue). "
+                    "Retrying once after 30s..."
+                ),
+            }, indent=2))
+            time.sleep(30)
+            retry_result = subprocess.run(
+                cmd,
+                capture_output=True, text=True, timeout=180,
+                cwd=PROJECT_DIR,
+            )
+            retry_exit = retry_result.returncode
+            retry_output = retry_result.stdout.strip()
+            if retry_exit == 0:
+                print(json.dumps({
+                    "action": "gate_pass_retry",
+                    "slug": slug,
+                    "stage": stage,
+                    "gate_exit": 0,
+                    "gate_output": retry_output[-500:] if len(retry_output) > 500 else retry_output,
+                    "message": f"Stage gate for {stage} passed on retry. Advancing.",
+                }, indent=2))
+                cmd_done(slug, stage)
+                return
+            # Retry also failed — treat as infra failure
+            print(json.dumps({
+                "action": "gate_retry_failed",
+                "slug": slug,
+                "stage": stage,
+                "gate_exit": retry_exit,
+                "gate_output": retry_output[-500:] if len(retry_output) > 500 else retry_output,
+                "message": f"Stage gate for {stage} FAILED on retry too. Treating as infra failure.",
+            }, indent=2))
+            sys.exit(2)
+
+        elif exit_code == 3:
+            # FATAL — block and escalate
+            reason = f"GATE_FATAL (stage={stage}): {gate_output[:300]}"
+            print(json.dumps({
+                "action": "gate_fatal",
+                "slug": slug,
+                "stage": stage,
+                "gate_exit": 3,
+                "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
+                "message": f"Stage gate for {stage} FATAL. Blocking pipeline.",
+            }, indent=2))
+            cmd_fail(slug, stage, reason)
+
+        else:
+            # Unknown exit code — treat as failure
+            reason = (
+                f"GATE_UNKNOWN_EXIT (stage={stage}, exit={exit_code}): "
+                f"{gate_stderr[:200] or gate_output[:200]}"
+            )
+            print(json.dumps({
+                "action": "gate_unknown_exit",
+                "slug": slug,
+                "stage": stage,
+                "gate_exit": exit_code,
+                "gate_output": gate_output[-500:] if len(gate_output) > 500 else gate_output,
+                "message": (
+                    f"Stage gate for {stage} exited with unexpected code {exit_code}. "
+                    "Failing the stage."
+                ),
+            }, indent=2))
+            cmd_fail(slug, stage, reason)
+
+    except subprocess.TimeoutExpired:
+        reason = f"GATE_TIMEOUT (stage={stage}): gate script timed out after 180s"
+        print(json.dumps({
+            "action": "gate_timeout",
+            "slug": slug,
+            "stage": stage,
+            "error": "timeout",
+            "message": reason,
+        }, indent=2))
+        cmd_fail(slug, stage, reason)
+    except Exception as e:
+        reason = f"GATE_SCRIPT_ERROR (stage={stage}): {e}"
+        print(json.dumps({
+            "action": "gate_error",
+            "slug": slug,
+            "stage": stage,
+            "error": str(e),
+            "message": reason,
+        }, indent=2))
+        cmd_fail(slug, stage, reason)
+
+
+def cmd_clean_stale():
+    """Remove stale/test state files."""
+    test_slugs = ["city1-tx", "city2-co", "city3-ny", "city4-fl"]
+    removed = []
+    for slug in test_slugs:
+        state_file = STATES_DIR / f"{slug}.json"
+        if state_file.exists():
+            state_file.unlink()
+            removed.append(slug)
+
+    # Also check for denver.json (wrong slug format, should be denver-co)
+    denver_file = STATES_DIR / "denver.json"
+    if denver_file.exists():
+        denver_file.unlink()
+        removed.append("denver")
+
+    print(json.dumps({
+        "action": "clean_stale",
+        "removed": removed,
+        "message": f"Removed {len(removed)} stale state files."
+    }, indent=2))
+
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: tjb-pipeline-state.py {init|next|done|fail|status|unblock|review|gates|advance|clean-stale} {slug} [args]")
+        print("  init {slug}          — Create/reset state, probe for initial stage")
+        print("  next {slug}          — Output next stage + subagent context")
+        print("  done {slug} {stage}  — Mark stage complete, advance forward")
+        print("  fail {slug} {stage} {reason} — Mark stage failed")
+        print("  status {slug}        — Show current state")
+        print("  unblock {slug}       — Clear blocked status, reset attempt counter")
+        print("  review {slug} approved|changes {note} — Record Jeff's human review (only release path)")
+        print("  gates {slug} {stage} {json} — Record gate results for a stage")
+        print("  advance {slug} {stage} — Run per-stage gate, advance only if gate passes (exit 0)")
+        print("  clean-stale           — Remove test/stale state files")
+        sys.exit(1)
+
+    command = sys.argv[1]
+
+    if command == "clean-stale":
+        cmd_clean_stale()
+        sys.exit(0)
+
+    if len(sys.argv) < 3:
+        print(f"Error: command '{command}' requires a slug argument")
+        sys.exit(1)
+
+    slug = sys.argv[2]
+
+    if command == "init":
+        force = "--force" in sys.argv
+        cmd_init(slug, force=force)
+    elif command == "next":
+        cmd_next(slug)
+    elif command == "done":
+        stage = sys.argv[3] if len(sys.argv) > 3 else ""
+        cmd_done(slug, stage)
+    elif command == "fail":
+        stage = sys.argv[3] if len(sys.argv) > 3 else ""
+        reason = sys.argv[4] if len(sys.argv) > 4 else "unknown"
+        cmd_fail(slug, stage, reason)
+    elif command == "status":
+        cmd_status(slug)
+    elif command == "unblock":
+        cmd_unblock(slug)
+    elif command == "review":
+        verdict = sys.argv[3] if len(sys.argv) > 3 else ""
+        note = sys.argv[4] if len(sys.argv) > 4 else ""
+        if verdict in ("--help", "-h", "help"):
+            print("Usage: tjb-pipeline-state.py review <slug> approved|changes [note]")
+            print("  approved — Jeff approved the page; releases the hold to complete (outreach freed)")
+            print("  changes  — Jeff wants changes; holds at human_review_required, note recorded for Kit")
+            sys.exit(0)
+        if not verdict:
+            print("Error: review requires a verdict argument: approved|changes [note]", file=sys.stderr)
+            sys.exit(1)
+        cmd_review(slug, verdict, note)
+    elif command == "gates":
+        stage = sys.argv[3] if len(sys.argv) > 3 else ""
+        gate_json = sys.argv[4] if len(sys.argv) > 4 else "{}"
+        cmd_gates(slug, stage, gate_json)
+    elif command == "advance":
+        stage = sys.argv[3] if len(sys.argv) > 3 else ""
+        if not stage:
+            print("Error: advance requires a stage argument")
+            sys.exit(1)
+        cmd_advance(slug, stage)
+    else:
+        print(f"Unknown command: {command}")
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

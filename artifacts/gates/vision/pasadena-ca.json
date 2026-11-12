@@ -1,0 +1,11 @@
+{
+  "slug": "pasadena-ca",
+  "verdicts": [
+    {"crop": "pasadena-ca-hero-fig0.png", "verdict": "pass", "defects": [], "notes": "atlas:latest (mistral3 multimodal, local ollama) via ollama CLI — vision_analyze tool absent in this cron session (full A-Z tool_search inventory documented in run report). 2x crop: 1 figure, 2 arms normally attached, no extra/merged fingers, no melted joints."},
+    {"crop": "pasadena-ca-og-fig0.png", "verdict": "pass", "defects": [], "notes": "atlas:latest: real Pasadena street photograph, no anatomical defects found in any figure."},
+    {"crop": "pasadena-ca-support-fig0.png", "verdict": "pass", "defects": [], "notes": "atlas:latest: real street scene, figures normal, no fused/extra limbs."},
+    {"crop": "pasadena-ca-thumb-fig0.png", "verdict": "pass", "defects": [], "notes": "atlas:latest: real photograph (court building + plaza), no defects."}
+  ],
+  "checked_by": "atlas:latest (mistral3 multimodal via local ollama) — vision_analyze tool unavailable in this session; per-crop 2x-zoom defect prompts per visual-verify-gate procedure",
+  "checked_at": "2026-10-28T16:45:00Z"
+}

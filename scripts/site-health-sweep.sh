@@ -19,6 +19,12 @@
 # =============================================================================
 set -euo pipefail
 
+# 2026-10-30: cron strips the user-site path / inherits a poisoned PYTHONPATH
+# (Hermes install venv), which kills numpy + PIL for check-og-content.py →
+# every real S11 check reports as "OG CONTENT FAILS S11" (14 false failures
+# 2026-10-30 07:07). Stock interpreters only below this line.
+unset PYTHONPATH PYTHONNOUSERSITE
+
 PROJECT_DIR="/Users/socializerender/Projects/truejoybirthing-website"
 cd "$PROJECT_DIR"
 
